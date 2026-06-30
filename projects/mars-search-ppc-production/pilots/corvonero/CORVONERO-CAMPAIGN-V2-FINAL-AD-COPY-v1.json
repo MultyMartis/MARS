@@ -1,0 +1,1651 @@
+{
+  "generated_at": "2026-06-30T11:27:08.000Z",
+  "checkpoint": "ebff109061932faecdff63456a27aa7fe3823be7",
+  "status": "OPERATOR_APPROVED",
+  "ads_count": 42,
+  "operator_rewrite_a01": {
+    "campaign_id": "CA-01-REMOTE",
+    "group_id": "ca-01-price-intent",
+    "applied_text": "Минимальный заказ — 2 часа. Работаем удалённо по России."
+  },
+  "ads": [
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "group_id": "ca-01-direct-service-order",
+      "group_name": "",
+      "geography_mode": "LOCAL",
+      "primary_ad": {
+        "headline": "Услуги программиста 1С под вашу задачу",
+        "additional_headline": "С выездом по Новосибирску",
+        "text": "Обсудим задачу и оценим объём работ. выезд в Новосибирске.",
+        "headline_metrics": {
+          "characters": 38,
+          "max_word_length": 12,
+          "words": 6
+        },
+        "additional_metrics": {
+          "characters": 25,
+          "max_word_length": 12,
+          "words": 4
+        },
+        "text_metrics": {
+          "characters": 58,
+          "max_word_length": 13,
+          "words": 9
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/programmist-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 38,
+        "headline_2": 25,
+        "text": 58,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "group_id": "ca-01-direct-service-order",
+      "group_name": "",
+      "geography_mode": "REMOTE",
+      "primary_ad": {
+        "headline": "Услуги программиста 1С под вашу задачу",
+        "additional_headline": "Удалённо по России",
+        "text": "Обсудим задачу и оценим объём работ. Удалённо по России.",
+        "headline_metrics": {
+          "characters": 38,
+          "max_word_length": 12,
+          "words": 6
+        },
+        "additional_metrics": {
+          "characters": 18,
+          "max_word_length": 8,
+          "words": 3
+        },
+        "text_metrics": {
+          "characters": 56,
+          "max_word_length": 8,
+          "words": 9
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/programmist-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 38,
+        "headline_2": 18,
+        "text": 56,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "group_id": "ca-01-find-hire-specialist",
+      "group_name": "",
+      "geography_mode": "LOCAL",
+      "primary_ad": {
+        "headline": "Нужен программист 1С?",
+        "additional_headline": "С выездом по Новосибирску",
+        "text": "Работаем с выездом по Новосибирску. По договору.",
+        "headline_metrics": {
+          "characters": 21,
+          "max_word_length": 11,
+          "words": 3
+        },
+        "additional_metrics": {
+          "characters": 25,
+          "max_word_length": 12,
+          "words": 4
+        },
+        "text_metrics": {
+          "characters": 48,
+          "max_word_length": 13,
+          "words": 7
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/programmist-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 21,
+        "headline_2": 25,
+        "text": 48,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "group_id": "ca-01-find-hire-specialist",
+      "group_name": "",
+      "geography_mode": "REMOTE",
+      "primary_ad": {
+        "headline": "Нужен программист 1С?",
+        "additional_headline": "Удалённо по России",
+        "text": "Доработаем 1С, исправим ошибки и подготовим отчёты. Удалённо, по договору.",
+        "headline_metrics": {
+          "characters": 21,
+          "max_word_length": 11,
+          "words": 3
+        },
+        "additional_metrics": {
+          "characters": 18,
+          "max_word_length": 8,
+          "words": 3
+        },
+        "text_metrics": {
+          "characters": 74,
+          "max_word_length": 10,
+          "words": 10
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/programmist-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 21,
+        "headline_2": 18,
+        "text": 74,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "group_id": "ca-01-price-intent",
+      "group_name": "",
+      "geography_mode": "LOCAL",
+      "primary_ad": {
+        "headline": "Программист 1С — от 3 000 ₽ в час",
+        "additional_headline": "С выездом по Новосибирску",
+        "text": "Минимальный заказ — 2 часа. Работаем и с выездом в Новосибирске.",
+        "headline_metrics": {
+          "characters": 33,
+          "max_word_length": 11,
+          "words": 9
+        },
+        "additional_metrics": {
+          "characters": 25,
+          "max_word_length": 12,
+          "words": 4
+        },
+        "text_metrics": {
+          "characters": 64,
+          "max_word_length": 13,
+          "words": 11
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/programmist-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 33,
+        "headline_2": 25,
+        "text": 64,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "group_id": "ca-01-price-intent",
+      "group_name": "",
+      "geography_mode": "REMOTE",
+      "primary_ad": {
+        "headline": "Программист 1С — от 3 000 ₽ в час",
+        "additional_headline": "Удалённо по России",
+        "text": "Минимальный заказ — 2 часа. Работаем удалённо по России.",
+        "headline_metrics": {
+          "characters": 33,
+          "max_word_length": 11,
+          "words": 9
+        },
+        "additional_metrics": {
+          "characters": 18,
+          "max_word_length": 8,
+          "words": 3
+        },
+        "text_metrics": {
+          "characters": 56,
+          "max_word_length": 11,
+          "words": 9
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/programmist-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 33,
+        "headline_2": 18,
+        "text": 56,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": true
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "group_id": "ca-01-remote-freelance-specialist",
+      "group_name": "",
+      "geography_mode": "LOCAL",
+      "primary_ad": {
+        "headline": "Программист 1С — выезд по Новосибирску",
+        "additional_headline": "Корво Неро",
+        "text": "Доработаем 1С, исправим ошибки и отчёты. С выездом по Новосибирску, по договору.",
+        "headline_metrics": {
+          "characters": 38,
+          "max_word_length": 12,
+          "words": 6
+        },
+        "additional_metrics": {
+          "characters": 10,
+          "max_word_length": 5,
+          "words": 2
+        },
+        "text_metrics": {
+          "characters": 80,
+          "max_word_length": 13,
+          "words": 12
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/programmist-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 38,
+        "headline_2": 10,
+        "text": 80,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "group_id": "ca-01-remote-freelance-specialist",
+      "group_name": "",
+      "geography_mode": "REMOTE",
+      "primary_ad": {
+        "headline": "Программист 1С удалённо",
+        "additional_headline": "Удалённо по России",
+        "text": "Доработаем 1С, исправим ошибки и отчёты. Удалённо по России, по договору.",
+        "headline_metrics": {
+          "characters": 23,
+          "max_word_length": 11,
+          "words": 3
+        },
+        "additional_metrics": {
+          "characters": 18,
+          "max_word_length": 8,
+          "words": 3
+        },
+        "text_metrics": {
+          "characters": 73,
+          "max_word_length": 10,
+          "words": 11
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/programmist-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 23,
+        "headline_2": 18,
+        "text": 73,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "group_id": "ca-01-specialist-by-product",
+      "group_name": "",
+      "geography_mode": "LOCAL",
+      "primary_ad": {
+        "headline": "Специалист по конфигурациям 1С",
+        "additional_headline": "С выездом по Новосибирску",
+        "text": "Работаем с выездом по Новосибирску. По договору.",
+        "headline_metrics": {
+          "characters": 30,
+          "max_word_length": 13,
+          "words": 4
+        },
+        "additional_metrics": {
+          "characters": 25,
+          "max_word_length": 12,
+          "words": 4
+        },
+        "text_metrics": {
+          "characters": 48,
+          "max_word_length": 13,
+          "words": 7
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/programmist-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 30,
+        "headline_2": 25,
+        "text": 48,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "group_id": "ca-01-specialist-by-product",
+      "group_name": "",
+      "geography_mode": "REMOTE",
+      "primary_ad": {
+        "headline": "Специалист по конфигурациям 1С",
+        "additional_headline": "Удалённо по России",
+        "text": "Доработаем и настроим вашу конфигурацию 1С. Удалённо по России, по договору.",
+        "headline_metrics": {
+          "characters": 30,
+          "max_word_length": 13,
+          "words": 4
+        },
+        "additional_metrics": {
+          "characters": 18,
+          "max_word_length": 8,
+          "words": 3
+        },
+        "text_metrics": {
+          "characters": 76,
+          "max_word_length": 12,
+          "words": 11
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/programmist-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 30,
+        "headline_2": 18,
+        "text": 76,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "group_id": "ca-01-specialist-extended",
+      "group_name": "",
+      "geography_mode": "LOCAL",
+      "primary_ad": {
+        "headline": "Программист 1С под разные задачи",
+        "additional_headline": "С выездом по Новосибирску",
+        "text": "Работаем с выездом по Новосибирску. По договору.",
+        "headline_metrics": {
+          "characters": 32,
+          "max_word_length": 11,
+          "words": 5
+        },
+        "additional_metrics": {
+          "characters": 25,
+          "max_word_length": 12,
+          "words": 4
+        },
+        "text_metrics": {
+          "characters": 48,
+          "max_word_length": 13,
+          "words": 7
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/programmist-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 32,
+        "headline_2": 25,
+        "text": 48,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "group_id": "ca-01-specialist-extended",
+      "group_name": "",
+      "geography_mode": "REMOTE",
+      "primary_ad": {
+        "headline": "Программист 1С под разные задачи",
+        "additional_headline": "Удалённо по России",
+        "text": "Настроим и доработаем 1С, исправим ошибки и отчёты. Удалённо по РФ, по договору.",
+        "headline_metrics": {
+          "characters": 32,
+          "max_word_length": 11,
+          "words": 5
+        },
+        "additional_metrics": {
+          "characters": 18,
+          "max_word_length": 8,
+          "words": 3
+        },
+        "text_metrics": {
+          "characters": 80,
+          "max_word_length": 10,
+          "words": 13
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/programmist-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 32,
+        "headline_2": 18,
+        "text": 80,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "group_id": "ca-01-specialist-search",
+      "group_name": "",
+      "geography_mode": "LOCAL",
+      "primary_ad": {
+        "headline": "Программист 1С для разовых задач",
+        "additional_headline": "С выездом по Новосибирску",
+        "text": "Доработка, ошибки и отчёты в 1С. Выезд в Новосибирске. Работа по договору.",
+        "headline_metrics": {
+          "characters": 32,
+          "max_word_length": 11,
+          "words": 5
+        },
+        "additional_metrics": {
+          "characters": 25,
+          "max_word_length": 12,
+          "words": 4
+        },
+        "text_metrics": {
+          "characters": 74,
+          "max_word_length": 13,
+          "words": 12
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/programmist-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 32,
+        "headline_2": 25,
+        "text": 74,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "group_id": "ca-01-specialist-search",
+      "group_name": "",
+      "geography_mode": "REMOTE",
+      "primary_ad": {
+        "headline": "Программист 1С для разовых задач",
+        "additional_headline": "Удалённо по России",
+        "text": "Доработка, ошибки и отчёты в 1С. Работа по договору. Удалённо по России.",
+        "headline_metrics": {
+          "characters": 32,
+          "max_word_length": 11,
+          "words": 5
+        },
+        "additional_metrics": {
+          "characters": 18,
+          "max_word_length": 8,
+          "words": 3
+        },
+        "text_metrics": {
+          "characters": 72,
+          "max_word_length": 10,
+          "words": 12
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/programmist-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 32,
+        "headline_2": 18,
+        "text": 72,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "group_id": "ca-02-direct-service-order",
+      "group_name": "",
+      "geography_mode": "LOCAL",
+      "primary_ad": {
+        "headline": "Услуги сопровождения и поддержки 1С",
+        "additional_headline": "С выездом по Новосибирску",
+        "text": "Помощь пользователям, обновления и устранение ошибок. С выездом по Новосибирску.",
+        "headline_metrics": {
+          "characters": 35,
+          "max_word_length": 13,
+          "words": 5
+        },
+        "additional_metrics": {
+          "characters": 25,
+          "max_word_length": 12,
+          "words": 4
+        },
+        "text_metrics": {
+          "characters": 80,
+          "max_word_length": 14,
+          "words": 10
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/soprovozhdenie-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 35,
+        "headline_2": 25,
+        "text": 80,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "group_id": "ca-02-direct-service-order",
+      "group_name": "",
+      "geography_mode": "REMOTE",
+      "primary_ad": {
+        "headline": "Услуги сопровождения и поддержки 1С",
+        "additional_headline": "Удалённо по России",
+        "text": "Помощь пользователям, обновления и устранение ошибок. Удалённо по России.",
+        "headline_metrics": {
+          "characters": 35,
+          "max_word_length": 13,
+          "words": 5
+        },
+        "additional_metrics": {
+          "characters": 18,
+          "max_word_length": 8,
+          "words": 3
+        },
+        "text_metrics": {
+          "characters": 73,
+          "max_word_length": 14,
+          "words": 9
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/soprovozhdenie-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 35,
+        "headline_2": 18,
+        "text": 73,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "group_id": "ca-02-price-intent",
+      "group_name": "",
+      "geography_mode": "LOCAL",
+      "primary_ad": {
+        "headline": "Стоимость сопровождения 1С",
+        "additional_headline": "С выездом по Новосибирску",
+        "text": "Работаем с выездом по Новосибирску. По договору.",
+        "headline_metrics": {
+          "characters": 26,
+          "max_word_length": 13,
+          "words": 3
+        },
+        "additional_metrics": {
+          "characters": 25,
+          "max_word_length": 12,
+          "words": 4
+        },
+        "text_metrics": {
+          "characters": 48,
+          "max_word_length": 13,
+          "words": 7
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/soprovozhdenie-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 26,
+        "headline_2": 25,
+        "text": 48,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "group_id": "ca-02-price-intent",
+      "group_name": "",
+      "geography_mode": "REMOTE",
+      "primary_ad": {
+        "headline": "Стоимость сопровождения 1С",
+        "additional_headline": "Удалённо по России",
+        "text": "Работаем удалённо по России. По договору.",
+        "headline_metrics": {
+          "characters": 26,
+          "max_word_length": 13,
+          "words": 3
+        },
+        "additional_metrics": {
+          "characters": 18,
+          "max_word_length": 8,
+          "words": 3
+        },
+        "text_metrics": {
+          "characters": 41,
+          "max_word_length": 9,
+          "words": 6
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/soprovozhdenie-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 26,
+        "headline_2": 18,
+        "text": 41,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "group_id": "ca-02-support-and-maintenance",
+      "group_name": "",
+      "geography_mode": "LOCAL",
+      "primary_ad": {
+        "headline": "Сопровождение 1С — поддержка и обновления",
+        "additional_headline": "С выездом по Новосибирску",
+        "text": "Помощь пользователям, обновления и ошибки. Выезд в Новосибирске.",
+        "headline_metrics": {
+          "characters": 41,
+          "max_word_length": 13,
+          "words": 6
+        },
+        "additional_metrics": {
+          "characters": 25,
+          "max_word_length": 12,
+          "words": 4
+        },
+        "text_metrics": {
+          "characters": 64,
+          "max_word_length": 14,
+          "words": 8
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/soprovozhdenie-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 41,
+        "headline_2": 25,
+        "text": 64,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "group_id": "ca-02-support-and-maintenance",
+      "group_name": "",
+      "geography_mode": "REMOTE",
+      "primary_ad": {
+        "headline": "Сопровождение 1С — поддержка и обновления",
+        "additional_headline": "Удалённо по России",
+        "text": "Помощь пользователям, обновления и ошибки. Удалённо по России.",
+        "headline_metrics": {
+          "characters": 41,
+          "max_word_length": 13,
+          "words": 6
+        },
+        "additional_metrics": {
+          "characters": 18,
+          "max_word_length": 8,
+          "words": 3
+        },
+        "text_metrics": {
+          "characters": 62,
+          "max_word_length": 14,
+          "words": 8
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/soprovozhdenie-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 41,
+        "headline_2": 18,
+        "text": 62,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "group_id": "ca-02-troubleshooting-not-working",
+      "group_name": "",
+      "geography_mode": "LOCAL",
+      "primary_ad": {
+        "headline": "1С не работает — поможем разобраться",
+        "additional_headline": "С выездом по Новосибирску",
+        "text": "Разберём ошибку и восстановим работу базы. выезд в Новосибирске.",
+        "headline_metrics": {
+          "characters": 36,
+          "max_word_length": 11,
+          "words": 6
+        },
+        "additional_metrics": {
+          "characters": 25,
+          "max_word_length": 12,
+          "words": 4
+        },
+        "text_metrics": {
+          "characters": 64,
+          "max_word_length": 13,
+          "words": 9
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/soprovozhdenie-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 36,
+        "headline_2": 25,
+        "text": 64,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "group_id": "ca-02-troubleshooting-not-working",
+      "group_name": "",
+      "geography_mode": "REMOTE",
+      "primary_ad": {
+        "headline": "1С не работает — поможем разобраться",
+        "additional_headline": "Удалённо по России",
+        "text": "Разберём ошибку и восстановим работу базы. Удалённо.",
+        "headline_metrics": {
+          "characters": 36,
+          "max_word_length": 11,
+          "words": 6
+        },
+        "additional_metrics": {
+          "characters": 18,
+          "max_word_length": 8,
+          "words": 3
+        },
+        "text_metrics": {
+          "characters": 52,
+          "max_word_length": 11,
+          "words": 7
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/soprovozhdenie-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 36,
+        "headline_2": 18,
+        "text": 52,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "group_id": "ca-03-direct-service-order",
+      "group_name": "",
+      "geography_mode": "LOCAL",
+      "primary_ad": {
+        "headline": "Услуги по доработке 1С",
+        "additional_headline": "С выездом по Новосибирску",
+        "text": "Доработаем конфигурацию, отчёт или форму. выезд в Новосибирске.",
+        "headline_metrics": {
+          "characters": 22,
+          "max_word_length": 9,
+          "words": 4
+        },
+        "additional_metrics": {
+          "characters": 25,
+          "max_word_length": 12,
+          "words": 4
+        },
+        "text_metrics": {
+          "characters": 63,
+          "max_word_length": 13,
+          "words": 8
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/dorabotka-razrabotka-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 22,
+        "headline_2": 25,
+        "text": 63,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "group_id": "ca-03-direct-service-order",
+      "group_name": "",
+      "geography_mode": "REMOTE",
+      "primary_ad": {
+        "headline": "Услуги по доработке 1С",
+        "additional_headline": "Удалённо по России",
+        "text": "Доработаем конфигурацию, отчёт или форму. Удалённо.",
+        "headline_metrics": {
+          "characters": 22,
+          "max_word_length": 9,
+          "words": 4
+        },
+        "additional_metrics": {
+          "characters": 18,
+          "max_word_length": 8,
+          "words": 3
+        },
+        "text_metrics": {
+          "characters": 51,
+          "max_word_length": 13,
+          "words": 6
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/dorabotka-razrabotka-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 22,
+        "headline_2": 18,
+        "text": 51,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "group_id": "ca-03-implementation",
+      "group_name": "",
+      "geography_mode": "LOCAL",
+      "primary_ad": {
+        "headline": "Внедрение отдельных процессов в 1С",
+        "additional_headline": "С выездом по Новосибирску",
+        "text": "Настроим учётный сценарий в действующей базе. С выездом по Новосибирску.",
+        "headline_metrics": {
+          "characters": 34,
+          "max_word_length": 9,
+          "words": 5
+        },
+        "additional_metrics": {
+          "characters": 25,
+          "max_word_length": 12,
+          "words": 4
+        },
+        "text_metrics": {
+          "characters": 72,
+          "max_word_length": 13,
+          "words": 10
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/dorabotka-razrabotka-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 34,
+        "headline_2": 25,
+        "text": 72,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "group_id": "ca-03-implementation",
+      "group_name": "",
+      "geography_mode": "REMOTE",
+      "primary_ad": {
+        "headline": "Внедрение отдельных процессов в 1С",
+        "additional_headline": "Удалённо по России",
+        "text": "Настроим учётный сценарий в действующей базе. Удалённо по России.",
+        "headline_metrics": {
+          "characters": 34,
+          "max_word_length": 9,
+          "words": 5
+        },
+        "additional_metrics": {
+          "characters": 18,
+          "max_word_length": 8,
+          "words": 3
+        },
+        "text_metrics": {
+          "characters": 65,
+          "max_word_length": 11,
+          "words": 9
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/dorabotka-razrabotka-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 34,
+        "headline_2": 18,
+        "text": 65,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "group_id": "ca-03-modification",
+      "group_name": "",
+      "geography_mode": "LOCAL",
+      "primary_ad": {
+        "headline": "Доработка 1С — отчёты, обработки, формы",
+        "additional_headline": "С выездом по Новосибирску",
+        "text": "Доработаем конфигурацию под ваш процесс. С выездом по Новосибирску.",
+        "headline_metrics": {
+          "characters": 39,
+          "max_word_length": 10,
+          "words": 6
+        },
+        "additional_metrics": {
+          "characters": 25,
+          "max_word_length": 12,
+          "words": 4
+        },
+        "text_metrics": {
+          "characters": 67,
+          "max_word_length": 13,
+          "words": 9
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/dorabotka-razrabotka-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 39,
+        "headline_2": 25,
+        "text": 67,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "group_id": "ca-03-modification",
+      "group_name": "",
+      "geography_mode": "REMOTE",
+      "primary_ad": {
+        "headline": "Доработка 1С — отчёты, обработки, формы",
+        "additional_headline": "Удалённо по России",
+        "text": "Доработаем конфигурацию под ваш процесс. Удалённо по России.",
+        "headline_metrics": {
+          "characters": 39,
+          "max_word_length": 10,
+          "words": 6
+        },
+        "additional_metrics": {
+          "characters": 18,
+          "max_word_length": 8,
+          "words": 3
+        },
+        "text_metrics": {
+          "characters": 60,
+          "max_word_length": 12,
+          "words": 8
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/dorabotka-razrabotka-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 39,
+        "headline_2": 18,
+        "text": 60,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "group_id": "ca-04-integration",
+      "group_name": "",
+      "geography_mode": "LOCAL",
+      "primary_ad": {
+        "headline": "Интеграция 1С с сайтом и Битрикс",
+        "additional_headline": "С выездом по Новосибирску",
+        "text": "Работаем с выездом по Новосибирску. По договору.",
+        "headline_metrics": {
+          "characters": 32,
+          "max_word_length": 10,
+          "words": 6
+        },
+        "additional_metrics": {
+          "characters": 25,
+          "max_word_length": 12,
+          "words": 4
+        },
+        "text_metrics": {
+          "characters": 48,
+          "max_word_length": 13,
+          "words": 7
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/integracii-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 32,
+        "headline_2": 25,
+        "text": 48,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "group_id": "ca-04-integration",
+      "group_name": "",
+      "geography_mode": "REMOTE",
+      "primary_ad": {
+        "headline": "Интеграция 1С с сайтом и Битрикс",
+        "additional_headline": "Удалённо по России",
+        "text": "Работаем удалённо по России. По договору.",
+        "headline_metrics": {
+          "characters": 32,
+          "max_word_length": 10,
+          "words": 6
+        },
+        "additional_metrics": {
+          "characters": 18,
+          "max_word_length": 8,
+          "words": 3
+        },
+        "text_metrics": {
+          "characters": 41,
+          "max_word_length": 9,
+          "words": 6
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/integracii-1s/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 32,
+        "headline_2": 18,
+        "text": 41,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "group_id": "ca-05-chestny-znak-service",
+      "group_name": "",
+      "geography_mode": "LOCAL",
+      "primary_ad": {
+        "headline": "Честный знак в 1С — настройка",
+        "additional_headline": "С выездом по Новосибирску",
+        "text": "Настроим Честный знак в 1С и обмен кодами маркировки. С выездом по Новосибирску.",
+        "headline_metrics": {
+          "characters": 29,
+          "max_word_length": 9,
+          "words": 6
+        },
+        "additional_metrics": {
+          "characters": 25,
+          "max_word_length": 12,
+          "words": 4
+        },
+        "text_metrics": {
+          "characters": 80,
+          "max_word_length": 13,
+          "words": 13
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/markirovka-chestny-znak/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 29,
+        "headline_2": 25,
+        "text": 80,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "group_id": "ca-05-chestny-znak-service",
+      "group_name": "",
+      "geography_mode": "REMOTE",
+      "primary_ad": {
+        "headline": "Честный знак в 1С — настройка",
+        "additional_headline": "Удалённо по России",
+        "text": "Настроим Честный знак в 1С и обмен кодами маркировки. Удалённо по России.",
+        "headline_metrics": {
+          "characters": 29,
+          "max_word_length": 9,
+          "words": 6
+        },
+        "additional_metrics": {
+          "characters": 18,
+          "max_word_length": 8,
+          "words": 3
+        },
+        "text_metrics": {
+          "characters": 73,
+          "max_word_length": 11,
+          "words": 12
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/markirovka-chestny-znak/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 29,
+        "headline_2": 18,
+        "text": 73,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "group_id": "ca-05-integration",
+      "group_name": "",
+      "geography_mode": "LOCAL",
+      "primary_ad": {
+        "headline": "Интеграция маркировки 1С с сайтом",
+        "additional_headline": "С выездом по Новосибирску",
+        "text": "Работаем с выездом по Новосибирску. По договору.",
+        "headline_metrics": {
+          "characters": 33,
+          "max_word_length": 10,
+          "words": 5
+        },
+        "additional_metrics": {
+          "characters": 25,
+          "max_word_length": 12,
+          "words": 4
+        },
+        "text_metrics": {
+          "characters": 48,
+          "max_word_length": 13,
+          "words": 7
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/markirovka-chestny-znak/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 33,
+        "headline_2": 25,
+        "text": 48,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "group_id": "ca-05-integration",
+      "group_name": "",
+      "geography_mode": "REMOTE",
+      "primary_ad": {
+        "headline": "Интеграция маркировки 1С с сайтом",
+        "additional_headline": "Удалённо по России",
+        "text": "Работаем удалённо по России. По договору.",
+        "headline_metrics": {
+          "characters": 33,
+          "max_word_length": 10,
+          "words": 5
+        },
+        "additional_metrics": {
+          "characters": 18,
+          "max_word_length": 8,
+          "words": 3
+        },
+        "text_metrics": {
+          "characters": 41,
+          "max_word_length": 9,
+          "words": 6
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/markirovka-chestny-znak/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 33,
+        "headline_2": 18,
+        "text": 41,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "group_id": "ca-05-marking-codes",
+      "group_name": "",
+      "geography_mode": "LOCAL",
+      "primary_ad": {
+        "headline": "Коды маркировки в 1С",
+        "additional_headline": "С выездом по Новосибирску",
+        "text": "Работаем с выездом по Новосибирску. По договору.",
+        "headline_metrics": {
+          "characters": 20,
+          "max_word_length": 10,
+          "words": 4
+        },
+        "additional_metrics": {
+          "characters": 25,
+          "max_word_length": 12,
+          "words": 4
+        },
+        "text_metrics": {
+          "characters": 48,
+          "max_word_length": 13,
+          "words": 7
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/markirovka-chestny-znak/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 20,
+        "headline_2": 25,
+        "text": 48,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "group_id": "ca-05-marking-codes",
+      "group_name": "",
+      "geography_mode": "REMOTE",
+      "primary_ad": {
+        "headline": "Коды маркировки в 1С",
+        "additional_headline": "Удалённо по России",
+        "text": "Настроим печать, сканирование и обмен кодами маркировки в 1С. Удалённо по России.",
+        "headline_metrics": {
+          "characters": 20,
+          "max_word_length": 10,
+          "words": 4
+        },
+        "additional_metrics": {
+          "characters": 18,
+          "max_word_length": 8,
+          "words": 3
+        },
+        "text_metrics": {
+          "characters": 81,
+          "max_word_length": 12,
+          "words": 12
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/markirovka-chestny-znak/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 20,
+        "headline_2": 18,
+        "text": 81,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "group_id": "ca-05-marking-setup",
+      "group_name": "",
+      "geography_mode": "LOCAL",
+      "primary_ad": {
+        "headline": "Настройка маркировки в 1С",
+        "additional_headline": "С выездом по Новосибирску",
+        "text": "Настроим маркировку, обмен кодами и документами в 1С. С выездом по Новосибирску.",
+        "headline_metrics": {
+          "characters": 25,
+          "max_word_length": 10,
+          "words": 4
+        },
+        "additional_metrics": {
+          "characters": 25,
+          "max_word_length": 12,
+          "words": 4
+        },
+        "text_metrics": {
+          "characters": 80,
+          "max_word_length": 13,
+          "words": 12
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/markirovka-chestny-znak/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 25,
+        "headline_2": 25,
+        "text": 80,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "group_id": "ca-05-marking-setup",
+      "group_name": "",
+      "geography_mode": "REMOTE",
+      "primary_ad": {
+        "headline": "Настройка маркировки в 1С",
+        "additional_headline": "Удалённо по России",
+        "text": "Настроим маркировку, обмен кодами и документами в 1С. Удалённо по России.",
+        "headline_metrics": {
+          "characters": 25,
+          "max_word_length": 10,
+          "words": 4
+        },
+        "additional_metrics": {
+          "characters": 18,
+          "max_word_length": 8,
+          "words": 3
+        },
+        "text_metrics": {
+          "characters": 73,
+          "max_word_length": 11,
+          "words": 11
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/markirovka-chestny-znak/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 25,
+        "headline_2": 18,
+        "text": 73,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "group_id": "ca-05-support-and-maintenance",
+      "group_name": "",
+      "geography_mode": "LOCAL",
+      "primary_ad": {
+        "headline": "Поддержка маркировки и Честного знака в 1С",
+        "additional_headline": "С выездом по Новосибирску",
+        "text": "Поможем с ошибками и документами маркировки. С выездом по Новосибирску.",
+        "headline_metrics": {
+          "characters": 42,
+          "max_word_length": 10,
+          "words": 7
+        },
+        "additional_metrics": {
+          "characters": 25,
+          "max_word_length": 12,
+          "words": 4
+        },
+        "text_metrics": {
+          "characters": 71,
+          "max_word_length": 13,
+          "words": 10
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/markirovka-chestny-znak/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 42,
+        "headline_2": 25,
+        "text": 71,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "group_id": "ca-05-support-and-maintenance",
+      "group_name": "",
+      "geography_mode": "REMOTE",
+      "primary_ad": {
+        "headline": "Поддержка маркировки и Честного знака в 1С",
+        "additional_headline": "Удалённо по России",
+        "text": "Поможем с ошибками и документами маркировки. Удалённо по России.",
+        "headline_metrics": {
+          "characters": 42,
+          "max_word_length": 10,
+          "words": 7
+        },
+        "additional_metrics": {
+          "characters": 18,
+          "max_word_length": 8,
+          "words": 3
+        },
+        "text_metrics": {
+          "characters": 64,
+          "max_word_length": 11,
+          "words": 9
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/markirovka-chestny-znak/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 42,
+        "headline_2": 18,
+        "text": 64,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "group_id": "ca-05-ts-piot",
+      "group_name": "",
+      "geography_mode": "LOCAL",
+      "primary_ad": {
+        "headline": "Настройка ТС ПИОТ и Честного знака в 1С",
+        "additional_headline": "С выездом по Новосибирску",
+        "text": "Работаем с выездом по Новосибирску. По договору.",
+        "headline_metrics": {
+          "characters": 39,
+          "max_word_length": 9,
+          "words": 8
+        },
+        "additional_metrics": {
+          "characters": 25,
+          "max_word_length": 12,
+          "words": 4
+        },
+        "text_metrics": {
+          "characters": 48,
+          "max_word_length": 13,
+          "words": 7
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/markirovka-chestny-znak/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 39,
+        "headline_2": 25,
+        "text": 48,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "group_id": "ca-05-ts-piot",
+      "group_name": "",
+      "geography_mode": "REMOTE",
+      "primary_ad": {
+        "headline": "Настройка ТС ПИОТ и Честного знака в 1С",
+        "additional_headline": "Удалённо по России",
+        "text": "Настроим работу ТС ПИОТ в связке с вашей конфигурацией 1С. Удалённо.",
+        "headline_metrics": {
+          "characters": 39,
+          "max_word_length": 9,
+          "words": 8
+        },
+        "additional_metrics": {
+          "characters": 18,
+          "max_word_length": 8,
+          "words": 3
+        },
+        "text_metrics": {
+          "characters": 68,
+          "max_word_length": 13,
+          "words": 11
+        }
+      },
+      "landing_page": {
+        "url": "https://lk.corvonero.ru/markirovka-chestny-znak/"
+      },
+      "display_path": "",
+      "character_counts": {
+        "headline_1": 39,
+        "headline_2": 18,
+        "text": 68,
+        "display_path": 0
+      },
+      "validation_status": "PASS",
+      "status": "OPERATOR_APPROVED",
+      "operator_rewrite_applied": false
+    }
+  ]
+}

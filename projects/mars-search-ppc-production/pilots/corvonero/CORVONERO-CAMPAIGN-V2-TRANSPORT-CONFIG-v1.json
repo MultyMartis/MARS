@@ -1,0 +1,41 @@
+{
+  "transport_config_id": "corvonero-campaign-v2-transport-config-v1",
+  "geo_region": "Новосибирская область",
+  "organization_policy": {
+    "required_value": "",
+    "forbidden_ids": [
+      "29500847237"
+    ]
+  },
+  "forbidden_organization_ids": [
+    "29500847237"
+  ],
+  "sitelinks_policy": "OMITTED",
+  "cross_campaign_negatives_policy": "NOT_APPLIED",
+  "bids_ref": "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CAMPAIGN-V2-BIDS-v1.json",
+  "display_paths_ref": "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-EXT-W1-DISPLAY-PATHS-v1.json",
+  "group_negatives_ref": "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CT4-GROUP-NEGATIVES-v1.json",
+  "fragment_anchor_approved": false,
+  "tracking_policy": "GLOBAL_CAMPAIGN_PARAMETERS_SET_MANUALLY_BY_OPERATOR",
+  "ad_url_query_parameters": "FORBIDDEN",
+  "ct4_authority": true,
+  "bid_policy": "CORVONERO_BALANCED_CYCLIC_10_RUB_V1",
+  "bid_step": 10,
+  "ladder_values": 10,
+  "assignment_scope": "PER_GROUP",
+  "assignment_order": "CT4_AUTHORITY_ORDER",
+  "geo_region_mode": "PER_CAMPAIGN",
+  "geo_regions": {
+    "CA-01-LOCAL": "Новосибирская область",
+    "CA-01-REMOTE": "Россия",
+    "CA-02-LOCAL": "Новосибирская область",
+    "CA-02-REMOTE": "Россия",
+    "CA-03-LOCAL": "Новосибирская область",
+    "CA-03-REMOTE": "Россия",
+    "CA-04-LOCAL": "Новосибирская область",
+    "CA-04-REMOTE": "Россия",
+    "CA-05-LOCAL": "Новосибирская область",
+    "CA-05-REMOTE": "Россия"
+  },
+  "campaign_negatives_in_workbook": false
+}

@@ -1,0 +1,1831 @@
+{
+  "generated_at": "2026-06-30T11:30:50.362Z",
+  "verdict": "PASS — FORENSIC VALIDATION COMPLETE",
+  "summary": {
+    "campaigns": 10,
+    "groups": 42,
+    "phrase_slots": 1593,
+    "primary_ads": 42,
+    "all_pass": true,
+    "bid_policy": "CORVONERO_BALANCED_CYCLIC_10_RUB_V1",
+    "cross_campaign_negatives": "NOT APPLIED",
+    "remote_nso_exclusion": "MANUAL POST-IMPORT ACTION REQUIRED"
+  },
+  "results": [
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "filename": "CORVONERO-CA-01-LOCAL-PROGRAMMIST-1S-COMMANDER-IMPORT-v1.xlsx",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "sheet_texts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "columns_78",
+          "status": "PASS",
+          "message": "78"
+        },
+        {
+          "check": "template_sha_lineage",
+          "status": "PASS",
+          "message": "source template SHA-256 1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa"
+        },
+        {
+          "check": "regions_dictionary_nso",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_count",
+          "status": "PASS",
+          "message": "1 (single-campaign workbook)"
+        },
+        {
+          "check": "expected_groups",
+          "status": "PASS",
+          "message": "7"
+        },
+        {
+          "check": "expected_keyword_rows",
+          "status": "PASS",
+          "message": "311"
+        },
+        {
+          "check": "expected_ad_rows",
+          "status": "PASS",
+          "message": "7"
+        },
+        {
+          "check": "max_group_phrase_count",
+          "status": "PASS",
+          "message": "128"
+        },
+        {
+          "check": "keyword_bids_present",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bids_within_campaign_base",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bid_ladder_payload_match",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "balanced_bid_distribution",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "distinct_bids_large_groups",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_floor_collapse",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "region",
+          "status": "PASS",
+          "message": "Новосибирская область"
+        },
+        {
+          "check": "local_no_remote_proposition",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "forbidden_organization_id",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_separate_row_16",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_21",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_36",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_59",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_66",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_77",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_206",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "no_combined_callout_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_length_limits",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_delimiter_integrity",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_ad_rows_checked",
+          "status": "PASS",
+          "message": "7"
+        },
+        {
+          "check": "no_query_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_utm_in_url",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_keyword_macro",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_fragment",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "clean_url_no_query",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "sitelinks_omitted",
+          "status": "PASS",
+          "message": ""
+        }
+      ],
+      "counts": {
+        "groups": 7,
+        "keyword_rows": 311,
+        "ad_rows": 7,
+        "max_group_keyword_count": 128
+      }
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "filename": "CORVONERO-CA-01-REMOTE-PROGRAMMIST-1S-COMMANDER-IMPORT-v1.xlsx",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "sheet_texts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "columns_78",
+          "status": "PASS",
+          "message": "78"
+        },
+        {
+          "check": "template_sha_lineage",
+          "status": "PASS",
+          "message": "source template SHA-256 1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa"
+        },
+        {
+          "check": "regions_dictionary_nso",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "regions_dictionary_russia",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_count",
+          "status": "PASS",
+          "message": "1 (single-campaign workbook)"
+        },
+        {
+          "check": "expected_groups",
+          "status": "PASS",
+          "message": "7"
+        },
+        {
+          "check": "expected_keyword_rows",
+          "status": "PASS",
+          "message": "316"
+        },
+        {
+          "check": "expected_ad_rows",
+          "status": "PASS",
+          "message": "7"
+        },
+        {
+          "check": "max_group_phrase_count",
+          "status": "PASS",
+          "message": "128"
+        },
+        {
+          "check": "keyword_bids_present",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bids_within_campaign_base",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bid_ladder_payload_match",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "balanced_bid_distribution",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "distinct_bids_large_groups",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_floor_collapse",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "region",
+          "status": "PASS",
+          "message": "Россия"
+        },
+        {
+          "check": "remote_no_local_proposition",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "forbidden_organization_id",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_separate_row_16",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_21",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_36",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_59",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_71",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_82",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_211",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "no_combined_callout_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_length_limits",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_delimiter_integrity",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_ad_rows_checked",
+          "status": "PASS",
+          "message": "7"
+        },
+        {
+          "check": "no_query_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_utm_in_url",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_keyword_macro",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_fragment",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "clean_url_no_query",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "sitelinks_omitted",
+          "status": "PASS",
+          "message": ""
+        }
+      ],
+      "counts": {
+        "groups": 7,
+        "keyword_rows": 316,
+        "ad_rows": 7,
+        "max_group_keyword_count": 128
+      }
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "filename": "CORVONERO-CA-02-LOCAL-SOPROVOZHDENIE-1S-COMMANDER-IMPORT-v1.xlsx",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "sheet_texts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "columns_78",
+          "status": "PASS",
+          "message": "78"
+        },
+        {
+          "check": "template_sha_lineage",
+          "status": "PASS",
+          "message": "source template SHA-256 1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa"
+        },
+        {
+          "check": "regions_dictionary_nso",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_count",
+          "status": "PASS",
+          "message": "1 (single-campaign workbook)"
+        },
+        {
+          "check": "expected_groups",
+          "status": "PASS",
+          "message": "4"
+        },
+        {
+          "check": "expected_keyword_rows",
+          "status": "PASS",
+          "message": "143"
+        },
+        {
+          "check": "expected_ad_rows",
+          "status": "PASS",
+          "message": "4"
+        },
+        {
+          "check": "max_group_phrase_count",
+          "status": "PASS",
+          "message": "127"
+        },
+        {
+          "check": "keyword_bids_present",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bids_within_campaign_base",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bid_ladder_payload_match",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "balanced_bid_distribution",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "distinct_bids_large_groups",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_floor_collapse",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "region",
+          "status": "PASS",
+          "message": "Новосибирская область"
+        },
+        {
+          "check": "local_no_remote_proposition",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "forbidden_organization_id",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_separate_row_16",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_30",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_32",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_160",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "no_combined_callout_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_length_limits",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_delimiter_integrity",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_ad_rows_checked",
+          "status": "PASS",
+          "message": "4"
+        },
+        {
+          "check": "no_query_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_utm_in_url",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_keyword_macro",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_fragment",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "clean_url_no_query",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "sitelinks_omitted",
+          "status": "PASS",
+          "message": ""
+        }
+      ],
+      "counts": {
+        "groups": 4,
+        "keyword_rows": 143,
+        "ad_rows": 4,
+        "max_group_keyword_count": 127
+      }
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "filename": "CORVONERO-CA-02-REMOTE-SOPROVOZHDENIE-1S-COMMANDER-IMPORT-v1.xlsx",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "sheet_texts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "columns_78",
+          "status": "PASS",
+          "message": "78"
+        },
+        {
+          "check": "template_sha_lineage",
+          "status": "PASS",
+          "message": "source template SHA-256 1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa"
+        },
+        {
+          "check": "regions_dictionary_nso",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "regions_dictionary_russia",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_count",
+          "status": "PASS",
+          "message": "1 (single-campaign workbook)"
+        },
+        {
+          "check": "expected_groups",
+          "status": "PASS",
+          "message": "4"
+        },
+        {
+          "check": "expected_keyword_rows",
+          "status": "PASS",
+          "message": "143"
+        },
+        {
+          "check": "expected_ad_rows",
+          "status": "PASS",
+          "message": "4"
+        },
+        {
+          "check": "max_group_phrase_count",
+          "status": "PASS",
+          "message": "127"
+        },
+        {
+          "check": "keyword_bids_present",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bids_within_campaign_base",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bid_ladder_payload_match",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "balanced_bid_distribution",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "distinct_bids_large_groups",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_floor_collapse",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "region",
+          "status": "PASS",
+          "message": "Россия"
+        },
+        {
+          "check": "remote_no_local_proposition",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "forbidden_organization_id",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_separate_row_16",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_30",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_32",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_160",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "no_combined_callout_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_length_limits",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_delimiter_integrity",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_ad_rows_checked",
+          "status": "PASS",
+          "message": "4"
+        },
+        {
+          "check": "no_query_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_utm_in_url",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_keyword_macro",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_fragment",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "clean_url_no_query",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "sitelinks_omitted",
+          "status": "PASS",
+          "message": ""
+        }
+      ],
+      "counts": {
+        "groups": 4,
+        "keyword_rows": 143,
+        "ad_rows": 4,
+        "max_group_keyword_count": 127
+      }
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "filename": "CORVONERO-CA-03-LOCAL-DORABOTKA-1S-COMMANDER-IMPORT-v1.xlsx",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "sheet_texts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "columns_78",
+          "status": "PASS",
+          "message": "78"
+        },
+        {
+          "check": "template_sha_lineage",
+          "status": "PASS",
+          "message": "source template SHA-256 1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa"
+        },
+        {
+          "check": "regions_dictionary_nso",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_count",
+          "status": "PASS",
+          "message": "1 (single-campaign workbook)"
+        },
+        {
+          "check": "expected_groups",
+          "status": "PASS",
+          "message": "3"
+        },
+        {
+          "check": "expected_keyword_rows",
+          "status": "PASS",
+          "message": "76"
+        },
+        {
+          "check": "expected_ad_rows",
+          "status": "PASS",
+          "message": "3"
+        },
+        {
+          "check": "max_group_phrase_count",
+          "status": "PASS",
+          "message": "69"
+        },
+        {
+          "check": "keyword_bids_present",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bids_within_campaign_base",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bid_ladder_payload_match",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "balanced_bid_distribution",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "distinct_bids_large_groups",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_floor_collapse",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "region",
+          "status": "PASS",
+          "message": "Новосибирская область"
+        },
+        {
+          "check": "local_no_remote_proposition",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "forbidden_organization_id",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_separate_row_16",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_19",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_25",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "no_combined_callout_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_length_limits",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_delimiter_integrity",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_ad_rows_checked",
+          "status": "PASS",
+          "message": "3"
+        },
+        {
+          "check": "no_query_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_utm_in_url",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_keyword_macro",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_fragment",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "clean_url_no_query",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "sitelinks_omitted",
+          "status": "PASS",
+          "message": ""
+        }
+      ],
+      "counts": {
+        "groups": 3,
+        "keyword_rows": 76,
+        "ad_rows": 3,
+        "max_group_keyword_count": 69
+      }
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "filename": "CORVONERO-CA-03-REMOTE-DORABOTKA-1S-COMMANDER-IMPORT-v1.xlsx",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "sheet_texts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "columns_78",
+          "status": "PASS",
+          "message": "78"
+        },
+        {
+          "check": "template_sha_lineage",
+          "status": "PASS",
+          "message": "source template SHA-256 1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa"
+        },
+        {
+          "check": "regions_dictionary_nso",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "regions_dictionary_russia",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_count",
+          "status": "PASS",
+          "message": "1 (single-campaign workbook)"
+        },
+        {
+          "check": "expected_groups",
+          "status": "PASS",
+          "message": "3"
+        },
+        {
+          "check": "expected_keyword_rows",
+          "status": "PASS",
+          "message": "76"
+        },
+        {
+          "check": "expected_ad_rows",
+          "status": "PASS",
+          "message": "3"
+        },
+        {
+          "check": "max_group_phrase_count",
+          "status": "PASS",
+          "message": "69"
+        },
+        {
+          "check": "keyword_bids_present",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bids_within_campaign_base",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bid_ladder_payload_match",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "balanced_bid_distribution",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "distinct_bids_large_groups",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_floor_collapse",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "region",
+          "status": "PASS",
+          "message": "Россия"
+        },
+        {
+          "check": "remote_no_local_proposition",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "forbidden_organization_id",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_separate_row_16",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_19",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_25",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "no_combined_callout_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_length_limits",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_delimiter_integrity",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_ad_rows_checked",
+          "status": "PASS",
+          "message": "3"
+        },
+        {
+          "check": "no_query_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_utm_in_url",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_keyword_macro",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_fragment",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "clean_url_no_query",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "sitelinks_omitted",
+          "status": "PASS",
+          "message": ""
+        }
+      ],
+      "counts": {
+        "groups": 3,
+        "keyword_rows": 76,
+        "ad_rows": 3,
+        "max_group_keyword_count": 69
+      }
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "filename": "CORVONERO-CA-04-LOCAL-INTEGRACII-1S-COMMANDER-IMPORT-v1.xlsx",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "sheet_texts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "columns_78",
+          "status": "PASS",
+          "message": "78"
+        },
+        {
+          "check": "template_sha_lineage",
+          "status": "PASS",
+          "message": "source template SHA-256 1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa"
+        },
+        {
+          "check": "regions_dictionary_nso",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_count",
+          "status": "PASS",
+          "message": "1 (single-campaign workbook)"
+        },
+        {
+          "check": "expected_groups",
+          "status": "PASS",
+          "message": "1"
+        },
+        {
+          "check": "expected_keyword_rows",
+          "status": "PASS",
+          "message": "48"
+        },
+        {
+          "check": "expected_ad_rows",
+          "status": "PASS",
+          "message": "1"
+        },
+        {
+          "check": "max_group_phrase_count",
+          "status": "PASS",
+          "message": "48"
+        },
+        {
+          "check": "keyword_bids_present",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bids_within_campaign_base",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bid_ladder_payload_match",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "balanced_bid_distribution",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "distinct_bids_large_groups",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_floor_collapse",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "region",
+          "status": "PASS",
+          "message": "Новосибирская область"
+        },
+        {
+          "check": "local_no_remote_proposition",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "forbidden_organization_id",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_separate_row_16",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "no_combined_callout_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_length_limits",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_delimiter_integrity",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_ad_rows_checked",
+          "status": "PASS",
+          "message": "1"
+        },
+        {
+          "check": "no_query_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_utm_in_url",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_keyword_macro",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_fragment",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "clean_url_no_query",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "sitelinks_omitted",
+          "status": "PASS",
+          "message": ""
+        }
+      ],
+      "counts": {
+        "groups": 1,
+        "keyword_rows": 48,
+        "ad_rows": 1,
+        "max_group_keyword_count": 48
+      }
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "filename": "CORVONERO-CA-04-REMOTE-INTEGRACII-1S-COMMANDER-IMPORT-v1.xlsx",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "sheet_texts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "columns_78",
+          "status": "PASS",
+          "message": "78"
+        },
+        {
+          "check": "template_sha_lineage",
+          "status": "PASS",
+          "message": "source template SHA-256 1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa"
+        },
+        {
+          "check": "regions_dictionary_nso",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "regions_dictionary_russia",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_count",
+          "status": "PASS",
+          "message": "1 (single-campaign workbook)"
+        },
+        {
+          "check": "expected_groups",
+          "status": "PASS",
+          "message": "1"
+        },
+        {
+          "check": "expected_keyword_rows",
+          "status": "PASS",
+          "message": "48"
+        },
+        {
+          "check": "expected_ad_rows",
+          "status": "PASS",
+          "message": "1"
+        },
+        {
+          "check": "max_group_phrase_count",
+          "status": "PASS",
+          "message": "48"
+        },
+        {
+          "check": "keyword_bids_present",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bids_within_campaign_base",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bid_ladder_payload_match",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "balanced_bid_distribution",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "distinct_bids_large_groups",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_floor_collapse",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "region",
+          "status": "PASS",
+          "message": "Россия"
+        },
+        {
+          "check": "remote_no_local_proposition",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "forbidden_organization_id",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_separate_row_16",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "no_combined_callout_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_length_limits",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_delimiter_integrity",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_ad_rows_checked",
+          "status": "PASS",
+          "message": "1"
+        },
+        {
+          "check": "no_query_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_utm_in_url",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_keyword_macro",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_fragment",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "clean_url_no_query",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "sitelinks_omitted",
+          "status": "PASS",
+          "message": ""
+        }
+      ],
+      "counts": {
+        "groups": 1,
+        "keyword_rows": 48,
+        "ad_rows": 1,
+        "max_group_keyword_count": 48
+      }
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "filename": "CORVONERO-CA-05-LOCAL-MARKIROVKA-1S-COMMANDER-IMPORT-v1.xlsx",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "sheet_texts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "columns_78",
+          "status": "PASS",
+          "message": "78"
+        },
+        {
+          "check": "template_sha_lineage",
+          "status": "PASS",
+          "message": "source template SHA-256 1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa"
+        },
+        {
+          "check": "regions_dictionary_nso",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_count",
+          "status": "PASS",
+          "message": "1 (single-campaign workbook)"
+        },
+        {
+          "check": "expected_groups",
+          "status": "PASS",
+          "message": "6"
+        },
+        {
+          "check": "expected_keyword_rows",
+          "status": "PASS",
+          "message": "216"
+        },
+        {
+          "check": "expected_ad_rows",
+          "status": "PASS",
+          "message": "6"
+        },
+        {
+          "check": "max_group_phrase_count",
+          "status": "PASS",
+          "message": "104"
+        },
+        {
+          "check": "keyword_bids_present",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bids_within_campaign_base",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bid_ladder_payload_match",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "balanced_bid_distribution",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "distinct_bids_large_groups",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_floor_collapse",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "region",
+          "status": "PASS",
+          "message": "Новосибирская область"
+        },
+        {
+          "check": "local_no_remote_proposition",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "forbidden_organization_id",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_separate_row_16",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_121",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_136",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_142",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_230",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_233",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "no_combined_callout_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_length_limits",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_delimiter_integrity",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_ad_rows_checked",
+          "status": "PASS",
+          "message": "6"
+        },
+        {
+          "check": "no_query_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_utm_in_url",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_keyword_macro",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_fragment",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "clean_url_no_query",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "sitelinks_omitted",
+          "status": "PASS",
+          "message": ""
+        }
+      ],
+      "counts": {
+        "groups": 6,
+        "keyword_rows": 216,
+        "ad_rows": 6,
+        "max_group_keyword_count": 104
+      }
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "filename": "CORVONERO-CA-05-REMOTE-MARKIROVKA-1S-COMMANDER-IMPORT-v1.xlsx",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "sheet_texts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "columns_78",
+          "status": "PASS",
+          "message": "78"
+        },
+        {
+          "check": "template_sha_lineage",
+          "status": "PASS",
+          "message": "source template SHA-256 1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa"
+        },
+        {
+          "check": "regions_dictionary_nso",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "regions_dictionary_russia",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_count",
+          "status": "PASS",
+          "message": "1 (single-campaign workbook)"
+        },
+        {
+          "check": "expected_groups",
+          "status": "PASS",
+          "message": "6"
+        },
+        {
+          "check": "expected_keyword_rows",
+          "status": "PASS",
+          "message": "216"
+        },
+        {
+          "check": "expected_ad_rows",
+          "status": "PASS",
+          "message": "6"
+        },
+        {
+          "check": "max_group_phrase_count",
+          "status": "PASS",
+          "message": "104"
+        },
+        {
+          "check": "keyword_bids_present",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bids_within_campaign_base",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bid_ladder_payload_match",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "balanced_bid_distribution",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "distinct_bids_large_groups",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_floor_collapse",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "region",
+          "status": "PASS",
+          "message": "Россия"
+        },
+        {
+          "check": "remote_no_local_proposition",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "forbidden_organization_id",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_separate_row_16",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_121",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_136",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_142",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_230",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "callout_separate_row_233",
+          "status": "PASS",
+          "message": "3 callouts"
+        },
+        {
+          "check": "no_combined_callout_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_length_limits",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_delimiter_integrity",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_ad_rows_checked",
+          "status": "PASS",
+          "message": "6"
+        },
+        {
+          "check": "no_query_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_utm_in_url",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_keyword_macro",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_fragment",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "clean_url_no_query",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "sitelinks_omitted",
+          "status": "PASS",
+          "message": ""
+        }
+      ],
+      "counts": {
+        "groups": 6,
+        "keyword_rows": 216,
+        "ad_rows": 6,
+        "max_group_keyword_count": 104
+      }
+    }
+  ]
+}

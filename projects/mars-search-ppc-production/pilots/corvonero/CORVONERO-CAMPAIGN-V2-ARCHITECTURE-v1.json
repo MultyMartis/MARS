@@ -1,0 +1,232 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-06-30T10:49:00.000Z",
+  "checkpoint": "ebff109061932faecdff63456a27aa7fe3823be7",
+  "campaigns": [
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "source_campaign_id": "CA-01",
+      "commander_name": "Корво Неро — Программист 1С — Новосибирск и область — поиск",
+      "service": "Программист 1С",
+      "geography_mode": "LOCAL",
+      "included_region": "Новосибирск и Новосибирская область",
+      "excluded_region": "none (campaign region selection only)",
+      "region_setting_note": "Set region to Новосибирск и Новосибирская область.",
+      "landing_url": "https://lk.corvonero.ru/programmist-1s/",
+      "base_bid": 500,
+      "bid_policy": "CORVONERO_BALANCED_CYCLIC_10_RUB_V1",
+      "schedule": "OPERATOR_DECISION_REQUIRED",
+      "networks": {
+        "search": "APPROVED",
+        "advertising_network": "DISABLED"
+      },
+      "autotargeting": "DISABLED",
+      "organization": "",
+      "tracking_policy": "GLOBAL_CAMPAIGN_PARAMETERS_SET_MANUALLY_BY_OPERATOR",
+      "ad_proposition": "С выездом по Новосибирску"
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "source_campaign_id": "CA-01",
+      "commander_name": "Корво Неро — Программист 1С — Россия без НСО — поиск",
+      "service": "Программист 1С",
+      "geography_mode": "REMOTE",
+      "included_region": "Россия",
+      "excluded_region": "Новосибирск и Новосибирская область",
+      "region_setting_note": "For REMOTE: in Yandex Direct/Commander set Russia and exclude Новосибирск + Новосибирская область manually — no dedicated exclusion column in CT5R3 XLSX authority.",
+      "landing_url": "https://lk.corvonero.ru/programmist-1s/",
+      "base_bid": 500,
+      "bid_policy": "CORVONERO_BALANCED_CYCLIC_10_RUB_V1",
+      "schedule": "OPERATOR_DECISION_REQUIRED",
+      "networks": {
+        "search": "APPROVED",
+        "advertising_network": "DISABLED"
+      },
+      "autotargeting": "DISABLED",
+      "organization": "",
+      "tracking_policy": "GLOBAL_CAMPAIGN_PARAMETERS_SET_MANUALLY_BY_OPERATOR",
+      "ad_proposition": "Удалённо по России"
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "source_campaign_id": "CA-02",
+      "commander_name": "Корво Неро — Сопровождение 1С — Новосибирск и область — поиск",
+      "service": "Сопровождение 1С",
+      "geography_mode": "LOCAL",
+      "included_region": "Новосибирск и Новосибирская область",
+      "excluded_region": "none (campaign region selection only)",
+      "region_setting_note": "Set region to Новосибирск и Новосибирская область.",
+      "landing_url": "https://lk.corvonero.ru/soprovozhdenie-1s/",
+      "base_bid": 400,
+      "bid_policy": "CORVONERO_BALANCED_CYCLIC_10_RUB_V1",
+      "schedule": "OPERATOR_DECISION_REQUIRED",
+      "networks": {
+        "search": "APPROVED",
+        "advertising_network": "DISABLED"
+      },
+      "autotargeting": "DISABLED",
+      "organization": "",
+      "tracking_policy": "GLOBAL_CAMPAIGN_PARAMETERS_SET_MANUALLY_BY_OPERATOR",
+      "ad_proposition": "С выездом по Новосибирску"
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "source_campaign_id": "CA-02",
+      "commander_name": "Корво Неро — Сопровождение 1С — Россия без НСО — поиск",
+      "service": "Сопровождение 1С",
+      "geography_mode": "REMOTE",
+      "included_region": "Россия",
+      "excluded_region": "Новосибирск и Новосибирская область",
+      "region_setting_note": "For REMOTE: in Yandex Direct/Commander set Russia and exclude Новосибирск + Новосибирская область manually — no dedicated exclusion column in CT5R3 XLSX authority.",
+      "landing_url": "https://lk.corvonero.ru/soprovozhdenie-1s/",
+      "base_bid": 400,
+      "bid_policy": "CORVONERO_BALANCED_CYCLIC_10_RUB_V1",
+      "schedule": "OPERATOR_DECISION_REQUIRED",
+      "networks": {
+        "search": "APPROVED",
+        "advertising_network": "DISABLED"
+      },
+      "autotargeting": "DISABLED",
+      "organization": "",
+      "tracking_policy": "GLOBAL_CAMPAIGN_PARAMETERS_SET_MANUALLY_BY_OPERATOR",
+      "ad_proposition": "Удалённо по России"
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "source_campaign_id": "CA-03",
+      "commander_name": "Корво Неро — Доработка и разработка 1С — Новосибирск и область — поиск",
+      "service": "Доработка и разработка 1С",
+      "geography_mode": "LOCAL",
+      "included_region": "Новосибирск и Новосибирская область",
+      "excluded_region": "none (campaign region selection only)",
+      "region_setting_note": "Set region to Новосибирск и Новосибирская область.",
+      "landing_url": "https://lk.corvonero.ru/dorabotka-razrabotka-1s/",
+      "base_bid": 400,
+      "bid_policy": "CORVONERO_BALANCED_CYCLIC_10_RUB_V1",
+      "schedule": "OPERATOR_DECISION_REQUIRED",
+      "networks": {
+        "search": "APPROVED",
+        "advertising_network": "DISABLED"
+      },
+      "autotargeting": "DISABLED",
+      "organization": "",
+      "tracking_policy": "GLOBAL_CAMPAIGN_PARAMETERS_SET_MANUALLY_BY_OPERATOR",
+      "ad_proposition": "С выездом по Новосибирску"
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "source_campaign_id": "CA-03",
+      "commander_name": "Корво Неро — Доработка и разработка 1С — Россия без НСО — поиск",
+      "service": "Доработка и разработка 1С",
+      "geography_mode": "REMOTE",
+      "included_region": "Россия",
+      "excluded_region": "Новосибирск и Новосибирская область",
+      "region_setting_note": "For REMOTE: in Yandex Direct/Commander set Russia and exclude Новосибирск + Новосибирская область manually — no dedicated exclusion column in CT5R3 XLSX authority.",
+      "landing_url": "https://lk.corvonero.ru/dorabotka-razrabotka-1s/",
+      "base_bid": 400,
+      "bid_policy": "CORVONERO_BALANCED_CYCLIC_10_RUB_V1",
+      "schedule": "OPERATOR_DECISION_REQUIRED",
+      "networks": {
+        "search": "APPROVED",
+        "advertising_network": "DISABLED"
+      },
+      "autotargeting": "DISABLED",
+      "organization": "",
+      "tracking_policy": "GLOBAL_CAMPAIGN_PARAMETERS_SET_MANUALLY_BY_OPERATOR",
+      "ad_proposition": "Удалённо по России"
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "source_campaign_id": "CA-04",
+      "commander_name": "Корво Неро — Интеграции 1С — Новосибирск и область — поиск",
+      "service": "Интеграции 1С",
+      "geography_mode": "LOCAL",
+      "included_region": "Новосибирск и Новосибирская область",
+      "excluded_region": "none (campaign region selection only)",
+      "region_setting_note": "Set region to Новосибирск и Новосибирская область.",
+      "landing_url": "https://lk.corvonero.ru/integracii-1s/",
+      "base_bid": 400,
+      "bid_policy": "CORVONERO_BALANCED_CYCLIC_10_RUB_V1",
+      "schedule": "OPERATOR_DECISION_REQUIRED",
+      "networks": {
+        "search": "APPROVED",
+        "advertising_network": "DISABLED"
+      },
+      "autotargeting": "DISABLED",
+      "organization": "",
+      "tracking_policy": "GLOBAL_CAMPAIGN_PARAMETERS_SET_MANUALLY_BY_OPERATOR",
+      "ad_proposition": "С выездом по Новосибирску"
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "source_campaign_id": "CA-04",
+      "commander_name": "Корво Неро — Интеграции 1С — Россия без НСО — поиск",
+      "service": "Интеграции 1С",
+      "geography_mode": "REMOTE",
+      "included_region": "Россия",
+      "excluded_region": "Новосибирск и Новосибирская область",
+      "region_setting_note": "For REMOTE: in Yandex Direct/Commander set Russia and exclude Новосибирск + Новосибирская область manually — no dedicated exclusion column in CT5R3 XLSX authority.",
+      "landing_url": "https://lk.corvonero.ru/integracii-1s/",
+      "base_bid": 400,
+      "bid_policy": "CORVONERO_BALANCED_CYCLIC_10_RUB_V1",
+      "schedule": "OPERATOR_DECISION_REQUIRED",
+      "networks": {
+        "search": "APPROVED",
+        "advertising_network": "DISABLED"
+      },
+      "autotargeting": "DISABLED",
+      "organization": "",
+      "tracking_policy": "GLOBAL_CAMPAIGN_PARAMETERS_SET_MANUALLY_BY_OPERATOR",
+      "ad_proposition": "Удалённо по России"
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "source_campaign_id": "CA-05",
+      "commander_name": "Корво Неро — Маркировка / Честный знак — Новосибирск и область — поиск",
+      "service": "Маркировка / Честный знак",
+      "geography_mode": "LOCAL",
+      "included_region": "Новосибирск и Новосибирская область",
+      "excluded_region": "none (campaign region selection only)",
+      "region_setting_note": "Set region to Новосибирск и Новосибирская область.",
+      "landing_url": "https://lk.corvonero.ru/markirovka-chestny-znak/",
+      "base_bid": 400,
+      "bid_policy": "CORVONERO_BALANCED_CYCLIC_10_RUB_V1",
+      "schedule": "OPERATOR_DECISION_REQUIRED",
+      "networks": {
+        "search": "APPROVED",
+        "advertising_network": "DISABLED"
+      },
+      "autotargeting": "DISABLED",
+      "organization": "",
+      "tracking_policy": "GLOBAL_CAMPAIGN_PARAMETERS_SET_MANUALLY_BY_OPERATOR",
+      "ad_proposition": "С выездом по Новосибирску"
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "source_campaign_id": "CA-05",
+      "commander_name": "Корво Неро — Маркировка / Честный знак — Россия без НСО — поиск",
+      "service": "Маркировка / Честный знак",
+      "geography_mode": "REMOTE",
+      "included_region": "Россия",
+      "excluded_region": "Новосибирск и Новосибирская область",
+      "region_setting_note": "For REMOTE: in Yandex Direct/Commander set Russia and exclude Новосибирск + Новосибирская область manually — no dedicated exclusion column in CT5R3 XLSX authority.",
+      "landing_url": "https://lk.corvonero.ru/markirovka-chestny-znak/",
+      "base_bid": 400,
+      "bid_policy": "CORVONERO_BALANCED_CYCLIC_10_RUB_V1",
+      "schedule": "OPERATOR_DECISION_REQUIRED",
+      "networks": {
+        "search": "APPROVED",
+        "advertising_network": "DISABLED"
+      },
+      "autotargeting": "DISABLED",
+      "organization": "",
+      "tracking_policy": "GLOBAL_CAMPAIGN_PARAMETERS_SET_MANUALLY_BY_OPERATOR",
+      "ad_proposition": "Удалённо по России"
+    }
+  ],
+  "totals": {
+    "campaigns": 10,
+    "local": 5,
+    "remote": 5
+  }
+}

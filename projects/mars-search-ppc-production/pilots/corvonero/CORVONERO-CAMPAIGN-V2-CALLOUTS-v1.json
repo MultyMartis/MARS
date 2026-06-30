@@ -1,0 +1,275 @@
+{
+  "callout_id": "corvonero-campaign-v2-callouts-v1",
+  "generated_at": "2026-06-28T23:31:33.742Z",
+  "operator_task_ref": "CURSOR TASK — CORVONERO EXTENSIONS WAVE 1 — APPLY OPERATOR DECISIONS",
+  "max_chars": 25,
+  "import_column": "Уточнения (col 67)",
+  "copy_status": "APPROVED",
+  "campaign_pools": {
+    "CA-01-LOCAL": [
+      {
+        "text": "Выезд в Новосибирске",
+        "char_count": 20,
+        "valid": true,
+        "scope": "operator_approved",
+        "evidence": "LP copy work_format.onsite",
+        "operator_status": "APPROVED"
+      },
+      {
+        "text": "Работа по договору",
+        "char_count": 18,
+        "valid": true,
+        "scope": "operator_approved",
+        "evidence": "LP trust facts / operator_decisions",
+        "operator_status": "APPROVED"
+      },
+      {
+        "text": "Минимальный заказ 2 часа",
+        "char_count": 24,
+        "valid": true,
+        "scope": "CA-01_only",
+        "evidence": "LP-01 pricing.minimum_hours",
+        "operator_status": "APPROVED"
+      }
+    ],
+    "CA-01-REMOTE": [
+      {
+        "text": "Удалённо по России",
+        "char_count": 18,
+        "valid": true,
+        "scope": "operator_approved",
+        "evidence": "LP copy work_format.remote",
+        "operator_status": "APPROVED"
+      },
+      {
+        "text": "Работа по договору",
+        "char_count": 18,
+        "valid": true,
+        "scope": "operator_approved",
+        "evidence": "LP trust facts / operator_decisions",
+        "operator_status": "APPROVED"
+      },
+      {
+        "text": "Минимальный заказ 2 часа",
+        "char_count": 24,
+        "valid": true,
+        "scope": "CA-01_only",
+        "evidence": "LP-01 pricing.minimum_hours",
+        "operator_status": "APPROVED"
+      }
+    ],
+    "CA-02-LOCAL": [
+      {
+        "text": "Выезд в Новосибирске",
+        "char_count": 20,
+        "valid": true,
+        "scope": "operator_approved",
+        "evidence": "LP copy work_format.onsite",
+        "operator_status": "APPROVED"
+      },
+      {
+        "text": "Поддержка рабочей базы",
+        "char_count": 22,
+        "valid": true,
+        "scope": "campaign_filtered",
+        "evidence": "LP-02 copy",
+        "operator_status": "APPROVED"
+      },
+      {
+        "text": "УТ, УНФ, Розница, КА, БП",
+        "char_count": 24,
+        "valid": true,
+        "scope": "operator_approved",
+        "evidence": "LP configurations section",
+        "operator_status": "APPROVED"
+      }
+    ],
+    "CA-02-REMOTE": [
+      {
+        "text": "Удалённо по России",
+        "char_count": 18,
+        "valid": true,
+        "scope": "operator_approved",
+        "evidence": "LP copy work_format.remote",
+        "operator_status": "APPROVED"
+      },
+      {
+        "text": "Поддержка рабочей базы",
+        "char_count": 22,
+        "valid": true,
+        "scope": "campaign_filtered",
+        "evidence": "LP-02 copy",
+        "operator_status": "APPROVED"
+      },
+      {
+        "text": "УТ, УНФ, Розница, КА, БП",
+        "char_count": 24,
+        "valid": true,
+        "scope": "operator_approved",
+        "evidence": "LP configurations section",
+        "operator_status": "APPROVED"
+      }
+    ],
+    "CA-03-LOCAL": [
+      {
+        "text": "Выезд в Новосибирске",
+        "char_count": 20,
+        "valid": true,
+        "scope": "operator_approved",
+        "evidence": "LP copy work_format.onsite",
+        "operator_status": "APPROVED"
+      },
+      {
+        "text": "Работа по договору",
+        "char_count": 18,
+        "valid": true,
+        "scope": "operator_approved",
+        "evidence": "LP trust facts / operator_decisions",
+        "operator_status": "APPROVED"
+      },
+      {
+        "text": "УТ, УНФ, Розница, КА, БП",
+        "char_count": 24,
+        "valid": true,
+        "scope": "operator_approved",
+        "evidence": "LP configurations section",
+        "operator_status": "APPROVED"
+      }
+    ],
+    "CA-03-REMOTE": [
+      {
+        "text": "Удалённо по России",
+        "char_count": 18,
+        "valid": true,
+        "scope": "operator_approved",
+        "evidence": "LP copy work_format.remote",
+        "operator_status": "APPROVED"
+      },
+      {
+        "text": "Работа по договору",
+        "char_count": 18,
+        "valid": true,
+        "scope": "operator_approved",
+        "evidence": "LP trust facts / operator_decisions",
+        "operator_status": "APPROVED"
+      },
+      {
+        "text": "УТ, УНФ, Розница, КА, БП",
+        "char_count": 24,
+        "valid": true,
+        "scope": "operator_approved",
+        "evidence": "LP configurations section",
+        "operator_status": "APPROVED"
+      }
+    ],
+    "CA-04-LOCAL": [
+      {
+        "text": "Выезд в Новосибирске",
+        "char_count": 20,
+        "valid": true,
+        "scope": "operator_approved",
+        "evidence": "LP copy work_format.onsite",
+        "operator_status": "APPROVED"
+      },
+      {
+        "text": "Работа по договору",
+        "char_count": 18,
+        "valid": true,
+        "scope": "operator_approved",
+        "evidence": "LP trust facts / operator_decisions",
+        "operator_status": "APPROVED"
+      },
+      {
+        "text": "УТ, УНФ, Розница, КА, БП",
+        "char_count": 24,
+        "valid": true,
+        "scope": "operator_approved",
+        "evidence": "LP configurations section",
+        "operator_status": "APPROVED"
+      }
+    ],
+    "CA-04-REMOTE": [
+      {
+        "text": "Удалённо по России",
+        "char_count": 18,
+        "valid": true,
+        "scope": "operator_approved",
+        "evidence": "LP copy work_format.remote",
+        "operator_status": "APPROVED"
+      },
+      {
+        "text": "Работа по договору",
+        "char_count": 18,
+        "valid": true,
+        "scope": "operator_approved",
+        "evidence": "LP trust facts / operator_decisions",
+        "operator_status": "APPROVED"
+      },
+      {
+        "text": "УТ, УНФ, Розница, КА, БП",
+        "char_count": 24,
+        "valid": true,
+        "scope": "operator_approved",
+        "evidence": "LP configurations section",
+        "operator_status": "APPROVED"
+      }
+    ],
+    "CA-05-LOCAL": [
+      {
+        "text": "Выезд в Новосибирске",
+        "char_count": 20,
+        "valid": true,
+        "scope": "operator_approved",
+        "evidence": "LP copy work_format.onsite",
+        "operator_status": "APPROVED"
+      },
+      {
+        "text": "Настройка маркировки",
+        "char_count": 20,
+        "valid": true,
+        "scope": "CA-05_only",
+        "evidence": "LP-05 service_scope",
+        "operator_status": "APPROVED"
+      },
+      {
+        "text": "УТ, УНФ, Розница, КА, БП",
+        "char_count": 24,
+        "valid": true,
+        "scope": "operator_approved",
+        "evidence": "LP configurations section",
+        "operator_status": "APPROVED"
+      }
+    ],
+    "CA-05-REMOTE": [
+      {
+        "text": "Удалённо по России",
+        "char_count": 18,
+        "valid": true,
+        "scope": "operator_approved",
+        "evidence": "LP copy work_format.remote",
+        "operator_status": "APPROVED"
+      },
+      {
+        "text": "Настройка маркировки",
+        "char_count": 20,
+        "valid": true,
+        "scope": "CA-05_only",
+        "evidence": "LP-05 service_scope",
+        "operator_status": "APPROVED"
+      },
+      {
+        "text": "УТ, УНФ, Розница, КА, БП",
+        "char_count": 24,
+        "valid": true,
+        "scope": "operator_approved",
+        "evidence": "LP configurations section",
+        "operator_status": "APPROVED"
+      }
+    ]
+  },
+  "validation": {
+    "callout_sets": 5,
+    "all_valid": true
+  },
+  "v2_mode_filter": "LOCAL excludes remote callouts; REMOTE excludes local callouts"
+}

@@ -1,0 +1,2268 @@
+{
+  "generated_at": "2026-06-30T11:13:36.000Z",
+  "checkpoint": "ebff109061932faecdff63456a27aa7fe3823be7",
+  "status": "PROPOSED — NOT OPERATOR APPROVED",
+  "summary": {
+    "campaign_sets": 10,
+    "operator_decisions_required": 25
+  },
+  "reviews": [
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "negative": "вакансия",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "negative": "работа программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "negative": "резюме",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "negative": "сертификация",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "negative": "кряк",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "negative": "зарплата",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "negative": "стань программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "negative": "становится программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "negative": "скачать",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "negative": "купить 1с",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "negative": "лицензия 1с",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "negative": "удалённо",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "negative": "удаленно",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "negative": "дистанционно",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "negative": "без выезда",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "negative": "по всей россии",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "negative": "по россии",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "negative": "по рф",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "negative": "удалённый",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Широкое слово «удалённый» — возможны ложные срабатывания",
+      "operator_decision_required": true
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "negative": "удаленный",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Широкое слово «удаленный» — возможны ложные срабатывания",
+      "operator_decision_required": true
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "negative": "удалёнка",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "negative": "удаленка",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "negative": "онлайн",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Широкое слово «онлайн» — возможны ложные срабатывания",
+      "operator_decision_required": true
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "negative": "вакансия",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "negative": "работа программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "negative": "резюме",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "negative": "сертификация",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "negative": "кряк",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "negative": "зарплата",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "negative": "стань программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "negative": "становится программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "negative": "скачать",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "negative": "купить 1с",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "negative": "лицензия 1с",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "negative": "новосибирск",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "negative": "новосибирский",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "negative": "новосибирская",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "negative": "нск",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 4,
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Есть конфликт с включёнными фразами",
+      "operator_decision_required": true
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "negative": "с выездом",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "negative": "выезд",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Широкое слово «выезд» — возможны ложные срабатывания",
+      "operator_decision_required": true
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "negative": "в офис",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "negative": "на месте",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "negative": "приехать",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "negative": "с выездом специалиста",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "negative": "вакансия",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "negative": "работа программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "negative": "резюме",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "negative": "сертификация",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "negative": "кряк",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "negative": "зарплата",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "negative": "стань программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "negative": "становится программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "negative": "скачать",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "negative": "купить 1с",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "negative": "лицензия 1с",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "negative": "удалённо",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "negative": "удаленно",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "negative": "дистанционно",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "negative": "без выезда",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "negative": "по всей россии",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "negative": "по россии",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "negative": "по рф",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "negative": "удалённый",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Широкое слово «удалённый» — возможны ложные срабатывания",
+      "operator_decision_required": true
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "negative": "удаленный",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Широкое слово «удаленный» — возможны ложные срабатывания",
+      "operator_decision_required": true
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "negative": "удалёнка",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "negative": "удаленка",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "negative": "онлайн",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Широкое слово «онлайн» — возможны ложные срабатывания",
+      "operator_decision_required": true
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "negative": "вакансия",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "negative": "работа программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "negative": "резюме",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "negative": "сертификация",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "negative": "кряк",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "negative": "зарплата",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "negative": "стань программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "negative": "становится программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "negative": "скачать",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "negative": "купить 1с",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "negative": "лицензия 1с",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "negative": "новосибирск",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "negative": "новосибирский",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "negative": "новосибирская",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "negative": "нск",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 1,
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Есть конфликт с включёнными фразами",
+      "operator_decision_required": true
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "negative": "с выездом",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "negative": "выезд",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Широкое слово «выезд» — возможны ложные срабатывания",
+      "operator_decision_required": true
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "negative": "в офис",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "negative": "на месте",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "negative": "приехать",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "negative": "с выездом специалиста",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "negative": "вакансия",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "negative": "работа программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "negative": "резюме",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "negative": "сертификация",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "negative": "кряк",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "negative": "зарплата",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "negative": "стань программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "negative": "становится программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "negative": "скачать",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "negative": "купить 1с",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "negative": "лицензия 1с",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "negative": "удалённо",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "negative": "удаленно",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "negative": "дистанционно",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "negative": "без выезда",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "negative": "по всей россии",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "negative": "по россии",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "negative": "по рф",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "negative": "удалённый",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Широкое слово «удалённый» — возможны ложные срабатывания",
+      "operator_decision_required": true
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "negative": "удаленный",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Широкое слово «удаленный» — возможны ложные срабатывания",
+      "operator_decision_required": true
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "negative": "удалёнка",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "negative": "удаленка",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "negative": "онлайн",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Широкое слово «онлайн» — возможны ложные срабатывания",
+      "operator_decision_required": true
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "negative": "вакансия",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "negative": "работа программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "negative": "резюме",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "negative": "сертификация",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "negative": "кряк",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "negative": "зарплата",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "negative": "стань программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "negative": "становится программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "negative": "скачать",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "negative": "купить 1с",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "negative": "лицензия 1с",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "negative": "новосибирск",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "negative": "новосибирский",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "negative": "новосибирская",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "negative": "нск",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 1,
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Есть конфликт с включёнными фразами",
+      "operator_decision_required": true
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "negative": "с выездом",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "negative": "выезд",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Широкое слово «выезд» — возможны ложные срабатывания",
+      "operator_decision_required": true
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "negative": "в офис",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "negative": "на месте",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "negative": "приехать",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "negative": "с выездом специалиста",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "negative": "вакансия",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "negative": "работа программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "negative": "резюме",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "negative": "сертификация",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "negative": "кряк",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "negative": "зарплата",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "negative": "стань программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "negative": "становится программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "negative": "скачать",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 1,
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Есть конфликт с включёнными фразами",
+      "operator_decision_required": true
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "negative": "купить 1с",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "negative": "лицензия 1с",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "negative": "удалённо",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "negative": "удаленно",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "negative": "дистанционно",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "negative": "без выезда",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "negative": "по всей россии",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "negative": "по россии",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "negative": "по рф",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "negative": "удалённый",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Широкое слово «удалённый» — возможны ложные срабатывания",
+      "operator_decision_required": true
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "negative": "удаленный",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Широкое слово «удаленный» — возможны ложные срабатывания",
+      "operator_decision_required": true
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "negative": "удалёнка",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "negative": "удаленка",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "negative": "онлайн",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Широкое слово «онлайн» — возможны ложные срабатывания",
+      "operator_decision_required": true
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "negative": "вакансия",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "negative": "работа программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "negative": "резюме",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "negative": "сертификация",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "negative": "кряк",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "negative": "зарплата",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "negative": "стань программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "negative": "становится программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "negative": "скачать",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 1,
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Есть конфликт с включёнными фразами",
+      "operator_decision_required": true
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "negative": "купить 1с",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "negative": "лицензия 1с",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "negative": "новосибирск",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "negative": "новосибирский",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "negative": "новосибирская",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "negative": "нск",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "negative": "с выездом",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "negative": "выезд",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Широкое слово «выезд» — возможны ложные срабатывания",
+      "operator_decision_required": true
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "negative": "в офис",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "negative": "на месте",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "negative": "приехать",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "negative": "с выездом специалиста",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "negative": "вакансия",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "negative": "работа программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "negative": "резюме",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "negative": "сертификация",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "negative": "кряк",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "negative": "зарплата",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "negative": "стань программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "negative": "становится программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "negative": "скачать",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "negative": "купить 1с",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "negative": "лицензия 1с",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "negative": "заказать коды маркировки",
+      "category": "SERVICE-SPECIFIC NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "negative": "удалённо",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "negative": "удаленно",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "negative": "дистанционно",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "negative": "без выезда",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "negative": "по всей россии",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "negative": "по россии",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "negative": "по рф",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "negative": "удалённый",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Широкое слово «удалённый» — возможны ложные срабатывания",
+      "operator_decision_required": true
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "negative": "удаленный",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Широкое слово «удаленный» — возможны ложные срабатывания",
+      "operator_decision_required": true
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "negative": "удалёнка",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "negative": "удаленка",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 LOCAL geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "negative": "онлайн",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Широкое слово «онлайн» — возможны ложные срабатывания",
+      "operator_decision_required": true
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "negative": "вакансия",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "negative": "работа программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "negative": "резюме",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "negative": "сертификация",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "negative": "кряк",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "negative": "зарплата",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "negative": "стань программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "negative": "становится программистом",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "negative": "скачать",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "negative": "купить 1с",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "negative": "лицензия 1с",
+      "category": "BASE COMMERCIAL NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "negative": "заказать коды маркировки",
+      "category": "SERVICE-SPECIFIC NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "Preserved CT4 operator-approved campaign negative",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "negative": "новосибирск",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "negative": "новосибирский",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "negative": "новосибирская",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "negative": "нск",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "negative": "с выездом",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "negative": "выезд",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Широкое слово «выезд» — возможны ложные срабатывания",
+      "operator_decision_required": true
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "negative": "в офис",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "negative": "на месте",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "negative": "приехать",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "negative": "с выездом специалиста",
+      "category": "GEOGRAPHIC / DELIVERY-MODE NEGATIVES",
+      "conflict_count": 0,
+      "recommendation": "APPROVE",
+      "reason": "V2 REMOTE geographic delivery-mode filter candidate",
+      "operator_decision_required": false
+    }
+  ],
+  "campaigns": [
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "proposed_negatives": [
+        "без выезда",
+        "вакансия",
+        "дистанционно",
+        "зарплата",
+        "кряк",
+        "купить 1с",
+        "лицензия 1с",
+        "по всей россии",
+        "по россии",
+        "по рф",
+        "работа программистом",
+        "резюме",
+        "сертификация",
+        "скачать",
+        "становится программистом",
+        "стань программистом",
+        "удаленка",
+        "удаленно",
+        "удалёнка",
+        "удалённо"
+      ],
+      "status": "PROPOSED — NOT OPERATOR APPROVED"
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "proposed_negatives": [
+        "в офис",
+        "вакансия",
+        "зарплата",
+        "кряк",
+        "купить 1с",
+        "лицензия 1с",
+        "на месте",
+        "новосибирск",
+        "новосибирская",
+        "новосибирский",
+        "приехать",
+        "работа программистом",
+        "резюме",
+        "с выездом",
+        "с выездом специалиста",
+        "сертификация",
+        "скачать",
+        "становится программистом",
+        "стань программистом"
+      ],
+      "status": "PROPOSED — NOT OPERATOR APPROVED"
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "proposed_negatives": [
+        "без выезда",
+        "вакансия",
+        "дистанционно",
+        "зарплата",
+        "кряк",
+        "купить 1с",
+        "лицензия 1с",
+        "по всей россии",
+        "по россии",
+        "по рф",
+        "работа программистом",
+        "резюме",
+        "сертификация",
+        "скачать",
+        "становится программистом",
+        "стань программистом",
+        "удаленка",
+        "удаленно",
+        "удалёнка",
+        "удалённо"
+      ],
+      "status": "PROPOSED — NOT OPERATOR APPROVED"
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "proposed_negatives": [
+        "в офис",
+        "вакансия",
+        "зарплата",
+        "кряк",
+        "купить 1с",
+        "лицензия 1с",
+        "на месте",
+        "новосибирск",
+        "новосибирская",
+        "новосибирский",
+        "приехать",
+        "работа программистом",
+        "резюме",
+        "с выездом",
+        "с выездом специалиста",
+        "сертификация",
+        "скачать",
+        "становится программистом",
+        "стань программистом"
+      ],
+      "status": "PROPOSED — NOT OPERATOR APPROVED"
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "proposed_negatives": [
+        "без выезда",
+        "вакансия",
+        "дистанционно",
+        "зарплата",
+        "кряк",
+        "купить 1с",
+        "лицензия 1с",
+        "по всей россии",
+        "по россии",
+        "по рф",
+        "работа программистом",
+        "резюме",
+        "сертификация",
+        "скачать",
+        "становится программистом",
+        "стань программистом",
+        "удаленка",
+        "удаленно",
+        "удалёнка",
+        "удалённо"
+      ],
+      "status": "PROPOSED — NOT OPERATOR APPROVED"
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "proposed_negatives": [
+        "в офис",
+        "вакансия",
+        "зарплата",
+        "кряк",
+        "купить 1с",
+        "лицензия 1с",
+        "на месте",
+        "новосибирск",
+        "новосибирская",
+        "новосибирский",
+        "приехать",
+        "работа программистом",
+        "резюме",
+        "с выездом",
+        "с выездом специалиста",
+        "сертификация",
+        "скачать",
+        "становится программистом",
+        "стань программистом"
+      ],
+      "status": "PROPOSED — NOT OPERATOR APPROVED"
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "proposed_negatives": [
+        "без выезда",
+        "вакансия",
+        "дистанционно",
+        "зарплата",
+        "кряк",
+        "купить 1с",
+        "лицензия 1с",
+        "по всей россии",
+        "по россии",
+        "по рф",
+        "работа программистом",
+        "резюме",
+        "сертификация",
+        "становится программистом",
+        "стань программистом",
+        "удаленка",
+        "удаленно",
+        "удалёнка",
+        "удалённо"
+      ],
+      "status": "PROPOSED — NOT OPERATOR APPROVED"
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "proposed_negatives": [
+        "в офис",
+        "вакансия",
+        "зарплата",
+        "кряк",
+        "купить 1с",
+        "лицензия 1с",
+        "на месте",
+        "новосибирск",
+        "новосибирская",
+        "новосибирский",
+        "нск",
+        "приехать",
+        "работа программистом",
+        "резюме",
+        "с выездом",
+        "с выездом специалиста",
+        "сертификация",
+        "становится программистом",
+        "стань программистом"
+      ],
+      "status": "PROPOSED — NOT OPERATOR APPROVED"
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "proposed_negatives": [
+        "без выезда",
+        "вакансия",
+        "дистанционно",
+        "заказать коды маркировки",
+        "зарплата",
+        "кряк",
+        "купить 1с",
+        "лицензия 1с",
+        "по всей россии",
+        "по россии",
+        "по рф",
+        "работа программистом",
+        "резюме",
+        "сертификация",
+        "скачать",
+        "становится программистом",
+        "стань программистом",
+        "удаленка",
+        "удаленно",
+        "удалёнка",
+        "удалённо"
+      ],
+      "status": "PROPOSED — NOT OPERATOR APPROVED"
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "proposed_negatives": [
+        "в офис",
+        "вакансия",
+        "заказать коды маркировки",
+        "зарплата",
+        "кряк",
+        "купить 1с",
+        "лицензия 1с",
+        "на месте",
+        "новосибирск",
+        "новосибирская",
+        "новосибирский",
+        "нск",
+        "приехать",
+        "работа программистом",
+        "резюме",
+        "с выездом",
+        "с выездом специалиста",
+        "сертификация",
+        "скачать",
+        "становится программистом",
+        "стань программистом"
+      ],
+      "status": "PROPOSED — NOT OPERATOR APPROVED"
+    }
+  ]
+}

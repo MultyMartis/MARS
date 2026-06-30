@@ -1,0 +1,71 @@
+{
+  "policy_id": "corvonero-ext-w1-utm-policy-v2",
+  "generated_at": "2026-06-28T23:31:33.742Z",
+  "operator_task_ref": "CURSOR TASK — CORVONERO EXTENSIONS WAVE 1 — APPLY OPERATOR DECISIONS",
+  "status": "APPROVED — BASE POLICY",
+  "approved_base_parameters": {
+    "utm_source": "yandex",
+    "utm_medium": "cpc",
+    "utm_campaign": "<campaign_slug>",
+    "utm_content": "<group_slug>"
+  },
+  "approved_url_suffix": "?utm_source=yandex&utm_medium=cpc&utm_campaign=<campaign_slug>&utm_content=<group_slug>",
+  "campaign_slugs": {
+    "CA-01-LOCAL": "corv_programmist_1s",
+    "CA-02-LOCAL": "corv_soprovozhdenie_1s",
+    "CA-03-LOCAL": "corv_dorabotka_1s",
+    "CA-04-LOCAL": "corv_integracii_1s",
+    "CA-05-LOCAL": "corv_markirovka_1s",
+    "CA-01-REMOTE": "corv_programmist_1s",
+    "CA-02-REMOTE": "corv_soprovozhdenie_1s",
+    "CA-03-REMOTE": "corv_dorabotka_1s",
+    "CA-04-REMOTE": "corv_integracii_1s",
+    "CA-05-REMOTE": "corv_markirovka_1s"
+  },
+  "group_slug_policy": "utm_content = final deployable group slug",
+  "group_slugs": {
+    "ca-01-specialist-search": "ca-01-specialist-search",
+    "ca-02-support-and-maintenance": "ca-02-support-and-maintenance",
+    "ca-03-modification": "ca-03-modification",
+    "ca-04-integration": "ca-04-integration",
+    "ca-01-price-intent": "ca-01-price-intent",
+    "ca-05-integration": "ca-05-integration",
+    "ca-02-direct-service-order": "ca-02-direct-service-order",
+    "ca-03-implementation": "ca-03-implementation",
+    "ca-01-direct-service-order": "ca-01-direct-service-order",
+    "ca-05-ts-piot": "ca-05-ts-piot",
+    "ca-02-troubleshooting-not-working": "ca-02-troubleshooting-not-working",
+    "ca-03-direct-service-order": "ca-03-direct-service-order",
+    "ca-05-support-and-maintenance": "ca-05-support-and-maintenance",
+    "ca-02-price-intent": "ca-02-price-intent",
+    "ca-01-find-hire-specialist": "ca-01-find-hire-specialist",
+    "ca-01-remote-freelance-specialist": "ca-01-remote-freelance-specialist",
+    "ca-01-specialist-by-product": "ca-01-specialist-by-product",
+    "ca-01-specialist-extended": "ca-01-specialist-extended",
+    "ca-05-chestny-znak-service": "ca-05-chestny-znak-service",
+    "ca-05-marking-codes": "ca-05-marking-codes",
+    "ca-05-marking-setup": "ca-05-marking-setup"
+  },
+  "utm_term": {
+    "proposed_macro": "{keyword}",
+    "status": "REQUIRES_COMMANDER_TEMPLATE_CONFIRMATION",
+    "in_approved_production_suffix": false,
+    "note": "Do not place utm_term into the production-ready URL until Commander template confirms dynamic keyword macro support"
+  },
+  "encoding_policy": {
+    "lowercase": true,
+    "cyrillic_in_slugs": "AVOID — use Latin transliteration for utm_campaign and utm_content",
+    "url_encoding": "encodeURIComponent for utm_term when static; macro substitution when supported"
+  },
+  "join_rules": {
+    "base_url_has_query": "use & for subsequent params",
+    "base_url_no_query": "use ? before first param",
+    "fragment_anchor": "UTM query before fragment — https://host/path/?utm_source=...#anchor",
+    "duplicate_question_mark": "FORBIDDEN — normalize before export"
+  },
+  "example_without_keyword_macro": "https://lk.corvonero.ru/programmist-1s/?utm_source=yandex&utm_medium=cpc&utm_campaign=corv_programmist_1s&utm_content=ca-01-specialist-search",
+  "validation": {
+    "campaign_slugs_unique": 5,
+    "keyword_macro_in_approved_suffix": false
+  }
+}

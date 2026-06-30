@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-06-30T10:49:00.000Z",
+  "generated_authority_count": 833,
+  "commander_observed_count": 828,
+  "delta": 5,
+  "exact_five_row_identity": "UNKNOWN",
+  "commander_export_available": false,
+  "status": "UNVERIFIED — COMMANDER EXPORT REQUIRED",
+  "duplicate_groups_found": 0,
+  "candidate_reduction_rows": 0,
+  "top_candidate_reductions": [],
+  "all_candidate_reductions": [],
+  "accounting_note": "833 authority deployable rows retained as source truth; 828 is operational Commander aggregate only. Deterministic duplicate/normalization scan over all 833 authority rows found zero exact or normalized phrase collisions — the five-row delta is not explainable from source authority alone.",
+  "authority_duplicate_scan": {
+    "exact_phrase_duplicates": 0,
+    "normalized_phrase_duplicates": 0,
+    "cross_campaign_normalized_duplicates": 0
+  }
+}

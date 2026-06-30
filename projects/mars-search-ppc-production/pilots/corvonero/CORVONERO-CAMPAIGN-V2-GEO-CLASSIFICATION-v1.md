@@ -1,0 +1,12 @@
+# CORVONERO Campaign V2 Geo Classification v1
+
+Generated: 2026-06-30T10:49:00.000Z
+Checkpoint: `ebff109061932faecdff63456a27aa7fe3823be7`
+
+## Counts
+
+- NEUTRAL: 791
+- REMOTE_EXPLICIT: 7
+- CONFLICTING_OR_AMBIGUOUS: 30
+- LOCAL_EXPLICIT: 2
+- REJECT_CANDIDATE: 3

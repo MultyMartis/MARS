@@ -1,0 +1,275 @@
+{
+  "generated_at": "2026-06-30T11:13:36.000Z",
+  "checkpoint": "ebff109061932faecdff63456a27aa7fe3823be7",
+  "status": "PROPOSED — NOT APPLIED — separate Direct configuration layer",
+  "summary": {
+    "rules_reviewed": 17,
+    "operator_decisions_required": 9
+  },
+  "reviews": [
+    {
+      "source_campaign": "CA-01",
+      "negative": "сопровождение",
+      "protected_target_campaign": "CA-02",
+      "conflicting_included_phrases": 120,
+      "sample_conflicts": [
+        "программист сопровождение 1с",
+        "сопровождение 1с",
+        "сопровождение 1с предприятие",
+        "программное сопровождение 1с",
+        "сопровождение продуктов 1с"
+      ],
+      "recommendation": "REJECT",
+      "reason": "Слишком много конфликтов (120) с фразами целевой кампании",
+      "operator_decision_required": false
+    },
+    {
+      "source_campaign": "CA-01",
+      "negative": "обслуживание",
+      "protected_target_campaign": "CA-02",
+      "conflicting_included_phrases": 2,
+      "sample_conflicts": [
+        "обслуживание и сопровождение 1с",
+        "сопровождение и обслуживание 1с предприятие"
+      ],
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Умеренный конфликт (2) — оценить коммерческую ценность",
+      "operator_decision_required": true
+    },
+    {
+      "source_campaign": "CA-01",
+      "negative": "доработка",
+      "protected_target_campaign": "CA-03",
+      "conflicting_included_phrases": 43,
+      "sample_conflicts": [
+        "программист 1с доработка",
+        "сопровождение и доработка 1с",
+        "доработка 1с",
+        "доработка конфигурации 1с",
+        "доработка расширений 1с"
+      ],
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Высокий конфликт (43) — широкий минус «доработка» блокирует смежные запросы",
+      "operator_decision_required": true
+    },
+    {
+      "source_campaign": "CA-01",
+      "negative": "разработка",
+      "protected_target_campaign": "CA-03",
+      "conflicting_included_phrases": 4,
+      "sample_conflicts": [
+        "программист 1с разработка",
+        "1с программист разработка и автоматизация",
+        "1с сопровождение разработка",
+        "разработка доработка 1с"
+      ],
+      "recommendation": "NARROW",
+      "reason": "Конфликт 4 — рекомендуется узкий минус вместо «разработка»",
+      "operator_decision_required": true
+    },
+    {
+      "source_campaign": "CA-01",
+      "negative": "интеграция",
+      "protected_target_campaign": "CA-04",
+      "conflicting_included_phrases": 30,
+      "sample_conflicts": [
+        "интеграция сайта с 1с",
+        "битрикс сайт интеграция с 1с",
+        "управление сайтом интеграция с 1с",
+        "битрикс управление сайтом интеграция с 1с",
+        "1с унф интеграция с сайтом"
+      ],
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Высокий конфликт (30) — широкий минус «интеграция» блокирует смежные запросы",
+      "operator_decision_required": true
+    },
+    {
+      "source_campaign": "CA-01",
+      "negative": "маркировка",
+      "protected_target_campaign": "CA-05",
+      "conflicting_included_phrases": 87,
+      "sample_conflicts": [
+        "маркировка в 1с",
+        "маркировка товаров в 1с",
+        "маркировка честный знак в 1с",
+        "маркировка в 1с ут",
+        "маркировка в 1с бухгалтерия"
+      ],
+      "recommendation": "REJECT",
+      "reason": "Слишком много конфликтов (87) с фразами целевой кампании",
+      "operator_decision_required": false
+    },
+    {
+      "source_campaign": "CA-01",
+      "negative": "честный знак",
+      "protected_target_campaign": "CA-05",
+      "conflicting_included_phrases": 102,
+      "sample_conflicts": [
+        "маркировка честный знак в 1с",
+        "маркировка товаров в 1с честный знак",
+        "маркировка честный знак в 1с унф",
+        "маркировка честный знак в 1с ут",
+        "маркировка честный знак в 1с бухгалтерия"
+      ],
+      "recommendation": "REJECT",
+      "reason": "Слишком много конфликтов (102) с фразами целевой кампании",
+      "operator_decision_required": false
+    },
+    {
+      "source_campaign": "CA-02",
+      "negative": "доработка",
+      "protected_target_campaign": "CA-03",
+      "conflicting_included_phrases": 43,
+      "sample_conflicts": [
+        "программист 1с доработка",
+        "сопровождение и доработка 1с",
+        "доработка 1с",
+        "доработка конфигурации 1с",
+        "доработка расширений 1с"
+      ],
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Высокий конфликт (43) — широкий минус «доработка» блокирует смежные запросы",
+      "operator_decision_required": true
+    },
+    {
+      "source_campaign": "CA-02",
+      "negative": "разработка",
+      "protected_target_campaign": "CA-03",
+      "conflicting_included_phrases": 4,
+      "sample_conflicts": [
+        "программист 1с разработка",
+        "1с программист разработка и автоматизация",
+        "1с сопровождение разработка",
+        "разработка доработка 1с"
+      ],
+      "recommendation": "NARROW",
+      "reason": "Конфликт 4 — рекомендуется узкий минус вместо «разработка»",
+      "operator_decision_required": true
+    },
+    {
+      "source_campaign": "CA-02",
+      "negative": "интеграция",
+      "protected_target_campaign": "CA-04",
+      "conflicting_included_phrases": 30,
+      "sample_conflicts": [
+        "интеграция сайта с 1с",
+        "битрикс сайт интеграция с 1с",
+        "управление сайтом интеграция с 1с",
+        "битрикс управление сайтом интеграция с 1с",
+        "1с унф интеграция с сайтом"
+      ],
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Высокий конфликт (30) — широкий минус «интеграция» блокирует смежные запросы",
+      "operator_decision_required": true
+    },
+    {
+      "source_campaign": "CA-03",
+      "negative": "сопровождение",
+      "protected_target_campaign": "CA-02",
+      "conflicting_included_phrases": 120,
+      "sample_conflicts": [
+        "программист сопровождение 1с",
+        "сопровождение 1с",
+        "сопровождение 1с предприятие",
+        "программное сопровождение 1с",
+        "сопровождение продуктов 1с"
+      ],
+      "recommendation": "REJECT",
+      "reason": "Слишком много конфликтов (120) с фразами целевой кампании",
+      "operator_decision_required": false
+    },
+    {
+      "source_campaign": "CA-03",
+      "negative": "обслуживание",
+      "protected_target_campaign": "CA-02",
+      "conflicting_included_phrases": 2,
+      "sample_conflicts": [
+        "обслуживание и сопровождение 1с",
+        "сопровождение и обслуживание 1с предприятие"
+      ],
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Умеренный конфликт (2) — оценить коммерческую ценность",
+      "operator_decision_required": true
+    },
+    {
+      "source_campaign": "CA-03",
+      "negative": "интеграция",
+      "protected_target_campaign": "CA-04",
+      "conflicting_included_phrases": 30,
+      "sample_conflicts": [
+        "интеграция сайта с 1с",
+        "битрикс сайт интеграция с 1с",
+        "управление сайтом интеграция с 1с",
+        "битрикс управление сайтом интеграция с 1с",
+        "1с унф интеграция с сайтом"
+      ],
+      "recommendation": "HOLD_OPERATOR",
+      "reason": "Высокий конфликт (30) — широкий минус «интеграция» блокирует смежные запросы",
+      "operator_decision_required": true
+    },
+    {
+      "source_campaign": "CA-03",
+      "negative": "маркировка",
+      "protected_target_campaign": "CA-05",
+      "conflicting_included_phrases": 87,
+      "sample_conflicts": [
+        "маркировка в 1с",
+        "маркировка товаров в 1с",
+        "маркировка честный знак в 1с",
+        "маркировка в 1с ут",
+        "маркировка в 1с бухгалтерия"
+      ],
+      "recommendation": "REJECT",
+      "reason": "Слишком много конфликтов (87) с фразами целевой кампании",
+      "operator_decision_required": false
+    },
+    {
+      "source_campaign": "CA-04",
+      "negative": "маркировка",
+      "protected_target_campaign": "CA-05",
+      "conflicting_included_phrases": 87,
+      "sample_conflicts": [
+        "маркировка в 1с",
+        "маркировка товаров в 1с",
+        "маркировка честный знак в 1с",
+        "маркировка в 1с ут",
+        "маркировка в 1с бухгалтерия"
+      ],
+      "recommendation": "REJECT",
+      "reason": "Слишком много конфликтов (87) с фразами целевой кампании",
+      "operator_decision_required": false
+    },
+    {
+      "source_campaign": "CA-04",
+      "negative": "честный знак",
+      "protected_target_campaign": "CA-05",
+      "conflicting_included_phrases": 102,
+      "sample_conflicts": [
+        "маркировка честный знак в 1с",
+        "маркировка товаров в 1с честный знак",
+        "маркировка честный знак в 1с унф",
+        "маркировка честный знак в 1с ут",
+        "маркировка честный знак в 1с бухгалтерия"
+      ],
+      "recommendation": "REJECT",
+      "reason": "Слишком много конфликтов (102) с фразами целевой кампании",
+      "operator_decision_required": false
+    },
+    {
+      "source_campaign": "CA-05",
+      "negative": "программист",
+      "protected_target_campaign": "CA-01",
+      "conflicting_included_phrases": 338,
+      "sample_conflicts": [
+        "программист 1с",
+        "программист 1с удаленно",
+        "программист 1с москва",
+        "1с программист 2026",
+        "задание программисту 1с"
+      ],
+      "recommendation": "REJECT",
+      "reason": "Слишком много конфликтов (338) с фразами целевой кампании",
+      "operator_decision_required": false
+    }
+  ]
+}
