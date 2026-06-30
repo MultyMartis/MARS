@@ -4,7 +4,7 @@
 **Date:** 2026-06-30  
 **Branch:** `mars/canonical-post-recovery`  
 **Pre-commit HEAD:** `f5186ddc8101c81e3bd1a81474790e6cf912a9e6`  
-**New commit hash:** _recorded post-commit_  
+**New commit hash:** `e96f4a515eb7b5928127534c8e9820b10fdb56cb`  
 **Volume:** `X:` / `AI WS`
 
 ---
@@ -157,13 +157,25 @@ feat(search-ppc): add campaign release gate and artifact regression protection
 
 ## Push result
 
-_recorded post-push_
+```
+git push origin mars/canonical-post-recovery
+To https://github.com/MultyMartis/MARS.git
+   f5186ddc..e96f4a51  mars/canonical-post-recovery -> mars/canonical-post-recovery
+```
+
+**Push:** PASS
 
 ---
 
 ## Post-commit working-tree summary
 
-_recorded post-commit_
+After commit `e96f4a51`, unrelated WIP remains unstaged:
+
+- Modified: `projects/atlas/**`, `projects/mars-localhost-infrastructure/OPERATIONAL-INDEX.md`, `workspaces/fp-0002-shpigovsky-v7/**`, `workspaces/fp-0002-shpigovsky-v8/**`
+- Untracked: `.recovery-temp/`, `.tools/corvonero-*`, `projects/mars-search-ppc-production/.tools-test-output/`, Corvonero V2–V2.6.1 campaign WIP under `pilots/corvonero/`, unrelated reports, Website Factory / FP-0002 WIP
+
+**Scoped files in commit:** 40  
+**Unrelated WIP:** PRESERVED
 
 ---
 
