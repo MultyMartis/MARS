@@ -3,11 +3,21 @@ import {
   ROW_TYPE_KEYWORD,
   REQUIRED_REGION_VALUE,
 } from './constants.mjs';
+import { serializeCallouts } from './callout-serializer.mjs';
 import {
   formatCommanderNegatives,
   parseCampaignNegatives,
   validateTransport,
 } from './transport-validator.mjs';
+import { resolveAdLandingUrl } from './url-policy.mjs';
+import {
+  assignBidsForGroup,
+  BID_POLICIES,
+  BID_STEP_MIN,
+  ABSOLUTE_BID_MIN,
+  CORVONERO_LADDER_VALUES,
+  resolveBidPolicy,
+} from './bid-ladder.mjs';
 
 /**
  * @param {import('./authority-loader.mjs').LoadedAuthority} loaded
@@ -32,6 +42,8 @@ export function buildPayloads(loaded, validationResult) {
   const calloutPools = model.callouts?.campaign_pools ?? {};
   const displayPaths = model.displayPaths?.records ?? [];
   const geoRegion = model.transportConfig?.geo_region ?? REQUIRED_REGION_VALUE;
+  const transportConfig = model.transportConfig;
+  const bidPolicy = resolveBidPolicy(transportConfig);
 
   const phrasesByGroup = new Map();
   for (const rec of deployablePhrases) {
@@ -80,16 +92,14 @@ export function buildPayloads(loaded, validationResult) {
       const ad = adsByGroup.get(g.group_id);
       const phrases = phrasesByGroup.get(g.group_id) ?? [];
       const pool = calloutPools[campaignId] ?? [];
-      const calloutText = pool.map((c) => c.text).join(';;');
+      const calloutItems = pool.map((c) => c.text);
+      const calloutText = serializeCallouts(calloutItems);
       const displayPath = displayByGroup.get(g.group_id) ?? '';
-      const slug = utmSlugs[campaignId];
-      const content = groupSlugs[g.group_id];
       const baseUrl = ad?.landing_page?.url ?? '';
-      let landingUrl = baseUrl;
-      if (baseUrl && slug && content) {
-        const sep = baseUrl.includes('?') ? '&' : '?';
-        landingUrl = `${baseUrl.split('#')[0]}${sep}utm_source=yandex&utm_medium=cpc&utm_campaign=${slug}&utm_content=${content}`;
-      }
+      const landingUrl = resolveAdLandingUrl(baseUrl, transportConfig, {
+        campaignSlug: utmSlugs[campaignId],
+        groupSlug: groupSlugs[g.group_id],
+      });
 
       const groupNegData = model.groupNegatives?.groups?.[g.group_id];
       const groupNegTerms = groupNegData?.terms ?? groupNegData?.negatives ?? [];
@@ -109,13 +119,22 @@ export function buildPayloads(loaded, validationResult) {
           display_path: displayPath,
           ad_status: 'Активные',
           callouts: calloutText,
+          callout_items: calloutItems,
           group_negatives: groupNegStr,
           region: geoRegion,
           organization: '',
         });
       }
 
+      const groupBidMap = assignBidsForGroup(phrases, bids[campaignId], {
+        policy: bidPolicy,
+        bidStep: transportConfig?.bid_step ?? BID_STEP_MIN,
+        ladderValues: transportConfig?.ladder_values ?? CORVONERO_LADDER_VALUES,
+        minimumBid: transportConfig?.minimum_bid ?? ABSOLUTE_BID_MIN,
+      });
+
       for (const p of phrases) {
+        const phraseBid = groupBidMap.get(String(p.phrase_id ?? p.phrase));
         rows.push({
           row_type: ROW_TYPE_KEYWORD,
           group_name: g.group_name,
@@ -124,7 +143,9 @@ export function buildPayloads(loaded, validationResult) {
           phrase: p.phrase,
           phrase_id: p.phrase_id,
           phrase_status: 'Активные',
-          bid: bids[campaignId],
+          bid: phraseBid,
+          campaign_base_bid: bids[campaignId],
+          bid_ladder_policy: bidPolicy,
           region: geoRegion,
           organization: '',
         });

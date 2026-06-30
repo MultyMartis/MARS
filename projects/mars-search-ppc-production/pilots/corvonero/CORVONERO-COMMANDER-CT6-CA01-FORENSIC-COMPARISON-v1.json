@@ -1,0 +1,78 @@
+{
+  "audit_id": "corvonero-ca01-v5-xlsx-forensic-ct6",
+  "audited_at": "2026-06-30T18:00:00.000Z",
+  "binding_version": "v5",
+  "source_file": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-COMMANDER-CT5R3-FINAL-2026-06-30/CORVONERO-CA-01-PROGRAMMIST-1S-COMMANDER-IMPORT-v5.xlsx",
+  "source_sha256": "80e62d262b33e154c86a6a2642c84d4c8a37c263f7464ac9fffc13e082702210",
+  "sha256_recalculated_at_reconciliation": "80e62d262b33e154c86a6a2642c84d4c8a37c263f7464ac9fffc13e082702210",
+  "verdict": "PASS — AUTHORITY WORKBOOK MATCHES OPERATOR IMPORT",
+  "counts": {
+    "campaigns": 1,
+    "groups": 7,
+    "keyword_rows": 339,
+    "ad_rows": 7,
+    "max_group_phrases": 144,
+    "groups_over_200": 0
+  },
+  "commander_operator_result": {
+    "preview": "PASS",
+    "local_import": "COMPLETED",
+    "campaigns": 1,
+    "groups": 7,
+    "phrases": 339,
+    "ads": 7,
+    "unparsed_rows": 0,
+    "import_errors": 0,
+    "callout_errors": 0,
+    "region_errors": 0,
+    "organization_errors": 0
+  },
+  "callouts": {
+    "status": "valid",
+    "column_number": 67,
+    "column_header": "Уточнения",
+    "logical_key": "extensions.callouts",
+    "delimiter_used": "||",
+    "expected_commander_delimiter": "||",
+    "ad_rows_checked": 7,
+    "individual_callouts": [
+      { "text": "Удалённо по России", "char_count": 18 },
+      { "text": "Выезд в Новосибирске", "char_count": 20 },
+      { "text": "Работа по договору", "char_count": 18 },
+      { "text": "Минимальный заказ 2 часа", "char_count": 24 }
+    ],
+    "v2_defect_resolved": true
+  },
+  "urls": {
+    "status": "clean, no UTM",
+    "column_number": 48,
+    "column_header": "Ссылка",
+    "clean_landing_url": "https://lk.corvonero.ru/programmist-1s/",
+    "affected_ad_rows": 7,
+    "affected_campaigns": 1,
+    "utm_parameters_found": [],
+    "v2_defect_resolved": true
+  },
+  "region": {
+    "value": "Новосибирская область",
+    "status": "PASS"
+  },
+  "organization": {
+    "value": "blank",
+    "status": "PASS"
+  },
+  "bid_policy": {
+    "policy": "CORVONERO_BALANCED_CYCLIC_10_RUB_V1",
+    "distinct_bids": 10,
+    "minimum_bid": 410,
+    "maximum_bid": 500,
+    "all_equal_base": false,
+    "status": "PASS"
+  },
+  "group_negatives_and_campaign_negatives": "OPERATOR CONFIRMED GENERALLY — DETAILED FIELD-BY-FIELD INSPECTION NOT RECORDED",
+  "historical_v2_defects": {
+    "callout_serialization": "resolved in CT-5R1 — payload uses || delimiter",
+    "url_policy": "resolved in CT-5R1 — clean landing URLs without UTM"
+  },
+  "ct5r3_forensic_reference": "CORVONERO-COMMANDER-CT5R3-FORENSIC-VALIDATION-v1.json"
+}

@@ -1,0 +1,892 @@
+{
+  "run_id": "CORVONERO-COMMANDER-CT5R1-FINAL-2026-06-30",
+  "verified_at": "2026-06-30T07:01:23.825Z",
+  "results": [
+    {
+      "campaign_id": "CA-01",
+      "filename": "CORVONERO-CA-01-PROGRAMMIST-1S-COMMANDER-IMPORT-v3.xlsx",
+      "output_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5R1-FINAL-2026-06-30\\CORVONERO-CA-01-PROGRAMMIST-1S-COMMANDER-IMPORT-v3.xlsx",
+      "sha256": "7a523c3f37bd60c6c6cb38983551dab6d788e28390fd71ea74d9c5504deff1dc",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "sheet_texts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "columns_78",
+          "status": "PASS",
+          "message": "78"
+        },
+        {
+          "check": "template_sha_lineage",
+          "status": "PASS",
+          "message": "source template SHA-256 1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa"
+        },
+        {
+          "check": "regions_dictionary",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_count",
+          "status": "PASS",
+          "message": "1 (single-campaign workbook)"
+        },
+        {
+          "check": "expected_groups",
+          "status": "PASS",
+          "message": "7"
+        },
+        {
+          "check": "expected_keyword_rows",
+          "status": "PASS",
+          "message": "339"
+        },
+        {
+          "check": "expected_ad_rows",
+          "status": "PASS",
+          "message": "7"
+        },
+        {
+          "check": "max_group_phrase_count",
+          "status": "PASS",
+          "message": "144"
+        },
+        {
+          "check": "keyword_bids",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "region",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "forbidden_organization_id",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_column_blank",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_separate_row_16",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_21",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_36",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_60",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_73",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_84",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_217",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "no_combined_callout_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_length_limits",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_delimiter_integrity",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_ad_rows_checked",
+          "status": "PASS",
+          "message": "7"
+        },
+        {
+          "check": "no_query_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_utm_in_url",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_keyword_macro",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_fragment",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "clean_url_no_query",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "keyword_macro_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "sitelinks_omitted",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_metadata_blank",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callouts_payload_match",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "urls_payload_match",
+          "status": "PASS",
+          "message": ""
+        }
+      ],
+      "callout_delimiter": "||",
+      "counts": {
+        "groups": 7,
+        "keyword_rows": 339,
+        "ad_rows": 7,
+        "max_group_keyword_count": 144
+      }
+    },
+    {
+      "campaign_id": "CA-02",
+      "filename": "CORVONERO-CA-02-SOPROVOZHDENIE-1S-COMMANDER-IMPORT-v3.xlsx",
+      "output_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5R1-FINAL-2026-06-30\\CORVONERO-CA-02-SOPROVOZHDENIE-1S-COMMANDER-IMPORT-v3.xlsx",
+      "sha256": "c36ff837a00af7ec7e96eeaacf85c423ac2dd1b58c2c599eac9928388438fe5e",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "sheet_texts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "columns_78",
+          "status": "PASS",
+          "message": "78"
+        },
+        {
+          "check": "template_sha_lineage",
+          "status": "PASS",
+          "message": "source template SHA-256 1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa"
+        },
+        {
+          "check": "regions_dictionary",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_count",
+          "status": "PASS",
+          "message": "1 (single-campaign workbook)"
+        },
+        {
+          "check": "expected_groups",
+          "status": "PASS",
+          "message": "4"
+        },
+        {
+          "check": "expected_keyword_rows",
+          "status": "PASS",
+          "message": "153"
+        },
+        {
+          "check": "expected_ad_rows",
+          "status": "PASS",
+          "message": "4"
+        },
+        {
+          "check": "max_group_phrase_count",
+          "status": "PASS",
+          "message": "137"
+        },
+        {
+          "check": "keyword_bids",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "region",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "forbidden_organization_id",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_column_blank",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_separate_row_16",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_30",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_32",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_170",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "no_combined_callout_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_length_limits",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_delimiter_integrity",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_ad_rows_checked",
+          "status": "PASS",
+          "message": "4"
+        },
+        {
+          "check": "no_query_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_utm_in_url",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_keyword_macro",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_fragment",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "clean_url_no_query",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "keyword_macro_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "sitelinks_omitted",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_metadata_blank",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callouts_payload_match",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "urls_payload_match",
+          "status": "PASS",
+          "message": ""
+        }
+      ],
+      "callout_delimiter": "||",
+      "counts": {
+        "groups": 4,
+        "keyword_rows": 153,
+        "ad_rows": 4,
+        "max_group_keyword_count": 137
+      }
+    },
+    {
+      "campaign_id": "CA-03",
+      "filename": "CORVONERO-CA-03-DORABOTKA-1S-COMMANDER-IMPORT-v3.xlsx",
+      "output_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5R1-FINAL-2026-06-30\\CORVONERO-CA-03-DORABOTKA-1S-COMMANDER-IMPORT-v3.xlsx",
+      "sha256": "5ae35260b4dbc0588953709412054c941e297423300b89828c70b715f859376f",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "sheet_texts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "columns_78",
+          "status": "PASS",
+          "message": "78"
+        },
+        {
+          "check": "template_sha_lineage",
+          "status": "PASS",
+          "message": "source template SHA-256 1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa"
+        },
+        {
+          "check": "regions_dictionary",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_count",
+          "status": "PASS",
+          "message": "1 (single-campaign workbook)"
+        },
+        {
+          "check": "expected_groups",
+          "status": "PASS",
+          "message": "3"
+        },
+        {
+          "check": "expected_keyword_rows",
+          "status": "PASS",
+          "message": "76"
+        },
+        {
+          "check": "expected_ad_rows",
+          "status": "PASS",
+          "message": "3"
+        },
+        {
+          "check": "max_group_phrase_count",
+          "status": "PASS",
+          "message": "69"
+        },
+        {
+          "check": "keyword_bids",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "region",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "forbidden_organization_id",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_column_blank",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_separate_row_16",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_19",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_25",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "no_combined_callout_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_length_limits",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_delimiter_integrity",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_ad_rows_checked",
+          "status": "PASS",
+          "message": "3"
+        },
+        {
+          "check": "no_query_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_utm_in_url",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_keyword_macro",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_fragment",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "clean_url_no_query",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "keyword_macro_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "sitelinks_omitted",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_metadata_blank",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callouts_payload_match",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "urls_payload_match",
+          "status": "PASS",
+          "message": ""
+        }
+      ],
+      "callout_delimiter": "||",
+      "counts": {
+        "groups": 3,
+        "keyword_rows": 76,
+        "ad_rows": 3,
+        "max_group_keyword_count": 69
+      }
+    },
+    {
+      "campaign_id": "CA-04",
+      "filename": "CORVONERO-CA-04-INTEGRACII-1S-COMMANDER-IMPORT-v3.xlsx",
+      "output_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5R1-FINAL-2026-06-30\\CORVONERO-CA-04-INTEGRACII-1S-COMMANDER-IMPORT-v3.xlsx",
+      "sha256": "e606cb7248050ce2aeaa2da5363a970eb8c88dccfdd9e4d47061d7d493ecda86",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "sheet_texts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "columns_78",
+          "status": "PASS",
+          "message": "78"
+        },
+        {
+          "check": "template_sha_lineage",
+          "status": "PASS",
+          "message": "source template SHA-256 1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa"
+        },
+        {
+          "check": "regions_dictionary",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_count",
+          "status": "PASS",
+          "message": "1 (single-campaign workbook)"
+        },
+        {
+          "check": "expected_groups",
+          "status": "PASS",
+          "message": "1"
+        },
+        {
+          "check": "expected_keyword_rows",
+          "status": "PASS",
+          "message": "48"
+        },
+        {
+          "check": "expected_ad_rows",
+          "status": "PASS",
+          "message": "1"
+        },
+        {
+          "check": "max_group_phrase_count",
+          "status": "PASS",
+          "message": "48"
+        },
+        {
+          "check": "keyword_bids",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "region",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "forbidden_organization_id",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_column_blank",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_separate_row_16",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "no_combined_callout_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_length_limits",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_delimiter_integrity",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_ad_rows_checked",
+          "status": "PASS",
+          "message": "1"
+        },
+        {
+          "check": "no_query_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_utm_in_url",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_keyword_macro",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_fragment",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "clean_url_no_query",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "keyword_macro_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "sitelinks_omitted",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_metadata_blank",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callouts_payload_match",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "urls_payload_match",
+          "status": "PASS",
+          "message": ""
+        }
+      ],
+      "callout_delimiter": "||",
+      "counts": {
+        "groups": 1,
+        "keyword_rows": 48,
+        "ad_rows": 1,
+        "max_group_keyword_count": 48
+      }
+    },
+    {
+      "campaign_id": "CA-05",
+      "filename": "CORVONERO-CA-05-MARKIROVKA-1S-COMMANDER-IMPORT-v3.xlsx",
+      "output_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5R1-FINAL-2026-06-30\\CORVONERO-CA-05-MARKIROVKA-1S-COMMANDER-IMPORT-v3.xlsx",
+      "sha256": "a753e8d7fc38bef423961f4c2c1d7db2c77e06fba0bb930760d5a290c52d7238",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "sheet_texts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "columns_78",
+          "status": "PASS",
+          "message": "78"
+        },
+        {
+          "check": "template_sha_lineage",
+          "status": "PASS",
+          "message": "source template SHA-256 1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa"
+        },
+        {
+          "check": "regions_dictionary",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_count",
+          "status": "PASS",
+          "message": "1 (single-campaign workbook)"
+        },
+        {
+          "check": "expected_groups",
+          "status": "PASS",
+          "message": "6"
+        },
+        {
+          "check": "expected_keyword_rows",
+          "status": "PASS",
+          "message": "217"
+        },
+        {
+          "check": "expected_ad_rows",
+          "status": "PASS",
+          "message": "6"
+        },
+        {
+          "check": "max_group_phrase_count",
+          "status": "PASS",
+          "message": "104"
+        },
+        {
+          "check": "keyword_bids",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "region",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "forbidden_organization_id",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_column_blank",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_separate_row_16",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_121",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_136",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_142",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_231",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_234",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "no_combined_callout_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_length_limits",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_delimiter_integrity",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_ad_rows_checked",
+          "status": "PASS",
+          "message": "6"
+        },
+        {
+          "check": "no_query_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_utm_in_url",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_keyword_macro",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_fragment",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "clean_url_no_query",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "keyword_macro_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "sitelinks_omitted",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_metadata_blank",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callouts_payload_match",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "urls_payload_match",
+          "status": "PASS",
+          "message": ""
+        }
+      ],
+      "callout_delimiter": "||",
+      "counts": {
+        "groups": 6,
+        "keyword_rows": 217,
+        "ad_rows": 6,
+        "max_group_keyword_count": 104
+      }
+    }
+  ],
+  "overall": "PASS"
+}

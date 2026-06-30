@@ -1,0 +1,56 @@
+{
+  "receipt_id": "corvonero-commander-ct6-ca01-local-result-v1",
+  "import_completed_at": "2026-06-30T18:00:00.000Z",
+  "operator": "OPERATOR",
+  "binding_version": "v5",
+  "status": "PASS — LOCAL IMPORT COMPLETED",
+  "verdict": "CORVONERO COMMANDER CT-6 CA-01: PASS — LOCAL IMPORT MATCHES FINAL AUTHORITY",
+  "ct6_pass": true,
+  "local_import_authorized": true,
+  "import_confirmed": true,
+  "local_import": "COMPLETED",
+  "server_upload": false,
+  "server_actions_blocked": true,
+  "binding": {
+    "file": "CORVONERO-CA-01-PROGRAMMIST-1S-COMMANDER-IMPORT-v5.xlsx",
+    "directory": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-COMMANDER-CT5R3-FINAL-2026-06-30",
+    "sha256": "80e62d262b33e154c86a6a2642c84d4c8a37c263f7464ac9fffc13e082702210",
+    "ct5r3_receipt": "CORVONERO-COMMANDER-CT5R3-RESULT-v1.json",
+    "bid_policy": "CORVONERO_BALANCED_CYCLIC_10_RUB_V1"
+  },
+  "commander_preview": {
+    "result": "PASS",
+    "campaigns": 1,
+    "groups": 7,
+    "phrases": 339,
+    "ads": 7,
+    "unparsed_rows": 0,
+    "import_errors": 0,
+    "callout_errors": 0,
+    "region_errors": 0,
+    "organization_errors": 0,
+    "warnings": 0
+  },
+  "expected": {
+    "campaigns": 1,
+    "groups": 7,
+    "phrases": 339,
+    "ads": 7
+  },
+  "observed": {
+    "campaigns": 1,
+    "groups": 7,
+    "phrases": 339,
+    "ads": 7,
+    "unparsed_rows": 0
+  },
+  "server_safety": {
+    "changes_sent_to_server": false,
+    "yandex_direct_synchronized": false,
+    "campaign_launched": false,
+    "moderation_submitted": false,
+    "pending_unsent_local_changes": true
+  },
+  "operator_notes": "Operator confirmed: Everything is good. Local import completed with preview PASS — 1 campaign, 7 groups, 339 phrases, 7 ads, 0 unparsed rows, 0 errors.",
+  "detailed_field_inspection": "OPERATOR CONFIRMED GENERALLY — DETAILED FIELD-BY-FIELD INSPECTION NOT RECORDED"
+}

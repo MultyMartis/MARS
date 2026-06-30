@@ -1,0 +1,811 @@
+{
+  "generated_at": "2026-06-30T07:46:19.681Z",
+  "bid_ladder_policy": "triumph-v1.3-descending-per-group",
+  "campaign_base_bids": {
+    "CA-01": 500,
+    "CA-02": 400,
+    "CA-03": 400,
+    "CA-04": 400,
+    "CA-05": 400
+  },
+  "groups": [
+    {
+      "campaign_id": "CA-01",
+      "group_id": "ca-01-direct-service-order",
+      "phrase_count": 4,
+      "base_bid": 500,
+      "minimum_assigned_bid": 410,
+      "maximum_assigned_bid": 500,
+      "distinct_bid_count": 4,
+      "duplicate_bid_count": 0,
+      "assignment_sequence_sample": [
+        {
+          "phrase_id": "CR2-PHR-00020",
+          "phrase": "услуги программиста 1с",
+          "bid": 500,
+          "position": 0
+        },
+        {
+          "phrase_id": "CR2-PHR-00329",
+          "phrase": "услуги 1с программиста цены",
+          "bid": 470,
+          "position": 1
+        },
+        {
+          "phrase_id": "CR2-PHR-00395",
+          "phrase": "авито 1с программист услуги",
+          "bid": 440,
+          "position": 2
+        },
+        {
+          "phrase_id": "CR2-PHR-00413",
+          "phrase": "заказы для 1с программиста",
+          "bid": 410,
+          "position": 3
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-01",
+      "group_id": "ca-01-find-hire-specialist",
+      "phrase_count": 14,
+      "base_bid": 500,
+      "minimum_assigned_bid": 422,
+      "maximum_assigned_bid": 500,
+      "distinct_bid_count": 14,
+      "duplicate_bid_count": 0,
+      "assignment_sequence_sample": [
+        {
+          "phrase_id": "CR2-PHR-00031",
+          "phrase": "нужен программист 1с",
+          "bid": 500,
+          "position": 0
+        },
+        {
+          "phrase_id": "CR2-PHR-00033",
+          "phrase": "найти программиста 1с",
+          "bid": 494,
+          "position": 1
+        },
+        {
+          "phrase_id": "CR2-PHR-00093",
+          "phrase": "ищу программист 1с",
+          "bid": 488,
+          "position": 2
+        },
+        {
+          "phrase_id": "CR2-PHR-00247",
+          "phrase": "нужен ли программист 1с",
+          "bid": 482,
+          "position": 3
+        },
+        {
+          "phrase_id": "CR2-PHR-00305",
+          "phrase": "где найти программиста 1с",
+          "bid": 476,
+          "position": 4
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-01",
+      "group_id": "ca-01-price-intent",
+      "phrase_count": 23,
+      "base_bid": 500,
+      "minimum_assigned_bid": 412,
+      "maximum_assigned_bid": 500,
+      "distinct_bid_count": 23,
+      "duplicate_bid_count": 0,
+      "assignment_sequence_sample": [
+        {
+          "phrase_id": "CR2-PHR-00015",
+          "phrase": "часа программиста 1с",
+          "bid": 500,
+          "position": 0
+        },
+        {
+          "phrase_id": "CR2-PHR-00025",
+          "phrase": "стоимость 1с программисты",
+          "bid": 496,
+          "position": 1
+        },
+        {
+          "phrase_id": "CR2-PHR-00040",
+          "phrase": "стоимость часа 1с программиста",
+          "bid": 492,
+          "position": 2
+        },
+        {
+          "phrase_id": "CR2-PHR-00062",
+          "phrase": "программисты 1с цена",
+          "bid": 488,
+          "position": 3
+        },
+        {
+          "phrase_id": "CR2-PHR-00088",
+          "phrase": "1с стоимость работы программиста",
+          "bid": 484,
+          "position": 4
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-01",
+      "group_id": "ca-01-remote-freelance-specialist",
+      "phrase_count": 12,
+      "base_bid": 500,
+      "minimum_assigned_bid": 412,
+      "maximum_assigned_bid": 500,
+      "distinct_bid_count": 12,
+      "duplicate_bid_count": 0,
+      "assignment_sequence_sample": [
+        {
+          "phrase_id": "CR2-PHR-00007",
+          "phrase": "программист 1с удаленно",
+          "bid": 500,
+          "position": 0
+        },
+        {
+          "phrase_id": "CR2-PHR-00073",
+          "phrase": "программисты 1с новосибирск",
+          "bid": 492,
+          "position": 1
+        },
+        {
+          "phrase_id": "CR2-PHR-00095",
+          "phrase": "фриланс 1с программист",
+          "bid": 484,
+          "position": 2
+        },
+        {
+          "phrase_id": "CR2-PHR-00207",
+          "phrase": "частный программист 1с",
+          "bid": 476,
+          "position": 3
+        },
+        {
+          "phrase_id": "CR2-PHR-00219",
+          "phrase": "программисты 1с удаленка",
+          "bid": 468,
+          "position": 4
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-01",
+      "group_id": "ca-01-specialist-by-product",
+      "phrase_count": 10,
+      "base_bid": 500,
+      "minimum_assigned_bid": 410,
+      "maximum_assigned_bid": 500,
+      "distinct_bid_count": 10,
+      "duplicate_bid_count": 0,
+      "assignment_sequence_sample": [
+        {
+          "phrase_id": "CR2-PHR-00037",
+          "phrase": "программист 1с предприятие",
+          "bid": 500,
+          "position": 0
+        },
+        {
+          "phrase_id": "CR2-PHR-00042",
+          "phrase": "программист аналитик 1с",
+          "bid": 490,
+          "position": 1
+        },
+        {
+          "phrase_id": "CR2-PHR-00083",
+          "phrase": "программист 1с зуп",
+          "bid": 480,
+          "position": 2
+        },
+        {
+          "phrase_id": "CR2-PHR-00130",
+          "phrase": "программист консультант 1с",
+          "bid": 470,
+          "position": 3
+        },
+        {
+          "phrase_id": "CR2-PHR-00204",
+          "phrase": "программист администратор 1с",
+          "bid": 460,
+          "position": 4
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-01",
+      "group_id": "ca-01-specialist-extended",
+      "phrase_count": 132,
+      "base_bid": 500,
+      "minimum_assigned_bid": 410,
+      "maximum_assigned_bid": 500,
+      "distinct_bid_count": 10,
+      "duplicate_bid_count": 122,
+      "assignment_sequence_sample": [
+        {
+          "phrase_id": "CR2-PHR-00022",
+          "phrase": "задание программисту 1с",
+          "bid": 500,
+          "position": 0
+        },
+        {
+          "phrase_id": "CR2-PHR-00035",
+          "phrase": "задачи 1с программиста",
+          "bid": 489,
+          "position": 1
+        },
+        {
+          "phrase_id": "CR2-PHR-00038",
+          "phrase": "часа работы программиста 1с",
+          "bid": 478,
+          "position": 2
+        },
+        {
+          "phrase_id": "CR2-PHR-00039",
+          "phrase": "часы работы программиста 1с",
+          "bid": 467,
+          "position": 3
+        },
+        {
+          "phrase_id": "CR2-PHR-00047",
+          "phrase": "технические задания программистам 1с",
+          "bid": 456,
+          "position": 4
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-01",
+      "group_id": "ca-01-specialist-search",
+      "phrase_count": 144,
+      "base_bid": 500,
+      "minimum_assigned_bid": 410,
+      "maximum_assigned_bid": 500,
+      "distinct_bid_count": 10,
+      "duplicate_bid_count": 134,
+      "assignment_sequence_sample": [
+        {
+          "phrase_id": "CR2-PHR-00001",
+          "phrase": "программист 1с",
+          "bid": 500,
+          "position": 0
+        },
+        {
+          "phrase_id": "CR2-PHR-00010",
+          "phrase": "программист 1с москва",
+          "bid": 489,
+          "position": 1
+        },
+        {
+          "phrase_id": "CR2-PHR-00018",
+          "phrase": "1с программист 2026",
+          "bid": 478,
+          "position": 2
+        },
+        {
+          "phrase_id": "CR2-PHR-00029",
+          "phrase": "программисты 1с спб",
+          "bid": 467,
+          "position": 3
+        },
+        {
+          "phrase_id": "CR2-PHR-00054",
+          "phrase": "1с программист код",
+          "bid": 456,
+          "position": 4
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-02",
+      "group_id": "ca-02-direct-service-order",
+      "phrase_count": 13,
+      "base_bid": 400,
+      "minimum_assigned_bid": 316,
+      "maximum_assigned_bid": 400,
+      "distinct_bid_count": 13,
+      "duplicate_bid_count": 0,
+      "assignment_sequence_sample": [
+        {
+          "phrase_id": "CR2-PHR-00591",
+          "phrase": "услуги по сопровождению 1с",
+          "bid": 400,
+          "position": 0
+        },
+        {
+          "phrase_id": "CR2-PHR-00607",
+          "phrase": "оказание услуг по сопровождению 1с",
+          "bid": 393,
+          "position": 1
+        },
+        {
+          "phrase_id": "CR2-PHR-00614",
+          "phrase": "услуг по сопровождению программного продукта 1с",
+          "bid": 386,
+          "position": 2
+        },
+        {
+          "phrase_id": "CR2-PHR-00630",
+          "phrase": "услуги по сопровождению 1с предприятие",
+          "bid": 379,
+          "position": 3
+        },
+        {
+          "phrase_id": "CR2-PHR-00650",
+          "phrase": "услуги по сопровождению 1с 8",
+          "bid": 372,
+          "position": 4
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-02",
+      "group_id": "ca-02-price-intent",
+      "phrase_count": 1,
+      "base_bid": 400,
+      "minimum_assigned_bid": 380,
+      "maximum_assigned_bid": 380,
+      "distinct_bid_count": 1,
+      "duplicate_bid_count": 0,
+      "assignment_sequence_sample": [
+        {
+          "phrase_id": "CR2-PHR-00711",
+          "phrase": "стоимость часа сопровождения 1с",
+          "bid": 380,
+          "position": 0
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-02",
+      "group_id": "ca-02-support-and-maintenance",
+      "phrase_count": 137,
+      "base_bid": 400,
+      "minimum_assigned_bid": 310,
+      "maximum_assigned_bid": 400,
+      "distinct_bid_count": 10,
+      "duplicate_bid_count": 127,
+      "assignment_sequence_sample": [
+        {
+          "phrase_id": "CR2-PHR-00333",
+          "phrase": "программист сопровождение 1с",
+          "bid": 400,
+          "position": 0
+        },
+        {
+          "phrase_id": "CR2-PHR-00590",
+          "phrase": "сопровождение 1с",
+          "bid": 389,
+          "position": 1
+        },
+        {
+          "phrase_id": "CR2-PHR-00592",
+          "phrase": "сопровождение 1с предприятие",
+          "bid": 378,
+          "position": 2
+        },
+        {
+          "phrase_id": "CR2-PHR-00593",
+          "phrase": "программное сопровождение 1с",
+          "bid": 367,
+          "position": 3
+        },
+        {
+          "phrase_id": "CR2-PHR-00594",
+          "phrase": "сопровождение продуктов 1с",
+          "bid": 356,
+          "position": 4
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-02",
+      "group_id": "ca-02-troubleshooting-not-working",
+      "phrase_count": 2,
+      "base_bid": 400,
+      "minimum_assigned_bid": 370,
+      "maximum_assigned_bid": 400,
+      "distinct_bid_count": 2,
+      "duplicate_bid_count": 0,
+      "assignment_sequence_sample": [
+        {
+          "phrase_id": "CR2-PHR-00273",
+          "phrase": "ошибки программиста 1с",
+          "bid": 400,
+          "position": 0
+        },
+        {
+          "phrase_id": "CR2-PHR-02239",
+          "phrase": "программа 1с не работает",
+          "bid": 370,
+          "position": 1
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-03",
+      "group_id": "ca-03-direct-service-order",
+      "phrase_count": 2,
+      "base_bid": 400,
+      "minimum_assigned_bid": 370,
+      "maximum_assigned_bid": 400,
+      "distinct_bid_count": 2,
+      "duplicate_bid_count": 0,
+      "assignment_sequence_sample": [
+        {
+          "phrase_id": "CR2-PHR-00769",
+          "phrase": "услуги доработки 1с",
+          "bid": 400,
+          "position": 0
+        },
+        {
+          "phrase_id": "CR2-PHR-00809",
+          "phrase": "1с заказы доработка",
+          "bid": 370,
+          "position": 1
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-03",
+      "group_id": "ca-03-implementation",
+      "phrase_count": 5,
+      "base_bid": 400,
+      "minimum_assigned_bid": 312,
+      "maximum_assigned_bid": 400,
+      "distinct_bid_count": 5,
+      "duplicate_bid_count": 0,
+      "assignment_sequence_sample": [
+        {
+          "phrase_id": "CR2-PHR-00490",
+          "phrase": "внедренцы и программисты 1с",
+          "bid": 400,
+          "position": 0
+        },
+        {
+          "phrase_id": "CR2-PHR-00623",
+          "phrase": "внедрение и сопровождение 1с",
+          "bid": 378,
+          "position": 1
+        },
+        {
+          "phrase_id": "CR2-PHR-00726",
+          "phrase": "внедрение и сопровождение 1с предприятия",
+          "bid": 356,
+          "position": 2
+        },
+        {
+          "phrase_id": "CR2-PHR-00731",
+          "phrase": "внедрение и сопровождение продуктов 1с",
+          "bid": 334,
+          "position": 3
+        },
+        {
+          "phrase_id": "CR2-PHR-00802",
+          "phrase": "доработка внедрение 1с",
+          "bid": 312,
+          "position": 4
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-03",
+      "group_id": "ca-03-modification",
+      "phrase_count": 69,
+      "base_bid": 400,
+      "minimum_assigned_bid": 332,
+      "maximum_assigned_bid": 400,
+      "distinct_bid_count": 69,
+      "duplicate_bid_count": 0,
+      "assignment_sequence_sample": [
+        {
+          "phrase_id": "CR2-PHR-00019",
+          "phrase": "программист разработчик 1с",
+          "bid": 400,
+          "position": 0
+        },
+        {
+          "phrase_id": "CR2-PHR-00096",
+          "phrase": "программист 1с разработка",
+          "bid": 399,
+          "position": 1
+        },
+        {
+          "phrase_id": "CR2-PHR-00117",
+          "phrase": "1с разработчик 1с программист разница",
+          "bid": 398,
+          "position": 2
+        },
+        {
+          "phrase_id": "CR2-PHR-00156",
+          "phrase": "программист 1с доработка",
+          "bid": 397,
+          "position": 3
+        },
+        {
+          "phrase_id": "CR2-PHR-00221",
+          "phrase": "1с программист разработка и автоматизация",
+          "bid": 396,
+          "position": 4
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-04",
+      "group_id": "ca-04-integration",
+      "phrase_count": 48,
+      "base_bid": 400,
+      "minimum_assigned_bid": 353,
+      "maximum_assigned_bid": 400,
+      "distinct_bid_count": 48,
+      "duplicate_bid_count": 0,
+      "assignment_sequence_sample": [
+        {
+          "phrase_id": "CR2-PHR-00236",
+          "phrase": "программист 1с битрикс",
+          "bid": 400,
+          "position": 0
+        },
+        {
+          "phrase_id": "CR2-PHR-00806",
+          "phrase": "доработка 1с битрикс",
+          "bid": 399,
+          "position": 1
+        },
+        {
+          "phrase_id": "CR2-PHR-00819",
+          "phrase": "1с доработка синхронизации",
+          "bid": 398,
+          "position": 2
+        },
+        {
+          "phrase_id": "CR2-PHR-00824",
+          "phrase": "доработка сайта на 1с битрикс",
+          "bid": 397,
+          "position": 3
+        },
+        {
+          "phrase_id": "CR2-PHR-00842",
+          "phrase": "интеграция сайта с 1с",
+          "bid": 396,
+          "position": 4
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-05",
+      "group_id": "ca-05-chestny-znak-service",
+      "phrase_count": 104,
+      "base_bid": 400,
+      "minimum_assigned_bid": 310,
+      "maximum_assigned_bid": 400,
+      "distinct_bid_count": 10,
+      "duplicate_bid_count": 94,
+      "assignment_sequence_sample": [
+        {
+          "phrase_id": "CR2-PHR-00882",
+          "phrase": "маркировка честный знак в 1с",
+          "bid": 400,
+          "position": 0
+        },
+        {
+          "phrase_id": "CR2-PHR-00903",
+          "phrase": "маркировка товаров в 1с честный знак",
+          "bid": 389,
+          "position": 1
+        },
+        {
+          "phrase_id": "CR2-PHR-00956",
+          "phrase": "маркировка честный знак в 1с унф",
+          "bid": 378,
+          "position": 2
+        },
+        {
+          "phrase_id": "CR2-PHR-00958",
+          "phrase": "маркировка честный знак в 1с ут",
+          "bid": 367,
+          "position": 3
+        },
+        {
+          "phrase_id": "CR2-PHR-00967",
+          "phrase": "маркировка честный знак в 1с бухгалтерия",
+          "bid": 356,
+          "position": 4
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-05",
+      "group_id": "ca-05-integration",
+      "phrase_count": 14,
+      "base_bid": 400,
+      "minimum_assigned_bid": 322,
+      "maximum_assigned_bid": 400,
+      "distinct_bid_count": 14,
+      "duplicate_bid_count": 0,
+      "assignment_sequence_sample": [
+        {
+          "phrase_id": "CR2-PHR-00877",
+          "phrase": "интеграция честного знака и сайта 1с битрикс",
+          "bid": 400,
+          "position": 0
+        },
+        {
+          "phrase_id": "CR2-PHR-00931",
+          "phrase": "интеграция маркировки в 1с",
+          "bid": 394,
+          "position": 1
+        },
+        {
+          "phrase_id": "CR2-PHR-00966",
+          "phrase": "интеграция маркировки товаров в 1с",
+          "bid": 388,
+          "position": 2
+        },
+        {
+          "phrase_id": "CR2-PHR-01080",
+          "phrase": "интеграция 1с и честный знак",
+          "bid": 382,
+          "position": 3
+        },
+        {
+          "phrase_id": "CR2-PHR-01147",
+          "phrase": "настройка интеграции 1с и честный знак",
+          "bid": 376,
+          "position": 4
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-05",
+      "group_id": "ca-05-marking-codes",
+      "phrase_count": 5,
+      "base_bid": 400,
+      "minimum_assigned_bid": 312,
+      "maximum_assigned_bid": 400,
+      "distinct_bid_count": 5,
+      "duplicate_bid_count": 0,
+      "assignment_sequence_sample": [
+        {
+          "phrase_id": "CR2-PHR-00939",
+          "phrase": "печать кодов маркировки в 1с",
+          "bid": 400,
+          "position": 0
+        },
+        {
+          "phrase_id": "CR2-PHR-00960",
+          "phrase": "передача кодов маркировки в 1с",
+          "bid": 378,
+          "position": 1
+        },
+        {
+          "phrase_id": "CR2-PHR-01002",
+          "phrase": "настройки сканирования кодов маркировки в 1с",
+          "bid": 356,
+          "position": 2
+        },
+        {
+          "phrase_id": "CR2-PHR-01004",
+          "phrase": "реализация с маркировкой кодами в 1с",
+          "bid": 334,
+          "position": 3
+        },
+        {
+          "phrase_id": "CR2-PHR-01051",
+          "phrase": "отчет по кодам маркировки в 1с",
+          "bid": 312,
+          "position": 4
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-05",
+      "group_id": "ca-05-marking-setup",
+      "phrase_count": 88,
+      "base_bid": 400,
+      "minimum_assigned_bid": 313,
+      "maximum_assigned_bid": 400,
+      "distinct_bid_count": 88,
+      "duplicate_bid_count": 0,
+      "assignment_sequence_sample": [
+        {
+          "phrase_id": "CR2-PHR-00879",
+          "phrase": "маркировка в 1с",
+          "bid": 400,
+          "position": 0
+        },
+        {
+          "phrase_id": "CR2-PHR-00881",
+          "phrase": "маркировка товаров в 1с",
+          "bid": 399,
+          "position": 1
+        },
+        {
+          "phrase_id": "CR2-PHR-00883",
+          "phrase": "маркировка в 1с ут",
+          "bid": 398,
+          "position": 2
+        },
+        {
+          "phrase_id": "CR2-PHR-00884",
+          "phrase": "маркировка в 1с бухгалтерия",
+          "bid": 397,
+          "position": 3
+        },
+        {
+          "phrase_id": "CR2-PHR-00885",
+          "phrase": "маркировка в 1с розница",
+          "bid": 396,
+          "position": 4
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-05",
+      "group_id": "ca-05-support-and-maintenance",
+      "phrase_count": 2,
+      "base_bid": 400,
+      "minimum_assigned_bid": 370,
+      "maximum_assigned_bid": 400,
+      "distinct_bid_count": 2,
+      "duplicate_bid_count": 0,
+      "assignment_sequence_sample": [
+        {
+          "phrase_id": "CR2-PHR-01179",
+          "phrase": "поддержка 1с честный знак",
+          "bid": 400,
+          "position": 0
+        },
+        {
+          "phrase_id": "CR2-PHR-01267",
+          "phrase": "техподдержка честный знак 1с",
+          "bid": 370,
+          "position": 1
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-05",
+      "group_id": "ca-05-ts-piot",
+      "phrase_count": 4,
+      "base_bid": 400,
+      "minimum_assigned_bid": 310,
+      "maximum_assigned_bid": 400,
+      "distinct_bid_count": 4,
+      "duplicate_bid_count": 0,
+      "assignment_sequence_sample": [
+        {
+          "phrase_id": "CR2-PHR-01145",
+          "phrase": "тс пиот честный знак 1с",
+          "bid": 400,
+          "position": 0
+        },
+        {
+          "phrase_id": "CR2-PHR-01239",
+          "phrase": "тс пиот честный знак 1с розница",
+          "bid": 370,
+          "position": 1
+        },
+        {
+          "phrase_id": "CR2-PHR-02315",
+          "phrase": "настройка тс пиот в 1с ут 11.5",
+          "bid": 340,
+          "position": 2
+        },
+        {
+          "phrase_id": "CR2-PHR-02354",
+          "phrase": "1с не видит тс пиот",
+          "bid": 310,
+          "position": 3
+        }
+      ]
+    }
+  ],
+  "ca01_all_bids_equal_500": false,
+  "ca01_keyword_rows": 339,
+  "totals": {
+    "groups": 21,
+    "keyword_rows": 833
+  }
+}

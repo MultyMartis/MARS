@@ -1,0 +1,112 @@
+{
+  "protocol_id": "corvonero-commander-ct6-ca01-import-protocol-v1",
+  "generated_at": "2026-06-30T00:00:00.000Z",
+  "programme_entry": "X:/AI MARS/projects/mars-search-ppc-production/README.md",
+  "mode": "operator_assisted_local_import_test",
+  "authorized_campaign": "CA-01",
+  "forbidden_actions": [
+    "server_upload",
+    "yandex_direct_synchronization",
+    "campaign_launch",
+    "import_CA-02_through_CA-05",
+    "api_access",
+    "semantic_execution",
+    "openrouter",
+    "autonomous_commander_ui_control"
+  ],
+  "authority_checkpoints": {
+    "ct4_final": "8943e07e5f6b45d8e6cfd209a30cac55e2f0bb86",
+    "ct5_generation": "880ca442d7dd25a74ed2c1fd83e4a11fecee8dc1",
+    "current_repo_head": "880ca442d7dd25a74ed2c1fd83e4a11fecee8dc1",
+    "branch": "mars/canonical-post-recovery"
+  },
+  "binding_source": {
+    "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-COMMANDER-CT5-FINAL-2026-06-30/CORVONERO-CA-01-PROGRAMMIST-1S-COMMANDER-IMPORT-v2.xlsx",
+    "canonical_sha256": "6b0894fbd49f19c20b9b10de830d2ab6ce4a675b0cb61603c1f0d1d5ebb24cd2",
+    "recalculated_sha256": "6b0894fbd49f19c20b9b10de830d2ab6ce4a675b0cb61603c1f0d1d5ebb24cd2",
+    "hash_status": "PASS",
+    "do_not_modify": true,
+    "ct6_preview_verdict": "PARTIAL — STRUCTURE PASSED, TRANSPORT DEFECTS FOUND"
+  },
+  "next_preview_candidate": {
+    "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-COMMANDER-CT5R1-FINAL-2026-06-30/CORVONERO-CA-01-PROGRAMMIST-1S-COMMANDER-IMPORT-v3.xlsx",
+    "ct5r1_receipt": "CORVONERO-COMMANDER-CT5R1-RESULT-v1.json",
+    "ct6_preview_retry": "READY FOR OPERATOR"
+  },
+  "filesystem_preflight": {
+    "drive": "X:",
+    "volume_label": "AI WS",
+    "volume_label_status": "PASS",
+    "repository": "X:/AI MARS/",
+    "repository_exists": true,
+    "storage_root": "X:/AI MARS STORAGE/",
+    "status": "PASS"
+  },
+  "expected_structure": {
+    "campaigns": 1,
+    "groups": 7,
+    "keyword_phrases": 339,
+    "primary_ads": 7,
+    "max_phrases_per_group": 200,
+    "max_observed_in_xlsx": 144,
+    "bid_rub": 500,
+    "region": "Новосибирская область",
+    "organization": "",
+    "sitelinks": "omitted"
+  },
+  "test_questions": [
+    "Does Commander create exactly one campaign?",
+    "Does it create exactly seven groups?",
+    "Does it import exactly 339 phrases?",
+    "Does it create exactly seven ads?",
+    "Are all groups at or below 200 phrases?",
+    "Is the region preserved as Новосибирская область?",
+    "Is the organization field blank?",
+    "Are campaign negatives imported?",
+    "Are group negatives imported and assigned correctly?",
+    "Are callouts present as expected?",
+    "Are sitelinks absent?",
+    "Are URLs and UTM values preserved?",
+    "Does Commander add, merge, drop or reinterpret any rows?",
+    "Are there import warnings or validation errors?"
+  ],
+  "part1_clean_boundary": {
+    "status": "PENDING_OPERATOR",
+    "commander_version": null,
+    "local_account_client_name": null,
+    "existing_campaigns_before_import": null,
+    "existing_groups_before_import": null,
+    "local_test_area_empty": null,
+    "isolation_proven": null,
+    "notes": "Use new empty local Commander account/container or clearly isolated test tree. Do not import into production. Do not merge with CA-01 v1 manual test."
+  },
+  "part2_operator_actions": [
+    "Open Commander",
+    "Select isolated local test account",
+    "Start import from file",
+    "Select only binding CA-01 XLSX",
+    "Review import preview — record in PREVIEW receipt",
+    "Confirm local import only",
+    "At every sync/send dialog: CANCEL / DO NOT SEND"
+  ],
+  "part3_preview_targets": {
+    "phrase_total": 339,
+    "region_replacement": "NONE",
+    "organization_lookup_error": "NONE",
+    "groups_over_200": "NONE",
+    "v1_defect_watchlist": [
+      "Phrase count larger than expected",
+      "Region replaced with Все",
+      "Organization ID not found",
+      "Group exceeding 200 phrases"
+    ]
+  },
+  "evidence_paths": {
+    "screenshots_dir": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-COMMANDER-CT6-CA01-EVIDENCE-2026-06-30/",
+    "receipts_dir": "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/",
+    "report": "X:/AI MARS/projects/mars-search-ppc-production/reports/REPORT-corvonero-commander-ct6-ca01-local-import-test-v1.md"
+  },
+  "protocol_status": "READY_FOR_OPERATOR",
+  "verdict": null,
+  "git_commit": "NOT_PERFORMED"
+}

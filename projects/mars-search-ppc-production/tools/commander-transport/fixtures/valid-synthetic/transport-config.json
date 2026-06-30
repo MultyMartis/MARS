@@ -18,5 +18,8 @@
       "grp-b": { "terms": ["резюме"] }
     }
   },
-  "fragment_anchor_approved": false
+  "fragment_anchor_approved": false,
+  "tracking_policy": "GLOBAL_CAMPAIGN_PARAMETERS_SET_MANUALLY_BY_OPERATOR",
+  "ad_url_query_parameters": "FORBIDDEN",
+  "bid_policy": "TRIUMPH_DYNAMIC_SPREAD_V1_3"
 }

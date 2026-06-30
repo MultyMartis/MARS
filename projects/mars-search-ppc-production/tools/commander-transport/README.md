@@ -13,8 +13,9 @@ Consumes **explicit frozen Search PPC authority only**. Performs validation befo
 | `filesystem-guard.mjs` | X: / AI WS boundary, approved write roots, FAIL_IF_OUTPUT_EXISTS |
 | `template-validator.mjs` | Authentic Triumph template SHA + sheet structure |
 | `authority-loader.mjs` | Manifest + SHA-256 + role policy |
-| `transport-validator.mjs` | Pre-generation integrity (200-phrase limit, region, org, negatives, ads, UTM) |
-| `payload-builder.mjs` | Per-campaign transport payloads (verbatim authority) |
+| `transport-validator.mjs` | Pre-generation integrity (200-phrase limit, region, org, negatives, ads, UTM, bid ladder) |
+| `bid-ladder.mjs` | Selectable bid policies: Triumph v1.3 (`TRIUMPH_DYNAMIC_SPREAD_V1_3`) and Corvonero cyclic (`CORVONERO_BALANCED_CYCLIC_10_RUB_V1`) |
+| `payload-builder.mjs` | Per-campaign transport payloads with phrase-level bids |
 | `commander-patcher-adapter.mjs` | CT-1 wrapper around Triumph exporter-cli ZIP patch |
 | `cli.mjs` | Modes: validate, build-payload, generate, verify-output |
 

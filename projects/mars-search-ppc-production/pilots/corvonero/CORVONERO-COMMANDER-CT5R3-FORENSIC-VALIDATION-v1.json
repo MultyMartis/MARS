@@ -1,0 +1,1563 @@
+{
+  "run_id": "CORVONERO-COMMANDER-CT5R3-FINAL-2026-06-30",
+  "verified_at": "2026-06-30T08:25:48.982Z",
+  "results": [
+    {
+      "campaign_id": "CA-01",
+      "filename": "CORVONERO-CA-01-PROGRAMMIST-1S-COMMANDER-IMPORT-v5.xlsx",
+      "output_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5R3-FINAL-2026-06-30\\CORVONERO-CA-01-PROGRAMMIST-1S-COMMANDER-IMPORT-v5.xlsx",
+      "sha256": "80e62d262b33e154c86a6a2642c84d4c8a37c263f7464ac9fffc13e082702210",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "sheet_texts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "columns_78",
+          "status": "PASS",
+          "message": "78"
+        },
+        {
+          "check": "template_sha_lineage",
+          "status": "PASS",
+          "message": "source template SHA-256 1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa"
+        },
+        {
+          "check": "regions_dictionary",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_count",
+          "status": "PASS",
+          "message": "1 (single-campaign workbook)"
+        },
+        {
+          "check": "expected_groups",
+          "status": "PASS",
+          "message": "7"
+        },
+        {
+          "check": "expected_keyword_rows",
+          "status": "PASS",
+          "message": "339"
+        },
+        {
+          "check": "expected_ad_rows",
+          "status": "PASS",
+          "message": "7"
+        },
+        {
+          "check": "max_group_phrase_count",
+          "status": "PASS",
+          "message": "144"
+        },
+        {
+          "check": "keyword_bids_present",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bids_within_campaign_base",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bid_ladder_payload_match",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "balanced_bid_distribution",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "distinct_bids_large_groups",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_floor_collapse",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "not_flat_at_base",
+          "status": "PASS",
+          "message": "distinct=10"
+        },
+        {
+          "check": "region",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "forbidden_organization_id",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_column_blank",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_separate_row_16",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_21",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_36",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_60",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_73",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_84",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_217",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "no_combined_callout_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_length_limits",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_delimiter_integrity",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_ad_rows_checked",
+          "status": "PASS",
+          "message": "7"
+        },
+        {
+          "check": "no_query_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_utm_in_url",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_keyword_macro",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_fragment",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "clean_url_no_query",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "keyword_macro_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "sitelinks_omitted",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_metadata_blank",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callouts_payload_match",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "urls_payload_match",
+          "status": "PASS",
+          "message": ""
+        }
+      ],
+      "callout_delimiter": "||",
+      "group_balance_reports": [
+        {
+          "group": "Программист / специалист 1С — direct service order",
+          "phrase_count": 4,
+          "count_per_bid": {
+            "410": 0,
+            "420": 0,
+            "430": 0,
+            "440": 0,
+            "450": 0,
+            "460": 0,
+            "470": 1,
+            "480": 1,
+            "490": 1,
+            "500": 1
+          },
+          "maximum_repeated_count": 1,
+          "minimum_repeated_count": 0,
+          "balance_delta": 1
+        },
+        {
+          "group": "Программист / специалист 1С — find / hire specialist",
+          "phrase_count": 14,
+          "count_per_bid": {
+            "410": 1,
+            "420": 1,
+            "430": 1,
+            "440": 1,
+            "450": 1,
+            "460": 1,
+            "470": 2,
+            "480": 2,
+            "490": 2,
+            "500": 2
+          },
+          "maximum_repeated_count": 2,
+          "minimum_repeated_count": 1,
+          "balance_delta": 1
+        },
+        {
+          "group": "Программист / специалист 1С — Price / cost intent",
+          "phrase_count": 23,
+          "count_per_bid": {
+            "410": 2,
+            "420": 2,
+            "430": 2,
+            "440": 2,
+            "450": 2,
+            "460": 2,
+            "470": 2,
+            "480": 3,
+            "490": 3,
+            "500": 3
+          },
+          "maximum_repeated_count": 3,
+          "minimum_repeated_count": 2,
+          "balance_delta": 1
+        },
+        {
+          "group": "Программист / специалист 1С — remote / freelance / local",
+          "phrase_count": 12,
+          "count_per_bid": {
+            "410": 1,
+            "420": 1,
+            "430": 1,
+            "440": 1,
+            "450": 1,
+            "460": 1,
+            "470": 1,
+            "480": 1,
+            "490": 2,
+            "500": 2
+          },
+          "maximum_repeated_count": 2,
+          "minimum_repeated_count": 1,
+          "balance_delta": 1
+        },
+        {
+          "group": "Программист / специалист 1С — product / role variants",
+          "phrase_count": 10,
+          "count_per_bid": {
+            "410": 1,
+            "420": 1,
+            "430": 1,
+            "440": 1,
+            "450": 1,
+            "460": 1,
+            "470": 1,
+            "480": 1,
+            "490": 1,
+            "500": 1
+          },
+          "maximum_repeated_count": 1,
+          "minimum_repeated_count": 1,
+          "balance_delta": 0
+        },
+        {
+          "group": "Программист / специалист 1С — extended specialist queries",
+          "phrase_count": 132,
+          "count_per_bid": {
+            "410": 13,
+            "420": 13,
+            "430": 13,
+            "440": 13,
+            "450": 13,
+            "460": 13,
+            "470": 13,
+            "480": 13,
+            "490": 14,
+            "500": 14
+          },
+          "maximum_repeated_count": 14,
+          "minimum_repeated_count": 13,
+          "balance_delta": 1
+        },
+        {
+          "group": "Программист / специалист 1С — core specialist search",
+          "phrase_count": 144,
+          "count_per_bid": {
+            "410": 14,
+            "420": 14,
+            "430": 14,
+            "440": 14,
+            "450": 14,
+            "460": 14,
+            "470": 15,
+            "480": 15,
+            "490": 15,
+            "500": 15
+          },
+          "maximum_repeated_count": 15,
+          "minimum_repeated_count": 14,
+          "balance_delta": 1
+        }
+      ],
+      "bid_summary": {
+        "total_keyword_rows": 339,
+        "distinct_bid_values": 10,
+        "minimum_bid": 410,
+        "maximum_bid": 500,
+        "rows_at_base_bid": 38,
+        "bid_histogram": {
+          "410": 32,
+          "420": 32,
+          "430": 32,
+          "440": 32,
+          "450": 32,
+          "460": 32,
+          "470": 35,
+          "480": 36,
+          "490": 38,
+          "500": 38
+        },
+        "all_equal_base": false,
+        "floor_value_count": 32
+      },
+      "counts": {
+        "groups": 7,
+        "keyword_rows": 339,
+        "ad_rows": 7,
+        "max_group_keyword_count": 144
+      }
+    },
+    {
+      "campaign_id": "CA-02",
+      "filename": "CORVONERO-CA-02-SOPROVOZHDENIE-1S-COMMANDER-IMPORT-v5.xlsx",
+      "output_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5R3-FINAL-2026-06-30\\CORVONERO-CA-02-SOPROVOZHDENIE-1S-COMMANDER-IMPORT-v5.xlsx",
+      "sha256": "62ddbe01b00b8070f7028327c7bebe7d652bcdf5faa21e43a363ead6ac494d70",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "sheet_texts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "columns_78",
+          "status": "PASS",
+          "message": "78"
+        },
+        {
+          "check": "template_sha_lineage",
+          "status": "PASS",
+          "message": "source template SHA-256 1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa"
+        },
+        {
+          "check": "regions_dictionary",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_count",
+          "status": "PASS",
+          "message": "1 (single-campaign workbook)"
+        },
+        {
+          "check": "expected_groups",
+          "status": "PASS",
+          "message": "4"
+        },
+        {
+          "check": "expected_keyword_rows",
+          "status": "PASS",
+          "message": "153"
+        },
+        {
+          "check": "expected_ad_rows",
+          "status": "PASS",
+          "message": "4"
+        },
+        {
+          "check": "max_group_phrase_count",
+          "status": "PASS",
+          "message": "137"
+        },
+        {
+          "check": "keyword_bids_present",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bids_within_campaign_base",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bid_ladder_payload_match",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "balanced_bid_distribution",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "distinct_bids_large_groups",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_floor_collapse",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "not_flat_at_base",
+          "status": "PASS",
+          "message": "distinct=10"
+        },
+        {
+          "check": "region",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "forbidden_organization_id",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_column_blank",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_separate_row_16",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_30",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_32",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_170",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "no_combined_callout_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_length_limits",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_delimiter_integrity",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_ad_rows_checked",
+          "status": "PASS",
+          "message": "4"
+        },
+        {
+          "check": "no_query_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_utm_in_url",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_keyword_macro",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_fragment",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "clean_url_no_query",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "keyword_macro_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "sitelinks_omitted",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_metadata_blank",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callouts_payload_match",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "urls_payload_match",
+          "status": "PASS",
+          "message": ""
+        }
+      ],
+      "callout_delimiter": "||",
+      "group_balance_reports": [
+        {
+          "group": "Сопровождение и обслуживание 1С — direct service order",
+          "phrase_count": 13,
+          "count_per_bid": {
+            "310": 1,
+            "320": 1,
+            "330": 1,
+            "340": 1,
+            "350": 1,
+            "360": 1,
+            "370": 1,
+            "380": 2,
+            "390": 2,
+            "400": 2
+          },
+          "maximum_repeated_count": 2,
+          "minimum_repeated_count": 1,
+          "balance_delta": 1
+        },
+        {
+          "group": "Сопровождение и обслуживание 1С — Price / cost intent",
+          "phrase_count": 1,
+          "count_per_bid": {
+            "310": 0,
+            "320": 0,
+            "330": 0,
+            "340": 0,
+            "350": 0,
+            "360": 0,
+            "370": 0,
+            "380": 0,
+            "390": 0,
+            "400": 1
+          },
+          "maximum_repeated_count": 1,
+          "minimum_repeated_count": 0,
+          "balance_delta": 1
+        },
+        {
+          "group": "Сопровождение и обслуживание 1С — support and maintenance",
+          "phrase_count": 137,
+          "count_per_bid": {
+            "310": 13,
+            "320": 13,
+            "330": 13,
+            "340": 14,
+            "350": 14,
+            "360": 14,
+            "370": 14,
+            "380": 14,
+            "390": 14,
+            "400": 14
+          },
+          "maximum_repeated_count": 14,
+          "minimum_repeated_count": 13,
+          "balance_delta": 1
+        },
+        {
+          "group": "Сопровождение и обслуживание 1С — 1С не работает / ошибки / восстановление работы",
+          "phrase_count": 2,
+          "count_per_bid": {
+            "310": 0,
+            "320": 0,
+            "330": 0,
+            "340": 0,
+            "350": 0,
+            "360": 0,
+            "370": 0,
+            "380": 0,
+            "390": 1,
+            "400": 1
+          },
+          "maximum_repeated_count": 1,
+          "minimum_repeated_count": 0,
+          "balance_delta": 1
+        }
+      ],
+      "bid_summary": {
+        "total_keyword_rows": 153,
+        "distinct_bid_values": 10,
+        "minimum_bid": 310,
+        "maximum_bid": 400,
+        "rows_at_base_bid": 18,
+        "bid_histogram": {
+          "310": 14,
+          "320": 14,
+          "330": 14,
+          "340": 15,
+          "350": 15,
+          "360": 15,
+          "370": 15,
+          "380": 16,
+          "390": 17,
+          "400": 18
+        },
+        "all_equal_base": false,
+        "floor_value_count": 14
+      },
+      "counts": {
+        "groups": 4,
+        "keyword_rows": 153,
+        "ad_rows": 4,
+        "max_group_keyword_count": 137
+      }
+    },
+    {
+      "campaign_id": "CA-03",
+      "filename": "CORVONERO-CA-03-DORABOTKA-1S-COMMANDER-IMPORT-v5.xlsx",
+      "output_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5R3-FINAL-2026-06-30\\CORVONERO-CA-03-DORABOTKA-1S-COMMANDER-IMPORT-v5.xlsx",
+      "sha256": "35a1a65f10039ec381422b66623ebb41d0583dcb6e955194168cfcd358c40e17",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "sheet_texts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "columns_78",
+          "status": "PASS",
+          "message": "78"
+        },
+        {
+          "check": "template_sha_lineage",
+          "status": "PASS",
+          "message": "source template SHA-256 1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa"
+        },
+        {
+          "check": "regions_dictionary",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_count",
+          "status": "PASS",
+          "message": "1 (single-campaign workbook)"
+        },
+        {
+          "check": "expected_groups",
+          "status": "PASS",
+          "message": "3"
+        },
+        {
+          "check": "expected_keyword_rows",
+          "status": "PASS",
+          "message": "76"
+        },
+        {
+          "check": "expected_ad_rows",
+          "status": "PASS",
+          "message": "3"
+        },
+        {
+          "check": "max_group_phrase_count",
+          "status": "PASS",
+          "message": "69"
+        },
+        {
+          "check": "keyword_bids_present",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bids_within_campaign_base",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bid_ladder_payload_match",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "balanced_bid_distribution",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "distinct_bids_large_groups",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_floor_collapse",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "not_flat_at_base",
+          "status": "PASS",
+          "message": "distinct=10"
+        },
+        {
+          "check": "region",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "forbidden_organization_id",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_column_blank",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_separate_row_16",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_19",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_25",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "no_combined_callout_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_length_limits",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_delimiter_integrity",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_ad_rows_checked",
+          "status": "PASS",
+          "message": "3"
+        },
+        {
+          "check": "no_query_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_utm_in_url",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_keyword_macro",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_fragment",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "clean_url_no_query",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "keyword_macro_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "sitelinks_omitted",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_metadata_blank",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callouts_payload_match",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "urls_payload_match",
+          "status": "PASS",
+          "message": ""
+        }
+      ],
+      "callout_delimiter": "||",
+      "group_balance_reports": [
+        {
+          "group": "Доработка и разработка 1С — direct service order",
+          "phrase_count": 2,
+          "count_per_bid": {
+            "310": 0,
+            "320": 0,
+            "330": 0,
+            "340": 0,
+            "350": 0,
+            "360": 0,
+            "370": 0,
+            "380": 0,
+            "390": 1,
+            "400": 1
+          },
+          "maximum_repeated_count": 1,
+          "minimum_repeated_count": 0,
+          "balance_delta": 1
+        },
+        {
+          "group": "Доработка и разработка 1С — implementation",
+          "phrase_count": 5,
+          "count_per_bid": {
+            "310": 0,
+            "320": 0,
+            "330": 0,
+            "340": 0,
+            "350": 0,
+            "360": 1,
+            "370": 1,
+            "380": 1,
+            "390": 1,
+            "400": 1
+          },
+          "maximum_repeated_count": 1,
+          "minimum_repeated_count": 0,
+          "balance_delta": 1
+        },
+        {
+          "group": "Доработка и разработка 1С — modification",
+          "phrase_count": 69,
+          "count_per_bid": {
+            "310": 6,
+            "320": 7,
+            "330": 7,
+            "340": 7,
+            "350": 7,
+            "360": 7,
+            "370": 7,
+            "380": 7,
+            "390": 7,
+            "400": 7
+          },
+          "maximum_repeated_count": 7,
+          "minimum_repeated_count": 6,
+          "balance_delta": 1
+        }
+      ],
+      "bid_summary": {
+        "total_keyword_rows": 76,
+        "distinct_bid_values": 10,
+        "minimum_bid": 310,
+        "maximum_bid": 400,
+        "rows_at_base_bid": 9,
+        "bid_histogram": {
+          "310": 6,
+          "320": 7,
+          "330": 7,
+          "340": 7,
+          "350": 7,
+          "360": 8,
+          "370": 8,
+          "380": 8,
+          "390": 9,
+          "400": 9
+        },
+        "all_equal_base": false,
+        "floor_value_count": 6
+      },
+      "counts": {
+        "groups": 3,
+        "keyword_rows": 76,
+        "ad_rows": 3,
+        "max_group_keyword_count": 69
+      }
+    },
+    {
+      "campaign_id": "CA-04",
+      "filename": "CORVONERO-CA-04-INTEGRACII-1S-COMMANDER-IMPORT-v5.xlsx",
+      "output_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5R3-FINAL-2026-06-30\\CORVONERO-CA-04-INTEGRACII-1S-COMMANDER-IMPORT-v5.xlsx",
+      "sha256": "e1ecdec2607c6778176d11bf2b14f1ddd4893853059ecfdeced359dbf9a9c94c",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "sheet_texts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "columns_78",
+          "status": "PASS",
+          "message": "78"
+        },
+        {
+          "check": "template_sha_lineage",
+          "status": "PASS",
+          "message": "source template SHA-256 1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa"
+        },
+        {
+          "check": "regions_dictionary",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_count",
+          "status": "PASS",
+          "message": "1 (single-campaign workbook)"
+        },
+        {
+          "check": "expected_groups",
+          "status": "PASS",
+          "message": "1"
+        },
+        {
+          "check": "expected_keyword_rows",
+          "status": "PASS",
+          "message": "48"
+        },
+        {
+          "check": "expected_ad_rows",
+          "status": "PASS",
+          "message": "1"
+        },
+        {
+          "check": "max_group_phrase_count",
+          "status": "PASS",
+          "message": "48"
+        },
+        {
+          "check": "keyword_bids_present",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bids_within_campaign_base",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bid_ladder_payload_match",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "balanced_bid_distribution",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "distinct_bids_large_groups",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_floor_collapse",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "not_flat_at_base",
+          "status": "PASS",
+          "message": "distinct=10"
+        },
+        {
+          "check": "region",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "forbidden_organization_id",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_column_blank",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_separate_row_16",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "no_combined_callout_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_length_limits",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_delimiter_integrity",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_ad_rows_checked",
+          "status": "PASS",
+          "message": "1"
+        },
+        {
+          "check": "no_query_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_utm_in_url",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_keyword_macro",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_fragment",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "clean_url_no_query",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "keyword_macro_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "sitelinks_omitted",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_metadata_blank",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callouts_payload_match",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "urls_payload_match",
+          "status": "PASS",
+          "message": ""
+        }
+      ],
+      "callout_delimiter": "||",
+      "group_balance_reports": [
+        {
+          "group": "Интеграции 1С — integration",
+          "phrase_count": 48,
+          "count_per_bid": {
+            "310": 4,
+            "320": 4,
+            "330": 5,
+            "340": 5,
+            "350": 5,
+            "360": 5,
+            "370": 5,
+            "380": 5,
+            "390": 5,
+            "400": 5
+          },
+          "maximum_repeated_count": 5,
+          "minimum_repeated_count": 4,
+          "balance_delta": 1
+        }
+      ],
+      "bid_summary": {
+        "total_keyword_rows": 48,
+        "distinct_bid_values": 10,
+        "minimum_bid": 310,
+        "maximum_bid": 400,
+        "rows_at_base_bid": 5,
+        "bid_histogram": {
+          "310": 4,
+          "320": 4,
+          "330": 5,
+          "340": 5,
+          "350": 5,
+          "360": 5,
+          "370": 5,
+          "380": 5,
+          "390": 5,
+          "400": 5
+        },
+        "all_equal_base": false,
+        "floor_value_count": 4
+      },
+      "counts": {
+        "groups": 1,
+        "keyword_rows": 48,
+        "ad_rows": 1,
+        "max_group_keyword_count": 48
+      }
+    },
+    {
+      "campaign_id": "CA-05",
+      "filename": "CORVONERO-CA-05-MARKIROVKA-1S-COMMANDER-IMPORT-v5.xlsx",
+      "output_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5R3-FINAL-2026-06-30\\CORVONERO-CA-05-MARKIROVKA-1S-COMMANDER-IMPORT-v5.xlsx",
+      "sha256": "5b1ac676066000c1541e600a62ad0d542e3f7b2816d0ae113fa7e497b69ba85b",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "sheet_texts",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "columns_78",
+          "status": "PASS",
+          "message": "78"
+        },
+        {
+          "check": "template_sha_lineage",
+          "status": "PASS",
+          "message": "source template SHA-256 1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa"
+        },
+        {
+          "check": "regions_dictionary",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "campaign_count",
+          "status": "PASS",
+          "message": "1 (single-campaign workbook)"
+        },
+        {
+          "check": "expected_groups",
+          "status": "PASS",
+          "message": "6"
+        },
+        {
+          "check": "expected_keyword_rows",
+          "status": "PASS",
+          "message": "217"
+        },
+        {
+          "check": "expected_ad_rows",
+          "status": "PASS",
+          "message": "6"
+        },
+        {
+          "check": "max_group_phrase_count",
+          "status": "PASS",
+          "message": "104"
+        },
+        {
+          "check": "keyword_bids_present",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bids_within_campaign_base",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "bid_ladder_payload_match",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "balanced_bid_distribution",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "distinct_bids_large_groups",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_floor_collapse",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "not_flat_at_base",
+          "status": "PASS",
+          "message": "distinct=10"
+        },
+        {
+          "check": "region",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "forbidden_organization_id",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_column_blank",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_separate_row_16",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_121",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_136",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_142",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_231",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "callout_separate_row_234",
+          "status": "PASS",
+          "message": "4 callouts"
+        },
+        {
+          "check": "no_combined_callout_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_length_limits",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_delimiter_integrity",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callout_ad_rows_checked",
+          "status": "PASS",
+          "message": "6"
+        },
+        {
+          "check": "no_query_string",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_utm_in_url",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_keyword_macro",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "no_fragment",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "utm_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "clean_url_no_query",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "keyword_macro_absent",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "sitelinks_omitted",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "organization_metadata_blank",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "callouts_payload_match",
+          "status": "PASS",
+          "message": ""
+        },
+        {
+          "check": "urls_payload_match",
+          "status": "PASS",
+          "message": ""
+        }
+      ],
+      "callout_delimiter": "||",
+      "group_balance_reports": [
+        {
+          "group": "Маркировка / Честный знак — Chestny Znak service",
+          "phrase_count": 104,
+          "count_per_bid": {
+            "310": 10,
+            "320": 10,
+            "330": 10,
+            "340": 10,
+            "350": 10,
+            "360": 10,
+            "370": 11,
+            "380": 11,
+            "390": 11,
+            "400": 11
+          },
+          "maximum_repeated_count": 11,
+          "minimum_repeated_count": 10,
+          "balance_delta": 1
+        },
+        {
+          "group": "Маркировка / Честный знак — integration",
+          "phrase_count": 14,
+          "count_per_bid": {
+            "310": 1,
+            "320": 1,
+            "330": 1,
+            "340": 1,
+            "350": 1,
+            "360": 1,
+            "370": 2,
+            "380": 2,
+            "390": 2,
+            "400": 2
+          },
+          "maximum_repeated_count": 2,
+          "minimum_repeated_count": 1,
+          "balance_delta": 1
+        },
+        {
+          "group": "Маркировка / Честный знак — marking codes setup",
+          "phrase_count": 5,
+          "count_per_bid": {
+            "310": 0,
+            "320": 0,
+            "330": 0,
+            "340": 0,
+            "350": 0,
+            "360": 1,
+            "370": 1,
+            "380": 1,
+            "390": 1,
+            "400": 1
+          },
+          "maximum_repeated_count": 1,
+          "minimum_repeated_count": 0,
+          "balance_delta": 1
+        },
+        {
+          "group": "Маркировка / Честный знак — general marking setup",
+          "phrase_count": 88,
+          "count_per_bid": {
+            "310": 8,
+            "320": 8,
+            "330": 9,
+            "340": 9,
+            "350": 9,
+            "360": 9,
+            "370": 9,
+            "380": 9,
+            "390": 9,
+            "400": 9
+          },
+          "maximum_repeated_count": 9,
+          "minimum_repeated_count": 8,
+          "balance_delta": 1
+        },
+        {
+          "group": "Маркировка / Честный знак — support and maintenance",
+          "phrase_count": 2,
+          "count_per_bid": {
+            "310": 0,
+            "320": 0,
+            "330": 0,
+            "340": 0,
+            "350": 0,
+            "360": 0,
+            "370": 0,
+            "380": 0,
+            "390": 1,
+            "400": 1
+          },
+          "maximum_repeated_count": 1,
+          "minimum_repeated_count": 0,
+          "balance_delta": 1
+        },
+        {
+          "group": "Маркировка / Честный знак — TS ПИОТ",
+          "phrase_count": 4,
+          "count_per_bid": {
+            "310": 0,
+            "320": 0,
+            "330": 0,
+            "340": 0,
+            "350": 0,
+            "360": 0,
+            "370": 1,
+            "380": 1,
+            "390": 1,
+            "400": 1
+          },
+          "maximum_repeated_count": 1,
+          "minimum_repeated_count": 0,
+          "balance_delta": 1
+        }
+      ],
+      "bid_summary": {
+        "total_keyword_rows": 217,
+        "distinct_bid_values": 10,
+        "minimum_bid": 310,
+        "maximum_bid": 400,
+        "rows_at_base_bid": 25,
+        "bid_histogram": {
+          "310": 19,
+          "320": 19,
+          "330": 20,
+          "340": 20,
+          "350": 20,
+          "360": 21,
+          "370": 24,
+          "380": 24,
+          "390": 25,
+          "400": 25
+        },
+        "all_equal_base": false,
+        "floor_value_count": 19
+      },
+      "counts": {
+        "groups": 6,
+        "keyword_rows": 217,
+        "ad_rows": 6,
+        "max_group_keyword_count": 104
+      }
+    }
+  ],
+  "overall": "PASS",
+  "aggregate": {
+    "campaigns": 5,
+    "groups": 21,
+    "keyword_rows": 833,
+    "primary_ads": 21,
+    "region": "Новосибирская область"
+  }
+}

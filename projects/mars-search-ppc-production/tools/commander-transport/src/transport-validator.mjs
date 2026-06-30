@@ -7,6 +7,22 @@ import {
   REQUIRED_ORGANIZATION_VALUE,
   REQUIRED_REGION_VALUE,
 } from './constants.mjs';
+import {
+  isCombinedCalloutDefect,
+  validateCalloutPool,
+  validateSerializedCallouts,
+} from './callout-serializer.mjs';
+import { validateAdUrlForTransport } from './url-policy.mjs';
+import {
+  assignBidsForGroup,
+  BID_POLICIES,
+  BID_STEP_MIN,
+  ABSOLUTE_BID_MIN,
+  CORVONERO_LADDER_VALUES,
+  resolveBidPolicy,
+  validateGroupBids,
+  verifyBidLadderDeterminism,
+} from './bid-ladder.mjs';
 
 /**
  * @param {import('./authority-loader.mjs').LoadedAuthority} loaded
@@ -323,38 +339,91 @@ export function validateTransport(loaded) {
 
   const bidsData = model.bids?.campaign_bids ?? null;
 
-  const utmSlugs = model.utmMap?.campaign_slugs ?? {};
-  const groupSlugs = model.utmMap?.group_slugs ?? {};
   const calloutPools = model.callouts?.campaign_pools ?? {};
+  const transportConfig = model.transportConfig;
+
+  let resolvedBidPolicy;
+  try {
+    resolvedBidPolicy = resolveBidPolicy(transportConfig);
+  } catch (err) {
+    violations.push({
+      code: err.code ?? 'BID_POLICY_NOT_EXPLICITLY_SELECTED',
+      message: err.message,
+    });
+    resolvedBidPolicy = null;
+  }
+
+  for (const [cid, pool] of Object.entries(calloutPools)) {
+    if (!campaignScope.has(cid)) continue;
+    violations.push(...validateCalloutPool(pool, { campaignId: cid }));
+    for (const item of pool) {
+      const text = item?.text ?? '';
+      if (isCombinedCalloutDefect(text)) {
+        violations.push({
+          code: 'COMBINED_CALLOUT_VALUE',
+          message: `Authority callout pool contains combined value for ${cid}: "${text}"`,
+          campaign_id: cid,
+        });
+      }
+    }
+  }
 
   for (const g of groups) {
     const phrases = phrasesByGroup.get(g.group_id) ?? [];
     const groupAds = adsByGroup.get(g.group_id) ?? [];
-    const bid = bidsData?.[g.campaign_id];
+    const campaignBaseBid = bidsData?.[g.campaign_id];
 
-    for (const p of phrases) {
-      if (bid == null || bid === '') {
+    if (campaignBaseBid == null || campaignBaseBid === '') {
+      if (phrases.length > 0) {
         violations.push({
-          code: 'MISSING_BID',
-          message: `Missing bid for phrase ${p.phrase_id} in campaign ${g.campaign_id}`,
+          code: 'MISSING_CAMPAIGN_BASE_BID',
+          message: `Missing campaign base bid for ${g.campaign_id}`,
+          campaign_id: g.campaign_id,
+        });
+      }
+    } else if (phrases.length > 0 && resolvedBidPolicy) {
+      const ladderOptions = {
+        policy: resolvedBidPolicy,
+        bidStep: transportConfig?.bid_step ?? BID_STEP_MIN,
+        ladderValues: transportConfig?.ladder_values ?? CORVONERO_LADDER_VALUES,
+        minimumBid: transportConfig?.minimum_bid ?? ABSOLUTE_BID_MIN,
+        phrases,
+      };
+      const expectedBids = assignBidsForGroup(phrases, campaignBaseBid, ladderOptions);
+      const ladderErrors = validateGroupBids(expectedBids, campaignBaseBid, phrases.length, ladderOptions);
+      for (const err of ladderErrors) {
+        violations.push({
+          code: 'BID_LADDER_INVALID',
+          message: `Bid ladder error for group ${g.group_id}: ${err}`,
           campaign_id: g.campaign_id,
           group_id: g.group_id,
         });
-        break;
+      }
+      const determinismErrors = verifyBidLadderDeterminism(
+        phrases,
+        campaignBaseBid,
+        expectedBids,
+        ladderOptions
+      );
+      for (const err of determinismErrors) {
+        violations.push({
+          code: 'BID_LADDER_NON_DETERMINISTIC',
+          message: `Bid ladder determinism error for group ${g.group_id}: ${err}`,
+          campaign_id: g.campaign_id,
+          group_id: g.group_id,
+        });
       }
     }
 
     if (groupAds.length === 1) {
       const ad = groupAds[0];
       const baseUrl = ad.landing_page?.url ?? ad.primary_ad?.landing_url ?? '';
-      validateUrlUtm(
-        violations,
-        baseUrl,
-        g.campaign_id,
-        g.group_id,
-        utmSlugs,
-        groupSlugs,
-        model.utmMap
+      violations.push(
+        ...validateAdUrlForTransport(baseUrl, transportConfig, {
+          groupId: g.group_id,
+          campaignId: g.campaign_id,
+          utmMap: model.utmMap,
+        })
       );
     }
   }
@@ -365,7 +434,10 @@ export function validateTransport(loaded) {
     for (const ad of ads.filter((a) => a.campaign_id === cid)) {
       const calloutField = ad.callouts ?? ad.primary_ad?.callouts;
       if (calloutField) {
-        for (const c of String(calloutField).split(';;')) {
+        violations.push(
+          ...validateSerializedCallouts(String(calloutField), { campaignId: cid })
+        );
+        for (const c of String(calloutField).split('||')) {
           const t = c.trim();
           if (t && !texts.includes(t)) {
             violations.push({
@@ -427,51 +499,6 @@ export function validateTransport(loaded) {
     group_phrase_counts: groupPhraseCounts,
     model,
   };
-}
-
-function validateUrlUtm(violations, baseUrl, campaignId, groupId, utmSlugs, groupSlugs, utmMap) {
-  if (!baseUrl) {
-    violations.push({
-      code: 'MISSING_URL',
-      message: `Missing landing URL for group ${groupId}`,
-      group_id: groupId,
-    });
-    return;
-  }
-  if (!baseUrl.startsWith('https://')) {
-    violations.push({
-      code: 'INVALID_URL',
-      message: `URL must be https for group ${groupId}: ${baseUrl}`,
-      group_id: groupId,
-    });
-  }
-  if (baseUrl.includes('#') && !utmMap?.fragment_anchor_approved) {
-    violations.push({
-      code: 'UNAPPROVED_FRAGMENT',
-      message: `Fragment anchor not approved for group ${groupId}`,
-      group_id: groupId,
-    });
-  }
-
-  const slug = utmSlugs[campaignId];
-  const content = groupSlugs[groupId];
-  if (!slug || !content) return;
-
-  const suffix = `utm_source=yandex&utm_medium=cpc&utm_campaign=${slug}&utm_content=${content}`;
-  if (baseUrl.includes('utm_term')) {
-    violations.push({
-      code: 'INVALID_UTM',
-      message: `utm_term forbidden for group ${groupId}`,
-      group_id: groupId,
-    });
-  }
-  if (baseUrl.includes('{keyword}')) {
-    violations.push({
-      code: 'INVALID_UTM',
-      message: `{keyword} macro forbidden for group ${groupId}`,
-      group_id: groupId,
-    });
-  }
 }
 
 function validateNegatives(violations, warnings, model, groups, knownGroupIds, campaignScope) {

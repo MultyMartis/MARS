@@ -60,4 +60,16 @@ describe('transport-validator', () => {
     const result = validateTransport(loaded);
     assert.ok(result.warnings.some((w) => w.code === 'CROSS_CAMPAIGN_NOT_APPLIED'));
   });
+
+  it('fails when bid policy is not explicitly selected', async () => {
+    const manifestPath = await writeFixtureManifest('valid-synthetic');
+    let loaded = await loadAuthority(manifestPath, { skipVolumeCheck: true });
+    loaded = enrichSyntheticAuthority(loaded);
+    delete loaded.byRole.transport_config.bid_policy;
+    const result = validateTransport(loaded);
+    assert.equal(result.status, 'FAIL');
+    assert.ok(
+      result.violations.some((v) => v.code === 'BID_POLICY_NOT_EXPLICITLY_SELECTED')
+    );
+  });
 });

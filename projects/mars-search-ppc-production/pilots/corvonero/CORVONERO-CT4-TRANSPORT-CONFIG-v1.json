@@ -16,5 +16,12 @@
   "display_paths_ref": "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-EXT-W1-DISPLAY-PATHS-v1.json",
   "group_negatives_ref": "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CT4-GROUP-NEGATIVES-v1.json",
   "fragment_anchor_approved": false,
-  "ct4_authority": true
+  "tracking_policy": "GLOBAL_CAMPAIGN_PARAMETERS_SET_MANUALLY_BY_OPERATOR",
+  "ad_url_query_parameters": "FORBIDDEN",
+  "ct4_authority": true,
+  "bid_policy": "CORVONERO_BALANCED_CYCLIC_10_RUB_V1",
+  "bid_step": 10,
+  "ladder_values": 10,
+  "assignment_scope": "PER_GROUP",
+  "assignment_order": "CT4_AUTHORITY_ORDER"
 }

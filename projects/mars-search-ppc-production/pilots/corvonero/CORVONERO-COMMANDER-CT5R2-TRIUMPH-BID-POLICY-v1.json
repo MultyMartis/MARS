@@ -1,0 +1,25 @@
+{
+  "source_path": "projects/orca/ppc/triumph-manipulator/tools/exporter-cli/bid-assignment-v1.3.js",
+  "source_file": "bid-assignment-v1.3.js",
+  "repository_commit": "880ca442d7dd25a74ed2c1fd83e4a11fecee8dc1",
+  "campaign": "triumph-manipulator-search",
+  "reference_bid_min_rub": 400,
+  "reference_bid_max_rub": 600,
+  "corvonero_campaign_base_bids": {
+    "CA-01": 500,
+    "CA-02": 400,
+    "CA-03": 400,
+    "CA-04": 400,
+    "CA-05": 400
+  },
+  "bid_ladder_policy": "triumph-v1.3-descending-per-group",
+  "bid_step_min_rub": 10,
+  "spread_max_rub": 90,
+  "assignment_scope": "per_ad_group",
+  "assignment_order": "primary_first_then_source_index_then_phrase_id",
+  "ladder_direction": "descending",
+  "group_reset_rule": "each_ad_group_restarts_from_campaign_base_bid",
+  "duplicate_bid_policy": "retry_with_step_min_11_when_unique_count_lt_phrase_count",
+  "determinism_rule": "stable_phrase_order_plus_fixed_algorithm",
+  "single_phrase_rule": "campaign_base_bid_minus_20_clamped"
+}

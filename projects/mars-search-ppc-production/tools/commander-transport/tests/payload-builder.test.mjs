@@ -21,6 +21,17 @@ describe('payload-builder', () => {
     const kwRows = payloads[0].rows.filter((r) => r.row_type === 'KEYWORD');
     assert.equal(adRows.length, 2);
     assert.equal(kwRows.length, 6);
+    for (const kw of kwRows) {
+      assert.ok(kw.bid != null && kw.bid !== '');
+      assert.ok(kw.bid <= 500);
+    }
+    const bidsInGroup = kwRows.map((r) => r.bid);
+    assert.ok(new Set(bidsInGroup).size > 1 || kwRows.length === 1);
+    const adRow = adRows[0];
+    assert.ok(!adRow.landing_url.includes('utm_'));
+    assert.ok(!adRow.landing_url.includes('?'));
+    assert.ok(adRow.callouts.includes('||'));
+    assert.ok(!adRow.callouts.includes(';;'));
   });
 
   it('refuses payload build on failed validation', async () => {

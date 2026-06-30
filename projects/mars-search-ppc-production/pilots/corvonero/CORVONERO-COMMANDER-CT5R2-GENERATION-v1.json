@@ -1,0 +1,62 @@
+{
+  "run_id": "CORVONERO-COMMANDER-CT5R2-FINAL-2026-06-30",
+  "generated_at": "2026-06-30T07:46:19.681Z",
+  "output_directory": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5R2-FINAL-2026-06-30",
+  "files_generated": 5,
+  "generation_results": [
+    {
+      "campaign_id": "CA-01",
+      "filename": "CORVONERO-CA-01-PROGRAMMIST-1S-COMMANDER-IMPORT-v4.xlsx",
+      "output_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5R2-FINAL-2026-06-30\\CORVONERO-CA-01-PROGRAMMIST-1S-COMMANDER-IMPORT-v4.xlsx",
+      "sha256": "cf740bec7a67a6bda17577ae81bbec533fde366bf9fab1454d4dbf506b738aa5",
+      "rows_written": 346,
+      "keyword_rows": 339,
+      "ad_rows": 7,
+      "campaign_base_bid": 500
+    },
+    {
+      "campaign_id": "CA-02",
+      "filename": "CORVONERO-CA-02-SOPROVOZHDENIE-1S-COMMANDER-IMPORT-v4.xlsx",
+      "output_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5R2-FINAL-2026-06-30\\CORVONERO-CA-02-SOPROVOZHDENIE-1S-COMMANDER-IMPORT-v4.xlsx",
+      "sha256": "2ccef20b8d603aaa968508c2b6c266083e9c0489f38f5db6cd0e81551f03f5c4",
+      "rows_written": 157,
+      "keyword_rows": 153,
+      "ad_rows": 4,
+      "campaign_base_bid": 400
+    },
+    {
+      "campaign_id": "CA-03",
+      "filename": "CORVONERO-CA-03-DORABOTKA-1S-COMMANDER-IMPORT-v4.xlsx",
+      "output_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5R2-FINAL-2026-06-30\\CORVONERO-CA-03-DORABOTKA-1S-COMMANDER-IMPORT-v4.xlsx",
+      "sha256": "01909977f4c41fcb702036f01e82c30dec6a62731c27cf82cdefffaed12142cd",
+      "rows_written": 79,
+      "keyword_rows": 76,
+      "ad_rows": 3,
+      "campaign_base_bid": 400
+    },
+    {
+      "campaign_id": "CA-04",
+      "filename": "CORVONERO-CA-04-INTEGRACII-1S-COMMANDER-IMPORT-v4.xlsx",
+      "output_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5R2-FINAL-2026-06-30\\CORVONERO-CA-04-INTEGRACII-1S-COMMANDER-IMPORT-v4.xlsx",
+      "sha256": "f27c98b3d343db35515415e056a7530002051593df6a72ac04fd75e08014b938",
+      "rows_written": 49,
+      "keyword_rows": 48,
+      "ad_rows": 1,
+      "campaign_base_bid": 400
+    },
+    {
+      "campaign_id": "CA-05",
+      "filename": "CORVONERO-CA-05-MARKIROVKA-1S-COMMANDER-IMPORT-v4.xlsx",
+      "output_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-CT5R2-FINAL-2026-06-30\\CORVONERO-CA-05-MARKIROVKA-1S-COMMANDER-IMPORT-v4.xlsx",
+      "sha256": "c32e1aaefc4680114aea7ef8dc083e883837cd960eb78ab5ff12b96ea6f90ace",
+      "rows_written": 223,
+      "keyword_rows": 217,
+      "ad_rows": 6,
+      "campaign_base_bid": 400
+    }
+  ],
+  "pre_validation": {
+    "status": "PASS"
+  },
+  "bid_ladder_policy": "triumph-v1.3-descending-per-group"
+}

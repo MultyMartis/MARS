@@ -1,0 +1,94 @@
+{
+  "receipt_id": "corvonero-commander-ct6-ca01-import-preview-v1",
+  "captured_at": "2026-06-30T18:00:00.000Z",
+  "updated_at": "2026-06-30T18:00:00.000Z",
+  "operator": "OPERATOR",
+  "binding_version": "v5",
+  "binding_file": "CORVONERO-CA-01-PROGRAMMIST-1S-COMMANDER-IMPORT-v5.xlsx",
+  "binding_directory": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-COMMANDER-CT5R3-FINAL-2026-06-30",
+  "binding_sha256": "80e62d262b33e154c86a6a2642c84d4c8a37c263f7464ac9fffc13e082702210",
+  "ct5r3_receipt": "CORVONERO-COMMANDER-CT5R3-RESULT-v1.json",
+  "bid_policy": "CORVONERO_BALANCED_CYCLIC_10_RUB_V1",
+  "status": "PASS — LOCAL IMPORT PREVIEW",
+  "verdict": "CORVONERO COMMANDER CT-6 CA-01: PASS — LOCAL IMPORT MATCHES FINAL AUTHORITY",
+  "ct6_pass": true,
+  "commander_preview": {
+    "result": "PASS",
+    "campaigns_detected": 1,
+    "groups_detected": 7,
+    "phrases_detected": 339,
+    "ads_detected": 7,
+    "unparsed_rows": 0,
+    "warnings": [],
+    "errors": [],
+    "callout_errors": 0,
+    "region_errors": 0,
+    "organization_errors": 0,
+    "import_errors": 0
+  },
+  "expected": {
+    "campaigns": 1,
+    "groups": 7,
+    "phrases": 339,
+    "ads": 7,
+    "groups_over_200": 0,
+    "region": "Новосибирская область",
+    "organization": "blank",
+    "callouts": "valid",
+    "urls": "clean, no UTM",
+    "bid_policy": "CORVONERO_BALANCED_CYCLIC_10_RUB_V1"
+  },
+  "observed": {
+    "campaigns": 1,
+    "groups": 7,
+    "phrases": 339,
+    "ads": 7,
+    "unparsed_rows": 0,
+    "commander_warnings": 0
+  },
+  "preview_vs_expected": {
+    "campaigns_match": true,
+    "groups_match": true,
+    "phrases_match": true,
+    "ads_match": true,
+    "safe_to_proceed_local_import": true
+  },
+  "workbook_authority_verification": {
+    "campaigns": 1,
+    "groups": 7,
+    "keyword_rows": 339,
+    "ad_rows": 7,
+    "max_group_phrases": 144,
+    "groups_over_200": 0,
+    "region": "Новосибирская область",
+    "organization": "blank",
+    "callouts": "valid",
+    "urls": "clean, no UTM",
+    "bid_policy": "CORVONERO_BALANCED_CYCLIC_10_RUB_V1",
+    "sha256_recalculated": "80e62d262b33e154c86a6a2642c84d4c8a37c263f7464ac9fffc13e082702210"
+  },
+  "import_confirmed": true,
+  "server_upload": false,
+  "synchronization": false,
+  "launch": false,
+  "operator_notes": "Operator confirmed: Everything is good. Preview PASS with 1 campaign, 7 groups, 339 phrases, 7 ads, 0 unparsed rows, 0 import/callout/region/organization errors.",
+  "detailed_field_inspection": "OPERATOR CONFIRMED GENERALLY — DETAILED FIELD-BY-FIELD INSPECTION NOT RECORDED",
+  "historical_attempts": {
+    "v2": {
+      "verdict": "PARTIAL — callout and URL transport defects",
+      "binding_sha256": "6b0894fbd49f19c20b9b10de830d2ab6ce4a675b0cb61603c1f0d1d5ebb24cd2"
+    },
+    "v3": {
+      "structure": "PASS",
+      "callouts": "PASS",
+      "clean_urls": "PASS",
+      "bid_distribution": "FAIL — all 339 phrases at 500 RUB"
+    },
+    "v4": {
+      "structure": "PASS",
+      "callouts": "PASS",
+      "clean_urls": "PASS",
+      "bid_distribution": "REJECTED — LARGE-GROUP FLOOR COLLAPSE"
+    }
+  }
+}

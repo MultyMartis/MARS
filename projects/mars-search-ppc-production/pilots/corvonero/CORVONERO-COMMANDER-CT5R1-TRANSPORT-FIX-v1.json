@@ -1,0 +1,11 @@
+{
+  "callout_delimiter": "||",
+  "previous_wrong_delimiter": ";;",
+  "tracking_policy": "GLOBAL_CAMPAIGN_PARAMETERS_SET_MANUALLY_BY_OPERATOR",
+  "ad_url_query_parameters": "FORBIDDEN",
+  "root_cause": {
+    "callout_serialization": "payload-builder.mjs used ;; instead of Commander || delimiter",
+    "url_construction": "payload-builder.mjs injected per-ad UTM query parameters",
+    "defect_layer": "payload-builder (transport serialization boundary)"
+  }
+}
