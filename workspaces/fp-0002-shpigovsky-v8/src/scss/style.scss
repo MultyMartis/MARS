@@ -7224,7 +7224,7 @@ body[data-offcanvas-state='open'] {
 	padding: var(--pad-gap);
 	border-radius: var(--radius-main);
 	background-color: var(--color-surface);
-	background-color: #eef0f0;
+	// background-color: #eef0f0;
 }
 
 .review-archive-card__header {
@@ -7568,6 +7568,598 @@ body[data-offcanvas-state='open'] {
 		.reviews-page__breadcrumbs .container,
 		.reviews-archive .container,
 		.reviews-rehabilitation-requirements__container {
+			padding-left: 30px; // EXACT_GEOMETRY — Figma 380 viewport → 320px content
+			padding-right: 30px;
+		}
+	}
+}
+
+/* ==========================================================================
+   FP-0002 PG-008 — Blog archive page (desktop pass 01)
+   ========================================================================== */
+
+.page-blog__main {
+	display: flex;
+	flex-direction: column;
+}
+
+.page-blog main {
+	padding-bottom: 0;
+}
+
+.blog-page__breadcrumbs {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.blog-page__breadcrumbs .container {
+	display: flex;
+	flex-direction: column;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.blog-page__breadcrumbs .breadcrumbs__list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.blog-page__breadcrumbs .breadcrumbs__item {
+	display: inline-flex;
+	align-items: center;
+	margin: 0;
+}
+
+.blog-page__breadcrumbs .breadcrumbs__item + .breadcrumbs__item::before {
+	content: "/";
+	margin-right: 8px;
+	color: var(--color-text-secondary);
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.blog-page__breadcrumbs .breadcrumbs__link,
+.blog-page__breadcrumbs .breadcrumbs__current {
+	font-size: 14px;
+	line-height: 18px;
+	color: var(--color-text-secondary);
+	text-decoration: none;
+}
+
+.blog-page__breadcrumbs .breadcrumbs__link:hover,
+.blog-page__breadcrumbs .breadcrumbs__link:focus-visible {
+	color: var(--color-accent);
+}
+
+.blog-page__breadcrumbs .breadcrumbs__current {
+	color: var(--color-text-primary);
+}
+
+.blog-archive {
+	padding-top: 15px;
+	padding-bottom: var(--pad-y);
+}
+
+.blog-archive__container {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap);
+}
+
+.blog-archive__heading {
+	margin: 0;
+	font-size: var(--font-size-h2);
+	font-weight: var(--font-weight-heading);
+	line-height: var(--line-height-h2);
+	color: var(--color-text-primary);
+}
+
+.blog-archive__intro.block-whith-red-line {
+	margin: 0;
+	font-size: 18px; // EXACT_GEOMETRY — Figma 1:2675
+	line-height: 24px;
+	text-transform: none;
+}
+
+.blog-archive__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: var(--pad-gap);
+}
+
+.blog-archive-card {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	height: 100%;
+	border-radius: var(--radius-main);
+	background-color: var(--color-surface);
+	overflow: hidden;
+}
+
+.blog-archive-card__image-link {
+	display: block;
+	flex-shrink: 0;
+	color: inherit;
+	text-decoration: none;
+	border-radius: var(--radius-main);
+}
+
+.blog-archive-card__image {
+	display: block;
+	width: 100%;
+	height: 276px; // EXACT_GEOMETRY — Figma 1:2679 card image area (~45% of 614)
+	object-fit: cover;
+	object-position: center;
+}
+
+.blog-archive-card__body {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	gap: var(--pad-gap-line);
+	padding: var(--pad-gap-line) var(--pad-box) var(--pad-box);
+}
+
+.blog-archive-card__title {
+	margin: 0;
+	font-size: var(--font-size-base);
+	font-weight: var(--font-weight-heading);
+	line-height: var(--line-height-base);
+}
+
+.blog-archive-card__title-link {
+	color: var(--color-text-primary);
+	text-decoration: none;
+}
+
+.blog-archive-card__title-link:hover,
+.blog-archive-card__title-link:focus-visible {
+	color: var(--color-accent);
+}
+
+.blog-archive-card__meta {
+	margin: 0;
+	font-size: var(--font-size-small);
+	line-height: var(--line-height-small);
+	color: var(--color-text-secondary);
+}
+
+.blog-archive-card__excerpt {
+	flex: 1;
+	margin: 0;
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+	color: var(--color-text-secondary);
+}
+
+.blog-archive-card__read-more {
+	margin: 0;
+}
+
+.blog-archive-card__read-more-link {
+	color: var(--color-accent);
+	text-decoration: underline;
+}
+
+.blog-archive-card__read-more-link:hover,
+.blog-archive-card__read-more-link:focus-visible {
+	color: var(--color-accent-hover);
+}
+
+.blog-archive-pagination {
+	margin-top: var(--pad-gap-line);
+}
+
+.blog-archive-pagination__list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: var(--pad-gap-line);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.blog-archive-pagination__item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.blog-archive-pagination__link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 40px;
+	height: 40px;
+	padding: 0 8px;
+	border: var(--border-width) solid transparent;
+	border-radius: var(--radius-full);
+	font-size: var(--font-size-base);
+	line-height: 1;
+	color: var(--color-text-secondary);
+	text-decoration: none;
+}
+
+.blog-archive-pagination__link:hover,
+.blog-archive-pagination__link:focus-visible {
+	color: var(--color-text-primary);
+}
+
+.blog-archive-pagination__link--active {
+	border-color: var(--color-text-primary);
+	background-color: var(--color-text-primary);
+	color: var(--color-text-inverse);
+}
+
+.blog-archive-pagination__ellipsis {
+	font-size: var(--font-size-base);
+	line-height: 1;
+	color: var(--color-text-secondary);
+}
+
+.page-blog .site-footer {
+	margin-top: 0;
+}
+
+/* FP-0002 Blog Desktop Pass 02 — lower stack */
+.page-blog .blog-lower-stack .program-cta-band-section {
+	padding-top: 0;
+	padding-bottom: var(--pad-gap);
+}
+
+.page-blog .blog-lower-stack .program-cta-band-section__container {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.page-blog .blog-expert-quote {
+	padding-bottom: var(--pad-y);
+}
+
+.page-blog .blog-expert-quote__container {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.page-blog .blog-expert-quote__layout {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	gap: var(--pad-gap);
+	align-items: flex-start;
+}
+
+.page-blog .blog-expert-quote__quote {
+	margin: 0;
+}
+
+.page-blog .blog-expert-quote__mark {
+	display: block;
+	width: 70px;
+	height: 55px;
+	margin: 0 0 var(--pad-gap);
+	color: var(--color-accent);
+}
+
+.page-blog .blog-expert-quote__text {
+	margin: 0;
+	max-width: 560px;
+	font-size: 17px; // EXACT_GEOMETRY — Figma 1:2728
+	line-height: 24px;
+	color: var(--color-text-primary);
+}
+
+.page-blog .blog-expert-quote__figure {
+	position: relative;
+	margin: 0;
+	overflow: hidden;
+	border-radius: var(--radius-main);
+	padding-right: 15%;
+}
+
+.page-blog .blog-expert-quote__photo {
+	display: block;
+	width: 100%;
+	max-height: 511px; // EXACT_GEOMETRY — Figma 1:2722 section height
+	object-fit: cover;
+	object-position: 62% 12%;
+	border-radius: var(--radius-main);
+	-webkit-mask-image: linear-gradient(90deg, transparent 5%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.95) 30%, #000 90%);
+	mask-image: linear-gradient(90deg, transparent 5%, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0.95) 30%, #000 90%);
+}
+
+.page-blog .blog-expert-quote__figure::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	background: linear-gradient(43deg, var(--color-page-background) 0%, rgba(218, 229, 240, 0) 2%, rgba(218, 229, 240, 0) 45%), linear-gradient(200deg, rgba(218, 229, 240, 0) 70%, rgb(218, 229, 240) 100%);
+	pointer-events: none;
+}
+
+.page-blog .blog-expert-quote__expert {
+	position: absolute;
+	top: var(--pad-gap);
+	right: var(--pad-gap);
+	z-index: 2;
+	margin: 0;
+}
+
+.page-blog .blog-expert-quote__expert-label {
+	font-size: 14px; // EXACT_GEOMETRY — Figma 1:2732
+	line-height: 18px;
+	color: var(--color-text-inverse);
+	text-transform: lowercase;
+}
+
+.page-blog .blog-expert-quote__card {
+	position: absolute;
+	right: 0;
+	bottom: var(--pad-gap);
+	z-index: 2;
+	box-sizing: border-box;
+	width: 250px;
+	max-width: 250px;
+	padding: 25px;
+	border-radius: var(--radius-main);
+	background-color: rgba(255, 255, 255, 0.7);
+	backdrop-filter: blur(var(--surface-frosted-blur));
+	-webkit-backdrop-filter: blur(var(--surface-frosted-blur));
+}
+
+.page-blog .blog-expert-quote__name {
+	margin: 0 0 var(--pad-gap-line);
+	font-size: 21px; // EXACT_GEOMETRY — Figma 1:2735
+	font-weight: var(--font-weight-heading);
+	line-height: 27px;
+	text-decoration: underline;
+}
+
+.page-blog .blog-expert-quote__role {
+	margin: 0 0 var(--pad-gap-line);
+	font-size: 16px; // EXACT_GEOMETRY — Figma 1:2736
+	line-height: 20px;
+	color: var(--color-text-secondary);
+}
+
+.page-blog .blog-expert-quote__cta {
+	border-color: var(--color-accent);
+	background-color: transparent;
+	white-space: pre-wrap;
+	line-height: 16px;
+	height: 50px;
+	align-items: center;
+}
+
+.page-blog .blog-expert-quote__cta:hover,
+.page-blog .blog-expert-quote__cta:focus-visible {
+	border-color: var(--color-accent);
+	background-color: var(--color-accent);
+	color: var(--color-text-inverse);
+}
+
+/* FP-0002 Blog Mobile Pass 03 — responsive (authority: Figma 1:5999, mobile PNG 380×8678) */
+@media (max-width: 1024px) {
+	.page-blog {
+		.blog-page__breadcrumbs .breadcrumbs__link,
+		.blog-page__breadcrumbs .breadcrumbs__current {
+			font-size: 8px; // EXACT_GEOMETRY — Figma 1:6031–1:6033
+			line-height: 12px;
+		}
+
+		.blog-page__breadcrumbs .breadcrumbs__item + .breadcrumbs__item::before {
+			font-size: 8px;
+			line-height: 12px;
+		}
+
+		.blog-archive {
+			padding-top: 10px; // EXACT_GEOMETRY — Figma 1:6034 rhythm below mobile header
+			padding-bottom: 25px;
+		}
+
+		.blog-archive__container {
+			gap: 15px; // EXACT_GEOMETRY — Figma 1:6034 H1 → intro spacing
+		}
+
+		.blog-archive__heading {
+			font-size: 22px; // EXACT_GEOMETRY — Figma 1:6041
+			line-height: 26px;
+		}
+
+		.blog-archive__intro.block-whith-red-line {
+			font-size: 14px; // EXACT_GEOMETRY — Figma 1:6038
+			line-height: 20px;
+		}
+
+		.blog-archive__grid {
+			grid-template-columns: minmax(0, 1fr);
+			gap: 20px; // EXACT_GEOMETRY — Figma 1:6042 card stack rhythm
+		}
+
+		.blog-archive-card--mobile-hidden {
+			display: none;
+		}
+
+		.blog-archive-card__image {
+			height: 213px; // EXACT_GEOMETRY — Figma 1:6044–1:6055 (~45% of 473px card)
+		}
+
+		.blog-archive-card__body {
+			padding: 15px 20px 20px;
+			gap: 10px;
+		}
+
+		.blog-archive-card__title {
+			font-size: 16px;
+			line-height: 22px;
+		}
+
+		.blog-archive-card__meta {
+			font-size: 14px;
+			line-height: 20px;
+		}
+
+		.blog-archive-card__excerpt {
+			font-size: 15px;
+			line-height: 20px;
+		}
+
+		.blog-archive-card__read-more-link {
+			font-size: 15px;
+			line-height: 21px;
+		}
+
+		.blog-archive-pagination {
+			margin-top: 10px;
+		}
+
+		.blog-archive-pagination__link {
+			min-width: 34px; // EXACT_GEOMETRY — Figma mobile pagination
+			height: 34px;
+			font-size: 14px;
+		}
+
+		.blog-lower-stack .program-cta-band-section {
+			padding-bottom: 20px;
+		}
+
+		.blog-lower-stack .program-cta-band {
+			gap: 15px;
+		}
+
+		.blog-lower-stack .program-cta-band__title {
+			font-size: 18px; // EXACT_GEOMETRY — Figma 1:6062
+			line-height: 24px;
+		}
+
+		.blog-lower-stack .program-cta-band__subtitle {
+			font-size: 16px; // EXACT_GEOMETRY — Figma 1:6063
+			line-height: 22px;
+		}
+
+		.blog-lower-stack .program-cta-band--button-first .program-cta-band__copy {
+			order: 1;
+		}
+
+		.blog-lower-stack .program-cta-band--button-first .program-cta-band__button {
+			order: 2;
+			width: 100%;
+			max-width: none;
+		}
+
+		.blog-lower-stack .program-cta-band--button-first .program-cta-band__phone {
+			order: 3;
+			font-size: 16px; // EXACT_GEOMETRY — Figma 1:6067
+			line-height: 20px;
+		}
+
+		.blog-lower-stack .program-cta-band__phone-hint {
+			font-size: 16px; // EXACT_GEOMETRY — Figma 1:6068
+			line-height: 20px;
+		}
+
+		.blog-expert-quote {
+			padding-bottom: 25px;
+		}
+
+		.blog-expert-quote__heading {
+			position: static;
+			width: auto;
+			height: auto;
+			margin: 0 0 15px;
+			padding: 0;
+			overflow: visible;
+			clip: auto;
+			white-space: normal;
+			border: 0;
+			font-size: 22px; // EXACT_GEOMETRY — Figma 1:6069 mobile section title
+			font-weight: var(--font-weight-heading);
+			line-height: 26px;
+			color: var(--color-text-primary);
+		}
+
+		.blog-expert-quote__layout {
+			grid-template-columns: minmax(0, 1fr);
+			gap: 20px;
+		}
+
+		.blog-expert-quote__mark {
+			width: 50px;
+			height: 40px;
+			margin-bottom: 10px;
+		}
+
+		.blog-expert-quote__text {
+			max-width: none;
+			font-size: 15px; // EXACT_GEOMETRY — Figma 1:6075
+			line-height: 22px;
+		}
+
+		.blog-expert-quote__figure {
+			padding-right: 0;
+			overflow: visible;
+		}
+
+		.blog-expert-quote__photo {
+			max-height: none;
+			height: 280px; // EXACT_GEOMETRY — Figma 1:6069 portrait area
+			object-position: center 15%;
+			-webkit-mask-image: none;
+			mask-image: none;
+			border-radius: var(--radius-main);
+		}
+
+		.blog-expert-quote__figure::before {
+			display: none;
+		}
+
+		.blog-expert-quote__expert {
+			top: 15px;
+			right: 15px;
+		}
+
+		.blog-expert-quote__card {
+			position: static;
+			width: 100%;
+			max-width: none;
+			margin-top: 15px;
+			padding: 20px;
+		}
+
+		.blog-expert-quote__name {
+			font-size: 18px; // EXACT_GEOMETRY — Figma 1:6085
+			line-height: 24px;
+		}
+
+		.blog-expert-quote__role {
+			font-size: 14px; // EXACT_GEOMETRY — Figma 1:6086
+			line-height: 20px;
+		}
+
+		.blog-expert-quote__cta {
+			width: 100%;
+			height: auto;
+			min-height: 50px;
+			padding-top: 12px;
+			padding-bottom: 12px;
+		}
+	}
+}
+
+@media (max-width: 430px) {
+	.page-blog {
+		.blog-page__breadcrumbs .container,
+		.blog-archive .container,
+		.blog-lower-stack .program-cta-band-section__container,
+		.blog-expert-quote__container {
 			padding-left: 30px; // EXACT_GEOMETRY — Figma 380 viewport → 320px content
 			padding-right: 30px;
 		}

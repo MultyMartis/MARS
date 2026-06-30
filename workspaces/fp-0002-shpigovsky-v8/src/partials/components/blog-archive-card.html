@@ -1,0 +1,25 @@
+<article class="blog-archive-card@@if (mobileHidden === 'true') { blog-archive-card--mobile-hidden}">
+  <a class="blog-archive-card__image-link" href="@@articleHref" data-static-prototype="blog-article">
+    <img
+      class="blog-archive-card__image"
+      src="@@imageSrc"
+      width="@@imageWidth"
+      height="@@imageHeight"
+      alt="@@imageAlt"
+      loading="lazy"
+      decoding="async"
+    >
+  </a>
+  <div class="blog-archive-card__body">
+    <h2 class="blog-archive-card__title">
+      <a class="blog-archive-card__title-link" href="@@articleHref" data-static-prototype="blog-article">@@title</a>
+    </h2>
+    <p class="blog-archive-card__meta">
+      <time class="blog-archive-card__date" datetime="@@isoDate">@@formattedDate</time><span class="blog-archive-card__reading-time" aria-hidden="true"> · </span><span class="blog-archive-card__reading-time">@@readingTime</span>
+    </p>
+    <p class="blog-archive-card__excerpt">@@excerpt</p>
+    <p class="blog-archive-card__read-more">
+      <a class="blog-archive-card__read-more-link" href="@@articleHref" data-static-prototype="blog-article">@@linkLabel</a>
+    </p>
+  </div>
+</article>

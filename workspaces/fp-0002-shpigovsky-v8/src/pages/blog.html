@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  @@include('partials/layout/head.html', {"title": "Статьи — Шпиговский дом", "description": "Статьи о зависимостях, диагностике и методах лечения от специалистов центра реабилитации «Шпиговский дом».", "canonical": "https://shpigovsky.ru/blog/", "robots": "noindex, nofollow", "ogType": "website", "ogTitle": "Статьи — Шпиговский дом", "ogDescription": "Статьи о зависимостях, диагностике и методах лечения от специалистов центра реабилитации «Шпиговский дом».", "ogUrl": "https://shpigovsky.ru/blog/", "ogImage": "https://shpigovsky.ru/assets/img/social/og-default.jpg", "ogImageAlt": "Статьи — Шпиговский дом"})
+</head>
+<body class="page-blog" data-page="blog">
+  @@include('partials/layout/header.html', {"activeNavUslugiClass": "", "activeNavOffcanvasClass": "", "activeNavUslugiAria": "", "activeNavOtzyvyClass": "", "activeNavOtzyvyOffcanvasClass": "", "activeNavOtzyvyAria": "", "activeNavBlogClass": " site-header__nav-link--active", "activeNavBlogOffcanvasClass": " offcanvas__nav-link--active", "activeNavBlogAria": " aria-current=\"page\"", "activeNavKontaktyClass": "", "activeNavKontaktyOffcanvasClass": "", "activeNavKontaktyAria": ""})
+  <main class="page-blog__main">
+    <div class="blog-page__breadcrumbs">
+      <div class="container">
+        @@include('partials/components/breadcrumbs.html', {"crumbHome": "Главная", "crumbMiddle": "", "crumbMiddleHref": "", "crumbMiddle2": "", "crumbMiddleHref2": "", "crumbCurrent": "Статьи"})
+      </div>
+    </div>
+    @@include('partials/sections/blog-archive-list.html')
+    @@include('partials/sections/blog-lower-stack.html')
+  </main>
+  @@include('partials/layout/footer.html')
+  @@include('partials/components/modal-consultation.html')
+  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+  <script src="assets/vendor/fancybox/fancybox.umd.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/inputmask.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
