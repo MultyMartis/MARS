@@ -6696,3 +6696,424 @@ body[data-offcanvas-state='open'] {
 		min-height: 220px;
 	}
 }
+
+/* ==========================================================================
+   FP-0002 PG-006 — Contacts page (desktop pass 01)
+   ========================================================================== */
+
+.page-kontakty__main {
+	display: flex;
+	flex-direction: column;
+}
+
+.contacts-page__breadcrumbs {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.contacts-page__breadcrumbs .container {
+	display: flex;
+	flex-direction: column;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.contacts-page__breadcrumbs .breadcrumbs__list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.contacts-page__breadcrumbs .breadcrumbs__item {
+	display: inline-flex;
+	align-items: center;
+	margin: 0;
+}
+
+.contacts-page__breadcrumbs .breadcrumbs__item + .breadcrumbs__item::before {
+	content: "/";
+	margin-right: 8px;
+	color: var(--color-text-secondary);
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.contacts-page__breadcrumbs .breadcrumbs__link,
+.contacts-page__breadcrumbs .breadcrumbs__current {
+	font-size: 14px;
+	line-height: 18px;
+	color: var(--color-text-secondary);
+	text-decoration: none;
+}
+
+.contacts-page__breadcrumbs .breadcrumbs__link:hover,
+.contacts-page__breadcrumbs .breadcrumbs__link:focus-visible {
+	color: var(--color-accent);
+}
+
+.contacts-page__breadcrumbs .breadcrumbs__current {
+	color: var(--color-text-primary);
+}
+
+.contacts-body {
+	padding-top: 15px;
+	padding-bottom: var(--pad-y);
+}
+
+.contacts-body__container {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap);
+}
+
+.contacts-body__heading {
+	margin: 0;
+	font-size: var(--font-size-h2);
+	font-weight: var(--font-weight-heading);
+	line-height: var(--line-height-h2);
+	color: var(--color-text-primary);
+}
+
+.contacts-body__intro {
+	margin: 0;
+	background-color: rgba(255, 255, 255, 0.45);
+}
+
+.contacts-body__phone-row {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: var(--pad-gap-line);
+}
+
+.contacts-body__phone {
+	color: var(--color-text-primary);
+	font-size: 42px;
+	font-weight: var(--font-weight-heading);
+	line-height: 1;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.contacts-body__phone:hover,
+.contacts-body__phone:focus-visible {
+	color: var(--color-accent);
+}
+
+.contacts-body__messengers {
+	display: flex;
+	align-items: center;
+	gap: var(--pad-gap-tight);
+}
+
+.contacts-body__messenger-link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: var(--radius-full);
+	background-color: #fff;
+	text-decoration: none;
+}
+
+.contacts-body__messenger-icon {
+	display: block;
+	width: 24px;
+	height: 24px;
+}
+
+.contacts-location {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap);
+}
+
+.contacts-location + .contacts-location {
+	margin-top: var(--pad-gap-line);
+}
+
+.contacts-location__title {
+	margin: 0;
+	font-size: var(--font-size-nav);
+	font-weight: var(--font-weight-heading);
+	line-height: var(--line-height-nav);
+	color: var(--color-text-primary);
+}
+
+.contacts-location__details {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: var(--pad-gap);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.contacts-location__detail {
+	display: flex;
+	align-items: flex-start;
+	gap: var(--pad-gap-line);
+	min-width: 0;
+}
+
+.contacts-location__icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 40px;
+	width: 40px;
+	height: 40px;
+	border-radius: var(--radius-full);
+	background-color: var(--color-accent);
+	color: #fff;
+}
+
+.contacts-location__icon i {
+	display: block;
+	font-size: 16px;
+	line-height: 1;
+}
+
+.contacts-location__detail-body {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap-mini);
+	min-width: 0;
+}
+
+.contacts-location__value {
+	margin: 0;
+	font-size: var(--font-size-base);
+	font-weight: var(--font-weight-heading);
+	line-height: var(--line-height-base);
+	color: var(--color-text-primary);
+}
+
+.contacts-location__address {
+	font-style: normal;
+}
+
+.contacts-location__email {
+	color: inherit;
+	text-decoration: none;
+}
+
+.contacts-location__email:hover,
+.contacts-location__email:focus-visible {
+	color: var(--color-accent);
+}
+
+.contacts-location__label {
+	margin: 0;
+	font-size: var(--font-size-small);
+	font-weight: var(--font-weight-base);
+	line-height: var(--line-height-small);
+	color: var(--color-text-secondary);
+}
+
+.contacts-location__map {
+	margin: 0;
+}
+
+.contacts-location__map-image {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: var(--radius-main);
+}
+
+.page-kontakty .site-footer {
+	margin-top: 0;
+}
+
+/* FP-0002 PG-006 — Contacts CT-B04 (desktop pass 02) */
+
+.contacts-rehabilitation-steps {
+	position: relative;
+	padding: 0 0 var(--pad-y);
+}
+
+.contacts-rehabilitation-steps__container {
+	display: flex;
+	flex-direction: column;
+}
+
+.contacts-rehabilitation-steps__heading {
+	margin: 0 0 var(--pad-gap-line);
+	font-size: var(--font-size-h2);
+	line-height: var(--line-height-h2);
+	font-weight: var(--font-weight-heading);
+	color: var(--color-text-primary);
+}
+
+.contacts-rehabilitation-steps__lead {
+	margin: 0 0 var(--pad-gap);
+}
+
+.contacts-rehabilitation-steps__steps {
+	margin-bottom: var(--pad-gap);
+}
+
+.contacts-rehabilitation-steps__cta-wrap {
+	position: relative;
+	margin-bottom: var(--pad-gap);
+}
+
+.contacts-rehabilitation-steps__decor {
+	position: absolute;
+	top: -71px; // EXACT_GEOMETRY — Figma 1:3122 y-offset above CTA 1:3149
+	right: 0;
+	left: 0;
+	z-index: 0;
+	height: 110px; // EXACT_GEOMETRY — Figma 1:3122 height
+	border-radius: var(--radius-main);
+	background-color: rgba(182, 71, 62, 0.07); // EXACT_GEOMETRY — Figma accent #B6473E @ 7%
+	pointer-events: none;
+}
+
+.contacts-rehabilitation-steps__cta-wrap .program-cta-band {
+	position: relative;
+	z-index: 1;
+	margin-bottom: 0;
+}
+
+.contacts-rehabilitation-steps__support {
+	margin-bottom: var(--pad-gap);
+}
+
+.contacts-rehabilitation-steps__photo-bleed {
+	margin-bottom: 0;
+}
+
+.contacts-rehabilitation-steps__photo {
+	height: 580px; // EXACT_GEOMETRY — Figma 1:3115 display height
+}
+
+/* FP-0002 PG-006 — Contacts page (mobile pass 03) */
+
+@media (max-width: 1024px) {
+	.page-kontakty {
+		.contacts-body {
+			padding-top: 10px;
+		}
+
+		.contacts-body__container {
+			gap: 20px;
+		}
+
+		.contacts-body__heading {
+			font-size: 22px; // EXACT_GEOMETRY — Figma 1:6496
+			line-height: 37px;
+		}
+
+		.contacts-body__phone-row {
+			gap: 25px; // EXACT_GEOMETRY — Figma phone → messengers
+		}
+
+		.contacts-body__phone {
+			font-size: 32px; // EXACT_GEOMETRY — Figma 1:6523
+			line-height: 38px;
+			white-space: normal;
+		}
+
+		.contacts-body__messenger-link {
+			width: 36px; // EXACT_GEOMETRY — Figma 1:6525 messenger frame
+			height: 36px;
+		}
+
+		.contacts-location:first-of-type {
+			margin-top: 25px; // EXACT_GEOMETRY — Figma messengers → loc1 title rhythm
+		}
+
+		.contacts-location + .contacts-location {
+			margin-top: 0;
+		}
+
+		.contacts-location {
+			gap: 20px;
+		}
+
+		.contacts-location__title {
+			font-size: 16px; // EXACT_GEOMETRY — Figma 1:6498
+			line-height: 22px;
+		}
+
+		.contacts-location + .contacts-location .contacts-location__title {
+			font-size: 18px; // EXACT_GEOMETRY — Figma 1:6538
+			line-height: 25px;
+		}
+
+		.contacts-location__details {
+			grid-template-columns: minmax(0, 1fr);
+			gap: 15px;
+		}
+
+		.contacts-location__detail {
+			gap: 12px;
+		}
+
+		.contacts-location__map-image {
+			height: 269px; // EXACT_GEOMETRY — Figma 1:6522 / 1:6562
+			object-fit: cover;
+			object-position: center;
+		}
+
+		.contacts-rehabilitation-steps {
+			padding-top: 40px; // EXACT_GEOMETRY — Figma map2 → CT-B04 gap
+		}
+
+		.contacts-rehabilitation-steps__heading {
+			font-size: 22px; // EXACT_GEOMETRY — Figma 1:6566
+			line-height: 39px;
+			margin-bottom: 20px;
+		}
+
+		.contacts-rehabilitation-steps__lead {
+			margin-bottom: 20px;
+		}
+
+		.contacts-rehabilitation-steps__steps {
+			gap: 15px;
+			margin-bottom: 20px;
+		}
+
+		.contacts-rehabilitation-steps .home-rehabilitation-requirements__step {
+			gap: 12px;
+		}
+
+		.contacts-rehabilitation-steps .home-rehabilitation-requirements__step-number {
+			width: 40px;
+			height: 40px;
+			font-size: 16px;
+		}
+
+		.contacts-rehabilitation-steps .home-rehabilitation-requirements__step-title {
+			font-size: 18px; // EXACT_GEOMETRY — Figma 1:6575–1:6593
+			line-height: 25px;
+		}
+
+		.contacts-rehabilitation-steps__cta-wrap {
+			margin-bottom: 20px;
+		}
+
+		.contacts-rehabilitation-steps__decor {
+			top: 14px; // EXACT_GEOMETRY — Figma 1:6595 offset within CTA wrap
+			height: 193px; // EXACT_GEOMETRY — Figma 1:6595 «Важно» mobile
+		}
+
+		.contacts-rehabilitation-steps__support {
+			margin-bottom: 20px;
+		}
+
+		.contacts-rehabilitation-steps__photo {
+			height: 280px; // EXACT_GEOMETRY — Figma 1:6603
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+}
