@@ -6780,7 +6780,7 @@ body[data-offcanvas-state='open'] {
 
 .contacts-body__intro {
 	margin: 0;
-	background-color: rgba(255, 255, 255, 0.45);
+	// background-color: rgba(255, 255, 255, 0.45);
 }
 
 .contacts-body__phone-row {
@@ -6811,7 +6811,7 @@ body[data-offcanvas-state='open'] {
 }
 
 .contacts-body__messenger-link {
-	display: inline-flex;
+	display: flex;
 	align-items: center;
 	justify-content: center;
 	width: 40px;
@@ -6819,6 +6819,8 @@ body[data-offcanvas-state='open'] {
 	border-radius: var(--radius-full);
 	background-color: #fff;
 	text-decoration: none;
+	padding: 12px;
+	box-sizing: border-box;
 }
 
 .contacts-body__messenger-icon {
@@ -6974,6 +6976,8 @@ body[data-offcanvas-state='open'] {
 	border-radius: var(--radius-main);
 	background-color: rgba(182, 71, 62, 0.07); // EXACT_GEOMETRY — Figma accent #B6473E @ 7%
 	pointer-events: none;
+
+	display: none;
 }
 
 .contacts-rehabilitation-steps__cta-wrap .program-cta-band {
@@ -6996,124 +7000,576 @@ body[data-offcanvas-state='open'] {
 
 /* FP-0002 PG-006 — Contacts page (mobile pass 03) */
 
+
+
 @media (max-width: 1024px) {
 	.page-kontakty {
-		.contacts-body {
-			padding-top: 10px;
-		}
+		// .contacts-body {
+		// 	padding-top: 10px;
+		// }
 
-		.contacts-body__container {
-			gap: 20px;
-		}
+		// .contacts-body__container {
+		// 	gap: 20px;
+		// }
 
-		.contacts-body__heading {
-			font-size: 22px; // EXACT_GEOMETRY — Figma 1:6496
-			line-height: 37px;
-		}
+		// .contacts-body__heading {
+		// 	font-size: 22px; // EXACT_GEOMETRY — Figma 1:6496
+		// 	line-height: 37px;
+		// }
 
-		.contacts-body__phone-row {
-			gap: 25px; // EXACT_GEOMETRY — Figma phone → messengers
-		}
+		// .contacts-body__phone-row {
+		// 	gap: 25px; // EXACT_GEOMETRY — Figma phone → messengers
+		// }
 
-		.contacts-body__phone {
-			font-size: 32px; // EXACT_GEOMETRY — Figma 1:6523
-			line-height: 38px;
-			white-space: normal;
-		}
+		// .contacts-body__phone {
+		// 	font-size: 32px; // EXACT_GEOMETRY — Figma 1:6523
+		// 	line-height: 38px;
+		// 	white-space: normal;
+		// }
 
-		.contacts-body__messenger-link {
-			width: 36px; // EXACT_GEOMETRY — Figma 1:6525 messenger frame
-			height: 36px;
-		}
+		// .contacts-body__messenger-link {
+		// 	width: 36px; // EXACT_GEOMETRY — Figma 1:6525 messenger frame
+		// 	height: 36px;
+		// }
 
-		.contacts-location:first-of-type {
-			margin-top: 25px; // EXACT_GEOMETRY — Figma messengers → loc1 title rhythm
-		}
+		// .contacts-location:first-of-type {
+		// 	margin-top: 25px; // EXACT_GEOMETRY — Figma messengers → loc1 title rhythm
+		// }
 
-		.contacts-location + .contacts-location {
-			margin-top: 0;
-		}
+		// .contacts-location + .contacts-location {
+		// 	margin-top: 0;
+		// }
 
-		.contacts-location {
-			gap: 20px;
-		}
+		// .contacts-location {
+		// 	gap: 20px;
+		// }
 
-		.contacts-location__title {
-			font-size: 16px; // EXACT_GEOMETRY — Figma 1:6498
-			line-height: 22px;
-		}
+		// .contacts-location__title {
+		// 	font-size: 16px; // EXACT_GEOMETRY — Figma 1:6498
+		// 	line-height: 22px;
+		// }
 
-		.contacts-location + .contacts-location .contacts-location__title {
-			font-size: 18px; // EXACT_GEOMETRY — Figma 1:6538
-			line-height: 25px;
-		}
+		// .contacts-location + .contacts-location .contacts-location__title {
+		// 	font-size: 18px; // EXACT_GEOMETRY — Figma 1:6538
+		// 	line-height: 25px;
+		// }
 
 		.contacts-location__details {
 			grid-template-columns: minmax(0, 1fr);
 			gap: 15px;
 		}
 
-		.contacts-location__detail {
-			gap: 12px;
-		}
+		// .contacts-location__detail {
+		// 	gap: 12px;
+		// }
 
-		.contacts-location__map-image {
-			height: 269px; // EXACT_GEOMETRY — Figma 1:6522 / 1:6562
-			object-fit: cover;
-			object-position: center;
-		}
+		// .contacts-location__map-image {
+		// 	height: 269px; // EXACT_GEOMETRY — Figma 1:6522 / 1:6562
+		// 	object-fit: cover;
+		// 	object-position: center;
+		// }
 
-		.contacts-rehabilitation-steps {
-			padding-top: 40px; // EXACT_GEOMETRY — Figma map2 → CT-B04 gap
-		}
+		// .contacts-rehabilitation-steps {
+		// 	padding-top: 40px; // EXACT_GEOMETRY — Figma map2 → CT-B04 gap
+		// }
 
-		.contacts-rehabilitation-steps__heading {
-			font-size: 22px; // EXACT_GEOMETRY — Figma 1:6566
-			line-height: 39px;
-			margin-bottom: 20px;
-		}
+		// .contacts-rehabilitation-steps__heading {
+		// 	font-size: 22px; // EXACT_GEOMETRY — Figma 1:6566
+		// 	line-height: 39px;
+		// 	margin-bottom: 20px;
+		// }
 
-		.contacts-rehabilitation-steps__lead {
-			margin-bottom: 20px;
-		}
+		// .contacts-rehabilitation-steps__lead {
+		// 	margin-bottom: 20px;
+		// }
 
-		.contacts-rehabilitation-steps__steps {
-			gap: 15px;
-			margin-bottom: 20px;
-		}
+		// .contacts-rehabilitation-steps__steps {
+		// 	gap: 15px;
+		// 	margin-bottom: 20px;
+		// }
 
-		.contacts-rehabilitation-steps .home-rehabilitation-requirements__step {
-			gap: 12px;
-		}
+		// .contacts-rehabilitation-steps .home-rehabilitation-requirements__step {
+		// 	gap: 12px;
+		// }
 
-		.contacts-rehabilitation-steps .home-rehabilitation-requirements__step-number {
-			width: 40px;
-			height: 40px;
-			font-size: 16px;
-		}
+		// .contacts-rehabilitation-steps .home-rehabilitation-requirements__step-number {
+		// 	width: 40px;
+		// 	height: 40px;
+		// 	font-size: 16px;
+		// }
 
-		.contacts-rehabilitation-steps .home-rehabilitation-requirements__step-title {
-			font-size: 18px; // EXACT_GEOMETRY — Figma 1:6575–1:6593
-			line-height: 25px;
-		}
+		// .contacts-rehabilitation-steps .home-rehabilitation-requirements__step-title {
+		// 	font-size: 18px; // EXACT_GEOMETRY — Figma 1:6575–1:6593
+		// 	line-height: 25px;
+		// }
 
-		.contacts-rehabilitation-steps__cta-wrap {
-			margin-bottom: 20px;
-		}
+		// .contacts-rehabilitation-steps__cta-wrap {
+		// 	margin-bottom: 20px;
+		// }
 
 		.contacts-rehabilitation-steps__decor {
 			top: 14px; // EXACT_GEOMETRY — Figma 1:6595 offset within CTA wrap
 			height: 193px; // EXACT_GEOMETRY — Figma 1:6595 «Важно» mobile
 		}
 
-		.contacts-rehabilitation-steps__support {
+		// .contacts-rehabilitation-steps__support {
+		// 	margin-bottom: 20px;
+		// }
+
+		// .contacts-rehabilitation-steps__photo {
+		// 	height: 280px; // EXACT_GEOMETRY — Figma 1:6603
+		// 	object-fit: cover;
+		// 	object-position: center;
+		// }
+	}
+}
+
+/* ==========================================================================
+   FP-0002 PG-007 — Reviews archive page (desktop pass 01)
+   ========================================================================== */
+
+.page-otzyvy__main {
+	display: flex;
+	flex-direction: column;
+}
+
+.reviews-page__breadcrumbs {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.reviews-page__breadcrumbs .container {
+	display: flex;
+	flex-direction: column;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.reviews-page__breadcrumbs .breadcrumbs__list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.reviews-page__breadcrumbs .breadcrumbs__item {
+	display: inline-flex;
+	align-items: center;
+	margin: 0;
+}
+
+.reviews-page__breadcrumbs .breadcrumbs__item + .breadcrumbs__item::before {
+	content: "/";
+	margin-right: 8px;
+	color: var(--color-text-secondary);
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.reviews-page__breadcrumbs .breadcrumbs__link,
+.reviews-page__breadcrumbs .breadcrumbs__current {
+	font-size: 14px;
+	line-height: 18px;
+	color: var(--color-text-secondary);
+	text-decoration: none;
+}
+
+.reviews-page__breadcrumbs .breadcrumbs__link:hover,
+.reviews-page__breadcrumbs .breadcrumbs__link:focus-visible {
+	color: var(--color-accent);
+}
+
+.reviews-page__breadcrumbs .breadcrumbs__current {
+	color: var(--color-text-primary);
+}
+
+.reviews-archive {
+	padding-top: 15px;
+	padding-bottom: var(--pad-y);
+}
+
+.reviews-archive__container {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap);
+}
+
+.reviews-archive__heading {
+	margin: 0;
+	font-size: var(--font-size-h2);
+	font-weight: var(--font-weight-heading);
+	line-height: var(--line-height-h2);
+	color: var(--color-text-primary);
+}
+
+.reviews-archive__intro {
+	margin: 0;
+}
+
+.reviews-archive__list {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap);
+}
+
+.review-archive-card {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap-line);
+	width: 100%;
+	padding: var(--pad-gap);
+	border-radius: var(--radius-main);
+	background-color: var(--color-surface);
+	background-color: #eef0f0;
+}
+
+.review-archive-card__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--pad-gap-line);
+}
+
+.review-archive-card__rating {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style: none;
+}
+
+.review-archive-card__star {
+	color: var(--color-accent);
+	font-size: var(--icon-size-small);
+	line-height: 1;
+}
+
+.review-archive-card__date {
+	font-size: var(--font-size-small);
+	line-height: var(--line-height-small);
+	color: var(--color-text-secondary);
+	white-space: nowrap;
+}
+
+.review-archive-card__name {
+	margin: 0;
+	font-size: var(--font-size-h3);
+	font-weight: var(--font-weight-heading);
+	line-height: var(--line-height-h3);
+	color: var(--color-text-primary);
+}
+
+.review-archive-card__service {
+	margin: 0;
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+	color: var(--color-text-secondary);
+}
+
+.review-archive-card__service-link {
+	color: var(--color-text-primary);
+	text-decoration: underline;
+}
+
+.review-archive-card__service-link:hover,
+.review-archive-card__service-link:focus-visible {
+	color: var(--color-accent);
+}
+
+.review-archive-card__body {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap-line);
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+	color: var(--color-text-primary);
+}
+
+.review-archive-card__body p {
+	margin: 0;
+}
+
+.review-archive-card__read-more {
+	margin: 0;
+}
+
+.review-archive-card__read-more-link {
+	color: var(--color-accent);
+	text-decoration: underline;
+}
+
+.review-archive-card__read-more-link:hover,
+.review-archive-card__read-more-link:focus-visible {
+	color: var(--color-accent-hover);
+}
+
+.reviews-archive-pagination {
+	margin-top: var(--pad-gap-line);
+}
+
+.reviews-archive-pagination__list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: var(--pad-gap-line);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.reviews-archive-pagination__item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.reviews-archive-pagination__link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 40px;
+	height: 40px;
+	padding: 0 8px;
+	border: var(--border-width) solid transparent;
+	border-radius: var(--radius-full);
+	font-size: var(--font-size-base);
+	line-height: 1;
+	color: var(--color-text-secondary);
+	text-decoration: none;
+}
+
+.reviews-archive-pagination__link:hover,
+.reviews-archive-pagination__link:focus-visible {
+	color: var(--color-text-primary);
+}
+
+.reviews-archive-pagination__link--active {
+	border-color: var(--color-text-primary);
+	background-color: var(--color-text-primary);
+	color: var(--color-text-inverse);
+}
+
+.reviews-archive-pagination__ellipsis {
+	font-size: var(--font-size-base);
+	line-height: 1;
+	color: var(--color-text-secondary);
+}
+
+/* FP-0002 PG-007 — Reviews lower rehabilitation stack (desktop pass 02) */
+
+.page-otzyvy .reviews-rehabilitation-requirements {
+	position: relative;
+	overflow: hidden;
+	padding: 0 0 var(--pad-y);
+}
+
+.page-otzyvy .reviews-rehabilitation-requirements__container {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.page-otzyvy .reviews-rehabilitation-requirements__heading {
+	margin: 0 0 var(--pad-gap-line);
+	font-size: var(--font-size-h2);
+	line-height: var(--line-height-h2);
+	font-weight: var(--font-weight-heading);
+	color: var(--color-text-primary);
+}
+
+.page-otzyvy .reviews-rehabilitation-requirements__lead {
+	margin: 0 0 var(--pad-y);
+}
+
+.page-otzyvy .reviews-rehabilitation-requirements__steps {
+	margin-bottom: var(--pad-gap);
+}
+
+.page-otzyvy .reviews-rehabilitation-requirements__cta-wrap {
+	position: relative;
+	margin-bottom: var(--pad-gap);
+}
+
+.page-otzyvy .reviews-rehabilitation-requirements__decor {
+	position: absolute;
+	top: -71px; // EXACT_GEOMETRY — Figma 1:2933 «Важно» y-offset above CTA 1:2960
+	right: 0;
+	left: 0;
+	z-index: 0;
+	height: 110px; // EXACT_GEOMETRY — Figma 1:2933 height
+	border-radius: var(--radius-main);
+	background-color: rgba(182, 71, 62, 0.07); // EXACT_GEOMETRY — Figma accent #B6473E @ 7%
+	pointer-events: none;
+
+	display: none;
+}
+
+.page-otzyvy .reviews-rehabilitation-requirements__cta-wrap .program-cta-band {
+	position: relative;
+	z-index: 1;
+	margin-bottom: 0;
+}
+
+.page-otzyvy .reviews-rehabilitation-requirements__support {
+	margin-bottom: var(--pad-gap);
+}
+
+.page-otzyvy .reviews-rehabilitation-requirements__photo-bleed {
+	margin-bottom: 0;
+}
+
+.page-otzyvy .reviews-rehabilitation-requirements__photo {
+	height: 580px; // EXACT_GEOMETRY — Figma 1:2926 display height
+	object-fit: cover;
+	object-position: center;
+}
+
+.page-otzyvy .site-footer {
+	margin-top: 0;
+}
+
+/* FP-0002 PG-007 — Reviews archive page (mobile pass 03) */
+
+@media (max-width: 1024px) {
+	.page-otzyvy {
+		.reviews-archive {
+			padding-top: 10px; // EXACT_GEOMETRY — Figma 1:6324 rhythm below mobile header
+			padding-bottom: 25px;
+		}
+
+		.reviews-archive__container {
+			gap: 15px; // EXACT_GEOMETRY — Figma 1:6324 H1 → intro spacing
+		}
+
+		.reviews-archive__heading {
+			font-size: 22px; // EXACT_GEOMETRY — Figma 1:6327
+			line-height: 26px;
+		}
+
+		.reviews-archive__intro.block-whith-red-line {
+			font-size: 14px; // EXACT_GEOMETRY — Figma 1:6331
+			line-height: 20px;
+		}
+
+		.reviews-archive__list {
+			gap: 20px; // EXACT_GEOMETRY — Figma 1:6332 card stack rhythm
+		}
+
+		.review-archive-card {
+			box-sizing: border-box;
+			min-height: 400px; // EXACT_GEOMETRY — Figma 1:6334–1:6344 card frames
+			padding: 20px; // EXACT_GEOMETRY — adaptive card interior inset
+			gap: 12px;
+		}
+
+		.review-archive-card__name {
+			font-size: 16px; // EXACT_GEOMETRY — Figma adaptive card title
+			line-height: 22px;
+		}
+
+		.review-archive-card__service {
+			font-size: 14px;
+			line-height: 20px;
+		}
+
+		.review-archive-card__body {
+			font-size: 15px; // EXACT_GEOMETRY — Figma adaptive review body
+			line-height: 20px;
+		}
+
+		.review-archive-card__read-more-link {
+			font-size: 15px;
+			line-height: 21px;
+		}
+
+		.reviews-archive-pagination {
+			margin-top: 10px;
+		}
+
+		.reviews-archive-pagination__link {
+			min-width: 34px; // EXACT_GEOMETRY — Figma 1:6345 pagination height
+			height: 34px;
+			font-size: 14px;
+		}
+
+		.reviews-rehabilitation-requirements {
+			padding: 0 0 25px;
+		}
+
+		.reviews-rehabilitation-requirements__heading {
+			margin-bottom: 15px;
+			font-size: 22px; // EXACT_GEOMETRY — Figma 1:6349
+			line-height: 26px;
+		}
+
+		.reviews-rehabilitation-requirements__lead {
+			margin-bottom: 20px;
+			font-size: 14px; // EXACT_GEOMETRY — Figma 1:6352
+			line-height: 20px;
+		}
+
+		.reviews-rehabilitation-requirements__steps {
+			gap: 20px; // EXACT_GEOMETRY — Figma 1:6353 step stack
 			margin-bottom: 20px;
 		}
 
-		.contacts-rehabilitation-steps__photo {
-			height: 280px; // EXACT_GEOMETRY — Figma 1:6603
+		.reviews-rehabilitation-requirements .home-rehabilitation-requirements__step {
+			gap: 20px; // EXACT_GEOMETRY — Figma number 35px + body 265px in 320px row
+		}
+
+		.reviews-rehabilitation-requirements .home-rehabilitation-requirements__step-number {
+			width: 35px; // EXACT_GEOMETRY — Figma 1:6355
+			height: 35px;
+			font-size: 16px; // EXACT_GEOMETRY — Figma 1:6356
+		}
+
+		.reviews-rehabilitation-requirements .home-rehabilitation-requirements__step-title {
+			font-size: 18px; // EXACT_GEOMETRY — Figma 1:6358
+			line-height: 25px;
+		}
+
+		.reviews-rehabilitation-requirements .home-rehabilitation-requirements__step-text {
+			font-size: 16px; // EXACT_GEOMETRY — Figma 1:6359
+			line-height: 20px;
+		}
+
+		.reviews-rehabilitation-requirements__cta-wrap {
+			margin-bottom: 20px;
+		}
+
+		.reviews-rehabilitation-requirements__decor {
+			display: block;
+			top: 14px; // EXACT_GEOMETRY — Figma 1:6378 «Важно моби»
+			height: 193px;
+		}
+
+		.reviews-rehabilitation-requirements__support {
+			margin-bottom: 20px;
+		}
+
+		.reviews-rehabilitation-requirements__photo {
+			height: 280px; // EXACT_GEOMETRY — Figma 1:6386
 			object-fit: cover;
 			object-position: center;
+		}
+	}
+}
+
+@media (max-width: 430px) {
+	.page-otzyvy {
+		.reviews-page__breadcrumbs .container,
+		.reviews-archive .container,
+		.reviews-rehabilitation-requirements__container {
+			padding-left: 30px; // EXACT_GEOMETRY — Figma 380 viewport → 320px content
+			padding-right: 30px;
 		}
 	}
 }
