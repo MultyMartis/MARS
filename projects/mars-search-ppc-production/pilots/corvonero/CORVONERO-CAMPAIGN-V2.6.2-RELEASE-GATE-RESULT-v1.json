@@ -1,0 +1,2051 @@
+{
+  "status": "RELEASE_GATE_PASS",
+  "script_status": "SCRIPT_PASS",
+  "project_id": "corvonero",
+  "package_root": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+  "current_release_phase": "DRAFT",
+  "violation_count": 0,
+  "violations": [],
+  "checks": [
+    {
+      "check": "operator_semantic_approval",
+      "status": "PASS",
+      "message": ""
+    },
+    {
+      "check": "authority_frozen",
+      "status": "PASS",
+      "message": ""
+    },
+    {
+      "check": "template_contract_loaded",
+      "status": "PASS",
+      "message": ""
+    },
+    {
+      "check": "template_contract_valid",
+      "status": "PASS",
+      "message": ""
+    },
+    {
+      "check": "template_contamination_detected",
+      "status": "PASS",
+      "message": "10 findings — sanitization required"
+    },
+    {
+      "check": "artifact_validated_CORVONERO-CA-01-LOCAL-PROGRAMMIST-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+      "status": "PASS",
+      "message": ""
+    },
+    {
+      "check": "artifact_validated_CORVONERO-CA-01-REMOTE-PROGRAMMIST-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+      "status": "PASS",
+      "message": ""
+    },
+    {
+      "check": "artifact_validated_CORVONERO-CA-02-LOCAL-SOPROVOZHDENIE-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+      "status": "PASS",
+      "message": ""
+    },
+    {
+      "check": "artifact_validated_CORVONERO-CA-02-REMOTE-SOPROVOZHDENIE-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+      "status": "PASS",
+      "message": ""
+    },
+    {
+      "check": "artifact_validated_CORVONERO-CA-03-LOCAL-DORABOTKA-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+      "status": "PASS",
+      "message": ""
+    },
+    {
+      "check": "artifact_validated_CORVONERO-CA-03-REMOTE-DORABOTKA-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+      "status": "PASS",
+      "message": ""
+    },
+    {
+      "check": "artifact_validated_CORVONERO-CA-04-LOCAL-INTEGRACII-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+      "status": "PASS",
+      "message": ""
+    },
+    {
+      "check": "artifact_validated_CORVONERO-CA-04-REMOTE-INTEGRACII-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+      "status": "PASS",
+      "message": ""
+    },
+    {
+      "check": "artifact_validated_CORVONERO-CA-05-LOCAL-MARKIROVKA-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+      "status": "PASS",
+      "message": ""
+    },
+    {
+      "check": "artifact_validated_CORVONERO-CA-05-REMOTE-MARKIROVKA-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+      "status": "PASS",
+      "message": ""
+    },
+    {
+      "check": "phrase_slot_reconciliation",
+      "status": "PASS",
+      "message": ""
+    }
+  ],
+  "artifact_results": [
+    {
+      "file": "CORVONERO-CA-01-LOCAL-PROGRAMMIST-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+      "result": {
+        "status": "ARTIFACT_VALIDATED",
+        "script_status": "SCRIPT_PASS",
+        "xlsx_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30\\CORVONERO-CA-01-LOCAL-PROGRAMMIST-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+        "violation_count": 0,
+        "violations": [],
+        "checks": [
+          {
+            "check": "file_opens",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "sheet_texts_exists",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "sheet_regions_exists",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "e9_blank",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "organization_blank",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "callout_serialization",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "url_policy",
+            "status": "PASS",
+            "message": ""
+          }
+        ],
+        "evidence": [
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E7",
+            "field": "campaign_type",
+            "raw_value": "Текстово-графическая кампания",
+            "normalized_value": "Текстово-графическая кампания",
+            "expected": "MAY_PRESERVE"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "H7",
+            "field": "placement",
+            "raw_value": "search",
+            "normalized_value": "search",
+            "expected": "MAY_PRESERVE"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "H8",
+            "field": "currency",
+            "raw_value": "RUB",
+            "normalized_value": "RUB",
+            "expected": "MUST_SET"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E9",
+            "field": "campaign_negatives",
+            "raw_value": "",
+            "normalized_value": "",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E10",
+            "field": "optimize_text",
+            "raw_value": "0",
+            "normalized_value": "0",
+            "expected": "MUST_SET"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E11",
+            "field": "promotion_url",
+            "raw_value": "https://lk.corvonero.ru/programmist-1s/",
+            "normalized_value": "https://lk.corvonero.ru/programmist-1s/",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E12",
+            "field": "organization",
+            "raw_value": "",
+            "normalized_value": "",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "summary": "tabular_counts",
+            "ad_count": 4,
+            "phrase_count": 55,
+            "group_count": 4
+          }
+        ],
+        "validated_at": "2026-06-30T17:01:26.959Z",
+        "note": "Artifact-first validation — actual XLSX is source of truth"
+      }
+    },
+    {
+      "file": "CORVONERO-CA-01-REMOTE-PROGRAMMIST-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+      "result": {
+        "status": "ARTIFACT_VALIDATED",
+        "script_status": "SCRIPT_PASS",
+        "xlsx_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30\\CORVONERO-CA-01-REMOTE-PROGRAMMIST-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+        "violation_count": 0,
+        "violations": [],
+        "checks": [
+          {
+            "check": "file_opens",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "sheet_texts_exists",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "sheet_regions_exists",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "e9_blank",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "organization_blank",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "callout_serialization",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "url_policy",
+            "status": "PASS",
+            "message": ""
+          }
+        ],
+        "evidence": [
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E7",
+            "field": "campaign_type",
+            "raw_value": "Текстово-графическая кампания",
+            "normalized_value": "Текстово-графическая кампания",
+            "expected": "MAY_PRESERVE"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "H7",
+            "field": "placement",
+            "raw_value": "search",
+            "normalized_value": "search",
+            "expected": "MAY_PRESERVE"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "H8",
+            "field": "currency",
+            "raw_value": "RUB",
+            "normalized_value": "RUB",
+            "expected": "MUST_SET"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E9",
+            "field": "campaign_negatives",
+            "raw_value": "",
+            "normalized_value": "",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E10",
+            "field": "optimize_text",
+            "raw_value": "0",
+            "normalized_value": "0",
+            "expected": "MUST_SET"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E11",
+            "field": "promotion_url",
+            "raw_value": "https://lk.corvonero.ru/programmist-1s/",
+            "normalized_value": "https://lk.corvonero.ru/programmist-1s/",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E12",
+            "field": "organization",
+            "raw_value": "",
+            "normalized_value": "",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "summary": "tabular_counts",
+            "ad_count": 5,
+            "phrase_count": 98,
+            "group_count": 5
+          }
+        ],
+        "validated_at": "2026-06-30T17:01:27.344Z",
+        "note": "Artifact-first validation — actual XLSX is source of truth"
+      }
+    },
+    {
+      "file": "CORVONERO-CA-02-LOCAL-SOPROVOZHDENIE-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+      "result": {
+        "status": "ARTIFACT_VALIDATED",
+        "script_status": "SCRIPT_PASS",
+        "xlsx_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30\\CORVONERO-CA-02-LOCAL-SOPROVOZHDENIE-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+        "violation_count": 0,
+        "violations": [],
+        "checks": [
+          {
+            "check": "file_opens",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "sheet_texts_exists",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "sheet_regions_exists",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "e9_blank",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "organization_blank",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "callout_serialization",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "url_policy",
+            "status": "PASS",
+            "message": ""
+          }
+        ],
+        "evidence": [
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E7",
+            "field": "campaign_type",
+            "raw_value": "Текстово-графическая кампания",
+            "normalized_value": "Текстово-графическая кампания",
+            "expected": "MAY_PRESERVE"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "H7",
+            "field": "placement",
+            "raw_value": "search",
+            "normalized_value": "search",
+            "expected": "MAY_PRESERVE"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "H8",
+            "field": "currency",
+            "raw_value": "RUB",
+            "normalized_value": "RUB",
+            "expected": "MUST_SET"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E9",
+            "field": "campaign_negatives",
+            "raw_value": "",
+            "normalized_value": "",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E10",
+            "field": "optimize_text",
+            "raw_value": "0",
+            "normalized_value": "0",
+            "expected": "MUST_SET"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E11",
+            "field": "promotion_url",
+            "raw_value": "https://lk.corvonero.ru/soprovozhdenie-1s/",
+            "normalized_value": "https://lk.corvonero.ru/soprovozhdenie-1s/",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E12",
+            "field": "organization",
+            "raw_value": "",
+            "normalized_value": "",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "summary": "tabular_counts",
+            "ad_count": 10,
+            "phrase_count": 97,
+            "group_count": 10
+          }
+        ],
+        "validated_at": "2026-06-30T17:01:27.529Z",
+        "note": "Artifact-first validation — actual XLSX is source of truth"
+      }
+    },
+    {
+      "file": "CORVONERO-CA-02-REMOTE-SOPROVOZHDENIE-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+      "result": {
+        "status": "ARTIFACT_VALIDATED",
+        "script_status": "SCRIPT_PASS",
+        "xlsx_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30\\CORVONERO-CA-02-REMOTE-SOPROVOZHDENIE-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+        "violation_count": 0,
+        "violations": [],
+        "checks": [
+          {
+            "check": "file_opens",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "sheet_texts_exists",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "sheet_regions_exists",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "e9_blank",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "organization_blank",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "callout_serialization",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "url_policy",
+            "status": "PASS",
+            "message": ""
+          }
+        ],
+        "evidence": [
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E7",
+            "field": "campaign_type",
+            "raw_value": "Текстово-графическая кампания",
+            "normalized_value": "Текстово-графическая кампания",
+            "expected": "MAY_PRESERVE"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "H7",
+            "field": "placement",
+            "raw_value": "search",
+            "normalized_value": "search",
+            "expected": "MAY_PRESERVE"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "H8",
+            "field": "currency",
+            "raw_value": "RUB",
+            "normalized_value": "RUB",
+            "expected": "MUST_SET"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E9",
+            "field": "campaign_negatives",
+            "raw_value": "",
+            "normalized_value": "",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E10",
+            "field": "optimize_text",
+            "raw_value": "0",
+            "normalized_value": "0",
+            "expected": "MUST_SET"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E11",
+            "field": "promotion_url",
+            "raw_value": "https://lk.corvonero.ru/soprovozhdenie-1s/",
+            "normalized_value": "https://lk.corvonero.ru/soprovozhdenie-1s/",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E12",
+            "field": "organization",
+            "raw_value": "",
+            "normalized_value": "",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "summary": "tabular_counts",
+            "ad_count": 10,
+            "phrase_count": 103,
+            "group_count": 10
+          }
+        ],
+        "validated_at": "2026-06-30T17:01:27.700Z",
+        "note": "Artifact-first validation — actual XLSX is source of truth"
+      }
+    },
+    {
+      "file": "CORVONERO-CA-03-LOCAL-DORABOTKA-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+      "result": {
+        "status": "ARTIFACT_VALIDATED",
+        "script_status": "SCRIPT_PASS",
+        "xlsx_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30\\CORVONERO-CA-03-LOCAL-DORABOTKA-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+        "violation_count": 0,
+        "violations": [],
+        "checks": [
+          {
+            "check": "file_opens",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "sheet_texts_exists",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "sheet_regions_exists",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "e9_blank",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "organization_blank",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "callout_serialization",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "url_policy",
+            "status": "PASS",
+            "message": ""
+          }
+        ],
+        "evidence": [
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E7",
+            "field": "campaign_type",
+            "raw_value": "Текстово-графическая кампания",
+            "normalized_value": "Текстово-графическая кампания",
+            "expected": "MAY_PRESERVE"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "H7",
+            "field": "placement",
+            "raw_value": "search",
+            "normalized_value": "search",
+            "expected": "MAY_PRESERVE"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "H8",
+            "field": "currency",
+            "raw_value": "RUB",
+            "normalized_value": "RUB",
+            "expected": "MUST_SET"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E9",
+            "field": "campaign_negatives",
+            "raw_value": "",
+            "normalized_value": "",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E10",
+            "field": "optimize_text",
+            "raw_value": "0",
+            "normalized_value": "0",
+            "expected": "MUST_SET"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E11",
+            "field": "promotion_url",
+            "raw_value": "https://lk.corvonero.ru/dorabotka-razrabotka-1s/",
+            "normalized_value": "https://lk.corvonero.ru/dorabotka-razrabotka-1s/",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E12",
+            "field": "organization",
+            "raw_value": "",
+            "normalized_value": "",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "summary": "tabular_counts",
+            "ad_count": 3,
+            "phrase_count": 53,
+            "group_count": 3
+          }
+        ],
+        "validated_at": "2026-06-30T17:01:28.027Z",
+        "note": "Artifact-first validation — actual XLSX is source of truth"
+      }
+    },
+    {
+      "file": "CORVONERO-CA-03-REMOTE-DORABOTKA-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+      "result": {
+        "status": "ARTIFACT_VALIDATED",
+        "script_status": "SCRIPT_PASS",
+        "xlsx_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30\\CORVONERO-CA-03-REMOTE-DORABOTKA-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+        "violation_count": 0,
+        "violations": [],
+        "checks": [
+          {
+            "check": "file_opens",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "sheet_texts_exists",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "sheet_regions_exists",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "e9_blank",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "organization_blank",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "callout_serialization",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "url_policy",
+            "status": "PASS",
+            "message": ""
+          }
+        ],
+        "evidence": [
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E7",
+            "field": "campaign_type",
+            "raw_value": "Текстово-графическая кампания",
+            "normalized_value": "Текстово-графическая кампания",
+            "expected": "MAY_PRESERVE"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "H7",
+            "field": "placement",
+            "raw_value": "search",
+            "normalized_value": "search",
+            "expected": "MAY_PRESERVE"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "H8",
+            "field": "currency",
+            "raw_value": "RUB",
+            "normalized_value": "RUB",
+            "expected": "MUST_SET"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E9",
+            "field": "campaign_negatives",
+            "raw_value": "",
+            "normalized_value": "",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E10",
+            "field": "optimize_text",
+            "raw_value": "0",
+            "normalized_value": "0",
+            "expected": "MUST_SET"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E11",
+            "field": "promotion_url",
+            "raw_value": "https://lk.corvonero.ru/dorabotka-razrabotka-1s/",
+            "normalized_value": "https://lk.corvonero.ru/dorabotka-razrabotka-1s/",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E12",
+            "field": "organization",
+            "raw_value": "",
+            "normalized_value": "",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "summary": "tabular_counts",
+            "ad_count": 3,
+            "phrase_count": 54,
+            "group_count": 3
+          }
+        ],
+        "validated_at": "2026-06-30T17:01:28.343Z",
+        "note": "Artifact-first validation — actual XLSX is source of truth"
+      }
+    },
+    {
+      "file": "CORVONERO-CA-04-LOCAL-INTEGRACII-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+      "result": {
+        "status": "ARTIFACT_VALIDATED",
+        "script_status": "SCRIPT_PASS",
+        "xlsx_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30\\CORVONERO-CA-04-LOCAL-INTEGRACII-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+        "violation_count": 0,
+        "violations": [],
+        "checks": [
+          {
+            "check": "file_opens",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "sheet_texts_exists",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "sheet_regions_exists",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "e9_blank",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "organization_blank",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "callout_serialization",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "url_policy",
+            "status": "PASS",
+            "message": ""
+          }
+        ],
+        "evidence": [
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E7",
+            "field": "campaign_type",
+            "raw_value": "Текстово-графическая кампания",
+            "normalized_value": "Текстово-графическая кампания",
+            "expected": "MAY_PRESERVE"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "H7",
+            "field": "placement",
+            "raw_value": "search",
+            "normalized_value": "search",
+            "expected": "MAY_PRESERVE"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "H8",
+            "field": "currency",
+            "raw_value": "RUB",
+            "normalized_value": "RUB",
+            "expected": "MUST_SET"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E9",
+            "field": "campaign_negatives",
+            "raw_value": "",
+            "normalized_value": "",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E10",
+            "field": "optimize_text",
+            "raw_value": "0",
+            "normalized_value": "0",
+            "expected": "MUST_SET"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E11",
+            "field": "promotion_url",
+            "raw_value": "https://lk.corvonero.ru/integracii-1s/",
+            "normalized_value": "https://lk.corvonero.ru/integracii-1s/",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E12",
+            "field": "organization",
+            "raw_value": "",
+            "normalized_value": "",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "summary": "tabular_counts",
+            "ad_count": 4,
+            "phrase_count": 35,
+            "group_count": 4
+          }
+        ],
+        "validated_at": "2026-06-30T17:01:28.760Z",
+        "note": "Artifact-first validation — actual XLSX is source of truth"
+      }
+    },
+    {
+      "file": "CORVONERO-CA-04-REMOTE-INTEGRACII-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+      "result": {
+        "status": "ARTIFACT_VALIDATED",
+        "script_status": "SCRIPT_PASS",
+        "xlsx_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30\\CORVONERO-CA-04-REMOTE-INTEGRACII-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+        "violation_count": 0,
+        "violations": [],
+        "checks": [
+          {
+            "check": "file_opens",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "sheet_texts_exists",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "sheet_regions_exists",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "e9_blank",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "organization_blank",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "callout_serialization",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "url_policy",
+            "status": "PASS",
+            "message": ""
+          }
+        ],
+        "evidence": [
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E7",
+            "field": "campaign_type",
+            "raw_value": "Текстово-графическая кампания",
+            "normalized_value": "Текстово-графическая кампания",
+            "expected": "MAY_PRESERVE"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "H7",
+            "field": "placement",
+            "raw_value": "search",
+            "normalized_value": "search",
+            "expected": "MAY_PRESERVE"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "H8",
+            "field": "currency",
+            "raw_value": "RUB",
+            "normalized_value": "RUB",
+            "expected": "MUST_SET"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E9",
+            "field": "campaign_negatives",
+            "raw_value": "",
+            "normalized_value": "",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E10",
+            "field": "optimize_text",
+            "raw_value": "0",
+            "normalized_value": "0",
+            "expected": "MUST_SET"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E11",
+            "field": "promotion_url",
+            "raw_value": "https://lk.corvonero.ru/integracii-1s/",
+            "normalized_value": "https://lk.corvonero.ru/integracii-1s/",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E12",
+            "field": "organization",
+            "raw_value": "",
+            "normalized_value": "",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "summary": "tabular_counts",
+            "ad_count": 4,
+            "phrase_count": 35,
+            "group_count": 4
+          }
+        ],
+        "validated_at": "2026-06-30T17:01:29.087Z",
+        "note": "Artifact-first validation — actual XLSX is source of truth"
+      }
+    },
+    {
+      "file": "CORVONERO-CA-05-LOCAL-MARKIROVKA-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+      "result": {
+        "status": "ARTIFACT_VALIDATED",
+        "script_status": "SCRIPT_PASS",
+        "xlsx_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30\\CORVONERO-CA-05-LOCAL-MARKIROVKA-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+        "violation_count": 0,
+        "violations": [],
+        "checks": [
+          {
+            "check": "file_opens",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "sheet_texts_exists",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "sheet_regions_exists",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "e9_blank",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "organization_blank",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "callout_serialization",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "url_policy",
+            "status": "PASS",
+            "message": ""
+          }
+        ],
+        "evidence": [
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E7",
+            "field": "campaign_type",
+            "raw_value": "Текстово-графическая кампания",
+            "normalized_value": "Текстово-графическая кампания",
+            "expected": "MAY_PRESERVE"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "H7",
+            "field": "placement",
+            "raw_value": "search",
+            "normalized_value": "search",
+            "expected": "MAY_PRESERVE"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "H8",
+            "field": "currency",
+            "raw_value": "RUB",
+            "normalized_value": "RUB",
+            "expected": "MUST_SET"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E9",
+            "field": "campaign_negatives",
+            "raw_value": "",
+            "normalized_value": "",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E10",
+            "field": "optimize_text",
+            "raw_value": "0",
+            "normalized_value": "0",
+            "expected": "MUST_SET"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E11",
+            "field": "promotion_url",
+            "raw_value": "https://lk.corvonero.ru/markirovka-chestny-znak/",
+            "normalized_value": "https://lk.corvonero.ru/markirovka-chestny-znak/",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E12",
+            "field": "organization",
+            "raw_value": "",
+            "normalized_value": "",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "summary": "tabular_counts",
+            "ad_count": 14,
+            "phrase_count": 198,
+            "group_count": 14
+          }
+        ],
+        "validated_at": "2026-06-30T17:01:29.499Z",
+        "note": "Artifact-first validation — actual XLSX is source of truth"
+      }
+    },
+    {
+      "file": "CORVONERO-CA-05-REMOTE-MARKIROVKA-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+      "result": {
+        "status": "ARTIFACT_VALIDATED",
+        "script_status": "SCRIPT_PASS",
+        "xlsx_path": "X:\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30\\CORVONERO-CA-05-REMOTE-MARKIROVKA-1S-COMMANDER-IMPORT-v2.6.2.xlsx",
+        "violation_count": 0,
+        "violations": [],
+        "checks": [
+          {
+            "check": "file_opens",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "sheet_texts_exists",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "sheet_regions_exists",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "e9_blank",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "organization_blank",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "callout_serialization",
+            "status": "PASS",
+            "message": ""
+          },
+          {
+            "check": "url_policy",
+            "status": "PASS",
+            "message": ""
+          }
+        ],
+        "evidence": [
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E7",
+            "field": "campaign_type",
+            "raw_value": "Текстово-графическая кампания",
+            "normalized_value": "Текстово-графическая кампания",
+            "expected": "MAY_PRESERVE"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "H7",
+            "field": "placement",
+            "raw_value": "search",
+            "normalized_value": "search",
+            "expected": "MAY_PRESERVE"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "H8",
+            "field": "currency",
+            "raw_value": "RUB",
+            "normalized_value": "RUB",
+            "expected": "MUST_SET"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E9",
+            "field": "campaign_negatives",
+            "raw_value": "",
+            "normalized_value": "",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E10",
+            "field": "optimize_text",
+            "raw_value": "0",
+            "normalized_value": "0",
+            "expected": "MUST_SET"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E11",
+            "field": "promotion_url",
+            "raw_value": "https://lk.corvonero.ru/markirovka-chestny-znak/",
+            "normalized_value": "https://lk.corvonero.ru/markirovka-chestny-znak/",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "filename": "",
+            "sheet": "Тексты",
+            "cell": "E12",
+            "field": "organization",
+            "raw_value": "",
+            "normalized_value": "",
+            "expected": "MUST_CLEAR"
+          },
+          {
+            "summary": "tabular_counts",
+            "ad_count": 14,
+            "phrase_count": 198,
+            "group_count": 14
+          }
+        ],
+        "validated_at": "2026-06-30T17:01:30.034Z",
+        "note": "Artifact-first validation — actual XLSX is source of truth"
+      }
+    }
+  ],
+  "phrase_slot_reconciliation": {
+    "authority_phrase_slots": 926,
+    "artifact_phrase_slots": 926,
+    "phrase_slot_delta": 0,
+    "campaign_reconciliation": [
+      {
+        "campaign_id": "CA-01-LOCAL",
+        "authority_phrase_slots": 55,
+        "artifact_phrase_slots": 55,
+        "phrase_slot_delta": 0,
+        "missing_slots": 0,
+        "unexpected_slots": 0,
+        "duplicate_slots": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-01-REMOTE",
+        "authority_phrase_slots": 98,
+        "artifact_phrase_slots": 98,
+        "phrase_slot_delta": 0,
+        "missing_slots": 0,
+        "unexpected_slots": 0,
+        "duplicate_slots": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-02-LOCAL",
+        "authority_phrase_slots": 97,
+        "artifact_phrase_slots": 97,
+        "phrase_slot_delta": 0,
+        "missing_slots": 0,
+        "unexpected_slots": 0,
+        "duplicate_slots": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-02-REMOTE",
+        "authority_phrase_slots": 103,
+        "artifact_phrase_slots": 103,
+        "phrase_slot_delta": 0,
+        "missing_slots": 0,
+        "unexpected_slots": 0,
+        "duplicate_slots": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-03-LOCAL",
+        "authority_phrase_slots": 53,
+        "artifact_phrase_slots": 53,
+        "phrase_slot_delta": 0,
+        "missing_slots": 0,
+        "unexpected_slots": 0,
+        "duplicate_slots": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-03-REMOTE",
+        "authority_phrase_slots": 54,
+        "artifact_phrase_slots": 54,
+        "phrase_slot_delta": 0,
+        "missing_slots": 0,
+        "unexpected_slots": 0,
+        "duplicate_slots": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-04-LOCAL",
+        "authority_phrase_slots": 35,
+        "artifact_phrase_slots": 35,
+        "phrase_slot_delta": 0,
+        "missing_slots": 0,
+        "unexpected_slots": 0,
+        "duplicate_slots": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-04-REMOTE",
+        "authority_phrase_slots": 35,
+        "artifact_phrase_slots": 35,
+        "phrase_slot_delta": 0,
+        "missing_slots": 0,
+        "unexpected_slots": 0,
+        "duplicate_slots": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-LOCAL",
+        "authority_phrase_slots": 198,
+        "artifact_phrase_slots": 198,
+        "phrase_slot_delta": 0,
+        "missing_slots": 0,
+        "unexpected_slots": 0,
+        "duplicate_slots": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-REMOTE",
+        "authority_phrase_slots": 198,
+        "artifact_phrase_slots": 198,
+        "phrase_slot_delta": 0,
+        "missing_slots": 0,
+        "unexpected_slots": 0,
+        "duplicate_slots": 0,
+        "pass": true
+      }
+    ],
+    "group_reconciliation": [
+      {
+        "campaign_id": "CA-01-LOCAL",
+        "group_id": "ca-01-find-hire-specialist",
+        "group_name": "Программист 1С — поиск специалиста",
+        "authority_phrase_slots": 13,
+        "artifact_phrase_slots": 13,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-01-LOCAL",
+        "group_id": "ca-01-price-intent",
+        "group_name": "Программист 1С — стоимость часа",
+        "authority_phrase_slots": 26,
+        "artifact_phrase_slots": 26,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-01-LOCAL",
+        "group_id": "ca-01-specialist-by-product",
+        "group_name": "Программист 1С — конфигурации",
+        "authority_phrase_slots": 5,
+        "artifact_phrase_slots": 5,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-01-LOCAL",
+        "group_id": "ca-01-specialist-search",
+        "group_name": "Программист 1С — услуги и настройка",
+        "authority_phrase_slots": 11,
+        "artifact_phrase_slots": 11,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-01-REMOTE",
+        "group_id": "ca-01-city-remote",
+        "group_name": "Программист 1С — по городам России",
+        "authority_phrase_slots": 38,
+        "artifact_phrase_slots": 38,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-01-REMOTE",
+        "group_id": "ca-01-find-hire-specialist",
+        "group_name": "Программист 1С — поиск специалиста",
+        "authority_phrase_slots": 16,
+        "artifact_phrase_slots": 16,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-01-REMOTE",
+        "group_id": "ca-01-price-intent",
+        "group_name": "Программист 1С — стоимость часа",
+        "authority_phrase_slots": 28,
+        "artifact_phrase_slots": 28,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-01-REMOTE",
+        "group_id": "ca-01-specialist-by-product",
+        "group_name": "Программист 1С — конфигурации",
+        "authority_phrase_slots": 5,
+        "artifact_phrase_slots": 5,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-01-REMOTE",
+        "group_id": "ca-01-specialist-search",
+        "group_name": "Программист 1С — услуги и настройка",
+        "authority_phrase_slots": 11,
+        "artifact_phrase_slots": 11,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-02-LOCAL",
+        "group_id": "ca-02-direct-service-order",
+        "group_name": "Сопровождение 1С — заказ услуги",
+        "authority_phrase_slots": 8,
+        "artifact_phrase_slots": 8,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-02-LOCAL",
+        "group_id": "ca-02-price-intent",
+        "group_name": "Сопровождение 1С — стоимость",
+        "authority_phrase_slots": 8,
+        "artifact_phrase_slots": 8,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-02-LOCAL",
+        "group_id": "ca-02-provider-search",
+        "group_name": "Сопровождение 1С — поиск подрядчика",
+        "authority_phrase_slots": 2,
+        "artifact_phrase_slots": 2,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-02-LOCAL",
+        "group_id": "ca-02-support-and-maintenance",
+        "group_name": "Сопровождение и обслуживание 1С",
+        "authority_phrase_slots": 33,
+        "artifact_phrase_slots": 33,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-02-LOCAL",
+        "group_id": "ca-02-support-buh",
+        "group_name": "Сопровождение 1С — бухгалтерия и БГУ",
+        "authority_phrase_slots": 7,
+        "artifact_phrase_slots": 7,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-02-LOCAL",
+        "group_id": "ca-02-support-enterprise",
+        "group_name": "Сопровождение 1С — предприятие и ERP",
+        "authority_phrase_slots": 10,
+        "artifact_phrase_slots": 10,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-02-LOCAL",
+        "group_id": "ca-02-support-its",
+        "group_name": "Сопровождение 1С — ИТС и абонентское",
+        "authority_phrase_slots": 5,
+        "artifact_phrase_slots": 5,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-02-LOCAL",
+        "group_id": "ca-02-support-org",
+        "group_name": "Сопровождение 1С — для организаций и ИП",
+        "authority_phrase_slots": 5,
+        "artifact_phrase_slots": 5,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-02-LOCAL",
+        "group_id": "ca-02-support-tech",
+        "group_name": "Сопровождение 1С — техподдержка и администрирование",
+        "authority_phrase_slots": 15,
+        "artifact_phrase_slots": 15,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-02-LOCAL",
+        "group_id": "ca-02-support-zup-unf",
+        "group_name": "Сопровождение 1С — ЗУП, УТ и УНФ",
+        "authority_phrase_slots": 4,
+        "artifact_phrase_slots": 4,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-02-REMOTE",
+        "group_id": "ca-02-direct-service-order",
+        "group_name": "Сопровождение 1С — заказ услуги",
+        "authority_phrase_slots": 8,
+        "artifact_phrase_slots": 8,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-02-REMOTE",
+        "group_id": "ca-02-price-intent",
+        "group_name": "Сопровождение 1С — стоимость",
+        "authority_phrase_slots": 8,
+        "artifact_phrase_slots": 8,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-02-REMOTE",
+        "group_id": "ca-02-provider-search",
+        "group_name": "Сопровождение 1С — поиск подрядчика",
+        "authority_phrase_slots": 2,
+        "artifact_phrase_slots": 2,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-02-REMOTE",
+        "group_id": "ca-02-support-and-maintenance",
+        "group_name": "Сопровождение и обслуживание 1С",
+        "authority_phrase_slots": 38,
+        "artifact_phrase_slots": 38,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-02-REMOTE",
+        "group_id": "ca-02-support-buh",
+        "group_name": "Сопровождение 1С — бухгалтерия и БГУ",
+        "authority_phrase_slots": 7,
+        "artifact_phrase_slots": 7,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-02-REMOTE",
+        "group_id": "ca-02-support-enterprise",
+        "group_name": "Сопровождение 1С — предприятие и ERP",
+        "authority_phrase_slots": 10,
+        "artifact_phrase_slots": 10,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-02-REMOTE",
+        "group_id": "ca-02-support-its",
+        "group_name": "Сопровождение 1С — ИТС и абонентское",
+        "authority_phrase_slots": 5,
+        "artifact_phrase_slots": 5,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-02-REMOTE",
+        "group_id": "ca-02-support-org",
+        "group_name": "Сопровождение 1С — для организаций и ИП",
+        "authority_phrase_slots": 5,
+        "artifact_phrase_slots": 5,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-02-REMOTE",
+        "group_id": "ca-02-support-tech",
+        "group_name": "Сопровождение 1С — техподдержка и администрирование",
+        "authority_phrase_slots": 16,
+        "artifact_phrase_slots": 16,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-02-REMOTE",
+        "group_id": "ca-02-support-zup-unf",
+        "group_name": "Сопровождение 1С — ЗУП, УТ и УНФ",
+        "authority_phrase_slots": 4,
+        "artifact_phrase_slots": 4,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-03-LOCAL",
+        "group_id": "ca-03-implementation",
+        "group_name": "Доработка 1С — внедрение",
+        "authority_phrase_slots": 3,
+        "artifact_phrase_slots": 3,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-03-LOCAL",
+        "group_id": "ca-03-mod-config",
+        "group_name": "Доработка 1С — по конфигурациям",
+        "authority_phrase_slots": 9,
+        "artifact_phrase_slots": 9,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-03-LOCAL",
+        "group_id": "ca-03-modification",
+        "group_name": "Доработка и разработка 1С",
+        "authority_phrase_slots": 41,
+        "artifact_phrase_slots": 41,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-03-REMOTE",
+        "group_id": "ca-03-implementation",
+        "group_name": "Доработка 1С — внедрение",
+        "authority_phrase_slots": 3,
+        "artifact_phrase_slots": 3,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-03-REMOTE",
+        "group_id": "ca-03-mod-config",
+        "group_name": "Доработка 1С — по конфигурациям",
+        "authority_phrase_slots": 9,
+        "artifact_phrase_slots": 9,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-03-REMOTE",
+        "group_id": "ca-03-modification",
+        "group_name": "Доработка и разработка 1С",
+        "authority_phrase_slots": 42,
+        "artifact_phrase_slots": 42,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-04-LOCAL",
+        "group_id": "ca-04-bitrix",
+        "group_name": "Интеграция 1С с 1С-Битрикс",
+        "authority_phrase_slots": 17,
+        "artifact_phrase_slots": 17,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-04-LOCAL",
+        "group_id": "ca-04-bitrix24",
+        "group_name": "Интеграция 1С с Битрикс24",
+        "authority_phrase_slots": 9,
+        "artifact_phrase_slots": 9,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-04-LOCAL",
+        "group_id": "ca-04-site",
+        "group_name": "Интеграция 1С с сайтом и API",
+        "authority_phrase_slots": 5,
+        "artifact_phrase_slots": 5,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-04-LOCAL",
+        "group_id": "ca-04-sync",
+        "group_name": "Синхронизация и обмен данными",
+        "authority_phrase_slots": 4,
+        "artifact_phrase_slots": 4,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-04-REMOTE",
+        "group_id": "ca-04-bitrix",
+        "group_name": "Интеграция 1С с 1С-Битрикс",
+        "authority_phrase_slots": 17,
+        "artifact_phrase_slots": 17,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-04-REMOTE",
+        "group_id": "ca-04-bitrix24",
+        "group_name": "Интеграция 1С с Битрикс24",
+        "authority_phrase_slots": 9,
+        "artifact_phrase_slots": 9,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-04-REMOTE",
+        "group_id": "ca-04-site",
+        "group_name": "Интеграция 1С с сайтом и API",
+        "authority_phrase_slots": 5,
+        "artifact_phrase_slots": 5,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-04-REMOTE",
+        "group_id": "ca-04-sync",
+        "group_name": "Синхронизация и обмен данными",
+        "authority_phrase_slots": 4,
+        "artifact_phrase_slots": 4,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-LOCAL",
+        "group_id": "ca-05-category-marking",
+        "group_name": "Маркировка по товарным категориям",
+        "authority_phrase_slots": 13,
+        "artifact_phrase_slots": 13,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-LOCAL",
+        "group_id": "ca-05-config-marking",
+        "group_name": "Маркировка — настройка в конфигурациях 1С",
+        "authority_phrase_slots": 24,
+        "artifact_phrase_slots": 24,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-LOCAL",
+        "group_id": "ca-05-connect-setup",
+        "group_name": "Честный знак — подключение и настройка",
+        "authority_phrase_slots": 38,
+        "artifact_phrase_slots": 38,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-LOCAL",
+        "group_id": "ca-05-errors-support",
+        "group_name": "Ошибки и техническая поддержка маркировки",
+        "authority_phrase_slots": 2,
+        "artifact_phrase_slots": 2,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-LOCAL",
+        "group_id": "ca-05-integration",
+        "group_name": "Интеграция 1С с Честным знаком",
+        "authority_phrase_slots": 14,
+        "artifact_phrase_slots": 14,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-LOCAL",
+        "group_id": "ca-05-local-module",
+        "group_name": "Локальный модуль Честного знака",
+        "authority_phrase_slots": 11,
+        "artifact_phrase_slots": 11,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-LOCAL",
+        "group_id": "ca-05-marking-buh",
+        "group_name": "Маркировка — бухгалтерия и БП",
+        "authority_phrase_slots": 16,
+        "artifact_phrase_slots": 16,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-LOCAL",
+        "group_id": "ca-05-marking-codes",
+        "group_name": "Коды маркировки — печать, передача и сканирование",
+        "authority_phrase_slots": 4,
+        "artifact_phrase_slots": 4,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-LOCAL",
+        "group_id": "ca-05-marking-erp",
+        "group_name": "Маркировка — ERP и КА",
+        "authority_phrase_slots": 10,
+        "artifact_phrase_slots": 10,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-LOCAL",
+        "group_id": "ca-05-marking-roznica",
+        "group_name": "Маркировка — розница",
+        "authority_phrase_slots": 17,
+        "artifact_phrase_slots": 17,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-LOCAL",
+        "group_id": "ca-05-marking-ut-unf",
+        "group_name": "Маркировка — УТ и УНФ",
+        "authority_phrase_slots": 28,
+        "artifact_phrase_slots": 28,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-LOCAL",
+        "group_id": "ca-05-remainder-marking",
+        "group_name": "Маркировка остатков",
+        "authority_phrase_slots": 10,
+        "artifact_phrase_slots": 10,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-LOCAL",
+        "group_id": "ca-05-suz-tokens",
+        "group_name": "СУЗ и токены",
+        "authority_phrase_slots": 8,
+        "artifact_phrase_slots": 8,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-LOCAL",
+        "group_id": "ca-05-ts-piot",
+        "group_name": "ТС ПИоТ",
+        "authority_phrase_slots": 3,
+        "artifact_phrase_slots": 3,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-REMOTE",
+        "group_id": "ca-05-category-marking",
+        "group_name": "Маркировка по товарным категориям",
+        "authority_phrase_slots": 13,
+        "artifact_phrase_slots": 13,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-REMOTE",
+        "group_id": "ca-05-config-marking",
+        "group_name": "Маркировка — настройка в конфигурациях 1С",
+        "authority_phrase_slots": 24,
+        "artifact_phrase_slots": 24,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-REMOTE",
+        "group_id": "ca-05-connect-setup",
+        "group_name": "Честный знак — подключение и настройка",
+        "authority_phrase_slots": 38,
+        "artifact_phrase_slots": 38,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-REMOTE",
+        "group_id": "ca-05-errors-support",
+        "group_name": "Ошибки и техническая поддержка маркировки",
+        "authority_phrase_slots": 2,
+        "artifact_phrase_slots": 2,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-REMOTE",
+        "group_id": "ca-05-integration",
+        "group_name": "Интеграция 1С с Честным знаком",
+        "authority_phrase_slots": 14,
+        "artifact_phrase_slots": 14,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-REMOTE",
+        "group_id": "ca-05-local-module",
+        "group_name": "Локальный модуль Честного знака",
+        "authority_phrase_slots": 11,
+        "artifact_phrase_slots": 11,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-REMOTE",
+        "group_id": "ca-05-marking-buh",
+        "group_name": "Маркировка — бухгалтерия и БП",
+        "authority_phrase_slots": 16,
+        "artifact_phrase_slots": 16,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-REMOTE",
+        "group_id": "ca-05-marking-codes",
+        "group_name": "Коды маркировки — печать, передача и сканирование",
+        "authority_phrase_slots": 4,
+        "artifact_phrase_slots": 4,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-REMOTE",
+        "group_id": "ca-05-marking-erp",
+        "group_name": "Маркировка — ERP и КА",
+        "authority_phrase_slots": 10,
+        "artifact_phrase_slots": 10,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-REMOTE",
+        "group_id": "ca-05-marking-roznica",
+        "group_name": "Маркировка — розница",
+        "authority_phrase_slots": 17,
+        "artifact_phrase_slots": 17,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-REMOTE",
+        "group_id": "ca-05-marking-ut-unf",
+        "group_name": "Маркировка — УТ и УНФ",
+        "authority_phrase_slots": 28,
+        "artifact_phrase_slots": 28,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-REMOTE",
+        "group_id": "ca-05-remainder-marking",
+        "group_name": "Маркировка остатков",
+        "authority_phrase_slots": 10,
+        "artifact_phrase_slots": 10,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-REMOTE",
+        "group_id": "ca-05-suz-tokens",
+        "group_name": "СУЗ и токены",
+        "authority_phrase_slots": 8,
+        "artifact_phrase_slots": 8,
+        "phrase_slot_delta": 0,
+        "pass": true
+      },
+      {
+        "campaign_id": "CA-05-REMOTE",
+        "group_id": "ca-05-ts-piot",
+        "group_name": "ТС ПИоТ",
+        "authority_phrase_slots": 3,
+        "artifact_phrase_slots": 3,
+        "phrase_slot_delta": 0,
+        "pass": true
+      }
+    ],
+    "missing_slots": 0,
+    "unexpected_slots": 0,
+    "duplicate_slots": 0,
+    "normalization_collisions": [],
+    "phrase_slot_reconciliation_pass": true,
+    "missing_slots_list": [],
+    "unexpected_slots_list": [],
+    "duplicate_slots_list": []
+  },
+  "evaluated_at": "2026-06-30T17:01:33.706Z",
+  "note": "RELEASE_GATE_PASS means artifact technically consistent with frozen authority — NOT semantic/launch approval"
+}

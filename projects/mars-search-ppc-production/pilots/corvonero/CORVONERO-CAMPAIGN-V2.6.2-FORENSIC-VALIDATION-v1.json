@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-06-30T17:01:33.706Z",
+  "verdict": "PASS — FORENSIC VALIDATION COMPLETE",
+  "package_version": "V2.6.2",
+  "semantic_authority_version": "V2.6",
+  "summary": {
+    "campaigns": 10,
+    "groups": 71,
+    "phrase_slots": 926,
+    "primary_ads": 71,
+    "phrase_slot_reconciliation_pass": true,
+    "phrase_slot_delta": 0,
+    "all_pass": true,
+    "embedded_campaign_negatives": "BLANK",
+    "restored_slots": 2
+  },
+  "restored_phrases": [
+    {
+      "phrase": "программа 1с не работает",
+      "campaign_id": "CA-02-LOCAL",
+      "group_id": "ca-02-support-tech"
+    },
+    {
+      "phrase": "программа 1с не работает",
+      "campaign_id": "CA-02-REMOTE",
+      "group_id": "ca-02-support-tech"
+    }
+  ]
+}

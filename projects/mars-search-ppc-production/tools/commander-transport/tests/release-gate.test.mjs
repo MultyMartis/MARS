@@ -21,8 +21,27 @@ async function writeGateFixturePackage(dir) {
   texts.getRow(16).getCell(10).value = 'Заголовок';
   texts.getRow(16).getCell(48).value = 'https://corvonero.ru/';
   texts.getRow(16).getCell(52).value = 'Новосибирская область';
-  const xlsxPath = path.join(dir, 'synthetic-campaign.xlsx');
+  const xlsxPath = path.join(dir, 'CORVONERO-CA-01-LOCAL-SYNTHETIC.xlsx');
   await wb.xlsx.writeFile(xlsxPath);
+
+  const groupPlan = {
+    groups: [
+      {
+        campaign: 'CA-01-LOCAL',
+        mode: 'LOCAL',
+        group_id: 'grp-a',
+        group_name: 'grp-a',
+        phrase_list: 'нужен программист 1с',
+      },
+    ],
+  };
+  const architecture = {
+    groups: [{ campaign_id: 'CA-01-LOCAL', group_id: 'grp-a', group_name: 'grp-a' }],
+  };
+  const groupPlanPath = path.join(dir, 'group-plan.json');
+  const archPath = path.join(dir, 'architecture.json');
+  fs.writeFileSync(groupPlanPath, JSON.stringify(groupPlan, null, 2));
+  fs.writeFileSync(archPath, JSON.stringify(architecture, null, 2));
 
   const authority = {
     authority_frozen: true,
@@ -33,7 +52,7 @@ async function writeGateFixturePackage(dir) {
     embedded_negative_policy: 'blank',
   };
   fs.writeFileSync(path.join(dir, 'authority-summary.json'), JSON.stringify(authority, null, 2));
-  return { xlsxPath, authority };
+  return { xlsxPath, authority, groupPlanPath, archPath };
 }
 
 describe('release-gate', () => {
@@ -55,7 +74,7 @@ describe('release-gate', () => {
 
   it('fails when E9 repopulated', async () => {
     const pkg = path.join(SYNTHETIC_TEST_OUTPUT_DIR, 'release-gate-e9-fail');
-    const { xlsxPath } = await writeGateFixturePackage(pkg);
+    const { xlsxPath, groupPlanPath, archPath } = await writeGateFixturePackage(pkg);
     const wb = new ExcelJS.Workbook();
     await wb.xlsx.readFile(xlsxPath);
     wb.getWorksheet('Тексты').getCell('E9').value = 'ремонт';
@@ -72,6 +91,7 @@ describe('release-gate', () => {
     receipt.approval_timestamp = new Date().toISOString();
     receipt.operator_identity_label = 'test-operator';
     receipt.generated_for_review_only = false;
+    receipt.authority_artifact_paths = [groupPlanPath.replace(/\\/g, '/')];
     fs.writeFileSync(receiptPath, JSON.stringify(receipt, null, 2));
 
     const result = await runReleaseGate({
@@ -79,6 +99,8 @@ describe('release-gate', () => {
       package_root: pkg,
       authority_path: path.join(pkg, 'authority-summary.json'),
       receipt_path: receiptPath,
+      group_plan_path: groupPlanPath,
+      architecture_path: archPath,
       guardOptions: { skipVolumeCheck: true },
     });
 
@@ -92,7 +114,7 @@ describe('release-gate', () => {
 
   it('passes on clean fixture with valid approval', async () => {
     const pkg = path.join(SYNTHETIC_TEST_OUTPUT_DIR, 'release-gate-pass');
-    await writeGateFixturePackage(pkg);
+    const { groupPlanPath, archPath } = await writeGateFixturePackage(pkg);
 
     const receiptPath = path.join(pkg, 'approval-receipt.json');
     const receipt = generateApprovalReceiptForReview({
@@ -109,6 +131,7 @@ describe('release-gate', () => {
     receipt.approval_timestamp = new Date().toISOString();
     receipt.operator_identity_label = 'test-operator';
     receipt.generated_for_review_only = false;
+    receipt.authority_artifact_paths = [groupPlanPath.replace(/\\/g, '/')];
     fs.writeFileSync(receiptPath, JSON.stringify(receipt, null, 2));
 
     const result = await runReleaseGate({
@@ -116,7 +139,9 @@ describe('release-gate', () => {
       package_root: pkg,
       authority_path: path.join(pkg, 'authority-summary.json'),
       receipt_path: receiptPath,
-      xlsx_files: ['synthetic-campaign.xlsx'],
+      group_plan_path: groupPlanPath,
+      architecture_path: archPath,
+      xlsx_files: ['CORVONERO-CA-01-LOCAL-SYNTHETIC.xlsx'],
       guardOptions: { skipVolumeCheck: true },
     });
 

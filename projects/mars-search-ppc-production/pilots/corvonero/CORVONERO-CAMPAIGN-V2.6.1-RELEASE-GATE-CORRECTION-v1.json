@@ -1,0 +1,38 @@
+{
+  "schema_version": "campaign-release-gate-correction-v1",
+  "project_id": "corvonero",
+  "corrects_artifact": "CORVONERO-CAMPAIGN-V2.6.1-RELEASE-GATE-RESULT-v1.json",
+  "corrected_at": "2026-06-30T22:00:00.000+07:00",
+  "original_result": "PASS",
+  "superseded_result": "INVALIDATED",
+  "reason": "MULTI_CAMPAIGN_PHRASE_SLOT_TOTAL_NOT_ENFORCED",
+  "false_pass_mechanism": "release-gate.mjs validated per-file XLSX contract checks but did not run package-level phrase-slot reconciliation against FINAL-GROUP-PLAN; authority_summary phrase_slot_count was not compared to summed artifact keyword rows",
+  "authority_phrase_slots": 926,
+  "artifact_phrase_slots": 924,
+  "phrase_slot_delta": -2,
+  "operator_import_ready": false,
+  "missing_slots_evidence": [
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "mode": "LOCAL",
+      "group_id": "ca-02-support-tech",
+      "group_name": "Сопровождение 1С — техподдержка и администрирование",
+      "phrase": "программа 1с не работает",
+      "classification": "GENERATION_DEFECT"
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "mode": "REMOTE",
+      "group_id": "ca-02-support-tech",
+      "group_name": "Сопровождение 1С — техподдержка и администрирование",
+      "phrase": "программа 1с не работает",
+      "classification": "GENERATION_DEFECT"
+    }
+  ],
+  "remediation": {
+    "gate_fix": "phrase-slot-reconciler.mjs integrated into release-gate.mjs",
+    "deployable_fix": "CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+    "semantic_decisions_changed": false
+  },
+  "note": "Original v1 PASS record preserved for audit — not deleted"
+}

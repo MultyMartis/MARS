@@ -19,6 +19,8 @@ function parseArgs(argv) {
     else if (a === '--authority') args.authority_path = argv[++i];
     else if (a === '--receipt') args.receipt_path = argv[++i];
     else if (a === '--template') args.template_path = argv[++i];
+    else if (a === '--group-plan') args.group_plan_path = argv[++i];
+    else if (a === '--architecture') args.architecture_path = argv[++i];
     else if (a === '--checksum-manifest') args.checksum_manifest_path = argv[++i];
     else if (a === '--no-require-approval') args.require_operator_approval = false;
     else if (a === '--json') args.json = true;

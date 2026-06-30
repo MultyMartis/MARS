@@ -2,6 +2,29 @@
   "schema_version": "campaign-release-state-v1",
   "project_id": "corvonero",
   "pilot_id": "corvonero",
+  "authority_frozen": true,
+  "embedded_negative_policy": "blank",
+  "campaign_count": 10,
+  "semantic_authority_version": "V2.6",
+  "deployable_package_version": "V2.6.2",
+  "deployable_package_path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+  "operator_approval_receipt_path": "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CAMPAIGN-V2.6-OPERATOR-SEMANTIC-APPROVAL-v1.json",
+  "operator_approval_receipt_hash": "e719e17ba47302b3546146031648f0e7b7307264a9f85d8d6cc540bcd96e22b9",
+  "release_gate_result_path": "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CAMPAIGN-V2.6.2-RELEASE-GATE-RESULT-v1.json",
+  "authority_hashes": {
+    "CORVONERO-CAMPAIGN-V2.6-FINAL-PHRASE-AUTHORITY-v1.json": "2fba7e123a9d8a9fe08ff856e74149a474417b700d82f719041947577c730a82",
+    "CORVONERO-CAMPAIGN-V2.6-FINAL-GROUP-PLAN-v1.json": "562614efede752dc00ae66003ba8dd698fbdeff28f3aaa1604e43a34c59183a3",
+    "CORVONERO-CAMPAIGN-V2.6-FINAL-AD-COPY-v1.json": "d4e7621a55f0f7366dc7f66e3d01c0ff3084825f83d58b87b3a14cd5ae44f216",
+    "CORVONERO-CAMPAIGN-V2.6-FINAL-NEGATIVES-v1.json": "3abe789c7e5ccfecd04c5cab4c21d1c2df71c528c2a4e06c1d2f123c21e9ba4a",
+    "CORVONERO-CAMPAIGN-V2.6-RESULT-v1.json": "e40289ac7c52b242b816ac8b8dd777515ca537b18dffd64e8b4585e01eaac25e"
+  },
+  "blockers": [],
+  "phrase_slot_reconciliation": {
+    "authority_phrase_slots": 926,
+    "artifact_phrase_slots": 926,
+    "phrase_slot_delta": 0,
+    "reconciled_package": "V2.6.2"
+  },
   "release_versions": {
     "V2.6": {
       "role": "semantic_authority_baseline",
@@ -9,39 +32,38 @@
       "states": {
         "DRAFT": false,
         "PHRASE_AUDIT_COMPLETE": true,
-        "OPERATOR_SEMANTIC_APPROVED": false,
+        "OPERATOR_SEMANTIC_APPROVED": true,
         "AUTHORITY_FROZEN": true,
         "GENERATION_COMPLETE": true,
         "ARTIFACT_VALIDATED": true,
-        "OPERATOR_IMPORT_READY": false,
+        "OPERATOR_IMPORT_READY": true,
         "COMMANDER_IMPORTED": false,
         "IMPORT_RECONCILED": false,
         "DIRECT_POST_IMPORT_READY": false,
         "LAUNCH_APPROVED": false
       },
       "semantic_status": {
-        "automation_status": "SEMANTIC_AUDIT_READY_FOR_REVIEW",
-        "operator_approval_receipt_path": null,
-        "note": "No explicit OPERATOR_SEMANTIC_APPROVED receipt found in repository — READY_FOR_OPERATOR_APPROVAL"
+        "automation_status": "OPERATOR_SEMANTIC_APPROVED",
+        "operator_approval_receipt_path": "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CAMPAIGN-V2.6-OPERATOR-SEMANTIC-APPROVAL-v1.json",
+        "note": "Operator semantic approval recorded 2026-06-30 — unchanged"
       },
-      "release_gate_status": "NOT_RUN",
+      "release_gate_status": "RELEASE_GATE_PASS",
       "notes": [
-        "V2.6 semantic authority unchanged by this systemic closure task",
-        "ARTIFACT_VALIDATED per V2.6 forensic validation — independent operator/Web-GPT review may still be pending",
-        "OPERATOR_IMPORT_READY false until final independent package review"
+        "V2.6 semantic authority unchanged",
+        "Deployable package V2.6.2 passed corrected release gate 2026-06-30"
       ]
     },
     "V2.6.1": {
-      "role": "generation_layer_hotfix_candidate",
+      "role": "deployable_generation_hotfix",
       "parent_version": "V2.6",
       "hotfix_scope": ["E9_campaign_negatives_clear", "transport_metadata_operation_model"],
       "states": {
         "DRAFT": false,
         "PHRASE_AUDIT_COMPLETE": true,
-        "OPERATOR_SEMANTIC_APPROVED": false,
+        "OPERATOR_SEMANTIC_APPROVED": true,
         "AUTHORITY_FROZEN": true,
         "GENERATION_COMPLETE": true,
-        "ARTIFACT_VALIDATED": true,
+        "ARTIFACT_VALIDATED": false,
         "OPERATOR_IMPORT_READY": false,
         "COMMANDER_IMPORTED": false,
         "IMPORT_RECONCILED": false,
@@ -50,15 +72,42 @@
       },
       "semantic_status": {
         "automation_status": null,
-        "note": "Generation hotfix only — no semantic authority change from V2.6"
+        "note": "Superseded by V2.6.2 phrase-slot restore — V2.6.1 gate PASS invalidated"
       },
-      "release_gate_status": "NOT_RUN",
+      "release_gate_status": "RELEASE_GATE_INVALIDATED",
       "notes": [
-        "V2.6.1 addresses stale Triumph E9 campaign negatives in actual XLSX",
-        "No V2.7 created",
-        "Differential validation should allow only E9/metadata/checksum changes vs V2.6"
+        "Original gate PASS invalidated — phrase-slot reconciliation not enforced",
+        "Do not import V2.6.1"
+      ]
+    },
+    "V2.6.2": {
+      "role": "deployable_phrase_slot_restore",
+      "parent_version": "V2.6.1",
+      "hotfix_scope": ["restore_2_missing_phrase_slots_ca02_support_tech"],
+      "states": {
+        "DRAFT": false,
+        "PHRASE_AUDIT_COMPLETE": true,
+        "OPERATOR_SEMANTIC_APPROVED": true,
+        "AUTHORITY_FROZEN": true,
+        "GENERATION_COMPLETE": true,
+        "ARTIFACT_VALIDATED": true,
+        "OPERATOR_IMPORT_READY": true,
+        "COMMANDER_IMPORTED": false,
+        "IMPORT_RECONCILED": false,
+        "DIRECT_POST_IMPORT_READY": false,
+        "LAUNCH_APPROVED": false
+      },
+      "semantic_status": {
+        "automation_status": null,
+        "note": "Generation restore only — semantic authority remains V2.6"
+      },
+      "release_gate_status": "RELEASE_GATE_PASS",
+      "notes": [
+        "Corrected release gate PASS 2026-06-30 — phrase-slot delta 0",
+        "Commander import and Direct launch not authorized in this task"
       ]
     }
   },
-  "updated_at": "2026-06-30T18:00:00.000Z"
+  "current_release_label": "Corvonero V2.6 semantic authority / Corvonero V2.6.2 deployable package",
+  "updated_at": "2026-06-30T22:00:00.000+07:00"
 }

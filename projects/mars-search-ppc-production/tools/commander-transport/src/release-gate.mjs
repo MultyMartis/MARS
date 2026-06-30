@@ -7,6 +7,10 @@ import path from 'node:path';
 import { loadTemplateContract } from './template-sanitizer.mjs';
 import { validateArtifactXlsx } from './artifact-xlsx-validator.mjs';
 import { reconcileAuthorityToArtifact } from './authority-artifact-reconciler.mjs';
+import {
+  reconcilePackagePhraseSlots,
+  resolveAuthorityPathsFromReceipt,
+} from './phrase-slot-reconciler.mjs';
 import { validateApprovalReceipt, loadApprovalReceipt } from './operator-approval-receipt.mjs';
 import { verifyChecksumManifest } from './checksum-manifest.mjs';
 import { scanTemplateContamination } from './template-sanitizer.mjs';
@@ -20,6 +24,7 @@ import { validateTemplate } from './template-validator.mjs';
 export async function runReleaseGate(input) {
   const violations = [];
   const checks = [];
+  let loadedReceipt = null;
   const fail = (code, message, detail = {}) => {
     violations.push({ code, message, ...detail });
     checks.push({ check: code, status: 'FAIL', message });
@@ -38,9 +43,12 @@ export async function runReleaseGate(input) {
 
   const packageRoot = input.package_root ?? input.package_path;
 
+  const manifestXlsxFiles = loadPackageManifestXlsxFiles(packageRoot, input.package_manifest_path);
+
   if (input.receipt_path) {
     try {
       const receipt = loadApprovalReceipt(input.receipt_path);
+      loadedReceipt = receipt;
       const receiptValidation = validateApprovalReceipt(receipt);
       if (!receiptValidation.valid) {
         for (const v of receiptValidation.violations) fail(v.code, v.message);
@@ -94,7 +102,7 @@ export async function runReleaseGate(input) {
     }
   }
 
-  const xlsxFiles = input.xlsx_files ?? findXlsxInPackage(packageRoot);
+  const xlsxFiles = input.xlsx_files ?? manifestXlsxFiles ?? findXlsxInPackage(packageRoot);
   if (xlsxFiles.length === 0) {
     fail('NO_XLSX_IN_PACKAGE', 'No XLSX files found in package');
   }
@@ -125,7 +133,7 @@ export async function runReleaseGate(input) {
       pass(`artifact_validated_${path.basename(fullPath)}`);
     }
 
-    if (authoritySummary) {
+    if (authoritySummary && input.enforce_per_file_package_totals === true) {
       const recon = await reconcileAuthorityToArtifact(authoritySummary, fullPath, {
         filename: path.basename(fullPath),
       });
@@ -135,6 +143,78 @@ export async function runReleaseGate(input) {
         }
       }
     }
+  }
+
+  let phraseSlotReconciliation = null;
+  const groupPlanPath =
+    input.group_plan_path ??
+    resolveAuthorityPathsFromReceipt(loadedReceipt ?? {}).group_plan_path;
+  let architecturePath =
+    input.architecture_path ??
+    resolveAuthorityPathsFromReceipt(loadedReceipt ?? {}).architecture_path;
+
+  if (groupPlanPath && fs.existsSync(groupPlanPath)) {
+    const groupPlan = JSON.parse(fs.readFileSync(groupPlanPath, 'utf8'));
+    const architecture = architecturePath && fs.existsSync(architecturePath)
+      ? JSON.parse(fs.readFileSync(architecturePath, 'utf8'))
+      : { groups: [] };
+
+    phraseSlotReconciliation = await reconcilePackagePhraseSlots({
+      group_plan: groupPlan,
+      architecture,
+      package_root: packageRoot,
+      xlsx_files: xlsxFiles.map((f) => (path.isAbsolute(f) ? path.basename(f) : f)),
+      authority_source_file: path.basename(groupPlanPath),
+    });
+
+    if (!phraseSlotReconciliation.phrase_slot_reconciliation_pass) {
+      fail(
+        'PHRASE_SLOT_RECONCILIATION_FAIL',
+        `Authority phrase slots ${phraseSlotReconciliation.authority_phrase_slots} != artifact ${phraseSlotReconciliation.artifact_phrase_slots} (delta ${phraseSlotReconciliation.phrase_slot_delta})`,
+        {
+          authority_phrase_slots: phraseSlotReconciliation.authority_phrase_slots,
+          artifact_phrase_slots: phraseSlotReconciliation.artifact_phrase_slots,
+          phrase_slot_delta: phraseSlotReconciliation.phrase_slot_delta,
+          missing_slots: phraseSlotReconciliation.missing_slots,
+          unexpected_slots: phraseSlotReconciliation.unexpected_slots,
+          duplicate_slots: phraseSlotReconciliation.duplicate_slots,
+        },
+      );
+      for (const m of phraseSlotReconciliation.expected_but_missing ?? []) {
+        fail(
+          'MISSING_PHRASE_SLOT',
+          `${m.campaign_id}/${m.group_id}: missing "${m.phrase}"`,
+          { slot: m },
+        );
+      }
+      for (const u of phraseSlotReconciliation.unexpected_in_artifact ?? []) {
+        fail(
+          'UNEXPECTED_PHRASE_SLOT',
+          `${u.filename} row ${u.xlsx_row}: unexpected "${u.phrase}"`,
+          { slot: u },
+        );
+      }
+      for (const d of phraseSlotReconciliation.duplicate_in_artifact ?? []) {
+        fail(
+          'DUPLICATE_PHRASE_SLOT',
+          `${d.filename} row ${d.xlsx_row}: duplicate "${d.phrase}"`,
+          { slot: d },
+        );
+      }
+      for (const c of phraseSlotReconciliation.campaign_reconciliation ?? []) {
+        if (!c.pass) {
+          fail(
+            'CAMPAIGN_PHRASE_SLOT_MISMATCH',
+            `${c.campaign_id}: authority ${c.authority_phrase_slots} vs artifact ${c.artifact_phrase_slots}`,
+            { campaign: c },
+          );
+        }
+      }
+    } else {
+      pass('phrase_slot_reconciliation');
+    }
+  } else if (input.require_phrase_slot_reconciliation !== false) {
+    fail('MISSING_GROUP_PLAN', 'Group plan required for phrase-slot reconciliation');
   }
 
   if (input.checksum_manifest_path) {
@@ -166,6 +246,23 @@ export async function runReleaseGate(input) {
     violations,
     checks,
     artifact_results: artifactResults,
+    phrase_slot_reconciliation: phraseSlotReconciliation
+      ? {
+          authority_phrase_slots: phraseSlotReconciliation.authority_phrase_slots,
+          artifact_phrase_slots: phraseSlotReconciliation.artifact_phrase_slots,
+          phrase_slot_delta: phraseSlotReconciliation.phrase_slot_delta,
+          campaign_reconciliation: phraseSlotReconciliation.campaign_reconciliation,
+          group_reconciliation: phraseSlotReconciliation.group_reconciliation,
+          missing_slots: phraseSlotReconciliation.missing_slots,
+          unexpected_slots: phraseSlotReconciliation.unexpected_slots,
+          duplicate_slots: phraseSlotReconciliation.duplicate_slots,
+          normalization_collisions: phraseSlotReconciliation.normalization_collisions,
+          phrase_slot_reconciliation_pass: phraseSlotReconciliation.phrase_slot_reconciliation_pass,
+          missing_slots_list: phraseSlotReconciliation.missing_slots_list,
+          unexpected_slots_list: phraseSlotReconciliation.unexpected_slots_list,
+          duplicate_slots_list: phraseSlotReconciliation.duplicate_slots_list,
+        }
+      : null,
     evaluated_at: new Date().toISOString(),
     note: 'RELEASE_GATE_PASS means artifact technically consistent with frozen authority — NOT semantic/launch approval',
   };
@@ -183,4 +280,30 @@ function findXlsxInPackage(packageRoot) {
   };
   walk(packageRoot);
   return results;
+}
+
+function loadPackageManifestXlsxFiles(packageRoot, explicitManifestPath) {
+  const candidates = [];
+  if (explicitManifestPath && fs.existsSync(explicitManifestPath)) {
+    candidates.push(explicitManifestPath);
+  }
+  if (fs.existsSync(packageRoot)) {
+    for (const ent of fs.readdirSync(packageRoot)) {
+      if (/OUTPUT-MANIFEST/i.test(ent) && ent.endsWith('.json')) {
+        candidates.push(path.join(packageRoot, ent));
+      }
+    }
+  }
+  for (const manifestPath of candidates) {
+    try {
+      const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+      const files = manifest.xlsx_files ?? manifest.files?.filter((f) => String(f).toLowerCase().endsWith('.xlsx'));
+      if (Array.isArray(files) && files.length > 0) {
+        return files.filter((f) => fs.existsSync(path.join(packageRoot, f)));
+      }
+    } catch {
+      /* try next */
+    }
+  }
+  return null;
 }
