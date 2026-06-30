@@ -4913,6 +4913,11 @@ body[data-offcanvas-state='open'] {
 	color: var(--color-text-primary);
 }
 
+.page-o-centre .services-category-section-v2__marker {
+	display: none;
+}
+
+
 .page-uslugi-v2 .services-category-section-v2__heading {
 	margin: 0 0 var(--pad-gap-line);
 	max-width: 1091px;
@@ -6316,24 +6321,54 @@ body[data-offcanvas-state='open'] {
 }
 
 .page-o-centre .services-category-section-v2--o-centre-who-we-treat {
-	padding: var(--pad-y) 0 0;
+	padding: var(--pad-y) 0 var(--pad-gap);
 }
 
 .page-o-centre .services-category-section-v2--o-centre-who-we-treat .services-category-section-v2__head-main {
+	display: flex;
 	align-items: flex-start;
+	gap: var(--pad-gap-line);
+	margin-bottom: var(--pad-gap);
+}
+
+.page-o-centre .services-category-section-v2--o-centre-who-we-treat .services-category-section-v2__marker {
+	display: flex;
+	flex: 0 0 auto;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	width: 50px;
+	height: 50px;
+	border: var(--border-width) solid var(--color-text-primary);
+	border-radius: var(--radius-full);
+	font-size: 16px;
+	font-weight: var(--font-weight-heading);
+	line-height: 1;
+	color: var(--color-text-primary);
 }
 
 .page-o-centre .services-category-section-v2--o-centre-who-we-treat .services-category-section-v2__heading {
-	margin: 0;
+	margin: 0 0 var(--pad-gap-line);
+	max-width: 1091px;
 	font-size: var(--font-size-h2);
 	line-height: var(--line-height-h2);
 	font-weight: var(--font-weight-heading);
 	color: var(--color-text-primary);
 }
 
-.page-o-centre .services-category-section-v2--o-centre-who-we-treat .services-category-section-v2__intro,
+.page-o-centre .services-category-section-v2--o-centre-who-we-treat .services-category-section-v2__intro {
+	margin: 0;
+	max-width: 1091px;
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+	color: var(--color-text-secondary);
+}
+
 .page-o-centre .services-category-section-v2--o-centre-who-we-treat .services-category-section-v2__lead {
-	margin: 0 0 var(--pad-gap-line);
+	margin: var(--pad-gap-line) 0 var(--pad-gap);
+	max-width: 1020px;
+	padding: var(--pad-gap-line) 0 var(--pad-gap-line) var(--pad-gap);
+	border-left: 5px solid var(--color-accent);
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
 	color: var(--color-text-secondary);
@@ -6343,13 +6378,52 @@ body[data-offcanvas-state='open'] {
 	display: flex;
 	flex-direction: column;
 	gap: var(--pad-gap-line);
+	max-width: 1170px;
 }
 
-.page-o-centre .services-category-section-v2--o-centre-who-we-treat .services-category-section-v2__body p {
+.page-o-centre .who-we-treat-visual__spectrum-list {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap-line);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.page-o-centre .who-we-treat-visual__spectrum-item {
 	margin: 0;
 	font-size: var(--font-size-base);
 	line-height: var(--line-height-base);
 	color: var(--color-text-secondary);
+}
+
+.page-o-centre .who-we-treat-visual__spectrum-title {
+	font-weight: var(--font-weight-heading);
+	color: var(--color-accent);
+}
+
+.page-o-centre .who-we-treat-visual__spectrum-title::before {
+	content: "";
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	margin-right: 0.55em;
+	border-radius: 50%;
+	background-color: var(--color-accent);
+	vertical-align: middle;
+}
+
+.page-o-centre .who-we-treat-visual__callout {
+	margin: var(--pad-gap-line) 0 0;
+	max-width: 1170px;
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+	color: var(--color-text-secondary);
+}
+
+.page-o-centre .who-we-treat-visual__more-link {
+	display: inline-flex;
+	margin-top: var(--pad-gap-line);
 }
 
 .page-o-centre .services-category-section-v2--o-centre-who-we-treat .services-category-section-v2__gallery {
@@ -6370,17 +6444,33 @@ body[data-offcanvas-state='open'] {
 .page-o-centre .who-we-treat-visual__staff-image {
 	display: block;
 	width: 100%;
+	max-width: 1170px;
 	height: auto;
+	min-height: 360px;
 	object-fit: cover;
+	object-position: center;
 }
 
 .page-o-centre .who-we-treat-visual__cards {
 	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: var(--pad-gap);
 	margin: 0;
 }
 
+.page-o-centre .who-we-treat-visual__card {
+	justify-content: flex-start;
+	min-height: 280px;
+	padding: var(--pad-gap) var(--pad-gap-line);
+	border-color: var(--color-text-primary);
+}
+
 .page-o-centre .who-we-treat-visual__card .home-feature-grid__card-title {
-	margin: 0;
+	margin: 0 0 var(--pad-gap-line);
+}
+
+.page-o-centre .who-we-treat-visual__card .home-feature-grid__card-text {
+	display: block;
+	max-width: 100%;
 }
 
 .page-o-centre .program-approach-band {
@@ -6439,16 +6529,7 @@ body[data-offcanvas-state='open'] {
 }
 
 .page-o-centre .infrastructure-narrative::before {
-	content: "";
-	position: absolute;
-	inset: 0;
-	background-image: url("../img/content/o-centre/decorative/o-centre-infrastructure-background.webp");
-	background-size: cover;
-	background-position: center top;
-	background-repeat: no-repeat;
-	opacity: 0.1;
-	pointer-events: none;
-	z-index: 0;
+	content: none;
 }
 
 .page-o-centre .infrastructure-narrative__container {
@@ -6463,6 +6544,7 @@ body[data-offcanvas-state='open'] {
 	display: flex;
 	flex-direction: column;
 	gap: var(--pad-gap-line);
+	min-width: 0;
 }
 
 .page-o-centre .infrastructure-narrative__head {
@@ -6487,35 +6569,76 @@ body[data-offcanvas-state='open'] {
 	color: var(--color-text-secondary);
 }
 
-.page-o-centre .infrastructure-narrative__brand {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0.35em;
-	margin: 0 0 var(--pad-gap-line);
-	font-size: var(--font-size-h2);
-	line-height: var(--line-height-h2);
-	font-weight: var(--font-weight-heading);
-	color: var(--color-text-primary);
-}
-
-.page-o-centre .infrastructure-narrative__brand-part_tagline {
-	flex: 1 1 100%;
-	font-size: var(--font-size-base);
-	line-height: var(--line-height-base);
-	font-weight: var(--font-weight-base);
-	color: var(--color-text-secondary);
-}
-
 .page-o-centre .infrastructure-narrative__subgallery--row-3 {
-	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: var(--pad-gap-line);
+	overflow: hidden;
 }
 
-.page-o-centre .infrastructure-narrative__mosaic {
-	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: var(--pad-gap-line);
+.page-o-centre [data-inf-slider] {
+	width: 100%;
+	max-width: 100%;
+	min-width: 0;
+}
+
+.page-o-centre [data-inf-slider] .swiper-slide {
+	height: auto;
+	box-sizing: border-box;
+}
+
+.page-o-centre [data-inf-slider] .infrastructure-narrative__figure,
+.page-o-centre [data-inf-slider] .infrastructure-narrative__figure > a {
+	width: 100%;
+	max-width: 100%;
+}
+
+.page-o-centre [data-inf-slider] .infrastructure-narrative__image {
+	width: 100%;
+	max-width: 100%;
+}
+
+.page-o-centre .infrastructure-narrative__group--g1 {
+	gap: var(--pad-gap);
+}
+
+.page-o-centre .infrastructure-narrative__group--g1 .infrastructure-narrative__image {
+	height: 360px;
+	object-fit: cover;
+	object-position: center;
+}
+
+.page-o-centre .infrastructure-narrative__group--g2 {
+	gap: var(--pad-gap);
+}
+
+.page-o-centre .infrastructure-narrative__group--g2 .infrastructure-narrative__image {
+	height: 360px;
+	object-fit: cover;
+	object-position: center;
+}
+
+.page-o-centre .infrastructure-narrative__group--g3 {
+	gap: var(--pad-gap);
+}
+
+.page-o-centre .infrastructure-narrative__group--g3 .infrastructure-narrative__image {
+	height: 360px;
+	object-fit: cover;
+	object-position: center;
+}
+
+.page-o-centre .infrastructure-narrative__group--g4 {
+	gap: var(--pad-gap);
+}
+
+.page-o-centre .infrastructure-narrative__group--g4 .infrastructure-narrative__image {
+	height: 360px;
+	object-fit: cover;
+	object-position: center;
+}
+
+.page-o-centre .infrastructure-narrative__figure > a {
+	display: block;
+	color: inherit;
+	text-decoration: none;
 }
 
 .page-o-centre .infrastructure-narrative__figure {
@@ -6535,8 +6658,7 @@ body[data-offcanvas-state='open'] {
 .page-o-centre .infrastructure-narrative__image {
 	display: block;
 	width: 100%;
-	height: 100%;
-	min-height: 280px;
+	height: auto;
 	object-fit: cover;
 	object-position: center;
 }
@@ -6551,14 +6673,6 @@ body[data-offcanvas-state='open'] {
 
 @media (max-width: 1024px) {
 	.page-o-centre .who-we-treat-visual__cards {
-		grid-template-columns: 1fr;
-	}
-
-	.page-o-centre .infrastructure-narrative__subgallery--row-3 {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
-
-	.page-o-centre .infrastructure-narrative__mosaic {
 		grid-template-columns: 1fr;
 	}
 

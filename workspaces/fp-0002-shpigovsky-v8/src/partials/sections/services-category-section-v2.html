@@ -2,7 +2,9 @@
   <div class="container services-category-section-v2__container">
     <header class="services-category-section-v2__head">
       <div class="services-category-section-v2__head-main">
+        @@if (hideMarker !== 'true') {
         <span class="services-category-section-v2__marker" aria-hidden="true">@@icon</span>
+        }
         <div class="services-category-section-v2__head-copy">
           <h2 class="services-category-section-v2__heading" id="@@sectionId">@@heading</h2>
           <p class="services-category-section-v2__intro">@@intro</p>
