@@ -29,6 +29,8 @@
 | `reports/` | Gap audit, bypass audit, task reports |
 | `decisions/` | Operator decision records |
 | `roadmap/` | Repair roadmap |
+| `docs/release-gate/` | Campaign release gate specs, operator workflow, Triumph reconciliation |
+| `tools/commander-transport/` | Commander transport, release gate, artifact validation |
 
 ---
 

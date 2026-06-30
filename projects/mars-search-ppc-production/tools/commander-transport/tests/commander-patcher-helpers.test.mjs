@@ -4,6 +4,7 @@ import {
   cloneRowXml,
   extendSheetForExport,
   extractRowXml,
+  shouldClearEmbeddedCampaignNegatives,
   translateMetadataPatches,
 } from '../src/commander-patcher-adapter.mjs';
 import { COMMANDER_CALLOUT_DELIMITER, serializeCallouts } from '../src/callout-serializer.mjs';
@@ -18,6 +19,18 @@ describe('commander-patcher-adapter helpers', () => {
     assert.equal(out['campaigns.campaign_type'], 'Текстово-графическая кампания');
     assert.equal(out['campaigns.campaign_negatives'], '-test');
     assert.equal(out['campaigns.organization'], undefined);
+  });
+
+  it('detects explicit blank embedded campaign negatives', () => {
+    assert.equal(
+      shouldClearEmbeddedCampaignNegatives({ 'Минус-фразы на кампанию:': '' }),
+      true,
+    );
+    assert.equal(
+      shouldClearEmbeddedCampaignNegatives({ 'Минус-фразы на кампанию:': '-test' }),
+      false,
+    );
+    assert.equal(shouldClearEmbeddedCampaignNegatives({}), false);
   });
 
   it('extends sheet rows for large exports', () => {

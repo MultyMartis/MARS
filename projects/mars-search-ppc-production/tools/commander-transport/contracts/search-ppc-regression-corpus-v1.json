@@ -1,0 +1,103 @@
+{
+  "schema_version": "search-ppc-regression-corpus-v1",
+  "purpose": "Failure-prevention fixtures — NOT automatic semantic authority for future clients",
+  "template_contamination": {
+    "stale_campaign_negatives": {
+      "terms": ["ремонт", "запчасти", "эвакуатор"],
+      "source": "Triumph template E9",
+      "expected_when_policy_blank": "removed_from_artifact"
+    },
+    "stale_organization": {
+      "values": ["29500847237"],
+      "expected_when_policy_blank": "cleared"
+    },
+    "stale_promotion_url": {
+      "values": ["https://manipulator-triumph.ru/"],
+      "expected": "cleared_or_replaced"
+    }
+  },
+  "metadata_transport": {
+    "explicit_clear_campaign_negatives": {
+      "input": { "operation": "clear", "field": "campaign_negatives" },
+      "template_e9_populated": true,
+      "expected_xlsx_e9": null
+    },
+    "preserve_campaign_negatives": {
+      "input": { "operation": "preserve", "field": "campaign_negatives" },
+      "expected": "original_only_where_contract_permits"
+    },
+    "set_campaign_negatives": {
+      "input": { "operation": "set", "value": "-test" },
+      "expected_xlsx": "-test"
+    },
+    "blank_string_must_not_become_preserve": {
+      "input": { "operation": "clear" },
+      "note": "Empty string via legacy path must map to EXPLICIT_CLEAR not PRESERVE"
+    }
+  },
+  "semantic_reject_examples": [
+    "как искать клиентов программисту 1с",
+    "мемы про 1с программистов",
+    "программист 1с колледж",
+    "программист 1с заработная плата",
+    "техническое задание на доработку 1с пример",
+    "программист 1с описание",
+    "программист 1с основы",
+    "программист 1с перспективы",
+    "интеграция 1с с честным знаком как сделать",
+    "ошибки программиста 1с"
+  ],
+  "semantic_keep_examples": [
+    "нужен программист 1с",
+    "где найти программиста 1с",
+    "ищу 1с программиста для разовой задачи",
+    "найти программиста 1с на аутсорсинг",
+    "стоимость часа программиста 1с",
+    "программист 1с зуп",
+    "программист 1с унф",
+    "услуги доработки 1с"
+  ],
+  "geo_examples": {
+    "Новосибирск": "LOCAL_ONLY",
+    "Саратов": "REMOTE_ONLY",
+    "Липецк": "REMOTE_ONLY",
+    "Улан-Удэ": "REMOTE_ONLY",
+    "Минск": "REJECT_RUSSIA_ONLY_SCOPE",
+    "Алматы": "REJECT_RUSSIA_ONLY_SCOPE"
+  },
+  "service_routing_examples": {
+    "честный знак маркировка": "CA-05",
+    "bitrix site integration": "CA-04",
+    "paid 1c support": "CA-02",
+    "paid modification": "CA-03",
+    "programmer search": "CA-01"
+  },
+  "group_architecture": {
+    "forbidden_generic_ad": "Услуги 1С для бизнеса: настройка, доработки и поддержка.",
+    "violations": [
+      "one_phrase_group_without_justification",
+      "generic_group_unrelated_intents",
+      "group_above_maximum",
+      "overlapping_duplicate_phrases",
+      "missing_ad_for_group",
+      "generic_ad_reused_across_groups"
+    ]
+  },
+  "negative_policy": {
+    "quoted_pseudo_safe_rejected": ["\"лицензия 1с\"", "\"дистанционно\""],
+    "separate_txt_policy": {
+      "xlsx_metadata_blank": true,
+      "txt_exists": true,
+      "txt_validated_independently": true
+    }
+  },
+  "semantic_quality_classes": {
+    "deterministic_reject": ["career", "salary", "education", "courses", "templates", "torrent", "named_person_lookup", "foreign_geography", "provider_client_acquisition"],
+    "deterministic_keep_candidate": ["explicit_service_order", "price_of_service", "find_contractor", "need_specialist", "paid_modification", "paid_support", "paid_integration"],
+    "operator_review_required": ["ambiguous_kak_queries", "short_role_phrases", "brand_ambiguity", "software_operation_queries", "document_commercial_ambiguity", "uncertain_geography"]
+  },
+  "differential_hotfix_v2_6_to_v2_6_1": {
+    "allowed_changes": ["file_version", "timestamps", "checksums", "manifest_references", "e9_clear_operation"],
+    "forbidden_changes": ["group_assignment", "phrase_assignment", "ad_text", "bid", "url", "region", "geo_allocation"]
+  }
+}

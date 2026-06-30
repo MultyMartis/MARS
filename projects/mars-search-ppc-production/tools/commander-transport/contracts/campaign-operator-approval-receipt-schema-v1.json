@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CampaignOperatorApprovalReceipt",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_id",
+    "campaign_program",
+    "status",
+    "authority_artifact_paths",
+    "authority_hashes"
+  ],
+  "properties": {
+    "schema_version": { "const": "campaign-operator-approval-receipt-v1" },
+    "project_id": { "type": "string" },
+    "pilot_id": { "type": "string" },
+    "campaign_program": { "type": "string" },
+    "release_version": { "type": "string" },
+    "status": {
+      "enum": [
+        "READY_FOR_OPERATOR_APPROVAL",
+        "OPERATOR_SEMANTIC_APPROVED",
+        "REJECTED",
+        "REVOKED"
+      ]
+    },
+    "authority_artifact_paths": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "authority_hashes": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "phrase_count": { "type": "integer" },
+    "keep_count": { "type": "integer" },
+    "reject_count": { "type": "integer" },
+    "move_count": { "type": "integer" },
+    "hold_count": { "type": "integer" },
+    "campaign_count": { "type": "integer" },
+    "group_count": { "type": "integer" },
+    "ad_count": { "type": "integer" },
+    "geo_policy": { "type": "string" },
+    "negative_policy": { "type": "string" },
+    "approval_timestamp": { "type": "string", "format": "date-time" },
+    "operator_identity_label": { "type": "string" },
+    "approval_scope": { "type": "string" },
+    "known_accepted_risks": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "generated_for_review_only": { "type": "boolean" }
+  }
+}

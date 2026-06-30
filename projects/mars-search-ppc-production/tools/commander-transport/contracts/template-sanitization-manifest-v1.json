@@ -1,0 +1,82 @@
+{
+  "schema_version": "template-sanitization-manifest-v1",
+  "contract_ref": "commander-template-contract-v1.json",
+  "entries": [
+    {
+      "sheet": "Тексты",
+      "cell": "E9",
+      "field": "campaign_negatives",
+      "operation": "clear",
+      "expected": null,
+      "reason": "Stale Triumph template campaign negatives must not leak to new projects",
+      "validation": "artifact_xlsx_cell_blank"
+    },
+    {
+      "sheet": "Тексты",
+      "cell": "E12",
+      "field": "organization",
+      "operation": "clear",
+      "expected": null,
+      "reason": "Triumph organization ID must not inherit",
+      "validation": "artifact_xlsx_cell_blank"
+    },
+    {
+      "sheet": "Тексты",
+      "cell": "E11",
+      "field": "promotion_url",
+      "operation": "clear",
+      "expected": null,
+      "reason": "Triumph promotion URL must not inherit",
+      "validation": "artifact_xlsx_cell_blank_or_project_url"
+    },
+    {
+      "sheet": "Тексты",
+      "cell": "E7",
+      "field": "campaign_type",
+      "operation": "clear",
+      "expected": null,
+      "reason": "Campaign type set by generator not template default",
+      "validation": "artifact_xlsx_matches_authority"
+    },
+    {
+      "sheet": "Тексты",
+      "range": "data_rows",
+      "field": "organization_data",
+      "col": 50,
+      "operation": "clear",
+      "expected": null,
+      "reason": "Per-row organization column must be blank when policy is blank",
+      "validation": "artifact_xlsx_data_column_blank"
+    },
+    {
+      "sheet": "Тексты",
+      "range": "data_rows",
+      "field": "fastlink_titles",
+      "col": 58,
+      "operation": "clear",
+      "expected": null,
+      "reason": "Sitelinks omitted policy — stale sitelinks must not leak",
+      "validation": "artifact_xlsx_data_column_blank"
+    },
+    {
+      "sheet": "Тексты",
+      "range": "data_rows",
+      "field": "fastlink_descriptions",
+      "col": 59,
+      "operation": "clear",
+      "expected": null,
+      "reason": "Sitelinks omitted policy",
+      "validation": "artifact_xlsx_data_column_blank"
+    },
+    {
+      "sheet": "Тексты",
+      "range": "data_rows",
+      "field": "fastlink_urls",
+      "col": 60,
+      "operation": "clear",
+      "expected": null,
+      "reason": "Sitelinks omitted policy",
+      "validation": "artifact_xlsx_data_column_blank"
+    }
+  ]
+}

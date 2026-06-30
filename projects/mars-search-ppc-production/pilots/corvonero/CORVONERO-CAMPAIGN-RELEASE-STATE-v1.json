@@ -1,0 +1,64 @@
+{
+  "schema_version": "campaign-release-state-v1",
+  "project_id": "corvonero",
+  "pilot_id": "corvonero",
+  "release_versions": {
+    "V2.6": {
+      "role": "semantic_authority_baseline",
+      "authority_checkpoint": "corvonero-campaign-v2.6-final-v1",
+      "states": {
+        "DRAFT": false,
+        "PHRASE_AUDIT_COMPLETE": true,
+        "OPERATOR_SEMANTIC_APPROVED": false,
+        "AUTHORITY_FROZEN": true,
+        "GENERATION_COMPLETE": true,
+        "ARTIFACT_VALIDATED": true,
+        "OPERATOR_IMPORT_READY": false,
+        "COMMANDER_IMPORTED": false,
+        "IMPORT_RECONCILED": false,
+        "DIRECT_POST_IMPORT_READY": false,
+        "LAUNCH_APPROVED": false
+      },
+      "semantic_status": {
+        "automation_status": "SEMANTIC_AUDIT_READY_FOR_REVIEW",
+        "operator_approval_receipt_path": null,
+        "note": "No explicit OPERATOR_SEMANTIC_APPROVED receipt found in repository — READY_FOR_OPERATOR_APPROVAL"
+      },
+      "release_gate_status": "NOT_RUN",
+      "notes": [
+        "V2.6 semantic authority unchanged by this systemic closure task",
+        "ARTIFACT_VALIDATED per V2.6 forensic validation — independent operator/Web-GPT review may still be pending",
+        "OPERATOR_IMPORT_READY false until final independent package review"
+      ]
+    },
+    "V2.6.1": {
+      "role": "generation_layer_hotfix_candidate",
+      "parent_version": "V2.6",
+      "hotfix_scope": ["E9_campaign_negatives_clear", "transport_metadata_operation_model"],
+      "states": {
+        "DRAFT": false,
+        "PHRASE_AUDIT_COMPLETE": true,
+        "OPERATOR_SEMANTIC_APPROVED": false,
+        "AUTHORITY_FROZEN": true,
+        "GENERATION_COMPLETE": true,
+        "ARTIFACT_VALIDATED": true,
+        "OPERATOR_IMPORT_READY": false,
+        "COMMANDER_IMPORTED": false,
+        "IMPORT_RECONCILED": false,
+        "DIRECT_POST_IMPORT_READY": false,
+        "LAUNCH_APPROVED": false
+      },
+      "semantic_status": {
+        "automation_status": null,
+        "note": "Generation hotfix only — no semantic authority change from V2.6"
+      },
+      "release_gate_status": "NOT_RUN",
+      "notes": [
+        "V2.6.1 addresses stale Triumph E9 campaign negatives in actual XLSX",
+        "No V2.7 created",
+        "Differential validation should allow only E9/metadata/checksum changes vs V2.6"
+      ]
+    }
+  },
+  "updated_at": "2026-06-30T18:00:00.000Z"
+}

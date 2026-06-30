@@ -8,6 +8,13 @@ import {
   TRIUMPH_HEADER_MAP,
 } from './constants.mjs';
 import { assertApprovedOutputPath, createGuardContext } from './filesystem-guard.mjs';
+import {
+  parseMetadataPatchMap,
+  toLogicalMetadataPatches,
+  shouldClearEmbeddedCampaignNegativesFromResolved,
+  shouldClearOrganizationFromResolved,
+} from './metadata-operation-model.mjs';
+import { sanitizeTemplateSheetXml } from './template-sanitizer.mjs';
 import { assertTemplateValid } from './template-validator.mjs';
 
 const require = createRequire(import.meta.url);
@@ -29,12 +36,8 @@ function resolveTriumphModule(name) {
 }
 
 export function translateMetadataPatches(russianPatches) {
-  const out = {};
-  for (const [ruKey, value] of Object.entries(russianPatches ?? {})) {
-    const logical = METADATA_KEY_MAP[ruKey];
-    if (logical && value !== '') out[logical] = value;
-  }
-  return out;
+  const resolved = parseMetadataPatchMap(russianPatches);
+  return toLogicalMetadataPatches(resolved);
 }
 
 export function extractRowXml(sheetXml, rowNum) {
@@ -108,6 +111,25 @@ export function clearOrganizationMetadataCell(sheetXml) {
   const { rowXml: patchedRow } = patchCellInRow(rowXml, ref, '');
   const re = new RegExp(`<row r="${rowNum}"[^>]*>[\\s\\S]*?</row>`);
   return sheetXml.replace(re, patchedRow);
+}
+
+/** Template row 9 col 5 (Тексты!E9) — campaign-level negatives; must be blank when not embedded. */
+export function clearCampaignNegativesMetadataCell(sheetXml) {
+  const { extractRowXml: extractRow, patchCellInRow, cellRef } =
+    resolveTriumphModule('sheet1-xml-builder.js');
+  const rowNum = 9;
+  const col = 5;
+  const rowXml = extractRow(sheetXml, rowNum);
+  if (!rowXml) return sheetXml;
+  const ref = cellRef(rowNum, col);
+  const { rowXml: patchedRow } = patchCellInRow(rowXml, ref, '');
+  const re = new RegExp(`<row r="${rowNum}"[^>]*>[\\s\\S]*?</row>`);
+  return sheetXml.replace(re, patchedRow);
+}
+
+export function shouldClearEmbeddedCampaignNegatives(russianPatches) {
+  const resolved = parseMetadataPatchMap(russianPatches);
+  return shouldClearEmbeddedCampaignNegativesFromResolved(resolved);
 }
 
 function buildFillRows(payload) {
@@ -222,10 +244,16 @@ export async function patchCommanderWorkbook(options) {
   const writableColumns = resolveWritableCleanupColumns(headerMapFields);
 
   const fillRows = buildFillRows(payload);
-  const metadataPatches = translateMetadataPatches(payload.metadata_patches || {});
+  const rawMetadataPatches = payload.metadata_patches || {};
+  const resolvedMetadata = parseMetadataPatchMap(rawMetadataPatches);
+  const metadataPatches = toLogicalMetadataPatches(resolvedMetadata);
 
   const sheet1Original = readZipEntryUtf8(templatePath, 'xl/worksheets/sheet1.xml');
-  const extendedSheet = extendSheetForExport(sheet1Original, fillRows.length, dataStartRow);
+  const { sheetXml: sanitizedSheet } = sanitizeTemplateSheetXml(sheet1Original, {
+    estimatedRowCount: fillRows.length,
+    dataStartRow,
+  });
+  const extendedSheet = extendSheetForExport(sanitizedSheet, fillRows.length, dataStartRow);
   let { sheetXml: patchedSheet1 } = patchSheet1DataRows(extendedSheet, fillRows, columns, {
     dataStartRow,
     headerMapFields,
@@ -238,6 +266,9 @@ export async function patchCommanderWorkbook(options) {
     enableMetadata: true,
   });
   patchedSheet1 = clearOrganizationMetadataCell(patchedSheet1);
+  if (shouldClearEmbeddedCampaignNegativesFromResolved(resolvedMetadata)) {
+    patchedSheet1 = clearCampaignNegativesMetadataCell(patchedSheet1);
+  }
   patchedSheet1 = clearOrganizationColumnOnDataRows(
     patchedSheet1,
     dataStartRow,

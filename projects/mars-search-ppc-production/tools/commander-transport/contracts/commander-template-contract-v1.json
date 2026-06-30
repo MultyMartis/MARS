@@ -1,0 +1,120 @@
+{
+  "schema_version": "commander-template-contract-v1",
+  "template_identity": {
+    "canonical_path": "projects/orca/ppc/triumph-manipulator/assets/direct-commander-template/triumph-manipulator-commander-template-v1.xlsx",
+    "expected_sha256": "1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa",
+    "note": "Structurally reusable; semantically contaminated until sanitization"
+  },
+  "sheets": {
+    "required": ["Тексты", "Регионы"],
+    "texts": {
+      "name": "Тексты",
+      "header_row": 14,
+      "data_start_row": 16,
+      "column_count": 78
+    },
+    "regions": {
+      "name": "Регионы",
+      "required_region_value": "Новосибирская область"
+    }
+  },
+  "metadata_fields": {
+    "campaign_type": {
+      "logical": "campaigns.campaign_type",
+      "sheet": "Тексты",
+      "row": 7,
+      "col": 5,
+      "label": "Тип кампании:",
+      "classification": "MAY_PRESERVE",
+      "default_sanitize": "clear"
+    },
+    "placement": {
+      "logical": "campaigns.placement",
+      "sheet": "Тексты",
+      "row": 7,
+      "col": 8,
+      "classification": "MAY_PRESERVE",
+      "default_sanitize": "clear"
+    },
+    "currency": {
+      "logical": "campaigns.currency",
+      "sheet": "Тексты",
+      "row": 8,
+      "col": 8,
+      "label": "№ заказа:",
+      "classification": "MUST_SET",
+      "default_sanitize": "clear"
+    },
+    "campaign_negatives": {
+      "logical": "campaigns.campaign_negatives",
+      "sheet": "Тексты",
+      "row": 9,
+      "col": 5,
+      "label": "Минус-фразы на кампанию:",
+      "classification": "MUST_CLEAR",
+      "default_sanitize": "clear",
+      "note": "E9 — stale Triumph negatives must not leak"
+    },
+    "optimize_text": {
+      "logical": "campaigns.optimize_text",
+      "sheet": "Тексты",
+      "row": 10,
+      "col": 5,
+      "label": "Оптимизировать текст объявлений под запрос:",
+      "classification": "MUST_SET",
+      "default_sanitize": "clear"
+    },
+    "promotion_url": {
+      "logical": "campaigns.promotion_url",
+      "sheet": "Тексты",
+      "row": 11,
+      "col": 5,
+      "label": "Объект продвижения:",
+      "classification": "MUST_CLEAR",
+      "default_sanitize": "clear",
+      "known_contamination": ["https://manipulator-triumph.ru/"]
+    },
+    "organization": {
+      "logical": "campaigns.organization",
+      "sheet": "Тексты",
+      "row": 12,
+      "col": 5,
+      "label": "Организация из Яндекс Бизнеса:",
+      "classification": "MUST_CLEAR",
+      "default_sanitize": "clear",
+      "forbidden_values": ["29500847237"]
+    }
+  },
+  "data_columns": {
+    "group_name": { "col": 5, "header": "Название группы" },
+    "phrase": { "col": 8, "header": "Фраза (с минус-словами)" },
+    "headline_1": { "col": 10, "header": "Заголовок 1" },
+    "headline_2": { "col": 11, "header": "Заголовок 2" },
+    "description": { "col": 12, "header": "Текст" },
+    "landing_url": { "col": 48, "header": "Ссылка" },
+    "organization_data": { "col": 50, "header": "Организация" },
+    "region": { "col": 52, "header": "Регион" },
+    "bid": { "col": 54, "header": "Ставка" },
+    "fastlink_titles": { "col": 58, "header": "Заголовки быстрых ссылок" },
+    "fastlink_descriptions": { "col": 59, "header": "Описания быстрых ссылок" },
+    "fastlink_urls": { "col": 60, "header": "Адреса быстрых ссылок" },
+    "callouts": { "col": 67, "header": "Уточнения" },
+    "group_negatives": { "col": 68, "header": "Минус-фразы на группу" }
+  },
+  "policies": {
+    "callout_delimiter": "||",
+    "region_format": "Новосибирская область",
+    "organization_policy_default": "blank",
+    "campaign_negative_policy_default": "blank_or_set_explicit",
+    "url_policy": "no_query_no_utm_no_fragment",
+    "bid_policy": "explicit_project_policy",
+    "sitelinks_policy_default": "OMITTED"
+  },
+  "contamination_signatures": {
+    "client_names": ["Triumph", "Триумф", "manipulator-triumph"],
+    "stale_campaign_negatives": ["ремонт", "запчасти", "эвакуатор"],
+    "stale_domains": ["manipulator-triumph.ru"],
+    "forbidden_organization_ids": ["29500847237"]
+  },
+  "sanitization_required_before_use": true
+}

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CampaignReleaseState",
+  "type": "object",
+  "required": ["schema_version", "project_id", "release_version", "states"],
+  "properties": {
+    "schema_version": { "const": "campaign-release-state-v1" },
+    "project_id": { "type": "string" },
+    "pilot_id": { "type": "string" },
+    "release_version": { "type": "string" },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "states": {
+      "type": "object",
+      "properties": {
+        "DRAFT": { "type": "boolean" },
+        "PHRASE_AUDIT_COMPLETE": { "type": "boolean" },
+        "OPERATOR_SEMANTIC_APPROVED": { "type": "boolean" },
+        "AUTHORITY_FROZEN": { "type": "boolean" },
+        "GENERATION_COMPLETE": { "type": "boolean" },
+        "ARTIFACT_VALIDATED": { "type": "boolean" },
+        "OPERATOR_IMPORT_READY": { "type": "boolean" },
+        "COMMANDER_IMPORTED": { "type": "boolean" },
+        "IMPORT_RECONCILED": { "type": "boolean" },
+        "DIRECT_POST_IMPORT_READY": { "type": "boolean" },
+        "LAUNCH_APPROVED": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "script_status": {
+      "type": "object",
+      "properties": {
+        "last_script_result": { "enum": ["SCRIPT_PASS", "SCRIPT_FAIL", null] },
+        "last_script_at": { "type": "string" }
+      }
+    },
+    "semantic_status": {
+      "type": "object",
+      "properties": {
+        "automation_status": {
+          "enum": ["SEMANTIC_AUDIT_READY_FOR_REVIEW", null]
+        },
+        "operator_approval_receipt_path": { "type": "string" }
+      }
+    },
+    "release_gate_status": {
+      "enum": ["RELEASE_GATE_PASS", "RELEASE_GATE_FAIL", "NOT_RUN", null]
+    },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  }
+}

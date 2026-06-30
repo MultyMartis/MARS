@@ -43,6 +43,14 @@ node src/cli.mjs build-payload --manifest <path> --payload-out <dir>
 npm test
 ```
 
+## Release gate
+
+```powershell
+npm run campaign:release-gate -- --project <id> --package <path> --authority <path> --receipt <path> --json
+```
+
+See `docs/release-gate/SEARCH-PPC-OPERATOR-RELEASE-WORKFLOW-v1.md`.
+
 Synthetic XLSX patch tests write only to `projects/mars-search-ppc-production/.tools-test-output/`.
 
 ## Known Corvonero state
