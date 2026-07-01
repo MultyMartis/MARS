@@ -1,0 +1,43 @@
+{
+  "schema_version": "corvonero-client-feedback-intake-v1",
+  "project_id": "corvonero",
+  "template_version": "v1",
+  "change_classes": [
+    "SPELLING_ONLY",
+    "COPY_CHANGE",
+    "COMMERCIAL_CLAIM_CHANGE",
+    "SERVICE_SCOPE_CHANGE",
+    "GEO_CHANGE",
+    "LANDING_URL_CHANGE",
+    "GROUP_STRUCTURE_CHANGE",
+    "KEYWORD_CHANGE",
+    "UNKNOWN_REVIEW"
+  ],
+  "entries": [],
+  "field_definitions": {
+    "feedback_id": "Unique intake record ID",
+    "received_at": "ISO timestamp when feedback received",
+    "source": "email|call|document|meeting",
+    "sender": "Client contact name/role",
+    "artifact": "Affected artifact filename or ID",
+    "artifact_version": "e.g. v1, V2.6",
+    "sheet_or_page": "Workbook sheet or landing section",
+    "campaign_id": "CA-0N-LOCAL|REMOTE if applicable",
+    "group_id": "Group ID if applicable",
+    "landing_page_id": "LP-0N if applicable",
+    "original_text": "Text before change",
+    "requested_text": "Client-requested text",
+    "change_type": "One of change_classes",
+    "commercial_claim_impact": "boolean",
+    "semantic_impact": "boolean",
+    "ad_impact": "boolean",
+    "landing_impact": "boolean",
+    "commander_package_impact": "boolean",
+    "requires_client_reconfirmation": "boolean",
+    "requires_operator_decision": "boolean",
+    "requires_new_deployable_version": "boolean",
+    "status": "OPEN|ACCEPTED|REJECTED|DEFERRED",
+    "resolution": "Operator resolution notes",
+    "evidence": "Path to supporting evidence"
+  }
+}

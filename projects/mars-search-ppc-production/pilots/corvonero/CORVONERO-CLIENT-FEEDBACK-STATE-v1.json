@@ -1,0 +1,65 @@
+{
+  "schema_version": "corvonero-client-feedback-state-v1",
+  "project_id": "corvonero",
+  "state": "CLIENT_FEEDBACK_PENDING",
+  "updated_at": "2026-07-01T13:08:34+07:00",
+  "materials_sent": {
+    "campaign_client_pack": {
+      "send_date": "2026-07-01",
+      "evidence": "CORVONERO-CLIENT-APPROVAL-PACK-2026-07-01",
+      "files": [
+        "01-CORVONERO-ADS-FOR-CLIENT-APPROVAL-v1.xlsx",
+        "02-CORVONERO-CAMPAIGN-STRATEGY-AND-RESEARCH-v1.html",
+        "03-CORVONERO-SEMANTIC-APPENDIX-v1.xlsx"
+      ]
+    },
+    "final_landing_texts": {
+      "send_date": "2026-07-01",
+      "count_sent": 5,
+      "count_expected": 5,
+      "evidence": "CORVONERO-FINAL-LANDING-PAGES-TEXT-DOCX-PACK-2026-07-01",
+      "files": [
+        "01-CORVONERO-PROGRAMMIST-1S-FINAL-TEXT-v1.docx",
+        "02-CORVONERO-SOPROVOZHDENIE-1S-FINAL-TEXT-v1.docx",
+        "03-CORVONERO-DORABOTKA-1S-FINAL-TEXT-v1.docx",
+        "04-CORVONERO-INTEGRACII-1S-FINAL-TEXT-v1.docx",
+        "05-CORVONERO-MARKIROVKA-CHESTNY-ZNAK-FINAL-TEXT-v1.docx"
+      ]
+    },
+    "roman_production_briefs": {
+      "send_date": "2026-07-01",
+      "count_sent": 5,
+      "count_expected": 5,
+      "evidence": "CORVONERO-ROMAN-LANDING-PAGES-DOCX-PACK-2026-07-01",
+      "files": [
+        "01-CORVONERO-LP-01-PROGRAMMIST-1S-v1.docx",
+        "02-CORVONERO-LP-02-SOPROVOZHDENIE-1S-v1.docx",
+        "03-CORVONERO-LP-03-DORABOTKA-1S-v1.docx",
+        "04-CORVONERO-LP-04-INTEGRACII-1S-v1.docx",
+        "05-CORVONERO-LP-05-MARKIROVKA-CHESTNY-ZNAK-v1.docx"
+      ]
+    }
+  },
+  "pending": {
+    "commercial_claims_confirmation": true,
+    "ad_corrections": true,
+    "landing_page_corrections": true,
+    "client_response_recorded": false
+  },
+  "blocked": {
+    "publication": true,
+    "commander_import": true,
+    "yandex_direct_launch": true
+  },
+  "not_approved_states": [
+    "CLIENT_APPROVED",
+    "ADS_APPROVED",
+    "LANDING_COPY_APPROVED",
+    "COMMANDER_IMPORTED",
+    "IMPORT_RECONCILED",
+    "DIRECT_POST_IMPORT_READY",
+    "LAUNCH_APPROVED"
+  ],
+  "client_response": null,
+  "note": "No client response invented. Await formal feedback via CORVONERO-CLIENT-FEEDBACK-INTAKE-v1."
+}

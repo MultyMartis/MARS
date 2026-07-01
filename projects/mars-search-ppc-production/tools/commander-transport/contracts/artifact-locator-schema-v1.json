@@ -1,0 +1,37 @@
+{
+  "schema_version": "artifact-locator-entry-v1",
+  "description": "Reusable current-deliverables index contract for Search PPC pilots",
+  "required_fields": [
+    "artifact_id",
+    "project_id",
+    "artifact_family",
+    "version",
+    "status",
+    "audience",
+    "physical_path",
+    "current",
+    "protected",
+    "safe_to_send",
+    "safe_to_import",
+    "safe_to_publish"
+  ],
+  "optional_fields": [
+    "repository_reference",
+    "manual_stable",
+    "supersedes",
+    "superseded_by",
+    "checksum",
+    "notes"
+  ],
+  "artifact_families": [
+    "SEMANTIC_AUTHORITY",
+    "DEPLOYABLE_COMMANDER_PACKAGE",
+    "CLIENT_APPROVAL_PACK",
+    "FINAL_PAGE_COPY",
+    "IMPLEMENTATION_PRODUCTION_BRIEF",
+    "INTERNAL_REPORT",
+    "BACKUP"
+  ],
+  "fixture_project": "corvonero",
+  "fixture_path": "pilots/corvonero/CORVONERO-CURRENT-ARTIFACT-INDEX-v1.json"
+}

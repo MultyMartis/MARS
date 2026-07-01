@@ -1,0 +1,305 @@
+{
+  "schema_version": "corvonero-cleanup-candidate-inventory-v1",
+  "project_id": "corvonero",
+  "generated_at": "2026-07-01T13:17:50.604119+00:00",
+  "note": "PLAN ONLY — no deletion/move/archive executed in closure task",
+  "candidate_count": 37,
+  "candidates": [
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/_commit-msg.txt",
+      "classification": "DELETE_CANDIDATE",
+      "reason": "Debug/temp file at exports root",
+      "superseding_artifact": null,
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/_extract-roman-text.txt",
+      "classification": "DELETE_CANDIDATE",
+      "reason": "Debug/temp file at exports root",
+      "superseding_artifact": null,
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/_review-forensic-compare-result.json",
+      "classification": "DELETE_CANDIDATE",
+      "reason": "Debug/temp file at exports root",
+      "superseding_artifact": null,
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/_review-temp-execute-ct5-repro-run.mjs",
+      "classification": "DELETE_CANDIDATE",
+      "reason": "Debug/temp file at exports root",
+      "superseding_artifact": null,
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/_review-temp-execute-ct5-repro-v1.mjs",
+      "classification": "DELETE_CANDIDATE",
+      "reason": "Debug/temp file at exports root",
+      "superseding_artifact": null,
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/_review-temp-forensic-compare-v1.mjs",
+      "classification": "DELETE_CANDIDATE",
+      "reason": "Debug/temp file at exports root",
+      "superseding_artifact": null,
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/_test-ca02.xlsx",
+      "classification": "DELETE_CANDIDATE",
+      "reason": "Debug/temp file at exports root",
+      "superseding_artifact": null,
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-ADS-FINAL-2026-06-29",
+      "classification": "ARCHIVE_LATER",
+      "reason": "Storage export directory — superseded or review wave",
+      "superseding_artifact": "CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-ADS-REVIEW-2026-06-29",
+      "classification": "ARCHIVE_LATER",
+      "reason": "Storage export directory — superseded or review wave",
+      "superseding_artifact": "CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-ADS-REVIEW-V2-2026-06-29",
+      "classification": "ARCHIVE_LATER",
+      "reason": "Storage export directory — superseded or review wave",
+      "superseding_artifact": "CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-CAMPAIGN-V2-FINAL-2026-06-30",
+      "classification": "ARCHIVE_LATER",
+      "reason": "Storage export directory — superseded or review wave",
+      "superseding_artifact": "CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-CAMPAIGN-V2-PASS1-REVIEW-2026-06-30",
+      "classification": "ARCHIVE_LATER",
+      "reason": "Storage export directory — superseded or review wave",
+      "superseding_artifact": "CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-CAMPAIGN-V2-PASS2-OPERATOR-REVIEW-2026-06-30",
+      "classification": "ARCHIVE_LATER",
+      "reason": "Storage export directory — superseded or review wave",
+      "superseding_artifact": "CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-CAMPAIGN-V2.1-FINAL-2026-06-30",
+      "classification": "ARCHIVE_LATER",
+      "reason": "Storage export directory — superseded or review wave",
+      "superseding_artifact": "CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-CAMPAIGN-V2.2-STRICT-AUDIT-REVIEW-2026-06-30",
+      "classification": "ARCHIVE_LATER",
+      "reason": "Storage export directory — superseded or review wave",
+      "superseding_artifact": "CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-CAMPAIGN-V2.3-CORRECTED-AUDIT-REVIEW-2026-06-30",
+      "classification": "ARCHIVE_LATER",
+      "reason": "Storage export directory — superseded or review wave",
+      "superseding_artifact": "CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-CAMPAIGN-V2.4-FINAL-AUTHORITY-REVIEW-2026-06-30",
+      "classification": "ARCHIVE_LATER",
+      "reason": "Storage export directory — superseded or review wave",
+      "superseding_artifact": "CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-CAMPAIGN-V2.5-CURATED-CORE-REVIEW-2026-06-30",
+      "classification": "ARCHIVE_LATER",
+      "reason": "Storage export directory — superseded or review wave",
+      "superseding_artifact": "CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-CAMPAIGN-V2.6-FINAL-2026-06-30",
+      "classification": "KEEP_HISTORICAL",
+      "reason": "Storage export directory — superseded or review wave",
+      "superseding_artifact": null,
+      "risk": "low",
+      "operator_approval_required": false
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-CAMPAIGN-V2.6.1-FINAL-2026-06-30",
+      "classification": "KEEP_HISTORICAL",
+      "reason": "Storage export directory — superseded or review wave",
+      "superseding_artifact": null,
+      "risk": "low",
+      "operator_approval_required": false
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+      "classification": "KEEP_CURRENT_DELIVERY",
+      "reason": "Storage export directory — current delivery",
+      "superseding_artifact": null,
+      "risk": "low",
+      "operator_approval_required": false
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-CLIENT-APPROVAL-PACK-2026-07-01",
+      "classification": "KEEP_CURRENT_DELIVERY",
+      "reason": "Storage export directory — current delivery",
+      "superseding_artifact": null,
+      "risk": "low",
+      "operator_approval_required": false
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-COMMANDER-5-CAMPAIGN-IMPORT-CANDIDATES-2026-06-29",
+      "classification": "ARCHIVE_LATER",
+      "reason": "Storage export directory — superseded or review wave",
+      "superseding_artifact": "CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-COMMANDER-CT5-FINAL-2026-06-30",
+      "classification": "ARCHIVE_LATER",
+      "reason": "Storage export directory — superseded or review wave",
+      "superseding_artifact": "CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-COMMANDER-CT5-REPRO-CHECK-2026-06-30",
+      "classification": "ARCHIVE_LATER",
+      "reason": "Storage export directory — superseded or review wave",
+      "superseding_artifact": "CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-COMMANDER-CT5R1-FINAL-2026-06-30",
+      "classification": "ARCHIVE_LATER",
+      "reason": "Storage export directory — superseded or review wave",
+      "superseding_artifact": "CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-COMMANDER-CT5R2-FINAL-2026-06-30",
+      "classification": "ARCHIVE_LATER",
+      "reason": "Storage export directory — superseded or review wave",
+      "superseding_artifact": "CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-COMMANDER-CT5R3-FINAL-2026-06-30",
+      "classification": "ARCHIVE_LATER",
+      "reason": "Storage export directory — superseded or review wave",
+      "superseding_artifact": "CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-COMMANDER-CT6-CA01-EVIDENCE-2026-06-30",
+      "classification": "ARCHIVE_LATER",
+      "reason": "Storage export directory — superseded or review wave",
+      "superseding_artifact": "CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-COMMANDER-IMPORT-CANDIDATE-2026-06-29",
+      "classification": "ARCHIVE_LATER",
+      "reason": "Storage export directory — superseded or review wave",
+      "superseding_artifact": "CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-COMMANDER-REVIEW-2026-06-29",
+      "classification": "ARCHIVE_LATER",
+      "reason": "Storage export directory — superseded or review wave",
+      "superseding_artifact": "CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-EXPORT-WAVE-1-2026-06-29",
+      "classification": "ARCHIVE_LATER",
+      "reason": "Storage export directory — superseded or review wave",
+      "superseding_artifact": "CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-FINAL-LANDING-PAGES-TEXT-DOCX-PACK-2026-07-01",
+      "classification": "KEEP_CURRENT_DELIVERY",
+      "reason": "Storage export directory — current delivery",
+      "superseding_artifact": null,
+      "risk": "low",
+      "operator_approval_required": false
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-LANDING-PAGES-ROMAN-2026-06-29",
+      "classification": "ARCHIVE_LATER",
+      "reason": "Storage export directory — superseded or review wave",
+      "superseding_artifact": "CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-ROMAN-LANDING-PAGES-DOCX-PACK-2026-07-01",
+      "classification": "KEEP_CURRENT_DELIVERY",
+      "reason": "Storage export directory — current delivery",
+      "superseding_artifact": null,
+      "risk": "low",
+      "operator_approval_required": false
+    },
+    {
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/.tools-test-output",
+      "classification": "DELETE_CANDIDATE",
+      "reason": "Debug/reconciliation temp output — evidence captured in JSON reports",
+      "superseding_artifact": "CORVONERO-CAMPAIGN-V2.6.2-PHRASE-SLOT-RECONCILIATION-v1.json",
+      "risk": "low",
+      "operator_approval_required": true
+    },
+    {
+      "path": "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-V2.6.1-MISSING-SLOTS.csv",
+      "classification": "DELETE_CANDIDATE",
+      "reason": "Debug/reconciliation temp output — evidence captured in JSON reports",
+      "superseding_artifact": "CORVONERO-CAMPAIGN-V2.6.2-PHRASE-SLOT-RECONCILIATION-v1.json",
+      "risk": "low",
+      "operator_approval_required": true
+    }
+  ]
+}
