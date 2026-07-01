@@ -1,6 +1,6 @@
 # FP-0002 V8 Operational Status
 
-**Updated:** 2026-07-01 (Phase 07B documentation complete)
+**Updated:** 2026-07-01 (Phase 07C-A reconciliation complete; operator gate pending)
 
 ## Operator-approved frontend baseline
 
@@ -9,6 +9,7 @@
 | Record | [FP-0002-V8-OPERATOR-APPROVED-FRONTEND-BASELINE-01.md](../../website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-V8-OPERATOR-APPROVED-FRONTEND-BASELINE-01.md) |
 | Documentation pack | [FP-0002-V8-IMPLEMENTATION-GUIDE-v1.md](../../website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-V8-IMPLEMENTATION-GUIDE-v1.md) |
 | Phase 07B report | [REPORT-FP-0002-V8-PHASE-07B-DOCUMENTATION-AND-LESSONS-LEARNED-v1.md](../../website-factory-operations/FP-0002-SHPIGOVSKY/REPORT-FP-0002-V8-PHASE-07B-DOCUMENTATION-AND-LESSONS-LEARNED-v1.md) |
+| Phase 07C-A report | [REPORT-FP-0002-V8-PHASE-07C-A-EXCEL-DEMO-RECONCILIATION-v1.md](../../website-factory-operations/FP-0002-SHPIGOVSKY/REPORT-FP-0002-V8-PHASE-07C-A-EXCEL-DEMO-RECONCILIATION-v1.md) |
 | WordPress facts | [FP-0002-V8-WORDPRESS-READY-BASELINE-v1.md](../../website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-V8-WORDPRESS-READY-BASELINE-v1.md) |
 | Tag | `fp-0002-v8-operator-approved-frontend-stable-01` |
 | Pages | 10 (Home, O-Centre, Contacts, Reviews, Blog archive, Blog Article, 4× services) |
@@ -17,7 +18,8 @@
 ```text
 fp0002_v8_operator_approved_frontend_baseline: STABLE_01
 fp0002_v8_blog_article: OPERATOR_APPROVED
-fp0002_v8_next_phase: 07C_STATIC_CLIENT_DEMO
+fp0002_v8_next_phase: 07C_B_STATIC_CLIENT_DEMO_ASSEMBLY
+fp0002_v8_phase_07c_a: RECONCILIATION_COMPLETE_PENDING_OPERATOR_SCOPE_DECISIONS
 fp0002_v8_phase_07b: DOCUMENTATION_COMPLETE
 ```
 

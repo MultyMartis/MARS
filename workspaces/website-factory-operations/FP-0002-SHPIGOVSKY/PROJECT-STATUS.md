@@ -1,7 +1,7 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-01 (V8 Phase 07B documentation and lessons learned)
+**Last updated:** 2026-07-01 (V8 Phase 07C-A Excel demo reconciliation)
 
 ## Current stable baseline (V8)
 
@@ -11,8 +11,9 @@
 | Tag | `fp-0002-v8-operator-approved-frontend-stable-01` |
 | Parent | `eeab3d68` · `fp-0002-v8-blog-full-stable-01` |
 | Recovery pack | `X:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v8\FP-0002-V8-OPERATOR-APPROVED-FRONTEND-STABLE-01\` |
-| Next | Phase 07C Excel static demo · deferred operator polish · Forge WP |
+| Next | Phase 07C-B static demo assembly (blocked on operator gate) · deferred operator polish · Forge WP |
 | Phase 07B | [REPORT-FP-0002-V8-PHASE-07B-DOCUMENTATION-AND-LESSONS-LEARNED-v1.md](REPORT-FP-0002-V8-PHASE-07B-DOCUMENTATION-AND-LESSONS-LEARNED-v1.md) · [FP-0002-V8-IMPLEMENTATION-GUIDE-v1.md](FP-0002-V8-IMPLEMENTATION-GUIDE-v1.md) |
+| Phase 07C-A | [REPORT-FP-0002-V8-PHASE-07C-A-EXCEL-DEMO-RECONCILIATION-v1.md](REPORT-FP-0002-V8-PHASE-07C-A-EXCEL-DEMO-RECONCILIATION-v1.md) · evidence `X:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v8\phase-07c-a-excel-demo-reconciliation\` · **operator gate pending** |
 
 ## ACTIVE TEMPORARY PRIORITY RULE
 
