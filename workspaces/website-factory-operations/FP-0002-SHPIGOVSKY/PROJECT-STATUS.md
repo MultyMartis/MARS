@@ -1,7 +1,7 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-01 (V8 operator-approved frontend baseline closure)
+**Last updated:** 2026-07-01 (V8 Phase 07B documentation and lessons learned)
 
 ## Current stable baseline (V8)
 
@@ -11,7 +11,8 @@
 | Tag | `fp-0002-v8-operator-approved-frontend-stable-01` |
 | Parent | `eeab3d68` · `fp-0002-v8-blog-full-stable-01` |
 | Recovery pack | `X:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v8\FP-0002-V8-OPERATOR-APPROVED-FRONTEND-STABLE-01\` |
-| Next | Phase 07B documentation · 07C Excel demo · deferred polish / WP |
+| Next | Phase 07C Excel static demo · deferred operator polish · Forge WP |
+| Phase 07B | [REPORT-FP-0002-V8-PHASE-07B-DOCUMENTATION-AND-LESSONS-LEARNED-v1.md](REPORT-FP-0002-V8-PHASE-07B-DOCUMENTATION-AND-LESSONS-LEARNED-v1.md) · [FP-0002-V8-IMPLEMENTATION-GUIDE-v1.md](FP-0002-V8-IMPLEMENTATION-GUIDE-v1.md) |
 
 ## ACTIVE TEMPORARY PRIORITY RULE
 
@@ -37,7 +38,7 @@ Before any FP-0002 frontend implementation, read:
 | CF-003–CF-012 | APPROVED |
 | Next wave | CF-010 clinic landscape — **NOT STARTED** |
 | Page-wide DOM gate | PASS |
-| O-Centre | STRUCTURAL_REGRESSION_REQUIRES_FIX — operator **REJECTED**; see [FP-0002-OCENTRE-VISUAL-AUDIT-STATUS-v1.md](FP-0002-OCENTRE-VISUAL-AUDIT-STATUS-v1.md) |
+| O-Centre | **STABLE_PREVIOUSLY_APPROVED** in operator baseline — historical audit [FP-0002-OCENTRE-VISUAL-AUDIT-STATUS-v1.md](FP-0002-OCENTRE-VISUAL-AUDIT-STATUS-v1.md) superseded by baseline |
 | Priority visual protocol | **ACTIVE** — [FP-0002-PRIORITY-VISUAL-IMPLEMENTATION-PROTOCOL.md](FP-0002-PRIORITY-VISUAL-IMPLEMENTATION-PROTOCOL.md) |
 
 ## Workspace versions (2026-06-24)
@@ -45,7 +46,8 @@ Before any FP-0002 frontend implementation, read:
 | Workspace | Path | Lifecycle | Tag / parent |
 |-----------|------|-----------|--------------|
 | **V6** | `workspaces/fp-0002-shpigovsky-v6/` | **FROZEN_FALLBACK** | `fp-0002-v6-final-before-v7-operator-stable-01` |
-| **V7** | `workspaces/fp-0002-shpigovsky-v7/` | **ACTIVE_DEVELOPMENT** | `fp-0002-v7-pre-final-polish-operator-stable-01` |
+| **V7** | `workspaces/fp-0002-shpigovsky-v7/` | **IMMUTABLE_STABLE_FALLBACK** | `fp-0002-v7-pre-final-polish-operator-stable-01` |
+| **V8** | `workspaces/fp-0002-shpigovsky-v8/` | **OPERATOR_APPROVED_BASELINE** | `fp-0002-v8-operator-approved-frontend-stable-01` @ `eb47ebb` |
 
 ```text
 V7 design authority: workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/01_DESIGN/Spig_v1.2.fig

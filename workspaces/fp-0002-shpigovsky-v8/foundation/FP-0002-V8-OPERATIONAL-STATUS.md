@@ -1,12 +1,14 @@
 # FP-0002 V8 Operational Status
 
-**Updated:** 2026-07-01 (operator-approved frontend baseline closure)
+**Updated:** 2026-07-01 (Phase 07B documentation complete)
 
 ## Operator-approved frontend baseline
 
 | Field | Value |
 |-------|-------|
 | Record | [FP-0002-V8-OPERATOR-APPROVED-FRONTEND-BASELINE-01.md](../../website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-V8-OPERATOR-APPROVED-FRONTEND-BASELINE-01.md) |
+| Documentation pack | [FP-0002-V8-IMPLEMENTATION-GUIDE-v1.md](../../website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-V8-IMPLEMENTATION-GUIDE-v1.md) |
+| Phase 07B report | [REPORT-FP-0002-V8-PHASE-07B-DOCUMENTATION-AND-LESSONS-LEARNED-v1.md](../../website-factory-operations/FP-0002-SHPIGOVSKY/REPORT-FP-0002-V8-PHASE-07B-DOCUMENTATION-AND-LESSONS-LEARNED-v1.md) |
 | WordPress facts | [FP-0002-V8-WORDPRESS-READY-BASELINE-v1.md](../../website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-V8-WORDPRESS-READY-BASELINE-v1.md) |
 | Tag | `fp-0002-v8-operator-approved-frontend-stable-01` |
 | Pages | 10 (Home, O-Centre, Contacts, Reviews, Blog archive, Blog Article, 4× services) |
@@ -15,7 +17,8 @@
 ```text
 fp0002_v8_operator_approved_frontend_baseline: STABLE_01
 fp0002_v8_blog_article: OPERATOR_APPROVED
-fp0002_v8_next_phase: 07B_DOCUMENTATION
+fp0002_v8_next_phase: 07C_STATIC_CLIENT_DEMO
+fp0002_v8_phase_07b: DOCUMENTATION_COMPLETE
 ```
 
 ## ACTIVE TEMPORARY PRIORITY RULE
@@ -57,12 +60,8 @@ fp0002_v8_manual_polish_checkpoint: DOCUMENTED
 fp0002_v8_cf010_clinic_landscape: COMPLETE
 fp0002_v8_next_wave: O_CENTRE_IMPLEMENTATION_NOT_AUTHORIZED
 fp0002_v8_o_centre_charter: COMPLETE_WITH_KNOWN_GAPS
-fp0002_v8_o_centre: STRUCTURAL_REGRESSION_REQUIRES_FIX
-fp0002_v8_o_centre_implementation: COMPLETE_TECHNICAL
-fp0002_v8_o_centre_visual: STRUCTURAL_REGRESSION_REQUIRES_FIX
-fp0002_v8_o_centre_dec01: EXTRACTED_RENDERING_NOT_APPROVED
-fp0002_v8_o_centre_operator_visual: REJECTED
-fp0002_v8_o_centre_deployment: BLOCKED
+fp0002_v8_o_centre: STABLE_IN_OPERATOR_BASELINE
+fp0002_v8_o_centre_historical_audit: SUPERSEDED_SEE_BASELINE
 fp0002_v8_priority_visual_protocol: ACTIVE
 fp0002_v8_deployment: NOT_STARTED
 

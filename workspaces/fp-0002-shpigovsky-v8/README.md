@@ -15,7 +15,7 @@ Before any FP-0002 frontend implementation, read:
 |-------|-------|
 | **Project** | FP-0002 Shpigovsky |
 | **Workspace version** | V8 |
-| **Status** | OPERATOR_APPROVED_FRONTEND_BASELINE_01 — see [baseline record](../website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-V8-OPERATOR-APPROVED-FRONTEND-BASELINE-01.md) |
+| **Status** | OPERATOR_APPROVED_BASELINE_01 — Phase 07B documentation complete |
 | **Stable tag** | `fp-0002-v8-operator-approved-frontend-stable-01` |
 | **Parent workspace** | `workspaces/fp-0002-shpigovsky-v7/` (`IMMUTABLE_STABLE_FALLBACK`) |
 | **Bootstrap authority tag** | `fp-0002-v7-four-template-canonical-demo-baseline-01` |
@@ -57,6 +57,8 @@ npm run build
 
 - `../website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-PRIORITY-VISUAL-IMPLEMENTATION-PROTOCOL.md` — **read before any frontend task**
 - `../website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-V8-OPERATOR-APPROVED-FRONTEND-BASELINE-01.md` — **current stable baseline**
+- `../website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-V8-IMPLEMENTATION-GUIDE-v1.md` — **V8 documentation pack entry**
+- `../website-factory-operations/FP-0002-SHPIGOVSKY/REPORT-FP-0002-V8-PHASE-07B-DOCUMENTATION-AND-LESSONS-LEARNED-v1.md` — Phase 07B report
 - `foundation/FP-0002-V8-OPERATIONAL-STATUS.md`
 - `foundation/FP-0002-V8-COMPONENT-GATE-RULES-v1.md`
 - `audits/component-family-audit-v8-bootstrap-01/`
