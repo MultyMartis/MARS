@@ -1,6 +1,22 @@
 # FP-0002 V8 Operational Status
 
-**Updated:** 2026-06-29 (priority visual implementation protocol activation)
+**Updated:** 2026-07-01 (operator-approved frontend baseline closure)
+
+## Operator-approved frontend baseline
+
+| Field | Value |
+|-------|-------|
+| Record | [FP-0002-V8-OPERATOR-APPROVED-FRONTEND-BASELINE-01.md](../../website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-V8-OPERATOR-APPROVED-FRONTEND-BASELINE-01.md) |
+| WordPress facts | [FP-0002-V8-WORDPRESS-READY-BASELINE-v1.md](../../website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-V8-WORDPRESS-READY-BASELINE-v1.md) |
+| Tag | `fp-0002-v8-operator-approved-frontend-stable-01` |
+| Pages | 10 (Home, O-Centre, Contacts, Reviews, Blog archive, Blog Article, 4× services) |
+| Blog Article | OPERATOR_APPROVED desktop + mobile (Pass 06) |
+
+```text
+fp0002_v8_operator_approved_frontend_baseline: STABLE_01
+fp0002_v8_blog_article: OPERATOR_APPROVED
+fp0002_v8_next_phase: 07B_DOCUMENTATION
+```
 
 ## ACTIVE TEMPORARY PRIORITY RULE
 

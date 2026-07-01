@@ -8165,3 +8165,793 @@ body[data-offcanvas-state='open'] {
 		}
 	}
 }
+
+// =============================================================================
+// FP-0002-PG-009 Blog Article — Recovery Corrective Pass 01.2 (two-column hero)
+// =============================================================================
+
+.page-blog-article__main {
+	display: flex;
+	flex-direction: column;
+}
+
+.page-blog-article main {
+	padding-bottom: 0;
+}
+
+.blog-article {
+	padding-top: 15px; // EXACT_GEOMETRY — matches blog-archive top rhythm
+	padding-bottom: var(--pad-y);
+}
+
+.blog-article__container {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap);
+}
+
+// Unified editorial hero — Figma 1:3316 two-column composition
+.blog-article-hero {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap); // 30px — breadcrumbs → layout; layout → excerpt gap matches Figma 60px total rhythm
+}
+
+.blog-article-hero__breadcrumbs .breadcrumbs__list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.blog-article-hero__breadcrumbs .breadcrumbs__item {
+	display: inline-flex;
+	align-items: center;
+	margin: 0;
+}
+
+.blog-article-hero__breadcrumbs .breadcrumbs__item + .breadcrumbs__item::before {
+	content: "/";
+	margin-right: 8px;
+	color: var(--color-text-secondary);
+	font-size: 13px; // EXACT_GEOMETRY — Figma 1:3277
+	line-height: 18px;
+}
+
+.blog-article-hero__breadcrumbs .breadcrumbs__link,
+.blog-article-hero__breadcrumbs .breadcrumbs__current {
+	font-size: 13px; // EXACT_GEOMETRY — Figma 1:3277
+	line-height: 18px;
+	color: var(--color-text-secondary);
+	text-decoration: none;
+}
+
+.blog-article-hero__breadcrumbs .breadcrumbs__link:hover,
+.blog-article-hero__breadcrumbs .breadcrumbs__link:focus-visible {
+	color: var(--color-accent);
+}
+
+.blog-article-hero__breadcrumbs .breadcrumbs__current {
+	color: var(--color-text-primary);
+}
+
+// Figma 1:3317 — 1170×600 grid: left editorial 570 + gap 30 + right image 570
+.blog-article-hero__layout {
+	display: grid;
+	grid-template-columns: minmax(0, 570px) minmax(0, 570px); // EXACT_GEOMETRY — Figma 1:3318 + 1:3335
+	gap: 30px; // EXACT_GEOMETRY — 600px offset between columns
+	align-items: start;
+	max-width: 1170px; // EXACT_GEOMETRY — content band
+	background: #fff;
+	border-radius: var(--radius-main);
+	overflow: hidden; // EXACT_GEOMETRY — clip featured image to shared card radius
+}
+
+.blog-article-hero__editorial {
+	display: flex;
+	flex-direction: column;
+	gap: 15px; // EXACT_GEOMETRY — H1 → meta (Figma y:150 − h:135)
+	padding: 20px 20px 0; // EXACT_GEOMETRY — Figma 1:3318 interior inset
+	min-height: 600px; // EXACT_GEOMETRY — matches hero image column height
+	box-sizing: border-box;
+}
+
+.blog-article-hero__title {
+	margin: 0;
+	max-width: 530px; // EXACT_GEOMETRY — Figma 1:3320 text box
+	font-size: 36px; // EXACT_GEOMETRY — Figma 1:3320
+	font-weight: var(--font-weight-heading);
+	line-height: 45px; // EXACT_GEOMETRY — 135px / 3 lines
+	color: var(--color-text-primary);
+}
+
+.blog-article-hero__meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	margin: 0;
+	max-width: 530px;
+	font-size: 16px; // EXACT_GEOMETRY — Figma 1:3322
+	line-height: 24px;
+	color: var(--color-text-secondary);
+}
+
+.blog-article-hero__meta-separator {
+	color: var(--color-text-secondary);
+}
+
+.page-blog-article .blog-article-hero__toc {
+	margin: 25px 0 0; // EXACT_GEOMETRY — meta block ends ~229px; TOC label at 269px inside column
+	max-width: 530px;
+}
+
+.page-blog-article .blog-article-hero__toc-title {
+	margin: 0 0 15px; // EXACT_GEOMETRY — Figma 1:3328 → list y:43
+	font-size: 22px; // EXACT_GEOMETRY — Figma 1:3328
+	font-weight: var(--font-weight-heading);
+	line-height: 28px;
+	color: var(--color-text-primary);
+}
+
+.page-blog-article .blog-article-hero__toc ul {
+	margin: 0;
+	padding-left: 18px;
+	list-style: disc;
+}
+
+.page-blog-article .blog-article-hero__toc li {
+	padding-left: 2px;
+}
+
+.page-blog-article .blog-article-hero__toc li + li {
+	margin-top: 8px;
+}
+
+.page-blog-article .blog-article-hero__toc li::marker {
+	color: var(--color-accent);
+}
+
+.page-blog-article .blog-article-hero__toc a {
+	font-size: 16px;
+	line-height: 24px;
+	color: var(--color-accent);
+	text-decoration: underline;
+}
+
+.page-blog-article .blog-article-hero__toc a:hover,
+.page-blog-article .blog-article-hero__toc a:focus-visible {
+	color: var(--color-accent-hover);
+}
+
+.blog-article-hero__media {
+	margin: 0;
+	width: 100%;
+	height: 600px; // EXACT_GEOMETRY — Figma 1:3335
+}
+
+.blog-article-hero__media img {
+	display: block;
+	width: 100%;
+	height: 600px; // EXACT_GEOMETRY — Figma 1:3335
+	border-radius: 0; // radius owned by .blog-article-hero__layout card
+	object-fit: cover;
+	object-position: center;
+}
+
+.blog-article-hero__excerpt.block-whith-red-line {
+	margin: 30px 0 0; // EXACT_GEOMETRY — excerpt frame y:660 below 600px grid
+	max-width: 1170px;
+	padding: 2px 0 2px 30px; // EXACT_GEOMETRY — Figma 1:3338 inset
+	text-transform: none;
+}
+
+.blog-article-hero__excerpt p {
+	margin: 0;
+	font-size: 16px;
+	line-height: 24px;
+	color: var(--color-text-primary);
+}
+
+// Single body wrapper — future the_content()
+.blog-article-body {
+	margin: 0;
+}
+
+.blog-article-body__content {
+	display: flex;
+	flex-direction: column;
+	gap: 20px; // EXACT_GEOMETRY — improved chapter rhythm vs failed 15px stack
+	max-width: 1170px;
+	color: var(--color-text-primary);
+	font-size: 16px;
+	line-height: 24px;
+
+	h2,
+	h3,
+	h4 {
+		margin: 0;
+		font-weight: var(--font-weight-heading);
+		color: var(--color-text-primary);
+		scroll-margin-top: 120px;
+	}
+
+	h2 {
+		margin-top: 10px; // EXACT_GEOMETRY — chapter open spacing after hero
+		font-size: 36px; // EXACT_GEOMETRY — Figma 1:3352
+		line-height: 36px;
+	}
+
+	h2:not(:first-child) {
+		margin-top: 30px; // EXACT_GEOMETRY — between major chapters
+	}
+
+	h3 {
+		margin-top: 5px;
+		font-size: 24px; // EXACT_GEOMETRY — Figma chapter H3 family
+		line-height: 30px;
+	}
+
+	h4 {
+		font-size: 20px;
+		line-height: 26px;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	a {
+		color: var(--color-accent);
+		text-decoration: underline;
+	}
+
+	a:hover,
+	a:focus-visible {
+		color: var(--color-accent-hover);
+	}
+
+	strong {
+		font-weight: var(--font-weight-heading);
+	}
+
+	em {
+		font-style: italic;
+	}
+
+	ul,
+	ol {
+		margin: 0;
+		padding-left: 1.25em;
+	}
+
+	li + li {
+		margin-top: 0.5em;
+	}
+
+	ul ul,
+	ul ol,
+	ol ul,
+	ol ol {
+		margin-top: 0.5em;
+	}
+
+	blockquote {
+		margin: 0;
+		padding: var(--pad-gap-line) var(--pad-gap);
+		border-left: 5px solid var(--color-accent);
+	}
+
+	figure {
+		margin: 10px 0 0; // EXACT_GEOMETRY — inline image separation
+	}
+
+	figcaption {
+		margin-top: var(--pad-gap-mini);
+		font-size: 14px;
+		line-height: 20px;
+		color: var(--color-text-secondary);
+	}
+
+	img {
+		display: block;
+		width: 100%;
+		max-width: 100%;
+		height: auto;
+		max-height: 603px; // EXACT_GEOMETRY — Figma 1:3353
+		border-radius: var(--radius-main);
+		object-fit: cover;
+		object-position: center;
+	}
+
+	hr {
+		margin: var(--pad-gap-line) 0;
+		border: 0;
+		border-top: 1px solid var(--color-border, #e0e0e0);
+	}
+
+	.table-wrap {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	th,
+	td {
+		padding: 8px 12px;
+		border: 1px solid var(--color-border, #e0e0e0);
+		text-align: left;
+		vertical-align: top;
+	}
+
+	thead th {
+		font-weight: var(--font-weight-heading);
+	}
+}
+
+/* FP-0002 Blog Article Desktop Pass 04 — lower stack */
+.page-blog-article .blog-article-conclusion {
+	padding-top: 30px; // EXACT_GEOMETRY — Figma rhythm after chapter 5
+	padding-bottom: 0;
+}
+
+.page-blog-article .blog-article-conclusion__container {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.page-blog-article .blog-article-conclusion__heading {
+	margin: 0;
+	font-size: 24px; // EXACT_GEOMETRY — Figma 1:3449
+	font-weight: var(--font-weight-heading);
+	line-height: 30px;
+	color: var(--color-text-primary);
+}
+
+.page-blog-article .blog-article-conclusion .founder-quote {
+	padding-top: var(--pad-gap-line);
+	padding-bottom: 0;
+}
+
+.page-blog-article .blog-article-conclusion .founder-quote__role {
+	margin-bottom: 0;
+}
+
+.page-blog-article .blog-article-sources {
+	padding-top: 30px; // EXACT_GEOMETRY — Figma rhythm after conclusion
+	padding-bottom: 0;
+}
+
+.page-blog-article .blog-article-sources__container {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.page-blog-article .blog-article-sources__content {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap-line);
+	max-width: 1170px;
+}
+
+.page-blog-article .blog-article-sources__label {
+	margin: 0;
+	font-size: 16px; // EXACT_GEOMETRY — Figma 1:3461
+	font-weight: var(--font-weight-heading);
+	line-height: 24px;
+	color: var(--color-text-primary);
+}
+
+.page-blog-article .blog-article-sources__list {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap-line);
+}
+
+.page-blog-article .blog-article-sources__list p {
+	margin: 0;
+	font-size: 15px; // EXACT_GEOMETRY — Figma 1:3459
+	line-height: 22px;
+	color: var(--color-text-primary);
+}
+
+.page-blog-article .blog-article-related {
+	padding-top: 30px; // EXACT_GEOMETRY — Figma rhythm after sources
+	padding-bottom: var(--pad-gap);
+}
+
+.page-blog-article .blog-article-related__container {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.page-blog-article .blog-article-related__head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--pad-gap-line);
+	margin-bottom: var(--pad-gap);
+}
+
+.page-blog-article .blog-article-related__heading {
+	margin: 0;
+	font-size: 36px; // EXACT_GEOMETRY — Figma 1:3465
+	font-weight: var(--font-weight-heading);
+	line-height: 40px;
+	color: var(--color-text-primary);
+}
+
+.page-blog-article .blog-article-related__all-link {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--pad-gap-line);
+	font-size: 15px; // EXACT_GEOMETRY — Figma 1:3467
+	line-height: var(--line-height-nav);
+	font-weight: var(--font-weight-button);
+	color: var(--color-text-primary);
+	text-decoration: none;
+	text-transform: uppercase;
+	flex-shrink: 0;
+}
+
+.page-blog-article .blog-article-related__all-link:hover,
+.page-blog-article .blog-article-related__all-link:focus-visible {
+	color: var(--color-accent);
+}
+
+.page-blog-article .blog-article-related__all-icon {
+	display: inline-flex;
+	font-size: 10px;
+	line-height: 1;
+}
+
+.page-blog-article .blog-article-related__grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 370px)); // EXACT_GEOMETRY — Figma 1:3474 card width
+	gap: 30px; // EXACT_GEOMETRY — 1170 content minus 3×370
+	justify-content: start;
+}
+
+.page-blog-article .blog-related-card {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	gap: var(--pad-gap-line);
+	min-width: 0;
+	height: 100%;
+}
+
+.page-blog-article .blog-related-card__image-link {
+	display: block;
+	flex-shrink: 0;
+	color: inherit;
+	text-decoration: none;
+}
+
+.page-blog-article .blog-related-card__image {
+	display: block;
+	width: 100%;
+	height: 220px; // EXACT_GEOMETRY — home-articles teaser / Figma 1:491 compact card
+	object-fit: cover;
+	object-position: center;
+	border-radius: var(--radius-main);
+}
+
+.page-blog-article .blog-related-card__body {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	gap: var(--pad-gap-line);
+	min-width: 0;
+}
+
+.page-blog-article .blog-related-card__title {
+	margin: 0;
+	padding: 10px 30px 0;
+	font-size: var(--font-size-base);
+	font-weight: var(--font-weight-heading);
+	line-height: var(--line-height-base);
+}
+
+.page-blog-article .blog-related-card__title-link {
+	color: var(--color-text-primary);
+	text-decoration: none;
+}
+
+.page-blog-article .blog-related-card__title-link:hover,
+.page-blog-article .blog-related-card__title-link:focus-visible {
+	color: var(--color-accent);
+}
+
+.page-blog-article .blog-related-card__read-more {
+	margin: 0;
+	margin-top: auto;
+	padding-left: 30px;
+}
+
+.page-blog-article .blog-related-card__read-more-link {
+	font-size: var(--font-size-small);
+	line-height: var(--line-height-small);
+	color: var(--color-accent);
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.page-blog-article .blog-related-card__read-more-link:hover,
+.page-blog-article .blog-related-card__read-more-link:focus-visible {
+	color: var(--color-accent-hover);
+}
+
+.page-blog-article .blog-article-lower-stack .program-cta-band-section {
+	padding-top: 0;
+	padding-bottom: var(--pad-gap);
+}
+
+.page-blog-article .blog-article-lower-stack .program-cta-band-section__container {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.page-blog-article .blog-article-lower-stack .program-cta-band {
+	max-width: 1170px;
+}
+
+/* FP-0002-PG-009 Blog Article — Mobile Pass 06 (authority: Figma 1:6785, PNG 380×17833) */
+@media (max-width: 1024px) {
+	.page-blog-article {
+		.blog-article {
+			padding-top: 10px; // EXACT_GEOMETRY — Figma 1:6786 rhythm below mobile header
+			padding-bottom: 25px;
+		}
+
+		.blog-article__container {
+			gap: 15px;
+		}
+
+		.blog-article-hero {
+			gap: 15px; // EXACT_GEOMETRY — breadcrumbs → hero card
+		}
+
+		.blog-article-hero__breadcrumbs .breadcrumbs__item + .breadcrumbs__item::before {
+			font-size: 8px; // EXACT_GEOMETRY — Figma 1:6838
+			line-height: 12px;
+		}
+
+		.blog-article-hero__breadcrumbs .breadcrumbs__link,
+		.blog-article-hero__breadcrumbs .breadcrumbs__current {
+			font-size: 8px; // EXACT_GEOMETRY — Figma 1:6838
+			line-height: 12px;
+		}
+
+		.blog-article-hero__layout {
+			grid-template-columns: minmax(0, 1fr);
+			gap: 0;
+			max-width: 100%;
+		}
+
+		.blog-article-hero__media {
+			order: -1; // EXACT_GEOMETRY — Figma 1:6789 image above H1/meta/TOC
+			height: 340px; // EXACT_GEOMETRY — Figma 1:6789
+		}
+
+		.blog-article-hero__media img {
+			height: 340px; // EXACT_GEOMETRY — Figma 1:6789
+			object-fit: cover;
+			object-position: center;
+		}
+
+		.blog-article-hero__editorial {
+			min-height: auto;
+			padding: 15px 15px 20px; // EXACT_GEOMETRY — 320px text band inside card
+			gap: 10px;
+		}
+
+		.blog-article-hero__title {
+			max-width: none;
+			font-size: 22px; // EXACT_GEOMETRY — Figma 1:6793
+			line-height: 28px;
+		}
+
+		.blog-article-hero__meta {
+			max-width: none;
+			font-size: 13px; // EXACT_GEOMETRY — Figma 1:6795
+			line-height: 18px;
+			gap: 6px;
+		}
+
+		.blog-article-hero__toc {
+			margin: 10px 0 0;
+			max-width: none;
+		}
+
+		.blog-article-hero__toc-title {
+			margin-bottom: 10px;
+			font-size: 16px; // EXACT_GEOMETRY — Figma 1:6801
+			line-height: 20px;
+		}
+
+		.blog-article-hero__toc li + li {
+			margin-top: 6px;
+		}
+
+		.blog-article-hero__toc a {
+			font-size: 14px;
+			line-height: 20px;
+		}
+
+		.blog-article-hero__excerpt.block-whith-red-line {
+			margin: 15px 0 0;
+			max-width: 100%;
+			padding: 2px 0 2px 15px; // EXACT_GEOMETRY — Figma 1:6843 lead band
+		}
+
+		.blog-article-hero__excerpt p {
+			font-size: 14px; // EXACT_GEOMETRY — Figma 1:6847
+			line-height: 20px;
+		}
+
+		.blog-article-body__content {
+			max-width: 100%;
+			gap: 15px;
+			font-size: 16px;
+			line-height: 24px;
+
+			h2,
+			h3,
+			h4 {
+				scroll-margin-top: 80px;
+			}
+
+			h2 {
+				margin-top: 20px;
+				font-size: 22px; // EXACT_GEOMETRY — Figma mobile H2 family
+				line-height: 26px;
+			}
+
+			h2:first-child {
+				margin-top: 0;
+			}
+
+			h2:not(:first-child) {
+				margin-top: 25px;
+			}
+
+			h3 {
+				font-size: 18px; // EXACT_GEOMETRY — Figma mobile H3 family
+				line-height: 24px;
+			}
+
+			figure {
+				margin: 10px 0 0;
+			}
+
+			img {
+				max-height: none;
+				height: 269px; // EXACT_GEOMETRY — Figma 1:6860 inline photo frames
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+
+		.blog-article-conclusion {
+			padding-top: 25px;
+		}
+
+		.blog-article-conclusion__heading {
+			font-size: 22px; // EXACT_GEOMETRY — Figma mobile conclusion rhythm
+			line-height: 26px;
+		}
+
+		.blog-article-conclusion .founder-quote {
+			padding-top: 15px;
+		}
+
+		.blog-article-sources {
+			padding-top: 25px;
+		}
+
+		.blog-article-sources__content {
+			max-width: 100%;
+		}
+
+		.blog-article-sources__label {
+			font-size: 16px;
+			line-height: 24px;
+		}
+
+		.blog-article-sources__list p {
+			font-size: 14px;
+			line-height: 20px;
+		}
+
+		.blog-article-related {
+			padding-top: 25px;
+			padding-bottom: 20px;
+		}
+
+		.blog-article-related__head {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 10px;
+			margin-bottom: 15px;
+		}
+
+		.blog-article-related__heading {
+			font-size: 22px; // EXACT_GEOMETRY — Figma 1:6965
+			line-height: 26px;
+		}
+
+		.blog-article-related__all-link {
+			font-size: 13px;
+			line-height: 18px;
+		}
+
+		.blog-article-related__grid {
+			grid-template-columns: minmax(0, 1fr);
+			gap: 20px;
+		}
+
+		.blog-related-card__image {
+			height: 316px; // EXACT_GEOMETRY — Figma 1:6970 mobile related photo
+		}
+
+		.blog-related-card__title {
+			padding: 10px 0 0;
+			font-size: 16px;
+			line-height: 22px;
+		}
+
+		.blog-related-card__read-more {
+			padding-left: 0;
+		}
+
+		.blog-article-lower-stack .program-cta-band-section {
+			padding-bottom: 20px;
+		}
+
+		.blog-article-lower-stack .program-cta-band {
+			gap: 15px;
+		}
+
+		.blog-article-lower-stack .program-cta-band__title {
+			font-size: 18px; // EXACT_GEOMETRY — Figma 1:7017 mobile CTA family
+			line-height: 24px;
+		}
+
+		.blog-article-lower-stack .program-cta-band__subtitle {
+			font-size: 16px;
+			line-height: 22px;
+		}
+
+		.blog-article-lower-stack .program-cta-band--button-first .program-cta-band__copy {
+			order: 1;
+		}
+
+		.blog-article-lower-stack .program-cta-band--button-first .program-cta-band__button {
+			order: 2;
+			width: 100%;
+			max-width: none;
+		}
+
+		.blog-article-lower-stack .program-cta-band--button-first .program-cta-band__phone {
+			order: 3;
+			font-size: 16px;
+			line-height: 20px;
+		}
+
+		.blog-article-lower-stack .program-cta-band__phone-hint {
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+}
+

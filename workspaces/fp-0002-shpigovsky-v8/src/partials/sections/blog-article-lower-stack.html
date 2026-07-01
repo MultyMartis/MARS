@@ -1,0 +1,98 @@
+<section class="blog-article-conclusion" aria-labelledby="blog-article-conclusion-heading">
+
+  <div class="blog-article-conclusion__container container">
+
+    <h2 class="blog-article-conclusion__heading" id="blog-article-conclusion-heading">Заключение</h2>
+
+  </div>
+
+  <!-- FORGE WORDPRESS: Populate this founder-quote block from article conclusion/quote data and the linked author profile; do not require manual visual markup inside the_content(). -->
+
+  @@include('partials/components/blog-article-founder-quote.html')
+
+</section>
+
+
+
+<section class="blog-article-sources" aria-labelledby="blog-article-sources-label">
+
+  <div class="blog-article-sources__container container">
+
+    <div class="blog-article-sources__content">
+
+      <h2 class="blog-article-sources__label" id="blog-article-sources-label">Источники:</h2>
+
+      <div class="blog-article-sources__list">
+
+        <p>Менделевич В.Д. (ред.) (2007). Руководство по аддиктологии. СПб.: Речь, 768 с.</p>
+
+        <p>Blum K., Sheridan P.J., Wood R.C., Braverman E.R., Chen T.J., Comings D.E. (1996). The D2 Dopamine Receptor Gene as a Determinant of Reward Deficiency Syndrome. Journal of the Royal Society of Medicine, 89(7), 396–400. doi:10.1177/014107689608900711</p>
+
+        <p>Гриневич В.П., Немец В.В., Крупицкий Е.М., Гайнетдинов Р.Р., Будыгин Е.А. (2022). Роль дофамина и норадреналина в алкоголь-зависимом поведении: от корреляций к механизмам. Обозрение психиатрии и медицинской психологии имени В.М. Бехтерева, 56(3), 13–29. doi:10.31363/2313-7053-2022-56-3-13-29</p>
+
+        <p>Анохина И.П. (2013). Основные биологические механизмы зависимости от психоактивных веществ. Вопросы наркологии, № 6, 40–59.</p>
+
+        <p>Анохина И.П. (1988). Нейробиологические аспекты алкоголизма. Вестник РАМН, № 3, 21–30.</p>
+
+        <p>Обзор концепции СДВ и её нейробиологических оснований: Dopamine homeostasis: brain functional connectivity in reward deficiency syndrome (2017). Frontiers in Bioscience, 22(4), 669–691. doi:10.2741/4509</p>
+
+        <p>Verhulst B., Neale M.C., Kendler K.S. (2015). The heritability of alcohol use disorders: a meta-analysis of twin and adoption studies. Psychological Medicine, 45(5). PMC4345133</p>
+
+        <p>Николишин А.Е., Бродянский В.М., Чупрова Н.А., Кибитов А.О. Генетические особенности дофаминергической нейромедиаторной системы у пациентов с сочетанием алкогольной зависимости и депрессии. Обозрение психиатрии и медицинской психологии имени В.М. Бехтерева. doi:10.31363/2313-7053-2019-4-1-124-126</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- FORGE WORDPRESS: Populate this related-articles section from a curated or automatic post query, exclude the current post, and use each post's featured image, title, date, reading time, excerpt, and permalink. Do not require manual card markup inside the_content(). -->
+
+<section class="blog-article-related" aria-labelledby="blog-article-related-label">
+
+  <div class="blog-article-related__container container">
+
+    <div class="blog-article-related__head">
+
+      <h2 class="blog-article-related__heading" id="blog-article-related-label">Рекомендуем к прочтению</h2>
+
+      <a class="blog-article-related__all-link" href="/blog/">
+
+        <span class="blog-article-related__all-text">все статьи</span>
+
+        <span class="blog-article-related__all-icon" aria-hidden="true"><i class="fas fa-play"></i></span>
+
+      </a>
+
+    </div>
+
+    <div class="blog-article-related__grid">
+
+      @@include('partials/components/blog-related-card.html', {"imageSrc": "assets/img/content/home-articles/article-yoga-therapy.webp", "imageWidth": "1920", "imageHeight": "1280", "imageAlt": "Йога в терапии", "articleHref": "/blog/nazvanie-stati/", "title": "Йога в&nbsp;терапии: снятие абстинентного синдрома, снижение кортизола", "linkLabel": "Читать"})
+
+      @@include('partials/components/blog-related-card.html', {"imageSrc": "assets/img/content/home-articles/article-bos-therapy.webp", "imageWidth": "2048", "imageHeight": "1365", "imageAlt": "БОС-терапия", "articleHref": "/blog/nazvanie-stati/", "title": "БОС-терапия: тренировка конкретных зон мозга с&nbsp;помощью технологий", "linkLabel": "Читать"})
+
+      @@include('partials/components/blog-related-card.html', {"imageSrc": "assets/img/content/home-articles/article-alcohol-dependence.webp", "imageWidth": "1216", "imageHeight": "1632", "imageAlt": "Лечение алкогольной зависимости", "articleHref": "/blog/nazvanie-stati/", "title": "Лечение алкогольной зависимости: почему сила воли здесь ни&nbsp;при чём", "linkLabel": "Читать"})
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+</article>
+
+
+
+<div class="blog-article-lower-stack">
+
+  @@include('partials/components/program-cta-band.html', {"wrapSection": "true", "wrapContainer": "", "sectionId": "blog-article-cta-01", "headingId": "blog-article-cta-01-heading", "headingText": "Запишитесь на&nbsp;встречу", "buttonFirst": "true", "marginFlush": "true", "ctaTitle": "Запишитесь на&nbsp;встречу", "ctaSubtitle": "Опишите ситуацию в&nbsp;удобном для вас формате. Первый разговор ни&nbsp;к&nbsp;чему не&nbsp;обязывает, но&nbsp;может стать шагом к&nbsp;переменам.", "ctaPhone": "8&nbsp;(925)&nbsp;183-64-64", "ctaPhoneHint": "Или позвоните нам", "ctaText": "Записаться", "ctaSource": "blog-article-cta-01"})
+
+</div>
+

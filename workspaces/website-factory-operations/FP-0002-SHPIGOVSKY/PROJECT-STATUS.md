@@ -1,7 +1,17 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-06-29 (priority visual implementation protocol activation)
+**Last updated:** 2026-07-01 (V8 operator-approved frontend baseline closure)
+
+## Current stable baseline (V8)
+
+| Field | Value |
+|-------|-------|
+| Baseline | [FP-0002-V8-OPERATOR-APPROVED-FRONTEND-BASELINE-01.md](FP-0002-V8-OPERATOR-APPROVED-FRONTEND-BASELINE-01.md) |
+| Tag | `fp-0002-v8-operator-approved-frontend-stable-01` |
+| Parent | `eeab3d68` · `fp-0002-v8-blog-full-stable-01` |
+| Recovery pack | `X:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v8\FP-0002-V8-OPERATOR-APPROVED-FRONTEND-STABLE-01\` |
+| Next | Phase 07B documentation · 07C Excel demo · deferred polish / WP |
 
 ## ACTIVE TEMPORARY PRIORITY RULE
 

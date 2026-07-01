@@ -15,7 +15,8 @@ Before any FP-0002 frontend implementation, read:
 |-------|-------|
 | **Project** | FP-0002 Shpigovsky |
 | **Workspace version** | V8 |
-| **Status** | BOOTSTRAP_RECONCILIATION_COMPLETE — Git protected; browser parity verified |
+| **Status** | OPERATOR_APPROVED_FRONTEND_BASELINE_01 — see [baseline record](../website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-V8-OPERATOR-APPROVED-FRONTEND-BASELINE-01.md) |
+| **Stable tag** | `fp-0002-v8-operator-approved-frontend-stable-01` |
 | **Parent workspace** | `workspaces/fp-0002-shpigovsky-v7/` (`IMMUTABLE_STABLE_FALLBACK`) |
 | **Bootstrap authority tag** | `fp-0002-v7-four-template-canonical-demo-baseline-01` |
 | **Bootstrap commit** | `6eb493e9eadb2578c2223278d41bdfe6970e5637` |
@@ -55,6 +56,7 @@ npm run build
 ## Key docs
 
 - `../website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-PRIORITY-VISUAL-IMPLEMENTATION-PROTOCOL.md` — **read before any frontend task**
+- `../website-factory-operations/FP-0002-SHPIGOVSKY/FP-0002-V8-OPERATOR-APPROVED-FRONTEND-BASELINE-01.md` — **current stable baseline**
 - `foundation/FP-0002-V8-OPERATIONAL-STATUS.md`
 - `foundation/FP-0002-V8-COMPONENT-GATE-RULES-v1.md`
 - `audits/component-family-audit-v8-bootstrap-01/`
