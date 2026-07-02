@@ -1,50 +1,72 @@
 ﻿# FP-0002 — WPilot Local Installation v1
 
-**Version:** v1 | **Date:** 2026-06-23 | **Stage:** FW-06A.1
+**Version:** v1.1 | **Date:** 2026-07-02 | **Stage:** FP-0002 local access task
 
 ## Result
 
 ```text
 WPilot installation:
-HOLD
+INSTALLED AND ACTIVE
 
-Reason:
-Canonical approved package/version checkpoint required.
+WPilot local read-only:
+VALIDATED (8/8)
 
-FP-0002 foundation:
-NOT BLOCKED
+WPilot writes:
+DISABLED / NOT TESTED
+
+Package:
+metacode-wpilot-v0.3.0.zip (deploy-packages, checkpoint 8c67478)
+
+Runtime:
+http://shpigovsky.test/
 ```
 
-## Evidence (read-only authority review)
+## Local bridge state
+
+| Setting | Value |
+|---------|-------|
+| `bridge_enabled` | `true` |
+| `dev_confirmed` | `true` |
+| `write_enabled` | `false` |
+| `emergency_disabled` | `false` |
+| Token storage | `X:\AI MARS\local\tokens\wpilot-local-shpigovsky.token` (gitignored) |
+
+## Evidence
 
 | Check | Result |
 |-------|--------|
-| Brain plugin source | `projects/wpilot/plugin/metacode-wpilot/` — v0.3.0 (Sprint 2) |
-| Source lifecycle | DEV/test bridge — Phase 0–1 + Sprint 1–2 |
-| Latest approved checkpoint | **NOT ISSUED** for FP-0002 local install |
-| Canonical distributable ZIP | **NOT IN** `X:\MARS-Localhost\storage\packages\` |
-| Build/package procedure | Manual copy/zip per README — no brain checksum charter |
-| Checksum for FP-0002 local | **NOT ISSUED** |
-| FWS-0001 reference install | **NOT INSTALLED** on synthetic runtime |
-| Active unrelated WPilot WIP | None verified as approved package |
-| Production DEV token | Exists outside runtime — **NOT USED** |
+| Pre-repair checkpoint | `foundation-002a-pre-access-encoding-wpilot` |
+| Package hash | `6309DD8157B93C3BA174101D35B45AF47AF0DC7D64236E939D5E913359C3771C` |
+| Local package cache | `X:\MARS-Localhost\storage\packages\wpilot\metacode-wpilot-v0.3.0.zip` |
+| Plugin slug / version | `metacode-wpilot` / `0.3.0` |
+| Read-only REST | 8/8 PASS (`wpilot/v1`) |
+| MU-plugin | `mars-local-runtime.php` — **KEEP AS IS** |
+| Cyrillic foundation data | **REPAIRED** |
+| Temporary local admin | **CREATED** (local only; credentials not in Git) |
 
-## Rationale
+## Boundaries (unchanged)
 
-FW-06A / FW-06A.1 does not authorize ad-hoc WPilot install from unverified path. Operator must declare canonical local package, version pin, reproducible build, and checksum before install on `shpigovsky.test`.
+- No WPilot write proof in this task
+- No production use
+- No Shpigovsky Forge admission
+- No FW-07C-2
+- WordPress implementation: **NOT STARTED**
 
-Absence of WPilot does **not** block approved frontend intake (FW-06B).
+## Operator checkpoint
 
-## Target placeholder (future controlled install)
+```text
+LOCAL ACCESS AND WPILOT SETUP COMPLETE.
 
-When authorized separately:
+Open:
+http://shpigovsky.test/wp-admin/
 
-- Runtime: `shpigovsky.test` only
-- Mode: local/dev inspection
-- No production credentials
-- No remote operations
-- Package source: approved checkpoint only — not unverified WIP
+Use the temporary local administrator credentials
+approved by the operator for this local environment.
+
+After manual inspection, report:
+WP-ADMIN INSPECTION COMPLETE
+```
 
 ---
 
-*FP-0002 WPilot local installation — FW-06A.1 HOLD decision.*
+*FP-0002 WPilot local installation — operator-authorized 2026-07-02.*

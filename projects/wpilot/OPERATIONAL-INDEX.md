@@ -17,8 +17,8 @@
 | **Release candidate** | `v0.3.0-RC5` |
 | **Plugin version** | `0.3.0` (schema `0.2.0`) |
 | **Runtime maturity** | `proven_content_writes` + `proven_connection_runtime` |
-| **Environment** | DEV only — `https://dev.gktriumph.ru` |
-| **Token storage** | `X:\AI MARS\local\tokens\wpilot-dev-gktriumph.token` |
+| **Environment** | DEV only — `https://dev.gktriumph.ru` + local FP-0002 `http://shpigovsky.test/` (read-only bridge) |
+| **Token storage** | `X:\AI MARS\local\tokens\wpilot-dev-gktriumph.token` · `wpilot-local-shpigovsky.token` |
 | **Notes** | No token value in repo. Sprint 3 **HOLD**. Next phase: explicit HITL charter only. |
 
 ---

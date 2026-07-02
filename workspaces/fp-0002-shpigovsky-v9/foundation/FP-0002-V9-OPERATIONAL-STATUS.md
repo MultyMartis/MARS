@@ -1,6 +1,6 @@
 # FP-0002 V9 Operational Status
 
-**Updated:** 2026-07-02 (Phase V9-05B pre-implementation runtime checkpoint)  
+**Updated:** 2026-07-02 (local access + WPilot read-only bridge on shpigovsky.test)  
 **Status:** `FP0002_V9_05B_PRE_IMPLEMENTATION_CHECKPOINT_COMPLETE`
 
 ## Authority model
@@ -56,6 +56,18 @@ Phase **07C-B** Storage package — `SUPERSEDED_FAILED_STATIC_PACKAGING_NOT_FOR_
 - Gate: `forge-intake/validation/FP-0002-V9-05B-PRE-IMPLEMENTATION-RUNTIME-CHECKPOINT-GATE-v1.md`
 - Checkpoint: `foundation-002-v9-pre-implementation` @ `X:\MARS-Localhost\backups\wordpress\projects\shpigovsky\`
 - Runtime: **FROZEN FOR PRE-IMPLEMENTATION BASELINE**
+- WordPress implementation: **not started**
+
+## Local access and WPilot setup (complete)
+
+- Status: `FP0002_LOCAL_ACCESS_WPILOT_SETUP_COMPLETE`
+- Receipt: `forge-intake/validation/FP-0002-LOCAL-ACCESS-WPILOT-SETUP-RECEIPT-v1.md`
+- Pre-repair checkpoint: `foundation-002a-pre-access-encoding-wpilot`
+- Cyrillic foundation data: **REPAIRED**
+- Temporary local admin: **CREATED** (local only)
+- WPilot v0.3.0: **INSTALLED AND ACTIVE** on `shpigovsky.test`
+- WPilot read-only REST: **VALIDATED** (8/8); writes **DISABLED**
+- Operator wp-admin inspection: **PENDING**
 - WordPress implementation: **not started**
 
 ## Next phase

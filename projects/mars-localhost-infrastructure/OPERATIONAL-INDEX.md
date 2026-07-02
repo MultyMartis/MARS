@@ -45,7 +45,7 @@ MLI is an **execution environment**. It is **not** the MARS brain, governance so
 
 **Hosts + Windows reboot persistence (2026-07-02):** Three `.test` hosts entries registered (`fws-0001.test`, `shpigovsky.test`, `mli-smoke-001.test`); normal browser DNS and HTTP **VERIFIED**; full Windows reboot and second Laragon cycle **VERIFIED** — receipt [reports/MARS-LOCALHOST-MLI-HOSTS-REBOOT-PERSISTENCE-20260702-v1.md](reports/MARS-LOCALHOST-MLI-HOSTS-REBOOT-PERSISTENCE-20260702-v1.md). **FW-07C-1 revalidation** and **canonical secrets layout** remain separate follow-up tasks. SSL **deferred**.
 
-**AG-WP-001 / WPilot bridge:** **not claimed** as live runtime in this index. Forge WordPress consumer validation references synthetic FWS-0001 only.
+**AG-WP-001 / WPilot bridge:** Local read-only bridge **ACTIVE** on `http://shpigovsky.test/` (FP-0002, v0.3.0, writes disabled). DEV triumph proof remains separate. See [FP-0002-WPILOT-LOCAL-INSTALLATION-v1.md](../mars-website-factory/subsystems/forge-wordpress/projects/fp-0002/FP-0002-WPILOT-LOCAL-INSTALLATION-v1.md).
 
 ---
 
