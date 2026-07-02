@@ -1,7 +1,7 @@
 # FP-0002 V9-06B Skeleton Implementation Report v1
 
-**Task:** V9-06B | **Date:** 2026-07-03  
-**Result:** PASS (static validation)
+**Task:** V9-06B / V9-06B.1 | **Date:** 2026-07-03  
+**Result:** PASS (Node static validation + PHP CLI syntax lint)
 
 ---
 
@@ -63,11 +63,49 @@ Superseded: `/specyalisty/` → `/specialistam/` — recorded in [FP-0002-OD-002
 
 ## Validation
 
+### Node static validation
+
 ```text
 node WORDPRESS/validation/FP-0002-V9-06B-SKELETON-VALIDATION.mjs
 ```
 
-Machine result: **PASS** (see validation output artifact in task closeout).
+| Field | Value |
+|-------|-------|
+| Checks | 120 |
+| Passed | 120 |
+| Failed | 0 |
+| Result | **PASS** |
+
+### PHP CLI syntax lint (V9-06B.1)
+
+| Field | Value |
+|-------|-------|
+| PHP CLI syntax lint | **PASS** |
+| PHP executable | `X:\MARS-Localhost\laragon\bin\php\php-8.3.30-Win32-vs16-x64\php.exe` |
+| PHP version | PHP 8.3.30 (cli) (ZTS Visual C++ 2019 x64) |
+| Loaded php.ini | `X:\MARS-Localhost\laragon\bin\php\php-8.3.30-Win32-vs16-x64\php.ini` |
+| Theme PHP files linted | 66 |
+| Plugin PHP files linted | 15 |
+| Total PHP files linted | 81 |
+| Syntax errors (initial) | 0 |
+| Files repaired | 0 |
+| Syntax errors (final) | 0 |
+| Skipped | 0 |
+| Artifact | `validation/FP-0002-V9-06B-PHP-SYNTAX-LINT-RESULT.json` |
+| Result | **PASS** |
+
+---
+
+## Delivery status (source only)
+
+| Surface | Implementation | Runtime delivery |
+|---------|----------------|------------------|
+| Theme skeleton | IMPLEMENTED | NOT DELIVERED |
+| Shpigovsky Core skeleton | IMPLEMENTED | NOT DELIVERED |
+| ACF JSON | EMPTY — NOT DELIVERED | NOT DELIVERED |
+| Feature modules | INERT | — |
+
+Source manifest: `manifests/v9-06b-skeleton-manifest.json`
 
 ---
 
@@ -78,8 +116,10 @@ Machine result: **PASS** (see validation output artifact in task closeout).
 | V9-06A | COMPLETE |
 | V9-06A.1 | COMPLETE |
 | V9-06B | **COMPLETE** |
-| V9-06C | READY FOR OPERATOR AUTHORIZATION |
+| V9-06B.1 | **COMPLETE** |
+| V9-06C | READY FOR OPERATOR REVIEW |
+| ACF Pro prerequisite | NOT SATISFIED |
 
 ---
 
-*Report generated as part of V9-06B skeleton implementation — no runtime delivery.*
+*Report updated by V9-06B.1 PHP CLI discovery and full skeleton validation — no runtime delivery.*
