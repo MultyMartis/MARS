@@ -1,14 +1,16 @@
 # FP-0002 V9 Forge WordPress Intake Pack
 
-**Phase:** V9-05A  
+**Phase:** V9-05B  
 **Date:** 2026-07-02  
 **Stable baseline:** `fp-0002-v9-operator-approved-static-frontend-stable-01` @ `a51376872fbfefb7d5f68a58b440c726d6cf3de3`  
-**Intake gate:** V9-05A **APPROVED** — foundation **ADOPTED**
+**Intake gate:** V9-05A **APPROVED** — foundation **ADOPTED**  
+**Runtime checkpoint:** V9-05B **COMPLETE** — `foundation-002-v9-pre-implementation`
 
 ## Entry documents
 
 - [FP-0002-V9-FORGE-WORDPRESS-INTAKE-PACK-v1.md](./FP-0002-V9-FORGE-WORDPRESS-INTAKE-PACK-v1.md) — V9-04 contract pack
-- [FP-0002-V9-05A-APPROVED-FRONTEND-INTAKE-GATE-v1.md](./validation/FP-0002-V9-05A-APPROVED-FRONTEND-INTAKE-GATE-v1.md) — **V9-05A gate (APPROVED)**
+- [FP-0002-V9-05A-APPROVED-FRONTEND-INTAKE-GATE-v1.md](./validation/FP-0002-V9-05A-APPROVED-FRONTEND-INTAKE-GATE-v1.md) — V9-05A gate (APPROVED)
+- [FP-0002-V9-05B-PRE-IMPLEMENTATION-RUNTIME-CHECKPOINT-GATE-v1.md](./validation/FP-0002-V9-05B-PRE-IMPLEMENTATION-RUNTIME-CHECKPOINT-GATE-v1.md) — **V9-05B checkpoint (COMPLETE)**
 
 ## Structure
 

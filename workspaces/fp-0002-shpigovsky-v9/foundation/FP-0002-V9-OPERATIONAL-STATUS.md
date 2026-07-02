@@ -1,7 +1,7 @@
 # FP-0002 V9 Operational Status
 
-**Updated:** 2026-07-02 (Phase V9-05A foundation adoption gate)  
-**Status:** `FP0002_V9_APPROVED_FRONTEND_INTAKE_AND_FOUNDATION_ADOPTED`
+**Updated:** 2026-07-02 (Phase V9-05B pre-implementation runtime checkpoint)  
+**Status:** `FP0002_V9_05B_PRE_IMPLEMENTATION_CHECKPOINT_COMPLETE`
 
 ## Authority model
 
@@ -50,9 +50,17 @@ Phase **07C-B** Storage package — `SUPERSEDED_FAILED_STATIC_PACKAGING_NOT_FOR_
 - Foundation: **ADOPTED** — reuse prepared WordPress with controlled V9 integration
 - WordPress implementation: **not started**
 
+## V9-05B Pre-Implementation Runtime Checkpoint (complete)
+
+- Status: `FP0002_V9_05B_PRE_IMPLEMENTATION_CHECKPOINT_COMPLETE`
+- Gate: `forge-intake/validation/FP-0002-V9-05B-PRE-IMPLEMENTATION-RUNTIME-CHECKPOINT-GATE-v1.md`
+- Checkpoint: `foundation-002-v9-pre-implementation` @ `X:\MARS-Localhost\backups\wordpress\projects\shpigovsky\`
+- Runtime: **FROZEN FOR PRE-IMPLEMENTATION BASELINE**
+- WordPress implementation: **not started**
+
 ## Next phase
 
-**V9-05B — Pre-Implementation Runtime Checkpoint** (`foundation-002-v9-pre-implementation`)
+**V9-05C — Read-Only Project Admission**
 
 ## V9-04 Forge Intake Pack (complete)
 

@@ -70,7 +70,7 @@ MLI is an **execution environment**. It is **not** the MARS brain, governance so
 | **Shared toolchain** | **HARDENED** — [registries/MARS-LOCALHOST-TOOL-REGISTRY-v1.md](registries/MARS-LOCALHOST-TOOL-REGISTRY-v1.md) |
 | **Smoke site** | `http://mli-smoke-001.test/` — **PASS** (browser `.test` DNS verified 2026-07-02) |
 | **WordPress synthetic (FWS-0001)** | `http://fws-0001.test/` — **OPERATIONAL** (browser `.test` DNS verified 2026-07-02); FW-05R synthetic validation complete; **FW-07C-1 revalidation pending** |
-| **WordPress project FP-0002** | `http://shpigovsky.test/` — **AVAILABLE_READ_ONLY** (browser `.test` DNS verified 2026-07-02) |
+| **WordPress project FP-0002** | `http://shpigovsky.test/` — **FROZEN_PRE_IMPLEMENTATION_BASELINE** (V9-05B checkpoint `foundation-002-v9-pre-implementation` 2026-07-02; browser HTTP verified) |
 | **Runtime operational (WordPress)** | **YES** — synthetic + project profiles with documented limitations |
 | **Runtime operational (OpenCart)** | **NO** — until MLI-04 |
 

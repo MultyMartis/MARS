@@ -72,6 +72,7 @@
 | Field | Value |
 |-------|-------|
 | Baseline | `X:\MARS-Localhost\backups\wordpress\projects\shpigovsky\foundation-001` |
+| Pre-implementation baseline (V9-05B) | `X:\MARS-Localhost\backups\wordpress\projects\shpigovsky\foundation-002-v9-pre-implementation` |
 | Backup script | `mars-runtime\scripts\backup-runtime.ps1` |
 | Reset script | `mars-runtime\scripts\reset-to-foundation.ps1` |
 | Reset token | `RESET-FP-0002` |
