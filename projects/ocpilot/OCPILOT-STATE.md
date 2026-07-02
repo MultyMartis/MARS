@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-02
-**Evidence cutoff:** 2026-07-02 (SITE-002 **Production Profile** **REGISTERED — NOT CONNECTED**; prior 2026-06-29 TEST checkpoints preserved)
+**Evidence cutoff:** 2026-07-02 (SITE-002 Run **4.171** partial Production capture — FTP blocked; HTTP/admin read-only PASS; baseline **not issued**)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Production Profile REGISTERED — NOT CONNECTED** · TEST checkpoints preserved · [production-profile.md](sites/site-002/production-profile.md) · first Production baseline **pending** · first Production operation **not authorized** |
+| Current SITE-002 focus | **Production partial capture (Run 4.171)** — HTTP/admin read-only verified · FTP auth **FAIL** · baseline **not issued** · [SITE-002-FIRST-PRODUCTION-CAPTURE.md](sites/site-002/reports/SITE-002-FIRST-PRODUCTION-CAPTURE.md) |
 
 ---
 
@@ -29,13 +29,17 @@
 | SITE-002 Production environment | **REGISTERED** |
 | Production URL | https://bzpm.ru/ |
 | Environment ID | `site-002-prod` |
-| Production Profile | [sites/site-002/production-profile.md](sites/site-002/production-profile.md) — registered, **not connected** |
+| Production Profile | [sites/site-002/production-profile.md](sites/site-002/production-profile.md) |
+| Production capture (Run 4.171) | **PARTIAL** — [SITE-002-FIRST-PRODUCTION-CAPTURE.md](sites/site-002/reports/SITE-002-FIRST-PRODUCTION-CAPTURE.md) |
+| FTP/SFTP connection | **NOT VERIFIED** — authentication failed |
+| HTTP verification | **VERIFIED** (homepage + corp pages) |
+| OpenCart admin read-only | **VERIFIED** — version 3.0.3.9 |
 | Historical TEST | **preserved** — https://zpm.new-site.space/ |
 | First Production baseline | **pending** — [SITE-002-PRODUCTION-BASELINE-PENDING.md](sites/site-002/baselines/SITE-002-PRODUCTION-BASELINE-PENDING.md) |
-| First Production test / operation | **pending operator authorization** |
-| Registration report | [sites/site-002/reports/SITE-002-PRODUCTION-PROFILE-REGISTRATION.md](sites/site-002/reports/SITE-002-PRODUCTION-PROFILE-REGISTRATION.md) |
+| First Production test / operation | **pending** — FTP credential fix required |
+| Capture storage | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\captures\SITE-002-PROD-INITIAL-CAPTURE-01\` |
 
-Production tooling (deploy / rollback / verification) is **registered, not verified**. No Production connection was performed during registration.
+Production tooling (deploy / rollback / verification) is **registered, not verified**. Partial read-only capture performed 2026-07-02; file-level baseline blocked by FTP credentials.
 
 ### BZPM UX REDESIGN — project banner
 

@@ -13,7 +13,7 @@
 | **Site Name** | ЗПМ |
 | **Slug** | site-002 |
 | **Platform** | ocStore / OpenCart |
-| **Version** | SAFE UNKNOWN |
+| **Version** | **3.0.3.9** (Production admin read-only, Run 4.171) |
 | **Baseline Match** | `SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01` (Home) · `SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02` (About) · `SITE-002-STABLE-LIVE-LOCAL-FONTS-01` (site-wide fonts) |
 | **Hosting** | Beget (FTP `polygonws.beget.tech`) — operator-recorded |
 | **Repository metadata** | `X:\AI MARS\projects\ocpilot\sites\site-002\` |
@@ -26,7 +26,7 @@
 | **Historical TEST URL** | https://zpm.new-site.space/ |
 | **Environment (legacy field)** | TEST (historical registration) · Production registered 2026-07-02 |
 | **Production Profile** | [production-profile.md](production-profile.md) |
-| **Production connection** | **NOT YET VERIFIED** |
+| **Production connection** | **PARTIAL** — HTTP/admin verified (Run 4.171); FTP **not verified** |
 | **Production baseline** | **PENDING** — [baselines/SITE-002-PRODUCTION-BASELINE-PENDING.md](baselines/SITE-002-PRODUCTION-BASELINE-PENDING.md) |
 | **Current Status** | **STABLE LIVE CHECKPOINT — HOME COMMERCIAL TRUST 01** (TEST-proven; Production parity unverified) |
 | **Active baseline** | [baselines/SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01.md](baselines/SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01.md) · About: [M9.13-ABOUT-REDESIGN-02](baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02.md) · fonts: [LOCAL-FONTS-01](baselines/SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md) |

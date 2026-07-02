@@ -1,8 +1,8 @@
 # Project Access Brief
 
 **Site ID:** SITE-002  
-**Status:** **PRODUCTION REGISTERED — NOT CONNECTED**
-**Run:** 4.170 — SITE-002 Production Profile Registration (2026-07-02)
+**Status:** **PRODUCTION PARTIAL CAPTURE — BASELINE PENDING**
+**Run:** 4.171 — SITE-002 First Read-Only Production Capture (2026-07-02)
 
 **Do not record:** passwords, tokens, credentials, secret URLs, or live `config.php` values.
 
@@ -53,7 +53,7 @@ Production profile: [production-profile.md](production-profile.md)
 | Role | Current operational website authority |
 | Credential source | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\secrets\secrets.md` |
 | Credential section | `PRODUCTION` |
-| Connection status | **NOT VERIFIED** |
+| Connection status | **PARTIAL** — HTTP 200 + admin read-only PASS; FTP auth FAIL |
 | Write status | **DISABLED UNTIL FIRST PRODUCTION OPERATION IS AUTHORIZED** |
 | Database | **EXCLUDED BY DEFAULT** |
 
@@ -63,7 +63,7 @@ Production profile: [production-profile.md](production-profile.md)
 
 | Access type | TEST | Production | Credential location |
 |-------------|------|------------|---------------------|
-| FTP / SFTP | Populated in secrets | **PENDING** operator fill | External secrets file — `TEST` / `PRODUCTION` sections |
+| FTP / SFTP | Populated in secrets | **AUTH FAIL** — operator verify Beget credentials | External secrets file — `TEST` / `PRODUCTION` sections |
 | Hosting panel | Partial in secrets | **PENDING** | External secrets file |
 | SSH | Populated in secrets (TEST) | **PENDING** | External secrets file |
 | OpenCart admin | Populated in secrets (TEST) | **PENDING** | External secrets file |
@@ -114,7 +114,7 @@ Checklist — operator sets before any supervised Production access run:
 
 | Field | TEST | Production |
 |-------|------|------------|
-| File backup status | Operator attestation (Beget) — TEST-era | **PENDING** first read-only capture |
+| File backup status | Operator attestation (Beget) — TEST-era | **PENDING** — FTP blocked at Run 4.171 |
 | Database backup status | SAFE UNKNOWN | **NOT AUTHORIZED BY DEFAULT** |
 | Backup location | External storage / hosting — TEST-era | `production\backups\` (future) |
 | Restore method | Beget full backup + file-level pass backups (TEST-era) | **PENDING** Production baseline |
@@ -186,7 +186,7 @@ Current Phase:
 
 Current State:
 
-**PRODUCTION REGISTERED — CONNECTION PENDING** — Production profile and storage prepared; operator to populate Production credentials; first read-only capture pending authorization.
+**PRODUCTION PARTIAL CAPTURE** — Run 4.171 HTTP/admin read-only complete; FTP credential fix required before file baseline.
 
 ---
 

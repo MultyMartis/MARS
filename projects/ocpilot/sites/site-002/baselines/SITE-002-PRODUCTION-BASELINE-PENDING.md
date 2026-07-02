@@ -13,7 +13,7 @@
 |-------|-------|
 | Production URL | **REGISTERED** |
 | Production parity | **NOT YET VERIFIED** |
-| Remote capture | **NOT PERFORMED** |
+| Remote capture | **PARTIAL** (2026-07-02 — HTTP/visual/admin; FTP blocked) |
 | File manifest | **NOT COLLECTED** |
 | Production checkpoint | **NOT ISSUED** |
 

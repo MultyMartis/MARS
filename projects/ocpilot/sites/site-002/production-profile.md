@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-02
+**Last updated:** 2026-07-02 (Run 4.171 partial capture)
 
 ---
 
@@ -11,8 +11,8 @@
 
 | Field | Value |
 |-------|-------|
-| Profile status | **REGISTERED — NOT CONNECTED** |
-| Remote access status | **NOT VERIFIED** |
+| Profile status | **REGISTERED — PARTIALLY CONNECTED** |
+| Remote access status | **HTTP/ADMIN VERIFIED · FTP NOT VERIFIED** |
 | Production operations | **NOT YET AUTHORIZED** |
 
 ---
@@ -28,7 +28,7 @@
 | Production URL | https://bzpm.ru/ |
 | Historical TEST URL | https://zpm.new-site.space/ |
 | Platform | ocStore / OpenCart |
-| Exact platform version | **SAFE UNKNOWN** unless already verified |
+| Exact platform version | **3.0.3.9** (admin read-only, Run 4.171) |
 | OCPilot owner | `projects/ocpilot/sites/site-002/` |
 | Operator model | human-supervised / HITL |
 
@@ -231,9 +231,12 @@ Deploy-tool preparation is a **separate task**.
 | Production URL | **REGISTERED** |
 | Storage bindings | **REGISTERED** |
 | Credential slots | **REGISTERED** |
-| Credentials populated | **OPERATOR ACTION REQUIRED** |
-| Remote connection | **NOT PERFORMED** |
-| Production baseline | **PENDING FIRST READ-ONLY CAPTURE** |
+| Credentials populated | **YES** (FTP credentials reject login — operator verification required) |
+| HTTP connection | **VERIFIED** (Run 4.171) |
+| Admin read-only connection | **VERIFIED** (Run 4.171) |
+| FTP/SFTP connection | **NOT VERIFIED** — authentication failed |
+| Remote listing | **NOT PERFORMED** |
+| Production baseline | **PENDING** — partial capture 2026-07-02 |
 | Deploy profile | **REGISTERED, NOT VERIFIED** |
 | Rollback profile | **REGISTERED, NOT VERIFIED** |
 | Verification profile | **REGISTERED, NOT VERIFIED** |
