@@ -1,0 +1,80 @@
+{
+  "operation_id": "wp.inspect.routes",
+  "request": {
+    "site_id": "fws-0001",
+    "environment": "LOCAL_SYNTHETIC",
+    "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "kill_switch_state": "SITE_ENABLED_READ_ONLY"
+  },
+  "admission_decision": "ADMIT",
+  "success": true,
+  "runtime_binding_id": "fws-0001-wp-inspect-routes-v1",
+  "reparse": {
+    "checked": true,
+    "allowed": true,
+    "logical_path": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "physical_path": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "allowed_physical_root": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "reparse_points": [],
+    "escape_detected": false,
+    "reason_codes": [],
+    "volume": "X:\\",
+    "logical_under_allowed": true,
+    "physical_under_allowed": true
+  },
+  "inspection_result": {
+    "operation_id": "wp.inspect.routes",
+    "report_type": "route_source_inventory",
+    "status": "SUCCEEDED",
+    "htaccess": {
+      "exists": true,
+      "size": 297,
+      "rewrite_rules_detected": true,
+      "redacted": true
+    },
+    "php_source_files_sample": [
+      "wp-content\\themes\\fws-synthetic\\archive-service.php",
+      "wp-content\\themes\\fws-synthetic\\footer.php",
+      "wp-content\\themes\\fws-synthetic\\front-page.php",
+      "wp-content\\themes\\fws-synthetic\\functions.php",
+      "wp-content\\themes\\fws-synthetic\\header.php",
+      "wp-content\\themes\\fws-synthetic\\index.php",
+      "wp-content\\themes\\fws-synthetic\\page-contacts.php",
+      "wp-content\\themes\\fws-synthetic\\single-service.php",
+      "wp-content\\themes\\twentytwentyfive\\functions.php",
+      "wp-content\\themes\\twentytwentyfour\\functions.php",
+      "wp-content\\themes\\twentytwentytwo\\functions.php",
+      "wp-content\\themes\\twentytwentytwo\\index.php",
+      "wp-content\\plugins\\advanced-custom-fields\\acf.php",
+      "wp-content\\plugins\\advanced-custom-fields\\index.php",
+      "wp-content\\plugins\\fws-synthetic-core\\fws-synthetic-core.php",
+      "wp-content\\plugins\\fws-synthetic-core\\index.php"
+    ],
+    "php_source_file_count": 16,
+    "note": "Filename inventory only — no PHP execution or DB route resolution",
+    "read_only": true,
+    "phase": "FW-07C-1"
+  },
+  "baseline_before": {
+    "file_count": 4723,
+    "directory_count": 536,
+    "aggregate_size": 121893147,
+    "latest_modified_timestamp": "2026-07-02T12:50:33.386Z"
+  },
+  "baseline_after": {
+    "file_count": 4723,
+    "directory_count": 536,
+    "aggregate_size": 121893147,
+    "latest_modified_timestamp": "2026-07-02T12:50:33.386Z"
+  },
+  "mutation": {
+    "unchanged": true,
+    "violations": [],
+    "diff": {},
+    "verdict": "NO_MUTATION",
+    "reason_codes": [],
+    "emergency_stop": false
+  },
+  "no_write_verdict": true
+}

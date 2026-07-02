@@ -4,7 +4,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-export const RUNTIME_PARENT = 'E:\\MARS-Localhost';
+export const RUNTIME_PARENT = 'X:\\MARS-Localhost';
 export const PROTECTED_RUNTIME_PARENT = RUNTIME_PARENT;
 
 const _registeredSites = {
@@ -12,7 +12,7 @@ const _registeredSites = {
     site_id: 'fws-0001',
     runtime_id: 'MLI-WP-SYN-001',
     environment: 'LOCAL_SYNTHETIC',
-    allowed_root: 'E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001',
+    allowed_root: 'X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001',
     runtime_class: 'synthetic',
     mli_manifest: 'projects/mars-localhost-infrastructure/manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md',
   }),

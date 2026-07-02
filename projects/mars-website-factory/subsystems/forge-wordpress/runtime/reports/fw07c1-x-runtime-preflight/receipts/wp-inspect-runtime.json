@@ -1,0 +1,106 @@
+{
+  "operation_id": "wp.inspect.runtime",
+  "request": {
+    "site_id": "fws-0001",
+    "environment": "LOCAL_SYNTHETIC",
+    "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "kill_switch_state": "SITE_ENABLED_READ_ONLY"
+  },
+  "admission_decision": "ADMIT",
+  "success": true,
+  "runtime_binding_id": "fws-0001-wp-inspect-runtime-v1",
+  "reparse": {
+    "checked": true,
+    "allowed": true,
+    "logical_path": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "physical_path": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "allowed_physical_root": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "reparse_points": [],
+    "escape_detected": false,
+    "reason_codes": [],
+    "volume": "X:\\",
+    "logical_under_allowed": true,
+    "physical_under_allowed": true
+  },
+  "inspection_result": {
+    "operation_id": "wp.inspect.runtime",
+    "report_type": "runtime_structure_inspection",
+    "status": "SUCCEEDED",
+    "site_root": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "wp_version": "7.0",
+    "version_php_exists": true,
+    "wp_config": {
+      "exists": true,
+      "path": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001\\wp-config.php",
+      "safe_fields": {
+        "DB_NAME": "mars_wp_fws0001",
+        "DB_HOST": "127.0.0.1",
+        "table_prefix": "mli_",
+        "WP_DEBUG": "true"
+      },
+      "secret_keys_detected": [
+        "DB_PASSWORD",
+        "AUTH_KEY",
+        "SECURE_AUTH_KEY",
+        "LOGGED_IN_KEY",
+        "NONCE_KEY",
+        "AUTH_SALT",
+        "SECURE_AUTH_SALT",
+        "LOGGED_IN_SALT",
+        "NONCE_SALT"
+      ],
+      "redacted": true,
+      "size": 3569,
+      "mtime_ms": 1782291397030.6765
+    },
+    "top_level_entry_count": 22,
+    "top_level_sample": [
+      ".htaccess",
+      "index.php",
+      "license.txt",
+      "mars-runtime",
+      "readme.html",
+      "wp-activate.php",
+      "wp-admin",
+      "wp-blog-header.php",
+      "wp-comments-post.php",
+      "wp-config-sample.php",
+      "wp-config.php",
+      "wp-content",
+      "wp-cron.php",
+      "wp-includes",
+      "wp-links-opml.php",
+      "wp-load.php",
+      "wp-login.php",
+      "wp-mail.php",
+      "wp-settings.php",
+      "wp-signup.php",
+      "wp-trackback.php",
+      "xmlrpc.php"
+    ],
+    "read_only": true,
+    "phase": "FW-07C-1"
+  },
+  "baseline_before": {
+    "file_count": 4723,
+    "directory_count": 536,
+    "aggregate_size": 121893147,
+    "latest_modified_timestamp": "2026-07-02T12:50:33.386Z"
+  },
+  "baseline_after": {
+    "file_count": 4723,
+    "directory_count": 536,
+    "aggregate_size": 121893147,
+    "latest_modified_timestamp": "2026-07-02T12:50:33.386Z"
+  },
+  "mutation": {
+    "unchanged": true,
+    "violations": [],
+    "diff": {},
+    "verdict": "NO_MUTATION",
+    "reason_codes": [],
+    "emergency_stop": false
+  },
+  "no_write_verdict": true
+}

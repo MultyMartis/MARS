@@ -9,7 +9,7 @@ import { resolveSiteAuthority } from '../src/runtime-authority.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const FIXTURE_ROOT = path.resolve(__dirname, 'fixtures/synthetic-site');
-const FWS_ROOT = 'E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001';
+const FWS_ROOT = 'X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001';
 
 let passed = 0;
 let failed = 0;
@@ -48,9 +48,15 @@ test('path outside fixture root is denied', () => {
   assert(r.allowed === false, 'denied');
 });
 
-test('runtime parent E:\\MARS-Localhost is not valid site root', () => {
-  const auth = resolveSiteAuthority('fws-0001', 'E:\\MARS-Localhost');
+test('runtime parent X:\\MARS-Localhost is not valid site root', () => {
+  const auth = resolveSiteAuthority('fws-0001', 'X:\\MARS-Localhost');
   assert(auth.valid === false, 'parent denied');
+});
+
+test('legacy E:\\MARS-Localhost root is rejected', () => {
+  const auth = resolveSiteAuthority('fws-0001', 'E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001');
+  assert(auth.valid === false, 'E root rejected');
+  assert(auth.reason_codes.includes('RT_AUTHORITY_PATH_MISMATCH'), 'path mismatch');
 });
 
 test('fws-0001 authority resolves when path exists', () => {

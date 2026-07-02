@@ -14,8 +14,8 @@ import { detectMutation } from '../src/mutation-detector.mjs';
 import { getBindingRegistry } from '../src/runtime-binding-registry.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const FWS_ROOT = 'E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001';
-const RECEIPT_ROOT = 'C:\\MARS Phenix\\_reconstruction-control\\fw07c1-runtime-preflight';
+const FWS_ROOT = 'X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001';
+const RECEIPT_ROOT = path.resolve(__dirname, '../reports/fw07c1-x-runtime-preflight');
 
 const PROVEN_OPERATIONS = [
   'wp.inspect.runtime',

@@ -1,0 +1,77 @@
+{
+  "operation_id": "wp.inspect.plugin_state",
+  "request": {
+    "site_id": "fws-0001",
+    "environment": "LOCAL_SYNTHETIC",
+    "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "kill_switch_state": "SITE_ENABLED_READ_ONLY"
+  },
+  "admission_decision": "ADMIT",
+  "success": true,
+  "runtime_binding_id": "fws-0001-wp-inspect-plugin-state-v1",
+  "reparse": {
+    "checked": true,
+    "allowed": true,
+    "logical_path": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "physical_path": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "allowed_physical_root": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "reparse_points": [],
+    "escape_detected": false,
+    "reason_codes": [],
+    "volume": "X:\\",
+    "logical_under_allowed": true,
+    "physical_under_allowed": true
+  },
+  "inspection_result": {
+    "operation_id": "wp.inspect.plugin_state",
+    "report_type": "plugin_directory_inspection",
+    "status": "SUCCEEDED",
+    "plugins_directory": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001\\wp-content\\plugins",
+    "plugin_count": 3,
+    "plugins": [
+      {
+        "slug": "advanced-custom-fields",
+        "is_directory": true,
+        "size": 0,
+        "mtime": "2026-06-29T13:40:33.117Z"
+      },
+      {
+        "slug": "fws-synthetic-core",
+        "is_directory": true,
+        "size": 0,
+        "mtime": "2026-06-29T13:40:33.166Z"
+      },
+      {
+        "slug": "index.php",
+        "is_directory": false,
+        "size": 28,
+        "mtime": "2026-06-22T17:06:32.410Z"
+      }
+    ],
+    "note": "Directory metadata only — activation state requires DB (deferred)",
+    "read_only": true,
+    "phase": "FW-07C-1"
+  },
+  "baseline_before": {
+    "file_count": 4723,
+    "directory_count": 536,
+    "aggregate_size": 121893147,
+    "latest_modified_timestamp": "2026-07-02T12:50:33.386Z"
+  },
+  "baseline_after": {
+    "file_count": 4723,
+    "directory_count": 536,
+    "aggregate_size": 121893147,
+    "latest_modified_timestamp": "2026-07-02T12:50:33.386Z"
+  },
+  "mutation": {
+    "unchanged": true,
+    "violations": [],
+    "diff": {},
+    "verdict": "NO_MUTATION",
+    "reason_codes": [],
+    "emergency_stop": false
+  },
+  "no_write_verdict": true
+}

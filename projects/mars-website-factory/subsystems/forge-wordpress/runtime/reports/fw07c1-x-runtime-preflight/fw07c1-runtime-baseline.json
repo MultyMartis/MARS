@@ -1,0 +1,452 @@
+{
+  "before": {
+    "captured_at": "2026-07-02T13:24:34.397Z",
+    "site_root": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "resolved_absolute_path": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "volume": "X:\\",
+    "directory_exists": true,
+    "directory_attributes": 16822,
+    "is_reparse_point": false,
+    "immediate_parent": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic",
+    "top_level_entry_names": [
+      ".htaccess",
+      "index.php",
+      "license.txt",
+      "mars-runtime",
+      "readme.html",
+      "wp-activate.php",
+      "wp-admin",
+      "wp-blog-header.php",
+      "wp-comments-post.php",
+      "wp-config-sample.php",
+      "wp-config.php",
+      "wp-content",
+      "wp-cron.php",
+      "wp-includes",
+      "wp-links-opml.php",
+      "wp-load.php",
+      "wp-login.php",
+      "wp-mail.php",
+      "wp-settings.php",
+      "wp-signup.php",
+      "wp-trackback.php",
+      "xmlrpc.php"
+    ],
+    "top_level_entries": [
+      {
+        "name": ".htaccess",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "index.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "license.txt",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "mars-runtime",
+        "is_directory": true,
+        "is_symlink": false
+      },
+      {
+        "name": "readme.html",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-activate.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-admin",
+        "is_directory": true,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-blog-header.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-comments-post.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-config-sample.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-config.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-content",
+        "is_directory": true,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-cron.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-includes",
+        "is_directory": true,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-links-opml.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-load.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-login.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-mail.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-settings.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-signup.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-trackback.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "xmlrpc.php",
+        "is_directory": false,
+        "is_symlink": false
+      }
+    ],
+    "file_count": 4723,
+    "directory_count": 536,
+    "aggregate_size": 121893147,
+    "latest_modified_timestamp": "2026-07-02T12:50:33.386Z",
+    "latest_modified_path": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001\\wp-content",
+    "allowlisted_hashes": [
+      {
+        "filename": "index.php",
+        "exists": true,
+        "size": 405,
+        "mtime_ms": 1782147991588.2925,
+        "sha256": "eea9347b1e266ca5407b92633958c148dbfebea307e511a3a226ea61828e2eba"
+      },
+      {
+        "filename": "license.txt",
+        "exists": true,
+        "size": 19903,
+        "mtime_ms": 1782147991589.2896,
+        "sha256": "49e97f629ce763abb2f8f1f13da74cb5a8a9a72a0e72a7477d1540c98cef5141"
+      },
+      {
+        "filename": "readme.html",
+        "exists": true,
+        "size": 7406,
+        "mtime_ms": 1782147991590.287,
+        "sha256": "491ef4578defac49ddbd8a3df9fa8dfc61bb6d140a7532fd7948b259b07223e2"
+      },
+      {
+        "filename": ".htaccess",
+        "exists": true,
+        "size": 297,
+        "mtime_ms": 1782148237751.3152,
+        "sha256": "45eff7a00d4843e73ae2a97f22e84e8f5946c49d601044e9d3a1f00c204ab5a6"
+      }
+    ],
+    "wp_config_metadata": {
+      "exists": true,
+      "path": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001\\wp-config.php",
+      "safe_fields": {
+        "DB_NAME": "mars_wp_fws0001",
+        "DB_HOST": "127.0.0.1",
+        "table_prefix": "mli_",
+        "WP_DEBUG": "true"
+      },
+      "secret_keys_detected": [
+        "DB_PASSWORD",
+        "AUTH_KEY",
+        "SECURE_AUTH_KEY",
+        "LOGGED_IN_KEY",
+        "NONCE_KEY",
+        "AUTH_SALT",
+        "SECURE_AUTH_SALT",
+        "LOGGED_IN_SALT",
+        "NONCE_SALT"
+      ],
+      "redacted": true,
+      "size": 3569,
+      "mtime_ms": 1782291397030.6765
+    },
+    "walk_truncated": false,
+    "reparse_self_check": {
+      "checked": true,
+      "allowed": true,
+      "logical_path": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+      "physical_path": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+      "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+      "allowed_physical_root": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+      "reparse_points": [],
+      "escape_detected": false,
+      "reason_codes": [],
+      "volume": "X:\\",
+      "logical_under_allowed": true,
+      "physical_under_allowed": true
+    },
+    "audit_files_created": []
+  },
+  "after": {
+    "captured_at": "2026-07-02T13:24:39.776Z",
+    "site_root": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "resolved_absolute_path": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "volume": "X:\\",
+    "directory_exists": true,
+    "directory_attributes": 16822,
+    "is_reparse_point": false,
+    "immediate_parent": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic",
+    "top_level_entry_names": [
+      ".htaccess",
+      "index.php",
+      "license.txt",
+      "mars-runtime",
+      "readme.html",
+      "wp-activate.php",
+      "wp-admin",
+      "wp-blog-header.php",
+      "wp-comments-post.php",
+      "wp-config-sample.php",
+      "wp-config.php",
+      "wp-content",
+      "wp-cron.php",
+      "wp-includes",
+      "wp-links-opml.php",
+      "wp-load.php",
+      "wp-login.php",
+      "wp-mail.php",
+      "wp-settings.php",
+      "wp-signup.php",
+      "wp-trackback.php",
+      "xmlrpc.php"
+    ],
+    "top_level_entries": [
+      {
+        "name": ".htaccess",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "index.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "license.txt",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "mars-runtime",
+        "is_directory": true,
+        "is_symlink": false
+      },
+      {
+        "name": "readme.html",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-activate.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-admin",
+        "is_directory": true,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-blog-header.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-comments-post.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-config-sample.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-config.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-content",
+        "is_directory": true,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-cron.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-includes",
+        "is_directory": true,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-links-opml.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-load.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-login.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-mail.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-settings.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-signup.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "wp-trackback.php",
+        "is_directory": false,
+        "is_symlink": false
+      },
+      {
+        "name": "xmlrpc.php",
+        "is_directory": false,
+        "is_symlink": false
+      }
+    ],
+    "file_count": 4723,
+    "directory_count": 536,
+    "aggregate_size": 121893147,
+    "latest_modified_timestamp": "2026-07-02T12:50:33.386Z",
+    "latest_modified_path": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001\\wp-content",
+    "allowlisted_hashes": [
+      {
+        "filename": "index.php",
+        "exists": true,
+        "size": 405,
+        "mtime_ms": 1782147991588.2925,
+        "sha256": "eea9347b1e266ca5407b92633958c148dbfebea307e511a3a226ea61828e2eba"
+      },
+      {
+        "filename": "license.txt",
+        "exists": true,
+        "size": 19903,
+        "mtime_ms": 1782147991589.2896,
+        "sha256": "49e97f629ce763abb2f8f1f13da74cb5a8a9a72a0e72a7477d1540c98cef5141"
+      },
+      {
+        "filename": "readme.html",
+        "exists": true,
+        "size": 7406,
+        "mtime_ms": 1782147991590.287,
+        "sha256": "491ef4578defac49ddbd8a3df9fa8dfc61bb6d140a7532fd7948b259b07223e2"
+      },
+      {
+        "filename": ".htaccess",
+        "exists": true,
+        "size": 297,
+        "mtime_ms": 1782148237751.3152,
+        "sha256": "45eff7a00d4843e73ae2a97f22e84e8f5946c49d601044e9d3a1f00c204ab5a6"
+      }
+    ],
+    "wp_config_metadata": {
+      "exists": true,
+      "path": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001\\wp-config.php",
+      "safe_fields": {
+        "DB_NAME": "mars_wp_fws0001",
+        "DB_HOST": "127.0.0.1",
+        "table_prefix": "mli_",
+        "WP_DEBUG": "true"
+      },
+      "secret_keys_detected": [
+        "DB_PASSWORD",
+        "AUTH_KEY",
+        "SECURE_AUTH_KEY",
+        "LOGGED_IN_KEY",
+        "NONCE_KEY",
+        "AUTH_SALT",
+        "SECURE_AUTH_SALT",
+        "LOGGED_IN_SALT",
+        "NONCE_SALT"
+      ],
+      "redacted": true,
+      "size": 3569,
+      "mtime_ms": 1782291397030.6765
+    },
+    "walk_truncated": false,
+    "reparse_self_check": {
+      "checked": true,
+      "allowed": true,
+      "logical_path": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+      "physical_path": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+      "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+      "allowed_physical_root": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+      "reparse_points": [],
+      "escape_detected": false,
+      "reason_codes": [],
+      "volume": "X:\\",
+      "logical_under_allowed": true,
+      "physical_under_allowed": true
+    },
+    "audit_files_created": []
+  },
+  "mutation": {
+    "unchanged": true,
+    "violations": [],
+    "diff": {},
+    "verdict": "NO_MUTATION",
+    "reason_codes": [],
+    "emergency_stop": false
+  }
+}

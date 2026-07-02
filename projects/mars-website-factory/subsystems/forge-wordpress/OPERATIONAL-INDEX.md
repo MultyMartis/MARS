@@ -23,7 +23,7 @@ FW-07A — COMPLETE (AG-WP-001 foundation)
 FW-07B — COMPLETE (AG-WP-001 typed operations)
 FW-07C — Safety Preflight — COMPLETE (2026-06-25)
 FW-07C-0 — Enforcement Foundation — IMPLEMENTED_AND_VALIDATED_IN_REPO (2026-06-26)
-FW-07C-1 — Local Read-Only Harness — VALIDATED BASELINE FROZEN (2026-06-26)
+FW-07C-1 — Local Read-Only Harness — X-RUNTIME REVALIDATED (2026-07-02)
 FW-07C-2 — BLOCKED — SEPARATE OPERATOR CHARTER REQUIRED
 Architecture: DOCUMENTED
 Contracts: BASELINE v1
@@ -221,8 +221,25 @@ WPilot does **not** own theme/content architecture.
 
 | Document | Path |
 |----------|------|
-| Baseline freeze | [FW-07C-1-VALIDATED-BASELINE-FREEZE-v1.md](FW-07C-1-VALIDATED-BASELINE-FREEZE-v1.md) |
-| Baseline manifest | [runtime/FW-07C-1-VALIDATED-BASELINE-v1.json](runtime/FW-07C-1-VALIDATED-BASELINE-v1.json) |
+| Baseline freeze (historical) | [FW-07C-1-VALIDATED-BASELINE-FREEZE-v1.md](FW-07C-1-VALIDATED-BASELINE-FREEZE-v1.md) |
+| Baseline manifest (historical) | [runtime/FW-07C-1-VALIDATED-BASELINE-v1.json](runtime/FW-07C-1-VALIDATED-BASELINE-v1.json) |
+| X-runtime revalidation receipt | [reports/FW-07C-1-X-RUNTIME-REVALIDATION-RECEIPT-v1.md](reports/FW-07C-1-X-RUNTIME-REVALIDATION-RECEIPT-v1.md) |
+| X-runtime revalidation manifest | [runtime/FW-07C-1-X-RUNTIME-REVALIDATION-v1.json](runtime/FW-07C-1-X-RUNTIME-REVALIDATION-v1.json) |
+| Authority defect repair | [reports/FW-07C-1-AUTHORITY-DEFECT-REPAIR-REPORT-v1.md](reports/FW-07C-1-AUTHORITY-DEFECT-REPAIR-REPORT-v1.md) |
+
+```text
+FW-07C-1:
+X-RUNTIME REVALIDATED
+
+Capability:
+SYNTHETIC READ-ONLY ONLY
+
+Shpigovsky:
+NOT ADMITTED
+
+FW-07C-2:
+BLOCKED / NOT AUTHORIZED
+```
 
 ---
 
@@ -236,4 +253,4 @@ Return to FP-0002 Shpigovsky frontend work
 
 ---
 
-*Last updated: 2026-06-26 — FW-07C-1 validated baseline frozen.*
+*Last updated: 2026-07-02 — FW-07C-1 X-runtime authority repaired and revalidated.*

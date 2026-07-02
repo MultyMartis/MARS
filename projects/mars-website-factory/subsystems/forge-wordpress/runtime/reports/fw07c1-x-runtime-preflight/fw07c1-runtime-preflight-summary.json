@@ -1,0 +1,106 @@
+{
+  "phase": "FW-07C-1",
+  "site_id": "fws-0001",
+  "started_at": "2026-07-02T13:24:34.041Z",
+  "authority": {
+    "valid": true,
+    "reason_codes": [],
+    "site": {
+      "site_id": "fws-0001",
+      "runtime_id": "MLI-WP-SYN-001",
+      "environment": "LOCAL_SYNTHETIC",
+      "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+      "runtime_class": "synthetic",
+      "mli_manifest": "projects/mars-localhost-infrastructure/manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md"
+    },
+    "resolved_root": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "runtime_parent": "X:\\MARS-Localhost",
+    "exists": true,
+    "is_directory": true,
+    "attributes": 16822
+  },
+  "reparse": {
+    "checked": true,
+    "allowed": true,
+    "logical_path": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "physical_path": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "allowed_physical_root": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "reparse_points": [],
+    "escape_detected": false,
+    "reason_codes": [],
+    "volume": "X:\\",
+    "logical_under_allowed": true,
+    "physical_under_allowed": true
+  },
+  "operations": [
+    {
+      "operation_id": "wp.inspect.runtime",
+      "success": true,
+      "mutation_unchanged": true,
+      "no_write_verdict": true
+    },
+    {
+      "operation_id": "wp.inspect.theme",
+      "success": true,
+      "mutation_unchanged": true,
+      "no_write_verdict": true
+    },
+    {
+      "operation_id": "wp.inspect.plugin_state",
+      "success": true,
+      "mutation_unchanged": true,
+      "no_write_verdict": true
+    },
+    {
+      "operation_id": "wp.inspect.routes",
+      "success": true,
+      "mutation_unchanged": true,
+      "no_write_verdict": true
+    }
+  ],
+  "mutation_checks": [
+    {
+      "unchanged": true,
+      "violations": [],
+      "diff": {},
+      "verdict": "NO_MUTATION",
+      "reason_codes": [],
+      "emergency_stop": false
+    },
+    {
+      "unchanged": true,
+      "violations": [],
+      "diff": {},
+      "verdict": "NO_MUTATION",
+      "reason_codes": [],
+      "emergency_stop": false
+    },
+    {
+      "unchanged": true,
+      "violations": [],
+      "diff": {},
+      "verdict": "NO_MUTATION",
+      "reason_codes": [],
+      "emergency_stop": false
+    },
+    {
+      "unchanged": true,
+      "violations": [],
+      "diff": {},
+      "verdict": "NO_MUTATION",
+      "reason_codes": [],
+      "emergency_stop": false
+    }
+  ],
+  "verdict": "FW07C1_SYNTHETIC_READ_ONLY_VALIDATED",
+  "global_mutation": {
+    "unchanged": true,
+    "violations": [],
+    "diff": {},
+    "verdict": "NO_MUTATION",
+    "reason_codes": [],
+    "emergency_stop": false
+  },
+  "completed_at": "2026-07-02T13:24:39.776Z"
+}

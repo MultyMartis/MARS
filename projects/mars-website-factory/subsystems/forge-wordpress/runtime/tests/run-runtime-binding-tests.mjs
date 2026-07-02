@@ -14,11 +14,12 @@ import { lookupBinding } from '../src/runtime-binding-registry.mjs';
 import { detectMutation } from '../src/mutation-detector.mjs';
 import { captureBaseline } from '../src/baseline-capture.mjs';
 import { RUNTIME_REASON_CODES as RC } from '../src/runtime-reason-codes.mjs';
-import { registerTestSiteAuthority } from '../src/runtime-authority.mjs';
+import { registerTestSiteAuthority, resolveSiteAuthority } from '../src/runtime-authority.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const FIXTURE_ROOT = path.resolve(__dirname, 'fixtures/synthetic-site');
-const FWS_ROOT = 'E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001';
+const FWS_ROOT = 'X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001';
+const SHPIGOVSKY_ROOT = 'X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky';
 const FIXTURE_SITE_ID = 'fw07c1-test-fixture';
 
 registerTestSiteAuthority(FIXTURE_SITE_ID, FIXTURE_ROOT);
@@ -213,8 +214,8 @@ test('runtime parent instead of site root is denied', () => {
     operation_id: 'wp.inspect.runtime',
     site_id: 'fws-0001',
     environment: 'LOCAL_SYNTHETIC',
-    allowed_root: 'E:\\MARS-Localhost',
-    logical_target: 'E:\\MARS-Localhost',
+    allowed_root: 'X:\\MARS-Localhost',
+    logical_target: 'X:\\MARS-Localhost',
     kill_switch_state: 'SITE_ENABLED_READ_ONLY',
   });
   assert(!r.success, 'parent denied');
@@ -226,10 +227,56 @@ test('path outside fws-0001 is denied', () => {
     site_id: 'fws-0001',
     environment: 'LOCAL_SYNTHETIC',
     allowed_root: FWS_ROOT,
-    logical_target: 'E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\other-site',
+    logical_target: 'X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\other-site',
     kill_switch_state: 'SITE_ENABLED_READ_ONLY',
   });
   assert(!r.success, 'outside path denied');
+});
+
+test('legacy E root is rejected by authority', () => {
+  const auth = resolveSiteAuthority('fws-0001', 'E:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001');
+  assert(!auth.valid, 'E root rejected');
+  assert(auth.reason_codes.includes('RT_AUTHORITY_PATH_MISMATCH'), 'path mismatch');
+});
+
+test('legacy D root is rejected by authority', () => {
+  const auth = resolveSiteAuthority('fws-0001', 'D:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001');
+  assert(!auth.valid, 'D root rejected');
+  assert(auth.reason_codes.includes('RT_AUTHORITY_PATH_MISMATCH'), 'path mismatch');
+});
+
+test('shpigovsky root is not admitted for fws-0001', () => {
+  const r = executeRuntimeInspection({
+    operation_id: 'wp.inspect.runtime',
+    site_id: 'fws-0001',
+    environment: 'LOCAL_SYNTHETIC',
+    allowed_root: SHPIGOVSKY_ROOT,
+    logical_target: SHPIGOVSKY_ROOT,
+    kill_switch_state: 'SITE_ENABLED_READ_ONLY',
+  });
+  assert(!r.success, 'shpigovsky denied');
+});
+
+test('canonical X root is admitted when path exists', () => {
+  const auth = resolveSiteAuthority('fws-0001', FWS_ROOT);
+  if (!auth.exists) return;
+  assert(auth.valid === true, `X root admitted — ${auth.reason_codes.join(',')}`);
+});
+
+test('four-operation allowlist unchanged', () => {
+  const proven = [
+    'wp.inspect.runtime',
+    'wp.inspect.theme',
+    'wp.inspect.plugin_state',
+    'wp.inspect.routes',
+  ];
+  for (const op of proven) {
+    const b = lookupBinding(op);
+    assert(b.allowed === true, `${op} still proven`);
+    assert(b.binding.binding_decision === 'BOUND_READ_ONLY_PROVEN', `${op} decision unchanged`);
+  }
+  const deferred = lookupBinding('wp.validate.database');
+  assert(!deferred.allowed, 'deferred ops still blocked');
 });
 
 test('kill switch disabled denies', () => {

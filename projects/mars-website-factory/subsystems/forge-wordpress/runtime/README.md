@@ -86,7 +86,7 @@ No persistent runtime tokens. In-memory only.
 - No shell execution for bound operations
 - No audit files inside runtime site root
 
-External receipts: `C:\MARS Phenix\_reconstruction-control\fw07c1-runtime-preflight\`
+External receipts: `runtime/reports/fw07c1-x-runtime-preflight/` (repository path on `X:\AI MARS`)
 
 ---
 

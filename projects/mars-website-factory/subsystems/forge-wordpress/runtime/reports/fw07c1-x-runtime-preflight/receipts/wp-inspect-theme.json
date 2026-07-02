@@ -1,0 +1,88 @@
+{
+  "operation_id": "wp.inspect.theme",
+  "request": {
+    "site_id": "fws-0001",
+    "environment": "LOCAL_SYNTHETIC",
+    "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "kill_switch_state": "SITE_ENABLED_READ_ONLY"
+  },
+  "admission_decision": "ADMIT",
+  "success": true,
+  "runtime_binding_id": "fws-0001-wp-inspect-theme-v1",
+  "reparse": {
+    "checked": true,
+    "allowed": true,
+    "logical_path": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "physical_path": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "allowed_physical_root": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
+    "reparse_points": [],
+    "escape_detected": false,
+    "reason_codes": [],
+    "volume": "X:\\",
+    "logical_under_allowed": true,
+    "physical_under_allowed": true
+  },
+  "inspection_result": {
+    "operation_id": "wp.inspect.theme",
+    "report_type": "theme_metadata_inspection",
+    "status": "SUCCEEDED",
+    "themes_directory": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001\\wp-content\\themes",
+    "theme_count": 5,
+    "themes": [
+      {
+        "theme_slug": "fws-synthetic",
+        "style_css_exists": true,
+        "theme_name": "FWS Synthetic",
+        "theme_version": "1.0.0"
+      },
+      {
+        "theme_slug": "twentytwentyfive",
+        "style_css_exists": true,
+        "theme_name": "Twenty Twenty-Five",
+        "theme_version": "1.5"
+      },
+      {
+        "theme_slug": "twentytwentyfour",
+        "style_css_exists": true,
+        "theme_name": "Twenty Twenty-Four",
+        "theme_version": "1.5"
+      },
+      {
+        "theme_slug": "twentytwentythree",
+        "style_css_exists": true,
+        "theme_name": "Twenty Twenty-Three",
+        "theme_version": "1.6"
+      },
+      {
+        "theme_slug": "twentytwentytwo",
+        "style_css_exists": true,
+        "theme_name": "Twenty Twenty-Two",
+        "theme_version": "2.1"
+      }
+    ],
+    "read_only": true,
+    "phase": "FW-07C-1"
+  },
+  "baseline_before": {
+    "file_count": 4723,
+    "directory_count": 536,
+    "aggregate_size": 121893147,
+    "latest_modified_timestamp": "2026-07-02T12:50:33.386Z"
+  },
+  "baseline_after": {
+    "file_count": 4723,
+    "directory_count": 536,
+    "aggregate_size": 121893147,
+    "latest_modified_timestamp": "2026-07-02T12:50:33.386Z"
+  },
+  "mutation": {
+    "unchanged": true,
+    "violations": [],
+    "diff": {},
+    "verdict": "NO_MUTATION",
+    "reason_codes": [],
+    "emergency_stop": false
+  },
+  "no_write_verdict": true
+}
