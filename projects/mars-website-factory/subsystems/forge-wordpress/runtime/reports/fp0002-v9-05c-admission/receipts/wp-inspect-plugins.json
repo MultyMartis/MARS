@@ -1,0 +1,67 @@
+{
+  "operation_id": "wp.inspect.plugins",
+  "request": {
+    "site_id": "fp-0002-shpigovsky",
+    "environment": "LOCAL_PROJECT",
+    "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky",
+    "kill_switch_state": "SITE_ENABLED_READ_ONLY"
+  },
+  "admission_decision": "ADMIT",
+  "success": true,
+  "runtime_binding_id": "fp0002-wpilot-plugins-v1",
+  "inspection_result": {
+    "operation_id": "wp.inspect.plugins",
+    "status": "SUCCEEDED",
+    "endpoint": "plugins",
+    "http_status": 200,
+    "data": {
+      "plugins": [
+        {
+          "name": "Advanced Custom Fields",
+          "version": "6.8.4",
+          "plugin_file": "advanced-custom-fields/acf.php"
+        },
+        {
+          "name": "MetaCODE WPilot",
+          "version": "0.3.0",
+          "plugin_file": "metacode-wpilot/metacode-wpilot.php"
+        },
+        {
+          "name": "Shpigovsky Core",
+          "version": "0.1.0",
+          "plugin_file": "shpigovsky-core/shpigovsky-core.php"
+        }
+      ]
+    },
+    "meta": {
+      "request_id": "wpilot-edb30c77-31b9-410c-8d20-c22f750de356",
+      "timestamp_utc": "2026-07-02 16:37:38",
+      "endpoint": "plugins",
+      "auth_state": "authorized",
+      "bridge_state_snapshot": {
+        "state": "token-generated",
+        "bridge_enabled": true,
+        "dev_confirmed": true,
+        "emergency_disabled": false,
+        "write_enabled": false
+      }
+    },
+    "read_only": true,
+    "phase": "V9-05C",
+    "wpilot_build_check": {
+      "build_id": "v0.3.0-rc5",
+      "plugin_file_count": 27,
+      "file_count_matches": true,
+      "verified": true
+    }
+  },
+  "mutation": {
+    "unchanged": true,
+    "violations": [],
+    "diff": {},
+    "verdict": "NO_MUTATION",
+    "reason_codes": [],
+    "emergency_stop": false
+  },
+  "no_write_verdict": true
+}

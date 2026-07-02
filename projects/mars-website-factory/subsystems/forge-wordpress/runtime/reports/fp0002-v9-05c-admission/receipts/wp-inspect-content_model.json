@@ -1,0 +1,32 @@
+{
+  "operation_id": "wp.inspect.content_model",
+  "request": {
+    "site_id": "fp-0002-shpigovsky",
+    "environment": "LOCAL_PROJECT",
+    "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky",
+    "kill_switch_state": "SITE_ENABLED_READ_ONLY"
+  },
+  "admission_decision": "ADMIT",
+  "success": true,
+  "runtime_binding_id": "fp0002-fs-acf-json-v1",
+  "inspection_result": {
+    "operation_id": "wp.inspect.content_model",
+    "report_type": "acf_json_state",
+    "status": "SUCCEEDED",
+    "acf_json_directory": "wp-content/plugins/shpigovsky-core/acf-json",
+    "directory_exists": false,
+    "json_file_count": 0,
+    "json_files": [],
+    "read_only": true,
+    "phase": "V9-05C"
+  },
+  "mutation": {
+    "unchanged": true,
+    "violations": [],
+    "diff": {},
+    "verdict": "NO_MUTATION",
+    "reason_codes": [],
+    "emergency_stop": false
+  },
+  "no_write_verdict": true
+}

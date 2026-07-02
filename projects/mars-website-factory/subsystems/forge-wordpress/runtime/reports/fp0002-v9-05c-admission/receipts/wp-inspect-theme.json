@@ -1,0 +1,92 @@
+{
+  "operation_id": "wp.inspect.theme",
+  "request": {
+    "site_id": "fp-0002-shpigovsky",
+    "environment": "LOCAL_PROJECT",
+    "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky",
+    "kill_switch_state": "SITE_ENABLED_READ_ONLY"
+  },
+  "admission_decision": "ADMIT",
+  "success": true,
+  "runtime_binding_id": "fp0002-fs-theme-inventory-v1",
+  "inspection_result": {
+    "operation_id": "wp.inspect.theme",
+    "report_type": "project_theme_inventory",
+    "status": "SUCCEEDED",
+    "theme_slug": "shpigovsky",
+    "file_count": 12,
+    "files": [
+      {
+        "path": "wp-content/themes/shpigovsky/assets/css/foundation.css",
+        "size": 755,
+        "mtime": "2026-06-23T15:23:11.872Z"
+      },
+      {
+        "path": "wp-content/themes/shpigovsky/footer.php",
+        "size": 873,
+        "mtime": "2026-06-23T15:23:07.637Z"
+      },
+      {
+        "path": "wp-content/themes/shpigovsky/front-page.php",
+        "size": 500,
+        "mtime": "2026-06-23T15:22:57.775Z"
+      },
+      {
+        "path": "wp-content/themes/shpigovsky/functions.php",
+        "size": 432,
+        "mtime": "2026-06-23T15:22:30.317Z"
+      },
+      {
+        "path": "wp-content/themes/shpigovsky/header.php",
+        "size": 841,
+        "mtime": "2026-06-23T15:23:02.585Z"
+      },
+      {
+        "path": "wp-content/themes/shpigovsky/inc/assets.php",
+        "size": 477,
+        "mtime": "2026-06-23T15:22:36.581Z"
+      },
+      {
+        "path": "wp-content/themes/shpigovsky/inc/setup.php",
+        "size": 829,
+        "mtime": "2026-06-23T15:22:34.291Z"
+      },
+      {
+        "path": "wp-content/themes/shpigovsky/index.php",
+        "size": 786,
+        "mtime": "2026-06-23T15:22:55.066Z"
+      },
+      {
+        "path": "wp-content/themes/shpigovsky/languages/.gitkeep",
+        "size": 0,
+        "mtime": "2026-06-23T15:23:17.288Z"
+      },
+      {
+        "path": "wp-content/themes/shpigovsky/README.md",
+        "size": 672,
+        "mtime": "2026-06-23T15:23:15.723Z"
+      },
+      {
+        "path": "wp-content/themes/shpigovsky/style.css",
+        "size": 432,
+        "mtime": "2026-06-23T15:22:27.488Z"
+      },
+      {
+        "path": "wp-content/themes/shpigovsky/template-parts/.gitkeep",
+        "size": 0,
+        "mtime": "2026-06-23T15:23:16.535Z"
+      }
+    ],
+    "read_only": true,
+    "phase": "V9-05C"
+  },
+  "mutation": {
+    "unchanged": true,
+    "violations": [],
+    "diff": {},
+    "verdict": "NO_MUTATION",
+    "reason_codes": [],
+    "emergency_stop": false
+  },
+  "no_write_verdict": true
+}

@@ -1,0 +1,98 @@
+{
+  "mapping_id": "fp-0002-failure-mappings-v1",
+  "version": "1.0.0",
+  "site_id": "fp-0002-shpigovsky",
+  "mappings": [
+    {
+      "condition": "token_missing",
+      "wpilot_code": "AUTH_MISSING",
+      "forge_failure": "RT_WPILOT_TOKEN_MISSING",
+      "fail_closed": true
+    },
+    {
+      "condition": "token_invalid",
+      "wpilot_code": "AUTH_INVALID",
+      "forge_failure": "RT_WPILOT_TOKEN_INVALID",
+      "fail_closed": true
+    },
+    {
+      "condition": "bridge_disabled",
+      "wpilot_code": "BRIDGE_DISABLED",
+      "forge_failure": "RT_WPILOT_BRIDGE_DISABLED",
+      "fail_closed": true
+    },
+    {
+      "condition": "dev_not_confirmed",
+      "wpilot_code": "DEV_NOT_CONFIRMED",
+      "forge_failure": "RT_WPILOT_DEV_NOT_CONFIRMED",
+      "fail_closed": true
+    },
+    {
+      "condition": "emergency_disabled",
+      "wpilot_code": "EMERGENCY_DISABLED",
+      "forge_failure": "RT_WPILOT_EMERGENCY_DISABLED",
+      "fail_closed": true
+    },
+    {
+      "condition": "write_gate_unexpectedly_enabled",
+      "forge_failure": "RT_WPILOT_WRITE_GATE_ENABLED",
+      "fail_closed": true
+    },
+    {
+      "condition": "site_identity_mismatch",
+      "forge_failure": "RT_PROJECT_IDENTITY_MISMATCH",
+      "fail_closed": true
+    },
+    {
+      "condition": "allowed_root_mismatch",
+      "forge_failure": "RT_AUTHORITY_PATH_MISMATCH",
+      "fail_closed": true
+    },
+    {
+      "condition": "domain_mismatch",
+      "forge_failure": "RT_PROJECT_DOMAIN_MISMATCH",
+      "fail_closed": true
+    },
+    {
+      "condition": "wpilot_build_mismatch",
+      "forge_failure": "RT_WPILOT_BUILD_MISMATCH",
+      "fail_closed": true
+    },
+    {
+      "condition": "endpoint_missing",
+      "http_status": 404,
+      "forge_failure": "RT_WPILOT_ENDPOINT_MISSING",
+      "fail_closed": true
+    },
+    {
+      "condition": "response_schema_mismatch",
+      "forge_failure": "RT_RESULT_SCHEMA_INVALID",
+      "fail_closed": true
+    },
+    {
+      "condition": "http_failure",
+      "forge_failure": "RT_WPILOT_HTTP_FAILURE",
+      "fail_closed": true
+    },
+    {
+      "condition": "timeout",
+      "forge_failure": "RT_WPILOT_TIMEOUT",
+      "fail_closed": true
+    },
+    {
+      "condition": "unexpected_mutation",
+      "forge_failure": "RT_MUTATION_DETECTED",
+      "fail_closed": true
+    },
+    {
+      "condition": "reparse_escape",
+      "forge_failure": "RT_REPARSE_ESCAPE_DETECTED",
+      "fail_closed": true
+    },
+    {
+      "condition": "forbidden_write_endpoint",
+      "forge_failure": "RT_WPILOT_WRITE_ENDPOINT_DENIED",
+      "fail_closed": true
+    }
+  ]
+}

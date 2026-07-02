@@ -1,7 +1,7 @@
 # FP-0002 V9 Operational Status
 
-**Updated:** 2026-07-02 (local access + WPilot read-only bridge on shpigovsky.test)  
-**Status:** `FP0002_V9_05B_PRE_IMPLEMENTATION_CHECKPOINT_COMPLETE`
+**Updated:** 2026-07-02 (V9-05C read-only Forge project admission PASS)  
+**Status:** `FP0002_V9_05C_READ_ONLY_PROJECT_ADMISSION_PASS`
 
 ## Authority model
 
@@ -70,9 +70,18 @@ Phase **07C-B** Storage package — `SUPERSEDED_FAILED_STATIC_PACKAGING_NOT_FOR_
 - Operator wp-admin inspection: **PENDING**
 - WordPress implementation: **not started**
 
+## V9-05C Read-Only Project Admission (complete)
+
+- Status: `FP0002_V9_05C_READ_ONLY_PROJECT_ADMISSION_PASS`
+- Gate: `forge-intake/validation/FP-0002-V9-05C-READ-ONLY-PROJECT-ADMISSION-GATE-v1.md`
+- Forge receipt: `projects/mars-website-factory/subsystems/forge-wordpress/projects/fp-0002/FP-0002-V9-05C-READ-ONLY-PROJECT-ADMISSION-RECEIPT-v1.md`
+- Admission mode: **READ_ONLY** — 11 operations admitted, 0 mutations
+- FW-07C-2: **NOT AUTHORIZED**
+- WordPress implementation: **not started**
+
 ## Next phase
 
-**V9-05C — Read-Only Project Admission**
+**FW-07C-2 — Controlled Mutation Charter** (separate operator authorization required)
 
 ## V9-04 Forge Intake Pack (complete)
 

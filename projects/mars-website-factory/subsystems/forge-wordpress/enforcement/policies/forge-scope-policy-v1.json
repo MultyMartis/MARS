@@ -12,6 +12,12 @@
       "allowed_risk_classes": [],
       "admission_default": "DENY"
     },
+    "LOCAL_PROJECT": {
+      "allowed_risk_classes": ["R0"],
+      "requires_full_validation": true,
+      "admission_default": "CONDITIONAL",
+      "notes": "V9-05C project read-only admission — exact site binding required"
+    },
     "REMOTE_DEV": {
       "allowed_risk_classes": [],
       "admission_default": "DENY"
@@ -32,6 +38,18 @@
       "class": "synthetic",
       "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\synthetic\\fws-0001",
       "environment": "LOCAL_SYNTHETIC"
+    }
+  ],
+  "registered_project_sites": [
+    {
+      "site_id": "fp-0002-shpigovsky",
+      "project_id": "FP-0002",
+      "runtime_id": "MLI-WP-FP0002-LOCAL",
+      "class": "project",
+      "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky",
+      "environment": "LOCAL_PROJECT",
+      "admission_mode": "READ_ONLY",
+      "write_authorized": false
     }
   ],
   "phase_execution_policy": {

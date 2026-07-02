@@ -1,0 +1,237 @@
+{
+  "operation_id": "wp.inspect.pages",
+  "request": {
+    "site_id": "fp-0002-shpigovsky",
+    "environment": "LOCAL_PROJECT",
+    "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky",
+    "kill_switch_state": "SITE_ENABLED_READ_ONLY"
+  },
+  "admission_decision": "ADMIT",
+  "success": true,
+  "runtime_binding_id": "fp0002-wpilot-pages-v1",
+  "inspection_result": {
+    "operation_id": "wp.inspect.pages",
+    "status": "SUCCEEDED",
+    "endpoint": "pages",
+    "http_status": 200,
+    "data": {
+      "items": [
+        {
+          "id": 3,
+          "title": "Политика конфиденциальности",
+          "status": "draft",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/?page_id=3",
+          "has_wpbakery": false
+        },
+        {
+          "id": 4,
+          "title": "Главная",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 5,
+          "title": "Услуги",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/uslugi/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 6,
+          "title": "Зависимости",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/uslugi/zavisimosti/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 7,
+          "title": "Психическое здоровье",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 8,
+          "title": "Расстройства пищевого поведения",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 9,
+          "title": "Генотипирование",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/uslugi/genotipirovanie/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 10,
+          "title": "Специалисты",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/specyalisty/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 11,
+          "title": "О центре",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/o-centre/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 12,
+          "title": "О нас",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/o-centre/o-nas/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 13,
+          "title": "Программа лечения",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/o-centre/programma-lecheniya/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 14,
+          "title": "Галерея о доме",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/o-centre/galereya-o-dome/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 15,
+          "title": "Специалистам",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/o-centre/specialistam/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 16,
+          "title": "Родственникам",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/o-centre/rodstvennikam/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 17,
+          "title": "Интервью и СМИ",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/o-centre/intervyu-i-smi/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 18,
+          "title": "Отзывы",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/otzyvy/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 19,
+          "title": "Статьи",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/blog/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 20,
+          "title": "Контакты",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/kontakty/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 21,
+          "title": "Правовая информация",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/pravovaya-informaciya-pilzovatelyu/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 22,
+          "title": "Пользовательское соглашение",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/user-agreement/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 23,
+          "title": "Согласие на обработку персональных данных",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/consent-personal-data/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 24,
+          "title": "Политика Cookie-файлов",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/cookie-files-policy/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 25,
+          "title": "Политика конфиденциальности (системная)",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/privacy-policy-page/",
+          "has_wpbakery": false
+        }
+      ],
+      "limit": 50
+    },
+    "meta": {
+      "request_id": "wpilot-e2971657-9fe2-4b4b-981a-c6c3259a2fdc",
+      "timestamp_utc": "2026-07-02 16:37:40",
+      "endpoint": "pages",
+      "auth_state": "authorized",
+      "bridge_state_snapshot": {
+        "state": "token-generated",
+        "bridge_enabled": true,
+        "dev_confirmed": true,
+        "emergency_disabled": false,
+        "write_enabled": false
+      }
+    },
+    "read_only": true,
+    "phase": "V9-05C",
+    "wpilot_build_check": {
+      "build_id": "v0.3.0-rc5",
+      "plugin_file_count": 27,
+      "file_count_matches": true,
+      "verified": true
+    }
+  },
+  "mutation": {
+    "unchanged": true,
+    "violations": [],
+    "diff": {},
+    "verdict": "NO_MUTATION",
+    "reason_codes": [],
+    "emergency_stop": false
+  },
+  "no_write_verdict": true
+}

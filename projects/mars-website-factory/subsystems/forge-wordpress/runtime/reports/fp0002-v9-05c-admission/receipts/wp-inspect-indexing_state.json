@@ -1,0 +1,56 @@
+{
+  "operation_id": "wp.inspect.indexing_state",
+  "request": {
+    "site_id": "fp-0002-shpigovsky",
+    "environment": "LOCAL_PROJECT",
+    "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky",
+    "kill_switch_state": "SITE_ENABLED_READ_ONLY"
+  },
+  "admission_decision": "ADMIT",
+  "success": true,
+  "runtime_binding_id": "fp0002-wpilot-indexing-state-v1",
+  "inspection_result": {
+    "operation_id": "wp.inspect.indexing_state",
+    "status": "SUCCEEDED",
+    "endpoint": "indexing-state",
+    "http_status": 200,
+    "data": {
+      "blog_public": "0",
+      "robots_txt_available": true,
+      "discourage_search_engines": true,
+      "notes": [
+        "robots_txt_available is a local WordPress routing signal, not an external crawl."
+      ]
+    },
+    "meta": {
+      "request_id": "wpilot-023afed4-67bc-4ea4-aa40-f73473dc9ab1",
+      "timestamp_utc": "2026-07-02 16:37:47",
+      "endpoint": "indexing-state",
+      "auth_state": "authorized",
+      "bridge_state_snapshot": {
+        "state": "token-generated",
+        "bridge_enabled": true,
+        "dev_confirmed": true,
+        "emergency_disabled": false,
+        "write_enabled": false
+      }
+    },
+    "read_only": true,
+    "phase": "V9-05C",
+    "wpilot_build_check": {
+      "build_id": "v0.3.0-rc5",
+      "plugin_file_count": 27,
+      "file_count_matches": true,
+      "verified": true
+    }
+  },
+  "mutation": {
+    "unchanged": true,
+    "violations": [],
+    "diff": {},
+    "verdict": "NO_MUTATION",
+    "reason_codes": [],
+    "emergency_stop": false
+  },
+  "no_write_verdict": true
+}

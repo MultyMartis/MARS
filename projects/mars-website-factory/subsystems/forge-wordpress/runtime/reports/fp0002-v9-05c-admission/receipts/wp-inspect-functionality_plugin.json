@@ -1,0 +1,52 @@
+{
+  "operation_id": "wp.inspect.functionality_plugin",
+  "request": {
+    "site_id": "fp-0002-shpigovsky",
+    "environment": "LOCAL_PROJECT",
+    "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky",
+    "kill_switch_state": "SITE_ENABLED_READ_ONLY"
+  },
+  "admission_decision": "ADMIT",
+  "success": true,
+  "runtime_binding_id": "fp0002-fs-project-plugin-v1",
+  "inspection_result": {
+    "operation_id": "wp.inspect.functionality_plugin",
+    "report_type": "project_plugin_inventory",
+    "status": "SUCCEEDED",
+    "plugin_slug": "shpigovsky-core",
+    "file_count": 4,
+    "files": [
+      {
+        "path": "wp-content/plugins/shpigovsky-core/includes/class-bootstrap.php",
+        "size": 792,
+        "mtime": "2026-06-23T15:23:30.559Z"
+      },
+      {
+        "path": "wp-content/plugins/shpigovsky-core/index.php",
+        "size": 30,
+        "mtime": "2026-06-23T15:23:31.259Z"
+      },
+      {
+        "path": "wp-content/plugins/shpigovsky-core/README.md",
+        "size": 191,
+        "mtime": "2026-06-23T15:23:32.836Z"
+      },
+      {
+        "path": "wp-content/plugins/shpigovsky-core/shpigovsky-core.php",
+        "size": 1608,
+        "mtime": "2026-06-23T15:23:27.051Z"
+      }
+    ],
+    "read_only": true,
+    "phase": "V9-05C"
+  },
+  "mutation": {
+    "unchanged": true,
+    "violations": [],
+    "diff": {},
+    "verdict": "NO_MUTATION",
+    "reason_codes": [],
+    "emergency_stop": false
+  },
+  "no_write_verdict": true
+}

@@ -1,0 +1,41 @@
+{
+  "operation_id": "wp.inspect.runtime",
+  "request": {
+    "site_id": "fp-0002-shpigovsky",
+    "environment": "LOCAL_PROJECT",
+    "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky",
+    "kill_switch_state": "SITE_ENABLED_READ_ONLY"
+  },
+  "admission_decision": "ADMIT",
+  "success": true,
+  "runtime_binding_id": "fp0002-fs-mu-plugin-v1",
+  "inspection_result": {
+    "operation_id": "wp.inspect.runtime",
+    "report_type": "mu_plugin_and_metadata",
+    "status": "SUCCEEDED",
+    "mu_plugin": {
+      "exists": true,
+      "sha256": "103bff87a685fdf6ef65072b026eb78c90bdf0a10046e2ae40a24edd81e697ad",
+      "size": 1580,
+      "mtime": "2026-06-24T08:56:37.080Z"
+    },
+    "wp_version": "7.0",
+    "wp_config_safe_fields": {
+      "DB_NAME": "mars_wp_fp0002",
+      "DB_HOST": "127.0.0.1",
+      "table_prefix": "fp02_",
+      "WP_DEBUG": "true"
+    },
+    "read_only": true,
+    "phase": "V9-05C"
+  },
+  "mutation": {
+    "unchanged": true,
+    "violations": [],
+    "diff": {},
+    "verdict": "NO_MUTATION",
+    "reason_codes": [],
+    "emergency_stop": false
+  },
+  "no_write_verdict": true
+}

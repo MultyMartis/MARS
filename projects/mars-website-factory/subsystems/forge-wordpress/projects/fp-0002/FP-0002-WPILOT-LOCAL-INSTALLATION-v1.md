@@ -60,7 +60,7 @@ Evidence: [wpilot-fp0002-dev-runtime-reconciliation-2026-07-02.md](../../../../w
 
 - No WPilot write proof in this task
 - No production use
-- No Shpigovsky Forge admission
+- Shpigovsky Forge admission: **V9-05C READ_ONLY** (see FP-0002-V9-05C-READ-ONLY-PROJECT-ADMISSION-RECEIPT-v1.md)
 - No FW-07C-2
 - WordPress implementation: **NOT STARTED**
 - **Shpigovsky Core:** project foundation — no WPilot bridge duplication

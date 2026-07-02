@@ -16,6 +16,21 @@ const _registeredSites = {
     runtime_class: 'synthetic',
     mli_manifest: 'projects/mars-localhost-infrastructure/manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md',
   }),
+  'fp-0002-shpigovsky': Object.freeze({
+    site_id: 'fp-0002-shpigovsky',
+    project_id: 'FP-0002',
+    runtime_id: 'MLI-WP-FP0002-LOCAL',
+    environment: 'LOCAL_PROJECT',
+    allowed_root: 'X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky',
+    domain: 'http://shpigovsky.test/',
+    runtime_class: 'project',
+    admission_mode: 'READ_ONLY',
+    write_authorized: false,
+    control_bridge: 'WPilot',
+    control_bridge_build: 'v0.3.0-rc5',
+    checkpoint_identity: 'foundation-002-v9-pre-implementation',
+    mli_manifest: 'projects/mars-website-factory/subsystems/forge-wordpress/projects/fp-0002/README.md',
+  }),
 };
 
 export const REGISTERED_SITES = _registeredSites;

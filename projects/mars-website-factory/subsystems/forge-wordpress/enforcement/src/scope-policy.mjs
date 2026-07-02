@@ -24,6 +24,7 @@ export function resetScopePolicyCache() {
 
 export const VALID_ENVIRONMENTS = Object.freeze([
   'LOCAL_SYNTHETIC',
+  'LOCAL_PROJECT',
   'LOCAL_PROJECT_RUNTIME',
   'REMOTE_DEV',
   'REMOTE_TEST',
@@ -36,7 +37,9 @@ export function isKnownEnvironment(environment) {
 
 export function getRegisteredSite(siteId) {
   const policy = loadScopePolicy();
-  return (policy.registered_synthetic_sites || []).find((s) => s.site_id === siteId) ?? null;
+  const synthetic = (policy.registered_synthetic_sites || []).find((s) => s.site_id === siteId);
+  if (synthetic) return synthetic;
+  return (policy.registered_project_sites || []).find((s) => s.site_id === siteId) ?? null;
 }
 
 /**

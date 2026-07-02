@@ -1,0 +1,262 @@
+{
+  "phase": "V9-05C",
+  "site_id": "fp-0002-shpigovsky",
+  "project_id": "FP-0002",
+  "started_at": "2026-07-02T16:37:27.015Z",
+  "admission_profile": {
+    "mode": "READ_ONLY",
+    "write_authorized": false,
+    "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky",
+    "domain": "http://shpigovsky.test/"
+  },
+  "authority": {
+    "valid": true,
+    "reason_codes": [],
+    "resolved_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky",
+    "exists": true
+  },
+  "reparse": {
+    "checked": true,
+    "allowed": true,
+    "logical_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky",
+    "physical_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky",
+    "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky",
+    "allowed_physical_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky",
+    "reparse_points": [],
+    "escape_detected": false,
+    "reason_codes": [],
+    "volume": "X:\\",
+    "logical_under_allowed": true,
+    "physical_under_allowed": true
+  },
+  "wpilot_pre_admission": {
+    "endpoints_passed": 8,
+    "endpoints_total": 8,
+    "write_enabled_unexpected": false,
+    "probes": [
+      {
+        "endpoint": "ping",
+        "ok": true,
+        "http_status": 200,
+        "write_enabled": null
+      },
+      {
+        "endpoint": "site-info",
+        "ok": true,
+        "http_status": 200,
+        "write_enabled": null
+      },
+      {
+        "endpoint": "themes",
+        "ok": true,
+        "http_status": 200,
+        "write_enabled": null
+      },
+      {
+        "endpoint": "plugins",
+        "ok": true,
+        "http_status": 200,
+        "write_enabled": null
+      },
+      {
+        "endpoint": "pages",
+        "ok": true,
+        "http_status": 200,
+        "write_enabled": null
+      },
+      {
+        "endpoint": "indexing-state",
+        "ok": true,
+        "http_status": 200,
+        "write_enabled": null
+      },
+      {
+        "endpoint": "page",
+        "ok": true,
+        "http_status": 200,
+        "write_enabled": null
+      },
+      {
+        "endpoint": "page-structure",
+        "ok": true,
+        "http_status": 200,
+        "write_enabled": null
+      }
+    ]
+  },
+  "wpilot_build": {
+    "build_id": "v0.3.0-rc5",
+    "plugin_file_count": 27,
+    "file_count_matches": true,
+    "verified": true
+  },
+  "operations": [
+    {
+      "operation_id": "wp.inspect.site_info",
+      "success": true,
+      "mutation_unchanged": true,
+      "no_write_verdict": true
+    },
+    {
+      "operation_id": "wp.inspect.themes",
+      "success": true,
+      "mutation_unchanged": true,
+      "no_write_verdict": true
+    },
+    {
+      "operation_id": "wp.inspect.plugins",
+      "success": true,
+      "mutation_unchanged": true,
+      "no_write_verdict": true
+    },
+    {
+      "operation_id": "wp.inspect.pages",
+      "success": true,
+      "mutation_unchanged": true,
+      "no_write_verdict": true
+    },
+    {
+      "operation_id": "wp.inspect.page",
+      "success": true,
+      "mutation_unchanged": true,
+      "no_write_verdict": true
+    },
+    {
+      "operation_id": "wp.inspect.page_structure",
+      "success": true,
+      "mutation_unchanged": true,
+      "no_write_verdict": true
+    },
+    {
+      "operation_id": "wp.inspect.indexing_state",
+      "success": true,
+      "mutation_unchanged": true,
+      "no_write_verdict": true
+    },
+    {
+      "operation_id": "wp.inspect.theme",
+      "success": true,
+      "mutation_unchanged": true,
+      "no_write_verdict": true
+    },
+    {
+      "operation_id": "wp.inspect.functionality_plugin",
+      "success": true,
+      "mutation_unchanged": true,
+      "no_write_verdict": true
+    },
+    {
+      "operation_id": "wp.inspect.content_model",
+      "success": true,
+      "mutation_unchanged": true,
+      "no_write_verdict": true
+    },
+    {
+      "operation_id": "wp.inspect.runtime",
+      "success": true,
+      "mutation_unchanged": true,
+      "no_write_verdict": true
+    }
+  ],
+  "mutation_checks": [
+    {
+      "unchanged": true,
+      "violations": [],
+      "diff": {},
+      "verdict": "NO_MUTATION",
+      "reason_codes": [],
+      "emergency_stop": false
+    },
+    {
+      "unchanged": true,
+      "violations": [],
+      "diff": {},
+      "verdict": "NO_MUTATION",
+      "reason_codes": [],
+      "emergency_stop": false
+    },
+    {
+      "unchanged": true,
+      "violations": [],
+      "diff": {},
+      "verdict": "NO_MUTATION",
+      "reason_codes": [],
+      "emergency_stop": false
+    },
+    {
+      "unchanged": true,
+      "violations": [],
+      "diff": {},
+      "verdict": "NO_MUTATION",
+      "reason_codes": [],
+      "emergency_stop": false
+    },
+    {
+      "unchanged": true,
+      "violations": [],
+      "diff": {},
+      "verdict": "NO_MUTATION",
+      "reason_codes": [],
+      "emergency_stop": false
+    },
+    {
+      "unchanged": true,
+      "violations": [],
+      "diff": {},
+      "verdict": "NO_MUTATION",
+      "reason_codes": [],
+      "emergency_stop": false
+    },
+    {
+      "unchanged": true,
+      "violations": [],
+      "diff": {},
+      "verdict": "NO_MUTATION",
+      "reason_codes": [],
+      "emergency_stop": false
+    },
+    {
+      "unchanged": true,
+      "violations": [],
+      "diff": {},
+      "verdict": "NO_MUTATION",
+      "reason_codes": [],
+      "emergency_stop": false
+    },
+    {
+      "unchanged": true,
+      "violations": [],
+      "diff": {},
+      "verdict": "NO_MUTATION",
+      "reason_codes": [],
+      "emergency_stop": false
+    },
+    {
+      "unchanged": true,
+      "violations": [],
+      "diff": {},
+      "verdict": "NO_MUTATION",
+      "reason_codes": [],
+      "emergency_stop": false
+    },
+    {
+      "unchanged": true,
+      "violations": [],
+      "diff": {},
+      "verdict": "NO_MUTATION",
+      "reason_codes": [],
+      "emergency_stop": false
+    }
+  ],
+  "verdict": "PASS",
+  "global_mutation": {
+    "unchanged": true,
+    "violations": [],
+    "diff": {},
+    "verdict": "NO_MUTATION",
+    "reason_codes": [],
+    "emergency_stop": false
+  },
+  "completed_at": "2026-07-02T16:37:53.383Z",
+  "admitted_operations": 11
+}

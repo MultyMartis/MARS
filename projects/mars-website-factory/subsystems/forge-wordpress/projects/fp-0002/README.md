@@ -1,7 +1,7 @@
 # Forge WordPress — FP-0002 Project Lane
 
 **Project ID:** FP-0002 — Шпиговский  
-**Stage:** V9-05B complete — V9-05C read-only project admission next
+**Stage:** V9-05C complete — FW-07C-2 mutation charter next
 
 | Document | Purpose |
 |----------|---------|

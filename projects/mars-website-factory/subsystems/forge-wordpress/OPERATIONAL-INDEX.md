@@ -44,7 +44,7 @@ Operator WV6: PENDING
 Direct local domain: PASS (FP-0002 — FW-06A.1)
 Synthetic source: TRACKED (Git whitelist)
 Agent registration: REGISTERED (AG-WP-001 — SYNTHETIC READ-ONLY CAPABILITY ONLY; NOT PRODUCTION READY)
-Client pilot: NOT STARTED — WordPress foundation ADOPTED; implementation LOCKED until V9-05B + V9-05C + FW-07C-2
+Client pilot: NOT STARTED — WordPress foundation ADOPTED; V9-05C read-only admission PASS; implementation LOCKED until FW-07C-2
 ```
 
 | Field | Value |
@@ -213,7 +213,7 @@ WPilot does **not** own theme/content architecture.
 
 ## First probable pilot
 
-**FP-0002 — Shpigovsky.ru** — FW-06A foundation **READY**; V9-05A intake **APPROVED**; foundation **ADOPTED**; implementation **LOCKED** until V9-05B + V9-05C + FW-07C-2; see [projects/fp-0002/](projects/fp-0002/).
+**FP-0002 — Shpigovsky.ru** — FW-06A foundation **READY**; V9-05A intake **APPROVED**; foundation **ADOPTED**; V9-05C read-only admission **PASS**; implementation **LOCKED** until FW-07C-2; see [projects/fp-0002/](projects/fp-0002/).
 
 ---
 
@@ -232,10 +232,10 @@ FW-07C-1:
 X-RUNTIME REVALIDATED
 
 Capability:
-SYNTHETIC READ-ONLY ONLY
+SYNTHETIC READ-ONLY (fws-0001) + PROJECT READ-ONLY (fp-0002-shpigovsky)
 
 Shpigovsky:
-NOT ADMITTED
+READ_ONLY ADMITTED (V9-05C — 2026-07-02)
 
 FW-07C-2:
 BLOCKED / NOT AUTHORIZED
@@ -246,11 +246,9 @@ BLOCKED / NOT AUTHORIZED
 ## Next authorized stage
 
 ```text
-V9-05B — Pre-Implementation Runtime Checkpoint (FP-0002)
-V9-05C — Shpigovsky Read-Only Admission — NOT STARTED
-FW-07C-2 — BLOCKED — SEPARATE OPERATOR CHARTER REQUIRED
+FW-07C-2 — BLOCKED — SEPARATE OPERATOR CHARTER REQUIRED (FP-0002 mutation capability)
 ```
 
 ---
 
-*Last updated: 2026-07-02 — V9-05A approved frontend intake and foundation adoption.*
+*Last updated: 2026-07-02 — V9-05C Shpigovsky read-only project admission PASS.*

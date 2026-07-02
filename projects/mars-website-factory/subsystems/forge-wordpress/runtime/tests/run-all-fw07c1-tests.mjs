@@ -10,6 +10,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const tests = [
   'run-reparse-boundary-tests.mjs',
   'run-runtime-binding-tests.mjs',
+  'run-fp0002-admission-tests.mjs',
 ];
 
 let allPassed = true;

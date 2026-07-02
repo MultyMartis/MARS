@@ -1,0 +1,59 @@
+{
+  "operation_id": "wp.inspect.page_structure",
+  "request": {
+    "site_id": "fp-0002-shpigovsky",
+    "environment": "LOCAL_PROJECT",
+    "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky",
+    "kill_switch_state": "SITE_ENABLED_READ_ONLY"
+  },
+  "admission_decision": "ADMIT",
+  "success": true,
+  "runtime_binding_id": "fp0002-wpilot-page-structure-v1",
+  "inspection_result": {
+    "operation_id": "wp.inspect.page_structure",
+    "status": "SUCCEEDED",
+    "endpoint": "pages/3/structure",
+    "http_status": 200,
+    "data": {
+      "id": 3,
+      "has_wpbakery": false,
+      "shortcode_counts": [],
+      "basic_integrity": {
+        "vc_row_open_count": 0,
+        "vc_row_close_count": 0,
+        "vc_row_balanced": true
+      },
+      "warnings": []
+    },
+    "meta": {
+      "request_id": "wpilot-99212b42-1d70-496e-8f0d-556989d1ec2d",
+      "timestamp_utc": "2026-07-02 16:37:45",
+      "endpoint": "page-structure",
+      "auth_state": "authorized",
+      "bridge_state_snapshot": {
+        "state": "token-generated",
+        "bridge_enabled": true,
+        "dev_confirmed": true,
+        "emergency_disabled": false,
+        "write_enabled": false
+      }
+    },
+    "read_only": true,
+    "phase": "V9-05C",
+    "wpilot_build_check": {
+      "build_id": "v0.3.0-rc5",
+      "plugin_file_count": 27,
+      "file_count_matches": true,
+      "verified": true
+    }
+  },
+  "mutation": {
+    "unchanged": true,
+    "violations": [],
+    "diff": {},
+    "verdict": "NO_MUTATION",
+    "reason_codes": [],
+    "emergency_stop": false
+  },
+  "no_write_verdict": true
+}

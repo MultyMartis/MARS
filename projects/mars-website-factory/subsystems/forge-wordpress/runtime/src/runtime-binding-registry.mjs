@@ -1,5 +1,5 @@
 /**
- * FW-07C-1 — Runtime binding registry loader.
+ * FW-07C-1 / V9-05C — Runtime binding registry loader (site-aware).
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -10,7 +10,12 @@ import { REGISTERED_SITES } from './runtime-authority.mjs';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const BINDINGS_DIR = path.resolve(__dirname, '../bindings');
 
-let cachedBindings = null;
+const SITE_BINDING_FILES = Object.freeze({
+  'fws-0001': 'fws-0001-readonly-bindings-v1.json',
+  'fp-0002-shpigovsky': 'fp-0002-readonly-bindings-v1.json',
+});
+
+const registryCache = new Map();
 
 export const BINDING_DECISIONS = Object.freeze([
   'BOUND_READ_ONLY_PROVEN',
@@ -21,6 +26,10 @@ export const BINDING_DECISIONS = Object.freeze([
   'REJECT',
   'UNBOUND',
 ]);
+
+export function getBindingFileForSite(siteId) {
+  return SITE_BINDING_FILES[siteId] ?? null;
+}
 
 export function loadBindingRegistry(bindingFile = 'fws-0001-readonly-bindings-v1.json') {
   const filePath = path.join(BINDINGS_DIR, bindingFile);
@@ -37,20 +46,26 @@ export function loadBindingRegistry(bindingFile = 'fws-0001-readonly-bindings-v1
   });
 }
 
-export function getBindingRegistry() {
-  if (!cachedBindings) cachedBindings = loadBindingRegistry();
-  return cachedBindings;
+export function getBindingRegistry(siteId = 'fws-0001') {
+  const bindingFile = getBindingFileForSite(siteId);
+  if (!bindingFile) {
+    return loadBindingRegistry();
+  }
+  if (!registryCache.has(siteId)) {
+    registryCache.set(siteId, loadBindingRegistry(bindingFile));
+  }
+  return registryCache.get(siteId);
 }
 
 export function resetBindingRegistryCache() {
-  cachedBindings = null;
+  registryCache.clear();
 }
 
 /**
  * Lookup binding for operation — fail-closed for unproven bindings.
  */
 export function lookupBinding(operationId, siteId = 'fws-0001', options = {}) {
-  const registry = options.registry ?? getBindingRegistry();
+  const registry = options.registry ?? getBindingRegistry(siteId);
   const binding = registry.byOperationId.get(operationId);
 
   if (!binding) {
@@ -102,4 +117,4 @@ export function lookupBinding(operationId, siteId = 'fws-0001', options = {}) {
   };
 }
 
-export default { getBindingRegistry, lookupBinding, loadBindingRegistry };
+export default { getBindingRegistry, lookupBinding, loadBindingRegistry, getBindingFileForSite };

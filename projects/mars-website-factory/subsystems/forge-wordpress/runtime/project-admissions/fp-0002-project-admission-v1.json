@@ -1,0 +1,45 @@
+{
+  "admission_id": "fp-0002-v9-05c-readonly-admission-v1",
+  "version": "1.0.0",
+  "phase": "V9-05C",
+  "site_id": "fp-0002-shpigovsky",
+  "project_id": "FP-0002",
+  "environment": "LOCAL_PROJECT",
+  "platform": "wordpress",
+  "domain": "http://shpigovsky.test/",
+  "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky",
+  "runtime_id": "MLI-WP-FP0002-LOCAL",
+  "control_bridge": "WPilot",
+  "control_bridge_build": "v0.3.0-rc5",
+  "control_bridge_plugin_slug": "metacode-wpilot",
+  "admission_mode": "READ_ONLY",
+  "write_authorized": false,
+  "production_allowed": false,
+  "checkpoint_identity": "foundation-002-v9-pre-implementation",
+  "token_reference": "X:\\AI MARS\\local\\tokens\\wpilot-local-shpigovsky.token",
+  "expected_identity": {
+    "site_title_contains": "Шпиговский",
+    "database": "mars_wp_fp0002",
+    "table_prefix": "fp02_",
+    "active_theme_slug": "shpigovsky",
+    "project_plugin_slug": "shpigovsky-core",
+    "wpilot_plugin_slug": "metacode-wpilot",
+    "mu_plugin": "mars-local-runtime.php"
+  },
+  "wpilot_gate_requirements": {
+    "bridge_enabled": true,
+    "dev_confirmed": true,
+    "write_enabled": false,
+    "emergency_disabled": false
+  },
+  "forbidden_wpilot_endpoints": [
+    "pages/{id}/replace-text/dry-run",
+    "pages/{id}/backups",
+    "pages/{id}/scoped-replace",
+    "pages/{id}/rollback"
+  ],
+  "binding_registry": "fp-0002-readonly-bindings-v1.json",
+  "failure_mappings": "fp-0002-failure-mappings-v1.json",
+  "preserves_admissions": ["fws-0001"],
+  "notes": "Project-specific read-only admission. Does not broaden FWS-0001 synthetic rules."
+}
