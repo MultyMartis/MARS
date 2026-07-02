@@ -1,6 +1,6 @@
 # FP-0002 WordPress Admin UX Model v1
 
-**Task:** V9-06A | **Date:** 2026-07-03
+**Task:** V9-06A.1 | **Date:** 2026-07-03
 
 ---
 
@@ -16,7 +16,7 @@
 | **Внешний вид → Меню** | Primary, footer columns, legal | Admin |
 | **Настройки → Общие** | Site title (native) | Admin |
 | **Настройки → Чтение** | Front page, posts page | Admin |
-| **Настройки сайта** (ACF options) | Phones, address, socials, modal defaults | Admin |
+| **Настройки сайта** (ACF Pro options) | Phones, address, socials, modal defaults, legal org identifiers | Admin |
 
 **Hidden / restricted:** Comments, Tools clutter, block editor flexible layouts, unrelated post formats.
 
@@ -99,18 +99,24 @@ Sections: hero slides, grids, FAQ, CTA — bounded fields only.
 
 ---
 
-## 4. Blog workflow
+## 4. Blog workflow (OD-003, OD-004)
 
-| Field | Visible |
-|-------|:-------:|
-| Title, slug | yes |
-| Content | yes — primary article body |
-| Excerpt | yes |
-| Featured image | yes |
-| Categories | optional (defer) |
-| Tags | **hidden** (default off) |
-| Author/date | configurable visibility |
-| Blog post ACF | sources, related, quote |
+| Field | Visible | Notes |
+|-------|:-------:|-------|
+| Title, slug | yes | |
+| Content | yes | Primary article body |
+| Excerpt | yes | |
+| Featured image | yes | |
+| Categories | **hidden at launch** | OD-003: none at launch; do not create editorial categories |
+| Tags | **hidden** | Default off |
+| Publication date | **yes (public)** | OD-004: visible on public template |
+| Modified date | **no (public)** | Not displayed at launch |
+| Author (public) | **hidden** | OD-004: no author byline or archive link |
+| Author (internal) | preserved | WordPress native author retained |
+| Blog post ACF | sources, related, quote | ACF Pro repeaters bounded |
+
+**Template ownership:** `single.php` — date in meta row; no author link.  
+**Schema:** `datePublished` required; `dateModified` only if meaningfully different (defer); publisher = organisation entity.
 
 Posts page (`blog`): title only; archive layout from theme.
 

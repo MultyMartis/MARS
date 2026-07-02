@@ -29,9 +29,9 @@ Destructive retirement later requires: exact object identity, backup, dry-run, r
 | Object / route | Current state | Required future action | Destructive |
 |----------------|---------------|------------------------|-------------|
 | `/uslugi/genotipirovanie/` | Page exists; slug `genotipirovanie` under `uslugi` | **RETIRE** — must not publish | **YES** |
-| `/specyalisty/` (top-level) | Page `specyalisty`; Primary menu | **RETIRE** or **REVIEW** redirect to V9 equivalent | **YES** |
-| `/o-centre/intervyu-i-smi/` | Page `intervyu-i-smi` under `o-centre` | **RETIRE** or **REVIEW** | **YES** |
-| `/pravovaya-informaciya-pilzovatelyu/` | Legal menu page | **RETIRE** or **REVIEW** — V9 uses discrete legal slugs | **YES** |
+| `/specyalisty/` (top-level) | Page `specyalisty`; Primary menu | **301 → `/uslugi/zavisimosti/specialistam/`** after target ready (OD-002); then **RETIRE** | **YES** |
+| `/o-centre/intervyu-i-smi/` | Page `intervyu-i-smi` under `o-centre` | **RETIRE_AFTER_MIGRATION** | **YES** |
+| `/pravovaya-informaciya-pilzovatelyu/` | Legal menu page | **RETIRE_AFTER_MIGRATION** — V9 uses discrete legal slugs | **YES** |
 
 ---
 

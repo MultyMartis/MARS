@@ -52,20 +52,13 @@
 | REASSIGN_TEMPLATE | 17 |
 | REPARENT | 0–2 |
 | RETIRE_AFTER_MIGRATION | 4 |
-| MANUAL_REVIEW | 2 |
+| MANUAL_REVIEW | 0 |
 
 ---
 
 ## 4. Page → Service migration procedure (V9-06D)
 
-For each subdivision Page (`zavisimosti`, `psihicheskoe-zdorovie`, `rasstroystva-pischevogo-povedeniya`):
-
-1. Export Page ID, slug, title, parent, menu refs.
-2. Create `service` post with identical slug segment and title.
-3. Map menu items to new service permalink.
-4. Verify `/uslugi/{slug}/` resolves to CPT.
-5. Set Page to draft → trash only after redirect/404 check and backup.
-6. **Do not** reuse Page ID.
+See [FP-0002-PAGE-TO-SERVICE-MIGRATION-CONTRACT-v1.md](FP-0002-PAGE-TO-SERVICE-MIGRATION-CONTRACT-v1.md) and [FP-0002-SERVICE-ENTITY-REGISTRY-v1.json](FP-0002-SERVICE-ENTITY-REGISTRY-v1.json).
 
 For new leaf services: create directly as `service` with correct `post_parent`.
 
@@ -108,7 +101,7 @@ For new leaf services: create directly as `service` with correct `post_parent`.
 
 | From | To | Type |
 |------|-----|------|
-| `/specyalisty/` | MANUAL_REVIEW | 301 or retire |
+| `/specyalisty/` | MANUAL_REVIEW | **301 → `/uslugi/zavisimosti/specialistam/`** after target ready (OD-002) |
 | `/uslugi/genotipirovanie/` | 410 or remove | RETIRE |
 | Old Page service URLs (if any drift) | New service URL | 301 |
 

@@ -1,10 +1,11 @@
 # Forge WordPress — FP-0002 Project Lane
 
 **Project ID:** FP-0002 — Шпиговский  
-**Stage:** V9-06A architecture design complete — WordPress implementation NOT STARTED
+**Stage:** V9-06A.1 architecture reconciliation complete — WordPress architecture APPROVED — V9-06B ready for operator authorization — WordPress implementation NOT STARTED
 
 | Document | Purpose |
 |----------|---------|
+| [FP-0002-V9-06A1-ARCHITECTURE-RECONCILIATION-REPORT-v1.md](../../../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/architecture/FP-0002-V9-06A1-ARCHITECTURE-RECONCILIATION-REPORT-v1.md) | **V9-06A.1** — reconciliation PASS |
 | [FP-0002-WORDPRESS-ARCHITECTURE-v1.md](../../../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/architecture/FP-0002-WORDPRESS-ARCHITECTURE-v1.md) | **V9-06A** — WordPress IA, content model, template system |
 | [FP-0002-V9-06A-VALIDATION-REPORT-v1.md](../../../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/architecture/FP-0002-V9-06A-VALIDATION-REPORT-v1.md) | V9-06A validation PASS |
 | [FP-0002-FW-07C-2C-FILESYSTEM-DELIVERY-PROOF-RECEIPT-v1.md](FP-0002-FW-07C-2C-FILESYSTEM-DELIVERY-PROOF-RECEIPT-v1.md) | **FW-07C-2C PASS** — bounded filesystem delivery + rollback proof |

@@ -118,7 +118,23 @@ Phase **07C-B** Storage package — `SUPERSEDED_FAILED_STATIC_PACKAGING_NOT_FOR_
 
 ## Next phase
 
-**FW-07C-2D — WordPress Object Reconciliation** (requires separate operator authorization)
+**V9-06B — Theme and Core skeleton** — **READY FOR OPERATOR AUTHORIZATION** (not authorized by this document)
+
+**V9-06C — ACF Pro fields** — BLOCKED until ACF Pro operational prerequisite satisfied
+
+---
+
+## V9-06A.1 Architecture Reconciliation (complete)
+
+- Status: `FP0002_V9_06A1_ARCHITECTURE_RECONCILIATION_COMPLETE`
+- Gate: `forge-intake/validation/FP-0002-V9-06A1-ARCHITECTURE-RECONCILIATION-GATE-v1.md`
+- Report: `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/architecture/FP-0002-V9-06A1-ARCHITECTURE-RECONCILIATION-REPORT-v1.md`
+- WordPress architecture: **APPROVED**
+- Route classification: **RECONCILED**
+- Service registry: **15 VERIFIED**
+- ACF Pro: **REQUIRED** (OD-001)
+- Runtime mutations: **0**
+- WordPress implementation: **not started**
 
 ## FW-07C-2A Enforcement Reconciliation and Charter Design (complete)
 

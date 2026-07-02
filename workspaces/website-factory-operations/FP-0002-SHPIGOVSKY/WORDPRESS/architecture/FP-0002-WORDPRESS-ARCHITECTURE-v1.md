@@ -3,7 +3,7 @@
 **Project:** FP-0002 — Шпиговский  
 **Task:** V9-06A  
 **Date:** 2026-07-03  
-**Status:** ARCHITECTURE DESIGN COMPLETE  
+**Status:** ARCHITECTURE APPROVED (V9-06A.1)  
 **Authority:** Operator architecture-first mandate; supersedes V9-04 mechanical all-Pages object model for planning
 
 ---
@@ -49,7 +49,7 @@ Design a deliberate WordPress product for FP-0002 that decomposes the approved V
 | Family | V9 routes | WordPress entity |
 |--------|-----------|------------------|
 | Home | `/` | Page (`page_on_front`) |
-| Services hub | `/uslugi/` | Page |
+| Services hub | `/uslugi/` | **Native Page** (not Service, not CPT archive) |
 | Service subdivision | 3 subdivisions | `service` CPT (parent=0) |
 | Service leaf | 12 leaves | `service` CPT (child) |
 | Institutional | `/o-centre/` + 5 children | Pages (hierarchical) |
@@ -90,23 +90,23 @@ See [FP-0002-WORDPRESS-ENTITY-REGISTRY-v1.json](FP-0002-WORDPRESS-ENTITY-REGISTR
 |---------|-----|-----------|-------|
 | Home | `/` | `page_on_front` (slug `glavnaya`) | NATIVE |
 | Services hub | `/uslugi/` | Page slug `uslugi` | PAGE_ROUTE |
-| Service detail | `/uslugi/{path}/` | Hierarchical `service` CPT, `has_archive=false` | CPT_REWRITE |
+| Service detail | `/uslugi/{path}/` | Hierarchical `service` CPT, `has_archive=false`, `CPT_REWRITE_PLUS_POST_TYPE_LINK_FILTER` | CPT_REWRITE |
 | Institutional | `/o-centre/...` | Hierarchical Pages | PAGE_ROUTE |
 | Reviews | `/otzyvy/` | Page | PAGE_ROUTE |
 | Blog archive | `/blog/` | `page_for_posts` + `home.php` | NATIVE |
 | Blog article | `/blog/{slug}/` | Post permalink | NATIVE |
 | Legal | top-level slugs | Pages | PAGE_ROUTE |
 
-**Conflict resolution:** Page `/uslugi/` takes precedence over CPT root; CPT does not register public archive.
+**Conflict resolution:** Page `/uslugi/` takes precedence over CPT root; CPT does not register public archive (`has_archive=false`). Permalink contract: [FP-0002-SERVICE-PERMALINK-REWRITE-CONTRACT-v1.md](FP-0002-SERVICE-PERMALINK-REWRITE-CONTRACT-v1.md).
 
 **Retire / redirect (post-migration):**
 
 | Route | Action |
 |-------|--------|
-| `/uslugi/genotipirovanie/` | RETIRE (forbidden) |
-| `/specyalisty/` | RETIRE or redirect — MANUAL_REVIEW |
-| `/o-centre/intervyu-i-smi/` | RETIRE |
-| `/pravovaya-informaciya-pilzovatelyu/` | RETIRE; legal menu uses discrete slugs |
+| `/uslugi/genotipirovanie/` | EXCLUDED — RETIRE (forbidden) |
+| `/specyalisty/` | **301 → `/uslugi/zavisimosti/specialistam/`** after canonical target ready (OD-002) |
+| `/o-centre/intervyu-i-smi/` | RETIRE_AFTER_MIGRATION |
+| `/pravovaya-informaciya-pilzovatelyu/` | RETIRE_AFTER_MIGRATION |
 
 **Custom rewrite:** optional `CUSTOM_REWRITE` rule only if hierarchical CPT + hub Page conflict requires explicit priority — validate in V9-06C.
 
@@ -187,7 +187,7 @@ No duplicate SEO field stacks before plugin decision.
 | Pages | 17 | Includes front, hub, institutional×6, reviews, contacts, legal×4, blog posts page |
 | Services | 15 | Full hierarchy under CPT |
 | Posts | 1+ | Fixture `nazvanie-stati` |
-| Categories | 0–3 | Defer |
+| Categories | **0** | OD-003: none at launch |
 | Menus | 4 | primary, footer_services, footer_o_centre, legal |
 | Options | 2 ACF option pages | site + modal |
 
@@ -199,9 +199,10 @@ No duplicate SEO field stacks before plugin decision.
 
 | Phase | Purpose | Mutations |
 |-------|---------|-----------|
-| V9-06A | Architecture (this task) | 0 |
+| V9-06A | Architecture | 0 |
+| V9-06A.1 | Architecture reconciliation | 0 |
 | V9-06B | Theme + core skeleton files | Filesystem source only |
-| V9-06C | CPT, fields, admin UX | Code + ACF JSON |
+| V9-06C | CPT, ACF Pro fields, admin UX | Code + ACF JSON — **requires ACF Pro prerequisite** |
 | V9-06D | Minimum WP objects + migration | WP objects |
 | V9-07A | Global shell integration | Theme |
 | V9-07B | Service templates | Theme |
@@ -215,9 +216,9 @@ No duplicate SEO field stacks before plugin decision.
 
 ## 12. Validation summary
 
-See [FP-0002-V9-06A-VALIDATION-REPORT-v1.md](FP-0002-V9-06A-VALIDATION-REPORT-v1.md).
+See [FP-0002-V9-06A-VALIDATION-REPORT-v1.md](FP-0002-V9-06A-VALIDATION-REPORT-v1.md) and [FP-0002-V9-06A1-ARCHITECTURE-RECONCILIATION-REPORT-v1.md](FP-0002-V9-06A1-ARCHITECTURE-RECONCILIATION-REPORT-v1.md).
 
-**Result:** PASS (33/33 checks)
+**Result:** PASS (39/39 checks; machine validation 0 failures)
 
 ---
 
@@ -231,7 +232,14 @@ See [FP-0002-V9-06A-VALIDATION-REPORT-v1.md](FP-0002-V9-06A-VALIDATION-REPORT-v1
 | FP-0002-TEMPLATE-PART-REGISTRY-v1.json | Partial inventory |
 | FP-0002-FIELD-OWNERSHIP-MATRIX-v1.json | Field classes |
 | FP-0002-WORDPRESS-ADMIN-UX-MODEL-v1.md | Editor workflows |
-| FP-0002-ACF-STRATEGY-v1.md | ACF Free/Pro resolution |
+| FP-0002-SERVICE-ENTITY-REGISTRY-v1.json | 15 Service entities |
+| FP-0002-SERVICE-PERMALINK-REWRITE-CONTRACT-v1.md | Permalink contract |
+| FP-0002-SERVICE-PERMALINK-TEST-MATRIX-v1.json | Permalink test matrix |
+| FP-0002-PAGE-TO-SERVICE-MIGRATION-CONTRACT-v1.md | Page→Service migration |
+| FP-0002-ROUTE-CONFLICT-REGISTER-RECONCILED-v1.md | Legacy route decisions |
+| FP-0002-V9-06A1-ARCHITECTURE-RECONCILIATION-REPORT-v1.md | V9-06A.1 report |
+| FP-0002-V9-06A1-ARCHITECTURE-VALIDATION.mjs | Machine validation |
+| FP-0002-ACF-STRATEGY-v1.md | ACF Pro required (OD-001) |
 | FP-0002-DATA-OWNERSHIP-MAP-v1.json | Data owners |
 | FP-0002-WORDPRESS-FOUNDATION-TO-V9-MIGRATION-PLAN-v1.md | Migration |
 | FP-0002-WORDPRESS-ARCHITECTURE-DECISIONS-v1.md | ADR log |

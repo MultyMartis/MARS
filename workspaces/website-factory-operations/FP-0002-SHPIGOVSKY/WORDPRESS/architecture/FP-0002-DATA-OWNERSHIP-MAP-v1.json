@@ -18,7 +18,7 @@
     },
     {
       "owner": "WORDPRESS_TERM",
-      "data_families": ["blog_categories_deferred"]
+      "data_families": ["blog_categories_none_at_launch"]
     },
     {
       "owner": "WORDPRESS_OPTION",
@@ -34,7 +34,7 @@
     },
     {
       "owner": "PROJECT_PLUGIN",
-      "data_families": ["service_cpt_registration", "bounded_list_meta", "form_handler", "migrations", "capabilities", "acf_json_paths"]
+      "data_families": ["service_cpt_registration", "acf_json_paths", "repeater_validation", "form_handler", "migrations", "capabilities", "permalink_filters"]
     },
     {
       "owner": "ENVIRONMENT_SECRET",

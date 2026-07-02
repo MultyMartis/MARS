@@ -1,97 +1,155 @@
 # FP-0002 ACF Strategy v1
 
-**Task:** V9-06A | **Date:** 2026-07-03  
-**Installed baseline:** ACF Free 6.8.4 (active)
+**Task:** V9-06A.1 | **Date:** 2026-07-03  
+**Operator decision:** OD-001 — **ACF Pro REQUIRED FOR FP-0002**
 
 ---
 
-## 1. OD-ACF-PRO resolution
+## 1. OD-001 resolution
 
-| Decision ID | Status | Recommendation |
-|-------------|--------|----------------|
-| OD-ACF-PRO | **MIXED** | ACF Free for scalars/groups/options; bounded repeaters via `shpigovsky-core` BoundedMeta API |
+| Decision ID | Status | Value |
+|-------------|--------|-------|
+| OD-001 | **APPROVED** | ACF Pro required for FP-0002 |
 
-**Can architecture be implemented with ACF Free 6.8.4 alone?**
-
-**PARTIAL — not sufficient as-is** for the intake pack's 13 groups if all repeaters remain ACF Repeater fields (Pro-only).
-
-**Sufficient path without Pro purchase:**
-
-1. Retain ACF Free for: options page, text/textarea/image/url/link/group fields, post object relationships (within Free limits).
-2. Move all repeating structures to plugin-registered bounded list meta with deterministic admin UI (`shpigovsky-core/src/Fields/BoundedList/`).
-3. Store as validated JSON in post meta; theme reads via helper API.
-
-**Alternative path (operator choice):**
-
-- **ACF Pro** — simplifies editor UX for repeaters; purchase decision deferred to implementation.
+**Primary FP-0002 implementation path:** ACF Pro  
+**Custom BoundedMeta repeater framework:** **REJECTED_FOR_FP0002** (historical V9-06A design retained as research reference only — see §8)
 
 ---
 
-## 2. Intake group audit (13 groups)
+## 2. ACF Pro use cases (approved)
 
-| Group ID | Location | Keep | Change | Remove | Free? | Notes |
-|----------|----------|:----:|:------:|:------:|:-----:|-------|
-| FG-SITE-OPTIONS | options | ✓ | — | — | yes | Scalars |
-| FG-HOME | front-page | ✓ | split repeaters → plugin | — | partial | hero_slides, faq → BoundedMeta |
-| FG-SERVICES-HUB | hub template | ✓ | split repeaters | — | partial | category_sections |
-| FG-SERVICE-SUBDIVISION | service | ✓ | relocate to CPT | — | partial | |
-| FG-SERVICE-LEAF | service | ✓ | relocate to CPT | — | partial | |
-| FG-SERVICE-LEAF-ALCOHOL | alcohol layout | ✓ | layout meta trigger | — | partial | extends leaf |
-| FG-O-CENTRE | institutional | ✓ | G0-G5 bounded | — | partial | no G6 |
-| FG-CONTACTS | contacts | ✓ | — | — | yes | |
-| FG-REVIEWS | reviews page | ✓ | repeater → BoundedMeta | — | partial | |
-| FG-BLOG-POST | post | ✓ | sources → BoundedMeta | — | partial | relationship stays ACF |
-| FG-LEGAL | legal | ✓ | — | — | yes | |
-| FG-MODAL | options | ✓ | — | — | yes | |
-| FG-PLACEHOLDER | placeholder | ✓ | merge into layout meta | — | yes | |
+| Use case | Allowed |
+|----------|:-------:|
+| Bounded Repeaters | yes |
+| Relationship fields | yes |
+| Options Page | yes |
+| Structured field groups | yes |
+| Deterministic conditional logic | yes |
 
-**Summary:** 13 retained conceptually; 8 changed (repeater transport); 0 removed; 0 arbitrary additions.
+## 3. Forbidden even with Pro
 
----
-
-## 3. Repeater policy
-
-| Structure | Strategy |
-|-----------|----------|
-| FAQ | BoundedMeta max 15 |
-| Reviews | BoundedMeta max 50 |
-| Hero slides | BoundedMeta max 5 |
-| Program items | BoundedMeta max 6 |
-| Infrastructure G0-G5 | Fixed 6 groups, each BoundedMeta |
-| Article sources | BoundedMeta max 12 |
+| Pattern | Status |
+|---------|--------|
 | Flexible Content | **FORBIDDEN** |
+| Clone-based generic page builders | **FORBIDDEN** |
+| Nested arbitrary layouts | **FORBIDDEN** |
+| Editor-defined section ordering | **FORBIDDEN** |
+| Unrestricted repeaters | **FORBIDDEN** |
+| Generic blocks CPT | **FORBIDDEN** |
 
 ---
 
-## 4. JSON sync
+## 4. Options Page
+
+**Admin label:** `Настройки сайта`  
+**Owner:** Shpigovsky Core + ACF Pro Options Page  
+**Implementation phase:** V9-06C (requires ACF Pro package prerequisite)
+
+| Group | Fields (bounded) |
+|-------|------------------|
+| Contacts | phones (repeater max 3), email, address, opening hours |
+| Social | social links actually present in V9 (url + label) |
+| Modal | default title, default CTA label |
+| Global CTA | default button labels where not page-specific |
+| Legal org | organisation legal name, identifiers for legal templates |
+| Map | map embed URL or coordinates where required |
+
+**Excluded from options:** secrets, API keys, analytics credentials, SMTP passwords, arbitrary HTML, generic global blocks.
+
+---
+
+## 5. Repeater bounds (ACF Pro + server validation)
+
+Validation ownership: **ACF field configuration** + **`shpigovsky-core` validation hook** where row count or required subfields must be enforced server-side.
+
+| Group | Field name | Location | Min | Max | Required row fields | Empty state | Render owner |
+|-------|------------|----------|-----|-----|---------------------|-------------|--------------|
+| FG-HOME | `fp02_hero_slides` | front-page | 0 | 5 | image, title | hide section | theme |
+| FG-HOME | `fp02_faq_items` | front-page | 0 | 15 | question, answer | hide section | theme |
+| FG-HOME | `fp02_program_items` | front-page | 0 | 6 | title | hide section | theme |
+| FG-SERVICE-* | `fp02_signs_items` | service | 0 | 12 | text | hide section | theme |
+| FG-SERVICE-* | `fp02_stages_items` | service / o-centre | 0 | 8 | title | hide section | theme |
+| FG-SERVICE-* | `fp02_program_items` | service | 0 | 6 | title | hide section | theme |
+| FG-SERVICE-* | `fp02_faq_items` | service | 0 | 15 | question, answer | hide section | theme |
+| FG-REVIEWS | `fp02_reviews_items` | reviews page | 0 | 50 | author, text | show empty notice | theme |
+| FG-BLOG-POST | `fp02_sources_items` | post | 0 | 12 | title, url | hide block | theme |
+| FG-O-CENTRE | `fp02_infrastructure_g0_g5` | o-centre hub | 6 | 6 | fixed G0–G5 groups | required structure | theme |
+
+---
+
+## 6. Intake group audit (13 groups — unchanged scope)
+
+All 13 conceptual groups retained. Repeaters implemented as **ACF Pro Repeater fields** with bounds above — not BoundedMeta.
+
+| Group ID | Repeater transport |
+|----------|-------------------|
+| FG-SITE-OPTIONS | ACF Pro options scalars |
+| FG-HOME | ACF Pro repeaters |
+| FG-SERVICES-HUB | ACF Pro repeaters (bounded) |
+| FG-SERVICE-* | ACF Pro on `service` CPT |
+| FG-O-CENTRE | ACF Pro fixed groups |
+| FG-CONTACTS | ACF Pro scalars |
+| FG-REVIEWS | ACF Pro repeater max 50 |
+| FG-BLOG-POST | ACF Pro repeater + relationship |
+| FG-LEGAL | ACF Pro scalars |
+| FG-MODAL | ACF Pro options |
+| FG-PLACEHOLDER | ACF Pro minimal |
+
+---
+
+## 7. JSON sync
 
 | Path | Role |
 |------|------|
-| `WORDPRESS/acf-json/` | Canonical ACF export (scalars/groups only) |
+| `WORDPRESS/acf-json/` | Canonical ACF Pro JSON export |
 | Runtime | Sync via `shpigovsky-core` load/save hooks |
 
-BoundedMeta schemas live in plugin PHP + JSON schema files — not ACF JSON.
+---
+
+## 8. BoundedMeta historical note
+
+V9-06A proposed ACF Free + custom BoundedMeta companion.
+
+**V9-06A.1 reconciliation:**
+
+| Item | Classification |
+|------|----------------|
+| BoundedMeta as primary FP-0002 path | **REJECTED_FOR_FP0002** |
+| BoundedMeta as Website Factory research | **DEFERRED_AS_WEBSITE_FACTORY_RESEARCH** |
+| V9-06B / V9-06C BoundedMeta implementation | **NOT AUTHORIZED** |
+
+**Scalar native meta helper:** A small `register_post_meta` helper in Shpigovsky Core for simple scalars (e.g. layout enum) may remain — **distinct from** a custom repeater framework.
 
 ---
 
-## 5. Operator decision
+## 9. V9-06C ACF Pro operational prerequisite
 
-| Question | Default recommendation |
-|----------|------------------------|
-| Purchase ACF Pro? | **Not required** if BoundedMeta path approved |
-| Accept plugin-managed repeaters? | **Yes** — preserves Free license |
+V9-06C **NOT READY** until:
 
-If operator prefers pure ACF UX → **ACF_PRO_REQUIRED** at V9-06C.
+- [ ] Approved ACF Pro package/source available locally
+- [ ] Local-only license handling documented
+- [ ] Git exclusion of license keys verified
+- [ ] Package provenance recorded
+- [ ] Version pinned
+- [ ] Checkpoint before install
+- [ ] Local install/activation validated
+- [ ] No automatic updates without operator approval
+- [ ] Production licensing decision recorded separately
+
+**V9-06B** theme/core skeleton **may proceed** without ACF Pro install if no ACF-dependent runtime functionality executes.
 
 ---
 
-## 6. Result
+## 10. Result
 
 ```text
-ACF Free: SUFFICIENT with BoundedMeta companion (MIXED architecture)
-ACF Pro: OPTIONAL convenience — not mandatory for V9 scope
+ACF Pro:              REQUIRED FOR FP-0002
+Flexible Content:     FORBIDDEN
+BoundedMeta primary:  REJECTED_FOR_FP0002
+Options Page:         Настройки сайта (V9-06C)
+V9-06C prerequisite:  ACF Pro package — NOT SATISFIED
 ```
 
 ---
 
-*No ACF groups created or modified in V9-06A.*
+*No ACF installation or field group creation in V9-06A.1.*

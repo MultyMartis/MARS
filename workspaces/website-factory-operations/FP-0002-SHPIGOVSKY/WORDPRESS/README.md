@@ -2,8 +2,8 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** ARCHITECTURE DESIGNED (V9-06A)  
-**Classification:** FOUNDATION BASELINE — ARCHITECTURE DESIGN COMPLETE — NO V9 IMPLEMENTATION
+**Status:** ARCHITECTURE APPROVED (V9-06A.1)  
+**Classification:** FOUNDATION BASELINE — ARCHITECTURE APPROVED — NO V9 IMPLEMENTATION
 
 ---
 
@@ -22,15 +22,19 @@ Git-tracked canonical source for WordPress theme, project plugin, and ACF JSON d
 
 The runtime is **not** the canonical editable source. Delivery flows: Git source → manifested package → bounded runtime apply.
 
-## V9-06A architecture (2026-07-03)
+## V9-06A / V9-06A.1 architecture (2026-07-03)
 
 | Surface | Status |
 |---------|--------|
-| V9-06A | ARCHITECTURE DESIGN COMPLETE |
-| WordPress entity model | DESIGNED |
-| Template system | DESIGNED |
-| Admin UX | DESIGNED |
-| ACF decision | MIXED (Free + BoundedMeta; Pro optional) |
+| V9-06A | COMPLETE |
+| V9-06A.1 | COMPLETE — reconciliation |
+| WordPress architecture | **APPROVED** |
+| Route classification | RECONCILED |
+| Service entity registry | 15 VERIFIED |
+| Service permalink contract | DEFINED |
+| ACF Pro | **REQUIRED** (OD-001) |
+| BoundedMeta primary path | REJECTED |
+| V9-06B | READY FOR OPERATOR AUTHORIZATION |
 | Runtime changes | 0 |
 | WordPress implementation | NOT STARTED |
 | FW-07C-2D | SUPERSEDED BY ARCHITECTURE-FIRST SEQUENCE (V9-06D) |

@@ -13,8 +13,9 @@
       "admin_location": "Страницы",
       "decision": "APPROVED_RECOMMENDATION",
       "scope": "Home hub, services hub, institutional tree, contacts, reviews, legal, placeholder children",
-      "count_v9": 17,
-      "notes": "Institutional and hub pages remain native Pages; not used for repeatable service leaf catalogue"
+      "count_v9": 15,
+      "wordpress_page_objects": 15,
+      "notes": "14 PAGE primary routes + 1 POSTS_PAGE (blog); legal uses primary PAGE + subtype legal"
     },
     {
       "id": "ENT-SERVICE",
@@ -47,7 +48,7 @@
       "decision": "APPROVED_RECOMMENDATION",
       "scope": "Blog articles only",
       "count_v9": 1,
-      "notes": "Native Posts; categories optional bounded; tags rejected by default"
+      "notes": "Native Posts; **no editorial categories at launch (OD-003)**; tags rejected by default; author hidden publicly (OD-004)"
     },
     {
       "id": "ENT-POSTS-PAGE",
@@ -68,9 +69,9 @@
       "public": true,
       "hierarchical": true,
       "admin_location": "Записи → Рубрики",
-      "decision": "DEFERRED",
-      "scope": "Blog editorial grouping only if operator confirms",
-      "notes": "Not required for V9 fixture; default no public category archives"
+      "decision": "NONE_AT_LAUNCH",
+      "scope": "OD-003: no editorial categories at launch; Uncategorized not surfaced publicly",
+      "notes": "Internal WordPress default category mechanics preserved; no public category archives or labels"
     },
     {
       "id": "ENT-SERVICE-CATEGORY",
@@ -135,14 +136,24 @@
     "page_on_front": {
       "slug": "glavnaya",
       "public_url": "/",
-      "decision": "APPROVED_RECOMMENDATION"
+      "decision": "APPROVED"
     },
     "page_for_posts": {
       "slug": "blog",
       "public_url": "/blog/",
-      "decision": "APPROVED_RECOMMENDATION"
+      "decision": "APPROVED"
+    },
+    "services_hub_page": {
+      "slug": "uslugi",
+      "public_url": "/uslugi/",
+      "entity": "native_page",
+      "not_a_service": true,
+      "template": "page-templates/services-hub.php"
     },
     "permalink_structure": "/%postname%/",
-    "blog_permalink": "/blog/%postname%/"
+    "blog_permalink": "/blog/%postname%/",
+    "service_permalink_contract": "FP-0002-SERVICE-PERMALINK-REWRITE-CONTRACT-v1.md",
+    "acf_pro": "REQUIRED",
+    "blog_categories_at_launch": "NONE"
   }
 }
