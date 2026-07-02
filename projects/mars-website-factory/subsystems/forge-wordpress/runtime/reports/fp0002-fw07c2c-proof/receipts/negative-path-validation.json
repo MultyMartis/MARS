@@ -1,0 +1,93 @@
+[
+  {
+    "target": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-admin",
+    "expected": "DENIED",
+    "actual": "DENIED",
+    "write_attempted": false,
+    "result": "PASS"
+  },
+  {
+    "target": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-includes",
+    "expected": "DENIED",
+    "actual": "DENIED",
+    "write_attempted": false,
+    "result": "PASS"
+  },
+  {
+    "target": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\metacode-wpilot",
+    "expected": "DENIED",
+    "actual": "DENIED",
+    "write_attempted": false,
+    "result": "PASS"
+  },
+  {
+    "target": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\mu-plugins",
+    "expected": "DENIED",
+    "actual": "DENIED",
+    "write_attempted": false,
+    "result": "PASS"
+  },
+  {
+    "target": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\uploads",
+    "expected": "DENIED",
+    "actual": "DENIED",
+    "write_attempted": false,
+    "result": "PASS"
+  },
+  {
+    "target": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-config.php",
+    "expected": "DENIED",
+    "actual": "DENIED",
+    "write_attempted": false,
+    "result": "PASS"
+  },
+  {
+    "target": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\",
+    "expected": "DENIED",
+    "actual": "DENIED",
+    "write_attempted": false,
+    "result": "PASS"
+  },
+  {
+    "target": "X:\\MARS-Localhost\\",
+    "expected": "DENIED",
+    "actual": "DENIED",
+    "write_attempted": false,
+    "result": "PASS"
+  },
+  {
+    "target": "C:\\",
+    "expected": "DENIED",
+    "actual": "DENIED",
+    "write_attempted": false,
+    "result": "PASS"
+  },
+  {
+    "target": "D:\\",
+    "expected": "DENIED",
+    "actual": "DENIED",
+    "write_attempted": false,
+    "result": "PASS"
+  },
+  {
+    "target": "E:\\",
+    "expected": "DENIED",
+    "actual": "DENIED",
+    "write_attempted": false,
+    "result": "PASS"
+  },
+  {
+    "target": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\other-project",
+    "expected": "DENIED",
+    "actual": "DENIED",
+    "write_attempted": false,
+    "result": "PASS"
+  },
+  {
+    "target": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\..\\..\\wp-config.php",
+    "expected": "DENIED",
+    "actual": "DENIED",
+    "write_attempted": false,
+    "result": "PASS"
+  }
+]

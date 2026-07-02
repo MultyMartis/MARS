@@ -1,12 +1,12 @@
 # FP-0002 FW-07C-2 Mutation Charter v1
 
-**Status:** `BOUNDED — FW-07C-2B PROVEN`  
+**Status:** `BOUNDED — FW-07C-2C PROVEN`  
 **Project:** FP-0002 — Шпиговский  
-**Date:** 2026-07-02 (updated after FW-07C-2B proof PASS)  
+**Date:** 2026-07-03 (updated after FW-07C-2C proof PASS)  
 **Task:** FW-07C-2A — enforcement reconciliation and charter design  
-**Authority:** Operator authorization FP-0002-FW-07C-2B (2026-07-02); V9-05C read-only admission PASS
+**Authority:** Operator authorization FP-0002-FW-07C-2C (2026-07-03); V9-05C read-only admission PASS
 
-> **Layer authorization is sequential.** FW-07C-2B local WPilot write proof is **COMPLETE**. FW-07C-2C, FW-07C-2D, and V9-06 remain **NOT AUTHORIZED** until separately chartered.
+> **Layer authorization is sequential.** FW-07C-2C filesystem delivery capability is **COMPLETE**. FW-07C-2D and V9-06 remain **NOT AUTHORIZED** until separately chartered.
 
 ---
 
@@ -32,7 +32,7 @@ Controlled mutation programme for FP-0002 local WordPress foundation reconciliat
 |-------|-----|---------|---------------|----------------|
 | Enforcement reconciliation + charter design | **FW-07C-2A** | Fix enforcement taxonomy; design mutation boundaries | Documentation only | **COMPLETE** (this task) |
 | WPilot harmless write proof | **FW-07C-2B** | Prove scoped replace + backup + rollback on disposable target | WPilot write (bounded) | **COMPLETE** ([receipt](FP-0002-FW-07C-2B-WPILOT-LOCAL-WRITE-PROOF-RECEIPT-v1.md)) |
-| Filesystem delivery capability | **FW-07C-2C** | Theme / plugin / acf-json package delivery | Filesystem (allowlisted) | **NOT AUTHORIZED** |
+| Filesystem delivery capability | **FW-07C-2C** | Theme / plugin / acf-json package delivery | Filesystem (allowlisted) | **COMPLETE** ([receipt](FP-0002-FW-07C-2C-FILESYSTEM-DELIVERY-PROOF-RECEIPT-v1.md)) |
 | WordPress object reconciliation | **FW-07C-2D** | Pages, menus, options, ACF values per route register | WP-CLI / WPilot / manual | **NOT AUTHORIZED** |
 | Foundation reconciliation | **V9-06** | Execute approved route + object plan | Mixed bounded ops | **NOT STARTED** |
 | Template/content integration | **V9-07+** | Visual parity, content migration, media | Mixed | **NOT STARTED** |
@@ -149,7 +149,7 @@ Forge filesystem delivery (FW-07C-2C) is the **only** authorized path for theme/
 
 | Control | Requirement |
 |---------|-------------|
-| Source authority | `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/` (prescribed; not yet created) |
+| Source authority | `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/` (**CREATED** FW-07C-2C) |
 | Package | Clean manifest with SHA-256 per file |
 | Checkpoint | Named checkpoint under `X:\MARS-Localhost\backups\wordpress\projects\shpigovsky\` |
 | Dry-run | Diff against runtime; operator review |
@@ -386,4 +386,4 @@ Required for first write:
 
 ---
 
-*FP-0002 FW-07C-2 Mutation Charter v1 — DRAFT — NOT AUTHORIZED*
+*FP-0002 FW-07C-2 Mutation Charter v1 — BOUNDED — FW-07C-2C PROVEN*

@@ -1,6 +1,6 @@
 # FP-0002 V9 Operational Status
 
-**Updated:** 2026-07-02 (FW-07C-2B WPilot local harmless write proof PASS)  
+**Updated:** 2026-07-03 (FW-07C-2C filesystem delivery proof PASS)  
 **Status:** `FP0002_V9_05C_READ_ONLY_PROJECT_ADMISSION_PASS`
 
 ## Authority model
@@ -101,12 +101,24 @@ Phase **07C-B** Storage package — `SUPERSEDED_FAILED_STATIC_PACKAGING_NOT_FOR_
 - Final state equivalence: **PROVEN**
 - WPilot `write_enabled`: **false** (verified post-proof)
 - Permanent admission: **READ_ONLY** (unchanged)
-- FW-07C-2C / FW-07C-2D: **NOT AUTHORIZED**
+- WordPress implementation: **not started**
+
+## FW-07C-2C Filesystem Delivery Capability (complete)
+
+- Status: `FP0002_FW07C2C_FILESYSTEM_DELIVERY_PROOF_PASS`
+- Receipt: `projects/mars-website-factory/subsystems/forge-wordpress/projects/fp-0002/FP-0002-FW-07C-2C-FILESYSTEM-DELIVERY-PROOF-RECEIPT-v1.md`
+- Evidence: `projects/mars-website-factory/subsystems/forge-wordpress/runtime/reports/fp0002-fw07c2c-proof/`
+- Canonical WordPress source: `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/`
+- Additive delivery + rollback + final equivalence: **PROVEN**
+- Existing-file replacement / general deletion: **NOT AUTHORIZED**
+- FW-07C-2D: **NOT AUTHORIZED**
+- WPilot `write_enabled`: **false** (verified post-proof)
+- Permanent admission: **READ_ONLY** (unchanged)
 - WordPress implementation: **not started**
 
 ## Next phase
 
-**FW-07C-2C — Filesystem Delivery Capability** (requires separate operator authorization)
+**FW-07C-2D — WordPress Object Reconciliation** (requires separate operator authorization)
 
 ## FW-07C-2A Enforcement Reconciliation and Charter Design (complete)
 

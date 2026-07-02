@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "results": [
+    {
+      "path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\.forge-proof\\fw07c2c-theme-30934a64-c258-4385-8eae-da02fc84e3ee.txt",
+      "deleted": true,
+      "expected_hash": "a18f8ac3671c91c1c41f61e32a83a7e9fb0dd58d35c0f64d52b4e63aee9f8fe4",
+      "actual_hash": "a18f8ac3671c91c1c41f61e32a83a7e9fb0dd58d35c0f64d52b4e63aee9f8fe4"
+    },
+    {
+      "path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\shpigovsky-core\\.forge-proof\\fw07c2c-plugin-30934a64-c258-4385-8eae-da02fc84e3ee.txt",
+      "deleted": true,
+      "expected_hash": "564713c72b4fac51b2238c69387c941c0f9e0aa11fecd732198781b97aea5af7",
+      "actual_hash": "564713c72b4fac51b2238c69387c941c0f9e0aa11fecd732198781b97aea5af7"
+    },
+    {
+      "path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\acf-json\\fw07c2c-acf-30934a64-c258-4385-8eae-da02fc84e3ee.proof.json",
+      "deleted": true,
+      "expected_hash": "e234cdae0702d0f11c2cdd9f5a6b710e0ec7c8b9aa7942e2f4cdfc230834044e",
+      "actual_hash": "e234cdae0702d0f11c2cdd9f5a6b710e0ec7c8b9aa7942e2f4cdfc230834044e"
+    }
+  ],
+  "empty_dirs_removed": [
+    "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\.forge-proof",
+    "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\shpigovsky-core\\.forge-proof"
+  ],
+  "existing_files_touched": 0
+}

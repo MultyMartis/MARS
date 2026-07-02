@@ -1,0 +1,41 @@
+{
+  "theme": {
+    "equal": true,
+    "initial_aggregate": "db247becca4a1fe223215f7d22e99fcfdbf864fdad0e5a088637eac90858439f",
+    "final_aggregate": "db247becca4a1fe223215f7d22e99fcfdbf864fdad0e5a088637eac90858439f",
+    "file_count_initial": 12,
+    "file_count_final": 12,
+    "hash_mismatches": [],
+    "unexpected_files": [],
+    "missing_files": [],
+    "verdict": "FINAL_FILESYSTEM_STATE_EQUALS_INITIAL_STATE",
+    "proof_files_absent": true,
+    "proof_files_present": []
+  },
+  "plugin": {
+    "equal": true,
+    "initial_aggregate": "30e98d437ad3c7bfd33d3fe2357df899e195bcc0f450f9ca643b87d34d5b4bc0",
+    "final_aggregate": "30e98d437ad3c7bfd33d3fe2357df899e195bcc0f450f9ca643b87d34d5b4bc0",
+    "file_count_initial": 4,
+    "file_count_final": 4,
+    "hash_mismatches": [],
+    "unexpected_files": [],
+    "missing_files": [],
+    "verdict": "FINAL_FILESYSTEM_STATE_EQUALS_INITIAL_STATE",
+    "proof_files_absent": true,
+    "proof_files_present": []
+  },
+  "acf_json": {
+    "equal": true,
+    "initial_aggregate": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "final_aggregate": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "file_count_initial": 0,
+    "file_count_final": 0,
+    "hash_mismatches": [],
+    "unexpected_files": [],
+    "missing_files": [],
+    "verdict": "FINAL_FILESYSTEM_STATE_EQUALS_INITIAL_STATE",
+    "proof_files_absent": true,
+    "proof_files_present": []
+  }
+}

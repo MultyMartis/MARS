@@ -1,0 +1,63 @@
+{
+  "theme": {
+    "new_files": 1,
+    "new_files_verified": [
+      {
+        "path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\.forge-proof\\fw07c2c-theme-30934a64-c258-4385-8eae-da02fc84e3ee.txt",
+        "exists": true,
+        "hash_verified": true
+      }
+    ],
+    "existing_files_modified": 0,
+    "existing_files_deleted": 0,
+    "unexpected_files": [],
+    "hash_mismatches": [],
+    "passed": true
+  },
+  "plugin": {
+    "new_files": 1,
+    "new_files_verified": [
+      {
+        "path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\shpigovsky-core\\.forge-proof\\fw07c2c-plugin-30934a64-c258-4385-8eae-da02fc84e3ee.txt",
+        "exists": true,
+        "hash_verified": true
+      }
+    ],
+    "existing_files_modified": 0,
+    "existing_files_deleted": 0,
+    "unexpected_files": [],
+    "hash_mismatches": [],
+    "passed": true
+  },
+  "acf_json": {
+    "new_files": 1,
+    "new_files_verified": [
+      {
+        "path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\acf-json\\fw07c2c-acf-30934a64-c258-4385-8eae-da02fc84e3ee.proof.json",
+        "exists": true,
+        "hash_verified": true
+      }
+    ],
+    "existing_files_modified": 0,
+    "existing_files_deleted": 0,
+    "unexpected_files": [],
+    "hash_mismatches": [],
+    "passed": true
+  },
+  "wordpress": {
+    "frontend_http": "200",
+    "wp_login_http": "200",
+    "siteurl": "http://shpigovsky.test",
+    "active_theme": "shpigovsky",
+    "active_plugins": [
+      "advanced-custom-fields",
+      "metacode-wpilot",
+      "shpigovsky-core"
+    ],
+    "pages_count": 23,
+    "posts_count": 0,
+    "acf_group_count": 0,
+    "wpilot_write_enabled": false
+  },
+  "wordpress_unchanged": true
+}

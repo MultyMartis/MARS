@@ -11,6 +11,7 @@ const tests = [
   'run-reparse-boundary-tests.mjs',
   'run-runtime-binding-tests.mjs',
   'run-fp0002-admission-tests.mjs',
+  'run-fw07c2c-delivery-tests.mjs',
 ];
 
 let allPassed = true;

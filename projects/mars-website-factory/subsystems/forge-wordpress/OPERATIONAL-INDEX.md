@@ -238,7 +238,7 @@ Shpigovsky:
 READ_ONLY ADMITTED (V9-05C — 2026-07-02)
 
 FW-07C-2:
-BOUNDED CHARTER — FW-07C-2B PROVEN (2026-07-02)
+BOUNDED CHARTER — FW-07C-2C PROVEN (2026-07-03)
 ```
 
 ---
@@ -246,12 +246,12 @@ BOUNDED CHARTER — FW-07C-2B PROVEN (2026-07-02)
 ## Next authorized stage
 
 ```text
-FW-07C-2C — Filesystem delivery capability (requires separate operator authorization)
+FW-07C-2D — WordPress object reconciliation (requires separate operator authorization)
 ```
 
-Charter: [projects/fp-0002/FP-0002-FW-07C-2-MUTATION-CHARTER-v1.md](projects/fp-0002/FP-0002-FW-07C-2-MUTATION-CHARTER-v1.md) — **BOUNDED — FW-07C-2B PROVEN**  
-Proof receipt: [FP-0002-FW-07C-2B-WPILOT-LOCAL-WRITE-PROOF-RECEIPT-v1.md](projects/fp-0002/FP-0002-FW-07C-2B-WPILOT-LOCAL-WRITE-PROOF-RECEIPT-v1.md)
+Charter: [projects/fp-0002/FP-0002-FW-07C-2-MUTATION-CHARTER-v1.md](projects/fp-0002/FP-0002-FW-07C-2-MUTATION-CHARTER-v1.md) — **BOUNDED — FW-07C-2C PROVEN**  
+Proof receipt: [FP-0002-FW-07C-2C-FILESYSTEM-DELIVERY-PROOF-RECEIPT-v1.md](projects/fp-0002/FP-0002-FW-07C-2C-FILESYSTEM-DELIVERY-PROOF-RECEIPT-v1.md)
 
 ---
 
-*Last updated: 2026-07-02 — FW-07C-2B WPilot local harmless write proof PASS.*
+*Last updated: 2026-07-03 — FW-07C-2C bounded filesystem delivery proof PASS.*

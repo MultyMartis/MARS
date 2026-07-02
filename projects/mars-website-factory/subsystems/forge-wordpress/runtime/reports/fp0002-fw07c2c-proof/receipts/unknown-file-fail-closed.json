@@ -1,0 +1,42 @@
+{
+  "fixture": "C:\\Users\\METACO~1\\AppData\\Local\\Temp\\fw07c2c-unknown-DOLTcG",
+  "planner": {
+    "mode": "ADDITIVE_ONLY",
+    "operations": [
+      {
+        "source_path": "C:\\Users\\METACO~1\\AppData\\Local\\Temp\\fw07c2c-unknown-DOLTcG\\new.txt",
+        "destination_path": "C:\\Users\\METACO~1\\AppData\\Local\\Temp\\fw07c2c-unknown-DOLTcG\\new.txt",
+        "action": "UNKNOWN",
+        "allowed": false,
+        "reason_codes": [
+          "DL_PATH_DENIED"
+        ]
+      },
+      {
+        "source_path": null,
+        "destination_path": "c:/users/metacode one/appdata/local/temp/fw07c2c-unknown-doltcg/unexpected.txt",
+        "action": "DELETE",
+        "allowed": false,
+        "reason_codes": [
+          "DL_UNKNOWN_FILE_CONFLICT",
+          "DL_DELETE_DENIED"
+        ]
+      }
+    ],
+    "summary": {
+      "adds": 0,
+      "modifies": 0,
+      "deletes": 1,
+      "moves": 0,
+      "unknown": 1,
+      "destination_conflicts": 0
+    },
+    "reason_codes": [
+      "DL_UNKNOWN_FILE_CONFLICT"
+    ],
+    "verdict": "BLOCKED",
+    "safe_to_apply": false
+  },
+  "writes": 0,
+  "deletes": 0
+}

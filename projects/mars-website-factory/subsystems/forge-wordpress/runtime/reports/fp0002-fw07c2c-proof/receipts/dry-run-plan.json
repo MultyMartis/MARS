@@ -1,0 +1,217 @@
+{
+  "uuid": "30934a64-c258-4385-8eae-da02fc84e3ee",
+  "plan": {
+    "mode": "ADDITIVE_ONLY",
+    "operations": [
+      {
+        "source_path": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\delivery\\fixtures\\fw07c2c\\fw07c2c-20260702T180335Z\\theme-proof.txt",
+        "destination_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\.forge-proof\\fw07c2c-theme-30934a64-c258-4385-8eae-da02fc84e3ee.txt",
+        "action": "ADD",
+        "overwrite": false,
+        "delete": false,
+        "allowed": true,
+        "reason_codes": [],
+        "destination_exists": false,
+        "source_hash": "a18f8ac3671c91c1c41f61e32a83a7e9fb0dd58d35c0f64d52b4e63aee9f8fe4",
+        "expected_post_write_hash": "a18f8ac3671c91c1c41f61e32a83a7e9fb0dd58d35c0f64d52b4e63aee9f8fe4",
+        "root_validation": {
+          "allowed": true,
+          "reason_codes": [],
+          "target_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\.forge-proof\\fw07c2c-theme-30934a64-c258-4385-8eae-da02fc84e3ee.txt",
+          "surface": "theme",
+          "reparse": {
+            "checked": true,
+            "allowed": true,
+            "logical_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky",
+            "physical_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky",
+            "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky",
+            "allowed_physical_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky",
+            "reparse_points": [],
+            "escape_detected": false,
+            "reason_codes": [],
+            "volume": "X:\\",
+            "logical_under_allowed": true,
+            "physical_under_allowed": true
+          }
+        },
+        "path_validation": {
+          "allowed": true,
+          "reason_codes": [],
+          "target_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\.forge-proof\\fw07c2c-theme-30934a64-c258-4385-8eae-da02fc84e3ee.txt",
+          "surface": "theme",
+          "reparse": {
+            "checked": true,
+            "allowed": true,
+            "logical_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky",
+            "physical_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky",
+            "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky",
+            "allowed_physical_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky",
+            "reparse_points": [],
+            "escape_detected": false,
+            "reason_codes": [],
+            "volume": "X:\\",
+            "logical_under_allowed": true,
+            "physical_under_allowed": true
+          }
+        },
+        "reparse_validation": {
+          "checked": true,
+          "allowed": true,
+          "logical_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky",
+          "physical_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky",
+          "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky",
+          "allowed_physical_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky",
+          "reparse_points": [],
+          "escape_detected": false,
+          "reason_codes": [],
+          "volume": "X:\\",
+          "logical_under_allowed": true,
+          "physical_under_allowed": true
+        }
+      },
+      {
+        "source_path": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\delivery\\fixtures\\fw07c2c\\fw07c2c-20260702T180335Z\\plugin-proof.txt",
+        "destination_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\shpigovsky-core\\.forge-proof\\fw07c2c-plugin-30934a64-c258-4385-8eae-da02fc84e3ee.txt",
+        "action": "ADD",
+        "overwrite": false,
+        "delete": false,
+        "allowed": true,
+        "reason_codes": [],
+        "destination_exists": false,
+        "source_hash": "564713c72b4fac51b2238c69387c941c0f9e0aa11fecd732198781b97aea5af7",
+        "expected_post_write_hash": "564713c72b4fac51b2238c69387c941c0f9e0aa11fecd732198781b97aea5af7",
+        "root_validation": {
+          "allowed": true,
+          "reason_codes": [],
+          "target_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\shpigovsky-core\\.forge-proof\\fw07c2c-plugin-30934a64-c258-4385-8eae-da02fc84e3ee.txt",
+          "surface": "plugin",
+          "reparse": {
+            "checked": true,
+            "allowed": true,
+            "logical_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\shpigovsky-core",
+            "physical_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\shpigovsky-core",
+            "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\shpigovsky-core",
+            "allowed_physical_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\shpigovsky-core",
+            "reparse_points": [],
+            "escape_detected": false,
+            "reason_codes": [],
+            "volume": "X:\\",
+            "logical_under_allowed": true,
+            "physical_under_allowed": true
+          }
+        },
+        "path_validation": {
+          "allowed": true,
+          "reason_codes": [],
+          "target_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\shpigovsky-core\\.forge-proof\\fw07c2c-plugin-30934a64-c258-4385-8eae-da02fc84e3ee.txt",
+          "surface": "plugin",
+          "reparse": {
+            "checked": true,
+            "allowed": true,
+            "logical_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\shpigovsky-core",
+            "physical_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\shpigovsky-core",
+            "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\shpigovsky-core",
+            "allowed_physical_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\shpigovsky-core",
+            "reparse_points": [],
+            "escape_detected": false,
+            "reason_codes": [],
+            "volume": "X:\\",
+            "logical_under_allowed": true,
+            "physical_under_allowed": true
+          }
+        },
+        "reparse_validation": {
+          "checked": true,
+          "allowed": true,
+          "logical_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\shpigovsky-core",
+          "physical_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\shpigovsky-core",
+          "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\shpigovsky-core",
+          "allowed_physical_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\shpigovsky-core",
+          "reparse_points": [],
+          "escape_detected": false,
+          "reason_codes": [],
+          "volume": "X:\\",
+          "logical_under_allowed": true,
+          "physical_under_allowed": true
+        }
+      },
+      {
+        "source_path": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\delivery\\fixtures\\fw07c2c\\fw07c2c-20260702T180335Z\\acf-proof.json",
+        "destination_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\acf-json\\fw07c2c-acf-30934a64-c258-4385-8eae-da02fc84e3ee.proof.json",
+        "action": "ADD",
+        "overwrite": false,
+        "delete": false,
+        "allowed": true,
+        "reason_codes": [],
+        "destination_exists": false,
+        "source_hash": "e234cdae0702d0f11c2cdd9f5a6b710e0ec7c8b9aa7942e2f4cdfc230834044e",
+        "expected_post_write_hash": "e234cdae0702d0f11c2cdd9f5a6b710e0ec7c8b9aa7942e2f4cdfc230834044e",
+        "root_validation": {
+          "allowed": true,
+          "reason_codes": [],
+          "target_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\acf-json\\fw07c2c-acf-30934a64-c258-4385-8eae-da02fc84e3ee.proof.json",
+          "surface": "acf_json",
+          "reparse": {
+            "checked": true,
+            "allowed": true,
+            "logical_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\acf-json",
+            "physical_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\acf-json",
+            "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\acf-json",
+            "allowed_physical_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\acf-json",
+            "reparse_points": [],
+            "escape_detected": false,
+            "reason_codes": [],
+            "volume": "X:\\",
+            "logical_under_allowed": true,
+            "physical_under_allowed": true
+          }
+        },
+        "path_validation": {
+          "allowed": true,
+          "reason_codes": [],
+          "target_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\acf-json\\fw07c2c-acf-30934a64-c258-4385-8eae-da02fc84e3ee.proof.json",
+          "surface": "acf_json",
+          "reparse": {
+            "checked": true,
+            "allowed": true,
+            "logical_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\acf-json",
+            "physical_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\acf-json",
+            "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\acf-json",
+            "allowed_physical_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\acf-json",
+            "reparse_points": [],
+            "escape_detected": false,
+            "reason_codes": [],
+            "volume": "X:\\",
+            "logical_under_allowed": true,
+            "physical_under_allowed": true
+          }
+        },
+        "reparse_validation": {
+          "checked": true,
+          "allowed": true,
+          "logical_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\acf-json",
+          "physical_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\acf-json",
+          "allowed_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\acf-json",
+          "allowed_physical_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\acf-json",
+          "reparse_points": [],
+          "escape_detected": false,
+          "reason_codes": [],
+          "volume": "X:\\",
+          "logical_under_allowed": true,
+          "physical_under_allowed": true
+        }
+      }
+    ],
+    "summary": {
+      "adds": 3,
+      "modifies": 0,
+      "deletes": 0,
+      "moves": 0,
+      "unknown": 0,
+      "destination_conflicts": 0
+    },
+    "reason_codes": [],
+    "verdict": "SAFE_TO_APPLY_ADDITIVE_ONLY",
+    "safe_to_apply": true
+  }
+}
