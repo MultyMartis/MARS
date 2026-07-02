@@ -23,7 +23,7 @@
 | Site ID | Slug | Platform | Version | Baseline | Status | Storage Location | Last Intake | Notes |
 |---------|------|----------|---------|----------|--------|------------------|-------------|-------|
 | SITE-001 | site-001 | ocStore | 3.0.3.8 (rs.2) | `ocstore-3038-rs2` (approved) | **READY FOR AUDIT** | `X:\AI MARS STORAGE\ocpilot\project-sites\site-001\` | 2026-06-01 (Run 4.99 — intake closed) | Intake complete; baseline approved; read-only audit chartered. Passport: [sites/site-001/site-passport.md](sites/site-001/site-passport.md). Charter: [sites/site-001/AUDIT-CHARTER.md](sites/site-001/AUDIT-CHARTER.md). |
-| SITE-002 | site-002 | ocStore / OpenCart | SAFE UNKNOWN | SAFE UNKNOWN | **AWAITING INTAKE** | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\` | 2026-06-09 (Run 4.113 — registration) | ЗПМ TEST `zpm.new-site.space`; PDP/Catalog UX pilot. Passport: [sites/site-002/site-passport.md](sites/site-002/site-passport.md). Credentials pending in external `secrets/`. |
+| SITE-002 | site-002 | ocStore / OpenCart | SAFE UNKNOWN | TEST-proven checkpoints · Production baseline pending | **ACTIVE — PRODUCTION REGISTERED** | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\` | 2026-07-02 (Run 4.170 — Production profile) | ЗПМ / BZPM — Production https://bzpm.ru/ · historical TEST https://zpm.new-site.space/ · TEST history complete · Production connection pending. Passport: [sites/site-002/site-passport.md](sites/site-002/site-passport.md). Production profile: [sites/site-002/production-profile.md](sites/site-002/production-profile.md). |
 
 ---
 
@@ -32,6 +32,7 @@
 | Status | Meaning |
 |--------|---------|
 | AWAITING INTAKE | Folder and passport exist; site not yet identified or materials not received |
+| ACTIVE — PRODUCTION REGISTERED | OCPilot-managed site with TEST history; Production environment registered; connection pending |
 | INTAKE IN PROGRESS | Materials under quarantine review |
 | READY FOR AUDIT | Intake complete; baseline selected; Run 5 allowed per [intake-readiness-review.md](intake-readiness-review.md) |
 | AUDIT IN PROGRESS | Run 5 or later read-only work active |

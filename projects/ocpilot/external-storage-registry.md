@@ -78,6 +78,37 @@ External storage is **not** a git repository by default. The MARS repo at `X:\AI
 
 **OCPilot reference:** `projects/ocpilot/sites/<slug>/` for metadata; bulk here.
 
+### SITE-002 Production bulk root
+
+**Path:** `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\`
+
+| Subfolder | Purpose |
+|-----------|---------|
+| `backups\` | Scoped Production pre-change backups |
+| `baselines\` | Promoted Production baseline artefacts |
+| `captures\` | Read-only remote inventory and page captures |
+| `deployments\` | Deployment manifests and scoped deploy evidence |
+| `verification\` | HTTP smoke and visual verification evidence |
+| `rollback\` | Rollback packages and restore evidence |
+| `reports\` | Large Production operation report attachments |
+
+**Production URL:** https://bzpm.ru/
+**Historical TEST URL:** https://zpm.new-site.space/
+**Status:** registered 2026-07-02 — no remote baseline captured yet.
+
+### SITE-002 secrets location
+
+**Path:** `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\secrets\`
+
+| Property | Value |
+|----------|-------|
+| Local-only | yes |
+| Out of Git | yes |
+| Operationally readable by Cursor | when explicitly authorized |
+| Canonical file | `secrets\secrets.md` — `TEST` and `PRODUCTION` sections |
+
+Do not store secret values in tracked repository files.
+
 ---
 
 ## `backups\`

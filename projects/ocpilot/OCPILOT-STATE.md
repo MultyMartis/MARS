@@ -1,8 +1,8 @@
 # OCPilot — Program State
 
 **Status:** living state document — **not** automated router  
-**Last updated:** 2026-06-29  
-**Evidence cutoff:** 2026-06-29 (SITE-002 **Custom OEM Proof Strip 01** **PASS** — Commercial Trust service cards on `/custom-equipment`; prior PDP Body Category Classes + Home Commercial Trust + M9.13 About + Local Fonts + Corporate Intro baselines preserved)  
+**Last updated:** 2026-07-02
+**Evidence cutoff:** 2026-07-02 (SITE-002 **Production Profile** **REGISTERED — NOT CONNECTED**; prior 2026-06-29 TEST checkpoints preserved)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -14,13 +14,28 @@
 | OCPilot phase | Runs **1** through **4.99** **DONE**; Runs **4.100–4.121** **DONE**; Run **5** initialized, **paused** |
 | Implementation in repo | **None claimed** — documentation + human-operated workflows |
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
-| Second project site | **SITE-002** — ЗПМ (TEST) — **STABLE LIVE CHECKPOINT HOME COMMERCIAL TRUST 01** (2026-06-29) |
+| Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Authority** `SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01` (Home CTA) · `SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02` (About) · Local Fonts 01 retained · Operator Manual Polish 01 visual baseline **preserved**; [Knowledge Map §28](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#28-home-commercial-trust-01--active); BZPM recovery **CLOSED**; **PRODUCTION PREPARATION**; **Corporate Pages Program COMPLETE on TEST** |
+| Current SITE-002 focus | **Production Profile REGISTERED — NOT CONNECTED** · TEST checkpoints preserved · [production-profile.md](sites/site-002/production-profile.md) · first Production baseline **pending** · first Production operation **not authorized** |
 
 ---
 
 ## SITE-002 — current state
+
+### Production environment (2026-07-02)
+
+| Field | Value |
+|-------|--------|
+| SITE-002 Production environment | **REGISTERED** |
+| Production URL | https://bzpm.ru/ |
+| Environment ID | `site-002-prod` |
+| Production Profile | [sites/site-002/production-profile.md](sites/site-002/production-profile.md) — registered, **not connected** |
+| Historical TEST | **preserved** — https://zpm.new-site.space/ |
+| First Production baseline | **pending** — [SITE-002-PRODUCTION-BASELINE-PENDING.md](sites/site-002/baselines/SITE-002-PRODUCTION-BASELINE-PENDING.md) |
+| First Production test / operation | **pending operator authorization** |
+| Registration report | [sites/site-002/reports/SITE-002-PRODUCTION-PROFILE-REGISTRATION.md](sites/site-002/reports/SITE-002-PRODUCTION-PROFILE-REGISTRATION.md) |
+
+Production tooling (deploy / rollback / verification) is **registered, not verified**. No Production connection was performed during registration.
 
 ### BZPM UX REDESIGN — project banner
 
@@ -38,15 +53,17 @@
 | Field | Value |
 |-------|--------|
 | Site ID | SITE-002 |
-| Environment | **TEST** — `https://zpm.new-site.space/` |
+| Environment | **PRODUCTION** (registered) · historical TEST preserved |
+| Production URL | https://bzpm.ru/ |
+| Historical TEST URL | https://zpm.new-site.space/ |
 | Platform (operator-recorded) | ocStore / OpenCart |
 | Version | **SAFE UNKNOWN** |
-| Baseline | **`SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01`** (Home CTA) · **`SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02`** (About) · **`SITE-002-STABLE-LIVE-LOCAL-FONTS-01`** — fonts retained |
+| Baseline | TEST-proven checkpoints preserved · Production baseline **pending** |
 | Knowledge map | [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) |
-| Authority policy | **MANUAL UI / CSS / TWIG / JS REFINEMENTS ARE CANONICAL** — if docs contradict live TEST, source of truth = live TEST on `zpm.new-site.space` |
-| Registry | Active project site — M7.1 through M9.8.5 + catalog UX cluster **complete** on TEST |
+| Authority policy | TEST-era manual UI canonical on historical TEST; **Production parity unverified** |
+| Registry | Active OCPilot-managed site — TEST history complete · Production registered · Production connection pending |
 | Completed | M7.1–M9.7 · Manual UI · M9.8.1/2/5 · operator PLP polish · **product reset** · **fresh 1C import** · **price index recovery (06D/06F)** · **filter hotfixes (06H/06J/06M)** · **filter UX (04–08A)** · **tooltips (01)** · **Commercial Trust (03B/03C + operator polish)** · **catalog state persistence (09A–09C)** · **hub cleanup (10)** · **M9.13 About redesign (re-activated 2026-06-29)** · **Home Commercial Trust CTA (2026-06-29)** |
-| Active stage | **PRODUCTION PREPARATION** — BZPM recovery **CLOSED**; remaining M9.8.9 tasks per roadmap (non-blocking) |
+| Active stage | **PRODUCTION REGISTERED — CONNECTION PENDING** — first read-only capture and operator credential fill required |
 | Open bugs | **EC-01** — mitigated by subcategories hide (07); M9.8.7 deferred |
 | Next planned | **Production parity / rollout** for corp pages · operator gates B6/B8/B1 · Visual Design **NOT OPEN** · deferred M9.8.3/4/6/8 · **M10** not authorized |
 | Active blockers | **B6** charter approval · **B8** copy sign-off · **B1** МО address · **B3** PLP vs `/dealers` (**governance-only** — does not block corp `/dealers` implementation) — recovery **not** a blocker |
@@ -563,6 +580,7 @@ W1 write charter applies to Phase 1 waves only; does not resume Run 5 automatica
 | 2026-06-29 | **DONE** — Delivery Summary Commercial Trust restyle on TEST; Run **4.168**; checkpoint `SITE-002-STABLE-LIVE-DELIVERY-SUMMARY-01`; [SITE-002-DELIVERY-SUMMARY-RESTYLE.md](sites/site-002/reports/SITE-002-DELIVERY-SUMMARY-RESTYLE.md); Knowledge Map §32 |
 | 2026-06-29 | **DONE** — Corporate Intro Image Blocks 01 on TEST; Run **4.165**; checkpoint `SITE-002-STABLE-LIVE-CORPORATE-INTRO-BLOCKS-01`; verdict **PASS** (closeout — operator upload of `delivery-intro.jpg`; all 6 assets HTTP 200); [SITE-002-CORPORATE-INTRO-BLOCKS-01.md](sites/site-002/reports/SITE-002-CORPORATE-INTRO-BLOCKS-01.md); Knowledge Map §29 |
 | 2026-06-30 | **DONE** — Documentation Closeout Scope A; Run **4.169**; Visual Polish Audit **TRACKED**; M9.17 warranty report drift fixed; authority reconciled; [SITE-002-DOCUMENTATION-CLOSEOUT-SCOPE-A.md](sites/site-002/reports/SITE-002-DOCUMENTATION-CLOSEOUT-SCOPE-A.md) |
+| 2026-07-02 | **REGISTERED** — SITE-002 Production Profile; Run **4.170**; Production URL https://bzpm.ru/; profile **REGISTERED — NOT CONNECTED**; historical TEST preserved; [SITE-002-PRODUCTION-PROFILE-REGISTRATION.md](sites/site-002/reports/SITE-002-PRODUCTION-PROFILE-REGISTRATION.md) |
 | 2026-06-22 | **RECONCILED** — Corporate Pages program registry; charters + briefs; [BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md) |
 | 2026-06-21 | **UPDATED** — SITE-002 stable live checkpoint **REGISTERED**; Run **4.145**; baseline `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01`; catalog UX cluster complete; Knowledge Map §16 Catalog State Persistence |
 | 2026-06-21 | **UPDATED** — SITE-002 stable live checkpoint **REGISTERED**; Run **4.144**; baseline `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01`; Commercial Trust + operator manual polish; FTP live capture; Knowledge Map §14 |

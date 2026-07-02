@@ -1,8 +1,24 @@
 # SITE-002 TECHNICAL KNOWLEDGE MAP
 
-**Site:** SITE-002 (ЗПМ / BZPM)  
-**Environment:** TEST — https://zpm.new-site.space/  
-**Authority:** `SITE-002-STABLE-LIVE-LOCAL-FONTS-01`  
+**Site:** SITE-002 (ЗПМ / BZPM)
+
+## Operational authority (present state)
+
+| Field | Value |
+|-------|-------|
+| **Current operational website** | https://bzpm.ru/ |
+| **Historical TEST** | https://zpm.new-site.space/ |
+| **Production profile** | [../production-profile.md](../production-profile.md) |
+| **Production storage root** | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\` |
+| **Production baseline** | **PENDING** — [../baselines/SITE-002-PRODUCTION-BASELINE-PENDING.md](../baselines/SITE-002-PRODUCTION-BASELINE-PENDING.md) |
+| **Production parity with TEST checkpoints** | **SAFE UNKNOWN** |
+
+**TEST-derived knowledge classification:** Implementation evidence and reusable technical knowledge. **Not** automatic proof of current Production parity.
+
+---
+
+**Environment (TEST-era evidence):** TEST — https://zpm.new-site.space/
+**Authority (TEST-era checkpoints):** `SITE-002-STABLE-LIVE-LOCAL-FONTS-01`
 **Created:** 2026-06-19  
 **Purpose:** Persistent technical reference for operators and agents working on SITE-002.
 
@@ -34,11 +50,12 @@
 
 | # | Source | Rule |
 |---|--------|------|
-| 1 | **Live TEST** (`zpm.new-site.space`) | Authoritative runtime state |
-| 2 | **Beget full backup** | Operator-controlled disaster recovery |
-| 3 | **Manual UI / CSS / Twig / JS refinements** | **CANONICAL** — operator edits on live override older deploy snapshots |
-| 4 | **This Knowledge Map** | Architecture and discovered behaviour — update when new forensic evidence appears |
-| 5 | **Latest Stable Checkpoint** | [SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md](../baselines/SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md) |
+| 1 | **Live Production** (`bzpm.ru`) | Authoritative runtime state once Production connection verified |
+| 2 | **Live TEST** (`zpm.new-site.space`) | Authoritative for TEST-era evidence and historical checkpoints |
+| 3 | **Beget full backup** | Operator-controlled disaster recovery |
+| 4 | **Manual UI / CSS / Twig / JS refinements** | **CANONICAL on TEST** — operator edits on live TEST override older deploy snapshots; Production parity **unverified** |
+| 5 | **This Knowledge Map** | Architecture and discovered behaviour — update when new forensic evidence appears |
+| 6 | **Latest Stable Checkpoint** | TEST-proven checkpoints under [../baselines/](../baselines/); Production baseline **pending** |
 
 ### Current stable state
 
@@ -55,7 +72,7 @@ See also **§12 Operator Manual JS Refinements** (post M9.8.9-04A/04B operator p
 
 ### Conflict resolution
 
-If documentation contradicts current TEST behaviour → **live TEST wins**. Update this map and checkpoint docs after verified forensic pass.
+If documentation contradicts current **Production** behaviour → verify on https://bzpm.ru/ after Production connection is authorized. If documentation contradicts **TEST-era** behaviour → **live TEST wins** for that era. Update this map and checkpoint docs after verified forensic pass.
 
 ---
 

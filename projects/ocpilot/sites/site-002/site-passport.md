@@ -21,9 +21,14 @@
 | **Storage Location** | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\` |
 | **Local runtime root** | `X:\MARS-Localhost\` |
 | **SITE-002 runtime subpath** | SAFE UNKNOWN — verify before execution (MLI pattern: `sites\opencart\projects\{slug}\`; `site-002` tree not verified on `X:` at 2026-06-29) |
-| **Environment** | TEST |
-| **Test URL** | https://zpm.new-site.space/ |
-| **Current Status** | **STABLE LIVE CHECKPOINT — HOME COMMERCIAL TRUST 01** |
+| **Current operational environment** | **PRODUCTION** |
+| **Production URL** | https://bzpm.ru/ |
+| **Historical TEST URL** | https://zpm.new-site.space/ |
+| **Environment (legacy field)** | TEST (historical registration) · Production registered 2026-07-02 |
+| **Production Profile** | [production-profile.md](production-profile.md) |
+| **Production connection** | **NOT YET VERIFIED** |
+| **Production baseline** | **PENDING** — [baselines/SITE-002-PRODUCTION-BASELINE-PENDING.md](baselines/SITE-002-PRODUCTION-BASELINE-PENDING.md) |
+| **Current Status** | **STABLE LIVE CHECKPOINT — HOME COMMERCIAL TRUST 01** (TEST-proven; Production parity unverified) |
 | **Active baseline** | [baselines/SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01.md](baselines/SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01.md) · About: [M9.13-ABOUT-REDESIGN-02](baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02.md) · fonts: [LOCAL-FONTS-01](baselines/SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md) |
 | **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — incl. [§7 Filter Architecture](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#7-filter-architecture), [§8 Live Files](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#8-live-files-with-business-logic), [§14 Commercial Trust Block](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#14-commercial-trust-block), [§16 Catalog State Persistence](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#16-catalog-state-persistence), [§17 About Page History](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#17-about-page-history), [§26 Operator Manual Polish 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#26-operator-manual-polish-01--superseded-visual-baseline-retained), [§27 Local Fonts 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#27-local-fonts-01--active) |
 | **Operator manual JS (04B)** | [reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md](reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md) |
@@ -40,7 +45,8 @@
 | **MANUAL UI REFINEMENTS ARE CANONICAL** | Operator manual CSS, Twig, JS, and UX edits on live TEST override older M9.x deploy snapshots |
 | **MANUAL CSS REFINEMENTS ARE CANONICAL** | Operator CSS edits on live TEST override repo work copies |
 | **MANUAL TWIG REFINEMENTS ARE CANONICAL** | Operator Twig edits on live TEST override repo work copies |
-| **Conflict resolution** | If any documentation contradicts current TEST state, **source of truth** = live TEST on https://zpm.new-site.space/ as registered in this checkpoint |
+| **Conflict resolution (Production)** | Current operational website authority = https://bzpm.ru/ once Production connection is verified |
+| **Conflict resolution (TEST evidence)** | If documentation contradicts historical TEST state, live TEST on https://zpm.new-site.space/ remains evidence for TEST-era checkpoints |
 | **Do NOT use as visual baseline** | Pass 1.2 CSS/HTML/JS · `SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2` · pre-checkpoint work copies · `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01` · M9.13 About redesign work copies |
 
 ---
@@ -208,7 +214,9 @@ Recovery is **not** a blocker. Operator gates before Corporate Pages implementat
 
 ### Corporate Pages Program
 
-**Status:** **OPEN** — Research **COMPLETE** · IA **READY** · Copy **SUBSTANTIVELY COMPLETE** (sign-off pending) · Design Charter **DRAFT COMPLETE / APPROVAL OPEN** · visual design **NOT OPEN** · implementation **not started**  
+**Status:** Implementation phase **COMPLETE on historical TEST** (2026-06-28) — Research **COMPLETE** · IA **READY** · Copy **SUBSTANTIVELY COMPLETE** (sign-off pending B8) · Design Charter **DRAFT COMPLETE / APPROVAL OPEN** (B6) · visual design **NOT OPEN**
+
+**Corporate pages M9.14–M9.18:** Implemented and verified on historical TEST. Production parity remains **unverified**.
 **Program doc:** [BZPM-CORPORATE-PAGES-PROGRAM-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-PROGRAM-v1.md)  
 **IA map:** [BZPM-CORPORATE-PAGES-IA-MAP-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-IA-MAP-v1.md)  
 **Design program:** [BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md](../../../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-DESIGN-PROGRAM-v1.md)  
