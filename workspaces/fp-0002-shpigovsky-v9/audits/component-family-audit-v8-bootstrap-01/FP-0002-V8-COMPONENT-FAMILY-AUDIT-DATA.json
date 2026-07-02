@@ -1,0 +1,382 @@
+{
+  "workspace": "C:\\MARS Phenix\\AI MARS\\workspaces\\fp-0002-shpigovsky-v8",
+  "canonical_pages": [
+    "index.html",
+    "uslugi-v2.html",
+    "usluga-podrazdel-v1.html",
+    "usluga-konechnaya-v1.html"
+  ],
+  "template_sha256": {
+    "index.html": "f861e28fcd94aee93f0c4243e38a23178d00b6ed67e49972713d6af3f99a91cd",
+    "uslugi-v2.html": "e0f7f8c8efb4aa5622418b1382442e8684152000a3330c5894ab07d0275eb9bc",
+    "usluga-podrazdel-v1.html": "fc32e6744f51ddd4a5b218baf253b80da6206f359dfb6161de3c0a769c76c49c",
+    "usluga-konechnaya-v1.html": "b24ba9f1f041fda50576df6f0fd9c8ba6aaa8fa18753cec9ae653f77dcd85e1a"
+  },
+  "include_usage": {
+    "partials/components/breadcrumbs.html": [
+      "usluga-konechnaya-v1.html",
+      "usluga-podrazdel-v1.html",
+      "uslugi-v2.html"
+    ],
+    "partials/components/modal-consultation.html": [
+      "index.html",
+      "usluga-konechnaya-v1.html",
+      "usluga-podrazdel-v1.html",
+      "uslugi-v2.html"
+    ],
+    "partials/components/services-page-subnav.html": [
+      "usluga-konechnaya-v1.html",
+      "usluga-podrazdel-v1.html",
+      "uslugi-v2.html"
+    ],
+    "partials/components/services-program-cta-band-v2.html": [
+      "uslugi-v2.html"
+    ],
+    "partials/layout/footer.html": [
+      "index.html",
+      "usluga-konechnaya-v1.html",
+      "usluga-podrazdel-v1.html",
+      "uslugi-v2.html"
+    ],
+    "partials/layout/head.html": [
+      "index.html",
+      "usluga-konechnaya-v1.html",
+      "usluga-podrazdel-v1.html",
+      "uslugi-v2.html"
+    ],
+    "partials/layout/header.html": [
+      "index.html",
+      "usluga-konechnaya-v1.html",
+      "usluga-podrazdel-v1.html",
+      "uslugi-v2.html"
+    ],
+    "partials/sections/hero.html": [
+      "index.html"
+    ],
+    "partials/sections/home-articles.html": [
+      "index.html"
+    ],
+    "partials/sections/home-clinic-landscape.html": [
+      "index.html",
+      "usluga-konechnaya-v1.html",
+      "usluga-podrazdel-v1.html"
+    ],
+    "partials/sections/home-comfort.html": [
+      "index.html",
+      "usluga-konechnaya-v1.html",
+      "usluga-podrazdel-v1.html",
+      "uslugi-v2.html"
+    ],
+    "partials/sections/home-faq.html": [
+      "index.html",
+      "usluga-konechnaya-v1.html",
+      "usluga-podrazdel-v1.html",
+      "uslugi-v2.html"
+    ],
+    "partials/sections/home-feature-grid.html": [
+      "index.html"
+    ],
+    "partials/sections/home-final-form.html": [
+      "index.html",
+      "usluga-konechnaya-v1.html",
+      "usluga-podrazdel-v1.html",
+      "uslugi-v2.html"
+    ],
+    "partials/sections/home-founder-quote.html": [
+      "index.html",
+      "usluga-konechnaya-v1.html",
+      "usluga-podrazdel-v1.html",
+      "uslugi-v2.html"
+    ],
+    "partials/sections/home-gallery.html": [
+      "index.html"
+    ],
+    "partials/sections/home-genotyping.html": [
+      "index.html"
+    ],
+    "partials/sections/home-recovery-intro.html": [
+      "index.html"
+    ],
+    "partials/sections/home-recovery-life.html": [
+      "index.html"
+    ],
+    "partials/sections/home-rehabilitation-program.html": [
+      "index.html"
+    ],
+    "partials/sections/home-rehabilitation-requirements.html": [
+      "index.html"
+    ],
+    "partials/sections/home-reviews.html": [
+      "index.html",
+      "usluga-konechnaya-v1.html",
+      "usluga-podrazdel-v1.html"
+    ],
+    "partials/sections/home-specialists.html": [
+      "index.html",
+      "usluga-konechnaya-v1.html",
+      "usluga-podrazdel-v1.html"
+    ],
+    "partials/sections/home-staff-photo.html": [
+      "index.html"
+    ],
+    "partials/sections/home-treatment-prevention.html": [
+      "index.html"
+    ],
+    "partials/sections/home-videos.html": [
+      "index.html"
+    ],
+    "partials/sections/home-why-us.html": [
+      "index.html"
+    ],
+    "partials/sections/service-leaf-approach-v1.html": [
+      "usluga-konechnaya-v1.html"
+    ],
+    "partials/sections/service-leaf-bordered-info-v1.html": [
+      "usluga-konechnaya-v1.html"
+    ],
+    "partials/sections/service-leaf-corridor-v1.html": [
+      "usluga-konechnaya-v1.html"
+    ],
+    "partials/sections/service-leaf-cta-01-v1.html": [
+      "usluga-konechnaya-v1.html"
+    ],
+    "partials/sections/service-leaf-intro-v1.html": [
+      "usluga-konechnaya-v1.html"
+    ],
+    "partials/sections/service-leaf-signs-v1.html": [
+      "usluga-konechnaya-v1.html"
+    ],
+    "partials/sections/service-leaf-stages-v1.html": [
+      "usluga-konechnaya-v1.html"
+    ],
+    "partials/sections/service-subdivision-first-cta-v1.html": [
+      "usluga-podrazdel-v1.html"
+    ],
+    "partials/sections/service-subdivision-nature-v1.html": [
+      "usluga-podrazdel-v1.html"
+    ],
+    "partials/sections/service-subdivision-stages-v1.html": [
+      "usluga-podrazdel-v1.html"
+    ],
+    "partials/sections/service-subdivision-team-stats-v1.html": [
+      "usluga-podrazdel-v1.html"
+    ],
+    "partials/sections/services-category-section-v2.html": [
+      "usluga-podrazdel-v1.html",
+      "uslugi-v2.html"
+    ],
+    "partials/sections/services-inner-hero-v2.html": [
+      "usluga-konechnaya-v1.html",
+      "usluga-podrazdel-v1.html",
+      "uslugi-v2.html"
+    ],
+    "partials/sections/services-program-v2.html": [
+      "usluga-konechnaya-v1.html",
+      "usluga-podrazdel-v1.html",
+      "uslugi-v2.html"
+    ]
+  },
+  "upper_nav_html_normalized": {
+    "uslugi-v2.html": "<div class=\"page-uslugi-v2__upper-nav container\"> @@include('partials/components/breadcrumbs.html', {\"crumbHome\": \"Главная\", \"crumbMiddle\": \"\", \"crumbMiddleHref\": \"\", \"crumbMiddle2\": \"\", \"crumbMiddleHref2\": \"\", \"crumbCurrent\": \"Услуги лечения и профилактики\"}) @@include('partials/components/services-page-subnav.html', {\"listHtml\": \"<li class=\\\"services-page-subnav__item\\\"><a class=\\\"services-page-subnav__link\\\" href=\\\"#services-category-addictions-heading\\\">Зависимости</a></li><li class=\\\"services-page-subnav__item\\\"><a class=\\\"services-page-subnav__link\\\" href=\\\"#services-category-mental-health-heading\\\">Психическое здоровье</a></li><li class=\\\"services-page-subnav__item\\\"><a class=\\\"services-page-subnav__link\\\" href=\\\"#services-category-eating-disorders-heading\\\">Пищевые расстройства</a></li><li class=\\\"services-page-subnav__item\\\"><a class=\\\"services-page-subnav__link\\\" href=\\\"#services-program\\\">Программа</a></li><li class=\\\"services-page-subnav__item\\\"><a class=\\\"services-page-subnav__link\\\" href=\\\"#services-comfort\\\">Условия центра</a></li><li class=\\\"services-page-subnav__item\\\"><a class=\\\"services-page-subnav__link\\\" href=\\\"#services-faq\\\">Вопрос/Ответ</a></li>\"}) </div>",
+    "usluga-podrazdel-v1.html": "<div class=\"page-service-subdivision-v1__upper-nav container\"> @@include('partials/components/breadcrumbs.html', {\"crumbHome\": \"Главная\", \"crumbMiddle\": \"Услуги\", \"crumbMiddleHref\": \"/uslugi-v2.html\", \"crumbMiddle2\": \"\", \"crumbMiddleHref2\": \"\", \"crumbCurrent\": \"Лечение алкогольной зависимости\"}) @@include('partials/components/services-page-subnav.html', {\"listHtml\": \"<li class=\\\"services-page-subnav__item\\\"><a class=\\\"services-page-subnav__link\\\" href=\\\"#service-subdivision-dependencies\\\">Зависимости</a></li><li class=\\\"services-page-subnav__item\\\"><a class=\\\"services-page-subnav__link\\\" href=\\\"#service-subdivision-nature\\\">Природа зависимости</a></li><li class=\\\"services-page-subnav__item\\\"><a class=\\\"services-page-subnav__link\\\" href=\\\"#service-subdivision-program\\\">Программа лечения</a></li><li class=\\\"services-page-subnav__item\\\"><a class=\\\"services-page-subnav__link\\\" href=\\\"#service-subdivision-start\\\">С чего начать</a></li><li class=\\\"services-page-subnav__item\\\"><a class=\\\"services-page-subnav__link\\\" href=\\\"#service-subdivision-approach\\\">Наш подход к лечению</a></li><li class=\\\"services-page-subnav__item\\\"><a class=\\\"services-page-subnav__link\\\" href=\\\"#service-subdivision-specialists\\\">Специалисты</a></li><li class=\\\"services-page-subnav__item\\\"><a class=\\\"services-page-subnav__link\\\" href=\\\"#service-subdivision-comfort\\\">Условия центра</a></li>\"}) </div>",
+    "usluga-konechnaya-v1.html": "<div class=\"page-service-leaf-v1__upper-nav container\"> @@include('partials/components/breadcrumbs.html', {\"crumbHome\": \"Главная\", \"crumbMiddle\": \"Услуги\", \"crumbMiddleHref\": \"/uslugi-v2.html\", \"crumbMiddle2\": \"Зависимости и&nbsp;пристрастия\", \"crumbMiddleHref2\": \"/usluga-podrazdel-v1.html\", \"crumbCurrent\": \"Лечение алкогольной зависимости\"}) @@include('partials/components/services-page-subnav.html', {\"listHtml\": \"<li class=\\\"services-page-subnav__item\\\"><a class=\\\"services-page-subnav__link\\\" href=\\\"#service-leaf-approach\\\">Наш подход к лечению</a></li><li class=\\\"services-page-subnav__item\\\"><a class=\\\"services-page-subnav__link\\\" href=\\\"#service-leaf-program\\\">Программа лечения</a></li><li class=\\\"services-page-subnav__item\\\"><a class=\\\"services-page-subnav__link\\\" href=\\\"#service-leaf-start\\\">С чего начать</a></li><li class=\\\"services-page-subnav__item\\\"><a class=\\\"services-page-subnav__link\\\" href=\\\"#service-leaf-specialists\\\">Специалисты</a></li><li class=\\\"services-page-subnav__item\\\"><a class=\\\"services-page-subnav__link\\\" href=\\\"#service-leaf-comfort\\\">Условия центра</a></li><li class=\\\"services-page-subnav__item\\\"><a class=\\\"services-page-subnav__link\\\" href=\\\"#service-leaf-reviews\\\">Отзывы о программе</a></li>\"}) </div>"
+  },
+  "upper_nav_css": [
+    {
+      "selector": ".page-uslugi-v2__upper-nav",
+      "declarations": "display: flex; flex-direction: column; gap: 15px; padding-top: 0; padding-bottom:0;"
+    },
+    {
+      "selector": ".page-service-subdivision-v1__upper-nav",
+      "declarations": "display: flex; flex-direction: column; gap: 15px; padding-top: 0; padding-bottom: 0;"
+    },
+    {
+      "selector": ".page-service-leaf-v1__upper-nav",
+      "declarations": "display: flex; flex-direction: column; gap: 12px; padding-top: 16px; padding-bottom: 8px;"
+    }
+  ],
+  "page_scoped_component_css_duplication": {
+    "breadcrumbs__": [
+      "page-service-leaf-v1",
+      "page-service-subdivision-v1",
+      "page-uslugi-v2"
+    ],
+    "services-page-subnav__": [
+      "page-service-leaf-v1",
+      "page-service-subdivision-v1",
+      "page-uslugi-v2"
+    ],
+    "services-inner-hero-v2__": [
+      "page-service-leaf-v1",
+      "page-service-subdivision-v1"
+    ],
+    "services-program-v2": [
+      "page-service-leaf-v1",
+      "page-service-subdivision-v1",
+      "page-uslugi-v2"
+    ]
+  },
+  "component_families": [
+    {
+      "family_id": "CF-001",
+      "name": "Site chrome (header/footer/modal/head)",
+      "partials": [
+        "partials/layout/head.html",
+        "partials/layout/header.html",
+        "partials/layout/footer.html",
+        "partials/components/modal-consultation.html"
+      ],
+      "pages": [
+        "index.html",
+        "usluga-konechnaya-v1.html",
+        "usluga-podrazdel-v1.html",
+        "uslugi-v2.html"
+      ]
+    },
+    {
+      "family_id": "CF-002",
+      "name": "Inner hero (services-inner-hero-v2)",
+      "partials": [
+        "partials/sections/services-inner-hero-v2.html"
+      ],
+      "css_roots": [
+        ".services-inner-hero-v2"
+      ],
+      "pages": [
+        "usluga-konechnaya-v1.html",
+        "usluga-podrazdel-v1.html",
+        "uslugi-v2.html"
+      ]
+    },
+    {
+      "family_id": "CF-003",
+      "name": "Upper page nav band (breadcrumbs + local subnav + container)",
+      "partials": [
+        "partials/components/breadcrumbs.html",
+        "partials/components/services-page-subnav.html"
+      ],
+      "page_wrappers": [
+        ".page-uslugi-v2__upper-nav",
+        ".page-service-subdivision-v1__upper-nav",
+        ".page-service-leaf-v1__upper-nav"
+      ],
+      "pages": [
+        "usluga-konechnaya-v1.html",
+        "usluga-podrazdel-v1.html",
+        "uslugi-v2.html"
+      ]
+    },
+    {
+      "family_id": "CF-004",
+      "name": "Category / hub content section",
+      "partials": [
+        "partials/sections/services-category-section-v2.html"
+      ],
+      "pages": [
+        "usluga-podrazdel-v1.html",
+        "uslugi-v2.html"
+      ]
+    },
+    {
+      "family_id": "CF-005",
+      "name": "Program block (4 directions + optional CTA band)",
+      "partials": [
+        "partials/sections/services-program-v2.html",
+        "partials/components/services-program-cta-band-v2.html"
+      ],
+      "pages": [
+        "usluga-konechnaya-v1.html",
+        "usluga-podrazdel-v1.html",
+        "uslugi-v2.html"
+      ]
+    },
+    {
+      "family_id": "CF-006",
+      "name": "Founder quote band",
+      "partials": [
+        "partials/sections/home-founder-quote.html"
+      ],
+      "pages": [
+        "index.html",
+        "usluga-konechnaya-v1.html",
+        "usluga-podrazdel-v1.html",
+        "uslugi-v2.html"
+      ]
+    },
+    {
+      "family_id": "CF-007",
+      "name": "Comfort gallery band",
+      "partials": [
+        "partials/sections/home-comfort.html"
+      ],
+      "pages": [
+        "index.html",
+        "usluga-konechnaya-v1.html",
+        "usluga-podrazdel-v1.html",
+        "uslugi-v2.html"
+      ]
+    },
+    {
+      "family_id": "CF-008",
+      "name": "FAQ accordion band",
+      "partials": [
+        "partials/sections/home-faq.html"
+      ],
+      "pages": [
+        "index.html",
+        "usluga-konechnaya-v1.html",
+        "usluga-podrazdel-v1.html",
+        "uslugi-v2.html"
+      ]
+    },
+    {
+      "family_id": "CF-009",
+      "name": "Final lead form band",
+      "partials": [
+        "partials/sections/home-final-form.html"
+      ],
+      "pages": [
+        "index.html",
+        "usluga-konechnaya-v1.html",
+        "usluga-podrazdel-v1.html",
+        "uslugi-v2.html"
+      ]
+    },
+    {
+      "family_id": "CF-010",
+      "name": "Reviews slider band",
+      "partials": [
+        "partials/sections/home-reviews.html"
+      ],
+      "pages": [
+        "index.html",
+        "usluga-konechnaya-v1.html",
+        "usluga-podrazdel-v1.html"
+      ]
+    },
+    {
+      "family_id": "CF-011",
+      "name": "Specialists slider band",
+      "partials": [
+        "partials/sections/home-specialists.html"
+      ],
+      "pages": [
+        "index.html",
+        "usluga-konechnaya-v1.html",
+        "usluga-podrazdel-v1.html"
+      ]
+    },
+    {
+      "family_id": "CF-012",
+      "name": "Clinic landscape bleed image",
+      "partials": [
+        "partials/sections/home-clinic-landscape.html"
+      ],
+      "pages": [
+        "index.html",
+        "usluga-konechnaya-v1.html",
+        "usluga-podrazdel-v1.html"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  @@include('partials/layout/head.html', {"title": "Контакты — Шпиговский дом", "description": "Контакты центра «Шпиговский дом»: адреса в Москве и Московской области, телефон, режим работы и почта.", "canonical": "https://shpigovsky.ru/kontakty/", "robots": "noindex, nofollow", "ogType": "website", "ogTitle": "Контакты — Шпиговский дом", "ogDescription": "Контакты центра «Шпиговский дом»: адреса в Москве и Московской области, телефон, режим работы и почта.", "ogUrl": "https://shpigovsky.ru/kontakty/", "ogImage": "https://shpigovsky.ru/assets/img/social/og-default.jpg", "ogImageAlt": "Контакты — Шпиговский дом"})
+</head>
+<body class="page-kontakty" data-page="kontakty">
+  @@include('partials/layout/body-start.html')
+  @@include('partials/layout/header.html', {"activeNavUslugiClass": "", "activeNavOffcanvasClass": "", "activeNavUslugiAria": "", "activeNavOtzyvyClass": "", "activeNavOtzyvyOffcanvasClass": "", "activeNavOtzyvyAria": "", "activeNavKontaktyClass": " site-header__nav-link--active", "activeNavKontaktyOffcanvasClass": " offcanvas__nav-link--active", "activeNavKontaktyAria": " aria-current=\"page\"", "activeNavBlogClass": "", "activeNavBlogOffcanvasClass": "", "activeNavBlogAria": ""})
+  <main class="page-kontakty__main">
+    <div class="contacts-page__breadcrumbs">
+      <div class="container">
+        @@include('partials/components/breadcrumbs.html', {"crumbHome": "Главная", "crumbMiddle": "", "crumbMiddleHref": "", "crumbMiddle2": "", "crumbMiddleHref2": "", "crumbCurrent": "Контакты"})
+      </div>
+    </div>
+    @@include('partials/sections/contacts-map-body.html')
+    @@include('partials/sections/contacts-rehabilitation-steps.html')
+  </main>
+  @@include('partials/layout/footer.html')
+  @@include('partials/layout/global-consultation-modal.html')
+  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+  <script src="assets/vendor/fancybox/fancybox.umd.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/inputmask.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

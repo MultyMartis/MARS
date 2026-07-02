@@ -1,0 +1,37 @@
+{
+  "phase": "post",
+  "partial": {
+    "path": "src/partials/sections/clinic-landscape.html",
+    "sha256": "ebba35afe013c8547e51037fc4d990a219e2f79f587ea40139f32ef2c5448929"
+  },
+  "consumers": {
+    "index.html": "f1a548730ccf656fb6c748dc9064684c9617dcd1f744dde6871031c4605369ed",
+    "usluga-podrazdel-v1.html": "420683bfa4018cea77afa9f124dcccb18bc96b791a79a98cb289cb5295b82926",
+    "usluga-konechnaya-v1.html": "cc5e8940922a816b3904780a346d74f363addb6dc17ce5ef2d267f6a5e3f0cc1"
+  },
+  "scss_cf010_ranges": [
+    {
+      "start_line": 1575,
+      "end_line": 1596,
+      "text": "   10h. Clinic landscape (pre-reviews)\n   ========================================================================== */\n\n// .clinic-landscape {\n// \tpadding-top: var(--pad-gap);\n// \tpadding-bottom: var(--pad-gap);\n// }\n\n.clinic-landscape__bleed {\n\toverflow: hidden;\n\tborder-radius: var(--radius-main);\n}\n\n.clinic-landscape__image {\n\tdisplay: block;\n\twidth: 100%;\n\theight: 584px; // EXACT_GEOMETRY \u2014 JPG BLOCK-011 landscape band height 584px\n\tobject-fit: cover;\n\tobject-position: center;\n\tborder-radius: var(--radius-main);\n}\n\n"
+    },
+    {
+      "start_line": 3876,
+      "end_line": 3879,
+      "text": "\t.clinic-landscape__image {\n\t\theight: 220px; // EXACT_GEOMETRY \u2014 mobile landscape band scaled from JPG 584px\n\t}\n\n"
+    },
+    {
+      "start_line": 6197,
+      "end_line": 6200,
+      "text": ".page-service-leaf-v1 .clinic-landscape.service-leaf-landscape-v1 {\n\tpadding: var(--pad-gap-line) 0 var(--pad-y);\n}\n\n"
+    }
+  ],
+  "scss_cf010_declarations_normalized": "\ndisplay: block;\n\twidth: 100%;\n\theight: 584px; \n\tobject-fit: cover;\n\tobject-position: center;\n\tborder-radius: var(--radius-main);\nheight: 220px;\noverflow: hidden;\n\tborder-radius: var(--radius-main);\npadding: var(--pad-gap-line) 0 var(--pad-y);",
+  "protected": {
+    "src/partials/sections/home-gallery.html": "bb2c4bb2b1b75d42a5945cb44336f4a6a289f176f87e5b35416f4f7c83d8dfed",
+    "src/partials/components/program-cta-band.html": "a93196dbb34618bf43b68204c6dd554bef4daad37dca6a9c9235dba6fa47ee5c",
+    "src/favicon/favicon.svg": "65b61a7185df074806f9f8e1440d40b004bee0df8bbdd4270c5b436ae77126e7"
+  },
+  "main_js_sha256": "652ae41867c80de36542c078e8e5fda3a0021e51f3b93dcd514a24a05d6bda92",
+  "asset_sha256": "220a4f628c53091e2742e5934df5af67af23e69e45a3527649dfd61b10336c8e"
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  @@include('partials/layout/head.html', {"title": "ПТСР — Шпиговский дом", "description": "ПТСР — Шпиговский дом", "canonical": "https://shpigovsky.ru/uslugi/psihicheskoe-zdorovie/ptrs/", "robots": "noindex, nofollow", "ogType": "website", "ogTitle": "ПТСР — Шпиговский дом", "ogDescription": "ПТСР — Шпиговский дом", "ogUrl": "https://shpigovsky.ru/uslugi/psihicheskoe-zdorovie/ptrs/", "ogImage": "https://shpigovsky.ru/assets/img/social/og-default.jpg", "ogImageAlt": "ПТСР — Шпиговский дом"})
+</head>
+<body class="page-placeholder" data-page="ptrs">
+  @@include('partials/layout/body-start.html')
+  @@include('partials/layout/header.html', {"activeNavUslugiClass": "", "activeNavOffcanvasClass": "", "activeNavUslugiAria": "", "activeNavOtzyvyClass": "", "activeNavOtzyvyOffcanvasClass": "", "activeNavOtzyvyAria": "", "activeNavKontaktyClass": "", "activeNavKontaktyOffcanvasClass": "", "activeNavKontaktyAria": "", "activeNavBlogClass": "", "activeNavBlogOffcanvasClass": "", "activeNavBlogAria": ""})
+  <main class="page-placeholder__main">
+    @@include('partials/components/placeholder-breadcrumbs.html', {"crumbHome": "Главная", "crumbMiddle": "Услуги", "crumbMiddleHref": "/uslugi/", "crumbMiddle2": "Психическое здоровье", "crumbMiddleHref2": "/uslugi/psihicheskoe-zdorovie/", "crumbCurrent": "ПТСР"})
+    @@include('partials/sections/placeholder-page.html', {"titleId": "ptrs-title", "pageTitle": "ПТСР"})
+  </main>
+  @@include('partials/layout/footer.html')
+  @@include('partials/layout/global-consultation-modal.html')
+  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+  <script src="assets/vendor/fancybox/fancybox.umd.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/inputmask.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

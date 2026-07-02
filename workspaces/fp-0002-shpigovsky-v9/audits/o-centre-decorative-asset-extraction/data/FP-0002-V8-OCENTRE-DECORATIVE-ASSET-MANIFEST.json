@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "generated_at": "2026-06-29T01:22:15.002483+00:00"
+  },
+  "assets": [
+    {
+      "asset_id": "OC-DEC-01",
+      "role": "SECTION_BACKGROUND",
+      "desktop_nodes": [
+        "1:2440"
+      ],
+      "mobile_nodes": [
+        "1:5697"
+      ],
+      "source_image_ref": "d3ac7d00af36722468bb8f23790ac8586fb9ae3d",
+      "canonical_figma_sha256": "bae5d91c74b5a22afc610f7c7845b9badc6b87ec8da85c5705ecf4eec4de3041",
+      "original_format": "png",
+      "original_dimensions": {
+        "w": 953,
+        "h": 988
+      },
+      "original_alpha": {
+        "has_alpha": true,
+        "transparent_pixels": 480995,
+        "semi_transparent_pixels": 9681,
+        "total_pixels": 941564,
+        "fully_opaque_ratio": 0.4892
+      },
+      "figma_node_opacity": 0.1,
+      "figma_blend_mode": "NORMAL",
+      "output_path": "src/img/content/o-centre/decorative/o-centre-infrastructure-background.webp",
+      "output_format": "webp",
+      "output_dimensions": {
+        "w": 953,
+        "h": 988
+      },
+      "byte_size": 74336,
+      "sha256": "e64e5d29440036dca7e944f1ce46e75ada9255857a7074c9694362f1864ce769",
+      "pixel_hash": "4b83af085d74a173b8fbb839bd960e14d81473275d36912cf9d463379488cec6",
+      "css_opacity_recommendation": 0.1,
+      "background_size_recommendation": "cover",
+      "background_position_desktop": "center top",
+      "background_position_mobile": "center top",
+      "repeat": "no-repeat",
+      "future_region": "infrastructure-narrative section wrapper",
+      "status": "APPROVED_EXPORTED",
+      "approval": "APPROVED_EXACT",
+      "copy_status": "copied"
+    }
+  ]
+}

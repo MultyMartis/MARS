@@ -1,0 +1,126 @@
+[
+  {
+    "consumer": "hub-services-program",
+    "viewport": "desktop",
+    "found": true,
+    "modifiers": [
+      "services-program-v2",
+      "services-program-v2--media-frame-fixed",
+      "services-program-v2--item-image-stack-tall",
+      "services-program-v2--item-body-mobile-pad",
+      "services-program-v2--item-media-mobile-pad"
+    ],
+    "child_count": 4,
+    "cta_in_section": true,
+    "images_ready": true,
+    "section_height": "1599px",
+    "overflow": false,
+    "console_errors": 0,
+    "result": "PASS"
+  },
+  {
+    "consumer": "subdivision-program",
+    "viewport": "desktop",
+    "found": true,
+    "modifiers": [
+      "services-program-v2",
+      "services-program-v2--play-link",
+      "services-program-v2--intro-stacked",
+      "services-program-v2--grid-compact",
+      "services-program-v2--media-contain",
+      "services-program-v2--title-block",
+      "services-program-v2--media-frame-fixed",
+      "services-program-v2--item-image-mobile-short"
+    ],
+    "child_count": 4,
+    "cta_in_section": false,
+    "images_ready": true,
+    "section_height": "1416px",
+    "overflow": false,
+    "console_errors": 0,
+    "result": "PASS"
+  },
+  {
+    "consumer": "leaf-program",
+    "viewport": "desktop",
+    "found": true,
+    "modifiers": [
+      "services-program-v2",
+      "services-program-v2--play-link",
+      "services-program-v2--intro-stacked",
+      "services-program-v2--title-flush",
+      "services-program-v2--item-body-spaced",
+      "services-program-v2--item-image-stack-tall",
+      "services-program-v2--media-frame-fixed"
+    ],
+    "child_count": 4,
+    "cta_in_section": false,
+    "images_ready": true,
+    "section_height": "1461px",
+    "overflow": false,
+    "console_errors": 0,
+    "result": "PASS"
+  },
+  {
+    "consumer": "hub-services-program",
+    "viewport": "mobile",
+    "found": true,
+    "modifiers": [
+      "services-program-v2",
+      "services-program-v2--media-frame-fixed",
+      "services-program-v2--item-image-stack-tall",
+      "services-program-v2--item-body-mobile-pad",
+      "services-program-v2--item-media-mobile-pad"
+    ],
+    "child_count": 4,
+    "cta_in_section": true,
+    "images_ready": true,
+    "section_height": "3534px",
+    "overflow": false,
+    "console_errors": 0,
+    "result": "PASS"
+  },
+  {
+    "consumer": "subdivision-program",
+    "viewport": "mobile",
+    "found": true,
+    "modifiers": [
+      "services-program-v2",
+      "services-program-v2--play-link",
+      "services-program-v2--intro-stacked",
+      "services-program-v2--grid-compact",
+      "services-program-v2--media-contain",
+      "services-program-v2--title-block",
+      "services-program-v2--media-frame-fixed",
+      "services-program-v2--item-image-mobile-short"
+    ],
+    "child_count": 4,
+    "cta_in_section": false,
+    "images_ready": true,
+    "section_height": "2924px",
+    "overflow": false,
+    "console_errors": 0,
+    "result": "PASS"
+  },
+  {
+    "consumer": "leaf-program",
+    "viewport": "mobile",
+    "found": true,
+    "modifiers": [
+      "services-program-v2",
+      "services-program-v2--play-link",
+      "services-program-v2--intro-stacked",
+      "services-program-v2--title-flush",
+      "services-program-v2--item-body-spaced",
+      "services-program-v2--item-image-stack-tall",
+      "services-program-v2--media-frame-fixed"
+    ],
+    "child_count": 4,
+    "cta_in_section": false,
+    "images_ready": true,
+    "section_height": "3044px",
+    "overflow": false,
+    "console_errors": 0,
+    "result": "PASS"
+  }
+]

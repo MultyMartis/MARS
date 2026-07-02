@@ -1,0 +1,206 @@
+{
+  "page_id": "FP-0002-PG-005",
+  "page_name": "\u041e \u0446\u0435\u043d\u0442\u0440\u0435",
+  "source_filename_recommendation": "o-centre.html",
+  "dist_filename_recommendation": "o-centre.html",
+  "canonical_design_source": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/01_DESIGN/Spig_v1.2.fig",
+  "historical_design_source": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/01_DESIGN/\u0428\u043f\u0438\u0433\u043e\u0432\u0441\u043a\u0438\u0439.fig",
+  "desktop_frame": {
+    "name": "\u041e \u0446\u0435\u043d\u0442\u0440\u0435",
+    "width": 1437,
+    "height": 12830,
+    "forensic_id": "1:2185"
+  },
+  "mobile_frame": {
+    "name": "\u041e \u0446\u0435\u043d\u0442\u0440\u0435 - \u043c\u043e\u0431",
+    "width": 390,
+    "height": 16586,
+    "forensic_id": "1:5519",
+    "content_width_note": "380px in child frames"
+  },
+  "git_anchors": {
+    "head": "508837a02658e357ce18dca777a46231d2575b25",
+    "branch": "mars/canonical-post-recovery",
+    "manual_polish": "472be1abffb666a836eb83d5644e1fd3a233cc2d",
+    "cf010": "7f5d7f23e49a5b1c16bbde8a97d969747d23a7a3",
+    "cf011": "4d98d6fbc273bd1bd4cf4555d973f2b978bef0fa",
+    "cf012": "9e8fa083cf957e0b05a212db88165709bd488e8b",
+    "o_centre_charter": "62d24fa7252f13a2e8ecf96d0932a01a7f59a766"
+  },
+  "blocks": [
+    {
+      "order": 1,
+      "block_id": "OC-B01",
+      "design_name": "1 - \u0413\u043b\u0430\u0432\u043d\u044b\u0439 \u044d\u043a\u0440\u0430\u043d",
+      "inventory_blk": "BLK-007s"
+    },
+    {
+      "order": 2,
+      "block_id": "OC-B02",
+      "design_name": "Breadcrumbs + subnav",
+      "inventory_blk": "BLK-005,006"
+    },
+    {
+      "order": 3,
+      "block_id": "OC-B03",
+      "design_name": "\u0414\u043e\u043c - \u0432\u0441\u0442\u0443\u043f\u043b\u0435\u043d\u0438\u0435 / \u041a\u0442\u043e \u043c\u044b",
+      "inventory_blk": "BLK-036"
+    },
+    {
+      "order": 4,
+      "block_id": "OC-B04",
+      "design_name": "\u041a\u043e\u0433\u043e \u043c\u044b \u043b\u0435\u0447\u0438\u043c",
+      "inventory_blk": "BLK-036 ext"
+    },
+    {
+      "order": 5,
+      "block_id": "OC-B05",
+      "design_name": "\u042d\u0442\u0430\u043f\u044b \u043f\u0440\u043e\u0446\u0435\u0434\u0443\u0440\u044b",
+      "inventory_blk": "BLK-018",
+      "status": "RETIRED",
+      "retired_reason": "Not present in Spig_v1.2 O-Centre; frame 1:2310 is OC-B04 who-we-treat",
+      "retired_date": "2026-06-29"
+    },
+    {
+      "order": 6,
+      "block_id": "OC-B06",
+      "design_name": "\u041f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0430 \u0446\u0435\u043d\u0442\u0440\u0430",
+      "inventory_blk": "BLK-020"
+    },
+    {
+      "order": 7,
+      "block_id": "OC-B07",
+      "design_name": "Guest visit CTA",
+      "inventory_blk": "BLK-019"
+    },
+    {
+      "order": 8,
+      "block_id": "OC-B08",
+      "design_name": "\u043f\u0440\u0435\u0438\u043c\u0443\u0449\u0435\u0441\u0442\u0432\u0430 / \u041d\u0430\u0448 \u0414\u043e\u043c",
+      "inventory_blk": "BLK-037,038"
+    },
+    {
+      "order": 9,
+      "block_id": "OC-B09",
+      "design_name": "Expert opinion",
+      "inventory_blk": "BLK-022"
+    },
+    {
+      "order": 10,
+      "block_id": "OC-B10",
+      "design_name": "\u041a\u043e\u043c\u0444\u043e\u0440\u0442, \u043f\u0440\u0438\u0432\u0430\u0442\u043d\u043e\u0441\u0442\u044c",
+      "inventory_blk": "BLK-023"
+    },
+    {
+      "order": 11,
+      "block_id": "OC-B11",
+      "design_name": "\u0421\u043f\u0435\u0446\u0438\u0430\u043b\u0438\u0441\u0442\u044b",
+      "inventory_blk": "BLK-026"
+    },
+    {
+      "order": 12,
+      "block_id": "OC-B12",
+      "design_name": "\u041e\u0442\u0437\u044b\u0432\u044b",
+      "inventory_blk": "BLK-015"
+    },
+    {
+      "order": 13,
+      "block_id": "OC-B13",
+      "design_name": "faq",
+      "inventory_blk": "BLK-034"
+    }
+  ],
+  "reuse_map": {
+    "OC-B01": "REUSE_WITH_CONTENT_PARAMETERS",
+    "OC-B02": "REUSE_WITH_CONTENT_PARAMETERS",
+    "OC-B03": "GENUINELY_UNIQUE",
+    "OC-B04": "REUSE_WITH_EXISTING_FUNCTIONAL_MODIFIER",
+    "OC-B05": "SIMILAR_BUT_DIFFERENT",
+    "OC-B06": "REUSE_WITH_CONTENT_PARAMETERS",
+    "OC-B07": "DIRECT_REUSE",
+    "OC-B08": "GENUINELY_UNIQUE",
+    "OC-B09": "REUSE_WITH_CONTENT_PARAMETERS",
+    "OC-B10": "DIRECT_REUSE",
+    "OC-B11": "DIRECT_REUSE",
+    "OC-B12": "DIRECT_REUSE",
+    "OC-B13": "REUSE_FINAL_FORM_NOT_FAQ"
+  },
+  "gallery_classification": "SIMILAR_BUT_DIFFERENT",
+  "staff_photo_classification": "HOME_SPECIFIC",
+  "hero_classification": "REUSE_WITH_CONTENT_PARAMETERS",
+  "unique_blocks": [
+    "OC-B03",
+    "OC-B08"
+  ],
+  "content_status": "RESOLVED",
+  "asset_status": "RESOLVED",
+  "missing_inputs": [],
+  "retired_blocks": [
+    {
+      "block_id": "OC-B05",
+      "inventory_blk": "BLK-018",
+      "reason": "Inventory label error — not in canonical Figma O-Centre composition"
+    }
+  ],
+  "content_blocker_resolution": {
+    "task": "FP-0002-V8-OCENTRE-CONTENT-BLOCKER-RESOLUTION",
+    "date": "2026-06-29",
+    "pack": "audits/o-centre-content-blocker-resolution/",
+    "verdict": "FP0002_V8_OCENTRE_CONTENT_BLOCKERS_RESOLVED"
+  },
+  "resolution_task": {
+    "id": "FP-0002-V8-OCENTRE-ASSET-CONTENT-RESOLUTION",
+    "date": "2026-06-29",
+    "pack_path": "workspaces/fp-0002-shpigovsky-v8/audits/o-centre-asset-content-resolution/",
+    "content_json": "data/FP-0002-V8-OCENTRE-IMPLEMENTATION-CONTENT.json",
+    "assets_json": "data/FP-0002-V8-OCENTRE-IMPLEMENTATION-ASSETS.json",
+    "hero_asset": "src/img/content/o-centre/o-centre-hero.webp"
+  },
+  "responsive_status": "PASS",
+  "accessibility_status": "PASS_WITH_KNOWN_GAPS",
+  "protected_components": [
+    "CF-003-internal-page-nav",
+    "CF-004-founder-quote",
+    "CF-005-specialists",
+    "CF-006-comfort",
+    "CF-007-reviews",
+    "CF-008-faq",
+    "CF-009-final-form",
+    "CF-010-clinic-landscape",
+    "CF-011-program-cta-band",
+    "CF-012-program-modifiers",
+    "home-gallery",
+    "home-staff-photo"
+  ],
+  "implementation_phases": [
+    "0_safety",
+    "1_shell",
+    "2_direct_reuse",
+    "3_parameterized",
+    "4_unique",
+    "5_integration",
+    "6_qa",
+    "7_operator_review"
+  ],
+  "readiness_gates": {
+    "design": "PASS",
+    "content": "PASS",
+    "assets": "PASS",
+    "reuse": "PASS",
+    "responsive": "PASS",
+    "accessibility": "PASS_WITH_KNOWN_GAPS",
+    "implementation": "NOT_AUTHORIZED"
+  },
+  "implementation_authorized": false,
+  "final_verdict": "FP0002_V8_OCENTRE_CONTENT_BLOCKERS_RESOLVED",
+  "gate_recommendation": "READY_FOR_FP0002_V8_OCENTRE_IMPLEMENTATION_PROMPT",
+  "production_href": "/o-centre/",
+  "breadcrumb_label": "\u041e \u0446\u0435\u043d\u0442\u0440\u0435",
+  "page_title": "\u041e \u0446\u0435\u043d\u0442\u0440\u0435 \u2014 \u0428\u043f\u0438\u0433\u043e\u0432\u0441\u043a\u0438\u0439 \u0414\u043e\u043c",
+  "charter_path": "workspaces/fp-0002-shpigovsky-v8/audits/o-centre-page-charter/FP-0002-V8-OCENTRE-PAGE-ANATOMY-REUSE-CHARTER-v1.md",
+  "assets": {
+    "infrastructure_status": "APPROVED_EXPORTED",
+    "infrastructure_count": 20,
+    "infrastructure_manifest": "audits/o-centre-targeted-asset-export/data/FP-0002-V8-OCENTRE-INFRASTRUCTURE-ASSET-MANIFEST.json"
+  }
+}

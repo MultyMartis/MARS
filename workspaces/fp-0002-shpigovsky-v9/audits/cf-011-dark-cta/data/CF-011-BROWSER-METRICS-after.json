@@ -1,0 +1,64 @@
+{
+  "metrics": [
+    {
+      "consumer": "uslugi-v2-secondary",
+      "viewport": "desktop",
+      "http": 200,
+      "console_errors": 0,
+      "overflow": false,
+      "band_found": true,
+      "aria_heading_resolves": false,
+      "result": "PASS"
+    },
+    {
+      "consumer": "subdivision-start",
+      "viewport": "desktop",
+      "http": 200,
+      "console_errors": 0,
+      "overflow": false,
+      "band_found": true,
+      "aria_heading_resolves": true,
+      "result": "PASS"
+    },
+    {
+      "consumer": "leaf-cta-01",
+      "viewport": "desktop",
+      "http": 200,
+      "console_errors": 0,
+      "overflow": false,
+      "band_found": true,
+      "aria_heading_resolves": true,
+      "result": "PASS"
+    },
+    {
+      "consumer": "uslugi-v2-secondary",
+      "viewport": "mobile",
+      "http": 200,
+      "console_errors": 0,
+      "overflow": false,
+      "band_found": true,
+      "aria_heading_resolves": false,
+      "result": "PASS"
+    },
+    {
+      "consumer": "subdivision-start",
+      "viewport": "mobile",
+      "http": 200,
+      "console_errors": 0,
+      "overflow": false,
+      "band_found": true,
+      "aria_heading_resolves": true,
+      "result": "PASS"
+    },
+    {
+      "consumer": "leaf-cta-01",
+      "viewport": "mobile",
+      "http": 200,
+      "console_errors": 0,
+      "overflow": false,
+      "band_found": true,
+      "aria_heading_resolves": true,
+      "result": "PASS"
+    }
+  ]
+}

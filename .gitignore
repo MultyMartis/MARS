@@ -343,6 +343,32 @@ workspaces/fp-0002-shpigovsky-v8/**/*.webp
 workspaces/fp-0002-shpigovsky-v8/**/*.zip
 workspaces/fp-0002-shpigovsky-v8/**/.server.pid
 
+# FP-0002 Shpigovsky V9 — explicit allow-list (operator-approved static frontend; dist tracked as deploy authority)
+!workspaces/fp-0002-shpigovsky-v9/
+workspaces/fp-0002-shpigovsky-v9/*
+!workspaces/fp-0002-shpigovsky-v9/README.md
+!workspaces/fp-0002-shpigovsky-v9/.gitignore
+!workspaces/fp-0002-shpigovsky-v9/package.json
+!workspaces/fp-0002-shpigovsky-v9/package-lock.json
+!workspaces/fp-0002-shpigovsky-v9/gulpfile.js
+!workspaces/fp-0002-shpigovsky-v9/src/
+!workspaces/fp-0002-shpigovsky-v9/src/**
+!workspaces/fp-0002-shpigovsky-v9/foundation/
+!workspaces/fp-0002-shpigovsky-v9/foundation/**
+!workspaces/fp-0002-shpigovsky-v9/tools/
+!workspaces/fp-0002-shpigovsky-v9/tools/**
+!workspaces/fp-0002-shpigovsky-v9/dist/
+!workspaces/fp-0002-shpigovsky-v9/dist/**
+!workspaces/fp-0002-shpigovsky-v9/audits/
+!workspaces/fp-0002-shpigovsky-v9/audits/**
+!workspaces/fp-0002-shpigovsky-v9/*.md
+workspaces/fp-0002-shpigovsky-v9/**/node_modules/
+workspaces/fp-0002-shpigovsky-v9/**/.cache/
+workspaces/fp-0002-shpigovsky-v9/**/temp/
+workspaces/fp-0002-shpigovsky-v9/**/logs/
+workspaces/fp-0002-shpigovsky-v9/**/coverage/
+workspaces/fp-0002-shpigovsky-v9/**/.server.pid
+
 # Licensed Font Awesome Pro vendor tree — local only (see .cursorignore; not for remote)
 shared/assets/icon-libraries/
 

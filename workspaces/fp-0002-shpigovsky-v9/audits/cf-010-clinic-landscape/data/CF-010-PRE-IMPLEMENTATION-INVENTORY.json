@@ -1,0 +1,70 @@
+{
+  "manifest_id": "CF-010-PRE-IMPLEMENTATION-INVENTORY",
+  "date": "2026-06-29",
+  "authority_commit": "472be1abffb666a836eb83d5644e1fd3a233cc2d",
+  "head_at_inventory": "fdd1899c5eb13268021636e40629cfa237a454cf",
+  "candidates": [
+    {
+      "candidate": "home-clinic-landscape",
+      "partial": "src/partials/sections/home-clinic-landscape.html",
+      "consumers": 3,
+      "consumer_pages": ["index.html", "usluga-podrazdel-v1.html", "usluga-konechnaya-v1.html"],
+      "root_class": "home-clinic-landscape",
+      "child_classes": ["home-clinic-landscape__bleed", "home-clinic-landscape__image"],
+      "modifiers": ["no-top-padding", "service-leaf-landscape-v1"],
+      "structure_signature": "section[aria-label] > div.container > div.__bleed > img.__image",
+      "visual_role": "clinic exterior/territory full-width photo band",
+      "css_sources": [
+        "style.scss:1574-1595",
+        "style.scss:3876-3878",
+        "style.scss:6197-6199"
+      ],
+      "js_hooks": [],
+      "classification": "SAME_CF010_FAMILY"
+    },
+    {
+      "candidate": "home-staff-photo",
+      "partial": "src/partials/sections/home-staff-photo.html",
+      "consumers": 1,
+      "root_class": "home-staff-photo",
+      "structure_signature": "section[aria-label] > div.container > div.__bleed > img.__image",
+      "visual_role": "staff group photo band",
+      "classification": "SIMILAR_BUT_DIFFERENT",
+      "exclusion_reason": "different content role, dimensions (443px vs 584px), home-only consumer"
+    },
+    {
+      "candidate": "home-gallery",
+      "partial": "src/partials/sections/home-gallery.html",
+      "consumers": 1,
+      "classification": "SIMILAR_BUT_DIFFERENT",
+      "exclusion_reason": "gallery grid with Fancybox — CF-010 boundary HOLD"
+    }
+  ],
+  "exact_consumer_count": 3,
+  "inline_copies": 0,
+  "duplicate_partials": 0,
+  "duplicate_css_blocks": 0,
+  "page_specific_wrappers": 0,
+  "planned_consumers": [
+    {
+      "page": "o-centre",
+      "status": "FORECAST_ONLY",
+      "requires": "fresh anatomy audit before implementation"
+    }
+  ],
+  "asset_dependencies": [
+    "assets/img/content/pre-reviews/shpigovsky-clinic-landscape.webp"
+  ],
+  "unresolved_candidates": [],
+  "family_classification": {
+    "classification": "SHARED_BUT_PAGE_NAMED",
+    "included_consumers": ["index.html", "usluga-podrazdel-v1.html", "usluga-konechnaya-v1.html"],
+    "excluded_candidates": [
+      {"name": "home-staff-photo", "reason": "different visual role and home-only"},
+      {"name": "home-gallery", "reason": "CF-010 boundary HOLD — separate family"}
+    ],
+    "implementation_decision": "NEUTRALIZE",
+    "neutral_name": "clinic-landscape",
+    "neutral_partial": "src/partials/sections/clinic-landscape.html"
+  }
+}

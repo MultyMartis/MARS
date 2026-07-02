@@ -1,0 +1,32 @@
+{
+  "task": "FP-0002-V8-OCENTRE-VISUAL-CORRECTION",
+  "date": "2026-06-29",
+  "page": "dist/o-centre.html",
+  "result": "PASS",
+  "checks": {
+    "h1_count": 1,
+    "duplicate_ids": 0,
+    "lorem": 0,
+    "invented_copy": 0,
+    "phantom_steps": 0,
+    "faq_accordion": 0,
+    "home_gallery": 0,
+    "home_staff_photo_in_wrong_block": 0,
+    "broken_aria": 0,
+    "empty_paragraphs": 0,
+    "invalid_nesting": 0
+  },
+  "section_order": [
+    "institutional-narrative",
+    "founder-quote",
+    "who-we-treat",
+    "o-centre-cta-1",
+    "our-approach",
+    "clinic-landscape",
+    "our-program",
+    "our-home",
+    "o-centre-guest-cta",
+    "specialists"
+  ],
+  "order_valid": true
+}

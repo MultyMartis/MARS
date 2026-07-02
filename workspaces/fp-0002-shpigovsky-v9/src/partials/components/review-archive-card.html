@@ -1,0 +1,23 @@
+<article class="review-archive-card" data-reveal>
+  <header class="review-archive-card__header">
+    <ul class="review-archive-card__rating" aria-label="@@ratingLabel">
+      <li class="review-archive-card__star" aria-hidden="true"><i class="fas fa-star"></i></li>
+      <li class="review-archive-card__star" aria-hidden="true"><i class="fas fa-star"></i></li>
+      <li class="review-archive-card__star" aria-hidden="true"><i class="fas fa-star"></i></li>
+      <li class="review-archive-card__star" aria-hidden="true"><i class="fas fa-star"></i></li>
+      <li class="review-archive-card__star" aria-hidden="true"><i class="fas fa-star"></i></li>
+    </ul>
+    <time class="review-archive-card__date" datetime="@@isoDate">@@formattedDate</time>
+  </header>
+  <h2 class="review-archive-card__name">@@reviewerName</h2>
+  <p class="review-archive-card__service">
+    Повод обращения:
+    <a class="review-archive-card__service-link" href="@@serviceHref">@@serviceText</a>
+  </p>
+  <div class="review-archive-card__body">
+    @@reviewTextHtml
+  </div>
+  <p class="review-archive-card__read-more">
+    <span class="review-archive-card__read-more-text">@@fullReviewLabel</span>
+  </p>
+</article>

@@ -1,0 +1,72 @@
+{
+  "date": "2026-06-28",
+  "family": "CF-003",
+  "canonical_class_family": "internal-page-nav",
+  "canonical_partial": "partials/components/internal-page-nav.html",
+  "authority": {
+    "source": "page-uslugi-v2 (Hub)",
+    "rationale": "Hub and Subdivision share wrapper geometry (gap 15px, padding 0); Hub has the most complete breadcrumbs/subnav and mobile scroll behavior. Leaf-specific padding and 12px breadcrumbs rejected.",
+    "desktop": {
+      "wrapper_gap": "15px",
+      "wrapper_padding_top": "0",
+      "wrapper_padding_bottom": "0",
+      "breadcrumbs_font_size": "14px",
+      "breadcrumbs_line_height": "18px",
+      "subnav_layout": "nowrap horizontal pills"
+    },
+    "mobile_max_width_1024": {
+      "wrapper_gap": "8px",
+      "wrapper_padding_top": "8px",
+      "breadcrumbs_font_size": "11px",
+      "subnav_overflow": "horizontal scroll on nav wrapper"
+    }
+  },
+  "pages": [
+    {
+      "template": "src/pages/uslugi-v2.html",
+      "body_class": "page-uslugi-v2",
+      "legacy_wrapper": "page-uslugi-v2__upper-nav container",
+      "breadcrumb_items": 2,
+      "subnav_link_count": 6,
+      "next_section": "services-category-section-v2",
+      "drift": []
+    },
+    {
+      "template": "src/pages/usluga-podrazdel-v1.html",
+      "body_class": "page-service-subdivision-v1",
+      "legacy_wrapper": "page-service-subdivision-v1__upper-nav container",
+      "breadcrumb_items": 3,
+      "subnav_link_count": 7,
+      "next_section": "service-subdivision-dependencies-v1",
+      "drift": [
+        "mobile wrapper gap 5px vs Hub 8px",
+        "breadcrumbs muted token vs Hub secondary",
+        "subnav flex-wrap desktop vs Hub nowrap"
+      ]
+    },
+    {
+      "template": "src/pages/usluga-konechnaya-v1.html",
+      "body_class": "page-service-leaf-v1",
+      "legacy_wrapper": "page-service-leaf-v1__upper-nav container",
+      "breadcrumb_items": 4,
+      "subnav_link_count": 6,
+      "next_section": "service-leaf-intro-v1",
+      "drift": [
+        "wrapper gap 12px",
+        "wrapper padding-top 16px padding-bottom 8px",
+        "breadcrumbs 12px typography",
+        "subnav wrap and 8px gap",
+        "mobile overflow on list not nav"
+      ]
+    }
+  ],
+  "shared_partials": [
+    "src/partials/components/breadcrumbs.html",
+    "src/partials/components/services-page-subnav.html"
+  ],
+  "legacy_wrappers_to_remove": [
+    "page-uslugi-v2__upper-nav",
+    "page-service-subdivision-v1__upper-nav",
+    "page-service-leaf-v1__upper-nav"
+  ]
+}

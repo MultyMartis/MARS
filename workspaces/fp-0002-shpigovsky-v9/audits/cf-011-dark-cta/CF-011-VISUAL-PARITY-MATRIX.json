@@ -1,0 +1,12 @@
+{
+  "matrix_id": "CF-011-VISUAL-PARITY-MATRIX",
+  "method": "after-implementation Playwright bounding-box + DOM structure parity vs HEAD backup manifest",
+  "consumers": [
+    {"consumer": "uslugi-v2-secondary", "desktop": "PASS", "mobile": "PASS"},
+    {"consumer": "subdivision-start", "desktop": "PASS", "mobile": "PASS"},
+    {"consumer": "leaf-cta-01", "desktop": "PASS", "mobile": "PASS"}
+  ],
+  "exact_parity": true,
+  "unexpected_differences": [],
+  "overall": "PASS"
+}

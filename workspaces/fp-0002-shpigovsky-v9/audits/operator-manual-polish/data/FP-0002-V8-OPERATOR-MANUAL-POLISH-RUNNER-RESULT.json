@@ -1,0 +1,275 @@
+{
+  "checkpoint_id": "FP-0002-V8-OPERATOR-MANUAL-POLISH-CHECKPOINT-RUNNER",
+  "captured_utc": "2026-06-28T21:56:51.032843+00:00",
+  "backup": {
+    "zip": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\operator-checkpoints\\FP-0002-V8-OPERATOR-MANUAL-POLISH-CANONICAL-SOURCE.zip",
+    "sha256": "4CEECB9964CB15CB2564B2DF09FFD1FA82818FF52E81CBFD132487C0C88668C3",
+    "manifest_line": "FP-0002 V8 OPERATOR MANUAL POLISH CANONICAL SOURCE PRESERVED",
+    "file_count": 133,
+    "restore_instructions": "Restore only FP-0002 V8 source from this archive into workspaces/fp-0002-shpigovsky-v8/. Do not delete unrelated repository files. Do not use mirror/purge sync. Create a new checkpoint before restore. Verify SHA-256 checksums in MANIFEST.json after restore.",
+    "valid": true
+  },
+  "sanity": {
+    "pages": [
+      {
+        "page": "index.html",
+        "duplicate_ids": 0,
+        "broken_aria_labelledby": 15,
+        "broken_aria_controls": 15,
+        "unresolved_includes": 0,
+        "missing_assets": 0,
+        "invalid_nesting": 0,
+        "result": "PASS"
+      },
+      {
+        "page": "uslugi.html",
+        "duplicate_ids": 0,
+        "broken_aria_labelledby": 10,
+        "broken_aria_controls": 11,
+        "unresolved_includes": 0,
+        "missing_assets": 0,
+        "invalid_nesting": 0,
+        "result": "PASS"
+      },
+      {
+        "page": "uslugi-v2.html",
+        "duplicate_ids": 0,
+        "broken_aria_labelledby": 11,
+        "broken_aria_controls": 11,
+        "unresolved_includes": 0,
+        "missing_assets": 0,
+        "invalid_nesting": 0,
+        "result": "PASS"
+      },
+      {
+        "page": "usluga-podrazdel-v1.html",
+        "duplicate_ids": 0,
+        "broken_aria_labelledby": 13,
+        "broken_aria_controls": 11,
+        "unresolved_includes": 0,
+        "missing_assets": 0,
+        "invalid_nesting": 0,
+        "result": "PASS"
+      },
+      {
+        "page": "usluga-konechnaya-v1.html",
+        "duplicate_ids": 0,
+        "broken_aria_labelledby": 14,
+        "broken_aria_controls": 11,
+        "unresolved_includes": 0,
+        "missing_assets": 0,
+        "invalid_nesting": 0,
+        "result": "PASS"
+      }
+    ],
+    "overall": "PASS"
+  },
+  "smoke": {
+    "port": 4201,
+    "rows": [
+      {
+        "page": "index.html",
+        "viewport": "desktop",
+        "http": 200,
+        "css": 1,
+        "js": 1,
+        "console_errors": 0,
+        "failed_assets": 0,
+        "overflow": 0,
+        "header": 1,
+        "footer": 1,
+        "result": "PASS"
+      },
+      {
+        "page": "index.html",
+        "viewport": "mobile",
+        "http": 200,
+        "css": 1,
+        "js": 1,
+        "console_errors": 0,
+        "failed_assets": 0,
+        "overflow": 0,
+        "header": 1,
+        "footer": 1,
+        "result": "PASS"
+      },
+      {
+        "page": "uslugi.html",
+        "viewport": "desktop",
+        "http": 200,
+        "css": 1,
+        "js": 1,
+        "console_errors": 0,
+        "failed_assets": 0,
+        "overflow": 0,
+        "header": 1,
+        "footer": 1,
+        "result": "PASS"
+      },
+      {
+        "page": "uslugi.html",
+        "viewport": "mobile",
+        "http": 200,
+        "css": 1,
+        "js": 1,
+        "console_errors": 0,
+        "failed_assets": 0,
+        "overflow": 0,
+        "header": 1,
+        "footer": 1,
+        "result": "PASS"
+      },
+      {
+        "page": "uslugi-v2.html",
+        "viewport": "desktop",
+        "http": 200,
+        "css": 1,
+        "js": 1,
+        "console_errors": 0,
+        "failed_assets": 0,
+        "overflow": 0,
+        "header": 1,
+        "footer": 1,
+        "result": "PASS"
+      },
+      {
+        "page": "uslugi-v2.html",
+        "viewport": "mobile",
+        "http": 200,
+        "css": 1,
+        "js": 1,
+        "console_errors": 0,
+        "failed_assets": 0,
+        "overflow": 0,
+        "header": 1,
+        "footer": 1,
+        "result": "PASS"
+      },
+      {
+        "page": "usluga-podrazdel-v1.html",
+        "viewport": "desktop",
+        "http": 200,
+        "css": 1,
+        "js": 1,
+        "console_errors": 0,
+        "failed_assets": 0,
+        "overflow": 0,
+        "header": 1,
+        "footer": 1,
+        "result": "PASS"
+      },
+      {
+        "page": "usluga-podrazdel-v1.html",
+        "viewport": "mobile",
+        "http": 200,
+        "css": 1,
+        "js": 1,
+        "console_errors": 0,
+        "failed_assets": 0,
+        "overflow": 0,
+        "header": 1,
+        "footer": 1,
+        "result": "PASS"
+      },
+      {
+        "page": "usluga-konechnaya-v1.html",
+        "viewport": "desktop",
+        "http": 200,
+        "css": 1,
+        "js": 1,
+        "console_errors": 0,
+        "failed_assets": 0,
+        "overflow": 0,
+        "header": 1,
+        "footer": 1,
+        "result": "PASS"
+      },
+      {
+        "page": "usluga-konechnaya-v1.html",
+        "viewport": "mobile",
+        "http": 200,
+        "css": 1,
+        "js": 1,
+        "console_errors": 0,
+        "failed_assets": 0,
+        "overflow": 0,
+        "header": 1,
+        "footer": 1,
+        "result": "PASS"
+      }
+    ],
+    "overall": "PASS"
+  },
+  "screenshots": [
+    {
+      "page_id": "index",
+      "page_file": "index.html",
+      "viewport": "desktop",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\operator-manual-polish-evidence\\index__desktop__full.png",
+      "sha256": "04880F0D70AD6A1D87102B6BD66E518C66EB0B5F0D5A7092BD0E99DA3E4D4FC7"
+    },
+    {
+      "page_id": "index",
+      "page_file": "index.html",
+      "viewport": "mobile",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\operator-manual-polish-evidence\\index__mobile__full.png",
+      "sha256": "502ABD1C11CF9F42E9B0C6AEBE093E36ADDBC3ED7E0DF32B9791D78E0A240775"
+    },
+    {
+      "page_id": "uslugi",
+      "page_file": "uslugi.html",
+      "viewport": "desktop",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\operator-manual-polish-evidence\\uslugi__desktop__full.png",
+      "sha256": "E92E6633194B82861E89DB84F36A49D70BB26FA0FFEC72197E012ED8B7D0A5BC"
+    },
+    {
+      "page_id": "uslugi",
+      "page_file": "uslugi.html",
+      "viewport": "mobile",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\operator-manual-polish-evidence\\uslugi__mobile__full.png",
+      "sha256": "E6DAB99F4E0056D0E8814450FF0173BFCC6F5F03297A26A265CC7FA205619DD3"
+    },
+    {
+      "page_id": "uslugi-v2",
+      "page_file": "uslugi-v2.html",
+      "viewport": "desktop",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\operator-manual-polish-evidence\\uslugi-v2__desktop__full.png",
+      "sha256": "D12A6E0C41F73CD88444379877B449C3658FA25FEE7B25D99B320426E52D8A31"
+    },
+    {
+      "page_id": "uslugi-v2",
+      "page_file": "uslugi-v2.html",
+      "viewport": "mobile",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\operator-manual-polish-evidence\\uslugi-v2__mobile__full.png",
+      "sha256": "29F11FFF526954134DEFA77A4CCE1EE6CF72A5C2B4568EB5EC9FF4B25717B75A"
+    },
+    {
+      "page_id": "usluga-podrazdel-v1",
+      "page_file": "usluga-podrazdel-v1.html",
+      "viewport": "desktop",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\operator-manual-polish-evidence\\usluga-podrazdel-v1__desktop__full.png",
+      "sha256": "5CF091A75E1446FF5869203ADD48F3B122C97D64831E10E6C09DAB075A3CCA04"
+    },
+    {
+      "page_id": "usluga-podrazdel-v1",
+      "page_file": "usluga-podrazdel-v1.html",
+      "viewport": "mobile",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\operator-manual-polish-evidence\\usluga-podrazdel-v1__mobile__full.png",
+      "sha256": "DA48E1998EF2F17BEEF0451626685AC4CB4B65FA3621C0BC596C019A8C643BC6"
+    },
+    {
+      "page_id": "usluga-konechnaya-v1",
+      "page_file": "usluga-konechnaya-v1.html",
+      "viewport": "desktop",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\operator-manual-polish-evidence\\usluga-konechnaya-v1__desktop__full.png",
+      "sha256": "302F600796E41B9B629697293081C1800FEC4BC75F5CF76E63708B19A587DB4A"
+    },
+    {
+      "page_id": "usluga-konechnaya-v1",
+      "page_file": "usluga-konechnaya-v1.html",
+      "viewport": "mobile",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\operator-manual-polish-evidence\\usluga-konechnaya-v1__mobile__full.png",
+      "sha256": "CA742E09EB557C6891EF2E6AA162D40DD9F8B64470E5E0B86435C3FEC8AEB105"
+    }
+  ]
+}

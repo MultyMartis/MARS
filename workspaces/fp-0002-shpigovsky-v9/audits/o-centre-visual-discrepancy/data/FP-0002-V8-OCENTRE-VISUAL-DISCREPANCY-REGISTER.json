@@ -1,0 +1,173 @@
+{
+  "items": [
+    {
+      "id": "VD-001",
+      "region": "OC-INST-FOUNDER",
+      "viewport": "both",
+      "type": "ORDER",
+      "current": "Founder quote after program CTA",
+      "canonical": "Founder quote embedded in institutional band after body copy",
+      "severity": "CRITICAL",
+      "root_cause": "12-block charter collapsed founder into separate late block",
+      "correction_class": "HTML_ORDER_ONLY"
+    },
+    {
+      "id": "VD-002",
+      "region": "OC-CTA-1",
+      "viewport": "both",
+      "type": "MISSING_REGION",
+      "current": "No CTA between who-we-treat and approach",
+      "canonical": "С чего начать at 1:2328 before approach",
+      "severity": "HIGH",
+      "root_cause": "Reconciled composition omitted first CTA",
+      "correction_class": "HTML_ORDER_ONLY"
+    },
+    {
+      "id": "VD-003",
+      "region": "OC-WHO-TREAT",
+      "viewport": "both",
+      "type": "MISSING_REGION",
+      "current": "Text-only category section",
+      "canonical": "Group photo Rectangle 4263 + four card grid in 1:2310",
+      "severity": "CRITICAL",
+      "root_cause": "services-category-section-v2 used without galleryHtml",
+      "correction_class": "UNIQUE_PARTIAL_RESTRUCTURE"
+    },
+    {
+      "id": "VD-004",
+      "region": "OC-APPROACH",
+      "viewport": "both",
+      "type": "WRONG_GROUPING",
+      "current": "Inline program-approach-band",
+      "canonical": "Separate Программа центра frame with staff photo + cards + landscape bleed",
+      "severity": "HIGH",
+      "root_cause": "Approach merged into page inline block",
+      "correction_class": "EXISTING_PARTIAL_REUSE"
+    },
+    {
+      "id": "VD-005",
+      "region": "OC-CLINIC-LANDSCAPE",
+      "viewport": "both",
+      "type": "MISSING_REGION",
+      "current": "Not included on page",
+      "canonical": "Large territory/clinic bleed after approach cards",
+      "severity": "HIGH",
+      "root_cause": "Charter optional reuse never wired",
+      "correction_class": "EXISTING_PARTIAL_REUSE"
+    },
+    {
+      "id": "VD-006",
+      "region": "OC-INFRA",
+      "viewport": "both",
+      "type": "WRONG_GROUPING",
+      "current": "Single CSS auto-grid for 20 assets",
+      "canonical": "Text-interleaved photo subgroups in 1:2440",
+      "severity": "CRITICAL",
+      "root_cause": "Asset manifest interpreted as collage",
+      "correction_class": "UNIQUE_PARTIAL_RESTRUCTURE"
+    },
+    {
+      "id": "VD-007",
+      "region": "OC-INFRA",
+      "viewport": "both",
+      "type": "DECORATION",
+      "current": "No section background raster",
+      "canonical": "1:2440 decorative fill opacity 0.1",
+      "severity": "HIGH",
+      "root_cause": "Decorative layers not parsed in implementation",
+      "correction_class": "DECORATIVE_LAYER_IMPLEMENTATION",
+      "asset_id": "OC-DEC-01",
+      "asset_path": "src/img/content/o-centre/decorative/o-centre-infrastructure-background.webp",
+      "asset_status": "READY",
+      "asset_extraction": "APPROVED_EXPORTED"
+    },
+    {
+      "id": "VD-008",
+      "region": "OC-INST",
+      "viewport": "both",
+      "type": "CONTENT",
+      "current": "Typo Шпиговсикй preserved",
+      "canonical": "Same typo in Figma 1:2282",
+      "severity": "LOW",
+      "root_cause": "Canonical copy fidelity",
+      "correction_class": "NO_CHANGE"
+    },
+    {
+      "id": "VD-009",
+      "region": "OC-PROGRAM",
+      "viewport": "both",
+      "type": "ORDER",
+      "current": "Program before misplaced mid-CTA",
+      "canonical": "Program after approach + landscape",
+      "severity": "MEDIUM",
+      "root_cause": "CTA/founder order drift",
+      "correction_class": "HTML_ORDER_ONLY"
+    },
+    {
+      "id": "VD-010",
+      "region": "OC-SPECIALISTS",
+      "viewport": "both",
+      "type": "SPACING",
+      "current": "V8 canonical component",
+      "canonical": "Figma tail acceptable via V8 canon",
+      "severity": "ACCEPTABLE_CANON_DIFFERENCE",
+      "root_cause": "Shared component authority",
+      "correction_class": "NO_CHANGE"
+    },
+    {
+      "id": "VD-011",
+      "region": "OC-REVIEWS",
+      "viewport": "both",
+      "type": "SPACING",
+      "current": "V8 canonical component",
+      "canonical": "Figma tail acceptable via V8 canon",
+      "severity": "ACCEPTABLE_CANON_DIFFERENCE",
+      "root_cause": "Shared component authority",
+      "correction_class": "NO_CHANGE"
+    },
+    {
+      "id": "VD-012",
+      "region": "OC-FINAL-FORM",
+      "viewport": "both",
+      "type": "COMPONENT_BOUNDARY",
+      "current": "CF-009 final form",
+      "canonical": "Figma faq frame is final form not accordion",
+      "severity": "ACCEPTABLE_CANON_DIFFERENCE",
+      "root_cause": "Content blocker resolution",
+      "correction_class": "NO_CHANGE"
+    },
+    {
+      "id": "VD-013",
+      "region": "page",
+      "viewport": "desktop",
+      "type": "GEOMETRY",
+      "current": "Shorter cumulative height",
+      "canonical": "Figma 12830px frame",
+      "severity": "MAJOR",
+      "root_cause": "Missing subregions + flat spacing",
+      "correction_class": "SCOPED_SCSS"
+    },
+    {
+      "id": "VD-014",
+      "region": "OC-APPROACH",
+      "viewport": "both",
+      "type": "CONTENT",
+      "current": "Four card titles only",
+      "canonical": "Four cards with Lorem body omitted by policy",
+      "severity": "ACCEPTABLE_CANON_DIFFERENCE",
+      "root_cause": "Lorem omission authorized",
+      "correction_class": "NO_CHANGE"
+    },
+    {
+      "id": "VD-015",
+      "region": "OC-INFRA",
+      "viewport": "mobile",
+      "type": "RESPONSIVE",
+      "current": "Mobile-only assets 19/20 present",
+      "canonical": "Mobile-only assets required",
+      "severity": "LOW",
+      "root_cause": "Visibility classes correct; grouping wrong",
+      "correction_class": "UNIQUE_PARTIAL_RESTRUCTURE"
+    }
+  ]
+}

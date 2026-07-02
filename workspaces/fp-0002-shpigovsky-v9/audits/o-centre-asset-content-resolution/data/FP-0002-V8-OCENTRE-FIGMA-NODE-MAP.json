@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "source": "C:/MARS Phenix/AI MARS/workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/01_DESIGN/Spig_v1.2.fig",
+    "fig_sha256": "bae5d91c74b5a22afc610f7c7845b9badc6b87ec8da85c5705ecf4eec4de3041",
+    "parsed_at": "2026-06-28T23:02:30.000Z",
+    "desktop_frame": {
+      "id": "1:2185",
+      "name": "О центре",
+      "w": 1437,
+      "h": 12830
+    },
+    "mobile_frame": {
+      "id": "1:5519",
+      "name": "О центре - моб",
+      "w": 390,
+      "h": 16586
+    },
+    "generated_at": "2026-06-28T23:04:51.829932+00:00"
+  },
+  "blocks": [
+    {
+      "block_id": "OC-B01",
+      "label": "1 - Главный экран",
+      "desktop_node": "1:2186",
+      "mobile_node": "1:5520",
+      "text_nodes": [
+        "1:2193",
+        "1:2198",
+        "1:2200",
+        "1:2210",
+        "1:2213",
+        "1:2214",
+        "1:2215",
+        "1:2216",
+        "1:2217",
+        "1:2218",
+        "1:2219",
+        "1:2230",
+        "1:2231",
+        "1:2232",
+        "1:2237",
+        "1:2238",
+        "1:2239",
+        "1:2241",
+        "1:2242",
+        "1:2243"
+      ],
+      "text_node_count": 24,
+      "image_refs": [
+        "1:2190",
+        "1:2226"
+      ],
+      "image_ref_count": 2,
+      "confidence": "CONFIRMED"
+    },
+    {
+      "block_id": "OC-B02",
+      "label": "Subnav (in hero)",
+      "desktop_node": "1:2241-1:2247",
+      "mobile_node": "1:5520",
+      "text_nodes": [],
+      "text_node_count": 0,
+      "image_refs": [],
+      "image_ref_count": 0,
+      "confidence": "CONFIRMED"
+    },
+    {
+      "block_id": "OC-B03",
+      "label": "3- Услуги / institutional",
+      "desktop_node": "1:2279",
+      "mobile_node": "1:5569",
+      "text_nodes": [
+        "1:2282",
+        "1:2285",
+        "1:2288",
+        "1:2290",
+        "1:2292",
+        "1:2294",
+        "1:2301",
+        "1:2305",
+        "1:2308",
+        "1:2309"
+      ],
+      "text_node_count": 10,
+      "image_refs": [
+        "1:2279",
+        "1:2299"
+      ],
+      "image_ref_count": 2,
+      "confidence": "CONFIRMED"
+    },
+    {
+      "block_id": "OC-B04",
+      "label": "Этапы процедуры (who-we-treat)",
+      "desktop_node": "1:2310",
+      "mobile_node": "1:5604",
+      "text_nodes": [
+        "1:2314",
+        "1:2316",
+        "1:2319",
+        "1:2321",
+        "1:2323"
+      ],
+      "text_node_count": 5,
+      "image_refs": [
+        "1:2317",
+        "1:2325",
+        "1:2326",
+        "1:2327"
+      ],
+      "image_ref_count": 4,
+      "confidence": "CONFIRMED"
+    },
+    {
+      "block_id": "OC-B05",
+      "label": "Steps (BLK-018)",
+      "desktop_node": null,
+      "mobile_node": null,
+      "text_nodes": [],
+      "text_node_count": 0,
+      "image_refs": [],
+      "image_ref_count": 0,
+      "confidence": "RETIRED_NOT_IN_COMPOSITION",
+      "retired_reason": "BLK-018 absent; 1:2310 is who-we-treat (OC-B04)"
+    },
+    {
+      "block_id": "OC-B06",
+      "label": "Программа центра",
+      "desktop_node": "1:2341,1:2401",
+      "mobile_node": "1:5629,1:5664",
+      "text_nodes": [
+        "1:2406",
+        "1:2408",
+        "1:2412",
+        "1:2417",
+        "1:2423",
+        "1:2428",
+        "1:2433",
+        "1:2435"
+      ],
+      "text_node_count": 8,
+      "image_refs": [
+        "1:2401",
+        "1:2402",
+        "1:2414",
+        "1:2419",
+        "1:2425",
+        "1:2430",
+        "1:2431"
+      ],
+      "image_ref_count": 7,
+      "confidence": "CONFIRMED"
+    },
+    {
+      "block_id": "OC-B07",
+      "label": "С чего начать CTA",
+      "desktop_node": "1:2328,1:2509",
+      "mobile_node": "1:5617",
+      "text_nodes": [
+        "1:2511"
+      ],
+      "text_node_count": 1,
+      "image_refs": [
+        "1:2511"
+      ],
+      "image_ref_count": 1,
+      "confidence": "PROBABLE"
+    },
+    {
+      "block_id": "OC-B08",
+      "label": "преимущества",
+      "desktop_node": "1:2440",
+      "mobile_node": "1:5697",
+      "text_nodes": [
+        "1:2442",
+        "1:2446",
+        "1:2449",
+        "1:2451",
+        "1:2452",
+        "1:2453",
+        "1:2456",
+        "1:2458",
+        "1:2459",
+        "1:2460",
+        "1:2463",
+        "1:2465",
+        "1:2466",
+        "1:2467",
+        "1:2470",
+        "1:2472",
+        "1:2473",
+        "1:2474",
+        "1:2477",
+        "1:2481"
+      ],
+      "text_node_count": 27,
+      "image_refs": [
+        "1:2440",
+        "1:2451",
+        "1:2452",
+        "1:2453",
+        "1:2458",
+        "1:2459",
+        "1:2460",
+        "1:2465",
+        "1:2466",
+        "1:2467",
+        "1:2472",
+        "1:2473",
+        "1:2474",
+        "1:2483",
+        "1:2496",
+        "1:2499",
+        "1:2500",
+        "1:2501",
+        "1:2503",
+        "1:2505"
+      ],
+      "image_ref_count": 23,
+      "confidence": "CONFIRMED"
+    },
+    {
+      "block_id": "OC-B09",
+      "label": "Founder quote (in 3- Услуги)",
+      "desktop_node": "1:2301-1:2309",
+      "mobile_node": "1:5569",
+      "text_nodes": [],
+      "text_node_count": 0,
+      "image_refs": [],
+      "image_ref_count": 0,
+      "confidence": "CONFIRMED"
+    },
+    {
+      "block_id": "OC-B10",
+      "label": "Комфорт, приватность (mobile)",
+      "desktop_node": null,
+      "mobile_node": "1:5697",
+      "text_nodes": [],
+      "text_node_count": 0,
+      "image_refs": [],
+      "image_ref_count": 0,
+      "confidence": "PROBABLE"
+    },
+    {
+      "block_id": "OC-B11",
+      "label": "Специаисты",
+      "desktop_node": "1:2512",
+      "mobile_node": "1:5848",
+      "text_nodes": [
+        "1:2514",
+        "1:2516",
+        "1:2531",
+        "1:2532",
+        "1:2533",
+        "1:2534"
+      ],
+      "text_node_count": 6,
+      "image_refs": [
+        "1:2512",
+        "1:2524"
+      ],
+      "image_ref_count": 2,
+      "confidence": "CONFIRMED"
+    },
+    {
+      "block_id": "OC-B12",
+      "label": "Отзывы",
+      "desktop_node": "1:2549",
+      "mobile_node": "1:5903",
+      "text_nodes": [
+        "1:2551",
+        "1:2553",
+        "1:2568",
+        "1:2569",
+        "1:2570"
+      ],
+      "text_node_count": 5,
+      "image_refs": [],
+      "image_ref_count": 0,
+      "confidence": "CONFIRMED"
+    },
+    {
+      "block_id": "OC-B13",
+      "label": "faq (final form)",
+      "desktop_node": "1:2578",
+      "mobile_node": "1:5918",
+      "text_nodes": [
+        "1:2581",
+        "1:2582",
+        "1:2586",
+        "1:2588",
+        "1:2589",
+        "1:2592"
+      ],
+      "text_node_count": 6,
+      "image_refs": [
+        "1:2578",
+        "1:2579"
+      ],
+      "image_ref_count": 2,
+      "confidence": "CONFIRMED"
+    }
+  ]
+}

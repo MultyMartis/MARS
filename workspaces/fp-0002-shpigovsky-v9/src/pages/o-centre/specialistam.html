@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  @@include('partials/layout/head.html', {"title": "Специалистам — Шпиговский дом", "description": "Специалистам — центр «Шпиговский дом». Демонстрационная страница.", "canonical": "https://shpigovsky.ru/o-centre/specialistam/", "robots": "noindex, nofollow", "ogType": "website", "ogTitle": "Специалистам — Шпиговский дом", "ogDescription": "Специалистам — центр «Шпиговский дом». Демонстрационная страница.", "ogUrl": "https://shpigovsky.ru/o-centre/specialistam/", "ogImage": "https://shpigovsky.ru/assets/img/social/og-default.jpg", "ogImageAlt": "Специалистам — Шпиговский дом"})
+</head>
+<body class="page-o-centre page-plain-content" data-page="specialistam" data-content-status="demo-placeholder">
+  @@include('partials/layout/body-start.html')
+  @@include('partials/layout/header.html', {"activeNavUslugiClass": "", "activeNavOffcanvasClass": "", "activeNavUslugiAria": "", "activeNavOtzyvyClass": "", "activeNavOtzyvyOffcanvasClass": "", "activeNavOtzyvyAria": "", "activeNavKontaktyClass": "", "activeNavKontaktyOffcanvasClass": "", "activeNavKontaktyAria": "", "activeNavBlogClass": "", "activeNavBlogOffcanvasClass": "", "activeNavBlogAria": ""})
+  <main class="page-plain-content__main">
+    
+    @@include('partials/sections/services-inner-hero-v2.html', {"titleId": "specialistam-hero-title", "heroImage": "assets/img/content/o-centre/o-centre-hero.webp", "heroWidth": "1890", "heroHeight": "1260", "heroEyebrow": "О центре", "heroTitle": "Специалистам", "heroLead": "Информация для профессионального сообщества.", "heroCtaText": "Записаться на&nbsp;консультацию", "heroCtaSource": "specialistam-hero"})
+    @@include('partials/components/internal-page-nav.html', {"crumbHome":"Главная","crumbMiddle":"О центре","crumbMiddleHref":"/o-centre/","crumbMiddle2":"","crumbMiddleHref2":"","crumbCurrent":"Специалистам","listHtml": ""})
+    @@include('partials/sections/plain-page-content.html', {"contentStatusAttr": "data-content-status=\"demo-placeholder\"", "titleId": "specialistam-title", "pageTitle": "Специалистам", "bodyHtml": "<p>Страница для врачей, психотерапевтов и&nbsp;партнёров. Демонстрационный текст.</p>", "demoNoteHtml": "<p class=\"plain-page-content__demo-note\">Текст страницы представлен в&nbsp;демонстрационном виде для внутреннего просмотра и&nbsp;подлежит замене после проверки.</p>", "useH1": "false"})
+    @@include('partials/sections/final-form.html', {"leadSource": "specialistam-final", "headingId": "specialistam-final-heading", "headingText": "Остались вопросы?", "leadText": "Опишите вашу ситуацию в&nbsp;форме заявки, и&nbsp;мы расскажем, как сможем помочь", "sectionModifierClass": ""})
+  </main>
+  @@include('partials/layout/footer.html')
+  @@include('partials/layout/global-consultation-modal.html')
+  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+  <script src="assets/vendor/fancybox/fancybox.umd.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/inputmask.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

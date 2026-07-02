@@ -1,0 +1,57 @@
+{
+  "validation_id": "CF-011-DOM-ARIA-VALIDATION",
+  "dist_root": "C:\\MARS Phenix\\AI MARS\\workspaces\\fp-0002-shpigovsky-v8\\dist",
+  "pages": [
+    {
+      "page": "index.html",
+      "canonical_root_count": 0,
+      "old_wrapper_root_count": 0,
+      "old_band_class_count": 0,
+      "broken_aria_labelledby": [],
+      "duplicate_ids": false,
+      "unresolved_include": false,
+      "result": "PASS"
+    },
+    {
+      "page": "uslugi.html",
+      "canonical_root_count": 0,
+      "old_wrapper_root_count": 0,
+      "old_band_class_count": 0,
+      "broken_aria_labelledby": [],
+      "duplicate_ids": false,
+      "unresolved_include": false,
+      "result": "PASS"
+    },
+    {
+      "page": "uslugi-v2.html",
+      "canonical_root_count": 12,
+      "old_wrapper_root_count": 0,
+      "old_band_class_count": 0,
+      "broken_aria_labelledby": [],
+      "duplicate_ids": false,
+      "unresolved_include": false,
+      "result": "PASS"
+    },
+    {
+      "page": "usluga-podrazdel-v1.html",
+      "canonical_root_count": 15,
+      "old_wrapper_root_count": 0,
+      "old_band_class_count": 0,
+      "broken_aria_labelledby": [],
+      "duplicate_ids": false,
+      "unresolved_include": false,
+      "result": "PASS"
+    },
+    {
+      "page": "usluga-konechnaya-v1.html",
+      "canonical_root_count": 15,
+      "old_wrapper_root_count": 0,
+      "old_band_class_count": 0,
+      "broken_aria_labelledby": [],
+      "duplicate_ids": false,
+      "unresolved_include": false,
+      "result": "PASS"
+    }
+  ],
+  "overall": "PASS"
+}

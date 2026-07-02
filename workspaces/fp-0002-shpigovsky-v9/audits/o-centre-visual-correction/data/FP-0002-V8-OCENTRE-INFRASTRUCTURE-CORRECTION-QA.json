@@ -1,0 +1,21 @@
+{
+  "task": "FP-0002-V8-OCENTRE-VISUAL-CORRECTION",
+  "date": "2026-06-29",
+  "assets_expected": 20,
+  "assets_rendered": 20,
+  "misplaced": 0,
+  "omitted": 0,
+  "extra": 0,
+  "unintended_duplicates": 0,
+  "auto_grid_retained": false,
+  "semantic_groups": 7,
+  "dec_01": {
+    "asset": "src/img/content/o-centre/decorative/o-centre-infrastructure-background.webp",
+    "css_reference": true,
+    "opacity": 0.1,
+    "pointer_events": "none",
+    "content_opacity_leakage": false,
+    "result": "PASS"
+  },
+  "result": "PASS"
+}

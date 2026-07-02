@@ -1,0 +1,58 @@
+{
+  "inventory_id": "CF-007-PRE-IMPLEMENTATION-INVENTORY",
+  "head": "4737b020c93dcbdfd2b309b3abe9a564a9a8ca79",
+  "old_partial": "src/partials/sections/home-reviews.html",
+  "old_root_class": "home-reviews",
+  "classification": "SHARED_BUT_PAGE_NAMED",
+  "consumers": [
+    {
+      "page": "index.html",
+      "include": "partials/sections/home-reviews.html",
+      "section_id": "",
+      "slides": 10,
+      "slider_hook": "data-reviews-slider",
+      "pagination_hook": "data-reviews-pagination",
+      "navigation": false
+    },
+    {
+      "page": "usluga-podrazdel-v1.html",
+      "include": "partials/sections/home-reviews.html",
+      "section_id": "",
+      "slides": 10,
+      "slider_hook": "data-reviews-slider",
+      "pagination_hook": "data-reviews-pagination",
+      "navigation": false
+    },
+    {
+      "page": "usluga-konechnaya-v1.html",
+      "include": "partials/sections/home-reviews.html",
+      "section_id": "service-leaf-reviews",
+      "slides": 10,
+      "slider_hook": "data-reviews-slider",
+      "pagination_hook": "data-reviews-pagination",
+      "navigation": false
+    }
+  ],
+  "totals": {
+    "consumers": 3,
+    "inline_copies": 0,
+    "duplicate_partials": 0,
+    "duplicate_css_blocks": 0,
+    "duplicate_js_initializations": 0,
+    "page_specific_wrappers": 0,
+    "visual_variants": 0,
+    "content_variants": 0,
+    "slide_count_variants": 0
+  },
+  "js": {
+    "init_function": "initHomeReviews",
+    "slider_selector": "[data-reviews-slider]",
+    "pagination_selector": "[data-reviews-pagination]"
+  },
+  "boundary": {
+    "included": ["home-reviews"],
+    "excluded": ["founder-quote", "standalone-testimonials", "review-page"],
+    "decision": "CONFIRMED"
+  },
+  "target_neutral_name": "reviews"
+}

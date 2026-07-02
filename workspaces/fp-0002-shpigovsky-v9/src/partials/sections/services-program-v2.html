@@ -1,0 +1,44 @@
+<section data-reveal class="services-program-v2 @@modifierClass" id="@@id" aria-labelledby="services-program-v2-heading">
+  <div class="container services-program-v2__container">
+    <header class="services-program-v2__head">
+      <h2 class="services-program-v2__heading" id="services-program-v2-heading">@@heading</h2>
+      <a class="services-program-v2__head-link" href="@@allLinkHref">
+        <span class="services-program-v2__head-link-text">@@allLinkTextDesktop</span>
+        @@if (usePlayLinkIcon === 'true') {
+        <span class="services-program-v2__head-link-icon" aria-hidden="true"><i class="fas fa-play"></i></span>
+        }
+        @@if (usePlayLinkIcon !== 'true') {
+        <span class="services-program-v2__head-link-icon" aria-hidden="true"><img class="services-program-v2__head-link-icon-image" src="assets/svg/external-link.svg" width="20" height="20" alt=""></span>
+        }
+      </a>
+    </header>
+
+    @@if (lead !== '') {
+    <p class="services-program-v2__lead">@@lead</p>
+    }
+    @@if (intro !== '') {
+    <p class="services-program-v2__intro">@@intro</p>
+    }
+    @@if (intro2 !== '') {
+    <p class="services-program-v2__intro services-program-v2__intro--continued">@@intro2</p>
+    }
+
+    <div class="services-program-v2__grid">
+      @@itemsHtml
+    </div>
+
+    @@if (hideCtaBand !== 'true') {
+    @@include('partials/components/program-cta-band.html', {"wrapSection": "", "wrapContainer": "", "sectionId": "", "headingId": "", "headingText": "", "buttonFirst": "", "marginFlush": "", "ctaTitle": "@@ctaTitle", "ctaSubtitle": "@@ctaSubtitle", "ctaPhone": "@@ctaPhone", "ctaPhoneHint": "@@ctaPhoneHint", "ctaText": "@@ctaText", "ctaSource": "@@ctaSource"})
+    }
+
+    <a class="services-program-v2__foot-link" href="@@allLinkHref">
+      <span class="services-program-v2__foot-link-text">@@allLinkTextMobile</span>
+      @@if (usePlayLinkIcon === 'true') {
+      <span class="services-program-v2__foot-link-icon" aria-hidden="true"><i class="fas fa-play"></i></span>
+      }
+      @@if (usePlayLinkIcon !== 'true') {
+      <span class="services-program-v2__foot-link-icon" aria-hidden="true"><img class="services-program-v2__foot-link-icon-image" src="assets/svg/external-link.svg" width="20" height="20" alt=""></span>
+      }
+    </a>
+  </div>
+</section>

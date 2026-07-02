@@ -1,0 +1,20 @@
+<nav class="breadcrumbs" aria-label="Хлебные крошки">
+  <ol class="breadcrumbs__list">
+    <li class="breadcrumbs__item">
+      <a class="breadcrumbs__link" href="/">@@crumbHome</a>
+    </li>
+    @@if (crumbMiddle !== '') {
+    <li class="breadcrumbs__item">
+      <a class="breadcrumbs__link" href="@@crumbMiddleHref">@@crumbMiddle</a>
+    </li>
+    }
+    @@if (crumbMiddle2 !== '') {
+    <li class="breadcrumbs__item">
+      <a class="breadcrumbs__link" href="@@crumbMiddleHref2">@@crumbMiddle2</a>
+    </li>
+    }
+    <li class="breadcrumbs__item breadcrumbs__item--current" aria-current="page">
+      <span class="breadcrumbs__current">@@crumbCurrent</span>
+    </li>
+  </ol>
+</nav>

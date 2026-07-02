@@ -1,0 +1,149 @@
+{
+  "asset_id": "OC-DEC-01",
+  "image_ref": "d3ac7d00af36722468bb8f23790ac8586fb9ae3d",
+  "short_ref": "d3ac7d00af36",
+  "fig_path": "C:\\MARS Phenix\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\INCOMING\\01_DESIGN\\Spig_v1.2.fig",
+  "fig_sha256": "bae5d91c74b5a22afc610f7c7845b9badc6b87ec8da85c5705ecf4eec4de3041",
+  "parsed_at": "2026-06-29T01:21:54.109235+00:00",
+  "rows": [
+    {
+      "node": "1:2440",
+      "layer": "\u043f\u0440\u0435\u0438\u043c\u0443\u0449\u0435\u0441\u0442\u0432\u0430",
+      "parent": "1:2185",
+      "parentLayer": "\u041e \u0446\u0435\u043d\u0442\u0440\u0435",
+      "nodeType": "FRAME",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "d3ac7d00af36722468bb8f23790ac8586fb9ae3d",
+      "imageHash": "d3ac7d00af36722468bb8f23790ac8586fb9ae3d",
+      "scaleMode": null,
+      "opacity": 0.10000000149011612,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 1437,
+        "h": 3621
+      },
+      "platform": "desktop",
+      "classification": "DECORATIVE_RASTER",
+      "desktop": 1,
+      "mobile": 0
+    },
+    {
+      "node": "1:2483",
+      "layer": "\u0421\u043d\u0438\u043c\u043e\u043a \u044d\u043a\u0440\u0430\u043d\u0430 2026-05-18 \u0432 17.53.58 1",
+      "parent": "1:2480",
+      "parentLayer": "Frame 2",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": false,
+      "fillType": "IMAGE",
+      "imageRef": "d3ac7d00af36722468bb8f23790ac8586fb9ae3d",
+      "imageHash": "d3ac7d00af36722468bb8f23790ac8586fb9ae3d",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 40,
+        "h": 41
+      },
+      "platform": "desktop",
+      "classification": "HIDDEN_NOT_EXPORT",
+      "desktop": 1,
+      "mobile": 0
+    },
+    {
+      "node": "1:5697",
+      "layer": "\u041a\u043e\u043c\u0444\u043e\u0440\u0442, \u043f\u0440\u0438\u0432\u0430\u0442\u043d\u043e\u0441\u0442\u044c",
+      "parent": "1:5519",
+      "parentLayer": "\u041e \u0446\u0435\u043d\u0442\u0440\u0435 - \u043c\u043e\u0431",
+      "nodeType": "FRAME",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "d3ac7d00af36722468bb8f23790ac8586fb9ae3d",
+      "imageHash": "d3ac7d00af36722468bb8f23790ac8586fb9ae3d",
+      "scaleMode": null,
+      "opacity": 0.10000000149011612,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 390,
+        "h": 4958
+      },
+      "platform": "mobile",
+      "classification": "DECORATIVE_RASTER",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5697",
+      "layer": "\u041a\u043e\u043c\u0444\u043e\u0440\u0442, \u043f\u0440\u0438\u0432\u0430\u0442\u043d\u043e\u0441\u0442\u044c",
+      "parent": "1:5519",
+      "parentLayer": "\u041e \u0446\u0435\u043d\u0442\u0440\u0435 - \u043c\u043e\u0431",
+      "nodeType": "FRAME",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "d3ac7d00af36722468bb8f23790ac8586fb9ae3d",
+      "imageHash": "d3ac7d00af36722468bb8f23790ac8586fb9ae3d",
+      "scaleMode": null,
+      "opacity": 0.10000000149011612,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 390,
+        "h": 4958
+      },
+      "platform": "mobile",
+      "classification": "DECORATIVE_RASTER",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5827",
+      "layer": "\u0421\u043d\u0438\u043c\u043e\u043a \u044d\u043a\u0440\u0430\u043d\u0430 2026-05-18 \u0432 17.53.58 1",
+      "parent": "1:5824",
+      "parentLayer": "Group 3409",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": false,
+      "fillType": "IMAGE",
+      "imageRef": "d3ac7d00af36722468bb8f23790ac8586fb9ae3d",
+      "imageHash": "d3ac7d00af36722468bb8f23790ac8586fb9ae3d",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 40,
+        "h": 41
+      },
+      "platform": "mobile",
+      "classification": "HIDDEN_NOT_EXPORT",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5840",
+      "layer": "\u0421\u043d\u0438\u043c\u043e\u043a \u044d\u043a\u0440\u0430\u043d\u0430 2026-05-18 \u0432 17.53.58 1",
+      "parent": "1:5819",
+      "parentLayer": "Frame 81513620",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": false,
+      "fillType": "IMAGE",
+      "imageRef": "d3ac7d00af36722468bb8f23790ac8586fb9ae3d",
+      "imageHash": "d3ac7d00af36722468bb8f23790ac8586fb9ae3d",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 40,
+        "h": 41
+      },
+      "platform": "mobile",
+      "classification": "HIDDEN_NOT_EXPORT",
+      "desktop": 0,
+      "mobile": 1
+    }
+  ],
+  "summary": {
+    "total_uses": 6,
+    "visible_uses": 3,
+    "desktop_uses": 2,
+    "mobile_uses": 4,
+    "same_ref": true
+  }
+}

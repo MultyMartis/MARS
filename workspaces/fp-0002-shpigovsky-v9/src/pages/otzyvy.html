@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  @@include('partials/layout/head.html', {"title": "Отзывы — Шпиговский дом", "description": "Отзывы о центре лечения и профилактики зависимостей «Шпиговский дом».", "canonical": "https://shpigovsky.ru/otzyvy/", "robots": "noindex, nofollow", "ogType": "website", "ogTitle": "Отзывы — Шпиговский дом", "ogDescription": "Отзывы о центре лечения и профилактики зависимостей «Шпиговский дом».", "ogUrl": "https://shpigovsky.ru/otzyvy/", "ogImage": "https://shpigovsky.ru/assets/img/social/og-default.jpg", "ogImageAlt": "Отзывы — Шпиговский дом"})
+</head>
+<body class="page-otzyvy" data-page="otzyvy">
+  @@include('partials/layout/body-start.html')
+  @@include('partials/layout/header.html', {"activeNavUslugiClass": "", "activeNavOffcanvasClass": "", "activeNavUslugiAria": "", "activeNavOtzyvyClass": " site-header__nav-link--active", "activeNavOtzyvyOffcanvasClass": " offcanvas__nav-link--active", "activeNavOtzyvyAria": " aria-current=\"page\"", "activeNavKontaktyClass": "", "activeNavKontaktyOffcanvasClass": "", "activeNavKontaktyAria": "", "activeNavBlogClass": "", "activeNavBlogOffcanvasClass": "", "activeNavBlogAria": ""})
+  <main class="page-otzyvy__main">
+    <div class="reviews-page__breadcrumbs">
+      <div class="container">
+        @@include('partials/components/breadcrumbs.html', {"crumbHome": "Главная", "crumbMiddle": "", "crumbMiddleHref": "", "crumbMiddle2": "", "crumbMiddleHref2": "", "crumbCurrent": "Отзывы"})
+      </div>
+    </div>
+    @@include('partials/sections/reviews-archive-list.html')
+    @@include('partials/sections/reviews-rehabilitation-requirements.html')
+  </main>
+  @@include('partials/layout/footer.html')
+  @@include('partials/layout/global-consultation-modal.html')
+  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+  <script src="assets/vendor/fancybox/fancybox.umd.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/inputmask.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

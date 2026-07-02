@@ -1,0 +1,78 @@
+{
+  "inventory_id": "CF-008-PRE-IMPLEMENTATION-INVENTORY",
+  "captured_at": "2026-06-28",
+  "head": "4fe928f2512af77413d61a5263aa685aae667123",
+  "family_old_name": "home-faq",
+  "partial_old_path": "src/partials/sections/home-faq.html",
+  "consumers": [
+    {
+      "page": "index.html",
+      "include_path": "partials/sections/home-faq.html",
+      "root_class": "home-faq",
+      "items": 10,
+      "trigger_hook": "data-accordion-button",
+      "panel_hook": "data-accordion-panel",
+      "ids_aria": "headingId=home-faq-heading; triggers home-faq-trigger-1..10; panels home-faq-panel-1..10",
+      "default_state": "item-1 open (aria-expanded=true, panel not hidden)",
+      "page_scope": "shared partial, page heading id"
+    },
+    {
+      "page": "uslugi.html",
+      "include_path": "partials/sections/home-faq.html",
+      "root_class": "home-faq",
+      "items": 10,
+      "trigger_hook": "data-accordion-button",
+      "panel_hook": "data-accordion-panel",
+      "ids_aria": "headingId=home-faq-heading",
+      "default_state": "item-1 open",
+      "page_scope": "shared partial"
+    },
+    {
+      "page": "uslugi-v2.html",
+      "include_path": "partials/sections/home-faq.html",
+      "root_class": "home-faq",
+      "items": 10,
+      "trigger_hook": "data-accordion-button",
+      "panel_hook": "data-accordion-panel",
+      "ids_aria": "headingId=home-faq-heading",
+      "default_state": "item-1 open",
+      "page_scope": "shared partial"
+    },
+    {
+      "page": "usluga-podrazdel-v1.html",
+      "include_path": "partials/sections/home-faq.html",
+      "root_class": "home-faq",
+      "items": 10,
+      "trigger_hook": "data-accordion-button",
+      "panel_hook": "data-accordion-panel",
+      "ids_aria": "sectionId=service-subdivision-faq; headingId=service-subdivision-faq-heading",
+      "default_state": "item-1 open",
+      "page_scope": "shared partial, page section/heading ids"
+    },
+    {
+      "page": "usluga-konechnaya-v1.html",
+      "include_path": "partials/sections/home-faq.html",
+      "root_class": "home-faq",
+      "items": 10,
+      "trigger_hook": "data-accordion-button",
+      "panel_hook": "data-accordion-panel",
+      "ids_aria": "sectionId=service-leaf-faq; headingId=service-leaf-faq-heading",
+      "default_state": "item-1 open",
+      "page_scope": "shared partial, page section/heading ids"
+    }
+  ],
+  "summary": {
+    "total_consumers": 5,
+    "inline_copies": 0,
+    "duplicate_partials": 0,
+    "duplicate_css_blocks": 0,
+    "duplicate_js_initializations": 0,
+    "page_specific_wrappers": 0,
+    "content_variants": 0,
+    "structure_variants": 0,
+    "default_state_variants": 0,
+    "js_init": "global initTreatmentAccordion via [data-accordion] — not home-faq scoped",
+    "classification": "SHARED_BUT_PAGE_NAMED",
+    "boundary_decision": "home-faq only; excludes home-treatment-prevention accordion and unrelated collapsibles"
+  }
+}

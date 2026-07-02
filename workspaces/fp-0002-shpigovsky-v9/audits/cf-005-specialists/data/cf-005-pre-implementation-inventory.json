@@ -1,0 +1,72 @@
+{
+  "inventory_id": "CF-005-PRE-IMPLEMENTATION-INVENTORY",
+  "date": "2026-06-28",
+  "classification": "SHARED_BUT_PAGE_NAMED",
+  "consumers": [
+    {
+      "page": "index.html",
+      "include_path": "partials/sections/home-specialists.html",
+      "root_class": "home-specialists",
+      "slider_hook": "data-specialists-slider",
+      "navigation_hooks": ["data-specialists-pagination"],
+      "section_id": "",
+      "heading_id": "home-specialists-heading",
+      "heading_text": "Специалисты центра",
+      "page_scope_dependency": "home-prefixed root class and heading id"
+    },
+    {
+      "page": "usluga-podrazdel-v1.html",
+      "include_path": "partials/sections/home-specialists.html",
+      "root_class": "home-specialists",
+      "slider_hook": "data-specialists-slider",
+      "navigation_hooks": ["data-specialists-pagination"],
+      "section_id": "service-subdivision-specialists",
+      "heading_id": "service-subdivision-specialists-heading",
+      "heading_text": "Специалисты центра",
+      "page_scope_dependency": "page-specific section/heading ids only"
+    },
+    {
+      "page": "usluga-konechnaya-v1.html",
+      "include_path": "partials/sections/home-specialists.html",
+      "root_class": "home-specialists",
+      "slider_hook": "data-specialists-slider",
+      "navigation_hooks": ["data-specialists-pagination"],
+      "section_id": "service-leaf-specialists",
+      "heading_id": "service-leaf-specialists-heading",
+      "heading_text": "Специалисты центра",
+      "page_scope_dependency": "page-specific section/heading ids only"
+    }
+  ],
+  "summary": {
+    "total_consumers": 3,
+    "inline_copies": 0,
+    "duplicate_partials": 0,
+    "duplicate_css_blocks": 0,
+    "duplicate_js_initializations": 0,
+    "page_specific_wrappers": 0,
+    "visual_variants": 0,
+    "content_variants": 0,
+    "unresolved_dependencies": 0
+  },
+  "css_selectors": [
+    ".home-specialists__pagination",
+    ".home-specialists__head",
+    ".home-specialists__heading",
+    ".home-specialists__all-link",
+    ".home-specialists__all-icon",
+    ".home-specialists__slider",
+    ".home-specialists__wrapper",
+    ".home-specialists__card",
+    ".home-specialists__photo",
+    ".home-specialists__name",
+    ".home-specialists__role"
+  ],
+  "js": {
+    "file": "src/js/main.js",
+    "function": "initHomeSpecialists",
+    "slider_selector": "[data-specialists-slider]",
+    "pagination_selector": "[data-specialists-pagination]"
+  },
+  "slide_count": 5,
+  "component_identity": "CONFIRMED_SHARED"
+}

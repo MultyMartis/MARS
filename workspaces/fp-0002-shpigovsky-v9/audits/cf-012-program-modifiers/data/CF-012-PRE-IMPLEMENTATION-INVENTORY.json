@@ -1,0 +1,79 @@
+{
+  "wave": "CF-012",
+  "head": "497c51c5fe088bb203b0c93486c3ee0f9f925afa",
+  "captured_utc": "2026-06-28T21:50:00Z",
+  "candidates": [
+    {
+      "id": "hub",
+      "partial": "services-program-v2.html",
+      "consumers": ["uslugi-v2.html"],
+      "root_class": "services-program-v2",
+      "modifiers_before": [],
+      "page_scoped_css": "page-uslugi-v2",
+      "status": "SAME_STRUCTURE_DUPLICATE_MODIFIER"
+    },
+    {
+      "id": "subdivision",
+      "partial": "services-program-v2.html",
+      "consumers": ["usluga-podrazdel-v1.html"],
+      "root_class": "services-program-v2",
+      "modifiers_before": [
+        "services-program-v2--subdivision",
+        "service-subdivision-program-v1"
+      ],
+        "modifiers_after": [
+          "services-program-v2--play-link",
+          "services-program-v2--intro-stacked",
+          "services-program-v2--grid-compact",
+          "services-program-v2--media-contain",
+          "services-program-v2--title-block",
+          "services-program-v2--media-frame-fixed",
+          "services-program-v2--item-image-mobile-short"
+        ],
+      "status": "SAME_STRUCTURE_DUPLICATE_MODIFIER"
+    },
+    {
+      "id": "leaf",
+      "partial": "services-program-v2.html",
+      "consumers": ["usluga-konechnaya-v1.html"],
+      "root_class": "services-program-v2",
+      "modifiers_before": [
+        "services-program-v2--subdivision",
+        "service-leaf-program-v1"
+      ],
+      "modifiers_after": [
+        "services-program-v2--play-link",
+        "services-program-v2--intro-stacked",
+        "services-program-v2--title-flush",
+        "services-program-v2--item-body-spaced"
+      ],
+      "status": "SAME_STRUCTURE_DUPLICATE_MODIFIER"
+    },
+    {
+      "id": "home-rehabilitation",
+      "partial": "home-rehabilitation-program.html",
+      "consumers": ["index.html", "uslugi.html"],
+      "root_class": "home-rehabilitation-program",
+      "status": "REAL_VISUAL_VARIANT"
+    }
+  ],
+  "totals": {
+    "active_partials": 1,
+    "active_consumers": 3,
+    "page_named_modifiers_before": 3,
+    "duplicate_css_groups_before": 3
+  },
+  "canonical_model": {
+    "base_partial": "services-program-v2.html",
+    "base_root": "services-program-v2",
+    "functional_modifiers": [
+      "services-program-v2--play-link",
+      "services-program-v2--intro-stacked",
+      "services-program-v2--grid-compact",
+      "services-program-v2--media-contain",
+      "services-program-v2--title-block",
+      "services-program-v2--title-flush",
+      "services-program-v2--item-body-spaced"
+    ]
+  }
+}

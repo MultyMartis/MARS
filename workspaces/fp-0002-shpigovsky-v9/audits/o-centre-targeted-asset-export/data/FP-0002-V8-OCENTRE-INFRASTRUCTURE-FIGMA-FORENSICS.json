@@ -1,0 +1,1412 @@
+{
+  "figPath": "C:\\MARS Phenix\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\INCOMING\\01_DESIGN\\Spig_v1.2.fig",
+  "figSha256": "bae5d91c74b5a22afc610f7c7845b9badc6b87ec8da85c5705ecf4eec4de3041",
+  "parsedAt": "2026-06-28T23:32:03.042Z",
+  "desktopFrame": "1:2440",
+  "mobileFrame": "1:5697",
+  "metrics": {
+    "desktop": {
+      "imageLikeNodes": 23,
+      "visibleBitmapNodes": 19,
+      "uniqueBitmapRefs": 22,
+      "requiredPhotoRefs": 18,
+      "hiddenRefs": 4,
+      "decorativeRefs": 1,
+      "unresolvedRefs": 0
+    },
+    "mobile": {
+      "imageLikeNodes": 31,
+      "visibleBitmapNodes": 20,
+      "uniqueBitmapRefs": 20,
+      "requiredPhotoRefs": 15,
+      "hiddenRefs": 11,
+      "decorativeRefs": 2,
+      "unresolvedRefs": 0
+    },
+    "combined": {
+      "imageLikeNodes": 54,
+      "visibleBitmapNodes": 39,
+      "uniqueBitmapRefs": 26,
+      "requiredPhotoRefs": 20,
+      "hiddenRefs": 15,
+      "decorativeRefs": 3,
+      "unresolvedRefs": 0
+    }
+  },
+  "rows": [
+    {
+      "node": "1:2440",
+      "layer": "преимущества",
+      "parent": "1:2185",
+      "parentLayer": "О центре",
+      "nodeType": "FRAME",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "d3ac7d00af36722468bb8f23790ac8586fb9ae3d",
+      "imageHash": "d3ac7d00af36722468bb8f23790ac8586fb9ae3d",
+      "scaleMode": null,
+      "opacity": 0.10000000149011612,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 1437,
+        "h": 3621
+      },
+      "platform": "desktop",
+      "classification": "DECORATIVE_RASTER",
+      "desktop": 1,
+      "mobile": 0
+    },
+    {
+      "node": "1:2451",
+      "layer": "этап",
+      "parent": "1:2450",
+      "parentLayer": "Frame 81513616",
+      "nodeType": "INSTANCE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "5d64fd209a3f3f67accbed866303db41c2d8a528",
+      "imageHash": "5d64fd209a3f3f67accbed866303db41c2d8a528",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 376,
+        "h": 360
+      },
+      "platform": "desktop",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 1,
+      "mobile": 0
+    },
+    {
+      "node": "1:2452",
+      "layer": "этап",
+      "parent": "1:2450",
+      "parentLayer": "Frame 81513616",
+      "nodeType": "INSTANCE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "b46f48587793dbe27b847ffab16c122acb838e68",
+      "imageHash": "b46f48587793dbe27b847ffab16c122acb838e68",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 376,
+        "h": 360
+      },
+      "platform": "desktop",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 1,
+      "mobile": 0
+    },
+    {
+      "node": "1:2453",
+      "layer": "этап",
+      "parent": "1:2450",
+      "parentLayer": "Frame 81513616",
+      "nodeType": "INSTANCE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "e7930992ff2ca8447562a925c16daf3eb22750f3",
+      "imageHash": "e7930992ff2ca8447562a925c16daf3eb22750f3",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 376,
+        "h": 360
+      },
+      "platform": "desktop",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 1,
+      "mobile": 0
+    },
+    {
+      "node": "1:2458",
+      "layer": "этап",
+      "parent": "1:2457",
+      "parentLayer": "Frame 81513831",
+      "nodeType": "INSTANCE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "08aafd01ea4f18d498e37f9a5bed870259a3bb5a",
+      "imageHash": "08aafd01ea4f18d498e37f9a5bed870259a3bb5a",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 376,
+        "h": 360
+      },
+      "platform": "desktop",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 1,
+      "mobile": 0
+    },
+    {
+      "node": "1:2459",
+      "layer": "этап",
+      "parent": "1:2457",
+      "parentLayer": "Frame 81513831",
+      "nodeType": "INSTANCE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "cfe9cb8830861cea3b475250b9b308d36acf00df",
+      "imageHash": "cfe9cb8830861cea3b475250b9b308d36acf00df",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 376,
+        "h": 360
+      },
+      "platform": "desktop",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 1,
+      "mobile": 0
+    },
+    {
+      "node": "1:2460",
+      "layer": "этап",
+      "parent": "1:2457",
+      "parentLayer": "Frame 81513831",
+      "nodeType": "INSTANCE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "9823f3b2ba2f98adb9f6c1e6cc423ec5fd250363",
+      "imageHash": "9823f3b2ba2f98adb9f6c1e6cc423ec5fd250363",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 376,
+        "h": 360
+      },
+      "platform": "desktop",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 1,
+      "mobile": 0
+    },
+    {
+      "node": "1:2465",
+      "layer": "этап",
+      "parent": "1:2464",
+      "parentLayer": "Frame 81513832",
+      "nodeType": "INSTANCE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "637f2e33d837dd58963184dc3c4c242e4838a28e",
+      "imageHash": "637f2e33d837dd58963184dc3c4c242e4838a28e",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 376,
+        "h": 360
+      },
+      "platform": "desktop",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 1,
+      "mobile": 0
+    },
+    {
+      "node": "1:2466",
+      "layer": "этап",
+      "parent": "1:2464",
+      "parentLayer": "Frame 81513832",
+      "nodeType": "INSTANCE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "56d93c21bb8affe8a77e7b4e59f9720c79686990",
+      "imageHash": "56d93c21bb8affe8a77e7b4e59f9720c79686990",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 376,
+        "h": 360
+      },
+      "platform": "desktop",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 1,
+      "mobile": 0
+    },
+    {
+      "node": "1:2467",
+      "layer": "этап",
+      "parent": "1:2464",
+      "parentLayer": "Frame 81513832",
+      "nodeType": "INSTANCE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "be546a9d18ee86201de5ea4cb7ce07b214505d3a",
+      "imageHash": "be546a9d18ee86201de5ea4cb7ce07b214505d3a",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 376,
+        "h": 360
+      },
+      "platform": "desktop",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 1,
+      "mobile": 0
+    },
+    {
+      "node": "1:2472",
+      "layer": "этап",
+      "parent": "1:2471",
+      "parentLayer": "Frame 81513834",
+      "nodeType": "INSTANCE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "764bb734225ea8803b3fff66550ad52115557580",
+      "imageHash": "764bb734225ea8803b3fff66550ad52115557580",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 376,
+        "h": 360
+      },
+      "platform": "desktop",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 1,
+      "mobile": 0
+    },
+    {
+      "node": "1:2473",
+      "layer": "этап",
+      "parent": "1:2471",
+      "parentLayer": "Frame 81513834",
+      "nodeType": "INSTANCE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "d8706218623eae4b9d4f08c4360c85620a699d9b",
+      "imageHash": "d8706218623eae4b9d4f08c4360c85620a699d9b",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 376,
+        "h": 360
+      },
+      "platform": "desktop",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 1,
+      "mobile": 0
+    },
+    {
+      "node": "1:2474",
+      "layer": "этап",
+      "parent": "1:2471",
+      "parentLayer": "Frame 81513834",
+      "nodeType": "INSTANCE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "e5556565eedf993018161f548b5528178ae38e62",
+      "imageHash": "e5556565eedf993018161f548b5528178ae38e62",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 376,
+        "h": 360
+      },
+      "platform": "desktop",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 1,
+      "mobile": 0
+    },
+    {
+      "node": "1:2483",
+      "layer": "Снимок экрана 2026-05-18 в 17.53.58 1",
+      "parent": "1:2480",
+      "parentLayer": "Frame 2",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": false,
+      "fillType": "IMAGE",
+      "imageRef": "d3ac7d00af36722468bb8f23790ac8586fb9ae3d",
+      "imageHash": "d3ac7d00af36722468bb8f23790ac8586fb9ae3d",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 40,
+        "h": 41
+      },
+      "platform": "desktop",
+      "classification": "HIDDEN_NOT_EXPORT",
+      "desktop": 1,
+      "mobile": 0
+    },
+    {
+      "node": "1:2496",
+      "layer": "image 13030321",
+      "parent": "1:2495",
+      "parentLayer": "этап",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "a781712981f3085366123fbeab4b2ea4bbe31b06",
+      "imageHash": "a781712981f3085366123fbeab4b2ea4bbe31b06",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 782,
+        "h": 491
+      },
+      "platform": "desktop",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 1,
+      "mobile": 0
+    },
+    {
+      "node": "1:2499",
+      "layer": "этап",
+      "parent": "1:2498",
+      "parentLayer": "Frame 81513614",
+      "nodeType": "INSTANCE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "696568a7986120af10e2b35b537cc171a5152ce2",
+      "imageHash": "696568a7986120af10e2b35b537cc171a5152ce2",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 377,
+        "h": 360
+      },
+      "platform": "desktop",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 1,
+      "mobile": 0
+    },
+    {
+      "node": "1:2500",
+      "layer": "этап",
+      "parent": "1:2498",
+      "parentLayer": "Frame 81513614",
+      "nodeType": "INSTANCE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "438c0366e0e935c0bc0111e3a21d86b4c1737eaf",
+      "imageHash": "438c0366e0e935c0bc0111e3a21d86b4c1737eaf",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 377,
+        "h": 360
+      },
+      "platform": "desktop",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 1,
+      "mobile": 0
+    },
+    {
+      "node": "1:2501",
+      "layer": "этап",
+      "parent": "1:2498",
+      "parentLayer": "Frame 81513614",
+      "nodeType": "INSTANCE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "3a1474a165f404d0baca2a2630c058405d133a58",
+      "imageHash": "3a1474a165f404d0baca2a2630c058405d133a58",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 377,
+        "h": 360
+      },
+      "platform": "desktop",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 1,
+      "mobile": 0
+    },
+    {
+      "node": "1:2503",
+      "layer": "этап",
+      "parent": "1:2502",
+      "parentLayer": "Frame 81513613",
+      "nodeType": "INSTANCE",
+      "visible": false,
+      "fillType": "IMAGE",
+      "imageRef": "a278c7c06175e004645580d162956fc7a79d5260",
+      "imageHash": "a278c7c06175e004645580d162956fc7a79d5260",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 580,
+        "h": 360
+      },
+      "platform": "desktop",
+      "classification": "HIDDEN_NOT_EXPORT",
+      "desktop": 1,
+      "mobile": 0
+    },
+    {
+      "node": "1:2505",
+      "layer": "image 13030321",
+      "parent": "1:2504",
+      "parentLayer": "этап",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": false,
+      "fillType": "IMAGE",
+      "imageRef": "8fd30cd90d8efd6ba5a36c8d07b30ffeb0049200",
+      "imageHash": "8fd30cd90d8efd6ba5a36c8d07b30ffeb0049200",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 393,
+        "h": 491
+      },
+      "platform": "desktop",
+      "classification": "HIDDEN_NOT_EXPORT",
+      "desktop": 1,
+      "mobile": 0
+    },
+    {
+      "node": "1:2506",
+      "layer": "image 13030326",
+      "parent": "1:2504",
+      "parentLayer": "этап",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": false,
+      "fillType": "IMAGE",
+      "imageRef": "12d46737cb690c3c8094e6483a6dd53cc9e1eda0",
+      "imageHash": "12d46737cb690c3c8094e6483a6dd53cc9e1eda0",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 540,
+        "h": 360
+      },
+      "platform": "desktop",
+      "classification": "HIDDEN_NOT_EXPORT",
+      "desktop": 1,
+      "mobile": 0
+    },
+    {
+      "node": "1:2507",
+      "layer": "image 13030327",
+      "parent": "1:2504",
+      "parentLayer": "этап",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "6a46faf0e239a93a14d4fe4252af39337232fa19",
+      "imageHash": "6a46faf0e239a93a14d4fe4252af39337232fa19",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 592,
+        "h": 388
+      },
+      "platform": "desktop",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 1,
+      "mobile": 0
+    },
+    {
+      "node": "1:2508",
+      "layer": "этап",
+      "parent": "1:2502",
+      "parentLayer": "Frame 81513613",
+      "nodeType": "INSTANCE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "44e80c1d81101538aec2e23532d0b592720046f3",
+      "imageHash": "44e80c1d81101538aec2e23532d0b592720046f3",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 575,
+        "h": 360
+      },
+      "platform": "desktop",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 1,
+      "mobile": 0
+    },
+    {
+      "node": "1:5697",
+      "layer": "Комфорт, приватность",
+      "parent": "1:5519",
+      "parentLayer": "О центре - моб",
+      "nodeType": "FRAME",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "d3ac7d00af36722468bb8f23790ac8586fb9ae3d",
+      "imageHash": "d3ac7d00af36722468bb8f23790ac8586fb9ae3d",
+      "scaleMode": null,
+      "opacity": 0.10000000149011612,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 390,
+        "h": 4958
+      },
+      "platform": "mobile",
+      "classification": "DECORATIVE_RASTER",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5697",
+      "layer": "Комфорт, приватность",
+      "parent": "1:5519",
+      "parentLayer": "О центре - моб",
+      "nodeType": "FRAME",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "d3ac7d00af36722468bb8f23790ac8586fb9ae3d",
+      "imageHash": "d3ac7d00af36722468bb8f23790ac8586fb9ae3d",
+      "scaleMode": null,
+      "opacity": 0.10000000149011612,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 390,
+        "h": 4958
+      },
+      "platform": "mobile",
+      "classification": "DECORATIVE_RASTER",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5710",
+      "layer": "Фото",
+      "parent": "1:5709",
+      "parentLayer": "Услуга",
+      "nodeType": "FRAME",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "5d64fd209a3f3f67accbed866303db41c2d8a528",
+      "imageHash": "5d64fd209a3f3f67accbed866303db41c2d8a528",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 320,
+        "h": 280
+      },
+      "platform": "mobile",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5711",
+      "layer": "image 13030404",
+      "parent": "1:5710",
+      "parentLayer": "Фото",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": false,
+      "fillType": "IMAGE",
+      "imageRef": "3d577677bce627f2e188b404d35b08078bd0ba24",
+      "imageHash": "3d577677bce627f2e188b404d35b08078bd0ba24",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 306,
+        "h": 280
+      },
+      "platform": "mobile",
+      "classification": "HIDDEN_NOT_EXPORT",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5720",
+      "layer": "Rectangle 4254",
+      "parent": "1:5719",
+      "parentLayer": "Фото",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "26b510f857327105eb2d9877dd3ccdc055dc3cf4",
+      "imageHash": "26b510f857327105eb2d9877dd3ccdc055dc3cf4",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 320,
+        "h": 280
+      },
+      "platform": "mobile",
+      "classification": "PHOTO_DUPLICATE_REF",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5721",
+      "layer": "image 13030404",
+      "parent": "1:5719",
+      "parentLayer": "Фото",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "b46f48587793dbe27b847ffab16c122acb838e68",
+      "imageHash": "b46f48587793dbe27b847ffab16c122acb838e68",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 320,
+        "h": 280
+      },
+      "platform": "mobile",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5738",
+      "layer": "Фото",
+      "parent": "1:5737",
+      "parentLayer": "Услуга",
+      "nodeType": "FRAME",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "08aafd01ea4f18d498e37f9a5bed870259a3bb5a",
+      "imageHash": "08aafd01ea4f18d498e37f9a5bed870259a3bb5a",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 320,
+        "h": 280
+      },
+      "platform": "mobile",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5739",
+      "layer": "image 13030404",
+      "parent": "1:5738",
+      "parentLayer": "Фото",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": false,
+      "fillType": "IMAGE",
+      "imageRef": "3d577677bce627f2e188b404d35b08078bd0ba24",
+      "imageHash": "3d577677bce627f2e188b404d35b08078bd0ba24",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 306,
+        "h": 280
+      },
+      "platform": "mobile",
+      "classification": "HIDDEN_NOT_EXPORT",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5748",
+      "layer": "Rectangle 4254",
+      "parent": "1:5747",
+      "parentLayer": "Фото",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "26b510f857327105eb2d9877dd3ccdc055dc3cf4",
+      "imageHash": "26b510f857327105eb2d9877dd3ccdc055dc3cf4",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 320,
+        "h": 280
+      },
+      "platform": "mobile",
+      "classification": "PHOTO_DUPLICATE_REF",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5749",
+      "layer": "image 13030404",
+      "parent": "1:5747",
+      "parentLayer": "Фото",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "cfe9cb8830861cea3b475250b9b308d36acf00df",
+      "imageHash": "cfe9cb8830861cea3b475250b9b308d36acf00df",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 320,
+        "h": 280
+      },
+      "platform": "mobile",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5766",
+      "layer": "Фото",
+      "parent": "1:5765",
+      "parentLayer": "Услуга",
+      "nodeType": "FRAME",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "637f2e33d837dd58963184dc3c4c242e4838a28e",
+      "imageHash": "637f2e33d837dd58963184dc3c4c242e4838a28e",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 320,
+        "h": 280
+      },
+      "platform": "mobile",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5767",
+      "layer": "image 13030404",
+      "parent": "1:5766",
+      "parentLayer": "Фото",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": false,
+      "fillType": "IMAGE",
+      "imageRef": "3d577677bce627f2e188b404d35b08078bd0ba24",
+      "imageHash": "3d577677bce627f2e188b404d35b08078bd0ba24",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 306,
+        "h": 280
+      },
+      "platform": "mobile",
+      "classification": "HIDDEN_NOT_EXPORT",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5776",
+      "layer": "Rectangle 4254",
+      "parent": "1:5775",
+      "parentLayer": "Фото",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "26b510f857327105eb2d9877dd3ccdc055dc3cf4",
+      "imageHash": "26b510f857327105eb2d9877dd3ccdc055dc3cf4",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 320,
+        "h": 280
+      },
+      "platform": "mobile",
+      "classification": "PHOTO_DUPLICATE_REF",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5777",
+      "layer": "image 13030404",
+      "parent": "1:5775",
+      "parentLayer": "Фото",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "d29f4f5452e2d5d112b42eab9881a04e641f6522",
+      "imageHash": "d29f4f5452e2d5d112b42eab9881a04e641f6522",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 320,
+        "h": 280
+      },
+      "platform": "mobile",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5794",
+      "layer": "Фото",
+      "parent": "1:5793",
+      "parentLayer": "Услуга",
+      "nodeType": "FRAME",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "764bb734225ea8803b3fff66550ad52115557580",
+      "imageHash": "764bb734225ea8803b3fff66550ad52115557580",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 320,
+        "h": 280
+      },
+      "platform": "mobile",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5795",
+      "layer": "image 13030404",
+      "parent": "1:5794",
+      "parentLayer": "Фото",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": false,
+      "fillType": "IMAGE",
+      "imageRef": "3d577677bce627f2e188b404d35b08078bd0ba24",
+      "imageHash": "3d577677bce627f2e188b404d35b08078bd0ba24",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 306,
+        "h": 280
+      },
+      "platform": "mobile",
+      "classification": "HIDDEN_NOT_EXPORT",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5804",
+      "layer": "Rectangle 4254",
+      "parent": "1:5803",
+      "parentLayer": "Фото",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "26b510f857327105eb2d9877dd3ccdc055dc3cf4",
+      "imageHash": "26b510f857327105eb2d9877dd3ccdc055dc3cf4",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 320,
+        "h": 280
+      },
+      "platform": "mobile",
+      "classification": "PHOTO_DUPLICATE_REF",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5805",
+      "layer": "image 13030404",
+      "parent": "1:5803",
+      "parentLayer": "Фото",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "d8706218623eae4b9d4f08c4360c85620a699d9b",
+      "imageHash": "d8706218623eae4b9d4f08c4360c85620a699d9b",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 320,
+        "h": 280
+      },
+      "platform": "mobile",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5821",
+      "layer": "image 13030321",
+      "parent": "1:5820",
+      "parentLayer": "этап",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": false,
+      "fillType": "IMAGE",
+      "imageRef": "8fd30cd90d8efd6ba5a36c8d07b30ffeb0049200",
+      "imageHash": "8fd30cd90d8efd6ba5a36c8d07b30ffeb0049200",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 393,
+        "h": 491
+      },
+      "platform": "mobile",
+      "classification": "HIDDEN_NOT_EXPORT",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5822",
+      "layer": "image 13030326",
+      "parent": "1:5820",
+      "parentLayer": "этап",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": false,
+      "fillType": "IMAGE",
+      "imageRef": "12d46737cb690c3c8094e6483a6dd53cc9e1eda0",
+      "imageHash": "12d46737cb690c3c8094e6483a6dd53cc9e1eda0",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 936,
+        "h": 382
+      },
+      "platform": "mobile",
+      "classification": "HIDDEN_NOT_EXPORT",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5823",
+      "layer": "shutterstock_1929204059 1",
+      "parent": "1:5820",
+      "parentLayer": "этап",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": false,
+      "fillType": "IMAGE",
+      "imageRef": "1cc41150873a51c51744d80ca20cf93bfec12a3e",
+      "imageHash": "1cc41150873a51c51744d80ca20cf93bfec12a3e",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 834,
+        "h": 558
+      },
+      "platform": "mobile",
+      "classification": "HIDDEN_NOT_EXPORT",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5827",
+      "layer": "Снимок экрана 2026-05-18 в 17.53.58 1",
+      "parent": "1:5824",
+      "parentLayer": "Group 3409",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": false,
+      "fillType": "IMAGE",
+      "imageRef": "d3ac7d00af36722468bb8f23790ac8586fb9ae3d",
+      "imageHash": "d3ac7d00af36722468bb8f23790ac8586fb9ae3d",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 40,
+        "h": 41
+      },
+      "platform": "mobile",
+      "classification": "HIDDEN_NOT_EXPORT",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5838",
+      "layer": "этап",
+      "parent": "1:5819",
+      "parentLayer": "Frame 81513620",
+      "nodeType": "INSTANCE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "a781712981f3085366123fbeab4b2ea4bbe31b06",
+      "imageHash": "a781712981f3085366123fbeab4b2ea4bbe31b06",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 320,
+        "h": 300
+      },
+      "platform": "mobile",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5839",
+      "layer": "этап",
+      "parent": "1:5819",
+      "parentLayer": "Frame 81513620",
+      "nodeType": "INSTANCE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "696568a7986120af10e2b35b537cc171a5152ce2",
+      "imageHash": "696568a7986120af10e2b35b537cc171a5152ce2",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 320,
+        "h": 300
+      },
+      "platform": "mobile",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5840",
+      "layer": "Снимок экрана 2026-05-18 в 17.53.58 1",
+      "parent": "1:5819",
+      "parentLayer": "Frame 81513620",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": false,
+      "fillType": "IMAGE",
+      "imageRef": "d3ac7d00af36722468bb8f23790ac8586fb9ae3d",
+      "imageHash": "d3ac7d00af36722468bb8f23790ac8586fb9ae3d",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 40,
+        "h": 41
+      },
+      "platform": "mobile",
+      "classification": "HIDDEN_NOT_EXPORT",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5841",
+      "layer": "этап",
+      "parent": "1:5819",
+      "parentLayer": "Frame 81513620",
+      "nodeType": "INSTANCE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "438c0366e0e935c0bc0111e3a21d86b4c1737eaf",
+      "imageHash": "438c0366e0e935c0bc0111e3a21d86b4c1737eaf",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 320,
+        "h": 300
+      },
+      "platform": "mobile",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5842",
+      "layer": "этап",
+      "parent": "1:5819",
+      "parentLayer": "Frame 81513620",
+      "nodeType": "FRAME",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "3a1474a165f404d0baca2a2630c058405d133a58",
+      "imageHash": "3a1474a165f404d0baca2a2630c058405d133a58",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 320,
+        "h": 300
+      },
+      "platform": "mobile",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5843",
+      "layer": "image 13030321",
+      "parent": "1:5842",
+      "parentLayer": "этап",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": false,
+      "fillType": "IMAGE",
+      "imageRef": "8fd30cd90d8efd6ba5a36c8d07b30ffeb0049200",
+      "imageHash": "8fd30cd90d8efd6ba5a36c8d07b30ffeb0049200",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 393,
+        "h": 491
+      },
+      "platform": "mobile",
+      "classification": "HIDDEN_NOT_EXPORT",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5844",
+      "layer": "image 13030326",
+      "parent": "1:5842",
+      "parentLayer": "этап",
+      "nodeType": "ROUNDED_RECTANGLE",
+      "visible": false,
+      "fillType": "IMAGE",
+      "imageRef": "12d46737cb690c3c8094e6483a6dd53cc9e1eda0",
+      "imageHash": "12d46737cb690c3c8094e6483a6dd53cc9e1eda0",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 540,
+        "h": 360
+      },
+      "platform": "mobile",
+      "classification": "HIDDEN_NOT_EXPORT",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5846",
+      "layer": "этап",
+      "parent": "1:5819",
+      "parentLayer": "Frame 81513620",
+      "nodeType": "INSTANCE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "6a46faf0e239a93a14d4fe4252af39337232fa19",
+      "imageHash": "6a46faf0e239a93a14d4fe4252af39337232fa19",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 320,
+        "h": 300
+      },
+      "platform": "mobile",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 0,
+      "mobile": 1
+    },
+    {
+      "node": "1:5847",
+      "layer": "этап",
+      "parent": "1:5819",
+      "parentLayer": "Frame 81513620",
+      "nodeType": "INSTANCE",
+      "visible": true,
+      "fillType": "IMAGE",
+      "imageRef": "44e80c1d81101538aec2e23532d0b592720046f3",
+      "imageHash": "44e80c1d81101538aec2e23532d0b592720046f3",
+      "scaleMode": null,
+      "opacity": 1,
+      "rotation": 0,
+      "frameBounds": {
+        "w": 320,
+        "h": 300
+      },
+      "platform": "mobile",
+      "classification": "PHOTO_REQUIRED",
+      "desktop": 0,
+      "mobile": 1
+    }
+  ],
+  "refUses": {
+    "d3ac7d00af36722468bb8f23790ac8586fb9ae3d": {
+      "nodes": [
+        "1:2440",
+        "1:2483",
+        "1:5697",
+        "1:5697",
+        "1:5827",
+        "1:5840"
+      ],
+      "count": 6
+    },
+    "5d64fd209a3f3f67accbed866303db41c2d8a528": {
+      "nodes": [
+        "1:2451",
+        "1:5710"
+      ],
+      "count": 2
+    },
+    "b46f48587793dbe27b847ffab16c122acb838e68": {
+      "nodes": [
+        "1:2452",
+        "1:5721"
+      ],
+      "count": 2
+    },
+    "e7930992ff2ca8447562a925c16daf3eb22750f3": {
+      "nodes": [
+        "1:2453"
+      ],
+      "count": 1
+    },
+    "08aafd01ea4f18d498e37f9a5bed870259a3bb5a": {
+      "nodes": [
+        "1:2458",
+        "1:5738"
+      ],
+      "count": 2
+    },
+    "cfe9cb8830861cea3b475250b9b308d36acf00df": {
+      "nodes": [
+        "1:2459",
+        "1:5749"
+      ],
+      "count": 2
+    },
+    "9823f3b2ba2f98adb9f6c1e6cc423ec5fd250363": {
+      "nodes": [
+        "1:2460"
+      ],
+      "count": 1
+    },
+    "637f2e33d837dd58963184dc3c4c242e4838a28e": {
+      "nodes": [
+        "1:2465",
+        "1:5766"
+      ],
+      "count": 2
+    },
+    "56d93c21bb8affe8a77e7b4e59f9720c79686990": {
+      "nodes": [
+        "1:2466"
+      ],
+      "count": 1
+    },
+    "be546a9d18ee86201de5ea4cb7ce07b214505d3a": {
+      "nodes": [
+        "1:2467"
+      ],
+      "count": 1
+    },
+    "764bb734225ea8803b3fff66550ad52115557580": {
+      "nodes": [
+        "1:2472",
+        "1:5794"
+      ],
+      "count": 2
+    },
+    "d8706218623eae4b9d4f08c4360c85620a699d9b": {
+      "nodes": [
+        "1:2473",
+        "1:5805"
+      ],
+      "count": 2
+    },
+    "e5556565eedf993018161f548b5528178ae38e62": {
+      "nodes": [
+        "1:2474"
+      ],
+      "count": 1
+    },
+    "a781712981f3085366123fbeab4b2ea4bbe31b06": {
+      "nodes": [
+        "1:2496",
+        "1:5838"
+      ],
+      "count": 2
+    },
+    "696568a7986120af10e2b35b537cc171a5152ce2": {
+      "nodes": [
+        "1:2499",
+        "1:5839"
+      ],
+      "count": 2
+    },
+    "438c0366e0e935c0bc0111e3a21d86b4c1737eaf": {
+      "nodes": [
+        "1:2500",
+        "1:5841"
+      ],
+      "count": 2
+    },
+    "3a1474a165f404d0baca2a2630c058405d133a58": {
+      "nodes": [
+        "1:2501",
+        "1:5842"
+      ],
+      "count": 2
+    },
+    "a278c7c06175e004645580d162956fc7a79d5260": {
+      "nodes": [
+        "1:2503"
+      ],
+      "count": 1
+    },
+    "8fd30cd90d8efd6ba5a36c8d07b30ffeb0049200": {
+      "nodes": [
+        "1:2505",
+        "1:5821",
+        "1:5843"
+      ],
+      "count": 3
+    },
+    "12d46737cb690c3c8094e6483a6dd53cc9e1eda0": {
+      "nodes": [
+        "1:2506",
+        "1:5822",
+        "1:5844"
+      ],
+      "count": 3
+    },
+    "6a46faf0e239a93a14d4fe4252af39337232fa19": {
+      "nodes": [
+        "1:2507",
+        "1:5846"
+      ],
+      "count": 2
+    },
+    "44e80c1d81101538aec2e23532d0b592720046f3": {
+      "nodes": [
+        "1:2508",
+        "1:5847"
+      ],
+      "count": 2
+    },
+    "3d577677bce627f2e188b404d35b08078bd0ba24": {
+      "nodes": [
+        "1:5711",
+        "1:5739",
+        "1:5767",
+        "1:5795"
+      ],
+      "count": 4
+    },
+    "26b510f857327105eb2d9877dd3ccdc055dc3cf4": {
+      "nodes": [
+        "1:5720",
+        "1:5748",
+        "1:5776",
+        "1:5804"
+      ],
+      "count": 4
+    },
+    "d29f4f5452e2d5d112b42eab9881a04e641f6522": {
+      "nodes": [
+        "1:5777"
+      ],
+      "count": 1
+    },
+    "1cc41150873a51c51744d80ca20cf93bfec12a3e": {
+      "nodes": [
+        "1:5823"
+      ],
+      "count": 1
+    }
+  }
+}

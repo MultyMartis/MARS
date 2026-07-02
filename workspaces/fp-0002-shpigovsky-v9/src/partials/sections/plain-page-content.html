@@ -1,0 +1,13 @@
+<section data-reveal class="plain-page-content" @@contentStatusAttr>
+  <div class="container plain-page-content__container">
+    @@if (useH1 === 'true') {
+    <h1 class="plain-page-content__title" id="@@titleId">@@pageTitle</h1>
+    @@} else {
+    <h2 class="plain-page-content__title" id="@@titleId">@@pageTitle</h2>
+    @@}
+    <div class="plain-page-content__body">
+      @@bodyHtml
+    </div>
+    @@demoNoteHtml
+  </div>
+</section>

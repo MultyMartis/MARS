@@ -1,0 +1,818 @@
+{
+  "manifest_id": "CF-006-BEFORE-SCREENSHOT-MANIFEST",
+  "phase": "before",
+  "captured_at": "2026-06-28T11:56:40.418397+00:00",
+  "port": 4196,
+  "storage_root": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before",
+  "pages": [
+    [
+      "home",
+      "index.html"
+    ],
+    [
+      "uslugi",
+      "uslugi.html"
+    ],
+    [
+      "uslugi-v2",
+      "uslugi-v2.html"
+    ],
+    [
+      "service-subdivision",
+      "usluga-podrazdel-v1.html"
+    ],
+    [
+      "service-leaf",
+      "usluga-konechnaya-v1.html"
+    ]
+  ],
+  "viewports": [
+    [
+      "desktop",
+      1437,
+      1000
+    ],
+    [
+      "mobile",
+      380,
+      900
+    ]
+  ],
+  "matrix": [
+    {
+      "page": "home",
+      "viewport": "desktop",
+      "http": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "overflow": false,
+      "item_count": 7,
+      "gallery_group": "home-comfort",
+      "result": "PASS"
+    },
+    {
+      "page": "home",
+      "viewport": "mobile",
+      "http": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "overflow": false,
+      "item_count": 7,
+      "gallery_group": "home-comfort",
+      "result": "PASS"
+    },
+    {
+      "page": "uslugi",
+      "viewport": "desktop",
+      "http": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "overflow": false,
+      "item_count": 7,
+      "gallery_group": "home-comfort",
+      "result": "PASS"
+    },
+    {
+      "page": "uslugi",
+      "viewport": "mobile",
+      "http": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "overflow": false,
+      "item_count": 7,
+      "gallery_group": "home-comfort",
+      "result": "PASS"
+    },
+    {
+      "page": "uslugi-v2",
+      "viewport": "desktop",
+      "http": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "overflow": false,
+      "item_count": 7,
+      "gallery_group": "home-comfort",
+      "result": "PASS"
+    },
+    {
+      "page": "uslugi-v2",
+      "viewport": "mobile",
+      "http": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "overflow": false,
+      "item_count": 7,
+      "gallery_group": "home-comfort",
+      "result": "PASS"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "desktop",
+      "http": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "overflow": false,
+      "item_count": 7,
+      "gallery_group": "home-comfort",
+      "result": "PASS"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "mobile",
+      "http": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "overflow": false,
+      "item_count": 7,
+      "gallery_group": "home-comfort",
+      "result": "PASS"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "desktop",
+      "http": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "overflow": false,
+      "item_count": 7,
+      "gallery_group": "home-comfort",
+      "result": "PASS"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "mobile",
+      "http": 200,
+      "console_errors": 0,
+      "failed_requests": 0,
+      "overflow": false,
+      "item_count": 7,
+      "gallery_group": "home-comfort",
+      "result": "PASS"
+    }
+  ],
+  "results": [
+    {
+      "page_id": "home",
+      "page_file": "index.html",
+      "viewport": "desktop",
+      "width": 1437,
+      "height": 1000,
+      "url": "http://127.0.0.1:4196/index.html",
+      "http_status": 200,
+      "comfort": {
+        "neutralRootCount": 0,
+        "oldRootCount": 1,
+        "comfortCount": 1,
+        "sectionClass": "home-comfort",
+        "labelId": "home-comfort-heading",
+        "labelText": "Комфорт, приватность, забота",
+        "labelResolves": true,
+        "itemCount": 7,
+        "linkCount": 6,
+        "galleryGroup": "home-comfort",
+        "headingText": "Комфорт, приватность, забота",
+        "scrollWidth": 1422,
+        "clientWidth": 1437,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": 11644,
+          "width": 1422,
+          "height": 1264
+        },
+        "galleryBox": {
+          "x": 126,
+          "y": 11868,
+          "width": 1170,
+          "height": 990
+        },
+        "computed": {
+          "galleryDisplay": "grid",
+          "headingFontSize": "36px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "result": "PASS"
+    },
+    {
+      "page_id": "home",
+      "page_file": "index.html",
+      "viewport": "mobile",
+      "width": 380,
+      "height": 900,
+      "url": "http://127.0.0.1:4196/index.html",
+      "http_status": 200,
+      "comfort": {
+        "neutralRootCount": 0,
+        "oldRootCount": 1,
+        "comfortCount": 1,
+        "sectionClass": "home-comfort",
+        "labelId": "home-comfort-heading",
+        "labelText": "Комфорт, приватность, забота",
+        "labelResolves": true,
+        "itemCount": 7,
+        "linkCount": 6,
+        "galleryGroup": "home-comfort",
+        "headingText": "Комфорт, приватность, забота",
+        "scrollWidth": 365,
+        "clientWidth": 380,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": 19428,
+          "width": 365,
+          "height": 2130
+        },
+        "galleryBox": {
+          "x": 15,
+          "y": 19855,
+          "width": 335,
+          "height": 1653
+        },
+        "computed": {
+          "galleryDisplay": "grid",
+          "headingFontSize": "36px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "result": "PASS"
+    },
+    {
+      "page_id": "uslugi",
+      "page_file": "uslugi.html",
+      "viewport": "desktop",
+      "width": 1437,
+      "height": 1000,
+      "url": "http://127.0.0.1:4196/uslugi.html",
+      "http_status": 200,
+      "comfort": {
+        "neutralRootCount": 0,
+        "oldRootCount": 1,
+        "comfortCount": 1,
+        "sectionClass": "home-comfort",
+        "labelId": "home-comfort-heading",
+        "labelText": "Комфорт, приватность, забота",
+        "labelResolves": true,
+        "itemCount": 7,
+        "linkCount": 6,
+        "galleryGroup": "home-comfort",
+        "headingText": "Комфорт, приватность, забота",
+        "scrollWidth": 1422,
+        "clientWidth": 1437,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": 6227,
+          "width": 1422,
+          "height": 1264
+        },
+        "galleryBox": {
+          "x": 126,
+          "y": 6451,
+          "width": 1170,
+          "height": 990
+        },
+        "computed": {
+          "galleryDisplay": "grid",
+          "headingFontSize": "36px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "result": "PASS"
+    },
+    {
+      "page_id": "uslugi",
+      "page_file": "uslugi.html",
+      "viewport": "mobile",
+      "width": 380,
+      "height": 900,
+      "url": "http://127.0.0.1:4196/uslugi.html",
+      "http_status": 200,
+      "comfort": {
+        "neutralRootCount": 0,
+        "oldRootCount": 1,
+        "comfortCount": 1,
+        "sectionClass": "home-comfort",
+        "labelId": "home-comfort-heading",
+        "labelText": "Комфорт, приватность, забота",
+        "labelResolves": true,
+        "itemCount": 7,
+        "linkCount": 6,
+        "galleryGroup": "home-comfort",
+        "headingText": "Комфорт, приватность, забота",
+        "scrollWidth": 365,
+        "clientWidth": 380,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": 10728,
+          "width": 365,
+          "height": 2130
+        },
+        "galleryBox": {
+          "x": 15,
+          "y": 11155,
+          "width": 335,
+          "height": 1653
+        },
+        "computed": {
+          "galleryDisplay": "grid",
+          "headingFontSize": "36px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "result": "PASS"
+    },
+    {
+      "page_id": "uslugi-v2",
+      "page_file": "uslugi-v2.html",
+      "viewport": "desktop",
+      "width": 1437,
+      "height": 1000,
+      "url": "http://127.0.0.1:4196/uslugi-v2.html",
+      "http_status": 200,
+      "comfort": {
+        "neutralRootCount": 0,
+        "oldRootCount": 1,
+        "comfortCount": 1,
+        "sectionClass": "home-comfort",
+        "labelId": "home-comfort-heading",
+        "labelText": "Комфорт, приватность, забота",
+        "labelResolves": true,
+        "itemCount": 7,
+        "linkCount": 6,
+        "galleryGroup": "home-comfort",
+        "headingText": "Комфорт, приватность, забота",
+        "scrollWidth": 1422,
+        "clientWidth": 1437,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": 7648,
+          "width": 1422,
+          "height": 1264
+        },
+        "galleryBox": {
+          "x": 126,
+          "y": 7872,
+          "width": 1170,
+          "height": 990
+        },
+        "computed": {
+          "galleryDisplay": "grid",
+          "headingFontSize": "36px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "result": "PASS"
+    },
+    {
+      "page_id": "uslugi-v2",
+      "page_file": "uslugi-v2.html",
+      "viewport": "mobile",
+      "width": 380,
+      "height": 900,
+      "url": "http://127.0.0.1:4196/uslugi-v2.html",
+      "http_status": 200,
+      "comfort": {
+        "neutralRootCount": 0,
+        "oldRootCount": 1,
+        "comfortCount": 1,
+        "sectionClass": "home-comfort",
+        "labelId": "home-comfort-heading",
+        "labelText": "Комфорт, приватность, забота",
+        "labelResolves": true,
+        "itemCount": 7,
+        "linkCount": 6,
+        "galleryGroup": "home-comfort",
+        "headingText": "Комфорт, приватность, забота",
+        "scrollWidth": 365,
+        "clientWidth": 380,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": 13460,
+          "width": 365,
+          "height": 2130
+        },
+        "galleryBox": {
+          "x": 15,
+          "y": 13887,
+          "width": 335,
+          "height": 1653
+        },
+        "computed": {
+          "galleryDisplay": "grid",
+          "headingFontSize": "36px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "result": "PASS"
+    },
+    {
+      "page_id": "service-subdivision",
+      "page_file": "usluga-podrazdel-v1.html",
+      "viewport": "desktop",
+      "width": 1437,
+      "height": 1000,
+      "url": "http://127.0.0.1:4196/usluga-podrazdel-v1.html",
+      "http_status": 200,
+      "comfort": {
+        "neutralRootCount": 0,
+        "oldRootCount": 1,
+        "comfortCount": 1,
+        "sectionClass": "home-comfort",
+        "labelId": "service-subdivision-comfort-heading",
+        "labelText": "Комфорт, приватность, забота",
+        "labelResolves": true,
+        "itemCount": 7,
+        "linkCount": 6,
+        "galleryGroup": "home-comfort",
+        "headingText": "Комфорт, приватность, забота",
+        "scrollWidth": 1422,
+        "clientWidth": 1437,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": 8710,
+          "width": 1422,
+          "height": 1264
+        },
+        "galleryBox": {
+          "x": 126,
+          "y": 8934,
+          "width": 1170,
+          "height": 990
+        },
+        "computed": {
+          "galleryDisplay": "grid",
+          "headingFontSize": "36px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "result": "PASS"
+    },
+    {
+      "page_id": "service-subdivision",
+      "page_file": "usluga-podrazdel-v1.html",
+      "viewport": "mobile",
+      "width": 380,
+      "height": 900,
+      "url": "http://127.0.0.1:4196/usluga-podrazdel-v1.html",
+      "http_status": 200,
+      "comfort": {
+        "neutralRootCount": 0,
+        "oldRootCount": 1,
+        "comfortCount": 1,
+        "sectionClass": "home-comfort",
+        "labelId": "service-subdivision-comfort-heading",
+        "labelText": "Комфорт, приватность, забота",
+        "labelResolves": true,
+        "itemCount": 7,
+        "linkCount": 6,
+        "galleryGroup": "home-comfort",
+        "headingText": "Комфорт, приватность, забота",
+        "scrollWidth": 365,
+        "clientWidth": 380,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": 13917,
+          "width": 365,
+          "height": 2130
+        },
+        "galleryBox": {
+          "x": 15,
+          "y": 14344,
+          "width": 335,
+          "height": 1653
+        },
+        "computed": {
+          "galleryDisplay": "grid",
+          "headingFontSize": "36px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "result": "PASS"
+    },
+    {
+      "page_id": "service-leaf",
+      "page_file": "usluga-konechnaya-v1.html",
+      "viewport": "desktop",
+      "width": 1437,
+      "height": 1000,
+      "url": "http://127.0.0.1:4196/usluga-konechnaya-v1.html",
+      "http_status": 200,
+      "comfort": {
+        "neutralRootCount": 0,
+        "oldRootCount": 1,
+        "comfortCount": 1,
+        "sectionClass": "home-comfort",
+        "labelId": "service-leaf-comfort-heading",
+        "labelText": "Комфорт, приватность, забота",
+        "labelResolves": true,
+        "itemCount": 7,
+        "linkCount": 6,
+        "galleryGroup": "home-comfort",
+        "headingText": "Комфорт, приватность, забота",
+        "scrollWidth": 1422,
+        "clientWidth": 1437,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": 8915,
+          "width": 1422,
+          "height": 1264
+        },
+        "galleryBox": {
+          "x": 126,
+          "y": 9139,
+          "width": 1170,
+          "height": 990
+        },
+        "computed": {
+          "galleryDisplay": "grid",
+          "headingFontSize": "36px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "result": "PASS"
+    },
+    {
+      "page_id": "service-leaf",
+      "page_file": "usluga-konechnaya-v1.html",
+      "viewport": "mobile",
+      "width": 380,
+      "height": 900,
+      "url": "http://127.0.0.1:4196/usluga-konechnaya-v1.html",
+      "http_status": 200,
+      "comfort": {
+        "neutralRootCount": 0,
+        "oldRootCount": 1,
+        "comfortCount": 1,
+        "sectionClass": "home-comfort",
+        "labelId": "service-leaf-comfort-heading",
+        "labelText": "Комфорт, приватность, забота",
+        "labelResolves": true,
+        "itemCount": 7,
+        "linkCount": 6,
+        "galleryGroup": "home-comfort",
+        "headingText": "Комфорт, приватность, забота",
+        "scrollWidth": 365,
+        "clientWidth": 380,
+        "overflow": false,
+        "boundingBox": {
+          "x": 0,
+          "y": 15151,
+          "width": 365,
+          "height": 2130
+        },
+        "galleryBox": {
+          "x": 15,
+          "y": 15578,
+          "width": 335,
+          "height": 1653
+        },
+        "computed": {
+          "galleryDisplay": "grid",
+          "headingFontSize": "36px"
+        }
+      },
+      "console_errors": [],
+      "page_errors": [],
+      "failed_requests": [],
+      "result": "PASS"
+    }
+  ],
+  "screenshots": [
+    {
+      "page": "home",
+      "viewport": "desktop",
+      "kind": "fullpage",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\home-desktop-fullpage.png",
+      "sha256": "dcad8a820208c4de2b1eed0951c9e13150ae087e3a51731f03ffac6dc45d47e2"
+    },
+    {
+      "page": "home",
+      "viewport": "desktop",
+      "kind": "comfort_crop",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\home-desktop-comfort-crop.png",
+      "sha256": "b437008f490b0147d6776a2c4a93eacd6c33a27639f30a6fc2cdb0871fda1db6"
+    },
+    {
+      "page": "home",
+      "viewport": "desktop",
+      "kind": "comfort_context",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\home-desktop-comfort-context.png",
+      "sha256": "2d33223f51f6f347002ea0c70553f0778e77610ed1a1ea909086872945e4888c"
+    },
+    {
+      "page": "home",
+      "viewport": "mobile",
+      "kind": "fullpage",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\home-mobile-fullpage.png",
+      "sha256": "22e54b02a70081914348d7c87bfd656b3892083dd01a3c1ec12f4a08bd767ad0"
+    },
+    {
+      "page": "home",
+      "viewport": "mobile",
+      "kind": "comfort_crop",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\home-mobile-comfort-crop.png",
+      "sha256": "37808a7df2939dd973c78e7b1bc36558f377c244a6fadef3e63754a545863640"
+    },
+    {
+      "page": "home",
+      "viewport": "mobile",
+      "kind": "comfort_context",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\home-mobile-comfort-context.png",
+      "sha256": "37808a7df2939dd973c78e7b1bc36558f377c244a6fadef3e63754a545863640"
+    },
+    {
+      "page": "uslugi",
+      "viewport": "desktop",
+      "kind": "fullpage",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\uslugi-desktop-fullpage.png",
+      "sha256": "e3d85be35a1e0ab79ba212274b97736a2bb0ed9fccb5edf05a6efbd96e559f25"
+    },
+    {
+      "page": "uslugi",
+      "viewport": "desktop",
+      "kind": "comfort_crop",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\uslugi-desktop-comfort-crop.png",
+      "sha256": "d3849e19243522b38076158aa859811d96b6844f550b088eb817e13619748893"
+    },
+    {
+      "page": "uslugi",
+      "viewport": "desktop",
+      "kind": "comfort_context",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\uslugi-desktop-comfort-context.png",
+      "sha256": "2b12c0a81b53ab6a11cea6d3bf87e49a82e871a79d207e235069f068ca8060a2"
+    },
+    {
+      "page": "uslugi",
+      "viewport": "mobile",
+      "kind": "fullpage",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\uslugi-mobile-fullpage.png",
+      "sha256": "ce95e6864d7869d1b68c7f3c65194fbd554c7af31c58e703ffbc3d919a2d4854"
+    },
+    {
+      "page": "uslugi",
+      "viewport": "mobile",
+      "kind": "comfort_crop",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\uslugi-mobile-comfort-crop.png",
+      "sha256": "3b45e34110b0cd1df090bb1aea4ac4b2c96f2b9255b24d9fdb359624da738e1e"
+    },
+    {
+      "page": "uslugi",
+      "viewport": "mobile",
+      "kind": "comfort_context",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\uslugi-mobile-comfort-context.png",
+      "sha256": "3b45e34110b0cd1df090bb1aea4ac4b2c96f2b9255b24d9fdb359624da738e1e"
+    },
+    {
+      "page": "uslugi-v2",
+      "viewport": "desktop",
+      "kind": "fullpage",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\uslugi-v2-desktop-fullpage.png",
+      "sha256": "6d283ea5d06e806d11bb1f21652735be094d08a8564fc5fd422158a21c6081e7"
+    },
+    {
+      "page": "uslugi-v2",
+      "viewport": "desktop",
+      "kind": "comfort_crop",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\uslugi-v2-desktop-comfort-crop.png",
+      "sha256": "de9d32afae6161929bd26f41b12b75d1cc564aa9a673dc33bed4255938969a44"
+    },
+    {
+      "page": "uslugi-v2",
+      "viewport": "desktop",
+      "kind": "comfort_context",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\uslugi-v2-desktop-comfort-context.png",
+      "sha256": "e44c9aad1b479c926ca2e45968fd06ffd4301b06e2fcb94309603170c1dd65d4"
+    },
+    {
+      "page": "uslugi-v2",
+      "viewport": "mobile",
+      "kind": "fullpage",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\uslugi-v2-mobile-fullpage.png",
+      "sha256": "29d0a06028cffba4cf1e3a103b86430f755d1c930a84068f6552e19866bd5a64"
+    },
+    {
+      "page": "uslugi-v2",
+      "viewport": "mobile",
+      "kind": "comfort_crop",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\uslugi-v2-mobile-comfort-crop.png",
+      "sha256": "2c0ddefb39bdd3ef4680688be641ca55694ff2a73804db8955155f79360fb29b"
+    },
+    {
+      "page": "uslugi-v2",
+      "viewport": "mobile",
+      "kind": "comfort_context",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\uslugi-v2-mobile-comfort-context.png",
+      "sha256": "2c0ddefb39bdd3ef4680688be641ca55694ff2a73804db8955155f79360fb29b"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "desktop",
+      "kind": "fullpage",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\service-subdivision-desktop-fullpage.png",
+      "sha256": "0fcfede9871974059737375f33b096264851a8dfeff9c67af103d517e74f6311"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "desktop",
+      "kind": "comfort_crop",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\service-subdivision-desktop-comfort-crop.png",
+      "sha256": "1583d85320aa4f7074d6b1f849e70021355d11e04a52f8d63f5b5a16cd1b20d3"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "desktop",
+      "kind": "comfort_context",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\service-subdivision-desktop-comfort-context.png",
+      "sha256": "488fb37cceb6582d4abd31941efff85384cf8ea0adda792aae073576605ab948"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "mobile",
+      "kind": "fullpage",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\service-subdivision-mobile-fullpage.png",
+      "sha256": "f987b2a9d80a64218c6318ff87c7d74fe014de73b9b9224a81fd985ac78d8710"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "mobile",
+      "kind": "comfort_crop",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\service-subdivision-mobile-comfort-crop.png",
+      "sha256": "4a6a52bf2b97662d568285db5f77c568fe56aa9acc095d283dcf561f9db2b947"
+    },
+    {
+      "page": "service-subdivision",
+      "viewport": "mobile",
+      "kind": "comfort_context",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\service-subdivision-mobile-comfort-context.png",
+      "sha256": "4a6a52bf2b97662d568285db5f77c568fe56aa9acc095d283dcf561f9db2b947"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "desktop",
+      "kind": "fullpage",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\service-leaf-desktop-fullpage.png",
+      "sha256": "48940448e688c9e5eaf68adbc7a3cf9dc3a2431d825d963c18818ff0ac519379"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "desktop",
+      "kind": "comfort_crop",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\service-leaf-desktop-comfort-crop.png",
+      "sha256": "dead9c4807c62f11262f8c265254ab55fadd5e3a2e7774483053f9901b5cfc37"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "desktop",
+      "kind": "comfort_context",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\service-leaf-desktop-comfort-context.png",
+      "sha256": "adcfe956ba837e05462879a848423142d44d116b15956b9ea3b6ac7cd672e03a"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "mobile",
+      "kind": "fullpage",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\service-leaf-mobile-fullpage.png",
+      "sha256": "ac88f8e3f08816387bb0eb46d784996b9935bc6138435e84ebf7b5b7207d10d8"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "mobile",
+      "kind": "comfort_crop",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\service-leaf-mobile-comfort-crop.png",
+      "sha256": "c5025e0449901992e70022930083b715f07245ae5e99a94a981ab21c8a6b66ce"
+    },
+    {
+      "page": "service-leaf",
+      "viewport": "mobile",
+      "kind": "comfort_context",
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\cf-006-evidence\\before\\service-leaf-mobile-comfort-context.png",
+      "sha256": "c5025e0449901992e70022930083b715f07245ae5e99a94a981ab21c8a6b66ce"
+    }
+  ],
+  "overall": "PASS"
+}

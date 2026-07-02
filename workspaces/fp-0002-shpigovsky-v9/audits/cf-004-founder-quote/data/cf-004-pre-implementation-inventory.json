@@ -1,0 +1,141 @@
+{
+  "inventory_id": "CF-004-PRE-IMPLEMENTATION-INVENTORY",
+  "captured_at": "2026-06-28",
+  "head": "98ea1ae66d4ef8f0c21360d6cc3ade10a385c8d9",
+  "partial": "src/partials/sections/home-founder-quote.html",
+  "root_class": "home-founder-quote",
+  "label_id": "home-founder-quote-label",
+  "modifier_class": "home-founder-quote--variant-b",
+  "html_copies": 0,
+  "css_copies": 1,
+  "duplicate_partials": 0,
+  "include_parameters": ["modalSource", "founderQuoteModifierClass"],
+  "consumers": [
+    {
+      "page": "index.html",
+      "include_path": "partials/sections/home-founder-quote.html",
+      "root_class": "home-founder-quote",
+      "child_classes": [
+        "home-founder-quote__layout",
+        "home-founder-quote__quote",
+        "home-founder-quote__mark",
+        "home-founder-quote__text",
+        "home-founder-quote__figure",
+        "home-founder-quote__photo",
+        "home-founder-quote__author",
+        "home-founder-quote__name",
+        "home-founder-quote__role",
+        "home-founder-quote__cta"
+      ],
+      "label_id": "home-founder-quote-label",
+      "cta": {
+        "type": "modal",
+        "data_modal_open": "consultation",
+        "data_modal_source": "founder-quote"
+      },
+      "image": "assets/img/content/founder-sergey-shpigovsky.png",
+      "page_scope_dependency": "founderQuoteModifierClass: home-founder-quote--variant-b"
+    },
+    {
+      "page": "uslugi-v2.html",
+      "include_path": "partials/sections/home-founder-quote.html",
+      "root_class": "home-founder-quote",
+      "child_classes": [
+        "home-founder-quote__layout",
+        "home-founder-quote__quote",
+        "home-founder-quote__mark",
+        "home-founder-quote__text",
+        "home-founder-quote__figure",
+        "home-founder-quote__photo",
+        "home-founder-quote__author",
+        "home-founder-quote__name",
+        "home-founder-quote__role",
+        "home-founder-quote__cta"
+      ],
+      "label_id": "home-founder-quote-label",
+      "cta": {
+        "type": "modal",
+        "data_modal_open": "consultation",
+        "data_modal_source": "services-founder-quote"
+      },
+      "image": "assets/img/content/founder-sergey-shpigovsky.png",
+      "page_scope_dependency": "founderQuoteModifierClass: home-founder-quote--variant-b"
+    },
+    {
+      "page": "usluga-podrazdel-v1.html",
+      "include_path": "partials/sections/home-founder-quote.html",
+      "root_class": "home-founder-quote",
+      "child_classes": [
+        "home-founder-quote__layout",
+        "home-founder-quote__quote",
+        "home-founder-quote__mark",
+        "home-founder-quote__text",
+        "home-founder-quote__figure",
+        "home-founder-quote__photo",
+        "home-founder-quote__author",
+        "home-founder-quote__name",
+        "home-founder-quote__role",
+        "home-founder-quote__cta"
+      ],
+      "label_id": "home-founder-quote-label",
+      "cta": {
+        "type": "modal",
+        "data_modal_open": "consultation",
+        "data_modal_source": "service-subdivision-founder"
+      },
+      "image": "assets/img/content/founder-sergey-shpigovsky.png",
+      "page_scope_dependency": "founderQuoteModifierClass: home-founder-quote--variant-b"
+    },
+    {
+      "page": "usluga-konechnaya-v1.html",
+      "include_path": "partials/sections/home-founder-quote.html",
+      "root_class": "home-founder-quote",
+      "child_classes": [
+        "home-founder-quote__layout",
+        "home-founder-quote__quote",
+        "home-founder-quote__mark",
+        "home-founder-quote__text",
+        "home-founder-quote__figure",
+        "home-founder-quote__photo",
+        "home-founder-quote__author",
+        "home-founder-quote__name",
+        "home-founder-quote__role",
+        "home-founder-quote__cta"
+      ],
+      "label_id": "home-founder-quote-label",
+      "cta": {
+        "type": "modal",
+        "data_modal_open": "consultation",
+        "data_modal_source": "service-leaf-founder"
+      },
+      "image": "assets/img/content/founder-sergey-shpigovsky.png",
+      "page_scope_dependency": "founderQuoteModifierClass: home-founder-quote--variant-b"
+    },
+    {
+      "page": "uslugi.html",
+      "include_path": "partials/sections/home-founder-quote.html",
+      "root_class": "home-founder-quote",
+      "child_classes": [
+        "home-founder-quote__layout",
+        "home-founder-quote__quote",
+        "home-founder-quote__mark",
+        "home-founder-quote__text",
+        "home-founder-quote__figure",
+        "home-founder-quote__photo",
+        "home-founder-quote__author",
+        "home-founder-quote__name",
+        "home-founder-quote__role",
+        "home-founder-quote__cta"
+      ],
+      "label_id": "home-founder-quote-label",
+      "cta": {
+        "type": "modal",
+        "data_modal_open": "consultation",
+        "data_modal_source": "services-founder"
+      },
+      "image": "assets/img/content/founder-sergey-shpigovsky.png",
+      "page_scope_dependency": "founderQuoteModifierClass: empty (variant A)"
+    }
+  ],
+  "result": "PASS"
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  @@include('partials/layout/head.html', {"title": "Галерея о доме — Шпиговский дом", "description": "Галерея о доме — центр «Шпиговский дом». Демонстрационная страница.", "canonical": "https://shpigovsky.ru/o-centre/galereya-o-dome/", "robots": "noindex, nofollow", "ogType": "website", "ogTitle": "Галерея о доме — Шпиговский дом", "ogDescription": "Галерея о доме — центр «Шпиговский дом». Демонстрационная страница.", "ogUrl": "https://shpigovsky.ru/o-centre/galereya-o-dome/", "ogImage": "https://shpigovsky.ru/assets/img/social/og-default.jpg", "ogImageAlt": "Галерея о доме — Шпиговский дом"})
+</head>
+<body class="page-o-centre page-plain-content" data-page="galereya-o-dome" data-content-status="demo-placeholder">
+  @@include('partials/layout/body-start.html')
+  @@include('partials/layout/header.html', {"activeNavUslugiClass": "", "activeNavOffcanvasClass": "", "activeNavUslugiAria": "", "activeNavOtzyvyClass": "", "activeNavOtzyvyOffcanvasClass": "", "activeNavOtzyvyAria": "", "activeNavKontaktyClass": "", "activeNavKontaktyOffcanvasClass": "", "activeNavKontaktyAria": "", "activeNavBlogClass": "", "activeNavBlogOffcanvasClass": "", "activeNavBlogAria": ""})
+  <main class="page-plain-content__main">
+    
+    @@include('partials/sections/services-inner-hero-v2.html', {"titleId": "galereya-o-dome-hero-title", "heroImage": "assets/img/content/o-centre/o-centre-hero.webp", "heroWidth": "1890", "heroHeight": "1260", "heroEyebrow": "О центре", "heroTitle": "Галерея о доме", "heroLead": "Фотоматериалы о&nbsp;пространстве центра.", "heroCtaText": "Записаться на&nbsp;консультацию", "heroCtaSource": "galereya-o-dome-hero"})
+    @@include('partials/components/internal-page-nav.html', {"crumbHome":"Главная","crumbMiddle":"О центре","crumbMiddleHref":"/o-centre/","crumbMiddle2":"","crumbMiddleHref2":"","crumbCurrent":"Галерея о доме","listHtml": ""})
+    @@include('partials/sections/plain-page-content.html', {"contentStatusAttr": "data-content-status=\"demo-placeholder\"", "titleId": "galereya-o-dome-title", "pageTitle": "Галерея о доме", "bodyHtml": "<p>Раздел предназначен для галереи интерьеров и&nbsp;территории. В&nbsp;демо-версии размещён текстовый заглушечный контент.</p>", "demoNoteHtml": "<p class=\"plain-page-content__demo-note\">Текст страницы представлен в&nbsp;демонстрационном виде для внутреннего просмотра и&nbsp;подлежит замене после проверки.</p>", "useH1": "false"})
+    @@include('partials/sections/final-form.html', {"leadSource": "galereya-o-dome-final", "headingId": "galereya-o-dome-final-heading", "headingText": "Остались вопросы?", "leadText": "Опишите вашу ситуацию в&nbsp;форме заявки, и&nbsp;мы расскажем, как сможем помочь", "sectionModifierClass": ""})
+  </main>
+  @@include('partials/layout/footer.html')
+  @@include('partials/layout/global-consultation-modal.html')
+  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+  <script src="assets/vendor/fancybox/fancybox.umd.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/inputmask.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,658 @@
+{
+  "manifest_id": "FP-0002-V8-BROWSER-PARITY-MANIFEST-01",
+  "captured_at": "2026-06-28T10:14:16.102124+00:00",
+  "evidence_storage_root": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation",
+  "screenshots": [
+    {
+      "template_id": "home",
+      "viewport": "desktop",
+      "kind": "fullpage_ref",
+      "file_name": "home-desktop-ref-fullpage.png",
+      "sha256": "5c54132e3b0eb532a10aa0d16b9a3c9c7d7706a89e27ff6b61bacc042ad2a0f2",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 1437,
+        "height": 16864,
+        "diff_pixels": 80690,
+        "total_pixels": 24233568,
+        "diff_ratio": 0.00332968,
+        "diff_bbox": [
+          812,
+          13578,
+          1125,
+          13838
+        ],
+        "sha256_ref": "5c54132e3b0eb532a10aa0d16b9a3c9c7d7706a89e27ff6b61bacc042ad2a0f2",
+        "sha256_v8": "7cbf5c5c713c42673e2ced8195426edb24e6e0a38f5f3ace8047c09a9d3cbd52",
+        "sha256_match": false
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\home-desktop-ref-fullpage.png"
+    },
+    {
+      "template_id": "home",
+      "viewport": "desktop",
+      "kind": "fullpage_v8",
+      "file_name": "home-desktop-v8-fullpage.png",
+      "sha256": "7cbf5c5c713c42673e2ced8195426edb24e6e0a38f5f3ace8047c09a9d3cbd52",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 1437,
+        "height": 16864,
+        "diff_pixels": 80690,
+        "total_pixels": 24233568,
+        "diff_ratio": 0.00332968,
+        "diff_bbox": [
+          812,
+          13578,
+          1125,
+          13838
+        ],
+        "sha256_ref": "5c54132e3b0eb532a10aa0d16b9a3c9c7d7706a89e27ff6b61bacc042ad2a0f2",
+        "sha256_v8": "7cbf5c5c713c42673e2ced8195426edb24e6e0a38f5f3ace8047c09a9d3cbd52",
+        "sha256_match": false
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\home-desktop-v8-fullpage.png"
+    },
+    {
+      "template_id": "home",
+      "viewport": "desktop",
+      "kind": "viewport_ref",
+      "file_name": "home-desktop-ref-viewport.png",
+      "sha256": "49d6f47307e3cd17f2ea0977f90eb311fceb2c9b0ea3d726eaa794978f701682",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 1437,
+        "height": 1000,
+        "diff_pixels": 0,
+        "total_pixels": 1437000,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "49d6f47307e3cd17f2ea0977f90eb311fceb2c9b0ea3d726eaa794978f701682",
+        "sha256_v8": "49d6f47307e3cd17f2ea0977f90eb311fceb2c9b0ea3d726eaa794978f701682",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\home-desktop-ref-viewport.png"
+    },
+    {
+      "template_id": "home",
+      "viewport": "desktop",
+      "kind": "viewport_v8",
+      "file_name": "home-desktop-v8-viewport.png",
+      "sha256": "49d6f47307e3cd17f2ea0977f90eb311fceb2c9b0ea3d726eaa794978f701682",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 1437,
+        "height": 1000,
+        "diff_pixels": 0,
+        "total_pixels": 1437000,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "49d6f47307e3cd17f2ea0977f90eb311fceb2c9b0ea3d726eaa794978f701682",
+        "sha256_v8": "49d6f47307e3cd17f2ea0977f90eb311fceb2c9b0ea3d726eaa794978f701682",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\home-desktop-v8-viewport.png"
+    },
+    {
+      "template_id": "home",
+      "viewport": "mobile",
+      "kind": "fullpage_ref",
+      "file_name": "home-mobile-ref-fullpage.png",
+      "sha256": "0b03db147fd700f5a6654b6ef5300375330d57f47790552b2bd6379b4a9aeb48",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 380,
+        "height": 28478,
+        "diff_pixels": 0,
+        "total_pixels": 10821640,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "0b03db147fd700f5a6654b6ef5300375330d57f47790552b2bd6379b4a9aeb48",
+        "sha256_v8": "0b03db147fd700f5a6654b6ef5300375330d57f47790552b2bd6379b4a9aeb48",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\home-mobile-ref-fullpage.png"
+    },
+    {
+      "template_id": "home",
+      "viewport": "mobile",
+      "kind": "fullpage_v8",
+      "file_name": "home-mobile-v8-fullpage.png",
+      "sha256": "0b03db147fd700f5a6654b6ef5300375330d57f47790552b2bd6379b4a9aeb48",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 380,
+        "height": 28478,
+        "diff_pixels": 0,
+        "total_pixels": 10821640,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "0b03db147fd700f5a6654b6ef5300375330d57f47790552b2bd6379b4a9aeb48",
+        "sha256_v8": "0b03db147fd700f5a6654b6ef5300375330d57f47790552b2bd6379b4a9aeb48",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\home-mobile-v8-fullpage.png"
+    },
+    {
+      "template_id": "home",
+      "viewport": "mobile",
+      "kind": "viewport_ref",
+      "file_name": "home-mobile-ref-viewport.png",
+      "sha256": "c8e76c2b47f0006fb1f92813de5ea64b1158ad6b97ab4dbb5249ab42d6ef0628",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 380,
+        "height": 900,
+        "diff_pixels": 0,
+        "total_pixels": 342000,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "c8e76c2b47f0006fb1f92813de5ea64b1158ad6b97ab4dbb5249ab42d6ef0628",
+        "sha256_v8": "c8e76c2b47f0006fb1f92813de5ea64b1158ad6b97ab4dbb5249ab42d6ef0628",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\home-mobile-ref-viewport.png"
+    },
+    {
+      "template_id": "home",
+      "viewport": "mobile",
+      "kind": "viewport_v8",
+      "file_name": "home-mobile-v8-viewport.png",
+      "sha256": "c8e76c2b47f0006fb1f92813de5ea64b1158ad6b97ab4dbb5249ab42d6ef0628",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 380,
+        "height": 900,
+        "diff_pixels": 0,
+        "total_pixels": 342000,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "c8e76c2b47f0006fb1f92813de5ea64b1158ad6b97ab4dbb5249ab42d6ef0628",
+        "sha256_v8": "c8e76c2b47f0006fb1f92813de5ea64b1158ad6b97ab4dbb5249ab42d6ef0628",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\home-mobile-v8-viewport.png"
+    },
+    {
+      "template_id": "services-hub",
+      "viewport": "desktop",
+      "kind": "fullpage_ref",
+      "file_name": "services-hub-desktop-ref-fullpage.png",
+      "sha256": "457bf900481b0b035caa43e98e7a53505a87a7a93d6464138723f140f06bfdd5",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 1437,
+        "height": 11345,
+        "diff_pixels": 0,
+        "total_pixels": 16302765,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "457bf900481b0b035caa43e98e7a53505a87a7a93d6464138723f140f06bfdd5",
+        "sha256_v8": "457bf900481b0b035caa43e98e7a53505a87a7a93d6464138723f140f06bfdd5",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\services-hub-desktop-ref-fullpage.png"
+    },
+    {
+      "template_id": "services-hub",
+      "viewport": "desktop",
+      "kind": "fullpage_v8",
+      "file_name": "services-hub-desktop-v8-fullpage.png",
+      "sha256": "457bf900481b0b035caa43e98e7a53505a87a7a93d6464138723f140f06bfdd5",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 1437,
+        "height": 11345,
+        "diff_pixels": 0,
+        "total_pixels": 16302765,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "457bf900481b0b035caa43e98e7a53505a87a7a93d6464138723f140f06bfdd5",
+        "sha256_v8": "457bf900481b0b035caa43e98e7a53505a87a7a93d6464138723f140f06bfdd5",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\services-hub-desktop-v8-fullpage.png"
+    },
+    {
+      "template_id": "services-hub",
+      "viewport": "desktop",
+      "kind": "viewport_ref",
+      "file_name": "services-hub-desktop-ref-viewport.png",
+      "sha256": "ca995c4d7c6ad1b2ef2449561a22342731c28eedeece891024bfc0593b2c2f85",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 1437,
+        "height": 1000,
+        "diff_pixels": 0,
+        "total_pixels": 1437000,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "ca995c4d7c6ad1b2ef2449561a22342731c28eedeece891024bfc0593b2c2f85",
+        "sha256_v8": "ca995c4d7c6ad1b2ef2449561a22342731c28eedeece891024bfc0593b2c2f85",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\services-hub-desktop-ref-viewport.png"
+    },
+    {
+      "template_id": "services-hub",
+      "viewport": "desktop",
+      "kind": "viewport_v8",
+      "file_name": "services-hub-desktop-v8-viewport.png",
+      "sha256": "ca995c4d7c6ad1b2ef2449561a22342731c28eedeece891024bfc0593b2c2f85",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 1437,
+        "height": 1000,
+        "diff_pixels": 0,
+        "total_pixels": 1437000,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "ca995c4d7c6ad1b2ef2449561a22342731c28eedeece891024bfc0593b2c2f85",
+        "sha256_v8": "ca995c4d7c6ad1b2ef2449561a22342731c28eedeece891024bfc0593b2c2f85",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\services-hub-desktop-v8-viewport.png"
+    },
+    {
+      "template_id": "services-hub",
+      "viewport": "mobile",
+      "kind": "fullpage_ref",
+      "file_name": "services-hub-mobile-ref-fullpage.png",
+      "sha256": "3da2be4b1afac8d63aeb6397d00817200d812eb46e8d5efe8370e76b28994900",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 380,
+        "height": 20129,
+        "diff_pixels": 0,
+        "total_pixels": 7649020,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "3da2be4b1afac8d63aeb6397d00817200d812eb46e8d5efe8370e76b28994900",
+        "sha256_v8": "3da2be4b1afac8d63aeb6397d00817200d812eb46e8d5efe8370e76b28994900",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\services-hub-mobile-ref-fullpage.png"
+    },
+    {
+      "template_id": "services-hub",
+      "viewport": "mobile",
+      "kind": "fullpage_v8",
+      "file_name": "services-hub-mobile-v8-fullpage.png",
+      "sha256": "3da2be4b1afac8d63aeb6397d00817200d812eb46e8d5efe8370e76b28994900",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 380,
+        "height": 20129,
+        "diff_pixels": 0,
+        "total_pixels": 7649020,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "3da2be4b1afac8d63aeb6397d00817200d812eb46e8d5efe8370e76b28994900",
+        "sha256_v8": "3da2be4b1afac8d63aeb6397d00817200d812eb46e8d5efe8370e76b28994900",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\services-hub-mobile-v8-fullpage.png"
+    },
+    {
+      "template_id": "services-hub",
+      "viewport": "mobile",
+      "kind": "viewport_ref",
+      "file_name": "services-hub-mobile-ref-viewport.png",
+      "sha256": "27c20529522dfc499733176a8edde3feee11e14d60b1817055f322fff5ff2038",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 380,
+        "height": 900,
+        "diff_pixels": 0,
+        "total_pixels": 342000,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "27c20529522dfc499733176a8edde3feee11e14d60b1817055f322fff5ff2038",
+        "sha256_v8": "27c20529522dfc499733176a8edde3feee11e14d60b1817055f322fff5ff2038",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\services-hub-mobile-ref-viewport.png"
+    },
+    {
+      "template_id": "services-hub",
+      "viewport": "mobile",
+      "kind": "viewport_v8",
+      "file_name": "services-hub-mobile-v8-viewport.png",
+      "sha256": "27c20529522dfc499733176a8edde3feee11e14d60b1817055f322fff5ff2038",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 380,
+        "height": 900,
+        "diff_pixels": 0,
+        "total_pixels": 342000,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "27c20529522dfc499733176a8edde3feee11e14d60b1817055f322fff5ff2038",
+        "sha256_v8": "27c20529522dfc499733176a8edde3feee11e14d60b1817055f322fff5ff2038",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\services-hub-mobile-v8-viewport.png"
+    },
+    {
+      "template_id": "service-subdivision",
+      "viewport": "desktop",
+      "kind": "fullpage_ref",
+      "file_name": "service-subdivision-desktop-ref-fullpage.png",
+      "sha256": "aa7d1d9d9f6110784fdb5e6dda64c4361347800f6a65f9409dc766c060ea4cf4",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 1437,
+        "height": 12685,
+        "diff_pixels": 0,
+        "total_pixels": 18228345,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "aa7d1d9d9f6110784fdb5e6dda64c4361347800f6a65f9409dc766c060ea4cf4",
+        "sha256_v8": "aa7d1d9d9f6110784fdb5e6dda64c4361347800f6a65f9409dc766c060ea4cf4",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\service-subdivision-desktop-ref-fullpage.png"
+    },
+    {
+      "template_id": "service-subdivision",
+      "viewport": "desktop",
+      "kind": "fullpage_v8",
+      "file_name": "service-subdivision-desktop-v8-fullpage.png",
+      "sha256": "aa7d1d9d9f6110784fdb5e6dda64c4361347800f6a65f9409dc766c060ea4cf4",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 1437,
+        "height": 12685,
+        "diff_pixels": 0,
+        "total_pixels": 18228345,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "aa7d1d9d9f6110784fdb5e6dda64c4361347800f6a65f9409dc766c060ea4cf4",
+        "sha256_v8": "aa7d1d9d9f6110784fdb5e6dda64c4361347800f6a65f9409dc766c060ea4cf4",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\service-subdivision-desktop-v8-fullpage.png"
+    },
+    {
+      "template_id": "service-subdivision",
+      "viewport": "desktop",
+      "kind": "viewport_ref",
+      "file_name": "service-subdivision-desktop-ref-viewport.png",
+      "sha256": "1800e42585e31a715996510e9c1e23eb6cc63621c02a2748c3749bba038abde1",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 1437,
+        "height": 1000,
+        "diff_pixels": 0,
+        "total_pixels": 1437000,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "1800e42585e31a715996510e9c1e23eb6cc63621c02a2748c3749bba038abde1",
+        "sha256_v8": "1800e42585e31a715996510e9c1e23eb6cc63621c02a2748c3749bba038abde1",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\service-subdivision-desktop-ref-viewport.png"
+    },
+    {
+      "template_id": "service-subdivision",
+      "viewport": "desktop",
+      "kind": "viewport_v8",
+      "file_name": "service-subdivision-desktop-v8-viewport.png",
+      "sha256": "1800e42585e31a715996510e9c1e23eb6cc63621c02a2748c3749bba038abde1",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 1437,
+        "height": 1000,
+        "diff_pixels": 0,
+        "total_pixels": 1437000,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "1800e42585e31a715996510e9c1e23eb6cc63621c02a2748c3749bba038abde1",
+        "sha256_v8": "1800e42585e31a715996510e9c1e23eb6cc63621c02a2748c3749bba038abde1",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\service-subdivision-desktop-v8-viewport.png"
+    },
+    {
+      "template_id": "service-subdivision",
+      "viewport": "mobile",
+      "kind": "fullpage_ref",
+      "file_name": "service-subdivision-mobile-ref-fullpage.png",
+      "sha256": "64b8aa875743b54825a740146b8ffd0e325bafac014ad25988d1d36d1e20bd39",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 380,
+        "height": 20925,
+        "diff_pixels": 0,
+        "total_pixels": 7951500,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "64b8aa875743b54825a740146b8ffd0e325bafac014ad25988d1d36d1e20bd39",
+        "sha256_v8": "64b8aa875743b54825a740146b8ffd0e325bafac014ad25988d1d36d1e20bd39",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\service-subdivision-mobile-ref-fullpage.png"
+    },
+    {
+      "template_id": "service-subdivision",
+      "viewport": "mobile",
+      "kind": "fullpage_v8",
+      "file_name": "service-subdivision-mobile-v8-fullpage.png",
+      "sha256": "64b8aa875743b54825a740146b8ffd0e325bafac014ad25988d1d36d1e20bd39",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 380,
+        "height": 20925,
+        "diff_pixels": 0,
+        "total_pixels": 7951500,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "64b8aa875743b54825a740146b8ffd0e325bafac014ad25988d1d36d1e20bd39",
+        "sha256_v8": "64b8aa875743b54825a740146b8ffd0e325bafac014ad25988d1d36d1e20bd39",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\service-subdivision-mobile-v8-fullpage.png"
+    },
+    {
+      "template_id": "service-subdivision",
+      "viewport": "mobile",
+      "kind": "viewport_ref",
+      "file_name": "service-subdivision-mobile-ref-viewport.png",
+      "sha256": "db2b1fd448443650c4f4fe42ab8da394765a729e17e0c29e8ac39b763c3ccaf4",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 380,
+        "height": 900,
+        "diff_pixels": 0,
+        "total_pixels": 342000,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "db2b1fd448443650c4f4fe42ab8da394765a729e17e0c29e8ac39b763c3ccaf4",
+        "sha256_v8": "db2b1fd448443650c4f4fe42ab8da394765a729e17e0c29e8ac39b763c3ccaf4",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\service-subdivision-mobile-ref-viewport.png"
+    },
+    {
+      "template_id": "service-subdivision",
+      "viewport": "mobile",
+      "kind": "viewport_v8",
+      "file_name": "service-subdivision-mobile-v8-viewport.png",
+      "sha256": "db2b1fd448443650c4f4fe42ab8da394765a729e17e0c29e8ac39b763c3ccaf4",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 380,
+        "height": 900,
+        "diff_pixels": 0,
+        "total_pixels": 342000,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "db2b1fd448443650c4f4fe42ab8da394765a729e17e0c29e8ac39b763c3ccaf4",
+        "sha256_v8": "db2b1fd448443650c4f4fe42ab8da394765a729e17e0c29e8ac39b763c3ccaf4",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\service-subdivision-mobile-v8-viewport.png"
+    },
+    {
+      "template_id": "service-leaf",
+      "viewport": "desktop",
+      "kind": "fullpage_ref",
+      "file_name": "service-leaf-desktop-ref-fullpage.png",
+      "sha256": "33d504fe74164982b5254fafd0409bfd7974d597255f84cedd8c6ec2224422fb",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 1437,
+        "height": 12909,
+        "diff_pixels": 0,
+        "total_pixels": 18550233,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "33d504fe74164982b5254fafd0409bfd7974d597255f84cedd8c6ec2224422fb",
+        "sha256_v8": "33d504fe74164982b5254fafd0409bfd7974d597255f84cedd8c6ec2224422fb",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\service-leaf-desktop-ref-fullpage.png"
+    },
+    {
+      "template_id": "service-leaf",
+      "viewport": "desktop",
+      "kind": "fullpage_v8",
+      "file_name": "service-leaf-desktop-v8-fullpage.png",
+      "sha256": "33d504fe74164982b5254fafd0409bfd7974d597255f84cedd8c6ec2224422fb",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 1437,
+        "height": 12909,
+        "diff_pixels": 0,
+        "total_pixels": 18550233,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "33d504fe74164982b5254fafd0409bfd7974d597255f84cedd8c6ec2224422fb",
+        "sha256_v8": "33d504fe74164982b5254fafd0409bfd7974d597255f84cedd8c6ec2224422fb",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\service-leaf-desktop-v8-fullpage.png"
+    },
+    {
+      "template_id": "service-leaf",
+      "viewport": "desktop",
+      "kind": "viewport_ref",
+      "file_name": "service-leaf-desktop-ref-viewport.png",
+      "sha256": "d3ab8048f3fdb7102ab3b8a0cae72ec4ec8eca8d962662346f168aac60fd5111",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 1437,
+        "height": 1000,
+        "diff_pixels": 0,
+        "total_pixels": 1437000,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "d3ab8048f3fdb7102ab3b8a0cae72ec4ec8eca8d962662346f168aac60fd5111",
+        "sha256_v8": "d3ab8048f3fdb7102ab3b8a0cae72ec4ec8eca8d962662346f168aac60fd5111",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\service-leaf-desktop-ref-viewport.png"
+    },
+    {
+      "template_id": "service-leaf",
+      "viewport": "desktop",
+      "kind": "viewport_v8",
+      "file_name": "service-leaf-desktop-v8-viewport.png",
+      "sha256": "d3ab8048f3fdb7102ab3b8a0cae72ec4ec8eca8d962662346f168aac60fd5111",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 1437,
+        "height": 1000,
+        "diff_pixels": 0,
+        "total_pixels": 1437000,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "d3ab8048f3fdb7102ab3b8a0cae72ec4ec8eca8d962662346f168aac60fd5111",
+        "sha256_v8": "d3ab8048f3fdb7102ab3b8a0cae72ec4ec8eca8d962662346f168aac60fd5111",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\service-leaf-desktop-v8-viewport.png"
+    },
+    {
+      "template_id": "service-leaf",
+      "viewport": "mobile",
+      "kind": "fullpage_ref",
+      "file_name": "service-leaf-mobile-ref-fullpage.png",
+      "sha256": "702900314e00ec375380cecd37579e46b9c0016755c46845c951124317fed91a",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 380,
+        "height": 22188,
+        "diff_pixels": 0,
+        "total_pixels": 8431440,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "702900314e00ec375380cecd37579e46b9c0016755c46845c951124317fed91a",
+        "sha256_v8": "702900314e00ec375380cecd37579e46b9c0016755c46845c951124317fed91a",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\service-leaf-mobile-ref-fullpage.png"
+    },
+    {
+      "template_id": "service-leaf",
+      "viewport": "mobile",
+      "kind": "fullpage_v8",
+      "file_name": "service-leaf-mobile-v8-fullpage.png",
+      "sha256": "702900314e00ec375380cecd37579e46b9c0016755c46845c951124317fed91a",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 380,
+        "height": 22188,
+        "diff_pixels": 0,
+        "total_pixels": 8431440,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "702900314e00ec375380cecd37579e46b9c0016755c46845c951124317fed91a",
+        "sha256_v8": "702900314e00ec375380cecd37579e46b9c0016755c46845c951124317fed91a",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\service-leaf-mobile-v8-fullpage.png"
+    },
+    {
+      "template_id": "service-leaf",
+      "viewport": "mobile",
+      "kind": "viewport_ref",
+      "file_name": "service-leaf-mobile-ref-viewport.png",
+      "sha256": "100d31fc6dee603267ef285ab8079efb201e0e767f458b14469a6e51e7bb8f50",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 380,
+        "height": 900,
+        "diff_pixels": 0,
+        "total_pixels": 342000,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "100d31fc6dee603267ef285ab8079efb201e0e767f458b14469a6e51e7bb8f50",
+        "sha256_v8": "100d31fc6dee603267ef285ab8079efb201e0e767f458b14469a6e51e7bb8f50",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\service-leaf-mobile-ref-viewport.png"
+    },
+    {
+      "template_id": "service-leaf",
+      "viewport": "mobile",
+      "kind": "viewport_v8",
+      "file_name": "service-leaf-mobile-v8-viewport.png",
+      "sha256": "100d31fc6dee603267ef285ab8079efb201e0e767f458b14469a6e51e7bb8f50",
+      "dimensions": {
+        "dimensions_match": true,
+        "width": 380,
+        "height": 900,
+        "diff_pixels": 0,
+        "total_pixels": 342000,
+        "diff_ratio": 0.0,
+        "diff_bbox": null,
+        "sha256_ref": "100d31fc6dee603267ef285ab8079efb201e0e767f458b14469a6e51e7bb8f50",
+        "sha256_v8": "100d31fc6dee603267ef285ab8079efb201e0e767f458b14469a6e51e7bb8f50",
+        "sha256_match": true
+      },
+      "storage_path": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\parity-evidence\\bootstrap-reconciliation\\service-leaf-mobile-v8-viewport.png"
+    }
+  ],
+  "parity_summary": "PASS"
+}

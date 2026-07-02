@@ -1,0 +1,363 @@
+{
+  "captured_at": "2026-06-29T00:58:11.562Z",
+  "git_head": "dbc057cbc37e7adc07983ddbdb0ac053046293f9",
+  "url": "http://127.0.0.1:4217/o-centre.html",
+  "browser": "Google Chrome via puppeteer-core",
+  "desktop": {
+    "viewport_width": 1437,
+    "device_scale_factor": 1,
+    "page_height": 11774,
+    "screenshot": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\o-centre-visual-discrepancy\\implementation\\o-centre-desktop-1437-full.png",
+    "screenshot_bytes": 2634965
+  },
+  "mobile": {
+    "viewport_width": 390,
+    "device_scale_factor": 1,
+    "page_height": 18764,
+    "screenshot": "C:\\MARS Phenix\\AI MARS STORAGE\\website-factory\\fp-0002-shpigovsky-v8\\o-centre-visual-discrepancy\\implementation\\o-centre-mobile-390-full.png",
+    "screenshot_bytes": 1519708
+  },
+  "regions": [
+    {
+      "order": 1,
+      "region_id": "OC-HERO",
+      "selector": ".services-inner-hero-v2, .service-inner-hero-v2",
+      "source": "services-inner-hero-v2.html",
+      "y": 195,
+      "height": 611,
+      "width": 1422,
+      "major": "Шпиговский дом",
+      "mobile": "same DOM"
+    },
+    {
+      "order": 2,
+      "region_id": "OC-SUBNAV",
+      "selector": ".services-page-subnav",
+      "source": "internal-page-nav.html",
+      "y": 889,
+      "height": 34,
+      "width": 1170,
+      "major": "OC-SUBNAV",
+      "mobile": "same DOM"
+    },
+    {
+      "order": 3,
+      "region_id": "OC-INST",
+      "selector": "#who-we-are.institutional-narrative",
+      "source": "institutional-narrative.html",
+      "y": 973,
+      "height": 578,
+      "width": 1422,
+      "major": "Шпиговсикй дом — место, где видят человека, а не только диагноз",
+      "mobile": "same DOM"
+    },
+    {
+      "order": 4,
+      "region_id": "OC-WHO-TREAT",
+      "selector": "#who-we-treat.services-category-section-v2",
+      "source": "services-category-section-v2.html",
+      "y": 1551,
+      "height": 616,
+      "width": 1422,
+      "major": "Разные люди, разные истории — одно общее: что-то пошло не так",
+      "mobile": "same DOM"
+    },
+    {
+      "order": 5,
+      "region_id": "OC-APPROACH",
+      "selector": "#our-approach.program-approach-band",
+      "source": "inline o-centre.html",
+      "y": 2167,
+      "height": 1256,
+      "width": 1422,
+      "major": "Наш подход к лечению",
+      "mobile": "same DOM"
+    },
+    {
+      "order": 6,
+      "region_id": "OC-PROGRAM",
+      "selector": "#our-program.services-program-v2",
+      "source": "services-program-v2.html",
+      "y": 3423,
+      "height": 1183,
+      "width": 1422,
+      "major": "Наша программа включает 4 направления",
+      "mobile": "same DOM"
+    },
+    {
+      "order": 7,
+      "region_id": "OC-CTA-MID",
+      "selector": "#o-centre-mid-cta",
+      "source": "program-cta-band.html",
+      "y": 4606,
+      "height": 189,
+      "width": 1422,
+      "major": "Запишитесь на гостевой визит",
+      "mobile": "same DOM"
+    },
+    {
+      "order": 8,
+      "region_id": "OC-FOUNDER",
+      "selector": ".founder-quote",
+      "source": "founder-quote.html",
+      "y": 4795,
+      "height": 583,
+      "width": 1422,
+      "major": "OC-FOUNDER",
+      "mobile": "same DOM"
+    },
+    {
+      "order": 9,
+      "region_id": "OC-INFRA",
+      "selector": "#our-home.infrastructure-narrative",
+      "source": "infrastructure-narrative.html",
+      "y": 5378,
+      "height": 4067,
+      "width": 1422,
+      "major": "Место, где лечение начинается с ощущения безопасности",
+      "mobile": "same DOM"
+    },
+    {
+      "order": 10,
+      "region_id": "OC-CTA-GUEST",
+      "selector": "#o-centre-guest-cta",
+      "source": "program-cta-band.html",
+      "y": 9445,
+      "height": 189,
+      "width": 1422,
+      "major": "Запишитесь на гостевой визит",
+      "mobile": "same DOM"
+    },
+    {
+      "order": 11,
+      "region_id": "OC-SPECIALISTS",
+      "selector": "#specialists",
+      "source": "specialists.html",
+      "y": 9634,
+      "height": 580,
+      "width": 1422,
+      "major": "Специалисты центра",
+      "mobile": "same DOM"
+    },
+    {
+      "order": 12,
+      "region_id": "OC-REVIEWS",
+      "selector": "#reviews",
+      "source": "reviews.html",
+      "y": 10214,
+      "height": 512,
+      "width": 1422,
+      "major": "Отзывы",
+      "mobile": "same DOM"
+    },
+    {
+      "order": 13,
+      "region_id": "OC-FINAL-FORM",
+      "selector": ".final-form",
+      "source": "final-form.html",
+      "y": 10726,
+      "height": 554,
+      "width": 1422,
+      "major": "Остались вопросы?",
+      "mobile": "same DOM"
+    }
+  ],
+  "geometry": [
+    {
+      "region": "OC-HERO",
+      "metric": "block_height",
+      "figma": 905,
+      "implementation": 611,
+      "delta_px": -294,
+      "delta_pct": -32,
+      "severity": "MAJOR"
+    },
+    {
+      "region": "OC-SUBNAV",
+      "metric": "block_height",
+      "figma": "ESTIMATED",
+      "implementation": 34,
+      "delta_px": null,
+      "delta_pct": null,
+      "severity": "ESTIMATED"
+    },
+    {
+      "region": "OC-INST",
+      "metric": "block_height",
+      "figma": 1131,
+      "implementation": 578,
+      "delta_px": -553,
+      "delta_pct": -49,
+      "severity": "STRUCTURAL"
+    },
+    {
+      "region": "OC-WHO-TREAT",
+      "metric": "block_height",
+      "figma": 598,
+      "implementation": 616,
+      "delta_px": 18,
+      "delta_pct": 3,
+      "severity": "ESTIMATED"
+    },
+    {
+      "region": "OC-APPROACH",
+      "metric": "block_height",
+      "figma": 1837,
+      "implementation": 1256,
+      "delta_px": -581,
+      "delta_pct": -32,
+      "severity": "MAJOR"
+    },
+    {
+      "region": "OC-PROGRAM",
+      "metric": "block_height",
+      "figma": 1519,
+      "implementation": 1183,
+      "delta_px": -336,
+      "delta_pct": -22,
+      "severity": "MAJOR"
+    },
+    {
+      "region": "OC-CTA-MID",
+      "metric": "block_height",
+      "figma": 168,
+      "implementation": 189,
+      "delta_px": 21,
+      "delta_pct": 13,
+      "severity": "ESTIMATED"
+    },
+    {
+      "region": "OC-FOUNDER",
+      "metric": "block_height",
+      "figma": "ESTIMATED",
+      "implementation": 583,
+      "delta_px": null,
+      "delta_pct": null,
+      "severity": "ESTIMATED"
+    },
+    {
+      "region": "OC-INFRA",
+      "metric": "block_height",
+      "figma": 3621,
+      "implementation": 4067,
+      "delta_px": 446,
+      "delta_pct": 12,
+      "severity": "ESTIMATED"
+    },
+    {
+      "region": "OC-CTA-GUEST",
+      "metric": "block_height",
+      "figma": 107,
+      "implementation": 189,
+      "delta_px": 82,
+      "delta_pct": 77,
+      "severity": "STRUCTURAL"
+    },
+    {
+      "region": "OC-SPECIALISTS",
+      "metric": "block_height",
+      "figma": 561,
+      "implementation": 580,
+      "delta_px": 19,
+      "delta_pct": 3,
+      "severity": "ESTIMATED"
+    },
+    {
+      "region": "OC-REVIEWS",
+      "metric": "block_height",
+      "figma": 429,
+      "implementation": 512,
+      "delta_px": 83,
+      "delta_pct": 19,
+      "severity": "MAJOR"
+    },
+    {
+      "region": "OC-FINAL-FORM",
+      "metric": "block_height",
+      "figma": 366,
+      "implementation": 554,
+      "delta_px": 188,
+      "delta_pct": 51,
+      "severity": "STRUCTURAL"
+    }
+  ],
+  "cumulative_drift": [
+    {
+      "region_end": "OC-HERO",
+      "figma_cumulative_y": 905,
+      "implementation_cumulative_y": 806,
+      "drift_px": -99,
+      "primary_cause": "Order/subregion mismatch — see reconciliation"
+    },
+    {
+      "region_end": "OC-INST",
+      "figma_cumulative_y": 2036,
+      "implementation_cumulative_y": 1551,
+      "drift_px": -485,
+      "primary_cause": "Order/subregion mismatch — see reconciliation"
+    },
+    {
+      "region_end": "OC-WHO-TREAT",
+      "figma_cumulative_y": 2634,
+      "implementation_cumulative_y": 2167,
+      "drift_px": -467,
+      "primary_cause": "Order/subregion mismatch — see reconciliation"
+    },
+    {
+      "region_end": "OC-CTA-MID",
+      "figma_cumulative_y": 2802,
+      "implementation_cumulative_y": 4795,
+      "drift_px": 1993,
+      "primary_cause": "Order/subregion mismatch — see reconciliation"
+    },
+    {
+      "region_end": "OC-APPROACH",
+      "figma_cumulative_y": 4639,
+      "implementation_cumulative_y": 3423,
+      "drift_px": -1216,
+      "primary_cause": "Order/subregion mismatch — see reconciliation"
+    },
+    {
+      "region_end": "OC-PROGRAM",
+      "figma_cumulative_y": 6158,
+      "implementation_cumulative_y": 4606,
+      "drift_px": -1552,
+      "primary_cause": "Order/subregion mismatch — see reconciliation"
+    },
+    {
+      "region_end": "OC-INFRA",
+      "figma_cumulative_y": 9779,
+      "implementation_cumulative_y": 9445,
+      "drift_px": -334,
+      "primary_cause": "Order/subregion mismatch — see reconciliation"
+    },
+    {
+      "region_end": "OC-CTA-GUEST",
+      "figma_cumulative_y": 9886,
+      "implementation_cumulative_y": 9634,
+      "drift_px": -252,
+      "primary_cause": "Order/subregion mismatch — see reconciliation"
+    },
+    {
+      "region_end": "OC-SPECIALISTS",
+      "figma_cumulative_y": 10447,
+      "implementation_cumulative_y": 10214,
+      "drift_px": -233,
+      "primary_cause": "Order/subregion mismatch — see reconciliation"
+    },
+    {
+      "region_end": "OC-REVIEWS",
+      "figma_cumulative_y": 10876,
+      "implementation_cumulative_y": 10726,
+      "drift_px": -150,
+      "primary_cause": "Order/subregion mismatch — see reconciliation"
+    },
+    {
+      "region_end": "OC-FINAL-FORM",
+      "figma_cumulative_y": 11242,
+      "implementation_cumulative_y": 11280,
+      "drift_px": 38,
+      "primary_cause": "Order/subregion mismatch — see reconciliation"
+    }
+  ]
+}

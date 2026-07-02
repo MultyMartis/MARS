@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  @@include('partials/layout/head.html', {"title": "Согласие на обработку персональных данных — Шпиговский дом", "description": "Согласие на обработку персональных данных. Демонстрационная страница.", "canonical": "https://shpigovsky.ru/consent-personal-data/", "robots": "noindex, nofollow", "ogType": "website", "ogTitle": "Согласие на обработку персональных данных — Шпиговский дом", "ogDescription": "Согласие на обработку персональных данных. Демонстрационная страница.", "ogUrl": "https://shpigovsky.ru/consent-personal-data/", "ogImage": "https://shpigovsky.ru/assets/img/social/og-default.jpg", "ogImageAlt": "Согласие на обработку персональных данных — Шпиговский дом"})
+</head>
+<body class="page-legal-plain page-plain-content" data-page="consent-personal-data" data-content-status="legal-demo-document">
+  @@include('partials/layout/body-start.html')
+  @@include('partials/layout/header.html', {"activeNavUslugiClass": "", "activeNavOffcanvasClass": "", "activeNavUslugiAria": "", "activeNavOtzyvyClass": "", "activeNavOtzyvyOffcanvasClass": "", "activeNavOtzyvyAria": "", "activeNavKontaktyClass": "", "activeNavKontaktyOffcanvasClass": "", "activeNavKontaktyAria": "", "activeNavBlogClass": "", "activeNavBlogOffcanvasClass": "", "activeNavBlogAria": ""})
+  <main class="page-plain-content__main">
+    @@include('partials/components/internal-page-nav.html', {"crumbHome":"Главная","crumbMiddle":"","crumbMiddleHref":"","crumbMiddle2":"","crumbMiddleHref2":"","crumbCurrent":"Согласие на обработку персональных данных","listHtml": ""})
+    @@include('partials/sections/legal-document-page.html', {"contentStatusAttr": "data-content-status=\"legal-demo-document\"", "titleId": "consent-personal-data-title", "pageTitle": "Согласие на обработку персональных данных", "contentPartial": "consent-personal-data-body.html"})
+    @@include('partials/sections/final-form.html', {"leadSource": "consent-personal-data-final", "headingId": "consent-personal-data-final-heading", "headingText": "Остались вопросы?", "leadText": "Опишите вашу ситуацию в&nbsp;форме заявки, и&nbsp;мы расскажем, как сможем помочь", "sectionModifierClass": ""})
+  </main>
+  @@include('partials/layout/footer.html')
+  @@include('partials/layout/global-consultation-modal.html')
+  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+  <script src="assets/vendor/fancybox/fancybox.umd.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/inputmask.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

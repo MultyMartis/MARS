@@ -1,0 +1,41 @@
+@@if (wrapSection === 'true') {
+<section class="program-cta-band-section" id="@@sectionId" aria-labelledby="@@headingId">
+  <div class="container program-cta-band-section__container">
+@@if (headingText !== '') {
+    <h2 class="visually-hidden" id="@@headingId">@@headingText</h2>
+}
+}
+@@if (wrapContainer === 'true' && wrapSection !== 'true') {
+<div class="container">
+}
+    <div class="program-cta-band@@if (buttonFirst === 'true') { program-cta-band--button-first}@@if (marginFlush === 'true') { program-cta-band--flush}">
+      <div class="program-cta-band__copy">
+        <p class="program-cta-band__title">@@ctaTitle</p>
+        @@if (ctaSubtitle !== '') {
+        <p class="program-cta-band__subtitle">@@ctaSubtitle</p>
+        }
+      </div>
+      @@if (ctaPhone !== '') {
+      <a class="program-cta-band__phone" href="tel:+79251836464">
+        <span class="program-cta-band__phone-number">@@ctaPhone</span>
+        @@if (ctaPhoneHint !== '') {
+        <span class="program-cta-band__phone-hint">@@ctaPhoneHint</span>
+        }
+      </a>
+      }
+      <button
+        type="button"
+        class="btn btn_dark btn--primary program-cta-band__button"
+        data-modal-open="consultation"
+        data-modal-source="@@ctaSource"
+        data-modal-title="@@ctaText"
+        data-modal-submit-text="@@ctaText"
+      >@@ctaText</button>
+    </div>
+@@if (wrapContainer === 'true' && wrapSection !== 'true') {
+</div>
+}
+@@if (wrapSection === 'true') {
+  </div>
+</section>
+}
