@@ -1,0 +1,326 @@
+{
+  "task": "FP-0002-FW-07C-2B",
+  "started_at_utc": "2026-07-02T17:17:15Z",
+  "proof_uuid": "5161e6cd-27ba-43d8-a2ba-ee20d3decc5c",
+  "approval_ref": "FP-0002-FW-07C-2B",
+  "steps": {
+    "runtime_preflight": {
+      "site_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky",
+      "domain": "http://shpigovsky.test/",
+      "database": "mars_wp_fp0002",
+      "theme": "shpigovsky",
+      "frontend_http": 200,
+      "bridge_initial": {
+        "bridge_enabled": true,
+        "dev_confirmed": true,
+        "write_enabled": false,
+        "emergency_disabled": false,
+        "http_status": 200,
+        "ok": true
+      },
+      "readonly_initial": {
+        "endpoints": [
+          {
+            "endpoint": "ping",
+            "result": "PASS",
+            "http_status": 200
+          },
+          {
+            "endpoint": "site-info",
+            "result": "PASS",
+            "http_status": 200
+          },
+          {
+            "endpoint": "themes",
+            "result": "PASS",
+            "http_status": 200
+          },
+          {
+            "endpoint": "plugins",
+            "result": "PASS",
+            "http_status": 200
+          },
+          {
+            "endpoint": "pages",
+            "result": "PASS",
+            "http_status": 200
+          },
+          {
+            "endpoint": "indexing-state",
+            "result": "PASS",
+            "http_status": 200
+          },
+          {
+            "endpoint": "pages-id",
+            "page_id": 3,
+            "result": "PASS"
+          },
+          {
+            "endpoint": "pages-structure",
+            "page_id": 3,
+            "result": "PASS"
+          }
+        ],
+        "passed": 8,
+        "total": 8,
+        "result": "PASS"
+      }
+    },
+    "checkpoint": {
+      "checkpoint": "fw07c2b-wpilot-write-proof-pre-20260702T171715Z",
+      "root": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\fw07c2b-wpilot-write-proof-pre-20260702T171715Z",
+      "database_dump": "database\\mars_wp_fp0002.sql",
+      "database_sha256": "0b51ee67051c4a6ca75ecbf67d7455784fc4c677f146311f876a7db3f6b27a5c",
+      "manifests": [
+        "fixture-absence-proof.json",
+        "menus-summary.json",
+        "pages.json",
+        "plugins.json",
+        "posts.json",
+        "sha256-manifest.json",
+        "themes.json"
+      ],
+      "token_copied": false,
+      "fixture_absent": true,
+      "result": "PASS",
+      "created_at_utc": "2026-07-02T17:17:42Z"
+    },
+    "fixture": {
+      "fixture_id": 68,
+      "title": "MARS WPilot Write Proof \u2014 FW-07C-2B",
+      "slug": "mars-wpilot-proof-fw07c2b",
+      "status": "draft",
+      "parent": 0,
+      "content": "<!-- FW07C2B-PROOF-BEGIN:5161e6cd-27ba-43d8-a2ba-ee20d3decc5c -->\n<p>WPilot proof state: INITIAL \u2014 5161e6cd-27ba-43d8-a2ba-ee20d3decc5c</p>\n<!-- FW07C2B-PROOF-END:5161e6cd-27ba-43d8-a2ba-ee20d3decc5c -->",
+      "result": "PASS",
+      "created_at_utc": "2026-07-02T17:17:46Z"
+    },
+    "initial_state": {
+      "fixture_id": 68,
+      "slug": "mars-wpilot-proof-fw07c2b",
+      "status": "draft",
+      "initial_checksum_wpilot": "sha256:6ac4fea67bc13558b99cf15833152d3deac05f3b8fa25beb6dfcf1dbd4970c2d",
+      "initial_checksum_independent": "sha256:6ac4fea67bc13558b99cf15833152d3deac05f3b8fa25beb6dfcf1dbd4970c2d",
+      "initial_sentinel_count": 1,
+      "applied_sentinel_count": 0,
+      "structure_ok": true,
+      "result": "PASS"
+    },
+    "write_gate_enable": {
+      "before": {
+        "bridge_enabled": true,
+        "dev_confirmed": true,
+        "write_enabled": false,
+        "emergency_disabled": false,
+        "http_status": 200,
+        "ok": true
+      },
+      "after_toggle": {
+        "write_enabled": true,
+        "bridge_enabled": true,
+        "dev_confirmed": true,
+        "emergency_disabled": false
+      },
+      "verified": {
+        "bridge_enabled": true,
+        "dev_confirmed": true,
+        "write_enabled": true,
+        "emergency_disabled": false,
+        "http_status": 200,
+        "ok": true
+      },
+      "enabled_at_utc": "2026-07-02T17:17:48Z",
+      "other_settings_changed": false,
+      "result": "PASS"
+    },
+    "dry_run": {
+      "endpoint": "/pages/68/replace-text/dry-run",
+      "request_fields": {
+        "find": "WPilot proof state: INITIAL \u2014 5161e6cd-27ba-43d8-a2ba-ee20d3decc5c",
+        "replace": "WPilot proof state: APPLIED \u2014 5161e6cd-27ba-43d8-a2ba-ee20d3decc5c",
+        "expected_occurrences": 1,
+        "scope": "content_raw"
+      },
+      "approval_ref": "FP-0002-FW-07C-2B",
+      "http_status": 200,
+      "ok": true,
+      "match_count": 1,
+      "safe_zone": true,
+      "content_changed": false,
+      "checksum_before": "sha256:6ac4fea67bc13558b99cf15833152d3deac05f3b8fa25beb6dfcf1dbd4970c2d",
+      "checksum_after_dry_run": "sha256:6ac4fea67bc13558b99cf15833152d3deac05f3b8fa25beb6dfcf1dbd4970c2d",
+      "result": "PASS"
+    },
+    "backup": {
+      "backup_id": 1,
+      "target_id": 68,
+      "pre_apply_checksum": "sha256:6ac4fea67bc13558b99cf15833152d3deac05f3b8fa25beb6dfcf1dbd4970c2d",
+      "content_captured": true,
+      "operation_id": "op_07eb0ad6-0d34-4684-8a0d-5f0273c80e83",
+      "audit_event": true,
+      "result": "PASS"
+    },
+    "apply": {
+      "endpoint": "/pages/68/scoped-replace",
+      "target_id": 68,
+      "replacement_count": 1,
+      "backup_linked": true,
+      "backup_id": 2,
+      "validation": "passed",
+      "applied_checksum": "sha256:1d7363a444a5f9daf21732302475a6de90bcd9ef0b4def70658f02aadc761f61",
+      "checksum_before": "sha256:6ac4fea67bc13558b99cf15833152d3deac05f3b8fa25beb6dfcf1dbd4970c2d",
+      "mutation_performed": true,
+      "result": "PASS"
+    },
+    "applied_validation": {
+      "initial_sentinel": 0,
+      "applied_sentinel": 1,
+      "title": "MARS WPilot Write Proof \u2014 FW-07C-2B",
+      "slug": "mars-wpilot-proof-fw07c2b",
+      "status": "draft",
+      "parent": 0,
+      "template": "",
+      "independent_checksum": "sha256:1d7363a444a5f9daf21732302475a6de90bcd9ef0b4def70658f02aadc761f61",
+      "result": "PASS"
+    },
+    "rollback": {
+      "endpoint": "/pages/68/rollback",
+      "backup_id": 1,
+      "checksum_guard": "passed",
+      "restore_checksum": null,
+      "validation": null,
+      "result": "PASS"
+    },
+    "final_equivalence": {
+      "initial_checksum_wpilot": "sha256:6ac4fea67bc13558b99cf15833152d3deac05f3b8fa25beb6dfcf1dbd4970c2d",
+      "final_checksum_wpilot": "sha256:6ac4fea67bc13558b99cf15833152d3deac05f3b8fa25beb6dfcf1dbd4970c2d",
+      "initial_checksum_independent": "sha256:6ac4fea67bc13558b99cf15833152d3deac05f3b8fa25beb6dfcf1dbd4970c2d",
+      "final_checksum_independent": "sha256:6ac4fea67bc13558b99cf15833152d3deac05f3b8fa25beb6dfcf1dbd4970c2d",
+      "equal": true,
+      "initial_sentinel": 1,
+      "applied_sentinel": 0,
+      "metadata_equal": true,
+      "verdict": "FINAL_STATE_EQUALS_INITIAL_STATE",
+      "result": "PASS"
+    },
+    "write_gate_close": {
+      "before_closure": true,
+      "after_closure": {
+        "bridge_enabled": true,
+        "dev_confirmed": true,
+        "write_enabled": false,
+        "emergency_disabled": false,
+        "http_status": 200,
+        "ok": true
+      },
+      "disabled_at_utc": "2026-07-02T17:17:57Z",
+      "verified_through_wpilot": true,
+      "result": "PASS"
+    },
+    "fixture_cleanup": {
+      "method": "wp post delete --force",
+      "deleted_id": 68,
+      "slug_absent": true,
+      "page_count_restored": true,
+      "baseline_page_count": 23,
+      "final_page_count": 23,
+      "result": "PASS"
+    },
+    "final_runtime": {
+      "frontend_http": 200,
+      "wp_admin_http": 200,
+      "bridge": {
+        "bridge_enabled": true,
+        "dev_confirmed": true,
+        "write_enabled": false,
+        "emergency_disabled": false,
+        "http_status": 200,
+        "ok": true
+      },
+      "readonly": {
+        "endpoints": [
+          {
+            "endpoint": "ping",
+            "result": "PASS",
+            "http_status": 200
+          },
+          {
+            "endpoint": "site-info",
+            "result": "PASS",
+            "http_status": 200
+          },
+          {
+            "endpoint": "themes",
+            "result": "PASS",
+            "http_status": 200
+          },
+          {
+            "endpoint": "plugins",
+            "result": "PASS",
+            "http_status": 200
+          },
+          {
+            "endpoint": "pages",
+            "result": "PASS",
+            "http_status": 200
+          },
+          {
+            "endpoint": "indexing-state",
+            "result": "PASS",
+            "http_status": 200
+          },
+          {
+            "endpoint": "pages-id",
+            "page_id": 3,
+            "result": "PASS"
+          },
+          {
+            "endpoint": "pages-structure",
+            "page_id": 3,
+            "result": "PASS"
+          }
+        ],
+        "passed": 8,
+        "total": 8,
+        "result": "PASS"
+      },
+      "result": "PASS"
+    }
+  },
+  "verdict": "PASS",
+  "mutation_accounting": {
+    "fixture_creation": {
+      "authorized": true,
+      "count": 1,
+      "residual": "removed"
+    },
+    "wpilot_backup": {
+      "authorized": true,
+      "count": 1,
+      "residual": "audit evidence retained"
+    },
+    "scoped_replacement": {
+      "authorized": true,
+      "count": 1,
+      "residual": "rolled back"
+    },
+    "rollback": {
+      "authorized": true,
+      "count": 1,
+      "residual": "content restored"
+    },
+    "fixture_cleanup": {
+      "authorized": true,
+      "count": 1,
+      "residual": "absent"
+    },
+    "write_gate": {
+      "authorized": true,
+      "count": "false\u2192true\u2192false",
+      "residual": "false"
+    },
+    "unexpected_writes": 0
+  },
+  "completed_at_utc": "2026-07-02T17:18:10Z",
+  "checkpoint_root": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\fw07c2b-wpilot-write-proof-pre-20260702T171715Z"
+}

@@ -1,11 +1,12 @@
 # Forge WordPress — FP-0002 Project Lane
 
 **Project ID:** FP-0002 — Шпиговский  
-**Stage:** V9-05C complete — FW-07C-2A charter draft; operator authorization pending
+**Stage:** V9-05C complete — FW-07C-2B WPilot local write proof PASS
 
 | Document | Purpose |
 |----------|---------|
-| [FP-0002-FW-07C-2-MUTATION-CHARTER-v1.md](FP-0002-FW-07C-2-MUTATION-CHARTER-v1.md) | **DRAFT — NOT AUTHORIZED** — controlled mutation programme design |
+| [FP-0002-FW-07C-2B-WPILOT-LOCAL-WRITE-PROOF-RECEIPT-v1.md](FP-0002-FW-07C-2B-WPILOT-LOCAL-WRITE-PROOF-RECEIPT-v1.md) | **FW-07C-2B PASS** — local WPilot write lifecycle proof |
+| [FP-0002-FW-07C-2-MUTATION-CHARTER-v1.md](FP-0002-FW-07C-2-MUTATION-CHARTER-v1.md) | **BOUNDED — FW-07C-2B PROVEN** — controlled mutation programme |
 | [FP-0002-V9-05B-PRE-IMPLEMENTATION-CHECKPOINT-SUMMARY-v1.md](FP-0002-V9-05B-PRE-IMPLEMENTATION-CHECKPOINT-SUMMARY-v1.md) | **Current** — V9 pre-implementation runtime checkpoint |
 | [FP-0002-V9-05A-FOUNDATION-ADOPTION-SUMMARY-v1.md](FP-0002-V9-05A-FOUNDATION-ADOPTION-SUMMARY-v1.md) | V9 intake + foundation adoption |
 | [FP-0002-WORDPRESS-FOUNDATION-REPORT-v1.md](FP-0002-WORDPRESS-FOUNDATION-REPORT-v1.md) | Foundation matrix + FW-06A evidence |

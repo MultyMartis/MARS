@@ -1,0 +1,60 @@
+{
+  "frontend_http": 200,
+  "wp_admin_http": 200,
+  "bridge": {
+    "bridge_enabled": true,
+    "dev_confirmed": true,
+    "write_enabled": false,
+    "emergency_disabled": false,
+    "http_status": 200,
+    "ok": true
+  },
+  "readonly": {
+    "endpoints": [
+      {
+        "endpoint": "ping",
+        "result": "PASS",
+        "http_status": 200
+      },
+      {
+        "endpoint": "site-info",
+        "result": "PASS",
+        "http_status": 200
+      },
+      {
+        "endpoint": "themes",
+        "result": "PASS",
+        "http_status": 200
+      },
+      {
+        "endpoint": "plugins",
+        "result": "PASS",
+        "http_status": 200
+      },
+      {
+        "endpoint": "pages",
+        "result": "PASS",
+        "http_status": 200
+      },
+      {
+        "endpoint": "indexing-state",
+        "result": "PASS",
+        "http_status": 200
+      },
+      {
+        "endpoint": "pages-id",
+        "page_id": 3,
+        "result": "PASS"
+      },
+      {
+        "endpoint": "pages-structure",
+        "page_id": 3,
+        "result": "PASS"
+      }
+    ],
+    "passed": 8,
+    "total": 8,
+    "result": "PASS"
+  },
+  "result": "PASS"
+}

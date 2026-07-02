@@ -1,12 +1,12 @@
 # FP-0002 FW-07C-2 Mutation Charter v1
 
-**Status:** `DRAFT — NOT AUTHORIZED`  
+**Status:** `BOUNDED — FW-07C-2B PROVEN`  
 **Project:** FP-0002 — Шпиговский  
-**Date:** 2026-07-02  
+**Date:** 2026-07-02 (updated after FW-07C-2B proof PASS)  
 **Task:** FW-07C-2A — enforcement reconciliation and charter design  
-**Authority:** Operator confirmation in FW-07C-2A task; V9-05C read-only admission PASS
+**Authority:** Operator authorization FP-0002-FW-07C-2B (2026-07-02); V9-05C read-only admission PASS
 
-> **This document does not authorize any mutation.** Existence of this draft does not enable WPilot writes, filesystem delivery, WP-CLI operations, or WordPress object changes.
+> **Layer authorization is sequential.** FW-07C-2B local WPilot write proof is **COMPLETE**. FW-07C-2C, FW-07C-2D, and V9-06 remain **NOT AUTHORIZED** until separately chartered.
 
 ---
 
@@ -31,7 +31,7 @@ Controlled mutation programme for FP-0002 local WordPress foundation reconciliat
 | Layer | ID | Purpose | Mutation type | Current status |
 |-------|-----|---------|---------------|----------------|
 | Enforcement reconciliation + charter design | **FW-07C-2A** | Fix enforcement taxonomy; design mutation boundaries | Documentation only | **COMPLETE** (this task) |
-| WPilot harmless write proof | **FW-07C-2B** | Prove scoped replace + backup + rollback on disposable target | WPilot write (bounded) | **NOT AUTHORIZED** |
+| WPilot harmless write proof | **FW-07C-2B** | Prove scoped replace + backup + rollback on disposable target | WPilot write (bounded) | **COMPLETE** ([receipt](FP-0002-FW-07C-2B-WPILOT-LOCAL-WRITE-PROOF-RECEIPT-v1.md)) |
 | Filesystem delivery capability | **FW-07C-2C** | Theme / plugin / acf-json package delivery | Filesystem (allowlisted) | **NOT AUTHORIZED** |
 | WordPress object reconciliation | **FW-07C-2D** | Pages, menus, options, ACF values per route register | WP-CLI / WPilot / manual | **NOT AUTHORIZED** |
 | Foundation reconciliation | **V9-06** | Execute approved route + object plan | Mixed bounded ops | **NOT STARTED** |
@@ -271,23 +271,23 @@ Required for first write:
 
 ---
 
-## 20. WPilot local write proof design (FW-07C-2B — not executed)
+## 20. WPilot local write proof (FW-07C-2B — COMPLETE)
 
-| Step | Design |
+**Executed:** 2026-07-02 — **PASS**  
+**Receipt:** [FP-0002-FW-07C-2B-WPILOT-LOCAL-WRITE-PROOF-RECEIPT-v1.md](FP-0002-FW-07C-2B-WPILOT-LOCAL-WRITE-PROOF-RECEIPT-v1.md)  
+**Evidence:** `runtime/reports/fp0002-fw07c2b-proof/`
+
+| Step | Result |
 |------|--------|
-| **Target** | Disposable local test page or dedicated `fp02_wpilot_proof_marker` custom field / HTML comment block in a **non-production** test page — **must be created first** via separately authorized fixture (not V9 content) |
-| **Initial value** | Known sentinel string e.g. `<!-- FW07C2B-PROOF-INITIAL-{uuid} -->` |
-| **Dry-run** | WPilot replace dry-run; expect diff only on sentinel |
-| **Backup** | WPilot backup before apply |
-| **Apply** | Single exact scoped replace to `<!-- FW07C2B-PROOF-APPLIED-{uuid} -->` |
-| **Validation** | Checksum / content hash match |
-| **Rollback** | WPilot rollback |
-| **Final equivalence** | Byte-identical to initial backup |
-| **Audit** | Receipt in `runtime/reports/fp0002-fw07c2b-proof/` |
+| Disposable fixture | Created and retired (`mars-wpilot-proof-fw07c2b`) |
+| Dry-run | `match_count: 1`, safe zone, no mutation |
+| Backup | `backup_id: 1` |
+| Scoped replace | `replacement_count: 1` |
+| Rollback | Pre-apply state restored |
+| Final equivalence | `FINAL_STATE_EQUALS_INITIAL_STATE` |
+| Write gate | `false → true → false` verified |
 
-**Safe to execute next:** **NO** — requires FW-07C-2B operator authorization and disposable fixture creation.
-
-**Must not use:** page title, menu, site title, legal text, production content, operator credentials.
+**Safe to execute next (2C):** **NO** — requires separate FW-07C-2C operator authorization.
 
 ---
 

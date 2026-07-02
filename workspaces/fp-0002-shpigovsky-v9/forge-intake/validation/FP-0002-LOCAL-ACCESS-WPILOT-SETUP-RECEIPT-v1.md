@@ -34,7 +34,7 @@
 
 ## Next authorised step
 
-1. **FW-07C-2B** — WPilot local harmless write proof (requires operator authorization of [mutation charter](../../../../projects/mars-website-factory/subsystems/forge-wordpress/projects/fp-0002/FP-0002-FW-07C-2-MUTATION-CHARTER-v1.md))
+1. **FW-07C-2C** — Filesystem delivery capability (requires separate operator authorization; FW-07C-2B **COMPLETE** — see [proof receipt](../../../../projects/mars-website-factory/subsystems/forge-wordpress/projects/fp-0002/FP-0002-FW-07C-2B-WPILOT-LOCAL-WRITE-PROOF-RECEIPT-v1.md))
 
 ---
 

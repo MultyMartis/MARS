@@ -238,7 +238,7 @@ Shpigovsky:
 READ_ONLY ADMITTED (V9-05C — 2026-07-02)
 
 FW-07C-2:
-DRAFT CHARTER — NOT AUTHORIZED (FW-07C-2A design complete)
+BOUNDED CHARTER — FW-07C-2B PROVEN (2026-07-02)
 ```
 
 ---
@@ -246,11 +246,12 @@ DRAFT CHARTER — NOT AUTHORIZED (FW-07C-2A design complete)
 ## Next authorized stage
 
 ```text
-FW-07C-2B — WPilot local harmless write proof (requires operator authorization of FW-07C-2 charter)
+FW-07C-2C — Filesystem delivery capability (requires separate operator authorization)
 ```
 
-Charter draft: [projects/fp-0002/FP-0002-FW-07C-2-MUTATION-CHARTER-v1.md](projects/fp-0002/FP-0002-FW-07C-2-MUTATION-CHARTER-v1.md) — **DRAFT — NOT AUTHORIZED**
+Charter: [projects/fp-0002/FP-0002-FW-07C-2-MUTATION-CHARTER-v1.md](projects/fp-0002/FP-0002-FW-07C-2-MUTATION-CHARTER-v1.md) — **BOUNDED — FW-07C-2B PROVEN**  
+Proof receipt: [FP-0002-FW-07C-2B-WPILOT-LOCAL-WRITE-PROOF-RECEIPT-v1.md](projects/fp-0002/FP-0002-FW-07C-2B-WPILOT-LOCAL-WRITE-PROOF-RECEIPT-v1.md)
 
 ---
 
-*Last updated: 2026-07-02 — FW-07C-2A enforcement reconciliation + mutation charter draft.*
+*Last updated: 2026-07-02 — FW-07C-2B WPilot local harmless write proof PASS.*

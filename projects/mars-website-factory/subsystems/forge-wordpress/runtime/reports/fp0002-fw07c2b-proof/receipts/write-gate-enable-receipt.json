@@ -1,0 +1,27 @@
+{
+  "before": {
+    "bridge_enabled": true,
+    "dev_confirmed": true,
+    "write_enabled": false,
+    "emergency_disabled": false,
+    "http_status": 200,
+    "ok": true
+  },
+  "after_toggle": {
+    "write_enabled": true,
+    "bridge_enabled": true,
+    "dev_confirmed": true,
+    "emergency_disabled": false
+  },
+  "verified": {
+    "bridge_enabled": true,
+    "dev_confirmed": true,
+    "write_enabled": true,
+    "emergency_disabled": false,
+    "http_status": 200,
+    "ok": true
+  },
+  "enabled_at_utc": "2026-07-02T17:17:48Z",
+  "other_settings_changed": false,
+  "result": "PASS"
+}

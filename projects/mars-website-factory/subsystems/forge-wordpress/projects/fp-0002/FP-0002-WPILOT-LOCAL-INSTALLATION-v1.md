@@ -12,7 +12,7 @@ WPilot local read-only:
 VALIDATED (8/8) post-reconciliation
 
 WPilot writes:
-DISABLED / NOT TESTED
+DISABLED (write gate closed; FW-07C-2B lifecycle PROVEN 2026-07-02)
 
 Package:
 metacode-wpilot-v0.3.0-rc5.zip (deploy-packages + local package cache)

@@ -1,6 +1,6 @@
 # FP-0002 V9 Operational Status
 
-**Updated:** 2026-07-02 (FW-07C-2A enforcement reconciliation + mutation charter draft)  
+**Updated:** 2026-07-02 (FW-07C-2B WPilot local harmless write proof PASS)  
 **Status:** `FP0002_V9_05C_READ_ONLY_PROJECT_ADMISSION_PASS`
 
 ## Authority model
@@ -92,11 +92,23 @@ Phase **07C-B** Storage package — `SUPERSEDED_FAILED_STATIC_PACKAGING_NOT_FOR_
 - WPilot write_enabled: **false**
 - WordPress implementation: **not started**
 
+## FW-07C-2B WPilot Local Harmless Write Proof (complete)
+
+- Status: `FP0002_FW07C2B_WPILOT_LOCAL_WRITE_PROOF_PASS`
+- Receipt: `projects/mars-website-factory/subsystems/forge-wordpress/projects/fp-0002/FP-0002-FW-07C-2B-WPILOT-LOCAL-WRITE-PROOF-RECEIPT-v1.md`
+- Evidence: `projects/mars-website-factory/subsystems/forge-wordpress/runtime/reports/fp0002-fw07c2b-proof/`
+- WPilot dry-run / backup / scoped replace / rollback: **PROVEN LOCALLY**
+- Final state equivalence: **PROVEN**
+- WPilot `write_enabled`: **false** (verified post-proof)
+- Permanent admission: **READ_ONLY** (unchanged)
+- FW-07C-2C / FW-07C-2D: **NOT AUTHORIZED**
+- WordPress implementation: **not started**
+
 ## Next phase
 
-**FW-07C-2 — Controlled Mutation Charter** (draft exists; separate operator authorization required)
+**FW-07C-2C — Filesystem Delivery Capability** (requires separate operator authorization)
 
-## V9-04 Forge Intake Pack (complete)
+## FW-07C-2A Enforcement Reconciliation and Charter Design (complete)
 
 - Status: `FP0002_V9_FORGE_WORDPRESS_INTAKE_PACK_COMPLETE`
 - Pack root: `forge-intake/`
