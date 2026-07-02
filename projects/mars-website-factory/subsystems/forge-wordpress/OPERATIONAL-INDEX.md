@@ -24,7 +24,7 @@ FW-07B — COMPLETE (AG-WP-001 typed operations)
 FW-07C — Safety Preflight — COMPLETE (2026-06-25)
 FW-07C-0 — Enforcement Foundation — IMPLEMENTED_AND_VALIDATED_IN_REPO (2026-06-26)
 FW-07C-1 — Local Read-Only Harness — X-RUNTIME REVALIDATED (2026-07-02)
-FW-07C-2 — BLOCKED — SEPARATE OPERATOR CHARTER REQUIRED
+FW-07C-2 — DRAFT CHARTER — NOT AUTHORIZED (FP-0002 mutation capability — FW-07C-2A design complete 2026-07-02)
 Architecture: DOCUMENTED
 Contracts: BASELINE v1
 Standards: BASELINE v1
@@ -238,7 +238,7 @@ Shpigovsky:
 READ_ONLY ADMITTED (V9-05C — 2026-07-02)
 
 FW-07C-2:
-BLOCKED / NOT AUTHORIZED
+DRAFT CHARTER — NOT AUTHORIZED (FW-07C-2A design complete)
 ```
 
 ---
@@ -246,9 +246,11 @@ BLOCKED / NOT AUTHORIZED
 ## Next authorized stage
 
 ```text
-FW-07C-2 — BLOCKED — SEPARATE OPERATOR CHARTER REQUIRED (FP-0002 mutation capability)
+FW-07C-2B — WPilot local harmless write proof (requires operator authorization of FW-07C-2 charter)
 ```
+
+Charter draft: [projects/fp-0002/FP-0002-FW-07C-2-MUTATION-CHARTER-v1.md](projects/fp-0002/FP-0002-FW-07C-2-MUTATION-CHARTER-v1.md) — **DRAFT — NOT AUTHORIZED**
 
 ---
 
-*Last updated: 2026-07-02 — V9-05C Shpigovsky read-only project admission PASS.*
+*Last updated: 2026-07-02 — FW-07C-2A enforcement reconciliation + mutation charter draft.*

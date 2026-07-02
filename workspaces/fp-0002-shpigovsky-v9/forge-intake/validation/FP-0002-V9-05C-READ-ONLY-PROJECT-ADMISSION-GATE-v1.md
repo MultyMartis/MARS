@@ -11,6 +11,10 @@
 | WPilot-backed inspection | **VALIDATED** (8/8 pre + 7 ops) |
 | Filesystem inspection | **VALIDATED** (4 bounded ops) |
 | Runtime mutations during admission | **0** |
+| Operator wp-admin inspection | **COMPLETE** |
+| Operator WPilot UI inspection | **COMPLETE** |
+| Enforcement regression | **FULL PASS** (FW-07C-2A) |
+| FW-07C-2 mutation charter | **DRAFT — NOT AUTHORIZED** |
 | FW-07C-2 | **NOT AUTHORIZED** |
 | WordPress implementation | **NOT STARTED** |
 
@@ -35,10 +39,10 @@
 ## Next authorized step
 
 ```text
-CREATE_FW07C2_FP0002_MUTATION_CHARTER
+CREATE_FW07C2B_WPILOT_LOCAL_WRITE_PROOF
 ```
 
-Do **not** begin V9 WordPress implementation without FW-07C-2 charter.
+Charter draft: [FP-0002-FW-07C-2-MUTATION-CHARTER-v1.md](../../../../projects/mars-website-factory/subsystems/forge-wordpress/projects/fp-0002/FP-0002-FW-07C-2-MUTATION-CHARTER-v1.md) — **DRAFT — NOT AUTHORIZED**
 
 ---
 

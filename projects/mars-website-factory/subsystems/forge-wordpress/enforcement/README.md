@@ -51,6 +51,10 @@ Defined in `policies/forge-protected-roots-v1.json`:
 - `D:\MARS-Localhost`, `E:\MARS-Localhost` (deprecated runtime roots — deny)
 - `X:\`, `X:\MARS-Localhost` (protected parent; registered site descendants allowlisted separately)
 
+### Failure-code precedence (path validator)
+
+When a path is both outside the admitted `allowed_root` and under a protected parent (e.g. sibling project under `X:\MARS-Localhost`), **`FW_PATH_PROTECTED_ROOT` wins** over `FW_PATH_OUTSIDE_ALLOWED_ROOT`. The protected-root code is more specific: it identifies cross-zone access within a deny-parent sandbox, not merely a wrong project subtree. Validator behaviour is unchanged; fixture `neg-outside-allowed-root` encodes this rule (FW-07C-2A reconciliation).
+
 ---
 
 ## Runtime prohibition

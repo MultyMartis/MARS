@@ -1,10 +1,11 @@
 # Forge WordPress — FP-0002 Project Lane
 
 **Project ID:** FP-0002 — Шпиговский  
-**Stage:** V9-05C complete — FW-07C-2 mutation charter next
+**Stage:** V9-05C complete — FW-07C-2A charter draft; operator authorization pending
 
 | Document | Purpose |
 |----------|---------|
+| [FP-0002-FW-07C-2-MUTATION-CHARTER-v1.md](FP-0002-FW-07C-2-MUTATION-CHARTER-v1.md) | **DRAFT — NOT AUTHORIZED** — controlled mutation programme design |
 | [FP-0002-V9-05B-PRE-IMPLEMENTATION-CHECKPOINT-SUMMARY-v1.md](FP-0002-V9-05B-PRE-IMPLEMENTATION-CHECKPOINT-SUMMARY-v1.md) | **Current** — V9 pre-implementation runtime checkpoint |
 | [FP-0002-V9-05A-FOUNDATION-ADOPTION-SUMMARY-v1.md](FP-0002-V9-05A-FOUNDATION-ADOPTION-SUMMARY-v1.md) | V9 intake + foundation adoption |
 | [FP-0002-WORDPRESS-FOUNDATION-REPORT-v1.md](FP-0002-WORDPRESS-FOUNDATION-REPORT-v1.md) | Foundation matrix + FW-06A evidence |

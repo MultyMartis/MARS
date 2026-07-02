@@ -14,7 +14,8 @@
 | WPilot local read-only | **VALIDATED** (8/8 post-reconciliation) |
 | WPilot writes | **DISABLED / NOT TESTED** |
 | MU-plugin | **KEEP AS IS** |
-| Operator wp-admin inspection | **PENDING** |
+| Operator wp-admin inspection | **COMPLETE** |
+| Operator WPilot UI inspection | **COMPLETE** |
 | WordPress implementation | **NOT STARTED** |
 
 ## Checkpoints
@@ -33,8 +34,7 @@
 
 ## Next authorised step
 
-1. **OPERATOR_WPADMIN_INSPECTION**
-2. Then **CREATE_V9_05C_SHPIGOVSKY_READ_ONLY_ADMISSION** (separate charter)
+1. **FW-07C-2B** — WPilot local harmless write proof (requires operator authorization of [mutation charter](../../../../projects/mars-website-factory/subsystems/forge-wordpress/projects/fp-0002/FP-0002-FW-07C-2-MUTATION-CHARTER-v1.md))
 
 ---
 

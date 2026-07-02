@@ -1,6 +1,6 @@
 # FP-0002 V9 Operational Status
 
-**Updated:** 2026-07-02 (V9-05C read-only Forge project admission PASS)  
+**Updated:** 2026-07-02 (FW-07C-2A enforcement reconciliation + mutation charter draft)  
 **Status:** `FP0002_V9_05C_READ_ONLY_PROJECT_ADMISSION_PASS`
 
 ## Authority model
@@ -67,7 +67,8 @@ Phase **07C-B** Storage package — `SUPERSEDED_FAILED_STATIC_PACKAGING_NOT_FOR_
 - Temporary local admin: **CREATED** (local only)
 - WPilot v0.3.0: **INSTALLED AND ACTIVE** on `shpigovsky.test`
 - WPilot read-only REST: **VALIDATED** (8/8); writes **DISABLED**
-- Operator wp-admin inspection: **PENDING**
+- Operator wp-admin inspection: **COMPLETE**
+- Operator WPilot UI inspection: **COMPLETE**
 - WordPress implementation: **not started**
 
 ## V9-05C Read-Only Project Admission (complete)
@@ -76,12 +77,24 @@ Phase **07C-B** Storage package — `SUPERSEDED_FAILED_STATIC_PACKAGING_NOT_FOR_
 - Gate: `forge-intake/validation/FP-0002-V9-05C-READ-ONLY-PROJECT-ADMISSION-GATE-v1.md`
 - Forge receipt: `projects/mars-website-factory/subsystems/forge-wordpress/projects/fp-0002/FP-0002-V9-05C-READ-ONLY-PROJECT-ADMISSION-RECEIPT-v1.md`
 - Admission mode: **READ_ONLY** — 11 operations admitted, 0 mutations
+- Operator wp-admin inspection: **COMPLETE**
+- Operator WPilot UI inspection: **COMPLETE**
+- Enforcement regression: **FULL PASS** (FW-07C-2A)
+- FW-07C-2 mutation charter: **DRAFT — NOT AUTHORIZED**
 - FW-07C-2: **NOT AUTHORIZED**
+- WordPress implementation: **not started**
+
+## FW-07C-2A Enforcement Reconciliation and Charter Design (complete)
+
+- Status: `FP0002_FW07C2A_ENFORCEMENT_RECONCILIATION_AND_CHARTER_DESIGN_COMPLETE`
+- Charter: `projects/mars-website-factory/subsystems/forge-wordpress/projects/fp-0002/FP-0002-FW-07C-2-MUTATION-CHARTER-v1.md`
+- Enforcement fix: stale fixture expectation reconciled (`neg-outside-allowed-root` → `FW_PATH_PROTECTED_ROOT`)
+- WPilot write_enabled: **false**
 - WordPress implementation: **not started**
 
 ## Next phase
 
-**FW-07C-2 — Controlled Mutation Charter** (separate operator authorization required)
+**FW-07C-2 — Controlled Mutation Charter** (draft exists; separate operator authorization required)
 
 ## V9-04 Forge Intake Pack (complete)
 

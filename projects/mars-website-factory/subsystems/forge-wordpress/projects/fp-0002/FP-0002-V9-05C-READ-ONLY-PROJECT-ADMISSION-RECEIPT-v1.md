@@ -27,6 +27,10 @@
 | Reparse boundary | PASS — 0 escapes |
 | WPilot pre-admission | 8/8 PASS |
 | WPilot write_enabled | `false` |
+| Operator wp-admin inspection | **COMPLETE** |
+| Operator WPilot UI inspection | **COMPLETE** |
+| Enforcement regression | **FULL PASS** (FW-07C-2A) |
+| FW-07C-2 mutation charter | **DRAFT — NOT AUTHORIZED** |
 | WPilot build fingerprint | 27 files — PASS |
 | Admitted operations executed | 11/11 PASS |
 | Runtime file mutations | 0 |
@@ -55,8 +59,10 @@
 ## Recommended next action
 
 ```text
-CREATE_FW07C2_FP0002_MUTATION_CHARTER
+CREATE_FW07C2B_WPILOT_LOCAL_WRITE_PROOF
 ```
+
+Charter draft: [FP-0002-FW-07C-2-MUTATION-CHARTER-v1.md](FP-0002-FW-07C-2-MUTATION-CHARTER-v1.md) — **DRAFT — NOT AUTHORIZED**
 
 ---
 
