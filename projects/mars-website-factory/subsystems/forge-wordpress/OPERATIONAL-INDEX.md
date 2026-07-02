@@ -44,7 +44,7 @@ Operator WV6: PENDING
 Direct local domain: PASS (FP-0002 — FW-06A.1)
 Synthetic source: TRACKED (Git whitelist)
 Agent registration: REGISTERED (AG-WP-001 — SYNTHETIC READ-ONLY CAPABILITY ONLY; NOT PRODUCTION READY)
-Client pilot: NOT STARTED — WordPress foundation ADOPTED; V9-05C read-only admission PASS; implementation LOCKED until FW-07C-2
+Client pilot: NOT STARTED — WordPress foundation ADOPTED; V9-05C read-only admission PASS; V9-06A architecture DESIGN COMPLETE; WordPress implementation NOT STARTED
 ```
 
 | Field | Value |
@@ -213,7 +213,7 @@ WPilot does **not** own theme/content architecture.
 
 ## First probable pilot
 
-**FP-0002 — Shpigovsky.ru** — FW-06A foundation **READY**; V9-05A intake **APPROVED**; foundation **ADOPTED**; V9-05C read-only admission **PASS**; implementation **LOCKED** until FW-07C-2; see [projects/fp-0002/](projects/fp-0002/).
+**FP-0002 — Shpigovsky.ru** — FW-06A foundation **READY**; V9-05A intake **APPROVED**; foundation **ADOPTED**; V9-05C read-only admission **PASS**; **V9-06A architecture DESIGN COMPLETE**; WordPress implementation **NOT STARTED**; see [projects/fp-0002/](projects/fp-0002/) · [architecture pack](../../../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/architecture/FP-0002-WORDPRESS-ARCHITECTURE-v1.md).
 
 ---
 
@@ -237,8 +237,32 @@ SYNTHETIC READ-ONLY (fws-0001) + PROJECT READ-ONLY (fp-0002-shpigovsky)
 Shpigovsky:
 READ_ONLY ADMITTED (V9-05C — 2026-07-02)
 
+V9-06A:
+ARCHITECTURE DESIGN COMPLETE (2026-07-03)
+
+WordPress entity model:
+DESIGNED
+
+Template system:
+DESIGNED
+
+Admin UX:
+DESIGNED
+
+ACF decision:
+MIXED — Free sufficient with BoundedMeta; Pro optional (OD-001)
+
+Runtime changes:
+0
+
+WordPress implementation:
+NOT STARTED
+
 FW-07C-2:
 BOUNDED CHARTER — FW-07C-2C PROVEN (2026-07-03)
+
+FW-07C-2D:
+SUPERSEDED BY ARCHITECTURE-FIRST SEQUENCE (V9-06D)
 ```
 
 ---
@@ -246,7 +270,7 @@ BOUNDED CHARTER — FW-07C-2C PROVEN (2026-07-03)
 ## Next authorized stage
 
 ```text
-FW-07C-2D — WordPress object reconciliation (requires separate operator authorization)
+OPERATOR_ARCHITECTURE_REVIEW — then V9-06B theme/core skeleton (not auto-authorized)
 ```
 
 Charter: [projects/fp-0002/FP-0002-FW-07C-2-MUTATION-CHARTER-v1.md](projects/fp-0002/FP-0002-FW-07C-2-MUTATION-CHARTER-v1.md) — **BOUNDED — FW-07C-2C PROVEN**  

@@ -1,0 +1,148 @@
+{
+  "schema": "fp-0002-wordpress-entity-registry",
+  "version": "1.0.0",
+  "task": "V9-06A",
+  "generated": "2026-07-03",
+  "entities": [
+    {
+      "id": "ENT-PAGE",
+      "wordpress_type": "page",
+      "label_ru": "Страницы",
+      "public": true,
+      "hierarchical": true,
+      "admin_location": "Страницы",
+      "decision": "APPROVED_RECOMMENDATION",
+      "scope": "Home hub, services hub, institutional tree, contacts, reviews, legal, placeholder children",
+      "count_v9": 17,
+      "notes": "Institutional and hub pages remain native Pages; not used for repeatable service leaf catalogue"
+    },
+    {
+      "id": "ENT-SERVICE",
+      "wordpress_type": "service",
+      "label_ru": "Услуги",
+      "public": true,
+      "hierarchical": true,
+      "admin_location": "Услуги",
+      "decision": "APPROVED_RECOMMENDATION",
+      "scope": "All /uslugi/* routes except /uslugi/ hub page",
+      "count_v9": 15,
+      "registration_owner": "shpigovsky-core",
+      "template_owner": "shpigovsky",
+      "rewrite": {
+        "slug": "uslugi",
+        "with_front": false,
+        "hierarchical": true,
+        "has_archive": false
+      },
+      "supports": ["title", "editor", "excerpt", "thumbnail", "revisions", "page-attributes"],
+      "notes": "Hierarchical parent-child replaces nested Pages for service catalogue"
+    },
+    {
+      "id": "ENT-POST",
+      "wordpress_type": "post",
+      "label_ru": "Записи",
+      "public": true,
+      "hierarchical": false,
+      "admin_location": "Записи",
+      "decision": "APPROVED_RECOMMENDATION",
+      "scope": "Blog articles only",
+      "count_v9": 1,
+      "notes": "Native Posts; categories optional bounded; tags rejected by default"
+    },
+    {
+      "id": "ENT-POSTS-PAGE",
+      "wordpress_type": "page",
+      "label_ru": "Страница записей",
+      "public": true,
+      "hierarchical": false,
+      "admin_location": "Настройки → Чтение",
+      "decision": "APPROVED_RECOMMENDATION",
+      "scope": "/blog/ archive surface",
+      "assigned_slug": "blog",
+      "notes": "page_for_posts assignment; template home.php"
+    },
+    {
+      "id": "ENT-CATEGORY",
+      "wordpress_type": "category",
+      "label_ru": "Рубрики",
+      "public": true,
+      "hierarchical": true,
+      "admin_location": "Записи → Рубрики",
+      "decision": "DEFERRED",
+      "scope": "Blog editorial grouping only if operator confirms",
+      "notes": "Not required for V9 fixture; default no public category archives"
+    },
+    {
+      "id": "ENT-SERVICE-CATEGORY",
+      "wordpress_type": "service_category",
+      "label_ru": "Категории услуг",
+      "public": false,
+      "hierarchical": true,
+      "admin_location": "—",
+      "decision": "REJECTED",
+      "reason": "Service hierarchy via post_parent on service CPT is sufficient; taxonomy would duplicate navigation"
+    },
+    {
+      "id": "ENT-REVIEW-CPT",
+      "wordpress_type": "review",
+      "decision": "REJECTED",
+      "reason": "No single-review routes in V9; archive satisfied by Page repeater"
+    },
+    {
+      "id": "ENT-SPECIALIST-CPT",
+      "wordpress_type": "specialist",
+      "decision": "REJECTED",
+      "reason": "No specialist detail pages in V9; specialists are section content only"
+    },
+    {
+      "id": "ENT-LEGAL-CPT",
+      "wordpress_type": "legal_document",
+      "decision": "REJECTED",
+      "reason": "Legal content is institutional Pages with shared template"
+    },
+    {
+      "id": "ENT-BLOCKS-CPT",
+      "wordpress_type": "block",
+      "decision": "REJECTED",
+      "reason": "Forbidden page-builder pattern"
+    },
+    {
+      "id": "ENT-ARTICLE-CPT",
+      "wordpress_type": "article",
+      "decision": "REJECTED",
+      "reason": "Native post satisfies blog architecture"
+    },
+    {
+      "id": "ENT-ABOUT-CPT",
+      "wordpress_type": "about",
+      "decision": "REJECTED",
+      "reason": "O-centre remains Page family"
+    },
+    {
+      "id": "ENT-CONTACTS-CPT",
+      "wordpress_type": "contacts",
+      "decision": "REJECTED",
+      "reason": "Contacts remains single Page"
+    },
+    {
+      "id": "ENT-TESTIMONIAL-CPT",
+      "wordpress_type": "testimonial",
+      "decision": "REJECTED",
+      "reason": "Reviews on dedicated Page; service teasers query same data or static teaser"
+    }
+  ],
+  "system_configuration": {
+    "page_on_front": {
+      "slug": "glavnaya",
+      "public_url": "/",
+      "decision": "APPROVED_RECOMMENDATION"
+    },
+    "page_for_posts": {
+      "slug": "blog",
+      "public_url": "/blog/",
+      "decision": "APPROVED_RECOMMENDATION"
+    },
+    "permalink_structure": "/%postname%/",
+    "blog_permalink": "/blog/%postname%/"
+  }
+}

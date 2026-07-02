@@ -1,0 +1,98 @@
+{
+  "schema": "fp-0002-template-part-registry",
+  "version": "1.0.0",
+  "task": "V9-06A",
+  "generated": "2026-07-03",
+  "families": [
+    {
+      "family": "global",
+      "count": 2,
+      "ownership": "THEME_CODE",
+      "reuse": "all templates"
+    },
+    {
+      "family": "layout",
+      "count": 5,
+      "ownership": "THEME_CODE",
+      "reuse": "all templates"
+    },
+    {
+      "family": "navigation",
+      "count": 3,
+      "ownership": "THEME_CODE + WORDPRESS_MENU",
+      "reuse": "all except bare system"
+    },
+    {
+      "family": "components",
+      "count": 5,
+      "ownership": "THEME_CODE",
+      "reuse": "cross-family"
+    },
+    {
+      "family": "home",
+      "count": 8,
+      "ownership": "TEMPLATE_PART_WITH_FIELDS",
+      "reuse": "front-page only"
+    },
+    {
+      "family": "service",
+      "count": 12,
+      "ownership": "TEMPLATE_PART_WITH_FIELDS",
+      "reuse": "single-service variants"
+    },
+    {
+      "family": "institutional",
+      "count": 2,
+      "ownership": "TEMPLATE_PART_WITH_FIELDS",
+      "reuse": "institutional pages"
+    },
+    {
+      "family": "contacts",
+      "count": 2,
+      "ownership": "TEMPLATE_PART_WITH_FIELDS",
+      "reuse": "contacts page"
+    },
+    {
+      "family": "blog",
+      "count": 3,
+      "ownership": "MIXED",
+      "reuse": "home.php + single.php"
+    },
+    {
+      "family": "legal",
+      "count": 1,
+      "ownership": "NATIVE_EDITOR_CONTENT",
+      "reuse": "legal template"
+    },
+    {
+      "family": "reviews",
+      "count": 2,
+      "ownership": "BOUNDED_REPEATER",
+      "reuse": "reviews page + service teasers"
+    }
+  ],
+  "parts": [
+    {"id": "TP-HEAD", "v9": "partials/layout/head.html", "wp": "template-parts/layout/head.php", "classification": "CODE_OWNED", "dynamic": ["title", "meta", "canonical", "og"]},
+    {"id": "TP-HEADER", "v9": "partials/layout/header.html", "wp": "template-parts/layout/header.php", "classification": "GLOBAL", "dynamic": ["menus", "phone", "cta"]},
+    {"id": "TP-FOOTER", "v9": "partials/layout/footer.html", "wp": "template-parts/layout/footer.php", "classification": "GLOBAL", "dynamic": ["menus", "contacts", "legal"]},
+    {"id": "TP-MODAL", "v9": "partials/layout/global-consultation-modal.html", "wp": "template-parts/layout/global-consultation-modal.php", "classification": "GLOBAL", "dynamic": ["labels", "consent_urls"]},
+    {"id": "TP-SCROLL", "v9": "partials/components/scroll-to-top.html", "wp": "template-parts/components/scroll-to-top.php", "classification": "CODE_OWNED", "dynamic": []},
+    {"id": "TP-BREADCRUMBS", "v9": "derived", "wp": "template-parts/navigation/breadcrumbs.php", "classification": "DERIVED", "dynamic": ["trail"]},
+    {"id": "TP-HOME-HERO", "v9": "sections/home-hero*", "wp": "template-parts/home/hero.php", "classification": "BOUNDED_REPEATER", "max_items": 5},
+    {"id": "TP-SERVICE-HERO", "v9": "sections/services-inner-hero-v2.html", "wp": "template-parts/service/inner-hero.php", "classification": "PAGE_SPECIFIC_FIELD"},
+    {"id": "TP-SERVICE-INTRO", "v9": "sections/service-leaf-intro-v1.html", "wp": "template-parts/service/intro.php", "classification": "BOUNDED_REPEATER"},
+    {"id": "TP-SERVICE-SIGNS", "v9": "sections/service-leaf-signs-v1.html", "wp": "template-parts/service/signs.php", "classification": "BOUNDED_REPEATER", "max_items": 12},
+    {"id": "TP-SERVICE-PROGRAM", "v9": "sections/services-program-v2.html", "wp": "template-parts/service/program.php", "classification": "BOUNDED_REPEATER", "max_items": 6},
+    {"id": "TP-SERVICE-FAQ", "v9": "sections/faq.html", "wp": "template-parts/service/faq.php", "classification": "BOUNDED_REPEATER", "max_items": 15},
+    {"id": "TP-INFRA", "v9": "sections/infrastructure-narrative.html", "wp": "template-parts/institutional/infrastructure-narrative.php", "classification": "BOUNDED_REPEATER", "note": "G0-G5 only, no G6"},
+    {"id": "TP-LEGAL", "v9": "sections/legal-document-page.html", "wp": "template-parts/legal/document-page.php", "classification": "NATIVE_EDITOR_CONTENT"},
+    {"id": "TP-BLOG-CARD", "v9": "components/blog-archive-card.html", "wp": "template-parts/components/blog-archive-card.php", "classification": "ENTITY_QUERY"},
+    {"id": "TP-REVIEW-CARD", "v9": "components/review-archive-card.html", "wp": "template-parts/components/review-archive-card.php", "classification": "BOUNDED_REPEATER"},
+    {"id": "TP-PLACEHOLDER", "v9": "sections/placeholder-page.html", "wp": "template-parts/page/placeholder-notice.php", "classification": "PAGE_SPECIFIC_FIELD"},
+    {"id": "TP-FINAL-FORM", "v9": "sections/final-form.html", "wp": "template-parts/components/final-form.php", "classification": "TEMPLATE_PART_CODE_OWNED", "note": "triggers global modal"}
+  ],
+  "excluded": [
+    {"v9": "sections/home-genotyping.html", "reason": "unpublished route /uslugi/genotipirovanie/"},
+    {"v9": "G6 infrastructure blocks", "reason": "explicit V9 rejection"}
+  ]
+}

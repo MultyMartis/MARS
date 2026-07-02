@@ -1,0 +1,72 @@
+{
+  "schema": "fp-0002-data-ownership-map",
+  "version": "1.0.0",
+  "task": "V9-06A",
+  "generated": "2026-07-03",
+  "owners": [
+    {
+      "owner": "WORDPRESS_PAGE",
+      "data_families": ["home_hub", "services_hub", "institutional_tree", "contacts", "reviews_archive", "legal_documents", "posts_page_record"]
+    },
+    {
+      "owner": "WORDPRESS_SERVICE",
+      "data_families": ["service_titles", "service_hierarchy", "service_section_content", "service_hero", "service_cards_source"]
+    },
+    {
+      "owner": "WORDPRESS_POST",
+      "data_families": ["blog_articles", "article_excerpt", "article_featured_image", "article_body"]
+    },
+    {
+      "owner": "WORDPRESS_TERM",
+      "data_families": ["blog_categories_deferred"]
+    },
+    {
+      "owner": "WORDPRESS_OPTION",
+      "data_families": ["site_contacts", "social_links", "modal_defaults", "reading_settings"]
+    },
+    {
+      "owner": "WORDPRESS_MENU",
+      "data_families": ["primary_navigation", "footer_services_links", "footer_o_centre_links", "legal_links", "menu_labels"]
+    },
+    {
+      "owner": "THEME_CODE",
+      "data_families": ["header_markup", "footer_markup", "modal_shell", "scroll_to_top", "section_chrome", "breadcrumbs_ui", "template_part_structure", "asset_bundle"]
+    },
+    {
+      "owner": "PROJECT_PLUGIN",
+      "data_families": ["service_cpt_registration", "bounded_list_meta", "form_handler", "migrations", "capabilities", "acf_json_paths"]
+    },
+    {
+      "owner": "ENVIRONMENT_SECRET",
+      "data_families": ["form_delivery_endpoint", "production_analytics_keys", "smtp_credentials"]
+    },
+    {
+      "owner": "WPILOT",
+      "data_families": ["inspection_snapshots", "mutation_audit", "backup_artifacts"]
+    },
+    {
+      "owner": "MARS_LOCAL_RUNTIME",
+      "data_families": ["local_environment_marker", "email_suppression", "non_local_url_guard"]
+    },
+    {
+      "owner": "DERIVED_QUERY",
+      "data_families": ["home_service_accordion", "home_blog_teaser", "related_services", "related_articles", "toc_h2", "breadcrumb_trail", "service_card_render"]
+    }
+  ],
+  "resolution_table": [
+    {"item": "header_navigation", "owner": "WORDPRESS_MENU", "rendered_by": "THEME_CODE"},
+    {"item": "footer_navigation", "owner": "WORDPRESS_MENU", "rendered_by": "THEME_CODE"},
+    {"item": "phone_display", "owner": "WORDPRESS_OPTION", "override": "per-cta_attr"},
+    {"item": "service_title", "owner": "WORDPRESS_SERVICE"},
+    {"item": "service_card", "owner": "DERIVED_QUERY"},
+    {"item": "faq_items", "owner": "PROJECT_PLUGIN", "storage": "bounded_meta"},
+    {"item": "related_services", "owner": "DERIVED_QUERY", "source": "WORDPRESS_SERVICE"},
+    {"item": "blog_card", "owner": "DERIVED_QUERY", "source": "WORDPRESS_POST"},
+    {"item": "legal_text", "owner": "WORDPRESS_PAGE", "field": "post_content"},
+    {"item": "modal_labels", "owner": "WORDPRESS_OPTION"},
+    {"item": "form_endpoint", "owner": "ENVIRONMENT_SECRET"},
+    {"item": "form_submissions", "owner": "PROJECT_PLUGIN", "status": "DEFERRED"},
+    {"item": "breadcrumbs", "owner": "DERIVED_QUERY"},
+    {"item": "seo_title_description", "owner": "DERIVED_QUERY", "plugin_optional": true}
+  ]
+}

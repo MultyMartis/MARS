@@ -2,8 +2,8 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** CREATED (FW-07C-2C)  
-**Classification:** FOUNDATION BASELINE — NO V9 IMPLEMENTATION
+**Status:** ARCHITECTURE DESIGNED (V9-06A)  
+**Classification:** FOUNDATION BASELINE — ARCHITECTURE DESIGN COMPLETE — NO V9 IMPLEMENTATION
 
 ---
 
@@ -22,12 +22,28 @@ Git-tracked canonical source for WordPress theme, project plugin, and ACF JSON d
 
 The runtime is **not** the canonical editable source. Delivery flows: Git source → manifested package → bounded runtime apply.
 
+## V9-06A architecture (2026-07-03)
+
+| Surface | Status |
+|---------|--------|
+| V9-06A | ARCHITECTURE DESIGN COMPLETE |
+| WordPress entity model | DESIGNED |
+| Template system | DESIGNED |
+| Admin UX | DESIGNED |
+| ACF decision | MIXED (Free + BoundedMeta; Pro optional) |
+| Runtime changes | 0 |
+| WordPress implementation | NOT STARTED |
+| FW-07C-2D | SUPERSEDED BY ARCHITECTURE-FIRST SEQUENCE (V9-06D) |
+
+Authority: [architecture/FP-0002-WORDPRESS-ARCHITECTURE-v1.md](architecture/FP-0002-WORDPRESS-ARCHITECTURE-v1.md)
+
 ## Structure
 
 ```text
 WORDPRESS/
   README.md
   SOURCE-AUTHORITY.md
+  architecture/       # V9-06A design pack
   manifests/          # source and package manifests
   packages/           # built ZIP packages
   theme/shpigovsky/   # adopted foundation theme
