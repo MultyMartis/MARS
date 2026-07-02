@@ -41,6 +41,10 @@ MLI is an **execution environment**. It is **not** the MARS brain, governance so
 
 **Post-incident reconciliation (2026-06-24):** MLI-03R.1–R.3 document MySQL 8.4 migration, wrong-datadir incident, Laragon `my.ini` authority, and cold-start persistence. **Do not** delete the historical `mysql-8.4` directory. **Do not** assume full Windows reboot validation is complete until operator retest per [MARS-LOCALHOST-POST-REBOOT-VERIFICATION-PROCEDURE-v1.md](reports/MARS-LOCALHOST-POST-REBOOT-VERIFICATION-PROCEDURE-v1.md).
 
+**X-drive runtime remediation (2026-06-30):** After X5 migration, MySQL datadir / vhosts / `www` junctions were missing on `X:\MARS-Localhost\`. Controlled recovery **COMPLETE** — receipt [reports/MARS-LOCALHOST-MLI-X-REMEDIATION-20260630-v1.md](reports/MARS-LOCALHOST-MLI-X-REMEDIATION-20260630-v1.md).
+
+**Hosts + Windows reboot persistence (2026-07-02):** Three `.test` hosts entries registered (`fws-0001.test`, `shpigovsky.test`, `mli-smoke-001.test`); normal browser DNS and HTTP **VERIFIED**; full Windows reboot and second Laragon cycle **VERIFIED** — receipt [reports/MARS-LOCALHOST-MLI-HOSTS-REBOOT-PERSISTENCE-20260702-v1.md](reports/MARS-LOCALHOST-MLI-HOSTS-REBOOT-PERSISTENCE-20260702-v1.md). **FW-07C-1 revalidation** and **canonical secrets layout** remain separate follow-up tasks. SSL **deferred**.
+
 **AG-WP-001 / WPilot bridge:** **not claimed** as live runtime in this index. Forge WordPress consumer validation references synthetic FWS-0001 only.
 
 ---
@@ -64,9 +68,9 @@ MLI is an **execution environment**. It is **not** the MARS brain, governance so
 | Capability | State |
 |------------|-------|
 | **Shared toolchain** | **HARDENED** — [registries/MARS-LOCALHOST-TOOL-REGISTRY-v1.md](registries/MARS-LOCALHOST-TOOL-REGISTRY-v1.md) |
-| **Smoke site** | `http://mli-smoke-001.test/` — **PASS** |
-| **WordPress synthetic (FWS-0001)** | `http://fws-0001.test/` — MLI-WP-SYN-001 **CURRENT SESSION RESTORED** (MLI-03R.3); FW-05R synthetic validation complete |
-| **WordPress project FP-0002** | `http://shpigovsky.test/` — MLI-WP-FP0002-LOCAL **READY — CURRENT SESSION RESTORED** (MLI-03R.3) |
+| **Smoke site** | `http://mli-smoke-001.test/` — **PASS** (browser `.test` DNS verified 2026-07-02) |
+| **WordPress synthetic (FWS-0001)** | `http://fws-0001.test/` — **OPERATIONAL** (browser `.test` DNS verified 2026-07-02); FW-05R synthetic validation complete; **FW-07C-1 revalidation pending** |
+| **WordPress project FP-0002** | `http://shpigovsky.test/` — **AVAILABLE_READ_ONLY** (browser `.test` DNS verified 2026-07-02) |
 | **Runtime operational (WordPress)** | **YES** — synthetic + project profiles with documented limitations |
 | **Runtime operational (OpenCart)** | **NO** — until MLI-04 |
 
@@ -112,8 +116,9 @@ Forward commits (FP-0002 WordPress foundation): `11e9155`, `f003fe8`, `a5a7de0`,
 | MLI-03 WordPress profile matrix | **PASS** — [reports/MARS-LOCALHOST-MLI-03-WORDPRESS-PROFILE-VALIDATION-MATRIX-v1.md](reports/MARS-LOCALHOST-MLI-03-WORDPRESS-PROFILE-VALIDATION-MATRIX-v1.md) |
 | FW-05R live synthetic validation | **COMPLETE** (2026-06-23) |
 | FWS-0001 synthetic (MLI-WP-SYN-001) | **VALIDATED** — manifest [manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md](manifests/MLI-WP-SYN-001-RUNTIME-MANIFEST-v1.md) |
-| Laragon cold-start persistence | **PROVEN** (MLI-03R.3) |
-| **Full Windows reboot** | **PENDING OPERATOR RETEST** — separate validation gate; **not proven** in this index |
+| Laragon cold-start persistence | **PROVEN** (MLI-03R.3) · **reconfirmed stop/start 2026-06-30** · **second cycle post-reboot 2026-07-02** |
+| **Full Windows reboot** | **VERIFIED** (2026-07-02) — [reports/MARS-LOCALHOST-MLI-HOSTS-REBOOT-PERSISTENCE-20260702-v1.md](reports/MARS-LOCALHOST-MLI-HOSTS-REBOOT-PERSISTENCE-20260702-v1.md) |
+| **Browser `.test` DNS (hosts)** | **VERIFIED** (2026-07-02) — three `127.0.0.1` entries; normal browser resolution without custom `Host` header |
 
 ---
 
@@ -143,7 +148,9 @@ Forward commits (FP-0002 WordPress foundation): `11e9155`, `f003fe8`, `a5a7de0`,
 |------|--------|
 | MLI-04 OpenCart runtime profile | Planned — parallel to Forge FW-06 |
 | Physical drive-letter reconciliation (D:/E: → X:) | **COMPLETE** (X5, 2026-06-29) — historical paths unchanged in MLI-03R.* reports |
-| Full Windows reboot operator retest | **Pending** |
+| Full Windows reboot operator retest | **COMPLETE** (2026-07-02) |
+| Canonical secrets layout on `X:\AI MARS\local\mli\` | **Pending** — separate reconciliation task |
+| SSL for MLI `.test` sites | **Deferred** |
 | MLI-04 blocking Forge | **No** — FW-05R complete; MLI-04 parallel |
 
 **Next authorized action:** Parallel infrastructure lane **MLI-04 — OpenCart Runtime Profile** (not blocking FW-05R).
