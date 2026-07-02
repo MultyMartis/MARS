@@ -10,8 +10,8 @@
 |------|--------|
 | Cyrillic foundation data | **REPAIRED** |
 | Temporary local administrator | **CREATED** |
-| WPilot | **INSTALLED AND ACTIVE** |
-| WPilot local read-only | **VALIDATED** (8/8) |
+| WPilot | **INSTALLED AND ACTIVE** (`v0.3.0-rc5` after 2026-07-02 DEV reconciliation) |
+| WPilot local read-only | **VALIDATED** (8/8 post-reconciliation) |
 | WPilot writes | **DISABLED / NOT TESTED** |
 | MU-plugin | **KEEP AS IS** |
 | Operator wp-admin inspection | **PENDING** |
@@ -23,6 +23,7 @@
 |------------|---------|
 | `foundation-002-v9-pre-implementation` | Pre-implementation baseline (prior) |
 | `foundation-002a-pre-access-encoding-wpilot` | Pre-repair micro-checkpoint (this task) |
+| `wpilot-pre-dev-runtime-reconciliation-20260702T161228Z` | Pre-DEV-runtime-reconciliation WPilot snapshot |
 
 ## Runtime
 

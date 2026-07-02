@@ -1,0 +1,335 @@
+{
+  "generated_at_utc": "2026-07-02T16:10:38Z",
+  "task": "FP-0002-WPILOT-DEV-RUNTIME-RECONCILIATION",
+  "surfaces": {
+    "brain": {
+      "path": "X:\\AI MARS\\projects\\wpilot\\plugin\\metacode-wpilot",
+      "file_count": 27,
+      "directory_count": 1,
+      "aggregate_sha256": "321be01250ffd23f7c9ea0d1aa823d76f73f2896e0a26dcbcb997a865a410bb2"
+    },
+    "local": {
+      "path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\metacode-wpilot",
+      "file_count": 22,
+      "directory_count": 1,
+      "aggregate_sha256": "047392e7dcf2984ad55c67eae6176a885bdb7ca8b1b6bd5ab356357d9bb9e3f9"
+    },
+    "old_zip": {
+      "path": "X:\\AI MARS STORAGE\\wpilot\\deploy-packages\\metacode-wpilot-v0.3.0.zip",
+      "file_count": 22,
+      "directory_count": 2,
+      "aggregate_sha256": "047392e7dcf2984ad55c67eae6176a885bdb7ca8b1b6bd5ab356357d9bb9e3f9",
+      "package_sha256": "6309dd8157b93c3ba174101d35b45af47af0dc7d64236e939d5e913359c3771c"
+    },
+    "rc5_zip": {
+      "path": "X:\\AI MARS STORAGE\\wpilot\\deploy-packages\\metacode-wpilot-v0.3.0-rc5.zip",
+      "file_count": 27,
+      "directory_count": 3,
+      "aggregate_sha256": "321be01250ffd23f7c9ea0d1aa823d76f73f2896e0a26dcbcb997a865a410bb2",
+      "package_sha256": "43c71a561872a037f294a12d5194d0925e988392599f02c1eeb2d8b1c52e1577"
+    },
+    "dev_remote": {
+      "path": "https://dev.gktriumph.ru/wp-content/plugins/metacode-wpilot",
+      "file_count": 4,
+      "directory_count": 1,
+      "aggregate_sha256": "2e196bb3db23a0a437f7e672802e836946789d086c9bdb9468d73402a3231e0b"
+    }
+  },
+  "comparisons": {
+    "brain_equals_rc5_zip": true,
+    "local_equals_old_zip": true,
+    "brain_equals_local": false,
+    "dev_remote_brain_file_matches": 4,
+    "dev_remote_brain_file_total": 27,
+    "dev_remote_full_brain_coverage": false
+  },
+  "classification_counts": {
+    "IDENTICAL_TO_DEV": 4,
+    "SAFE_UNKNOWN": 23
+  },
+  "dev_fetch_probe": [
+    {
+      "relative_path": "languages/metacode-wpilot-ru_RU.mo",
+      "url": "https://dev.gktriumph.ru/wp-content/plugins/metacode-wpilot/languages/metacode-wpilot-ru_RU.mo",
+      "http_status": 200,
+      "size": 11890,
+      "sha256": "d4905259150397f41d26f3603ab3cd567d2657c4e0c6d23fcd0dbb130cabea25",
+      "accessible": true
+    },
+    {
+      "relative_path": "languages/metacode-wpilot-ru_RU.po",
+      "url": "https://dev.gktriumph.ru/wp-content/plugins/metacode-wpilot/languages/metacode-wpilot-ru_RU.po",
+      "http_status": 200,
+      "size": 17276,
+      "sha256": "f0fbd97f228d6e3c2b196cedffed1be72764dd41f2df9ae1be325824cc7b1590",
+      "accessible": true
+    },
+    {
+      "relative_path": "admin/class-wpilot-admin-ui-model.php",
+      "url": "https://dev.gktriumph.ru/wp-content/plugins/metacode-wpilot/admin/class-wpilot-admin-ui-model.php",
+      "http_status": 200,
+      "size": 0,
+      "sha256": "",
+      "accessible": false
+    },
+    {
+      "relative_path": "admin/class-wpilot-admin-page.php",
+      "url": "https://dev.gktriumph.ru/wp-content/plugins/metacode-wpilot/admin/class-wpilot-admin-page.php",
+      "http_status": 200,
+      "size": 0,
+      "sha256": "",
+      "accessible": false
+    },
+    {
+      "relative_path": "includes/class-wpilot-connection-tracker.php",
+      "url": "https://dev.gktriumph.ru/wp-content/plugins/metacode-wpilot/includes/class-wpilot-connection-tracker.php",
+      "http_status": 200,
+      "size": 0,
+      "sha256": "",
+      "accessible": false
+    },
+    {
+      "relative_path": "includes/class-wpilot-auth.php",
+      "url": "https://dev.gktriumph.ru/wp-content/plugins/metacode-wpilot/includes/class-wpilot-auth.php",
+      "http_status": 200,
+      "size": 0,
+      "sha256": "",
+      "accessible": false
+    },
+    {
+      "relative_path": "metacode-wpilot.php",
+      "url": "https://dev.gktriumph.ru/wp-content/plugins/metacode-wpilot/metacode-wpilot.php",
+      "http_status": 200,
+      "size": 0,
+      "sha256": "",
+      "accessible": false
+    }
+  ],
+  "file_matrix": [
+    {
+      "relative_file": "README.md",
+      "dev": true,
+      "brain": true,
+      "old_zip": true,
+      "shpigovsky": true,
+      "classification": "IDENTICAL_TO_DEV",
+      "dev_brain_match": true
+    },
+    {
+      "relative_file": "admin/class-wpilot-admin-page.php",
+      "dev": false,
+      "brain": true,
+      "old_zip": true,
+      "shpigovsky": true,
+      "classification": "SAFE_UNKNOWN"
+    },
+    {
+      "relative_file": "admin/class-wpilot-admin-ui-model.php",
+      "dev": false,
+      "brain": true,
+      "old_zip": false,
+      "shpigovsky": false,
+      "classification": "SAFE_UNKNOWN"
+    },
+    {
+      "relative_file": "includes/class-wpilot-audit-service.php",
+      "dev": false,
+      "brain": true,
+      "old_zip": true,
+      "shpigovsky": true,
+      "classification": "SAFE_UNKNOWN"
+    },
+    {
+      "relative_file": "includes/class-wpilot-auth.php",
+      "dev": false,
+      "brain": true,
+      "old_zip": true,
+      "shpigovsky": true,
+      "classification": "SAFE_UNKNOWN"
+    },
+    {
+      "relative_file": "includes/class-wpilot-backup-service.php",
+      "dev": false,
+      "brain": true,
+      "old_zip": true,
+      "shpigovsky": true,
+      "classification": "SAFE_UNKNOWN"
+    },
+    {
+      "relative_file": "includes/class-wpilot-checksum.php",
+      "dev": false,
+      "brain": true,
+      "old_zip": true,
+      "shpigovsky": true,
+      "classification": "SAFE_UNKNOWN"
+    },
+    {
+      "relative_file": "includes/class-wpilot-connection-tracker.php",
+      "dev": false,
+      "brain": true,
+      "old_zip": false,
+      "shpigovsky": false,
+      "classification": "SAFE_UNKNOWN"
+    },
+    {
+      "relative_file": "includes/class-wpilot-constants.php",
+      "dev": false,
+      "brain": true,
+      "old_zip": true,
+      "shpigovsky": true,
+      "classification": "SAFE_UNKNOWN"
+    },
+    {
+      "relative_file": "includes/class-wpilot-dry-run.php",
+      "dev": false,
+      "brain": true,
+      "old_zip": true,
+      "shpigovsky": true,
+      "classification": "SAFE_UNKNOWN"
+    },
+    {
+      "relative_file": "includes/class-wpilot-environment.php",
+      "dev": false,
+      "brain": true,
+      "old_zip": true,
+      "shpigovsky": true,
+      "classification": "SAFE_UNKNOWN"
+    },
+    {
+      "relative_file": "includes/class-wpilot-errors.php",
+      "dev": false,
+      "brain": true,
+      "old_zip": true,
+      "shpigovsky": true,
+      "classification": "SAFE_UNKNOWN"
+    },
+    {
+      "relative_file": "includes/class-wpilot-operation-id.php",
+      "dev": false,
+      "brain": true,
+      "old_zip": true,
+      "shpigovsky": true,
+      "classification": "SAFE_UNKNOWN"
+    },
+    {
+      "relative_file": "includes/class-wpilot-plugin.php",
+      "dev": false,
+      "brain": true,
+      "old_zip": true,
+      "shpigovsky": true,
+      "classification": "SAFE_UNKNOWN"
+    },
+    {
+      "relative_file": "includes/class-wpilot-request-context.php",
+      "dev": false,
+      "brain": true,
+      "old_zip": true,
+      "shpigovsky": true,
+      "classification": "SAFE_UNKNOWN"
+    },
+    {
+      "relative_file": "includes/class-wpilot-response.php",
+      "dev": false,
+      "brain": true,
+      "old_zip": true,
+      "shpigovsky": true,
+      "classification": "SAFE_UNKNOWN"
+    },
+    {
+      "relative_file": "includes/class-wpilot-rest-controller.php",
+      "dev": false,
+      "brain": true,
+      "old_zip": true,
+      "shpigovsky": true,
+      "classification": "SAFE_UNKNOWN"
+    },
+    {
+      "relative_file": "includes/class-wpilot-rollback-service.php",
+      "dev": false,
+      "brain": true,
+      "old_zip": true,
+      "shpigovsky": true,
+      "classification": "SAFE_UNKNOWN"
+    },
+    {
+      "relative_file": "includes/class-wpilot-schema.php",
+      "dev": false,
+      "brain": true,
+      "old_zip": true,
+      "shpigovsky": true,
+      "classification": "SAFE_UNKNOWN"
+    },
+    {
+      "relative_file": "includes/class-wpilot-scoped-replace-service.php",
+      "dev": false,
+      "brain": true,
+      "old_zip": true,
+      "shpigovsky": true,
+      "classification": "SAFE_UNKNOWN"
+    },
+    {
+      "relative_file": "includes/class-wpilot-settings.php",
+      "dev": false,
+      "brain": true,
+      "old_zip": true,
+      "shpigovsky": true,
+      "classification": "SAFE_UNKNOWN"
+    },
+    {
+      "relative_file": "includes/class-wpilot-site-reader.php",
+      "dev": false,
+      "brain": true,
+      "old_zip": true,
+      "shpigovsky": true,
+      "classification": "SAFE_UNKNOWN"
+    },
+    {
+      "relative_file": "includes/class-wpilot-wpbakery-detector.php",
+      "dev": false,
+      "brain": true,
+      "old_zip": true,
+      "shpigovsky": true,
+      "classification": "SAFE_UNKNOWN"
+    },
+    {
+      "relative_file": "languages/metacode-wpilot-ru_RU.mo",
+      "dev": true,
+      "brain": true,
+      "old_zip": false,
+      "shpigovsky": false,
+      "classification": "IDENTICAL_TO_DEV",
+      "dev_brain_match": true
+    },
+    {
+      "relative_file": "languages/metacode-wpilot-ru_RU.po",
+      "dev": true,
+      "brain": true,
+      "old_zip": false,
+      "shpigovsky": false,
+      "classification": "IDENTICAL_TO_DEV",
+      "dev_brain_match": true
+    },
+    {
+      "relative_file": "languages/metacode-wpilot.pot",
+      "dev": true,
+      "brain": true,
+      "old_zip": false,
+      "shpigovsky": false,
+      "classification": "IDENTICAL_TO_DEV",
+      "dev_brain_match": true
+    },
+    {
+      "relative_file": "metacode-wpilot.php",
+      "dev": false,
+      "brain": true,
+      "old_zip": true,
+      "shpigovsky": true,
+      "classification": "SAFE_UNKNOWN"
+    }
+  ],
+  "version_identity": {
+    "advertised_version_all_surfaces": "0.3.0",
+    "materially_different_builds": true,
+    "collision": "VERSION_IDENTITY_COLLISION"
+  }
+}

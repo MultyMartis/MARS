@@ -1,0 +1,21 @@
+{
+  "manifest_id": "metacode-wpilot-v0.3.0-rc5-deploy",
+  "generated_at_utc": "2026-07-02T16:13:00Z",
+  "source_authority": "X:\\AI MARS\\projects\\wpilot\\plugin\\metacode-wpilot\\",
+  "source_commit": "648632acbdd42703427fd76a0cb1fd8d88641dcc",
+  "source_tag": "v0.3.0-RC5",
+  "reference_deployment": "https://dev.gktriumph.ru/",
+  "remote_dev_aggregate_hash_partial": "2e196bb3db23a0a437f7e672802e836946789d086c9bdb9468d73402a3231e0b",
+  "remote_dev_fingerprint_note": "Full PHP byte inventory not available via REST; languages assets hash-verified against Brain/RC5; UX-01/UX-02 file presence confirmed via HTTP 200 on DEV",
+  "package_path": "X:\\AI MARS STORAGE\\wpilot\\deploy-packages\\metacode-wpilot-v0.3.0-rc5.zip",
+  "package_sha256": "43c71a561872a037f294a12d5194d0925e988392599f02c1eeb2d8b1c52e1577",
+  "package_file_count": 27,
+  "plugin_version_header": "0.3.0",
+  "build_identity": "v0.3.0-rc5",
+  "schema_version": "0.2.0",
+  "brain_package_equivalence": "EXACT — aggregate_sha256 321be01250ffd23f7c9ea0d1aa823d76f73f2896e0a26dcbcb997a865a410bb2",
+  "excluded_files": ["reports", "docs", "tokens", "evidence", "temp", "backups", ".git"],
+  "secret_audit": "no_secrets_detected",
+  "stale_package_incident": "metacode-wpilot-v0.3.0.zip (22 files, pre-UX-01) was incorrectly used for FP-0002 local install",
+  "local_package_checkpoint": "X:\\MARS-Localhost\\storage\\packages\\wpilot\\metacode-wpilot-v0.3.0-rc5.zip"
+}

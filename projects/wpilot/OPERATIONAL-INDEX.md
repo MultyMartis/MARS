@@ -17,7 +17,7 @@
 | **Release candidate** | `v0.3.0-RC5` |
 | **Plugin version** | `0.3.0` (schema `0.2.0`) |
 | **Runtime maturity** | `proven_content_writes` + `proven_connection_runtime` |
-| **Environment** | DEV only — `https://dev.gktriumph.ru` + local FP-0002 `http://shpigovsky.test/` (read-only bridge) |
+| **Environment** | DEV only — `https://dev.gktriumph.ru` + local FP-0002 `http://shpigovsky.test/` (read-only bridge, **v0.3.0-rc5** reconciled 2026-07-02) |
 | **Token storage** | `X:\AI MARS\local\tokens\wpilot-dev-gktriumph.token` · `wpilot-local-shpigovsky.token` |
 | **Notes** | No token value in repo. Sprint 3 **HOLD**. Next phase: explicit HITL charter only. |
 
@@ -52,6 +52,7 @@
 | 10 | **Plugin MVP roadmap** | [metacode-wpilot-plugin-mvp-roadmap.md](metacode-wpilot-plugin-mvp-roadmap.md) |
 | 11 | **Local token policy** | [local-storage-policy.md](local-storage-policy.md) |
 | 12 | **Ecosystem sync (RC5)** | [ecosystem-sync/WPILOT-ECOSYSTEM-SYNC-RC5-2026-06-19.md](ecosystem-sync/WPILOT-ECOSYSTEM-SYNC-RC5-2026-06-19.md) |
+| 13 | **FP-0002 DEV-runtime reconciliation** | [reports/wpilot-fp0002-dev-runtime-reconciliation-2026-07-02.md](reports/wpilot-fp0002-dev-runtime-reconciliation-2026-07-02.md) |
 
 ---
 

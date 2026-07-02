@@ -1,25 +1,41 @@
 ﻿# FP-0002 — WPilot Local Installation v1
 
-**Version:** v1.1 | **Date:** 2026-07-02 | **Stage:** FP-0002 local access task
+**Version:** v1.2 | **Date:** 2026-07-02 | **Stage:** FP-0002 DEV-runtime reconciliation
 
 ## Result
 
 ```text
 WPilot installation:
-INSTALLED AND ACTIVE
+INSTALLED AND ACTIVE (v0.3.0-rc5)
 
 WPilot local read-only:
-VALIDATED (8/8)
+VALIDATED (8/8) post-reconciliation
 
 WPilot writes:
 DISABLED / NOT TESTED
 
 Package:
-metacode-wpilot-v0.3.0.zip (deploy-packages, checkpoint 8c67478)
+metacode-wpilot-v0.3.0-rc5.zip (deploy-packages + local package cache)
 
 Runtime:
 http://shpigovsky.test/
 ```
+
+## Reconciliation (2026-07-02)
+
+Local Shpigovsky previously ran stale `metacode-wpilot-v0.3.0.zip` (22 files, pre-UX-01). Operator confirmed DEV `https://dev.gktriumph.ru/` is the visual/functional authority. Controlled replacement aligned local plugin files with **RC5** package identical to Brain source and DEV fingerprint.
+
+| Check | Result |
+|-------|--------|
+| Stale package incident | `metacode-wpilot-v0.3.0.zip` — **superseded, preserved** |
+| Canonical package | `metacode-wpilot-v0.3.0-rc5.zip` — SHA-256 `43c71a561872a037f294a12d5194d0925e988392599f02c1eeb2d8b1c52e1577` |
+| Brain ↔ RC5 equivalence | **EXACT** |
+| Pre-replace checkpoint | `wpilot-pre-dev-runtime-reconciliation-20260702T161228Z` |
+| Post-replace file count | 27 |
+| Read-only REST | 8/8 PASS |
+| Version collision | Header `0.3.0` on distinct builds — use build id `v0.3.0-rc5` |
+
+Evidence: [wpilot-fp0002-dev-runtime-reconciliation-2026-07-02.md](../../../../wpilot/reports/wpilot-fp0002-dev-runtime-reconciliation-2026-07-02.md)
 
 ## Local bridge state
 
@@ -31,18 +47,14 @@ http://shpigovsky.test/
 | `emergency_disabled` | `false` |
 | Token storage | `X:\AI MARS\local\tokens\wpilot-local-shpigovsky.token` (gitignored) |
 
-## Evidence
+## Evidence (initial install)
 
 | Check | Result |
 |-------|--------|
 | Pre-repair checkpoint | `foundation-002a-pre-access-encoding-wpilot` |
-| Package hash | `6309DD8157B93C3BA174101D35B45AF47AF0DC7D64236E939D5E913359C3771C` |
-| Local package cache | `X:\MARS-Localhost\storage\packages\wpilot\metacode-wpilot-v0.3.0.zip` |
-| Plugin slug / version | `metacode-wpilot` / `0.3.0` |
-| Read-only REST | 8/8 PASS (`wpilot/v1`) |
+| Initial (stale) package | `metacode-wpilot-v0.3.0.zip` — replaced 2026-07-02 |
+| Plugin slug / version header | `metacode-wpilot` / `0.3.0` |
 | MU-plugin | `mars-local-runtime.php` — **KEEP AS IS** |
-| Cyrillic foundation data | **REPAIRED** |
-| Temporary local admin | **CREATED** (local only; credentials not in Git) |
 
 ## Boundaries (unchanged)
 
@@ -51,22 +63,8 @@ http://shpigovsky.test/
 - No Shpigovsky Forge admission
 - No FW-07C-2
 - WordPress implementation: **NOT STARTED**
-
-## Operator checkpoint
-
-```text
-LOCAL ACCESS AND WPILOT SETUP COMPLETE.
-
-Open:
-http://shpigovsky.test/wp-admin/
-
-Use the temporary local administrator credentials
-approved by the operator for this local environment.
-
-After manual inspection, report:
-WP-ADMIN INSPECTION COMPLETE
-```
+- **Shpigovsky Core:** project foundation — no WPilot bridge duplication
 
 ---
 
-*FP-0002 WPilot local installation — operator-authorized 2026-07-02.*
+*FP-0002 WPilot local installation — reconciled with DEV 2026-07-02.*
