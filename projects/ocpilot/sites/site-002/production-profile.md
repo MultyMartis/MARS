@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-03 (Run 4.171-R1 — Production baseline issued)
+**Last updated:** 2026-07-03 (Run 4.172 — Production FTP path reconciliation)
 
 ---
 
@@ -116,6 +116,29 @@ X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\
 **Shared image directories:** reuse existing SITE-002 shared image storage when appropriate. Do not duplicate the image library unless a Production-specific image area is explicitly required.
 
 **Storage README:** `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\README.md`
+
+---
+
+## Production path model (Run 4.172)
+
+| Concept | Hosting / application path | FTP-visible path | Status |
+|---------|---------------------------|------------------|--------|
+| Application root | `/bzpm.ru/` | `/` (chrooted login root) | **CONFIRMED** |
+| Public document root | `/bzpm.ru/public_html/` | `/public_html/` | **CONFIRMED** |
+| OpenCart storage root | `/bzpm.ru/storage/` | `/storage/` | **CONFIRMED** |
+
+**Secrets field `Remote root`:** denotes **application root** (`/bzpm.ru/`), not the public web directory. Public deploy paths are relative to `public_html/` inside the application root.
+
+**FTP chroot:** the Production FTP account lands at `/` with first-level directories `public_html/` and `storage/`. This is equivalent to hosting application root `/bzpm.ru/`, not a separate site root.
+
+**Example deploy path (guarantee.twig):**
+
+```text
+Hosting: /bzpm.ru/public_html/catalog/view/theme/default/template/information/guarantee.twig
+FTP:     /public_html/catalog/view/theme/default/template/information/guarantee.twig
+```
+
+Do **not** describe `/public_html/` as the application root for the whole OpenCart installation.
 
 ---
 
@@ -235,7 +258,7 @@ Deploy-tool preparation is a **separate task**.
 | HTTP connection | **VERIFIED** (Run 4.171) |
 | Admin read-only connection | **VERIFIED** (Run 4.171) |
 | FTP/SFTP connection | **VERIFIED** (Run 4.171-R1) |
-| Remote listing | **VERIFIED** — document root `/public_html/` |
+| Remote listing | **VERIFIED** — application root `/bzpm.ru/`; FTP chroot `/` → `public_html/` + `storage/` |
 | Production baseline | **ISSUED** — `SITE-002-STABLE-PROD-INITIAL-01` (2026-07-02) |
 | Deploy profile | **REGISTERED, NOT VERIFIED** |
 | Rollback profile | **REGISTERED, NOT VERIFIED** |

@@ -2,7 +2,7 @@
 
 **Site ID:** SITE-002  
 **Status:** **PRODUCTION BASELINE ISSUED — READY FOR FIRST CONTROLLED TEST**
-**Run:** 4.171-R1 — SITE-002 Production FTP retry (2026-07-03)
+**Run:** 4.172 — SITE-002 Production FTP Path Reconciliation (2026-07-03)
 
 **Do not record:** passwords, tokens, credentials, secret URLs, or live `config.php` values.
 
@@ -63,7 +63,7 @@ Production profile: [production-profile.md](production-profile.md)
 
 | Access type | TEST | Production | Credential location |
 |-------------|------|------------|---------------------|
-| FTP / SFTP | Populated in secrets | **VERIFIED** (read-only, document root `/public_html/`) | External secrets file — `TEST` / `PRODUCTION` sections |
+| FTP / SFTP | Populated in secrets | **VERIFIED** (read-only; application root `/bzpm.ru/`; FTP-visible public root `/public_html/`) | External secrets file — `TEST` / `PRODUCTION` sections |
 | Hosting panel | Partial in secrets | **PENDING** | External secrets file |
 | SSH | Populated in secrets (TEST) | **PENDING** | External secrets file |
 | OpenCart admin | Populated in secrets (TEST) | **PENDING** | External secrets file |
@@ -71,6 +71,19 @@ Production profile: [production-profile.md](production-profile.md)
 | DNS / Domain | SAFE UNKNOWN | **PENDING** | External secrets file |
 
 Full inventory details remain in the external secrets file only. This brief contains **no secret values**.
+
+---
+
+## Production path model
+
+| Concept | Hosting path | FTP-visible path |
+|---------|--------------|------------------|
+| Application root | `/bzpm.ru/` | `/` (chrooted login) |
+| Public document root | `/bzpm.ru/public_html/` | `/public_html/` |
+| OpenCart storage root | `/bzpm.ru/storage/` | `/storage/` |
+
+**Secrets `Remote root` in `PRODUCTION`:** application root / hosting-level root (`/bzpm.ru/`).
+**Public deploy root:** `public_html/` inside application root. Relative deploy paths omit the application prefix when using FTP.
 
 ---
 
@@ -114,7 +127,7 @@ Checklist — operator sets before any supervised Production access run:
 
 | Field | TEST | Production |
 |-------|------|------------|
-| File backup status | Operator attestation (Beget) — TEST-era | **PENDING** — FTP blocked at Run 4.171 |
+| File backup status | Operator attestation (Beget) — TEST-era | **BASELINE CAPTURED** — Run 4.171-R1 |
 | Database backup status | SAFE UNKNOWN | **NOT AUTHORIZED BY DEFAULT** |
 | Backup location | External storage / hosting — TEST-era | `production\backups\` (future) |
 | Restore method | Beget full backup + file-level pass backups (TEST-era) | **PENDING** Production baseline |
@@ -186,7 +199,7 @@ Current Phase:
 
 Current State:
 
-**PRODUCTION PARTIAL CAPTURE** — Run 4.171 HTTP/admin read-only complete; FTP credential fix required before file baseline.
+**PRODUCTION BASELINE ISSUED** — Run 4.171-R1 file baseline complete; Run 4.172 path model reconciled.
 
 ---
 

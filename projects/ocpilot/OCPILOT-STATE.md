@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-03
-**Evidence cutoff:** 2026-07-03 (SITE-002 Run **4.171-R1** — Production baseline `SITE-002-STABLE-PROD-INITIAL-01` issued)
+**Evidence cutoff:** 2026-07-03 (SITE-002 Run **4.172** — Production FTP path model confirmed; baseline `SITE-002-STABLE-PROD-INITIAL-01` retained)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Production baseline ISSUED** — `SITE-002-STABLE-PROD-INITIAL-01` · ready for first controlled Production test · [SITE-002-FIRST-PRODUCTION-CAPTURE.md](sites/site-002/reports/SITE-002-FIRST-PRODUCTION-CAPTURE.md) |
+| Current SITE-002 focus | **Production path model CONFIRMED** — `SITE-002-STABLE-PROD-INITIAL-01` retained · ready for first controlled Production test · [SITE-002-PRODUCTION-FTP-PATH-RECONCILIATION.md](sites/site-002/reports/SITE-002-PRODUCTION-FTP-PATH-RECONCILIATION.md) |
 
 ---
 
@@ -31,7 +31,7 @@
 | Environment ID | `site-002-prod` |
 | Production Profile | [sites/site-002/production-profile.md](sites/site-002/production-profile.md) |
 | Production capture (Run 4.171 / 4.171-R1) | **COMPLETE** — [SITE-002-FIRST-PRODUCTION-CAPTURE.md](sites/site-002/reports/SITE-002-FIRST-PRODUCTION-CAPTURE.md) |
-| FTP/SFTP connection | **VERIFIED** (read-only) |
+| FTP/SFTP connection | **VERIFIED** (read-only) — application `/bzpm.ru/`; FTP chroot `/` → `/public_html/` + `/storage/` |
 | HTTP verification | **VERIFIED** (homepage + corp pages) |
 | OpenCart admin read-only | **VERIFIED** — version 3.0.3.9 |
 | Historical TEST | **preserved** — https://zpm.new-site.space/ |

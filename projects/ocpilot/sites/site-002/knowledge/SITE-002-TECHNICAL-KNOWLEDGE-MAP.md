@@ -24,13 +24,23 @@
 | HTTP verification | **PASS** — homepage + corporate routes |
 | Visual capture | **PASS** — 18/18 screenshots (Run 4.171) |
 | Admin read-only | **PASS** — OpenCart **3.0.3.9** |
-| FTP/SFTP | **PASS** (retry) — document root `/public_html/`; configured `/bzpm.ru/` empty |
+| FTP/SFTP | **PASS** (retry) — application root `/bzpm.ru/`; FTP chroot `/` → public `/public_html/` + `/storage/` |
 | File baseline | **24 files** + SHA-256 in capture `downloaded-baseline/` |
 | Active theme | `default` — **CONFIRMED** |
 | First test task | `guarantee.twig` — phrase «понятный порядок действий» **CONFIRMED** |
 | PDP category classes | **MATCH CONFIRMED** in `catalog/controller/product/product.php` |
 | Baseline | **ISSUED** — `SITE-002-STABLE-PROD-INITIAL-01` |
 | Storage | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\captures\SITE-002-PROD-INITIAL-CAPTURE-01\` |
+
+### Production path model (Run 4.172)
+
+| Concept | Hosting path | FTP-visible path |
+|---------|--------------|------------------|
+| Application root | `/bzpm.ru/` | `/` (chrooted login) |
+| Public document root | `/bzpm.ru/public_html/` | `/public_html/` |
+| OpenCart storage root | `/bzpm.ru/storage/` | `/storage/` |
+
+Secrets `Remote root` = application root. Deploy paths for theme files are under `public_html/` (FTP) or `/bzpm.ru/public_html/` (hosting).
 
 ---
 

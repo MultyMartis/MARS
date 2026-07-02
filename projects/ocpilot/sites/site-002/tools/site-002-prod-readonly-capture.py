@@ -209,6 +209,72 @@ def normalize_remote_root(root: str) -> str:
     return root
 
 
+def join_remote(*parts: str) -> str:
+    path = "/".join(p.strip("/") for p in parts if p and p.strip("/"))
+    return "/" + path + ("/" if parts and not parts[-1].endswith(".") else "")
+
+
+def resolve_production_paths(
+    ftp: ftplib.FTP, configured_application_root: str
+) -> dict[str, Any]:
+    """Map hosting application paths to FTP-visible paths (chroot-aware)."""
+    pwd = ftp.pwd() or "/"
+    ftp_login_root = normalize_remote_root(pwd if pwd.startswith("/") else "/" + pwd)
+    application_root_hosting = normalize_remote_root(configured_application_root)
+
+    login_entries = list_dir(ftp, ftp_login_root.rstrip("/") or "/")
+    login_dirs = {name for name, kind in login_entries if kind == "dir"}
+
+    public_candidates = [
+        join_remote(ftp_login_root, "public_html"),
+        join_remote(application_root_hosting, "public_html"),
+        "/public_html/",
+    ]
+    storage_candidates = [
+        join_remote(ftp_login_root, "storage"),
+        join_remote(application_root_hosting, "storage"),
+        "/storage/",
+    ]
+
+    def pick_public_root() -> str:
+        for candidate in public_candidates:
+            try:
+                names = {name for name, _ in list_dir(ftp, candidate.rstrip("/"))}
+                if "index.php" in names and "catalog" in names:
+                    return normalize_remote_root(candidate)
+            except ftplib.error_perm:
+                continue
+        return normalize_remote_root("/public_html/")
+
+    def pick_storage_root() -> str | None:
+        for candidate in storage_candidates:
+            try:
+                names = {name for name, _ in list_dir(ftp, candidate.rstrip("/"))}
+                if {"cache", "logs", "session"} & names:
+                    return normalize_remote_root(candidate)
+            except ftplib.error_perm:
+                continue
+        return normalize_remote_root("/storage/") if "storage" in login_dirs else None
+
+    ftp_public_root = pick_public_root()
+    ftp_storage_root = pick_storage_root()
+    chrooted = "public_html" in login_dirs and ftp_public_root == join_remote(ftp_login_root, "public_html")
+
+    public_document_root_hosting = join_remote(application_root_hosting, "public_html")
+    storage_root_hosting = join_remote(application_root_hosting, "storage")
+
+    return {
+        "ftp_login_root": ftp_login_root,
+        "application_root_hosting": application_root_hosting,
+        "public_document_root_hosting": public_document_root_hosting,
+        "opencart_storage_root_hosting": storage_root_hosting,
+        "ftp_visible_public_root": ftp_public_root,
+        "ftp_visible_storage_root": ftp_storage_root,
+        "ftp_chrooted_to_application_root": chrooted,
+        "login_level1_directories": sorted(login_dirs),
+    }
+
+
 def list_dir(ftp: ftplib.FTP, path: str) -> list[tuple[str, str]]:
     """Return list of (name, type) where type is file|dir."""
     entries: list[tuple[str, str]] = []
@@ -556,21 +622,28 @@ def main() -> int:
         log_path.write_text("\n".join(log_lines), encoding="utf-8")
         return 1
 
-    remote_root = normalize_remote_root(fields["remote_root"])
+    application_root = normalize_remote_root(fields["remote_root"])
     protocol = fields.get("protocol", "FTP").upper()
 
     log(f"Connecting {protocol} (read-only)…")
     auth_pass = False
     listing_pass = False
-    detected_root = remote_root
+    path_model: dict[str, Any] = {}
+    ftp_public_root = application_root
     ftp: ftplib.FTP | None = None
     try:
         ftp = ftp_connect(fields)
         auth_pass = True
         pwd = ftp.pwd()
-        detected_root = normalize_remote_root(pwd if pwd.startswith("/") else remote_root)
+        path_model = resolve_production_paths(ftp, application_root)
+        ftp_public_root = path_model["ftp_visible_public_root"]
         listing_pass = True
         log(f"Authenticated. PWD={pwd}")
+        log(
+            "Path model: application="
+            f"{path_model['application_root_hosting']} "
+            f"public={path_model['ftp_visible_public_root']}"
+        )
     except Exception as exc:
         log(f"Connection failed: {type(exc).__name__}")
 
@@ -582,9 +655,9 @@ def main() -> int:
         "protocol": protocol,
         "authentication": "PASS" if auth_pass else "FAIL",
         "initial_listing": "PASS" if listing_pass else "FAIL",
-        "configured_remote_root": remote_root,
-        "detected_remote_root": detected_root,
-        "root_match": normalize_remote_root(detected_root) == remote_root or auth_pass,
+        "configured_application_root": application_root,
+        "path_model": path_model,
+        "ftp_visible_public_root": path_model.get("ftp_visible_public_root"),
         "remote_write_operations": 0,
         "timestamp": utc_now(),
     }
@@ -600,12 +673,12 @@ def main() -> int:
         return 0
 
     try:
-        ftp.cwd(remote_root.rstrip("/") or "/")
+        ftp.cwd(ftp_public_root.rstrip("/") or "/")
     except Exception:
         pass
 
     log("Building remote inventory…")
-    items = inventory_tree(ftp, remote_root)
+    items = inventory_tree(ftp, ftp_public_root)
     opencart = detect_opencart_roots(items)
     files_count = sum(1 for i in items if i["type"] == "file")
     dirs_count = sum(1 for i in items if i["type"] == "directory")
@@ -632,7 +705,9 @@ def main() -> int:
         "total_visible_files": files_count,
         "total_visible_directories": dirs_count,
         "inventory_exclusions": INVENTORY_EXCLUSIONS,
-        "document_root": remote_root,
+        "document_root": ftp_public_root,
+        "application_root_hosting": path_model.get("application_root_hosting", application_root),
+        "path_model": path_model,
         "theme_roots": sorted({p.split("/")[3] for p in {i["relative_path"] for i in items} if p.startswith("catalog/view/theme/")}),
         "active_theme_candidates": ["default"],
         "opencart_structural_indicators": opencart,
@@ -656,7 +731,7 @@ def main() -> int:
     baseline_root = CAPTURE_ROOT / "downloaded-baseline"
     for entry in planned["files"]:
         remote_rel = entry["remote"]
-        remote_full = (remote_root + remote_rel).replace("//", "/")
+        remote_full = (ftp_public_root + remote_rel).replace("//", "/")
         data = download_file(ftp, remote_full)
         if data is None:
             downloaded_meta.append(

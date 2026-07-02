@@ -29,7 +29,6 @@ _spec.loader.exec_module(cap)
 
 CAPTURE_ROOT = cap.CAPTURE_ROOT
 OPERATION_ID = cap.OPERATION_ID
-DETECTED_DOCUMENT_ROOT = "/public_html/"
 FIRST_ATTEMPT_ERROR = "530 Login incorrect (FTP port 21; SFTP port 22 also failed)"
 
 def targeted_inventory(ftp, document_root: str) -> list[dict]:
@@ -279,17 +278,21 @@ def main() -> int:
     log_lines: list[str] = [f"[{utc_now()}] === FTP RETRY AFTER CREDENTIAL CORRECTION ==="]
 
     fields = cap.parse_production_secrets(cap.SECRETS_PATH)
-    configured_root = cap.normalize_remote_root(fields["remote_root"])
-    document_root = cap.normalize_remote_root(DETECTED_DOCUMENT_ROOT)
-    root_match = document_root == configured_root
+    application_root = cap.normalize_remote_root(fields["remote_root"])
 
     log_lines.append(f"[{utc_now()}] Connecting FTP (read-only retry)…")
     try:
         ftp = cap.ftp_connect(fields)
         auth_pass = True
         pwd = ftp.pwd()
+        path_model = cap.resolve_production_paths(ftp, application_root)
+        ftp_public_root = path_model["ftp_visible_public_root"]
         listing_pass = True
         log_lines.append(f"[{utc_now()}] Retry authenticated. Login PWD={pwd}")
+        log_lines.append(
+            f"[{utc_now()}] Path model: application={path_model['application_root_hosting']} "
+            f"ftp_public={ftp_public_root}"
+        )
     except Exception as exc:
         log_lines.append(f"[{utc_now()}] Retry connection failed: {type(exc).__name__}: {exc}")
         append_log(log_lines)
@@ -301,9 +304,8 @@ def main() -> int:
             "protocol": "FTP",
             "authentication": "FAIL",
             "initial_listing": "FAIL",
-            "configured_remote_root": configured_root,
-            "detected_remote_root": "SAFE UNKNOWN",
-            "root_match": False,
+            "configured_application_root": application_root,
+            "path_model": {},
             "remote_write_operations": 0,
             "timestamp": utc_now(),
             "attempts": [
@@ -332,9 +334,9 @@ def main() -> int:
         "protocol": "FTP",
         "authentication": "PASS",
         "initial_listing": "PASS",
-        "configured_remote_root": configured_root,
-        "detected_remote_root": document_root,
-        "root_match": root_match,
+        "configured_application_root": application_root,
+        "path_model": path_model,
+        "ftp_visible_public_root": ftp_public_root,
         "remote_write_operations": 0,
         "timestamp": utc_now(),
         "attempts": [
@@ -349,20 +351,23 @@ def main() -> int:
                 "timestamp": utc_now(),
                 "authentication": "PASS",
                 "login_pwd": pwd,
-                "note": "Document root resolved by read-only listing to /public_html/ (configured /bzpm.ru/ empty)",
+                "note": (
+                    "FTP chroot maps login / to hosting application root; "
+                    f"public deploy root {ftp_public_root}"
+                ),
             },
         ],
     }
     cap.write_json(CAPTURE_ROOT / "connection-result.json", connection)
 
     try:
-        ftp.cwd(document_root.rstrip("/"))
+        ftp.cwd(ftp_public_root.rstrip("/"))
     except Exception:
         pass
 
-    log_lines.append(f"[{utc_now()}] Building remote inventory from {document_root}…")
-    items = targeted_inventory(ftp, document_root)
-    markers = verify_document_root_markers(ftp, document_root)
+    log_lines.append(f"[{utc_now()}] Building remote inventory from {ftp_public_root}…")
+    items = targeted_inventory(ftp, ftp_public_root)
+    markers = verify_document_root_markers(ftp, ftp_public_root)
     root_confirmed = all(markers.get(k) for k in ("index.php", "catalog", "system", "image"))
     opencart = {
         "opencart_indicators": {
@@ -402,9 +407,12 @@ def main() -> int:
         "total_visible_files": files_count,
         "total_visible_directories": dirs_count,
         "inventory_exclusions": cap.INVENTORY_EXCLUSIONS,
-        "document_root": document_root,
-        "configured_remote_root": configured_root,
-        "root_match": root_match,
+        "document_root": ftp_public_root,
+        "application_root_hosting": path_model["application_root_hosting"],
+        "opencart_storage_root_hosting": path_model["opencart_storage_root_hosting"],
+        "ftp_visible_storage_root": path_model.get("ftp_visible_storage_root"),
+        "configured_application_root": application_root,
+        "path_model": path_model,
         "theme_roots": sorted(
             {
                 p.split("/")[3]
@@ -428,7 +436,8 @@ def main() -> int:
     planned = {
         "operation_id": OPERATION_ID,
         "status": "COMPLETE",
-        "document_root": document_root,
+        "document_root": ftp_public_root,
+        "application_root_hosting": path_model["application_root_hosting"],
         "files": [
             {"remote": p, "reason": "baseline implementation surface"}
             for p in cap.BASELINE_REMOTE_FILES
@@ -443,7 +452,7 @@ def main() -> int:
     baseline_root = CAPTURE_ROOT / "downloaded-baseline"
     for entry in planned["files"]:
         remote_rel = entry["remote"]
-        remote_full = (document_root + remote_rel).replace("//", "/")
+        remote_full = (ftp_public_root + remote_rel).replace("//", "/")
         data = cap.download_file(ftp, remote_full)
         if data is None:
             downloaded_meta.append(
@@ -608,9 +617,10 @@ def main() -> int:
         "active_theme_identification": theme["confidence"],
         "production_test_parity": "FILE + HTTP evidence collected",
         "admin_inspection": "COMPLETED READ-ONLY",
-        "document_root": document_root,
-        "configured_remote_root": configured_root,
-        "root_match": root_match,
+        "document_root": ftp_public_root,
+        "application_root_hosting": path_model["application_root_hosting"],
+        "configured_application_root": application_root,
+        "path_model": path_model,
         "guarantee_twig": guarantee,
         "blockers": [] if all_pass else ["Baseline gate not fully satisfied"],
         "issued_at": utc_now() if all_pass else None,

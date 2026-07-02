@@ -17,7 +17,9 @@ First authorized read-only Production baseline for SITE-002. Establishes file-le
 | Area | Evidence |
 |------|----------|
 | FTP read-only access | **VERIFIED** (retry after credential correction) |
-| Document root | `/public_html/` (configured secrets path `/bzpm.ru/` empty — not updated automatically) |
+| Application root | `/bzpm.ru/` (secrets `Remote root`; FTP chroot maps to login `/`) |
+| Public document root | `/bzpm.ru/public_html/` — FTP-visible `/public_html/` |
+| OpenCart storage root | `/bzpm.ru/storage/` — FTP-visible `/storage/` |
 | Platform | OpenCart / ocStore **3.0.3.9** — CONFIRMED |
 | Active theme | `default` — CONFIRMED |
 | HTTP corporate pages | **PASS** (Run 4.171 initial capture) |
@@ -72,6 +74,8 @@ Matrix: capture `manifests/production-test-parity-matrix.json`
 |-------|-------|
 | Page | https://bzpm.ru/guarantee |
 | Template | `catalog/view/theme/default/template/information/guarantee.twig` |
+| Hosting path | `/bzpm.ru/public_html/catalog/view/theme/default/template/information/guarantee.twig` |
+| FTP path | `/public_html/catalog/view/theme/default/template/information/guarantee.twig` |
 | Phrase present | «понятный порядок действий» — **CONFIRMED** in downloaded twig |
 | Proposed test change | «понятный порядок действий» → «чёткий порядок действий» |
 | Classification | **TEST TASK CONFIRMED** |

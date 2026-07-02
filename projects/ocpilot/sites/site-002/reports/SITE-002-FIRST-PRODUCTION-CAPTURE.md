@@ -292,9 +292,11 @@ SITE-002-STABLE-PROD-INITIAL-01 ISSUED — READY FOR FIRST CONTROLLED PRODUCTION
 | FTP authentication | **FAIL** — `530 Login incorrect` | **PASS** |
 | Initial listing | **FAIL** | **PASS** |
 | Configured remote root | `/bzpm.ru/` | `/bzpm.ru/` (unchanged in secrets) |
-| Detected remote root | SAFE UNKNOWN | **`/public_html/`** |
+| Detected remote root | SAFE UNKNOWN | **`/public_html/`** *(Run 4.171-R1 — superseded by path reconciliation Run 4.172)* |
 | Root match | false | **false** — configured path empty; actual OpenCart root is `/public_html/` |
 | Remote write operations | 0 | **0** |
+
+**Path reconciliation (Run 4.172):** `/public_html/` is the **public document root**, not the application root. Application root remains `/bzpm.ru/`; FTP account is chrooted so login `/` ≡ hosting `/bzpm.ru/`. See [SITE-002-PRODUCTION-FTP-PATH-RECONCILIATION.md](SITE-002-PRODUCTION-FTP-PATH-RECONCILIATION.md).
 
 **Document root confirmation:** `/public_html/` contains `index.php`, `config.php`, `admin/`, `catalog/`, `system/`, `image/` (markers verified by read-only listing). `config.php` / `admin/config.php` not downloaded per policy.
 
@@ -312,7 +314,7 @@ SITE-002-STABLE-PROD-INITIAL-01 ISSUED — READY FOR FIRST CONTROLLED PRODUCTION
 
 **Remote mutation count:** 0 (read-only throughout).
 
-**Operator note:** Update `remote_root` in secrets `PRODUCTION` section to `/public_html/` when convenient — not changed automatically by this run.
+**Operator note:** `Remote root` in secrets remains `/bzpm.ru/` (application root). Do not replace with `/public_html/`. Path semantics reconciled in Run 4.172.
 
 ---
 
