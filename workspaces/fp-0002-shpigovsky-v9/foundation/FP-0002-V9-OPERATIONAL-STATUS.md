@@ -45,4 +45,13 @@ Phase **07C-B** Storage package — `SUPERSEDED_FAILED_STATIC_PACKAGING_NOT_FOR_
 
 ## Next phase
 
-**V9-04 — Forge WordPress Intake Pack** (not yet created)
+**V9-05 — Forge WordPress Implementation Environment Gate and Execution Plan**
+
+## V9-04 Forge Intake Pack (complete)
+
+- Status: `FP0002_V9_FORGE_WORDPRESS_INTAKE_PACK_COMPLETE`
+- Pack root: `forge-intake/`
+- Master document: `forge-intake/FP-0002-V9-FORGE-WORDPRESS-INTAKE-PACK-v1.md`
+- Intake tag (on checkpoint): `fp-0002-v9-forge-wordpress-intake-pack-01`
+- Validator: `npm run validate:forge-intake`
+- WordPress implementation: **not started**

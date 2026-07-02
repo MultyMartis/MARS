@@ -1,0 +1,147 @@
+{
+  "schema": "fp-0002-v9-forge-intake",
+  "version": "1.0.0",
+  "generated": "2026-07-02",
+  "stable_commit": "a51376872fbfefb7d5f68a58b440c726d6cf3de3",
+  "stable_tag": "fp-0002-v9-operator-approved-static-frontend-stable-01",
+  "route_count": 31,
+  "excluded_routes": [
+    "/uslugi/genotipirovanie/"
+  ],
+  "templates": [
+    {
+      "id": "TPL-FRONT-PAGE",
+      "file": "front-page.php",
+      "route_count": 1,
+      "routes": [
+        "/"
+      ],
+      "variants": [
+        "approved-full"
+      ]
+    },
+    {
+      "id": "TPL-SERVICES-HUB",
+      "file": "templates/page-services-hub.php",
+      "route_count": 1,
+      "routes": [
+        "/uslugi/"
+      ],
+      "variants": [
+        "approved-full"
+      ]
+    },
+    {
+      "id": "TPL-SERVICE-SUBDIVISION",
+      "file": "templates/page-service-subdivision.php",
+      "route_count": 3,
+      "routes": [
+        "/uslugi/zavisimosti/",
+        "/uslugi/psihicheskoe-zdorovie/",
+        "/uslugi/rasstroystva-pischevogo-povedeniya/"
+      ],
+      "variants": [
+        "approved-full",
+        "placeholder"
+      ]
+    },
+    {
+      "id": "TPL-SERVICE-LEAF",
+      "file": "templates/page-service-leaf.php",
+      "route_count": 12,
+      "routes": [
+        "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+        "/uslugi/zavisimosti/profilakticheskiy-analiz/",
+        "/uslugi/zavisimosti/specialistam/",
+        "/uslugi/psihicheskoe-zdorovie/depressiya/",
+        "/uslugi/psihicheskoe-zdorovie/ptrs/",
+        "/uslugi/psihicheskoe-zdorovie/emocionalnoe-vygoranie/",
+        "/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+        "/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+        "/uslugi/psihicheskoe-zdorovie/travma/",
+        "/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+        "/uslugi/rasstroystva-pischevogo-povedeniya/nervnaya-bulimiya/",
+        "/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/"
+      ],
+      "variants": [
+        "full-alcohol-exception",
+        "placeholder"
+      ]
+    },
+    {
+      "id": "TPL-INSTITUTIONAL",
+      "file": "templates/page-institutional.php",
+      "route_count": 6,
+      "routes": [
+        "/o-centre/",
+        "/o-centre/o-nas/",
+        "/o-centre/programma-lecheniya/",
+        "/o-centre/galereya-o-dome/",
+        "/o-centre/specialistam/",
+        "/o-centre/rodstvennikam/"
+      ],
+      "variants": [
+        "approved-full",
+        "placeholder"
+      ]
+    },
+    {
+      "id": "TPL-REVIEWS",
+      "file": "templates/page-reviews.php",
+      "route_count": 1,
+      "routes": [
+        "/otzyvy/"
+      ],
+      "variants": [
+        "approved-full"
+      ]
+    },
+    {
+      "id": "TPL-BLOG-ARCHIVE",
+      "file": "home.php",
+      "route_count": 1,
+      "routes": [
+        "/blog/"
+      ],
+      "variants": [
+        "approved-full"
+      ]
+    },
+    {
+      "id": "TPL-BLOG-SINGLE",
+      "file": "single.php",
+      "route_count": 1,
+      "routes": [
+        "/blog/nazvanie-stati/"
+      ],
+      "variants": [
+        "approved-full"
+      ]
+    },
+    {
+      "id": "TPL-CONTACTS",
+      "file": "templates/page-contacts.php",
+      "route_count": 1,
+      "routes": [
+        "/kontakty/"
+      ],
+      "variants": [
+        "approved-full"
+      ]
+    },
+    {
+      "id": "TPL-LEGAL",
+      "file": "templates/page-legal.php",
+      "route_count": 4,
+      "routes": [
+        "/privacy-policy/",
+        "/user-agreement/",
+        "/consent-personal-data/",
+        "/cookie-files-policy/"
+      ],
+      "variants": [
+        "approved-full"
+      ]
+    }
+  ]
+}

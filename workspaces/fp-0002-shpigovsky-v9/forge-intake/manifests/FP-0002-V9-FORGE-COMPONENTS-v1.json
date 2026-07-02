@@ -1,0 +1,136 @@
+{
+  "schema": "fp-0002-v9-forge-intake",
+  "version": "1.0.0",
+  "generated": "2026-07-02",
+  "stable_commit": "a51376872fbfefb7d5f68a58b440c726d6cf3de3",
+  "stable_tag": "fp-0002-v9-operator-approved-static-frontend-stable-01",
+  "route_count": 31,
+  "excluded_routes": [
+    "/uslugi/genotipirovanie/"
+  ],
+  "components": [
+    {
+      "id": "CMP-HEAD",
+      "v9_partial": "src/partials/layout/head.html",
+      "wp_path": "template-parts/layout/head.php",
+      "scope": "global",
+      "js": [],
+      "static": true
+    },
+    {
+      "id": "CMP-HEADER",
+      "v9_partial": "src/partials/layout/header.html",
+      "wp_path": "template-parts/layout/header.php",
+      "scope": "global",
+      "js": [
+        "offcanvas"
+      ],
+      "static": "mixed"
+    },
+    {
+      "id": "CMP-FOOTER",
+      "v9_partial": "src/partials/layout/footer.html",
+      "wp_path": "template-parts/layout/footer.php",
+      "scope": "global",
+      "js": [],
+      "static": "mixed"
+    },
+    {
+      "id": "CMP-BODY-START",
+      "v9_partial": "src/partials/layout/body-start.html",
+      "wp_path": "template-parts/layout/body-start.php",
+      "scope": "global",
+      "js": [],
+      "static": true
+    },
+    {
+      "id": "CMP-BREADCRUMBS",
+      "v9_partial": "inline per template",
+      "wp_path": "template-parts/components/breadcrumbs.php",
+      "scope": "per-page",
+      "js": [],
+      "static": "dynamic"
+    },
+    {
+      "id": "CMP-MODAL",
+      "v9_partial": "src/partials/layout/global-consultation-modal.html",
+      "wp_path": "template-parts/layout/global-consultation-modal.php",
+      "scope": "global-once",
+      "js": [
+        "modal-triumph-runtime"
+      ],
+      "static": "mixed"
+    },
+    {
+      "id": "CMP-SCROLL-TOP",
+      "v9_partial": "src/partials/components/scroll-to-top.html",
+      "wp_path": "template-parts/components/scroll-to-top.php",
+      "scope": "global-once",
+      "js": [
+        "scroll-to-top"
+      ],
+      "static": true
+    },
+    {
+      "id": "CMP-REVIEW-CARD",
+      "v9_partial": "src/partials/components/review-archive-card.html",
+      "wp_path": "template-parts/components/review-archive-card.php",
+      "scope": "reviews",
+      "js": [],
+      "static": "dynamic"
+    },
+    {
+      "id": "CMP-BLOG-CARD",
+      "v9_partial": "src/partials/components/blog-archive-card.html",
+      "wp_path": "template-parts/components/blog-archive-card.php",
+      "scope": "blog",
+      "js": [],
+      "static": "dynamic"
+    },
+    {
+      "id": "CMP-PLACEHOLDER-BC",
+      "v9_partial": "src/partials/components/placeholder-breadcrumbs.html",
+      "wp_path": "template-parts/components/placeholder-breadcrumbs.php",
+      "scope": "placeholder",
+      "js": [],
+      "static": "dynamic"
+    },
+    {
+      "id": "CMP-LEGAL-WRAPPER",
+      "v9_partial": "src/partials/sections/legal-document-page.html",
+      "wp_path": "template-parts/sections/legal-document-page.php",
+      "scope": "legal",
+      "js": [],
+      "static": "mixed"
+    },
+    {
+      "id": "CMP-BLOG-ARTICLE-CONTENT",
+      "v9_partial": "src/partials/sections/blog-article-content.html",
+      "wp_path": "template-parts/sections/blog-article-content.php",
+      "scope": "single-post",
+      "js": [
+        "toc-generate"
+      ],
+      "static": "dynamic"
+    },
+    {
+      "id": "CMP-BLOG-LOWER",
+      "v9_partial": "src/partials/sections/blog-article-lower-stack.html",
+      "wp_path": "template-parts/sections/blog-article-lower-stack.php",
+      "scope": "single-post",
+      "js": [],
+      "static": "dynamic"
+    },
+    {
+      "id": "CMP-INFRA-NARRATIVE",
+      "v9_partial": "src/partials/sections/infrastructure-narrative.html",
+      "wp_path": "template-parts/sections/infrastructure-narrative.php",
+      "scope": "o-centre",
+      "js": [
+        "accordion"
+      ],
+      "static": "mixed",
+      "note": "G0-G5 only; G6 excluded"
+    }
+  ]
+}

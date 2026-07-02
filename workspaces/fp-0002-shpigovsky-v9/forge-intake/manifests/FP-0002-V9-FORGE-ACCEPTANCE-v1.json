@@ -1,0 +1,610 @@
+{
+  "schema": "fp-0002-v9-forge-intake",
+  "version": "1.0.0",
+  "generated": "2026-07-02",
+  "stable_commit": "a51376872fbfefb7d5f68a58b440c726d6cf3de3",
+  "stable_tag": "fp-0002-v9-operator-approved-static-frontend-stable-01",
+  "route_count": 31,
+  "excluded_routes": [
+    "/uslugi/genotipirovanie/"
+  ],
+  "global_checks": [
+    "no_preloader",
+    "no_g6",
+    "one_modal",
+    "one_scroll_to_top",
+    "modal_no_scroll_jump",
+    "reduced_motion"
+  ],
+  "acceptance": [
+    {
+      "route_id": "ROUTE-01",
+      "route": "/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-FRONT-PAGE",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": true,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": false,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-02",
+      "route": "/uslugi/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-SERVICES-HUB",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": true,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": false,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-03",
+      "route": "/uslugi/zavisimosti/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-SERVICE-SUBDIVISION",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": true,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": false,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-04",
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-SERVICE-LEAF",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": true,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": false,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-05",
+      "route": "/uslugi/zavisimosti/profilakticheskiy-analiz/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-SERVICE-LEAF",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": false,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": true,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-06",
+      "route": "/uslugi/zavisimosti/specialistam/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-SERVICE-LEAF",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": false,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": true,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-07",
+      "route": "/uslugi/psihicheskoe-zdorovie/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-SERVICE-SUBDIVISION",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": false,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": true,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-08",
+      "route": "/uslugi/psihicheskoe-zdorovie/depressiya/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-SERVICE-LEAF",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": false,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": true,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-09",
+      "route": "/uslugi/psihicheskoe-zdorovie/ptrs/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-SERVICE-LEAF",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": false,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": true,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-10",
+      "route": "/uslugi/psihicheskoe-zdorovie/emocionalnoe-vygoranie/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-SERVICE-LEAF",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": false,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": true,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-11",
+      "route": "/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-SERVICE-LEAF",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": false,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": true,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-12",
+      "route": "/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-SERVICE-LEAF",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": false,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": true,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-13",
+      "route": "/uslugi/psihicheskoe-zdorovie/travma/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-SERVICE-LEAF",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": false,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": true,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-14",
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-SERVICE-SUBDIVISION",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": false,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": true,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-15",
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-SERVICE-LEAF",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": false,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": true,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-16",
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/nervnaya-bulimiya/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-SERVICE-LEAF",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": false,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": true,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-17",
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-SERVICE-LEAF",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": false,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": true,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-18",
+      "route": "/o-centre/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-INSTITUTIONAL",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": true,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": false,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-19",
+      "route": "/o-centre/o-nas/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-INSTITUTIONAL",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": false,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": true,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-20",
+      "route": "/o-centre/programma-lecheniya/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-INSTITUTIONAL",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": false,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": true,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-21",
+      "route": "/o-centre/galereya-o-dome/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-INSTITUTIONAL",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": false,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": true,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-22",
+      "route": "/o-centre/specialistam/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-INSTITUTIONAL",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": false,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": true,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-23",
+      "route": "/o-centre/rodstvennikam/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-INSTITUTIONAL",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": false,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": true,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-24",
+      "route": "/otzyvy/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-REVIEWS",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": true,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": false,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-25",
+      "route": "/blog/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-BLOG-ARCHIVE",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": true,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": false,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-26",
+      "route": "/blog/nazvanie-stati/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-BLOG-SINGLE",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": true,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": false,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-27",
+      "route": "/kontakty/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-CONTACTS",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": true,
+        "legal_demo_blocker": false,
+        "placeholder_blocker": false,
+        "console_clean": true,
+        "admin_editable": true
+      }
+    },
+    {
+      "route_id": "ROUTE-28",
+      "route": "/privacy-policy/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-LEGAL",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": false,
+        "legal_demo_blocker": true,
+        "placeholder_blocker": false,
+        "console_clean": true,
+        "admin_editable": "controlled_html"
+      }
+    },
+    {
+      "route_id": "ROUTE-29",
+      "route": "/user-agreement/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-LEGAL",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": false,
+        "legal_demo_blocker": true,
+        "placeholder_blocker": false,
+        "console_clean": true,
+        "admin_editable": "controlled_html"
+      }
+    },
+    {
+      "route_id": "ROUTE-30",
+      "route": "/consent-personal-data/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-LEGAL",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": false,
+        "legal_demo_blocker": true,
+        "placeholder_blocker": false,
+        "console_clean": true,
+        "admin_editable": "controlled_html"
+      }
+    },
+    {
+      "route_id": "ROUTE-31",
+      "route": "/cookie-files-policy/",
+      "checks": {
+        "route_exists": true,
+        "http_200": true,
+        "template_id": "TPL-LEGAL",
+        "title_h1_match": true,
+        "breadcrumbs_match": true,
+        "modal_present": true,
+        "scroll_to_top_present": true,
+        "responsive_parity": true,
+        "content_parity_vs_dist": false,
+        "legal_demo_blocker": true,
+        "placeholder_blocker": false,
+        "console_clean": true,
+        "admin_editable": "controlled_html"
+      }
+    }
+  ]
+}

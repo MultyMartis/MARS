@@ -1,26 +1,22 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-02 (V9-03 stable baseline checkpoint)
+**Last updated:** 2026-07-02 (V9-04 Forge WordPress Intake Pack checkpoint)
 
 ## Active frontend workspace (V9)
 
 | Field | Value |
 |-------|-------|
 | Workspace | `workspaces/fp-0002-shpigovsky-v9/` |
-| Status | `FP0002_V9_OPERATOR_APPROVED_STATIC_FRONTEND_STABLE_BASELINE_COMPLETE` |
-| Phase | V9-03G operator approved → **V9 stable baseline checkpoint complete** |
+| Static baseline | `FP0002_V9_OPERATOR_APPROVED_STATIC_FRONTEND_STABLE_BASELINE_COMPLETE` |
+| Intake pack | `FP0002_V9_FORGE_WORDPRESS_INTAKE_PACK_COMPLETE` |
+| Phase | V9-04 complete → **V9-05 Forge WP environment gate** |
 | Dist output | Clean-route static site in `dist/` (root-relative `/assets/...`) |
 | Route manifest | `workspaces/fp-0002-shpigovsky-v9/tools/v9-route-manifest.json` (31 routes) |
-| Preview | `npm run preview` (default **http://127.0.0.1:8791/**) |
-| Legal pages | `/privacy-policy/`, `/user-agreement/`, `/consent-personal-data/`, `/cookie-files-policy/` — `LEGAL_DEMO_DOCUMENT` |
-| Forge intake | **Next:** V9-04 Forge WordPress Intake Pack (not yet created) |
-| Genotyping route | **Not published** (`NOT_PUBLISHED_IN_FRONTEND`) |
-| Canonical dependencies | **Зависимости** → `/uslugi/zavisimosti/` |
-| Git checkpoint | Stable tag: `fp-0002-v9-operator-approved-static-frontend-stable-01` — see commit at tag |
-| Source authority | `workspaces/fp-0002-shpigovsky-v9/src/` |
-| Rendered authority | `workspaces/fp-0002-shpigovsky-v9/dist/` |
-| V8 role | Historical operator-approved predecessor (`fp-0002-v8-operator-approved-frontend-stable-01`) |
+| Forge intake pack | `workspaces/fp-0002-shpigovsky-v9/forge-intake/` |
+| Intake tag | `fp-0002-v9-forge-wordpress-intake-pack-01` |
+| Stable tag | `fp-0002-v9-operator-approved-static-frontend-stable-01` @ `a51376872fbfefb7d5f68a58b440c726d6cf3de3` |
+| WordPress implementation | **Not started** |
 
 ## Phase 07C-B static package — SUPERSEDED
 

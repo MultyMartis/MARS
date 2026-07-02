@@ -6,6 +6,7 @@
   "scripts": {
     "build": "gulp build && node tools/v9-emit-routes.mjs",
     "validate": "node tools/v9-validate-all.mjs",
+    "validate:forge-intake": "node tools/v9-validate-forge-intake.mjs",
     "preview": "node tools/v9-preview-server.mjs",
     "audit:components": "python tools/component-audit/_run-v8-component-family-audit.py",
     "watch": "gulp watch",

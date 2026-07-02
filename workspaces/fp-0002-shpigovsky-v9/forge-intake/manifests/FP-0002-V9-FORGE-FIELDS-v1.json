@@ -1,0 +1,164 @@
+{
+  "schema": "fp-0002-v9-forge-intake",
+  "version": "1.0.0",
+  "generated": "2026-07-02",
+  "stable_commit": "a51376872fbfefb7d5f68a58b440c726d6cf3de3",
+  "stable_tag": "fp-0002-v9-operator-approved-static-frontend-stable-01",
+  "route_count": 31,
+  "excluded_routes": [
+    "/uslugi/genotipirovanie/"
+  ],
+  "field_groups": [
+    {
+      "id": "FG-SITE-OPTIONS",
+      "name": "group_site_options",
+      "location": "options",
+      "fields": [
+        "site_phone_primary",
+        "site_phone_secondary",
+        "site_email",
+        "site_address",
+        "site_hours",
+        "social_telegram",
+        "social_whatsapp",
+        "social_max",
+        "social_youtube",
+        "footer_legal_entity_demo"
+      ]
+    },
+    {
+      "id": "FG-HOME",
+      "name": "group_home_page",
+      "location": "front-page",
+      "fields": [
+        "hero_slides",
+        "feature_grid",
+        "treatment_prevention",
+        "rehab_program",
+        "gallery",
+        "articles_teaser",
+        "faq",
+        "final_cta"
+      ]
+    },
+    {
+      "id": "FG-SERVICES-HUB",
+      "name": "group_services_hub",
+      "location": "page-template-services-hub",
+      "fields": [
+        "category_sections",
+        "program_band",
+        "founder_quote",
+        "comfort",
+        "mid_cta",
+        "faq"
+      ]
+    },
+    {
+      "id": "FG-SERVICE-SUBDIVISION",
+      "name": "group_service_subdivision",
+      "location": "page-template-service-subdivision",
+      "fields": [
+        "intro",
+        "nature",
+        "stages",
+        "approach",
+        "specialists",
+        "reviews_teaser",
+        "faq"
+      ]
+    },
+    {
+      "id": "FG-SERVICE-LEAF",
+      "name": "group_service_leaf",
+      "location": "page-template-service-leaf",
+      "fields": [
+        "intro",
+        "bordered_info",
+        "signs",
+        "approach",
+        "stages",
+        "program"
+      ]
+    },
+    {
+      "id": "FG-SERVICE-LEAF-ALCOHOL",
+      "name": "group_service_leaf_alcohol",
+      "location": "page-lechenie-alkogolnoy-zavisimosti",
+      "fields": [
+        "extends_group_service_leaf"
+      ],
+      "note": "full-page exception template"
+    },
+    {
+      "id": "FG-O-CENTRE",
+      "name": "group_o_centre",
+      "location": "page-template-o-centre",
+      "fields": [
+        "infrastructure_groups_g0_g5",
+        "clinic_landscape",
+        "specialists",
+        "faq"
+      ]
+    },
+    {
+      "id": "FG-CONTACTS",
+      "name": "group_contacts",
+      "location": "page-template-contacts",
+      "fields": [
+        "contact_methods",
+        "map_embed",
+        "rehab_steps"
+      ]
+    },
+    {
+      "id": "FG-REVIEWS",
+      "name": "group_reviews_page",
+      "location": "page-template-reviews",
+      "fields": [
+        "reviews_repeater",
+        "requirements_band"
+      ]
+    },
+    {
+      "id": "FG-BLOG-POST",
+      "name": "group_blog_post",
+      "location": "post",
+      "fields": [
+        "reading_time_override",
+        "sources_repeater",
+        "related_posts",
+        "founder_quote_block"
+      ]
+    },
+    {
+      "id": "FG-LEGAL",
+      "name": "group_legal_meta",
+      "location": "page-template-legal",
+      "fields": [
+        "effective_date",
+        "document_version",
+        "demo_token_inventory"
+      ]
+    },
+    {
+      "id": "FG-MODAL",
+      "name": "group_modal_form",
+      "location": "options",
+      "fields": [
+        "default_modal_title",
+        "default_submit_label",
+        "consent_links",
+        "form_endpoint_placeholder"
+      ]
+    },
+    {
+      "id": "FG-PLACEHOLDER",
+      "name": "group_placeholder_notice",
+      "location": "page-template-placeholder",
+      "fields": [
+        "placeholder_notice_text"
+      ]
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 # FP-0002 Shpigovsky — V9 Frontend Workspace
 
-**Status:** `FP0002_V9_OPERATOR_APPROVED_STATIC_FRONTEND_STABLE_BASELINE_COMPLETE`  
-**Phase:** V9-03 stable baseline — operator-approved static frontend frozen in Git  
-**Authority:** Current canonical static frontend (V8 remains historical approved baseline)
+**Status:** `FP0002_V9_FORGE_WORDPRESS_INTAKE_PACK_COMPLETE`  
+**Phase:** V9-04 Forge WordPress Intake Pack complete — WordPress implementation not started  
+**Authority:** V9 stable static frontend frozen; intake pack at `forge-intake/`
 
 ## Build
 
@@ -10,12 +10,14 @@
 npm install
 npm run build
 npm run validate
+npm run validate:forge-intake
 npm run preview
 ```
 
 - **`src/`** — canonical source
 - **`dist/`** — generated clean-route static site (operator review target)
-- **`tools/v9-route-manifest.json`** — route authority for build and future Forge intake
+- **`forge-intake/`** — V9-04 Forge WordPress intake pack (documentation only)
+- **`tools/v9-route-manifest.json`** — route authority for build and Forge intake
 
 ## Preview
 
@@ -27,6 +29,13 @@ After build: `npm run preview` → default **http://127.0.0.1:8791/** (V9-03G re
 - Tag: `fp-0002-v9-operator-approved-static-frontend-stable-01`
 - See `FP-0002-V9-OPERATOR-APPROVED-STATIC-FRONTEND-STABLE-01-MANIFEST.md`
 - Recovery ZIP: `X:\AI MARS STORAGE\website-factory\fp-0002-shpigovsky-v9\v9-03-stable-baseline-checkpoint\`
+
+## V9-04 Forge WordPress Intake Pack
+
+- Complete intake contracts: `forge-intake/FP-0002-V9-FORGE-WORDPRESS-INTAKE-PACK-v1.md`
+- Validate: `npm run validate:forge-intake`
+- Tag: `fp-0002-v9-forge-wordpress-intake-pack-01`
+- Next: V9-05 environment gate — **no WordPress theme work in V9-04**
 
 ## V9-03G (operator approved)
 

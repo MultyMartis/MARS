@@ -1,0 +1,1014 @@
+{
+  "schema": "fp-0002-v9-forge-intake",
+  "version": "1.0.0",
+  "generated": "2026-07-02",
+  "stable_commit": "a51376872fbfefb7d5f68a58b440c726d6cf3de3",
+  "stable_tag": "fp-0002-v9-operator-approved-static-frontend-stable-01",
+  "route_count": 31,
+  "excluded_routes": [
+    "/uslugi/genotipirovanie/"
+  ],
+  "routes": [
+    {
+      "id": "ROUTE-01",
+      "route": "/",
+      "slug": "home",
+      "source_page": "src/pages/index.html",
+      "output": "index.html",
+      "title": "Главная",
+      "h1": "Главная",
+      "page_type": "HOME",
+      "classification": "full",
+      "status": "APPROVED_FULL",
+      "content_status": "CURRENT_DEMO_CONTENT",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-home"
+      },
+      "template_id": "TPL-FRONT-PAGE",
+      "template_file": "front-page.php",
+      "template_variant": "approved-full",
+      "parent_route": null,
+      "breadcrumbs": [
+        "Главная"
+      ],
+      "menu_exposure": [
+        "header"
+      ],
+      "production_blocker": false,
+      "production_blocker_reason": null,
+      "wordpress_family": "FAM-HOME"
+    },
+    {
+      "id": "ROUTE-02",
+      "route": "/uslugi/",
+      "slug": "uslugi",
+      "source_page": "src/pages/uslugi-v2.html",
+      "output": "uslugi/index.html",
+      "title": "Услуги",
+      "h1": "Услуги",
+      "page_type": "SERVICES_HUB",
+      "classification": "full",
+      "status": "APPROVED_FULL",
+      "content_status": "CURRENT_DEMO_CONTENT",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-uslugi"
+      },
+      "template_id": "TPL-SERVICES-HUB",
+      "template_file": "templates/page-services-hub.php",
+      "template_variant": "approved-full",
+      "parent_route": null,
+      "breadcrumbs": [
+        "Главная",
+        "Услуги"
+      ],
+      "menu_exposure": [
+        "header",
+        "mobile"
+      ],
+      "production_blocker": false,
+      "production_blocker_reason": null,
+      "wordpress_family": "FAM-SERVICES-HUB"
+    },
+    {
+      "id": "ROUTE-03",
+      "route": "/uslugi/zavisimosti/",
+      "slug": "uslugi/zavisimosti",
+      "source_page": "src/pages/usluga-podrazdel-v1.html",
+      "output": "uslugi/zavisimosti/index.html",
+      "title": "Зависимости",
+      "h1": "Зависимости",
+      "page_type": "SERVICE_SUBDIVISION",
+      "classification": "full",
+      "status": "APPROVED_FULL",
+      "content_status": "TEMPLATE_FIXTURE",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-uslugi-zavisimosti"
+      },
+      "template_id": "TPL-SERVICE-SUBDIVISION",
+      "template_file": "templates/page-service-subdivision.php",
+      "template_variant": "approved-full",
+      "parent_route": "/uslugi/",
+      "breadcrumbs": [
+        "Главная",
+        "Услуги",
+        "Зависимости"
+      ],
+      "menu_exposure": [
+        "header",
+        "mobile",
+        "footer"
+      ],
+      "production_blocker": false,
+      "production_blocker_reason": null,
+      "wordpress_family": "FAM-SERVICE-SUBDIVISION"
+    },
+    {
+      "id": "ROUTE-04",
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "slug": "uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti",
+      "source_page": "src/pages/usluga-konechnaya-v1.html",
+      "output": "uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/index.html",
+      "title": "Лечение алкогольной зависимости",
+      "h1": "Лечение алкогольной зависимости",
+      "page_type": "SERVICE_LEAF",
+      "classification": "full",
+      "status": "APPROVED_FULL",
+      "content_status": "TEMPLATE_FIXTURE",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-uslugi-zavisimosti-lechenie-alkogolnoy-zavisimosti"
+      },
+      "template_id": "TPL-SERVICE-LEAF",
+      "template_file": "templates/page-service-leaf.php",
+      "template_variant": "full-alcohol-exception",
+      "parent_route": "/uslugi/zavisimosti/",
+      "breadcrumbs": [
+        "Главная",
+        "Услуги",
+        "Зависимости",
+        "Лечение алкогольной зависимости"
+      ],
+      "menu_exposure": [
+        "home_accordion"
+      ],
+      "production_blocker": false,
+      "production_blocker_reason": null,
+      "wordpress_family": "FAM-SERVICE-LEAF"
+    },
+    {
+      "id": "ROUTE-05",
+      "route": "/uslugi/zavisimosti/profilakticheskiy-analiz/",
+      "slug": "uslugi/zavisimosti/profilakticheskiy-analiz",
+      "source_page": "src/pages/uslugi/zavisimosti/profilakticheskiy-analiz.html",
+      "output": "uslugi/zavisimosti/profilakticheskiy-analiz/index.html",
+      "title": "Профилактический анализ",
+      "h1": "Профилактический анализ",
+      "page_type": "SERVICE_LEAF",
+      "classification": "placeholder",
+      "status": "PLACEHOLDER",
+      "content_status": "PLACEHOLDER_PENDING_CONTENT",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-uslugi-zavisimosti-profilakticheskiy-analiz"
+      },
+      "template_id": "TPL-SERVICE-LEAF",
+      "template_file": "templates/page-service-leaf.php",
+      "template_variant": "placeholder",
+      "parent_route": "/uslugi/zavisimosti/",
+      "breadcrumbs": [
+        "Главная",
+        "Услуги",
+        "Зависимости",
+        "Профилактический анализ"
+      ],
+      "menu_exposure": [
+        "home_accordion"
+      ],
+      "production_blocker": true,
+      "production_blocker_reason": "PLACEHOLDER_CONTENT_PENDING",
+      "wordpress_family": "FAM-SERVICE-LEAF"
+    },
+    {
+      "id": "ROUTE-06",
+      "route": "/uslugi/zavisimosti/specialistam/",
+      "slug": "uslugi/zavisimosti/specialistam",
+      "source_page": "src/pages/uslugi/zavisimosti/specialistam.html",
+      "output": "uslugi/zavisimosti/specialistam/index.html",
+      "title": "Специалистам",
+      "h1": "Специалистам",
+      "page_type": "SERVICE_LEAF",
+      "classification": "placeholder",
+      "status": "PLACEHOLDER",
+      "content_status": "PLACEHOLDER_PENDING_CONTENT",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-uslugi-zavisimosti-specialistam"
+      },
+      "template_id": "TPL-SERVICE-LEAF",
+      "template_file": "templates/page-service-leaf.php",
+      "template_variant": "placeholder",
+      "parent_route": "/uslugi/zavisimosti/",
+      "breadcrumbs": [
+        "Главная",
+        "Услуги",
+        "Зависимости",
+        "Специалистам"
+      ],
+      "menu_exposure": [
+        "home_accordion"
+      ],
+      "production_blocker": true,
+      "production_blocker_reason": "PLACEHOLDER_CONTENT_PENDING",
+      "wordpress_family": "FAM-SERVICE-LEAF"
+    },
+    {
+      "id": "ROUTE-07",
+      "route": "/uslugi/psihicheskoe-zdorovie/",
+      "slug": "uslugi/psihicheskoe-zdorovie",
+      "source_page": "src/pages/uslugi/psihicheskoe-zdorovie.html",
+      "output": "uslugi/psihicheskoe-zdorovie/index.html",
+      "title": "Психическое здоровье",
+      "h1": "Психическое здоровье",
+      "page_type": "SERVICE_SUBDIVISION",
+      "classification": "placeholder",
+      "status": "PLACEHOLDER",
+      "content_status": "PLACEHOLDER_PENDING_CONTENT",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-uslugi-psihicheskoe-zdorovie"
+      },
+      "template_id": "TPL-SERVICE-SUBDIVISION",
+      "template_file": "templates/page-service-subdivision.php",
+      "template_variant": "placeholder",
+      "parent_route": "/uslugi/",
+      "breadcrumbs": [
+        "Главная",
+        "Услуги",
+        "Психическое здоровье"
+      ],
+      "menu_exposure": [
+        "footer",
+        "home_accordion"
+      ],
+      "production_blocker": true,
+      "production_blocker_reason": "PLACEHOLDER_CONTENT_PENDING",
+      "wordpress_family": "FAM-SERVICE-SUBDIVISION"
+    },
+    {
+      "id": "ROUTE-08",
+      "route": "/uslugi/psihicheskoe-zdorovie/depressiya/",
+      "slug": "uslugi/psihicheskoe-zdorovie/depressiya",
+      "source_page": "src/pages/uslugi/psihicheskoe-zdorovie/depressiya.html",
+      "output": "uslugi/psihicheskoe-zdorovie/depressiya/index.html",
+      "title": "Депрессия",
+      "h1": "Депрессия",
+      "page_type": "SERVICE_LEAF",
+      "classification": "placeholder",
+      "status": "PLACEHOLDER",
+      "content_status": "PLACEHOLDER_PENDING_CONTENT",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-uslugi-psihicheskoe-zdorovie-depressiya"
+      },
+      "template_id": "TPL-SERVICE-LEAF",
+      "template_file": "templates/page-service-leaf.php",
+      "template_variant": "placeholder",
+      "parent_route": "/uslugi/psihicheskoe-zdorovie/",
+      "breadcrumbs": [
+        "Главная",
+        "Услуги",
+        "Психическое здоровье",
+        "Депрессия"
+      ],
+      "menu_exposure": [
+        "home_accordion"
+      ],
+      "production_blocker": true,
+      "production_blocker_reason": "PLACEHOLDER_CONTENT_PENDING",
+      "wordpress_family": "FAM-SERVICE-LEAF"
+    },
+    {
+      "id": "ROUTE-09",
+      "route": "/uslugi/psihicheskoe-zdorovie/ptrs/",
+      "slug": "uslugi/psihicheskoe-zdorovie/ptrs",
+      "source_page": "src/pages/uslugi/psihicheskoe-zdorovie/ptrs.html",
+      "output": "uslugi/psihicheskoe-zdorovie/ptrs/index.html",
+      "title": "ПТСР",
+      "h1": "ПТСР",
+      "page_type": "SERVICE_LEAF",
+      "classification": "placeholder",
+      "status": "PLACEHOLDER",
+      "content_status": "PLACEHOLDER_PENDING_CONTENT",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-uslugi-psihicheskoe-zdorovie-ptrs"
+      },
+      "template_id": "TPL-SERVICE-LEAF",
+      "template_file": "templates/page-service-leaf.php",
+      "template_variant": "placeholder",
+      "parent_route": "/uslugi/psihicheskoe-zdorovie/",
+      "breadcrumbs": [
+        "Главная",
+        "Услуги",
+        "Психическое здоровье",
+        "ПТСР"
+      ],
+      "menu_exposure": [
+        "home_accordion"
+      ],
+      "production_blocker": true,
+      "production_blocker_reason": "PLACEHOLDER_CONTENT_PENDING",
+      "wordpress_family": "FAM-SERVICE-LEAF"
+    },
+    {
+      "id": "ROUTE-10",
+      "route": "/uslugi/psihicheskoe-zdorovie/emocionalnoe-vygoranie/",
+      "slug": "uslugi/psihicheskoe-zdorovie/emocionalnoe-vygoranie",
+      "source_page": "src/pages/uslugi/psihicheskoe-zdorovie/emocionalnoe-vygoranie.html",
+      "output": "uslugi/psihicheskoe-zdorovie/emocionalnoe-vygoranie/index.html",
+      "title": "Эмоциональное выгорание",
+      "h1": "Эмоциональное выгорание",
+      "page_type": "SERVICE_LEAF",
+      "classification": "placeholder",
+      "status": "PLACEHOLDER",
+      "content_status": "PLACEHOLDER_PENDING_CONTENT",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-uslugi-psihicheskoe-zdorovie-emocionalnoe-vygoranie"
+      },
+      "template_id": "TPL-SERVICE-LEAF",
+      "template_file": "templates/page-service-leaf.php",
+      "template_variant": "placeholder",
+      "parent_route": "/uslugi/psihicheskoe-zdorovie/",
+      "breadcrumbs": [
+        "Главная",
+        "Услуги",
+        "Психическое здоровье",
+        "Эмоциональное выгорание"
+      ],
+      "menu_exposure": [
+        "home_accordion"
+      ],
+      "production_blocker": true,
+      "production_blocker_reason": "PLACEHOLDER_CONTENT_PENDING",
+      "wordpress_family": "FAM-SERVICE-LEAF"
+    },
+    {
+      "id": "ROUTE-11",
+      "route": "/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+      "slug": "uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva",
+      "source_page": "src/pages/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva.html",
+      "output": "uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/index.html",
+      "title": "Тревожные расстройства",
+      "h1": "Тревожные расстройства",
+      "page_type": "SERVICE_LEAF",
+      "classification": "placeholder",
+      "status": "PLACEHOLDER",
+      "content_status": "PLACEHOLDER_PENDING_CONTENT",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-uslugi-psihicheskoe-zdorovie-trevozhnye-rasstroystva"
+      },
+      "template_id": "TPL-SERVICE-LEAF",
+      "template_file": "templates/page-service-leaf.php",
+      "template_variant": "placeholder",
+      "parent_route": "/uslugi/psihicheskoe-zdorovie/",
+      "breadcrumbs": [
+        "Главная",
+        "Услуги",
+        "Психическое здоровье",
+        "Тревожные расстройства"
+      ],
+      "menu_exposure": [
+        "home_accordion"
+      ],
+      "production_blocker": true,
+      "production_blocker_reason": "PLACEHOLDER_CONTENT_PENDING",
+      "wordpress_family": "FAM-SERVICE-LEAF"
+    },
+    {
+      "id": "ROUTE-12",
+      "route": "/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+      "slug": "uslugi/psihicheskoe-zdorovie/rasstroystva-sna",
+      "source_page": "src/pages/uslugi/psihicheskoe-zdorovie/rasstroystva-sna.html",
+      "output": "uslugi/psihicheskoe-zdorovie/rasstroystva-sna/index.html",
+      "title": "Расстройства сна",
+      "h1": "Расстройства сна",
+      "page_type": "SERVICE_LEAF",
+      "classification": "placeholder",
+      "status": "PLACEHOLDER",
+      "content_status": "PLACEHOLDER_PENDING_CONTENT",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-uslugi-psihicheskoe-zdorovie-rasstroystva-sna"
+      },
+      "template_id": "TPL-SERVICE-LEAF",
+      "template_file": "templates/page-service-leaf.php",
+      "template_variant": "placeholder",
+      "parent_route": "/uslugi/psihicheskoe-zdorovie/",
+      "breadcrumbs": [
+        "Главная",
+        "Услуги",
+        "Психическое здоровье",
+        "Расстройства сна"
+      ],
+      "menu_exposure": [
+        "home_accordion"
+      ],
+      "production_blocker": true,
+      "production_blocker_reason": "PLACEHOLDER_CONTENT_PENDING",
+      "wordpress_family": "FAM-SERVICE-LEAF"
+    },
+    {
+      "id": "ROUTE-13",
+      "route": "/uslugi/psihicheskoe-zdorovie/travma/",
+      "slug": "uslugi/psihicheskoe-zdorovie/travma",
+      "source_page": "src/pages/uslugi/psihicheskoe-zdorovie/travma.html",
+      "output": "uslugi/psihicheskoe-zdorovie/travma/index.html",
+      "title": "Травма",
+      "h1": "Травма",
+      "page_type": "SERVICE_LEAF",
+      "classification": "placeholder",
+      "status": "PLACEHOLDER",
+      "content_status": "PLACEHOLDER_PENDING_CONTENT",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-uslugi-psihicheskoe-zdorovie-travma"
+      },
+      "template_id": "TPL-SERVICE-LEAF",
+      "template_file": "templates/page-service-leaf.php",
+      "template_variant": "placeholder",
+      "parent_route": "/uslugi/psihicheskoe-zdorovie/",
+      "breadcrumbs": [
+        "Главная",
+        "Услуги",
+        "Психическое здоровье",
+        "Травма"
+      ],
+      "menu_exposure": [
+        "home_accordion"
+      ],
+      "production_blocker": true,
+      "production_blocker_reason": "PLACEHOLDER_CONTENT_PENDING",
+      "wordpress_family": "FAM-SERVICE-LEAF"
+    },
+    {
+      "id": "ROUTE-14",
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "slug": "uslugi/rasstroystva-pischevogo-povedeniya",
+      "source_page": "src/pages/uslugi/rasstroystva-pischevogo-povedeniya.html",
+      "output": "uslugi/rasstroystva-pischevogo-povedeniya/index.html",
+      "title": "Расстройства пищевого поведения",
+      "h1": "Расстройства пищевого поведения",
+      "page_type": "SERVICE_SUBDIVISION",
+      "classification": "placeholder",
+      "status": "PLACEHOLDER",
+      "content_status": "PLACEHOLDER_PENDING_CONTENT",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-uslugi-rasstroystva-pischevogo-povedeniya"
+      },
+      "template_id": "TPL-SERVICE-SUBDIVISION",
+      "template_file": "templates/page-service-subdivision.php",
+      "template_variant": "placeholder",
+      "parent_route": "/uslugi/",
+      "breadcrumbs": [
+        "Главная",
+        "Услуги",
+        "Расстройства пищевого поведения"
+      ],
+      "menu_exposure": [
+        "footer",
+        "home_accordion"
+      ],
+      "production_blocker": true,
+      "production_blocker_reason": "PLACEHOLDER_CONTENT_PENDING",
+      "wordpress_family": "FAM-SERVICE-SUBDIVISION"
+    },
+    {
+      "id": "ROUTE-15",
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+      "slug": "uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya",
+      "source_page": "src/pages/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya.html",
+      "output": "uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/index.html",
+      "title": "Нервная анорексия",
+      "h1": "Нервная анорексия",
+      "page_type": "SERVICE_LEAF",
+      "classification": "placeholder",
+      "status": "PLACEHOLDER",
+      "content_status": "PLACEHOLDER_PENDING_CONTENT",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-uslugi-rasstroystva-pischevogo-povedeniya-anoreksiya"
+      },
+      "template_id": "TPL-SERVICE-LEAF",
+      "template_file": "templates/page-service-leaf.php",
+      "template_variant": "placeholder",
+      "parent_route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "breadcrumbs": [
+        "Главная",
+        "Услуги",
+        "Расстройства пищевого поведения",
+        "Нервная анорексия"
+      ],
+      "menu_exposure": [
+        "home_accordion"
+      ],
+      "production_blocker": true,
+      "production_blocker_reason": "PLACEHOLDER_CONTENT_PENDING",
+      "wordpress_family": "FAM-SERVICE-LEAF"
+    },
+    {
+      "id": "ROUTE-16",
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/nervnaya-bulimiya/",
+      "slug": "uslugi/rasstroystva-pischevogo-povedeniya/nervnaya-bulimiya",
+      "source_page": "src/pages/uslugi/rasstroystva-pischevogo-povedeniya/nervnaya-bulimiya.html",
+      "output": "uslugi/rasstroystva-pischevogo-povedeniya/nervnaya-bulimiya/index.html",
+      "title": "Нервная булимия",
+      "h1": "Нервная булимия",
+      "page_type": "SERVICE_LEAF",
+      "classification": "placeholder",
+      "status": "PLACEHOLDER",
+      "content_status": "PLACEHOLDER_PENDING_CONTENT",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-uslugi-rasstroystva-pischevogo-povedeniya-nervnaya-bulimiya"
+      },
+      "template_id": "TPL-SERVICE-LEAF",
+      "template_file": "templates/page-service-leaf.php",
+      "template_variant": "placeholder",
+      "parent_route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "breadcrumbs": [
+        "Главная",
+        "Услуги",
+        "Расстройства пищевого поведения",
+        "Нервная булимия"
+      ],
+      "menu_exposure": [
+        "home_accordion"
+      ],
+      "production_blocker": true,
+      "production_blocker_reason": "PLACEHOLDER_CONTENT_PENDING",
+      "wordpress_family": "FAM-SERVICE-LEAF"
+    },
+    {
+      "id": "ROUTE-17",
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/",
+      "slug": "uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie",
+      "source_page": "src/pages/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie.html",
+      "output": "uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/index.html",
+      "title": "Компульсивное переедание",
+      "h1": "Компульсивное переедание",
+      "page_type": "SERVICE_LEAF",
+      "classification": "placeholder",
+      "status": "PLACEHOLDER",
+      "content_status": "PLACEHOLDER_PENDING_CONTENT",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-uslugi-rasstroystva-pischevogo-povedeniya-kompulsivnoe-pereedanie"
+      },
+      "template_id": "TPL-SERVICE-LEAF",
+      "template_file": "templates/page-service-leaf.php",
+      "template_variant": "placeholder",
+      "parent_route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "breadcrumbs": [
+        "Главная",
+        "Услуги",
+        "Расстройства пищевого поведения",
+        "Компульсивное переедание"
+      ],
+      "menu_exposure": [
+        "home_accordion"
+      ],
+      "production_blocker": true,
+      "production_blocker_reason": "PLACEHOLDER_CONTENT_PENDING",
+      "wordpress_family": "FAM-SERVICE-LEAF"
+    },
+    {
+      "id": "ROUTE-18",
+      "route": "/o-centre/",
+      "slug": "o-centre",
+      "source_page": "src/pages/o-centre.html",
+      "output": "o-centre/index.html",
+      "title": "О центре",
+      "h1": "О центре",
+      "page_type": "INSTITUTIONAL",
+      "classification": "full",
+      "status": "APPROVED_FULL",
+      "content_status": "CURRENT_DEMO_CONTENT",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-o-centre"
+      },
+      "template_id": "TPL-INSTITUTIONAL",
+      "template_file": "templates/page-institutional.php",
+      "template_variant": "approved-full",
+      "parent_route": null,
+      "breadcrumbs": [
+        "Главная",
+        "О центре"
+      ],
+      "menu_exposure": [
+        "header",
+        "mobile"
+      ],
+      "production_blocker": false,
+      "production_blocker_reason": null,
+      "wordpress_family": "FAM-INSTITUTIONAL"
+    },
+    {
+      "id": "ROUTE-19",
+      "route": "/o-centre/o-nas/",
+      "slug": "o-centre/o-nas",
+      "source_page": "src/pages/o-centre/o-nas.html",
+      "output": "o-centre/o-nas/index.html",
+      "title": "О нас",
+      "h1": "О нас",
+      "page_type": "INSTITUTIONAL",
+      "classification": "placeholder",
+      "status": "PLACEHOLDER",
+      "content_status": "PLACEHOLDER_PENDING_CONTENT",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-o-centre-o-nas"
+      },
+      "template_id": "TPL-INSTITUTIONAL",
+      "template_file": "templates/page-institutional.php",
+      "template_variant": "placeholder",
+      "parent_route": "/o-centre/",
+      "breadcrumbs": [
+        "Главная",
+        "О центре",
+        "О нас"
+      ],
+      "menu_exposure": [
+        "footer"
+      ],
+      "production_blocker": true,
+      "production_blocker_reason": "PLACEHOLDER_CONTENT_PENDING",
+      "wordpress_family": "FAM-INSTITUTIONAL"
+    },
+    {
+      "id": "ROUTE-20",
+      "route": "/o-centre/programma-lecheniya/",
+      "slug": "o-centre/programma-lecheniya",
+      "source_page": "src/pages/o-centre/programma-lecheniya.html",
+      "output": "o-centre/programma-lecheniya/index.html",
+      "title": "Программа лечения",
+      "h1": "Программа лечения",
+      "page_type": "INSTITUTIONAL",
+      "classification": "placeholder",
+      "status": "PLACEHOLDER",
+      "content_status": "PLACEHOLDER_PENDING_CONTENT",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-o-centre-programma-lecheniya"
+      },
+      "template_id": "TPL-INSTITUTIONAL",
+      "template_file": "templates/page-institutional.php",
+      "template_variant": "placeholder",
+      "parent_route": "/o-centre/",
+      "breadcrumbs": [
+        "Главная",
+        "О центре",
+        "Программа лечения"
+      ],
+      "menu_exposure": [
+        "footer"
+      ],
+      "production_blocker": true,
+      "production_blocker_reason": "PLACEHOLDER_CONTENT_PENDING",
+      "wordpress_family": "FAM-INSTITUTIONAL"
+    },
+    {
+      "id": "ROUTE-21",
+      "route": "/o-centre/galereya-o-dome/",
+      "slug": "o-centre/galereya-o-dome",
+      "source_page": "src/pages/o-centre/galereya-o-dome.html",
+      "output": "o-centre/galereya-o-dome/index.html",
+      "title": "Галерея о доме",
+      "h1": "Галерея о доме",
+      "page_type": "INSTITUTIONAL",
+      "classification": "placeholder",
+      "status": "PLACEHOLDER",
+      "content_status": "PLACEHOLDER_PENDING_CONTENT",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-o-centre-galereya-o-dome"
+      },
+      "template_id": "TPL-INSTITUTIONAL",
+      "template_file": "templates/page-institutional.php",
+      "template_variant": "placeholder",
+      "parent_route": "/o-centre/",
+      "breadcrumbs": [
+        "Главная",
+        "О центре",
+        "Галерея о доме"
+      ],
+      "menu_exposure": [
+        "footer"
+      ],
+      "production_blocker": true,
+      "production_blocker_reason": "PLACEHOLDER_CONTENT_PENDING",
+      "wordpress_family": "FAM-INSTITUTIONAL"
+    },
+    {
+      "id": "ROUTE-22",
+      "route": "/o-centre/specialistam/",
+      "slug": "o-centre/specialistam",
+      "source_page": "src/pages/o-centre/specialistam.html",
+      "output": "o-centre/specialistam/index.html",
+      "title": "Специалистам",
+      "h1": "Специалистам",
+      "page_type": "INSTITUTIONAL",
+      "classification": "placeholder",
+      "status": "PLACEHOLDER",
+      "content_status": "PLACEHOLDER_PENDING_CONTENT",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-o-centre-specialistam"
+      },
+      "template_id": "TPL-INSTITUTIONAL",
+      "template_file": "templates/page-institutional.php",
+      "template_variant": "placeholder",
+      "parent_route": "/o-centre/",
+      "breadcrumbs": [
+        "Главная",
+        "О центре",
+        "Специалистам"
+      ],
+      "menu_exposure": [
+        "footer"
+      ],
+      "production_blocker": true,
+      "production_blocker_reason": "PLACEHOLDER_CONTENT_PENDING",
+      "wordpress_family": "FAM-INSTITUTIONAL"
+    },
+    {
+      "id": "ROUTE-23",
+      "route": "/o-centre/rodstvennikam/",
+      "slug": "o-centre/rodstvennikam",
+      "source_page": "src/pages/o-centre/rodstvennikam.html",
+      "output": "o-centre/rodstvennikam/index.html",
+      "title": "Родственникам",
+      "h1": "Родственникам",
+      "page_type": "INSTITUTIONAL",
+      "classification": "placeholder",
+      "status": "PLACEHOLDER",
+      "content_status": "PLACEHOLDER_PENDING_CONTENT",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-o-centre-rodstvennikam"
+      },
+      "template_id": "TPL-INSTITUTIONAL",
+      "template_file": "templates/page-institutional.php",
+      "template_variant": "placeholder",
+      "parent_route": "/o-centre/",
+      "breadcrumbs": [
+        "Главная",
+        "О центре",
+        "Родственникам"
+      ],
+      "menu_exposure": [
+        "footer"
+      ],
+      "production_blocker": true,
+      "production_blocker_reason": "PLACEHOLDER_CONTENT_PENDING",
+      "wordpress_family": "FAM-INSTITUTIONAL"
+    },
+    {
+      "id": "ROUTE-24",
+      "route": "/otzyvy/",
+      "slug": "otzyvy",
+      "source_page": "src/pages/otzyvy.html",
+      "output": "otzyvy/index.html",
+      "title": "Отзывы",
+      "h1": "Отзывы",
+      "page_type": "REVIEWS",
+      "classification": "full",
+      "status": "APPROVED_FULL",
+      "content_status": "CURRENT_DEMO_CONTENT",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-otzyvy"
+      },
+      "template_id": "TPL-REVIEWS",
+      "template_file": "templates/page-reviews.php",
+      "template_variant": "approved-full",
+      "parent_route": null,
+      "breadcrumbs": [
+        "Главная",
+        "Отзывы"
+      ],
+      "menu_exposure": [
+        "header",
+        "mobile"
+      ],
+      "production_blocker": false,
+      "production_blocker_reason": null,
+      "wordpress_family": "FAM-REVIEWS"
+    },
+    {
+      "id": "ROUTE-25",
+      "route": "/blog/",
+      "slug": "blog",
+      "source_page": "src/pages/blog.html",
+      "output": "blog/index.html",
+      "title": "Статьи",
+      "h1": "Статьи",
+      "page_type": "BLOG_ARCHIVE",
+      "classification": "full",
+      "status": "APPROVED_FULL",
+      "content_status": "CURRENT_DEMO_CONTENT",
+      "wordpress_object": {
+        "type": "posts_page",
+        "id": "OBJ-BLOG-ARCHIVE"
+      },
+      "template_id": "TPL-BLOG-ARCHIVE",
+      "template_file": "home.php",
+      "template_variant": "approved-full",
+      "parent_route": null,
+      "breadcrumbs": [
+        "Главная",
+        "Статьи"
+      ],
+      "menu_exposure": [
+        "header",
+        "mobile"
+      ],
+      "production_blocker": false,
+      "production_blocker_reason": null,
+      "wordpress_family": "FAM-BLOG-ARCHIVE"
+    },
+    {
+      "id": "ROUTE-26",
+      "route": "/blog/nazvanie-stati/",
+      "slug": "blog/nazvanie-stati",
+      "source_page": "src/pages/blog/nazvanie-stati.html",
+      "output": "blog/nazvanie-stati/index.html",
+      "title": "Название статьи",
+      "h1": "Название статьи",
+      "page_type": "BLOG_ARTICLE",
+      "classification": "full",
+      "status": "APPROVED_FULL",
+      "content_status": "CURRENT_DEMO_CONTENT",
+      "wordpress_object": {
+        "type": "post",
+        "id": "OBJ-BLOG-FIXTURE",
+        "note": "fixture reference; future posts use same template"
+      },
+      "template_id": "TPL-BLOG-SINGLE",
+      "template_file": "single.php",
+      "template_variant": "approved-full",
+      "parent_route": "/blog/",
+      "breadcrumbs": [
+        "Главная",
+        "Статьи",
+        "Название статьи"
+      ],
+      "menu_exposure": [],
+      "production_blocker": false,
+      "production_blocker_reason": null,
+      "wordpress_family": "FAM-BLOG-ARTICLE"
+    },
+    {
+      "id": "ROUTE-27",
+      "route": "/kontakty/",
+      "slug": "kontakty",
+      "source_page": "src/pages/kontakty.html",
+      "output": "kontakty/index.html",
+      "title": "Контакты",
+      "h1": "Контакты",
+      "page_type": "CONTACTS",
+      "classification": "full",
+      "status": "APPROVED_FULL",
+      "content_status": "CURRENT_DEMO_CONTENT",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-kontakty"
+      },
+      "template_id": "TPL-CONTACTS",
+      "template_file": "templates/page-contacts.php",
+      "template_variant": "approved-full",
+      "parent_route": null,
+      "breadcrumbs": [
+        "Главная",
+        "Контакты"
+      ],
+      "menu_exposure": [
+        "header",
+        "mobile"
+      ],
+      "production_blocker": false,
+      "production_blocker_reason": null,
+      "wordpress_family": "FAM-CONTACTS"
+    },
+    {
+      "id": "ROUTE-28",
+      "route": "/privacy-policy/",
+      "slug": "privacy-policy",
+      "source_page": "src/pages/privacy-policy.html",
+      "output": "privacy-policy/index.html",
+      "title": "Политика конфиденциальности",
+      "h1": "Политика конфиденциальности",
+      "page_type": "LEGAL",
+      "classification": "legal",
+      "status": "LEGAL_DEMO_DOCUMENT",
+      "content_status": "LEGAL_DEMO_PENDING_OPERATOR_DATA",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-privacy-policy"
+      },
+      "template_id": "TPL-LEGAL",
+      "template_file": "templates/page-legal.php",
+      "template_variant": "approved-full",
+      "parent_route": null,
+      "breadcrumbs": [
+        "Главная",
+        "Политика конфиденциальности"
+      ],
+      "menu_exposure": [
+        "footer"
+      ],
+      "production_blocker": true,
+      "production_blocker_reason": "LEGAL_DEMO_TOKENS",
+      "wordpress_family": "FAM-LEGAL-PLAIN"
+    },
+    {
+      "id": "ROUTE-29",
+      "route": "/user-agreement/",
+      "slug": "user-agreement",
+      "source_page": "src/pages/user-agreement.html",
+      "output": "user-agreement/index.html",
+      "title": "Пользовательское соглашение",
+      "h1": "Пользовательское соглашение",
+      "page_type": "LEGAL",
+      "classification": "legal",
+      "status": "LEGAL_DEMO_DOCUMENT",
+      "content_status": "LEGAL_DEMO_PENDING_OPERATOR_DATA",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-user-agreement"
+      },
+      "template_id": "TPL-LEGAL",
+      "template_file": "templates/page-legal.php",
+      "template_variant": "approved-full",
+      "parent_route": null,
+      "breadcrumbs": [
+        "Главная",
+        "Пользовательское соглашение"
+      ],
+      "menu_exposure": [
+        "footer"
+      ],
+      "production_blocker": true,
+      "production_blocker_reason": "LEGAL_DEMO_TOKENS",
+      "wordpress_family": "FAM-LEGAL-PLAIN"
+    },
+    {
+      "id": "ROUTE-30",
+      "route": "/consent-personal-data/",
+      "slug": "consent-personal-data",
+      "source_page": "src/pages/consent-personal-data.html",
+      "output": "consent-personal-data/index.html",
+      "title": "Согласие на обработку персональных данных",
+      "h1": "Согласие на обработку персональных данных",
+      "page_type": "LEGAL",
+      "classification": "legal",
+      "status": "LEGAL_DEMO_DOCUMENT",
+      "content_status": "LEGAL_DEMO_PENDING_OPERATOR_DATA",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-consent-personal-data"
+      },
+      "template_id": "TPL-LEGAL",
+      "template_file": "templates/page-legal.php",
+      "template_variant": "approved-full",
+      "parent_route": null,
+      "breadcrumbs": [
+        "Главная",
+        "Согласие на обработку персональных данных"
+      ],
+      "menu_exposure": [
+        "footer"
+      ],
+      "production_blocker": true,
+      "production_blocker_reason": "LEGAL_DEMO_TOKENS",
+      "wordpress_family": "FAM-LEGAL-PLAIN"
+    },
+    {
+      "id": "ROUTE-31",
+      "route": "/cookie-files-policy/",
+      "slug": "cookie-files-policy",
+      "source_page": "src/pages/cookie-files-policy.html",
+      "output": "cookie-files-policy/index.html",
+      "title": "Политика Cookie-файлов",
+      "h1": "Политика Cookie-файлов",
+      "page_type": "LEGAL",
+      "classification": "legal",
+      "status": "LEGAL_DEMO_DOCUMENT",
+      "content_status": "LEGAL_DEMO_PENDING_OPERATOR_DATA",
+      "wordpress_object": {
+        "type": "page",
+        "id": "OBJ-PAGE-cookie-files-policy"
+      },
+      "template_id": "TPL-LEGAL",
+      "template_file": "templates/page-legal.php",
+      "template_variant": "approved-full",
+      "parent_route": null,
+      "breadcrumbs": [
+        "Главная",
+        "Политика Cookie-файлов"
+      ],
+      "menu_exposure": [
+        "footer"
+      ],
+      "production_blocker": true,
+      "production_blocker_reason": "LEGAL_DEMO_TOKENS",
+      "wordpress_family": "FAM-LEGAL-PLAIN"
+    }
+  ]
+}

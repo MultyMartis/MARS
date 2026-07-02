@@ -1,0 +1,87 @@
+{
+  "schema": "fp-0002-v9-forge-intake",
+  "version": "1.0.0",
+  "generated": "2026-07-02",
+  "stable_commit": "a51376872fbfefb7d5f68a58b440c726d6cf3de3",
+  "stable_tag": "fp-0002-v9-operator-approved-static-frontend-stable-01",
+  "route_count": 31,
+  "excluded_routes": [
+    "/uslugi/genotipirovanie/"
+  ],
+  "blockers": [
+    {
+      "id": "BLK-LEGAL-DEMO",
+      "severity": "launch_critical",
+      "owner": "operator",
+      "routes": [
+        "/privacy-policy/",
+        "/user-agreement/",
+        "/consent-personal-data/",
+        "/cookie-files-policy/"
+      ],
+      "resolution": "Replace DEMO tokens with approved legal data"
+    },
+    {
+      "id": "BLK-PLACEHOLDER-CONTENT",
+      "severity": "launch_critical",
+      "owner": "operator",
+      "routes": [
+        "/uslugi/zavisimosti/profilakticheskiy-analiz/",
+        "/uslugi/zavisimosti/specialistam/",
+        "/uslugi/psihicheskoe-zdorovie/",
+        "/uslugi/psihicheskoe-zdorovie/depressiya/",
+        "/uslugi/psihicheskoe-zdorovie/ptrs/",
+        "/uslugi/psihicheskoe-zdorovie/emocionalnoe-vygoranie/",
+        "/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+        "/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+        "/uslugi/psihicheskoe-zdorovie/travma/",
+        "/uslugi/rasstroystva-pischevogo-povedeniya/",
+        "/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+        "/uslugi/rasstroystva-pischevogo-povedeniya/nervnaya-bulimiya/",
+        "/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/",
+        "/o-centre/o-nas/",
+        "/o-centre/programma-lecheniya/",
+        "/o-centre/galereya-o-dome/",
+        "/o-centre/specialistam/",
+        "/o-centre/rodstvennikam/"
+      ],
+      "resolution": "Complete editorial content before launch indexing"
+    },
+    {
+      "id": "BLK-FORM-BACKEND",
+      "severity": "launch_critical",
+      "owner": "forge",
+      "routes": [
+        "global-modal"
+      ],
+      "resolution": "Implement form handler; currently STATIC_DEMO_NO_BACKEND"
+    },
+    {
+      "id": "BLK-COOKIE-BANNER",
+      "severity": "launch_critical",
+      "owner": "forge",
+      "routes": [
+        "global"
+      ],
+      "resolution": "Cookie consent banner not implemented"
+    },
+    {
+      "id": "BLK-SEO-PLUGIN",
+      "severity": "pre_launch",
+      "owner": "operator",
+      "routes": [
+        "global"
+      ],
+      "resolution": "Select SEO plugin and meta ownership"
+    },
+    {
+      "id": "BLK-SMTP",
+      "severity": "pre_launch",
+      "owner": "operator",
+      "routes": [
+        "global-modal"
+      ],
+      "resolution": "Configure mail delivery"
+    }
+  ]
+}
