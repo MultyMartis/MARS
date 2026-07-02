@@ -1,6 +1,6 @@
 <?php
 /**
- * Main template — foundation placeholder.
+ * Main template — last-resort fallback loop.
  *
  * @package Shpigovsky
  */
@@ -11,24 +11,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 ?>
-<main class="shpigovsky-foundation" id="main-content">
-	<div class="shpigovsky-foundation__inner">
-		<h1><?php esc_html_e( 'FP-0002 LOCAL WORDPRESS FOUNDATION', 'shpigovsky' ); ?></h1>
-		<p><?php esc_html_e( 'Frontend integration has not started.', 'shpigovsky' ); ?></p>
-		<?php if ( have_posts() ) : ?>
-			<?php
-			while ( have_posts() ) :
-				the_post();
-				?>
-				<article <?php post_class( 'shpigovsky-foundation__content' ); ?>>
-					<?php the_title( '<h2>', '</h2>' ); ?>
-					<?php the_content(); ?>
-				</article>
-				<?php
-			endwhile;
+<main class="shpigovsky-skeleton" id="main-content">
+	<?php shpigovsky_render_breadcrumbs(); ?>
+	<?php if ( have_posts() ) : ?>
+		<?php
+		while ( have_posts() ) :
+			the_post();
 			?>
-		<?php endif; ?>
-	</div>
+			<article <?php post_class( 'shpigovsky-skeleton__article' ); ?>>
+				<h1><?php the_title(); ?></h1>
+				<?php the_content(); ?>
+			</article>
+			<?php
+		endwhile;
+		?>
+	<?php else : ?>
+		<p><?php esc_html_e( 'Контент не найден.', 'shpigovsky' ); ?></p>
+	<?php endif; ?>
 </main>
 <?php
 get_footer();

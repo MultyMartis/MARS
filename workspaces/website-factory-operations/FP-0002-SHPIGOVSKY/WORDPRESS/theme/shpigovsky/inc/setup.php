@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Register theme features and menus.
+ * Register theme features and navigation locations.
  */
 function shpigovsky_setup() {
 	load_theme_textdomain( 'shpigovsky', SHPIGOVSKY_THEME_DIR . '/languages' );
@@ -32,9 +32,10 @@ function shpigovsky_setup() {
 
 	register_nav_menus(
 		array(
-			'primary' => __( 'Главное меню', 'shpigovsky' ),
-			'footer'  => __( 'Нижнее меню', 'shpigovsky' ),
-			'legal'   => __( 'Правовое меню', 'shpigovsky' ),
+			'primary'         => __( 'Главное меню', 'shpigovsky' ),
+			'footer_services' => __( 'Нижнее меню — услуги', 'shpigovsky' ),
+			'footer_o_centre' => __( 'Нижнее меню — о центре', 'shpigovsky' ),
+			'legal'           => __( 'Правовое меню', 'shpigovsky' ),
 		)
 	);
 }

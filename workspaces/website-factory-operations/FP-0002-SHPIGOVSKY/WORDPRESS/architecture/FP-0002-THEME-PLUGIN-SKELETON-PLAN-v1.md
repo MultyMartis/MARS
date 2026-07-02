@@ -1,7 +1,7 @@
 # FP-0002 V9-06A Theme and Plugin Skeleton Plan
 
 **Task:** V9-06A.1 | **Date:** 2026-07-03  
-**Status:** Design only — files not created. ACF Pro install deferred to V9-06C prerequisite.
+**Status:** Design complete — **V9-06B skeleton implemented** (2026-07-03). ACF Pro install deferred to V9-06C prerequisite.
 
 ---
 
@@ -55,4 +55,4 @@
 
 ## Delivery note
 
-Skeleton implementation authorized only in **V9-06B** — not this task.
+Skeleton implementation completed in **V9-06B**. See [FP-0002-V9-06B-SKELETON-IMPLEMENTATION-REPORT-v1.md](../reports/FP-0002-V9-06B-SKELETON-IMPLEMENTATION-REPORT-v1.md).

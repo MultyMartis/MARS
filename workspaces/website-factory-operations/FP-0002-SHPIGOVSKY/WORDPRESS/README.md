@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** ARCHITECTURE APPROVED (V9-06A.1)  
+**Status:** V9-06B SKELETON COMPLETE  
 **Classification:** FOUNDATION BASELINE — ARCHITECTURE APPROVED — NO V9 IMPLEMENTATION
 
 ---
@@ -34,9 +34,10 @@ The runtime is **not** the canonical editable source. Delivery flows: Git source
 | Service permalink contract | DEFINED |
 | ACF Pro | **REQUIRED** (OD-001) |
 | BoundedMeta primary path | REJECTED |
-| V9-06B | READY FOR OPERATOR AUTHORIZATION |
+| V9-06B | **COMPLETE** — theme + core skeleton |
+| V9-06C | READY FOR OPERATOR AUTHORIZATION |
 | Runtime changes | 0 |
-| WordPress implementation | NOT STARTED |
+| WordPress implementation | SKELETON ONLY (V9-06B) |
 | FW-07C-2D | SUPERSEDED BY ARCHITECTURE-FIRST SEQUENCE (V9-06D) |
 
 Authority: [architecture/FP-0002-WORDPRESS-ARCHITECTURE-v1.md](architecture/FP-0002-WORDPRESS-ARCHITECTURE-v1.md)
@@ -50,20 +51,18 @@ WORDPRESS/
   architecture/       # V9-06A design pack
   manifests/          # source and package manifests
   packages/           # built ZIP packages
-  theme/shpigovsky/   # adopted foundation theme
-  plugins/shpigovsky-core/
-  acf-json/           # empty foundation state
-  delivery/           # delivery fixtures and proof harness
-  validation/         # validation evidence
-  reports/            # human-readable reports
+  theme/shpigovsky/   # V9-06B skeleton theme
+  plugins/shpigovsky-core/  # V9-06B skeleton plugin
+  validation/         # V9-06B static validation
+  reports/            # implementation reports
 ```
 
 ## Foundation classification
 
 | Surface | Classification |
 |---------|----------------|
-| Theme | ADOPTED — NO V9 IMPLEMENTATION |
-| Shpigovsky Core | ADOPTED — NO NEW CAPABILITIES |
+| Theme | V9-06B SKELETON — NO V9 VISUAL INTEGRATION |
+| Shpigovsky Core | V9-06B SKELETON — MODULES INERT |
 | ACF JSON | EMPTY FOUNDATION STATE |
 
 ## Provenance

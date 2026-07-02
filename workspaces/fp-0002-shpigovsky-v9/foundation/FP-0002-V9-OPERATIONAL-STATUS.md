@@ -118,9 +118,20 @@ Phase **07C-B** Storage package — `SUPERSEDED_FAILED_STATIC_PACKAGING_NOT_FOR_
 
 ## Next phase
 
-**V9-06B — Theme and Core skeleton** — **READY FOR OPERATOR AUTHORIZATION** (not authorized by this document)
+**V9-06C — CPT, ACF Pro fields, admin UX** — **READY FOR OPERATOR AUTHORIZATION** (requires ACF Pro prerequisite)
 
-**V9-06C — ACF Pro fields** — BLOCKED until ACF Pro operational prerequisite satisfied
+---
+
+## V9-06B Theme and Core Skeleton (complete)
+
+- Status: `FP0002_V9_06B_SKELETON_IMPLEMENTATION_COMPLETE`
+- Gate: `forge-intake/validation/FP-0002-V9-06B-SKELETON-IMPLEMENTATION-GATE-v1.md`
+- Report: `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/reports/FP-0002-V9-06B-SKELETON-IMPLEMENTATION-REPORT-v1.md`
+- OD-002 authority: `WORDPRESS/architecture/FP-0002-OD-002-ROUTE-AUTHORITY-v1.md`
+- Canonical source: theme + plugin skeleton under `WORDPRESS/`
+- Runtime delivery: **0**
+- Runtime mutations: **0**
+- WordPress implementation: **SKELETON ONLY (V9-06B)**
 
 ---
 

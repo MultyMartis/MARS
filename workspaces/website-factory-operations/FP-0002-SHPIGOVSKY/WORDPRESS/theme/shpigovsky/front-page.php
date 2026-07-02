@@ -1,6 +1,6 @@
 <?php
 /**
- * Front page — foundation placeholder.
+ * Front page — home section orchestration boundary.
  *
  * @package Shpigovsky
  */
@@ -11,11 +11,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 ?>
-<main class="shpigovsky-foundation shpigovsky-foundation--front" id="main-content">
-	<div class="shpigovsky-foundation__inner">
-		<h1><?php esc_html_e( 'FP-0002 LOCAL WORDPRESS FOUNDATION', 'shpigovsky' ); ?></h1>
-		<p><?php esc_html_e( 'Frontend integration has not started.', 'shpigovsky' ); ?></p>
-	</div>
+<main class="shpigovsky-skeleton shpigovsky-skeleton--front" id="main-content">
+	<?php shpigovsky_render_breadcrumbs(); ?>
+	<?php
+	get_template_part( 'template-parts/home/hero' );
+	get_template_part( 'template-parts/home/feature-grid' );
+	get_template_part( 'template-parts/home/treatment-prevention' );
+	get_template_part( 'template-parts/home/rehabilitation-program' );
+	get_template_part( 'template-parts/home/gallery' );
+	get_template_part( 'template-parts/home/articles-teaser' );
+	get_template_part( 'template-parts/home/faq' );
+	get_template_part( 'template-parts/components/final-form' );
+	?>
 </main>
 <?php
 get_footer();

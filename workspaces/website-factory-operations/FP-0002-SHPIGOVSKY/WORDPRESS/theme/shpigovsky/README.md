@@ -1,20 +1,30 @@
-# Shpigovsky WordPress Theme — Foundation Only
+# Shpigovsky WordPress Theme — V9-06B Skeleton
 
 **Project:** FP-0002  
-**Status:** `FOUNDATION ONLY` / `NOT VISUALLY INTEGRATED`  
-**Runtime:** `http://shpigovsky.test` (local MLI)
+**Status:** `V9-06B SKELETON` / `NOT VISUALLY INTEGRATED`  
+**Version:** `0.2.0-skeleton`
 
 ## Purpose
 
-Minimal project theme skeleton for FP-0002 local WordPress foundation (FW-06A). Does **not** contain approved frontend markup, assets, or templates from `workspaces/fp-0002-shpigovsky-v6/src/`.
+Canonical WordPress theme skeleton for FP-0002. Establishes template hierarchy, global shell boundaries, template-part structure, asset registration boundary, and navigation locations — without V9 markup/CSS/JS integration.
 
 ## Integration gate
 
-Theme integration is **LOCKED** until:
+Visual integration is **LOCKED** until V9-07+ phases. V9 frontend authority remains:
 
-- FP-0002 Frontend Production Pass
-- Approved Forge frontend handoff (FW-06B)
+- `workspaces/fp-0002-shpigovsky-v9/src/`
+- `workspaces/fp-0002-shpigovsky-v9/dist/`
 
-## Screenshot
+## Registered menu locations
 
-No production screenshot until visual integration. Placeholder policy: use neutral foundation state only.
+| Location | Purpose |
+|----------|---------|
+| `primary` | Header navigation |
+| `footer_services` | Footer services column |
+| `footer_o_centre` | Footer o-centre column |
+| `legal` | Legal links |
+
+## Architecture reference
+
+- `WORDPRESS/architecture/FP-0002-WORDPRESS-TEMPLATE-HIERARCHY-v1.md`
+- `WORDPRESS/architecture/FP-0002-TEMPLATE-PART-REGISTRY-v1.json`

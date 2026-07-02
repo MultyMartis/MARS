@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Shpigovsky Core
  * Plugin URI: https://example.invalid/shpigovsky-core
- * Description: FP-0002 functionality plugin — FOUNDATION ONLY. No project content model yet.
- * Version: 0.1.0
+ * Description: FP-0002 functionality plugin — V9-06B skeleton. Module boundaries only; no content model registration yet.
+ * Version: 0.2.0-skeleton
  * Requires at least: 6.0
  * Requires PHP: 8.0
  * Author: Forge WordPress / FP-0002
@@ -17,40 +17,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'SHPIGOVSKY_CORE_VERSION', '0.1.0' );
+define( 'SHPIGOVSKY_CORE_VERSION', '0.2.0-skeleton' );
 define( 'SHPIGOVSKY_CORE_FILE', __FILE__ );
 define( 'SHPIGOVSKY_CORE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SHPIGOVSKY_CORE_URI', plugin_dir_url( __FILE__ ) );
+define( 'SHPIGOVSKY_CORE_SKELETON', true );
 
-require_once SHPIGOVSKY_CORE_DIR . 'includes/class-bootstrap.php';
+require_once SHPIGOVSKY_CORE_DIR . 'inc/compat.php';
+require_once SHPIGOVSKY_CORE_DIR . 'src/Loader/Autoloader.php';
 
-/**
- * Initialize plugin.
- */
-function shpigovsky_core_init() {
-	Shpigovsky_Core_Bootstrap::init();
-}
-add_action( 'plugins_loaded', 'shpigovsky_core_init' );
+Shpigovsky\Core\Loader\Autoloader::register( SHPIGOVSKY_CORE_DIR . 'src' );
 
-/**
- * ACF JSON load path — project source directory.
- *
- * @param array<int, string> $paths Existing paths.
- * @return array<int, string>
- */
-function shpigovsky_core_acf_json_load( $paths ) {
-	$paths[] = trailingslashit( dirname( dirname( SHPIGOVSKY_CORE_DIR ) ) ) . 'acf-json';
-	return $paths;
-}
-add_filter( 'acf/settings/load_json', 'shpigovsky_core_acf_json_load' );
+register_activation_hook( SHPIGOVSKY_CORE_FILE, array( 'Shpigovsky\Core\Plugin', 'activate' ) );
+register_deactivation_hook( SHPIGOVSKY_CORE_FILE, array( 'Shpigovsky\Core\Plugin', 'deactivate' ) );
 
-/**
- * ACF JSON save path.
- *
- * @param string $path Default save path.
- * @return string
- */
-function shpigovsky_core_acf_json_save( $path ) {
-	return trailingslashit( dirname( dirname( SHPIGOVSKY_CORE_DIR ) ) ) . 'acf-json';
-}
-add_filter( 'acf/settings/save_json', 'shpigovsky_core_acf_json_save' );
+add_action(
+	'plugins_loaded',
+	static function () {
+		Shpigovsky\Core\Plugin::init();
+	},
+	5
+);
