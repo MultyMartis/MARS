@@ -10,22 +10,26 @@
 | **Historical TEST** | https://zpm.new-site.space/ |
 | **Production profile** | [../production-profile.md](../production-profile.md) |
 | **Production storage root** | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\` |
-| **Production baseline** | **PENDING** — Run 4.171 partial capture; [../reports/SITE-002-FIRST-PRODUCTION-CAPTURE.md](../reports/SITE-002-FIRST-PRODUCTION-CAPTURE.md) |
-| **Production parity with TEST checkpoints** | **HTTP-level FUNCTIONALLY PRESENT** for corp pages; file-level **NOT VERIFIED** (FTP blocked) |
+| **Production baseline** | **ISSUED** — `SITE-002-STABLE-PROD-INITIAL-01` · [../baselines/SITE-002-STABLE-PROD-INITIAL-01.md](../baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
+| **Production parity with TEST checkpoints** | **VERIFIED** — file + HTTP evidence (Run 4.171-R1) |
 
 **TEST-derived knowledge classification:** Implementation evidence and reusable technical knowledge. **Not** automatic proof of current Production parity.
 
-### Production capture (Run 4.171 — 2026-07-02)
+### Production capture (Run 4.171 / 4.171-R1 — 2026-07-02/03)
 
 | Field | Value |
 |-------|-------|
 | Operation | `SITE-002-PROD-INITIAL-CAPTURE-01` |
 | Report | [../reports/SITE-002-FIRST-PRODUCTION-CAPTURE.md](../reports/SITE-002-FIRST-PRODUCTION-CAPTURE.md) |
 | HTTP verification | **PASS** — homepage + corporate routes |
-| Visual capture | **PARTIAL** — 18/18 screenshots; PDP product_id=50 may be invalid on Production |
+| Visual capture | **PASS** — 18/18 screenshots (Run 4.171) |
 | Admin read-only | **PASS** — OpenCart **3.0.3.9** |
-| FTP/SFTP | **FAIL** — credentials reject login; file inventory and twig baseline **not collected** |
-| Baseline | **NOT ISSUED** — `SITE-002-STABLE-PROD-INITIAL-01` pending FTP fix |
+| FTP/SFTP | **PASS** (retry) — document root `/public_html/`; configured `/bzpm.ru/` empty |
+| File baseline | **24 files** + SHA-256 in capture `downloaded-baseline/` |
+| Active theme | `default` — **CONFIRMED** |
+| First test task | `guarantee.twig` — phrase «понятный порядок действий» **CONFIRMED** |
+| PDP category classes | **MATCH CONFIRMED** in `catalog/controller/product/product.php` |
+| Baseline | **ISSUED** — `SITE-002-STABLE-PROD-INITIAL-01` |
 | Storage | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\captures\SITE-002-PROD-INITIAL-CAPTURE-01\` |
 
 ---

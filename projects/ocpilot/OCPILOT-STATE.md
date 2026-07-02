@@ -1,8 +1,8 @@
 # OCPilot — Program State
 
 **Status:** living state document — **not** automated router  
-**Last updated:** 2026-07-02
-**Evidence cutoff:** 2026-07-02 (SITE-002 Run **4.171** partial Production capture — FTP blocked; HTTP/admin read-only PASS; baseline **not issued**)
+**Last updated:** 2026-07-03
+**Evidence cutoff:** 2026-07-03 (SITE-002 Run **4.171-R1** — Production baseline `SITE-002-STABLE-PROD-INITIAL-01` issued)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Production partial capture (Run 4.171)** — HTTP/admin read-only verified · FTP auth **FAIL** · baseline **not issued** · [SITE-002-FIRST-PRODUCTION-CAPTURE.md](sites/site-002/reports/SITE-002-FIRST-PRODUCTION-CAPTURE.md) |
+| Current SITE-002 focus | **Production baseline ISSUED** — `SITE-002-STABLE-PROD-INITIAL-01` · ready for first controlled Production test · [SITE-002-FIRST-PRODUCTION-CAPTURE.md](sites/site-002/reports/SITE-002-FIRST-PRODUCTION-CAPTURE.md) |
 
 ---
 
@@ -30,16 +30,16 @@
 | Production URL | https://bzpm.ru/ |
 | Environment ID | `site-002-prod` |
 | Production Profile | [sites/site-002/production-profile.md](sites/site-002/production-profile.md) |
-| Production capture (Run 4.171) | **PARTIAL** — [SITE-002-FIRST-PRODUCTION-CAPTURE.md](sites/site-002/reports/SITE-002-FIRST-PRODUCTION-CAPTURE.md) |
-| FTP/SFTP connection | **NOT VERIFIED** — authentication failed |
+| Production capture (Run 4.171 / 4.171-R1) | **COMPLETE** — [SITE-002-FIRST-PRODUCTION-CAPTURE.md](sites/site-002/reports/SITE-002-FIRST-PRODUCTION-CAPTURE.md) |
+| FTP/SFTP connection | **VERIFIED** (read-only) |
 | HTTP verification | **VERIFIED** (homepage + corp pages) |
 | OpenCart admin read-only | **VERIFIED** — version 3.0.3.9 |
 | Historical TEST | **preserved** — https://zpm.new-site.space/ |
-| First Production baseline | **pending** — [SITE-002-PRODUCTION-BASELINE-PENDING.md](sites/site-002/baselines/SITE-002-PRODUCTION-BASELINE-PENDING.md) |
-| First Production test / operation | **pending** — FTP credential fix required |
+| First Production baseline | **ISSUED** — [SITE-002-STABLE-PROD-INITIAL-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
+| First Production test / operation | **READY** — guarantee.twig test task confirmed |
 | Capture storage | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\captures\SITE-002-PROD-INITIAL-CAPTURE-01\` |
 
-Production tooling (deploy / rollback / verification) is **registered, not verified**. Partial read-only capture performed 2026-07-02; file-level baseline blocked by FTP credentials.
+Production tooling (deploy / rollback / verification) is **registered**; read-only capture **verified** 2026-07-02/03. File-level baseline issued as `SITE-002-STABLE-PROD-INITIAL-01`.
 
 ### BZPM UX REDESIGN — project banner
 
@@ -67,7 +67,7 @@ Production tooling (deploy / rollback / verification) is **registered, not verif
 | Authority policy | TEST-era manual UI canonical on historical TEST; **Production parity unverified** |
 | Registry | Active OCPilot-managed site — TEST history complete · Production registered · Production connection pending |
 | Completed | M7.1–M9.7 · Manual UI · M9.8.1/2/5 · operator PLP polish · **product reset** · **fresh 1C import** · **price index recovery (06D/06F)** · **filter hotfixes (06H/06J/06M)** · **filter UX (04–08A)** · **tooltips (01)** · **Commercial Trust (03B/03C + operator polish)** · **catalog state persistence (09A–09C)** · **hub cleanup (10)** · **M9.13 About redesign (re-activated 2026-06-29)** · **Home Commercial Trust CTA (2026-06-29)** |
-| Active stage | **PRODUCTION REGISTERED — CONNECTION PENDING** — first read-only capture and operator credential fill required |
+| Active stage | **PRODUCTION BASELINE ISSUED** — ready for first controlled Production test |
 | Open bugs | **EC-01** — mitigated by subcategories hide (07); M9.8.7 deferred |
 | Next planned | **Production parity / rollout** for corp pages · operator gates B6/B8/B1 · Visual Design **NOT OPEN** · deferred M9.8.3/4/6/8 · **M10** not authorized |
 | Active blockers | **B6** charter approval · **B8** copy sign-off · **B1** МО address · **B3** PLP vs `/dealers` (**governance-only** — does not block corp `/dealers` implementation) — recovery **not** a blocker |

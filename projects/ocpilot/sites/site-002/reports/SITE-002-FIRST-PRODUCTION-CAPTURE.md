@@ -278,6 +278,47 @@ Foreign WIP preserved unstaged.
 ## 19. Final verdict
 
 ```text
+SITE-002-STABLE-PROD-INITIAL-01 ISSUED — READY FOR FIRST CONTROLLED PRODUCTION TEST
+```
+
+---
+
+## FTP RETRY AFTER CREDENTIAL CORRECTION
+
+**Continuation:** Run **4.171-R1** (2026-07-03) — file-level portion only; HTTP/screenshots/admin artefacts from Run 4.171 preserved.
+
+| Step | First attempt (2026-07-02) | Retry (2026-07-03) |
+|------|---------------------------|---------------------|
+| FTP authentication | **FAIL** — `530 Login incorrect` | **PASS** |
+| Initial listing | **FAIL** | **PASS** |
+| Configured remote root | `/bzpm.ru/` | `/bzpm.ru/` (unchanged in secrets) |
+| Detected remote root | SAFE UNKNOWN | **`/public_html/`** |
+| Root match | false | **false** — configured path empty; actual OpenCart root is `/public_html/` |
+| Remote write operations | 0 | **0** |
+
+**Document root confirmation:** `/public_html/` contains `index.php`, `config.php`, `admin/`, `catalog/`, `system/`, `image/` (markers verified by read-only listing). `config.php` / `admin/config.php` not downloaded per policy.
+
+**Inventory:** 2420 visible files, 113 directories (targeted inventory with exclusions for cache/logs/sessions and summarized bulk trees). Artefacts: `ftp-inventory/remote-tree.csv`, `remote-tree.json`, `inventory-summary.json`.
+
+**Downloaded scope:** 24/24 planned baseline files under `downloaded-baseline/` including `catalog/view/theme/default/template/information/guarantee.twig`.
+
+**Checksums:** `manifests/downloaded-files-sha256.csv` — 24 SHA-256 entries.
+
+**Parity:** Updated with file + HTTP evidence — M9.13–M9.18 corp pages **FUNCTIONALLY PRESENT**; PDP body/category classes **MATCH CONFIRMED** in `product.php`; guarantee phrase **CONFIRMED**.
+
+**Baseline gate:** **PASS** (all 13 conditions) — see `manifests/baseline-gate.json`.
+
+**Checkpoint result:** `SITE-002-STABLE-PROD-INITIAL-01` **ISSUED** — storage baseline at `production/baselines/SITE-002-STABLE-PROD-INITIAL-01/`.
+
+**Remote mutation count:** 0 (read-only throughout).
+
+**Operator note:** Update `remote_root` in secrets `PRODUCTION` section to `/public_html/` when convenient — not changed automatically by this run.
+
+---
+
+## 19 (historical). Final verdict (first attempt)
+
+```text
 PRODUCTION CAPTURE PARTIAL — BASELINE NOT ISSUED
 ```
 

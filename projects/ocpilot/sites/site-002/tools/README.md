@@ -10,6 +10,7 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `site-002-prod-http-capture.py` | HTTP-only checks when FTP unavailable |
 | `site-002-prod-screenshots.py` | Playwright desktop/mobile screenshots |
 | `site-002-prod-admin-readonly.py` | OpenCart admin read-only dashboard inspection |
+| `site-002-prod-ftp-retry.py` | FTP retry — inventory + baseline download only (Run 4.171-R1) |
 
 ## Dependencies
 

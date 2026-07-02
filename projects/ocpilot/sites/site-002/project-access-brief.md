@@ -1,8 +1,8 @@
 # Project Access Brief
 
 **Site ID:** SITE-002  
-**Status:** **PRODUCTION PARTIAL CAPTURE — BASELINE PENDING**
-**Run:** 4.171 — SITE-002 First Read-Only Production Capture (2026-07-02)
+**Status:** **PRODUCTION BASELINE ISSUED — READY FOR FIRST CONTROLLED TEST**
+**Run:** 4.171-R1 — SITE-002 Production FTP retry (2026-07-03)
 
 **Do not record:** passwords, tokens, credentials, secret URLs, or live `config.php` values.
 
@@ -22,7 +22,7 @@ Production profile: [production-profile.md](production-profile.md)
 | Historical TEST URL | https://zpm.new-site.space/ |
 | Current operational environment | **PRODUCTION** |
 | Platform | ocStore / OpenCart |
-| Version | SAFE UNKNOWN |
+| Version | **3.0.3.9** (Production admin + FTP baseline, Run 4.171 / 4.171-R1) |
 | Production Profile | [production-profile.md](production-profile.md) |
 
 ---
@@ -53,8 +53,8 @@ Production profile: [production-profile.md](production-profile.md)
 | Role | Current operational website authority |
 | Credential source | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\secrets\secrets.md` |
 | Credential section | `PRODUCTION` |
-| Connection status | **PARTIAL** — HTTP 200 + admin read-only PASS; FTP auth FAIL |
-| Write status | **DISABLED UNTIL FIRST PRODUCTION OPERATION IS AUTHORIZED** |
+| Connection status | **VERIFIED** — HTTP + admin read-only + FTP read-only (Run 4.171-R1) |
+| Write status | **DISABLED UNTIL FIRST PRODUCTION OPERATION IS EXPLICITLY AUTHORIZED** |
 | Database | **EXCLUDED BY DEFAULT** |
 
 ---
@@ -63,7 +63,7 @@ Production profile: [production-profile.md](production-profile.md)
 
 | Access type | TEST | Production | Credential location |
 |-------------|------|------------|---------------------|
-| FTP / SFTP | Populated in secrets | **AUTH FAIL** — operator verify Beget credentials | External secrets file — `TEST` / `PRODUCTION` sections |
+| FTP / SFTP | Populated in secrets | **VERIFIED** (read-only, document root `/public_html/`) | External secrets file — `TEST` / `PRODUCTION` sections |
 | Hosting panel | Partial in secrets | **PENDING** | External secrets file |
 | SSH | Populated in secrets (TEST) | **PENDING** | External secrets file |
 | OpenCart admin | Populated in secrets (TEST) | **PENDING** | External secrets file |

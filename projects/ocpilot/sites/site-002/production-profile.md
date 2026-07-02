@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-02 (Run 4.171 partial capture)
+**Last updated:** 2026-07-03 (Run 4.171-R1 — Production baseline issued)
 
 ---
 
@@ -11,9 +11,9 @@
 
 | Field | Value |
 |-------|-------|
-| Profile status | **REGISTERED — PARTIALLY CONNECTED** |
-| Remote access status | **HTTP/ADMIN VERIFIED · FTP NOT VERIFIED** |
-| Production operations | **NOT YET AUTHORIZED** |
+| Profile status | **REGISTERED — CONNECTED (READ-ONLY VERIFIED)** |
+| Remote access status | **HTTP/ADMIN/FTP VERIFIED (read-only)** |
+| Production operations | **READY FOR FIRST CONTROLLED TEST** (write still requires explicit authorization) |
 
 ---
 
@@ -50,7 +50,7 @@ Previous implementation and verification environment. Preserve as historical evi
 
 | Field | Value |
 |-------|-------|
-| Production parity with latest TEST checkpoints | **SAFE UNKNOWN** |
+| Production parity with latest TEST checkpoints | **FILE + HTTP VERIFIED** (Run 4.171-R1) — corp pages FUNCTIONALLY PRESENT |
 
 Do not claim that Production exactly matches TEST unless evidence proves it.
 
@@ -68,7 +68,7 @@ Do not claim that Production exactly matches TEST unless evidence proves it.
 | Technical knowledge map | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) |
 | Current M9.x baselines | [baselines/](baselines/) — TEST-proven checkpoints |
 | Post-corporate-page checkpoints | Home Commercial Trust · Corporate Intro · Custom Proof Strip · Delivery Summary · PDP Body Category Classes |
-| Production baseline placeholder | [baselines/SITE-002-PRODUCTION-BASELINE-PENDING.md](baselines/SITE-002-PRODUCTION-BASELINE-PENDING.md) |
+| Production baseline placeholder | [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
 
 ---
 
@@ -91,7 +91,7 @@ Production is **believed** to inherit the transferred TEST state including:
 | Classification | Value |
 |----------------|-------|
 | Implementation evidence | **TEST-PROVEN IMPLEMENTATION** |
-| Production parity | **PRODUCTION PARITY NOT YET VERIFIED** |
+| Production parity | **VERIFIED** (HTTP + file baseline, Run 4.171-R1) |
 
 ---
 
@@ -231,12 +231,12 @@ Deploy-tool preparation is a **separate task**.
 | Production URL | **REGISTERED** |
 | Storage bindings | **REGISTERED** |
 | Credential slots | **REGISTERED** |
-| Credentials populated | **YES** (FTP credentials reject login — operator verification required) |
+| Credentials populated | **YES** |
 | HTTP connection | **VERIFIED** (Run 4.171) |
 | Admin read-only connection | **VERIFIED** (Run 4.171) |
-| FTP/SFTP connection | **NOT VERIFIED** — authentication failed |
-| Remote listing | **NOT PERFORMED** |
-| Production baseline | **PENDING** — partial capture 2026-07-02 |
+| FTP/SFTP connection | **VERIFIED** (Run 4.171-R1) |
+| Remote listing | **VERIFIED** — document root `/public_html/` |
+| Production baseline | **ISSUED** — `SITE-002-STABLE-PROD-INITIAL-01` (2026-07-02) |
 | Deploy profile | **REGISTERED, NOT VERIFIED** |
 | Rollback profile | **REGISTERED, NOT VERIFIED** |
 | Verification profile | **REGISTERED, NOT VERIFIED** |
