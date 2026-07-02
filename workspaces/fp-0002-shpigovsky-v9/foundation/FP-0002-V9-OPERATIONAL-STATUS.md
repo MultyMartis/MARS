@@ -1,7 +1,7 @@
 # FP-0002 V9 Operational Status
 
-**Updated:** 2026-07-02 (Phase V9-03 stable baseline checkpoint)  
-**Status:** `FP0002_V9_OPERATOR_APPROVED_STATIC_FRONTEND_STABLE_BASELINE_COMPLETE`
+**Updated:** 2026-07-02 (Phase V9-05A foundation adoption gate)  
+**Status:** `FP0002_V9_APPROVED_FRONTEND_INTAKE_AND_FOUNDATION_ADOPTED`
 
 ## Authority model
 
@@ -43,9 +43,16 @@ Phase **07C-B** Storage package — `SUPERSEDED_FAILED_STATIC_PACKAGING_NOT_FOR_
 - Placeholder page content
 - No form backend; no cookie banner
 
+## V9-05A Approved Frontend Intake (complete)
+
+- Status: `FP0002_V9_APPROVED_FRONTEND_INTAKE_APPROVED`
+- Gate: `forge-intake/validation/FP-0002-V9-05A-APPROVED-FRONTEND-INTAKE-GATE-v1.md`
+- Foundation: **ADOPTED** — reuse prepared WordPress with controlled V9 integration
+- WordPress implementation: **not started**
+
 ## Next phase
 
-**V9-05 — Forge WordPress Implementation Environment Gate and Execution Plan**
+**V9-05B — Pre-Implementation Runtime Checkpoint** (`foundation-002-v9-pre-implementation`)
 
 ## V9-04 Forge Intake Pack (complete)
 

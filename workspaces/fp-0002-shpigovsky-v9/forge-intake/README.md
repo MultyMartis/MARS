@@ -1,12 +1,14 @@
 # FP-0002 V9 Forge WordPress Intake Pack
 
-**Phase:** V9-04  
+**Phase:** V9-05A  
 **Date:** 2026-07-02  
-**Stable baseline:** `fp-0002-v9-operator-approved-static-frontend-stable-01` @ `a51376872fbfefb7d5f68a58b440c726d6cf3de3`
+**Stable baseline:** `fp-0002-v9-operator-approved-static-frontend-stable-01` @ `a51376872fbfefb7d5f68a58b440c726d6cf3de3`  
+**Intake gate:** V9-05A **APPROVED** — foundation **ADOPTED**
 
-## Entry document
+## Entry documents
 
-[FP-0002-V9-FORGE-WORDPRESS-INTAKE-PACK-v1.md](./FP-0002-V9-FORGE-WORDPRESS-INTAKE-PACK-v1.md)
+- [FP-0002-V9-FORGE-WORDPRESS-INTAKE-PACK-v1.md](./FP-0002-V9-FORGE-WORDPRESS-INTAKE-PACK-v1.md) — V9-04 contract pack
+- [FP-0002-V9-05A-APPROVED-FRONTEND-INTAKE-GATE-v1.md](./validation/FP-0002-V9-05A-APPROVED-FRONTEND-INTAKE-GATE-v1.md) — **V9-05A gate (APPROVED)**
 
 ## Structure
 
@@ -36,4 +38,4 @@
 npm run validate:forge-intake
 ```
 
-**WordPress implementation is NOT authorized by this pack alone** — requires FW-06B operator charter and environment gate (V9-05).
+**WordPress implementation is NOT authorized** — requires V9-05B checkpoint, V9-05C admission, and FW-07C-2 charter.

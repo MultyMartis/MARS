@@ -18,7 +18,7 @@ FW-05 — COMPLETE (PROVEN WITH LIMITATIONS)
 FW-05R — COMPLETE (PROVEN WITH LIMITATIONS)
 FW-06A — COMPLETE (FP-0002 local foundation)
 FW-06A.1 — COMPLETE (FP-0002 foundation closure)
-FW-06B — WAITING FOR FRONTEND PRODUCTION PASS
+FW-06B — APPROVED FRONTEND INTAKE (V9-05A) — COMPLETE
 FW-07A — COMPLETE (AG-WP-001 foundation)
 FW-07B — COMPLETE (AG-WP-001 typed operations)
 FW-07C — Safety Preflight — COMPLETE (2026-06-25)
@@ -39,12 +39,12 @@ Synthetic validation: COMPLETE (FWS-0001 static + live)
 Local environment: PROVEN WITH LIMITATIONS (MLI Profile A)
 Local Laragon profile: ENABLED (MLI-03) — Laragon at X:\MARS-Localhost\laragon
 FW-05R — COMPLETE (PROVEN WITH LIMITATIONS)
-FW-06B — WAITING FOR FRONTEND PRODUCTION PASS
+FW-06B — APPROVED FRONTEND INTAKE (V9-05A) — COMPLETE
 Operator WV6: PENDING
 Direct local domain: PASS (FP-0002 — FW-06A.1)
 Synthetic source: TRACKED (Git whitelist)
 Agent registration: REGISTERED (AG-WP-001 — SYNTHETIC READ-ONLY CAPABILITY ONLY; NOT PRODUCTION READY)
-Client pilot: NOT STARTED — WordPress foundation READY; theme integration LOCKED until FW-06B
+Client pilot: NOT STARTED — WordPress foundation ADOPTED; implementation LOCKED until V9-05B + V9-05C + FW-07C-2
 ```
 
 | Field | Value |
@@ -213,7 +213,7 @@ WPilot does **not** own theme/content architecture.
 
 ## First probable pilot
 
-**FP-0002 — Shpigovsky.ru** — FW-06A foundation **READY** on `shpigovsky.test`; frontend integration **HOLD**; see [projects/fp-0002/](projects/fp-0002/).
+**FP-0002 — Shpigovsky.ru** — FW-06A foundation **READY**; V9-05A intake **APPROVED**; foundation **ADOPTED**; implementation **LOCKED** until V9-05B + V9-05C + FW-07C-2; see [projects/fp-0002/](projects/fp-0002/).
 
 ---
 
@@ -246,11 +246,11 @@ BLOCKED / NOT AUTHORIZED
 ## Next authorized stage
 
 ```text
-FW-06B — Approved Frontend Intake (FP-0002) — WAITING
+V9-05B — Pre-Implementation Runtime Checkpoint (FP-0002)
+V9-05C — Shpigovsky Read-Only Admission — NOT STARTED
 FW-07C-2 — BLOCKED — SEPARATE OPERATOR CHARTER REQUIRED
-Return to FP-0002 Shpigovsky frontend work
 ```
 
 ---
 
-*Last updated: 2026-07-02 — FW-07C-1 X-runtime authority repaired and revalidated.*
+*Last updated: 2026-07-02 — V9-05A approved frontend intake and foundation adoption.*

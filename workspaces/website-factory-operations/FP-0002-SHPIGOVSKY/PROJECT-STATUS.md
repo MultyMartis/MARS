@@ -1,7 +1,7 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-02 (V9-04 Forge WordPress Intake Pack checkpoint)
+**Last updated:** 2026-07-02 (V9-05A approved frontend intake + foundation adoption)
 
 ## Active frontend workspace (V9)
 
@@ -10,7 +10,9 @@
 | Workspace | `workspaces/fp-0002-shpigovsky-v9/` |
 | Static baseline | `FP0002_V9_OPERATOR_APPROVED_STATIC_FRONTEND_STABLE_BASELINE_COMPLETE` |
 | Intake pack | `FP0002_V9_FORGE_WORDPRESS_INTAKE_PACK_COMPLETE` |
-| Phase | V9-04 complete → **V9-05 Forge WP environment gate** |
+| Intake gate (V9-05A) | `FP0002_V9_APPROVED_FRONTEND_INTAKE_APPROVED` |
+| WordPress foundation | **ADOPTED** — prepared MLI site, not legacy discard |
+| Phase | V9-05A complete → **V9-05B pre-implementation checkpoint** |
 | Dist output | Clean-route static site in `dist/` (root-relative `/assets/...`) |
 | Route manifest | `workspaces/fp-0002-shpigovsky-v9/tools/v9-route-manifest.json` (31 routes) |
 | Forge intake pack | `workspaces/fp-0002-shpigovsky-v9/forge-intake/` |

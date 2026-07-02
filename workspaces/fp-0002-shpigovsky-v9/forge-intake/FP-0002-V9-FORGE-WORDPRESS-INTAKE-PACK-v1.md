@@ -71,6 +71,12 @@ Complete formal contract for Forge / AG-WP-001 to implement WordPress theme and 
 - [Acceptance matrix](./validation/FP-0002-V9-04-FORGE-ACCEPTANCE-MATRIX-v1.md)
 - [Intake pack review](./validation/FP-0002-V9-04-INTAKE-PACK-REVIEW-v1.md)
 
+### V9-05A gate (complete)
+- [Approved frontend intake gate](./validation/FP-0002-V9-05A-APPROVED-FRONTEND-INTAKE-GATE-v1.md)
+- [Foundation adoption register](./registers/FP-0002-V9-05A-WORDPRESS-FOUNDATION-ADOPTION-REGISTER-v1.md)
+- [Route conflict register](./registers/FP-0002-V9-05A-ROUTE-CONFLICT-REGISTER-v1.md)
+- [Pre-implementation gate sequence](./validation/FP-0002-V9-05A-PRE-IMPLEMENTATION-GATE-SEQUENCE-v1.md)
+
 ### Registers
 - [Production blockers](./registers/FP-0002-V9-04-PRODUCTION-BLOCKER-REGISTER-v1.md)
 - [Risks](./registers/FP-0002-V9-04-FORGE-RISK-REGISTER-v1.md)
@@ -97,12 +103,14 @@ Complete formal contract for Forge / AG-WP-001 to implement WordPress theme and 
 
 ## Next action for Forge
 
-**V9-05 — Forge WordPress Implementation Environment Gate and Execution Plan**
+**V9-05B — Pre-Implementation Runtime Checkpoint** — see [V9-05A gate sequence](./validation/FP-0002-V9-05A-PRE-IMPLEMENTATION-GATE-SEQUENCE-v1.md).
 
-1. Verify FW-06B operator charter.
-2. Run `npm run validate:forge-intake`.
-3. Provision local WP against existing foundation (`shpigovsky.test`).
-4. Begin F0–F1 only after gate PASS — no production mutations.
+V9-05A (approved frontend intake + foundation adoption): **COMPLETE** — [gate document](./validation/FP-0002-V9-05A-APPROVED-FRONTEND-INTAKE-GATE-v1.md).
+
+1. Execute V9-05B checkpoint (`foundation-002-v9-pre-implementation`).
+2. Run V9-05C read-only Shpigovsky admission.
+3. Obtain FW-07C-2 operator charter.
+4. Begin V9-06 reconciliation only after above gates PASS.
 
 ## Constraints
 
