@@ -1,0 +1,10 @@
+{
+  "phase": "V9-06D.4",
+  "result": "NOT READY",
+  "reason": "Preflight FAIL — no DB checkpoint created; no seed applied",
+  "db_dump": null,
+  "modified_object_ids": [],
+  "modified_fields": [],
+  "rollback_tested": false,
+  "rollback_not_executed_reason": "No apply performed; rollback not required"
+}

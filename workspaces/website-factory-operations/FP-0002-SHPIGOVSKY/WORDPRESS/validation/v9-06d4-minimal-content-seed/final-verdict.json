@@ -1,0 +1,159 @@
+{
+  "phase": "V9-06D.4",
+  "timestamp": "2026-07-04T04:38:56+07:00",
+  "verdict": "BLOCKED",
+  "v9_06d4": "NOT COMPLETE",
+  "minimal_content_seed": "NOT COMPLETE",
+  "authorized_pages": "0",
+  "authorized_services": "0",
+  "unauthorized_object_writes": 0,
+  "route_qa_readiness": "BLOCKED",
+  "rewrite_flush": "NOT PERFORMED",
+  "content_migration": "NOT PERFORMED",
+  "v9_integration": "NOT STARTED",
+  "menus": "UNCHANGED",
+  "redirects": "NOT CREATED",
+  "options_page_values": "UNCHANGED",
+  "runtime_health": "NOT_CHECKED",
+  "rollback_readiness": "NOT READY",
+  "v9_06d5": "BLOCKED",
+  "blocker": {
+    "id": "PREFLIGHT_LOCAL_REMOTE_HEAD_MISMATCH",
+    "summary": "Local HEAD is ahead of remote by 1 unrelated commit; task requires local==remote at 35743338349d0e62d87d409aa216d6c3ce51d4b4 with ahead=0 behind=0",
+    "local_head": "a917323e627ac2c3a850bd81f9cb9d462ef9bb11",
+    "remote_head": "35743338349d0e62d87d409aa216d6c3ce51d4b4",
+    "ahead_commit_subject": "Add MARS system maturity overlay v1",
+    "ahead_commit_files": [
+      "governance/mars-system-maturity-overlay-v1.md"
+    ]
+  },
+  "checks_summary": {
+    "total": 22,
+    "passed": 4,
+    "failed": 1,
+    "skipped": 17
+  },
+  "required_checks": [
+    {
+      "id": 1,
+      "name": "exact X volume",
+      "result": "PASS"
+    },
+    {
+      "id": 2,
+      "name": "local/remote HEAD synchronized",
+      "result": "FAIL"
+    },
+    {
+      "id": 3,
+      "name": "runtime health pass before writes",
+      "result": "SKIPPED"
+    },
+    {
+      "id": 4,
+      "name": "DB dump created",
+      "result": "SKIPPED"
+    },
+    {
+      "id": 5,
+      "name": "authorized object IDs exist",
+      "result": "SKIPPED"
+    },
+    {
+      "id": 6,
+      "name": "dry-run object count = 7",
+      "result": "SKIPPED"
+    },
+    {
+      "id": 7,
+      "name": "no unauthorized object write planned",
+      "result": "SKIPPED"
+    },
+    {
+      "id": 8,
+      "name": "no menu changes planned/performed",
+      "result": "PASS",
+      "detail": "No writes performed"
+    },
+    {
+      "id": 9,
+      "name": "no options changes planned/performed",
+      "result": "PASS",
+      "detail": "No writes performed"
+    },
+    {
+      "id": 10,
+      "name": "no redirects planned/performed",
+      "result": "PASS",
+      "detail": "No writes performed"
+    },
+    {
+      "id": 11,
+      "name": "rewrite flush not performed",
+      "result": "PASS"
+    },
+    {
+      "id": 12,
+      "name": "no V9 integration",
+      "result": "PASS"
+    },
+    {
+      "id": 13,
+      "name": "no V9 source/dist changes",
+      "result": "PASS"
+    },
+    {
+      "id": 14,
+      "name": "ACF Extended PRO not used",
+      "result": "PASS"
+    },
+    {
+      "id": 15,
+      "name": "ACF PRO not updated",
+      "result": "PASS"
+    },
+    {
+      "id": 16,
+      "name": "no plugin changes",
+      "result": "PASS"
+    },
+    {
+      "id": 17,
+      "name": "only authorized objects modified",
+      "result": "PASS",
+      "detail": "0 objects modified"
+    },
+    {
+      "id": 18,
+      "name": "Pages total unchanged",
+      "result": "SKIPPED"
+    },
+    {
+      "id": 19,
+      "name": "Services total unchanged at 15",
+      "result": "SKIPPED"
+    },
+    {
+      "id": 20,
+      "name": "Posts total unchanged",
+      "result": "SKIPPED"
+    },
+    {
+      "id": 21,
+      "name": "visual route QA URL list evaluated",
+      "result": "SKIPPED"
+    },
+    {
+      "id": 22,
+      "name": "rollback readiness documented",
+      "result": "SKIPPED"
+    }
+  ],
+  "total_failures": 1,
+  "rewrite_micro_gate_required": false,
+  "recommended_next_action": "OPERATOR_DECISION_REQUIRED",
+  "operator_options": [
+    "Push a917323e (maturity overlay) so local==remote, then re-issue V9-06D.4 with required HEAD a917323e627ac2c3a850bd81f9cb9d462ef9bb11",
+    "Explicitly authorize V9-06D.4 to proceed from current local HEAD a917323e627ac2c3a850bd81f9cb9d462ef9bb11 despite ahead=1"
+  ]
+}

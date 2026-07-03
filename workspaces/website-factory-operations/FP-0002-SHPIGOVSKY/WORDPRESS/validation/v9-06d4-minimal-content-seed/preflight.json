@@ -1,0 +1,70 @@
+{
+  "phase": "V9-06D.4",
+  "timestamp": "2026-07-04T04:38:56+07:00",
+  "volume": {
+    "DriveLetter": "X",
+    "FileSystemLabel": "AI WS",
+    "FileSystem": "NTFS",
+    "HealthStatus": "Healthy"
+  },
+  "repository": "X:\\AI MARS",
+  "branch": "mars/canonical-post-recovery",
+  "local_head": "a917323e627ac2c3a850bd81f9cb9d462ef9bb11",
+  "remote_tracking_head": "35743338349d0e62d87d409aa216d6c3ce51d4b4",
+  "remote_actual_head": "35743338349d0e62d87d409aa216d6c3ce51d4b4",
+  "required_local_head": "35743338349d0e62d87d409aa216d6c3ce51d4b4",
+  "required_remote_head": "35743338349d0e62d87d409aa216d6c3ce51d4b4",
+  "ahead": 1,
+  "behind": 0,
+  "ahead_commit": {
+    "hash": "a917323e627ac2c3a850bd81f9cb9d462ef9bb11",
+    "subject": "Add MARS system maturity overlay v1",
+    "files": [
+      "governance/mars-system-maturity-overlay-v1.md"
+    ],
+    "fp0002_related": false
+  },
+  "staged_files": [],
+  "staged_count": 0,
+  "merge_head": false,
+  "rebase_apply": false,
+  "rebase_merge": false,
+  "foreign_wip_present": true,
+  "foreign_wip_note": "Unstaged/untracked foreign WIP present; excluded from scope",
+  "checks": [
+    {
+      "id": "volume_identity",
+      "result": "PASS",
+      "detail": "DriveLetter=X FileSystemLabel=AI WS HealthStatus=Healthy"
+    },
+    {
+      "id": "branch",
+      "result": "PASS",
+      "detail": "mars/canonical-post-recovery"
+    },
+    {
+      "id": "local_remote_head_sync",
+      "result": "FAIL",
+      "detail": "Local HEAD a917323e627ac2c3a850bd81f9cb9d462ef9bb11 differs from remote HEAD 35743338349d0e62d87d409aa216d6c3ce51d4b4; ahead=1 behind=0"
+    },
+    {
+      "id": "required_head_match",
+      "result": "FAIL",
+      "detail": "Task requires Local/Remote HEAD 35743338349d0e62d87d409aa216d6c3ce51d4b4 with ahead=0 behind=0"
+    },
+    {
+      "id": "staged_files_clean",
+      "result": "PASS",
+      "detail": "0 staged files"
+    },
+    {
+      "id": "no_merge_rebase",
+      "result": "PASS",
+      "detail": "No merge or rebase in progress"
+    }
+  ],
+  "stop_condition_triggered": "local HEAD differs from remote HEAD",
+  "runtime_writes_performed": false,
+  "database_writes_performed": false,
+  "result": "FAIL"
+}
