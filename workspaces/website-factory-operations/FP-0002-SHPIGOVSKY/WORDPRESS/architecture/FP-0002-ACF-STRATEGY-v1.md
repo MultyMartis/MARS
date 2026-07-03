@@ -43,7 +43,7 @@
 
 **Admin label:** `Настройки сайта`  
 **Owner:** Shpigovsky Core + ACF Pro Options Page  
-**Implementation phase:** V9-06C (requires ACF Pro package prerequisite)
+**Implementation phase:** V9-06C (ACF PRO dependency admitted in V9-06B.2; implementation still requires separate authorization)
 
 | Group | Fields (bounded) |
 |-------|------------------|
@@ -101,7 +101,7 @@ All 13 conceptual groups retained. Repeaters implemented as **ACF Pro Repeater f
 
 | Path | Role |
 |------|------|
-| `WORDPRESS/acf-json/` | Canonical ACF Pro JSON export |
+| `WORDPRESS/acf-json/` | Canonical ACF Pro JSON export; no runtime writes in V9-06B.2 |
 | Runtime | Sync via `shpigovsky-core` load/save hooks |
 
 ---
@@ -124,17 +124,16 @@ V9-06A proposed ACF Free + custom BoundedMeta companion.
 
 ## 9. V9-06C ACF Pro operational prerequisite
 
-V9-06C **NOT READY** until:
+V9-06B.2 dependency admission result:
 
-- [ ] Approved ACF Pro package/source available locally
-- [ ] Local-only license handling documented
-- [ ] Git exclusion of license keys verified
-- [ ] Package provenance recorded
-- [ ] Version pinned
-- [ ] Checkpoint before install
-- [ ] Local install/activation validated
-- [ ] No automatic updates without operator approval
-- [ ] Production licensing decision recorded separately
+- [x] ACF PRO installed locally by operator
+- [x] ACF PRO active and capability-sufficient
+- [x] Operator-managed external dependency classification recorded
+- [x] Git exclusion of plugin source, ZIPs, and license keys preserved
+- [x] Version and plugin basename recorded
+- [x] File hash manifest recorded
+- [x] No automatic updates without explicit operator approval
+- [x] Production licensing decision remains operator-owned and separate
 
 **V9-06B** theme/core skeleton **may proceed** without ACF Pro install if no ACF-dependent runtime functionality executes.
 
@@ -147,9 +146,19 @@ ACF Pro:              REQUIRED FOR FP-0002
 Flexible Content:     FORBIDDEN
 BoundedMeta primary:  REJECTED_FOR_FP0002
 Options Page:         Настройки сайта (V9-06C)
-V9-06C prerequisite:  ACF Pro package — NOT SATISFIED
+V9-06C prerequisite:  ACF PRO admitted — READY FOR OPERATOR AUTHORIZATION
 ```
 
 ---
 
 *No ACF installation or field group creation in V9-06A.1.*
+
+## 9.1 V9-06B.2 operator-managed ACF admission
+
+ACF PRO v6.8.5 is active and capability-sufficient for the approved FP-0002 ACF path. It is admitted only as an **operator-managed external dependency**: public API use is allowed after admission, while install/update/delete/replacement/package delivery/license handling remain forbidden to MARS.
+
+ACF Extended PRO v0.9.2.3 is active but **not required** and **not approved** for FP-0002 use by default. Recommendation: KEEP_ACTIVE_BUT_NOT_USED.
+
+V9-06C status after admission: **READY FOR OPERATOR AUTHORIZATION**, not automatically authorized.
+
+

@@ -1,4 +1,4 @@
-﻿# Forge WordPress — Operational Index
+# Forge WordPress — Operational Index
 
 **Subsystem:** Forge WordPress (WP Forge)  
 **Parent:** [MARS Website Factory](../../OPERATIONAL-INDEX.md)  
@@ -44,7 +44,7 @@ Operator WV6: PENDING
 Direct local domain: PASS (FP-0002 — FW-06A.1)
 Synthetic source: TRACKED (Git whitelist)
 Agent registration: REGISTERED (AG-WP-001 — SYNTHETIC READ-ONLY CAPABILITY ONLY; NOT PRODUCTION READY)
-Client pilot: NOT STARTED — WordPress foundation ADOPTED; V9-05C read-only admission PASS; V9-06A architecture DESIGN COMPLETE; WordPress implementation NOT STARTED
+Client pilot: FP-0002 V9-06B.2 ACF dependency admission PASS; V9-06C ready for operator authorization; runtime mutations 0
 ```
 
 | Field | Value |
@@ -213,7 +213,7 @@ WPilot does **not** own theme/content architecture.
 
 ## First probable pilot
 
-**FP-0002 — Shpigovsky.ru** — FW-06A foundation **READY**; V9-05A intake **APPROVED**; foundation **ADOPTED**; V9-05C read-only admission **PASS**; **V9-06A architecture DESIGN COMPLETE**; WordPress implementation **NOT STARTED**; see [projects/fp-0002/](projects/fp-0002/) · [architecture pack](../../../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/architecture/FP-0002-WORDPRESS-ARCHITECTURE-v1.md).
+**FP-0002 — Shpigovsky.ru** — V9-06B.2 ACF dependency admission **PASS**; ACF PRO operator-managed dependency **ADMITTED**; V9-06C **READY FOR OPERATOR AUTHORIZATION** and **NOT AUTHORIZED**; see [projects/fp-0002/](projects/fp-0002/) · [ACF admission report](../../../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/reports/FP-0002-V9-06B2-ACF-OPERATOR-DEPENDENCY-ADMISSION-REPORT-v1.md).
 
 ---
 
@@ -278,4 +278,7 @@ Proof receipt: [FP-0002-FW-07C-2C-FILESYSTEM-DELIVERY-PROOF-RECEIPT-v1.md](proje
 
 ---
 
-*Last updated: 2026-07-03 — FW-07C-2C bounded filesystem delivery proof PASS.*
+*Last updated: 2026-07-04 — FP-0002 V9-06B.2 operator-managed ACF dependency admission PASS.*
+
+
+

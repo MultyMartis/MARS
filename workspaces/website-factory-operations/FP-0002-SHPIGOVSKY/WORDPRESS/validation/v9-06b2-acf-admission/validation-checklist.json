@@ -1,0 +1,61 @@
+{
+  "generated_at": "2026-07-03T18:39:42.4560361Z",
+  "total_checks": 13,
+  "passed": 13,
+  "failed": 0,
+  "result": "PASS",
+  "checks": [
+    {
+      "result": true,
+      "check": "ACF PRO inventoried"
+    },
+    {
+      "result": true,
+      "check": "ACF PRO active"
+    },
+    {
+      "result": true,
+      "check": "ACF PRO capability sufficient"
+    },
+    {
+      "result": true,
+      "check": "ACF PRO operator-managed policy emitted"
+    },
+    {
+      "result": true,
+      "check": "ACF PRO update policy ALWAYS_IGNORE"
+    },
+    {
+      "result": true,
+      "check": "ACF PRO package delivery FORBIDDEN"
+    },
+    {
+      "result": true,
+      "check": "ACF Extended PRO inventoried"
+    },
+    {
+      "result": true,
+      "check": "ACF Extended PRO classified separately"
+    },
+    {
+      "result": true,
+      "check": "ACF Extended PRO not approved for use by default"
+    },
+    {
+      "result": true,
+      "check": "ACF Free inactive/not used"
+    },
+    {
+      "result": true,
+      "check": "Static scan has no HIGH_RISK"
+    },
+    {
+      "result": true,
+      "check": "Static scan has no BLOCKER"
+    },
+    {
+      "result": true,
+      "check": "V9-06C readiness explicit"
+    }
+  ]
+}

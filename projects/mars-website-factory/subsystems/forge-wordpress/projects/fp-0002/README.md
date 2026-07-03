@@ -1,7 +1,7 @@
 # Forge WordPress — FP-0002 Project Lane
 
 **Project ID:** FP-0002 — Шпиговский  
-**Stage:** V9-06B skeleton complete — WordPress source skeleton implemented — V9-06C ready for operator authorization
+**Stage:** V9-06B.2 ACF dependency admission complete — V9-06C ready for operator authorization, not authorized
 
 | Document | Purpose |
 |----------|---------|
@@ -21,3 +21,11 @@
 **V9 intake authority:** `workspaces/fp-0002-shpigovsky-v9/forge-intake/`
 
 Runtime manifest: [MLI-WP-FP0002-LOCAL-RUNTIME-MANIFEST-v1.md](../../../../mars-localhost-infrastructure/manifests/MLI-WP-FP0002-LOCAL-RUNTIME-MANIFEST-v1.md)
+
+## V9-06B.2 ACF dependency admission
+
+| Document | Purpose |
+|----------|---------|
+| [FP-0002-V9-06B2-ACF-OPERATOR-DEPENDENCY-ADMISSION-REPORT-v1.md](../../../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/reports/FP-0002-V9-06B2-ACF-OPERATOR-DEPENDENCY-ADMISSION-REPORT-v1.md) | **V9-06B.2** — operator-managed ACF PRO admission PASS |
+| [FP-0002-OPERATOR-MANAGED-EXTERNAL-PLUGINS-v1.md](../../../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/architecture/FP-0002-OPERATOR-MANAGED-EXTERNAL-PLUGINS-v1.md) | ACF PRO / ACF Extended PRO update-ignore and delivery-deny registry |
+

@@ -46,3 +46,14 @@ Manual operator decision only. No auto-update for plugins/themes/core on this ru
 ---
 
 *FP-0002 plugin register — FW-06A.1 complete.*
+
+## V9-06B.2 operator-managed ACF plugins
+
+| Plugin | Version | Status | Classification | Updates | Delivery |
+|--------|--------:|--------|----------------|---------|----------|
+| Advanced Custom Fields PRO | 6.8.5 | active | OPERATOR_MANAGED_EXTERNAL_DEPENDENCY | ALWAYS_IGNORE_FOR_AUTOMATED_UPDATES | FORBIDDEN |
+| Advanced Custom Fields: Extended PRO | 0.9.2.3 | active | OPERATOR_MANAGED_EXTERNAL_DEPENDENCY | ALWAYS_IGNORE_FOR_AUTOMATED_UPDATES | FORBIDDEN |
+| Advanced Custom Fields | 6.8.4 | inactive | INACTIVE_LEGACY_OR_FALLBACK_PLUGIN | DO_NOT_UPDATE_IN_THIS_TASK | FORBIDDEN |
+
+MARS may inspect and use admitted public APIs but must not source, install, update, replace, delete, distribute, package, or manage licensing for operator-managed plugins.
+

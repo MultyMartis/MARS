@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06B SKELETON COMPLETE  
+**Status:** V9-06B.2 ACF PRO DEPENDENCY ADMITTED  
 **Classification:** FOUNDATION BASELINE — ARCHITECTURE APPROVED — NO V9 IMPLEMENTATION
 
 ---
@@ -32,10 +32,10 @@ The runtime is **not** the canonical editable source. Delivery flows: Git source
 | Route classification | RECONCILED |
 | Service entity registry | 15 VERIFIED |
 | Service permalink contract | DEFINED |
-| ACF Pro | **REQUIRED** (OD-001) |
+| ACF Pro | **ADMITTED** as operator-managed external dependency (OD-001 / V9-06B.2) |
 | BoundedMeta primary path | REJECTED |
 | V9-06B | **COMPLETE** — theme + core skeleton |
-| V9-06C | READY FOR OPERATOR AUTHORIZATION |
+| V9-06C | READY FOR OPERATOR AUTHORIZATION — NOT AUTHORIZED |
 | Runtime changes | 0 |
 | WordPress implementation | SKELETON ONLY (V9-06B) |
 | FW-07C-2D | SUPERSEDED BY ARCHITECTURE-FIRST SEQUENCE (V9-06D) |
@@ -79,3 +79,12 @@ WORDPRESS/
 - Unknown files: FAIL CLOSED
 
 See [SOURCE-AUTHORITY.md](SOURCE-AUTHORITY.md) and Forge delivery contract.
+
+## V9-06B.2 ACF dependency admission
+
+ACF PRO advanced-custom-fields-pro/acf.php v6.8.5 is admitted as an **operator-managed external dependency**. MARS may use its public APIs after admission but must not source, install, update, replace, delete, distribute, package, or manage licensing for it.
+
+ACF Extended PRO acf-extended-pro/acf-extended.php v0.9.2.3 is classified separately as operator-managed and **not approved for FP-0002 use by default**. ACF Free remains installed but inactive and is not used while PRO is active.
+
+Registry: architecture/FP-0002-OPERATOR-MANAGED-EXTERNAL-PLUGINS-v1.md.
+

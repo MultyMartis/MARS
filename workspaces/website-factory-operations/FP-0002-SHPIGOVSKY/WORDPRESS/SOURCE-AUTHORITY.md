@@ -50,3 +50,13 @@ Foundation baseline scanned at capture; no secrets detected in theme/plugin sour
 ## V9 implementation
 
 **NOT INCLUDED** in this baseline. V9 frontend remains under `workspaces/fp-0002-shpigovsky-v9/`.
+
+## Operator-managed external plugin boundary
+
+V9-06B.2 admits ACF PRO as an operator-managed external dependency. The installed plugin files under runtime wp-content/plugins/advanced-custom-fields-pro/ are **not** canonical source, are **not** copied into Git, and are **not** delivered by Forge filesystem packages.
+
+ACF Extended PRO is also operator-managed, active, and classified separately, but not approved for FP-0002 use by default. ACF Free is inactive fallback only.
+
+Forbidden for these dependencies: automatic update, replacement, deletion, package delivery, license handling, license bypass repair, source mirroring, and unattended remediation. See architecture/FP-0002-OPERATOR-MANAGED-EXTERNAL-PLUGINS-v1.md.
+
+

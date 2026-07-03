@@ -1,7 +1,7 @@
 # FP-0002 V9 Operational Status
 
-**Updated:** 2026-07-03 (FW-07C-2C filesystem delivery proof PASS)  
-**Status:** `FP0002_V9_05C_READ_ONLY_PROJECT_ADMISSION_PASS`
+**Updated:** 2026-07-04 (V9-06B.2 ACF operator dependency admission PASS)  
+**Status:** `FP0002_V9_06B2_ACF_OPERATOR_DEPENDENCY_ADMISSION_PASS`
 
 ## Authority model
 
@@ -118,7 +118,7 @@ Phase **07C-B** Storage package — `SUPERSEDED_FAILED_STATIC_PACKAGING_NOT_FOR_
 
 ## Next phase
 
-**V9-06C — CPT, ACF Pro fields, admin UX** — **READY FOR OPERATOR AUTHORIZATION** (requires ACF Pro prerequisite)
+**V9-06C — CPT, ACF Pro fields, admin UX** — **READY FOR OPERATOR AUTHORIZATION** after ACF PRO admission; **NOT AUTHORIZED**
 
 ---
 
@@ -155,3 +155,17 @@ Phase **07C-B** Storage package — `SUPERSEDED_FAILED_STATIC_PACKAGING_NOT_FOR_
 - Intake tag (on checkpoint): `fp-0002-v9-forge-wordpress-intake-pack-01`
 - Validator: `npm run validate:forge-intake`
 - WordPress implementation: **not started**
+
+## V9-06B.2 ACF Operator Dependency Admission
+
+- Status: FP0002_V9_06B2_ACF_OPERATOR_DEPENDENCY_ADMISSION_PASS
+- Gate: forge-intake/validation/FP-0002-V9-06B2-ACF-OPERATOR-DEPENDENCY-ADMISSION-GATE-v1.md
+- Report: workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/reports/FP-0002-V9-06B2-ACF-OPERATOR-DEPENDENCY-ADMISSION-REPORT-v1.md
+- Registry: WORDPRESS/architecture/FP-0002-OPERATOR-MANAGED-EXTERNAL-PLUGINS-v1.md
+- ACF PRO: **ADMITTED** as operator-managed external dependency; capability sufficient.
+- ACF Extended PRO: **CLASSIFIED** but **NOT APPROVED** for use by default.
+- ACF Free: **INACTIVE_NOT_USED**.
+- Runtime mutations: **0**.
+- V9 source/dist changes: **0**.
+- V9-06C: **READY FOR OPERATOR AUTHORIZATION**, **NOT AUTHORIZED**.
+

@@ -1,0 +1,105 @@
+{
+  "generated_at": "2026-07-03T18:39:33.7807773Z",
+  "plugin": {
+    "name": "Advanced Custom Fields PRO",
+    "basename": "advanced-custom-fields-pro/acf.php",
+    "version": "6.8.5",
+    "status": "active",
+    "author": "WP Engine",
+    "plugin_uri": "https://www.advancedcustomfields.com",
+    "requires_wp": "6.2",
+    "requires_php": "7.4",
+    "update_available": false,
+    "auto_update": false,
+    "plugin_file": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky/wp-content/plugins/advanced-custom-fields-pro/acf.php",
+    "plugin_directory": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky/wp-content/plugins/advanced-custom-fields-pro",
+    "headers": {
+      "Name": "Advanced Custom Fields PRO",
+      "PluginURI": "https://www.advancedcustomfields.com",
+      "Version": "6.8.5",
+      "Description": "Customize WordPress with powerful, professional and intuitive fields.",
+      "Author": "WP Engine",
+      "AuthorURI": "https://wpengine.com/?utm_source=wordpress.org&utm_medium=referral&utm_campaign=plugin_directory&utm_content=advanced_custom_fields",
+      "TextDomain": "acf",
+      "DomainPath": "/lang",
+      "Network": false,
+      "RequiresWP": "6.2",
+      "RequiresPHP": "7.4",
+      "UpdateURI": "https://www.advancedcustomfields.com/pro",
+      "RequiresPlugins": "",
+      "Title": "Advanced Custom Fields PRO",
+      "AuthorName": "WP Engine"
+    }
+  },
+  "acf_version": "6.8.5",
+  "capability": "SUFFICIENT",
+  "rows": [
+    {
+      "required": true,
+      "method": "function_exists(acf)",
+      "capability": "ACF API",
+      "available": true
+    },
+    {
+      "required": true,
+      "method": "ACF_PRO/function/options-page marker",
+      "capability": "PRO marker/version",
+      "available": true
+    },
+    {
+      "required": true,
+      "method": "acf_get_field_type(repeater)/class_exists",
+      "capability": "Repeater",
+      "available": true
+    },
+    {
+      "required": true,
+      "method": "function_exists(acf_add_options_page)",
+      "capability": "Options Page",
+      "available": true
+    },
+    {
+      "required": true,
+      "method": "acf_get_field_type(relationship)/class_exists",
+      "capability": "Relationship",
+      "available": true
+    },
+    {
+      "required": false,
+      "method": "acf_get_field_type(gallery)/class_exists",
+      "capability": "Gallery",
+      "available": true
+    },
+    {
+      "required": true,
+      "method": "WordPress filter API available for acf/settings filters",
+      "capability": "ACF JSON filters",
+      "available": true
+    },
+    {
+      "required": true,
+      "method": "acf_get_setting or ACF_Local_JSON class",
+      "capability": "Local JSON path support",
+      "available": true
+    },
+    {
+      "required": true,
+      "method": "function_exists(get_field)",
+      "capability": "get_field",
+      "available": true
+    },
+    {
+      "required": true,
+      "method": "function_exists(update_field), not called",
+      "capability": "update_field",
+      "available": true
+    },
+    {
+      "required": true,
+      "method": "function_exists(acf_add_local_field_group), not called",
+      "capability": "acf_add_local_field_group",
+      "available": true
+    }
+  ],
+  "missing_required": []
+}

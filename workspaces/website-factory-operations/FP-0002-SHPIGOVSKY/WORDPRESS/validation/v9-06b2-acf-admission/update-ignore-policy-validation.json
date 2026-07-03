@@ -1,0 +1,33 @@
+{
+  "generated_at": "2026-07-03T18:39:42.4379763Z",
+  "result": "PASS",
+  "policies": [
+    {
+      "plugin": "Advanced Custom Fields PRO",
+      "basename": "advanced-custom-fields-pro/acf.php",
+      "classification": "OPERATOR_MANAGED_EXTERNAL_DEPENDENCY",
+      "update_policy": "ALWAYS_IGNORE_FOR_AUTOMATED_UPDATES",
+      "replacement_policy": "FORBIDDEN_WITHOUT_EXPLICIT_OPERATOR_AUTHORIZATION",
+      "deletion_policy": "FORBIDDEN_WITHOUT_EXPLICIT_OPERATOR_AUTHORIZATION",
+      "package_delivery_policy": "FORBIDDEN"
+    },
+    {
+      "plugin": "Advanced Custom Fields: Extended PRO",
+      "basename": "acf-extended-pro/acf-extended.php",
+      "classification": "OPERATOR_MANAGED_EXTERNAL_DEPENDENCY",
+      "update_policy": "ALWAYS_IGNORE_FOR_AUTOMATED_UPDATES",
+      "replacement_policy": "FORBIDDEN_WITHOUT_EXPLICIT_OPERATOR_AUTHORIZATION",
+      "deletion_policy": "FORBIDDEN_WITHOUT_EXPLICIT_OPERATOR_AUTHORIZATION",
+      "package_delivery_policy": "FORBIDDEN"
+    },
+    {
+      "plugin": "Advanced Custom Fields",
+      "basename": "advanced-custom-fields/acf.php",
+      "classification": "INACTIVE_LEGACY_OR_FALLBACK_PLUGIN",
+      "update_policy": "DO_NOT_UPDATE_IN_THIS_TASK",
+      "replacement_policy": "DO_NOT_REPLACE",
+      "deletion_policy": "DO_NOT_DELETE",
+      "package_delivery_policy": "FORBIDDEN"
+    }
+  ]
+}

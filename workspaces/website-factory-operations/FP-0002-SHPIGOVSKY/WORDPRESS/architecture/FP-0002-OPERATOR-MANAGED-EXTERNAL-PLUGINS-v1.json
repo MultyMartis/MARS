@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "project": "FP-0002-SHPIGOVSKY",
+  "generated_at": "2026-07-03T18:41:33.4652881Z",
+  "authority": "V9-06B.2 operator-managed external dependency admission",
+  "hard_denylist_policy": "Future update/deployment prompts must exclude operator-managed external plugins from automatic update, replacement, delivery, cleanup, deletion, and unattended remediation.",
+  "plugins": [
+    {
+      "plugin_name": "Advanced Custom Fields PRO",
+      "basename": "advanced-custom-fields-pro/acf.php",
+      "installed_version": "6.8.5",
+      "status": "active",
+      "classification": "OPERATOR_MANAGED_EXTERNAL_DEPENDENCY",
+      "source_responsibility": "OPERATOR",
+      "install_responsibility": "OPERATOR",
+      "license_responsibility": "OPERATOR",
+      "update_policy": "ALWAYS_IGNORE_FOR_AUTOMATED_UPDATES",
+      "replacement_policy": "FORBIDDEN_WITHOUT_EXPLICIT_OPERATOR_AUTHORIZATION",
+      "deletion_policy": "FORBIDDEN_WITHOUT_EXPLICIT_OPERATOR_AUTHORIZATION",
+      "delivery_policy": "FORBIDDEN",
+      "allowed_mars_use": [
+        "inspect installed plugin",
+        "hash and baseline installed files",
+        "use public WordPress/PHP APIs after admission",
+        "write integration code with safe absent/inactive checks",
+        "create canonical ACF JSON in later authorized phase"
+      ],
+      "forbidden_mars_actions": [
+        "source package",
+        "download package",
+        "distribute package",
+        "copy plugin source into Git",
+        "commit ZIPs",
+        "commit license keys",
+        "enter/store license keys",
+        "bypass licensing",
+        "patch license checks",
+        "update automatically",
+        "replace automatically",
+        "delete automatically",
+        "include in filesystem delivery packages"
+      ],
+      "audit_date": "2026-07-04",
+      "manifest_path": "WORDPRESS/validation/v9-06b2-acf-admission/acf-pro-file-manifest.json",
+      "aggregate_hash": "62dcbd1c1fb556b77ecf460f624c9c85dbf8165d2c3c40ea3028458c91308c42",
+      "risk_classification": "REVIEW_REQUIRED_STATIC_VENDOR_CONTEXT_NO_HIGH_RISK_NO_BLOCKER",
+      "notes": "ACF PRO active and capability sufficient for V9-06C readiness; V9-06C remains not authorized."
+    },
+    {
+      "plugin_name": "Advanced Custom Fields: Extended PRO",
+      "basename": "acf-extended-pro/acf-extended.php",
+      "installed_version": "0.9.2.3",
+      "status": "active",
+      "classification": "OPERATOR_MANAGED_EXTERNAL_DEPENDENCY",
+      "source_responsibility": "OPERATOR",
+      "install_responsibility": "OPERATOR",
+      "license_responsibility": "OPERATOR",
+      "update_policy": "ALWAYS_IGNORE_FOR_AUTOMATED_UPDATES",
+      "replacement_policy": "FORBIDDEN_WITHOUT_EXPLICIT_OPERATOR_AUTHORIZATION",
+      "deletion_policy": "FORBIDDEN_WITHOUT_EXPLICIT_OPERATOR_AUTHORIZATION",
+      "delivery_policy": "FORBIDDEN",
+      "allowed_mars_use": [
+        "inspect installed plugin",
+        "hash and baseline installed files"
+      ],
+      "forbidden_mars_actions": [
+        "use for FP-0002 field model without explicit approval",
+        "source package",
+        "download package",
+        "distribute package",
+        "copy plugin source into Git",
+        "commit ZIPs",
+        "commit license keys",
+        "update automatically",
+        "replace automatically",
+        "delete automatically",
+        "include in filesystem delivery packages"
+      ],
+      "audit_date": "2026-07-04",
+      "manifest_path": "WORDPRESS/validation/v9-06b2-acf-admission/acf-extended-pro-file-manifest.json",
+      "aggregate_hash": "ac614f38670ec9c272ed8a39d52a6cc39d54899a5d1268a6714d73f9e4ff78aa",
+      "risk_classification": "REVIEW_REQUIRED_NOT_APPROVED_FOR_USE",
+      "notes": "Active and classified separately. Recommended state: KEEP_ACTIVE_BUT_NOT_USED. Not required for V9-06C."
+    },
+    {
+      "plugin_name": "Advanced Custom Fields",
+      "basename": "advanced-custom-fields/acf.php",
+      "installed_version": "6.8.4",
+      "status": "inactive",
+      "classification": "INACTIVE_LEGACY_OR_FALLBACK_PLUGIN",
+      "source_responsibility": "wordpress.org package already present in runtime",
+      "install_responsibility": "OPERATOR/HISTORICAL_FOUNDATION",
+      "license_responsibility": "N/A",
+      "update_policy": "DO_NOT_UPDATE_IN_THIS_TASK",
+      "replacement_policy": "DO_NOT_REPLACE",
+      "deletion_policy": "DO_NOT_DELETE",
+      "delivery_policy": "FORBIDDEN",
+      "allowed_mars_use": [
+        "confirm inactive state",
+        "do not load or activate while ACF PRO active"
+      ],
+      "forbidden_mars_actions": [
+        "activate while ACF PRO active",
+        "delete",
+        "auto-update",
+        "include in delivery package"
+      ],
+      "audit_date": "2026-07-04",
+      "manifest_path": null,
+      "aggregate_hash": null,
+      "risk_classification": "LOW_INACTIVE_NOT_USED",
+      "notes": "Inactive fallback only. ACF PRO is the active ACF runtime."
+    }
+  ]
+}

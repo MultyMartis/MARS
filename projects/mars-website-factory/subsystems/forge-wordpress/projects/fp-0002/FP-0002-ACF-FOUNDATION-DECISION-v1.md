@@ -55,3 +55,10 @@ Plugin `shpigovsky-core` registers ACF JSON load/save paths.
 ---
 
 *FP-0002 ACF foundation — FW-06A.1 complete.*
+
+## V9-06B.2 update
+
+ACF PRO is now installed, active, and admitted as an operator-managed external dependency. The earlier FW-06A.1 ACF Free path remains historical foundation context only; ACF Free is currently inactive and not used while PRO is active.
+
+ACF Extended PRO is active but not architecturally approved for FP-0002 use by default.
+

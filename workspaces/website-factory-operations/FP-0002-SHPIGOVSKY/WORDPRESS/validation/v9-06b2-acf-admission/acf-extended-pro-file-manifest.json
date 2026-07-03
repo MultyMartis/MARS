@@ -1,0 +1,4907 @@
+{
+  "plugin": "Advanced Custom Fields: Extended PRO",
+  "directory": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky/wp-content/plugins/acf-extended-pro",
+  "generated_at": "2026-07-03T18:39:37.7380073Z",
+  "files": 612,
+  "php_files": 519,
+  "js_files": 36,
+  "aggregate_hash": "ac614f38670ec9c272ed8a39d52a6cc39d54899a5d1268a6714d73f9e4ff78aa",
+  "entries": [
+    {
+      "relative_path": "acf-extended.php",
+      "size": 18093,
+      "sha256": "856599d60fc8ff85bf9e000920e71185342784a7598a1ab2615b541e2ac8b9fe",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1465821Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "assets\\css\\acfe-admin.css",
+      "size": 39666,
+      "sha256": "d0816aa0afaafd21e3513132ec147b5eca8981cbe2efe078da0cf610cd6c4346",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.1475791Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "assets\\css\\acfe-admin.min.css",
+      "size": 33097,
+      "sha256": "215d8c3af7cefba15b474592eec772cfa668238e215e1332ce6e0d2be576658e",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.1475791Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "assets\\css\\acfe-field-group.css",
+      "size": 25287,
+      "sha256": "2a87d982cbec3154dc8738db7e8ff162b7b1bfb85f522ab37db433466315b894",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.1475791Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "assets\\css\\acfe-field-group.min.css",
+      "size": 22491,
+      "sha256": "724bc26ae5eeb0decdf4d92f20dd364992f8c61c82d9df56564abe21ce06d390",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.1485767Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "assets\\css\\acfe-input.css",
+      "size": 45581,
+      "sha256": "4f54804ab7d846add5e35cde7be8efecdc5adee3aca5625d0fa25232d3ab0f98",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.1485767Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "assets\\css\\acfe-input.min.css",
+      "size": 38800,
+      "sha256": "f323554d4203ac53bdd6667e5ab969b9b1eb8f7097b391dfca34c2683ec5953e",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.1485767Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "assets\\css\\acfe-ui.css",
+      "size": 23810,
+      "sha256": "43434eeb093d8a12bb7b59b669a8dbe8b2259550c2a93a43d5d7e5c0af6e6be3",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.1496022Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "assets\\css\\acfe-ui.min.css",
+      "size": 20193,
+      "sha256": "4c62acb9c2559364837ef5edd439731363c7a060b37d737883968f48381d9870",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.1496022Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "assets\\css\\acfe.css",
+      "size": 17291,
+      "sha256": "5ab4d3728ce7133598b1c38515a100bba1f079ae412769fc1d00548174adcc04",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.1535649Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "assets\\css\\acfe.min.css",
+      "size": 13611,
+      "sha256": "63e1fdffaba9f3d397455a506bf74cfc1177c33cc250df0f2fd26c53b63482a6",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.1535649Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "assets\\inc\\tinymce\\acfe-form.js",
+      "size": 1711,
+      "sha256": "6f94fa0e6af64a801e84923908e92fb67516d6d540e9e4a6782e1da99e171ad7",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.1535649Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "assets\\inc\\tinymce\\acfe-form.min.js",
+      "size": 737,
+      "sha256": "0aa2c8ffcddeb28a102846c074b9dece26535e08d2a79528dda383f230a1f9db",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.1545607Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "assets\\js\\acfe-admin.js",
+      "size": 29722,
+      "sha256": "656d81a1eb0ccdf8c0d65696629cdf710b0a92371b01e58019b4b969683aeac5",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.1545607Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "assets\\js\\acfe-admin.min.js",
+      "size": 12235,
+      "sha256": "41e57e6e977191a684ef331c8969703d8c2eb503d5679b15f3431a78ab4583fa",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.1545607Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "assets\\js\\acfe-field-group.js",
+      "size": 11063,
+      "sha256": "3a581986fe34dafcf049ba4a5d9541f9b725befe0cbf568db49bb2c1af99c0c7",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.1555578Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "assets\\js\\acfe-field-group.min.js",
+      "size": 4295,
+      "sha256": "d5b44bb494dfe971a6c896446b179cbb85aa36f96299e755bbd3f3dd16042656",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.1555578Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "assets\\js\\acfe-input.js",
+      "size": 165202,
+      "sha256": "2de39ebcbb00fb730f74901f36bd3b5cd53d9cf7dd0c2d111a83cb7db87e90d0",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.1565841Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "assets\\js\\acfe-input.min.js",
+      "size": 71012,
+      "sha256": "28d5ea6df2d104074576b7262ebc1914c070967da2697ecb13238adf5322a81d",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.1565841Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "assets\\js\\acfe-ui.js",
+      "size": 15355,
+      "sha256": "e1f06c5c1da3a912fbfb5e4f8a21fde7215e998aa86a20b8516a59f46be92abe",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.1565841Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "assets\\js\\acfe-ui.min.js",
+      "size": 8568,
+      "sha256": "1d4c000c330163df35c8154a7fdf3aa1f32482a25b882aa91b3e243f8780e714",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.1575830Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "assets\\js\\acfe.js",
+      "size": 56163,
+      "sha256": "4fec52e56334049684bd4693118040a4146c80251d6d922863cfe087df4a0a75",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.1575830Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "assets\\js\\acfe.min.js",
+      "size": 17922,
+      "sha256": "c55c053851a5356b50db1bd3e926bee5306ac685dd469cd6440e89992e10c164",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.1575830Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "includes\\acfe-deprecated-functions.php",
+      "size": 2787,
+      "sha256": "7ee70a44f019f35def64f99908b2a0113b97547e12a86158dc82b866cd202fc1",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1585783Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\acfe-field-functions.php",
+      "size": 16967,
+      "sha256": "34fe50eb6d9fd89abe0d4e4b68247fbb88e8ad517afe5d753cd6e83e2341672b",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1585783Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\acfe-field-group-functions.php",
+      "size": 16762,
+      "sha256": "6c1deb0be1d14ff51cc01fca6bf1fbf2031c04e5e8d6301cd34e6d082519d4c3",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1585783Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\acfe-file-functions.php",
+      "size": 7044,
+      "sha256": "f1761f74ecd7af097c62220bedb6c2173f7213223b0b8e7a31fd2728bd647a18",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1595768Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\acfe-form-functions.php",
+      "size": 8308,
+      "sha256": "442b8f41a76ba67487e5af0349597a28ade335c1ba7f23128428c8ba1a46e586",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1595768Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\acfe-helper-functions.php",
+      "size": 29135,
+      "sha256": "fb2a31b9078f4b7ba4bd9592909349f34dea5d013fb302afd892aa6b008a5dde",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1595768Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\acfe-meta-functions.php",
+      "size": 10749,
+      "sha256": "9c3f6514bdd3a28ccb59e3c6d5a87f7558bf326ed3ecdac747c603118b81435f",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1605728Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\acfe-post-functions.php",
+      "size": 3027,
+      "sha256": "54d35a9d5339a70cd9f4db58d62a756b674ab2e08ac7f6f37e180c8f714fec2d",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1605728Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\acfe-screen-functions.php",
+      "size": 4433,
+      "sha256": "e1097785a33efe2f10b37c574aa3e7711416611a21b57ae6a594e00199b55cb3",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1615717Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\acfe-template-functions.php",
+      "size": 29968,
+      "sha256": "fbf096b6421e886e5af5d9bfa16688e1122a88d33a334a5818e83d720c85bf76",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1615717Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\acfe-term-functions.php",
+      "size": 2408,
+      "sha256": "e64b4c6cbbe71b5480b758b1ec3a0b2b8466d1d01220ebe91331dec7a05d0147",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1615717Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\acfe-user-functions.php",
+      "size": 1368,
+      "sha256": "edec2fbc83135acf52e55e448cc954b0153e44cd482373ca18f854c3edf52969",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1625631Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\acfe-wp-functions.php",
+      "size": 8696,
+      "sha256": "3912a88dde00dacf6a07abf0397949b97ba8d331ec6e887a31a7945a67707e28",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1625631Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\admin\\menu.php",
+      "size": 3643,
+      "sha256": "49efb468231b8a6ffaf4535cafeeb5ce6e5aae504113df17dd9d9ac1aaea7a76",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1625631Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\admin\\plugins.php",
+      "size": 1336,
+      "sha256": "e3ab23719b77fd7ceaf6f0d5d08d1c184997d8208c78c67082046400629e71af",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1635609Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\admin\\settings.php",
+      "size": 33343,
+      "sha256": "aa6912e0c062586ea02c8f9497598277940900312c4e2ad90cb6a0a79cfc6239",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1635609Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\admin\\tools\\field-groups-export.php",
+      "size": 1435,
+      "sha256": "dc3860ec675c87e3143916c84f575676fae50477073dfb6ce4e0db3e89e28508",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1635609Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\admin\\tools\\field-groups-local.php",
+      "size": 11715,
+      "sha256": "37eb4fdaabe4333f736de8102dc5c84709fd9e6bc6bfc8f06deaecbe06acbb4a",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1645584Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\admin\\tools\\module-export.php",
+      "size": 15743,
+      "sha256": "041b3961c95b4093bb089bcdc38f5822183d13ed2b9ed7e435fcc924fb1c778c",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1645584Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\admin\\tools\\module-import.php",
+      "size": 5022,
+      "sha256": "494aa32b49b0a36fe854549a00756bae91237c513ddb120f2e5f405420698350",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1655321Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\admin\\views\\html-options-edit.php",
+      "size": 1948,
+      "sha256": "2c81a0798b9a15f25d18c4dce1c3252fc9091c782c37cd05558e1015cfaa46a8",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1655321Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\admin\\views\\html-options-list.php",
+      "size": 1233,
+      "sha256": "e3736c6de2f2fd4b781d226c9ff0e58ccd0780ccd836054b86352273ef2de704",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1655321Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\assets.php",
+      "size": 7676,
+      "sha256": "524172950401cf9c671fd0049fb43faf073536cf417d2c391513f7ae4da241b4",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1655321Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\compatibility-6.0.php",
+      "size": 9018,
+      "sha256": "5f114a86b818fc90959be143879cb91cd268a7a8c47ecc96351f6f415936a59f",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1665567Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\compatibility.php",
+      "size": 14094,
+      "sha256": "ee841df55e7773f9be575ad1e8b259fa333b6033cf8a418ca1cb1617fee4fd18",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1675270Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\field-extend.php",
+      "size": 11674,
+      "sha256": "8e5a25f790f8fc072dbe4db62100a69e495c4d951f97a3eece49b28973500241",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1675270Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\field-groups\\field-group-advanced.php",
+      "size": 1703,
+      "sha256": "2ca9d75f9c49e5a5da4872ada8dfd92208052f7938ebe1b8238aa8806690736c",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1685245Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\field-groups\\field-group-category.php",
+      "size": 10163,
+      "sha256": "de33ddd50efe717fc3e6e5bc5e3d8bceb9700b035339e694fe3605bb1118f8f9",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1685245Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\field-groups\\field-group-display-title.php",
+      "size": 814,
+      "sha256": "92ab49c019b17024611cd5220ce40279c5883f8475ce146608757ca97fa7027a",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1685245Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\field-groups\\field-group-hide-on-screen.php",
+      "size": 5130,
+      "sha256": "36dbd364ceb397245974faebcdcb3a4cbb4fb4b6bb3b3331019fca2636a9d98b",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1695486Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\field-groups\\field-group-instruction-placement.php",
+      "size": 1045,
+      "sha256": "24e1c895d249a0c08d7cbbc937d63b4dd5f14215fa03535f1b4b5ab916f5d94e",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1695486Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\field-groups\\field-group-meta.php",
+      "size": 6306,
+      "sha256": "3bf880556cec068b191810470280c0023b52b08850a378864c7928df4e4e9e88",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1705984Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\field-groups\\field-group-permissions.php",
+      "size": 1407,
+      "sha256": "11202d156f3ddd4e5cc5df3fd310ac3fa95b47f1235b8b3eb0bb3942142dbfee",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1705984Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\field-groups\\field-group.php",
+      "size": 15301,
+      "sha256": "2f013afa2669689841ee12b130c3aceb50035b907c4b1eb220800651bfa31c75",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1705984Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\field-groups\\field-groups-local.php",
+      "size": 11921,
+      "sha256": "0b9127507e5ecccf9f0e8805126df8ac2c2601954cd55fbe6e2b372c627cd4d3",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1715911Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\field-groups\\field-groups.php",
+      "size": 30264,
+      "sha256": "0b1eee953645282ea12ae9999fc446039913568c636882d53be2fa967536ee0f",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1715911Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\field-groups\\field-types.php",
+      "size": 2099,
+      "sha256": "1e17a987090969db8e169dcdd8b8e78f6423fcec72b88e0aaa3a004b50f35ac4",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1725605Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\field.php",
+      "size": 548,
+      "sha256": "228b01a385f23147c155d9f5b8f0b8d1ca2d711261c6c243c2aae750b20ec515",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1725605Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields-settings\\bidirectional.php",
+      "size": 26731,
+      "sha256": "d7a8eccb6ebaca161220443ac5089ab0247ac763e8cbed8b2482d40db62d9fb5",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1885179Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields-settings\\data.php",
+      "size": 2842,
+      "sha256": "ea0f4cb42b8bb987de3046cb7fff7ebf67d7ec2f0a327ab0ebd219124764f071",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1885179Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields-settings\\instructions.php",
+      "size": 2190,
+      "sha256": "fe9c396266fd191682da54a234dc2ab051462e97519b961a46274327b02923a3",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1895427Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields-settings\\permissions.php",
+      "size": 2019,
+      "sha256": "5d5e1f5a3028deabdd4d19869b4a676424a6c156d0cb4c371e316dfd7163cb0f",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1895427Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields-settings\\settings.php",
+      "size": 16177,
+      "sha256": "df622d23952d87422b7af4b68f37823898431e82706d5d7d2c219d07bcd826f2",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1895427Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields-settings\\validation.php",
+      "size": 28472,
+      "sha256": "a61f5787c8308c240ef2d4eebc6d17c4973ffe9e004075e45e32fbdabfcb2e6d",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1905400Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-advanced-link.php",
+      "size": 23972,
+      "sha256": "a3e0f218e63b10ad0fb2a7c06e4c5431a1244f90440d52ef4891acb1eb7cc785",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1725605Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-button.php",
+      "size": 6536,
+      "sha256": "e7e370a6f747340f140dc5db53216d46a6f5c9c8956a076c6fcc37f83c58dc16",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1735852Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-checkbox.php",
+      "size": 5315,
+      "sha256": "b34b861be21c06c966a7691331f4cf784dec0d63515f74efe9e202a868830f3b",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1735852Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-clone.php",
+      "size": 7871,
+      "sha256": "afef6d46acf6ce11a23a2f14692f2cf11d1918f1522f5063be1ba675094fda78",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1735852Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-code-editor.php",
+      "size": 7473,
+      "sha256": "9dcd428eb6513dd7887187041e8b8d06dcca91f3e4fd87a268393f72d2fed33e",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1745825Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-column.php",
+      "size": 4459,
+      "sha256": "20c3ad50820743b1982cfcff3679988468d000b249a9df22d50bffe07cd6acdb",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1745825Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-dynamic-render.php",
+      "size": 967,
+      "sha256": "0618fdcc10014f7c9d3f6805900b7620c07c21f79693a5e65eadff9db62c10ca",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1755819Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-file.php",
+      "size": 4594,
+      "sha256": "19ee99cc1b27b19b1322ee1e5151f49544c331bc4bcf674f8e5ab1af1b7eb174",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1755819Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-flexible-content-actions.php",
+      "size": 18673,
+      "sha256": "b42329fc0204a6231c671b554e66fb03d727b15da05bfd943e646823f63ce0d8",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1755819Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-flexible-content-async.php",
+      "size": 7124,
+      "sha256": "54c8eb2d2fcedc5960a0dd959b3f4e56d6314f1b13e2c98489d877925a37281f",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1765770Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-flexible-content-controls.php",
+      "size": 10702,
+      "sha256": "1a24213ebb9f8cbb97ac8c594ef1f837bec0d562f1fd789fac7a95188c1a11b5",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1765770Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-flexible-content-edit.php",
+      "size": 11661,
+      "sha256": "29987086d12bcc67f881af54f75abc7fd0b3139483456b754061ed96d4c0bb14",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1765770Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-flexible-content-hide.php",
+      "size": 5241,
+      "sha256": "fc2bdb142346a7f71fa4fa3e9633ed8b788b1ed8738303fccbb0acb6f0873852",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1775470Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-flexible-content-preview.php",
+      "size": 22223,
+      "sha256": "f82df0e28bd9834115ca47abd40e093a6188003b9ae3017991162c28f50fe95e",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1775470Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-flexible-content-select.php",
+      "size": 11460,
+      "sha256": "6f8c4e86c4d2a4e02ee631085d357eb6896e5bc762e4bea2097d73bb084aa7be",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1775470Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-flexible-content-settings.php",
+      "size": 9776,
+      "sha256": "bf564c5a08824100e80181afdf7e52be1bda2555d2328abda22180c1cf44c1ef",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1785720Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-flexible-content-state.php",
+      "size": 6117,
+      "sha256": "c17841ca8ae9bddcc8b63523a055d62b7bfbf367cc7887a92313ad8d52b5d465",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1785720Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-flexible-content-thumbnail.php",
+      "size": 8861,
+      "sha256": "c61234f365172342eafd178498bd81433d9b2702439113db96cca64e09062263",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1785720Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-flexible-content.php",
+      "size": 33641,
+      "sha256": "57635576fee86576201ca267f73738c932bd92d69571a4863742437f5ebd5f57",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1795691Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-forms.php",
+      "size": 18933,
+      "sha256": "e03dc57f54c607641a9d2fcb483334715dd9bba438e5793fa7d5637f8dfa921e",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1795691Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-group.php",
+      "size": 5848,
+      "sha256": "3bda7effd0816d8a47ef3a2589c3f94783e7a672114b25b9ce7d37ccf7ff321f",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1805686Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-hidden.php",
+      "size": 1518,
+      "sha256": "3b2bc8f7b19cea7809931a807f8e34577906c9f1863dcfdd2911b57b47e9ff11",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1805686Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-image.php",
+      "size": 6592,
+      "sha256": "d08917d964a182ecea6b869120cfacf56193ed64542bbb561132fcbc80c0b161",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1805686Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-post-object.php",
+      "size": 5906,
+      "sha256": "5ec4d3b411c9e87346c1048ca4261885e542a95684643f6baf76bb43b976a71c",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1815364Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-post-statuses.php",
+      "size": 16458,
+      "sha256": "9047041aed1e0ddf0f012fbae601c433177f04ba8a4f5b7ae63ed72d15748290",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1815364Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-post-types.php",
+      "size": 16438,
+      "sha256": "d3ee9bdfe29b2db864106d13675681038a2294d54a33ac68e2afd8c796359f8a",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1825618Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-recaptcha.php",
+      "size": 9502,
+      "sha256": "cc8fcce5b700358d7f875327bf41cf6062afea5041d6168a9a1b1366ea60c1eb",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1825618Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-repeater.php",
+      "size": 2612,
+      "sha256": "d3f42c85d6d4d2689660586f7720b222c9b35e39c8396b8c8f441c773939a81e",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1825618Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-select.php",
+      "size": 7064,
+      "sha256": "f7e1783488d2c4365bfcfff0b1b6d5ddca39323610f66fb0f2a9963743b35839",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1835311Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-slug.php",
+      "size": 3943,
+      "sha256": "0425d8836507b61ac7b223c8df8ecde488c3934107518a34a050fe00f81031e8",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1845295Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-taxonomies.php",
+      "size": 16407,
+      "sha256": "1844204087e61514dc878d0441b26a11b0679672cfd36a240655bef600472a3f",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1855262Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-taxonomy-terms.php",
+      "size": 47036,
+      "sha256": "193e74542db88c87acc9998065a95df82eb3af0991e142871bc8de2bf2ce5e04",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1865234Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-taxonomy.php",
+      "size": 1527,
+      "sha256": "d450fd206bac90dbcbe8b3c701c274448aa4a6cb574b5103bd1e15bbd4139409",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1865234Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-textarea.php",
+      "size": 2285,
+      "sha256": "a03f7539cd74a6b8991cdf4a61eefd3c9ac52a598488fc53400f81b8dd2f7bca",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1875199Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-user-roles.php",
+      "size": 14792,
+      "sha256": "13895b9cff7fd3cd229ec8104c9c51b8f1108093528332d6f4e32b91c863c174",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1875199Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\fields\\field-wysiwyg.php",
+      "size": 784,
+      "sha256": "191f017ec160bace519a01d905d25c81057cefed1e97462aee4eef2c0b347539",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1885179Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\hooks.php",
+      "size": 19796,
+      "sha256": "547985a8d173a453e01e3127e96b7aecc92cb752fb3f15237a3570a482ae002d",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1905400Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\init.php",
+      "size": 4083,
+      "sha256": "a77be82585bf762228bf6ae2eec9b84abb7bd57ece0643eab58fffce96f02b20",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1905400Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\local-meta.php",
+      "size": 6871,
+      "sha256": "c43845ff4424e9470580bf9d25e4c1935a938ed6caa6467cdd5ece8bf0e306c3",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1915372Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\locations\\post-type-all.php",
+      "size": 1809,
+      "sha256": "a13c3c05cb9b9650e1104a1df4bda93bfd51ceae6510c96ed7fca2d0bbcd6d47",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1915372Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\locations\\post-type-archive.php",
+      "size": 11091,
+      "sha256": "7691f1f3bdb5c41ae8d22c77303891bedeff61676ad21c360e06ccf4fad96184",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1915372Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\locations\\post-type-list.php",
+      "size": 8008,
+      "sha256": "8dc2634ad321e44c13b8602e263fc6345a7c165784013aafb891d6c4b8e081cc",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1925349Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\locations\\taxonomy-list.php",
+      "size": 7573,
+      "sha256": "3ff8b05d7c68331edecdf1a0b802298e4328a185e09463afe3197e934e35b645",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1925349Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\module-acf.php",
+      "size": 13101,
+      "sha256": "5b47bcbb644d4166a820e7a32c2eca0f955f921f272e0db57c7cd45c2c534350",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1935346Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\module-db.php",
+      "size": 4498,
+      "sha256": "50fd4e110bee3cf5bae72f9d6546ef7f505887461608cf759413ee55386590bd",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1935346Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\module-l10n.php",
+      "size": 1380,
+      "sha256": "4a3d9c5f6693b406db74c0d3d6fc75c0fe7b987e4372be5e1b35cf4e6001efaa",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1935346Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\module-legacy.php",
+      "size": 14833,
+      "sha256": "8eff94e7277699d75e5842d46ed55310c8b661f9de2cc9144946706531a1e915",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1945018Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\module-manager.php",
+      "size": 4402,
+      "sha256": "7fcf0e7f73a0fcb2ee3f4fe5b43de81ff935ae94c47ca1284f6c8925888b84cb",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1945018Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\module-post.php",
+      "size": 7482,
+      "sha256": "4e7f5d81606b6a2925e23967427dc02a539abb51afe00c745a8bd509d5605413",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1955268Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\module-posts.php",
+      "size": 7393,
+      "sha256": "bb2f67ce78e15d6a4c2b2f8639c18614248efb66e552a639bee6b537a3cab768",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1955268Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\module-upgrades.php",
+      "size": 958,
+      "sha256": "d23da47898cbd01362799c541bf4e495d9bbdcaeeb295f8e78a4ed0eb1c3b9b5",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1955268Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\module.php",
+      "size": 34492,
+      "sha256": "1d408f2274b225571f70506c13d78c1f257af1fff3616122037f471dc03ce60f",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1965238Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\author.php",
+      "size": 5006,
+      "sha256": "3bc52c46e08ac6f38c7e26498795a221371bccd0d359c7f45b493c04f9c51621",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1965238Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\autosync-json.php",
+      "size": 15691,
+      "sha256": "b5b6459e989331d10cb14d4eab2c33a3b7ddc16412c1cef0e809c78da7839bc3",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1965238Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\autosync-php.php",
+      "size": 9710,
+      "sha256": "8fa81eff7cfc353fe7cc9e4584475f4e5908af982289b27a9956d21c3714d838",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1975213Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\block-type\\module-block-type-fields.php",
+      "size": 33655,
+      "sha256": "eaedeb766234438eb8cca9c5b19a6c6dfb91a3ed2d588a2dcffb49c174b77247",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1975213Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\block-type\\module-block-type-upgrades.php",
+      "size": 4041,
+      "sha256": "a66050a64497c987a2cf8009c96d007406f842af8f7abccbc975bd8c1873ce4c",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1975213Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\block-type\\module-block-type.php",
+      "size": 13567,
+      "sha256": "60f28e4474daa1e23394dac19b1aa2e0b163a0115a79f73190956244e383db84",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1985193Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\dev\\module-dev-delete-meta.php",
+      "size": 5753,
+      "sha256": "0830683db5fa4cc166c21cf5117bed266cfbf7bbccb03fa61d17cc89057ceb71",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1985193Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\dev\\module-dev.php",
+      "size": 25511,
+      "sha256": "fdaf324c959df5db0c30f18aa989a3217ac3b311c90cdd55d0a23d03c917c0c6",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1995178Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\form\\module-form-action-custom.php",
+      "size": 5077,
+      "sha256": "fcb53ecbe37b8a5510a78fdf936e9e59eca06c35b76aa80305328e4b61184011",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1995178Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\form\\module-form-action-email.php",
+      "size": 31282,
+      "sha256": "cfae7d5aa7966c96dc77b117eb5bfd281f1c31b505f571d89e666260fae27dd4",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.1995178Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\form\\module-form-action-post.php",
+      "size": 83665,
+      "sha256": "3f2765807441da551c1163e28547445a58b33b7d13b7ec83d6dbdfef0af25972",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2004849Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\form\\module-form-action-redirect.php",
+      "size": 4853,
+      "sha256": "3f1b2971fe531796e7954b64a4369fbd95bd490061b818e2b3d90bd47fa3a22b",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2004849Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\form\\module-form-action-term.php",
+      "size": 47636,
+      "sha256": "e0ef07237882ede99659aad99d4b423da50fc2fe955f5d1e6fd48a13799f2faa",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2015134Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\form\\module-form-action-user.php",
+      "size": 87799,
+      "sha256": "cc8ecf3e198dab61fd24978a8ac6e8b3f986ee1aea73279990ade3052fc027e1",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2015134Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\form\\module-form-action.php",
+      "size": 12196,
+      "sha256": "11c5a4d9b2fb4fc958061e78af2739a475f93d07d0a1b8efc0dedda613ffa7ec",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2025088Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\form\\module-form-compatibility.php",
+      "size": 12261,
+      "sha256": "981da91ea38e9306aa07cb01d577a4434abc5c3bd202ee200696d5233ddb4fcc",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2025088Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\form\\module-form-deprecated.php",
+      "size": 45519,
+      "sha256": "b0839d86d028dad673311f2273a9feb3c10ca49ec222b58ccd27a5139969e24f",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2025088Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\form\\module-form-fields.php",
+      "size": 79570,
+      "sha256": "2b9bfcc35e1ffc2c4cf9ec070dc435e989e28261245fafa56d4e40ab28114fee",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2035051Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\form\\module-form-format.php",
+      "size": 13054,
+      "sha256": "0d294556d9d8b5778753c943a1414bf563fff4bd55fdc981589aff62d059b43b",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2035051Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\form\\module-form-front-hooks.php",
+      "size": 4218,
+      "sha256": "e1eddc106f092c9b848850181ff8a27e84b0760a7ecad4428d8b21555b5009e8",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2035051Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\form\\module-form-front-render.php",
+      "size": 19818,
+      "sha256": "b640935179b8a7f4c3ec35a7534f4c2098614febadba239dcdbf02f3ef572e85",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2045025Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\form\\module-form-front.php",
+      "size": 21132,
+      "sha256": "fa39243ad56386ca5053e7a2abcbe9a5dc34b779cdc7ff209370ef6d1e089414",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2045025Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\form\\module-form-shortcode.php",
+      "size": 4579,
+      "sha256": "510f23c30e8a73853afee558820ba34f81a37f6cc86b3d1b00b2b9c9cb0863eb",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2054997Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\form\\module-form-upgrades.php",
+      "size": 287222,
+      "sha256": "d417bb9f12c15c26feec502613cb7ec179c492cf3df0882246013c322b1f957b",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2054997Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\form\\module-form.php",
+      "size": 26267,
+      "sha256": "47b1ab058c8528f431aec5fa5c6e42ad5601463038452efb795daa70040337a7",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2064697Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\option\\module-option-table.php",
+      "size": 8367,
+      "sha256": "8c6b595ed076578c567a3ffff8ff3b7911e95598a553b579efef86b19eaa1fbc",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2064697Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\option\\module-option.php",
+      "size": 17943,
+      "sha256": "3c7248abcccff441f40b81f8508ae4fdb715000ec5d9acc98dcac030efca8373",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2064697Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\options-page\\module-options-page-features.php",
+      "size": 2117,
+      "sha256": "c4e77236a34da31de27a703cecd5ab9a931bfed6005587170e1b6956034a02ec",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2074963Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\options-page\\module-options-page-fields.php",
+      "size": 11628,
+      "sha256": "0b14449443dceeecbeae8b118b062a884ef153783ad5e59182397dc9657f070e",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2074963Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\options-page\\module-options-page-upgrades.php",
+      "size": 7296,
+      "sha256": "ab89b61ccf4d4280f13411a371bccf0a0754085a9c9fd7993bd14337a1f0b422",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2074963Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\options-page\\module-options-page.php",
+      "size": 9966,
+      "sha256": "d1dc5e6fded2a69aecc18d069e263cf4a91fc69738798f1c74554306bbe74c56",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2084922Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\performance\\module-performance-connector.php",
+      "size": 11377,
+      "sha256": "d6ec198d39068ed9d2a35682b4331fbfb40cc29f2f56b7b7cb8a272e33bbf913",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2084922Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\performance\\module-performance-functions.php",
+      "size": 22474,
+      "sha256": "0706e7a5f3efc6de6111c265b6970d638a683fbb257a72de7a149cf74e1ff804",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2084922Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\performance\\module-performance-ui.php",
+      "size": 6601,
+      "sha256": "191abce1488aa0b5deca9d7d799161ce56bd1a8cb0f7829c2767963c6d72d2fe",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2094894Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\performance\\module-performance-ultra-fields.php",
+      "size": 2310,
+      "sha256": "66d5f3da60c791d67e8348e4ca33a1733284a49f852a1e3b11b8e3ee802c5825",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2094894Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\performance\\module-performance-ultra-revisions.php",
+      "size": 5967,
+      "sha256": "76def7e1104d928584ae72e15787abcac7f7c6ffe75acc72debbde31948ac570",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2094894Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\performance\\module-performance-ultra.php",
+      "size": 7736,
+      "sha256": "01da8da5619104816b26d3596abcfea231c520d591953b658d2de24e4c7daeef",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2104582Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\performance\\module-performance-upgrades.php",
+      "size": 1184,
+      "sha256": "3b1b7f461e582a895718e5c4a7fd5d2425992db4b8dd8efda439cb033b310fca",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2104582Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\performance\\module-performance.php",
+      "size": 10101,
+      "sha256": "ca893a6d8563ec7bf9edbd0177c03e60a774571b9baa1cb7e07b8edaee15476c",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2114555Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\post-type\\module-post-type-features.php",
+      "size": 11495,
+      "sha256": "b6136ded3c55c3db30d30d25c5173592f4b7f3ea4a621cb93fc84b8078dfcb31",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2114555Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\post-type\\module-post-type-fields.php",
+      "size": 84094,
+      "sha256": "201b9e1f6a9f0d23c2a452fe91d38184b377d0ebf27091f4d807aa645edf9d49",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2114555Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\post-type\\module-post-type-upgrades.php",
+      "size": 4015,
+      "sha256": "21fd3e237a5ea20967ae23ab4f1d906f9748f4f795785a6cd1f8bd0bd0140150",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2124539Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\post-type\\module-post-type.php",
+      "size": 12412,
+      "sha256": "ebbaea6ba980143a81987dc65b5e90ab05d3f1746b7e9f152f843cba40f7b2df",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2124539Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\taxonomy\\module-taxonomy-features.php",
+      "size": 6881,
+      "sha256": "45cdb1e7a2b606c74c84a7f0633cc38085e2f35ac0e7683a1620d68b829499cb",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2134788Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\taxonomy\\module-taxonomy-fields.php",
+      "size": 58809,
+      "sha256": "919b3aacbcadc2c00b7a15c1f95c673926b3f2d42a22b81cef2f925142aa6418",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2134788Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\taxonomy\\module-taxonomy-upgrades.php",
+      "size": 4020,
+      "sha256": "33bb2acb0bd0cdfdd3db3e9184fd36b31dcb67a393aaec1917b651f696f381c4",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2134788Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\taxonomy\\module-taxonomy.php",
+      "size": 12285,
+      "sha256": "7d0f5c5d21ff8521d6999d3d94bcb7513c2254bd17953e0785e7d452704340db",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2144762Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\ui\\module-ui-attachment.php",
+      "size": 2752,
+      "sha256": "29e38b3cbd1cb1d99d100109a3ffed36ed4c02a7a696b21b20da59ed0e251a2c",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2144762Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\ui\\module-ui-settings.php",
+      "size": 2354,
+      "sha256": "7510c61da235dae5f2dbb90b9f9f879d6d10d1982b314a49be00a8785120c579",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2144762Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\ui\\module-ui-term.php",
+      "size": 4683,
+      "sha256": "17517b6157f13af522e2605a62f30ddef64e5e8ef976e1c39d2a6d12910d5701",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2154732Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\ui\\module-ui-user.php",
+      "size": 5508,
+      "sha256": "622d85e7b3456cc2ae6e9b3614cc199483bfbfc8a7ce17ab1eee3b166fb8425b",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2154732Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\modules\\ui\\module-ui.php",
+      "size": 3428,
+      "sha256": "8c870e026a4585e40732f84908289df4a811da1e40df38d97d6837c0251f1f02",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2154732Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\multilang.php",
+      "size": 23283,
+      "sha256": "3fe7e2c41509febc97c9a1b2db19fcb94de9297f1ed7d66b8876210ca9e45bbb",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2164705Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\screens\\screen-attachment.php",
+      "size": 6313,
+      "sha256": "ca52f32a93b43c086bbe71eed9bf62be33c0cb4439cd3cee3e4337dfc38dd5da",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2164705Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\screens\\screen-options-page.php",
+      "size": 1370,
+      "sha256": "7102bf9001bd1a02dd9efafc64fd2486aed6b4e761e8229c318c2ce7b663379e",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2174405Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\screens\\screen-post.php",
+      "size": 4930,
+      "sha256": "fc50f2908a939a781301c82ce505d1f29371206a3fca882e5806e9586cfacb6c",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2187734Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\screens\\screen-settings.php",
+      "size": 1974,
+      "sha256": "7585c278e66afe51433410da51f55686608500065eb3cfaca284903fd4ff05de",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2193143Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\screens\\screen-taxonomy.php",
+      "size": 6454,
+      "sha256": "0e6df912f1f7eb1bc2e40af101342156052d1375f690e4414bdc4ebeaddeb5c3",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2198257Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\screens\\screen-user.php",
+      "size": 6115,
+      "sha256": "57dafa0851e825797049371bde37365da97702ec50e45e253827f7650d8c259d",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2198257Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\settings.php",
+      "size": 6969,
+      "sha256": "93cba8ea9c9dcf2d2d99bc307a6f488f4c673eea9f1f5aaa7bac7674d6f0c229",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2204333Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\template-tags.php",
+      "size": 42267,
+      "sha256": "d51c0d13027404c89204c82731f5d368e35ff16ff2d1415f31e252c3445ced05",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2209780Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\third-party.php",
+      "size": 7039,
+      "sha256": "efba93a74230a01d778bc63e0e126f96d9760189a6d381e488bad9e4dba09a4d",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2209780Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "includes\\upgrades.php",
+      "size": 1575,
+      "sha256": "fe99fbdcfa7a9be6c99ea880b6b93e29938c9d5d75b876772097cf8cb5bda4f8",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2215769Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "lang\\acfe-fr_FR.mo",
+      "size": 132344,
+      "sha256": "004397048b290077c5cf7c21d5414e309ae3dc96e13a846091541690a9656925",
+      "extension": ".mo",
+      "modified_time_utc": "2026-07-03T18:27:28.2222040Z",
+      "classification": "data_or_translation"
+    },
+    {
+      "relative_path": "lang\\acfe-fr_FR.po",
+      "size": 276770,
+      "sha256": "ffa2b1d7d1c7ac99120ef4d2aba2df1b25ed8080507687bc26b0c1b8d8d00991",
+      "extension": ".po",
+      "modified_time_utc": "2026-07-03T18:27:28.2222040Z",
+      "classification": "data_or_translation"
+    },
+    {
+      "relative_path": "lang\\acfe.pot",
+      "size": 221578,
+      "sha256": "69b14403e74de836416430db850cdc72459abbf6e162f6d3fd9c989d7df7f3be",
+      "extension": ".pot",
+      "modified_time_utc": "2026-07-03T18:27:28.2227795Z",
+      "classification": "data_or_translation"
+    },
+    {
+      "relative_path": "pro\\acf-extended-pro.php",
+      "size": 10048,
+      "sha256": "fe5c8de4fd3009b1ada08a76caa9260e016ac89bb7c7bb696ad495b31976139c",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2233760Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\assets\\css\\acfe-pro-admin.css",
+      "size": 27424,
+      "sha256": "eaeafd921333b718a491b80ce728a001d23afc2ca3e020be7d392ce6925bbaef",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.2237092Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "pro\\assets\\css\\acfe-pro-admin.min.css",
+      "size": 22560,
+      "sha256": "5ffeb384f37a4011fb5ccce63028d7b1f6e0ba97717647985252f8193adaa71c",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.2238790Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "pro\\assets\\css\\acfe-pro-field-group.css",
+      "size": 3331,
+      "sha256": "8269eb2a392eafa1cd976c3f23e86061b5b5b5e1735105abf4a5a3c2282e1a63",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.2244738Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "pro\\assets\\css\\acfe-pro-field-group.min.css",
+      "size": 2927,
+      "sha256": "1254118fa7871065ab3d95679ea2f0fb8c32dac11ead3a8f1cbac1c67a8d134a",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.2244738Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "pro\\assets\\css\\acfe-pro-input.css",
+      "size": 78176,
+      "sha256": "979609beac52e08b9155ad581fc7b653c5888eaf5532dd40239a5acf79a70c6b",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.2249893Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "pro\\assets\\css\\acfe-pro-input.min.css",
+      "size": 64874,
+      "sha256": "481cc4d995d3ffca638475e2ca2f9f3b7ab90b5c2ecee54f44af5eeed80c41a5",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.2255271Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "pro\\assets\\images\\americanexpress.gif",
+      "size": 2635,
+      "sha256": "cacd0d9334ac21f4a747c627a856054a427c324d118d264fee01b714812cc4d8",
+      "extension": ".gif",
+      "modified_time_utc": "2026-07-03T18:27:28.3906519Z",
+      "classification": "asset"
+    },
+    {
+      "relative_path": "pro\\assets\\images\\discover.gif",
+      "size": 2599,
+      "sha256": "f93dd42c674da4ecee98576786e5ee10f7928fe37da29cde5aba08f772172e3e",
+      "extension": ".gif",
+      "modified_time_utc": "2026-07-03T18:27:28.3906519Z",
+      "classification": "asset"
+    },
+    {
+      "relative_path": "pro\\assets\\images\\dynamic-template-instructions.jpg",
+      "size": 46718,
+      "sha256": "25e558150739d2e426ceff4a68253ae4cfb01184c0e1355ef971ae5a7757117c",
+      "extension": ".jpg",
+      "modified_time_utc": "2026-07-03T18:27:28.3906519Z",
+      "classification": "asset"
+    },
+    {
+      "relative_path": "pro\\assets\\images\\flags.png",
+      "size": 42294,
+      "sha256": "1e71d27eaa5d7e3feff31f3a0bc70b10a6bcf3cd955755372e1594545e876457",
+      "extension": ".png",
+      "modified_time_utc": "2026-07-03T18:27:28.3916501Z",
+      "classification": "asset"
+    },
+    {
+      "relative_path": "pro\\assets\\images\\mastercard.gif",
+      "size": 2585,
+      "sha256": "93308080855a29772a199539edafb47fac702a9ca2cad6209276ead96fbc556b",
+      "extension": ".gif",
+      "modified_time_utc": "2026-07-03T18:27:28.3916501Z",
+      "classification": "asset"
+    },
+    {
+      "relative_path": "pro\\assets\\images\\paypal.gif",
+      "size": 2770,
+      "sha256": "66ddde498a31529a20a1665ffb149aeeb51bc768bd9d6d3fc56d0817aeeb73e4",
+      "extension": ".gif",
+      "modified_time_utc": "2026-07-03T18:27:28.3926754Z",
+      "classification": "asset"
+    },
+    {
+      "relative_path": "pro\\assets\\images\\screen-layouts.png",
+      "size": 290,
+      "sha256": "bc84103740980016e448d60c5c50a9c54d86dd6baf3eab9eab07ebda39b29e64",
+      "extension": ".png",
+      "modified_time_utc": "2026-07-03T18:27:28.3926754Z",
+      "classification": "asset"
+    },
+    {
+      "relative_path": "pro\\assets\\images\\visa.gif",
+      "size": 2585,
+      "sha256": "9f6d172d3e11324066433a3bba44bc79919e12592ba2d5d3deb30ec0077bc693",
+      "extension": ".gif",
+      "modified_time_utc": "2026-07-03T18:27:28.3926754Z",
+      "classification": "asset"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\block-editor\\block-editor-6.0.css",
+      "size": 599167,
+      "sha256": "b620e5cadc1a1b3ce6ffe5f111a691aeb5d2fb54c6faf574fd3dea1f6fb92cfd",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.2260354Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\block-editor\\block-editor-6.0.deps.php",
+      "size": 461,
+      "sha256": "7c44bd99d547bfafcdc3886754a722449fb50caeea7ad53dbfddc03a79f2cf6b",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2260354Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\block-editor\\block-editor-6.0.js",
+      "size": 208312,
+      "sha256": "5f9ea27ab12f341f89cd5482047aeda7fb64fb0d100285563d5ee8e8aec09510",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.2260354Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\block-editor\\block-editor-6.0.min.css",
+      "size": 472949,
+      "sha256": "9f67f664c0f2a9d3538a9f35af5961489d24df9f53189632f2d77e3ef37c793d",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.2270310Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\block-editor\\block-editor-6.0.min.js",
+      "size": 89266,
+      "sha256": "1c0fcefdc2eced7e2b0a83d4ad99c855b1ba753853c972795100c1c957709c3f",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.2280272Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\block-editor\\block-editor-6.3.css",
+      "size": 599167,
+      "sha256": "b620e5cadc1a1b3ce6ffe5f111a691aeb5d2fb54c6faf574fd3dea1f6fb92cfd",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.2280272Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\block-editor\\block-editor-6.3.deps.php",
+      "size": 490,
+      "sha256": "f15c0cfc748fd9c86d23181a8ed748d03eb559fc4ccce6bf15967b985a9a5c35",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2280272Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\block-editor\\block-editor-6.3.js",
+      "size": 217284,
+      "sha256": "94cda382b8e863f076723ca5fa2062b76e8617a7c8a4714937cd8ba328f1bbc7",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.2290245Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\block-editor\\block-editor-6.3.min.css",
+      "size": 472949,
+      "sha256": "9f67f664c0f2a9d3538a9f35af5961489d24df9f53189632f2d77e3ef37c793d",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.2290245Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\block-editor\\block-editor-6.3.min.js",
+      "size": 95623,
+      "sha256": "c4f406d0580a50ad08e9dff02ef8a70f643a9d625cab87039851823048d03b2d",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.2300217Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\block-editor\\block-editor-6.4.css",
+      "size": 599167,
+      "sha256": "b620e5cadc1a1b3ce6ffe5f111a691aeb5d2fb54c6faf574fd3dea1f6fb92cfd",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.2300217Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\block-editor\\block-editor-6.4.deps.php",
+      "size": 490,
+      "sha256": "07db9f45c4cd99a83f2defcfd835c89f20db76d1ac27635852582e51a02035d7",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2310191Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\block-editor\\block-editor-6.4.js",
+      "size": 195992,
+      "sha256": "2a3f61fa8acd701c49ea9f57ea904836308f3d8ac17974ece278d98571a19eed",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.2310191Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\block-editor\\block-editor-6.4.min.css",
+      "size": 472949,
+      "sha256": "9f67f664c0f2a9d3538a9f35af5961489d24df9f53189632f2d77e3ef37c793d",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.2320164Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\block-editor\\block-editor-6.4.min.js",
+      "size": 86511,
+      "sha256": "dea0a9ba0640366781f2f11be4d398eaebb07cfa3c525029f8eb0afaa0ec096f",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.2320164Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\block-editor\\block-editor-6.5.css",
+      "size": 634975,
+      "sha256": "a31148aba3bd5f566e8a67a703765b7580b1f91ea23329df313cad59dfacc998",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.2330139Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\block-editor\\block-editor-6.5.deps.php",
+      "size": 490,
+      "sha256": "88554084b19d95c324e27fe5ca4cc959e093f5d146e629d9fb06bc6715d32298",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2330139Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\block-editor\\block-editor-6.5.js",
+      "size": 192147,
+      "sha256": "55330833bf8ddb088083f46bd299490cf4674e3ad35d133566622b20fe3f612c",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.2340119Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\block-editor\\block-editor-6.5.min.css",
+      "size": 505041,
+      "sha256": "82dd956fce0fdbad80c9292dab0bf3c322bc1721cd06704ba091a3d884920019",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.2350093Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\block-editor\\block-editor-6.5.min.js",
+      "size": 83365,
+      "sha256": "eee86ca8562966512b53fec8ae7388770583a5f7df7439335e182506b8010007",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.2350093Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\block-editor\\block-editor.css",
+      "size": 635077,
+      "sha256": "fdf62a1642aa7c1ec70018058aa32c872cedb1ae4066b17d2afa8c34762561bf",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.2360059Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\block-editor\\block-editor.deps.php",
+      "size": 490,
+      "sha256": "c17003c27a7cc46788b9e75d2ccdb8cef23413ed771d0b31aacc0d97a57a1923",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2360059Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\block-editor\\block-editor.js",
+      "size": 192161,
+      "sha256": "20fdd320887fa8af3c815c455e1b1ca093a1a662dd9342c69df0ce3c78f945e9",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.2370032Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\block-editor\\block-editor.min.css",
+      "size": 505129,
+      "sha256": "632968637fab5620d684b3043db56908ad6dfbf520db6eaf742c855452f2faf7",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.2370032Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\block-editor\\block-editor.min.js",
+      "size": 83379,
+      "sha256": "9ef444e83ced1d772c4266fec4f0ca9ccddbaa2322eb24785db39ef603491c7a",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.2380005Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\daterangepicker\\daterangepicker.css",
+      "size": 8683,
+      "sha256": "6ad03cd37dea34b3614c3a94f4c09e6f97c3aa382c630ef115ebe3f5f10ac5e5",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.2380005Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\daterangepicker\\daterangepicker.js",
+      "size": 71119,
+      "sha256": "dc0d86a16d9a1696dc795e34e3b568fb4795bf0ebfe4d19eb4651d7eed089ba7",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.2380005Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\daterangepicker\\daterangepicker.min.css",
+      "size": 6340,
+      "sha256": "1d1c435697cb5a1b4a3f1da2df33a71e4cc7df3f797e9c7fe47047e962889dd3",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.2389977Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\daterangepicker\\daterangepicker.min.js",
+      "size": 32746,
+      "sha256": "321bd62b5c1e6c2f6664de2181a22ded2c5fe6853cad8d0530c9c8dcf2caa2fd",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.2389977Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\intl-tel-input\\intl-tel-input.css",
+      "size": 3904,
+      "sha256": "868571a5d42e7407558b854ba6da7f3cd45005b6fa7d4af4b4af6f6a762a4d51",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.2400239Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\intl-tel-input\\intl-tel-input.js",
+      "size": 101308,
+      "sha256": "d6be5e7f90c25448f5faaa39acc6d96845dd4f588fec8e9f8c262d42cc87fcfe",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.2400239Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\intl-tel-input\\intl-tel-input.min.css",
+      "size": 2989,
+      "sha256": "d7389602bd49a3863e1911e48d52e1c91a142ce1e0405462f072ffe39d611e1c",
+      "extension": ".css",
+      "modified_time_utc": "2026-07-03T18:27:28.2409928Z",
+      "classification": "stylesheet"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\intl-tel-input\\intl-tel-input.min.js",
+      "size": 35885,
+      "sha256": "65392ae901b2e635a5dbf3fb98c7ceb12ef28701e9033a2b794c018a56037bef",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.2409928Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\tinymce\\source-code.js",
+      "size": 2216,
+      "sha256": "d91218c2f4766a17ffb646f74415d552ea55ecd9a8c5d4e4aa6db023f55180f3",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.2409928Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\tinymce\\source-code.min.js",
+      "size": 875,
+      "sha256": "b8e64f2f3cc88e509a9c1deb47c944ca888b20269aa7ba327afca923483f5dd8",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.2419898Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\wp-color-picker-alpha\\wp-color-picker-alpha.js",
+      "size": 22683,
+      "sha256": "8cca9283f5b682fc0c144e4db2bc7330bd6167f5adb1a36cd7d71ab0d45645c0",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.2419898Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "pro\\assets\\inc\\wp-color-picker-alpha\\wp-color-picker-alpha.min.js",
+      "size": 6552,
+      "sha256": "998d2ef81cd05987e2247d2a44388b9feaed47b1e2d38fa6c3a074d9c861b097",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.2419898Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "pro\\assets\\js\\acfe-pro-admin.js",
+      "size": 36801,
+      "sha256": "3a58afa6c7157e94475be53636db1aabb7d7255d9c1cc32bba08ee005d8ac070",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.2429881Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "pro\\assets\\js\\acfe-pro-admin.min.js",
+      "size": 15911,
+      "sha256": "9466fa42bdd83e949e44f3cbecc3428bb6bc2a238036650d561ef2fdbf4a820f",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.2429881Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "pro\\assets\\js\\acfe-pro-field-group.js",
+      "size": 27660,
+      "sha256": "bc7a23d0b347cc1b2d959a97998b6acc5522947d8d6d362b695c5027267505f1",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.2429881Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "pro\\assets\\js\\acfe-pro-field-group.min.js",
+      "size": 11997,
+      "sha256": "d64d7de715b43d68fd627f9b77b3e1c962d3e820a47cb9caa1c09beaa293e308",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.2439844Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "pro\\assets\\js\\acfe-pro-input.js",
+      "size": 179519,
+      "sha256": "ffd62b8df6950640d9678746afcaf41c23f437ee08041ecd67eb3b4c8211c5ac",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.2439844Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "pro\\assets\\js\\acfe-pro-input.min.js",
+      "size": 75445,
+      "sha256": "7cc05d7db782aa847e18e93ce02d645beafc550d0d76d52627b3a4bb431d1401",
+      "extension": ".js",
+      "modified_time_utc": "2026-07-03T18:27:28.2450103Z",
+      "classification": "javascript"
+    },
+    {
+      "relative_path": "pro\\includes\\acfe-helper-functions.php",
+      "size": 2394,
+      "sha256": "2fa2c2304375faea36ff6e44afe13bfaffeda590d6beb0b206cf24abdd3cb8bb",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2450103Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\acfe-payment-functions.php",
+      "size": 930,
+      "sha256": "2784612db94153809f64fd97269737cdbf2f8f915dfff73c3772f8899be512d9",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2450103Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\acfe-script-functions.php",
+      "size": 5435,
+      "sha256": "5718af0520203292c0c4b8d8a2a853fce7136c8a563dea3daf2e6dca51472abe",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2459803Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\acfe-world-functions.php",
+      "size": 4078,
+      "sha256": "958966c754505b8f5d5df5de32d740d095860767994883b7db5edfcdd17a2fd0",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2459803Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\admin\\dashboard.php",
+      "size": 7389,
+      "sha256": "4e439528a0c180fc9906fe27f4f57cc8fd5393cf6485f44b22bdb4b83faf9fbc",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2459803Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\admin\\menu.php",
+      "size": 1344,
+      "sha256": "f1f4312a86cd8fc72d9210111492cfa7c1feabc7bbda50311ab205e09c22270e",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2470052Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\admin\\settings.php",
+      "size": 30597,
+      "sha256": "db8041d140af4959329c0f277d2b3e0d22c3451657a9dc1e1689c3a747191ed9",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2470052Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\admin\\tools\\rewrite-rules-export.php",
+      "size": 6218,
+      "sha256": "d9471585de25ba850d56bee461f657459963ca0ae3cbd87925fcf44a51966828",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2470052Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\admin\\tools\\settings-export.php",
+      "size": 9771,
+      "sha256": "512a2c9462854977f91e5a84408810f38f9b7ec365cd35de3fae740b18f071d7",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2480021Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\admin\\tools\\settings-import.php",
+      "size": 3252,
+      "sha256": "9df1e8999dd9f35d6f837e104b90176564769085847521d4936c98ab26c874ce",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2480021Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\assets.php",
+      "size": 2994,
+      "sha256": "8825fa85a5c8ef06e94681cde4e33e3fe7bce7f867118d0173af10c6924b0fee",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2480021Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\compatibility.php",
+      "size": 3887,
+      "sha256": "c6b88f56bb41e9add2f0f34683885281b51b58ae047831e9fb62eb15ac80040a",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2490022Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\data\\countries.php",
+      "size": 129978,
+      "sha256": "2c90668334126462bedd870ce672dc97da8d28842b02645e6f9691c170e64a85",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2490022Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\data\\currencies.php",
+      "size": 53084,
+      "sha256": "5b1c231976d41156b0a3c436035d6014f0321f60b2e813ca17ba31c84272c5d9",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2490022Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\data\\languages.php",
+      "size": 56212,
+      "sha256": "748b2deb5a7e3baf826b32ed136897e88b1e7b2396eb9889884ad2b3e26c1c23",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2499969Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\data\\phones.php",
+      "size": 43301,
+      "sha256": "274ad0ca1c334cc58f55fb7dbe6e06e90a49424f0176dce987f1ccd06db9f0dc",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2519640Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\enqueue.php",
+      "size": 3718,
+      "sha256": "0f2f51c84dd8bf27eac6e53347bf6de20eb374d72d9148c6fe01932f75664037",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2529620Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\field-groups\\field-group-hide-on-screen.php",
+      "size": 3634,
+      "sha256": "c9eec48b488c5e337ed9ea9c69bf60a0bba647c32990f6adaf68ca1d5acb0922",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2539593Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\field-groups\\field-group-ui.php",
+      "size": 24174,
+      "sha256": "c47792b4bc61b482268c54e46ca56a0c2647d8d3a3f4aee93f8a3a734633776b",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2539593Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields-settings\\instructions.php",
+      "size": 2406,
+      "sha256": "687a1c1d587aef4ea20a4e1d87f0075dd265c3f552c8fb9f9a62c59f9104293a",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2699167Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields-settings\\min-max.php",
+      "size": 12706,
+      "sha256": "024fed4ad8a648c6224ef378f5cf17c70652c18a8fd24b3a0f0394dd5a75b27e",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2705502Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields-settings\\required.php",
+      "size": 2000,
+      "sha256": "5155d4f32d8034f5a46df5e8ff63deeadf5182cc08fd0210518f64994cb3ce4c",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2705502Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields-settings\\visibility.php",
+      "size": 3970,
+      "sha256": "6b5408c451da207b0c3bbe48d4f388b323bb205a22b38fd4e7325fcc7e9992b1",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2705502Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-address.php",
+      "size": 19646,
+      "sha256": "af7e2a39a55dbe1e5747bdca599ab0fc81cfd8ba5e8c470adca9eef818c2f648",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2549552Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-block-editor.php",
+      "size": 29241,
+      "sha256": "586b3968fa3c37939e6c2a4a20890726d6e2f72be421a35d380feba764067088",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2549552Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-block-types.php",
+      "size": 17040,
+      "sha256": "0b507ffa880f4e1a4c736fea3b6b1cc8240cccf1ad3bb13c44a106d23d3fe98e",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2549552Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-checkbox.php",
+      "size": 7774,
+      "sha256": "1cff48010321efbf96a914bb44082fb2daec234d7fa73d2dcef47d670a1c3b9e",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2559812Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-color-picker.php",
+      "size": 27764,
+      "sha256": "be6e1966ac56b39022e4a60d5133531b3a1f2bb08ffd93ea40cc7670d7c80262",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2559812Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-column.php",
+      "size": 3626,
+      "sha256": "acbf1f8d52c78e6fbf1816c536a5c37849f0a39ba92154007671260295b17ccb",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2559812Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-countries.php",
+      "size": 21959,
+      "sha256": "b4e32beefc8af8d83d63d7b7106ac305a9b47f7fbe0d4304ac3efc5188bff275",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2569807Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-currencies.php",
+      "size": 21885,
+      "sha256": "34f7168223fd500caa75aa794ee12d982217b6206ea83be214bf32ad41b6a1bd",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2569807Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-date-picker.php",
+      "size": 3783,
+      "sha256": "6cfd4ece4408d601edab38ad64a6a803359ac10fd1019c823ebd81d7dfd7688c",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2569807Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-date-range-picker.php",
+      "size": 26802,
+      "sha256": "6ceec18acb195626f6e1d97d945056eceff18e1fcb8ad98493d6bd5c57e31626",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2579753Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-date-time-picker.php",
+      "size": 9053,
+      "sha256": "82fd038e78172d950405510b16a273f4da9225ea29360aab3806412e22515118",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2579753Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-field-groups.php",
+      "size": 17510,
+      "sha256": "435291f216d9b370bb74edd821cb3f9380504623e898cf0cc7e83214328c4126",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2579753Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-field-types.php",
+      "size": 17209,
+      "sha256": "f784bd966ee4150cd7ae1eb9b6c062078ff0b4c3a1ec670d88a1c561b1c15295",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2589731Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-fields.php",
+      "size": 17858,
+      "sha256": "a17181e8a26edf028ab294758458a604c45d9cb534751c473d168682bea774e0",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2589731Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-file.php",
+      "size": 25435,
+      "sha256": "a15cfdf380ec10b8edfefeca7500b8c28c604f6967ab4cee735326b1418b4154",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2599708Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-flexible-content-grid.php",
+      "size": 19534,
+      "sha256": "1358d6dc75065da870a6f4f605cfea0e02c95ec373dbd89a8a8b6c6125a55870",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2599708Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-flexible-content-iframe.php",
+      "size": 11732,
+      "sha256": "cd2be7e011cef0f4640427884dc6e351491e5f3a7797cc09fcc02a72626b01dd",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2599708Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-flexible-content-locations.php",
+      "size": 14422,
+      "sha256": "28901e573928b8132ce94f50d3da6d3b4de0d2bf29e82e21d450969e458193f0",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2609675Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-google-map.php",
+      "size": 20897,
+      "sha256": "445ccff4910e656defb82e64013aa79f8d6f3aca87441810554ec04fdd7fde7c",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2609675Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-image-selector.php",
+      "size": 10044,
+      "sha256": "7acedd13dbbb6e1da68cdde9edf55968b829cd3e723a782d2b50485fd2865761",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2619373Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-image-sizes.php",
+      "size": 19160,
+      "sha256": "134a6379dae69e4f0f21603d3de908100931ec381132f5b53979944916d077b5",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2619373Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-image.php",
+      "size": 3029,
+      "sha256": "ae4e6a23bc5310012b6b3774dbca3e4fadaf169ea1da27cfa9f8ea3cbd31f55a",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2619373Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-languages.php",
+      "size": 24375,
+      "sha256": "3b9b855c69d589c7674fc4e35ebdbce816c3727ce75c35306e9aad60c4454bc6",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2629628Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-menu-locations.php",
+      "size": 17316,
+      "sha256": "7b63c3f68c98346c177b29bedaf401e078153cc023e8d2455cd3594ccc5a0665",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2629628Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-menus.php",
+      "size": 17128,
+      "sha256": "fcf48bcda77dfad1343c5b1b0be4a500e55c0ff8596508426b93e7560863f90c",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2629628Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-options-pages.php",
+      "size": 17260,
+      "sha256": "f5b0f2d6f48af52b5cfcc3428fbad1cc0c3a5227d39cda2cfbac65a280a98465",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2639320Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-payment-cart.php",
+      "size": 19393,
+      "sha256": "d5902ac8cf79b83b4b0b0db396c642f06c8074f89b10c62a73407e0b8eee1086",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2639320Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-payment-selector.php",
+      "size": 9102,
+      "sha256": "bcd2ef419b5881da95059dd06a99d9982909dce00a001e39ca215c8210b36e16",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2639320Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-payment.php",
+      "size": 54133,
+      "sha256": "26176555dc97225f447f85323911c9fd5e5b7efb9b763a7594940cfab141c477",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2649572Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-phone-number.php",
+      "size": 18614,
+      "sha256": "75eed6eaa6774e997ae5daeb2bb5d563f56edd05984ca99e42859a413c056288",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2649572Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-post-field.php",
+      "size": 5883,
+      "sha256": "e141eae5b58c52e582fa565698d5c46f0fa922d6af4dbf84fe10673b25c9bbcb",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2649572Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-post-formats.php",
+      "size": 15985,
+      "sha256": "b4364b87ab69476347b1dd4490f16093442ce09fcd9246dd6be5ba7616e00019",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2659545Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-post-object.php",
+      "size": 1242,
+      "sha256": "89f65469d75ee601170a55e26e571f6a45127ffe75acd5432b5a9a18f4338cd6",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2659545Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-radio.php",
+      "size": 5532,
+      "sha256": "bf0c790245eb9ca75e52eb71323104dff18f09e04422d861f42a1361f30e40b4",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2669519Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-relationship.php",
+      "size": 5803,
+      "sha256": "93e2a563f2ecd62f18ef2740f3427f9016b859e820579210046e912ddd95ff9b",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2669519Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-select.php",
+      "size": 2182,
+      "sha256": "44bb5889957d839713a59416a1dd8c1c3ea9210eb00833aa4349cd873373f836",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2679223Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-tab.php",
+      "size": 1252,
+      "sha256": "15c07911afb8153995173fb39dddc8d3231d4f4e7ab9285de07d8986752eb442",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2679223Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-templates.php",
+      "size": 17232,
+      "sha256": "2e390d66eaf6a4ee83b3f4c94c76b33fd0ce85541bb3d0537c4187f8fd30d8bf",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2689187Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-time-picker.php",
+      "size": 6871,
+      "sha256": "afe1f6b0c95f63674722b6aef9502b61e4cd4816979cad22de45e7d7f1cade40",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2689187Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-true-false.php",
+      "size": 2026,
+      "sha256": "d250f491538e844d89019ca074059d3db1a116f08c993e1c4e04079d5d63b77a",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2689187Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\fields\\field-wysiwyg.php",
+      "size": 30274,
+      "sha256": "0b3e619ce4f538ae6e832fff42ad6457b83488568b2f771ee33d7d0d417edfd7",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2699167Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\google-map.php",
+      "size": 24636,
+      "sha256": "f23112a039a517c82444fd1f21a2c6ea929afbdaffd63369220b7757d16c9bc8",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2715702Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\hooks.php",
+      "size": 6337,
+      "sha256": "3d3fe298962603530efb23d0c0412b6efdb1f14652bf9e5b238f9856b8b36331",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2715702Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\paypal\\paypal-express.php",
+      "size": 4329,
+      "sha256": "7c9316fc9ce98690fa7fc8f6ebdfc90526920bd799c7a44c70cafab769790d65",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2715702Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\.coveralls.github-actions.yml",
+      "size": 93,
+      "sha256": "63fd6f20d410cba8567f37126cf9c110853856d6e6372a671a9890d0577a22cb",
+      "extension": ".yml",
+      "modified_time_utc": "2026-07-03T18:27:28.2725676Z",
+      "classification": "data_or_translation"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\.editorconfig",
+      "size": 288,
+      "sha256": "5f6b31fe33b80e936a5f3b567829190b350d7baffc6ddae9707971c477e3d219",
+      "extension": ".editorconfig",
+      "modified_time_utc": "2026-07-03T18:27:28.2725676Z",
+      "classification": "other"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\.gitignore",
+      "size": 643,
+      "sha256": "13471dc3100ec59d9943b00cb9aa2ad26bc2bc25122dff02efc543a7c0fb3d3a",
+      "extension": ".gitignore",
+      "modified_time_utc": "2026-07-03T18:27:28.2725676Z",
+      "classification": "other"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\.php_cs.dist",
+      "size": 1839,
+      "sha256": "b914c2de9f5efc1f066339ee4add1639ea1b73d6705dd840aaf4af85542388f3",
+      "extension": ".dist",
+      "modified_time_utc": "2026-07-03T18:27:28.2735371Z",
+      "classification": "other"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\build.php",
+      "size": 665,
+      "sha256": "0900c961f46cfd8c9977d60019a124028bdbb19a1ea50cfb2255e7fe51289e7d",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2735371Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\CHANGELOG.md",
+      "size": 55759,
+      "sha256": "aeb8335dd02ee1876ac955518a8dbe521b844db43adea8f83252a681d43aa4a3",
+      "extension": ".md",
+      "modified_time_utc": "2026-07-03T18:27:28.2735371Z",
+      "classification": "data_or_translation"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\CODE_OF_CONDUCT.md",
+      "size": 3445,
+      "sha256": "79321b6066656908c1fb6250dea69cc9a5d9a653bfdf260a556ff83d58b8dd00",
+      "extension": ".md",
+      "modified_time_utc": "2026-07-03T18:27:28.2745635Z",
+      "classification": "data_or_translation"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\composer.json",
+      "size": 971,
+      "sha256": "6de4515f75071f8e3a639206a774a62511aadcca8b6b3d094bb667909e18779b",
+      "extension": ".json",
+      "modified_time_utc": "2026-07-03T18:27:28.2745635Z",
+      "classification": "data_or_translation"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\data\\ca-certificates.crt",
+      "size": 227561,
+      "sha256": "9265af106c80ad5f92a67fb3a2fb22688b3551e1a7da381bc58c44c0b0212b5c",
+      "extension": ".crt",
+      "modified_time_utc": "2026-07-03T18:27:28.2755310Z",
+      "classification": "other"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\init.php",
+      "size": 12097,
+      "sha256": "25257388c62f2acd1953209c87b65bc5c97891d873b841982f992bb7708e4f2b",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2755310Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Account.php",
+      "size": 17282,
+      "sha256": "cfe8c6a9256845f569ebd1ba29b410ca5daff8b44fdf9b62642328927aed165d",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2755310Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\AccountLink.php",
+      "size": 856,
+      "sha256": "9abc1aeb9382445f4a7b6414b84a72316371e74df962f1a0d2c2cdcb92527302",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2765282Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\AlipayAccount.php",
+      "size": 2461,
+      "sha256": "515e4b2dfe34f9efc551a655fa5ac4f49226beb7e4152cb18a6d5246f878b72f",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2765282Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\ApiOperations\\All.php",
+      "size": 1146,
+      "sha256": "dfd228b54a018dcba61c28707061fb1ef5959a092ad28d3986950f025faada74",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2765282Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\ApiOperations\\Create.php",
+      "size": 867,
+      "sha256": "d72516b37acdf8f0c92c61603caf17f54d250ba03ed54eec7bbca4a98229c93c",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2775255Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\ApiOperations\\Delete.php",
+      "size": 764,
+      "sha256": "742733b97d09a86f61a45360b49ab029150818f4581bffdae0b7c00ac9a3fc51",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2775255Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\ApiOperations\\NestedResource.php",
+      "size": 4129,
+      "sha256": "4c3c0a4bbc6340f2931913baaa1c695c272676fc45d1cfb9e85f79a1662fd204",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2775255Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\ApiOperations\\Request.php",
+      "size": 4151,
+      "sha256": "4973b544cb52590e7cee14bbf23016e5e393b2de028cb296f85caef42bc6813d",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2785228Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\ApiOperations\\Retrieve.php",
+      "size": 780,
+      "sha256": "57f251c23fb039ae9d7f1628542d0f63b3a5eba7d9ae9f2c2827211dca39b663",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2785228Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\ApiOperations\\Update.php",
+      "size": 1498,
+      "sha256": "ccf11830b9208a51e8ae7467c845895ea6cba065d6621a4246cc17a0a02787dc",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2795511Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\ApiRequestor.php",
+      "size": 19841,
+      "sha256": "61aa13aa44e2c61295784551b23f1aa1b5ebeb75a73d7de02691eb6beb3b4e1e",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2795511Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\ApiResource.php",
+      "size": 3568,
+      "sha256": "14b94fb64efcda6c274a5f0472542994bfae8aee6010fe3280544748f01b52c7",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2805175Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\ApiResponse.php",
+      "size": 757,
+      "sha256": "64d344cd963e8bec845a0ae902cb463272fbbabc6a8b0723ace9afee5a5e4a60",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2805175Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\ApplePayDomain.php",
+      "size": 1047,
+      "sha256": "a7de9228804a1557b99522b04391fa74469fc4eefb2154baba4567699fd7cd25",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2805175Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\ApplicationFee.php",
+      "size": 4293,
+      "sha256": "ffa8e13433ab21dd93419fb3e92b0b8e8ffd00e27c8f40ff2478590fc67b1b43",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2815149Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\ApplicationFeeRefund.php",
+      "size": 2569,
+      "sha256": "b72de5aa3f8a44269667f3b8d4eb443efb219a0318b9b4b14c93317703382d7a",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2815149Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Balance.php",
+      "size": 2407,
+      "sha256": "64e2471d4bc4d467b8ada489a7526e0982ade82b433ad74b6eeab2271a042fd6",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2815149Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\BalanceTransaction.php",
+      "size": 5745,
+      "sha256": "6f17cea4b0e4130cfe714fdc1e2005c28f47ed9df15722a2a6f412afa008bb95",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2825123Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\BankAccount.php",
+      "size": 7431,
+      "sha256": "d011214d4bff78c7743c496058cfac1ac6f43c480dcdcc8b758a08df2e72bdb9",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2825123Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\BaseStripeClient.php",
+      "size": 10839,
+      "sha256": "d9b4fd3e93597d8411735848d76c4e575341d53e276480cdedb60e4e162158bf",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2825123Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\BaseStripeClientInterface.php",
+      "size": 1034,
+      "sha256": "2efcdc6b41058b1d804174ad4e4ff489443a174c682a9d606970f22e74b1dc3f",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2835382Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\BillingPortal\\Configuration.php",
+      "size": 1874,
+      "sha256": "6874a62e36bdbcfbdf98aed7099d79bf255a453448619f7eea511e231c678908",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2845082Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\BillingPortal\\Session.php",
+      "size": 2587,
+      "sha256": "70aac19ac2cf704efc61b14a360dcfed44a3c6705fce1e5a2226d2d6f51cb912",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2865025Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\BitcoinReceiver.php",
+      "size": 4306,
+      "sha256": "83803dd964eb74b5c8b88f53cf87d3f70d68217e68069d265f686ff86f872998",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2865025Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\BitcoinTransaction.php",
+      "size": 904,
+      "sha256": "7499eb0a97e0948867109afbbec3aad20079c92e8ca0f5b850f9383b05f522f5",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2875300Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Capability.php",
+      "size": 3024,
+      "sha256": "37e79342a7e762c76ff3e60a08c38a12de257a6e3a463d5862495d36ad21fe55",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2875300Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Card.php",
+      "size": 8653,
+      "sha256": "9fecadfa759ae6daa7a07a85cfd02d983c58c0b4ae1373a019a0d6136d95be80",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2885247Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Charge.php",
+      "size": 12708,
+      "sha256": "7dc4177693b4e7958ada4544821b1af81bd5505ef9ac2abe21ed45cff20f97d0",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2885247Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Checkout\\Session.php",
+      "size": 7190,
+      "sha256": "cfc1a24665ab26efad0c5be5760205e0235ad688fca697675f2b85a63416f0af",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2885247Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Collection.php",
+      "size": 7994,
+      "sha256": "40aa2ff355fbb6cb727078880a152ca323ccd12d6dedb450d22ab3a3690f7d09",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2895224Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\CountrySpec.php",
+      "size": 1814,
+      "sha256": "a5743728365fa3f59f8a0e1fa8cb5e41e5515c75f5c699366b5347c88d49d35b",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2895224Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Coupon.php",
+      "size": 3025,
+      "sha256": "b3afbb66cbca1f98a16401e9cd7c579b35e5872bc08b9c95ac4e4c3a5c5aaeb3",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2895224Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\CreditNote.php",
+      "size": 5892,
+      "sha256": "f7a9d6eb29780b5edc4b7e6bbd268926d09a55bd8fdae33bf523002993db2f1d",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2905194Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\CreditNoteLineItem.php",
+      "size": 1923,
+      "sha256": "b1ddb6ecf4bbf7aa6490802bddd4cba19a26d2d7d17733e2c6a70960df796d56",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2905194Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Customer.php",
+      "size": 13339,
+      "sha256": "f54a9ef5390a731aea395445c8a71a87a46c5a9d802f5e3527dd255509a7d119",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2905194Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\CustomerBalanceTransaction.php",
+      "size": 5439,
+      "sha256": "4873db6bf36ae9bdbab89a03ec514d5c2130636bea7b6e4e134b90cce2f244f7",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2915171Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Discount.php",
+      "size": 1563,
+      "sha256": "2960f17c68bf50233d4c64dadf2d3ddeb48bd9c67d4839b9f0b05515b82fe901",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2915171Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Dispute.php",
+      "size": 5277,
+      "sha256": "27f648d8c494cb49cc86fab5b215d144afb022a97d0d0a947de5846dc2afa7a7",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2924867Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\EphemeralKey.php",
+      "size": 1629,
+      "sha256": "efa18d08082df033303d1fc8094bba23a1d6c7bda4f924d2845e450cf611a2a7",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2924867Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\ErrorObject.php",
+      "size": 8952,
+      "sha256": "287eb2dcf2d2ca14004a1038a68e37155c1b91c76620bc5345cd061099d0febd",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2924867Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Event.php",
+      "size": 14521,
+      "sha256": "59e70e16b9f528f10570fb76e7cb69d7fded0a30ce4bf270a5cfd45b00ee0fb3",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2935123Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Exception\\ApiConnectionException.php",
+      "size": 304,
+      "sha256": "0db08acd06dbdc0e0f43e7e9a64bcbb7280206d44874df0dcd2bf4a5c4f733d0",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2935123Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Exception\\ApiErrorException.php",
+      "size": 5231,
+      "sha256": "259b4c6aaa2646b4c884a8fe91d4f7728b1ea317aa095e2b07f5c62c37638d90",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2935123Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Exception\\AuthenticationException.php",
+      "size": 221,
+      "sha256": "4aa022397aca8f0508b6f6a305d51b48993beba55e9ed7884f4a2846137494d8",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2945098Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Exception\\BadMethodCallException.php",
+      "size": 138,
+      "sha256": "25acc6edef1a1b1994370bdda7015b6b81aca45a6addcb4a04b8daa407594049",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2945098Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Exception\\CardException.php",
+      "size": 2208,
+      "sha256": "d297d12e13a90183f4d0610316bd5258f74d469bd0a4383813d0e9c219408a89",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2945098Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Exception\\ExceptionInterface.php",
+      "size": 512,
+      "sha256": "0abd7fa8eba64de1e407b3002340c8d0ef5408c45ecf971ef727560d00fc4b06",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2955065Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Exception\\IdempotencyException.php",
+      "size": 204,
+      "sha256": "7795b0c6982c20ad07dc3602f644cb44c2591e3bdc3ad9082cbf63ecb385eb65",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2955065Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Exception\\InvalidArgumentException.php",
+      "size": 142,
+      "sha256": "4a095db96133b02e22c956c0b269e1683c576c073fdf535fe6da21a437938e17",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2955065Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Exception\\InvalidRequestException.php",
+      "size": 1688,
+      "sha256": "736d8efdb45bbbfcdf2baad3ab3c54771d1d3806e9385eff64fe285c87a91cd5",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2965032Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Exception\\OAuth\\ExceptionInterface.php",
+      "size": 193,
+      "sha256": "c644507be77f9002436398c24cdb5c451099ff53be1de1f88fcedf68c784cf64",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2965032Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Exception\\OAuth\\InvalidClientException.php",
+      "size": 358,
+      "sha256": "84b46390dbbe0d918579201bbddc400a942de833c232c3b699431b4ada255d9c",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2975010Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Exception\\OAuth\\InvalidGrantException.php",
+      "size": 404,
+      "sha256": "0f37bc9bd67e114a0dabf55b636de90e82f3a420d6eef6e4e42b97f0492f5a98",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2975010Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Exception\\OAuth\\InvalidRequestException.php",
+      "size": 250,
+      "sha256": "5fda71a932c8c313f2cc96e87d6f4a7d815327634577975be820f50cdffaf314",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2975010Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Exception\\OAuth\\InvalidScopeException.php",
+      "size": 200,
+      "sha256": "578983c9de6ef20c11a938efd873f81be1ec8df43db390c9ce8650e2a56d68e7",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2984996Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Exception\\OAuth\\OAuthErrorException.php",
+      "size": 448,
+      "sha256": "83dc6138a0e8ce63a53f740c487d913bbaed305c933fab6dac778ee2bc5fbf58",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2984996Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Exception\\OAuth\\UnknownOAuthErrorException.php",
+      "size": 351,
+      "sha256": "746443ebc172fe8b434e678fbc0ede0fbc4b86e901720a4559411f9b73acce46",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2984996Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Exception\\OAuth\\UnsupportedGrantTypeException.php",
+      "size": 230,
+      "sha256": "ae9e5115fdb6aa7b6746a91d8478155c702556cfc7318bb29b1813f8065c7668",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2994953Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Exception\\OAuth\\UnsupportedResponseTypeException.php",
+      "size": 239,
+      "sha256": "f73673e62c904d90c1f363d457238720072c58004d3f05e9c41c59e25217567e",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.2994953Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Exception\\PermissionException.php",
+      "size": 218,
+      "sha256": "611dcb2d89a325852f26ceffa868c362383fc0a72fb40adf19c6bad7633a66a1",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3004707Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Exception\\RateLimitException.php",
+      "size": 306,
+      "sha256": "5665a687ec3edd8a491e5a6e3833a1c19bb2484a2753ff479cc651de903b7809",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3004707Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Exception\\SignatureVerificationException.php",
+      "size": 1705,
+      "sha256": "073fcc2392eee074e6a56b665d3fd7f9747912ebccfd1648d46bc92bc59b1b6c",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3014909Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Exception\\UnexpectedValueException.php",
+      "size": 142,
+      "sha256": "d0befcad16ed87c93105fe6e97321d50d8d25910a8a6356cd0631f83e5a03c8e",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3014909Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Exception\\UnknownApiErrorException.php",
+      "size": 335,
+      "sha256": "e1fab3f8a66ab1feb74340b4be4d5b1e0ee9b0e52a61402dfd6bbbfc418ce717",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3024598Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\ExchangeRate.php",
+      "size": 1476,
+      "sha256": "ad293f795b46a6f8a55febb209bf5ec7f59d40ff5ee6d02c05f60b91e8898b90",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3024598Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\File.php",
+      "size": 3966,
+      "sha256": "c24f05572d083436aa3856f4fea02dd1b01a65e4c64002ee1f862446b647ff25",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3024598Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\FileLink.php",
+      "size": 1516,
+      "sha256": "93620beb72cf73e1261f6f5b35ed312c6e12bfac98647f0fb713df96f942f1fc",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3034852Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\HttpClient\\ClientInterface.php",
+      "size": 908,
+      "sha256": "388d8a310f8b36dfebe6d5bd6938e3e35cdb73216d4fc0cf74efed969cf70cd0",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3034852Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\HttpClient\\CurlClient.php",
+      "size": 25259,
+      "sha256": "61e6a5193e121cda88add9eb760fae8c1519c1f197c40522931fe4ced476c376",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3034852Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\HttpClient\\StreamingClientInterface.php",
+      "size": 1089,
+      "sha256": "10d92ac5f30b3cb76e248354045196756a2140d1797a749555c24ca0d1f59b2f",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3044822Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Identity\\VerificationReport.php",
+      "size": 2171,
+      "sha256": "b821b4698a91523882f5c288597b3160a2542813aeab4010085ee48cacc01c43",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3044822Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Identity\\VerificationSession.php",
+      "size": 5267,
+      "sha256": "ef024acab82ff75291c84bc0ee3ca5f86481a4c98557b9916e934e1806f88526",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3054791Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Invoice.php",
+      "size": 19992,
+      "sha256": "8990c0f0c7c5d39719642a813f7b6a8b16e837b456d63c7940f5eba08e0bc871",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3054791Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\InvoiceItem.php",
+      "size": 3807,
+      "sha256": "3dedb89ff98c84d04a864728c7e5b1f78d04e62d8227712fad1a69e7ff6b3916",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3054791Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\InvoiceLineItem.php",
+      "size": 2942,
+      "sha256": "a7ff5387edff5a428f4fe596472bc02c7d01d6c93f444d13a3c340d64992bea3",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3064783Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Issuing\\Authorization.php",
+      "size": 5458,
+      "sha256": "06812d08d3c38c3e070ee88f1141ff3fb0e0af2ee22db4ef4df521962147ab47",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3064783Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Issuing\\Card.php",
+      "size": 4194,
+      "sha256": "f3482275e6cdd16f3d8fe50d1f3327e8f42a053a1e5ce200a6c0b194a516d376",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3064783Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Issuing\\CardDetails.php",
+      "size": 368,
+      "sha256": "7c37066f4a6f6de23e685dc43a816da966efc34256780003168c68dc7e61f4a7",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3074740Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Issuing\\Cardholder.php",
+      "size": 2309,
+      "sha256": "0533395a06574e7d410e301375fd94cf107d4ea69f9bf47272172bac15c1a2ca",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3074740Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Issuing\\Dispute.php",
+      "size": 2429,
+      "sha256": "6430f951adb9f33c333013194d65b544d69c8c39512304626122f5d65875b6f8",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3074740Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Issuing\\Transaction.php",
+      "size": 3562,
+      "sha256": "d652837651d14e4ad15b6035e01a5dc430b8bf847ce9449aaf4e44020f0363d2",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3084719Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\LineItem.php",
+      "size": 1218,
+      "sha256": "235b76a6690325ba75393afd7fba661ec646bce6cdc14570c326b0bb0c8c5d9f",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3084719Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\LoginLink.php",
+      "size": 441,
+      "sha256": "3acb3f1cb78025d9a23bd4619b15bf17be6dd5e0e5371016c1c7e9af54f074f4",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3084719Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Mandate.php",
+      "size": 1131,
+      "sha256": "683d5bf64327429ade84dba3e3e5847945c9a88a0ff6166508a626c1a141732e",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3094687Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\OAuth.php",
+      "size": 3494,
+      "sha256": "4162387a7740e55908d1e78f5862f6109397eb02d27d7b9cac42f739fa5609f9",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3094687Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\OAuthErrorObject.php",
+      "size": 892,
+      "sha256": "2606a9f036faa07e6dfd6fef4663abff2fb18b8e44fa2bab69594b6944cf0e2a",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3094687Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Order.php",
+      "size": 5313,
+      "sha256": "86ac57f9e6398f186f71a2d1bc543876370e2c16a2d1098c7007139d6ff76cfb",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3104385Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\OrderItem.php",
+      "size": 352,
+      "sha256": "2bc6ba3bd150dee0bd096f53e20420a59ebe832ab6bd4b34ac9dee8b956eeb16",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3104385Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\OrderReturn.php",
+      "size": 1721,
+      "sha256": "48973cd0428848567f8047c855877bb68c8c3461056f4466aafca66f9d2c9dc1",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3104385Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\PaymentIntent.php",
+      "size": 11665,
+      "sha256": "f39ae6c4da6500dfdd866ab34642c3a91ebb463b36e7580e6572eab9053ee0bf",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3114658Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\PaymentMethod.php",
+      "size": 3903,
+      "sha256": "881af1a310da6bc3ac3833a0769f9248f2e83bb1aedaddb39cdc6a690928b12a",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3114658Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Payout.php",
+      "size": 6955,
+      "sha256": "e27da869f154c75b9c09d09c48768061e3e7d6be7decf06a0b01770e2203ba2b",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3114658Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Person.php",
+      "size": 5603,
+      "sha256": "0c28d06fdb5d30ef0b2a2a532d227475a658db9eb47afe5f41fd236eedf5a47f",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3124608Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Plan.php",
+      "size": 5742,
+      "sha256": "78463de56bd9070c208dcc2f2dd9b79b53d14f8a8a4aca9b686b7ee39246329f",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3124608Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Price.php",
+      "size": 5324,
+      "sha256": "1648f1bc674ad796792abdaee7aa9797365e0abf136c1f9d8c250aa763eed0fc",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3124608Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Product.php",
+      "size": 4172,
+      "sha256": "700925ce52fa2abfbbbfbe53bbc8809abb5206cd595aec5b3c89e61821339354",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3134584Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\PromotionCode.php",
+      "size": 2279,
+      "sha256": "e242d7a0494c31cbeffbe1f4d57ac75cf41380aaf87f45f3b32d8f209feb84fe",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3134584Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Quote.php",
+      "size": 8956,
+      "sha256": "2ef93c7fdc0b9449ca07ce9c81b0deda4d73fc6c95783dcad91bca8b69972ffc",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3134584Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Radar\\EarlyFraudWarning.php",
+      "size": 2264,
+      "sha256": "d09971fa909957995c08b54a7263e81bcb4c0ce1c322d4ff9bad0d79e3ebb636",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3144559Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Radar\\ValueList.php",
+      "size": 1871,
+      "sha256": "d226ca5122e85a28654a61d86491e96523db8f99ae21ac967ecd06bd9ab7848b",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3144559Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Radar\\ValueListItem.php",
+      "size": 1289,
+      "sha256": "7a87112762af9a36457046ad48cef0f07e2d7eec2cdf015939fe9f49bb0ca4de",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3144559Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Recipient.php",
+      "size": 2803,
+      "sha256": "f14007f93a2908d4163b3fffd41ce2254c65d47eba75ef03cd7a1ff49a859263",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3154530Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\RecipientTransfer.php",
+      "size": 954,
+      "sha256": "63050e7a8da62776621db5ee34040a9fb2e3b6d4c2c16c2b74bee03af73c3a56",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3154530Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Refund.php",
+      "size": 4197,
+      "sha256": "c91772c8cf032a08137b2b43d675ef5c04c6101cb21357058260340f145178f4",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3154530Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Reporting\\ReportRun.php",
+      "size": 2465,
+      "sha256": "ea46218866ef3fc0686d79bd60569005c1d63dc42ad0d28cc810cf263d5db3bd",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3164224Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Reporting\\ReportType.php",
+      "size": 2099,
+      "sha256": "114566c9c67abadf730fdbee381e57429f47825c9fc4133dda7e7358b5103020",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3164224Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\RequestTelemetry.php",
+      "size": 565,
+      "sha256": "63b7bcb34f587daf4fb4c8ceec5ccd30ab39d6f14de6cc1e63250cf5e36795dc",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3184175Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Review.php",
+      "size": 3491,
+      "sha256": "8d39aed7f2477b56f4abc6c2e43dbf22240f89b73fa3eae93dfc73776d1ec8cf",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3194268Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\AbstractService.php",
+      "size": 2697,
+      "sha256": "030207fef3e65ae73e1256879681e49250c21ad668b32e3e4eadd68854f49693",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3194268Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\AbstractServiceFactory.php",
+      "size": 1535,
+      "sha256": "9dbad0c7b9c5ba213d2aae91ac7aa8e1e0f53d420e668482c235bac24dd00de0",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3204120Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\AccountLinkService.php",
+      "size": 743,
+      "sha256": "3bb1c566b1e5d4290850b4b52824d8420e2a9b74b2103755f3f79357dd208e76",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3204120Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\AccountService.php",
+      "size": 13859,
+      "sha256": "ad023d7f452786f80f69638eb990e0fea588a6026e45b5426f556c3c4d6b9648",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3204120Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\ApplePayDomainService.php",
+      "size": 2027,
+      "sha256": "1cdbb0d86c11af8e3b9c6ff6c93c73757f747041f7d15935523f06195feb24fd",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3214365Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\ApplicationFeeService.php",
+      "size": 4849,
+      "sha256": "33f2c364008543596ffcb8552e54c47e59004f446a6403ea3ec1bd91a0fe015b",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3214365Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\BalanceService.php",
+      "size": 807,
+      "sha256": "6a6a7bd25787cd8f55801c8078b41e77a86dba2e60235dd567bb4c619ec532d6",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3224065Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\BalanceTransactionService.php",
+      "size": 1597,
+      "sha256": "0f44738729897d3a72728f70984bbe25aedb1e03795f2a1d552618647dd7dda3",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3224065Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\BillingPortal\\BillingPortalServiceFactory.php",
+      "size": 716,
+      "sha256": "8d783458da56bb9ce530d022ac14052e66a40dfb870a7bb70f9562a75c270864",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3224065Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\BillingPortal\\ConfigurationService.php",
+      "size": 2382,
+      "sha256": "dd20e2ffc718d1314a3c26217fa401b707801b684249eb0bab09f12e1467ec12",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3234316Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\BillingPortal\\SessionService.php",
+      "size": 627,
+      "sha256": "62a96accc319646ee903a6c4629869ca6e7d5b485aafdacd39ae200f4f0a4be1",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3234316Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\ChargeService.php",
+      "size": 3680,
+      "sha256": "876c243fc9d71c204d91fe9063590fb1c00d0ce065672f86ec373e6ce0817651",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3234316Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\Checkout\\CheckoutServiceFactory.php",
+      "size": 592,
+      "sha256": "9bb9e02c724a2b72fda8a9a95626384cdf259f8b06d1c3cbc93587c95269ee73",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3244289Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\Checkout\\SessionService.php",
+      "size": 2301,
+      "sha256": "608e496f2bbe1cc9c3decd3f345831f7c044b899770ce73a42b34c77bfbb7fa3",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3244289Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\CoreServiceFactory.php",
+      "size": 5698,
+      "sha256": "ea5398202e9e2514d44fa0259f18e9d7cdf76cb78cfe6149f05d7c501577de59",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3244289Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\CountrySpecService.php",
+      "size": 1124,
+      "sha256": "dad73f403a7c7d76db62724b691f2532b87227cc43e793411402a7461e7e3c31",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3254269Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\CouponService.php",
+      "size": 3780,
+      "sha256": "ce1a8f43bdb36c27ff45d4555bbd1a1fef077ffa98840fc9d2238b5b5cf3df95",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3254269Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\CreditNoteService.php",
+      "size": 5759,
+      "sha256": "681064398b3129f0a69a1215e8eadcca3e54071387aa006714d2e778535459af",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3254269Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\CustomerService.php",
+      "size": 13229,
+      "sha256": "c88502e2798404c7ce39552b049d4c770a50efa49fcfca36968942caabccf904",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3263957Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\DisputeService.php",
+      "size": 2947,
+      "sha256": "aa69da9418b7b5f26ef9f6c59191887c58b260791d940d48d993a6382d8a8229",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3263957Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\EphemeralKeyService.php",
+      "size": 1332,
+      "sha256": "5e7edd94e62b462d70a86b6be19db99ee85967ef0e50dd895e294e0f40bc3f42",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3263957Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\EventService.php",
+      "size": 1468,
+      "sha256": "124a1b1f15fd795cf5e28648d8a9e8deb8d8e3d13f1779d58d35a9d70475f545",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3274207Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\ExchangeRateService.php",
+      "size": 1284,
+      "sha256": "699fa2c401f0575be54241a7d252ab9106c434eb95ff05a7e1a70cd330f65b9d",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3274207Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\FileLinkService.php",
+      "size": 2046,
+      "sha256": "26236f94d6156f6a5790260a6dfb1807e90ef8c629f1559a485db582642261bd",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3283907Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\FileService.php",
+      "size": 2157,
+      "sha256": "37eae0b50beb2b4e0362c737ef285e4bd499fa67cfbe4533e10825e7d2f40f7b",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3283907Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\Identity\\IdentityServiceFactory.php",
+      "size": 769,
+      "sha256": "2e93a5383f2b98536bc23685d3f2e7f5293cb8bd1698aaa012bc5a2a92eab5ef",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3283907Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\Identity\\VerificationReportService.php",
+      "size": 1159,
+      "sha256": "3b9e4cbec166ff58507722be40b2cf1aaf367e3eefaefd96d127c8d2f2058c12",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3294154Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\Identity\\VerificationSessionService.php",
+      "size": 5791,
+      "sha256": "afa58e25916ae02d252439ca17bc6a0933cd73f99d3de0fbac77ecc21a5cfd08",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3294154Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\InvoiceItemService.php",
+      "size": 3123,
+      "sha256": "f3b6a476742c7e32a0995f470ea7d5df36a3c7d750e31c28e8aa7772d9abdd25",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3294154Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\InvoiceService.php",
+      "size": 10981,
+      "sha256": "c0ccf380b7fe93ae3eafb39989a24a7043b37c1233a3db3ad91a0356d1582c52",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3304140Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\Issuing\\AuthorizationService.php",
+      "size": 3426,
+      "sha256": "b8c1f894527f3b86daf697697c290ee3ff21c7024fca3d133bec524fc46a3a2f",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3304140Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\Issuing\\CardholderService.php",
+      "size": 2439,
+      "sha256": "614b098203727be55aae238a5c3ee2015b6a01be4ce3bae054cd8098f15a2fc2",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3304140Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\Issuing\\CardService.php",
+      "size": 2331,
+      "sha256": "2db6c6c01f57f24cbe4f1213ece7f4a9a881a10fd2c5197fb53908333da91add",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3314099Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\Issuing\\DisputeService.php",
+      "size": 3626,
+      "sha256": "4aeeb454b7caf8c450dbda30d48e8f2693bc2f63d0165064a552da79cb08dd4d",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3314099Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\Issuing\\IssuingServiceFactory.php",
+      "size": 969,
+      "sha256": "a539d7a1e955b11d6c2a4056606267bd948409a79dbf5fe1b3a85fe4b0726d8c",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3324074Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\Issuing\\TransactionService.php",
+      "size": 1952,
+      "sha256": "cfe5fbcad389920e210151ad2bbaf49da56859b4ed5847ef284e7c11d8b4818a",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3324074Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\MandateService.php",
+      "size": 628,
+      "sha256": "324a3c9136b57bca577fa3fd677327471f5fcf78b04bc522fa65fe1a975ba561",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3324074Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\OAuthService.php",
+      "size": 5009,
+      "sha256": "7fb83922278b8559fb3925762df00df97ef871e3e05f14023da62bffb431faea",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3334046Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\OrderReturnService.php",
+      "size": 1398,
+      "sha256": "f3f3bbc6ea3bd98911b345731e0530aa6563f898a45dab1c0507926262d5699d",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3334046Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\OrderService.php",
+      "size": 3635,
+      "sha256": "62cd7f42530fafd3239ef07f59982c052dfe473a978c33f5a741209d1b78ef58",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3344102Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\PaymentIntentService.php",
+      "size": 7646,
+      "sha256": "e241831d9634fcb19f85b68f985f1431742e5f173425d5c4db60ee49faf90c3e",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3344102Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\PaymentMethodService.php",
+      "size": 4422,
+      "sha256": "9ab4d4929782495f6a6361766ede0bc1c9824df9e415ec5b333ae3838904c915",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3353723Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\PayoutService.php",
+      "size": 4801,
+      "sha256": "29b8146ca6201610bdd30c54303213fee22c425dbdad5341b54d40e740023ebc",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3353723Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\PlanService.php",
+      "size": 2853,
+      "sha256": "7357341bd8fcf52b4f1f44b57198c656f3fff133dbf76e2d5fa0611265b5b7ea",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3353723Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\PriceService.php",
+      "size": 2130,
+      "sha256": "95e136a4938626994ec55eecff7b998c0151c2b81946123be4600105aa1bd20a",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3363965Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\ProductService.php",
+      "size": 3060,
+      "sha256": "a333f195e1c4a0d9a00e6a718e341d1c0337f138e424e5a8ca1a13931bbb85ef",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3363965Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\PromotionCodeService.php",
+      "size": 2271,
+      "sha256": "f1f192f31667402571dbfc1cd8507239e8b2919f3a5bfa88bb98daa98b6d50be",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3363965Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\QuoteService.php",
+      "size": 5902,
+      "sha256": "ef560d3c638320c1b13151d5d5de56a636e00a6181e49ab29f657d579fdb814e",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3373941Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\Radar\\EarlyFraudWarningService.php",
+      "size": 1343,
+      "sha256": "6b8b4d0b52d4fc22f4c39bd519795be058ad485573d660a60e4cf64b015b46eb",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3373941Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\Radar\\RadarServiceFactory.php",
+      "size": 825,
+      "sha256": "111aa23d02fdb06bf5462f959c1e79c3913188313dda155ce1240e33aa87dba5",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3383926Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\Radar\\ValueListItemService.php",
+      "size": 2391,
+      "sha256": "0763ff4267d0d3020a84a142986eb8780a168fc4383bc0444be42ff6158fe07b",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3383926Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\Radar\\ValueListService.php",
+      "size": 3089,
+      "sha256": "2db4efbfd703508508cac3dee92ed019a4ecc6a844c228453323bb3a9bda4cdc",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3383926Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\RefundService.php",
+      "size": 2391,
+      "sha256": "bf8d8c9e13d9dd81c028150c4c570283773917534e036384bada4dd48e40ae1d",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3393894Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\Reporting\\ReportingServiceFactory.php",
+      "size": 700,
+      "sha256": "7501ae2cc9dcae5580c18025bc2e1e9957426f06bd6cf37e83c49bebbb53b03c",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3393894Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\Reporting\\ReportRunService.php",
+      "size": 1763,
+      "sha256": "ff7dcc05d9a67a56df2586613fbe522c31355d7a36a576b57dae7ac44e82bc15",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3393894Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\Reporting\\ReportTypeService.php",
+      "size": 1255,
+      "sha256": "a4193ed03bdb64c9d239f07c8c162d2ad336b1188685daaf96df480ebb6a7eec",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3403587Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\ReviewService.php",
+      "size": 1831,
+      "sha256": "d729429cf9c8d1fa968874e40046b7ce01be564d9abf5792647d9eb958a27e06",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3403587Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\SetupAttemptService.php",
+      "size": 634,
+      "sha256": "68d2c9b768d8cd1046e7788ec727fea6f60f976b8465e1f3799eeaca7b76b729",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3413836Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\SetupIntentService.php",
+      "size": 4587,
+      "sha256": "340388bf96c72779cb0205920673a4c7b00ef71da6290624634fba102feb0e38",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3413836Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\Sigma\\ScheduledQueryRunService.php",
+      "size": 1161,
+      "sha256": "5bb1d9fbcc7cecf51851d3de58c92eae08272e819ca9f1756c7cf493471bd66a",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3423540Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\Sigma\\SigmaServiceFactory.php",
+      "size": 623,
+      "sha256": "6a2388aab65a108365d88a81fad122567e17ba09ae6018749ae9bab9931a4f04",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3423540Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\SkuService.php",
+      "size": 3076,
+      "sha256": "b9a32035ddd6ccb0c7450496d72973919f16759636596ee6ee9c86684db6140d",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3423540Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\SourceService.php",
+      "size": 3603,
+      "sha256": "b4e1a183facf839885a6a6ce2784689454904f5efd767d5cacb8fa49be47cbd0",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3433837Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\SubscriptionItemService.php",
+      "size": 5973,
+      "sha256": "18b96f561821c430c0ecdaf7b4b5d16a5d94e76f86fb6580990fa50903665f9b",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3433837Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\SubscriptionScheduleService.php",
+      "size": 4112,
+      "sha256": "f52e633e4b736d89bf855f02ae2aaf646aded178673d1d4cf73202d243a40176",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3433837Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\SubscriptionService.php",
+      "size": 4707,
+      "sha256": "734544e9008b89f2a5c8e1ca207f05074325f41ecc93fdd5aa75828265fc8ecb",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3443755Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\TaxCodeService.php",
+      "size": 1312,
+      "sha256": "f6b4782891c8544187daa837cbb0706e1d05c287e4cb9a2ffea0b558fa5888e5",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3443755Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\TaxRateService.php",
+      "size": 2097,
+      "sha256": "ae02225109af127b0113a31c132772ee33bb03a855ccd4f657e562c45c92e0e3",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3443755Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\Terminal\\ConnectionTokenService.php",
+      "size": 826,
+      "sha256": "216a44f0abdfd163bbe3119f1f06d731162b2e3ae42ec83218e13738e08214fa",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3453740Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\Terminal\\LocationService.php",
+      "size": 2727,
+      "sha256": "804edb9014286100e2adead76eb7d1116d13e2da9158a8b7d65cce801b20d01a",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3453740Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\Terminal\\ReaderService.php",
+      "size": 2697,
+      "sha256": "e00137d73c211178df068438d8c3a86e0586687a78cbb81ce0e011e1cb1966ee",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3463424Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\Terminal\\TerminalServiceFactory.php",
+      "size": 794,
+      "sha256": "07e41d592c84aa3adadb20ed442bfe55b8d1186fedb85e10a040d6fdb14c0bdd",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3463424Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\TokenService.php",
+      "size": 1296,
+      "sha256": "050179145482559f2388085e596e2645c52acefd8b296e403ea285b0a28bbf50",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3463424Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\TopupService.php",
+      "size": 2717,
+      "sha256": "ad479feb6b9084fffe0ae03da7fc7f3ad2912f4868575c95f863eec8b1d7a828",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3473677Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\TransferService.php",
+      "size": 6513,
+      "sha256": "d1458918dbfb1bdaaf0b732254c7cc6cf4ec6bf892c3b53d32706ca520aa4818",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3473677Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Service\\WebhookEndpointService.php",
+      "size": 3461,
+      "sha256": "61e19f3dd803753c07e1652cf9fb3a032613c5904a9220d66031ecc38b8eeb38",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3473677Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\SetupAttempt.php",
+      "size": 2481,
+      "sha256": "24c6cfc943b8d9d281a72d03a76d9c39c232ec005f6243d5486842327f106e6a",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3483647Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\SetupIntent.php",
+      "size": 7332,
+      "sha256": "b5d3dc0e8b0d03504d7ea8671dc705e1fc6e98fb0b40fffbc3107663e3bd91f0",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3483647Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Sigma\\ScheduledQueryRun.php",
+      "size": 1820,
+      "sha256": "9480bbef687b965fbdda6a2979d11891fbe3e1441b684e3799cc5367b60aeba9",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3483647Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\SingletonApiResource.php",
+      "size": 955,
+      "sha256": "06619727d0b405b2b105b065603e580acb85dc8a0b2af37779cc7f0ef722d37d",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3493635Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\SKU.php",
+      "size": 2929,
+      "sha256": "d020cd8cb262fbdbace7c2613e6e16dfe03ce8409cbc4da367f5bdecc97b5e27",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3493635Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Source.php",
+      "size": 8741,
+      "sha256": "3bafdea3c56350dd48ba4f341a877a359ee9a78aade8527ac265a872d3f8def4",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3493635Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\SourceTransaction.php",
+      "size": 428,
+      "sha256": "c647efd275b9468b03ab95dc052b6a0002bc61e009dae1c9d24f650c11ce9b70",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3503592Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Stripe.php",
+      "size": 7502,
+      "sha256": "b76ddd4355cc8cdfb97e83c64244d84c90e56a837e9806e58270c2a288c14661",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3513303Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\StripeClient.php",
+      "size": 3826,
+      "sha256": "caf68da0e426a96c63a86cf5277b714d10b2264db48be21afa9048ee1123bb37",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3513303Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\StripeClientInterface.php",
+      "size": 607,
+      "sha256": "e707d8be6fcbe2bc725c9db0437c1d820b05027bcf71079456bdd1e8464f02a2",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3523575Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\StripeObject.php",
+      "size": 19383,
+      "sha256": "f83e70cb8b30e50b28bf7573e54cfc4cc1c07a8f174c44fd63ddd07833590c47",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3523575Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\StripeStreamingClientInterface.php",
+      "size": 249,
+      "sha256": "82ca16dcdb4f72b066a4830b0b63cf95ccdb15975f15bb55dfe53270da924860",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3533516Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Subscription.php",
+      "size": 11454,
+      "sha256": "25d2ee52acc80ab6d02e470be6ba48a82570f38e4d30c04ef9bf84b205834cd1",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3533516Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\SubscriptionItem.php",
+      "size": 5689,
+      "sha256": "2c6b35657b661eeaa6ba4a9c7038978f30823054d37e1655d8139cd99e33c92d",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3543202Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\SubscriptionSchedule.php",
+      "size": 3997,
+      "sha256": "b43874e81bab5f0a2dcb5a95b52b0aa3382f94974eb0895dd7cd3a5676b5708d",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3543202Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\TaxCode.php",
+      "size": 685,
+      "sha256": "f05707d1b6cb464f54a631efe25d48f030db3e58e419f1d88634b7b9a5cec868",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3543202Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\TaxId.php",
+      "size": 4958,
+      "sha256": "4840a36bd43578de81a367258926503a67f9b27133662cc35ffdd3eade0c3bdc",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3553175Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\TaxRate.php",
+      "size": 2992,
+      "sha256": "979eb6a30f5b738b80e695c2bfb550e5da213fc967637788387a91e3eb10a993",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3553175Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Terminal\\ConnectionToken.php",
+      "size": 970,
+      "sha256": "fbedf7538c54705d0965b7b72583ee85c2718de0abc6511c59c0052488c255df",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3553175Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Terminal\\Location.php",
+      "size": 1245,
+      "sha256": "4bc3037c3e91af844e497432eaeb69cf014e04433aa465fecd00f99e9f4e4324",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3563147Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Terminal\\Reader.php",
+      "size": 1767,
+      "sha256": "ab9c7cec13e69c4f11c8c1bceab3ac53336a47996657ec3a204148acc8590f7e",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3563147Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\ThreeDSecure.php",
+      "size": 2643,
+      "sha256": "84e08d987e4b0554d8ffa8bd2283b72e6830ff071b888d60a4646e8aad6f471c",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3563147Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Token.php",
+      "size": 3686,
+      "sha256": "964ef6b9c33a5ef27aaed02ebf55c149faab17f543701257c43c15892ce763df",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3573130Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Topup.php",
+      "size": 4066,
+      "sha256": "723225a90f8a8a3252559b94df346e01d6190277511e2f36d834192ff7815a28",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3573130Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Transfer.php",
+      "size": 6459,
+      "sha256": "c234798fbe8aaeaa10023f89dc1f94aceed480213af4ee8c93f25e4d1b0b5b4b",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3573130Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\TransferReversal.php",
+      "size": 3402,
+      "sha256": "e1835b0736c60a54bbfc2beb61319654b239c9df1098b73d81c42bb9299e2331",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3583095Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\UsageRecord.php",
+      "size": 1005,
+      "sha256": "f71d613b7038f4d7201d3209971154c81304b67db05c50f95d5a5ca75652a35d",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3583095Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\UsageRecordSummary.php",
+      "size": 831,
+      "sha256": "f23112e7c348bc40a0c7cb2aecbed5f9f32967e528c7961d6dfd3f8e246a51e3",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3593355Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Util\\CaseInsensitiveArray.php",
+      "size": 1928,
+      "sha256": "9d0ef2dea3550144796064d92eafc99ebacd6efcbd566257d83c8263e7f32b5d",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3593355Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Util\\DefaultLogger.php",
+      "size": 822,
+      "sha256": "4b4a2d3845390c20ad93a21f7f0bbc3cd2c1b08049c42b994e7afef2e479eada",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3593355Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Util\\LoggerInterface.php",
+      "size": 1158,
+      "sha256": "eb5cb37f97ea8d217bc32c4faf1a14afeff6b8f4292eff5d3f5d5d5c9c306820",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3603328Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Util\\ObjectTypes.php",
+      "size": 7037,
+      "sha256": "215917200829e7eda6a1c1bb60d7be7690c74240f17ba0c0d803168a1804dd73",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3603328Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Util\\RandomGenerator.php",
+      "size": 850,
+      "sha256": "b3ed77ae5ce1d0af66d5c87d8bf9a823d8127f2e287b0577d73984c5052c9ca0",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3603328Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Util\\RequestOptions.php",
+      "size": 5391,
+      "sha256": "79e3b0e8873ada7e5dc20aa8903f350677fd03fc68c4e7141b0ecf9111cf36f5",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3613310Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Util\\Set.php",
+      "size": 790,
+      "sha256": "2b645130060b473fcd964b231e6b0920626af57ba21b297471d294100be583c7",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3613310Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Util\\Util.php",
+      "size": 7672,
+      "sha256": "4ea709366916bd44d93a74b01c4042cd9a8282ae780b99fe2175bd356eea213f",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3613310Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\Webhook.php",
+      "size": 1557,
+      "sha256": "98a9d8fa0442eae683e5f1ce382276f3bbd51048eccdb078105a7ec2428d7929",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3623286Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\WebhookEndpoint.php",
+      "size": 2352,
+      "sha256": "f1c0698219465f25fd78f5a76978d3d355be4593ffb432775278929c055222dd",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3623286Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\lib\\WebhookSignature.php",
+      "size": 4517,
+      "sha256": "f97c957c902b0a8290bd89f40fe621f714d64684d4172c290ed122ea7c21195b",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3623286Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\LICENSE",
+      "size": 1120,
+      "sha256": "4be81b83ae70ae9448c930bdfd1aaf3cd8600a94da0bbe3ebbd4cba7102b018a",
+      "extension": "",
+      "modified_time_utc": "2026-07-03T18:27:28.3633249Z",
+      "classification": "other"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\Makefile",
+      "size": 1040,
+      "sha256": "47864fbcf1414c0e1e565cb4bf3ff94834a829ab84d6fd71769756073d98710e",
+      "extension": "",
+      "modified_time_utc": "2026-07-03T18:27:28.3633249Z",
+      "classification": "other"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\phpdoc.dist.xml",
+      "size": 1006,
+      "sha256": "cb3188bd0b558c4a9e102b36a3b6d013a15f4cf9256b9e8af162048d9b8457ef",
+      "extension": ".xml",
+      "modified_time_utc": "2026-07-03T18:27:28.3633249Z",
+      "classification": "data_or_translation"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\phpstan-baseline.neon",
+      "size": 327,
+      "sha256": "b92b465524fa2dc928ee6e7e027a0fd9fdbae46b9bd4d25ca7983511290b2bf6",
+      "extension": ".neon",
+      "modified_time_utc": "2026-07-03T18:27:28.3643221Z",
+      "classification": "other"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\phpstan.neon.dist",
+      "size": 167,
+      "sha256": "dcfbd6c795177e95da7657b9b0bd9f0cc3dd3004fc1422c3b5d5c412bee97c6f",
+      "extension": ".dist",
+      "modified_time_utc": "2026-07-03T18:27:28.3643221Z",
+      "classification": "other"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\README.md",
+      "size": 11537,
+      "sha256": "7321d4f7945935892c00e4833d615154c7e719abe88be5e6548f3fa9f6f9ad10",
+      "extension": ".md",
+      "modified_time_utc": "2026-07-03T18:27:28.3643221Z",
+      "classification": "data_or_translation"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\update_certs.php",
+      "size": 406,
+      "sha256": "331801e7440ca89b81048cb418ec311d74280e68f7c67273c861f1c7ff7abec6",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3643221Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\libraries\\stripe\\VERSION",
+      "size": 8,
+      "sha256": "f0726654721ebf30710601d000bed76473b01939088dc84da708db75913b7339",
+      "extension": "",
+      "modified_time_utc": "2026-07-03T18:27:28.3653192Z",
+      "classification": "other"
+    },
+    {
+      "relative_path": "pro\\includes\\locations\\acfe-location-rules.php",
+      "size": 1593,
+      "sha256": "9990d6ff0717b556f0b293e2c39ed48e4bd22ba9b3609737c4a601b0702aa5ea",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3653192Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\locations\\acfe-location.php",
+      "size": 2774,
+      "sha256": "278f80d0387477d6ca38ba294ea2f536d6738199e96da0472ece082ca3db3e41",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3653192Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\locations\\attachment-list.php",
+      "size": 6939,
+      "sha256": "ba866fd429b951b2f656f26755970d8514d658541eac5aa660e2fecd010242cc",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3663168Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\locations\\dashboard.php",
+      "size": 858,
+      "sha256": "d3813dddb8fec622dfd7f41d8a16333fba6ea2c972bb2c166674e772f82bc809",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3663168Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\locations\\menu-item-depth.php",
+      "size": 1844,
+      "sha256": "56ec29e110ba5218e3445ad7d85b9edacbbd7b92fa67a4fb4ef261b8a7450bff",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3672887Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\locations\\menu-item-type.php",
+      "size": 983,
+      "sha256": "cbf2c35748f7e37b40cd477def833f6f5809f17f620a340c84b6ff5b076bf7fc",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3682841Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\locations\\post-author-role.php",
+      "size": 1322,
+      "sha256": "032777c52f7635ec643f28a55d48f9eb7d800922b633eec28600dad3ab2423e1",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3682841Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\locations\\post-author.php",
+      "size": 1372,
+      "sha256": "34e763afdb4d1af72121c32e18a44918dc612f43f53b4d71cdd2848045c01c40",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3692805Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\locations\\post-date-time.php",
+      "size": 2440,
+      "sha256": "a8ce210b9d7c9a77a5cf81a79d886a8c44341eb725b7e2ebf40cba5dcb643efd",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3692805Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\locations\\post-date.php",
+      "size": 2428,
+      "sha256": "eba0462a575e7306709948d9231985b65881222f591c453a14dd24cd4adb9a90",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3692805Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\locations\\post-path.php",
+      "size": 2164,
+      "sha256": "616e7a85b05cd6509a8cff9f21c5b3fdc3d642be66244aee34d948ed2bb7d011",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3703072Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\locations\\post-screen.php",
+      "size": 1052,
+      "sha256": "fc984d772a9f71c8a0a8cc700149466e2a91604721fbc1cc72e80651de05b0a5",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3703072Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\locations\\post-slug.php",
+      "size": 2245,
+      "sha256": "8fadff9f381b34dfc3047aa0cfb0844d63ce0d2639109c84e8ad7874988475aa",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3712748Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\locations\\post-time.php",
+      "size": 2396,
+      "sha256": "82ba887469126d012bab96a1b26c8a2b8637926cf000b4eee71b4c68b0de5dc1",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3712748Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\locations\\post-title.php",
+      "size": 2254,
+      "sha256": "971299e33b2f5038988e792ab16da62fba4728013e404e34670de87d07b51823",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3712748Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\locations\\settings.php",
+      "size": 3367,
+      "sha256": "045bbf6910ceaeb4f69008cd2f388965914b1a49236dcf33f6ae39886c9ed40a",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3722722Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\locations\\taxonomy-term-name.php",
+      "size": 2283,
+      "sha256": "22583a97f28c74e2209458dbd5911c2877bd3bbfdeaeb6e2e0adf66619f94d55",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3722722Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\locations\\taxonomy-term-parent.php",
+      "size": 1066,
+      "sha256": "1a6d5b734b65c4f041daa041903a6bc47dd520d71ceb6a0ac59876aac87adb80",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3722722Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\locations\\taxonomy-term-slug.php",
+      "size": 2283,
+      "sha256": "ae1b57b8abe7b04cfb5691947ba1768d298b4481b26c3fe28468c3e2cb7ad309",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3732979Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\locations\\taxonomy-term-type.php",
+      "size": 1953,
+      "sha256": "c1b8d43e69085c16d371bcad9732b6d1b8e294161d6f06ab75ddee5741f98043",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3732979Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\locations\\taxonomy-term.php",
+      "size": 962,
+      "sha256": "395271d68103ea9d08a7c50d940badb40f2a1f19406c345b3ff1986ce01cf812",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3732979Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\locations\\user-list.php",
+      "size": 6745,
+      "sha256": "054254079c1d8439cac31ce49dc76af424664db540f4c5b7044665f058ad0f68",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3742950Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\locations\\woocommerce.php",
+      "size": 1553,
+      "sha256": "edb6c5edd46d1c78a91c6b9b8e3cd8e13c0eb48f616d42e560a5cd7232e3f8c4",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3742950Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\media.php",
+      "size": 6035,
+      "sha256": "befd570c4cec775d831005223dc17fb8789df2115d7c1172b4a06421e0816a1c",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3742950Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\module-item.php",
+      "size": 9193,
+      "sha256": "63b8667a0a80afaf7348e41b32fcc3947515925efb7758939ccf1f9ae777698d",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3752974Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\module-local.php",
+      "size": 28215,
+      "sha256": "7c54ac8d604c17f4800ea25182e80f6a958fd25708f5c3eba5a7149b48c8f0b1",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3752974Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\module-posts.php",
+      "size": 20107,
+      "sha256": "646a0764e9a30d5d99591a306b8fdfeba9e0d4a1fd6b2b2ae81acfefb5a2a5ad",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3752974Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\module-sync.php",
+      "size": 7078,
+      "sha256": "7a129450cfc9d7e3346c702c457fc878435085a9c31ee5e4e5ee67c2f6d8ca3d",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3762908Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\classic-editor.php",
+      "size": 6195,
+      "sha256": "89397ec0d420a07a642b2b33a50a0380c723b3e777352dc38151ae01cd9eb5f0",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3771183Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\dev\\module-dev-clean-meta.php",
+      "size": 4189,
+      "sha256": "c2dabaa6d6bd7c35fe3e9c3b15f8c5cafe3f87b70243e79eb4abd30908755365",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3771183Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\dev\\module-dev-edit-meta.php",
+      "size": 9995,
+      "sha256": "e6647c03ed1eacf2277673cadaabc3af8945c9e4e0a999e0a4d43202768ee95c",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3777400Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\dev\\module-dev-metabox.php",
+      "size": 27754,
+      "sha256": "e07dc69cea80e6aaa2283ef609bfc39e2562c5a278165572e24bf2c5a592ae2f",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3777400Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\force-sync.php",
+      "size": 8679,
+      "sha256": "457340ddbe8bbb2b81f2dade26820b6d5108984393844623606731b87aef2e0d",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3785471Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\form\\module-form-action-option.php",
+      "size": 14714,
+      "sha256": "827fd4acdd3d8c9982662d7be3c732d7961fb7d007483c06adf4b6fd77a28153",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3788197Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\form\\module-form-ajax.php",
+      "size": 5095,
+      "sha256": "6bac804a1bb751577556e6aa524e5ac7682c38ba29e510e61b435f30904e00b2",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3788197Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\form\\module-form-shortcode.php",
+      "size": 2775,
+      "sha256": "8ddd22f801e17ef34ce95713314219d1f4bdda6a728bc8b408e86ec8b0aa8102",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3793624Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\global-field-condition.php",
+      "size": 13820,
+      "sha256": "e818eeebe145598223d1400ad5f321589b04f31374f0794b4ff2270782faf9f0",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3798984Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\performance\\module-performance-hybrid-revisions.php",
+      "size": 5940,
+      "sha256": "c9111109aea6171d813c251149b15a55c869081841f1d2d60c62f802e94944cd",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3798984Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\performance\\module-performance-hybrid.php",
+      "size": 7492,
+      "sha256": "d188ac29e627c04d174d857df3dfeb5f751840123331821baf9c53e3de87f13b",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3804391Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\rewrite-rules.php",
+      "size": 26025,
+      "sha256": "258a5dabbd897af339d7d35934d81186d0b02d126e2e8cea8149ce34df4a1ea2",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3810329Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\screen-layouts.php",
+      "size": 1535,
+      "sha256": "bde36910ed41aad01c59d8e8fb347a5cb00c4baa9d1f522b5583da662bc129b8",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3810329Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\script\\module-script-class.php",
+      "size": 6234,
+      "sha256": "b040a2d2af42ce91bb4d08b70b996e5bee785f6baf8a4826e4b2add4e8c529cc",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3816440Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\script\\module-script-count-posts.php",
+      "size": 4179,
+      "sha256": "e7c792d1d636fa2ab9e3abcc5481083c4b44a46aeb7504278abb01e1d19424c9",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3819748Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\script\\module-script-export-posts.php",
+      "size": 9647,
+      "sha256": "8907cdcc2f0be1a3c387dc0892a11ded3b0615b5efcab9026c0aa5b83d12c48c",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3822453Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\script\\module-script-import-posts.php",
+      "size": 7867,
+      "sha256": "78c7ed2248c1494c8bf905acccc3ccf4607f61d2f7838a4aca8a2eeceb1556d7",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3827526Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\script\\module-script-launcher.php",
+      "size": 5895,
+      "sha256": "eb619a73782c545a54ffc7d8a4778ae9c739e732f54484c6e9b0129e3d63f4a9",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3827588Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\script\\module-script-orphan-meta-cleaner.php",
+      "size": 26850,
+      "sha256": "0eaff7b822448ab38ce5d7686731f74f6938dd1e074cc17367d565af1de150de",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3832973Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\script\\module-script-performance-converter.php",
+      "size": 33220,
+      "sha256": "cecfa05a2ffb9512d94733d1a956553ff3ac252acedae9c45581d7c9c7dba608",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3838401Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\script\\module-script-table.php",
+      "size": 7970,
+      "sha256": "162d32cfd2644571b3a552507926beecc31280a675eadbfc03e687ba1b8884a6",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3843516Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\script\\module-script.php",
+      "size": 18581,
+      "sha256": "b952a9a9e417650711a0c99e65cb475b3ab868549cbde0bc28666d79b89d6424",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3853442Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\template\\module-template-compat.php",
+      "size": 3962,
+      "sha256": "1368a61d9c33d808cee710d6c3e6b118301cbb694160d1bd819798d5efeea509",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3859267Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\template\\module-template-features.php",
+      "size": 10517,
+      "sha256": "f01cbed1826610d240b21ae85e888f001944258b6f3425cf9d6572e0e68d52b5",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3864728Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\template\\module-template-fields.php",
+      "size": 5529,
+      "sha256": "ae82fea4d0ecb54a04183d75f4010690d5739a50cd27799df7694eb502e4c688",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3870212Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\template\\module-template-upgrades.php",
+      "size": 2347,
+      "sha256": "8d23f083aece958e5af7c4ef48151178185fe9f66c493ce48f101dea17cbd2d4",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3876635Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\modules\\template\\module-template.php",
+      "size": 12498,
+      "sha256": "f4af522147cdd138bd3746c7500242188224287beb201d705f9feccee1448793",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3876635Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\payment.php",
+      "size": 7038,
+      "sha256": "50a755b23f03d000b528466c5f103d84def917e7bbe607aad5f38742bc9a1db4",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3876635Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\third-party.php",
+      "size": 2614,
+      "sha256": "5872ffa035ccc610a5dfbc55a5b1a94ef9bb642db59601c8b64f2042a2410376",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3886580Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\updater.php",
+      "size": 23996,
+      "sha256": "23856c2f8ea389fa02d9e75d04df1ba8857fa3bec5100823eef25486bb22ae32",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3886580Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\updates.php",
+      "size": 17788,
+      "sha256": "ded657f4bbe26f34d3012c6891c2568ada0ca305fb994d5e55c4dcf25b2300ad",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3886580Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "pro\\includes\\world.php",
+      "size": 10167,
+      "sha256": "a022a43e0a3177d78256731e8e895ff5f506db8a8e69cf93715a7e0385c2112b",
+      "extension": ".php",
+      "modified_time_utc": "2026-07-03T18:27:28.3896833Z",
+      "classification": "php_script"
+    },
+    {
+      "relative_path": "readme.txt",
+      "size": 188869,
+      "sha256": "5e3951b23aaaa5220b51a1f88196b10543bea46aa39e254864661a367da951be",
+      "extension": ".txt",
+      "modified_time_utc": "2026-07-03T18:27:28.3896833Z",
+      "classification": "data_or_translation"
+    }
+  ]
+}

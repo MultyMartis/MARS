@@ -47,3 +47,12 @@
 ---
 
 *Decision log — planning authority. V9-06A.1 reconciliation complete.*
+
+## V9-06B.2 dependency decisions
+
+| ID | Decision | Status | Value |
+|----|----------|--------|-------|
+| ADR-029 | Operator-managed ACF PRO admission | APPROVED | ACF PRO v6.8.5 admitted as external dependency; public API use allowed after admission |
+| ADR-030 | ACF Extended PRO use | NOT APPROVED BY DEFAULT | Keep active but not used unless explicitly authorized |
+| ADR-031 | ACF plugin update/delivery policy | APPROVED | ACF PRO/ACFE PRO automatic update, replacement, deletion, and package delivery forbidden |
+
