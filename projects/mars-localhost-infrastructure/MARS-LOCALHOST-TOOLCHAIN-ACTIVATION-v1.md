@@ -265,6 +265,88 @@ Python normalization:
 
 DEFERRED UNTIL A PYTHON-CRITICAL LANE REQUIRES IT
 
+## Runtime Activator Backup
+
+Status:
+
+COMPLETE
+
+Backup created:
+
+2026-07-04T01:13:48+07:00
+
+Backup root:
+
+`X:\AI MARS STORAGE\backups\workstation\runtime-toolchain\MARS-TOOLCHAIN-ACTIVATOR-20260704-011348`
+
+Source:
+
+`X:\MARS-Localhost\tools\powershell\Activate-MarsToolchain.ps1`
+
+`X:\MARS-Localhost\tools\powershell\README.md`
+
+Backup contents:
+
+- exact source copies;
+- source receipt;
+- backup manifest;
+- SHA-256 checksums;
+- restore guide;
+- restore validation checklist.
+
+Classification:
+
+SANITIZED — RESTORABLE — OUT OF GIT
+
+Source hashes:
+
+Activate-MarsToolchain.ps1:
+
+`3988AD57545207BA0A72717C139751413DF0867FF1E286D9101B9EAB98A8AD76`
+
+README.md:
+
+`A45582815EBA65C75BB663A43CC3558E42E22D6CA87C556EAD8CEC90B59FDA1A`
+
+Restore policy:
+
+- manual;
+- exact two-file scope;
+- checksum validation required;
+- no automatic overwrite;
+- no mirror;
+- no delete;
+- operator approval required when target differs.
+
+Git documentation preserves authority and explanation.
+
+Storage backup preserves the runtime file bytes.
+
+Both are required for complete recovery.
+
+## Current Backup Coverage
+
+| Component | Status | Location |
+|-----------|--------|----------|
+| Cursor sanitized profile/config backup | COMPLETE | `X:\AI MARS STORAGE\backups\workstation\cursor\` |
+| PATH checkpoints, cleanup evidence and rollback | COMPLETE | `X:\AI MARS STORAGE\backups\workstation\environment\` |
+| Runtime toolchain activator and README | COMPLETE | `X:\AI MARS STORAGE\backups\workstation\runtime-toolchain\MARS-TOOLCHAIN-ACTIVATOR-20260704-011348` |
+| Git documentation and reports | COMPLETE | `X:\AI MARS\` |
+
+## Current Scope Closure
+
+Cursor/workstation/toolchain current phase:
+
+CLOSED FOR CURRENT SCOPE
+
+Further workstation changes:
+
+ONLY WHEN A CONCRETE PROJECT DEPENDENCY REQUIRES THEM
+
+Python normalization:
+
+DEFERRED UNTIL A PYTHON-CRITICAL LANE REQUIRES IT
+
 ## Evidence
 
 Storage evidence paths are external, out-of-Git evidence:

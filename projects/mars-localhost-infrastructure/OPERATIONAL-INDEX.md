@@ -70,6 +70,8 @@ MLI is an **execution environment**. It is **not** the MARS brain, governance so
 | **Shared toolchain** | **HARDENED** — [registries/MARS-LOCALHOST-TOOL-REGISTRY-v1.md](registries/MARS-LOCALHOST-TOOL-REGISTRY-v1.md) |
 | **Toolchain activator** | **OPERATIONAL — HUMAN-INVOKED — SESSION-ONLY** — [MARS-LOCALHOST-TOOLCHAIN-ACTIVATION-v1.md](MARS-LOCALHOST-TOOLCHAIN-ACTIVATION-v1.md) |
 | **Workstation PATH normalization** | **COMPLETE** — stale User npm/Composer entries removed; duplicate Machine Node entry removed; WindowsApps/Git/canonical Node/ComposerSetup retained; persistent PHP PATH **NOT USED** — [MARS-LOCALHOST-TOOLCHAIN-ACTIVATION-v1.md](MARS-LOCALHOST-TOOLCHAIN-ACTIVATION-v1.md) |
+| **Runtime activator backup** | **COMPLETE** — `X:\AI MARS STORAGE\backups\workstation\runtime-toolchain\MARS-TOOLCHAIN-ACTIVATOR-20260704-011348` |
+| **Cursor/workstation/toolchain current phase** | **CLOSED FOR CURRENT SCOPE** — further changes only when a concrete dependency or recovery event requires them |
 | **Global Gulp** | **NOT USED** — project-local dependencies only |
 | **Smoke site** | `http://mli-smoke-001.test/` — **PASS** (browser `.test` DNS verified 2026-07-02) |
 | **WordPress synthetic (FWS-0001)** | `http://fws-0001.test/` — **OPERATIONAL** (browser `.test` DNS verified 2026-07-02); FW-05R synthetic validation complete; **FW-07C-1 revalidation pending** |
@@ -181,6 +183,7 @@ Forward commits (FP-0002 WordPress foundation): `11e9155`, `f003fe8`, `a5a7de0`,
 | 11 | [MARS-LOCALHOST-SERVICE-CONTROL-POLICY-v1.md](MARS-LOCALHOST-SERVICE-CONTROL-POLICY-v1.md) |
 | 12 | [MARS-LOCALHOST-LARAGON-PLACEMENT-DECISION-v1.md](MARS-LOCALHOST-LARAGON-PLACEMENT-DECISION-v1.md) |
 | 13 | [MARS-LOCALHOST-TOOLCHAIN-ACTIVATION-v1.md](MARS-LOCALHOST-TOOLCHAIN-ACTIVATION-v1.md) |
+| 14 | [mars-workstation-cursor-toolchain-final-closure-v1.md](../../reports/mars-workstation-cursor-toolchain-final-closure-v1.md) |
 
 ### MLI-02 standards and reports
 
