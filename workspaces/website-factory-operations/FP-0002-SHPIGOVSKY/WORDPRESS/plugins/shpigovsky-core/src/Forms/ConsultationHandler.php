@@ -8,6 +8,7 @@
 namespace Shpigovsky\Core\Forms;
 
 use Shpigovsky\Core\Contracts\ModuleInterface;
+use Shpigovsky\Core\ModuleRegistry;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -29,7 +30,7 @@ final class ConsultationHandler implements ModuleInterface {
 	 * {@inheritdoc}
 	 */
 	public static function is_enabled() {
-		return ! shpigovsky_core_is_skeleton_mode();
+		return ModuleRegistry::is_enabled( self::id() );
 	}
 
 	/**
@@ -43,7 +44,7 @@ final class ConsultationHandler implements ModuleInterface {
 	/**
 	 * Handle consultation form POST.
 	 *
-	 * V9-06B: not registered while skeleton mode is active.
+	 * Deferred until a later authorized forms phase.
 	 */
 	public static function handle_submission() {
 		// V9-08+ implementation per FP-0002-LOCAL-MAIL-AND-FORM-POLICY-v1.md.

@@ -1,0 +1,43 @@
+{
+  "schema": "fp-0002-v9-06c1-activation-model-validation",
+  "checks": [
+    {
+      "check": "SHPIGOVSKY_CORE_MODE exists",
+      "passed": true,
+      "evidence": "shpigovsky-core.php"
+    },
+    {
+      "check": "Default mode is content_model",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "SHPIGOVSKY_CORE_SKELETON is compatibility-derived",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "shpigovsky_core_mode helper exists",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "No DB option controls source mode",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "No env secret controls source mode",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Runtime delivery not performed by source",
+      "passed": true,
+      "evidence": ""
+    }
+  ],
+  "passed": 7,
+  "failed": 0,
+  "result": "PASS"
+}

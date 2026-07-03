@@ -2,8 +2,8 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06C CONTENT MODEL SOURCE IMPLEMENTED
-**Classification:** SOURCE IMPLEMENTED — NOT DELIVERED — RUNTIME NOT STARTED
+**Status:** V9-06C.1 SOURCE ACTIVATION GATE RESOLVED
+**Classification:** SOURCE ACTIVATION READY — NOT DELIVERED — RUNTIME NOT STARTED
 
 ---
 
@@ -36,6 +36,7 @@ The runtime is **not** the canonical editable source. Delivery flows: Git source
 | BoundedMeta primary path | REJECTED |
 | V9-06B | **COMPLETE** — theme + core skeleton |
 | V9-06C | **COMPLETE — CONTENT MODEL SOURCE IMPLEMENTED** |
+| V9-06C.1 | **COMPLETE — SOURCE ACTIVATION GATE RESOLVED** |
 | Runtime changes | 0 |
 | WordPress source implementation | **CONTENT MODEL COMPLETE** |
 | WordPress runtime implementation | **NOT STARTED** |
@@ -63,7 +64,7 @@ WORDPRESS/
 | Surface | Classification |
 |---------|----------------|
 | Theme | V9-06B SKELETON — NO V9 VISUAL INTEGRATION |
-| Shpigovsky Core | V9-06C CONTENT MODEL SOURCE IMPLEMENTED — MODULES STILL GATED |
+| Shpigovsky Core | V9-06C.1 CONTENT MODEL SOURCE ACTIVATION READY — NOT DELIVERED |
 | ACF JSON | V9-06C SOURCE CREATED — NOT DELIVERED |
 
 ## Provenance
@@ -99,4 +100,14 @@ V9-06C implements the canonical WordPress content model in source only:
 - Runtime delivery, WordPress object creation, database writes, rewrite flushing, ACF runtime DB registration, V9 HTML/CSS/JS integration, and runtime ACF JSON writes were not performed.
 
 Report: `reports/FP-0002-V9-06C-CONTENT-MODEL-SOURCE-IMPLEMENTATION-REPORT-v1.md`.
+
+
+## V9-06C.1 source activation gate resolution (2026-07-04)
+
+V9-06D.1 runtime delivery was blocked before apply by the old `SHPIGOVSKY_CORE_SKELETON=true` source gate. V9-06C.1 resolves that source blocker with `SHPIGOVSKY_CORE_MODE=content_model` and an explicit module activation registry. Runtime writes: 0. WordPress object writes: 0.
+
+Reports:
+
+- `reports/FP-0002-V9-06C1-SOURCE-ACTIVATION-GATE-RESOLUTION-REPORT-v1.md`
+- `reports/FP-0002-V9-06D1-RUNTIME-DELIVERY-CONTENT-MODEL-ACTIVATION-REPORT-v1.md` — historical blocked attempt, superseded by V9-06C.1 source fix
 

@@ -64,5 +64,5 @@ The skeleton remains source-only and inert. ACF PRO is available as an operator-
 
 ## V9-06C source implementation boundary
 
-Content model source is implemented in Shpigovsky Core and ACF JSON source is generated. `SHPIGOVSKY_CORE_SKELETON` remains `true`, so the source is not registered in runtime until a later explicitly authorized delivery phase.
+Content model source is implemented in Shpigovsky Core and ACF JSON source is generated. V9-06C.1 supersedes the old `SHPIGOVSKY_CORE_SKELETON=true` blocker with `SHPIGOVSKY_CORE_MODE=content_model`; runtime delivery remains a later explicitly authorized phase.
 

@@ -460,7 +460,7 @@ function content_model_spec(array $registry): string {
         . "## Field Groups\n\n"
         . "Total groups: " . $registry['field_group_count'] . ". See `FP-0002-V9-06C-ACF-FIELD-GROUP-REGISTRY-v1.json`.\n\n"
         . "## Runtime Boundary\n\n"
-        . "`SHPIGOVSKY_CORE_SKELETON` remains `true`; source implementation is ready for a later delivery phase only.\n";
+        . "V9-06C.1 supersedes the old coarse skeleton gate. `SHPIGOVSKY_CORE_MODE` defaults to `content_model`; runtime delivery remains a separate authorized phase.\n";
 }
 
 function admin_ux_spec(): string {

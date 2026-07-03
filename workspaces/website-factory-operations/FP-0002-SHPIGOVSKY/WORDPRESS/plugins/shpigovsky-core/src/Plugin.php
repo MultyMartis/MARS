@@ -7,17 +7,7 @@
 
 namespace Shpigovsky\Core;
 
-use Shpigovsky\Core\Admin\EditorRestrictions;
-use Shpigovsky\Core\Admin\OptionsPage;
-use Shpigovsky\Core\ContentTypes\Service;
 use Shpigovsky\Core\Contracts\ModuleInterface;
-use Shpigovsky\Core\Fields\AcfIntegration;
-use Shpigovsky\Core\Fields\FieldGroups;
-use Shpigovsky\Core\Fields\RepeaterValidation;
-use Shpigovsky\Core\Forms\ConsultationHandler;
-use Shpigovsky\Core\Migrations\MigrationRunner;
-use Shpigovsky\Core\Permalinks\ServicePermalinks;
-use Shpigovsky\Core\Settings\SiteSettings;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -33,24 +23,13 @@ final class Plugin {
 	 *
 	 * @var class-string<ModuleInterface>[]
 	 */
-	private static $modules = array(
-		Service::class,
-		ServicePermalinks::class,
-		AcfIntegration::class,
-		FieldGroups::class,
-		RepeaterValidation::class,
-		SiteSettings::class,
-		MigrationRunner::class,
-		ConsultationHandler::class,
-		OptionsPage::class,
-		EditorRestrictions::class,
-	);
+	private static $modules = null;
 
 	/**
 	 * Initialize plugin modules.
 	 */
 	public static function init() {
-		foreach ( self::$modules as $module_class ) {
+		foreach ( self::get_modules() as $module_class ) {
 			if ( is_subclass_of( $module_class, ModuleInterface::class ) && $module_class::is_enabled() ) {
 				$module_class::register();
 			}
@@ -81,7 +60,20 @@ final class Plugin {
 	public static function render_skeleton_notice() {
 		printf(
 			'<div class="notice notice-info"><p><strong>Shpigovsky Core</strong> — %s</p></div>',
-			esc_html__( 'V9-06C source implemented — modules are still disabled by skeleton gate; no runtime content model registered.', 'shpigovsky-core' )
+			esc_html__( 'Skeleton mode is active — content-model modules are disabled until source mode is changed.', 'shpigovsky-core' )
 		);
+	}
+
+	/**
+	 * Return phase-aware module classes.
+	 *
+	 * @return array<int, class-string<ModuleInterface>>
+	 */
+	private static function get_modules() {
+		if ( null === self::$modules ) {
+			self::$modules = ModuleRegistry::get_module_classes();
+		}
+
+		return self::$modules;
 	}
 }

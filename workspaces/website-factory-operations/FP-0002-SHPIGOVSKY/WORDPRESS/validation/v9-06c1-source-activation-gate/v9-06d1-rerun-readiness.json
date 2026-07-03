@@ -1,0 +1,29 @@
+{
+  "schema": "fp-0002-v9-06c1-v9-06d1-rerun-readiness",
+  "readiness": "READY",
+  "checks": [
+    {
+      "check": "Old skeleton gate no longer blocks V9-06D1",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Content model modules source-enabled",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Deferred modules still disabled",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Runtime delivery not performed in V9-06C1",
+      "passed": true,
+      "evidence": ""
+    }
+  ],
+  "passed": 4,
+  "failed": 0,
+  "result": "PASS"
+}

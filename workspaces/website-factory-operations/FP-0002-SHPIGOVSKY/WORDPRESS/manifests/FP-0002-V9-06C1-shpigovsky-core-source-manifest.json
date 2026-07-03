@@ -1,0 +1,95 @@
+{
+  "schema": "fp-0002-v9-06c1-source-manifest",
+  "surface": "plugins/shpigovsky-core",
+  "file_count": 20,
+  "php_count": 17,
+  "json_count": 0,
+  "aggregate_hash": "0f26cc6fd179c9d2ee069d076ce0696e68bad9f630e9dca9244cac283fae2fe9",
+  "phase": "V9-06C.1",
+  "delivery_status": "SOURCE_ACTIVATION_GATE_RESOLVED_NOT_DELIVERED",
+  "secret_scan": "PASS",
+  "secret_hits": [],
+  "runtime_delivery_status": "NOT_DELIVERED",
+  "files": [
+    {
+      "path": "inc/compat.php",
+      "sha256": "8bd9f8eeecae89287d889f85d51fa4af3e25cb1bcf84c22fa28b380af1b04881"
+    },
+    {
+      "path": "index.php",
+      "sha256": "e5c2434c1cce8d94a71d752f3fad0d958a9a81353fbe8b0fab3f9f8d8b6f1f49"
+    },
+    {
+      "path": "languages/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "README.md",
+      "sha256": "444ec06659134c32acf0e32ff05ca65e9bd51b413ba04b226de8976b4c11260a"
+    },
+    {
+      "path": "shpigovsky-core.php",
+      "sha256": "2e1c2d26335ac81c0af62c2961ed950eb2d8ddb6b3440a5b8f2e8fbc42a6f871"
+    },
+    {
+      "path": "src/Admin/EditorRestrictions.php",
+      "sha256": "2097832c9232b3aa94b243dc13a93456a35a1de8f326a0ea6a280a13f52ec426"
+    },
+    {
+      "path": "src/Admin/OptionsPage.php",
+      "sha256": "624e57c7d08b12a128e7a204c8f0e75b993851d8c8bc1c82f276cadbcf71d92f"
+    },
+    {
+      "path": "src/ContentTypes/Service.php",
+      "sha256": "966c37aa1489451f6a2adb581a4442440abe99fc63749d62545ae8ccdcb548cf"
+    },
+    {
+      "path": "src/Contracts/ModuleInterface.php",
+      "sha256": "97051adc5f2ab4a83ac7b8c21261facae549c17bd1df8cc2f1d9306700fa1132"
+    },
+    {
+      "path": "src/Fields/AcfIntegration.php",
+      "sha256": "818457616c5eaf13f0c33ff5bf1b0b7471db3d24de930adbb5a0d490078539e0"
+    },
+    {
+      "path": "src/Fields/FieldGroups.php",
+      "sha256": "33f20c74859d89ac11999f3b102ea8c805f30b00b84f0ffe150d83dd68ce28fb"
+    },
+    {
+      "path": "src/Fields/RepeaterValidation.php",
+      "sha256": "dad6dc9a59ca62080a23b053c402485e8005e748a125fc3b6b6f35c18a4787b4"
+    },
+    {
+      "path": "src/Forms/ConsultationHandler.php",
+      "sha256": "136c79943e743a007222bcd401701f7e2d33669513492639d620d1c849ad2b15"
+    },
+    {
+      "path": "src/Loader/Autoloader.php",
+      "sha256": "34c93352f63bbbefb2fba85bb566502bd6e779a1120b4fbd9a5d6dc64df14e3e"
+    },
+    {
+      "path": "src/Migrations/MigrationRunner.php",
+      "sha256": "96654bd34b957c4ac1fdd7970c4c580ce9c4cc058a2540c9dab1d5d1e9faf5a3"
+    },
+    {
+      "path": "src/ModuleRegistry.php",
+      "sha256": "a7b2b9bb033494da95cd9e5d411f2448b24faf981320e553f0d7a9b70734ebba"
+    },
+    {
+      "path": "src/Permalinks/ServicePermalinks.php",
+      "sha256": "2b6d09917989ecaa57fcd09e0e16748d27f21a97a9cb60be3aef07c5260cb7ca"
+    },
+    {
+      "path": "src/Plugin.php",
+      "sha256": "dc7939a27259ddf92d6101dde015a65fe89518cfc986ece05be9bcd345428bce"
+    },
+    {
+      "path": "src/Settings/SiteSettings.php",
+      "sha256": "e9ff653258a3c033feddf7b50c068648c7767759334a7d9d5faab1fb70f25ae4"
+    },
+    {
+      "path": "src/Taxonomies/README.md",
+      "sha256": "8b5850f496a5cfc917a00b28ed6de7c6cb8f28e09dbd0e3c493495b3b39a6ca4"
+    }
+  ]
+}

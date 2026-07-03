@@ -1,0 +1,23 @@
+{
+  "schema": "fp-0002-v9-06c1-skeleton-gate-diagnosis",
+  "phase": "V9-06C.1",
+  "result": "PASS",
+  "skeleton_mode_defined_in": "plugins/shpigovsky-core/shpigovsky-core.php",
+  "previous_blocking_condition": "SHPIGOVSKY_CORE_SKELETON=true",
+  "previous_module_gate": "ModuleInterface::is_enabled returned ! shpigovsky_core_is_skeleton_mode()",
+  "modules_blocked": [
+    "ContentTypes",
+    "Permalinks",
+    "Fields",
+    "Settings",
+    "Admin",
+    "Validation"
+  ],
+  "deferred_modules": [
+    "Migrations",
+    "Forms"
+  ],
+  "source_fix": "SHPIGOVSKY_CORE_MODE=content_model plus ModuleRegistry allowlist",
+  "theme_skeleton_flag": "NOT_FOUND_AS_CONTENT_MODEL_BLOCKER",
+  "v9_06d1_blocker": "Delivery would not register CPT/permalinks/ACF/options/admin/validation with old gate."
+}

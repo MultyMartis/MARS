@@ -8,6 +8,7 @@
 namespace Shpigovsky\Core\ContentTypes;
 
 use Shpigovsky\Core\Contracts\ModuleInterface;
+use Shpigovsky\Core\ModuleRegistry;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -34,7 +35,7 @@ final class Service implements ModuleInterface {
 	 * {@inheritdoc}
 	 */
 	public static function is_enabled() {
-		return ! shpigovsky_core_is_skeleton_mode();
+		return ModuleRegistry::is_enabled( self::id() );
 	}
 
 	/**
@@ -52,7 +53,7 @@ final class Service implements ModuleInterface {
 	 * - FP-0002-WORDPRESS-ENTITY-REGISTRY-v1.json
 	 * - FP-0002-SERVICE-PERMALINK-REWRITE-CONTRACT-v1.md
 	 *
-	 * Runtime delivery remains disabled while SHPIGOVSKY_CORE_SKELETON is true.
+	 * Runtime delivery remains separate; V9-06C.1 only enables source hook registration.
 	 */
 	public static function register_post_type() {
 		register_post_type(

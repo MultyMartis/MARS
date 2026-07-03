@@ -1,7 +1,7 @@
 # FP-0002 V9 Operational Status
 
-**Updated:** 2026-07-04 (V9-06C content model source implementation PASS)
-**Status:** `FP0002_V9_06C_CONTENT_MODEL_SOURCE_IMPLEMENTATION_PASS`
+**Updated:** 2026-07-04 (V9-06C.1 source activation gate resolution PASS)
+**Status:** `FP0002_V9_06C1_SOURCE_ACTIVATION_GATE_RESOLUTION_PASS`
 
 ## Authority model
 
@@ -118,7 +118,7 @@ Phase **07C-B** Storage package — `SUPERSEDED_FAILED_STATIC_PACKAGING_NOT_FOR_
 
 ## Next phase
 
-**V9-06D — runtime delivery and object skeleton strategy** — **READY FOR OPERATOR REVIEW** after V9-06C source implementation; runtime delivery remains **NOT AUTHORIZED**
+**V9-06D.1 — runtime delivery and content model activation gate rerun** — **READY FOR SEPARATE OPERATOR AUTHORIZATION** after V9-06C.1 source fix; runtime delivery remains **NOT AUTHORIZED IN V9-06C.1**
 
 ---
 
@@ -181,4 +181,19 @@ Phase **07C-B** Storage package — `SUPERSEDED_FAILED_STATIC_PACKAGING_NOT_FOR_
 - Database writes: **0**.
 - V9 source/dist changes: **0**.
 - V9-06D: **READY FOR OPERATOR REVIEW**, not authorized.
+
+## V9-06C.1 Source Activation Gate Resolution
+
+- Status: `FP0002_V9_06C1_SOURCE_ACTIVATION_GATE_RESOLUTION_PASS`
+- Gate: forge-intake/validation/FP-0002-V9-06C1-SOURCE-ACTIVATION-GATE-RESOLUTION-GATE-v1.md
+- Report: workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/reports/FP-0002-V9-06C1-SOURCE-ACTIVATION-GATE-RESOLUTION-REPORT-v1.md
+- Shpigovsky Core default mode: **CONTENT_MODEL**.
+- `SHPIGOVSKY_CORE_SKELETON`: **FALSE_OR_COMPAT_DERIVED**.
+- Content model modules: **ENABLED_IN_SOURCE**.
+- Migrations/forms/object creation/content migration/rewrite flush: **DISABLED**.
+- Runtime delivery: **0**.
+- WordPress objects created: **0**.
+- Database writes: **0**.
+- V9 source/dist changes: **0**.
+- V9-06D.1 rerun: **READY**, under separate authorization.
 

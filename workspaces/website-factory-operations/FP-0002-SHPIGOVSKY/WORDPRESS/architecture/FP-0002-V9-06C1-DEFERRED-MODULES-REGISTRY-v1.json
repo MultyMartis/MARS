@@ -1,0 +1,49 @@
+{
+  "schema": "fp-0002-v9-06c1-deferred-modules-registry",
+  "version": "1.0.0",
+  "runtime_delivery": "NOT_PERFORMED",
+  "deferred": [
+    {
+      "surface": "Migrations",
+      "status": "DISABLED_UNTIL_V9_06D2_OR_LATER",
+      "normal_load": "NOT_REGISTERED",
+      "writes": "0"
+    },
+    {
+      "surface": "Forms",
+      "status": "DISABLED_UNTIL_LATER_PHASE",
+      "normal_load": "NOT_REGISTERED",
+      "writes": "0"
+    },
+    {
+      "surface": "ObjectCreation",
+      "status": "DISABLED",
+      "normal_load": "ABSENT",
+      "writes": "0"
+    },
+    {
+      "surface": "ContentMigration",
+      "status": "DISABLED",
+      "normal_load": "ABSENT",
+      "writes": "0"
+    },
+    {
+      "surface": "Redirects",
+      "status": "DISABLED",
+      "normal_load": "ABSENT",
+      "writes": "0"
+    },
+    {
+      "surface": "RewriteFlush",
+      "status": "DISABLED_BY_DEFAULT",
+      "normal_load": "NO_FLUSH_CALL",
+      "writes": "0"
+    },
+    {
+      "surface": "ACFExtended",
+      "status": "NOT_USED",
+      "normal_load": "NO_ACFE_API_CALLS",
+      "writes": "0"
+    }
+  ]
+}

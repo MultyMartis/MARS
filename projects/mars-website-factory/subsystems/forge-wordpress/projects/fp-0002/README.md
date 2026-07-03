@@ -1,7 +1,7 @@
 # Forge WordPress — FP-0002 Project Lane
 
 **Project ID:** FP-0002 — Шпиговский  
-**Stage:** V9-06C content model source implementation complete — runtime delivery not started
+**Stage:** V9-06C.1 source activation gate resolved — runtime delivery not started
 
 | Document | Purpose |
 |----------|---------|
@@ -9,6 +9,7 @@
 | [FP-0002-WORDPRESS-ARCHITECTURE-v1.md](../../../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/architecture/FP-0002-WORDPRESS-ARCHITECTURE-v1.md) | **V9-06A** — WordPress IA, content model, template system |
 | [FP-0002-V9-06B-SKELETON-IMPLEMENTATION-REPORT-v1.md](../../../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/reports/FP-0002-V9-06B-SKELETON-IMPLEMENTATION-REPORT-v1.md) | **V9-06B** — theme + core skeleton PASS |
 | [FP-0002-V9-06C-CONTENT-MODEL-SOURCE-IMPLEMENTATION-REPORT-v1.md](../../../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/reports/FP-0002-V9-06C-CONTENT-MODEL-SOURCE-IMPLEMENTATION-REPORT-v1.md) | **V9-06C** — content model source implementation PASS |
+| [FP-0002-V9-06C1-SOURCE-ACTIVATION-GATE-RESOLUTION-REPORT-v1.md](../../../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/reports/FP-0002-V9-06C1-SOURCE-ACTIVATION-GATE-RESOLUTION-REPORT-v1.md) | **V9-06C.1** — source activation gate resolution PASS |
 | [FP-0002-OD-002-ROUTE-AUTHORITY-v1.md](../../../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/architecture/FP-0002-OD-002-ROUTE-AUTHORITY-v1.md) | OD-002 final route authority |
 | [FP-0002-FW-07C-2C-FILESYSTEM-DELIVERY-PROOF-RECEIPT-v1.md](FP-0002-FW-07C-2C-FILESYSTEM-DELIVERY-PROOF-RECEIPT-v1.md) | **FW-07C-2C PASS** — bounded filesystem delivery + rollback proof |
 | [FP-0002-FW-07C-2B-WPILOT-LOCAL-WRITE-PROOF-RECEIPT-v1.md](FP-0002-FW-07C-2B-WPILOT-LOCAL-WRITE-PROOF-RECEIPT-v1.md) | **FW-07C-2B PASS** — local WPilot write lifecycle proof |
@@ -42,6 +43,19 @@ Runtime manifest: [MLI-WP-FP0002-LOCAL-RUNTIME-MANIFEST-v1.md](../../../../mars-
 | Options Page | SOURCE IMPLEMENTED |
 | Admin UX | SOURCE IMPLEMENTED |
 | Validation hooks | SOURCE IMPLEMENTED |
+| Source activation gate | RESOLVED — CONTENT_MODEL |
 | Runtime delivery | NOT PERFORMED |
 | WordPress objects | NOT CREATED |
+
+## V9-06C.1 source activation gate
+
+| Surface | Status |
+|---|---|
+| Shpigovsky Core mode | CONTENT_MODEL |
+| Legacy skeleton flag | FALSE_OR_COMPAT_DERIVED |
+| Content model modules | ENABLED_IN_SOURCE |
+| Migrations | DISABLED |
+| Forms | DISABLED |
+| Runtime delivery | NOT PERFORMED |
+| V9-06D.1 rerun | READY UNDER SEPARATE AUTHORIZATION |
 

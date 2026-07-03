@@ -13,6 +13,7 @@
 namespace Shpigovsky\Core\Fields;
 
 use Shpigovsky\Core\Contracts\ModuleInterface;
+use Shpigovsky\Core\ModuleRegistry;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -39,7 +40,7 @@ final class FieldGroups implements ModuleInterface {
 	 * {@inheritdoc}
 	 */
 	public static function is_enabled() {
-		return ! shpigovsky_core_is_skeleton_mode() && shpigovsky_core_acf_pro_is_active();
+		return ModuleRegistry::is_enabled( self::id() ) && shpigovsky_core_acf_pro_is_active();
 	}
 
 	/**

@@ -41,10 +41,31 @@ function shpigovsky_core_acf_extended_is_active() {
 }
 
 /**
+ * Return deterministic Shpigovsky Core source mode.
+ *
+ * @return string
+ */
+function shpigovsky_core_mode() {
+	$mode    = defined( 'SHPIGOVSKY_CORE_MODE' ) ? SHPIGOVSKY_CORE_MODE : 'skeleton';
+	$allowed = array( 'skeleton', 'content_model', 'runtime_delivered' );
+
+	return in_array( $mode, $allowed, true ) ? $mode : 'skeleton';
+}
+
+/**
  * Whether the plugin is in skeleton mode (no model registration).
  *
  * @return bool
  */
 function shpigovsky_core_is_skeleton_mode() {
-	return defined( 'SHPIGOVSKY_CORE_SKELETON' ) && SHPIGOVSKY_CORE_SKELETON;
+	return 'skeleton' === shpigovsky_core_mode();
+}
+
+/**
+ * Whether V9-06C content-model source modules may register hooks.
+ *
+ * @return bool
+ */
+function shpigovsky_core_is_content_model_mode() {
+	return in_array( shpigovsky_core_mode(), array( 'content_model', 'runtime_delivered' ), true );
 }

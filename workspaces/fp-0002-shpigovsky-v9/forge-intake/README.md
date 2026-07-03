@@ -5,12 +5,14 @@
 **Stable baseline:** `fp-0002-v9-operator-approved-static-frontend-stable-01` @ `a51376872fbfefb7d5f68a58b440c726d6cf3de3`  
 **Intake gate:** V9-05A **APPROVED** — foundation **ADOPTED**  
 **Runtime checkpoint:** V9-05B **COMPLETE** — `foundation-002-v9-pre-implementation`
+**Latest WordPress source gate:** V9-06C.1 **PASS** — source activation gate resolved; runtime delivery not performed
 
 ## Entry documents
 
 - [FP-0002-V9-FORGE-WORDPRESS-INTAKE-PACK-v1.md](./FP-0002-V9-FORGE-WORDPRESS-INTAKE-PACK-v1.md) — V9-04 contract pack
 - [FP-0002-V9-05A-APPROVED-FRONTEND-INTAKE-GATE-v1.md](./validation/FP-0002-V9-05A-APPROVED-FRONTEND-INTAKE-GATE-v1.md) — V9-05A gate (APPROVED)
 - [FP-0002-V9-05B-PRE-IMPLEMENTATION-RUNTIME-CHECKPOINT-GATE-v1.md](./validation/FP-0002-V9-05B-PRE-IMPLEMENTATION-RUNTIME-CHECKPOINT-GATE-v1.md) — **V9-05B checkpoint (COMPLETE)**
+- [FP-0002-V9-06C1-SOURCE-ACTIVATION-GATE-RESOLUTION-GATE-v1.md](./validation/FP-0002-V9-06C1-SOURCE-ACTIVATION-GATE-RESOLUTION-GATE-v1.md) — **V9-06C.1 source gate (PASS)**
 
 ## Structure
 
@@ -40,4 +42,4 @@
 npm run validate:forge-intake
 ```
 
-**WordPress implementation is NOT authorized** — requires V9-05B checkpoint, V9-05C admission, and FW-07C-2 charter.
+**Runtime delivery is NOT authorized by V9-06C.1** — V9-06D.1 rerun requires a separate operator authorization.

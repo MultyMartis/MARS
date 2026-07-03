@@ -8,6 +8,7 @@
 namespace Shpigovsky\Core\Migrations;
 
 use Shpigovsky\Core\Contracts\ModuleInterface;
+use Shpigovsky\Core\ModuleRegistry;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -29,7 +30,7 @@ final class MigrationRunner implements ModuleInterface {
 	 * {@inheritdoc}
 	 */
 	public static function is_enabled() {
-		return ! shpigovsky_core_is_skeleton_mode();
+		return ModuleRegistry::is_enabled( self::id() );
 	}
 
 	/**

@@ -11,7 +11,7 @@
 | Surface | Origin | Runtime match | Canonical source | Classification |
 |---------|--------|---------------|------------------|----------------|
 | Theme `shpigovsky` | V6 `theme-source/shpigovsky` + runtime deltas | DRIFTED from V6; matches adopted runtime | `WORDPRESS/theme/shpigovsky/` | CANONICAL_CURRENT — ADOPTED |
-| Plugin `shpigovsky-core` | V6 `functionality-plugin/shpigovsky-core` + runtime deltas | DRIFTED from V6; matches adopted runtime | `WORDPRESS/plugins/shpigovsky-core/` | CANONICAL_CURRENT — ADOPTED |
+| Plugin `shpigovsky-core` | V6 `functionality-plugin/shpigovsky-core` + runtime deltas | DRIFTED from V6; source activation gate resolved in V9-06C.1 | `WORDPRESS/plugins/shpigovsky-core/` | CANONICAL_CURRENT — ADOPTED — SOURCE ACTIVATION READY |
 | ACF JSON | V6 empty state + V9-06C source generation | NOT DELIVERED TO RUNTIME | `WORDPRESS/acf-json/` | REGISTERED — V9-06C SOURCE CREATED |
 
 ## Historical surfaces
@@ -51,7 +51,7 @@ Foundation baseline scanned at capture; no secrets detected in theme/plugin sour
 
 V9 frontend HTML/CSS/JS integration is **NOT INCLUDED** in V9-06C. V9 frontend remains under `workspaces/fp-0002-shpigovsky-v9/`.
 
-V9-06C adds WordPress content model source only: Shpigovsky Core CPT/permalink/ACF/admin/validation source and canonical ACF JSON under `WORDPRESS/acf-json/`. Runtime implementation remains **NOT STARTED**.
+V9-06C adds WordPress content model source only: Shpigovsky Core CPT/permalink/ACF/admin/validation source and canonical ACF JSON under `WORDPRESS/acf-json/`. V9-06C.1 resolves the Shpigovsky Core source activation gate with `SHPIGOVSKY_CORE_MODE=content_model`. Runtime implementation remains **NOT STARTED**.
 
 ## Operator-managed external plugin boundary
 
@@ -61,4 +61,9 @@ ACF Extended PRO is also operator-managed, active, and classified separately, bu
 
 Forbidden for these dependencies: automatic update, replacement, deletion, package delivery, license handling, license bypass repair, source mirroring, and unattended remediation. See architecture/FP-0002-OPERATOR-MANAGED-EXTERNAL-PLUGINS-v1.md.
 
+
+
+## V9-06C.1 activation gate
+
+Delivery of the previous V9-06D.1 package was blocked by the old skeleton gate and is now superseded by V9-06C.1 source repair. The current canonical source is activation-ready for a separate V9-06D.1 rerun. V9-06C.1 did not change runtime files, database state, external plugins, or WordPress objects.
 

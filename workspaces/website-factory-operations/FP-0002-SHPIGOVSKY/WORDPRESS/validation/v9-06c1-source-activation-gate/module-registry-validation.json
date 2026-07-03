@@ -1,0 +1,167 @@
+{
+  "schema": "fp-0002-v9-06c1-module-registry-validation",
+  "modules": [
+    {
+      "module": "ContentTypes",
+      "ids": [
+        "content-types.service"
+      ],
+      "previous_state": "DISABLED_BY_SKELETON_GATE",
+      "new_source_state": "ENABLED_IN_CONTENT_MODEL",
+      "runtime_delivered": false,
+      "result": "PASS"
+    },
+    {
+      "module": "Permalinks",
+      "ids": [
+        "permalinks.service"
+      ],
+      "previous_state": "DISABLED_BY_SKELETON_GATE",
+      "new_source_state": "ENABLED_IN_CONTENT_MODEL",
+      "runtime_delivered": false,
+      "result": "PASS"
+    },
+    {
+      "module": "Fields",
+      "ids": [
+        "fields.acf",
+        "fields.field-groups"
+      ],
+      "previous_state": "DISABLED_BY_SKELETON_GATE",
+      "new_source_state": "ENABLED_IN_CONTENT_MODEL_WITH_ACF_GUARDS",
+      "runtime_delivered": false,
+      "result": "PASS"
+    },
+    {
+      "module": "Settings",
+      "ids": [
+        "settings.site"
+      ],
+      "previous_state": "DISABLED_BY_SKELETON_GATE",
+      "new_source_state": "ENABLED_IN_CONTENT_MODEL_WITH_ACF_PRO_GUARD",
+      "runtime_delivered": false,
+      "result": "PASS"
+    },
+    {
+      "module": "Admin",
+      "ids": [
+        "admin.options-page",
+        "admin.editor-restrictions"
+      ],
+      "previous_state": "DISABLED_BY_SKELETON_GATE",
+      "new_source_state": "ENABLED_IN_CONTENT_MODEL",
+      "runtime_delivered": false,
+      "result": "PASS"
+    },
+    {
+      "module": "Validation",
+      "ids": [
+        "fields.repeater-validation"
+      ],
+      "previous_state": "DISABLED_BY_SKELETON_GATE",
+      "new_source_state": "ENABLED_IN_CONTENT_MODEL_WITH_ACF_PRO_GUARD",
+      "runtime_delivered": false,
+      "result": "PASS"
+    },
+    {
+      "module": "Migrations",
+      "ids": [
+        "migrations.runner"
+      ],
+      "previous_state": "WOULD_ENABLE_IF_SKELETON_FALSE",
+      "new_source_state": "DISABLED_UNTIL_V9_06D2_OR_LATER",
+      "runtime_delivered": false,
+      "result": "PASS"
+    },
+    {
+      "module": "Forms",
+      "ids": [
+        "forms.consultation"
+      ],
+      "previous_state": "WOULD_ENABLE_IF_SKELETON_FALSE",
+      "new_source_state": "DISABLED_UNTIL_LATER_PHASE",
+      "runtime_delivered": false,
+      "result": "PASS"
+    },
+    {
+      "module": "Taxonomies",
+      "ids": [
+        "taxonomies"
+      ],
+      "previous_state": "REJECTED",
+      "new_source_state": "REJECTED",
+      "runtime_delivered": false,
+      "result": "PASS"
+    }
+  ],
+  "checks": [
+    {
+      "check": "ModuleRegistry class exists",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Enabled status constant exists",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "ContentTypes registry id content-types.service",
+      "passed": true,
+      "evidence": "ENABLED_IN_CONTENT_MODEL"
+    },
+    {
+      "check": "Permalinks registry id permalinks.service",
+      "passed": true,
+      "evidence": "ENABLED_IN_CONTENT_MODEL"
+    },
+    {
+      "check": "Fields registry id fields.acf",
+      "passed": true,
+      "evidence": "ENABLED_IN_CONTENT_MODEL_WITH_ACF_GUARDS"
+    },
+    {
+      "check": "Fields registry id fields.field-groups",
+      "passed": true,
+      "evidence": "ENABLED_IN_CONTENT_MODEL_WITH_ACF_GUARDS"
+    },
+    {
+      "check": "Settings registry id settings.site",
+      "passed": true,
+      "evidence": "ENABLED_IN_CONTENT_MODEL_WITH_ACF_PRO_GUARD"
+    },
+    {
+      "check": "Admin registry id admin.options-page",
+      "passed": true,
+      "evidence": "ENABLED_IN_CONTENT_MODEL"
+    },
+    {
+      "check": "Admin registry id admin.editor-restrictions",
+      "passed": true,
+      "evidence": "ENABLED_IN_CONTENT_MODEL"
+    },
+    {
+      "check": "Validation registry id fields.repeater-validation",
+      "passed": true,
+      "evidence": "ENABLED_IN_CONTENT_MODEL_WITH_ACF_PRO_GUARD"
+    },
+    {
+      "check": "Migrations registry id migrations.runner",
+      "passed": true,
+      "evidence": "DISABLED_UNTIL_V9_06D2_OR_LATER"
+    },
+    {
+      "check": "Forms registry id forms.consultation",
+      "passed": true,
+      "evidence": "DISABLED_UNTIL_LATER_PHASE"
+    },
+    {
+      "check": "Taxonomies registry id taxonomies",
+      "passed": true,
+      "evidence": "REJECTED"
+    }
+  ],
+  "passed": 13,
+  "failed": 0,
+  "result": "PASS"
+}

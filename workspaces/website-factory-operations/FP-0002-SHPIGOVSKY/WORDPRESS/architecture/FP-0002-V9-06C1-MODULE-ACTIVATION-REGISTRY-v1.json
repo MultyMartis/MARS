@@ -1,0 +1,100 @@
+{
+  "schema": "fp-0002-v9-06c1-module-activation-registry",
+  "version": "1.0.0",
+  "default_mode": "content_model",
+  "runtime_delivery": "NOT_PERFORMED",
+  "modules": [
+    {
+      "module": "ContentTypes",
+      "ids": [
+        "content-types.service"
+      ],
+      "previous_state": "DISABLED_BY_SKELETON_GATE",
+      "new_source_state": "ENABLED_IN_CONTENT_MODEL",
+      "runtime_delivered": false,
+      "result": "PASS"
+    },
+    {
+      "module": "Permalinks",
+      "ids": [
+        "permalinks.service"
+      ],
+      "previous_state": "DISABLED_BY_SKELETON_GATE",
+      "new_source_state": "ENABLED_IN_CONTENT_MODEL",
+      "runtime_delivered": false,
+      "result": "PASS"
+    },
+    {
+      "module": "Fields",
+      "ids": [
+        "fields.acf",
+        "fields.field-groups"
+      ],
+      "previous_state": "DISABLED_BY_SKELETON_GATE",
+      "new_source_state": "ENABLED_IN_CONTENT_MODEL_WITH_ACF_GUARDS",
+      "runtime_delivered": false,
+      "result": "PASS"
+    },
+    {
+      "module": "Settings",
+      "ids": [
+        "settings.site"
+      ],
+      "previous_state": "DISABLED_BY_SKELETON_GATE",
+      "new_source_state": "ENABLED_IN_CONTENT_MODEL_WITH_ACF_PRO_GUARD",
+      "runtime_delivered": false,
+      "result": "PASS"
+    },
+    {
+      "module": "Admin",
+      "ids": [
+        "admin.options-page",
+        "admin.editor-restrictions"
+      ],
+      "previous_state": "DISABLED_BY_SKELETON_GATE",
+      "new_source_state": "ENABLED_IN_CONTENT_MODEL",
+      "runtime_delivered": false,
+      "result": "PASS"
+    },
+    {
+      "module": "Validation",
+      "ids": [
+        "fields.repeater-validation"
+      ],
+      "previous_state": "DISABLED_BY_SKELETON_GATE",
+      "new_source_state": "ENABLED_IN_CONTENT_MODEL_WITH_ACF_PRO_GUARD",
+      "runtime_delivered": false,
+      "result": "PASS"
+    },
+    {
+      "module": "Migrations",
+      "ids": [
+        "migrations.runner"
+      ],
+      "previous_state": "WOULD_ENABLE_IF_SKELETON_FALSE",
+      "new_source_state": "DISABLED_UNTIL_V9_06D2_OR_LATER",
+      "runtime_delivered": false,
+      "result": "PASS"
+    },
+    {
+      "module": "Forms",
+      "ids": [
+        "forms.consultation"
+      ],
+      "previous_state": "WOULD_ENABLE_IF_SKELETON_FALSE",
+      "new_source_state": "DISABLED_UNTIL_LATER_PHASE",
+      "runtime_delivered": false,
+      "result": "PASS"
+    },
+    {
+      "module": "Taxonomies",
+      "ids": [
+        "taxonomies"
+      ],
+      "previous_state": "REJECTED",
+      "new_source_state": "REJECTED",
+      "runtime_delivered": false,
+      "result": "PASS"
+    }
+  ]
+}

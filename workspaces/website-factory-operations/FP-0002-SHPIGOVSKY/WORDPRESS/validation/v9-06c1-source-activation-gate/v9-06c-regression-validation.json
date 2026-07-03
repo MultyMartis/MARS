@@ -1,0 +1,43 @@
+{
+  "schema": "fp-0002-v9-06c1-v9-06c-regression-validation",
+  "checks": [
+    {
+      "check": "Service CPT source still registers service",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Service CPT has_archive false",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Service permalink source still owns /uslugi child paths",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "ACF field group registry still lists 13 groups",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Options Page source still present",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "ACF PRO policy remains ALWAYS_IGNORE",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "ACF JSON source present",
+      "passed": true,
+      "evidence": ""
+    }
+  ],
+  "passed": 7,
+  "failed": 0,
+  "result": "PASS"
+}

@@ -1,0 +1,67 @@
+{
+  "schema": "fp-0002-v9-06c1-source-manifest",
+  "surface": "acf-json",
+  "file_count": 13,
+  "php_count": 0,
+  "json_count": 13,
+  "aggregate_hash": "f1931a82dbe58f0000153bec58b850c1e69cb66f35680b726391101aff2a8990",
+  "phase": "V9-06C.1",
+  "delivery_status": "UNCHANGED_OR_SOURCE_VALIDATED_NOT_DELIVERED",
+  "secret_scan": "PASS",
+  "secret_hits": [],
+  "runtime_delivery_status": "NOT_DELIVERED",
+  "files": [
+    {
+      "path": "group_fp02_blog_post_article_meta.json",
+      "sha256": "8da48063f74576c1695565eea3bc9fc3ccc968bf1c8ce320c959b6e5873f7a34"
+    },
+    {
+      "path": "group_fp02_page_contacts.json",
+      "sha256": "320819c208593374f33ab2190b86e4deb4311cd9a043c967edab976c1448cd4c"
+    },
+    {
+      "path": "group_fp02_page_home.json",
+      "sha256": "2077213e1e3bfccce3b0b6873ce885201d70b87f492c3655d08d90124f8244a0"
+    },
+    {
+      "path": "group_fp02_page_institutional.json",
+      "sha256": "a1f3b3c540dea2c854edb7dac1aa86cd09331a40b1b42f80e7ca75fb8cf3b531"
+    },
+    {
+      "path": "group_fp02_page_legal.json",
+      "sha256": "866d650e6d42c99e2c281a40dcdf1d86648968d56b25f87532fa21742f0a1a48"
+    },
+    {
+      "path": "group_fp02_page_reviews.json",
+      "sha256": "90bffaf30b1b8c76c4ef4c140176929be178aab0be069f236e61587d591fc6aa"
+    },
+    {
+      "path": "group_fp02_page_services_hub.json",
+      "sha256": "b2b783d0db6d74ffdf0b1649601d179964cb49f0c655d2dd5f416182261d9715"
+    },
+    {
+      "path": "group_fp02_service_faq.json",
+      "sha256": "7ef5056eb6c1fc25caa5a6c029a625e98cff13650513a1a5a97115190fdc28d4"
+    },
+    {
+      "path": "group_fp02_service_layout_hero.json",
+      "sha256": "60e341d11cadbeddff8586acc7df9b21a67f278540b98a65ceb120a3a370ff14"
+    },
+    {
+      "path": "group_fp02_service_relationships.json",
+      "sha256": "990446dbbab74a4e7cbab689f2e92c9b5c80a0b54eea30bfc4d6b12e45827b19"
+    },
+    {
+      "path": "group_fp02_service_structured_sections.json",
+      "sha256": "095bb0714002e24a6cc47d4f4f7a98dbca3cc16e12e9fada665aaf3015428d92"
+    },
+    {
+      "path": "group_fp02_site_options_contacts.json",
+      "sha256": "b043c0a835fd5205592b451c6b4a59976e29a9123f72e3e1521da891af1ed7a6"
+    },
+    {
+      "path": "group_fp02_site_options_modal_cta.json",
+      "sha256": "afbde527c24b494efb02f78ad1abc21aa7cd6e82d2a420a36a77bafa87b7807f"
+    }
+  ]
+}

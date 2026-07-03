@@ -1,0 +1,87 @@
+{
+  "schema": "fp-0002-v9-06c1-deferred-modules-validation",
+  "deferred": [
+    {
+      "surface": "Migrations",
+      "status": "DISABLED_UNTIL_V9_06D2_OR_LATER",
+      "normal_load": "NOT_REGISTERED",
+      "writes": "0"
+    },
+    {
+      "surface": "Forms",
+      "status": "DISABLED_UNTIL_LATER_PHASE",
+      "normal_load": "NOT_REGISTERED",
+      "writes": "0"
+    },
+    {
+      "surface": "ObjectCreation",
+      "status": "DISABLED",
+      "normal_load": "ABSENT",
+      "writes": "0"
+    },
+    {
+      "surface": "ContentMigration",
+      "status": "DISABLED",
+      "normal_load": "ABSENT",
+      "writes": "0"
+    },
+    {
+      "surface": "Redirects",
+      "status": "DISABLED",
+      "normal_load": "ABSENT",
+      "writes": "0"
+    },
+    {
+      "surface": "RewriteFlush",
+      "status": "DISABLED_BY_DEFAULT",
+      "normal_load": "NO_FLUSH_CALL",
+      "writes": "0"
+    },
+    {
+      "surface": "ACFExtended",
+      "status": "NOT_USED",
+      "normal_load": "NO_ACFE_API_CALLS",
+      "writes": "0"
+    }
+  ],
+  "checks": [
+    {
+      "check": "Migrations disabled",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Forms disabled",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Taxonomies rejected",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Object creation absent",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Content migration absent",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Rewrite flush absent",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "ACF Extended PRO APIs not used",
+      "passed": true,
+      "evidence": "Only passive ACFE_VERSION/class_exists detection for admin notice; no ACFE function calls, classes, or field APIs."
+    }
+  ],
+  "passed": 7,
+  "failed": 0,
+  "result": "PASS"
+}

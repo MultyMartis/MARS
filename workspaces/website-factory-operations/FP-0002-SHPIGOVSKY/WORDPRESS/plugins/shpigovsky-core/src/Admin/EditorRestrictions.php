@@ -9,6 +9,7 @@ namespace Shpigovsky\Core\Admin;
 
 use Shpigovsky\Core\ContentTypes\Service;
 use Shpigovsky\Core\Contracts\ModuleInterface;
+use Shpigovsky\Core\ModuleRegistry;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -30,7 +31,7 @@ final class EditorRestrictions implements ModuleInterface {
 	 * {@inheritdoc}
 	 */
 	public static function is_enabled() {
-		return ! shpigovsky_core_is_skeleton_mode();
+		return ModuleRegistry::is_enabled( self::id() );
 	}
 
 	/**

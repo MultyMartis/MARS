@@ -1,0 +1,160 @@
+{
+  "schema": "fp-0002-v9-06c1-final-verdict",
+  "total_checks": 30,
+  "passed": 30,
+  "failed": 0,
+  "result": "PASS",
+  "verdict": "V9-06C.1 COMPLETE; SOURCE ACTIVATION GATE RESOLVED; V9-06D.1 RERUN READY",
+  "checks": [
+    {
+      "check": "SHPIGOVSKY_CORE_MODE exists",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Default source mode is content_model",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "SHPIGOVSKY_CORE_SKELETON false/derived",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "ContentTypes enabled",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Permalinks enabled",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Fields enabled",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Settings enabled",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Admin enabled",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Validation enabled",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Migrations disabled",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Forms disabled",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Taxonomies rejected",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Object creation absent",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Content migration absent",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Rewrite flush absent",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "ACF Extended PRO APIs not used",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "ACF PRO policy ALWAYS_IGNORE",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "ACF JSON source unchanged or validated",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Service CPT source valid",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Service permalink source valid",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "ACF field group registry valid",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "Options Page source valid",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "PHP lint passes",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "V9-06C regression clean",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "V9-06D1 skeleton blocker resolved",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "No runtime paths written",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "No plugin ZIPs staged",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "No license keys staged",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "No secrets staged",
+      "passed": true,
+      "evidence": ""
+    },
+    {
+      "check": "No foreign WIP staged",
+      "passed": true,
+      "evidence": ""
+    }
+  ]
+}

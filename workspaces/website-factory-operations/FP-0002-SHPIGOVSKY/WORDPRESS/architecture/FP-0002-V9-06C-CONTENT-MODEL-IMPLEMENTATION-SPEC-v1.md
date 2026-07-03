@@ -12,6 +12,8 @@
 
 Total groups: 13. See `FP-0002-V9-06C-ACF-FIELD-GROUP-REGISTRY-v1.json`.
 
-## Runtime Boundary
+## Source Activation Boundary
 
-`SHPIGOVSKY_CORE_SKELETON` remains `true`; source implementation is ready for a later delivery phase only.
+V9-06C.1 supersedes the old coarse skeleton gate. `SHPIGOVSKY_CORE_MODE` defaults to `content_model`, and V9-06C content-model modules are enabled in source for delivery readiness.
+
+Runtime delivery, object creation, migrations, content migration, redirects, rewrite flush, option writes, and ACF runtime DB sync remain not performed and require separate authorization.

@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Shpigovsky Core
  * Plugin URI: https://example.invalid/shpigovsky-core
- * Description: FP-0002 functionality plugin — V9-06C content model source implemented. Runtime registration remains gated until delivery.
- * Version: 0.3.0-v9-06c-source
+ * Description: FP-0002 functionality plugin — V9-06C.1 content model source activation gate resolved. Runtime delivery remains separate.
+ * Version: 0.3.1-v9-06c1-source
  * Requires at least: 6.0
  * Requires PHP: 8.0
  * Author: Forge WordPress / FP-0002
@@ -17,12 +17,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'SHPIGOVSKY_CORE_VERSION', '0.3.0-v9-06c-source' );
+define( 'SHPIGOVSKY_CORE_VERSION', '0.3.1-v9-06c1-source' );
 define( 'SHPIGOVSKY_CORE_FILE', __FILE__ );
 define( 'SHPIGOVSKY_CORE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SHPIGOVSKY_CORE_URI', plugin_dir_url( __FILE__ ) );
-define( 'SHPIGOVSKY_CORE_SKELETON', true );
+define( 'SHPIGOVSKY_CORE_MODE', 'content_model' );
+define( 'SHPIGOVSKY_CORE_SKELETON', 'skeleton' === SHPIGOVSKY_CORE_MODE );
 define( 'SHPIGOVSKY_CORE_V9_06C_SOURCE_IMPLEMENTED', true );
+define( 'SHPIGOVSKY_CORE_V9_06C1_SOURCE_GATE_RESOLVED', true );
 
 require_once SHPIGOVSKY_CORE_DIR . 'inc/compat.php';
 require_once SHPIGOVSKY_CORE_DIR . 'src/Loader/Autoloader.php';

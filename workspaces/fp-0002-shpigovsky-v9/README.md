@@ -1,7 +1,7 @@
 # FP-0002 Shpigovsky — V9 Frontend Workspace
 
-**Status:** `FP0002_V9_FORGE_WORDPRESS_INTAKE_PACK_COMPLETE`  
-**Phase:** V9-04 Forge WordPress Intake Pack complete — WordPress implementation not started  
+**Status:** `FP0002_V9_06C1_SOURCE_ACTIVATION_GATE_RESOLUTION_PASS`  
+**Phase:** V9-06C.1 source activation gate resolved — runtime delivery not performed  
 **Authority:** V9 stable static frontend frozen; intake pack at `forge-intake/`
 
 ## Build
@@ -36,6 +36,14 @@ After build: `npm run preview` → default **http://127.0.0.1:8791/** (V9-03G re
 - Validate: `npm run validate:forge-intake`
 - Tag: `fp-0002-v9-forge-wordpress-intake-pack-01`
 - Next: V9-05 environment gate — **no WordPress theme work in V9-04**
+
+## V9-06C.1 WordPress Source Gate
+
+- Shpigovsky Core source mode: `CONTENT_MODEL`
+- Content model modules enabled in source: yes
+- Runtime delivery: no
+- V9 `src/` and `dist/`: unchanged
+- Gate: `forge-intake/validation/FP-0002-V9-06C1-SOURCE-ACTIVATION-GATE-RESOLUTION-GATE-v1.md`
 
 ## V9-03G (operator approved)
 
