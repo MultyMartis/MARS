@@ -138,6 +138,133 @@ YES, to refresh inherited process environment.
 
 Cursor restart is not claimed complete here; this documentation only records the cleanup state and restart requirement.
 
+## Workstation PATH Normalization Closure
+
+Status:
+
+COMPLETE
+
+Completed removals:
+
+### User PATH
+
+- `C:\Users\MetaCODE ONE\AppData\Roaming\npm`
+- `C:\Users\MetaCODE ONE\AppData\Roaming\Composer\vendor\bin`
+
+Reason:
+
+Both directories were absent and no active global command shims depended on them.
+
+### Machine PATH
+
+Removed duplicate textual form:
+
+`C:\Program Files\nodejs`
+
+Retained canonical textual form:
+
+`C:\Program Files\nodejs\`
+
+Reason:
+
+Both entries referenced the same Node installation in the same persisted Machine PATH scope.
+
+### Retained Entries
+
+User PATH:
+
+`C:\Users\MetaCODE ONE\AppData\Local\Microsoft\WindowsApps`
+
+Machine PATH:
+
+- `C:\Program Files\Git\cmd`
+- `C:\Program Files\nodejs\`
+- `C:\ProgramData\ComposerSetup\bin`
+
+### PHP Boundary
+
+Deprecated E: PHP entry:
+
+REMOVED
+
+Canonical X: PHP in permanent User PATH:
+
+NO
+
+Canonical X: PHP in permanent Machine PATH:
+
+NO
+
+PHP activation model:
+
+PROCESS ONLY / SESSION-ONLY
+
+### Final Command Resolution
+
+Git:
+
+AVAILABLE
+
+Node:
+
+AVAILABLE
+
+npm:
+
+AVAILABLE
+
+npx:
+
+AVAILABLE
+
+Composer wrapper:
+
+AVAILABLE
+
+Python:
+
+SHIM-RESOLVED THROUGH WINDOWSAPPS
+
+PHP before activator:
+
+UNRESOLVED — EXPECTED
+
+### Restart State
+
+Windows restart required:
+
+NO
+
+Cursor restart required after cleanup:
+
+YES
+
+Post-restart validation:
+
+OPERATOR-CONFIRMED
+
+### Evidence Boundary
+
+Storage evidence paths are external, out-of-Git evidence:
+
+- `X:\AI MARS STORAGE\backups\workstation\environment\USER-PATH-BEFORE-STALE-ENTRY-CLEANUP-20260703-213858.txt`
+- `X:\AI MARS STORAGE\backups\workstation\environment\USER-PATH-AFTER-STALE-ENTRY-CLEANUP-20260703-213858.txt`
+- `X:\AI MARS STORAGE\backups\workstation\environment\USER-PATH-RESTORE-20260703-213858.ps1`
+- `X:\AI MARS STORAGE\backups\workstation\environment\MACHINE-PATH-BEFORE-NODE-DUPLICATE-CLEANUP-20260703-213858.txt`
+- `X:\AI MARS STORAGE\backups\workstation\environment\MACHINE-PATH-AFTER-NODE-DUPLICATE-CLEANUP-20260703-213858.txt`
+- `X:\AI MARS STORAGE\backups\workstation\environment\MACHINE-PATH-RESTORE-NODE-20260703-213858.ps1`
+- `X:\AI MARS STORAGE\backups\workstation\environment\MACHINE-PATH-REMOVE-NODE-DUPLICATE-20260703-213858.ps1`
+
+Restore scripts require explicit operator action. Machine PATH restore requires elevation.
+
+No credentials or secrets are stored in this PATH-normalization evidence.
+
+### Remaining Deferred Item
+
+Python normalization:
+
+DEFERRED UNTIL A PYTHON-CRITICAL LANE REQUIRES IT
+
 ## Evidence
 
 Storage evidence paths are external, out-of-Git evidence:

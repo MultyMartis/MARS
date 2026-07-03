@@ -69,7 +69,7 @@ MLI is an **execution environment**. It is **not** the MARS brain, governance so
 |------------|-------|
 | **Shared toolchain** | **HARDENED** — [registries/MARS-LOCALHOST-TOOL-REGISTRY-v1.md](registries/MARS-LOCALHOST-TOOL-REGISTRY-v1.md) |
 | **Toolchain activator** | **OPERATIONAL — HUMAN-INVOKED — SESSION-ONLY** — [MARS-LOCALHOST-TOOLCHAIN-ACTIVATION-v1.md](MARS-LOCALHOST-TOOLCHAIN-ACTIVATION-v1.md) |
-| **Machine PATH cleanup** | **COMPLETE** — deprecated `E:\MARS-Localhost\laragon\bin\php\php-8.3.30-Win32-vs16-x64` entry removed; persistent global PHP PATH **NOT USED** |
+| **Workstation PATH normalization** | **COMPLETE** — stale User npm/Composer entries removed; duplicate Machine Node entry removed; WindowsApps/Git/canonical Node/ComposerSetup retained; persistent PHP PATH **NOT USED** — [MARS-LOCALHOST-TOOLCHAIN-ACTIVATION-v1.md](MARS-LOCALHOST-TOOLCHAIN-ACTIVATION-v1.md) |
 | **Global Gulp** | **NOT USED** — project-local dependencies only |
 | **Smoke site** | `http://mli-smoke-001.test/` — **PASS** (browser `.test` DNS verified 2026-07-02) |
 | **WordPress synthetic (FWS-0001)** | `http://fws-0001.test/` — **OPERATIONAL** (browser `.test` DNS verified 2026-07-02); FW-05R synthetic validation complete; **FW-07C-1 revalidation pending** |
@@ -154,6 +154,7 @@ Forward commits (FP-0002 WordPress foundation): `11e9155`, `f003fe8`, `a5a7de0`,
 | Full Windows reboot operator retest | **COMPLETE** (2026-07-02) |
 | Canonical secrets layout on `X:\AI MARS\local\mli\` | **Pending** — separate reconciliation task |
 | SSL for MLI `.test` sites | **Deferred** |
+| Python normalization | **Deferred** — not required until a Python-critical lane needs it |
 | MLI-04 blocking Forge | **No** — FW-05R complete; MLI-04 parallel |
 
 **Next authorized action:** Parallel infrastructure lane **MLI-04 — OpenCart Runtime Profile** (not blocking FW-05R).
