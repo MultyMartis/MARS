@@ -237,7 +237,7 @@ Evidence: `validation/v9-06d4-minimal-content-seed-rerun/pre-write-baseline.json
 
 ## 16. Git checkpoint
 
-- Exact staged files: V9-06D.4 rerun documentation/evidence/status only
+- Exact staged files: V9-06D.4 rerun documentation/evidence/status only (30 files)
 - Runtime files staged: NO
 - Runtime snapshots staged: NO
 - Database dumps staged: NO
@@ -246,12 +246,12 @@ Evidence: `validation/v9-06d4-minimal-content-seed-rerun/pre-write-baseline.json
 - Secrets staged: NO
 - License keys staged: NO
 - Foreign files staged: NO
-- Commit: see git section after push
-- Commit hash: pending commit
-- Push: pending
-- Local HEAD: pending
-- Remote HEAD: pending
-- Result: pending
+- Commit: FP-0002: seed minimal WordPress content for route QA
+- Commit hash: 998dc71d0f27287addfdb55d87dd634c6eecffd0
+- Push: YES (normal, no force)
+- Local HEAD: 998dc71d0f27287addfdb55d87dd634c6eecffd0
+- Remote HEAD: 998dc71d0f27287addfdb55d87dd634c6eecffd0
+- Result: PASS
 
 ## 17. No-scope-drift audit
 
