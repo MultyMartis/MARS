@@ -1,6 +1,6 @@
 # AQ Task Starter v1
 
-**Status:** `MINIMAL_V1`  
+**Status:** `MINIMAL_V1`
 **Mode:** `HUMAN_INVOKED` / `NOT_AUTOMATED`
 
 Use this template for future Cursor/Web-GPT tasks. Fill every field. Do not treat placeholders as authority.

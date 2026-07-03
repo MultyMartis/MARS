@@ -1,7 +1,7 @@
 # FP-0002 Shpigovsky — V9 Frontend Workspace
 
-**Status:** `FP0002_V9_06C1_SOURCE_ACTIVATION_GATE_RESOLUTION_PASS`  
-**Phase:** V9-06C.1 source activation gate resolved — runtime delivery not performed  
+**Status:** `FP0002_V9_06C1_SOURCE_ACTIVATION_GATE_RESOLUTION_PASS`
+**Phase:** V9-06C.1 source activation gate resolved — runtime delivery not performed
 **Authority:** V9 stable static frontend frozen; intake pack at `forge-intake/`
 
 ## Build

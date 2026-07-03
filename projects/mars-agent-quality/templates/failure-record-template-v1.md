@@ -1,6 +1,6 @@
 # Failure Record Template v1
 
-**Status:** `MINIMAL_V1`  
+**Status:** `MINIMAL_V1`
 **Mode:** `HUMAN_INVOKED` / `NOT_AUTOMATED`
 
 Use this template for recurring agent-quality failures. Seed examples below are placeholders, not completed records.

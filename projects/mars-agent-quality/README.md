@@ -1,7 +1,7 @@
 # MARS Agent Quality
 
-**Status:** `MINIMAL_V1`  
-**Maturity:** `active / minimal v1`  
+**Status:** `MINIMAL_V1`
+**Maturity:** `active / minimal v1`
 **Mode:** `HUMAN_INVOKED` / `NOT_AUTOMATED`
 
 ## What This Is

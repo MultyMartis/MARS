@@ -1,6 +1,6 @@
 # Agent Contract v1
 
-**Status:** `MINIMAL_V1`  
+**Status:** `MINIMAL_V1`
 **Mode:** `HUMAN_INVOKED` / `NOT_AUTOMATED`
 
 ## Purpose

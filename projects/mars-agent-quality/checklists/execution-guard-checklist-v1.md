@@ -1,6 +1,6 @@
 # Execution Guard Checklist v1
 
-**Status:** `MINIMAL_V1`  
+**Status:** `MINIMAL_V1`
 **Mode:** `HUMAN_INVOKED` / `NOT_AUTOMATED`
 
 Use before and during scoped MARS agent tasks.
