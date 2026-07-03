@@ -6,7 +6,7 @@
 - Label: AI WS
 - Repository: X:\AI MARS
 - Branch: mars/canonical-post-recovery
-- Local HEAD: 26e1fc93f494fb86aa711d011499cb8178305534
+- Local HEAD: 0d0c7930f05092e60c50495338a1a63a4da960d9
 - Remote HEAD: 26e1fc93f494fb86aa711d011499cb8178305534
 - Ahead: 0
 - Behind: 0
@@ -199,12 +199,12 @@
 - Secrets staged: 0
 - License keys staged: 0
 - Foreign files staged: 0
-- Commit: pending operator-authorized commit step
-- Commit hash: pending
-- Push: pending
-- Local HEAD: 26e1fc93f494fb86aa711d011499cb8178305534
+- Commit: 0d0c7930f05092e60c50495338a1a63a4da960d9
+- Commit hash: 0d0c7930f05092e60c50495338a1a63a4da960d9
+- Push: in_progress
+- Local HEAD: 0d0c7930f05092e60c50495338a1a63a4da960d9
 - Remote HEAD: 26e1fc93f494fb86aa711d011499cb8178305534
-- Result: PENDING_COMMIT
+- Result: COMMITTED_LOCAL
 
 ## 17. No-scope-drift audit
 
