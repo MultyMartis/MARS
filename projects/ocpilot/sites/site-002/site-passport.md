@@ -1,7 +1,7 @@
 # SITE-002 — Site Passport
 
-**Status:** **STABLE LIVE CHECKPOINT — HOME COMMERCIAL TRUST 01**  
-**Run:** Home CTA `zpm-commercial-trust` replacement (2026-06-29)
+**Status:** **STABLE PRODUCTION CHECKPOINT — TEXT CHANGE 01**
+**Run:** 4.173 — SITE-002 First Controlled Production Change (2026-07-04)
 
 ---
 
@@ -27,13 +27,14 @@
 | **Environment (legacy field)** | TEST (historical registration) · Production registered 2026-07-02 |
 | **Production Profile** | [production-profile.md](production-profile.md) |
 | **Production connection** | **VERIFIED** — HTTP/admin (Run 4.171) + FTP/file baseline (Run 4.171-R1); path model reconciled (Run 4.172) |
-| **Production baseline** | **ISSUED** — [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| **Current Status** | **STABLE LIVE CHECKPOINT — HOME COMMERCIAL TRUST 01** (TEST-proven; Production parity verified Run 4.171-R1) |
+| **Production baseline** | **PARENT** — [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
+| **Current Production checkpoint** | **ISSUED** — [baselines/SITE-002-STABLE-PROD-TEXT-CHANGE-01.md](baselines/SITE-002-STABLE-PROD-TEXT-CHANGE-01.md) |
+| **Current Status** | **STABLE PRODUCTION CHECKPOINT — TEXT CHANGE 01** |
 | **Active baseline** | [baselines/SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01.md](baselines/SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01.md) · About: [M9.13-ABOUT-REDESIGN-02](baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02.md) · fonts: [LOCAL-FONTS-01](baselines/SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md) |
 | **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — incl. [§7 Filter Architecture](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#7-filter-architecture), [§8 Live Files](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#8-live-files-with-business-logic), [§14 Commercial Trust Block](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#14-commercial-trust-block), [§16 Catalog State Persistence](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#16-catalog-state-persistence), [§17 About Page History](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#17-about-page-history), [§26 Operator Manual Polish 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#26-operator-manual-polish-01--superseded-visual-baseline-retained), [§27 Local Fonts 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#27-local-fonts-01--active) |
 | **Operator manual JS (04B)** | [reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md](reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md) |
 | **Rollback source** | Beget full backup + current live TEST + file-level pass backups |
-| **Notes** | TEST площадка. **MANUAL UI / CSS / TWIG / JS REFINEMENTS ARE CANONICAL**. **Delivery summary strip** — Commercial Trust service cards on `/delivery` **PASS** (2026-06-29) · [Knowledge Map §32](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#32-delivery-summary--commercial-trust-reuse-active) · checkpoint `SITE-002-STABLE-LIVE-DELIVERY-SUMMARY-01`. **Custom OEM proof strip** — Commercial Trust service cards on `/custom-equipment` **PASS** (2026-06-29) · [Knowledge Map §31](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#31-custom-oem-proof-strip--commercial-trust-reuse-active) · checkpoint `SITE-002-STABLE-LIVE-CUSTOM-PROOF-STRIP-01`. **PDP body category classes** — `category-root-*` / `category-parent-*` on product pages **PASS** (2026-06-29) · [Knowledge Map §30](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#30-pdp-body-category-classes-01--active) · checkpoint `SITE-002-STABLE-LIVE-PDP-BODY-CATEGORY-CLASSES-01`. **Corporate intro blocks** — `.zpm-corp-intro` on 6 corp pages **PASS** (2026-06-29 closeout) · [Knowledge Map §29](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#29-corporate-intro-image-blocks-01--active) · checkpoint `SITE-002-STABLE-LIVE-CORPORATE-INTRO-BLOCKS-01`. **Home CTA** — `zpm-commercial-trust` active (2026-06-29). **M9.13 About redesign RE-ACTIVATED** (2026-06-29). Local Fonts 01 **retained**. |
+| **Notes** | Production first controlled change **COMPLETE**: single-file text-only FTP deploy on `/guarantee`, rollback readiness verified, HTTP/visual verification PASS, current Production checkpoint `SITE-002-STABLE-PROD-TEXT-CHANGE-01`. TEST площадка remains historical evidence. **MANUAL UI / CSS / TWIG / JS REFINEMENTS ARE CANONICAL** for TEST-era context. **Delivery summary strip** — Commercial Trust service cards on `/delivery` **PASS** (2026-06-29) · [Knowledge Map §32](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#32-delivery-summary--commercial-trust-reuse-active) · checkpoint `SITE-002-STABLE-LIVE-DELIVERY-SUMMARY-01`. **Custom OEM proof strip** — Commercial Trust service cards on `/custom-equipment` **PASS** (2026-06-29) · [Knowledge Map §31](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#31-custom-oem-proof-strip--commercial-trust-reuse-active) · checkpoint `SITE-002-STABLE-LIVE-CUSTOM-PROOF-STRIP-01`. **PDP body category classes** — `category-root-*` / `category-parent-*` on product pages **PASS** (2026-06-29) · [Knowledge Map §30](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#30-pdp-body-category-classes-01--active) · checkpoint `SITE-002-STABLE-LIVE-PDP-BODY-CATEGORY-CLASSES-01`. **Corporate intro blocks** — `.zpm-corp-intro` on 6 corp pages **PASS** (2026-06-29 closeout) · [Knowledge Map §29](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#29-corporate-intro-image-blocks-01--active) · checkpoint `SITE-002-STABLE-LIVE-CORPORATE-INTRO-BLOCKS-01`. **Home CTA** — `zpm-commercial-trust` active (2026-06-29). **M9.13 About redesign RE-ACTIVATED** (2026-06-29). Local Fonts 01 **retained**. |
 
 ---
 
@@ -45,13 +46,29 @@
 | **MANUAL UI REFINEMENTS ARE CANONICAL** | Operator manual CSS, Twig, JS, and UX edits on live TEST override older M9.x deploy snapshots |
 | **MANUAL CSS REFINEMENTS ARE CANONICAL** | Operator CSS edits on live TEST override repo work copies |
 | **MANUAL TWIG REFINEMENTS ARE CANONICAL** | Operator Twig edits on live TEST override repo work copies |
-| **Conflict resolution (Production)** | Current operational website authority = https://bzpm.ru/ once Production connection is verified |
+| **Conflict resolution (Production)** | Current operational website authority = https://bzpm.ru/; current checkpoint `SITE-002-STABLE-PROD-TEXT-CHANGE-01` |
 | **Conflict resolution (TEST evidence)** | If documentation contradicts historical TEST state, live TEST on https://zpm.new-site.space/ remains evidence for TEST-era checkpoints |
 | **Do NOT use as visual baseline** | Pass 1.2 CSS/HTML/JS · `SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2` · pre-checkpoint work copies · `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01` · M9.13 About redesign work copies |
 
 ---
 
-## Stable checkpoint (active)
+## Production checkpoint (current)
+
+| Field | Value |
+|-------|--------|
+| Name | `SITE-002-STABLE-PROD-TEXT-CHANGE-01` |
+| Registered | 2026-07-04 |
+| Type | Stable Production checkpoint — first controlled single-file text deploy |
+| Parent | `SITE-002-STABLE-PROD-INITIAL-01` |
+| Operation | `SITE-002-PROD-TEXT-CHANGE-01` |
+| Scope | `/guarantee` text replacement in `guarantee.twig` |
+| Report | [SITE-002-FIRST-CONTROLLED-PRODUCTION-CHANGE.md](reports/SITE-002-FIRST-CONTROLLED-PRODUCTION-CHANGE.md) |
+
+Verified proof boundary: single-file text-only FTP deploy with backup and rollback readiness.
+
+---
+
+## Stable TEST checkpoint (historical evidence)
 
 | Field | Value |
 |-------|--------|

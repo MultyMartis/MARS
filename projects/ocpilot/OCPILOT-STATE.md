@@ -1,8 +1,8 @@
 # OCPilot — Program State
 
 **Status:** living state document — **not** automated router  
-**Last updated:** 2026-07-03
-**Evidence cutoff:** 2026-07-03 (SITE-002 Run **4.172** — Production FTP path model confirmed; baseline `SITE-002-STABLE-PROD-INITIAL-01` retained)
+**Last updated:** 2026-07-04
+**Evidence cutoff:** 2026-07-04 (SITE-002 Run **4.173** — first controlled Production change complete; checkpoint `SITE-002-STABLE-PROD-TEXT-CHANGE-01` issued)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Production path model CONFIRMED** — `SITE-002-STABLE-PROD-INITIAL-01` retained · ready for first controlled Production test · [SITE-002-PRODUCTION-FTP-PATH-RECONCILIATION.md](sites/site-002/reports/SITE-002-PRODUCTION-FTP-PATH-RECONCILIATION.md) |
+| Current SITE-002 focus | **First controlled Production change COMPLETE** — single-file text-only FTP deploy verified · rollback readiness verified · checkpoint `SITE-002-STABLE-PROD-TEXT-CHANGE-01` issued · [SITE-002-FIRST-CONTROLLED-PRODUCTION-CHANGE.md](sites/site-002/reports/SITE-002-FIRST-CONTROLLED-PRODUCTION-CHANGE.md) |
 
 ---
 
@@ -35,11 +35,12 @@
 | HTTP verification | **VERIFIED** (homepage + corp pages) |
 | OpenCart admin read-only | **VERIFIED** — version 3.0.3.9 |
 | Historical TEST | **preserved** — https://zpm.new-site.space/ |
-| First Production baseline | **ISSUED** — [SITE-002-STABLE-PROD-INITIAL-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| First Production test / operation | **READY** — guarantee.twig test task confirmed |
+| First Production baseline | **SUPERSEDED BY CONTROLLED TEXT CHANGE** — parent [SITE-002-STABLE-PROD-INITIAL-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
+| Current Production checkpoint | **ISSUED** — [SITE-002-STABLE-PROD-TEXT-CHANGE-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-TEXT-CHANGE-01.md) |
+| First Production test / operation | **COMPLETE** — single-file text-only FTP deploy verified |
 | Capture storage | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\captures\SITE-002-PROD-INITIAL-CAPTURE-01\` |
 
-Production tooling (deploy / rollback / verification) is **registered**; read-only capture **verified** 2026-07-02/03. File-level baseline issued as `SITE-002-STABLE-PROD-INITIAL-01`.
+Production tooling remains scoped and site-specific. The verified proof is limited to **single-file text-only FTP deploy with backup and rollback readiness**. File-level Production checkpoint is `SITE-002-STABLE-PROD-TEXT-CHANGE-01`.
 
 ### BZPM UX REDESIGN — project banner
 
@@ -585,6 +586,7 @@ W1 write charter applies to Phase 1 waves only; does not resume Run 5 automatica
 | 2026-06-29 | **DONE** — Corporate Intro Image Blocks 01 on TEST; Run **4.165**; checkpoint `SITE-002-STABLE-LIVE-CORPORATE-INTRO-BLOCKS-01`; verdict **PASS** (closeout — operator upload of `delivery-intro.jpg`; all 6 assets HTTP 200); [SITE-002-CORPORATE-INTRO-BLOCKS-01.md](sites/site-002/reports/SITE-002-CORPORATE-INTRO-BLOCKS-01.md); Knowledge Map §29 |
 | 2026-06-30 | **DONE** — Documentation Closeout Scope A; Run **4.169**; Visual Polish Audit **TRACKED**; M9.17 warranty report drift fixed; authority reconciled; [SITE-002-DOCUMENTATION-CLOSEOUT-SCOPE-A.md](sites/site-002/reports/SITE-002-DOCUMENTATION-CLOSEOUT-SCOPE-A.md) |
 | 2026-07-02 | **REGISTERED** — SITE-002 Production Profile; Run **4.170**; Production URL https://bzpm.ru/; profile **REGISTERED — NOT CONNECTED**; historical TEST preserved; [SITE-002-PRODUCTION-PROFILE-REGISTRATION.md](sites/site-002/reports/SITE-002-PRODUCTION-PROFILE-REGISTRATION.md) |
+| 2026-07-04 | **COMPLETE** — SITE-002 First Controlled Production Change; Run **4.173**; single-file text-only FTP deploy verified; rollback readiness verified; checkpoint `SITE-002-STABLE-PROD-TEXT-CHANGE-01`; [SITE-002-FIRST-CONTROLLED-PRODUCTION-CHANGE.md](sites/site-002/reports/SITE-002-FIRST-CONTROLLED-PRODUCTION-CHANGE.md) |
 | 2026-06-22 | **RECONCILED** — Corporate Pages program registry; charters + briefs; [BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md](../website-factory/execution-cases/bzpm-roadmap/BZPM-CORPORATE-PAGES-PROGRAM-RECONCILIATION-v1.md) |
 | 2026-06-21 | **UPDATED** — SITE-002 stable live checkpoint **REGISTERED**; Run **4.145**; baseline `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01`; catalog UX cluster complete; Knowledge Map §16 Catalog State Persistence |
 | 2026-06-21 | **UPDATED** — SITE-002 stable live checkpoint **REGISTERED**; Run **4.144**; baseline `SITE-002-STABLE-LIVE-M9.8.9-COMMERCIAL-TRUST-01`; Commercial Trust + operator manual polish; FTP live capture; Knowledge Map §14 |

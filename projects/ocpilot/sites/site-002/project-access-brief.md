@@ -1,8 +1,8 @@
 # Project Access Brief
 
 **Site ID:** SITE-002  
-**Status:** **PRODUCTION BASELINE ISSUED — READY FOR FIRST CONTROLLED TEST**
-**Run:** 4.172 — SITE-002 Production FTP Path Reconciliation (2026-07-03)
+**Status:** **FIRST CONTROLLED PRODUCTION CHANGE COMPLETE**
+**Run:** 4.173 — SITE-002 First Controlled Production Change (2026-07-04)
 
 **Do not record:** passwords, tokens, credentials, secret URLs, or live `config.php` values.
 
@@ -54,7 +54,7 @@ Production profile: [production-profile.md](production-profile.md)
 | Credential source | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\secrets\secrets.md` |
 | Credential section | `PRODUCTION` |
 | Connection status | **VERIFIED** — HTTP + admin read-only + FTP read-only (Run 4.171-R1) |
-| Write status | **DISABLED UNTIL FIRST PRODUCTION OPERATION IS EXPLICITLY AUTHORIZED** |
+| Write status | **FIRST CONTROLLED OPERATION COMPLETE** — future Production writes require separate explicit authorization |
 | Database | **EXCLUDED BY DEFAULT** |
 
 ---
@@ -106,7 +106,7 @@ This file may only contain references such as:
 
 ## Operation Permissions
 
-**Production writes:** **NOT AUTHORIZED** at registration.
+**Production writes:** first controlled single-file text operation completed in Run 4.173. Future Production writes remain **NOT AUTHORIZED BY DEFAULT** and require a new explicit operation charter.
 
 Checklist — operator sets before any supervised Production access run:
 
@@ -119,7 +119,7 @@ Checklist — operator sets before any supervised Production access run:
 - [ ] Theme edits allowed
 - [ ] Controller/model edits allowed
 
-**Write permissions** require backup confirmed, rollback path confirmed, and operator approval — **not satisfied** for Production at registration.
+**Write permissions** require backup confirmed, rollback path confirmed, and operator approval. Run 4.173 satisfied these conditions for only one file: `/public_html/catalog/view/theme/default/template/information/guarantee.twig`.
 
 ---
 
@@ -199,7 +199,7 @@ Current Phase:
 
 Current State:
 
-**PRODUCTION BASELINE ISSUED** — Run 4.171-R1 file baseline complete; Run 4.172 path model reconciled.
+**FIRST CONTROLLED PRODUCTION CHANGE COMPLETE** — Run 4.173 single-file text-only FTP deploy verified; checkpoint `SITE-002-STABLE-PROD-TEXT-CHANGE-01` issued.
 
 ---
 
@@ -208,7 +208,7 @@ Current State:
 | Environment | Type | OCPilot writes |
 |-------------|------|----------------|
 | site-002-test | Historical TEST | **NO** (unless explicitly re-authorized) |
-| site-002-prod | **PRODUCTION** | **NO** until first Production operation authorized |
+| site-002-prod | **PRODUCTION** | **NO by default** — Run 4.173 one-file operation complete; future writes require explicit authorization |
 
 Required conditions for future Production writes:
 

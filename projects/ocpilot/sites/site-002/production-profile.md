@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-03 (Run 4.172 — Production FTP path reconciliation)
+**Last updated:** 2026-07-04 (Run 4.173 — first controlled Production change)
 
 ---
 
@@ -11,9 +11,9 @@
 
 | Field | Value |
 |-------|-------|
-| Profile status | **REGISTERED — CONNECTED (READ-ONLY VERIFIED)** |
-| Remote access status | **HTTP/ADMIN/FTP VERIFIED (read-only)** |
-| Production operations | **READY FOR FIRST CONTROLLED TEST** (write still requires explicit authorization) |
+| Profile status | **REGISTERED — CONNECTED** |
+| Remote access status | **HTTP/ADMIN/FTP VERIFIED; FTP WRITE VERIFIED FOR ONE FILE** |
+| Production operations | **FIRST CONTROLLED PRODUCTION CHANGE COMPLETE** |
 
 ---
 
@@ -68,7 +68,8 @@ Do not claim that Production exactly matches TEST unless evidence proves it.
 | Technical knowledge map | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) |
 | Current M9.x baselines | [baselines/](baselines/) — TEST-proven checkpoints |
 | Post-corporate-page checkpoints | Home Commercial Trust · Corporate Intro · Custom Proof Strip · Delivery Summary · PDP Body Category Classes |
-| Production baseline placeholder | [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
+| Production baseline parent | [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
+| Current Production checkpoint | [baselines/SITE-002-STABLE-PROD-TEXT-CHANGE-01.md](baselines/SITE-002-STABLE-PROD-TEXT-CHANGE-01.md) |
 
 ---
 
@@ -184,6 +185,30 @@ Future Production write sequence (human-supervised):
 
 ---
 
+## First controlled Production change (Run 4.173)
+
+| Field | Value |
+|-------|-------|
+| Operation | `SITE-002-PROD-TEXT-CHANGE-01` |
+| Status | **COMPLETE** |
+| Deploy method | single-file FTP |
+| Remote target | `/public_html/catalog/view/theme/default/template/information/guarantee.twig` |
+| Change | `понятный порядок действий` → `чёткий порядок действий` |
+| Rollback readiness | **VERIFIED** |
+| Post-deploy verification | **PASS** — remote hash, HTTP 200, desktop/mobile screenshots |
+| Current Production checkpoint | `SITE-002-STABLE-PROD-TEXT-CHANGE-01` |
+| Report | [reports/SITE-002-FIRST-CONTROLLED-PRODUCTION-CHANGE.md](reports/SITE-002-FIRST-CONTROLLED-PRODUCTION-CHANGE.md) |
+
+Verified proof boundary:
+
+```text
+single-file text-only FTP deploy with backup and rollback readiness
+```
+
+This does not prove generic deploy tooling for other file classes, cache clearing, OpenCart admin changes, database changes, or bulk operations.
+
+---
+
 ## Approval gates
 
 Every Production **write** requires:
@@ -259,11 +284,12 @@ Deploy-tool preparation is a **separate task**.
 | Admin read-only connection | **VERIFIED** (Run 4.171) |
 | FTP/SFTP connection | **VERIFIED** (Run 4.171-R1) |
 | Remote listing | **VERIFIED** — application root `/bzpm.ru/`; FTP chroot `/` → `public_html/` + `storage/` |
-| Production baseline | **ISSUED** — `SITE-002-STABLE-PROD-INITIAL-01` (2026-07-02) |
-| Deploy profile | **REGISTERED, NOT VERIFIED** |
-| Rollback profile | **REGISTERED, NOT VERIFIED** |
-| Verification profile | **REGISTERED, NOT VERIFIED** |
-| First Production change | **NOT YET AUTHORIZED** |
+| Production baseline | **SUPERSEDED BY TEXT CHANGE CHECKPOINT** — parent `SITE-002-STABLE-PROD-INITIAL-01` |
+| Current Production checkpoint | **ISSUED** — `SITE-002-STABLE-PROD-TEXT-CHANGE-01` (2026-07-04) |
+| Deploy profile | **VERIFIED FOR SINGLE-FILE TEXT-ONLY FTP DEPLOY** |
+| Rollback profile | **READINESS VERIFIED FOR SINGLE-FILE RESTORE** |
+| Verification profile | **VERIFIED** — file hash + HTTP + desktop/mobile screenshots |
+| First Production change | **COMPLETE** — `SITE-002-PROD-TEXT-CHANGE-01` |
 
 ---
 

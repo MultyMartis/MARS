@@ -10,8 +10,10 @@
 | **Historical TEST** | https://zpm.new-site.space/ |
 | **Production profile** | [../production-profile.md](../production-profile.md) |
 | **Production storage root** | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\` |
-| **Production baseline** | **ISSUED** — `SITE-002-STABLE-PROD-INITIAL-01` · [../baselines/SITE-002-STABLE-PROD-INITIAL-01.md](../baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
+| **Production baseline** | Parent baseline `SITE-002-STABLE-PROD-INITIAL-01` · [../baselines/SITE-002-STABLE-PROD-INITIAL-01.md](../baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
+| **Current Production checkpoint** | **ISSUED** — `SITE-002-STABLE-PROD-TEXT-CHANGE-01` · [../baselines/SITE-002-STABLE-PROD-TEXT-CHANGE-01.md](../baselines/SITE-002-STABLE-PROD-TEXT-CHANGE-01.md) |
 | **Production parity with TEST checkpoints** | **VERIFIED** — file + HTTP evidence (Run 4.171-R1) |
+| **First controlled Production change** | **COMPLETE** — Run 4.173; single-file text-only FTP deploy with backup and rollback readiness |
 
 **TEST-derived knowledge classification:** Implementation evidence and reusable technical knowledge. **Not** automatic proof of current Production parity.
 
@@ -41,6 +43,27 @@
 | OpenCart storage root | `/bzpm.ru/storage/` | `/storage/` |
 
 Secrets `Remote root` = application root. Deploy paths for theme files are under `public_html/` (FTP) or `/bzpm.ru/public_html/` (hosting).
+
+### First controlled Production change (Run 4.173 — 2026-07-04)
+
+| Field | Value |
+|-------|-------|
+| Operation | `SITE-002-PROD-TEXT-CHANGE-01` |
+| Status | **COMPLETE** |
+| Page | https://bzpm.ru/guarantee |
+| Remote file | `/public_html/catalog/view/theme/default/template/information/guarantee.twig` |
+| Change | `понятный порядок действий` → `чёткий порядок действий` |
+| Verification | PASS — remote SHA, HTTP 200, desktop/mobile screenshots |
+| Checkpoint | `SITE-002-STABLE-PROD-TEXT-CHANGE-01` |
+| Report | [../reports/SITE-002-FIRST-CONTROLLED-PRODUCTION-CHANGE.md](../reports/SITE-002-FIRST-CONTROLLED-PRODUCTION-CHANGE.md) |
+
+Proven operational boundary:
+
+```text
+single-file text-only FTP deploy with backup and rollback readiness
+```
+
+Do not generalize this proof to CSS/JS/controller deploys, database operations, admin saves, cache clearing, or bulk file operations.
 
 ---
 
@@ -1583,4 +1606,4 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 
 ---
 
-*Documentation only — live TEST evidence in deploy manifest. Last updated: 2026-06-29 (§32 Delivery Summary 01).*
+*Documentation only — Production evidence in Run 4.173 operation manifests. Last updated: 2026-07-04 (SITE-002 First Controlled Production Change).*

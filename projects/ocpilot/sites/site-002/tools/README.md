@@ -12,6 +12,7 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `site-002-prod-admin-readonly.py` | OpenCart admin read-only dashboard inspection |
 | `site-002-prod-ftp-retry.py` | FTP retry — inventory + baseline download only (Run 4.171-R1) |
 | `site-002-prod-ftp-path-verify.py` | FTP path model verification — read-only listing (Run 4.172) |
+| `site-002-prod-text-change-01.py` | Exact single-file Production text deploy for `SITE-002-PROD-TEXT-CHANGE-01` |
 
 ## Dependencies
 
@@ -30,6 +31,8 @@ No credentials are embedded in scripts or logs.
 
 ## Safety
 
-- No upload/delete/rename commands
+- Read-only scripts have no upload/delete/rename commands
 - Does not download `config.php`, `admin/config.php`, `.env`
 - Sanitizes admin session tokens in stored observations
+
+`site-002-prod-text-change-01.py` is the only write-capable helper in this folder. It is operation-specific, supports only `/public_html/catalog/view/theme/default/template/information/guarantee.twig`, has mandatory dry-run and rollback manifests, and has no delete or rename functions.
