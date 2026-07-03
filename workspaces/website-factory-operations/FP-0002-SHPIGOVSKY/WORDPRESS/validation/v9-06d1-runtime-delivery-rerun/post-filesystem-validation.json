@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-07-03T20:24:02.561631Z",
+  "surfaces": {
+    "theme": {
+      "source_files": 73,
+      "target_files": 73,
+      "missing": [],
+      "unexpected": [],
+      "hash_mismatches": [],
+      "source_aggregate_hash": "a42f5603b260a32bf5511a6ec33d100405f1f531f3a796b78eeeabdba86fd6a1",
+      "target_aggregate_hash": "a42f5603b260a32bf5511a6ec33d100405f1f531f3a796b78eeeabdba86fd6a1",
+      "hash_match": true,
+      "result": "PASS"
+    },
+    "plugin": {
+      "source_files": 20,
+      "target_files": 20,
+      "missing": [],
+      "unexpected": [],
+      "hash_mismatches": [],
+      "source_aggregate_hash": "500b11f810d7bd5de93efbd15f5964b7f38e3b1bd25486df3dd8d678bb2b8798",
+      "target_aggregate_hash": "500b11f810d7bd5de93efbd15f5964b7f38e3b1bd25486df3dd8d678bb2b8798",
+      "hash_match": true,
+      "result": "PASS"
+    },
+    "acf-json": {
+      "source_files": 13,
+      "target_files": 13,
+      "missing": [],
+      "unexpected": [],
+      "hash_mismatches": [],
+      "source_aggregate_hash": "237de70604f973e0e6eafb08c74ceabc2429bf45b603e49e862b76f79d3baa22",
+      "target_aggregate_hash": "237de70604f973e0e6eafb08c74ceabc2429bf45b603e49e862b76f79d3baa22",
+      "hash_match": true,
+      "result": "PASS"
+    }
+  },
+  "failures": [],
+  "result": "PASS"
+}

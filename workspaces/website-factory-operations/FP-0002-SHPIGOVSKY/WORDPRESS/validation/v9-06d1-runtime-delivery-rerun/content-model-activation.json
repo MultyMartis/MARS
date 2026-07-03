@@ -1,0 +1,140 @@
+{
+  "generated_at": "2026-07-03T20:24:12.917537Z",
+  "source_activation": {
+    "mode": "content_model",
+    "skeleton": false,
+    "version": "0.3.1-v9-06c1-source",
+    "enabled_modules": [
+      "admin.editor-restrictions",
+      "admin.options-page",
+      "content-types.service",
+      "fields.acf",
+      "fields.field-groups",
+      "fields.repeater-validation",
+      "permalinks.service",
+      "settings.site"
+    ],
+    "deferred": {
+      "migrations.runner": {
+        "module": "Migrations",
+        "class": "Shpigovsky\\Core\\Migrations\\MigrationRunner",
+        "status": "DISABLED_UNTIL_V9_06D2_OR_LATER",
+        "runtime_delivered": false
+      },
+      "forms.consultation": {
+        "module": "Forms",
+        "class": "Shpigovsky\\Core\\Forms\\ConsultationHandler",
+        "status": "DISABLED_UNTIL_LATER_PHASE",
+        "runtime_delivered": false
+      },
+      "taxonomies": {
+        "module": "Taxonomies",
+        "status": "REJECTED",
+        "runtime_delivered": false
+      }
+    }
+  },
+  "service": {
+    "public": true,
+    "hierarchical": true,
+    "has_archive": false,
+    "show_in_rest": true,
+    "supports": {
+      "title": true,
+      "editor": true,
+      "excerpt": true,
+      "thumbnail": true,
+      "page-attributes": true,
+      "revisions": true,
+      "autosave": true
+    },
+    "taxonomies": []
+  },
+  "service_objects": 0,
+  "acf": {
+    "acf_function_exists": true,
+    "local_field_group_count": 13,
+    "local_field_groups": [
+      {
+        "key": "group_fp02_blog_post_article_meta",
+        "title": "Blog Post — Article Meta"
+      },
+      {
+        "key": "group_fp02_page_contacts",
+        "title": "Page — Contacts"
+      },
+      {
+        "key": "group_fp02_page_home",
+        "title": "Page — Home"
+      },
+      {
+        "key": "group_fp02_page_institutional",
+        "title": "Page — Institutional"
+      },
+      {
+        "key": "group_fp02_page_legal",
+        "title": "Page — Legal"
+      },
+      {
+        "key": "group_fp02_page_reviews",
+        "title": "Page — Reviews"
+      },
+      {
+        "key": "group_fp02_page_services_hub",
+        "title": "Page — Services Hub"
+      },
+      {
+        "key": "group_fp02_service_faq",
+        "title": "Service — FAQ"
+      },
+      {
+        "key": "group_fp02_service_layout_hero",
+        "title": "Service — Layout and Hero"
+      },
+      {
+        "key": "group_fp02_service_relationships",
+        "title": "Service — Relationships / Related Services"
+      },
+      {
+        "key": "group_fp02_service_structured_sections",
+        "title": "Service — Structured Sections"
+      },
+      {
+        "key": "group_fp02_site_options_contacts",
+        "title": "Site Options — Contacts and Organisation"
+      },
+      {
+        "key": "group_fp02_site_options_modal_cta",
+        "title": "Site Options — Modal and Global CTA"
+      }
+    ],
+    "options_pages": {
+      "fp02-site-settings": {
+        "page_title": "Настройки сайта",
+        "menu_title": "Настройки сайта",
+        "menu_slug": "fp02-site-settings",
+        "capability": "manage_options",
+        "parent_slug": "",
+        "position": 59,
+        "icon_url": "dashicons-admin-generic",
+        "redirect": false,
+        "post_id": "options",
+        "autoload": false,
+        "update_button": "Обновить",
+        "updated_message": "Настройки сайта обновлены."
+      }
+    }
+  },
+  "hooks": {
+    "post_type_link_filter": 10,
+    "acf_init_field_groups": 20,
+    "acf_init_options_page": 10,
+    "admin_editor_restrictions_load": true,
+    "repeater_validation_load": true
+  },
+  "rewrite_flush_performed": false,
+  "rewrite_flush_required_later": false,
+  "redirects_implemented": false,
+  "failures": [],
+  "result": "PASS"
+}

@@ -1,0 +1,463 @@
+{
+  "generated_at": "2026-07-03T20:24:10.229680Z",
+  "frontend": {
+    "url": "http://shpigovsky.test/",
+    "status": 200
+  },
+  "wp_admin": {
+    "url": "http://shpigovsky.test/wp-admin/",
+    "status": 200
+  },
+  "wordpress_state": {
+    "label": "post-delivery",
+    "generated_at": "2026-07-03T20:24:10+00:00",
+    "siteurl": "http://shpigovsky.test",
+    "home": "http://shpigovsky.test",
+    "db_name": "mars_wp_fp0002",
+    "db_prefix": "fp02_",
+    "active_theme": "shpigovsky",
+    "active_plugins": [
+      "acf-extended-pro/acf-extended.php",
+      "advanced-custom-fields-pro/acf.php",
+      "metacode-wpilot/metacode-wpilot.php",
+      "shpigovsky-core/shpigovsky-core.php"
+    ],
+    "plugin_versions": {
+      "advanced-custom-fields-pro/acf.php": "6.8.5",
+      "acf-extended-pro/acf-extended.php": "0.9.2.3",
+      "advanced-custom-fields/acf.php": "6.8.4",
+      "shpigovsky-core/shpigovsky-core.php": "0.3.1-v9-06c1-source",
+      "metacode-wpilot/metacode-wpilot.php": "0.3.0"
+    },
+    "acf_pro_active": true,
+    "acf_extended_active": true,
+    "acf_free_active": false,
+    "shpigovsky_core_active": true,
+    "wpilot_active": true,
+    "pages": 23,
+    "posts": 1,
+    "service_exists": true,
+    "services": 0,
+    "menus": 3,
+    "show_on_front": "page",
+    "page_on_front": "4",
+    "page_for_posts": "19",
+    "permalink_structure": "/%postname%/",
+    "users": 2,
+    "constants": {
+      "SHPIGOVSKY_CORE_MODE": "content_model",
+      "SHPIGOVSKY_CORE_SKELETON": false,
+      "SHPIGOVSKY_CORE_VERSION": "0.3.1-v9-06c1-source"
+    },
+    "service_post_type": {
+      "public": true,
+      "hierarchical": true,
+      "has_archive": false,
+      "show_in_rest": true,
+      "supports": {
+        "title": true,
+        "editor": true,
+        "excerpt": true,
+        "thumbnail": true,
+        "page-attributes": true,
+        "revisions": true,
+        "autosave": true
+      },
+      "taxonomies": []
+    },
+    "hooks": {
+      "post_type_link_filter": 10,
+      "acf_init_field_groups": 20,
+      "acf_init_options_page": 10,
+      "admin_editor_restrictions_load": true,
+      "repeater_validation_load": true
+    },
+    "module_registry": {
+      "content-types.service": {
+        "module": "ContentTypes",
+        "class": "Shpigovsky\\Core\\ContentTypes\\Service",
+        "status": "ENABLED_IN_CONTENT_MODEL",
+        "runtime_delivered": false
+      },
+      "permalinks.service": {
+        "module": "Permalinks",
+        "class": "Shpigovsky\\Core\\Permalinks\\ServicePermalinks",
+        "status": "ENABLED_IN_CONTENT_MODEL",
+        "runtime_delivered": false
+      },
+      "fields.acf": {
+        "module": "Fields",
+        "class": "Shpigovsky\\Core\\Fields\\AcfIntegration",
+        "status": "ENABLED_IN_CONTENT_MODEL",
+        "runtime_delivered": false
+      },
+      "fields.field-groups": {
+        "module": "Fields",
+        "class": "Shpigovsky\\Core\\Fields\\FieldGroups",
+        "status": "ENABLED_IN_CONTENT_MODEL",
+        "runtime_delivered": false
+      },
+      "fields.repeater-validation": {
+        "module": "Validation",
+        "class": "Shpigovsky\\Core\\Fields\\RepeaterValidation",
+        "status": "ENABLED_IN_CONTENT_MODEL",
+        "runtime_delivered": false
+      },
+      "settings.site": {
+        "module": "Settings",
+        "class": "Shpigovsky\\Core\\Settings\\SiteSettings",
+        "status": "ENABLED_IN_CONTENT_MODEL",
+        "runtime_delivered": false
+      },
+      "admin.options-page": {
+        "module": "Admin",
+        "class": "Shpigovsky\\Core\\Admin\\OptionsPage",
+        "status": "ENABLED_IN_CONTENT_MODEL",
+        "runtime_delivered": false
+      },
+      "admin.editor-restrictions": {
+        "module": "Admin",
+        "class": "Shpigovsky\\Core\\Admin\\EditorRestrictions",
+        "status": "ENABLED_IN_CONTENT_MODEL",
+        "runtime_delivered": false
+      },
+      "migrations.runner": {
+        "module": "Migrations",
+        "class": "Shpigovsky\\Core\\Migrations\\MigrationRunner",
+        "status": "DISABLED_UNTIL_V9_06D2_OR_LATER",
+        "runtime_delivered": false
+      },
+      "forms.consultation": {
+        "module": "Forms",
+        "class": "Shpigovsky\\Core\\Forms\\ConsultationHandler",
+        "status": "DISABLED_UNTIL_LATER_PHASE",
+        "runtime_delivered": false
+      },
+      "taxonomies": {
+        "module": "Taxonomies",
+        "status": "REJECTED",
+        "runtime_delivered": false
+      }
+    },
+    "acf": {
+      "acf_function_exists": true,
+      "local_field_group_count": 13,
+      "local_field_groups": [
+        {
+          "key": "group_fp02_blog_post_article_meta",
+          "title": "Blog Post — Article Meta"
+        },
+        {
+          "key": "group_fp02_page_contacts",
+          "title": "Page — Contacts"
+        },
+        {
+          "key": "group_fp02_page_home",
+          "title": "Page — Home"
+        },
+        {
+          "key": "group_fp02_page_institutional",
+          "title": "Page — Institutional"
+        },
+        {
+          "key": "group_fp02_page_legal",
+          "title": "Page — Legal"
+        },
+        {
+          "key": "group_fp02_page_reviews",
+          "title": "Page — Reviews"
+        },
+        {
+          "key": "group_fp02_page_services_hub",
+          "title": "Page — Services Hub"
+        },
+        {
+          "key": "group_fp02_service_faq",
+          "title": "Service — FAQ"
+        },
+        {
+          "key": "group_fp02_service_layout_hero",
+          "title": "Service — Layout and Hero"
+        },
+        {
+          "key": "group_fp02_service_relationships",
+          "title": "Service — Relationships / Related Services"
+        },
+        {
+          "key": "group_fp02_service_structured_sections",
+          "title": "Service — Structured Sections"
+        },
+        {
+          "key": "group_fp02_site_options_contacts",
+          "title": "Site Options — Contacts and Organisation"
+        },
+        {
+          "key": "group_fp02_site_options_modal_cta",
+          "title": "Site Options — Modal and Global CTA"
+        }
+      ],
+      "options_pages": {
+        "fp02-site-settings": {
+          "page_title": "Настройки сайта",
+          "menu_title": "Настройки сайта",
+          "menu_slug": "fp02-site-settings",
+          "capability": "manage_options",
+          "parent_slug": "",
+          "position": 59,
+          "icon_url": "dashicons-admin-generic",
+          "redirect": false,
+          "post_id": "options",
+          "autoload": false,
+          "update_button": "Обновить",
+          "updated_message": "Настройки сайта обновлены."
+        }
+      }
+    },
+    "wpilot": {
+      "available": true,
+      "write_enabled": false,
+      "site_info": {
+        "site_url": "http://shpigovsky.test",
+        "home_url": "http://shpigovsky.test",
+        "wp_version": "7.0",
+        "php_version": "8.3.30",
+        "active_theme": "Shpigovsky",
+        "is_multisite": false,
+        "bridge_enabled": true,
+        "write_enabled": false
+      },
+      "plugins": {
+        "plugins": [
+          {
+            "name": "Advanced Custom Fields: Extended PRO",
+            "version": "0.9.2.3",
+            "plugin_file": "acf-extended-pro/acf-extended.php"
+          },
+          {
+            "name": "Advanced Custom Fields PRO",
+            "version": "6.8.5",
+            "plugin_file": "advanced-custom-fields-pro/acf.php"
+          },
+          {
+            "name": "MetaCODE WPilot",
+            "version": "0.3.0",
+            "plugin_file": "metacode-wpilot/metacode-wpilot.php"
+          },
+          {
+            "name": "Shpigovsky Core",
+            "version": "0.3.1-v9-06c1-source",
+            "plugin_file": "shpigovsky-core/shpigovsky-core.php"
+          }
+        ]
+      },
+      "themes": {
+        "active_theme": {
+          "name": "Shpigovsky",
+          "version": "0.2.0-skeleton",
+          "template": "shpigovsky",
+          "stylesheet": "shpigovsky"
+        }
+      },
+      "pages": {
+        "items": [
+          {
+            "id": 3,
+            "title": "Политика конфиденциальности",
+            "status": "draft",
+            "modified": "2026-07-02T15:53:38+00:00",
+            "link": "http://shpigovsky.test/?page_id=3",
+            "has_wpbakery": false
+          },
+          {
+            "id": 4,
+            "title": "Главная",
+            "status": "publish",
+            "modified": "2026-07-02T15:53:38+00:00",
+            "link": "http://shpigovsky.test/",
+            "has_wpbakery": false
+          },
+          {
+            "id": 5,
+            "title": "Услуги",
+            "status": "publish",
+            "modified": "2026-07-02T15:53:38+00:00",
+            "link": "http://shpigovsky.test/uslugi/",
+            "has_wpbakery": false
+          },
+          {
+            "id": 6,
+            "title": "Зависимости",
+            "status": "publish",
+            "modified": "2026-07-02T15:53:38+00:00",
+            "link": "http://shpigovsky.test/uslugi/zavisimosti/",
+            "has_wpbakery": false
+          },
+          {
+            "id": 7,
+            "title": "Психическое здоровье",
+            "status": "publish",
+            "modified": "2026-07-02T15:53:38+00:00",
+            "link": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/",
+            "has_wpbakery": false
+          },
+          {
+            "id": 8,
+            "title": "Расстройства пищевого поведения",
+            "status": "publish",
+            "modified": "2026-07-02T15:53:38+00:00",
+            "link": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/",
+            "has_wpbakery": false
+          },
+          {
+            "id": 9,
+            "title": "Генотипирование",
+            "status": "publish",
+            "modified": "2026-07-02T15:53:38+00:00",
+            "link": "http://shpigovsky.test/uslugi/genotipirovanie/",
+            "has_wpbakery": false
+          },
+          {
+            "id": 10,
+            "title": "Специалисты",
+            "status": "publish",
+            "modified": "2026-07-02T15:53:38+00:00",
+            "link": "http://shpigovsky.test/specyalisty/",
+            "has_wpbakery": false
+          },
+          {
+            "id": 11,
+            "title": "О центре",
+            "status": "publish",
+            "modified": "2026-07-02T15:53:38+00:00",
+            "link": "http://shpigovsky.test/o-centre/",
+            "has_wpbakery": false
+          },
+          {
+            "id": 12,
+            "title": "О нас",
+            "status": "publish",
+            "modified": "2026-07-02T15:53:38+00:00",
+            "link": "http://shpigovsky.test/o-centre/o-nas/",
+            "has_wpbakery": false
+          },
+          {
+            "id": 13,
+            "title": "Программа лечения",
+            "status": "publish",
+            "modified": "2026-07-02T15:53:38+00:00",
+            "link": "http://shpigovsky.test/o-centre/programma-lecheniya/",
+            "has_wpbakery": false
+          },
+          {
+            "id": 14,
+            "title": "Галерея о доме",
+            "status": "publish",
+            "modified": "2026-07-02T15:53:38+00:00",
+            "link": "http://shpigovsky.test/o-centre/galereya-o-dome/",
+            "has_wpbakery": false
+          },
+          {
+            "id": 15,
+            "title": "Специалистам",
+            "status": "publish",
+            "modified": "2026-07-02T15:53:38+00:00",
+            "link": "http://shpigovsky.test/o-centre/specialistam/",
+            "has_wpbakery": false
+          },
+          {
+            "id": 16,
+            "title": "Родственникам",
+            "status": "publish",
+            "modified": "2026-07-02T15:53:38+00:00",
+            "link": "http://shpigovsky.test/o-centre/rodstvennikam/",
+            "has_wpbakery": false
+          },
+          {
+            "id": 17,
+            "title": "Интервью и СМИ",
+            "status": "publish",
+            "modified": "2026-07-02T15:53:38+00:00",
+            "link": "http://shpigovsky.test/o-centre/intervyu-i-smi/",
+            "has_wpbakery": false
+          },
+          {
+            "id": 18,
+            "title": "Отзывы",
+            "status": "publish",
+            "modified": "2026-07-02T15:53:38+00:00",
+            "link": "http://shpigovsky.test/otzyvy/",
+            "has_wpbakery": false
+          },
+          {
+            "id": 19,
+            "title": "Статьи",
+            "status": "publish",
+            "modified": "2026-07-02T15:53:38+00:00",
+            "link": "http://shpigovsky.test/blog/",
+            "has_wpbakery": false
+          },
+          {
+            "id": 20,
+            "title": "Контакты",
+            "status": "publish",
+            "modified": "2026-07-02T15:53:38+00:00",
+            "link": "http://shpigovsky.test/kontakty/",
+            "has_wpbakery": false
+          },
+          {
+            "id": 21,
+            "title": "Правовая информация",
+            "status": "publish",
+            "modified": "2026-07-02T15:53:38+00:00",
+            "link": "http://shpigovsky.test/pravovaya-informaciya-pilzovatelyu/",
+            "has_wpbakery": false
+          },
+          {
+            "id": 22,
+            "title": "Пользовательское соглашение",
+            "status": "publish",
+            "modified": "2026-07-02T15:53:38+00:00",
+            "link": "http://shpigovsky.test/user-agreement/",
+            "has_wpbakery": false
+          },
+          {
+            "id": 23,
+            "title": "Согласие на обработку персональных данных",
+            "status": "publish",
+            "modified": "2026-07-02T15:53:38+00:00",
+            "link": "http://shpigovsky.test/consent-personal-data/",
+            "has_wpbakery": false
+          },
+          {
+            "id": 24,
+            "title": "Политика Cookie-файлов",
+            "status": "publish",
+            "modified": "2026-07-02T15:53:38+00:00",
+            "link": "http://shpigovsky.test/cookie-files-policy/",
+            "has_wpbakery": false
+          },
+          {
+            "id": 25,
+            "title": "Политика конфиденциальности (системная)",
+            "status": "publish",
+            "modified": "2026-07-02T15:53:38+00:00",
+            "link": "http://shpigovsky.test/privacy-policy-page/",
+            "has_wpbakery": false
+          }
+        ],
+        "limit": 50
+      },
+      "indexing_state": {
+        "blog_public": "0",
+        "robots_txt_available": true,
+        "discourage_search_engines": true,
+        "notes": [
+          "robots_txt_available is a local WordPress routing signal, not an external crawl."
+        ]
+      }
+    }
+  },
+  "php_fatal": "NOT_DETECTED_BY_HTTP_SMOKE",
+  "result": "PASS",
+  "failures": []
+}

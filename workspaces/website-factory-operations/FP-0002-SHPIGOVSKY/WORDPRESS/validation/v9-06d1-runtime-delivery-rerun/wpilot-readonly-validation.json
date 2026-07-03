@@ -1,0 +1,271 @@
+{
+  "generated_at": "2026-07-03T20:24:12.918903Z",
+  "http_endpoints": {
+    "site-info": {
+      "url": "http://shpigovsky.test/wp-json/wpilot/v1/site-info",
+      "status": 401
+    },
+    "plugins": {
+      "url": "http://shpigovsky.test/wp-json/wpilot/v1/plugins",
+      "status": 401
+    },
+    "themes": {
+      "url": "http://shpigovsky.test/wp-json/wpilot/v1/themes",
+      "status": 401
+    },
+    "pages": {
+      "url": "http://shpigovsky.test/wp-json/wpilot/v1/pages",
+      "status": 401
+    },
+    "indexing-state": {
+      "url": "http://shpigovsky.test/wp-json/wpilot/v1/indexing-state",
+      "status": 401
+    }
+  },
+  "direct_reader": {
+    "available": true,
+    "write_enabled": false,
+    "site_info": {
+      "site_url": "http://shpigovsky.test",
+      "home_url": "http://shpigovsky.test",
+      "wp_version": "7.0",
+      "php_version": "8.3.30",
+      "active_theme": "Shpigovsky",
+      "is_multisite": false,
+      "bridge_enabled": true,
+      "write_enabled": false
+    },
+    "plugins": {
+      "plugins": [
+        {
+          "name": "Advanced Custom Fields: Extended PRO",
+          "version": "0.9.2.3",
+          "plugin_file": "acf-extended-pro/acf-extended.php"
+        },
+        {
+          "name": "Advanced Custom Fields PRO",
+          "version": "6.8.5",
+          "plugin_file": "advanced-custom-fields-pro/acf.php"
+        },
+        {
+          "name": "MetaCODE WPilot",
+          "version": "0.3.0",
+          "plugin_file": "metacode-wpilot/metacode-wpilot.php"
+        },
+        {
+          "name": "Shpigovsky Core",
+          "version": "0.3.1-v9-06c1-source",
+          "plugin_file": "shpigovsky-core/shpigovsky-core.php"
+        }
+      ]
+    },
+    "themes": {
+      "active_theme": {
+        "name": "Shpigovsky",
+        "version": "0.2.0-skeleton",
+        "template": "shpigovsky",
+        "stylesheet": "shpigovsky"
+      }
+    },
+    "pages": {
+      "items": [
+        {
+          "id": 3,
+          "title": "Политика конфиденциальности",
+          "status": "draft",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/?page_id=3",
+          "has_wpbakery": false
+        },
+        {
+          "id": 4,
+          "title": "Главная",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 5,
+          "title": "Услуги",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/uslugi/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 6,
+          "title": "Зависимости",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/uslugi/zavisimosti/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 7,
+          "title": "Психическое здоровье",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 8,
+          "title": "Расстройства пищевого поведения",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 9,
+          "title": "Генотипирование",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/uslugi/genotipirovanie/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 10,
+          "title": "Специалисты",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/specyalisty/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 11,
+          "title": "О центре",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/o-centre/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 12,
+          "title": "О нас",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/o-centre/o-nas/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 13,
+          "title": "Программа лечения",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/o-centre/programma-lecheniya/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 14,
+          "title": "Галерея о доме",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/o-centre/galereya-o-dome/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 15,
+          "title": "Специалистам",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/o-centre/specialistam/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 16,
+          "title": "Родственникам",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/o-centre/rodstvennikam/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 17,
+          "title": "Интервью и СМИ",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/o-centre/intervyu-i-smi/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 18,
+          "title": "Отзывы",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/otzyvy/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 19,
+          "title": "Статьи",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/blog/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 20,
+          "title": "Контакты",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/kontakty/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 21,
+          "title": "Правовая информация",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/pravovaya-informaciya-pilzovatelyu/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 22,
+          "title": "Пользовательское соглашение",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/user-agreement/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 23,
+          "title": "Согласие на обработку персональных данных",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/consent-personal-data/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 24,
+          "title": "Политика Cookie-файлов",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/cookie-files-policy/",
+          "has_wpbakery": false
+        },
+        {
+          "id": 25,
+          "title": "Политика конфиденциальности (системная)",
+          "status": "publish",
+          "modified": "2026-07-02T15:53:38+00:00",
+          "link": "http://shpigovsky.test/privacy-policy-page/",
+          "has_wpbakery": false
+        }
+      ],
+      "limit": 50
+    },
+    "indexing_state": {
+      "blog_public": "0",
+      "robots_txt_available": true,
+      "discourage_search_engines": true,
+      "notes": [
+        "robots_txt_available is a local WordPress routing signal, not an external crawl."
+      ]
+    }
+  },
+  "write_operations": 0,
+  "result": "PASS",
+  "notes": "HTTP endpoints returned auth-gated statuses where applicable; direct WPilot reader was used read-only inside WordPress runtime."
+}

@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-07-03T20:23:55.826014Z",
+  "checkpoint_root": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d1-rerun-runtime-delivery-pre-20260704-032355",
+  "theme_snapshot": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d1-rerun-runtime-delivery-pre-20260704-032355\\theme",
+  "plugin_snapshot": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d1-rerun-runtime-delivery-pre-20260704-032355\\plugin",
+  "acf_json_snapshot": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d1-rerun-runtime-delivery-pre-20260704-032355\\acf-json",
+  "db_dump": null,
+  "db_dump_reason": "No DB dump created: task performs only bounded filesystem delivery and read-only WordPress probes; no intentional DB writes or rewrite flush.",
+  "manifests": [
+    "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d1-rerun-runtime-delivery-pre-20260704-032355\\manifests\\acf-json-pre-manifest.json",
+    "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d1-rerun-runtime-delivery-pre-20260704-032355\\manifests\\plugin-pre-manifest.json",
+    "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d1-rerun-runtime-delivery-pre-20260704-032355\\manifests\\theme-pre-manifest.json"
+  ],
+  "rollback_instructions": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d1-rerun-runtime-delivery-pre-20260704-032355\\rollback\\ROLLBACK-INSTRUCTIONS.txt",
+  "secrets_copied": 0,
+  "result": "PASS"
+}

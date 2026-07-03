@@ -1,7 +1,7 @@
 # FP-0002 V9 Operational Status
 
-**Updated:** 2026-07-04 (V9-06C.1 source activation gate resolution PASS)
-**Status:** `FP0002_V9_06C1_SOURCE_ACTIVATION_GATE_RESOLUTION_PASS`
+**Updated:** 2026-07-04 (V9-06D.1 rerun runtime delivery PASS)
+**Status:** `FP0002_V9_06D1_RERUN_RUNTIME_DELIVERY_PASS`
 
 ## Authority model
 
@@ -118,7 +118,7 @@ Phase **07C-B** Storage package — `SUPERSEDED_FAILED_STATIC_PACKAGING_NOT_FOR_
 
 ## Next phase
 
-**V9-06D.1 — runtime delivery and content model activation gate rerun** — **READY FOR SEPARATE OPERATOR AUTHORIZATION** after V9-06C.1 source fix; runtime delivery remains **NOT AUTHORIZED IN V9-06C.1**
+**V9-06D.2 — WordPress object skeleton** — **READY FOR OPERATOR REVIEW / NOT AUTHORIZED**. V9-06D.1 rerun runtime code/model delivery is complete; no Pages, Services, Posts, menus, options, redirects, rewrite flush, or V9 integration were created/changed.
 
 ---
 
@@ -195,5 +195,21 @@ Phase **07C-B** Storage package — `SUPERSEDED_FAILED_STATIC_PACKAGING_NOT_FOR_
 - WordPress objects created: **0**.
 - Database writes: **0**.
 - V9 source/dist changes: **0**.
-- V9-06D.1 rerun: **READY**, under separate authorization.
+- V9-06D.1 rerun: **COMPLETE — PASS**.
+
+## V9-06D.1 Rerun Runtime Delivery and Content Model Activation
+
+- Status: `FP0002_V9_06D1_RERUN_RUNTIME_DELIVERY_PASS`
+- Gate: forge-intake/validation/FP-0002-V9-06D1-RERUN-RUNTIME-DELIVERY-GATE-v1.md
+- Report: workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/reports/FP-0002-V9-06D1-RERUN-RUNTIME-DELIVERY-CONTENT-MODEL-ACTIVATION-REPORT-v1.md
+- Runtime delivery: **COMPLETE** for theme, Shpigovsky Core, and ACF JSON.
+- Source activation mode: **CONTENT_MODEL**.
+- Service CPT: **REGISTERED**.
+- ACF groups: **13 DISCOVERABLE**.
+- Options Page: **REGISTERED**.
+- Services created: **0**.
+- Pages/posts/menus/options changed: **0**.
+- Rewrite flush: **0**.
+- V9 source/dist changes: **0**.
+- V9-06D.2: **READY FOR OPERATOR REVIEW**, not authorized.
 

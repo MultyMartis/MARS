@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-07-03T20:24:17.092438Z",
+  "checkpoint": {
+    "generated_at": "2026-07-03T20:23:55.826014Z",
+    "checkpoint_root": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d1-rerun-runtime-delivery-pre-20260704-032355",
+    "theme_snapshot": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d1-rerun-runtime-delivery-pre-20260704-032355\\theme",
+    "plugin_snapshot": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d1-rerun-runtime-delivery-pre-20260704-032355\\plugin",
+    "acf_json_snapshot": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d1-rerun-runtime-delivery-pre-20260704-032355\\acf-json",
+    "db_dump": null,
+    "db_dump_reason": "No DB dump created: task performs only bounded filesystem delivery and read-only WordPress probes; no intentional DB writes or rewrite flush.",
+    "manifests": [
+      "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d1-rerun-runtime-delivery-pre-20260704-032355\\manifests\\acf-json-pre-manifest.json",
+      "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d1-rerun-runtime-delivery-pre-20260704-032355\\manifests\\plugin-pre-manifest.json",
+      "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d1-rerun-runtime-delivery-pre-20260704-032355\\manifests\\theme-pre-manifest.json"
+    ],
+    "rollback_instructions": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d1-rerun-runtime-delivery-pre-20260704-032355\\rollback\\ROLLBACK-INSTRUCTIONS.txt",
+    "secrets_copied": 0,
+    "result": "PASS"
+  },
+  "restore_procedure": "Use checkpoint rollback/ROLLBACK-INSTRUCTIONS.txt; restore only theme, plugin, and acf-json roots.",
+  "expected_hashes": {
+    "theme": {
+      "root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky",
+      "exists": true,
+      "files": [
+        {
+          "relative_path": "README.md",
+          "size": 672,
+          "sha256": "9bff5312c820e807c4cfecec641dc4cfcab2bed04169aede64091c0e9ac2d63a"
+        },
+        {
+          "relative_path": "assets/css/foundation.css",
+          "size": 755,
+          "sha256": "5b28778b853b1880bd2f901bc844164c8c3e6b9ba481ce65bf5229a7d9e4df5b"
+        },
+        {
+          "relative_path": "footer.php",
+          "size": 873,
+          "sha256": "9f2c0b763e13fd84d9d9b934cfa8cfed7a6d9004e2f60f1a91cd75169a96a723"
+        },
+        {
+          "relative_path": "front-page.php",
+          "size": 500,
+          "sha256": "f2cdd62dbd670d53570223ca02e114e0a2426768a2948581859ef1a0f3bb4f6b"
+        },
+        {
+          "relative_path": "functions.php",
+          "size": 432,
+          "sha256": "1160f8bf94e4255810ecdb91d3dd23885474389510a8d6f53cac910baf824a04"
+        },
+        {
+          "relative_path": "header.php",
+          "size": 841,
+          "sha256": "7e5e48a76b22100e8110b21e2210d90046618728c0ac5107938a82312f62f199"
+        },
+        {
+          "relative_path": "inc/assets.php",
+          "size": 477,
+          "sha256": "e4b1ebd239dfb5eabf400bdbfedc267a080529da7e815a1565ffcc3b76cd677c"
+        },
+        {
+          "relative_path": "inc/setup.php",
+          "size": 829,
+          "sha256": "fbfaf7d931a5af6563f56309ebc2fc88c76d2bcb579e242d46444072cfa166ba"
+        },
+        {
+          "relative_path": "index.php",
+          "size": 786,
+          "sha256": "ee720dd789ae080163756e5fd5ce57e826702396ce7ee71f0937c89679b73935"
+        },
+        {
+          "relative_path": "languages/.gitkeep",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "relative_path": "style.css",
+          "size": 432,
+          "sha256": "96c43e383f6514b16d7a16fb48e9e2c45be6d8661ee4e596d9e5825f40b1a417"
+        },
+        {
+          "relative_path": "template-parts/.gitkeep",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "file_count": 12,
+      "dir_count": 5,
+      "aggregate_hash": "746cdba4e175245eb6caf27d3ea17f6b17e81e109dec620085bf8dd72b9b32bb",
+      "reparse_points": []
+    },
+    "plugin": {
+      "root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\shpigovsky-core",
+      "exists": true,
+      "files": [
+        {
+          "relative_path": "README.md",
+          "size": 191,
+          "sha256": "3e998eb056722ee6d4c29c35c99089a6921d5cbff60fc80a720844e9810c51b4"
+        },
+        {
+          "relative_path": "includes/class-bootstrap.php",
+          "size": 792,
+          "sha256": "1b1912e30990049e3fb19643f548b0811c3df95d012c1e0e36b874c8185749e6"
+        },
+        {
+          "relative_path": "index.php",
+          "size": 30,
+          "sha256": "8bc1530674ae3f74c2c450b8ef2d4c9c1081e718ab7f804096b4c1917e59d7b9"
+        },
+        {
+          "relative_path": "shpigovsky-core.php",
+          "size": 1608,
+          "sha256": "4dfe6377eaa7555b32589326ebfc281378c149fb2582d0e568865102c39e0e87"
+        }
+      ],
+      "file_count": 4,
+      "dir_count": 1,
+      "aggregate_hash": "d7ffc351b39cfc541db82682cc7c862db3d9bd5d85062ac924fbc09d3bb219aa",
+      "reparse_points": []
+    },
+    "acf-json": {
+      "root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\acf-json",
+      "exists": true,
+      "files": [],
+      "file_count": 0,
+      "dir_count": 0,
+      "aggregate_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reparse_points": []
+    }
+  },
+  "db_restore_required": false,
+  "rollback_tested": false,
+  "rollback_not_executed_reason": "Delivery and validation succeeded; rollback is ready but not executed.",
+  "result": "PASS"
+}

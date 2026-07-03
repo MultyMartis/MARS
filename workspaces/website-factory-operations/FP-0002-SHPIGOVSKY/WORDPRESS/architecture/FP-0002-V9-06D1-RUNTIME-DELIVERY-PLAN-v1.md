@@ -1,26 +1,29 @@
 # FP-0002 V9-06D.1 Runtime Delivery Plan v1
 
-**Result:** BLOCKED before apply — SUPERSEDED BY V9-06C.1 SOURCE FIX.
+**Result:** PASS — RERUN COMPLETE.
 
-## Intended delivery
+## Delivery surfaces
 
-- Theme source: $themeSrc
-- Shpigovsky Core source: $pluginSrc
-- ACF JSON source: $acfSrc
-- Runtime target: $runtime
+| Surface | Source | Runtime target | Result |
+|---|---|---|---|
+| Theme | `WORDPRESS/theme/shpigovsky/` | `wp-content/themes/shpigovsky/` | DELIVERED |
+| Shpigovsky Core | `WORDPRESS/plugins/shpigovsky-core/` | `wp-content/plugins/shpigovsky-core/` | DELIVERED |
+| ACF JSON | `WORDPRESS/acf-json/` | `wp-content/acf-json/` | DELIVERED |
 
-## Dry-run policy
+## Policy
 
-Policy: ALLOWLISTED_REPLACE_WITH_CHECKPOINT.
+- Delivery policy: `ALLOWLISTED_REPLACE_WITH_CHECKPOINT`.
+- Unknown-file policy: fail closed; one legacy source-owned runtime plugin file was classified and removed as `DELETE_OWNED`.
+- Deletion: only `wp-content/plugins/shpigovsky-core/includes/class-bootstrap.php`, documented as legacy removed in V9-06B and covered by checkpoint.
+- Rewrite flush: not performed.
+- WordPress object creation: 0.
 
-Dry-run file comparison was generated in WORDPRESS/validation/v9-06d1-runtime-delivery/dry-run-plan.json.
+## Evidence
 
-## Historical blocker
+- `WORDPRESS/validation/v9-06d1-runtime-delivery-rerun/dry-run-plan.json`
+- `WORDPRESS/validation/v9-06d1-runtime-delivery-rerun/apply-result.json`
+- `WORDPRESS/validation/v9-06d1-runtime-delivery-rerun/final-verdict.json`
 
-V9-06D.1 was blocked by the old canonical source gate: `SHPIGOVSKY_CORE_SKELETON=true`, with content-model modules returning `! shpigovsky_core_is_skeleton_mode()`.
+## Verdict
 
-V9-06C.1 resolves this source blocker by setting `SHPIGOVSKY_CORE_MODE=content_model` and using a phase-aware module activation registry. This document remains historical evidence for the blocked attempt.
-
-## Apply decision
-
-Runtime apply was not performed in V9-06D.1 and is still not performed by V9-06C.1. After V9-06C.1, rerun delivery must use the new readiness document and validation evidence.
+V9-06D.1 rerun delivery is complete. V9-06D.2 object skeleton remains a separate, not-yet-authorized phase.

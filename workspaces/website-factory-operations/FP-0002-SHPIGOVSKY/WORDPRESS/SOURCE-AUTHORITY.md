@@ -10,9 +10,9 @@
 
 | Surface | Origin | Runtime match | Canonical source | Classification |
 |---------|--------|---------------|------------------|----------------|
-| Theme `shpigovsky` | V6 `theme-source/shpigovsky` + runtime deltas | DRIFTED from V6; matches adopted runtime | `WORDPRESS/theme/shpigovsky/` | CANONICAL_CURRENT — ADOPTED |
-| Plugin `shpigovsky-core` | V6 `functionality-plugin/shpigovsky-core` + runtime deltas | DRIFTED from V6; source activation gate resolved in V9-06C.1 | `WORDPRESS/plugins/shpigovsky-core/` | CANONICAL_CURRENT — ADOPTED — SOURCE ACTIVATION READY |
-| ACF JSON | V6 empty state + V9-06C source generation | NOT DELIVERED TO RUNTIME | `WORDPRESS/acf-json/` | REGISTERED — V9-06C SOURCE CREATED |
+| Theme `shpigovsky` | V6 `theme-source/shpigovsky` + runtime deltas | DELIVERED TO LOCAL RUNTIME in V9-06D.1 rerun | `WORDPRESS/theme/shpigovsky/` | CANONICAL_CURRENT — ADOPTED — RUNTIME DELIVERED |
+| Plugin `shpigovsky-core` | V6 `functionality-plugin/shpigovsky-core` + runtime deltas | DELIVERED TO LOCAL RUNTIME in V9-06D.1 rerun | `WORDPRESS/plugins/shpigovsky-core/` | CANONICAL_CURRENT — ADOPTED — CONTENT MODEL ACTIVE |
+| ACF JSON | V6 empty state + V9-06C source generation | 13 JSON files delivered to local runtime in V9-06D.1 rerun | `WORDPRESS/acf-json/` | REGISTERED — RUNTIME DELIVERED |
 
 ## Historical surfaces
 
@@ -51,7 +51,7 @@ Foundation baseline scanned at capture; no secrets detected in theme/plugin sour
 
 V9 frontend HTML/CSS/JS integration is **NOT INCLUDED** in V9-06C. V9 frontend remains under `workspaces/fp-0002-shpigovsky-v9/`.
 
-V9-06C adds WordPress content model source only: Shpigovsky Core CPT/permalink/ACF/admin/validation source and canonical ACF JSON under `WORDPRESS/acf-json/`. V9-06C.1 resolves the Shpigovsky Core source activation gate with `SHPIGOVSKY_CORE_MODE=content_model`. Runtime implementation remains **NOT STARTED**.
+V9-06C adds WordPress content model source only: Shpigovsky Core CPT/permalink/ACF/admin/validation source and canonical ACF JSON under `WORDPRESS/acf-json/`. V9-06C.1 resolves the Shpigovsky Core source activation gate with `SHPIGOVSKY_CORE_MODE=content_model`. V9-06D.1 rerun delivered this source into local runtime and verified content model activation. Object skeleton, content migration, redirects, rewrite flush, and V9 integration remain **NOT STARTED**.
 
 ## Operator-managed external plugin boundary
 
@@ -67,3 +67,7 @@ Forbidden for these dependencies: automatic update, replacement, deletion, packa
 
 Delivery of the previous V9-06D.1 package was blocked by the old skeleton gate and is now superseded by V9-06C.1 source repair. The current canonical source is activation-ready for a separate V9-06D.1 rerun. V9-06C.1 did not change runtime files, database state, external plugins, or WordPress objects.
 
+
+## V9-06D.1 rerun runtime delivery
+
+Runtime delivery is complete for the local FP-0002 runtime only. The runtime remains a deployment target, not canonical editable source. External plugins remain operator-managed and were not delivered, updated, replaced, or modified.

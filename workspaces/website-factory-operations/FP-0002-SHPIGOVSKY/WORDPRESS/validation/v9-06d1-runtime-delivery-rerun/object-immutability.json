@@ -1,0 +1,71 @@
+{
+  "generated_at": "2026-07-03T20:24:12.918324Z",
+  "checks": {
+    "pages": {
+      "before": 23,
+      "after": 23,
+      "changed": false,
+      "result": "PASS"
+    },
+    "services": {
+      "before": 0,
+      "after": 0,
+      "changed": false,
+      "result": "PASS"
+    },
+    "posts": {
+      "before": 1,
+      "after": 1,
+      "changed": false,
+      "result": "PASS"
+    },
+    "menus": {
+      "before": 3,
+      "after": 3,
+      "changed": false,
+      "result": "PASS"
+    },
+    "front_page_option": {
+      "before": "4",
+      "after": "4",
+      "changed": false,
+      "result": "PASS"
+    },
+    "posts_page_option": {
+      "before": "19",
+      "after": "19",
+      "changed": false,
+      "result": "PASS"
+    },
+    "active_plugins": {
+      "before": [
+        "acf-extended-pro/acf-extended.php",
+        "advanced-custom-fields-pro/acf.php",
+        "metacode-wpilot/metacode-wpilot.php",
+        "shpigovsky-core/shpigovsky-core.php"
+      ],
+      "after": [
+        "acf-extended-pro/acf-extended.php",
+        "advanced-custom-fields-pro/acf.php",
+        "metacode-wpilot/metacode-wpilot.php",
+        "shpigovsky-core/shpigovsky-core.php"
+      ],
+      "changed": false,
+      "result": "PASS"
+    },
+    "active_theme": {
+      "before": "shpigovsky",
+      "after": "shpigovsky",
+      "changed": false,
+      "result": "PASS"
+    },
+    "users": {
+      "before": 2,
+      "after": 2,
+      "changed": false,
+      "result": "PASS"
+    }
+  },
+  "failures": [],
+  "result": "PASS"
+}

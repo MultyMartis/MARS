@@ -2,8 +2,8 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06C.1 SOURCE ACTIVATION GATE RESOLVED
-**Classification:** SOURCE ACTIVATION READY — NOT DELIVERED — RUNTIME NOT STARTED
+**Status:** V9-06D.1 RERUN RUNTIME DELIVERY COMPLETE
+**Classification:** CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON NOT STARTED
 
 ---
 
@@ -37,9 +37,9 @@ The runtime is **not** the canonical editable source. Delivery flows: Git source
 | V9-06B | **COMPLETE** — theme + core skeleton |
 | V9-06C | **COMPLETE — CONTENT MODEL SOURCE IMPLEMENTED** |
 | V9-06C.1 | **COMPLETE — SOURCE ACTIVATION GATE RESOLVED** |
-| Runtime changes | 0 |
+| Runtime changes | **AUTHORIZED FILE DELIVERY ONLY (V9-06D.1 rerun)** |
 | WordPress source implementation | **CONTENT MODEL COMPLETE** |
-| WordPress runtime implementation | **NOT STARTED** |
+| WordPress runtime implementation | **CONTENT MODEL ACTIVATED — OBJECTS NOT CREATED** |
 | FW-07C-2D | SUPERSEDED BY ARCHITECTURE-FIRST SEQUENCE (V9-06D) |
 
 Authority: [architecture/FP-0002-WORDPRESS-ARCHITECTURE-v1.md](architecture/FP-0002-WORDPRESS-ARCHITECTURE-v1.md)
@@ -64,8 +64,8 @@ WORDPRESS/
 | Surface | Classification |
 |---------|----------------|
 | Theme | V9-06B SKELETON — NO V9 VISUAL INTEGRATION |
-| Shpigovsky Core | V9-06C.1 CONTENT MODEL SOURCE ACTIVATION READY — NOT DELIVERED |
-| ACF JSON | V9-06C SOURCE CREATED — NOT DELIVERED |
+| Shpigovsky Core | V9-06D.1 CONTENT MODEL RUNTIME DELIVERED |
+| ACF JSON | V9-06D.1 DELIVERED — 13 LOCAL JSON FILES |
 
 ## Provenance
 
@@ -110,4 +110,9 @@ Reports:
 
 - `reports/FP-0002-V9-06C1-SOURCE-ACTIVATION-GATE-RESOLUTION-REPORT-v1.md`
 - `reports/FP-0002-V9-06D1-RUNTIME-DELIVERY-CONTENT-MODEL-ACTIVATION-REPORT-v1.md` — historical blocked attempt, superseded by V9-06C.1 source fix
+- `reports/FP-0002-V9-06D1-RERUN-RUNTIME-DELIVERY-CONTENT-MODEL-ACTIVATION-REPORT-v1.md` — V9-06D.1 rerun PASS; runtime code/model activation complete
 
+
+## V9-06D.1 rerun runtime delivery (2026-07-04)
+
+V9-06D.1 rerun delivered `theme/shpigovsky`, `plugins/shpigovsky-core`, and 13 `acf-json` files into the local runtime under checkpoint control. Service CPT, ACF local field groups, Options Page, admin hooks, validation hooks, and runtime health are verified. WordPress object creation, content migration, redirects, rewrite flush, plugin updates/install/deletes, and V9 integration remain not started.

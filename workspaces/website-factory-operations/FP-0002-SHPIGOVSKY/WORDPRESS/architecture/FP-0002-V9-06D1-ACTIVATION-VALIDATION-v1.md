@@ -1,28 +1,46 @@
 # FP-0002 V9-06D.1 Activation Validation v1
 
-**Result:** BLOCKED BEFORE APPLY — SUPERSEDED BY V9-06C.1 SOURCE FIX.
+**Result:** PASS — content model activation verified in local runtime.
 
-## Activation gate finding
+## Runtime activation
 
-V9-06D.1 originally found `SHPIGOVSKY_CORE_SKELETON=true` in canonical shpigovsky-core source. The following runtime activation expectations could not pass with that package:
+- `SHPIGOVSKY_CORE_MODE`: `content_model`
+- `SHPIGOVSKY_CORE_SKELETON`: `false`
+- Enabled modules: ContentTypes, Permalinks, Fields, Settings, Admin, Validation.
+- Deferred modules: Migrations, Forms, object creation, content migration, redirects, rewrite flush.
 
-- service CPT registration
-- service permalink/rewrite hooks
-- ACF local field group registration
-- Options Page registration
-- admin UX hooks
-- validation hooks
+## Service CPT
+
+- Registered: yes
+- Public: true
+- Hierarchical: true
+- Has archive: false
+- REST: true
+- Taxonomies: 0
+- Service objects: 0
+
+## ACF / Options Page
+
+- ACF PRO active: true
+- ACF local field groups discoverable: 13
+- Runtime ACF JSON files: 13
+- Options Page: `fp02-site-settings` registered
+- ACF Extended PRO usage: 0
+- ACF Free active: false
+
+## Runtime health and immutability
+
+- Frontend: HTTP 200
+- wp-admin: HTTP 200
+- Pages changed: 0
+- Posts changed: 0
+- Services created: 0
+- Menus changed: 0
+- Plugin activation changed: 0
+- Rewrite flush performed: false
 
 ## Evidence
 
-- WORDPRESS/validation/v9-06d1-runtime-delivery/source-readiness.json
-- WORDPRESS/validation/v9-06d1-runtime-delivery/runtime-baseline.json
-- WORDPRESS/validation/v9-06d1-runtime-delivery/final-verdict.json
-
-## V9-06C.1 resolution
-
-V9-06C.1 resolves the source blocker through `SHPIGOVSKY_CORE_MODE=content_model` and a phase-aware module registry. Runtime delivery and activation validation still require a separate V9-06D.1 rerun.
-
-## Required decision
-
-Rerun V9-06D.1 runtime delivery and content model activation gate under explicit operator authorization.
+- `WORDPRESS/validation/v9-06d1-runtime-delivery-rerun/content-model-activation.json`
+- `WORDPRESS/validation/v9-06d1-runtime-delivery-rerun/object-immutability.json`
+- `WORDPRESS/validation/v9-06d1-runtime-delivery-rerun/wordpress-activation-smoke.json`
