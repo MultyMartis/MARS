@@ -44,7 +44,7 @@ Operator WV6: PENDING
 Direct local domain: PASS (FP-0002 — FW-06A.1)
 Synthetic source: TRACKED (Git whitelist)
 Agent registration: REGISTERED (AG-WP-001 — SYNTHETIC READ-ONLY CAPABILITY ONLY; NOT PRODUCTION READY)
-Client pilot: FP-0002 V9-06D.1 rerun runtime delivery PASS; content model active; object skeleton not started
+Client pilot: FP-0002 V9-06D.3 content migration planning PASS; object skeleton complete; content migration not performed
 ```
 
 | Field | Value |

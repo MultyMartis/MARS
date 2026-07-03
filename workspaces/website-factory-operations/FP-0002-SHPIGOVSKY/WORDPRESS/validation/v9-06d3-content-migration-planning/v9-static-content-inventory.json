@@ -1,0 +1,688 @@
+{
+  "schema": "fp-0002-v9-06d3-v9-static-content-inventory",
+  "phase": "V9-06D.3",
+  "v9_root": "X:\\AI MARS\\workspaces\\fp-0002-shpigovsky-v9",
+  "src_inspected": true,
+  "dist_inspected": true,
+  "dist_present": true,
+  "dist_html_count": 31,
+  "html_page_files": [
+    "src\\pages\\blog.html",
+    "src\\pages\\blog\\nazvanie-stati.html",
+    "src\\pages\\consent-personal-data.html",
+    "src\\pages\\cookie-files-policy.html",
+    "src\\pages\\index.html",
+    "src\\pages\\kontakty.html",
+    "src\\pages\\o-centre.html",
+    "src\\pages\\o-centre\\galereya-o-dome.html",
+    "src\\pages\\o-centre\\o-nas.html",
+    "src\\pages\\o-centre\\programma-lecheniya.html",
+    "src\\pages\\o-centre\\rodstvennikam.html",
+    "src\\pages\\o-centre\\specialistam.html",
+    "src\\pages\\otzyvy.html",
+    "src\\pages\\privacy-policy.html",
+    "src\\pages\\user-agreement.html",
+    "src\\pages\\usluga-konechnaya-v1.html",
+    "src\\pages\\usluga-podrazdel-v1.html",
+    "src\\pages\\uslugi-v2.html",
+    "src\\pages\\uslugi.html",
+    "src\\pages\\uslugi\\genotipirovanie.html",
+    "src\\pages\\uslugi\\psihicheskoe-zdorovie.html",
+    "src\\pages\\uslugi\\psihicheskoe-zdorovie\\depressiya.html",
+    "src\\pages\\uslugi\\psihicheskoe-zdorovie\\emocionalnoe-vygoranie.html",
+    "src\\pages\\uslugi\\psihicheskoe-zdorovie\\ptrs.html",
+    "src\\pages\\uslugi\\psihicheskoe-zdorovie\\rasstroystva-sna.html",
+    "src\\pages\\uslugi\\psihicheskoe-zdorovie\\travma.html",
+    "src\\pages\\uslugi\\psihicheskoe-zdorovie\\trevozhnye-rasstroystva.html",
+    "src\\pages\\uslugi\\rasstroystva-pischevogo-povedeniya.html",
+    "src\\pages\\uslugi\\rasstroystva-pischevogo-povedeniya\\anoreksiya.html",
+    "src\\pages\\uslugi\\rasstroystva-pischevogo-povedeniya\\kompulsivnoe-pereedanie.html",
+    "src\\pages\\uslugi\\rasstroystva-pischevogo-povedeniya\\nervnaya-bulimiya.html",
+    "src\\pages\\uslugi\\zavisimosti\\profilakticheskiy-analiz.html",
+    "src\\pages\\uslugi\\zavisimosti\\specialistam.html"
+  ],
+  "html_page_count": 33,
+  "partial_files_count": 77,
+  "canonical_routes": [
+    {
+      "route_id": "ROUTE-01",
+      "url": "/",
+      "title": "Главная",
+      "v9_source": "src/pages/index.html",
+      "source_exists": true,
+      "content_status": "FULL",
+      "primary_entity_class": "PAGE",
+      "entity_subtype": "home",
+      "wordpress_entity_mapping": "PAGE",
+      "production_like": true,
+      "placeholder": false,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-02",
+      "url": "/uslugi/",
+      "title": "Услуги",
+      "v9_source": "src/pages/uslugi-v2.html",
+      "source_exists": true,
+      "content_status": "FULL",
+      "primary_entity_class": "PAGE",
+      "entity_subtype": "services_hub",
+      "wordpress_entity_mapping": "PAGE",
+      "production_like": true,
+      "placeholder": false,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-03",
+      "url": "/uslugi/zavisimosti/",
+      "title": "Зависимости",
+      "v9_source": "src/pages/usluga-podrazdel-v1.html",
+      "source_exists": true,
+      "content_status": "FULL",
+      "primary_entity_class": "SERVICE",
+      "entity_subtype": "service_parent",
+      "wordpress_entity_mapping": "SERVICE",
+      "production_like": true,
+      "placeholder": false,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-04",
+      "url": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "title": "Лечение алкогольной зависимости",
+      "v9_source": "src/pages/usluga-konechnaya-v1.html",
+      "source_exists": true,
+      "content_status": "FULL",
+      "primary_entity_class": "SERVICE",
+      "entity_subtype": "service_leaf",
+      "wordpress_entity_mapping": "SERVICE",
+      "production_like": true,
+      "placeholder": false,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-05",
+      "url": "/uslugi/zavisimosti/profilakticheskiy-analiz/",
+      "title": "Профилактический анализ",
+      "v9_source": "src/pages/uslugi/zavisimosti/profilakticheskiy-analiz.html",
+      "source_exists": true,
+      "content_status": "PLACEHOLDER",
+      "primary_entity_class": "SERVICE",
+      "entity_subtype": "service_leaf",
+      "wordpress_entity_mapping": "SERVICE",
+      "production_like": false,
+      "placeholder": true,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-06",
+      "url": "/uslugi/zavisimosti/specialistam/",
+      "title": "Специалистам",
+      "v9_source": "src/pages/uslugi/zavisimosti/specialistam.html",
+      "source_exists": true,
+      "content_status": "PLACEHOLDER",
+      "primary_entity_class": "SERVICE",
+      "entity_subtype": "service_leaf",
+      "wordpress_entity_mapping": "SERVICE",
+      "production_like": false,
+      "placeholder": true,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-07",
+      "url": "/uslugi/psihicheskoe-zdorovie/",
+      "title": "Психическое здоровье",
+      "v9_source": "src/pages/uslugi/psihicheskoe-zdorovie.html",
+      "source_exists": true,
+      "content_status": "PLACEHOLDER",
+      "primary_entity_class": "SERVICE",
+      "entity_subtype": "service_parent",
+      "wordpress_entity_mapping": "SERVICE",
+      "production_like": false,
+      "placeholder": true,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-08",
+      "url": "/uslugi/psihicheskoe-zdorovie/depressiya/",
+      "title": "Депрессия",
+      "v9_source": "src/pages/uslugi/psihicheskoe-zdorovie/depressiya.html",
+      "source_exists": true,
+      "content_status": "PLACEHOLDER",
+      "primary_entity_class": "SERVICE",
+      "entity_subtype": "service_leaf",
+      "wordpress_entity_mapping": "SERVICE",
+      "production_like": false,
+      "placeholder": true,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-09",
+      "url": "/uslugi/psihicheskoe-zdorovie/ptrs/",
+      "title": "ПТСР",
+      "v9_source": "src/pages/uslugi/psihicheskoe-zdorovie/ptrs.html",
+      "source_exists": true,
+      "content_status": "PLACEHOLDER",
+      "primary_entity_class": "SERVICE",
+      "entity_subtype": "service_leaf",
+      "wordpress_entity_mapping": "SERVICE",
+      "production_like": false,
+      "placeholder": true,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-10",
+      "url": "/uslugi/psihicheskoe-zdorovie/emocionalnoe-vygoranie/",
+      "title": "Эмоциональное выгорание",
+      "v9_source": "src/pages/uslugi/psihicheskoe-zdorovie/emocionalnoe-vygoranie.html",
+      "source_exists": true,
+      "content_status": "PLACEHOLDER",
+      "primary_entity_class": "SERVICE",
+      "entity_subtype": "service_leaf",
+      "wordpress_entity_mapping": "SERVICE",
+      "production_like": false,
+      "placeholder": true,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-11",
+      "url": "/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+      "title": "Тревожные расстройства",
+      "v9_source": "src/pages/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva.html",
+      "source_exists": true,
+      "content_status": "PLACEHOLDER",
+      "primary_entity_class": "SERVICE",
+      "entity_subtype": "service_leaf",
+      "wordpress_entity_mapping": "SERVICE",
+      "production_like": false,
+      "placeholder": true,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-12",
+      "url": "/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+      "title": "Расстройства сна",
+      "v9_source": "src/pages/uslugi/psihicheskoe-zdorovie/rasstroystva-sna.html",
+      "source_exists": true,
+      "content_status": "PLACEHOLDER",
+      "primary_entity_class": "SERVICE",
+      "entity_subtype": "service_leaf",
+      "wordpress_entity_mapping": "SERVICE",
+      "production_like": false,
+      "placeholder": true,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-13",
+      "url": "/uslugi/psihicheskoe-zdorovie/travma/",
+      "title": "Травма",
+      "v9_source": "src/pages/uslugi/psihicheskoe-zdorovie/travma.html",
+      "source_exists": true,
+      "content_status": "PLACEHOLDER",
+      "primary_entity_class": "SERVICE",
+      "entity_subtype": "service_leaf",
+      "wordpress_entity_mapping": "SERVICE",
+      "production_like": false,
+      "placeholder": true,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-14",
+      "url": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "title": "Расстройства пищевого поведения",
+      "v9_source": "src/pages/uslugi/rasstroystva-pischevogo-povedeniya.html",
+      "source_exists": true,
+      "content_status": "PLACEHOLDER",
+      "primary_entity_class": "SERVICE",
+      "entity_subtype": "service_parent",
+      "wordpress_entity_mapping": "SERVICE",
+      "production_like": false,
+      "placeholder": true,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-15",
+      "url": "/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+      "title": "Нервная анорексия",
+      "v9_source": "src/pages/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya.html",
+      "source_exists": true,
+      "content_status": "PLACEHOLDER",
+      "primary_entity_class": "SERVICE",
+      "entity_subtype": "service_leaf",
+      "wordpress_entity_mapping": "SERVICE",
+      "production_like": false,
+      "placeholder": true,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-16",
+      "url": "/uslugi/rasstroystva-pischevogo-povedeniya/nervnaya-bulimiya/",
+      "title": "Нервная булимия",
+      "v9_source": "src/pages/uslugi/rasstroystva-pischevogo-povedeniya/nervnaya-bulimiya.html",
+      "source_exists": true,
+      "content_status": "PLACEHOLDER",
+      "primary_entity_class": "SERVICE",
+      "entity_subtype": "service_leaf",
+      "wordpress_entity_mapping": "SERVICE",
+      "production_like": false,
+      "placeholder": true,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-17",
+      "url": "/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/",
+      "title": "Компульсивное переедание",
+      "v9_source": "src/pages/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie.html",
+      "source_exists": true,
+      "content_status": "PLACEHOLDER",
+      "primary_entity_class": "SERVICE",
+      "entity_subtype": "service_leaf",
+      "wordpress_entity_mapping": "SERVICE",
+      "production_like": false,
+      "placeholder": true,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-18",
+      "url": "/o-centre/",
+      "title": "О центре",
+      "v9_source": "src/pages/o-centre.html",
+      "source_exists": true,
+      "content_status": "FULL",
+      "primary_entity_class": "PAGE",
+      "entity_subtype": "institutional",
+      "wordpress_entity_mapping": "PAGE",
+      "production_like": true,
+      "placeholder": false,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-19",
+      "url": "/o-centre/o-nas/",
+      "title": "О нас",
+      "v9_source": "src/pages/o-centre/o-nas.html",
+      "source_exists": true,
+      "content_status": "PLACEHOLDER",
+      "primary_entity_class": "PAGE",
+      "entity_subtype": "institutional",
+      "wordpress_entity_mapping": "PAGE",
+      "production_like": false,
+      "placeholder": true,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-20",
+      "url": "/o-centre/programma-lecheniya/",
+      "title": "Программа лечения",
+      "v9_source": "src/pages/o-centre/programma-lecheniya.html",
+      "source_exists": true,
+      "content_status": "PLACEHOLDER",
+      "primary_entity_class": "PAGE",
+      "entity_subtype": "institutional",
+      "wordpress_entity_mapping": "PAGE",
+      "production_like": false,
+      "placeholder": true,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-21",
+      "url": "/o-centre/galereya-o-dome/",
+      "title": "Галерея о доме",
+      "v9_source": "src/pages/o-centre/galereya-o-dome.html",
+      "source_exists": true,
+      "content_status": "PLACEHOLDER",
+      "primary_entity_class": "PAGE",
+      "entity_subtype": "institutional",
+      "wordpress_entity_mapping": "PAGE",
+      "production_like": false,
+      "placeholder": true,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-22",
+      "url": "/o-centre/specialistam/",
+      "title": "Специалистам",
+      "v9_source": "src/pages/o-centre/specialistam.html",
+      "source_exists": true,
+      "content_status": "PLACEHOLDER",
+      "primary_entity_class": "PAGE",
+      "entity_subtype": "institutional",
+      "wordpress_entity_mapping": "PAGE",
+      "production_like": false,
+      "placeholder": true,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-23",
+      "url": "/o-centre/rodstvennikam/",
+      "title": "Родственникам",
+      "v9_source": "src/pages/o-centre/rodstvennikam.html",
+      "source_exists": true,
+      "content_status": "PLACEHOLDER",
+      "primary_entity_class": "PAGE",
+      "entity_subtype": "institutional",
+      "wordpress_entity_mapping": "PAGE",
+      "production_like": false,
+      "placeholder": true,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-24",
+      "url": "/otzyvy/",
+      "title": "Отзывы",
+      "v9_source": "src/pages/otzyvy.html",
+      "source_exists": true,
+      "content_status": "FULL",
+      "primary_entity_class": "PAGE",
+      "entity_subtype": "reviews",
+      "wordpress_entity_mapping": "PAGE",
+      "production_like": true,
+      "placeholder": false,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-25",
+      "url": "/blog/",
+      "title": "Статьи",
+      "v9_source": "src/pages/blog.html",
+      "source_exists": true,
+      "content_status": "FULL",
+      "primary_entity_class": "POSTS_PAGE",
+      "entity_subtype": "blog_archive",
+      "wordpress_entity_mapping": "POSTS_PAGE",
+      "production_like": true,
+      "placeholder": false,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-26",
+      "url": "/blog/nazvanie-stati/",
+      "title": "Название статьи",
+      "v9_source": "src/pages/blog/nazvanie-stati.html",
+      "source_exists": true,
+      "content_status": "FULL",
+      "primary_entity_class": "POST",
+      "entity_subtype": "blog_article",
+      "wordpress_entity_mapping": "POST",
+      "production_like": true,
+      "placeholder": false,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-27",
+      "url": "/kontakty/",
+      "title": "Контакты",
+      "v9_source": "src/pages/kontakty.html",
+      "source_exists": true,
+      "content_status": "FULL",
+      "primary_entity_class": "PAGE",
+      "entity_subtype": "contacts",
+      "wordpress_entity_mapping": "PAGE",
+      "production_like": true,
+      "placeholder": false,
+      "legal_demo": false,
+      "do_not_migrate_yet": false
+    },
+    {
+      "route_id": "ROUTE-28",
+      "url": "/privacy-policy/",
+      "title": "Политика конфиденциальности",
+      "v9_source": "src/pages/privacy-policy.html",
+      "source_exists": true,
+      "content_status": "DEMO",
+      "primary_entity_class": "PAGE",
+      "entity_subtype": "legal",
+      "wordpress_entity_mapping": "PAGE",
+      "production_like": false,
+      "placeholder": false,
+      "legal_demo": true,
+      "do_not_migrate_yet": true
+    },
+    {
+      "route_id": "ROUTE-29",
+      "url": "/user-agreement/",
+      "title": "Пользовательское соглашение",
+      "v9_source": "src/pages/user-agreement.html",
+      "source_exists": true,
+      "content_status": "DEMO",
+      "primary_entity_class": "PAGE",
+      "entity_subtype": "legal",
+      "wordpress_entity_mapping": "PAGE",
+      "production_like": false,
+      "placeholder": false,
+      "legal_demo": true,
+      "do_not_migrate_yet": true
+    },
+    {
+      "route_id": "ROUTE-30",
+      "url": "/consent-personal-data/",
+      "title": "Согласие на обработку персональных данных",
+      "v9_source": "src/pages/consent-personal-data.html",
+      "source_exists": true,
+      "content_status": "DEMO",
+      "primary_entity_class": "PAGE",
+      "entity_subtype": "legal",
+      "wordpress_entity_mapping": "PAGE",
+      "production_like": false,
+      "placeholder": false,
+      "legal_demo": true,
+      "do_not_migrate_yet": true
+    },
+    {
+      "route_id": "ROUTE-31",
+      "url": "/cookie-files-policy/",
+      "title": "Политика Cookie-файлов",
+      "v9_source": "src/pages/cookie-files-policy.html",
+      "source_exists": true,
+      "content_status": "DEMO",
+      "primary_entity_class": "PAGE",
+      "entity_subtype": "legal",
+      "wordpress_entity_mapping": "PAGE",
+      "production_like": false,
+      "placeholder": false,
+      "legal_demo": true,
+      "do_not_migrate_yet": true
+    }
+  ],
+  "route_count": 31,
+  "full_pages": [
+    "/",
+    "/uslugi/",
+    "/uslugi/zavisimosti/",
+    "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+    "/o-centre/",
+    "/otzyvy/",
+    "/blog/",
+    "/blog/nazvanie-stati/",
+    "/kontakty/"
+  ],
+  "placeholder_pages": [
+    "/uslugi/zavisimosti/profilakticheskiy-analiz/",
+    "/uslugi/zavisimosti/specialistam/",
+    "/uslugi/psihicheskoe-zdorovie/",
+    "/uslugi/psihicheskoe-zdorovie/depressiya/",
+    "/uslugi/psihicheskoe-zdorovie/ptrs/",
+    "/uslugi/psihicheskoe-zdorovie/emocionalnoe-vygoranie/",
+    "/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+    "/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+    "/uslugi/psihicheskoe-zdorovie/travma/",
+    "/uslugi/rasstroystva-pischevogo-povedeniya/",
+    "/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+    "/uslugi/rasstroystva-pischevogo-povedeniya/nervnaya-bulimiya/",
+    "/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/",
+    "/o-centre/o-nas/",
+    "/o-centre/programma-lecheniya/",
+    "/o-centre/galereya-o-dome/",
+    "/o-centre/specialistam/",
+    "/o-centre/rodstvennikam/"
+  ],
+  "legal_demo_pages": [
+    "/privacy-policy/",
+    "/user-agreement/",
+    "/consent-personal-data/",
+    "/cookie-files-policy/"
+  ],
+  "section_types": [
+    {
+      "type": "hero",
+      "sources": [
+        "src/partials/sections/home-*.html",
+        "service hero blocks in usluga-*.html"
+      ],
+      "production_like": true
+    },
+    {
+      "type": "service_card_grids",
+      "sources": [
+        "src/partials/sections/services-comfort-v2.html",
+        "src/pages/uslugi-v2.html"
+      ],
+      "production_like": true
+    },
+    {
+      "type": "signs_symptoms",
+      "sources": [
+        "src/pages/usluga-konechnaya-v1.html"
+      ],
+      "production_like": true
+    },
+    {
+      "type": "programme_stages",
+      "sources": [
+        "src/partials/sections/home-rehabilitation-program.html",
+        "service programme blocks"
+      ],
+      "production_like": true
+    },
+    {
+      "type": "faq",
+      "sources": [
+        "home FAQ",
+        "services hub FAQ",
+        "service FAQ"
+      ],
+      "production_like": true
+    },
+    {
+      "type": "reviews",
+      "sources": [
+        "src/partials/sections/reviews.html",
+        "src/partials/sections/reviews-archive-list.html"
+      ],
+      "production_like": true
+    },
+    {
+      "type": "contacts",
+      "sources": [
+        "src/pages/kontakty.html"
+      ],
+      "production_like": true
+    },
+    {
+      "type": "cta_modal_hooks",
+      "sources": [
+        "src/partials/layout/global-consultation-modal.html"
+      ],
+      "production_like": true
+    },
+    {
+      "type": "source_lists",
+      "sources": [
+        "blog article lower stack"
+      ],
+      "production_like": true
+    },
+    {
+      "type": "breadcrumbs",
+      "sources": [
+        "src/partials/components/placeholder-breadcrumbs.html",
+        "layout breadcrumbs"
+      ],
+      "production_like": true
+    },
+    {
+      "type": "gallery_media",
+      "sources": [
+        "o-centre gallery",
+        "home gallery"
+      ],
+      "production_like": true
+    },
+    {
+      "type": "blog_article_sections",
+      "sources": [
+        "src/partials/sections/blog-article-content.html",
+        "blog-article-lower-stack.html"
+      ],
+      "production_like": true
+    },
+    {
+      "type": "placeholder_notice",
+      "sources": [
+        "src/partials/sections/placeholder-page.html"
+      ],
+      "production_like": false
+    },
+    {
+      "type": "legal_document",
+      "sources": [
+        "src/partials/sections/legal-document-page.html",
+        "legal/content/*"
+      ],
+      "production_like": false
+    }
+  ],
+  "assets_needed_later": [
+    "src/img/**",
+    "src/svg/**",
+    "src/fonts/**",
+    "hero/media images for home and alcohol special",
+    "gallery media for o-centre"
+  ],
+  "text_not_to_migrate_yet": [
+    "Legal DEMO token bodies (privacy, user-agreement, consent, cookie)",
+    "Placeholder-only service leaf bodies beyond minimal notice",
+    "Foundation Hello World post body"
+  ],
+  "legal_demo_blockers": [
+    "LEGAL_DEMO_TOKENS on ROUTE-28..31",
+    "legal_production_blocker field must remain true until counsel-approved copy"
+  ],
+  "excluded_non_canonical": [
+    {
+      "route": "/uslugi/genotipirovanie/",
+      "source": "src/pages/uslugi/genotipirovanie.html",
+      "status": "EXCLUDED"
+    },
+    {
+      "source": "src/pages/uslugi.html",
+      "status": "NON_CANONICAL_LEGACY_HUB_FILE"
+    }
+  ]
+}

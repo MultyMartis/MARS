@@ -1,7 +1,7 @@
 # Forge WordPress — FP-0002 Project Lane
 
 **Project ID:** FP-0002 — Шпиговский  
-**Stage:** V9-06D.1 rerun runtime delivery PASS — content model active; object skeleton not started
+**Stage:** V9-06D.3 content migration planning COMPLETE — content migration not performed
 
 | Document | Purpose |
 |----------|---------|
@@ -46,7 +46,7 @@ Runtime manifest: [MLI-WP-FP0002-LOCAL-RUNTIME-MANIFEST-v1.md](../../../../mars-
 | Validation hooks | SOURCE IMPLEMENTED |
 | Source activation gate | RESOLVED — CONTENT_MODEL |
 | Runtime delivery | COMPLETE — V9-06D.1 rerun |
-| WordPress objects | NOT CREATED |
+| WordPress objects | SKELETON COMPLETE (15 Services) — CONTENT NOT MIGRATED |
 
 ## V9-06C.1 source activation gate
 
@@ -63,4 +63,4 @@ Runtime manifest: [MLI-WP-FP0002-LOCAL-RUNTIME-MANIFEST-v1.md](../../../../mars-
 
 ## V9-06D.1 rerun runtime delivery
 
-Runtime code/model activation is complete in local runtime: theme, Shpigovsky Core, and ACF JSON delivered; service CPT, 13 ACF groups, and Options Page verified. WordPress object skeleton remains separate and not started.
+Runtime code/model activation is complete in local runtime: theme, Shpigovsky Core, and ACF JSON delivered; service CPT, 13 ACF groups, and Options Page verified. WordPress object skeleton complete (V9-06D.2); content migration planned (V9-06D.3), not performed.

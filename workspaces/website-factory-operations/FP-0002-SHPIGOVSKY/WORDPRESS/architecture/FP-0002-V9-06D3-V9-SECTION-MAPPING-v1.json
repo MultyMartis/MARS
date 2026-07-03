@@ -1,0 +1,164 @@
+{
+  "schema": "fp-0002-v9-06d3-v9-section-mapping",
+  "version": "1.0.0",
+  "phase": "V9-06D.3",
+  "runtime_integration_performed": false,
+  "static_fallback_strategy": "Templates render empty/minimal states when ACF empty; no V9 HTML copied into theme in D.3; later integration maps section markup to template-parts driven by ACF.",
+  "sections": [
+    {
+      "section_type": "hero",
+      "v9_source_selector_or_file": "home hero / service hero",
+      "wordpress_template_partial_target": "front-page.php / single-service.php / template-parts",
+      "acf_data_source": "home_hero_slides / hero_*",
+      "static_fallback_behavior": "Render empty/minimal markup when ACF empty; no fatal",
+      "first_wave_integration_priority": "WAVE_1",
+      "validation_method": "Template render + visual QA URL checklist",
+      "risk": "MEDIUM",
+      "runtime_integration_performed": false
+    },
+    {
+      "section_type": "service_card_grids",
+      "v9_source_selector_or_file": "uslugi-v2 / services-comfort-v2",
+      "wordpress_template_partial_target": "page-templates/services-hub.php",
+      "acf_data_source": "services_hub_* + service query",
+      "static_fallback_behavior": "Render empty/minimal markup when ACF empty; no fatal",
+      "first_wave_integration_priority": "WAVE_1",
+      "validation_method": "Template render + visual QA URL checklist",
+      "risk": "MEDIUM",
+      "runtime_integration_performed": false
+    },
+    {
+      "section_type": "signs_symptoms",
+      "v9_source_selector_or_file": "usluga-konechnaya-v1 signs",
+      "wordpress_template_partial_target": "template-parts/service/alcohol-stack.php",
+      "acf_data_source": "signs_items",
+      "static_fallback_behavior": "Render empty/minimal markup when ACF empty; no fatal",
+      "first_wave_integration_priority": "WAVE_1",
+      "validation_method": "Template render + visual QA URL checklist",
+      "risk": "MEDIUM",
+      "runtime_integration_performed": false
+    },
+    {
+      "section_type": "programme_stages",
+      "v9_source_selector_or_file": "programme / stages blocks",
+      "wordpress_template_partial_target": "template-parts/service/*",
+      "acf_data_source": "programme_items / stages",
+      "static_fallback_behavior": "Render empty/minimal markup when ACF empty; no fatal",
+      "first_wave_integration_priority": "WAVE_2",
+      "validation_method": "Template render + visual QA URL checklist",
+      "risk": "LOW",
+      "runtime_integration_performed": false
+    },
+    {
+      "section_type": "faq",
+      "v9_source_selector_or_file": "FAQ accordions",
+      "wordpress_template_partial_target": "service/page partials",
+      "acf_data_source": "faq_items / home_faq_items / services_hub_faq_items",
+      "static_fallback_behavior": "Render empty/minimal markup when ACF empty; no fatal",
+      "first_wave_integration_priority": "WAVE_2",
+      "validation_method": "Template render + visual QA URL checklist",
+      "risk": "LOW",
+      "runtime_integration_performed": false
+    },
+    {
+      "section_type": "reviews",
+      "v9_source_selector_or_file": "reviews.html / reviews-archive-list",
+      "wordpress_template_partial_target": "page-templates/reviews.php",
+      "acf_data_source": "reviews_items",
+      "static_fallback_behavior": "Render empty/minimal markup when ACF empty; no fatal",
+      "first_wave_integration_priority": "WAVE_3",
+      "validation_method": "Template render + visual QA URL checklist",
+      "risk": "LOW",
+      "runtime_integration_performed": false
+    },
+    {
+      "section_type": "contacts",
+      "v9_source_selector_or_file": "kontakty.html",
+      "wordpress_template_partial_target": "page-templates/contacts.php",
+      "acf_data_source": "contacts_* + options contacts",
+      "static_fallback_behavior": "Render empty/minimal markup when ACF empty; no fatal",
+      "first_wave_integration_priority": "WAVE_1",
+      "validation_method": "Template render + visual QA URL checklist",
+      "risk": "MEDIUM",
+      "runtime_integration_performed": false
+    },
+    {
+      "section_type": "cta_modal_hooks",
+      "v9_source_selector_or_file": "global-consultation-modal.html",
+      "wordpress_template_partial_target": "layout partials",
+      "acf_data_source": "site options modal/cta",
+      "static_fallback_behavior": "Render empty/minimal markup when ACF empty; no fatal",
+      "first_wave_integration_priority": "WAVE_1_OPTIONS_DEFERRED_WRITE",
+      "validation_method": "Template render + visual QA URL checklist",
+      "risk": "MEDIUM",
+      "runtime_integration_performed": false
+    },
+    {
+      "section_type": "source_lists",
+      "v9_source_selector_or_file": "blog article sources",
+      "wordpress_template_partial_target": "single.php partials",
+      "acf_data_source": "post content + article meta",
+      "static_fallback_behavior": "Render empty/minimal markup when ACF empty; no fatal",
+      "first_wave_integration_priority": "WAVE_4",
+      "validation_method": "Template render + visual QA URL checklist",
+      "risk": "LOW",
+      "runtime_integration_performed": false
+    },
+    {
+      "section_type": "breadcrumbs",
+      "v9_source_selector_or_file": "placeholder-breadcrumbs / layout",
+      "wordpress_template_partial_target": "template-parts/navigation/breadcrumbs.php",
+      "acf_data_source": "derived from hierarchy",
+      "static_fallback_behavior": "Render empty/minimal markup when ACF empty; no fatal",
+      "first_wave_integration_priority": "WAVE_1",
+      "validation_method": "Template render + visual QA URL checklist",
+      "risk": "MEDIUM",
+      "runtime_integration_performed": false
+    },
+    {
+      "section_type": "gallery_media",
+      "v9_source_selector_or_file": "o-centre gallery / home gallery",
+      "wordpress_template_partial_target": "institutional / front-page partials",
+      "acf_data_source": "infrastructure_g0_g5 / home_gallery_media",
+      "static_fallback_behavior": "Render empty/minimal markup when ACF empty; no fatal",
+      "first_wave_integration_priority": "WAVE_3",
+      "validation_method": "Template render + visual QA URL checklist",
+      "risk": "LOW",
+      "runtime_integration_performed": false
+    },
+    {
+      "section_type": "blog_article_sections",
+      "v9_source_selector_or_file": "blog-article-content / lower-stack",
+      "wordpress_template_partial_target": "single.php",
+      "acf_data_source": "post_content + group_fp02_blog_post_article_meta",
+      "static_fallback_behavior": "Render empty/minimal markup when ACF empty; no fatal",
+      "first_wave_integration_priority": "WAVE_4",
+      "validation_method": "Template render + visual QA URL checklist",
+      "risk": "LOW",
+      "runtime_integration_performed": false
+    },
+    {
+      "section_type": "placeholder_notice",
+      "v9_source_selector_or_file": "placeholder-page.html",
+      "wordpress_template_partial_target": "service/institutional templates",
+      "acf_data_source": "service_layout_variant=placeholder / institutional_placeholder_notice",
+      "static_fallback_behavior": "Render empty/minimal markup when ACF empty; no fatal",
+      "first_wave_integration_priority": "WAVE_1",
+      "validation_method": "Template render + visual QA URL checklist",
+      "risk": "MEDIUM",
+      "runtime_integration_performed": false
+    },
+    {
+      "section_type": "legal_document",
+      "v9_source_selector_or_file": "legal-document-page + legal/content/*",
+      "wordpress_template_partial_target": "page-templates/legal.php",
+      "acf_data_source": "post_content + group_fp02_page_legal",
+      "static_fallback_behavior": "Render empty/minimal markup when ACF empty; no fatal",
+      "first_wave_integration_priority": "WAVE_4",
+      "validation_method": "Template render + visual QA URL checklist",
+      "risk": "LOW",
+      "runtime_integration_performed": false
+    }
+  ],
+  "result": "PASS"
+}

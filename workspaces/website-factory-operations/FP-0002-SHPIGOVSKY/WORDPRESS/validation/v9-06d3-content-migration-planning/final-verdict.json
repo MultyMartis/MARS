@@ -1,0 +1,167 @@
+{
+  "phase": "V9-06D.3",
+  "verdict": "PASS",
+  "failure_count": 0,
+  "failures": [],
+  "checks": [
+    {
+      "check": "exact_x_volume",
+      "result": "PASS",
+      "detail": "AI WS / X: verified in preflight"
+    },
+    {
+      "check": "local_remote_head_sync",
+      "result": "PASS",
+      "detail": "26e1fc93f494fb86aa711d011499cb8178305534"
+    },
+    {
+      "check": "runtime_inspected_readonly",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "v9_static_inspected_readonly",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "all_31_routes_mapped",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "all_15_services_mapped",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "all_page_owned_routes_mapped",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "services_hub_page_owned",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "specyalisty_legacy_deferred",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "no_immediate_redirects",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "no_immediate_rewrite_flush",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "all_13_acf_groups_covered",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "no_flexible_content",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "no_acf_extended_pro_usage",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "first_writable_wave_defined",
+      "result": "PASS",
+      "detail": "V9-06D.4 plan present"
+    },
+    {
+      "check": "rollback_plan_defined",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "runtime_writes_0",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "database_writes_0",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "wpilot_writes_0",
+      "result": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "v9_source_dist_writes_0",
+      "result": "PASS",
+      "detail": ""
+    }
+  ],
+  "suites": [
+    {
+      "suite": "preflight",
+      "result": "PASS"
+    },
+    {
+      "suite": "runtime_readonly_inventory",
+      "result": "PASS"
+    },
+    {
+      "suite": "v9_static_content_inventory",
+      "result": "PASS"
+    },
+    {
+      "suite": "route_object_matrix",
+      "result": "PASS"
+    },
+    {
+      "suite": "page_migration_plan",
+      "result": "PASS"
+    },
+    {
+      "suite": "service_migration_plan",
+      "result": "PASS"
+    },
+    {
+      "suite": "acf_field_fill_strategy",
+      "result": "PASS"
+    },
+    {
+      "suite": "v9_section_integration_strategy",
+      "result": "PASS"
+    },
+    {
+      "suite": "minimal_visual_content_seed_plan",
+      "result": "PASS"
+    },
+    {
+      "suite": "legacy_redirect_rewrite_plan",
+      "result": "PASS"
+    },
+    {
+      "suite": "future_validation_plan",
+      "result": "PASS"
+    },
+    {
+      "suite": "future_rollback_plan",
+      "result": "PASS"
+    },
+    {
+      "suite": "no_runtime_mutation",
+      "result": "PASS"
+    }
+  ],
+  "runtime_writes": 0,
+  "database_writes": 0,
+  "content_migration_performed": false,
+  "v9_integration_started": false,
+  "v9_06d4_authorized": false
+}

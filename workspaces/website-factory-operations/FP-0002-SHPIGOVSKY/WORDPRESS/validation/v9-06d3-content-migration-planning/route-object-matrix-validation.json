@@ -1,0 +1,51 @@
+{
+  "route_count": 31,
+  "mapped_routes": 31,
+  "unmapped_routes": 0,
+  "type_summary": {
+    "PAGE": {
+      "count": 10,
+      "mapped": 10,
+      "ambiguous": 0,
+      "deferred": 0,
+      "result": "PASS"
+    },
+    "SERVICE": {
+      "count": 15,
+      "mapped": 15,
+      "ambiguous": 0,
+      "deferred": 0,
+      "result": "PASS"
+    },
+    "POSTS_PAGE": {
+      "count": 1,
+      "mapped": 1,
+      "ambiguous": 0,
+      "deferred": 0,
+      "result": "PASS"
+    },
+    "POST": {
+      "count": 1,
+      "mapped": 1,
+      "ambiguous": 0,
+      "deferred": 0,
+      "result": "PASS"
+    },
+    "LEGAL_PAGE": {
+      "count": 4,
+      "mapped": 4,
+      "ambiguous": 0,
+      "deferred": 4,
+      "result": "PASS"
+    },
+    "LEGACY_DEFERRED": {
+      "count": 1,
+      "mapped": 1,
+      "ambiguous": 0,
+      "deferred": 1,
+      "result": "PASS",
+      "note": "Outside 31-route set; Page ID 10 /specyalisty/"
+    }
+  },
+  "result": "PASS"
+}

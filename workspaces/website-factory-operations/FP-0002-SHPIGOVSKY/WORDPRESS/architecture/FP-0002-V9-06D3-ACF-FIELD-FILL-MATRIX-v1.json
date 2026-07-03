@@ -1,0 +1,1549 @@
+{
+  "schema": "fp-0002-v9-06d3-acf-field-fill-matrix",
+  "version": "1.0.0",
+  "phase": "V9-06D.3",
+  "group_count": 13,
+  "flexible_content": "NOT_USED",
+  "unbounded_repeaters": "NOT_USED",
+  "acf_extended_pro_usage": "NOT_USED",
+  "options_values_immediate_write": false,
+  "groups": [
+    {
+      "group_key": "group_fp02_service_layout_hero",
+      "title": "Service — Layout and Hero",
+      "object_type": "service",
+      "target_objects": [
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "field_count": 7,
+      "fields": [
+        {
+          "key": "field_fp02_service_layout_variant",
+          "name": "service_layout_variant",
+          "label": "Вариант макета",
+          "type": "select",
+          "required": true,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_hero_eyebrow_service",
+          "name": "hero_eyebrow",
+          "label": "Надзаголовок",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_hero_title_override_service",
+          "name": "hero_title_override",
+          "label": "Заголовок H1 override",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_hero_lead_service",
+          "name": "hero_lead",
+          "label": "Лид",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_hero_media_service",
+          "name": "hero_media",
+          "label": "Медиа hero",
+          "type": "image",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_hero_cta_label_service",
+          "name": "hero_cta_label",
+          "label": "CTA label",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_hero_cta_target_service",
+          "name": "hero_cta_target",
+          "label": "CTA target",
+          "type": "url",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        }
+      ],
+      "fields_purpose": "Service layout variant and hero fields",
+      "required_for_wave_1": [
+        "service_layout_variant",
+        "hero_lead"
+      ],
+      "required_for_full_migration": [
+        "service_layout_variant",
+        "hero_eyebrow",
+        "hero_title_override",
+        "hero_lead",
+        "hero_media",
+        "hero_cta_label",
+        "hero_cta_target"
+      ],
+      "source_extraction_method": "Manual/scripted extract from V9 src HTML sections into bounded ACF fields",
+      "allowed_empty_state": "Empty allowed for non-wave-1 fields; wave-1 targets require minimal fill in D.4",
+      "validation_rule": "Field present in local JSON; repeater rows <= max; no Flexible Content; no ACF Extended PRO fields",
+      "repeater_max_rows": {},
+      "demo_legal_blocker": false,
+      "flexible_content": false,
+      "unbounded_repeaters": false,
+      "acf_extended_pro_usage": false,
+      "immediate_write_in_d3": false
+    },
+    {
+      "group_key": "group_fp02_service_structured_sections",
+      "title": "Service — Structured Sections",
+      "object_type": "service",
+      "target_objects": [
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "field_count": 9,
+      "fields": [
+        {
+          "key": "field_fp02_intro_text_service",
+          "name": "intro_text",
+          "label": "Intro text",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_intro_note_service",
+          "name": "intro_note",
+          "label": "Intro note",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_signs_items_service",
+          "name": "signs_items",
+          "label": "Признаки / симптомы",
+          "type": "repeater",
+          "required": false,
+          "max_rows": 12,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_signs_item_title_service",
+          "name": "title",
+          "label": "Заголовок",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": "signs_items"
+        },
+        {
+          "key": "field_fp02_signs_item_text_service",
+          "name": "text",
+          "label": "Текст",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": "signs_items"
+        },
+        {
+          "key": "field_fp02_programme_items_service",
+          "name": "programme_items",
+          "label": "Пункты программы",
+          "type": "repeater",
+          "required": false,
+          "max_rows": 6,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_programme_item_title_service",
+          "name": "title",
+          "label": "Заголовок",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": "programme_items"
+        },
+        {
+          "key": "field_fp02_programme_item_text_service",
+          "name": "text",
+          "label": "Текст",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": "programme_items"
+        },
+        {
+          "key": "field_fp02_stages_service",
+          "name": "stages",
+          "label": "Этапы",
+          "type": "repeater",
+          "required": false,
+          "max_rows": 8,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_stage_title_service",
+          "name": "title",
+          "label": "Заголовок",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": "stages"
+        },
+        {
+          "key": "field_fp02_stage_text_service",
+          "name": "text",
+          "label": "Текст",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": "stages"
+        },
+        {
+          "key": "field_fp02_cta_title_service",
+          "name": "cta_title",
+          "label": "CTA title",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_cta_text_service",
+          "name": "cta_text",
+          "label": "CTA text",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_cta_button_label_service",
+          "name": "cta_button_label",
+          "label": "CTA button label",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_cta_button_target_service",
+          "name": "cta_button_target",
+          "label": "CTA button target",
+          "type": "url",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        }
+      ],
+      "fields_purpose": "Intro, signs, programme, stages, CTA",
+      "required_for_wave_1": [
+        "intro_text"
+      ],
+      "required_for_full_migration": [
+        "intro_text",
+        "intro_note",
+        "signs_items",
+        "programme_items",
+        "stages",
+        "cta_title",
+        "cta_text",
+        "cta_button_label",
+        "cta_button_target"
+      ],
+      "source_extraction_method": "Manual/scripted extract from V9 src HTML sections into bounded ACF fields",
+      "allowed_empty_state": "Empty allowed for non-wave-1 fields; wave-1 targets require minimal fill in D.4",
+      "validation_rule": "Field present in local JSON; repeater rows <= max; no Flexible Content; no ACF Extended PRO fields",
+      "repeater_max_rows": {
+        "signs_items": 12,
+        "programme_items": 6,
+        "stages": 8
+      },
+      "demo_legal_blocker": false,
+      "flexible_content": false,
+      "unbounded_repeaters": false,
+      "acf_extended_pro_usage": false,
+      "immediate_write_in_d3": false
+    },
+    {
+      "group_key": "group_fp02_service_faq",
+      "title": "Service — FAQ",
+      "object_type": "service",
+      "target_objects": [
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "field_count": 1,
+      "fields": [
+        {
+          "key": "field_fp02_faq_items_service",
+          "name": "faq_items",
+          "label": "FAQ",
+          "type": "repeater",
+          "required": false,
+          "max_rows": 15,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_faq_question_service",
+          "name": "question",
+          "label": "Вопрос",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": "faq_items"
+        },
+        {
+          "key": "field_fp02_faq_answer_service",
+          "name": "answer",
+          "label": "Ответ",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": "faq_items"
+        }
+      ],
+      "fields_purpose": "Bounded FAQ repeater",
+      "required_for_wave_1": [],
+      "required_for_full_migration": [
+        "faq_items"
+      ],
+      "source_extraction_method": "Manual/scripted extract from V9 src HTML sections into bounded ACF fields",
+      "allowed_empty_state": "Empty allowed for non-wave-1 fields; wave-1 targets require minimal fill in D.4",
+      "validation_rule": "Field present in local JSON; repeater rows <= max; no Flexible Content; no ACF Extended PRO fields",
+      "repeater_max_rows": {
+        "faq_items": 15
+      },
+      "demo_legal_blocker": false,
+      "flexible_content": false,
+      "unbounded_repeaters": false,
+      "acf_extended_pro_usage": false,
+      "immediate_write_in_d3": false
+    },
+    {
+      "group_key": "group_fp02_service_relationships",
+      "title": "Service — Relationships / Related Services",
+      "object_type": "service",
+      "target_objects": [
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "field_count": 1,
+      "fields": [
+        {
+          "key": "field_fp02_manual_related_services",
+          "name": "manual_related_services",
+          "label": "Связанные услуги вручную",
+          "type": "relationship",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        }
+      ],
+      "fields_purpose": "Manual related services relationship",
+      "required_for_wave_1": [],
+      "required_for_full_migration": [
+        "manual_related_services"
+      ],
+      "source_extraction_method": "Manual/scripted extract from V9 src HTML sections into bounded ACF fields",
+      "allowed_empty_state": "Empty allowed for non-wave-1 fields; wave-1 targets require minimal fill in D.4",
+      "validation_rule": "Field present in local JSON; repeater rows <= max; no Flexible Content; no ACF Extended PRO fields",
+      "repeater_max_rows": {},
+      "demo_legal_blocker": false,
+      "flexible_content": false,
+      "unbounded_repeaters": false,
+      "acf_extended_pro_usage": false,
+      "immediate_write_in_d3": false
+    },
+    {
+      "group_key": "group_fp02_page_home",
+      "title": "Page — Home",
+      "object_type": "page",
+      "target_objects": [
+        4
+      ],
+      "field_count": 10,
+      "fields": [
+        {
+          "key": "field_fp02_home_hero_slides",
+          "name": "home_hero_slides",
+          "label": "Hero slides",
+          "type": "repeater",
+          "required": false,
+          "max_rows": 5,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_home_hero_title",
+          "name": "title",
+          "label": "Заголовок",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": "home_hero_slides"
+        },
+        {
+          "key": "field_fp02_home_hero_text",
+          "name": "text",
+          "label": "Текст",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": "home_hero_slides"
+        },
+        {
+          "key": "field_fp02_home_hero_image",
+          "name": "image",
+          "label": "Изображение",
+          "type": "image",
+          "required": false,
+          "max_rows": null,
+          "parent": "home_hero_slides"
+        },
+        {
+          "key": "field_fp02_home_service_nav_items",
+          "name": "home_service_nav_items",
+          "label": "Настройки service navigation / accordion",
+          "type": "repeater",
+          "required": false,
+          "max_rows": 6,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_home_service_nav_title",
+          "name": "title",
+          "label": "Заголовок",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": "home_service_nav_items"
+        },
+        {
+          "key": "field_fp02_home_service_nav_text",
+          "name": "text",
+          "label": "Текст",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": "home_service_nav_items"
+        },
+        {
+          "key": "field_fp02_home_advantages",
+          "name": "home_advantages",
+          "label": "Advantages / trust",
+          "type": "repeater",
+          "required": false,
+          "max_rows": 8,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_home_advantages_title",
+          "name": "title",
+          "label": "Заголовок",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": "home_advantages"
+        },
+        {
+          "key": "field_fp02_home_advantages_text",
+          "name": "text",
+          "label": "Текст",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": "home_advantages"
+        },
+        {
+          "key": "field_fp02_home_intro_bands",
+          "name": "home_intro_bands",
+          "label": "Intro bands",
+          "type": "repeater",
+          "required": false,
+          "max_rows": 6,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_home_intro_bands_title",
+          "name": "title",
+          "label": "Заголовок",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": "home_intro_bands"
+        },
+        {
+          "key": "field_fp02_home_intro_bands_text",
+          "name": "text",
+          "label": "Текст",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": "home_intro_bands"
+        },
+        {
+          "key": "field_fp02_home_reviews_teaser",
+          "name": "home_reviews_teaser",
+          "label": "Reviews teaser",
+          "type": "repeater",
+          "required": false,
+          "max_rows": 6,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_home_reviews_teaser_title",
+          "name": "title",
+          "label": "Заголовок",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": "home_reviews_teaser"
+        },
+        {
+          "key": "field_fp02_home_reviews_teaser_text",
+          "name": "text",
+          "label": "Текст",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": "home_reviews_teaser"
+        },
+        {
+          "key": "field_fp02_home_blog_teaser_enabled",
+          "name": "home_blog_teaser_enabled",
+          "label": "Blog teaser enabled",
+          "type": "true_false",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_home_gallery_media",
+          "name": "home_gallery_media",
+          "label": "Gallery / media bands",
+          "type": "repeater",
+          "required": false,
+          "max_rows": 12,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_home_gallery_item_title",
+          "name": "title",
+          "label": "Заголовок",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": "home_gallery_media"
+        },
+        {
+          "key": "field_fp02_home_gallery_item_text",
+          "name": "text",
+          "label": "Текст",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": "home_gallery_media"
+        },
+        {
+          "key": "field_fp02_home_gallery_item_media",
+          "name": "media",
+          "label": "Медиа",
+          "type": "image",
+          "required": false,
+          "max_rows": null,
+          "parent": "home_gallery_media"
+        },
+        {
+          "key": "field_fp02_home_faq_items",
+          "name": "home_faq_items",
+          "label": "FAQ",
+          "type": "repeater",
+          "required": false,
+          "max_rows": 15,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_home_faq_question",
+          "name": "question",
+          "label": "Вопрос",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": "home_faq_items"
+        },
+        {
+          "key": "field_fp02_home_faq_answer",
+          "name": "answer",
+          "label": "Ответ",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": "home_faq_items"
+        },
+        {
+          "key": "field_fp02_home_cta_title",
+          "name": "home_cta_title",
+          "label": "CTA title",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_home_cta_text",
+          "name": "home_cta_text",
+          "label": "CTA text",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        }
+      ],
+      "fields_purpose": "Home page bounded sections",
+      "required_for_wave_1": [
+        "home_hero_slides",
+        "home_service_nav_items",
+        "home_cta_title",
+        "home_cta_text"
+      ],
+      "required_for_full_migration": [
+        "home_hero_slides",
+        "home_service_nav_items",
+        "home_advantages",
+        "home_intro_bands",
+        "home_reviews_teaser",
+        "home_blog_teaser_enabled",
+        "home_gallery_media",
+        "home_faq_items",
+        "home_cta_title",
+        "home_cta_text"
+      ],
+      "source_extraction_method": "Manual/scripted extract from V9 src HTML sections into bounded ACF fields",
+      "allowed_empty_state": "Empty allowed for non-wave-1 fields; wave-1 targets require minimal fill in D.4",
+      "validation_rule": "Field present in local JSON; repeater rows <= max; no Flexible Content; no ACF Extended PRO fields",
+      "repeater_max_rows": {
+        "home_hero_slides": 5,
+        "home_service_nav_items": 6,
+        "home_advantages": 8,
+        "home_intro_bands": 6,
+        "home_reviews_teaser": 6,
+        "home_gallery_media": 12,
+        "home_faq_items": 15
+      },
+      "demo_legal_blocker": false,
+      "flexible_content": false,
+      "unbounded_repeaters": false,
+      "acf_extended_pro_usage": false,
+      "immediate_write_in_d3": false
+    },
+    {
+      "group_key": "group_fp02_page_services_hub",
+      "title": "Page — Services Hub",
+      "object_type": "page",
+      "target_objects": [
+        5
+      ],
+      "field_count": 4,
+      "fields": [
+        {
+          "key": "field_fp02_services_hub_intro",
+          "name": "services_hub_intro",
+          "label": "Intro",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_services_hub_query_mode",
+          "name": "services_hub_query_mode",
+          "label": "Query display mode",
+          "type": "select",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_services_hub_show_placeholders",
+          "name": "services_hub_show_placeholders",
+          "label": "Show placeholder services",
+          "type": "true_false",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_services_hub_faq_items",
+          "name": "services_hub_faq_items",
+          "label": "FAQ",
+          "type": "repeater",
+          "required": false,
+          "max_rows": 15,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_services_hub_faq_question",
+          "name": "question",
+          "label": "Вопрос",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": "services_hub_faq_items"
+        },
+        {
+          "key": "field_fp02_services_hub_faq_answer",
+          "name": "answer",
+          "label": "Ответ",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": "services_hub_faq_items"
+        }
+      ],
+      "fields_purpose": "Services hub intro/query/FAQ",
+      "required_for_wave_1": [
+        "services_hub_intro",
+        "services_hub_query_mode",
+        "services_hub_show_placeholders"
+      ],
+      "required_for_full_migration": [
+        "services_hub_intro",
+        "services_hub_query_mode",
+        "services_hub_show_placeholders",
+        "services_hub_faq_items"
+      ],
+      "source_extraction_method": "Manual/scripted extract from V9 src HTML sections into bounded ACF fields",
+      "allowed_empty_state": "Empty allowed for non-wave-1 fields; wave-1 targets require minimal fill in D.4",
+      "validation_rule": "Field present in local JSON; repeater rows <= max; no Flexible Content; no ACF Extended PRO fields",
+      "repeater_max_rows": {
+        "services_hub_faq_items": 15
+      },
+      "demo_legal_blocker": false,
+      "flexible_content": false,
+      "unbounded_repeaters": false,
+      "acf_extended_pro_usage": false,
+      "immediate_write_in_d3": false
+    },
+    {
+      "group_key": "group_fp02_page_institutional",
+      "title": "Page — Institutional",
+      "object_type": "page",
+      "target_objects": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "field_count": 4,
+      "fields": [
+        {
+          "key": "field_fp02_institutional_placeholder_notice",
+          "name": "institutional_placeholder_notice",
+          "label": "Placeholder notice",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_institutional_content_sections",
+          "name": "institutional_content_sections",
+          "label": "Content sections",
+          "type": "repeater",
+          "required": false,
+          "max_rows": 8,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_institutional_section_title",
+          "name": "title",
+          "label": "Заголовок",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": "institutional_content_sections"
+        },
+        {
+          "key": "field_fp02_institutional_section_text",
+          "name": "text",
+          "label": "Текст",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": "institutional_content_sections"
+        },
+        {
+          "key": "field_fp02_institutional_section_media",
+          "name": "media",
+          "label": "Медиа",
+          "type": "image",
+          "required": false,
+          "max_rows": null,
+          "parent": "institutional_content_sections"
+        },
+        {
+          "key": "field_fp02_institutional_stages",
+          "name": "institutional_stages",
+          "label": "Stages",
+          "type": "repeater",
+          "required": false,
+          "max_rows": 8,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_institutional_stages_title",
+          "name": "title",
+          "label": "Заголовок",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": "institutional_stages"
+        },
+        {
+          "key": "field_fp02_institutional_stages_text",
+          "name": "text",
+          "label": "Текст",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": "institutional_stages"
+        },
+        {
+          "key": "field_fp02_infrastructure_g0_g5",
+          "name": "infrastructure_g0_g5",
+          "label": "Infrastructure G0-G5",
+          "type": "repeater",
+          "required": false,
+          "max_rows": 6,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_infrastructure_g_title",
+          "name": "title",
+          "label": "Заголовок",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": "infrastructure_g0_g5"
+        },
+        {
+          "key": "field_fp02_infrastructure_g_text",
+          "name": "text",
+          "label": "Текст",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": "infrastructure_g0_g5"
+        },
+        {
+          "key": "field_fp02_infrastructure_g_media",
+          "name": "media",
+          "label": "Медиа",
+          "type": "image",
+          "required": false,
+          "max_rows": null,
+          "parent": "infrastructure_g0_g5"
+        }
+      ],
+      "fields_purpose": "Institutional sections/stages/gallery",
+      "required_for_wave_1": [],
+      "required_for_full_migration": [
+        "institutional_placeholder_notice",
+        "institutional_content_sections",
+        "institutional_stages",
+        "infrastructure_g0_g5"
+      ],
+      "source_extraction_method": "Manual/scripted extract from V9 src HTML sections into bounded ACF fields",
+      "allowed_empty_state": "Empty allowed for non-wave-1 fields; wave-1 targets require minimal fill in D.4",
+      "validation_rule": "Field present in local JSON; repeater rows <= max; no Flexible Content; no ACF Extended PRO fields",
+      "repeater_max_rows": {
+        "institutional_content_sections": 8,
+        "institutional_stages": 8,
+        "infrastructure_g0_g5": 6
+      },
+      "demo_legal_blocker": false,
+      "flexible_content": false,
+      "unbounded_repeaters": false,
+      "acf_extended_pro_usage": false,
+      "immediate_write_in_d3": false
+    },
+    {
+      "group_key": "group_fp02_page_contacts",
+      "title": "Page — Contacts",
+      "object_type": "page",
+      "target_objects": [
+        20
+      ],
+      "field_count": 6,
+      "fields": [
+        {
+          "key": "field_fp02_contacts_address",
+          "name": "contacts_address",
+          "label": "Address",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_contacts_map_url",
+          "name": "contacts_map_url",
+          "label": "Map URL",
+          "type": "url",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_contacts_phones",
+          "name": "contacts_phones",
+          "label": "Phones",
+          "type": "repeater",
+          "required": false,
+          "max_rows": 4,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_contacts_phone_label",
+          "name": "label",
+          "label": "Label",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": "contacts_phones"
+        },
+        {
+          "key": "field_fp02_contacts_phone_value",
+          "name": "phone",
+          "label": "Phone",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": "contacts_phones"
+        },
+        {
+          "key": "field_fp02_contacts_messengers",
+          "name": "contacts_messengers",
+          "label": "Messengers",
+          "type": "repeater",
+          "required": false,
+          "max_rows": 6,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_contacts_messenger_label",
+          "name": "label",
+          "label": "Label",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": "contacts_messengers"
+        },
+        {
+          "key": "field_fp02_contacts_messenger_url",
+          "name": "url",
+          "label": "URL",
+          "type": "url",
+          "required": false,
+          "max_rows": null,
+          "parent": "contacts_messengers"
+        },
+        {
+          "key": "field_fp02_contacts_blocks",
+          "name": "contacts_blocks",
+          "label": "Contact blocks",
+          "type": "repeater",
+          "required": false,
+          "max_rows": 8,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_contacts_block_title",
+          "name": "title",
+          "label": "Заголовок",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": "contacts_blocks"
+        },
+        {
+          "key": "field_fp02_contacts_block_text",
+          "name": "text",
+          "label": "Текст",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": "contacts_blocks"
+        },
+        {
+          "key": "field_fp02_contacts_form_intro",
+          "name": "contacts_form_intro",
+          "label": "Form intro",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        }
+      ],
+      "fields_purpose": "Contacts page fields",
+      "required_for_wave_1": [
+        "contacts_address",
+        "contacts_phones",
+        "contacts_form_intro"
+      ],
+      "required_for_full_migration": [
+        "contacts_address",
+        "contacts_map_url",
+        "contacts_phones",
+        "contacts_messengers",
+        "contacts_blocks",
+        "contacts_form_intro"
+      ],
+      "source_extraction_method": "Manual/scripted extract from V9 src HTML sections into bounded ACF fields",
+      "allowed_empty_state": "Empty allowed for non-wave-1 fields; wave-1 targets require minimal fill in D.4",
+      "validation_rule": "Field present in local JSON; repeater rows <= max; no Flexible Content; no ACF Extended PRO fields",
+      "repeater_max_rows": {
+        "contacts_phones": 4,
+        "contacts_messengers": 6,
+        "contacts_blocks": 8
+      },
+      "demo_legal_blocker": false,
+      "flexible_content": false,
+      "unbounded_repeaters": false,
+      "acf_extended_pro_usage": false,
+      "immediate_write_in_d3": false
+    },
+    {
+      "group_key": "group_fp02_page_reviews",
+      "title": "Page — Reviews",
+      "object_type": "page",
+      "target_objects": [
+        18
+      ],
+      "field_count": 1,
+      "fields": [
+        {
+          "key": "field_fp02_reviews_items",
+          "name": "reviews_items",
+          "label": "Reviews",
+          "type": "repeater",
+          "required": false,
+          "max_rows": 50,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_review_author_label",
+          "name": "author_label",
+          "label": "Author label",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": "reviews_items"
+        },
+        {
+          "key": "field_fp02_review_text",
+          "name": "text",
+          "label": "Review text",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": "reviews_items"
+        },
+        {
+          "key": "field_fp02_review_meta",
+          "name": "metadata",
+          "label": "Metadata",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": "reviews_items"
+        },
+        {
+          "key": "field_fp02_review_source",
+          "name": "source",
+          "label": "Source",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": "reviews_items"
+        }
+      ],
+      "fields_purpose": "Reviews repeater",
+      "required_for_wave_1": [],
+      "required_for_full_migration": [
+        "reviews_items"
+      ],
+      "source_extraction_method": "Manual/scripted extract from V9 src HTML sections into bounded ACF fields",
+      "allowed_empty_state": "Empty allowed for non-wave-1 fields; wave-1 targets require minimal fill in D.4",
+      "validation_rule": "Field present in local JSON; repeater rows <= max; no Flexible Content; no ACF Extended PRO fields",
+      "repeater_max_rows": {
+        "reviews_items": 50
+      },
+      "demo_legal_blocker": false,
+      "flexible_content": false,
+      "unbounded_repeaters": false,
+      "acf_extended_pro_usage": false,
+      "immediate_write_in_d3": false
+    },
+    {
+      "group_key": "group_fp02_page_legal",
+      "title": "Page — Legal",
+      "object_type": "page",
+      "target_objects": [
+        3,
+        22,
+        23,
+        24
+      ],
+      "field_count": 5,
+      "fields": [
+        {
+          "key": "field_fp02_legal_status",
+          "name": "legal_status",
+          "label": "Legal status",
+          "type": "select",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_legal_demo_marker",
+          "name": "legal_demo_marker",
+          "label": "Demo marker",
+          "type": "true_false",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_legal_effective_date",
+          "name": "legal_effective_date",
+          "label": "Effective date",
+          "type": "date_picker",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_legal_version",
+          "name": "legal_version",
+          "label": "Version",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_legal_production_blocker",
+          "name": "legal_production_blocker",
+          "label": "Production blocker flag",
+          "type": "true_false",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        }
+      ],
+      "fields_purpose": "Legal status/demo/blocker meta",
+      "required_for_wave_1": [],
+      "required_for_full_migration": [
+        "legal_status",
+        "legal_demo_marker",
+        "legal_effective_date",
+        "legal_version",
+        "legal_production_blocker"
+      ],
+      "source_extraction_method": "Do not migrate DEMO legal bodies; set blocker flags only in later legal wave",
+      "allowed_empty_state": "Legal meta may be empty until WAVE_4; body remains foundation/demo",
+      "validation_rule": "Field present in local JSON; repeater rows <= max; no Flexible Content; no ACF Extended PRO fields",
+      "repeater_max_rows": {},
+      "demo_legal_blocker": true,
+      "flexible_content": false,
+      "unbounded_repeaters": false,
+      "acf_extended_pro_usage": false,
+      "immediate_write_in_d3": false
+    },
+    {
+      "group_key": "group_fp02_blog_post_article_meta",
+      "title": "Blog Post — Article Meta",
+      "object_type": "post",
+      "target_objects": [
+        "PLANNED_POST_FIXTURE"
+      ],
+      "field_count": 6,
+      "fields": [
+        {
+          "key": "field_fp02_article_source_label",
+          "name": "article_source_label",
+          "label": "Source label",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_article_reading_time",
+          "name": "article_reading_time",
+          "label": "Reading time",
+          "type": "number",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_article_disclaimer",
+          "name": "article_disclaimer",
+          "label": "Article disclaimer",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_article_hide_author_public",
+          "name": "article_hide_author_public",
+          "label": "Hide author publicly",
+          "type": "true_false",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_article_show_date_public",
+          "name": "article_show_date_public",
+          "label": "Show date publicly",
+          "type": "true_false",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_related_posts",
+          "name": "related_posts",
+          "label": "Related posts",
+          "type": "relationship",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        }
+      ],
+      "fields_purpose": "Blog article meta",
+      "required_for_wave_1": [],
+      "required_for_full_migration": [
+        "article_source_label",
+        "article_reading_time",
+        "article_disclaimer",
+        "article_hide_author_public",
+        "article_show_date_public",
+        "related_posts"
+      ],
+      "source_extraction_method": "Manual/scripted extract from V9 src HTML sections into bounded ACF fields",
+      "allowed_empty_state": "Empty allowed for non-wave-1 fields; wave-1 targets require minimal fill in D.4",
+      "validation_rule": "Field present in local JSON; repeater rows <= max; no Flexible Content; no ACF Extended PRO fields",
+      "repeater_max_rows": {},
+      "demo_legal_blocker": false,
+      "flexible_content": false,
+      "unbounded_repeaters": false,
+      "acf_extended_pro_usage": false,
+      "immediate_write_in_d3": false
+    },
+    {
+      "group_key": "group_fp02_site_options_contacts",
+      "title": "Site Options — Contacts and Organisation",
+      "object_type": "options",
+      "target_objects": [
+        "fp02-site-settings"
+      ],
+      "field_count": 9,
+      "fields": [
+        {
+          "key": "field_fp02_org_name",
+          "name": "organisation_name",
+          "label": "Organisation name",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_phone_primary",
+          "name": "phone_primary",
+          "label": "Primary phone",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_phone_secondary",
+          "name": "phone_secondary",
+          "label": "Secondary phone",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_site_email",
+          "name": "site_email",
+          "label": "Email",
+          "type": "email",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_site_address",
+          "name": "site_address",
+          "label": "Address",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_opening_hours",
+          "name": "opening_hours",
+          "label": "Opening hours",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_map_link",
+          "name": "map_link",
+          "label": "Map link",
+          "type": "url",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_social_links",
+          "name": "social_links",
+          "label": "Messengers / socials",
+          "type": "repeater",
+          "required": false,
+          "max_rows": 8,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_social_label",
+          "name": "label",
+          "label": "Label",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": "social_links"
+        },
+        {
+          "key": "field_fp02_social_url",
+          "name": "url",
+          "label": "URL",
+          "type": "url",
+          "required": false,
+          "max_rows": null,
+          "parent": "social_links"
+        },
+        {
+          "key": "field_fp02_legal_org_identifiers",
+          "name": "legal_org_identifiers",
+          "label": "Legal organisation identifiers",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        }
+      ],
+      "fields_purpose": "Global contacts/org options",
+      "required_for_wave_1": [],
+      "required_for_full_migration": [
+        "organisation_name",
+        "phone_primary",
+        "phone_secondary",
+        "site_email",
+        "site_address",
+        "opening_hours",
+        "map_link",
+        "social_links",
+        "legal_org_identifiers"
+      ],
+      "source_extraction_method": "Extract from V9 layout/footer/modal; operator review; no D.3 write",
+      "allowed_empty_state": "Empty allowed until options seed phase; templates must not fatally fail",
+      "validation_rule": "Field present in local JSON; repeater rows <= max; no Flexible Content; no ACF Extended PRO fields",
+      "repeater_max_rows": {
+        "social_links": 8
+      },
+      "demo_legal_blocker": false,
+      "flexible_content": false,
+      "unbounded_repeaters": false,
+      "acf_extended_pro_usage": false,
+      "immediate_write_in_d3": false
+    },
+    {
+      "group_key": "group_fp02_site_options_modal_cta",
+      "title": "Site Options — Modal and Global CTA",
+      "object_type": "options",
+      "target_objects": [
+        "fp02-site-settings"
+      ],
+      "field_count": 7,
+      "fields": [
+        {
+          "key": "field_fp02_default_callback_title",
+          "name": "default_callback_title",
+          "label": "Default callback title",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_default_callback_text",
+          "name": "default_callback_text",
+          "label": "Default callback text",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_default_button_label",
+          "name": "default_button_label",
+          "label": "Default button label",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_default_secondary_button_label",
+          "name": "default_secondary_button_label",
+          "label": "Default secondary button label",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_default_consent_text_reference",
+          "name": "default_consent_text_reference",
+          "label": "Consent text reference",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_global_cta_title",
+          "name": "global_cta_title",
+          "label": "Global CTA title",
+          "type": "text",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        },
+        {
+          "key": "field_fp02_global_cta_text",
+          "name": "global_cta_text",
+          "label": "Global CTA text",
+          "type": "textarea",
+          "required": false,
+          "max_rows": null,
+          "parent": null
+        }
+      ],
+      "fields_purpose": "Global modal/CTA options",
+      "required_for_wave_1": [],
+      "required_for_full_migration": [
+        "default_callback_title",
+        "default_callback_text",
+        "default_button_label",
+        "default_secondary_button_label",
+        "default_consent_text_reference",
+        "global_cta_title",
+        "global_cta_text"
+      ],
+      "source_extraction_method": "Extract from V9 layout/footer/modal; operator review; no D.3 write",
+      "allowed_empty_state": "Empty allowed until options seed phase; templates must not fatally fail",
+      "validation_rule": "Field present in local JSON; repeater rows <= max; no Flexible Content; no ACF Extended PRO fields",
+      "repeater_max_rows": {},
+      "demo_legal_blocker": false,
+      "flexible_content": false,
+      "unbounded_repeaters": false,
+      "acf_extended_pro_usage": false,
+      "immediate_write_in_d3": false
+    }
+  ],
+  "result": "PASS"
+}

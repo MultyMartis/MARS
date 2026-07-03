@@ -1,0 +1,558 @@
+{
+  "schema": "fp-0002-v9-06d3-page-migration-matrix",
+  "version": "1.0.0",
+  "phase": "V9-06D.3",
+  "page_owned_routes": [
+    {
+      "route_id": "ROUTE-01",
+      "route_path": "/",
+      "object_id": 4,
+      "title": "Главная",
+      "keep_as_page": true,
+      "target_template": "front-page.php",
+      "acf_groups": [
+        "group_fp02_page_home"
+      ],
+      "first_wave_fields": [
+        "home_hero_slides[0].title",
+        "home_hero_slides[0].text",
+        "home_service_nav_items[0..2].title",
+        "home_cta_title",
+        "home_cta_text"
+      ],
+      "required_source_sections": [
+        "hero",
+        "service_nav",
+        "advantages",
+        "reviews_teaser",
+        "faq",
+        "cta"
+      ],
+      "content_source": "src/pages/index.html",
+      "preserve_current_content": true,
+      "overwrite_current_content_later": true,
+      "manual_operator_review_required": true,
+      "legal_demo_blocker": false,
+      "migration_wave": "WAVE_1_VISUAL_MINIMUM",
+      "migration_action": "FILL_ACF_MINIMAL",
+      "risk": "MEDIUM",
+      "rollback_strategy": "Restore post_content/meta from pre-wave DB dump; do not delete Page",
+      "current_content_length": 431,
+      "current_template": "default"
+    },
+    {
+      "route_id": "ROUTE-02",
+      "route_path": "/uslugi/",
+      "object_id": 5,
+      "title": "Услуги",
+      "keep_as_page": true,
+      "target_template": "page-templates/services-hub.php",
+      "acf_groups": [
+        "group_fp02_page_services_hub"
+      ],
+      "first_wave_fields": [
+        "services_hub_intro",
+        "services_hub_query_mode",
+        "services_hub_show_placeholders"
+      ],
+      "required_source_sections": [
+        "intro",
+        "service_card_grids",
+        "faq"
+      ],
+      "content_source": "src/pages/uslugi-v2.html",
+      "preserve_current_content": true,
+      "overwrite_current_content_later": true,
+      "manual_operator_review_required": false,
+      "legal_demo_blocker": false,
+      "migration_wave": "WAVE_1_VISUAL_MINIMUM",
+      "migration_action": "FILL_ACF_MINIMAL",
+      "risk": "MEDIUM",
+      "rollback_strategy": "Restore post_content/meta from pre-wave DB dump; do not delete Page",
+      "current_content_length": 431,
+      "current_template": "page-templates/services-hub.php"
+    },
+    {
+      "route_id": "ROUTE-18",
+      "route_path": "/o-centre/",
+      "object_id": 11,
+      "title": "О центре",
+      "keep_as_page": true,
+      "target_template": "page-templates/institutional.php",
+      "acf_groups": [
+        "group_fp02_page_institutional"
+      ],
+      "first_wave_fields": [
+        "institutional_placeholder_notice"
+      ],
+      "required_source_sections": [
+        "institutional_sections",
+        "stages_or_gallery_if_present"
+      ],
+      "content_source": "src/pages/o-centre.html",
+      "preserve_current_content": true,
+      "overwrite_current_content_later": true,
+      "manual_operator_review_required": false,
+      "legal_demo_blocker": false,
+      "migration_wave": "WAVE_3_INSTITUTIONAL_CONTENT",
+      "migration_action": "FILL_ACF_FULL_LATER",
+      "risk": "LOW",
+      "rollback_strategy": "Restore post_content/meta from pre-wave DB dump; do not delete Page",
+      "current_content_length": 431,
+      "current_template": "page-templates/institutional.php"
+    },
+    {
+      "route_id": "ROUTE-19",
+      "route_path": "/o-centre/o-nas/",
+      "object_id": 12,
+      "title": "О нас",
+      "keep_as_page": true,
+      "target_template": "page-templates/institutional.php",
+      "acf_groups": [
+        "group_fp02_page_institutional"
+      ],
+      "first_wave_fields": [
+        "institutional_placeholder_notice"
+      ],
+      "required_source_sections": [
+        "institutional_sections",
+        "stages_or_gallery_if_present"
+      ],
+      "content_source": "src/pages/o-centre/o-nas.html",
+      "preserve_current_content": true,
+      "overwrite_current_content_later": true,
+      "manual_operator_review_required": false,
+      "legal_demo_blocker": false,
+      "migration_wave": "WAVE_3_INSTITUTIONAL_CONTENT",
+      "migration_action": "CREATE_PLACEHOLDER_ONLY",
+      "risk": "LOW",
+      "rollback_strategy": "Restore post_content/meta from pre-wave DB dump; do not delete Page",
+      "current_content_length": 431,
+      "current_template": "page-templates/institutional.php"
+    },
+    {
+      "route_id": "ROUTE-20",
+      "route_path": "/o-centre/programma-lecheniya/",
+      "object_id": 13,
+      "title": "Программа лечения",
+      "keep_as_page": true,
+      "target_template": "page-templates/institutional.php",
+      "acf_groups": [
+        "group_fp02_page_institutional"
+      ],
+      "first_wave_fields": [
+        "institutional_placeholder_notice"
+      ],
+      "required_source_sections": [
+        "institutional_sections",
+        "stages_or_gallery_if_present"
+      ],
+      "content_source": "src/pages/o-centre/programma-lecheniya.html",
+      "preserve_current_content": true,
+      "overwrite_current_content_later": true,
+      "manual_operator_review_required": false,
+      "legal_demo_blocker": false,
+      "migration_wave": "WAVE_3_INSTITUTIONAL_CONTENT",
+      "migration_action": "CREATE_PLACEHOLDER_ONLY",
+      "risk": "LOW",
+      "rollback_strategy": "Restore post_content/meta from pre-wave DB dump; do not delete Page",
+      "current_content_length": 431,
+      "current_template": "page-templates/institutional.php"
+    },
+    {
+      "route_id": "ROUTE-21",
+      "route_path": "/o-centre/galereya-o-dome/",
+      "object_id": 14,
+      "title": "Галерея о доме",
+      "keep_as_page": true,
+      "target_template": "page-templates/institutional.php",
+      "acf_groups": [
+        "group_fp02_page_institutional"
+      ],
+      "first_wave_fields": [
+        "institutional_placeholder_notice"
+      ],
+      "required_source_sections": [
+        "institutional_sections",
+        "stages_or_gallery_if_present"
+      ],
+      "content_source": "src/pages/o-centre/galereya-o-dome.html",
+      "preserve_current_content": true,
+      "overwrite_current_content_later": true,
+      "manual_operator_review_required": false,
+      "legal_demo_blocker": false,
+      "migration_wave": "WAVE_3_INSTITUTIONAL_CONTENT",
+      "migration_action": "CREATE_PLACEHOLDER_ONLY",
+      "risk": "LOW",
+      "rollback_strategy": "Restore post_content/meta from pre-wave DB dump; do not delete Page",
+      "current_content_length": 431,
+      "current_template": "page-templates/institutional.php"
+    },
+    {
+      "route_id": "ROUTE-22",
+      "route_path": "/o-centre/specialistam/",
+      "object_id": 15,
+      "title": "Специалистам",
+      "keep_as_page": true,
+      "target_template": "page-templates/institutional.php",
+      "acf_groups": [
+        "group_fp02_page_institutional"
+      ],
+      "first_wave_fields": [
+        "institutional_placeholder_notice"
+      ],
+      "required_source_sections": [
+        "institutional_sections",
+        "stages_or_gallery_if_present"
+      ],
+      "content_source": "src/pages/o-centre/specialistam.html",
+      "preserve_current_content": true,
+      "overwrite_current_content_later": true,
+      "manual_operator_review_required": false,
+      "legal_demo_blocker": false,
+      "migration_wave": "WAVE_3_INSTITUTIONAL_CONTENT",
+      "migration_action": "CREATE_PLACEHOLDER_ONLY",
+      "risk": "LOW",
+      "rollback_strategy": "Restore post_content/meta from pre-wave DB dump; do not delete Page",
+      "current_content_length": 431,
+      "current_template": "page-templates/institutional.php"
+    },
+    {
+      "route_id": "ROUTE-23",
+      "route_path": "/o-centre/rodstvennikam/",
+      "object_id": 16,
+      "title": "Родственникам",
+      "keep_as_page": true,
+      "target_template": "page-templates/institutional.php",
+      "acf_groups": [
+        "group_fp02_page_institutional"
+      ],
+      "first_wave_fields": [
+        "institutional_placeholder_notice"
+      ],
+      "required_source_sections": [
+        "institutional_sections",
+        "stages_or_gallery_if_present"
+      ],
+      "content_source": "src/pages/o-centre/rodstvennikam.html",
+      "preserve_current_content": true,
+      "overwrite_current_content_later": true,
+      "manual_operator_review_required": false,
+      "legal_demo_blocker": false,
+      "migration_wave": "WAVE_3_INSTITUTIONAL_CONTENT",
+      "migration_action": "CREATE_PLACEHOLDER_ONLY",
+      "risk": "LOW",
+      "rollback_strategy": "Restore post_content/meta from pre-wave DB dump; do not delete Page",
+      "current_content_length": 431,
+      "current_template": "page-templates/institutional.php"
+    },
+    {
+      "route_id": "ROUTE-24",
+      "route_path": "/otzyvy/",
+      "object_id": 18,
+      "title": "Отзывы",
+      "keep_as_page": true,
+      "target_template": "page-templates/reviews.php",
+      "acf_groups": [
+        "group_fp02_page_reviews"
+      ],
+      "first_wave_fields": [
+        "institutional_placeholder_notice"
+      ],
+      "required_source_sections": [
+        "reviews_list"
+      ],
+      "content_source": "src/pages/otzyvy.html",
+      "preserve_current_content": true,
+      "overwrite_current_content_later": true,
+      "manual_operator_review_required": false,
+      "legal_demo_blocker": false,
+      "migration_wave": "WAVE_3_INSTITUTIONAL_CONTENT",
+      "migration_action": "FILL_ACF_FULL_LATER",
+      "risk": "LOW",
+      "rollback_strategy": "Restore post_content/meta from pre-wave DB dump; do not delete Page",
+      "current_content_length": 431,
+      "current_template": "page-templates/reviews.php"
+    },
+    {
+      "route_id": "ROUTE-25",
+      "route_path": "/blog/",
+      "object_id": 19,
+      "title": "Статьи",
+      "keep_as_page": true,
+      "target_template": "home.php",
+      "acf_groups": [],
+      "first_wave_fields": [],
+      "required_source_sections": [
+        "title_only"
+      ],
+      "content_source": "src/pages/blog.html",
+      "preserve_current_content": true,
+      "overwrite_current_content_later": true,
+      "manual_operator_review_required": false,
+      "legal_demo_blocker": false,
+      "migration_wave": "WAVE_4_BLOG_LEGAL_REVIEW",
+      "migration_action": "KEEP_EXISTING",
+      "risk": "LOW",
+      "rollback_strategy": "Restore post_content/meta from pre-wave DB dump; do not delete Page",
+      "current_content_length": 431,
+      "current_template": "default"
+    },
+    {
+      "route_id": "ROUTE-27",
+      "route_path": "/kontakty/",
+      "object_id": 20,
+      "title": "Контакты",
+      "keep_as_page": true,
+      "target_template": "page-templates/contacts.php",
+      "acf_groups": [
+        "group_fp02_page_contacts"
+      ],
+      "first_wave_fields": [
+        "contacts_address",
+        "contacts_phones[0].label",
+        "contacts_phones[0].phone",
+        "contacts_form_intro"
+      ],
+      "required_source_sections": [
+        "contacts",
+        "form_intro",
+        "map"
+      ],
+      "content_source": "src/pages/kontakty.html",
+      "preserve_current_content": true,
+      "overwrite_current_content_later": true,
+      "manual_operator_review_required": false,
+      "legal_demo_blocker": false,
+      "migration_wave": "WAVE_1_VISUAL_MINIMUM",
+      "migration_action": "FILL_ACF_MINIMAL",
+      "risk": "LOW",
+      "rollback_strategy": "Restore post_content/meta from pre-wave DB dump; do not delete Page",
+      "current_content_length": 431,
+      "current_template": "page-templates/contacts.php"
+    },
+    {
+      "route_id": "ROUTE-28",
+      "route_path": "/privacy-policy/",
+      "object_id": 3,
+      "title": "Политика конфиденциальности",
+      "keep_as_page": true,
+      "target_template": "page-templates/legal.php",
+      "acf_groups": [
+        "group_fp02_page_legal"
+      ],
+      "first_wave_fields": [
+        "legal_status",
+        "legal_demo_marker",
+        "legal_production_blocker"
+      ],
+      "required_source_sections": [
+        "legal_document"
+      ],
+      "content_source": "src/pages/privacy-policy.html",
+      "preserve_current_content": true,
+      "overwrite_current_content_later": false,
+      "manual_operator_review_required": true,
+      "legal_demo_blocker": true,
+      "migration_wave": "WAVE_4_BLOG_LEGAL_REVIEW",
+      "migration_action": "DEFER_LEGAL",
+      "risk": "HIGH",
+      "rollback_strategy": "Restore post_content/meta from pre-wave DB dump; do not delete Page",
+      "current_content_length": 20026,
+      "current_template": "page-templates/legal.php"
+    },
+    {
+      "route_id": "ROUTE-29",
+      "route_path": "/user-agreement/",
+      "object_id": 22,
+      "title": "Пользовательское соглашение",
+      "keep_as_page": true,
+      "target_template": "page-templates/legal.php",
+      "acf_groups": [
+        "group_fp02_page_legal"
+      ],
+      "first_wave_fields": [
+        "legal_status",
+        "legal_demo_marker",
+        "legal_production_blocker"
+      ],
+      "required_source_sections": [
+        "legal_document"
+      ],
+      "content_source": "src/pages/user-agreement.html",
+      "preserve_current_content": true,
+      "overwrite_current_content_later": false,
+      "manual_operator_review_required": true,
+      "legal_demo_blocker": true,
+      "migration_wave": "WAVE_4_BLOG_LEGAL_REVIEW",
+      "migration_action": "DEFER_LEGAL",
+      "risk": "HIGH",
+      "rollback_strategy": "Restore post_content/meta from pre-wave DB dump; do not delete Page",
+      "current_content_length": 431,
+      "current_template": "page-templates/legal.php"
+    },
+    {
+      "route_id": "ROUTE-30",
+      "route_path": "/consent-personal-data/",
+      "object_id": 23,
+      "title": "Согласие на обработку персональных данных",
+      "keep_as_page": true,
+      "target_template": "page-templates/legal.php",
+      "acf_groups": [
+        "group_fp02_page_legal"
+      ],
+      "first_wave_fields": [
+        "legal_status",
+        "legal_demo_marker",
+        "legal_production_blocker"
+      ],
+      "required_source_sections": [
+        "legal_document"
+      ],
+      "content_source": "src/pages/consent-personal-data.html",
+      "preserve_current_content": true,
+      "overwrite_current_content_later": false,
+      "manual_operator_review_required": true,
+      "legal_demo_blocker": true,
+      "migration_wave": "WAVE_4_BLOG_LEGAL_REVIEW",
+      "migration_action": "DEFER_LEGAL",
+      "risk": "HIGH",
+      "rollback_strategy": "Restore post_content/meta from pre-wave DB dump; do not delete Page",
+      "current_content_length": 431,
+      "current_template": "page-templates/legal.php"
+    },
+    {
+      "route_id": "ROUTE-31",
+      "route_path": "/cookie-files-policy/",
+      "object_id": 24,
+      "title": "Политика Cookie-файлов",
+      "keep_as_page": true,
+      "target_template": "page-templates/legal.php",
+      "acf_groups": [
+        "group_fp02_page_legal"
+      ],
+      "first_wave_fields": [
+        "legal_status",
+        "legal_demo_marker",
+        "legal_production_blocker"
+      ],
+      "required_source_sections": [
+        "legal_document"
+      ],
+      "content_source": "src/pages/cookie-files-policy.html",
+      "preserve_current_content": true,
+      "overwrite_current_content_later": false,
+      "manual_operator_review_required": true,
+      "legal_demo_blocker": true,
+      "migration_wave": "WAVE_4_BLOG_LEGAL_REVIEW",
+      "migration_action": "DEFER_LEGAL",
+      "risk": "HIGH",
+      "rollback_strategy": "Restore post_content/meta from pre-wave DB dump; do not delete Page",
+      "current_content_length": 431,
+      "current_template": "page-templates/legal.php"
+    }
+  ],
+  "page_owned_route_count": 15,
+  "legacy_and_source_pages": [
+    {
+      "object_id": 6,
+      "title": "╨Ч╨░╨▓╨╕╤Б╨╕╨╝╨╛╤Б╤В╨╕",
+      "slug": "zavisimosti",
+      "path": "/uslugi/zavisimosti/",
+      "migration_role": "PAGE_TO_SERVICE_SOURCE",
+      "keep_as_page": false,
+      "action": "RETIRE_AFTER_SERVICE_CONTENT_VALIDATED",
+      "do_not_delete_in_d3": true,
+      "canonical_replacement": null
+    },
+    {
+      "object_id": 7,
+      "title": "╨Я╤Б╨╕╤Е╨╕╤З╨╡╤Б╨║╨╛╨╡ ╨╖╨┤╨╛╤А╨╛╨▓╤М╨╡",
+      "slug": "psihicheskoe-zdorovie",
+      "path": "/uslugi/psihicheskoe-zdorovie/",
+      "migration_role": "PAGE_TO_SERVICE_SOURCE",
+      "keep_as_page": false,
+      "action": "RETIRE_AFTER_SERVICE_CONTENT_VALIDATED",
+      "do_not_delete_in_d3": true,
+      "canonical_replacement": null
+    },
+    {
+      "object_id": 8,
+      "title": "╨а╨░╤Б╤Б╤В╤А╨╛╨╣╤Б╤В╨▓╨░ ╨┐╨╕╤Й╨╡╨▓╨╛╨│╨╛ ╨┐╨╛╨▓╨╡╨┤╨╡╨╜╨╕╤П",
+      "slug": "rasstroystva-pischevogo-povedeniya",
+      "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "migration_role": "PAGE_TO_SERVICE_SOURCE",
+      "keep_as_page": false,
+      "action": "RETIRE_AFTER_SERVICE_CONTENT_VALIDATED",
+      "do_not_delete_in_d3": true,
+      "canonical_replacement": null
+    },
+    {
+      "object_id": 9,
+      "title": "╨У╨╡╨╜╨╛╤В╨╕╨┐╨╕╤А╨╛╨▓╨░╨╜╨╕╨╡",
+      "slug": "genotipirovanie",
+      "path": "/uslugi/genotipirovanie/",
+      "migration_role": "LEGACY_ONLY",
+      "keep_as_page": true,
+      "action": "RETIRE_AFTER_MIGRATION",
+      "do_not_delete_in_d3": true,
+      "canonical_replacement": null
+    },
+    {
+      "object_id": 10,
+      "title": "╨б╨┐╨╡╤Ж╨╕╨░╨╗╨╕╤Б╤В╤Л",
+      "slug": "specyalisty",
+      "path": "/specyalisty/",
+      "migration_role": "LEGACY_ONLY",
+      "keep_as_page": true,
+      "action": "DEFER_REDIRECT",
+      "do_not_delete_in_d3": true,
+      "canonical_replacement": "/uslugi/zavisimosti/specialistam/"
+    },
+    {
+      "object_id": 17,
+      "title": "╨Ш╨╜╤В╨╡╤А╨▓╤М╤О ╨╕ ╨б╨Ь╨Ш",
+      "slug": "intervyu-i-smi",
+      "path": "/o-centre/intervyu-i-smi/",
+      "migration_role": "LEGACY_ONLY",
+      "keep_as_page": true,
+      "action": "RETIRE_AFTER_MIGRATION",
+      "do_not_delete_in_d3": true,
+      "canonical_replacement": null
+    },
+    {
+      "object_id": 21,
+      "title": "╨Я╤А╨░╨▓╨╛╨▓╨░╤П ╨╕╨╜╤Д╨╛╤А╨╝╨░╤Ж╨╕╤П",
+      "slug": "pravovaya-informaciya-pilzovatelyu",
+      "path": "/pravovaya-informaciya-pilzovatelyu/",
+      "migration_role": "LEGACY_ONLY",
+      "keep_as_page": true,
+      "action": "RETIRE_AFTER_MIGRATION",
+      "do_not_delete_in_d3": true,
+      "canonical_replacement": null
+    },
+    {
+      "object_id": 25,
+      "title": "╨Я╨╛╨╗╨╕╤В╨╕╨║╨░ ╨║╨╛╨╜╤Д╨╕╨┤╨╡╨╜╤Ж╨╕╨░╨╗╤М╨╜╨╛╤Б╤В╨╕ (╤Б╨╕╤Б╤В╨╡╨╝╨╜╨░╤П)",
+      "slug": "privacy-policy-page",
+      "path": "/privacy-policy-page/",
+      "migration_role": "LEGACY_ONLY",
+      "keep_as_page": true,
+      "action": "RETIRE_AFTER_MIGRATION",
+      "do_not_delete_in_d3": true,
+      "canonical_replacement": null
+    }
+  ],
+  "services_hub_page_owned": true,
+  "services_hub_page_id": 5,
+  "legacy_specyalisty": {
+    "object_id": 10,
+    "path": "/specyalisty/",
+    "status": "LEGACY_DEFERRED",
+    "delete_in_d3": false,
+    "canonical_service_path": "/uslugi/zavisimosti/specialistam/",
+    "redirect_immediate": false,
+    "redirect_deferred": true
+  },
+  "result": "PASS"
+}

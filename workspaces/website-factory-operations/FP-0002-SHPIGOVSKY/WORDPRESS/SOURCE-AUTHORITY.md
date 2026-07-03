@@ -76,3 +76,8 @@ Runtime delivery is complete for the local FP-0002 runtime only. The runtime rem
 ## V9-06D.2 object skeleton
 
 Local runtime object skeleton is complete: 15 Service CPT objects created, required Page templates reconciled, no content migration, no V9 integration, no menu changes, no redirects, and no rewrite flush. Runtime remains deployment target; Git source records documentation and evidence only.
+
+
+## V9-06D.3 content migration planning
+
+Content migration planning is complete in Git documentation only. No runtime content writes, no V9 integration, no menu/redirect/rewrite changes.
