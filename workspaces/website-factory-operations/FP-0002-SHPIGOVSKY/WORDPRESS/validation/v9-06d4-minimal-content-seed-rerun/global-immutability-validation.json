@@ -1,0 +1,332 @@
+{
+    "phase": "V9-06D.4-RERUN",
+    "timestamp": "2026-07-03T22:45:22+00:00",
+    "before": {
+        "pages_total": 23,
+        "services_total": 15,
+        "posts_total": 1,
+        "menus": [
+            {
+                "term_id": 3,
+                "name": "Footer",
+                "slug": "footer",
+                "count": 3
+            },
+            {
+                "term_id": 4,
+                "name": "Legal",
+                "slug": "legal",
+                "count": 5
+            },
+            {
+                "term_id": 2,
+                "name": "Primary",
+                "slug": "primary",
+                "count": 7
+            }
+        ],
+        "menus_count": 3,
+        "show_on_front": "page",
+        "page_on_front": 4,
+        "page_for_posts": 19,
+        "permalink_structure": "/%postname%/",
+        "rewrite_rules_hash": "c3e9cb3746da51c81226e4b8e517004c6a0ca0a5eb73a6ea5225c2a8af1aa110",
+        "active_theme": "shpigovsky",
+        "active_theme_version": "0.2.0-skeleton",
+        "active_plugins": [
+            "acf-extended-pro/acf-extended.php",
+            "advanced-custom-fields-pro/acf.php",
+            "metacode-wpilot/metacode-wpilot.php",
+            "shpigovsky-core/shpigovsky-core.php"
+        ],
+        "acf_groups_count": 13,
+        "acf_group_keys": [
+            "group_fp02_blog_post_article_meta",
+            "group_fp02_page_contacts",
+            "group_fp02_page_home",
+            "group_fp02_page_institutional",
+            "group_fp02_page_legal",
+            "group_fp02_page_reviews",
+            "group_fp02_page_services_hub",
+            "group_fp02_service_faq",
+            "group_fp02_service_layout_hero",
+            "group_fp02_service_relationships",
+            "group_fp02_service_structured_sections",
+            "group_fp02_site_options_contacts",
+            "group_fp02_site_options_modal_cta"
+        ],
+        "acf_options_pages": [
+            "fp02-site-settings"
+        ],
+        "acf_pro_active": true,
+        "acf_extended_pro_active": true,
+        "acf_free_active": false,
+        "wpilot_write_enabled": false,
+        "categories_count": 1,
+        "tags_count": 0,
+        "users_count": 2
+    },
+    "after": {
+        "pages_total": 23,
+        "services_total": 15,
+        "posts_total": 1,
+        "menus": [
+            {
+                "term_id": 3,
+                "name": "Footer",
+                "slug": "footer",
+                "count": 3
+            },
+            {
+                "term_id": 4,
+                "name": "Legal",
+                "slug": "legal",
+                "count": 5
+            },
+            {
+                "term_id": 2,
+                "name": "Primary",
+                "slug": "primary",
+                "count": 7
+            }
+        ],
+        "menus_count": 3,
+        "show_on_front": "page",
+        "page_on_front": 4,
+        "page_for_posts": 19,
+        "permalink_structure": "/%postname%/",
+        "rewrite_rules_hash": "c3e9cb3746da51c81226e4b8e517004c6a0ca0a5eb73a6ea5225c2a8af1aa110",
+        "active_theme": "shpigovsky",
+        "active_theme_version": "0.2.0-skeleton",
+        "active_plugins": [
+            "acf-extended-pro/acf-extended.php",
+            "advanced-custom-fields-pro/acf.php",
+            "metacode-wpilot/metacode-wpilot.php",
+            "shpigovsky-core/shpigovsky-core.php"
+        ],
+        "acf_groups_count": 13,
+        "acf_group_keys": [
+            "group_fp02_blog_post_article_meta",
+            "group_fp02_page_contacts",
+            "group_fp02_page_home",
+            "group_fp02_page_institutional",
+            "group_fp02_page_legal",
+            "group_fp02_page_reviews",
+            "group_fp02_page_services_hub",
+            "group_fp02_service_faq",
+            "group_fp02_service_layout_hero",
+            "group_fp02_service_relationships",
+            "group_fp02_service_structured_sections",
+            "group_fp02_site_options_contacts",
+            "group_fp02_site_options_modal_cta"
+        ],
+        "acf_options_pages": [
+            "fp02-site-settings"
+        ],
+        "acf_pro_active": true,
+        "acf_extended_pro_active": true,
+        "acf_free_active": false,
+        "wpilot_write_enabled": false,
+        "categories_count": 1,
+        "tags_count": 0,
+        "users_count": 2
+    },
+    "rows": [
+        {
+            "key": "pages_total",
+            "before": 23,
+            "after": 23,
+            "changed": false,
+            "result": "PASS"
+        },
+        {
+            "key": "services_total",
+            "before": 15,
+            "after": 15,
+            "changed": false,
+            "result": "PASS"
+        },
+        {
+            "key": "posts_total",
+            "before": 1,
+            "after": 1,
+            "changed": false,
+            "result": "PASS"
+        },
+        {
+            "key": "menus_count",
+            "before": 3,
+            "after": 3,
+            "changed": false,
+            "result": "PASS"
+        },
+        {
+            "key": "show_on_front",
+            "before": "page",
+            "after": "page",
+            "changed": false,
+            "result": "PASS"
+        },
+        {
+            "key": "page_on_front",
+            "before": 4,
+            "after": 4,
+            "changed": false,
+            "result": "PASS"
+        },
+        {
+            "key": "page_for_posts",
+            "before": 19,
+            "after": 19,
+            "changed": false,
+            "result": "PASS"
+        },
+        {
+            "key": "permalink_structure",
+            "before": "/%postname%/",
+            "after": "/%postname%/",
+            "changed": false,
+            "result": "PASS"
+        },
+        {
+            "key": "rewrite_rules_hash",
+            "before": "c3e9cb3746da51c81226e4b8e517004c6a0ca0a5eb73a6ea5225c2a8af1aa110",
+            "after": "c3e9cb3746da51c81226e4b8e517004c6a0ca0a5eb73a6ea5225c2a8af1aa110",
+            "changed": false,
+            "result": "PASS"
+        },
+        {
+            "key": "active_theme",
+            "before": "shpigovsky",
+            "after": "shpigovsky",
+            "changed": false,
+            "result": "PASS"
+        },
+        {
+            "key": "active_theme_version",
+            "before": "0.2.0-skeleton",
+            "after": "0.2.0-skeleton",
+            "changed": false,
+            "result": "PASS"
+        },
+        {
+            "key": "acf_groups_count",
+            "before": 13,
+            "after": 13,
+            "changed": false,
+            "result": "PASS"
+        },
+        {
+            "key": "acf_pro_active",
+            "before": true,
+            "after": true,
+            "changed": false,
+            "result": "PASS"
+        },
+        {
+            "key": "acf_extended_pro_active",
+            "before": true,
+            "after": true,
+            "changed": false,
+            "result": "PASS"
+        },
+        {
+            "key": "acf_free_active",
+            "before": false,
+            "after": false,
+            "changed": false,
+            "result": "PASS"
+        },
+        {
+            "key": "wpilot_write_enabled",
+            "before": false,
+            "after": false,
+            "changed": false,
+            "result": "PASS"
+        },
+        {
+            "key": "categories_count",
+            "before": 1,
+            "after": 1,
+            "changed": false,
+            "result": "PASS"
+        },
+        {
+            "key": "tags_count",
+            "before": 0,
+            "after": 0,
+            "changed": false,
+            "result": "PASS"
+        },
+        {
+            "key": "users_count",
+            "before": 2,
+            "after": 2,
+            "changed": false,
+            "result": "PASS"
+        },
+        {
+            "key": "menus",
+            "before": [
+                {
+                    "term_id": 3,
+                    "name": "Footer",
+                    "slug": "footer",
+                    "count": 3
+                },
+                {
+                    "term_id": 4,
+                    "name": "Legal",
+                    "slug": "legal",
+                    "count": 5
+                },
+                {
+                    "term_id": 2,
+                    "name": "Primary",
+                    "slug": "primary",
+                    "count": 7
+                }
+            ],
+            "after": [
+                {
+                    "term_id": 3,
+                    "name": "Footer",
+                    "slug": "footer",
+                    "count": 3
+                },
+                {
+                    "term_id": 4,
+                    "name": "Legal",
+                    "slug": "legal",
+                    "count": 5
+                },
+                {
+                    "term_id": 2,
+                    "name": "Primary",
+                    "slug": "primary",
+                    "count": 7
+                }
+            ],
+            "changed": false,
+            "result": "PASS"
+        },
+        {
+            "key": "active_plugins",
+            "before": [
+                "acf-extended-pro/acf-extended.php",
+                "advanced-custom-fields-pro/acf.php",
+                "metacode-wpilot/metacode-wpilot.php",
+                "shpigovsky-core/shpigovsky-core.php"
+            ],
+            "after": [
+                "acf-extended-pro/acf-extended.php",
+                "advanced-custom-fields-pro/acf.php",
+                "metacode-wpilot/metacode-wpilot.php",
+                "shpigovsky-core/shpigovsky-core.php"
+            ],
+            "changed": false,
+            "result": "PASS"
+        }
+    ],
+    "result": "PASS"
+}

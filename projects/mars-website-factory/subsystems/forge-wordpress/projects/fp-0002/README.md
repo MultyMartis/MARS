@@ -1,7 +1,7 @@
 # Forge WordPress — FP-0002 Project Lane
 
 **Project ID:** FP-0002 — Шпиговский  
-**Stage:** V9-06D.3 content migration planning COMPLETE — content migration not performed
+**Stage:** V9-06D.4 RERUN minimal content seed COMPLETE (PARTIAL PASS — rewrite flush micro-gate for Service 74)
 
 | Document | Purpose |
 |----------|---------|
@@ -63,4 +63,4 @@ Runtime manifest: [MLI-WP-FP0002-LOCAL-RUNTIME-MANIFEST-v1.md](../../../../mars-
 
 ## V9-06D.1 rerun runtime delivery
 
-Runtime code/model activation is complete in local runtime: theme, Shpigovsky Core, and ACF JSON delivered; service CPT, 13 ACF groups, and Options Page verified. WordPress object skeleton complete (V9-06D.2); content migration planned (V9-06D.3), not performed.
+Runtime code/model activation is complete in local runtime: theme, Shpigovsky Core, and ACF JSON delivered; service CPT, 13 ACF groups, and Options Page verified. WordPress object skeleton complete (V9-06D.2); content migration planned (V9-06D.3); minimal visual content seed applied for Pages 4/5/20 and Services 73/74/77/84 (V9-06D.4 RERUN). Full content migration and V9 integration remain not performed. Service 74 HTTP route requires rewrite flush micro-gate.

@@ -81,3 +81,8 @@ Local runtime object skeleton is complete: 15 Service CPT objects created, requi
 ## V9-06D.3 content migration planning
 
 Content migration planning is complete in Git documentation only. No runtime content writes, no V9 integration, no menu/redirect/rewrite changes.
+
+
+## V9-06D.4 RERUN minimal content seed
+
+Local runtime minimal ACF/meta seed is complete for authorized Pages 4/5/20 and Services 73/74/77/84 only. Full production content migration, V9 integration, menus, redirects, Options Page values, and rewrite flush remain not performed. Previous blocked D.4 attempt is preserved as historical evidence.

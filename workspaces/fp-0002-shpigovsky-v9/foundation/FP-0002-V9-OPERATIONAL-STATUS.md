@@ -1,13 +1,15 @@
 # FP-0002 V9 Operational Status
 
-**Current:** V9-06D.3 CONTENT MIGRATION PLANNING COMPLETE
+**Current:** V9-06D.4 RERUN MINIMAL CONTENT SEED COMPLETE (PARTIAL PASS)
 
 - V9 static frontend: operator-approved stable
 - WordPress content model: active in local runtime
 - Object skeleton: 15 Services complete
-- Content migration: PLANNED, NOT PERFORMED
+- Minimal visual content seed: COMPLETE for Pages 4/5/20 and Services 73/74/77/84
+- Full content migration: NOT PERFORMED
 - V9 integration: NOT STARTED
-- Next: V9-06D.4 minimal content seed (operator authorization required)
+- Rewrite flush: MICRO_GATE_REQUIRED (Service 74 HTTP 404 with correct generated permalink)
+- Next: REWRITE_FLUSH_MICRO_GATE, then V9-06D.5 visual route QA
 
 # FP-0002 V9 Operational Status
 

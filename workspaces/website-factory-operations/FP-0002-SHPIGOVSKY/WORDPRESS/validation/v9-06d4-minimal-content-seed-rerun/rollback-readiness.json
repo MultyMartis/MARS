@@ -1,0 +1,216 @@
+{
+  "phase": "V9-06D.4-RERUN",
+  "timestamp": "2026-07-03T22:46:36+00:00",
+  "db_dump": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d4-rerun-minimal-content-seed-pre-20260704-054146\\database\\mars_wp_fp0002-v9-06d4-rerun-pre.sql",
+  "modified_object_ids": [
+    4,
+    5,
+    20,
+    73,
+    74,
+    77,
+    84
+  ],
+  "modified_fields": [
+    {
+      "object_id": 4,
+      "key": "home_hero_slides",
+      "kind": "acf"
+    },
+    {
+      "object_id": 4,
+      "key": "home_service_nav_items",
+      "kind": "acf"
+    },
+    {
+      "object_id": 4,
+      "key": "home_cta_title",
+      "kind": "acf"
+    },
+    {
+      "object_id": 4,
+      "key": "home_cta_text",
+      "kind": "acf"
+    },
+    {
+      "object_id": 4,
+      "key": "migration_status",
+      "kind": "post_meta"
+    },
+    {
+      "object_id": 4,
+      "key": "seeded_by_phase",
+      "kind": "post_meta"
+    },
+    {
+      "object_id": 5,
+      "key": "services_hub_intro",
+      "kind": "acf"
+    },
+    {
+      "object_id": 5,
+      "key": "services_hub_query_mode",
+      "kind": "acf"
+    },
+    {
+      "object_id": 5,
+      "key": "services_hub_show_placeholders",
+      "kind": "acf"
+    },
+    {
+      "object_id": 5,
+      "key": "migration_status",
+      "kind": "post_meta"
+    },
+    {
+      "object_id": 5,
+      "key": "seeded_by_phase",
+      "kind": "post_meta"
+    },
+    {
+      "object_id": 20,
+      "key": "contacts_address",
+      "kind": "acf"
+    },
+    {
+      "object_id": 20,
+      "key": "contacts_phones",
+      "kind": "acf"
+    },
+    {
+      "object_id": 20,
+      "key": "contacts_form_intro",
+      "kind": "acf"
+    },
+    {
+      "object_id": 20,
+      "key": "migration_status",
+      "kind": "post_meta"
+    },
+    {
+      "object_id": 20,
+      "key": "seeded_by_phase",
+      "kind": "post_meta"
+    },
+    {
+      "object_id": 73,
+      "key": "service_layout_variant",
+      "kind": "acf"
+    },
+    {
+      "object_id": 73,
+      "key": "hero_lead",
+      "kind": "acf"
+    },
+    {
+      "object_id": 73,
+      "key": "migration_status",
+      "kind": "post_meta"
+    },
+    {
+      "object_id": 73,
+      "key": "seeded_by_phase",
+      "kind": "post_meta"
+    },
+    {
+      "object_id": 73,
+      "key": "skeleton_status",
+      "kind": "post_meta"
+    },
+    {
+      "object_id": 74,
+      "key": "service_layout_variant",
+      "kind": "acf"
+    },
+    {
+      "object_id": 74,
+      "key": "hero_lead",
+      "kind": "acf"
+    },
+    {
+      "object_id": 74,
+      "key": "intro_text",
+      "kind": "acf"
+    },
+    {
+      "object_id": 74,
+      "key": "signs_items",
+      "kind": "acf"
+    },
+    {
+      "object_id": 74,
+      "key": "migration_status",
+      "kind": "post_meta"
+    },
+    {
+      "object_id": 74,
+      "key": "seeded_by_phase",
+      "kind": "post_meta"
+    },
+    {
+      "object_id": 74,
+      "key": "skeleton_status",
+      "kind": "post_meta"
+    },
+    {
+      "object_id": 77,
+      "key": "service_layout_variant",
+      "kind": "acf"
+    },
+    {
+      "object_id": 77,
+      "key": "hero_lead",
+      "kind": "acf"
+    },
+    {
+      "object_id": 77,
+      "key": "migration_status",
+      "kind": "post_meta"
+    },
+    {
+      "object_id": 77,
+      "key": "seeded_by_phase",
+      "kind": "post_meta"
+    },
+    {
+      "object_id": 77,
+      "key": "skeleton_status",
+      "kind": "post_meta"
+    },
+    {
+      "object_id": 84,
+      "key": "service_layout_variant",
+      "kind": "acf"
+    },
+    {
+      "object_id": 84,
+      "key": "hero_lead",
+      "kind": "acf"
+    },
+    {
+      "object_id": 84,
+      "key": "migration_status",
+      "kind": "post_meta"
+    },
+    {
+      "object_id": 84,
+      "key": "seeded_by_phase",
+      "kind": "post_meta"
+    },
+    {
+      "object_id": 84,
+      "key": "skeleton_status",
+      "kind": "post_meta"
+    }
+  ],
+  "restore_procedure": "Restore mars_wp_fp0002 from checkpoint SQL dump; re-validate baseline hashes/counts.",
+  "rollback_tested": false,
+  "rollback_not_executed_reason": "Apply succeeded; rollback not required.",
+  "expected_post_rollback_counts": {
+    "pages": 23,
+    "services": 15,
+    "posts": 1,
+    "menus": 3
+  },
+  "result": "READY"
+}

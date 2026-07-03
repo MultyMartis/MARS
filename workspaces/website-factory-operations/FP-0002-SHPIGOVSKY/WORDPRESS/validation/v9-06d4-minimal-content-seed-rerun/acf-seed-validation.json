@@ -1,0 +1,89 @@
+{
+    "phase": "V9-06D.4-RERUN",
+    "timestamp": "2026-07-03T22:45:22+00:00",
+    "acf_fields_written": true,
+    "native_content_fields_written": false,
+    "skeleton_migration_status": "minimal_seed",
+    "production_content": false,
+    "acf_extended_pro_used": false,
+    "options_values_written": false,
+    "objects": [
+        {
+            "object_id": 4,
+            "acf_nonempty_fields": [
+                "home_cta_text",
+                "home_cta_title",
+                "home_hero_slides",
+                "home_service_nav_items"
+            ],
+            "migration_status": "minimal_seed",
+            "seeded_by_phase": "V9-06D.4",
+            "registry_id": ""
+        },
+        {
+            "object_id": 5,
+            "acf_nonempty_fields": [
+                "services_hub_intro",
+                "services_hub_query_mode",
+                "services_hub_show_placeholders"
+            ],
+            "migration_status": "minimal_seed",
+            "seeded_by_phase": "V9-06D.4",
+            "registry_id": ""
+        },
+        {
+            "object_id": 20,
+            "acf_nonempty_fields": [
+                "contacts_address",
+                "contacts_form_intro",
+                "contacts_phones"
+            ],
+            "migration_status": "minimal_seed",
+            "seeded_by_phase": "V9-06D.4",
+            "registry_id": ""
+        },
+        {
+            "object_id": 73,
+            "acf_nonempty_fields": [
+                "hero_lead",
+                "service_layout_variant"
+            ],
+            "migration_status": "minimal_seed",
+            "seeded_by_phase": "V9-06D.4",
+            "registry_id": "SVC-ZAVISIMOSTI"
+        },
+        {
+            "object_id": 74,
+            "acf_nonempty_fields": [
+                "hero_lead",
+                "intro_text",
+                "service_layout_variant",
+                "signs_items"
+            ],
+            "migration_status": "minimal_seed",
+            "seeded_by_phase": "V9-06D.4",
+            "registry_id": "SVC-ALKOGOL"
+        },
+        {
+            "object_id": 77,
+            "acf_nonempty_fields": [
+                "hero_lead",
+                "service_layout_variant"
+            ],
+            "migration_status": "minimal_seed",
+            "seeded_by_phase": "V9-06D.4",
+            "registry_id": "SVC-PSYCH"
+        },
+        {
+            "object_id": 84,
+            "acf_nonempty_fields": [
+                "hero_lead",
+                "service_layout_variant"
+            ],
+            "migration_status": "minimal_seed",
+            "seeded_by_phase": "V9-06D.4",
+            "registry_id": "SVC-RPP"
+        }
+    ],
+    "result": "PASS"
+}

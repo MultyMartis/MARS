@@ -542,3 +542,13 @@ PASS: local WordPress runtime received canonical theme, Shpigovsky Core, and ACF
 ## 2026-07-04 — V9-06D.2 WordPress object skeleton
 
 PASS: local WordPress runtime object skeleton created under checkpoint control. Services total: 15; Pages created: 0; Page templates reconciled: 13; Posts created: 0; Menus/options/redirects/rewrite flush unchanged. Content migration and V9 integration remain not started.
+
+
+## 2026-07-04 — V9-06D.3 content migration planning
+
+PASS: planning/audit only. 31 routes mapped; minimal visual content seed plan READY. Runtime content writes: 0.
+
+
+## 2026-07-04 — V9-06D.4 RERUN minimal content seed for visual route QA
+
+PARTIAL PASS: minimal ACF/meta seed applied to Pages 4/5/20 and Services 73/74/77/84 under DB checkpoint. Unauthorized writes: 0. Menus/options/redirects unchanged. Rewrite flush not performed. Service 74 HTTP 404 with matching generated permalink → REWRITE_FLUSH_MICRO_GATE_REQUIRED. Full content migration and V9 integration not performed.

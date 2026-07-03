@@ -1,0 +1,20 @@
+{
+  "phase": "V9-06D.4-RERUN",
+  "timestamp": "2026-07-03T22:46:36+00:00",
+  "name": "v9-06d4-rerun-minimal-content-seed-pre-20260704-054146",
+  "root": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d4-rerun-minimal-content-seed-pre-20260704-054146",
+  "folders": [
+    "database",
+    "wordpress-state",
+    "object-baseline",
+    "rollback",
+    "receipts"
+  ],
+  "db_dump": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d4-rerun-minimal-content-seed-pre-20260704-054146\\database\\mars_wp_fp0002-v9-06d4-rerun-pre.sql",
+  "db_dump_exists": true,
+  "db_dump_size": 1404384,
+  "object_baseline": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d4-rerun-minimal-content-seed-pre-20260704-054146\\object-baseline\\authorized-object-baseline.json",
+  "rollback_instructions": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d4-rerun-minimal-content-seed-pre-20260704-054146\\rollback\\ROLLBACK-INSTRUCTIONS.md",
+  "secrets_copied": 0,
+  "result": "PASS"
+}

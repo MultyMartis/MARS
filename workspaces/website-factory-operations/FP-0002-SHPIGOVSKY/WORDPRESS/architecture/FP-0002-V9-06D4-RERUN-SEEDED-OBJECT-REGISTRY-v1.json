@@ -1,0 +1,94 @@
+{
+  "schema": "fp-0002-v9-06d4-rerun-seeded-object-registry",
+  "version": "1.0.0",
+  "phase": "V9-06D.4-RERUN",
+  "required_head": "1b0fba0e854071d635766e3912802c38b860bf43",
+  "seed_marker": "Минимальное наполнение для визуальной проверки маршрута. Полная миграция контента выполняется отдельной фазой.",
+  "objects": [
+    {
+      "object_id": 4,
+      "object_type": "page",
+      "title": "Главная",
+      "path": "/",
+      "acf_fields": ["home_hero_slides", "home_service_nav_items", "home_cta_title", "home_cta_text"],
+      "meta_fields": ["migration_status", "seeded_by_phase"],
+      "migration_status": "minimal_seed",
+      "seeded_by_phase": "V9-06D.4",
+      "production_final": false
+    },
+    {
+      "object_id": 5,
+      "object_type": "page",
+      "title": "Услуги",
+      "path": "/uslugi/",
+      "acf_fields": ["services_hub_intro", "services_hub_query_mode", "services_hub_show_placeholders"],
+      "meta_fields": ["migration_status", "seeded_by_phase"],
+      "migration_status": "minimal_seed",
+      "seeded_by_phase": "V9-06D.4",
+      "production_final": false
+    },
+    {
+      "object_id": 20,
+      "object_type": "page",
+      "title": "Контакты",
+      "path": "/kontakty/",
+      "acf_fields": ["contacts_address", "contacts_phones", "contacts_form_intro"],
+      "meta_fields": ["migration_status", "seeded_by_phase"],
+      "migration_status": "minimal_seed",
+      "seeded_by_phase": "V9-06D.4",
+      "production_final": false
+    },
+    {
+      "object_id": 73,
+      "object_type": "service",
+      "registry_id": "SVC-ZAVISIMOSTI",
+      "title": "Зависимости",
+      "path": "/uslugi/zavisimosti/",
+      "acf_fields": ["service_layout_variant", "hero_lead"],
+      "meta_fields": ["migration_status", "seeded_by_phase", "skeleton_status"],
+      "service_layout_variant": "subdivision",
+      "migration_status": "minimal_seed",
+      "seeded_by_phase": "V9-06D.4",
+      "production_final": false
+    },
+    {
+      "object_id": 74,
+      "object_type": "service",
+      "registry_id": "SVC-ALKOGOL",
+      "title": "Лечение алкогольной зависимости",
+      "path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "acf_fields": ["service_layout_variant", "hero_lead", "intro_text", "signs_items"],
+      "meta_fields": ["migration_status", "seeded_by_phase", "skeleton_status"],
+      "service_layout_variant": "alcohol_special",
+      "migration_status": "minimal_seed",
+      "seeded_by_phase": "V9-06D.4",
+      "production_final": false
+    },
+    {
+      "object_id": 77,
+      "object_type": "service",
+      "registry_id": "SVC-PSYCH",
+      "title": "Психическое здоровье",
+      "path": "/uslugi/psihicheskoe-zdorovie/",
+      "acf_fields": ["service_layout_variant", "hero_lead"],
+      "meta_fields": ["migration_status", "seeded_by_phase", "skeleton_status"],
+      "service_layout_variant": "subdivision",
+      "migration_status": "minimal_seed",
+      "seeded_by_phase": "V9-06D.4",
+      "production_final": false
+    },
+    {
+      "object_id": 84,
+      "object_type": "service",
+      "registry_id": "SVC-RPP",
+      "title": "Расстройства пищевого поведения",
+      "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "acf_fields": ["service_layout_variant", "hero_lead"],
+      "meta_fields": ["migration_status", "seeded_by_phase", "skeleton_status"],
+      "service_layout_variant": "subdivision",
+      "migration_status": "minimal_seed",
+      "seeded_by_phase": "V9-06D.4",
+      "production_final": false
+    }
+  ]
+}

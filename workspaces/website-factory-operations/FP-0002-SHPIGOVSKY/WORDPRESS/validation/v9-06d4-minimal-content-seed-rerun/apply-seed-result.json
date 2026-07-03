@@ -1,0 +1,335 @@
+{
+    "phase": "V9-06D.4-RERUN",
+    "timestamp": "2026-07-03T22:45:22+00:00",
+    "pages_modified": 3,
+    "services_modified": 4,
+    "posts_modified": 0,
+    "menus_changed": false,
+    "options_changed": false,
+    "rewrite_flush": "NOT_PERFORMED",
+    "objects": [
+        {
+            "object_id": 4,
+            "object_type": "page",
+            "object_title": "Главная",
+            "native_writes": 0,
+            "acf_meta_writes": 6,
+            "acf_writes": 4,
+            "meta_writes": 2,
+            "failed_writes": [],
+            "write_log": [
+                {
+                    "key": "home_hero_slides",
+                    "kind": "acf",
+                    "result": "OK",
+                    "after_hash": "cae8b18a9b9b698462f33d6f8bfd4b74f44afd2d266886a0d08bea1d9443f3df"
+                },
+                {
+                    "key": "home_service_nav_items",
+                    "kind": "acf",
+                    "result": "OK",
+                    "after_hash": "15065105cc63e80f8ab46ca5041a8bbb02d850b8552bdd2f97e1d8e4a56d7dfc"
+                },
+                {
+                    "key": "home_cta_title",
+                    "kind": "acf",
+                    "result": "OK",
+                    "after_hash": "7049984059f87bd23631d1fcb9702e78ba46373c47d448c520a5a424d67a0f82"
+                },
+                {
+                    "key": "home_cta_text",
+                    "kind": "acf",
+                    "result": "OK",
+                    "after_hash": "2a115162fe554d2507e31325547ae96df9a9743bab92cc241d6e052774f7b134"
+                },
+                {
+                    "key": "migration_status",
+                    "kind": "post_meta",
+                    "result": "OK",
+                    "after_hash": "952a7cdee78ae6d9f3d41885857f8368606cb419957100edc9c36090ec9d2640"
+                },
+                {
+                    "key": "seeded_by_phase",
+                    "kind": "post_meta",
+                    "result": "OK",
+                    "after_hash": "76876150667cd0a0d9f264600b74a173558804c3c21188fec484b49fc576bab2"
+                }
+            ],
+            "result": "PASS"
+        },
+        {
+            "object_id": 5,
+            "object_type": "page",
+            "object_title": "Услуги",
+            "native_writes": 0,
+            "acf_meta_writes": 5,
+            "acf_writes": 3,
+            "meta_writes": 2,
+            "failed_writes": [],
+            "write_log": [
+                {
+                    "key": "services_hub_intro",
+                    "kind": "acf",
+                    "result": "OK",
+                    "after_hash": "958b0089f216552a177aea5b87b051c612352f28b5a5cc9b54ef5072c0033e49"
+                },
+                {
+                    "key": "services_hub_query_mode",
+                    "kind": "acf",
+                    "result": "OK",
+                    "after_hash": "c9f5fd88b1bd8556eceebf6eca2c77163a0d47061bf8ce4fd530264f17a5e819"
+                },
+                {
+                    "key": "services_hub_show_placeholders",
+                    "kind": "acf",
+                    "result": "OK",
+                    "after_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+                },
+                {
+                    "key": "migration_status",
+                    "kind": "post_meta",
+                    "result": "OK",
+                    "after_hash": "952a7cdee78ae6d9f3d41885857f8368606cb419957100edc9c36090ec9d2640"
+                },
+                {
+                    "key": "seeded_by_phase",
+                    "kind": "post_meta",
+                    "result": "OK",
+                    "after_hash": "76876150667cd0a0d9f264600b74a173558804c3c21188fec484b49fc576bab2"
+                }
+            ],
+            "result": "PASS"
+        },
+        {
+            "object_id": 20,
+            "object_type": "page",
+            "object_title": "Контакты",
+            "native_writes": 0,
+            "acf_meta_writes": 5,
+            "acf_writes": 3,
+            "meta_writes": 2,
+            "failed_writes": [],
+            "write_log": [
+                {
+                    "key": "contacts_address",
+                    "kind": "acf",
+                    "result": "OK",
+                    "after_hash": "ffca0dc921e1b858072e8325232b4995b6bfd50700b6e34dcc50767ed7962b41"
+                },
+                {
+                    "key": "contacts_phones",
+                    "kind": "acf",
+                    "result": "OK",
+                    "after_hash": "e3471e04b252cb660efebdebd4ec06f10e61949010086d69a918d38efeac6c23"
+                },
+                {
+                    "key": "contacts_form_intro",
+                    "kind": "acf",
+                    "result": "OK",
+                    "after_hash": "e6d3f4e9f13e790b1e28dae1afa70ae9102e25a8d895b6e6c93862a18ed5c733"
+                },
+                {
+                    "key": "migration_status",
+                    "kind": "post_meta",
+                    "result": "OK",
+                    "after_hash": "952a7cdee78ae6d9f3d41885857f8368606cb419957100edc9c36090ec9d2640"
+                },
+                {
+                    "key": "seeded_by_phase",
+                    "kind": "post_meta",
+                    "result": "OK",
+                    "after_hash": "76876150667cd0a0d9f264600b74a173558804c3c21188fec484b49fc576bab2"
+                }
+            ],
+            "result": "PASS"
+        },
+        {
+            "object_id": 73,
+            "object_type": "service",
+            "object_title": "Зависимости",
+            "native_writes": 0,
+            "acf_meta_writes": 5,
+            "acf_writes": 2,
+            "meta_writes": 3,
+            "failed_writes": [],
+            "write_log": [
+                {
+                    "key": "service_layout_variant",
+                    "kind": "acf",
+                    "result": "OK",
+                    "after_hash": "9a80b44788374fb621b488e900dc2ffe82b3ac081ddc3928b0cd00c13d7fa32d"
+                },
+                {
+                    "key": "hero_lead",
+                    "kind": "acf",
+                    "result": "OK",
+                    "after_hash": "2646317c0d279d4d96c8b36da7aad5e906d1887294b288fbe843886d5647bb18"
+                },
+                {
+                    "key": "migration_status",
+                    "kind": "post_meta",
+                    "result": "OK",
+                    "after_hash": "952a7cdee78ae6d9f3d41885857f8368606cb419957100edc9c36090ec9d2640"
+                },
+                {
+                    "key": "seeded_by_phase",
+                    "kind": "post_meta",
+                    "result": "OK",
+                    "after_hash": "76876150667cd0a0d9f264600b74a173558804c3c21188fec484b49fc576bab2"
+                },
+                {
+                    "key": "skeleton_status",
+                    "kind": "post_meta",
+                    "result": "OK",
+                    "after_hash": "b59a0d4089b92a3e786161da291929c1a661f721c439bfd8a5d14012f03c8f19"
+                }
+            ],
+            "result": "PASS"
+        },
+        {
+            "object_id": 74,
+            "object_type": "service",
+            "object_title": "Лечение алкогольной зависимости",
+            "native_writes": 0,
+            "acf_meta_writes": 7,
+            "acf_writes": 4,
+            "meta_writes": 3,
+            "failed_writes": [],
+            "write_log": [
+                {
+                    "key": "service_layout_variant",
+                    "kind": "acf",
+                    "result": "OK",
+                    "after_hash": "2fbde2579856c3559939ac1296005c8fa39a40f23356393f2abe3cbe3d00b878"
+                },
+                {
+                    "key": "hero_lead",
+                    "kind": "acf",
+                    "result": "OK",
+                    "after_hash": "938a7155e5627a5dcb5daea78900a8653c056184cbb01ee81b886158fcad4ad2"
+                },
+                {
+                    "key": "intro_text",
+                    "kind": "acf",
+                    "result": "OK",
+                    "after_hash": "e6d3f4e9f13e790b1e28dae1afa70ae9102e25a8d895b6e6c93862a18ed5c733"
+                },
+                {
+                    "key": "signs_items",
+                    "kind": "acf",
+                    "result": "OK",
+                    "after_hash": "3736287b372e03b71c333f654643e42996bce7a6b0a63d459f18b72830b7f831"
+                },
+                {
+                    "key": "migration_status",
+                    "kind": "post_meta",
+                    "result": "OK",
+                    "after_hash": "952a7cdee78ae6d9f3d41885857f8368606cb419957100edc9c36090ec9d2640"
+                },
+                {
+                    "key": "seeded_by_phase",
+                    "kind": "post_meta",
+                    "result": "OK",
+                    "after_hash": "76876150667cd0a0d9f264600b74a173558804c3c21188fec484b49fc576bab2"
+                },
+                {
+                    "key": "skeleton_status",
+                    "kind": "post_meta",
+                    "result": "OK",
+                    "after_hash": "b59a0d4089b92a3e786161da291929c1a661f721c439bfd8a5d14012f03c8f19"
+                }
+            ],
+            "result": "PASS"
+        },
+        {
+            "object_id": 77,
+            "object_type": "service",
+            "object_title": "Психическое здоровье",
+            "native_writes": 0,
+            "acf_meta_writes": 5,
+            "acf_writes": 2,
+            "meta_writes": 3,
+            "failed_writes": [],
+            "write_log": [
+                {
+                    "key": "service_layout_variant",
+                    "kind": "acf",
+                    "result": "OK",
+                    "after_hash": "9a80b44788374fb621b488e900dc2ffe82b3ac081ddc3928b0cd00c13d7fa32d"
+                },
+                {
+                    "key": "hero_lead",
+                    "kind": "acf",
+                    "result": "OK",
+                    "after_hash": "9cb46993930bf2f11ef56989dc1ebd4a0ca1de07f5cf128763aba8c32fea4534"
+                },
+                {
+                    "key": "migration_status",
+                    "kind": "post_meta",
+                    "result": "OK",
+                    "after_hash": "952a7cdee78ae6d9f3d41885857f8368606cb419957100edc9c36090ec9d2640"
+                },
+                {
+                    "key": "seeded_by_phase",
+                    "kind": "post_meta",
+                    "result": "OK",
+                    "after_hash": "76876150667cd0a0d9f264600b74a173558804c3c21188fec484b49fc576bab2"
+                },
+                {
+                    "key": "skeleton_status",
+                    "kind": "post_meta",
+                    "result": "OK",
+                    "after_hash": "b59a0d4089b92a3e786161da291929c1a661f721c439bfd8a5d14012f03c8f19"
+                }
+            ],
+            "result": "PASS"
+        },
+        {
+            "object_id": 84,
+            "object_type": "service",
+            "object_title": "Расстройства пищевого поведения",
+            "native_writes": 0,
+            "acf_meta_writes": 5,
+            "acf_writes": 2,
+            "meta_writes": 3,
+            "failed_writes": [],
+            "write_log": [
+                {
+                    "key": "service_layout_variant",
+                    "kind": "acf",
+                    "result": "OK",
+                    "after_hash": "9a80b44788374fb621b488e900dc2ffe82b3ac081ddc3928b0cd00c13d7fa32d"
+                },
+                {
+                    "key": "hero_lead",
+                    "kind": "acf",
+                    "result": "OK",
+                    "after_hash": "1d4c6763727449913deb711dc5e5759747fb36f8debf4bd9a4d1d6e1cd2322a9"
+                },
+                {
+                    "key": "migration_status",
+                    "kind": "post_meta",
+                    "result": "OK",
+                    "after_hash": "952a7cdee78ae6d9f3d41885857f8368606cb419957100edc9c36090ec9d2640"
+                },
+                {
+                    "key": "seeded_by_phase",
+                    "kind": "post_meta",
+                    "result": "OK",
+                    "after_hash": "76876150667cd0a0d9f264600b74a173558804c3c21188fec484b49fc576bab2"
+                },
+                {
+                    "key": "skeleton_status",
+                    "kind": "post_meta",
+                    "result": "OK",
+                    "after_hash": "b59a0d4089b92a3e786161da291929c1a661f721c439bfd8a5d14012f03c8f19"
+                }
+            ],
+            "result": "PASS"
+        }
+    ],
+    "failed_object_ids": [],
+    "result": "PASS",
+    "mode": "revalidate_existing_writes",
+    "note": "No additional writes; verifies planned values already present (ACF repeater subfield-aware match)."
+}

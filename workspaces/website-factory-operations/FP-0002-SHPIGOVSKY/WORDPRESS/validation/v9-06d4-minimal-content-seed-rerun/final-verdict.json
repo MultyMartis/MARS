@@ -1,0 +1,75 @@
+{
+  "phase": "V9-06D.4-RERUN",
+  "timestamp": "2026-07-03T22:46:36+00:00",
+  "required_head": "1b0fba0e854071d635766e3912802c38b860bf43",
+  "suites": [
+    {
+      "suite": "preflight",
+      "result": "PASS"
+    },
+    {
+      "suite": "runtime-identity",
+      "result": "PASS"
+    },
+    {
+      "suite": "pre-write-baseline",
+      "result": "PASS"
+    },
+    {
+      "suite": "checkpoint",
+      "result": "PASS"
+    },
+    {
+      "suite": "dry-run-seed-plan",
+      "result": "PASS"
+    },
+    {
+      "suite": "apply-seed-result",
+      "result": "PASS"
+    },
+    {
+      "suite": "authorized-object-validation",
+      "result": "PASS"
+    },
+    {
+      "suite": "acf-seed-validation",
+      "result": "PASS"
+    },
+    {
+      "suite": "global-immutability-validation",
+      "result": "PASS"
+    },
+    {
+      "suite": "route-qa-readiness-validation",
+      "result": "PARTIAL"
+    },
+    {
+      "suite": "wpilot-readonly-validation",
+      "result": "PASS"
+    },
+    {
+      "suite": "rollback-readiness",
+      "result": "READY"
+    },
+    {
+      "suite": "no-scope-drift-validation",
+      "result": "PASS"
+    }
+  ],
+  "total_failures": 0,
+  "rewrite_micro_gate_required": true,
+  "pages_modified": 3,
+  "services_modified": 4,
+  "posts_modified": 0,
+  "unauthorized_object_writes": 0,
+  "minimal_content_seed": "COMPLETE",
+  "route_qa_readiness": "PARTIAL",
+  "rewrite_flush": "MICRO_GATE_REQUIRED",
+  "content_migration": "MINIMAL_SEED_ONLY",
+  "v9_integration": "NOT_STARTED",
+  "verdict": "PARTIAL PASS",
+  "v9_06d4_rerun": "COMPLETE",
+  "v9_06d5": "BLOCKED pending rewrite flush micro-gate decision",
+  "recommended_next_action": "REWRITE_FLUSH_MICRO_GATE",
+  "result": "PARTIAL PASS"
+}

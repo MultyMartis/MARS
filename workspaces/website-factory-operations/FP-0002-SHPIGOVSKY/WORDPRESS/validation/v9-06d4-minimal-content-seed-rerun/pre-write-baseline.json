@@ -1,0 +1,317 @@
+{
+    "phase": "V9-06D.4-RERUN",
+    "timestamp": "2026-07-03T22:44:22+00:00",
+    "authorized_objects": {
+        "4": {
+            "ID": 4,
+            "post_type": "page",
+            "title": "Главная",
+            "slug": "glavnaya",
+            "parent": 0,
+            "status": "publish",
+            "template": "default",
+            "path": "/",
+            "url": "http://shpigovsky.test/",
+            "content_hash": "0f00e812b2c40a8f0b3150e98b4ce744fc5b70fbc82989c455c28a248363c610",
+            "excerpt_hash": "empty",
+            "content_length": 431,
+            "excerpt_length": 0,
+            "modified_gmt": "2026-07-02 15:53:38",
+            "meta_keys": [],
+            "meta_hashes": [],
+            "acf": {
+                "nonempty_fields": [],
+                "field_hashes": []
+            },
+            "registry_id": "",
+            "migration_status": "",
+            "seeded_by_phase": "",
+            "skeleton_status": "",
+            "service_layout_variant_meta": ""
+        },
+        "5": {
+            "ID": 5,
+            "post_type": "page",
+            "title": "Услуги",
+            "slug": "uslugi",
+            "parent": 0,
+            "status": "publish",
+            "template": "page-templates/services-hub.php",
+            "path": "/uslugi/",
+            "url": "http://shpigovsky.test/uslugi/",
+            "content_hash": "0f00e812b2c40a8f0b3150e98b4ce744fc5b70fbc82989c455c28a248363c610",
+            "excerpt_hash": "empty",
+            "content_length": 431,
+            "excerpt_length": 0,
+            "modified_gmt": "2026-07-02 15:53:38",
+            "meta_keys": [],
+            "meta_hashes": [],
+            "acf": {
+                "nonempty_fields": [],
+                "field_hashes": []
+            },
+            "registry_id": "",
+            "migration_status": "",
+            "seeded_by_phase": "",
+            "skeleton_status": "",
+            "service_layout_variant_meta": ""
+        },
+        "20": {
+            "ID": 20,
+            "post_type": "page",
+            "title": "Контакты",
+            "slug": "kontakty",
+            "parent": 0,
+            "status": "publish",
+            "template": "page-templates/contacts.php",
+            "path": "/kontakty/",
+            "url": "http://shpigovsky.test/kontakty/",
+            "content_hash": "0f00e812b2c40a8f0b3150e98b4ce744fc5b70fbc82989c455c28a248363c610",
+            "excerpt_hash": "empty",
+            "content_length": 431,
+            "excerpt_length": 0,
+            "modified_gmt": "2026-07-02 15:53:38",
+            "meta_keys": [],
+            "meta_hashes": [],
+            "acf": {
+                "nonempty_fields": [],
+                "field_hashes": []
+            },
+            "registry_id": "",
+            "migration_status": "",
+            "seeded_by_phase": "",
+            "skeleton_status": "",
+            "service_layout_variant_meta": ""
+        },
+        "73": {
+            "ID": 73,
+            "post_type": "service",
+            "title": "Зависимости",
+            "slug": "zavisimosti",
+            "parent": 0,
+            "status": "publish",
+            "template": "default",
+            "path": "/uslugi/zavisimosti/",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/",
+            "content_hash": "d363fe02bc19b643f114734e4e7401590feb5dd0009ae33061dad3ae939f3fea",
+            "excerpt_hash": "df669fcae0b3cf910fac38142aeb08f540b6fdd54dd31dbc27fd1cf2b055f78d",
+            "content_length": 140,
+            "excerpt_length": 93,
+            "modified_gmt": "2026-07-03 21:04:34",
+            "meta_keys": [
+                "content_source",
+                "created_by_phase",
+                "migration_status",
+                "registry_id",
+                "service_layout_variant",
+                "skeleton_status"
+            ],
+            "meta_hashes": {
+                "content_source": "62a2fed3d6e08c44835fce71f02210b1ddabfb066e39edf1e6c261988f824dd3",
+                "created_by_phase": "df579930d430ed65b979e55bf5c8eef563a51ed22af29f112798eb99c1848da4",
+                "migration_status": "52cbdb3d95abd35e29a75dd0a58bdd69fa9d9a9bf475501a48759c31ffe05075",
+                "registry_id": "07596b8dd2d5d8abc2b29f01a88d912c7326700d87f7b415a61d6f575666e016",
+                "service_layout_variant": "9a80b44788374fb621b488e900dc2ffe82b3ac081ddc3928b0cd00c13d7fa32d",
+                "skeleton_status": "f50ffef7ade69252ecb5102189c56efdac5cd2b75f1cfb9e3cfc796b836d2603"
+            },
+            "acf": {
+                "nonempty_fields": [],
+                "field_hashes": []
+            },
+            "registry_id": "SVC-ZAVISIMOSTI",
+            "migration_status": "not_migrated",
+            "seeded_by_phase": "",
+            "skeleton_status": "object_skeleton",
+            "service_layout_variant_meta": "subdivision"
+        },
+        "74": {
+            "ID": 74,
+            "post_type": "service",
+            "title": "Лечение алкогольной зависимости",
+            "slug": "lechenie-alkogolnoy-zavisimosti",
+            "parent": 73,
+            "status": "publish",
+            "template": "default",
+            "path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+            "content_hash": "d363fe02bc19b643f114734e4e7401590feb5dd0009ae33061dad3ae939f3fea",
+            "excerpt_hash": "df669fcae0b3cf910fac38142aeb08f540b6fdd54dd31dbc27fd1cf2b055f78d",
+            "content_length": 140,
+            "excerpt_length": 93,
+            "modified_gmt": "2026-07-03 21:04:34",
+            "meta_keys": [
+                "content_source",
+                "created_by_phase",
+                "migration_status",
+                "registry_id",
+                "service_layout_variant",
+                "skeleton_status"
+            ],
+            "meta_hashes": {
+                "content_source": "62a2fed3d6e08c44835fce71f02210b1ddabfb066e39edf1e6c261988f824dd3",
+                "created_by_phase": "df579930d430ed65b979e55bf5c8eef563a51ed22af29f112798eb99c1848da4",
+                "migration_status": "52cbdb3d95abd35e29a75dd0a58bdd69fa9d9a9bf475501a48759c31ffe05075",
+                "registry_id": "aaa1312c68b96a5360b179fb2ec535f4875894d2eeeeae34d13c0735954155ad",
+                "service_layout_variant": "2fbde2579856c3559939ac1296005c8fa39a40f23356393f2abe3cbe3d00b878",
+                "skeleton_status": "f50ffef7ade69252ecb5102189c56efdac5cd2b75f1cfb9e3cfc796b836d2603"
+            },
+            "acf": {
+                "nonempty_fields": [],
+                "field_hashes": []
+            },
+            "registry_id": "SVC-ALKOGOL",
+            "migration_status": "not_migrated",
+            "seeded_by_phase": "",
+            "skeleton_status": "object_skeleton",
+            "service_layout_variant_meta": "alcohol_special"
+        },
+        "77": {
+            "ID": 77,
+            "post_type": "service",
+            "title": "Психическое здоровье",
+            "slug": "psihicheskoe-zdorovie",
+            "parent": 0,
+            "status": "publish",
+            "template": "default",
+            "path": "/uslugi/psihicheskoe-zdorovie/",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/",
+            "content_hash": "d363fe02bc19b643f114734e4e7401590feb5dd0009ae33061dad3ae939f3fea",
+            "excerpt_hash": "df669fcae0b3cf910fac38142aeb08f540b6fdd54dd31dbc27fd1cf2b055f78d",
+            "content_length": 140,
+            "excerpt_length": 93,
+            "modified_gmt": "2026-07-03 21:04:34",
+            "meta_keys": [
+                "content_source",
+                "created_by_phase",
+                "migration_status",
+                "registry_id",
+                "service_layout_variant",
+                "skeleton_status"
+            ],
+            "meta_hashes": {
+                "content_source": "62a2fed3d6e08c44835fce71f02210b1ddabfb066e39edf1e6c261988f824dd3",
+                "created_by_phase": "df579930d430ed65b979e55bf5c8eef563a51ed22af29f112798eb99c1848da4",
+                "migration_status": "52cbdb3d95abd35e29a75dd0a58bdd69fa9d9a9bf475501a48759c31ffe05075",
+                "registry_id": "159880d25d5bd78f040970dc3b17b40bbfec8594b1a2b45907874092d1d3c2d7",
+                "service_layout_variant": "9a80b44788374fb621b488e900dc2ffe82b3ac081ddc3928b0cd00c13d7fa32d",
+                "skeleton_status": "f50ffef7ade69252ecb5102189c56efdac5cd2b75f1cfb9e3cfc796b836d2603"
+            },
+            "acf": {
+                "nonempty_fields": [],
+                "field_hashes": []
+            },
+            "registry_id": "SVC-PSYCH",
+            "migration_status": "not_migrated",
+            "seeded_by_phase": "",
+            "skeleton_status": "object_skeleton",
+            "service_layout_variant_meta": "subdivision"
+        },
+        "84": {
+            "ID": 84,
+            "post_type": "service",
+            "title": "Расстройства пищевого поведения",
+            "slug": "rasstroystva-pischevogo-povedeniya",
+            "parent": 0,
+            "status": "publish",
+            "template": "default",
+            "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+            "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/",
+            "content_hash": "d363fe02bc19b643f114734e4e7401590feb5dd0009ae33061dad3ae939f3fea",
+            "excerpt_hash": "df669fcae0b3cf910fac38142aeb08f540b6fdd54dd31dbc27fd1cf2b055f78d",
+            "content_length": 140,
+            "excerpt_length": 93,
+            "modified_gmt": "2026-07-03 21:04:34",
+            "meta_keys": [
+                "content_source",
+                "created_by_phase",
+                "migration_status",
+                "registry_id",
+                "service_layout_variant",
+                "skeleton_status"
+            ],
+            "meta_hashes": {
+                "content_source": "62a2fed3d6e08c44835fce71f02210b1ddabfb066e39edf1e6c261988f824dd3",
+                "created_by_phase": "df579930d430ed65b979e55bf5c8eef563a51ed22af29f112798eb99c1848da4",
+                "migration_status": "52cbdb3d95abd35e29a75dd0a58bdd69fa9d9a9bf475501a48759c31ffe05075",
+                "registry_id": "035330790613498e259b295015ff23cddb498f51c9a586e5d7848cbbde3f65c9",
+                "service_layout_variant": "9a80b44788374fb621b488e900dc2ffe82b3ac081ddc3928b0cd00c13d7fa32d",
+                "skeleton_status": "f50ffef7ade69252ecb5102189c56efdac5cd2b75f1cfb9e3cfc796b836d2603"
+            },
+            "acf": {
+                "nonempty_fields": [],
+                "field_hashes": []
+            },
+            "registry_id": "SVC-RPP",
+            "migration_status": "not_migrated",
+            "seeded_by_phase": "",
+            "skeleton_status": "object_skeleton",
+            "service_layout_variant_meta": "subdivision"
+        }
+    },
+    "global": {
+        "pages_total": 23,
+        "services_total": 15,
+        "posts_total": 1,
+        "menus": [
+            {
+                "term_id": 3,
+                "name": "Footer",
+                "slug": "footer",
+                "count": 3
+            },
+            {
+                "term_id": 4,
+                "name": "Legal",
+                "slug": "legal",
+                "count": 5
+            },
+            {
+                "term_id": 2,
+                "name": "Primary",
+                "slug": "primary",
+                "count": 7
+            }
+        ],
+        "menus_count": 3,
+        "show_on_front": "page",
+        "page_on_front": 4,
+        "page_for_posts": 19,
+        "permalink_structure": "/%postname%/",
+        "rewrite_rules_hash": "c3e9cb3746da51c81226e4b8e517004c6a0ca0a5eb73a6ea5225c2a8af1aa110",
+        "active_theme": "shpigovsky",
+        "active_theme_version": "0.2.0-skeleton",
+        "active_plugins": [
+            "acf-extended-pro/acf-extended.php",
+            "advanced-custom-fields-pro/acf.php",
+            "metacode-wpilot/metacode-wpilot.php",
+            "shpigovsky-core/shpigovsky-core.php"
+        ],
+        "acf_groups_count": 13,
+        "acf_group_keys": [
+            "group_fp02_blog_post_article_meta",
+            "group_fp02_page_contacts",
+            "group_fp02_page_home",
+            "group_fp02_page_institutional",
+            "group_fp02_page_legal",
+            "group_fp02_page_reviews",
+            "group_fp02_page_services_hub",
+            "group_fp02_service_faq",
+            "group_fp02_service_layout_hero",
+            "group_fp02_service_relationships",
+            "group_fp02_service_structured_sections",
+            "group_fp02_site_options_contacts",
+            "group_fp02_site_options_modal_cta"
+        ],
+        "acf_options_pages": [
+            "fp02-site-settings"
+        ],
+        "acf_pro_active": true,
+        "acf_extended_pro_active": true,
+        "acf_free_active": false,
+        "wpilot_write_enabled": false,
+        "categories_count": 1,
+        "tags_count": 0,
+        "users_count": 2
+    },
+    "result": "PASS"
+}

@@ -1,0 +1,91 @@
+{
+  "phase": "V9-06D.4-RERUN",
+  "timestamp": "2026-07-03T22:46:36+00:00",
+  "routes": [
+    {
+      "url": "http://shpigovsky.test/",
+      "path": "/",
+      "expected_object_id": 4,
+      "expected_object_type": "page",
+      "http_status": 200,
+      "generated_permalink": "http://shpigovsky.test/",
+      "generated_path": "/",
+      "generated_permalink_match": true,
+      "result": "PASS"
+    },
+    {
+      "url": "http://shpigovsky.test/uslugi/",
+      "path": "/uslugi/",
+      "expected_object_id": 5,
+      "expected_object_type": "page",
+      "http_status": 200,
+      "generated_permalink": "http://shpigovsky.test/uslugi/",
+      "generated_path": "/uslugi/",
+      "generated_permalink_match": true,
+      "result": "PASS"
+    },
+    {
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/",
+      "path": "/uslugi/zavisimosti/",
+      "expected_object_id": 73,
+      "expected_object_type": "service",
+      "http_status": 200,
+      "generated_permalink": "http://shpigovsky.test/uslugi/zavisimosti/",
+      "generated_path": "/uslugi/zavisimosti/",
+      "generated_permalink_match": true,
+      "result": "PASS"
+    },
+    {
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "expected_object_id": 74,
+      "expected_object_type": "service",
+      "http_status": 404,
+      "generated_permalink": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "generated_path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "generated_permalink_match": true,
+      "result": "REWRITE_FLUSH_MICRO_GATE_REQUIRED"
+    },
+    {
+      "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/",
+      "path": "/uslugi/psihicheskoe-zdorovie/",
+      "expected_object_id": 77,
+      "expected_object_type": "service",
+      "http_status": 200,
+      "generated_permalink": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/",
+      "generated_path": "/uslugi/psihicheskoe-zdorovie/",
+      "generated_permalink_match": true,
+      "result": "PASS"
+    },
+    {
+      "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "expected_object_id": 84,
+      "expected_object_type": "service",
+      "http_status": 200,
+      "generated_permalink": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "generated_path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "generated_permalink_match": true,
+      "result": "PASS"
+    },
+    {
+      "url": "http://shpigovsky.test/kontakty/",
+      "path": "/kontakty/",
+      "expected_object_id": 20,
+      "expected_object_type": "page",
+      "http_status": 200,
+      "generated_permalink": "http://shpigovsky.test/kontakty/",
+      "generated_path": "/kontakty/",
+      "generated_permalink_match": true,
+      "result": "PASS"
+    }
+  ],
+  "rewrite_flush_required": true,
+  "rewrite_flush_performed": false,
+  "http_200_count": 6,
+  "http_404_count": 1,
+  "frontend_home": 200,
+  "wp_admin": 302,
+  "result": "PARTIAL",
+  "note": "Service ID 74 generated permalink matches expected path but HTTP 404; rewrite flush not authorized in D.4."
+}

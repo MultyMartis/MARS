@@ -1,0 +1,167 @@
+{
+    "phase": "V9-06D.4-RERUN",
+    "timestamp": "2026-07-03T22:45:22+00:00",
+    "objects": [
+        {
+            "object_id": 4,
+            "title": "Главная",
+            "type": "page",
+            "checks": {
+                "exists": true,
+                "post_type_unchanged": true,
+                "slug_unchanged": true,
+                "parent_unchanged": true,
+                "status_unchanged": true,
+                "template_unchanged": true,
+                "registry_id_preserved": true,
+                "migration_status_minimal_seed": true,
+                "seeded_by_phase": true,
+                "content_hash_unchanged": true
+            },
+            "acf_nonempty_fields": [
+                "home_cta_text",
+                "home_cta_title",
+                "home_hero_slides",
+                "home_service_nav_items"
+            ],
+            "result": "PASS"
+        },
+        {
+            "object_id": 5,
+            "title": "Услуги",
+            "type": "page",
+            "checks": {
+                "exists": true,
+                "post_type_unchanged": true,
+                "slug_unchanged": true,
+                "parent_unchanged": true,
+                "status_unchanged": true,
+                "template_unchanged": true,
+                "registry_id_preserved": true,
+                "migration_status_minimal_seed": true,
+                "seeded_by_phase": true,
+                "content_hash_unchanged": true
+            },
+            "acf_nonempty_fields": [
+                "services_hub_intro",
+                "services_hub_query_mode",
+                "services_hub_show_placeholders"
+            ],
+            "result": "PASS"
+        },
+        {
+            "object_id": 20,
+            "title": "Контакты",
+            "type": "page",
+            "checks": {
+                "exists": true,
+                "post_type_unchanged": true,
+                "slug_unchanged": true,
+                "parent_unchanged": true,
+                "status_unchanged": true,
+                "template_unchanged": true,
+                "registry_id_preserved": true,
+                "migration_status_minimal_seed": true,
+                "seeded_by_phase": true,
+                "content_hash_unchanged": true
+            },
+            "acf_nonempty_fields": [
+                "contacts_address",
+                "contacts_form_intro",
+                "contacts_phones"
+            ],
+            "result": "PASS"
+        },
+        {
+            "object_id": 73,
+            "title": "Зависимости",
+            "type": "service",
+            "checks": {
+                "exists": true,
+                "post_type_unchanged": true,
+                "slug_unchanged": true,
+                "parent_unchanged": true,
+                "status_unchanged": true,
+                "template_unchanged": true,
+                "registry_id_preserved": true,
+                "migration_status_minimal_seed": true,
+                "seeded_by_phase": true,
+                "content_hash_unchanged": true
+            },
+            "acf_nonempty_fields": [
+                "hero_lead",
+                "service_layout_variant"
+            ],
+            "result": "PASS"
+        },
+        {
+            "object_id": 74,
+            "title": "Лечение алкогольной зависимости",
+            "type": "service",
+            "checks": {
+                "exists": true,
+                "post_type_unchanged": true,
+                "slug_unchanged": true,
+                "parent_unchanged": true,
+                "status_unchanged": true,
+                "template_unchanged": true,
+                "registry_id_preserved": true,
+                "migration_status_minimal_seed": true,
+                "seeded_by_phase": true,
+                "content_hash_unchanged": true
+            },
+            "acf_nonempty_fields": [
+                "hero_lead",
+                "intro_text",
+                "service_layout_variant",
+                "signs_items"
+            ],
+            "result": "PASS"
+        },
+        {
+            "object_id": 77,
+            "title": "Психическое здоровье",
+            "type": "service",
+            "checks": {
+                "exists": true,
+                "post_type_unchanged": true,
+                "slug_unchanged": true,
+                "parent_unchanged": true,
+                "status_unchanged": true,
+                "template_unchanged": true,
+                "registry_id_preserved": true,
+                "migration_status_minimal_seed": true,
+                "seeded_by_phase": true,
+                "content_hash_unchanged": true
+            },
+            "acf_nonempty_fields": [
+                "hero_lead",
+                "service_layout_variant"
+            ],
+            "result": "PASS"
+        },
+        {
+            "object_id": 84,
+            "title": "Расстройства пищевого поведения",
+            "type": "service",
+            "checks": {
+                "exists": true,
+                "post_type_unchanged": true,
+                "slug_unchanged": true,
+                "parent_unchanged": true,
+                "status_unchanged": true,
+                "template_unchanged": true,
+                "registry_id_preserved": true,
+                "migration_status_minimal_seed": true,
+                "seeded_by_phase": true,
+                "content_hash_unchanged": true
+            },
+            "acf_nonempty_fields": [
+                "hero_lead",
+                "service_layout_variant"
+            ],
+            "result": "PASS"
+        }
+    ],
+    "result": "PASS"
+}

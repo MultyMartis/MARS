@@ -44,7 +44,7 @@ Operator WV6: PENDING
 Direct local domain: PASS (FP-0002 — FW-06A.1)
 Synthetic source: TRACKED (Git whitelist)
 Agent registration: REGISTERED (AG-WP-001 — SYNTHETIC READ-ONLY CAPABILITY ONLY; NOT PRODUCTION READY)
-Client pilot: FP-0002 V9-06D.3 content migration planning PASS; object skeleton complete; content migration not performed
+Client pilot: FP-0002 V9-06D.4 RERUN minimal content seed PARTIAL PASS; Pages 4/5/20 + Services 73/74/77/84 seeded; rewrite flush micro-gate for Service 74; full content migration / V9 integration not performed
 ```
 
 | Field | Value |

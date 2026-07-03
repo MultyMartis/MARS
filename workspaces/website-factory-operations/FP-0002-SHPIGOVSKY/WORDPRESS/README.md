@@ -2,8 +2,8 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D.3 CONTENT MIGRATION PLANNING COMPLETE
-**Classification:** CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON COMPLETE — CONTENT MIGRATION PLANNED (NOT PERFORMED)
+**Status:** V9-06D.4 RERUN MINIMAL CONTENT SEED COMPLETE (PARTIAL PASS — rewrite flush micro-gate for Service 74)
+**Classification:** CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON COMPLETE — MINIMAL VISUAL CONTENT SEEDED (PAGES 4/5/20 + SERVICES 73/74/77/84)
 
 ---
 
@@ -123,3 +123,20 @@ V9-06D.1 rerun delivered `theme/shpigovsky`, `plugins/shpigovsky-core`, and 13 `
 V9-06D.2 created the controlled WordPress object skeleton in the local FP-0002 runtime: 15 `service` CPT objects with registry metadata and hierarchy, 0 new Pages, 13 existing Page template assignments, 0 Posts, 0 menu changes, 0 option changes, 0 redirects, and no rewrite flush. Content migration and V9 integration remain not started.
 
 Report: `reports/FP-0002-V9-06D2-WORDPRESS-OBJECT-SKELETON-REPORT-v1.md`.
+
+
+## V9-06D.3 content migration planning (2026-07-04)
+
+Planning-only phase complete: route/object matrices, ACF fill strategy, and minimal visual content seed plan. Runtime content writes: 0.
+
+Report: `reports/FP-0002-V9-06D3-CONTENT-MIGRATION-PLANNING-REPORT-v1.md`.
+
+
+## V9-06D.4 RERUN minimal content seed for visual route QA (2026-07-04)
+
+Authorized minimal ACF/meta seed applied to Pages 4/5/20 and Services 73/74/77/84 under DB checkpoint control. Full content migration, V9 HTML/CSS/JS integration, menus, redirects, Options Page values, and rewrite flush were not performed. Service 74 generated permalink matches expected path but HTTP 404 — `REWRITE_FLUSH_MICRO_GATE_REQUIRED`.
+
+Reports:
+
+- `reports/FP-0002-V9-06D4-RERUN-MINIMAL-CONTENT-SEED-FOR-VISUAL-ROUTE-QA-REPORT-v1.md` — rerun PASS/PARTIAL
+- `reports/FP-0002-V9-06D4-MINIMAL-CONTENT-SEED-FOR-VISUAL-ROUTE-QA-REPORT-v1.md` — previous blocked attempt (HEAD mismatch), preserved
