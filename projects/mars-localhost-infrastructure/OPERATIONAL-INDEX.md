@@ -68,6 +68,9 @@ MLI is an **execution environment**. It is **not** the MARS brain, governance so
 | Capability | State |
 |------------|-------|
 | **Shared toolchain** | **HARDENED** — [registries/MARS-LOCALHOST-TOOL-REGISTRY-v1.md](registries/MARS-LOCALHOST-TOOL-REGISTRY-v1.md) |
+| **Toolchain activator** | **OPERATIONAL — HUMAN-INVOKED — SESSION-ONLY** — [MARS-LOCALHOST-TOOLCHAIN-ACTIVATION-v1.md](MARS-LOCALHOST-TOOLCHAIN-ACTIVATION-v1.md) |
+| **Machine PATH cleanup** | **COMPLETE** — deprecated `E:\MARS-Localhost\laragon\bin\php\php-8.3.30-Win32-vs16-x64` entry removed; persistent global PHP PATH **NOT USED** |
+| **Global Gulp** | **NOT USED** — project-local dependencies only |
 | **Smoke site** | `http://mli-smoke-001.test/` — **PASS** (browser `.test` DNS verified 2026-07-02) |
 | **WordPress synthetic (FWS-0001)** | `http://fws-0001.test/` — **OPERATIONAL** (browser `.test` DNS verified 2026-07-02); FW-05R synthetic validation complete; **FW-07C-1 revalidation pending** |
 | **WordPress project FP-0002** | `http://shpigovsky.test/` — **FROZEN_PRE_IMPLEMENTATION_BASELINE** (V9-05B checkpoint `foundation-002-v9-pre-implementation` 2026-07-02; browser HTTP verified) |
@@ -176,6 +179,7 @@ Forward commits (FP-0002 WordPress foundation): `11e9155`, `f003fe8`, `a5a7de0`,
 | 10 | [MARS-LOCALHOST-BACKUP-AND-RESET-POLICY-v1.md](MARS-LOCALHOST-BACKUP-AND-RESET-POLICY-v1.md) |
 | 11 | [MARS-LOCALHOST-SERVICE-CONTROL-POLICY-v1.md](MARS-LOCALHOST-SERVICE-CONTROL-POLICY-v1.md) |
 | 12 | [MARS-LOCALHOST-LARAGON-PLACEMENT-DECISION-v1.md](MARS-LOCALHOST-LARAGON-PLACEMENT-DECISION-v1.md) |
+| 13 | [MARS-LOCALHOST-TOOLCHAIN-ACTIVATION-v1.md](MARS-LOCALHOST-TOOLCHAIN-ACTIVATION-v1.md) |
 
 ### MLI-02 standards and reports
 
