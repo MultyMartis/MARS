@@ -1,0 +1,146 @@
+{
+    "schema": "fp-0002-source-manifest",
+    "surface": "Shpigovsky Core",
+    "file_count": 19,
+    "php_count": 16,
+    "json_count": 0,
+    "aggregate_hash": "0903f884189903ce7102caa03cd912d9a2728d892b4d3daedf3f14920588e93d",
+    "delivery_status": "CONTENT MODEL SOURCE IMPLEMENTED — NOT DELIVERED",
+    "secret_scan_hits": 0,
+    "operator_managed_plugin_package_exclusion": "CONFIRMED",
+    "files": [
+        {
+            "path": "README.md",
+            "sha256": "9b913a5ce7ecc4082318436237fce5adc7e916f797c09616528b566d486e3d08",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "CONTENT MODEL SOURCE IMPLEMENTED — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "inc/compat.php",
+            "sha256": "8a7d41a7f948c7ef4cbb076353502f39081c6f1f755b329fc81fb1adee3a73bd",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "CONTENT MODEL SOURCE IMPLEMENTED — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "index.php",
+            "sha256": "e5c2434c1cce8d94a71d752f3fad0d958a9a81353fbe8b0fab3f9f8d8b6f1f49",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "CONTENT MODEL SOURCE IMPLEMENTED — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "languages/.gitkeep",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "CONTENT MODEL SOURCE IMPLEMENTED — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "shpigovsky-core.php",
+            "sha256": "852aaa3c7ed46c797b248eba57fe08a108bd927e92870a1da00ca94b231b31ef",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "CONTENT MODEL SOURCE IMPLEMENTED — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "src/Admin/EditorRestrictions.php",
+            "sha256": "c2b3a3caf85d908bc73fed6a49e18e21d223528e7207b4570b2a3f01399bbe81",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "CONTENT MODEL SOURCE IMPLEMENTED — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "src/Admin/OptionsPage.php",
+            "sha256": "63738b44463cbfd85731b243c5b85c402b30b2716f0da4acb7d55011e70d89a1",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "CONTENT MODEL SOURCE IMPLEMENTED — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "src/ContentTypes/Service.php",
+            "sha256": "5b7be77d1c8795156f52d459ce1d797183a1e23af8873ac7afd3cf650e620121",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "CONTENT MODEL SOURCE IMPLEMENTED — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "src/Contracts/ModuleInterface.php",
+            "sha256": "97051adc5f2ab4a83ac7b8c21261facae549c17bd1df8cc2f1d9306700fa1132",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "CONTENT MODEL SOURCE IMPLEMENTED — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "src/Fields/AcfIntegration.php",
+            "sha256": "554f75a5fa35106ced7d4d45caa65ffc095f355309ba17371a8842ae679e9464",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "CONTENT MODEL SOURCE IMPLEMENTED — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "src/Fields/FieldGroups.php",
+            "sha256": "f77b78358b3e5662bb6e4c3184b14933f867745b441413e30e009a424b18bf70",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "CONTENT MODEL SOURCE IMPLEMENTED — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "src/Fields/RepeaterValidation.php",
+            "sha256": "86b2f005f42770a27e124a1345188813da8cdd981b90db71efb55911cd0d3c63",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "CONTENT MODEL SOURCE IMPLEMENTED — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "src/Forms/ConsultationHandler.php",
+            "sha256": "ef25fa3d694812fffd077bfb04bb61c8fa20875a61209bf6258ca47f6dd2b61d",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "CONTENT MODEL SOURCE IMPLEMENTED — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "src/Loader/Autoloader.php",
+            "sha256": "34c93352f63bbbefb2fba85bb566502bd6e779a1120b4fbd9a5d6dc64df14e3e",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "CONTENT MODEL SOURCE IMPLEMENTED — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "src/Migrations/MigrationRunner.php",
+            "sha256": "d31444eb6fd85ad8fe2780ab816392d7f01d15a4f26e9eeb1c58f027e366cf14",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "CONTENT MODEL SOURCE IMPLEMENTED — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "src/Permalinks/ServicePermalinks.php",
+            "sha256": "677dd676eda072354d7fc44666c303fcc079295bd6fdd392509a5db79ed61755",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "CONTENT MODEL SOURCE IMPLEMENTED — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "src/Plugin.php",
+            "sha256": "278d430531791a7ec18f81bf68fcb46aff48a99aa13258cdf6bea7679b1374a2",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "CONTENT MODEL SOURCE IMPLEMENTED — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "src/Settings/SiteSettings.php",
+            "sha256": "077c5080ba3884daef3bb316799065ef835eec764bf3fcabf499a00f4a1b9692",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "CONTENT MODEL SOURCE IMPLEMENTED — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "src/Taxonomies/README.md",
+            "sha256": "8b5850f496a5cfc917a00b28ed6de7c6cb8f28e09dbd0e3c493495b3b39a6ca4",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "CONTENT MODEL SOURCE IMPLEMENTED — NOT DELIVERED",
+            "secret_scan": "PASS"
+        }
+    ]
+}

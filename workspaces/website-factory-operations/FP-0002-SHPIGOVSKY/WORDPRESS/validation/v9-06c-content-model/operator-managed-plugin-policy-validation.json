@@ -1,0 +1,11 @@
+{
+    "suite": "operator-managed-plugin-policy-validation",
+    "checks": {
+        "acf_pro_admitted": true,
+        "acf_pro_update_policy_ignore": true,
+        "acf_pro_delivery_forbidden": true,
+        "acf_extended_not_approved": true,
+        "acf_free_inactive": true
+    },
+    "result": "PASS"
+}

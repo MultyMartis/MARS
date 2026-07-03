@@ -12,7 +12,7 @@
 |---------|--------|---------------|------------------|----------------|
 | Theme `shpigovsky` | V6 `theme-source/shpigovsky` + runtime deltas | DRIFTED from V6; matches adopted runtime | `WORDPRESS/theme/shpigovsky/` | CANONICAL_CURRENT — ADOPTED |
 | Plugin `shpigovsky-core` | V6 `functionality-plugin/shpigovsky-core` + runtime deltas | DRIFTED from V6; matches adopted runtime | `WORDPRESS/plugins/shpigovsky-core/` | CANONICAL_CURRENT — ADOPTED |
-| ACF JSON | V6 empty state | EMPTY (`.gitkeep` only) | `WORDPRESS/acf-json/` | REGISTERED — EMPTY FOUNDATION STATE |
+| ACF JSON | V6 empty state + V9-06C source generation | NOT DELIVERED TO RUNTIME | `WORDPRESS/acf-json/` | REGISTERED — V9-06C SOURCE CREATED |
 
 ## Historical surfaces
 
@@ -49,7 +49,9 @@ Foundation baseline scanned at capture; no secrets detected in theme/plugin sour
 
 ## V9 implementation
 
-**NOT INCLUDED** in this baseline. V9 frontend remains under `workspaces/fp-0002-shpigovsky-v9/`.
+V9 frontend HTML/CSS/JS integration is **NOT INCLUDED** in V9-06C. V9 frontend remains under `workspaces/fp-0002-shpigovsky-v9/`.
+
+V9-06C adds WordPress content model source only: Shpigovsky Core CPT/permalink/ACF/admin/validation source and canonical ACF JSON under `WORDPRESS/acf-json/`. Runtime implementation remains **NOT STARTED**.
 
 ## Operator-managed external plugin boundary
 

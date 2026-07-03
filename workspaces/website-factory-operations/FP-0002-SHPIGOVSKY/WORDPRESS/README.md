@@ -2,8 +2,8 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06B.2 ACF PRO DEPENDENCY ADMITTED  
-**Classification:** FOUNDATION BASELINE — ARCHITECTURE APPROVED — NO V9 IMPLEMENTATION
+**Status:** V9-06C CONTENT MODEL SOURCE IMPLEMENTED
+**Classification:** SOURCE IMPLEMENTED — NOT DELIVERED — RUNTIME NOT STARTED
 
 ---
 
@@ -35,9 +35,10 @@ The runtime is **not** the canonical editable source. Delivery flows: Git source
 | ACF Pro | **ADMITTED** as operator-managed external dependency (OD-001 / V9-06B.2) |
 | BoundedMeta primary path | REJECTED |
 | V9-06B | **COMPLETE** — theme + core skeleton |
-| V9-06C | READY FOR OPERATOR AUTHORIZATION — NOT AUTHORIZED |
+| V9-06C | **COMPLETE — CONTENT MODEL SOURCE IMPLEMENTED** |
 | Runtime changes | 0 |
-| WordPress implementation | SKELETON ONLY (V9-06B) |
+| WordPress source implementation | **CONTENT MODEL COMPLETE** |
+| WordPress runtime implementation | **NOT STARTED** |
 | FW-07C-2D | SUPERSEDED BY ARCHITECTURE-FIRST SEQUENCE (V9-06D) |
 
 Authority: [architecture/FP-0002-WORDPRESS-ARCHITECTURE-v1.md](architecture/FP-0002-WORDPRESS-ARCHITECTURE-v1.md)
@@ -62,8 +63,8 @@ WORDPRESS/
 | Surface | Classification |
 |---------|----------------|
 | Theme | V9-06B SKELETON — NO V9 VISUAL INTEGRATION |
-| Shpigovsky Core | V9-06B SKELETON — MODULES INERT |
-| ACF JSON | EMPTY FOUNDATION STATE |
+| Shpigovsky Core | V9-06C CONTENT MODEL SOURCE IMPLEMENTED — MODULES STILL GATED |
+| ACF JSON | V9-06C SOURCE CREATED — NOT DELIVERED |
 
 ## Provenance
 
@@ -87,4 +88,15 @@ ACF PRO advanced-custom-fields-pro/acf.php v6.8.5 is admitted as an **operator-m
 ACF Extended PRO acf-extended-pro/acf-extended.php v0.9.2.3 is classified separately as operator-managed and **not approved for FP-0002 use by default**. ACF Free remains installed but inactive and is not used while PRO is active.
 
 Registry: architecture/FP-0002-OPERATOR-MANAGED-EXTERNAL-PLUGINS-v1.md.
+
+## V9-06C content model source implementation
+
+V9-06C implements the canonical WordPress content model in source only:
+
+- `service` CPT source and `/uslugi/{service-path}/` permalink source are implemented in `plugins/shpigovsky-core/`.
+- 13 ACF Pro field group definitions are implemented in source and canonical JSON is generated under `acf-json/`.
+- Options Page, admin UX helpers, ACF dependency guards, and validation hooks are source implemented.
+- Runtime delivery, WordPress object creation, database writes, rewrite flushing, ACF runtime DB registration, V9 HTML/CSS/JS integration, and runtime ACF JSON writes were not performed.
+
+Report: `reports/FP-0002-V9-06C-CONTENT-MODEL-SOURCE-IMPLEMENTATION-REPORT-v1.md`.
 

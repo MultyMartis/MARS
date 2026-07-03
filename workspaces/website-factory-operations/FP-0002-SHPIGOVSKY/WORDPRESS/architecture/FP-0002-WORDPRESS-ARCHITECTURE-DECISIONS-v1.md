@@ -56,3 +56,12 @@
 | ADR-030 | ACF Extended PRO use | NOT APPROVED BY DEFAULT | Keep active but not used unless explicitly authorized |
 | ADR-031 | ACF plugin update/delivery policy | APPROVED | ACF PRO/ACFE PRO automatic update, replacement, deletion, and package delivery forbidden |
 
+## V9-06C source implementation decisions
+
+| ID | Decision | Status | Value |
+|----|----------|--------|-------|
+| ADR-032 | Content model source implementation | COMPLETE_SOURCE_ONLY | `service` CPT, permalink source, ACF groups, options page, admin UX and validation hooks implemented in canonical source |
+| ADR-033 | ACF JSON source generation | COMPLETE_SOURCE_ONLY | 13 deterministic JSON groups generated under `WORDPRESS/acf-json/`; runtime ACF JSON writes remain 0 |
+| ADR-034 | Runtime delivery boundary | NOT_STARTED | V9-06C did not deliver theme/plugin/ACF JSON to `X:\MARS-Localhost` |
+| ADR-035 | WordPress object creation boundary | NOT_STARTED | Pages, Services, Posts, Menus, Options and runtime ACF field groups were not created |
+

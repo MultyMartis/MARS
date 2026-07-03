@@ -1,0 +1,53 @@
+{
+    "schema": "fp-0002-v9-06b-module-registry",
+    "version": "1.0.0",
+    "updated_by": "V9-06C",
+    "runtime_delivery": "NOT_PERFORMED",
+    "modules": [
+        {
+            "module": "ContentTypes",
+            "status": "SOURCE_IMPLEMENTED_FOR_V9_06C",
+            "runtime_active": "after_delivery_only"
+        },
+        {
+            "module": "Permalinks",
+            "status": "SOURCE_IMPLEMENTED_FOR_V9_06C",
+            "runtime_active": "after_delivery_only"
+        },
+        {
+            "module": "Fields",
+            "status": "SOURCE_IMPLEMENTED_FOR_V9_06C",
+            "runtime_active": "after_delivery_only"
+        },
+        {
+            "module": "Settings",
+            "status": "SOURCE_IMPLEMENTED_FOR_V9_06C",
+            "runtime_active": "after_delivery_only"
+        },
+        {
+            "module": "Admin",
+            "status": "SOURCE_IMPLEMENTED_FOR_V9_06C",
+            "runtime_active": "after_delivery_only"
+        },
+        {
+            "module": "Validation",
+            "status": "SOURCE_IMPLEMENTED_FOR_V9_06C",
+            "runtime_active": "after_delivery_only"
+        },
+        {
+            "module": "Migrations",
+            "status": "SKELETON_ONLY",
+            "deferred_to": "V9-06D"
+        },
+        {
+            "module": "Forms",
+            "status": "SKELETON_ONLY",
+            "deferred_to": "later_phase"
+        },
+        {
+            "module": "Taxonomies",
+            "status": "REJECTED",
+            "public_module": false
+        }
+    ]
+}

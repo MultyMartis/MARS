@@ -1,0 +1,737 @@
+{
+  "schema": "fp-0002-v9-06b-skeleton-validation-result",
+  "generated": "2026-07-03T18:59:37.119Z",
+  "total_checks": 120,
+  "passed": 120,
+  "failed": 0,
+  "result": "PASS",
+  "boundaries": {
+    "runtime_writes": 0,
+    "database_writes": 0,
+    "wordpress_object_writes": 0,
+    "service_cpt_registered_at_runtime": false,
+    "acf_json_hooks_active_in_skeleton": false
+  },
+  "checks": [
+    {
+      "id": "exists:theme/shpigovsky/style.css",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/functions.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/header.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/footer.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/index.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/front-page.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/home.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/page.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/single.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/single-service.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/404.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/search.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/inc/setup.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/inc/assets.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/inc/template-tags.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/inc/service-template-loader.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/page-templates/services-hub.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/page-templates/institutional.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/page-templates/reviews.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/page-templates/contacts.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/page-templates/legal.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "template_part_registry_families",
+      "expected": "11",
+      "actual": "11",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/layout/head.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/layout/header.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/layout/footer.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/layout/global-consultation-modal.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/components/scroll-to-top.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/navigation/breadcrumbs.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/home/hero.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/service/inner-hero.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/service/intro.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/service/signs.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/service/program.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/service/faq.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/institutional/infrastructure-narrative.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/legal/document-page.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/components/blog-archive-card.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/components/review-archive-card.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/page/placeholder-notice.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/components/final-form.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/global/document-open.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/global/document-close.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/layout/head.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/layout/body-start.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/layout/header.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/layout/footer.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/layout/global-consultation-modal.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/navigation/primary-desktop.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/navigation/primary-mobile.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/navigation/breadcrumbs.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/components/scroll-to-top.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/components/blog-archive-card.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/components/review-archive-card.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/components/program-cta-band.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/components/internal-page-nav.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/components/final-form.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/home/hero.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/home/feature-grid.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/home/treatment-prevention.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/home/rehabilitation-program.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/home/gallery.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/home/articles-teaser.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/home/faq.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/service/subdivision-stack.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/service/leaf-stack.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/service/alcohol-stack.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/service/inner-hero.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/service/intro.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/service/signs.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/service/approach.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/service/stages.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/service/program.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/service/comfort.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/service/faq.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/page/placeholder-notice.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/page/plain-content.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/institutional/infrastructure-narrative.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/institutional/institutional-narrative.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/contacts/map-body.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/contacts/rehabilitation-steps.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/blog/archive-list.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/blog/article-content.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/blog/article-lower-stack.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/legal/document-page.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/reviews/archive-list.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:theme/shpigovsky/template-parts/reviews/reviews-section.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:plugins/shpigovsky-core/shpigovsky-core.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:plugins/shpigovsky-core/inc/compat.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:plugins/shpigovsky-core/src/Plugin.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:plugins/shpigovsky-core/src/Contracts/ModuleInterface.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:plugins/shpigovsky-core/src/Loader/Autoloader.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:plugins/shpigovsky-core/src/ContentTypes/Service.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:plugins/shpigovsky-core/src/Permalinks/ServicePermalinks.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:plugins/shpigovsky-core/src/Fields/AcfIntegration.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:plugins/shpigovsky-core/src/Fields/RepeaterValidation.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:plugins/shpigovsky-core/src/Settings/SiteSettings.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:plugins/shpigovsky-core/src/Migrations/MigrationRunner.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:plugins/shpigovsky-core/src/Forms/ConsultationHandler.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:plugins/shpigovsky-core/src/Admin/OptionsPage.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:plugins/shpigovsky-core/src/Admin/EditorRestrictions.php",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:plugins/shpigovsky-core/src/Taxonomies/README.md",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "menu_primary",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "menu_footer_services",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "menu_footer_o_centre",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "menu_legal",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "legacy_footer_menu_removed",
+      "expected": "false",
+      "actual": "false",
+      "result": "PASS"
+    },
+    {
+      "id": "theme_skeleton_constant",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "service_loader_required",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "plugin_skeleton_constant",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "plugin_no_inline_acf_hooks",
+      "expected": "false",
+      "actual": "false",
+      "result": "PASS"
+    },
+    {
+      "id": "legacy_bootstrap_removed",
+      "expected": "false",
+      "actual": "false",
+      "result": "PASS"
+    },
+    {
+      "id": "service_module_contract",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "service_module_gated",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "exists:architecture/FP-0002-OD-002-ROUTE-AUTHORITY-v1.md",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "od002_legacy_route",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "od002_canonical_route",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "od002_entity",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "od002_supersedes_short_redirect",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "od002_no_implementation_in_06b",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    },
+    {
+      "id": "php_abspath_guard_all_files",
+      "expected": "true",
+      "actual": "true",
+      "result": "PASS"
+    }
+  ]
+}

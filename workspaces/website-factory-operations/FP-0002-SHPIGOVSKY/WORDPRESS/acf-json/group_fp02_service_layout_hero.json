@@ -1,0 +1,155 @@
+{
+    "key": "group_fp02_service_layout_hero",
+    "title": "Service — Layout and Hero",
+    "fields": [
+        {
+            "key": "field_fp02_service_layout_variant",
+            "label": "Вариант макета",
+            "name": "service_layout_variant",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Allowed V9-06C values: subdivision, standard, extended, alcohol_special, placeholder.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "standard",
+            "placeholder": "",
+            "choices": {
+                "subdivision": "Подраздел",
+                "standard": "Стандартная услуга",
+                "extended": "Расширенная услуга",
+                "alcohol_special": "Алкогольная зависимость",
+                "placeholder": "Заглушка"
+            },
+            "return_format": "value"
+        },
+        {
+            "key": "field_fp02_hero_eyebrow_service",
+            "label": "Надзаголовок",
+            "name": "hero_eyebrow",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_hero_title_override_service",
+            "label": "Заголовок H1 override",
+            "name": "hero_title_override",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_hero_lead_service",
+            "label": "Лид",
+            "name": "hero_lead",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 4
+        },
+        {
+            "key": "field_fp02_hero_media_service",
+            "label": "Медиа hero",
+            "name": "hero_media",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "return_format": "array",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_fp02_hero_cta_label_service",
+            "label": "CTA label",
+            "name": "hero_cta_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_hero_cta_target_service",
+            "label": "CTA target",
+            "name": "hero_cta_target",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "service"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "FP-0002 V9-06C canonical source field group. Runtime registration occurs only after delivery authorization.",
+    "show_in_rest": 0,
+    "modified": 1783158780
+}

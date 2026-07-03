@@ -1,30 +1,31 @@
-# Shpigovsky Core — V9-06B Skeleton
+# Shpigovsky Core — V9-06C Content Model Source
 
-**Status:** `V9-06B SKELETON` / `NO CONTENT MODEL REGISTERED`  
-**Version:** `0.2.0-skeleton`
+**Status:** `V9-06C SOURCE IMPLEMENTED` / `NO RUNTIME CONTENT MODEL REGISTERED`
+**Version:** `0.3.0-v9-06c-source`
 
 ## Purpose
 
-Canonical project plugin skeleton for FP-0002. Establishes namespace/autoload boundary, module contracts, and future module locations — without registering CPT, permalinks, ACF fields, forms, or migrations at runtime.
+Canonical project plugin source for FP-0002. Establishes namespace/autoload boundary, module contracts, and V9-06C source implementations for CPT, permalinks, ACF field groups, options page, admin UX, and validation hooks — without registering them in runtime while skeleton mode is enabled.
 
 ## Module map
 
 | Module | Path | Enabled in V9-06B |
 |--------|------|:-----------------:|
-| Service CPT | `src/ContentTypes/Service.php` | no |
-| Service permalinks | `src/Permalinks/ServicePermalinks.php` | no |
-| ACF integration | `src/Fields/AcfIntegration.php` | no |
-| Repeater validation | `src/Fields/RepeaterValidation.php` | no |
-| Site settings | `src/Settings/SiteSettings.php` | no |
+| Service CPT | `src/ContentTypes/Service.php` | source implemented, runtime gated |
+| Service permalinks | `src/Permalinks/ServicePermalinks.php` | source implemented, runtime gated |
+| ACF integration | `src/Fields/AcfIntegration.php` | source implemented, runtime gated |
+| ACF field groups | `src/Fields/FieldGroups.php` | source implemented, runtime gated |
+| Repeater validation | `src/Fields/RepeaterValidation.php` | source implemented, runtime gated |
+| Site settings | `src/Settings/SiteSettings.php` | source implemented, runtime gated |
 | Migrations | `src/Migrations/MigrationRunner.php` | no |
 | Consultation form | `src/Forms/ConsultationHandler.php` | no |
-| Options pages | `src/Admin/OptionsPage.php` | no |
-| Editor restrictions | `src/Admin/EditorRestrictions.php` | no |
+| Options pages | `src/Admin/OptionsPage.php` | source implemented, runtime gated |
+| Editor restrictions | `src/Admin/EditorRestrictions.php` | source implemented, runtime gated |
 | Taxonomies | `src/Taxonomies/` | rejected (empty) |
 
 ## Skeleton mode
 
-`SHPIGOVSKY_CORE_SKELETON` is `true`. All modules implement `ModuleInterface::is_enabled()` and remain inert until V9-06C authorization.
+`SHPIGOVSKY_CORE_SKELETON` is `true`. Source modules implement `ModuleInterface::is_enabled()` and remain inert until a later runtime delivery phase explicitly disables the gate.
 
 ## Architecture reference
 

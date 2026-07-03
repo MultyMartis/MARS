@@ -1,0 +1,47 @@
+{
+    "key": "group_fp02_service_relationships",
+    "title": "Service — Relationships / Related Services",
+    "fields": [
+        {
+            "key": "field_fp02_manual_related_services",
+            "label": "Связанные услуги вручную",
+            "name": "manual_related_services",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "Optional override. Fallback behavior is derived sibling query.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "post_type": [
+                "service"
+            ],
+            "max": 6,
+            "return_format": "object"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "service"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "FP-0002 V9-06C canonical source field group. Runtime registration occurs only after delivery authorization.",
+    "show_in_rest": 0,
+    "modified": 1783158780
+}

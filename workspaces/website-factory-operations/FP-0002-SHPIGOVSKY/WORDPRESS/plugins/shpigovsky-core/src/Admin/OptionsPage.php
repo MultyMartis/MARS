@@ -43,6 +43,21 @@ final class OptionsPage implements ModuleInterface {
 	 * Register ACF options pages.
 	 */
 	public static function register_options_pages() {
-		// V9-06C implementation.
+		if ( ! function_exists( 'acf_add_options_page' ) ) {
+			return;
+		}
+
+		acf_add_options_page(
+			array(
+				'page_title'      => __( 'Настройки сайта', 'shpigovsky-core' ),
+				'menu_title'      => __( 'Настройки сайта', 'shpigovsky-core' ),
+				'menu_slug'       => 'fp02-site-settings',
+				'capability'      => 'manage_options',
+				'position'        => 59,
+				'redirect'        => false,
+				'icon_url'        => 'dashicons-admin-generic',
+				'updated_message' => __( 'Настройки сайта обновлены.', 'shpigovsky-core' ),
+			)
+		);
 	}
 }

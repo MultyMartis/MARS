@@ -1,0 +1,12 @@
+{
+    "suite": "permalink-contract-validation",
+    "checks": {
+        "pattern_uslugi_path": true,
+        "post_type_link_filter": true,
+        "rewrite_rules_present": true,
+        "no_flush_rewrite_rules": true,
+        "fixture_tests_helper": true,
+        "max_depth_two_source": true
+    },
+    "result": "PASS"
+}

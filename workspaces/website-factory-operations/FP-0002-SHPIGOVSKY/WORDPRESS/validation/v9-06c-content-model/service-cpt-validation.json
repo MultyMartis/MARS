@@ -1,0 +1,14 @@
+{
+    "suite": "service-cpt-validation",
+    "checks": {
+        "post_type_key_service": true,
+        "has_archive_false": true,
+        "hierarchical_true": true,
+        "show_in_rest_true": true,
+        "query_var_service": true,
+        "rewrite_slug_uslugi": true,
+        "supports_required": true,
+        "service_taxonomy_not_registered": true
+    },
+    "result": "PASS"
+}

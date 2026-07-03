@@ -44,7 +44,7 @@ Operator WV6: PENDING
 Direct local domain: PASS (FP-0002 — FW-06A.1)
 Synthetic source: TRACKED (Git whitelist)
 Agent registration: REGISTERED (AG-WP-001 — SYNTHETIC READ-ONLY CAPABILITY ONLY; NOT PRODUCTION READY)
-Client pilot: FP-0002 V9-06B.2 ACF dependency admission PASS; V9-06C ready for operator authorization; runtime mutations 0
+Client pilot: FP-0002 V9-06C content model source implementation PASS; runtime delivery not performed; runtime mutations 0
 ```
 
 | Field | Value |

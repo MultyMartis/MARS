@@ -1,13 +1,14 @@
 # Forge WordPress — FP-0002 Project Lane
 
 **Project ID:** FP-0002 — Шпиговский  
-**Stage:** V9-06B.2 ACF dependency admission complete — V9-06C ready for operator authorization, not authorized
+**Stage:** V9-06C content model source implementation complete — runtime delivery not started
 
 | Document | Purpose |
 |----------|---------|
 | [FP-0002-V9-06A1-ARCHITECTURE-RECONCILIATION-REPORT-v1.md](../../../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/architecture/FP-0002-V9-06A1-ARCHITECTURE-RECONCILIATION-REPORT-v1.md) | **V9-06A.1** — reconciliation PASS |
 | [FP-0002-WORDPRESS-ARCHITECTURE-v1.md](../../../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/architecture/FP-0002-WORDPRESS-ARCHITECTURE-v1.md) | **V9-06A** — WordPress IA, content model, template system |
 | [FP-0002-V9-06B-SKELETON-IMPLEMENTATION-REPORT-v1.md](../../../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/reports/FP-0002-V9-06B-SKELETON-IMPLEMENTATION-REPORT-v1.md) | **V9-06B** — theme + core skeleton PASS |
+| [FP-0002-V9-06C-CONTENT-MODEL-SOURCE-IMPLEMENTATION-REPORT-v1.md](../../../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/reports/FP-0002-V9-06C-CONTENT-MODEL-SOURCE-IMPLEMENTATION-REPORT-v1.md) | **V9-06C** — content model source implementation PASS |
 | [FP-0002-OD-002-ROUTE-AUTHORITY-v1.md](../../../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/architecture/FP-0002-OD-002-ROUTE-AUTHORITY-v1.md) | OD-002 final route authority |
 | [FP-0002-FW-07C-2C-FILESYSTEM-DELIVERY-PROOF-RECEIPT-v1.md](FP-0002-FW-07C-2C-FILESYSTEM-DELIVERY-PROOF-RECEIPT-v1.md) | **FW-07C-2C PASS** — bounded filesystem delivery + rollback proof |
 | [FP-0002-FW-07C-2B-WPILOT-LOCAL-WRITE-PROOF-RECEIPT-v1.md](FP-0002-FW-07C-2B-WPILOT-LOCAL-WRITE-PROOF-RECEIPT-v1.md) | **FW-07C-2B PASS** — local WPilot write lifecycle proof |
@@ -28,4 +29,19 @@ Runtime manifest: [MLI-WP-FP0002-LOCAL-RUNTIME-MANIFEST-v1.md](../../../../mars-
 |----------|---------|
 | [FP-0002-V9-06B2-ACF-OPERATOR-DEPENDENCY-ADMISSION-REPORT-v1.md](../../../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/reports/FP-0002-V9-06B2-ACF-OPERATOR-DEPENDENCY-ADMISSION-REPORT-v1.md) | **V9-06B.2** — operator-managed ACF PRO admission PASS |
 | [FP-0002-OPERATOR-MANAGED-EXTERNAL-PLUGINS-v1.md](../../../../workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/architecture/FP-0002-OPERATOR-MANAGED-EXTERNAL-PLUGINS-v1.md) | ACF PRO / ACF Extended PRO update-ignore and delivery-deny registry |
+
+## V9-06C source implementation
+
+| Surface | Status |
+|---|---|
+| WordPress source implementation | CONTENT MODEL COMPLETE |
+| Service CPT source | IMPLEMENTED |
+| Service permalink source | IMPLEMENTED |
+| ACF Pro field groups | SOURCE IMPLEMENTED |
+| ACF JSON | SOURCE CREATED |
+| Options Page | SOURCE IMPLEMENTED |
+| Admin UX | SOURCE IMPLEMENTED |
+| Validation hooks | SOURCE IMPLEMENTED |
+| Runtime delivery | NOT PERFORMED |
+| WordPress objects | NOT CREATED |
 

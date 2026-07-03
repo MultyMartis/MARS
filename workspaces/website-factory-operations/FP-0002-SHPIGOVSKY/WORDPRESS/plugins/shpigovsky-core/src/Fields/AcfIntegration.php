@@ -29,7 +29,7 @@ final class AcfIntegration implements ModuleInterface {
 	 * {@inheritdoc}
 	 */
 	public static function is_enabled() {
-		return ! shpigovsky_core_is_skeleton_mode() && shpigovsky_core_acf_pro_is_active();
+		return ! shpigovsky_core_is_skeleton_mode();
 	}
 
 	/**
@@ -38,6 +38,10 @@ final class AcfIntegration implements ModuleInterface {
 	public static function register() {
 		add_filter( 'acf/settings/load_json', array( __CLASS__, 'add_load_path' ) );
 		add_filter( 'acf/settings/save_json', array( __CLASS__, 'set_save_path' ) );
+
+		if ( is_admin() ) {
+			add_action( 'admin_notices', array( __CLASS__, 'render_dependency_notices' ) );
+		}
 	}
 
 	/**
@@ -68,5 +72,29 @@ final class AcfIntegration implements ModuleInterface {
 	 */
 	public static function set_save_path( $path ) {
 		return self::get_json_directory();
+	}
+
+	/**
+	 * Render bounded dependency notices.
+	 */
+	public static function render_dependency_notices() {
+		if ( ! current_user_can( 'manage_options' ) ) {
+			return;
+		}
+
+		if ( ! shpigovsky_core_acf_pro_is_active() ) {
+			printf(
+				'<div class="notice notice-error"><p><strong>Shpigovsky Core</strong> — %s</p></div>',
+				esc_html__( 'ACF Pro is required for FP-0002 field groups. Source is safe, but runtime field registration is unavailable.', 'shpigovsky-core' )
+			);
+			return;
+		}
+
+		if ( shpigovsky_core_acf_extended_is_active() ) {
+			printf(
+				'<div class="notice notice-info"><p><strong>Shpigovsky Core</strong> — %s</p></div>',
+				esc_html__( 'ACF Extended PRO is present but FP-0002 does not use ACFE APIs or ACFE-only field types.', 'shpigovsky-core' )
+			);
+		}
 	}
 }

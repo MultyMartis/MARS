@@ -1,0 +1,524 @@
+{
+    "schema": "fp-0002-source-manifest",
+    "surface": "Theme",
+    "file_count": 73,
+    "php_count": 66,
+    "json_count": 0,
+    "aggregate_hash": "da4bb50f7039e8f139a7c1ba7c9c93bf3fcf70bdc1a21bc31cd81e3de9b5866d",
+    "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+    "secret_scan_hits": 0,
+    "operator_managed_plugin_package_exclusion": "CONFIRMED",
+    "files": [
+        {
+            "path": "404.php",
+            "sha256": "bf3b28666123d70d7a460a5315e2e0677264e24508a75f7c9fdf3efc0f65f1bf",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "README.md",
+            "sha256": "50a98911b0f2a94e3f80ef51325a4f5b5acd7cbe5f3cb391190c3d02d9e5b6dc",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "assets/css/foundation.css",
+            "sha256": "5b28778b853b1880bd2f901bc844164c8c3e6b9ba481ce65bf5229a7d9e4df5b",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "assets/img/.gitkeep",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "assets/js/.gitkeep",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "footer.php",
+            "sha256": "70edfe28852b650efb478ee52eb0b9989ea739d3cce532c1e5507e8aa9031a8e",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "front-page.php",
+            "sha256": "866068d3b387a5525f1bb01c6b4fb36d00cce354bb8e186e4a1e6c9e1122c36b",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "functions.php",
+            "sha256": "9981ee843feb18d020864b0c302720adb545f0b8074a6959285656e2cd8a955d",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "header.php",
+            "sha256": "64d6d87b6cd8e387d0c8d6f07a7a9286385642bd30facbc3421b7055fbcee5d2",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "home.php",
+            "sha256": "561f2c85c32e70ac58c7d93f18908bf90cd2d004e7e24bc440f1a7dc0592dbd8",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "inc/assets.php",
+            "sha256": "7ded32c6078a32b661a3b43dc25fc6c53aeae1807dab15a291246f7c7cd74e20",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "inc/service-template-loader.php",
+            "sha256": "91563adb28e2ff4870484cb026f4f34e6d5a08acc79049d8414d3a675b256a68",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "inc/setup.php",
+            "sha256": "8fdfee23c2fd7da0f98d02358324c2df4aaa0bfef5c4a01f64ab6a0b38dbb359",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "inc/template-tags.php",
+            "sha256": "68f12129bd40177a587ca130ab7862dde403c8f71e2e9c942f4f5901abaf6ff3",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "index.php",
+            "sha256": "84f845e7c27a1a42c70c42cf6fe177b176254ebf158653c3d5f8855bdd2c7175",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "languages/.gitkeep",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "page-templates/contacts.php",
+            "sha256": "1ef7260502351f02f158750799918ca4bc90c5eb2829f7a90d47446479e7d698",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "page-templates/institutional.php",
+            "sha256": "047fe06a4ec75f989fc686c9f3c35dc6d14b764270d9616d6de963408e71b096",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "page-templates/legal.php",
+            "sha256": "2de6ce46d2eb5b7a0b9744d35f15966eeeb27c50096b354d37185b4c9f8d93ed",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "page-templates/reviews.php",
+            "sha256": "8a0c208a0be458df1a6b28d44b7b26341a68ca0b536f6720f8ff3b5c15c18464",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "page-templates/services-hub.php",
+            "sha256": "bcb2eeaa58c06205a52dcfa0f80727c76e87f9e9767f9b917051c90cf9e835ed",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "page.php",
+            "sha256": "a4727f52387abf243f5b54679efee9548f2587d8acc2cbfa9c0a13c4fc5f42f0",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "search.php",
+            "sha256": "f7f77f3ab8b2fec8ccdea0e8f5bc86fff219af3699e824d2a3110e9fc20e32a0",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "single-service.php",
+            "sha256": "6e8b944655bcd590973e7a832c9c0ebbecc9b097e55a824f619c8929dc3e9a62",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "single.php",
+            "sha256": "3547add929540707d316e2e3e00c6dd0588d114e5bd13342b4b88b6a3909c3d6",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "style.css",
+            "sha256": "a1a09a7bd0331291dd8cd3709c33c833efe31d29cd785876ba9ee4718e60006c",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/.gitkeep",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/blog/archive-list.php",
+            "sha256": "803ef14bc02da630261914bd8353432179535ebb1a00c0b8797e944b800b6366",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/blog/article-content.php",
+            "sha256": "fed9a8ba3be5be6486745b817b17d54bcad2f8948066ab5070c375efe51abe17",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/blog/article-lower-stack.php",
+            "sha256": "cda71e1e6fcd952bb7414b2958adc9839c150f1f418d4dbdb7e7b8f471e7b450",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/components/blog-archive-card.php",
+            "sha256": "8db3a164fe9383c52d2e73fe8393c8666d8fd01a45e63b136a6c7e2d5b309792",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/components/final-form.php",
+            "sha256": "aaf9d5a64b28bf23150edfbe456ef397cea020764de9441c05a327edde0c012f",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/components/internal-page-nav.php",
+            "sha256": "5832cd83976d60dcc91efbb0a2dba7803724e14dcbd66760d2458bb689b8ac28",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/components/program-cta-band.php",
+            "sha256": "802dd826abf5689afa15afdf3ef102a646890ec0d2251ac11fb4ee0d7b37314e",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/components/review-archive-card.php",
+            "sha256": "06f86e250f2a5e474d68bb337bfa23d5ad3572adb03da0ab527a0ac3394ac8c1",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/components/scroll-to-top.php",
+            "sha256": "dcb8ecb500484c28fff0a9be03042655866a6f9e387b08f52603ff91438984b7",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/contacts/map-body.php",
+            "sha256": "ba638e2ac2db43682cd3dfd43d5e5e961a9c51118d711e91b89a2ca74c88a30d",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/contacts/rehabilitation-steps.php",
+            "sha256": "ff3acefbed535ecc0bf85f009ee82550142acd477032a69729da121c7901b5c0",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/global/document-close.php",
+            "sha256": "ba4f647e9e41393454458e3548eb6586e8feff19beb11f30895c80c4fb759511",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/global/document-open.php",
+            "sha256": "eb656fae3254d02a60724774e54a98e51d85ce2086de4dcf54d734a3d1f98db8",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/home/articles-teaser.php",
+            "sha256": "61fc0e16a1f133547554d1cc109c7516bf2eb39be6f003c6ebc490370e682ad6",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/home/faq.php",
+            "sha256": "8bf9475b463a4569b20ba9e811247f046dba4eca0d0b24fa851a56f21417868a",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/home/feature-grid.php",
+            "sha256": "33b6cb4f20608781ed888933f89c6ba1afc3324e816761bf5670316890ccd687",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/home/gallery.php",
+            "sha256": "ce24805d68094bcac72ad41d2e9259396efe323b981d93c6252d1680dfca28f1",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/home/hero.php",
+            "sha256": "df551c53bededbc9cf38ab5d43f14424c5ffa0bb00cef74ecab29b22dd9dbd76",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/home/rehabilitation-program.php",
+            "sha256": "ca503b4fc19ccc122ce3320b575fcc6af0e9e6fbe8d1239e8e10142f297cc8f4",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/home/treatment-prevention.php",
+            "sha256": "e8c9393bb7cc868ddfee0dccea68e12fc7abd00dd5f019174b1e94cac2eb180a",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/institutional/infrastructure-narrative.php",
+            "sha256": "fb29c07c94e1ab45a67404b89029d3becfb547369a9fcdc651d4aec51702c933",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/institutional/institutional-narrative.php",
+            "sha256": "d6def63cff7504cbd6f4d1163fca0c5a9708d5c9f5595b707528724fbc11df8b",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/layout/body-start.php",
+            "sha256": "abf8fd336718a6708d488a5096a108c8b713a20b1bb6c7bddf11e9a18836af8f",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/layout/footer.php",
+            "sha256": "29387fca89689ccfdc984f70c6903121840bc109afb64dc114a56f7c8e9bdd37",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/layout/global-consultation-modal.php",
+            "sha256": "b6dd1dbb5abf89ee1d332fd151d6ee3c63776fdd3efc2a2792850faf34de2a8c",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/layout/head.php",
+            "sha256": "75583c85324660a41d896b3200b17786b365231b0273bf86b3b298809dfadf6f",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/layout/header.php",
+            "sha256": "4be6528f3636fad7beb374db38c9e8fd6876fc126eeb0c0d73cd4bace60701d6",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/legal/document-page.php",
+            "sha256": "59281e936d29e140667396f09a7920d6a75e616122dcf970f7b489c4cbd66319",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/navigation/breadcrumbs.php",
+            "sha256": "5d30bce9b4272e58ce8a53e6cccb6a0057228d162da19addec6b8d35cecddbf8",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/navigation/primary-desktop.php",
+            "sha256": "6c2e4272c1ff21995f7bccbc1feeb56d622a95c2d790642efe0359d2bca60a43",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/navigation/primary-mobile.php",
+            "sha256": "cb358a9bd478673f034af7bd3f3f2a251daff9ecbfd299f6714d2789086d5c85",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/page/placeholder-notice.php",
+            "sha256": "c9a7735a034a8c6dc941a964a80bfb69cc34650d97e93b7c3072d31100f3ae4b",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/page/plain-content.php",
+            "sha256": "23a75e9265852f779cd721a71c70d0917d502360bbf12111f8a056779900c7b5",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/reviews/archive-list.php",
+            "sha256": "85cddeba38b0ea76de7c23a3aa2c244f39273044ecc05a89760830d9753e8553",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/reviews/reviews-section.php",
+            "sha256": "5c6f8913a98778b73b36aadeb54fd1b4c1cae413b1bde755a217bf3b8e38a8cc",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/service/alcohol-stack.php",
+            "sha256": "6d2161e5784b408846234346ac9571b87defc158d33d984260a26c42f1b367e1",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/service/approach.php",
+            "sha256": "983023a50d862bb0f68b4804314e89619a32c96c8794783cb042d8bd4de8e57e",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/service/comfort.php",
+            "sha256": "c5ba1bca3eb28dc5d65cce165ffcdc1f1a3bd8c4ce8215495d9b736bd82cc6a2",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/service/faq.php",
+            "sha256": "31751f481e5972a0f24e58e7d09ef649a9084d8bd9966fad8c02962a7794aeb1",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/service/inner-hero.php",
+            "sha256": "69a1a82caf1a62ab346f21412f6b18af48f03c55f0988160ddabae36f41b7eca",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/service/intro.php",
+            "sha256": "011681096c46f5cffbfcdecb2cc7466b9436d75d2cf89992a6077a2809955ff4",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/service/leaf-stack.php",
+            "sha256": "a5066000824d42c8619e1aab9eed9b98f10886391c35951643d0642356d11693",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/service/program.php",
+            "sha256": "9b021ff8feee706de83de5c3868a96a198ad93e35c2254eef16b7256595ea59d",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/service/signs.php",
+            "sha256": "ec5aa5f74cc585a4f800e6cefe7e996235177b7bbd63ed4036477c182c84ef6b",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/service/stages.php",
+            "sha256": "330c87cd9365e44eb4b0d9ac4f660d0475d58f726f75db431c25f8a5ed9b7c29",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        },
+        {
+            "path": "template-parts/service/subdivision-stack.php",
+            "sha256": "02b25599ca26abdd25efc764614953ead7f22889bf69e228b2aa4e86cd804b72",
+            "phase_introduced_or_modified": "V9-06C",
+            "delivery_status": "SOURCE UPDATED IF ANY — NOT DELIVERED",
+            "secret_scan": "PASS"
+        }
+    ]
+}

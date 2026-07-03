@@ -1,0 +1,117 @@
+{
+    "key": "group_fp02_page_legal",
+    "title": "Page — Legal",
+    "fields": [
+        {
+            "key": "field_fp02_legal_status",
+            "label": "Legal status",
+            "name": "legal_status",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "demo",
+            "placeholder": "",
+            "choices": {
+                "demo": "Demo",
+                "review": "Review",
+                "production_ready": "Production ready"
+            }
+        },
+        {
+            "key": "field_fp02_legal_demo_marker",
+            "label": "Demo marker",
+            "name": "legal_demo_marker",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_legal_effective_date",
+            "label": "Effective date",
+            "name": "legal_effective_date",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "display_format": "Y-m-d",
+            "return_format": "Y-m-d"
+        },
+        {
+            "key": "field_fp02_legal_version",
+            "label": "Version",
+            "name": "legal_version",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_legal_production_blocker",
+            "label": "Production blocker flag",
+            "name": "legal_production_blocker",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates/legal.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "FP-0002 V9-06C canonical source field group. Runtime registration occurs only after delivery authorization.",
+    "show_in_rest": 0,
+    "modified": 1783158780
+}

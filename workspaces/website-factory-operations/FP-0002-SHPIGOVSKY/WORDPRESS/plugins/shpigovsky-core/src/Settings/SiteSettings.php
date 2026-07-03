@@ -36,6 +36,33 @@ final class SiteSettings implements ModuleInterface {
 	 * {@inheritdoc}
 	 */
 	public static function register() {
-		// V9-06C: register option-backed fields.
+		add_filter( 'pre_update_option', array( __CLASS__, 'prevent_secret_like_options' ), 10, 3 );
+	}
+
+	/**
+	 * Secret-like field name fragments forbidden in FP-0002 options source.
+	 *
+	 * @return array<int, string>
+	 */
+	public static function get_forbidden_option_patterns() {
+		return array( 'password', 'passwd', 'secret', 'token', 'api_key', 'apikey', 'license', 'smtp' );
+	}
+
+	/**
+	 * Guard against accidental secret-like option mutations after delivery activation.
+	 *
+	 * @param mixed  $value New value.
+	 * @param string $option Option name.
+	 * @param mixed  $old_value Old value.
+	 * @return mixed
+	 */
+	public static function prevent_secret_like_options( $value, $option, $old_value ) {
+		foreach ( self::get_forbidden_option_patterns() as $pattern ) {
+			if ( false !== stripos( (string) $option, $pattern ) ) {
+				return $old_value;
+			}
+		}
+
+		return $value;
 	}
 }

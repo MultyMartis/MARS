@@ -43,7 +43,7 @@
 
 **Admin label:** `Настройки сайта`  
 **Owner:** Shpigovsky Core + ACF Pro Options Page  
-**Implementation phase:** V9-06C (ACF PRO dependency admitted in V9-06B.2; implementation still requires separate authorization)
+**Implementation phase:** V9-06C source implementation complete; runtime delivery not performed
 
 | Group | Fields (bounded) |
 |-------|------------------|
@@ -101,8 +101,8 @@ All 13 conceptual groups retained. Repeaters implemented as **ACF Pro Repeater f
 
 | Path | Role |
 |------|------|
-| `WORDPRESS/acf-json/` | Canonical ACF Pro JSON export; no runtime writes in V9-06B.2 |
-| Runtime | Sync via `shpigovsky-core` load/save hooks |
+| `WORDPRESS/acf-json/` | Canonical ACF Pro JSON source; created in V9-06C; no runtime writes |
+| Runtime | Future sync via `shpigovsky-core` load/save hooks after explicit delivery authorization |
 
 ---
 
@@ -145,8 +145,8 @@ V9-06B.2 dependency admission result:
 ACF Pro:              REQUIRED FOR FP-0002
 Flexible Content:     FORBIDDEN
 BoundedMeta primary:  REJECTED_FOR_FP0002
-Options Page:         Настройки сайта (V9-06C)
-V9-06C prerequisite:  ACF PRO admitted — READY FOR OPERATOR AUTHORIZATION
+Options Page:         Настройки сайта (V9-06C source implemented)
+V9-06C:               CONTENT MODEL SOURCE IMPLEMENTED — NOT DELIVERED
 ```
 
 ---
@@ -159,6 +159,6 @@ ACF PRO v6.8.5 is active and capability-sufficient for the approved FP-0002 ACF 
 
 ACF Extended PRO v0.9.2.3 is active but **not required** and **not approved** for FP-0002 use by default. Recommendation: KEEP_ACTIVE_BUT_NOT_USED.
 
-V9-06C status after admission: **READY FOR OPERATOR AUTHORIZATION**, not automatically authorized.
+V9-06C status after operator authorization: **SOURCE IMPLEMENTED**, not delivered.
 
 
