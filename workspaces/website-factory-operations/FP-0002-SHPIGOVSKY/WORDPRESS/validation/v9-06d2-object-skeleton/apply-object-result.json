@@ -1,0 +1,500 @@
+{
+    "timestamp": "2026-07-03T21:04:34+00:00",
+    "created_pages": [],
+    "modified_pages": [
+        {
+            "ID": 5,
+            "before_template": "default",
+            "after_template": "page-templates/services-hub.php"
+        },
+        {
+            "ID": 11,
+            "before_template": "default",
+            "after_template": "page-templates/institutional.php"
+        },
+        {
+            "ID": 12,
+            "before_template": "default",
+            "after_template": "page-templates/institutional.php"
+        },
+        {
+            "ID": 13,
+            "before_template": "default",
+            "after_template": "page-templates/institutional.php"
+        },
+        {
+            "ID": 14,
+            "before_template": "default",
+            "after_template": "page-templates/institutional.php"
+        },
+        {
+            "ID": 15,
+            "before_template": "default",
+            "after_template": "page-templates/institutional.php"
+        },
+        {
+            "ID": 16,
+            "before_template": "default",
+            "after_template": "page-templates/institutional.php"
+        },
+        {
+            "ID": 18,
+            "before_template": "default",
+            "after_template": "page-templates/reviews.php"
+        },
+        {
+            "ID": 20,
+            "before_template": "default",
+            "after_template": "page-templates/contacts.php"
+        },
+        {
+            "ID": 3,
+            "before_template": "default",
+            "after_template": "page-templates/legal.php"
+        },
+        {
+            "ID": 22,
+            "before_template": "default",
+            "after_template": "page-templates/legal.php"
+        },
+        {
+            "ID": 23,
+            "before_template": "default",
+            "after_template": "page-templates/legal.php"
+        },
+        {
+            "ID": 24,
+            "before_template": "default",
+            "after_template": "page-templates/legal.php"
+        }
+    ],
+    "created_services": [
+        {
+            "registry_id": "SVC-ZAVISIMOSTI",
+            "ID": 73
+        },
+        {
+            "registry_id": "SVC-ALKOGOL",
+            "ID": 74
+        },
+        {
+            "registry_id": "SVC-PROFILAKTIKA",
+            "ID": 75
+        },
+        {
+            "registry_id": "SVC-SPECIALISTAM-ZAV",
+            "ID": 76
+        },
+        {
+            "registry_id": "SVC-PSYCH",
+            "ID": 77
+        },
+        {
+            "registry_id": "SVC-DEPRESSIYA",
+            "ID": 78
+        },
+        {
+            "registry_id": "SVC-PTRS",
+            "ID": 79
+        },
+        {
+            "registry_id": "SVC-VYGORANIE",
+            "ID": 80
+        },
+        {
+            "registry_id": "SVC-TREVOGA",
+            "ID": 81
+        },
+        {
+            "registry_id": "SVC-SON",
+            "ID": 82
+        },
+        {
+            "registry_id": "SVC-TRAVMA",
+            "ID": 83
+        },
+        {
+            "registry_id": "SVC-RPP",
+            "ID": 84
+        },
+        {
+            "registry_id": "SVC-ANOREKSIYA",
+            "ID": 85
+        },
+        {
+            "registry_id": "SVC-BULIMIYA",
+            "ID": 86
+        },
+        {
+            "registry_id": "SVC-KOMPULSIV",
+            "ID": 87
+        }
+    ],
+    "modified_services": [],
+    "failed": [],
+    "page_actions": [
+        {
+            "action": "SKIP_EXISTING",
+            "route_id": "ROUTE-01",
+            "title": "Главная",
+            "slug": "glavnaya",
+            "target_path": "/",
+            "parent_route": null,
+            "existing_object_id": 4,
+            "template_planned": null,
+            "actual_template": "default",
+            "fields_meta_planned": [],
+            "risk": "none",
+            "rollback_action": "restore previous template if changed"
+        },
+        {
+            "action": "RECONCILE_PAGE",
+            "route_id": "ROUTE-02",
+            "title": "Услуги",
+            "slug": "uslugi",
+            "target_path": "/uslugi/",
+            "parent_route": null,
+            "existing_object_id": 5,
+            "template_planned": "page-templates/services-hub.php",
+            "actual_template": "default",
+            "fields_meta_planned": {
+                "_wp_page_template": "page-templates/services-hub.php"
+            },
+            "risk": "template_meta_only",
+            "rollback_action": "restore previous template if changed"
+        },
+        {
+            "action": "RECONCILE_PAGE",
+            "route_id": "ROUTE-18",
+            "title": "О центре",
+            "slug": "o-centre",
+            "target_path": "/o-centre/",
+            "parent_route": null,
+            "existing_object_id": 11,
+            "template_planned": "page-templates/institutional.php",
+            "actual_template": "default",
+            "fields_meta_planned": {
+                "_wp_page_template": "page-templates/institutional.php"
+            },
+            "risk": "template_meta_only",
+            "rollback_action": "restore previous template if changed"
+        },
+        {
+            "action": "RECONCILE_PAGE",
+            "route_id": "ROUTE-19",
+            "title": "О нас",
+            "slug": "o-nas",
+            "target_path": "/o-centre/o-nas/",
+            "parent_route": "ROUTE-18",
+            "existing_object_id": 12,
+            "template_planned": "page-templates/institutional.php",
+            "actual_template": "default",
+            "fields_meta_planned": {
+                "_wp_page_template": "page-templates/institutional.php"
+            },
+            "risk": "template_meta_only",
+            "rollback_action": "restore previous template if changed"
+        },
+        {
+            "action": "RECONCILE_PAGE",
+            "route_id": "ROUTE-20",
+            "title": "Программа лечения",
+            "slug": "programma-lecheniya",
+            "target_path": "/o-centre/programma-lecheniya/",
+            "parent_route": "ROUTE-18",
+            "existing_object_id": 13,
+            "template_planned": "page-templates/institutional.php",
+            "actual_template": "default",
+            "fields_meta_planned": {
+                "_wp_page_template": "page-templates/institutional.php"
+            },
+            "risk": "template_meta_only",
+            "rollback_action": "restore previous template if changed"
+        },
+        {
+            "action": "RECONCILE_PAGE",
+            "route_id": "ROUTE-21",
+            "title": "Галерея о доме",
+            "slug": "galereya-o-dome",
+            "target_path": "/o-centre/galereya-o-dome/",
+            "parent_route": "ROUTE-18",
+            "existing_object_id": 14,
+            "template_planned": "page-templates/institutional.php",
+            "actual_template": "default",
+            "fields_meta_planned": {
+                "_wp_page_template": "page-templates/institutional.php"
+            },
+            "risk": "template_meta_only",
+            "rollback_action": "restore previous template if changed"
+        },
+        {
+            "action": "RECONCILE_PAGE",
+            "route_id": "ROUTE-22",
+            "title": "Специалистам",
+            "slug": "specialistam",
+            "target_path": "/o-centre/specialistam/",
+            "parent_route": "ROUTE-18",
+            "existing_object_id": 15,
+            "template_planned": "page-templates/institutional.php",
+            "actual_template": "default",
+            "fields_meta_planned": {
+                "_wp_page_template": "page-templates/institutional.php"
+            },
+            "risk": "template_meta_only",
+            "rollback_action": "restore previous template if changed"
+        },
+        {
+            "action": "RECONCILE_PAGE",
+            "route_id": "ROUTE-23",
+            "title": "Родственникам",
+            "slug": "rodstvennikam",
+            "target_path": "/o-centre/rodstvennikam/",
+            "parent_route": "ROUTE-18",
+            "existing_object_id": 16,
+            "template_planned": "page-templates/institutional.php",
+            "actual_template": "default",
+            "fields_meta_planned": {
+                "_wp_page_template": "page-templates/institutional.php"
+            },
+            "risk": "template_meta_only",
+            "rollback_action": "restore previous template if changed"
+        },
+        {
+            "action": "RECONCILE_PAGE",
+            "route_id": "ROUTE-24",
+            "title": "Отзывы",
+            "slug": "otzyvy",
+            "target_path": "/otzyvy/",
+            "parent_route": null,
+            "existing_object_id": 18,
+            "template_planned": "page-templates/reviews.php",
+            "actual_template": "default",
+            "fields_meta_planned": {
+                "_wp_page_template": "page-templates/reviews.php"
+            },
+            "risk": "template_meta_only",
+            "rollback_action": "restore previous template if changed"
+        },
+        {
+            "action": "SKIP_EXISTING",
+            "route_id": "ROUTE-25",
+            "title": "Статьи",
+            "slug": "blog",
+            "target_path": "/blog/",
+            "parent_route": null,
+            "existing_object_id": 19,
+            "template_planned": null,
+            "actual_template": "default",
+            "fields_meta_planned": [],
+            "risk": "none",
+            "rollback_action": "restore previous template if changed"
+        },
+        {
+            "action": "RECONCILE_PAGE",
+            "route_id": "ROUTE-27",
+            "title": "Контакты",
+            "slug": "kontakty",
+            "target_path": "/kontakty/",
+            "parent_route": null,
+            "existing_object_id": 20,
+            "template_planned": "page-templates/contacts.php",
+            "actual_template": "default",
+            "fields_meta_planned": {
+                "_wp_page_template": "page-templates/contacts.php"
+            },
+            "risk": "template_meta_only",
+            "rollback_action": "restore previous template if changed"
+        },
+        {
+            "action": "RECONCILE_PAGE",
+            "route_id": "ROUTE-28",
+            "title": "Политика конфиденциальности",
+            "slug": "privacy-policy",
+            "target_path": "/privacy-policy/",
+            "parent_route": null,
+            "existing_object_id": 3,
+            "template_planned": "page-templates/legal.php",
+            "actual_template": "default",
+            "fields_meta_planned": {
+                "_wp_page_template": "page-templates/legal.php"
+            },
+            "risk": "template_meta_only",
+            "rollback_action": "restore previous template if changed"
+        },
+        {
+            "action": "RECONCILE_PAGE",
+            "route_id": "ROUTE-29",
+            "title": "Пользовательское соглашение",
+            "slug": "user-agreement",
+            "target_path": "/user-agreement/",
+            "parent_route": null,
+            "existing_object_id": 22,
+            "template_planned": "page-templates/legal.php",
+            "actual_template": "default",
+            "fields_meta_planned": {
+                "_wp_page_template": "page-templates/legal.php"
+            },
+            "risk": "template_meta_only",
+            "rollback_action": "restore previous template if changed"
+        },
+        {
+            "action": "RECONCILE_PAGE",
+            "route_id": "ROUTE-30",
+            "title": "Согласие на обработку персональных данных",
+            "slug": "consent-personal-data",
+            "target_path": "/consent-personal-data/",
+            "parent_route": null,
+            "existing_object_id": 23,
+            "template_planned": "page-templates/legal.php",
+            "actual_template": "default",
+            "fields_meta_planned": {
+                "_wp_page_template": "page-templates/legal.php"
+            },
+            "risk": "template_meta_only",
+            "rollback_action": "restore previous template if changed"
+        },
+        {
+            "action": "RECONCILE_PAGE",
+            "route_id": "ROUTE-31",
+            "title": "Политика Cookie-файлов",
+            "slug": "cookie-files-policy",
+            "target_path": "/cookie-files-policy/",
+            "parent_route": null,
+            "existing_object_id": 24,
+            "template_planned": "page-templates/legal.php",
+            "actual_template": "default",
+            "fields_meta_planned": {
+                "_wp_page_template": "page-templates/legal.php"
+            },
+            "risk": "template_meta_only",
+            "rollback_action": "restore previous template if changed"
+        }
+    ],
+    "service_actions": [
+        {
+            "registry_id": "SVC-ZAVISIMOSTI",
+            "ID": 73,
+            "parent_id": 0,
+            "changes": [],
+            "permalink": "http://shpigovsky.test/uslugi/zavisimosti/",
+            "generated_path": "/uslugi/zavisimosti/"
+        },
+        {
+            "registry_id": "SVC-ALKOGOL",
+            "ID": 74,
+            "parent_id": 73,
+            "changes": [],
+            "permalink": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+            "generated_path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+        },
+        {
+            "registry_id": "SVC-PROFILAKTIKA",
+            "ID": 75,
+            "parent_id": 73,
+            "changes": [],
+            "permalink": "http://shpigovsky.test/uslugi/zavisimosti/profilakticheskiy-analiz/",
+            "generated_path": "/uslugi/zavisimosti/profilakticheskiy-analiz/"
+        },
+        {
+            "registry_id": "SVC-SPECIALISTAM-ZAV",
+            "ID": 76,
+            "parent_id": 73,
+            "changes": [],
+            "permalink": "http://shpigovsky.test/uslugi/zavisimosti/specialistam/",
+            "generated_path": "/uslugi/zavisimosti/specialistam/"
+        },
+        {
+            "registry_id": "SVC-PSYCH",
+            "ID": 77,
+            "parent_id": 0,
+            "changes": [],
+            "permalink": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/",
+            "generated_path": "/uslugi/psihicheskoe-zdorovie/"
+        },
+        {
+            "registry_id": "SVC-DEPRESSIYA",
+            "ID": 78,
+            "parent_id": 77,
+            "changes": [],
+            "permalink": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/depressiya/",
+            "generated_path": "/uslugi/psihicheskoe-zdorovie/depressiya/"
+        },
+        {
+            "registry_id": "SVC-PTRS",
+            "ID": 79,
+            "parent_id": 77,
+            "changes": [],
+            "permalink": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/ptrs/",
+            "generated_path": "/uslugi/psihicheskoe-zdorovie/ptrs/"
+        },
+        {
+            "registry_id": "SVC-VYGORANIE",
+            "ID": 80,
+            "parent_id": 77,
+            "changes": [],
+            "permalink": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/emocionalnoe-vygoranie/",
+            "generated_path": "/uslugi/psihicheskoe-zdorovie/emocionalnoe-vygoranie/"
+        },
+        {
+            "registry_id": "SVC-TREVOGA",
+            "ID": 81,
+            "parent_id": 77,
+            "changes": [],
+            "permalink": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+            "generated_path": "/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/"
+        },
+        {
+            "registry_id": "SVC-SON",
+            "ID": 82,
+            "parent_id": 77,
+            "changes": [],
+            "permalink": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+            "generated_path": "/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/"
+        },
+        {
+            "registry_id": "SVC-TRAVMA",
+            "ID": 83,
+            "parent_id": 77,
+            "changes": [],
+            "permalink": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/travma/",
+            "generated_path": "/uslugi/psihicheskoe-zdorovie/travma/"
+        },
+        {
+            "registry_id": "SVC-RPP",
+            "ID": 84,
+            "parent_id": 0,
+            "changes": [],
+            "permalink": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/",
+            "generated_path": "/uslugi/rasstroystva-pischevogo-povedeniya/"
+        },
+        {
+            "registry_id": "SVC-ANOREKSIYA",
+            "ID": 85,
+            "parent_id": 84,
+            "changes": [],
+            "permalink": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+            "generated_path": "/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/"
+        },
+        {
+            "registry_id": "SVC-BULIMIYA",
+            "ID": 86,
+            "parent_id": 84,
+            "changes": [],
+            "permalink": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/nervnaya-bulimiya/",
+            "generated_path": "/uslugi/rasstroystva-pischevogo-povedeniya/nervnaya-bulimiya/"
+        },
+        {
+            "registry_id": "SVC-KOMPULSIV",
+            "ID": 87,
+            "parent_id": 84,
+            "changes": [],
+            "permalink": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/",
+            "generated_path": "/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/"
+        }
+    ],
+    "menus_changed": 0,
+    "options_changed": 0,
+    "posts_created": 0,
+    "rewrite_flush_performed": false,
+    "result": "PASS"
+}

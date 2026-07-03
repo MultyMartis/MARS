@@ -1,0 +1,117 @@
+{
+  "phase": "V9-06D.2",
+  "timestamp": "2026-07-03T21:07:36.947371+00:00",
+  "rows": [
+    {
+      "registry_id": "SVC-ZAVISIMOSTI",
+      "expected_path": "/uslugi/zavisimosti/",
+      "generated_path": "/uslugi/zavisimosti/",
+      "http_checked": false,
+      "result": "PASS"
+    },
+    {
+      "registry_id": "SVC-ALKOGOL",
+      "expected_path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "generated_path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "http_checked": false,
+      "result": "PASS"
+    },
+    {
+      "registry_id": "SVC-PROFILAKTIKA",
+      "expected_path": "/uslugi/zavisimosti/profilakticheskiy-analiz/",
+      "generated_path": "/uslugi/zavisimosti/profilakticheskiy-analiz/",
+      "http_checked": false,
+      "result": "PASS"
+    },
+    {
+      "registry_id": "SVC-SPECIALISTAM-ZAV",
+      "expected_path": "/uslugi/zavisimosti/specialistam/",
+      "generated_path": "/uslugi/zavisimosti/specialistam/",
+      "http_checked": false,
+      "result": "PASS"
+    },
+    {
+      "registry_id": "SVC-PSYCH",
+      "expected_path": "/uslugi/psihicheskoe-zdorovie/",
+      "generated_path": "/uslugi/psihicheskoe-zdorovie/",
+      "http_checked": false,
+      "result": "PASS"
+    },
+    {
+      "registry_id": "SVC-DEPRESSIYA",
+      "expected_path": "/uslugi/psihicheskoe-zdorovie/depressiya/",
+      "generated_path": "/uslugi/psihicheskoe-zdorovie/depressiya/",
+      "http_checked": false,
+      "result": "PASS"
+    },
+    {
+      "registry_id": "SVC-PTRS",
+      "expected_path": "/uslugi/psihicheskoe-zdorovie/ptrs/",
+      "generated_path": "/uslugi/psihicheskoe-zdorovie/ptrs/",
+      "http_checked": false,
+      "result": "PASS"
+    },
+    {
+      "registry_id": "SVC-VYGORANIE",
+      "expected_path": "/uslugi/psihicheskoe-zdorovie/emocionalnoe-vygoranie/",
+      "generated_path": "/uslugi/psihicheskoe-zdorovie/emocionalnoe-vygoranie/",
+      "http_checked": false,
+      "result": "PASS"
+    },
+    {
+      "registry_id": "SVC-TREVOGA",
+      "expected_path": "/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+      "generated_path": "/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+      "http_checked": false,
+      "result": "PASS"
+    },
+    {
+      "registry_id": "SVC-SON",
+      "expected_path": "/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+      "generated_path": "/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+      "http_checked": false,
+      "result": "PASS"
+    },
+    {
+      "registry_id": "SVC-TRAVMA",
+      "expected_path": "/uslugi/psihicheskoe-zdorovie/travma/",
+      "generated_path": "/uslugi/psihicheskoe-zdorovie/travma/",
+      "http_checked": false,
+      "result": "PASS"
+    },
+    {
+      "registry_id": "SVC-RPP",
+      "expected_path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "generated_path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "http_checked": false,
+      "result": "PASS"
+    },
+    {
+      "registry_id": "SVC-ANOREKSIYA",
+      "expected_path": "/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+      "generated_path": "/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+      "http_checked": false,
+      "result": "PASS"
+    },
+    {
+      "registry_id": "SVC-BULIMIYA",
+      "expected_path": "/uslugi/rasstroystva-pischevogo-povedeniya/nervnaya-bulimiya/",
+      "generated_path": "/uslugi/rasstroystva-pischevogo-povedeniya/nervnaya-bulimiya/",
+      "http_checked": false,
+      "result": "PASS"
+    },
+    {
+      "registry_id": "SVC-KOMPULSIV",
+      "expected_path": "/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/",
+      "generated_path": "/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/",
+      "http_checked": false,
+      "result": "PASS"
+    }
+  ],
+  "rewrite_flush_performed": false,
+  "rewrite_flush_required_later": false,
+  "hub_ownership": "PAGE_OWNED",
+  "legacy_specyalisty": "NOT_CREATED_BY_D2",
+  "redirects_created": 0,
+  "result": "PASS"
+}

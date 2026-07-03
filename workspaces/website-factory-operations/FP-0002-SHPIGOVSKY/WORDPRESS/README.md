@@ -2,8 +2,8 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D.1 RERUN RUNTIME DELIVERY COMPLETE
-**Classification:** CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON NOT STARTED
+**Status:** V9-06D.2 WORDPRESS OBJECT SKELETON COMPLETE
+**Classification:** CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON COMPLETE — CONTENT MIGRATION NOT STARTED
 
 ---
 
@@ -37,9 +37,9 @@ The runtime is **not** the canonical editable source. Delivery flows: Git source
 | V9-06B | **COMPLETE** — theme + core skeleton |
 | V9-06C | **COMPLETE — CONTENT MODEL SOURCE IMPLEMENTED** |
 | V9-06C.1 | **COMPLETE — SOURCE ACTIVATION GATE RESOLVED** |
-| Runtime changes | **AUTHORIZED FILE DELIVERY ONLY (V9-06D.1 rerun)** |
+| Runtime changes | **AUTHORIZED FILE DELIVERY (V9-06D.1 rerun) + AUTHORIZED OBJECT SKELETON (V9-06D.2)** |
 | WordPress source implementation | **CONTENT MODEL COMPLETE** |
-| WordPress runtime implementation | **CONTENT MODEL ACTIVATED — OBJECTS NOT CREATED** |
+| WordPress runtime implementation | **CONTENT MODEL ACTIVATED — 15 SERVICE OBJECTS CREATED / PAGE TEMPLATES RECONCILED** |
 | FW-07C-2D | SUPERSEDED BY ARCHITECTURE-FIRST SEQUENCE (V9-06D) |
 
 Authority: [architecture/FP-0002-WORDPRESS-ARCHITECTURE-v1.md](architecture/FP-0002-WORDPRESS-ARCHITECTURE-v1.md)
@@ -64,8 +64,8 @@ WORDPRESS/
 | Surface | Classification |
 |---------|----------------|
 | Theme | V9-06B SKELETON — NO V9 VISUAL INTEGRATION |
-| Shpigovsky Core | V9-06D.1 CONTENT MODEL RUNTIME DELIVERED |
-| ACF JSON | V9-06D.1 DELIVERED — 13 LOCAL JSON FILES |
+| Shpigovsky Core | V9-06D.2 CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON COMPLETE |
+| ACF JSON | V9-06D.1 DELIVERED — 13 LOCAL JSON FILES; V9-06D.2 object meta only |
 
 ## Provenance
 
@@ -116,3 +116,10 @@ Reports:
 ## V9-06D.1 rerun runtime delivery (2026-07-04)
 
 V9-06D.1 rerun delivered `theme/shpigovsky`, `plugins/shpigovsky-core`, and 13 `acf-json` files into the local runtime under checkpoint control. Service CPT, ACF local field groups, Options Page, admin hooks, validation hooks, and runtime health are verified. WordPress object creation, content migration, redirects, rewrite flush, plugin updates/install/deletes, and V9 integration remain not started.
+
+
+## V9-06D.2 WordPress object skeleton (2026-07-04)
+
+V9-06D.2 created the controlled WordPress object skeleton in the local FP-0002 runtime: 15 `service` CPT objects with registry metadata and hierarchy, 0 new Pages, 13 existing Page template assignments, 0 Posts, 0 menu changes, 0 option changes, 0 redirects, and no rewrite flush. Content migration and V9 integration remain not started.
+
+Report: `reports/FP-0002-V9-06D2-WORDPRESS-OBJECT-SKELETON-REPORT-v1.md`.

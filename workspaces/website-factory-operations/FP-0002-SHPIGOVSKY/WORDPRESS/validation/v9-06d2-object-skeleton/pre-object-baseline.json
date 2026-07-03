@@ -1,0 +1,469 @@
+{
+    "timestamp": "2026-07-03T21:03:46+00:00",
+    "identity": {
+        "runtime": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky",
+        "domain": "http://shpigovsky.test/",
+        "active_theme": "shpigovsky",
+        "active_theme_version": "0.2.0-skeleton",
+        "active_plugins": [
+            "acf-extended-pro/acf-extended.php",
+            "advanced-custom-fields-pro/acf.php",
+            "metacode-wpilot/metacode-wpilot.php",
+            "shpigovsky-core/shpigovsky-core.php"
+        ],
+        "plugin_versions": [
+            {
+                "file": "acf-extended-pro/acf-extended.php",
+                "name": "Advanced Custom Fields: Extended PRO",
+                "version": "0.9.2.3"
+            },
+            {
+                "file": "advanced-custom-fields-pro/acf.php",
+                "name": "Advanced Custom Fields PRO",
+                "version": "6.8.5"
+            },
+            {
+                "file": "metacode-wpilot/metacode-wpilot.php",
+                "name": "MetaCODE WPilot",
+                "version": "0.3.0"
+            },
+            {
+                "file": "shpigovsky-core/shpigovsky-core.php",
+                "name": "Shpigovsky Core",
+                "version": "0.3.1-v9-06c1-source"
+            }
+        ],
+        "shpigovsky_core_active": true,
+        "shpigovsky_core_mode": "content_model",
+        "service_cpt_registered": true,
+        "service_cpt": {
+            "public": true,
+            "hierarchical": true,
+            "has_archive": false,
+            "rewrite": {
+                "slug": "uslugi",
+                "with_front": false,
+                "hierarchical": true,
+                "pages": true,
+                "feeds": false,
+                "ep_mask": 1
+            },
+            "show_in_rest": true
+        },
+        "service_taxonomies": [],
+        "acf_pro_active": true,
+        "acf_extended_pro_active": true,
+        "acf_free_active": false,
+        "acf_groups_count": 13,
+        "acf_options_page_registered": true,
+        "wpilot_active": true,
+        "wpilot": {
+            "option_count": 2,
+            "options_hash": "cd9829034b2ba9b46eaee4db77d29d284054944a21109bf5a593be2bb8e33639",
+            "write_enabled": false
+        }
+    },
+    "pages": [
+        {
+            "ID": 3,
+            "post_type": "page",
+            "post_title": "Политика конфиденциальности",
+            "post_name": "privacy-policy",
+            "post_parent": 0,
+            "post_status": "draft",
+            "template": "default",
+            "url": "http://shpigovsky.test/?page_id=3",
+            "path": "/",
+            "page_uri": "privacy-policy",
+            "modified_gmt": "2026-07-02 15:53:38",
+            "menu_order": 0
+        },
+        {
+            "ID": 4,
+            "post_type": "page",
+            "post_title": "Главная",
+            "post_name": "glavnaya",
+            "post_parent": 0,
+            "post_status": "publish",
+            "template": "default",
+            "url": "http://shpigovsky.test/",
+            "path": "/",
+            "page_uri": "glavnaya",
+            "modified_gmt": "2026-07-02 15:53:38",
+            "menu_order": 0
+        },
+        {
+            "ID": 5,
+            "post_type": "page",
+            "post_title": "Услуги",
+            "post_name": "uslugi",
+            "post_parent": 0,
+            "post_status": "publish",
+            "template": "default",
+            "url": "http://shpigovsky.test/uslugi/",
+            "path": "/uslugi/",
+            "page_uri": "uslugi",
+            "modified_gmt": "2026-07-02 15:53:38",
+            "menu_order": 0
+        },
+        {
+            "ID": 6,
+            "post_type": "page",
+            "post_title": "Зависимости",
+            "post_name": "zavisimosti",
+            "post_parent": 5,
+            "post_status": "publish",
+            "template": "default",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/",
+            "path": "/uslugi/zavisimosti/",
+            "page_uri": "uslugi/zavisimosti",
+            "modified_gmt": "2026-07-02 15:53:38",
+            "menu_order": 0
+        },
+        {
+            "ID": 7,
+            "post_type": "page",
+            "post_title": "Психическое здоровье",
+            "post_name": "psihicheskoe-zdorovie",
+            "post_parent": 5,
+            "post_status": "publish",
+            "template": "default",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/",
+            "path": "/uslugi/psihicheskoe-zdorovie/",
+            "page_uri": "uslugi/psihicheskoe-zdorovie",
+            "modified_gmt": "2026-07-02 15:53:38",
+            "menu_order": 0
+        },
+        {
+            "ID": 8,
+            "post_type": "page",
+            "post_title": "Расстройства пищевого поведения",
+            "post_name": "rasstroystva-pischevogo-povedeniya",
+            "post_parent": 5,
+            "post_status": "publish",
+            "template": "default",
+            "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/",
+            "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+            "page_uri": "uslugi/rasstroystva-pischevogo-povedeniya",
+            "modified_gmt": "2026-07-02 15:53:38",
+            "menu_order": 0
+        },
+        {
+            "ID": 9,
+            "post_type": "page",
+            "post_title": "Генотипирование",
+            "post_name": "genotipirovanie",
+            "post_parent": 5,
+            "post_status": "publish",
+            "template": "default",
+            "url": "http://shpigovsky.test/uslugi/genotipirovanie/",
+            "path": "/uslugi/genotipirovanie/",
+            "page_uri": "uslugi/genotipirovanie",
+            "modified_gmt": "2026-07-02 15:53:38",
+            "menu_order": 0
+        },
+        {
+            "ID": 10,
+            "post_type": "page",
+            "post_title": "Специалисты",
+            "post_name": "specyalisty",
+            "post_parent": 0,
+            "post_status": "publish",
+            "template": "default",
+            "url": "http://shpigovsky.test/specyalisty/",
+            "path": "/specyalisty/",
+            "page_uri": "specyalisty",
+            "modified_gmt": "2026-07-02 15:53:38",
+            "menu_order": 0
+        },
+        {
+            "ID": 11,
+            "post_type": "page",
+            "post_title": "О центре",
+            "post_name": "o-centre",
+            "post_parent": 0,
+            "post_status": "publish",
+            "template": "default",
+            "url": "http://shpigovsky.test/o-centre/",
+            "path": "/o-centre/",
+            "page_uri": "o-centre",
+            "modified_gmt": "2026-07-02 15:53:38",
+            "menu_order": 0
+        },
+        {
+            "ID": 12,
+            "post_type": "page",
+            "post_title": "О нас",
+            "post_name": "o-nas",
+            "post_parent": 11,
+            "post_status": "publish",
+            "template": "default",
+            "url": "http://shpigovsky.test/o-centre/o-nas/",
+            "path": "/o-centre/o-nas/",
+            "page_uri": "o-centre/o-nas",
+            "modified_gmt": "2026-07-02 15:53:38",
+            "menu_order": 0
+        },
+        {
+            "ID": 13,
+            "post_type": "page",
+            "post_title": "Программа лечения",
+            "post_name": "programma-lecheniya",
+            "post_parent": 11,
+            "post_status": "publish",
+            "template": "default",
+            "url": "http://shpigovsky.test/o-centre/programma-lecheniya/",
+            "path": "/o-centre/programma-lecheniya/",
+            "page_uri": "o-centre/programma-lecheniya",
+            "modified_gmt": "2026-07-02 15:53:38",
+            "menu_order": 0
+        },
+        {
+            "ID": 14,
+            "post_type": "page",
+            "post_title": "Галерея о доме",
+            "post_name": "galereya-o-dome",
+            "post_parent": 11,
+            "post_status": "publish",
+            "template": "default",
+            "url": "http://shpigovsky.test/o-centre/galereya-o-dome/",
+            "path": "/o-centre/galereya-o-dome/",
+            "page_uri": "o-centre/galereya-o-dome",
+            "modified_gmt": "2026-07-02 15:53:38",
+            "menu_order": 0
+        },
+        {
+            "ID": 15,
+            "post_type": "page",
+            "post_title": "Специалистам",
+            "post_name": "specialistam",
+            "post_parent": 11,
+            "post_status": "publish",
+            "template": "default",
+            "url": "http://shpigovsky.test/o-centre/specialistam/",
+            "path": "/o-centre/specialistam/",
+            "page_uri": "o-centre/specialistam",
+            "modified_gmt": "2026-07-02 15:53:38",
+            "menu_order": 0
+        },
+        {
+            "ID": 16,
+            "post_type": "page",
+            "post_title": "Родственникам",
+            "post_name": "rodstvennikam",
+            "post_parent": 11,
+            "post_status": "publish",
+            "template": "default",
+            "url": "http://shpigovsky.test/o-centre/rodstvennikam/",
+            "path": "/o-centre/rodstvennikam/",
+            "page_uri": "o-centre/rodstvennikam",
+            "modified_gmt": "2026-07-02 15:53:38",
+            "menu_order": 0
+        },
+        {
+            "ID": 17,
+            "post_type": "page",
+            "post_title": "Интервью и СМИ",
+            "post_name": "intervyu-i-smi",
+            "post_parent": 11,
+            "post_status": "publish",
+            "template": "default",
+            "url": "http://shpigovsky.test/o-centre/intervyu-i-smi/",
+            "path": "/o-centre/intervyu-i-smi/",
+            "page_uri": "o-centre/intervyu-i-smi",
+            "modified_gmt": "2026-07-02 15:53:38",
+            "menu_order": 0
+        },
+        {
+            "ID": 18,
+            "post_type": "page",
+            "post_title": "Отзывы",
+            "post_name": "otzyvy",
+            "post_parent": 0,
+            "post_status": "publish",
+            "template": "default",
+            "url": "http://shpigovsky.test/otzyvy/",
+            "path": "/otzyvy/",
+            "page_uri": "otzyvy",
+            "modified_gmt": "2026-07-02 15:53:38",
+            "menu_order": 0
+        },
+        {
+            "ID": 19,
+            "post_type": "page",
+            "post_title": "Статьи",
+            "post_name": "blog",
+            "post_parent": 0,
+            "post_status": "publish",
+            "template": "default",
+            "url": "http://shpigovsky.test/blog/",
+            "path": "/blog/",
+            "page_uri": "blog",
+            "modified_gmt": "2026-07-02 15:53:38",
+            "menu_order": 0
+        },
+        {
+            "ID": 20,
+            "post_type": "page",
+            "post_title": "Контакты",
+            "post_name": "kontakty",
+            "post_parent": 0,
+            "post_status": "publish",
+            "template": "default",
+            "url": "http://shpigovsky.test/kontakty/",
+            "path": "/kontakty/",
+            "page_uri": "kontakty",
+            "modified_gmt": "2026-07-02 15:53:38",
+            "menu_order": 0
+        },
+        {
+            "ID": 21,
+            "post_type": "page",
+            "post_title": "Правовая информация",
+            "post_name": "pravovaya-informaciya-pilzovatelyu",
+            "post_parent": 0,
+            "post_status": "publish",
+            "template": "default",
+            "url": "http://shpigovsky.test/pravovaya-informaciya-pilzovatelyu/",
+            "path": "/pravovaya-informaciya-pilzovatelyu/",
+            "page_uri": "pravovaya-informaciya-pilzovatelyu",
+            "modified_gmt": "2026-07-02 15:53:38",
+            "menu_order": 0
+        },
+        {
+            "ID": 22,
+            "post_type": "page",
+            "post_title": "Пользовательское соглашение",
+            "post_name": "user-agreement",
+            "post_parent": 0,
+            "post_status": "publish",
+            "template": "default",
+            "url": "http://shpigovsky.test/user-agreement/",
+            "path": "/user-agreement/",
+            "page_uri": "user-agreement",
+            "modified_gmt": "2026-07-02 15:53:38",
+            "menu_order": 0
+        },
+        {
+            "ID": 23,
+            "post_type": "page",
+            "post_title": "Согласие на обработку персональных данных",
+            "post_name": "consent-personal-data",
+            "post_parent": 0,
+            "post_status": "publish",
+            "template": "default",
+            "url": "http://shpigovsky.test/consent-personal-data/",
+            "path": "/consent-personal-data/",
+            "page_uri": "consent-personal-data",
+            "modified_gmt": "2026-07-02 15:53:38",
+            "menu_order": 0
+        },
+        {
+            "ID": 24,
+            "post_type": "page",
+            "post_title": "Политика Cookie-файлов",
+            "post_name": "cookie-files-policy",
+            "post_parent": 0,
+            "post_status": "publish",
+            "template": "default",
+            "url": "http://shpigovsky.test/cookie-files-policy/",
+            "path": "/cookie-files-policy/",
+            "page_uri": "cookie-files-policy",
+            "modified_gmt": "2026-07-02 15:53:38",
+            "menu_order": 0
+        },
+        {
+            "ID": 25,
+            "post_type": "page",
+            "post_title": "Политика конфиденциальности (системная)",
+            "post_name": "privacy-policy-page",
+            "post_parent": 0,
+            "post_status": "publish",
+            "template": "default",
+            "url": "http://shpigovsky.test/privacy-policy-page/",
+            "path": "/privacy-policy-page/",
+            "page_uri": "privacy-policy-page",
+            "modified_gmt": "2026-07-02 15:53:38",
+            "menu_order": 0
+        }
+    ],
+    "services": [],
+    "posts": [
+        {
+            "ID": 64,
+            "post_type": "post",
+            "post_title": "Черновик",
+            "post_name": "",
+            "post_parent": 0,
+            "post_status": "auto-draft",
+            "template": null,
+            "url": "http://shpigovsky.test/?p=64",
+            "path": "/",
+            "page_uri": null,
+            "modified_gmt": "0000-00-00 00:00:00",
+            "menu_order": 0
+        }
+    ],
+    "menus": [
+        {
+            "term_id": 3,
+            "name": "Footer",
+            "slug": "footer",
+            "count": 3,
+            "items_hash": "0b45d529249770a9af031959c3ff86591e281ef93c04252166ba789e20e9bce5"
+        },
+        {
+            "term_id": 4,
+            "name": "Legal",
+            "slug": "legal",
+            "count": 5,
+            "items_hash": "275248d344f76a21195e8d2276c2476792f6eac9eabf141edebde4a1de4af24b"
+        },
+        {
+            "term_id": 2,
+            "name": "Primary",
+            "slug": "primary",
+            "count": 7,
+            "items_hash": "97699723de17bfef30e3b4a2cc1cfcac480e629781ede1d631b3b0281afdb1af"
+        }
+    ],
+    "options": {
+        "show_on_front": "page",
+        "page_on_front": 4,
+        "page_for_posts": 19,
+        "permalink_structure": "/%postname%/",
+        "rewrite_rules_hash": "224bcae00dcb5d295717cbceba968d7bbe382172469142516f298f79f1590529",
+        "rewrite_rules_count": 95
+    },
+    "theme": {
+        "stylesheet": "shpigovsky",
+        "version": "0.2.0-skeleton"
+    },
+    "plugins": [
+        "acf-extended-pro/acf-extended.php",
+        "advanced-custom-fields-pro/acf.php",
+        "metacode-wpilot/metacode-wpilot.php",
+        "shpigovsky-core/shpigovsky-core.php"
+    ],
+    "users_count": 2,
+    "acf_groups_count": 13,
+    "acf_options_values": {
+        "count": 0,
+        "hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "categories": {
+        "count": 1,
+        "names": [
+            "╨С╨╡╨╖ ╤А╤Г╨▒╤А╨╕╨║╨╕"
+        ]
+    },
+    "tags": {
+        "count": 0,
+        "names": []
+    },
+    "wpilot": {
+        "option_count": 2,
+        "options_hash": "cd9829034b2ba9b46eaee4db77d29d284054944a21109bf5a593be2bb8e33639",
+        "write_enabled": false
+    }
+}

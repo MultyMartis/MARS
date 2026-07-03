@@ -1,0 +1,127 @@
+{
+  "phase": "V9-06D.2",
+  "timestamp": "2026-07-03T21:07:36.947371+00:00",
+  "checks": [
+    {
+      "check": "exact X volume",
+      "result": "PASS"
+    },
+    {
+      "check": "local/remote HEAD synchronized",
+      "result": "PASS"
+    },
+    {
+      "check": "runtime health pass",
+      "result": "PASS"
+    },
+    {
+      "check": "Service CPT registered before object creation",
+      "result": "PASS"
+    },
+    {
+      "check": "ACF groups discoverable before object creation",
+      "result": "PASS"
+    },
+    {
+      "check": "DB dump created",
+      "result": "PASS"
+    },
+    {
+      "check": "dry-run no ambiguity",
+      "result": "PASS"
+    },
+    {
+      "check": "exactly 15 Services planned",
+      "result": "PASS"
+    },
+    {
+      "check": "exactly 15 Services created/reconciled",
+      "result": "PASS"
+    },
+    {
+      "check": "no extra Services",
+      "result": "PASS"
+    },
+    {
+      "check": "parent hierarchy correct",
+      "result": "PASS"
+    },
+    {
+      "check": "slugs correct",
+      "result": "PASS"
+    },
+    {
+      "check": "generated permalinks correct",
+      "result": "PASS"
+    },
+    {
+      "check": "Services Hub remains Page-owned",
+      "result": "PASS"
+    },
+    {
+      "check": "/specyalisty/ not created by D.2",
+      "result": "PASS"
+    },
+    {
+      "check": "no redirects created",
+      "result": "PASS"
+    },
+    {
+      "check": "no menus changed",
+      "result": "PASS"
+    },
+    {
+      "check": "no front/posts page option changed",
+      "result": "PASS"
+    },
+    {
+      "check": "no categories/tags created",
+      "result": "PASS"
+    },
+    {
+      "check": "no content migration performed",
+      "result": "PASS"
+    },
+    {
+      "check": "no V9 integration performed",
+      "result": "PASS"
+    },
+    {
+      "check": "ACF Extended PRO not used",
+      "result": "PASS"
+    },
+    {
+      "check": "ACF PRO not updated",
+      "result": "PASS"
+    },
+    {
+      "check": "plugin activation unchanged",
+      "result": "PASS"
+    },
+    {
+      "check": "rollback readiness documented",
+      "result": "PASS"
+    }
+  ],
+  "passed": 25,
+  "failed": 0,
+  "skipped": 0,
+  "final_verdict": "PASS",
+  "v9_06d2": "COMPLETE",
+  "wordpress_object_skeleton": "COMPLETE",
+  "pages": "CREATED_OR_RECONCILED",
+  "services": "15_CREATED_OR_RECONCILED",
+  "service_hierarchy": "VALID",
+  "service_permalinks": "READY",
+  "services_hub": "PAGE_OWNED",
+  "legacy_specyalisty": "NOT_CREATED_BY_D2_PRE_EXISTING_PAGE_UNCHANGED",
+  "content_migration": "NOT_PERFORMED",
+  "v9_integration": "NOT_STARTED",
+  "menus": "UNCHANGED",
+  "redirects": "NOT_CREATED",
+  "rewrite_flush": "NOT_PERFORMED",
+  "runtime_health": "PASS",
+  "rollback_readiness": "READY",
+  "v9_06d3": "READY_FOR_OPERATOR_REVIEW",
+  "recommended_next_action": "CREATE_V9_06D3_CONTENT_MIGRATION_PLANNING_TASK"
+}

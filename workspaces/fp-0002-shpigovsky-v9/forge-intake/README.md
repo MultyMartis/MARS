@@ -5,7 +5,7 @@
 **Stable baseline:** `fp-0002-v9-operator-approved-static-frontend-stable-01` @ `a51376872fbfefb7d5f68a58b440c726d6cf3de3`  
 **Intake gate:** V9-05A **APPROVED** — foundation **ADOPTED**  
 **Runtime checkpoint:** V9-05B **COMPLETE** — `foundation-002-v9-pre-implementation`
-**Latest WordPress runtime gate:** V9-06D.1 rerun **PASS** — runtime delivery complete; object skeleton not started
+**Latest WordPress runtime gate:** V9-06D.2 **PASS** — object skeleton complete; content migration not started
 
 ## Entry documents
 
@@ -14,6 +14,7 @@
 - [FP-0002-V9-05B-PRE-IMPLEMENTATION-RUNTIME-CHECKPOINT-GATE-v1.md](./validation/FP-0002-V9-05B-PRE-IMPLEMENTATION-RUNTIME-CHECKPOINT-GATE-v1.md) — **V9-05B checkpoint (COMPLETE)**
 - [FP-0002-V9-06C1-SOURCE-ACTIVATION-GATE-RESOLUTION-GATE-v1.md](./validation/FP-0002-V9-06C1-SOURCE-ACTIVATION-GATE-RESOLUTION-GATE-v1.md) — **V9-06C.1 source gate (PASS)**
 - [FP-0002-V9-06D1-RERUN-RUNTIME-DELIVERY-GATE-v1.md](./validation/FP-0002-V9-06D1-RERUN-RUNTIME-DELIVERY-GATE-v1.md) — **V9-06D.1 rerun runtime delivery gate (PASS)**
+- [FP-0002-V9-06D2-WORDPRESS-OBJECT-SKELETON-GATE-v1.md](./validation/FP-0002-V9-06D2-WORDPRESS-OBJECT-SKELETON-GATE-v1.md) — **V9-06D.2 WordPress object skeleton gate (PASS)**
 
 ## Structure
 
@@ -43,4 +44,4 @@
 npm run validate:forge-intake
 ```
 
-**V9-06D.1 rerun runtime delivery is COMPLETE.** V9-06D.2 object skeleton requires separate operator authorization.
+**V9-06D.2 WordPress object skeleton is COMPLETE.** Content migration / V9 integration require separate operator authorization.

@@ -1,0 +1,26 @@
+{
+  "phase": "V9-06D.2",
+  "timestamp": "2026-07-04T04:04:09.1227337+07:00",
+  "name": "v9-06d2-object-skeleton-pre-20260704-040407",
+  "root": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d2-object-skeleton-pre-20260704-040407",
+  "folders": [
+    "wordpress-state",
+    "database",
+    "rollback",
+    "receipts"
+  ],
+  "db_dump": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d2-object-skeleton-pre-20260704-040407\\database\\mars_wp_fp0002-v9-06d2-pre.sql",
+  "db_dump_exists": true,
+  "db_dump_size": 1406689,
+  "object_baseline": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d2-object-skeleton-pre-20260704-040407\\wordpress-state\\pre-object-baseline.json",
+  "rollback_instructions": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d2-object-skeleton-pre-20260704-040407\\rollback\\ROLLBACK-INSTRUCTIONS.md",
+  "cleanup_plan": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d2-object-skeleton-pre-20260704-040407\\rollback\\created-object-cleanup-plan.json",
+  "expected_post_rollback_object_counts": {
+    "menus": 3,
+    "posts": 1,
+    "pages": 23,
+    "services": 0
+  },
+  "secrets_copied": 0,
+  "result": "PASS"
+}

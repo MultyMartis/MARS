@@ -1,7 +1,7 @@
 # FP-0002 V9 Operational Status
 
-**Updated:** 2026-07-04 (V9-06D.1 rerun runtime delivery PASS)
-**Status:** `FP0002_V9_06D1_RERUN_RUNTIME_DELIVERY_PASS`
+**Updated:** 2026-07-04 (V9-06D.2 WordPress object skeleton PASS)
+**Status:** `FP0002_V9_06D2_WORDPRESS_OBJECT_SKELETON_PASS`
 
 ## Authority model
 
@@ -213,3 +213,14 @@ Phase **07C-B** Storage package — `SUPERSEDED_FAILED_STATIC_PACKAGING_NOT_FOR_
 - V9 source/dist changes: **0**.
 - V9-06D.2: **READY FOR OPERATOR REVIEW**, not authorized.
 
+
+
+## V9-06D.2 WordPress Object Skeleton (complete)
+
+- Status: `FP0002_V9_06D2_WORDPRESS_OBJECT_SKELETON_PASS`
+- Gate/report: `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/reports/FP-0002-V9-06D2-WORDPRESS-OBJECT-SKELETON-REPORT-v1.md`
+- Services: 15 created/reconciled with hierarchy and generated permalink readiness.
+- Pages: 0 created; required existing Page templates reconciled.
+- Menus/options/redirects/rewrite flush: unchanged / not performed.
+- Content migration: not started.
+- V9 integration: not started.

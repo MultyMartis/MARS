@@ -537,3 +537,8 @@ Manifest enrollment (Playbook 01), registry enrollment (Playbook 02), and RT-G04
 ## 2026-07-04 — V9-06D.1 rerun runtime delivery
 
 PASS: local WordPress runtime received canonical theme, Shpigovsky Core, and ACF JSON. Content model activation verified; service CPT registered; ACF groups and Options Page discoverable. WordPress object skeleton and V9 integration remain not started.
+
+
+## 2026-07-04 — V9-06D.2 WordPress object skeleton
+
+PASS: local WordPress runtime object skeleton created under checkpoint control. Services total: 15; Pages created: 0; Page templates reconciled: 13; Posts created: 0; Menus/options/redirects/rewrite flush unchanged. Content migration and V9 integration remain not started.

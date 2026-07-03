@@ -1,0 +1,148 @@
+{
+  "phase": "V9-06D.2",
+  "timestamp": "2026-07-03T21:07:36.947371+00:00",
+  "rows": [
+    {
+      "route_id": "ROUTE-01",
+      "ID": 4,
+      "title": "Главная",
+      "path": "/",
+      "template": "default",
+      "created_reused": "reused",
+      "result": "PASS"
+    },
+    {
+      "route_id": "ROUTE-02",
+      "ID": 5,
+      "title": "Услуги",
+      "path": "/uslugi/",
+      "template": "page-templates/services-hub.php",
+      "created_reused": "reused",
+      "result": "PASS"
+    },
+    {
+      "route_id": "ROUTE-18",
+      "ID": 11,
+      "title": "О центре",
+      "path": "/o-centre/",
+      "template": "page-templates/institutional.php",
+      "created_reused": "reused",
+      "result": "PASS"
+    },
+    {
+      "route_id": "ROUTE-19",
+      "ID": 12,
+      "title": "О нас",
+      "path": "/o-centre/o-nas/",
+      "template": "page-templates/institutional.php",
+      "created_reused": "reused",
+      "result": "PASS"
+    },
+    {
+      "route_id": "ROUTE-20",
+      "ID": 13,
+      "title": "Программа лечения",
+      "path": "/o-centre/programma-lecheniya/",
+      "template": "page-templates/institutional.php",
+      "created_reused": "reused",
+      "result": "PASS"
+    },
+    {
+      "route_id": "ROUTE-21",
+      "ID": 14,
+      "title": "Галерея о доме",
+      "path": "/o-centre/galereya-o-dome/",
+      "template": "page-templates/institutional.php",
+      "created_reused": "reused",
+      "result": "PASS"
+    },
+    {
+      "route_id": "ROUTE-22",
+      "ID": 15,
+      "title": "Специалистам",
+      "path": "/o-centre/specialistam/",
+      "template": "page-templates/institutional.php",
+      "created_reused": "reused",
+      "result": "PASS"
+    },
+    {
+      "route_id": "ROUTE-23",
+      "ID": 16,
+      "title": "Родственникам",
+      "path": "/o-centre/rodstvennikam/",
+      "template": "page-templates/institutional.php",
+      "created_reused": "reused",
+      "result": "PASS"
+    },
+    {
+      "route_id": "ROUTE-24",
+      "ID": 18,
+      "title": "Отзывы",
+      "path": "/otzyvy/",
+      "template": "page-templates/reviews.php",
+      "created_reused": "reused",
+      "result": "PASS"
+    },
+    {
+      "route_id": "ROUTE-25",
+      "ID": 19,
+      "title": "Статьи",
+      "path": "/blog/",
+      "template": "default",
+      "created_reused": "reused",
+      "result": "PASS"
+    },
+    {
+      "route_id": "ROUTE-27",
+      "ID": 20,
+      "title": "Контакты",
+      "path": "/kontakty/",
+      "template": "page-templates/contacts.php",
+      "created_reused": "reused",
+      "result": "PASS"
+    },
+    {
+      "route_id": "ROUTE-28",
+      "ID": 3,
+      "title": "Политика конфиденциальности",
+      "path": "/privacy-policy/",
+      "template": "page-templates/legal.php",
+      "created_reused": "reused",
+      "result": "PASS"
+    },
+    {
+      "route_id": "ROUTE-29",
+      "ID": 22,
+      "title": "Пользовательское соглашение",
+      "path": "/user-agreement/",
+      "template": "page-templates/legal.php",
+      "created_reused": "reused",
+      "result": "PASS"
+    },
+    {
+      "route_id": "ROUTE-30",
+      "ID": 23,
+      "title": "Согласие на обработку персональных данных",
+      "path": "/consent-personal-data/",
+      "template": "page-templates/legal.php",
+      "created_reused": "reused",
+      "result": "PASS"
+    },
+    {
+      "route_id": "ROUTE-31",
+      "ID": 24,
+      "title": "Политика Cookie-файлов",
+      "path": "/cookie-files-policy/",
+      "template": "page-templates/legal.php",
+      "created_reused": "reused",
+      "result": "PASS"
+    }
+  ],
+  "duplicate_paths": [],
+  "services_hub_page": 5,
+  "front_page": 4,
+  "posts_page": 19,
+  "legacy_specyalisty_page": 10,
+  "legacy_specyalisty_status": "PRE_EXISTING_NOT_CREATED",
+  "result": "PASS"
+}

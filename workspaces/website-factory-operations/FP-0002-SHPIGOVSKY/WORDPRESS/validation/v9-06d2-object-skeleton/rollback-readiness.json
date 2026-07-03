@@ -1,0 +1,153 @@
+{
+  "phase": "V9-06D.2",
+  "timestamp": "2026-07-03T21:07:36.947371+00:00",
+  "db_dump": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d2-object-skeleton-pre-20260704-040407\\database\\mars_wp_fp0002-v9-06d2-pre.sql",
+  "db_dump_exists": true,
+  "created_object_list": {
+    "services": [
+      {
+        "registry_id": "SVC-ZAVISIMOSTI",
+        "ID": 73
+      },
+      {
+        "registry_id": "SVC-ALKOGOL",
+        "ID": 74
+      },
+      {
+        "registry_id": "SVC-PROFILAKTIKA",
+        "ID": 75
+      },
+      {
+        "registry_id": "SVC-SPECIALISTAM-ZAV",
+        "ID": 76
+      },
+      {
+        "registry_id": "SVC-PSYCH",
+        "ID": 77
+      },
+      {
+        "registry_id": "SVC-DEPRESSIYA",
+        "ID": 78
+      },
+      {
+        "registry_id": "SVC-PTRS",
+        "ID": 79
+      },
+      {
+        "registry_id": "SVC-VYGORANIE",
+        "ID": 80
+      },
+      {
+        "registry_id": "SVC-TREVOGA",
+        "ID": 81
+      },
+      {
+        "registry_id": "SVC-SON",
+        "ID": 82
+      },
+      {
+        "registry_id": "SVC-TRAVMA",
+        "ID": 83
+      },
+      {
+        "registry_id": "SVC-RPP",
+        "ID": 84
+      },
+      {
+        "registry_id": "SVC-ANOREKSIYA",
+        "ID": 85
+      },
+      {
+        "registry_id": "SVC-BULIMIYA",
+        "ID": 86
+      },
+      {
+        "registry_id": "SVC-KOMPULSIV",
+        "ID": 87
+      }
+    ],
+    "pages": []
+  },
+  "modified_object_list": {
+    "pages": [
+      {
+        "ID": 5,
+        "before_template": "default",
+        "after_template": "page-templates/services-hub.php"
+      },
+      {
+        "ID": 11,
+        "before_template": "default",
+        "after_template": "page-templates/institutional.php"
+      },
+      {
+        "ID": 12,
+        "before_template": "default",
+        "after_template": "page-templates/institutional.php"
+      },
+      {
+        "ID": 13,
+        "before_template": "default",
+        "after_template": "page-templates/institutional.php"
+      },
+      {
+        "ID": 14,
+        "before_template": "default",
+        "after_template": "page-templates/institutional.php"
+      },
+      {
+        "ID": 15,
+        "before_template": "default",
+        "after_template": "page-templates/institutional.php"
+      },
+      {
+        "ID": 16,
+        "before_template": "default",
+        "after_template": "page-templates/institutional.php"
+      },
+      {
+        "ID": 18,
+        "before_template": "default",
+        "after_template": "page-templates/reviews.php"
+      },
+      {
+        "ID": 20,
+        "before_template": "default",
+        "after_template": "page-templates/contacts.php"
+      },
+      {
+        "ID": 3,
+        "before_template": "default",
+        "after_template": "page-templates/legal.php"
+      },
+      {
+        "ID": 22,
+        "before_template": "default",
+        "after_template": "page-templates/legal.php"
+      },
+      {
+        "ID": 23,
+        "before_template": "default",
+        "after_template": "page-templates/legal.php"
+      },
+      {
+        "ID": 24,
+        "before_template": "default",
+        "after_template": "page-templates/legal.php"
+      }
+    ],
+    "services": []
+  },
+  "restore_procedure": "Delete D.2-created Service IDs children-first, delete D.2-created Pages only if any, restore modified Page _wp_page_template values, or restore full local DB from checkpoint SQL dump if object cleanup is insufficient.",
+  "rollback_tested": false,
+  "rollback_not_executed_reason": "Apply and validation succeeded.",
+  "expected_after_rollback": {
+    "pages": 23,
+    "services": 0,
+    "posts": 1,
+    "menus": 3,
+    "page_on_front": 4,
+    "page_for_posts": 19
+  },
+  "result": "PASS"
+}

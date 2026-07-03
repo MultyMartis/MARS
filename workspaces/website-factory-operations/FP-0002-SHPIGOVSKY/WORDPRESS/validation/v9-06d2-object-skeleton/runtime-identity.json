@@ -1,0 +1,65 @@
+{
+  "runtime": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky",
+  "domain": "http://shpigovsky.test/",
+  "active_theme": "shpigovsky",
+  "active_theme_version": "0.2.0-skeleton",
+  "active_plugins": [
+    "acf-extended-pro/acf-extended.php",
+    "advanced-custom-fields-pro/acf.php",
+    "metacode-wpilot/metacode-wpilot.php",
+    "shpigovsky-core/shpigovsky-core.php"
+  ],
+  "plugin_versions": [
+    {
+      "file": "acf-extended-pro/acf-extended.php",
+      "name": "Advanced Custom Fields: Extended PRO",
+      "version": "0.9.2.3"
+    },
+    {
+      "file": "advanced-custom-fields-pro/acf.php",
+      "name": "Advanced Custom Fields PRO",
+      "version": "6.8.5"
+    },
+    {
+      "file": "metacode-wpilot/metacode-wpilot.php",
+      "name": "MetaCODE WPilot",
+      "version": "0.3.0"
+    },
+    {
+      "file": "shpigovsky-core/shpigovsky-core.php",
+      "name": "Shpigovsky Core",
+      "version": "0.3.1-v9-06c1-source"
+    }
+  ],
+  "shpigovsky_core_active": true,
+  "shpigovsky_core_mode": "content_model",
+  "service_cpt_registered": true,
+  "service_cpt": {
+    "public": true,
+    "hierarchical": true,
+    "has_archive": false,
+    "rewrite": {
+      "slug": "uslugi",
+      "with_front": false,
+      "hierarchical": true,
+      "pages": true,
+      "feeds": false,
+      "ep_mask": 1
+    },
+    "show_in_rest": true
+  },
+  "service_taxonomies": [],
+  "acf_pro_active": true,
+  "acf_extended_pro_active": true,
+  "acf_free_active": false,
+  "acf_groups_count": 13,
+  "acf_options_page_registered": true,
+  "wpilot_active": true,
+  "wpilot": {
+    "option_count": 2,
+    "options_hash": "cd9829034b2ba9b46eaee4db77d29d284054944a21109bf5a593be2bb8e33639",
+    "write_enabled": false
+  },
+  "frontend_http_status": 200,
+  "wp_admin_http_status": 302
+}
