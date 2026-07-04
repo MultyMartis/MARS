@@ -39,11 +39,13 @@ GitGuard remains a referenced/future helper surface where documented. AQ-01 does
 
 ## Relationship To Remote Operations Layer
 
-Remote Operations Layer is a future/applied consumer, not part of AQ-01.
+ROL has a repo-native minimal charter under `projects/remote-operations-layer/` (`L2 STRUCTURED_CONTRACT` / `MINIMAL_CHARTER`). ROL is not part of AQ-01.
 
-This package may be used later to structure Remote Operations Layer task contracts, failure records, and report gates, but AQ-01 does not authorize remote operations.
+ROL consumes AQ-style task/report discipline through its own remote task starter and remote report gate. AQ remains the generic quality surface; ROL owns remote-specific preflight and reporting.
 
-Remote operations require a separate ROL charter.
+AQ-01 does not authorize remote operations. ROL does not authorize live remote access by itself.
+
+Remote work still requires operator approval, target identity, environment classification, credential boundary, backup/rollback plan, and evidence/report closeout under ROL discipline.
 
 ## Relationship To Programme Parent Chats
 

@@ -46,6 +46,7 @@ AQ-01 references but does not modify or supersede:
 - `projects/mars-survivability/`
 - `projects/mars-website-factory/`
 - `projects/mars-search-ppc-production/`
+- `projects/remote-operations-layer/` (ROL owns remote-specific preflight/reporting; AQ remains generic quality surface)
 
 ## Protected Zones
 
@@ -72,7 +73,7 @@ Stop and report `SAFE UNKNOWN`, `NEED HUMAN APPROVAL`, or `SECURITY RISK` when:
 - branch or task authority is unclear;
 - requested paths escape approved scope;
 - destructive operations are requested without separate charter;
-- remote operations are requested without separate ROL charter;
+- remote operations are requested without applying ROL discipline (`projects/remote-operations-layer/`);
 - REPORT evidence is missing but a PASS claim is requested;
 - foreign WIP would be staged, reverted, deleted, cleaned, or overwritten.
 

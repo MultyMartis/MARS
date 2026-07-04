@@ -51,7 +51,7 @@
 | Forge WordPress / AG-WP-001 | L6 | `projects/mars-website-factory/subsystems/forge-wordpress/OPERATIONAL-INDEX.md` | Tool-assisted WP forge operations, human-invoked | Not L7 enforcement; not unattended production | Forge parent |
 | WPilot | L5 | `projects/wpilot/OPERATIONAL-INDEX.md` | Repeatable WPilot programme operations | Not automatic enforcement | WPilot parent |
 | OCPilot | L5 | `projects/ocpilot/OPERATIONAL-INDEX.md` | Repeatable OCPilot programme operations | Production receipts persistence not fully verified | OCPilot parent |
-| Remote Operations Layer / ROL | L0–L1 | MASTER-04: no repo-native charter found | Named applied layer only | No charter, no implementation authorization | ROL parent chat |
+| Remote Operations Layer / ROL | L2 | `projects/remote-operations-layer/` (charter, starter, report gate, preflight) | Repo-native minimal charter / structured contract surface | Not runtime; not connector; not credential vault; not live production control plane; does not authorize live remote access by itself | ROL parent |
 | MIG | L6 | `projects/mig/OPERATIONAL-INDEX.md` | Tool-assisted MIG operations, human-invoked | Not automatic enforcement | MIG parent |
 | ORCA | L5 | `projects/orca/OPERATIONAL-INDEX.md` | Repeatable ORCA programme operations | Not production automation | ORCA parent |
 | Search PPC Production | L6 | `projects/mars-search-ppc-production/README.md` | Tool-assisted Search PPC production lane | Wave 2.x acceptance not verified | Search PPC parent / operator |
@@ -88,7 +88,7 @@
 
 | Area | Current state | Risk if inflated | Required proof |
 |---|---|---|---|
-| ROL | L0–L1; no repo-native charter | Unauthorized remote work | Repo-native charter + parent authorization |
+| ROL | L2 STRUCTURED_CONTRACT / MINIMAL_CHARTER | Unauthorized remote work without task-level approval | Operator approval + target identity + environment class + credential boundary + backup/rollback + evidence/report closeout |
 | Full MARS runtime | L2 full (narrow L6 only) | False “runtime exists” claims | Scoped runtime SoT + evidence of invoked surface only |
 | NOVA | L2 docs | Implementation without charter | Parent charter + operational evidence |
 | HomeGateway | L2 docs | Implementation without charter | Parent charter + operational evidence |
@@ -105,7 +105,7 @@
 |---|---|---|---|
 | Automatic enforcement inflation | HIGH | AQ, Survivability, tools, all L6 systems | Do not claim L7 without hooks/CI/policy proof |
 | Runtime claim drift | HIGH | mars-runtime, MARS Core, EAR, Factory | Cite SoT; separate docs vs invoked tools vs runtime product |
-| ROL absence | HIGH | Any remote / external operation | No remote work without ROL charter |
+| ROL discipline bypass | HIGH | Any remote / external operation | No remote work without ROL discipline (charter, preflight, report gate); charter alone does not authorize live access |
 | Old path drift | MEDIUM | All programmes, recovery evidence | Historical C:/D:/E: paths are not current roots |
 | Evidence vs Git persistence | MEDIUM | reports/, Forge receipts, OCPilot | Treat untracked evidence as non-authoritative until committed or explicitly out-of-git |
 | Factory README vs OP index drift | MEDIUM | Website Factory | Prefer OPERATIONAL-INDEX as programme SoT |
@@ -119,7 +119,7 @@
 | Priority | Initiative | Owner | First step |
 |---:|---|---|---|
 | 1 | Maturity-aware overlay for existing systems | MASTER CORE | Publish and use this overlay (MASTER-05) |
-| 2 | ROL repo-native charter | ROL parent | Draft charter in authorized parent chat / applied layer |
+| 2 | ROL discipline adoption in remote-touching programmes | Programme parents / ROL | Apply ROL starter/preflight/report gate when remote work is chartered; adoption links deferred |
 | 3 | Evidence persistence discipline | MASTER CORE coordinates | Define what must be Git-committed vs Storage-only |
 | 4 | Forge WP / FP-0002 next authorized gate | Forge parent / operator | Authorize next gate only; no V9-06D.2 without approval |
 | 5 | Search PPC release evidence review | Search PPC parent / operator | Verify Wave 2.x acceptance evidence |
@@ -138,7 +138,7 @@
 | Website Factory | Summarize maturity; do not replace OP index | Factory parent |
 | Forge WP / FP-0002 | Gate authorization awareness only | Forge parent / operator |
 | WPilot / OCPilot | Maturity labels; no parent replacement | WPilot / OCPilot parents |
-| ROL | Block remote work until charter exists | ROL parent chat |
+| ROL | Maintain maturity label; require ROL discipline for remote work; charter does not authorize live access | ROL parent |
 | MIG / ORCA / Search PPC | Maturity labels; route work to parents | Programme parents / operators |
 | ATLAS / OPS | Maturity labels; no API/automation inflation | ATLAS / OPS parents |
 | EAR / MLI | Maturity labels; authority and live-pilot gates | EAR / MLI parents |
@@ -147,7 +147,8 @@
 
 ## Do-not-touch zones
 
-- ROL implementation without charter
+- ROL runtime, connector, or credential-vault implementation
+- Remote work without ROL discipline and operator approval
 - Full MARS runtime
 - Storage (`X:\AI MARS STORAGE\`) mutation without explicit task scope
 - Localhost (`X:\MARS-Localhost\`) mutation without explicit task scope
@@ -167,12 +168,13 @@
 | `WEB-GPT-CHAT-SYNC-PACK.md` | Repo authority update | Sync pack refresh authorization |
 | MASTER CORE chat sync | This overlay + related governance accepted | Explicit MASTER CORE sync request |
 | Factory / Forge / FP chats | Programme SoT and gate status accepted in repo | Parent-chat sync after repo update |
-| ROL chat | Repo-native ROL charter exists | Charter publication |
+| ROL chat | Repo-native ROL charter accepted in repo | Sync after post-charter alignment if needed |
 | External Web-GPT project chats | Relevant programme SoT accepted in repo | Per-project operator approval |
 
 ## SAFE UNKNOWN
 
-- Repo-native ROL charter not found.
+- Programme-level ROL adoption links (WPilot / OCPilot / MetaBOT / EAR) not verified in this overlay wave.
+- Live remote verification is not proven by ROL charter alone.
 - Untracked reports/receipts may or may not be intended for Git.
 - MetaBOT live n8n state not verified.
 - Search PPC Wave 2.x acceptance not verified.
@@ -186,5 +188,5 @@
 - Before raising maturity, require report/receipt/tool/proof.
 - Before updating Web-GPT sources, update repo authority first.
 - Before touching parent-owned systems, route to parent chat.
-- Before remote work, require ROL charter.
+- Before remote work, require ROL discipline (charter, preflight, report gate) plus operator approval; charter alone does not authorize live access.
 - Before destructive work, require Survivability/Execution Guard charter.

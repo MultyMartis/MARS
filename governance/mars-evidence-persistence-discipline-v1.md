@@ -166,8 +166,11 @@ A REPORT without persistence classification cannot raise maturity alone. Evidenc
 
 ## Remote / external evidence rule
 
-- Remote operations require separate ROL charter.
-- Live CMS/hosting/DB/API/n8n evidence must be treated as `REMOTE_ONLY` unless captured and referenced.
+- ROL provides a repo-native minimal charter and can classify remote evidence and remote report closeout (`projects/remote-operations-layer/`).
+- ROL is not runtime, not connector, not credential vault, and does not authorize live remote access by itself.
+- Remote work still requires operator approval, target identity, environment classification, credential boundary, backup/rollback plan, and evidence/report closeout.
+- Live CMS/hosting/DB/API/n8n evidence must be treated as `REMOTE_ONLY` / SAFE UNKNOWN unless captured and referenced in repo or storage evidence.
+- ROL does not convert external state into repo truth automatically.
 - Screenshots, hashes, backup IDs, HTTP checks, admin saves, FTP logs and DB export receipts must be classified.
 - Remote evidence must not be used to update Web-GPT sources directly without repo reconciliation.
 
@@ -205,7 +208,7 @@ Before committing, ask: **are only exact task files staged?**
 
 Before globalizing a project lesson, ask: **did the parent owner validate it?**
 
-Before remote claims, ask: **is there ROL authority and captured evidence?**
+Before remote claims, ask: **was ROL discipline applied, and is evidence captured (not merely live-external)?**
 
 ## SAFE UNKNOWN
 
