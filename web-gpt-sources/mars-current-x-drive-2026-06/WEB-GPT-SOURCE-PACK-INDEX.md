@@ -19,32 +19,36 @@ Upload in this order when time-constrained:
 |------|------|
 | **1** | `01_MARS_IDENTITY.md` |
 | **2** | `02_OPERATIONAL_POSTURE.md` |
-| **3** | `04_INFRASTRUCTURE_REALITY.md` |
-| **4** | `10_RUNTIME_AND_FILESYSTEM_BOUNDARIES.md` |
-| **5** | `README.md` |
+| **3** | `11_RESPONSE_AND_PROMPT_CONTRACT.md` |
+| **4** | `04_INFRASTRUCTURE_REALITY.md` |
+| **5** | `10_RUNTIME_AND_FILESYSTEM_BOUNDARIES.md` |
+| **6** | `README.md` |
 
 Then paste lane declaration + path to one programme `OPERATIONAL-INDEX.md` Core Run row.
+
+`11_RESPONSE_AND_PROMPT_CONTRACT.md` — Web-GPT response priority, Cursor prompt one-block format, and no-proactive-image-generation rule.
 
 ---
 
 ## Full recommended upload sequence
 
-Upload **one file at a time** in this order. After steps 1–4, declare lane before optional depth.
+Upload **one file at a time** in this order. After steps 1–5, declare lane before optional depth.
 
 | Step | File | Why this order |
 |------|------|----------------|
 | **1** | `01_MARS_IDENTITY.md` | Truth baseline — what MARS is and is not |
 | **2** | `02_OPERATIONAL_POSTURE.md` | Post–Cycle 8 defaults, session start, foreign WIP |
-| **3** | `04_INFRASTRUCTURE_REALITY.md` | X: roots before any path planning |
-| **4** | `10_RUNTIME_AND_FILESYSTEM_BOUNDARIES.md` | Hard anti-mythology + guard capability truth |
-| **5** | `07_CURRENT_BASELINE_AND_MIGRATION_STATE.md` | Migration waves X0–X9 evidence chain (closure) |
-| **6** | `03_PROGRAM_REGISTRY_SUMMARY.md` | Registered programmes and distinctions |
-| **7** | `09_OPERATIONAL_PRIORITIES.md` | Current delivery focus |
-| **8** | `05_ACTIVE_VISUAL_COLD_BRAIN.md` | Brain layers — organizational only |
-| **9** | `06_KNOWLEDGE_CENTER.md` | Operator KC (out-of-git) |
-| **10** | `08_SYSTEM_MATURITY_MAP.md` | Maturity buckets and routers |
-| **11** | `README.md` | Pack meta, authority order, historical relationship |
-| **12** | `WEB-GPT-CHAT-SYNC-PACK.md` | Per-programme sync blocks (optional — when refreshing program chats) |
+| **3** | `11_RESPONSE_AND_PROMPT_CONTRACT.md` | Response priority, one-block Cursor prompts, no proactive images |
+| **4** | `04_INFRASTRUCTURE_REALITY.md` | X: roots before any path planning |
+| **5** | `10_RUNTIME_AND_FILESYSTEM_BOUNDARIES.md` | Hard anti-mythology + guard capability truth |
+| **6** | `07_CURRENT_BASELINE_AND_MIGRATION_STATE.md` | Migration waves X0–X9 evidence chain (closure) |
+| **7** | `03_PROGRAM_REGISTRY_SUMMARY.md` | Registered programmes and distinctions |
+| **8** | `09_OPERATIONAL_PRIORITIES.md` | Current delivery focus |
+| **9** | `05_ACTIVE_VISUAL_COLD_BRAIN.md` | Brain layers — organizational only |
+| **10** | `06_KNOWLEDGE_CENTER.md` | Operator KC (out-of-git) |
+| **11** | `08_SYSTEM_MATURITY_MAP.md` | Maturity buckets and routers |
+| **12** | `README.md` | Pack meta, authority order, historical relationship |
+| **13** | `WEB-GPT-CHAT-SYNC-PACK.md` | Per-programme sync blocks (optional — when refreshing program chats) |
 
 ---
 
@@ -76,9 +80,9 @@ After minimum bundle, pull **from repository** when needed:
 
 | Remove from Web-GPT project | Replace with |
 |-----------------------------|--------------|
-| `mars-v2-stable-baseline-2026-06-sync/*` | Steps 1–11 above (**CURRENT**) |
-| `mars-v2-stable-baseline-2026-06/*` | Steps 1–11 above |
-| `mars-v2-final/*`, `mars-v2/*` | Steps 1–11 above |
+| `mars-v2-stable-baseline-2026-06-sync/*` | Steps 1–12 above (**CURRENT**) |
+| `mars-v2-stable-baseline-2026-06/*` | Steps 1–12 above |
+| `mars-v2-final/*`, `mars-v2/*` | Steps 1–12 above |
 | `01_system.md` … `14_roadmap.md` | Remove unless archival |
 | `chat-migration/*` as SoT | One-time paste only |
 

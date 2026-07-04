@@ -12,6 +12,7 @@
 This is the **current Web-GPT synchronization pack** for MARS after canonical recovery and X-drive migration. It allows existing and future Web-GPT chats to understand:
 
 - current MARS identity and operational posture;
+- Web-GPT response priority, Cursor prompt packaging, and no-proactive-image behavior (`11_RESPONSE_AND_PROMPT_CONTRACT.md`);
 - canonical volume **AI WS** on drive **X:**;
 - Active Brain, Storage, and Local Runtime roots;
 - filesystem boundary and deprecated-root policy;
@@ -55,7 +56,9 @@ This is the **current Web-GPT synchronization pack** for MARS after canonical re
 
 See [WEB-GPT-SOURCE-PACK-INDEX.md](WEB-GPT-SOURCE-PACK-INDEX.md) for upload sequence.
 
-**Minimum viable bootstrap:** `01_MARS_IDENTITY.md` → `02_OPERATIONAL_POSTURE.md` → `04_INFRASTRUCTURE_REALITY.md` → `10_RUNTIME_AND_FILESYSTEM_BOUNDARIES.md` → `README.md`.
+**Minimum viable bootstrap:** `01_MARS_IDENTITY.md` → `02_OPERATIONAL_POSTURE.md` → `11_RESPONSE_AND_PROMPT_CONTRACT.md` → `04_INFRASTRUCTURE_REALITY.md` → `10_RUNTIME_AND_FILESYSTEM_BOUNDARIES.md` → `README.md`.
+
+`11_RESPONSE_AND_PROMPT_CONTRACT.md` is the CURRENT response UX contract for MARS Web-GPT chats. It should be loaded early with `01`/`02` because it protects prompt packaging and unwanted image-generation behavior.
 
 ---
 

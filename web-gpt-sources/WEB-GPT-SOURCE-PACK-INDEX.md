@@ -22,7 +22,7 @@
 
 See **[mars-current-x-drive-2026-06/WEB-GPT-SOURCE-PACK-INDEX.md](mars-current-x-drive-2026-06/WEB-GPT-SOURCE-PACK-INDEX.md)** for the authoritative upload sequence.
 
-**Minimum viable:** `01_MARS_IDENTITY.md` → `02_OPERATIONAL_POSTURE.md` → `04_INFRASTRUCTURE_REALITY.md` → `10_RUNTIME_AND_FILESYSTEM_BOUNDARIES.md` → `README.md`
+**Minimum viable:** `01_MARS_IDENTITY.md` → `02_OPERATIONAL_POSTURE.md` → `11_RESPONSE_AND_PROMPT_CONTRACT.md` → `04_INFRASTRUCTURE_REALITY.md` → `10_RUNTIME_AND_FILESYSTEM_BOUNDARIES.md` → `README.md`
 
 **Do not upload old stable/pre-X packs together with the current pack.**
 
