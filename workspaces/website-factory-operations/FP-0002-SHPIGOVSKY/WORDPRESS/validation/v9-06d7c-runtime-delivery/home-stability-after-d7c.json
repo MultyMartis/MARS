@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-07-04T18:31:59.937987Z",
+  "url": "http://shpigovsky.test/",
+  "http_status": 200,
+  "site_main_front": true,
+  "header_present": true,
+  "footer_present": true,
+  "css_loaded": true,
+  "js_loaded": true,
+  "checks": [
+    {
+      "section": "site-main--front",
+      "present": true,
+      "result": "PASS"
+    },
+    {
+      "section": "hero--home",
+      "present": true,
+      "result": "PASS"
+    },
+    {
+      "section": "treatment-prevention",
+      "present": true,
+      "result": "PASS"
+    },
+    {
+      "section": "rehabilitation-program",
+      "present": true,
+      "result": "PASS"
+    },
+    {
+      "section": "final-form",
+      "present": true,
+      "result": "PASS"
+    }
+  ],
+  "failures": [],
+  "result": "PASS"
+}

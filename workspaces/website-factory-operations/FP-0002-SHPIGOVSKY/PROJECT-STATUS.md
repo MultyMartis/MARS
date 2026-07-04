@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-05 (V9-06D7-C Services Hub template source PASS)
+**Last updated:** 2026-07-05 (V9-06D7-C Services Hub template runtime delivery PASS)
 
-**Current WordPress phase:** V9-06D7-C Services Hub template source complete in canonical theme — next `CREATE_V9_06D7C_RUNTIME_DELIVERY_TASK` (operator review). Report: `WORDPRESS/reports/FP-0002-V9-06D7C-SERVICES-HUB-TEMPLATE-SOURCE-REPORT-v1.md`.
+**Current WordPress phase:** V9-06D7-C Services Hub template runtime delivered to local runtime — next `CREATE_V9_06D7D_SERVICE_TEMPLATE_SOURCE_TASK` (operator review). Report: `WORDPRESS/reports/FP-0002-V9-06D7C-RUNTIME-DELIVERY-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

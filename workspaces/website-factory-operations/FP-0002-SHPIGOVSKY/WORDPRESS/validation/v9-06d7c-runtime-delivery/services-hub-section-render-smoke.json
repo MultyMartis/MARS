@@ -1,0 +1,82 @@
+{
+  "generated_at": "2026-07-04T18:31:58.847590Z",
+  "url": "http://shpigovsky.test/uslugi/",
+  "http_status": 200,
+  "checks": [
+    {
+      "section": "page-template orchestration",
+      "present": true,
+      "expected_if_empty": false,
+      "result": "PASS"
+    },
+    {
+      "section": "page-uslugi/root class",
+      "present": true,
+      "expected_if_empty": false,
+      "result": "PASS"
+    },
+    {
+      "section": "hero",
+      "present": true,
+      "expected_if_empty": false,
+      "result": "PASS"
+    },
+    {
+      "section": "service groups",
+      "present": true,
+      "expected_if_empty": false,
+      "result": "PASS"
+    },
+    {
+      "section": "parent service 73",
+      "present": true,
+      "expected_if_empty": false,
+      "result": "PASS"
+    },
+    {
+      "section": "parent service 77",
+      "present": true,
+      "expected_if_empty": false,
+      "result": "PASS"
+    },
+    {
+      "section": "parent service 84",
+      "present": true,
+      "expected_if_empty": false,
+      "result": "PASS"
+    },
+    {
+      "section": "child service cards",
+      "present": true,
+      "expected_if_empty": false,
+      "result": "PASS"
+    },
+    {
+      "section": "rehabilitation-program",
+      "present": true,
+      "expected_if_empty": false,
+      "result": "PASS"
+    },
+    {
+      "section": "FAQ or omitted if empty",
+      "present": false,
+      "expected_if_empty": true,
+      "result": "PASS_OMITTED"
+    },
+    {
+      "section": "final-form",
+      "present": true,
+      "expected_if_empty": false,
+      "result": "PASS"
+    },
+    {
+      "section": "deferred sections documented",
+      "present": true,
+      "expected_if_empty": "founder-quote, comfort, genotyping, category galleries deferred per D7-C scope",
+      "result": "PASS"
+    }
+  ],
+  "failures": [],
+  "core_wave_sections_visible": 10,
+  "result": "PASS"
+}

@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-07-04T18:32:01.042827Z",
+  "assets": [
+    {
+      "asset": "V9 CSS",
+      "url_or_path": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/css/v9-style.css?ver=1783184132",
+      "exists": true,
+      "http_status": 200,
+      "result": "PASS"
+    },
+    {
+      "asset": "V9 shell JS",
+      "url_or_path": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/js/v9-shell.js?ver=1783184146",
+      "exists": true,
+      "http_status": 200,
+      "result": "PASS"
+    },
+    {
+      "asset": "Logo SVG",
+      "url_or_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\assets\\img\\branding\\logo.svg",
+      "exists": true,
+      "http_status": null,
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS"
+}

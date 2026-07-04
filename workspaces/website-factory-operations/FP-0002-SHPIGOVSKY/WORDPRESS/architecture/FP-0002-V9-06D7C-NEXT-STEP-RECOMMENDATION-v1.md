@@ -2,15 +2,16 @@
 
 **Date:** 2026-07-05
 
-## Recommended next action
+D7-C Services Hub template runtime delivery **COMPLETE**. Core-wave sections (hero, CPT groups/cards, rehabilitation-program, final-form) live in local runtime with hash-verified theme copy. Deferred: founder-quote, comfort, genotyping hub, category galleries.
 
-**CREATE_V9_06D7C_RUNTIME_DELIVERY_TASK** — deliver D7-C Services Hub template source to local runtime theme only (bounded theme-files copy; PHP lint; hash match; route/section smoke; no DB/content/ACF writes).
+## Recommended next phase
 
-## Alternatives (not default)
+**CREATE_V9_06D7D_SERVICE_TEMPLATE_SOURCE_TASK** — implement individual service template blocks from V9 static reference in canonical theme source (source-only; separate runtime delivery authorization).
 
-- `CREATE_V9_06D7D_SERVICE_TEMPLATE_SOURCE_TASK` — after Services Hub runtime delivery accepted  
-- `CREATE_V9_06D7C_SOURCE_REPAIR_TASK` — only if operator rejects source integration  
+## V9-06D7-D gate
+
+READY FOR OPERATOR REVIEW (not authorized by this task).
 
 ## Result
 
-CREATE_V9_06D7C_RUNTIME_DELIVERY_TASK
+RECOMMENDED
