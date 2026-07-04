@@ -3,7 +3,7 @@
 **Status:** **documented** — canonical visibility snapshot.  
 **Version:** v1 (operational state stabilization).  
 **As-of discipline:** Re-verify with `git status` and lane charter on every session; this file is **not** live telemetry.  
-**Authority:** [AGENTS.md](../AGENTS.md) > [web-gpt-sources/mars-v2/](../web-gpt-sources/mars-v2/) > this file.  
+**Authority:** [AGENTS.md](../AGENTS.md) / [.cursorrules](../.cursorrules) > this file; CURRENT Web-GPT sync pack: [web-gpt-sources/mars-current-x-drive-2026-06/](../web-gpt-sources/mars-current-x-drive-2026-06/) (X-drive current pack; chat synchronization distillate — **not** source of repo truth; repo governance wins on conflict). Historical packs (`mars-v2/`, `mars-v2-final/`, `mars-v2-stable-baseline-2026-06*`, numbered legacy topics) are **legacy / investigation only**.  
 **Supersedes for SoT:** migration snapshot `web-gpt-sources/chat-migration/02-current-operational-state.md` (reference only).
 
 ---
@@ -58,7 +58,7 @@
 
 | Bucket | What exists |
 |--------|-------------|
-| **operational** | Primary loop: **task/envelope → prompt (Web-GPT) → execute (Cursor/Codex on repo) → REPORT → validation (human meaning)** per [execution-model.md](execution-model.md), [web-gpt-sources/mars-v2/02_MARS_v2_EXECUTION_MODEL.md](../web-gpt-sources/mars-v2/02_MARS_v2_EXECUTION_MODEL.md). HITL for approvals, security stops, delivery. |
+| **operational** | Primary loop: **task/envelope → prompt (Web-GPT) → execute (Cursor/Codex on repo) → REPORT → validation (human meaning)** per [execution-model.md](execution-model.md); Web-GPT packaging via [mars-current-x-drive-2026-06/](../web-gpt-sources/mars-current-x-drive-2026-06/) (CURRENT sync pack — chat distillate; AGENTS / .cursorrules win on conflict). HITL for approvals, security stops, delivery. |
 | **conceptual** | Task/workflow contracts under `workflows/`; execution phase vocabulary; task envelope standard. |
 | **future** | Durable MARS task store; in-repo dispatcher; daemon enforcing full chain. |
 | **excluded** | “MARS executes end-to-end without human initiation.” |
@@ -71,8 +71,8 @@
 
 | Bucket | What exists |
 |--------|-------------|
-| **operational** | Packaging context for Web-GPT; `mars-v2/` distillates for bootstrap and boundaries. |
-| **historical** | Numbered topic import (`01_system.md`, `02_architecture.md`, …) — **legacy imported** design input. |
+| **operational** | CURRENT Web-GPT sync pack: `web-gpt-sources/mars-current-x-drive-2026-06/` (X-drive current pack; chat synchronization distillate — **not** source of repo truth; repo governance / AGENTS / .cursorrules win on conflict). |
+| **historical** | `mars-v2/`, `mars-v2-final/`, `mars-v2-stable-baseline-2026-06*`, numbered topic import (`01_system.md`, `02_architecture.md`, …) — **legacy / investigation only**. |
 | **conceptual** | Terminology and architecture narrative inside packs — interpret via three-way split. |
 | **excluded** | Treating pack paths like `02-core/...` as live repo roots (see [13_migration.md](../web-gpt-sources/13_migration.md)). |
 
@@ -182,7 +182,7 @@
 |------|-------------|--------------|------------|--------|------------------------|
 | Governance docs | ✓ maintenance | — | ✓ contracts | auto-enforcement | fake runtime |
 | Execution loop | ✓ human+Cursor | — | ✓ workflows | dispatcher | autonomous E2E |
-| Source-pack | ✓ mars-v2 ops | — | ✓ narratives | — | legacy paths as live |
+| Source-pack | ✓ current X-drive pack | — | ✓ narratives | — | mars-v2 / legacy paths as live |
 | Website Factory | ✓ methodology | — | ✓ layers/bus | bridge wire | AI factory runtime |
 | mars-runtime | — | ✓ R1 only | ✓ contracts | full runtime | queues/daemons |
 | tools/ | ✓ manual helpers | ✓ pilots | ✓ contracts | tool host | enforcers |
