@@ -24,6 +24,12 @@
 
 - `research/` - SERP, local SERP, competitor intelligence, review analysis, and snapshot methodology.
 
+## Standards
+
+- `standards/` - ORCA normative standards (ORCA-RS-*).
+- `orca-standards-register-v1.md` - standards index.
+- **ORCA-RS-001** - Executive Research Publication Standard (ACTIVE).
+
 ## Semantic
 
 - `semantic/` - intent classification, clustering, geo modifiers, negative keywords, and semantic quality.

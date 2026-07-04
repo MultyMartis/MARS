@@ -84,7 +84,7 @@ flowchart TD
 | Search mode | SERP per intent tier, query groups, competitor search ads |
 | RSYA mode | Display creatives, placement context, visual offers |
 | Audits | PDF-ready summaries with evidence table |
-| Website Factory | Approved landing briefs — not raw screenshots alone |
+| Website Factory | Approved landing briefs — **ORCA-RS-001** Executive Research Package when research program completes — not raw screenshots alone |
 | Validation CLI | Structured entities — not screenshot folders |
 
 ## Integration with Intake
@@ -116,6 +116,7 @@ AI may **draft** observation summaries from captures — tag `ai-derived`, requi
 
 ## Related Documents
 
+- [ORCA-RS-001-EXECUTIVE-RESEARCH-PUBLICATION-STANDARD-v1.md](../standards/ORCA-RS-001-EXECUTIVE-RESEARCH-PUBLICATION-STANDARD-v1.md) — Executive Research Package publication gate
 - [orca-universal-intake-architecture-v0.md](../intake/orca-universal-intake-architecture-v0.md)
 - [evidence-classification-system-v0.md](../evidence/evidence-classification-system-v0.md)
 - [orca-campaign-mode-architecture-v0.md](../campaign-modes/orca-campaign-mode-architecture-v0.md)

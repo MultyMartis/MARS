@@ -76,6 +76,20 @@ Stop analysis when:
 - `ad-copy/` - ad message and CTA fit.
 - `campaign-qa-assembly/` - final human QA before platform work.
 
+## ORCA Standards (ORCA-RS)
+
+Research publication standards — **ORCA-owned**. Website Factory **consumes** outputs; Factory **does not** own these standards.
+
+| Doc | Role |
+|-----|------|
+| [orca-standards-register-v1.md](orca-standards-register-v1.md) | Standards index — ORCA-RS-* |
+| [standards/ORCA-RS-001-EXECUTIVE-RESEARCH-PUBLICATION-STANDARD-v1.md](standards/ORCA-RS-001-EXECUTIVE-RESEARCH-PUBLICATION-STANDARD-v1.md) | **ACTIVE** — Executive Research Package; Publication Gate; two-level research model |
+| [standards/README.md](standards/README.md) | Standards folder entry |
+
+**Reference implementation:** BZPM Market Intelligence — Executive Presentation Package v2.1 RU — `projects/website-factory/execution-cases/bzpm-market-intelligence/executive-report/`
+
+**Factory consumer lanes:** [../mars-website-factory/research-standards-v1.md](../mars-website-factory/research-standards-v1.md) · [../mars-website-factory/publication-standards-v1.md](../mars-website-factory/publication-standards-v1.md)
+
 ## ORCA Content Export Layer v0
 
 Landing **semantic** export (content packs → DOCX / Markdown → Website Factory). **Not** Commander `exporter-cli`. **Not** runtime.

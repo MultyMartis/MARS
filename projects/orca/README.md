@@ -57,6 +57,7 @@ Core documentation:
 - `workflows/` - documented workflows for research, semantics, generation, export, and QA.
 - `contracts/` - input and output contracts for handoffs between workflow steps.
 - `research/` - SERP, competitor, and review analysis methodology.
+- **ORCA-RS-001 — Executive Research Publication Standard** — two-level research model; mandatory Executive Research Package; Publication Gate — [standards/ORCA-RS-001-EXECUTIVE-RESEARCH-PUBLICATION-STANDARD-v1.md](standards/ORCA-RS-001-EXECUTIVE-RESEARCH-PUBLICATION-STANDARD-v1.md) · [orca-standards-register-v1.md](orca-standards-register-v1.md).
 - **PPC Semantic Intelligence — world practice research (2026-06)** — analytical source only; operator decisions D1–D7: [research/ppc-semantic-intelligence/world-practice-2026-06/README.md](research/ppc-semantic-intelligence/world-practice-2026-06/README.md).
 - **ORCA Semantic Intelligence Architecture v1** — target multi-stage architecture (SI-01–SI-17); ADR **APPROVED — IMPLEMENTATION NOT STARTED**; checkpoint `f17c270`: [architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-ADR-v1.md](architecture/semantic-intelligence/ORCA-SEMANTIC-INTELLIGENCE-ADR-v1.md).
 - **ORCA Semantic Intelligence Taxonomy & Schema v1 (P0-B)** — **APPROVED — IMPLEMENTATION NOT STARTED**; checkpoint `3151953`: [semantic-intelligence/README.md](semantic-intelligence/README.md).
@@ -94,7 +95,7 @@ No ORCA runtime, autonomous campaign manager, bidding automation, optimization e
 
 | System | Relationship |
 |--------|--------------|
-| **MIG** | Upstream acquisition lane. ORCA consumes **human-approved** market groundtruth handoffs; ORCA does not claim MIG acquisition ownership. |
-| **Website Factory** | Optional downstream implementation lane. ORCA can produce strategy/semantic handoff artifacts, but ORCA remains operable without Factory when source is an existing client site. |
+| **MIG** | Upstream acquisition lane. ORCA consumes **human-approved** market groundtruth handoffs; ORCA does not claim MIG acquisition ownership. ORCA owns research publication per **ORCA-RS-001**. |
+| **Website Factory** | Optional downstream implementation lane. ORCA produces research publications (ORCA-RS-001) and strategy/semantic handoff artifacts; Factory **consumes** ORCA research — Factory **does not** own Executive Research Publication. ORCA remains operable without Factory when source is an existing client site. |
 | **WPilot / OCPilot** | External implementation systems. No direct ORCA runtime ownership; relationships are boundary and handoff-oriented. |
 | **MARS governance / survivability** | ORCA consumes honesty, boundary, and safe-execution discipline; governance does not execute ORCA workflows. |
