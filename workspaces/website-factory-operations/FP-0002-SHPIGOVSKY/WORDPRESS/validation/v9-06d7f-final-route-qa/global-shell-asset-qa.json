@@ -1,0 +1,118 @@
+{
+  "generated_at": "2026-07-04T19:39:35.751393Z",
+  "routes": [
+    {
+      "route": "home",
+      "url": "http://shpigovsky.test/",
+      "header": true,
+      "footer": true,
+      "nav": true,
+      "offcanvas_trigger": true,
+      "modal": true,
+      "css_200": 200,
+      "js_200": 200,
+      "critical_missing": null,
+      "result": "PASS"
+    },
+    {
+      "route": "services_hub",
+      "url": "http://shpigovsky.test/uslugi/",
+      "header": true,
+      "footer": true,
+      "nav": true,
+      "offcanvas_trigger": true,
+      "modal": true,
+      "css_200": 200,
+      "js_200": 200,
+      "critical_missing": null,
+      "result": "PASS"
+    },
+    {
+      "route": "service_zavisimosti",
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/",
+      "header": true,
+      "footer": true,
+      "nav": true,
+      "offcanvas_trigger": true,
+      "modal": true,
+      "css_200": 200,
+      "js_200": 200,
+      "critical_missing": null,
+      "result": "PASS"
+    },
+    {
+      "route": "service_alkogol",
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "header": true,
+      "footer": true,
+      "nav": true,
+      "offcanvas_trigger": true,
+      "modal": true,
+      "css_200": 200,
+      "js_200": 200,
+      "critical_missing": null,
+      "result": "PASS"
+    },
+    {
+      "route": "service_psych",
+      "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/",
+      "header": true,
+      "footer": true,
+      "nav": true,
+      "offcanvas_trigger": true,
+      "modal": true,
+      "css_200": 200,
+      "js_200": 200,
+      "critical_missing": null,
+      "result": "PASS"
+    },
+    {
+      "route": "service_rpp",
+      "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "header": true,
+      "footer": true,
+      "nav": true,
+      "offcanvas_trigger": true,
+      "modal": true,
+      "css_200": 200,
+      "js_200": 200,
+      "critical_missing": null,
+      "result": "PASS"
+    },
+    {
+      "route": "contacts",
+      "url": "http://shpigovsky.test/kontakty/",
+      "header": true,
+      "footer": true,
+      "nav": true,
+      "offcanvas_trigger": true,
+      "modal": true,
+      "css_200": 200,
+      "js_200": 200,
+      "critical_missing": null,
+      "result": "PASS"
+    }
+  ],
+  "shared_assets": [
+    {
+      "asset": "V9 CSS",
+      "url": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/css/v9-style.css?ver=1783184132",
+      "http_status": 200,
+      "result": "PASS"
+    },
+    {
+      "asset": "V9 shell JS",
+      "url": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/js/v9-shell.js?ver=1783184146",
+      "http_status": 200,
+      "result": "PASS"
+    },
+    {
+      "asset": "Logo SVG",
+      "path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\assets\\img\\branding\\logo.svg",
+      "exists": true,
+      "result": "PASS"
+    }
+  ],
+  "all_routes_shell_pass": true,
+  "result": "PASS"
+}

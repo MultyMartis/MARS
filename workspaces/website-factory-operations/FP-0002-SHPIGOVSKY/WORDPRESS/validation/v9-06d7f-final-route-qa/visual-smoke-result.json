@@ -1,0 +1,112 @@
+{
+  "phase": "V9-06D7-F",
+  "timestamp": "2026-07-04T19:40:32.605Z",
+  "visible_layout": true,
+  "route_non_blank": true,
+  "header_footer_present": "VERIFIED_IN_DOM_SMOKE",
+  "no_catastrophic_overflow": "NOT_MEASURED_PIXEL_LEVEL",
+  "no_obvious_broken_global_asset": true,
+  "known_content_media_gaps_documented": true,
+  "pixel_perfect_claim": false,
+  "screenshots": [
+    {
+      "screenshot": "desktop-home-final-d7f.png",
+      "route": "/",
+      "viewport": "desktop",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "screenshot": "desktop-services-hub-final-d7f.png",
+      "route": "/uslugi/",
+      "viewport": "desktop",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "screenshot": "desktop-service-zavisimosti-final-d7f.png",
+      "route": "/uslugi/zavisimosti/",
+      "viewport": "desktop",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "screenshot": "desktop-service-alkogol-final-d7f.png",
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "viewport": "desktop",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "screenshot": "desktop-service-psych-final-d7f.png",
+      "route": "/uslugi/psihicheskoe-zdorovie/",
+      "viewport": "desktop",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "screenshot": "desktop-service-rpp-final-d7f.png",
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "viewport": "desktop",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "screenshot": "desktop-contacts-final-d7f.png",
+      "route": "/kontakty/",
+      "viewport": "desktop",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "screenshot": "mobile-home-final-d7f.png",
+      "route": "/",
+      "viewport": "mobile",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "screenshot": "mobile-services-hub-final-d7f.png",
+      "route": "/uslugi/",
+      "viewport": "mobile",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "screenshot": "mobile-service-zavisimosti-final-d7f.png",
+      "route": "/uslugi/zavisimosti/",
+      "viewport": "mobile",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "screenshot": "mobile-service-alkogol-final-d7f.png",
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "viewport": "mobile",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "screenshot": "mobile-service-psych-final-d7f.png",
+      "route": "/uslugi/psihicheskoe-zdorovie/",
+      "viewport": "mobile",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "screenshot": "mobile-service-rpp-final-d7f.png",
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "viewport": "mobile",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "screenshot": "mobile-contacts-final-d7f.png",
+      "route": "/kontakty/",
+      "viewport": "mobile",
+      "captured": true,
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS"
+}

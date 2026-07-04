@@ -1,0 +1,347 @@
+{
+  "generated_at": "2026-07-04T19:39:30.016487Z",
+  "templates": [
+    {
+      "template": "Home",
+      "route": "/",
+      "http_status": 200,
+      "required_markers": [
+        "site-main--front",
+        "hero--home",
+        "treatment-prevention",
+        "rehabilitation-program",
+        "final-form"
+      ],
+      "checks": [
+        {
+          "marker": "site-main--front",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        {
+          "marker": "hero--home",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        {
+          "marker": "treatment-prevention",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        {
+          "marker": "rehabilitation-program",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        {
+          "marker": "final-form",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        }
+      ],
+      "optional_omissions": [],
+      "result": "PASS"
+    },
+    {
+      "template": "Services Hub",
+      "route": "/uslugi/",
+      "http_status": 200,
+      "required_markers": [
+        "site-main--services-hub",
+        "hero--inner",
+        "service_groups",
+        "service_cards",
+        "rehabilitation-program",
+        "final-form"
+      ],
+      "checks": [
+        {
+          "marker": "site-main--services-hub",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        {
+          "marker": "hero--inner",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        {
+          "marker": "service_groups",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        {
+          "marker": "service_cards",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        {
+          "marker": "rehabilitation-program",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        {
+          "marker": "final-form",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        {
+          "marker": "faq",
+          "present": false,
+          "required": false,
+          "result": "PASS_OMITTED"
+        }
+      ],
+      "optional_omissions": [
+        "faq"
+      ],
+      "result": "PASS"
+    },
+    {
+      "template": "Service 73",
+      "route": "/uslugi/zavisimosti/",
+      "http_status": 200,
+      "required_markers": [
+        "hero",
+        "subnav",
+        "children",
+        "final-form"
+      ],
+      "checks": [
+        {
+          "marker": "hero",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        {
+          "marker": "subnav",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        {
+          "marker": "children",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        {
+          "marker": "programme",
+          "present": true,
+          "required": false,
+          "result": "PASS"
+        },
+        {
+          "marker": "final-form",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        }
+      ],
+      "optional_omissions": [],
+      "result": "PASS"
+    },
+    {
+      "template": "Service 74",
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "http_status": 200,
+      "required_markers": [
+        "hero",
+        "alcohol-special",
+        "final-form"
+      ],
+      "checks": [
+        {
+          "marker": "hero",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        {
+          "marker": "alcohol-special",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        {
+          "marker": "programme",
+          "present": true,
+          "required": false,
+          "result": "PASS"
+        },
+        {
+          "marker": "final-form",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        }
+      ],
+      "optional_omissions": [],
+      "result": "PASS"
+    },
+    {
+      "template": "Service 77",
+      "route": "/uslugi/psihicheskoe-zdorovie/",
+      "http_status": 200,
+      "required_markers": [
+        "hero",
+        "subnav",
+        "final-form"
+      ],
+      "checks": [
+        {
+          "marker": "hero",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        {
+          "marker": "subnav",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        {
+          "marker": "programme",
+          "present": true,
+          "required": false,
+          "result": "PASS"
+        },
+        {
+          "marker": "final-form",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        }
+      ],
+      "optional_omissions": [],
+      "result": "PASS"
+    },
+    {
+      "template": "Service 84",
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "http_status": 200,
+      "required_markers": [
+        "hero",
+        "subnav",
+        "final-form"
+      ],
+      "checks": [
+        {
+          "marker": "hero",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        {
+          "marker": "subnav",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        {
+          "marker": "programme",
+          "present": true,
+          "required": false,
+          "result": "PASS"
+        },
+        {
+          "marker": "final-form",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        }
+      ],
+      "optional_omissions": [],
+      "result": "PASS"
+    },
+    {
+      "template": "Contacts",
+      "route": "/kontakty/",
+      "http_status": 200,
+      "required_markers": [
+        "contacts_root",
+        "contacts_body",
+        "location_cards",
+        "rehabilitation_steps",
+        "cta_band",
+        "modal_only"
+      ],
+      "checks": [
+        {
+          "marker": "contacts_root",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        {
+          "marker": "contacts_body",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        {
+          "marker": "location_cards",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        {
+          "marker": "phone_row",
+          "present": true,
+          "required": false,
+          "result": "PASS"
+        },
+        {
+          "marker": "messengers_social",
+          "present": false,
+          "required": false,
+          "result": "PASS_OMITTED"
+        },
+        {
+          "marker": "map_figure",
+          "present": false,
+          "required": false,
+          "result": "PASS_OMITTED"
+        },
+        {
+          "marker": "rehabilitation_steps",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        {
+          "marker": "cta_band",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        {
+          "marker": "modal_only",
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        }
+      ],
+      "optional_omissions": [
+        "messengers_social",
+        "map_figure"
+      ],
+      "result": "PASS"
+    }
+  ],
+  "failures": [],
+  "result": "PASS"
+}

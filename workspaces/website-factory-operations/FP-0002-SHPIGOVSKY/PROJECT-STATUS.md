@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-05 (V9-06D7-E Contacts template runtime delivery PASS)
+**Last updated:** 2026-07-05 (V9-06D7-F Final Route QA PASS)
 
-**Current WordPress phase:** V9-06D7-E Contacts template runtime delivered to local runtime — next `CREATE_V9_06D7F_FINAL_ROUTE_QA_TASK` (operator review). Report: `WORDPRESS/reports/FP-0002-V9-06D7E-RUNTIME-DELIVERY-REPORT-v1.md`.
+**Current WordPress phase:** V9-06D7-F Final Route QA PASS (read-only) — D7 wave verified. Next `CREATE_V9_06D8_CONTENT_SEED_PLANNING_TASK`. Report: `WORDPRESS/reports/FP-0002-V9-06D7F-FINAL-ROUTE-QA-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

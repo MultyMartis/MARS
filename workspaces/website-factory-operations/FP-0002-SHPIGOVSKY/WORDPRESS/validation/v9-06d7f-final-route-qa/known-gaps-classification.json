@@ -1,0 +1,86 @@
+{
+  "generated_at": "2026-07-04T19:39:37.510329Z",
+  "gaps": [
+    {
+      "area": "Home",
+      "gap": "deferred V9 sections",
+      "classification": "EXPECTED_SHARED_BLOCK_GAP",
+      "blocking": false
+    },
+    {
+      "area": "Home",
+      "gap": "optional ACF-empty feature/gallery/articles/FAQ",
+      "classification": "EXPECTED_ACF_EMPTY_GAP",
+      "blocking": false
+    },
+    {
+      "area": "Services Hub",
+      "gap": "genotyping hub",
+      "classification": "EXPECTED_SHARED_BLOCK_GAP",
+      "blocking": false
+    },
+    {
+      "area": "Services Hub",
+      "gap": "category galleries",
+      "classification": "EXPECTED_MEDIA_GAP",
+      "blocking": false
+    },
+    {
+      "area": "Services Hub",
+      "gap": "hero image",
+      "classification": "EXPECTED_MEDIA_GAP",
+      "blocking": false
+    },
+    {
+      "area": "Services Hub",
+      "gap": "founder/comfort blocks",
+      "classification": "EXPECTED_SHARED_BLOCK_GAP",
+      "blocking": false
+    },
+    {
+      "area": "Service templates",
+      "gap": "nature, team-stats, landscape, specialists",
+      "classification": "EXPECTED_SHARED_BLOCK_GAP",
+      "blocking": false
+    },
+    {
+      "area": "Service templates",
+      "gap": "founder-quote, comfort, reviews, corridor, bordered-info",
+      "classification": "EXPECTED_SHARED_BLOCK_GAP",
+      "blocking": false
+    },
+    {
+      "area": "Service templates",
+      "gap": "full production content richness",
+      "classification": "EXPECTED_CONTENT_GAP",
+      "blocking": false
+    },
+    {
+      "area": "Contacts",
+      "gap": "map PNG assets",
+      "classification": "EXPECTED_MEDIA_GAP",
+      "blocking": false
+    },
+    {
+      "area": "Contacts",
+      "gap": "rehabilitation interior photo",
+      "classification": "EXPECTED_MEDIA_GAP",
+      "blocking": false
+    },
+    {
+      "area": "Contacts",
+      "gap": "unseeded messenger/site options",
+      "classification": "EXPECTED_ACF_EMPTY_GAP",
+      "blocking": false
+    },
+    {
+      "area": "Contacts",
+      "gap": "no live endpoint",
+      "classification": "EXPECTED_CONTENT_GAP",
+      "blocking": false
+    }
+  ],
+  "has_defects": false,
+  "has_blockers": false,
+  "result": "EXPECTED_ONLY"
+}

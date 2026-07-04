@@ -47,6 +47,10 @@ WORDPRESS/acf-json/          fp-0002-acf-json-foundation-*     wp-content/acf-js
 
 Foundation baseline scanned at capture; no secrets detected in theme/plugin source files.
 
+## V9-06D7-F final route QA (2026-07-05)
+
+Read-only QA PASS after D7-A–D7-E runtime deliveries. Evidence: `validation/v9-06d7f-final-route-qa/`. No runtime/source/DB mutations. Recommended next: D8 content seed planning.
+
 ## V9 implementation
 
 V9 frontend HTML/CSS/JS integration is **NOT INCLUDED** in V9-06C. V9 frontend remains under `workspaces/fp-0002-shpigovsky-v9/`.
