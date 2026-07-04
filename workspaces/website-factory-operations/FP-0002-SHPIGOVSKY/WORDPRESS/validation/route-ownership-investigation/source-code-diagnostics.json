@@ -1,0 +1,90 @@
+{
+  "phase": "ROUTE-OWNERSHIP-INVESTIGATION",
+  "timestamp": "2026-07-04T18:45:00+07:00",
+  "sources_inspected": {
+    "git_plugin": "WORDPRESS/plugins/shpigovsky-core/",
+    "git_theme": "WORDPRESS/theme/shpigovsky/",
+    "runtime_plugin": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\shpigovsky-core\\",
+    "runtime_theme": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\"
+  },
+  "service_cpt_registration": {
+    "file": "plugins/shpigovsky-core/src/ContentTypes/Service.php",
+    "post_type": "service",
+    "hierarchical": true,
+    "has_archive": false,
+    "rewrite": {
+      "slug": "uslugi",
+      "with_front": false,
+      "hierarchical": true,
+      "pages": true
+    },
+    "query_var": "service",
+    "supports_page_attributes": true
+  },
+  "service_permalink_filter": {
+    "file": "plugins/shpigovsky-core/src/Permalinks/ServicePermalinks.php",
+    "hook": "post_type_link",
+    "behavior": "Walks post_parent chain and builds /uslugi/{parent}/{child}/ for depth-2",
+    "service_74_output_correct": true
+  },
+  "rewrite_rule_generation": {
+    "file": "plugins/shpigovsky-core/src/Permalinks/ServicePermalinks.php",
+    "method": "register_rewrite_rules",
+    "priority": "init:20",
+    "rules": [
+      {
+        "pattern": "^uslugi/([^/]+)/([^/]+)/?$",
+        "query": "index.php?post_type=service&service=$matches[2]",
+        "position": "top",
+        "issue": "Maps leaf slug only; hierarchical CPT resolution requires parent/child path"
+      },
+      {
+        "pattern": "^uslugi/([^/]+)/?$",
+        "query": "index.php?post_type=service&service=$matches[1]",
+        "position": "top",
+        "issue": "OK for depth-1 root services where leaf equals full hierarchy path"
+      }
+    ],
+    "native_cpt_rule_shadowed": {
+      "pattern": "uslugi/(.+?)(?:/([0-9]+))?/?$",
+      "query": "index.php?service=$matches[1]&page=$matches[2]",
+      "note": "Native hierarchical rule would pass full path in service query var, but custom top depth-2 rule matches first with leaf-only mapping"
+    }
+  },
+  "request_resolver": {
+    "custom_request_filter": false,
+    "custom_parse_request": false,
+    "custom_pre_get_posts": false,
+    "note": "No bounded request resolver exists; resolution relies entirely on rewrite query vars + core hierarchical CPT lookup"
+  },
+  "template_loader": {
+    "single_service_template_git": "theme/shpigovsky/single-service.php",
+    "single_service_template_runtime": true,
+    "custom_template_include": false,
+    "contributes_to_404": false,
+    "note": "Template loader runs only after successful query; Service 74 never reaches template selection"
+  },
+  "canonical_redirect": {
+    "hook": "redirect_canonical",
+    "file": "plugins/shpigovsky-core/src/Permalinks/ServicePermalinks.php",
+    "behavior": "Prevents collapse of nested service paths when already singular service",
+    "contributes_to_404": false,
+    "note": "Filter only applies when is_singular(service); Service 74 never becomes singular"
+  },
+  "depth2_support": {
+    "permalink_generation": "SUPPORTED",
+    "rewrite_pattern_present": true,
+    "rewrite_query_mapping": "INCORRECT_LEAF_ONLY",
+    "hierarchical_lookup_requires": "parent/child path in service query var",
+    "verdict": "DEPTH2_REWRITE_QUERY_MISMATCH"
+  },
+  "page_cpt_collision_expectation": {
+    "page_owns_exact_uslugi": true,
+    "cpt_owns_uslugi_subpaths": true,
+    "page_6_service_73_shared_generated_path": true,
+    "page_6_blocks_service_74": false,
+    "note": "Shared generated path Page 6 / Service 73 is a secondary ownership debt; not the direct Service 74 404 mechanism"
+  },
+  "mutations": 0,
+  "result": "PASS"
+}

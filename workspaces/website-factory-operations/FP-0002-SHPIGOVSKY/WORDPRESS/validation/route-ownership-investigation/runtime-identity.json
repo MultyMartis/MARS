@@ -1,0 +1,76 @@
+{
+    "phase": "ROUTE-OWNERSHIP-INVESTIGATION",
+    "timestamp": "2026-07-04T11:41:25+00:00",
+    "runtime": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\",
+    "domain": "http://shpigovsky.test/",
+    "theme": "shpigovsky",
+    "theme_version": "0.2.0-skeleton",
+    "shpigovsky_core_active": true,
+    "active_plugins": [
+        "acf-extended-pro/acf-extended.php",
+        "advanced-custom-fields-pro/acf.php",
+        "metacode-wpilot/metacode-wpilot.php",
+        "shpigovsky-core/shpigovsky-core.php"
+    ],
+    "core_mode": "content_model",
+    "service_cpt_registered": true,
+    "service_cpt_hierarchical": true,
+    "service_cpt_has_archive": false,
+    "service_cpt_rewrite": {
+        "slug": "uslugi",
+        "with_front": false,
+        "hierarchical": true,
+        "pages": true,
+        "feeds": false,
+        "ep_mask": 1
+    },
+    "pages_total": 23,
+    "services_total": 15,
+    "posts_total": 1,
+    "menus_count": 3,
+    "menus": [
+        {
+            "term_id": 3,
+            "name": "Footer",
+            "slug": "footer",
+            "count": 3
+        },
+        {
+            "term_id": 4,
+            "name": "Legal",
+            "slug": "legal",
+            "count": 5
+        },
+        {
+            "term_id": 2,
+            "name": "Primary",
+            "slug": "primary",
+            "count": 7
+        }
+    ],
+    "acf_pro_active": true,
+    "acf_groups_count": 13,
+    "acf_group_keys": [
+        "group_fp02_blog_post_article_meta",
+        "group_fp02_page_contacts",
+        "group_fp02_page_home",
+        "group_fp02_page_institutional",
+        "group_fp02_page_legal",
+        "group_fp02_page_reviews",
+        "group_fp02_page_services_hub",
+        "group_fp02_service_faq",
+        "group_fp02_service_layout_hero",
+        "group_fp02_service_relationships",
+        "group_fp02_service_structured_sections",
+        "group_fp02_site_options_contacts",
+        "group_fp02_site_options_modal_cta"
+    ],
+    "options_pages": [
+        "fp02-site-settings"
+    ],
+    "wpilot_active": true,
+    "wpilot_write_enabled": false,
+    "frontend_http": 200,
+    "wp_admin_http": 302,
+    "result": "PASS"
+}

@@ -44,7 +44,7 @@ Operator WV6: PENDING
 Direct local domain: PASS (FP-0002 — FW-06A.1)
 Synthetic source: TRACKED (Git whitelist)
 Agent registration: REGISTERED (AG-WP-001 — SYNTHETIC READ-ONLY CAPABILITY ONLY; NOT PRODUCTION READY)
-Client pilot: FP-0002 REWRITE-FLUSH-MICRO-GATE PARTIAL PASS (FLUSH_NOT_SUFFICIENT); soft rewrite flush done; Service 74 still HTTP 404; route ownership investigation next; full content migration / V9 integration not performed
+Client pilot: FP-0002 ROUTE-OWNERSHIP-INVESTIGATION PASS; root cause POST_TYPE_LINK_REWRITE_MISMATCH; Service 74 STILL_404; rewrite rule repair next; V9-06D.5 BLOCKED; full content migration / V9 integration not performed
 ```
 
 | Field | Value |

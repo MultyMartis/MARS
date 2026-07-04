@@ -1,0 +1,178 @@
+{
+    "phase": "ROUTE-OWNERSHIP-INVESTIGATION",
+    "timestamp": "2026-07-04T11:41:36+00:00",
+    "db_prefix": "fp02_",
+    "object_rows": [
+        {
+            "ID": "5",
+            "post_type": "page",
+            "post_status": "publish",
+            "post_title": "Услуги",
+            "post_name": "uslugi",
+            "post_parent": "0",
+            "post_modified_gmt": "2026-07-02 15:53:38"
+        },
+        {
+            "ID": "6",
+            "post_type": "page",
+            "post_status": "publish",
+            "post_title": "Зависимости",
+            "post_name": "zavisimosti",
+            "post_parent": "5",
+            "post_modified_gmt": "2026-07-02 15:53:38"
+        },
+        {
+            "ID": "73",
+            "post_type": "service",
+            "post_status": "publish",
+            "post_title": "Зависимости",
+            "post_name": "zavisimosti",
+            "post_parent": "0",
+            "post_modified_gmt": "2026-07-03 21:04:34"
+        },
+        {
+            "ID": "74",
+            "post_type": "service",
+            "post_status": "publish",
+            "post_title": "Лечение алкогольной зависимости",
+            "post_name": "lechenie-alkogolnoy-zavisimosti",
+            "post_parent": "73",
+            "post_modified_gmt": "2026-07-03 21:04:34"
+        },
+        {
+            "ID": "77",
+            "post_type": "service",
+            "post_status": "publish",
+            "post_title": "Психическое здоровье",
+            "post_name": "psihicheskoe-zdorovie",
+            "post_parent": "0",
+            "post_modified_gmt": "2026-07-03 21:04:34"
+        },
+        {
+            "ID": "84",
+            "post_type": "service",
+            "post_status": "publish",
+            "post_title": "Расстройства пищевого поведения",
+            "post_name": "rasstroystva-pischevogo-povedeniya",
+            "post_parent": "0",
+            "post_modified_gmt": "2026-07-03 21:04:34"
+        }
+    ],
+    "slug_matches": [
+        {
+            "ID": "74",
+            "post_type": "service",
+            "post_status": "publish",
+            "post_title": "Лечение алкогольной зависимости",
+            "post_name": "lechenie-alkogolnoy-zavisimosti",
+            "post_parent": "73"
+        },
+        {
+            "ID": "7",
+            "post_type": "page",
+            "post_status": "publish",
+            "post_title": "Психическое здоровье",
+            "post_name": "psihicheskoe-zdorovie",
+            "post_parent": "5"
+        },
+        {
+            "ID": "77",
+            "post_type": "service",
+            "post_status": "publish",
+            "post_title": "Психическое здоровье",
+            "post_name": "psihicheskoe-zdorovie",
+            "post_parent": "0"
+        },
+        {
+            "ID": "8",
+            "post_type": "page",
+            "post_status": "publish",
+            "post_title": "Расстройства пищевого поведения",
+            "post_name": "rasstroystva-pischevogo-povedeniya",
+            "post_parent": "5"
+        },
+        {
+            "ID": "84",
+            "post_type": "service",
+            "post_status": "publish",
+            "post_title": "Расстройства пищевого поведения",
+            "post_name": "rasstroystva-pischevogo-povedeniya",
+            "post_parent": "0"
+        },
+        {
+            "ID": "5",
+            "post_type": "page",
+            "post_status": "publish",
+            "post_title": "Услуги",
+            "post_name": "uslugi",
+            "post_parent": "0"
+        },
+        {
+            "ID": "6",
+            "post_type": "page",
+            "post_status": "publish",
+            "post_title": "Зависимости",
+            "post_name": "zavisimosti",
+            "post_parent": "5"
+        },
+        {
+            "ID": "73",
+            "post_type": "service",
+            "post_status": "publish",
+            "post_title": "Зависимости",
+            "post_name": "zavisimosti",
+            "post_parent": "0"
+        }
+    ],
+    "relevant_postmeta": {
+        "5": {
+            "registry_id": "",
+            "migration_status": "minimal_seed",
+            "seeded_by_phase": "V9-06D.4",
+            "skeleton_status": "",
+            "service_layout_variant": ""
+        },
+        "6": {
+            "registry_id": "",
+            "migration_status": "",
+            "seeded_by_phase": "",
+            "skeleton_status": "",
+            "service_layout_variant": ""
+        },
+        "73": {
+            "registry_id": "SVC-ZAVISIMOSTI",
+            "migration_status": "minimal_seed",
+            "seeded_by_phase": "V9-06D.4",
+            "skeleton_status": "MINIMAL_SEED",
+            "service_layout_variant": "subdivision"
+        },
+        "74": {
+            "registry_id": "SVC-ALKOGOL",
+            "migration_status": "minimal_seed",
+            "seeded_by_phase": "V9-06D.4",
+            "skeleton_status": "MINIMAL_SEED",
+            "service_layout_variant": "alcohol_special"
+        },
+        "77": {
+            "registry_id": "SVC-PSYCH",
+            "migration_status": "minimal_seed",
+            "seeded_by_phase": "V9-06D.4",
+            "skeleton_status": "MINIMAL_SEED",
+            "service_layout_variant": "subdivision"
+        },
+        "84": {
+            "registry_id": "SVC-RPP",
+            "migration_status": "minimal_seed",
+            "seeded_by_phase": "V9-06D.4",
+            "skeleton_status": "MINIMAL_SEED",
+            "service_layout_variant": "subdivision"
+        }
+    },
+    "rewrite_rules_option": {
+        "count": 108,
+        "hash": "bf3926c71b7b134708fa052f782c911dcc931dd61b1964a49b034d5b546c3a12",
+        "full_dump": false
+    },
+    "mutations": 0,
+    "result": "PASS"
+}

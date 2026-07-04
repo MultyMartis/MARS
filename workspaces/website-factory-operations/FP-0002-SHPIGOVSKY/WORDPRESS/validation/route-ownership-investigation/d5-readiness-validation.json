@@ -1,0 +1,11 @@
+{
+  "phase": "ROUTE-OWNERSHIP-INVESTIGATION",
+  "timestamp": "2026-07-04T18:45:00+07:00",
+  "decision": "D5_BLOCKED_ROUTE_REPAIR_REQUIRED",
+  "service_74_http": 404,
+  "service_74_blocks_visual_qa": true,
+  "exclusion_allowed": false,
+  "reason": "Service ID 74 is an authorized D.4/D.5 visual route QA target (alcohol leaf service). HTTP 404 remains after rewrite flush. Root cause identified but repair not applied in this diagnostics-only task.",
+  "v9_06d5_authorized": false,
+  "result": "BLOCKED"
+}

@@ -1,0 +1,40 @@
+{
+    "phase": "ROUTE-OWNERSHIP-INVESTIGATION",
+    "timestamp": "2026-07-04T11:43:14+00:00",
+    "main_query_probes": [
+        {
+            "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+            "request": "uslugi/rasstroystva-pischevogo-povedeniya",
+            "matched_rule": "^uslugi/([^/]+)/?$",
+            "matched_query": "post_type=service&service=rasstroystva-pischevogo-povedeniya",
+            "query_vars": {
+                "post_type": "service",
+                "service": "rasstroystva-pischevogo-povedeniya",
+                "name": "rasstroystva-pischevogo-povedeniya"
+            },
+            "is_404": false,
+            "is_page": false,
+            "is_single": true,
+            "is_singular": true,
+            "is_singular_service": true,
+            "queried_object_id": 84,
+            "queried_object_post_type": "service",
+            "queried_object_title": "Расстройства пищевого поведения",
+            "lookups": {
+                "service_leaf": 84,
+                "service_full_hierarchy": 84,
+                "page_full_path": 8
+            },
+            "template_candidate": "single-service.php",
+            "template_exists": true
+        }
+    ],
+    "repair_simulation": {
+        "current_rewrite_query_var": "lechenie-alkogolnoy-zavisimosti",
+        "current_lookup_id": null,
+        "repaired_rewrite_query_var": "zavisimosti/lechenie-alkogolnoy-zavisimosti",
+        "repaired_lookup_id": 74,
+        "repair_would_resolve_service_74": true
+    },
+    "native_cpt_rule_note": "Native hierarchical CPT rule uslugi/(.+?)(?:/([0-9]+))?/?$ maps service=$matches[1] (full path). Custom top rule ^uslugi/([^/]+)/([^/]+)/?$ maps service=$matches[2] (leaf only) and shadows the native rule."
+}

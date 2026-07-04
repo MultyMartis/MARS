@@ -1,0 +1,52 @@
+{
+  "phase": "ROUTE-OWNERSHIP-INVESTIGATION",
+  "timestamp": "2026-07-04T18:45:00+07:00",
+  "path": "/uslugi/zavisimosti/",
+  "page_id_6": {
+    "exists": true,
+    "status": "publish",
+    "title": "Зависимости",
+    "slug": "zavisimosti",
+    "parent": 5,
+    "parent_path": "/uslugi/",
+    "generated_path": "/uslugi/zavisimosti/",
+    "http_status": 200,
+    "intended_legacy_source_page": true,
+    "get_page_by_path_page_full": 6
+  },
+  "service_id_73": {
+    "exists": true,
+    "status": "publish",
+    "title": "Зависимости",
+    "slug": "zavisimosti",
+    "parent": 0,
+    "generated_path": "/uslugi/zavisimosti/",
+    "http_status": 200,
+    "get_page_by_path_service": 73
+  },
+  "current_resolver": {
+    "matched_rule": "^uslugi/([^/]+)/?$",
+    "matched_query": "index.php?post_type=service&service=$matches[1]",
+    "query_vars": {
+      "post_type": "service",
+      "service": "zavisimosti"
+    },
+    "service_lookup_id": 73,
+    "page_lookup_id": 6,
+    "http_status": 200,
+    "classification": "service_cpt_depth1_top_rule_wins",
+    "note": "Custom top depth-1 service rule maps service=zavisimosti and resolves Service 73. Page 6 remains published with the same generated path but is not selected by the winning rewrite rule."
+  },
+  "effect_on_service_74": {
+    "direct_cause_of_404": false,
+    "parent_service_73_object_valid": true,
+    "parent_service_73_resolves_at_depth1": true,
+    "explanation": "Page ID 6 / Service ID 73 share generated path /uslugi/zavisimosti/. Depth-1 service rewrite resolves Service 73 via leaf slug zavisimosti at root. Service 74 404 is caused by depth-2 rewrite mapping leaf-only service query var (lechenie-alkogolnoy-zavisimosti) instead of full hierarchy path (zavisimosti/lechenie-alkogolnoy-zavisimosti)."
+  },
+  "blocking_for_d5": {
+    "page_service_collision": false,
+    "service_74_404": true,
+    "primary_blocker": "SERVICE_74_DEPTH2_REWRITE_QUERY_MISMATCH"
+  },
+  "result": "CONFIRMED"
+}

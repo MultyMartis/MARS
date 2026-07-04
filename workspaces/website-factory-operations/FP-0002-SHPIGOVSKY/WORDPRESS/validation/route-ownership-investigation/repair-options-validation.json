@@ -1,0 +1,48 @@
+{
+  "phase": "ROUTE-OWNERSHIP-INVESTIGATION",
+  "timestamp": "2026-07-04T18:45:00+07:00",
+  "options_documented": true,
+  "options_applied": false,
+  "options": [
+    {
+      "id": 1,
+      "name": "Source resolver repair",
+      "layer": "request resolver",
+      "recommended": false,
+      "reason_not_primary": "Works but heavier than correcting rewrite query mapping; contract prefers rewrite + post_type_link model"
+    },
+    {
+      "id": 2,
+      "name": "Rewrite rule repair",
+      "layer": "rewrite rules",
+      "recommended": true,
+      "exact_change": "Change depth-2 rule query from service=$matches[2] to service=$matches[1]/$matches[2]; update contract; deliver source; soft flush",
+      "runtime_writes_later": "rewrite_rules option only (authorized soft flush)",
+      "source_changes_later": true
+    },
+    {
+      "id": 3,
+      "name": "Path ownership cleanup",
+      "layer": "path ownership policy / migration object cleanup",
+      "recommended": false,
+      "reason_not_primary": "Required later for Page 6 / Service 73 debt; does not fix Service 74 leaf-only rewrite mapping"
+    },
+    {
+      "id": 4,
+      "name": "Change service parent/path model",
+      "layer": "object model",
+      "recommended": false,
+      "rejected": true
+    },
+    {
+      "id": 5,
+      "name": "Redirect workaround",
+      "layer": "redirect/canonical",
+      "recommended": false,
+      "rejected": true
+    }
+  ],
+  "recommended_option_id": 2,
+  "recommended_next_action": "CREATE_REWRITE_RULE_REPAIR_MICRO_TASK",
+  "result": "PASS"
+}

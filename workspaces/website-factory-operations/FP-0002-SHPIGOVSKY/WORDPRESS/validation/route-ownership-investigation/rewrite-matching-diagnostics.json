@@ -1,0 +1,236 @@
+{
+    "phase": "ROUTE-OWNERSHIP-INVESTIGATION",
+    "timestamp": "2026-07-04T11:41:33+00:00",
+    "rewrite_rules_count": 108,
+    "rewrite_rules_hash": "bf3926c71b7b134708fa052f782c911dcc931dd61b1964a49b034d5b546c3a12",
+    "relevant_rules_count": 13,
+    "relevant_rules": [
+        {
+            "pattern": "^uslugi/([^/]+)/([^/]+)/?$",
+            "query": "index.php?post_type=service&service=$matches[2]"
+        },
+        {
+            "pattern": "^uslugi/([^/]+)/?$",
+            "query": "index.php?post_type=service&service=$matches[1]"
+        },
+        {
+            "pattern": "uslugi/.+?/attachment/([^/]+)/?$",
+            "query": "index.php?attachment=$matches[1]"
+        },
+        {
+            "pattern": "uslugi/.+?/attachment/([^/]+)/trackback/?$",
+            "query": "index.php?attachment=$matches[1]&tb=1"
+        },
+        {
+            "pattern": "uslugi/.+?/attachment/([^/]+)/feed/(feed|rdf|rss|rss2|atom)/?$",
+            "query": "index.php?attachment=$matches[1]&feed=$matches[2]"
+        },
+        {
+            "pattern": "uslugi/.+?/attachment/([^/]+)/(feed|rdf|rss|rss2|atom)/?$",
+            "query": "index.php?attachment=$matches[1]&feed=$matches[2]"
+        },
+        {
+            "pattern": "uslugi/.+?/attachment/([^/]+)/comment-page-([0-9]{1,})/?$",
+            "query": "index.php?attachment=$matches[1]&cpage=$matches[2]"
+        },
+        {
+            "pattern": "uslugi/.+?/attachment/([^/]+)/embed/?$",
+            "query": "index.php?attachment=$matches[1]&embed=true"
+        },
+        {
+            "pattern": "uslugi/(.+?)/embed/?$",
+            "query": "index.php?service=$matches[1]&embed=true"
+        },
+        {
+            "pattern": "uslugi/(.+?)/trackback/?$",
+            "query": "index.php?service=$matches[1]&tb=1"
+        },
+        {
+            "pattern": "uslugi/(.+?)/page/?([0-9]{1,})/?$",
+            "query": "index.php?service=$matches[1]&paged=$matches[2]"
+        },
+        {
+            "pattern": "uslugi/(.+?)/comment-page-([0-9]{1,})/?$",
+            "query": "index.php?service=$matches[1]&cpage=$matches[2]"
+        },
+        {
+            "pattern": "uslugi/(.+?)(?:/([0-9]+))?/?$",
+            "query": "index.php?service=$matches[1]&page=$matches[2]"
+        }
+    ],
+    "depth2_rule": {
+        "pattern": "^uslugi/([^/]+)/([^/]+)/?$",
+        "query": "index.php?post_type=service&service=$matches[2]"
+    },
+    "depth1_rule": {
+        "pattern": "^uslugi/([^/]+)/?$",
+        "query": "index.php?post_type=service&service=$matches[1]"
+    },
+    "service_74_url": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+    "service_74_expected_rule": "uslugi/([^/]+)/([^/]+)/?$",
+    "service_74_actual": {
+        "path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+        "http": {
+            "http_status": 404,
+            "title": "Страница не найдена — Шпиговский — локальная разработка",
+            "redirect_url": null,
+            "curl_error": null
+        },
+        "matched_rule": "^uslugi/([^/]+)/([^/]+)/?$",
+        "matched_query": "index.php?post_type=service&service=$matches[2]",
+        "query_vars_from_rewrite": {
+            "post_type": "service",
+            "service": "lechenie-alkogolnoy-zavisimosti"
+        },
+        "wp_query_resolution": {
+            "is_404": false,
+            "is_page": false,
+            "is_single": false,
+            "is_singular": false,
+            "queried_object_id": null,
+            "queried_object_post_type": null,
+            "found_posts": 0,
+            "post_count": 0,
+            "query_vars_used": {
+                "post_type": "service",
+                "service": "lechenie-alkogolnoy-zavisimosti"
+            }
+        },
+        "alternate_full_path_resolution": {
+            "query_vars": {
+                "post_type": "service",
+                "service": "zavisimosti/lechenie-alkogolnoy-zavisimosti",
+                "name": ""
+            },
+            "is_404": false,
+            "queried_object_id": null,
+            "queried_object_post_type": null,
+            "found_posts": 1,
+            "note": "Simulated repair: service query var uses full parent/child path"
+        },
+        "get_page_by_path_service_using_rewrite_var": null,
+        "get_page_by_path_service_full_hierarchy": 74,
+        "get_page_by_path_page": null,
+        "template_candidate": null,
+        "request_classification": "404"
+    },
+    "control_urls": {
+        "/uslugi/zavisimosti/": {
+            "path": "/uslugi/zavisimosti/",
+            "http": {
+                "http_status": 200,
+                "title": "Зависимости — Шпиговский — локальная разработка",
+                "redirect_url": null,
+                "curl_error": null
+            },
+            "matched_rule": "^uslugi/([^/]+)/?$",
+            "matched_query": "index.php?post_type=service&service=$matches[1]",
+            "query_vars_from_rewrite": {
+                "post_type": "service",
+                "service": "zavisimosti"
+            },
+            "wp_query_resolution": {
+                "is_404": false,
+                "is_page": false,
+                "is_single": false,
+                "is_singular": false,
+                "queried_object_id": null,
+                "queried_object_post_type": null,
+                "found_posts": 1,
+                "post_count": 1,
+                "query_vars_used": {
+                    "post_type": "service",
+                    "service": "zavisimosti"
+                }
+            },
+            "alternate_full_path_resolution": null,
+            "get_page_by_path_service_using_rewrite_var": 73,
+            "get_page_by_path_service_full_hierarchy": 73,
+            "get_page_by_path_page": 6,
+            "template_candidate": null,
+            "request_classification": "unknown"
+        },
+        "/uslugi/psihicheskoe-zdorovie/": {
+            "path": "/uslugi/psihicheskoe-zdorovie/",
+            "http": {
+                "http_status": 200,
+                "title": "Психическое здоровье — Шпиговский — локальная разработка",
+                "redirect_url": null,
+                "curl_error": null
+            },
+            "matched_rule": "^uslugi/([^/]+)/?$",
+            "matched_query": "index.php?post_type=service&service=$matches[1]",
+            "query_vars_from_rewrite": {
+                "post_type": "service",
+                "service": "psihicheskoe-zdorovie"
+            },
+            "wp_query_resolution": {
+                "is_404": false,
+                "is_page": false,
+                "is_single": false,
+                "is_singular": false,
+                "queried_object_id": null,
+                "queried_object_post_type": null,
+                "found_posts": 1,
+                "post_count": 1,
+                "query_vars_used": {
+                    "post_type": "service",
+                    "service": "psihicheskoe-zdorovie"
+                }
+            },
+            "alternate_full_path_resolution": null,
+            "get_page_by_path_service_using_rewrite_var": 77,
+            "get_page_by_path_service_full_hierarchy": 77,
+            "get_page_by_path_page": 7,
+            "template_candidate": null,
+            "request_classification": "unknown"
+        },
+        "/uslugi/rasstroystva-pischevogo-povedeniya/": {
+            "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+            "http": {
+                "http_status": 200,
+                "title": "Расстройства пищевого поведения — Шпиговский — локальная разработка",
+                "redirect_url": null,
+                "curl_error": null
+            },
+            "matched_rule": "^uslugi/([^/]+)/?$",
+            "matched_query": "index.php?post_type=service&service=$matches[1]",
+            "query_vars_from_rewrite": {
+                "post_type": "service",
+                "service": "rasstroystva-pischevogo-povedeniya"
+            },
+            "wp_query_resolution": {
+                "is_404": false,
+                "is_page": false,
+                "is_single": false,
+                "is_singular": false,
+                "queried_object_id": null,
+                "queried_object_post_type": null,
+                "found_posts": 1,
+                "post_count": 1,
+                "query_vars_used": {
+                    "post_type": "service",
+                    "service": "rasstroystva-pischevogo-povedeniya"
+                }
+            },
+            "alternate_full_path_resolution": null,
+            "get_page_by_path_service_using_rewrite_var": 84,
+            "get_page_by_path_service_full_hierarchy": 84,
+            "get_page_by_path_page": 8,
+            "template_candidate": null,
+            "request_classification": "unknown"
+        }
+    },
+    "analysis": {
+        "depth2_rule_present": true,
+        "depth2_query_uses_leaf_only": true,
+        "depth2_query_uses_full_path": false,
+        "leaf_only_lookup_id": null,
+        "full_path_lookup_id": 74,
+        "wp_query_with_rewrite_vars_object_id": null,
+        "wp_query_with_full_path_object_id": null,
+        "conclusion": "Depth-2 rewrite rule maps service=$matches[2] (leaf only). Hierarchical CPT resolution via get_page_by_path requires parent/child path. Leaf-only lookup fails for Service 74 (post_parent=73). Full path zavisimosti/lechenie-alkogolnoy-zavisimosti resolves Service 74.",
+        "primary_cause": "POST_TYPE_LINK_REWRITE_MISMATCH"
+    },
+    "result": "PASS"
+}

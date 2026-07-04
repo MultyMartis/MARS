@@ -1,6 +1,6 @@
 # FP-0002 V9 Operational Status
 
-**Current:** REWRITE-FLUSH-MICRO-GATE COMPLETE (PARTIAL PASS — FLUSH_NOT_SUFFICIENT)
+**Current:** ROUTE-OWNERSHIP-INVESTIGATION COMPLETE (PASS — Service 74 STILL_404)
 
 - V9 static frontend: operator-approved stable
 - WordPress content model: active in local runtime
@@ -9,8 +9,11 @@
 - Full content migration: NOT PERFORMED
 - V9 integration: NOT STARTED
 - Rewrite flush: PERFORMED (soft; `.htaccess` unchanged)
-- Service 74: STILL HTTP 404 with correct generated permalink (`FLUSH_NOT_SUFFICIENT`)
-- Next: route ownership / path conflict investigation, then V9-06D.5 visual route QA
+- Service 74: STILL HTTP 404 with correct generated permalink
+- Root cause: `POST_TYPE_LINK_REWRITE_MISMATCH` (depth-2 rewrite leaf-only `service` query var)
+- Page 6 / Service 73 path collision: CONFIRMED (secondary)
+- V9-06D.5: BLOCKED
+- Next: rewrite rule repair micro-task, then V9-06D.5 visual route QA
 
 # FP-0002 V9 Operational Status
 

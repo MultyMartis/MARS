@@ -1,0 +1,35 @@
+{
+  "phase": "ROUTE-OWNERSHIP-INVESTIGATION",
+  "timestamp": "2026-07-04T18:45:00+07:00",
+  "primary_cause": "B. POST_TYPE_LINK_REWRITE_MISMATCH",
+  "primary_cause_code": "POST_TYPE_LINK_REWRITE_MISMATCH",
+  "secondary_causes": [
+    "A. PAGE_SERVICE_PATH_COLLISION"
+  ],
+  "rejected_primary_causes": {
+    "A. PAGE_SERVICE_PATH_COLLISION": "Confirmed secondary ownership debt only; parent path HTTP 200 and Service 73 lookup succeeds",
+    "C. HIERARCHICAL_CPT_DEPTH2_RULE_MISSING": "Depth-2 pattern is present after flush; query mapping is wrong, not missing",
+    "D. PARENT_SERVICE_NOT_RESOLVED_AS_CPT": "Service 73 resolves at depth-1; parent object state valid",
+    "E. TEMPLATE_LOADER_404_AFTER_QUERY": "Query never finds Service 74; template not reached",
+    "F. REDIRECT_CANONICAL_OR_CANONICALIZATION": "No redirect observed; HTTP 404 direct",
+    "G. OBJECT_STATE_OR_PARENT_INVALID": "Service 74 publish, parent 73 publish, hierarchy intact",
+    "H. UNKNOWN_NEEDS_DEEPER_DIAGNOSTIC": "Mechanism identified"
+  },
+  "failing_url": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+  "service_id": 74,
+  "evidence": [
+    "post_type_link generates correct /uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+    "Depth-2 rewrite rule matches: ^uslugi/([^/]+)/([^/]+)/?$",
+    "Matched query sets service=lechenie-alkogolnoy-zavisimosti (leaf only)",
+    "get_page_by_path(leaf, service) = null",
+    "get_page_by_path(zavisimosti/lechenie-alkogolnoy-zavisimosti, service) = 74",
+    "WP_Query with leaf service var: found_posts=0",
+    "WP_Query with full-path service var: found_posts=1",
+    "HTTP 404 with title Страница не найдена",
+    "Controls depth-1 Services 77/84 HTTP 200 because leaf equals full hierarchy path"
+  ],
+  "why_permalink_correct_but_http_404": "Permalink generation (post_type_link filter) walks post_parent and emits full path. Request resolution uses custom rewrite that only injects the leaf slug into the hierarchical service query var. Core hierarchical CPT lookup requires the full parent/child path, so the object is not found and WordPress returns 404.",
+  "why_controls_work": "Services 77 and 84 are root-level (post_parent=0). Depth-1 rule sets service={slug}, which equals their full hierarchy path, so get_page_by_path succeeds.",
+  "repair_layer": "rewrite rules (source ServicePermalinks::register_rewrite_rules query mapping) + subsequent authorized soft rewrite flush; contract doc correction; optional later path-ownership cleanup for Page 6",
+  "result": "IDENTIFIED"
+}

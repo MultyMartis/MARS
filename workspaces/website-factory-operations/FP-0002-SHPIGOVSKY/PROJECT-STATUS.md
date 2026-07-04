@@ -557,3 +557,7 @@ PARTIAL PASS: minimal ACF/meta seed applied to Pages 4/5/20 and Services 73/74/7
 ## 2026-07-04 — REWRITE-FLUSH-MICRO-GATE
 
 PARTIAL PASS: soft rewrite flush performed under DB checkpoint; `rewrite_rules` updated; `.htaccess` unchanged; content/ACF/menus/redirects/objects unchanged. Service 74 still HTTP 404 with matching generated permalink → FLUSH_NOT_SUFFICIENT. Next: route ownership / path conflict investigation.
+
+## 2026-07-04 — ROUTE-OWNERSHIP-INVESTIGATION
+
+PASS: read-only diagnostics. Primary cause POST_TYPE_LINK_REWRITE_MISMATCH (depth-2 rewrite maps leaf-only service query var; hierarchical lookup needs parent/child). Page 6 / Service 73 shared path CONFIRMED (secondary). Service 74 STILL_404. Runtime mutations 0. Next: CREATE_REWRITE_RULE_REPAIR_MICRO_TASK. V9-06D.5 BLOCKED.
