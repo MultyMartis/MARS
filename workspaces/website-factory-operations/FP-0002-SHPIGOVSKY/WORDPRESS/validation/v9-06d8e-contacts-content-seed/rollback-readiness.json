@@ -1,0 +1,37 @@
+{
+    "phase": "V9-06D8-E",
+    "generated_at": "2026-07-04T21:14:49+00:00",
+    "checkpoint_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d8e-contacts-content-seed-pre-20260704-211441",
+    "changed_contacts_fields": [
+        {
+            "page_id": 20,
+            "field": "contacts_form_intro",
+            "old_value": "Минимальное наполнение для визуальной проверки маршрута. Полная миграция контента выполняется отдельной фазой.",
+            "rollback": "update_field('contacts_form_intro', baseline_value, 20)"
+        },
+        {
+            "page_id": 20,
+            "field": "contacts_address",
+            "old_value": "Москва и Московская область",
+            "rollback": "update_field('contacts_address', baseline_value, 20)"
+        },
+        {
+            "page_id": 20,
+            "field": "contacts_blocks",
+            "old_value": null,
+            "rollback": "update_field('contacts_blocks', baseline_value, 20)"
+        }
+    ],
+    "old_values_captured": true,
+    "d8a_options_snapshot": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d8e-contacts-content-seed-pre-20260704-211441/d8a-site-options-snapshot-readonly.json",
+    "per_field_rollback": "contacts-page-20-pre-values.json + update_field per allowlisted field",
+    "full_db_rollback": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d8e-contacts-content-seed-pre-20260704-211441/mars_wp_fp0002.sql",
+    "rollback_tested": false,
+    "rollback_not_executed_reason": "Seed succeeded; rollback not required",
+    "post_rollback_validation_plan": [
+        "Seven route smoke",
+        "Contacts intro/blocks verification",
+        "Home/hub/service/options unchanged"
+    ],
+    "result": "PASS"
+}

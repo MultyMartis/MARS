@@ -1,0 +1,49 @@
+{
+    "phase": "V9-06D8-E",
+    "generated_at": "2026-07-04T21:14:49+00:00",
+    "areas": [
+        {
+            "area": "Contacts page edit screen",
+            "visible": true,
+            "clarity": "Контакты",
+            "issue": "English group title Page — Contacts",
+            "result": "PASS"
+        },
+        {
+            "area": "contacts_form_intro textarea",
+            "visible": true,
+            "clarity": "Seeded V9 intro — recognizable hero copy",
+            "issue": "Label \"Form intro\" misleading — field drives page intro not form endpoint",
+            "result": "PARTIAL"
+        },
+        {
+            "area": "contacts_blocks repeater",
+            "visible": true,
+            "clarity": "Two location rows with title/text — editable for MVP",
+            "issue": "Simplified card mode vs V9 multi-row details — acceptable MVP",
+            "result": "PARTIAL"
+        },
+        {
+            "area": "contacts_address textarea",
+            "visible": true,
+            "clarity": "Moscow consulting address for location-two fallback",
+            "issue": "Overlap with contacts_blocks row 2 — document for Olga",
+            "result": "PARTIAL"
+        },
+        {
+            "area": "contacts_phones / messengers / map_url",
+            "visible": true,
+            "clarity": "Empty — operator data deferred",
+            "issue": "Prefer Site Options for phones; messengers/map need operator URLs",
+            "result": "PARTIAL"
+        },
+        {
+            "area": "Site Options overlap",
+            "visible": true,
+            "clarity": "Phone/email/hours still driven by Настройки сайта",
+            "issue": "Olga should edit global contact chrome in Options not duplicate phones here",
+            "result": "PASS"
+        }
+    ],
+    "result": "PARTIAL"
+}

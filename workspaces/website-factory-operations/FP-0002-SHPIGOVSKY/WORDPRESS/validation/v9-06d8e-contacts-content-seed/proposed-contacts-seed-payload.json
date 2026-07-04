@@ -1,0 +1,86 @@
+{
+    "phase": "V9-06D8-E",
+    "generated_at": "2026-07-04T21:14:41+00:00",
+    "target_page_id": 20,
+    "entries": [
+        {
+            "page_id": 20,
+            "field": "contacts_address",
+            "old_state": "populated",
+            "proposed_value_state": "set",
+            "proposed_value_preview": "Москва, ул. Ленина, 3",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "STATIC_V9_CONTENT",
+            "write": true,
+            "rollback_value": "Москва и Московская область",
+            "skip_reason": ""
+        },
+        {
+            "page_id": 20,
+            "field": "contacts_map_url",
+            "old_state": "empty",
+            "proposed_value_state": "unchanged",
+            "proposed_value_preview": "unchanged/skip",
+            "source": "OPERATOR_SUPPLIED_REQUIRED",
+            "classification": "SKIP_OPERATOR_SUPPLIED_REQUIRED",
+            "write": false,
+            "rollback_value": null,
+            "skip_reason": "SKIP_OPERATOR_SUPPLIED_REQUIRED"
+        },
+        {
+            "page_id": 20,
+            "field": "contacts_phones",
+            "old_state": "populated",
+            "proposed_value_state": "unchanged",
+            "proposed_value_preview": "unchanged/skip",
+            "source": "D8A_SITE_OPTIONS_READONLY",
+            "classification": "SKIP_DO_NOT_SEED",
+            "write": false,
+            "rollback_value": [
+                {
+                    "label": "Телефон",
+                    "phone": "8 (925) 183-64-64"
+                }
+            ],
+            "skip_reason": "SKIP_DO_NOT_SEED"
+        },
+        {
+            "page_id": 20,
+            "field": "contacts_messengers",
+            "old_state": "empty",
+            "proposed_value_state": "unchanged",
+            "proposed_value_preview": "unchanged/skip",
+            "source": "OPERATOR_SUPPLIED_REQUIRED",
+            "classification": "SKIP_OPERATOR_SUPPLIED_REQUIRED",
+            "write": false,
+            "rollback_value": null,
+            "skip_reason": "SKIP_OPERATOR_SUPPLIED_REQUIRED"
+        },
+        {
+            "page_id": 20,
+            "field": "contacts_blocks",
+            "old_state": "empty",
+            "proposed_value_state": "set",
+            "proposed_value_preview": "repeater[2 rows]",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "STATIC_V9_CONTENT",
+            "write": true,
+            "rollback_value": null,
+            "skip_reason": ""
+        },
+        {
+            "page_id": 20,
+            "field": "contacts_form_intro",
+            "old_state": "populated",
+            "proposed_value_state": "set",
+            "proposed_value_preview": "Ведем прием и консультируем в Москве и Московской области. Для нас не существует",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "STATIC_V9_CONTENT",
+            "write": true,
+            "rollback_value": "Минимальное наполнение для визуальной проверки маршрута. Полная миграция контента выполняется отдельной фазой.",
+            "skip_reason": ""
+        }
+    ],
+    "writable_field_operations": 3,
+    "result": "PASS"
+}

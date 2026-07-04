@@ -1,0 +1,94 @@
+{
+    "phase": "V9-06D8-E",
+    "generated_at": "2026-07-04T21:14:42+00:00",
+    "page_id": 20,
+    "fields": [
+        {
+            "field": "contacts_address",
+            "expected_state": "seeded",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "field": "contacts_map_url",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "field": "contacts_phones",
+            "expected_state": "unchanged",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "field": "contacts_messengers",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "field": "contacts_blocks",
+            "expected_state": "seeded",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "field": "contacts_form_intro",
+            "expected_state": "seeded",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        }
+    ],
+    "sections": [
+        {
+            "section": "D7-E page shell",
+            "expected": "page-kontakty + site-main--contacts",
+            "actual": "visible",
+            "result": "PASS"
+        },
+        {
+            "section": "intro copy",
+            "expected": "contacts-body__intro with seeded intro",
+            "actual": "visible",
+            "result": "PASS"
+        },
+        {
+            "section": "location cards",
+            "expected": "contacts-location cards from contacts_blocks",
+            "actual": "visible",
+            "result": "PASS"
+        },
+        {
+            "section": "phone row",
+            "expected": "D8-A phone_primary via template",
+            "actual": "visible",
+            "result": "PASS"
+        },
+        {
+            "section": "rehabilitation steps",
+            "expected": "contacts-rehabilitation-steps static block",
+            "actual": "visible",
+            "result": "PASS"
+        },
+        {
+            "section": "map embed",
+            "expected": "omitted — no map URL",
+            "actual": "omitted",
+            "result": "PASS"
+        },
+        {
+            "section": "messengers",
+            "expected": "omitted when no operator URLs",
+            "actual": "omitted",
+            "result": "PASS"
+        }
+    ],
+    "result": "PASS"
+}

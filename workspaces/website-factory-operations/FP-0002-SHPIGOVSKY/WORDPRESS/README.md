@@ -2,8 +2,8 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D8-D SERVICES HUB CONTENT SEED COMPLETE — 2 hub ACF writes on page #5; route smoke ALL_200
-**Classification:** CONTENT MODEL RUNTIME DELIVERED — D8-A OPTIONS SEEDED — D8-B HOME ACF SEEDED — D8-C SERVICES ACF SEEDED — D8-D HUB ACF SEEDED — D8-E CONTACTS SEED READY FOR OPERATOR REVIEW
+**Status:** V9-06D8-E CONTACTS CONTENT SEED COMPLETE — 3 contacts ACF writes on page #20; route smoke ALL_200
+**Classification:** CONTENT MODEL RUNTIME DELIVERED — D8-A OPTIONS SEEDED — D8-B HOME ACF SEEDED — D8-C SERVICES ACF SEEDED — D8-D HUB ACF SEEDED — D8-E CONTACTS ACF SEEDED — D8-G POST-SEED QA READY FOR OPERATOR REVIEW
 
 ---
 
@@ -210,3 +210,7 @@ Planning-only: MVP gap map, ACF/options inventory, Olga admin UX plan, seed wave
 ## V9-06D8-D services hub content seed (2026-07-05)
 
 D8-D Services Hub page #5 ACF only: `services_hub_intro` (V9 heroLead) and `services_hub_faq_items` (5 FAQ rows, LOCAL_MVP_PLACEHOLDER). Developer-only query/placeholder fields unchanged. DB checkpoint `v9-06d8d-services-hub-content-seed-pre-20260704-210430`. Route smoke ALL_200. Hub visual smoke PASS. No runtime/source/home/service/contacts/options writes. Evidence: `validation/v9-06d8d-services-hub-content-seed/`. Report: `reports/FP-0002-V9-06D8D-SERVICES-HUB-CONTENT-SEED-REPORT-v1.md`. Next: D8-E contacts content seed (operator review).
+
+## V9-06D8-E contacts content seed (2026-07-05)
+
+D8-E Contacts page #20 ACF only: `contacts_form_intro` (V9 intro), `contacts_address` (V9 Moscow consulting address), `contacts_blocks` (2 V9 location rows). Map/messengers/phones skipped (operator URLs or D8-A options canonical). DB checkpoint `v9-06d8e-contacts-content-seed-pre-20260704-211441`. Route smoke ALL_200. Contacts visual smoke PASS. No runtime/source/home/hub/service/options writes. Evidence: `validation/v9-06d8e-contacts-content-seed/`. Report: `reports/FP-0002-V9-06D8E-CONTACTS-CONTENT-SEED-REPORT-v1.md`. Next: D8-G post-seed QA (operator review).

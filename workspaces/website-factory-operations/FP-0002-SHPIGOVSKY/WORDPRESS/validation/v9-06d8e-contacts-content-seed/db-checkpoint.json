@@ -1,0 +1,19 @@
+{
+    "phase": "V9-06D8-E",
+    "generated_at": "2026-07-04T21:14:41+00:00",
+    "checkpoint_name": "v9-06d8e-contacts-content-seed-pre-20260704-211441",
+    "checkpoint_root": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d8e-contacts-content-seed-pre-20260704-211441",
+    "db_dump": "PASS",
+    "db_dump_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d8e-contacts-content-seed-pre-20260704-211441/mars_wp_fp0002.sql",
+    "contacts_pre_values_captured": true,
+    "contacts_pre_values_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d8e-contacts-content-seed-pre-20260704-211441/contacts-page-20-pre-values.json",
+    "d8a_options_snapshot": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d8e-contacts-content-seed-pre-20260704-211441/d8a-site-options-snapshot-readonly.json",
+    "object_counts_captured": true,
+    "restore_instructions": {
+        "full": "mysql -u root mars_wp_fp0002 < X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d8e-contacts-content-seed-pre-20260704-211441/mars_wp_fp0002.sql",
+        "field": "Restore individual fields from contacts-page-20-pre-values.json via update_field per allowlisted field on page 20"
+    },
+    "secrets_copied": false,
+    "api_keys_copied": false,
+    "result": "PASS"
+}

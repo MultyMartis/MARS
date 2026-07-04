@@ -1,0 +1,65 @@
+{
+    "phase": "V9-06D8-E",
+    "generated_at": "2026-07-04T21:14:41+00:00",
+    "target_page_id": 20,
+    "fields": [
+        {
+            "page_id": 20,
+            "field": "contacts_form_intro",
+            "old_state": "populated",
+            "new_state": "set",
+            "operation": "update",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "STATIC_V9_CONTENT",
+            "rollback_available": true,
+            "rollback_value": "Минимальное наполнение для визуальной проверки маршрута. Полная миграция контента выполняется отдельной фазой.",
+            "risk": "LOW",
+            "result": "OK"
+        },
+        {
+            "page_id": 20,
+            "field": "contacts_address",
+            "old_state": "populated",
+            "new_state": "set",
+            "operation": "update",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "STATIC_V9_CONTENT",
+            "rollback_available": true,
+            "rollback_value": "Москва и Московская область",
+            "risk": "LOW",
+            "result": "OK"
+        },
+        {
+            "page_id": 20,
+            "field": "contacts_blocks",
+            "old_state": "empty",
+            "new_state": "set",
+            "operation": "create",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "STATIC_V9_CONTENT",
+            "rollback_available": true,
+            "rollback_value": null,
+            "risk": "LOW",
+            "result": "OK"
+        }
+    ],
+    "skipped_fields": [
+        {
+            "field": "contacts_map_url",
+            "reason": "SKIP_OPERATOR_SUPPLIED_REQUIRED",
+            "operation": "skip"
+        },
+        {
+            "field": "contacts_phones",
+            "reason": "SKIP_DO_NOT_SEED",
+            "operation": "skip"
+        },
+        {
+            "field": "contacts_messengers",
+            "reason": "SKIP_OPERATOR_SUPPLIED_REQUIRED",
+            "operation": "skip"
+        }
+    ],
+    "verdict": "SAFE_TO_APPLY_EXACT_CONTACTS_ACF_ALLOWLIST",
+    "result": "PASS"
+}

@@ -1,0 +1,108 @@
+{
+    "phase": "V9-06D8-E",
+    "generated_at": "2026-07-04T21:14:41+00:00",
+    "sections": [
+        {
+            "section": "contacts hero/intro",
+            "v9_ref": "contacts-map-body.html contacts-body__intro",
+            "d8a_option": "",
+            "target_fields": [
+                "contacts_form_intro"
+            ],
+            "seed_decision": "WRITE",
+            "reason": "Page intro field; improves Olga editability vs template fallback"
+        },
+        {
+            "section": "phone row",
+            "v9_ref": "contacts-map-body.html tel link",
+            "d8a_option": "phone_primary",
+            "target_fields": [
+                "contacts_phones"
+            ],
+            "seed_decision": "SKIP",
+            "reason": "Canonical phone in D8-A Site Options; template fallback OK"
+        },
+        {
+            "section": "messengers/social",
+            "v9_ref": "contacts-map-body.html href=\"#\" placeholders",
+            "d8a_option": "social_links",
+            "target_fields": [
+                "contacts_messengers"
+            ],
+            "seed_decision": "SKIP",
+            "reason": "OPERATOR_SUPPLIED_REQUIRED — no real URLs"
+        },
+        {
+            "section": "location card MO",
+            "v9_ref": "contacts-map-body.html location 1",
+            "d8a_option": "site_address (chrome short form)",
+            "target_fields": [
+                "contacts_blocks[0]"
+            ],
+            "seed_decision": "WRITE",
+            "reason": "V9 full MO address in contacts_blocks row 1 text"
+        },
+        {
+            "section": "location card Moscow",
+            "v9_ref": "contacts-map-body.html location 2",
+            "d8a_option": "",
+            "target_fields": [
+                "contacts_address",
+                "contacts_blocks[1]"
+            ],
+            "seed_decision": "WRITE",
+            "reason": "V9 Moscow consulting address"
+        },
+        {
+            "section": "opening hours/email rows",
+            "v9_ref": "contacts-map-body.html detail rows",
+            "d8a_option": "opening_hours, site_email",
+            "target_fields": [],
+            "seed_decision": "SKIP",
+            "reason": "Template reads D8-A options + static fallback"
+        },
+        {
+            "section": "map block",
+            "v9_ref": "contacts-map-body.html static PNG",
+            "d8a_option": "map_link",
+            "target_fields": [
+                "contacts_map_url"
+            ],
+            "seed_decision": "SKIP",
+            "reason": "No operator map URL; static theme assets only"
+        },
+        {
+            "section": "rehabilitation steps",
+            "v9_ref": "contacts-rehabilitation-steps.html",
+            "d8a_option": "",
+            "target_fields": [],
+            "seed_decision": "SKIP",
+            "reason": "STATIC_FALLBACK_ALREADY_IN_TEMPLATE — no page ACF fields"
+        },
+        {
+            "section": "CTA band",
+            "v9_ref": "program-cta-band.html + D8-A options",
+            "d8a_option": "default_button_label, phone_primary",
+            "target_fields": [],
+            "seed_decision": "SKIP",
+            "reason": "Template helper + site options"
+        },
+        {
+            "section": "form/callback static text",
+            "v9_ref": "global-consultation-modal.html",
+            "d8a_option": "default_callback_title",
+            "target_fields": [],
+            "seed_decision": "SKIP",
+            "reason": "Modal-only; no live endpoint"
+        },
+        {
+            "section": "map/photo media",
+            "v9_ref": "contacts-map PNG + rehabilitation interior PNG",
+            "d8a_option": "",
+            "target_fields": [],
+            "seed_decision": "SKIP",
+            "reason": "MEDIA_REQUIRED — theme static assets until upload authorized"
+        }
+    ],
+    "result": "PASS"
+}
