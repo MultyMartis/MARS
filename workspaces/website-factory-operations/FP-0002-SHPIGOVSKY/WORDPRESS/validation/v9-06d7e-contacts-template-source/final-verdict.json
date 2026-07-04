@@ -1,0 +1,25 @@
+{
+  "task": "V9-06D7-E",
+  "phase": "CONTACTS_TEMPLATE_SOURCE",
+  "generated_at": "2026-07-05T02:30:00+07:00",
+  "preflight_head": "0672ed2b03ce58a5a35b3a969d9c68f5280b835b",
+  "verdict": "PASS",
+  "contacts_template_source": "COMPLETE",
+  "theme_source_changes": "COMPLETE",
+  "contacts_section_integration": "COMPLETE",
+  "acf_fallback_binding": "COMPLETE",
+  "runtime_delivery": "NOT_PERFORMED",
+  "runtime_mutations": 0,
+  "db_writes": 0,
+  "source_validation": "PASS",
+  "recommended_next_phase": "CREATE_V9_06D7E_RUNTIME_DELIVERY_TASK",
+  "runtime_delivery_gate": "READY FOR OPERATOR REVIEW",
+  "notes": [
+    "V9 contacts-map-body and contacts-rehabilitation-steps integrated into theme template-parts",
+    "ACF page fields and site options wired with guarded read helpers",
+    "Map PNG assets and rehabilitation photo deferred until content migration media package",
+    "Map iframe only when allowlisted embed URL present",
+    "D7-A/D7-B/D7-C/D7-D source preserved",
+    "Breadcrumb partial remains skeleton boundary per D7-A"
+  ]
+}

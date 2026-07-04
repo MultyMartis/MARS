@@ -1,0 +1,58 @@
+{
+  "task": "V9-06D7-E",
+  "generated_at": "2026-07-05T02:30:00+07:00",
+  "sections": [
+    {
+      "id": "breadcrumbs-wrapper",
+      "v9_source": "kontakty.html",
+      "wp_template_part": "page-templates/contacts.php",
+      "data_source": "POST_FIELD",
+      "fallback": "skeleton breadcrumbs partial",
+      "implemented": true,
+      "deferred_reason": "derived trail V9-07+"
+    },
+    {
+      "id": "contacts-body",
+      "v9_source": "contacts-map-body.html",
+      "wp_template_part": "template-parts/contacts/map-body.php",
+      "data_source": ["ACF_CONTACTS_FIELD", "SITE_OPTION", "POST_FIELD"],
+      "fallback": "STATIC_FROM_V9",
+      "implemented": true
+    },
+    {
+      "id": "location-card",
+      "v9_source": "contacts-map-body.html",
+      "wp_template_part": "template-parts/contacts/location-card.php",
+      "data_source": ["ACF_CONTACTS_FIELD", "SITE_OPTION"],
+      "fallback": "STATIC_FROM_V9",
+      "implemented": true,
+      "deferred_reason": "map PNG media package"
+    },
+    {
+      "id": "rehabilitation-steps",
+      "v9_source": "contacts-rehabilitation-steps.html",
+      "wp_template_part": "template-parts/contacts/rehabilitation-steps.php",
+      "data_source": "STATIC_FROM_V9",
+      "fallback": "SAFE_STATIC_FALLBACK",
+      "implemented": true
+    },
+    {
+      "id": "cta-band",
+      "v9_source": "program-cta-band.html",
+      "wp_template_part": "template-parts/components/program-cta-band.php",
+      "data_source": ["ACF_CONTACTS_FIELD", "SITE_OPTION"],
+      "fallback": "STATIC_FROM_V9",
+      "implemented": true
+    },
+    {
+      "id": "photo-bleed",
+      "v9_source": "contacts-rehabilitation-steps.html",
+      "wp_template_part": null,
+      "data_source": "DEFER_CONTENT_MIGRATION",
+      "fallback": "OMIT_IF_EMPTY",
+      "implemented": false,
+      "deferred_reason": "contacts-rehabilitation-interior.png not in theme assets"
+    }
+  ],
+  "result": "PASS"
+}

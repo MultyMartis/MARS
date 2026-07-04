@@ -1,0 +1,41 @@
+{
+  "task": "V9-06D7-E",
+  "generated_at": "2026-07-05T02:30:00+07:00",
+  "scanned_files": [
+    "theme/shpigovsky/inc/contacts-helpers.php",
+    "theme/shpigovsky/functions.php",
+    "theme/shpigovsky/page-templates/contacts.php",
+    "theme/shpigovsky/template-parts/contacts/map-body.php",
+    "theme/shpigovsky/template-parts/contacts/rehabilitation-steps.php",
+    "theme/shpigovsky/template-parts/contacts/location-card.php"
+  ],
+  "forbidden_patterns": [
+    "update_option",
+    "add_option",
+    "delete_option",
+    "wp_insert_post",
+    "wp_update_post",
+    "wp_delete_post",
+    "update_post_meta",
+    "delete_post_meta",
+    "add_post_meta",
+    "acf_update",
+    "acfe",
+    "flush_rewrite_rules",
+    "wp_remote_",
+    "curl_",
+    "file_put_contents",
+    "unlink",
+    "rmdir",
+    "mkdir",
+    "token",
+    "password",
+    "secret",
+    "license",
+    "api_key",
+    "apikey",
+    "bearer"
+  ],
+  "hits": [],
+  "result": "PASS"
+}

@@ -1,0 +1,55 @@
+{
+  "task": "V9-06D7-E",
+  "generated_at": "2026-07-05T02:30:00+07:00",
+  "v9_source_files": [
+    "workspaces/fp-0002-shpigovsky-v9/src/pages/kontakty.html",
+    "workspaces/fp-0002-shpigovsky-v9/src/partials/sections/contacts-map-body.html",
+    "workspaces/fp-0002-shpigovsky-v9/src/partials/sections/contacts-rehabilitation-steps.html"
+  ],
+  "v9_dist_files": [
+    "workspaces/fp-0002-shpigovsky-v9/dist/kontakty/index.html (read-only; cursorignore boundary)"
+  ],
+  "section_order": [
+    "contacts-page__breadcrumbs",
+    "contacts-map-body (contacts-body)",
+    "contacts-rehabilitation-steps"
+  ],
+  "contacts_map_body": {
+    "classes": ["contacts-body", "contacts-body__container", "contacts-body__heading", "contacts-body__intro", "contacts-body__phone-row", "contacts-body__phone", "contacts-body__messengers", "contacts-location"],
+    "h1": "contacts-body__heading",
+    "intro": "contacts-body__intro block-whith-red-line",
+    "phone_row": "contacts-body__phone-row with tel link and messenger icons",
+    "location_cards": 2,
+    "location_fields_per_card": ["title", "address", "hours", "email", "map_image"],
+    "map_type": "static PNG images (not iframe in V9 source)"
+  },
+  "contacts_rehabilitation_steps": {
+    "classes": ["contacts-rehabilitation-steps", "home-rehabilitation-requirements__steps", "program-cta-band", "home-rehabilitation-requirements__support"],
+    "steps_count": 4,
+    "cta_component": "program-cta-band via partial include",
+    "support_list": 4,
+    "photo_bleed": "contacts-rehabilitation-interior.png"
+  },
+  "assets_referenced": [
+    "assets/img/social/telegram.svg",
+    "assets/img/social/whatsapp.svg",
+    "assets/img/social/max.svg",
+    "assets/img/content/contacts/contacts-map-mo-region.png",
+    "assets/img/content/contacts/contacts-map-moscow.png",
+    "assets/img/content/contacts/contacts-rehabilitation-interior.png"
+  ],
+  "js_dependencies": ["main.js", "inputmask deferred", "swiper", "fancybox"],
+  "shared_dependencies": [
+    "program-cta-band component",
+    "home-rehabilitation-requirements step classes",
+    "global consultation modal (header/footer shell)"
+  ],
+  "deferred_items": [
+    "contacts map PNG assets until media content migration package",
+    "contacts rehabilitation interior photo until media migration",
+    "live contact form endpoint",
+    "production messenger URLs when options unseeded",
+    "breadcrumb derived trail (V9-07+)"
+  ],
+  "result": "PASS"
+}

@@ -1,0 +1,46 @@
+{
+  "task": "V9-06D7-E",
+  "generated_at": "2026-07-05T02:30:00+07:00",
+  "checks": [
+    {
+      "section": "all contacts helpers",
+      "acf_unavailable": "function_exists get_field guard returns empty arrays/strings",
+      "empty_fields": "optional blocks omitted or static V9 fallback where authorized",
+      "result": "PASS"
+    },
+    {
+      "section": "phone row",
+      "acf_unavailable": "falls back to phone_primary site option",
+      "empty_fields": "phone row omitted when no display phone",
+      "result": "PASS"
+    },
+    {
+      "section": "messengers",
+      "acf_unavailable": "falls back to social_links site option rows",
+      "empty_fields": "messengers block omitted",
+      "result": "PASS"
+    },
+    {
+      "section": "location email",
+      "acf_unavailable": "site_email read skipped safely",
+      "empty_fields": "email detail row omitted",
+      "result": "PASS"
+    },
+    {
+      "section": "map embed",
+      "acf_unavailable": "no iframe rendered",
+      "empty_fields": "map figure omitted",
+      "allowlist": "yandex/google map hosts only",
+      "result": "PASS"
+    },
+    {
+      "section": "CTA band",
+      "acf_unavailable": "static V9 titles; modal trigger only",
+      "empty_fields": "program-cta-band partial returns early if title and button empty",
+      "result": "PASS"
+    }
+  ],
+  "raw_field_keys_exposed": false,
+  "write_functions_used": false,
+  "result": "PASS"
+}

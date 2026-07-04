@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'SHPIGOVSKY_THEME_VERSION', '0.6.0-d7d-service-templates' );
+define( 'SHPIGOVSKY_THEME_VERSION', '0.7.0-d7e-contacts-template' );
 define( 'SHPIGOVSKY_THEME_DIR', get_template_directory() );
 define( 'SHPIGOVSKY_THEME_URI', get_template_directory_uri() );
 define( 'SHPIGOVSKY_THEME_SKELETON', false );
@@ -23,3 +23,4 @@ require_once SHPIGOVSKY_THEME_DIR . '/inc/home-helpers.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/services-hub-helpers.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/service-helpers.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/service-template-loader.php';
+require_once SHPIGOVSKY_THEME_DIR . '/inc/contacts-helpers.php';

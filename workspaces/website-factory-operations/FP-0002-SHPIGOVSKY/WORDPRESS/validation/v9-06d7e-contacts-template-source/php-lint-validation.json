@@ -1,0 +1,23 @@
+{
+  "task": "V9-06D7-E",
+  "generated_at": "2026-07-05T02:30:00+07:00",
+  "php_cli": "X:\\MARS-Localhost\\laragon\\bin\\php\\php-8.3.30-Win32-vs16-x64\\php.exe",
+  "changed_files_lint": {
+    "count": 6,
+    "passed": 6,
+    "failed": 0,
+    "files": [
+      "inc/contacts-helpers.php",
+      "functions.php",
+      "page-templates/contacts.php",
+      "template-parts/contacts/map-body.php",
+      "template-parts/contacts/rehabilitation-steps.php",
+      "template-parts/contacts/location-card.php"
+    ]
+  },
+  "all_theme_php_lint": {
+    "passed": true,
+    "failures": []
+  },
+  "result": "PASS"
+}

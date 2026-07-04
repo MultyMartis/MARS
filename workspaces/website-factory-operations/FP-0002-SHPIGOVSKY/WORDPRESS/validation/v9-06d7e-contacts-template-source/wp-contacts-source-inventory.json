@@ -1,0 +1,53 @@
+{
+  "task": "V9-06D7-E",
+  "generated_at": "2026-07-05T02:30:00+07:00",
+  "page_template": {
+    "path": "theme/shpigovsky/page-templates/contacts.php",
+    "prior_state": "skeleton with inert map-body and rehabilitation-steps placeholders",
+    "current_state": "V9 orchestration with breadcrumbs wrapper, map-body, rehabilitation-steps"
+  },
+  "template_parts": {
+    "existing_updated": [
+      "template-parts/contacts/map-body.php",
+      "template-parts/contacts/rehabilitation-steps.php"
+    ],
+    "added": [
+      "template-parts/contacts/location-card.php"
+    ],
+    "helpers_added": [
+      "inc/contacts-helpers.php"
+    ]
+  },
+  "acf_page_group": "group_fp02_page_contacts",
+  "acf_page_fields": [
+    "contacts_address",
+    "contacts_map_url",
+    "contacts_phones",
+    "contacts_messengers",
+    "contacts_blocks",
+    "contacts_form_intro"
+  ],
+  "site_options_group": "group_fp02_site_options_contacts",
+  "site_option_fields_used": [
+    "phone_primary",
+    "site_email",
+    "site_address",
+    "opening_hours",
+    "map_link",
+    "social_links",
+    "default_button_label"
+  ],
+  "seeded_assumptions_d4": {
+    "page_id": 20,
+    "contacts_fields_seeded": ["contacts_address", "contacts_phones", "contacts_form_intro"],
+    "options_seeded": false
+  },
+  "empty_fallback_areas": [
+    "map PNG figures omitted when no theme asset and no allowlisted embed URL",
+    "messengers omitted when repeaters and social_links empty",
+    "email detail row omitted when site_email empty",
+    "rehabilitation photo bleed omitted (no packaged asset)",
+    "simplified contacts_blocks rendering when repeater populated"
+  ],
+  "result": "PASS"
+}

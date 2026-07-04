@@ -1,0 +1,61 @@
+{
+  "task": "V9-06D7-E",
+  "generated_at": "2026-07-05T02:30:00+07:00",
+  "bindings": [
+    {
+      "section": "contacts-body heading",
+      "fields": ["post_title"],
+      "source": "POST_FIELD",
+      "fallback": "SAFE_STATIC_FALLBACK: Контакты"
+    },
+    {
+      "section": "contacts-body intro",
+      "fields": ["contacts_form_intro"],
+      "source": "ACF_CONTACTS_FIELD",
+      "fallback": "STATIC_FROM_V9 intro paragraph"
+    },
+    {
+      "section": "contacts-body phone",
+      "fields": ["contacts_phones", "phone_primary"],
+      "source": "ACF_CONTACTS_FIELD then SITE_OPTION",
+      "fallback": "OMIT_IF_EMPTY phone link"
+    },
+    {
+      "section": "contacts-body messengers",
+      "fields": ["contacts_messengers", "social_links"],
+      "source": "ACF_CONTACTS_FIELD then SITE_OPTION",
+      "fallback": "OMIT_IF_EMPTY"
+    },
+    {
+      "section": "contacts-location cards",
+      "fields": ["contacts_blocks", "contacts_address", "site_address", "opening_hours", "site_email", "contacts_map_url", "map_link"],
+      "source": "ACF_CONTACTS_FIELD + SITE_OPTION",
+      "fallback": "STATIC_FROM_V9 two-location structure when contacts_blocks empty"
+    },
+    {
+      "section": "contacts-location map",
+      "fields": ["contacts_map_url", "map_link"],
+      "source": "ACF_CONTACTS_FIELD + SITE_OPTION",
+      "fallback": "OMIT_IF_EMPTY unless allowlisted embed URL"
+    },
+    {
+      "section": "contacts-rehabilitation-steps",
+      "fields": [],
+      "source": "STATIC_FROM_V9",
+      "fallback": "SAFE_STATIC_FALLBACK step/support copy"
+    },
+    {
+      "section": "contacts-rehabilitation CTA band",
+      "fields": ["contacts_phones", "phone_primary", "default_button_label"],
+      "source": "ACF_CONTACTS_FIELD + SITE_OPTION",
+      "fallback": "STATIC_FROM_V9 CTA copy; modal open only (no submit endpoint)"
+    },
+    {
+      "section": "contacts-rehabilitation photo",
+      "fields": [],
+      "source": "DEFER_CONTENT_MIGRATION",
+      "fallback": "OMIT_IF_EMPTY"
+    }
+  ],
+  "result": "PASS"
+}
