@@ -1,0 +1,59 @@
+{
+    "phase": "V9-06D.5",
+    "timestamp": "2026-07-04T12:51:51+00:00",
+    "source_files": {
+        "front-page.php": {
+            "exists": true,
+            "bytes": 812
+        },
+        "page.php": {
+            "exists": true,
+            "bytes": 564
+        },
+        "single-service.php": {
+            "exists": true,
+            "bytes": 437
+        },
+        "home.php": {
+            "exists": true,
+            "bytes": 511
+        },
+        "header.php": {
+            "exists": true,
+            "bytes": 381
+        },
+        "footer.php": {
+            "exists": true,
+            "bytes": 408
+        },
+        "page-templates/services-hub.php": {
+            "exists": true,
+            "bytes": 559
+        },
+        "page-templates/contacts.php": {
+            "exists": true,
+            "bytes": 625
+        },
+        "page-templates/institutional.php": {
+            "exists": true,
+            "bytes": 645
+        },
+        "page-templates/legal.php": {
+            "exists": true,
+            "bytes": 562
+        },
+        "inc/service-template-loader.php": {
+            "exists": true,
+            "bytes": 1504
+        }
+    },
+    "service_permalinks_depth2_repaired": false,
+    "front_page": "SKELETON — orchestrates home template-parts; hero is inert placeholder comment",
+    "services_hub": "SKELETON — page-templates/services-hub.php with title + placeholder notice",
+    "single_service": "SKELETON — single-service.php loads leaf-stack by default (layout meta filter not wired to ACF)",
+    "contacts": "SKELETON — page-templates/contacts.php with title + contacts partials",
+    "header_footer": "PRESENT — shpigovsky-skeleton-header / shpigovsky-skeleton-footer",
+    "template_parts": "PRESENT — home/service/contacts/layout partials exist as skeleton boundaries",
+    "v9_integration_status": "NOT_STARTED",
+    "result": "READY_BASELINE_SKELETON"
+}

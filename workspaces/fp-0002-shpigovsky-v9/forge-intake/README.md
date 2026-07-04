@@ -5,7 +5,7 @@
 **Stable baseline:** `fp-0002-v9-operator-approved-static-frontend-stable-01` @ `a51376872fbfefb7d5f68a58b440c726d6cf3de3`  
 **Intake gate:** V9-05A **APPROVED** — foundation **ADOPTED**  
 **Runtime checkpoint:** V9-05B **COMPLETE** — `foundation-002-v9-pre-implementation`
-**Latest WordPress runtime gate:** ROUTE-OWNERSHIP-INVESTIGATION **PASS** — Service 74 root cause identified (`POST_TYPE_LINK_REWRITE_MISMATCH`); rewrite rule repair next; V9-06D.5 blocked
+**Latest WordPress runtime gate:** V9-06D.5 visual route QA **PARTIAL PASS** — all required routes HTTP 200; Service 74 PASS; skeleton baseline; V9-06D.6 template integration planning next
 
 ## Entry documents
 
@@ -17,6 +17,7 @@
 - [FP-0002-V9-06D2-WORDPRESS-OBJECT-SKELETON-GATE-v1.md](./validation/FP-0002-V9-06D2-WORDPRESS-OBJECT-SKELETON-GATE-v1.md) — **V9-06D.2 WordPress object skeleton gate (PASS)**
 - [FP-0002-REWRITE-FLUSH-MICRO-GATE-v1.md](./validation/FP-0002-REWRITE-FLUSH-MICRO-GATE-v1.md) — **REWRITE-FLUSH-MICRO-GATE (PARTIAL PASS)**
 - [FP-0002-ROUTE-OWNERSHIP-INVESTIGATION-GATE-v1.md](./validation/FP-0002-ROUTE-OWNERSHIP-INVESTIGATION-GATE-v1.md) — **ROUTE-OWNERSHIP-INVESTIGATION (PASS)**
+- [FP-0002-V9-06D5-VISUAL-ROUTE-QA-GATE-v1.md](./validation/FP-0002-V9-06D5-VISUAL-ROUTE-QA-GATE-v1.md) — **V9-06D.5 visual route QA (PARTIAL PASS)**
 
 ## Structure
 

@@ -1,0 +1,42 @@
+{
+  "phase": "V9-06D.5",
+  "timestamp": "2026-07-04T12:55:00+00:00",
+  "required_head": "e377ff4a72b3341e9b2ff6bc2dc532b84c79bdc2",
+  "suites": [
+    { "suite": "preflight", "passed": 1, "failed": 0, "skipped": 0, "result": "PASS" },
+    { "suite": "runtime-identity", "passed": 1, "failed": 0, "skipped": 0, "result": "PASS" },
+    { "suite": "route-http-resolution", "passed": 7, "failed": 0, "skipped": 0, "result": "PASS" },
+    { "suite": "route-template-render-readiness", "passed": 7, "failed": 0, "skipped": 0, "result": "PASS" },
+    { "suite": "route-visual-smoke-desktop", "passed": 7, "failed": 0, "skipped": 0, "result": "PASS" },
+    { "suite": "route-visual-smoke-mobile", "passed": 7, "failed": 0, "skipped": 0, "result": "PASS" },
+    { "suite": "service-74-regression-check", "passed": 1, "failed": 0, "skipped": 0, "result": "PASS" },
+    { "suite": "page6-service73-path-note", "passed": 1, "failed": 0, "skipped": 0, "result": "PASS" },
+    { "suite": "source-template-readiness", "passed": 1, "failed": 0, "skipped": 0, "result": "PASS" },
+    { "suite": "screenshot-manifest", "passed": 14, "failed": 0, "skipped": 0, "result": "PASS" },
+    { "suite": "no-runtime-mutation-validation", "passed": 1, "failed": 0, "skipped": 0, "result": "PASS" },
+    { "suite": "d6-readiness-validation", "passed": 1, "failed": 0, "skipped": 0, "result": "PASS" }
+  ],
+  "total_failures": 0,
+  "runtime_mutations": 0,
+  "database_writes": 0,
+  "rewrite_flush": "NOT_PERFORMED",
+  "content_acf_writes": 0,
+  "all_required_routes_http_200": true,
+  "service_74_http": 200,
+  "service_74_resolved_id": 74,
+  "template_render_readiness": "READY_BASELINE",
+  "visual_gaps": [
+    "Theme remains V9-06B skeleton (unstyled lists + placeholder comments)",
+    "Service stacks render inert HTML comments only — no visible H1/hero body copy",
+    "Minimal ACF seed not rendered as V9 visuals",
+    "Page ID 6 / Service ID 73 shared path remains secondary debt"
+  ],
+  "desktop_smoke": "PASS",
+  "mobile_smoke": "PASS",
+  "verdict": "PARTIAL PASS",
+  "verdict_note": "All required routes HTTP 200 with non-blank skeleton baseline and Service 74 regression PASS. Visual/template gaps remain (skeleton only; V9 integration not started). No runtime mutations.",
+  "v9_06d5": "COMPLETE",
+  "v9_06d6": "READY_FOR_OPERATOR_REVIEW",
+  "recommended_next_action": "CREATE_V9_06D6_TEMPLATE_INTEGRATION_PLANNING_TASK",
+  "result": "PARTIAL PASS"
+}

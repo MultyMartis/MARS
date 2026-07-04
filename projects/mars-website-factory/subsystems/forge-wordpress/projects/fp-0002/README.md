@@ -1,7 +1,7 @@
 # Forge WordPress — FP-0002 Project Lane
 
 **Project ID:** FP-0002 — Шпиговский  
-**Stage:** REWRITE-RULE-REPAIR COMPLETE (PASS — Service 74 HTTP 200; V9-06D.5 unblocked)
+**Stage:** V9-06D.5 VISUAL ROUTE QA COMPLETE (PARTIAL PASS — all required routes HTTP 200; skeleton baseline; D.6 planning next)
 
 | Document | Purpose |
 |----------|---------|
@@ -63,4 +63,4 @@ Runtime manifest: [MLI-WP-FP0002-LOCAL-RUNTIME-MANIFEST-v1.md](../../../../mars-
 
 ## V9-06D.1 rerun runtime delivery
 
-Runtime code/model activation is complete in local runtime: theme, Shpigovsky Core, and ACF JSON delivered; service CPT, 13 ACF groups, and Options Page verified. WordPress object skeleton complete (V9-06D.2); content migration planned (V9-06D.3); minimal visual content seed applied for Pages 4/5/20 and Services 73/74/77/84 (V9-06D.4 RERUN). Soft rewrite flush performed (REWRITE-FLUSH-MICRO-GATE); route ownership investigation identified `POST_TYPE_LINK_REWRITE_MISMATCH`. Rewrite rule repair **PASS**: depth-2 query `service=$matches[1]/$matches[2]`; Service 74 HTTP 200. Page 6 / Service 73 collision remains secondary debt. Full content migration and V9 integration remain not performed. Next: V9-06D.5 visual route QA.
+Runtime code/model activation is complete in local runtime: theme, Shpigovsky Core, and ACF JSON delivered; service CPT, 13 ACF groups, and Options Page verified. WordPress object skeleton complete (V9-06D.2); content migration planned (V9-06D.3); minimal visual content seed applied for Pages 4/5/20 and Services 73/74/77/84 (V9-06D.4 RERUN). Soft rewrite flush performed (REWRITE-FLUSH-MICRO-GATE); route ownership investigation identified `POST_TYPE_LINK_REWRITE_MISMATCH`. Rewrite rule repair **PASS**: depth-2 query `service=$matches[1]/$matches[2]`; Service 74 HTTP 200. V9-06D.5 visual route QA **PARTIAL PASS**: all required routes HTTP 200; Service 74 regression PASS; skeleton template/render baseline confirmed; screenshots captured. Page 6 / Service 73 collision remains secondary debt. Full content migration and V9 integration remain not performed. Next: V9-06D.6 template integration planning.

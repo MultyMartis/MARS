@@ -565,3 +565,7 @@ PASS: read-only diagnostics. Primary cause POST_TYPE_LINK_REWRITE_MISMATCH (dept
 ## 2026-07-04 — REWRITE-RULE-REPAIR
 
 PASS: depth-2 rewrite query repaired to `service=$matches[1]/$matches[2]`; source delivered to local runtime; soft flush under checkpoint. Service 74 HTTP 200 (resolved ID 74). Controls all 200. Content/ACF/menus/redirects unchanged. Page 6 / Service 73 secondary debt remains. V9-06D.5 UNBLOCKED. Next: V9-06D.5 visual route QA.
+
+## 2026-07-04 — V9-06D.5 visual route QA
+
+PARTIAL PASS: read-only visual route QA. All seven required routes HTTP 200; Service 74 regression PASS; header/footer/main present; desktop/mobile screenshots captured. Theme remains V9-06B skeleton (no V9 integration). Pages publish=22 (any-status=23; Page ID 3 draft). Posts publish=0 (prior=1). Page 6 / Service 73 secondary debt remains (not a D.5 blocker). Runtime mutations 0. Next: CREATE_V9_06D6_TEMPLATE_INTEGRATION_PLANNING_TASK.

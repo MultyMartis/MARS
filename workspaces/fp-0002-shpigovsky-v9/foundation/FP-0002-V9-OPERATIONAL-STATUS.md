@@ -1,6 +1,6 @@
 # FP-0002 V9 Operational Status
 
-**Current:** ROUTE-OWNERSHIP-INVESTIGATION COMPLETE (PASS — Service 74 STILL_404)
+**Current:** V9-06D.5 VISUAL ROUTE QA COMPLETE (PARTIAL PASS)
 
 - V9 static frontend: operator-approved stable
 - WordPress content model: active in local runtime
@@ -9,11 +9,11 @@
 - Full content migration: NOT PERFORMED
 - V9 integration: NOT STARTED
 - Rewrite flush: PERFORMED (soft; `.htaccess` unchanged)
-- Service 74: STILL HTTP 404 with correct generated permalink
-- Root cause: `POST_TYPE_LINK_REWRITE_MISMATCH` (depth-2 rewrite leaf-only `service` query var)
-- Page 6 / Service 73 path collision: CONFIRMED (secondary)
-- V9-06D.5: BLOCKED
-- Next: rewrite rule repair micro-task, then V9-06D.5 visual route QA
+- Service 74: HTTP **200** after depth-2 rewrite repair (`service=$matches[1]/$matches[2]`)
+- Root cause addressed: `POST_TYPE_LINK_REWRITE_MISMATCH`
+- Page 6 / Service 73 path collision: CONFIRMED (secondary debt; not a D.5 blocker)
+- V9-06D.5: **COMPLETE** (PARTIAL PASS — all required routes HTTP 200; skeleton baseline)
+- Next: V9-06D.6 template integration planning (operator review)
 
 # FP-0002 V9 Operational Status
 

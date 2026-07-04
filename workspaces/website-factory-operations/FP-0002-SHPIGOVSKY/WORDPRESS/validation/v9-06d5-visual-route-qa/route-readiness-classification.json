@@ -1,0 +1,88 @@
+{
+    "phase": "V9-06D.5",
+    "timestamp": "2026-07-04T12:51:51+00:00",
+    "routes": [
+        {
+            "key": "home",
+            "label": "Home",
+            "path": "/",
+            "classification": "READY_FOR_V9_TEMPLATE_INTEGRATION",
+            "reason": "Route resolves HTTP 200 with non-blank skeleton baseline; V9 visuals not integrated; minimal seed only",
+            "next_need": "V9_TEMPLATE_INTEGRATION",
+            "secondary_need": "READY_FOR_CONTENT_MIGRATION_LATER",
+            "optional": false
+        },
+        {
+            "key": "services_hub",
+            "label": "Services Hub",
+            "path": "/uslugi/",
+            "classification": "READY_FOR_V9_TEMPLATE_INTEGRATION",
+            "reason": "Route resolves HTTP 200 with non-blank skeleton baseline; V9 visuals not integrated; minimal seed only",
+            "next_need": "V9_TEMPLATE_INTEGRATION",
+            "secondary_need": "READY_FOR_CONTENT_MIGRATION_LATER",
+            "optional": false
+        },
+        {
+            "key": "service_zavisimosti",
+            "label": "Parent Service — Зависимости",
+            "path": "/uslugi/zavisimosti/",
+            "classification": "READY_FOR_V9_TEMPLATE_INTEGRATION",
+            "reason": "Route resolves HTTP 200 with non-blank skeleton baseline; V9 visuals not integrated; minimal seed only",
+            "next_need": "V9_TEMPLATE_INTEGRATION",
+            "secondary_need": "READY_FOR_CONTENT_MIGRATION_LATER",
+            "optional": false
+        },
+        {
+            "key": "service_alkogol",
+            "label": "Child Service — Лечение алкогольной зависимости",
+            "path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+            "classification": "READY_FOR_V9_TEMPLATE_INTEGRATION",
+            "reason": "Route resolves HTTP 200 with non-blank skeleton baseline; V9 visuals not integrated; minimal seed only",
+            "next_need": "V9_TEMPLATE_INTEGRATION",
+            "secondary_need": "READY_FOR_CONTENT_MIGRATION_LATER",
+            "optional": false
+        },
+        {
+            "key": "service_psych",
+            "label": "Parent Service — Психическое здоровье",
+            "path": "/uslugi/psihicheskoe-zdorovie/",
+            "classification": "READY_FOR_V9_TEMPLATE_INTEGRATION",
+            "reason": "Route resolves HTTP 200 with non-blank skeleton baseline; V9 visuals not integrated; minimal seed only",
+            "next_need": "V9_TEMPLATE_INTEGRATION",
+            "secondary_need": "READY_FOR_CONTENT_MIGRATION_LATER",
+            "optional": false
+        },
+        {
+            "key": "service_rpp",
+            "label": "Parent Service — Расстройства пищевого поведения",
+            "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+            "classification": "READY_FOR_V9_TEMPLATE_INTEGRATION",
+            "reason": "Route resolves HTTP 200 with non-blank skeleton baseline; V9 visuals not integrated; minimal seed only",
+            "next_need": "V9_TEMPLATE_INTEGRATION",
+            "secondary_need": "READY_FOR_CONTENT_MIGRATION_LATER",
+            "optional": false
+        },
+        {
+            "key": "contacts",
+            "label": "Contacts",
+            "path": "/kontakty/",
+            "classification": "READY_FOR_V9_TEMPLATE_INTEGRATION",
+            "reason": "Route resolves HTTP 200 with non-blank skeleton baseline; V9 visuals not integrated; minimal seed only",
+            "next_need": "V9_TEMPLATE_INTEGRATION",
+            "secondary_need": "READY_FOR_CONTENT_MIGRATION_LATER",
+            "optional": false
+        }
+    ],
+    "optional_routes": [
+        {
+            "key": "blog",
+            "label": "Blog index",
+            "path": "/blog/",
+            "classification": "READY_FOR_V9_TEMPLATE_INTEGRATION",
+            "reason": "Route resolves HTTP 200 with non-blank skeleton baseline; V9 visuals not integrated; minimal seed only",
+            "next_need": "V9_TEMPLATE_INTEGRATION",
+            "secondary_need": "READY_FOR_CONTENT_MIGRATION_LATER",
+            "optional": true
+        }
+    ]
+}

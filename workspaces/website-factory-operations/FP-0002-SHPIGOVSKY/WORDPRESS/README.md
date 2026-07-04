@@ -2,8 +2,8 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** ROUTE-OWNERSHIP-INVESTIGATION COMPLETE (PASS — root cause IDENTIFIED; Service 74 STILL_404)
-**Classification:** CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON COMPLETE — MINIMAL VISUAL CONTENT SEEDED — REWRITE RULES FLUSHED (SOFT) — DEPTH-2 REWRITE QUERY MISMATCH IDENTIFIED
+**Status:** V9-06D.5 VISUAL ROUTE QA COMPLETE (PARTIAL PASS — all required routes HTTP 200; skeleton baseline)
+**Classification:** CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON COMPLETE — MINIMAL VISUAL CONTENT SEEDED — DEPTH-2 REWRITE REPAIRED — VISUAL ROUTE BASELINE READY FOR V9 TEMPLATE INTEGRATION PLANNING
 
 ---
 
@@ -148,8 +148,13 @@ Read-only diagnostics complete. Primary cause: **POST_TYPE_LINK_REWRITE_MISMATCH
 
 Depth-2 rewrite query repaired to `service=$matches[1]/$matches[2]` in `ServicePermalinks.php`; delivered to local runtime; soft flush under checkpoint. Service 74 HTTP **200** (resolved ID 74). Controls all 200. Content/ACF/menus/redirects unchanged. V9-06D.5: **UNBLOCKED**. Report: [reports/FP-0002-REWRITE-RULE-REPAIR-REPORT-v1.md](reports/FP-0002-REWRITE-RULE-REPAIR-REPORT-v1.md).
 
+### V9-06D.5 visual route QA (2026-07-04)
+
+Read-only visual route QA after rewrite repair: all seven required routes HTTP **200**; Service 74 regression **PASS**; header/footer/main present; desktop/mobile screenshots captured; theme remains V9-06B skeleton (no V9 integration). Runtime mutations: **0**. Verdict: **PARTIAL PASS**. Next: V9-06D.6 template integration planning. Report: [reports/FP-0002-V9-06D5-VISUAL-ROUTE-QA-REPORT-v1.md](reports/FP-0002-V9-06D5-VISUAL-ROUTE-QA-REPORT-v1.md).
+
 Reports:
 
+- `reports/FP-0002-V9-06D5-VISUAL-ROUTE-QA-REPORT-v1.md` — D.5 visual route QA PARTIAL PASS
 - `reports/FP-0002-REWRITE-RULE-REPAIR-REPORT-v1.md` — repair PASS
 - `reports/FP-0002-ROUTE-OWNERSHIP-INVESTIGATION-REPORT-v1.md` — investigation PASS
 - `reports/FP-0002-V9-06D4-RERUN-MINIMAL-CONTENT-SEED-FOR-VISUAL-ROUTE-QA-REPORT-v1.md` — rerun PASS/PARTIAL
