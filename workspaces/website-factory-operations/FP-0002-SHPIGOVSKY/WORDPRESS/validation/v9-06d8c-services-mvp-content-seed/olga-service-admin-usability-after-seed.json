@@ -1,0 +1,71 @@
+{
+    "phase": "V9-06D8-C",
+    "generated_at": "2026-07-04T20:54:38+00:00",
+    "areas": [
+        {
+            "service_id": 73,
+            "area": "Service edit screen",
+            "visible": true,
+            "clarity": "Зависимости",
+            "issue": "English group titles Service — *",
+            "result": "PARTIAL"
+        },
+        {
+            "service_id": 73,
+            "area": "Programme / stages / FAQ repeaters",
+            "visible": true,
+            "clarity": "Seeded repeaters with title/text or question/answer",
+            "issue": "Signs not rendered on subdivision",
+            "result": "PARTIAL"
+        },
+        {
+            "service_id": 74,
+            "area": "Service edit screen",
+            "visible": true,
+            "clarity": "Лечение алкогольной зависимости",
+            "issue": "English group titles Service — *",
+            "result": "PARTIAL"
+        },
+        {
+            "service_id": 74,
+            "area": "Programme / stages / FAQ repeaters",
+            "visible": true,
+            "clarity": "Seeded repeaters with title/text or question/answer",
+            "issue": "Signs repeater now has nine checklist rows",
+            "result": "PASS"
+        },
+        {
+            "service_id": 77,
+            "area": "Service edit screen",
+            "visible": true,
+            "clarity": "Психическое здоровье",
+            "issue": "English group titles Service — *",
+            "result": "PARTIAL"
+        },
+        {
+            "service_id": 77,
+            "area": "Programme / stages / FAQ repeaters",
+            "visible": true,
+            "clarity": "Seeded repeaters with title/text or question/answer",
+            "issue": "Signs not rendered on subdivision",
+            "result": "PARTIAL"
+        },
+        {
+            "service_id": 84,
+            "area": "Service edit screen",
+            "visible": true,
+            "clarity": "Расстройства пищевого поведения",
+            "issue": "English group titles Service — *",
+            "result": "PARTIAL"
+        },
+        {
+            "service_id": 84,
+            "area": "Programme / stages / FAQ repeaters",
+            "visible": true,
+            "clarity": "Seeded repeaters with title/text or question/answer",
+            "issue": "Signs not rendered on subdivision",
+            "result": "PARTIAL"
+        }
+    ],
+    "result": "PARTIAL"
+}

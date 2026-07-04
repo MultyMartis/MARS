@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-05 (V9-06D8-B Home Content Seed COMPLETE)
+**Last updated:** 2026-07-05 (V9-06D8-C Services MVP Content Seed COMPLETE)
 
-**Current WordPress phase:** V9-06D8-B Home Content Seed **COMPLETE (PARTIAL PASS)** — `home_advantages` + `home_faq_items` seeded on page #4 from V9 static; hero D4 seed retained; route smoke ALL_200. Next: D8-C services MVP content seed. Report: `WORDPRESS/reports/FP-0002-V9-06D8B-HOME-CONTENT-SEED-REPORT-v1.md`.
+**Current WordPress phase:** V9-06D8-C Services MVP Content Seed **COMPLETE (PASS)** — 15 ACF writes on service objects #73/#74/#77/#84 from V9 static; priority #74 intro/signs/programme/stages/FAQ seeded; route smoke ALL_200; service 74 alcohol-special regression PASS. Next: D8-D services hub content seed. Report: `WORDPRESS/reports/FP-0002-V9-06D8C-SERVICES-MVP-CONTENT-SEED-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

@@ -1,0 +1,18 @@
+{
+    "phase": "V9-06D8-C",
+    "generated_at": "2026-07-04T20:54:31+00:00",
+    "checkpoint_name": "v9-06d8c-services-mvp-content-seed-pre-20260704-205431",
+    "checkpoint_root": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d8c-services-mvp-content-seed-pre-20260704-205431",
+    "db_dump": "PASS",
+    "db_dump_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d8c-services-mvp-content-seed-pre-20260704-205431/mars_wp_fp0002.sql",
+    "service_pre_values_captured": true,
+    "service_pre_values_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d8c-services-mvp-content-seed-pre-20260704-205431/services-73-74-77-84-pre-values.json",
+    "object_counts_captured": true,
+    "restore_instructions": {
+        "full": "mysql -u root mars_wp_fp0002 < X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d8c-services-mvp-content-seed-pre-20260704-205431/mars_wp_fp0002.sql",
+        "field": "Restore individual fields from services-73-74-77-84-pre-values.json via update_field per service/field"
+    },
+    "secrets_copied": false,
+    "api_keys_copied": false,
+    "result": "PASS"
+}

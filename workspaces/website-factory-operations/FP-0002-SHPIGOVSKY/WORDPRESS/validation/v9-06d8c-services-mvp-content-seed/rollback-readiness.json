@@ -1,0 +1,113 @@
+{
+    "phase": "V9-06D8-C",
+    "generated_at": "2026-07-04T20:54:38+00:00",
+    "checkpoint_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d8c-services-mvp-content-seed-pre-20260704-205431",
+    "changed_service_fields": [
+        {
+            "service_id": 73,
+            "field": "programme_items",
+            "old_value": null,
+            "rollback": "update_field('programme_items', baseline_value, 73)"
+        },
+        {
+            "service_id": 73,
+            "field": "stages",
+            "old_value": null,
+            "rollback": "update_field('stages', baseline_value, 73)"
+        },
+        {
+            "service_id": 73,
+            "field": "faq_items",
+            "old_value": null,
+            "rollback": "update_field('faq_items', baseline_value, 73)"
+        },
+        {
+            "service_id": 74,
+            "field": "intro_text",
+            "old_value": "Минимальное наполнение для визуальной проверки маршрута. Полная миграция контента выполняется отдельной фазой.",
+            "rollback": "update_field('intro_text', baseline_value, 74)"
+        },
+        {
+            "service_id": 74,
+            "field": "intro_note",
+            "old_value": null,
+            "rollback": "update_field('intro_note', baseline_value, 74)"
+        },
+        {
+            "service_id": 74,
+            "field": "signs_items",
+            "old_value": [
+                {
+                    "title": "Признак для визуальной проверки",
+                    "text": "Минимальное наполнение для визуальной проверки маршрута. Полная миграция контента выполняется отдельной фазой."
+                }
+            ],
+            "rollback": "update_field('signs_items', baseline_value, 74)"
+        },
+        {
+            "service_id": 74,
+            "field": "programme_items",
+            "old_value": null,
+            "rollback": "update_field('programme_items', baseline_value, 74)"
+        },
+        {
+            "service_id": 74,
+            "field": "stages",
+            "old_value": null,
+            "rollback": "update_field('stages', baseline_value, 74)"
+        },
+        {
+            "service_id": 74,
+            "field": "faq_items",
+            "old_value": null,
+            "rollback": "update_field('faq_items', baseline_value, 74)"
+        },
+        {
+            "service_id": 77,
+            "field": "programme_items",
+            "old_value": null,
+            "rollback": "update_field('programme_items', baseline_value, 77)"
+        },
+        {
+            "service_id": 77,
+            "field": "stages",
+            "old_value": null,
+            "rollback": "update_field('stages', baseline_value, 77)"
+        },
+        {
+            "service_id": 77,
+            "field": "faq_items",
+            "old_value": null,
+            "rollback": "update_field('faq_items', baseline_value, 77)"
+        },
+        {
+            "service_id": 84,
+            "field": "programme_items",
+            "old_value": null,
+            "rollback": "update_field('programme_items', baseline_value, 84)"
+        },
+        {
+            "service_id": 84,
+            "field": "stages",
+            "old_value": null,
+            "rollback": "update_field('stages', baseline_value, 84)"
+        },
+        {
+            "service_id": 84,
+            "field": "faq_items",
+            "old_value": null,
+            "rollback": "update_field('faq_items', baseline_value, 84)"
+        }
+    ],
+    "old_values_captured": true,
+    "per_field_rollback": "services-73-74-77-84-pre-values.json + update_field per allowlisted field",
+    "full_db_rollback": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d8c-services-mvp-content-seed-pre-20260704-205431/mars_wp_fp0002.sql",
+    "rollback_tested": false,
+    "rollback_not_executed_reason": "Seed succeeded; rollback not required",
+    "post_rollback_validation_plan": [
+        "Seven route smoke",
+        "Service 74 regression",
+        "Home/options unchanged"
+    ],
+    "result": "PASS"
+}

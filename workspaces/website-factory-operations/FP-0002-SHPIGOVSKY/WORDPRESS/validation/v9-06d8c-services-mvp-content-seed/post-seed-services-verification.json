@@ -1,0 +1,413 @@
+{
+    "phase": "V9-06D8-C",
+    "generated_at": "2026-07-04T20:54:32+00:00",
+    "fields": [
+        {
+            "service_id": 73,
+            "field": "hero_lead",
+            "expected_state": "unchanged",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 73,
+            "field": "intro_text",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 73,
+            "field": "intro_note",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 73,
+            "field": "signs_items",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 73,
+            "field": "programme_items",
+            "expected_state": "seeded",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 73,
+            "field": "stages",
+            "expected_state": "seeded",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 73,
+            "field": "faq_items",
+            "expected_state": "seeded",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 73,
+            "field": "cta_title",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 73,
+            "field": "cta_text",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 73,
+            "field": "cta_button_label",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 74,
+            "field": "hero_lead",
+            "expected_state": "unchanged",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 74,
+            "field": "intro_text",
+            "expected_state": "seeded",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 74,
+            "field": "intro_note",
+            "expected_state": "seeded",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 74,
+            "field": "signs_items",
+            "expected_state": "seeded",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 74,
+            "field": "programme_items",
+            "expected_state": "seeded",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 74,
+            "field": "stages",
+            "expected_state": "seeded",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 74,
+            "field": "faq_items",
+            "expected_state": "seeded",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 74,
+            "field": "cta_title",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 74,
+            "field": "cta_text",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 74,
+            "field": "cta_button_label",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 77,
+            "field": "hero_lead",
+            "expected_state": "unchanged",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 77,
+            "field": "intro_text",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 77,
+            "field": "intro_note",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 77,
+            "field": "signs_items",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 77,
+            "field": "programme_items",
+            "expected_state": "seeded",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 77,
+            "field": "stages",
+            "expected_state": "seeded",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 77,
+            "field": "faq_items",
+            "expected_state": "seeded",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 77,
+            "field": "cta_title",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 77,
+            "field": "cta_text",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 77,
+            "field": "cta_button_label",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 84,
+            "field": "hero_lead",
+            "expected_state": "unchanged",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 84,
+            "field": "intro_text",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 84,
+            "field": "intro_note",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 84,
+            "field": "signs_items",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 84,
+            "field": "programme_items",
+            "expected_state": "seeded",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 84,
+            "field": "stages",
+            "expected_state": "seeded",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 84,
+            "field": "faq_items",
+            "expected_state": "seeded",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 84,
+            "field": "cta_title",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 84,
+            "field": "cta_text",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "service_id": 84,
+            "field": "cta_button_label",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        }
+    ],
+    "sections": [
+        {
+            "service_id": 73,
+            "section": "programme",
+            "expected": "visible when programme_items populated or fallback",
+            "actual": "acf",
+            "result": "PASS"
+        },
+        {
+            "service_id": 73,
+            "section": "stages",
+            "expected": "visible when stages populated",
+            "actual": "visible",
+            "result": "PASS"
+        },
+        {
+            "service_id": 73,
+            "section": "faq",
+            "expected": "visible when faq_items populated",
+            "actual": "visible",
+            "result": "PASS"
+        },
+        {
+            "service_id": 74,
+            "section": "programme",
+            "expected": "visible when programme_items populated or fallback",
+            "actual": "acf",
+            "result": "PASS"
+        },
+        {
+            "service_id": 74,
+            "section": "stages",
+            "expected": "visible when stages populated",
+            "actual": "visible",
+            "result": "PASS"
+        },
+        {
+            "service_id": 74,
+            "section": "faq",
+            "expected": "visible when faq_items populated",
+            "actual": "visible",
+            "result": "PASS"
+        },
+        {
+            "service_id": 77,
+            "section": "programme",
+            "expected": "visible when programme_items populated or fallback",
+            "actual": "acf",
+            "result": "PASS"
+        },
+        {
+            "service_id": 77,
+            "section": "stages",
+            "expected": "visible when stages populated",
+            "actual": "visible",
+            "result": "PASS"
+        },
+        {
+            "service_id": 77,
+            "section": "faq",
+            "expected": "visible when faq_items populated",
+            "actual": "visible",
+            "result": "PASS"
+        },
+        {
+            "service_id": 84,
+            "section": "programme",
+            "expected": "visible when programme_items populated or fallback",
+            "actual": "acf",
+            "result": "PASS"
+        },
+        {
+            "service_id": 84,
+            "section": "stages",
+            "expected": "visible when stages populated",
+            "actual": "visible",
+            "result": "PASS"
+        },
+        {
+            "service_id": 84,
+            "section": "faq",
+            "expected": "visible when faq_items populated",
+            "actual": "visible",
+            "result": "PASS"
+        }
+    ],
+    "result": "PASS"
+}

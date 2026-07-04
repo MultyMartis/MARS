@@ -1,0 +1,128 @@
+{
+    "phase": "V9-06D8-C",
+    "generated_at": "2026-07-04T20:54:31+00:00",
+    "sections": [
+        {
+            "service_id": 74,
+            "section": "hero",
+            "v9_ref": "src/pages/usluga-konechnaya-v1.html heroLead",
+            "target_fields": [
+                "hero_lead"
+            ],
+            "seed_decision": "SKIP",
+            "reason": "Already matches V9 at runtime"
+        },
+        {
+            "service_id": 74,
+            "section": "intro",
+            "v9_ref": "src/partials/sections/service-leaf-intro-v1.html",
+            "target_fields": [
+                "intro_note",
+                "intro_text"
+            ],
+            "seed_decision": "WRITE",
+            "reason": "Replace D4 placeholder; intro_note from V9 lead"
+        },
+        {
+            "service_id": 74,
+            "section": "signs",
+            "v9_ref": "src/partials/sections/service-leaf-signs-v1.html",
+            "target_fields": [
+                "signs_items"
+            ],
+            "seed_decision": "WRITE",
+            "reason": "Nine traceable checklist items; editorial lorem skipped"
+        },
+        {
+            "service_id": 74,
+            "section": "programme",
+            "v9_ref": "services-program-v2 items in usluga-konechnaya-v1.html",
+            "target_fields": [
+                "programme_items"
+            ],
+            "seed_decision": "WRITE",
+            "reason": "Four direction titles; media in theme fallback"
+        },
+        {
+            "service_id": 74,
+            "section": "stages",
+            "v9_ref": "src/partials/sections/service-leaf-stages-v1.html steps",
+            "target_fields": [
+                "stages"
+            ],
+            "seed_decision": "WRITE",
+            "reason": "Four steps; guarantee lead line not in WP template"
+        },
+        {
+            "service_id": 74,
+            "section": "faq",
+            "v9_ref": "src/partials/sections/faq.html items 2-6",
+            "target_fields": [
+                "faq_items"
+            ],
+            "seed_decision": "WRITE",
+            "reason": "LOCAL_MVP_PLACEHOLDER answers; Q1 lorem skipped"
+        },
+        {
+            "service_id": 74,
+            "section": "cta",
+            "v9_ref": "program-cta-band + D8-A options",
+            "target_fields": [
+                "cta_title",
+                "cta_text",
+                "cta_button_label"
+            ],
+            "seed_decision": "SKIP",
+            "reason": "Theme fallback + site options"
+        },
+        {
+            "service_id": 73,
+            "section": "programme/stages/faq",
+            "v9_ref": "usluga-podrazdel-v1.html shared blocks",
+            "target_fields": [
+                "programme_items",
+                "stages",
+                "faq_items"
+            ],
+            "seed_decision": "WRITE",
+            "reason": "MVP enrichment on subdivision parent"
+        },
+        {
+            "service_id": 73,
+            "section": "hero/intro",
+            "v9_ref": "usluga-podrazdel-v1.html",
+            "target_fields": [
+                "hero_lead",
+                "intro_text",
+                "intro_note"
+            ],
+            "seed_decision": "SKIP",
+            "reason": "V9 hero/intro lorem; retain D4 minimal"
+        },
+        {
+            "service_id": 77,
+            "section": "programme/stages/faq",
+            "v9_ref": "shared programme/stages pattern",
+            "target_fields": [
+                "programme_items",
+                "stages",
+                "faq_items"
+            ],
+            "seed_decision": "WRITE",
+            "reason": "Placeholder layout; shared safe blocks"
+        },
+        {
+            "service_id": 84,
+            "section": "programme/stages/faq",
+            "v9_ref": "shared programme/stages pattern",
+            "target_fields": [
+                "programme_items",
+                "stages",
+                "faq_items"
+            ],
+            "seed_decision": "WRITE",
+            "reason": "Placeholder layout; shared safe blocks"
+        }
+    ],
+    "result": "PASS"
+}

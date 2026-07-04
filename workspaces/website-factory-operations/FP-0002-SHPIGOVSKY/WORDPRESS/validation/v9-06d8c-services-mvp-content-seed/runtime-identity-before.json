@@ -1,0 +1,64 @@
+{
+    "phase": "V9-06D8-C",
+    "generated_at": "2026-07-04T20:54:31+00:00",
+    "runtime_path": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky",
+    "domain": "http://shpigovsky.test/",
+    "db_name": "mars_wp_fp0002",
+    "table_prefix": "fp02_",
+    "db_connection": true,
+    "active_theme": "shpigovsky",
+    "shpigovsky_core_active": true,
+    "acf_pro_active": true,
+    "acf_groups_count": 13,
+    "core_mode": "content_model",
+    "service_cpt_registered": true,
+    "wpilot": {
+        "detected": false,
+        "write_enabled": null
+    },
+    "target_services": {
+        "73": {
+            "id": 73,
+            "exists": true,
+            "slug": "zavisimosti",
+            "title": "Зависимости",
+            "route": "/uslugi/zavisimosti/",
+            "http": 200,
+            "layout_variant": "subdivision"
+        },
+        "74": {
+            "id": 74,
+            "exists": true,
+            "slug": "lechenie-alkogolnoy-zavisimosti",
+            "title": "Лечение алкогольной зависимости",
+            "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+            "http": 200,
+            "layout_variant": "alcohol_special"
+        },
+        "77": {
+            "id": 77,
+            "exists": true,
+            "slug": "psihicheskoe-zdorovie",
+            "title": "Психическое здоровье",
+            "route": "/uslugi/psihicheskoe-zdorovie/",
+            "http": 200,
+            "layout_variant": "subdivision"
+        },
+        "84": {
+            "id": 84,
+            "exists": true,
+            "slug": "rasstroystva-pischevogo-povedeniya",
+            "title": "Расстройства пищевого поведения",
+            "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+            "http": 200,
+            "layout_variant": "subdivision"
+        }
+    },
+    "active_plugins": {
+        "acf-extended-pro/acf-extended.php": "Advanced Custom Fields: Extended PRO",
+        "advanced-custom-fields-pro/acf.php": "Advanced Custom Fields PRO",
+        "metacode-wpilot/metacode-wpilot.php": "MetaCODE WPilot",
+        "shpigovsky-core/shpigovsky-core.php": "Shpigovsky Core"
+    },
+    "result": "PASS"
+}
