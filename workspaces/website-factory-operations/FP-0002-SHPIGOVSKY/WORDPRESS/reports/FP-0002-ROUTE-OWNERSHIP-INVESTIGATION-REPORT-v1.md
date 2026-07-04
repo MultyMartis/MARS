@@ -181,7 +181,7 @@ Service 74 remains HTTP 404 on an in-scope visual QA URL. Exclusion would weaken
 
 ## 16. Git checkpoint
 
-- Exact staged files: (filled after commit)
+- Exact staged files: 30 documentation/evidence files under WORDPRESS route-ownership investigation, architecture, reports, validation, and status/index paths (see commit `673fbdc1`)
 - Runtime files staged: 0
 - Runtime snapshots staged: 0
 - Database dumps staged: 0
@@ -190,12 +190,12 @@ Service 74 remains HTTP 404 on an in-scope visual QA URL. Exclusion would weaken
 - Secrets staged: 0
 - License keys staged: 0
 - Foreign files staged: 0
-- Commit: (filled after commit)
-- Commit hash: (filled after commit)
-- Push: (filled after push)
-- Local HEAD: (filled after push)
-- Remote HEAD: (filled after push)
-- Result: (filled after push)
+- Commit: FP-0002: investigate service route ownership
+- Commit hash: 673fbdc19e44dbc0fc8e00df251eee5771914769
+- Push: YES (normal, no force)
+- Local HEAD: 673fbdc19e44dbc0fc8e00df251eee5771914769
+- Remote HEAD: 673fbdc19e44dbc0fc8e00df251eee5771914769
+- Result: PASS
 
 ## 17. No-scope-drift audit
 
