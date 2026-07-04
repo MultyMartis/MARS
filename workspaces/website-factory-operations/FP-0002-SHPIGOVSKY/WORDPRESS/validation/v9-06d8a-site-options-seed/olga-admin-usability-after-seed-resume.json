@@ -1,0 +1,36 @@
+{
+  "phase": "V9-06D8-A-RESUME",
+  "generated_at": "2026-07-05T03:32:52+07:00",
+  "areas": [
+    {
+      "area": "Site Options screen",
+      "visible": true,
+      "clarity": "Menu slug fp02-site-settings; English group titles",
+      "issue": "RU labels deferred to future admin UX repair",
+      "result": "PARTIAL"
+    },
+    {
+      "area": "Contacts fields",
+      "visible": true,
+      "clarity": "Field names map to phone/email/address/hours",
+      "issue": "social_links and map_link empty until operator supplies",
+      "result": "PARTIAL"
+    },
+    {
+      "area": "Modal/CTA fields",
+      "visible": true,
+      "clarity": "default_button_label seeded from V9",
+      "issue": "global_cta fields seeded but not all templates consume them yet",
+      "result": "PARTIAL"
+    },
+    {
+      "area": "Legal identifiers",
+      "visible": true,
+      "clarity": "Empty — operator must fill",
+      "issue": "OPERATOR_SUPPLIED_REQUIRED",
+      "result": "PARTIAL"
+    }
+  ],
+  "result": "PARTIAL",
+  "resume_phase": "V9-06D8-A-RESUME"
+}

@@ -1,0 +1,35 @@
+{
+  "phase": "V9-06D8-A-RESUME",
+  "generated_at": "2026-07-04T20:32:07+00:00",
+  "helper_path": "WORDPRESS/validation/v9-06d8a-site-options-seed/_site_options_seed_runner.php",
+  "helper_exists": true,
+  "helper_committed": false,
+  "helper_staged": false,
+  "exact_allowlist_only": true,
+  "authorized_fields_count": 16,
+  "writable_fields_count": 11,
+  "forbidden_operations_found": false,
+  "forbidden_checks": {
+    "post_page_service_writes": false,
+    "menu_writes": false,
+    "redirect_writes": false,
+    "rewrite_flush": false,
+    "file_writes": false,
+    "media_uploads": false,
+    "plugin_changes": false,
+    "acf_json_writes": false,
+    "source_writes": false
+  },
+  "secrets_api_keys_found": false,
+  "uses_acf_update_field_option_only": true,
+  "skip_fields_respected": [
+    "map_link",
+    "social_links",
+    "legal_org_identifiers",
+    "default_callback_text",
+    "default_consent_text_reference"
+  ],
+  "used": true,
+  "modes_used": ["identity", "dry-run", "apply", "verify"],
+  "result": "PASS"
+}

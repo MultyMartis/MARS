@@ -57,7 +57,7 @@ Planning-only PASS. MVP content gap map, ACF/options field inventory, Olga admin
 
 ## V9-06D8-A site options seed (2026-07-05)
 
-D8-A task executed planning gates: 16-field allowlist, 11-field V9-static payload, dry-run SAFE_TO_APPLY. **Apply BLOCKED** — MySQL/DB and HTTP runtime unavailable; 0 options writes. Prepared apply runner at `validation/v9-06d8a-site-options-seed/` (local only). Evidence: `validation/v9-06d8a-site-options-seed/final-verdict.json`. Report: `reports/FP-0002-V9-06D8A-SITE-OPTIONS-SEED-REPORT-v1.md`.
+D8-A initial run: planning gates PASS; apply BLOCKED (MySQL/HTTP unavailable). Resume apply **COMPLETE**: 11 site options seeded (LOCAL_MVP_PLACEHOLDER from V9 static); 5 fields skipped (operator/DO_NOT_SEED). DB checkpoint `v9-06d8a-site-options-seed-pre-20260705-033228`. Route smoke ALL_200. Options-only writes; no content/meta/menu/rewrite mutations. Local helper `_site_options_seed_runner.php` used but not committed. Evidence: `validation/v9-06d8a-site-options-seed/final-verdict-resume.json`. Report: `reports/FP-0002-V9-06D8A-SITE-OPTIONS-SEED-RESUME-REPORT-v1.md`. Next: D8-B home content seed.
 
 ## V9 implementation
 

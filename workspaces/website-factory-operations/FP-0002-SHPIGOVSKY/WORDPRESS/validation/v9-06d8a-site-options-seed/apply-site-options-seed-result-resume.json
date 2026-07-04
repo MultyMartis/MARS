@@ -1,0 +1,139 @@
+{
+  "phase": "V9-06D8-A-RESUME",
+  "generated_at": "2026-07-05T03:32:36+07:00",
+  "fields_attempted": [
+    "organisation_name",
+    "phone_primary",
+    "phone_secondary",
+    "site_email",
+    "site_address",
+    "opening_hours",
+    "default_callback_title",
+    "default_button_label",
+    "default_secondary_button_label",
+    "global_cta_title",
+    "global_cta_text"
+  ],
+  "fields_updated": [
+    "organisation_name",
+    "phone_primary",
+    "phone_secondary",
+    "site_email",
+    "site_address",
+    "opening_hours",
+    "default_callback_title",
+    "default_button_label",
+    "default_secondary_button_label",
+    "global_cta_title",
+    "global_cta_text"
+  ],
+  "fields_unchanged": [],
+  "fields_skipped": [
+    "map_link",
+    "social_links",
+    "legal_org_identifiers",
+    "default_callback_text",
+    "default_consent_text_reference"
+  ],
+  "errors": [],
+  "post_values": {
+    "organisation_name": {
+      "field": "organisation_name",
+      "value": "Шпиговский дом",
+      "hash": "1f110c396641118d294b94566f5ab11519f496a0bbfae97bbc7c8dfe48c5a30e",
+      "empty": false
+    },
+    "phone_primary": {
+      "field": "phone_primary",
+      "value": "8 (925) 183-64-64",
+      "hash": "e8b8ce92090ae7bb6995a5f7641b3d8402fabde6bc85cc4f73ead65e093fc355",
+      "empty": false
+    },
+    "phone_secondary": {
+      "field": "phone_secondary",
+      "value": "8 (995) 023-92-26",
+      "hash": "c44de3ce1227f8d7b06d8df32e4935b7eeaac9a176f26248ddb91695b6f032c6",
+      "empty": false
+    },
+    "site_email": {
+      "field": "site_email",
+      "value": "Info@shpigovsky.ru",
+      "hash": "f1053533b9dde9f5457feda9e75d7f188d00c2232912d6cb6bd11fb9b41d060f",
+      "empty": false
+    },
+    "site_address": {
+      "field": "site_address",
+      "value": "Москва,\nМосковская область",
+      "hash": "8da1767a483cffc0914f6753c5db66a44a8b60cdbe432a6707276a100693ba44",
+      "empty": false
+    },
+    "opening_hours": {
+      "field": "opening_hours",
+      "value": "пн-пт: 09:00-19:00\nсб-вс: 09:00-20:00",
+      "hash": "690349bad2a7fec514f261ea881b437bba99452a23f9dccabaf4faf91c785452",
+      "empty": false
+    },
+    "map_link": {
+      "field": "map_link",
+      "value": null,
+      "hash": "empty",
+      "empty": true
+    },
+    "social_links": {
+      "field": "social_links",
+      "value": null,
+      "hash": "empty",
+      "empty": true
+    },
+    "legal_org_identifiers": {
+      "field": "legal_org_identifiers",
+      "value": null,
+      "hash": "empty",
+      "empty": true
+    },
+    "default_callback_title": {
+      "field": "default_callback_title",
+      "value": "Заказать звонок",
+      "hash": "4ef3e62a87abba8ba78f513359c938a0d808242d12cab433b0eff9c4e023164f",
+      "empty": false
+    },
+    "default_callback_text": {
+      "field": "default_callback_text",
+      "value": null,
+      "hash": "empty",
+      "empty": true
+    },
+    "default_button_label": {
+      "field": "default_button_label",
+      "value": "Заказать звонок",
+      "hash": "4ef3e62a87abba8ba78f513359c938a0d808242d12cab433b0eff9c4e023164f",
+      "empty": false
+    },
+    "default_secondary_button_label": {
+      "field": "default_secondary_button_label",
+      "value": "Записаться",
+      "hash": "e191a6a93b68e9c678ca887858bdade10da52e4a9e1abf44bc7fd3db854c81ce",
+      "empty": false
+    },
+    "default_consent_text_reference": {
+      "field": "default_consent_text_reference",
+      "value": null,
+      "hash": "empty",
+      "empty": true
+    },
+    "global_cta_title": {
+      "field": "global_cta_title",
+      "value": "Остались вопросы?",
+      "hash": "7049984059f87bd23631d1fcb9702e78ba46373c47d448c520a5a424d67a0f82",
+      "empty": false
+    },
+    "global_cta_text": {
+      "field": "global_cta_text",
+      "value": "Опишите вашу ситуацию в форме заявки, и мы расскажем, как сможем помочь",
+      "hash": "2a115162fe554d2507e31325547ae96df9a9743bab92cc241d6e052774f7b134",
+      "empty": false
+    }
+  },
+  "result": "PASS",
+  "resume_phase": "V9-06D8-A-RESUME"
+}

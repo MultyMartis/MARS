@@ -1,0 +1,27 @@
+{
+  "phase": "V9-06D8-A-RESUME",
+  "generated_at": "2026-07-04T20:33:00+00:00",
+  "checkpoint_root": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d8a-site-options-seed-pre-20260705-033228",
+  "checkpoint_dump": "mars_wp_fp0002.sql",
+  "changed_options": [
+    "organisation_name",
+    "phone_primary",
+    "phone_secondary",
+    "site_email",
+    "site_address",
+    "opening_hours",
+    "default_callback_title",
+    "default_button_label",
+    "default_secondary_button_label",
+    "global_cta_title",
+    "global_cta_text"
+  ],
+  "old_values_captured": true,
+  "old_values_state": "empty for all changed fields at checkpoint",
+  "per_field_rollback": "update_field(field, null|empty, 'option') or restore from checkpoint dump",
+  "full_db_rollback": "mysql import mars_wp_fp0002.sql from checkpoint root",
+  "post_rollback_validation": "seven-route smoke + options verification + object count check",
+  "rollback_tested": false,
+  "rollback_not_executed_reason": "Seed succeeded; site healthy; rollback not required",
+  "result": "PASS"
+}
