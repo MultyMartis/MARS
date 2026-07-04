@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-05 (V9-06D8-E Contacts Content Seed COMPLETE)
+**Last updated:** 2026-07-05 (V9-06D8-G Post-Seed QA COMPLETE)
 
-**Current WordPress phase:** V9-06D8-E Contacts Content Seed **COMPLETE (PASS)** — 3 ACF writes on page #20 (`contacts_form_intro`, `contacts_address`, `contacts_blocks`) from V9 static; route smoke ALL_200; contacts visual smoke PASS. Next: D8-G post-seed QA. Report: `WORDPRESS/reports/FP-0002-V9-06D8E-CONTACTS-CONTENT-SEED-REPORT-v1.md`.
+**Current WordPress phase:** V9-06D8-G Post-Seed QA **COMPLETE (PARTIAL PASS)** — read-only QA after D8-A…E; route matrix ALL_200; ACF integrity PASS; visual smoke PASS; readiness **READY_FOR_OPERATOR_VISUAL_REVIEW**. Next: operator visual review at `http://shpigovsky.test/`. Report: `WORDPRESS/reports/FP-0002-V9-06D8G-POST-SEED-QA-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

@@ -1,0 +1,515 @@
+{
+  "phase": "V9-06D8-G",
+  "generated_at": "2026-07-04T21:33:27+00:00",
+  "scopes": [
+    {
+      "scope": "D8-A Site Options",
+      "field": "organisation_name",
+      "expected_state": "seeded",
+      "actual_state": "populated",
+      "classification": "LOCAL_MVP_PLACEHOLDER",
+      "empty": false,
+      "row_count": 1,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-A Site Options",
+      "field": "phone_primary",
+      "expected_state": "seeded",
+      "actual_state": "populated",
+      "classification": "LOCAL_MVP_PLACEHOLDER",
+      "empty": false,
+      "row_count": 1,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-A Site Options",
+      "field": "phone_secondary",
+      "expected_state": "seeded",
+      "actual_state": "populated",
+      "classification": "LOCAL_MVP_PLACEHOLDER",
+      "empty": false,
+      "row_count": 1,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-A Site Options",
+      "field": "site_email",
+      "expected_state": "seeded",
+      "actual_state": "populated",
+      "classification": "LOCAL_MVP_PLACEHOLDER",
+      "empty": false,
+      "row_count": 1,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-A Site Options",
+      "field": "site_address",
+      "expected_state": "seeded",
+      "actual_state": "populated",
+      "classification": "LOCAL_MVP_PLACEHOLDER",
+      "empty": false,
+      "row_count": 1,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-A Site Options",
+      "field": "opening_hours",
+      "expected_state": "seeded",
+      "actual_state": "populated",
+      "classification": "LOCAL_MVP_PLACEHOLDER",
+      "empty": false,
+      "row_count": 1,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-A Site Options",
+      "field": "default_callback_title",
+      "expected_state": "seeded",
+      "actual_state": "populated",
+      "classification": "LOCAL_MVP_PLACEHOLDER",
+      "empty": false,
+      "row_count": 1,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-A Site Options",
+      "field": "default_button_label",
+      "expected_state": "seeded",
+      "actual_state": "populated",
+      "classification": "LOCAL_MVP_PLACEHOLDER",
+      "empty": false,
+      "row_count": 1,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-A Site Options",
+      "field": "default_secondary_button_label",
+      "expected_state": "seeded",
+      "actual_state": "populated",
+      "classification": "LOCAL_MVP_PLACEHOLDER",
+      "empty": false,
+      "row_count": 1,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-A Site Options",
+      "field": "global_cta_title",
+      "expected_state": "seeded",
+      "actual_state": "populated",
+      "classification": "LOCAL_MVP_PLACEHOLDER",
+      "empty": false,
+      "row_count": 1,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-A Site Options",
+      "field": "global_cta_text",
+      "expected_state": "seeded",
+      "actual_state": "populated",
+      "classification": "LOCAL_MVP_PLACEHOLDER",
+      "empty": false,
+      "row_count": 1,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-A Site Options",
+      "field": "map_link",
+      "expected_state": "skipped",
+      "actual_state": "empty",
+      "classification": "SKIPPED_EXPECTED",
+      "empty": true,
+      "row_count": 0,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-A Site Options",
+      "field": "social_links",
+      "expected_state": "skipped",
+      "actual_state": "empty",
+      "classification": "SKIPPED_EXPECTED",
+      "empty": true,
+      "row_count": 0,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-A Site Options",
+      "field": "legal_org_identifiers",
+      "expected_state": "skipped",
+      "actual_state": "empty",
+      "classification": "SKIPPED_EXPECTED",
+      "empty": true,
+      "row_count": 0,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-A Site Options",
+      "field": "default_callback_text",
+      "expected_state": "skipped",
+      "actual_state": "empty",
+      "classification": "SKIPPED_EXPECTED",
+      "empty": true,
+      "row_count": 0,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-A Site Options",
+      "field": "default_consent_text_reference",
+      "expected_state": "skipped",
+      "actual_state": "empty",
+      "classification": "SKIPPED_EXPECTED",
+      "empty": true,
+      "row_count": 0,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-B Home #4",
+      "field": "home_advantages",
+      "expected_state": "seeded",
+      "actual_state": "populated_repeater_6",
+      "classification": "STATIC_V9_CONTENT",
+      "empty": false,
+      "row_count": 6,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-B Home #4",
+      "field": "home_faq_items",
+      "expected_state": "seeded",
+      "actual_state": "populated_repeater_5",
+      "classification": "STATIC_V9_CONTENT",
+      "empty": false,
+      "row_count": 5,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-B Home #4",
+      "field": "home_hero_slides",
+      "expected_state": "retained",
+      "actual_state": "populated",
+      "classification": "EXISTING_SAFE_VALUE",
+      "empty": false,
+      "row_count": 1,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-B Home #4",
+      "field": "home_gallery_media",
+      "expected_state": "skipped",
+      "actual_state": "empty",
+      "classification": "SKIPPED_EXPECTED",
+      "empty": true,
+      "row_count": 0,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-B Home #4",
+      "field": "home_reviews_teaser",
+      "expected_state": "skipped",
+      "actual_state": "empty",
+      "classification": "SKIPPED_EXPECTED",
+      "empty": true,
+      "row_count": 0,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-B Home #4",
+      "field": "home_intro_bands",
+      "expected_state": "skipped",
+      "actual_state": "empty",
+      "classification": "SKIPPED_EXPECTED",
+      "empty": true,
+      "row_count": 0,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-C Service #73",
+      "field": "programme_items",
+      "expected_state": "seeded",
+      "actual_state": "populated_repeater_4",
+      "classification": "STATIC_V9_CONTENT",
+      "empty": false,
+      "row_count": 4,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-C Service #73",
+      "field": "stages",
+      "expected_state": "seeded",
+      "actual_state": "populated_repeater_4",
+      "classification": "STATIC_V9_CONTENT",
+      "empty": false,
+      "row_count": 4,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-C Service #73",
+      "field": "faq_items",
+      "expected_state": "seeded",
+      "actual_state": "populated_repeater_5",
+      "classification": "STATIC_V9_CONTENT",
+      "empty": false,
+      "row_count": 5,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-C Service #77",
+      "field": "programme_items",
+      "expected_state": "seeded",
+      "actual_state": "populated_repeater_4",
+      "classification": "STATIC_V9_CONTENT",
+      "empty": false,
+      "row_count": 4,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-C Service #77",
+      "field": "stages",
+      "expected_state": "seeded",
+      "actual_state": "populated_repeater_4",
+      "classification": "STATIC_V9_CONTENT",
+      "empty": false,
+      "row_count": 4,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-C Service #77",
+      "field": "faq_items",
+      "expected_state": "seeded",
+      "actual_state": "populated_repeater_5",
+      "classification": "STATIC_V9_CONTENT",
+      "empty": false,
+      "row_count": 5,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-C Service #84",
+      "field": "programme_items",
+      "expected_state": "seeded",
+      "actual_state": "populated_repeater_4",
+      "classification": "STATIC_V9_CONTENT",
+      "empty": false,
+      "row_count": 4,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-C Service #84",
+      "field": "stages",
+      "expected_state": "seeded",
+      "actual_state": "populated_repeater_4",
+      "classification": "STATIC_V9_CONTENT",
+      "empty": false,
+      "row_count": 4,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-C Service #84",
+      "field": "faq_items",
+      "expected_state": "seeded",
+      "actual_state": "populated_repeater_5",
+      "classification": "STATIC_V9_CONTENT",
+      "empty": false,
+      "row_count": 5,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-C Service #74",
+      "field": "programme_items",
+      "expected_state": "seeded",
+      "actual_state": "populated_repeater_4",
+      "classification": "STATIC_V9_CONTENT",
+      "empty": false,
+      "row_count": 4,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-C Service #74",
+      "field": "stages",
+      "expected_state": "seeded",
+      "actual_state": "populated_repeater_4",
+      "classification": "STATIC_V9_CONTENT",
+      "empty": false,
+      "row_count": 4,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-C Service #74",
+      "field": "faq_items",
+      "expected_state": "seeded",
+      "actual_state": "populated_repeater_5",
+      "classification": "STATIC_V9_CONTENT",
+      "empty": false,
+      "row_count": 5,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-C Service #74",
+      "field": "intro_note",
+      "expected_state": "seeded",
+      "actual_state": "populated",
+      "classification": "STATIC_V9_CONTENT",
+      "empty": false,
+      "row_count": 1,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-C Service #74",
+      "field": "signs_items",
+      "expected_state": "seeded",
+      "actual_state": "populated_repeater_9",
+      "classification": "STATIC_V9_CONTENT",
+      "empty": false,
+      "row_count": 9,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-C Service #73",
+      "field": "hero_lead",
+      "expected_state": "skipped_or_d4_retained",
+      "actual_state": "populated",
+      "classification": "EXISTING_SAFE_VALUE",
+      "empty": false,
+      "row_count": 1,
+      "result": "PASS",
+      "note": "D8-C did not write hero_lead; populated values are D4 minimal seed retained"
+    },
+    {
+      "scope": "D8-C Service #74",
+      "field": "hero_lead",
+      "expected_state": "skipped_or_d4_retained",
+      "actual_state": "populated",
+      "classification": "EXISTING_SAFE_VALUE",
+      "empty": false,
+      "row_count": 1,
+      "result": "PASS",
+      "note": "D8-C did not write hero_lead; populated values are D4 minimal seed retained"
+    },
+    {
+      "scope": "D8-C Service #77",
+      "field": "hero_lead",
+      "expected_state": "skipped_or_d4_retained",
+      "actual_state": "populated",
+      "classification": "EXISTING_SAFE_VALUE",
+      "empty": false,
+      "row_count": 1,
+      "result": "PASS",
+      "note": "D8-C did not write hero_lead; populated values are D4 minimal seed retained"
+    },
+    {
+      "scope": "D8-C Service #84",
+      "field": "hero_lead",
+      "expected_state": "skipped_or_d4_retained",
+      "actual_state": "populated",
+      "classification": "EXISTING_SAFE_VALUE",
+      "empty": false,
+      "row_count": 1,
+      "result": "PASS",
+      "note": "D8-C did not write hero_lead; populated values are D4 minimal seed retained"
+    },
+    {
+      "scope": "D8-D Hub #5",
+      "field": "services_hub_intro",
+      "expected_state": "seeded",
+      "actual_state": "populated",
+      "classification": "STATIC_V9_CONTENT",
+      "empty": false,
+      "row_count": 1,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-D Hub #5",
+      "field": "services_hub_faq_items",
+      "expected_state": "seeded",
+      "actual_state": "populated_repeater_5",
+      "classification": "STATIC_V9_CONTENT",
+      "empty": false,
+      "row_count": 5,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-D Hub #5",
+      "field": "services_hub_query_mode",
+      "expected_state": "unchanged",
+      "actual_state": "populated",
+      "classification": "EXISTING_SAFE_VALUE",
+      "empty": false,
+      "row_count": 1,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-D Hub #5",
+      "field": "services_hub_show_placeholders",
+      "expected_state": "unchanged",
+      "actual_state": "populated",
+      "classification": "EXISTING_SAFE_VALUE",
+      "empty": false,
+      "row_count": 1,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-E Contacts #20",
+      "field": "contacts_form_intro",
+      "expected_state": "seeded",
+      "actual_state": "populated",
+      "classification": "STATIC_V9_CONTENT",
+      "empty": false,
+      "row_count": 1,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-E Contacts #20",
+      "field": "contacts_address",
+      "expected_state": "seeded",
+      "actual_state": "populated",
+      "classification": "STATIC_V9_CONTENT",
+      "empty": false,
+      "row_count": 1,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-E Contacts #20",
+      "field": "contacts_blocks",
+      "expected_state": "seeded",
+      "actual_state": "populated_repeater_2",
+      "classification": "STATIC_V9_CONTENT",
+      "empty": false,
+      "row_count": 2,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-E Contacts #20",
+      "field": "contacts_map_url",
+      "expected_state": "skipped",
+      "actual_state": "empty",
+      "classification": "SKIPPED_EXPECTED",
+      "empty": true,
+      "row_count": 0,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-E Contacts #20",
+      "field": "contacts_messengers",
+      "expected_state": "skipped",
+      "actual_state": "empty",
+      "classification": "SKIPPED_EXPECTED",
+      "empty": true,
+      "row_count": 0,
+      "result": "PASS"
+    },
+    {
+      "scope": "D8-E Contacts #20",
+      "field": "contacts_phones",
+      "expected_state": "skipped_or_existing",
+      "actual_state": "populated_repeater_1",
+      "classification": "EXISTING_SAFE_VALUE",
+      "empty": false,
+      "row_count": 1,
+      "result": "PASS",
+      "note": "D8-E skipped contacts_phones write; canonical phones remain in Site Options"
+    }
+  ],
+  "unexpected_empty": [],
+  "unexpected_mutation": [],
+  "partial": [],
+  "result": "PASS"
+}

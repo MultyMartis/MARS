@@ -1,0 +1,64 @@
+{
+  "phase": "V9-06D8-G",
+  "generated_at": "2026-07-04T21:33:00.318516Z",
+  "objects": [
+    {
+      "id": 4,
+      "exists": true,
+      "type": "page",
+      "status": "publish",
+      "slug": "glavnaya",
+      "route": "/"
+    },
+    {
+      "id": 5,
+      "exists": true,
+      "type": "page",
+      "status": "publish",
+      "slug": "uslugi",
+      "route": "/uslugi/"
+    },
+    {
+      "id": 20,
+      "exists": true,
+      "type": "page",
+      "status": "publish",
+      "slug": "kontakty",
+      "route": "/kontakty/"
+    },
+    {
+      "id": 73,
+      "exists": true,
+      "type": "service",
+      "status": "publish",
+      "slug": "zavisimosti",
+      "route": "/uslugi/zavisimosti/"
+    },
+    {
+      "id": 74,
+      "exists": true,
+      "type": "service",
+      "status": "publish",
+      "slug": "lechenie-alkogolnoy-zavisimosti",
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+    },
+    {
+      "id": 77,
+      "exists": true,
+      "type": "service",
+      "status": "publish",
+      "slug": "psihicheskoe-zdorovie",
+      "route": "/uslugi/psihicheskoe-zdorovie/"
+    },
+    {
+      "id": 84,
+      "exists": true,
+      "type": "service",
+      "status": "publish",
+      "slug": "rasstroystva-pischevogo-povedeniya",
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/"
+    }
+  ],
+  "all_exist": true,
+  "result": "PASS"
+}

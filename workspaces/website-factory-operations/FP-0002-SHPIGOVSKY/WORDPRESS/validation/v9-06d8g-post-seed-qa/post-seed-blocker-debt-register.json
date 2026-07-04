@@ -1,0 +1,76 @@
+{
+  "phase": "V9-06D8-G",
+  "generated_at": "2026-07-04T21:33:00.318516Z",
+  "items": [
+    {
+      "item": "Map URL missing (options map_link + contacts_map_url)",
+      "class": "OPERATOR_DATA_REQUIRED",
+      "blocks_visual_review": false,
+      "blocks_production": true,
+      "owner_action": "Operator supplies map URL in D8-F or later"
+    },
+    {
+      "item": "Messenger/social URLs missing",
+      "class": "OPERATOR_DATA_REQUIRED",
+      "blocks_visual_review": false,
+      "blocks_production": true,
+      "owner_action": "Operator fills social_links + contacts_messengers"
+    },
+    {
+      "item": "Legal identifiers missing",
+      "class": "OPERATOR_DATA_REQUIRED",
+      "blocks_visual_review": false,
+      "blocks_production": true,
+      "owner_action": "Legal review + options seed"
+    },
+    {
+      "item": "Hero/service/gallery media missing",
+      "class": "MEDIA_REQUIRED",
+      "blocks_visual_review": false,
+      "blocks_production": true,
+      "owner_action": "Separate media upload wave"
+    },
+    {
+      "item": "FAQ copy technical placeholders",
+      "class": "CONTENT_REVIEW",
+      "blocks_visual_review": false,
+      "blocks_production": false,
+      "owner_action": "Olga content review"
+    },
+    {
+      "item": "Service 74 medical copy review",
+      "class": "CONTENT_REVIEW",
+      "blocks_visual_review": false,
+      "blocks_production": true,
+      "owner_action": "Clinical operator review"
+    },
+    {
+      "item": "English ACF labels/help",
+      "class": "ADMIN_UX_DEBT",
+      "blocks_visual_review": false,
+      "blocks_production": false,
+      "owner_action": "D8-F Admin UX Repair"
+    },
+    {
+      "item": "Developer-only fields visible to Olga",
+      "class": "ADMIN_UX_DEBT",
+      "blocks_visual_review": false,
+      "blocks_production": false,
+      "owner_action": "D8-F hide/explain query_mode, layout_variant"
+    },
+    {
+      "item": "Genotyping/founder/comfort/specialists/reviews deferred",
+      "class": "DEFER_AFTER_MVP",
+      "blocks_visual_review": false,
+      "blocks_production": false,
+      "owner_action": "Post-MVP shared blocks"
+    },
+    {
+      "item": "Page 6 / Service 73 path collision debt",
+      "class": "TECH_DEBT_NON_BLOCKING",
+      "blocks_visual_review": false,
+      "blocks_production": false,
+      "owner_action": "Path ownership cleanup later"
+    }
+  ]
+}
