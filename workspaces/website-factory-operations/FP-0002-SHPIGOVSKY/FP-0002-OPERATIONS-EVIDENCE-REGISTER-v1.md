@@ -73,8 +73,9 @@ Validation evidence is an **audit/validation chain**, not proof of production de
 | D.5 | `v9-06d5-visual-route-qa` | PARTIAL PASS | validation reads | QA evidence | **NO** | Visual QA partial; no-runtime-mutation suites PASS |
 | D.6 | `v9-06d6-template-integration-planning` | PASS | 0 | planning | NO | Template integration **planning** complete |
 | D.7-A | `v9-06d7a-global-shell-asset-source` | PASS (`global_shell_asset_source: COMPLETE`) | **NOT PERFORMED** | source-only | **NO** | `runtime_delivery: NOT_PERFORMED` — source packaging only |
+| D.7-B | `v9-06d7b-home-template-source` + `v9-06d7b-runtime-delivery` | PASS | YES — local theme files only; prior evidence-recorded action | VALIDATION_EVIDENCE_LOCAL_RUNTIME | **NO** | `home_template_source: COMPLETE` @ `c006edeb`; `runtime_delivery: PERFORMED` @ `3d42853a`; target `X:\MARS-Localhost\...\wp-content\themes\shpigovsky\`; apply 1 ADD / 11 MODIFY / 442 SAME / 0 DELETE; hash 454/454 PASS; routes smoke PASS; DB/content/ACF writes **0**; forbidden roots unchanged; checkpoint recorded; operator approval **SAFE UNKNOWN** |
 
-**Delivery claim rules encoded:** BLOCKED = NO; PARTIAL PASS = NO; PASS planning/source-only = NO; D.1 rerun COMPLETE = NO; D.7-A = NO (`runtime_delivery NOT_PERFORMED`).
+**Delivery claim rules encoded:** BLOCKED = NO; PARTIAL PASS = NO; PASS planning/source-only = NO; D.1 rerun COMPLETE = NO; D.7-A = NO (`runtime_delivery NOT_PERFORMED`); D.7-B = NO (local bounded theme delivery evidence only; not production / not go-live / not remote CMS).
 
 *Observed verdicts from `final-verdict.json` / suite summaries where present; Pre-D b2/c rows from collection/generation artifacts.*
 
@@ -153,6 +154,11 @@ This register **does not** establish or imply:
 - V7/V8 as current authority
 - BLOCKED or PARTIAL PASS as success
 - D7-A global-shell **runtime delivery** (source task explicitly `NOT_PERFORMED`)
+- D7-B **production** WordPress deployment, client-facing go-live, or remote/live CMS status (local theme evidence only @ `3d42853a`)
+- D7-B autonomous Forge runtime execution or WPilot ownership transfer
+- D7-B Storage or INCOMING mutation
+- D7-B DB/content/ACF writes (evidence-recorded: **0** @ `3d42853a`)
+- D7-B Localhost activity as **prior evidence-recorded** action; **this register update performs no Localhost mutation**
 - Storage policy resolution for INCOMING large binaries
 - Cleanup authorization for temp/noise clusters
 - Validity or exposure of secrets/credentials in INCOMING access slots
@@ -168,6 +174,7 @@ Possible future operator waves only — **not executed by this register**:
 3. Forge 05C dirty receipt cluster — remain **LEAVE_DIRTY_LOCAL** unless separately chartered
 4. Cleanup charter for `REPORTS/_fig_*` temp/noise after operator policy
 5. Runtime delivery as a **separate operator-approved wave** (distinct from source/planning PASS)
+6. Formal D7-B operator approval closure remains optional/future because parent context classified approval status as **SAFE UNKNOWN** while accepting `3d42853a` content as E4 evidence
 
 ---
 
@@ -176,3 +183,4 @@ Possible future operator waves only — **not executed by this register**:
 | Date | Wave | Change |
 |---|---|---|
 | 2026-07-05 | MASTER-16G | Initial evidence register created from MASTER-16F design; no runtime/storage/git claims. |
+| 2026-07-05 | MASTER-16L | Added D7-B local home template runtime evidence row after `3d42853a`; preserved no-production/no-go-live/non-remote claims and approval SAFE UNKNOWN. |
