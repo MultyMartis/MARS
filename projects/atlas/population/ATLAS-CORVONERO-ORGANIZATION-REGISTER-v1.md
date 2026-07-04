@@ -17,8 +17,8 @@
 | Wave tier CORV | **1** |
 | Classification i-SEO client | **1** |
 | Lifecycle **active** | **1** (ORG-0009) |
-| Legal entity **active** *(E0)* | **1** (LE-0006) |
-| Attestation | **Complete** — AT-CORV-ORG-01 |
+| Legal entity **active** *(E0 requisites-enriched)* | **1** (LE-0006) |
+| Attestation | **Complete** — AT-CORV-ORG-01; LE requisites **AT-CORV-LE-01** |
 
 ---
 
@@ -32,11 +32,11 @@
 
 ## 3. Legal entity index
 
-| legal_entity_id | legal_name | legal_form | inn | kpp | ogrn_ogrnip | registration_date | lifecycle_state | org_id | evidence_tier | attestation_ref | completeness |
-|-----------------|------------|------------|-----|-----|-------------|-------------------|-----------------|--------|---------------|-----------------|--------------|
-| LE-0006 | ИП Никифоров Роман Вадимович | **ИП** | 540200831636 | **N/A** *(ИП)* | 324547600100482 | 2024-06-14 | **active** | ORG-0009 | **E0** | AT-CORV-ORG-01 | **partial** — operator intake only; no CC; no E2 registry extract |
+| legal_entity_id | legal_name | legal_form | jurisdiction | inn | kpp | ogrn_ogrnip | registration_date | legal_address | actual_address | settlement_account | correspondent_account | bik | lifecycle_state | org_id | evidence_tier | attestation_ref | completeness |
+|-----------------|------------|------------|--------------|-----|-----|-------------|-------------------|---------------|----------------|--------------------|-----------------------|-----|-----------------|--------|---------------|-----------------|--------------|
+| LE-0006 | ИП Никифоров Роман Вадимович | **ИП** *(individual_entrepreneur)* | **RU** | 540200831636 | **N/A** *(ИП)* | 324547600100482 | 2024-06-14 | г. Новосибирск, Новосибирская обл., улица Дачная, д. 23/5, кв./оф. 224 | г. Новосибирск, Новосибирская обл., улица Дачная, д. 23/5, кв./оф. 224 | 40802810023400007687 | 30101810600000000774 | 045004774 | **active** | ORG-0009 | **E0** | AT-CORV-ORG-01; **AT-CORV-LE-01** | **partial** — E0 requisites enriched (addresses + banking); bank name, tax system, registration authority, signatory contacts **SAFE UNKNOWN** |
 
-**Note:** LE-0001..0005 attested in prior waves. LE-0006 minted for Corvonero at **E0** — identifiers from operator-confirmed intake; legal-entity **status** beyond recorded fields **not** attested.
+**Note:** LE-0001..0005 attested in prior waves. LE-0006 minted for Corvonero at org intake **2026-06-21** (**AT-CORV-ORG-01**); requisites enriched **2026-06-29** (**AT-CORV-LE-01**, **EV-CORV-OP-REQ-01**). Canonical LE roster: [ATLAS-CORVONERO-LEGAL-ENTITY-REGISTER-v1.md](ATLAS-CORVONERO-LEGAL-ENTITY-REGISTER-v1.md).
 
 ---
 
@@ -103,4 +103,4 @@
 
 ---
 
-*ATLAS Corvonero Organization Register v1 — ORG-0009 **active**; LE-0006 **active** (E0 partial).*
+*ATLAS Corvonero Organization Register v1 — ORG-0009 **active**; LE-0006 **active** (E0 requisites-enriched partial; AT-CORV-LE-01).*

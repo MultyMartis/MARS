@@ -90,9 +90,20 @@
 
 | Field | Value |
 |-------|-------|
-| Legal form | ИП |
-| Completeness | **partial** — E0 operator intake; no CC; no E2 extract |
+| Legal form | **individual_entrepreneur** *(ИП)* |
+| Jurisdiction | **RU** |
+| INN / OGRNIP | 540200831636 / 324547600100482 |
+| Legal address | г. Новосибирск, Новосибирская обл., улица Дачная, д. 23/5, кв./оф. 224 |
+| Actual address | *(same as legal_address)* |
+| Settlement account | 40802810023400007687 |
+| Correspondent account | 30101810600000000774 |
+| BIK | 045004774 |
+| Evidence tier | **E0** — EV-CORV-OP-REQ-01 |
+| Attestation | **AT-CORV-LE-01** *(2026-06-29 requisites pass)* |
+| Completeness | **partial** — E0 requisites enriched; bank name, tax system, registration authority, signatory contacts **SAFE UNKNOWN** |
 | Lifecycle | **active** |
+
+**Post-registration sync:** Requisites population documented in [ATLAS-CORVONERO-LEGAL-ENTITY-REGISTER-v1.md](../population/ATLAS-CORVONERO-LEGAL-ENTITY-REGISTER-v1.md); documentation sync [ATLAS-CORVONERO-LEGAL-ENTITY-DOCUMENTATION-SYNC-v1.md](../audit/ATLAS-CORVONERO-LEGAL-ENTITY-DOCUMENTATION-SYNC-v1.md).
 
 ### 4.3 Project — PRJ-0013
 
