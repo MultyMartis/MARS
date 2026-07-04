@@ -68,7 +68,7 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 
 | Bucket | Reality |
 |--------|---------|
-| **operational** | Human/Cursor methodology: workflow v0, runbook, OPERATIONAL-INDEX, agent cards (roles), HITL, Forge overlay pointers. |
+| **operational** | Human/Cursor methodology: workflow v0, runbook, OPERATIONAL-INDEX, agent cards (roles), HITL, Forge overlay pointers; **consumes** ORCA-RS-001 research publications — does **not** own Executive Research Publication. |
 | **conceptual** | Seven-layer story, artifact bus, validation **models**, semantic object vocabulary. |
 | **documentation-only** | ~258 markdown files; governance triads; **no** in-pack execution engine. |
 | **external** | Production HTML/SCSS in operator workspaces and customer hosting — **outside** pack SoT. |
@@ -78,7 +78,7 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 
 **Forge WordPress (subsystem):** **FOUNDATION** — WordPress implementation layer candidate; [subsystems/forge-wordpress/](../projects/mars-website-factory/subsystems/forge-wordpress/); **not** operational · **not** runtime · **not** registered agent.
 
-**SoT:** [../projects/mars-website-factory/README.md](../projects/mars-website-factory/README.md) · [OPERATIONAL-INDEX.md](../projects/mars-website-factory/OPERATIONAL-INDEX.md) · registry `mars-website-factory` (**planned**)
+**SoT:** [../projects/mars-website-factory/README.md](../projects/mars-website-factory/README.md) · [OPERATIONAL-INDEX.md](../projects/mars-website-factory/OPERATIONAL-INDEX.md) · research consumer: [ORCA-RS-001](../projects/orca/standards/ORCA-RS-001-EXECUTIVE-RESEARCH-PUBLICATION-STANDARD-v1.md) · registry `mars-website-factory` (**planned**)
 
 ---
 
@@ -145,14 +145,14 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 
 | Bucket | Reality |
 |--------|---------|
-| **operational** | Human-supervised PPC toolkit: methodology, checklists, fast-path, live pilots under `projects/orca/`. |
+| **operational** | Human-supervised PPC toolkit: methodology, checklists, fast-path, live pilots under `projects/orca/`; **ORCA-RS-001** Executive Research Publication Standard (research completion gate). |
 | **conceptual** | Heuristics, semantic rules, report templates. |
 | **external** | Ad platforms, SERP UI, customer landing pages. |
 | **documentation-only** | Dense pack (~800+ md) — **workflow support**, not automation. |
 
 **Not:** bidding engine, scheduler, validator daemon, MARS runtime component.
 
-**SoT:** [../projects/orca/README.md](../projects/orca/README.md) · [OPERATIONAL-INDEX.md](../projects/orca/OPERATIONAL-INDEX.md) · registry **active**, runtime **excluded**
+**SoT:** [../projects/orca/README.md](../projects/orca/README.md) · [OPERATIONAL-INDEX.md](../projects/orca/OPERATIONAL-INDEX.md) · [ORCA-RS-001](../projects/orca/standards/ORCA-RS-001-EXECUTIVE-RESEARCH-PUBLICATION-STANDARD-v1.md) · registry **active**, runtime **excluded**
 
 **Search PPC Lifecycle v1 (2026-06-22):** `APPROVED — CHECKPOINTED` (`43c4271`) — [../projects/mars-search-ppc-production/MARS-SEARCH-PPC-PRODUCTION-LIFECYCLE-v1.md](../projects/mars-search-ppc-production/MARS-SEARCH-PPC-PRODUCTION-LIFECYCLE-v1.md). Wave 1 core **APPROVED — CHECKPOINTED** (`2b3020d`). Wave 1.1 entry-point wiring **IMPLEMENTED — OPERATOR REVIEW REQUIRED**. Wave 2 **BLOCKED PENDING WAVE 1.1 REVIEW**. Lifecycle gate + execution receipts implemented; **NOT OPERATIONAL**. Corvonero **FROZEN**; P0-I pilot **DIAGNOSTIC EVIDENCE**; P0-D **ON HOLD**.
 
