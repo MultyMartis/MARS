@@ -51,6 +51,10 @@ Foundation baseline scanned at capture; no secrets detected in theme/plugin sour
 
 Read-only QA PASS after D7-A–D7-E runtime deliveries. Evidence: `validation/v9-06d7f-final-route-qa/`. No runtime/source/DB mutations. Recommended next: D8 content seed planning.
 
+## V9-06D8 content seed planning (2026-07-05)
+
+Planning-only PASS. MVP content gap map, ACF/options field inventory, Olga admin UX plan, seed wave design (D8-A…G), content source map, and future seed mutation safety protocol documented in Git. Live runtime DB inventory unavailable at task time; D7-F and D4 evidence used. No runtime/source/DB/content/ACF/options mutations. Recommended next: D8-A site options seed. Evidence: `validation/v9-06d8-content-seed-planning/`.
+
 ## V9 implementation
 
 V9 frontend HTML/CSS/JS integration is **NOT INCLUDED** in V9-06C. V9 frontend remains under `workspaces/fp-0002-shpigovsky-v9/`.

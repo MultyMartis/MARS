@@ -1,0 +1,233 @@
+{
+  "phase": "V9-06D8",
+  "generated_at": "2026-07-04T20:16:22Z",
+  "waves": [
+    {
+      "wave_id": "D8-A",
+      "name": "Site Options Seed",
+      "purpose": "Populate global contact, CTA, and org fields for header/footer/contacts chrome",
+      "allowed_objects": [
+        "options:fp02-site-settings"
+      ],
+      "allowed_fields": [
+        "organisation_name",
+        "phone_primary",
+        "phone_secondary",
+        "site_email",
+        "site_address",
+        "opening_hours",
+        "map_link",
+        "social_links",
+        "legal_org_identifiers",
+        "default_callback_title",
+        "default_callback_text",
+        "default_button_label",
+        "default_secondary_button_label",
+        "global_cta_title",
+        "global_cta_text"
+      ],
+      "forbidden_writes": [
+        "pages",
+        "services",
+        "posts",
+        "menus",
+        "redirects",
+        "rewrite flush",
+        "media uploads",
+        "objects create/delete"
+      ],
+      "expected_writes": "16 option field values max (partial OK if operator defers legal/social)",
+      "checkpoint_required": true,
+      "dry_run_required": true,
+      "rollback_plan": "Restore options snapshot from pre-wave DB checkpoint",
+      "success_criteria": "Header/footer/contacts show phone/email/hours; no route regression",
+      "estimated_risk": "LOW",
+      "operator_review_gate": true,
+      "recommended": true
+    },
+    {
+      "wave_id": "D8-B",
+      "name": "Home Content Seed",
+      "purpose": "Fill home ACF repeaters for feature grid, FAQ, optional gallery",
+      "allowed_objects": [
+        "page:4"
+      ],
+      "allowed_fields": [
+        "home_advantages",
+        "home_intro_bands",
+        "home_faq_items",
+        "home_gallery_media",
+        "home_hero_slides"
+      ],
+      "forbidden_writes": [
+        "services",
+        "options",
+        "media uploads unless authorized",
+        "object create/delete",
+        "rewrite flush"
+      ],
+      "expected_writes": "Up to 5 ACF fields on page 4",
+      "checkpoint_required": true,
+      "dry_run_required": true,
+      "rollback_plan": "Per-field rollback from D4 baseline hashes where applicable",
+      "success_criteria": "Home optional sections render when seeded; empty sections still omit safely",
+      "estimated_risk": "LOW-MEDIUM",
+      "operator_review_gate": true,
+      "recommended": true
+    },
+    {
+      "wave_id": "D8-C",
+      "name": "Services MVP Content Seed",
+      "purpose": "Expand programme/stages/FAQ on service 74; optional enrichment on 73/77/84",
+      "allowed_objects": [
+        "service:73",
+        "service:74",
+        "service:77",
+        "service:84"
+      ],
+      "allowed_fields": [
+        "intro_text",
+        "signs_items",
+        "programme_items",
+        "stages",
+        "faq_items",
+        "cta_title",
+        "cta_text",
+        "cta_button_label",
+        "hero_lead",
+        "intro_note"
+      ],
+      "forbidden_writes": [
+        "object create/delete",
+        "layout variant change on 74",
+        "rewrite flush",
+        "media unless authorized"
+      ],
+      "expected_writes": "Priority service 74: 3-6 fields; others optional",
+      "checkpoint_required": true,
+      "dry_run_required": true,
+      "rollback_plan": "Restore service meta from checkpoint; preserve D4 minimal_seed markers",
+      "success_criteria": "Service 74 shows programme/stages/FAQ; routes remain 200",
+      "estimated_risk": "MEDIUM",
+      "operator_review_gate": true,
+      "recommended": true
+    },
+    {
+      "wave_id": "D8-D",
+      "name": "Services Hub Content Seed",
+      "purpose": "FAQ and intro polish on services hub page",
+      "allowed_objects": [
+        "page:5"
+      ],
+      "allowed_fields": [
+        "services_hub_intro",
+        "services_hub_faq_items"
+      ],
+      "forbidden_writes": [
+        "services_hub_query_mode",
+        "services_hub_show_placeholders unless operator approves",
+        "CPT changes",
+        "rewrite flush"
+      ],
+      "expected_writes": "1-2 fields on page 5",
+      "checkpoint_required": true,
+      "dry_run_required": true,
+      "rollback_plan": "Restore page 5 ACF from checkpoint",
+      "success_criteria": "Hub FAQ section renders when seeded",
+      "estimated_risk": "LOW",
+      "operator_review_gate": true,
+      "recommended": true
+    },
+    {
+      "wave_id": "D8-E",
+      "name": "Contacts Content Seed",
+      "purpose": "Align contacts page fields with seeded site options; map/messenger rows",
+      "allowed_objects": [
+        "page:20"
+      ],
+      "allowed_fields": [
+        "contacts_messengers",
+        "contacts_blocks",
+        "contacts_map_url",
+        "contacts_phones",
+        "contacts_address"
+      ],
+      "forbidden_writes": [
+        "live form endpoint",
+        "map API keys",
+        "external API",
+        "rewrite flush"
+      ],
+      "expected_writes": "2-5 fields on page 20; depends on D8-A",
+      "checkpoint_required": true,
+      "dry_run_required": true,
+      "rollback_plan": "Restore page 20 ACF from checkpoint",
+      "success_criteria": "Contacts messengers/locations render; form remains static",
+      "estimated_risk": "LOW-MEDIUM",
+      "operator_review_gate": true,
+      "recommended": true,
+      "depends_on": [
+        "D8-A"
+      ]
+    },
+    {
+      "wave_id": "D8-F",
+      "name": "Admin UX Repair (source task)",
+      "purpose": "ACF JSON label/help/reorder improvements for Olga — source change only",
+      "allowed_objects": [],
+      "allowed_fields": [],
+      "forbidden_writes": [
+        "runtime seed in same task",
+        "ACF JSON without source task authorization"
+      ],
+      "expected_writes": "Source ACF JSON + theme admin copy only when authorized",
+      "checkpoint_required": true,
+      "dry_run_required": false,
+      "rollback_plan": "Git revert ACF JSON delivery wave",
+      "success_criteria": "Olga-facing labels Russian; developer fields hidden or read-only",
+      "estimated_risk": "MEDIUM",
+      "operator_review_gate": true,
+      "recommended": false,
+      "note": "Optional parallel track; not blocking D8-A"
+    },
+    {
+      "wave_id": "D8-G",
+      "name": "Post-Seed Runtime QA",
+      "purpose": "Full route/content/visual smoke after seed waves",
+      "allowed_objects": [
+        "read-only QA"
+      ],
+      "allowed_fields": [],
+      "forbidden_writes": [
+        "all mutations unless defect fix separately authorized"
+      ],
+      "expected_writes": 0,
+      "checkpoint_required": false,
+      "dry_run_required": false,
+      "rollback_plan": "N/A",
+      "success_criteria": "D7-F equivalent PASS with reduced EXPECTED gaps",
+      "estimated_risk": "NONE",
+      "operator_review_gate": true,
+      "recommended": true,
+      "depends_on": [
+        "D8-A",
+        "D8-B",
+        "D8-C",
+        "D8-D",
+        "D8-E"
+      ]
+    }
+  ],
+  "execution_order": [
+    "D8-A",
+    "D8-B",
+    "D8-C",
+    "D8-D",
+    "D8-E",
+    "D8-G"
+  ],
+  "parallel_optional": [
+    "D8-F"
+  ],
+  "result": "COMPLETE"
+}

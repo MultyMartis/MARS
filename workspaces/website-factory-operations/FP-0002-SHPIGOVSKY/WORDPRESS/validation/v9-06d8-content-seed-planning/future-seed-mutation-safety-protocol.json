@@ -1,0 +1,21 @@
+{
+  "phase": "V9-06D8",
+  "generated_at": "2026-07-04T20:16:22Z",
+  "required_head_gate": "d257fbe7ee8db4a099b6599e2c7c66fdc326fa21 or successor explicitly named in seed task",
+  "local_remote_sync_gate": "branch mars/canonical-post-recovery; ahead=0 behind=0 before task",
+  "runtime_identity_gate": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky; domain shpigovsky.test; theme shpigovsky; core_mode content_model",
+  "db_checkpoint_before_mutation": true,
+  "object_value_dry_run": true,
+  "exact_allowlist_required": true,
+  "pre_post_value_diff": true,
+  "no_rewrite_flush_unless_authorized": true,
+  "no_object_create_delete_unless_authorized": true,
+  "no_media_upload_unless_authorized": true,
+  "no_plugin_update_install_delete": true,
+  "rollback_instructions": "DB/options/postmeta restore from operator checkpoint; document rollback hashes per field",
+  "evidence_only_in_git": true,
+  "no_db_dumps_in_git": true,
+  "operator_acceptance_after_each_wave": true,
+  "wpilot_write_must_remain_disabled": true,
+  "result": "COMPLETE"
+}

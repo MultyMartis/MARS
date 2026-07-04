@@ -1,0 +1,106 @@
+{
+  "phase": "V9-06D8",
+  "generated_at": "2026-07-04T20:16:22Z",
+  "operator": "Olga",
+  "goal": "Routine content editable in WP admin without developer intervention",
+  "areas": [
+    {
+      "area": "Site Options (fp02-site-settings)",
+      "current": "Registered but empty; mixed EN labels",
+      "improvement": "Seed D8-A values; Russian labels/help in D8-F",
+      "classification": "NEEDS_DEFAULT_SEED",
+      "before_mvp": true
+    },
+    {
+      "area": "Home page ACF",
+      "current": "4 fields seeded; repeaters empty",
+      "improvement": "Section-order tab labels; Russian instructions on repeaters",
+      "classification": "NEEDS_LABEL_HELP_TEXT",
+      "before_mvp": false
+    },
+    {
+      "area": "Services Hub ACF",
+      "current": "Intro seeded; FAQ empty",
+      "improvement": "Hide or read-only query_mode for editors",
+      "classification": "NEEDS_OPERATOR_DECISION",
+      "before_mvp": false
+    },
+    {
+      "area": "Service edit screen",
+      "current": "4 field groups stacked; layout variant required",
+      "improvement": "Collapsible groups by section; lock layout_variant for non-devs",
+      "classification": "NEEDS_FIELD_GROUP_REORDER",
+      "before_mvp": false
+    },
+    {
+      "area": "Contacts page ACF",
+      "current": "Partial seed; overlaps site options",
+      "improvement": "Document single source: phones in Options, page overrides optional",
+      "classification": "NEEDS_LABEL_HELP_TEXT",
+      "before_mvp": true
+    },
+    {
+      "area": "Media fields",
+      "current": "Image fields unseeded",
+      "improvement": "Media library workflow doc for Olga",
+      "classification": "NEEDS_OPERATOR_DECISION",
+      "before_mvp": false
+    },
+    {
+      "area": "Forms / CTAs",
+      "current": "Static form; no endpoint",
+      "improvement": "Keep developer-only until endpoint authorized",
+      "classification": "DEVELOPER_ONLY",
+      "before_mvp": false
+    },
+    {
+      "area": "Legal identifiers",
+      "current": "Empty textarea",
+      "improvement": "Operator-supplied only; flag legal review",
+      "classification": "NEEDS_OPERATOR_DECISION",
+      "before_mvp": false
+    }
+  ],
+  "recommendations": {
+    "edit_in_pages": [
+      "home_* repeaters",
+      "services_hub_intro",
+      "services_hub_faq_items",
+      "contacts_form_intro",
+      "contacts_blocks"
+    ],
+    "edit_in_services": [
+      "hero_lead",
+      "intro_text",
+      "signs_items",
+      "programme_items",
+      "stages",
+      "faq_items",
+      "cta_*"
+    ],
+    "edit_in_site_options": [
+      "phone_primary",
+      "site_email",
+      "site_address",
+      "opening_hours",
+      "social_links",
+      "default_button_label",
+      "global_cta_*"
+    ],
+    "do_not_expose_yet": [
+      "service_layout_variant",
+      "services_hub_query_mode",
+      "manual_related_services",
+      "form endpoint config"
+    ],
+    "developer_only": [
+      "layout variant",
+      "query mode",
+      "rewrite-dependent slugs",
+      "ACF JSON structure"
+    ],
+    "d8_f_required_before_handoff": false,
+    "d8_f_recommended": true
+  },
+  "result": "COMPLETE"
+}

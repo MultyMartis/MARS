@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-05 (V9-06D7-F Final Route QA PASS)
+**Last updated:** 2026-07-05 (V9-06D8 Content Seed Planning PASS)
 
-**Current WordPress phase:** V9-06D7-F Final Route QA PASS (read-only) — D7 wave verified. Next `CREATE_V9_06D8_CONTENT_SEED_PLANNING_TASK`. Report: `WORDPRESS/reports/FP-0002-V9-06D7F-FINAL-ROUTE-QA-REPORT-v1.md`.
+**Current WordPress phase:** V9-06D8 Content Seed Planning PASS (planning-only) — D8 seed waves documented. Next `CREATE_V9_06D8A_SITE_OPTIONS_SEED_TASK`. Report: `WORDPRESS/reports/FP-0002-V9-06D8-CONTENT-SEED-PLANNING-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

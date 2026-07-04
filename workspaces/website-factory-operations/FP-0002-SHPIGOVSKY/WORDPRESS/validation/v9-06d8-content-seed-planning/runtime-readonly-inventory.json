@@ -1,0 +1,134 @@
+{
+  "phase": "V9-06D8",
+  "mode": "READ_ONLY",
+  "generated_at": "2026-07-04T20:16:22Z",
+  "live_inspection": {
+    "attempted": true,
+    "method": "PHP _inventory_readonly.php via wp-load.php",
+    "result": "DB_CONNECTION_FAILED",
+    "note": "Local MySQL unavailable at task time; counts and object IDs from D7-F runtime-identity-qa.json and D4 acf-seed-validation.json"
+  },
+  "evidence_sources": [
+    "validation/v9-06d7f-final-route-qa/runtime-identity-qa.json",
+    "validation/v9-06d4-minimal-content-seed-rerun/acf-seed-validation.json",
+    "validation/v9-06d4-minimal-content-seed-rerun/dry-run-seed-plan.json"
+  ],
+  "identity": {
+    "runtime": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky",
+    "domain": "http://shpigovsky.test/",
+    "active_theme": "shpigovsky",
+    "core_mode": "content_model",
+    "service_cpt_registered": true,
+    "acf_pro_active": true,
+    "acf_groups_count": 13,
+    "wpilot_write_enabled": false
+  },
+  "counts": {
+    "pages": 23,
+    "services": 15,
+    "posts": 1,
+    "menus": 3
+  },
+  "key_object_ids": {
+    "front_page": 4,
+    "services_hub_page": 5,
+    "contacts_page": 20,
+    "service_zavisimosti": 73,
+    "service_alkogol": 74,
+    "service_psych": 77,
+    "service_rpp": 84
+  },
+  "site_options": {
+    "show_on_front": "page",
+    "page_on_front": 4,
+    "options_page_slug": "fp02-site-settings",
+    "options_values_seeded": false,
+    "contacts_group_registered": true,
+    "modal_cta_group_registered": true
+  },
+  "seeded_objects_d4": [
+    {
+      "object_id": 4,
+      "type": "page",
+      "title": "Главная",
+      "path": "/",
+      "acf_nonempty": [
+        "home_hero_slides",
+        "home_service_nav_items",
+        "home_cta_title",
+        "home_cta_text"
+      ]
+    },
+    {
+      "object_id": 5,
+      "type": "page",
+      "title": "Услуги",
+      "path": "/uslugi/",
+      "acf_nonempty": [
+        "services_hub_intro",
+        "services_hub_query_mode",
+        "services_hub_show_placeholders"
+      ]
+    },
+    {
+      "object_id": 20,
+      "type": "page",
+      "title": "Контакты",
+      "path": "/kontakty/",
+      "acf_nonempty": [
+        "contacts_address",
+        "contacts_form_intro",
+        "contacts_phones"
+      ]
+    },
+    {
+      "object_id": 73,
+      "type": "service",
+      "path": "/uslugi/zavisimosti/",
+      "acf_nonempty": [
+        "service_layout_variant",
+        "hero_lead"
+      ]
+    },
+    {
+      "object_id": 74,
+      "type": "service",
+      "path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "acf_nonempty": [
+        "service_layout_variant",
+        "hero_lead",
+        "intro_text",
+        "signs_items"
+      ]
+    },
+    {
+      "object_id": 77,
+      "type": "service",
+      "path": "/uslugi/psihicheskoe-zdorovie/",
+      "acf_nonempty": [
+        "service_layout_variant",
+        "hero_lead"
+      ]
+    },
+    {
+      "object_id": 84,
+      "type": "service",
+      "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "acf_nonempty": [
+        "service_layout_variant",
+        "hero_lead"
+      ]
+    }
+  ],
+  "media_notes": {
+    "contacts_map_png": "Theme static assets expected; runtime uploads not inventoried live",
+    "contacts_rehab_photo": "Theme static fallback in contacts-helpers.php",
+    "hero_images": "home_hero_slides.image and hero_media unseeded; require separate media authorization"
+  },
+  "mutations": {
+    "runtime_content_writes": 0,
+    "database_writes": 0,
+    "wpilot_writes": 0
+  },
+  "result": "PARTIAL_LIVE_DB_UNAVAILABLE_EVIDENCE_FROM_D7F_D4"
+}

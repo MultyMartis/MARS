@@ -2,8 +2,8 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D7-F FINAL ROUTE QA PASS — D7 wave runtime verified read-only
-**Classification:** CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON COMPLETE — MINIMAL VISUAL CONTENT SEEDED — DEPTH-2 REWRITE REPAIRED — VISUAL ROUTE BASELINE READY — V9 GLOBAL SHELL RUNTIME DELIVERED — V9 HOME TEMPLATE RUNTIME DELIVERED — V9 SERVICES HUB TEMPLATE RUNTIME DELIVERED — V9 SERVICE TEMPLATE RUNTIME DELIVERED — V9 CONTACTS TEMPLATE RUNTIME DELIVERED — NEXT D8 CONTENT SEED PLANNING (operator review)
+**Status:** V9-06D8 CONTENT SEED PLANNING PASS — D8 seed waves planned (operator review)
+**Classification:** CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON COMPLETE — MINIMAL VISUAL CONTENT SEEDED — D7 WAVE RUNTIME VERIFIED — D8 CONTENT SEED PLANNING COMPLETE — NEXT D8-A SITE OPTIONS SEED (operator review)
 
 ---
 
@@ -196,3 +196,13 @@ D7-D Service template delivered to local runtime theme only. PHP lint PASS. Chec
 ## V9-06D7-E runtime delivery
 
 D7-E Contacts template delivered to local runtime theme only. PHP lint PASS. Checkpoint + hash match PASS. Seven D.5 routes HTTP 200; `/kontakty/` renders D7-E contacts body, location cards, rehabilitation steps, CTA band (modal-only); map/messengers omitted where expected. Home D7-B, Services Hub D7-C, Service templates 73/74/77/84 stability PASS. No DB/content/ACF/menu/redirect writes. Evidence: `validation/v9-06d7e-runtime-delivery/`. Next: D7-F final route QA (operator review).
+
+
+## V9-06D7-F final route QA (2026-07-05)
+
+Read-only QA PASS after D7-A–D7-E. Seven first-wave routes HTTP 200; Service 74 regression PASS; known gaps EXPECTED_ONLY. No runtime/source/DB mutations. Evidence: `validation/v9-06d7f-final-route-qa/`. Next: D8 content seed planning.
+
+
+## V9-06D8 content seed planning (2026-07-05)
+
+Planning-only: MVP gap map, ACF/options inventory, Olga admin UX plan, seed waves D8-A…G, content source map, mutation safety protocol. Runtime inventory PARTIAL (live DB unavailable; D7-F/D4 evidence used). No runtime/source/DB mutations. Report: `reports/FP-0002-V9-06D8-CONTENT-SEED-PLANNING-REPORT-v1.md`. Evidence: `validation/v9-06d8-content-seed-planning/`. Next: D8-A site options seed (operator review).

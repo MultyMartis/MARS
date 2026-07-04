@@ -1,0 +1,106 @@
+{
+  "phase": "V9-06D8",
+  "generated_at": "2026-07-04T20:16:22Z",
+  "entries": [
+    {
+      "area": "Site Options",
+      "primary_source": "OPERATOR_SUPPLIED_REQUIRED",
+      "v9_reference": "src/pages/kontakty.html, header partial",
+      "operator_needed": true,
+      "media_needed": false,
+      "do_not_seed": [
+        "default_consent_text_reference until legal review"
+      ]
+    },
+    {
+      "area": "Home hero",
+      "primary_source": "V9_STATIC_SOURCE",
+      "v9_reference": "src/pages/index.html hero section",
+      "operator_needed": false,
+      "media_needed": true,
+      "do_not_seed": []
+    },
+    {
+      "area": "Home advantages",
+      "primary_source": "V9_STATIC_SOURCE",
+      "v9_reference": "src/partials/sections/home-why-us.html",
+      "operator_needed": false,
+      "media_needed": false,
+      "do_not_seed": []
+    },
+    {
+      "area": "Home FAQ",
+      "primary_source": "V9_STATIC_SOURCE",
+      "v9_reference": "src/partials/sections/home-faq.html",
+      "operator_needed": false,
+      "media_needed": false,
+      "do_not_seed": []
+    },
+    {
+      "area": "Home gallery",
+      "primary_source": "V9_STATIC_SOURCE",
+      "v9_reference": "src/partials/sections/home-gallery.html",
+      "operator_needed": false,
+      "media_needed": true,
+      "do_not_seed": []
+    },
+    {
+      "area": "Services Hub FAQ",
+      "primary_source": "V9_STATIC_SOURCE",
+      "v9_reference": "src/pages/uslugi-v2.html FAQ block",
+      "operator_needed": false,
+      "media_needed": false,
+      "do_not_seed": []
+    },
+    {
+      "area": "Service 74 content",
+      "primary_source": "V9_STATIC_SOURCE",
+      "v9_reference": "src/pages/usluga-konechnaya-v1.html",
+      "operator_needed": true,
+      "media_needed": true,
+      "do_not_seed": [
+        "invented medical claims"
+      ]
+    },
+    {
+      "area": "Service 73/77/84",
+      "primary_source": "V9_STATIC_SOURCE",
+      "v9_reference": "usluga-podrazdel-v1.html / placeholder pages",
+      "operator_needed": true,
+      "media_needed": false,
+      "do_not_seed": []
+    },
+    {
+      "area": "Contacts",
+      "primary_source": "V9_STATIC_SOURCE",
+      "v9_reference": "src/pages/kontakty.html",
+      "operator_needed": true,
+      "media_needed": true,
+      "do_not_seed": [
+        "live form endpoint"
+      ]
+    },
+    {
+      "area": "Shared blocks (no ACF)",
+      "primary_source": "DO_NOT_SEED",
+      "v9_reference": "theme static partials",
+      "operator_needed": false,
+      "media_needed": false,
+      "do_not_seed": [
+        "founder-quote",
+        "specialists",
+        "genotyping",
+        "comfort",
+        "nature",
+        "team-stats",
+        "landscape",
+        "reviews",
+        "corridor",
+        "bordered-info"
+      ]
+    }
+  ],
+  "v9_static_root": "workspaces/fp-0002-shpigovsky-v9/src/",
+  "v9_dist_root": "workspaces/fp-0002-shpigovsky-v9/dist/",
+  "result": "COMPLETE"
+}

@@ -1,0 +1,255 @@
+{
+  "phase": "V9-06D8",
+  "generated_at": "2026-07-04T20:16:22Z",
+  "classification_source": "D7-F known-gaps + ACF/template analysis",
+  "routes": [
+    {
+      "route": "/",
+      "template": "Home",
+      "object_id": 4,
+      "gaps": {
+        "MUST_SEED_FOR_MVP": [
+          "home_advantages",
+          "home_faq_items"
+        ],
+        "SHOULD_SEED_FOR_VISUAL_RICHNESS": [
+          "home_gallery_media",
+          "home_intro_bands",
+          "home_hero_slides.image"
+        ],
+        "CAN_USE_STATIC_FALLBACK": [
+          "treatment-prevention",
+          "rehabilitation-program"
+        ],
+        "DEFER_AFTER_MVP": [
+          "home_reviews_teaser",
+          "home_blog_teaser_enabled",
+          "founder-quote",
+          "specialists",
+          "genotyping",
+          "comfort"
+        ],
+        "NEEDS_OPERATOR_CONTENT": [
+          "phone_primary via site options",
+          "legal consent references"
+        ],
+        "NEEDS_MEDIA_ASSET": [
+          "home_hero_slides.image",
+          "home_gallery_media.media"
+        ],
+        "NEEDS_ADMIN_UX_REPAIR": [
+          "mixed EN/RU repeater sub-labels"
+        ],
+        "BLOCKED": []
+      },
+      "mvp_blocker": false,
+      "notes": "Route PASS at D7-F with minimal seed; richer MVP needs D8-A options + D8-B repeaters"
+    },
+    {
+      "route": "/uslugi/",
+      "template": "Services Hub",
+      "object_id": 5,
+      "gaps": {
+        "MUST_SEED_FOR_MVP": [],
+        "SHOULD_SEED_FOR_VISUAL_RICHNESS": [
+          "services_hub_faq_items"
+        ],
+        "CAN_USE_STATIC_FALLBACK": [
+          "service_cards from CPT query",
+          "rehabilitation-program"
+        ],
+        "DEFER_AFTER_MVP": [
+          "genotyping hub",
+          "category hero image",
+          "category galleries",
+          "founder/comfort blocks"
+        ],
+        "NEEDS_OPERATOR_CONTENT": [],
+        "NEEDS_MEDIA_ASSET": [
+          "category hero images",
+          "category galleries"
+        ],
+        "NEEDS_ADMIN_UX_REPAIR": [
+          "services_hub_query_mode developer-only labeling"
+        ],
+        "BLOCKED": []
+      },
+      "mvp_blocker": false
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "template": "Service parent",
+      "object_id": 73,
+      "gaps": {
+        "MUST_SEED_FOR_MVP": [],
+        "SHOULD_SEED_FOR_VISUAL_RICHNESS": [
+          "intro_text",
+          "programme_items"
+        ],
+        "CAN_USE_STATIC_FALLBACK": [
+          "children grid from CPT"
+        ],
+        "DEFER_AFTER_MVP": [
+          "nature",
+          "team-stats",
+          "landscape",
+          "specialists",
+          "founder-quote",
+          "comfort",
+          "reviews",
+          "corridor",
+          "bordered-info"
+        ],
+        "NEEDS_OPERATOR_CONTENT": [],
+        "NEEDS_MEDIA_ASSET": [
+          "hero_media"
+        ],
+        "NEEDS_ADMIN_UX_REPAIR": [],
+        "BLOCKED": []
+      },
+      "mvp_blocker": false
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "template": "Service child (alcohol_special)",
+      "object_id": 74,
+      "gaps": {
+        "MUST_SEED_FOR_MVP": [
+          "programme_items",
+          "stages",
+          "faq_items"
+        ],
+        "SHOULD_SEED_FOR_VISUAL_RICHNESS": [
+          "cta_title",
+          "cta_text",
+          "hero_media"
+        ],
+        "CAN_USE_STATIC_FALLBACK": [
+          "approach section partial from programme_items"
+        ],
+        "DEFER_AFTER_MVP": [
+          "shared blocks without ACF fields"
+        ],
+        "NEEDS_OPERATOR_CONTENT": [
+          "medical copy review before production"
+        ],
+        "NEEDS_MEDIA_ASSET": [
+          "hero_media"
+        ],
+        "NEEDS_ADMIN_UX_REPAIR": [],
+        "BLOCKED": []
+      },
+      "mvp_blocker": false,
+      "notes": "Primary regression route; D7-F PASS with signs_items seeded"
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/",
+      "template": "Service parent (placeholder)",
+      "object_id": 77,
+      "gaps": {
+        "MUST_SEED_FOR_MVP": [],
+        "SHOULD_SEED_FOR_VISUAL_RICHNESS": [
+          "intro_text",
+          "signs_items"
+        ],
+        "CAN_USE_STATIC_FALLBACK": [
+          "placeholder notice in template"
+        ],
+        "DEFER_AFTER_MVP": [
+          "full production content"
+        ],
+        "NEEDS_OPERATOR_CONTENT": [
+          "clinical scope copy"
+        ],
+        "NEEDS_MEDIA_ASSET": [],
+        "NEEDS_ADMIN_UX_REPAIR": [],
+        "BLOCKED": []
+      },
+      "mvp_blocker": false
+    },
+    {
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "template": "Service parent (placeholder)",
+      "object_id": 84,
+      "gaps": {
+        "MUST_SEED_FOR_MVP": [],
+        "SHOULD_SEED_FOR_VISUAL_RICHNESS": [
+          "intro_text",
+          "signs_items"
+        ],
+        "CAN_USE_STATIC_FALLBACK": [
+          "placeholder notice"
+        ],
+        "DEFER_AFTER_MVP": [
+          "full production content"
+        ],
+        "NEEDS_OPERATOR_CONTENT": [
+          "clinical scope copy"
+        ],
+        "NEEDS_MEDIA_ASSET": [],
+        "NEEDS_ADMIN_UX_REPAIR": [],
+        "BLOCKED": []
+      },
+      "mvp_blocker": false
+    },
+    {
+      "route": "/kontakty/",
+      "template": "Contacts",
+      "object_id": 20,
+      "gaps": {
+        "MUST_SEED_FOR_MVP": [
+          "site options phone/email/hours",
+          "contacts_messengers or social_links"
+        ],
+        "SHOULD_SEED_FOR_VISUAL_RICHNESS": [
+          "contacts_blocks",
+          "contacts_map_url"
+        ],
+        "CAN_USE_STATIC_FALLBACK": [
+          "map PNG assets in theme",
+          "rehabilitation interior photo",
+          "form markup without endpoint"
+        ],
+        "DEFER_AFTER_MVP": [
+          "live form endpoint",
+          "map API embed"
+        ],
+        "NEEDS_OPERATOR_CONTENT": [
+          "real phone numbers",
+          "messenger URLs",
+          "map link"
+        ],
+        "NEEDS_MEDIA_ASSET": [
+          "map PNG if not in theme dist",
+          "rehabilitation photo upload"
+        ],
+        "NEEDS_ADMIN_UX_REPAIR": [
+          "duplicate phone fields page vs options"
+        ],
+        "BLOCKED": [
+          "live form endpoint — explicit authorization required"
+        ]
+      },
+      "mvp_blocker": false,
+      "notes": "Chrome contact bits empty until D8-A site options seed"
+    }
+  ],
+  "global_gaps": {
+    "site_options_never_seeded": true,
+    "shared_v9_blocks_without_acf": [
+      "founder-quote",
+      "specialists",
+      "genotyping",
+      "comfort",
+      "nature",
+      "team-stats",
+      "landscape",
+      "reviews",
+      "corridor",
+      "bordered-info"
+    ],
+    "media_uploads_not_authorized_in_d8_planning": true
+  },
+  "has_mvp_blockers": false,
+  "result": "COMPLETE"
+}
