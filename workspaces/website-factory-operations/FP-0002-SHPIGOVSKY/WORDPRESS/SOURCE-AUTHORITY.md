@@ -130,6 +130,6 @@ Canonical D7-B home template source delivered to local runtime `wp-content/theme
 Source-only Services Hub integration in `WORDPRESS/theme/shpigovsky/`: V9-compatible hero, CPT-driven category hub groups, rehabilitation program, FAQ, shared final-form; `inc/services-hub-helpers.php`. Theme version `0.5.0-d7c-services-hub`. No runtime delivery, no DB/content/ACF writes, no plugin or V9 src/dist edits. Validation: `validation/v9-06d7c-services-hub-template-source/`. Next: V9-06D7-C runtime delivery task (operator review; not authorized here).
 
 
-## V9-06D7-C runtime delivery
+## V9-06D7-D service template source
 
-Canonical D7-C Services Hub template source delivered to local runtime `wp-content/themes/shpigovsky/` only. Additive/update copy (8 ADD, 2 MODIFY); no deletes; no plugin/core/uploads/ACF JSON changes. Hash match 462/462. Runtime remains deployment target; Git canonical source unchanged post-delivery. Evidence: `validation/v9-06d7c-runtime-delivery/`.
+Source-only Service single integration in `WORDPRESS/theme/shpigovsky/`: V9-compatible subdivision/leaf/alcohol stacks, `inc/service-helpers.php`, ACF layout variant routing with hierarchy/slug fallback, guarded section template-parts. Theme version `0.6.0-d7d-service-templates`. No runtime delivery, no DB/content/ACF writes, no plugin or V9 src/dist edits. Validation: `validation/v9-06d7d-service-template-source/`. Next: V9-06D7-D runtime delivery task (operator review; not authorized here).

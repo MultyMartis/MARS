@@ -1,0 +1,33 @@
+{
+  "task": "V9-06D7-D",
+  "phase": "SERVICE_TEMPLATE_SOURCE",
+  "generated_at": "2026-07-05T01:45:00+07:00",
+  "preflight_head": "131da3c66f4fd49208dfb5aea7122a5b15d3c391",
+  "theme_version": "0.6.0-d7d-service-templates",
+  "scope": {
+    "theme_source": true,
+    "reports": true,
+    "architecture": true,
+    "validation": true,
+    "status_docs": true
+  },
+  "excluded": {
+    "runtime": true,
+    "plugin_source": true,
+    "acf_json": true,
+    "v9_src_dist": true
+  },
+  "evidence_files": [
+    "validation/v9-06d7d-service-template-source/v9-service-template-inventory.json",
+    "validation/v9-06d7d-service-template-source/wp-service-source-inventory.json",
+    "validation/v9-06d7d-service-template-source/service-acf-cpt-binding-inventory.json",
+    "validation/v9-06d7d-service-template-source/service-layout-variant-map.json",
+    "validation/v9-06d7d-service-template-source/service-fallback-behavior-validation.json",
+    "validation/v9-06d7d-service-template-source/service-source-change-manifest.json",
+    "validation/v9-06d7d-service-template-source/php-lint-validation.json",
+    "validation/v9-06d7d-service-template-source/source-safety-scan.json",
+    "validation/v9-06d7d-service-template-source/no-scope-drift-validation.json",
+    "validation/v9-06d7d-service-template-source/final-verdict.json"
+  ],
+  "verdict": "PASS"
+}

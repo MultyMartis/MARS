@@ -1,0 +1,19 @@
+{
+  "task": "V9-06D7-D",
+  "generated_at": "2026-07-05T01:45:00+07:00",
+  "sections": [
+    {"section": "inner-hero", "v9_source": "services-inner-hero-v2", "wp_template_part": "service/inner-hero", "data_source": "ACF_SERVICE_FIELD", "fallback": "POST_FIELD title + STATIC_FROM_V9 labels", "implemented": true, "deferred_reason": ""},
+    {"section": "subnav", "v9_source": "internal-page-nav", "wp_template_part": "service/subnav + components/internal-page-nav", "data_source": "POST_FIELD", "fallback": "STATIC_FROM_V9 anchor labels", "implemented": true, "deferred_reason": ""},
+    {"section": "children", "v9_source": "services-category-section-v2", "wp_template_part": "service/children", "data_source": "SERVICE_CPT_QUERY", "fallback": "OMIT_IF_EMPTY", "implemented": true, "deferred_reason": ""},
+    {"section": "intro", "v9_source": "service-leaf-intro-v1", "wp_template_part": "service/intro", "data_source": "ACF_SERVICE_FIELD", "fallback": "POST_FIELD content", "implemented": true, "deferred_reason": ""},
+    {"section": "mid-cta", "v9_source": "program-cta-band", "wp_template_part": "service/mid-cta + components/program-cta-band", "data_source": "ACF_SERVICE_FIELD", "fallback": "SITE_OPTION phone + STATIC_FROM_V9", "implemented": true, "deferred_reason": ""},
+    {"section": "signs", "v9_source": "service-leaf-signs-v1", "wp_template_part": "service/signs", "data_source": "ACF_SERVICE_FIELD", "fallback": "OMIT_IF_EMPTY", "implemented": true, "deferred_reason": ""},
+    {"section": "program", "v9_source": "services-program-v2", "wp_template_part": "service/program", "data_source": "ACF_SERVICE_FIELD", "fallback": "STATIC_FROM_V9", "implemented": true, "deferred_reason": ""},
+    {"section": "stages", "v9_source": "service-leaf-stages-v1", "wp_template_part": "service/stages", "data_source": "ACF_SERVICE_FIELD", "fallback": "OMIT_IF_EMPTY", "implemented": true, "deferred_reason": ""},
+    {"section": "faq", "v9_source": "faq", "wp_template_part": "service/faq", "data_source": "ACF_SERVICE_FIELD", "fallback": "OMIT_IF_EMPTY", "implemented": true, "deferred_reason": ""},
+    {"section": "final-form", "v9_source": "final-form", "wp_template_part": "components/final-form", "data_source": "SITE_OPTION", "fallback": "STATIC_FROM_V9", "implemented": true, "deferred_reason": ""},
+    {"section": "nature", "v9_source": "service-subdivision-nature-v1", "wp_template_part": "", "data_source": "DEFER_CONTENT_MIGRATION", "fallback": "omit", "implemented": false, "deferred_reason": "No ACF field group"},
+    {"section": "comfort", "v9_source": "comfort", "wp_template_part": "service/comfort", "data_source": "DEFER_CONTENT_MIGRATION", "fallback": "omit", "implemented": false, "deferred_reason": "Shared block wave not in D7-D"},
+    {"section": "specialists", "v9_source": "specialists", "wp_template_part": "", "data_source": "DEFER_CONTENT_MIGRATION", "fallback": "omit", "implemented": false, "deferred_reason": "Shared block wave not in D7-D"}
+  ]
+}

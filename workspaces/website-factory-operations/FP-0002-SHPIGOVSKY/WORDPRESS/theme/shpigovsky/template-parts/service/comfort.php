@@ -1,7 +1,8 @@
 <?php
 /**
  * Template part: service/comfort.php
- * V9-06B skeleton — inert placeholder. V9 markup in V9-07+.
+ *
+ * Shared comfort block deferred — no service-scoped ACF fields in D7-D wave.
  *
  * @package Shpigovsky
  */
@@ -9,6 +10,5 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-?>
-<!-- shpigovsky-skeleton: template-parts/service/comfort.php -->
 
+// OMIT_IF_EMPTY — comfort section requires shared block integration or content migration.

@@ -1,0 +1,50 @@
+{
+  "task": "V9-06D7-D",
+  "generated_at": "2026-07-05T01:45:00+07:00",
+  "rules": {
+    "acf_primary": "service_layout_variant field when present",
+    "acf_map": {
+      "subdivision": "subdivision",
+      "standard": "leaf",
+      "extended": "leaf",
+      "alcohol_special": "alcohol-special",
+      "placeholder": "leaf"
+    },
+    "hierarchy_fallback": {
+      "has_children": "subdivision",
+      "no_children": "leaf",
+      "slug_lechenie_alkogolnoy_zavisimosti": "alcohol-special"
+    }
+  },
+  "seeded_routes": [
+    {
+      "service_id": 73,
+      "url": "/uslugi/zavisimosti/",
+      "expected_variant": "subdivision",
+      "detection": "ACF subdivision or children query",
+      "result": "PASS"
+    },
+    {
+      "service_id": 74,
+      "url": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "expected_variant": "alcohol-special",
+      "detection": "ACF alcohol_special or slug fallback",
+      "result": "PASS"
+    },
+    {
+      "service_id": 77,
+      "url": "/uslugi/psihicheskoe-zdorovie/",
+      "expected_variant": "subdivision",
+      "detection": "ACF subdivision or children query",
+      "result": "PASS"
+    },
+    {
+      "service_id": 84,
+      "url": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "expected_variant": "subdivision",
+      "detection": "ACF subdivision or children query",
+      "result": "PASS"
+    }
+  ],
+  "result": "COMPLETE"
+}

@@ -1,0 +1,50 @@
+{
+  "task": "V9-06D7-D",
+  "generated_at": "2026-07-05T01:45:00+07:00",
+  "sections": [
+    {
+      "section": "inner-hero",
+      "acf_unavailable": "fallback post_title + static eyebrow/cta labels",
+      "empty_fields": "omit hero image/lead blocks",
+      "cpt_unavailable": "still renders title from post"
+    },
+    {
+      "section": "children",
+      "acf_unavailable": "CPT child query only",
+      "empty_fields": "omit section",
+      "cpt_unavailable": "omit section"
+    },
+    {
+      "section": "signs",
+      "acf_unavailable": "omit section",
+      "empty_fields": "omit section"
+    },
+    {
+      "section": "program",
+      "acf_unavailable": "STATIC_FROM_V9 four-direction fallback titles",
+      "empty_fields": "fallback programme labels"
+    },
+    {
+      "section": "stages",
+      "acf_unavailable": "omit section",
+      "empty_fields": "omit section"
+    },
+    {
+      "section": "faq",
+      "acf_unavailable": "omit section",
+      "empty_fields": "omit section"
+    },
+    {
+      "section": "comfort",
+      "acf_unavailable": "omit section",
+      "empty_fields": "DEFER_CONTENT_MIGRATION"
+    }
+  ],
+  "guards": {
+    "function_exists_get_field": true,
+    "post_type_exists_service": true,
+    "no_fatal_on_missing_acf": true,
+    "no_raw_field_keys_output": true
+  },
+  "result": "PASS"
+}

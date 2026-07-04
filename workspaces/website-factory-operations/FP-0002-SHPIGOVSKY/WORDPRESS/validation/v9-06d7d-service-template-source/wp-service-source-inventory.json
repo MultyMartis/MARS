@@ -1,0 +1,38 @@
+{
+  "task": "V9-06D7-D",
+  "generated_at": "2026-07-05T01:45:00+07:00",
+  "single_service_php": {
+    "path": "theme/shpigovsky/single-service.php",
+    "orchestration": "get_header → main with variant class → shpigovsky_load_service_template → get_footer",
+    "prior_state": "skeleton main with breadcrumbs + inert loader default leaf"
+  },
+  "service_template_loader": {
+    "path": "theme/shpigovsky/inc/service-template-loader.php",
+    "variants": ["subdivision", "leaf", "alcohol-special"],
+    "stacks": ["subdivision-stack", "leaf-stack", "alcohol-stack"]
+  },
+  "service_helpers": {
+    "path": "theme/shpigovsky/inc/service-helpers.php",
+    "status": "NEW D7-D"
+  },
+  "template_parts": {
+    "stacks": ["subdivision-stack.php", "leaf-stack.php", "alcohol-stack.php"],
+    "sections": [
+      "inner-hero.php",
+      "subnav.php",
+      "intro.php",
+      "children.php",
+      "mid-cta.php",
+      "signs.php",
+      "approach.php",
+      "program.php",
+      "stages.php",
+      "faq.php",
+      "comfort.php",
+      "bordered-info.php"
+    ],
+    "shared_updated": ["components/internal-page-nav.php", "components/program-cta-band.php"]
+  },
+  "prior_skeleton_markers_removed": true,
+  "result": "COMPLETE"
+}

@@ -1,0 +1,42 @@
+{
+  "task": "V9-06D7-D",
+  "phase": "SERVICE_TEMPLATE_SOURCE",
+  "generated_at": "2026-07-05T01:45:00+07:00",
+  "theme_version": "0.6.0-d7d-service-templates",
+  "changed_files": [
+    "theme/shpigovsky/single-service.php",
+    "theme/shpigovsky/functions.php",
+    "theme/shpigovsky/inc/service-helpers.php",
+    "theme/shpigovsky/inc/service-template-loader.php",
+    "theme/shpigovsky/template-parts/service/subdivision-stack.php",
+    "theme/shpigovsky/template-parts/service/leaf-stack.php",
+    "theme/shpigovsky/template-parts/service/alcohol-stack.php",
+    "theme/shpigovsky/template-parts/service/inner-hero.php",
+    "theme/shpigovsky/template-parts/service/subnav.php",
+    "theme/shpigovsky/template-parts/service/intro.php",
+    "theme/shpigovsky/template-parts/service/children.php",
+    "theme/shpigovsky/template-parts/service/mid-cta.php",
+    "theme/shpigovsky/template-parts/service/signs.php",
+    "theme/shpigovsky/template-parts/service/approach.php",
+    "theme/shpigovsky/template-parts/service/program.php",
+    "theme/shpigovsky/template-parts/service/stages.php",
+    "theme/shpigovsky/template-parts/service/faq.php",
+    "theme/shpigovsky/template-parts/service/comfort.php",
+    "theme/shpigovsky/template-parts/service/bordered-info.php",
+    "theme/shpigovsky/template-parts/components/internal-page-nav.php",
+    "theme/shpigovsky/template-parts/components/program-cta-band.php"
+  ],
+  "added_files": [
+    "theme/shpigovsky/inc/service-helpers.php",
+    "theme/shpigovsky/template-parts/service/subnav.php",
+    "theme/shpigovsky/template-parts/service/children.php",
+    "theme/shpigovsky/template-parts/service/mid-cta.php",
+    "theme/shpigovsky/template-parts/service/bordered-info.php"
+  ],
+  "preserved": [
+    "D7-A global shell/assets",
+    "D7-B home source",
+    "D7-C services hub source"
+  ],
+  "result": "COMPLETE"
+}

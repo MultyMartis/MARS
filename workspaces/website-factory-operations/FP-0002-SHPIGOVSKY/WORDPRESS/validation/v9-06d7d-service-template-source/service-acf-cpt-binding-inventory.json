@@ -1,0 +1,40 @@
+{
+  "task": "V9-06D7-D",
+  "generated_at": "2026-07-05T01:45:00+07:00",
+  "acf_groups_read_only": [
+    "group_fp02_service_layout_hero",
+    "group_fp02_service_structured_sections",
+    "group_fp02_service_faq",
+    "group_fp02_service_relationships"
+  ],
+  "fields_bound": {
+    "service_layout_variant": "ACF_SERVICE_FIELD → layout routing",
+    "hero_eyebrow": "ACF_SERVICE_FIELD",
+    "hero_title_override": "ACF_SERVICE_FIELD",
+    "hero_lead": "ACF_SERVICE_FIELD",
+    "hero_media": "ACF_SERVICE_FIELD",
+    "hero_cta_label": "ACF_SERVICE_FIELD",
+    "intro_text": "ACF_SERVICE_FIELD",
+    "intro_note": "ACF_SERVICE_FIELD",
+    "signs_items": "ACF_SERVICE_FIELD",
+    "programme_items": "ACF_SERVICE_FIELD",
+    "stages": "ACF_SERVICE_FIELD",
+    "faq_items": "ACF_SERVICE_FIELD",
+    "cta_title": "ACF_SERVICE_FIELD",
+    "cta_text": "ACF_SERVICE_FIELD",
+    "cta_button_label": "ACF_SERVICE_FIELD",
+    "manual_related_services": "ACF_SERVICE_FIELD"
+  },
+  "cpt_queries": {
+    "child_services": "SERVICE_CPT_QUERY via get_posts post_parent",
+    "breadcrumb_ancestors": "POST_FIELD via get_post_ancestors"
+  },
+  "site_options": ["phone_primary", "default_button_label"],
+  "seeded_services": {
+    "73": {"slug": "zavisimosti", "expected_variant": "subdivision"},
+    "74": {"slug": "lechenie-alkogolnoy-zavisimosti", "expected_variant": "alcohol-special"},
+    "77": {"slug": "psihicheskoe-zdorovie", "expected_variant": "subdivision"},
+    "84": {"slug": "rasstroystva-pischevogo-povedeniya", "expected_variant": "subdivision"}
+  },
+  "result": "COMPLETE"
+}

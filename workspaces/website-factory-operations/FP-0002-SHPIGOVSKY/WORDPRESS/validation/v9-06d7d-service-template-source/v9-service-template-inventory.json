@@ -1,0 +1,87 @@
+{
+  "task": "V9-06D7-D",
+  "generated_at": "2026-07-05T01:45:00+07:00",
+  "parent_service_source": {
+    "v9_page": "src/pages/usluga-podrazdel-v1.html",
+    "body_class": "page-service-subdivision-v1",
+    "main_class": "page-service-subdivision-v1__main"
+  },
+  "detail_service_source": {
+    "v9_page": "src/pages/usluga-konechnaya-v1.html",
+    "body_class": "page-service-leaf-v1",
+    "main_class": "page-service-leaf-v1__main"
+  },
+  "alcohol_special_source": {
+    "v9_page": "src/pages/usluga-konechnaya-v1.html",
+    "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+    "note": "No separate V9 alcohol page; leaf template used for Service ID 74 with alcohol-special stack variant"
+  },
+  "dist_files": [
+    "dist/uslugi/zavisimosti/index.html",
+    "dist/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/index.html"
+  ],
+  "parent_section_order": [
+    "services-inner-hero-v2",
+    "internal-page-nav",
+    "services-category-section-v2",
+    "service-subdivision-nature-v1",
+    "program-cta-band",
+    "services-program-v2",
+    "service-subdivision-stages-v1",
+    "service-subdivision-team-stats-v1",
+    "clinic-landscape",
+    "specialists",
+    "founder-quote",
+    "comfort",
+    "reviews",
+    "faq",
+    "final-form"
+  ],
+  "detail_section_order": [
+    "services-inner-hero-v2",
+    "internal-page-nav",
+    "service-leaf-intro-v1",
+    "service-leaf-bordered-info-v1",
+    "program-cta-band",
+    "service-leaf-signs-v1",
+    "service-leaf-approach-v1",
+    "clinic-landscape",
+    "services-program-v2",
+    "service-leaf-stages-v1",
+    "service-leaf-corridor-v1",
+    "specialists",
+    "founder-quote",
+    "comfort",
+    "reviews",
+    "faq",
+    "final-form"
+  ],
+  "shared_dependencies": [
+    "services-inner-hero-v2",
+    "internal-page-nav",
+    "program-cta-band",
+    "services-program-v2",
+    "faq",
+    "final-form",
+    "global-consultation-modal"
+  ],
+  "js_dependencies": [
+    "assets/vendor/swiper/swiper-bundle.min.js",
+    "assets/vendor/fancybox/fancybox.umd.js",
+    "inputmask CDN",
+    "assets/js/main.js"
+  ],
+  "deferred_sections": [
+    "service-subdivision-nature-v1",
+    "service-subdivision-team-stats-v1",
+    "clinic-landscape",
+    "specialists",
+    "founder-quote",
+    "comfort",
+    "reviews",
+    "service-leaf-bordered-info-v1",
+    "service-leaf-approach-v1",
+    "service-leaf-corridor-v1"
+  ],
+  "result": "COMPLETE"
+}

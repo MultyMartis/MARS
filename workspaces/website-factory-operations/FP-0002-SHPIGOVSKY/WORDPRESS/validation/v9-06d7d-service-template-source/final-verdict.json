@@ -1,0 +1,25 @@
+{
+  "task": "V9-06D7-D",
+  "phase": "SERVICE_TEMPLATE_SOURCE",
+  "generated_at": "2026-07-05T01:45:00+07:00",
+  "preflight_head": "131da3c66f4fd49208dfb5aea7122a5b15d3c391",
+  "verdict": "PASS",
+  "service_template_source": "COMPLETE",
+  "theme_source_changes": "COMPLETE",
+  "service_section_integration": "PARTIAL",
+  "layout_variant_rules": "COMPLETE",
+  "acf_fallback_binding": "COMPLETE",
+  "runtime_delivery": "NOT_PERFORMED",
+  "runtime_mutations": 0,
+  "db_writes": 0,
+  "source_validation": "PASS",
+  "recommended_next_phase": "CREATE_V9_06D7D_RUNTIME_DELIVERY_TASK",
+  "runtime_delivery_gate": "READY FOR OPERATOR REVIEW",
+  "notes": [
+    "Core D7-D wave sections integrated: hero, subnav, children, intro, signs, program, stages, FAQ, CTA bands, final-form",
+    "Shared blocks deferred: nature, team-stats, specialists, founder-quote, comfort, reviews, clinic-landscape, corridor, bordered-info in stack",
+    "Program section uses ACF programme_items with static four-direction fallback",
+    "Layout variant wired to ACF service_layout_variant with hierarchy/slug fallback",
+    "D7-A/D7-B/D7-C source preserved"
+  ]
+}

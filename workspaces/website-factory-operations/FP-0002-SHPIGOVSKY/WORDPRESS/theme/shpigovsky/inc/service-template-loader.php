@@ -1,6 +1,6 @@
 <?php
 /**
- * Service template loader — layout meta routing boundary (skeleton).
+ * Service template loader — layout meta routing (V9-06D7-D).
  *
  * @package Shpigovsky
  */
@@ -21,17 +21,17 @@ function shpigovsky_service_layout_variants() {
 /**
  * Resolve service layout variant for the current post.
  *
- * V9-06B: returns skeleton default only — no ACF/meta reads yet.
- *
  * @return string
  */
 function shpigovsky_get_service_layout_variant() {
+	$variant = shpigovsky_resolve_service_layout_variant();
+
 	/**
-	 * Filter service layout variant once field integration exists (V9-06C+).
+	 * Filter service layout variant after ACF/hierarchy resolution.
 	 *
 	 * @param string $variant Layout variant slug.
 	 */
-	return apply_filters( 'shpigovsky_service_layout_variant', 'leaf' );
+	return apply_filters( 'shpigovsky_service_layout_variant', $variant );
 }
 
 /**
@@ -56,6 +56,8 @@ function shpigovsky_service_stack_slug( $variant ) {
 function shpigovsky_load_service_template() {
 	$variant = shpigovsky_get_service_layout_variant();
 	$slug    = shpigovsky_service_stack_slug( $variant );
+
+	set_query_var( 'shpigovsky_service_layout_variant', $variant );
 
 	get_template_part( 'template-parts/service/' . $slug );
 }
