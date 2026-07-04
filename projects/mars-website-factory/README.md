@@ -103,6 +103,11 @@ A **target architecture** for a **multi-agent, contract-driven** website product
 | [agent-prompt-behavior-v0.md](agent-prompt-behavior-v0.md) | **Agent prompt behavior v0** — behavioral rules (no fabrication, escalation, artifact-first) |
 | [cursor-execution-standard-v0.md](cursor-execution-standard-v0.md) | **Cursor execution standard v0** — prompt → execute → report loop, git safety, target folder / agent mode |
 | [reporting-standard-v0.md](reporting-standard-v0.md) | **Reporting standard v0** — REPORT format and lane variants (doc / frontend / QA / migration / validation) |
+| [standards/WF-RS-001-EXECUTIVE-RESEARCH-PUBLICATION-STANDARD-v1.md](standards/WF-RS-001-EXECUTIVE-RESEARCH-PUBLICATION-STANDARD-v1.md) | **WF-RS-001 — SUPERSEDED** (historical) — migrated to [ORCA-RS-001](../orca/standards/ORCA-RS-001-EXECUTIVE-RESEARCH-PUBLICATION-STANDARD-v1.md); Factory **consumes** ORCA research publications |
+| [../orca/standards/ORCA-RS-001-EXECUTIVE-RESEARCH-PUBLICATION-STANDARD-v1.md](../orca/standards/ORCA-RS-001-EXECUTIVE-RESEARCH-PUBLICATION-STANDARD-v1.md) | **ORCA-RS-001 — Executive Research Publication Standard** (normative owner) — two-level research model; mandatory Executive Research Package; Publication Gate; BZPM reference |
+| [website-factory-standards-register-v1.md](website-factory-standards-register-v1.md) | **Website Factory Standards Register** — WF-* and related normative standards index |
+| [research-standards-v1.md](research-standards-v1.md) · [publication-standards-v1.md](publication-standards-v1.md) | **Research & publication standards** — completion gates and executive deliverables |
+| [website-factory-knowledge-map-v1.md](website-factory-knowledge-map-v1.md) | **Knowledge map** — durable Factory knowledge and reference implementations |
 | [hitl-prompt-boundary-v0.md](hitl-prompt-boundary-v0.md) | **HITL prompt boundary v0** — mandatory gates, escalation triggers, “no fake autonomous approval” |
 | [safe-unknown-prompt-rules-v0.md](safe-unknown-prompt-rules-v0.md) | **SAFE UNKNOWN prompt rules v0** — assumption discipline, fabrication forbidden, GOOD vs BAD examples |
 | [artifact-transfer-prompt-rules-v0.md](artifact-transfer-prompt-rules-v0.md) | **Artifact transfer prompt rules v0** — immutability, approval inheritance, revisions, QA inheritance |
