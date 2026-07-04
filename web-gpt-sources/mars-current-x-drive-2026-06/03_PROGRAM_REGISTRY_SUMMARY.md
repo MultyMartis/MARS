@@ -44,7 +44,8 @@
 
 | Topic | Truth |
 |-------|-------|
-| Website Factory | Methodology + contracts — **≠** runtime factory engine |
+| Website Factory | Methodology + contracts — **≠** runtime factory engine; **consumes** ORCA research publications per **ORCA-RS-001** ([standards/ORCA-RS-001](../../projects/orca/standards/ORCA-RS-001-EXECUTIVE-RESEARCH-PUBLICATION-STANDARD-v1.md)) — Factory **does not** own Executive Research Publication |
+| ORCA | PPC toolkit + research publication — **ORCA-RS-001** owns Executive Research Package gate ([standards/ORCA-RS-001](../../projects/orca/standards/ORCA-RS-001-EXECUTIVE-RESEARCH-PUBLICATION-STANDARD-v1.md)) |
 | ATLAS / OPS | Documentation-layer registries — **≠** deployed CRM/ERP |
 | MetaBOT | Execution is **external n8n** — in-repo docs only |
 | WPilot / OCPilot | **Siblings** — separate CMS lanes |
