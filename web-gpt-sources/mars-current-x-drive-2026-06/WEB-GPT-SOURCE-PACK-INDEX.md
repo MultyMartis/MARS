@@ -80,9 +80,9 @@ After minimum bundle, pull **from repository** when needed:
 
 | Remove from Web-GPT project | Replace with |
 |-----------------------------|--------------|
-| `mars-v2-stable-baseline-2026-06-sync/*` | Steps 1–12 above (**CURRENT**) |
-| `mars-v2-stable-baseline-2026-06/*` | Steps 1–12 above |
-| `mars-v2-final/*`, `mars-v2/*` | Steps 1–12 above |
+| `mars-v2-stable-baseline-2026-06-sync/*` | Steps 1–13 above (**CURRENT**) |
+| `mars-v2-stable-baseline-2026-06/*` | Steps 1–13 above |
+| `mars-v2-final/*`, `mars-v2/*` | Steps 1–13 above |
 | `01_system.md` … `14_roadmap.md` | Remove unless archival |
 | `chat-migration/*` as SoT | One-time paste only |
 

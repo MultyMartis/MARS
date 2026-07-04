@@ -4,7 +4,7 @@
 **Global pack:** `mars-current-x-drive-2026-06/` + `WEB-GPT-SOURCE-PACK-INDEX.md`  
 **Not:** MARS v3 · autonomous runtime · new version release
 
-**Usage:** Upload minimum truth bundle (`01`, `02`, `04`, `10`) first. Copy one **Sync block** below. Re-verify `git status` every session.
+**Usage:** Upload minimum truth bundle (`01`, `02`, `11`, `04`, `10`, `README`) first. Copy one **Sync block** below. Re-verify `git status` every session.
 
 ---
 
