@@ -1,0 +1,186 @@
+{
+  "phase": "V9-06D.6",
+  "waves": [
+    {
+      "id": "D7-A",
+      "name": "Global shell and assets source integration",
+      "objective": "Port V9 header/footer/nav chrome and enqueue V9 CSS/JS vendors into theme source",
+      "allowed_files": [
+        "theme/shpigovsky/template-parts/layout/*",
+        "theme/shpigovsky/template-parts/navigation/*",
+        "theme/shpigovsky/inc/assets.php",
+        "theme/shpigovsky/assets/**",
+        "theme/shpigovsky/header.php",
+        "theme/shpigovsky/footer.php",
+        "theme/shpigovsky/functions.php",
+        "theme/shpigovsky/style.css"
+      ],
+      "forbidden_files": [
+        "plugins/**",
+        "acf-json/**",
+        "V9 src/dist",
+        "runtime/**"
+      ],
+      "runtime_delivery_later": true,
+      "db_checkpoint_later": false,
+      "expected_changed_source_files": [
+        "header/footer/nav partials",
+        "assets enqueue",
+        "packaged CSS/JS/img"
+      ],
+      "validation_gates": [
+        "php lint",
+        "static validation",
+        "source manifest",
+        "no DB writes"
+      ],
+      "rollback": "git revert theme source commit; restore runtime theme backup if delivered",
+      "expected_report": "FP-0002-V9-06D7A-GLOBAL-SHELL-ASSET-INTEGRATION-REPORT-v1.md",
+      "stop_conditions": [
+        "asset packaging requires V9 edit",
+        "runtime write without delivery gate"
+      ]
+    },
+    {
+      "id": "D7-B",
+      "name": "Home template source integration",
+      "objective": "Wire front-page.php and home partials to ACF with empty fallbacks",
+      "allowed_files": [
+        "theme/shpigovsky/front-page.php",
+        "theme/shpigovsky/template-parts/home/**",
+        "theme/shpigovsky/template-parts/components/final-form.php"
+      ],
+      "forbidden_files": [
+        "plugins/**",
+        "acf-json/**"
+      ],
+      "runtime_delivery_later": true,
+      "db_checkpoint_later": false,
+      "expected_changed_source_files": [
+        "front-page.php",
+        "home partials"
+      ],
+      "validation_gates": [
+        "php lint",
+        "home route smoke after delivery"
+      ],
+      "rollback": "source revert + runtime theme restore",
+      "expected_report": "FP-0002-V9-06D7B-HOME-TEMPLATE-INTEGRATION-REPORT-v1.md",
+      "stop_conditions": [
+        "requires ACF schema change without gap-repair task"
+      ]
+    },
+    {
+      "id": "D7-C",
+      "name": "Services Hub template source integration",
+      "objective": "Implement services-hub template with category hubs and CPT-driven cards",
+      "allowed_files": [
+        "theme/shpigovsky/page-templates/services-hub.php",
+        "theme/shpigovsky/template-parts/**"
+      ],
+      "forbidden_files": [
+        "plugins/** except read-only"
+      ],
+      "runtime_delivery_later": true,
+      "db_checkpoint_later": false,
+      "expected_changed_source_files": [
+        "services-hub.php",
+        "hub partials"
+      ],
+      "validation_gates": [
+        "php lint",
+        "/uslugi/ smoke"
+      ],
+      "rollback": "source revert + runtime theme restore",
+      "expected_report": "FP-0002-V9-06D7C-SERVICES-HUB-INTEGRATION-REPORT-v1.md",
+      "stop_conditions": [
+        "menu/redirect changes requested"
+      ]
+    },
+    {
+      "id": "D7-D",
+      "name": "Service template source integration",
+      "objective": "Wire service layout variant from ACF; implement subdivision/leaf/alcohol stacks",
+      "allowed_files": [
+        "theme/shpigovsky/single-service.php",
+        "theme/shpigovsky/inc/service-template-loader.php",
+        "theme/shpigovsky/template-parts/service/**"
+      ],
+      "forbidden_files": [
+        "acf-json/** unless separate gap-repair task"
+      ],
+      "runtime_delivery_later": true,
+      "db_checkpoint_later": false,
+      "expected_changed_source_files": [
+        "service-template-loader.php",
+        "service stacks/partials"
+      ],
+      "validation_gates": [
+        "php lint",
+        "services 73/74/77/84 smoke"
+      ],
+      "rollback": "source revert + runtime theme restore",
+      "expected_report": "FP-0002-V9-06D7D-SERVICE-TEMPLATE-INTEGRATION-REPORT-v1.md",
+      "stop_conditions": [
+        "path ownership cleanup mixed into task"
+      ]
+    },
+    {
+      "id": "D7-E",
+      "name": "Contacts template source integration",
+      "objective": "Wire contacts template to ACF; form markup only",
+      "allowed_files": [
+        "theme/shpigovsky/page-templates/contacts.php",
+        "theme/shpigovsky/template-parts/contacts/**"
+      ],
+      "forbidden_files": [
+        "plugins/forms enablement without charter"
+      ],
+      "runtime_delivery_later": true,
+      "db_checkpoint_later": false,
+      "expected_changed_source_files": [
+        "contacts.php",
+        "contacts partials"
+      ],
+      "validation_gates": [
+        "php lint",
+        "/kontakty/ smoke"
+      ],
+      "rollback": "source revert + runtime theme restore",
+      "expected_report": "FP-0002-V9-06D7E-CONTACTS-INTEGRATION-REPORT-v1.md",
+      "stop_conditions": [
+        "form backend activation without authorization"
+      ]
+    },
+    {
+      "id": "D7-F",
+      "name": "Runtime delivery and cross-route visual QA",
+      "objective": "Deliver theme package to local runtime; screenshot/smoke first-wave routes",
+      "allowed_files": [
+        "manifests/packages",
+        "validation evidence",
+        "reports"
+      ],
+      "forbidden_files": [
+        "DB content writes",
+        "plugin updates"
+      ],
+      "runtime_delivery_later": true,
+      "db_checkpoint_later": true,
+      "expected_changed_source_files": [
+        "docs/evidence only unless hotfix"
+      ],
+      "validation_gates": [
+        "dry-run delivery",
+        "hash match",
+        "desktop/mobile smoke"
+      ],
+      "rollback": "runtime backup restore; DB restore only if DB touched",
+      "expected_report": "FP-0002-V9-06D7F-RUNTIME-DELIVERY-VISUAL-QA-REPORT-v1.md",
+      "stop_conditions": [
+        "pixel-perfect claim without operator visual PASS"
+      ]
+    }
+  ],
+  "result": "COMPLETE"
+}

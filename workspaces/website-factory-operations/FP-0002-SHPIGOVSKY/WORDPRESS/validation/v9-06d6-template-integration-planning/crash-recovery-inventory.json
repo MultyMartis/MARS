@@ -1,0 +1,129 @@
+{
+  "phase": "V9-06D.6",
+  "task": "CURSOR_CRASH_RECOVERY_AUDIT",
+  "timestamp_utc": "2026-07-04T14:49:00Z",
+  "preflight": {
+    "volume_drive": "X",
+    "volume_label": "AI WS",
+    "volume_filesystem": "NTFS",
+    "volume_health": "Healthy",
+    "repository": "X:\\AI MARS",
+    "branch": "mars/canonical-post-recovery",
+    "local_head": "10eaffc2e195d4820768a183677fd19681138173",
+    "remote_tracking_head": "10eaffc2e195d4820768a183677fd19681138173",
+    "remote_actual_head": "10eaffc2e195d4820768a183677fd19681138173",
+    "ahead": 0,
+    "behind": 0,
+    "staged_files": [],
+    "merge_rebase_state": "NONE",
+    "foreign_unstaged_wip": true,
+    "d5_required_head_at_original_task": "755aae3a40ac3800c52df64c59f88307da2082e8",
+    "d5_required_head_is_ancestor": true,
+    "commits_since_d5": [
+      "db2a057b Correct current Web-GPT authority pointers",
+      "1a960bc0 Add remote operations layer charter",
+      "10eaffc2 Align ROL maturity and evidence references"
+    ],
+    "result": "PASS"
+  },
+  "crash_context": {
+    "cursor_error": "internal server error (agent session terminated before REPORT)",
+    "last_visible_operations": [
+      "created validation/v9-06d6-template-integration-planning directory",
+      "PowerShell heredoc python <<'PY' failed",
+      "attempted to write generator as Python file and run it"
+    ],
+    "known_failed_command": "python <<'PY' (PowerShell: Missing file specification after redirection operator)",
+    "generator_script_created": false,
+    "generator_script_run": false,
+    "d6_planning_continued_after_crash": false
+  },
+  "expected_d6_scope_inspected": [
+    "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/reports/",
+    "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/architecture/",
+    "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d6-template-integration-planning/",
+    "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/README.md",
+    "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/SOURCE-AUTHORITY.md",
+    "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/PROJECT-STATUS.md"
+  ],
+  "partial_artifacts": [
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d6-template-integration-planning/",
+      "status": "EMPTY_DIRECTORY_EXISTS",
+      "size_bytes": 0,
+      "file_count": 0,
+      "malformed": false,
+      "truncated": false,
+      "claims_complete": false,
+      "classification": "ACCEPT_D6_PARTIAL_EVIDENCE",
+      "notes": "Directory created by crashed D.6 attempt; contains no files. Git does not track empty directories. Safe to reuse on resume."
+    }
+  ],
+  "missing_expected_d6_outputs": [
+    "reports/FP-0002-V9-06D6-TEMPLATE-INTEGRATION-PLANNING-REPORT-v1.md",
+    "architecture/FP-0002-V9-06D6-*",
+    "validation/v9-06d6-template-integration-planning/preflight.json",
+    "validation/v9-06d6-template-integration-planning/final-verdict.json",
+    "validation/v9-06d6-template-integration-planning/v9-static-inventory.json",
+    "validation/v9-06d6-template-integration-planning/wp-theme-source-inventory.json",
+    "validation/v9-06d6-template-integration-planning/acf-field-source-inventory.json"
+  ],
+  "d6_report_exists": false,
+  "d6_final_verdict_exists": false,
+  "any_evidence_claims_complete": false,
+  "generator_temp_files": [],
+  "status_docs_modified_by_d6_attempt": {
+    "WORDPRESS/README.md": false,
+    "WORDPRESS/SOURCE-AUTHORITY.md": false,
+    "FP-0002-SHPIGOVSKY/PROJECT-STATUS.md": false,
+    "notes": "README and SOURCE-AUTHORITY mention V9-06D.6 only as next step from D.5; not updated by crashed attempt."
+  },
+  "scope_drift": {
+    "runtime_files_changed": false,
+    "db_dumps_in_git_scope": false,
+    "v9_src_changed": false,
+    "v9_dist_changed": false,
+    "theme_source_changed": false,
+    "plugin_source_changed": false,
+    "acf_json_changed": false,
+    "foreign_wip_staged": false,
+    "secrets_found_in_d6_scope": false,
+    "forbidden_paths_touched_by_d6": []
+  },
+  "path_classifications": [
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d6-template-integration-planning/",
+      "classification": "ACCEPT_D6_PARTIAL_EVIDENCE"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d6-template-integration-planning/crash-recovery-inventory.json",
+      "classification": "ACCEPT_D6_RECOVERY_REPORT"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d6-template-integration-planning/crash-recovery-final-verdict.json",
+      "classification": "ACCEPT_D6_RECOVERY_REPORT"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/reports/FP-0002-V9-06D6-CURSOR-CRASH-RECOVERY-AUDIT-REPORT-v1.md",
+      "classification": "ACCEPT_D6_RECOVERY_REPORT"
+    },
+    {
+      "path": "foreign_unstaged_wip_outside_d6_scope",
+      "classification": "REJECT_FOREIGN_WIP",
+      "notes": "Pre-existing unstaged/untracked WIP across governance, atlas, orca, v7/v8, recovery-temp, etc. Untouched by this audit."
+    }
+  ],
+  "recovery_classification": "D6_RECOVERABLE_RESUME_READY",
+  "recovery_classification_rationale": [
+    "No forbidden runtime/source/V9/ACF files changed by D.6 attempt",
+    "Only artifact is empty approved evidence directory",
+    "No staged files",
+    "No generator/temp scripts created",
+    "No malformed or COMPLETE-claiming partial package",
+    "Branch clean relative to remote (ahead 0, behind 0)",
+    "D.6 can be safely re-run from a new prompt into the empty evidence directory"
+  ],
+  "recommended_next_action": "RERUN_V9_06D6_TEMPLATE_INTEGRATION_PLANNING_FROM_CLEAN_SCOPE",
+  "cleanup_required_before_resume": false,
+  "commit_performed": false
+}

@@ -44,7 +44,7 @@ Operator WV6: PENDING
 Direct local domain: PASS (FP-0002 — FW-06A.1)
 Synthetic source: TRACKED (Git whitelist)
 Agent registration: REGISTERED (AG-WP-001 — SYNTHETIC READ-ONLY CAPABILITY ONLY; NOT PRODUCTION READY)
-Client pilot: FP-0002 V9-06D.5 visual route QA PARTIAL PASS; all required routes HTTP 200; Service 74 PASS; skeleton baseline ready for V9-06D.6 template integration planning; Page 6 / Service 73 secondary debt remains; full content migration / V9 integration not performed
+Client pilot: FP-0002 V9-06D.6 template integration planning PASS; D.5 routes HTTP 200; next D7-A global shell/asset integration (operator review); Page 6 / Service 73 secondary debt remains; full content migration / V9 integration not performed
 ```
 
 | Field | Value |

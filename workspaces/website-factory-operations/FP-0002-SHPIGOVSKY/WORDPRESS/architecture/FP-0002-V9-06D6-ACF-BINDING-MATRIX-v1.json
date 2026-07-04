@@ -1,0 +1,180 @@
+{
+  "phase": "V9-06D.6",
+  "constraints": {
+    "flexible_content": false,
+    "acf_extended_pro": false,
+    "bounded_repeaters_only": true
+  },
+  "routes": [
+    {
+      "id": "home",
+      "fields_needed": [
+        "home_hero_slides",
+        "home_service_nav_items",
+        "home_cta_title",
+        "home_cta_text",
+        "home_faq_items",
+        "home_gallery_media",
+        "home_advantages"
+      ],
+      "fields_existing": [
+        "home_hero_slides",
+        "home_service_nav_items",
+        "home_advantages",
+        "home_intro_bands",
+        "home_reviews_teaser",
+        "home_blog_teaser_enabled",
+        "home_gallery_media",
+        "home_faq_items",
+        "home_cta_title",
+        "home_cta_text"
+      ],
+      "fields_seeded": [
+        "home_hero_slides",
+        "home_service_nav_items",
+        "home_cta_title",
+        "home_cta_text"
+      ],
+      "gaps": [
+        "Many V9 home sections lack 1:1 ACF fields (founder-quote, specialists, videos, genotyping, comfort shared blocks)"
+      ],
+      "fallback": "Render only sections with data; use post_title for document title; omit empty repeaters",
+      "migration_need": "PARTIAL_BEFORE_VISUAL_PARITY"
+    },
+    {
+      "id": "services_hub",
+      "fields_needed": [
+        "services_hub_intro",
+        "services_hub_query_mode",
+        "services_hub_show_placeholders",
+        "services_hub_faq_items"
+      ],
+      "fields_existing": [
+        "services_hub_intro",
+        "services_hub_query_mode",
+        "services_hub_show_placeholders",
+        "services_hub_faq_items"
+      ],
+      "fields_seeded": [
+        "services_hub_intro",
+        "services_hub_query_mode",
+        "services_hub_show_placeholders"
+      ],
+      "gaps": [
+        "Category hub leads/galleries not fully modeled as ACF; service cards from CPT query"
+      ],
+      "fallback": "H1 from post_title; intro if present; query top-level services",
+      "migration_need": "PARTIAL_BEFORE_VISUAL_PARITY"
+    },
+    {
+      "id": "service_parent",
+      "fields_needed": [
+        "service_layout_variant",
+        "hero_lead",
+        "hero_title_override",
+        "intro_text",
+        "cta_*"
+      ],
+      "fields_existing": [
+        "service_layout_variant",
+        "hero_*",
+        "intro_text",
+        "programme_items",
+        "stages",
+        "faq_items"
+      ],
+      "fields_seeded": {
+        "73": [
+          "service_layout_variant",
+          "hero_lead"
+        ],
+        "77": [
+          "service_layout_variant",
+          "hero_lead"
+        ],
+        "84": [
+          "service_layout_variant",
+          "hero_lead"
+        ]
+      },
+      "gaps": [
+        "Loader ignores ACF layout variant; subdivision-specific sections partially unmapped"
+      ],
+      "fallback": "post_title as H1; hero_lead if present; placeholder notice for psych/RPP",
+      "migration_need": "YES_FOR_ZAVISIMOSTI_PARITY"
+    },
+    {
+      "id": "service_child",
+      "fields_needed": [
+        "service_layout_variant",
+        "hero_lead",
+        "intro_text",
+        "signs_items",
+        "programme_items",
+        "stages",
+        "faq_items"
+      ],
+      "fields_existing": [
+        "layout/hero",
+        "structured sections",
+        "faq"
+      ],
+      "fields_seeded": [
+        "service_layout_variant",
+        "hero_lead",
+        "intro_text",
+        "signs_items"
+      ],
+      "gaps": [
+        "approach/corridor/specialists/reviews shared blocks not fully fielded"
+      ],
+      "fallback": "omit empty sections; show title + seeded intro/signs",
+      "migration_need": "PARTIAL_BEFORE_VISUAL_PARITY"
+    },
+    {
+      "id": "contacts",
+      "fields_needed": [
+        "contacts_address",
+        "contacts_phones",
+        "contacts_form_intro",
+        "contacts_map_url",
+        "contacts_messengers"
+      ],
+      "fields_existing": [
+        "contacts_address",
+        "contacts_map_url",
+        "contacts_phones",
+        "contacts_messengers",
+        "contacts_blocks",
+        "contacts_form_intro"
+      ],
+      "fields_seeded": [
+        "contacts_address",
+        "contacts_phones",
+        "contacts_form_intro"
+      ],
+      "gaps": [
+        "options contacts empty; form submit deferred"
+      ],
+      "fallback": "show seeded address/phones; form markup only",
+      "migration_need": "OPTIONS_SEED_LATER"
+    },
+    {
+      "id": "site_options",
+      "fields_needed": [
+        "phone_primary",
+        "site_address",
+        "default_callback_*",
+        "global_cta_*"
+      ],
+      "fields_existing": "group_fp02_site_options_*",
+      "fields_seeded": [],
+      "gaps": [
+        "options never seeded in D.4"
+      ],
+      "fallback": "hide optional chrome contact bits; modal labels static fallback strings only if operator-approved later",
+      "migration_need": "YES_FOR_CHROME_PARITY"
+    }
+  ],
+  "result": "COMPLETE"
+}

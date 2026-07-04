@@ -1,6 +1,6 @@
 # FP-0002 V9 Operational Status
 
-**Current:** V9-06D.5 VISUAL ROUTE QA COMPLETE (PARTIAL PASS)
+**Current:** V9-06D.6 TEMPLATE INTEGRATION PLANNING COMPLETE (PASS)
 
 - V9 static frontend: operator-approved stable
 - WordPress content model: active in local runtime
@@ -11,9 +11,10 @@
 - Rewrite flush: PERFORMED (soft; `.htaccess` unchanged)
 - Service 74: HTTP **200** after depth-2 rewrite repair (`service=$matches[1]/$matches[2]`)
 - Root cause addressed: `POST_TYPE_LINK_REWRITE_MISMATCH`
-- Page 6 / Service 73 path collision: CONFIRMED (secondary debt; not a D.5 blocker)
+- Page 6 / Service 73 path collision: CONFIRMED (secondary debt)
 - V9-06D.5: **COMPLETE** (PARTIAL PASS — all required routes HTTP 200; skeleton baseline)
-- Next: V9-06D.6 template integration planning (operator review)
+- V9-06D.6: **COMPLETE** (PASS — planning/docs only; crash recovery preserved)
+- Next: `CREATE_V9_06D7_GLOBAL_SHELL_ASSET_INTEGRATION_SOURCE_TASK` (operator review)
 
 # FP-0002 V9 Operational Status
 

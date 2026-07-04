@@ -1,0 +1,378 @@
+{
+  "phase": "V9-06D.6",
+  "routes": [
+    {
+      "id": "home",
+      "route": "/",
+      "object_id": 4,
+      "object_type": "page",
+      "v9_source": "src/pages/index.html",
+      "wp_template": "front-page.php",
+      "template_parts": [
+        "template-parts/home/hero.php",
+        "template-parts/home/feature-grid.php",
+        "template-parts/home/treatment-prevention.php",
+        "template-parts/home/rehabilitation-program.php",
+        "template-parts/home/gallery.php",
+        "template-parts/home/articles-teaser.php",
+        "template-parts/home/faq.php",
+        "template-parts/components/final-form.php"
+      ],
+      "static_blocks": [
+        "hero",
+        "home-recovery-intro",
+        "founder-quote",
+        "home-treatment-prevention",
+        "home-gallery",
+        "home-why-us",
+        "home-staff-photo",
+        "home-feature-grid",
+        "clinic-landscape",
+        "home-recovery-life",
+        "reviews",
+        "home-rehabilitation-requirements",
+        "home-rehabilitation-program",
+        "home-genotyping",
+        "comfort",
+        "home-videos",
+        "specialists",
+        "home-articles",
+        "faq",
+        "final-form"
+      ],
+      "acf_groups": [
+        "group_fp02_page_home"
+      ],
+      "post_fields": [
+        "post_title"
+      ],
+      "options_dependency": [
+        "group_fp02_site_options_modal_cta"
+      ],
+      "required_assets": [
+        "theme style.css from V9",
+        "swiper",
+        "fancybox"
+      ],
+      "required_js": [
+        "main.js",
+        "swiper",
+        "fancybox",
+        "inputmask"
+      ],
+      "current_gap": "inert home partials; no V9 CSS/JS; many V9 sections lack dedicated WP partials/ACF fields",
+      "implementation_risk": "HIGH",
+      "proposed_wave": "D7-B"
+    },
+    {
+      "id": "services_hub",
+      "route": "/uslugi/",
+      "object_id": 5,
+      "object_type": "page",
+      "v9_source": "src/pages/uslugi.html",
+      "wp_template": "page-templates/services-hub.php",
+      "template_parts": [
+        "placeholder-notice currently; needs category-hub partials"
+      ],
+      "static_blocks": [
+        "hero-inner",
+        "services-category-hub x4",
+        "home-rehabilitation-program",
+        "founder-quote",
+        "comfort",
+        "faq",
+        "final-form"
+      ],
+      "acf_groups": [
+        "group_fp02_page_services_hub"
+      ],
+      "post_fields": [
+        "post_title"
+      ],
+      "options_dependency": [
+        "group_fp02_site_options_modal_cta"
+      ],
+      "required_assets": [
+        "services images",
+        "theme CSS"
+      ],
+      "required_js": [
+        "main.js",
+        "modal hooks"
+      ],
+      "current_gap": "H1 + placeholder only; no category hub markup; service cards not queried",
+      "implementation_risk": "HIGH",
+      "proposed_wave": "D7-C"
+    },
+    {
+      "id": "service_parent_zavisimosti",
+      "route": "/uslugi/zavisimosti/",
+      "object_id": 73,
+      "object_type": "service",
+      "v9_source": "src/pages/usluga-podrazdel-v1.html",
+      "wp_template": "single-service.php → subdivision-stack.php",
+      "template_parts": [
+        "service/inner-hero",
+        "service/intro",
+        "components/program-cta-band"
+      ],
+      "static_blocks": [
+        "services-inner-hero-v2",
+        "internal-page-nav",
+        "services-category-section-v2",
+        "service-subdivision-nature-v1",
+        "program-cta-band",
+        "services-program-v2",
+        "service-subdivision-stages-v1",
+        "service-subdivision-team-stats-v1",
+        "specialists",
+        "comfort",
+        "faq",
+        "final-form"
+      ],
+      "acf_groups": [
+        "group_fp02_service_layout_hero",
+        "group_fp02_service_structured_sections",
+        "group_fp02_service_faq"
+      ],
+      "post_fields": [
+        "post_title"
+      ],
+      "options_dependency": [
+        "phone_primary for CTA"
+      ],
+      "required_assets": [
+        "service hero media",
+        "program images"
+      ],
+      "required_js": [
+        "main.js"
+      ],
+      "current_gap": "layout variant not ACF-wired (defaults leaf); inert partials; Page6/Service73 path debt",
+      "implementation_risk": "HIGH",
+      "proposed_wave": "D7-D"
+    },
+    {
+      "id": "service_child_alcohol",
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "object_id": 74,
+      "object_type": "service",
+      "v9_source": "src/pages/usluga-konechnaya-v1.html",
+      "wp_template": "single-service.php → alcohol-stack.php",
+      "template_parts": [
+        "service/inner-hero",
+        "service/intro",
+        "service/signs",
+        "service/approach",
+        "service/stages",
+        "service/program",
+        "service/comfort",
+        "service/faq",
+        "components/final-form"
+      ],
+      "static_blocks": [
+        "services-inner-hero-v2",
+        "service-leaf-intro-v1",
+        "service-leaf-bordered-info-v1",
+        "service-leaf-signs-v1",
+        "service-leaf-approach-v1",
+        "services-program-v2",
+        "service-leaf-stages-v1",
+        "service-leaf-corridor-v1",
+        "specialists",
+        "comfort",
+        "reviews",
+        "faq",
+        "final-form"
+      ],
+      "acf_groups": [
+        "group_fp02_service_layout_hero",
+        "group_fp02_service_structured_sections",
+        "group_fp02_service_faq"
+      ],
+      "post_fields": [
+        "post_title"
+      ],
+      "options_dependency": [
+        "phone_primary"
+      ],
+      "required_assets": [
+        "alcohol hero",
+        "program images"
+      ],
+      "required_js": [
+        "main.js"
+      ],
+      "current_gap": "seeded layout/hero/intro/signs but inert partials; alcohol-special not selected by loader",
+      "implementation_risk": "MEDIUM",
+      "proposed_wave": "D7-D"
+    },
+    {
+      "id": "service_parent_psych",
+      "route": "/uslugi/psihicheskoe-zdorovie/",
+      "object_id": 77,
+      "object_type": "service",
+      "v9_source": "src/pages/uslugi/psihicheskoe-zdorovie.html",
+      "wp_template": "single-service.php → subdivision-stack.php",
+      "template_parts": [
+        "service/inner-hero",
+        "service/intro",
+        "page/placeholder-notice"
+      ],
+      "static_blocks": [
+        "placeholder-page"
+      ],
+      "acf_groups": [
+        "group_fp02_service_layout_hero"
+      ],
+      "post_fields": [
+        "post_title"
+      ],
+      "options_dependency": [],
+      "required_assets": [
+        "chrome only"
+      ],
+      "required_js": [
+        "main.js"
+      ],
+      "current_gap": "V9 is placeholder; minimal seed only; use subdivision + placeholder notice until content wave",
+      "implementation_risk": "LOW",
+      "proposed_wave": "D7-D"
+    },
+    {
+      "id": "service_parent_rpp",
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "object_id": 84,
+      "object_type": "service",
+      "v9_source": "src/pages/uslugi/rasstroystva-pischevogo-povedeniya.html",
+      "wp_template": "single-service.php → subdivision-stack.php",
+      "template_parts": [
+        "service/inner-hero",
+        "service/intro",
+        "page/placeholder-notice"
+      ],
+      "static_blocks": [
+        "placeholder-page"
+      ],
+      "acf_groups": [
+        "group_fp02_service_layout_hero"
+      ],
+      "post_fields": [
+        "post_title"
+      ],
+      "options_dependency": [],
+      "required_assets": [
+        "chrome only"
+      ],
+      "required_js": [
+        "main.js"
+      ],
+      "current_gap": "V9 is placeholder; minimal seed only",
+      "implementation_risk": "LOW",
+      "proposed_wave": "D7-D"
+    },
+    {
+      "id": "contacts",
+      "route": "/kontakty/",
+      "object_id": 20,
+      "object_type": "page",
+      "v9_source": "src/pages/kontakty.html",
+      "wp_template": "page-templates/contacts.php",
+      "template_parts": [
+        "template-parts/contacts/map-body.php",
+        "template-parts/contacts/rehabilitation-steps.php"
+      ],
+      "static_blocks": [
+        "contacts-map-body",
+        "contacts-rehabilitation-steps"
+      ],
+      "acf_groups": [
+        "group_fp02_page_contacts"
+      ],
+      "post_fields": [
+        "post_title"
+      ],
+      "options_dependency": [
+        "group_fp02_site_options_contacts"
+      ],
+      "required_assets": [
+        "map assets if any"
+      ],
+      "required_js": [
+        "main.js",
+        "inputmask deferred"
+      ],
+      "current_gap": "H1 + inert/minimal contacts partials; options not seeded",
+      "implementation_risk": "MEDIUM",
+      "proposed_wave": "D7-E"
+    },
+    {
+      "id": "global_header",
+      "route": "*",
+      "object_id": null,
+      "object_type": "global",
+      "v9_source": "src/partials/layout/header.html",
+      "wp_template": "header.php → template-parts/layout/header.php",
+      "template_parts": [
+        "navigation/primary-desktop",
+        "navigation/primary-mobile"
+      ],
+      "static_blocks": [
+        "site-header",
+        "offcanvas"
+      ],
+      "acf_groups": [],
+      "post_fields": [],
+      "options_dependency": [
+        "phone_primary",
+        "organisation_name"
+      ],
+      "required_assets": [
+        "logo/svg",
+        "theme CSS"
+      ],
+      "required_js": [
+        "offcanvas"
+      ],
+      "current_gap": "unstyled skeleton list nav",
+      "implementation_risk": "HIGH",
+      "proposed_wave": "D7-A"
+    },
+    {
+      "id": "global_footer",
+      "route": "*",
+      "object_id": null,
+      "object_type": "global",
+      "v9_source": "src/partials/layout/footer.html",
+      "wp_template": "footer.php → template-parts/layout/footer.php",
+      "template_parts": [
+        "layout/footer",
+        "layout/global-consultation-modal"
+      ],
+      "static_blocks": [
+        "footer",
+        "global-consultation-modal",
+        "scroll-to-top"
+      ],
+      "acf_groups": [
+        "group_fp02_site_options_contacts",
+        "group_fp02_site_options_modal_cta"
+      ],
+      "post_fields": [],
+      "options_dependency": [
+        "all site options contacts/modal"
+      ],
+      "required_assets": [
+        "theme CSS"
+      ],
+      "required_js": [
+        "modal deferred",
+        "scroll-to-top"
+      ],
+      "current_gap": "unstyled skeleton footer; modal inert; forms disabled",
+      "implementation_risk": "HIGH",
+      "proposed_wave": "D7-A"
+    }
+  ],
+  "result": "COMPLETE"
+}

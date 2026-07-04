@@ -1,0 +1,44 @@
+{
+  "phase": "V9-06D.6",
+  "task": "CURSOR_CRASH_RECOVERY_AUDIT",
+  "verdict": "PASS",
+  "crash_recovery_audit": "COMPLETE",
+  "d6_planning_package": "NOT_COMPLETE",
+  "safe_to_resume_d6": "YES",
+  "cleanup_required_before_resume": "NO",
+  "recovery_classification": "D6_RECOVERABLE_RESUME_READY",
+  "recommended_next_action": "RERUN_V9_06D6_TEMPLATE_INTEGRATION_PLANNING_FROM_CLEAN_SCOPE",
+  "commit": "NOT_PERFORMED",
+  "mutations": {
+    "runtime_writes": 0,
+    "database_writes": 0,
+    "source_changes": 0,
+    "v9_source_changed": false,
+    "v9_dist_changed": false,
+    "theme_plugin_source_changed": false,
+    "content_writes": 0,
+    "acf_meta_writes": 0,
+    "rewrite_flush": false,
+    "menus_changed": 0,
+    "redirects_created": 0,
+    "object_create_delete": 0,
+    "d6_resumed": false,
+    "full_d6_package_completed": false
+  },
+  "partial_artifacts_summary": {
+    "empty_evidence_directory": true,
+    "partial_docs": 0,
+    "partial_json": 0,
+    "generator_scripts": 0,
+    "malformed_files": 0,
+    "complete_claims": 0
+  },
+  "git": {
+    "branch": "mars/canonical-post-recovery",
+    "local_head": "10eaffc2e195d4820768a183677fd19681138173",
+    "remote_head": "10eaffc2e195d4820768a183677fd19681138173",
+    "ahead": 0,
+    "behind": 0,
+    "staged_files": []
+  }
+}

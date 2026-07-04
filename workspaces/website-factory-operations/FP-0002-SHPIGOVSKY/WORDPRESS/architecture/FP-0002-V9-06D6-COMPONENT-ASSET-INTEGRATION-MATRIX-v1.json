@@ -1,0 +1,88 @@
+{
+  "phase": "V9-06D.6",
+  "global_chrome": {
+    "header": {
+      "wave": "D7-A",
+      "v9": "partials/layout/header.html",
+      "wp": "template-parts/layout/header.php"
+    },
+    "desktop_nav": {
+      "wave": "D7-A",
+      "wp": "template-parts/navigation/primary-desktop.php",
+      "data": "WP menus"
+    },
+    "mobile_nav": {
+      "wave": "D7-A",
+      "wp": "template-parts/navigation/primary-mobile.php",
+      "js": "offcanvas safe_static"
+    },
+    "footer": {
+      "wave": "D7-A",
+      "v9": "partials/layout/footer.html",
+      "wp": "template-parts/layout/footer.php"
+    },
+    "modal": {
+      "wave": "D7-A_MARKUP_ONLY",
+      "v9": "partials/layout/global-consultation-modal.html",
+      "wp": "template-parts/layout/global-consultation-modal.php",
+      "submit": "DEFERRED"
+    },
+    "buttons": {
+      "classes": "V9 button classes preserved; no new tokens"
+    },
+    "breadcrumbs": {
+      "wp": "template-parts/navigation/breadcrumbs.php",
+      "data": "hierarchy-derived"
+    }
+  },
+  "css_strategy": {
+    "approach": "Package compiled V9 CSS into theme assets/css/ (copy from V9 dist or build artifact) during D7-A source task",
+    "do_not_edit_v9_source": true,
+    "enqueue": "inc/assets.php via shpigovsky_enqueue_theme_assets",
+    "versioning": "SHPIGOVSKY_THEME_VERSION or filemtime",
+    "order": [
+      "foundation.css optional retire",
+      "style.css",
+      "vendor css if needed"
+    ],
+    "no_new_design_tokens": true
+  },
+  "js_strategy": {
+    "safe_static": [
+      "reveal",
+      "offcanvas",
+      "scroll-to-top"
+    ],
+    "requires_wp_adaptation": [
+      "swiper",
+      "fancybox",
+      "inputmask"
+    ],
+    "deferred": [
+      "consultation modal submit",
+      "final-form submit"
+    ],
+    "not_first_wave": [
+      "blog-specific interactions"
+    ]
+  },
+  "images_media": {
+    "theme_asset_candidates": [
+      "logo/svg",
+      "shared icons",
+      "chrome decorative assets",
+      "first-wave service hero placeholders packaged as theme assets"
+    ],
+    "media_library_later": [
+      "CMS-managed gallery",
+      "service hero media fields"
+    ],
+    "placeholder_fallback": "omit media block when empty",
+    "external_unknown": []
+  },
+  "fallbacks": {
+    "empty_acf": "omit section or show post_title only; never fatal",
+    "empty_options": "hide phone/email/modal labels; keep structure"
+  },
+  "result": "COMPLETE"
+}

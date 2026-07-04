@@ -1,0 +1,165 @@
+{
+  "phase": "V9-06D.6",
+  "acf_json_root": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\acf-json",
+  "group_count": 13,
+  "groups": [
+    {
+      "key": "group_fp02_page_home",
+      "fields": [
+        "home_hero_slides",
+        "home_service_nav_items",
+        "home_advantages",
+        "home_intro_bands",
+        "home_reviews_teaser",
+        "home_blog_teaser_enabled",
+        "home_gallery_media",
+        "home_faq_items",
+        "home_cta_title",
+        "home_cta_text"
+      ]
+    },
+    {
+      "key": "group_fp02_page_services_hub",
+      "fields": [
+        "services_hub_intro",
+        "services_hub_query_mode",
+        "services_hub_show_placeholders",
+        "services_hub_faq_items"
+      ]
+    },
+    {
+      "key": "group_fp02_service_layout_hero",
+      "fields": [
+        "service_layout_variant",
+        "hero_eyebrow",
+        "hero_title_override",
+        "hero_lead",
+        "hero_media",
+        "hero_cta_label",
+        "hero_cta_target"
+      ]
+    },
+    {
+      "key": "group_fp02_service_structured_sections",
+      "fields": [
+        "intro_text",
+        "intro_note",
+        "signs_items",
+        "programme_items",
+        "stages",
+        "cta_title",
+        "cta_text",
+        "cta_button_label",
+        "cta_button_target"
+      ]
+    },
+    {
+      "key": "group_fp02_service_faq",
+      "fields": [
+        "faq_items"
+      ]
+    },
+    {
+      "key": "group_fp02_service_relationships",
+      "fields": [
+        "manual_related_services"
+      ]
+    },
+    {
+      "key": "group_fp02_page_contacts",
+      "fields": [
+        "contacts_address",
+        "contacts_map_url",
+        "contacts_phones",
+        "contacts_messengers",
+        "contacts_blocks",
+        "contacts_form_intro"
+      ]
+    },
+    {
+      "key": "group_fp02_site_options_contacts",
+      "fields": [
+        "organisation_name",
+        "phone_primary",
+        "phone_secondary",
+        "site_email",
+        "site_address",
+        "opening_hours",
+        "map_link",
+        "social_links",
+        "legal_org_identifiers"
+      ]
+    },
+    {
+      "key": "group_fp02_site_options_modal_cta",
+      "fields": [
+        "default_callback_title",
+        "default_callback_text",
+        "default_button_label",
+        "default_secondary_button_label",
+        "default_consent_text_reference",
+        "global_cta_title",
+        "global_cta_text"
+      ]
+    },
+    {
+      "key": "group_fp02_page_institutional",
+      "first_wave": false
+    },
+    {
+      "key": "group_fp02_page_reviews",
+      "first_wave": false
+    },
+    {
+      "key": "group_fp02_page_legal",
+      "first_wave": false
+    },
+    {
+      "key": "group_fp02_blog_post_article_meta",
+      "first_wave": false
+    }
+  ],
+  "constraints": {
+    "flexible_content": false,
+    "acf_extended_pro": "NOT_APPROVED_FOR_FP0002",
+    "bounded_repeaters_only": true
+  },
+  "d4_seeded": {
+    "page_4": [
+      "home_hero_slides",
+      "home_service_nav_items",
+      "home_cta_title",
+      "home_cta_text"
+    ],
+    "page_5": [
+      "services_hub_intro",
+      "services_hub_query_mode",
+      "services_hub_show_placeholders"
+    ],
+    "page_20": [
+      "contacts_address",
+      "contacts_phones",
+      "contacts_form_intro"
+    ],
+    "service_73": [
+      "service_layout_variant",
+      "hero_lead"
+    ],
+    "service_74": [
+      "service_layout_variant",
+      "hero_lead",
+      "intro_text",
+      "signs_items"
+    ],
+    "service_77": [
+      "service_layout_variant",
+      "hero_lead"
+    ],
+    "service_84": [
+      "service_layout_variant",
+      "hero_lead"
+    ],
+    "options": []
+  },
+  "result": "COMPLETE"
+}

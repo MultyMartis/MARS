@@ -2,8 +2,8 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D.5 VISUAL ROUTE QA COMPLETE (PARTIAL PASS — all required routes HTTP 200; skeleton baseline)
-**Classification:** CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON COMPLETE — MINIMAL VISUAL CONTENT SEEDED — DEPTH-2 REWRITE REPAIRED — VISUAL ROUTE BASELINE READY FOR V9 TEMPLATE INTEGRATION PLANNING
+**Status:** V9-06D.6 TEMPLATE INTEGRATION PLANNING COMPLETE (PASS — planning/docs only; V9 integration NOT_STARTED)
+**Classification:** CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON COMPLETE — MINIMAL VISUAL CONTENT SEEDED — DEPTH-2 REWRITE REPAIRED — VISUAL ROUTE BASELINE READY — V9 TEMPLATE INTEGRATION PLAN COMPLETE — NEXT D7-A GLOBAL SHELL/ASSETS
 
 ---
 
@@ -150,10 +150,16 @@ Depth-2 rewrite query repaired to `service=$matches[1]/$matches[2]` in `ServiceP
 
 ### V9-06D.5 visual route QA (2026-07-04)
 
-Read-only visual route QA after rewrite repair: all seven required routes HTTP **200**; Service 74 regression **PASS**; header/footer/main present; desktop/mobile screenshots captured; theme remains V9-06B skeleton (no V9 integration). Runtime mutations: **0**. Verdict: **PARTIAL PASS**. Next: V9-06D.6 template integration planning. Report: [reports/FP-0002-V9-06D5-VISUAL-ROUTE-QA-REPORT-v1.md](reports/FP-0002-V9-06D5-VISUAL-ROUTE-QA-REPORT-v1.md).
+Read-only visual route QA after rewrite repair: all seven required routes HTTP **200**; Service 74 regression **PASS**; header/footer/main present; desktop/mobile screenshots captured; theme remains V9-06B skeleton (no V9 integration). Runtime mutations: **0**. Verdict: **PARTIAL PASS**. Report: [reports/FP-0002-V9-06D5-VISUAL-ROUTE-QA-REPORT-v1.md](reports/FP-0002-V9-06D5-VISUAL-ROUTE-QA-REPORT-v1.md).
+
+### V9-06D.6 template integration planning (2026-07-04)
+
+Planning-only rerun after Cursor crash recovery (`D6_RECOVERABLE_RESUME_READY`). Static→WP matrix, ACF binding, component/asset plan, integration waves D7-A…F, runtime delivery/rollback plan, and risk register complete. V9 integration and theme/plugin source changes: **NOT STARTED**. Next: `CREATE_V9_06D7_GLOBAL_SHELL_ASSET_INTEGRATION_SOURCE_TASK` (operator review). Report: [reports/FP-0002-V9-06D6-TEMPLATE-INTEGRATION-PLANNING-REPORT-v1.md](reports/FP-0002-V9-06D6-TEMPLATE-INTEGRATION-PLANNING-REPORT-v1.md). Crash recovery: [reports/FP-0002-V9-06D6-CURSOR-CRASH-RECOVERY-AUDIT-REPORT-v1.md](reports/FP-0002-V9-06D6-CURSOR-CRASH-RECOVERY-AUDIT-REPORT-v1.md).
 
 Reports:
 
+- `reports/FP-0002-V9-06D6-TEMPLATE-INTEGRATION-PLANNING-REPORT-v1.md` — D.6 planning PASS
+- `reports/FP-0002-V9-06D6-CURSOR-CRASH-RECOVERY-AUDIT-REPORT-v1.md` — crash recovery PASS
 - `reports/FP-0002-V9-06D5-VISUAL-ROUTE-QA-REPORT-v1.md` — D.5 visual route QA PARTIAL PASS
 - `reports/FP-0002-REWRITE-RULE-REPAIR-REPORT-v1.md` — repair PASS
 - `reports/FP-0002-ROUTE-OWNERSHIP-INVESTIGATION-REPORT-v1.md` — investigation PASS

@@ -1,0 +1,63 @@
+{
+  "phase": "V9-06D.6",
+  "theme_root": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky",
+  "version": "0.2.0-skeleton",
+  "skeleton_flag": "SHPIGOVSKY_THEME_SKELETON=true",
+  "templates": {
+    "front_page": "front-page.php",
+    "home_blog": "home.php",
+    "single_service": "single-service.php",
+    "page_templates": [
+      "page-templates/services-hub.php",
+      "page-templates/contacts.php",
+      "page-templates/institutional.php",
+      "page-templates/reviews.php",
+      "page-templates/legal.php"
+    ]
+  },
+  "service_stacks": {
+    "loader": "inc/service-template-loader.php",
+    "variants": [
+      "subdivision",
+      "leaf",
+      "alcohol-special"
+    ],
+    "default_variant": "leaf",
+    "acf_wired": false,
+    "partials_state": "inert_comment_markers"
+  },
+  "layout": [
+    "template-parts/layout/header.php",
+    "template-parts/layout/footer.php",
+    "template-parts/layout/global-consultation-modal.php",
+    "template-parts/navigation/primary-desktop.php",
+    "template-parts/navigation/primary-mobile.php",
+    "template-parts/navigation/breadcrumbs.php"
+  ],
+  "assets": {
+    "enqueue": "inc/assets.php",
+    "current": [
+      "assets/css/foundation.css"
+    ],
+    "v9_enqueue_hook": "shpigovsky_enqueue_theme_assets",
+    "v9_assets_present": false
+  },
+  "plugin": {
+    "mode": "content_model",
+    "modules_enabled": [
+      "content-types.service",
+      "permalinks.service",
+      "fields.acf",
+      "fields.field-groups",
+      "fields.repeater-validation",
+      "settings.site",
+      "admin.options-page"
+    ],
+    "modules_disabled": [
+      "forms.consultation",
+      "migrations.runner"
+    ],
+    "permalink_depth2": "service=$matches[1]/$matches[2]"
+  },
+  "result": "COMPLETE"
+}

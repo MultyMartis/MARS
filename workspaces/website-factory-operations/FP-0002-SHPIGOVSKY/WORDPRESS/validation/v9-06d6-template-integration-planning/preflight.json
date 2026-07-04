@@ -1,0 +1,44 @@
+{
+  "phase": "V9-06D.6",
+  "task": "TEMPLATE_INTEGRATION_PLANNING_RERUN",
+  "volume": {
+    "drive": "X",
+    "label": "AI WS",
+    "filesystem": "NTFS",
+    "health": "Healthy",
+    "result": "PASS"
+  },
+  "git": {
+    "repository": "X:\\AI MARS",
+    "branch": "mars/canonical-post-recovery",
+    "required_head": "10eaffc2e195d4820768a183677fd19681138173",
+    "local_head": "2edcdf3c1021634dbe134db26c722c6e55d3f583",
+    "remote_tracking_head": "2edcdf3c1021634dbe134db26c722c6e55d3f583",
+    "remote_actual_head": "2edcdf3c1021634dbe134db26c722c6e55d3f583",
+    "ahead": 0,
+    "behind": 0,
+    "required_head_is_ancestor": true,
+    "ahead_commits": [
+      "fbbc966a Register ORCA-RS-001 executive research publication ownership",
+      "4cd24a96 Point Website Factory research completion to ORCA-RS-001",
+      "10780ba6 Add BZPM executive-report as ORCA-RS-001 reference package"
+    ],
+    "ahead_touches_fp0002_wordpress": false,
+    "ahead_touches_v9_src_dist": false,
+    "staged_files": [],
+    "foreign_unstaged_wip": true,
+    "merge_rebase_in_progress": false,
+    "task_start_local_head": "10780ba66dac78b998f6eb1212e71d6160e18e45",
+    "task_start_remote_head": "10eaffc2e195d4820768a183677fd19681138173",
+    "task_start_ahead": 3
+  },
+  "deviation": {
+    "code": "REQUIRED_HEAD_SUPERSEDED_BY_UNRELATED_REMOTE_COMMITS",
+    "severity": "Required HEAD 10eaffc2 is ancestor. At task start local was ahead 3 (ORCA). Before commit, remote advanced and local/remote synced at 2edcdf3c (ORCA/Web-GPT registry commits). No FP-0002 WordPress/V9 source in those commits. Planning package valid.",
+    "blocked": false
+  },
+  "crash_recovery_preserved": true,
+  "old_resume_used": false,
+  "old_generator_reused": false,
+  "result": "PARTIAL_PASS_DEVIATION_NOTED"
+}

@@ -1,0 +1,111 @@
+{
+  "phase": "V9-06D.6",
+  "risks": [
+    {
+      "id": "R01",
+      "risk": "Page ID 6 / Service ID 73 shared path ownership debt",
+      "severity": "MEDIUM",
+      "blocks_next_wave": false,
+      "mitigation": "Documented secondary debt; cleanup after template integration"
+    },
+    {
+      "id": "R02",
+      "risk": "Skeleton chrome currently unstyled",
+      "severity": "HIGH",
+      "blocks_next_wave": true,
+      "mitigation": "D7-A global shell/assets first"
+    },
+    {
+      "id": "R03",
+      "risk": "Inert service template partials",
+      "severity": "HIGH",
+      "blocks_next_wave": false,
+      "mitigation": "D7-D wires partials to ACF"
+    },
+    {
+      "id": "R04",
+      "risk": "Content minimal seed only",
+      "severity": "MEDIUM",
+      "blocks_next_wave": false,
+      "mitigation": "Fallbacks; later migration waves"
+    },
+    {
+      "id": "R05",
+      "risk": "ACF fields may not fully cover V9 visual content",
+      "severity": "MEDIUM",
+      "blocks_next_wave": false,
+      "mitigation": "Gap register; optional ACF gap-repair task if blocking"
+    },
+    {
+      "id": "R06",
+      "risk": "Static assets need theme asset packaging",
+      "severity": "HIGH",
+      "blocks_next_wave": true,
+      "mitigation": "D7-A packages from V9 dist without editing V9"
+    },
+    {
+      "id": "R07",
+      "risk": "Forms/modal behavior deferred",
+      "severity": "MEDIUM",
+      "blocks_next_wave": false,
+      "mitigation": "Markup only; ConsultationHandler stays disabled"
+    },
+    {
+      "id": "R08",
+      "risk": "Legal/demo content not production ready",
+      "severity": "LOW",
+      "blocks_next_wave": false,
+      "mitigation": "Outside first wave"
+    },
+    {
+      "id": "R09",
+      "risk": "Blog/reviews/institutional outside first wave",
+      "severity": "LOW",
+      "blocks_next_wave": false,
+      "mitigation": "Optional planning only"
+    },
+    {
+      "id": "R10",
+      "risk": "Foreign WIP must be protected",
+      "severity": "HIGH",
+      "blocks_next_wave": false,
+      "mitigation": "Exact-path staging only"
+    },
+    {
+      "id": "R11",
+      "risk": "No ACF Extended PRO dependency",
+      "severity": "LOW",
+      "blocks_next_wave": false,
+      "mitigation": "Use only admitted ACF PRO fields"
+    },
+    {
+      "id": "R12",
+      "risk": "No automatic filesystem enforcement",
+      "severity": "LOW",
+      "blocks_next_wave": false,
+      "mitigation": "Human delivery gates"
+    },
+    {
+      "id": "R13",
+      "risk": "No pixel-perfect claim until visual integration QA",
+      "severity": "MEDIUM",
+      "blocks_next_wave": false,
+      "mitigation": "D7-F smoke only; operator visual PASS separate"
+    },
+    {
+      "id": "R14",
+      "risk": "service_layout_variant not wired in loader",
+      "severity": "HIGH",
+      "blocks_next_wave": false,
+      "mitigation": "D7-D must read ACF variant"
+    },
+    {
+      "id": "R15",
+      "risk": "Site options not seeded",
+      "severity": "MEDIUM",
+      "blocks_next_wave": false,
+      "mitigation": "Chrome fallbacks; options seed micro-task later"
+    }
+  ],
+  "result": "COMPLETE"
+}
