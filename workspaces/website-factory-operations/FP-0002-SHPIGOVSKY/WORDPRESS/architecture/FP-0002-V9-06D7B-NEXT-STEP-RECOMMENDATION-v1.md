@@ -2,19 +2,15 @@
 
 **Date:** 2026-07-05
 
-D7-B home template source **COMPLETE** (source-only). Global shell from D7-A preserved.
+D7-B home template runtime delivery **COMPLETE**. Home front-page orchestration with 8/20 V9 sections (D7-B wave) is live in local runtime with hash-verified theme copy.
 
 ## Recommended next phase
 
-**CREATE_V9_06D7B_RUNTIME_DELIVERY_TASK** — deliver D7-B theme source to local runtime under bounded theme-files-only gate; post-delivery home route smoke.
+**CREATE_V9_06D7C_SERVICES_HUB_TEMPLATE_SOURCE_TASK** — implement Services Hub template blocks from V9 static reference in canonical theme source (source-only; separate runtime delivery authorization).
 
-Alternative if operator prefers parallel source work: **CREATE_V9_06D7C_SERVICES_HUB_TEMPLATE_SOURCE_TASK** (does not replace runtime delivery need for home visuals).
+## V9-06D7-C gate
 
-## Blockers before runtime delivery
-
-- Operator authorization for D7-B runtime delivery task  
-- Optional: seed `home_advantages`, `home_gallery_media`, `home_faq_items`, enable `home_blog_teaser_enabled` for fuller home preview (content migration — separate gate)  
-- Optional: package Swiper/main.js home modules for gallery/accordion parity (asset wave)
+READY FOR OPERATOR REVIEW (not authorized by this task).
 
 ## Result
 

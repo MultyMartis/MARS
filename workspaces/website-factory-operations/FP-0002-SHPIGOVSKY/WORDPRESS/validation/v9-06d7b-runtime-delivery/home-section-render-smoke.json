@@ -1,0 +1,76 @@
+{
+  "generated_at": "2026-07-04T17:24:56.525095Z",
+  "url": "http://shpigovsky.test/",
+  "http_status": 200,
+  "checks": [
+    {
+      "section": "front_page_orchestration",
+      "present": true,
+      "expected_if_empty": false,
+      "result": "PASS"
+    },
+    {
+      "section": "site-main--front",
+      "present": true,
+      "expected_if_empty": false,
+      "result": "PASS"
+    },
+    {
+      "section": "hero",
+      "present": true,
+      "expected_if_empty": false,
+      "result": "PASS"
+    },
+    {
+      "section": "feature-grid",
+      "present": false,
+      "expected_if_empty": true,
+      "result": "PASS_OMITTED"
+    },
+    {
+      "section": "treatment-prevention",
+      "present": true,
+      "expected_if_empty": false,
+      "result": "PASS"
+    },
+    {
+      "section": "rehabilitation-program",
+      "present": true,
+      "expected_if_empty": false,
+      "result": "PASS"
+    },
+    {
+      "section": "gallery",
+      "present": false,
+      "expected_if_empty": true,
+      "result": "PASS_OMITTED"
+    },
+    {
+      "section": "articles-teaser",
+      "present": false,
+      "expected_if_empty": true,
+      "result": "PASS_OMITTED"
+    },
+    {
+      "section": "faq",
+      "present": false,
+      "expected_if_empty": true,
+      "result": "PASS_OMITTED"
+    },
+    {
+      "section": "final-form",
+      "present": true,
+      "expected_if_empty": false,
+      "result": "PASS"
+    },
+    {
+      "section": "deferred_sections_documented",
+      "present": true,
+      "expected_if_empty": "12/20 V9 sections deferred per D7-B scope",
+      "result": "PASS"
+    }
+  ],
+  "failures": [],
+  "implemented_sections_visible": 5,
+  "result": "PASS"
+}

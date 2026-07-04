@@ -2,8 +2,8 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D7-B HOME TEMPLATE SOURCE COMPLETE — runtime delivery NOT performed — next D7-B runtime delivery gate
-**Classification:** CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON COMPLETE — MINIMAL VISUAL CONTENT SEEDED — DEPTH-2 REWRITE REPAIRED — VISUAL ROUTE BASELINE READY — V9 GLOBAL SHELL RUNTIME DELIVERED — V9 HOME TEMPLATE SOURCE COMPLETE — NEXT D7-B RUNTIME DELIVERY
+**Status:** V9-06D7-B HOME TEMPLATE RUNTIME DELIVERED — hash verified — route/home smoke PASS
+**Classification:** CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON COMPLETE — MINIMAL VISUAL CONTENT SEEDED — DEPTH-2 REWRITE REPAIRED — VISUAL ROUTE BASELINE READY — V9 GLOBAL SHELL RUNTIME DELIVERED — V9 HOME TEMPLATE RUNTIME DELIVERED — NEXT D7-C SERVICES HUB SOURCE
 
 ---
 
@@ -63,7 +63,7 @@ WORDPRESS/
 
 | Surface | Classification |
 |---------|----------------|
-| Theme | V9-06D7-A GLOBAL SHELL RUNTIME DELIVERED — V9 CSS/JS/header/footer/nav live in local runtime |
+| Theme | V9-06D7-B HOME TEMPLATE RUNTIME DELIVERED — D7-B home sections live in local runtime |
 | Shpigovsky Core | V9-06D.2 CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON COMPLETE |
 | ACF JSON | V9-06D.1 DELIVERED — 13 LOCAL JSON FILES; V9-06D.2 object meta only |
 
@@ -171,3 +171,8 @@ Reports:
 ## V9-06D7-A runtime delivery
 
 D7-A global shell/assets delivered to local runtime theme only. PHP lint PASS. Checkpoint + hash match PASS. Seven D.5 routes HTTP 200; Service 74 PASS; V9 CSS/JS enqueued. No DB/content/ACF/menu/redirect writes. Evidence: `validation/v9-06d7a-runtime-delivery/`. Next: D7-B home template source (operator review).
+
+
+## V9-06D7-B runtime delivery
+
+D7-B home template delivered to local runtime theme only. PHP lint PASS. Checkpoint + hash match PASS. Seven D.5 routes HTTP 200; Service 74 PASS; Home D7-B sections visible (8/20 V9 wave; optional sections omitted where ACF empty). No DB/content/ACF/menu/redirect writes. Evidence: `validation/v9-06d7b-runtime-delivery/`. Next: D7-C Services Hub template source (operator review).
