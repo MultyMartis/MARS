@@ -1,4 +1,11 @@
 #!/usr/bin/env node
+// C2c HOLD: source hardening only.
+// This file is not authorized for execution without explicit operator approval.
+// Commit/persistence does not authorize Commander import, Direct launch, account mutation,
+// advertising start, Storage export generation, repo artifact generation,
+// Localhost mutation, Storage mutation, Yandex/API access, or client-facing delivery.
+// Commander/XLSX generation is transport/import-candidate tooling only and does not authorize
+// import into Yandex Direct or any live account mutation.
 /**
  * CORVONERO V2.6.2 — restore 2 missing phrase slots from V2.6.1 package.
  * Root cause: build_phrase_allocation omitted merged group ca-02-troubleshooting-not-working → ca-02-support-tech.
@@ -42,6 +49,15 @@ const RESTORE_SLOTS = [
     phrase_id: 'PHR-0447',
   },
 ];
+
+function requireOperatorGate() {
+  if (process.env.CORVONERO_OPERATOR_GATE !== 'APPROVED') {
+    console.error(
+      'STOP: CORVONERO_OPERATOR_GATE=APPROVED required. This C2c helper is not safe for casual execution.'
+    );
+    process.exit(1);
+  }
+}
 
 function sha256File(fp) {
   return crypto.createHash('sha256').update(fs.readFileSync(fp)).digest('hex');
@@ -113,6 +129,7 @@ function normalize(s) {
 }
 
 async function main() {
+  requireOperatorGate();
   if (!fs.existsSync(V261)) throw new Error(`V2.6.1 package missing: ${V261}`);
 
   if (fs.existsSync(V262)) {

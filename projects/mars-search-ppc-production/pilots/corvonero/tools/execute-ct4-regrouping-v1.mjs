@@ -1,4 +1,11 @@
 #!/usr/bin/env node
+// C2c HOLD: source hardening only.
+// This file is not authorized for execution without explicit operator approval.
+// Commit/persistence does not authorize Commander import, Direct launch, account mutation,
+// advertising start, Storage export generation, repo artifact generation,
+// Localhost mutation, Storage mutation, Yandex/API access, or client-facing delivery.
+// CT4 regrouping / UTM / bids authority generation does not authorize campaign launch, import,
+// account mutation, advertising start, or client-facing delivery.
 /**
  * CORVONERO CT-4 — semantic regrouping, re-audit, routing authority.
  * Rule-based only — no semantic cache, no OpenRouter, no XLSX generation.
@@ -32,6 +39,15 @@ const OPERATOR_FILES = {
 };
 
 const AD_LIMITS = { headline_1: 56, headline_2: 30, text: 81, display_path: 20 };
+
+function requireOperatorGate() {
+  if (process.env.CORVONERO_OPERATOR_GATE !== 'APPROVED') {
+    console.error(
+      'STOP: CORVONERO_OPERATOR_GATE=APPROVED required. This C2c helper is not safe for casual execution.'
+    );
+    process.exit(1);
+  }
+}
 
 function sha256File(fp) {
   return crypto.createHash('sha256').update(fs.readFileSync(fp)).digest('hex');
@@ -307,6 +323,7 @@ const GROUP_DEFS = {
 };
 
 function main() {
+  requireOperatorGate();
   const generatedAt = new Date().toISOString();
   const { adDecision, cleanupRegister, cleanupByPhrase } = loadOperatorInputs();
   const sourceHashes = {};

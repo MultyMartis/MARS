@@ -1,4 +1,11 @@
 #!/usr/bin/env node
+// C2c HOLD: source hardening only.
+// This file is not authorized for execution without explicit operator approval.
+// Commit/persistence does not authorize Commander import, Direct launch, account mutation,
+// advertising start, Storage export generation, repo artifact generation,
+// Localhost mutation, Storage mutation, Yandex/API access, or client-facing delivery.
+// Commander/XLSX generation is transport/import-candidate tooling only and does not authorize
+// import into Yandex Direct or any live account mutation.
 /**
  * CORVONERO CT-5R2 — Triumph bid-ladder recovery + v4 Commander XLSX regeneration.
  * Local generation only — no import, no Direct API.
@@ -126,6 +133,15 @@ function assertVolume() {
   }).trim();
   if (label !== 'AI WS') {
     throw new Error(`STOP — X VOLUME IDENTITY MISMATCH (got "${label}")`);
+  }
+}
+
+function requireOperatorGate() {
+  if (process.env.CORVONERO_OPERATOR_GATE !== 'APPROVED') {
+    console.error(
+      'STOP: CORVONERO_OPERATOR_GATE=APPROVED required. This C2c helper is not safe for casual execution.'
+    );
+    process.exit(1);
   }
 }
 
@@ -400,6 +416,7 @@ function writeStorage(name, data, md) {
 }
 
 async function main() {
+  requireOperatorGate();
   const generatedAt = new Date().toISOString();
   assertVolume();
 

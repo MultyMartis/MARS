@@ -1,7 +1,17 @@
 #!/usr/bin/env node
+// C2c HOLD: ad-wave review/approval hardening only.
+// This file is not authorized for execution without explicit operator approval.
+// Commit/persistence does not authorize Direct launch, Commander import,
+// account mutation, advertising start, Storage export generation,
+// repo artifact generation, Localhost mutation, Storage mutation,
+// Yandex/API access, client-facing delivery, or production execution.
+// Ad-wave DOCX/JSON/MD generation is review/export-candidate tooling only.
 /**
  * CORVONERO AD WAVE 1 — Final P1 approval, deployability overlay, DOCX export.
  * Operator decisions S1–S5 (final). Deterministic — no external model calls.
+ * Ad-wave review/final approval materials are review/export-candidate tooling only
+ * and do not authorize launch, Direct import, account mutation, advertising start,
+ * or client-facing delivery.
  */
 import fs from "fs";
 import path from "path";
@@ -14,7 +24,7 @@ const PILOT = path.resolve(__dirname, "..");
 const REPO = path.resolve(PILOT, "../../../..");
 const REPORTS = path.resolve(REPO, "projects/mars-search-ppc-production/reports");
 const STORAGE_EXPORT = path.resolve(
-  "C:/MARS Phenix/AI MARS STORAGE/exports/corvonero/CORVONERO-ADS-FINAL-2026-06-29"
+  "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-ADS-FINAL-2026-06-29"
 );
 
 const CHECKPOINT = "fdd1899c5eb13268021636e40629cfa237a454cf";
@@ -346,7 +356,17 @@ async function buildFinalDocx(deployableAds, register) {
   return docxPath;
 }
 
+function requireOperatorGate() {
+  if (process.env.CORVONERO_OPERATOR_GATE !== 'APPROVED') {
+    console.error(
+      'STOP: CORVONERO_OPERATOR_GATE=APPROVED required. This C2c ad-wave helper is not safe for casual execution.'
+    );
+    process.exit(1);
+  }
+}
+
 async function main() {
+  requireOperatorGate();
   const architecture = readJson("CORVONERO-PHASE-6.1-AD-GROUP-ARCHITECTURE-v2.json");
   const groupLp = readJson("CORVONERO-PHASE-6.2-GROUP-TO-LP-MAP-v1.json");
   const accept = readJson("CORVONERO-RUN-004-PHASE-5.2-FINAL-ACCEPT-v1.json");
