@@ -62,7 +62,7 @@ Only: WordPress `rewrite_rules` option via soft rewrite flush (`wp rewrite flush
 | `.htaccess` changed | NO |
 | Rewrite hash before | `c3e9cb3746da51c81226e4b8e517004c6a0ca0a5eb73a6ea5225c2a8af1aa110` |
 | Rewrite hash after | `bf3926c71b7b134708fa052f782c911dcc931dd61b1964a49b034d5b546c3a12` |
-| Count before / after | 150 / 163 |
+| Count before / after | 95 / 108 |
 | Result | PASS |
 
 ## Post-flush route QA
