@@ -85,4 +85,8 @@ Content migration planning is complete in Git documentation only. No runtime con
 
 ## V9-06D.4 RERUN minimal content seed
 
-Local runtime minimal ACF/meta seed is complete for authorized Pages 4/5/20 and Services 73/74/77/84 only. Full production content migration, V9 integration, menus, redirects, Options Page values, and rewrite flush remain not performed. Previous blocked D.4 attempt is preserved as historical evidence.
+Local runtime minimal ACF/meta seed is complete for authorized Pages 4/5/20 and Services 73/74/77/84 only. Full production content migration, V9 integration, menus, redirects, and Options Page values remain not performed. Previous blocked D.4 attempt is preserved as historical evidence.
+
+## REWRITE-FLUSH-MICRO-GATE
+
+Soft rewrite flush performed in local runtime only (`rewrite_rules` option). Hard flush not used; `.htaccess` unchanged. Service 74 remains HTTP 404 with correct generated permalink (`FLUSH_NOT_SUFFICIENT`). No content, menu, redirect, plugin, or V9 source/dist changes. Runtime remains deployment target; Git source records documentation and evidence only.

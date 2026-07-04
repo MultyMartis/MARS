@@ -1,0 +1,100 @@
+{
+  "phase": "REWRITE-FLUSH-MICRO-GATE",
+  "timestamp": "2026-07-04T17:49:41+07:00",
+  "routes": [
+    {
+      "url": "http://shpigovsky.test/",
+      "path": "/",
+      "expected_object_id": 4,
+      "expected_object_type": "page",
+      "http_status": 200,
+      "response_title": "Шпиговский — локальная разработка",
+      "generated_permalink": "http://shpigovsky.test/",
+      "generated_path": "/",
+      "generated_permalink_match": true,
+      "result": "PASS"
+    },
+    {
+      "url": "http://shpigovsky.test/uslugi/",
+      "path": "/uslugi/",
+      "expected_object_id": 5,
+      "expected_object_type": "page",
+      "http_status": 200,
+      "response_title": "Услуги — Шпиговский — локальная разработка",
+      "generated_permalink": "http://shpigovsky.test/uslugi/",
+      "generated_path": "/uslugi/",
+      "generated_permalink_match": true,
+      "result": "PASS"
+    },
+    {
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/",
+      "path": "/uslugi/zavisimosti/",
+      "expected_object_id": 73,
+      "expected_object_type": "service",
+      "http_status": 200,
+      "response_title": "Зависимости — Шпиговский — локальная разработка",
+      "generated_permalink": "http://shpigovsky.test/uslugi/zavisimosti/",
+      "generated_path": "/uslugi/zavisimosti/",
+      "generated_permalink_match": true,
+      "result": "PASS"
+    },
+    {
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "expected_object_id": 74,
+      "expected_object_type": "service",
+      "http_status": 404,
+      "response_title": "Страница не найдена — Шпиговский — локальная разработка",
+      "generated_permalink": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "generated_path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "generated_permalink_match": true,
+      "result": "FLUSH_NOT_SUFFICIENT"
+    },
+    {
+      "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/",
+      "path": "/uslugi/psihicheskoe-zdorovie/",
+      "expected_object_id": 77,
+      "expected_object_type": "service",
+      "http_status": 200,
+      "response_title": "Психическое здоровье — Шпиговский — локальная разработка",
+      "generated_permalink": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/",
+      "generated_path": "/uslugi/psihicheskoe-zdorovie/",
+      "generated_permalink_match": true,
+      "result": "PASS"
+    },
+    {
+      "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "expected_object_id": 84,
+      "expected_object_type": "service",
+      "http_status": 200,
+      "response_title": "Расстройства пищевого поведения — Шпиговский — локальная разработка",
+      "generated_permalink": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "generated_path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "generated_permalink_match": true,
+      "result": "PASS"
+    },
+    {
+      "url": "http://shpigovsky.test/kontakty/",
+      "path": "/kontakty/",
+      "expected_object_id": 20,
+      "expected_object_type": "page",
+      "http_status": 200,
+      "response_title": "Контакты — Шпиговский — локальная разработка",
+      "generated_permalink": "http://shpigovsky.test/kontakty/",
+      "generated_path": "/kontakty/",
+      "generated_permalink_match": true,
+      "result": "PASS"
+    }
+  ],
+  "rewrite_flush_performed": true,
+  "hard_flush": false,
+  "http_200_count": 6,
+  "http_404_count": 1,
+  "service_id_74_status": "STILL_404",
+  "service_id_74_http": 404,
+  "all_d4_qa_urls_pass": false,
+  "classification": "FLUSH_NOT_SUFFICIENT",
+  "note": "Service ID 74 generated permalink remains correct but HTTP 404 after soft rewrite flush. Do not create redirects or edit content. Recommend route ownership/path conflict investigation (Page ID 6 shares /uslugi/zavisimosti/ with Service 73; depth-2 service rewrite may not resolve leaf under shared prefix).",
+  "result": "PARTIAL"
+}

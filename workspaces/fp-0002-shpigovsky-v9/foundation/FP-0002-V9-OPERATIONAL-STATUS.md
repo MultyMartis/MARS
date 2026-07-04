@@ -1,6 +1,6 @@
 # FP-0002 V9 Operational Status
 
-**Current:** V9-06D.4 RERUN MINIMAL CONTENT SEED COMPLETE (PARTIAL PASS)
+**Current:** REWRITE-FLUSH-MICRO-GATE COMPLETE (PARTIAL PASS — FLUSH_NOT_SUFFICIENT)
 
 - V9 static frontend: operator-approved stable
 - WordPress content model: active in local runtime
@@ -8,8 +8,9 @@
 - Minimal visual content seed: COMPLETE for Pages 4/5/20 and Services 73/74/77/84
 - Full content migration: NOT PERFORMED
 - V9 integration: NOT STARTED
-- Rewrite flush: MICRO_GATE_REQUIRED (Service 74 HTTP 404 with correct generated permalink)
-- Next: REWRITE_FLUSH_MICRO_GATE, then V9-06D.5 visual route QA
+- Rewrite flush: PERFORMED (soft; `.htaccess` unchanged)
+- Service 74: STILL HTTP 404 with correct generated permalink (`FLUSH_NOT_SUFFICIENT`)
+- Next: route ownership / path conflict investigation, then V9-06D.5 visual route QA
 
 # FP-0002 V9 Operational Status
 

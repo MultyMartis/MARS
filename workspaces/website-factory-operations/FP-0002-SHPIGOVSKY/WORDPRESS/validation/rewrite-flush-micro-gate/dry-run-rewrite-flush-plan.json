@@ -1,0 +1,27 @@
+{
+  "expected_non_mutations": {
+    "plugin_theme_files": true,
+    "uploads": true,
+    "terms": true,
+    "menus": true,
+    "redirects": true,
+    "options_other_than_rewrite_rules": true,
+    "acf": true,
+    "posts": true,
+    "postmeta": true,
+    "users": true
+  },
+  "rollback_method": "DB restore from checkpoint dump if needed",
+  "checkpoint": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\rewrite-flush-micro-gate-pre-20260704-174923",
+  "timestamp": "2026-07-04T10:49:33+00:00",
+  "preferred_command": "wp rewrite flush",
+  "phase": "REWRITE-FLUSH-MICRO-GATE",
+  "hard_flush": false,
+  "planned_command": "wp rewrite flush --path=<runtime> (soft; no --hard) OR flush_rewrite_rules(false)",
+  "verdict": "SAFE_TO_FLUSH_WITH_DB_CHECKPOINT",
+  "expected_mutation": {
+    "description": "WordPress rewrite_rules option regenerated from registered post types/taxonomies",
+    "rewrite_rules_option_only": true
+  },
+  "result": "PASS"
+}

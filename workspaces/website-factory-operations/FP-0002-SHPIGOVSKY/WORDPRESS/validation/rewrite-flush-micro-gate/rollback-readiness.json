@@ -1,0 +1,21 @@
+{
+  "phase": "REWRITE-FLUSH-MICRO-GATE",
+  "timestamp": "2026-07-04T17:49:41+07:00",
+  "db_dump": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\rewrite-flush-micro-gate-pre-20260704-174923\\database\\mars_wp_fp0002-rewrite-flush-micro-gate-pre.sql",
+  "rewrite_rules_before": "c3e9cb3746da51c81226e4b8e517004c6a0ca0a5eb73a6ea5225c2a8af1aa110",
+  "rewrite_rules_after": "bf3926c71b7b134708fa052f782c911dcc931dd61b1964a49b034d5b546c3a12",
+  "restore_procedure": "Restore mars_wp_fp0002 from checkpoint SQL dump; re-validate baseline hashes/counts and pre-flush route behavior.",
+  "expected_rollback_route_behavior": "Service 74 remains 404; other D.4 QA URLs HTTP 200; rewrite_rules hash returns to pre-flush value.",
+  "validation_checklist": [
+    "pages_total=23",
+    "services_total=15",
+    "posts_total unchanged",
+    "menus unchanged",
+    "seeded object combined hashes match pre-flush",
+    "rewrite_rules_hash matches pre-flush",
+    "Service 74 HTTP matches pre-flush baseline"
+  ],
+  "rollback_tested": false,
+  "rollback_not_executed_reason": "Flush executed safely with no scope drift; Service 74 still 404 is FLUSH_NOT_SUFFICIENT not flush breakage. Rollback not required.",
+  "result": "READY"
+}

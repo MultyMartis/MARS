@@ -15,5 +15,6 @@
 - Full content migration: not performed
 - V9 integration: not started
 - Next gate candidate: rewrite flush micro-gate, then V9-06D.5 visual route QA
+- Follow-on: REWRITE-FLUSH-MICRO-GATE executed 2026-07-04 — PARTIAL PASS (`FLUSH_NOT_SUFFICIENT`); see `FP-0002-REWRITE-FLUSH-MICRO-GATE-v1.md`
 
 Authority report: `workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/reports/FP-0002-V9-06D4-RERUN-MINIMAL-CONTENT-SEED-FOR-VISUAL-ROUTE-QA-REPORT-v1.md`

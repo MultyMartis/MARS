@@ -552,3 +552,8 @@ PASS: planning/audit only. 31 routes mapped; minimal visual content seed plan RE
 ## 2026-07-04 — V9-06D.4 RERUN minimal content seed for visual route QA
 
 PARTIAL PASS: minimal ACF/meta seed applied to Pages 4/5/20 and Services 73/74/77/84 under DB checkpoint. Unauthorized writes: 0. Menus/options/redirects unchanged. Rewrite flush not performed. Service 74 HTTP 404 with matching generated permalink → REWRITE_FLUSH_MICRO_GATE_REQUIRED. Full content migration and V9 integration not performed.
+
+
+## 2026-07-04 — REWRITE-FLUSH-MICRO-GATE
+
+PARTIAL PASS: soft rewrite flush performed under DB checkpoint; `rewrite_rules` updated; `.htaccess` unchanged; content/ACF/menus/redirects/objects unchanged. Service 74 still HTTP 404 with matching generated permalink → FLUSH_NOT_SUFFICIENT. Next: route ownership / path conflict investigation.

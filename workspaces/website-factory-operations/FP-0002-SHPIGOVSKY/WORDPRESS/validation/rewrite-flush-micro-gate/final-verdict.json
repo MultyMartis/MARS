@@ -1,0 +1,78 @@
+{
+  "phase": "REWRITE-FLUSH-MICRO-GATE",
+  "timestamp": "2026-07-04T17:49:41+07:00",
+  "required_head": "d34a863f87210933ede05734379db4bb5e21017e",
+  "suites": [
+    {
+      "result": "PASS",
+      "suite": "preflight"
+    },
+    {
+      "result": "PASS",
+      "suite": "runtime-identity"
+    },
+    {
+      "result": "PASS",
+      "suite": "pre-flush-baseline"
+    },
+    {
+      "result": "PASS",
+      "suite": "checkpoint"
+    },
+    {
+      "result": "PASS",
+      "suite": "dry-run-rewrite-flush-plan"
+    },
+    {
+      "result": "PASS",
+      "suite": "apply-rewrite-flush-result"
+    },
+    {
+      "result": "PARTIAL",
+      "suite": "post-flush-route-validation"
+    },
+    {
+      "result": "PASS",
+      "suite": "rewrite-rules-diff-validation"
+    },
+    {
+      "result": "PASS",
+      "suite": "object-content-immutability-validation"
+    },
+    {
+      "result": "RECORDED",
+      "suite": "historical-path-ownership-note"
+    },
+    {
+      "result": "PASS",
+      "suite": "wpilot-readonly-validation"
+    },
+    {
+      "result": "READY",
+      "suite": "rollback-readiness"
+    },
+    {
+      "result": "PASS",
+      "suite": "no-scope-drift-validation"
+    }
+  ],
+  "total_failures": 0,
+  "rewrite_flush_micro_gate": "COMPLETE",
+  "rewrite_flush": "PERFORMED",
+  "hard_flush": false,
+  "service_id_74_route": "STILL_404",
+  "d4_qa_urls": "PARTIAL",
+  "classification": "FLUSH_NOT_SUFFICIENT",
+  "content_changes": 0,
+  "acf_meta_changes": 0,
+  "menus": "UNCHANGED",
+  "redirects": "NOT_CREATED",
+  "object_counts": "UNCHANGED",
+  "options_changed": "REWRITE_RULES_ONLY",
+  "runtime_health": "PASS",
+  "rollback_readiness": "READY",
+  "v9_06d5": "BLOCKED pending route ownership/path conflict investigation for Service 74",
+  "verdict": "PARTIAL PASS",
+  "recommended_next_action": "CREATE_ROUTE_OWNERSHIP_INVESTIGATION_TASK",
+  "result": "PARTIAL PASS"
+}

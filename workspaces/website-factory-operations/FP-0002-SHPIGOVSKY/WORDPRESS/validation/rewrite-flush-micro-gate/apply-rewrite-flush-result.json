@@ -1,0 +1,17 @@
+{
+  "htaccess_hash_before": "EB8DFF1AC965306BD374B5604032C0F1EE51A35F209FC18EE5878250F7258BF6",
+  "result": "PASS",
+  "htaccess_changed": false,
+  "exit_code": 0,
+  "rewrite_rules_count_before": 95,
+  "rewrite_rules_hash_after": "bf3926c71b7b134708fa052f782c911dcc931dd61b1964a49b034d5b546c3a12",
+  "rewrite_rules_hash_before": "c3e9cb3746da51c81226e4b8e517004c6a0ca0a5eb73a6ea5225c2a8af1aa110",
+  "phase": "REWRITE-FLUSH-MICRO-GATE",
+  "rewrite_rules_count_after": 108,
+  "hard_flush": false,
+  "stderr": "",
+  "timestamp": "2026-07-04T10:49:41+00:00",
+  "htaccess_hash_after": "EB8DFF1AC965306BD374B5604032C0F1EE51A35F209FC18EE5878250F7258BF6",
+  "stdout": "Success: Rewrite rules flushed.",
+  "command": "php wp-cli.phar rewrite flush --path=X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky"
+}

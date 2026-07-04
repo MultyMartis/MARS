@@ -1,0 +1,38 @@
+{
+  "phase": "REWRITE-FLUSH-MICRO-GATE",
+  "timestamp": "2026-07-04T17:49:41+07:00",
+  "path": "/uslugi/zavisimosti/",
+  "historical_page_id_6": {
+    "exists": true,
+    "status": "publish",
+    "title": "Зависимости",
+    "generated_path": "/uslugi/zavisimosti/"
+  },
+  "service_id_73": {
+    "exists": true,
+    "status": "publish",
+    "title": "Зависимости",
+    "generated_path": "/uslugi/zavisimosti/"
+  },
+  "http": {
+    "http_status": 200,
+    "title": "Зависимости — Шпиговский — локальная разработка",
+    "curl_error": null
+  },
+  "current_resolver_classification": "SHARED_GENERATED_PATH_PAGE_6_AND_SERVICE_73",
+  "resolver_details": {
+    "page_id_6_status": "publish",
+    "page_id_6_slug": "zavisimosti",
+    "page_id_6_generated_path": "/uslugi/zavisimosti/",
+    "service_id_73_status": "publish",
+    "service_id_73_slug": "zavisimosti",
+    "service_id_73_generated_path": "/uslugi/zavisimosti/",
+    "http_status": 200,
+    "response_title": "Зависимости — Шпиговский — локальная разработка"
+  },
+  "blocking_conflict_for_d5": false,
+  "recommended_later_action": "ROUTE_OWNERSHIP_REVIEW_IF_VISUAL_QA_REQUIRES_SERVICE_73_SPECIFICALLY",
+  "mutations_performed": 0,
+  "result": "RECORDED",
+  "note": "Page ID 6 and Service ID 73 both generate /uslugi/zavisimosti/. Path returns HTTP 200. Not mutated. Service 74 depth-2 child remains 404 after flush — ownership/path conflict investigation recommended."
+}

@@ -2,8 +2,8 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D.4 RERUN MINIMAL CONTENT SEED COMPLETE (PARTIAL PASS — rewrite flush micro-gate for Service 74)
-**Classification:** CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON COMPLETE — MINIMAL VISUAL CONTENT SEEDED (PAGES 4/5/20 + SERVICES 73/74/77/84)
+**Status:** REWRITE-FLUSH-MICRO-GATE COMPLETE (PARTIAL PASS — FLUSH_NOT_SUFFICIENT for Service 74)
+**Classification:** CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON COMPLETE — MINIMAL VISUAL CONTENT SEEDED — REWRITE RULES FLUSHED (SOFT)
 
 ---
 
@@ -134,7 +134,11 @@ Report: `reports/FP-0002-V9-06D3-CONTENT-MIGRATION-PLANNING-REPORT-v1.md`.
 
 ## V9-06D.4 RERUN minimal content seed for visual route QA (2026-07-04)
 
-Authorized minimal ACF/meta seed applied to Pages 4/5/20 and Services 73/74/77/84 under DB checkpoint control. Full content migration, V9 HTML/CSS/JS integration, menus, redirects, Options Page values, and rewrite flush were not performed. Service 74 generated permalink matches expected path but HTTP 404 — `REWRITE_FLUSH_MICRO_GATE_REQUIRED`.
+Authorized minimal ACF/meta seed applied to Pages 4/5/20 and Services 73/74/77/84 under DB checkpoint control. Full content migration, V9 HTML/CSS/JS integration, menus, redirects, and Options Page values were not performed.
+
+### REWRITE-FLUSH-MICRO-GATE (2026-07-04)
+
+Soft rewrite flush performed under DB checkpoint (`wp rewrite flush`, no `--hard`, `.htaccess` unchanged). Options changed: `rewrite_rules` only. Service 74 generated permalink still matches expected path but HTTP remains **404** — classification `FLUSH_NOT_SUFFICIENT`. Next: route ownership / path conflict investigation (Page ID 6 vs Service 73/74 under `/uslugi/`). Report: [reports/FP-0002-REWRITE-FLUSH-MICRO-GATE-REPORT-v1.md](reports/FP-0002-REWRITE-FLUSH-MICRO-GATE-REPORT-v1.md).
 
 Reports:
 

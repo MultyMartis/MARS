@@ -1,0 +1,21 @@
+{
+  "db_dump_exists": true,
+  "rewrite_baseline": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\rewrite-flush-micro-gate-pre-20260704-174923\\rewrite-baseline\\rewrite-rules-baseline.json",
+  "name": "rewrite-flush-micro-gate-pre-20260704-174923",
+  "result": "PASS",
+  "secrets_copied": 0,
+  "phase": "REWRITE-FLUSH-MICRO-GATE",
+  "db_dump": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\rewrite-flush-micro-gate-pre-20260704-174923\\database\\mars_wp_fp0002-rewrite-flush-micro-gate-pre.sql",
+  "rollback_instructions": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\rewrite-flush-micro-gate-pre-20260704-174923\\rollback\\ROLLBACK-INSTRUCTIONS.md",
+  "object_baseline": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\rewrite-flush-micro-gate-pre-20260704-174923\\wordpress-state\\object-content-baseline-summary.json",
+  "timestamp": "2026-07-04T10:49:33+00:00",
+  "root": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\rewrite-flush-micro-gate-pre-20260704-174923",
+  "db_dump_size": 1303090,
+  "folders": [
+    "database",
+    "wordpress-state",
+    "rewrite-baseline",
+    "rollback",
+    "receipts"
+  ]
+}

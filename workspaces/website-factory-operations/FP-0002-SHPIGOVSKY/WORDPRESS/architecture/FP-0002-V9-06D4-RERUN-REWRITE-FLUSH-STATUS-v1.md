@@ -30,3 +30,7 @@ Condition 4 is **not** met.
 ## Recommended next action
 
 `REWRITE_FLUSH_MICRO_GATE` — separate operator-authorized micro-gate to flush rewrite rules for Service CPT routes, then re-check Service 74 HTTP status.
+
+## Follow-on (2026-07-04)
+
+REWRITE-FLUSH-MICRO-GATE executed: soft flush PASS; Service 74 still HTTP 404 → `FLUSH_NOT_SUFFICIENT`. See `FP-0002-REWRITE-FLUSH-MICRO-GATE-RESULT-v1.md`.

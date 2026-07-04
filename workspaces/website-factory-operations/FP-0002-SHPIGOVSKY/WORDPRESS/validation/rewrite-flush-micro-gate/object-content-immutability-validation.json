@@ -1,0 +1,242 @@
+{
+  "phase": "REWRITE-FLUSH-MICRO-GATE",
+  "timestamp": "2026-07-04T17:49:41+07:00",
+  "global_checks": [
+    {
+      "name": "pages_total",
+      "before": 23,
+      "after": 23,
+      "changed": false,
+      "result": "PASS"
+    },
+    {
+      "name": "services_total",
+      "before": 15,
+      "after": 15,
+      "changed": false,
+      "result": "PASS"
+    },
+    {
+      "name": "posts_total",
+      "before": 1,
+      "after": 1,
+      "changed": false,
+      "result": "PASS"
+    },
+    {
+      "name": "menus",
+      "before": [
+        {
+          "term_id": 2,
+          "name": "Primary",
+          "slug": "primary",
+          "count": 7
+        },
+        {
+          "term_id": 3,
+          "name": "Footer",
+          "slug": "footer",
+          "count": 3
+        },
+        {
+          "term_id": 4,
+          "name": "Legal",
+          "slug": "legal",
+          "count": 5
+        }
+      ],
+      "after": [
+        {
+          "term_id": 2,
+          "name": "Primary",
+          "slug": "primary",
+          "count": 7
+        },
+        {
+          "term_id": 3,
+          "name": "Footer",
+          "slug": "footer",
+          "count": 3
+        },
+        {
+          "term_id": 4,
+          "name": "Legal",
+          "slug": "legal",
+          "count": 5
+        }
+      ],
+      "changed": false,
+      "result": "PASS"
+    },
+    {
+      "name": "show_on_front",
+      "before": "page",
+      "after": "page",
+      "changed": false,
+      "result": "PASS"
+    },
+    {
+      "name": "page_on_front",
+      "before": 4,
+      "after": 4,
+      "changed": false,
+      "result": "PASS"
+    },
+    {
+      "name": "page_for_posts",
+      "before": 19,
+      "after": 19,
+      "changed": false,
+      "result": "PASS"
+    },
+    {
+      "name": "active_plugins",
+      "before": [
+        "acf-extended-pro/acf-extended.php",
+        "advanced-custom-fields-pro/acf.php",
+        "metacode-wpilot/metacode-wpilot.php",
+        "shpigovsky-core/shpigovsky-core.php"
+      ],
+      "after": [
+        "acf-extended-pro/acf-extended.php",
+        "advanced-custom-fields-pro/acf.php",
+        "metacode-wpilot/metacode-wpilot.php",
+        "shpigovsky-core/shpigovsky-core.php"
+      ],
+      "changed": false,
+      "result": "PASS"
+    },
+    {
+      "name": "active_theme",
+      "before": "shpigovsky",
+      "after": "shpigovsky",
+      "changed": false,
+      "result": "PASS"
+    },
+    {
+      "name": "categories_count",
+      "before": 1,
+      "after": 1,
+      "changed": false,
+      "result": "PASS"
+    },
+    {
+      "name": "tags_count",
+      "before": 0,
+      "after": 0,
+      "changed": false,
+      "result": "PASS"
+    },
+    {
+      "name": "users_count",
+      "before": 2,
+      "after": 2,
+      "changed": false,
+      "result": "PASS"
+    },
+    {
+      "name": "invariants_hash",
+      "before": "c8d7d4524056048613ca788a86b9ef304a28165cb0f834691403cc8a995fca2c",
+      "after": "c8d7d4524056048613ca788a86b9ef304a28165cb0f834691403cc8a995fca2c",
+      "changed": false,
+      "result": "PASS"
+    }
+  ],
+  "seeded_object_checks": [
+    {
+      "object_id": 4,
+      "content_hash_before": "0f00e812b2c40a8f0b3150e98b4ce744fc5b70fbc82989c455c28a248363c610",
+      "content_hash_after": "0f00e812b2c40a8f0b3150e98b4ce744fc5b70fbc82989c455c28a248363c610",
+      "content_changed": false,
+      "meta_changed": false,
+      "acf_changed": false,
+      "combined_hash_before": "43ce1481dbbef6f34ceb36a1b8e6fcd72adcbf744d2485380a205b8d9ab83901",
+      "combined_hash_after": "43ce1481dbbef6f34ceb36a1b8e6fcd72adcbf744d2485380a205b8d9ab83901",
+      "combined_changed": false,
+      "result": "PASS"
+    },
+    {
+      "object_id": 5,
+      "content_hash_before": "0f00e812b2c40a8f0b3150e98b4ce744fc5b70fbc82989c455c28a248363c610",
+      "content_hash_after": "0f00e812b2c40a8f0b3150e98b4ce744fc5b70fbc82989c455c28a248363c610",
+      "content_changed": false,
+      "meta_changed": false,
+      "acf_changed": false,
+      "combined_hash_before": "03641929f673f1ede10a95ae31b58af3c6a918da82c6806f18357d96fe166ace",
+      "combined_hash_after": "03641929f673f1ede10a95ae31b58af3c6a918da82c6806f18357d96fe166ace",
+      "combined_changed": false,
+      "result": "PASS"
+    },
+    {
+      "object_id": 20,
+      "content_hash_before": "0f00e812b2c40a8f0b3150e98b4ce744fc5b70fbc82989c455c28a248363c610",
+      "content_hash_after": "0f00e812b2c40a8f0b3150e98b4ce744fc5b70fbc82989c455c28a248363c610",
+      "content_changed": false,
+      "meta_changed": false,
+      "acf_changed": false,
+      "combined_hash_before": "2d13c3fd2b9dc542b8ea4f60b2d4a4f2d6fcff5fc6c2cd6f6208438fc6c92d9e",
+      "combined_hash_after": "2d13c3fd2b9dc542b8ea4f60b2d4a4f2d6fcff5fc6c2cd6f6208438fc6c92d9e",
+      "combined_changed": false,
+      "result": "PASS"
+    },
+    {
+      "object_id": 73,
+      "content_hash_before": "d363fe02bc19b643f114734e4e7401590feb5dd0009ae33061dad3ae939f3fea",
+      "content_hash_after": "d363fe02bc19b643f114734e4e7401590feb5dd0009ae33061dad3ae939f3fea",
+      "content_changed": false,
+      "meta_changed": false,
+      "acf_changed": false,
+      "combined_hash_before": "a16b1405301af498329cf045a5d2fd2a72f1f88b5c65281170a7158f375d22e7",
+      "combined_hash_after": "a16b1405301af498329cf045a5d2fd2a72f1f88b5c65281170a7158f375d22e7",
+      "combined_changed": false,
+      "result": "PASS"
+    },
+    {
+      "object_id": 74,
+      "content_hash_before": "d363fe02bc19b643f114734e4e7401590feb5dd0009ae33061dad3ae939f3fea",
+      "content_hash_after": "d363fe02bc19b643f114734e4e7401590feb5dd0009ae33061dad3ae939f3fea",
+      "content_changed": false,
+      "meta_changed": false,
+      "acf_changed": false,
+      "combined_hash_before": "968f508a795310a224d20245651f6fb34f77d9563aabf11485b1297c7df8a69a",
+      "combined_hash_after": "968f508a795310a224d20245651f6fb34f77d9563aabf11485b1297c7df8a69a",
+      "combined_changed": false,
+      "result": "PASS"
+    },
+    {
+      "object_id": 77,
+      "content_hash_before": "d363fe02bc19b643f114734e4e7401590feb5dd0009ae33061dad3ae939f3fea",
+      "content_hash_after": "d363fe02bc19b643f114734e4e7401590feb5dd0009ae33061dad3ae939f3fea",
+      "content_changed": false,
+      "meta_changed": false,
+      "acf_changed": false,
+      "combined_hash_before": "8ef7e1a327caeb9391311e580592d1e6946e97d6d9921a0d8438daaec2fda744",
+      "combined_hash_after": "8ef7e1a327caeb9391311e580592d1e6946e97d6d9921a0d8438daaec2fda744",
+      "combined_changed": false,
+      "result": "PASS"
+    },
+    {
+      "object_id": 84,
+      "content_hash_before": "d363fe02bc19b643f114734e4e7401590feb5dd0009ae33061dad3ae939f3fea",
+      "content_hash_after": "d363fe02bc19b643f114734e4e7401590feb5dd0009ae33061dad3ae939f3fea",
+      "content_changed": false,
+      "meta_changed": false,
+      "acf_changed": false,
+      "combined_hash_before": "92d95600b3978a9e20ae944bed75e171dc5e2334ffccb1be4e00e44305342977",
+      "combined_hash_after": "92d95600b3978a9e20ae944bed75e171dc5e2334ffccb1be4e00e44305342977",
+      "combined_changed": false,
+      "result": "PASS"
+    }
+  ],
+  "rewrite_rules": {
+    "before": "c3e9cb3746da51c81226e4b8e517004c6a0ca0a5eb73a6ea5225c2a8af1aa110",
+    "after": "bf3926c71b7b134708fa052f782c911dcc931dd61b1964a49b034d5b546c3a12",
+    "changed": true,
+    "expected_change": true,
+    "result": "PASS"
+  },
+  "content_changes": 0,
+  "acf_meta_changes": 0,
+  "forbidden_changes": 0,
+  "result": "PASS"
+}
