@@ -1,0 +1,25 @@
+{
+  "task": "V9-06D7-A",
+  "generated_at": "2026-07-04T17:00:00+00:00",
+  "patterns_scanned": [
+    "wp_remote_",
+    "curl_",
+    "file_put_contents",
+    "update_option",
+    "wp_insert_post",
+    "wp_update_post",
+    "flush_rewrite_rules",
+    "acf_update",
+    "acfe"
+  ],
+  "theme_php_hits": [],
+  "theme_php_false_positives": [
+    "style.css GPL license header only"
+  ],
+  "packaged_js_note": "v9-shell.js retains upstream recaptcha/fetch helpers but lead form init disabled and submit prevented in D7-A",
+  "packaged_css_note": "Font Awesome license comment in compiled CSS only",
+  "secrets_license_keys": 0,
+  "remote_urls_in_theme_php": 0,
+  "runtime_path_writes": 0,
+  "result": "PASS"
+}

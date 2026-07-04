@@ -1,0 +1,29 @@
+{
+  "task": "V9-06D7-A",
+  "generated_at": "2026-07-04T17:00:00+00:00",
+  "files_changed": [
+    "theme/shpigovsky/template-parts/layout/header.php",
+    "theme/shpigovsky/template-parts/navigation/primary-desktop.php",
+    "theme/shpigovsky/template-parts/navigation/offcanvas.php",
+    "theme/shpigovsky/template-parts/navigation/messenger-links.php",
+    "theme/shpigovsky/inc/navigation.php",
+    "theme/shpigovsky/inc/site-chrome.php"
+  ],
+  "v9_classes_preserved": [
+    "site-header",
+    "site-header__nav-list",
+    "site-header__nav-link",
+    "offcanvas",
+    "offcanvas__nav-list"
+  ],
+  "wp_menu_usage": {
+    "primary": "theme_location primary with V9 class filters",
+    "footer_services": "footer only",
+    "footer_o_centre": "footer only",
+    "legal": "footer only"
+  },
+  "fallback_nav": "first-wave static routes via shpigovsky_primary_nav_fallback_items()",
+  "wp_head_preserved": true,
+  "empty_data_behavior": "omit phones/address/schedule/social blocks when ACF options empty",
+  "result": "PASS"
+}

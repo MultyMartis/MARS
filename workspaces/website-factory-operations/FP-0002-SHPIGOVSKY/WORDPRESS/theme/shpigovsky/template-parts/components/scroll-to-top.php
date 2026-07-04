@@ -1,7 +1,6 @@
 <?php
 /**
- * Template part: components/scroll-to-top.php
- * V9-06B skeleton — inert placeholder. V9 markup in V9-07+.
+ * Scroll-to-top control — V9 markup.
  *
  * @package Shpigovsky
  */
@@ -10,5 +9,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<!-- shpigovsky-skeleton: template-parts/components/scroll-to-top.php -->
-
+<button
+	type="button"
+	class="scroll-to-top"
+	data-scroll-to-top
+	aria-label="<?php esc_attr_e( 'Прокрутить страницу наверх', 'shpigovsky' ); ?>"
+	aria-hidden="true"
+>
+	<svg class="scroll-to-top__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+		<path fill="currentColor" d="M10 4.5a.75.75 0 0 1 .53.22l5.5 5.5a.75.75 0 1 1-1.06 1.06L10.75 7.56V15a.75.75 0 0 1-1.5 0V7.56L5.03 11.28a.75.75 0 0 1-1.06-1.06l5.5-5.5A.75.75 0 0 1 10 4.5Z"/>
+	</svg>
+</button>

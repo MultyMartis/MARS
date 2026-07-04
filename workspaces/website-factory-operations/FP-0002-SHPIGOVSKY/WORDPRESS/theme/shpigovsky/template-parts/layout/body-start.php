@@ -1,6 +1,6 @@
 <?php
 /**
- * Body start — body_class and wp_body_open.
+ * Body start — site page shell wrapper.
  *
  * @package Shpigovsky
  */
@@ -9,5 +9,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<body <?php body_class( 'shpigovsky-skeleton-body' ); ?>>
+<body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<div class="site-page-shell" data-page-shell>

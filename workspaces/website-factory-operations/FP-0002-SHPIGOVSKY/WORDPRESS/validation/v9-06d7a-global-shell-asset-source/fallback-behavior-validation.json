@@ -1,0 +1,10 @@
+{
+  "task": "V9-06D7-A",
+  "generated_at": "2026-07-04T17:00:00+00:00",
+  "empty_menus": "static first-wave fallback lists for primary and footer columns",
+  "empty_options": "phones/address/schedule/email/social omitted; CTA labels use i18n defaults",
+  "empty_acf": "function_exists guards; no raw field keys rendered",
+  "missing_assets": "CSS falls back to foundation.css; JS omitted if file missing",
+  "legal_footer_links": "legal menu location with static legal-route fallback",
+  "result": "PASS"
+}

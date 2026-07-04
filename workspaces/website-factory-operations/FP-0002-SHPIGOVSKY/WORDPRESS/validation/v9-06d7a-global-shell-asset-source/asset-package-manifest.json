@@ -1,0 +1,3373 @@
+{
+  "generated_at": "2026-07-04T16:56:59.1876910Z",
+  "package_count": 374,
+  "packages": [
+    {
+      "asset": "css/v9-style.css",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/css/style.css",
+      "destination": "theme/shpigovsky/assets/css/v9-style.css",
+      "bytes": 565401,
+      "sha256": "f89fcb86a678c5fb4d4a94db2e423095a23564b6c3be19d7e39cf5af0d30abde",
+      "enqueued": true,
+      "handle": "shpigovsky-v9"
+    },
+    {
+      "asset": "js/v9-shell.js",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/js/main.js",
+      "destination": "theme/shpigovsky/assets/js/v9-shell.js",
+      "bytes": 39637,
+      "sha256": "19518c4bf86fbda4fd5128d67ef00cbf7a2bdc6000a571b65d75bfa6af27db8a",
+      "enqueued": true,
+      "handle": "shpigovsky-v9-shell"
+    },
+    {
+      "asset": "img/branding/logo.svg",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/img/branding/logo.svg",
+      "destination": "theme/shpigovsky/assets/img/branding/logo.svg",
+      "bytes": 86654,
+      "sha256": "bda3fb13c9c583dd548f5d217f03455a1cde352628337d617530684ecb53ef57",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "fonts/inter/inter-300-latin.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/fonts/inter/inter-300-latin.woff2",
+      "destination": "theme/shpigovsky/assets/fonts/inter/inter-300-latin.woff2",
+      "bytes": 23916,
+      "sha256": "be0276550393a72b94d673505567dceba801511d5e1ca5a87793190dc5d5a6ca",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "fonts/inter/inter-300.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/fonts/inter/inter-300.woff2",
+      "destination": "theme/shpigovsky/assets/fonts/inter/inter-300.woff2",
+      "bytes": 7812,
+      "sha256": "2f4d3f2e59e0dd665765f7e6d52f0cd8173a1ec1732b544622e3a4780ad3877c",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "fonts/inter/inter-400-latin.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/fonts/inter/inter-400-latin.woff2",
+      "destination": "theme/shpigovsky/assets/fonts/inter/inter-400-latin.woff2",
+      "bytes": 23664,
+      "sha256": "8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "fonts/inter/inter-400.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/fonts/inter/inter-400.woff2",
+      "destination": "theme/shpigovsky/assets/fonts/inter/inter-400.woff2",
+      "bytes": 7712,
+      "sha256": "f0bb586459ce8f09b238285040f17e3e9e9538b2c5a7aae0775194e33c36c3c3",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "fonts/inter/inter-500-latin.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/fonts/inter/inter-500-latin.woff2",
+      "destination": "theme/shpigovsky/assets/fonts/inter/inter-500-latin.woff2",
+      "bytes": 24272,
+      "sha256": "f3779f1efccc4bdcdf9c0a02ab95bf6bd092ed09c48c08cedc725889edd1d19f",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "fonts/inter/inter-500.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/fonts/inter/inter-500.woff2",
+      "destination": "theme/shpigovsky/assets/fonts/inter/inter-500.woff2",
+      "bytes": 7900,
+      "sha256": "b77a86ec16aadc157f4a99e8898d71cd75ea264753d9bdf13f962f8c3988cbb0",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "fonts/inter/INTER-FONT-PROVENANCE.md",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/fonts/inter/INTER-FONT-PROVENANCE.md",
+      "destination": "theme/shpigovsky/assets/fonts/inter/INTER-FONT-PROVENANCE.md",
+      "bytes": 1294,
+      "sha256": "1aec5bfccd3de698a063af35b3c1151b2595b932b01a2e7043a6894278bbdcf4",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/fa-brands-400.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/fa-brands-400.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/fa-brands-400.woff",
+      "bytes": 89988,
+      "sha256": "f9217f66874b0c01cd8c10b6a295dbc4f609acb6f5adc41c37da46641b57eb02",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/fa-brands-400.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/fa-brands-400.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/fa-brands-400.woff2",
+      "bytes": 76736,
+      "sha256": "8ea8791754915a898a3100e63e32978a6d1763be6df8e73a39d3a90d691cdeef",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/fa-regular-400.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/fa-regular-400.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/fa-regular-400.woff",
+      "bytes": 16276,
+      "sha256": "cb9e9e693192413cde2b1f21c1dc1d44b6fe7b27cc2b458e8b359d18f9ff8f4e",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/fa-regular-400.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/fa-regular-400.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/fa-regular-400.woff2",
+      "bytes": 13224,
+      "sha256": "e42a88444448ac3d60549cc7c1ff2c8a9cac721034c073d80a14a44e79730cca",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/fa-solid-900.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/fa-solid-900.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/fa-solid-900.woff",
+      "bytes": 101648,
+      "sha256": "3f6d3488cf65374f6f676c315340b0ac2be832bd55240c809448e36ef9b96326",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/fa-solid-900.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/fa-solid-900.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/fa-solid-900.woff2",
+      "bytes": 78268,
+      "sha256": "9834b82ad26e2a37583d22676a12dd2eb0fe7c80356a2114d0db1aa8b3899537",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/free-fa-brands-400.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/free-fa-brands-400.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/free-fa-brands-400.woff",
+      "bytes": 89988,
+      "sha256": "9ac9e3975b817be10a1dae0710b80d868d2f5ab1cef100109b84bf6be24bbebc",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/free-fa-brands-400.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/free-fa-brands-400.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/free-fa-brands-400.woff2",
+      "bytes": 76736,
+      "sha256": "b5be0732ab1cc16692e165a7950810f0c772e400f6a2f63e1026a0b938016813",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/free-fa-regular-400.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/free-fa-regular-400.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/free-fa-regular-400.woff",
+      "bytes": 16276,
+      "sha256": "ec181c113669c05c5fcc90475bd778962e4cc41742c4a30f1e8b2df87d2d4511",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/free-fa-regular-400.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/free-fa-regular-400.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/free-fa-regular-400.woff2",
+      "bytes": 13216,
+      "sha256": "48fb6f0d8ac464d95cbc2df3ffa7bf5066950898c5581f5133d0565abb7f706b",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/free-fa-solid-900.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/free-fa-solid-900.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/free-fa-solid-900.woff",
+      "bytes": 101652,
+      "sha256": "e89c596b8bc68492150d3378b65d026cb667dcc6627acf06677ebe4cd5878c13",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/free-fa-solid-900.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/free-fa-solid-900.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/free-fa-solid-900.woff2",
+      "bytes": 78168,
+      "sha256": "c5dd43f53f3af822cbf17b1fb75f46192cdbd51724f277acf6cf0dacb3fd57e7",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.0.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.0.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.0.0.woff",
+      "bytes": 44404,
+      "sha256": "a23e94cb06991cf2e81ea4eea4d1c9b01cfc8ead10e0886d1921f0bc6cc0a953",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.0.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.0.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.0.0.woff2",
+      "bytes": 37796,
+      "sha256": "49fd3e0c64f247cf56cb828bc37b88cf139df6e5c7bb4c3a4507f740e9a52c17",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.0.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.0.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.0.1.woff",
+      "bytes": 1384,
+      "sha256": "5c0218a63bf5a6d3e61f261138190e4e5c004d5e63273d090d96a2bf6f9a8ef4",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.0.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.0.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.0.1.woff2",
+      "bytes": 884,
+      "sha256": "9180e82584b96c40748c7e939b88d6c61a2a2b5d012ce4542ed7c8ddb680b4c1",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.0.10.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.0.10.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.0.10.woff",
+      "bytes": 1592,
+      "sha256": "8da475db8eea5df9847d4ac379376d76b57c52cff62686b79ee526fafd420f0d",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.0.10.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.0.10.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.0.10.woff2",
+      "bytes": 1096,
+      "sha256": "97879c8e55ae8ac9ef39a37e0106f85210a1c5a2a51231247d22a2127776bad4",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.0.11.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.0.11.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.0.11.woff",
+      "bytes": 3176,
+      "sha256": "5c49f54fac4cde63ea921c322d8fea14fe28b408c02707240307cda4e66b74a7",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.0.11.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.0.11.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.0.11.woff2",
+      "bytes": 2468,
+      "sha256": "133b8970e8b11aed7422f8f50ccee394dd1e7846bbf016f65b612230825d4160",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.0.12.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.0.12.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.0.12.woff",
+      "bytes": 3976,
+      "sha256": "337d731c0ee4071bd70daa6a6c78ec4545c56cf9b0718faf67b09055cc6459e7",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.0.12.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.0.12.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.0.12.woff2",
+      "bytes": 3348,
+      "sha256": "b7690a9f98bc947bc9ef4489a65b1a9700c267d8acecd08e307ef8c69c1e50e3",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.0.2.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.0.2.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.0.2.woff",
+      "bytes": 1984,
+      "sha256": "91c204765d6dcb74b0f24c7c48a3b621658cc687ce5897d003613e039ccd0dd7",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.0.2.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.0.2.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.0.2.woff2",
+      "bytes": 1496,
+      "sha256": "23f07266967976e29537c5a6db361d3c2195a817be2f6afdfb584095c959f451",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.0.3.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.0.3.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.0.3.woff",
+      "bytes": 5000,
+      "sha256": "d2ff20ce1b474b03d6144d856d101981405c920dfa10f4219c62debfc9238387",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.0.3.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.0.3.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.0.3.woff2",
+      "bytes": 4128,
+      "sha256": "3964a0236fa4d31909d09b3c436016881336007bcd4d533e27dabf200179e67f",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.0.5.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.0.5.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.0.5.woff",
+      "bytes": 1888,
+      "sha256": "c6e8592e233e5056694bef6d12b00abde1ece41a6126b2b513480d697129b58b",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.0.5.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.0.5.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.0.5.woff2",
+      "bytes": 1376,
+      "sha256": "018f1a7cd21dcab910b43e9c61676d88e459396516799af6aa90e14f7459d16c",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.0.9.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.0.9.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.0.9.woff",
+      "bytes": 1380,
+      "sha256": "122ec2d4a4af88035d14cbf9d1a60d5f19b1501d384b263fb4dc4909ec715bd6",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.0.9.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.0.9.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.0.9.woff2",
+      "bytes": 888,
+      "sha256": "d851586da5456374e2663a2b47b2a60f14670dd673f931bf7b198e462f89cc67",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.1.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.1.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.1.0.woff",
+      "bytes": 2592,
+      "sha256": "36650994da5646696551bf3d2a3c6832786f08dcb08b65935b1850f6d75e44fc",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.1.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.1.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.1.0.woff2",
+      "bytes": 2020,
+      "sha256": "9b133fbf3691119e23423d0c4ec9b5849128fa378329294fc76653505fcec2eb",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.10.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.10.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.10.0.woff",
+      "bytes": 1540,
+      "sha256": "47dfea7228eee75944f77c635fd2391c7e342e74cc84c08f1bd5080596b9ef6f",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.10.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.10.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.10.0.woff2",
+      "bytes": 1068,
+      "sha256": "bd3dc78df7ca5b24c34cc7e81dbbf532e1cbef399abe66dad3116dc9afecadf6",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.11.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.11.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.11.0.woff",
+      "bytes": 2484,
+      "sha256": "8a15e39b0c6a47ff48e065d241493067217a3f0422d5844d3f0d27547a40c57f",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.11.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.11.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.11.0.woff2",
+      "bytes": 1924,
+      "sha256": "7a0a101f30af3a3f9ec2a91b42d827d7987869c844a915f3e72be4921840462b",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.11.2.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.11.2.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.11.2.woff",
+      "bytes": 1524,
+      "sha256": "50c447a4115ff3219de364e908e64390a0fd7c576d7474480c139808f12baf5d",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.11.2.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.11.2.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.11.2.woff2",
+      "bytes": 1052,
+      "sha256": "c12d441ed6733c812c3f58e2748418e6a9f1f4eba0d2e570940490623739c99d",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.12.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.12.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.12.0.woff",
+      "bytes": 2500,
+      "sha256": "d3ca548699f9a86e475ad5e0094eead081434c179e4b00869f25b54bfaee9a24",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.12.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.12.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.12.0.woff2",
+      "bytes": 1944,
+      "sha256": "4df4f1442f9cc28b4c903159a934232422ba2ac51d58ce42c70a7fdd3a080ed3",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.12.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.12.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.12.1.woff",
+      "bytes": 1480,
+      "sha256": "08f901810d496a2963e8e1ac7769943a2cfb91523ee125eddac3784f7657de9a",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.12.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.12.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.12.1.woff2",
+      "bytes": 996,
+      "sha256": "bbbe4447ba20296b84c837d5cab2ff9640013e511ed2de028f2e4c8b15ce071f",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.13.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.13.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.13.1.woff",
+      "bytes": 1488,
+      "sha256": "a9663b6bc6a58da3c76a3d286fc54d3f01e17bbbd97359f3160d0193a52e033b",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.13.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.13.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.13.1.woff2",
+      "bytes": 1012,
+      "sha256": "9cd0ad948325b05e6a40890d7dcacf374627e5cb93e133029b37c3186ec8f6c4",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.14.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.14.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.14.0.woff",
+      "bytes": 3956,
+      "sha256": "39b18b1adf9f4294d8d447e58c192ebc40a5fab99edb4cd72dbdedde93f80e36",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.14.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.14.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.14.0.woff2",
+      "bytes": 3236,
+      "sha256": "a69381514210cefa9794478d2d379578d97b8a2367b8a1b3b4481e3d0b1afceb",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.15.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.15.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.15.0.woff",
+      "bytes": 3328,
+      "sha256": "928d120757d4e3f6d18d3216bfaa5f200c79a1c5b4065669d5f5aa4a326c3353",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.15.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.15.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.15.0.woff2",
+      "bytes": 2624,
+      "sha256": "12c7f96cf43572eebb195e5d1ab8a950bc22c5ce47f01df7b7bd7af3d0c664eb",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.15.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.15.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.15.1.woff",
+      "bytes": 1444,
+      "sha256": "69864335c1fbf7745cce929898ea111404baa6e0f5df64850f0c8adbd2bb634c",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.15.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.15.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.15.1.woff2",
+      "bytes": 1016,
+      "sha256": "6b7c1959dafa1f995a36d22ba8533701d88bdb32c9cf6b12e18a080bc7da741e",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.15.4.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.15.4.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.15.4.woff",
+      "bytes": 2160,
+      "sha256": "8d3d757689a397d0ed42e63540d17bdcbd7f3d3ab9b6dfa1b2de240dffbb56b7",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.15.4.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.15.4.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.15.4.woff2",
+      "bytes": 1620,
+      "sha256": "745f0cf7d5bd91c6f52c91bc579204bcfde2b636b718ec88bfcc6d7f2958ba2c",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.2.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.2.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.2.0.woff",
+      "bytes": 1668,
+      "sha256": "f378ec00e07e87324aa1512b8b108452d9898183b65e63165c9660d00ac7a211",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.2.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.2.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.2.0.woff2",
+      "bytes": 1192,
+      "sha256": "e2ab7f02ab3876a49d384b9cd3d253f801a511bf1c18e1bfee7c7c6636797673",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.3.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.3.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.3.0.woff",
+      "bytes": 1500,
+      "sha256": "069729edeeeee6c1e4412421bb6d043201549f8974e33c055d5953a53d11203d",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.3.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.3.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.3.0.woff2",
+      "bytes": 972,
+      "sha256": "04b963bea3d9fc9ee1fe4c0b4b6aa8ee0ac13f051f60a4f41622c71f2b88e07c",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.4.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.4.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.4.0.woff",
+      "bytes": 4224,
+      "sha256": "77fa8db2bf9bef9ffd8d809a321e95df201e19334966afacf9d6ad68dec6809d",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.4.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.4.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.4.0.woff2",
+      "bytes": 3404,
+      "sha256": "f9e41654409d1b99c15673419601b137f36e37b9a5515937af19061239fb7e53",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.4.2.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.4.2.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.4.2.woff",
+      "bytes": 1516,
+      "sha256": "0313bded776691954de0ae29360051ba4269e84a8873fdf3ed81702a80a4d27f",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.4.2.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.4.2.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.4.2.woff2",
+      "bytes": 1064,
+      "sha256": "551858ae6eeee6c4bc03a48e820fa02fdbb9669627f6fbbdb8298657d5e90ff6",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.6.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.6.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.6.0.woff",
+      "bytes": 3912,
+      "sha256": "9b7417784322bff68211c327c5c78ba0fea86cff931da895c209c6e711e5c83f",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.6.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.6.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.6.0.woff2",
+      "bytes": 3132,
+      "sha256": "ef0dfd66f6713e4ae7c6c3760a1c2a5351cde83350c1d00b912e42c143cabcfa",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.7.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.7.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.7.0.woff",
+      "bytes": 5924,
+      "sha256": "929f6b9ac3033e7ccf0e267cdc7dc11b6336f57dbf03675e3e55adc0948d0d63",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.7.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.7.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.7.0.woff2",
+      "bytes": 4900,
+      "sha256": "d448e5313817ffb34159790099f347fbaf14e172d8baa8b90732a01c017bb009",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.8.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.8.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.8.0.woff",
+      "bytes": 15688,
+      "sha256": "b3d4efa535cea9636c75fcf9e04e2cc5b2026f4e0968ee96c35873e65506b946",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.8.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.8.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.8.0.woff2",
+      "bytes": 13652,
+      "sha256": "afc444f5940038256ff9a9fa96fb049f6fc9650cbe44f2c4d84b280ff641ef17",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.8.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.8.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.8.1.woff",
+      "bytes": 1432,
+      "sha256": "b9676da7e7dd5fa2c4c07a1916801561dd245f306ead33e3f429e3baa17bffde",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.8.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.8.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.8.1.woff2",
+      "bytes": 916,
+      "sha256": "d89dee8f24dda47c0d11d05a173399503262f306a25fbc969f0dc45883ffb65a",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.8.2.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.8.2.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.8.2.woff",
+      "bytes": 3044,
+      "sha256": "b2d97bf56d7aaafae39fbdb748a33d2a6b22ae2fd651b93e728a768e3c552d1a",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.8.2.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.8.2.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.8.2.woff2",
+      "bytes": 2412,
+      "sha256": "322c181b1aab5807cd0a7ed9e249ddbd97fa385ca3d338aa59ef1f610ca24601",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.9.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.9.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.9.0.woff",
+      "bytes": 1408,
+      "sha256": "8c832918842a1929845ce002d400be7612c091d33edd9eabfa6cb3d5b2aaea22",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-brands-400-5.9.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-brands-400-5.9.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-brands-400-5.9.0.woff2",
+      "bytes": 960,
+      "sha256": "d979af91a7f3fd74efa705e7b0156bf9b7e0048807a61569f935261de0f725f0",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.0.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.0.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.0.0.woff",
+      "bytes": 37072,
+      "sha256": "e4fe7777157bd8d0907e83777ddc5691ee0624e7937942f4d10000908c7172f8",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.0.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.0.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.0.0.woff2",
+      "bytes": 28100,
+      "sha256": "2f931c30f48b2240d4eba1be47c045c70545573713c19833a5573e0dad05a613",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.0.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.0.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.0.1.woff",
+      "bytes": 1508,
+      "sha256": "209dec74c1bedbfce44a680b23b8cbd8c989d4b11397515780d9fe9ac0cbe9cb",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.0.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.0.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.0.1.woff2",
+      "bytes": 972,
+      "sha256": "838adfb70af3df77606de7d689818b3f09a8452f40bc215687a0c37d55619714",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.0.10.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.0.10.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.0.10.woff",
+      "bytes": 1772,
+      "sha256": "6778fac29add2b81763091d01d1bde7fee538e87b962c9e5a40067f05d9c99f7",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.0.10.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.0.10.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.0.10.woff2",
+      "bytes": 1240,
+      "sha256": "63cd914d9bda9e96f21c816c7db17c64e4ef933d9535d1b15a4891840848e42a",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.0.11.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.0.11.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.0.11.woff",
+      "bytes": 5312,
+      "sha256": "bce33adad8028f0011d19851282b575ba265f88eb86b595ee571b59368003edb",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.0.11.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.0.11.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.0.11.woff2",
+      "bytes": 4280,
+      "sha256": "95f2e919f8b1a4dedbce317db32729dc45cea5a8fff72d78eb4b84084cfa3806",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.0.13.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.0.13.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.0.13.woff",
+      "bytes": 10152,
+      "sha256": "69502179c7e5b8a09c476348d1ebd972db7bba5642debe703e1871c006fa5216",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.0.13.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.0.13.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.0.13.woff2",
+      "bytes": 7860,
+      "sha256": "828f65c6b308416be8076b92fe0511921c1d710121902678995c651e12a7a3af",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.0.3.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.0.3.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.0.3.woff",
+      "bytes": 1948,
+      "sha256": "361797cd7cbfe1fe07df6b92b1e8152da57054c3f1d61b1ef3790a8ec61a0b2c",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.0.3.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.0.3.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.0.3.woff2",
+      "bytes": 1324,
+      "sha256": "70c8e537f6e821aacf230a735cf36776713a67c95a5eaa34773df4bd336be100",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.0.5.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.0.5.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.0.5.woff",
+      "bytes": 4408,
+      "sha256": "e7cdeb6d3f931da1ce47aed8b93e28f5a29331c728add3da4994a6b7de5a129f",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.0.5.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.0.5.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.0.5.woff2",
+      "bytes": 3540,
+      "sha256": "913b53dabfca10a9762867ed5ab47f7af52f2050faf2bc30619f7a1b3345341d",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.0.7.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.0.7.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.0.7.woff",
+      "bytes": 7572,
+      "sha256": "9aee1a476763bb634e7745d803298f838701ed5337842e7fe66ee06b4e085ebb",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.0.7.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.0.7.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.0.7.woff2",
+      "bytes": 5628,
+      "sha256": "3ad7e9c6e63410fecd32bb2a76e4c4d641dfea050f57ccc3561535f85a7eb8e4",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.0.9.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.0.9.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.0.9.woff",
+      "bytes": 10668,
+      "sha256": "104fb4a28eddb847a669c40101858a7d22f93e1a212bf2e284004ddf299f402c",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.0.9.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.0.9.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.0.9.woff2",
+      "bytes": 8368,
+      "sha256": "80474f21b0e512e90613a6854e2800649c163886d4f5311f976125eb46316e59",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.1.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.1.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.1.0.woff",
+      "bytes": 12004,
+      "sha256": "74232bf9646320315abc38048bfbfcf91bb0ef21e59c3ff4b799ccc27ff184f5",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.1.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.1.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.1.0.woff2",
+      "bytes": 9460,
+      "sha256": "3edbacef7441e0d4d87b11f4f49352703aab85fdf695e56a58e1e1056cd97926",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.1.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.1.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.1.1.woff",
+      "bytes": 1496,
+      "sha256": "af0a3ebbefb719f0137f2f7f5ccf1f91f9799f745df8e4ae39aa03511bdc692d",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.1.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.1.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.1.1.woff2",
+      "bytes": 960,
+      "sha256": "329c6997755469b1e7f04fa5ee9ba34d2e1579bcf4d8b83da40939a86159225b",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.10.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.10.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.10.1.woff",
+      "bytes": 13560,
+      "sha256": "9fb9f119c923cf1b556701afd298d67ef5f91bdc8f0dab7db81629386b375c62",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.10.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.10.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.10.1.woff2",
+      "bytes": 10656,
+      "sha256": "cbf49f34bf1732fd3996e6f486f3eed6bc512f7fe1895d8340adee8c632115a4",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.10.2.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.10.2.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.10.2.woff",
+      "bytes": 25472,
+      "sha256": "f11afdb8f4d33b8a2d9f5f73d4582e4f144e3712205b3f546feac59c2d4830bb",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.10.2.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.10.2.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.10.2.woff2",
+      "bytes": 20244,
+      "sha256": "1b78fbbfd0b841db3ec9038287c62a7314466ee0cb785cff6daa785ee2531342",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.11.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.11.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.11.0.woff",
+      "bytes": 20692,
+      "sha256": "18bcf257006348e2ef90d0c8d1feb63af5164753e8d99e81c4458477be1b194a",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.11.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.11.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.11.0.woff2",
+      "bytes": 16060,
+      "sha256": "99f9e954b739cb356f31f284373d8b68aa3ccf32ca1075f93a12cfa8708e212d",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.11.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.11.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.11.1.woff",
+      "bytes": 16204,
+      "sha256": "019d7f5ef9988e52674374f4f8156241677f2da8c4c34dabb9ed9e90d4cf18d0",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.11.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.11.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.11.1.woff2",
+      "bytes": 13068,
+      "sha256": "31aca58fb9458f78e89b4c8b304e83fd2795e9527e4123a9df6d90c1070f2c49",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.11.2.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.11.2.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.11.2.woff",
+      "bytes": 1816,
+      "sha256": "62def798c38234398a4a7c7858a67f28da5bdad923302c52122e2cea9aaa34d0",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.11.2.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.11.2.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.11.2.woff2",
+      "bytes": 1224,
+      "sha256": "448fe72ec0bfee084cd88bf0322a2c5d7daac940179518ad51aa05e73a3be552",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.12.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.12.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.12.0.woff",
+      "bytes": 8420,
+      "sha256": "dbb5f935a517a379790fa4f85e1888274c8bf90cb19660ca17bf3724e70e6eea",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.12.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.12.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.12.0.woff2",
+      "bytes": 6764,
+      "sha256": "8673afb535078198e3bc78e19be3b9f91db3eb3f6b152e63352d44ff483f6702",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.12.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.12.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.12.1.woff",
+      "bytes": 2116,
+      "sha256": "baa9dc05a65139767fbe7197052f9c77315909e3d7c4cf98a4cf899bcb3746f6",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.12.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.12.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.12.1.woff2",
+      "bytes": 1484,
+      "sha256": "6ddf4bc016e3ad2d721f2c082e8ddad23612d63d23f71e197422d930ffb8df3b",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.13.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.13.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.13.0.woff",
+      "bytes": 1760,
+      "sha256": "71888798d05e2cd1c850df872a8f6d76a529f97f81b4cb2e055bc46941c43bac",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.13.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.13.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.13.0.woff2",
+      "bytes": 1236,
+      "sha256": "c49daf4069736307e1436a4034350ed3abc4b3cc608a9b0e08809502ac2a1222",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.14.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.14.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.14.0.woff",
+      "bytes": 19132,
+      "sha256": "72dec8ea366e22be8926f5c5e1a69c2acc312bd9603431fbe5a3144af161d793",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.14.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.14.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.14.0.woff2",
+      "bytes": 15408,
+      "sha256": "3a3ceee1d2225fe330dbc03b96a1cbbef56efb2b8a4a791d52995910788290c8",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.15.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.15.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.15.1.woff",
+      "bytes": 1852,
+      "sha256": "0f9be0ce80f8f157fb58effa5f073e2f3e3db67ee2278cbd36509aa03c9b5250",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.15.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.15.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.15.1.woff2",
+      "bytes": 1308,
+      "sha256": "9dabdd6e9d6f2be821236b65dcbbd26671d8bb39f7c8e1ffc4b39927da92e0dc",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.15.3.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.15.3.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.15.3.woff",
+      "bytes": 1504,
+      "sha256": "b13aee645bc5a68e77f1bd3ee7c8da85e99f508c0e016ea5c153e8fd1701ed2e",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.15.3.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.15.3.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.15.3.woff2",
+      "bytes": 1016,
+      "sha256": "6f435bfaa6a44289b21db8f7412ddfc1371865826c0dfdd592368aa35a484531",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.15.4.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.15.4.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.15.4.woff",
+      "bytes": 1920,
+      "sha256": "67132d22f5ca0cea4b21cc3d4bdea1b8aa13ce4f41bae07ee510d6d093adc097",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.15.4.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.15.4.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.15.4.woff2",
+      "bytes": 1424,
+      "sha256": "a0a542f0dfbbe24c7f155a9efa9fd295bba68033d112d9860426b3dee2a1a635",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.2.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.2.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.2.0.woff",
+      "bytes": 15004,
+      "sha256": "cdd3730cbce46203360aa31c12dcd2b014e13d4cdea5154b7b7f28fd9c5da637",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.2.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.2.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.2.0.woff2",
+      "bytes": 12004,
+      "sha256": "31d6ce4804e555ee3f3ecda5e7ef390576dfb114c9c4b1c248ac241e1555c93f",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.3.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.3.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.3.0.woff",
+      "bytes": 14008,
+      "sha256": "4aa31c8240388521ebff3c7dfad2c03d4c851556d44a9f62dfb59cb54715cff5",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.3.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.3.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.3.0.woff2",
+      "bytes": 11100,
+      "sha256": "e947b006f327b7b137afaa96d55e934a3c1bb617afa2b85bcbf54ca99bd7b561",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.4.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.4.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.4.0.woff",
+      "bytes": 15384,
+      "sha256": "c82b48fbf7030ec77e57954d4945f8a6b274ee9cb746d0a8ecc907448e7545ce",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.4.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.4.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.4.0.woff2",
+      "bytes": 12432,
+      "sha256": "a72c0105aa8719307ac92bb12bf48d42405269b3d531298bc5cb94e4f3caae1f",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.4.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.4.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.4.1.woff",
+      "bytes": 1404,
+      "sha256": "bf0832db19d97920f02ddbaf55c4f17487f9d98c50a21f2a08f325f790133fee",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.4.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.4.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.4.1.woff2",
+      "bytes": 940,
+      "sha256": "231000f4b70d4577c69dfa02c00c761c9e3def10400927ed733c76a1959c39f2",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.5.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.5.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.5.0.woff",
+      "bytes": 10996,
+      "sha256": "2b6ef4c91d380e30aa3c67ed880c0fa6e3efea36b34a2a9ca154f795d9487947",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.5.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.5.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.5.0.woff2",
+      "bytes": 8900,
+      "sha256": "afb10edcdff581a4bbd288030c370ec4a69dd23c221b45acbcab14100d6cad43",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.6.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.6.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.6.0.woff",
+      "bytes": 12816,
+      "sha256": "ea48fdee1593aeafce1ebea222756ca08d80494060c2f469aeda04132b28b821",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.6.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.6.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.6.0.woff2",
+      "bytes": 10440,
+      "sha256": "b6a2be4c2a6c16583c53076e2940f2b21b3d0c682bf66a87088e9f4d9ca91419",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.6.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.6.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.6.1.woff",
+      "bytes": 1572,
+      "sha256": "6c5bca1b265a18d9c5feb243d0a18bbfccaf6ba0d3d51e2f08bc719e97179011",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.6.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.6.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.6.1.woff2",
+      "bytes": 1064,
+      "sha256": "e38bceb1f93cd5ae50f991e222de1d79804f3410fb64060f2e41c0031585db5a",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.6.3.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.6.3.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.6.3.woff",
+      "bytes": 1576,
+      "sha256": "8237ba16f53d4b56de5a44c5bbc12700cc3abef8f4880d853f8c290b659f20db",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.6.3.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.6.3.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.6.3.woff2",
+      "bytes": 1024,
+      "sha256": "4ef8877788a6e507bc838a8a303bdd9f1c9f30cf031434f5ffe3db10ba894bca",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.7.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.7.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.7.0.woff",
+      "bytes": 13564,
+      "sha256": "b1277511582f764a6fcf0c16d3de8e679704ca3dc42a8dace7c5330ade49e19a",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.7.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.7.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.7.0.woff2",
+      "bytes": 10884,
+      "sha256": "272922821dedf161cdf3bebb80a3353ae53e530698f4f92606e3f76b5415c158",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.7.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.7.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.7.1.woff",
+      "bytes": 1464,
+      "sha256": "6f6418563be4bea30ae285f2428d5f8c63ebc46ad6c4b2b4f7f3402228409ab8",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.7.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.7.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.7.1.woff2",
+      "bytes": 952,
+      "sha256": "1988eb78c8b4c047b2c4f564c6950e77884205ebaa5faa0731664c190856fc68",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.8.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.8.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.8.0.woff",
+      "bytes": 2864,
+      "sha256": "4adbc4708605e7007e55ed3b35ac5b77f79e14dccdc127e8327db9b73e3e27c1",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.8.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.8.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.8.0.woff2",
+      "bytes": 2192,
+      "sha256": "1292c5fd0248dd3d6c8fb12e3804671dc0c39f0d31841181e8d4763ce088c1c4",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.8.2.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.8.2.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.8.2.woff",
+      "bytes": 1424,
+      "sha256": "910dbe4f589cc7008b9db0a492c595634af56f03dbc1fea0c958176e76faf525",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.8.2.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.8.2.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.8.2.woff2",
+      "bytes": 928,
+      "sha256": "1b3d39131afd9030b3b88ff5eaa5edb0d92f6d31df5604677f1bdd1b24c527da",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.9.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.9.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.9.0.woff",
+      "bytes": 15108,
+      "sha256": "cd5e6c1111540da995a52d84f157a401fc341da91fec8279bfc6dd350df9ef0b",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-duotone-900-5.9.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-duotone-900-5.9.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-duotone-900-5.9.0.woff2",
+      "bytes": 11656,
+      "sha256": "d014b684f2b939ff5349da73cf10bbec34b996abaa2129e249338a4a9666e867",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.0.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.0.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.0.0.woff",
+      "bytes": 31584,
+      "sha256": "4e05cca299e2701485e7f1b5c2faf09f987bb84f748f5b9298f5809d9be79e7a",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.0.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.0.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.0.0.woff2",
+      "bytes": 24800,
+      "sha256": "299dc8e16be2ab2214e279b5536efd387d17fd3d364f397ce9f1fed602384fea",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.0.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.0.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.0.1.woff",
+      "bytes": 1452,
+      "sha256": "e374bab401449c25399835ed7cfc34524540f0f1a1281997e08480583a1f1931",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.0.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.0.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.0.1.woff2",
+      "bytes": 940,
+      "sha256": "566fe53069db8cb9cce320188e3d9c500c123189d920704a2c23d4410bc79f05",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.0.10.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.0.10.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.0.10.woff",
+      "bytes": 1584,
+      "sha256": "5fe96728cb51c3d22efd4ef4626f4bf1c0527fe869ca3b774539782bbb5e31f7",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.0.10.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.0.10.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.0.10.woff2",
+      "bytes": 1076,
+      "sha256": "134a88cf4a6562a43218a30978af8ced8932da4967d41ebc5b0428f275c471b8",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.0.11.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.0.11.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.0.11.woff",
+      "bytes": 5268,
+      "sha256": "c670c4a93d931413fc039ff8ec79ef5cefd8b7bf768a4a0c03a912a7d8a43ee2",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.0.11.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.0.11.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.0.11.woff2",
+      "bytes": 4204,
+      "sha256": "4a6ed5edf6761b3788973b5d23951a1590895302bb03cfe50fccba28bf8004c8",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.0.13.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.0.13.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.0.13.woff",
+      "bytes": 9160,
+      "sha256": "7f112ecf506cb9615ef228e06cee976077b456a9e9096eac5c8cfcd7d6754451",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.0.13.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.0.13.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.0.13.woff2",
+      "bytes": 7372,
+      "sha256": "f0cf5ab0d12cc2df6d9891b3fa263daf7e08632c96fcd2f9ddbf643de28aeac4",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.0.3.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.0.3.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.0.3.woff",
+      "bytes": 1884,
+      "sha256": "e1354b38b6a28047db3d344dabc0c88bcea032a872c03bfa57ef106ab60229f8",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.0.3.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.0.3.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.0.3.woff2",
+      "bytes": 1296,
+      "sha256": "0a8a19cd5c0040675a3297e5cdfbf061714ec12f660c9bbe21470771e276bd80",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.0.5.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.0.5.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.0.5.woff",
+      "bytes": 4524,
+      "sha256": "4285cdcb90bfec454f80c71c13fda6a5fa597bc43970ec4191f939e1bda80433",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.0.5.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.0.5.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.0.5.woff2",
+      "bytes": 3648,
+      "sha256": "15a7b83b4f4cdc030ed125164f4dfd5c50f79c32da6f5051bbb4f20e32910716",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.0.7.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.0.7.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.0.7.woff",
+      "bytes": 6784,
+      "sha256": "fc86e2a4d2155b0acae999a69bbe5ddc30c1ce3401a5bc8dfb2637a76aec588d",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.0.7.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.0.7.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.0.7.woff2",
+      "bytes": 5344,
+      "sha256": "cd29784f7c4f068505d8c4a9765743ecf9c93b7f61c5b314f1f785d2708ed3bc",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.0.9.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.0.9.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.0.9.woff",
+      "bytes": 10452,
+      "sha256": "e503ff06d8a76e4717096b4e608d37e9fe1841be7472c83fcf905459342a4bca",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.0.9.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.0.9.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.0.9.woff2",
+      "bytes": 8296,
+      "sha256": "2ae2d4f585bc9f278ae7f9f45bca43f1af08fa3500f738dcfddabbc4dc8f06a1",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.1.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.1.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.1.0.woff",
+      "bytes": 11684,
+      "sha256": "37938b73506ec7029804f1ce701cdcfc6d93e91df7945d4297138ec7339a0e31",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.1.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.1.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.1.0.woff2",
+      "bytes": 9552,
+      "sha256": "407ad4d7348eff6fbbe0b2eb1af0d273ec15a79d2cac38d89d339ea62c9d26dc",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.1.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.1.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.1.1.woff",
+      "bytes": 1420,
+      "sha256": "f173330b6f8a711e59a420261f5935174b36689c99fc3ecd2ab3bd9add8235f4",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.1.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.1.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.1.1.woff2",
+      "bytes": 900,
+      "sha256": "cf7c418ceac85ea47efe801a8c66b0fb6aefd48be07c58a014b500ea7e87d373",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.10.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.10.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.10.1.woff",
+      "bytes": 12904,
+      "sha256": "9500d90ab5bf839d7ca5bab7b3021365202cc305887cc020e8a1287725f2c593",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.10.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.10.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.10.1.woff2",
+      "bytes": 10412,
+      "sha256": "94db1583c12033a2b06418908eaf13362e9e79e6c4a78e5e8ce608774cf6e512",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.10.2.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.10.2.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.10.2.woff",
+      "bytes": 21052,
+      "sha256": "17b54bc9c364c8fdda69f1338d7e03901e791be80dd93ccce1f48ef77af7f67c",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.10.2.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.10.2.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.10.2.woff2",
+      "bytes": 17168,
+      "sha256": "2bbaabc785383c5d90abc17e6703ac6a057b9644c6ebdfe9e15709c6ffac9c71",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.11.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.11.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.11.0.woff",
+      "bytes": 19436,
+      "sha256": "87ecd3c086f499ff3f9dec4cc3d95be2a32752ca53481e4e6acc6de270cb5e59",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.11.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.11.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.11.0.woff2",
+      "bytes": 15748,
+      "sha256": "ec540bd82697b5fb43f1584f25446b7d58a0cf0a51e1544b0b278a2aaa5f1e77",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.11.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.11.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.11.1.woff",
+      "bytes": 13224,
+      "sha256": "11d821f6a1e4e88b14d1ef320fdb9a25b89fcea09b8fd80602d6dd803cc795f1",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.11.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.11.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.11.1.woff2",
+      "bytes": 10860,
+      "sha256": "b2698da8df8781bf12a07d76bab5c6353fbb730a8138fcaa1371c4950ad7c461",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.11.2.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.11.2.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.11.2.woff",
+      "bytes": 1740,
+      "sha256": "25957bafbbc226edd3872bd6940d54967a757f4b67168a4f0aee5fec818b5077",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.11.2.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.11.2.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.11.2.woff2",
+      "bytes": 1192,
+      "sha256": "851eb2ff8c44b56aff884958b5f6c4be1ce9f7946b46ba6f2ea1765588f84e25",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.12.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.12.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.12.0.woff",
+      "bytes": 8248,
+      "sha256": "c91070f564418293013efb856fbc6dca6d41036df7022c277b770a38224e8aba",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.12.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.12.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.12.0.woff2",
+      "bytes": 6684,
+      "sha256": "84968bb09802e1438ec8f3565808e9b580fcb25e3b8e176d4be22fcadcaccf88",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.12.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.12.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.12.1.woff",
+      "bytes": 1864,
+      "sha256": "206a55f54f9b09da8f2cfdd113eaf341e5afdad79c1fb75cf71ae0e0e4fc3be8",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.12.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.12.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.12.1.woff2",
+      "bytes": 1312,
+      "sha256": "88b321ae792dde2ccd41df1e2cfda1ee995dd537da2bd18cfa553ec520702e38",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.13.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.13.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.13.0.woff",
+      "bytes": 1752,
+      "sha256": "980dafa037948608525c9afca6e6b3b9912b3612b50f5eae7db3bfb4a243bce5",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.13.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.13.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.13.0.woff2",
+      "bytes": 1216,
+      "sha256": "a10caa18ae1f4ef048adb59406df0d9c86977aa6b2f6123425be242a49a87950",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.14.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.14.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.14.0.woff",
+      "bytes": 20928,
+      "sha256": "d75a80703e285f4849539251a5b998e1837744a7af97069c3598a868611730df",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.14.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.14.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.14.0.woff2",
+      "bytes": 17392,
+      "sha256": "a5e04446423f9d55f1f8796ef599723170533a18315d5ff08e023f5cda41930c",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.15.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.15.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.15.1.woff",
+      "bytes": 1764,
+      "sha256": "0936774686768f150a71c8dd92ca92406c912d95d967dffd0d4fd8ebec42661f",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.15.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.15.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.15.1.woff2",
+      "bytes": 1208,
+      "sha256": "d03c0e4423923fb0eacc0a1831c9d4c17f81e164339d7a188b2c21101b17d67d",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.15.3.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.15.3.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.15.3.woff",
+      "bytes": 1460,
+      "sha256": "60777d9de5a1bb54d87bf603d100238b7445dac999347a5d39c128c36bf46126",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.15.3.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.15.3.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.15.3.woff2",
+      "bytes": 1004,
+      "sha256": "6a6a00c3eaf3a46d353a4abf77f6187687590c8457bf97956495e7489da4042a",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.15.4.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.15.4.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.15.4.woff",
+      "bytes": 1836,
+      "sha256": "fa00dce47b980260c5a4ad30e316a1c61310d5bd9cb851bbb2eb0ea69b7a8941",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.15.4.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.15.4.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.15.4.woff2",
+      "bytes": 1364,
+      "sha256": "6a600b826edcaad076821a9e278ea7d85bc8fae06abea6301f5b9f9d57158798",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.2.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.2.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.2.0.woff",
+      "bytes": 14472,
+      "sha256": "723d8dc9b515cfa079ce74eb93e4a16f383e81a698b6191874f617ed115b1b73",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.2.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.2.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.2.0.woff2",
+      "bytes": 11776,
+      "sha256": "097d402395a145006a68bf3c1ac9f91c44b74b43fe869fa9a87cfef4d889930c",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.3.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.3.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.3.0.woff",
+      "bytes": 13448,
+      "sha256": "bdc6079f0fee99ecede81779aee48d61f5469c2ea89064cfaab1f5977318fe93",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.3.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.3.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.3.0.woff2",
+      "bytes": 10992,
+      "sha256": "40ebccd8ceceaed567584b9768b10be209699ffddbf85e22f443218f2d358513",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.4.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.4.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.4.0.woff",
+      "bytes": 16900,
+      "sha256": "d990422aef3261dacec1ee0ae8d2a7c21670289d5b47adcbed0a16533ff9a9d2",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.4.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.4.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.4.0.woff2",
+      "bytes": 14132,
+      "sha256": "e74637c2829d30ae2a6dbb4e801dc1011c672fffbf7937d44cfc42f081a7d4b6",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.4.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.4.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.4.1.woff",
+      "bytes": 1328,
+      "sha256": "906edd86d63fa852f68172b628d6a917b3ad348dcd28c33edc2d2d4372542ee4",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.4.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.4.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.4.1.woff2",
+      "bytes": 900,
+      "sha256": "c1a28ff68db2060584fee412c0f0fb10722859ca217c93fc61b95c6c3dfcddf5",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.5.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.5.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.5.0.woff",
+      "bytes": 11864,
+      "sha256": "7cef1076f39b6ae00ad34fca161fa949b784cfd52b7130e83ef474ff314dedd4",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.5.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.5.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.5.0.woff2",
+      "bytes": 9804,
+      "sha256": "173c515ed1eaa3209052acddec75a65c6b349db9689d1538b92ba8c93fcedeff",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.6.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.6.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.6.0.woff",
+      "bytes": 13408,
+      "sha256": "4797880ddb7cd7a477bd3ad17e9c3e0ce90a7925ad06f08bf1e9ebaa43d3aed1",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.6.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.6.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.6.0.woff2",
+      "bytes": 11252,
+      "sha256": "a010f5779522121d2aaad526a1c4c788d1e389dae9139fd05a0134992d78eb5c",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.6.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.6.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.6.1.woff",
+      "bytes": 1480,
+      "sha256": "72f959166bdc442effc77ab1dcb386b687935f04ca0754c638085458da7d16d7",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.6.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.6.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.6.1.woff2",
+      "bytes": 984,
+      "sha256": "d12e83c36512b6df8e1b6467b36003dcb3b1b797c5f5f0f4ece1b8ec7f66127b",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.6.3.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.6.3.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.6.3.woff",
+      "bytes": 1540,
+      "sha256": "987cd0c98d38859e1cced01cb6e7d2a159f5c9144b9699f7bc651ea63b636e35",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.6.3.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.6.3.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.6.3.woff2",
+      "bytes": 1028,
+      "sha256": "bea6d2687203a0cc0191c1650b21132c55b70bdc02a87dae00fb6647c9ac12b5",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.7.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.7.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.7.0.woff",
+      "bytes": 14256,
+      "sha256": "1dcddf5e2d0638a02a9841dea18733044162b82a1e062d0c5c6d7e4ace356ed9",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.7.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.7.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.7.0.woff2",
+      "bytes": 11932,
+      "sha256": "6c9b88da6d6c32d8f376e3b03f31af197cc9d36b7c0d03bad68694b60fc799a9",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.7.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.7.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.7.1.woff",
+      "bytes": 1500,
+      "sha256": "cf440648b46f2d4f08ac1720a825ebb210b53cba93d35b93ec8dcae67285682c",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.7.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.7.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.7.1.woff2",
+      "bytes": 988,
+      "sha256": "c36ecb06e23ad65890eca59e71371363d30d12f41dcfe653c30bb2e1586a927d",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.8.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.8.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.8.0.woff",
+      "bytes": 2660,
+      "sha256": "7b79804e81331bd8a0f772d61ee9cc29cb5176d470fe2f296ea61ba4cec8f9e8",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.8.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.8.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.8.0.woff2",
+      "bytes": 2024,
+      "sha256": "f0d0a2de06713e21060ce9a8d947e3bbb9b7a440def1e9134250da0c53facddf",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.8.2.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.8.2.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.8.2.woff",
+      "bytes": 1452,
+      "sha256": "b68a33aeda69a710ff2508cc5300991eb08c60270e466eb7d27ede730fe64924",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.8.2.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.8.2.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.8.2.woff2",
+      "bytes": 936,
+      "sha256": "1cb53bcf3c129fb1f4e2221ed5b646e8d11e428ab61792eb42927aed508fba22",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.9.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.9.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.9.0.woff",
+      "bytes": 15248,
+      "sha256": "bbd9c894dc0287211c426e9cdde77b3e48c13393e1334bb8664dd437f79a0b87",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-light-300-5.9.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-light-300-5.9.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-light-300-5.9.0.woff2",
+      "bytes": 12156,
+      "sha256": "2bbd30f1cfcc309cdf092cd94f1782790a6ce3e2d8605a34c92f82b5b25e69fa",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.0.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.0.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.0.0.woff",
+      "bytes": 29480,
+      "sha256": "fadf3b246841b76d2ceed3b75734cd476d2e29e4d106707239381ea980b4ecd7",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.0.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.0.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.0.0.woff2",
+      "bytes": 23316,
+      "sha256": "78f2234a60cbe6920db07df9663c0b035d9a602d8f7b82e174fc9e0f5bf89ad0",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.0.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.0.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.0.1.woff",
+      "bytes": 1428,
+      "sha256": "d931a24cf3b2c7a5f8e69cbea92c2dd0466a4a2565d8928161155984ef7d16ed",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.0.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.0.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.0.1.woff2",
+      "bytes": 916,
+      "sha256": "f384aae3901f75f50124ae408b39d99cd680908c6cc8ea2cef49e755d990a217",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.0.10.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.0.10.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.0.10.woff",
+      "bytes": 1580,
+      "sha256": "61036aabb9668bd7a2b213fec190df0e8580640f6770b0535c6d98dc0df0cbb2",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.0.10.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.0.10.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.0.10.woff2",
+      "bytes": 1104,
+      "sha256": "44ed0b36494df3950aeaf52131f2d51c677150204948a669f9d2ecbfb3786cf2",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.0.11.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.0.11.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.0.11.woff",
+      "bytes": 4964,
+      "sha256": "add02d4ee065a0b8939488003b25475a2e653c4be46f8bb40f67375c5d074a90",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.0.11.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.0.11.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.0.11.woff2",
+      "bytes": 3960,
+      "sha256": "a99869e51e3c5a515bb290ca6f1aa885a2feac8d58984a5e39dd3030e663f9e5",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.0.13.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.0.13.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.0.13.woff",
+      "bytes": 8672,
+      "sha256": "c73ddfff1c078c7a1530df3d73be4e381efa50be835e24a80f835d5dab7d7261",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.0.13.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.0.13.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.0.13.woff2",
+      "bytes": 7012,
+      "sha256": "a64c70703236783a77935f2454a78073771d9416809716ff184bc831006878c5",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.0.3.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.0.3.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.0.3.woff",
+      "bytes": 1784,
+      "sha256": "4f4fc467e684c2695ffa6e883517b86abfc4494e5ddcc11afdf9ee03205e8d1e",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.0.3.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.0.3.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.0.3.woff2",
+      "bytes": 1228,
+      "sha256": "41640842d371969bbddc06defc69509aded02f8f4308f82d012f741ecc6de5e9",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.0.5.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.0.5.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.0.5.woff",
+      "bytes": 4404,
+      "sha256": "8ad8903e820538a8e24d439bfdf21fd0a92c508c79bc21b5d984abd9878a40e4",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.0.5.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.0.5.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.0.5.woff2",
+      "bytes": 3588,
+      "sha256": "2fa1a245e23c08b9e4f9e4b8b7d842ec55d6bc32a3888c49b7f5f297328ebec5",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.0.7.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.0.7.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.0.7.woff",
+      "bytes": 6340,
+      "sha256": "77beb52b8fb8cb5397d7838f8518968863a0256ed0b01f05e0ab58e72fc3d3c5",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.0.7.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.0.7.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.0.7.woff2",
+      "bytes": 4972,
+      "sha256": "47061b56c2ea44f3825f3ada0055b4f3688a984a13085f3877ee4dcc730bda59",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.0.9.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.0.9.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.0.9.woff",
+      "bytes": 9796,
+      "sha256": "d4db2dd89bffaba4fcd4f337ddb71e13678c55d37de3413ad4f5f8cb2b225d0b",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.0.9.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.0.9.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.0.9.woff2",
+      "bytes": 7732,
+      "sha256": "b7fb99816108e6e66c7d6d5c3bc0fc270cd4875ec80c68685442dd102ae7acd2",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.1.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.1.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.1.0.woff",
+      "bytes": 11140,
+      "sha256": "9a84f7e7c6fab144426cbb96e322ec1235ee9f8e36181bf65d3fd642f93978e3",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.1.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.1.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.1.0.woff2",
+      "bytes": 9060,
+      "sha256": "aadea1153a74afebc987044f194f0dcb7ccb5385bb95368d01460a262ee23d1e",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.1.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.1.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.1.1.woff",
+      "bytes": 1424,
+      "sha256": "d66655e39a57b747a488023e51b4e5778520cbbfd733c19269af3f4726f244e1",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.1.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.1.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.1.1.woff2",
+      "bytes": 940,
+      "sha256": "3d898a8cb6d408261a2d6d0e1304833cbba5397ade5b8f4226427451b86ce897",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.10.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.10.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.10.1.woff",
+      "bytes": 11952,
+      "sha256": "6968c13447f54bab86c53e7e9adfd265079433ba2f3c1d2bd8505a6de3ea8e22",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.10.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.10.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.10.1.woff2",
+      "bytes": 9708,
+      "sha256": "bc90cc9bd2ffffc93b0a18eb778a24a627d0df254590aa419720ed9cd51d7b4c",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.10.2.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.10.2.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.10.2.woff",
+      "bytes": 19944,
+      "sha256": "777e022689a70b86bd58acbf140e13f09b8599bdedceaac5acfd2fc6dd227910",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.10.2.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.10.2.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.10.2.woff2",
+      "bytes": 16248,
+      "sha256": "e272d442a9319692de4cc42fa2de41167f7f3731f247aa94399e07230f2ae46f",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.11.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.11.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.11.0.woff",
+      "bytes": 17560,
+      "sha256": "060bbaadad38a196250f74fea2bb3a446d418d9b8f1ec273fedd8a1575bc1d57",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.11.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.11.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.11.0.woff2",
+      "bytes": 14228,
+      "sha256": "9b2558712dbb2f90229e52332f215c223e3656a5fcac9a327ccf38538041d2e6",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.11.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.11.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.11.1.woff",
+      "bytes": 11792,
+      "sha256": "2c67582bf0df55e8bb42b6fd91cb6e656ba70e607a08545f1cc9ada84301c857",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.11.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.11.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.11.1.woff2",
+      "bytes": 9552,
+      "sha256": "0c74a515bead1d65bb620c4efbd28cf165ddb500be6664ac9940ad773d115f98",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.11.2.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.11.2.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.11.2.woff",
+      "bytes": 1724,
+      "sha256": "187ca8f9adf972cc9eefbe1c2065fff8660849f0ee0fcc1ad0f744b947d35f26",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.11.2.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.11.2.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.11.2.woff2",
+      "bytes": 1220,
+      "sha256": "35c00d51ed71e1fd306a0fd5e05512ff589751f2f80b8a42a59a1b10a0ae7a77",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.12.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.12.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.12.0.woff",
+      "bytes": 7644,
+      "sha256": "956d267c3ecd44a762f01da4f3c0857fb6cfc1e32dd4194674e7377e6b3c7a64",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.12.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.12.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.12.0.woff2",
+      "bytes": 6200,
+      "sha256": "4770d2809a93c957423736e2100392bea7ae455aa3a12362558f9fe734ca25fc",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.12.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.12.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.12.1.woff",
+      "bytes": 1828,
+      "sha256": "48abef6f3e3d78b3abfdd284fb12503d85f84b5a500f605bc84bd8a9cc6dd78c",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.12.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.12.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.12.1.woff2",
+      "bytes": 1308,
+      "sha256": "e11b475f07be9ebfe0e6086c097062e17a6aa3fdfbaa028c2ca46eb4f2c50156",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.13.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.13.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.13.0.woff",
+      "bytes": 1756,
+      "sha256": "b352308390c789b44b48f67c93ea735b4864c07ae82156eb560dd6f59f6e82e8",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.13.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.13.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.13.0.woff2",
+      "bytes": 1220,
+      "sha256": "f564cc0656a18485178197047fa72b613c2b2db05e3db6d7ff14934d2c6145d9",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.14.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.14.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.14.0.woff",
+      "bytes": 18300,
+      "sha256": "9fa87c3aa621508deb2058d2ada87814c125f1522eeebc0aaf350452b7d476aa",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.14.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.14.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.14.0.woff2",
+      "bytes": 15188,
+      "sha256": "5ec24af39db1bcba9aef57ebecba9ead260419a9f8ead97ee497e1db7c095fc0",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.15.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.15.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.15.1.woff",
+      "bytes": 1672,
+      "sha256": "5cb8ad27334907b1114f369a57af5a1356f057cb0f399a8e66aaa2f46c226596",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.15.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.15.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.15.1.woff2",
+      "bytes": 1156,
+      "sha256": "0cf434faafa0e5146034fabd475e27b0e438bbb38601c884b4974deeef49b21b",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.15.3.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.15.3.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.15.3.woff",
+      "bytes": 1444,
+      "sha256": "180b4a28810eb0651cfb80c5fc8b616236d07b23abc64887464dfd15cb930b36",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.15.3.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.15.3.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.15.3.woff2",
+      "bytes": 976,
+      "sha256": "ed2934f9e962f2b910796410e6d74a9f4323dea21fa8b23cff86255207a6abe8",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.15.4.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.15.4.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.15.4.woff",
+      "bytes": 1760,
+      "sha256": "952f45775961dbe6b6424edb00146ab123c054cf63932162accfafb20065e686",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.15.4.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.15.4.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.15.4.woff2",
+      "bytes": 1268,
+      "sha256": "d55e9ddeac610c1f8607bdde4c27a84f2839148be036c809c2fb77a16fce1203",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.2.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.2.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.2.0.woff",
+      "bytes": 13188,
+      "sha256": "f7dae2939a3b5ffbdd1668bf0e7b7fb2b90e42cfcd4a719c8429c53933f2524f",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.2.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.2.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.2.0.woff2",
+      "bytes": 10772,
+      "sha256": "4748004919254e0f036f6c900c88b038887e330e4035f3db1b23485d2d2cd8ad",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.3.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.3.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.3.0.woff",
+      "bytes": 12632,
+      "sha256": "51fe6a173841db20054982a5d7029d4f34b8d03aac699710551a830d5d857048",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.3.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.3.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.3.0.woff2",
+      "bytes": 10408,
+      "sha256": "ff5d2150e43c172c9b476b3bd476db9cf737ac6bc37ff1bbcfa25b5b6ddd12e2",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.4.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.4.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.4.0.woff",
+      "bytes": 15684,
+      "sha256": "10cbb8947c957e1655e59f40bbd87787a797cded05c5b08899aae3ff70d720bf",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.4.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.4.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.4.0.woff2",
+      "bytes": 13152,
+      "sha256": "a3afa75542135081d53c6c1f3b283b60309d336136ac5089e842cd4be5376de8",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.4.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.4.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.4.1.woff",
+      "bytes": 1348,
+      "sha256": "b49d0feb80e6d437b45102ed198187872d42e9a45ad9dfce3a6d0d5768cb7d3a",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.4.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.4.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.4.1.woff2",
+      "bytes": 888,
+      "sha256": "4fe7c536f288e51b9ee760fa05e74ef1eab81a7216462db6cf4888e7c7a2e07d",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.5.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.5.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.5.0.woff",
+      "bytes": 10804,
+      "sha256": "1ebebb2a4e162c9fea3b85aa159306055f960e6f4dc4858dfeb46e3063086e5d",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.5.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.5.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.5.0.woff2",
+      "bytes": 8952,
+      "sha256": "04a75053dd1d68905e1a57e2f7dd4fe13f88810f8aa9c5c8625d065d956e2de0",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.6.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.6.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.6.0.woff",
+      "bytes": 12352,
+      "sha256": "f78060fbb8a1923a265025216bcc8d3cbb4fcccc19fe3cf18f0d2b8492bbe779",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.6.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.6.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.6.0.woff2",
+      "bytes": 10280,
+      "sha256": "889d04807befa3a57255f4e49352eb64e1debab4134e8c20395a701b899aa579",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.6.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.6.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.6.1.woff",
+      "bytes": 1484,
+      "sha256": "3d024803028a912848e0345e3e1b3282b8bd61b8378b8b7bcd2e777424dd5690",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.6.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.6.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.6.1.woff2",
+      "bytes": 1000,
+      "sha256": "512e33f57302172f2f943dfe3a6d5593747e202d083fcaa7a96ae6158f54581e",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.6.3.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.6.3.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.6.3.woff",
+      "bytes": 1476,
+      "sha256": "4bf6216f483325d8f72a1305d79fd52b0d30a9b3abed07f38767d56b0da0c6c6",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.6.3.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.6.3.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.6.3.woff2",
+      "bytes": 956,
+      "sha256": "f653fcd4809405b68f806ac281e8d1ab263a14dfb72c5b416537ef81b1c3ea1e",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.7.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.7.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.7.0.woff",
+      "bytes": 13104,
+      "sha256": "5f4cd6eff19a1bfa04e1aaf0dcfe06c8f7fd7239d5c84b7a3f2fba605dca2ed3",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.7.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.7.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.7.0.woff2",
+      "bytes": 10844,
+      "sha256": "75d22a92c7e44f31d147b49317e065e25c677c4e874252a90402e5a3651e4346",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.7.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.7.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.7.1.woff",
+      "bytes": 1480,
+      "sha256": "27d535a0f64187b10f207f106416bc2ad82657a530bb8e1e2492d08c934bbe7f",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.7.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.7.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.7.1.woff2",
+      "bytes": 1000,
+      "sha256": "fb13ef3c810a995230ea1a75c20b9d87e7d4a84f27cf024de2106abafe2956da",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.8.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.8.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.8.0.woff",
+      "bytes": 2488,
+      "sha256": "9ffe2cd9cdfc76d060019d406f69d654354cc34d71d77c77bb6929e448d605d7",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.8.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.8.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.8.0.woff2",
+      "bytes": 1920,
+      "sha256": "8248bc1cd7eec3d9335d93c11bd05ac59da137cce828cf1ad4efb7598ab959b9",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.8.2.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.8.2.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.8.2.woff",
+      "bytes": 1448,
+      "sha256": "66df7cc7e695e5203d1b705cb34a42aafac129a66f5e4e50921a8839840ad891",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.8.2.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.8.2.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.8.2.woff2",
+      "bytes": 952,
+      "sha256": "5b2558e78103860bf050b1c7da8039bea10df424d88271a3301c4b2a8422aded",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.9.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.9.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.9.0.woff",
+      "bytes": 14280,
+      "sha256": "241e83c3c8fb3104b3638eeda11bf54c0e09eff9195d0346523c17d8a52792af",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-regular-400-5.9.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-regular-400-5.9.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-regular-400-5.9.0.woff2",
+      "bytes": 11356,
+      "sha256": "3bd74fde6f4a31adc390c63d9f7a888908d357349b15ca6c00d0b22f5b8c2e91",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.0.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.0.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.0.0.woff",
+      "bytes": 25004,
+      "sha256": "af408be32d88ce51e20ff82a4cbe96d97217f168985ea33fcedddf4b05a51765",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.0.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.0.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.0.0.woff2",
+      "bytes": 19784,
+      "sha256": "1b50aa1d36ea249991fb44f8f6ad2aa74fe360df9cc04c564b5edf3b053b739c",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.0.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.0.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.0.1.woff",
+      "bytes": 1424,
+      "sha256": "de8d0ee6983e0b8542d82be35523f94a30bc0660bc716fe399c0591ddbde2751",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.0.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.0.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.0.1.woff2",
+      "bytes": 960,
+      "sha256": "83bed4859259ff6b3b47d26f293cdb1c8cd9707b9bb19d10d99e0394b77b4bbf",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.0.10.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.0.10.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.0.10.woff",
+      "bytes": 1644,
+      "sha256": "da1294e0025252ba6cd34d431b78b7528a754f3612d63e05fb16feba968d81fa",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.0.10.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.0.10.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.0.10.woff2",
+      "bytes": 1096,
+      "sha256": "df0d8b0de0f842b76054a03f7da5401886b5f5bff3227cea0c9fc803447d6730",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.0.11.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.0.11.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.0.11.woff",
+      "bytes": 4104,
+      "sha256": "1809c426b93f786a12496310d8e2dbc9117b131055debc36e9993bbc97bb95d0",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.0.11.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.0.11.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.0.11.woff2",
+      "bytes": 3180,
+      "sha256": "7cc42a9f8bf43bf7414d6f762c756fad09d90134bab450e423902af5facd2408",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.0.13.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.0.13.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.0.13.woff",
+      "bytes": 7492,
+      "sha256": "bf90824e21858e4072230a3fe668e732ab85c3f835b0a73995d2ee5b26aff271",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.0.13.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.0.13.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.0.13.woff2",
+      "bytes": 5964,
+      "sha256": "ef8f8838ef61f54522e3b369a8f43c0512750407a421a7e10354cfead7f5da48",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.0.3.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.0.3.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.0.3.woff",
+      "bytes": 1692,
+      "sha256": "f0849a3105405fcdbbcea60e91eaffb1b4ddb733bbe43997eac0fb82c7d13ec9",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.0.3.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.0.3.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.0.3.woff2",
+      "bytes": 1132,
+      "sha256": "f9795df4d815c43a0552e44e599c8dbfd2ac0ccd650c85781fb1eea1ccf48c24",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.0.5.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.0.5.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.0.5.woff",
+      "bytes": 3604,
+      "sha256": "d6387cec039c2e082152c9cdc2cf1ed7955cd1b12e1b8bc1dea2877787c8d9a4",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.0.5.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.0.5.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.0.5.woff2",
+      "bytes": 2860,
+      "sha256": "120a3fe16cacfdad00edca7599b958b66da8e46b63f021f7a08d32bfc9c41358",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.0.7.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.0.7.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.0.7.woff",
+      "bytes": 5624,
+      "sha256": "bc75a5d4c268a0a222f27c38b972962e7747b98e9c98867a6cbb16e8c1096f62",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.0.7.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.0.7.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.0.7.woff2",
+      "bytes": 4344,
+      "sha256": "eb711156a18608f8b4acbc6392ef73c32e1ebc6240688577502aa3f16a8f4ea3",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.0.9.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.0.9.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.0.9.woff",
+      "bytes": 7792,
+      "sha256": "65208295ab0837ec62242c32e00a795a628e84f0ed2bf445bb76a5d331a9ef6c",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.0.9.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.0.9.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.0.9.woff2",
+      "bytes": 6112,
+      "sha256": "5c6f8529544df44b0b1351226e2f57369c3f955b3f2269e29690c6fa4bc8ad8b",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.1.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.1.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.1.0.woff",
+      "bytes": 9116,
+      "sha256": "dafd35ab772eb72c5af41f3b67aec7e4cf064008799fa538ea02376abcce8266",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.1.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.1.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.1.0.woff2",
+      "bytes": 7360,
+      "sha256": "8e16ea8c8ed1923b3ef24e84dcf902a4451dcdc12e7d51b91750073d31b9c7d3",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.1.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.1.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.1.1.woff",
+      "bytes": 1428,
+      "sha256": "6975276e5faf35f1ccd6f56d2877a84801bdfea3460df6aa9b4936a128f27d86",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.1.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.1.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.1.1.woff2",
+      "bytes": 924,
+      "sha256": "7d235f1b997b236953a7a4a393f828302152503caa74623ef1a1cc2d515e34f3",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.10.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.10.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.10.1.woff",
+      "bytes": 9916,
+      "sha256": "364138d66648dfff99bcd7bd194ca3073348adf62f5f8a1f27a38e6c253284b5",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.10.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.10.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.10.1.woff2",
+      "bytes": 7852,
+      "sha256": "3ef6d474406c064fcdbfdeed13014238b7f01c809ab555cb92dd1286220e9a7a",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.10.2.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.10.2.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.10.2.woff",
+      "bytes": 16532,
+      "sha256": "d37b60e80dc3e2706fbf6cd46c984a8e0a5093c3c33757466b2b40b768334606",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.10.2.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.10.2.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.10.2.woff2",
+      "bytes": 13268,
+      "sha256": "46fa33cc9340603e767415c1829c08b91f3a3680b9800047dbc1bda91b8eb0ac",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.11.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.11.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.11.0.woff",
+      "bytes": 15160,
+      "sha256": "48116633ef257d93494bba1c3593d16d92f360dea998d67b94bcaf28476440fa",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.11.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.11.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.11.0.woff2",
+      "bytes": 12144,
+      "sha256": "6bcade3d96c0c0fb1950e54b96b0f4cfa7f51e45a99dd8f12224fb0530ac432d",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.11.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.11.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.11.1.woff",
+      "bytes": 10500,
+      "sha256": "ca9965eb3aae1fc2f0fd6fba5acb1debb39530f80c9c57cf1b5e8da06f030707",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.11.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.11.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.11.1.woff2",
+      "bytes": 8516,
+      "sha256": "12f1a71885bf9077aca3c849b84b51fe92f36154e21a16659ceb1fbba35cae8b",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.11.2.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.11.2.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.11.2.woff",
+      "bytes": 1664,
+      "sha256": "9934ad32709131184b2ac1567f5fdf800fd921fda9bf00cdffe6cb96963efe22",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.11.2.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.11.2.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.11.2.woff2",
+      "bytes": 1124,
+      "sha256": "15a152177e56aa5d37eaa6427861ac587fc44464cc00078d06bfcef091dc3dee",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.12.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.12.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.12.0.woff",
+      "bytes": 6608,
+      "sha256": "5fd1fb81624dd6f02b1287a7ed6c4a1dc639d7ef5bf381ac6aa6d2e5c1f8dc3c",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.12.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.12.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.12.0.woff2",
+      "bytes": 5308,
+      "sha256": "3953cdb9cdc2646ff25e9f7ae31e35d268ce36a6134f05655ad15526cd6c633d",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.12.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.12.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.12.1.woff",
+      "bytes": 1748,
+      "sha256": "8c8658baffc2dd007383230ea56b68ef01db2e902495fa348a8860a9fedcbc62",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.12.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.12.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.12.1.woff2",
+      "bytes": 1180,
+      "sha256": "38ad3c9c9362784f9ee0309d90babf47f5bff15d6a2269dfbb4d958540e5058c",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.13.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.13.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.13.0.woff",
+      "bytes": 1620,
+      "sha256": "01811e68da66fb518ecfec526b19d84e185ff3bbf39b784ee4183bb799b2434b",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.13.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.13.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.13.0.woff2",
+      "bytes": 1080,
+      "sha256": "299fed0671b6de5f4d2cc2ed03e729d3177c66e3ef696de3a6fe6e922cf06297",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.14.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.14.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.14.0.woff",
+      "bytes": 15248,
+      "sha256": "57637815a93d82e5ba441ba19093564818832e83ef08a3b2477171a0e3aef56d",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.14.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.14.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.14.0.woff2",
+      "bytes": 12568,
+      "sha256": "01f283390b1395b80224066fb0b74457df5ee2215ed897c94ecd090dff3413d3",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.15.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.15.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.15.1.woff",
+      "bytes": 1628,
+      "sha256": "c4e3853cc49b0b92ce9f467a01e716298a9442f5fd0b3b2d68013bf75d7b1320",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.15.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.15.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.15.1.woff2",
+      "bytes": 1112,
+      "sha256": "5b3a354bd7fdbef2e3667c5ebb5e06557de5edaf0aa1aa75f139c862a432d1ee",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.15.3.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.15.3.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.15.3.woff",
+      "bytes": 1408,
+      "sha256": "d83f5eb2c71017438b55fcaa83b3a5e156c4c2872c700af32327755b5860ce5f",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.15.3.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.15.3.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.15.3.woff2",
+      "bytes": 944,
+      "sha256": "e6aedca6aa2fa733adc46de473e4f603bc87d142bb8e3da69da28fc595295627",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.15.4.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.15.4.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.15.4.woff",
+      "bytes": 1708,
+      "sha256": "14b15e8dd6fa34d9c41388135eed485ea5daf868f390454a938661c5343371a6",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.15.4.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.15.4.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.15.4.woff2",
+      "bytes": 1220,
+      "sha256": "a5716f3fbf50c26ac021c543454d7aa805d79319fe8757f1c189a4df67f958e1",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.2.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.2.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.2.0.woff",
+      "bytes": 11204,
+      "sha256": "efc4f8fd90c1893f75fc91f25b1698600116a0b761b8809ebc0e3a61b51d88a7",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.2.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.2.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.2.0.woff2",
+      "bytes": 9092,
+      "sha256": "0a65d6a7ecf17489b457edf7200ded3d5a5beccfca92cfbeeab8e85aaa054581",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.3.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.3.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.3.0.woff",
+      "bytes": 10936,
+      "sha256": "b799e2486a3dd1b2c3d4fe24080d29eb699a2cffb512fd23b7847b1875b963ce",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.3.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.3.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.3.0.woff2",
+      "bytes": 8980,
+      "sha256": "2790591909373ad96ef43baa988e6fa279a1b043f6984ba20dabc071a10f3977",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.4.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.4.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.4.0.woff",
+      "bytes": 12268,
+      "sha256": "6fc260744587d7cbc7d4c57717dbaaa0a7f1be946dc1e1a96071d83e99cade26",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.4.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.4.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.4.0.woff2",
+      "bytes": 10012,
+      "sha256": "93915b1ab26f2af47edc3d197fadd617e98b4a8adc0ab9c9c00d68037b9f7f21",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.4.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.4.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.4.1.woff",
+      "bytes": 1308,
+      "sha256": "af53ebcbfa03a8c227be05c4cc693ed30120ff40a3e84c905f718725fa164939",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.4.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.4.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.4.1.woff2",
+      "bytes": 844,
+      "sha256": "7ee1c4e1d94c2d081208ba045007db1ec40563cfdefcd7d6ddda933bd60b2243",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.5.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.5.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.5.0.woff",
+      "bytes": 8752,
+      "sha256": "6efcbf3840b27ed99b53fd827dfb5d22ef2fa6755f36b49b05b53e9018fd8869",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.5.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.5.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.5.0.woff2",
+      "bytes": 7112,
+      "sha256": "aaba3eb884823051607922764b39d2469a2b5da52a44a52470d79ef486e110a2",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.6.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.6.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.6.0.woff",
+      "bytes": 10256,
+      "sha256": "1da11ff7bac403924be631e68beab2aa18a80662c0aea6781362639c6ad2241b",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.6.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.6.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.6.0.woff2",
+      "bytes": 8448,
+      "sha256": "14d1e6b430bf725614a24a9e02e33bd35f5d8ff5e8de5aa8df44cefee646ec7e",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.6.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.6.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.6.1.woff",
+      "bytes": 1452,
+      "sha256": "24d8af31b7eec86d4d355858e3b53d202c7417cb4cc3d643e4eed703f9d6ca04",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.6.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.6.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.6.1.woff2",
+      "bytes": 944,
+      "sha256": "76a25edfda332c07f8dbec5700c40a52a3b919e5c7eb4707036cebd2348dc2b1",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.6.3.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.6.3.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.6.3.woff",
+      "bytes": 1436,
+      "sha256": "d073178bbd7cd893c800c4e6c2030548ec41f4197cb231ce2e1338c4d6102545",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.6.3.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.6.3.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.6.3.woff2",
+      "bytes": 912,
+      "sha256": "7bc5221f9483189f0f555501a049e2690ab75928fe579b0d27df080a6811dd5e",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.7.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.7.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.7.0.woff",
+      "bytes": 10744,
+      "sha256": "021cffb4e42870e83f1c81e5799f4396cde32b32a0acd4b7c0430650c8245811",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.7.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.7.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.7.0.woff2",
+      "bytes": 8768,
+      "sha256": "70a3c9d597085022d81c642d3cf740f76b8c500e7328bc8071a63b5b93e2e73d",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.7.1.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.7.1.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.7.1.woff",
+      "bytes": 1396,
+      "sha256": "525ecf1d949d7e27eb621fea5d9727699ca000db8143d7c2b9e04bb0aed042b3",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.7.1.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.7.1.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.7.1.woff2",
+      "bytes": 932,
+      "sha256": "a034d23482fd89b1337eaf48966f47d0e2abb91cd54d4e6ee7f2fbad8135bdaa",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.8.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.8.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.8.0.woff",
+      "bytes": 2372,
+      "sha256": "d13b613311a90480adeea50ab259757df8f89e125a47d19e260906cbe4fb3c3f",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.8.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.8.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.8.0.woff2",
+      "bytes": 1752,
+      "sha256": "4c4a0207dec88a4d08021364661c126aa561a9f708763f1518975981715206d8",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.8.2.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.8.2.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.8.2.woff",
+      "bytes": 1360,
+      "sha256": "1d0dc28adeed8204b367d5ffb81a208c59fb949aa0bec1e3ed50e79adf22112c",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.8.2.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.8.2.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.8.2.woff2",
+      "bytes": 864,
+      "sha256": "625d513758f74740c899ac8155884c0faed6e85fe35c8a70175f4ea4491da3e0",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.9.0.woff",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.9.0.woff",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.9.0.woff",
+      "bytes": 12508,
+      "sha256": "623623a0dc30cf11de5b3d6f707a916c1574f2d67c4b1bbf69e4a5b142f4b25f",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "webfonts/pro-fa-solid-900-5.9.0.woff2",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/webfonts/pro-fa-solid-900-5.9.0.woff2",
+      "destination": "theme/shpigovsky/assets/webfonts/pro-fa-solid-900-5.9.0.woff2",
+      "bytes": 9812,
+      "sha256": "f94d45a0e5b87eb2fc7c019d58b0c46edc943cdad7578ffb12eea5fb3c9b1673",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "img/social/max.svg",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/img/social/max.svg",
+      "destination": "theme/shpigovsky/assets/img/social/max.svg",
+      "bytes": 2184,
+      "sha256": "0077d093f1fac0503d9ec2666b3860efd1e5b9025b2f3346caf7370b0b7cf2f4",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "img/social/og-default.jpg",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/img/social/og-default.jpg",
+      "destination": "theme/shpigovsky/assets/img/social/og-default.jpg",
+      "bytes": 152523,
+      "sha256": "66a850b29c0ac34d4408e865bb52508ee2e1b6c62df847a3b1979e1232bae131",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "img/social/telegram.svg",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/img/social/telegram.svg",
+      "destination": "theme/shpigovsky/assets/img/social/telegram.svg",
+      "bytes": 2179,
+      "sha256": "126ffc6480844855fea7898d5ee2de8d2e0e11f71f894303ad49bde71b39a882",
+      "enqueued": false,
+      "handle": ""
+    },
+    {
+      "asset": "img/social/whatsapp.svg",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/img/social/whatsapp.svg",
+      "destination": "theme/shpigovsky/assets/img/social/whatsapp.svg",
+      "bytes": 2658,
+      "sha256": "5f269edc225ba9ef1fc18c55dd34315bc9d5353dc2c35e4bb637e0c91949ccf8",
+      "enqueued": false,
+      "handle": ""
+    }
+  ],
+  "task": "V9-06D7-A"
+}

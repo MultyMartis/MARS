@@ -1,0 +1,32 @@
+{
+  "task": "V9-06D7-A",
+  "generated_at": "2026-07-04T17:00:00+00:00",
+  "theme_version": "0.3.0-d7a-shell",
+  "changed_php": [
+    "theme/shpigovsky/functions.php",
+    "theme/shpigovsky/style.css",
+    "theme/shpigovsky/footer.php",
+    "theme/shpigovsky/inc/assets.php",
+    "theme/shpigovsky/inc/navigation.php",
+    "theme/shpigovsky/inc/site-chrome.php",
+    "theme/shpigovsky/template-parts/layout/body-start.php",
+    "theme/shpigovsky/template-parts/layout/footer.php",
+    "theme/shpigovsky/template-parts/layout/header.php",
+    "theme/shpigovsky/template-parts/layout/global-consultation-modal.php",
+    "theme/shpigovsky/template-parts/layout/site-page-shell-close.php",
+    "theme/shpigovsky/template-parts/navigation/offcanvas.php",
+    "theme/shpigovsky/template-parts/navigation/messenger-links.php",
+    "theme/shpigovsky/template-parts/navigation/footer-social.php",
+    "theme/shpigovsky/template-parts/navigation/primary-desktop.php",
+    "theme/shpigovsky/template-parts/navigation/primary-mobile.php",
+    "theme/shpigovsky/template-parts/components/scroll-to-top.php"
+  ],
+  "packaged_assets_root": "theme/shpigovsky/assets/",
+  "asset_package_manifest": "validation/v9-06d7a-global-shell-asset-source/asset-package-manifest.json",
+  "plugin_source_changed": false,
+  "acf_json_changed": false,
+  "v9_src_changed": false,
+  "v9_dist_changed": false,
+  "runtime_delivery_performed": false,
+  "result": "PASS"
+}

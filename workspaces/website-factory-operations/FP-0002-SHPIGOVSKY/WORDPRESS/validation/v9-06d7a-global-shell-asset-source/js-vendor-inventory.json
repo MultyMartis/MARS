@@ -1,0 +1,36 @@
+{
+  "task": "V9-06D7-A",
+  "generated_at": "2026-07-04T17:00:00+00:00",
+  "js_files_packaged": [
+    {
+      "destination": "theme/shpigovsky/assets/js/v9-shell.js",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/js/main.js",
+      "bytes": 39637,
+      "enqueued": true,
+      "handle": "shpigovsky-v9-shell",
+      "note": "Packaged from V9 dist main.js; lead form init disabled; submit prevented in D7-A boot()"
+    }
+  ],
+  "js_files_enqueued": ["shpigovsky-v9-shell"],
+  "vendors_included": [],
+  "vendors_deferred": [
+    {
+      "name": "Swiper",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/vendor/swiper/",
+      "reason": "Page-level carousels — D7-B+"
+    },
+    {
+      "name": "Fancybox",
+      "source": "workspaces/fp-0002-shpigovsky-v9/dist/assets/vendor/fancybox/",
+      "reason": "Gallery/lightbox — D7-B+"
+    },
+    {
+      "name": "Inputmask",
+      "source": "V9 static CDN reference only",
+      "reason": "Lead form phone mask — deferred with forms wave"
+    }
+  ],
+  "remote_dependencies": [],
+  "forms_ajax": "disabled — data-lead-form submit prevented; no endpoint configured",
+  "result": "PASS"
+}

@@ -1,0 +1,25 @@
+{
+  "task": "V9-06D7-A",
+  "generated_at": "2026-07-04T17:00:00+00:00",
+  "files_changed": [
+    "theme/shpigovsky/template-parts/layout/footer.php",
+    "theme/shpigovsky/template-parts/navigation/footer-social.php",
+    "theme/shpigovsky/template-parts/layout/site-page-shell-close.php",
+    "theme/shpigovsky/footer.php"
+  ],
+  "v9_classes_preserved": [
+    "site-footer",
+    "site-footer__nav-list",
+    "site-footer__nav-link",
+    "site-footer__social"
+  ],
+  "wp_menu_usage": {
+    "footer_services": "with fallback",
+    "footer_o_centre": "with fallback",
+    "legal": "with fallback"
+  },
+  "options_read_behavior": "read-time only via get_field(..., option); omit empty contact/social blocks",
+  "wp_footer_preserved": true,
+  "empty_data_behavior": "no fatal; omit contact/social sections; footer nav uses static first-wave fallbacks",
+  "result": "PASS"
+}

@@ -10,6 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_template_part( 'template-parts/layout/footer' );
+get_template_part( 'template-parts/layout/site-page-shell-close' );
 get_template_part( 'template-parts/layout/global-consultation-modal' );
 get_template_part( 'template-parts/components/scroll-to-top' );
 get_template_part( 'template-parts/global/document-close' );

@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-04 (V9-06D.6 template integration planning PASS)
+**Last updated:** 2026-07-04 (V9-06D7-A global shell asset source PASS)
 
-**Current WordPress phase:** V9-06D.6 planning complete — next `CREATE_V9_06D7_GLOBAL_SHELL_ASSET_INTEGRATION_SOURCE_TASK` (operator review). V9 integration NOT_STARTED. Report: `WORDPRESS/reports/FP-0002-V9-06D6-TEMPLATE-INTEGRATION-PLANNING-REPORT-v1.md`.
+**Current WordPress phase:** V9-06D7-A global shell/asset source complete in git — next `CREATE_V9_06D7A_RUNTIME_DELIVERY_TASK` (operator review). Report: `WORDPRESS/reports/FP-0002-V9-06D7A-GLOBAL-SHELL-ASSET-SOURCE-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 
