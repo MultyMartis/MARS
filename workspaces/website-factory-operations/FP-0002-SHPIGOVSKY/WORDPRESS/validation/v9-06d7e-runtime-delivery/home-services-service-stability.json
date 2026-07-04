@@ -1,0 +1,196 @@
+{
+  "generated_at": "2026-07-04T19:26:50.539673Z",
+  "routes": [
+    {
+      "route": "home",
+      "url": "http://shpigovsky.test/",
+      "service_id": null,
+      "http_status": 200,
+      "key_marker": "site-main--front",
+      "header_present": true,
+      "footer_present": true,
+      "css_loaded": true,
+      "js_loaded": true,
+      "checks": [
+        {
+          "section": "site-main--front",
+          "present": true,
+          "result": "PASS"
+        },
+        {
+          "section": "hero--home",
+          "present": true,
+          "result": "PASS"
+        },
+        {
+          "section": "rehabilitation-program",
+          "present": true,
+          "result": "PASS"
+        },
+        {
+          "section": "final-form",
+          "present": true,
+          "result": "PASS"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "services_hub",
+      "url": "http://shpigovsky.test/uslugi/",
+      "service_id": null,
+      "http_status": 200,
+      "key_marker": "site-main--services-hub",
+      "header_present": true,
+      "footer_present": true,
+      "css_loaded": true,
+      "js_loaded": true,
+      "checks": [
+        {
+          "section": "site-main--services-hub",
+          "present": true,
+          "result": "PASS"
+        },
+        {
+          "section": "hero--inner",
+          "present": true,
+          "result": "PASS"
+        },
+        {
+          "section": "service groups",
+          "present": true,
+          "result": "PASS"
+        },
+        {
+          "section": "final-form",
+          "present": true,
+          "result": "PASS"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "service_73",
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/",
+      "service_id": 73,
+      "http_status": 200,
+      "key_marker": "hero",
+      "header_present": true,
+      "footer_present": true,
+      "css_loaded": true,
+      "js_loaded": true,
+      "checks": [
+        {
+          "section": "hero",
+          "present": true,
+          "result": "PASS"
+        },
+        {
+          "section": "subnav",
+          "present": true,
+          "result": "PASS"
+        },
+        {
+          "section": "children",
+          "present": true,
+          "result": "PASS"
+        },
+        {
+          "section": "final_form",
+          "present": true,
+          "result": "PASS"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "service_74",
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "service_id": 74,
+      "http_status": 200,
+      "key_marker": "hero",
+      "header_present": true,
+      "footer_present": true,
+      "css_loaded": true,
+      "js_loaded": true,
+      "checks": [
+        {
+          "section": "hero",
+          "present": true,
+          "result": "PASS"
+        },
+        {
+          "section": "alcohol-special",
+          "present": true,
+          "result": "PASS"
+        },
+        {
+          "section": "final_form",
+          "present": true,
+          "result": "PASS"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "service_77",
+      "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/",
+      "service_id": 77,
+      "http_status": 200,
+      "key_marker": "hero",
+      "header_present": true,
+      "footer_present": true,
+      "css_loaded": true,
+      "js_loaded": true,
+      "checks": [
+        {
+          "section": "hero",
+          "present": true,
+          "result": "PASS"
+        },
+        {
+          "section": "subnav",
+          "present": true,
+          "result": "PASS"
+        },
+        {
+          "section": "final_form",
+          "present": true,
+          "result": "PASS"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "service_84",
+      "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "service_id": 84,
+      "http_status": 200,
+      "key_marker": "hero",
+      "header_present": true,
+      "footer_present": true,
+      "css_loaded": true,
+      "js_loaded": true,
+      "checks": [
+        {
+          "section": "hero",
+          "present": true,
+          "result": "PASS"
+        },
+        {
+          "section": "subnav",
+          "present": true,
+          "result": "PASS"
+        },
+        {
+          "section": "final_form",
+          "present": true,
+          "result": "PASS"
+        }
+      ],
+      "result": "PASS"
+    }
+  ],
+  "failures": [],
+  "result": "PASS"
+}

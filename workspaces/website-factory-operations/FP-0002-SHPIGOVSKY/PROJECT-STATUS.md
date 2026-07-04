@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-05 (V9-06D7-E Contacts template source PASS)
+**Last updated:** 2026-07-05 (V9-06D7-E Contacts template runtime delivery PASS)
 
-**Current WordPress phase:** V9-06D7-E Contacts template source complete in Git — next `CREATE_V9_06D7E_RUNTIME_DELIVERY_TASK` (operator review). Report: `WORDPRESS/reports/FP-0002-V9-06D7E-CONTACTS-TEMPLATE-SOURCE-REPORT-v1.md`.
+**Current WordPress phase:** V9-06D7-E Contacts template runtime delivered to local runtime — next `CREATE_V9_06D7F_FINAL_ROUTE_QA_TASK` (operator review). Report: `WORDPRESS/reports/FP-0002-V9-06D7E-RUNTIME-DELIVERY-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

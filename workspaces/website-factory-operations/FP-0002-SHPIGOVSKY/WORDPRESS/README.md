@@ -2,8 +2,8 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D7-E CONTACTS TEMPLATE SOURCE COMPLETE — runtime delivery pending operator task
-**Classification:** CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON COMPLETE — MINIMAL VISUAL CONTENT SEEDED — DEPTH-2 REWRITE REPAIRED — VISUAL ROUTE BASELINE READY — V9 GLOBAL SHELL RUNTIME DELIVERED — V9 HOME TEMPLATE RUNTIME DELIVERED — V9 SERVICES HUB TEMPLATE RUNTIME DELIVERED — V9 SERVICE TEMPLATE RUNTIME DELIVERED — V9 CONTACTS TEMPLATE SOURCE COMPLETE — NEXT D7-E RUNTIME DELIVERY
+**Status:** V9-06D7-E CONTACTS TEMPLATE RUNTIME DELIVERED — hash verified — route/contacts smoke PASS
+**Classification:** CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON COMPLETE — MINIMAL VISUAL CONTENT SEEDED — DEPTH-2 REWRITE REPAIRED — VISUAL ROUTE BASELINE READY — V9 GLOBAL SHELL RUNTIME DELIVERED — V9 HOME TEMPLATE RUNTIME DELIVERED — V9 SERVICES HUB TEMPLATE RUNTIME DELIVERED — V9 SERVICE TEMPLATE RUNTIME DELIVERED — V9 CONTACTS TEMPLATE RUNTIME DELIVERED — NEXT D7-F FINAL ROUTE QA
 
 ---
 
@@ -63,7 +63,7 @@ WORDPRESS/
 
 | Surface | Classification |
 |---------|----------------|
-| Theme | V9-06D7-E CONTACTS TEMPLATE SOURCE COMPLETE — D7-E contacts stacks in Git; runtime delivery pending operator task |
+| Theme | V9-06D7-E CONTACTS TEMPLATE RUNTIME DELIVERED — D7-E contacts stacks live in local runtime |
 | Shpigovsky Core | V9-06D.2 CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON COMPLETE |
 | ACF JSON | V9-06D.1 DELIVERED — 13 LOCAL JSON FILES; V9-06D.2 object meta only |
 
@@ -191,3 +191,8 @@ D7-C Services Hub template delivered to local runtime theme only. PHP lint PASS.
 ## V9-06D7-D runtime delivery
 
 D7-D Service template delivered to local runtime theme only. PHP lint PASS. Checkpoint + hash match PASS. Seven D.5 routes HTTP 200; Services 73/74/77/84 core-wave sections visible; Service 74 alcohol-special markers detected; Home D7-B and Services Hub D7-C stability PASS. Deferred shared V9 blocks documented. No DB/content/ACF/menu/redirect writes. Evidence: `validation/v9-06d7d-runtime-delivery/`. Next: D7-E contacts template source (operator review).
+
+
+## V9-06D7-E runtime delivery
+
+D7-E Contacts template delivered to local runtime theme only. PHP lint PASS. Checkpoint + hash match PASS. Seven D.5 routes HTTP 200; `/kontakty/` renders D7-E contacts body, location cards, rehabilitation steps, CTA band (modal-only); map/messengers omitted where expected. Home D7-B, Services Hub D7-C, Service templates 73/74/77/84 stability PASS. No DB/content/ACF/menu/redirect writes. Evidence: `validation/v9-06d7e-runtime-delivery/`. Next: D7-F final route QA (operator review).

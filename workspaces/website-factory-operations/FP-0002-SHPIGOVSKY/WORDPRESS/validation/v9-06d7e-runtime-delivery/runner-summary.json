@@ -1,0 +1,21 @@
+{
+  "started_at": "2026-07-04T19:26:10.692935Z",
+  "steps": [
+    "preflight",
+    "php-lint",
+    "runtime-identity",
+    "checkpoint",
+    "dry-run",
+    "apply",
+    "hash-validation",
+    "route-smoke",
+    "contacts-section-smoke",
+    "home-services-service-stability",
+    "asset-smoke",
+    "no-external-api-key",
+    "service-74",
+    "rollback-readiness"
+  ],
+  "result": "PASS",
+  "finished_at": "2026-07-04T19:26:53.484925Z"
+}

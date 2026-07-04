@@ -1,0 +1,106 @@
+{
+  "generated_at": "2026-07-04T19:26:45.447770Z",
+  "url": "http://shpigovsky.test/kontakty/",
+  "http_status": 200,
+  "checks": [
+    {
+      "section": "page_template_orchestration",
+      "present": true,
+      "required": true,
+      "expected_if_empty": "required",
+      "result": "PASS"
+    },
+    {
+      "section": "contacts_root_class",
+      "present": true,
+      "required": true,
+      "expected_if_empty": "required",
+      "result": "PASS"
+    },
+    {
+      "section": "contacts_body",
+      "present": true,
+      "required": true,
+      "expected_if_empty": "required",
+      "result": "PASS"
+    },
+    {
+      "section": "location_cards",
+      "present": true,
+      "required": true,
+      "expected_if_empty": "required",
+      "result": "PASS"
+    },
+    {
+      "section": "phone_row",
+      "present": true,
+      "required": false,
+      "expected_if_empty": "omitted or fallback acceptable",
+      "result": "PASS"
+    },
+    {
+      "section": "messengers_social",
+      "present": false,
+      "required": false,
+      "expected_if_empty": "omitted or fallback acceptable",
+      "result": "PASS_OMITTED"
+    },
+    {
+      "section": "map_figure",
+      "present": false,
+      "required": false,
+      "expected_if_empty": "omitted or fallback acceptable",
+      "result": "PASS_OMITTED"
+    },
+    {
+      "section": "rehabilitation_steps",
+      "present": true,
+      "required": true,
+      "expected_if_empty": "required",
+      "result": "PASS"
+    },
+    {
+      "section": "cta_band",
+      "present": true,
+      "required": true,
+      "expected_if_empty": "required",
+      "result": "PASS"
+    },
+    {
+      "section": "modal_only_behavior",
+      "present": true,
+      "required": true,
+      "expected_if_empty": "required",
+      "result": "PASS"
+    },
+    {
+      "section": "no_live_endpoint",
+      "present": true,
+      "required": true,
+      "expected_if_empty": "modal-only consultation; no external form POST",
+      "result": "PASS"
+    },
+    {
+      "section": "no_external_api_key_in_html",
+      "present": true,
+      "required": true,
+      "expected_if_empty": "no map API keys in rendered HTML",
+      "result": "PASS"
+    },
+    {
+      "section": "deferred_media_documented",
+      "present": true,
+      "required": false,
+      "expected_if_empty": "map PNG and rehabilitation interior photo not packaged; omission expected",
+      "result": "PASS"
+    }
+  ],
+  "api_keys_found_in_html": [],
+  "deferred_gaps": [
+    "map PNG assets",
+    "rehabilitation interior photo",
+    "unseeded site options may omit phone/messengers"
+  ],
+  "failures": [],
+  "result": "PASS"
+}

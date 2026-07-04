@@ -1,0 +1,60 @@
+{
+  "generated_at": "2026-07-04T19:26:32.540253Z",
+  "files_added": 2,
+  "files_modified": 4,
+  "files_same": 463,
+  "target_only_preserved": 0,
+  "deletes": 0,
+  "records": [
+    {
+      "source_path": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\functions.php",
+      "target_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\functions.php",
+      "action": "MODIFY",
+      "source_hash": "7adc052cde5c7eb2ce97727665df99620028a651a5a8c7be31e85e8b0e57497e",
+      "target_pre_hash": "cbb09f946fd37fbc7b3c280c8ad7cd989bc2ef5323e2d25bdd81f5da2130ea26",
+      "final_hash": "7adc052cde5c7eb2ce97727665df99620028a651a5a8c7be31e85e8b0e57497e"
+    },
+    {
+      "source_path": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\inc\\contacts-helpers.php",
+      "target_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\inc\\contacts-helpers.php",
+      "action": "ADD",
+      "source_hash": "a7bd207b725ace9be4e85647bee6d251bf80a8c4394842b1f8ecb4dabba5690a",
+      "target_pre_hash": null,
+      "final_hash": "a7bd207b725ace9be4e85647bee6d251bf80a8c4394842b1f8ecb4dabba5690a"
+    },
+    {
+      "source_path": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\page-templates\\contacts.php",
+      "target_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\page-templates\\contacts.php",
+      "action": "MODIFY",
+      "source_hash": "9a7f58d0f0e1db78a123d4502d344c75f98df0b8756c988d4784481067324544",
+      "target_pre_hash": "1ef7260502351f02f158750799918ca4bc90c5eb2829f7a90d47446479e7d698",
+      "final_hash": "9a7f58d0f0e1db78a123d4502d344c75f98df0b8756c988d4784481067324544"
+    },
+    {
+      "source_path": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\contacts\\location-card.php",
+      "target_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\template-parts\\contacts\\location-card.php",
+      "action": "ADD",
+      "source_hash": "62bc563e732a289f999c80aabdd3ccac66a4db56a6826b2055eafe9bfa8ce201",
+      "target_pre_hash": null,
+      "final_hash": "62bc563e732a289f999c80aabdd3ccac66a4db56a6826b2055eafe9bfa8ce201"
+    },
+    {
+      "source_path": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\contacts\\map-body.php",
+      "target_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\template-parts\\contacts\\map-body.php",
+      "action": "MODIFY",
+      "source_hash": "c5deeadfbd1b661f55bbb954ffd4ec62b5eb40d0524eb880577e8a1d651ae7fe",
+      "target_pre_hash": "ba638e2ac2db43682cd3dfd43d5e5e961a9c51118d711e91b89a2ca74c88a30d",
+      "final_hash": "c5deeadfbd1b661f55bbb954ffd4ec62b5eb40d0524eb880577e8a1d651ae7fe"
+    },
+    {
+      "source_path": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\contacts\\rehabilitation-steps.php",
+      "target_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\template-parts\\contacts\\rehabilitation-steps.php",
+      "action": "MODIFY",
+      "source_hash": "e40bf1c0d96d2467247a54c08a25cb35ddeeb8b7357dabd71ed880dabdb72b02",
+      "target_pre_hash": "ff3acefbed535ecc0bf85f009ee82550142acd477032a69729da121c7901b5c0",
+      "final_hash": "e40bf1c0d96d2467247a54c08a25cb35ddeeb8b7357dabd71ed880dabdb72b02"
+    }
+  ],
+  "errors": [],
+  "result": "PASS"
+}

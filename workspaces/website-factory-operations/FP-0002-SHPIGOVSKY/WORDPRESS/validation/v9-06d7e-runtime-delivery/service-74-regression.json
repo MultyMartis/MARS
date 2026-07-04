@@ -1,0 +1,11 @@
+{
+  "generated_at": "2026-07-04T19:26:53.084023Z",
+  "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+  "http_status": 200,
+  "expected_object_id": 74,
+  "expected_object_type": "service",
+  "expected_variant": "alcohol-special",
+  "detected_variant": "alcohol-special",
+  "detection_method": "html_regex:shpigovsky-service--alcohol|service-leaf-signs",
+  "result": "PASS"
+}

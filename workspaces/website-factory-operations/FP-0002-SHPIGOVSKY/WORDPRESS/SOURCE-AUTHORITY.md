@@ -141,4 +141,9 @@ Canonical D7-D Service template source (commit `c54c23d0`) delivered to local ru
 
 ## V9-06D7-E contacts template source
 
-Source-only Contacts page integration in `WORDPRESS/theme/shpigovsky/`: V9-compatible `contacts-map-body` and `contacts-rehabilitation-steps`, `inc/contacts-helpers.php`, ACF page field and site option read/fallback bindings. Theme version `0.7.0-d7e-contacts-template`. No runtime delivery, no DB/content/ACF writes, no plugin or V9 src/dist edits. Validation: `validation/v9-06d7e-contacts-template-source/`. Next: V9-06D7-E runtime delivery task (operator review; not authorized here).
+Source-only Contacts page integration in `WORDPRESS/theme/shpigovsky/`: V9-compatible `contacts-map-body` and `contacts-rehabilitation-steps`, `inc/contacts-helpers.php`, ACF page field and site option read/fallback bindings. Theme version `0.7.0-d7e-contacts-template`. Runtime delivery performed 2026-07-05. Canonical D7-E source (commit `5a7eb400`) delivered to local runtime `wp-content/themes/shpigovsky/` only. Additive/update copy; no deletes; no plugin/core/uploads/ACF JSON changes. Hash match verified post-delivery. Evidence: `validation/v9-06d7e-runtime-delivery/`.
+
+
+## V9-06D7-E runtime delivery
+
+Canonical D7-E Contacts template source (commit `5a7eb400`) delivered to local runtime `wp-content/themes/shpigovsky/` only. Six theme files (2 ADD, 4 MODIFY). Hash match verified post-delivery. Runtime remains deployment target; Git canonical source unchanged post-delivery. Evidence: `validation/v9-06d7e-runtime-delivery/`.
