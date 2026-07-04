@@ -1,0 +1,176 @@
+{
+  "map_id": "corvonero-commander-review-to-import-mapping-v1",
+  "generated_at": "2026-06-29T00:34:36Z",
+  "review_workbook": "C:\\MARS Phenix\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-REVIEW-2026-06-29\\CORVONERO-YANDEX-DIRECT-COMMANDER-REVIEW-v1.xlsx",
+  "review_sha256": "e0f9e320f08e451e4e59ba80618a775f7a2b48459a062904f59bba51c6fc3425",
+  "template_path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\assets\\direct-commander-template\\triumph-manipulator-commander-template-v1.xlsx",
+  "compatibility": "PARTIAL",
+  "row_structure": "AD row + KEYWORD rows per group; one row per phrase",
+  "entity_id_policy": "Cleared in new-campaign mode (no Commander IDs)",
+  "required_constants": {
+    "campaign_type": "Текстово-графическая кампания",
+    "placement": "search",
+    "ad_type": "Текстово-графическое",
+    "geo_region": "Новосибирск и Новосибирская область"
+  },
+  "mandatory_blank_fields": [
+    "sitelink_titles",
+    "sitelink_descriptions",
+    "sitelink_urls",
+    "entity_ids",
+    "image",
+    "creative",
+    "metrica",
+    "goals",
+    "network_bid"
+  ],
+  "unsupported_review_fields": [
+    "campaign_id (review)",
+    "campaign_name (review)",
+    "row_type (review)",
+    "daily_budget",
+    "schedule"
+  ],
+  "fields": [
+    {
+      "corvonero_source_field": "campaign_name",
+      "commander_column": "N/A — metadata block only",
+      "compatibility": "PARTIAL",
+      "transformation": "Single Commander import = one Yandex campaign; 5 logical campaigns documented in SUPPORT",
+      "final_value_source": "CAMPAIGN_SETTINGS support sheet"
+    },
+    {
+      "corvonero_source_field": "campaign_type",
+      "commander_column": "Тип кампании:",
+      "compatibility": "FULL",
+      "transformation": "Metadata row — «Текстово-графическая кампания»",
+      "final_value_source": "CORVONERO-EXT-W1-CAMPAIGN-SETTINGS-v2.json"
+    },
+    {
+      "corvonero_source_field": "placement / search",
+      "commander_column": "Места показа-фразы на кампанию:",
+      "compatibility": "FULL",
+      "transformation": "Metadata «search» literal",
+      "final_value_source": "Operator: SEARCH ENABLED, networks DISABLED"
+    },
+    {
+      "corvonero_source_field": "daily_budget",
+      "commander_column": "N/A in template data table",
+      "compatibility": "NOT_IN_TEMPLATE",
+      "transformation": "Post-import Commander UI — 5000 RUB × 5 campaigns",
+      "final_value_source": "CAMPAIGN_SETTINGS support sheet"
+    },
+    {
+      "corvonero_source_field": "schedule",
+      "commander_column": "N/A",
+      "compatibility": "NOT_IN_TEMPLATE",
+      "transformation": "Post-import — daily 06:00–21:00 Novosibirsk",
+      "final_value_source": "CAMPAIGN_SETTINGS support sheet"
+    },
+    {
+      "corvonero_source_field": "region / geography",
+      "commander_column": "col 52 «Регион»",
+      "compatibility": "FULL",
+      "transformation": "Новосибирск и Новосибирская область",
+      "final_value_source": "Review COMMANDER_IMPORT col Регион"
+    },
+    {
+      "corvonero_source_field": "group_name",
+      "commander_column": "col 5",
+      "compatibility": "FULL",
+      "transformation": "Verbatim",
+      "final_value_source": "Review ID группы / Название группы"
+    },
+    {
+      "corvonero_source_field": "keyword / phrase",
+      "commander_column": "col 8",
+      "compatibility": "FULL",
+      "transformation": "One row per keyword; ad fields blank on keyword rows",
+      "final_value_source": "Review KEYWORD rows"
+    },
+    {
+      "corvonero_source_field": "keyword bid (manual search CPC)",
+      "commander_column": "col 54 «Ставка»",
+      "compatibility": "FULL",
+      "transformation": "Numeric RUB integer; per-campaign: CA-01=500, others=400",
+      "final_value_source": "Operator approved initial manual bids"
+    },
+    {
+      "corvonero_source_field": "campaign_negatives",
+      "commander_column": "Минус-фразы на кампанию: (metadata)",
+      "compatibility": "PARTIAL",
+      "transformation": "Single metadata cell — per-campaign variants in SUPPORT (CA-05 extra)",
+      "final_value_source": "CORVONERO-EXT-W1-NEGATIVE-DEPLOYMENT-v1.json"
+    },
+    {
+      "corvonero_source_field": "group_negatives",
+      "commander_column": "col 68",
+      "compatibility": "FULL",
+      "transformation": "Cross-negatives NONE — column blank",
+      "final_value_source": "Operator decision"
+    },
+    {
+      "corvonero_source_field": "headline_1 / headline_2 / ad text",
+      "commander_column": "cols 10-12",
+      "compatibility": "FULL",
+      "transformation": "AD rows only",
+      "final_value_source": "Review AD rows"
+    },
+    {
+      "corvonero_source_field": "final URL",
+      "commander_column": "col 48 «Ссылка»",
+      "compatibility": "FULL",
+      "transformation": "UTM appended; no utm_term",
+      "final_value_source": "URL_UTM_MAP / review Ссылка"
+    },
+    {
+      "corvonero_source_field": "display_path",
+      "commander_column": "col 49",
+      "compatibility": "FULL",
+      "transformation": "Short path only",
+      "final_value_source": "Review Отображаемая ссылка"
+    },
+    {
+      "corvonero_source_field": "callouts",
+      "commander_column": "col 67 «Уточнения»",
+      "compatibility": "FULL",
+      "transformation": "Combined cell joined with '||'; AD rows only",
+      "final_value_source": "CORVONERO-EXT-W1-CALLOUTS-v2.json"
+    },
+    {
+      "corvonero_source_field": "sitelinks",
+      "commander_column": "cols 58-60",
+      "compatibility": "OMITTED",
+      "transformation": "Empty — anchors PENDING; preserved in SITELINKS_PENDING",
+      "final_value_source": "CORVONERO-EXT-W1-SITELINKS-v2.json (20 pending)"
+    },
+    {
+      "corvonero_source_field": "ad_status / phrase_status",
+      "commander_column": "cols 56, 57",
+      "compatibility": "FULL",
+      "transformation": "Empty = Commander default on import",
+      "final_value_source": "Review workbook"
+    },
+    {
+      "corvonero_source_field": "yandex_metrica / conversion_goals",
+      "commander_column": "N/A",
+      "compatibility": "OMITTED_BY_OPERATOR",
+      "transformation": "Blank / not populated",
+      "final_value_source": "Production scope: OMITTED"
+    },
+    {
+      "corvonero_source_field": "network bid",
+      "commander_column": "N/A — networks DISABLED",
+      "compatibility": "N/A",
+      "transformation": "Blank",
+      "final_value_source": "Operator: advertising network DISABLED"
+    },
+    {
+      "corvonero_source_field": "auto-targeting",
+      "commander_column": "N/A",
+      "compatibility": "DISABLED",
+      "transformation": "No autotarget rows exported",
+      "final_value_source": "Operator: DISABLED"
+    }
+  ]
+}

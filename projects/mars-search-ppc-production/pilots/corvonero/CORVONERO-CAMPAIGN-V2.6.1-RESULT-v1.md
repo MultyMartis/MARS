@@ -1,0 +1,18 @@
+# CORVONERO CAMPAIGN V2.6.1 — RESULT v1
+
+```
+CORVONERO CAMPAIGN V2.6.1: PASS — COMMANDER PACKAGE REGENERATED WITH BLANK EMBEDDED CAMPAIGN NEGATIVES
+
+Campaigns: 10
+Groups: 71
+Phrase slots: 926
+Ads: 71
+Actual XLSX E9 blank: 10/10 PASS
+Organization blank: 10/10 PASS
+URLs without UTM: 10/10 PASS
+Campaign-negative TXT: 10
+TXT policy: SEPARATE MANUAL IMPORT
+Cross-campaign negatives: NOT APPLIED
+Commander import: NOT PERFORMED
+Git checkpoint: NOT PERFORMED
+```

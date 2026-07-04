@@ -1,0 +1,9 @@
+# CORVONERO CAMPAIGN V2.6 — RESULT v1
+
+```
+CORVONERO CAMPAIGN V2.6: PASS — CONSOLIDATED OPERATOR IMPORT PACKAGE GENERATED
+```
+
+Campaigns: 10 | Final groups: 71 | Ads: 71
+Generic forbidden ad texts: 0
+Unsafe NARROW negatives: OMITTED

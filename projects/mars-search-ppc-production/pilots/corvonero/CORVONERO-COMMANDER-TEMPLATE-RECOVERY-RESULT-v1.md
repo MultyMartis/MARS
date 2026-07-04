@@ -1,0 +1,3 @@
+# Template Recovery Result v1
+
+**TEMPLATE FOUND — IMPORT-CANDIDATE XLSX CREATED**

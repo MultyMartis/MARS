@@ -1,0 +1,3055 @@
+{
+  "generated_at": "2026-06-30T15:10:49.000Z",
+  "negatives": [
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "вакансия",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "зарплата",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "резюме",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "работа программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "подработка",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "обязанности",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "становится программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "стань программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "hh",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "скачать",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "кряк",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "торрент",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "бесплатно",
+      "intent_blocked": "freebie intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks freebie intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "мем",
+      "intent_blocked": "non-commercial intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks non-commercial intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "курсы",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "образование",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "колледж",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "инструкция",
+      "intent_blocked": "documentation lookup",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks documentation lookup",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "сертификация",
+      "intent_blocked": "certification lookup",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks certification lookup",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "купить 1с",
+      "intent_blocked": "software purchase",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks software purchase — campaign sells services",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "лицензия 1с",
+      "intent_blocked": "license purchase",
+      "included_phrases_tested": "none",
+      "decision": "OMITTED_FROM_FINAL_SAFE_SET",
+      "reason": "Unsafe NARROW assumption — omitted pending real search-query data",
+      "conflict_count": 0,
+      "source_decision_v25": "NARROW"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "удаленно",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks explicit remote-delivery intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "удалённо",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks explicit remote-delivery intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "дистанционно",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "OMITTED_FROM_FINAL_SAFE_SET",
+      "reason": "Unsafe NARROW assumption — omitted pending real search-query data",
+      "conflict_count": 0,
+      "source_decision_v25": "NARROW"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "онлайн",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote-delivery slang",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "по россии",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote geography signal",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "по рф",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote geography signal",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "по всей россии",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote geography signal",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "удаленка",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote-work slang",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "удалёнка",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote-work slang",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "без выезда",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks opposite delivery mode",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "вакансия",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "зарплата",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "резюме",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "работа программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "подработка",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "обязанности",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "становится программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "стань программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "hh",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "скачать",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "кряк",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "торрент",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "бесплатно",
+      "intent_blocked": "freebie intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks freebie intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "мем",
+      "intent_blocked": "non-commercial intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks non-commercial intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "курсы",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "образование",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "колледж",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "инструкция",
+      "intent_blocked": "documentation lookup",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks documentation lookup",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "сертификация",
+      "intent_blocked": "certification lookup",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks certification lookup",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "купить 1с",
+      "intent_blocked": "software purchase",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks software purchase — campaign sells services",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "лицензия 1с",
+      "intent_blocked": "license purchase",
+      "included_phrases_tested": "none",
+      "decision": "OMITTED_FROM_FINAL_SAFE_SET",
+      "reason": "Unsafe NARROW assumption — omitted pending real search-query data",
+      "conflict_count": 0,
+      "source_decision_v25": "NARROW"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "выезд",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks explicit local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "с выездом",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks explicit local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "выезд специалиста",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks explicit local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "новосибирск",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks NSO local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "новосибирская",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks NSO local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "новосибирский",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks NSO local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "на месте",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks on-site visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "в офис",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks on-site visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "приехать",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks on-site visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "вакансия",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "зарплата",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "резюме",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "работа программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "подработка",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "обязанности",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "становится программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "стань программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "hh",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "скачать",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "кряк",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "торрент",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "бесплатно",
+      "intent_blocked": "freebie intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks freebie intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "мем",
+      "intent_blocked": "non-commercial intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks non-commercial intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "курсы",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "образование",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "колледж",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "инструкция",
+      "intent_blocked": "documentation lookup",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks documentation lookup",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "сертификация",
+      "intent_blocked": "certification lookup",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks certification lookup",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "купить 1с",
+      "intent_blocked": "software purchase",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks software purchase — campaign sells services",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "лицензия 1с",
+      "intent_blocked": "license purchase",
+      "included_phrases_tested": "none",
+      "decision": "OMITTED_FROM_FINAL_SAFE_SET",
+      "reason": "Unsafe NARROW assumption — omitted pending real search-query data",
+      "conflict_count": 0,
+      "source_decision_v25": "NARROW"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "удаленно",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks explicit remote-delivery intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "удалённо",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks explicit remote-delivery intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "дистанционно",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "OMITTED_FROM_FINAL_SAFE_SET",
+      "reason": "Unsafe NARROW assumption — omitted pending real search-query data",
+      "conflict_count": 0,
+      "source_decision_v25": "NARROW"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "онлайн",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote-delivery slang",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "по россии",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote geography signal",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "по рф",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote geography signal",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "по всей россии",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote geography signal",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "удаленка",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote-work slang",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "удалёнка",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote-work slang",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "без выезда",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks opposite delivery mode",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "вакансия",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "зарплата",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "резюме",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "работа программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "подработка",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "обязанности",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "становится программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "стань программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "hh",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "скачать",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "кряк",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "торрент",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "бесплатно",
+      "intent_blocked": "freebie intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks freebie intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "мем",
+      "intent_blocked": "non-commercial intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks non-commercial intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "курсы",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "образование",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "колледж",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "инструкция",
+      "intent_blocked": "documentation lookup",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks documentation lookup",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "сертификация",
+      "intent_blocked": "certification lookup",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks certification lookup",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "купить 1с",
+      "intent_blocked": "software purchase",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks software purchase — campaign sells services",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "лицензия 1с",
+      "intent_blocked": "license purchase",
+      "included_phrases_tested": "none",
+      "decision": "OMITTED_FROM_FINAL_SAFE_SET",
+      "reason": "Unsafe NARROW assumption — omitted pending real search-query data",
+      "conflict_count": 0,
+      "source_decision_v25": "NARROW"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "выезд",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks explicit local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "с выездом",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks explicit local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "выезд специалиста",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks explicit local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "новосибирск",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks NSO local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "новосибирская",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks NSO local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "новосибирский",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks NSO local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "на месте",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks on-site visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "в офис",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks on-site visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "приехать",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks on-site visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "вакансия",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "зарплата",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "резюме",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "работа программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "подработка",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "обязанности",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "становится программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "стань программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "hh",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "скачать",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "кряк",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "торрент",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "бесплатно",
+      "intent_blocked": "freebie intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks freebie intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "мем",
+      "intent_blocked": "non-commercial intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks non-commercial intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "курсы",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "образование",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "колледж",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "инструкция",
+      "intent_blocked": "documentation lookup",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks documentation lookup",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "сертификация",
+      "intent_blocked": "certification lookup",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks certification lookup",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "купить 1с",
+      "intent_blocked": "software purchase",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks software purchase — campaign sells services",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "лицензия 1с",
+      "intent_blocked": "license purchase",
+      "included_phrases_tested": "none",
+      "decision": "OMITTED_FROM_FINAL_SAFE_SET",
+      "reason": "Unsafe NARROW assumption — omitted pending real search-query data",
+      "conflict_count": 0,
+      "source_decision_v25": "NARROW"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "удаленно",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks explicit remote-delivery intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "удалённо",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks explicit remote-delivery intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "дистанционно",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "OMITTED_FROM_FINAL_SAFE_SET",
+      "reason": "Unsafe NARROW assumption — omitted pending real search-query data",
+      "conflict_count": 0,
+      "source_decision_v25": "NARROW"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "онлайн",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote-delivery slang",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "по россии",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote geography signal",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "по рф",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote geography signal",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "по всей россии",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote geography signal",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "удаленка",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote-work slang",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "удалёнка",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote-work slang",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "без выезда",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks opposite delivery mode",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "вакансия",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "зарплата",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "резюме",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "работа программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "подработка",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "обязанности",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "становится программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "стань программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "hh",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "скачать",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "кряк",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "торрент",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "бесплатно",
+      "intent_blocked": "freebie intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks freebie intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "мем",
+      "intent_blocked": "non-commercial intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks non-commercial intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "курсы",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "образование",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "колледж",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "инструкция",
+      "intent_blocked": "documentation lookup",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks documentation lookup",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "сертификация",
+      "intent_blocked": "certification lookup",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks certification lookup",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "купить 1с",
+      "intent_blocked": "software purchase",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks software purchase — campaign sells services",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "лицензия 1с",
+      "intent_blocked": "license purchase",
+      "included_phrases_tested": "none",
+      "decision": "OMITTED_FROM_FINAL_SAFE_SET",
+      "reason": "Unsafe NARROW assumption — omitted pending real search-query data",
+      "conflict_count": 0,
+      "source_decision_v25": "NARROW"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "выезд",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks explicit local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "с выездом",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks explicit local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "выезд специалиста",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks explicit local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "новосибирск",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks NSO local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "новосибирская",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks NSO local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "новосибирский",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks NSO local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "на месте",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks on-site visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "в офис",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks on-site visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "приехать",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks on-site visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "вакансия",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "зарплата",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "резюме",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "работа программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "подработка",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "обязанности",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "становится программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "стань программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "hh",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "скачать",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "кряк",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "торрент",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "бесплатно",
+      "intent_blocked": "freebie intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks freebie intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "мем",
+      "intent_blocked": "non-commercial intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks non-commercial intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "курсы",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "образование",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "колледж",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "инструкция",
+      "intent_blocked": "documentation lookup",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks documentation lookup",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "сертификация",
+      "intent_blocked": "certification lookup",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks certification lookup",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "купить 1с",
+      "intent_blocked": "software purchase",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks software purchase — campaign sells services",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "лицензия 1с",
+      "intent_blocked": "license purchase",
+      "included_phrases_tested": "none",
+      "decision": "OMITTED_FROM_FINAL_SAFE_SET",
+      "reason": "Unsafe NARROW assumption — omitted pending real search-query data",
+      "conflict_count": 0,
+      "source_decision_v25": "NARROW"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "удаленно",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks explicit remote-delivery intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "удалённо",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks explicit remote-delivery intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "дистанционно",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "OMITTED_FROM_FINAL_SAFE_SET",
+      "reason": "Unsafe NARROW assumption — omitted pending real search-query data",
+      "conflict_count": 0,
+      "source_decision_v25": "NARROW"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "онлайн",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote-delivery slang",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "по россии",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote geography signal",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "по рф",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote geography signal",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "по всей россии",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote geography signal",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "удаленка",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote-work slang",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "удалёнка",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote-work slang",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "без выезда",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks opposite delivery mode",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "вакансия",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "зарплата",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "резюме",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "работа программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "подработка",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "обязанности",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "становится программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "стань программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "hh",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "скачать",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "кряк",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "торрент",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "бесплатно",
+      "intent_blocked": "freebie intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks freebie intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "мем",
+      "intent_blocked": "non-commercial intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks non-commercial intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "курсы",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "образование",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "колледж",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "инструкция",
+      "intent_blocked": "documentation lookup",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks documentation lookup",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "сертификация",
+      "intent_blocked": "certification lookup",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks certification lookup",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "купить 1с",
+      "intent_blocked": "software purchase",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks software purchase — campaign sells services",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "лицензия 1с",
+      "intent_blocked": "license purchase",
+      "included_phrases_tested": "none",
+      "decision": "OMITTED_FROM_FINAL_SAFE_SET",
+      "reason": "Unsafe NARROW assumption — omitted pending real search-query data",
+      "conflict_count": 0,
+      "source_decision_v25": "NARROW"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "выезд",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks explicit local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "с выездом",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks explicit local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "выезд специалиста",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks explicit local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "новосибирск",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks NSO local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "новосибирская",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks NSO local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "новосибирский",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks NSO local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "на месте",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks on-site visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "в офис",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks on-site visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "приехать",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks on-site visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "вакансия",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "зарплата",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "резюме",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "работа программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "подработка",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "обязанности",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "становится программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "стань программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "hh",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "скачать",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "кряк",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "торрент",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "бесплатно",
+      "intent_blocked": "freebie intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks freebie intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "мем",
+      "intent_blocked": "non-commercial intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks non-commercial intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "курсы",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "образование",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "колледж",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "инструкция",
+      "intent_blocked": "documentation lookup",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks documentation lookup",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "сертификация",
+      "intent_blocked": "certification lookup",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks certification lookup",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "купить 1с",
+      "intent_blocked": "software purchase",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks software purchase — campaign sells services",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "лицензия 1с",
+      "intent_blocked": "license purchase",
+      "included_phrases_tested": "none",
+      "decision": "OMITTED_FROM_FINAL_SAFE_SET",
+      "reason": "Unsafe NARROW assumption — omitted pending real search-query data",
+      "conflict_count": 0,
+      "source_decision_v25": "NARROW"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "удаленно",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks explicit remote-delivery intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "удалённо",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks explicit remote-delivery intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "дистанционно",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "OMITTED_FROM_FINAL_SAFE_SET",
+      "reason": "Unsafe NARROW assumption — omitted pending real search-query data",
+      "conflict_count": 0,
+      "source_decision_v25": "NARROW"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "онлайн",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote-delivery slang",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "по россии",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote geography signal",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "по рф",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote geography signal",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "по всей россии",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote geography signal",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "удаленка",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote-work slang",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "удалёнка",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks remote-work slang",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "без выезда",
+      "intent_blocked": "LOCAL",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "LOCAL — blocks opposite delivery mode",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "вакансия",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "зарплата",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "резюме",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "работа программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "подработка",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "обязанности",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "становится программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "стань программистом",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "hh",
+      "intent_blocked": "career/junk intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks career/junk intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "скачать",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "кряк",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "торрент",
+      "intent_blocked": "download/piracy intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks download/piracy intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "бесплатно",
+      "intent_blocked": "freebie intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks freebie intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "мем",
+      "intent_blocked": "non-commercial intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks non-commercial intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "курсы",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "образование",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "колледж",
+      "intent_blocked": "education intent",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks education intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "инструкция",
+      "intent_blocked": "documentation lookup",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks documentation lookup",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "сертификация",
+      "intent_blocked": "certification lookup",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks certification lookup",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "купить 1с",
+      "intent_blocked": "software purchase",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "Blocks software purchase — campaign sells services",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "лицензия 1с",
+      "intent_blocked": "license purchase",
+      "included_phrases_tested": "none",
+      "decision": "OMITTED_FROM_FINAL_SAFE_SET",
+      "reason": "Unsafe NARROW assumption — omitted pending real search-query data",
+      "conflict_count": 0,
+      "source_decision_v25": "NARROW"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "выезд",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks explicit local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "с выездом",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks explicit local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "выезд специалиста",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks explicit local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "новосибирск",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks NSO local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "новосибирская",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks NSO local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "новосибирский",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks NSO local-visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "на месте",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks on-site visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "в офис",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks on-site visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "приехать",
+      "intent_blocked": "REMOTE",
+      "included_phrases_tested": "none",
+      "decision": "KEEP_SAFE",
+      "reason": "REMOTE — blocks on-site visit intent",
+      "conflict_count": 0,
+      "source_decision_v25": "KEEP"
+    }
+  ]
+}

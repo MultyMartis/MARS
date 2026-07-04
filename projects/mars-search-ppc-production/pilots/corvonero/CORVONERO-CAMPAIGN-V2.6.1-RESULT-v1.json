@@ -1,0 +1,113 @@
+{
+  "generated_at": "2026-06-30T15:53:26.000Z",
+  "audit_version": "V2.6.1-DEPLOYABLE-GENERATION-HOTFIX-v1",
+  "semantic_authority": "CORVONERO-CAMPAIGN-V2.6-FINAL-v1",
+  "verdict": "CORVONERO CAMPAIGN V2.6.1: PASS — COMMANDER PACKAGE REGENERATED WITH BLANK EMBEDDED CAMPAIGN NEGATIVES",
+  "accounting": {
+    "unique_phrases": 760,
+    "KEEP": 487,
+    "REJECT": 271,
+    "MOVE": 2,
+    "phrase_slots": 926,
+    "groups": 71,
+    "ads": 71
+  },
+  "e9_blank_pass": "10/10",
+  "comparison": {
+    "comparisons": [
+      {
+        "v26_file": "CORVONERO-CA-01-LOCAL-PROGRAMMIST-1S-COMMANDER-IMPORT-v2.6.xlsx",
+        "v261_file": "CORVONERO-CA-01-LOCAL-PROGRAMMIST-1S-COMMANDER-IMPORT-v2.6.1.xlsx",
+        "v26_present": true,
+        "v261_present": true,
+        "sha256_v26": "8d1e4d8010af3e3e173cf5763e09951db84cf3faa305ec14f22952daa10db7be",
+        "sha256_v261": "8389dc02c06acfaa1950cc3f8cebbccb4f3bdb0b3e2a834f92d1bd131060936f",
+        "binary_identical": false
+      },
+      {
+        "v26_file": "CORVONERO-CA-01-REMOTE-PROGRAMMIST-1S-COMMANDER-IMPORT-v2.6.xlsx",
+        "v261_file": "CORVONERO-CA-01-REMOTE-PROGRAMMIST-1S-COMMANDER-IMPORT-v2.6.1.xlsx",
+        "v26_present": true,
+        "v261_present": true,
+        "sha256_v26": "a0535b0b7c82544302ac067abb9fe5f8f94acd956080e8b7b0747365b59ea158",
+        "sha256_v261": "8d686e96c1d221d94f849583a2ca96c597c78994f8693a920a2c1dd8fb0d7d86",
+        "binary_identical": false
+      },
+      {
+        "v26_file": "CORVONERO-CA-02-LOCAL-SOPROVOZHDENIE-1S-COMMANDER-IMPORT-v2.6.xlsx",
+        "v261_file": "CORVONERO-CA-02-LOCAL-SOPROVOZHDENIE-1S-COMMANDER-IMPORT-v2.6.1.xlsx",
+        "v26_present": true,
+        "v261_present": true,
+        "sha256_v26": "dc59e68fcf3e8f647e2c5ef56d9730819425115a04465cfd3aaf0b6389a56396",
+        "sha256_v261": "08e6192103d0cef81ad43518b5658bfdbd5aded1e049996df92d91981753c9c3",
+        "binary_identical": false
+      },
+      {
+        "v26_file": "CORVONERO-CA-02-REMOTE-SOPROVOZHDENIE-1S-COMMANDER-IMPORT-v2.6.xlsx",
+        "v261_file": "CORVONERO-CA-02-REMOTE-SOPROVOZHDENIE-1S-COMMANDER-IMPORT-v2.6.1.xlsx",
+        "v26_present": true,
+        "v261_present": true,
+        "sha256_v26": "9ddcde5a41edd0a6c51dadf92c12fb158eb39ae9b98c755b7cd404d6bc88b645",
+        "sha256_v261": "d5e96d61fc21d43d7096b0b20e1fdf5a32d69029ef347f03ebcf0453937161f2",
+        "binary_identical": false
+      },
+      {
+        "v26_file": "CORVONERO-CA-03-LOCAL-DORABOTKA-1S-COMMANDER-IMPORT-v2.6.xlsx",
+        "v261_file": "CORVONERO-CA-03-LOCAL-DORABOTKA-1S-COMMANDER-IMPORT-v2.6.1.xlsx",
+        "v26_present": true,
+        "v261_present": true,
+        "sha256_v26": "27a68c3f9d3058f81e5a44da78bed6399711ae799eb20d43ac311ae26f02947e",
+        "sha256_v261": "5e12ff48e58fc5fb88e34e13b3eaec381e89ec7cd3be2ff33675a1bf42d97e01",
+        "binary_identical": false
+      },
+      {
+        "v26_file": "CORVONERO-CA-03-REMOTE-DORABOTKA-1S-COMMANDER-IMPORT-v2.6.xlsx",
+        "v261_file": "CORVONERO-CA-03-REMOTE-DORABOTKA-1S-COMMANDER-IMPORT-v2.6.1.xlsx",
+        "v26_present": true,
+        "v261_present": true,
+        "sha256_v26": "e874fefc17f14016dfaaf624c548e8c4b24f4e1e20b9d775ad664f5230b30576",
+        "sha256_v261": "36890dd756694cdcff2cab6e323a95a127082d1d5d833890cb45de3451bdf17a",
+        "binary_identical": false
+      },
+      {
+        "v26_file": "CORVONERO-CA-04-LOCAL-INTEGRACII-1S-COMMANDER-IMPORT-v2.6.xlsx",
+        "v261_file": "CORVONERO-CA-04-LOCAL-INTEGRACII-1S-COMMANDER-IMPORT-v2.6.1.xlsx",
+        "v26_present": true,
+        "v261_present": true,
+        "sha256_v26": "653724415c971677a7d55fcc86e40424053368484e506202662851337c532a49",
+        "sha256_v261": "a51ee5caa7097bd32c1ed9f528f74dab083831da6bebc3ff0d223eb032d24723",
+        "binary_identical": false
+      },
+      {
+        "v26_file": "CORVONERO-CA-04-REMOTE-INTEGRACII-1S-COMMANDER-IMPORT-v2.6.xlsx",
+        "v261_file": "CORVONERO-CA-04-REMOTE-INTEGRACII-1S-COMMANDER-IMPORT-v2.6.1.xlsx",
+        "v26_present": true,
+        "v261_present": true,
+        "sha256_v26": "31087af1523a85f1cbf080d36e95bc0293db0fe8f40dd3d58547a566ef05613b",
+        "sha256_v261": "4903e9b3db1780a2523d43ca6fb0459f47a8544c2b6a0c8b4994f08451113435",
+        "binary_identical": false
+      },
+      {
+        "v26_file": "CORVONERO-CA-05-LOCAL-MARKIROVKA-1S-COMMANDER-IMPORT-v2.6.xlsx",
+        "v261_file": "CORVONERO-CA-05-LOCAL-MARKIROVKA-1S-COMMANDER-IMPORT-v2.6.1.xlsx",
+        "v26_present": true,
+        "v261_present": true,
+        "sha256_v26": "7114345f0b078fb0ae9d8a834f786efccef4918780799542d62ae2adfb02fa5f",
+        "sha256_v261": "04c092e2ab78bfb7df3f660b978e99c14564947ca6b62bd9095ef8ddf2ff267f",
+        "binary_identical": false
+      },
+      {
+        "v26_file": "CORVONERO-CA-05-REMOTE-MARKIROVKA-1S-COMMANDER-IMPORT-v2.6.xlsx",
+        "v261_file": "CORVONERO-CA-05-REMOTE-MARKIROVKA-1S-COMMANDER-IMPORT-v2.6.1.xlsx",
+        "v26_present": true,
+        "v261_present": true,
+        "sha256_v26": "7c2ff0e1e842c36eedb24b4c3f9494585a7af0bbbcfaf344457aa4accd4017ed",
+        "sha256_v261": "0cec6ebde040a85048376c1fd4b13802c2621a741bf2b3adb456763496e5c564",
+        "binary_identical": false
+      }
+    ],
+    "unexpected_differences": []
+  },
+  "commander_import": "NOT PERFORMED",
+  "git_checkpoint": "NOT PERFORMED"
+}

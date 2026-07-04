@@ -1,0 +1,53 @@
+# CORVONERO-COMMANDER-W1-EXPORT-MAP-v1
+
+Generated: 2026-06-28T23:53:44Z
+
+```json
+{
+  "map_id": "corvonero-commander-w1-export-map-v1",
+  "generated_at": "2026-06-28T23:53:44Z",
+  "authority_sources": {
+    "phrase_allocation": "CORVONERO-AD-WAVE-1-FINAL-PHRASE-ALLOCATION-v1.json",
+    "group_register": "CORVONERO-AD-WAVE-1-P1-FINAL-GROUP-REGISTER-v1.json",
+    "primary_ads": "CORVONERO-AD-WAVE-1-P1-FINAL-PRIMARY-ADS-v1.json",
+    "combinatorial_assets": "CORVONERO-AD-WAVE-1-P1-FINAL-COMBINATORIAL-ASSETS-v1.json",
+    "sitelinks": "CORVONERO-EXT-W1-SITELINKS-v2.json",
+    "callouts": "CORVONERO-EXT-W1-CALLOUTS-v2.json",
+    "negatives": "CORVONERO-EXT-W1-NEGATIVE-DEPLOYMENT-v1.json",
+    "cross_negatives": "CORVONERO-EXT-W1-CROSS-NEGATIVES-v2.json",
+    "utm_policy": "CORVONERO-EXT-W1-UTM-POLICY-v2.json",
+    "campaign_settings": "CORVONERO-EXT-W1-CAMPAIGN-SETTINGS-v2.json",
+    "import_profile": "CORVONERO-EXT-W1-IMPORT-PROFILE-v1.json",
+    "display_paths": "CORVONERO-EXT-W1-DISPLAY-PATHS-v1.json"
+  },
+  "output": {
+    "xlsx": "C:\\MARS Phenix\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-REVIEW-2026-06-29\\CORVONERO-YANDEX-DIRECT-COMMANDER-REVIEW-v1.xlsx",
+    "sheets": [
+      "COMMANDER_IMPORT",
+      "CAMPAIGN_SETTINGS",
+      "GROUP_REGISTER",
+      "PRIMARY_ADS",
+      "COMBINATORIAL_ASSETS",
+      "NEGATIVES",
+      "SITELINKS_PENDING",
+      "CALLOUTS",
+      "URL_UTM_MAP",
+      "README"
+    ],
+    "commander_import_rows": 910
+  },
+  "excluded_groups": [
+    "ca-02-modification",
+    "ca-02-specialist-search",
+    "ca-05-specialist-search"
+  ],
+  "lp_base_urls": {
+    "LP-01": "https://lk.corvonero.ru/programmist-1s/",
+    "LP-02": "https://lk.corvonero.ru/soprovozhdenie-1s/",
+    "LP-03": "https://lk.corvonero.ru/dorabotka-razrabotka-1s/",
+    "LP-04": "https://lk.corvonero.ru/integracii-1s/",
+    "LP-05": "https://lk.corvonero.ru/markirovka-chestny-znak/"
+  },
+  "utm_suffix_template": "?utm_source=yandex&utm_medium=cpc&utm_campaign=<campaign_slug>&utm_content=<group_slug>"
+}
+```

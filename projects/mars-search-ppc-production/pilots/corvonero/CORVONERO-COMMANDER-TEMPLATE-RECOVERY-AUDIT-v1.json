@@ -1,0 +1,913 @@
+{
+  "audit_id": "corvonero-commander-template-recovery-audit-v1",
+  "generated_at": "2026-06-29T00:34:36Z",
+  "export_date": "2026-06-29",
+  "checkpoint": "017c6de26d711f3f71be5d2ebef41a5eba83f21b",
+  "candidates_scanned": 49,
+  "zip_internal_hits": [
+    {
+      "archive_path": "C:\\MARS Phenix\\AI MARS STORAGE\\backups\\corvonero\\CORVONERO-FINAL-LANDING-PAGE-COPY-2026-06-29\\CORVONERO-FINAL-LANDING-PAGE-COPY-2026-06-29.zip",
+      "internal_path": "repository/projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/CORVONERO-DIRECT-V2-SEMANTIC-CORE-REVIEW-v1.xlsx",
+      "size_bytes": 429770,
+      "crc": "0xb295dced",
+      "extracted": false
+    },
+    {
+      "archive_path": "C:\\MARS Phenix\\AI MARS STORAGE\\backups\\corvonero\\CORVONERO-FINAL-P1-SEARCH-ADS-2026-06-29\\CORVONERO-FINAL-P1-SEARCH-ADS-2026-06-29.zip",
+      "internal_path": "repository/projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/CORVONERO-DIRECT-V2-SEMANTIC-CORE-REVIEW-v1.xlsx",
+      "size_bytes": 429770,
+      "crc": "0xb295dced",
+      "extracted": false
+    },
+    {
+      "archive_path": "C:\\MARS Phenix\\AI MARS STORAGE\\backups\\corvonero\\CORVONERO-PRE-EXPORT-PRODUCTION-2026-06-29\\CORVONERO-PRE-EXPORT-PRODUCTION-2026-06-29.zip",
+      "internal_path": "repository/projects/orca/projects/corvonero-direct-v2-clean-room/semantic-core/CORVONERO-DIRECT-V2-SEMANTIC-CORE-REVIEW-v1.xlsx",
+      "size_bytes": 429770,
+      "crc": "0xb295dced",
+      "extracted": false
+    }
+  ],
+  "candidates": [
+    {
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\backups\\corvonero\\CORVONERO-FINAL-LANDING-PAGE-COPY-2026-06-29\\_staging\\exports\\CORVONERO-EXPORT-WAVE-1-2026-06-29\\CORVONERO-СВОДНОЕ-ИССЛЕДОВАНИЕ-v1.xlsx",
+      "filename": "CORVONERO-СВОДНОЕ-ИССЛЕДОВАНИЕ-v1.xlsx",
+      "sha256": "55fedb67c6765b9db05e6907422c8d113a51f1dc39d61401321a8a47b2feaa85",
+      "size_bytes": 804163,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\backups\\corvonero\\CORVONERO-FINAL-LANDING-PAGE-COPY-2026-06-29\\_staging\\repository\\projects\\orca\\projects\\corvonero-direct-v2-clean-room\\semantic-core\\CORVONERO-DIRECT-V2-SEMANTIC-CORE-REVIEW-v1.xlsx",
+      "filename": "CORVONERO-DIRECT-V2-SEMANTIC-CORE-REVIEW-v1.xlsx",
+      "sha256": "3caae56dc944133d4dd2b5aef2b0ee7667c6e0b4e8bd6e92bde7e4d769f4c83c",
+      "size_bytes": 429770,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\backups\\corvonero\\CORVONERO-FINAL-P1-SEARCH-ADS-2026-06-29\\staging\\exports\\CORVONERO-EXPORT-WAVE-1-2026-06-29\\CORVONERO-СВОДНОЕ-ИССЛЕДОВАНИЕ-v1.xlsx",
+      "filename": "CORVONERO-СВОДНОЕ-ИССЛЕДОВАНИЕ-v1.xlsx",
+      "sha256": "55fedb67c6765b9db05e6907422c8d113a51f1dc39d61401321a8a47b2feaa85",
+      "size_bytes": 804163,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\backups\\corvonero\\CORVONERO-FINAL-P1-SEARCH-ADS-2026-06-29\\staging\\repository\\projects\\orca\\projects\\corvonero-direct-v2-clean-room\\semantic-core\\CORVONERO-DIRECT-V2-SEMANTIC-CORE-REVIEW-v1.xlsx",
+      "filename": "CORVONERO-DIRECT-V2-SEMANTIC-CORE-REVIEW-v1.xlsx",
+      "sha256": "3caae56dc944133d4dd2b5aef2b0ee7667c6e0b4e8bd6e92bde7e4d769f4c83c",
+      "size_bytes": 429770,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\backups\\corvonero\\CORVONERO-FINAL-PRODUCTION-EXTENSIONS-2026-06-29\\staging\\exports\\CORVONERO-EXPORT-WAVE-1-2026-06-29\\CORVONERO-СВОДНОЕ-ИССЛЕДОВАНИЕ-v1.xlsx",
+      "filename": "CORVONERO-СВОДНОЕ-ИССЛЕДОВАНИЕ-v1.xlsx",
+      "sha256": "55fedb67c6765b9db05e6907422c8d113a51f1dc39d61401321a8a47b2feaa85",
+      "size_bytes": 804163,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-REVIEW-2026-06-29\\CORVONERO-YANDEX-DIRECT-COMMANDER-REVIEW-v1.xlsx",
+      "filename": "CORVONERO-YANDEX-DIRECT-COMMANDER-REVIEW-v1.xlsx",
+      "sha256": "e0f9e320f08e451e4e59ba80618a775f7a2b48459a062904f59bba51c6fc3425",
+      "size_bytes": 124843,
+      "sheets": [
+        {
+          "name": "COMMANDER_IMPORT",
+          "max_row": 920,
+          "max_column": 27,
+          "review_fork": true,
+          "review_banner": true
+        },
+        {
+          "name": "CAMPAIGN_SETTINGS",
+          "max_row": 6,
+          "max_column": 18
+        },
+        {
+          "name": "GROUP_REGISTER",
+          "max_row": 16,
+          "max_column": 8
+        },
+        {
+          "name": "PRIMARY_ADS",
+          "max_row": 16,
+          "max_column": 11
+        },
+        {
+          "name": "COMBINATORIAL_ASSETS",
+          "max_row": 16,
+          "max_column": 8
+        },
+        {
+          "name": "NEGATIVES",
+          "max_row": 28,
+          "max_column": 7
+        },
+        {
+          "name": "SITELINKS_PENDING",
+          "max_row": 21,
+          "max_column": 9
+        },
+        {
+          "name": "CALLOUTS",
+          "max_row": 21,
+          "max_column": 5
+        },
+        {
+          "name": "URL_UTM_MAP",
+          "max_row": 16,
+          "max_column": 10
+        },
+        {
+          "name": "README",
+          "max_row": 29,
+          "max_column": 1
+        }
+      ],
+      "classification": "PLANNING_OR_REVIEW_WORKBOOK",
+      "classification_evidence": [
+        "COMMANDER_IMPORT review fork sheet",
+        "NOT import-ready banner"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-EXPORT-WAVE-1-2026-06-29\\CORVONERO-СВОДНОЕ-ИССЛЕДОВАНИЕ-v1.xlsx",
+      "filename": "CORVONERO-СВОДНОЕ-ИССЛЕДОВАНИЕ-v1.xlsx",
+      "sha256": "55fedb67c6765b9db05e6907422c8d113a51f1dc39d61401321a8a47b2feaa85",
+      "size_bytes": 804163,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\incoming\\orca-triumph-raw-pack\\Пример выгрузки кампании из Командера.xlsx",
+      "filename": "Пример выгрузки кампании из Командера.xlsx",
+      "sha256": "27846270806e1e1e9d42bd6b69ac7198dd35a450bc5e64b0fe2ff5c70c0fca2e",
+      "size_bytes": 454360,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\archive\\stable-search-rk-after-commander-import-v1\\assets\\direct-commander-template\\triumph-manipulator-commander-template-v0.xlsx",
+      "filename": "triumph-manipulator-commander-template-v0.xlsx",
+      "sha256": "27846270806e1e1e9d42bd6b69ac7198dd35a450bc5e64b0fe2ff5c70c0fca2e",
+      "size_bytes": 454360,
+      "sheets": [],
+      "classification": "AUTHENTIC_COMMANDER_EXPORT_OR_TEMPLATE",
+      "classification_evidence": [
+        "Triumph Commander template filename"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\archive\\stable-search-rk-after-commander-import-v1\\assets\\direct-commander-template\\triumph-manipulator-commander-template-v1.xlsx",
+      "filename": "triumph-manipulator-commander-template-v1.xlsx",
+      "sha256": "1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa",
+      "size_bytes": 439514,
+      "sheets": [],
+      "classification": "AUTHENTIC_COMMANDER_EXPORT_OR_TEMPLATE",
+      "classification_evidence": [
+        "Triumph Commander template filename"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\assets\\direct-commander-template\\triumph-manipulator-commander-template-v0.xlsx",
+      "filename": "triumph-manipulator-commander-template-v0.xlsx",
+      "sha256": "27846270806e1e1e9d42bd6b69ac7198dd35a450bc5e64b0fe2ff5c70c0fca2e",
+      "size_bytes": 454360,
+      "sheets": [
+        {
+          "name": "Тексты",
+          "max_row": 133,
+          "max_column": 78,
+          "header_row": 14,
+          "header_count": 38,
+          "first_15_headers": [
+            "Доп. объявление группы",
+            "Тип объявления",
+            "Мобильное объявление",
+            "ID группы",
+            "Название группы",
+            "Номер группы",
+            "ID фразы",
+            "Фраза (с минус-словами)",
+            "ID объявления",
+            "Заголовок 1",
+            "Заголовок 2",
+            "Текст",
+            "Длина",
+            "Комбинаторика",
+            "Ссылка"
+          ],
+          "last_15_headers": [
+            "Статус фразы",
+            "Заголовки быстрых ссылок",
+            "Описания быстрых ссылок",
+            "Адреса быстрых ссылок",
+            "Параметр 1",
+            "Параметр 2",
+            "Метки",
+            "Изображение",
+            "Креатив",
+            "Статус модерации креатива",
+            "Уточнения",
+            "Минус-фразы на группу",
+            "Возрастные ограничения",
+            "Продвижение приложений: настройки на группу",
+            "Продвижение приложений: настройки на объявление"
+          ],
+          "metadata_rows": [
+            {
+              "row": 6,
+              "label": "Предложение текстовых блоков для кампании",
+              "value": null
+            },
+            {
+              "row": 7,
+              "label": "Тип кампании:",
+              "value": "Единая перфоманс-кампания"
+            },
+            {
+              "row": 8,
+              "label": "№ заказа:",
+              "value": "708994101"
+            },
+            {
+              "row": 9,
+              "label": "Минус-фразы на кампанию:",
+              "value": "-газель -грузоперевозки -дальние -доставка -компания -курьер -логистика -межгород -транспортная -фура"
+            },
+            {
+              "row": 10,
+              "label": "Оптимизировать текст объявлений под запрос:",
+              "value": "1"
+            },
+            {
+              "row": 11,
+              "label": "Объект продвижения:",
+              "value": "https://gruzotaxi-triumph.ru/"
+            },
+            {
+              "row": 12,
+              "label": "Организация из Яндекс Бизнеса:",
+              "value": null
+            },
+            {
+              "row": 13,
+              "label": "Номер телефона:",
+              "value": null
+            }
+          ]
+        },
+        {
+          "name": "Регионы",
+          "skipped": true
+        },
+        {
+          "name": "Словарь значений полей",
+          "skipped": true
+        }
+      ],
+      "classification": "PROJECT_CUSTOM_COMMANDER_TEMPLATE",
+      "classification_evidence": [
+        "Corvonero/ORCA project export naming"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\assets\\direct-commander-template\\triumph-manipulator-commander-template-v1.xlsx",
+      "filename": "triumph-manipulator-commander-template-v1.xlsx",
+      "sha256": "1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa",
+      "size_bytes": 439514,
+      "sheets": [
+        {
+          "name": "Тексты",
+          "max_row": 99,
+          "max_column": 78,
+          "header_row": 14,
+          "header_count": 38,
+          "first_15_headers": [
+            "Доп. объявление группы",
+            "Тип объявления",
+            "Мобильное объявление",
+            "ID группы",
+            "Название группы",
+            "Номер группы",
+            "ID фразы",
+            "Фраза (с минус-словами)",
+            "ID объявления",
+            "Заголовок 1",
+            "Заголовок 2",
+            "Текст",
+            "Длина",
+            "Комбинаторика",
+            "Ссылка"
+          ],
+          "last_15_headers": [
+            "Статус фразы",
+            "Заголовки быстрых ссылок",
+            "Описания быстрых ссылок",
+            "Адреса быстрых ссылок",
+            "Параметр 1",
+            "Параметр 2",
+            "Метки",
+            "Изображение",
+            "Креатив",
+            "Статус модерации креатива",
+            "Уточнения",
+            "Минус-фразы на группу",
+            "Возрастные ограничения",
+            "Продвижение приложений: настройки на группу",
+            "Продвижение приложений: настройки на объявление"
+          ],
+          "metadata_rows": [
+            {
+              "row": 6,
+              "label": "Предложение текстовых блоков для кампании",
+              "value": null
+            },
+            {
+              "row": 7,
+              "label": "Тип кампании:",
+              "value": "Единая перфоманс-кампания"
+            },
+            {
+              "row": 8,
+              "label": "№ заказа:",
+              "value": "RUB"
+            },
+            {
+              "row": 9,
+              "label": "Минус-фразы на кампанию:",
+              "value": "-вакансии -работа -резюме -купить -ремонт -запчасти -эвакуатор -бесплатно -своими руками"
+            },
+            {
+              "row": 10,
+              "label": "Оптимизировать текст объявлений под запрос:",
+              "value": "0"
+            },
+            {
+              "row": 11,
+              "label": "Объект продвижения:",
+              "value": "https://manipulator-triumph.ru/"
+            },
+            {
+              "row": 12,
+              "label": "Организация из Яндекс Бизнеса:",
+              "value": null
+            },
+            {
+              "row": 13,
+              "label": "Номер телефона:",
+              "value": null
+            }
+          ]
+        },
+        {
+          "name": "Регионы",
+          "skipped": true
+        },
+        {
+          "name": "Словарь значений полей",
+          "skipped": true
+        }
+      ],
+      "classification": "PROJECT_CUSTOM_COMMANDER_TEMPLATE",
+      "classification_evidence": [
+        "Corvonero/ORCA project export naming"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\tools\\exporter-cli\\output\\missing-header-map-test.xlsx",
+      "filename": "missing-header-map-test.xlsx",
+      "sha256": "c5f14c44d28cea57ac72628814d1238e809c14bdb041c31b54bf7ae3e57422b5",
+      "size_bytes": 289513,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\tools\\exporter-cli\\output\\triumph-commander-template-fill-draft.xlsx",
+      "filename": "triumph-commander-template-fill-draft.xlsx",
+      "sha256": "c4d400c6f0fbd51497141afe8f665d3b91051c764551b4f63f9986868856316d",
+      "size_bytes": 295076,
+      "sheets": [],
+      "classification": "PROJECT_CUSTOM_COMMANDER_TEMPLATE",
+      "classification_evidence": [
+        "Commander-related export — lightweight classify"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\tools\\exporter-cli\\output\\triumph-export-draft.xlsx",
+      "filename": "triumph-export-draft.xlsx",
+      "sha256": "9e5f0bd6d601ca986ad1c4f611176054f392d69de1daacfbedd353d5a72efc37",
+      "size_bytes": 13534,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\tools\\exporter-cli\\output\\triumph-sheet1-patch-ad-type-v0.5.xlsx",
+      "filename": "triumph-sheet1-patch-ad-type-v0.5.xlsx",
+      "sha256": "00c26ff77a2125f67f2455b6d5734e6ddc5e6086b836d19bc5405e4f5564f6db",
+      "size_bytes": 412757,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\tools\\exporter-cli\\output\\triumph-sheet1-patch-cleanup-draft.xlsx",
+      "filename": "triumph-sheet1-patch-cleanup-draft.xlsx",
+      "sha256": "181ba78cf7f523dad62fb9fa93a528eb828197bccac315960934540dbfb5b53c",
+      "size_bytes": 445614,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\tools\\exporter-cli\\output\\triumph-sheet1-patch-display-url-routing-v0.3.xlsx",
+      "filename": "triumph-sheet1-patch-display-url-routing-v0.3.xlsx",
+      "sha256": "38b24a7d1caabbea3fcdeac1d4740edeea8fdd6b18e9a43b8adb551d03a59779",
+      "size_bytes": 412819,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\tools\\exporter-cli\\output\\triumph-sheet1-patch-domain-fastlinks-v0.2.xlsx",
+      "filename": "triumph-sheet1-patch-domain-fastlinks-v0.2.xlsx",
+      "sha256": "8b8311b82109f4cbb9e4ce0898ba6b0520e592638c6e13eba427a9f216ce2a3c",
+      "size_bytes": 413060,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\tools\\exporter-cli\\output\\triumph-sheet1-patch-draft.xlsx",
+      "filename": "triumph-sheet1-patch-draft.xlsx",
+      "sha256": "ea87810916ac3ffeb93e143c8d955fec3ca7ad8b8415c94be3615780d3b13dcc",
+      "size_bytes": 454929,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\tools\\exporter-cli\\output\\triumph-sheet1-patch-feedback-v0.1.xlsx",
+      "filename": "triumph-sheet1-patch-feedback-v0.1.xlsx",
+      "sha256": "eaefaf5b115edcbf57deb450b54788fc751dad4aa4a4bf59384fa60d493ad3c0",
+      "size_bytes": 445652,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\tools\\exporter-cli\\output\\triumph-sheet1-patch-full-cycle-v1.1.xlsx",
+      "filename": "triumph-sheet1-patch-full-cycle-v1.1.xlsx",
+      "sha256": "c83b4682921828c43652612f336b85d546b77cc52615865a0124de2e72ca3c57",
+      "size_bytes": 449148,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\tools\\exporter-cli\\output\\triumph-sheet1-patch-full-cycle-v1.2.xlsx",
+      "filename": "triumph-sheet1-patch-full-cycle-v1.2.xlsx",
+      "sha256": "9a42a593ae5f7c15041678b6e658739063afccd613428578a8ed62b27680c40a",
+      "size_bytes": 441923,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\tools\\exporter-cli\\output\\triumph-sheet1-patch-full-cycle-v1.xlsx",
+      "filename": "triumph-sheet1-patch-full-cycle-v1.xlsx",
+      "sha256": "11040ea38f924e0c0616cdf39a86b69c749d57d007d08e1493d6ee35f34f77d8",
+      "size_bytes": 439026,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\tools\\exporter-cli\\output\\triumph-sheet1-patch-import-refined-v0.4.xlsx",
+      "filename": "triumph-sheet1-patch-import-refined-v0.4.xlsx",
+      "sha256": "c7cfae9c64e6153f1bfa0f3d49d7b95aae8b046f74ba220b98b8bf5bb2941a50",
+      "size_bytes": 412708,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\tools\\exporter-cli\\output\\triumph-sheet1-patch-launch-ready-v1.3.xlsx",
+      "filename": "triumph-sheet1-patch-launch-ready-v1.3.xlsx",
+      "sha256": "f794367546fa8da1384603571e1b88d47660ec1e5aee968bba775ea95fa70dc8",
+      "size_bytes": 442656,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\tools\\exporter-cli\\output\\triumph-sheet1-patch-launch-ready-v1.4.xlsx",
+      "filename": "triumph-sheet1-patch-launch-ready-v1.4.xlsx",
+      "sha256": "f2dd2b665b47237adb24673b901499fa703b9e904d82022f6147b6a11b0fc420",
+      "size_bytes": 444074,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\tools\\exporter-cli\\output\\triumph-sheet1-patch-region-v0.6.xlsx",
+      "filename": "triumph-sheet1-patch-region-v0.6.xlsx",
+      "sha256": "a7e31801ff01fa1516a8340883b544242be93f7f3d63a1ce7d29f990fb33ca54",
+      "size_bytes": 412751,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\tools\\exporter-cli\\output\\triumph-sheet1-patch-row-clean-v0.xlsx",
+      "filename": "triumph-sheet1-patch-row-clean-v0.xlsx",
+      "sha256": "a2a7faa24db69e33b58a4c819707be393aea991682e9db313d15441675f1a476",
+      "size_bytes": 412733,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\CORVONERO-CAMPAIGN-REVIEW-v2.xlsx",
+      "filename": "CORVONERO-CAMPAIGN-REVIEW-v2.xlsx",
+      "sha256": "fc2548bb1dd7b666f2ca84715d6cc7b51ceb08da1964bb2d1457cc77b2c7eff3",
+      "size_bytes": 57922,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\CORVONERO-CAMPAIGN-REVIEW-v3.xlsx",
+      "filename": "CORVONERO-CAMPAIGN-REVIEW-v3.xlsx",
+      "sha256": "2e765ac62c0a025caf1e3771f004cd0e65880e59aad125eb1d064c660d8a45c6",
+      "size_bytes": 84238,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\CORVONERO-CAMPAIGN-REVIEW-v4.xlsx",
+      "filename": "CORVONERO-CAMPAIGN-REVIEW-v4.xlsx",
+      "sha256": "d48202ae6d32e611e13f56badad14f1f2daee404e3d03f92132622bb263a53cb",
+      "size_bytes": 95987,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\CORVONERO-CAMPAIGN-REVIEW-v5.xlsx",
+      "filename": "CORVONERO-CAMPAIGN-REVIEW-v5.xlsx",
+      "sha256": "f5e5f615c7caefee203f457bfffc0d336ccb42ad8305626468fc1430c13d6c62",
+      "size_bytes": 133766,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\CORVONERO-CAMPAIGN-REVIEW-v6.xlsx",
+      "filename": "CORVONERO-CAMPAIGN-REVIEW-v6.xlsx",
+      "sha256": "d7b9dec1e599b9480028d5cf4427142bd95e3789830be096a53f6ab41a0c7d46",
+      "size_bytes": 110997,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\CORVONERO-CAMPAIGN-REVIEW-v7.1.xlsx",
+      "filename": "CORVONERO-CAMPAIGN-REVIEW-v7.1.xlsx",
+      "sha256": "440a95682aff5d1c4cd91c28523bf3590180e18f43976a89afc86437773909bc",
+      "size_bytes": 116334,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\CORVONERO-CAMPAIGN-REVIEW-v7.xlsx",
+      "filename": "CORVONERO-CAMPAIGN-REVIEW-v7.xlsx",
+      "sha256": "f8b5fe2377b3782b9e147911d7429fe9dafd4876f5a43e4df0733d22f57c8a83",
+      "size_bytes": 115287,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\CORVONERO-V5-QA-REPAIR-AUDIT-v2.xlsx",
+      "filename": "CORVONERO-V5-QA-REPAIR-AUDIT-v2.xlsx",
+      "sha256": "1cc41cc585c18c7f3cfbb88077a252d3f6c45236175e2869b4dd1b5f7315751a",
+      "size_bytes": 47709,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\CORVONERO-V5-QA-REPAIR-AUDIT.xlsx",
+      "filename": "CORVONERO-V5-QA-REPAIR-AUDIT.xlsx",
+      "sha256": "5df8b0ef6baa5fd643d75aa6ab2efb318d6b273c13cff73e466cb3f7f197b0ce",
+      "size_bytes": 57867,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\CORVONERO-V6-SCOPE-RECOVERY-AUDIT.xlsx",
+      "filename": "CORVONERO-V6-SCOPE-RECOVERY-AUDIT.xlsx",
+      "sha256": "91be59fcc1a807679be6b8003e21064eb28c21c3277e602228cce620a3f6bd6c",
+      "size_bytes": 26237,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\CORVONERO-V7-TRIUMPH-CONTRACT-AUDIT-FINAL.xlsx",
+      "filename": "CORVONERO-V7-TRIUMPH-CONTRACT-AUDIT-FINAL.xlsx",
+      "sha256": "1224094fb7abddd2280a163c307432c06bc522d3fc4c8a749dc22d66099ecd76",
+      "size_bytes": 38666,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\CORVONERO-V7-TRIUMPH-CONTRACT-AUDIT.xlsx",
+      "filename": "CORVONERO-V7-TRIUMPH-CONTRACT-AUDIT.xlsx",
+      "sha256": "247abee68dff61c8192d8dd10576c1b7a8a46d9bcd2a6d6ca587f003ec95e47a",
+      "size_bytes": 38427,
+      "sheets": [],
+      "classification": "UNRELATED",
+      "classification_evidence": [
+        "Not a Commander priority candidate"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\CORVONERO-YANDEX-DIRECT-COMMANDER-v1.xlsx",
+      "filename": "CORVONERO-YANDEX-DIRECT-COMMANDER-v1.xlsx",
+      "sha256": "f375e25b6f3e88d8068923c42b943d11daa58e367f8916e4c5270176864cadc6",
+      "size_bytes": 560290,
+      "sheets": [],
+      "classification": "PROJECT_CUSTOM_COMMANDER_TEMPLATE",
+      "classification_evidence": [
+        "Commander-related export — lightweight classify"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\CORVONERO-YANDEX-DIRECT-COMMANDER-v2.xlsx",
+      "filename": "CORVONERO-YANDEX-DIRECT-COMMANDER-v2.xlsx",
+      "sha256": "44e8611c3fe7cd576b08abb6dcc80880dd2acea043ee47315ef7563d2b997fd6",
+      "size_bytes": 560413,
+      "sheets": [],
+      "classification": "PROJECT_CUSTOM_COMMANDER_TEMPLATE",
+      "classification_evidence": [
+        "Commander-related export — lightweight classify"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\CORVONERO-YANDEX-DIRECT-COMMANDER-v3.xlsx",
+      "filename": "CORVONERO-YANDEX-DIRECT-COMMANDER-v3.xlsx",
+      "sha256": "61f4ebe6977bb97f1e8bfe0f1353f4e21472ea4c56482bf7b9cb50130d418505",
+      "size_bytes": 568746,
+      "sheets": [],
+      "classification": "PROJECT_CUSTOM_COMMANDER_TEMPLATE",
+      "classification_evidence": [
+        "Commander-related export — lightweight classify"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\CORVONERO-YANDEX-DIRECT-COMMANDER-v4.xlsx",
+      "filename": "CORVONERO-YANDEX-DIRECT-COMMANDER-v4.xlsx",
+      "sha256": "fe0faa7cda57e6603c803b8c88c0849c517d4b6c652241e99ec667f3b8134f11",
+      "size_bytes": 560367,
+      "sheets": [],
+      "classification": "PROJECT_CUSTOM_COMMANDER_TEMPLATE",
+      "classification_evidence": [
+        "Commander-related export — lightweight classify"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\CORVONERO-YANDEX-DIRECT-COMMANDER-v5.xlsx",
+      "filename": "CORVONERO-YANDEX-DIRECT-COMMANDER-v5.xlsx",
+      "sha256": "c67ee3d947cf46cad1f0fb2b664eb8f099e07ae7fa5a7575897ed58863e14305",
+      "size_bytes": 562416,
+      "sheets": [],
+      "classification": "PROJECT_CUSTOM_COMMANDER_TEMPLATE",
+      "classification_evidence": [
+        "Commander-related export — lightweight classify"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\CORVONERO-YANDEX-DIRECT-COMMANDER-v6.xlsx",
+      "filename": "CORVONERO-YANDEX-DIRECT-COMMANDER-v6.xlsx",
+      "sha256": "7252f596c76fe3f73e98acbd5a7b993e7894f72a53c693ba5b4213cb9bd7f9aa",
+      "size_bytes": 532695,
+      "sheets": [],
+      "classification": "PROJECT_CUSTOM_COMMANDER_TEMPLATE",
+      "classification_evidence": [
+        "Commander-related export — lightweight classify"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\CORVONERO-YANDEX-DIRECT-COMMANDER-v7.1.xlsx",
+      "filename": "CORVONERO-YANDEX-DIRECT-COMMANDER-v7.1.xlsx",
+      "sha256": "48f8f67106b6f90d5ca03768ab9ffea684a1af28065d3502e955e12d2bbff45e",
+      "size_bytes": 545353,
+      "sheets": [],
+      "classification": "PROJECT_CUSTOM_COMMANDER_TEMPLATE",
+      "classification_evidence": [
+        "Commander-related export — lightweight classify"
+      ]
+    },
+    {
+      "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\projects\\corvonero-yandex-direct\\exports\\CORVONERO-YANDEX-DIRECT-COMMANDER-v7.xlsx",
+      "filename": "CORVONERO-YANDEX-DIRECT-COMMANDER-v7.xlsx",
+      "sha256": "11e16facf339ddf0deb02a8255f76c6bb5cedb974d86f3801dbee89f9d5364c9",
+      "size_bytes": 548094,
+      "sheets": [],
+      "classification": "PROJECT_CUSTOM_COMMANDER_TEMPLATE",
+      "classification_evidence": [
+        "Commander-related export — lightweight classify"
+      ]
+    }
+  ],
+  "selected_template": {
+    "path": "C:\\MARS Phenix\\AI MARS\\projects\\orca\\ppc\\triumph-manipulator\\assets\\direct-commander-template\\triumph-manipulator-commander-template-v1.xlsx",
+    "filename": "triumph-manipulator-commander-template-v1.xlsx",
+    "sha256": "1112793a888ac2e0762317fa0bf728a116e36a143fc72fa0f5fe729c56c3f1fa",
+    "size_bytes": 439514,
+    "sheets": [
+      {
+        "name": "Тексты",
+        "max_row": 99,
+        "max_column": 78,
+        "header_row": 14,
+        "header_count": 38,
+        "first_15_headers": [
+          "Доп. объявление группы",
+          "Тип объявления",
+          "Мобильное объявление",
+          "ID группы",
+          "Название группы",
+          "Номер группы",
+          "ID фразы",
+          "Фраза (с минус-словами)",
+          "ID объявления",
+          "Заголовок 1",
+          "Заголовок 2",
+          "Текст",
+          "Длина",
+          "Комбинаторика",
+          "Ссылка"
+        ],
+        "last_15_headers": [
+          "Статус фразы",
+          "Заголовки быстрых ссылок",
+          "Описания быстрых ссылок",
+          "Адреса быстрых ссылок",
+          "Параметр 1",
+          "Параметр 2",
+          "Метки",
+          "Изображение",
+          "Креатив",
+          "Статус модерации креатива",
+          "Уточнения",
+          "Минус-фразы на группу",
+          "Возрастные ограничения",
+          "Продвижение приложений: настройки на группу",
+          "Продвижение приложений: настройки на объявление"
+        ],
+        "metadata_rows": [
+          {
+            "row": 6,
+            "label": "Предложение текстовых блоков для кампании",
+            "value": null
+          },
+          {
+            "row": 7,
+            "label": "Тип кампании:",
+            "value": "Единая перфоманс-кампания"
+          },
+          {
+            "row": 8,
+            "label": "№ заказа:",
+            "value": "RUB"
+          },
+          {
+            "row": 9,
+            "label": "Минус-фразы на кампанию:",
+            "value": "-вакансии -работа -резюме -купить -ремонт -запчасти -эвакуатор -бесплатно -своими руками"
+          },
+          {
+            "row": 10,
+            "label": "Оптимизировать текст объявлений под запрос:",
+            "value": "0"
+          },
+          {
+            "row": 11,
+            "label": "Объект продвижения:",
+            "value": "https://manipulator-triumph.ru/"
+          },
+          {
+            "row": 12,
+            "label": "Организация из Яндекс Бизнеса:",
+            "value": null
+          },
+          {
+            "row": 13,
+            "label": "Номер телефона:",
+            "value": null
+          }
+        ]
+      },
+      {
+        "name": "Регионы",
+        "skipped": true
+      },
+      {
+        "name": "Словарь значений полей",
+        "skipped": true
+      }
+    ],
+    "classification": "PROJECT_CUSTOM_COMMANDER_TEMPLATE",
+    "classification_evidence": [
+      "Corvonero/ORCA project export naming"
+    ]
+  },
+  "authentic_count": 2
+}

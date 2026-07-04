@@ -1,0 +1,35 @@
+{
+  "generated_at": "2026-06-30T15:10:49.000Z",
+  "audit_version": "V2.6-FINAL-v1",
+  "supersedes": "CORVONERO-CAMPAIGN-V2.5-CURATED-CORE",
+  "verdict": "CORVONERO CAMPAIGN V2.6: PASS — CONSOLIDATED OPERATOR IMPORT PACKAGE GENERATED",
+  "accounting": {
+    "unique_phrases": 760,
+    "KEEP": 487,
+    "REJECT": 271,
+    "MOVE": 2,
+    "BOTH": 677,
+    "LOCAL_ONLY": 2,
+    "REMOTE_ONLY": 73,
+    "NONE": 8,
+    "final_groups": 71,
+    "one_phrase_groups": 0,
+    "ca05_groups_per_mode": 14,
+    "final_ads": 71,
+    "generic_forbidden_ads": 0,
+    "negative_KEEP_SAFE": 290,
+    "negative_OMITTED": 15,
+    "v26_binding_rejects": 5,
+    "phrase_slots": 926
+  },
+  "validation": {
+    "issues": [],
+    "generic_ad_count": 0,
+    "one_phrase_groups": 0
+  },
+  "cross_campaign_negatives": {
+    "status": "NOT APPLIED",
+    "future_embedded_campaign_negatives": "BLANK"
+  },
+  "unsafe_narrow_negatives": "OMITTED_FROM_FINAL_SAFE_SET"
+}

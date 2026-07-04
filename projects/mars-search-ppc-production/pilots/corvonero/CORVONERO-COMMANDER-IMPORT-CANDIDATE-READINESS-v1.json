@@ -1,0 +1,18 @@
+{
+  "readiness_id": "corvonero-commander-import-candidate-readiness-v1",
+  "generated_at": "2026-06-29T00:34:36Z",
+  "import_candidate_created": true,
+  "ready_for_commander_import": false,
+  "ready_for_launch": false,
+  "result_classification": "TEMPLATE FOUND — IMPORT-CANDIDATE XLSX CREATED",
+  "blockers": [
+    "Base URLs NOT HTTP VERIFIED",
+    "Five campaigns require five separate Commander imports (single metadata block per template)",
+    "Sitelink anchors PENDING — 20 sitelinks omitted from import table",
+    "Daily budget and schedule require post-import Commander UI",
+    "Metrica and conversion goals OMITTED",
+    "Live Commander import not performed in this pass"
+  ],
+  "commander_import_performed": false,
+  "advertising_started": false
+}

@@ -1,0 +1,33 @@
+{
+  "validation_id": "corvonero-commander-import-candidate-validation-v1",
+  "generated_at": "2026-06-29T00:34:36Z",
+  "import_xlsx": "C:\\MARS Phenix\\AI MARS STORAGE\\exports\\corvonero\\CORVONERO-COMMANDER-IMPORT-CANDIDATE-2026-06-29\\CORVONERO-YANDEX-DIRECT-COMMANDER-IMPORT-CANDIDATE-v1.xlsx",
+  "import_sha256": "2e5a390ccd96b35e0c4a014cee892b6d94bab84d1cc80854168e791bfdcb1666",
+  "checks": {
+    "campaigns": 5,
+    "groups": 15,
+    "phrases": 895,
+    "primary_ads": 15,
+    "bids_populated": 895,
+    "ca01_bid_500": true,
+    "ca02_bid_400": true,
+    "ca03_bid_400": true,
+    "ca04_bid_400": true,
+    "ca05_bid_400": true,
+    "duplicate_phrases": 0,
+    "utm_term_leak": 0,
+    "double_question_url": 0,
+    "sitelinks_empty": 0,
+    "cross_negatives": 0,
+    "header_hash": "3098fc8d6b76267e6993ba9fa036519c18f13150e1fb13e7a5251dccbaf4063d"
+  },
+  "expected": {
+    "campaigns": 5,
+    "groups": 15,
+    "phrases": 895,
+    "primary_ads": 15,
+    "bids_populated": 895
+  },
+  "pass": true,
+  "failures": []
+}

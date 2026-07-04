@@ -1,0 +1,59 @@
+{
+  "schema_version": "campaign-operator-approval-receipt-v1",
+  "project_id": "corvonero",
+  "pilot_id": "corvonero",
+  "campaign_program": "CORVONERO CAMPAIGN",
+  "release_version": "V2.6",
+  "semantic_authority_version": "V2.6",
+  "deployable_package_version": "V2.6.1",
+  "status": "OPERATOR_SEMANTIC_APPROVED",
+  "approval_scope": "semantic authority only",
+  "operator_identity_label": "operator",
+  "approval_timestamp": "2026-06-30T20:45:00.000+07:00",
+  "operator_statement": "Утверждаю семантическую authority Corvonero V2.6: 487 KEEP, 271 REJECT, 2 MOVE, 71 группа и 71 объявление. Разрешаю оформить OPERATOR_SEMANTIC_APPROVED и проверить пакет V2.6.1 через Campaign Release Gate. Импорт в Commander и запуск в Яндекс Директе пока не разрешаю.",
+  "authority_artifact_paths": [
+    "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CAMPAIGN-V2.6-FINAL-PHRASE-AUTHORITY-v1.json",
+    "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CAMPAIGN-V2.6-FINAL-GROUP-PLAN-v1.json",
+    "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CAMPAIGN-V2.6-FINAL-AD-COPY-v1.json",
+    "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CAMPAIGN-V2.6-FINAL-NEGATIVES-v1.json",
+    "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CAMPAIGN-V2.6-RESULT-v1.json",
+    "X:/AI MARS/projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CAMPAIGN-V2.6-AUTHORITY-MANIFEST-v1.json"
+  ],
+  "authority_hashes": {
+    "CORVONERO-CAMPAIGN-V2.6-FINAL-PHRASE-AUTHORITY-v1.json": "2fba7e123a9d8a9fe08ff856e74149a474417b700d82f719041947577c730a82",
+    "CORVONERO-CAMPAIGN-V2.6-FINAL-GROUP-PLAN-v1.json": "562614efede752dc00ae66003ba8dd698fbdeff28f3aaa1604e43a34c59183a3",
+    "CORVONERO-CAMPAIGN-V2.6-FINAL-AD-COPY-v1.json": "d4e7621a55f0f7366dc7f66e3d01c0ff3084825f83d58b87b3a14cd5ae44f216",
+    "CORVONERO-CAMPAIGN-V2.6-FINAL-NEGATIVES-v1.json": "3abe789c7e5ccfecd04c5cab4c21d1c2df71c528c2a4e06c1d2f123c21e9ba4a",
+    "CORVONERO-CAMPAIGN-V2.6-RESULT-v1.json": "e40289ac7c52b242b816ac8b8dd777515ca537b18dffd64e8b4585e01eaac25e",
+    "CORVONERO-CAMPAIGN-V2.6-AUTHORITY-MANIFEST-v1.json": "e0ed6519a5086a52a14688d1366213cbd4cccc91eb4bd47756b4b52df61e2710"
+  },
+  "phrase_count": 760,
+  "keep_count": 487,
+  "reject_count": 271,
+  "move_count": 2,
+  "hold_count": 0,
+  "campaign_count": 10,
+  "group_count": 71,
+  "ad_count": 71,
+  "phrase_slot_count": 926,
+  "geo_policy": "LOCAL = Новосибирск и НСО; REMOTE = Россия excluding Новосибирск and НСО after manual post-import exclusion",
+  "negative_policy": "campaign negatives are separate TXT; embedded campaign negatives must be blank; cross-campaign negatives not applied",
+  "url_policy": "clean URLs without UTM",
+  "organization_policy": "blank",
+  "known_accepted_risks": [
+    "REMOTE NSO exclusion must be applied manually after import",
+    "TXT negatives must be imported manually",
+    "post-import reconciliation required"
+  ],
+  "explicitly_not_approved": [
+    "Commander import",
+    "Yandex Direct launch",
+    "campaign launch",
+    "automatic cross-negatives",
+    "semantic changes",
+    "new generation"
+  ],
+  "deployable_package_path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-CAMPAIGN-V2.6.1-FINAL-2026-06-30",
+  "generated_for_review_only": false,
+  "generated_at": "2026-06-30T20:45:00.000+07:00"
+}

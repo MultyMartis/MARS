@@ -1,0 +1,758 @@
+{
+  "schema_version": "corvonero-phrase-slot-reconciliation-v1",
+  "package_version": "V2.6.2",
+  "package_path": "X:/AI MARS STORAGE/exports/corvonero/CORVONERO-CAMPAIGN-V2.6.2-FINAL-2026-06-30",
+  "reconciled_at": "2026-06-30T17:00:34.380Z",
+  "authority_phrase_slots": 926,
+  "artifact_phrase_slots": 926,
+  "phrase_slot_delta": 0,
+  "phrase_slot_reconciliation_pass": true,
+  "missing_slots": [],
+  "unexpected_slots": [],
+  "duplicate_slots": [],
+  "normalization_collisions": [],
+  "campaign_reconciliation": [
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "authority_phrase_slots": 55,
+      "artifact_phrase_slots": 55,
+      "phrase_slot_delta": 0,
+      "missing_slots": 0,
+      "unexpected_slots": 0,
+      "duplicate_slots": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "authority_phrase_slots": 98,
+      "artifact_phrase_slots": 98,
+      "phrase_slot_delta": 0,
+      "missing_slots": 0,
+      "unexpected_slots": 0,
+      "duplicate_slots": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "authority_phrase_slots": 97,
+      "artifact_phrase_slots": 97,
+      "phrase_slot_delta": 0,
+      "missing_slots": 0,
+      "unexpected_slots": 0,
+      "duplicate_slots": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "authority_phrase_slots": 103,
+      "artifact_phrase_slots": 103,
+      "phrase_slot_delta": 0,
+      "missing_slots": 0,
+      "unexpected_slots": 0,
+      "duplicate_slots": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "authority_phrase_slots": 53,
+      "artifact_phrase_slots": 53,
+      "phrase_slot_delta": 0,
+      "missing_slots": 0,
+      "unexpected_slots": 0,
+      "duplicate_slots": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "authority_phrase_slots": 54,
+      "artifact_phrase_slots": 54,
+      "phrase_slot_delta": 0,
+      "missing_slots": 0,
+      "unexpected_slots": 0,
+      "duplicate_slots": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "authority_phrase_slots": 35,
+      "artifact_phrase_slots": 35,
+      "phrase_slot_delta": 0,
+      "missing_slots": 0,
+      "unexpected_slots": 0,
+      "duplicate_slots": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "authority_phrase_slots": 35,
+      "artifact_phrase_slots": 35,
+      "phrase_slot_delta": 0,
+      "missing_slots": 0,
+      "unexpected_slots": 0,
+      "duplicate_slots": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "authority_phrase_slots": 198,
+      "artifact_phrase_slots": 198,
+      "phrase_slot_delta": 0,
+      "missing_slots": 0,
+      "unexpected_slots": 0,
+      "duplicate_slots": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "authority_phrase_slots": 198,
+      "artifact_phrase_slots": 198,
+      "phrase_slot_delta": 0,
+      "missing_slots": 0,
+      "unexpected_slots": 0,
+      "duplicate_slots": 0,
+      "pass": true
+    }
+  ],
+  "group_reconciliation": [
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "group_id": "ca-01-find-hire-specialist",
+      "group_name": "Программист 1С — поиск специалиста",
+      "authority_phrase_slots": 13,
+      "artifact_phrase_slots": 13,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "group_id": "ca-01-price-intent",
+      "group_name": "Программист 1С — стоимость часа",
+      "authority_phrase_slots": 26,
+      "artifact_phrase_slots": 26,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "group_id": "ca-01-specialist-by-product",
+      "group_name": "Программист 1С — конфигурации",
+      "authority_phrase_slots": 5,
+      "artifact_phrase_slots": 5,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "group_id": "ca-01-specialist-search",
+      "group_name": "Программист 1С — услуги и настройка",
+      "authority_phrase_slots": 11,
+      "artifact_phrase_slots": 11,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "group_id": "ca-01-city-remote",
+      "group_name": "Программист 1С — по городам России",
+      "authority_phrase_slots": 38,
+      "artifact_phrase_slots": 38,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "group_id": "ca-01-find-hire-specialist",
+      "group_name": "Программист 1С — поиск специалиста",
+      "authority_phrase_slots": 16,
+      "artifact_phrase_slots": 16,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "group_id": "ca-01-price-intent",
+      "group_name": "Программист 1С — стоимость часа",
+      "authority_phrase_slots": 28,
+      "artifact_phrase_slots": 28,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "group_id": "ca-01-specialist-by-product",
+      "group_name": "Программист 1С — конфигурации",
+      "authority_phrase_slots": 5,
+      "artifact_phrase_slots": 5,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "group_id": "ca-01-specialist-search",
+      "group_name": "Программист 1С — услуги и настройка",
+      "authority_phrase_slots": 11,
+      "artifact_phrase_slots": 11,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "group_id": "ca-02-direct-service-order",
+      "group_name": "Сопровождение 1С — заказ услуги",
+      "authority_phrase_slots": 8,
+      "artifact_phrase_slots": 8,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "group_id": "ca-02-price-intent",
+      "group_name": "Сопровождение 1С — стоимость",
+      "authority_phrase_slots": 8,
+      "artifact_phrase_slots": 8,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "group_id": "ca-02-provider-search",
+      "group_name": "Сопровождение 1С — поиск подрядчика",
+      "authority_phrase_slots": 2,
+      "artifact_phrase_slots": 2,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "group_id": "ca-02-support-and-maintenance",
+      "group_name": "Сопровождение и обслуживание 1С",
+      "authority_phrase_slots": 33,
+      "artifact_phrase_slots": 33,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "group_id": "ca-02-support-buh",
+      "group_name": "Сопровождение 1С — бухгалтерия и БГУ",
+      "authority_phrase_slots": 7,
+      "artifact_phrase_slots": 7,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "group_id": "ca-02-support-enterprise",
+      "group_name": "Сопровождение 1С — предприятие и ERP",
+      "authority_phrase_slots": 10,
+      "artifact_phrase_slots": 10,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "group_id": "ca-02-support-its",
+      "group_name": "Сопровождение 1С — ИТС и абонентское",
+      "authority_phrase_slots": 5,
+      "artifact_phrase_slots": 5,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "group_id": "ca-02-support-org",
+      "group_name": "Сопровождение 1С — для организаций и ИП",
+      "authority_phrase_slots": 5,
+      "artifact_phrase_slots": 5,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "group_id": "ca-02-support-tech",
+      "group_name": "Сопровождение 1С — техподдержка и администрирование",
+      "authority_phrase_slots": 15,
+      "artifact_phrase_slots": 15,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "group_id": "ca-02-support-zup-unf",
+      "group_name": "Сопровождение 1С — ЗУП, УТ и УНФ",
+      "authority_phrase_slots": 4,
+      "artifact_phrase_slots": 4,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "group_id": "ca-02-direct-service-order",
+      "group_name": "Сопровождение 1С — заказ услуги",
+      "authority_phrase_slots": 8,
+      "artifact_phrase_slots": 8,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "group_id": "ca-02-price-intent",
+      "group_name": "Сопровождение 1С — стоимость",
+      "authority_phrase_slots": 8,
+      "artifact_phrase_slots": 8,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "group_id": "ca-02-provider-search",
+      "group_name": "Сопровождение 1С — поиск подрядчика",
+      "authority_phrase_slots": 2,
+      "artifact_phrase_slots": 2,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "group_id": "ca-02-support-and-maintenance",
+      "group_name": "Сопровождение и обслуживание 1С",
+      "authority_phrase_slots": 38,
+      "artifact_phrase_slots": 38,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "group_id": "ca-02-support-buh",
+      "group_name": "Сопровождение 1С — бухгалтерия и БГУ",
+      "authority_phrase_slots": 7,
+      "artifact_phrase_slots": 7,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "group_id": "ca-02-support-enterprise",
+      "group_name": "Сопровождение 1С — предприятие и ERP",
+      "authority_phrase_slots": 10,
+      "artifact_phrase_slots": 10,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "group_id": "ca-02-support-its",
+      "group_name": "Сопровождение 1С — ИТС и абонентское",
+      "authority_phrase_slots": 5,
+      "artifact_phrase_slots": 5,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "group_id": "ca-02-support-org",
+      "group_name": "Сопровождение 1С — для организаций и ИП",
+      "authority_phrase_slots": 5,
+      "artifact_phrase_slots": 5,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "group_id": "ca-02-support-tech",
+      "group_name": "Сопровождение 1С — техподдержка и администрирование",
+      "authority_phrase_slots": 16,
+      "artifact_phrase_slots": 16,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "group_id": "ca-02-support-zup-unf",
+      "group_name": "Сопровождение 1С — ЗУП, УТ и УНФ",
+      "authority_phrase_slots": 4,
+      "artifact_phrase_slots": 4,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "group_id": "ca-03-implementation",
+      "group_name": "Доработка 1С — внедрение",
+      "authority_phrase_slots": 3,
+      "artifact_phrase_slots": 3,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "group_id": "ca-03-mod-config",
+      "group_name": "Доработка 1С — по конфигурациям",
+      "authority_phrase_slots": 9,
+      "artifact_phrase_slots": 9,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "group_id": "ca-03-modification",
+      "group_name": "Доработка и разработка 1С",
+      "authority_phrase_slots": 41,
+      "artifact_phrase_slots": 41,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "group_id": "ca-03-implementation",
+      "group_name": "Доработка 1С — внедрение",
+      "authority_phrase_slots": 3,
+      "artifact_phrase_slots": 3,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "group_id": "ca-03-mod-config",
+      "group_name": "Доработка 1С — по конфигурациям",
+      "authority_phrase_slots": 9,
+      "artifact_phrase_slots": 9,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "group_id": "ca-03-modification",
+      "group_name": "Доработка и разработка 1С",
+      "authority_phrase_slots": 42,
+      "artifact_phrase_slots": 42,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "group_id": "ca-04-bitrix",
+      "group_name": "Интеграция 1С с 1С-Битрикс",
+      "authority_phrase_slots": 17,
+      "artifact_phrase_slots": 17,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "group_id": "ca-04-bitrix24",
+      "group_name": "Интеграция 1С с Битрикс24",
+      "authority_phrase_slots": 9,
+      "artifact_phrase_slots": 9,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "group_id": "ca-04-site",
+      "group_name": "Интеграция 1С с сайтом и API",
+      "authority_phrase_slots": 5,
+      "artifact_phrase_slots": 5,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "group_id": "ca-04-sync",
+      "group_name": "Синхронизация и обмен данными",
+      "authority_phrase_slots": 4,
+      "artifact_phrase_slots": 4,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "group_id": "ca-04-bitrix",
+      "group_name": "Интеграция 1С с 1С-Битрикс",
+      "authority_phrase_slots": 17,
+      "artifact_phrase_slots": 17,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "group_id": "ca-04-bitrix24",
+      "group_name": "Интеграция 1С с Битрикс24",
+      "authority_phrase_slots": 9,
+      "artifact_phrase_slots": 9,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "group_id": "ca-04-site",
+      "group_name": "Интеграция 1С с сайтом и API",
+      "authority_phrase_slots": 5,
+      "artifact_phrase_slots": 5,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "group_id": "ca-04-sync",
+      "group_name": "Синхронизация и обмен данными",
+      "authority_phrase_slots": 4,
+      "artifact_phrase_slots": 4,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "group_id": "ca-05-category-marking",
+      "group_name": "Маркировка по товарным категориям",
+      "authority_phrase_slots": 13,
+      "artifact_phrase_slots": 13,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "group_id": "ca-05-config-marking",
+      "group_name": "Маркировка — настройка в конфигурациях 1С",
+      "authority_phrase_slots": 24,
+      "artifact_phrase_slots": 24,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "group_id": "ca-05-connect-setup",
+      "group_name": "Честный знак — подключение и настройка",
+      "authority_phrase_slots": 38,
+      "artifact_phrase_slots": 38,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "group_id": "ca-05-errors-support",
+      "group_name": "Ошибки и техническая поддержка маркировки",
+      "authority_phrase_slots": 2,
+      "artifact_phrase_slots": 2,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "group_id": "ca-05-integration",
+      "group_name": "Интеграция 1С с Честным знаком",
+      "authority_phrase_slots": 14,
+      "artifact_phrase_slots": 14,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "group_id": "ca-05-local-module",
+      "group_name": "Локальный модуль Честного знака",
+      "authority_phrase_slots": 11,
+      "artifact_phrase_slots": 11,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "group_id": "ca-05-marking-buh",
+      "group_name": "Маркировка — бухгалтерия и БП",
+      "authority_phrase_slots": 16,
+      "artifact_phrase_slots": 16,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "group_id": "ca-05-marking-codes",
+      "group_name": "Коды маркировки — печать, передача и сканирование",
+      "authority_phrase_slots": 4,
+      "artifact_phrase_slots": 4,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "group_id": "ca-05-marking-erp",
+      "group_name": "Маркировка — ERP и КА",
+      "authority_phrase_slots": 10,
+      "artifact_phrase_slots": 10,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "group_id": "ca-05-marking-roznica",
+      "group_name": "Маркировка — розница",
+      "authority_phrase_slots": 17,
+      "artifact_phrase_slots": 17,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "group_id": "ca-05-marking-ut-unf",
+      "group_name": "Маркировка — УТ и УНФ",
+      "authority_phrase_slots": 28,
+      "artifact_phrase_slots": 28,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "group_id": "ca-05-remainder-marking",
+      "group_name": "Маркировка остатков",
+      "authority_phrase_slots": 10,
+      "artifact_phrase_slots": 10,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "group_id": "ca-05-suz-tokens",
+      "group_name": "СУЗ и токены",
+      "authority_phrase_slots": 8,
+      "artifact_phrase_slots": 8,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "group_id": "ca-05-ts-piot",
+      "group_name": "ТС ПИоТ",
+      "authority_phrase_slots": 3,
+      "artifact_phrase_slots": 3,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "group_id": "ca-05-category-marking",
+      "group_name": "Маркировка по товарным категориям",
+      "authority_phrase_slots": 13,
+      "artifact_phrase_slots": 13,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "group_id": "ca-05-config-marking",
+      "group_name": "Маркировка — настройка в конфигурациях 1С",
+      "authority_phrase_slots": 24,
+      "artifact_phrase_slots": 24,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "group_id": "ca-05-connect-setup",
+      "group_name": "Честный знак — подключение и настройка",
+      "authority_phrase_slots": 38,
+      "artifact_phrase_slots": 38,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "group_id": "ca-05-errors-support",
+      "group_name": "Ошибки и техническая поддержка маркировки",
+      "authority_phrase_slots": 2,
+      "artifact_phrase_slots": 2,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "group_id": "ca-05-integration",
+      "group_name": "Интеграция 1С с Честным знаком",
+      "authority_phrase_slots": 14,
+      "artifact_phrase_slots": 14,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "group_id": "ca-05-local-module",
+      "group_name": "Локальный модуль Честного знака",
+      "authority_phrase_slots": 11,
+      "artifact_phrase_slots": 11,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "group_id": "ca-05-marking-buh",
+      "group_name": "Маркировка — бухгалтерия и БП",
+      "authority_phrase_slots": 16,
+      "artifact_phrase_slots": 16,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "group_id": "ca-05-marking-codes",
+      "group_name": "Коды маркировки — печать, передача и сканирование",
+      "authority_phrase_slots": 4,
+      "artifact_phrase_slots": 4,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "group_id": "ca-05-marking-erp",
+      "group_name": "Маркировка — ERP и КА",
+      "authority_phrase_slots": 10,
+      "artifact_phrase_slots": 10,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "group_id": "ca-05-marking-roznica",
+      "group_name": "Маркировка — розница",
+      "authority_phrase_slots": 17,
+      "artifact_phrase_slots": 17,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "group_id": "ca-05-marking-ut-unf",
+      "group_name": "Маркировка — УТ и УНФ",
+      "authority_phrase_slots": 28,
+      "artifact_phrase_slots": 28,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "group_id": "ca-05-remainder-marking",
+      "group_name": "Маркировка остатков",
+      "authority_phrase_slots": 10,
+      "artifact_phrase_slots": 10,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "group_id": "ca-05-suz-tokens",
+      "group_name": "СУЗ и токены",
+      "authority_phrase_slots": 8,
+      "artifact_phrase_slots": 8,
+      "phrase_slot_delta": 0,
+      "pass": true
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "group_id": "ca-05-ts-piot",
+      "group_name": "ТС ПИоТ",
+      "authority_phrase_slots": 3,
+      "artifact_phrase_slots": 3,
+      "phrase_slot_delta": 0,
+      "pass": true
+    }
+  ],
+  "root_cause_classification": []
+}
