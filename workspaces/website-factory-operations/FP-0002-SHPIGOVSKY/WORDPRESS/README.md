@@ -2,8 +2,8 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D7-A GLOBAL SHELL ASSET SOURCE COMPLETE (source-only; runtime delivery NOT performed)
-**Classification:** CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON COMPLETE — MINIMAL VISUAL CONTENT SEEDED — DEPTH-2 REWRITE REPAIRED — VISUAL ROUTE BASELINE READY — V9 TEMPLATE INTEGRATION PLAN COMPLETE — V9 GLOBAL SHELL SOURCE INTEGRATED — NEXT D7-A RUNTIME DELIVERY
+**Status:** V9-06D7-A GLOBAL SHELL RUNTIME DELIVERED — hash verified — route smoke PASS
+**Classification:** CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON COMPLETE — MINIMAL VISUAL CONTENT SEEDED — DEPTH-2 REWRITE REPAIRED — VISUAL ROUTE BASELINE READY — V9 GLOBAL SHELL RUNTIME DELIVERED — NEXT D7-B HOME TEMPLATE SOURCE
 
 ---
 
@@ -63,7 +63,7 @@ WORDPRESS/
 
 | Surface | Classification |
 |---------|----------------|
-| Theme | V9-06D7-A GLOBAL SHELL SOURCE — V9 CSS/JS packaged; header/footer/nav integrated in source |
+| Theme | V9-06D7-A GLOBAL SHELL RUNTIME DELIVERED — V9 CSS/JS/header/footer/nav live in local runtime |
 | Shpigovsky Core | V9-06D.2 CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON COMPLETE |
 | ACF JSON | V9-06D.1 DELIVERED — 13 LOCAL JSON FILES; V9-06D.2 object meta only |
 
@@ -166,3 +166,8 @@ Reports:
 - `reports/FP-0002-V9-06D4-RERUN-MINIMAL-CONTENT-SEED-FOR-VISUAL-ROUTE-QA-REPORT-v1.md` — rerun PASS/PARTIAL
 - `reports/FP-0002-V9-06D4-MINIMAL-CONTENT-SEED-FOR-VISUAL-ROUTE-QA-REPORT-v1.md` — previous blocked attempt (HEAD mismatch), preserved
 - `reports/FP-0002-REWRITE-FLUSH-MICRO-GATE-REPORT-v1.md` — flush micro-gate PARTIAL PASS
+
+
+## V9-06D7-A runtime delivery
+
+D7-A global shell/assets delivered to local runtime theme only. PHP lint PASS. Checkpoint + hash match PASS. Seven D.5 routes HTTP 200; Service 74 PASS; V9 CSS/JS enqueued. No DB/content/ACF/menu/redirect writes. Evidence: `validation/v9-06d7a-runtime-delivery/`. Next: D7-B home template source (operator review).

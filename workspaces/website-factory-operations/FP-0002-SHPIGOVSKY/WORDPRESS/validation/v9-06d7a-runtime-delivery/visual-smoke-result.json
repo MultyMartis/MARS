@@ -1,0 +1,69 @@
+{
+  "phase": "V9-06D7-A",
+  "timestamp": "2026-07-04T17:05:37.529Z",
+  "styled_shell_visible": true,
+  "header_footer_visible": "ASSUMED_FROM_ROUTE_SMOKE",
+  "route_non_blank": true,
+  "no_obvious_catastrophic_overflow": "NOT_MEASURED_PIXEL_LEVEL",
+  "known_content_template_gaps_expected": true,
+  "pixel_perfect_claim": false,
+  "screenshots": [
+    {
+      "screenshot": "desktop-home-after-d7a.png",
+      "route": "/",
+      "viewport": "desktop",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "screenshot": "desktop-services-hub-after-d7a.png",
+      "route": "/uslugi/",
+      "viewport": "desktop",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "screenshot": "desktop-service-alkogol-after-d7a.png",
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "viewport": "desktop",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "screenshot": "desktop-contacts-after-d7a.png",
+      "route": "/kontakty/",
+      "viewport": "desktop",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "screenshot": "mobile-home-after-d7a.png",
+      "route": "/",
+      "viewport": "mobile",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "screenshot": "mobile-services-hub-after-d7a.png",
+      "route": "/uslugi/",
+      "viewport": "mobile",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "screenshot": "mobile-service-alkogol-after-d7a.png",
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "viewport": "mobile",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "screenshot": "mobile-contacts-after-d7a.png",
+      "route": "/kontakty/",
+      "viewport": "mobile",
+      "captured": true,
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS"
+}

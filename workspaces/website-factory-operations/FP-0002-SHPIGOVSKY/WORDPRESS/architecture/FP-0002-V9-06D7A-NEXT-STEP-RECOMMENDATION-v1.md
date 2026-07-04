@@ -1,25 +1,17 @@
 # FP-0002 V9-06D7A Next Step Recommendation v1
 
-**Date:** 2026-07-04
+**Date:** 2026-07-05
 
-## Recommended action
+D7-A runtime delivery **COMPLETE**. Global V9 shell (header/footer/nav/assets) is live in local runtime with hash-verified theme copy.
 
-**CREATE_V9_06D7A_RUNTIME_DELIVERY_TASK**
+## Recommended next phase
 
-## Rationale
+**CREATE_V9_06D7B_HOME_TEMPLATE_SOURCE_TASK** — implement home page template blocks from V9 static reference in canonical theme source (source-only; separate runtime delivery authorization).
 
-1. D7-A source integrates V9 global CSS, shell JS, header/footer/nav, modal markup boundary.
-2. Runtime still serves prior skeleton theme until delivery task runs.
-3. Home/service template source waves (D7-B+) should follow runtime delivery of shell baseline or proceed in parallel only if operator prefers source-first batching.
+## V9-06D7-B gate
 
-## Not recommended now
-
-| Action | Why not |
-|--------|---------|
-| CREATE_V9_06D7B_HOME_TEMPLATE_SOURCE_TASK | May proceed after operator confirms shell delivery; not blocked on runtime but visual verification needs delivery |
-| CREATE_V9_06D7A_SOURCE_REPAIR_TASK | No blocking source defects identified |
-| OPERATOR_DECISION_REQUIRED | Clear next gate exists |
+READY FOR OPERATOR REVIEW (not authorized by this task).
 
 ## Result
 
-COMPLETE
+RECOMMENDED

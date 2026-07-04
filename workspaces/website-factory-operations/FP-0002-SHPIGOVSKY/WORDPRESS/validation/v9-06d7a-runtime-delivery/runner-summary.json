@@ -1,0 +1,18 @@
+{
+  "started_at": "2026-07-04T17:04:06.698998Z",
+  "steps": [
+    "preflight",
+    "php-cli-discovery",
+    "php-lint",
+    "runtime-identity",
+    "checkpoint",
+    "dry-run",
+    "apply",
+    "hash-validation",
+    "route-smoke",
+    "asset-smoke",
+    "rollback-readiness"
+  ],
+  "result": "PASS",
+  "finished_at": "2026-07-04T17:04:53.676283Z"
+}

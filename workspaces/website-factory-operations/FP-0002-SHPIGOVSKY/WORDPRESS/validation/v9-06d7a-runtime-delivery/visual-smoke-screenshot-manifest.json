@@ -1,0 +1,84 @@
+{
+  "phase": "V9-06D7-A",
+  "timestamp": "2026-07-04T17:05:37.529Z",
+  "evidence_root": "WORDPRESS/validation/v9-06d7a-runtime-delivery/screenshots/",
+  "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "screenshots": [
+    {
+      "file": "desktop-home-after-d7a.png",
+      "path": "screenshots/desktop-home-after-d7a.png",
+      "route": "/",
+      "viewport": "desktop",
+      "bytes": 52759,
+      "url": "http://shpigovsky.test/",
+      "result": "CAPTURED"
+    },
+    {
+      "file": "desktop-services-hub-after-d7a.png",
+      "path": "screenshots/desktop-services-hub-after-d7a.png",
+      "route": "/uslugi/",
+      "viewport": "desktop",
+      "bytes": 55367,
+      "url": "http://shpigovsky.test/uslugi/",
+      "result": "CAPTURED"
+    },
+    {
+      "file": "desktop-service-alkogol-after-d7a.png",
+      "path": "screenshots/desktop-service-alkogol-after-d7a.png",
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "viewport": "desktop",
+      "bytes": 52759,
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "result": "CAPTURED"
+    },
+    {
+      "file": "desktop-contacts-after-d7a.png",
+      "path": "screenshots/desktop-contacts-after-d7a.png",
+      "route": "/kontakty/",
+      "viewport": "desktop",
+      "bytes": 55178,
+      "url": "http://shpigovsky.test/kontakty/",
+      "result": "CAPTURED"
+    },
+    {
+      "file": "mobile-home-after-d7a.png",
+      "path": "screenshots/mobile-home-after-d7a.png",
+      "route": "/",
+      "viewport": "mobile",
+      "bytes": 37543,
+      "url": "http://shpigovsky.test/",
+      "result": "CAPTURED"
+    },
+    {
+      "file": "mobile-services-hub-after-d7a.png",
+      "path": "screenshots/mobile-services-hub-after-d7a.png",
+      "route": "/uslugi/",
+      "viewport": "mobile",
+      "bytes": 38433,
+      "url": "http://shpigovsky.test/uslugi/",
+      "result": "CAPTURED"
+    },
+    {
+      "file": "mobile-service-alkogol-after-d7a.png",
+      "path": "screenshots/mobile-service-alkogol-after-d7a.png",
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "viewport": "mobile",
+      "bytes": 37543,
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "result": "CAPTURED"
+    },
+    {
+      "file": "mobile-contacts-after-d7a.png",
+      "path": "screenshots/mobile-contacts-after-d7a.png",
+      "route": "/kontakty/",
+      "viewport": "mobile",
+      "bytes": 38361,
+      "url": "http://shpigovsky.test/kontakty/",
+      "result": "CAPTURED"
+    }
+  ],
+  "captured": 8,
+  "failed": 0,
+  "capture_status": "COMPLETE",
+  "result": "PASS"
+}
