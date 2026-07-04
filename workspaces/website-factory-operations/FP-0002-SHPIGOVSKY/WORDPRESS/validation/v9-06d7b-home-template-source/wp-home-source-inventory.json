@@ -1,0 +1,53 @@
+{
+  "task": "V9-06D7-B",
+  "generated_at": "2026-07-05T00:00:00+07:00",
+  "front_page_php": {
+    "path": "theme/shpigovsky/front-page.php",
+    "before": "skeleton main with inert template-part placeholders",
+    "after": "intro-section hero boundary + site-main orchestration of 7 home parts + final-form"
+  },
+  "home_template_parts": [
+    {
+      "file": "template-parts/home/hero.php",
+      "status": "implemented"
+    },
+    {
+      "file": "template-parts/home/feature-grid.php",
+      "status": "implemented"
+    },
+    {
+      "file": "template-parts/home/treatment-prevention.php",
+      "status": "implemented"
+    },
+    {
+      "file": "template-parts/home/rehabilitation-program.php",
+      "status": "implemented"
+    },
+    {
+      "file": "template-parts/home/gallery.php",
+      "status": "implemented"
+    },
+    {
+      "file": "template-parts/home/articles-teaser.php",
+      "status": "implemented"
+    },
+    {
+      "file": "template-parts/home/faq.php",
+      "status": "implemented"
+    }
+  ],
+  "shared_components": [
+    {
+      "file": "template-parts/components/final-form.php",
+      "status": "implemented"
+    }
+  ],
+  "helpers": [
+    "inc/home-helpers.php"
+  ],
+  "layout_adjustments": [
+    "template-parts/layout/header.php — opens .intro-section on front page"
+  ],
+  "skeleton_markers_removed": true,
+  "result": "COMPLETE"
+}

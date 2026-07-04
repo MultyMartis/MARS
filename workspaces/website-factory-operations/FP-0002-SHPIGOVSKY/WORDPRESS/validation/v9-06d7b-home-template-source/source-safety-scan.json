@@ -1,0 +1,31 @@
+{
+  "task": "V9-06D7-B",
+  "generated_at": "2026-07-05T00:00:00+07:00",
+  "scan_root": "theme/shpigovsky/",
+  "forbidden_patterns": [
+    "update_option",
+    "add_option",
+    "delete_option",
+    "wp_insert_post",
+    "wp_update_post",
+    "wp_delete_post",
+    "update_post_meta",
+    "delete_post_meta",
+    "add_post_meta",
+    "acf_update",
+    "acfe",
+    "flush_rewrite_rules",
+    "wp_remote_",
+    "curl_",
+    "file_put_contents",
+    "unlink",
+    "rmdir",
+    "mkdir"
+  ],
+  "matches_in_changed_files": 0,
+  "read_only_queries": [
+    "get_posts in home-helpers.php and articles-teaser.php",
+    "get_field guarded by function_exists"
+  ],
+  "result": "PASS"
+}

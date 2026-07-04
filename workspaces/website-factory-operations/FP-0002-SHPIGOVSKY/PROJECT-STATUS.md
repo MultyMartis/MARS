@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-05 (V9-06D7-A global shell runtime delivery PASS)
+**Last updated:** 2026-07-05 (V9-06D7-B home template source PASS)
 
-**Current WordPress phase:** V9-06D7-A global shell runtime delivered to local runtime — next `CREATE_V9_06D7B_HOME_TEMPLATE_SOURCE_TASK` (operator review). Report: `WORDPRESS/reports/FP-0002-V9-06D7A-RUNTIME-DELIVERY-REPORT-v1.md`.
+**Current WordPress phase:** V9-06D7-B home template source complete in canonical theme — runtime delivery NOT performed — next `CREATE_V9_06D7B_RUNTIME_DELIVERY_TASK`. Report: `WORDPRESS/reports/FP-0002-V9-06D7B-HOME-TEMPLATE-SOURCE-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

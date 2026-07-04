@@ -1,0 +1,22 @@
+{
+  "task": "V9-06D7-B",
+  "phase": "HOME_TEMPLATE_SOURCE",
+  "generated_at": "2026-07-05T00:00:00+07:00",
+  "preflight_head": "6cfe5533601441f7e8a4fc2b8d0a495a00c1675e",
+  "verdict": "PASS",
+  "home_template_source": "COMPLETE",
+  "theme_source_changes": "COMPLETE",
+  "home_section_integration": "PARTIAL",
+  "acf_fallback_binding": "COMPLETE",
+  "runtime_delivery": "NOT_PERFORMED",
+  "runtime_mutations": 0,
+  "db_writes": 0,
+  "source_validation": "PASS",
+  "recommended_next_phase": "CREATE_V9_06D7B_RUNTIME_DELIVERY_TASK",
+  "runtime_delivery_gate": "READY FOR OPERATOR REVIEW",
+  "notes": [
+    "D7-B wave implements 8 orchestrated sections per D.6 matrix; 12 V9 home sections deferred to content migration / later waves",
+    "Home gallery/articles/feature blocks omit when ACF/query data empty",
+    "Swiper/main.js home modules not enqueued in D7-B — deferred to runtime delivery or asset wave"
+  ]
+}

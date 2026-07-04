@@ -1,0 +1,56 @@
+{
+  "task": "V9-06D7-B",
+  "generated_at": "2026-07-05T00:00:00+07:00",
+  "sections": [
+    {
+      "section": "hero",
+      "acf_unavailable": "Uses post_title/blogname + STATIC_FROM_V9 tagline; omits hero image block",
+      "empty_fields": "Falls back to site name + generic tagline; CTA uses options or i18n default",
+      "result": "PASS"
+    },
+    {
+      "section": "feature-grid",
+      "acf_unavailable": "Early return — section omitted",
+      "empty_fields": "Repeater empty — section omitted",
+      "result": "PASS"
+    },
+    {
+      "section": "treatment-prevention",
+      "acf_unavailable": "Queries service CPT if available; else omits if no nav fallback",
+      "empty_fields": "No CPT groups and no home_service_nav_items — section omitted",
+      "result": "PASS"
+    },
+    {
+      "section": "rehabilitation-program",
+      "acf_unavailable": "STATIC_FROM_V9 abbreviated copy renders (no ACF dependency)",
+      "empty_fields": "N/A — static structure always renders",
+      "result": "PASS"
+    },
+    {
+      "section": "gallery",
+      "acf_unavailable": "Early return — section omitted",
+      "empty_fields": "No media rows with images — section omitted",
+      "result": "PASS"
+    },
+    {
+      "section": "articles-teaser",
+      "acf_unavailable": "home_blog_teaser_enabled false — section omitted",
+      "empty_fields": "No published posts — section omitted",
+      "result": "PASS"
+    },
+    {
+      "section": "faq",
+      "acf_unavailable": "Early return — section omitted",
+      "empty_fields": "Empty repeater — section omitted",
+      "result": "PASS"
+    },
+    {
+      "section": "final-form",
+      "acf_unavailable": "STATIC_FROM_V9 i18n heading/lead defaults",
+      "empty_fields": "home_cta_title/text empty — i18n defaults used",
+      "result": "PASS"
+    }
+  ],
+  "raw_field_keys_exposed": false,
+  "result": "PASS"
+}

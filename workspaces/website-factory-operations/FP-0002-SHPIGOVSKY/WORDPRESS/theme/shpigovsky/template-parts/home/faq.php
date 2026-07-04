@@ -1,7 +1,6 @@
 <?php
 /**
  * Template part: home/faq.php
- * V9-06B skeleton — inert placeholder. V9 markup in V9-07+.
  *
  * @package Shpigovsky
  */
@@ -9,6 +8,59 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-?>
-<!-- shpigovsky-skeleton: template-parts/home/faq.php -->
 
+$faq_items = shpigovsky_get_home_repeater( 'home_faq_items' );
+
+if ( empty( $faq_items ) ) {
+	return;
+}
+?>
+<section data-reveal class="faq" aria-labelledby="faq-heading">
+	<div class="container">
+		<h2 class="faq__heading" id="faq-heading">
+			<?php echo esc_html__( 'Нас часто спрашивают', 'shpigovsky' ); ?>
+		</h2>
+
+		<div class="faq__list" data-accordion>
+			<?php foreach ( $faq_items as $index => $item ) : ?>
+				<?php
+				$question = isset( $item['question'] ) ? trim( (string) $item['question'] ) : '';
+				$answer   = isset( $item['answer'] ) ? trim( (string) $item['answer'] ) : '';
+
+				if ( '' === $question || '' === $answer ) {
+					continue;
+				}
+
+				$panel_id   = 'home-faq-panel-' . ( $index + 1 );
+				$trigger_id = 'home-faq-trigger-' . ( $index + 1 );
+				$expanded   = 0 === $index;
+				?>
+				<div class="faq__item" data-accordion-item>
+					<h3 class="faq__item-title">
+						<button
+							type="button"
+							class="faq__question"
+							data-accordion-button
+							aria-expanded="<?php echo $expanded ? 'true' : 'false'; ?>"
+							aria-controls="<?php echo esc_attr( $panel_id ); ?>"
+							id="<?php echo esc_attr( $trigger_id ); ?>"
+						>
+							<span class="faq__question-label"><?php echo esc_html( $question ); ?></span>
+							<span class="faq__icon" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+						</button>
+					</h3>
+					<div
+						class="faq__answer-panel"
+						data-accordion-panel
+						id="<?php echo esc_attr( $panel_id ); ?>"
+						role="region"
+						aria-labelledby="<?php echo esc_attr( $trigger_id ); ?>"
+						<?php echo $expanded ? '' : 'hidden'; ?>
+					>
+						<p class="faq__answer"><?php echo wp_kses_post( $answer ); ?></p>
+					</div>
+				</div>
+			<?php endforeach; ?>
+		</div>
+	</div>
+</section>

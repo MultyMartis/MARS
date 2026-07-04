@@ -1,0 +1,124 @@
+{
+  "phase": "V9-06D7-B",
+  "generated_at": "2026-07-05T00:00:00+07:00",
+  "sections": [
+    {
+      "section": "hero",
+      "v9_source": "src/partials/sections/hero.html",
+      "wp_template_part": "template-parts/home/hero.php",
+      "data_source": "ACF_HOME_FIELD + POST_FIELD + SITE_OPTION",
+      "fallback": "blogname tagline; omit image if missing",
+      "implemented": true,
+      "deferred_reason": ""
+    },
+    {
+      "section": "feature-grid",
+      "v9_source": "src/partials/sections/home-feature-grid.html",
+      "wp_template_part": "template-parts/home/feature-grid.php",
+      "data_source": "ACF_HOME_FIELD",
+      "fallback": "OMIT_IF_EMPTY",
+      "implemented": true,
+      "deferred_reason": ""
+    },
+    {
+      "section": "treatment-prevention",
+      "v9_source": "src/partials/sections/home-treatment-prevention.html",
+      "wp_template_part": "template-parts/home/treatment-prevention.php",
+      "data_source": "QUERY_DYNAMIC + ACF_HOME_FIELD",
+      "fallback": "service CPT accordion; nav items fallback; OMIT_IF_EMPTY",
+      "implemented": true,
+      "deferred_reason": ""
+    },
+    {
+      "section": "rehabilitation-program",
+      "v9_source": "src/partials/sections/home-rehabilitation-program.html",
+      "wp_template_part": "template-parts/home/rehabilitation-program.php",
+      "data_source": "STATIC_FROM_V9",
+      "fallback": "abbreviated static copy; images omitted",
+      "implemented": true,
+      "deferred_reason": ""
+    },
+    {
+      "section": "gallery",
+      "v9_source": "src/partials/sections/home-gallery.html",
+      "wp_template_part": "template-parts/home/gallery.php",
+      "data_source": "ACF_HOME_FIELD",
+      "fallback": "OMIT_IF_EMPTY",
+      "implemented": true,
+      "deferred_reason": ""
+    },
+    {
+      "section": "articles-teaser",
+      "v9_source": "src/partials/sections/home-articles.html",
+      "wp_template_part": "template-parts/home/articles-teaser.php",
+      "data_source": "ACF_HOME_FIELD + QUERY_DYNAMIC",
+      "fallback": "OMIT_IF_EMPTY when disabled or no posts",
+      "implemented": true,
+      "deferred_reason": ""
+    },
+    {
+      "section": "faq",
+      "v9_source": "src/partials/sections/faq.html",
+      "wp_template_part": "template-parts/home/faq.php",
+      "data_source": "ACF_HOME_FIELD",
+      "fallback": "OMIT_IF_EMPTY",
+      "implemented": true,
+      "deferred_reason": ""
+    },
+    {
+      "section": "final-form",
+      "v9_source": "src/partials/sections/final-form.html",
+      "wp_template_part": "template-parts/components/final-form.php",
+      "data_source": "ACF_HOME_FIELD + SITE_OPTION",
+      "fallback": "STATIC_FROM_V9 i18n defaults",
+      "implemented": true,
+      "deferred_reason": ""
+    },
+    {
+      "section": "home-recovery-intro",
+      "v9_source": "src/partials/sections/home-recovery-intro.html",
+      "wp_template_part": null,
+      "data_source": "DEFER_CONTENT_MIGRATION",
+      "fallback": "not orchestrated in D7-B",
+      "implemented": false,
+      "deferred_reason": "No dedicated partial/ACF in D.6 D7-B wave"
+    },
+    {
+      "section": "founder-quote",
+      "v9_source": "src/partials/sections/founder-quote.html",
+      "wp_template_part": null,
+      "data_source": "DEFER_CONTENT_MIGRATION",
+      "fallback": "shared block — no home ACF field",
+      "implemented": false,
+      "deferred_reason": "Missing ACF mapping"
+    },
+    {
+      "section": "home-why-us",
+      "v9_source": "src/partials/sections/home-why-us.html",
+      "wp_template_part": null,
+      "data_source": "DEFER_CONTENT_MIGRATION",
+      "fallback": "not orchestrated",
+      "implemented": false,
+      "deferred_reason": "Later wave"
+    },
+    {
+      "section": "reviews",
+      "v9_source": "src/partials/sections/reviews.html",
+      "wp_template_part": null,
+      "data_source": "ACF_HOME_FIELD (home_reviews_teaser)",
+      "fallback": "partial field exists — deferred partial",
+      "implemented": false,
+      "deferred_reason": "D7-B scope excludes reviews partial"
+    },
+    {
+      "section": "specialists",
+      "v9_source": "src/partials/sections/specialists.html",
+      "wp_template_part": null,
+      "data_source": "DEFER_CONTENT_MIGRATION",
+      "fallback": "shared block",
+      "implemented": false,
+      "deferred_reason": "No ACF field"
+    }
+  ],
+  "result": "COMPLETE"
+}

@@ -1,0 +1,73 @@
+{
+  "task": "V9-06D7-B",
+  "generated_at": "2026-07-05T00:00:00+07:00",
+  "acf_group": "group_fp02_page_home",
+  "acf_json_path": "acf-json/group_fp02_page_home.json",
+  "acf_json_changed": false,
+  "fields": [
+    {
+      "name": "home_hero_slides",
+      "type": "repeater",
+      "used_by": "hero.php",
+      "seeded": true
+    },
+    {
+      "name": "home_service_nav_items",
+      "type": "repeater",
+      "used_by": "treatment-prevention.php (fallback accordion)",
+      "seeded": true
+    },
+    {
+      "name": "home_advantages",
+      "type": "repeater",
+      "used_by": "feature-grid.php",
+      "seeded": false
+    },
+    {
+      "name": "home_intro_bands",
+      "type": "repeater",
+      "used_by": "deferred — no D7-B partial",
+      "seeded": false
+    },
+    {
+      "name": "home_reviews_teaser",
+      "type": "repeater",
+      "used_by": "deferred — reviews section",
+      "seeded": false
+    },
+    {
+      "name": "home_blog_teaser_enabled",
+      "type": "true_false",
+      "used_by": "articles-teaser.php",
+      "seeded": false
+    },
+    {
+      "name": "home_gallery_media",
+      "type": "repeater",
+      "used_by": "gallery.php",
+      "seeded": false
+    },
+    {
+      "name": "home_faq_items",
+      "type": "repeater",
+      "used_by": "faq.php",
+      "seeded": false
+    },
+    {
+      "name": "home_cta_title",
+      "type": "text",
+      "used_by": "final-form.php",
+      "seeded": true
+    },
+    {
+      "name": "home_cta_text",
+      "type": "textarea",
+      "used_by": "final-form.php",
+      "seeded": true
+    }
+  ],
+  "options_dependency": [
+    "default_button_label (site options — read via shpigovsky_get_site_option)"
+  ],
+  "result": "COMPLETE"
+}

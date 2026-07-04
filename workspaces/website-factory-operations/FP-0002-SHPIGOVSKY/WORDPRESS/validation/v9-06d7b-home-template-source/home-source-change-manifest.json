@@ -1,0 +1,28 @@
+{
+  "task": "V9-06D7-B",
+  "generated_at": "2026-07-05T00:00:00+07:00",
+  "theme_version": "0.4.0-d7b-home",
+  "changed_php": [
+    "theme/shpigovsky/functions.php",
+    "theme/shpigovsky/front-page.php",
+    "theme/shpigovsky/inc/home-helpers.php",
+    "theme/shpigovsky/template-parts/layout/header.php",
+    "theme/shpigovsky/template-parts/home/hero.php",
+    "theme/shpigovsky/template-parts/home/feature-grid.php",
+    "theme/shpigovsky/template-parts/home/treatment-prevention.php",
+    "theme/shpigovsky/template-parts/home/rehabilitation-program.php",
+    "theme/shpigovsky/template-parts/home/gallery.php",
+    "theme/shpigovsky/template-parts/home/articles-teaser.php",
+    "theme/shpigovsky/template-parts/home/faq.php",
+    "theme/shpigovsky/template-parts/components/final-form.php"
+  ],
+  "new_files": [
+    "theme/shpigovsky/inc/home-helpers.php"
+  ],
+  "plugin_source_changed": false,
+  "acf_json_changed": false,
+  "v9_src_changed": false,
+  "v9_dist_changed": false,
+  "runtime_delivery_performed": false,
+  "result": "PASS"
+}

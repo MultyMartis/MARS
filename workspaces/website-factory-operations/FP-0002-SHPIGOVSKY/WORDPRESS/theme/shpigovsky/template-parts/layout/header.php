@@ -19,6 +19,10 @@ $address_lines = shpigovsky_split_option_lines( shpigovsky_get_site_option( 'sit
 $schedule_lines = shpigovsky_split_option_lines( shpigovsky_get_site_option( 'opening_hours' ) );
 $callback_label = shpigovsky_get_site_option( 'default_button_label' );
 $callback_label = '' !== $callback_label ? $callback_label : __( 'Заказать звонок', 'shpigovsky' );
+
+if ( is_front_page() ) {
+	echo '<div class="intro-section">' . "\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+}
 ?>
 <header class="site-header" role="banner">
 	<div class="container">
