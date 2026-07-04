@@ -1,0 +1,106 @@
+{
+    "phase": "REWRITE-RULE-REPAIR",
+    "timestamp": "2026-07-04T12:02:48+00:00",
+    "depth2_query": "index.php?post_type=service&service=$matches[1]/$matches[2]",
+    "depth2_expected": "index.php?post_type=service&service=$matches[1]/$matches[2]",
+    "depth2_ok": true,
+    "rewrite_rules_hash": "a0e11d66d4759f7628d3a0f86c740267c29bd656e86745505e35187e31bc1bfe",
+    "rewrite_rules_count": 108,
+    "service_74_request": {
+        "request": "uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti",
+        "matched_rule": "^uslugi/([^/]+)/([^/]+)/?$",
+        "matched_query": "index.php?post_type=service&service=$matches[1]/$matches[2]",
+        "query_vars": {
+            "post_type": "service",
+            "service": "zavisimosti/lechenie-alkogolnoy-zavisimosti"
+        },
+        "service_query_var": "zavisimosti/lechenie-alkogolnoy-zavisimosti",
+        "resolved_id": 74
+    },
+    "routes": [
+        {
+            "path": "/",
+            "expected_object_id": 4,
+            "expected_object_type": "page",
+            "http_status": 200,
+            "response_title": "Шпиговский — локальная разработка",
+            "generated_path": "/",
+            "generated_permalink_match": true,
+            "lookup_resolved_id": 4,
+            "lookup_resolved_type": "page",
+            "result": "PASS"
+        },
+        {
+            "path": "/uslugi/",
+            "expected_object_id": 5,
+            "expected_object_type": "page",
+            "http_status": 200,
+            "response_title": "Услуги — Шпиговский — локальная разработка",
+            "generated_path": "/uslugi/",
+            "generated_permalink_match": true,
+            "lookup_resolved_id": 5,
+            "lookup_resolved_type": "page",
+            "result": "PASS"
+        },
+        {
+            "path": "/uslugi/zavisimosti/",
+            "expected_object_id": 73,
+            "expected_object_type": "service",
+            "http_status": 200,
+            "response_title": "Зависимости — Шпиговский — локальная разработка",
+            "generated_path": "/uslugi/zavisimosti/",
+            "generated_permalink_match": true,
+            "lookup_resolved_id": 73,
+            "lookup_resolved_type": "service",
+            "result": "PASS"
+        },
+        {
+            "path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+            "expected_object_id": 74,
+            "expected_object_type": "service",
+            "http_status": 200,
+            "response_title": "Лечение алкогольной зависимости — Шпиговский — локальная разработка",
+            "generated_path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+            "generated_permalink_match": true,
+            "lookup_resolved_id": 74,
+            "lookup_resolved_type": "service",
+            "result": "PASS"
+        },
+        {
+            "path": "/uslugi/psihicheskoe-zdorovie/",
+            "expected_object_id": 77,
+            "expected_object_type": "service",
+            "http_status": 200,
+            "response_title": "Психическое здоровье — Шпиговский — локальная разработка",
+            "generated_path": "/uslugi/psihicheskoe-zdorovie/",
+            "generated_permalink_match": true,
+            "lookup_resolved_id": 77,
+            "lookup_resolved_type": "service",
+            "result": "PASS"
+        },
+        {
+            "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+            "expected_object_id": 84,
+            "expected_object_type": "service",
+            "http_status": 200,
+            "response_title": "Расстройства пищевого поведения — Шпиговский — локальная разработка",
+            "generated_path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+            "generated_permalink_match": true,
+            "lookup_resolved_id": 84,
+            "lookup_resolved_type": "service",
+            "result": "PASS"
+        },
+        {
+            "path": "/kontakty/",
+            "expected_object_id": 20,
+            "expected_object_type": "page",
+            "http_status": 200,
+            "response_title": "Контакты — Шпиговский — локальная разработка",
+            "generated_path": "/kontakty/",
+            "generated_permalink_match": true,
+            "lookup_resolved_id": 20,
+            "lookup_resolved_type": "page",
+            "result": "PASS"
+        }
+    ]
+}

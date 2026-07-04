@@ -1,0 +1,33 @@
+{
+  "phase": "REWRITE-RULE-REPAIR",
+  "timestamp": "2026-07-04T12:03:00+00:00",
+  "suites": [
+    { "suite": "checkpoint", "result": "PASS" },
+    { "suite": "source-repair", "result": "PASS" },
+    { "suite": "runtime-delivery", "result": "PASS" },
+    { "suite": "soft-rewrite-flush", "result": "PASS" },
+    { "suite": "depth2-query-mapping", "result": "PASS" },
+    { "suite": "service-74-route", "result": "PASS" },
+    { "suite": "control-routes", "result": "PASS" },
+    { "suite": "no-content-acf-menu-redirect-writes", "result": "PASS" }
+  ],
+  "total_failures": 0,
+  "primary_cause_addressed": "POST_TYPE_LINK_REWRITE_MISMATCH",
+  "depth2_query": "index.php?post_type=service&service=$matches[1]/$matches[2]",
+  "service_74_http": 200,
+  "service_74_resolved_id": 74,
+  "service_74_query_var": "zavisimosti/lechenie-alkogolnoy-zavisimosti",
+  "service_74_generated_permalink_match": true,
+  "control_routes_http_200": 7,
+  "rewrite_flush": "SOFT_PERFORMED",
+  "hard_flush": false,
+  "htaccess_changed": false,
+  "content_acf_writes": 0,
+  "menu_writes": 0,
+  "redirect_writes": 0,
+  "page_6_service_73_collision": "REMAINS_SECONDARY_DEBT",
+  "v9_06d5": "UNBLOCKED_FOR_VISUAL_ROUTE_QA",
+  "verdict": "PASS",
+  "recommended_next_action": "V9-06D.5 visual route QA",
+  "result": "PASS"
+}

@@ -1,0 +1,29 @@
+{
+  "phase": "REWRITE-RULE-REPAIR",
+  "timestamp": "2026-07-04T12:02:48+00:00",
+  "source_change": {
+    "file": "WORDPRESS/plugins/shpigovsky-core/src/Permalinks/ServicePermalinks.php",
+    "method": "register_rewrite_rules",
+    "before": "index.php?post_type=service&service=$matches[2]",
+    "after": "index.php?post_type=service&service=$matches[1]/$matches[2]"
+  },
+  "runtime_delivery": {
+    "target": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\shpigovsky-core\\src\\Permalinks\\ServicePermalinks.php",
+    "result": "PASS"
+  },
+  "soft_flush": {
+    "command": "php wp-cli.phar rewrite flush --path=X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky",
+    "hard_flush": false,
+    "htaccess_touched": false,
+    "exit_code": 0,
+    "rewrite_rules_hash_before": "bf3926c71b7b134708fa052f782c911dcc931dd61b1964a49b034d5b546c3a12",
+    "rewrite_rules_hash_after": "a0e11d66d4759f7628d3a0f86c740267c29bd656e86745505e35187e31bc1bfe",
+    "rewrite_rules_count_before": 108,
+    "rewrite_rules_count_after": 108,
+    "depth2_query_after": "index.php?post_type=service&service=$matches[1]/$matches[2]",
+    "result": "PASS"
+  },
+  "content_acf_menu_redirect_writes": 0,
+  "object_count_changes": 0,
+  "result": "PASS"
+}

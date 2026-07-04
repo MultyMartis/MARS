@@ -2,7 +2,7 @@
 
 **Date:** 2026-07-04  
 **Phase:** ROUTE-OWNERSHIP-INVESTIGATION  
-**Status:** RECOMMENDED ONLY — not applied
+**Status:** APPLIED — PASS (REWRITE-RULE-REPAIR 2026-07-04)
 
 ## Recommended option
 
@@ -76,4 +76,4 @@ Page ID 6 cleanup is real ownership debt but does not fix leaf-only depth-2 mapp
 
 ## Result
 
-Recommended repair documented. **Not applied** in this investigation.
+Recommended repair **applied** in REWRITE-RULE-REPAIR micro-task (2026-07-04): source + runtime delivery + soft flush. Service 74 HTTP 200. See `FP-0002-REWRITE-RULE-REPAIR-REPORT-v1.md`.

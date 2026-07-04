@@ -1,7 +1,7 @@
 # FP-0002 Service Permalink and Rewrite Contract v1
 
 **Task:** V9-06A.1 | **Date:** 2026-07-03  
-**Status:** DEFINED — planning authority only; no runtime registration
+**Status:** ACTIVE — depth-2 full-path mapping applied (REWRITE-RULE-REPAIR 2026-07-04)
 
 ---
 
@@ -96,9 +96,13 @@ register_post_type('service', [
 2. Add explicit top-priority rules if smoke tests show Page/CPT ambiguity:
 
 ```text
-^uslugi/([^/]+)/([^/]+)/?$  →  index.php?service=$matches[2]&post_type=service
-^uslugi/([^/]+)/?$          →  index.php?service=$matches[1]&post_type=service
+^uslugi/([^/]+)/([^/]+)/?$  →  index.php?post_type=service&service=$matches[1]/$matches[2]
+^uslugi/([^/]+)/?$          →  index.php?post_type=service&service=$matches[1]
 ```
+
+**Depth-2 query var:** full parent/child path (`$matches[1]/$matches[2]`), not leaf-only `$matches[2]`. Hierarchical CPT resolution via `get_page_by_path` requires the full path under the CPT base (e.g. `zavisimosti/lechenie-alkogolnoy-zavisimosti` for Service 74). Leaf-only mapping is a `POST_TYPE_LINK_REWRITE_MISMATCH` and yields HTTP 404 for depth-2 services.
+
+**Repair note (2026-07-04):** Corrected in `ServicePermalinks::register_rewrite_rules` (REWRITE-RULE-REPAIR micro-task). Soft rewrite flush required after runtime delivery.
 
 3. **Page `/uslugi/` exact match** must resolve to Page before CPT rules — WordPress Page rules typically take precedence for exact slug; validate in V9-06C.
 

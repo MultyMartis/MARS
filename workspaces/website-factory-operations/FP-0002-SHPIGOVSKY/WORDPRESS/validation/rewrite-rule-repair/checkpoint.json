@@ -1,0 +1,15 @@
+{
+  "phase": "REWRITE-RULE-REPAIR",
+  "name": "rewrite-rule-repair-pre-20260704-190040",
+  "timestamp": "2026-07-04T12:00:40+00:00",
+  "root": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\rewrite-rule-repair-pre-20260704-190040",
+  "db_dump": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\rewrite-rule-repair-pre-20260704-190040\\database\\mars_wp_fp0002-rewrite-rule-repair-pre.sql",
+  "db_dump_size": 1075415,
+  "db_dump_exists": true,
+  "plugin_before": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\rewrite-rule-repair-pre-20260704-190040\\plugin-source\\ServicePermalinks.php.before",
+  "plugin_after": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\rewrite-rule-repair-pre-20260704-190040\\plugin-source\\ServicePermalinks.php.after",
+  "rollback_instructions": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\rewrite-rule-repair-pre-20260704-190040\\rollback\\ROLLBACK-INSTRUCTIONS.md",
+  "pre_repair_rewrite_hash": "bf3926c71b7b134708fa052f782c911dcc931dd61b1964a49b034d5b546c3a12",
+  "secrets_copied": 0,
+  "result": "PASS"
+}

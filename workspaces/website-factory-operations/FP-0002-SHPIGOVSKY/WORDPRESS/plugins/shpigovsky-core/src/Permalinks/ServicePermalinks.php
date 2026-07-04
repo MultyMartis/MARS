@@ -50,9 +50,11 @@ final class ServicePermalinks implements ModuleInterface {
 	 * Do not flush rewrite rules here; activation/migration flush is a later delivery boundary.
 	 */
 	public static function register_rewrite_rules() {
+		// Depth-2 must pass parent/child path: hierarchical CPT lookup uses get_page_by_path.
+		// Leaf-only $matches[2] fails for children (e.g. Service 74 under Service 73).
 		add_rewrite_rule(
 			'^uslugi/([^/]+)/([^/]+)/?$',
-			'index.php?post_type=' . Service::POST_TYPE . '&' . Service::POST_TYPE . '=$matches[2]',
+			'index.php?post_type=' . Service::POST_TYPE . '&' . Service::POST_TYPE . '=$matches[1]/$matches[2]',
 			'top'
 		);
 

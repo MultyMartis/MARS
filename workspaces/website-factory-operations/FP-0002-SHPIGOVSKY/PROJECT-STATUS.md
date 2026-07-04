@@ -561,3 +561,7 @@ PARTIAL PASS: soft rewrite flush performed under DB checkpoint; `rewrite_rules` 
 ## 2026-07-04 — ROUTE-OWNERSHIP-INVESTIGATION
 
 PASS: read-only diagnostics. Primary cause POST_TYPE_LINK_REWRITE_MISMATCH (depth-2 rewrite maps leaf-only service query var; hierarchical lookup needs parent/child). Page 6 / Service 73 shared path CONFIRMED (secondary). Service 74 STILL_404. Runtime mutations 0. Next: CREATE_REWRITE_RULE_REPAIR_MICRO_TASK. V9-06D.5 BLOCKED.
+
+## 2026-07-04 — REWRITE-RULE-REPAIR
+
+PASS: depth-2 rewrite query repaired to `service=$matches[1]/$matches[2]`; source delivered to local runtime; soft flush under checkpoint. Service 74 HTTP 200 (resolved ID 74). Controls all 200. Content/ACF/menus/redirects unchanged. Page 6 / Service 73 secondary debt remains. V9-06D.5 UNBLOCKED. Next: V9-06D.5 visual route QA.

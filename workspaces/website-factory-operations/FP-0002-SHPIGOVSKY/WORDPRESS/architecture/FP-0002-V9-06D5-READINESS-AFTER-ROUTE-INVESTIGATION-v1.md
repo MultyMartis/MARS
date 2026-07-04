@@ -1,39 +1,35 @@
 # FP-0002 V9-06D.5 Readiness After Route Investigation v1
 
 **Date:** 2026-07-04  
-**Phase:** ROUTE-OWNERSHIP-INVESTIGATION
+**Phase:** ROUTE-OWNERSHIP-INVESTIGATION → REWRITE-RULE-REPAIR
 
-## Decision
+## Decision (investigation-time)
 
-**D5_BLOCKED_ROUTE_REPAIR_REQUIRED**
+**D5_BLOCKED_ROUTE_REPAIR_REQUIRED** — superseded by repair apply.
 
-## Reason
+## Decision (post-repair)
 
-Service ID 74 remains HTTP **404** on its canonical generated path:
+**D5_READY** — Service 74 route repaired.
+
+## Investigation-time reason (historical)
+
+Service ID 74 remained HTTP **404** on its canonical generated path:
 
 `/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/`
 
-That URL is an authorized visual route QA target from V9-06D.4. Root cause is identified (`POST_TYPE_LINK_REWRITE_MISMATCH`) but repair is **not** authorized or applied in this diagnostics-only task.
+Root cause: `POST_TYPE_LINK_REWRITE_MISMATCH`. Repair was not applied during diagnostics-only investigation.
 
-## Alternatives considered
+## Prerequisites (completed)
 
-| Outcome | Verdict |
-|---|---|
-| `D5_READY` | Rejected — blocking 404 remains |
-| `D5_CAN_PROCEED_WITH_KNOWN_404_EXCLUSION` | Rejected — alcohol leaf service is in-scope for D.5 visual QA; exclusion would weaken gate value |
-| `D5_BLOCKED_ROUTE_REPAIR_REQUIRED` | **Selected** |
-
-## Prerequisites before D.5
-
-1. Authorized rewrite-rule repair micro-task (recommended Option 2).
-2. Source delivery of corrected `ServicePermalinks` depth-2 mapping.
-3. Soft rewrite flush under checkpoint.
-4. Post-repair route validation: Service 74 HTTP 200 + controls unchanged.
+1. Authorized rewrite-rule repair micro-task (Option 2) — **DONE**
+2. Source delivery of corrected `ServicePermalinks` depth-2 mapping — **DONE**
+3. Soft rewrite flush under checkpoint — **DONE**
+4. Post-repair route validation: Service 74 HTTP 200 + controls unchanged — **DONE**
 
 ## Authorization status
 
-V9-06D.5 visual route QA: **NOT AUTHORIZED**
+V9-06D.5 visual route QA: **UNBLOCKED** after REWRITE-RULE-REPAIR (Service 74 HTTP 200). See `FP-0002-REWRITE-RULE-REPAIR-REPORT-v1.md`.
 
 ## Result
 
-D.5 **BLOCKED** pending rewrite rule repair.
+D.5 **UNBLOCKED**. Next: V9-06D.5 visual route QA.

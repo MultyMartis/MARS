@@ -1,0 +1,11 @@
+{
+  "phase": "REWRITE-RULE-REPAIR",
+  "timestamp": "2026-07-04T12:00:40+00:00",
+  "rewrite_rules_hash": "bf3926c71b7b134708fa052f782c911dcc931dd61b1964a49b034d5b546c3a12",
+  "rewrite_rules_count": 108,
+  "depth2_query": "index.php?post_type=service&service=$matches[2]",
+  "service_74_permalink": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+  "service_74_http_expected_pre": 404,
+  "primary_cause": "POST_TYPE_LINK_REWRITE_MISMATCH",
+  "result": "PASS"
+}

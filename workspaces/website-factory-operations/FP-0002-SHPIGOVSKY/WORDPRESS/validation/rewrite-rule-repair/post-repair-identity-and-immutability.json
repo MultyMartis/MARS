@@ -1,0 +1,203 @@
+{
+    "phase": "REWRITE-RULE-REPAIR",
+    "timestamp": "2026-07-04T12:04:18+00:00",
+    "runtime": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky",
+    "domain": "http://shpigovsky.test/",
+    "db_name": "mars_wp_fp0002",
+    "db_prefix": "fp02_",
+    "active_theme": "shpigovsky",
+    "shpigovsky_core_active": true,
+    "shpigovsky_core_mode": "content_model",
+    "service_cpt_registered": true,
+    "pages_total": 23,
+    "services_total": 15,
+    "posts_total": 1,
+    "menus": 3,
+    "menu_snapshot": [
+        {
+            "term_id": 3,
+            "name": "Footer",
+            "slug": "footer",
+            "count": 3
+        },
+        {
+            "term_id": 4,
+            "name": "Legal",
+            "slug": "legal",
+            "count": 5
+        },
+        {
+            "term_id": 2,
+            "name": "Primary",
+            "slug": "primary",
+            "count": 7
+        }
+    ],
+    "acf_groups_count": 13,
+    "wpilot_write_enabled": false,
+    "depth2_query": "index.php?post_type=service&service=$matches[1]/$matches[2]",
+    "rewrite_rules_hash": "a0e11d66d4759f7628d3a0f86c740267c29bd656e86745505e35187e31bc1bfe",
+    "rewrite_rules_count": 108,
+    "service_74_main_query": {
+        "is_404": false,
+        "is_singular": false,
+        "is_singular_service": false,
+        "queried_object_id": null,
+        "queried_object_type": null,
+        "query_vars_service": "",
+        "query_vars_post_type": "service"
+    },
+    "seeded_objects": {
+        "4": {
+            "ID": 4,
+            "post_type": "page",
+            "title": "Главная",
+            "slug": "glavnaya",
+            "parent": 0,
+            "status": "publish",
+            "content_hash": "0f00e812b2c40a8f0b3150e98b4ce744fc5b70fbc82989c455c28a248363c610",
+            "excerpt_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "meta_hashes": {
+                "home_cta_text": "2a115162fe554d2507e31325547ae96df9a9743bab92cc241d6e052774f7b134",
+                "home_cta_title": "7049984059f87bd23631d1fcb9702e78ba46373c47d448c520a5a424d67a0f82",
+                "home_hero_slides": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+                "home_hero_slides_0_text": "7dd601bd02fa57bc1c8ca387facf31f8ac91c4d11afb40306f877900a862d2d6",
+                "home_hero_slides_0_title": "1f110c396641118d294b94566f5ab11519f496a0bbfae97bbc7c8dfe48c5a30e",
+                "home_service_nav_items": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+                "home_service_nav_items_0_title": "9af957b361ca18b631e62480fdbc0e34957b5a6a6188f4a11a581cc6d0abc000",
+                "home_service_nav_items_1_title": "b726261d985f6b5481bc85ff237f1bbba42a1f56eec094a2bd374f4d57202818",
+                "home_service_nav_items_2_title": "e97c4cb2ec6ba7f3ac053c2122d1f48182530dcf8d40ec941df686f6214d6dd6",
+                "migration_status": "952a7cdee78ae6d9f3d41885857f8368606cb419957100edc9c36090ec9d2640",
+                "seeded_by_phase": "76876150667cd0a0d9f264600b74a173558804c3c21188fec484b49fc576bab2"
+            },
+            "modified_gmt": "2026-07-02 15:53:38"
+        },
+        "5": {
+            "ID": 5,
+            "post_type": "page",
+            "title": "Услуги",
+            "slug": "uslugi",
+            "parent": 0,
+            "status": "publish",
+            "content_hash": "0f00e812b2c40a8f0b3150e98b4ce744fc5b70fbc82989c455c28a248363c610",
+            "excerpt_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "meta_hashes": {
+                "migration_status": "952a7cdee78ae6d9f3d41885857f8368606cb419957100edc9c36090ec9d2640",
+                "seeded_by_phase": "76876150667cd0a0d9f264600b74a173558804c3c21188fec484b49fc576bab2",
+                "services_hub_intro": "958b0089f216552a177aea5b87b051c612352f28b5a5cc9b54ef5072c0033e49",
+                "services_hub_query_mode": "c9f5fd88b1bd8556eceebf6eca2c77163a0d47061bf8ce4fd530264f17a5e819",
+                "services_hub_show_placeholders": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+            },
+            "modified_gmt": "2026-07-02 15:53:38"
+        },
+        "20": {
+            "ID": 20,
+            "post_type": "page",
+            "title": "Контакты",
+            "slug": "kontakty",
+            "parent": 0,
+            "status": "publish",
+            "content_hash": "0f00e812b2c40a8f0b3150e98b4ce744fc5b70fbc82989c455c28a248363c610",
+            "excerpt_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "meta_hashes": {
+                "contacts_address": "ffca0dc921e1b858072e8325232b4995b6bfd50700b6e34dcc50767ed7962b41",
+                "contacts_form_intro": "e6d3f4e9f13e790b1e28dae1afa70ae9102e25a8d895b6e6c93862a18ed5c733",
+                "contacts_phones": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+                "contacts_phones_0_label": "822f9fd9ba2d117e7a4c1dd10c410eab7a3a5cc0417cd149633649cc5fb23c1b",
+                "contacts_phones_0_phone": "e8b8ce92090ae7bb6995a5f7641b3d8402fabde6bc85cc4f73ead65e093fc355",
+                "migration_status": "952a7cdee78ae6d9f3d41885857f8368606cb419957100edc9c36090ec9d2640",
+                "seeded_by_phase": "76876150667cd0a0d9f264600b74a173558804c3c21188fec484b49fc576bab2"
+            },
+            "modified_gmt": "2026-07-02 15:53:38"
+        },
+        "73": {
+            "ID": 73,
+            "post_type": "service",
+            "title": "Зависимости",
+            "slug": "zavisimosti",
+            "parent": 0,
+            "status": "publish",
+            "content_hash": "d363fe02bc19b643f114734e4e7401590feb5dd0009ae33061dad3ae939f3fea",
+            "excerpt_hash": "df669fcae0b3cf910fac38142aeb08f540b6fdd54dd31dbc27fd1cf2b055f78d",
+            "meta_hashes": {
+                "content_source": "62a2fed3d6e08c44835fce71f02210b1ddabfb066e39edf1e6c261988f824dd3",
+                "created_by_phase": "df579930d430ed65b979e55bf5c8eef563a51ed22af29f112798eb99c1848da4",
+                "hero_lead": "2646317c0d279d4d96c8b36da7aad5e906d1887294b288fbe843886d5647bb18",
+                "migration_status": "952a7cdee78ae6d9f3d41885857f8368606cb419957100edc9c36090ec9d2640",
+                "registry_id": "07596b8dd2d5d8abc2b29f01a88d912c7326700d87f7b415a61d6f575666e016",
+                "seeded_by_phase": "76876150667cd0a0d9f264600b74a173558804c3c21188fec484b49fc576bab2",
+                "service_layout_variant": "9a80b44788374fb621b488e900dc2ffe82b3ac081ddc3928b0cd00c13d7fa32d",
+                "skeleton_status": "b59a0d4089b92a3e786161da291929c1a661f721c439bfd8a5d14012f03c8f19"
+            },
+            "modified_gmt": "2026-07-03 21:04:34"
+        },
+        "74": {
+            "ID": 74,
+            "post_type": "service",
+            "title": "Лечение алкогольной зависимости",
+            "slug": "lechenie-alkogolnoy-zavisimosti",
+            "parent": 73,
+            "status": "publish",
+            "content_hash": "d363fe02bc19b643f114734e4e7401590feb5dd0009ae33061dad3ae939f3fea",
+            "excerpt_hash": "df669fcae0b3cf910fac38142aeb08f540b6fdd54dd31dbc27fd1cf2b055f78d",
+            "meta_hashes": {
+                "content_source": "62a2fed3d6e08c44835fce71f02210b1ddabfb066e39edf1e6c261988f824dd3",
+                "created_by_phase": "df579930d430ed65b979e55bf5c8eef563a51ed22af29f112798eb99c1848da4",
+                "hero_lead": "938a7155e5627a5dcb5daea78900a8653c056184cbb01ee81b886158fcad4ad2",
+                "intro_text": "e6d3f4e9f13e790b1e28dae1afa70ae9102e25a8d895b6e6c93862a18ed5c733",
+                "migration_status": "952a7cdee78ae6d9f3d41885857f8368606cb419957100edc9c36090ec9d2640",
+                "registry_id": "aaa1312c68b96a5360b179fb2ec535f4875894d2eeeeae34d13c0735954155ad",
+                "seeded_by_phase": "76876150667cd0a0d9f264600b74a173558804c3c21188fec484b49fc576bab2",
+                "service_layout_variant": "2fbde2579856c3559939ac1296005c8fa39a40f23356393f2abe3cbe3d00b878",
+                "signs_items": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+                "signs_items_0_text": "e6d3f4e9f13e790b1e28dae1afa70ae9102e25a8d895b6e6c93862a18ed5c733",
+                "signs_items_0_title": "35784c41a5a93d3a0288402076f97c6ef129ba9cf3ac281a5a9e90ed9629636f",
+                "skeleton_status": "b59a0d4089b92a3e786161da291929c1a661f721c439bfd8a5d14012f03c8f19"
+            },
+            "modified_gmt": "2026-07-03 21:04:34"
+        },
+        "77": {
+            "ID": 77,
+            "post_type": "service",
+            "title": "Психическое здоровье",
+            "slug": "psihicheskoe-zdorovie",
+            "parent": 0,
+            "status": "publish",
+            "content_hash": "d363fe02bc19b643f114734e4e7401590feb5dd0009ae33061dad3ae939f3fea",
+            "excerpt_hash": "df669fcae0b3cf910fac38142aeb08f540b6fdd54dd31dbc27fd1cf2b055f78d",
+            "meta_hashes": {
+                "content_source": "62a2fed3d6e08c44835fce71f02210b1ddabfb066e39edf1e6c261988f824dd3",
+                "created_by_phase": "df579930d430ed65b979e55bf5c8eef563a51ed22af29f112798eb99c1848da4",
+                "hero_lead": "9cb46993930bf2f11ef56989dc1ebd4a0ca1de07f5cf128763aba8c32fea4534",
+                "migration_status": "952a7cdee78ae6d9f3d41885857f8368606cb419957100edc9c36090ec9d2640",
+                "registry_id": "159880d25d5bd78f040970dc3b17b40bbfec8594b1a2b45907874092d1d3c2d7",
+                "seeded_by_phase": "76876150667cd0a0d9f264600b74a173558804c3c21188fec484b49fc576bab2",
+                "service_layout_variant": "9a80b44788374fb621b488e900dc2ffe82b3ac081ddc3928b0cd00c13d7fa32d",
+                "skeleton_status": "b59a0d4089b92a3e786161da291929c1a661f721c439bfd8a5d14012f03c8f19"
+            },
+            "modified_gmt": "2026-07-03 21:04:34"
+        },
+        "84": {
+            "ID": 84,
+            "post_type": "service",
+            "title": "Расстройства пищевого поведения",
+            "slug": "rasstroystva-pischevogo-povedeniya",
+            "parent": 0,
+            "status": "publish",
+            "content_hash": "d363fe02bc19b643f114734e4e7401590feb5dd0009ae33061dad3ae939f3fea",
+            "excerpt_hash": "df669fcae0b3cf910fac38142aeb08f540b6fdd54dd31dbc27fd1cf2b055f78d",
+            "meta_hashes": {
+                "content_source": "62a2fed3d6e08c44835fce71f02210b1ddabfb066e39edf1e6c261988f824dd3",
+                "created_by_phase": "df579930d430ed65b979e55bf5c8eef563a51ed22af29f112798eb99c1848da4",
+                "hero_lead": "1d4c6763727449913deb711dc5e5759747fb36f8debf4bd9a4d1d6e1cd2322a9",
+                "migration_status": "952a7cdee78ae6d9f3d41885857f8368606cb419957100edc9c36090ec9d2640",
+                "registry_id": "035330790613498e259b295015ff23cddb498f51c9a586e5d7848cbbde3f65c9",
+                "seeded_by_phase": "76876150667cd0a0d9f264600b74a173558804c3c21188fec484b49fc576bab2",
+                "service_layout_variant": "9a80b44788374fb621b488e900dc2ffe82b3ac081ddc3928b0cd00c13d7fa32d",
+                "skeleton_status": "b59a0d4089b92a3e786161da291929c1a661f721c439bfd8a5d14012f03c8f19"
+            },
+            "modified_gmt": "2026-07-03 21:04:34"
+        }
+    },
+    "result": "FAIL"
+}

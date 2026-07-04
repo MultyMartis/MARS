@@ -144,8 +144,13 @@ Soft rewrite flush performed under DB checkpoint (`wp rewrite flush`, no `--hard
 
 Read-only diagnostics complete. Primary cause: **POST_TYPE_LINK_REWRITE_MISMATCH** — depth-2 rewrite maps `service=$matches[2]` (leaf only) while hierarchical CPT lookup requires `parent/child`. Page ID 6 / Service ID 73 shared path **CONFIRMED** as secondary ownership debt, not the direct Service 74 404 mechanism. Recommended next: rewrite rule repair micro-task. V9-06D.5: **BLOCKED**. Runtime mutations: 0.
 
+### REWRITE-RULE-REPAIR (2026-07-04)
+
+Depth-2 rewrite query repaired to `service=$matches[1]/$matches[2]` in `ServicePermalinks.php`; delivered to local runtime; soft flush under checkpoint. Service 74 HTTP **200** (resolved ID 74). Controls all 200. Content/ACF/menus/redirects unchanged. V9-06D.5: **UNBLOCKED**. Report: [reports/FP-0002-REWRITE-RULE-REPAIR-REPORT-v1.md](reports/FP-0002-REWRITE-RULE-REPAIR-REPORT-v1.md).
+
 Reports:
 
+- `reports/FP-0002-REWRITE-RULE-REPAIR-REPORT-v1.md` — repair PASS
 - `reports/FP-0002-ROUTE-OWNERSHIP-INVESTIGATION-REPORT-v1.md` — investigation PASS
 - `reports/FP-0002-V9-06D4-RERUN-MINIMAL-CONTENT-SEED-FOR-VISUAL-ROUTE-QA-REPORT-v1.md` — rerun PASS/PARTIAL
 - `reports/FP-0002-V9-06D4-MINIMAL-CONTENT-SEED-FOR-VISUAL-ROUTE-QA-REPORT-v1.md` — previous blocked attempt (HEAD mismatch), preserved

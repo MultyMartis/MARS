@@ -1,7 +1,7 @@
 # Forge WordPress — FP-0002 Project Lane
 
 **Project ID:** FP-0002 — Шпиговский  
-**Stage:** ROUTE-OWNERSHIP-INVESTIGATION COMPLETE (PASS — Service 74 STILL_404; rewrite rule repair next)
+**Stage:** REWRITE-RULE-REPAIR COMPLETE (PASS — Service 74 HTTP 200; V9-06D.5 unblocked)
 
 | Document | Purpose |
 |----------|---------|
@@ -63,4 +63,4 @@ Runtime manifest: [MLI-WP-FP0002-LOCAL-RUNTIME-MANIFEST-v1.md](../../../../mars-
 
 ## V9-06D.1 rerun runtime delivery
 
-Runtime code/model activation is complete in local runtime: theme, Shpigovsky Core, and ACF JSON delivered; service CPT, 13 ACF groups, and Options Page verified. WordPress object skeleton complete (V9-06D.2); content migration planned (V9-06D.3); minimal visual content seed applied for Pages 4/5/20 and Services 73/74/77/84 (V9-06D.4 RERUN). Soft rewrite flush performed (REWRITE-FLUSH-MICRO-GATE); Service 74 still HTTP 404. Route ownership investigation **PASS**: root cause `POST_TYPE_LINK_REWRITE_MISMATCH` (depth-2 rewrite leaf-only query var). Page 6 / Service 73 collision confirmed secondary. Full content migration and V9 integration remain not performed. Next: rewrite rule repair micro-task; V9-06D.5 blocked.
+Runtime code/model activation is complete in local runtime: theme, Shpigovsky Core, and ACF JSON delivered; service CPT, 13 ACF groups, and Options Page verified. WordPress object skeleton complete (V9-06D.2); content migration planned (V9-06D.3); minimal visual content seed applied for Pages 4/5/20 and Services 73/74/77/84 (V9-06D.4 RERUN). Soft rewrite flush performed (REWRITE-FLUSH-MICRO-GATE); route ownership investigation identified `POST_TYPE_LINK_REWRITE_MISMATCH`. Rewrite rule repair **PASS**: depth-2 query `service=$matches[1]/$matches[2]`; Service 74 HTTP 200. Page 6 / Service 73 collision remains secondary debt. Full content migration and V9 integration remain not performed. Next: V9-06D.5 visual route QA.
