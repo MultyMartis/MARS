@@ -1,0 +1,76 @@
+{
+  "generated_at": "2026-07-04T18:59:46.208030Z",
+  "routes": [
+    {
+      "route": "home",
+      "url": "http://shpigovsky.test/",
+      "http_status": 200,
+      "header_present": true,
+      "footer_present": true,
+      "css_loaded": true,
+      "js_loaded": true,
+      "checks": [
+        {
+          "section": "site-main--front",
+          "present": true,
+          "result": "PASS"
+        },
+        {
+          "section": "hero--home",
+          "present": true,
+          "result": "PASS"
+        },
+        {
+          "section": "treatment-prevention",
+          "present": true,
+          "result": "PASS"
+        },
+        {
+          "section": "rehabilitation-program",
+          "present": true,
+          "result": "PASS"
+        },
+        {
+          "section": "final-form",
+          "present": true,
+          "result": "PASS"
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "route": "services_hub",
+      "url": "http://shpigovsky.test/uslugi/",
+      "http_status": 200,
+      "header_present": true,
+      "footer_present": true,
+      "css_loaded": true,
+      "js_loaded": true,
+      "checks": [
+        {
+          "section": "site-main--services-hub",
+          "present": true,
+          "result": "PASS"
+        },
+        {
+          "section": "hero--inner",
+          "present": true,
+          "result": "PASS"
+        },
+        {
+          "section": "service groups",
+          "present": true,
+          "result": "PASS"
+        },
+        {
+          "section": "final-form",
+          "present": true,
+          "result": "PASS"
+        }
+      ],
+      "result": "PASS"
+    }
+  ],
+  "failures": [],
+  "result": "PASS"
+}

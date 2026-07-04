@@ -1,0 +1,138 @@
+{
+  "phase": "V9-06D7-D",
+  "timestamp": "2026-07-04T19:01:10.019Z",
+  "evidence_root": "WORDPRESS/validation/v9-06d7d-runtime-delivery/screenshots/",
+  "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "screenshots": [
+    {
+      "file": "desktop-home-after-d7d.png",
+      "path": "screenshots/desktop-home-after-d7d.png",
+      "route": "/",
+      "viewport": "desktop",
+      "bytes": 55586,
+      "url": "http://shpigovsky.test/",
+      "result": "CAPTURED"
+    },
+    {
+      "file": "desktop-services-hub-after-d7d.png",
+      "path": "screenshots/desktop-services-hub-after-d7d.png",
+      "route": "/uslugi/",
+      "viewport": "desktop",
+      "bytes": 53451,
+      "url": "http://shpigovsky.test/uslugi/",
+      "result": "CAPTURED"
+    },
+    {
+      "file": "desktop-service-zavisimosti-after-d7d.png",
+      "path": "screenshots/desktop-service-zavisimosti-after-d7d.png",
+      "route": "/uslugi/zavisimosti/",
+      "viewport": "desktop",
+      "bytes": 79250,
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/",
+      "result": "CAPTURED"
+    },
+    {
+      "file": "desktop-service-alkogol-after-d7d.png",
+      "path": "screenshots/desktop-service-alkogol-after-d7d.png",
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "viewport": "desktop",
+      "bytes": 88390,
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "result": "CAPTURED"
+    },
+    {
+      "file": "desktop-service-psych-after-d7d.png",
+      "path": "screenshots/desktop-service-psych-after-d7d.png",
+      "route": "/uslugi/psihicheskoe-zdorovie/",
+      "viewport": "desktop",
+      "bytes": 86716,
+      "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/",
+      "result": "CAPTURED"
+    },
+    {
+      "file": "desktop-service-rpp-after-d7d.png",
+      "path": "screenshots/desktop-service-rpp-after-d7d.png",
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "viewport": "desktop",
+      "bytes": 88560,
+      "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "result": "CAPTURED"
+    },
+    {
+      "file": "desktop-contacts-after-d7d.png",
+      "path": "screenshots/desktop-contacts-after-d7d.png",
+      "route": "/kontakty/",
+      "viewport": "desktop",
+      "bytes": 55178,
+      "url": "http://shpigovsky.test/kontakty/",
+      "result": "CAPTURED"
+    },
+    {
+      "file": "mobile-home-after-d7d.png",
+      "path": "screenshots/mobile-home-after-d7d.png",
+      "route": "/",
+      "viewport": "mobile",
+      "bytes": 31378,
+      "url": "http://shpigovsky.test/",
+      "result": "CAPTURED"
+    },
+    {
+      "file": "mobile-services-hub-after-d7d.png",
+      "path": "screenshots/mobile-services-hub-after-d7d.png",
+      "route": "/uslugi/",
+      "viewport": "mobile",
+      "bytes": 28533,
+      "url": "http://shpigovsky.test/uslugi/",
+      "result": "CAPTURED"
+    },
+    {
+      "file": "mobile-service-zavisimosti-after-d7d.png",
+      "path": "screenshots/mobile-service-zavisimosti-after-d7d.png",
+      "route": "/uslugi/zavisimosti/",
+      "viewport": "mobile",
+      "bytes": 57228,
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/",
+      "result": "CAPTURED"
+    },
+    {
+      "file": "mobile-service-alkogol-after-d7d.png",
+      "path": "screenshots/mobile-service-alkogol-after-d7d.png",
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "viewport": "mobile",
+      "bytes": 62962,
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "result": "CAPTURED"
+    },
+    {
+      "file": "mobile-service-psych-after-d7d.png",
+      "path": "screenshots/mobile-service-psych-after-d7d.png",
+      "route": "/uslugi/psihicheskoe-zdorovie/",
+      "viewport": "mobile",
+      "bytes": 61302,
+      "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/",
+      "result": "CAPTURED"
+    },
+    {
+      "file": "mobile-service-rpp-after-d7d.png",
+      "path": "screenshots/mobile-service-rpp-after-d7d.png",
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "viewport": "mobile",
+      "bytes": 61025,
+      "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "result": "CAPTURED"
+    },
+    {
+      "file": "mobile-contacts-after-d7d.png",
+      "path": "screenshots/mobile-contacts-after-d7d.png",
+      "route": "/kontakty/",
+      "viewport": "mobile",
+      "bytes": 38361,
+      "url": "http://shpigovsky.test/kontakty/",
+      "result": "CAPTURED"
+    }
+  ],
+  "captured": 14,
+  "failed": 0,
+  "capture_status": "COMPLETE",
+  "result": "PASS"
+}

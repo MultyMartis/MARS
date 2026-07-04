@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-07-04T18:59:48.984925Z",
+  "checkpoint": {
+    "generated_at": "2026-07-04T18:59:17.948499Z",
+    "checkpoint_name": "v9-06d7d-service-runtime-delivery-pre-20260705-015917",
+    "checkpoint_root": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d7d-service-runtime-delivery-pre-20260705-015917",
+    "theme_snapshot": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d7d-service-runtime-delivery-pre-20260705-015917\\theme\\shpigovsky",
+    "baseline_manifest": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d7d-service-runtime-delivery-pre-20260705-015917\\manifests\\theme-pre-manifest.json",
+    "db_dump": null,
+    "restore_instructions": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d7d-service-runtime-delivery-pre-20260705-015917\\rollback\\ROLLBACK-INSTRUCTIONS.txt",
+    "secrets_copied": 0,
+    "result": "PASS"
+  },
+  "runtime_theme_baseline_hash_before": "028b5ee3130f736fa432a1c4b0bcb980ba8a337ccb4a470415c8bb57c2bb5d78",
+  "runtime_theme_hash_after": "cb6a5ceaf64790b47ee9fab5470ad74801af0223fef403056c40591deb1e009c",
+  "restore_procedure": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d7d-service-runtime-delivery-pre-20260705-015917\\rollback\\ROLLBACK-INSTRUCTIONS.txt",
+  "db_rollback": false,
+  "rollback_tested": false,
+  "rollback_not_executed_reason": "Delivery succeeded; rollback ready but not executed.",
+  "expected_post_rollback_validation": "Restore theme snapshot; re-run D.5 seven routes HTTP 200; verify D7-B home, D7-C hub, and D7-A shell intact.",
+  "result": "PASS"
+}

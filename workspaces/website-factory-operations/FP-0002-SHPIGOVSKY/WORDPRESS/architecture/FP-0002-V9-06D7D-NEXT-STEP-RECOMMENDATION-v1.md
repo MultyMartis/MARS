@@ -2,21 +2,16 @@
 
 **Date:** 2026-07-05
 
+D7-D Service template runtime delivery **COMPLETE**. Core-wave service sections live in local runtime with hash-verified theme copy. Deferred shared V9 blocks: nature, team-stats, landscape, specialists, founder-quote, comfort, reviews, corridor, bordered-info.
+
 ## Recommended next phase
 
-**CREATE_V9_06D7D_RUNTIME_DELIVERY_TASK**
+**CREATE_V9_06D7E_CONTACTS_TEMPLATE_SOURCE_TASK** — implement Contacts page template blocks from V9 static reference in canonical theme source (source-only; separate runtime delivery authorization).
 
-## Rationale
+## V9-06D7-E gate
 
-- D7-D service template source is complete in Git with PHP lint PASS and no scope drift.  
-- Local runtime still serves D7-C baseline on service single routes.  
-- Operator should review source diff, then authorize bounded theme-only runtime delivery.  
-
-## Alternatives (not default)
-
-- `CREATE_V9_06D7D_SOURCE_REPAIR_TASK` — only if operator rejects section scope  
-- `CREATE_V9_06D7E_CONTACTS_TEMPLATE_SOURCE_TASK` — parallel wave after runtime gate if preferred  
+READY FOR OPERATOR REVIEW (not authorized by this task).
 
 ## Result
 
-CREATE_V9_06D7D_RUNTIME_DELIVERY_TASK
+RECOMMENDED

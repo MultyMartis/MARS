@@ -1,0 +1,172 @@
+{
+  "generated_at": "2026-07-04T18:59:39.589509Z",
+  "services": [
+    {
+      "service_id": 73,
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/",
+      "http_status": 200,
+      "expected_variant": "subdivision",
+      "detected_variant": "subdivision",
+      "variant": "subdivision",
+      "checks": {
+        "hero": {
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        "subnav": {
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        "children": {
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        "programme": {
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        "faq": {
+          "present": true,
+          "required": false,
+          "result": "PASS"
+        },
+        "final_form": {
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        }
+      },
+      "result": "PASS"
+    },
+    {
+      "service_id": 74,
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "http_status": 200,
+      "expected_variant": "alcohol-special",
+      "detected_variant": "leaf",
+      "variant": "leaf",
+      "checks": {
+        "hero": {
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        "subnav": {
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        "children": {
+          "present": false,
+          "required": false,
+          "result": "N/A"
+        },
+        "programme": {
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        "faq": {
+          "present": true,
+          "required": false,
+          "result": "PASS"
+        },
+        "final_form": {
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        }
+      },
+      "result": "PASS"
+    },
+    {
+      "service_id": 77,
+      "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/",
+      "http_status": 200,
+      "expected_variant": "subdivision",
+      "detected_variant": "subdivision",
+      "variant": "subdivision",
+      "checks": {
+        "hero": {
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        "subnav": {
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        "children": {
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        "programme": {
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        "faq": {
+          "present": true,
+          "required": false,
+          "result": "PASS"
+        },
+        "final_form": {
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        }
+      },
+      "result": "PASS"
+    },
+    {
+      "service_id": 84,
+      "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "http_status": 200,
+      "expected_variant": "subdivision",
+      "detected_variant": "subdivision",
+      "variant": "subdivision",
+      "checks": {
+        "hero": {
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        "subnav": {
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        "children": {
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        "programme": {
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        },
+        "faq": {
+          "present": true,
+          "required": false,
+          "result": "PASS"
+        },
+        "final_form": {
+          "present": true,
+          "required": true,
+          "result": "PASS"
+        }
+      },
+      "result": "PASS"
+    }
+  ],
+  "deferred_sections_note": "nature, team-stats, landscape, specialists, founder-quote, comfort, reviews, corridor, bordered-info deferred per D7-D scope",
+  "failures": [],
+  "result": "PASS"
+}

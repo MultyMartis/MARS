@@ -2,8 +2,8 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D7-C SERVICES HUB TEMPLATE RUNTIME DELIVERED — V9-06D7-D SERVICE TEMPLATE SOURCE COMPLETE — NEXT D7-D RUNTIME DELIVERY (operator review)
-**Classification:** CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON COMPLETE — MINIMAL VISUAL CONTENT SEEDED — DEPTH-2 REWRITE REPAIRED — VISUAL ROUTE BASELINE READY — V9 GLOBAL SHELL RUNTIME DELIVERED — V9 HOME TEMPLATE RUNTIME DELIVERED — V9 SERVICES HUB TEMPLATE RUNTIME DELIVERED — V9 SERVICE TEMPLATE SOURCE DELIVERED (GIT) — NEXT D7-D RUNTIME DELIVERY
+**Status:** V9-06D7-D SERVICE TEMPLATE RUNTIME DELIVERED — hash verified — route/service smoke PASS
+**Classification:** CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON COMPLETE — MINIMAL VISUAL CONTENT SEEDED — DEPTH-2 REWRITE REPAIRED — VISUAL ROUTE BASELINE READY — V9 GLOBAL SHELL RUNTIME DELIVERED — V9 HOME TEMPLATE RUNTIME DELIVERED — V9 SERVICES HUB TEMPLATE RUNTIME DELIVERED — V9 SERVICE TEMPLATE RUNTIME DELIVERED — NEXT D7-E CONTACTS TEMPLATE SOURCE
 
 ---
 
@@ -186,3 +186,8 @@ D7-C Services Hub template integrated in canonical theme source only. PHP lint P
 ## V9-06D7-C runtime delivery
 
 D7-C Services Hub template delivered to local runtime theme only. PHP lint PASS. Checkpoint + hash match PASS. Seven D.5 routes HTTP 200; Service 74 PASS; Services Hub core-wave sections visible (6/10 V9 wave; FAQ omitted where ACF empty; founder-quote/comfort/genotyping/galleries deferred). Home D7-B stability PASS. No DB/content/ACF/menu/redirect writes. Evidence: `validation/v9-06d7c-runtime-delivery/`. Next: D7-D service template source (operator review).
+
+
+## V9-06D7-D runtime delivery
+
+D7-D Service template delivered to local runtime theme only. PHP lint PASS. Checkpoint + hash match PASS. Seven D.5 routes HTTP 200; Services 73/74/77/84 core-wave sections visible; Service 74 alcohol-special markers detected; Home D7-B and Services Hub D7-C stability PASS. Deferred shared V9 blocks documented. No DB/content/ACF/menu/redirect writes. Evidence: `validation/v9-06d7d-runtime-delivery/`. Next: D7-E contacts template source (operator review).

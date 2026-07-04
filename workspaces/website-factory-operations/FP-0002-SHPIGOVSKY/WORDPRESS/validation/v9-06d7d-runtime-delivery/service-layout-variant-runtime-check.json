@@ -1,0 +1,38 @@
+{
+  "services": [
+    {
+      "service_id": 73,
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/",
+      "expected_variant": "subdivision",
+      "detected_variant": "subdivision",
+      "detection_method": "html_regex:site-main--service-subdivision|shpigovsky-service--subdivision",
+      "result": "PASS"
+    },
+    {
+      "service_id": 74,
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "expected_variant": "alcohol-special",
+      "detected_variant": "alcohol-special",
+      "detection_method": "html_regex:shpigovsky-service--alcohol|service-leaf-signs",
+      "result": "PASS"
+    },
+    {
+      "service_id": 77,
+      "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/",
+      "expected_variant": "subdivision",
+      "detected_variant": "subdivision",
+      "detection_method": "html_regex:site-main--service-subdivision|shpigovsky-service--subdivision",
+      "result": "PASS"
+    },
+    {
+      "service_id": 84,
+      "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "expected_variant": "subdivision",
+      "detected_variant": "subdivision",
+      "detection_method": "html_regex:site-main--service-subdivision|shpigovsky-service--subdivision",
+      "result": "PASS"
+    }
+  ],
+  "failures": [],
+  "result": "PASS"
+}
