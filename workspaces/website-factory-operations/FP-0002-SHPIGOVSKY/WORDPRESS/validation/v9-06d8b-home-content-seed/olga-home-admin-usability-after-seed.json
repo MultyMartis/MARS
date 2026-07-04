@@ -1,0 +1,56 @@
+{
+    "phase": "V9-06D8-B",
+    "generated_at": "2026-07-04T20:43:27+00:00",
+    "areas": [
+        {
+            "area": "Home page edit screen",
+            "visible": true,
+            "clarity": "Page ID 4 front page",
+            "issue": "English group title Page — Home",
+            "result": "PARTIAL"
+        },
+        {
+            "area": "Hero slides repeater",
+            "visible": true,
+            "clarity": "Title/text seeded; image empty",
+            "issue": "Image field needs media workflow",
+            "result": "PARTIAL"
+        },
+        {
+            "area": "Advantages repeater",
+            "visible": true,
+            "clarity": "Six cards with title+text",
+            "issue": "RU subfield labels OK",
+            "result": "PASS"
+        },
+        {
+            "area": "FAQ repeater",
+            "visible": true,
+            "clarity": "Question/answer pairs editable",
+            "issue": "Answers are LOCAL_MVP_PLACEHOLDER from V9 technical copy",
+            "result": "PARTIAL"
+        },
+        {
+            "area": "Gallery media",
+            "visible": true,
+            "clarity": "Empty — media not seeded",
+            "issue": "MEDIA_REQUIRED",
+            "result": "PARTIAL"
+        },
+        {
+            "area": "CTA fields",
+            "visible": true,
+            "clarity": "home_cta_title/text pre-seeded D4",
+            "issue": "Overlaps site options global_cta from D8-A",
+            "result": "PARTIAL"
+        },
+        {
+            "area": "Intro bands / reviews",
+            "visible": true,
+            "clarity": "Not rendered on front page",
+            "issue": "Developer-controlled until template wired",
+            "result": "PARTIAL"
+        }
+    ],
+    "result": "PARTIAL"
+}

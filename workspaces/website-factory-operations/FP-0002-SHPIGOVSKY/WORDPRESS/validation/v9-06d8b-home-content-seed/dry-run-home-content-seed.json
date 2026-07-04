@@ -1,0 +1,148 @@
+{
+    "phase": "V9-06D8-B",
+    "generated_at": "2026-07-04T20:43:16+00:00",
+    "page_id": 4,
+    "fields": [
+        {
+            "field": "home_hero_slides",
+            "old_state": "populated",
+            "new_state": "set",
+            "operation": "update",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "STATIC_V9_CONTENT",
+            "rollback_available": true,
+            "rollback_value": [
+                {
+                    "title": "Шпиговский дом",
+                    "text": "Центр профилактики и лечения зависимостей. Минимальное наполнение для визуальной проверки маршрута. Полная миграция контента выполняется отдельной фазой.",
+                    "image": false
+                }
+            ],
+            "risk": "LOW",
+            "result": "OK"
+        },
+        {
+            "field": "home_service_nav_items",
+            "old_state": "populated",
+            "new_state": "unchanged",
+            "operation": "skip",
+            "source": "EXISTING_ACF_VALUE",
+            "classification": "SKIP_NOT_RENDERED",
+            "rollback_available": true,
+            "rollback_value": [
+                {
+                    "title": "Зависимости",
+                    "text": ""
+                },
+                {
+                    "title": "Психическое здоровье",
+                    "text": ""
+                },
+                {
+                    "title": "Расстройства пищевого поведения",
+                    "text": ""
+                }
+            ],
+            "risk": "LOW",
+            "result": "OK"
+        },
+        {
+            "field": "home_advantages",
+            "old_state": "empty",
+            "new_state": "set",
+            "operation": "create",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "STATIC_V9_CONTENT",
+            "rollback_available": true,
+            "rollback_value": null,
+            "risk": "LOW",
+            "result": "OK"
+        },
+        {
+            "field": "home_intro_bands",
+            "old_state": "empty",
+            "new_state": "unchanged",
+            "operation": "skip",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "SKIP_NOT_RENDERED",
+            "rollback_available": true,
+            "rollback_value": null,
+            "risk": "LOW",
+            "result": "OK"
+        },
+        {
+            "field": "home_reviews_teaser",
+            "old_state": "empty",
+            "new_state": "unchanged",
+            "operation": "skip",
+            "source": "DO_NOT_SEED",
+            "classification": "SKIP_DEFER_AFTER_MVP",
+            "rollback_available": true,
+            "rollback_value": null,
+            "risk": "LOW",
+            "result": "OK"
+        },
+        {
+            "field": "home_blog_teaser_enabled",
+            "old_state": "empty",
+            "new_state": "unchanged",
+            "operation": "skip",
+            "source": "DEFER_AFTER_MVP",
+            "classification": "SKIP_DEFER_AFTER_MVP",
+            "rollback_available": true,
+            "rollback_value": null,
+            "risk": "LOW",
+            "result": "OK"
+        },
+        {
+            "field": "home_gallery_media",
+            "old_state": "empty",
+            "new_state": "unchanged",
+            "operation": "skip",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "SKIP_MEDIA_REQUIRED",
+            "rollback_available": true,
+            "rollback_value": null,
+            "risk": "LOW",
+            "result": "OK"
+        },
+        {
+            "field": "home_faq_items",
+            "old_state": "empty",
+            "new_state": "set",
+            "operation": "create",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "rollback_available": true,
+            "rollback_value": null,
+            "risk": "LOW",
+            "result": "OK"
+        },
+        {
+            "field": "home_cta_title",
+            "old_state": "populated",
+            "new_state": "unchanged",
+            "operation": "skip",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "EXISTING_SAFE_VALUE",
+            "rollback_available": true,
+            "rollback_value": "Остались вопросы?",
+            "risk": "LOW",
+            "result": "OK"
+        },
+        {
+            "field": "home_cta_text",
+            "old_state": "populated",
+            "new_state": "unchanged",
+            "operation": "skip",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "EXISTING_SAFE_VALUE",
+            "rollback_available": true,
+            "rollback_value": "Опишите вашу ситуацию в форме заявки, и мы расскажем, как сможем помочь",
+            "risk": "LOW",
+            "result": "OK"
+        }
+    ],
+    "verdict": "SAFE_TO_APPLY_EXACT_HOME_ACF_ALLOWLIST",
+    "result": "PASS"
+}

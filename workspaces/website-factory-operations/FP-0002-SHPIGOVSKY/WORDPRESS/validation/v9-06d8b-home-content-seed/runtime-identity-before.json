@@ -1,0 +1,30 @@
+{
+    "phase": "V9-06D8-B",
+    "generated_at": "2026-07-04T20:43:16+00:00",
+    "runtime_path": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky",
+    "domain": "http://shpigovsky.test/",
+    "db_name": "mars_wp_fp0002",
+    "table_prefix": "fp02_",
+    "db_connection": true,
+    "active_theme": "shpigovsky",
+    "shpigovsky_core_active": true,
+    "acf_pro_active": true,
+    "acf_groups_count": 13,
+    "core_mode": "content_model",
+    "service_cpt_registered": true,
+    "wpilot": {
+        "detected": false,
+        "write_enabled": null
+    },
+    "home_page_id": 4,
+    "home_page_exists": true,
+    "home_page_title": "Главная",
+    "page_on_front": 4,
+    "active_plugins": {
+        "acf-extended-pro/acf-extended.php": "Advanced Custom Fields: Extended PRO",
+        "advanced-custom-fields-pro/acf.php": "Advanced Custom Fields PRO",
+        "metacode-wpilot/metacode-wpilot.php": "MetaCODE WPilot",
+        "shpigovsky-core/shpigovsky-core.php": "Shpigovsky Core"
+    },
+    "result": "PASS"
+}

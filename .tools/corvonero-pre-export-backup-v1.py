@@ -11,10 +11,9 @@ import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
 
-REPO = Path(r"C:\MARS Phenix\AI MARS")
-STORAGE_DIR = Path(
-    r"C:\MARS Phenix\AI MARS STORAGE\backups\corvonero\CORVONERO-PRE-EXPORT-PRODUCTION-2026-06-29"
-)
+REPO = Path(r"X:\AI MARS")
+STORAGE_ROOT = Path(r"X:\AI MARS STORAGE")
+STORAGE_DIR = STORAGE_ROOT / "backups/corvonero/CORVONERO-PRE-EXPORT-PRODUCTION-2026-06-29"
 ARCHIVE_NAME = "CORVONERO-PRE-EXPORT-PRODUCTION-2026-06-29.zip"
 PRIOR_COMMIT = "4472be53ee6475665fa5c37ebd46f430f919e8bf"
 PRIOR_TAG = "corvonero-lp01-final-copy-v3-2026-06"
@@ -715,6 +714,12 @@ def create_archive(head: str, commit_sha: str | None = None) -> dict:
 
 
 def main() -> None:
+    if os.environ.get("CORVONERO_OPERATOR_GATE") != "APPROVED":
+        raise SystemExit(
+            "STOP: CORVONERO_OPERATOR_GATE=APPROVED required. "
+            "This script is not safe for casual execution."
+        )
+
     head = run_git("rev-parse", "HEAD")
     print(f"HEAD={head}")
 

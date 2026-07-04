@@ -1,0 +1,52 @@
+{
+  "phase": "V9-06D8-B",
+  "timestamp": "2026-07-04T20:44:22.804Z",
+  "visible_layout": true,
+  "seeded_sections_appear": true,
+  "global_shell_intact": true,
+  "no_catastrophic_overflow": "NOT_MEASURED_PIXEL_LEVEL",
+  "known_content_media_gaps": [
+    "home_gallery_media",
+    "home_hero_slides.image",
+    "articles-teaser disabled"
+  ],
+  "pixel_perfect_claim": false,
+  "screenshots": [
+    {
+      "screenshot": "desktop-home-after-d8b.png",
+      "route": "/",
+      "viewport": "desktop",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "screenshot": "mobile-home-after-d8b.png",
+      "route": "/",
+      "viewport": "mobile",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "screenshot": "desktop-services-hub-after-d8b.png",
+      "route": "/uslugi/",
+      "viewport": "desktop",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "screenshot": "desktop-service-alkogol-after-d8b.png",
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "viewport": "desktop",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "screenshot": "desktop-contacts-after-d8b.png",
+      "route": "/kontakty/",
+      "viewport": "desktop",
+      "captured": true,
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS"
+}

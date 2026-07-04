@@ -57,7 +57,11 @@ Planning-only PASS. MVP content gap map, ACF/options field inventory, Olga admin
 
 ## V9-06D8-A site options seed (2026-07-05)
 
-D8-A initial run: planning gates PASS; apply BLOCKED (MySQL/HTTP unavailable). Resume apply **COMPLETE**: 11 site options seeded (LOCAL_MVP_PLACEHOLDER from V9 static); 5 fields skipped (operator/DO_NOT_SEED). DB checkpoint `v9-06d8a-site-options-seed-pre-20260705-033228`. Route smoke ALL_200. Options-only writes; no content/meta/menu/rewrite mutations. Local helper `_site_options_seed_runner.php` used but not committed. Evidence: `validation/v9-06d8a-site-options-seed/final-verdict-resume.json`. Report: `reports/FP-0002-V9-06D8A-SITE-OPTIONS-SEED-RESUME-REPORT-v1.md`. Next: D8-B home content seed.
+D8-A initial run: planning gates PASS; apply BLOCKED (MySQL/HTTP unavailable). Resume apply **COMPLETE**: 11 site options seeded (LOCAL_MVP_PLACEHOLDER from V9 static); 5 fields skipped (operator/DO_NOT_SEED). DB checkpoint `v9-06d8a-site-options-seed-pre-20260705-033228`. Route smoke ALL_200. Options-only writes; no content/meta/menu/rewrite mutations. Local helper `_site_options_seed_runner.php` used but not committed. Evidence: `validation/v9-06d8a-site-options-seed/final-verdict-resume.json`. Report: `reports/FP-0002-V9-06D8A-SITE-OPTIONS-SEED-RESUME-REPORT-v1.md`.
+
+## V9-06D8-B home content seed (2026-07-05)
+
+D8-B **COMPLETE (PARTIAL PASS)**: Home page #4 ACF only — `home_advantages` (6 rows) and `home_faq_items` (5 rows) seeded from V9 static; `home_hero_slides` normalize failed (D4 seed retained). Gallery/reviews/blog/media skipped. DB checkpoint `v9-06d8b-home-content-seed-pre-20260704-204316`. Route smoke ALL_200. Home visual smoke PASS. No runtime/source/options/service/contacts writes. Local helper `_home_content_seed_runner.php` used but not committed. Evidence: `validation/v9-06d8b-home-content-seed/final-verdict.json`. Report: `reports/FP-0002-V9-06D8B-HOME-CONTENT-SEED-REPORT-v1.md`. Next: D8-C services MVP content seed.
 
 ## V9 implementation
 

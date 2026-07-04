@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -11,8 +12,8 @@ import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
 
-REPO = Path(r"C:\MARS Phenix\AI MARS")
-STORAGE = Path(r"C:\MARS Phenix\AI MARS STORAGE")
+REPO = Path(r"X:\AI MARS")
+STORAGE = Path(r"X:\AI MARS STORAGE")
 PILOT = REPO / "projects/mars-search-ppc-production/pilots/corvonero"
 REPORTS = REPO / "projects/mars-search-ppc-production/reports"
 TOOLS = REPO / ".tools"
@@ -281,6 +282,12 @@ Manifest file count: {len(manifest_entries)}
 
 
 def main() -> None:
+    if os.environ.get("CORVONERO_OPERATOR_GATE") != "APPROVED":
+        raise SystemExit(
+            "STOP: CORVONERO_OPERATOR_GATE=APPROVED required. "
+            "This script is not safe for casual execution."
+        )
+
     now = datetime.now(timezone.utc).isoformat()
     head_before = run_git("rev-parse", "HEAD")
 

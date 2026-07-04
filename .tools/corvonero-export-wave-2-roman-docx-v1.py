@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import re
 import zipfile
 from datetime import datetime, timezone
@@ -14,10 +15,11 @@ from docx import Document
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.shared import Cm, Pt
 
-REPO = Path(r"C:\MARS Phenix\AI MARS")
+REPO = Path(r"X:\AI MARS")
+STORAGE_ROOT = Path(r"X:\AI MARS STORAGE")
 PILOTS = REPO / "projects/mars-search-ppc-production/pilots/corvonero"
-OUT = Path(r"C:\MARS Phenix\AI MARS STORAGE\exports\corvonero\CORVONERO-LANDING-PAGES-ROMAN-2026-06-29")
-LP01_DIR = Path(r"C:\MARS Phenix\AI MARS STORAGE\exports\corvonero\CORVONERO-EXPORT-WAVE-1-2026-06-29")
+OUT = STORAGE_ROOT / "exports/corvonero/CORVONERO-LANDING-PAGES-ROMAN-2026-06-29"
+LP01_DIR = STORAGE_ROOT / "exports/corvonero/CORVONERO-EXPORT-WAVE-1-2026-06-29"
 EXPORT_DATE = "2026-06-29"
 CHECKPOINT = "2de6bafab4ca80f2e1bf641468f0b973c4c21282"
 PHONE = "+7 (383) 390-29-28"
@@ -605,6 +607,12 @@ def verify_docx(path: Path) -> dict:
 
 
 def main() -> None:
+    if os.environ.get("CORVONERO_OPERATOR_GATE") != "APPROVED":
+        raise SystemExit(
+            "STOP: CORVONERO_OPERATOR_GATE=APPROVED required. "
+            "This script is not safe for casual execution."
+        )
+
     OUT.mkdir(parents=True, exist_ok=True)
     outputs = []
 

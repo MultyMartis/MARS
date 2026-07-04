@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
-"""Corvonero Commander Wave 1 — split combined import candidate into five campaign workbooks."""
+"""Corvonero Commander Wave 1 — split combined import candidate into five campaign workbooks.
+
+C2c hold: Path rewrite does not authorize Commander import, Direct launch,
+account mutation, advertising start, or Storage export execution.
+"""
 
 from __future__ import annotations
 
 import hashlib
 import json
+import os
 import re
 import subprocess
 import zipfile
@@ -16,8 +21,8 @@ from typing import Any
 from openpyxl import Workbook, load_workbook
 from openpyxl.styles import Alignment, Font, PatternFill
 
-REPO = Path(r"C:\MARS Phenix\AI MARS")
-STORAGE = Path(r"C:\MARS Phenix\AI MARS STORAGE")
+REPO = Path(r"X:\AI MARS")
+STORAGE = Path(r"X:\AI MARS STORAGE")
 PILOTS = REPO / "projects/mars-search-ppc-production/pilots/corvonero"
 REPORTS = REPO / "projects/mars-search-ppc-production/reports"
 TOOLS = REPO / ".tools"
@@ -600,6 +605,12 @@ def write_md(path: Path, text: str) -> None:
 
 
 def main() -> None:
+    if os.environ.get("CORVONERO_OPERATOR_GATE") != "APPROVED":
+        raise SystemExit(
+            "STOP: CORVONERO_OPERATOR_GATE=APPROVED required. "
+            "This script is not safe for casual execution."
+        )
+
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     AUDIT_TEMP.mkdir(parents=True, exist_ok=True)
 

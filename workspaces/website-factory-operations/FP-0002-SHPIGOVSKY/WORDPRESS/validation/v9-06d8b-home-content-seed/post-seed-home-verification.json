@@ -1,0 +1,97 @@
+{
+    "phase": "V9-06D8-B",
+    "generated_at": "2026-07-04T20:43:17+00:00",
+    "fields": [
+        {
+            "field": "home_hero_slides",
+            "expected_state": "seeded",
+            "actual_state": "populated",
+            "hash_match": false,
+            "result": "FAIL"
+        },
+        {
+            "field": "home_service_nav_items",
+            "expected_state": "unchanged",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "field": "home_advantages",
+            "expected_state": "seeded",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "field": "home_intro_bands",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "field": "home_reviews_teaser",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "field": "home_blog_teaser_enabled",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "field": "home_gallery_media",
+            "expected_state": "unchanged",
+            "actual_state": "empty",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "field": "home_faq_items",
+            "expected_state": "seeded",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "field": "home_cta_title",
+            "expected_state": "unchanged",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "field": "home_cta_text",
+            "expected_state": "unchanged",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        }
+    ],
+    "sections": [
+        {
+            "section": "feature-grid",
+            "expected": "visible when home_advantages populated",
+            "actual": "visible",
+            "result": "PASS"
+        },
+        {
+            "section": "faq",
+            "expected": "visible when home_faq_items populated",
+            "actual": "visible",
+            "result": "PASS"
+        },
+        {
+            "section": "gallery",
+            "expected": "hidden without media",
+            "actual": "hidden",
+            "result": "PASS"
+        }
+    ],
+    "result": "PARTIAL"
+}

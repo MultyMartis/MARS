@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import re
 import zipfile
 from collections import Counter, defaultdict
@@ -19,8 +20,9 @@ from openpyxl import Workbook
 from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.utils import get_column_letter
 
-REPO = Path(r"C:\MARS Phenix\AI MARS")
-OUT = Path(r"C:\MARS Phenix\AI MARS STORAGE\exports\corvonero\CORVONERO-EXPORT-WAVE-1-2026-06-29")
+REPO = Path(r"X:\AI MARS")
+STORAGE_ROOT = Path(r"X:\AI MARS STORAGE")
+OUT = STORAGE_ROOT / "exports/corvonero/CORVONERO-EXPORT-WAVE-1-2026-06-29"
 CHECKPOINT = "2de6bafab4ca80f2e1bf641468f0b973c4c21282"
 EXPORT_DATE = "2026-06-29"
 
@@ -848,6 +850,12 @@ def verify_docx(path: Path) -> bool:
 
 
 def main():
+    if os.environ.get("CORVONERO_OPERATOR_GATE") != "APPROVED":
+        raise SystemExit(
+            "STOP: CORVONERO_OPERATOR_GATE=APPROVED required. "
+            "This script is not safe for casual execution."
+        )
+
     OUT.mkdir(parents=True, exist_ok=True)
     docx_path = OUT / DOCX_NAME
     xlsx_path = OUT / XLSX_NAME

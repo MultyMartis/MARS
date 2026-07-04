@@ -1,0 +1,17 @@
+{
+    "phase": "V9-06D8-B",
+    "generated_at": "2026-07-04T20:43:27+00:00",
+    "verdict": "PARTIAL PASS",
+    "home_content_seed": "COMPLETE",
+    "runtime_delivery": "NOT_PERFORMED",
+    "source_changes": 0,
+    "home_acf_meta_writes": 2,
+    "home_acf_meta_write_errors": 1,
+    "home_acf_meta_write_error_note": "home_hero_slides update_field false; D4 minimal seed retained",
+    "mvp_home_content": "SEEDED",
+    "media_dependent_fields": "SKIPPED",
+    "operator_review_fields": "SKIPPED",
+    "route_smoke": "ALL_200",
+    "recommended_next_phase": "CREATE_V9_06D8C_SERVICES_MVP_CONTENT_SEED_TASK",
+    "v9_06d8c": "READY FOR OPERATOR REVIEW"
+}

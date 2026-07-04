@@ -1,0 +1,28 @@
+{
+    "phase": "V9-06D8-B",
+    "generated_at": "2026-07-04T20:43:27+00:00",
+    "checkpoint_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d8b-home-content-seed-pre-20260704-204316",
+    "changed_home_fields": [
+        {
+            "field": "home_advantages",
+            "old_value": null,
+            "rollback": "update_field('home_advantages', baseline_value, 4)"
+        },
+        {
+            "field": "home_faq_items",
+            "old_value": null,
+            "rollback": "update_field('home_faq_items', baseline_value, 4)"
+        }
+    ],
+    "old_values_captured": true,
+    "per_field_rollback": "home-page-4-pre-values.json + update_field per allowlisted field",
+    "full_db_rollback": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d8b-home-content-seed-pre-20260704-204316/mars_wp_fp0002.sql",
+    "rollback_tested": false,
+    "rollback_not_executed_reason": "Seed succeeded; rollback not required",
+    "post_rollback_validation_plan": [
+        "Home /",
+        "Seven route smoke",
+        "Options snapshot unchanged"
+    ],
+    "result": "PASS"
+}

@@ -1,0 +1,96 @@
+{
+    "phase": "V9-06D8-B",
+    "generated_at": "2026-07-04T20:43:16+00:00",
+    "sections": [
+        {
+            "section": "hero",
+            "v9_ref": "src/partials/sections/hero.html",
+            "target_fields": [
+                "home_hero_slides"
+            ],
+            "seed_decision": "WRITE_TEXT_ONLY",
+            "reason": "Title/tagline from V9; image MEDIA_REQUIRED"
+        },
+        {
+            "section": "feature-grid",
+            "v9_ref": "src/partials/sections/home-feature-grid.html",
+            "target_fields": [
+                "home_advantages"
+            ],
+            "seed_decision": "WRITE",
+            "reason": "Six cards traceable; improves visible MVP section"
+        },
+        {
+            "section": "treatment-prevention",
+            "v9_ref": "Service CPT + static lead in theme",
+            "target_fields": [
+                "home_service_nav_items"
+            ],
+            "seed_decision": "SKIP",
+            "reason": "CPT accordion primary; nav items fallback only"
+        },
+        {
+            "section": "rehabilitation-program",
+            "v9_ref": "Static in template-parts/home/rehabilitation-program.php",
+            "target_fields": [],
+            "seed_decision": "NO_ACF_FIELD",
+            "reason": "Hardcoded in D7-B theme partial"
+        },
+        {
+            "section": "gallery",
+            "v9_ref": "src/partials/sections/home-gallery.html",
+            "target_fields": [
+                "home_gallery_media"
+            ],
+            "seed_decision": "SKIP_MEDIA",
+            "reason": "Requires attachment IDs; no upload authorized"
+        },
+        {
+            "section": "articles-teaser",
+            "v9_ref": "src/partials/sections/home-articles.html",
+            "target_fields": [
+                "home_blog_teaser_enabled"
+            ],
+            "seed_decision": "SKIP",
+            "reason": "No posts; enabling would show nothing"
+        },
+        {
+            "section": "faq",
+            "v9_ref": "src/partials/sections/faq.html",
+            "target_fields": [
+                "home_faq_items"
+            ],
+            "seed_decision": "WRITE",
+            "reason": "V9 FAQ Q2–6 with technical placeholder answers; Q1 lorem skipped"
+        },
+        {
+            "section": "final-form/CTA",
+            "v9_ref": "src/partials/sections/final-form.html",
+            "target_fields": [
+                "home_cta_title",
+                "home_cta_text"
+            ],
+            "seed_decision": "SKIP",
+            "reason": "Already seeded D4; matches V9/static fallback"
+        },
+        {
+            "section": "recovery-intro",
+            "v9_ref": "src/partials/sections/home-recovery-intro.html",
+            "target_fields": [
+                "home_intro_bands"
+            ],
+            "seed_decision": "SKIP_NOT_RENDERED",
+            "reason": "Section not in D7-B front-page orchestration"
+        },
+        {
+            "section": "reviews",
+            "v9_ref": "src/partials/sections/reviews.html",
+            "target_fields": [
+                "home_reviews_teaser"
+            ],
+            "seed_decision": "DO_NOT_SEED",
+            "reason": "Do not invent reviews"
+        }
+    ],
+    "result": "PASS"
+}

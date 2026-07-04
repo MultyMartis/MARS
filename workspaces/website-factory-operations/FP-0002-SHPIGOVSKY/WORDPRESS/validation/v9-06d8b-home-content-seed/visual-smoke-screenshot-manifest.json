@@ -1,0 +1,62 @@
+{
+  "phase": "V9-06D8-B",
+  "timestamp": "2026-07-04T20:44:22.799Z",
+  "evidence_root": "WORDPRESS/validation/v9-06d8b-home-content-seed/screenshots/",
+  "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "screenshots": [
+    {
+      "file": "desktop-home-after-d8b.png",
+      "path": "screenshots/desktop-home-after-d8b.png",
+      "route": "/",
+      "viewport": "desktop",
+      "bytes": 45110,
+      "url": "http://shpigovsky.test/",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "file": "mobile-home-after-d8b.png",
+      "path": "screenshots/mobile-home-after-d8b.png",
+      "route": "/",
+      "viewport": "mobile",
+      "bytes": 32779,
+      "url": "http://shpigovsky.test/",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "file": "desktop-services-hub-after-d8b.png",
+      "path": "screenshots/desktop-services-hub-after-d8b.png",
+      "route": "/uslugi/",
+      "viewport": "desktop",
+      "bytes": 58679,
+      "url": "http://shpigovsky.test/uslugi/",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "file": "desktop-service-alkogol-after-d8b.png",
+      "path": "screenshots/desktop-service-alkogol-after-d8b.png",
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "viewport": "desktop",
+      "bytes": 102459,
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "file": "desktop-contacts-after-d8b.png",
+      "path": "screenshots/desktop-contacts-after-d8b.png",
+      "route": "/kontakty/",
+      "viewport": "desktop",
+      "bytes": 77144,
+      "url": "http://shpigovsky.test/kontakty/",
+      "captured": true,
+      "result": "PASS"
+    }
+  ],
+  "captured": 5,
+  "failed": 0,
+  "capture_status": "COMPLETE",
+  "result": "PASS"
+}

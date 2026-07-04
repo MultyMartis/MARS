@@ -1,0 +1,270 @@
+{
+    "phase": "V9-06D8-B",
+    "generated_at": "2026-07-04T20:43:16+00:00",
+    "page_id": 4,
+    "payload": {
+        "home_hero_slides": {
+            "value": [
+                {
+                    "title": "Шпиговский дом",
+                    "text": "Центр профилактики и лечения зависимостей"
+                }
+            ],
+            "source": "V9_STATIC_SOURCE",
+            "classification": "STATIC_V9_CONTENT",
+            "write": true,
+            "v9_ref": "src/partials/sections/hero.html",
+            "skip_subfields": [
+                "image"
+            ]
+        },
+        "home_advantages": {
+            "value": [
+                {
+                    "title": "до 15 резидентов",
+                    "text": "В нашем Доме ценится личное пространство каждого. Такой формат позволяет проявлять заботу о каждом, уделять максимум терапевтического внимания."
+                },
+                {
+                    "title": "нет решеток и замков",
+                    "text": "В нашем Доме нет запертых дверей и решеток на окнах. Мы не закрываем, не удерживаем насильно — мы успешно работаем с мотивацией."
+                },
+                {
+                    "title": "дипломированные специалисты",
+                    "text": "Все групповые мероприятия ведут дипломированные специалисты — психологи."
+                },
+                {
+                    "title": "Бассейн и сауна",
+                    "text": "Для формирования новых полезных привычек и желаний. Находятся на цокольном этаже, доступ к ним открыт всегда."
+                },
+                {
+                    "title": "Тренажерный комплекс",
+                    "text": "Для поддержания физической формы и получения удовольствия от спортивных нагрузок."
+                },
+                {
+                    "title": "Выбор категории номера",
+                    "text": "У нас созданы прекрасные условия для комфортного преодоления зависимости и возможности изменить свою жизнь к лучшему."
+                }
+            ],
+            "source": "V9_STATIC_SOURCE",
+            "classification": "STATIC_V9_CONTENT",
+            "write": true,
+            "v9_ref": "src/partials/sections/home-feature-grid.html",
+            "skip_subfields": []
+        },
+        "home_faq_items": {
+            "value": [
+                {
+                    "question": "Анонимное лечение или нет?",
+                    "answer": "Это временный технический текст для проверки блока FAQ. Здесь будет размещён финальный ответ о формате обращения и порядке первичного контакта с центром. Текст не является маркетинговым обещанием и не заменяет консультацию специалиста. Финальная редакция будет согласована оператором отдельно."
+                },
+                {
+                    "question": "Как долго длится реабилитация?",
+                    "answer": "Это временный технический текст для проверки высоты аккордеона. В финальной версии здесь будет описан типовой порядок этапов сопровождения без указания конкретных сроков. Длительность программы зависит от индивидуального запроса и согласуется на консультации."
+                },
+                {
+                    "question": "Как уговорить близкого пройти лечение от зависимости?",
+                    "answer": "Это временный технический текст для проверки блока FAQ. Здесь будет размещён финальный ответ о том, как семье подготовиться к разговору с близким человеком. Материал носит справочный характер и не содержит обещаний результата."
+                },
+                {
+                    "question": "Можно ли самостоятельно перестать употреблять наркотики?",
+                    "answer": "Это временный технический текст для проверки аккордеона. В финальной версии здесь будет нейтральное описание сценариев, когда самостоятельные попытки требуют дополнительной поддержки. Текст не содержит медицинских утверждений и не описывает гарантированный исход."
+                },
+                {
+                    "question": "Как понять, что у меня есть проблемы с алкоголем?",
+                    "answer": "Это временный технический текст для проверки блока FAQ. Здесь будет размещён финальный ответ с ориентирами для самонаблюдения без диагностических формулировок. Материал предназначен для проверки типографики; контент будет заменён после согласования с оператором."
+                }
+            ],
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "write": true,
+            "v9_ref": "src/partials/sections/faq.html (items 2–6; item 1 lorem skipped)",
+            "skip_subfields": []
+        },
+        "home_cta_title": {
+            "value": "Остались вопросы?",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "EXISTING_SAFE_VALUE",
+            "write": false,
+            "v9_ref": "src/partials/sections/final-form.html; likely seeded D4"
+        },
+        "home_cta_text": {
+            "value": "Опишите вашу ситуацию в форме заявки, и мы расскажем, как сможем помочь",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "EXISTING_SAFE_VALUE",
+            "write": false,
+            "v9_ref": "src/partials/sections/final-form.html; likely seeded D4; D8-A global_cta also set"
+        },
+        "home_service_nav_items": {
+            "value": [],
+            "source": "EXISTING_ACF_VALUE",
+            "classification": "SKIP_NOT_RENDERED",
+            "write": false,
+            "v9_ref": "Treatment-prevention uses Service CPT query; D4 minimal seed may exist"
+        },
+        "home_intro_bands": {
+            "value": [],
+            "source": "V9_STATIC_SOURCE",
+            "classification": "SKIP_NOT_RENDERED",
+            "write": false,
+            "v9_ref": "home-recovery-intro not wired in D7-B front-page.php"
+        },
+        "home_reviews_teaser": {
+            "value": [],
+            "source": "DO_NOT_SEED",
+            "classification": "SKIP_DEFER_AFTER_MVP",
+            "write": false,
+            "v9_ref": "reviews.html — do not invent reviews"
+        },
+        "home_blog_teaser_enabled": {
+            "value": false,
+            "source": "DEFER_AFTER_MVP",
+            "classification": "SKIP_DEFER_AFTER_MVP",
+            "write": false,
+            "v9_ref": "No published posts for teaser; articles-teaser would remain hidden"
+        },
+        "home_gallery_media": {
+            "value": [],
+            "source": "V9_STATIC_SOURCE",
+            "classification": "SKIP_MEDIA_REQUIRED",
+            "write": false,
+            "v9_ref": "src/partials/sections/home-gallery.html — media upload not authorized"
+        }
+    },
+    "entries": [
+        {
+            "field": "home_hero_slides",
+            "old_state": "populated",
+            "proposed_value_state": "set",
+            "proposed_value_preview": "repeater[1 rows]",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "STATIC_V9_CONTENT",
+            "write": true,
+            "rollback_value": [
+                {
+                    "title": "Шпиговский дом",
+                    "text": "Центр профилактики и лечения зависимостей. Минимальное наполнение для визуальной проверки маршрута. Полная миграция контента выполняется отдельной фазой.",
+                    "image": false
+                }
+            ],
+            "skip_reason": ""
+        },
+        {
+            "field": "home_advantages",
+            "old_state": "empty",
+            "proposed_value_state": "set",
+            "proposed_value_preview": "repeater[6 rows]",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "STATIC_V9_CONTENT",
+            "write": true,
+            "rollback_value": null,
+            "skip_reason": ""
+        },
+        {
+            "field": "home_faq_items",
+            "old_state": "empty",
+            "proposed_value_state": "set",
+            "proposed_value_preview": "repeater[5 rows]",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "write": true,
+            "rollback_value": null,
+            "skip_reason": ""
+        },
+        {
+            "field": "home_cta_title",
+            "old_state": "populated",
+            "proposed_value_state": "unchanged",
+            "proposed_value_preview": "unchanged/skip",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "EXISTING_SAFE_VALUE",
+            "write": false,
+            "rollback_value": "Остались вопросы?",
+            "skip_reason": "EXISTING_SAFE_VALUE"
+        },
+        {
+            "field": "home_cta_text",
+            "old_state": "populated",
+            "proposed_value_state": "unchanged",
+            "proposed_value_preview": "unchanged/skip",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "EXISTING_SAFE_VALUE",
+            "write": false,
+            "rollback_value": "Опишите вашу ситуацию в форме заявки, и мы расскажем, как сможем помочь",
+            "skip_reason": "EXISTING_SAFE_VALUE"
+        },
+        {
+            "field": "home_service_nav_items",
+            "old_state": "populated",
+            "proposed_value_state": "unchanged",
+            "proposed_value_preview": "unchanged/skip",
+            "source": "EXISTING_ACF_VALUE",
+            "classification": "SKIP_NOT_RENDERED",
+            "write": false,
+            "rollback_value": [
+                {
+                    "title": "Зависимости",
+                    "text": ""
+                },
+                {
+                    "title": "Психическое здоровье",
+                    "text": ""
+                },
+                {
+                    "title": "Расстройства пищевого поведения",
+                    "text": ""
+                }
+            ],
+            "skip_reason": "SKIP_NOT_RENDERED"
+        },
+        {
+            "field": "home_intro_bands",
+            "old_state": "empty",
+            "proposed_value_state": "unchanged",
+            "proposed_value_preview": "unchanged/skip",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "SKIP_NOT_RENDERED",
+            "write": false,
+            "rollback_value": null,
+            "skip_reason": "SKIP_NOT_RENDERED"
+        },
+        {
+            "field": "home_reviews_teaser",
+            "old_state": "empty",
+            "proposed_value_state": "unchanged",
+            "proposed_value_preview": "unchanged/skip",
+            "source": "DO_NOT_SEED",
+            "classification": "SKIP_DEFER_AFTER_MVP",
+            "write": false,
+            "rollback_value": null,
+            "skip_reason": "SKIP_DEFER_AFTER_MVP"
+        },
+        {
+            "field": "home_blog_teaser_enabled",
+            "old_state": "empty",
+            "proposed_value_state": "unchanged",
+            "proposed_value_preview": "unchanged/skip",
+            "source": "DEFER_AFTER_MVP",
+            "classification": "SKIP_DEFER_AFTER_MVP",
+            "write": false,
+            "rollback_value": null,
+            "skip_reason": "SKIP_DEFER_AFTER_MVP"
+        },
+        {
+            "field": "home_gallery_media",
+            "old_state": "empty",
+            "proposed_value_state": "unchanged",
+            "proposed_value_preview": "unchanged/skip",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "SKIP_MEDIA_REQUIRED",
+            "write": false,
+            "rollback_value": null,
+            "skip_reason": "SKIP_MEDIA_REQUIRED"
+        }
+    ],
+    "writable_fields": [
+        "home_hero_slides",
+        "home_advantages",
+        "home_faq_items"
+    ],
+    "result": "PASS"
+}

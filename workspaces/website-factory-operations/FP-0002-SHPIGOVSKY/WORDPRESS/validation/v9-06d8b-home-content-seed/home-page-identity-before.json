@@ -1,0 +1,91 @@
+{
+    "phase": "V9-06D8-B",
+    "generated_at": "2026-07-04T20:43:16+00:00",
+    "page_id": 4,
+    "title": "Главная",
+    "slug": "glavnaya",
+    "status": "publish",
+    "is_front_page": true,
+    "acf_fields": {
+        "home_hero_slides": {
+            "field": "home_hero_slides",
+            "value": [
+                {
+                    "title": "Шпиговский дом",
+                    "text": "Центр профилактики и лечения зависимостей. Минимальное наполнение для визуальной проверки маршрута. Полная миграция контента выполняется отдельной фазой.",
+                    "image": false
+                }
+            ],
+            "hash": "cae8b18a9b9b698462f33d6f8bfd4b74f44afd2d266886a0d08bea1d9443f3df",
+            "empty": false
+        },
+        "home_service_nav_items": {
+            "field": "home_service_nav_items",
+            "value": [
+                {
+                    "title": "Зависимости",
+                    "text": ""
+                },
+                {
+                    "title": "Психическое здоровье",
+                    "text": ""
+                },
+                {
+                    "title": "Расстройства пищевого поведения",
+                    "text": ""
+                }
+            ],
+            "hash": "15065105cc63e80f8ab46ca5041a8bbb02d850b8552bdd2f97e1d8e4a56d7dfc",
+            "empty": false
+        },
+        "home_advantages": {
+            "field": "home_advantages",
+            "value": null,
+            "hash": "empty",
+            "empty": true
+        },
+        "home_intro_bands": {
+            "field": "home_intro_bands",
+            "value": null,
+            "hash": "empty",
+            "empty": true
+        },
+        "home_reviews_teaser": {
+            "field": "home_reviews_teaser",
+            "value": null,
+            "hash": "empty",
+            "empty": true
+        },
+        "home_blog_teaser_enabled": {
+            "field": "home_blog_teaser_enabled",
+            "value": null,
+            "hash": "empty",
+            "empty": true
+        },
+        "home_gallery_media": {
+            "field": "home_gallery_media",
+            "value": null,
+            "hash": "empty",
+            "empty": true
+        },
+        "home_faq_items": {
+            "field": "home_faq_items",
+            "value": null,
+            "hash": "empty",
+            "empty": true
+        },
+        "home_cta_title": {
+            "field": "home_cta_title",
+            "value": "Остались вопросы?",
+            "hash": "7049984059f87bd23631d1fcb9702e78ba46373c47d448c520a5a424d67a0f82",
+            "empty": false
+        },
+        "home_cta_text": {
+            "field": "home_cta_text",
+            "value": "Опишите вашу ситуацию в форме заявки, и мы расскажем, как сможем помочь",
+            "hash": "2a115162fe554d2507e31325547ae96df9a9743bab92cc241d6e052774f7b134",
+            "empty": false
+        }
+    },
+    "result": "PASS"
+}
