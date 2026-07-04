@@ -1,0 +1,32 @@
+{
+  "task": "V9-06D7-C",
+  "phase": "SERVICES_HUB_TEMPLATE_SOURCE",
+  "generated_at": "2026-07-05T00:00:00+07:00",
+  "theme_version": "0.5.0-d7c-services-hub",
+  "preflight_head": "3d42853a3035c26639cfd6d0f242e22eb82bf777",
+  "theme_files": [
+    "theme/shpigovsky/functions.php",
+    "theme/shpigovsky/inc/services-hub-helpers.php",
+    "theme/shpigovsky/page-templates/services-hub.php",
+    "theme/shpigovsky/template-parts/services-hub/hero.php",
+    "theme/shpigovsky/template-parts/services-hub/service-groups.php",
+    "theme/shpigovsky/template-parts/services-hub/service-group.php",
+    "theme/shpigovsky/template-parts/services-hub/empty-state.php",
+    "theme/shpigovsky/template-parts/services-hub/faq.php",
+    "theme/shpigovsky/template-parts/services-hub/rehabilitation-program.php",
+    "theme/shpigovsky/template-parts/components/service-card.php"
+  ],
+  "validation_evidence": [
+    "validation/v9-06d7c-services-hub-template-source/v9-services-hub-inventory.json",
+    "validation/v9-06d7c-services-hub-template-source/wp-services-hub-source-inventory.json",
+    "validation/v9-06d7c-services-hub-template-source/services-hub-acf-cpt-binding-inventory.json",
+    "validation/v9-06d7c-services-hub-template-source/services-hub-fallback-behavior-validation.json",
+    "validation/v9-06d7c-services-hub-template-source/services-hub-source-change-manifest.json",
+    "validation/v9-06d7c-services-hub-template-source/php-lint-validation.json",
+    "validation/v9-06d7c-services-hub-template-source/source-safety-scan.json",
+    "validation/v9-06d7c-services-hub-template-source/no-scope-drift-validation.json",
+    "validation/v9-06d7c-services-hub-template-source/final-verdict.json"
+  ],
+  "runtime_delivery_performed": false,
+  "result": "PASS"
+}

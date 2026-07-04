@@ -1,0 +1,76 @@
+{
+  "task": "V9-06D7-C",
+  "generated_at": "2026-07-04T18:16:18.052490+00:00",
+  "files_scanned": [
+    {
+      "file": "theme/shpigovsky/functions.php",
+      "forbidden_hits": [],
+      "passed": true
+    },
+    {
+      "file": "theme/shpigovsky/inc/services-hub-helpers.php",
+      "forbidden_hits": [],
+      "passed": true
+    },
+    {
+      "file": "theme/shpigovsky/page-templates/services-hub.php",
+      "forbidden_hits": [],
+      "passed": true
+    },
+    {
+      "file": "theme/shpigovsky/template-parts/services-hub/hero.php",
+      "forbidden_hits": [],
+      "passed": true
+    },
+    {
+      "file": "theme/shpigovsky/template-parts/services-hub/service-groups.php",
+      "forbidden_hits": [],
+      "passed": true
+    },
+    {
+      "file": "theme/shpigovsky/template-parts/services-hub/service-group.php",
+      "forbidden_hits": [],
+      "passed": true
+    },
+    {
+      "file": "theme/shpigovsky/template-parts/services-hub/empty-state.php",
+      "forbidden_hits": [],
+      "passed": true
+    },
+    {
+      "file": "theme/shpigovsky/template-parts/services-hub/faq.php",
+      "forbidden_hits": [],
+      "passed": true
+    },
+    {
+      "file": "theme/shpigovsky/template-parts/services-hub/rehabilitation-program.php",
+      "forbidden_hits": [],
+      "passed": true
+    },
+    {
+      "file": "theme/shpigovsky/template-parts/components/service-card.php",
+      "forbidden_hits": [],
+      "passed": true
+    }
+  ],
+  "forbidden_patterns": [
+    "update_option",
+    "add_option",
+    "delete_option",
+    "wp_insert_post",
+    "wp_update_post",
+    "wp_delete_post",
+    "update_post_meta",
+    "delete_post_meta",
+    "add_post_meta",
+    "acf_update",
+    "acfe",
+    "flush_rewrite_rules",
+    "wp_remote_",
+    "curl_",
+    "file_put_contents",
+    "unlink",
+    "rmdir"
+  ],
+  "result": "PASS"
+}

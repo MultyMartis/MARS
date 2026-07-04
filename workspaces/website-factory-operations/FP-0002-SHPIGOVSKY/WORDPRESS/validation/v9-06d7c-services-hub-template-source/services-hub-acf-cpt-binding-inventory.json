@@ -1,0 +1,45 @@
+{
+  "task": "V9-06D7-C",
+  "generated_at": "2026-07-05T00:00:00+07:00",
+  "acf_group": "group_fp02_page_services_hub",
+  "acf_fields": {
+    "services_hub_intro": {
+      "type": "textarea",
+      "seeded": true,
+      "binding": "hero tagline fallback"
+    },
+    "services_hub_query_mode": {
+      "type": "select",
+      "choices": ["grouped_by_parent", "flat"],
+      "default": "grouped_by_parent",
+      "binding": "service group query strategy"
+    },
+    "services_hub_show_placeholders": {
+      "type": "true_false",
+      "binding": "empty-state section visibility when CPT query empty"
+    },
+    "services_hub_faq_items": {
+      "type": "repeater",
+      "sub_fields": ["question", "answer"],
+      "binding": "services-hub/faq.php"
+    }
+  },
+  "service_cpt": {
+    "post_type": "service",
+    "hierarchy": "parent (post_parent=0) + children",
+    "known_parents": [
+      {"id": 73, "slug": "zavisimosti", "title": "Зависимости"},
+      {"id": 77, "slug": "psihicheskoe-zdorovie", "title": "Психическое здоровье"},
+      {"id": 84, "slug": "rasstroystva-pischevogo-povedeniya", "title": "Расстройства пищевого поведения"}
+    ],
+    "total_objects": 15,
+    "service_fields_used": ["hero_lead", "intro_text", "intro_note", "post_title", "post_excerpt", "permalink"]
+  },
+  "gaps": [
+    "Category hub gallery not modeled in ACF",
+    "Category hub lead copy not on Services Hub page ACF (read from parent service fields)",
+    "Genotyping hub section has no Service CPT parent object",
+    "Hero image not in Services Hub ACF"
+  ],
+  "result": "COMPLETE"
+}

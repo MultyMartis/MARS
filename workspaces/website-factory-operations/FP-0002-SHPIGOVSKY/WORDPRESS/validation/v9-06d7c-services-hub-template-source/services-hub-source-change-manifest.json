@@ -1,0 +1,34 @@
+{
+  "task": "V9-06D7-C",
+  "generated_at": "2026-07-05T00:00:00+07:00",
+  "theme_version": "0.5.0-d7c-services-hub",
+  "preflight_head": "3d42853a3035c26639cfd6d0f242e22eb82bf777",
+  "changed_php": [
+    "theme/shpigovsky/functions.php",
+    "theme/shpigovsky/inc/services-hub-helpers.php",
+    "theme/shpigovsky/page-templates/services-hub.php",
+    "theme/shpigovsky/template-parts/services-hub/hero.php",
+    "theme/shpigovsky/template-parts/services-hub/service-groups.php",
+    "theme/shpigovsky/template-parts/services-hub/service-group.php",
+    "theme/shpigovsky/template-parts/services-hub/empty-state.php",
+    "theme/shpigovsky/template-parts/services-hub/faq.php",
+    "theme/shpigovsky/template-parts/services-hub/rehabilitation-program.php",
+    "theme/shpigovsky/template-parts/components/service-card.php"
+  ],
+  "architecture_docs": [
+    "architecture/FP-0002-V9-06D7C-SERVICES-HUB-INVENTORY-v1.md",
+    "architecture/FP-0002-V9-06D7C-SERVICES-HUB-ACF-CPT-BINDING-MAP-v1.md",
+    "architecture/FP-0002-V9-06D7C-SERVICES-HUB-SECTION-MAP-v1.md",
+    "architecture/FP-0002-V9-06D7C-SERVICES-HUB-SECTION-MAP-v1.json",
+    "architecture/FP-0002-V9-06D7C-RUNTIME-DELIVERY-GATE-v1.md",
+    "architecture/FP-0002-V9-06D7C-SOURCE-CHANGE-MANIFEST-v1.md",
+    "architecture/FP-0002-V9-06D7C-NEXT-STEP-RECOMMENDATION-v1.md"
+  ],
+  "report": "reports/FP-0002-V9-06D7C-SERVICES-HUB-TEMPLATE-SOURCE-REPORT-v1.md",
+  "plugin_source_changed": false,
+  "acf_json_changed": false,
+  "v9_src_changed": false,
+  "v9_dist_changed": false,
+  "runtime_delivery_performed": false,
+  "result": "PASS"
+}

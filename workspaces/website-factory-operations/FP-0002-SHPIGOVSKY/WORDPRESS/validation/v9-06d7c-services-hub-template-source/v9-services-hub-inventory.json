@@ -1,0 +1,82 @@
+{
+  "task": "V9-06D7-C",
+  "phase": "SERVICES_HUB_TEMPLATE_SOURCE",
+  "generated_at": "2026-07-05T00:00:00+07:00",
+  "canonical_workspace": "X:\\AI MARS\\workspaces\\fp-0002-shpigovsky-v9",
+  "source_page": "src/pages/uslugi.html",
+  "dist_page": "dist/uslugi/index.html",
+  "dist_readable_in_agent": "SAFE_UNKNOWN_CURSORIGNORE",
+  "body_class": "page-uslugi",
+  "section_order": [
+    "hero-inner",
+    "services-category-hub (addictions)",
+    "services-category-hub (mental-health)",
+    "services-category-hub (eating-disorders)",
+    "services-category-hub (genotyping)",
+    "home-rehabilitation-program",
+    "founder-quote",
+    "comfort",
+    "faq",
+    "final-form"
+  ],
+  "section_classes": {
+    "hero": "hero hero--inner",
+    "category_hub": "services-category-hub + modifier (--addictions, --mental-health, --eating-disorders, --genotyping, --no-gallery, --compact)",
+    "service_card": "services-category-hub__service",
+    "rehabilitation": "home-rehabilitation-program",
+    "faq": "faq",
+    "final_form": "final-form"
+  },
+  "service_group_structure": {
+    "parent_sections": 4,
+    "card_markup": "article.services-category-hub__service > h3 > a.services-category-hub__service-link",
+    "card_fields": ["title", "url", "optional text paragraph"],
+    "cta_per_group": "button[data-modal-open=consultation]"
+  },
+  "routes_assumed": [
+    "/uslugi/",
+    "/uslugi/zavisimosti/",
+    "/uslugi/psihicheskoe-zdorovie/",
+    "/uslugi/rasstroystva-pischevogo-povedeniya/",
+    "/uslugi/genotipirovanie/",
+    "child service permalinks under parent slugs"
+  ],
+  "assets_referenced": [
+    "assets/img/content/services/services-hero.webp",
+    "assets/img/content/services/services-hub-decor.webp",
+    "assets/img/content/services/services-addictions-*.webp",
+    "assets/img/content/services/services-mental-health-*.webp",
+    "assets/svg/external-link.svg"
+  ],
+  "js_dependencies": [
+    "swiper-bundle.min.js",
+    "fancybox.umd.js",
+    "inputmask.min.js",
+    "assets/js/main.js"
+  ],
+  "shared_shell_dependencies": [
+    "layout/header.html",
+    "layout/footer.html",
+    "layout/global-consultation-modal.html",
+    "data-modal-open consultation CTA pattern"
+  ],
+  "integrate_now": [
+    "hero-inner",
+    "services-category-hub groups from Service CPT",
+    "service cards from child CPT query",
+    "home-rehabilitation-program static block",
+    "faq when services_hub_faq_items present",
+    "final-form component reuse"
+  ],
+  "deferred": [
+    "hero background image (no packaged theme asset / no ACF image field)",
+    "category hub decor image",
+    "category hub gallery images",
+    "founder-quote section (no Services Hub ACF field)",
+    "comfort section (no Services Hub ACF field)",
+    "genotyping parent group (not in 15-object Service CPT skeleton)",
+    "production card copy parity (content migration)",
+    "lead-form live submission"
+  ],
+  "result": "COMPLETE"
+}

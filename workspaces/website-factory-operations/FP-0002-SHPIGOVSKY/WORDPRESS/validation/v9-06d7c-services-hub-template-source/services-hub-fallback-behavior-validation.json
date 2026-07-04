@@ -1,0 +1,64 @@
+{
+  "task": "V9-06D7-C",
+  "generated_at": "2026-07-05T00:00:00+07:00",
+  "sections": [
+    {
+      "section": "hero",
+      "acf_unavailable": "static V9 eyebrow/title; tagline from services_hub_intro or generic fallback",
+      "empty_acf": "uses STATIC_FROM_V9 strings",
+      "empty_cpt": "not applicable",
+      "result": "PASS"
+    },
+    {
+      "section": "service-groups",
+      "acf_unavailable": "query Service CPT only; modifier from slug map",
+      "empty_acf": "not applicable",
+      "empty_cpt": "omit groups; optional empty-state if services_hub_show_placeholders true",
+      "result": "PASS"
+    },
+    {
+      "section": "service-card",
+      "acf_unavailable": "uses post title/excerpt only",
+      "empty_acf": "omit card text paragraph",
+      "empty_cpt": "parent without children renders parent as single card",
+      "result": "PASS"
+    },
+    {
+      "section": "rehabilitation-program",
+      "acf_unavailable": "static V9 structure renders",
+      "empty_acf": "static block always renders",
+      "empty_cpt": "not applicable",
+      "result": "PASS"
+    },
+    {
+      "section": "faq",
+      "acf_unavailable": "section omitted",
+      "empty_acf": "section omitted",
+      "empty_cpt": "not applicable",
+      "result": "PASS"
+    },
+    {
+      "section": "final-form",
+      "acf_unavailable": "generic heading/lead defaults",
+      "empty_acf": "uses home_cta_* or defaults via existing component",
+      "empty_cpt": "not applicable",
+      "result": "PASS"
+    },
+    {
+      "section": "founder-quote",
+      "binding": "DEFER_CONTENT_MIGRATION",
+      "result": "DEFERRED"
+    },
+    {
+      "section": "comfort",
+      "binding": "DEFER_CONTENT_MIGRATION",
+      "result": "DEFERRED"
+    },
+    {
+      "section": "genotyping-hub",
+      "binding": "SAFE_UNKNOWN — no Service CPT parent object in 15-object skeleton",
+      "result": "DEFERRED"
+    }
+  ],
+  "result": "PASS"
+}

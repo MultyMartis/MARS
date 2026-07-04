@@ -12,18 +12,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 ?>
-<main class="shpigovsky-skeleton shpigovsky-skeleton--services-hub" id="main-content">
-	<?php shpigovsky_render_breadcrumbs(); ?>
+<main class="page-uslugi site-main site-main--services-hub" id="main-content">
 	<?php
-	while ( have_posts() ) :
-		the_post();
-		?>
-		<article <?php post_class(); ?>>
-			<h1><?php the_title(); ?></h1>
-		</article>
-		<?php
-	endwhile;
-	shpigovsky_render_placeholder_notice( 'services-hub' );
+	get_template_part( 'template-parts/services-hub/hero' );
+	get_template_part( 'template-parts/services-hub/service-groups' );
+	get_template_part( 'template-parts/services-hub/rehabilitation-program' );
+	get_template_part( 'template-parts/services-hub/faq' );
+	get_template_part( 'template-parts/components/final-form' );
 	?>
 </main>
 <?php

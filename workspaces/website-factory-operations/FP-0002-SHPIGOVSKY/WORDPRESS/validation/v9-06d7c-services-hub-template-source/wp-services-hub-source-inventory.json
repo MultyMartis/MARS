@@ -1,0 +1,31 @@
+{
+  "task": "V9-06D7-C",
+  "generated_at": "2026-07-05T00:00:00+07:00",
+  "before_state": {
+    "page_template": "page-templates/services-hub.php",
+    "structure": "skeleton main with breadcrumbs, H1 post title, placeholder notice",
+    "template_parts": []
+  },
+  "after_state": {
+    "page_template": "page-templates/services-hub.php",
+    "structure": "main.page-uslugi orchestrating services-hub template-parts + shared final-form",
+    "helpers": "inc/services-hub-helpers.php",
+    "template_parts": [
+      "template-parts/services-hub/hero.php",
+      "template-parts/services-hub/service-groups.php",
+      "template-parts/services-hub/service-group.php",
+      "template-parts/services-hub/empty-state.php",
+      "template-parts/services-hub/rehabilitation-program.php",
+      "template-parts/services-hub/faq.php",
+      "template-parts/components/service-card.php"
+    ],
+    "theme_version": "0.5.0-d7c-services-hub"
+  },
+  "preserved": [
+    "D7-A global shell/header/footer/assets",
+    "D7-B home template source",
+    "service single templates untouched",
+    "contacts/institutional/legal/reviews untouched"
+  ],
+  "result": "COMPLETE"
+}

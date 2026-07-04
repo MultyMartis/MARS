@@ -1,0 +1,23 @@
+{
+  "task": "V9-06D7-C",
+  "phase": "SERVICES_HUB_TEMPLATE_SOURCE",
+  "generated_at": "2026-07-05T00:00:00+07:00",
+  "preflight_head": "3d42853a3035c26639cfd6d0f242e22eb82bf777",
+  "verdict": "PASS",
+  "services_hub_template_source": "COMPLETE",
+  "theme_source_changes": "COMPLETE",
+  "services_hub_section_integration": "PARTIAL",
+  "acf_fallback_binding": "COMPLETE",
+  "runtime_delivery": "NOT_PERFORMED",
+  "runtime_mutations": 0,
+  "db_writes": 0,
+  "source_validation": "PASS",
+  "recommended_next_phase": "CREATE_V9_06D7C_RUNTIME_DELIVERY_TASK",
+  "runtime_delivery_gate": "READY FOR OPERATOR REVIEW",
+  "notes": [
+    "D7-C implements hero, CPT-driven category hubs, rehabilitation program, FAQ, final-form per D.6 wave",
+    "Founder-quote, comfort, genotyping hub, and category galleries deferred",
+    "Hero/category decor images omitted — no packaged theme assets and no ACF image fields",
+    "Service card production copy depends on content migration / seeded service fields"
+  ]
+}

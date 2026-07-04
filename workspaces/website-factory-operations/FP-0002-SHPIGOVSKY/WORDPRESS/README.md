@@ -2,8 +2,8 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D7-B HOME TEMPLATE RUNTIME DELIVERED — hash verified — route/home smoke PASS
-**Classification:** CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON COMPLETE — MINIMAL VISUAL CONTENT SEEDED — DEPTH-2 REWRITE REPAIRED — VISUAL ROUTE BASELINE READY — V9 GLOBAL SHELL RUNTIME DELIVERED — V9 HOME TEMPLATE RUNTIME DELIVERED — NEXT D7-C SERVICES HUB SOURCE
+**Status:** V9-06D7-C SERVICES HUB TEMPLATE SOURCE COMPLETE — next D7-C runtime delivery (operator review)
+**Classification:** CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON COMPLETE — MINIMAL VISUAL CONTENT SEEDED — DEPTH-2 REWRITE REPAIRED — VISUAL ROUTE BASELINE READY — V9 GLOBAL SHELL RUNTIME DELIVERED — V9 HOME TEMPLATE RUNTIME DELIVERED — V9 SERVICES HUB TEMPLATE SOURCE COMPLETE — NEXT D7-C RUNTIME DELIVERY
 
 ---
 
@@ -176,3 +176,8 @@ D7-A global shell/assets delivered to local runtime theme only. PHP lint PASS. C
 ## V9-06D7-B runtime delivery
 
 D7-B home template delivered to local runtime theme only. PHP lint PASS. Checkpoint + hash match PASS. Seven D.5 routes HTTP 200; Service 74 PASS; Home D7-B sections visible (8/20 V9 wave; optional sections omitted where ACF empty). No DB/content/ACF/menu/redirect writes. Evidence: `validation/v9-06d7b-runtime-delivery/`. Next: D7-C Services Hub template source (operator review).
+
+
+## V9-06D7-C services hub template source
+
+D7-C Services Hub template integrated in canonical theme source only. PHP lint PASS. CPT-driven category hub groups, hero, program block, FAQ, final-form. Founder-quote/comfort/genotyping/galleries deferred. No runtime delivery, no DB/content/ACF writes. Evidence: `validation/v9-06d7c-services-hub-template-source/`. Next: D7-C runtime delivery (operator review).
