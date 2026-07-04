@@ -1,0 +1,100 @@
+{
+    "phase": "V9-06D8-D",
+    "generated_at": "2026-07-04T21:04:30+00:00",
+    "target_page_id": 5,
+    "allowlist_source": [
+        "acf-json/group_fp02_page_services_hub.json",
+        "seed-wave-design.json D8-D",
+        "D7-C template usage"
+    ],
+    "authorized_fields": [
+        "services_hub_intro",
+        "services_hub_faq_items"
+    ],
+    "forbidden_fields": [
+        "services_hub_query_mode",
+        "services_hub_show_placeholders",
+        "post_title",
+        "post_content",
+        "home_*",
+        "service_*",
+        "contacts_*",
+        "options"
+    ],
+    "fields": [
+        {
+            "page_id": 5,
+            "field_group": "group_fp02_page_services_hub",
+            "field_key": "field_fp02_services_hub_intro",
+            "field_name": "services_hub_intro",
+            "field_type": "textarea",
+            "old_value_state": "populated",
+            "old_hash": "958b0089f216552a177aea5b87b051c612352f28b5a5cc9b54ef5072c0033e49",
+            "proposed_value_source": "V9_STATIC_SOURCE",
+            "classification": "STATIC_V9_CONTENT",
+            "rendered_by_d7c": true,
+            "improves_visible_mvp": true,
+            "olga_editable_later": true,
+            "risk": "LOW",
+            "write_decision": "WRITE",
+            "v9_reference": "src/pages/uslugi-v2.html services-inner-hero-v2 heroLead",
+            "result": "CONFIRMED"
+        },
+        {
+            "page_id": 5,
+            "field_group": "group_fp02_page_services_hub",
+            "field_key": "field_fp02_services_hub_query_mode",
+            "field_name": "services_hub_query_mode",
+            "field_type": "select",
+            "old_value_state": "populated",
+            "old_hash": "c9f5fd88b1bd8556eceebf6eca2c77163a0d47061bf8ce4fd530264f17a5e819",
+            "proposed_value_source": "EXISTING_ACF_VALUE",
+            "classification": "SKIP_DO_NOT_SEED",
+            "rendered_by_d7c": false,
+            "improves_visible_mvp": false,
+            "olga_editable_later": false,
+            "risk": "LOW",
+            "write_decision": "SKIP",
+            "v9_reference": "Developer-only query display mode",
+            "result": "CONFIRMED"
+        },
+        {
+            "page_id": 5,
+            "field_group": "group_fp02_page_services_hub",
+            "field_key": "field_fp02_services_hub_show_placeholders",
+            "field_name": "services_hub_show_placeholders",
+            "field_type": "true_false",
+            "old_value_state": "populated",
+            "old_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+            "proposed_value_source": "EXISTING_ACF_VALUE",
+            "classification": "SKIP_DO_NOT_SEED",
+            "rendered_by_d7c": false,
+            "improves_visible_mvp": false,
+            "olga_editable_later": false,
+            "risk": "LOW",
+            "write_decision": "SKIP",
+            "v9_reference": "Developer-only empty-state toggle",
+            "result": "CONFIRMED"
+        },
+        {
+            "page_id": 5,
+            "field_group": "group_fp02_page_services_hub",
+            "field_key": "field_fp02_services_hub_faq_items",
+            "field_name": "services_hub_faq_items",
+            "field_type": "repeater",
+            "old_value_state": "empty",
+            "old_hash": "empty",
+            "proposed_value_source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "rendered_by_d7c": true,
+            "improves_visible_mvp": true,
+            "olga_editable_later": true,
+            "risk": "LOW_MVP_PLACEHOLDER",
+            "write_decision": "WRITE",
+            "v9_reference": "src/partials/sections/faq.html items 2–6; item 1 lorem skipped",
+            "result": "CONFIRMED"
+        }
+    ],
+    "writable_count": 2,
+    "result": "PASS"
+}

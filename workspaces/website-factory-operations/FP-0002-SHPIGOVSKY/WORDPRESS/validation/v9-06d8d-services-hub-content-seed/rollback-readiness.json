@@ -1,0 +1,30 @@
+{
+    "phase": "V9-06D8-D",
+    "generated_at": "2026-07-04T21:04:37+00:00",
+    "checkpoint_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d8d-services-hub-content-seed-pre-20260704-210430",
+    "changed_hub_fields": [
+        {
+            "page_id": 5,
+            "field": "services_hub_intro",
+            "old_value": "Лечение и профилактика. Зависимость, тревога, нарушение пищевого поведения — направления, которые мы сопровождаем. Минимальное наполнение для визуальной проверки маршрута. Полная миграция контента выполняется отдельной фазой.",
+            "rollback": "update_field('services_hub_intro', baseline_value, 5)"
+        },
+        {
+            "page_id": 5,
+            "field": "services_hub_faq_items",
+            "old_value": null,
+            "rollback": "update_field('services_hub_faq_items', baseline_value, 5)"
+        }
+    ],
+    "old_values_captured": true,
+    "per_field_rollback": "services-hub-page-5-pre-values.json + update_field per allowlisted field",
+    "full_db_rollback": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d8d-services-hub-content-seed-pre-20260704-210430/mars_wp_fp0002.sql",
+    "rollback_tested": false,
+    "rollback_not_executed_reason": "Seed succeeded; rollback not required",
+    "post_rollback_validation_plan": [
+        "Seven route smoke",
+        "Services hub FAQ/intro verification",
+        "Home/service/contacts/options unchanged"
+    ],
+    "result": "PASS"
+}

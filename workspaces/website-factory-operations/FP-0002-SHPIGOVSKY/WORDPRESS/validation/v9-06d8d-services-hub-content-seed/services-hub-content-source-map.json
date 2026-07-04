@@ -1,0 +1,63 @@
+{
+    "phase": "V9-06D8-D",
+    "generated_at": "2026-07-04T21:04:30+00:00",
+    "sections": [
+        {
+            "section": "hero tagline",
+            "v9_ref": "src/pages/uslugi-v2.html heroLead",
+            "target_fields": [
+                "services_hub_intro"
+            ],
+            "seed_decision": "WRITE_IF_DIFFERENT",
+            "reason": "V9 hero lead; D4 may have partial intro"
+        },
+        {
+            "section": "service groups/cards",
+            "v9_ref": "CPT hierarchy + D7-C template",
+            "target_fields": [],
+            "seed_decision": "SKIP",
+            "reason": "SERVICE_CPT_DERIVED_SKIP — not manual ACF"
+        },
+        {
+            "section": "programme/rehabilitation",
+            "v9_ref": "services-program-v2.html theme fallback",
+            "target_fields": [],
+            "seed_decision": "SKIP",
+            "reason": "STATIC_FALLBACK_ALREADY_IN_TEMPLATE"
+        },
+        {
+            "section": "faq",
+            "v9_ref": "src/partials/sections/faq.html items 2–6",
+            "target_fields": [
+                "services_hub_faq_items"
+            ],
+            "seed_decision": "WRITE",
+            "reason": "LOCAL_MVP_PLACEHOLDER; section omitted when empty"
+        },
+        {
+            "section": "final-form/CTA",
+            "v9_ref": "final-form.html + D8-A options",
+            "target_fields": [],
+            "seed_decision": "SKIP",
+            "reason": "Site options + template fallback"
+        },
+        {
+            "section": "founder-quote/comfort/genotyping/galleries",
+            "v9_ref": "uslugi-v2 deferred blocks",
+            "target_fields": [],
+            "seed_decision": "SKIP",
+            "reason": "SKIP_DEFER_AFTER_MVP / not rendered D7-C"
+        },
+        {
+            "section": "query mode / placeholders",
+            "v9_ref": "EXISTING_ACF_VALUE",
+            "target_fields": [
+                "services_hub_query_mode",
+                "services_hub_show_placeholders"
+            ],
+            "seed_decision": "SKIP",
+            "reason": "DEVELOPER_ONLY"
+        }
+    ],
+    "result": "PASS"
+}

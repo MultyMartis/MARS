@@ -2,8 +2,8 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D8-C SERVICES MVP CONTENT SEED COMPLETE — 15 service ACF writes on IDs 73/74/77/84; route smoke ALL_200
-**Classification:** CONTENT MODEL RUNTIME DELIVERED — D8-A OPTIONS SEEDED — D8-B HOME ACF SEEDED — D8-C SERVICES ACF SEEDED — D8-D HUB SEED READY FOR OPERATOR REVIEW
+**Status:** V9-06D8-D SERVICES HUB CONTENT SEED COMPLETE — 2 hub ACF writes on page #5; route smoke ALL_200
+**Classification:** CONTENT MODEL RUNTIME DELIVERED — D8-A OPTIONS SEEDED — D8-B HOME ACF SEEDED — D8-C SERVICES ACF SEEDED — D8-D HUB ACF SEEDED — D8-E CONTACTS SEED READY FOR OPERATOR REVIEW
 
 ---
 
@@ -206,3 +206,7 @@ Read-only QA PASS after D7-A–D7-E. Seven first-wave routes HTTP 200; Service 7
 ## V9-06D8 content seed planning (2026-07-05)
 
 Planning-only: MVP gap map, ACF/options inventory, Olga admin UX plan, seed waves D8-A…G, content source map, mutation safety protocol. Runtime inventory PARTIAL (live DB unavailable; D7-F/D4 evidence used). No runtime/source/DB mutations. Report: `reports/FP-0002-V9-06D8-CONTENT-SEED-PLANNING-REPORT-v1.md`. Evidence: `validation/v9-06d8-content-seed-planning/`. Next: D8-A site options seed (operator review).
+
+## V9-06D8-D services hub content seed (2026-07-05)
+
+D8-D Services Hub page #5 ACF only: `services_hub_intro` (V9 heroLead) and `services_hub_faq_items` (5 FAQ rows, LOCAL_MVP_PLACEHOLDER). Developer-only query/placeholder fields unchanged. DB checkpoint `v9-06d8d-services-hub-content-seed-pre-20260704-210430`. Route smoke ALL_200. Hub visual smoke PASS. No runtime/source/home/service/contacts/options writes. Evidence: `validation/v9-06d8d-services-hub-content-seed/`. Report: `reports/FP-0002-V9-06D8D-SERVICES-HUB-CONTENT-SEED-REPORT-v1.md`. Next: D8-E contacts content seed (operator review).

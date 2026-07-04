@@ -1,0 +1,57 @@
+{
+    "phase": "V9-06D8-D",
+    "generated_at": "2026-07-04T21:04:30+00:00",
+    "target_page_id": 5,
+    "entries": [
+        {
+            "page_id": 5,
+            "field": "services_hub_intro",
+            "old_state": "populated",
+            "proposed_value_state": "set",
+            "proposed_value_preview": "Зависимость, тревога, нарушение пищевого поведения — у каждого из этих состояний",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "STATIC_V9_CONTENT",
+            "write": true,
+            "rollback_value": "Лечение и профилактика. Зависимость, тревога, нарушение пищевого поведения — направления, которые мы сопровождаем. Минимальное наполнение для визуальной проверки маршрута. Полная миграция контента выполняется отдельной фазой.",
+            "skip_reason": ""
+        },
+        {
+            "page_id": 5,
+            "field": "services_hub_query_mode",
+            "old_state": "populated",
+            "proposed_value_state": "unchanged",
+            "proposed_value_preview": "unchanged/skip",
+            "source": "EXISTING_ACF_VALUE",
+            "classification": "SKIP_DO_NOT_SEED",
+            "write": false,
+            "rollback_value": "grouped_by_parent",
+            "skip_reason": "SKIP_DO_NOT_SEED"
+        },
+        {
+            "page_id": 5,
+            "field": "services_hub_show_placeholders",
+            "old_state": "populated",
+            "proposed_value_state": "unchanged",
+            "proposed_value_preview": "unchanged/skip",
+            "source": "EXISTING_ACF_VALUE",
+            "classification": "SKIP_DO_NOT_SEED",
+            "write": false,
+            "rollback_value": true,
+            "skip_reason": "SKIP_DO_NOT_SEED"
+        },
+        {
+            "page_id": 5,
+            "field": "services_hub_faq_items",
+            "old_state": "empty",
+            "proposed_value_state": "set",
+            "proposed_value_preview": "repeater[5 rows]",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "write": true,
+            "rollback_value": null,
+            "skip_reason": ""
+        }
+    ],
+    "writable_field_operations": 2,
+    "result": "PASS"
+}

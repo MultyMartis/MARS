@@ -1,0 +1,47 @@
+{
+    "phase": "V9-06D8-D",
+    "generated_at": "2026-07-04T21:04:30+00:00",
+    "target_page_id": 5,
+    "fields": [
+        {
+            "page_id": 5,
+            "field": "services_hub_intro",
+            "old_state": "populated",
+            "new_state": "set",
+            "operation": "update",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "STATIC_V9_CONTENT",
+            "rollback_available": true,
+            "rollback_value": "Лечение и профилактика. Зависимость, тревога, нарушение пищевого поведения — направления, которые мы сопровождаем. Минимальное наполнение для визуальной проверки маршрута. Полная миграция контента выполняется отдельной фазой.",
+            "risk": "LOW",
+            "result": "OK"
+        },
+        {
+            "page_id": 5,
+            "field": "services_hub_faq_items",
+            "old_state": "empty",
+            "new_state": "set",
+            "operation": "create",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "rollback_available": true,
+            "rollback_value": null,
+            "risk": "LOW",
+            "result": "OK"
+        }
+    ],
+    "skipped_fields": [
+        {
+            "field": "services_hub_query_mode",
+            "reason": "DEVELOPER_ONLY",
+            "operation": "skip"
+        },
+        {
+            "field": "services_hub_show_placeholders",
+            "reason": "DEVELOPER_ONLY",
+            "operation": "skip"
+        }
+    ],
+    "verdict": "SAFE_TO_APPLY_EXACT_SERVICES_HUB_ACF_ALLOWLIST",
+    "result": "PASS"
+}

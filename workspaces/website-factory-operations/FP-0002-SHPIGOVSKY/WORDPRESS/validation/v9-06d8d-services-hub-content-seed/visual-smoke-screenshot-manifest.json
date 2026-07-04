@@ -1,0 +1,56 @@
+{
+  "phase": "V9-06D8-D",
+  "generated_at": "2026-07-04T21:05:14.868Z",
+  "shots": [
+    {
+      "file": "desktop-services-hub-after-d8d.png",
+      "path": "screenshots/desktop-services-hub-after-d8d.png",
+      "route": "/uslugi/",
+      "viewport": "desktop",
+      "bytes": 58532,
+      "url": "http://shpigovsky.test/uslugi/",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "file": "mobile-services-hub-after-d8d.png",
+      "path": "screenshots/mobile-services-hub-after-d8d.png",
+      "route": "/uslugi/",
+      "viewport": "mobile",
+      "bytes": 29345,
+      "url": "http://shpigovsky.test/uslugi/",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "file": "desktop-home-after-d8d.png",
+      "path": "screenshots/desktop-home-after-d8d.png",
+      "route": "/",
+      "viewport": "desktop",
+      "bytes": 45110,
+      "url": "http://shpigovsky.test/",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "file": "desktop-service-alkogol-after-d8d.png",
+      "path": "screenshots/desktop-service-alkogol-after-d8d.png",
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "viewport": "desktop",
+      "bytes": 104160,
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "captured": true,
+      "result": "PASS"
+    },
+    {
+      "file": "desktop-contacts-after-d8d.png",
+      "path": "screenshots/desktop-contacts-after-d8d.png",
+      "route": "/kontakty/",
+      "viewport": "desktop",
+      "bytes": 77144,
+      "url": "http://shpigovsky.test/kontakty/",
+      "captured": true,
+      "result": "PASS"
+    }
+  ]
+}

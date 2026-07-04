@@ -1,0 +1,62 @@
+{
+    "phase": "V9-06D8-D",
+    "generated_at": "2026-07-04T21:04:31+00:00",
+    "page_id": 5,
+    "fields": [
+        {
+            "field": "services_hub_intro",
+            "expected_state": "seeded",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "field": "services_hub_query_mode",
+            "expected_state": "unchanged",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "field": "services_hub_show_placeholders",
+            "expected_state": "unchanged",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        },
+        {
+            "field": "services_hub_faq_items",
+            "expected_state": "seeded",
+            "actual_state": "populated",
+            "hash_match": true,
+            "result": "PASS"
+        }
+    ],
+    "sections": [
+        {
+            "section": "hero",
+            "expected": "site-main--services-hub + hero markers",
+            "actual": "visible",
+            "result": "PASS"
+        },
+        {
+            "section": "service groups",
+            "expected": "CPT-driven category cards",
+            "actual": "visible",
+            "result": "PASS"
+        },
+        {
+            "section": "faq",
+            "expected": "visible when services_hub_faq_items populated",
+            "actual": "visible",
+            "result": "PASS"
+        },
+        {
+            "section": "programme",
+            "expected": "theme fallback programme block",
+            "actual": "visible",
+            "result": "PASS"
+        }
+    ],
+    "result": "PASS"
+}

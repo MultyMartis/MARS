@@ -1,0 +1,58 @@
+{
+    "phase": "V9-06D8-D",
+    "generated_at": "2026-07-04T21:04:30+00:00",
+    "runtime_path": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky",
+    "domain": "http://shpigovsky.test/",
+    "http_root": 200,
+    "http_uslugi": 200,
+    "db_name": "mars_wp_fp0002",
+    "table_prefix": "fp02_",
+    "db_connection": true,
+    "active_theme": "shpigovsky",
+    "shpigovsky_core_active": true,
+    "acf_pro_active": true,
+    "acf_groups_count": 13,
+    "core_mode": "content_model",
+    "service_cpt_registered": true,
+    "wpilot": {
+        "detected": false,
+        "write_enabled": null
+    },
+    "services_hub_page": {
+        "id": 5,
+        "exists": true,
+        "title": "Услуги",
+        "slug": "uslugi",
+        "template": "page-templates/services-hub.php",
+        "route": "/uslugi/"
+    },
+    "target_services_readonly": {
+        "73": {
+            "id": 73,
+            "exists": true,
+            "title": "Зависимости"
+        },
+        "74": {
+            "id": 74,
+            "exists": true,
+            "title": "Лечение алкогольной зависимости"
+        },
+        "77": {
+            "id": 77,
+            "exists": true,
+            "title": "Психическое здоровье"
+        },
+        "84": {
+            "id": 84,
+            "exists": true,
+            "title": "Расстройства пищевого поведения"
+        }
+    },
+    "active_plugins": {
+        "acf-extended-pro/acf-extended.php": "Advanced Custom Fields: Extended PRO",
+        "advanced-custom-fields-pro/acf.php": "Advanced Custom Fields PRO",
+        "metacode-wpilot/metacode-wpilot.php": "MetaCODE WPilot",
+        "shpigovsky-core/shpigovsky-core.php": "Shpigovsky Core"
+    },
+    "result": "PASS"
+}

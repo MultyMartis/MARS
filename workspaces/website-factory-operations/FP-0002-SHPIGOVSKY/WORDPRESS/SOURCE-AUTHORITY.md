@@ -67,6 +67,10 @@ D8-B **COMPLETE (PARTIAL PASS)**: Home page #4 ACF only — `home_advantages` (6
 
 D8-C **COMPLETE (PASS)**: Service CPT #73/#74/#77/#84 ACF only — 15 field writes (priority #74: intro_note, signs, programme, stages, FAQ; parents: programme/stages/FAQ). V9 traceable source; FAQ LOCAL_MVP_PLACEHOLDER. DB checkpoint `v9-06d8c-services-mvp-content-seed-pre-20260704-205431`. Route smoke ALL_200. Service 74 alcohol-special regression PASS. No runtime/source/home/hub/contacts/options writes. Local helper `_services_content_seed_runner.php` used but not committed. Evidence: `validation/v9-06d8c-services-mvp-content-seed/final-verdict.json`. Report: `reports/FP-0002-V9-06D8C-SERVICES-MVP-CONTENT-SEED-REPORT-v1.md`. Next: D8-D services hub content seed.
 
+## V9-06D8-D services hub content seed (2026-07-05)
+
+D8-D **COMPLETE (PASS)**: Services Hub page #5 ACF only — 2 field writes (`services_hub_intro` V9 heroLead; `services_hub_faq_items` 5 rows LOCAL_MVP_PLACEHOLDER from V9 `faq.html` items 2–6). Developer-only `services_hub_query_mode` / `services_hub_show_placeholders` unchanged. DB checkpoint `v9-06d8d-services-hub-content-seed-pre-20260704-210430`. Route smoke ALL_200. Hub visual smoke PASS. No runtime/source/home/service/contacts/options writes. Local helper `_services_hub_content_seed_runner.php` used but not committed. Evidence: `validation/v9-06d8d-services-hub-content-seed/final-verdict.json`. Report: `reports/FP-0002-V9-06D8D-SERVICES-HUB-CONTENT-SEED-REPORT-v1.md`. Next: D8-E contacts content seed.
+
 ## V9 implementation
 
 V9 frontend HTML/CSS/JS integration is **NOT INCLUDED** in V9-06C. V9 frontend remains under `workspaces/fp-0002-shpigovsky-v9/`.

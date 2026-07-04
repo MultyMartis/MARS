@@ -1,0 +1,42 @@
+{
+    "phase": "V9-06D8-D",
+    "generated_at": "2026-07-04T21:04:37+00:00",
+    "areas": [
+        {
+            "area": "Services Hub page edit screen",
+            "visible": true,
+            "clarity": "Услуги",
+            "issue": "English group title Page — Services Hub",
+            "result": "PASS"
+        },
+        {
+            "area": "services_hub_intro textarea",
+            "visible": true,
+            "clarity": "Hero tagline / intro copy",
+            "issue": "Label \"Intro\" — RU repair deferred",
+            "result": "PARTIAL"
+        },
+        {
+            "area": "services_hub_faq_items repeater",
+            "visible": true,
+            "clarity": "Question/answer rows seeded; understandable for MVP",
+            "issue": "Subfield labels RU OK; group title English",
+            "result": "PARTIAL"
+        },
+        {
+            "area": "services_hub_query_mode",
+            "visible": true,
+            "clarity": "Developer-only — do not expose to Olga yet",
+            "issue": "Needs admin UX repair task",
+            "result": "PARTIAL"
+        },
+        {
+            "area": "CPT hierarchy vs manual fields",
+            "visible": true,
+            "clarity": "No duplicate manual service cards on hub page",
+            "issue": "Service groups driven by CPT — correct",
+            "result": "PASS"
+        }
+    ],
+    "result": "PARTIAL"
+}

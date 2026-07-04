@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-05 (V9-06D8-C Services MVP Content Seed COMPLETE)
+**Last updated:** 2026-07-05 (V9-06D8-D Services Hub Content Seed COMPLETE)
 
-**Current WordPress phase:** V9-06D8-C Services MVP Content Seed **COMPLETE (PASS)** — 15 ACF writes on service objects #73/#74/#77/#84 from V9 static; priority #74 intro/signs/programme/stages/FAQ seeded; route smoke ALL_200; service 74 alcohol-special regression PASS. Next: D8-D services hub content seed. Report: `WORDPRESS/reports/FP-0002-V9-06D8C-SERVICES-MVP-CONTENT-SEED-REPORT-v1.md`.
+**Current WordPress phase:** V9-06D8-D Services Hub Content Seed **COMPLETE (PASS)** — 2 ACF writes on page #5 (`services_hub_intro`, `services_hub_faq_items`) from V9 static; route smoke ALL_200; hub visual smoke PASS. Next: D8-E contacts content seed. Report: `WORDPRESS/reports/FP-0002-V9-06D8D-SERVICES-HUB-CONTENT-SEED-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 
