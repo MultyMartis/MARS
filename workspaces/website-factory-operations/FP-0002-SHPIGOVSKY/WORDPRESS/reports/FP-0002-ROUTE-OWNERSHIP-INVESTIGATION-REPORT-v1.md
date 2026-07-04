@@ -181,7 +181,7 @@ Service 74 remains HTTP 404 on an in-scope visual QA URL. Exclusion would weaken
 
 ## 16. Git checkpoint
 
-- Exact staged files: 30 documentation/evidence files under WORDPRESS route-ownership investigation, architecture, reports, validation, and status/index paths (see commit `673fbdc1`)
+- Exact staged files: 30 documentation/evidence files under WORDPRESS route-ownership investigation, architecture, reports, validation, and status/index paths
 - Runtime files staged: 0
 - Runtime snapshots staged: 0
 - Database dumps staged: 0
@@ -193,8 +193,8 @@ Service 74 remains HTTP 404 on an in-scope visual QA URL. Exclusion would weaken
 - Commit: FP-0002: investigate service route ownership
 - Commit hash: 673fbdc19e44dbc0fc8e00df251eee5771914769
 - Push: YES (normal, no force)
-- Local HEAD: 673fbdc19e44dbc0fc8e00df251eee5771914769
-- Remote HEAD: 673fbdc19e44dbc0fc8e00df251eee5771914769
+- Local HEAD: synchronized with origin/mars/canonical-post-recovery after push
+- Remote HEAD: synchronized with local after push
 - Result: PASS
 
 ## 17. No-scope-drift audit
