@@ -1,0 +1,43 @@
+{
+  "phase": "V9-06D8-A",
+  "generated_at": "2026-07-04T20:23:00Z",
+  "verdict": "BLOCKED",
+  "v9_06d8a_site_options_seed": "NOT COMPLETE",
+  "runtime_delivery": "NOT_PERFORMED",
+  "source_changes": 0,
+  "runtime_file_writes": 0,
+  "db_writes": 0,
+  "content_writes": 0,
+  "acf_page_meta_writes": 0,
+  "options_writes": 0,
+  "mvp_site_options": "NOT_SEEDED",
+  "operator_supplied_values": "NOT_AVAILABLE",
+  "placeholder_local_mvp_values": "PLANNED_NOT_APPLIED",
+  "route_smoke": "NOT_PERFORMED",
+  "olga_admin_usability": "NOT_PERFORMED",
+  "future_mutation_safety": "PASS",
+  "recommended_next_phase": "OPERATOR_DECISION_REQUIRED",
+  "v9_06d8b": "BLOCKED",
+  "blockers": [
+    "STRICT_HEAD_VARIANCE: local/remote HEAD d98557fb234769ec0f12bdbf7e65dcff4f1961a0 differs from task-required 989b97a912832f2d3e73de20e5e07aa34fc57c4a (descendant commit; D8 planning present)",
+    "MySQL/DB unavailable — port 3306 not listening; wp-load.php database connection error",
+    "HTTP http://shpigovsky.test/ unavailable (curl code 0)",
+    "DB checkpoint not created",
+    "Options seed apply not executed"
+  ],
+  "completed_gates": [
+    "Volume AI WS verified",
+    "D8 authority review",
+    "Exact 16-field allowlist confirmed from ACF JSON + D8 planning",
+    "Proposed payload built from V9 static (11 writable, 5 skipped)",
+    "Dry-run verdict SAFE_TO_APPLY_EXACT_OPTIONS_ALLOWLIST (planning-only)",
+    "Options-only runner prepared",
+    "Documentation/evidence pack"
+  ],
+  "operator_actions": [
+    "Start local MySQL/Laragon stack for mars_wp_fp0002",
+    "Confirm or reset git HEAD to 989b97a9 if strict pin required",
+    "Re-run V9-06D8-A apply phase using prepared runner after DB checkpoint"
+  ],
+  "result": "BLOCKED"
+}

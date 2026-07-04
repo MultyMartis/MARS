@@ -55,6 +55,10 @@ Read-only QA PASS after D7-A–D7-E runtime deliveries. Evidence: `validation/v9
 
 Planning-only PASS. MVP content gap map, ACF/options field inventory, Olga admin UX plan, seed wave design (D8-A…G), content source map, and future seed mutation safety protocol documented in Git. Live runtime DB inventory unavailable at task time; D7-F and D4 evidence used. No runtime/source/DB/content/ACF/options mutations. Recommended next: D8-A site options seed. Evidence: `validation/v9-06d8-content-seed-planning/`.
 
+## V9-06D8-A site options seed (2026-07-05)
+
+D8-A task executed planning gates: 16-field allowlist, 11-field V9-static payload, dry-run SAFE_TO_APPLY. **Apply BLOCKED** — MySQL/DB and HTTP runtime unavailable; 0 options writes. Prepared apply runner at `validation/v9-06d8a-site-options-seed/` (local only). Evidence: `validation/v9-06d8a-site-options-seed/final-verdict.json`. Report: `reports/FP-0002-V9-06D8A-SITE-OPTIONS-SEED-REPORT-v1.md`.
+
 ## V9 implementation
 
 V9 frontend HTML/CSS/JS integration is **NOT INCLUDED** in V9-06C. V9 frontend remains under `workspaces/fp-0002-shpigovsky-v9/`.

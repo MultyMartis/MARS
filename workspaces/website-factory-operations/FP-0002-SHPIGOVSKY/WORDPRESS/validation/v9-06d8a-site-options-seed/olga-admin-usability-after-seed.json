@@ -1,0 +1,12 @@
+{
+  "phase": "V9-06D8-A",
+  "generated_at": "2026-07-04T20:22:00Z",
+  "executed": false,
+  "blocked_reason": "Post-seed admin read blocked — DB/runtime unavailable",
+  "areas": [
+    {"area": "Site Options screen (fp02-site-settings)", "visible_editable": "UNKNOWN", "value_clarity": "Field groups defined in ACF JSON; English labels", "remaining_ux_issue": "RU labels/help deferred", "result": "NOT_ASSESSED"},
+    {"area": "Contacts option fields", "visible_editable": "UNKNOWN", "value_clarity": "Planned V9 placeholder seed for phone/email/address/hours", "remaining_ux_issue": "map_link, social_links need operator URLs", "result": "NOT_ASSESSED"},
+    {"area": "Modal/CTA option fields", "visible_editable": "UNKNOWN", "value_clarity": "Planned CTA label seed from V9 static", "remaining_ux_issue": "global_cta not consumed by all templates yet", "result": "NOT_ASSESSED"}
+  ],
+  "result": "NOT_PERFORMED"
+}

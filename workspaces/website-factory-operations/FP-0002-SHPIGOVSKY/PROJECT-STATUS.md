@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-05 (V9-06D8 Content Seed Planning PASS)
+**Last updated:** 2026-07-05 (V9-06D8-A Site Options Seed BLOCKED)
 
-**Current WordPress phase:** V9-06D8 Content Seed Planning PASS (planning-only) — D8 seed waves documented. Next `CREATE_V9_06D8A_SITE_OPTIONS_SEED_TASK`. Report: `WORDPRESS/reports/FP-0002-V9-06D8-CONTENT-SEED-PLANNING-REPORT-v1.md`.
+**Current WordPress phase:** V9-06D8-A Site Options Seed **BLOCKED** — allowlist/payload/dry-run PASS; apply blocked (MySQL/HTTP unavailable). Next: operator start local stack + re-run D8-A apply. Report: `WORDPRESS/reports/FP-0002-V9-06D8A-SITE-OPTIONS-SEED-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

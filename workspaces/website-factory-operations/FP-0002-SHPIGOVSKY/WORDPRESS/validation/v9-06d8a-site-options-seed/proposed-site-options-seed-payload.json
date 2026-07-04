@@ -1,0 +1,46 @@
+{
+  "phase": "V9-06D8-A",
+  "generated_at": "2026-07-04T20:22:00Z",
+  "writable_fields": [
+    "organisation_name",
+    "phone_primary",
+    "phone_secondary",
+    "site_email",
+    "site_address",
+    "opening_hours",
+    "default_callback_title",
+    "default_button_label",
+    "default_secondary_button_label",
+    "global_cta_title",
+    "global_cta_text"
+  ],
+  "skipped_fields": [
+    "map_link",
+    "social_links",
+    "legal_org_identifiers",
+    "default_callback_text",
+    "default_consent_text_reference"
+  ],
+  "entries": [
+    {"field": "organisation_name", "proposed_value_state": "set", "source": "V9_STATIC_SOURCE", "classification": "LOCAL_MVP_PLACEHOLDER", "operator_supplied_required": false, "write": true},
+    {"field": "phone_primary", "proposed_value_state": "set", "source": "V9_STATIC_SOURCE", "classification": "LOCAL_MVP_PLACEHOLDER", "operator_supplied_required": false, "write": true},
+    {"field": "phone_secondary", "proposed_value_state": "set", "source": "V9_STATIC_SOURCE", "classification": "LOCAL_MVP_PLACEHOLDER", "operator_supplied_required": false, "write": true},
+    {"field": "site_email", "proposed_value_state": "set", "source": "V9_STATIC_SOURCE", "classification": "LOCAL_MVP_PLACEHOLDER", "operator_supplied_required": false, "write": true},
+    {"field": "site_address", "proposed_value_state": "set", "source": "V9_STATIC_SOURCE", "classification": "LOCAL_MVP_PLACEHOLDER", "operator_supplied_required": false, "write": true},
+    {"field": "opening_hours", "proposed_value_state": "set", "source": "V9_STATIC_SOURCE", "classification": "LOCAL_MVP_PLACEHOLDER", "operator_supplied_required": false, "write": true},
+    {"field": "map_link", "proposed_value_state": "unchanged", "source": "OPERATOR_SUPPLIED_REQUIRED", "classification": "empty", "operator_supplied_required": true, "write": false},
+    {"field": "social_links", "proposed_value_state": "unchanged", "source": "OPERATOR_SUPPLIED_REQUIRED", "classification": "empty", "operator_supplied_required": true, "write": false},
+    {"field": "legal_org_identifiers", "proposed_value_state": "unchanged", "source": "OPERATOR_SUPPLIED_REQUIRED", "classification": "empty", "operator_supplied_required": true, "write": false},
+    {"field": "default_callback_title", "proposed_value_state": "set", "source": "V9_STATIC_SOURCE", "classification": "LOCAL_MVP_PLACEHOLDER", "operator_supplied_required": false, "write": true},
+    {"field": "default_callback_text", "proposed_value_state": "unchanged", "source": "DO_NOT_SEED", "classification": "empty", "operator_supplied_required": false, "write": false},
+    {"field": "default_button_label", "proposed_value_state": "set", "source": "V9_STATIC_SOURCE", "classification": "LOCAL_MVP_PLACEHOLDER", "operator_supplied_required": false, "write": true},
+    {"field": "default_secondary_button_label", "proposed_value_state": "set", "source": "V9_STATIC_SOURCE", "classification": "LOCAL_MVP_PLACEHOLDER", "operator_supplied_required": false, "write": true},
+    {"field": "default_consent_text_reference", "proposed_value_state": "unchanged", "source": "DO_NOT_SEED", "classification": "empty", "operator_supplied_required": false, "write": false},
+    {"field": "global_cta_title", "proposed_value_state": "set", "source": "V9_STATIC_SOURCE", "classification": "LOCAL_MVP_PLACEHOLDER", "operator_supplied_required": false, "write": true},
+    {"field": "global_cta_text", "proposed_value_state": "set", "source": "V9_STATIC_SOURCE", "classification": "LOCAL_MVP_PLACEHOLDER", "operator_supplied_required": false, "write": true}
+  ],
+  "value_traceability": "All writable values traced to workspaces/fp-0002-shpigovsky-v9/src/ — not operator-supplied production confirmation",
+  "invented_values": false,
+  "secrets_in_payload": false,
+  "result": "PASS"
+}

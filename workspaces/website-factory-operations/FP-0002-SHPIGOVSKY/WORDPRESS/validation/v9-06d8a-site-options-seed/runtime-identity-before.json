@@ -1,0 +1,33 @@
+{
+  "phase": "V9-06D8-A",
+  "generated_at": "2026-07-04T20:21:00Z",
+  "runtime_path": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky",
+  "runtime_path_exists": true,
+  "domain_expected": "http://shpigovsky.test/",
+  "domain_http_probe": {
+    "attempted": true,
+    "http_code": 0,
+    "result": "HTTP_UNAVAILABLE"
+  },
+  "wp_load_attempt": {
+    "attempted": true,
+    "result": "DB_CONNECTION_ERROR",
+    "message": "WordPress wp-load.php returned database connection error page (Russian: Ошибка установки соединения с базой данных)"
+  },
+  "db_name_expected": "mars_wp_fp0002",
+  "table_prefix_expected": "fp02_",
+  "db_connection": false,
+  "active_theme": "UNKNOWN_DB_GATE",
+  "shpigovsky_core_active": "UNKNOWN_DB_GATE",
+  "acf_pro_active": "UNKNOWN_DB_GATE",
+  "acf_groups_count": "UNKNOWN_DB_GATE",
+  "core_mode": "UNKNOWN_DB_GATE",
+  "service_cpt_registered": "UNKNOWN_DB_GATE",
+  "options_page_slug": "fp02-site-settings",
+  "wpilot": {
+    "detected": "UNKNOWN_DB_GATE",
+    "write_enabled": "UNKNOWN_DB_GATE"
+  },
+  "d7f_baseline_reference": "validation/v9-06d7f-final-route-qa/runtime-identity-before.json",
+  "result": "FAIL_DB_UNAVAILABLE"
+}

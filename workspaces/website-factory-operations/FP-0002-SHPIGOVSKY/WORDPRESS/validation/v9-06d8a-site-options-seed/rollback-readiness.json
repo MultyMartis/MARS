@@ -1,0 +1,14 @@
+{
+  "phase": "V9-06D8-A",
+  "generated_at": "2026-07-04T20:22:00Z",
+  "checkpoint_created": false,
+  "checkpoint_path": null,
+  "changed_options": [],
+  "old_values_captured": false,
+  "per_field_rollback": "When apply runs: update_field(name, old_value, 'option') for each changed field using pre-checkpoint snapshot",
+  "full_db_rollback": "Restore mysqldump from v9-06d8a-site-options-seed-pre-<timestamp>/ when checkpoint exists",
+  "post_rollback_validation": "Re-run 7-route smoke; confirm options empty or pre-seed values",
+  "rollback_tested": false,
+  "rollback_not_executed_reason": "No mutation performed",
+  "result": "READY_PENDING_DB"
+}

@@ -1,0 +1,16 @@
+{
+  "phase": "V9-06D8-A",
+  "generated_at": "2026-07-04T20:22:00Z",
+  "checkpoint_performed": false,
+  "checkpoint_name": null,
+  "checkpoint_root": null,
+  "db_dump": null,
+  "tool": null,
+  "pre_values_captured": false,
+  "restore_instructions": "NOT_APPLICABLE — checkpoint not created",
+  "rollback_checklist": "When MySQL available: dump mars_wp_fp0002 to X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d8a-site-options-seed-pre-<timestamp>/; capture fp02_ options rows for allowlisted fields; then run apply",
+  "secrets_copied": false,
+  "api_keys_copied": false,
+  "stop_reason": "MySQL/DB unavailable",
+  "result": "FAIL"
+}
