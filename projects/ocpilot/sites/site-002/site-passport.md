@@ -49,7 +49,7 @@
 | **MANUAL UI REFINEMENTS ARE CANONICAL** | Operator manual CSS, Twig, JS, and UX edits on live TEST override older M9.x deploy snapshots |
 | **MANUAL CSS REFINEMENTS ARE CANONICAL** | Operator CSS edits on live TEST override repo work copies |
 | **MANUAL TWIG REFINEMENTS ARE CANONICAL** | Operator Twig edits on live TEST override repo work copies |
-| **Conflict resolution (Production)** | Current operational website authority = https://bzpm.ru/; current checkpoint `SITE-002-STABLE-PROD-SITEMAP-01`; valid XML sitemap at `/sitemap.xml` (Run 4.191); robots `Sitemap:` deployed; duplicate body/preloader fixed (Run 4.190); Yandex Metrika/Webmaster **VERIFIED** (Run 4.189) — operator Twig WIP in header/footer **DO NOT OVERWRITE**; catalog load-more append UX active; catalog default sort `pd.name ASC`; sort menu order A→Я, Я→А, cheaper, expensive |
+| **Conflict resolution (Production)** | Current operational website authority = https://bzpm.ru/; current checkpoint `SITE-002-STABLE-PROD-SITEMAP-01`; non-product SEO meta **PARTIAL** (Run 4.192); valid XML sitemap at `/sitemap.xml` (Run 4.191); duplicate body/preloader fixed (Run 4.190); Yandex Metrika/Webmaster **VERIFIED** (Run 4.189) — operator Twig WIP in header/footer **DO NOT OVERWRITE** |
 | **Conflict resolution (TEST evidence)** | If documentation contradicts historical TEST state, live TEST on https://zpm.new-site.space/ remains evidence for TEST-era checkpoints |
 | **Do NOT use as visual baseline** | Pass 1.2 CSS/HTML/JS · `SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2` · pre-checkpoint work copies · `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01` · M9.13 About redesign work copies |
 

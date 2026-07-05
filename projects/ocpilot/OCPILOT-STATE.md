@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-06
-**Evidence cutoff:** 2026-07-06 (SITE-002 Run **4.191** — valid XML sitemap **VERIFIED** at `https://bzpm.ru/sitemap.xml`; Google Sitemap feed enabled; robots `Sitemap:` deployed; checkpoint `SITE-002-STABLE-PROD-SITEMAP-01` issued)
+**Evidence cutoff:** 2026-07-06 (SITE-002 Run **4.192** — non-product SEO meta fix **PARTIAL** — category/query-variant/contact meta verified; admin home trim deferred; checkpoint unchanged `SITE-002-STABLE-PROD-SITEMAP-01`)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Valid sitemap + robots Sitemap directive (Run 4.191)** — OpenCart Google Sitemap enabled; 1320 URLs verified · next: `SITE-002-PROD-SEO-META-FIX-01` · [SITE-002-PROD-SITEMAP-ENABLE-01.md](sites/site-002/reports/SITE-002-PROD-SITEMAP-ENABLE-01.md) |
+| Current SITE-002 focus | **Non-product SEO meta fix (Run 4.192 PARTIAL)** — controller/modification deploy verified · admin home/category persistence pending · [SITE-002-PROD-SEO-META-FIX-01.md](sites/site-002/reports/SITE-002-PROD-SEO-META-FIX-01.md) |
 
 ---
 
