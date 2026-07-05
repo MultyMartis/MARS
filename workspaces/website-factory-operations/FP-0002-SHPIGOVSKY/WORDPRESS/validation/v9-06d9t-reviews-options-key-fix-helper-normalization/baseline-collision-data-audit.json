@@ -1,0 +1,176 @@
+{
+  "phase": "V9-06D9-T",
+  "generated_at": "2026-07-06T01:09:02.468832+07:00",
+  "source_options_json_keys": [
+    {
+      "key": "field_fp02_options_reviews_enabled",
+      "name": "reviews_enabled"
+    },
+    {
+      "key": "field_fp02_options_reviews_section_heading",
+      "name": "reviews_section_heading"
+    },
+    {
+      "key": "field_fp02_options_reviews_items",
+      "name": "reviews_items"
+    },
+    {
+      "key": "field_fp02_options_review_author",
+      "name": "review_author"
+    },
+    {
+      "key": "field_fp02_options_review_text",
+      "name": "review_text"
+    },
+    {
+      "key": "field_fp02_options_review_context",
+      "name": "review_context"
+    },
+    {
+      "key": "field_fp02_options_review_source",
+      "name": "review_source"
+    },
+    {
+      "key": "field_fp02_options_review_date",
+      "name": "review_date"
+    },
+    {
+      "key": "field_fp02_options_review_rating",
+      "name": "review_rating"
+    },
+    {
+      "key": "field_fp02_options_review_visible",
+      "name": "review_visible"
+    },
+    {
+      "key": "field_fp02_options_review_featured",
+      "name": "review_featured"
+    }
+  ],
+  "source_page_json_keys": [
+    {
+      "key": "field_fp02_reviews_items",
+      "name": "reviews_items"
+    },
+    {
+      "key": "field_fp02_review_author_label",
+      "name": "author_label"
+    },
+    {
+      "key": "field_fp02_review_text",
+      "name": "text"
+    },
+    {
+      "key": "field_fp02_review_meta",
+      "name": "metadata"
+    },
+    {
+      "key": "field_fp02_review_source",
+      "name": "source"
+    }
+  ],
+  "source_json_duplicate_keys": [],
+  "runtime_duplicate_keys": [
+    "field_fp02_reviews_items",
+    "field_fp02_review_author_label",
+    "field_fp02_review_text",
+    "field_fp02_review_meta",
+    "field_fp02_review_source"
+  ],
+  "runtime_options_group_keys": [
+    {
+      "key": "field_fp02_reviews_enabled",
+      "name": "reviews_enabled"
+    },
+    {
+      "key": "field_fp02_reviews_section_heading",
+      "name": "reviews_section_heading"
+    },
+    {
+      "key": "field_fp02_reviews_items",
+      "name": "reviews_items"
+    },
+    {
+      "key": "field_fp02_review_author_label",
+      "name": "author_label"
+    },
+    {
+      "key": "field_fp02_review_text",
+      "name": "text"
+    },
+    {
+      "key": "field_fp02_review_meta",
+      "name": "metadata"
+    },
+    {
+      "key": "field_fp02_review_source",
+      "name": "source"
+    }
+  ],
+  "runtime_page_group_keys": [
+    {
+      "key": "field_fp02_reviews_items",
+      "name": "reviews_items"
+    },
+    {
+      "key": "field_fp02_review_author_label",
+      "name": "author_label"
+    },
+    {
+      "key": "field_fp02_review_text",
+      "name": "text"
+    },
+    {
+      "key": "field_fp02_review_meta",
+      "name": "metadata"
+    },
+    {
+      "key": "field_fp02_review_source",
+      "name": "source"
+    }
+  ],
+  "seeded_reviews_items_count": 10,
+  "first_option_row": {
+    "author_label": "Александр, Москва",
+    "text": "Обратились в&nbsp;центр в&nbsp;непростой период. С&nbsp;первого контакта чувствовалось уважительное отношение и&nbsp;спокойный тон общения. Персонал отвечал на&nbsp;вопросы без спешки и&nbsp;давления.",
+    "metadata": "",
+    "source": ""
+  },
+  "first_option_row_subfield_names": [
+    "author_label",
+    "text",
+    "metadata",
+    "source"
+  ],
+  "helper_option_items_count_before": 0,
+  "frontend_source_mode_before": "FALLBACK",
+  "home_reviews_slide_count_before": 10,
+  "otzyvy_reviews_slide_count_before": 10,
+  "helper_expected_subfields": [
+    "review_author",
+    "review_text",
+    "review_context",
+    "review_source",
+    "review_date",
+    "review_rating",
+    "review_visible",
+    "review_featured"
+  ],
+  "legacy_subfield_names_in_db": [
+    "author_label",
+    "text",
+    "metadata",
+    "source"
+  ],
+  "collision_reproducible": true,
+  "migration_assessment": "helper_only_or_post_sync",
+  "home_page_4_reviews_meta": {
+    "home_reviews_heading": "Отзывы",
+    "home_reviews_teaser_0_title": "3123123",
+    "home_reviews_teaser_0_text": "12",
+    "home_reviews_teaser": "1"
+  },
+  "result": "PASS",
+  "home_http_status": 200,
+  "otzyvy_http_status": 200
+}

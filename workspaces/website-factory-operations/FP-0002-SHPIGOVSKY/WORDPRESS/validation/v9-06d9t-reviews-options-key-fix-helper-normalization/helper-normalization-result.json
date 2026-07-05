@@ -1,0 +1,80 @@
+{
+  "phase": "V9-06D9-T",
+  "generated_at": "2026-07-06T01:09:21.129990+07:00",
+  "mapping_checks": [
+    {
+      "field": "author",
+      "fallback_chain": [
+        "review_author",
+        "author_label",
+        "author"
+      ],
+      "present_in_helper": true
+    },
+    {
+      "field": "text",
+      "fallback_chain": [
+        "review_text",
+        "text"
+      ],
+      "present_in_helper": true
+    },
+    {
+      "field": "context",
+      "fallback_chain": [
+        "review_context",
+        "metadata"
+      ],
+      "present_in_helper": true
+    },
+    {
+      "field": "source",
+      "fallback_chain": [
+        "review_source",
+        "source"
+      ],
+      "present_in_helper": true
+    },
+    {
+      "field": "date",
+      "fallback_chain": [
+        "review_date",
+        "date"
+      ],
+      "present_in_helper": true
+    },
+    {
+      "field": "rating",
+      "fallback_chain": [
+        "review_rating",
+        "rating"
+      ],
+      "present_in_helper": true
+    },
+    {
+      "field": "visible",
+      "fallback_chain": [
+        "review_visible",
+        "visible"
+      ],
+      "present_in_helper": true
+    },
+    {
+      "field": "featured",
+      "fallback_chain": [
+        "review_featured",
+        "featured"
+      ],
+      "present_in_helper": true
+    }
+  ],
+  "source_mode_detector_present": true,
+  "runtime_probe": {
+    "option_count": 10,
+    "resolved_count": 10,
+    "source_mode": "OPTIONS",
+    "first_author": "Александр, Москва",
+    "is_demo": false
+  },
+  "result": "PASS"
+}

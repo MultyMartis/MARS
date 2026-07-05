@@ -1,0 +1,82 @@
+{
+  "phase": "V9-06D9-T",
+  "generated_at": "2026-07-05T18:09:05+00:00",
+  "synced_groups": [
+    "group_fp02_site_options_reviews"
+  ],
+  "before_reviews_items_subfields": [
+    {
+      "key": "field_fp02_review_author_label",
+      "name": "author_label"
+    },
+    {
+      "key": "field_fp02_review_text",
+      "name": "text"
+    },
+    {
+      "key": "field_fp02_review_meta",
+      "name": "metadata"
+    },
+    {
+      "key": "field_fp02_review_source",
+      "name": "source"
+    }
+  ],
+  "options_reviews_items_subfields": [
+    {
+      "key": "field_fp02_options_review_author",
+      "name": "review_author"
+    },
+    {
+      "key": "field_fp02_options_review_text",
+      "name": "review_text"
+    },
+    {
+      "key": "field_fp02_options_review_context",
+      "name": "review_context"
+    },
+    {
+      "key": "field_fp02_options_review_source",
+      "name": "review_source"
+    },
+    {
+      "key": "field_fp02_options_review_date",
+      "name": "review_date"
+    },
+    {
+      "key": "field_fp02_options_review_rating",
+      "name": "review_rating"
+    },
+    {
+      "key": "field_fp02_options_review_visible",
+      "name": "review_visible"
+    },
+    {
+      "key": "field_fp02_options_review_featured",
+      "name": "review_featured"
+    }
+  ],
+  "page_reviews_items_subfields": [
+    {
+      "key": "field_fp02_review_author_label",
+      "name": "author_label"
+    },
+    {
+      "key": "field_fp02_review_text",
+      "name": "text"
+    },
+    {
+      "key": "field_fp02_review_meta",
+      "name": "metadata"
+    },
+    {
+      "key": "field_fp02_review_source",
+      "name": "source"
+    }
+  ],
+  "options_field_key": "field_fp02_options_reviews_items",
+  "page_field_key": "field_fp02_reviews_items",
+  "keys_distinct": true,
+  "import_result_id": 262,
+  "result": "PASS"
+}

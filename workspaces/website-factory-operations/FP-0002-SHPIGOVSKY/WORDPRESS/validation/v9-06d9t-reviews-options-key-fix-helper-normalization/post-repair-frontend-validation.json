@@ -1,0 +1,53 @@
+{
+  "phase": "V9-06D9-T",
+  "generated_at": "2026-07-06T01:09:15.122593+07:00",
+  "routes": [
+    {
+      "route": "/",
+      "http_status": 200,
+      "fatal": false,
+      "reviews_slider_present": true,
+      "reviews_slide_count": 10,
+      "reviews_pagination_present": true,
+      "rating_stars_present": true,
+      "source_mode": "OPTIONS"
+    },
+    {
+      "route": "/otzyvy/",
+      "http_status": 200,
+      "fatal": false,
+      "reviews_slider_present": true,
+      "reviews_slide_count": 10,
+      "reviews_pagination_present": true,
+      "rating_stars_present": true,
+      "source_mode": "OPTIONS"
+    },
+    {
+      "route": "/uslugi/",
+      "http_status": 200,
+      "fatal": false
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "http_status": 200,
+      "fatal": false
+    },
+    {
+      "route": "/kontakty/",
+      "http_status": 200,
+      "fatal": false
+    }
+  ],
+  "php_source_probe": {
+    "option_count": 10,
+    "resolved_count": 10,
+    "source_mode": "OPTIONS",
+    "first_author": "Александр, Москва",
+    "is_demo": false
+  },
+  "source_mode_after_repair": "OPTIONS",
+  "home_reviews_slide_count": 10,
+  "otzyvy_reviews_slide_count": 10,
+  "options_not_fallback": true,
+  "result": "PASS"
+}

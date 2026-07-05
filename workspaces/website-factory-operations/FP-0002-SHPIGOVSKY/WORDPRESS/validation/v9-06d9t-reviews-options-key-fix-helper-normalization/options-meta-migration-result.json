@@ -1,0 +1,39 @@
+{
+  "phase": "V9-06D9-T",
+  "generated_at": "2026-07-05T18:09:07+00:00",
+  "reference_meta_updates": [
+    {
+      "option_name": "_reviews_enabled",
+      "before": false,
+      "after": "field_fp02_options_reviews_enabled",
+      "ok": true
+    },
+    {
+      "option_name": "_reviews_section_heading",
+      "before": false,
+      "after": "field_fp02_options_reviews_section_heading",
+      "ok": true
+    },
+    {
+      "option_name": "_reviews_items",
+      "before": false,
+      "after": "field_fp02_options_reviews_items",
+      "ok": true
+    }
+  ],
+  "rows_before_count": 10,
+  "rows_after_count": 10,
+  "helper_items_before": 10,
+  "helper_items_after": 10,
+  "first_row_keys_after": [
+    "author_label",
+    "text",
+    "metadata",
+    "source"
+  ],
+  "migration_performed": false,
+  "migration_rows": 0,
+  "mode": "compatibility_helper_only",
+  "source_mode_after": "OPTIONS",
+  "result": "PASS"
+}

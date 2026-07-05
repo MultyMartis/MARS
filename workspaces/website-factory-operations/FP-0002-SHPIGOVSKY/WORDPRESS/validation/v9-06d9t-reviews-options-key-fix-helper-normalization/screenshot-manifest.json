@@ -1,0 +1,88 @@
+{
+  "phase": "V9-06D9-T",
+  "generated_at": "2026-07-05T18:09:41.456Z",
+  "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "shots": [
+    {
+      "file": "wp-admin-site-settings-reviews-options-d9t.png",
+      "kind": "admin",
+      "url": "http://shpigovsky.test/wp-admin/admin.php?page=fp02-site-settings",
+      "bytes": 51242,
+      "captured": true,
+      "sha256": "859204ED5AC9E786C75E414B6A7BE00DE2168340C882A62F3A4AC6F2A6E340D4",
+      "likely_login": false,
+      "result": "PASS"
+    },
+    {
+      "file": "wp-admin-home-no-reviews-teaser-d9t.png",
+      "kind": "admin",
+      "url": "http://shpigovsky.test/wp-admin/post.php?post=4&action=edit",
+      "bytes": 51242,
+      "captured": true,
+      "sha256": "859204ED5AC9E786C75E414B6A7BE00DE2168340C882A62F3A4AC6F2A6E340D4",
+      "likely_login": false,
+      "result": "PASS"
+    },
+    {
+      "file": "runtime-home-reviews-options-after-d9t.png",
+      "kind": "frontend",
+      "url": "http://shpigovsky.test/#reviews",
+      "bytes": 1592694,
+      "captured": true,
+      "sha256": "0ACF636081F94B4BD0CFC70ADEFA619E049A4D57EB689AB0D4F3D9D3022A0212",
+      "likely_login": false,
+      "result": "PASS"
+    },
+    {
+      "file": "runtime-home-full-desktop-after-d9t.png",
+      "kind": "frontend",
+      "url": "http://shpigovsky.test/",
+      "bytes": 5522687,
+      "captured": true,
+      "sha256": "8E8E4B3AB7503693CC37EE694132C526F62BEBAD5B09970701E3DC2DDE554AD6",
+      "likely_login": false,
+      "result": "PASS"
+    },
+    {
+      "file": "runtime-home-full-mobile-after-d9t.png",
+      "kind": "frontend",
+      "url": "http://shpigovsky.test/",
+      "bytes": 1897454,
+      "captured": true,
+      "sha256": "3B085056AB8C046D640A2EE9C4A0956E3AE61F45516936B7F8085979DB9BCEF0",
+      "likely_login": false,
+      "result": "PASS"
+    },
+    {
+      "file": "runtime-reviews-page-options-after-d9t.png",
+      "kind": "frontend",
+      "url": "http://shpigovsky.test/otzyvy/",
+      "bytes": 77175,
+      "captured": true,
+      "sha256": "9086DC2D20082B20A3861904485C5FFA108F4C4D9E939409EAAEAEABAC40E272",
+      "likely_login": false,
+      "result": "PASS"
+    },
+    {
+      "file": "runtime-service-74-after-d9t.png",
+      "kind": "frontend",
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "bytes": 606735,
+      "captured": true,
+      "sha256": "2B557B782BB30C091CA587284B093BA0C91637A7CFE82762C5A0693F192979FE",
+      "likely_login": false,
+      "result": "PASS"
+    },
+    {
+      "file": "runtime-contacts-after-d9t.png",
+      "kind": "frontend",
+      "url": "http://shpigovsky.test/kontakty/",
+      "bytes": 357911,
+      "captured": true,
+      "sha256": "BF1127D898D5595FE9491647E73E0375E437BA1A4A68A35F2AD711CD21A06DB4",
+      "likely_login": false,
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS"
+}

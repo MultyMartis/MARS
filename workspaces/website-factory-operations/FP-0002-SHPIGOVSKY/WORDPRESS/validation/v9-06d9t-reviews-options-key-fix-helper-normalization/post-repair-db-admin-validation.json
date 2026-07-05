@@ -1,0 +1,33 @@
+{
+  "phase": "V9-06D9-T",
+  "generated_at": "2026-07-05T18:09:08+00:00",
+  "options_reviews_items_field_key": "field_fp02_options_reviews_items",
+  "page_reviews_items_field_key": "field_fp02_reviews_items",
+  "duplicate_field_fp02_reviews_items": false,
+  "options_subfield_names": [
+    "review_author",
+    "review_text",
+    "review_context",
+    "review_source",
+    "review_date",
+    "review_rating",
+    "review_visible",
+    "review_featured"
+  ],
+  "reviews_items_count": 10,
+  "helper_option_items_count": 10,
+  "reviews_items_reference_meta": "field_fp02_options_reviews_items",
+  "reviews_items_required": false,
+  "first_row_author": "Александр, Москва",
+  "first_row_text_length": 344,
+  "home_reviews_teaser_present": true,
+  "home_page_4_reviews_meta": {
+    "home_reviews_heading": "Отзывы",
+    "home_reviews_teaser_0_title": "3123123",
+    "home_reviews_teaser_0_text": "12",
+    "home_reviews_teaser": "1"
+  },
+  "source_mode": "OPTIONS",
+  "admin_fatal": false,
+  "result": "PASS"
+}

@@ -1,0 +1,37 @@
+{
+  "phase": "V9-06D9-T",
+  "generated_at": "2026-07-06T01:09:19.982796+07:00",
+  "checks": [
+    {
+      "route": "/",
+      "http_status": 200,
+      "content_length": 140835,
+      "has_php_fatal_snippet": false
+    },
+    {
+      "route": "/otzyvy/",
+      "http_status": 200,
+      "content_length": 67803,
+      "has_php_fatal_snippet": false
+    },
+    {
+      "route": "/uslugi/",
+      "http_status": 200,
+      "content_length": 80157,
+      "has_php_fatal_snippet": false
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "http_status": 200,
+      "content_length": 76679,
+      "has_php_fatal_snippet": false
+    },
+    {
+      "route": "/kontakty/",
+      "http_status": 200,
+      "content_length": 60981,
+      "has_php_fatal_snippet": false
+    }
+  ],
+  "result": "PASS"
+}

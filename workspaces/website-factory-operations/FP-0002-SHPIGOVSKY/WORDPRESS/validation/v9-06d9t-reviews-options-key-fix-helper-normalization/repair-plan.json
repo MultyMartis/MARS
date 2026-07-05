@@ -1,0 +1,32 @@
+{
+  "phase": "V9-06D9-T",
+  "generated_at": "2026-07-06T01:09:21.130876+07:00",
+  "components": [
+    {
+      "component": "acf_key_repair",
+      "action": "Unique field_fp02_options_* keys in options reviews group",
+      "safety": "No page reviews group changes"
+    },
+    {
+      "component": "helper_normalization",
+      "action": "Legacy + canonical subfield mapping in normalize_review_row",
+      "safety": "Read-only; no content mutation"
+    },
+    {
+      "component": "options_meta",
+      "action": "Migrate only if post-sync admin/read requires canonical keys",
+      "safety": "Preserve 10 rows text exactly"
+    },
+    {
+      "component": "runtime_delivery",
+      "action": "Copy helper + ACF JSON; acf_import options group",
+      "safety": "Bounded file copy only"
+    },
+    {
+      "component": "validation",
+      "action": "OPTIONS source mode; 10 reviews Home + /otzyvy/",
+      "safety": "No rewrite/menu/media"
+    }
+  ],
+  "result": "PASS"
+}

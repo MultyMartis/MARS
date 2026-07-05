@@ -3,7 +3,7 @@
     "title": "Site Options — Reviews",
     "fields": [
         {
-            "key": "field_fp02_reviews_enabled",
+            "key": "field_fp02_options_reviews_enabled",
             "label": "Включить блок отзывов",
             "name": "reviews_enabled",
             "aria-label": "",
@@ -22,7 +22,7 @@
             "ui_off_text": "Нет"
         },
         {
-            "key": "field_fp02_reviews_section_heading",
+            "key": "field_fp02_options_reviews_section_heading",
             "label": "Заголовок блока отзывов",
             "name": "reviews_section_heading",
             "aria-label": "",
@@ -39,7 +39,7 @@
             "placeholder": "Отзывы"
         },
         {
-            "key": "field_fp02_reviews_items",
+            "key": "field_fp02_options_reviews_items",
             "label": "Отзывы",
             "name": "reviews_items",
             "aria-label": "",
@@ -60,7 +60,7 @@
             "max": 50,
             "sub_fields": [
                 {
-                    "key": "field_fp02_review_author",
+                    "key": "field_fp02_options_review_author",
                     "label": "Автор",
                     "name": "review_author",
                     "aria-label": "",
@@ -77,7 +77,7 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_fp02_review_text",
+                    "key": "field_fp02_options_review_text",
                     "label": "Текст отзыва",
                     "name": "review_text",
                     "aria-label": "",
@@ -95,7 +95,7 @@
                     "rows": 5
                 },
                 {
-                    "key": "field_fp02_review_context",
+                    "key": "field_fp02_options_review_context",
                     "label": "Контекст / роль",
                     "name": "review_context",
                     "aria-label": "",
@@ -112,7 +112,7 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_fp02_review_source",
+                    "key": "field_fp02_options_review_source",
                     "label": "Источник",
                     "name": "review_source",
                     "aria-label": "",
@@ -129,7 +129,7 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_fp02_review_date",
+                    "key": "field_fp02_options_review_date",
                     "label": "Дата",
                     "name": "review_date",
                     "aria-label": "",
@@ -146,7 +146,7 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_fp02_review_rating",
+                    "key": "field_fp02_options_review_rating",
                     "label": "Оценка (1–5)",
                     "name": "review_rating",
                     "aria-label": "",
@@ -166,7 +166,7 @@
                     "step": 1
                 },
                 {
-                    "key": "field_fp02_review_visible",
+                    "key": "field_fp02_options_review_visible",
                     "label": "Показывать",
                     "name": "review_visible",
                     "aria-label": "",
@@ -185,7 +185,7 @@
                     "ui_off_text": "Нет"
                 },
                 {
-                    "key": "field_fp02_review_featured",
+                    "key": "field_fp02_options_review_featured",
                     "label": "В слайдере на главной",
                     "name": "review_featured",
                     "aria-label": "",
@@ -222,7 +222,7 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
-    "description": "FP-0002 V9-06D9-R shared reviews options. Values seeded in D9-S; static V9 fallback when empty.",
+    "description": "FP-0002 V9-06D9-T options reviews — unique field keys; D9-S seeded values preserved via helper normalization.",
     "show_in_rest": 0,
-    "modified": 1783511700
+    "modified": 1783520000
 }

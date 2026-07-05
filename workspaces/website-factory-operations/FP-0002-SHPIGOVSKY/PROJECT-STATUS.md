@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-06 (V9-06D9-S controlled reviews options seed PARTIAL PASS)
+**Last updated:** 2026-07-06 (V9-06D9-T reviews options key fix + helper normalization PASS)
 
-**Current WordPress phase:** V9-06D9-S Controlled Reviews Options Seed **PARTIAL PASS** — 10 review rows seeded to ACF Options from static V9 fallback; DB checkpoint created; Home #4 unchanged. Frontend still **FALLBACK** due ACF field key collision (`field_fp02_reviews_items`) — helper reads `review_author`, runtime stores `author_label`. **Next: operator decision — D9-T schema key fix + helper normalization.** Report: `WORDPRESS/reports/FP-0002-V9-06D9S-CONTROLLED-REVIEWS-OPTIONS-SEED-REPORT-v1.md`. Prior D9-R: `WORDPRESS/reports/FP-0002-V9-06D9R-REVIEWS-SHARED-INCLUDE-IMPLEMENTATION-REPORT-v1.md`.
+**Current WordPress phase:** V9-06D9-T Reviews Options Key Fix + Helper Normalization **PASS** — ACF options reviews keys decollided (`field_fp02_options_*`); helper reads legacy D9-S rows; frontend source mode **OPTIONS** (10 reviews Home + `/otzyvy/`). DB checkpoint created. **Next: D9-U admin visual QA.** Report: `WORDPRESS/reports/FP-0002-V9-06D9T-REVIEWS-OPTIONS-KEY-FIX-HELPER-NORMALIZATION-REPORT-v1.md`. Prior D9-S: `WORDPRESS/reports/FP-0002-V9-06D9S-CONTROLLED-REVIEWS-OPTIONS-SEED-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

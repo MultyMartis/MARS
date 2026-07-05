@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D9-S CONTROLLED REVIEWS OPTIONS SEED PARTIAL PASS — NEXT: operator decision (D9-T schema/helper repair for OPTIONS mode)
+**Status:** V9-06D9-T REVIEWS OPTIONS KEY FIX + HELPER NORMALIZATION PASS — source mode OPTIONS; NEXT: D9-U admin visual QA
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---
@@ -277,4 +277,8 @@ D9-R **PASS**: Shared reviews architecture implemented — `inc/reviews-helpers.
 
 ## V9-06D9-S controlled reviews options seed (2026-07-06)
 
-D9-S **PARTIAL PASS**: DB checkpoint `v9-06d9s-controlled-reviews-options-seed-pre-20260706-005734`. Seeded `reviews_enabled`, `reviews_section_heading`, 10 `reviews_items` rows from static V9 fallback (legacy runtime subfields `author_label`/`text`). Home #4 unchanged. Frontend still **FALLBACK** — `field_fp02_reviews_items` key collision with page reviews group; helper reads `review_author` not `author_label`. Zero source/theme/ACF JSON changes. Screenshots PARTIAL. Evidence: `validation/v9-06d9s-controlled-reviews-options-seed/`. Report: `reports/FP-0002-V9-06D9S-CONTROLLED-REVIEWS-OPTIONS-SEED-REPORT-v1.md`. Next: operator decision — D9-T schema key fix + helper normalization.
+D9-S **PARTIAL PASS**: DB checkpoint `v9-06d9s-controlled-reviews-options-seed-pre-20260706-005734`. Seeded `reviews_enabled`, `reviews_section_heading`, 10 `reviews_items` rows from static V9 fallback (legacy runtime subfields `author_label`/`text`). Home #4 unchanged. Frontend still **FALLBACK** — `field_fp02_reviews_items` key collision with page reviews group; helper reads `review_author` not `author_label`. Zero source/theme/ACF JSON changes. Repaired in D9-T below.
+
+## V9-06D9-T reviews options key fix + helper normalization (2026-07-06)
+
+D9-T **PASS**: Unique `field_fp02_options_*` keys in `group_fp02_site_options_reviews.json`; helper normalization for legacy + canonical subfields; 3 ACF reference meta updates. DB checkpoint `v9-06d9t-reviews-options-key-fix-pre-20260706-010904`. Runtime delivery + ACF import. Source mode **OPTIONS**; 10 reviews on Home and `/otzyvy/`; `is_demo: false`. Evidence: `validation/v9-06d9t-reviews-options-key-fix-helper-normalization/`. Report: `reports/FP-0002-V9-06D9T-REVIEWS-OPTIONS-KEY-FIX-HELPER-NORMALIZATION-REPORT-v1.md`. Next: D9-U admin visual QA.

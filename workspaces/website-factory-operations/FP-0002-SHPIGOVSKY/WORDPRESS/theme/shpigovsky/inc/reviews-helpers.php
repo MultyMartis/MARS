@@ -141,7 +141,58 @@ function shpigovsky_normalize_review_rating( $rating ) {
 }
 
 /**
+ * Pick the first non-empty string value from a row using candidate field names.
+ *
+ * @param array<string, mixed> $row        Raw ACF row.
+ * @param array<int, string>   $candidates Candidate field names in priority order.
+ * @return string
+ */
+function shpigovsky_pick_review_string_field( $row, $candidates ) {
+	foreach ( $candidates as $key ) {
+		if ( ! array_key_exists( $key, $row ) ) {
+			continue;
+		}
+
+		$value = trim( (string) $row[ $key ] );
+
+		if ( '' !== $value ) {
+			return $value;
+		}
+	}
+
+	return '';
+}
+
+/**
+ * Pick a boolean review flag with canonical and legacy field fallbacks.
+ *
+ * @param array<string, mixed> $row        Raw ACF row.
+ * @param array<int, string>   $candidates Candidate field names in priority order.
+ * @param bool                 $default    Default when unset or empty.
+ * @return bool
+ */
+function shpigovsky_pick_review_bool_field( $row, $candidates, $default = true ) {
+	foreach ( $candidates as $key ) {
+		if ( ! array_key_exists( $key, $row ) ) {
+			continue;
+		}
+
+		$value = $row[ $key ];
+
+		if ( '' === $value || null === $value ) {
+			continue;
+		}
+
+		return (bool) $value;
+	}
+
+	return $default;
+}
+
+/**
  * Normalize one ACF options repeater row into render-ready review data.
+ *
+ * Supports canonical D9-R options subfields and legacy D9-S/page-reviews names.
  *
  * @param array<string, mixed> $row Raw ACF row.
  * @return array<string, mixed>|null
@@ -151,34 +202,59 @@ function shpigovsky_normalize_review_row( $row ) {
 		return null;
 	}
 
-	$author = isset( $row['review_author'] ) ? trim( (string) $row['review_author'] ) : '';
-	$text   = isset( $row['review_text'] ) ? trim( (string) $row['review_text'] ) : '';
+	$author = shpigovsky_pick_review_string_field(
+		$row,
+		array( 'review_author', 'author_label', 'author' )
+	);
+	$text   = shpigovsky_pick_review_string_field(
+		$row,
+		array( 'review_text', 'text' )
+	);
 
 	if ( '' === $author && '' === $text ) {
 		return null;
 	}
 
-	$visible = true;
-	if ( array_key_exists( 'review_visible', $row ) && '' !== $row['review_visible'] && null !== $row['review_visible'] ) {
-		$visible = (bool) $row['review_visible'];
-	}
+	$visible = shpigovsky_pick_review_bool_field(
+		$row,
+		array( 'review_visible', 'visible' ),
+		true
+	);
 
 	if ( ! $visible ) {
 		return null;
 	}
 
-	$featured = true;
-	if ( array_key_exists( 'review_featured', $row ) && '' !== $row['review_featured'] && null !== $row['review_featured'] ) {
-		$featured = (bool) $row['review_featured'];
+	$featured = shpigovsky_pick_review_bool_field(
+		$row,
+		array( 'review_featured', 'featured' ),
+		true
+	);
+
+	$rating_raw = null;
+	foreach ( array( 'review_rating', 'rating' ) as $rating_key ) {
+		if ( array_key_exists( $rating_key, $row ) && '' !== $row[ $rating_key ] && null !== $row[ $rating_key ] ) {
+			$rating_raw = $row[ $rating_key ];
+			break;
+		}
 	}
 
 	return array(
 		'author'   => $author,
 		'text'     => $text,
-		'context'  => isset( $row['review_context'] ) ? trim( (string) $row['review_context'] ) : '',
-		'source'   => isset( $row['review_source'] ) ? trim( (string) $row['review_source'] ) : '',
-		'date'     => isset( $row['review_date'] ) ? trim( (string) $row['review_date'] ) : '',
-		'rating'   => shpigovsky_normalize_review_rating( $row['review_rating'] ?? 5 ),
+		'context'  => shpigovsky_pick_review_string_field(
+			$row,
+			array( 'review_context', 'metadata' )
+		),
+		'source'   => shpigovsky_pick_review_string_field(
+			$row,
+			array( 'review_source', 'source' )
+		),
+		'date'     => shpigovsky_pick_review_string_field(
+			$row,
+			array( 'review_date', 'date' )
+		),
+		'rating'   => shpigovsky_normalize_review_rating( null !== $rating_raw ? $rating_raw : 5 ),
 		'featured' => $featured,
 		'visible'  => true,
 		'is_demo'  => false,
@@ -266,6 +342,25 @@ function shpigovsky_get_reviews_items( $args = array() ) {
 	}
 
 	return $items;
+}
+
+/**
+ * Resolve shared reviews data source mode for validation and diagnostics.
+ *
+ * @return string OPTIONS|FALLBACK|DISABLED
+ */
+function shpigovsky_get_reviews_source_mode() {
+	if ( ! shpigovsky_reviews_enabled() ) {
+		return 'DISABLED';
+	}
+
+	$option_items = shpigovsky_get_reviews_option_items();
+
+	if ( ! empty( $option_items ) ) {
+		return 'OPTIONS';
+	}
+
+	return 'FALLBACK';
 }
 
 /**
