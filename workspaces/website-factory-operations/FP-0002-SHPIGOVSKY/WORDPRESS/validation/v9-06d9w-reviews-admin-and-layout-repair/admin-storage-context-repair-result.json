@@ -1,0 +1,14 @@
+{
+  "phase": "V9-06D9-W",
+  "generated_at": "2026-07-06T02:12:00+07:00",
+  "seed_source": "validation/v9-06d9s-controlled-reviews-options-seed/_seed_payload.json",
+  "migration_strategy": "update_field option restore + direct meta copy options_reviews_* to fp02-reviews_reviews_* with canonical field references",
+  "meta_copied_count": 166,
+  "fp02_rows_after": 10,
+  "option_rows_after": 10,
+  "fp02_admin_first_author": "Александр, Москва",
+  "option_admin_first_author": "Александр, Москва",
+  "helper_items_count": 10,
+  "source_mode": "OPTIONS",
+  "result": "PASS"
+}

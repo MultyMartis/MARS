@@ -1,0 +1,39 @@
+{
+  "phase": "V9-06D9-W",
+  "generated_at": "2026-07-05T19:10:51+00:00",
+  "group_key": "group_fp02_site_options_reviews",
+  "keep_id": 286,
+  "actions": [
+    {
+      "ID": 286,
+      "action": "KEEP",
+      "reason": "canonical active group"
+    },
+    {
+      "ID": 274,
+      "action": "TRASH",
+      "result": true,
+      "reason": "stale duplicate"
+    },
+    {
+      "ID": 250,
+      "action": "TRASH",
+      "result": true,
+      "reason": "stale duplicate"
+    },
+    {
+      "ID": 262,
+      "action": "TRASH",
+      "result": true,
+      "reason": "stale duplicate"
+    }
+  ],
+  "remaining_non_trash": [
+    {
+      "ID": "286",
+      "post_status": "publish"
+    }
+  ],
+  "remaining_count": 1,
+  "result": "PASS"
+}

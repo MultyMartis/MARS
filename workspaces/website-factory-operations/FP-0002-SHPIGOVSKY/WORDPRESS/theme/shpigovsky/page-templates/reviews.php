@@ -12,19 +12,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 ?>
-<main class="shpigovsky-skeleton shpigovsky-skeleton--reviews" id="main-content">
-	<?php shpigovsky_render_breadcrumbs(); ?>
+<main class="page-otzyvy__main" id="main-content">
+	<div class="reviews-page__breadcrumbs">
+		<div class="container">
+			<?php shpigovsky_render_breadcrumbs(); ?>
+		</div>
+	</div>
 	<?php
-	while ( have_posts() ) :
-		the_post();
-		?>
-		<article <?php post_class(); ?>>
-			<h1><?php the_title(); ?></h1>
-		</article>
-		<?php
-	endwhile;
-	get_template_part( 'template-parts/reviews/reviews-section' );
 	get_template_part( 'template-parts/reviews/archive-list' );
+	get_template_part( 'template-parts/reviews/rehabilitation-requirements' );
 	?>
 </main>
 <?php

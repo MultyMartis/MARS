@@ -1,0 +1,93 @@
+{
+  "phase": "V9-06D9-W",
+  "generated_at": "2026-07-06T02:10:50.391596+07:00",
+  "preflight": {
+    "volume_label": "AI WS",
+    "branch": "mars/canonical-post-recovery",
+    "local_head": "9e29aa5b3625ce0445eb4510d1ec9c80a0751038",
+    "local_head_short": "9e29aa5b",
+    "remote_head": "9e29aa5b3625ce0445eb4510d1ec9c80a0751038",
+    "remote_head_short": "9e29aa5b",
+    "required_d9v_head": "9e29aa5b3625ce0445eb4510d1ec9c80a0751038",
+    "d9v_ancestor_present": true,
+    "ahead": 0,
+    "behind": 0,
+    "staged_files": [],
+    "strict_head_gate": "PASS",
+    "strict_head_note": null,
+    "result": "PASS"
+  },
+  "duplicate_reviews_group_in_site_settings": true,
+  "duplicate_group_posts": [
+    {
+      "ID": 250,
+      "post_name": "group_fp02_site_options_reviews",
+      "post_title": "Site Options — Reviews",
+      "post_status": "publish",
+      "post_modified": "2026-07-05 21:31:27",
+      "location_hint": "fp02-reviews"
+    },
+    {
+      "ID": 262,
+      "post_name": "group_fp02_site_options_reviews",
+      "post_title": "Site Options — Reviews",
+      "post_status": "publish",
+      "post_modified": "2026-07-05 21:09:05",
+      "location_hint": "fp02-site-settings"
+    },
+    {
+      "ID": 274,
+      "post_name": "group_fp02_site_options_reviews",
+      "post_title": "Site Options — Reviews",
+      "post_status": "publish",
+      "post_modified": "2026-07-05 21:30:05",
+      "location_hint": "fp02-reviews"
+    },
+    {
+      "ID": 286,
+      "post_name": "group_fp02_site_options_reviews",
+      "post_title": "Site Options — Reviews",
+      "post_status": "publish",
+      "post_modified": "2026-07-05 21:31:11",
+      "location_hint": "fp02-reviews"
+    }
+  ],
+  "duplicate_group_count": 4,
+  "top_level_reviews_empty_fields": true,
+  "reviews_option_context_rows": 10,
+  "fp02_reviews_context_rows": 0,
+  "helper_items_count": 0,
+  "source_mode": "FALLBACK",
+  "frontend_otzyvy_uses_slider": true,
+  "frontend_otzyvy_has_archive": false,
+  "home_slider_slide_count": 10,
+  "reviews_options_meta_sample": {
+    "_options_reviews_enabled": "field_fp02_options_reviews_enabled",
+    "_options_reviews_items": "field_fp02_options_reviews_items",
+    "_options_reviews_items_0_review_author": "field_fp02_options_review_author",
+    "_options_reviews_items_0_review_context": "field_fp02_options_review_context",
+    "_options_reviews_items_0_review_date": "field_fp02_options_review_date",
+    "_options_reviews_items_0_review_featured": "field_fp02_options_review_featured",
+    "_options_reviews_items_0_review_rating": "field_fp02_options_review_rating",
+    "_options_reviews_items_0_review_source": "field_fp02_options_review_source",
+    "_options_reviews_items_0_review_text": "field_fp02_options_review_text",
+    "_options_reviews_items_0_review_visible": "field_fp02_options_review_visible",
+    "_options_reviews_items_1_review_author": "field_fp02_options_review_author",
+    "_options_reviews_items_1_review_context": "field_fp02_options_review_context",
+    "_options_reviews_items_1_review_date": "field_fp02_options_review_date",
+    "_options_reviews_items_1_review_featured": "field_fp02_options_review_featured",
+    "_options_reviews_items_1_review_rating": "field_fp02_options_review_rating",
+    "_options_reviews_items_1_review_source": "field_fp02_options_review_source",
+    "_options_reviews_items_1_review_text": "field_fp02_options_review_text",
+    "_options_reviews_items_1_review_visible": "field_fp02_options_review_visible",
+    "_options_reviews_items_2_review_author": "field_fp02_options_review_author",
+    "_options_reviews_items_2_review_context": "field_fp02_options_review_context"
+  },
+  "fp02_reviews_meta_count": 0,
+  "static_v9_archive_classes_expected": [
+    "reviews-archive",
+    "reviews-archive__list",
+    "review-archive-card"
+  ],
+  "result": "PASS"
+}

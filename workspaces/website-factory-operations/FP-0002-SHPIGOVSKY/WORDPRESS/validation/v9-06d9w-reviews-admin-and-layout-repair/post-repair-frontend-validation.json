@@ -1,0 +1,21 @@
+{
+  "phase": "V9-06D9-W",
+  "generated_at": "2026-07-06T02:12:00+07:00",
+  "routes": {
+    "/": { "status": 200, "ok": true },
+    "/otzyvy/": { "status": 200, "ok": true },
+    "/uslugi/": { "status": 200, "ok": true },
+    "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/": { "status": 200, "ok": true },
+    "/kontakty/": { "status": 200, "ok": true }
+  },
+  "all_routes_200": true,
+  "home_has_slider": true,
+  "home_slide_count": 10,
+  "otzyvy_has_slider": false,
+  "otzyvy_has_archive": true,
+  "otzyvy_archive_card_count": 10,
+  "otzyvy_has_rehab_section": true,
+  "source_mode": "OPTIONS",
+  "helper_items_count": 10,
+  "result": "PASS"
+}

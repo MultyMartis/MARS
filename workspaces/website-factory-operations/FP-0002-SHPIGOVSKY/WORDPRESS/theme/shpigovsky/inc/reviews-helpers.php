@@ -102,6 +102,42 @@ function shpigovsky_get_reviews_fallback_items() {
 }
 
 /**
+ * Canonical ACF options context for top-level Reviews admin.
+ *
+ * @return string
+ */
+function shpigovsky_get_reviews_options_context() {
+	return 'fp02-reviews';
+}
+
+/**
+ * Read a reviews options field from canonical context with generic fallback.
+ *
+ * @param string $field_name ACF field name.
+ * @return mixed
+ */
+function shpigovsky_get_reviews_option_field( $field_name ) {
+	if ( ! function_exists( 'get_field' ) ) {
+		return null;
+	}
+
+	$contexts = array(
+		shpigovsky_get_reviews_options_context(),
+		'option',
+	);
+
+	foreach ( $contexts as $context ) {
+		$value = get_field( $field_name, $context );
+
+		if ( null !== $value && '' !== $value ) {
+			return $value;
+		}
+	}
+
+	return null;
+}
+
+/**
  * Whether the shared reviews section should render.
  *
  * @return bool
@@ -111,7 +147,7 @@ function shpigovsky_reviews_enabled() {
 		return true;
 	}
 
-	$value = get_field( 'reviews_enabled', 'option' );
+	$value = shpigovsky_get_reviews_option_field( 'reviews_enabled' );
 
 	if ( null === $value || '' === $value ) {
 		return true;
@@ -271,23 +307,31 @@ function shpigovsky_get_reviews_option_items() {
 		return array();
 	}
 
-	$rows = get_field( 'reviews_items', 'option' );
+	$rows = null;
 
-	if ( ! is_array( $rows ) || empty( $rows ) ) {
-		return array();
-	}
+	foreach ( array( shpigovsky_get_reviews_options_context(), 'option' ) as $context ) {
+		$candidate = get_field( 'reviews_items', $context );
 
-	$items = array();
+		if ( ! is_array( $candidate ) || empty( $candidate ) ) {
+			continue;
+		}
 
-	foreach ( $rows as $row ) {
-		$normalized = shpigovsky_normalize_review_row( $row );
+		$normalized = array();
 
-		if ( null !== $normalized ) {
-			$items[] = $normalized;
+		foreach ( $candidate as $row ) {
+			$item = shpigovsky_normalize_review_row( $row );
+
+			if ( null !== $item ) {
+				$normalized[] = $item;
+			}
+		}
+
+		if ( ! empty( $normalized ) ) {
+			return $normalized;
 		}
 	}
 
-	return $items;
+	return array();
 }
 
 /**
@@ -370,11 +414,57 @@ function shpigovsky_get_reviews_source_mode() {
  * @return string
  */
 function shpigovsky_get_reviews_heading( $fallback = 'Отзывы' ) {
-	$option_heading = shpigovsky_get_site_option( 'reviews_section_heading' );
+	$option_heading = shpigovsky_get_reviews_option_field( 'reviews_section_heading' );
 
-	if ( '' !== $option_heading ) {
-		return $option_heading;
+	if ( is_string( $option_heading ) && '' !== trim( $option_heading ) ) {
+		return trim( $option_heading );
 	}
 
 	return shpigovsky_home_text_or_fallback( 'home_reviews_heading', $fallback );
 }
+
+/**
+ * Format review date for archive card display.
+ *
+ * @param string $date Raw date string from options.
+ * @return array{iso: string, formatted: string}
+ */
+function shpigovsky_format_review_archive_date( $date ) {
+	$date = trim( (string) $date );
+
+	if ( '' === $date ) {
+		return array(
+			'iso'       => '',
+			'formatted' => '',
+		);
+	}
+
+	if ( preg_match( '/^\d{4}-\d{2}-\d{2}$/', $date ) ) {
+		$timestamp = strtotime( $date . ' 00:00:00' );
+
+		return array(
+			'iso'       => $date,
+			'formatted' => false !== $timestamp ? gmdate( 'd.m.Y', $timestamp ) : $date,
+		);
+	}
+
+	return array(
+		'iso'       => '',
+		'formatted' => $date,
+	);
+}
+
+/**
+ * Add V9 page body class on reviews template.
+ *
+ * @param string[] $classes Body classes.
+ * @return string[]
+ */
+function shpigovsky_reviews_body_class( $classes ) {
+	if ( is_page_template( 'page-templates/reviews.php' ) ) {
+		$classes[] = 'page-otzyvy';
+	}
+
+	return $classes;
+}
+add_filter( 'body_class', 'shpigovsky_reviews_body_class' );

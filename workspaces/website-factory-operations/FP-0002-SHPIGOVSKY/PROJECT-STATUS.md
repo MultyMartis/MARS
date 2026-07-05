@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-06 (V9-06D9-U reviews admin UX repair PASS)
+**Last updated:** 2026-07-06 (V9-06D9-W reviews admin + archive layout repair PARTIAL PASS)
 
-**Current WordPress phase:** V9-06D9-U Reviews Admin UX Repair **PASS** — Home `Reviews teaser` blocker removed; 10 reviews canonical in admin (`fp02-reviews` top-level menu); frontend source mode **OPTIONS** unchanged. DB checkpoint created. **Next: D9-V admin visual QA.** Report: `WORDPRESS/reports/FP-0002-V9-06D9U-REVIEWS-ADMIN-UX-REPAIR-REPORT-v1.md`. Prior D9-T: `WORDPRESS/reports/FP-0002-V9-06D9T-REVIEWS-OPTIONS-KEY-FIX-HELPER-NORMALIZATION-REPORT-v1.md`.
+**Current WordPress phase:** V9-06D9-W Reviews Admin + Archive Layout Repair **PARTIAL PASS** — duplicate ACF reviews group removed from Site Settings; top-level **Отзывы** admin populated (10 rows, `fp02-reviews` context); `/otzyvy/` uses static V9 archive card layout (no Home slider); Home reviews slider unchanged; source mode **OPTIONS**. DB checkpoint created. Admin screenshots PARTIAL. **Next: D9-X admin visual QA.** Report: `WORDPRESS/reports/FP-0002-V9-06D9W-REVIEWS-ADMIN-AND-LAYOUT-REPAIR-REPORT-v1.md`. Prior D9-V: `WORDPRESS/reports/FP-0002-V9-06D9V-REVIEWS-ADMIN-STATIC-LAYOUT-RECONCILIATION-AUDIT-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

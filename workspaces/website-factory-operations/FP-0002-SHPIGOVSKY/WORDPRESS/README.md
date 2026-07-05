@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D9-U REVIEWS ADMIN UX REPAIR PASS — canonical admin + top-level Отзывы; source mode OPTIONS; NEXT: D9-V admin visual QA
+**Status:** V9-06D9-W REVIEWS ADMIN + ARCHIVE LAYOUT REPAIR PARTIAL PASS — duplicate removed; fp02-reviews populated; /otzyvy/ archive layout; source OPTIONS; NEXT: D9-X admin visual QA
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

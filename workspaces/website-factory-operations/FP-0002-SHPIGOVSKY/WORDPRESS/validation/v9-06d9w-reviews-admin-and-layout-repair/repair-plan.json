@@ -1,0 +1,27 @@
+{
+  "phase": "V9-06D9-W",
+  "generated_at": "2026-07-06T02:10:50.704869+07:00",
+  "components": [
+    {
+      "component": "duplicate_cleanup",
+      "planned_repair": "Trash stale duplicate acf-field-group posts for group_fp02_site_options_reviews; keep single active fp02-reviews group",
+      "safety": "DB checkpoint + exact key match only"
+    },
+    {
+      "component": "admin_storage_context",
+      "planned_repair": "Restore 10 seeded rows from D9-S payload into fp02-reviews via update_field; sync option context for fallback",
+      "safety": "Existing seed payload only; no new content"
+    },
+    {
+      "component": "archive_layout",
+      "planned_repair": "Replace /otzyvy/ slider with reviews-archive card list + rehabilitation requirements partial",
+      "safety": "Home slider untouched; existing V9 CSS classes"
+    },
+    {
+      "component": "helper_context",
+      "planned_repair": "Read fp02-reviews first, option second",
+      "safety": "Read-only helper change in theme source"
+    }
+  ],
+  "result": "PASS"
+}

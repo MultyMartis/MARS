@@ -1,0 +1,16 @@
+{
+  "phase": "V9-06D9-W",
+  "generated_at": "2026-07-06T02:12:00+07:00",
+  "files_changed": [
+    "inc/reviews-helpers.php",
+    "page-templates/reviews.php",
+    "template-parts/components/review-archive-card.php",
+    "template-parts/reviews/archive-list.php",
+    "template-parts/reviews/rehabilitation-requirements.php",
+    "template-parts/reviews/reviews-section.php"
+  ],
+  "archive_classes": ["reviews-archive", "reviews-archive__list", "review-archive-card"],
+  "home_slider_preserved": true,
+  "css_changes": 0,
+  "result": "PASS"
+}
