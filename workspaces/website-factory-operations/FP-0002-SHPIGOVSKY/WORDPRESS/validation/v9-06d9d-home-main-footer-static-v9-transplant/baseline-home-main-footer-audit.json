@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-07-05T12:12:24.648090+00:00",
+  "static_home_source": "workspaces/fp-0002-shpigovsky-v9/src/pages/index.html",
+  "static_footer_source": "workspaces/fp-0002-shpigovsky-v9/src/partials/layout/footer.html",
+  "wp_home_before": "front-page.php — 6 MVP sections only",
+  "wp_home_after": "front-page.php — 19 V9 main sections + final-form",
+  "static_sections": [
+    "hero",
+    "home-recovery-intro",
+    "founder-quote",
+    "home-treatment-prevention",
+    "home-gallery",
+    "home-why-us",
+    "home-staff-photo",
+    "home-feature-grid",
+    "clinic-landscape",
+    "home-recovery-life",
+    "reviews",
+    "home-rehabilitation-requirements",
+    "home-rehabilitation-program",
+    "home-genotyping",
+    "comfort",
+    "home-videos",
+    "specialists",
+    "home-articles",
+    "faq",
+    "final-form"
+  ],
+  "wp_before_sections": [
+    "feature-grid",
+    "treatment-prevention",
+    "rehabilitation-program",
+    "gallery",
+    "articles-teaser",
+    "faq",
+    "final-form"
+  ],
+  "static_hero_cta": "Записаться на консультацию",
+  "wp_before_hero_cta": "default_button_label option (D8-A seeded)",
+  "mvp_scaffold_replaced": true
+}

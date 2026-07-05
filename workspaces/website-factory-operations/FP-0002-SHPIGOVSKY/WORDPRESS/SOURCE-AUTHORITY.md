@@ -195,3 +195,7 @@ D9-B **PARTIAL PASS**: Inter `@font-face` paths rewritten to theme-relative `../
 ## V9-06D9-C home hero parity repair (2026-07-05)
 
 D9-C **PASS**: Home hero media restored via theme asset fallback — `hero-main.png` copied from V9 static source into `theme/shpigovsky/assets/img/hero/`; `shpigovsky_get_home_hero_image_fallback()` added; `template-parts/home/hero.php` renders `hero__media` when ACF `home_hero_slides[0].image` empty (ACF wins when seeded). Bounded runtime delivery: 3 files to active theme only. No DB/ACF/options/menu writes; no media uploads to WP library. Hero image HTTP 200; route smoke ALL_200. Evidence: `validation/v9-06d9c-home-hero-parity-repair/`. Report: `reports/FP-0002-V9-06D9C-HOME-HERO-PARITY-REPAIR-REPORT-v1.md`. Next: D9-D home full section transfer.
+
+## V9-06D9-D home main + footer static V9 transplant (2026-07-05)
+
+D9-D **PASS**: Replaced MVP 6-section Home main with static V9 19-section orchestration; transplanted global footer from V9 static authority; hero CTA label fixed to `Записаться на консультацию`; 93 assets + vendors copied to theme source; bounded runtime delivery (~119 files). No DB/ACF/options/menu writes. Route smoke ALL_200; 19/19 home sections present. Strict HEAD gate PASS_WITH_HEAD_NOTE (required D9-C HEAD `2c576542` is ancestor; actual `0693c4b5` +1 unrelated commit; branch synced 0/0). Evidence: `validation/v9-06d9d-home-main-footer-static-v9-transplant/`. Report: `reports/FP-0002-V9-06D9D-HOME-MAIN-FOOTER-STATIC-V9-TRANSPLANT-REPORT-v1.md`. Next: D9-E ACF admin editability wiring.

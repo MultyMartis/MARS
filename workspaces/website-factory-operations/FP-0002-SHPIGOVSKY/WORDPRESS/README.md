@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D9-C HOME HERO PARITY PASS — NEXT: D9-D home full section transfer
+**Status:** V9-06D9-D HOME MAIN + FOOTER STATIC V9 TRANSPLANT PASS — NEXT: D9-E ACF admin editability wiring
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

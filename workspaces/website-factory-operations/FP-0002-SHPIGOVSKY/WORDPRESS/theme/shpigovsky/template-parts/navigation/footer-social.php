@@ -1,6 +1,6 @@
 <?php
 /**
- * Footer social links — from site options repeater when configured.
+ * Footer social links — static V9 visual fallback (D9-D).
  *
  * @package Shpigovsky
  */
@@ -12,7 +12,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 $rows = shpigovsky_get_social_link_rows();
 
 if ( empty( $rows ) ) {
-	return;
+	$rows = array(
+		array( 'label' => 'Telegram', 'url' => '#' ),
+		array( 'label' => 'WhatsApp', 'url' => '#' ),
+		array( 'label' => 'Max', 'url' => '#' ),
+		array( 'label' => 'YouTube', 'url' => '#' ),
+	);
 }
 ?>
 <div class="site-footer__social">
@@ -22,11 +27,7 @@ if ( empty( $rows ) ) {
 		$label = '' !== $row['label'] ? $row['label'] : __( 'Социальная сеть', 'shpigovsky' );
 		$is_fa = '' === $icon && str_contains( mb_strtolower( $label ), 'youtube' );
 		?>
-		<a
-			class="site-footer__social-link<?php echo $is_fa ? ' site-footer__social-link--fa' : ''; ?>"
-			href="<?php echo esc_url( $row['url'] ); ?>"
-			aria-label="<?php echo esc_attr( $label ); ?>"
-		>
+		<a class="site-footer__social-link<?php echo $is_fa ? ' site-footer__social-link--fa' : ''; ?>" href="<?php echo esc_url( $row['url'] ); ?>" aria-label="<?php echo esc_attr( $label ); ?>">
 			<?php if ( $is_fa ) : ?>
 				<i class="fab fa-youtube site-footer__social-fa" aria-hidden="true"></i>
 			<?php elseif ( '' !== $icon ) : ?>

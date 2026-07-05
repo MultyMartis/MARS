@@ -22,8 +22,8 @@ if ( '' === $lead ) {
 	$lead = __( 'Опишите вашу ситуацию в форме заявки, и мы расскажем, как сможем помочь', 'shpigovsky' );
 }
 
-$submit_label = shpigovsky_get_site_option( 'default_button_label' );
-$submit_label = '' !== $submit_label ? $submit_label : __( 'Записаться на консультацию', 'shpigovsky' );
+// D9-D: static V9 submit label.
+$submit_label = __( 'Записаться на консультацию', 'shpigovsky' );
 
 $consent_url = home_url( '/consent-personal-data/' );
 $privacy_url = home_url( '/privacy-policy/' );

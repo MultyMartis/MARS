@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-05 (V9-06D9-C Home Hero Parity Repair PASS)
+**Last updated:** 2026-07-05 (V9-06D9-D Home Main + Footer Static V9 Transplant PASS)
 
-**Current WordPress phase:** V9-06D9-C Home Hero Parity Repair **PASS** — theme asset fallback restores `hero__media` and hero PNG (HTTP 200); bounded runtime delivery (3 files); DB/ACF writes 0. Recommended next: **D9-D home full section transfer**. Report: `WORDPRESS/reports/FP-0002-V9-06D9C-HOME-HERO-PARITY-REPAIR-REPORT-v1.md`. Prior: D9-B header/font/messenger partial, D9-A audit, D9-0 charter.
+**Current WordPress phase:** V9-06D9-D Home Main + Footer Static V9 Transplant **PASS** — MVP Home main replaced with static V9 19-section orchestration; footer transplanted from V9; hero CTA `Записаться на консультацию`; bounded runtime delivery (~119 files); DB/ACF writes 0. Recommended next: **D9-E ACF admin editability wiring**. Report: `WORDPRESS/reports/FP-0002-V9-06D9D-HOME-MAIN-FOOTER-STATIC-V9-TRANSPLANT-REPORT-v1.md`. Prior: D9-C hero parity, D9-B header/font/messenger partial, D9-A audit, D9-0 charter.
 
 ## Active frontend workspace (V9)
 

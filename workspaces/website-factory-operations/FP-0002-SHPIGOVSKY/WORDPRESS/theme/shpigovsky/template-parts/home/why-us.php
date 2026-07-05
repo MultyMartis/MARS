@@ -1,0 +1,77 @@
+<?php
+/**
+ * Template part: home/why-us.php
+ *
+ * D9-D: static V9 visual authority with theme asset fallbacks.
+ * Future ACF wiring: D9-E wave.
+ *
+ * @package Shpigovsky
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+?>
+<section data-reveal class="home-why-us @@class" aria-labelledby="home-why-us-heading">
+  <div class="container">
+    <h2 class="home-why-us__heading" id="home-why-us-heading">Нас выбирают за&nbsp;мультидисциплинарный подход к&nbsp;лечению</h2>
+    <p class="home-why-us__lead">У&nbsp;нас команда, а&nbsp;не&nbsp;конвейер. Каждый клиент получает полное внимание&nbsp;— психолога, нейропсихолога, специалиста по&nbsp;кинезиотерапии, специалиста по&nbsp;телесноориентированной терапии и&nbsp;координатора программы.</p>
+    <div class="home-why-us__body-stack">
+      <p class="home-why-us__body"><span>Лечение в&nbsp;нашем реабилитационном центре совмещает современный и&nbsp;мультидисциплинарный подход направленный на&nbsp;устранение истинных причин зависимости.</span></p>
+      <p class="home-why-us__body"><span>Мультидисциплинарный подход&nbsp;— это когда лечение одного пациента обеспечивается командой специалистов разных профилей. Такой подход становится залогом понимания и&nbsp;решения проблемы.</span></p>
+    </div>
+
+        <div
+          class="home-treatment-prevention__panel"
+          data-accordion-panel
+          id="home-why-us-services-panel"
+          role="region"
+          aria-labelledby="home-why-us-heading"
+        >
+          <ul class="home-treatment-prevention__service-list">
+            <li class="home-treatment-prevention__service-list-item">
+              <a
+                class="home-treatment-prevention__service-item"
+                href="<?php echo esc_url( home_url( '/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/' ) ); ?>"
+              >
+                <span class="home-treatment-prevention__service-name">Диагностические инструменты</span>
+                <span class="home-treatment-prevention__service-leader" aria-hidden="true"></span>
+                <span class="home-treatment-prevention__service-icon" aria-hidden="true"><img class="home-treatment-prevention__service-icon-image" src="<?php echo esc_url( shpigovsky_asset_uri( 'svg/external-link.svg' ) ); ?>" width="20" height="20" alt=""></span>
+              </a>
+            </li>
+            <li class="home-treatment-prevention__service-list-item">
+              <a
+                class="home-treatment-prevention__service-item"
+                href="<?php echo esc_url( home_url( '/uslugi/zavisimosti/' ) ); ?>"
+              >
+                <span class="home-treatment-prevention__service-name">Психиатрия</span>
+                <span class="home-treatment-prevention__service-leader" aria-hidden="true"></span>
+                <span class="home-treatment-prevention__service-icon" aria-hidden="true"><img class="home-treatment-prevention__service-icon-image" src="<?php echo esc_url( shpigovsky_asset_uri( 'svg/external-link.svg' ) ); ?>" width="20" height="20" alt=""></span>
+              </a>
+            </li>
+            <li class="home-treatment-prevention__service-list-item">
+              <a
+                class="home-treatment-prevention__service-item"
+                href="<?php echo esc_url( home_url( '/uslugi/zavisimosti/' ) ); ?>"
+              >
+                <span class="home-treatment-prevention__service-name">Функциональная терапия</span>
+                <span class="home-treatment-prevention__service-leader" aria-hidden="true"></span>
+                <span class="home-treatment-prevention__service-icon" aria-hidden="true"><img class="home-treatment-prevention__service-icon-image" src="<?php echo esc_url( shpigovsky_asset_uri( 'svg/external-link.svg' ) ); ?>" width="20" height="20" alt=""></span>
+              </a>
+            </li>
+            <li class="home-treatment-prevention__service-list-item">
+              <a
+                class="home-treatment-prevention__service-item"
+                href="<?php echo esc_url( home_url( '/uslugi/zavisimosti/' ) ); ?>"
+              >
+                <span class="home-treatment-prevention__service-name">Комплементарная терапия</span>
+                <span class="home-treatment-prevention__service-leader" aria-hidden="true"></span>
+                <span class="home-treatment-prevention__service-icon" aria-hidden="true"><img class="home-treatment-prevention__service-icon-image" src="<?php echo esc_url( shpigovsky_asset_uri( 'svg/external-link.svg' ) ); ?>" width="20" height="20" alt=""></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+  </div>
+</section>

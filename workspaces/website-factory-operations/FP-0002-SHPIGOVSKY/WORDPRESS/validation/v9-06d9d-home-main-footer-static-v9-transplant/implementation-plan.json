@@ -1,0 +1,13 @@
+{
+  "strategy": "Replace WP MVP home main with static V9 section partials; static asset fallbacks; no DB/ACF",
+  "static_authority": "workspaces/fp-0002-shpigovsky-v9/src/partials/sections/",
+  "wp_files": [
+    "front-page.php",
+    "template-parts/home/*.php (18 sections)",
+    "template-parts/layout/footer.php",
+    "template-parts/navigation/footer-social.php",
+    "template-parts/components/scroll-to-top.php",
+    "inc/home-vendors.php"
+  ],
+  "db_acf_required": false
+}

@@ -20,6 +20,7 @@ require_once SHPIGOVSKY_THEME_DIR . '/inc/navigation.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/assets.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/template-tags.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/home-helpers.php';
+require_once SHPIGOVSKY_THEME_DIR . '/inc/home-vendors.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/services-hub-helpers.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/service-helpers.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/service-template-loader.php';

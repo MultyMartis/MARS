@@ -1,0 +1,52 @@
+{
+  "areas": [
+    {
+      "area": "hero",
+      "d9d": "STATIC_OK_FOR_NOW",
+      "future": "ACF_IMAGE_FIELD",
+      "wave": "D9-E"
+    },
+    {
+      "area": "home-recovery-intro",
+      "d9d": "STATIC_OK_FOR_NOW",
+      "future": "ACF_TEXT_FIELD",
+      "wave": "D9-E"
+    },
+    {
+      "area": "founder-quote",
+      "d9d": "STATIC_OK_FOR_NOW",
+      "future": "ACF_IMAGE_FIELD",
+      "wave": "D9-E"
+    },
+    {
+      "area": "home-gallery",
+      "d9d": "STATIC_OK_FOR_NOW",
+      "future": "ACF_REPEATER",
+      "wave": "D9-E"
+    },
+    {
+      "area": "reviews",
+      "d9d": "STATIC_OK_FOR_NOW",
+      "future": "ACF_REPEATER",
+      "wave": "D9-E"
+    },
+    {
+      "area": "home-articles",
+      "d9d": "STATIC_OK_FOR_NOW",
+      "future": "WP_POST_QUERY",
+      "wave": "D9-E"
+    },
+    {
+      "area": "footer contacts",
+      "d9d": "STATIC_OK_FOR_NOW",
+      "future": "WP_MENU_OR_OPTION",
+      "wave": "D9-E"
+    },
+    {
+      "area": "footer nav",
+      "d9d": "STATIC_OK_FOR_NOW",
+      "future": "WP_MENU_OR_OPTION",
+      "wave": "D9-E"
+    }
+  ]
+}

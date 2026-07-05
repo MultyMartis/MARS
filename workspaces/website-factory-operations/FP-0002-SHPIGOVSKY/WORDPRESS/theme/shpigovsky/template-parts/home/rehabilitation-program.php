@@ -2,7 +2,8 @@
 /**
  * Template part: home/rehabilitation-program.php
  *
- * Static structure from V9 source; images omitted until content migration packages media.
+ * D9-D: static V9 visual authority with theme asset fallbacks.
+ * Future ACF wiring: D9-E wave.
  *
  * @package Shpigovsky
  */
@@ -11,56 +12,92 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$program_url = home_url( '/o-centre/programma-lecheniya/' );
-
-$directions = array(
-	array(
-		'title' => '01 — Генотипирование',
-		'text'  => 'Выявление причин эндогенной природы зависимости служит дополнительным инструментом в индивидуальной схеме лечения и реабилитации.',
-	),
-	array(
-		'title' => '02 — Нейропсихологическая коррекция',
-		'text'  => 'БОС-терапия проводится с использованием специального оборудования для обучения сознательному контролю функций организма.',
-	),
-	array(
-		'title' => '03 — Психокоррекция',
-		'text'  => 'Работа с глубинными причинами зависимости и формирование внутренней опоры и новой стратегии совладания со стрессом.',
-	),
-	array(
-		'title' => '04 — Кинезиотерапия',
-		'text'  => 'Физическая нагрузка поддерживает восстановление естественной выработки нейромедиаторов в рамках программы сопровождения.',
-	),
-);
 ?>
 <section data-reveal class="home-rehabilitation-program" aria-labelledby="home-rehabilitation-program-heading">
-	<div class="container">
-		<div class="home-rehabilitation-program__head">
-			<h2 class="home-rehabilitation-program__heading" id="home-rehabilitation-program-heading">
-				<?php echo esc_html__( 'Программа центра включает 4 направления', 'shpigovsky' ); ?>
-			</h2>
-			<a class="home-rehabilitation-program__all-link" href="<?php echo esc_url( $program_url ); ?>">
-				<span class="home-rehabilitation-program__all-text"><?php echo esc_html__( 'подробнее', 'shpigovsky' ); ?></span>
-				<span class="home-rehabilitation-program__all-icon" aria-hidden="true"><i class="fas fa-play"></i></span>
-			</a>
-		</div>
+  <div class="container">
+    <div class="home-rehabilitation-program__head">
+      <h2 class="home-rehabilitation-program__heading" id="home-rehabilitation-program-heading">Программа центра включает 4&nbsp;направления</h2>
+      <a class="home-rehabilitation-program__all-link" href="<?php echo esc_url( home_url( '/o-centre/programma-lecheniya/' ) ); ?>">
+        <span class="home-rehabilitation-program__all-text">подробнее</span>
+        <span class="home-rehabilitation-program__all-icon" aria-hidden="true"><i class="fas fa-play"></i></span>
+      </a>
+    </div>
 
-		<p class="home-rehabilitation-program__lead">
-			<?php echo esc_html__( 'Не просто снимаем симптомы. Мы помогаем разобраться в том, что именно в жизни и истории привело к этой точке.', 'shpigovsky' ); ?>
-		</p>
+    <p class="home-rehabilitation-program__lead">Не&nbsp;просто снимаем симптомы. Мы помогаем разобраться в&nbsp;том, что именно в&nbsp;жизни, истории привело к&nbsp;этой точке.</p>
 
-		<p class="home-rehabilitation-program__intro">
-			<?php echo esc_html__( 'Каждый человек приходит к нам со своей историей. Именно поэтому универсальных программ в нашем центре не существует.', 'shpigovsky' ); ?>
-		</p>
+    <p class="home-rehabilitation-program__intro">Каждый человек приходит к&nbsp;нам со&nbsp;своей историей. Со&nbsp;своим сочетанием причин, обстоятельств и&nbsp;состояний, которые привели его туда, где он сейчас находится. Именно поэтому универсальных программ в&nbsp;нашем центре не&nbsp;существует.</p>
 
-		<div class="home-rehabilitation-program__directions">
-			<?php foreach ( $directions as $direction ) : ?>
-				<article class="home-rehabilitation-program__direction">
-					<div class="home-rehabilitation-program__direction--wrapper">
-						<h3 class="home-rehabilitation-program__direction-title"><?php echo esc_html( $direction['title'] ); ?></h3>
-						<p class="home-rehabilitation-program__direction-text"><?php echo esc_html( $direction['text'] ); ?></p>
-					</div>
-				</article>
-			<?php endforeach; ?>
-		</div>
-	</div>
+    <p class="home-rehabilitation-program__intro">Программа реабилитации выстраивается из&nbsp;отдельных блоков&nbsp;— каждый из&nbsp;которых направлен на&nbsp;свой уровень работы: генетические предрасположенности, нейрологические паттерны, психологическое состояние и&nbsp;физическое восстановление тела. Вместе они создают целостный, по-настоящему индивидуальный маршрут&nbsp;— такой, который работает именно для вас.</p>
+
+    <div class="home-rehabilitation-program__directions">
+      <article class="home-rehabilitation-program__direction">
+        <div class="home-rehabilitation-program__direction--img">
+        <img
+          class="home-rehabilitation-program__direction-image"
+          src="<?php echo esc_url( shpigovsky_asset_uri( 'img/content/rehabilitation-program/program-genotyping.webp' ) ); ?>"
+          width="1216"
+          height="1632"
+          alt="Генотипирование"
+          loading="lazy"
+          decoding="async"
+        >
+        </div>
+        <div class="home-rehabilitation-program__direction--wrapper">
+        <h3 class="home-rehabilitation-program__direction-title">01&nbsp;— Генотипирование</h3>
+        <p class="home-rehabilitation-program__direction-text">Выявление причин эндогенной природы зависимости служит дополнительным инструментом в&nbsp;индивидуальной схеме лечения и&nbsp;реабилитации. В&nbsp;основе большинства зависимостей лежит нарушение работы системы вознаграждения мозга&nbsp;— в&nbsp;частности, гипофункция мезолимбической дофаминовой системы. Это не&nbsp;слабость характера. Это биология, с&nbsp;которой можно и&nbsp;нужно работать.</p>
+        </div>
+      </article>
+      <article class="home-rehabilitation-program__direction">
+        <div class="home-rehabilitation-program__direction--img">
+        <img
+          class="home-rehabilitation-program__direction-image"
+          src="<?php echo esc_url( shpigovsky_asset_uri( 'img/content/rehabilitation-program/program-neuropsychology.webp' ) ); ?>"
+          width="1632"
+          height="1216"
+          alt="Нейропсихологическая коррекция"
+          loading="lazy"
+          decoding="async"
+        >
+        </div>
+        <div class="home-rehabilitation-program__direction--wrapper">
+        <h3 class="home-rehabilitation-program__direction-title">02&nbsp;— Нейропсихологическая коррекция</h3>
+        <p class="home-rehabilitation-program__direction-text">БОС-терапия (биологическая обратная связь) проводится с&nbsp;использованием специального оборудования. На&nbsp;этом этапе лечения и&nbsp;реабилитации происходит обучение сознательно контролировать функции своего тела (пульс, дыхание, напряжение мышц, артериальное давление). Специальные датчики оборудования выполняют функцию «физиологического зеркала».</p>
+        </div>
+      </article>
+      <article class="home-rehabilitation-program__direction">
+        <div class="home-rehabilitation-program__direction--img">
+        <img
+          class="home-rehabilitation-program__direction-image"
+          src="<?php echo esc_url( shpigovsky_asset_uri( 'img/content/rehabilitation-program/program-psychocorrection.webp' ) ); ?>"
+          width="880"
+          height="1184"
+          alt="Психокоррекция"
+          loading="lazy"
+          decoding="async"
+        >
+        </div>
+        <div class="home-rehabilitation-program__direction--wrapper">
+        <h3 class="home-rehabilitation-program__direction-title">03&nbsp;— Психокоррекция</h3>
+        <p class="home-rehabilitation-program__direction-text">Зависимость редко бывает просто привычкой. За&nbsp;ней почти всегда стоит что-то глубже: тревога, которую не&nbsp;удаётся унять, боль, которую проще приглушить, чем прожить, или пустота там, где должно быть что-то важное. Психокоррекция формирует внутреннюю опору и&nbsp;новую стратегию совладания со&nbsp;стрессом.</p>
+        </div>
+      </article>
+      <article class="home-rehabilitation-program__direction">
+        <div class="home-rehabilitation-program__direction--img">
+        <img
+          class="home-rehabilitation-program__direction-image"
+          src="<?php echo esc_url( shpigovsky_asset_uri( 'img/content/rehabilitation-program/program-kinesiotherapy.webp' ) ); ?>"
+          width="880"
+          height="1184"
+          alt="Кинезиотерапия"
+          loading="lazy"
+          decoding="async"
+        >
+        </div>
+        <div class="home-rehabilitation-program__direction--wrapper">
+        <h3 class="home-rehabilitation-program__direction-title">04&nbsp;— Кинезиотерапия</h3>
+        <p class="home-rehabilitation-program__direction-text">Движение меняет химию мозга. Это не&nbsp;вдохновляющая цитата&nbsp;— это факт, подтверждённый десятилетиями исследований в&nbsp;области нейробиологии и&nbsp;аддиктологии. Физическая нагрузка стимулирует выработку эндорфинов (создающих ощущение благополучия), дофамина (системы вознаграждения) и&nbsp;серотонина (регулирующего настроение, аппетит и&nbsp;сон). Именно эти нейромедиаторы зависимость «научила» организм получать извне&nbsp;— мы помогаем восстановить их естественную выработку.</p>
+        </div>
+      </article>
+    </div>
+  </div>
 </section>

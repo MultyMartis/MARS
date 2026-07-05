@@ -2,6 +2,9 @@
 /**
  * Template part: home/articles-teaser.php
  *
+ * D9-D: static V9 visual authority with theme asset fallbacks.
+ * Future ACF wiring: D9-E wave.
+ *
  * @package Shpigovsky
  */
 
@@ -9,70 +12,39 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! shpigovsky_get_home_bool( 'home_blog_teaser_enabled' ) ) {
-	return;
-}
-
-$posts = get_posts(
-	array(
-		'post_type'      => 'post',
-		'post_status'    => 'publish',
-		'posts_per_page' => 3,
-		'orderby'        => 'date',
-		'order'          => 'DESC',
-		'no_found_rows'  => true,
-	)
-);
-
-if ( empty( $posts ) ) {
-	return;
-}
-
-$blog_url = get_post_type_archive_link( 'post' );
-
-if ( ! is_string( $blog_url ) || '' === $blog_url ) {
-	$blog_url = home_url( '/blog/' );
-}
 ?>
 <section class="home-articles" aria-labelledby="home-articles-heading">
-	<div class="container">
-		<div class="home-articles__head">
-			<h2 class="home-articles__heading" id="home-articles-heading">
-				<?php echo esc_html__( 'Статьи', 'shpigovsky' ); ?>
-			</h2>
-			<a class="home-articles__all-link" href="<?php echo esc_url( $blog_url ); ?>">
-				<span class="home-articles__all-text"><?php echo esc_html__( 'все статьи', 'shpigovsky' ); ?></span>
-				<span class="home-articles__all-icon" aria-hidden="true"><i class="fas fa-play"></i></span>
-			</a>
-		</div>
+  <div class="container">
+    <div class="home-articles__head">
+      <h2 class="home-articles__heading" id="home-articles-heading">Статьи</h2>
+      <a class="home-articles__all-link" href="<?php echo esc_url( home_url( '/blog/' ) ); ?>">
+        <span class="home-articles__all-text">все статьи</span>
+        <span class="home-articles__all-icon" aria-hidden="true"><i class="fas fa-play"></i></span>
+      </a>
+    </div>
 
-		<div class="home-articles__grid" data-reveal-group>
-			<?php foreach ( $posts as $post ) : ?>
-				<?php
-				if ( ! $post instanceof WP_Post ) {
-					continue;
-				}
-
-				$permalink = get_permalink( $post );
-				$thumb_id  = get_post_thumbnail_id( $post );
-				$thumb_url = $thumb_id ? wp_get_attachment_image_url( $thumb_id, 'large' ) : '';
-				?>
-				<article class="home-articles__card" data-reveal>
-					<a class="home-articles__card-link" href="<?php echo esc_url( $permalink ); ?>">
-						<?php if ( is_string( $thumb_url ) && '' !== $thumb_url ) : ?>
-							<img
-								class="home-articles__image"
-								src="<?php echo esc_url( $thumb_url ); ?>"
-								alt=""
-								loading="lazy"
-								decoding="async"
-							>
-						<?php endif; ?>
-						<h3 class="home-articles__title"><?php echo esc_html( get_the_title( $post ) ); ?></h3>
-						<p class="home-articles__meta"><?php echo esc_html__( 'Читать', 'shpigovsky' ); ?></p>
-					</a>
-				</article>
-			<?php endforeach; ?>
-		</div>
-	</div>
+    <div class="home-articles__grid" data-reveal-group>
+      <article class="home-articles__card" data-reveal>
+        <a class="home-articles__card-link" href="<?php echo esc_url( home_url( '/blog/nazvanie-stati/' ) ); ?>">
+          <img class="home-articles__image" src="<?php echo esc_url( shpigovsky_asset_uri( 'img/content/home-articles/article-alcohol-dependence.webp' ) ); ?>" width="1216" height="1632" alt="" loading="lazy" decoding="async">
+          <h3 class="home-articles__title">Лечение алкогольной зависимости: почему сила воли здесь ни&nbsp;при чём</h3>
+          <p class="home-articles__meta">Читать</p>
+        </a>
+      </article>
+      <article class="home-articles__card" data-reveal>
+        <a class="home-articles__card-link" href="<?php echo esc_url( home_url( '/blog/nazvanie-stati/' ) ); ?>">
+          <img class="home-articles__image" src="<?php echo esc_url( shpigovsky_asset_uri( 'img/content/home-articles/article-yoga-therapy.webp' ) ); ?>" width="1920" height="1280" alt="Йога в терапии" loading="lazy" decoding="async">
+          <h3 class="home-articles__title">Йога в&nbsp;терапии: снятие абстинентного синдрома, снижение кортизола</h3>
+          <p class="home-articles__meta">Читать</p>
+        </a>
+      </article>
+      <article class="home-articles__card" data-reveal>
+        <a class="home-articles__card-link" href="<?php echo esc_url( home_url( '/blog/nazvanie-stati/' ) ); ?>">
+          <img class="home-articles__image" src="<?php echo esc_url( shpigovsky_asset_uri( 'img/content/home-articles/article-bos-therapy.webp' ) ); ?>" width="2048" height="1365" alt="БОС-терапия" loading="lazy" decoding="async">
+          <h3 class="home-articles__title">БОС-терапия: тренировка конкретных зон мозга с&nbsp;помощью технологий</h3>
+          <p class="home-articles__meta">Читать</p>
+        </a>
+      </article>
+    </div>
+  </div>
 </section>

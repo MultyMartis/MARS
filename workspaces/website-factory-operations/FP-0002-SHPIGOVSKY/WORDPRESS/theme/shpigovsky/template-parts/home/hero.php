@@ -31,15 +31,15 @@ if ( '' === $hero_img_url ) {
 }
 
 if ( '' === $hero_title ) {
-	$hero_title = get_bloginfo( 'name', 'display' );
+	$hero_title = 'Шпиговский дом';
 }
 
 if ( '' === $hero_text ) {
 	$hero_text = 'Центр профилактики и&nbsp;лечения зависимостей';
 }
 
-$cta_label = shpigovsky_get_site_option( 'default_button_label' );
-$cta_label = '' !== $cta_label ? $cta_label : __( 'Записаться на консультацию', 'shpigovsky' );
+// D9-D: static V9 CTA authority — options wiring deferred to D9-E.
+$cta_label = __( 'Записаться на консультацию', 'shpigovsky' );
 ?>
 <section class="hero hero--home">
 	<?php if ( '' !== $hero_img_url ) : ?>
