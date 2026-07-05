@@ -12,7 +12,7 @@
   "provider": "openrouter",
   "model": "openai/gpt-5-mini",
   "authority_class": "CONTROLLED_SEMANTIC_RUN_V2",
-  "lifecycle_phase": "SPPC-05_VALIDATION",
+  "lifecycle_phase": "BLOCKED_AT_SPPC_05",
   "created_at": "2026-06-25T18:53:17.410Z",
   "storage_root": "C:\\MARS Phenix\\AI MARS STORAGE\\mig\\corvonero\\semantic-runs\\corv-semantic-v2-20260626-002",
   "git_run_dir": "projects\\mars-search-ppc-production\\pilots\\corvonero\\runs\\corv-semantic-v2-20260626-002",
@@ -26,5 +26,6 @@
     "missing_ts_piot_serp": "NON_BLOCKING_FOR_PHASE_0_1_2",
     "wave5": "BLOCKED"
   },
-  "old_run_boundary": "OLD_CORVONERO_RUN_NON_RESUMABLE"
+  "old_run_boundary": "OLD_CORVONERO_RUN_NON_RESUMABLE",
+  "gate_b": "FAILED"
 }
