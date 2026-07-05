@@ -1,0 +1,649 @@
+{
+  "task": "V9-06D9-0",
+  "authority": {
+    "static_dist": "X:\\AI MARS\\workspaces\\fp-0002-shpigovsky-v9\\dist\\",
+    "static_src": "X:\\AI MARS\\workspaces\\fp-0002-shpigovsky-v9\\src\\",
+    "d9a_evidence": "validation/v9-06d9a-visual-parity-audit/"
+  },
+  "global_shell": [
+    {
+      "id": "header_root",
+      "static_source": "src/partials/layout/header.html",
+      "selector": "header.site-header",
+      "role": "Global header shell",
+      "assets": [
+        "img/branding/logo.svg"
+      ],
+      "js": [
+        "offcanvas",
+        "modal"
+      ],
+      "desktop_mobile": "Top bar + bottom nav desktop; mobile bar + offcanvas",
+      "wp_present": true,
+      "wp_state": "partial",
+      "repair_category": "HEADER_STRUCTURE_NOT_PORTED"
+    },
+    {
+      "id": "header_top",
+      "static_source": "src/partials/layout/header.html",
+      "selector": ".site-header__top",
+      "role": "Logo, address, schedule, phones, messengers, callback",
+      "assets": [
+        "logo.svg",
+        "img/social/telegram.svg",
+        "img/social/whatsapp.svg"
+      ],
+      "js": [
+        "data-modal-open"
+      ],
+      "desktop_mobile": "Desktop only",
+      "wp_present": true,
+      "wp_state": "partial",
+      "repair_category": "ACF_NOT_SEEDED"
+    },
+    {
+      "id": "header_messengers_desktop",
+      "static_source": "src/partials/layout/header.html",
+      "selector": ".site-header__messengers",
+      "role": "Telegram + WhatsApp icon buttons",
+      "assets": [
+        "telegram.svg",
+        "whatsapp.svg"
+      ],
+      "js": null,
+      "desktop_mobile": "Desktop; href=# placeholders",
+      "wp_present": false,
+      "wp_state": "missing",
+      "repair_category": "ACF_NOT_SEEDED"
+    },
+    {
+      "id": "header_messengers_mobile",
+      "static_source": "src/partials/layout/header.html",
+      "selector": ".mobile-header__messengers",
+      "role": "Telegram + WhatsApp + Max icons",
+      "assets": [
+        "telegram.svg",
+        "whatsapp.svg",
+        "max.svg"
+      ],
+      "js": null,
+      "desktop_mobile": "Mobile bar; href=# placeholders",
+      "wp_present": false,
+      "wp_state": "missing",
+      "repair_category": "ACF_NOT_SEEDED"
+    },
+    {
+      "id": "header_callback",
+      "static_source": "src/partials/layout/header.html",
+      "selector": ".site-header__btns-wrap .btn",
+      "role": "Заказать звонок modal trigger",
+      "assets": [],
+      "js": [
+        "data-modal-open"
+      ],
+      "desktop_mobile": "Both",
+      "wp_present": true,
+      "wp_state": "present",
+      "repair_category": null
+    },
+    {
+      "id": "header_search",
+      "static_source": "src/partials/layout/header.html",
+      "selector": ".site-header__search",
+      "role": "Search button (UI only)",
+      "assets": [
+        "Font Awesome"
+      ],
+      "js": null,
+      "desktop_mobile": "Desktop nav",
+      "wp_present": true,
+      "wp_state": "present",
+      "repair_category": null
+    },
+    {
+      "id": "header_nav",
+      "static_source": "src/partials/layout/header.html",
+      "selector": ".site-header__nav-list",
+      "role": "Primary nav: Лечение и профилактика, Зависимости, О центре, Отзывы, Статьи, Контакты",
+      "assets": [],
+      "js": null,
+      "desktop_mobile": "Hardcoded static links",
+      "wp_present": true,
+      "wp_state": "degraded",
+      "repair_category": "WP_MENU_DATA_MISSING"
+    },
+    {
+      "id": "header_offcanvas",
+      "static_source": "src/partials/layout/header.html",
+      "selector": ".offcanvas",
+      "role": "Mobile menu + contacts + messengers",
+      "assets": [
+        "logo.svg",
+        "social icons"
+      ],
+      "js": [
+        "data-offcanvas"
+      ],
+      "desktop_mobile": "Mobile",
+      "wp_present": true,
+      "wp_state": "partial",
+      "repair_category": "ACF_NOT_SEEDED"
+    },
+    {
+      "id": "footer",
+      "static_source": "src/partials/layout/footer.html",
+      "selector": "footer.site-footer",
+      "role": "Footer columns, legal, social",
+      "assets": [
+        "logo.svg",
+        "social icons"
+      ],
+      "js": null,
+      "desktop_mobile": "Both",
+      "wp_present": true,
+      "wp_state": "partial",
+      "repair_category": "ACF_NOT_SEEDED"
+    },
+    {
+      "id": "global_modal",
+      "static_source": "src/partials/layout/global-consultation-modal.html",
+      "selector": "[data-modal]",
+      "role": "Consultation modal",
+      "assets": [],
+      "js": [
+        "modal"
+      ],
+      "desktop_mobile": "Both",
+      "wp_present": true,
+      "wp_state": "present",
+      "repair_category": null
+    },
+    {
+      "id": "fonts_inter",
+      "static_source": "src/scss + dist/assets/fonts/inter/",
+      "selector": "@font-face Inter",
+      "role": "Inter 300/400/500 + Cyrillic",
+      "assets": [
+        "inter-300.woff2",
+        "inter-400.woff2",
+        "inter-500.woff2",
+        "inter-*-cyrillic.woff2"
+      ],
+      "js": null,
+      "desktop_mobile": "Global",
+      "wp_present": true,
+      "wp_state": "broken",
+      "repair_category": "FONT_PATH_NOT_REWRITTEN"
+    },
+    {
+      "id": "vendor_swiper",
+      "static_source": "dist/assets/vendor/swiper/",
+      "selector": ".swiper",
+      "role": "Gallery/reviews/specialists sliders",
+      "assets": [
+        "swiper-bundle.min.css",
+        "swiper-bundle.min.js"
+      ],
+      "js": [
+        "Swiper"
+      ],
+      "desktop_mobile": "Section-dependent",
+      "wp_present": false,
+      "wp_state": "missing",
+      "repair_category": "VENDOR_ASSET_NOT_ENQUEUED"
+    },
+    {
+      "id": "vendor_fancybox",
+      "static_source": "dist/assets/vendor/fancybox/",
+      "selector": "[data-fancybox]",
+      "role": "Lightbox",
+      "assets": [
+        "fancybox.css",
+        "fancybox.umd.js"
+      ],
+      "js": [
+        "Fancybox"
+      ],
+      "desktop_mobile": "Section-dependent",
+      "wp_present": false,
+      "wp_state": "missing",
+      "repair_category": "VENDOR_ASSET_NOT_ENQUEUED"
+    },
+    {
+      "id": "vendor_inputmask",
+      "static_source": "CDN",
+      "selector": "form inputs",
+      "role": "Phone mask",
+      "assets": [
+        "inputmask.min.js"
+      ],
+      "js": [
+        "Inputmask"
+      ],
+      "desktop_mobile": "Forms",
+      "wp_present": false,
+      "wp_state": "missing",
+      "repair_category": "VENDOR_ASSET_NOT_ENQUEUED"
+    }
+  ],
+  "home_sections": [
+    {
+      "id": "hero",
+      "static_source": "src/partials/sections/hero.html",
+      "selector": "section.hero",
+      "order": 1,
+      "assets": [
+        "img/hero/hero-main.png"
+      ],
+      "js": null,
+      "wp_present": true,
+      "wp_state": "degraded",
+      "repair_category": "MEDIA_NOT_DELIVERED"
+    },
+    {
+      "id": "home-recovery-intro",
+      "static_source": "src/partials/sections/home-recovery-intro.html",
+      "selector": "section.home-recovery-intro",
+      "order": 2,
+      "assets": [],
+      "js": null,
+      "wp_present": false,
+      "wp_state": "missing",
+      "repair_category": "MISSING_TEMPLATE_PORT"
+    },
+    {
+      "id": "founder-quote",
+      "static_source": "src/partials/sections/founder-quote.html",
+      "selector": "section.founder-quote",
+      "order": 3,
+      "assets": [
+        "founder SVG/photo"
+      ],
+      "js": [
+        "modal"
+      ],
+      "wp_present": false,
+      "wp_state": "missing",
+      "repair_category": "MISSING_TEMPLATE_PORT"
+    },
+    {
+      "id": "home-treatment-prevention",
+      "static_source": "src/partials/sections/home-treatment-prevention.html",
+      "selector": "section.home-treatment-prevention",
+      "order": 4,
+      "assets": [
+        "service icons webp"
+      ],
+      "js": null,
+      "wp_present": true,
+      "wp_state": "partial",
+      "repair_category": "MEDIA_NOT_DELIVERED"
+    },
+    {
+      "id": "home-gallery",
+      "static_source": "src/partials/sections/home-gallery.html",
+      "selector": "section.home-gallery",
+      "order": 5,
+      "assets": [
+        "gallery images",
+        "swiper"
+      ],
+      "js": [
+        "Swiper"
+      ],
+      "wp_present": false,
+      "wp_state": "empty",
+      "repair_category": "ACF_NOT_SEEDED"
+    },
+    {
+      "id": "home-why-us",
+      "static_source": "src/partials/sections/home-why-us.html",
+      "selector": "section.home-why-us",
+      "order": 6,
+      "assets": [
+        "icons/images"
+      ],
+      "js": null,
+      "wp_present": false,
+      "wp_state": "missing",
+      "repair_category": "MISSING_TEMPLATE_PORT"
+    },
+    {
+      "id": "home-staff-photo",
+      "static_source": "src/partials/sections/home-staff-photo.html",
+      "selector": "section.home-staff-photo",
+      "order": 7,
+      "assets": [
+        "staff photo webp"
+      ],
+      "js": null,
+      "wp_present": false,
+      "wp_state": "missing",
+      "repair_category": "MISSING_TEMPLATE_PORT"
+    },
+    {
+      "id": "home-feature-grid",
+      "static_source": "src/partials/sections/home-feature-grid.html",
+      "selector": "section.home-feature-grid",
+      "order": 8,
+      "assets": [
+        "advantage icons"
+      ],
+      "js": null,
+      "wp_present": true,
+      "wp_state": "present",
+      "repair_category": null
+    },
+    {
+      "id": "clinic-landscape",
+      "static_source": "src/partials/sections/clinic-landscape.html",
+      "selector": "section.clinic-landscape",
+      "order": 9,
+      "assets": [
+        "landscape webp"
+      ],
+      "js": null,
+      "wp_present": false,
+      "wp_state": "missing",
+      "repair_category": "MISSING_TEMPLATE_PORT"
+    },
+    {
+      "id": "home-recovery-life",
+      "static_source": "src/partials/sections/home-recovery-life.html",
+      "selector": "section.home-recovery-life",
+      "order": 10,
+      "assets": [
+        "life images"
+      ],
+      "js": null,
+      "wp_present": false,
+      "wp_state": "missing",
+      "repair_category": "MISSING_TEMPLATE_PORT"
+    },
+    {
+      "id": "reviews",
+      "static_source": "src/partials/sections/reviews.html",
+      "selector": "section.reviews",
+      "order": 11,
+      "assets": [
+        "review photos",
+        "swiper"
+      ],
+      "js": [
+        "Swiper"
+      ],
+      "wp_present": false,
+      "wp_state": "missing",
+      "repair_category": "MISSING_TEMPLATE_PORT"
+    },
+    {
+      "id": "home-rehabilitation-requirements",
+      "static_source": "src/partials/sections/home-rehabilitation-requirements.html",
+      "selector": "section.home-rehabilitation-requirements",
+      "order": 12,
+      "assets": [],
+      "js": null,
+      "wp_present": false,
+      "wp_state": "missing",
+      "repair_category": "MISSING_TEMPLATE_PORT"
+    },
+    {
+      "id": "home-rehabilitation-program",
+      "static_source": "src/partials/sections/home-rehabilitation-program.html",
+      "selector": "section.home-rehabilitation-program",
+      "order": 13,
+      "assets": [
+        "program images webp"
+      ],
+      "js": null,
+      "wp_present": true,
+      "wp_state": "partial",
+      "repair_category": "MEDIA_NOT_DELIVERED"
+    },
+    {
+      "id": "home-genotyping",
+      "static_source": "src/partials/sections/home-genotyping.html",
+      "selector": "section.home-genotyping",
+      "order": 14,
+      "assets": [
+        "genotyping image"
+      ],
+      "js": null,
+      "wp_present": false,
+      "wp_state": "missing",
+      "repair_category": "MISSING_TEMPLATE_PORT"
+    },
+    {
+      "id": "comfort",
+      "static_source": "src/partials/sections/comfort.html",
+      "selector": "section.comfort",
+      "order": 15,
+      "assets": [
+        "comfort gallery"
+      ],
+      "js": [
+        "Swiper"
+      ],
+      "wp_present": false,
+      "wp_state": "missing",
+      "repair_category": "MISSING_TEMPLATE_PORT"
+    },
+    {
+      "id": "home-videos",
+      "static_source": "src/partials/sections/home-videos.html",
+      "selector": "section.home-videos",
+      "order": 16,
+      "assets": [
+        "video posters"
+      ],
+      "js": null,
+      "wp_present": false,
+      "wp_state": "missing",
+      "repair_category": "MISSING_TEMPLATE_PORT"
+    },
+    {
+      "id": "specialists",
+      "static_source": "src/partials/sections/specialists.html",
+      "selector": "section.specialists",
+      "order": 17,
+      "assets": [
+        "specialist photos",
+        "swiper"
+      ],
+      "js": [
+        "Swiper"
+      ],
+      "wp_present": false,
+      "wp_state": "missing",
+      "repair_category": "MISSING_TEMPLATE_PORT"
+    },
+    {
+      "id": "home-articles",
+      "static_source": "src/partials/sections/home-articles.html",
+      "selector": "section.home-articles",
+      "order": 18,
+      "assets": [
+        "blog thumbnails"
+      ],
+      "js": null,
+      "wp_present": false,
+      "wp_state": "empty",
+      "repair_category": "ACF_NOT_SEEDED"
+    },
+    {
+      "id": "faq",
+      "static_source": "src/partials/sections/faq.html",
+      "selector": "section.faq",
+      "order": 19,
+      "assets": [],
+      "js": [
+        "accordion"
+      ],
+      "wp_present": true,
+      "wp_state": "present",
+      "repair_category": null
+    },
+    {
+      "id": "final-form",
+      "static_source": "src/partials/sections/final-form.html",
+      "selector": "section.final-form",
+      "order": 20,
+      "assets": [],
+      "js": [
+        "form"
+      ],
+      "wp_present": true,
+      "wp_state": "present",
+      "repair_category": null
+    }
+  ],
+  "services_hub_sections": [
+    {
+      "id": "hub_hero",
+      "static_source": "src/partials/sections/services-inner-hero-v2.html",
+      "selector": ".services-inner-hero-v2",
+      "wp_partial": "template-parts/services-hub/hero.php",
+      "wp_state": "partial",
+      "repair_category": "MEDIA_NOT_DELIVERED"
+    },
+    {
+      "id": "hub_subnav",
+      "static_source": "src/partials/components/internal-page-nav.html",
+      "selector": ".services-page-subnav",
+      "wp_partial": "template-parts/components/internal-page-nav.php",
+      "wp_state": "partial",
+      "repair_category": "INTENTIONAL_LIGHTWEIGHT_DEFERRED"
+    },
+    {
+      "id": "hub_category_sections",
+      "static_source": "src/partials/sections/services-category-section-v2.html",
+      "selector": ".services-category-section-v2",
+      "wp_partial": "template-parts/services-hub/service-groups.php",
+      "wp_state": "sparse",
+      "repair_category": "INTENTIONAL_LIGHTWEIGHT_DEFERRED"
+    },
+    {
+      "id": "hub_program",
+      "static_source": "src/partials/sections/services-program-v2.html",
+      "selector": ".services-program-v2",
+      "wp_partial": "template-parts/services-hub/rehabilitation-program.php",
+      "wp_state": "partial",
+      "repair_category": "MEDIA_NOT_DELIVERED"
+    },
+    {
+      "id": "hub_founder",
+      "static_source": "src/partials/sections/founder-quote.html",
+      "selector": "section.founder-quote",
+      "wp_partial": null,
+      "wp_state": "missing",
+      "repair_category": "MISSING_TEMPLATE_PORT"
+    },
+    {
+      "id": "hub_comfort",
+      "static_source": "src/partials/sections/comfort.html",
+      "selector": "section.comfort",
+      "wp_partial": null,
+      "wp_state": "missing",
+      "repair_category": "MISSING_TEMPLATE_PORT"
+    },
+    {
+      "id": "hub_faq",
+      "static_source": "src/partials/sections/faq.html",
+      "selector": "section.faq",
+      "wp_partial": "template-parts/services-hub/faq.php",
+      "wp_state": "present",
+      "repair_category": null
+    },
+    {
+      "id": "hub_final_form",
+      "static_source": "src/partials/sections/final-form.html",
+      "selector": "section.final-form",
+      "wp_partial": "template-parts/components/final-form.php",
+      "wp_state": "present",
+      "repair_category": null
+    }
+  ],
+  "service_leaf_sections": [
+    {
+      "id": "leaf_hero",
+      "static_source": "services-inner-hero-v2.html",
+      "wp_partial": "template-parts/service/inner-hero.php",
+      "wp_state": "partial"
+    },
+    {
+      "id": "leaf_intro",
+      "static_source": "service-leaf-intro-v1.html",
+      "wp_partial": "template-parts/service/intro.php",
+      "wp_state": "partial"
+    },
+    {
+      "id": "leaf_signs",
+      "static_source": "service-leaf-signs-v1.html",
+      "wp_partial": "template-parts/service/signs.php",
+      "wp_state": "partial"
+    },
+    {
+      "id": "leaf_approach",
+      "static_source": "service-leaf-approach-v1.html",
+      "wp_partial": "template-parts/service/approach.php",
+      "wp_state": "partial"
+    },
+    {
+      "id": "leaf_program",
+      "static_source": "services-program-v2.html",
+      "wp_partial": "template-parts/service/program.php",
+      "wp_state": "partial"
+    },
+    {
+      "id": "leaf_specialists",
+      "static_source": "specialists.html",
+      "wp_partial": null,
+      "wp_state": "missing"
+    },
+    {
+      "id": "leaf_reviews",
+      "static_source": "reviews.html",
+      "wp_partial": null,
+      "wp_state": "missing"
+    },
+    {
+      "id": "leaf_comfort",
+      "static_source": "comfort.html",
+      "wp_partial": "template-parts/service/comfort.php",
+      "wp_state": "partial"
+    }
+  ],
+  "contacts_sections": [
+    {
+      "id": "contacts_breadcrumbs",
+      "static_source": "breadcrumbs.html",
+      "wp_partial": "template-parts/components/breadcrumbs.php",
+      "wp_state": "present"
+    },
+    {
+      "id": "contacts_map_body",
+      "static_source": "contacts-map-body.html",
+      "wp_partial": "template-parts/contacts/map-body.php",
+      "wp_state": "partial",
+      "repair_category": "OPERATOR_DATA_REQUIRED"
+    },
+    {
+      "id": "contacts_steps",
+      "static_source": "contacts-rehabilitation-steps.html",
+      "wp_partial": "template-parts/contacts/rehabilitation-steps.php",
+      "wp_state": "present"
+    }
+  ],
+  "summary": {
+    "static_home_sections": 20,
+    "static_global_shell_items": 14,
+    "primary_repair_categories": [
+      "FONT_PATH_NOT_REWRITTEN",
+      "MISSING_TEMPLATE_PORT",
+      "ACF_NOT_SEEDED",
+      "MEDIA_NOT_DELIVERED",
+      "VENDOR_ASSET_NOT_ENQUEUED",
+      "WP_MENU_DATA_MISSING"
+    ]
+  }
+}

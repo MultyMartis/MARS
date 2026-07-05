@@ -2,8 +2,8 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D9-A VISUAL PARITY AUDIT COMPLETE — FAIL — REPAIR REQUIRED (D9-C hero first)
-**Classification:** CONTENT MODEL RUNTIME DELIVERED — D8-A…E SEEDED — D9-A PARITY GAP DOCUMENTED
+**Status:** V9-06D9-0 FULL V9 VISUAL PORT CHARTER COMPLETE — FULL PORT AUTHORIZED — NEXT: D9-B header/fonts/messengers
+**Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---
 
@@ -221,4 +221,8 @@ D8-G **COMPLETE (PARTIAL PASS)**: Route matrix ALL_200; ACF integrity PASS; visu
 
 ## V9-06D9-A visual parity audit (2026-07-05)
 
-D9-A **COMPLETE (FAIL)**: Read-only static V9 vs WP runtime parity audit. Home: 20 static sections vs 6 runtime; hero image absent (ACF not seeded); 5/10 Inter font 404s (CSS root path bug); 18 screenshots captured. Zero DB/ACF/runtime/source mutations. Evidence: `validation/v9-06d9a-visual-parity-audit/`. Report: `reports/FP-0002-V9-06D9A-VISUAL-PARITY-AUDIT-REPORT-v1.md`. Next: **D9-C home hero parity repair** (recommended).
+D9-A **COMPLETE (FAIL)**: Read-only static V9 vs WP runtime parity audit. Home: 20 static sections vs 6 runtime; hero image absent (ACF not seeded); 5/10 Inter font 404s (CSS root path bug); 18 screenshots captured. Zero DB/ACF/runtime/source mutations. Evidence: `validation/v9-06d9a-visual-parity-audit/`. Report: `reports/FP-0002-V9-06D9A-VISUAL-PARITY-AUDIT-REPORT-v1.md`.
+
+## V9-06D9-0 full V9 visual port charter (2026-07-05)
+
+D9-0 **COMPLETE (PASS)**: Read-only full visual port charter and repair wave plan. WP runtime interpreted as lightweight MVP skeleton (not catastrophic failure). Static V9 full inventory, WP current inventory, lightweight-vs-broken classification, header/messenger parity plan, home 20-section transfer plan, asset/font/vendor plan, ACF/content/media map, waves D9-B…H (+ optional D8-F). Messenger icons absent because D8-A skipped `social_links`; static V9 uses `href="#"` placeholders — D9-B can restore visuals without operator URLs. Zero DB/ACF/runtime/source mutations. Evidence: `validation/v9-06d9-0-full-visual-port-charter/`. Report: `reports/FP-0002-V9-06D9-0-FULL-V9-VISUAL-PORT-CHARTER-REPORT-v1.md`. Next: **CREATE_V9_06D9B_HEADER_FONT_ASSET_MESSENGER_REPAIR_TASK** (recommended).

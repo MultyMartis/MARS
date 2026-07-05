@@ -1,0 +1,135 @@
+{
+  "task": "V9-06D9-0",
+  "items": [
+    {
+      "item": "hero image",
+      "source": true,
+      "acf_schema": false,
+      "db_seed": true,
+      "media": true,
+      "operator_data": false,
+      "review": false,
+      "static_fallback_temp": true
+    },
+    {
+      "item": "gallery images",
+      "source": false,
+      "acf_schema": false,
+      "db_seed": true,
+      "media": true,
+      "operator_data": false,
+      "review": false,
+      "static_fallback_temp": true
+    },
+    {
+      "item": "reviews",
+      "source": true,
+      "acf_schema": true,
+      "db_seed": true,
+      "media": true,
+      "operator_data": false,
+      "review": true,
+      "static_fallback_temp": true
+    },
+    {
+      "item": "specialists",
+      "source": true,
+      "acf_schema": true,
+      "db_seed": true,
+      "media": true,
+      "operator_data": false,
+      "review": true,
+      "static_fallback_temp": true
+    },
+    {
+      "item": "articles",
+      "source": false,
+      "acf_schema": false,
+      "db_seed": true,
+      "media": true,
+      "operator_data": false,
+      "review": true,
+      "static_fallback_temp": true
+    },
+    {
+      "item": "messenger URLs (header)",
+      "source": true,
+      "acf_schema": false,
+      "db_seed": false,
+      "media": false,
+      "operator_data": true,
+      "review": false,
+      "static_fallback_temp": true
+    },
+    {
+      "item": "map URL (contacts)",
+      "source": false,
+      "acf_schema": false,
+      "db_seed": true,
+      "media": false,
+      "operator_data": true,
+      "review": false,
+      "static_fallback_temp": false
+    },
+    {
+      "item": "legal identifiers",
+      "source": false,
+      "acf_schema": false,
+      "db_seed": true,
+      "media": false,
+      "operator_data": true,
+      "review": true,
+      "static_fallback_temp": false
+    },
+    {
+      "item": "Service 74 clinical copy",
+      "source": false,
+      "acf_schema": false,
+      "db_seed": false,
+      "media": false,
+      "operator_data": false,
+      "review": true,
+      "static_fallback_temp": true
+    },
+    {
+      "item": "FAQ copy",
+      "source": false,
+      "acf_schema": false,
+      "db_seed": false,
+      "media": false,
+      "operator_data": false,
+      "review": true,
+      "static_fallback_temp": true
+    },
+    {
+      "item": "header messenger icons visual",
+      "source": true,
+      "acf_schema": false,
+      "db_seed": false,
+      "media": false,
+      "operator_data": false,
+      "review": false,
+      "static_fallback_temp": true
+    },
+    {
+      "item": "home missing section fields",
+      "source": true,
+      "acf_schema": true,
+      "db_seed": true,
+      "media": true,
+      "operator_data": false,
+      "review": true,
+      "static_fallback_temp": true
+    },
+    {
+      "item": "WP primary menu",
+      "source": false,
+      "acf_schema": false,
+      "db_seed": true,
+      "media": false,
+      "operator_data": false,
+      "review": false,
+      "static_fallback_temp": false
+    }
+  ]
+}

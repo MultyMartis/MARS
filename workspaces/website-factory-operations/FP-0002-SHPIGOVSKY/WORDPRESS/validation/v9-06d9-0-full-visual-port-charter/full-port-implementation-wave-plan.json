@@ -1,0 +1,199 @@
+{
+  "task": "V9-06D9-0",
+  "framing": "MVP skeleton → full V9 visual port",
+  "waves": [
+    {
+      "wave": "D9-B",
+      "objective": "Header + fonts + global assets + messenger/icon parity",
+      "files": [
+        "inc/assets.php",
+        "assets/css/v9-style.css",
+        "inc/site-chrome.php",
+        "template-parts/navigation/messenger-links.php",
+        "template-parts/navigation/primary-desktop.php"
+      ],
+      "mutation": [
+        "source/theme",
+        "runtime delivery"
+      ],
+      "safety_gates": [
+        "PHP lint",
+        "font network 200",
+        "messenger DOM present"
+      ],
+      "db_checkpoint": false,
+      "runtime_delivery": true,
+      "media_auth": false,
+      "acceptance": "Fonts 200; messengers visible; nav aligned",
+      "rollback": "Redeploy prior theme package",
+      "risk": "MEDIUM",
+      "order": 1
+    },
+    {
+      "wave": "D9-C",
+      "objective": "Home hero media/overlay parity",
+      "files": [
+        "template-parts/home/hero.php",
+        "inc/home-helpers.php"
+      ],
+      "mutation": [
+        "source/theme",
+        "ACF seed",
+        "media delivery",
+        "runtime delivery"
+      ],
+      "safety_gates": [
+        "DB checkpoint",
+        "hero screenshot"
+      ],
+      "db_checkpoint": true,
+      "runtime_delivery": true,
+      "media_auth": true,
+      "acceptance": "hero__media + hero-main.png visible",
+      "rollback": "DB checkpoint restore",
+      "risk": "LOW-MEDIUM",
+      "order": 2
+    },
+    {
+      "wave": "D9-D",
+      "objective": "Home missing sections source/template transfer",
+      "files": [
+        "front-page.php",
+        "template-parts/home/*.php (12 new)",
+        "inc/home-helpers.php",
+        "acf-json (if new fields)"
+      ],
+      "mutation": [
+        "source/theme",
+        "ACF JSON",
+        "runtime delivery"
+      ],
+      "safety_gates": [
+        "PHP lint",
+        "section count ≥18"
+      ],
+      "db_checkpoint": false,
+      "runtime_delivery": true,
+      "media_auth": false,
+      "acceptance": "≥18 home sections in DOM",
+      "rollback": "Git revert theme",
+      "risk": "HIGH",
+      "order": 3
+    },
+    {
+      "wave": "D9-E",
+      "objective": "Home ACF/content/media seed for newly ported sections",
+      "files": [
+        "validation seed runners",
+        "page #4 meta"
+      ],
+      "mutation": [
+        "DB seed",
+        "media delivery"
+      ],
+      "safety_gates": [
+        "allowlist",
+        "checkpoint",
+        "scope drift"
+      ],
+      "db_checkpoint": true,
+      "runtime_delivery": false,
+      "media_auth": true,
+      "acceptance": "Gallery/reviews/specialists populated",
+      "rollback": "DB checkpoint",
+      "risk": "MEDIUM",
+      "order": 4
+    },
+    {
+      "wave": "D9-F",
+      "objective": "Visual density/spacing/vendor CSS/JS parity",
+      "files": [
+        "inc/assets.php",
+        "assets/js/*",
+        "assets/vendor/*"
+      ],
+      "mutation": [
+        "source/theme",
+        "runtime delivery"
+      ],
+      "safety_gates": [
+        "Swiper init",
+        "Fancybox",
+        "full-page screenshot"
+      ],
+      "db_checkpoint": false,
+      "runtime_delivery": true,
+      "media_auth": true,
+      "acceptance": "Slider/lightbox functional; density ↑",
+      "rollback": "Theme redeploy",
+      "risk": "MEDIUM",
+      "order": 5
+    },
+    {
+      "wave": "D9-G",
+      "objective": "Secondary pages parity (hub/service/contacts)",
+      "files": [
+        "template-parts/services-hub/*",
+        "template-parts/service/*",
+        "template-parts/contacts/*"
+      ],
+      "mutation": [
+        "source/theme",
+        "DB seed partial",
+        "runtime delivery"
+      ],
+      "safety_gates": [
+        "route QA screenshots"
+      ],
+      "db_checkpoint": true,
+      "runtime_delivery": true,
+      "media_auth": true,
+      "acceptance": "Hub/service/contacts visual parity pass",
+      "rollback": "Per-wave checkpoint",
+      "risk": "MEDIUM",
+      "order": 6
+    },
+    {
+      "wave": "D9-H",
+      "objective": "Full visual parity QA",
+      "files": [
+        "validation/v9-06d9h-*"
+      ],
+      "mutation": [
+        "docs only"
+      ],
+      "safety_gates": [
+        "D9-A repeat audit PASS"
+      ],
+      "db_checkpoint": false,
+      "runtime_delivery": false,
+      "media_auth": false,
+      "acceptance": "Static vs runtime screenshots PASS",
+      "rollback": "N/A",
+      "risk": "LOW",
+      "order": 7
+    },
+    {
+      "wave": "D8-F",
+      "objective": "Admin UX Repair (optional after visual parity)",
+      "files": [
+        "acf-json",
+        "plugins/shpigovsky-core admin labels"
+      ],
+      "mutation": [
+        "source only"
+      ],
+      "safety_gates": [
+        "operator choice"
+      ],
+      "db_checkpoint": false,
+      "runtime_delivery": true,
+      "media_auth": false,
+      "acceptance": "Russian admin labels",
+      "rollback": "Source revert",
+      "risk": "LOW",
+      "order": 8,
+      "optional": true
+    }
+  ]
+}

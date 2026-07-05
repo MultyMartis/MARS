@@ -1,0 +1,18 @@
+{
+  "task": "V9-06D9-0",
+  "recommendation": "CREATE_V9_06D9B_HEADER_FONT_ASSET_MESSENGER_REPAIR_TASK",
+  "alternatives_considered": {
+    "CREATE_V9_06D9C_HOME_HERO_PARITY_REPAIR_TASK": "Valid for hero-only quick win but does not fix global font 404 or missing messengers affecting every page",
+    "CREATE_V9_06D9D_HOME_FULL_SECTION_TRANSFER_TASK": "Premature before fonts/vendor/header global fixes",
+    "OPERATOR_DECISION_REQUIRED": "Not required — operator authorized full port; D9-B is clear first wave"
+  },
+  "rationale": [
+    "Inter font 404 affects every page including header typography perception",
+    "Messenger icons missing due to empty social_links — static V9 shows icons with href=# placeholders; source-only fallback can restore visual parity without operator URLs",
+    "Swiper/Fancybox foundation should enqueue before home gallery/reviews sections",
+    "WP menu structure mismatch is header-level and blocks nav parity",
+    "Hero (D9-C) remains wave 2 immediately after global shell fixes",
+    "Operator explicitly concerned about header messengers and font/menu mismatch"
+  ],
+  "first_wave_scope": "D9-B only — no home section port in same task"
+}

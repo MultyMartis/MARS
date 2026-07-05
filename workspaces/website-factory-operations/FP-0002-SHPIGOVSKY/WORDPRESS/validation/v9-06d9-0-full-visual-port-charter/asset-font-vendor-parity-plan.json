@@ -1,0 +1,75 @@
+{
+  "task": "V9-06D9-0",
+  "font_issue": {
+    "symptom": "5/10 Inter woff2 return HTTP 404 at /assets/fonts/inter/*.woff2",
+    "root_cause": "v9-style.css copied from static dist with absolute root paths",
+    "theme_files_exist": "wp-content/themes/shpigovsky/assets/fonts/inter/ return 200 when requested directly",
+    "fix": "Rewrite @font-face url() to theme-relative paths via build step or PHP filter; deliver v9-style.css",
+    "weights_needed": [
+      300,
+      400,
+      500
+    ],
+    "cyrillic_required": true,
+    "wave": "D9-B"
+  },
+  "css_bundle": {
+    "static": [
+      "style.css",
+      "swiper-bundle.min.css",
+      "fancybox.css"
+    ],
+    "wp": [
+      "v9-style.css only"
+    ],
+    "fix": "Enqueue vendor CSS in inc/assets.php or bundled import",
+    "wave": "D9-B/D9-F"
+  },
+  "js_vendor": {
+    "static": [
+      "swiper-bundle.min.js",
+      "fancybox.umd.js",
+      "inputmask CDN",
+      "main.js"
+    ],
+    "wp": [
+      "v9-shell.js only"
+    ],
+    "fix": "Copy vendor to theme assets; enqueue conditionally; port init modules",
+    "wave": "D9-F"
+  },
+  "image_groups": [
+    {
+      "group": "hero",
+      "static_path": "assets/img/hero/hero-main.png",
+      "delivery_target": "theme assets + media library attachment",
+      "wave": "D9-C"
+    },
+    {
+      "group": "gallery",
+      "static_path": "assets/img/content/gallery/*",
+      "delivery_target": "media library",
+      "wave": "D9-E"
+    },
+    {
+      "group": "home sections",
+      "static_path": "assets/img/content/**",
+      "delivery_target": "theme assets or media",
+      "wave": "D9-E"
+    },
+    {
+      "group": "social icons",
+      "static_path": "assets/img/social/*.svg",
+      "delivery_target": "theme assets (already present)",
+      "wave": "D9-B"
+    }
+  ],
+  "cache_versioning": "shpigovsky_asset_version() filemtime — retain after path fix",
+  "runtime_delivery_required": true,
+  "acceptance": [
+    "All font requests 200",
+    "Swiper/Fancybox load on home",
+    "Hero PNG in DOM",
+    "Screenshot density approaches static ~1.48MB vs ~46KB"
+  ]
+}

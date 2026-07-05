@@ -1,0 +1,224 @@
+{
+  "task": "V9-06D9-0",
+  "runtime_url": "http://shpigovsky.test/",
+  "runtime_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\",
+  "wp_source": "WORDPRESS/theme/shpigovsky/",
+  "header": [
+    {
+      "item": "header_shell",
+      "wp_source": "template-parts/layout/header.php",
+      "selector": "header.site-header",
+      "render_state": "present",
+      "acf_dependency": [
+        "phone_primary",
+        "phone_secondary",
+        "site_address",
+        "opening_hours",
+        "default_button_label"
+      ],
+      "data_state": "seeded_d8a",
+      "media_dependency": [
+        "logo.svg"
+      ],
+      "repair_needed": false,
+      "likely_deferred": false
+    },
+    {
+      "item": "messenger_icons_desktop",
+      "wp_source": "template-parts/navigation/messenger-links.php",
+      "selector": ".site-header__messengers",
+      "render_state": "omitted",
+      "acf_dependency": [
+        "social_links (options)"
+      ],
+      "data_state": "empty_skipped_d8a",
+      "media_dependency": [
+        "telegram.svg",
+        "whatsapp.svg"
+      ],
+      "repair_needed": true,
+      "likely_deferred": true
+    },
+    {
+      "item": "messenger_icons_mobile",
+      "wp_source": "template-parts/navigation/messenger-links.php",
+      "selector": ".mobile-header__messengers",
+      "render_state": "omitted",
+      "acf_dependency": [
+        "social_links (options)"
+      ],
+      "data_state": "empty_skipped_d8a",
+      "media_dependency": [
+        "telegram.svg",
+        "whatsapp.svg",
+        "max.svg"
+      ],
+      "repair_needed": true,
+      "likely_deferred": true
+    },
+    {
+      "item": "primary_nav",
+      "wp_source": "template-parts/navigation/primary-desktop.php",
+      "selector": ".site-header__nav-list",
+      "render_state": "flat_wp_menu",
+      "acf_dependency": null,
+      "data_state": "wp_menu_differs_from_v9",
+      "media_dependency": null,
+      "repair_needed": true,
+      "likely_deferred": true
+    },
+    {
+      "item": "search_button",
+      "wp_source": "template-parts/navigation/primary-desktop.php",
+      "selector": ".site-header__search",
+      "render_state": "present",
+      "acf_dependency": null,
+      "data_state": "ok",
+      "media_dependency": [
+        "Font Awesome"
+      ],
+      "repair_needed": false,
+      "likely_deferred": false
+    },
+    {
+      "item": "offcanvas",
+      "wp_source": "template-parts/navigation/offcanvas.php",
+      "selector": ".offcanvas",
+      "render_state": "partial_no_messengers",
+      "acf_dependency": [
+        "social_links"
+      ],
+      "data_state": "partial",
+      "media_dependency": [
+        "logo.svg"
+      ],
+      "repair_needed": true,
+      "likely_deferred": true
+    }
+  ],
+  "home_rendered_sections": [
+    {
+      "section": "hero",
+      "wp_source": "template-parts/home/hero.php",
+      "selector": "section.hero",
+      "render_state": "degraded_no_media",
+      "acf": "home_hero_slides",
+      "data_state": "image_empty",
+      "media": "hero-main.png missing",
+      "repair": true,
+      "deferred": false
+    },
+    {
+      "section": "feature-grid",
+      "wp_source": "template-parts/home/feature-grid.php",
+      "selector": "section.home-feature-grid",
+      "render_state": "visible",
+      "acf": "home_advantages",
+      "data_state": "seeded_d8b",
+      "media": "icons partial",
+      "repair": false,
+      "deferred": false
+    },
+    {
+      "section": "treatment-prevention",
+      "wp_source": "template-parts/home/treatment-prevention.php",
+      "selector": "section.home-treatment-prevention",
+      "render_state": "visible_degraded",
+      "acf": "home_service_nav",
+      "data_state": "cpt_driven",
+      "media": "icons gaps",
+      "repair": true,
+      "deferred": false
+    },
+    {
+      "section": "rehabilitation-program",
+      "wp_source": "template-parts/home/rehabilitation-program.php",
+      "selector": "section.home-rehabilitation-program",
+      "render_state": "visible_degraded",
+      "acf": "home_program_items",
+      "data_state": "partial",
+      "media": "images gaps",
+      "repair": true,
+      "deferred": false
+    },
+    {
+      "section": "gallery",
+      "wp_source": "template-parts/home/gallery.php",
+      "selector": "section.home-gallery",
+      "render_state": "hidden_early_return",
+      "acf": "home_gallery_slides",
+      "data_state": "empty",
+      "media": "not requested",
+      "repair": true,
+      "deferred": true
+    },
+    {
+      "section": "articles-teaser",
+      "wp_source": "template-parts/home/articles-teaser.php",
+      "selector": "section.home-articles",
+      "render_state": "hidden_no_posts",
+      "acf": null,
+      "data_state": "no_posts",
+      "media": null,
+      "repair": true,
+      "deferred": true
+    },
+    {
+      "section": "faq",
+      "wp_source": "template-parts/home/faq.php",
+      "selector": "section.faq",
+      "render_state": "visible",
+      "acf": "home_faq_items",
+      "data_state": "seeded_d8b",
+      "media": null,
+      "repair": false,
+      "deferred": false
+    },
+    {
+      "section": "final-form",
+      "wp_source": "template-parts/components/final-form.php",
+      "selector": "section.final-form",
+      "render_state": "visible",
+      "acf": "options",
+      "data_state": "seeded",
+      "media": null,
+      "repair": false,
+      "deferred": false
+    }
+  ],
+  "home_missing_sections": [
+    "home-recovery-intro",
+    "founder-quote",
+    "home-why-us",
+    "home-staff-photo",
+    "clinic-landscape",
+    "home-recovery-life",
+    "reviews",
+    "home-rehabilitation-requirements",
+    "home-genotyping",
+    "comfort",
+    "home-videos",
+    "specialists"
+  ],
+  "assets_enqueue": {
+    "wp_source": "inc/assets.php",
+    "enqueued": [
+      "v9-style.css",
+      "v9-shell.js"
+    ],
+    "not_enqueued": [
+      "swiper-bundle.min.css",
+      "swiper-bundle.min.js",
+      "fancybox.css",
+      "fancybox.umd.js",
+      "inputmask.min.js",
+      "main.js page modules"
+    ],
+    "font_issue": "v9-style.css @font-face uses /assets/fonts/ → 404 on WP"
+  },
+  "counts": {
+    "runtime_home_sections_visible": 6,
+    "runtime_home_sections_total_orchestrated": 7,
+    "static_home_sections": 20
+  }
+}

@@ -1,0 +1,306 @@
+{
+  "task": "V9-06D9-0",
+  "static_count": 20,
+  "wp_visible_count": 6,
+  "front_page_orchestration": "WORDPRESS/theme/shpigovsky/front-page.php",
+  "sections": [
+    {
+      "section": "hero",
+      "wp_state": "degraded",
+      "static_partial": "hero.html",
+      "target_wp": "home/hero.php",
+      "acf": [
+        "home_hero_slides"
+      ],
+      "db_seed": true,
+      "media": true,
+      "static_fallback": true,
+      "risk": "LOW",
+      "wave": "D9-C",
+      "acceptance": "hero__media visible with hero-main.png"
+    },
+    {
+      "section": "home-recovery-intro",
+      "wp_state": "missing",
+      "static_partial": "home-recovery-intro.html",
+      "target_wp": "home/recovery-intro.php (new)",
+      "acf": [
+        "home_recovery_intro"
+      ],
+      "db_seed": true,
+      "media": false,
+      "static_fallback": true,
+      "risk": "MED",
+      "wave": "D9-D",
+      "acceptance": "Section renders with V9 copy"
+    },
+    {
+      "section": "founder-quote",
+      "wp_state": "missing",
+      "static_partial": "founder-quote.html",
+      "target_wp": "components/founder-quote.php (new)",
+      "acf": [
+        "home_founder_quote or reuse options"
+      ],
+      "db_seed": true,
+      "media": true,
+      "static_fallback": true,
+      "risk": "MED",
+      "wave": "D9-D",
+      "acceptance": "Variant-b quote block visible"
+    },
+    {
+      "section": "home-treatment-prevention",
+      "wp_state": "partial",
+      "static_partial": "home-treatment-prevention.html",
+      "target_wp": "home/treatment-prevention.php",
+      "acf": [
+        "home_service_nav"
+      ],
+      "db_seed": false,
+      "media": true,
+      "static_fallback": true,
+      "risk": "LOW",
+      "wave": "D9-E",
+      "acceptance": "Service icons/images load"
+    },
+    {
+      "section": "home-gallery",
+      "wp_state": "empty",
+      "static_partial": "home-gallery.html",
+      "target_wp": "home/gallery.php",
+      "acf": [
+        "home_gallery_slides"
+      ],
+      "db_seed": true,
+      "media": true,
+      "static_fallback": true,
+      "risk": "MED",
+      "wave": "D9-D/E",
+      "acceptance": "Swiper gallery 4 slides"
+    },
+    {
+      "section": "home-why-us",
+      "wp_state": "missing",
+      "static_partial": "home-why-us.html",
+      "target_wp": "home/why-us.php (new)",
+      "acf": [
+        "home_why_us_items"
+      ],
+      "db_seed": true,
+      "media": true,
+      "static_fallback": true,
+      "risk": "MED",
+      "wave": "D9-D",
+      "acceptance": "Why-us cards visible"
+    },
+    {
+      "section": "home-staff-photo",
+      "wp_state": "missing",
+      "static_partial": "home-staff-photo.html",
+      "target_wp": "home/staff-photo.php (new)",
+      "acf": [
+        "home_staff_photo"
+      ],
+      "db_seed": true,
+      "media": true,
+      "static_fallback": true,
+      "risk": "LOW",
+      "wave": "D9-D",
+      "acceptance": "Staff photo band visible"
+    },
+    {
+      "section": "home-feature-grid",
+      "wp_state": "present",
+      "static_partial": "home-feature-grid.html",
+      "target_wp": "home/feature-grid.php",
+      "acf": [
+        "home_advantages"
+      ],
+      "db_seed": false,
+      "media": false,
+      "static_fallback": false,
+      "risk": "LOW",
+      "wave": null,
+      "acceptance": "Already OK"
+    },
+    {
+      "section": "clinic-landscape",
+      "wp_state": "missing",
+      "static_partial": "clinic-landscape.html",
+      "target_wp": "home/clinic-landscape.php (new)",
+      "acf": [
+        "home_clinic_landscape"
+      ],
+      "db_seed": true,
+      "media": true,
+      "static_fallback": true,
+      "risk": "MED",
+      "wave": "D9-D",
+      "acceptance": "Landscape image band"
+    },
+    {
+      "section": "home-recovery-life",
+      "wp_state": "missing",
+      "static_partial": "home-recovery-life.html",
+      "target_wp": "home/recovery-life.php (new)",
+      "acf": [
+        "home_recovery_life"
+      ],
+      "db_seed": true,
+      "media": true,
+      "static_fallback": true,
+      "risk": "MED",
+      "wave": "D9-D",
+      "acceptance": "Recovery life grid"
+    },
+    {
+      "section": "reviews",
+      "wp_state": "missing",
+      "static_partial": "reviews.html",
+      "target_wp": "home/reviews.php (new)",
+      "acf": [
+        "home_reviews"
+      ],
+      "db_seed": true,
+      "media": true,
+      "static_fallback": true,
+      "risk": "HIGH",
+      "wave": "D9-D/E",
+      "acceptance": "Reviews swiper"
+    },
+    {
+      "section": "home-rehabilitation-requirements",
+      "wp_state": "missing",
+      "static_partial": "home-rehabilitation-requirements.html",
+      "target_wp": "home/rehabilitation-requirements.php (new)",
+      "acf": [
+        "home_rehab_requirements"
+      ],
+      "db_seed": true,
+      "media": false,
+      "static_fallback": true,
+      "risk": "MED",
+      "wave": "D9-D",
+      "acceptance": "Requirements list"
+    },
+    {
+      "section": "home-rehabilitation-program",
+      "wp_state": "partial",
+      "static_partial": "home-rehabilitation-program.html",
+      "target_wp": "home/rehabilitation-program.php",
+      "acf": [
+        "home_program_items"
+      ],
+      "db_seed": true,
+      "media": true,
+      "static_fallback": true,
+      "risk": "MED",
+      "wave": "D9-E",
+      "acceptance": "Program images"
+    },
+    {
+      "section": "home-genotyping",
+      "wp_state": "missing",
+      "static_partial": "home-genotyping.html",
+      "target_wp": "home/genotyping.php (new)",
+      "acf": [
+        "home_genotyping"
+      ],
+      "db_seed": true,
+      "media": true,
+      "static_fallback": true,
+      "risk": "MED",
+      "wave": "D9-D",
+      "acceptance": "Genotyping block"
+    },
+    {
+      "section": "comfort",
+      "wp_state": "missing",
+      "static_partial": "comfort.html",
+      "target_wp": "home/comfort.php (new)",
+      "acf": [
+        "home_comfort"
+      ],
+      "db_seed": true,
+      "media": true,
+      "static_fallback": true,
+      "risk": "MED",
+      "wave": "D9-D",
+      "acceptance": "Comfort gallery"
+    },
+    {
+      "section": "home-videos",
+      "wp_state": "missing",
+      "static_partial": "home-videos.html",
+      "target_wp": "home/videos.php (new)",
+      "acf": [
+        "home_videos"
+      ],
+      "db_seed": true,
+      "media": true,
+      "static_fallback": true,
+      "risk": "MED",
+      "wave": "D9-D",
+      "acceptance": "Video posters"
+    },
+    {
+      "section": "specialists",
+      "wp_state": "missing",
+      "static_partial": "specialists.html",
+      "target_wp": "home/specialists.php (new)",
+      "acf": [
+        "home_specialists"
+      ],
+      "db_seed": true,
+      "media": true,
+      "static_fallback": true,
+      "risk": "HIGH",
+      "wave": "D9-D/E",
+      "acceptance": "Specialists swiper"
+    },
+    {
+      "section": "home-articles",
+      "wp_state": "empty",
+      "static_partial": "home-articles.html",
+      "target_wp": "home/articles-teaser.php",
+      "acf": null,
+      "db_seed": true,
+      "media": true,
+      "static_fallback": true,
+      "risk": "MED",
+      "wave": "D9-E",
+      "acceptance": "3 article cards or static fallback posts"
+    },
+    {
+      "section": "faq",
+      "wp_state": "present",
+      "static_partial": "faq.html",
+      "target_wp": "home/faq.php",
+      "acf": [
+        "home_faq_items"
+      ],
+      "db_seed": false,
+      "media": false,
+      "static_fallback": false,
+      "risk": "LOW",
+      "wave": null,
+      "acceptance": "OK — content review later"
+    },
+    {
+      "section": "final-form",
+      "wp_state": "present",
+      "static_partial": "final-form.html",
+      "target_wp": "components/final-form.php",
+      "acf": [
+        "options"
+      ],
+      "db_seed": false,
+      "media": false,
+      "static_fallback": false,
+      "risk": "LOW",
+      "wave": null,
+      "acceptance": "OK"
+    }
+  ]
+}

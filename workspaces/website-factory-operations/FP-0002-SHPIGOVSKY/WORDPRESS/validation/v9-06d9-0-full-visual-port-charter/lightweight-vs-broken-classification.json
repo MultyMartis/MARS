@@ -1,0 +1,90 @@
+{
+  "task": "V9-06D9-0",
+  "interpretation": "WP runtime is MVP skeleton/content seed — not catastrophic failure",
+  "items": [
+    {
+      "mismatch": "Home 12 sections not in front-page.php",
+      "class": "INTENTIONAL_LIGHTWEIGHT_DEFERRED",
+      "error_or_deferred": "deferred",
+      "required_action": "D9-D port partials + front-page orchestration"
+    },
+    {
+      "mismatch": "D7-B scoped to 8 home sections",
+      "class": "INTENTIONAL_LIGHTWEIGHT_DEFERRED",
+      "error_or_deferred": "deferred",
+      "required_action": "Full-port wave D9-D authorized"
+    },
+    {
+      "mismatch": "Gallery/articles hidden when ACF/posts empty",
+      "class": "INTENTIONAL_LIGHTWEIGHT_DEFERRED",
+      "error_or_deferred": "deferred",
+      "required_action": "D9-E seed + D9-D ensure render path"
+    },
+    {
+      "mismatch": "social_links not seeded (messengers hidden)",
+      "class": "INTENTIONAL_LIGHTWEIGHT_DEFERRED",
+      "error_or_deferred": "deferred",
+      "required_action": "D9-B V9 placeholder fallback OR operator URLs"
+    },
+    {
+      "mismatch": "Inter font /assets/ 404",
+      "class": "BROKEN_ASSET_PATH",
+      "error_or_deferred": "broken",
+      "required_action": "D9-B rewrite @font-face to theme URI"
+    },
+    {
+      "mismatch": "Hero image not in DOM",
+      "class": "ACF_NOT_SEEDED",
+      "error_or_deferred": "deferred",
+      "required_action": "D9-C media + ACF seed"
+    },
+    {
+      "mismatch": "Swiper/Fancybox not enqueued",
+      "class": "VENDOR_ASSET_NOT_ENQUEUED",
+      "error_or_deferred": "broken",
+      "required_action": "D9-B/D9-F enqueue vendor assets"
+    },
+    {
+      "mismatch": "WP primary menu ≠ V9 nav labels/structure",
+      "class": "WP_MENU_DATA_MISSING",
+      "error_or_deferred": "deferred",
+      "required_action": "D9-B menu seed or hardcoded V9 nav fallback"
+    },
+    {
+      "mismatch": "Messenger icons absent at runtime",
+      "class": "HEADER_STRUCTURE_NOT_PORTED",
+      "error_or_deferred": "deferred",
+      "required_action": "D9-B source fallback for empty social_links"
+    },
+    {
+      "mismatch": "Services hub sparse vs uslugi-v2.html",
+      "class": "INTENTIONAL_LIGHTWEIGHT_DEFERRED",
+      "error_or_deferred": "deferred",
+      "required_action": "D9-G secondary pages pass"
+    },
+    {
+      "mismatch": "Service leaf missing specialists/reviews blocks",
+      "class": "MISSING_TEMPLATE_PORT",
+      "error_or_deferred": "deferred",
+      "required_action": "D9-G reuse home partials"
+    },
+    {
+      "mismatch": "Contacts map/messengers omitted",
+      "class": "OPERATOR_DATA_REQUIRED",
+      "error_or_deferred": "deferred",
+      "required_action": "Operator map URL + messenger URLs or V9 # placeholders"
+    },
+    {
+      "mismatch": "FAQ placeholder copy",
+      "class": "CONTENT_REVIEW_REQUIRED",
+      "error_or_deferred": "deferred",
+      "required_action": "Operator clinical copy review post-parity"
+    },
+    {
+      "mismatch": "Service 74 clinical copy MVP",
+      "class": "CONTENT_REVIEW_REQUIRED",
+      "error_or_deferred": "deferred",
+      "required_action": "Operator review after visual port"
+    }
+  ]
+}

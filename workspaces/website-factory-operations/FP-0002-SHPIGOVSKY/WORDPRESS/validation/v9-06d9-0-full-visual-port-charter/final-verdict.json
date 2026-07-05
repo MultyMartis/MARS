@@ -1,0 +1,23 @@
+{
+  "task": "V9-06D9-0",
+  "verdict": "PASS",
+  "charter_status": "COMPLETE",
+  "repair_performed": false,
+  "runtime_delivery": "NOT_PERFORMED",
+  "source_changes": "docs_evidence_only",
+  "full_visual_port_required": true,
+  "header_messenger_repair_required": true,
+  "font_asset_repair_required": true,
+  "home_full_section_transfer_required": true,
+  "recommended_next_phase": "CREATE_V9_06D9B_HEADER_FONT_ASSET_MESSENGER_REPAIR_TASK",
+  "preflight": {
+    "volume": "X",
+    "label": "AI WS",
+    "branch": "mars/canonical-post-recovery",
+    "local_head": "bc2b9c3c97e3024d6954699ecb78b9e585e8e69a",
+    "remote_head": "bc2b9c3c97e3024d6954699ecb78b9e585e8e69a",
+    "ahead": 0,
+    "behind": 0,
+    "strict_head_gate": "PASS"
+  }
+}

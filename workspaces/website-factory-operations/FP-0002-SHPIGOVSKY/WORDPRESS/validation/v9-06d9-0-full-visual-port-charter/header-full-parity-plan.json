@@ -1,0 +1,137 @@
+{
+  "task": "V9-06D9-0",
+  "static_structure": {
+    "source": "workspaces/fp-0002-shpigovsky-v9/src/partials/layout/header.html",
+    "blocks": [
+      "mobile-bar",
+      "top (logo/address/schedule/phones/messengers/callback)",
+      "bottom nav + search",
+      "offcanvas"
+    ]
+  },
+  "wp_structure": {
+    "source": "WORDPRESS/theme/shpigovsky/template-parts/layout/header.php",
+    "blocks": [
+      "mobile-bar",
+      "top",
+      "bottom nav via wp_nav_menu",
+      "offcanvas via template-part"
+    ],
+    "messenger_partial": "template-parts/navigation/messenger-links.php"
+  },
+  "messenger_audit": {
+    "static_desktop": [
+      {
+        "label": "Telegram",
+        "href": "#",
+        "icon": "telegram.svg"
+      },
+      {
+        "label": "WhatsApp",
+        "href": "#",
+        "icon": "whatsapp.svg"
+      }
+    ],
+    "static_mobile_bar": [
+      {
+        "label": "Telegram",
+        "href": "#"
+      },
+      {
+        "label": "WhatsApp",
+        "href": "#"
+      },
+      {
+        "label": "Max",
+        "href": "#",
+        "icon": "max.svg"
+      }
+    ],
+    "static_offcanvas": "Same 3 icons with href=#",
+    "wp_runtime": "No .site-header__messengers or .mobile-header__messengers in DOM — early return when social_links empty",
+    "root_cause": "D8-A skipped social_links (OPERATOR_SUPPLIED_REQUIRED policy); messenger-links.php requires non-empty URL rows",
+    "static_uses_placeholders": true,
+    "operator_urls_required_for_visual": false,
+    "operator_urls_required_for_production_links": true
+  },
+  "gaps": [
+    {
+      "item": "Desktop messenger icons",
+      "static": "present href=#",
+      "wp": "absent",
+      "repair": "Source fallback default icons OR seed social_links with #",
+      "operator_data": false,
+      "wave": "D9-B"
+    },
+    {
+      "item": "Mobile messenger icons",
+      "static": "3 icons",
+      "wp": "absent",
+      "repair": "Same + ensure max.svg asset",
+      "operator_data": false,
+      "wave": "D9-B"
+    },
+    {
+      "item": "Nav items",
+      "static": "Лечение и профилактика, Зависимости, О центре…",
+      "wp": "Главная, Услуги, Специалисты…",
+      "repair": "Menu seed or V9 nav fallback",
+      "operator_data": false,
+      "wave": "D9-B"
+    },
+    {
+      "item": "Inter fonts",
+      "static": "200 all",
+      "wp": "5/10 404",
+      "repair": "Rewrite @font-face paths in v9-style.css source",
+      "operator_data": false,
+      "wave": "D9-B"
+    },
+    {
+      "item": "Nav typography perception",
+      "static": "Inter loaded",
+      "wp": "synthesized fallback",
+      "repair": "Font path fix",
+      "operator_data": false,
+      "wave": "D9-B"
+    }
+  ],
+  "suspected_files": {
+    "wp": [
+      "template-parts/navigation/messenger-links.php",
+      "inc/site-chrome.php",
+      "assets/css/v9-style.css",
+      "inc/assets.php",
+      "template-parts/navigation/primary-desktop.php",
+      "template-parts/navigation/offcanvas.php"
+    ],
+    "static": [
+      "src/partials/layout/header.html",
+      "src/scss/layout/header.scss"
+    ]
+  },
+  "mutations_required": {
+    "source_only_sufficient_for_icons": true,
+    "note": "V9 static uses href=# — WP can match with placeholder fallback without inventing WhatsApp/Telegram URLs",
+    "db_menu_writes": true,
+    "site_options_new_fields": false,
+    "runtime_delivery": true,
+    "media_delivery": false
+  },
+  "fallback_policy": {
+    "if_urls_missing": "Render Telegram/WhatsApp/(Max mobile) icons with href='#' and aria-label matching static V9 — same as static authority",
+    "if_operator_supplies_urls": "Seed social_links option rows; links become functional",
+    "do_not_invent": [
+      "WhatsApp deep links",
+      "Telegram t.me links",
+      "Max links"
+    ]
+  },
+  "acceptance_criteria": [
+    "Desktop .site-header__messengers visible with 2 icons matching static",
+    "Mobile .mobile-header__messengers visible with 3 icons",
+    "Offcanvas messengers visible",
+    "All Inter woff2 requests HTTP 200",
+    "Nav computed tokens match D9-A baseline with real Inter glyphs"
+  ]
+}
