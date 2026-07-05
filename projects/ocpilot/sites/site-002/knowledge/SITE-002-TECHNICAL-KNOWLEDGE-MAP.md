@@ -472,8 +472,9 @@ Product SEO URLs created during catalog import (`oc_seo_url` where `query LIKE '
 | Meta audit scope | **Non-product only** — 43 URLs; product PDP excluded |
 | Meta audit result | PASS 12 · WARN 14 · FAIL 17 |
 | Valid XML sitemap | **NOT FOUND** at audit time — `Sitemap:` omitted from robots |
-| Yandex Metrika / Webmaster (live Twig) | **SAFE UNKNOWN** — not detected in FTP header/footer at audit; operator WIP may be pending |
-| Protected Twig | `common/header.twig`, `common/footer.twig` — **DO NOT OVERWRITE** |
+| Yandex Metrika / Webmaster (live Twig) | **VERIFIED** (Run 4.189) — Metrika in `footer.twig` (~L233–245); Webmaster meta in `header.twig` (~L21); live HTML confirmed on home/category/information |
+| Protected Twig (operator WIP) | `catalog/view/theme/default/template/common/header.twig`, `common/footer.twig` — **DO NOT OVERWRITE / DO NOT REFORMAT** — fresh-download live before any template work |
+| Yandex verification report | [SITE-002-PROD-YANDEX-CODES-VERIFY-01.md](../reports/SITE-002-PROD-YANDEX-CODES-VERIFY-01.md) |
 | Next meta operation | `SITE-002-PROD-SEO-META-FIX-01` (not authorized by default) |
 | Report | [SITE-002-PROD-SEO-READINESS-ROBOTS-01.md](../reports/SITE-002-PROD-SEO-READINESS-ROBOTS-01.md) |
 

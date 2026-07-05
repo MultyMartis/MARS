@@ -25,6 +25,7 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `site-002-prod-load-more-01.py` | Multi-file Production catalog load-more deploy for `SITE-002-PROD-LOAD-MORE-01` |
 | `site-002-prod-mail-recipients-discovery-01.py` | Read-only Production mail/recipient FTP discovery for `SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01` |
 | `site-002-prod-seo-readiness-robots-01.py` | SEO readiness — non-product meta audit + single-file robots.txt deploy for `SITE-002-PROD-SEO-READINESS-ROBOTS-01` |
+| `site-002-prod-yandex-codes-verify-01.py` | Read-only Yandex Metrika/Webmaster verification for `SITE-002-PROD-YANDEX-CODES-VERIFY-01` |
 
 ## Dependencies
 
