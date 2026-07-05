@@ -30,6 +30,7 @@
 | **Production baseline** | **PARENT** — [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
 | **Current Production checkpoint** | **ISSUED** — [baselines/SITE-002-STABLE-PROD-LOAD-MORE-01.md](baselines/SITE-002-STABLE-PROD-LOAD-MORE-01.md) |
 | **MARS 1C cron wrapper** | **ACTIVE — DAILY SCHEDULED** (Run 4.183) — Beget cron confirmed by operator; manual run SUCCESS (Run 4.181); HTTP gateway; wrapper v1.1.0; schedule `0 8 * * *` Moscow; Sergey legacy preserved; next run monitoring pending |
+| **Mail recipients** | **MAPPED** (Run 4.186) — handler `checkout/anketa.php`; active list via OpenCart `config_mail_alert_email`; next task **SITE-002-PROD-MAIL-RECIPIENTS-ADD-01** · [report](reports/SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01.md) |
 | **MARS 1C cron reports** | **CLEANED** (Run 4.184) — 19 redundant setup-date TXT reports removed; 3 current files preserved; [SITE-002-PROD-CRON-REPORTS-CLEANUP-01.md](reports/SITE-002-PROD-CRON-REPORTS-CLEANUP-01.md) |
 | **Current Status** | **STABLE PRODUCTION CHECKPOINT — CRON BEGET ACTIVE 01** |
 | **Active baseline** | [baselines/SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01.md](baselines/SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01.md) · About: [M9.13-ABOUT-REDESIGN-02](baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02.md) · fonts: [LOCAL-FONTS-01](baselines/SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md) |

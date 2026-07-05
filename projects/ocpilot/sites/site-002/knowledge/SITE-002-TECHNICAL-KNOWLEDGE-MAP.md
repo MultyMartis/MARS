@@ -1821,4 +1821,31 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 
 ---
 
-*Documentation only — Production evidence in Run 4.173 operation manifests. Last updated: 2026-07-04 (SITE-002 First Controlled Production Change).*
+## 33. Mail Recipients Architecture (Production — MAPPED)
+
+**Discovery:** Run 4.186 — `SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01` (2026-07-06)
+**Status:** **MAPPED — read-only; no Production mutation**
+
+| Item | Production value |
+|------|------------------|
+| **Unified form handler** | `catalog/controller/checkout/anketa.php` — `ControllerCheckoutAnketa::index()` |
+| **Frontend route** | `POST /index.php?route=checkout/anketa` via `assets/js/main.js` (`sendForm`, `processSubmission`) |
+| **Form markup** | `zpm-form` + hidden `dialog` (1/2/3/5/7) in Fancybox, PLP Commercial Trust, corporate `corpcta-form-*` partials |
+| **Security** | CSRF session token + Google reCAPTCHA v3 |
+| **DB persist** | `catalog/model/checkout/anketa.php` → `addanketa()` |
+| **Active recipients** | OpenCart setting **`config_mail_alert_email`** — comma-separated; loop in anketa + order alert |
+| **From / SMTP** | OpenCart mail settings (`config_email`, `config_mail_*`) |
+| **Order admin alerts** | `catalog/controller/mail/order.php` → `config_email` + same `config_mail_alert_email` when `config_mail_alert` includes `order` |
+| **Native contact** | `information/contact.php` → `config_email` only (no alert list) |
+| **Legacy dead code** | `$to = 's***@mail.ru'` in anketa line 51 — **not used** in send path |
+| **Multi-recipient** | **Already supported** via comma-separated admin setting |
+| **Recommended add path** | Prefer OpenCart admin Mail Alert Emails; else single-file anketa change |
+| **Next task** | `SITE-002-PROD-MAIL-RECIPIENTS-ADD-01` |
+| **Report** | [SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01.md](../reports/SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01.md) |
+| **Storage artefacts** | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\deployments\SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01\` |
+
+**Change rules:** Do not edit anketa/mail paths during unrelated catalog/cron work. Verify CSRF + reCAPTCHA after any anketa change. Mask recipient emails in reports.
+
+---
+
+*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-06 (Run 4.186 — mail recipients discovery).*
