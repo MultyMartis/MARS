@@ -64,8 +64,43 @@
 
 **Historical note:** Phoenix-era paths (`C:\MARS Phenix\AI MARS`, `C:\AI MARS`, etc.) may appear in incident/recovery evidence — they are **not** current operational targets.
 
+### Mandatory session preflight
+
+Before the first filesystem mutation, scoped edit, commit, push, cleanup, or destructive operation in any task, verify:
+
+- `Get-Location` resolves to `X:\AI MARS` or a task-authorized subpath under an approved MARS root.
+- `Get-Volume -DriveLetter X` reports volume label `AI WS`.
+- `git branch --show-current` is `mars/canonical-post-recovery` unless the task explicitly authorizes another branch.
+- `git status --short` is read and unrelated `M` / `??` entries are treated as foreign WIP.
+- `git diff --cached --name-only` is empty unless the task explicitly expects staged work.
+- `git log --oneline origin/mars/canonical-post-recovery..HEAD` is checked before commit/push waves.
+- `git rev-parse HEAD` and `git rev-parse origin/mars/canonical-post-recovery` are checked before pull/rebase/merge/push decisions.
+
+**STOP tokens:**
+
+- `STOP — X VOLUME IDENTITY OR WORKSPACE MISMATCH`
+- `STOP — WRONG BRANCH`
+- `STOP — EXISTING STAGED CHANGES PRESENT`
+- `STOP — UNPUSHED COMMITS PRESENT`
+- `STOP — REMOTE/HEAD MISMATCH`
+
+**Guardrails reference:** `projects/mars-survivability/guardrails/cursor-agent-guardrails-v1.md` — use the guardrails session header copy block when the task involves filesystem, git, cleanup, destructive, backup, Storage, Localhost, runtime, or production risk.
+
+**Backup readiness:** Stable backup is not git cleanup. Before declaring a stable backup point, use `governance/mars-normal-operations-resumption-checklist-v1.md` and ensure foreign WIP inventory is known.
+
+### Destructive operations
+
+No delete / cleanup / move / overwrite without an explicit destructive charter: exact path list; dry-run; path validation; checkpoint or backup; explicit operator approval; post-action audit evidence.
+
+Forbidden without explicit approval: recursive or wildcard delete; `Remove-Item -Recurse`; `git clean`; `git reset --hard`; `robocopy /MIR`; `robocopy /PURGE`; broad restore.
+
 ## Commits
 - **Default:** no commit and no push. **Do not** create commits unless the user explicitly requests.
+- **Never** `git add .`, `git add -A`, or `git commit -a`.
+- Stage only exact allowlisted paths from the task charter.
+- Foreign WIP must not be staged, restored, cleaned, reset, moved, or deleted.
+- Commit and push are separate waves unless the task explicitly authorizes both.
+- Generic Cursor/platform commit habits are subordinate to MARS selective staging rules.
 - **GIT CHECKPOINT NEEDED** is **not** default: use only for major milestones (see `web-gpt-sources/04-workflows__git-rules.md`). In typical tasks, **omit** it.
 
 ## Task closeout

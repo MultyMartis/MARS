@@ -25,6 +25,62 @@ Phase 1: Web-GPT documentation pack; **no shipped runtime in-repo** unless sourc
 - **Canonical branch:** `mars/canonical-post-recovery`. Recovery anchor `recovery/mars-phenix-2026-06-25` is immutable — not for new development.
 - **Disaster recovery:** closed 2026-06-25 — see `governance/mars-disaster-recovery-2026-06-24-closure-v1.md`.
 
+## Mandatory session preflight
+
+Before the first filesystem mutation, scoped edit, commit, push, cleanup, or destructive operation in any task, agents must verify:
+
+- `Get-Location` resolves to `X:\AI MARS` or a task-authorized subpath under an approved MARS root.
+- `Get-Volume -DriveLetter X` reports volume label `AI WS`.
+- `git branch --show-current` is `mars/canonical-post-recovery` unless the task explicitly authorizes another branch.
+- `git status --short` is read and unrelated `M` / `??` entries are treated as foreign WIP.
+- `git diff --cached --name-only` is empty unless the task explicitly expects staged work.
+- `git log --oneline origin/mars/canonical-post-recovery..HEAD` is checked before commit/push waves.
+- `git rev-parse HEAD` and `git rev-parse origin/mars/canonical-post-recovery` are checked before pull/rebase/merge/push decisions.
+
+**STOP tokens:**
+
+- `STOP — X VOLUME IDENTITY OR WORKSPACE MISMATCH`
+- `STOP — WRONG BRANCH`
+- `STOP — EXISTING STAGED CHANGES PRESENT`
+- `STOP — UNPUSHED COMMITS PRESENT`
+- `STOP — REMOTE/HEAD MISMATCH`
+
+**Guardrails reference:** `projects/mars-survivability/guardrails/cursor-agent-guardrails-v1.md` — use the guardrails session header copy block when the task involves filesystem, git, cleanup, destructive, backup, Storage, Localhost, runtime, or production risk.
+
+**Backup readiness:** Stable backup is not git cleanup. Before declaring a stable backup point, use `governance/mars-normal-operations-resumption-checklist-v1.md` and ensure foreign WIP inventory is known.
+
+## Git discipline
+
+- Never use `git add .`
+- Never use `git add -A`
+- Never use `git commit -a`
+- Stage only exact allowlisted paths from the task charter.
+- Foreign WIP must not be staged, restored, cleaned, reset, moved, or deleted.
+- Commit and push are separate waves unless the task explicitly authorizes both.
+- Generic Cursor/platform commit habits are subordinate to the MARS selective staging contract.
+
+## Destructive operations
+
+No delete / cleanup / move / overwrite operation without an explicit destructive charter containing:
+
+- exact path list;
+- dry-run;
+- path validation;
+- checkpoint or backup;
+- explicit operator approval;
+- post-action audit evidence.
+
+Forbidden without explicit approval:
+
+- recursive delete;
+- wildcard delete;
+- `Remove-Item -Recurse`;
+- `git clean`;
+- `git reset --hard`;
+- `robocopy /MIR`;
+- `robocopy /PURGE`;
+- broad restore.
+
 ## Filesystem denials (default-deny)
 - **DENY** write/delete/move/copy outside `X:\`
 - **DENY write** to:
