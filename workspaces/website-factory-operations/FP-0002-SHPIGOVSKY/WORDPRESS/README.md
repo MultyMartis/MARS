@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D9-L ADMIN EDITOR / ACF VISIBILITY REPAIR PASS — NEXT: D9-M admin UX QA
+**Status:** V9-06D9-M NATIVE PAGE CONTENT CLEANUP PASS — NEXT: D9-N hide native editor for template pages
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

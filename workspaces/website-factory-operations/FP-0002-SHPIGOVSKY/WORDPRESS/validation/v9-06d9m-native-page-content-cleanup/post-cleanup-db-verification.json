@@ -1,0 +1,176 @@
+{
+    "phase": "V9-06D9-M",
+    "generated_at": "2026-07-05T15:46:24+00:00",
+    "checks": [
+        {
+            "check": "target_page_4_post_content_empty",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "target_page_5_post_content_empty",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "target_page_11_post_content_empty",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "target_page_12_post_content_empty",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "target_page_13_post_content_empty",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "target_page_14_post_content_empty",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "target_page_15_post_content_empty",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "target_page_16_post_content_empty",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "target_page_18_post_content_empty",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "target_page_20_post_content_empty",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "target_page_22_post_content_empty",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "target_page_23_post_content_empty",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "target_page_24_post_content_empty",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "non_target_page_3_unchanged",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "non_target_page_6_unchanged",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "non_target_page_7_unchanged",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "non_target_page_8_unchanged",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "non_target_page_9_unchanged",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "non_target_page_10_unchanged",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "non_target_page_17_unchanged",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "non_target_page_19_unchanged",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "non_target_page_21_unchanged",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "non_target_page_25_unchanged",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "home_acf_values_present",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "hero_image_populated",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "gallery_four_rows",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "attachment_count_unchanged",
+            "result": "PASS",
+            "notes": "No attachment writes in D9-M"
+        },
+        {
+            "check": "classic_editor_still_active",
+            "result": "PASS",
+            "notes": ""
+        }
+    ],
+    "home_acf_summary": {
+        "home_recovery_intro_heading": {
+            "empty": false,
+            "type": "string",
+            "preview": "Шпиговский дом&nbsp;&mdash; восстановление, построенное вокруг человека"
+        },
+        "home_faq_heading": {
+            "empty": false,
+            "type": "string",
+            "preview": "Нас часто спрашивают"
+        },
+        "home_specialists_heading": {
+            "empty": false,
+            "type": "string",
+            "preview": "Специалисты центра"
+        },
+        "home_hero_slides": {
+            "empty": false,
+            "type": "array",
+            "preview": "array[1]",
+            "hero_image_attachment_id": 89
+        },
+        "home_gallery_media": {
+            "empty": false,
+            "type": "array",
+            "preview": "array[4]",
+            "gallery_row_count": 4
+        }
+    },
+    "result": "PASS"
+}

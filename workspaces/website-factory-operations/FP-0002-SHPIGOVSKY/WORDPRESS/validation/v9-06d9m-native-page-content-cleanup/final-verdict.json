@@ -1,0 +1,20 @@
+{
+    "phase": "V9-06D9-M",
+    "generated_at": "2026-07-05T15:47:00+00:00",
+    "verdict": "PASS",
+    "db_checkpoint": "PASS",
+    "native_post_content_cleaned": 13,
+    "acf_value_writes": 0,
+    "source_theme_changes": 0,
+    "acf_json_changes": 0,
+    "media_uploads": 0,
+    "attachment_creation": 0,
+    "options_writes": 0,
+    "menu_writes": 0,
+    "home_admin_cleanup": "PASS",
+    "frontend_regression": "PASS",
+    "route_smoke": "ALL_200",
+    "no_scope_drift": "PASS",
+    "operator_review_required_page_ids": [3, 6, 7, 8, 9, 10, 17, 19, 21, 25],
+    "recommended_next_phase": "CREATE_V9_06D9N_HIDE_NATIVE_EDITOR_FOR_TEMPLATE_PAGES_TASK"
+}

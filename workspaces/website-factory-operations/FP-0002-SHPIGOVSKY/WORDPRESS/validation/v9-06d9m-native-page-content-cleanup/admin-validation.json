@@ -1,0 +1,83 @@
+{
+    "phase": "V9-06D9-M",
+    "generated_at": "2026-07-05T15:46:24+00:00",
+    "page_id": 4,
+    "checks": [
+        {
+            "check": "home_page_exists",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "native_post_content_empty",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "classic_editor_active",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "acf_home_group_registered",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "acf_faq_heading_populated",
+            "result": "PASS",
+            "notes": "Нас часто спрашивают"
+        },
+        {
+            "check": "acf_specialists_heading_populated",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "hero_image_field_populated",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "gallery_field_four_rows",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "no_broken_encoding_in_native_content",
+            "result": "PASS",
+            "notes": ""
+        }
+    ],
+    "home_acf_summary": {
+        "home_recovery_intro_heading": {
+            "empty": false,
+            "type": "string",
+            "preview": "Шпиговский дом&nbsp;&mdash; восстановление, построенное вокруг человека"
+        },
+        "home_faq_heading": {
+            "empty": false,
+            "type": "string",
+            "preview": "Нас часто спрашивают"
+        },
+        "home_specialists_heading": {
+            "empty": false,
+            "type": "string",
+            "preview": "Специалисты центра"
+        },
+        "home_hero_slides": {
+            "empty": false,
+            "type": "array",
+            "preview": "array[1]",
+            "hero_image_attachment_id": 89
+        },
+        "home_gallery_media": {
+            "empty": false,
+            "type": "array",
+            "preview": "array[4]",
+            "gallery_row_count": 4
+        }
+    },
+    "admin_edit_url": "http://shpigovsky.test/wp-admin/post.php?post=4&action=edit",
+    "result": "PASS"
+}

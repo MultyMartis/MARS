@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-05 (V9-06D9-L Admin Editor / ACF Visibility Repair PASS)
+**Last updated:** 2026-07-05 (V9-06D9-M Native Page Content Cleanup PASS)
 
-**Current WordPress phase:** V9-06D9-L Admin Editor / ACF Visibility Repair **PASS** — Classic Editor 1.7.0 installed/activated; Gutenberg disabled globally; 13 ACF field groups synced from existing local JSON to DB; Home #4 seeded ACF values preserved; frontend regression PASS (19 sections, uploads, routes ALL_200); DB checkpoint PASS; no source/theme/ACF JSON/content writes. Recommended next: **D9-M Admin UX QA** (operator-authenticated). Report: `WORDPRESS/reports/FP-0002-V9-06D9L-ADMIN-EDITOR-ACF-VISIBILITY-REPAIR-REPORT-v1.md`. Prior: D9-K media seed, D9-I ACF seed, D9-H wiring.
+**Current WordPress phase:** V9-06D9-M Native Page Content Cleanup **PASS** — cleared obsolete native `post_content` on 13 template-managed pages (Home #4, Services Hub #5, institutional, Contacts #20, legal); DB checkpoint PASS; ACF values preserved; frontend regression PASS (19 sections, uploads, routes ALL_200); no source/theme/ACF JSON/media writes. Ten pages deferred for operator review. Recommended next: **D9-N hide native editor for template pages**. Report: `WORDPRESS/reports/FP-0002-V9-06D9M-NATIVE-PAGE-CONTENT-CLEANUP-REPORT-v1.md`. Prior: D9-L Classic Editor + ACF sync.
 
 ## Active frontend workspace (V9)
 

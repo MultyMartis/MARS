@@ -1,0 +1,50 @@
+{
+  "phase": "V9-06D9-M",
+  "generated_at": "2026-07-05T15:46:24+00:00",
+  "runtime_url": "http://shpigovsky.test/",
+  "db_name": "mars_wp_fp0002",
+  "table_prefix": "fp02_",
+  "checks": [
+    {
+      "check": "runtime_http_home",
+      "result": "PASS",
+      "notes": "HTTP 200"
+    },
+    {
+      "check": "db_connection",
+      "result": "PASS",
+      "notes": "wp-load.php OK"
+    },
+    {
+      "check": "active_theme_shpigovsky",
+      "result": "PASS",
+      "notes": "shpigovsky"
+    },
+    {
+      "check": "classic_editor_active",
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "check": "acf_pro_active",
+      "result": "PASS",
+      "notes": "advanced-custom-fields-pro"
+    },
+    {
+      "check": "home_page_4_exists",
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "check": "home_acf_group_registered",
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "check": "frontend_template_managed",
+      "result": "PASS",
+      "notes": "front-page.php orchestrates ACF partials; native post_content not rendered"
+    }
+  ],
+  "result": "PASS"
+}

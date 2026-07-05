@@ -1,0 +1,14 @@
+{
+    "phase": "V9-06D9-M",
+    "generated_at": "2026-07-05T15:46:24+00:00",
+    "checkpoint_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d9m-native-page-content-cleanup-pre-20260705-154624",
+    "db_dump": "PASS",
+    "db_dump_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d9m-native-page-content-cleanup-pre-20260705-154624/mars_wp_fp0002.sql",
+    "db_dump_sha256": "9639bbff9b09ae3d5af9ce1b92e69f93125943f7d00d1b25ae0b8ea40d24fe2d",
+    "pre_cleanup_values_json": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d9m-native-page-content-cleanup-pre-20260705-154624/native-page-post-content-pre-values.json",
+    "restore_instructions": {
+        "full": "mysql -u root mars_wp_fp0002 < X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d9m-native-page-content-cleanup-pre-20260705-154624/mars_wp_fp0002.sql",
+        "post_content_only": "Restore post_content from native-page-post-content-pre-values.json"
+    },
+    "result": "PASS"
+}
