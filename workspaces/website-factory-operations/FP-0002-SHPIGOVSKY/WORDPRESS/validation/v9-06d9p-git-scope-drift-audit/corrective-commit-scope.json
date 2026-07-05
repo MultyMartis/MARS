@@ -1,0 +1,43 @@
+{
+  "corrective_phase": "V9-06D9-P-SCOPE-DRIFT-DOCUMENTATION-CORRECTIVE-COMMIT",
+  "generated_at": "2026-07-05T23:58:00+07:00",
+  "audited_commit": "b8361aad0f488ce2c3b4b05f274e12c21e2141a9",
+  "preflight_head_at_task_start": "72391b6fdddaf72114722cf7d15d1ed7d1844166",
+  "preflight_head_note": "Expected audit baseline b8361aad; branch tip +1 OCPilot reconciliation commit 72391b6f (local=remote 0/0)",
+  "corrective_commit_type": "DOCS_ONLY_DISCLOSURE",
+  "history_rewrite": false,
+  "ocpilot_files_touched": false,
+  "files_staged": [
+    "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/reports/FP-0002-V9-06D9P-GIT-SCOPE-DRIFT-AUDIT-REPORT-v1.md",
+    "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-git-scope-drift-audit/audit-no-scope-drift-validation.json",
+    "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-git-scope-drift-audit/commit-file-classification.json",
+    "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-git-scope-drift-audit/corrective-commit-scope.json",
+    "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-git-scope-drift-audit/corrective-no-scope-drift-validation.json",
+    "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-git-scope-drift-audit/corrective-options-analysis.json",
+    "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-git-scope-drift-audit/d9p-evidence-integrity-check.json",
+    "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-git-scope-drift-audit/unrelated-ocpilot-drift-inspection.json",
+    "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/README.md",
+    "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/SOURCE-AUTHORITY.md",
+    "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/PROJECT-STATUS.md"
+  ],
+  "files_explicitly_not_staged": [
+    "projects/ocpilot/OCPILOT-STATE.md",
+    "projects/ocpilot/OPERATIONAL-INDEX.md",
+    "projects/ocpilot/sites/site-002/reports/SITE-002-PRODUCTION-TASK-INTAKE-CATALOG-LOADMORE-1C-CRON.md",
+    "projects/ocpilot/sites/site-002/reports/SITE-002-RUN-4-174-COMMIT-SCOPE-RECONCILIATION.md",
+    "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/**",
+    "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/plugins/**",
+    "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/acf-json/**",
+    "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-admin-ux-qa/_d9p_runner.*",
+    "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-admin-ux-qa/_chrome-profile-tmp/**",
+    ".recovery-temp/**",
+    "foreign WIP (all other unstaged M/?? entries)"
+  ],
+  "ocpilot_preservation": {
+    "rollback_performed": false,
+    "delete_performed": false,
+    "edit_performed": false,
+    "classification": "valid foreign project documentation"
+  },
+  "d9q_baseline_requirement": "D9-Q must start from corrective commit HEAD after push"
+}

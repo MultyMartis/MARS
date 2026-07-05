@@ -1,0 +1,78 @@
+{
+  "audit_phase": "V9-06D9-P-GIT-SCOPE-DRIFT-AUDIT",
+  "generated_at": "2026-07-05T23:55:00+07:00",
+  "commit": "b8361aad0f488ce2c3b4b05f274e12c21e2141a9",
+  "overall_integrity": "PASS",
+  "checks": [
+    {
+      "check": "d9p_report_exists_in_commit",
+      "result": "PASS",
+      "notes": "FP-0002-V9-06D9P-ADMIN-UX-QA-REPORT-v1.md added in commit; present on disk"
+    },
+    {
+      "check": "d9p_validation_json_complete",
+      "result": "PASS",
+      "notes": "All 9 expected validation JSON files committed under v9-06d9p-admin-ux-qa/"
+    },
+    {
+      "check": "d9p_screenshots_complete",
+      "result": "PASS",
+      "notes": "All 10 screenshots in screenshot-manifest.json committed and present on disk"
+    },
+    {
+      "check": "d9p_architecture_docs_complete",
+      "result": "PASS",
+      "notes": "All 4 FP-0002-V9-06D9P-*.md architecture docs committed"
+    },
+    {
+      "check": "d9p_status_docs_updated",
+      "result": "PASS",
+      "notes": "PROJECT-STATUS.md, WORDPRESS/README.md, WORDPRESS/SOURCE-AUTHORITY.md modified in commit"
+    },
+    {
+      "check": "no_source_theme_changes",
+      "result": "PASS",
+      "notes": "No files under theme/, src/, acf-json/, plugins/, or runtime paths in commit"
+    },
+    {
+      "check": "no_acf_json_changes",
+      "result": "PASS",
+      "notes": "No ACF JSON files in commit diff"
+    },
+    {
+      "check": "no_runtime_files_committed",
+      "result": "PASS",
+      "notes": "No MARS-Localhost or forge-wordpress runtime paths in commit"
+    },
+    {
+      "check": "no_helper_temp_committed",
+      "result": "PASS",
+      "notes": "_d9p_runner.mjs, _d9p_runner.py, _chrome-profile-tmp/ not in commit (untracked foreign WIP on disk)"
+    },
+    {
+      "check": "final_verdict_consistency",
+      "result": "PASS",
+      "notes": "final-verdict.json verdict PARTIAL PASS matches report section 13"
+    },
+    {
+      "check": "d9p_report_git_checkpoint_accuracy",
+      "result": "FAIL",
+      "notes": "Report section 12 claims 28 staged files and no-scope-drift PASS for git checkpoint; commit actually contains 31 files including 3 OCPilot paths"
+    },
+    {
+      "check": "d9p_report_commit_message_accuracy",
+      "result": "FAIL",
+      "notes": "D9-P report does not document OCPilot co-commit or mismatched commit message subject"
+    }
+  ],
+  "evidence_on_disk": {
+    "report": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/reports/FP-0002-V9-06D9P-ADMIN-UX-QA-REPORT-v1.md",
+    "validation_json_count_committed": 9,
+    "validation_json_count_on_disk_excluding_helpers": 9,
+    "screenshot_count_committed": 10,
+    "screenshot_count_on_disk": 10,
+    "architecture_doc_count": 4
+  },
+  "fp0002_evidence_intact": true,
+  "qa_substance_unaffected_by_git_drift": true
+}

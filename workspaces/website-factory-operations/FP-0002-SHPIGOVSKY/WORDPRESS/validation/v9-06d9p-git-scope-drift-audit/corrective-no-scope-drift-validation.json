@@ -1,0 +1,45 @@
+{
+  "corrective_phase": "V9-06D9-P-SCOPE-DRIFT-DOCUMENTATION-CORRECTIVE-COMMIT",
+  "generated_at": "2026-07-05T23:58:00+07:00",
+  "validated_before_staging": true,
+  "counts": {
+    "db_writes": 0,
+    "runtime_writes": 0,
+    "source_theme_writes": 0,
+    "ocpilot_writes": 0,
+    "destructive_git": 0,
+    "staged_files_before_gate": 0
+  },
+  "allowed_writes_performed": {
+    "audit_report_md": 1,
+    "audit_evidence_json": 7,
+    "status_disclosure_md": 3,
+    "paths_under": [
+      "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/reports/",
+      "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-git-scope-drift-audit/",
+      "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/README.md",
+      "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/SOURCE-AUTHORITY.md",
+      "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/PROJECT-STATUS.md"
+    ]
+  },
+  "forbidden_writes_avoided": [
+    "projects/ocpilot/**",
+    "WORDPRESS/theme/**",
+    "WORDPRESS/plugins/**",
+    "WORDPRESS/acf-json/**",
+    "runtime",
+    "DB",
+    "helpers/temp",
+    "secrets"
+  ],
+  "preflight_at_corrective_start": {
+    "branch": "mars/canonical-post-recovery",
+    "local_head": "72391b6fdddaf72114722cf7d15d1ed7d1844166",
+    "remote_head": "72391b6fdddaf72114722cf7d15d1ed7d1844166",
+    "ahead": 0,
+    "behind": 0,
+    "staged_files": 0,
+    "volume_label": "AI WS"
+  },
+  "result": "PASS"
+}

@@ -262,3 +262,7 @@ D9-O **PASS**: `home_reviews_teaser` optional; runtime ACF JSON restored; fronte
 ## V9-06D9-P admin UX QA (2026-07-05)
 
 D9-P **PARTIAL PASS**: Read-only admin UX QA after D9-L/M/N/O. Home #4 ACF visible; native editor hidden; reviews teaser optional (simulation PASS); hero/gallery populated; managed pages PASS; operator-review pages preserved; frontend 19/19 sections routes ALL_200. Live authenticated Home save: OPERATOR_CONFIRMATION_REQUIRED. Admin screenshots PARTIAL (login on some screens). Zero DB/source/ACF JSON/value/content/media mutations. Evidence: `validation/v9-06d9p-admin-ux-qa/`. Report: `reports/FP-0002-V9-06D9P-ADMIN-UX-QA-REPORT-v1.md`. Next: D9-Q reviews include planning.
+
+## V9-06D9-P git scope drift disclosure (2026-07-05)
+
+D9-P Admin UX QA commit `b8361aad` was **mixed-scope**: 28 valid FP-0002 D9-P evidence/status files plus 3 unrelated OCPilot/SITE-002 files (`projects/ocpilot/OCPILOT-STATE.md`, `OPERATIONAL-INDEX.md`, `sites/site-002/reports/SITE-002-PRODUCTION-TASK-INTAKE-CATALOG-LOADMORE-1C-CRON.md`). Commit message described OCPilot only. OCPilot files classified as **valid foreign project documentation**; no rollback, delete, reset, or revert performed. Corrective documentation (Option C) preserves audit evidence in `reports/FP-0002-V9-06D9P-GIT-SCOPE-DRIFT-AUDIT-REPORT-v1.md` and `validation/v9-06d9p-git-scope-drift-audit/`. **D9-Q must start from the D9-P scope drift corrective commit HEAD.**

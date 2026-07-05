@@ -1,0 +1,217 @@
+{
+  "audit_phase": "V9-06D9-P-GIT-SCOPE-DRIFT-AUDIT",
+  "generated_at": "2026-07-05T23:55:00+07:00",
+  "commit": "b8361aad0f488ce2c3b4b05f274e12c21e2141a9",
+  "parent": "1ee0efd9b6d536bd22af476e1bca2f13868f2f9e",
+  "commit_message_subject": "ocpilot: scope SITE-002 catalog and cron production tasks",
+  "total_files_changed": 31,
+  "d9p_allowed_count": 28,
+  "unrelated_ocpilot_count": 3,
+  "other_unrelated_count": 0,
+  "unknown_count": 0,
+  "classification_summary": {
+    "D9-P_ALLOWED_EVIDENCE": 1,
+    "D9-P_ALLOWED_STATUS": 3,
+    "D9-P_ALLOWED_ARCHITECTURE": 4,
+    "D9-P_ALLOWED_VALIDATION_JSON": 9,
+    "D9-P_ALLOWED_SCREENSHOT": 10,
+    "UNRELATED_OCPILOT": 3
+  },
+  "verdict": {
+    "unrelated_files_committed": true,
+    "commit_message_matches_d9p": false,
+    "commit_message_matches_ocpilot_only": true,
+    "mixed_commit": true,
+    "d9p_report_staged_count_claim": 28,
+    "actual_commit_file_count": 31,
+    "staged_count_discrepancy": 3
+  },
+  "files": [
+    {
+      "path": "projects/ocpilot/OCPILOT-STATE.md",
+      "status": "M",
+      "classification": "UNRELATED_OCPILOT",
+      "notes": "OCPilot program state update for SITE-002 Run 4.174; not in D9-P allowlist"
+    },
+    {
+      "path": "projects/ocpilot/OPERATIONAL-INDEX.md",
+      "status": "M",
+      "classification": "UNRELATED_OCPILOT",
+      "notes": "OCPilot operational index entry for Run 4.174; not in D9-P allowlist"
+    },
+    {
+      "path": "projects/ocpilot/sites/site-002/reports/SITE-002-PRODUCTION-TASK-INTAKE-CATALOG-LOADMORE-1C-CRON.md",
+      "status": "A",
+      "classification": "UNRELATED_OCPILOT",
+      "notes": "New OCPilot SITE-002 production task intake report (439 lines); not in D9-P allowlist"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/PROJECT-STATUS.md",
+      "status": "M",
+      "classification": "D9-P_ALLOWED_STATUS",
+      "notes": "Allowed D9-P status doc"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/README.md",
+      "status": "M",
+      "classification": "D9-P_ALLOWED_STATUS",
+      "notes": "Allowed D9-P status doc"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/SOURCE-AUTHORITY.md",
+      "status": "M",
+      "classification": "D9-P_ALLOWED_STATUS",
+      "notes": "Allowed D9-P status doc"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/architecture/FP-0002-V9-06D9P-HOME-ADMIN-UX-QA-v1.md",
+      "status": "A",
+      "classification": "D9-P_ALLOWED_ARCHITECTURE",
+      "notes": "Allowed D9-P architecture evidence"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/architecture/FP-0002-V9-06D9P-MANAGED-PAGES-ADMIN-UX-QA-v1.md",
+      "status": "A",
+      "classification": "D9-P_ALLOWED_ARCHITECTURE",
+      "notes": "Allowed D9-P architecture evidence"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/architecture/FP-0002-V9-06D9P-NEXT-STEP-RECOMMENDATION-v1.md",
+      "status": "A",
+      "classification": "D9-P_ALLOWED_ARCHITECTURE",
+      "notes": "Allowed D9-P architecture evidence"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/architecture/FP-0002-V9-06D9P-OPERATOR-REVIEW-PAGES-PRESERVATION-QA-v1.md",
+      "status": "A",
+      "classification": "D9-P_ALLOWED_ARCHITECTURE",
+      "notes": "Allowed D9-P architecture evidence"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/reports/FP-0002-V9-06D9P-ADMIN-UX-QA-REPORT-v1.md",
+      "status": "A",
+      "classification": "D9-P_ALLOWED_EVIDENCE",
+      "notes": "Allowed D9-P primary report"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-admin-ux-qa/admin-ux-findings-register.json",
+      "status": "A",
+      "classification": "D9-P_ALLOWED_VALIDATION_JSON",
+      "notes": "Allowed D9-P validation artefact"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-admin-ux-qa/final-verdict.json",
+      "status": "A",
+      "classification": "D9-P_ALLOWED_VALIDATION_JSON",
+      "notes": "Allowed D9-P validation artefact"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-admin-ux-qa/frontend-regression-qa.json",
+      "status": "A",
+      "classification": "D9-P_ALLOWED_VALIDATION_JSON",
+      "notes": "Allowed D9-P validation artefact"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-admin-ux-qa/home-admin-ux-qa.json",
+      "status": "A",
+      "classification": "D9-P_ALLOWED_VALIDATION_JSON",
+      "notes": "Allowed D9-P validation artefact"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-admin-ux-qa/managed-pages-admin-ux-qa.json",
+      "status": "A",
+      "classification": "D9-P_ALLOWED_VALIDATION_JSON",
+      "notes": "Allowed D9-P validation artefact"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-admin-ux-qa/no-scope-drift-validation.json",
+      "status": "A",
+      "classification": "D9-P_ALLOWED_VALIDATION_JSON",
+      "notes": "Allowed D9-P validation artefact"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-admin-ux-qa/operator-review-pages-preservation-qa.json",
+      "status": "A",
+      "classification": "D9-P_ALLOWED_VALIDATION_JSON",
+      "notes": "Allowed D9-P validation artefact"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-admin-ux-qa/runtime-admin-readonly-gate.json",
+      "status": "A",
+      "classification": "D9-P_ALLOWED_VALIDATION_JSON",
+      "notes": "Allowed D9-P validation artefact"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-admin-ux-qa/screenshot-manifest.json",
+      "status": "A",
+      "classification": "D9-P_ALLOWED_VALIDATION_JSON",
+      "notes": "Allowed D9-P validation artefact"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-admin-ux-qa/visual-result.json",
+      "status": "A",
+      "classification": "D9-P_ALLOWED_VALIDATION_JSON",
+      "notes": "Allowed D9-P validation artefact"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-admin-ux-qa/screenshots/runtime-contacts-d9p.png",
+      "status": "A",
+      "classification": "D9-P_ALLOWED_SCREENSHOT",
+      "notes": "Allowed D9-P screenshot"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-admin-ux-qa/screenshots/runtime-home-full-desktop-d9p.png",
+      "status": "A",
+      "classification": "D9-P_ALLOWED_SCREENSHOT",
+      "notes": "Allowed D9-P screenshot"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-admin-ux-qa/screenshots/runtime-home-full-mobile-d9p.png",
+      "status": "A",
+      "classification": "D9-P_ALLOWED_SCREENSHOT",
+      "notes": "Allowed D9-P screenshot"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-admin-ux-qa/screenshots/runtime-reviews-section-d9p.png",
+      "status": "A",
+      "classification": "D9-P_ALLOWED_SCREENSHOT",
+      "notes": "Allowed D9-P screenshot"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-admin-ux-qa/screenshots/runtime-service-74-d9p.png",
+      "status": "A",
+      "classification": "D9-P_ALLOWED_SCREENSHOT",
+      "notes": "Allowed D9-P screenshot"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-admin-ux-qa/screenshots/wp-admin-contacts-ux-d9p.png",
+      "status": "A",
+      "classification": "D9-P_ALLOWED_SCREENSHOT",
+      "notes": "Allowed D9-P screenshot"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-admin-ux-qa/screenshots/wp-admin-home-reviews-teaser-d9p.png",
+      "status": "A",
+      "classification": "D9-P_ALLOWED_SCREENSHOT",
+      "notes": "Allowed D9-P screenshot"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-admin-ux-qa/screenshots/wp-admin-home-ux-d9p.png",
+      "status": "A",
+      "classification": "D9-P_ALLOWED_SCREENSHOT",
+      "notes": "Allowed D9-P screenshot"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-admin-ux-qa/screenshots/wp-admin-privacy-policy-retained-d9p.png",
+      "status": "A",
+      "classification": "D9-P_ALLOWED_SCREENSHOT",
+      "notes": "Allowed D9-P screenshot"
+    },
+    {
+      "path": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-admin-ux-qa/screenshots/wp-admin-services-ux-d9p.png",
+      "status": "A",
+      "classification": "D9-P_ALLOWED_SCREENSHOT",
+      "notes": "Allowed D9-P screenshot"
+    }
+  ]
+}

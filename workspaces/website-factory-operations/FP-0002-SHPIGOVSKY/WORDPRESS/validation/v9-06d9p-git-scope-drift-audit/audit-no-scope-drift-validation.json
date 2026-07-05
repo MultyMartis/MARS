@@ -1,0 +1,28 @@
+{
+  "audit_phase": "V9-06D9-P-GIT-SCOPE-DRIFT-AUDIT",
+  "generated_at": "2026-07-05T23:55:00+07:00",
+  "audit_performed": true,
+  "counts": {
+    "db_writes": 0,
+    "runtime_writes": 0,
+    "source_theme_writes": 0,
+    "git_staging": 0,
+    "git_commits": 0,
+    "git_pushes": 0,
+    "destructive_git": 0,
+    "corrective_action_executed": 0
+  },
+  "allowed_writes_performed": {
+    "audit_evidence_json": 5,
+    "audit_report_md": 1,
+    "paths_under": "workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-git-scope-drift-audit/ and WORDPRESS/reports/"
+  },
+  "preflight_at_audit_start": {
+    "branch": "mars/canonical-post-recovery",
+    "local_head": "b8361aad0f488ce2c3b4b05f274e12c21e2141a9",
+    "remote_head": "b8361aad0f488ce2c3b4b05f274e12c21e2141a9",
+    "staged_files": 0,
+    "volume_label": "AI WS"
+  },
+  "result": "PASS"
+}

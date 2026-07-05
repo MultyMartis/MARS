@@ -1,0 +1,59 @@
+{
+  "audit_phase": "V9-06D9-P-GIT-SCOPE-DRIFT-AUDIT",
+  "generated_at": "2026-07-05T23:55:00+07:00",
+  "commit": "b8361aad0f488ce2c3b4b05f274e12c21e2141a9",
+  "unrelated_ocpilot_file_count": 3,
+  "files": [
+    {
+      "path": "projects/ocpilot/OCPILOT-STATE.md",
+      "status_in_commit": "M",
+      "existed_before_parent": true,
+      "first_introduced_by_this_commit": false,
+      "diff_summary": "Updated Last updated/Evidence cutoff to 2026-07-05; SITE-002 focus changed from Run 4.173 first controlled production change to Run 4.174 production task intake with link to new intake report",
+      "content_meaningful": true,
+      "belongs_to_active_project": "OCPilot / SITE-002 (BZPM / ЗПМ)",
+      "cross_project_reason_documented": false,
+      "should_preserve": true,
+      "treat_as_foreign_wip": false,
+      "requires_separate_owner_confirmation": false,
+      "risk": "LOW",
+      "recommendation": "Preserve content; belongs in a dedicated OCPilot commit with correct message, not removal"
+    },
+    {
+      "path": "projects/ocpilot/OPERATIONAL-INDEX.md",
+      "status_in_commit": "M",
+      "existed_before_parent": true,
+      "first_introduced_by_this_commit": false,
+      "diff_summary": "Added Run 4.174 index row for SITE-002 Production Task Intake (catalog sort / load more / 1C cron) marked COMPLETE — IMPLEMENTATION SCOPES PREPARED",
+      "content_meaningful": true,
+      "belongs_to_active_project": "OCPilot / SITE-002 (BZPM / ЗПМ)",
+      "cross_project_reason_documented": false,
+      "should_preserve": true,
+      "treat_as_foreign_wip": false,
+      "requires_separate_owner_confirmation": false,
+      "risk": "LOW",
+      "recommendation": "Preserve content; document as co-committed OCPilot Run 4.174 artefact"
+    },
+    {
+      "path": "projects/ocpilot/sites/site-002/reports/SITE-002-PRODUCTION-TASK-INTAKE-CATALOG-LOADMORE-1C-CRON.md",
+      "status_in_commit": "A",
+      "existed_before_parent": false,
+      "first_introduced_by_this_commit": true,
+      "diff_summary": "New 439-line OCPilot Run 4.174 read-only intake report covering catalog default sort A→Я, Load More Option B, and 1C cron wrapper planning for bzpm.ru Production; no remote mutations performed",
+      "content_meaningful": true,
+      "belongs_to_active_project": "OCPilot / SITE-002 (BZPM / ЗПМ)",
+      "cross_project_reason_documented": false,
+      "should_preserve": true,
+      "treat_as_foreign_wip": false,
+      "requires_separate_owner_confirmation": false,
+      "risk": "LOW",
+      "recommendation": "Preserve file; valid OCPilot deliverable accidentally bundled into D9-P commit wave"
+    }
+  ],
+  "drift_mechanism_assessment": {
+    "likely_cause": "Mixed staging at commit time — OCPilot Run 4.174 documentation staged alongside D9-P evidence under a single OCPilot-themed commit message",
+    "commit_message_describes": "OCPilot SITE-002 only",
+    "commit_content_includes": "OCPilot SITE-002 (3 files) + FP-0002 D9-P evidence (28 files)",
+    "d9p_report_acknowledged_ocpilot_files": false
+  }
+}

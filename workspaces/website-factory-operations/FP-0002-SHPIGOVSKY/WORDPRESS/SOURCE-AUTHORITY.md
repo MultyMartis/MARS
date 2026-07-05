@@ -247,3 +247,7 @@ D9-O **PASS**: Confirmed `home_reviews_teaser` optional in canonical JSON and DB
 ## V9-06D9-P admin UX QA (2026-07-05)
 
 D9-P **PARTIAL PASS**: Read-only admin UX QA after D9-L/M/N/O. Runtime gate PASS (theme shpigovsky, Classic Editor, ACF PRO, runtime JSON, attachments 89–93). Home #4: native editor hidden, ACF populated, `home_reviews_teaser` optional; save simulation PASS; live auth save OPERATOR_CONFIRMATION_REQUIRED. Managed pages #5/#20/#11 PASS; operator-review pages #3/#7/#17/#21 preserved PASS. Frontend regression PASS (7 routes ALL_200, Home 19/19 sections). Admin screenshots PARTIAL. Zero DB/source/ACF JSON/value/content/media/options/menu mutations. Local helpers `_d9p_runner.py` / `_d9p_runner.mjs` used but not committed. Strict HEAD gate PASS (`1ee0efd9`). Evidence: `validation/v9-06d9p-admin-ux-qa/`. Report: `reports/FP-0002-V9-06D9P-ADMIN-UX-QA-REPORT-v1.md`. Next: D9-Q reviews include planning.
+
+## V9-06D9-P git scope drift disclosure (2026-07-05)
+
+Mixed-scope commit `b8361aad`: 28 D9-P allowed paths + 3 OCPilot/SITE-002 paths with OCPilot-only commit message. OCPilot artefacts preserved as valid foreign project documentation; no history rewrite. FP-0002 corrective disclosure: `reports/FP-0002-V9-06D9P-GIT-SCOPE-DRIFT-AUDIT-REPORT-v1.md`; validation: `validation/v9-06d9p-git-scope-drift-audit/`. D9-Q baseline: corrective commit HEAD after this disclosure wave.

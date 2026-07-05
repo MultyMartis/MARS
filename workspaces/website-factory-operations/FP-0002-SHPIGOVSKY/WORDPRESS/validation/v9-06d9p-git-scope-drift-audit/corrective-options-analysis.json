@@ -1,0 +1,64 @@
+{
+  "audit_phase": "V9-06D9-P-GIT-SCOPE-DRIFT-AUDIT",
+  "generated_at": "2026-07-05T23:55:00+07:00",
+  "commit": "b8361aad0f488ce2c3b4b05f274e12c21e2141a9",
+  "history_rewrite_recommended": false,
+  "options": [
+    {
+      "option": "A",
+      "id": "LEAVE_AS_IS_WITH_DOCUMENTATION",
+      "description": "Accept mixed commit on branch; add this audit report and cross-reference notes in FP-0002 / OCPilot state without changing tracked file content",
+      "risk": "LOW",
+      "feasibility": "HIGH",
+      "recommended_when": "Operator accepts co-located OCPilot Run 4.174 artefacts and prioritizes forward progress to D9-Q",
+      "not_recommended_when": "Strict per-task git hygiene is required for FP-0002 checkpoint traceability",
+      "recommendation": "ACCEPTABLE"
+    },
+    {
+      "option": "B",
+      "id": "CORRECTIVE_COMMIT_REMOVE_OCPILOT",
+      "description": "Follow-up commit reverting or deleting the 3 OCPilot files from branch tip to restore D9-P-only commit scope on HEAD",
+      "risk": "HIGH",
+      "feasibility": "MEDIUM",
+      "recommended_when": "OCPilot files were committed by error and have no intended retention on branch",
+      "not_recommended_when": "OCPilot Run 4.174 work is valid and should remain tracked (current evidence shows valid meaningful content)",
+      "recommendation": "NOT_RECOMMENDED",
+      "reason": "OCPilot files are legitimate project artefacts; removal would destroy valid SITE-002 intake documentation already pushed to origin"
+    },
+    {
+      "option": "C",
+      "id": "DOCUMENTATION_CORRECTION_ONLY",
+      "description": "Add follow-up documentation commit: this audit report, update D9-P report git checkpoint section with drift disclosure, optional OCPilot cross-index note; no file content rollback",
+      "risk": "LOW",
+      "feasibility": "HIGH",
+      "recommended_when": "Commit content is acceptable but message and D9-P git checkpoint claims are inaccurate",
+      "not_recommended_when": "Operator mandates physically separate commits per project lane",
+      "recommendation": "PREFERRED"
+    },
+    {
+      "option": "D",
+      "id": "STOP_AND_ESCALATE",
+      "description": "Halt D9-Q until operator decides ownership, commit hygiene policy, and whether OCPilot co-commit was intentional",
+      "risk": "MEDIUM",
+      "feasibility": "HIGH",
+      "recommended_when": "Unclear whether OCPilot staging was authorized or accidental",
+      "not_recommended_when": "Forensic evidence already shows valid OCPilot work and intact D9-P QA evidence",
+      "recommendation": "NOT_REQUIRED",
+      "reason": "Ownership is clear (OCPilot SITE-002); drift is staging/message hygiene, not content safety unknown"
+    }
+  ],
+  "explicitly_forbidden": [
+    "git reset",
+    "git revert (without separate operator charter)",
+    "git push --force",
+    "deleting local foreign WIP",
+    "history rewrite"
+  ],
+  "selected_recommendation": {
+    "primary": "C",
+    "secondary": "A",
+    "next_action_token": "PROCEED_TO_D9Q_REVIEWS_INCLUDE_PLANNING",
+    "conditional_follow_up": "CREATE_D9P_SCOPE_DRIFT_CORRECTIVE_COMMIT_TASK",
+    "rationale": "D9-P QA evidence is complete and intact; OCPilot files are valid and should not be removed; primary defect is mixed commit scope and wrong commit message. Document drift (Option C), optionally accept as-is (Option A), proceed to D9-Q planning."
+  }
+}
