@@ -152,6 +152,30 @@ Proven operational boundary:
 MARS wrapper TXT reporting under mars-tools/reports — no legacy import mutation
 ```
 
+### MARS 1C cron activation preflight (Run 4.180 — 2026-07-06)
+
+| Field | Value |
+|-------|-------|
+| Operation | `SITE-002-PROD-CRON-ACTIVATION-PREFLIGHT-01` |
+| Status | **TOKEN CONFIG READY — MANUAL RUN PENDING** |
+| Local config | `/storage/mars-tools/cron/mars_1c_wrapper.local.php` (Storage secrets — not in Git) |
+| Wrapper version | 1.1.0 |
+| HTTP gates | dry-run/status **200** · run without token **403** |
+| Input XML | `import0_1.xml` + `offers0_1.xml` present |
+| Live cron DB state | **SAFE UNKNOWN** (SSH PHP CLI too old for OpenCart bootstrap) |
+| Manual import executed | **No** — blocked G5/G6 |
+| Beget cron | **Not activated** |
+| Recommended schedule | `0 8 * * *` (Moscow → 12:00 Barnaul) |
+| Legacy Sergey import | **PRESERVED** |
+| Checkpoint | unchanged — `SITE-002-STABLE-PROD-CRON-RUN-REPORTS-01` |
+| Report | [../reports/SITE-002-PROD-CRON-ACTIVATION-PREFLIGHT-01.md](../reports/SITE-002-PROD-CRON-ACTIVATION-PREFLIGHT-01.md) |
+
+Proven operational boundary:
+
+```text
+MARS local token config upload only — no legacy import mutation; manual run gated on live cron DB verify
+```
+
 ---
 
 **Environment (TEST-era evidence):** TEST — https://zpm.new-site.space/

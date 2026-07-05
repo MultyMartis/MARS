@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-06 (Run 4.179 — MARS 1C wrapper TXT reports)
+**Last updated:** 2026-07-06 (Run 4.180 — MARS 1C cron activation preflight)
 
 ---
 
@@ -70,7 +70,7 @@ Do not claim that Production exactly matches TEST unless evidence proves it.
 | Post-corporate-page checkpoints | Home Commercial Trust · Corporate Intro · Custom Proof Strip · Delivery Summary · PDP Body Category Classes |
 | Production baseline parent | [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
 | Current Production checkpoint | [baselines/SITE-002-STABLE-PROD-CRON-RUN-REPORTS-01.md](baselines/SITE-002-STABLE-PROD-CRON-RUN-REPORTS-01.md) |
-| MARS 1C cron wrapper | **TXT REPORTS ACTIVE** — `/storage/mars-tools/cron/` + HTTP gateway; human-readable reports `/storage/mars-tools/cron/reports/`; technical logs `/storage/mars-tools/cron/logs/`; Sergey legacy import **preserved**; Beget cron **not activated** (Run 4.179) |
+| MARS 1C cron wrapper | **TOKEN CONFIG READY** — local config `/storage/mars-tools/cron/mars_1c_wrapper.local.php`; wrapper v1.1.0; TXT reports `/storage/mars-tools/cron/reports/`; manual `--run` **pending** (live cron DB verify required); Sergey legacy **preserved**; Beget cron **not activated**; recommended schedule `0 8 * * *` (Moscow → 12:00 Barnaul) (Run 4.180) |
 | Catalog default sort (Production) | `pd.name ASC` when `sort`/`order` omitted |
 
 ---
