@@ -207,3 +207,7 @@ D9-E **PASS**: Repaired Home slider visual parity without Home main rewrite. Fix
 ## V9-06D9-F home + footer visual parity QA (2026-07-05)
 
 D9-F **PARTIAL PASS**: Read-only QA after D9-D/D9-E. Home 19/19 sections + order PASS; footer transplant PASS; D9-E slider/vendor/pagination verified PASS; assets + secondary routes ALL_200 PASS. One minor defect: `template-parts/home/faq.php` retains D9-D `comfort-heading` transplant typo (wrong id/aria + heading copy; duplicate id with comfort section). No runtime/source/DB/ACF mutations. ACF wiring NOT_READY until FAQ micro repair. Evidence: `validation/v9-06d9f-home-footer-visual-parity-qa/`. Report: `reports/FP-0002-V9-06D9F-HOME-FOOTER-VISUAL-PARITY-QA-REPORT-v1.md`. Next: D9-G micro visual repair.
+
+## V9-06D9-G FAQ micro visual repair (2026-07-05)
+
+D9-G **PASS**: Repaired FAQ heading contract in `template-parts/home/faq.php` — `aria-labelledby` and heading `id` restored to `faq-heading`; heading text restored to `Нас часто спрашивают`; duplicate `comfort-heading` id eliminated. Bounded runtime delivery: 1 theme file. No DB/ACF/options/menu writes. Post-repair Home FAQ parity PASS; comfort section unchanged; route smoke ALL_200. ACF editability readiness: READY. Evidence: `validation/v9-06d9g-micro-visual-repair-faq-heading/`. Report: `reports/FP-0002-V9-06D9G-FAQ-MICRO-VISUAL-REPAIR-REPORT-v1.md`. Next: D9-H ACF admin editability wiring.

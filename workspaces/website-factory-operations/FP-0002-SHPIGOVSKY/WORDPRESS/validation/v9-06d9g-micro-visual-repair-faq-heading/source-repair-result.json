@@ -1,0 +1,28 @@
+{
+  "task": "V9-06D9-G",
+  "capturedAt": "2026-07-05T13:14:11.452Z",
+  "file": "template-parts/home/faq.php",
+  "changes": [
+    {
+      "field": "aria-labelledby",
+      "before": "comfort-heading",
+      "after": "faq-heading",
+      "result": "PASS"
+    },
+    {
+      "field": "heading id",
+      "before": "comfort-heading",
+      "after": "faq-heading",
+      "result": "PASS"
+    },
+    {
+      "field": "heading text",
+      "before": "Комфорт, приватность, забота",
+      "after": "Нас часто спрашивают",
+      "result": "PASS"
+    }
+  ],
+  "sourceContainsFaqHeading": true,
+  "sourceSha256": "143629E1717302ED0DD52C6ED27F1EED48A0C12224549022AE3EF32BC90E9BB4",
+  "result": "PASS"
+}

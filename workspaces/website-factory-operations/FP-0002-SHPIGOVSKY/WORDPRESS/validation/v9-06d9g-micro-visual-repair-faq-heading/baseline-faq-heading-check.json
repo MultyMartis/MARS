@@ -1,0 +1,45 @@
+{
+  "task": "V9-06D9-G",
+  "capturedAt": "2026-07-05T13:14:00.000Z",
+  "staticV9Authority": "X:/AI MARS/workspaces/fp-0002-shpigovsky-v9/src/pages/index.html",
+  "sourceFile": "template-parts/home/faq.php",
+  "items": [
+    {
+      "item": "faq_aria_labelledby",
+      "expectedV9": "faq-heading",
+      "sourceBefore": "comfort-heading",
+      "runtimeBefore": "comfort-heading",
+      "result": "FAIL"
+    },
+    {
+      "item": "faq_heading_id",
+      "expectedV9": "faq-heading",
+      "sourceBefore": "comfort-heading",
+      "runtimeBefore": "comfort-heading",
+      "result": "FAIL"
+    },
+    {
+      "item": "faq_heading_text",
+      "expectedV9": "Нас часто спрашивают",
+      "sourceBefore": "Комфорт, приватность, забота",
+      "runtimeBefore": "Комфорт, приватность, забота",
+      "result": "FAIL"
+    },
+    {
+      "item": "comfort_heading_id_count",
+      "expectedV9": 1,
+      "runtimeBefore": 2,
+      "note": "comfort section + FAQ both used comfort-heading",
+      "result": "FAIL"
+    },
+    {
+      "item": "comfort_section_heading",
+      "expectedV9": "Комфорт, приватность, забота",
+      "runtimeBefore": "Комфорт, приватность, забота",
+      "result": "PASS"
+    }
+  ],
+  "d9fKnownIssue": "FAQ transplant typo from D9-D — confirmed in D9-F QA",
+  "repairRequired": true,
+  "overall": "FAIL"
+}

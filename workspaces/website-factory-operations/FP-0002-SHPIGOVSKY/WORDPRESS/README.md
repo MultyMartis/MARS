@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D9-F HOME + FOOTER VISUAL PARITY QA PARTIAL PASS — NEXT: D9-G micro visual repair (FAQ typo)
+**Status:** V9-06D9-G FAQ MICRO VISUAL REPAIR PASS — NEXT: D9-H ACF admin editability wiring
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---
@@ -230,3 +230,11 @@ D9-0 **COMPLETE (PASS)**: Read-only full visual port charter and repair wave pla
 ## V9-06D9-E home slider / vendor / pagination repair (2026-07-05)
 
 D9-E **PASS**: Specialists heading restored; vendor CSS cascade fixed (swiper → v9-style) for pagination dot parity; bounded runtime delivery (2 files). No DB/ACF writes. Route smoke ALL_200. Evidence: `validation/v9-06d9e-home-slider-vendor-pagination-repair/`. Report: `reports/FP-0002-V9-06D9E-HOME-SLIDER-VENDOR-PAGINATION-REPAIR-REPORT-v1.md`. Next: D9-F visual parity QA.
+
+## V9-06D9-F home + footer visual parity QA (2026-07-05)
+
+D9-F **PARTIAL PASS**: Read-only QA after D9-D/D9-E. Home 19/19 sections + order PASS; footer PASS; slider/vendor PASS; routes ALL_200. FAQ transplant typo in `faq.php` (MINOR_REPAIR_REQUIRED). Evidence: `validation/v9-06d9f-home-footer-visual-parity-qa/`. Report: `reports/FP-0002-V9-06D9F-HOME-FOOTER-VISUAL-PARITY-QA-REPORT-v1.md`. Next: D9-G micro visual repair.
+
+## V9-06D9-G FAQ micro visual repair (2026-07-05)
+
+D9-G **PASS**: Fixed FAQ heading/id/aria transplant typo in `template-parts/home/faq.php` (`comfort-heading` → `faq-heading`; heading text → Нас часто спрашивают); resolved duplicate `comfort-heading` id. Bounded runtime delivery (1 file). No DB/ACF/options/menu writes. Post-repair Home + route smoke ALL PASS. ACF editability readiness: READY. Evidence: `validation/v9-06d9g-micro-visual-repair-faq-heading/`. Report: `reports/FP-0002-V9-06D9G-FAQ-MICRO-VISUAL-REPAIR-REPORT-v1.md`. Next: **CREATE_V9_06D9H_ACF_ADMIN_EDITABILITY_WIRING_TASK**.

@@ -1,0 +1,74 @@
+{
+  "task": "V9-06D9-G",
+  "capturedAt": "2026-07-05T13:14:11.452Z",
+  "httpStatus": 200,
+  "checks": [
+    {
+      "check": "http_200",
+      "expected": 200,
+      "actual": 200,
+      "result": "PASS"
+    },
+    {
+      "check": "faq_section_exists",
+      "expected": true,
+      "actual": true,
+      "result": "PASS"
+    },
+    {
+      "check": "faq_aria_labelledby",
+      "expected": "faq-heading",
+      "actual": "faq-heading",
+      "result": "PASS"
+    },
+    {
+      "check": "faq_heading_id",
+      "expected": "faq-heading",
+      "actual": "faq-heading",
+      "result": "PASS"
+    },
+    {
+      "check": "faq_heading_text",
+      "expected": "Нас часто спрашивают",
+      "actual": "Нас часто спрашивают",
+      "result": "PASS"
+    },
+    {
+      "check": "duplicate_comfort_heading",
+      "expected": 1,
+      "actual": 1,
+      "result": "PASS"
+    },
+    {
+      "check": "comfort_section_heading",
+      "expected": "Комфорт, приватность, забота",
+      "actual": "Комфорт, приватность, забота",
+      "result": "PASS"
+    },
+    {
+      "check": "hero_cta",
+      "expected": "Записаться на консультацию",
+      "actual": true,
+      "result": "PASS"
+    },
+    {
+      "check": "specialists_heading",
+      "expected": "Специалисты центра",
+      "actual": true,
+      "result": "PASS"
+    },
+    {
+      "check": "sliders_dots",
+      "expected": "gallery/reviews/specialists pagination present",
+      "actual": true,
+      "result": "PASS"
+    },
+    {
+      "check": "footer_present",
+      "expected": true,
+      "actual": true,
+      "result": "PASS"
+    }
+  ],
+  "overall": "PASS"
+}

@@ -13,9 +13,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-<section data-reveal class="faq"  aria-labelledby="comfort-heading">
+<section data-reveal class="faq"  aria-labelledby="faq-heading">
   <div class="container">
-    <h2 class="faq__heading" id="comfort-heading">Комфорт, приватность, забота</h2>
+    <h2 class="faq__heading" id="faq-heading">Нас часто спрашивают</h2>
 
     <div class="faq__list" data-accordion>
       <div class="faq__item" data-accordion-item>

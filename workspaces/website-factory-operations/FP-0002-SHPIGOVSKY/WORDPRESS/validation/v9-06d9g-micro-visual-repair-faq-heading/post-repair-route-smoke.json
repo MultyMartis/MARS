@@ -1,0 +1,33 @@
+{
+  "task": "V9-06D9-G",
+  "capturedAt": "2026-07-05T13:14:11.452Z",
+  "routes": [
+    {
+      "path": "/uslugi/",
+      "label": "services-hub",
+      "http": 200,
+      "footer": true,
+      "fatal": false,
+      "result": "PASS"
+    },
+    {
+      "path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "label": "service-74",
+      "http": 200,
+      "footer": true,
+      "fatal": false,
+      "result": "PASS"
+    },
+    {
+      "path": "/kontakty/",
+      "label": "contacts",
+      "http": 200,
+      "footer": true,
+      "fatal": false,
+      "result": "PASS"
+    }
+  ],
+  "all200": true,
+  "allPass": true,
+  "result": "PASS"
+}

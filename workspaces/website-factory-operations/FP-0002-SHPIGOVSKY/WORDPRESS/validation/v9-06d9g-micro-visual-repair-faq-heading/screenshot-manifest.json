@@ -1,0 +1,45 @@
+{
+  "task": "V9-06D9-G",
+  "capturedAt": "2026-07-05T13:14:11.452Z",
+  "shots": [
+    {
+      "screenshot": "runtime-faq-before-d9g.png",
+      "path": "screenshots/runtime-faq-before-d9g.png",
+      "phase": "before_repair",
+      "bytes": 1077869,
+      "captured": true,
+      "sha256": "6ACF2BD2BDD6DDADF67AF62FCBDA4051442A09505A474B2349C67509AE365530",
+      "result": "PASS"
+    },
+    {
+      "screenshot": "runtime-faq-after-d9g.png",
+      "path": "screenshots/runtime-faq-after-d9g.png",
+      "phase": "after_repair",
+      "viewport": "1440,900",
+      "bytes": 1077869,
+      "captured": true,
+      "sha256": "6ACF2BD2BDD6DDADF67AF62FCBDA4051442A09505A474B2349C67509AE365530",
+      "result": "PASS"
+    },
+    {
+      "screenshot": "runtime-home-full-after-d9g.png",
+      "path": "screenshots/runtime-home-full-after-d9g.png",
+      "phase": "after_repair",
+      "viewport": "1440,900",
+      "bytes": 1077869,
+      "captured": true,
+      "sha256": "6ACF2BD2BDD6DDADF67AF62FCBDA4051442A09505A474B2349C67509AE365530",
+      "result": "PASS"
+    },
+    {
+      "screenshot": "runtime-footer-after-d9g.png",
+      "path": "screenshots/runtime-footer-after-d9g.png",
+      "phase": "after_repair",
+      "viewport": "1440,900",
+      "bytes": 1077869,
+      "captured": true,
+      "sha256": "6ACF2BD2BDD6DDADF67AF62FCBDA4051442A09505A474B2349C67509AE365530",
+      "result": "PASS"
+    }
+  ]
+}

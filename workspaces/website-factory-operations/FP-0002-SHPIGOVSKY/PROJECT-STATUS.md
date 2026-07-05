@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-05 (V9-06D9-F Home + Footer Visual Parity QA PARTIAL PASS)
+**Last updated:** 2026-07-05 (V9-06D9-G FAQ Micro Visual Repair PASS)
 
-**Current WordPress phase:** V9-06D9-F Home + Footer Visual Parity QA **PARTIAL PASS** — 19/19 Home sections + footer + slider/vendor + routes PASS; FAQ `comfort-heading` transplant typo remains in `faq.php` (MINOR_REPAIR_REQUIRED); no mutations; ACF wiring NOT_READY. Recommended next: **D9-G micro visual repair (FAQ)** then ACF admin editability wiring. Report: `WORDPRESS/reports/FP-0002-V9-06D9F-HOME-FOOTER-VISUAL-PARITY-QA-REPORT-v1.md`. Prior: D9-E slider/vendor repair, D9-D home main/footer transplant.
+**Current WordPress phase:** V9-06D9-G FAQ Micro Visual Repair **PASS** — FAQ heading/id/aria restored (`faq-heading`, «Нас часто спрашивают»); duplicate `comfort-heading` resolved; bounded runtime delivery (1 file); no DB/ACF writes; ACF editability **READY**. Recommended next: **D9-H ACF admin editability wiring**. Report: `WORDPRESS/reports/FP-0002-V9-06D9G-FAQ-MICRO-VISUAL-REPAIR-REPORT-v1.md`. Prior: D9-F visual parity QA (PARTIAL — FAQ typo), D9-E slider/vendor repair, D9-D home main/footer transplant.
 
 ## Active frontend workspace (V9)
 
