@@ -1,0 +1,96 @@
+{
+  "phase": "V9-06D9-Q",
+  "generated_at": "2026-07-06T00:15:00+07:00",
+  "audit_mode": "READ_ONLY",
+  "home_reviews_template": {
+    "path": "WORDPRESS/theme/shpigovsky/template-parts/home/reviews.php",
+    "included_from": "front-page.php via get_template_part('template-parts/home/reviews')",
+    "markup_source": "STATIC_V9_TRANSPLANT",
+    "acf_driven_cards": false,
+    "acf_fields_consumed": ["home_reviews_heading"],
+    "static_card_count": 10,
+    "slider": "Swiper data-reviews-slider + data-reviews-pagination"
+  },
+  "reviews_data_source": {
+    "frontend_cards": "Hardcoded static HTML in home/reviews.php (V9 copy)",
+    "heading": "ACF home_reviews_heading with static fallback 'Отзывы'",
+    "home_reviews_teaser": "NOT_WIRED_TO_FRONTEND"
+  },
+  "home_reviews_teaser": {
+    "field_key": "field_fp02_home_reviews_teaser",
+    "group": "group_fp02_page_home",
+    "location": "Home page #4 admin only",
+    "required": 0,
+    "min": 0,
+    "max": 6,
+    "sub_fields": ["title", "text"],
+    "db_value_state": "NON_EMPTY_ONE_ROW",
+    "db_meta_keys_observed": ["home_reviews_teaser_0_title", "home_reviews_teaser_0_text"],
+    "frontend_dependency": false,
+    "admin_blocker_after_d9o": false
+  },
+  "home_page_acf_dependency": {
+    "reviews_section_visible_without_acf_cards": true,
+    "reviews_section_depends_on_home_acf_for_cards": false,
+    "reviews_heading_only_from_home_acf": true
+  },
+  "reviews_cpt": {
+    "exists": false,
+    "registered_in_theme_or_plugin": false
+  },
+  "review_posts": {
+    "dedicated_cpt_objects": false,
+    "note": "No review CPT; no review post objects in canonical architecture"
+  },
+  "acf_groups_reviews": [
+    {
+      "key": "group_fp02_page_home",
+      "fields": ["home_reviews_heading", "home_reviews_teaser"],
+      "location": "front-page / Home #4"
+    },
+    {
+      "key": "group_fp02_page_reviews",
+      "fields": ["reviews_items"],
+      "location": "page-templates/reviews.php",
+      "sub_fields": ["author_label", "text", "metadata", "source"],
+      "max": 50,
+      "frontend_wired": false
+    }
+  ],
+  "reviews_on_other_routes": {
+    "home": "Full static slider section present",
+    "contacts": "No reviews section",
+    "service_74": "No reviews section",
+    "otzyvy_reviews_page": "Skeleton placeholders only (reviews-section.php, archive-list.php)"
+  },
+  "static_v9": {
+    "section_partial": "workspaces/fp-0002-shpigovsky-v9/src/partials/sections/reviews.html",
+    "card_count": 10,
+    "card_fields": {
+      "author_label": "reviews__author-name (cite)",
+      "rating": "5 stars fixed (reviews__rating)",
+      "text": "reviews__text (blockquote p)",
+      "read_more_label": "reviews__read-more-text (footer, non-link in V9)",
+      "section_heading": "Отзывы",
+      "all_link_href": "/otzyvy/",
+      "all_link_label": "Смотреть отзывы"
+    }
+  },
+  "site_options_pattern": {
+    "options_page_slug": "fp02-site-settings",
+    "existing_groups": ["group_fp02_site_options_contacts", "group_fp02_site_options_modal_cta"],
+    "helper": "shpigovsky_get_site_option() in inc/site-chrome.php"
+  },
+  "d9_authority_refs": {
+    "d9_o": "home_reviews_teaser optional; runtime JSON restored",
+    "d9_p": "frontend reviews_present PASS; reviews include deferred to D9-Q",
+    "d8_b": "reviews skipped during home content seed"
+  },
+  "gaps": [
+    "home_reviews_teaser admin field duplicates wrong ownership model",
+    "Dedicated reviews page ACF group exists but theme partials are skeletons",
+    "No shared reviews include; Home and future /otzyvy/ cannot share one source",
+    "Static demo reviews render as production testimonials without operator-approved flag"
+  ],
+  "result": "COMPLETE"
+}

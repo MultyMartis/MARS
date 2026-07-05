@@ -251,3 +251,7 @@ D9-P **PARTIAL PASS**: Read-only admin UX QA after D9-L/M/N/O. Runtime gate PASS
 ## V9-06D9-P git scope drift disclosure (2026-07-05)
 
 Mixed-scope commit `b8361aad`: 28 D9-P allowed paths + 3 OCPilot/SITE-002 paths with OCPilot-only commit message. OCPilot artefacts preserved as valid foreign project documentation; no history rewrite. FP-0002 corrective disclosure: `reports/FP-0002-V9-06D9P-GIT-SCOPE-DRIFT-AUDIT-REPORT-v1.md`; validation: `validation/v9-06d9p-git-scope-drift-audit/`. D9-Q baseline: corrective commit HEAD after this disclosure wave.
+
+## V9-06D9-Q reviews include planning (2026-07-06)
+
+D9-Q **PASS**: Read-only architecture planning. Audited current static Home reviews (`template-parts/home/reviews.php`), optional unwired `home_reviews_teaser`, dormant `group_fp02_page_reviews`, and V9 static authority. Recommended **Hybrid E** — ACF Options shared `reviews_items` on `fp02-site-settings` + shared include + static V9 fallback; deprecate `home_reviews_teaser` on Home admin in D9-R. Frontend smoke PASS (Home reviews 10 slides, routes ALL_200). Zero DB/source/ACF JSON/value/content/media/options/menu/runtime mutations. Strict HEAD gate PASS_WITH_HEAD_NOTE (tip `c188cd2e`, corrective `fae4cd07` ancestor). Evidence: `validation/v9-06d9q-reviews-include-planning/`. Report: `reports/FP-0002-V9-06D9Q-REVIEWS-INCLUDE-PLANNING-REPORT-v1.md`. Next: D9-R shared include source/schema implementation.

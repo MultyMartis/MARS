@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-05 (V9-06D9-P scope drift disclosure — D9-Q unblocked)
+**Last updated:** 2026-07-06 (V9-06D9-Q reviews include planning complete)
 
-**Current WordPress phase:** V9-06D9-P Admin UX QA **PARTIAL PASS** — read-only QA after D9-L/M/N/O; Home #4 admin UX ready (ACF visible, native editor hidden, reviews teaser optional); managed pages PASS; operator-review pages preserved; frontend 19/19 sections routes ALL_200; live Home save OPERATOR_CONFIRMATION_REQUIRED. **Git scope drift:** commit `b8361aad` mixed 28 D9-P files with 3 OCPilot/SITE-002 files (valid foreign docs; no rollback). Corrective disclosure committed per audit Option C. **Next: D9-Q reviews include planning** (from corrective commit HEAD). Report: `WORDPRESS/reports/FP-0002-V9-06D9P-ADMIN-UX-QA-REPORT-v1.md`. Drift audit: `WORDPRESS/reports/FP-0002-V9-06D9P-GIT-SCOPE-DRIFT-AUDIT-REPORT-v1.md`. Prior: D9-O reviews teaser optional repair.
+**Current WordPress phase:** V9-06D9-Q Reviews Include Planning **PASS** — read-only architecture planning; recommended **Hybrid E** (ACF Options shared reviews on `fp02-site-settings` + shared theme include + static V9 fallback); deprecate unwired `home_reviews_teaser` on Home admin in D9-R; frontend Home reviews stable (10 static slides, Swiper OK). Implementation **not** authorized in D9-Q. Prior: D9-P Admin UX QA PARTIAL PASS; D9-P scope drift corrective `fae4cd07`. **Next: D9-R shared include source/schema implementation.** Report: `WORDPRESS/reports/FP-0002-V9-06D9Q-REVIEWS-INCLUDE-PLANNING-REPORT-v1.md`. Prior D9-P: `WORDPRESS/reports/FP-0002-V9-06D9P-ADMIN-UX-QA-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

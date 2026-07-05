@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D9-P ADMIN UX QA PARTIAL PASS — NEXT: D9-Q reviews include planning
+**Status:** V9-06D9-Q REVIEWS INCLUDE PLANNING PASS — NEXT: D9-R shared include implementation
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---
@@ -266,3 +266,7 @@ D9-P **PARTIAL PASS**: Read-only admin UX QA after D9-L/M/N/O. Home #4 ACF visib
 ## V9-06D9-P git scope drift disclosure (2026-07-05)
 
 D9-P Admin UX QA commit `b8361aad` was **mixed-scope**: 28 valid FP-0002 D9-P evidence/status files plus 3 unrelated OCPilot/SITE-002 files (`projects/ocpilot/OCPILOT-STATE.md`, `OPERATIONAL-INDEX.md`, `sites/site-002/reports/SITE-002-PRODUCTION-TASK-INTAKE-CATALOG-LOADMORE-1C-CRON.md`). Commit message described OCPilot only. OCPilot files classified as **valid foreign project documentation**; no rollback, delete, reset, or revert performed. Corrective documentation (Option C) preserves audit evidence in `reports/FP-0002-V9-06D9P-GIT-SCOPE-DRIFT-AUDIT-REPORT-v1.md` and `validation/v9-06d9p-git-scope-drift-audit/`. **D9-Q must start from the D9-P scope drift corrective commit HEAD.**
+
+## V9-06D9-Q reviews include planning (2026-07-06)
+
+D9-Q **PASS**: Read-only architecture planning. Recommended **Hybrid E** — ACF Options shared reviews on `fp02-site-settings` + shared theme include + static V9 fallback; deprecate `home_reviews_teaser` on Home admin in D9-R. Frontend smoke PASS. Zero DB/source/ACF JSON/value/runtime mutations. Evidence: `validation/v9-06d9q-reviews-include-planning/`. Report: `reports/FP-0002-V9-06D9Q-REVIEWS-INCLUDE-PLANNING-REPORT-v1.md`. Next: D9-R shared include source/schema implementation.

@@ -1,0 +1,76 @@
+{
+  "phase": "V9-06D9-Q",
+  "generated_at": "2026-07-06T00:15:00+07:00",
+  "requirements": [
+    {
+      "id": "REQ-01",
+      "requirement": "Shared across pages",
+      "decision": "REQUIRED",
+      "notes": "Home slider and /otzyvy/ archive must read one canonical reviews pool"
+    },
+    {
+      "id": "REQ-02",
+      "requirement": "Not required on Home page edit screen",
+      "decision": "REQUIRED",
+      "notes": "Remove reviews card management from Home #4; no required repeater on Home"
+    },
+    {
+      "id": "REQ-03",
+      "requirement": "Editor-friendly",
+      "decision": "REQUIRED",
+      "notes": "Single admin location under Настройки сайта; Classic Editor context unchanged"
+    },
+    {
+      "id": "REQ-04",
+      "requirement": "Future-proof for separate reviews page",
+      "decision": "REQUIRED",
+      "notes": "Reuse shared include on page-templates/reviews.php when implemented"
+    },
+    {
+      "id": "REQ-05",
+      "requirement": "Safe local to production migration",
+      "decision": "REQUIRED",
+      "notes": "ACF JSON in Git + options values export/seed wave; no Home-page meta coupling"
+    },
+    {
+      "id": "REQ-06",
+      "requirement": "Supports fallback/static demo state",
+      "decision": "REQUIRED",
+      "notes": "Preserve V9 static cards when options empty or reviews disabled"
+    },
+    {
+      "id": "REQ-07",
+      "requirement": "Does not block Home saves",
+      "decision": "REQUIRED",
+      "notes": "No Home-bound reviews repeater; D9-O optional flag preserved until field removed/hidden"
+    },
+    {
+      "id": "REQ-08",
+      "requirement": "Allows disabling/hiding if no approved reviews",
+      "decision": "REQUIRED",
+      "notes": "Master reviews_enabled toggle + per-row visible flag"
+    },
+    {
+      "id": "REQ-09",
+      "requirement": "Can later be replaced with real reviews",
+      "decision": "REQUIRED",
+      "notes": "Hybrid path allows future CPT without rewriting Home template"
+    },
+    {
+      "id": "REQ-10",
+      "requirement": "No fake production claims without operator review",
+      "decision": "REQUIRED",
+      "notes": "Demo/static fallback labeled DEMO; seed wave requires operator charter; D9-U legal review optional"
+    }
+  ],
+  "constraints": {
+    "acf_pro_required": true,
+    "flexible_content_forbidden": true,
+    "home_page_reviews_repeater_forbidden": true,
+    "max_reviews_items": 50,
+    "home_teaser_display_limit": 10,
+    "no_cpt_in_d9r": true,
+    "no_db_writes_in_d9q": true
+  },
+  "result": "COMPLETE"
+}

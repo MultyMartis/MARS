@@ -1,0 +1,54 @@
+{
+  "phase": "V9-06D9-Q",
+  "generated_at": "2026-07-06T00:18:00+07:00",
+  "check_mode": "READ_ONLY_HTTP",
+  "routes": [
+    {
+      "url": "http://shpigovsky.test/",
+      "path": "/",
+      "status": 200,
+      "php_fatal": false,
+      "reviews_section_present": true,
+      "reviews_class_present": true,
+      "reviews_slides_count": 10,
+      "swiper_hook": true,
+      "pagination_hook": true,
+      "layout_broken": false,
+      "images_broken": false,
+      "notes": "10 author cards; Swiper data-reviews-slider + pagination present; static V9 content"
+    },
+    {
+      "url": "http://shpigovsky.test/kontakty/",
+      "path": "/kontakty/",
+      "status": 200,
+      "php_fatal": false,
+      "reviews_section_present": false,
+      "layout_broken": false,
+      "notes": "Expected — no reviews on contacts"
+    },
+    {
+      "url": "http://shpigovsky.test/?p=74",
+      "path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "status": 200,
+      "php_fatal": false,
+      "reviews_section_present": false,
+      "layout_broken": false,
+      "notes": "Service 74 route smoke PASS"
+    },
+    {
+      "url": "http://shpigovsky.test/otzyvy/",
+      "path": "/otzyvy/",
+      "status": 200,
+      "php_fatal": false,
+      "reviews_section_present": false,
+      "notes": "Reviews page exists; theme partials still skeleton placeholders"
+    }
+  ],
+  "summary": {
+    "route_smoke_all_200": true,
+    "home_reviews_ok": true,
+    "php_fatals": 0,
+    "regression_vs_d9p": "STABLE"
+  },
+  "result": "PASS"
+}

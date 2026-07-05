@@ -1,0 +1,96 @@
+{
+  "phase": "V9-06D9-Q",
+  "generated_at": "2026-07-06T00:15:00+07:00",
+  "options": [
+    {
+      "id": "A",
+      "name": "Static reviews partial only",
+      "pros": [
+        "Simplest; zero admin surface",
+        "Matches current frontend",
+        "No save blockers"
+      ],
+      "cons": [
+        "No editor editability",
+        "Cannot share with /otzyvy/",
+        "Demo testimonials fixed in theme",
+        "Poor long-term"
+      ],
+      "verdict": "REJECT_FOR_IMPLEMENTATION",
+      "safest_for_fp0002_now": "Short-term demo only"
+    },
+    {
+      "id": "B",
+      "name": "Home page ACF repeater (home_reviews_teaser)",
+      "pros": [
+        "Already partially defined in group_fp02_page_home",
+        "Easy local wiring"
+      ],
+      "cons": [
+        "Wrong ownership — reviews are global not Home-specific",
+        "Duplicates if reviews appear on /otzyvy/",
+        "Clutters Home admin UX",
+        "Operator explicitly rejected this model"
+      ],
+      "verdict": "REJECT",
+      "safest_for_fp0002_now": false
+    },
+    {
+      "id": "C",
+      "name": "ACF Options page shared reviews",
+      "pros": [
+        "Central admin under fp02-site-settings",
+        "Matches contacts/modal options pattern",
+        "Shared include trivial",
+        "Good for small site MVP",
+        "No CPT overhead",
+        "Clean Home admin"
+      ],
+      "cons": [
+        "No per-review URL/archive without extra work",
+        "Large lists less ergonomic than CPT admin",
+        "Requires new ACF JSON group + helper"
+      ],
+      "verdict": "RECOMMENDED_PRIMARY",
+      "safest_for_fp0002_now": true
+    },
+    {
+      "id": "D",
+      "name": "Reviews CPT",
+      "pros": [
+        "Scalable",
+        "Native archive/detail potential",
+        "Better for many real reviews"
+      ],
+      "cons": [
+        "Higher implementation overhead",
+        "New post type registration + templates + migration",
+        "Overkill for current FP-0002 stage",
+        "group_fp02_page_reviews already covers page repeater pattern"
+      ],
+      "verdict": "DEFER_FUTURE_WAVE",
+      "safest_for_fp0002_now": false
+    },
+    {
+      "id": "E",
+      "name": "Hybrid (shared include + options + static fallback; optional future CPT)",
+      "pros": [
+        "Options as source now; CPT slot later",
+        "Static V9 fallback preserved",
+        "Home and /otzyvy/ share one helper",
+        "reviews_enabled master toggle",
+        "Aligns with existing group_fp02_page_reviews as optional page override later"
+      ],
+      "cons": [
+        "Slightly more theme helper code than pure Options",
+        "Must document precedence rules clearly"
+      ],
+      "verdict": "RECOMMENDED_IMPLEMENTATION_SHAPE",
+      "safest_for_fp0002_now": true
+    }
+  ],
+  "recommended_option": "E",
+  "recommended_primary_source": "C",
+  "rationale": "FP-0002 already has fp02-site-settings options infrastructure and a dedicated reviews page ACF group (unused). Hybrid Options + shared include + static fallback delivers shared reviews without Home admin coupling and without CPT cost. CPT remains a future escalation path if operator needs many individually managed reviews.",
+  "result": "COMPLETE"
+}

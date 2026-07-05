@@ -1,0 +1,119 @@
+{
+  "phase": "V9-06D9-Q",
+  "generated_at": "2026-07-06T00:15:00+07:00",
+  "architecture_name": "FP-0002 Shared Reviews Include (Hybrid E / Options C primary)",
+  "source_of_truth": {
+    "primary": "ACF Options repeater on fp02-site-settings",
+    "secondary_future": "Reviews CPT (not in D9-R scope)",
+    "legacy_page_repeater": "group_fp02_page_reviews reviews_items — defer; optional override in later wave",
+    "demo_fallback": "Static V9 card set in theme helper (same content as current home/reviews.php)"
+  },
+  "admin_screen": {
+    "options_page_slug": "fp02-site-settings",
+    "options_page_label": "Настройки сайта",
+    "new_submenu_tab_label": "Отзывы",
+    "implementation_note": "Either new field group tab on same options page or dedicated options sub-page fp02-site-settings-reviews — prefer sub-page only if field count grows"
+  },
+  "acf_group": {
+    "proposed_key": "group_fp02_site_options_reviews",
+    "proposed_title": "Site Options — Reviews",
+    "location": "options_page == fp02-site-settings"
+  },
+  "fields": [
+    {
+      "name": "reviews_enabled",
+      "type": "true_false",
+      "label": "Показывать блок отзывов",
+      "default": 1,
+      "required": 0
+    },
+    {
+      "name": "reviews_section_heading",
+      "type": "text",
+      "label": "Заголовок секции",
+      "default": "Отзывы",
+      "required": 0
+    },
+    {
+      "name": "reviews_all_link_label",
+      "type": "text",
+      "label": "Текст ссылки «все отзывы»",
+      "default": "Смотреть отзывы",
+      "required": 0
+    },
+    {
+      "name": "reviews_all_link_url",
+      "type": "url",
+      "label": "URL страницы всех отзывов",
+      "default": "/otzyvy/",
+      "required": 0
+    },
+    {
+      "name": "reviews_items",
+      "type": "repeater",
+      "label": "Отзывы",
+      "min": 0,
+      "max": 50,
+      "required": 0,
+      "sub_fields": [
+        { "name": "author_label", "type": "text", "label": "Автор", "required": 0 },
+        { "name": "text", "type": "textarea", "label": "Текст отзыва", "rows": 5, "required": 0 },
+        { "name": "metadata", "type": "text", "label": "Контекст / роль", "required": 0 },
+        { "name": "source", "type": "text", "label": "Источник / дата", "required": 0 },
+        { "name": "rating", "type": "number", "label": "Оценка (1–5)", "min": 1, "max": 5, "default": 5, "required": 0 },
+        { "name": "visible", "type": "true_false", "label": "Показывать", "default": 1, "required": 0 },
+        { "name": "featured", "type": "true_false", "label": "В слайдере на главной", "default": 1, "required": 0 }
+      ]
+    }
+  ],
+  "fallback_behavior": {
+    "precedence": [
+      "If reviews_enabled is false → hide entire reviews section on all contexts",
+      "Else if reviews_items has visible rows → render from options",
+      "Else → render static V9 demo fallback cards (current hardcoded set)",
+      "Future CPT hook inserts between options and static when implemented"
+    ],
+    "demo_policy": "Static fallback treated as DEMO; options-seeded rows require operator seed charter in D9-S"
+  },
+  "frontend": {
+    "shared_partial": "template-parts/shared/reviews-slider.php",
+    "shared_helper": "inc/reviews-helpers.php",
+    "helper_functions": [
+      "shpigovsky_get_reviews_items( $args )",
+      "shpigovsky_reviews_static_fallback_items()",
+      "shpigovsky_should_render_reviews_section( $context )"
+    ],
+    "home_integration": {
+      "wrapper": "template-parts/home/reviews.php becomes thin wrapper",
+      "args": { "context": "home", "limit": 10, "featured_only": true },
+      "heading_source": "reviews_section_heading option, then home_reviews_heading ACF, then static"
+    },
+    "reviews_page_integration": {
+      "template": "page-templates/reviews.php",
+      "partials": [
+        "template-parts/reviews/reviews-section.php → shared slider or hero intro",
+        "template-parts/reviews/archive-list.php → full list from same helper, no limit"
+      ]
+    },
+    "no_reviews_behavior": "If disabled → section omitted; if enabled but empty → static demo fallback until operator seeds or disables"
+  },
+  "home_reviews_teaser_disposition": {
+    "action": "DEPRECATE_AND_REMOVE_FROM_HOME_ADMIN",
+    "timing": "D9-R ACF JSON change",
+    "frontend": "Never wire home_reviews_teaser to templates",
+    "db_meta": "Orphan meta may remain; no destructive DB cleanup in D9-R",
+    "home_reviews_heading": "Keep on Home for now OR migrate to options in D9-R (prefer migrate heading to options for single ownership)"
+  },
+  "migration_to_production": {
+    "git": "ACF JSON group_fp02_site_options_reviews.json committed in D9-R",
+    "values": "D9-S controlled options seed from V9 static (operator-approved); export via ACF/tools",
+    "runtime": "D9-R bounded delivery: theme helpers + partial + ACF JSON sync",
+    "rollback": "DB checkpoint before options seed; revert theme + hide group"
+  },
+  "content_policy": {
+    "demo": "Static V9 testimonials = DEMO_ONLY until operator replaces via options seed",
+    "approved": "Options rows edited by operator post D9-S/U",
+    "legal": "D9-U optional native content / testimonial authenticity review before production"
+  },
+  "result": "COMPLETE"
+}

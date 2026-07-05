@@ -1,0 +1,107 @@
+{
+  "phase": "V9-06D9-Q",
+  "generated_at": "2026-07-06T00:15:00+07:00",
+  "implementation_approved_in_d9q": false,
+  "waves": [
+    {
+      "id": "D9-R",
+      "name": "Reviews shared include source/schema implementation",
+      "scope": [
+        "Add group_fp02_site_options_reviews.json",
+        "Register field group location on fp02-site-settings (plugin FieldGroups.php if required)",
+        "Add inc/reviews-helpers.php",
+        "Add template-parts/shared/reviews-slider.php",
+        "Refactor template-parts/home/reviews.php to use shared include",
+        "Implement template-parts/reviews/reviews-section.php and archive-list.php using shared helper",
+        "Remove or hide home_reviews_teaser from group_fp02_page_home.json",
+        "Optionally migrate home_reviews_heading to options group"
+      ],
+      "files_likely_changed": [
+        "WORDPRESS/acf-json/group_fp02_site_options_reviews.json",
+        "WORDPRESS/acf-json/group_fp02_page_home.json",
+        "WORDPRESS/theme/shpigovsky/inc/reviews-helpers.php",
+        "WORDPRESS/theme/shpigovsky/template-parts/shared/reviews-slider.php",
+        "WORDPRESS/theme/shpigovsky/template-parts/home/reviews.php",
+        "WORDPRESS/theme/shpigovsky/template-parts/reviews/reviews-section.php",
+        "WORDPRESS/theme/shpigovsky/template-parts/reviews/archive-list.php",
+        "WORDPRESS/theme/shpigovsky/functions.php",
+        "WORDPRESS/plugins/shpigovsky-core/src/Fields/FieldGroups.php",
+        "WORDPRESS/plugins/shpigovsky-core/src/Fields/RepeaterValidation.php"
+      ],
+      "acf_json_changes": "YES",
+      "db_checkpoint_required": "YES — before ACF JSON sync to runtime and before any options field registration side effects",
+      "runtime_delivery_required": "YES — bounded theme + acf-json delivery after source commit",
+      "validation_plan": [
+        "PHP lint theme + plugin touched files",
+        "Route smoke /, /kontakty/, /otzyvy/, service 74",
+        "Home reviews section renders (static fallback when options empty)",
+        "Home #4 admin no longer shows home_reviews_teaser",
+        "fp02-site-settings shows Reviews fields",
+        "No-scope-drift gate"
+      ],
+      "writes_expected": {
+        "source_theme": "YES",
+        "acf_json": "YES",
+        "db_acf_values": "NO",
+        "runtime_delivery": "YES"
+      }
+    },
+    {
+      "id": "D9-S",
+      "name": "Controlled reviews seed or static fallback wiring",
+      "scope": [
+        "Operator-chartered seed of reviews_items from V9 static into options OR explicit decision to keep static fallback only",
+        "Set reviews_enabled and visibility flags",
+        "Verify Home and /otzyvy/ consume seeded options",
+        "No fake production claims — seed payload documented"
+      ],
+      "acf_json_changes": "NO",
+      "db_checkpoint_required": "YES — before update_field/options writes",
+      "runtime_delivery_required": "NO unless theme tweak needed",
+      "validation_plan": [
+        "Post-seed options verification JSON",
+        "Frontend shows options-driven cards when seeded",
+        "Fallback path still works when options cleared in dry-run"
+      ],
+      "writes_expected": {
+        "db_acf_values": "YES — options only",
+        "source_theme": "NO"
+      }
+    },
+    {
+      "id": "D9-T",
+      "name": "Admin UX QA and frontend visual regression",
+      "scope": [
+        "Home admin UX without reviews teaser",
+        "Site settings reviews admin usability",
+        "Frontend 19/19 sections regression",
+        "Reviews slider Swiper/pagination smoke",
+        "/otzyvy/ page visual parity vs V9"
+      ],
+      "acf_json_changes": "NO",
+      "db_checkpoint_required": "NO",
+      "runtime_delivery_required": "NO",
+      "validation_plan": [
+        "Read-only admin QA JSON",
+        "Screenshot manifest",
+        "Route matrix ALL_200"
+      ],
+      "writes_expected": {
+        "documentation_evidence_only": "YES"
+      }
+    },
+    {
+      "id": "D9-U",
+      "name": "Optional legal/native content review",
+      "scope": [
+        "Operator review of testimonial authenticity wording",
+        "Decision on demo vs approved reviews for production",
+        "May block production migration of reviews content"
+      ],
+      "optional": true,
+      "writes_expected": {}
+    }
+  ],
+  "recommended_next_phase": "D9-R",
+  "result": "COMPLETE"
+}
