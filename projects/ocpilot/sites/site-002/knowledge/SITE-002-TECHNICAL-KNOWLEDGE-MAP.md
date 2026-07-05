@@ -1157,9 +1157,12 @@ fetch(location.href) — full category page
   → replace .category__limit outerHTML + initCategoryLimitMenu()  [since 09C]
   → scrollToCategorySection()
   → initPaginationAJAX(root)
+  → initLoadMore(root)  [Production Run 4.185]
 ```
 
 **Since 09C:** limit toolbar refresh closes the 09B gap — after filter AJAX, limit hrefs match server-rendered filtered URLs.
+
+**Since Run 4.185 (Production):** `initLoadMore()` appends next-page `.p-card` elements on «Показать ещё» click; counter `[data-load-more-counter]` shows «Показано X из Y»; numeric `.pagination__pages` hidden when `<html>` has class `js-load-more`.
 
 ### `category__limit` refresh
 
@@ -1176,7 +1179,9 @@ fetch(location.href) — full category page
 | Layer | Role |
 |-------|------|
 | **PHP** | `category.php` pagination `$url` includes `filters` when present (09A) |
-| **JS** | `updateProducts()` replaces `.pagination` from response; `initPaginationAJAX` merges `page` into current browser URL on click |
+| **JS** | `updateProducts()` replaces `.pagination` from response; `initPaginationAJAX` merges `page` into current browser URL on click; **`initLoadMore`** fetches `data-next` and **appends** `.p-card` to grid (Run 4.185) |
+| **Counter** | `category.twig` — `[data-load-more-counter]` with `product_total` / `product_shown` from `category.php` |
+| **CSS** | `.js-load-more .pagination__pages { display: none }` — numeric pagination not primary UI when JS active |
 
 Post-filter AJAX, pagination links in fetched HTML include `filters` — consistent with full-page filtered load.
 

@@ -69,9 +69,10 @@ Do not claim that Production exactly matches TEST unless evidence proves it.
 | Current M9.x baselines | [baselines/](baselines/) — TEST-proven checkpoints |
 | Post-corporate-page checkpoints | Home Commercial Trust · Corporate Intro · Custom Proof Strip · Delivery Summary · PDP Body Category Classes |
 | Production baseline parent | [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| Current Production checkpoint | [baselines/SITE-002-STABLE-PROD-CRON-BEGET-ACTIVE-01.md](baselines/SITE-002-STABLE-PROD-CRON-BEGET-ACTIVE-01.md) |
+| Current Production checkpoint | [baselines/SITE-002-STABLE-PROD-LOAD-MORE-01.md](baselines/SITE-002-STABLE-PROD-LOAD-MORE-01.md) |
 | MARS 1C cron wrapper | **ACTIVE — DAILY SCHEDULED** (Run 4.183) — Beget cron row confirmed by operator; manual run **SUCCESS** (Run 4.181); wrapper v1.1.0; HTTP gateway; schedule `0 8 * * *` (Moscow → 12:00 Barnaul); token present not documented; next scheduled run monitoring pending; Sergey legacy **preserved** |
 | MARS 1C cron reports | **CLEANED** (Run 4.184) — `/storage/mars-tools/cron/reports/` retains 3 files: `index.html`, manual run `mars_1c_import_2026-07-05_205934.txt`, latest status `mars_1c_import_status_2026-07-05_212740.txt`; 19 redundant setup-date dry-run/status reports removed; backups in Storage; retention policy: keep daily run reports, not every diagnostic dry-run/status |
+| Catalog load more (Production) | **ACTIVE** (Run 4.185) — «Показать ещё» append via `initLoadMore()`; counter «Показано X из Y»; numeric pagination hidden when JS (`js-load-more`); rollback in Storage `deployments/SITE-002-PROD-LOAD-MORE-01/rollback/` |
 | Catalog default sort (Production) | `pd.name ASC` when `sort`/`order` omitted |
 
 ---

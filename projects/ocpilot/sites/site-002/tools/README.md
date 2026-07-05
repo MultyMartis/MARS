@@ -22,6 +22,7 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `site-002-prod-cron-beget-activate-01.py` | Beget 1C cron activation prep — wrapper recheck, cron command, panel instructions for `SITE-002-PROD-CRON-BEGET-ACTIVATE-01` |
 | `site-002-prod-cron-beget-active-confirm-01.py` | Beget 1C cron active confirmation — wrapper recheck, operator cron evidence, Storage artefacts for `SITE-002-PROD-CRON-BEGET-ACTIVE-CONFIRM-01` |
 | `site-002-prod-cron-reports-cleanup-01.py` | MARS 1C cron reports cleanup — list, backup, exact delete, verify for `SITE-002-PROD-CRON-REPORTS-CLEANUP-01` |
+| `site-002-prod-load-more-01.py` | Multi-file Production catalog load-more deploy for `SITE-002-PROD-LOAD-MORE-01` |
 
 ## Dependencies
 

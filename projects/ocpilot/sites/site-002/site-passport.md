@@ -28,7 +28,7 @@
 | **Production Profile** | [production-profile.md](production-profile.md) |
 | **Production connection** | **VERIFIED** — HTTP/admin (Run 4.171) + FTP/file baseline (Run 4.171-R1); path model reconciled (Run 4.172) |
 | **Production baseline** | **PARENT** — [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| **Current Production checkpoint** | **ISSUED** — [baselines/SITE-002-STABLE-PROD-CRON-BEGET-ACTIVE-01.md](baselines/SITE-002-STABLE-PROD-CRON-BEGET-ACTIVE-01.md) |
+| **Current Production checkpoint** | **ISSUED** — [baselines/SITE-002-STABLE-PROD-LOAD-MORE-01.md](baselines/SITE-002-STABLE-PROD-LOAD-MORE-01.md) |
 | **MARS 1C cron wrapper** | **ACTIVE — DAILY SCHEDULED** (Run 4.183) — Beget cron confirmed by operator; manual run SUCCESS (Run 4.181); HTTP gateway; wrapper v1.1.0; schedule `0 8 * * *` Moscow; Sergey legacy preserved; next run monitoring pending |
 | **MARS 1C cron reports** | **CLEANED** (Run 4.184) — 19 redundant setup-date TXT reports removed; 3 current files preserved; [SITE-002-PROD-CRON-REPORTS-CLEANUP-01.md](reports/SITE-002-PROD-CRON-REPORTS-CLEANUP-01.md) |
 | **Current Status** | **STABLE PRODUCTION CHECKPOINT — CRON BEGET ACTIVE 01** |
@@ -48,13 +48,29 @@
 | **MANUAL UI REFINEMENTS ARE CANONICAL** | Operator manual CSS, Twig, JS, and UX edits on live TEST override older M9.x deploy snapshots |
 | **MANUAL CSS REFINEMENTS ARE CANONICAL** | Operator CSS edits on live TEST override repo work copies |
 | **MANUAL TWIG REFINEMENTS ARE CANONICAL** | Operator Twig edits on live TEST override repo work copies |
-| **Conflict resolution (Production)** | Current operational website authority = https://bzpm.ru/; current checkpoint `SITE-002-STABLE-PROD-SORT-MENU-ORDER-01`; catalog default sort `pd.name ASC`; sort menu order A→Я, Я→А, cheaper, expensive |
+| **Conflict resolution (Production)** | Current operational website authority = https://bzpm.ru/; current checkpoint `SITE-002-STABLE-PROD-LOAD-MORE-01`; catalog load-more append UX active; catalog default sort `pd.name ASC`; sort menu order A→Я, Я→А, cheaper, expensive |
 | **Conflict resolution (TEST evidence)** | If documentation contradicts historical TEST state, live TEST on https://zpm.new-site.space/ remains evidence for TEST-era checkpoints |
 | **Do NOT use as visual baseline** | Pass 1.2 CSS/HTML/JS · `SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2` · pre-checkpoint work copies · `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01` · M9.13 About redesign work copies |
 
 ---
 
 ## Production checkpoint (current)
+
+| Field | Value |
+|-------|--------|
+| Name | `SITE-002-STABLE-PROD-LOAD-MORE-01` |
+| Registered | 2026-07-06 |
+| Type | Stable Production checkpoint — multi-file catalog load-more deploy |
+| Parent | `SITE-002-STABLE-PROD-CRON-BEGET-ACTIVE-01` |
+| Operation | `SITE-002-PROD-LOAD-MORE-01` |
+| Scope | category.twig/php, main.js, style.css — append load-more + counter |
+| Report | [SITE-002-PROD-LOAD-MORE-01.md](reports/SITE-002-PROD-LOAD-MORE-01.md) |
+
+Verified proof boundary: multi-file catalog frontend FTP deploy with backup, dry-run, HTTP/visual verification, rollback readiness.
+
+---
+
+## Prior Production checkpoint
 
 | Field | Value |
 |-------|--------|
