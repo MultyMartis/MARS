@@ -1,8 +1,8 @@
 # OCPilot — Program State
 
 **Status:** living state document — **not** automated router  
-**Last updated:** 2026-07-05
-**Evidence cutoff:** 2026-07-05 (SITE-002 Run **4.176** — Production catalog default sort A→Я deployed; checkpoint `SITE-002-STABLE-PROD-SORT-AZ-01`)
+**Last updated:** 2026-07-06
+**Evidence cutoff:** 2026-07-06 (SITE-002 Run **4.177** — Production catalog sort menu order deployed; checkpoint `SITE-002-STABLE-PROD-SORT-MENU-ORDER-01`)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Production catalog default sort COMPLETE (Run 4.176)** — `pd.name ASC` in `category.php` · checkpoint `SITE-002-STABLE-PROD-SORT-AZ-01` · [SITE-002-PROD-SORT-AZ-01.md](sites/site-002/reports/SITE-002-PROD-SORT-AZ-01.md) · Load More + 1C cron remain scoped from Run 4.174 |
+| Current SITE-002 focus | **Production catalog sort menu order COMPLETE (Run 4.177)** — sort menu in `category.twig` · checkpoint `SITE-002-STABLE-PROD-SORT-MENU-ORDER-01` · [SITE-002-PROD-SORT-MENU-ORDER-01.md](sites/site-002/reports/SITE-002-PROD-SORT-MENU-ORDER-01.md) · default sort `pd.name ASC` (Run 4.176) · Load More + 1C cron remain scoped from Run 4.174 |
 
 ---
 
@@ -36,12 +36,13 @@
 | OpenCart admin read-only | **VERIFIED** — version 3.0.3.9 |
 | Historical TEST | **preserved** — https://zpm.new-site.space/ |
 | First Production baseline | **SUPERSEDED BY CONTROLLED TEXT CHANGE** — parent [SITE-002-STABLE-PROD-INITIAL-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| Current Production checkpoint | **ISSUED** — [SITE-002-STABLE-PROD-SORT-AZ-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-SORT-AZ-01.md) |
+| Current Production checkpoint | **ISSUED** — [SITE-002-STABLE-PROD-SORT-MENU-ORDER-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-SORT-MENU-ORDER-01.md) |
 | First Production test / operation | **COMPLETE** — single-file text-only FTP deploy verified (Run 4.173) |
 | Second Production operation | **COMPLETE** — single-controller catalog sort deploy verified (Run 4.176) |
+| Third Production operation | **COMPLETE** — single-Twig catalog sort menu deploy verified (Run 4.177) |
 | Capture storage | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\captures\SITE-002-PROD-INITIAL-CAPTURE-01\` |
 
-Production tooling remains scoped and site-specific. Verified deploy classes: **single-file text-only FTP deploy** (Run 4.173) and **single-controller-file FTP deploy** (Run 4.176). File-level Production checkpoint is `SITE-002-STABLE-PROD-SORT-AZ-01`.
+Production tooling remains scoped and site-specific. Verified deploy classes: **single-file text-only FTP deploy** (Run 4.173), **single-controller-file FTP deploy** (Run 4.176), and **single-Twig-file FTP deploy** (Run 4.177). File-level Production checkpoint is `SITE-002-STABLE-PROD-SORT-MENU-ORDER-01`.
 
 ### BZPM UX REDESIGN — project banner
 

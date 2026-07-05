@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-05 (Run 4.176 — catalog default sort A→Я)
+**Last updated:** 2026-07-06 (Run 4.177 — catalog sort menu order)
 
 ---
 
@@ -231,6 +231,31 @@ single-controller-file FTP deploy with backup, dry-run, verification, rollback r
 ```
 
 Does not prove multi-file frontend deploy (Twig/CSS/JS), cache clearing, or database operations.
+
+---
+
+## Catalog sort menu order (Run 4.177)
+
+| Field | Value |
+|-------|-------|
+| Operation | `SITE-002-PROD-SORT-MENU-ORDER-01` |
+| Status | **COMPLETE** |
+| Deploy method | single-Twig FTP |
+| Remote target | `/public_html/catalog/view/theme/default/template/product/category.twig` |
+| Change | remove «Умолчанию»; reorder menu: A→Я, Я→А, price ASC, price DESC |
+| Default catalog sort (controller) | unchanged — `pd.name ASC` (Run 4.176) |
+| Rollback readiness | **VERIFIED** |
+| Post-deploy verification | **PASS** — remote hash, HTTP 200, desktop/mobile screenshots |
+| Current Production checkpoint | `SITE-002-STABLE-PROD-SORT-MENU-ORDER-01` |
+| Report | [reports/SITE-002-PROD-SORT-MENU-ORDER-01.md](reports/SITE-002-PROD-SORT-MENU-ORDER-01.md) |
+
+Verified proof boundary:
+
+```text
+single-Twig-file FTP deploy with backup, dry-run, verification, rollback readiness
+```
+
+Does not prove multi-file frontend deploy, CSS/JS deploy, cache clearing, or database operations.
 
 ---
 

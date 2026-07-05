@@ -15,6 +15,7 @@
 | **Production parity with TEST checkpoints** | **VERIFIED** — file + HTTP evidence (Run 4.171-R1) |
 | **First controlled Production change** | **COMPLETE** — Run 4.173; single-file text-only FTP deploy |
 | **Catalog default sort (Production)** | **COMPLETE** — Run 4.176; default `pd.name ASC` in `category.php` |
+| **Catalog sort menu (Production)** | **COMPLETE** — Run 4.177; menu order in `category.twig`; «Умолчанию» removed |
 
 **TEST-derived knowledge classification:** Implementation evidence and reusable technical knowledge. **Not** automatic proof of current Production parity.
 
@@ -84,7 +85,28 @@ Proven operational boundary:
 single-controller-file FTP deploy with backup, dry-run, verification, rollback readiness
 ```
 
-Explicit `sort`/`order` URL parameters still override defaults. Twig/CSS/JS not modified.
+Explicit `sort`/`order` URL parameters still override defaults. Twig/CSS/JS not modified in Run 4.176.
+
+### Catalog sort menu order (Run 4.177 — 2026-07-06)
+
+| Field | Value |
+|-------|-------|
+| Operation | `SITE-002-PROD-SORT-MENU-ORDER-01` |
+| Status | **COMPLETE** |
+| Remote file | `/public_html/catalog/view/theme/default/template/product/category.twig` |
+| Change | remove «Умолчанию»; menu order: `pd.name ASC`, `pd.name DESC`, `p.price ASC`, `p.price DESC` |
+| Default sort (controller) | unchanged — `pd.name ASC` (Run 4.176) |
+| Verification | PASS — remote SHA, HTTP 200, desktop/mobile screenshots |
+| Checkpoint | `SITE-002-STABLE-PROD-SORT-MENU-ORDER-01` |
+| Report | [../reports/SITE-002-PROD-SORT-MENU-ORDER-01.md](../reports/SITE-002-PROD-SORT-MENU-ORDER-01.md) |
+
+Proven operational boundary:
+
+```text
+single-Twig-file FTP deploy with backup, dry-run, verification, rollback readiness
+```
+
+Does not prove multi-file frontend deploy, CSS/JS deploy, cache clearing, or database operations.
 
 ---
 

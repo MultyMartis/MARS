@@ -1,7 +1,7 @@
 # SITE-002 — Site Passport
 
 **Status:** **STABLE PRODUCTION CHECKPOINT — TEXT CHANGE 01**
-**Run:** 4.176 — SITE-002 Production Catalog Default Sort A→Я (2026-07-05)
+**Run:** 4.177 — SITE-002 Production Catalog Sort Menu Order (2026-07-06)
 
 ---
 
@@ -28,7 +28,7 @@
 | **Production Profile** | [production-profile.md](production-profile.md) |
 | **Production connection** | **VERIFIED** — HTTP/admin (Run 4.171) + FTP/file baseline (Run 4.171-R1); path model reconciled (Run 4.172) |
 | **Production baseline** | **PARENT** — [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| **Current Production checkpoint** | **ISSUED** — [baselines/SITE-002-STABLE-PROD-SORT-AZ-01.md](baselines/SITE-002-STABLE-PROD-SORT-AZ-01.md) |
+| **Current Production checkpoint** | **ISSUED** — [baselines/SITE-002-STABLE-PROD-SORT-MENU-ORDER-01.md](baselines/SITE-002-STABLE-PROD-SORT-MENU-ORDER-01.md) |
 | **Current Status** | **STABLE PRODUCTION CHECKPOINT — TEXT CHANGE 01** |
 | **Active baseline** | [baselines/SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01.md](baselines/SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01.md) · About: [M9.13-ABOUT-REDESIGN-02](baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02.md) · fonts: [LOCAL-FONTS-01](baselines/SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md) |
 | **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — incl. [§7 Filter Architecture](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#7-filter-architecture), [§8 Live Files](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#8-live-files-with-business-logic), [§14 Commercial Trust Block](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#14-commercial-trust-block), [§16 Catalog State Persistence](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#16-catalog-state-persistence), [§17 About Page History](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#17-about-page-history), [§26 Operator Manual Polish 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#26-operator-manual-polish-01--superseded-visual-baseline-retained), [§27 Local Fonts 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#27-local-fonts-01--active) |
@@ -46,13 +46,29 @@
 | **MANUAL UI REFINEMENTS ARE CANONICAL** | Operator manual CSS, Twig, JS, and UX edits on live TEST override older M9.x deploy snapshots |
 | **MANUAL CSS REFINEMENTS ARE CANONICAL** | Operator CSS edits on live TEST override repo work copies |
 | **MANUAL TWIG REFINEMENTS ARE CANONICAL** | Operator Twig edits on live TEST override repo work copies |
-| **Conflict resolution (Production)** | Current operational website authority = https://bzpm.ru/; current checkpoint `SITE-002-STABLE-PROD-SORT-AZ-01`; catalog default sort `pd.name ASC` |
+| **Conflict resolution (Production)** | Current operational website authority = https://bzpm.ru/; current checkpoint `SITE-002-STABLE-PROD-SORT-MENU-ORDER-01`; catalog default sort `pd.name ASC`; sort menu order A→Я, Я→А, cheaper, expensive |
 | **Conflict resolution (TEST evidence)** | If documentation contradicts historical TEST state, live TEST on https://zpm.new-site.space/ remains evidence for TEST-era checkpoints |
 | **Do NOT use as visual baseline** | Pass 1.2 CSS/HTML/JS · `SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2` · pre-checkpoint work copies · `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01` · M9.13 About redesign work copies |
 
 ---
 
 ## Production checkpoint (current)
+
+| Field | Value |
+|-------|--------|
+| Name | `SITE-002-STABLE-PROD-SORT-MENU-ORDER-01` |
+| Registered | 2026-07-06 |
+| Type | Stable Production checkpoint — single-Twig catalog sort menu deploy |
+| Parent | `SITE-002-STABLE-PROD-SORT-AZ-01` |
+| Operation | `SITE-002-PROD-SORT-MENU-ORDER-01` |
+| Scope | sort menu order in `category.twig`; «Умолчанию» removed |
+| Report | [SITE-002-PROD-SORT-MENU-ORDER-01.md](reports/SITE-002-PROD-SORT-MENU-ORDER-01.md) |
+
+Verified proof boundary: single-Twig-file FTP deploy with backup, dry-run, verification, rollback readiness.
+
+---
+
+## Prior Production checkpoint
 
 | Field | Value |
 |-------|--------|
