@@ -1,0 +1,35 @@
+{
+  "task": "V9-06D9-E",
+  "repairs": [
+    {
+      "item": "Swiper CSS enqueue",
+      "staticV9": "head: swiper-bundle.min.css before style.css",
+      "runtimeBefore": "v9-style → swiper (wrong)",
+      "runtimeAfter": "swiper → fancybox → v9-style",
+      "result": "PASS"
+    },
+    {
+      "item": "Swiper JS + initSpecialists",
+      "staticV9": "swiper-bundle.min.js defer before main.js; initSpecialists in main.js",
+      "runtimeBefore": "swiper before v9-shell; init present",
+      "runtimeAfter": "unchanged order; CSS fix enables visual parity",
+      "result": "PASS"
+    },
+    {
+      "item": "Fancybox enqueue",
+      "staticV9": "fancybox.css + fancybox.umd.js on home",
+      "runtimeBefore": "enqueued front page",
+      "runtimeAfter": "enqueued; CSS order fixed",
+      "result": "PASS"
+    },
+    {
+      "item": "Inputmask",
+      "staticV9": "CDN inputmask on static index",
+      "runtimeBefore": "optional local path missing — phone mask skipped",
+      "runtimeAfter": "unchanged; out of slider scope",
+      "result": "N/A"
+    }
+  ],
+  "duplicateInit": false,
+  "result": "PASS"
+}

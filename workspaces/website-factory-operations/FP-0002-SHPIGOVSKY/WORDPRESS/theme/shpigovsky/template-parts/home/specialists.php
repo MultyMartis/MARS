@@ -13,10 +13,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-<section data-reveal class="specialists"  aria-labelledby="comfort-heading">
+<section data-reveal class="specialists" aria-labelledby="specialists-heading">
   <div class="container">
     <div class="specialists__head">
-      <h2 class="specialists__heading" id="comfort-heading">Комфорт, приватность, забота</h2>
+      <h2 class="specialists__heading" id="specialists-heading">Специалисты центра</h2>
       <a class="specialists__all-link" href="<?php echo esc_url( home_url( '/o-centre/' ) ); ?>">
         <span class="specialists__all-text">все специалисты</span>
         <span class="specialists__all-icon" aria-hidden="true"><i class="fas fa-play"></i></span>

@@ -1,0 +1,31 @@
+{
+  "task": "V9-06D9-E",
+  "route": "/",
+  "httpStatus": 200,
+  "hasGallerySlider": true,
+  "hasReviewsSlider": true,
+  "hasSpecialistsSlider": true,
+  "specialistsHeading": true,
+  "specialistsWrongComfortHeading": false,
+  "hasGalleryPagination": true,
+  "hasReviewsPagination": true,
+  "hasSpecialistsPagination": true,
+  "swiperClassCount": 28,
+  "cssOrder": [
+    {
+      "id": "shpigovsky-swiper-css",
+      "href": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/vendor/swiper/swiper-bundle.min.css?ver=1782982431"
+    },
+    {
+      "id": "shpigovsky-fancybox-css",
+      "href": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/vendor/fancybox/fancybox.css?ver=1782982431"
+    },
+    {
+      "id": "shpigovsky-v9-css",
+      "href": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/css/v9-style.css?ver=1783250673"
+    }
+  ],
+  "cssOrderMatchesStatic": true,
+  "heroCta": true,
+  "result": "PASS"
+}

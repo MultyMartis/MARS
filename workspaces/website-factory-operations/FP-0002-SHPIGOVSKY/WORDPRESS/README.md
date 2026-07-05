@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D9-D HOME MAIN + FOOTER STATIC V9 TRANSPLANT PASS — NEXT: D9-E ACF admin editability wiring
+**Status:** V9-06D9-E HOME SLIDER / VENDOR / PAGINATION REPAIR PASS — NEXT: D9-F visual parity QA
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---
@@ -226,3 +226,7 @@ D9-A **COMPLETE (FAIL)**: Read-only static V9 vs WP runtime parity audit. Home: 
 ## V9-06D9-0 full V9 visual port charter (2026-07-05)
 
 D9-0 **COMPLETE (PASS)**: Read-only full visual port charter and repair wave plan. WP runtime interpreted as lightweight MVP skeleton (not catastrophic failure). Static V9 full inventory, WP current inventory, lightweight-vs-broken classification, header/messenger parity plan, home 20-section transfer plan, asset/font/vendor plan, ACF/content/media map, waves D9-B…H (+ optional D8-F). Messenger icons absent because D8-A skipped `social_links`; static V9 uses `href="#"` placeholders — D9-B can restore visuals without operator URLs. Zero DB/ACF/runtime/source mutations. Evidence: `validation/v9-06d9-0-full-visual-port-charter/`. Report: `reports/FP-0002-V9-06D9-0-FULL-V9-VISUAL-PORT-CHARTER-REPORT-v1.md`. Next: **CREATE_V9_06D9B_HEADER_FONT_ASSET_MESSENGER_REPAIR_TASK** (recommended).
+
+## V9-06D9-E home slider / vendor / pagination repair (2026-07-05)
+
+D9-E **PASS**: Specialists heading restored; vendor CSS cascade fixed (swiper → v9-style) for pagination dot parity; bounded runtime delivery (2 files). No DB/ACF writes. Route smoke ALL_200. Evidence: `validation/v9-06d9e-home-slider-vendor-pagination-repair/`. Report: `reports/FP-0002-V9-06D9E-HOME-SLIDER-VENDOR-PAGINATION-REPAIR-REPORT-v1.md`. Next: D9-F visual parity QA.

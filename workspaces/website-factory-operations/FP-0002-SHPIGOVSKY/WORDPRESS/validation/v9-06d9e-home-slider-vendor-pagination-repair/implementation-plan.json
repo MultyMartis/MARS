@@ -1,0 +1,52 @@
+{
+  "task": "V9-06D9-E",
+  "createdAt": "2026-07-05T00:00:00+07:00",
+  "componentsToRepair": [
+    "specialists",
+    "home-gallery",
+    "reviews",
+    "pagination-dots-global"
+  ],
+  "staticAuthority": {
+    "specialists": "workspaces/fp-0002-shpigovsky-v9/src/partials/sections/specialists.html",
+    "gallery": "workspaces/fp-0002-shpigovsky-v9/src/partials/sections/home-gallery.html",
+    "reviews": "workspaces/fp-0002-shpigovsky-v9/src/partials/sections/reviews.html",
+    "init": "workspaces/fp-0002-shpigovsky-v9/src/js/main.js",
+    "paginationCss": "workspaces/fp-0002-shpigovsky-v9/src/scss/style.scss",
+    "dist": "workspaces/fp-0002-shpigovsky-v9/dist/"
+  },
+  "themeEdits": [
+    {
+      "file": "theme/shpigovsky/template-parts/home/specialists.php",
+      "change": "Restore specialists-heading / Специалисты центра (D9-D transplant typo)"
+    },
+    {
+      "file": "theme/shpigovsky/inc/home-vendors.php",
+      "change": "Fix CSS cascade: vendor bundles before v9-style; shell JS deps unchanged"
+    }
+  ],
+  "vendorAssets": {
+    "copyRequired": false,
+    "existing": [
+      "assets/vendor/swiper/swiper-bundle.min.css",
+      "assets/vendor/swiper/swiper-bundle.min.js",
+      "assets/vendor/fancybox/fancybox.css",
+      "assets/vendor/fancybox/fancybox.umd.js"
+    ],
+    "d9dIssue": "Swiper CSS was enqueued with dependency on shpigovsky-v9, loading AFTER theme overrides"
+  },
+  "initStrategy": "Retain v9-shell.js init blocks from V9 dist; no duplicate init",
+  "runtimeDelivery": [
+    "template-parts/home/specialists.php",
+    "inc/home-vendors.php"
+  ],
+  "validationCriteria": {
+    "specialistsHeading": "Специалисты центра",
+    "cssOrder": "swiper → fancybox → v9-style",
+    "routeSmoke": "ALL_200",
+    "vendor404": 0,
+    "heroCta": "Записаться на консультацию"
+  },
+  "dbAcfRequired": false,
+  "result": "APPROVED_FOR_IMPLEMENTATION"
+}

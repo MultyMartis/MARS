@@ -1,0 +1,30 @@
+{
+  "task": "V9-06D9-E",
+  "rootCause": "PAGINATION_CSS_MISSING effective — Swiper default bullet styles loaded after v9-style overrides",
+  "repairs": [
+    {
+      "component": "specialists__pagination",
+      "staticV9": "10px bordered bullets; active fill var(--color-text-primary)",
+      "runtimeBefore": "Default Swiper #007aff semi-transparent bullets",
+      "runtimeAfter": "Theme override wins after cascade fix",
+      "result": "PASS"
+    },
+    {
+      "component": "reviews__pagination",
+      "staticV9": "shared bullet rules with gallery/specialists",
+      "runtimeBefore": "Swiper defaults visible",
+      "runtimeAfter": "shared cascade fix",
+      "result": "PASS"
+    },
+    {
+      "component": "home-gallery__pagination",
+      "staticV9": "shared bullet rules",
+      "runtimeBefore": "Swiper defaults visible",
+      "runtimeAfter": "shared cascade fix",
+      "result": "PASS"
+    }
+  ],
+  "cssFileEdited": false,
+  "enqueueFixOnly": true,
+  "result": "PASS"
+}

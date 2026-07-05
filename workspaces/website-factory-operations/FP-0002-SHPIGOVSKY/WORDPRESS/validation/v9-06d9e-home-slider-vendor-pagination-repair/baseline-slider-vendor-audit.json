@@ -1,0 +1,102 @@
+{
+  "task": "V9-06D9-E",
+  "capturedAt": "2026-07-05T12:37:09.866Z",
+  "components": [
+    {
+      "component": "home-gallery",
+      "staticSource": "src/partials/sections/home-gallery.html",
+      "staticSelector": "[data-gallery-slider]",
+      "staticPagination": "[data-gallery-pagination]",
+      "staticInit": "initHomeGallery in src/js/main.js",
+      "runtimePartial": "template-parts/home/gallery.php",
+      "runtimeBeforeCssOrder": [
+        {
+          "id": "shpigovsky-swiper-css",
+          "href": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/vendor/swiper/swiper-bundle.min.css?ver=1782982431"
+        },
+        {
+          "id": "shpigovsky-fancybox-css",
+          "href": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/vendor/fancybox/fancybox.css?ver=1782982431"
+        },
+        {
+          "id": "shpigovsky-v9-css",
+          "href": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/css/v9-style.css?ver=1783250673"
+        }
+      ],
+      "staticCssOrder": [
+        "swiper",
+        "fancybox",
+        "style.css"
+      ],
+      "visualDifference": "Pagination dots may show default Swiper blue if vendor CSS loads after v9-style",
+      "rootCause": "MISSING_VENDOR_CSS_ORDER",
+      "severity": "HIGH"
+    },
+    {
+      "component": "reviews",
+      "staticSource": "src/partials/sections/reviews.html",
+      "staticSelector": "[data-reviews-slider]",
+      "staticPagination": "[data-reviews-pagination]",
+      "staticInit": "initReviews in src/js/main.js",
+      "runtimePartial": "template-parts/home/reviews.php",
+      "rootCause": "MISSING_VENDOR_CSS_ORDER",
+      "severity": "HIGH"
+    },
+    {
+      "component": "specialists",
+      "staticSource": "src/partials/sections/specialists.html",
+      "staticSelector": "[data-specialists-slider]",
+      "staticHeading": "Специалисты центра / specialists-heading",
+      "runtimeBeforeHeading": true,
+      "staticPagination": "[data-specialists-pagination]",
+      "staticInit": "initSpecialists in src/js/main.js",
+      "runtimePartial": "template-parts/home/specialists.php",
+      "visualDifference": "Wrong comfort heading transplanted; slider dots unstyled",
+      "rootCause": "WRONG_DOM_CLASSES",
+      "severity": "CRITICAL"
+    },
+    {
+      "component": "comfort",
+      "staticSource": "src/partials/sections/comfort.html",
+      "staticSelector": "Fancybox [data-fancybox=\"comfort\"]",
+      "staticInit": "initComfortFancybox",
+      "runtimePartial": "template-parts/home/comfort.php",
+      "rootCause": "NONE",
+      "severity": "LOW"
+    },
+    {
+      "component": "home-videos",
+      "staticSource": "src/partials/sections/home-videos.html",
+      "staticSelector": "[data-fancybox=\"home-videos\"]",
+      "staticInit": "initHomeVideosFancybox",
+      "runtimePartial": "template-parts/home/videos.php",
+      "rootCause": "NONE",
+      "severity": "LOW"
+    }
+  ],
+  "runtimeVendorBefore": {
+    "swiperCss": true,
+    "fancyboxCss": true,
+    "swiperJs": true,
+    "fancyboxJs": true,
+    "cssOrder": [
+      {
+        "id": "shpigovsky-swiper-css",
+        "href": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/vendor/swiper/swiper-bundle.min.css?ver=1782982431"
+      },
+      {
+        "id": "shpigovsky-fancybox-css",
+        "href": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/vendor/fancybox/fancybox.css?ver=1782982431"
+      },
+      {
+        "id": "shpigovsky-v9-css",
+        "href": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/css/v9-style.css?ver=1783250673"
+      }
+    ]
+  },
+  "staticVendor": {
+    "swiperCss": true,
+    "fancyboxCss": true
+  },
+  "result": "BASELINE_CAPTURED"
+}

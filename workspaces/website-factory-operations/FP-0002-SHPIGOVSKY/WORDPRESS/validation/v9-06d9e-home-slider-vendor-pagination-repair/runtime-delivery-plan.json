@@ -1,0 +1,13 @@
+{
+  "task": "V9-06D9-E",
+  "mode": "BOUNDED_COPY",
+  "target": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky/wp-content/themes/shpigovsky/",
+  "files": [
+    "template-parts/home/specialists.php",
+    "inc/home-vendors.php"
+  ],
+  "deletes": 0,
+  "mirror": false,
+  "purge": false,
+  "result": "APPROVED"
+}

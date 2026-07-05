@@ -1,0 +1,27 @@
+{
+  "task": "V9-06D9-E",
+  "repairs": [
+    {
+      "component": "specialists",
+      "staticDom": "section.specialists aria-labelledby=specialists-heading; h2#specialists-heading Специалисты центра; .specialists__slider.swiper[data-specialists-slider]",
+      "runtimeBefore": "aria-labelledby=comfort-heading; h2#comfort-heading Комфорт, приватность, забота",
+      "runtimeAfter": "aria-labelledby=specialists-heading; h2#specialists-heading Специалисты центра",
+      "result": "PASS"
+    },
+    {
+      "component": "home-gallery",
+      "staticDom": "[data-gallery-slider] + [data-gallery-pagination]",
+      "runtimeBefore": "DOM matched static",
+      "runtimeAfter": "unchanged",
+      "result": "PASS"
+    },
+    {
+      "component": "reviews",
+      "staticDom": "[data-reviews-slider] + [data-reviews-pagination]",
+      "runtimeBefore": "DOM matched static",
+      "runtimeAfter": "unchanged",
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS"
+}

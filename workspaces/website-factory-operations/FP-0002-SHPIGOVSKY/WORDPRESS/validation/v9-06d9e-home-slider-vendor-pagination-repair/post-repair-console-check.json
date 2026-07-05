@@ -1,0 +1,15 @@
+{
+  "task": "V9-06D9-E",
+  "method": "static_analysis",
+  "swiperBeforeShell": true,
+  "swiperGlobalExpected": true,
+  "initBlocksInShell": [
+    "initHomeGallery",
+    "initReviews",
+    "initSpecialists",
+    "initComfortFancybox",
+    "initHomeVideosFancybox"
+  ],
+  "note": "Headless console not captured; script order and vendor 200 used as proxy",
+  "result": "PASS"
+}

@@ -1,0 +1,22 @@
+{
+  "task": "V9-06D9-E",
+  "cssOrderAfterRepair": [
+    {
+      "id": "shpigovsky-swiper-css",
+      "href": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/vendor/swiper/swiper-bundle.min.css?ver=1782982431"
+    },
+    {
+      "id": "shpigovsky-fancybox-css",
+      "href": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/vendor/fancybox/fancybox.css?ver=1782982431"
+    },
+    {
+      "id": "shpigovsky-v9-css",
+      "href": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/css/v9-style.css?ver=1783250673"
+    }
+  ],
+  "themeAfterVendor": true,
+  "paginationSelectorsPresent": true,
+  "customBulletCssInV9Style": true,
+  "expectedVisual": "10px bordered dots, active filled primary color",
+  "result": "PASS"
+}
