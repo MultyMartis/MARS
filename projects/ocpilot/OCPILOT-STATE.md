@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-06
-**Evidence cutoff:** 2026-07-06 (SITE-002 Run **4.180** — MARS 1C cron activation preflight; local token config deployed; manual run **pending**; Beget cron **not** activated)
+**Evidence cutoff:** 2026-07-06 (SITE-002 Run **4.181** — MARS 1C cron manual run **SUCCESS**; first controlled wrapper import verified; Beget cron **not** activated; activation **ready**)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **MARS 1C cron activation preflight (Run 4.180)** — local token config `/storage/mars-tools/cron/mars_1c_wrapper.local.php` · manual `--run` **pending** (blocked on live cron DB verify) · Beget cron **not activated** · schedule recommendation `0 8 * * *` Moscow · [SITE-002-PROD-CRON-ACTIVATION-PREFLIGHT-01.md](sites/site-002/reports/SITE-002-PROD-CRON-ACTIVATION-PREFLIGHT-01.md) · checkpoint remains `SITE-002-STABLE-PROD-CRON-RUN-REPORTS-01` |
+| Current SITE-002 focus | **MARS 1C cron manual run (Run 4.181)** — first controlled wrapper import **SUCCESS** (HTTP gateway) · catalog+offers PASS · TXT report verified · checkpoint `SITE-002-STABLE-PROD-CRON-MANUAL-RUN-01` · Beget cron **not activated** · activation **ready** after operator approval · schedule `0 8 * * *` Moscow · [SITE-002-PROD-CRON-MANUAL-RUN-01.md](sites/site-002/reports/SITE-002-PROD-CRON-MANUAL-RUN-01.md) |
 
 ---
 
@@ -36,13 +36,14 @@
 | OpenCart admin read-only | **VERIFIED** — version 3.0.3.9 |
 | Historical TEST | **preserved** — https://zpm.new-site.space/ |
 | First Production baseline | **SUPERSEDED BY CONTROLLED TEXT CHANGE** — parent [SITE-002-STABLE-PROD-INITIAL-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| Current Production checkpoint | **ISSUED** — [SITE-002-STABLE-PROD-CRON-RUN-REPORTS-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-CRON-RUN-REPORTS-01.md) |
+| Current Production checkpoint | **ISSUED** — [SITE-002-STABLE-PROD-CRON-MANUAL-RUN-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-CRON-MANUAL-RUN-01.md) |
 | First Production test / operation | **COMPLETE** — single-file text-only FTP deploy verified (Run 4.173) |
 | Second Production operation | **COMPLETE** — single-controller catalog sort deploy verified (Run 4.176) |
 | Third Production operation | **COMPLETE** — single-Twig catalog sort menu deploy verified (Run 4.177) |
 | Fourth Production operation | **COMPLETE** — parallel MARS 1C cron wrapper prepared (Run 4.178) — **cron not activated** |
 | Fifth Production operation | **COMPLETE** — MARS 1C wrapper TXT reports (Run 4.179) — **cron not activated** |
 | Sixth Production operation | **PARTIAL** — MARS 1C cron activation preflight (Run 4.180) — token config ready; manual run pending; **cron not activated** |
+| Seventh Production operation | **COMPLETE** — MARS 1C cron manual run (Run 4.181) — first wrapper import **SUCCESS**; Beget cron **not activated**; activation **ready** |
 | Capture storage | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\captures\SITE-002-PROD-INITIAL-CAPTURE-01\` |
 
 Production tooling remains scoped and site-specific. Verified deploy classes: **single-file text-only FTP deploy** (Run 4.173), **single-controller-file FTP deploy** (Run 4.176), and **single-Twig-file FTP deploy** (Run 4.177). File-level Production checkpoint is `SITE-002-STABLE-PROD-SORT-MENU-ORDER-01`.

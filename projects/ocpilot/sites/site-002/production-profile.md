@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-06 (Run 4.180 — MARS 1C cron activation preflight)
+**Last updated:** 2026-07-06 (Run 4.181 — MARS 1C cron manual run verified)
 
 ---
 
@@ -69,8 +69,8 @@ Do not claim that Production exactly matches TEST unless evidence proves it.
 | Current M9.x baselines | [baselines/](baselines/) — TEST-proven checkpoints |
 | Post-corporate-page checkpoints | Home Commercial Trust · Corporate Intro · Custom Proof Strip · Delivery Summary · PDP Body Category Classes |
 | Production baseline parent | [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| Current Production checkpoint | [baselines/SITE-002-STABLE-PROD-CRON-RUN-REPORTS-01.md](baselines/SITE-002-STABLE-PROD-CRON-RUN-REPORTS-01.md) |
-| MARS 1C cron wrapper | **TOKEN CONFIG READY** — local config `/storage/mars-tools/cron/mars_1c_wrapper.local.php`; wrapper v1.1.0; TXT reports `/storage/mars-tools/cron/reports/`; manual `--run` **pending** (live cron DB verify required); Sergey legacy **preserved**; Beget cron **not activated**; recommended schedule `0 8 * * *` (Moscow → 12:00 Barnaul) (Run 4.180) |
+| Current Production checkpoint | [baselines/SITE-002-STABLE-PROD-CRON-MANUAL-RUN-01.md](baselines/SITE-002-STABLE-PROD-CRON-MANUAL-RUN-01.md) |
+| MARS 1C cron wrapper | **MANUAL RUN VERIFIED** — first controlled import **SUCCESS** (Run 4.181); wrapper v1.1.0; HTTP gateway channel; TXT reports `/storage/mars-tools/cron/reports/`; latest run `mars_1c_import_2026-07-05_205934.txt`; Sergey legacy **preserved**; Beget cron **not activated**; activation **ready**; recommended schedule `0 8 * * *` (Moscow → 12:00 Barnaul) |
 | Catalog default sort (Production) | `pd.name ASC` when `sort`/`order` omitted |
 
 ---

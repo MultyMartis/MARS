@@ -11,12 +11,12 @@
 | **Production profile** | [../production-profile.md](../production-profile.md) |
 | **Production storage root** | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\` |
 | **Production baseline** | Parent baseline `SITE-002-STABLE-PROD-INITIAL-01` · [../baselines/SITE-002-STABLE-PROD-INITIAL-01.md](../baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| **Current Production checkpoint** | **ISSUED** — `SITE-002-STABLE-PROD-CRON-WRAPPER-01` · [../baselines/SITE-002-STABLE-PROD-CRON-WRAPPER-01.md](../baselines/SITE-002-STABLE-PROD-CRON-WRAPPER-01.md) |
+| **Current Production checkpoint** | **ISSUED** — `SITE-002-STABLE-PROD-CRON-MANUAL-RUN-01` · [../baselines/SITE-002-STABLE-PROD-CRON-MANUAL-RUN-01.md](../baselines/SITE-002-STABLE-PROD-CRON-MANUAL-RUN-01.md) |
 | **Production parity with TEST checkpoints** | **VERIFIED** — file + HTTP evidence (Run 4.171-R1) |
 | **First controlled Production change** | **COMPLETE** — Run 4.173; single-file text-only FTP deploy |
 | **Catalog default sort (Production)** | **COMPLETE** — Run 4.176; default `pd.name ASC` in `category.php` |
 | **Catalog sort menu (Production)** | **COMPLETE** — Run 4.177; menu order in `category.twig`; «Умолчанию» removed |
-| **MARS 1C cron wrapper (Production)** | **TXT REPORTS ACTIVE** — Run 4.179; human-readable TXT per run; reports `/storage/mars-tools/cron/reports/`; Sergey legacy preserved; Beget cron **not activated** |
+| **MARS 1C cron wrapper (Production)** | **MANUAL RUN VERIFIED** — Run 4.181; first controlled import SUCCESS; reports `/storage/mars-tools/cron/reports/`; Sergey legacy preserved; Beget cron **not activated**; activation **ready** |
 
 **TEST-derived knowledge classification:** Implementation evidence and reusable technical knowledge. **Not** automatic proof of current Production parity.
 
@@ -174,6 +174,33 @@ Proven operational boundary:
 
 ```text
 MARS local token config upload only — no legacy import mutation; manual run gated on live cron DB verify
+```
+
+### MARS 1C cron manual run (Run 4.181 — 2026-07-06)
+
+| Field | Value |
+|-------|-------|
+| Operation | `SITE-002-PROD-CRON-MANUAL-RUN-01` |
+| Status | **MANUAL RUN VERIFIED — CRON ACTIVATION READY** |
+| Wrapper version | 1.1.0 |
+| Run channel | HTTP gateway (CLI PHP on SSH incompatible) |
+| Run ID | `mars-20260705-205929-df82e686` |
+| Catalog step | **PASS** (`import0_1.xml`) |
+| Offers step | **PASS** (`offers0_1.xml`) |
+| Final status | **SUCCESS** |
+| TXT report | `mars_1c_import_2026-07-05_205934.txt` |
+| DB pre-run | Operator phpMyAdmin confirm `active=0` |
+| DB post-run live SELECT | **SAFE UNKNOWN** |
+| Beget cron | **Not activated** |
+| Recommended schedule | `0 8 * * *` (Moscow → 12:00 Barnaul) |
+| Legacy Sergey import | **PRESERVED** |
+| Checkpoint | `SITE-002-STABLE-PROD-CRON-MANUAL-RUN-01` |
+| Report | [../reports/SITE-002-PROD-CRON-MANUAL-RUN-01.md](../reports/SITE-002-PROD-CRON-MANUAL-RUN-01.md) |
+
+Proven operational boundary:
+
+```text
+MARS wrapper manual 1C import on Production — SUCCESS — Sergey legacy preserved — Beget cron not activated
 ```
 
 ---

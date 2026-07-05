@@ -1,7 +1,7 @@
 # SITE-002 — Site Passport
 
-**Status:** **STABLE PRODUCTION CHECKPOINT — CRON WRAPPER 01**
-**Run:** 4.178 — SITE-002 Parallel 1C Import Cron Wrapper (2026-07-06)
+**Status:** **STABLE PRODUCTION CHECKPOINT — CRON MANUAL RUN 01**
+**Run:** 4.181 — SITE-002 1C Cron Manual Run (2026-07-06)
 
 ---
 
@@ -28,9 +28,9 @@
 | **Production Profile** | [production-profile.md](production-profile.md) |
 | **Production connection** | **VERIFIED** — HTTP/admin (Run 4.171) + FTP/file baseline (Run 4.171-R1); path model reconciled (Run 4.172) |
 | **Production baseline** | **PARENT** — [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| **Current Production checkpoint** | **ISSUED** — [baselines/SITE-002-STABLE-PROD-CRON-RUN-REPORTS-01.md](baselines/SITE-002-STABLE-PROD-CRON-RUN-REPORTS-01.md) |
-| **MARS 1C cron wrapper** | **TOKEN CONFIG READY** (Run 4.180) — `mars_1c_wrapper.local.php` on Production; wrapper v1.1.0; TXT reports `/storage/mars-tools/cron/reports/`; manual `--run` pending (cron DB verify); Sergey legacy preserved; Beget cron **not activated**; schedule `0 8 * * *` Moscow recommended |
-| **Current Status** | **STABLE PRODUCTION CHECKPOINT — CRON WRAPPER 01** |
+| **Current Production checkpoint** | **ISSUED** — [baselines/SITE-002-STABLE-PROD-CRON-MANUAL-RUN-01.md](baselines/SITE-002-STABLE-PROD-CRON-MANUAL-RUN-01.md) |
+| **MARS 1C cron wrapper** | **MANUAL RUN VERIFIED** (Run 4.181) — first controlled import SUCCESS via HTTP gateway; wrapper v1.1.0; TXT reports `/storage/mars-tools/cron/reports/`; Sergey legacy preserved; Beget cron **not activated**; activation **ready**; schedule `0 8 * * *` Moscow recommended |
+| **Current Status** | **STABLE PRODUCTION CHECKPOINT — CRON MANUAL RUN 01** |
 | **Active baseline** | [baselines/SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01.md](baselines/SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01.md) · About: [M9.13-ABOUT-REDESIGN-02](baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02.md) · fonts: [LOCAL-FONTS-01](baselines/SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md) |
 | **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — incl. [§7 Filter Architecture](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#7-filter-architecture), [§8 Live Files](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#8-live-files-with-business-logic), [§14 Commercial Trust Block](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#14-commercial-trust-block), [§16 Catalog State Persistence](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#16-catalog-state-persistence), [§17 About Page History](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#17-about-page-history), [§26 Operator Manual Polish 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#26-operator-manual-polish-01--superseded-visual-baseline-retained), [§27 Local Fonts 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#27-local-fonts-01--active) |
 | **Operator manual JS (04B)** | [reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md](reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md) |
