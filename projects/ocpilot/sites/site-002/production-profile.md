@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-06 (Run 4.182 — Beget 1C cron activation ready; operator panel HITL)
+**Last updated:** 2026-07-06 (Run 4.183 — Beget 1C cron active; operator row confirmed; next run monitoring pending)
 
 ---
 
@@ -69,8 +69,8 @@ Do not claim that Production exactly matches TEST unless evidence proves it.
 | Current M9.x baselines | [baselines/](baselines/) — TEST-proven checkpoints |
 | Post-corporate-page checkpoints | Home Commercial Trust · Corporate Intro · Custom Proof Strip · Delivery Summary · PDP Body Category Classes |
 | Production baseline parent | [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| Current Production checkpoint | [baselines/SITE-002-STABLE-PROD-CRON-MANUAL-RUN-01.md](baselines/SITE-002-STABLE-PROD-CRON-MANUAL-RUN-01.md) |
-| MARS 1C cron wrapper | **ACTIVATION READY** (Run 4.182) — manual run **SUCCESS** (Run 4.181); wrapper v1.1.0; HTTP gateway channel; TXT reports `/storage/mars-tools/cron/reports/`; latest run `mars_1c_import_2026-07-05_205934.txt`; Sergey legacy **preserved**; Beget cron **not activated** — operator panel HITL; schedule `0 8 * * *` (Moscow → 12:00 Barnaul); command in Storage `SITE-002-PROD-CRON-BEGET-ACTIVATE-01/cron-command/` |
+| Current Production checkpoint | [baselines/SITE-002-STABLE-PROD-CRON-BEGET-ACTIVE-01.md](baselines/SITE-002-STABLE-PROD-CRON-BEGET-ACTIVE-01.md) |
+| MARS 1C cron wrapper | **ACTIVE — DAILY SCHEDULED** (Run 4.183) — Beget cron row confirmed by operator; manual run **SUCCESS** (Run 4.181); wrapper v1.1.0; HTTP gateway; schedule `0 8 * * *` (Moscow → 12:00 Barnaul); token present not documented; next scheduled run monitoring pending; Sergey legacy **preserved** |
 | Catalog default sort (Production) | `pd.name ASC` when `sort`/`order` omitted |
 
 ---

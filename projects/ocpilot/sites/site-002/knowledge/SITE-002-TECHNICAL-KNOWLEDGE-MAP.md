@@ -11,12 +11,12 @@
 | **Production profile** | [../production-profile.md](../production-profile.md) |
 | **Production storage root** | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\` |
 | **Production baseline** | Parent baseline `SITE-002-STABLE-PROD-INITIAL-01` · [../baselines/SITE-002-STABLE-PROD-INITIAL-01.md](../baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| **Current Production checkpoint** | **ISSUED** — `SITE-002-STABLE-PROD-CRON-MANUAL-RUN-01` · [../baselines/SITE-002-STABLE-PROD-CRON-MANUAL-RUN-01.md](../baselines/SITE-002-STABLE-PROD-CRON-MANUAL-RUN-01.md) |
+| **Current Production checkpoint** | **ISSUED** — `SITE-002-STABLE-PROD-CRON-BEGET-ACTIVE-01` · [../baselines/SITE-002-STABLE-PROD-CRON-BEGET-ACTIVE-01.md](../baselines/SITE-002-STABLE-PROD-CRON-BEGET-ACTIVE-01.md) |
 | **Production parity with TEST checkpoints** | **VERIFIED** — file + HTTP evidence (Run 4.171-R1) |
 | **First controlled Production change** | **COMPLETE** — Run 4.173; single-file text-only FTP deploy |
 | **Catalog default sort (Production)** | **COMPLETE** — Run 4.176; default `pd.name ASC` in `category.php` |
 | **Catalog sort menu (Production)** | **COMPLETE** — Run 4.177; menu order in `category.twig`; «Умолчанию» removed |
-| **MARS 1C cron wrapper (Production)** | **ACTIVATION READY** — Run 4.182; wrapper gates PASS; HTTP gateway command prepared; manual run 4.181 SUCCESS; Beget cron **not activated** — operator panel HITL |
+| **MARS 1C cron wrapper (Production)** | **ACTIVE — DAILY SCHEDULED** — Run 4.183; Beget cron row confirmed by operator; schedule `0 8 * * *`; manual run 4.181 SUCCESS; next scheduled run monitoring pending |
 
 **TEST-derived knowledge classification:** Implementation evidence and reusable technical knowledge. **Not** automatic proof of current Production parity.
 
@@ -225,6 +225,30 @@ Proven operational boundary:
 
 ```text
 MARS Beget cron activation prepared — wrapper ready — panel save pending operator
+```
+
+### MARS 1C Beget cron active confirmation (Run 4.183 — 2026-07-06)
+
+| Field | Value |
+|-------|-------|
+| Operation | `SITE-002-PROD-CRON-BEGET-ACTIVE-CONFIRM-01` |
+| Status | **ACTIVE — DAILY IMPORT SCHEDULED / NEXT RUN MONITORING PENDING** |
+| Wrapper gates | dry-run/status **200** · run without token **403** · lock **free** |
+| Beget cron row | **Confirmed active** — operator-created `SITE-002 MARS 1C Import Wrapper` |
+| Cron schedule | `0 8 * * *` (08:00 Moscow = 12:00 Barnaul) |
+| Cron command channel | HTTP gateway — `mars_1c_http_gateway.php?mode=run&token=<TOKEN_PRESENT>` |
+| Token | **Present** — not documented; rotation **not performed** (operator decision) |
+| Manual run prerequisite | Run 4.181 **SUCCESS** — `mars_1c_import_2026-07-05_205934.txt` |
+| Import in this operation | **No** |
+| Legacy Sergey import | **PRESERVED** |
+| External assum.ru cron rows | **Observed — not touched** |
+| Checkpoint | `SITE-002-STABLE-PROD-CRON-BEGET-ACTIVE-01` |
+| Report | [../reports/SITE-002-PROD-CRON-BEGET-ACTIVE-CONFIRM-01.md](../reports/SITE-002-PROD-CRON-BEGET-ACTIVE-CONFIRM-01.md) |
+
+Proven operational boundary:
+
+```text
+MARS Beget daily 1C cron active — HTTP gateway — Sergey legacy preserved — next scheduled run monitoring pending
 ```
 
 ---
