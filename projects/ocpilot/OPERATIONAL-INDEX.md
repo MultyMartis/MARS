@@ -12,7 +12,17 @@
 
 **Localhost (pointer only, 2026-06-29):** OCPilot may consume OpenCart runtime profile on `X:\MARS-Localhost` via [MARS Localhost Infrastructure](../mars-localhost-infrastructure/MARS-LOCALHOST-CONSUMER-MODEL-v1.md) — **no** OCPilot runtime migration in MLI-00. *(Pre-X-drive pointer: `E:\MARS-Localhost`.)*
 
+## Path supersession note
 
+This document may contain historical backup/deliverable references under `C:\AI MARS STORAGE\...`.
+
+Current MARS Storage authority is `X:\AI MARS STORAGE\`.
+
+When interpreting historical OCPilot deliverables, map:
+
+- `C:\AI MARS STORAGE\...` → `X:\AI MARS STORAGE\...`
+
+Do not treat C:\ paths in this document as current write targets.
 
 ---
 

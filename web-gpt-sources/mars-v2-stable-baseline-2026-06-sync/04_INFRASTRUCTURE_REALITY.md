@@ -1,3 +1,27 @@
+# HISTORICAL / SUPERSEDED SOURCE PACK
+
+This file belongs to the pre-X-drive historical Web-GPT source pack `mars-v2-stable-baseline-2026-06-sync`.
+
+It MUST NOT be used to bootstrap current operational paths, current storage roots, current runtime roots, or current Cursor prompts.
+
+Current operational authority is:
+
+- Repo / Active Brain: `X:\AI MARS\`
+- Storage: `X:\AI MARS STORAGE\`
+- Local Runtime: `X:\MARS-Localhost\`
+- Branch: `mars/canonical-post-recovery`
+- Volume label: `AI WS`
+
+For current Web-GPT authority, use:
+
+- `web-gpt-sources/mars-current-x-drive-2026-06/`
+- `WEB-GPT-SOURCE-PACK-INDEX.md`
+- current root authority documents under `governance/`
+
+Historical C:/D:/E: paths in this pack are evidence only.
+
+---
+
 # MARS — Infrastructure reality (Sync Pack 2026-06)
 
 **Status:** **CORE**  
@@ -9,6 +33,8 @@
 ---
 
 ## Canonical two-root model
+
+> **Historical path note (this pack):** `C:\` paths in the tables below reflect the pre-X-drive sync pack at publication time. They are **superseded** by `X:\AI MARS\` and `X:\AI MARS STORAGE\` for current operational work.
 
 | Layer | Path | Role |
 |-------|------|------|

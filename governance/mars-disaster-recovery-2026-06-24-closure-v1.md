@@ -1,3 +1,23 @@
+# CURRENT OPERATIONS SUPERSESSION NOTICE
+
+This closure record is preserved as historical disaster-recovery evidence.
+
+Any C:\, D:\, E:\, or `C:\MARS Phenix\...` paths in this document describe the recovery state at the time of the DR closure and MUST NOT be used as current operational roots.
+
+Current operational authority is:
+
+- Repo / Active Brain: `X:\AI MARS\`
+- Storage: `X:\AI MARS STORAGE\`
+- Local Runtime: `X:\MARS-Localhost\`
+- Branch: `mars/canonical-post-recovery`
+- Volume label: `AI WS`
+
+Use current X-drive authority documents for new Cursor prompts and operational work.
+
+Do not rewrite historical DR evidence.
+
+---
+
 # MARS — Disaster recovery closure v1 (2026-06-24 incident)
 
 **Status:** **documented** — operator-authoritative closure record; disaster recovery program **CLOSED**.  
@@ -157,6 +177,9 @@ branch: mars/canonical-post-recovery
 ```
 
 Checklist: [mars-normal-operations-resumption-checklist-v1.md](mars-normal-operations-resumption-checklist-v1.md)
+
+**SUPERSEDED BY X-DRIVE MIGRATION:**  
+This authorization is historical. Current workspace for normal operations is `X:\AI MARS\`.
 
 ---
 
