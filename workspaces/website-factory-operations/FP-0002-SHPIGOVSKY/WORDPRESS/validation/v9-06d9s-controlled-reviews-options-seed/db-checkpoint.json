@@ -1,0 +1,23 @@
+{
+  "phase": "V9-06D9-S",
+  "generated_at": "2026-07-06T00:57:34.776889+07:00",
+  "path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d9s-controlled-reviews-options-seed-pre-20260706-005734",
+  "db_dump": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d9s-controlled-reviews-options-seed-pre-20260706-005734/mars_wp_fp0002.sql",
+  "db_dump_bytes": 1307524,
+  "db_dump_sha256": "0F189149106A976647C805F2CFA84CD00B5E2004BE29E7014BDBA6DFE12CF115",
+  "acf_groups_before_count": 14,
+  "reviews_options_before": {
+    "reviews_enabled": null,
+    "reviews_section_heading": null,
+    "reviews_items_count": 0
+  },
+  "home_page_4_reviews_meta_before": {
+    "home_reviews_heading": "Отзывы",
+    "home_reviews_teaser_0_title": "3123123",
+    "home_reviews_teaser_0_text": "12",
+    "home_reviews_teaser": "1"
+  },
+  "active_plugins_before": "a:5:{i:0;s:33:\"acf-extended-pro/acf-extended.php\";i:1;s:34:\"advanced-custom-fields-pro/acf.php\";i:2;s:33:\"classic-editor/classic-editor.php\";i:3;s:35:\"metacode-wpilot/metacode-wpilot.php\";i:4;s:35:\"shpigovsky-core/shpigovsky-core.php\";}",
+  "restore_instructions": "mysql --host=127.0.0.1 --user=root mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d9s-controlled-reviews-options-seed-pre-20260706-005734\\mars_wp_fp0002.sql\"",
+  "result": "PASS"
+}

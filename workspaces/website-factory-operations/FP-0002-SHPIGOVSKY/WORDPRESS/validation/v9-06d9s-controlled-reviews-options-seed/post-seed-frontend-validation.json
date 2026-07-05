@@ -1,0 +1,53 @@
+{
+  "phase": "V9-06D9-S",
+  "generated_at": "2026-07-06T00:57:44.085272+07:00",
+  "routes": [
+    {
+      "route": "/",
+      "http_status": 200,
+      "fatal": false,
+      "reviews_slider_present": true,
+      "reviews_slide_count": 10,
+      "reviews_pagination_present": true,
+      "rating_stars_present": true,
+      "source_mode": "FALLBACK"
+    },
+    {
+      "route": "/otzyvy/",
+      "http_status": 200,
+      "fatal": false,
+      "reviews_slider_present": true,
+      "reviews_slide_count": 10,
+      "reviews_pagination_present": true,
+      "rating_stars_present": true,
+      "source_mode": "FALLBACK"
+    },
+    {
+      "route": "/uslugi/",
+      "http_status": 200,
+      "fatal": false
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "http_status": 200,
+      "fatal": false
+    },
+    {
+      "route": "/kontakty/",
+      "http_status": 200,
+      "fatal": false
+    }
+  ],
+  "php_source_probe": {
+    "option_count": 0,
+    "resolved_count": 10,
+    "source_mode": "FALLBACK",
+    "first_author": "РђР»РµРєСЃР°РЅРґСЂ, РњРѕСЃРєРІР°",
+    "is_demo": true
+  },
+  "source_mode_after_seed": "FALLBACK",
+  "home_reviews_slide_count": 10,
+  "otzyvy_reviews_slide_count": 10,
+  "options_not_fallback": false,
+  "result": "PARTIAL"
+}

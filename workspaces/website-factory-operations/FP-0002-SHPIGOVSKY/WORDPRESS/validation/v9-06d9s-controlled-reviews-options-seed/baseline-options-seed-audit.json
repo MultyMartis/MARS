@@ -1,0 +1,55 @@
+{
+  "phase": "V9-06D9-S",
+  "generated_at": "2026-07-06T00:57:34.505407+07:00",
+  "group_fp02_site_options_reviews_in_db": true,
+  "acf_json_exists": true,
+  "options_page_slug": "fp02-site-settings",
+  "reviews_enabled_before": null,
+  "reviews_section_heading_before": null,
+  "reviews_items_count_before": 0,
+  "home_frontend_source_mode_before": "FALLBACK",
+  "otzyvy_frontend_source_mode_before": "FALLBACK",
+  "static_fallback_items_count": 10,
+  "fallback_fields_present": [
+    "author",
+    "text",
+    "rating"
+  ],
+  "existing_option_values_nonempty": false,
+  "idempotent_seed_allowed": true,
+  "home_page_4_reviews_meta_before": {
+    "home_reviews_heading": "Отзывы",
+    "home_reviews_teaser_0_title": "3123123",
+    "home_reviews_teaser_0_text": "12",
+    "home_reviews_teaser": "1"
+  },
+  "home_http_status": 200,
+  "otzyvy_http_status": 200,
+  "home_reviews_slides_before": 10,
+  "result": "PASS",
+  "acf_field_key_collision": {
+    "colliding_key": "field_fp02_reviews_items",
+    "groups": [
+      "group_fp02_page_reviews",
+      "group_fp02_site_options_reviews"
+    ],
+    "runtime_subfields": [
+      "author_label",
+      "text",
+      "metadata",
+      "source"
+    ],
+    "d9r_expected_subfields": [
+      "review_author",
+      "review_text",
+      "review_context",
+      "review_source",
+      "review_date",
+      "review_rating",
+      "review_visible",
+      "review_featured"
+    ],
+    "helper_reads": "review_author/review_text only",
+    "options_mode_blocked_without_d9t": true
+  }
+}

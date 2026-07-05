@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-06 (V9-06D9-R reviews shared include implementation complete)
+**Last updated:** 2026-07-06 (V9-06D9-S controlled reviews options seed PARTIAL PASS)
 
-**Current WordPress phase:** V9-06D9-R Reviews Shared Include Implementation **PASS** — Hybrid E implemented: ACF Options `group_fp02_site_options_reviews`, shared helper/include, Home + `/otzyvy/` wired, static V9 10-slide fallback preserved, `home_reviews_teaser` removed from Home admin group. No reviews seed. **Next: D9-S controlled reviews options seed.** Report: `WORDPRESS/reports/FP-0002-V9-06D9R-REVIEWS-SHARED-INCLUDE-IMPLEMENTATION-REPORT-v1.md`. Prior D9-Q: `WORDPRESS/reports/FP-0002-V9-06D9Q-REVIEWS-INCLUDE-PLANNING-REPORT-v1.md`.
+**Current WordPress phase:** V9-06D9-S Controlled Reviews Options Seed **PARTIAL PASS** — 10 review rows seeded to ACF Options from static V9 fallback; DB checkpoint created; Home #4 unchanged. Frontend still **FALLBACK** due ACF field key collision (`field_fp02_reviews_items`) — helper reads `review_author`, runtime stores `author_label`. **Next: operator decision — D9-T schema key fix + helper normalization.** Report: `WORDPRESS/reports/FP-0002-V9-06D9S-CONTROLLED-REVIEWS-OPTIONS-SEED-REPORT-v1.md`. Prior D9-R: `WORDPRESS/reports/FP-0002-V9-06D9R-REVIEWS-SHARED-INCLUDE-IMPLEMENTATION-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

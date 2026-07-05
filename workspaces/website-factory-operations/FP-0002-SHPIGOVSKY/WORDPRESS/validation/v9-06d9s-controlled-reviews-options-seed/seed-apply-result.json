@@ -1,0 +1,33 @@
+{
+  "phase": "V9-06D9-S",
+  "generated_at": "2026-07-05T17:57:36+00:00",
+  "writes": [
+    {
+      "field": "reviews_enabled",
+      "ok": true
+    },
+    {
+      "field": "reviews_section_heading",
+      "ok": true
+    },
+    {
+      "field": "reviews_items",
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "before": {
+    "reviews_enabled": null,
+    "reviews_section_heading": null,
+    "reviews_items_count": 0
+  },
+  "after": {
+    "reviews_enabled": true,
+    "reviews_section_heading": "РћС‚Р·С‹РІС‹",
+    "reviews_items_count": 10
+  },
+  "option_items_resolved_count": 0,
+  "resolved_items_count": 10,
+  "source_mode": "UNKNOWN",
+  "result": "PASS"
+}

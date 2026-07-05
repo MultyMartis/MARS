@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D9-R REVIEWS SHARED INCLUDE IMPLEMENTATION PASS — NEXT: D9-S controlled reviews options seed
+**Status:** V9-06D9-S CONTROLLED REVIEWS OPTIONS SEED PARTIAL PASS — NEXT: operator decision (D9-T schema/helper repair for OPTIONS mode)
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---
@@ -273,4 +273,8 @@ D9-Q **PASS**: Read-only architecture planning. Recommended **Hybrid E** — ACF
 
 ## V9-06D9-R reviews shared include implementation (2026-07-06)
 
-D9-R **PASS**: Shared reviews architecture implemented — `inc/reviews-helpers.php`, `template-parts/shared/reviews-slider.php`, Home thin wrapper, `/otzyvy/` wired to shared include; ACF Options group `group_fp02_site_options_reviews` on `fp02-site-settings`; `home_reviews_teaser` removed from Home group JSON (orphan meta preserved). DB checkpoint before ACF sync. Bounded runtime delivery + `wp acf json sync` (14 groups). Static V9 10-slide fallback preserved; routes ALL_200. No reviews seed, no ACF value writes. Admin screenshots PARTIAL (headless). Evidence: `validation/v9-06d9r-reviews-shared-include-implementation/`. Report: `reports/FP-0002-V9-06D9R-REVIEWS-SHARED-INCLUDE-IMPLEMENTATION-REPORT-v1.md`. Next: D9-S controlled reviews options seed.
+D9-R **PASS**: Shared reviews architecture implemented — `inc/reviews-helpers.php`, `template-parts/shared/reviews-slider.php`, Home thin wrapper, `/otzyvy/` wired to shared include; ACF Options group `group_fp02_site_options_reviews` on `fp02-site-settings`; `home_reviews_teaser` removed from Home group JSON (orphan meta preserved). DB checkpoint before ACF sync. Bounded runtime delivery + `wp acf json sync` (14 groups). Static V9 10-slide fallback preserved; routes ALL_200. No reviews seed, no ACF value writes. Admin screenshots PARTIAL (headless). Evidence: `validation/v9-06d9r-reviews-shared-include-implementation/`. Report: `reports/FP-0002-V9-06D9R-REVIEWS-SHARED-INCLUDE-IMPLEMENTATION-REPORT-v1.md`. Prior: D9-S seed below.
+
+## V9-06D9-S controlled reviews options seed (2026-07-06)
+
+D9-S **PARTIAL PASS**: DB checkpoint `v9-06d9s-controlled-reviews-options-seed-pre-20260706-005734`. Seeded `reviews_enabled`, `reviews_section_heading`, 10 `reviews_items` rows from static V9 fallback (legacy runtime subfields `author_label`/`text`). Home #4 unchanged. Frontend still **FALLBACK** — `field_fp02_reviews_items` key collision with page reviews group; helper reads `review_author` not `author_label`. Zero source/theme/ACF JSON changes. Screenshots PARTIAL. Evidence: `validation/v9-06d9s-controlled-reviews-options-seed/`. Report: `reports/FP-0002-V9-06D9S-CONTROLLED-REVIEWS-OPTIONS-SEED-REPORT-v1.md`. Next: operator decision — D9-T schema key fix + helper normalization.

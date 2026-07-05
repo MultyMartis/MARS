@@ -1,0 +1,28 @@
+{
+  "phase": "V9-06D9-S",
+  "generated_at": "2026-07-06T00:57:44.088807+07:00",
+  "verdict": "PARTIAL PASS",
+  "preflight": {
+    "volume_label": "AI WS",
+    "branch": "mars/canonical-post-recovery",
+    "local_head": "a129f7083ad6b45f8f3f3a616169fab8c413495c",
+    "local_head_short": "a129f708",
+    "remote_head": "a129f7083ad6b45f8f3f3a616169fab8c413495c",
+    "remote_head_short": "a129f708",
+    "required_d9r_head": "a84ec2e8032bf4409538b32885566a7e1fe6f4d8",
+    "d9r_ancestor_present": true,
+    "ahead": 0,
+    "behind": 0,
+    "staged_files": [],
+    "strict_head_gate": "PARTIAL",
+    "strict_head_note": "Tip advanced beyond D9-R commit; D9-R ancestor verified",
+    "result": "PASS"
+  },
+  "seeded_reviews_count": 10,
+  "source_mode_after_seed": "FALLBACK",
+  "acf_option_value_writes": 3,
+  "recommended_next_action": "OPERATOR_DECISION_REQUIRED",
+  "blocker": "field_fp02_reviews_items key collision — helper reads review_author; runtime stores author_label",
+  "frontend_regression": "PASS",
+  "no_scope_drift": "PASS"
+}
