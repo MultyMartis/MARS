@@ -1,0 +1,101 @@
+{
+  "phase": "V9-06E3",
+  "generated_at": "2026-07-06T04:30:00+07:00",
+  "e1_e2_baseline_hashes": {
+    "3": "588845cf73e2955656d3166e684c4f722b625aa929953a0821bba941f0502f28",
+    "22": "47e15c92fb21ab0aa6fa0100190210af4637e08adc80ae65f26b5005b61b4e50",
+    "23": "8ac8489399253c5d9e92dc46643a86289bfc27d32f7560af69df7bd8a689e866",
+    "24": "a06f0209c5b3379941242a2550a623cadbeb998ef06485179b83e81eb5f8809d",
+    "25": "0f00e812b2c40a8f0b3150e98b4ce744fc5b70fbc82989c455c28a248363c610"
+  },
+  "pages": [
+    {
+      "id": 3,
+      "slug": "privacy-policy",
+      "status": "publish",
+      "content_sha256": "588845cf73e2955656d3166e684c4f722b625aa929953a0821bba941f0502f28",
+      "e2_hash_unchanged": true,
+      "seeded_static_v9": true,
+      "frontend_route": "PASS",
+      "standard_editor_editable": true,
+      "result": "PASS"
+    },
+    {
+      "id": 22,
+      "slug": "user-agreement",
+      "status": "publish",
+      "content_sha256": "47e15c92fb21ab0aa6fa0100190210af4637e08adc80ae65f26b5005b61b4e50",
+      "e2_hash_unchanged": true,
+      "seeded_static_v9": true,
+      "frontend_route": "PASS",
+      "standard_editor_editable": true,
+      "result": "PASS"
+    },
+    {
+      "id": 23,
+      "slug": "consent-personal-data",
+      "status": "publish",
+      "content_sha256": "8ac8489399253c5d9e92dc46643a86289bfc27d32f7560af69df7bd8a689e866",
+      "e2_hash_unchanged": true,
+      "seeded_static_v9": true,
+      "frontend_route": "PASS",
+      "standard_editor_editable": true,
+      "result": "PASS"
+    },
+    {
+      "id": 24,
+      "slug": "cookie-files-policy",
+      "status": "publish",
+      "content_sha256": "a06f0209c5b3379941242a2550a623cadbeb998ef06485179b83e81eb5f8809d",
+      "e2_hash_unchanged": true,
+      "seeded_static_v9": true,
+      "frontend_route": "PASS",
+      "standard_editor_editable": true,
+      "result": "PASS"
+    },
+    {
+      "id": 25,
+      "slug": "privacy-policy-page",
+      "status": "publish",
+      "content_sha256": "0f00e812b2c40a8f0b3150e98b4ce744fc5b70fbc82989c455c28a248363c610",
+      "e2_hash_unchanged": true,
+      "legacy_preserved": true,
+      "result": "PASS"
+    },
+    {
+      "id": 21,
+      "slug": "pravovaya-informaciya-pilzovatelyu",
+      "status": "draft",
+      "public_footer_authority": false,
+      "object_preserved": true,
+      "result": "PASS"
+    }
+  ],
+  "wp_page_for_privacy_policy": "3",
+  "legal_narrow_width_cap": "ABSENT",
+  "legal_width_900_in_linked_css": false,
+  "legal_text_unchanged_since_e2": true,
+  "checks": [
+    {
+      "area": "canonical_four_legal_pages_seeded",
+      "result": "PASS"
+    },
+    {
+      "area": "privacy_setting_aligned",
+      "result": "PASS"
+    },
+    {
+      "area": "legal_width_restriction_removed",
+      "result": "PASS"
+    },
+    {
+      "area": "page_25_legacy_preserved",
+      "result": "PASS"
+    },
+    {
+      "area": "page_21_draft_not_public",
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS"
+}

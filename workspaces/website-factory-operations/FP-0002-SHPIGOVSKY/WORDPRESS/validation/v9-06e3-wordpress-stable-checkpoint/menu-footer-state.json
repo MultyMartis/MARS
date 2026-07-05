@@ -1,0 +1,110 @@
+{
+  "phase": "V9-06E3",
+  "generated_at": "2026-07-06T04:30:00+07:00",
+  "authority": "static V9 header.html post-E2 + E2 post-repair-route-menu-validation.json",
+  "primary_nav_alignment": [
+    {
+      "order": 1,
+      "static_label": "Лечение и профилактика",
+      "static_url": "/uslugi/",
+      "actual_object_id": "5",
+      "actual_slug": "uslugi",
+      "result": "PASS"
+    },
+    {
+      "order": 2,
+      "static_label": "Зависимости",
+      "static_url": "/uslugi/zavisimosti/",
+      "actual_object_id": "6",
+      "actual_slug": "zavisimosti",
+      "result": "PASS"
+    },
+    {
+      "order": 3,
+      "static_label": "О центре",
+      "static_url": "/o-centre/",
+      "actual_object_id": "11",
+      "actual_slug": "o-centre",
+      "result": "PASS"
+    },
+    {
+      "order": 4,
+      "static_label": "Отзывы",
+      "static_url": "/otzyvy/",
+      "actual_object_id": "18",
+      "actual_slug": "otzyvy",
+      "result": "PASS"
+    },
+    {
+      "order": 5,
+      "static_label": "Статьи",
+      "static_url": "/blog/",
+      "actual_object_id": "19",
+      "actual_slug": "blog",
+      "result": "PASS"
+    },
+    {
+      "order": 6,
+      "static_label": "Контакты",
+      "static_url": "/kontakty/",
+      "actual_object_id": "20",
+      "actual_slug": "kontakty",
+      "result": "PASS"
+    }
+  ],
+  "footer_legal_links": [
+    {
+      "order": 1,
+      "label": "Политика конфиденциальности",
+      "page_id": 3,
+      "slug": "privacy-policy",
+      "result": "PASS"
+    },
+    {
+      "order": 2,
+      "label": "Пользовательское соглашение",
+      "page_id": 22,
+      "slug": "user-agreement",
+      "result": "PASS"
+    },
+    {
+      "order": 3,
+      "label": "Согласие на обработку персональных данных",
+      "page_id": 23,
+      "slug": "consent-personal-data",
+      "result": "PASS"
+    },
+    {
+      "order": 4,
+      "label": "Политика Cookie-файлов",
+      "page_id": 24,
+      "slug": "cookie-files-policy",
+      "result": "PASS"
+    }
+  ],
+  "footer_legal_count": 4,
+  "hub_21_in_footer": false,
+  "hub_21_page_status": "draft",
+  "dead_links_in_main_or_legal_footer": false,
+  "checks": [
+    {
+      "area": "main_menu_labels_order_urls",
+      "result": "PASS",
+      "notes": "DB menu term primary matches E2 alignment"
+    },
+    {
+      "area": "footer_legal_exactly_four",
+      "result": "PASS"
+    },
+    {
+      "area": "page_21_absent_from_footer",
+      "result": "PASS"
+    },
+    {
+      "area": "no_dead_legal_links",
+      "result": "PASS",
+      "notes": "All four legal pages publish"
+    }
+  ],
+  "result": "PASS"
+}

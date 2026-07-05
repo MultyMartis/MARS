@@ -1,0 +1,93 @@
+{
+  "phase": "V9-06E3",
+  "generated_at": "2026-07-06T04:30:00+07:00",
+  "pixel_perfect_signoff": "DEFERRED",
+  "checks": [
+    {
+      "area": "home",
+      "route": "/",
+      "http_status": 200,
+      "screenshot": "runtime-home-stable-e3.png",
+      "result": "PASS"
+    },
+    {
+      "area": "services_hub",
+      "route": "/uslugi/",
+      "http_status": 200,
+      "screenshot": "runtime-services-stable-e3.png",
+      "result": "PASS"
+    },
+    {
+      "area": "service_leaf_74",
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "http_status": 200,
+      "screenshot": "runtime-service-74-stable-e3.png",
+      "result": "PASS"
+    },
+    {
+      "area": "contacts",
+      "route": "/kontakty/",
+      "http_status": 200,
+      "screenshot": "runtime-contacts-stable-e3.png",
+      "result": "PASS"
+    },
+    {
+      "area": "reviews",
+      "route": "/otzyvy/",
+      "http_status": 200,
+      "screenshot": "runtime-reviews-stable-e3.png",
+      "result": "PASS"
+    },
+    {
+      "area": "legal_privacy",
+      "route": "/privacy-policy/",
+      "screenshot": "runtime-privacy-policy-stable-e3.png",
+      "result": "PASS"
+    },
+    {
+      "area": "legal_user_agreement",
+      "route": "/user-agreement/",
+      "screenshot": "runtime-user-agreement-stable-e3.png",
+      "result": "PASS"
+    },
+    {
+      "area": "legal_consent",
+      "route": "/consent-personal-data/",
+      "screenshot": "runtime-consent-stable-e3.png",
+      "result": "PASS"
+    },
+    {
+      "area": "legal_cookie",
+      "route": "/cookie-files-policy/",
+      "screenshot": "runtime-cookie-policy-stable-e3.png",
+      "result": "PASS"
+    },
+    {
+      "area": "header_menu",
+      "screenshot": "runtime-main-menu-stable-e3.png",
+      "result": "PASS"
+    },
+    {
+      "area": "footer_legal_links",
+      "screenshot": "runtime-footer-legal-stable-e3.png",
+      "result": "PASS"
+    },
+    {
+      "area": "broken_images_obvious",
+      "expected": false,
+      "actual": false,
+      "result": "PASS",
+      "notes": "No obvious broken-image markers on captured surfaces"
+    },
+    {
+      "area": "php_fatal",
+      "expected": false,
+      "actual": false,
+      "result": "PASS"
+    }
+  ],
+  "screenshots_captured": 11,
+  "screenshots_total_frontend": 11,
+  "result": "PASS",
+  "result_note": "Key-surface stable; full-site pixel sign-off deferred to operator future pass"
+}

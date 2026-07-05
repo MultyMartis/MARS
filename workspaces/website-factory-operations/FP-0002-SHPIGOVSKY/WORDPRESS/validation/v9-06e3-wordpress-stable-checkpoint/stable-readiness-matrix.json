@@ -1,0 +1,60 @@
+{
+  "phase": "V9-06E3",
+  "generated_at": "2026-07-06T04:30:00+07:00",
+  "baseline_commit": "e3ec20224c24974432ea88158f29aa13bde2c94a",
+  "domains": [
+    {
+      "domain": "Runtime",
+      "status": "STABLE_LOCAL",
+      "notes": "HTTP + DB reachable; shpigovsky theme; expected plugins active"
+    },
+    {
+      "domain": "Git/source authority",
+      "status": "READY",
+      "notes": "Synced at E2 HEAD e3ec2022; no staged foreign work"
+    },
+    {
+      "domain": "Routes",
+      "status": "READY",
+      "notes": "13/13 required routes PASS incl. draft #21 → 404"
+    },
+    {
+      "domain": "Menus/footer",
+      "status": "READY",
+      "notes": "Primary menu V9-aligned; footer legal exactly 4; #21 absent"
+    },
+    {
+      "domain": "Legal content",
+      "status": "READY",
+      "notes": "E1 seeded static V9 copy unchanged; width caps removed E2; privacy=3"
+    },
+    {
+      "domain": "Reviews chain",
+      "status": "READY",
+      "notes": "CLOSED D9-Y; OPTIONS mode; Андрей, Москва confirmed E3"
+    },
+    {
+      "domain": "Admin/editability",
+      "status": "PARTIAL",
+      "notes": "Functional per D9-L..Y; authenticated admin screenshots PARTIAL"
+    },
+    {
+      "domain": "Frontend visual",
+      "status": "STABLE_LOCAL",
+      "notes": "11/11 key-surface screenshots PASS; full pixel sign-off deferred"
+    },
+    {
+      "domain": "Deferred legacy pages",
+      "status": "DEFERRED",
+      "notes": "#6-10, #17, #19, #25, #21 draft — documented not blockers"
+    },
+    {
+      "domain": "Production migration",
+      "status": "DEFERRED",
+      "notes": "Local checkpoint only"
+    }
+  ],
+  "wordpress_stable_checkpoint_ready": true,
+  "overall": "STABLE_LOCAL",
+  "result": "PASS"
+}

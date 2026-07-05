@@ -1,0 +1,106 @@
+{
+  "phase": "V9-06E3",
+  "generated_at": "2026-07-06T04:30:00+07:00",
+  "base_url": "http://shpigovsky.test",
+  "routes": [
+    {
+      "route": "/",
+      "expected": "HTTP 200, no PHP fatal",
+      "http_status": 200,
+      "has_php_fatal": false,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/",
+      "expected": "HTTP 200, no PHP fatal",
+      "http_status": 200,
+      "has_php_fatal": false,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "expected": "HTTP 200, no PHP fatal",
+      "http_status": 200,
+      "has_php_fatal": false,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "expected": "HTTP 200, no PHP fatal (service #74)",
+      "http_status": 200,
+      "has_php_fatal": false,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/",
+      "expected": "HTTP 200, no PHP fatal",
+      "http_status": 200,
+      "has_php_fatal": false,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "expected": "HTTP 200, no PHP fatal",
+      "http_status": 200,
+      "has_php_fatal": false,
+      "result": "PASS"
+    },
+    {
+      "route": "/kontakty/",
+      "expected": "HTTP 200, no PHP fatal",
+      "http_status": 200,
+      "has_php_fatal": false,
+      "result": "PASS"
+    },
+    {
+      "route": "/otzyvy/",
+      "expected": "HTTP 200, no PHP fatal",
+      "http_status": 200,
+      "has_php_fatal": false,
+      "result": "PASS"
+    },
+    {
+      "route": "/privacy-policy/",
+      "expected": "HTTP 200, legal content visible",
+      "http_status": 200,
+      "has_php_fatal": false,
+      "has_legal_body": true,
+      "result": "PASS"
+    },
+    {
+      "route": "/user-agreement/",
+      "expected": "HTTP 200, legal content visible",
+      "http_status": 200,
+      "has_php_fatal": false,
+      "has_legal_body": true,
+      "result": "PASS"
+    },
+    {
+      "route": "/consent-personal-data/",
+      "expected": "HTTP 200, legal content visible",
+      "http_status": 200,
+      "has_php_fatal": false,
+      "has_legal_body": true,
+      "result": "PASS"
+    },
+    {
+      "route": "/cookie-files-policy/",
+      "expected": "HTTP 200, legal content visible",
+      "http_status": 200,
+      "has_php_fatal": false,
+      "has_legal_body": true,
+      "result": "PASS"
+    },
+    {
+      "route": "/pravovaya-informaciya-pilzovatelyu/",
+      "expected": "not public (draft → 404)",
+      "http_status": 404,
+      "has_php_fatal": false,
+      "public_access_expected": "draft",
+      "result": "PASS"
+    }
+  ],
+  "pass_count": 13,
+  "total": 13,
+  "result": "PASS"
+}

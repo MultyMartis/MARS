@@ -1,0 +1,78 @@
+{
+  "phase": "V9-06E3",
+  "generated_at": "2026-07-06T04:30:00+07:00",
+  "runtime_url": "http://shpigovsky.test/",
+  "runtime_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\",
+  "database": "mars_wp_fp0002",
+  "table_prefix": "fp02_",
+  "checks": [
+    {
+      "check": "http_reachable",
+      "expected": true,
+      "actual": true,
+      "result": "PASS",
+      "notes": "Home HTTP 200"
+    },
+    {
+      "check": "db_reachable",
+      "expected": true,
+      "actual": true,
+      "result": "PASS",
+      "notes": "pymysql read-only connect OK"
+    },
+    {
+      "check": "active_theme",
+      "expected": "shpigovsky",
+      "actual": "shpigovsky",
+      "result": "PASS"
+    },
+    {
+      "check": "classic_editor_active",
+      "expected": true,
+      "actual": true,
+      "result": "PASS",
+      "notes": "classic-editor/classic-editor.php in active_plugins"
+    },
+    {
+      "check": "gutenberg_disabled",
+      "expected": true,
+      "actual": true,
+      "result": "PASS",
+      "notes": "classic-editor-replace=classic; allow-users=disallow"
+    },
+    {
+      "check": "acf_pro_active",
+      "expected": true,
+      "actual": true,
+      "result": "PASS",
+      "notes": "advanced-custom-fields-pro/acf.php"
+    },
+    {
+      "check": "acf_extended_state",
+      "expected": "installed_active_not_default_approved",
+      "actual": "installed_active",
+      "result": "PASS",
+      "notes": "acf-extended-pro/acf-extended.php active; classified operator-managed, not default-approved for FP-0002 use per SOURCE-AUTHORITY"
+    },
+    {
+      "check": "shpigovsky_core_active",
+      "expected": true,
+      "actual": true,
+      "result": "PASS"
+    },
+    {
+      "check": "php_fatal_on_key_routes",
+      "expected": false,
+      "actual": false,
+      "result": "PASS"
+    }
+  ],
+  "active_plugins": [
+    "acf-extended-pro/acf-extended.php",
+    "advanced-custom-fields-pro/acf.php",
+    "classic-editor/classic-editor.php",
+    "metacode-wpilot/metacode-wpilot.php",
+    "shpigovsky-core/shpigovsky-core.php"
+  ],
+  "result": "PASS"
+}

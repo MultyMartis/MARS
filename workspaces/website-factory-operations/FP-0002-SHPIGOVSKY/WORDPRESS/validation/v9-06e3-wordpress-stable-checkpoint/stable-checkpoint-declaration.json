@@ -1,0 +1,15 @@
+{
+  "phase": "V9-06E3",
+  "generated_at": "2026-07-06T04:30:00+07:00",
+  "declaration": "FP-0002 Shpigovsky WordPress local runtime stable checkpoint candidate",
+  "is_production_release": false,
+  "checkpoint_scope": "local WordPress port after D9 admin/reviews/content repair waves; E0 legal review; E1 legal static seed; E2 legal/menu repair",
+  "baseline_commit": "e3ec20224c24974432ea88158f29aa13bde2c94a",
+  "runtime_url": "http://shpigovsky.test/",
+  "database": "mars_wp_fp0002",
+  "blockers": [],
+  "stable_checkpoint": "DECLARED",
+  "runtime_state": "STABLE_LOCAL",
+  "recommended_next_phase": "CREATE_V9_06E4_OPERATOR_FINAL_VISUAL_PASS_TASK",
+  "result": "PASS"
+}

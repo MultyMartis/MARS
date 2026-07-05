@@ -1,0 +1,56 @@
+{
+  "phase": "V9-06E3",
+  "generated_at": "2026-07-06T04:30:00+07:00",
+  "authority_chain": "D9-R through D9-Y; E3 re-validation only",
+  "checks": [
+    {
+      "area": "top_level_reviews_admin",
+      "expected": "fp02-reviews screen exists",
+      "actual": "documented D9-U/D9-X; DB fp02-reviews_reviews_enabled=1",
+      "result": "PASS"
+    },
+    {
+      "area": "source_mode",
+      "expected": "OPTIONS",
+      "actual": "OPTIONS",
+      "result": "PASS"
+    },
+    {
+      "area": "home_slider_reads_admin_source",
+      "expected": "Андрей, Москва first review",
+      "actual": true,
+      "result": "PASS"
+    },
+    {
+      "area": "otzyvy_archive_reads_admin_source",
+      "expected": "Андрей, Москва first review",
+      "actual": true,
+      "result": "PASS"
+    },
+    {
+      "area": "first_review_author",
+      "expected": "Андрей, Москва",
+      "actual": "Андрей, Москва",
+      "result": "PASS"
+    },
+    {
+      "area": "duplicate_reviews_in_site_settings",
+      "expected": "ABSENT",
+      "actual": "ABSENT",
+      "result": "PASS",
+      "notes": "D9-W trashed stale duplicate groups; 3 trashed + 2 publish ACF review groups remain harmless residue"
+    },
+    {
+      "area": "home_reviews_teaser_blocker",
+      "expected": "ABSENT",
+      "actual": "ABSENT",
+      "result": "PASS"
+    }
+  ],
+  "acf_review_groups_publish": 2,
+  "acf_trashed_review_groups": 3,
+  "operator_confirmation": "PASS",
+  "operator_confirmation_source": "D9-Y",
+  "result": "PASS",
+  "reviews_chain": "CLOSED"
+}

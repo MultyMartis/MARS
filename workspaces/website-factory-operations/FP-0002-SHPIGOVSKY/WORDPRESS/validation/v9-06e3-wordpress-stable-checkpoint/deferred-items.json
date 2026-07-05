@@ -1,0 +1,47 @@
+{
+  "phase": "V9-06E3",
+  "generated_at": "2026-07-06T04:30:00+07:00",
+  "items": [
+    {
+      "item": "production_migration",
+      "status": "DEFERRED",
+      "notes": "Local runtime stable checkpoint only; not production release"
+    },
+    {
+      "item": "pixel_perfect_full_site_visual_signoff",
+      "status": "DEFERRED",
+      "notes": "Operator/manual future pass; D9-A gaps may remain on non-key surfaces"
+    },
+    {
+      "item": "legacy_pages_not_public_authority",
+      "status": "DEFERRED",
+      "notes": "IDs #6-10, #17, #19, #25 preserved; operator review as needed"
+    },
+    {
+      "item": "page_21_legal_hub",
+      "status": "DEFERRED",
+      "notes": "Preserved as draft; not public/footer authority per E2"
+    },
+    {
+      "item": "acf_duplicate_trashed_groups",
+      "status": "DEFERRED",
+      "notes": "3 trashed + 2 publish reviews-related ACF DB groups; harmless historical residue per D9-W/D9-Z"
+    },
+    {
+      "item": "admin_authenticated_screenshots",
+      "status": "PARTIAL",
+      "notes": "Login gate; functional evidence from D9-P/Y + source/DB in E3"
+    },
+    {
+      "item": "acf_extended_pro_usage_policy",
+      "status": "DEFERRED",
+      "notes": "Installed/active but not default-approved for FP-0002; operator-managed boundary"
+    },
+    {
+      "item": "page_6_service_73_path_collision",
+      "status": "DEFERRED",
+      "notes": "Secondary ownership debt documented D5; not E3 blocker"
+    }
+  ],
+  "result": "DOCUMENTED"
+}

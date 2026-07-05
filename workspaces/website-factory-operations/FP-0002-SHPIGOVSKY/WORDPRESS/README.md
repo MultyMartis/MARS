@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E2 LEGAL LAYOUT + MENU ALIGNMENT REPAIR PASS — legal width caps removed; footer legal menu aligned (4 links); primary menu matches static V9; #21 hub draft/unlinked; NEXT: E3 stable checkpoint
+**Status:** V9-06E3 WORDPRESS STABLE CHECKPOINT DECLARED — local runtime STABLE_LOCAL after D9/E0/E1/E2; routes/menus/legal/reviews READY; admin screenshots PARTIAL; NEXT: E4 operator final visual pass
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---
@@ -293,4 +293,8 @@ D9-V **PARTIAL PASS**: Read-only reconciliation audit. Operator findings after D
 
 ## V9-06D9-Z WordPress readiness audit (2026-07-06)
 
-D9-Z **PARTIAL PASS**: Holistic read-only readiness audit after D9-L through D9-Y. Runtime/routes/frontend/Reviews **READY/CLOSED**; content/legal **NEEDS_OPERATOR_REVIEW**; admin/ACF **PARTIAL**. 8/8 key routes HTTP 200; 5 frontend + 3 admin (login gate) screenshots. Zero mutations. Strict HEAD gate **PASS** (`00c9db03`). WordPress stable checkpoint **NOT READY**. Evidence: `validation/v9-06d9z-wordpress-readiness-audit/`. Report: `reports/FP-0002-V9-06D9Z-WORDPRESS-READINESS-AUDIT-REPORT-v1.md`. Next: **CREATE_V9_06E0_LEGAL_NATIVE_CONTENT_REVIEW_TASK**.
+D9-Z **PARTIAL PASS**: Holistic read-only readiness audit after D9-L through D9-Y. Runtime/routes/frontend key surfaces **READY**; Reviews chain **CLOSED**; admin/ACF **PARTIAL**; content/legal **NEEDS_OPERATOR_REVIEW** at D9-Z time — subsequently repaired E0→E2. Evidence: `validation/v9-06d9z-wordpress-readiness-audit/`. Report: `reports/FP-0002-V9-06D9Z-WORDPRESS-READINESS-AUDIT-REPORT-v1.md`. Superseded by E3 stable checkpoint.
+
+## V9-06E3 WordPress stable checkpoint (2026-07-06)
+
+E3 **PASS**: Read-only stable checkpoint after E2. Runtime **STABLE_LOCAL**; routes 13/13 PASS; menus/footer/legal/reviews **READY**; admin editability **PARTIAL** (auth screenshots); 11/11 frontend screenshots PASS. Stable checkpoint **DECLARED** at HEAD `e3ec2022`. Zero DB/source/theme/ACF JSON/runtime mutations. Evidence: `validation/v9-06e3-wordpress-stable-checkpoint/`. Report: `reports/FP-0002-V9-06E3-WORDPRESS-STABLE-CHECKPOINT-REPORT-v1.md`. Next: **CREATE_V9_06E4_OPERATOR_FINAL_VISUAL_PASS_TASK**.
