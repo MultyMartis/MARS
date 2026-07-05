@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-06 (V9-06D9-Q reviews include planning complete)
+**Last updated:** 2026-07-06 (V9-06D9-R reviews shared include implementation complete)
 
-**Current WordPress phase:** V9-06D9-Q Reviews Include Planning **PASS** — read-only architecture planning; recommended **Hybrid E** (ACF Options shared reviews on `fp02-site-settings` + shared theme include + static V9 fallback); deprecate unwired `home_reviews_teaser` on Home admin in D9-R; frontend Home reviews stable (10 static slides, Swiper OK). Implementation **not** authorized in D9-Q. Prior: D9-P Admin UX QA PARTIAL PASS; D9-P scope drift corrective `fae4cd07`. **Next: D9-R shared include source/schema implementation.** Report: `WORDPRESS/reports/FP-0002-V9-06D9Q-REVIEWS-INCLUDE-PLANNING-REPORT-v1.md`. Prior D9-P: `WORDPRESS/reports/FP-0002-V9-06D9P-ADMIN-UX-QA-REPORT-v1.md`.
+**Current WordPress phase:** V9-06D9-R Reviews Shared Include Implementation **PASS** — Hybrid E implemented: ACF Options `group_fp02_site_options_reviews`, shared helper/include, Home + `/otzyvy/` wired, static V9 10-slide fallback preserved, `home_reviews_teaser` removed from Home admin group. No reviews seed. **Next: D9-S controlled reviews options seed.** Report: `WORDPRESS/reports/FP-0002-V9-06D9R-REVIEWS-SHARED-INCLUDE-IMPLEMENTATION-REPORT-v1.md`. Prior D9-Q: `WORDPRESS/reports/FP-0002-V9-06D9Q-REVIEWS-INCLUDE-PLANNING-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

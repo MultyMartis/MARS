@@ -1,0 +1,228 @@
+{
+    "key": "group_fp02_site_options_reviews",
+    "title": "Site Options — Reviews",
+    "fields": [
+        {
+            "key": "field_fp02_reviews_enabled",
+            "label": "Включить блок отзывов",
+            "name": "reviews_enabled",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Отключите, чтобы скрыть блок отзывов на главной и странице /otzyvy/.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Да",
+            "ui_off_text": "Нет"
+        },
+        {
+            "key": "field_fp02_reviews_section_heading",
+            "label": "Заголовок блока отзывов",
+            "name": "reviews_section_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Общий заголовок для блока отзывов. Если пусто — используется заголовок Home или «Отзывы».",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Отзывы"
+        },
+        {
+            "key": "field_fp02_reviews_items",
+            "label": "Отзывы",
+            "name": "reviews_items",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Site-wide reviews source. Если пусто — на фронтенде используется статический V9 fallback.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "layout": "row",
+            "button_label": "Добавить отзыв",
+            "min": 0,
+            "max": 50,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_review_author",
+                    "label": "Автор",
+                    "name": "review_author",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_fp02_review_text",
+                    "label": "Текст отзыва",
+                    "name": "review_text",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "rows": 5
+                },
+                {
+                    "key": "field_fp02_review_context",
+                    "label": "Контекст / роль",
+                    "name": "review_context",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_fp02_review_source",
+                    "label": "Источник",
+                    "name": "review_source",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_fp02_review_date",
+                    "label": "Дата",
+                    "name": "review_date",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_fp02_review_rating",
+                    "label": "Оценка (1–5)",
+                    "name": "review_rating",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 5,
+                    "placeholder": "",
+                    "min": 1,
+                    "max": 5,
+                    "step": 1
+                },
+                {
+                    "key": "field_fp02_review_visible",
+                    "label": "Показывать",
+                    "name": "review_visible",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 1,
+                    "ui": 1,
+                    "ui_on_text": "Да",
+                    "ui_off_text": "Нет"
+                },
+                {
+                    "key": "field_fp02_review_featured",
+                    "label": "В слайдере на главной",
+                    "name": "review_featured",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 1,
+                    "ui": 1,
+                    "ui_on_text": "Да",
+                    "ui_off_text": "Нет"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "fp02-site-settings"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "FP-0002 V9-06D9-R shared reviews options. Values seeded in D9-S; static V9 fallback when empty.",
+    "show_in_rest": 0,
+    "modified": 1783511700
+}

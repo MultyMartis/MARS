@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D9-Q REVIEWS INCLUDE PLANNING PASS — NEXT: D9-R shared include implementation
+**Status:** V9-06D9-R REVIEWS SHARED INCLUDE IMPLEMENTATION PASS — NEXT: D9-S controlled reviews options seed
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---
@@ -65,7 +65,7 @@ WORDPRESS/
 |---------|----------------|
 | Theme | V9-06D7-E CONTACTS TEMPLATE RUNTIME DELIVERED — D7-E contacts stacks live in local runtime |
 | Shpigovsky Core | V9-06D.2 CONTENT MODEL RUNTIME DELIVERED — OBJECT SKELETON COMPLETE |
-| ACF JSON | V9-06D.1 DELIVERED — 13 LOCAL JSON FILES; V9-06D.2 object meta only |
+| ACF JSON | V9-06D9-R DELIVERED — 14 LOCAL JSON FILES; shared reviews options group added |
 
 ## Provenance
 
@@ -270,3 +270,7 @@ D9-P Admin UX QA commit `b8361aad` was **mixed-scope**: 28 valid FP-0002 D9-P ev
 ## V9-06D9-Q reviews include planning (2026-07-06)
 
 D9-Q **PASS**: Read-only architecture planning. Recommended **Hybrid E** — ACF Options shared reviews on `fp02-site-settings` + shared theme include + static V9 fallback; deprecate `home_reviews_teaser` on Home admin in D9-R. Frontend smoke PASS. Zero DB/source/ACF JSON/value/runtime mutations. Evidence: `validation/v9-06d9q-reviews-include-planning/`. Report: `reports/FP-0002-V9-06D9Q-REVIEWS-INCLUDE-PLANNING-REPORT-v1.md`. Next: D9-R shared include source/schema implementation.
+
+## V9-06D9-R reviews shared include implementation (2026-07-06)
+
+D9-R **PASS**: Shared reviews architecture implemented — `inc/reviews-helpers.php`, `template-parts/shared/reviews-slider.php`, Home thin wrapper, `/otzyvy/` wired to shared include; ACF Options group `group_fp02_site_options_reviews` on `fp02-site-settings`; `home_reviews_teaser` removed from Home group JSON (orphan meta preserved). DB checkpoint before ACF sync. Bounded runtime delivery + `wp acf json sync` (14 groups). Static V9 10-slide fallback preserved; routes ALL_200. No reviews seed, no ACF value writes. Admin screenshots PARTIAL (headless). Evidence: `validation/v9-06d9r-reviews-shared-include-implementation/`. Report: `reports/FP-0002-V9-06D9R-REVIEWS-SHARED-INCLUDE-IMPLEMENTATION-REPORT-v1.md`. Next: D9-S controlled reviews options seed.

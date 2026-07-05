@@ -1,0 +1,38 @@
+{
+  "phase": "V9-06D9-R",
+  "generated_at": "2026-07-06T00:36:43.972539+07:00",
+  "components": [
+    {
+      "component": "inc/reviews-helpers.php",
+      "action": "CREATE",
+      "safety": "read-only helpers + static fallback"
+    },
+    {
+      "component": "template-parts/shared/reviews-slider.php",
+      "action": "CREATE",
+      "safety": "shared markup"
+    },
+    {
+      "component": "template-parts/home/reviews.php",
+      "action": "UPDATE",
+      "safety": "thin wrapper"
+    },
+    {
+      "component": "template-parts/reviews/reviews-section.php",
+      "action": "UPDATE",
+      "safety": "wire shared include"
+    },
+    {
+      "component": "group_fp02_site_options_reviews.json",
+      "action": "CREATE",
+      "safety": "schema only"
+    },
+    {
+      "component": "group_fp02_page_home.json",
+      "action": "UPDATE",
+      "safety": "remove home_reviews_teaser field"
+    }
+  ],
+  "fallback_behavior": "options empty -> static V9 10 slides",
+  "result": "PASS"
+}

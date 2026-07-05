@@ -2,8 +2,7 @@
 /**
  * Template part: home/reviews.php
  *
- * D9-D: static V9 visual authority with theme asset fallbacks.
- * Future ACF wiring: D9-E wave.
+ * D9-R: thin wrapper around shared reviews slider include.
  *
  * @package Shpigovsky
  */
@@ -12,213 +11,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$reviews_heading = shpigovsky_home_text_or_fallback( 'home_reviews_heading', 'Отзывы' );
-
-?>
-<section data-reveal class="reviews"  aria-label="Отзывы">
-  <div class="container">
-    <div class="reviews__heading">
-      <h2 class="reviews__title"><?php echo esc_html( $reviews_heading ); ?></h2>
-      <a class="reviews__all-link" href="<?php echo esc_url( home_url( '/otzyvy/' ) ); ?>">
-        <span class="reviews__all-text">Смотреть отзывы</span>
-        <span class="reviews__all-icon" aria-hidden="true"><i class="fas fa-caret-right"></i></span>
-      </a>
-    </div>
-
-    <div class="reviews__slider swiper" data-reviews-slider>
-      <div class="reviews__wrapper swiper-wrapper">
-        <article class="reviews__slide swiper-slide">
-          <div class="reviews__card">
-            <ul class="reviews__rating" aria-label="Оценка 5 из 5">
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-            </ul>
-            <cite class="reviews__author-name">Александр, Москва</cite>
-            <blockquote class="reviews__quote">
-              <p class="reviews__text">Обратились в&nbsp;центр в&nbsp;непростой период. С&nbsp;первого контакта чувствовалось уважительное отношение и&nbsp;спокойный тон общения. Персонал отвечал на&nbsp;вопросы без спешки и&nbsp;давления.</p>
-            </blockquote>
-            <footer class="reviews__read-all">
-              <span class="reviews__read-more-text">Читать весь отзыв</span>
-            </footer>
-          </div>
-        </article>
-
-        <article class="reviews__slide swiper-slide">
-          <div class="reviews__card">
-            <ul class="reviews__rating" aria-label="Оценка 5 из 5">
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-            </ul>
-            <cite class="reviews__author-name">Мария, Московская область</cite>
-            <blockquote class="reviews__quote">
-              <p class="reviews__text">Для нас было важно, что в&nbsp;центре поддерживают спокойную обстановку. Пространство организовано аккуратно, без ощущения формального учреждения. Это помогло легче адаптироваться.</p>
-            </blockquote>
-            <footer class="reviews__read-all">
-              <span class="reviews__read-more-text">Читать весь отзыв</span>
-            </footer>
-          </div>
-        </article>
-
-        <article class="reviews__slide swiper-slide">
-          <div class="reviews__card">
-            <ul class="reviews__rating" aria-label="Оценка 5 из 5">
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-            </ul>
-            <cite class="reviews__author-name">Елена, Москва</cite>
-            <blockquote class="reviews__quote">
-              <p class="reviews__text">Понравилось, что этапы сопровождения объясняли простым языком. Мы понимали, что происходит на&nbsp;каждом шаге, и&nbsp;могли спокойно планировать визиты и&nbsp;общение с&nbsp;специалистами.</p>
-            </blockquote>
-            <footer class="reviews__read-all">
-              <span class="reviews__read-more-text">Читать весь отзыв</span>
-            </footer>
-          </div>
-        </article>
-
-        <article class="reviews__slide swiper-slide">
-          <div class="reviews__card">
-            <ul class="reviews__rating" aria-label="Оценка 5 из 5">
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-            </ul>
-            <cite class="reviews__author-name">Игорь, Московская область</cite>
-            <blockquote class="reviews__quote">
-              <p class="reviews__text">Семье было важно получать понятную обратную связь. Сотрудники центра поддерживали контакт, отвечали на&nbsp;звонки и&nbsp;помогали сохранять спокойствие в&nbsp;сложной ситуации.</p>
-            </blockquote>
-            <footer class="reviews__read-all">
-              <span class="reviews__read-more-text">Читать весь отзыв</span>
-            </footer>
-          </div>
-        </article>
-
-        <article class="reviews__slide swiper-slide">
-          <div class="reviews__card">
-            <ul class="reviews__rating" aria-label="Оценка 5 из 5">
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-            </ul>
-            <cite class="reviews__author-name">Наталья, Москва</cite>
-            <blockquote class="reviews__quote">
-              <p class="reviews__text">Отметила внимательное отношение персонала к&nbsp;мелочам быта и&nbsp;режима. В&nbsp;центре создают условия, в&nbsp;которых проще сосредоточиться на&nbsp;восстановлении и&nbsp;ежедневных задачах.</p>
-            </blockquote>
-            <footer class="reviews__read-all">
-              <span class="reviews__read-more-text">Читать весь отзыв</span>
-            </footer>
-          </div>
-        </article>
-
-        <article class="reviews__slide swiper-slide">
-          <div class="reviews__card">
-            <ul class="reviews__rating" aria-label="Оценка 5 из 5">
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-            </ul>
-            <cite class="reviews__author-name">Сергей, Московская область</cite>
-            <blockquote class="reviews__quote">
-              <p class="reviews__text">Комфортные условия проживания и&nbsp;чёткий распорядок помогли быстрее войти в&nbsp;рабочий ритм. Атмосфера в&nbsp;центре дружелюбная, без излишней официальности.</p>
-            </blockquote>
-            <footer class="reviews__read-all">
-              <span class="reviews__read-more-text">Читать весь отзыв</span>
-            </footer>
-          </div>
-        </article>
-
-        <article class="reviews__slide swiper-slide">
-          <div class="reviews__card">
-            <ul class="reviews__rating" aria-label="Оценка 5 из 5">
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-            </ul>
-            <cite class="reviews__author-name">Анна, Москва</cite>
-            <blockquote class="reviews__quote">
-              <p class="reviews__text">Ценим деликатный подход к&nbsp;личной информации. Вопросы конфиденциальности обсуждали заранее, и&nbsp;это создало дополнительное чувство безопасности для всей семьи.</p>
-            </blockquote>
-            <footer class="reviews__read-all">
-              <span class="reviews__read-more-text">Читать весь отзыв</span>
-            </footer>
-          </div>
-        </article>
-
-        <article class="reviews__slide swiper-slide">
-          <div class="reviews__card">
-            <ul class="reviews__rating" aria-label="Оценка 5 из 5">
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-            </ul>
-            <cite class="reviews__author-name">Дмитрий, Московская область</cite>
-            <blockquote class="reviews__quote">
-              <p class="reviews__text">Понравилась последовательность в&nbsp;организации помощи: от&nbsp;первичной консультации до&nbsp;ежедневного сопровождения. Команда работает согласованно и&nbsp;внимательно относится к&nbsp;запросам.</p>
-            </blockquote>
-            <footer class="reviews__read-all">
-              <span class="reviews__read-more-text">Читать весь отзыв</span>
-            </footer>
-          </div>
-        </article>
-
-        <article class="reviews__slide swiper-slide">
-          <div class="reviews__card">
-            <ul class="reviews__rating" aria-label="Оценка 5 из 5">
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-            </ul>
-            <cite class="reviews__author-name">Ольга, Москва</cite>
-            <blockquote class="reviews__quote">
-              <p class="reviews__text">Сотрудники центра оперативно отвечали на&nbsp;вопросы и&nbsp;поддерживали контакт с&nbsp;родственниками. Такая обратная связь помогала чувствовать, что процесс под контролем.</p>
-            </blockquote>
-            <footer class="reviews__read-all">
-              <span class="reviews__read-more-text">Читать весь отзыв</span>
-            </footer>
-          </div>
-        </article>
-
-        <article class="reviews__slide swiper-slide">
-          <div class="reviews__card">
-            <ul class="reviews__rating" aria-label="Оценка 5 из 5">
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-              <li class="reviews__star" aria-hidden="true"><i class="fas fa-star"></i></li>
-            </ul>
-            <cite class="reviews__author-name">Михаил, Московская область</cite>
-            <blockquote class="reviews__quote">
-              <p class="reviews__text">В&nbsp;центре чувствуется человеческое отношение: специалисты говорят спокойно, слушают и&nbsp;не&nbsp;обесценивают переживания. Именно это для нас стало решающим при выборе.</p>
-            </blockquote>
-            <footer class="reviews__read-all">
-              <span class="reviews__read-more-text">Читать весь отзыв</span>
-            </footer>
-          </div>
-        </article>
-      </div>
-
-      <div class="reviews__pagination swiper-pagination" data-reviews-pagination></div>
-    </div>
-  </div>
-</section>
+get_template_part(
+	'template-parts/shared/reviews-slider',
+	null,
+	array(
+		'context'       => 'home',
+		'limit'         => 10,
+		'featured_only' => true,
+		'section_class' => 'reviews',
+		'show_heading'  => true,
+		'show_all_link' => true,
+	)
+);

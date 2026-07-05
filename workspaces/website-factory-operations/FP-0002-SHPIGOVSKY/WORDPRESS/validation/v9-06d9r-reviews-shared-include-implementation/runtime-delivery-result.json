@@ -1,0 +1,52 @@
+{
+  "phase": "V9-06D9-R",
+  "generated_at": "2026-07-06T00:36:44.033166+07:00",
+  "theme_files": [
+    {
+      "file": "inc/reviews-helpers.php",
+      "source_sha256": "52A5860BF863221F53C578DEFB876EADC2419C4F855FB3AC69CA134E37862CB3",
+      "target_sha256": "52A5860BF863221F53C578DEFB876EADC2419C4F855FB3AC69CA134E37862CB3",
+      "checksum_match": true
+    },
+    {
+      "file": "template-parts/shared/reviews-slider.php",
+      "source_sha256": "7272408B402570299366AA7C3BC15C9F9442C6E882D7CB25C3F139A96EB3C8C6",
+      "target_sha256": "7272408B402570299366AA7C3BC15C9F9442C6E882D7CB25C3F139A96EB3C8C6",
+      "checksum_match": true
+    },
+    {
+      "file": "template-parts/home/reviews.php",
+      "source_sha256": "B0114F373EEF52467B8B810E2E2AC1040582D0F00DA678524B55983FD7C495B0",
+      "target_sha256": "B0114F373EEF52467B8B810E2E2AC1040582D0F00DA678524B55983FD7C495B0",
+      "checksum_match": true
+    },
+    {
+      "file": "template-parts/reviews/reviews-section.php",
+      "source_sha256": "08D8C81D3F9E769CD70C64471C28DD3BDD75FCE70D38B298D156F4EB5A4C7C45",
+      "target_sha256": "08D8C81D3F9E769CD70C64471C28DD3BDD75FCE70D38B298D156F4EB5A4C7C45",
+      "checksum_match": true
+    },
+    {
+      "file": "functions.php",
+      "source_sha256": "26E92E9156561F89176F3EA956B74C63C72010E88C8B0BD302ED92C562658616",
+      "target_sha256": "26E92E9156561F89176F3EA956B74C63C72010E88C8B0BD302ED92C562658616",
+      "checksum_match": true
+    }
+  ],
+  "acf_json_files": [
+    {
+      "file": "group_fp02_site_options_reviews.json",
+      "source_sha256": "0BA9211AFE261FFE5EC04563F3175668E2B523C1DB6D73B513AFDEC82FD01EBE",
+      "target_sha256": "0BA9211AFE261FFE5EC04563F3175668E2B523C1DB6D73B513AFDEC82FD01EBE",
+      "checksum_match": true
+    },
+    {
+      "file": "group_fp02_page_home.json",
+      "source_sha256": "0819CCE673844BD824C1585C6EC390C288E920D2407079FFEA813D33D6B8D9A1",
+      "target_sha256": "0819CCE673844BD824C1585C6EC390C288E920D2407079FFEA813D33D6B8D9A1",
+      "checksum_match": true
+    }
+  ],
+  "runtime_deletes": 0,
+  "result": "PASS"
+}

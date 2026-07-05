@@ -1,0 +1,17 @@
+{
+  "phase": "V9-06D9-R",
+  "generated_at": "2026-07-06T00:36:50.255114+07:00",
+  "site_settings_options_page": "fp02-site-settings",
+  "reviews_options_group_in_db": true,
+  "reviews_items_required": false,
+  "home_reviews_teaser_in_home_group_db": false,
+  "home_reviews_teaser_orphan_meta_preserved": true,
+  "home_reviews_teaser_orphan_meta_keys": [
+    "home_reviews_teaser_0_title",
+    "home_reviews_teaser_0_text",
+    "home_reviews_teaser"
+  ],
+  "home_reviews_heading_preserved_in_json": true,
+  "notes": "Live wp-admin UI not captured in headless run; DB/JSON checks used.",
+  "result": "PASS"
+}

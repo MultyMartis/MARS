@@ -1,0 +1,71 @@
+{
+  "phase": "V9-06D9-R",
+  "generated_at": "2026-07-06T00:36:43.964365+07:00",
+  "path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d9r-reviews-shared-include-pre-20260706-003643",
+  "db_dump": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d9r-reviews-shared-include-pre-20260706-003643/mars_wp_fp0002.sql",
+  "db_dump_bytes": 1300034,
+  "db_dump_sha256": "7BC9501AC40A5C0DF6859EFE3448ED33E062F3ACADB8F62F02C43BE1ADEE5236",
+  "acf_groups_before_count": 13,
+  "acf_groups_before": [
+    {
+      "key": "group_fp02_blog_post_article_meta",
+      "title": "Blog Post — Article Meta"
+    },
+    {
+      "key": "group_fp02_page_contacts",
+      "title": "Page — Contacts"
+    },
+    {
+      "key": "group_fp02_page_home",
+      "title": "Page — Home"
+    },
+    {
+      "key": "group_fp02_page_institutional",
+      "title": "Page — Institutional"
+    },
+    {
+      "key": "group_fp02_page_legal",
+      "title": "Page — Legal"
+    },
+    {
+      "key": "group_fp02_page_reviews",
+      "title": "Page — Reviews"
+    },
+    {
+      "key": "group_fp02_page_services_hub",
+      "title": "Page — Services Hub"
+    },
+    {
+      "key": "group_fp02_service_faq",
+      "title": "Service — FAQ"
+    },
+    {
+      "key": "group_fp02_service_layout_hero",
+      "title": "Service — Layout and Hero"
+    },
+    {
+      "key": "group_fp02_service_relationships",
+      "title": "Service — Relationships / Related Services"
+    },
+    {
+      "key": "group_fp02_service_structured_sections",
+      "title": "Service — Structured Sections"
+    },
+    {
+      "key": "group_fp02_site_options_contacts",
+      "title": "Site Options — Contacts and Organisation"
+    },
+    {
+      "key": "group_fp02_site_options_modal_cta",
+      "title": "Site Options — Modal and Global CTA"
+    }
+  ],
+  "home_page_4_reviews_meta_before": {
+    "home_reviews_heading": "Отзывы",
+    "home_reviews_teaser_0_title": "3123123",
+    "home_reviews_teaser_0_text": "12",
+    "home_reviews_teaser": "1"
+  },
+  "restore_instructions": "mysql --host=127.0.0.1 --user=root mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d9r-reviews-shared-include-pre-20260706-003643\\mars_wp_fp0002.sql\"",
+  "result": "PASS"
+}

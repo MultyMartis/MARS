@@ -1,0 +1,75 @@
+{
+  "phase": "V9-06D9-R",
+  "generated_at": "2026-07-06T00:36:45.720956+07:00",
+  "method": "wp acf json sync",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "groups_synced": [
+    "group_fp02_site_options_reviews",
+    "group_fp02_page_home"
+  ],
+  "acf_groups_after_count": 14,
+  "acf_groups_after": [
+    {
+      "key": "group_fp02_blog_post_article_meta",
+      "title": "Blog Post — Article Meta"
+    },
+    {
+      "key": "group_fp02_page_contacts",
+      "title": "Page — Contacts"
+    },
+    {
+      "key": "group_fp02_page_home",
+      "title": "Page — Home"
+    },
+    {
+      "key": "group_fp02_page_institutional",
+      "title": "Page — Institutional"
+    },
+    {
+      "key": "group_fp02_page_legal",
+      "title": "Page — Legal"
+    },
+    {
+      "key": "group_fp02_page_reviews",
+      "title": "Page — Reviews"
+    },
+    {
+      "key": "group_fp02_page_services_hub",
+      "title": "Page — Services Hub"
+    },
+    {
+      "key": "group_fp02_service_faq",
+      "title": "Service — FAQ"
+    },
+    {
+      "key": "group_fp02_service_layout_hero",
+      "title": "Service — Layout and Hero"
+    },
+    {
+      "key": "group_fp02_service_relationships",
+      "title": "Service — Relationships / Related Services"
+    },
+    {
+      "key": "group_fp02_service_structured_sections",
+      "title": "Service — Structured Sections"
+    },
+    {
+      "key": "group_fp02_site_options_contacts",
+      "title": "Site Options — Contacts and Organisation"
+    },
+    {
+      "key": "group_fp02_site_options_modal_cta",
+      "title": "Site Options — Modal and Global CTA"
+    },
+    {
+      "key": "group_fp02_site_options_reviews",
+      "title": "Site Options — Reviews"
+    }
+  ],
+  "group_fp02_site_options_reviews_in_db": true,
+  "group_fp02_page_home_has_home_reviews_teaser": false,
+  "acf_option_value_writes": 0,
+  "result": "PASS"
+}

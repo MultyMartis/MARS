@@ -253,64 +253,6 @@
             ]
         },
         {
-            "key": "field_fp02_home_reviews_teaser",
-            "label": "Reviews teaser",
-            "name": "home_reviews_teaser",
-            "aria-label": "",
-            "type": "repeater",
-            "instructions": "Bounded repeater. Max rows are enforced in source and validation hooks.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "layout": "row",
-            "button_label": "Добавить",
-            "min": 0,
-            "max": 6,
-            "sub_fields": [
-                {
-                    "key": "field_fp02_home_reviews_teaser_title",
-                    "label": "Заголовок",
-                    "name": "title",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": ""
-                },
-                {
-                    "key": "field_fp02_home_reviews_teaser_text",
-                    "label": "Текст",
-                    "name": "text",
-                    "aria-label": "",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "rows": 3
-                }
-            ]
-        },
-        {
             "key": "field_fp02_home_blog_teaser_enabled",
             "label": "Blog teaser enabled",
             "name": "home_blog_teaser_enabled",
@@ -671,5 +613,5 @@
     "active": true,
     "description": "FP-0002 V9-06C canonical source field group. Runtime registration occurs only after delivery authorization.",
     "show_in_rest": 0,
-    "modified": 1783203300
+    "modified": 1783511700
 }
