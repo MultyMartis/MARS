@@ -1,0 +1,68 @@
+{
+  "phase": "V9-06E1",
+  "generated_at": "2026-07-06T03:53:07.859707+07:00",
+  "authority_root": "X:/AI MARS/workspaces/fp-0002-shpigovsky-v9/src",
+  "pages": [
+    {
+      "key": "privacy-policy",
+      "title": "Политика конфиденциальности",
+      "source_path": "X:/AI MARS/workspaces/fp-0002-shpigovsky-v9/src/partials/sections/legal/content/privacy-policy-body.html",
+      "page_source_path": "X:/AI MARS/workspaces/fp-0002-shpigovsky-v9/src/pages/privacy-policy.html",
+      "dist_path": "X:/AI MARS/workspaces/fp-0002-shpigovsky-v9/dist/privacy-policy/index.html",
+      "extraction_method": "src_body_partial_exact",
+      "extracted_title": "Политика конфиденциальности",
+      "extracted_body_length": 7472,
+      "extracted_body_sha256": "588845cf73e2955656d3166e684c4f722b625aa929953a0821bba941f0502f28",
+      "sample_beginning": "<p>Настоящая Политика конфиденциальности (далее&nbsp;— Политика) разработана в&nbsp;соответствии с&nbsp;Федеральным законом от&nbsp;27.07.2006 №&nbsp;152-ФЗ «О&",
+      "sample_ending": "чаях, предусмотренных законом.</p> <h2>Изменение Политики</h2> <p>Оператор вправе вносить изменения в&nbsp;настоящую Политику. Актуальная версия всегда доступна",
+      "exact_one_to_one": true,
+      "result": "FOUND"
+    },
+    {
+      "key": "user-agreement",
+      "title": "Пользовательское соглашение",
+      "source_path": "X:/AI MARS/workspaces/fp-0002-shpigovsky-v9/src/partials/sections/legal/content/user-agreement-body.html",
+      "page_source_path": "X:/AI MARS/workspaces/fp-0002-shpigovsky-v9/src/pages/user-agreement.html",
+      "dist_path": "X:/AI MARS/workspaces/fp-0002-shpigovsky-v9/dist/user-agreement/index.html",
+      "extraction_method": "src_body_partial_exact",
+      "extracted_title": "Пользовательское соглашение",
+      "extracted_body_length": 5696,
+      "extracted_body_sha256": "47e15c92fb21ab0aa6fa0100190210af4637e08adc80ae65f26b5005b61b4e50",
+      "sample_beginning": "<p>Настоящее Пользовательское соглашение (далее&nbsp;— Соглашение) регулирует отношения между [ДЕМО: полное наименование владельца сайта] ([ДЕМО: организационно",
+      "sample_ending": "рению.</p> <p>Актуальная версия Соглашения размещается по&nbsp;адресу: <a href=\"/user-agreement/\">/user-agreement/</a>.</p> <h2>Контактные данные</h2> <p>По&nbs",
+      "exact_one_to_one": true,
+      "result": "FOUND"
+    },
+    {
+      "key": "consent-personal-data",
+      "title": "Согласие на обработку персональных данных",
+      "source_path": "X:/AI MARS/workspaces/fp-0002-shpigovsky-v9/src/partials/sections/legal/content/consent-personal-data-body.html",
+      "page_source_path": "X:/AI MARS/workspaces/fp-0002-shpigovsky-v9/src/pages/consent-personal-data.html",
+      "dist_path": "X:/AI MARS/workspaces/fp-0002-shpigovsky-v9/dist/consent-personal-data/index.html",
+      "extraction_method": "src_body_partial_exact",
+      "extracted_title": "Согласие на обработку персональных данных",
+      "extracted_body_length": 3054,
+      "extracted_body_sha256": "8ac8489399253c5d9e92dc46643a86289bfc27d32f7560af69df7bd8a689e866",
+      "sample_beginning": "<p>Я, заполняя формы на&nbsp;сайте shpigovsky.ru, даю своё согласие [ДЕМО: полное наименование владельца сайта] ([ДЕМО: организационно-правовая форма]) (далее&n",
+      "sample_ending": "=\"/privacy-policy/\">Политикой конфиденциальности</a> сайта shpigovsky.ru.</p> <p>Текст настоящего Согласия размещён по&nbsp;адресу <a href=\"/consent-personal-da",
+      "exact_one_to_one": true,
+      "result": "FOUND"
+    },
+    {
+      "key": "cookie-files-policy",
+      "title": "Политика Cookie-файлов",
+      "source_path": "X:/AI MARS/workspaces/fp-0002-shpigovsky-v9/src/partials/sections/legal/content/cookie-files-policy-body.html",
+      "page_source_path": "X:/AI MARS/workspaces/fp-0002-shpigovsky-v9/src/pages/cookie-files-policy.html",
+      "dist_path": "X:/AI MARS/workspaces/fp-0002-shpigovsky-v9/dist/cookie-files-policy/index.html",
+      "extraction_method": "src_body_partial_exact",
+      "extracted_title": "Политика Cookie-файлов",
+      "extracted_body_length": 6226,
+      "extracted_body_sha256": "a06f0209c5b3379941242a2550a623cadbeb998ef06485179b83e81eb5f8809d",
+      "sample_beginning": "<p>Настоящая Политика Cookie-файлов (далее&nbsp;— Политика) описывает, какие cookie могут использоваться на&nbsp;сайте shpigovsky.ru, принадлежащем [ДЕМО: полно",
+      "sample_ending": "</tr> </tbody> </table> </div> <h2>Изменение Политики</h2> <p>Оператор вправе обновлять настоящую Политику. Актуальная версия размещается по&nbsp;адресу <a href",
+      "exact_one_to_one": true,
+      "result": "FOUND"
+    }
+  ],
+  "result": "FOUND"
+}

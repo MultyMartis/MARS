@@ -1,0 +1,99 @@
+{
+  "phase": "V9-06E1",
+  "generated_at": "2026-07-05T20:54:53.848Z",
+  "screenshots": [
+    {
+      "file": "runtime-privacy-policy-seeded-e1.png",
+      "url": "http://shpigovsky.test/privacy-policy/",
+      "kind": "frontend",
+      "captured": true,
+      "bytes": 142062,
+      "sha256": "C77004603A371D8A8EDF4BFB927B71E6D20B3140DF931C449B4F72D991FBF5E1",
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "file": "runtime-user-agreement-seeded-e1.png",
+      "url": "http://shpigovsky.test/user-agreement/",
+      "kind": "frontend",
+      "captured": true,
+      "bytes": 137916,
+      "sha256": "936EAC4252F511AAF9A629EFC5209F4E40DC07826406D858DC95F84B1B375F80",
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "file": "runtime-consent-personal-data-seeded-e1.png",
+      "url": "http://shpigovsky.test/consent-personal-data/",
+      "kind": "frontend",
+      "captured": true,
+      "bytes": 130059,
+      "sha256": "31A45D6C38FDE955D577CB1D194BCC6A96D70B3E58943844735ACA8F8D349AD0",
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "file": "runtime-cookie-policy-seeded-e1.png",
+      "url": "http://shpigovsky.test/cookie-files-policy/",
+      "kind": "frontend",
+      "captured": true,
+      "bytes": 146722,
+      "sha256": "B424BD4553C16E69D054978C4FD6499BB65396422768A40244716CBB956D5CBA",
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "file": "wp-admin-privacy-policy-editor-e1.png",
+      "url": "http://shpigovsky.test/wp-admin/post.php?post=3&action=edit",
+      "kind": "admin",
+      "captured": true,
+      "bytes": 24497,
+      "sha256": "F69E38990FC1FF4E117415BD80F1F0594556D9B58C74F362BE6C960F716475B3",
+      "result": "PASS",
+      "notes": "Login gate may apply; PARTIAL if login screen"
+    },
+    {
+      "file": "wp-admin-user-agreement-editor-e1.png",
+      "url": "http://shpigovsky.test/wp-admin/post.php?post=22&action=edit",
+      "kind": "admin",
+      "captured": true,
+      "bytes": 24497,
+      "sha256": "F69E38990FC1FF4E117415BD80F1F0594556D9B58C74F362BE6C960F716475B3",
+      "result": "PASS",
+      "notes": "Login gate may apply; PARTIAL if login screen"
+    },
+    {
+      "file": "wp-admin-consent-editor-e1.png",
+      "url": "http://shpigovsky.test/wp-admin/post.php?post=23&action=edit",
+      "kind": "admin",
+      "captured": true,
+      "bytes": 24497,
+      "sha256": "F69E38990FC1FF4E117415BD80F1F0594556D9B58C74F362BE6C960F716475B3",
+      "result": "PASS",
+      "notes": "Login gate may apply; PARTIAL if login screen"
+    },
+    {
+      "file": "wp-admin-cookie-policy-editor-e1.png",
+      "url": "http://shpigovsky.test/wp-admin/post.php?post=24&action=edit",
+      "kind": "admin",
+      "captured": true,
+      "bytes": 24497,
+      "sha256": "F69E38990FC1FF4E117415BD80F1F0594556D9B58C74F362BE6C960F716475B3",
+      "result": "PASS",
+      "notes": "Login gate may apply; PARTIAL if login screen"
+    },
+    {
+      "file": "wp-admin-privacy-setting-e1.png",
+      "url": "http://shpigovsky.test/wp-admin/options-privacy.php",
+      "kind": "admin",
+      "captured": true,
+      "bytes": 24497,
+      "sha256": "F69E38990FC1FF4E117415BD80F1F0594556D9B58C74F362BE6C960F716475B3",
+      "result": "PASS",
+      "notes": "Login gate may apply; PARTIAL if login screen"
+    }
+  ],
+  "frontend_captured": 4,
+  "admin_captured": 5,
+  "result": "PASS"
+}

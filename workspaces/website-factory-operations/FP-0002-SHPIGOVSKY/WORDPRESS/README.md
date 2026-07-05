@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E0 LEGAL NATIVE CONTENT REVIEW PASS — 13 pages classified; garbled privacy #3 CONFIRMED; legal authority PARTIAL; NEXT: OPERATOR_DECISION_REQUIRED then E1 repair waves
+**Status:** V9-06E1 LEGAL STATIC COPY SEED PASS — static V9 legal bodies seeded into #3/#22/#23/#24; privacy setting #3; template render repair delivered; NEXT: E2 legal frontend visual QA
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

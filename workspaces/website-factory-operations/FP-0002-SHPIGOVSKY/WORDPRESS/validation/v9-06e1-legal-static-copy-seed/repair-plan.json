@@ -1,0 +1,42 @@
+{
+  "phase": "V9-06E1",
+  "generated_at": "2026-07-06T03:53:08.127257+07:00",
+  "components": [
+    {
+      "component": "page_3",
+      "action": "replace garbled post_content with static privacy body; publish",
+      "safety": "ALLOWED"
+    },
+    {
+      "component": "page_22",
+      "action": "seed static user agreement body",
+      "safety": "ALLOWED"
+    },
+    {
+      "component": "page_23",
+      "action": "seed static consent body",
+      "safety": "ALLOWED"
+    },
+    {
+      "component": "page_24",
+      "action": "seed static cookie policy body",
+      "safety": "ALLOWED"
+    },
+    {
+      "component": "wp_page_for_privacy_policy",
+      "action": "set to 3",
+      "safety": "ALLOWED"
+    },
+    {
+      "component": "page_25",
+      "action": "preserve untouched",
+      "safety": "ALLOWED"
+    },
+    {
+      "component": "legal_template",
+      "action": "minimal document-page the_content renderer delivered",
+      "safety": "ALLOWED"
+    }
+  ],
+  "result": "APPROVED"
+}

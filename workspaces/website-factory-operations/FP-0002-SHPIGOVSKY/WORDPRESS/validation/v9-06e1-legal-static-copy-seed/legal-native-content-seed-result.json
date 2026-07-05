@@ -1,0 +1,64 @@
+{
+  "phase": "V9-06E1",
+  "generated_at": "2026-07-06T03:53:08.134946+07:00",
+  "pages": [
+    {
+      "page_id": 3,
+      "title": "Политика конфиденциальности",
+      "route": "/privacy-policy/",
+      "before_content_length": 7472,
+      "before_content_sha256": "588845cf73e2955656d3166e684c4f722b625aa929953a0821bba941f0502f28",
+      "after_content_length": 7472,
+      "after_content_sha256": "588845cf73e2955656d3166e684c4f722b625aa929953a0821bba941f0502f28",
+      "static_source_sha256": "588845cf73e2955656d3166e684c4f722b625aa929953a0821bba941f0502f28",
+      "static_match": true,
+      "status_before": "publish",
+      "status_after": "publish",
+      "result": "SEEDED"
+    },
+    {
+      "page_id": 22,
+      "title": "Пользовательское соглашение",
+      "route": "/user-agreement/",
+      "before_content_length": 5696,
+      "before_content_sha256": "47e15c92fb21ab0aa6fa0100190210af4637e08adc80ae65f26b5005b61b4e50",
+      "after_content_length": 5696,
+      "after_content_sha256": "47e15c92fb21ab0aa6fa0100190210af4637e08adc80ae65f26b5005b61b4e50",
+      "static_source_sha256": "47e15c92fb21ab0aa6fa0100190210af4637e08adc80ae65f26b5005b61b4e50",
+      "static_match": true,
+      "status_before": "publish",
+      "status_after": "publish",
+      "result": "SEEDED"
+    },
+    {
+      "page_id": 23,
+      "title": "Согласие на обработку персональных данных",
+      "route": "/consent-personal-data/",
+      "before_content_length": 3054,
+      "before_content_sha256": "8ac8489399253c5d9e92dc46643a86289bfc27d32f7560af69df7bd8a689e866",
+      "after_content_length": 3054,
+      "after_content_sha256": "8ac8489399253c5d9e92dc46643a86289bfc27d32f7560af69df7bd8a689e866",
+      "static_source_sha256": "8ac8489399253c5d9e92dc46643a86289bfc27d32f7560af69df7bd8a689e866",
+      "static_match": true,
+      "status_before": "publish",
+      "status_after": "publish",
+      "result": "SEEDED"
+    },
+    {
+      "page_id": 24,
+      "title": "Политика Cookie-файлов",
+      "route": "/cookie-files-policy/",
+      "before_content_length": 6226,
+      "before_content_sha256": "a06f0209c5b3379941242a2550a623cadbeb998ef06485179b83e81eb5f8809d",
+      "after_content_length": 6226,
+      "after_content_sha256": "a06f0209c5b3379941242a2550a623cadbeb998ef06485179b83e81eb5f8809d",
+      "static_source_sha256": "a06f0209c5b3379941242a2550a623cadbeb998ef06485179b83e81eb5f8809d",
+      "static_match": true,
+      "status_before": "publish",
+      "status_after": "publish",
+      "result": "SEEDED"
+    }
+  ],
+  "native_content_writes": 4,
+  "result": "PASS"
+}

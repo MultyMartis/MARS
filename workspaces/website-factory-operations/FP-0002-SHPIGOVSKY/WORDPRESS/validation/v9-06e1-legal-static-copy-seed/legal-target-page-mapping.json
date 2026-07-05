@@ -1,0 +1,42 @@
+{
+  "phase": "V9-06E1",
+  "generated_at": "2026-07-06T03:53:07.860437+07:00",
+  "canonical_privacy_page_id": 3,
+  "legacy_privacy_page_id": 25,
+  "wp_page_for_privacy_policy_target": 3,
+  "mappings": [
+    {
+      "static_title": "Политика конфиденциальности",
+      "static_key": "privacy-policy",
+      "wp_page_id": 3,
+      "wp_slug": "privacy-policy",
+      "route": "/privacy-policy/",
+      "result": "MAPPED"
+    },
+    {
+      "static_title": "Пользовательское соглашение",
+      "static_key": "user-agreement",
+      "wp_page_id": 22,
+      "wp_slug": "user-agreement",
+      "route": "/user-agreement/",
+      "result": "MAPPED"
+    },
+    {
+      "static_title": "Согласие на обработку персональных данных",
+      "static_key": "consent-personal-data",
+      "wp_page_id": 23,
+      "wp_slug": "consent-personal-data",
+      "route": "/consent-personal-data/",
+      "result": "MAPPED"
+    },
+    {
+      "static_title": "Политика Cookie-файлов",
+      "static_key": "cookie-files-policy",
+      "wp_page_id": 24,
+      "wp_slug": "cookie-files-policy",
+      "route": "/cookie-files-policy/",
+      "result": "MAPPED"
+    }
+  ],
+  "result": "PASS"
+}

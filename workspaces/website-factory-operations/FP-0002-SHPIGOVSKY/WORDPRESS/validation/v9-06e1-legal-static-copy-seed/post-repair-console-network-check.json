@@ -1,0 +1,27 @@
+{
+  "phase": "V9-06E1",
+  "generated_at": "2026-07-06T03:53:18.171095+07:00",
+  "checks": [
+    {
+      "route": "/privacy-policy/",
+      "http_status": 200,
+      "network_error": null
+    },
+    {
+      "route": "/user-agreement/",
+      "http_status": 200,
+      "network_error": null
+    },
+    {
+      "route": "/consent-personal-data/",
+      "http_status": 200,
+      "network_error": null
+    },
+    {
+      "route": "/cookie-files-policy/",
+      "http_status": 200,
+      "network_error": null
+    }
+  ],
+  "result": "PASS"
+}

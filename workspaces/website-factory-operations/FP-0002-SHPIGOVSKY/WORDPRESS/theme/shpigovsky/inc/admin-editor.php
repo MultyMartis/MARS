@@ -17,6 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * Source: D9-M cleaned template-managed pages plus Home/Services/Contacts.
  * Excludes operator-review pages (IDs 3, 6–10, 17, 19, 21, 25).
+ * Legal pages #22–24 use native post_content after V9-06E1 static copy seed.
  *
  * @return int[]
  */
@@ -32,9 +33,6 @@ function shpigovsky_get_hide_native_editor_page_ids() {
 		16, // Родственникам.
 		18, // Отзывы.
 		20, // Контакты.
-		22, // Пользовательское соглашение.
-		23, // Согласие на обработку персональных данных.
-		24, // Политика Cookie-файлов.
 	);
 }
 

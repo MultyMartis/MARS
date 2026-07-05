@@ -3,7 +3,7 @@
 **Factory Project:** FP-0002 — Shpigovsky.ru  
 **Last updated:** 2026-07-06 (V9-06E0 Legal Native Content Review PASS)
 
-**Current WordPress phase:** V9-06E0 Legal Native Content Review **PASS** — Read-only classification of 13 native/legal pages complete. Garbled privacy seed on ID 3 **CONFIRMED**; WP privacy setting points to ID 25 (mismatch). Legal templates #22–24 empty; no verified Shpigovsky authoritative copy in repo. WordPress stable checkpoint **NOT READY**. **Next: OPERATOR_DECISION_REQUIRED** → E1 route/privacy repair, clear, and authoritative copy seed. Report: `WORDPRESS/reports/FP-0002-V9-06E0-LEGAL-NATIVE-CONTENT-REVIEW-REPORT-v1.md`. Prior D9-Z @ `72463299`.
+**Current WordPress phase:** V9-06E1 Legal Static Copy Seed **PASS** — static V9 legal bodies seeded into pages #3/#22/#23/#24; `wp_page_for_privacy_policy=3`; garbled privacy seed removed; minimal legal template render repair delivered. WordPress stable checkpoint **PARTIAL**. **Next: CREATE_V9_06E2_LEGAL_FRONTEND_VISUAL_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E1-LEGAL-STATIC-COPY-SEED-REPORT-v1.md`. Prior E0 @ `d11859b0`.
 
 ## Active frontend workspace (V9)
 

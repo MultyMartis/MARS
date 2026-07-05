@@ -1,0 +1,62 @@
+{
+  "phase": "V9-06E1",
+  "generated_at": "2026-07-06T03:53:13.605792+07:00",
+  "routes": [
+    {
+      "route": "/privacy-policy/",
+      "http_status": 200,
+      "expected_title_visible": true,
+      "content_visible": true,
+      "garbled_absent": true,
+      "has_legal_document_body": true,
+      "marker_present": true,
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "route": "/user-agreement/",
+      "http_status": 200,
+      "expected_title_visible": true,
+      "content_visible": true,
+      "garbled_absent": true,
+      "has_legal_document_body": true,
+      "marker_present": true,
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "route": "/consent-personal-data/",
+      "http_status": 200,
+      "expected_title_visible": true,
+      "content_visible": true,
+      "garbled_absent": true,
+      "has_legal_document_body": true,
+      "marker_present": true,
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "route": "/cookie-files-policy/",
+      "http_status": 200,
+      "expected_title_visible": true,
+      "content_visible": true,
+      "garbled_absent": true,
+      "has_legal_document_body": true,
+      "marker_present": true,
+      "result": "PASS",
+      "notes": ""
+    },
+    {
+      "route": "/privacy-policy-page/",
+      "http_status": 200,
+      "expected_title_visible": true,
+      "content_visible": false,
+      "garbled_absent": false,
+      "has_legal_document_body": false,
+      "marker_present": null,
+      "result": "PARTIAL",
+      "notes": "Legacy placeholder page preserved"
+    }
+  ],
+  "result": "PASS"
+}
