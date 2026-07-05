@@ -1,7 +1,7 @@
 # SITE-002 — Site Passport
 
 **Status:** **STABLE PRODUCTION CHECKPOINT — CRON BEGET ACTIVE 01**
-**Run:** 4.183 — SITE-002 Beget 1C Cron Active Confirmation (2026-07-06)
+**Run:** 4.184 — SITE-002 1C Cron Reports Cleanup (2026-07-06)
 
 ---
 
@@ -30,6 +30,7 @@
 | **Production baseline** | **PARENT** — [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
 | **Current Production checkpoint** | **ISSUED** — [baselines/SITE-002-STABLE-PROD-CRON-BEGET-ACTIVE-01.md](baselines/SITE-002-STABLE-PROD-CRON-BEGET-ACTIVE-01.md) |
 | **MARS 1C cron wrapper** | **ACTIVE — DAILY SCHEDULED** (Run 4.183) — Beget cron confirmed by operator; manual run SUCCESS (Run 4.181); HTTP gateway; wrapper v1.1.0; schedule `0 8 * * *` Moscow; Sergey legacy preserved; next run monitoring pending |
+| **MARS 1C cron reports** | **CLEANED** (Run 4.184) — 19 redundant setup-date TXT reports removed; 3 current files preserved; [SITE-002-PROD-CRON-REPORTS-CLEANUP-01.md](reports/SITE-002-PROD-CRON-REPORTS-CLEANUP-01.md) |
 | **Current Status** | **STABLE PRODUCTION CHECKPOINT — CRON BEGET ACTIVE 01** |
 | **Active baseline** | [baselines/SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01.md](baselines/SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01.md) · About: [M9.13-ABOUT-REDESIGN-02](baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02.md) · fonts: [LOCAL-FONTS-01](baselines/SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md) |
 | **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — incl. [§7 Filter Architecture](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#7-filter-architecture), [§8 Live Files](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#8-live-files-with-business-logic), [§14 Commercial Trust Block](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#14-commercial-trust-block), [§16 Catalog State Persistence](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#16-catalog-state-persistence), [§17 About Page History](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#17-about-page-history), [§26 Operator Manual Polish 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#26-operator-manual-polish-01--superseded-visual-baseline-retained), [§27 Local Fonts 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#27-local-fonts-01--active) |

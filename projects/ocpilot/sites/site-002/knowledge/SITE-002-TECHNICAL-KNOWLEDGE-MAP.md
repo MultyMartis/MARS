@@ -17,6 +17,7 @@
 | **Catalog default sort (Production)** | **COMPLETE** — Run 4.176; default `pd.name ASC` in `category.php` |
 | **Catalog sort menu (Production)** | **COMPLETE** — Run 4.177; menu order in `category.twig`; «Умолчанию» removed |
 | **MARS 1C cron wrapper (Production)** | **ACTIVE — DAILY SCHEDULED** — Run 4.183; Beget cron row confirmed by operator; schedule `0 8 * * *`; manual run 4.181 SUCCESS; next scheduled run monitoring pending |
+| **MARS 1C cron reports (Production)** | **CLEANED** — Run 4.184; 3 files retained in `/storage/mars-tools/cron/reports/`; setup-date diagnostic dry-run/status removed |
 
 **TEST-derived knowledge classification:** Implementation evidence and reusable technical knowledge. **Not** automatic proof of current Production parity.
 
@@ -249,6 +250,29 @@ Proven operational boundary:
 
 ```text
 MARS Beget daily 1C cron active — HTTP gateway — Sergey legacy preserved — next scheduled run monitoring pending
+```
+
+### MARS 1C cron reports cleanup (Run 4.184 — 2026-07-06)
+
+| Field | Value |
+|-------|-------|
+| Operation | `SITE-002-PROD-CRON-REPORTS-CLEANUP-01` |
+| Status | **COMPLETE — REDUNDANT TXT REPORTS REMOVED / CURRENT REPORTS PRESERVED** |
+| Reports path | `/storage/mars-tools/cron/reports/` |
+| Files before | **22** (index + 1 manual run + 1 latest status + 19 redundant dry-run/status) |
+| Files after | **3** — `index.html`, `mars_1c_import_2026-07-05_205934.txt`, `mars_1c_import_status_2026-07-05_212740.txt` |
+| Remote deletes | **19** exact TXT files (2026-07-05 dry-run/status only) |
+| Backups | MARS Storage — `deployments/SITE-002-PROD-CRON-REPORTS-CLEANUP-01/backup-deleted-reports/` |
+| Retention policy | Setup date: keep manual run SUCCESS + latest status + index guard; future: keep daily run reports, not every diagnostic dry-run/status |
+| Import in this operation | **No** |
+| Beget cron change | **No** |
+| Legacy Sergey import | **PRESERVED** |
+| Report | [../reports/SITE-002-PROD-CRON-REPORTS-CLEANUP-01.md](../reports/SITE-002-PROD-CRON-REPORTS-CLEANUP-01.md) |
+
+Proven operational boundary:
+
+```text
+MARS 1C cron reports directory cleaned — current reports preserved — wrapper/logs/cron untouched
 ```
 
 ---
