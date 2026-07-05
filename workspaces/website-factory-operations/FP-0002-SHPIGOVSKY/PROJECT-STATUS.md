@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-05 (V9-06D9-O ACF Reviews Teaser Required Flag Repair PASS)
+**Last updated:** 2026-07-05 (V9-06D9-P Admin UX QA PARTIAL PASS)
 
-**Current WordPress phase:** V9-06D9-O ACF Reviews Teaser Required Flag Repair **PASS** — `home_reviews_teaser` confirmed optional in canonical JSON and DB; missing runtime ACF JSON restored; no ACF/content/template writes; frontend regression PASS (routes ALL_200, Home 19/19 sections). Operator in-browser save QA recommended (D9-P). Report: `WORDPRESS/reports/FP-0002-V9-06D9O-ACF-REVIEWS-TEASER-REQUIRED-FLAG-REPAIR-REPORT-v1.md`. Prior: D9-N hide native editor.
+**Current WordPress phase:** V9-06D9-P Admin UX QA **PARTIAL PASS** — read-only QA after D9-L/M/N/O; Home #4 admin UX ready (ACF visible, native editor hidden, reviews teaser optional); managed pages PASS; operator-review pages preserved; frontend 19/19 sections routes ALL_200; live Home save OPERATOR_CONFIRMATION_REQUIRED. Next: D9-Q reviews include planning. Report: `WORDPRESS/reports/FP-0002-V9-06D9P-ADMIN-UX-QA-REPORT-v1.md`. Prior: D9-O reviews teaser optional repair.
 
 ## Active frontend workspace (V9)
 

@@ -1,0 +1,106 @@
+{
+  "phase": "V9-06D9-P",
+  "generated_at": "2026-07-05T16:44:08.285Z",
+  "shots": [
+    {
+      "file": "wp-admin-home-ux-d9p.png",
+      "kind": "admin",
+      "url": "http://shpigovsky.test/wp-admin/post.php?post=4&action=edit",
+      "captured": true,
+      "bytes": 51242,
+      "sha256": "859204ED5AC9E786C75E414B6A7BE00DE2168340C882A62F3A4AC6F2A6E340D4",
+      "result": "PASS",
+      "note": null
+    },
+    {
+      "file": "wp-admin-home-reviews-teaser-d9p.png",
+      "kind": "admin",
+      "url": "http://shpigovsky.test/wp-admin/post.php?post=4&action=edit",
+      "captured": true,
+      "bytes": 51242,
+      "sha256": "859204ED5AC9E786C75E414B6A7BE00DE2168340C882A62F3A4AC6F2A6E340D4",
+      "result": "PASS",
+      "note": null
+    },
+    {
+      "file": "wp-admin-services-ux-d9p.png",
+      "kind": "admin",
+      "url": "http://shpigovsky.test/wp-admin/post.php?post=5&action=edit",
+      "captured": true,
+      "bytes": 44828,
+      "sha256": "5B7A239301C173AA665DD178302648CA4D8741E5B5222AD61018DE3114263AFC",
+      "result": "PARTIAL",
+      "note": "Unauthenticated — login screen; DB/policy evidence used"
+    },
+    {
+      "file": "wp-admin-contacts-ux-d9p.png",
+      "kind": "admin",
+      "url": "http://shpigovsky.test/wp-admin/post.php?post=20&action=edit",
+      "captured": true,
+      "bytes": 44828,
+      "sha256": "5B7A239301C173AA665DD178302648CA4D8741E5B5222AD61018DE3114263AFC",
+      "result": "PARTIAL",
+      "note": "Unauthenticated — login screen; DB/policy evidence used"
+    },
+    {
+      "file": "wp-admin-privacy-policy-retained-d9p.png",
+      "kind": "admin",
+      "url": "http://shpigovsky.test/wp-admin/post.php?post=3&action=edit",
+      "captured": true,
+      "bytes": 51242,
+      "sha256": "859204ED5AC9E786C75E414B6A7BE00DE2168340C882A62F3A4AC6F2A6E340D4",
+      "result": "PASS",
+      "note": null
+    },
+    {
+      "file": "runtime-home-full-desktop-d9p.png",
+      "kind": "frontend",
+      "url": "http://shpigovsky.test/",
+      "captured": true,
+      "bytes": 5522719,
+      "sha256": "38FA232BFBA89CF6DF006D0226BEBEBCD01EF2414F59CE07BD7C7A1A504A0CA8",
+      "result": "PASS",
+      "note": null
+    },
+    {
+      "file": "runtime-home-full-mobile-d9p.png",
+      "kind": "frontend",
+      "url": "http://shpigovsky.test/",
+      "captured": true,
+      "bytes": 1929133,
+      "sha256": "6D2CEE0E8106D1127F37E5FDC0220F19657519EB739DC53FE959998C997B2CE1",
+      "result": "PASS",
+      "note": null
+    },
+    {
+      "file": "runtime-reviews-section-d9p.png",
+      "kind": "frontend",
+      "url": "http://shpigovsky.test/#reviews",
+      "captured": true,
+      "bytes": 1639935,
+      "sha256": "072031E7CAC6B49812527CD2B84778DAB5AE97579D78F261BA3F87F1F465EBD6",
+      "result": "PASS",
+      "note": null
+    },
+    {
+      "file": "runtime-service-74-d9p.png",
+      "kind": "frontend",
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "captured": true,
+      "bytes": 606732,
+      "sha256": "F28A825DC990F6DF29C96956F4E5A19BF6F3BDD9E8CD368F96D106F1B94D3E72",
+      "result": "PASS",
+      "note": null
+    },
+    {
+      "file": "runtime-contacts-d9p.png",
+      "kind": "frontend",
+      "url": "http://shpigovsky.test/kontakty/",
+      "captured": true,
+      "bytes": 357911,
+      "sha256": "BF1127D898D5595FE9491647E73E0375E437BA1A4A68A35F2AD711CD21A06DB4",
+      "result": "PASS",
+      "note": null
+    }
+  ]
+}

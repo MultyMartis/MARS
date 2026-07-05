@@ -1,0 +1,86 @@
+{
+  "phase": "V9-06D9-P",
+  "generated_at": "2026-07-05T23:43:56.763237+07:00",
+  "runtime_url": "http://shpigovsky.test",
+  "database": "mars_wp_fp0002",
+  "table_prefix": "fp02_",
+  "checks": [
+    {
+      "check": "runtime_http_200",
+      "result": "PASS",
+      "notes": "200"
+    },
+    {
+      "check": "db_readable",
+      "result": "PASS"
+    },
+    {
+      "check": "active_theme_shpigovsky",
+      "result": "PASS",
+      "value": "shpigovsky"
+    },
+    {
+      "check": "classic_editor_active",
+      "result": "PASS"
+    },
+    {
+      "check": "acf_pro_active",
+      "result": "PASS",
+      "plugins": [
+        "acf-extended-pro/acf-extended.php",
+        "advanced-custom-fields-pro/acf.php"
+      ]
+    },
+    {
+      "check": "home_page_4_exists",
+      "result": "PASS"
+    },
+    {
+      "check": "acf_group_fp02_page_home_registered",
+      "result": "PASS",
+      "db_id": 114
+    },
+    {
+      "check": "runtime_acf_json_exists",
+      "result": "PASS",
+      "path": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky/wp-content/acf-json/group_fp02_page_home.json"
+    },
+    {
+      "check": "attachments_89_93_exist",
+      "result": "PASS",
+      "details": {
+        "89": {
+          "exists": true,
+          "title": "Шпиговский дом — центр профилактики и лечения зависимостей",
+          "mime": "image/png"
+        },
+        "90": {
+          "exists": true,
+          "title": "Лечение зависимости от алкоголя",
+          "mime": "image/webp"
+        },
+        "91": {
+          "exists": true,
+          "title": "Лудомания лечение зависимости",
+          "mime": "image/webp"
+        },
+        "92": {
+          "exists": true,
+          "title": "Лечение подростковой зависимости",
+          "mime": "image/webp"
+        },
+        "93": {
+          "exists": true,
+          "title": "Зависимость от постоянных покупок",
+          "mime": "image/webp"
+        }
+      }
+    },
+    {
+      "check": "home_acf_values_readable",
+      "result": "PASS"
+    }
+  ],
+  "gutenberg_note": "Classic Editor plugin active; block editor for pages expected disabled via plugin",
+  "result": "PASS"
+}

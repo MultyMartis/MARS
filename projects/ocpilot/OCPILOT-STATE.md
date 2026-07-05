@@ -1,8 +1,8 @@
 # OCPilot — Program State
 
 **Status:** living state document — **not** automated router  
-**Last updated:** 2026-07-04
-**Evidence cutoff:** 2026-07-04 (SITE-002 Run **4.173** — first controlled Production change complete; checkpoint `SITE-002-STABLE-PROD-TEXT-CHANGE-01` issued)
+**Last updated:** 2026-07-05
+**Evidence cutoff:** 2026-07-05 (SITE-002 Run **4.174** — Production task intake: catalog sort / load more / 1C cron scopes prepared; Run **4.173** checkpoint `SITE-002-STABLE-PROD-TEXT-CHANGE-01` unchanged)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **First controlled Production change COMPLETE** — single-file text-only FTP deploy verified · rollback readiness verified · checkpoint `SITE-002-STABLE-PROD-TEXT-CHANGE-01` issued · [SITE-002-FIRST-CONTROLLED-PRODUCTION-CHANGE.md](sites/site-002/reports/SITE-002-FIRST-CONTROLLED-PRODUCTION-CHANGE.md) |
+| Current SITE-002 focus | **Production task intake COMPLETE (Run 4.174)** — catalog sort A→Я scoped · Load More Option B recommended · 1C cron wrapper required before activation · [SITE-002-PRODUCTION-TASK-INTAKE-CATALOG-LOADMORE-1C-CRON.md](sites/site-002/reports/SITE-002-PRODUCTION-TASK-INTAKE-CATALOG-LOADMORE-1C-CRON.md) · prior checkpoint `SITE-002-STABLE-PROD-TEXT-CHANGE-01` unchanged |
 
 ---
 

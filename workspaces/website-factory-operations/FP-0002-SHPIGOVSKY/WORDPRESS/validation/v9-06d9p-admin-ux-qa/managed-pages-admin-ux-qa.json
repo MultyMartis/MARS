@@ -1,0 +1,48 @@
+{
+  "phase": "V9-06D9-P",
+  "generated_at": "2026-07-05T23:43:56.788533+07:00",
+  "pages": [
+    {
+      "page_id": 5,
+      "title": "Услуги",
+      "native_editor_hidden": true,
+      "admin_controls_ok": true,
+      "gutenberg_expected_disabled": true,
+      "route_slug": "uslugi",
+      "post_content_length": 0,
+      "result": "PASS"
+    },
+    {
+      "page_id": 20,
+      "title": "Контакты",
+      "native_editor_hidden": true,
+      "admin_controls_ok": true,
+      "gutenberg_expected_disabled": true,
+      "route_slug": "kontakty",
+      "post_content_length": 0,
+      "result": "PASS"
+    },
+    {
+      "page_id": 11,
+      "title": "О центре",
+      "native_editor_hidden": true,
+      "admin_controls_ok": true,
+      "gutenberg_expected_disabled": true,
+      "route_slug": "o-centre",
+      "post_content_length": 0,
+      "result": "PASS"
+    }
+  ],
+  "checks": [
+    {
+      "check": "all_managed_native_editor_hidden",
+      "result": "PASS"
+    },
+    {
+      "check": "no_gutenberg_pages",
+      "result": "PASS",
+      "method": "classic_editor_plugin_assumed"
+    }
+  ],
+  "result": "PASS"
+}

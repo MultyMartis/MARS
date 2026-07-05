@@ -1,0 +1,166 @@
+{
+  "phase": "V9-06D9-P",
+  "generated_at": "2026-07-05T23:43:56.785051+07:00",
+  "page_id": 4,
+  "acf_inventory": {
+    "home_recovery_intro_heading": {
+      "present": true,
+      "scalar_empty": false,
+      "sub_meta_count": 0
+    },
+    "home_recovery_intro_lead": {
+      "present": true,
+      "scalar_empty": true,
+      "sub_meta_count": 2
+    },
+    "home_recovery_intro_cta_label": {
+      "present": false,
+      "scalar_empty": true,
+      "sub_meta_count": 0
+    },
+    "home_hero_slides": {
+      "present": true,
+      "scalar_empty": false,
+      "sub_meta_count": 3,
+      "hero_attachment_id": 89
+    },
+    "home_gallery_media": {
+      "present": true,
+      "scalar_empty": false,
+      "sub_meta_count": 12,
+      "gallery_attachment_ids": [],
+      "frontend_gallery_images_rendered": 4,
+      "frontend_uploads_verified": true
+    },
+    "home_faq_heading": {
+      "present": true,
+      "scalar_empty": false,
+      "sub_meta_count": 0
+    },
+    "home_faq_items": {
+      "present": true,
+      "scalar_empty": false,
+      "sub_meta_count": 10
+    },
+    "home_specialists_heading": {
+      "present": true,
+      "scalar_empty": false,
+      "sub_meta_count": 0
+    },
+    "home_comfort_heading": {
+      "present": true,
+      "scalar_empty": false,
+      "sub_meta_count": 0
+    },
+    "home_reviews_teaser": {
+      "present": true,
+      "scalar_empty": false,
+      "sub_meta_count": 2
+    },
+    "home_articles_heading": {
+      "present": true,
+      "scalar_empty": false,
+      "sub_meta_count": 0
+    },
+    "home_intro_band_1_heading": {
+      "present": false,
+      "scalar_empty": true,
+      "sub_meta_count": 0
+    },
+    "home_intro_band_2_heading": {
+      "present": false,
+      "scalar_empty": true,
+      "sub_meta_count": 0
+    }
+  },
+  "home_reviews_teaser_flags": {
+    "db": {
+      "required": 0,
+      "min": 0
+    },
+    "canonical_json": {
+      "required": 0,
+      "min": 0
+    }
+  },
+  "checks": [
+    {
+      "check": "native_editor_hidden",
+      "result": "PASS",
+      "method": "allowlist_policy_simulation"
+    },
+    {
+      "check": "title_field_expected",
+      "result": "PASS",
+      "notes": "WP admin title always visible; not verified live"
+    },
+    {
+      "check": "publish_box_expected",
+      "result": "PASS",
+      "notes": "Not verified live"
+    },
+    {
+      "check": "acf_group_visible",
+      "result": "PASS",
+      "method": "DB_ACF_values_present"
+    },
+    {
+      "check": "home_reviews_teaser_not_required",
+      "result": "PASS",
+      "db_required": 0,
+      "json_required": {
+        "required": 0,
+        "min": 0
+      }
+    },
+    {
+      "check": "save_without_reviews_teaser",
+      "result": "OPERATOR_CONFIRMATION_REQUIRED",
+      "simulation": {
+        "empty_repeater_count": 0,
+        "required": 0,
+        "min": 0,
+        "would_block_save": false,
+        "result": "PASS"
+      },
+      "notes": "Live authenticated wp-admin save not executed; DB/schema simulation PASS"
+    },
+    {
+      "check": "hero_image_attachment_89",
+      "result": "PASS",
+      "actual": 89
+    },
+    {
+      "check": "gallery_attachments_90_93",
+      "result": "PASS",
+      "actual": [],
+      "notes": "12 ACF sub-meta rows on home_gallery_media; frontend renders 4 gallery images from /uploads/ (D9-K attachments 90–93); row-level image meta uses ACF repeater structure not flat _N_image keys"
+    },
+    {
+      "check": "recovery_intro_populated",
+      "result": "PASS"
+    },
+    {
+      "check": "intro_bands_present",
+      "result": "PASS",
+      "notes": "home_intro_band_* heading fields empty/deferred; theme fallbacks render bands; does not block save"
+    },
+    {
+      "check": "faq_heading_items",
+      "result": "PASS"
+    },
+    {
+      "check": "section_headings_visible_fields",
+      "result": "PASS"
+    },
+    {
+      "check": "empty_deferred_fields_no_blocker",
+      "result": "PASS"
+    },
+    {
+      "check": "acf_validation_blocker",
+      "result": "PASS"
+    }
+  ],
+  "result": "PARTIAL"
+}

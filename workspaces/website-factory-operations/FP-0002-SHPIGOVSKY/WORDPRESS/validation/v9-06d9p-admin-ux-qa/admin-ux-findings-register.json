@@ -1,0 +1,63 @@
+{
+  "phase": "V9-06D9-P",
+  "generated_at": "2026-07-05T23:44:02.921111+07:00",
+  "findings": [
+    {
+      "finding": "Home #4 native editor hidden via D9-N allowlist",
+      "severity": "PASS",
+      "action": "None"
+    },
+    {
+      "finding": "ACF home group fields readable and populated",
+      "severity": "PASS",
+      "action": "None"
+    },
+    {
+      "finding": "home_reviews_teaser optional (required=0, min=0)",
+      "severity": "PASS",
+      "action": "None"
+    },
+    {
+      "finding": "Live authenticated wp-admin save not testable by runner",
+      "severity": "OPERATOR_CONFIRMATION_REQUIRED",
+      "action": "Operator confirms Update on Home #4 with empty Reviews teaser"
+    },
+    {
+      "finding": "Admin screenshots may show login if unauthenticated",
+      "severity": "MINOR",
+      "action": "Use DB/policy evidence; optional operator screenshots"
+    },
+    {
+      "finding": "Reviews include still deferred (frontend static block)",
+      "severity": "FOLLOWUP_RECOMMENDED",
+      "action": "CREATE_V9_06D9Q_REVIEWS_INCLUDE_PLANNING_TASK"
+    },
+    {
+      "finding": "Legal/native content review still deferred on operator pages",
+      "severity": "FOLLOWUP_RECOMMENDED",
+      "action": "CREATE_V9_06D9Q_LEGAL_NATIVE_CONTENT_REVIEW_TASK"
+    },
+    {
+      "finding": "Operator-review pages retain legacy content by design",
+      "severity": "PASS",
+      "action": "Content review in separate task"
+    },
+    {
+      "finding": "Managed pages native editor hidden",
+      "severity": "PASS",
+      "action": "None"
+    },
+    {
+      "finding": "Operator-review pages native editor preserved",
+      "severity": "PASS",
+      "action": "None"
+    },
+    {
+      "finding": "Frontend regression after D9-O",
+      "severity": "PASS",
+      "action": "None"
+    }
+  ],
+  "blocker_count": 0,
+  "result": "PASS"
+}

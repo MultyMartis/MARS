@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D9-O ACF REVIEWS TEASER REQUIRED FLAG REPAIR PASS — NEXT: D9-P admin UX QA
+**Status:** V9-06D9-P ADMIN UX QA PARTIAL PASS — NEXT: D9-Q reviews include planning
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---
@@ -254,3 +254,11 @@ D9-M **PASS**: Cleared obsolete native `post_content` on 13 template-managed pag
 ## V9-06D9-N hide native editor for template-managed pages (2026-07-05)
 
 D9-N **PASS**: Theme admin helper hides native Classic Editor box on 13 allowlisted template-managed pages; operator-review pages retain editor; bounded runtime delivery (2 theme files); frontend regression PASS; routes ALL_200; admin screenshots PARTIAL. No DB/ACF/content writes. Evidence: `validation/v9-06d9n-hide-native-editor-template-pages/`. Report: `reports/FP-0002-V9-06D9N-HIDE-NATIVE-EDITOR-FOR-TEMPLATE-PAGES-REPORT-v1.md`. Next: D9-O admin UX QA.
+
+## V9-06D9-O ACF reviews teaser required flag repair (2026-07-05)
+
+D9-O **PASS**: `home_reviews_teaser` optional; runtime ACF JSON restored; frontend regression PASS. Evidence: `validation/v9-06d9o-acf-reviews-teaser-required-flag-repair/`. Report: `reports/FP-0002-V9-06D9O-ACF-REVIEWS-TEASER-REQUIRED-FLAG-REPAIR-REPORT-v1.md`. Next: D9-P admin UX QA.
+
+## V9-06D9-P admin UX QA (2026-07-05)
+
+D9-P **PARTIAL PASS**: Read-only admin UX QA after D9-L/M/N/O. Home #4 ACF visible; native editor hidden; reviews teaser optional (simulation PASS); hero/gallery populated; managed pages PASS; operator-review pages preserved; frontend 19/19 sections routes ALL_200. Live authenticated Home save: OPERATOR_CONFIRMATION_REQUIRED. Admin screenshots PARTIAL (login on some screens). Zero DB/source/ACF JSON/value/content/media mutations. Evidence: `validation/v9-06d9p-admin-ux-qa/`. Report: `reports/FP-0002-V9-06D9P-ADMIN-UX-QA-REPORT-v1.md`. Next: D9-Q reviews include planning.

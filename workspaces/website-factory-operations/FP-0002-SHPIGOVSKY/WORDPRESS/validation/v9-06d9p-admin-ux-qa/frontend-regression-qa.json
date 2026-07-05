@@ -1,0 +1,106 @@
+{
+  "phase": "V9-06D9-P",
+  "generated_at": "2026-07-05T23:44:02.919847+07:00",
+  "routes": [
+    {
+      "path": "/",
+      "label": "home",
+      "status": 200,
+      "pass": true,
+      "home": {
+        "sections_found": 19,
+        "sections_expected": 19,
+        "sections_pass": true,
+        "hero_present": true,
+        "hero_uploads": true,
+        "gallery_count": 4,
+        "faq_present": true,
+        "specialists_present": true,
+        "reviews_present": true,
+        "footer_present": true,
+        "php_fatal": false
+      }
+    },
+    {
+      "path": "/uslugi/",
+      "label": "services-hub",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/uslugi/zavisimosti/",
+      "label": "service-73",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "label": "service-74",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/uslugi/psihicheskoe-zdorovie/",
+      "label": "service-77",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "label": "service-84",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/kontakty/",
+      "label": "contacts",
+      "status": 200,
+      "pass": true
+    }
+  ],
+  "checks": [
+    {
+      "check": "all_routes_200",
+      "result": "PASS"
+    },
+    {
+      "check": "home_19_sections",
+      "result": "PASS",
+      "detail": {
+        "sections_found": 19,
+        "sections_expected": 19,
+        "sections_pass": true,
+        "hero_present": true,
+        "hero_uploads": true,
+        "gallery_count": 4,
+        "faq_present": true,
+        "specialists_present": true,
+        "reviews_present": true,
+        "footer_present": true,
+        "php_fatal": false
+      }
+    },
+    {
+      "check": "hero_gallery_uploads",
+      "result": "PASS",
+      "detail": {
+        "sections_found": 19,
+        "sections_expected": 19,
+        "sections_pass": true,
+        "hero_present": true,
+        "hero_uploads": true,
+        "gallery_count": 4,
+        "faq_present": true,
+        "specialists_present": true,
+        "reviews_present": true,
+        "footer_present": true,
+        "php_fatal": false
+      }
+    },
+    {
+      "check": "no_php_fatal",
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS"
+}
