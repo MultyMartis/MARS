@@ -1,0 +1,18 @@
+{
+  "legal_width": {
+    "action": "Remove .legal-document__container max-width:900px and .legal-document__body max-width:820px from v9-style.css",
+    "safety": "CSS only; no content change"
+  },
+  "legal_menu": {
+    "action": "Delete menu item 36 (#21 hub); reorder items 37-40",
+    "safety": "No page delete"
+  },
+  "page_21": {
+    "action": "Set post_status=draft",
+    "safety": "Preserve page object"
+  },
+  "primary_menu": {
+    "action": "Remove items 26/28; relabel 27; add zavisimosti page 6; reorder",
+    "safety": "Only existing pages; matches static V9"
+  }
+}

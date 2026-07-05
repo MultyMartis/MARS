@@ -1,0 +1,188 @@
+{
+  "routes": [
+    {
+      "route": "/privacy-policy/",
+      "http_status": 200,
+      "has_php_fatal": false,
+      "has_legal_body": true,
+      "has_marker_content": true,
+      "container_max_width_900_in_css_linked": false
+    },
+    {
+      "route": "/user-agreement/",
+      "http_status": 200,
+      "has_php_fatal": false,
+      "has_legal_body": true,
+      "has_marker_content": true,
+      "container_max_width_900_in_css_linked": false
+    },
+    {
+      "route": "/consent-personal-data/",
+      "http_status": 200,
+      "has_php_fatal": false,
+      "has_legal_body": true,
+      "has_marker_content": true,
+      "container_max_width_900_in_css_linked": false
+    },
+    {
+      "route": "/cookie-files-policy/",
+      "http_status": 200,
+      "has_php_fatal": false,
+      "has_legal_body": true,
+      "has_marker_content": true,
+      "container_max_width_900_in_css_linked": false
+    },
+    {
+      "route": "/",
+      "http_status": 200,
+      "has_php_fatal": false
+    },
+    {
+      "route": "/uslugi/",
+      "http_status": 200,
+      "has_php_fatal": false
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "http_status": 200,
+      "has_php_fatal": false
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "http_status": 200,
+      "has_php_fatal": false
+    },
+    {
+      "route": "/kontakty/",
+      "http_status": 200,
+      "has_php_fatal": false
+    },
+    {
+      "route": "/otzyvy/",
+      "http_status": 200,
+      "has_php_fatal": false
+    },
+    {
+      "route": "/pravovaya-informaciya-pilzovatelyu/",
+      "http_status": 404,
+      "has_php_fatal": false,
+      "public_access_expected": "draft",
+      "note": "draft page should not be 200 for anonymous"
+    }
+  ],
+  "primary_nav": [
+    {
+      "label": "Лечение и профилактика",
+      "url": "http://shpigovsky.test/uslugi/"
+    },
+    {
+      "label": "Зависимости",
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/"
+    },
+    {
+      "label": "О центре",
+      "url": "http://shpigovsky.test/o-centre/"
+    },
+    {
+      "label": "Отзывы",
+      "url": "http://shpigovsky.test/otzyvy/"
+    },
+    {
+      "label": "Статьи",
+      "url": "http://shpigovsky.test/blog/"
+    },
+    {
+      "label": "Контакты",
+      "url": "http://shpigovsky.test/kontakty/"
+    }
+  ],
+  "primary_nav_alignment": [
+    {
+      "order": 1,
+      "static_label": "Лечение и профилактика",
+      "static_url": "/uslugi/",
+      "actual_label": "Лечение и профилактика",
+      "actual_url": "http://shpigovsky.test/uslugi/",
+      "label_match": true,
+      "url_match": true
+    },
+    {
+      "order": 2,
+      "static_label": "Зависимости",
+      "static_url": "/uslugi/zavisimosti/",
+      "actual_label": "Зависимости",
+      "actual_url": "http://shpigovsky.test/uslugi/zavisimosti/",
+      "label_match": true,
+      "url_match": true
+    },
+    {
+      "order": 3,
+      "static_label": "О центре",
+      "static_url": "/o-centre/",
+      "actual_label": "О центре",
+      "actual_url": "http://shpigovsky.test/o-centre/",
+      "label_match": true,
+      "url_match": true
+    },
+    {
+      "order": 4,
+      "static_label": "Отзывы",
+      "static_url": "/otzyvy/",
+      "actual_label": "Отзывы",
+      "actual_url": "http://shpigovsky.test/otzyvy/",
+      "label_match": true,
+      "url_match": true
+    },
+    {
+      "order": 5,
+      "static_label": "Статьи",
+      "static_url": "/blog/",
+      "actual_label": "Статьи",
+      "actual_url": "http://shpigovsky.test/blog/",
+      "label_match": true,
+      "url_match": true
+    },
+    {
+      "order": 6,
+      "static_label": "Контакты",
+      "static_url": "/kontakty/",
+      "actual_label": "Контакты",
+      "actual_url": "http://shpigovsky.test/kontakty/",
+      "label_match": true,
+      "url_match": true
+    }
+  ],
+  "footer_legal_links": [
+    {
+      "label": "Политика конфиденциальности",
+      "url": "http://shpigovsky.test/privacy-policy/"
+    },
+    {
+      "label": "Пользовательское соглашение",
+      "url": "http://shpigovsky.test/user-agreement/"
+    },
+    {
+      "label": "Согласие на обработку персональных данных",
+      "url": "http://shpigovsky.test/consent-personal-data/"
+    },
+    {
+      "label": "Политика Cookie-файлов",
+      "url": "http://shpigovsky.test/cookie-files-policy/"
+    }
+  ],
+  "footer_legal_alignment": [],
+  "hub_21_in_footer": false,
+  "footer_legal_count": 4,
+  "legal_width_rules_removed": {
+    "container_900": true,
+    "body_820": true
+  },
+  "legal_content_hashes_unchanged": {
+    "3": "588845cf73e2955656d3166e684c4f722b625aa929953a0821bba941f0502f28",
+    "22": "47e15c92fb21ab0aa6fa0100190210af4637e08adc80ae65f26b5005b61b4e50",
+    "23": "8ac8489399253c5d9e92dc46643a86289bfc27d32f7560af69df7bd8a689e866",
+    "24": "a06f0209c5b3379941242a2550a623cadbeb998ef06485179b83e81eb5f8809d",
+    "25": "0f00e812b2c40a8f0b3150e98b4ce744fc5b70fbc82989c455c28a248363c610"
+  },
+  "result": "PASS"
+}

@@ -1,0 +1,44 @@
+{
+  "writes": {
+    "menu_deletes": 3,
+    "menu_updates": 9,
+    "menu_creates": 1,
+    "page_status_writes": 1
+  },
+  "legal_hub_menu_item_removed": 36,
+  "page_21_status_after": "draft",
+  "legal_text_unchanged": true,
+  "result": "PASS",
+  "static_v9_target": [
+    {
+      "label": "Лечение и профилактика",
+      "url": "/uslugi/",
+      "page_id": 5
+    },
+    {
+      "label": "Зависимости",
+      "url": "/uslugi/zavisimosti/",
+      "page_id": 6
+    },
+    {
+      "label": "О центре",
+      "url": "/o-centre/",
+      "page_id": 11
+    },
+    {
+      "label": "Отзывы",
+      "url": "/otzyvy/",
+      "page_id": 18
+    },
+    {
+      "label": "Статьи",
+      "url": "/blog/",
+      "page_id": 19
+    },
+    {
+      "label": "Контакты",
+      "url": "/kontakty/",
+      "page_id": 20
+    }
+  ]
+}

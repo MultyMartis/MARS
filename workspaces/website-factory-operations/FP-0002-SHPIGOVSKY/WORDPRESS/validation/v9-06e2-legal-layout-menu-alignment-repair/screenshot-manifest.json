@@ -1,0 +1,77 @@
+{
+  "manifest": [
+    {
+      "file": "runtime-privacy-policy-width-e2.png",
+      "url": "http://shpigovsky.test/privacy-policy/",
+      "kind": "legal",
+      "captured": true,
+      "bytes": 151377,
+      "sha256": "85DE26EC5EAA91E300C165DC8150D48A18E798D11ED661176EC998035E0C2526",
+      "result": "PASS"
+    },
+    {
+      "file": "runtime-user-agreement-width-e2.png",
+      "url": "http://shpigovsky.test/user-agreement/",
+      "kind": "legal",
+      "captured": true,
+      "bytes": 143420,
+      "sha256": "2E9AD6DB16ADA05525E76609A6053E7F1803B497938E74E9CE50F49AD9C95EDC",
+      "result": "PASS"
+    },
+    {
+      "file": "runtime-consent-width-e2.png",
+      "url": "http://shpigovsky.test/consent-personal-data/",
+      "kind": "legal",
+      "captured": true,
+      "bytes": 129699,
+      "sha256": "B7468E9FC17797B1B64948ECE620A55D8C9B263082BEC165FA1F223FD6AAEC42",
+      "result": "PASS"
+    },
+    {
+      "file": "runtime-cookie-policy-width-e2.png",
+      "url": "http://shpigovsky.test/cookie-files-policy/",
+      "kind": "legal",
+      "captured": true,
+      "bytes": 149759,
+      "sha256": "49C4671DDE2504F3CCEA1EAAE57EA9D922DDC49E1BE1B72C82B7AC0AB9534E04",
+      "result": "PASS"
+    },
+    {
+      "file": "runtime-footer-legal-links-e2.png",
+      "url": "http://shpigovsky.test/privacy-policy/",
+      "kind": "footer",
+      "captured": true,
+      "bytes": 151377,
+      "sha256": "85DE26EC5EAA91E300C165DC8150D48A18E798D11ED661176EC998035E0C2526",
+      "result": "PASS"
+    },
+    {
+      "file": "runtime-main-menu-e2.png",
+      "url": "http://shpigovsky.test/",
+      "kind": "menu",
+      "captured": true,
+      "bytes": 1083650,
+      "sha256": "4CE2D25B27877370917834BF55A28FA8B3E7E71CB0FBF64F374702BCF15F33A4",
+      "result": "PASS"
+    },
+    {
+      "file": "runtime-home-menu-e2.png",
+      "url": "http://shpigovsky.test/",
+      "kind": "core",
+      "captured": true,
+      "bytes": 1083652,
+      "sha256": "492BB8C287FD111488AFF7126D426B0CA9217A93C13B762D9823DEB715C89883",
+      "result": "PASS"
+    },
+    {
+      "file": "runtime-services-menu-e2.png",
+      "url": "http://shpigovsky.test/uslugi/",
+      "kind": "core",
+      "captured": true,
+      "bytes": 75796,
+      "sha256": "FDC71D0A2CF90C6AA829F5237294BD36DF18C72B6C12043094AB4C44ADD4F98A",
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS"
+}

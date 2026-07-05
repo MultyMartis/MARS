@@ -1,0 +1,35 @@
+{
+  "writes": {
+    "menu_deletes": 3,
+    "menu_updates": 9,
+    "menu_creates": 1,
+    "page_status_writes": 1
+  },
+  "legal_hub_menu_item_removed": 36,
+  "page_21_status_after": "draft",
+  "legal_text_unchanged": true,
+  "result": "PASS",
+  "footer_legal_target": [
+    {
+      "label": "Политика конфиденциальности",
+      "url": "/privacy-policy/",
+      "page_id": 3
+    },
+    {
+      "label": "Пользовательское соглашение",
+      "url": "/user-agreement/",
+      "page_id": 22
+    },
+    {
+      "label": "Согласие на обработку персональных данных",
+      "url": "/consent-personal-data/",
+      "page_id": 23
+    },
+    {
+      "label": "Политика Cookie-файлов",
+      "url": "/cookie-files-policy/",
+      "page_id": 24
+    }
+  ],
+  "hub_removed_from_menu": true
+}

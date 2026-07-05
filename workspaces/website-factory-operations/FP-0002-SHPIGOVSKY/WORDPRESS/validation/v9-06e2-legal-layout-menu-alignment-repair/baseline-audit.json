@@ -1,0 +1,380 @@
+{
+  "timestamp": "2026-07-06T04:10:56.419536+07:00",
+  "css_width_audit": {
+    "source": "X:/AI MARS/workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/assets/css/v9-style.css",
+    "rules": [
+      {
+        "selector": ".legal-document__container",
+        "property": "max-width: 900px",
+        "present_in_source": false
+      },
+      {
+        "selector": ".legal-document__body",
+        "property": "max-width: 820px",
+        "present_in_source": false
+      },
+      {
+        "selector": ".plain-page-content__body",
+        "property": "max-width: 820px",
+        "present_in_source": true
+      }
+    ]
+  },
+  "static_v9_primary_menu": [
+    {
+      "label": "Лечение и профилактика",
+      "url": "/uslugi/"
+    },
+    {
+      "label": "Зависимости",
+      "url": "/uslugi/zavisimosti/"
+    },
+    {
+      "label": "О центре",
+      "url": "/o-centre/"
+    },
+    {
+      "label": "Отзывы",
+      "url": "/otzyvy/"
+    },
+    {
+      "label": "Статьи",
+      "url": "/blog/"
+    },
+    {
+      "label": "Контакты",
+      "url": "/kontakty/"
+    }
+  ],
+  "static_v9_legal_footer": [],
+  "pages": {
+    "3": {
+      "ID": 3,
+      "post_title": "Политика конфиденциальности",
+      "post_name": "privacy-policy",
+      "post_status": "publish",
+      "content_length": 7472,
+      "content_sha256": "588845cf73e2955656d3166e684c4f722b625aa929953a0821bba941f0502f28"
+    },
+    "21": {
+      "ID": 21,
+      "post_title": "Правовая информация",
+      "post_name": "pravovaya-informaciya-pilzovatelyu",
+      "post_status": "publish",
+      "content_length": 169,
+      "content_sha256": "0f00e812b2c40a8f0b3150e98b4ce744fc5b70fbc82989c455c28a248363c610"
+    },
+    "22": {
+      "ID": 22,
+      "post_title": "Пользовательское соглашение",
+      "post_name": "user-agreement",
+      "post_status": "publish",
+      "content_length": 5696,
+      "content_sha256": "47e15c92fb21ab0aa6fa0100190210af4637e08adc80ae65f26b5005b61b4e50"
+    },
+    "23": {
+      "ID": 23,
+      "post_title": "Согласие на обработку персональных данных",
+      "post_name": "consent-personal-data",
+      "post_status": "publish",
+      "content_length": 3054,
+      "content_sha256": "8ac8489399253c5d9e92dc46643a86289bfc27d32f7560af69df7bd8a689e866"
+    },
+    "24": {
+      "ID": 24,
+      "post_title": "Политика Cookie-файлов",
+      "post_name": "cookie-files-policy",
+      "post_status": "publish",
+      "content_length": 6226,
+      "content_sha256": "a06f0209c5b3379941242a2550a623cadbeb998ef06485179b83e81eb5f8809d"
+    },
+    "25": {
+      "ID": 25,
+      "post_title": "Политика конфиденциальности (системная)",
+      "post_name": "privacy-policy-page",
+      "post_status": "publish",
+      "content_length": 169,
+      "content_sha256": "0f00e812b2c40a8f0b3150e98b4ce744fc5b70fbc82989c455c28a248363c610"
+    }
+  },
+  "menus": {
+    "menus": [
+      {
+        "term_id": 2,
+        "name": "Primary",
+        "slug": "primary"
+      },
+      {
+        "term_id": 3,
+        "name": "Footer",
+        "slug": "footer"
+      },
+      {
+        "term_id": 4,
+        "name": "Legal",
+        "slug": "legal"
+      }
+    ],
+    "theme_mods_shpigovsky": "a:2:{s:18:\"nav_menu_locations\";a:3:{s:7:\"primary\";i:2;s:6:\"footer\";i:3;s:5:\"legal\";i:4;}s:18:\"custom_css_post_id\";i:-1;}",
+    "privacy_policy_page_id": 3,
+    "items": [
+      {
+        "ID": 26,
+        "post_title": "Главная",
+        "menu_order": 0,
+        "url": "",
+        "object_id": "4",
+        "type": "post_type",
+        "menu_term_id": 2,
+        "menu_slug": "primary",
+        "post_name": "glavnaya",
+        "post_status": "publish"
+      },
+      {
+        "ID": 27,
+        "post_title": "Услуги",
+        "menu_order": 2,
+        "url": "",
+        "object_id": "5",
+        "type": "post_type",
+        "menu_term_id": 2,
+        "menu_slug": "primary",
+        "post_name": "uslugi",
+        "post_status": "publish"
+      },
+      {
+        "ID": 28,
+        "post_title": "Специалисты",
+        "menu_order": 3,
+        "url": "",
+        "object_id": "10",
+        "type": "post_type",
+        "menu_term_id": 2,
+        "menu_slug": "primary",
+        "post_name": "specyalisty",
+        "post_status": "publish"
+      },
+      {
+        "ID": 29,
+        "post_title": "О центре",
+        "menu_order": 4,
+        "url": "",
+        "object_id": "11",
+        "type": "post_type",
+        "menu_term_id": 2,
+        "menu_slug": "primary",
+        "post_name": "o-centre",
+        "post_status": "publish"
+      },
+      {
+        "ID": 30,
+        "post_title": "Отзывы",
+        "menu_order": 5,
+        "url": "",
+        "object_id": "18",
+        "type": "post_type",
+        "menu_term_id": 2,
+        "menu_slug": "primary",
+        "post_name": "otzyvy",
+        "post_status": "publish"
+      },
+      {
+        "ID": 31,
+        "post_title": "Статьи",
+        "menu_order": 6,
+        "url": "",
+        "object_id": "19",
+        "type": "post_type",
+        "menu_term_id": 2,
+        "menu_slug": "primary",
+        "post_name": "blog",
+        "post_status": "publish"
+      },
+      {
+        "ID": 32,
+        "post_title": "Контакты",
+        "menu_order": 7,
+        "url": "",
+        "object_id": "20",
+        "type": "post_type",
+        "menu_term_id": 2,
+        "menu_slug": "primary",
+        "post_name": "kontakty",
+        "post_status": "publish"
+      },
+      {
+        "ID": 33,
+        "post_title": "Услуги",
+        "menu_order": 0,
+        "url": "",
+        "object_id": "5",
+        "type": "post_type",
+        "menu_term_id": 3,
+        "menu_slug": "footer",
+        "post_name": "uslugi",
+        "post_status": "publish"
+      },
+      {
+        "ID": 34,
+        "post_title": "О центре",
+        "menu_order": 2,
+        "url": "",
+        "object_id": "11",
+        "type": "post_type",
+        "menu_term_id": 3,
+        "menu_slug": "footer",
+        "post_name": "o-centre",
+        "post_status": "publish"
+      },
+      {
+        "ID": 35,
+        "post_title": "Контакты",
+        "menu_order": 3,
+        "url": "",
+        "object_id": "20",
+        "type": "post_type",
+        "menu_term_id": 3,
+        "menu_slug": "footer",
+        "post_name": "kontakty",
+        "post_status": "publish"
+      },
+      {
+        "ID": 36,
+        "post_title": "Правовая информация",
+        "menu_order": 0,
+        "url": "",
+        "object_id": "21",
+        "type": "post_type",
+        "menu_term_id": 4,
+        "menu_slug": "legal",
+        "post_name": "pravovaya-informaciya-pilzovatelyu",
+        "post_status": "publish"
+      },
+      {
+        "ID": 37,
+        "post_title": "Политика конфиденциальности",
+        "menu_order": 2,
+        "url": "",
+        "object_id": "3",
+        "type": "post_type",
+        "menu_term_id": 4,
+        "menu_slug": "legal",
+        "post_name": "privacy-policy",
+        "post_status": "publish"
+      },
+      {
+        "ID": 38,
+        "post_title": "Пользовательское соглашение",
+        "menu_order": 3,
+        "url": "",
+        "object_id": "22",
+        "type": "post_type",
+        "menu_term_id": 4,
+        "menu_slug": "legal",
+        "post_name": "user-agreement",
+        "post_status": "publish"
+      },
+      {
+        "ID": 39,
+        "post_title": "Согласие на обработку персональных данных",
+        "menu_order": 4,
+        "url": "",
+        "object_id": "23",
+        "type": "post_type",
+        "menu_term_id": 4,
+        "menu_slug": "legal",
+        "post_name": "consent-personal-data",
+        "post_status": "publish"
+      },
+      {
+        "ID": 40,
+        "post_title": "Политика Cookie-файлов",
+        "menu_order": 5,
+        "url": "",
+        "object_id": "24",
+        "type": "post_type",
+        "menu_term_id": 4,
+        "menu_slug": "legal",
+        "post_name": "cookie-files-policy",
+        "post_status": "publish"
+      }
+    ]
+  },
+  "legal_hub_page_21_in_legal_menu": true,
+  "current_primary_menu": [
+    {
+      "menu_item_id": 26,
+      "label": "Главная",
+      "slug": "glavnaya",
+      "order": 0
+    },
+    {
+      "menu_item_id": 27,
+      "label": "Услуги",
+      "slug": "uslugi",
+      "order": 2
+    },
+    {
+      "menu_item_id": 28,
+      "label": "Специалисты",
+      "slug": "specyalisty",
+      "order": 3
+    },
+    {
+      "menu_item_id": 29,
+      "label": "О центре",
+      "slug": "o-centre",
+      "order": 4
+    },
+    {
+      "menu_item_id": 30,
+      "label": "Отзывы",
+      "slug": "otzyvy",
+      "order": 5
+    },
+    {
+      "menu_item_id": 31,
+      "label": "Статьи",
+      "slug": "blog",
+      "order": 6
+    },
+    {
+      "menu_item_id": 32,
+      "label": "Контакты",
+      "slug": "kontakty",
+      "order": 7
+    }
+  ],
+  "current_legal_menu": [
+    {
+      "menu_item_id": 36,
+      "label": "Правовая информация",
+      "slug": "pravovaya-informaciya-pilzovatelyu",
+      "order": 0
+    },
+    {
+      "menu_item_id": 37,
+      "label": "Политика конфиденциальности",
+      "slug": "privacy-policy",
+      "order": 2
+    },
+    {
+      "menu_item_id": 38,
+      "label": "Пользовательское соглашение",
+      "slug": "user-agreement",
+      "order": 3
+    },
+    {
+      "menu_item_id": 39,
+      "label": "Согласие на обработку персональных данных",
+      "slug": "consent-personal-data",
+      "order": 4
+    },
+    {
+      "menu_item_id": 40,
+      "label": "Политика Cookie-файлов",
+      "slug": "cookie-files-policy",
+      "order": 5
+    }
+  ]
+}

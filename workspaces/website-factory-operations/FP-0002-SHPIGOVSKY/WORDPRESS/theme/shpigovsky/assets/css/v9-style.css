@@ -26909,10 +26909,6 @@ body[data-offcanvas-state=open] {
   color: #555;
 }
 
-.legal-document__container {
-  max-width: 900px;
-}
-
 .legal-document__demo-notice {
   margin: 0 0 24px;
   padding: 14px 18px;
@@ -26931,7 +26927,6 @@ body[data-offcanvas-state=open] {
 }
 
 .legal-document__body {
-  max-width: 820px;
   font-size: 16px;
   line-height: 1.65;
 }

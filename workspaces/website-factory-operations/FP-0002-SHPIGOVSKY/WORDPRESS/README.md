@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E1 LEGAL STATIC COPY SEED PASS — static V9 legal bodies seeded into #3/#22/#23/#24; privacy setting #3; template render repair delivered; NEXT: E2 legal frontend visual QA
+**Status:** V9-06E2 LEGAL LAYOUT + MENU ALIGNMENT REPAIR PASS — legal width caps removed; footer legal menu aligned (4 links); primary menu matches static V9; #21 hub draft/unlinked; NEXT: E3 stable checkpoint
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

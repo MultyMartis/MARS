@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-06 (V9-06E0 Legal Native Content Review PASS)
+**Last updated:** 2026-07-06 (V9-06E2 Legal Layout + Menu Alignment Repair PASS)
 
-**Current WordPress phase:** V9-06E1 Legal Static Copy Seed **PASS** — static V9 legal bodies seeded into pages #3/#22/#23/#24; `wp_page_for_privacy_policy=3`; garbled privacy seed removed; minimal legal template render repair delivered. WordPress stable checkpoint **PARTIAL**. **Next: CREATE_V9_06E2_LEGAL_FRONTEND_VISUAL_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E1-LEGAL-STATIC-COPY-SEED-REPORT-v1.md`. Prior E0 @ `d11859b0`.
+**Current WordPress phase:** V9-06E2 Legal Layout + Menu Alignment Repair **PASS** — legal width caps removed from `v9-style.css`; footer legal menu = 4 canonical links; primary menu aligned with static V9; legacy hub #21 draft/unlinked; legal native content unchanged from E1. WordPress stable checkpoint **READY**. **Next: CREATE_V9_06E3_WORDPRESS_STABLE_CHECKPOINT_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E2-LEGAL-LAYOUT-MENU-ALIGNMENT-REPAIR-REPORT-v1.md`. Prior E1 @ `396c22c8`.
 
 ## Active frontend workspace (V9)
 
