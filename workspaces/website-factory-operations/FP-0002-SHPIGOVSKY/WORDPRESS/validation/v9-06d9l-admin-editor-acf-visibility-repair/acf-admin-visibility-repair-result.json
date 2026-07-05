@@ -1,0 +1,37 @@
+{
+    "phase": "V9-06D9-L",
+    "generated_at": "2026-07-05T15:18:45+00:00",
+    "acf_sync_performed": true,
+    "acf_sync_method": "wp acf json sync",
+    "acf_sync_items": 13,
+    "acf_sync_groups": [
+        "group_fp02_blog_post_article_meta",
+        "group_fp02_page_contacts",
+        "group_fp02_page_home",
+        "group_fp02_page_institutional",
+        "group_fp02_page_legal",
+        "group_fp02_page_reviews",
+        "group_fp02_page_services_hub",
+        "group_fp02_service_faq",
+        "group_fp02_service_layout_hero",
+        "group_fp02_service_relationships",
+        "group_fp02_service_structured_sections",
+        "group_fp02_site_options_contacts",
+        "group_fp02_site_options_modal_cta"
+    ],
+    "acf_sync_reason": "13 field groups existed in wp-content/acf-json but not in DB; admin metabox registration required DB sync after Classic Editor activation",
+    "home_field_group_db_id": 114,
+    "location_rule": "page_type == front_page",
+    "page_on_front": 4,
+    "location_valid_for_home_4": true,
+    "acf_content_value_writes": 0,
+    "field_group": {
+        "exists": true,
+        "key": "group_fp02_page_home",
+        "title": "Page — Home",
+        "ID": 114,
+        "active": true
+    },
+    "home_acf_values_unchanged": true,
+    "result": "PASS"
+}

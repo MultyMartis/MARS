@@ -1,0 +1,175 @@
+{
+    "phase": "V9-06D9-L",
+    "generated_at": "2026-07-05T15:17:57+00:00",
+    "wordpress_version": "7.0",
+    "active_theme": "shpigovsky",
+    "home_page_id": 4,
+    "home_page_title": "Главная",
+    "home_page_status": "publish",
+    "classic_editor": {
+        "slug": "classic-editor",
+        "installed": false,
+        "active": false,
+        "main_file": null
+    },
+    "editor_state": {
+        "use_block_editor_for_home_page_4": true,
+        "use_block_editor_for_post_type_page": true,
+        "classic_editor_plugin_active": false,
+        "classic_editor_replace": null,
+        "classic_editor_allow_users": null
+    },
+    "acf_pro_active": true,
+    "acf_json": {
+        "available": true,
+        "local_json_count": 13,
+        "local_json_keys": [
+            "group_fp02_blog_post_article_meta",
+            "group_fp02_page_contacts",
+            "group_fp02_page_home",
+            "group_fp02_page_institutional",
+            "group_fp02_page_legal",
+            "group_fp02_page_reviews",
+            "group_fp02_page_services_hub",
+            "group_fp02_service_faq",
+            "group_fp02_service_layout_hero",
+            "group_fp02_service_relationships",
+            "group_fp02_service_structured_sections",
+            "group_fp02_site_options_contacts",
+            "group_fp02_site_options_modal_cta"
+        ],
+        "db_group_count": 0,
+        "home_group_in_local_json": true,
+        "pending_sync_estimate": 13
+    },
+    "field_group": {
+        "exists": true,
+        "key": "group_fp02_page_home",
+        "title": "Page — Home",
+        "ID": 0,
+        "active": true,
+        "location_matches_home_page_4": false
+    },
+    "home_acf_values_summary": {
+        "home_recovery_intro_heading": {
+            "name": "home_recovery_intro_heading",
+            "empty": false,
+            "type": "string",
+            "length": 71,
+            "preview": "Шпиговский дом&nbsp;&mdash; восстановление, построенное вокруг человека"
+        },
+        "home_recovery_intro_lead_1": {
+            "name": "home_recovery_intro_lead_1",
+            "empty": false,
+            "type": "string",
+            "length": 198,
+            "preview": "Мы&nbsp;убеждены, зависимость невозможно эффективно лечить по&nbsp;шаблону. За&n"
+        },
+        "home_recovery_intro_lead_2": {
+            "name": "home_recovery_intro_lead_2",
+            "empty": false,
+            "type": "string",
+            "length": 192,
+            "preview": "Поэтому в&nbsp;&laquo;Шпиговском Доме&raquo; мы&nbsp;создаём персонализированную"
+        },
+        "home_intro_bands": {
+            "name": "home_intro_bands",
+            "empty": false,
+            "type": "array",
+            "count": 6
+        },
+        "home_faq_heading": {
+            "name": "home_faq_heading",
+            "empty": false,
+            "type": "string",
+            "length": 20,
+            "preview": "Нас часто спрашивают"
+        },
+        "home_faq_items": {
+            "name": "home_faq_items",
+            "empty": false,
+            "type": "array",
+            "count": 5
+        },
+        "home_specialists_heading": {
+            "name": "home_specialists_heading",
+            "empty": false,
+            "type": "string",
+            "length": 18,
+            "preview": "Специалисты центра"
+        },
+        "home_comfort_heading": {
+            "name": "home_comfort_heading",
+            "empty": false,
+            "type": "string",
+            "length": 28,
+            "preview": "Комфорт, приватность, забота"
+        },
+        "home_comfort_lead": {
+            "name": "home_comfort_lead",
+            "empty": false,
+            "type": "string",
+            "length": 151,
+            "preview": "Разговор&nbsp;— это уже первый шаг. Мы расскажем, что можем предложить именно ва"
+        },
+        "home_reviews_heading": {
+            "name": "home_reviews_heading",
+            "empty": false,
+            "type": "string",
+            "length": 6,
+            "preview": "Отзывы"
+        },
+        "home_articles_heading": {
+            "name": "home_articles_heading",
+            "empty": false,
+            "type": "string",
+            "length": 6,
+            "preview": "Статьи"
+        },
+        "home_hero_slides": {
+            "name": "home_hero_slides",
+            "empty": false,
+            "type": "array",
+            "count": 1,
+            "hero_image_attachment_id": 89
+        },
+        "home_gallery_media": {
+            "name": "home_gallery_media",
+            "empty": false,
+            "type": "array",
+            "count": 4,
+            "gallery_row_count": 4,
+            "gallery_with_media": 4
+        }
+    },
+    "active_plugins": [
+        {
+            "file": "acf-extended-pro/acf-extended.php",
+            "name": "Advanced Custom Fields: Extended PRO",
+            "version": "0.9.2.3"
+        },
+        {
+            "file": "advanced-custom-fields-pro/acf.php",
+            "name": "Advanced Custom Fields PRO",
+            "version": "6.8.5"
+        },
+        {
+            "file": "metacode-wpilot/metacode-wpilot.php",
+            "name": "MetaCODE WPilot",
+            "version": "0.3.0"
+        },
+        {
+            "file": "shpigovsky-core/shpigovsky-core.php",
+            "name": "Shpigovsky Core",
+            "version": "0.3.1-v9-06c1-source"
+        }
+    ],
+    "diagnosis": {
+        "block_editor_active_for_home": true,
+        "classic_editor_missing": true,
+        "classic_editor_inactive": false,
+        "acf_field_groups_pending_sync": true,
+        "acf_home_group_registered": true
+    },
+    "result": "CAPTURED"
+}

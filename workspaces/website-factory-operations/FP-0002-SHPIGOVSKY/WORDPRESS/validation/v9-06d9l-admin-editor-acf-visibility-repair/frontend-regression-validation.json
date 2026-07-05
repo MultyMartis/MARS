@@ -1,0 +1,71 @@
+{
+  "phase": "V9-06D9-L",
+  "capturedAt": "2026-07-05T15:18:58.378Z",
+  "routes": [
+    {
+      "path": "/",
+      "label": "home",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/uslugi/",
+      "label": "services-hub",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/uslugi/zavisimosti/",
+      "label": "service-73",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "label": "service-74",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/uslugi/psihicheskoe-zdorovie/",
+      "label": "service-77",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "label": "service-84",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/kontakty/",
+      "label": "contacts",
+      "status": 200,
+      "pass": true
+    }
+  ],
+  "home": {
+    "sectionCount": 19,
+    "sectionsExpected": 19,
+    "sectionsPass": true,
+    "heroCta": true,
+    "heroImagePresent": true,
+    "heroImageUrl": "http://shpigovsky.test/wp-content/uploads/2026/07/hero-main.png",
+    "heroUsesUploads": true,
+    "galleryImageCount": 4,
+    "galleryUrls": [
+      "http://shpigovsky.test/wp-content/uploads/2026/07/shpigovsky-gallery-01.webp",
+      "http://shpigovsky.test/wp-content/uploads/2026/07/shpigovsky-gallery-02.webp",
+      "http://shpigovsky.test/wp-content/uploads/2026/07/shpigovsky-gallery-03.webp",
+      "http://shpigovsky.test/wp-content/uploads/2026/07/shpigovsky-gallery-04.webp"
+    ],
+    "galleryUsesUploads": true,
+    "faqHeading": true,
+    "specialistsHeading": true,
+    "hasFooter": true,
+    "hasGalleryPagination": true
+  },
+  "route_smoke": "ALL_200",
+  "result": "PASS"
+}

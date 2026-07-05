@@ -1,0 +1,22 @@
+{
+    "phase": "V9-06D9-L",
+    "generated_at": "2026-07-05T15:18:20+00:00",
+    "plugin_slug": "classic-editor",
+    "plugin_source": "https://downloads.wordpress.org/plugin/classic-editor.1.7.0.zip",
+    "plugin_version": "1.7.0",
+    "was_installed_before": false,
+    "was_active_before": false,
+    "install_method": "wp-cli plugin install classic-editor --activate",
+    "install_result": "PASS",
+    "activation_result": "PASS",
+    "configuration": {
+        "classic-editor-replace": "classic",
+        "classic-editor-allow-users": "disallow",
+        "configuration_note": "Initial mistaken value classic-editor-replace=block corrected to classic before validation"
+    },
+    "post_config_editor_state": {
+        "use_block_editor_for_home_page_4": false,
+        "use_block_editor_for_post_type_page": false
+    },
+    "result": "PASS"
+}

@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D9-K CONTROLLED MEDIA UPLOAD + ACF SEED PASS — NEXT: D9-L operator media review
+**Status:** V9-06D9-L ADMIN EDITOR / ACF VISIBILITY REPAIR PASS — NEXT: D9-M admin UX QA
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---
@@ -241,4 +241,8 @@ D9-G **PASS**: Fixed FAQ heading/id/aria transplant typo in `template-parts/home
 
 ## V9-06D9-K controlled media upload + ACF seed (2026-07-05)
 
-D9-K **PASS**: 5 Home media uploads + ACF seed on page #4 (hero image + 4 gallery rows). Attachments 89–93; DB checkpoint PASS; visual regression PASS; routes ALL_200. No source/theme/ACF JSON writes. Evidence: `validation/v9-06d9k-controlled-media-upload-acf-seed/`. Report: `reports/FP-0002-V9-06D9K-CONTROLLED-MEDIA-UPLOAD-ACF-SEED-REPORT-v1.md`. Next: D9-L operator media review.
+D9-K **PASS**: 5 Home media uploads + ACF seed on page #4 (hero image + 4 gallery rows). Attachments 89–93; DB checkpoint PASS; visual regression PASS; routes ALL_200. No source/theme/ACF JSON writes. Evidence: `validation/v9-06d9k-controlled-media-upload-acf-seed/`. Report: `reports/FP-0002-V9-06D9K-CONTROLLED-MEDIA-UPLOAD-ACF-SEED-REPORT-v1.md`. Next: D9-L admin editor / ACF visibility repair.
+
+## V9-06D9-L admin editor / ACF visibility repair (2026-07-05)
+
+D9-L **PASS**: Classic Editor installed/activated; Gutenberg disabled; 13 ACF groups synced from existing JSON to DB; Home #4 seeded values preserved; frontend regression PASS; routes ALL_200. No source/theme/ACF JSON/content writes. Evidence: `validation/v9-06d9l-admin-editor-acf-visibility-repair/`. Report: `reports/FP-0002-V9-06D9L-ADMIN-EDITOR-ACF-VISIBILITY-REPAIR-REPORT-v1.md`. Next: D9-M admin UX QA.
