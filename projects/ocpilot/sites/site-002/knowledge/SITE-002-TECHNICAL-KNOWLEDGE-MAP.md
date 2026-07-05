@@ -16,7 +16,7 @@
 | **First controlled Production change** | **COMPLETE** — Run 4.173; single-file text-only FTP deploy |
 | **Catalog default sort (Production)** | **COMPLETE** — Run 4.176; default `pd.name ASC` in `category.php` |
 | **Catalog sort menu (Production)** | **COMPLETE** — Run 4.177; menu order in `category.twig`; «Умолчанию» removed |
-| **MARS 1C cron wrapper (Production)** | **PREPARED** — Run 4.178; parallel `mars-tools` wrapper; Sergey legacy preserved; Beget cron **not activated** |
+| **MARS 1C cron wrapper (Production)** | **TXT REPORTS ACTIVE** — Run 4.179; human-readable TXT per run; reports `/storage/mars-tools/cron/reports/`; Sergey legacy preserved; Beget cron **not activated** |
 
 **TEST-derived knowledge classification:** Implementation evidence and reusable technical knowledge. **Not** automatic proof of current Production parity.
 
@@ -129,6 +129,28 @@ parallel MARS-only wrapper upload under mars-tools — no legacy import mutation
 ```
 
 Does not prove Beget cron activation, real 1C import execution, or DB cron table changes.
+
+### MARS 1C wrapper TXT reports (Run 4.179 — 2026-07-06)
+
+| Field | Value |
+|-------|-------|
+| Operation | `SITE-002-PROD-CRON-RUN-REPORTS-01` |
+| Status | **TXT REPORTING VERIFIED — CRON ACTIVATION PENDING** |
+| Wrapper version | 1.1.0 |
+| Reports path | `/storage/mars-tools/cron/reports/` |
+| Logs path (technical) | `/storage/mars-tools/cron/logs/` |
+| Report filename pattern | `mars_1c_import[_dry_run|_status]_YYYY-MM-DD_HHMMSS.txt` |
+| Legacy Sergey import | **PRESERVED** |
+| Real import executed | **No** |
+| Beget cron | **Not activated** |
+| Checkpoint | `SITE-002-STABLE-PROD-CRON-RUN-REPORTS-01` |
+| Report | [../reports/SITE-002-PROD-CRON-RUN-REPORTS-01.md](../reports/SITE-002-PROD-CRON-RUN-REPORTS-01.md) |
+
+Proven operational boundary:
+
+```text
+MARS wrapper TXT reporting under mars-tools/reports — no legacy import mutation
+```
 
 ---
 

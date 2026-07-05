@@ -267,3 +267,5 @@ Scoped commit planned for OCPilot docs/tools/report/baseline only. Storage artef
 **SITE-002 MARS 1C CRON WRAPPER PREPARED — LEGACY IMPORT PRESERVED**
 
 Parallel MARS wrapper deployed under isolated `mars-tools` paths. Dry-run and status verified over HTTP. Run mode gated (403 without config). Sergey legacy import untouched. **Beget cron activation pending operator approval.**
+
+**Superseded by Run 4.179:** wrapper v1.1.0 adds human-readable TXT reports per run — see [SITE-002-PROD-CRON-RUN-REPORTS-01.md](SITE-002-PROD-CRON-RUN-REPORTS-01.md) · checkpoint `SITE-002-STABLE-PROD-CRON-RUN-REPORTS-01`.
