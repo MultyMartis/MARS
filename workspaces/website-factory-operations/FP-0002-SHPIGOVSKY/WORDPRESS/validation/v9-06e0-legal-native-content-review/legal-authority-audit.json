@@ -1,0 +1,85 @@
+{
+  "phase": "V9-06E0",
+  "generated_at": "2026-07-06T03:35:00+07:00",
+  "checks": [
+    {
+      "check": "v9_static_legal_pages_exist",
+      "result": "PASS",
+      "notes": "V8/V9 src/pages: privacy-policy, user-agreement, consent-personal-data, cookie-files-policy — all marked data-content-status=demo-placeholder"
+    },
+    {
+      "check": "authoritative_shpigovsky_legal_copy_in_repo",
+      "result": "FAIL",
+      "notes": "No verified FP-0002 production legal body text; V9-02 authority map states PROJECT_SPECIFIC_EXAMPLE: None verified"
+    },
+    {
+      "check": "mars_reference_legal_templates",
+      "result": "PARTIAL",
+      "notes": "website-factory-reference-v1/legal/*.md templates exist with {{variables}} and DEMO tokens — structure only, not operator-approved Shpigovsky copy"
+    },
+    {
+      "check": "wp_legal_routes_registered",
+      "result": "PASS",
+      "notes": "IDs 3,22,23,24 publish/draft with canonical slugs per D3 matrix"
+    },
+    {
+      "check": "footer_legal_fallback_links",
+      "result": "PASS",
+      "notes": "shpigovsky_legal_nav_fallback_items() → /privacy-policy/, /user-agreement/, /consent-personal-data/, /cookie-files-policy/"
+    },
+    {
+      "check": "legal_nav_menu_assignment",
+      "result": "PARTIAL",
+      "notes": "Menu slug legal: items #21, #3, #22, #23, #24; includes draft #3 and legacy #21"
+    },
+    {
+      "check": "wp_page_for_privacy_policy",
+      "result": "NEEDS_REPAIR",
+      "notes": "Option wp_page_for_privacy_policy=25 (placeholder LEGACY_ONLY page); canonical slug /privacy-policy/ is ID 3 (draft, garbled seed)"
+    },
+    {
+      "check": "privacy_page_id_3_role",
+      "result": "CANONICAL_SLUG_DRAFT",
+      "notes": "ID 3: draft, legal.php, garbled WP seed ~8.7k chars; footer fallback target slug"
+    },
+    {
+      "check": "privacy_page_id_25_role",
+      "result": "WP_SYSTEM_SETTING_TARGET",
+      "notes": "ID 25: publish, slug privacy-policy-page, placeholder native content; selected in Settings → Privacy"
+    },
+    {
+      "check": "legal_templates_22_24_v9_mapping",
+      "result": "PASS",
+      "notes": "Match V9 routes ROUTE-29..31; page-templates/legal.php; ACF group_fp02_page_legal registered in Git JSON"
+    },
+    {
+      "check": "legal_template_frontend_body_render",
+      "result": "NOT_IMPLEMENTED",
+      "notes": "template-parts/legal/document-page.php is V9-06B skeleton comment only; frontend shows title shell without document body"
+    },
+    {
+      "check": "garbled_content_in_db",
+      "result": "CONFIRMED",
+      "notes": "ID 3 post_content SHA256 376d1d92… matches D9-M inventory; WP privacy-policy tutorial seed with encoding damage"
+    },
+    {
+      "check": "demo_placeholder_v8_v9",
+      "result": "CONFIRMED",
+      "notes": "All four V9 static legal pages explicitly demo; robots noindex,nofollow in V8 exports"
+    }
+  ],
+  "authority_layers": {
+    "production_authoritative": "NONE_VERIFIED",
+    "reference_templates": "workspaces/website-factory-reference-v1/legal/",
+    "v9_static_demo": "workspaces/fp-0002-shpigovsky-v8/src/pages/*.html",
+    "wp_runtime_native": "ID 3 garbled seed; IDs 22-24 empty; ID 25 placeholder"
+  },
+  "privacy_page_resolution": {
+    "canonical_route_slug": "/privacy-policy/",
+    "canonical_page_id": 3,
+    "wp_privacy_setting_page_id": 25,
+    "conflict": true,
+    "recommended_e1_action": "Align wp_page_for_privacy_policy to ID 3 after garbled seed cleared and authoritative copy approved"
+  },
+  "result": "PARTIAL"
+}

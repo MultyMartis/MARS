@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-06 (V9-06D9-Z WordPress readiness audit PARTIAL PASS)
+**Last updated:** 2026-07-06 (V9-06E0 Legal Native Content Review PASS)
 
-**Current WordPress phase:** V9-06D9-Z WordPress Readiness Audit **PARTIAL PASS** — Runtime, routes, frontend key surfaces, and Reviews chain **READY/CLOSED**. Content/legal native pages **NEEDS_OPERATOR_REVIEW** (D9-M deferred set + legal templates). Admin/ACF **PARTIAL** (auth-gated screenshots; harmless trashed duplicate ACF groups). WordPress stable checkpoint **NOT READY**. **Next: V9-06E0 Legal / Native Content Review.** Report: `WORDPRESS/reports/FP-0002-V9-06D9Z-WORDPRESS-READINESS-AUDIT-REPORT-v1.md`. Prior D9-Y: Reviews chain CLOSED @ `00c9db03`.
+**Current WordPress phase:** V9-06E0 Legal Native Content Review **PASS** — Read-only classification of 13 native/legal pages complete. Garbled privacy seed on ID 3 **CONFIRMED**; WP privacy setting points to ID 25 (mismatch). Legal templates #22–24 empty; no verified Shpigovsky authoritative copy in repo. WordPress stable checkpoint **NOT READY**. **Next: OPERATOR_DECISION_REQUIRED** → E1 route/privacy repair, clear, and authoritative copy seed. Report: `WORDPRESS/reports/FP-0002-V9-06E0-LEGAL-NATIVE-CONTENT-REVIEW-REPORT-v1.md`. Prior D9-Z @ `72463299`.
 
 ## Active frontend workspace (V9)
 

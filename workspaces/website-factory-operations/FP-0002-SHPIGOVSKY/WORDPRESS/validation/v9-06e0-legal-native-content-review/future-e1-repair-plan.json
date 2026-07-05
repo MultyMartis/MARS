@@ -1,0 +1,60 @@
+{
+  "phase": "V9-06E0",
+  "generated_at": "2026-07-06T03:35:00+07:00",
+  "recommended_sequence": [
+    {
+      "order": 1,
+      "task": "OPERATOR_DECISION_REQUIRED",
+      "rationale": "No verified Shpigovsky authoritative legal copy in repository; operator must provide approved text or authorize reference-template fill with entity data"
+    },
+    {
+      "order": 2,
+      "task": "CREATE_V9_06E1_LEGAL_ROUTE_AND_PRIVACY_SETTING_REPAIR_TASK",
+      "rationale": "After operator direction: align wp_page_for_privacy_policy, legal menu, and footer targets; resolve ID 3 vs 25 conflict"
+    },
+    {
+      "order": 3,
+      "task": "CREATE_V9_06E1_LEGAL_PAGE_CLEAR_AND_PLACEHOLDER_TASK",
+      "rationale": "Clear garbled seed on ID 3; optional SAFE_TO_CLEAR_NATIVE on legacy placeholder pages 6-10,17,19,21,25 after operator sign-off"
+    },
+    {
+      "order": 4,
+      "task": "CREATE_V9_06E1_AUTHORITATIVE_LEGAL_COPY_SEED_TASK",
+      "rationale": "Seed operator-approved copy into IDs 3,22,23,24; set legal ACF status fields; publish ID 3 when ready"
+    }
+  ],
+  "pages_to_touch_e1": {
+    "legal_route_repair": [3, 21, 25],
+    "garbled_clear": [3],
+    "authoritative_copy_seed": [3, 22, 23, 24],
+    "optional_native_clear": [6, 7, 8, 9, 10, 17, 19, 21, 25]
+  },
+  "pages_not_to_touch_e1": {
+    "template_managed_clean": [4, 5, 11, 12, 13, 14, 15, 16, 18, 20],
+    "service_cpt_objects": "all fp02_service posts",
+    "reviews_options": "fp02-reviews ACF options"
+  },
+  "db_checkpoint_requirement": "Mandatory read-only export or named checkpoint before any E1 post_content or option writes (per D9-M pattern)",
+  "expected_e1_writes": [
+    "fp02_posts.post_content (allowlisted page IDs only)",
+    "fp02_posts.post_status (ID 3 publish only after operator approval)",
+    "fp02_options.wp_page_for_privacy_policy",
+    "fp02_postmeta ACF legal fields on IDs 3,22,23,24",
+    "nav_menu_item relationships if legal menu repair authorized"
+  ],
+  "operator_copy_requirements": [
+    "Approved privacy policy text for Shpigovsky entity",
+    "Approved user agreement, consent PD, cookie policy",
+    "Legal entity identifiers (INN/OGRN/address) or explicit DEMO token waiver",
+    "Decision on legacy pages 21 and 25 retire/redirect vs keep"
+  ],
+  "validation_plan_e1": [
+    "Re-run native-legal-page-inventory probe",
+    "Verify wp_page_for_privacy_policy matches canonical ID 3",
+    "Frontend route audit on four footer legal URLs",
+    "Confirm no garbled markers in public HTML",
+    "Admin screenshot of privacy setting and ID 3 editor state",
+    "No-scope-drift gate"
+  ],
+  "result": "PLANNED"
+}

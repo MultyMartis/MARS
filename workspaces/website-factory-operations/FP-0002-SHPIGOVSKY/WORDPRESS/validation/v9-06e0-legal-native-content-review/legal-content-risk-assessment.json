@@ -1,0 +1,59 @@
+{
+  "phase": "V9-06E0",
+  "generated_at": "2026-07-06T03:35:00+07:00",
+  "risks": [
+    {
+      "risk": "garbled_privacy_policy_in_db",
+      "severity": "HIGH",
+      "notes": "ID 3 retains ~8.7k chars garbled WP privacy seed; admin editor retained; accidental publish would expose invalid legal text"
+    },
+    {
+      "risk": "privacy_setting_page_mismatch",
+      "severity": "HIGH",
+      "notes": "wp_page_for_privacy_policy=25 (placeholder) vs canonical slug /privacy-policy/ (ID 3 draft); WP core privacy tools point to wrong page"
+    },
+    {
+      "risk": "legal_pages_empty_on_frontend",
+      "severity": "MEDIUM",
+      "notes": "IDs 22-24 publish with empty body; footer links live; users see title-only legal shell"
+    },
+    {
+      "risk": "footer_privacy_link_to_draft_slug",
+      "severity": "MEDIUM",
+      "notes": "Footer fallback links /privacy-policy/ (ID 3 draft); public shell returns 200 without authoritative policy text"
+    },
+    {
+      "risk": "legal_menu_includes_draft_and_legacy",
+      "severity": "LOW",
+      "notes": "Legal menu lists #21 legacy hub and draft #3 alongside cleared templates"
+    },
+    {
+      "risk": "placeholder_pages_indexable",
+      "severity": "LOW",
+      "notes": "Legacy publish pages 6-10,17,19,21,25 may be indexable if linked; most do not expose garbled text on frontend today"
+    },
+    {
+      "risk": "operator_review_pages_retain_native_editor",
+      "severity": "LOW",
+      "notes": "Ten deferred pages retain Classic Editor per D9-N; confuses operators but intentional"
+    },
+    {
+      "risk": "stable_checkpoint_blocked",
+      "severity": "HIGH",
+      "notes": "D9-Z blocked stable checkpoint on content/legal uncertainty; E0 confirms blocker remains"
+    },
+    {
+      "risk": "no_authoritative_copy_source",
+      "severity": "HIGH",
+      "notes": "Only demo placeholders and generic MARS templates; operator must supply or approve Shpigovsky legal text"
+    },
+    {
+      "risk": "legal_document_template_not_implemented",
+      "severity": "MEDIUM",
+      "notes": "Even after copy seed, document-page.php skeleton may not render body until separate visual wave"
+    }
+  ],
+  "overall_severity": "HIGH",
+  "production_migration_gate": "BLOCKED",
+  "result": "ASSESSED"
+}

@@ -1,0 +1,33 @@
+{
+  "phase": "V9-06E0",
+  "generated_at": "2026-07-06T03:35:00+07:00",
+  "checks": [
+    { "check": "db_writes", "expected": 0, "actual": 0, "result": "PASS" },
+    { "check": "source_theme_changes", "expected": 0, "actual": 0, "result": "PASS" },
+    { "check": "acf_json_changes", "expected": 0, "actual": 0, "result": "PASS" },
+    { "check": "acf_value_writes", "expected": 0, "actual": 0, "result": "PASS" },
+    { "check": "native_content_writes", "expected": 0, "actual": 0, "result": "PASS" },
+    { "check": "media_uploads", "expected": 0, "actual": 0, "result": "PASS" },
+    { "check": "options_writes", "expected": 0, "actual": 0, "result": "PASS" },
+    { "check": "menu_writes", "expected": 0, "actual": 0, "result": "PASS" },
+    { "check": "runtime_delivery", "expected": "NOT_PERFORMED", "actual": "NOT_PERFORMED", "result": "PASS" },
+    { "check": "rewrite_flush", "expected": "NO", "actual": "NO", "result": "PASS" },
+    { "check": "plugin_install_update_delete", "expected": 0, "actual": 0, "result": "PASS" },
+    { "check": "ocpilot_writes", "expected": 0, "actual": 0, "result": "PASS" },
+    { "check": "v9_src_dist_changes", "expected": 0, "actual": 0, "result": "PASS" },
+    { "check": "db_dumps_staged", "expected": 0, "actual": 0, "result": "PASS" },
+    { "check": "runtime_snapshots_staged", "expected": 0, "actual": 0, "result": "PASS" },
+    { "check": "secrets_committed", "expected": 0, "actual": 0, "result": "PASS" },
+    { "check": "helper_scripts_staged", "expected": 0, "actual": 0, "result": "PASS", "notes": "_e0_readonly_probe.py and _e0_screenshots.mjs created locally; excluded from staging gate" }
+  ],
+  "verdict": "PASS",
+  "v9_06e0_legal_native_content_review": "COMPLETE",
+  "legal_authority": "PARTIAL",
+  "garbled_legal_content": "CONFIRMED",
+  "privacy_page_status": "NEEDS_OPERATOR_REVIEW",
+  "legal_pages_status": "NEEDS_AUTHORITATIVE_COPY",
+  "operator_review_pages": "CLASSIFIED",
+  "stable_checkpoint_readiness": "NOT_READY",
+  "no_scope_drift": "PASS",
+  "recommended_next_phase": "OPERATOR_DECISION_REQUIRED"
+}

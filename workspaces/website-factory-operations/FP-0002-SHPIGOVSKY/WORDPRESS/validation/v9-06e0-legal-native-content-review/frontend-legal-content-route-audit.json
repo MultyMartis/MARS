@@ -1,0 +1,118 @@
+{
+  "phase": "V9-06E0",
+  "generated_at": "2026-07-06T03:35:00+07:00",
+  "routes": [
+    {
+      "route": "/privacy-policy/",
+      "page_id": 3,
+      "http_status": 200,
+      "page_status": "draft",
+      "template": "page-templates/legal.php",
+      "content_visible": "title_shell_only",
+      "exposes_garbled": false,
+      "exposes_empty_legal_placeholder": true,
+      "classification": "NEEDS_OPERATOR_REVIEW",
+      "notes": "Draft page; HTTP 200 generic shell; garbled seed not detected in public HTML probe; document-page skeleton empty"
+    },
+    {
+      "route": "/privacy-policy-page/",
+      "page_id": 25,
+      "http_status": 200,
+      "page_status": "publish",
+      "template": "default",
+      "content_visible": "placeholder_possible",
+      "exposes_garbled": false,
+      "exposes_empty_legal_placeholder": true,
+      "classification": "NEEDS_OPERATOR_REVIEW",
+      "notes": "WP privacy setting page; placeholder native content in DB"
+    },
+    {
+      "route": "/user-agreement/",
+      "page_id": 22,
+      "http_status": 200,
+      "page_status": "publish",
+      "template": "page-templates/legal.php",
+      "content_visible": "title_shell_only",
+      "exposes_garbled": false,
+      "exposes_empty_legal_placeholder": true,
+      "classification": "NEEDS_AUTHORITATIVE_COPY",
+      "notes": "Footer legal link; empty legal body"
+    },
+    {
+      "route": "/consent-personal-data/",
+      "page_id": 23,
+      "http_status": 200,
+      "page_status": "publish",
+      "template": "page-templates/legal.php",
+      "content_visible": "title_shell_only",
+      "exposes_garbled": false,
+      "exposes_empty_legal_placeholder": true,
+      "classification": "NEEDS_AUTHORITATIVE_COPY",
+      "notes": "Footer legal link"
+    },
+    {
+      "route": "/cookie-files-policy/",
+      "page_id": 24,
+      "http_status": 200,
+      "page_status": "publish",
+      "template": "page-templates/legal.php",
+      "content_visible": "title_shell_only",
+      "exposes_garbled": false,
+      "exposes_empty_legal_placeholder": true,
+      "classification": "NEEDS_AUTHORITATIVE_COPY",
+      "notes": "Footer legal link"
+    },
+    {
+      "route": "/pravovaya-informaciya-pilzovatelyu/",
+      "page_id": 21,
+      "http_status": 200,
+      "page_status": "publish",
+      "template": "default",
+      "content_visible": "generic_shell",
+      "exposes_garbled": false,
+      "exposes_empty_legal_placeholder": true,
+      "classification": "OPERATOR_REVIEW_REQUIRED",
+      "notes": "Legal nav menu first item; legacy hub"
+    },
+    {
+      "route": "/zavisimosti/",
+      "page_id": 6,
+      "http_status": 200,
+      "page_status": "publish",
+      "content_visible": "generic_shell",
+      "exposes_garbled": false,
+      "exposes_empty_legal_placeholder": false,
+      "classification": "KEEP_FOR_NOW",
+      "notes": "Sample operator-review page; placeholder in DB; CPT canonical elsewhere"
+    },
+    {
+      "route": "/genotipirovanie/",
+      "page_id": 9,
+      "http_status": 404,
+      "page_status": "publish",
+      "content_visible": "none",
+      "exposes_garbled": false,
+      "exposes_empty_legal_placeholder": false,
+      "classification": "KEEP_FOR_NOW",
+      "notes": "Not publicly routed"
+    },
+    {
+      "route": "/blog/",
+      "page_id": 19,
+      "http_status": 200,
+      "page_status": "publish",
+      "content_visible": "generic_shell",
+      "exposes_garbled": false,
+      "exposes_empty_legal_placeholder": false,
+      "classification": "OPERATOR_REVIEW_REQUIRED",
+      "notes": "Deferred blog wave"
+    }
+  ],
+  "footer_legal_routes": [
+    "/privacy-policy/",
+    "/user-agreement/",
+    "/consent-personal-data/",
+    "/cookie-files-policy/"
+  ],
+  "result": "AUDITED"
+}

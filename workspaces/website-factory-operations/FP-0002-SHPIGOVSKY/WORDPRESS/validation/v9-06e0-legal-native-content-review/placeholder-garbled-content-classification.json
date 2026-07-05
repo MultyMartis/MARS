@@ -1,0 +1,77 @@
+{
+  "phase": "V9-06E0",
+  "generated_at": "2026-07-06T03:35:00+07:00",
+  "classifications": [
+    {
+      "page_id": 3,
+      "classification": "GARBLED_LEGAL_SEED",
+      "recommended_handling": "KEEP_FOR_NOW in E0; E1: clear garbled native post_content after DB checkpoint; seed authoritative copy; publish only after operator legal approval; do not delete page"
+    },
+    {
+      "page_id": 6,
+      "classification": "PLACEHOLDER_LOCAL_DEV",
+      "recommended_handling": "KEEP_FOR_NOW; E1 optional SAFE_TO_CLEAR_NATIVE after operator confirms CPT routes are sole public surface; do not delete page"
+    },
+    {
+      "page_id": 7,
+      "classification": "PLACEHOLDER_LOCAL_DEV",
+      "recommended_handling": "KEEP_FOR_NOW; same as #6"
+    },
+    {
+      "page_id": 8,
+      "classification": "PLACEHOLDER_LOCAL_DEV",
+      "recommended_handling": "KEEP_FOR_NOW; same as #6"
+    },
+    {
+      "page_id": 9,
+      "classification": "PLACEHOLDER_LOCAL_DEV",
+      "recommended_handling": "KEEP_FOR_NOW; route 404; operator decision on retire vs redirect in later wave"
+    },
+    {
+      "page_id": 10,
+      "classification": "PLACEHOLDER_LOCAL_DEV",
+      "recommended_handling": "KEEP_FOR_NOW; LEGACY_DEFERRED; do not delete"
+    },
+    {
+      "page_id": 17,
+      "classification": "PLACEHOLDER_LOCAL_DEV",
+      "recommended_handling": "OPERATOR_REVIEW_REQUIRED; defer content strategy"
+    },
+    {
+      "page_id": 19,
+      "classification": "PLACEHOLDER_LOCAL_DEV",
+      "recommended_handling": "OPERATOR_REVIEW_REQUIRED; blog wave deferred"
+    },
+    {
+      "page_id": 21,
+      "classification": "PLACEHOLDER_LOCAL_DEV",
+      "recommended_handling": "KEEP_FOR_NOW; LEGACY_ONLY legal hub; in legal menu; operator decides retire vs redirect"
+    },
+    {
+      "page_id": 22,
+      "classification": "NEEDS_AUTHORITATIVE_COPY",
+      "recommended_handling": "TEMPLATE_MANAGED_EMPTY_OK; E1 seed when operator provides copy; native editor stays hidden"
+    },
+    {
+      "page_id": 23,
+      "classification": "NEEDS_AUTHORITATIVE_COPY",
+      "recommended_handling": "Same as #22"
+    },
+    {
+      "page_id": 24,
+      "classification": "NEEDS_AUTHORITATIVE_COPY",
+      "recommended_handling": "Same as #22"
+    },
+    {
+      "page_id": 25,
+      "classification": "PLACEHOLDER_LOCAL_DEV",
+      "recommended_handling": "OPERATOR_REVIEW_REQUIRED; WP privacy setting target; E1 repoint setting to #3 or retire after canonical privacy live"
+    }
+  ],
+  "rules_applied": [
+    "No legal page classified safe to delete",
+    "Garbled ID 3 not classified authoritative",
+    "No content replacement performed in E0"
+  ],
+  "result": "CLASSIFIED"
+}

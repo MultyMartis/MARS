@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D9-Z WORDPRESS READINESS AUDIT PARTIAL PASS — Runtime/routes/frontend/Reviews READY; content/legal NEEDS_OPERATOR_REVIEW; NEXT: E0 legal/native content review
+**Status:** V9-06E0 LEGAL NATIVE CONTENT REVIEW PASS — 13 pages classified; garbled privacy #3 CONFIRMED; legal authority PARTIAL; NEXT: OPERATOR_DECISION_REQUIRED then E1 repair waves
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---
