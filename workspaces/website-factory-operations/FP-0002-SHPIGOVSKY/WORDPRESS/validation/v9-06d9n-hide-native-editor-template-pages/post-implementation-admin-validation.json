@@ -1,0 +1,287 @@
+{
+    "phase": "V9-06D9-N",
+    "generated_at": "2026-07-05T16:00:04+00:00",
+    "classic_editor": {
+        "slug": "classic-editor",
+        "installed": true,
+        "active": true,
+        "main_file": "classic-editor/classic-editor.php"
+    },
+    "gutenberg_disabled": true,
+    "pages": [
+        {
+            "page_id": 4,
+            "title": "Главная",
+            "native_editor_after": "hidden",
+            "acf_visible_after": true,
+            "result": "PASS",
+            "notes": {
+                "simulated": true,
+                "should_hide": true,
+                "editor_support_removed": "pending_admin_init",
+                "function_exists": true,
+                "allowlist_count": 13
+            }
+        },
+        {
+            "page_id": 5,
+            "title": "Услуги",
+            "native_editor_after": "hidden",
+            "acf_visible_after": null,
+            "result": "PASS",
+            "notes": {
+                "simulated": true,
+                "should_hide": true,
+                "editor_support_removed": "pending_admin_init",
+                "function_exists": true,
+                "allowlist_count": 13
+            }
+        },
+        {
+            "page_id": 20,
+            "title": "Контакты",
+            "native_editor_after": "hidden",
+            "acf_visible_after": null,
+            "result": "PASS",
+            "notes": {
+                "simulated": true,
+                "should_hide": true,
+                "editor_support_removed": "pending_admin_init",
+                "function_exists": true,
+                "allowlist_count": 13
+            }
+        },
+        {
+            "page_id": 3,
+            "title": "Политика конфиденциальности",
+            "native_editor_after": "visible",
+            "acf_visible_after": null,
+            "result": "PASS",
+            "notes": {
+                "simulated": true,
+                "should_hide": false,
+                "editor_support_removed": false,
+                "function_exists": true,
+                "allowlist_count": 13
+            }
+        },
+        {
+            "page_id": 6,
+            "title": "Зависимости",
+            "native_editor_after": "visible",
+            "acf_visible_after": null,
+            "result": "PASS",
+            "notes": {
+                "simulated": true,
+                "should_hide": false,
+                "editor_support_removed": false,
+                "function_exists": true,
+                "allowlist_count": 13
+            }
+        },
+        {
+            "page_id": 11,
+            "title": "О центре",
+            "native_editor_after": "hidden",
+            "acf_visible_after": null,
+            "result": "PASS",
+            "notes": {
+                "simulated": true,
+                "should_hide": true,
+                "editor_support_removed": "pending_admin_init",
+                "function_exists": true,
+                "allowlist_count": 13
+            }
+        },
+        {
+            "page_id": 12,
+            "title": "О нас",
+            "native_editor_after": "hidden",
+            "acf_visible_after": null,
+            "result": "PASS",
+            "notes": {
+                "simulated": true,
+                "should_hide": true,
+                "editor_support_removed": "pending_admin_init",
+                "function_exists": true,
+                "allowlist_count": 13
+            }
+        },
+        {
+            "page_id": 13,
+            "title": "Программа лечения",
+            "native_editor_after": "hidden",
+            "acf_visible_after": null,
+            "result": "PASS",
+            "notes": {
+                "simulated": true,
+                "should_hide": true,
+                "editor_support_removed": "pending_admin_init",
+                "function_exists": true,
+                "allowlist_count": 13
+            }
+        },
+        {
+            "page_id": 14,
+            "title": "Галерея о доме",
+            "native_editor_after": "hidden",
+            "acf_visible_after": null,
+            "result": "PASS",
+            "notes": {
+                "simulated": true,
+                "should_hide": true,
+                "editor_support_removed": "pending_admin_init",
+                "function_exists": true,
+                "allowlist_count": 13
+            }
+        },
+        {
+            "page_id": 15,
+            "title": "Специалистам",
+            "native_editor_after": "hidden",
+            "acf_visible_after": null,
+            "result": "PASS",
+            "notes": {
+                "simulated": true,
+                "should_hide": true,
+                "editor_support_removed": "pending_admin_init",
+                "function_exists": true,
+                "allowlist_count": 13
+            }
+        },
+        {
+            "page_id": 16,
+            "title": "Родственникам",
+            "native_editor_after": "hidden",
+            "acf_visible_after": null,
+            "result": "PASS",
+            "notes": {
+                "simulated": true,
+                "should_hide": true,
+                "editor_support_removed": "pending_admin_init",
+                "function_exists": true,
+                "allowlist_count": 13
+            }
+        },
+        {
+            "page_id": 18,
+            "title": "Отзывы",
+            "native_editor_after": "hidden",
+            "acf_visible_after": null,
+            "result": "PASS",
+            "notes": {
+                "simulated": true,
+                "should_hide": true,
+                "editor_support_removed": "pending_admin_init",
+                "function_exists": true,
+                "allowlist_count": 13
+            }
+        },
+        {
+            "page_id": 22,
+            "title": "Пользовательское соглашение",
+            "native_editor_after": "hidden",
+            "acf_visible_after": null,
+            "result": "PASS",
+            "notes": {
+                "simulated": true,
+                "should_hide": true,
+                "editor_support_removed": "pending_admin_init",
+                "function_exists": true,
+                "allowlist_count": 13
+            }
+        },
+        {
+            "page_id": 23,
+            "title": "Согласие на обработку персональных данных",
+            "native_editor_after": "hidden",
+            "acf_visible_after": null,
+            "result": "PASS",
+            "notes": {
+                "simulated": true,
+                "should_hide": true,
+                "editor_support_removed": "pending_admin_init",
+                "function_exists": true,
+                "allowlist_count": 13
+            }
+        },
+        {
+            "page_id": 24,
+            "title": "Политика Cookie-файлов",
+            "native_editor_after": "hidden",
+            "acf_visible_after": null,
+            "result": "PASS",
+            "notes": {
+                "simulated": true,
+                "should_hide": true,
+                "editor_support_removed": "pending_admin_init",
+                "function_exists": true,
+                "allowlist_count": 13
+            }
+        }
+    ],
+    "home_acf_summary": {
+        "home_recovery_intro_heading": {
+            "empty": false,
+            "type": "string",
+            "preview": "Шпиговский дом&nbsp;&mdash; восстановление, построенное вокруг человека"
+        },
+        "home_faq_heading": {
+            "empty": false,
+            "type": "string",
+            "preview": "Нас часто спрашивают"
+        },
+        "home_specialists_heading": {
+            "empty": false,
+            "type": "string",
+            "preview": "Специалисты центра"
+        },
+        "home_hero_slides": {
+            "empty": false,
+            "type": "array",
+            "preview": "array[1]",
+            "hero_image_attachment_id": 89
+        },
+        "home_gallery_media": {
+            "empty": false,
+            "type": "array",
+            "preview": "array[4]",
+            "gallery_row_count": 4
+        }
+    },
+    "checks": [
+        {
+            "check": "classic_editor_active",
+            "result": "PASS"
+        },
+        {
+            "check": "gutenberg_disabled",
+            "result": "PASS"
+        },
+        {
+            "check": "hide_helper_loaded",
+            "result": "PASS"
+        },
+        {
+            "check": "home_4_hide_policy",
+            "result": "PASS"
+        },
+        {
+            "check": "privacy_3_retain_editor",
+            "result": "PASS"
+        },
+        {
+            "check": "operator_review_6_retain",
+            "result": "PASS"
+        },
+        {
+            "check": "home_acf_values_intact",
+            "result": "PASS"
+        },
+        {
+            "check": "hero_image_populated",
+            "result": "PASS"
+        }
+    ],
+    "result": "PASS"
+}

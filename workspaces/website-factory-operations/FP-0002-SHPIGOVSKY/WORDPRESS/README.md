@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D9-M NATIVE PAGE CONTENT CLEANUP PASS — NEXT: D9-N hide native editor for template pages
+**Status:** V9-06D9-N HIDE NATIVE EDITOR FOR TEMPLATE PAGES PASS — NEXT: D9-O admin UX QA
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---
@@ -245,4 +245,12 @@ D9-K **PASS**: 5 Home media uploads + ACF seed on page #4 (hero image + 4 galler
 
 ## V9-06D9-L admin editor / ACF visibility repair (2026-07-05)
 
-D9-L **PASS**: Classic Editor installed/activated; Gutenberg disabled; 13 ACF groups synced from existing JSON to DB; Home #4 seeded values preserved; frontend regression PASS; routes ALL_200. No source/theme/ACF JSON/content writes. Evidence: `validation/v9-06d9l-admin-editor-acf-visibility-repair/`. Report: `reports/FP-0002-V9-06D9L-ADMIN-EDITOR-ACF-VISIBILITY-REPAIR-REPORT-v1.md`. Next: D9-M admin UX QA.
+D9-L **PASS**: Classic Editor installed/activated; Gutenberg disabled; 13 ACF groups synced from existing JSON to DB; Home #4 seeded values preserved; frontend regression PASS; routes ALL_200. No source/theme/ACF JSON/content writes. Evidence: `validation/v9-06d9l-admin-editor-acf-visibility-repair/`. Report: `reports/FP-0002-V9-06D9L-ADMIN-EDITOR-ACF-VISIBILITY-REPAIR-REPORT-v1.md`. Next: D9-M native page content cleanup.
+
+## V9-06D9-M native page content cleanup (2026-07-05)
+
+D9-M **PASS**: Cleared obsolete native `post_content` on 13 template-managed pages; DB checkpoint PASS; ACF values preserved; frontend regression PASS; routes ALL_200. Evidence: `validation/v9-06d9m-native-page-content-cleanup/`. Report: `reports/FP-0002-V9-06D9M-NATIVE-PAGE-CONTENT-CLEANUP-REPORT-v1.md`. Next: D9-N hide native editor for template pages.
+
+## V9-06D9-N hide native editor for template-managed pages (2026-07-05)
+
+D9-N **PASS**: Theme admin helper hides native Classic Editor box on 13 allowlisted template-managed pages; operator-review pages retain editor; bounded runtime delivery (2 theme files); frontend regression PASS; routes ALL_200; admin screenshots PARTIAL. No DB/ACF/content writes. Evidence: `validation/v9-06d9n-hide-native-editor-template-pages/`. Report: `reports/FP-0002-V9-06D9N-HIDE-NATIVE-EDITOR-FOR-TEMPLATE-PAGES-REPORT-v1.md`. Next: D9-O admin UX QA.

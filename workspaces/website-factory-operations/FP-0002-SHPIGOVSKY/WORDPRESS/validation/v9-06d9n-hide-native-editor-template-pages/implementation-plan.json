@@ -1,0 +1,48 @@
+{
+    "phase": "V9-06D9-N",
+    "generated_at": "2026-07-05T16:00:04+00:00",
+    "pattern": "allowlist_metabox_removal",
+    "implementation": {
+        "file": "theme/shpigovsky/inc/admin-editor.php",
+        "hooks": [
+            "admin_init",
+            "add_meta_boxes",
+            "admin_head-post.php"
+        ],
+        "methods": [
+            "remove_post_type_support page editor on allowlisted edit screens",
+            "remove_meta_box postdivrich",
+            "admin CSS fallback for #postdivrich"
+        ]
+    },
+    "allowlist_page_ids": [
+        4,
+        5,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18,
+        20,
+        22,
+        23,
+        24
+    ],
+    "retain_editor_page_ids": [
+        3,
+        6,
+        7,
+        8,
+        9,
+        10,
+        17,
+        19,
+        21,
+        25
+    ],
+    "db_writes_required": false,
+    "acf_json_changes": false,
+    "result": "PASS"
+}

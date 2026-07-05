@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-05 (V9-06D9-M Native Page Content Cleanup PASS)
+**Last updated:** 2026-07-05 (V9-06D9-N Hide Native Editor for Template-Managed Pages PASS)
 
-**Current WordPress phase:** V9-06D9-M Native Page Content Cleanup **PASS** — cleared obsolete native `post_content` on 13 template-managed pages (Home #4, Services Hub #5, institutional, Contacts #20, legal); DB checkpoint PASS; ACF values preserved; frontend regression PASS (19 sections, uploads, routes ALL_200); no source/theme/ACF JSON/media writes. Ten pages deferred for operator review. Recommended next: **D9-N hide native editor for template pages**. Report: `WORDPRESS/reports/FP-0002-V9-06D9M-NATIVE-PAGE-CONTENT-CLEANUP-REPORT-v1.md`. Prior: D9-L Classic Editor + ACF sync.
+**Current WordPress phase:** V9-06D9-N Hide Native Editor for Template-Managed Pages **PASS** — allowlist-based admin UX helper hides native Classic Editor content box on 13 template-managed pages; operator-review pages retain editor; no DB/ACF/content writes; frontend regression PASS (19 sections, uploads, routes ALL_200); admin screenshots PARTIAL (operator visual QA recommended). Recommended next: **D9-O admin UX QA**. Report: `WORDPRESS/reports/FP-0002-V9-06D9N-HIDE-NATIVE-EDITOR-FOR-TEMPLATE-PAGES-REPORT-v1.md`. Prior: D9-M native content cleanup.
 
 ## Active frontend workspace (V9)
 
