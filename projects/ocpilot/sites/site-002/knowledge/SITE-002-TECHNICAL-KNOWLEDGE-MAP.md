@@ -1821,10 +1821,11 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 
 ---
 
-## 33. Mail Recipients Architecture (Production — MAPPED)
+## 33. Mail Recipients Architecture (Production — ACTIVE)
 
 **Discovery:** Run 4.186 — `SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01` (2026-07-06)
-**Status:** **MAPPED — read-only; no Production mutation**
+**Confirmation:** Run 4.187 — `SITE-002-PROD-MAIL-RECIPIENTS-ADMIN-ADD-01` (2026-07-06)
+**Status:** **ACTIVE — admin-managed via OpenCart Mail Alert Emails; no code deploy**
 
 | Item | Production value |
 |------|------------------|
@@ -1834,18 +1835,20 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 | **Security** | CSRF session token + Google reCAPTCHA v3 |
 | **DB persist** | `catalog/model/checkout/anketa.php` → `addanketa()` |
 | **Active recipients** | OpenCart setting **`config_mail_alert_email`** — comma-separated; loop in anketa + order alert |
-| **From / SMTP** | OpenCart mail settings (`config_email`, `config_mail_*`) |
+| **Admin path** | **System → Settings → Mail → Additional Alert Emails** (*Дополнительные адреса оповещения*) |
+| **Operator update** | Run 4.187 — recipient list updated in admin; delivery verified by operator |
+| **From / SMTP** | OpenCart mail settings (`config_email`, `config_mail_*`) — **unchanged** (Run 4.187) |
 | **Order admin alerts** | `catalog/controller/mail/order.php` → `config_email` + same `config_mail_alert_email` when `config_mail_alert` includes `order` |
 | **Native contact** | `information/contact.php` → `config_email` only (no alert list) |
 | **Legacy dead code** | `$to = 's***@mail.ru'` in anketa line 51 — **not used** in send path |
-| **Multi-recipient** | **Already supported** via comma-separated admin setting |
-| **Recommended add path** | Prefer OpenCart admin Mail Alert Emails; else single-file anketa change |
-| **Next task** | `SITE-002-PROD-MAIL-RECIPIENTS-ADD-01` |
-| **Report** | [SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01.md](../reports/SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01.md) |
-| **Storage artefacts** | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\deployments\SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01\` |
+| **Multi-recipient** | **Supported** via comma-separated admin setting |
+| **Custom admin section** | **Not implemented** — not required; optional future phase only for differentiated per-flow recipients |
+| **Discovery report** | [SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01.md](../reports/SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01.md) |
+| **Confirmation report** | [SITE-002-PROD-MAIL-RECIPIENTS-ADMIN-ADD-01.md](../reports/SITE-002-PROD-MAIL-RECIPIENTS-ADMIN-ADD-01.md) |
+| **Storage artefacts** | Discovery: `.../SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01\` · Confirmation: `.../SITE-002-PROD-MAIL-RECIPIENTS-ADMIN-ADD-01\` |
 
-**Change rules:** Do not edit anketa/mail paths during unrelated catalog/cron work. Verify CSRF + reCAPTCHA after any anketa change. Mask recipient emails in reports.
+**Change rules:** Recipients are managed through OpenCart native Mail Alert Emails — do not hardcode in `anketa.php` unless admin path is unavailable. Do not edit anketa/mail paths during unrelated catalog/cron work. Verify CSRF + reCAPTCHA after any anketa change. Mask recipient emails in reports.
 
 ---
 
-*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-06 (Run 4.186 — mail recipients discovery).*
+*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-06 (Run 4.187 — mail recipients admin update confirmed).*

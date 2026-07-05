@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-06 (Run 4.184 — 1C cron reports cleanup; redundant setup-date TXT removed; Beget cron active)
+**Last updated:** 2026-07-06 (Run 4.187 — mail recipients admin update confirmed; operator verified delivery; no code deploy)
 
 ---
 
@@ -73,7 +73,7 @@ Do not claim that Production exactly matches TEST unless evidence proves it.
 | MARS 1C cron wrapper | **ACTIVE — DAILY SCHEDULED** (Run 4.183) — Beget cron row confirmed by operator; manual run **SUCCESS** (Run 4.181); wrapper v1.1.0; HTTP gateway; schedule `0 8 * * *` (Moscow → 12:00 Barnaul); token present not documented; next scheduled run monitoring pending; Sergey legacy **preserved** |
 | MARS 1C cron reports | **CLEANED** (Run 4.184) — `/storage/mars-tools/cron/reports/` retains 3 files: `index.html`, manual run `mars_1c_import_2026-07-05_205934.txt`, latest status `mars_1c_import_status_2026-07-05_212740.txt`; 19 redundant setup-date dry-run/status reports removed; backups in Storage; retention policy: keep daily run reports, not every diagnostic dry-run/status |
 | Catalog load more (Production) | **ACTIVE** (Run 4.185) — «Показать ещё» append via `initLoadMore()`; counter «Показано X из Y»; numeric pagination hidden when JS (`js-load-more`); rollback in Storage `deployments/SITE-002-PROD-LOAD-MORE-01/rollback/` |
-| Mail recipients architecture (Production) | **MAPPED** (Run 4.186) — read-only discovery; unified form handler `catalog/controller/checkout/anketa.php`; active recipients from OpenCart `config_mail_alert_email` (comma-separated); order alerts share same setting; legacy hardcoded email in anketa **inactive**; report [SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01.md](reports/SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01.md) |
+| Mail recipients architecture (Production) | **ACTIVE — ADMIN-MANAGED** (Run 4.186 discovery + Run 4.187 confirmation) — unified form handler `catalog/controller/checkout/anketa.php`; active recipients from OpenCart **`config_mail_alert_email`** (comma-separated); operator updated via admin **Additional Alert Emails**; delivery verified; order alerts share same setting; legacy hardcoded email in anketa **inactive**; no custom admin section; no code deploy · [discovery](reports/SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01.md) · [confirmation](reports/SITE-002-PROD-MAIL-RECIPIENTS-ADMIN-ADD-01.md) |
 | Catalog default sort (Production) | `pd.name ASC` when `sort`/`order` omitted |
 
 ---
