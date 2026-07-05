@@ -1,0 +1,38 @@
+{
+  "phase": "V9-06D9-X",
+  "generated_at": "2026-07-06T02:34:00+07:00",
+  "admin_context": "fp02-reviews",
+  "legacy_context": "option",
+  "contexts": {
+    "fp02-reviews": {
+      "rows": 10,
+      "first_author": "Александр, Москва",
+      "storage_prefix": "fp02-reviews_reviews_"
+    },
+    "option": {
+      "rows": 10,
+      "first_author": "Андрей, Москва",
+      "storage_prefix": "options_reviews_"
+    }
+  },
+  "meta_direct": {
+    "options_reviews_items_0_review_author": "Андрей, Москва",
+    "fp02-reviews_reviews_items_0_review_author": "Александр, Москва"
+  },
+  "helper_before_repair": {
+    "first_author": "Александр, Москва",
+    "items_count": 10,
+    "source_mode": "OPTIONS",
+    "resolved_context": "fp02-reviews"
+  },
+  "frontend_before_repair": {
+    "home_first_author": "Александр, Москва",
+    "otzyvy_first_author": "Александр, Москва",
+    "home_slide_count": 10
+  },
+  "root_cause": "Operator edit persisted to legacy options_* namespace while helper read fp02-reviews_* first with stale D9-W copy",
+  "stale_context_identified": "fp02-reviews",
+  "operator_edit_context": "option",
+  "admin_value_andrey_found": true,
+  "result": "PASS"
+}

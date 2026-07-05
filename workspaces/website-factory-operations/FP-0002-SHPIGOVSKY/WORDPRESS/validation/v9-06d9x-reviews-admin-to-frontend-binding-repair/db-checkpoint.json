@@ -1,0 +1,14 @@
+{
+  "phase": "V9-06D9-X",
+  "generated_at": "2026-07-06T02:34:10+07:00",
+  "performed": true,
+  "path": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d9x-reviews-binding-repair-pre-20260706-023410",
+  "reason": "Options context migration required to sync operator edit (Андрей, Москва) into canonical fp02-reviews storage",
+  "includes": {
+    "database_dump": "mars_wp_fp0002.sql",
+    "reviews_context_snapshot": "reviews-options-context-before.tsv",
+    "restore_instructions": "RESTORE.md"
+  },
+  "dump_bytes": 1421818,
+  "result": "PASS"
+}

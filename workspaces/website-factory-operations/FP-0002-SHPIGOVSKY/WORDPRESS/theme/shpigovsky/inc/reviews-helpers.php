@@ -1,6 +1,6 @@
 <?php
 /**
- * Shared reviews helpers — V9-06D9-R ACF Options + static V9 fallback.
+ * Shared reviews helpers — V9-06D9-X admin-to-frontend binding repair.
  *
  * Read-only; no meta writes.
  *
@@ -111,6 +111,66 @@ function shpigovsky_get_reviews_options_context() {
 }
 
 /**
+ * Last resolved ACF options context used by reviews helpers (request-scoped).
+ *
+ * @return string Empty when unresolved.
+ */
+function shpigovsky_get_reviews_resolved_options_context() {
+	return shpigovsky_reviews_options_context_state( 'get' );
+}
+
+/**
+ * Remember which options context supplied review rows for this request.
+ *
+ * @param string $context ACF options context slug.
+ * @return void
+ */
+function shpigovsky_set_reviews_resolved_options_context( $context ) {
+	shpigovsky_reviews_options_context_state( 'set', $context );
+}
+
+/**
+ * Request-scoped storage for resolved reviews options context.
+ *
+ * @param string      $action One of get|set.
+ * @param string|null $value  Context slug when setting.
+ * @return string
+ */
+function shpigovsky_reviews_options_context_state( $action, $value = null ) {
+	static $resolved = '';
+
+	if ( 'set' === $action && is_string( $value ) && '' !== $value ) {
+		$resolved = $value;
+	}
+
+	return is_string( $resolved ) ? $resolved : '';
+}
+
+/**
+ * Legacy generic options context retained for empty-canonical fallback only.
+ *
+ * @return string
+ */
+function shpigovsky_get_reviews_legacy_options_context() {
+	return 'option';
+}
+
+/**
+ * Ordered ACF options contexts for reviews reads.
+ *
+ * Canonical top-level Reviews admin (`fp02-reviews`) first; legacy `option`
+ * second only when canonical has no usable rows.
+ *
+ * @return array<int, string>
+ */
+function shpigovsky_get_reviews_options_read_contexts() {
+	return array(
+		shpigovsky_get_reviews_options_context(),
+		shpigovsky_get_reviews_legacy_options_context(),
+	);
+}
+
+/**
  * Read a reviews options field from canonical context with generic fallback.
  *
  * @param string $field_name ACF field name.
@@ -121,10 +181,7 @@ function shpigovsky_get_reviews_option_field( $field_name ) {
 		return null;
 	}
 
-	$contexts = array(
-		shpigovsky_get_reviews_options_context(),
-		'option',
-	);
+	$contexts = shpigovsky_get_reviews_options_read_contexts();
 
 	foreach ( $contexts as $context ) {
 		$value = get_field( $field_name, $context );
@@ -307,9 +364,9 @@ function shpigovsky_get_reviews_option_items() {
 		return array();
 	}
 
-	$rows = null;
+	shpigovsky_set_reviews_resolved_options_context( '' );
 
-	foreach ( array( shpigovsky_get_reviews_options_context(), 'option' ) as $context ) {
+	foreach ( shpigovsky_get_reviews_options_read_contexts() as $context ) {
 		$candidate = get_field( 'reviews_items', $context );
 
 		if ( ! is_array( $candidate ) || empty( $candidate ) ) {
@@ -327,6 +384,8 @@ function shpigovsky_get_reviews_option_items() {
 		}
 
 		if ( ! empty( $normalized ) ) {
+			shpigovsky_set_reviews_resolved_options_context( $context );
+
 			return $normalized;
 		}
 	}
@@ -400,7 +459,15 @@ function shpigovsky_get_reviews_source_mode() {
 
 	$option_items = shpigovsky_get_reviews_option_items();
 
-	if ( ! empty( $option_items ) ) {
+	if ( empty( $option_items ) ) {
+		return 'FALLBACK';
+	}
+
+	if ( shpigovsky_get_reviews_options_context() === shpigovsky_get_reviews_resolved_options_context() ) {
+		return 'OPTIONS';
+	}
+
+	if ( shpigovsky_get_reviews_legacy_options_context() === shpigovsky_get_reviews_resolved_options_context() ) {
 		return 'OPTIONS';
 	}
 

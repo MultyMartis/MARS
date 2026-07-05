@@ -1,0 +1,31 @@
+{
+  "phase": "V9-06D9-X",
+  "generated_at": "2026-07-06T02:35:00+07:00",
+  "routes": {
+    "/": {
+      "status": 200,
+      "ok": true,
+      "home_first_author": "Андрей, Москва",
+      "home_slide_count": 10,
+      "source_mode": "OPTIONS"
+    },
+    "/otzyvy/": {
+      "status": 200,
+      "ok": true,
+      "first_review_author": "Андрей, Москва",
+      "archive_card_count": 10,
+      "has_archive_layout": true,
+      "has_slider": false,
+      "source_mode": "OPTIONS"
+    },
+    "/uslugi/": { "status": 200, "ok": true },
+    "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/": { "status": 200, "ok": true },
+    "/kontakty/": { "status": 200, "ok": true }
+  },
+  "all_routes_200": true,
+  "home_first_author": "Андрей, Москва",
+  "otzyvy_first_author": "Андрей, Москва",
+  "source_mode": "OPTIONS",
+  "helper_items_count": 10,
+  "result": "PASS"
+}

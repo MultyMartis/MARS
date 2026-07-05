@@ -1,0 +1,35 @@
+{
+  "phase": "V9-06D9-X",
+  "generated_at": "2026-07-06T02:35:00+07:00",
+  "checks": {
+    "first_review_author_db_fp02": {
+      "expected": "Андрей, Москва",
+      "actual": "Андрей, Москва",
+      "result": "PASS"
+    },
+    "first_review_author_db_option": {
+      "expected": "Андрей, Москва",
+      "actual": "Андрей, Москва",
+      "result": "PASS"
+    },
+    "row_count_fp02": {
+      "expected": 10,
+      "actual": 10,
+      "result": "PASS"
+    },
+    "duplicate_reviews_in_site_settings": {
+      "expected": "absent",
+      "result": "PASS",
+      "notes": "Single canonical group ID 286 on fp02-reviews"
+    },
+    "home_reviews_teaser_blocker": {
+      "expected": "absent",
+      "result": "PASS"
+    },
+    "wp_admin_ui_screenshot": {
+      "result": "PARTIAL",
+      "notes": "Auth required; DB/meta validation used"
+    }
+  },
+  "result": "PARTIAL"
+}

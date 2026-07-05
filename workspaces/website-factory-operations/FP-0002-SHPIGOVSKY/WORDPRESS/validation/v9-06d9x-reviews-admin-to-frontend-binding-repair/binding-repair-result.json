@@ -1,0 +1,26 @@
+{
+  "phase": "V9-06D9-X",
+  "generated_at": "2026-07-06T02:34:31+07:00",
+  "source_changes": [
+    {
+      "file": "theme/shpigovsky/inc/reviews-helpers.php",
+      "change": "Added resolved context tracking, read-order helpers, source_mode canonical check",
+      "result": "PASS"
+    },
+    {
+      "file": "theme/shpigovsky/inc/admin-options.php",
+      "change": "Explicit post_id, autoload false, acf/pre_save_post force fp02-reviews",
+      "result": "PASS"
+    }
+  ],
+  "db_migration": {
+    "strategy": "copy options_reviews_* to fp02-reviews_reviews_*",
+    "meta_copied_count": 166,
+    "option_first_author": "Андрей, Москва",
+    "fp02_first_author_after": "Андрей, Москва",
+    "result": "PASS"
+  },
+  "acf_json_changed": false,
+  "template_changed": false,
+  "result": "PASS"
+}
