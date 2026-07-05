@@ -1,0 +1,27 @@
+{
+  "phase": "V9-06D9-U",
+  "generated_at": "2026-07-06T01:30:04.369320+07:00",
+  "components": [
+    {
+      "component": "home_blocker",
+      "action": "Theme hide + POST strip for field_fp02_home_reviews_teaser",
+      "safety": "No plugin edits; orphan meta preserved"
+    },
+    {
+      "component": "canonical_meta",
+      "action": "update_field reviews_items with review_* subfields",
+      "safety": "Preserve 10 rows text exactly"
+    },
+    {
+      "component": "top_level_menu",
+      "action": "acf_add_options_page fp02-reviews + relocate ACF group",
+      "safety": "No frontend menu changes"
+    },
+    {
+      "component": "runtime_delivery",
+      "action": "Copy theme + ACF JSON; acf_import reviews group",
+      "safety": "Bounded copy"
+    }
+  ],
+  "result": "PASS"
+}

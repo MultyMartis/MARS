@@ -1,0 +1,51 @@
+{
+  "phase": "V9-06D9-U",
+  "generated_at": "2026-07-05T18:30:05+00:00",
+  "synced_groups": [
+    "group_fp02_site_options_reviews"
+  ],
+  "import_results": [
+    {
+      "group": "group_fp02_site_options_reviews",
+      "import_id": 274,
+      "location": "fp02-reviews",
+      "result": "PASS"
+    }
+  ],
+  "options_reviews_items_subfields": [
+    {
+      "key": "field_fp02_options_review_author",
+      "name": "review_author"
+    },
+    {
+      "key": "field_fp02_options_review_text",
+      "name": "review_text"
+    },
+    {
+      "key": "field_fp02_options_review_context",
+      "name": "review_context"
+    },
+    {
+      "key": "field_fp02_options_review_source",
+      "name": "review_source"
+    },
+    {
+      "key": "field_fp02_options_review_date",
+      "name": "review_date"
+    },
+    {
+      "key": "field_fp02_options_review_rating",
+      "name": "review_rating"
+    },
+    {
+      "key": "field_fp02_options_review_visible",
+      "name": "review_visible"
+    },
+    {
+      "key": "field_fp02_options_review_featured",
+      "name": "review_featured"
+    }
+  ],
+  "reviews_group_location_after": "fp02-reviews",
+  "result": "PASS"
+}

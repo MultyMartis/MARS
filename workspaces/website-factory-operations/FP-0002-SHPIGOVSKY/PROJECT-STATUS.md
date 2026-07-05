@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-06 (V9-06D9-T reviews options key fix + helper normalization PASS)
+**Last updated:** 2026-07-06 (V9-06D9-U reviews admin UX repair PASS)
 
-**Current WordPress phase:** V9-06D9-T Reviews Options Key Fix + Helper Normalization **PASS** — ACF options reviews keys decollided (`field_fp02_options_*`); helper reads legacy D9-S rows; frontend source mode **OPTIONS** (10 reviews Home + `/otzyvy/`). DB checkpoint created. **Next: D9-U admin visual QA.** Report: `WORDPRESS/reports/FP-0002-V9-06D9T-REVIEWS-OPTIONS-KEY-FIX-HELPER-NORMALIZATION-REPORT-v1.md`. Prior D9-S: `WORDPRESS/reports/FP-0002-V9-06D9S-CONTROLLED-REVIEWS-OPTIONS-SEED-REPORT-v1.md`.
+**Current WordPress phase:** V9-06D9-U Reviews Admin UX Repair **PASS** — Home `Reviews teaser` blocker removed; 10 reviews canonical in admin (`fp02-reviews` top-level menu); frontend source mode **OPTIONS** unchanged. DB checkpoint created. **Next: D9-V admin visual QA.** Report: `WORDPRESS/reports/FP-0002-V9-06D9U-REVIEWS-ADMIN-UX-REPAIR-REPORT-v1.md`. Prior D9-T: `WORDPRESS/reports/FP-0002-V9-06D9T-REVIEWS-OPTIONS-KEY-FIX-HELPER-NORMALIZATION-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

@@ -211,7 +211,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "fp02-site-settings"
+                "value": "fp02-reviews"
             }
         ]
     ],
@@ -222,7 +222,7 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
-    "description": "FP-0002 V9-06D9-T options reviews — unique field keys; D9-S seeded values preserved via helper normalization.",
+    "description": "FP-0002 V9-06D9-U options reviews — top-level fp02-reviews admin; canonical subfields for seeded demo rows.",
     "show_in_rest": 0,
-    "modified": 1783520000
+    "modified": 1783526400
 }

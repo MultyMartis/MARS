@@ -1,0 +1,18 @@
+{
+  "phase": "V9-06D9-U",
+  "generated_at": "2026-07-06T01:30:06.689281+07:00",
+  "actions": [
+    {
+      "action": "acf/prepare_field hide field_fp02_home_reviews_teaser",
+      "file": "inc/admin-options.php",
+      "result": "PASS"
+    },
+    {
+      "action": "acf/validate_save_post priority 1 unset POST field",
+      "file": "inc/admin-options.php",
+      "result": "PASS"
+    }
+  ],
+  "orphan_meta_preserved": true,
+  "result": "PASS"
+}

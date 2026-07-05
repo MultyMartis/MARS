@@ -1,0 +1,171 @@
+{
+  "phase": "V9-06D9-U",
+  "generated_at": "2026-07-06T01:30:04.617833+07:00",
+  "path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d9u-reviews-admin-ux-repair-pre-20260706-013004",
+  "db_dump": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d9u-reviews-admin-ux-repair-pre-20260706-013004/mars_wp_fp0002.sql",
+  "db_dump_bytes": 1325630,
+  "db_dump_sha256": "FA731ED90EF88E644177A80992F2EE795BEA841ED1065762943A3ED089E3C125",
+  "acf_groups_before_count": 15,
+  "acf_groups_before": [
+    {
+      "key": "group_fp02_blog_post_article_meta",
+      "title": "Blog Post — Article Meta"
+    },
+    {
+      "key": "group_fp02_page_contacts",
+      "title": "Page — Contacts"
+    },
+    {
+      "key": "group_fp02_page_home",
+      "title": "Page — Home"
+    },
+    {
+      "key": "group_fp02_page_institutional",
+      "title": "Page — Institutional"
+    },
+    {
+      "key": "group_fp02_page_legal",
+      "title": "Page — Legal"
+    },
+    {
+      "key": "group_fp02_page_reviews",
+      "title": "Page — Reviews"
+    },
+    {
+      "key": "group_fp02_page_services_hub",
+      "title": "Page — Services Hub"
+    },
+    {
+      "key": "group_fp02_service_faq",
+      "title": "Service — FAQ"
+    },
+    {
+      "key": "group_fp02_service_layout_hero",
+      "title": "Service — Layout and Hero"
+    },
+    {
+      "key": "group_fp02_service_relationships",
+      "title": "Service — Relationships / Related Services"
+    },
+    {
+      "key": "group_fp02_service_structured_sections",
+      "title": "Service — Structured Sections"
+    },
+    {
+      "key": "group_fp02_site_options_contacts",
+      "title": "Site Options — Contacts and Organisation"
+    },
+    {
+      "key": "group_fp02_site_options_modal_cta",
+      "title": "Site Options — Modal and Global CTA"
+    },
+    {
+      "key": "group_fp02_site_options_reviews",
+      "title": "Site Options — Reviews"
+    },
+    {
+      "key": "group_fp02_site_options_reviews",
+      "title": "Site Options — Reviews"
+    }
+  ],
+  "reviews_options_meta_before": {
+    "_options_reviews_enabled": "field_fp02_reviews_enabled",
+    "_options_reviews_items": "field_fp02_reviews_items",
+    "_options_reviews_items_0_author_label": "field_fp02_review_author_label",
+    "_options_reviews_items_0_metadata": "field_fp02_review_meta",
+    "_options_reviews_items_0_source": "field_fp02_review_source",
+    "_options_reviews_items_0_text": "field_fp02_review_text",
+    "_options_reviews_items_1_author_label": "field_fp02_review_author_label",
+    "_options_reviews_items_1_metadata": "field_fp02_review_meta",
+    "_options_reviews_items_1_source": "field_fp02_review_source",
+    "_options_reviews_items_1_text": "field_fp02_review_text",
+    "_options_reviews_items_2_author_label": "field_fp02_review_author_label",
+    "_options_reviews_items_2_metadata": "field_fp02_review_meta",
+    "_options_reviews_items_2_source": "field_fp02_review_source",
+    "_options_reviews_items_2_text": "field_fp02_review_text",
+    "_options_reviews_items_3_author_label": "field_fp02_review_author_label",
+    "_options_reviews_items_3_metadata": "field_fp02_review_meta",
+    "_options_reviews_items_3_source": "field_fp02_review_source",
+    "_options_reviews_items_3_text": "field_fp02_review_text",
+    "_options_reviews_items_4_author_label": "field_fp02_review_author_label",
+    "_options_reviews_items_4_metadata": "field_fp02_review_meta",
+    "_options_reviews_items_4_source": "field_fp02_review_source",
+    "_options_reviews_items_4_text": "field_fp02_review_text",
+    "_options_reviews_items_5_author_label": "field_fp02_review_author_label",
+    "_options_reviews_items_5_metadata": "field_fp02_review_meta",
+    "_options_reviews_items_5_source": "field_fp02_review_source",
+    "_options_reviews_items_5_text": "field_fp02_review_text",
+    "_options_reviews_items_6_author_label": "field_fp02_review_author_label",
+    "_options_reviews_items_6_metadata": "field_fp02_review_meta",
+    "_options_reviews_items_6_source": "field_fp02_review_source",
+    "_options_reviews_items_6_text": "field_fp02_review_text",
+    "_options_reviews_items_7_author_label": "field_fp02_review_author_label",
+    "_options_reviews_items_7_metadata": "field_fp02_review_meta",
+    "_options_reviews_items_7_source": "field_fp02_review_source",
+    "_options_reviews_items_7_text": "field_fp02_review_text",
+    "_options_reviews_items_8_author_label": "field_fp02_review_author_label",
+    "_options_reviews_items_8_metadata": "field_fp02_review_meta",
+    "_options_reviews_items_8_source": "field_fp02_review_source",
+    "_options_reviews_items_8_text": "field_fp02_review_text",
+    "_options_reviews_items_9_author_label": "field_fp02_review_author_label",
+    "_options_reviews_items_9_metadata": "field_fp02_review_meta",
+    "_options_reviews_items_9_source": "field_fp02_review_source",
+    "_options_reviews_items_9_text": "field_fp02_review_text",
+    "_options_reviews_section_heading": "field_fp02_reviews_section_heading",
+    "_reviews_enabled": "field_fp02_options_reviews_enabled",
+    "_reviews_items": "field_fp02_options_reviews_items",
+    "_reviews_section_heading": "field_fp02_options_reviews_section_heading",
+    "options_reviews_enabled": "1",
+    "options_reviews_items": "10",
+    "options_reviews_items_0_author_label": "Александр, Москва",
+    "options_reviews_items_0_metadata": "",
+    "options_reviews_items_0_source": "",
+    "options_reviews_items_0_text": "Обратились в&nbsp;центр в&nbsp;непростой период. С&nbsp;первого контакта чувствовалось уважительное отношение и&nbsp;спокойный тон общения. Персонал отвечал на&nbsp;вопросы без спешки и&nbsp;давления.",
+    "options_reviews_items_1_author_label": "Мария, Московская область",
+    "options_reviews_items_1_metadata": "",
+    "options_reviews_items_1_source": "",
+    "options_reviews_items_1_text": "Для нас было важно, что в&nbsp;центре поддерживают спокойную обстановку. Пространство организовано аккуратно, без ощущения формального учреждения. Это помогло легче адаптироваться.",
+    "options_reviews_items_2_author_label": "Елена, Москва",
+    "options_reviews_items_2_metadata": "",
+    "options_reviews_items_2_source": "",
+    "options_reviews_items_2_text": "Понравилось, что этапы сопровождения объясняли простым языком. Мы понимали, что происходит на&nbsp;каждом шаге, и&nbsp;могли спокойно планировать визиты и&nbsp;общение с&nbsp;специалистами.",
+    "options_reviews_items_3_author_label": "Игорь, Московская область",
+    "options_reviews_items_3_metadata": "",
+    "options_reviews_items_3_source": "",
+    "options_reviews_items_3_text": "Семье было важно получать понятную обратную связь. Сотрудники центра поддерживали контакт, отвечали на&nbsp;звонки и&nbsp;помогали сохранять спокойствие в&nbsp;сложной ситуации.",
+    "options_reviews_items_4_author_label": "Наталья, Москва",
+    "options_reviews_items_4_metadata": "",
+    "options_reviews_items_4_source": "",
+    "options_reviews_items_4_text": "Отметила внимательное отношение персонала к&nbsp;мелочам быта и&nbsp;режима. В&nbsp;центре создают условия, в&nbsp;которых проще сосредоточиться на&nbsp;восстановлении и&nbsp;ежедневных задачах.",
+    "options_reviews_items_5_author_label": "Сергей, Московская область",
+    "options_reviews_items_5_metadata": "",
+    "options_reviews_items_5_source": "",
+    "options_reviews_items_5_text": "Комфортные условия проживания и&nbsp;чёткий распорядок помогли быстрее войти в&nbsp;рабочий ритм. Атмосфера в&nbsp;центре дружелюбная, без излишней официальности.",
+    "options_reviews_items_6_author_label": "Анна, Москва",
+    "options_reviews_items_6_metadata": "",
+    "options_reviews_items_6_source": "",
+    "options_reviews_items_6_text": "Ценим деликатный подход к&nbsp;личной информации. Вопросы конфиденциальности обсуждали заранее, и&nbsp;это создало дополнительное чувство безопасности для всей семьи.",
+    "options_reviews_items_7_author_label": "Дмитрий, Московская область",
+    "options_reviews_items_7_metadata": "",
+    "options_reviews_items_7_source": "",
+    "options_reviews_items_7_text": "Понравилась последовательность в&nbsp;организации помощи: от&nbsp;первичной консультации до&nbsp;ежедневного сопровождения. Команда работает согласованно и&nbsp;внимательно относится к&nbsp;запросам.",
+    "options_reviews_items_8_author_label": "Ольга, Москва",
+    "options_reviews_items_8_metadata": "",
+    "options_reviews_items_8_source": "",
+    "options_reviews_items_8_text": "Сотрудники центра оперативно отвечали на&nbsp;вопросы и&nbsp;поддерживали контакт с&nbsp;родственниками. Такая обратная связь помогала чувствовать, что процесс под контролем.",
+    "options_reviews_items_9_author_label": "Михаил, Московская область",
+    "options_reviews_items_9_metadata": "",
+    "options_reviews_items_9_source": "",
+    "options_reviews_items_9_text": "В&nbsp;центре чувствуется человеческое отношение: специалисты говорят спокойно, слушают и&nbsp;не&nbsp;обесценивают переживания. Именно это для нас стало решающим при выборе.",
+    "options_reviews_section_heading": "Отзывы"
+  },
+  "home_page_4_values_before": {
+    "home_reviews_heading": "Отзывы",
+    "home_reviews_teaser_0_title": "3123123",
+    "home_reviews_teaser_0_text": "12",
+    "home_reviews_teaser": "1"
+  },
+  "active_plugins_before": "a:5:{i:0;s:33:\"acf-extended-pro/acf-extended.php\";i:1;s:34:\"advanced-custom-fields-pro/acf.php\";i:2;s:33:\"classic-editor/classic-editor.php\";i:3;s:35:\"metacode-wpilot/metacode-wpilot.php\";i:4;s:35:\"shpigovsky-core/shpigovsky-core.php\";}",
+  "restore_instructions": "mysql --host=127.0.0.1 --user=root mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d9u-reviews-admin-ux-repair-pre-20260706-013004\\mars_wp_fp0002.sql\"",
+  "result": "PASS"
+}

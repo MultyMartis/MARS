@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D9-T REVIEWS OPTIONS KEY FIX + HELPER NORMALIZATION PASS — source mode OPTIONS; NEXT: D9-U admin visual QA
+**Status:** V9-06D9-U REVIEWS ADMIN UX REPAIR PASS — canonical admin + top-level Отзывы; source mode OPTIONS; NEXT: D9-V admin visual QA
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---
@@ -281,4 +281,8 @@ D9-S **PARTIAL PASS**: DB checkpoint `v9-06d9s-controlled-reviews-options-seed-p
 
 ## V9-06D9-T reviews options key fix + helper normalization (2026-07-06)
 
-D9-T **PASS**: Unique `field_fp02_options_*` keys in `group_fp02_site_options_reviews.json`; helper normalization for legacy + canonical subfields; 3 ACF reference meta updates. DB checkpoint `v9-06d9t-reviews-options-key-fix-pre-20260706-010904`. Runtime delivery + ACF import. Source mode **OPTIONS**; 10 reviews on Home and `/otzyvy/`; `is_demo: false`. Evidence: `validation/v9-06d9t-reviews-options-key-fix-helper-normalization/`. Report: `reports/FP-0002-V9-06D9T-REVIEWS-OPTIONS-KEY-FIX-HELPER-NORMALIZATION-REPORT-v1.md`. Next: D9-U admin visual QA.
+D9-T **PASS**: Unique `field_fp02_options_*` keys in `group_fp02_site_options_reviews.json`; helper normalization for legacy + canonical subfields; 3 ACF reference meta updates. DB checkpoint `v9-06d9t-reviews-options-key-fix-pre-20260706-010904`. Runtime delivery + ACF import. Source mode **OPTIONS**; 10 reviews on Home and `/otzyvy/`; `is_demo: false`. Evidence: `validation/v9-06d9t-reviews-options-key-fix-helper-normalization/`. Report: `reports/FP-0002-V9-06D9T-REVIEWS-OPTIONS-KEY-FIX-HELPER-NORMALIZATION-REPORT-v1.md`. Repaired in D9-U below.
+
+## V9-06D9-U reviews admin UX repair (2026-07-06)
+
+D9-U **PASS**: Home `Reviews teaser` blocker removed (theme suppresses plugin-local field); 10 rows migrated to canonical `review_*` option meta; top-level admin **Отзывы** (`fp02-reviews`). DB checkpoint `v9-06d9u-reviews-admin-ux-repair-pre-20260706-013004`. Frontend **OPTIONS** unchanged. Admin screenshots PARTIAL. Evidence: `validation/v9-06d9u-reviews-admin-ux-repair/`. Report: `reports/FP-0002-V9-06D9U-REVIEWS-ADMIN-UX-REPAIR-REPORT-v1.md`. Next: D9-V admin visual QA.

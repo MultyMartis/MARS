@@ -1,0 +1,22 @@
+{
+  "phase": "V9-06D9-U",
+  "generated_at": "2026-07-05T18:31:42+00:00",
+  "rows_migrated": 10,
+  "writes_count": 40,
+  "legacy_keys_deleted": 0,
+  "first_row_keys_after": [
+    "review_author",
+    "review_text",
+    "review_context",
+    "review_source",
+    "review_date",
+    "review_rating",
+    "review_visible",
+    "review_featured"
+  ],
+  "admin_first_author": "",
+  "admin_first_text_length": 0,
+  "helper_items_after": 0,
+  "source_mode_after": "FALLBACK",
+  "result": "PARTIAL"
+}

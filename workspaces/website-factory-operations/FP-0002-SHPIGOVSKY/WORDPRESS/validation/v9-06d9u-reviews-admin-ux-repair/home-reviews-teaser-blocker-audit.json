@@ -1,0 +1,34 @@
+{
+  "phase": "V9-06D9-U",
+  "generated_at": "2026-07-06T01:30:03.422741+07:00",
+  "field_key": "field_fp02_home_reviews_teaser",
+  "field_name": "home_reviews_teaser",
+  "field_label": "Reviews teaser",
+  "group": "group_fp02_page_home",
+  "registration_source": "plugins/shpigovsky-core/src/Fields/FieldGroups.php acf_add_local_field_group",
+  "canonical_json_has_field": false,
+  "db_group_has_field": false,
+  "max_rows": 6,
+  "validation_hook": "plugins/shpigovsky-core/src/Fields/RepeaterValidation.php",
+  "orphan_meta_present": true,
+  "home_reviews_meta": [
+    {
+      "meta_key": "home_reviews_heading",
+      "meta_value": "Отзывы"
+    },
+    {
+      "meta_key": "home_reviews_teaser",
+      "meta_value": "1"
+    },
+    {
+      "meta_key": "home_reviews_teaser_0_text",
+      "meta_value": "12"
+    },
+    {
+      "meta_key": "home_reviews_teaser_0_title",
+      "meta_value": "3123123"
+    }
+  ],
+  "repair_strategy": "theme admin-options.php hide field + strip POST before validation",
+  "result": "PASS"
+}
