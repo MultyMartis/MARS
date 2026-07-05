@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D9-E HOME SLIDER / VENDOR / PAGINATION REPAIR PASS — NEXT: D9-F visual parity QA
+**Status:** V9-06D9-F HOME + FOOTER VISUAL PARITY QA PARTIAL PASS — NEXT: D9-G micro visual repair (FAQ typo)
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

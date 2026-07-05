@@ -203,3 +203,7 @@ D9-D **PASS**: Replaced MVP 6-section Home main with static V9 19-section orches
 ## V9-06D9-E home slider / vendor / pagination repair (2026-07-05)
 
 D9-E **PASS**: Repaired Home slider visual parity without Home main rewrite. Fixed specialists heading transplant typo (`Специалисты центра` / `specialists-heading`); fixed vendor CSS cascade order (swiper → fancybox → v9-style) so pagination dots match static V9 bordered style. Bounded runtime delivery: 2 theme files. No DB/ACF/options/menu writes. Route smoke ALL_200. Evidence: `validation/v9-06d9e-home-slider-vendor-pagination-repair/`. Report: `reports/FP-0002-V9-06D9E-HOME-SLIDER-VENDOR-PAGINATION-REPAIR-REPORT-v1.md`. Next: D9-F visual parity QA.
+
+## V9-06D9-F home + footer visual parity QA (2026-07-05)
+
+D9-F **PARTIAL PASS**: Read-only QA after D9-D/D9-E. Home 19/19 sections + order PASS; footer transplant PASS; D9-E slider/vendor/pagination verified PASS; assets + secondary routes ALL_200 PASS. One minor defect: `template-parts/home/faq.php` retains D9-D `comfort-heading` transplant typo (wrong id/aria + heading copy; duplicate id with comfort section). No runtime/source/DB/ACF mutations. ACF wiring NOT_READY until FAQ micro repair. Evidence: `validation/v9-06d9f-home-footer-visual-parity-qa/`. Report: `reports/FP-0002-V9-06D9F-HOME-FOOTER-VISUAL-PARITY-QA-REPORT-v1.md`. Next: D9-G micro visual repair.

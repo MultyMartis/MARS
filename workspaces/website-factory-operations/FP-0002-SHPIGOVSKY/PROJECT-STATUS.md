@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-05 (V9-06D9-E Home Slider / Vendor / Pagination Repair PASS)
+**Last updated:** 2026-07-05 (V9-06D9-F Home + Footer Visual Parity QA PARTIAL PASS)
 
-**Current WordPress phase:** V9-06D9-E Home Slider / Vendor / Pagination Repair **PASS** — specialists heading restored; Swiper/Fancybox CSS cascade fixed for pagination dots; bounded runtime delivery (2 files); DB/ACF writes 0. Recommended next: **D9-F visual parity QA**. Report: `WORDPRESS/reports/FP-0002-V9-06D9E-HOME-SLIDER-VENDOR-PAGINATION-REPAIR-REPORT-v1.md`. Prior: D9-D home main/footer transplant, D9-C hero parity, D9-B header/font/messenger partial.
+**Current WordPress phase:** V9-06D9-F Home + Footer Visual Parity QA **PARTIAL PASS** — 19/19 Home sections + footer + slider/vendor + routes PASS; FAQ `comfort-heading` transplant typo remains in `faq.php` (MINOR_REPAIR_REQUIRED); no mutations; ACF wiring NOT_READY. Recommended next: **D9-G micro visual repair (FAQ)** then ACF admin editability wiring. Report: `WORDPRESS/reports/FP-0002-V9-06D9F-HOME-FOOTER-VISUAL-PARITY-QA-REPORT-v1.md`. Prior: D9-E slider/vendor repair, D9-D home main/footer transplant.
 
 ## Active frontend workspace (V9)
 

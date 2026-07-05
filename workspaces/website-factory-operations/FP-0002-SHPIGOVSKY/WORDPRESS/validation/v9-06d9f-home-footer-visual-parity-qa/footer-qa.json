@@ -1,0 +1,49 @@
+{
+  "task": "V9-06D9-F",
+  "capturedAt": "2026-07-05T12:58:19.948Z",
+  "checks": [
+    {
+      "area": "layout",
+      "static": true,
+      "runtime": true,
+      "result": "PASS"
+    },
+    {
+      "area": "logo",
+      "static": true,
+      "runtime": true,
+      "result": "PASS"
+    },
+    {
+      "area": "nav_columns",
+      "static": true,
+      "runtime": true,
+      "result": "PASS"
+    },
+    {
+      "area": "contacts",
+      "static": true,
+      "runtime": true,
+      "result": "PASS"
+    },
+    {
+      "area": "privacy_legal",
+      "static": true,
+      "runtime": true,
+      "result": "PASS"
+    },
+    {
+      "area": "scroll_to_top",
+      "static": false,
+      "runtime": false,
+      "result": "PARTIAL"
+    },
+    {
+      "area": "credit",
+      "static": true,
+      "runtime": true,
+      "result": "PASS"
+    }
+  ],
+  "overall": "PASS"
+}

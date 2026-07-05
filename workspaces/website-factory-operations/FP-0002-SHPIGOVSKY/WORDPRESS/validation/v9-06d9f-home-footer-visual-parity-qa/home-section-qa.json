@@ -1,0 +1,264 @@
+{
+  "task": "V9-06D9-F",
+  "capturedAt": "2026-07-05T12:58:19.948Z",
+  "staticMainSectionCount": 19,
+  "runtimeMainSectionCount": 19,
+  "expectedCount": 19,
+  "staticSections": [
+    "home-recovery-intro",
+    "founder-quote",
+    "home-treatment-prevention",
+    "home-gallery",
+    "home-why-us",
+    "home-staff-photo",
+    "home-feature-grid",
+    "clinic-landscape",
+    "home-recovery-life",
+    "reviews",
+    "home-rehabilitation-requirements",
+    "home-rehabilitation-program",
+    "home-genotyping",
+    "comfort",
+    "home-videos",
+    "specialists",
+    "home-articles",
+    "faq",
+    "final-form"
+  ],
+  "runtimeSections": [
+    "home-recovery-intro",
+    "founder-quote",
+    "home-treatment-prevention",
+    "home-gallery",
+    "home-why-us",
+    "home-staff-photo",
+    "home-feature-grid",
+    "clinic-landscape",
+    "home-recovery-life",
+    "reviews",
+    "home-rehabilitation-requirements",
+    "home-rehabilitation-program",
+    "home-genotyping",
+    "comfort",
+    "home-videos",
+    "specialists",
+    "home-articles",
+    "faq",
+    "final-form"
+  ],
+  "sectionOrderParity": true,
+  "heroCta": {
+    "static": true,
+    "runtime": true,
+    "result": "PASS"
+  },
+  "faqHeadingIdCheck": {
+    "static": {
+      "faqAriaLabelledby": "faq-heading",
+      "faqHeadingId": "faq-heading",
+      "faqHeadingText": "Нас часто спрашивают",
+      "comfortHeadingDuplicateCount": 1,
+      "faqHeadingIdCount": 1,
+      "expectedHeadingId": "faq-heading",
+      "expectedHeadingText": "Нас часто спрашивают",
+      "hasComfortHeadingTypo": false,
+      "hasWrongHeadingText": false,
+      "duplicateIdWithComfort": false,
+      "classification": "PASS"
+    },
+    "runtime": {
+      "faqAriaLabelledby": "comfort-heading",
+      "faqHeadingId": "comfort-heading",
+      "faqHeadingText": "Комфорт, приватность, забота",
+      "comfortHeadingDuplicateCount": 2,
+      "faqHeadingIdCount": 0,
+      "expectedHeadingId": "faq-heading",
+      "expectedHeadingText": "Нас часто спрашивают",
+      "hasComfortHeadingTypo": true,
+      "hasWrongHeadingText": true,
+      "duplicateIdWithComfort": true,
+      "classification": "MINOR_REPAIR_REQUIRED"
+    },
+    "sourceFile": "template-parts/home/faq.php",
+    "knownIssueFromD9E": "comfort-heading transplant typo may remain in FAQ",
+    "result": "MINOR_REPAIR_REQUIRED"
+  },
+  "duplicateIds": {
+    "comfortHeadingCount": 2,
+    "result": "FAIL"
+  },
+  "sections": [
+    {
+      "section": "home-recovery-intro",
+      "staticPresent": true,
+      "runtimePresent": true,
+      "staticOrder": 1,
+      "runtimeOrder": 1,
+      "orderMatch": true,
+      "result": "PASS"
+    },
+    {
+      "section": "founder-quote",
+      "staticPresent": true,
+      "runtimePresent": true,
+      "staticOrder": 2,
+      "runtimeOrder": 2,
+      "orderMatch": true,
+      "result": "PASS"
+    },
+    {
+      "section": "home-treatment-prevention",
+      "staticPresent": true,
+      "runtimePresent": true,
+      "staticOrder": 3,
+      "runtimeOrder": 3,
+      "orderMatch": true,
+      "result": "PASS"
+    },
+    {
+      "section": "home-gallery",
+      "staticPresent": true,
+      "runtimePresent": true,
+      "staticOrder": 4,
+      "runtimeOrder": 4,
+      "orderMatch": true,
+      "result": "PASS"
+    },
+    {
+      "section": "home-why-us",
+      "staticPresent": true,
+      "runtimePresent": true,
+      "staticOrder": 5,
+      "runtimeOrder": 5,
+      "orderMatch": true,
+      "result": "PASS"
+    },
+    {
+      "section": "home-staff-photo",
+      "staticPresent": true,
+      "runtimePresent": true,
+      "staticOrder": 6,
+      "runtimeOrder": 6,
+      "orderMatch": true,
+      "result": "PASS"
+    },
+    {
+      "section": "home-feature-grid",
+      "staticPresent": true,
+      "runtimePresent": true,
+      "staticOrder": 7,
+      "runtimeOrder": 7,
+      "orderMatch": true,
+      "result": "PASS"
+    },
+    {
+      "section": "clinic-landscape",
+      "staticPresent": true,
+      "runtimePresent": true,
+      "staticOrder": 8,
+      "runtimeOrder": 8,
+      "orderMatch": true,
+      "result": "PASS"
+    },
+    {
+      "section": "home-recovery-life",
+      "staticPresent": true,
+      "runtimePresent": true,
+      "staticOrder": 9,
+      "runtimeOrder": 9,
+      "orderMatch": true,
+      "result": "PASS"
+    },
+    {
+      "section": "reviews",
+      "staticPresent": true,
+      "runtimePresent": true,
+      "staticOrder": 10,
+      "runtimeOrder": 10,
+      "orderMatch": true,
+      "result": "PASS"
+    },
+    {
+      "section": "home-rehabilitation-requirements",
+      "staticPresent": true,
+      "runtimePresent": true,
+      "staticOrder": 11,
+      "runtimeOrder": 11,
+      "orderMatch": true,
+      "result": "PASS"
+    },
+    {
+      "section": "home-rehabilitation-program",
+      "staticPresent": true,
+      "runtimePresent": true,
+      "staticOrder": 12,
+      "runtimeOrder": 12,
+      "orderMatch": true,
+      "result": "PASS"
+    },
+    {
+      "section": "home-genotyping",
+      "staticPresent": true,
+      "runtimePresent": true,
+      "staticOrder": 13,
+      "runtimeOrder": 13,
+      "orderMatch": true,
+      "result": "PASS"
+    },
+    {
+      "section": "comfort",
+      "staticPresent": true,
+      "runtimePresent": true,
+      "staticOrder": 14,
+      "runtimeOrder": 14,
+      "orderMatch": true,
+      "result": "PASS"
+    },
+    {
+      "section": "home-videos",
+      "staticPresent": true,
+      "runtimePresent": true,
+      "staticOrder": 15,
+      "runtimeOrder": 15,
+      "orderMatch": true,
+      "result": "PASS"
+    },
+    {
+      "section": "specialists",
+      "staticPresent": true,
+      "runtimePresent": true,
+      "staticOrder": 16,
+      "runtimeOrder": 16,
+      "orderMatch": true,
+      "result": "PASS"
+    },
+    {
+      "section": "home-articles",
+      "staticPresent": true,
+      "runtimePresent": true,
+      "staticOrder": 17,
+      "runtimeOrder": 17,
+      "orderMatch": true,
+      "result": "PASS"
+    },
+    {
+      "section": "faq",
+      "staticPresent": true,
+      "runtimePresent": true,
+      "staticOrder": 18,
+      "runtimeOrder": 18,
+      "orderMatch": true,
+      "result": "PASS"
+    },
+    {
+      "section": "final-form",
+      "staticPresent": true,
+      "runtimePresent": true,
+      "staticOrder": 19,
+      "runtimeOrder": 19,
+      "orderMatch": true,
+      "result": "PASS"
+    }
+  ],
+  "overall": "PARTIAL"
+}

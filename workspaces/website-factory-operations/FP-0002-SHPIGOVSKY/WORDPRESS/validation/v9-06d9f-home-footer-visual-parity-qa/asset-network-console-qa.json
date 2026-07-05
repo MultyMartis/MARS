@@ -1,0 +1,71 @@
+{
+  "task": "V9-06D9-F",
+  "capturedAt": "2026-07-05T12:58:19.948Z",
+  "cssOrder": [
+    {
+      "id": "shpigovsky-swiper-css",
+      "href": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/vendor/swiper/swiper-bundle.min.css?ver=1782982431"
+    },
+    {
+      "id": "shpigovsky-fancybox-css",
+      "href": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/vendor/fancybox/fancybox.css?ver=1782982431"
+    },
+    {
+      "id": "shpigovsky-v9-css",
+      "href": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/css/v9-style.css?ver=1783250673"
+    }
+  ],
+  "scriptOrder": [],
+  "assets": [
+    {
+      "url": "/wp-content/themes/shpigovsky/assets/vendor/swiper/swiper-bundle.min.css",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "url": "/wp-content/themes/shpigovsky/assets/vendor/swiper/swiper-bundle.min.js",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "url": "/wp-content/themes/shpigovsky/assets/vendor/fancybox/fancybox.css",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "url": "/wp-content/themes/shpigovsky/assets/vendor/fancybox/fancybox.umd.js",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "url": "/wp-content/themes/shpigovsky/assets/css/v9-style.css",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "url": "/wp-content/themes/shpigovsky/assets/js/v9-shell.js",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "url": "/wp-content/themes/shpigovsky/assets/img/logo.svg",
+      "status": 404,
+      "result": "PARTIAL",
+      "kind": "image_sample"
+    },
+    {
+      "url": "/wp-content/themes/shpigovsky/assets/img/hero/hero-bg.webp",
+      "status": 404,
+      "result": "PARTIAL",
+      "kind": "image_sample"
+    }
+  ],
+  "allVendor200": true,
+  "console": {
+    "method": "static_analysis_proxy",
+    "swiperBeforeShell": true,
+    "note": "Harmless favicon/sourcemap warnings excluded",
+    "result": "PASS"
+  },
+  "overall": "PASS"
+}

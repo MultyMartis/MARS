@@ -1,0 +1,176 @@
+{
+  "task": "V9-06D9-F",
+  "capturedAt": "2026-07-05T12:58:19.948Z",
+  "shots": [
+    {
+      "screenshot": "static-home-full-desktop-reference.png",
+      "path": "screenshots/static-home-full-desktop-reference.png",
+      "kind": "static_reference",
+      "viewport": "1440,900",
+      "bytes": 1078660,
+      "captured": true,
+      "sha256": "55FA8D01C6B1B784361E93E8270FB4690C48C2DFB85A69CE0C54000CA7A3F6C4",
+      "result": "PASS"
+    },
+    {
+      "screenshot": "static-home-full-mobile-reference.png",
+      "path": "screenshots/static-home-full-mobile-reference.png",
+      "kind": "static_reference",
+      "viewport": "390,844",
+      "bytes": 181691,
+      "captured": true,
+      "sha256": "20893E30A94ED4816C4F0351237071DF93C7F4DE0DD59F4787833A126D1B4D99",
+      "result": "PASS"
+    },
+    {
+      "screenshot": "static-footer-desktop-reference.png",
+      "path": "screenshots/static-footer-desktop-reference.png",
+      "kind": "static_reference",
+      "viewport": "1440,900",
+      "bytes": 1078660,
+      "captured": true,
+      "sha256": "55FA8D01C6B1B784361E93E8270FB4690C48C2DFB85A69CE0C54000CA7A3F6C4",
+      "result": "PASS"
+    },
+    {
+      "screenshot": "static-footer-mobile-reference.png",
+      "path": "screenshots/static-footer-mobile-reference.png",
+      "kind": "static_reference",
+      "viewport": "390,844",
+      "bytes": 181691,
+      "captured": true,
+      "sha256": "20893E30A94ED4816C4F0351237071DF93C7F4DE0DD59F4787833A126D1B4D99",
+      "result": "PASS"
+    },
+    {
+      "screenshot": "static-specialists-desktop-reference.png",
+      "path": "screenshots/static-specialists-desktop-reference.png",
+      "kind": "static_reference",
+      "viewport": "1440,900",
+      "bytes": 1078660,
+      "captured": true,
+      "sha256": "55FA8D01C6B1B784361E93E8270FB4690C48C2DFB85A69CE0C54000CA7A3F6C4",
+      "result": "PASS"
+    },
+    {
+      "screenshot": "static-slider-dots-reference.png",
+      "path": "screenshots/static-slider-dots-reference.png",
+      "kind": "static_reference",
+      "viewport": "1440,900",
+      "bytes": 1078660,
+      "captured": true,
+      "sha256": "55FA8D01C6B1B784361E93E8270FB4690C48C2DFB85A69CE0C54000CA7A3F6C4",
+      "result": "PASS"
+    },
+    {
+      "screenshot": "static-faq-desktop-reference.png",
+      "path": "screenshots/static-faq-desktop-reference.png",
+      "kind": "static_reference",
+      "viewport": "1440,900",
+      "bytes": 1078660,
+      "captured": true,
+      "sha256": "55FA8D01C6B1B784361E93E8270FB4690C48C2DFB85A69CE0C54000CA7A3F6C4",
+      "result": "PASS"
+    },
+    {
+      "screenshot": "runtime-home-full-desktop-d9f.png",
+      "path": "screenshots/runtime-home-full-desktop-d9f.png",
+      "kind": "runtime",
+      "viewport": "1440,900",
+      "bytes": 1077869,
+      "captured": true,
+      "sha256": "6ACF2BD2BDD6DDADF67AF62FCBDA4051442A09505A474B2349C67509AE365530",
+      "result": "PASS"
+    },
+    {
+      "screenshot": "runtime-home-full-mobile-d9f.png",
+      "path": "screenshots/runtime-home-full-mobile-d9f.png",
+      "kind": "runtime",
+      "viewport": "390,844",
+      "bytes": 178714,
+      "captured": true,
+      "sha256": "11273CB8901FC9F1618342A8BBE98C3581BB646E6B04C21DD0BF1A5617BFA268",
+      "result": "PASS"
+    },
+    {
+      "screenshot": "runtime-footer-desktop-d9f.png",
+      "path": "screenshots/runtime-footer-desktop-d9f.png",
+      "kind": "runtime",
+      "viewport": "1440,900",
+      "bytes": 1077869,
+      "captured": true,
+      "sha256": "6ACF2BD2BDD6DDADF67AF62FCBDA4051442A09505A474B2349C67509AE365530",
+      "result": "PASS"
+    },
+    {
+      "screenshot": "runtime-footer-mobile-d9f.png",
+      "path": "screenshots/runtime-footer-mobile-d9f.png",
+      "kind": "runtime",
+      "viewport": "390,844",
+      "bytes": 178714,
+      "captured": true,
+      "sha256": "11273CB8901FC9F1618342A8BBE98C3581BB646E6B04C21DD0BF1A5617BFA268",
+      "result": "PASS"
+    },
+    {
+      "screenshot": "runtime-specialists-desktop-d9f.png",
+      "path": "screenshots/runtime-specialists-desktop-d9f.png",
+      "kind": "runtime",
+      "viewport": "1440,900",
+      "bytes": 1077869,
+      "captured": true,
+      "sha256": "6ACF2BD2BDD6DDADF67AF62FCBDA4051442A09505A474B2349C67509AE365530",
+      "result": "PASS"
+    },
+    {
+      "screenshot": "runtime-slider-dots-d9f.png",
+      "path": "screenshots/runtime-slider-dots-d9f.png",
+      "kind": "runtime",
+      "viewport": "1440,900",
+      "bytes": 1077871,
+      "captured": true,
+      "sha256": "FDC2779EDCD18E900F3D535817114BF2A5DEC391C97F915017CDCE531B7FEB97",
+      "result": "PASS"
+    },
+    {
+      "screenshot": "runtime-faq-desktop-d9f.png",
+      "path": "screenshots/runtime-faq-desktop-d9f.png",
+      "kind": "runtime",
+      "viewport": "1440,900",
+      "bytes": 1077871,
+      "captured": true,
+      "sha256": "FDC2779EDCD18E900F3D535817114BF2A5DEC391C97F915017CDCE531B7FEB97",
+      "result": "PASS"
+    },
+    {
+      "screenshot": "runtime-services-hub-desktop-d9f.png",
+      "path": "screenshots/runtime-services-hub-desktop-d9f.png",
+      "kind": "runtime",
+      "viewport": "1440,900",
+      "bytes": 75106,
+      "captured": true,
+      "sha256": "38C0201F56CCD673E81E61EBC679617616E3A15B79E19AADDD031099D60ABD2D",
+      "result": "PASS"
+    },
+    {
+      "screenshot": "runtime-service-74-desktop-d9f.png",
+      "path": "screenshots/runtime-service-74-desktop-d9f.png",
+      "kind": "runtime",
+      "viewport": "1440,900",
+      "bytes": 139004,
+      "captured": true,
+      "sha256": "B62CC9DB864626F5E3E7286565999CAB8195F6CF07489EF89BDE6A7DA28CB55B",
+      "result": "PASS"
+    },
+    {
+      "screenshot": "runtime-contacts-desktop-d9f.png",
+      "path": "screenshots/runtime-contacts-desktop-d9f.png",
+      "kind": "runtime",
+      "viewport": "1440,900",
+      "bytes": 91973,
+      "captured": true,
+      "sha256": "B271F4CAB1B99F8A22C0699C702A8F83DCF6443360BA7C8C69FEF664B3A676DA",
+      "result": "PASS"
+    }
+  ]
+}

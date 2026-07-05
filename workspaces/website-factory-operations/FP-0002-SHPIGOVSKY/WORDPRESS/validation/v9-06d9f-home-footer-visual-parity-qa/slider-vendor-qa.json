@@ -1,0 +1,44 @@
+{
+  "task": "V9-06D9-F",
+  "capturedAt": "2026-07-05T12:58:19.948Z",
+  "d9eVerification": true,
+  "components": [
+    {
+      "component": "specialists",
+      "expected": "Специалисты центра / specialists-heading",
+      "runtime": "PASS",
+      "result": "PASS"
+    },
+    {
+      "component": "gallery_pagination",
+      "expected": "data-gallery-pagination + V9 dot styling",
+      "runtime": true,
+      "result": "PASS"
+    },
+    {
+      "component": "reviews_pagination",
+      "expected": "data-reviews-pagination + V9 dot styling",
+      "runtime": true,
+      "result": "PASS"
+    },
+    {
+      "component": "specialists_pagination",
+      "expected": "data-specialists-pagination + V9 dot styling",
+      "runtime": true,
+      "result": "PASS"
+    },
+    {
+      "component": "swiper_css_order",
+      "expected": "swiper CSS before v9-style.css",
+      "runtime": true,
+      "result": "PASS"
+    },
+    {
+      "component": "default_blue_bullets",
+      "expected": "no default Swiper blue bullets (css order proxy)",
+      "runtime": true,
+      "result": "PASS"
+    }
+  ],
+  "overall": "PASS"
+}

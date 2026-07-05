@@ -1,0 +1,25 @@
+{
+  "task": "V9-06D9-F",
+  "capturedAt": "2026-07-05T12:58:19.948Z",
+  "visualParityReadiness": "PARTIAL",
+  "blockingVisualIssues": [],
+  "minorVisualIssues": [
+    {
+      "finding": "FAQ section uses comfort-heading id/aria and wrong heading text from D9-D transplant typo",
+      "file": "template-parts/home/faq.php",
+      "severity": "MINOR",
+      "repair": "Replace aria-labelledby/id comfort-heading → faq-heading; heading text → Нас часто спрашивают"
+    },
+    {
+      "finding": "Duplicate id=\"comfort-heading\" on comfort + FAQ sections",
+      "severity": "MINOR",
+      "repair": "Fix FAQ heading id to faq-heading"
+    }
+  ],
+  "footerQa": "PASS",
+  "sliderVendorQa": "PASS",
+  "secondaryRouteSafety": "PASS",
+  "acfWiringRecommendedNow": false,
+  "recommendedNextPhase": "CREATE_V9_06D9G_MICRO_VISUAL_REPAIR_TASK",
+  "reason": "FAQ transplant typo (comfort-heading) and duplicate id remain; micro repair should precede ACF wiring to avoid encoding wrong field bindings."
+}
