@@ -1,0 +1,62 @@
+{
+  "phase": "V9-06D9-V",
+  "generated_at": "2026-07-06T02:10:00+07:00",
+  "task_mode": "READ_ONLY_AUDIT",
+  "operator_finding": "duplicate reviews module in Site Settings",
+  "canonical_json_location": {
+    "group_key": "group_fp02_site_options_reviews",
+    "group_title": "Site Options — Reviews",
+    "location_param": "options_page",
+    "location_value": "fp02-reviews",
+    "source_file": "WORDPRESS/acf-json/group_fp02_site_options_reviews.json"
+  },
+  "runtime_acf_json_location": {
+    "location_value": "fp02-reviews",
+    "source_file": "MARS-Localhost/.../shpigovsky/acf-json/group_fp02_site_options_reviews.json",
+    "matches_git": true
+  },
+  "db_duplicate_evidence": {
+    "source": "validation/v9-06d9u-reviews-admin-ux-repair/db-checkpoint.json",
+    "acf_groups_before_count": 15,
+    "duplicate_group_key_entries": 2,
+    "duplicate_key": "group_fp02_site_options_reviews",
+    "duplicate_title": "Site Options — Reviews",
+    "note": "Two acf-field-group posts share the same group key before D9-U repair"
+  },
+  "d9u_import_evidence": {
+    "import_id": 274,
+    "prior_active_group_id_note": "250 referenced in D9-U architecture docs",
+    "acf_sync_result": "PASS",
+    "reviews_top_level_menu_result_site_settings_duplicate": false,
+    "operator_contradicts_automated_pass": true
+  },
+  "site_settings_registrations": [
+    {
+      "source": "shpigovsky-core OptionsPage.php",
+      "menu_slug": "fp02-site-settings",
+      "registers_reviews_fields": false,
+      "registers_contacts_modal_cta_only": true
+    },
+    {
+      "source": "group_fp02_site_options_contacts.json",
+      "location": "fp02-site-settings"
+    },
+    {
+      "source": "group_fp02_site_options_modal_cta.json",
+      "location": "fp02-site-settings"
+    }
+  ],
+  "likely_duplicate_source": "STALE_DUPLICATE_ACF_FIELD_GROUP_POST",
+  "likely_mechanism": "D9-R placed group on fp02-site-settings; D9-U relocated canonical JSON to fp02-reviews and imported/synced, but a second acf-field-group post with the same key may retain fp02-site-settings location in runtime DB",
+  "not_duplicate_source": [
+    "group_fp02_page_reviews (page template location, not Site Settings)",
+    "shpigovsky-core site_options_contacts/modal_cta groups"
+  ],
+  "minimal_future_fix": {
+    "action": "Identify and deactivate/trash stale duplicate acf-field-group post for group_fp02_site_options_reviews still targeting fp02-site-settings; keep single active group on fp02-reviews",
+    "risk": "LOW with DB checkpoint",
+    "git_json_change_required": false
+  },
+  "result": "CONFIRMED",
+  "confidence": "HIGH"
+}

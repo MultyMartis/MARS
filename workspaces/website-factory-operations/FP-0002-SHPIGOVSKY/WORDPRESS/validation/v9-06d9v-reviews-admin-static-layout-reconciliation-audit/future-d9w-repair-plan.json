@@ -1,0 +1,39 @@
+{
+  "phase": "V9-06D9-V",
+  "generated_at": "2026-07-06T02:10:00+07:00",
+  "next_phase": "V9-06D9-W",
+  "recommended_action": "CREATE_V9_06D9W_REVIEWS_ADMIN_AND_LAYOUT_REPAIR_TASK",
+  "repair_waves": [
+    {
+      "order": 1,
+      "component": "admin_duplicate_cleanup",
+      "planned_repair": "Query runtime acf-field-group posts for group_fp02_site_options_reviews; deactivate/trash stale duplicate still on fp02-site-settings; verify Site Settings shows no reviews module",
+      "safety": "DB checkpoint required; read-only dry-run first; no git ACF JSON change if JSON already correct"
+    },
+    {
+      "order": 2,
+      "component": "admin_storage_context_fix",
+      "planned_repair": "Copy/migrate canonical review meta from generic 'option' to 'fp02-reviews' ACF post_id; update inc/reviews-helpers.php get_field calls to use 'fp02-reviews'; confirm 10 rows visible and editable in Отзывы admin",
+      "safety": "DB checkpoint; bounded meta migration; verify helper source mode OPTIONS"
+    },
+    {
+      "order": 3,
+      "component": "otzyvy_layout_transplant",
+      "planned_repair": "Implement template-parts/reviews/archive-list.php from static V9 reviews-archive-list.html + review-archive-card; remove reviews-section slider from page-templates/reviews.php; add reviews-rehabilitation-requirements partial; apply page-otzyvy body/main classes",
+      "safety": "Source/theme delivery wave; no DB writes; preserve Home slider via home/reviews.php"
+    },
+    {
+      "order": 4,
+      "component": "validation",
+      "planned_repair": "Admin screenshots (Site Settings, Отзывы, Home #4 save); frontend Home slider parity; /otzyvy/ archive list spacing parity vs static V9 src",
+      "safety": "Read-only QA after repairs"
+    }
+  ],
+  "explicitly_out_of_scope_d9w": [
+    "Plugin shpigovsky-core FieldGroups.php edits unless separately chartered",
+    "Production migration",
+    "Menu mutation",
+    "Rewrite flush"
+  ],
+  "result": "READY_FOR_D9W_CHARTER"
+}

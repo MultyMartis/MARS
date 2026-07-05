@@ -286,3 +286,7 @@ D9-T **PASS**: Unique `field_fp02_options_*` keys in `group_fp02_site_options_re
 ## V9-06D9-U reviews admin UX repair (2026-07-06)
 
 D9-U **PASS**: Home `Reviews teaser` blocker removed (theme suppresses plugin-local field); 10 rows migrated to canonical `review_*` option meta; top-level admin **Отзывы** (`fp02-reviews`). DB checkpoint `v9-06d9u-reviews-admin-ux-repair-pre-20260706-013004`. Frontend **OPTIONS** unchanged. Admin screenshots PARTIAL. Evidence: `validation/v9-06d9u-reviews-admin-ux-repair/`. Report: `reports/FP-0002-V9-06D9U-REVIEWS-ADMIN-UX-REPAIR-REPORT-v1.md`. Next: D9-V admin visual QA.
+
+## V9-06D9-V reviews admin + static layout reconciliation audit (2026-07-06)
+
+D9-V **PARTIAL PASS**: Read-only reconciliation audit. Operator findings after D9-U **substantiated**: duplicate Site Settings reviews module (stale duplicate ACF field-group DB post); empty top-level **Отзывы** admin (ACF storage context `option` vs `fp02-reviews` mismatch); `/otzyvy/` layout mismatch vs static V9 archive card list (WP uses Home slider + skeleton archive placeholder). Home slider matches static V9 Home authority. D9-U treated as committed but operator-unverified. Zero DB/source/theme/ACF JSON/runtime mutations. Screenshots NOT_CAPTURED (tooling). Evidence: `validation/v9-06d9v-reviews-admin-static-layout-reconciliation-audit/`. Report: `reports/FP-0002-V9-06D9V-REVIEWS-ADMIN-STATIC-LAYOUT-RECONCILIATION-AUDIT-REPORT-v1.md`. Next: D9-W combined admin + layout repair.

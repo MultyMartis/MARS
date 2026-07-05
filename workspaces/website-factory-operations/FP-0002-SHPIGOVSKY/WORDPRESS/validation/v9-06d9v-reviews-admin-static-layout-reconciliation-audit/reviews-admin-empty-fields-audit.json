@@ -1,0 +1,75 @@
+{
+  "phase": "V9-06D9-V",
+  "generated_at": "2026-07-06T02:10:00+07:00",
+  "task_mode": "READ_ONLY_AUDIT",
+  "operator_finding": "top-level Reviews admin fields empty",
+  "admin_context": {
+    "options_page_slug": "fp02-reviews",
+    "options_page_title": "Отзывы",
+    "registered_by": "theme/shpigovsky/inc/admin-options.php",
+    "acf_group_key": "group_fp02_site_options_reviews",
+    "acf_group_location": "fp02-reviews"
+  },
+  "storage_context_analysis": {
+    "helper_reads_from": "option",
+    "helper_functions": [
+      "get_field('reviews_items', 'option')",
+      "get_field('reviews_enabled', 'option')"
+    ],
+    "d9s_d9t_d9u_seed_migration_target": "option",
+    "meta_key_prefix_observed": "options_reviews_*",
+    "acf_custom_options_page_expected_post_id": "fp02-reviews",
+    "expected_admin_meta_prefix": "options_fp02-reviews_*"
+  },
+  "d9u_migration_evidence": {
+    "canonical_options_meta_migration_result": "PARTIAL",
+    "admin_first_author_after_migration": "",
+    "helper_items_after_migration": 0,
+    "source_mode_after_migration": "FALLBACK",
+    "post_repair_admin_validation": "PASS",
+    "post_repair_first_row_author_populated": true,
+    "post_repair_helper_option_items_count": 10,
+    "post_repair_source_mode": "OPTIONS"
+  },
+  "frontend_source_of_truth": {
+    "mode": "OPTIONS or FALLBACK via helper",
+    "read_path": "shpigovsky_get_reviews_option_items() -> get_field(..., 'option')",
+    "fallback_when_empty": "shpigovsky_get_reviews_fallback_items() static V9 demo rows",
+    "live_frontend_probe": {
+      "home_slide_count": 10,
+      "otzyvy_slide_count": 10,
+      "markup": "reviews__slider swiper"
+    }
+  },
+  "admin_source_of_truth": {
+    "screen": "fp02-reviews",
+    "expected_read_post_id": "fp02-reviews",
+    "operator_reported_state": "empty repeater rows / empty subfields",
+    "automated_d9u_claim": "10 rows populated"
+  },
+  "mismatch_reason": "ACF_OPTIONS_PAGE_STORAGE_CONTEXT_MISMATCH",
+  "mismatch_detail": "Seeded/migrated review data lives under generic ACF options post_id 'option' (options_* keys). Top-level fp02-reviews admin UI reads/writes a separate options-page storage namespace. Frontend helper reads generic 'option' and can show 10 reviews while fp02-reviews admin appears empty.",
+  "legacy_keys_still_present_before_d9u": [
+    "author_label",
+    "text",
+    "metadata",
+    "source"
+  ],
+  "canonical_keys_expected": [
+    "review_author",
+    "review_text",
+    "review_context",
+    "review_source",
+    "review_date",
+    "review_rating",
+    "review_visible",
+    "review_featured"
+  ],
+  "minimal_future_fix": {
+    "preferred": "Migrate/copy canonical review meta from 'option' to 'fp02-reviews' post_id AND update reviews-helpers.php to read/write 'fp02-reviews' consistently",
+    "alternative": "Keep data on fp02-site-settings with group location revert (conflicts with top-level menu goal)",
+    "validation": "Admin fp02-reviews shows 10 editable rows; get_field from helper matches admin; Home save unaffected"
+  },
+  "result": "CONFIRMED",
+  "confidence": "HIGH"
+}

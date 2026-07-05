@@ -571,3 +571,7 @@ PASS: depth-2 rewrite query repaired to `service=$matches[1]/$matches[2]`; sourc
 ## 2026-07-04 — V9-06D.5 visual route QA
 
 PARTIAL PASS: read-only visual route QA. All seven required routes HTTP 200; Service 74 regression PASS; header/footer/main present; desktop/mobile screenshots captured. Theme remains V9-06B skeleton (no V9 integration). Pages publish=22 (any-status=23; Page ID 3 draft). Posts publish=0 (prior=1). Page 6 / Service 73 secondary debt remains (not a D.5 blocker). Runtime mutations 0. Next: CREATE_V9_06D6_TEMPLATE_INTEGRATION_PLANNING_TASK.
+
+## 2026-07-06 — V9-06D9-V reviews admin + static layout reconciliation audit
+
+PARTIAL PASS: read-only audit. Operator post-D9-U findings confirmed: duplicate reviews in Site Settings; empty top-level Отзывы admin; /otzyvy/ layout mismatch (slider vs static archive list). Home slider matches static V9. D9-U committed but operator-unverified. Zero DB/source/theme/runtime mutations. Next: CREATE_V9_06D9W_REVIEWS_ADMIN_AND_LAYOUT_REPAIR_TASK.

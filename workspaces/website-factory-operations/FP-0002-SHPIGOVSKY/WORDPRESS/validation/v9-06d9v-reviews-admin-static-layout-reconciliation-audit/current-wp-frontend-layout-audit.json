@@ -1,0 +1,68 @@
+{
+  "phase": "V9-06D9-V",
+  "generated_at": "2026-07-06T02:10:00+07:00",
+  "runtime_url": "http://shpigovsky.test/",
+  "probe_method": "curl HTML inspection (read-only)",
+  "home": {
+    "route": "/",
+    "http_status": 200,
+    "template_chain": [
+      "front-page.php",
+      "template-parts/home/reviews.php",
+      "template-parts/shared/reviews-slider.php"
+    ],
+    "markup_found": [
+      "section.reviews",
+      "div.reviews__slider.swiper[data-reviews-slider]",
+      "article.reviews__slide.swiper-slide (x10)",
+      "div.reviews__pagination.swiper-pagination"
+    ],
+    "markup_missing_vs_static": [],
+    "slide_count": 10,
+    "layout_match_static_home": true,
+    "operator_note": "Home still looks like old slider — matches static V9 Home authority (slider is correct for Home)"
+  },
+  "reviews_page": {
+    "route": "/otzyvy/",
+    "http_status": 200,
+    "template_file": "page-templates/reviews.php",
+    "main_class": "shpigovsky-skeleton shpigovsky-skeleton--reviews",
+    "body_class_expected_static": "page-otzyvy",
+    "body_class_actual": "UNKNOWN (not extracted in curl probe)",
+    "includes": [
+      "template-parts/reviews/reviews-section.php -> shared/reviews-slider.php",
+      "template-parts/reviews/archive-list.php (skeleton placeholder only)"
+    ],
+    "markup_found": [
+      "div.reviews__slider.swiper",
+      "article.reviews__slide.swiper-slide (x10)",
+      "reviews__pagination",
+      "skeleton comment archive-list placeholder"
+    ],
+    "markup_missing_vs_static": [
+      "section.reviews-archive",
+      "div.reviews-archive__list",
+      "article.review-archive-card",
+      "reviews-archive-pagination",
+      "section.reviews-rehabilitation-requirements",
+      "main.page-otzyvy__main",
+      "h1.reviews-archive__heading"
+    ],
+    "slide_count": 10,
+    "layout_match_static_reviews_page": false,
+    "spacing_issue_root_cause": "Wrong template partial (Home slider reused); archive-list not implemented; page-otzyvy scoped CSS not applied"
+  },
+  "css_loaded": {
+    "theme_file": "assets/css/v9-style.css",
+    "reviews_archive_rules_present_in_css": true,
+    "reviews_archive_rules_applied_on_page": false
+  },
+  "screenshots": {
+    "static-v9-reviews-page-reference.png": "NOT_CAPTURED",
+    "wp-reviews-page-current.png": "NOT_CAPTURED",
+    "static-v9-home-reviews-reference.png": "NOT_CAPTURED",
+    "wp-home-reviews-current.png": "NOT_CAPTURED",
+    "reason": "PHP/Playwright unavailable in audit shell; dist/ not built"
+  },
+  "result": "CONFIRMED_MISMATCH_ON_OTZYVY"
+}

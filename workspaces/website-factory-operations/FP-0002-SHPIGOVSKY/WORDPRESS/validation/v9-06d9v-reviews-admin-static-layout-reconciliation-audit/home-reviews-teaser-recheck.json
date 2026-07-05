@@ -1,0 +1,48 @@
+{
+  "phase": "V9-06D9-V",
+  "generated_at": "2026-07-06T02:10:00+07:00",
+  "home_page_id": 4,
+  "canonical_json_group_fp02_page_home": {
+    "has_home_reviews_teaser": false,
+    "has_home_reviews_heading": true,
+    "source_file": "WORDPRESS/acf-json/group_fp02_page_home.json"
+  },
+  "plugin_local_field": {
+    "field_key": "field_fp02_home_reviews_teaser",
+    "field_name": "home_reviews_teaser",
+    "registered_in": "plugins/shpigovsky-core/src/Fields/FieldGroups.php",
+    "max_rows_validation": 6,
+    "validation_source": "RepeaterValidation.php"
+  },
+  "d9u_suppression": {
+    "file": "theme/shpigovsky/inc/admin-options.php",
+    "prepare_field_filter": "acf/prepare_field returns false for field_fp02_home_reviews_teaser",
+    "save_strip": "acf/validate_save_post priority 1 unsets POST field",
+    "home_blocker_removal_result": "PASS"
+  },
+  "orphan_meta": {
+    "keys": [
+      "home_reviews_teaser",
+      "home_reviews_teaser_0_title",
+      "home_reviews_teaser_0_text"
+    ],
+    "preserved": true
+  },
+  "db_home_group_may_still_contain_teaser": true,
+  "operator_finding": "old Reviews teaser blocker",
+  "audit_assessment": {
+    "visible_in_admin_expected": false,
+    "save_blocker_expected": false,
+    "field_still_registered": true,
+    "blocker_suppressed_by_theme": true
+  },
+  "save_would_fail_without_suppression": true,
+  "result": "NOT_CONFIRMED_AS_ACTIVE_BLOCKER",
+  "suppression_status": "THEME_FILTER_ACTIVE",
+  "operator_may_still_see_teaser_if": [
+    "prepare_field filter not loaded on runtime",
+    "DB home group renders teaser independently of canonical JSON",
+    "operator viewing stale admin cache/session"
+  ],
+  "confidence": "MEDIUM"
+}

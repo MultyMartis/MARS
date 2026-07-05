@@ -1,0 +1,65 @@
+{
+  "phase": "V9-06D9-V",
+  "generated_at": "2026-07-06T02:10:00+07:00",
+  "authority": {
+    "source_root": "workspaces/fp-0002-shpigovsky-v9/src/",
+    "visual_root": "workspaces/fp-0002-shpigovsky-v9/dist/ (not built in repo at audit time; src used)",
+    "css_authority": "src/scss/style.scss"
+  },
+  "home": {
+    "page_file": "src/pages/index.html",
+    "reviews_partial": "src/partials/sections/reviews.html",
+    "layout_type": "SWIPER_SLIDER",
+    "section_class": "reviews",
+    "wrapper_structure": [
+      "section.reviews[data-reveal]",
+      "  .container",
+      "    .reviews__heading",
+      "    .reviews__slider.swiper[data-reviews-slider]",
+      "      .reviews__wrapper.swiper-wrapper",
+      "        article.reviews__slide.swiper-slide",
+      "          .reviews__card",
+      "      .reviews__pagination.swiper-pagination"
+    ],
+    "slide_count_static": 10,
+    "key_css": {
+      "section": ".reviews { overflow: hidden; }",
+      "heading_gap": ".reviews__heading { margin-bottom: var(--pad-gap); }",
+      "card": ".reviews__card { padding: var(--pad-gap); border; border-radius: var(--radius-main); }",
+      "slide_height": ".reviews__slider .swiper-slide { height: auto; display: flex; }"
+    }
+  },
+  "reviews_page": {
+    "page_file": "src/pages/otzyvy.html",
+    "body_class": "page-otzyvy",
+    "main_class": "page-otzyvy__main",
+    "sections_top_to_bottom": [
+      "reviews-page__breadcrumbs",
+      "reviews-archive-list",
+      "reviews-rehabilitation-requirements"
+    ],
+    "reviews_content_partial": "src/partials/sections/reviews-archive-list.html",
+    "layout_type": "VERTICAL_CARD_LIST",
+    "uses_home_slider": false,
+    "archive_section_class": "reviews-archive",
+    "list_class": "reviews-archive__list",
+    "card_component": "src/partials/components/review-archive-card.html",
+    "card_class": "review-archive-card",
+    "card_count_static": 6,
+    "spacing_rules": {
+      "archive_section": ".reviews-archive { padding-top: 15px; padding-bottom: var(--pad-y); }",
+      "container_gap": ".reviews-archive__container { gap: var(--pad-gap); }",
+      "list_gap": ".reviews-archive__list { flex-direction: column; gap: var(--pad-gap); }",
+      "card_internal_gap": ".review-archive-card { gap: var(--pad-gap-line); padding: var(--pad-gap); }"
+    },
+    "pagination_class": "reviews-archive-pagination",
+    "second_section": "reviews-rehabilitation-requirements.html"
+  },
+  "shared_slider_appropriate_for": [
+    "Home teaser block only"
+  ],
+  "shared_slider_not_appropriate_for": [
+    "/otzyvy/ archive page"
+  ],
+  "result": "PASS"
+}

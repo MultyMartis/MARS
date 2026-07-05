@@ -1,0 +1,92 @@
+{
+  "phase": "V9-06D9-V",
+  "generated_at": "2026-07-06T02:10:00+07:00",
+  "mismatches": [
+    {
+      "id": "M1",
+      "classification": "ADMIN_DUPLICATE",
+      "static_expected": "Single reviews admin surface on top-level Отзывы (fp02-reviews)",
+      "wp_current": "Duplicate Site Options — Reviews module still visible under Настройки сайта per operator",
+      "root_cause": "Stale duplicate acf-field-group DB post for group_fp02_site_options_reviews (2 entries in D9-U checkpoint) likely retaining fp02-site-settings location",
+      "repair_risk": "LOW",
+      "minimal_repair": "Deactivate/trash duplicate ACF group post; verify only fp02-reviews location remains"
+    },
+    {
+      "id": "M2",
+      "classification": "ADMIN_EMPTY_FIELDS",
+      "static_expected": "Editable 10 review rows in top-level Отзывы admin",
+      "wp_current": "fp02-reviews admin fields empty per operator; data under generic option post_id",
+      "root_cause": "ACF options storage context mismatch: helpers/migrations use 'option'; fp02-reviews admin uses separate post_id namespace",
+      "repair_risk": "MEDIUM",
+      "minimal_repair": "Migrate meta to fp02-reviews context; update helpers to read/write fp02-reviews"
+    },
+    {
+      "id": "M3",
+      "classification": "HOME_BLOCKER",
+      "static_expected": "No Home Reviews teaser save blocker",
+      "wp_current": "Theme suppression active; plugin field still registered",
+      "root_cause": "home_reviews_teaser remains in shpigovsky-core PHP; suppressed by theme filters",
+      "repair_risk": "LOW",
+      "minimal_repair": "Verify suppression on live admin; optional future plugin cleanup out of scope"
+    },
+    {
+      "id": "M4",
+      "classification": "FRONTEND_HOME_LAYOUT",
+      "static_expected": "Home reviews swiper slider with 10 featured slides",
+      "wp_current": "Home renders shared reviews slider with 10 slides",
+      "root_cause": "None — layout matches static V9 Home",
+      "repair_risk": "NONE",
+      "minimal_repair": "No Home layout repair required; operator perception may conflate with /otzyvy/ issue"
+    },
+    {
+      "id": "M5",
+      "classification": "FRONTEND_REVIEWS_PAGE_LAYOUT",
+      "static_expected": "reviews-archive vertical card list with var(--pad-gap) spacing + rehabilitation section",
+      "wp_current": "Shared Home slider on /otzyvy/; archive-list.php is skeleton placeholder",
+      "root_cause": "D9-R wired reviews-section slider to reviews page; archive-list never implemented",
+      "repair_risk": "MEDIUM",
+      "minimal_repair": "Replace reviews-section on /otzyvy/ with reviews-archive-list implementation; add page-otzyvy body/main classes; wire rehabilitation section"
+    },
+    {
+      "id": "M6",
+      "classification": "TEMPLATE_STRUCTURE",
+      "static_expected": "page-otzyvy body, page-otzyvy__main, breadcrumbs, archive list, rehab section",
+      "wp_current": "shpigovsky-skeleton--reviews main, slider + skeleton comment",
+      "root_cause": "page-templates/reviews.php still skeleton-era structure",
+      "repair_risk": "MEDIUM",
+      "minimal_repair": "Refactor reviews.php to match static otzyvy.html section order"
+    },
+    {
+      "id": "M7",
+      "classification": "CSS_SPACING",
+      "static_expected": ".reviews-archive__list { gap: var(--pad-gap) } between cards",
+      "wp_current": "Swiper slides without archive list gap rules",
+      "root_cause": "Wrong markup — slider classes instead of reviews-archive classes",
+      "repair_risk": "LOW after template fix",
+      "minimal_repair": "Implement archive markup; existing v9-style.css rules will apply under .page-otzyvy"
+    },
+    {
+      "id": "M8",
+      "classification": "DATA_SOURCE",
+      "static_expected": "Admin-editable options drive frontend",
+      "wp_current": "Frontend may read generic option or fallback while admin fp02-reviews empty",
+      "root_cause": "Same storage context mismatch as M2",
+      "repair_risk": "MEDIUM",
+      "minimal_repair": "Unify storage context in D9-W"
+    }
+  ],
+  "d9u_claims_vs_operator": {
+    "d9u_verdict": "PASS",
+    "operator_contradictions_confirmed": [
+      "duplicate Site Settings reviews",
+      "empty top-level Reviews fields",
+      "/otzyvy/ layout not matching static V9"
+    ],
+    "d9u_claims_still_valid": [
+      "Home slider outputs 10 reviews",
+      "theme suppression code present",
+      "top-level menu registration in source"
+    ]
+  },
+  "result": "OPERATOR_FINDINGS_SUBSTANTIATED"
+}
