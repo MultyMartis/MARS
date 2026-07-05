@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-05 (V9-06D9-B Header/Font/Messenger Repair PARTIAL PASS)
+**Last updated:** 2026-07-05 (V9-06D9-C Home Hero Parity Repair PASS)
 
-**Current WordPress phase:** V9-06D9-B Header Font Asset Messenger Repair **PARTIAL PASS** — Inter fonts load (theme-relative paths); messenger icon placeholders restored (href `#`); bounded runtime delivery performed; primary nav mega-menu deferred D9-B2. Recommended next: **D9-C home hero parity**. Report: `WORDPRESS/reports/FP-0002-V9-06D9B-HEADER-FONT-ASSET-MESSENGER-REPAIR-REPORT-v1.md`. Prior: D9-0 charter, D9-A audit.
+**Current WordPress phase:** V9-06D9-C Home Hero Parity Repair **PASS** — theme asset fallback restores `hero__media` and hero PNG (HTTP 200); bounded runtime delivery (3 files); DB/ACF writes 0. Recommended next: **D9-D home full section transfer**. Report: `WORDPRESS/reports/FP-0002-V9-06D9C-HOME-HERO-PARITY-REPAIR-REPORT-v1.md`. Prior: D9-B header/font/messenger partial, D9-A audit, D9-0 charter.
 
 ## Active frontend workspace (V9)
 

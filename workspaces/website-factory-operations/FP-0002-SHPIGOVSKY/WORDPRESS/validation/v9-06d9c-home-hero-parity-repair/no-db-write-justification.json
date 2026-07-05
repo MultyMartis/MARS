@@ -1,0 +1,12 @@
+{
+  "task": "V9-06D9-C",
+  "dbWritePerformed": false,
+  "justification": "Theme asset fallback renders hero__media and hero image HTTP 200 without seeding home_hero_slides[0].image. ACF image remains empty; template prefers ACF when present and falls back to bundled theme asset otherwise.",
+  "acfField": "home_hero_slides[0].image",
+  "acfStateBefore": "empty",
+  "acfStateAfter": "empty",
+  "homePageId": 4,
+  "dbCheckpointRequired": false,
+  "mediaUploads": 0,
+  "result": "NO_DB_WRITE"
+}

@@ -1,0 +1,19 @@
+{
+  "task": "V9-06D9-C",
+  "performed": true,
+  "deliveryMode": "BOUNDED_COPY",
+  "filesCopied": 3,
+  "runtimeFileWrites": 3,
+  "checksumVerification": "SHA256 source-target match on all copied files",
+  "targets": [
+    {
+      "path": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky/wp-content/themes/shpigovsky/",
+      "role": "ACTIVE",
+      "filesCopied": 3,
+      "allSha256Match": true
+    }
+  ],
+  "deletes": 0,
+  "mirrorPurge": false,
+  "result": "PASS"
+}

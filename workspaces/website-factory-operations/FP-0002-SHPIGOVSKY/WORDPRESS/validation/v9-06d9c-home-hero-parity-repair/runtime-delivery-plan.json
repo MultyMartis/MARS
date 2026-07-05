@@ -1,0 +1,25 @@
+{
+  "task": "V9-06D9-C",
+  "deliveryMode": "BOUNDED_COPY",
+  "mirrorPurge": false,
+  "deletes": 0,
+  "targets": [
+    {
+      "path": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky/wp-content/themes/shpigovsky/",
+      "role": "ACTIVE",
+      "authorized": true
+    },
+    {
+      "path": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky/app/public/wp-content/themes/shpigovsky/",
+      "role": "CHARTER_AUTHORIZED",
+      "authorized": false,
+      "reason": "Path not present on local runtime"
+    }
+  ],
+  "files": [
+    "template-parts/home/hero.php",
+    "inc/home-helpers.php",
+    "assets/img/hero/hero-main.png"
+  ],
+  "result": "APPROVED"
+}

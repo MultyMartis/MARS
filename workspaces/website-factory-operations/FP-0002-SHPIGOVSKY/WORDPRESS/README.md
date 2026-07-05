@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D9-B HEADER/FONT/MESSENGER REPAIR PARTIAL PASS — NEXT: D9-C home hero parity
+**Status:** V9-06D9-C HOME HERO PARITY PASS — NEXT: D9-D home full section transfer
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

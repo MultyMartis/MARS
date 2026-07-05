@@ -1,0 +1,28 @@
+{
+  "task": "V9-06D9-C",
+  "capturedAt": "2026-07-05T11:49:45.534Z",
+  "static": {
+    "heroImagePath": "/assets/img/hero/hero-main.png",
+    "heroImageExists": true,
+    "heroImageSha256": "48CBA0B7509915E3E2CEDB1C5239FF594B9070A5908FC937E345C8517AF0BEA1",
+    "heroImageBytes": 3809988,
+    "hasMediaLayer": true,
+    "hasImage": true,
+    "heroImageHttp": 200
+  },
+  "runtime": {
+    "hasMediaLayer": false,
+    "hasImage": false,
+    "heroImageSrc": null,
+    "acfField": "home_hero_slides[0].image",
+    "acfImageSeeded": false
+  },
+  "rootCause": "ACF_IMAGE_NOT_SEEDED + ASSET_NOT_DELIVERED",
+  "repairStrategy": "THEME_ASSET_FALLBACK",
+  "sourceFiles": [
+    "template-parts/home/hero.php",
+    "inc/home-helpers.php",
+    "assets/img/hero/hero-main.png"
+  ],
+  "dbWriteRequired": false
+}

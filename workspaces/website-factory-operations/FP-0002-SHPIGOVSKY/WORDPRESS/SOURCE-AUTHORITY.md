@@ -191,3 +191,7 @@ Canonical D7-E Contacts template source (commit `5a7eb400`) delivered to local r
 ## V9-06D9-B header/font/messenger repair (2026-07-05)
 
 D9-B **PARTIAL PASS**: Inter `@font-face` paths rewritten to theme-relative `../fonts/inter/`; 6 WOFF2 files copied from V9 dist into theme source; messenger visual fallback (`href="#"`) when `social_links` empty. Bounded runtime delivery: 10 files to active `wp-content/themes/shpigovsky/` and charter `app/public/.../themes/shpigovsky/` (WordPress ABSPATH = project root). No DB/ACF/options/menu writes. Primary nav mega-menu deferred D9-B2. Evidence: `validation/v9-06d9b-header-font-asset-messenger-repair/`. Report: `reports/FP-0002-V9-06D9B-HEADER-FONT-ASSET-MESSENGER-REPAIR-REPORT-v1.md`. Next: D9-C home hero parity.
+
+## V9-06D9-C home hero parity repair (2026-07-05)
+
+D9-C **PASS**: Home hero media restored via theme asset fallback — `hero-main.png` copied from V9 static source into `theme/shpigovsky/assets/img/hero/`; `shpigovsky_get_home_hero_image_fallback()` added; `template-parts/home/hero.php` renders `hero__media` when ACF `home_hero_slides[0].image` empty (ACF wins when seeded). Bounded runtime delivery: 3 files to active theme only. No DB/ACF/options/menu writes; no media uploads to WP library. Hero image HTTP 200; route smoke ALL_200. Evidence: `validation/v9-06d9c-home-hero-parity-repair/`. Report: `reports/FP-0002-V9-06D9C-HOME-HERO-PARITY-REPAIR-REPORT-v1.md`. Next: D9-D home full section transfer.

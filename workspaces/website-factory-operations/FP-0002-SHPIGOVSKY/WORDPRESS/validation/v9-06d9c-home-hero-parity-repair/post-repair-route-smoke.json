@@ -1,0 +1,76 @@
+{
+  "task": "V9-06D9-C",
+  "routes": [
+    {
+      "path": "/",
+      "label": "home",
+      "status": 200,
+      "header": true,
+      "footer": true,
+      "v9Css": true,
+      "fatal": false,
+      "result": "PASS"
+    },
+    {
+      "path": "/uslugi/",
+      "label": "services-hub",
+      "status": 200,
+      "header": true,
+      "footer": true,
+      "v9Css": true,
+      "fatal": false,
+      "result": "PASS"
+    },
+    {
+      "path": "/uslugi/zavisimosti/",
+      "label": "service-73",
+      "status": 200,
+      "header": true,
+      "footer": true,
+      "v9Css": true,
+      "fatal": false,
+      "result": "PASS"
+    },
+    {
+      "path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "label": "service-74",
+      "status": 200,
+      "header": true,
+      "footer": true,
+      "v9Css": true,
+      "fatal": false,
+      "result": "PASS"
+    },
+    {
+      "path": "/uslugi/psihicheskoe-zdorovie/",
+      "label": "service-77",
+      "status": 200,
+      "header": true,
+      "footer": true,
+      "v9Css": true,
+      "fatal": false,
+      "result": "PASS"
+    },
+    {
+      "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "label": "service-84",
+      "status": 200,
+      "header": true,
+      "footer": true,
+      "v9Css": true,
+      "fatal": false,
+      "result": "PASS"
+    },
+    {
+      "path": "/kontakty/",
+      "label": "contacts",
+      "status": 200,
+      "header": true,
+      "footer": true,
+      "v9Css": true,
+      "fatal": false,
+      "result": "PASS"
+    }
+  ],
+  "result": "ALL_200"
+}

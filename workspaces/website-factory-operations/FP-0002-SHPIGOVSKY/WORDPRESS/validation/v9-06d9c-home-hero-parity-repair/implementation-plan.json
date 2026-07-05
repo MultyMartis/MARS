@@ -1,0 +1,44 @@
+{
+  "task": "V9-06D9-C",
+  "strategy": "THEME_ASSET_FALLBACK",
+  "preferredOverDbSeed": true,
+  "staticHeroSource": "workspaces/fp-0002-shpigovsky-v9/src/img/hero/hero-main.png",
+  "staticHeroSha256": "48CBA0B7509915E3E2CEDB1C5239FF594B9070A5908FC937E345C8517AF0BEA1",
+  "themeHeroTarget": "theme/shpigovsky/assets/img/hero/hero-main.png",
+  "changes": [
+    {
+      "change": "Copy static V9 hero PNG into theme assets",
+      "sourceFile": "assets/img/hero/hero-main.png",
+      "runtimeTarget": "wp-content/themes/shpigovsky/assets/img/hero/hero-main.png",
+      "dbWriteNeeded": false,
+      "reason": "Deliver missing hero media without WP uploads",
+      "risk": "LOW"
+    },
+    {
+      "change": "Add home hero image fallback helper",
+      "sourceFile": "inc/home-helpers.php",
+      "runtimeTarget": "wp-content/themes/shpigovsky/inc/home-helpers.php",
+      "dbWriteNeeded": false,
+      "reason": "Resolve theme asset when ACF image empty",
+      "risk": "LOW"
+    },
+    {
+      "change": "Wire fallback into home hero template",
+      "sourceFile": "template-parts/home/hero.php",
+      "runtimeTarget": "wp-content/themes/shpigovsky/template-parts/home/hero.php",
+      "dbWriteNeeded": false,
+      "reason": "Render hero__media when ACF image not seeded",
+      "risk": "LOW"
+    }
+  ],
+  "dbCheckpointRequired": false,
+  "dbWriteRequired": false,
+  "validationCriteria": {
+    "heroMediaDom": true,
+    "heroImageHttp200": true,
+    "heroPanelVisible": true,
+    "routeSmokeAll200": true,
+    "noOtherHomeSectionsChanged": true
+  },
+  "result": "APPROVED"
+}

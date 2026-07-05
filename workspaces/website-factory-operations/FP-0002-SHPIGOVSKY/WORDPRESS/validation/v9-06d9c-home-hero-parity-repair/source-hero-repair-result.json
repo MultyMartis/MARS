@@ -1,0 +1,34 @@
+{
+  "task": "V9-06D9-C",
+  "performed": true,
+  "strategy": "THEME_ASSET_FALLBACK",
+  "items": [
+    {
+      "item": "hero-main.png theme asset",
+      "before": "absent in theme source/runtime",
+      "after": "present at assets/img/hero/hero-main.png",
+      "source": "fp-0002-shpigovsky-v9/src/img/hero/hero-main.png",
+      "sha256": "48CBA0B7509915E3E2CEDB1C5239FF594B9070A5908FC937E345C8517AF0BEA1",
+      "bytes": 3809988,
+      "result": "PASS"
+    },
+    {
+      "item": "shpigovsky_get_home_hero_image_fallback()",
+      "before": "not present",
+      "after": "returns theme URI when file readable",
+      "source": "inc/home-helpers.php",
+      "result": "PASS"
+    },
+    {
+      "item": "home hero template media layer",
+      "before": "hero__media omitted when ACF image empty",
+      "after": "hero__media rendered via theme fallback",
+      "source": "template-parts/home/hero.php",
+      "result": "PASS"
+    }
+  ],
+  "acfImagePriorityPreserved": true,
+  "d4D8TextFieldsPreserved": true,
+  "otherHomeSectionsModified": false,
+  "result": "PASS"
+}
