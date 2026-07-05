@@ -1,0 +1,34 @@
+{
+  "phase": "V9-06D9-O",
+  "generated_at": "2026-07-05T23:22:17.358910+07:00",
+  "file": "X:/AI MARS/workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/acf-json/group_fp02_page_home.json",
+  "group": "group_fp02_page_home",
+  "field": "home_reviews_teaser",
+  "change": "required: ensure 0 (canonical already 0; DB idempotent reconcile)",
+  "schema_file_changed_in_git": false,
+  "before": {
+    "json_required": 0,
+    "db_repair": {
+      "field_post_id": 128,
+      "changed": false,
+      "before": {
+        "required": 0,
+        "min": 0
+      },
+      "after": {
+        "required": 0,
+        "min": 0
+      },
+      "result": "PASS"
+    }
+  },
+  "after": {
+    "json_required": 0,
+    "runtime_required": 0,
+    "db_flags_after": {
+      "required": 0,
+      "min": 0
+    }
+  },
+  "result": "PASS"
+}

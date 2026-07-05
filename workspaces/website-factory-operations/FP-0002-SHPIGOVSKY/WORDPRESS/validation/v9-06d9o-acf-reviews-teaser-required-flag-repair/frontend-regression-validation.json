@@ -1,0 +1,58 @@
+{
+  "phase": "V9-06D9-O",
+  "captured_at": "2026-07-05T16:22:17.475Z",
+  "routes": [
+    {
+      "path": "/",
+      "label": "home",
+      "status": 200,
+      "pass": true,
+      "home": {
+        "sectionCount": 19,
+        "sectionsExpected": 19,
+        "sectionsPass": true,
+        "heroImagePresent": true,
+        "heroUsesUploads": true,
+        "galleryImageCount": 4,
+        "galleryUsesUploads": true,
+        "faqHeading": true,
+        "specialistsHeading": true,
+        "reviewsSection": true,
+        "hasFooter": true
+      }
+    },
+    {
+      "path": "/uslugi/",
+      "label": "services-hub",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "label": "service-74",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/kontakty/",
+      "label": "contacts",
+      "status": 200,
+      "pass": true
+    }
+  ],
+  "route_smoke": "ALL_200",
+  "home_checks": {
+    "sectionCount": 19,
+    "sectionsExpected": 19,
+    "sectionsPass": true,
+    "heroImagePresent": true,
+    "heroUsesUploads": true,
+    "galleryImageCount": 4,
+    "galleryUsesUploads": true,
+    "faqHeading": true,
+    "specialistsHeading": true,
+    "reviewsSection": true,
+    "hasFooter": true
+  },
+  "result": "PASS"
+}

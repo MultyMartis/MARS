@@ -1,0 +1,30 @@
+{
+  "phase": "V9-06D9-O",
+  "generated_at": "2026-07-05T23:22:17.359932+07:00",
+  "runtime_delivery": {
+    "source": "X:/AI MARS/workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/acf-json/group_fp02_page_home.json",
+    "target": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky/wp-content/acf-json/group_fp02_page_home.json",
+    "existed_before": false,
+    "source_sha256": "4E93F5B5CFAECD4DEF8FEFD92060E13D8555FD343329187F778D0876064558B4",
+    "target_sha256": "4E93F5B5CFAECD4DEF8FEFD92060E13D8555FD343329187F778D0876064558B4",
+    "checksum_match": true,
+    "deletes": 0,
+    "result": "PASS"
+  },
+  "db_sync": {
+    "field_post_id": 128,
+    "changed": false,
+    "before": {
+      "required": 0,
+      "min": 0
+    },
+    "after": {
+      "required": 0,
+      "min": 0
+    },
+    "result": "PASS"
+  },
+  "acf_db_import_via_php": false,
+  "reason": "DB field post already matched optional flag; direct serialized reconcile only",
+  "result": "PASS"
+}

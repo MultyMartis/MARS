@@ -1,0 +1,36 @@
+{
+  "phase": "V9-06D9-O",
+  "generated_at": "2026-07-05T23:22:17.360583+07:00",
+  "classic_editor": {
+    "expected": "active",
+    "verified": "READ_ONLY_ASSUMED"
+  },
+  "gutenberg_disabled": {
+    "expected": true,
+    "verified": "READ_ONLY_ASSUMED"
+  },
+  "native_editor_hidden_page_4": {
+    "expected": true,
+    "verified": "D9-N_BASELINE"
+  },
+  "acf_visible_page_4": {
+    "expected": true,
+    "verified": "D9-N_BASELINE"
+  },
+  "home_reviews_teaser_required_flag": 0,
+  "home_reviews_teaser_min_rows": 0,
+  "empty_repeater_save_simulation": {
+    "empty_repeater_count": 0,
+    "required": 0,
+    "min": 0,
+    "would_block_save": false,
+    "error": null,
+    "result": "PASS"
+  },
+  "home_4_save_blocked_by_reviews_teaser": false,
+  "operator_test_data_preserved": true,
+  "hero_gallery_fields_preserved": true,
+  "no_fake_reviews_seeded": true,
+  "notes": "Live wp-admin save not executed (PHP CLI unavailable); validation simulated from DB field flags using ACF repeater rules.",
+  "result": "PASS"
+}

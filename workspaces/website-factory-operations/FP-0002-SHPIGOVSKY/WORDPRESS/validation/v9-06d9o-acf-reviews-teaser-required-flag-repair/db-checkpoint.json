@@ -1,0 +1,76 @@
+{
+  "phase": "V9-06D9-O",
+  "generated_at": "2026-07-05T23:22:17.288398+07:00",
+  "path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d9o-acf-reviews-teaser-required-flag-pre-20260705-232217",
+  "db_dump": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d9o-acf-reviews-teaser-required-flag-pre-20260705-232217/mars_wp_fp0002.sql",
+  "db_dump_bytes": 1376108,
+  "db_dump_sha256": "61FC9FE3275D0A520C10F8DEECFE589BACB28B0BC79C9485BAC8A4BC5859797A",
+  "active_plugins_before": "serialized_php_in_dump",
+  "acf_groups_before_count": 13,
+  "acf_groups_before": [
+    {
+      "key": "group_fp02_blog_post_article_meta",
+      "title": "Blog Post — Article Meta"
+    },
+    {
+      "key": "group_fp02_page_contacts",
+      "title": "Page — Contacts"
+    },
+    {
+      "key": "group_fp02_page_home",
+      "title": "Page — Home"
+    },
+    {
+      "key": "group_fp02_page_institutional",
+      "title": "Page — Institutional"
+    },
+    {
+      "key": "group_fp02_page_legal",
+      "title": "Page — Legal"
+    },
+    {
+      "key": "group_fp02_page_reviews",
+      "title": "Page — Reviews"
+    },
+    {
+      "key": "group_fp02_page_services_hub",
+      "title": "Page — Services Hub"
+    },
+    {
+      "key": "group_fp02_service_faq",
+      "title": "Service — FAQ"
+    },
+    {
+      "key": "group_fp02_service_layout_hero",
+      "title": "Service — Layout and Hero"
+    },
+    {
+      "key": "group_fp02_service_relationships",
+      "title": "Service — Relationships / Related Services"
+    },
+    {
+      "key": "group_fp02_service_structured_sections",
+      "title": "Service — Structured Sections"
+    },
+    {
+      "key": "group_fp02_site_options_contacts",
+      "title": "Site Options — Contacts and Organisation"
+    },
+    {
+      "key": "group_fp02_site_options_modal_cta",
+      "title": "Site Options — Modal and Global CTA"
+    }
+  ],
+  "group_fp02_page_home_field_post_id": 128,
+  "home_reviews_teaser_field_before_flags": {
+    "required": 0,
+    "min": 0
+  },
+  "home_page_4_reviews_meta_before": {
+    "home_reviews_teaser_0_title": "3123123",
+    "home_reviews_teaser_0_text": "12",
+    "home_reviews_teaser": "1"
+  },
+  "restore_instructions": "mysql --host=127.0.0.1 --user=root mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06d9o-acf-reviews-teaser-required-flag-pre-20260705-232217\\mars_wp_fp0002.sql\"",
+  "result": "PASS"
+}

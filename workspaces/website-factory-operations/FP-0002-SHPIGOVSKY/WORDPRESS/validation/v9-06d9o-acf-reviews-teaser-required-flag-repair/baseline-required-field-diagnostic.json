@@ -1,0 +1,28 @@
+{
+  "phase": "V9-06D9-O",
+  "generated_at": "2026-07-05T23:22:17.063869+07:00",
+  "field_key": "field_fp02_home_reviews_teaser",
+  "field_name": "home_reviews_teaser",
+  "field_group": "group_fp02_page_home",
+  "home_page_id": 4,
+  "canonical_json_path": "X:/AI MARS/workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/acf-json/group_fp02_page_home.json",
+  "runtime_json_path": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky/wp-content/acf-json/group_fp02_page_home.json",
+  "json_required": 0,
+  "json_min": 0,
+  "runtime_json_exists_before": false,
+  "runtime_required_before": null,
+  "runtime_min_before": null,
+  "db_required_before": 0,
+  "db_min_before": 0,
+  "home_reviews_teaser_empty": false,
+  "home_reviews_teaser_value_preview": "1",
+  "home_reviews_teaser_meta_keys": [
+    "home_reviews_teaser_0_title",
+    "home_reviews_teaser_0_text"
+  ],
+  "other_blocking_fields_in_home_group": [],
+  "deferred_status": "SKIP_PRODUCTION_REVIEW",
+  "operator_reported_blocker": "home_reviews_teaser",
+  "root_cause_hypothesis": "Runtime wp-content/acf-json/group_fp02_page_home.json missing after D9-H delivery drift; canonical JSON and DB field post already define required=0/min=0 — repair focuses on runtime JSON delivery and DB reconcile.",
+  "result": "PASS"
+}

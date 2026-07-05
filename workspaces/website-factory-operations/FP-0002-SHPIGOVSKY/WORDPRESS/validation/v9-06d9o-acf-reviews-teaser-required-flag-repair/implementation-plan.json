@@ -1,0 +1,27 @@
+{
+  "phase": "V9-06D9-O",
+  "generated_at": "2026-07-05T23:22:17.298043+07:00",
+  "decisions": [
+    {
+      "item": "canonical_json_edit",
+      "decision": "NO_CHANGE",
+      "reason": "home_reviews_teaser.required already 0 in canonical JSON"
+    },
+    {
+      "item": "runtime_json_delivery",
+      "decision": "COPY_CANONICAL_TO_RUNTIME",
+      "reason": "Runtime wp-content/acf-json/group_fp02_page_home.json missing"
+    },
+    {
+      "item": "db_schema_sync",
+      "decision": "IDEMPOTENT_ENSURE_REQUIRED_ZERO",
+      "reason": "Ensure DB acf-field post matches canonical optional flag"
+    },
+    {
+      "item": "acf_value_writes",
+      "decision": "FORBIDDEN",
+      "reason": "No content seeding or fake reviews"
+    }
+  ],
+  "result": "PASS"
+}

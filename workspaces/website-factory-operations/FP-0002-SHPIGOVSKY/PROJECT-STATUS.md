@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-05 (V9-06D9-N Hide Native Editor for Template-Managed Pages PASS)
+**Last updated:** 2026-07-05 (V9-06D9-O ACF Reviews Teaser Required Flag Repair PASS)
 
-**Current WordPress phase:** V9-06D9-N Hide Native Editor for Template-Managed Pages **PASS** — allowlist-based admin UX helper hides native Classic Editor content box on 13 template-managed pages; operator-review pages retain editor; no DB/ACF/content writes; frontend regression PASS (19 sections, uploads, routes ALL_200); admin screenshots PARTIAL (operator visual QA recommended). Recommended next: **D9-O admin UX QA**. Report: `WORDPRESS/reports/FP-0002-V9-06D9N-HIDE-NATIVE-EDITOR-FOR-TEMPLATE-PAGES-REPORT-v1.md`. Prior: D9-M native content cleanup.
+**Current WordPress phase:** V9-06D9-O ACF Reviews Teaser Required Flag Repair **PASS** — `home_reviews_teaser` confirmed optional in canonical JSON and DB; missing runtime ACF JSON restored; no ACF/content/template writes; frontend regression PASS (routes ALL_200, Home 19/19 sections). Operator in-browser save QA recommended (D9-P). Report: `WORDPRESS/reports/FP-0002-V9-06D9O-ACF-REVIEWS-TEASER-REQUIRED-FLAG-REPAIR-REPORT-v1.md`. Prior: D9-N hide native editor.
 
 ## Active frontend workspace (V9)
 

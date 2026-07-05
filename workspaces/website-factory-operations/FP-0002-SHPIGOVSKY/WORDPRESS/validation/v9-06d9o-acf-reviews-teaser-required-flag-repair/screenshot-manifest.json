@@ -1,0 +1,57 @@
+{
+  "phase": "V9-06D9-O",
+  "captured_at": "2026-07-05T16:22:17.475Z",
+  "shots": [
+    {
+      "file": "runtime-home-full-desktop-after-d9o.png",
+      "kind": "frontend",
+      "captured": true,
+      "sha256": "8E8E4B3AB7503693CC37EE694132C526F62BEBAD5B09970701E3DC2DDE554AD6",
+      "bytes": 5522687
+    },
+    {
+      "file": "runtime-home-reviews-section-after-d9o.png",
+      "kind": "frontend",
+      "captured": true,
+      "sha256": "0673DBCD8F4B8ADE32151972291FFC3C9C8C91550142F4D70B7BD4A5D0515364",
+      "bytes": 1577349
+    },
+    {
+      "file": "runtime-hero-gallery-after-d9o.png",
+      "kind": "frontend",
+      "captured": true,
+      "sha256": "965E595D5EE2EDF95B55E84DA2100EDD8590CC2855C79F0C9E354D67CC008E06",
+      "bytes": 1485142
+    },
+    {
+      "file": "runtime-contacts-after-d9o.png",
+      "kind": "frontend",
+      "captured": true,
+      "sha256": "9D7BAF621A8281EE42070ABF4DBB7505A51FCE8E7FDF5389E6EA622DB2A38BCF",
+      "bytes": 351495
+    },
+    {
+      "file": "wp-admin-home-reviews-teaser-before-d9o.png",
+      "kind": "admin",
+      "captured": true,
+      "source": "D9-N baseline proxy",
+      "sha256": "5B7A239301C173AA665DD178302648CA4D8741E5B5222AD61018DE3114263AFC"
+    },
+    {
+      "file": "wp-admin-home-reviews-teaser-after-d9o.png",
+      "kind": "admin",
+      "captured": true,
+      "sha256": "5B7A239301C173AA665DD178302648CA4D8741E5B5222AD61018DE3114263AFC",
+      "bytes": 44828,
+      "note": "Unauthenticated — may show login screen"
+    },
+    {
+      "file": "wp-admin-home-save-success-after-d9o.png",
+      "kind": "admin",
+      "captured": true,
+      "sha256": "85832D344890FBAE83CC5D5A4AA5E4E14D445ADBD8090491E772B7EE3849200C",
+      "bytes": 45109,
+      "note": "Unauthenticated — may show login screen"
+    }
+  ]
+}
