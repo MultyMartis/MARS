@@ -1,0 +1,25 @@
+{
+  "task": "V9-06D9-B",
+  "cssBundle": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/css/v9-style.css",
+  "cssVersionAfterDelivery": "1783250673",
+  "fontFaceResolvedBase": "../fonts/inter/",
+  "requests": [
+    {"url": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/fonts/inter/inter-300.woff2", "status": 200},
+    {"url": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/fonts/inter/inter-300-latin.woff2", "status": 200},
+    {"url": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/fonts/inter/inter-400.woff2", "status": 200},
+    {"url": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/fonts/inter/inter-400-latin.woff2", "status": 200},
+    {"url": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/fonts/inter/inter-500.woff2", "status": 200},
+    {"url": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/fonts/inter/inter-500-latin.woff2", "status": 200}
+  ],
+  "failedCount": 0,
+  "legacyRoot404StillPresentButUnreferenced": true,
+  "navComputedStyle": {
+    "selector": ".site-header__nav-link",
+    "fontFamilyDeclared": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+    "fontSize": "18px",
+    "fontWeight": "300",
+    "lineHeight": "24px",
+    "note": "Matches static V9 declared stack; Inter files now load (D9-A had 5/10 font 404)"
+  },
+  "result": "PASS"
+}

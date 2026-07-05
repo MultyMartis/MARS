@@ -1,6 +1,8 @@
 <?php
 /**
- * Messenger icon links — omitted when social option rows are empty.
+ * Messenger icon links — configured social_links or static V9 visual fallback.
+ *
+ * D9-B: when social_links is empty, render placeholder href="#" icons for parity.
  *
  * @package Shpigovsky
  *
@@ -12,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $context = isset( $args['context'] ) ? (string) $args['context'] : 'header';
-$rows    = shpigovsky_get_social_link_rows();
+$rows    = shpigovsky_get_messenger_link_rows( $context );
 
 if ( empty( $rows ) ) {
 	return;
@@ -29,7 +31,9 @@ if ( 'mobile-header' === $context ) {
 <div class="<?php echo esc_attr( $wrapper_class ); ?>">
 	<?php foreach ( $rows as $row ) : ?>
 		<?php
-		$icon = shpigovsky_social_icon_for_label( $row['label'] );
+		$icon = isset( $row['icon'] ) && '' !== $row['icon']
+			? (string) $row['icon']
+			: shpigovsky_social_icon_for_label( $row['label'] );
 		$label = '' !== $row['label'] ? $row['label'] : __( 'Социальная сеть', 'shpigovsky' );
 		?>
 		<a class="<?php echo esc_attr( $link_class ); ?>" href="<?php echo esc_url( $row['url'] ); ?>" aria-label="<?php echo esc_attr( $label ); ?>">

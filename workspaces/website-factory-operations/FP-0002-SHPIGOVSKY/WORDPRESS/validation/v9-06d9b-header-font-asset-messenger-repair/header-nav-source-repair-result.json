@@ -1,0 +1,50 @@
+{
+  "task": "V9-06D9-B",
+  "scope": "header/nav bounded source repair — fonts + messengers; mega-menu deferred",
+  "items": [
+    {
+      "item": "Inter font loading",
+      "static": "OK — local WOFF2",
+      "runtimeAfter": "OK — theme-relative URLs HTTP 200",
+      "match": true,
+      "notes": "Typography stack now receives real Inter files"
+    },
+    {
+      "item": "Desktop messenger icons",
+      "static": "2 (TG, WA)",
+      "runtimeAfter": "2 (TG, WA)",
+      "match": true,
+      "notes": "Placeholder href=\"#\""
+    },
+    {
+      "item": "Mobile/offcanvas messenger icons",
+      "static": "3 (TG, WA, Max)",
+      "runtimeAfter": "3 (TG, WA, Max)",
+      "match": true,
+      "notes": "Placeholder href=\"#\""
+    },
+    {
+      "item": "Primary nav structure",
+      "static": "V9 hardcoded multi-level nav",
+      "runtimeAfter": "Flat WP menu (3 items)",
+      "match": false,
+      "notes": "Deferred D9-B2 — no menu DB mutation authorized"
+    },
+    {
+      "item": "Header phones/address/schedule/callback",
+      "static": "present",
+      "runtimeAfter": "present (D8-A options)",
+      "match": true,
+      "notes": "unchanged"
+    },
+    {
+      "item": "Search control",
+      "static": "present in nav",
+      "runtimeAfter": "present",
+      "match": true,
+      "notes": "unchanged"
+    }
+  ],
+  "overallHeaderNavParity": "PARTIAL",
+  "result": "PARTIAL PASS — messenger + font parity restored; nav structure debt remains"
+}

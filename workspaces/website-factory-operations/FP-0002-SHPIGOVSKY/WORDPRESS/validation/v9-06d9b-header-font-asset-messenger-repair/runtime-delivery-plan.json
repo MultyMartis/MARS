@@ -1,0 +1,20 @@
+{
+  "task": "V9-06D9-B",
+  "mode": "BOUNDED_COPY",
+  "mirrorPurge": false,
+  "deletes": 0,
+  "files": [
+    {"relative": "assets/css/v9-style.css", "targets": ["wp-content/themes/shpigovsky", "app/public/wp-content/themes/shpigovsky"]},
+    {"relative": "inc/site-chrome.php", "targets": ["wp-content/themes/shpigovsky", "app/public/wp-content/themes/shpigovsky"]},
+    {"relative": "template-parts/navigation/messenger-links.php", "targets": ["wp-content/themes/shpigovsky", "app/public/wp-content/themes/shpigovsky"]},
+    {"relative": "assets/fonts/inter/inter-300.woff2", "targets": ["wp-content/themes/shpigovsky", "app/public/wp-content/themes/shpigovsky"]},
+    {"relative": "assets/fonts/inter/inter-300-latin.woff2", "targets": ["wp-content/themes/shpigovsky", "app/public/wp-content/themes/shpigovsky"]},
+    {"relative": "assets/fonts/inter/inter-400.woff2", "targets": ["wp-content/themes/shpigovsky", "app/public/wp-content/themes/shpigovsky"]},
+    {"relative": "assets/fonts/inter/inter-400-latin.woff2", "targets": ["wp-content/themes/shpigovsky", "app/public/wp-content/themes/shpigovsky"]},
+    {"relative": "assets/fonts/inter/inter-500.woff2", "targets": ["wp-content/themes/shpigovsky", "app/public/wp-content/themes/shpigovsky"]},
+    {"relative": "assets/fonts/inter/inter-500-latin.woff2", "targets": ["wp-content/themes/shpigovsky", "app/public/wp-content/themes/shpigovsky"]},
+    {"relative": "assets/fonts/inter/INTER-FONT-PROVENANCE.md", "targets": ["wp-content/themes/shpigovsky", "app/public/wp-content/themes/shpigovsky"]}
+  ],
+  "activeRuntimeRoot": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky/wp-content/themes/shpigovsky/",
+  "charterRuntimeRoot": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky/app/public/wp-content/themes/shpigovsky/"
+}

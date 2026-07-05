@@ -1,0 +1,21 @@
+{
+  "task": "V9-06D9-B",
+  "headerDesktop": {
+    "staticReference": "static-header-desktop-reference.png",
+    "runtimeAfter": "runtime-header-desktop-after-d9b.png",
+    "messengersVisibleAfter": true,
+    "fontParityImproved": true
+  },
+  "headerMobile": {
+    "staticReference": "static-header-mobile-reference.png",
+    "runtimeAfter": "runtime-header-mobile-after-d9b.png",
+    "messengersVisibleAfter": true,
+    "fontParityImproved": true
+  },
+  "home": {
+    "runtimeDesktop": "runtime-home-desktop-after-d9b.png",
+    "runtimeMobile": "runtime-home-mobile-after-d9b.png",
+    "heroParity": "NOT_IN_SCOPE — unchanged"
+  },
+  "overallVisualResult": "PARTIAL PASS — header shell fonts/messengers improved; home hero/sections still deferred"
+}

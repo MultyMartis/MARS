@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-05 (V9-06D9-0 Full V9 Visual Port Charter COMPLETE — PASS)
+**Last updated:** 2026-07-05 (V9-06D9-B Header/Font/Messenger Repair PARTIAL PASS)
 
-**Current WordPress phase:** V9-06D9-0 Full V9 Visual Port Charter **COMPLETE (PASS)** — full visual port from MVP skeleton authorized; wave plan D9-B…H documented. WP interpreted as lightweight MVP, not catastrophic failure. Messenger icons missing (D8-A skip); fonts 404 globally; 14 home sections deferred. Recommended next: **D9-B header/fonts/messengers**. Report: `WORDPRESS/reports/FP-0002-V9-06D9-0-FULL-V9-VISUAL-PORT-CHARTER-REPORT-v1.md`. Prior audit: `WORDPRESS/reports/FP-0002-V9-06D9A-VISUAL-PARITY-AUDIT-REPORT-v1.md`.
+**Current WordPress phase:** V9-06D9-B Header Font Asset Messenger Repair **PARTIAL PASS** — Inter fonts load (theme-relative paths); messenger icon placeholders restored (href `#`); bounded runtime delivery performed; primary nav mega-menu deferred D9-B2. Recommended next: **D9-C home hero parity**. Report: `WORDPRESS/reports/FP-0002-V9-06D9B-HEADER-FONT-ASSET-MESSENGER-REPAIR-REPORT-v1.md`. Prior: D9-0 charter, D9-A audit.
 
 ## Active frontend workspace (V9)
 

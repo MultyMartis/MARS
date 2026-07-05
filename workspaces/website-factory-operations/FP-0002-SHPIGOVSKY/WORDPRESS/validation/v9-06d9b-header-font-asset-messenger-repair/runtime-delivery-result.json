@@ -1,0 +1,25 @@
+{
+  "task": "V9-06D9-B",
+  "performed": true,
+  "deliveryMode": "BOUNDED_COPY",
+  "filesCopied": 10,
+  "runtimeFileWrites": 20,
+  "checksumVerification": "SHA256 source-target match on all copied files",
+  "targets": [
+    {
+      "path": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky/wp-content/themes/shpigovsky/",
+      "role": "ACTIVE",
+      "filesCopied": 10,
+      "allSha256Match": true
+    },
+    {
+      "path": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky/app/public/wp-content/themes/shpigovsky/",
+      "role": "CHARTER_AUTHORIZED",
+      "filesCopied": 10,
+      "allSha256Match": true
+    }
+  ],
+  "deletes": 0,
+  "mirrorPurge": false,
+  "result": "PASS"
+}

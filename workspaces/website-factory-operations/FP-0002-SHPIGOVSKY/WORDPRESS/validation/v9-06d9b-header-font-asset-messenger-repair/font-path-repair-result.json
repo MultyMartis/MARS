@@ -1,0 +1,35 @@
+{
+  "task": "V9-06D9-B",
+  "strategy": "A — copy fonts from static V9 dist + rewrite @font-face to theme-relative ../fonts/inter/",
+  "fontProvenance": "workspaces/fp-0002-shpigovsky-v9/dist/assets/fonts/inter/ (Inter v20 WOFF2, OFL)",
+  "filesCopiedToThemeSource": [
+    "inter-300.woff2",
+    "inter-300-latin.woff2",
+    "inter-400.woff2",
+    "inter-400-latin.woff2",
+    "inter-500.woff2",
+    "inter-500-latin.woff2",
+    "INTER-FONT-PROVENANCE.md"
+  ],
+  "cssRewrite": {
+    "file": "assets/css/v9-style.css",
+    "beforePattern": "url(\"/assets/fonts/inter/",
+    "afterPattern": "url(\"../fonts/inter/",
+    "occurrences": 6
+  },
+  "networkValidationAfter": {
+    "themeRelativeUrlsAll200": true,
+    "urls": [
+      {"url": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/fonts/inter/inter-300.woff2", "status": 200},
+      {"url": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/fonts/inter/inter-300-latin.woff2", "status": 200},
+      {"url": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/fonts/inter/inter-400.woff2", "status": 200},
+      {"url": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/fonts/inter/inter-400-latin.woff2", "status": 200},
+      {"url": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/fonts/inter/inter-500.woff2", "status": 200},
+      {"url": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/fonts/inter/inter-500-latin.woff2", "status": 200}
+    ],
+    "legacyRootPathsStill404": true,
+    "legacyNote": "Old /assets/fonts/ paths remain 404 by design — CSS no longer references them"
+  },
+  "computedFontFamily": "Inter, system-ui, ... (declared; files now load)",
+  "result": "PASS"
+}

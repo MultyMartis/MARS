@@ -1,0 +1,55 @@
+{
+  "task": "V9-06D9-B",
+  "capturedAt": "2026-07-05T18:25:00+07:00",
+  "staticFontAudit": {
+    "label": "static-v9-dist",
+    "interFontFiles": [
+      "assets/fonts/inter/inter-300.woff2",
+      "assets/fonts/inter/inter-300-latin.woff2",
+      "assets/fonts/inter/inter-400.woff2",
+      "assets/fonts/inter/inter-400-latin.woff2",
+      "assets/fonts/inter/inter-500.woff2",
+      "assets/fonts/inter/inter-500-latin.woff2"
+    ],
+    "fontRequestsOk": 11,
+    "fontFailed": 0,
+    "authority": "workspaces/fp-0002-shpigovsky-v9/dist/"
+  },
+  "runtimeFontAuditBefore": {
+    "label": "runtime-before-d9b",
+    "cssBundle": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/css/v9-style.css",
+    "fontFacePaths": "/assets/fonts/inter/*.woff2",
+    "failedUrls": [
+      {"url": "http://shpigovsky.test/assets/fonts/inter/inter-300.woff2", "status": 404},
+      {"url": "http://shpigovsky.test/assets/fonts/inter/inter-300-latin.woff2", "status": 404},
+      {"url": "http://shpigovsky.test/assets/fonts/inter/inter-400.woff2", "status": 404},
+      {"url": "http://shpigovsky.test/assets/fonts/inter/inter-400-latin.woff2", "status": 404},
+      {"url": "http://shpigovsky.test/assets/fonts/inter/inter-500.woff2", "status": 404},
+      {"url": "http://shpigovsky.test/assets/fonts/inter/inter-500-latin.woff2", "status": 404}
+    ],
+    "fontFailed": 5,
+    "issue": "FONT_PATH_NOT_REWRITTEN"
+  },
+  "messengerAuditBefore": {
+    "desktopHeader": {"visible": false, "expectedCount": 2, "staticUsesPlaceholderHref": true},
+    "mobileHeader": {"visible": false, "expectedCount": 3, "staticUsesPlaceholderHref": true},
+    "offcanvas": {"visible": false, "expectedCount": 3, "staticUsesPlaceholderHref": true},
+    "rootCause": "messenger-links.php returned early when social_links option empty (D8-A skip)"
+  },
+  "headerTypographyBefore": {
+    "source": "validation/v9-06d9a-visual-parity-audit/header-nav-computed-style-diff.json",
+    "navLinkFontFamilyDeclared": "Inter, system-ui, ...",
+    "interFilesLoaded": false,
+    "severity": "HIGH"
+  },
+  "baselineScreenshots": [
+    "screenshots/before-static-header-desktop.png",
+    "screenshots/before-runtime-header-desktop.png",
+    "screenshots/before-static-header-mobile.png",
+    "screenshots/before-runtime-header-mobile.png"
+  ],
+  "baselineScreenshotProvenance": {
+    "beforeStatic": "captured D9-B from static V9 dist index",
+    "beforeRuntime": "copied from D9-A audit evidence (pre-repair runtime state)"
+  }
+}

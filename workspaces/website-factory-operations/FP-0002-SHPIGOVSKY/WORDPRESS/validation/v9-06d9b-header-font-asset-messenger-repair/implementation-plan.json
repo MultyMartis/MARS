@@ -1,0 +1,63 @@
+{
+  "task": "V9-06D9-B",
+  "requiredHead": "2d76cf9882a8283cfb014b8511b215361f032a7d",
+  "sourceEdits": [
+    {
+      "file": "theme/shpigovsky/assets/css/v9-style.css",
+      "change": "Rewrite Inter @font-face URLs from /assets/fonts/inter/ to ../fonts/inter/",
+      "reason": "Eliminate root-relative 404s in WordPress runtime",
+      "risk": "LOW"
+    },
+    {
+      "file": "theme/shpigovsky/assets/fonts/inter/*.woff2",
+      "change": "Copy 6 Inter WOFF2 files from static V9 dist (provenance documented)",
+      "reason": "Theme source lacked binary font files (provenance MD only)",
+      "risk": "LOW"
+    },
+    {
+      "file": "theme/shpigovsky/inc/site-chrome.php",
+      "change": "Add shpigovsky_get_messenger_visual_fallback_rows() and shpigovsky_get_messenger_link_rows()",
+      "reason": "Visual messenger parity without social_links DB seed",
+      "risk": "LOW"
+    },
+    {
+      "file": "theme/shpigovsky/template-parts/navigation/messenger-links.php",
+      "change": "Use messenger link resolver with static V9 placeholder fallback",
+      "reason": "Restore TG/WA/Max icon buttons with href=\"#\"",
+      "risk": "LOW"
+    }
+  ],
+  "runtimeDelivery": [
+    "assets/css/v9-style.css",
+    "assets/fonts/inter/inter-300.woff2",
+    "assets/fonts/inter/inter-300-latin.woff2",
+    "assets/fonts/inter/inter-400.woff2",
+    "assets/fonts/inter/inter-400-latin.woff2",
+    "assets/fonts/inter/inter-500.woff2",
+    "assets/fonts/inter/inter-500-latin.woff2",
+    "assets/fonts/inter/inter-INTER-FONT-PROVENANCE.md",
+    "inc/site-chrome.php",
+    "template-parts/navigation/messenger-links.php"
+  ],
+  "runtimeTargets": [
+    {
+      "path": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky/wp-content/themes/shpigovsky/",
+      "role": "ACTIVE_WP_ABSPATH",
+      "note": "WordPress ABSPATH resolves to project root; live theme loads here"
+    },
+    {
+      "path": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky/app/public/wp-content/themes/shpigovsky/",
+      "role": "TASK_AUTHORIZED_TARGET",
+      "note": "Also received bounded copy per charter path; not active WP docroot"
+    }
+  ],
+  "deferred": [
+    {
+      "item": "Primary nav mega-menu structure",
+      "wave": "D9-B2",
+      "reason": "Requires menu DB seed or broader nav refactor — out of D9-B bounded scope"
+    }
+  ],
+  "dbWritesRequired": false,
+  "acfJsonChangesRequired": false
+}

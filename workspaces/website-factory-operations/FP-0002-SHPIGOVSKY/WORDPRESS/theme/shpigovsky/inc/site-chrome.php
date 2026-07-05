@@ -112,6 +112,75 @@ function shpigovsky_brand_label() {
 }
 
 /**
+ * Static V9 visual fallback messenger rows when social_links option is empty.
+ *
+ * D9-B: placeholder href="#" only — no operator URLs invented.
+ *
+ * @param string $context header|mobile-header|offcanvas.
+ * @return array<int, array{label:string,url:string,icon:string}>
+ */
+function shpigovsky_get_messenger_visual_fallback_rows( $context = 'header' ) {
+	$desktop = array(
+		array(
+			'label' => 'Telegram',
+			'url'   => '#',
+			'icon'  => 'telegram.svg',
+		),
+		array(
+			'label' => 'WhatsApp',
+			'url'   => '#',
+			'icon'  => 'whatsapp.svg',
+		),
+	);
+
+	$mobile = array(
+		array(
+			'label' => 'Telegram',
+			'url'   => '#',
+			'icon'  => 'telegram.svg',
+		),
+		array(
+			'label' => 'WhatsApp',
+			'url'   => '#',
+			'icon'  => 'whatsapp.svg',
+		),
+		array(
+			'label' => 'Max',
+			'url'   => '#',
+			'icon'  => 'max.svg',
+		),
+	);
+
+	if ( 'header' === $context ) {
+		return $desktop;
+	}
+
+	return $mobile;
+}
+
+/**
+ * Resolve messenger rows for chrome: configured options or static visual fallback.
+ *
+ * @param string $context header|mobile-header|offcanvas.
+ * @return array<int, array{label:string,url:string,icon?:string,fallback?:bool}>
+ */
+function shpigovsky_get_messenger_link_rows( $context = 'header' ) {
+	$rows = shpigovsky_get_social_link_rows();
+
+	if ( ! empty( $rows ) ) {
+		return $rows;
+	}
+
+	$fallback = shpigovsky_get_messenger_visual_fallback_rows( $context );
+
+	foreach ( $fallback as $index => $row ) {
+		$fallback[ $index ]['fallback'] = true;
+	}
+
+	return $fallback;
+}
+
+/**
  * Read configured social/messenger rows from site options.
  *
  * @return array<int, array{label:string,url:string}>

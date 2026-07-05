@@ -187,3 +187,7 @@ Source-only Contacts page integration in `WORDPRESS/theme/shpigovsky/`: V9-compa
 ## V9-06D7-E runtime delivery
 
 Canonical D7-E Contacts template source (commit `5a7eb400`) delivered to local runtime `wp-content/themes/shpigovsky/` only. Six theme files (2 ADD, 4 MODIFY). Hash match verified post-delivery. Runtime remains deployment target; Git canonical source unchanged post-delivery. Evidence: `validation/v9-06d7e-runtime-delivery/`.
+
+## V9-06D9-B header/font/messenger repair (2026-07-05)
+
+D9-B **PARTIAL PASS**: Inter `@font-face` paths rewritten to theme-relative `../fonts/inter/`; 6 WOFF2 files copied from V9 dist into theme source; messenger visual fallback (`href="#"`) when `social_links` empty. Bounded runtime delivery: 10 files to active `wp-content/themes/shpigovsky/` and charter `app/public/.../themes/shpigovsky/` (WordPress ABSPATH = project root). No DB/ACF/options/menu writes. Primary nav mega-menu deferred D9-B2. Evidence: `validation/v9-06d9b-header-font-asset-messenger-repair/`. Report: `reports/FP-0002-V9-06D9B-HEADER-FONT-ASSET-MESSENGER-REPAIR-REPORT-v1.md`. Next: D9-C home hero parity.

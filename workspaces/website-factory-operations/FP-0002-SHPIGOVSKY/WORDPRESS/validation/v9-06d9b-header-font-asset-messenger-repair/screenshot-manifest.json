@@ -1,0 +1,19 @@
+{
+  "task": "V9-06D9-B",
+  "screenshots": [
+    {"file": "before-static-header-desktop.png", "role": "baseline-static", "captured": true},
+    {"file": "before-runtime-header-desktop.png", "role": "baseline-runtime", "captured": true, "provenance": "D9-A pre-repair evidence"},
+    {"file": "before-static-header-mobile.png", "role": "baseline-static", "captured": true},
+    {"file": "before-runtime-header-mobile.png", "role": "baseline-runtime", "captured": true, "provenance": "D9-A pre-repair evidence"},
+    {"file": "static-header-desktop-reference.png", "role": "static-reference", "captured": true},
+    {"file": "static-header-mobile-reference.png", "role": "static-reference", "captured": true},
+    {"file": "runtime-header-desktop-after-d9b.png", "role": "post-repair-runtime", "captured": true},
+    {"file": "runtime-header-mobile-after-d9b.png", "role": "post-repair-runtime", "captured": true},
+    {"file": "runtime-home-desktop-after-d9b.png", "role": "post-repair-runtime", "captured": true},
+    {"file": "runtime-home-mobile-after-d9b.png", "role": "post-repair-runtime", "captured": true},
+    {"file": "runtime-services-hub-desktop-after-d9b.png", "role": "post-repair-runtime", "captured": true},
+    {"file": "runtime-service-74-desktop-after-d9b.png", "role": "post-repair-runtime", "captured": true},
+    {"file": "runtime-contacts-desktop-after-d9b.png", "role": "post-repair-runtime", "captured": true}
+  ],
+  "directory": "validation/v9-06d9b-header-font-asset-messenger-repair/screenshots/"
+}

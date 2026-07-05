@@ -1,0 +1,13 @@
+{
+  "task": "V9-06D9-B",
+  "routes": [
+    {"path": "/", "status": 200, "header": true, "footer": true, "v9Css": true},
+    {"path": "/uslugi/", "status": 200, "header": true, "footer": true, "v9Css": true},
+    {"path": "/uslugi/zavisimosti/", "status": 200, "header": true, "footer": true, "v9Css": true},
+    {"path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/", "status": 200, "header": true, "footer": true, "v9Css": true},
+    {"path": "/uslugi/psihicheskoe-zdorovie/", "status": 200, "header": true, "footer": true, "v9Css": true},
+    {"path": "/uslugi/rasstroystva-pischevogo-povedeniya/", "status": 200, "header": true, "footer": true, "v9Css": true},
+    {"path": "/kontakty/", "status": 200, "header": true, "footer": true, "v9Css": true}
+  ],
+  "result": "ALL_200"
+}

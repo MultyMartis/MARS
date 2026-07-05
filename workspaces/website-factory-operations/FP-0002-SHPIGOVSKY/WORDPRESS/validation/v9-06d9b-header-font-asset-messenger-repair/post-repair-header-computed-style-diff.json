@@ -1,0 +1,38 @@
+{
+  "task": "V9-06D9-B",
+  "viewport": {"width": 1440, "height": 900},
+  "comparisonSource": "D9-A audit baseline + D9-B post-repair HTTP/DOM validation",
+  "improvements": [
+    "Inter WOFF2 files now HTTP 200 via theme-relative paths",
+    "Messenger icon blocks restored in desktop/mobile/offcanvas"
+  ],
+  "representativeNavLink": {
+    "selector": ".site-header__nav-link",
+    "static": {
+      "font-family": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+      "font-size": "18px",
+      "font-weight": "300",
+      "line-height": "24px"
+    },
+    "runtimeBefore": {
+      "font-family": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+      "font-size": "18px",
+      "font-weight": "300",
+      "line-height": "24px",
+      "interFilesLoaded": false
+    },
+    "runtimeAfter": {
+      "font-family": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+      "font-size": "18px",
+      "font-weight": "300",
+      "line-height": "24px",
+      "interFilesLoaded": true
+    },
+    "declaredMatch": true,
+    "renderingImproved": true
+  },
+  "remainingDiffs": [
+    "Primary nav item count/structure (WP flat menu vs V9 mega-menu)"
+  ],
+  "result": "IMPROVED — font asset loading fixed; nav structure still PARTIAL"
+}

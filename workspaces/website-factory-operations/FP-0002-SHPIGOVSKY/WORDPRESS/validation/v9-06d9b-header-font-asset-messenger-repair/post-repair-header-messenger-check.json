@@ -1,0 +1,11 @@
+{
+  "task": "V9-06D9-B",
+  "route": "http://shpigovsky.test/",
+  "desktopHeader": {"wrapper": "site-header__messengers", "links": 2, "visible": true, "hrefPolicy": "#"},
+  "mobileHeader": {"wrapper": "mobile-header__messengers", "links": 3, "visible": true, "hrefPolicy": "#"},
+  "offcanvas": {"wrapper": "offcanvas__messengers", "links": 3, "visible": true, "hrefPolicy": "#"},
+  "totalMessengerLinks": 8,
+  "realUrlsInvented": false,
+  "optionsWrites": 0,
+  "result": "PASS"
+}

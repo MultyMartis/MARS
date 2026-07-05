@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D9-0 FULL V9 VISUAL PORT CHARTER COMPLETE — FULL PORT AUTHORIZED — NEXT: D9-B header/fonts/messengers
+**Status:** V9-06D9-B HEADER/FONT/MESSENGER REPAIR PARTIAL PASS — NEXT: D9-C home hero parity
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

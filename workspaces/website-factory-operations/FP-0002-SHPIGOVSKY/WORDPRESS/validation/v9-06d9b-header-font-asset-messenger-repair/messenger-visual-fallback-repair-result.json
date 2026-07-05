@@ -1,0 +1,48 @@
+{
+  "task": "V9-06D9-B",
+  "policy": {
+    "href": "#",
+    "realUrlsInvented": false,
+    "socialLinksOptionWritten": false,
+    "dbWrites": 0
+  },
+  "sourceChanges": [
+    "inc/site-chrome.php — visual fallback rows by context",
+    "template-parts/navigation/messenger-links.php — use shpigovsky_get_messenger_link_rows()"
+  ],
+  "locations": [
+    {
+      "location": "desktop-header",
+      "context": "header",
+      "staticV9": {"count": 2, "icons": ["Telegram", "WhatsApp"], "href": "#"},
+      "runtimeBefore": {"count": 0, "visible": false},
+      "runtimeAfter": {"count": 2, "visible": true, "href": "#"},
+      "result": "PASS"
+    },
+    {
+      "location": "mobile-header",
+      "context": "mobile-header",
+      "staticV9": {"count": 3, "icons": ["Telegram", "WhatsApp", "Max"], "href": "#"},
+      "runtimeBefore": {"count": 0, "visible": false},
+      "runtimeAfter": {"count": 3, "visible": true, "href": "#"},
+      "result": "PASS"
+    },
+    {
+      "location": "offcanvas",
+      "context": "offcanvas",
+      "staticV9": {"count": 3, "icons": ["Telegram", "WhatsApp", "Max"], "href": "#"},
+      "runtimeBefore": {"count": 0, "visible": false},
+      "runtimeAfter": {"count": 3, "visible": true, "href": "#"},
+      "result": "PASS"
+    }
+  ],
+  "domValidationHome": {
+    "site-header__messengers": 1,
+    "mobile-header__messengers": 1,
+    "offcanvas__messengers": 1,
+    "messengerLinkElements": 8,
+    "placeholderHrefCount": 8,
+    "telegramSvgReferences": 3
+  },
+  "result": "PASS"
+}
