@@ -471,14 +471,13 @@ Product SEO URLs created during catalog import (`oc_seo_url` where `query LIKE '
 | robots.txt | https://bzpm.ru/robots.txt — deployed; rollback in Storage `deployments/SITE-002-PROD-SEO-READINESS-ROBOTS-01/rollback/` |
 | Meta audit scope | **Non-product only** — 43 URLs; product PDP excluded |
 | Meta audit result | PASS 12 · WARN 14 · FAIL 17 |
-| Valid XML sitemap | **NOT FOUND** at audit time — `Sitemap:` omitted from robots |
-| Yandex Metrika / Webmaster (live Twig) | **VERIFIED** (Run 4.189) — Metrika in `footer.twig` (~L233–245); Webmaster meta in `header.twig` (~L21); live HTML confirmed on home/category/information |
-| Duplicate body / preloader (Production) | **FIXED** (Run 4.190) — duplicate `<body>` + global preloader + `page_overlay` were in `header.twig` L113–126 (same file, not include); removed; live HTML now 1× body on 4 sampled URLs · [report](../reports/SITE-002-PROD-HTML-BODY-DUPLICATE-FIX-01.md) |
-| Protected Twig (operator WIP) | `catalog/view/theme/default/template/common/header.twig`, `common/footer.twig` — **DO NOT OVERWRITE / DO NOT REFORMAT** — fresh-download live before any template work |
-| Yandex verification report | [SITE-002-PROD-YANDEX-CODES-VERIFY-01.md](../reports/SITE-002-PROD-YANDEX-CODES-VERIFY-01.md) |
+| Valid XML sitemap | **VERIFIED** (Run 4.191) — https://bzpm.ru/sitemap.xml — 1320 URLs; OpenCart Google Sitemap feed enabled; robots `Sitemap:` deployed |
+| Yandex Metrika / Webmaster (live Twig) | **VERIFIED** (Run 4.189) — preserved after Run 4.191 |
+| Duplicate body / preloader (Production) | **FIXED** (Run 4.190) — unchanged by Run 4.191 |
+| Protected Twig (operator WIP) | `catalog/view/theme/default/template/common/header.twig`, `common/footer.twig` — **DO NOT OVERWRITE / DO NOT REFORMAT** |
 | Next meta operation | `SITE-002-PROD-SEO-META-FIX-01` (not authorized by default) |
-| Next sitemap operation | `SITE-002-PROD-SITEMAP-ENABLE-01` (planned after Run 4.190) |
-| Report | [SITE-002-PROD-SEO-READINESS-ROBOTS-01.md](../reports/SITE-002-PROD-SEO-READINESS-ROBOTS-01.md) |
+| Sitemap report | [SITE-002-PROD-SITEMAP-ENABLE-01.md](../reports/SITE-002-PROD-SITEMAP-ENABLE-01.md) |
+| Robots / meta audit report | [SITE-002-PROD-SEO-READINESS-ROBOTS-01.md](../reports/SITE-002-PROD-SEO-READINESS-ROBOTS-01.md) |
 
 **robots.txt policy (Production):** block admin/system/storage/account/cart/checkout/search; allow `/catalog/view/` assets and `/image/`; disallow faceted query params (`sort`, `order`, `limit`, `page`, `filter_name`, `tracking`); Yandex `Clean-param: tracking`.
 
