@@ -1,0 +1,52 @@
+{
+  "phase": "V9-06D9-Y",
+  "generated_at": "2026-07-06T02:56:00+07:00",
+  "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "screenshots": {
+    "wp-admin-reviews-closed-d9y.png": {
+      "captured": false,
+      "kind": "admin",
+      "reason": "Admin auth required; operator confirmation + D9-X DB validation used",
+      "result": "PARTIAL"
+    },
+    "wp-admin-site-settings-no-duplicate-d9y.png": {
+      "captured": false,
+      "kind": "admin",
+      "reason": "Admin auth required; D9-W duplicate cleanup evidence + operator confirmation used",
+      "result": "PARTIAL"
+    },
+    "wp-admin-home-no-teaser-d9y.png": {
+      "captured": false,
+      "kind": "admin",
+      "reason": "Admin auth required; D9-X admin validation + operator confirmation used",
+      "result": "PARTIAL"
+    },
+    "runtime-home-reviews-final-d9y.png": {
+      "captured": true,
+      "kind": "frontend",
+      "url": "http://shpigovsky.test/#reviews",
+      "bytes": 1592694,
+      "sha256": "0ACF636081F94B4BD0CFC70ADEFA619E049A4D57EB689AB0D4F3D9D3022A0212",
+      "result": "PASS"
+    },
+    "runtime-reviews-page-final-d9y.png": {
+      "captured": true,
+      "kind": "frontend",
+      "url": "http://shpigovsky.test/otzyvy/",
+      "bytes": 1150932,
+      "sha256": "E4B28BEAD69D4C42701723233E0C7813AFB01AADFA7AD8D73EC8FF1FD0FA844A",
+      "result": "PASS"
+    },
+    "runtime-reviews-archive-spacing-final-d9y.png": {
+      "captured": true,
+      "kind": "frontend",
+      "url": "http://shpigovsky.test/otzyvy/",
+      "bytes": 917536,
+      "sha256": "DBC70470FD3254AAB0839FBD24571047B0FAEE019B07C5D192EF87C7A07721CA",
+      "result": "PASS"
+    }
+  },
+  "frontend_captured": 3,
+  "admin_captured": 0,
+  "result": "PARTIAL"
+}

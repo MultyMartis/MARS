@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-06 (V9-06D9-X reviews admin-to-frontend binding repair PASS)
+**Last updated:** 2026-07-06 (V9-06D9-Y reviews admin visual QA + closure PASS)
 
-**Current WordPress phase:** V9-06D9-X Reviews Admin-to-Frontend Binding Repair **PASS** — operator edit **Андрей, Москва** synced from legacy `options_*` to canonical `fp02-reviews_*`; Home slider + `/otzyvy/` archive now read same context; admin save path fixed (`post_id` + `acf/pre_save_post`); source mode **OPTIONS**; Home slider and archive layout unchanged. DB checkpoint created. Admin screenshots PARTIAL. **Next: D9-Y admin visual QA.** Report: `WORDPRESS/reports/FP-0002-V9-06D9X-REVIEWS-ADMIN-TO-FRONTEND-BINDING-REPAIR-REPORT-v1.md`. Prior D9-W: `WORDPRESS/reports/FP-0002-V9-06D9W-REVIEWS-ADMIN-AND-LAYOUT-REPAIR-REPORT-v1.md`.
+**Current WordPress phase:** V9-06D9-Y Reviews Admin Visual QA + Closure **PASS** — Reviews admin/frontend chain **CLOSED**. Operator confirmed «Проверил, всё хорошо. давай дальше» after D9-X binding repair. Home + `/otzyvy/` first review **Андрей, Москва**; source mode **OPTIONS**; 10 reviews on Home and archive; Site Settings duplicate absent; Home #4 teaser blocker absent. Frontend screenshots PASS; admin screenshots PARTIAL. Zero mutations in D9-Y. **Next: D9-Z WordPress readiness audit.** Report: `WORDPRESS/reports/FP-0002-V9-06D9Y-REVIEWS-ADMIN-VISUAL-QA-CLOSURE-REPORT-v1.md`. Prior D9-X: `WORDPRESS/reports/FP-0002-V9-06D9X-REVIEWS-ADMIN-TO-FRONTEND-BINDING-REPAIR-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

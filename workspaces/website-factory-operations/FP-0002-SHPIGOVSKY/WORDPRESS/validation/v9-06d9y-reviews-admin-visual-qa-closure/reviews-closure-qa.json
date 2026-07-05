@@ -1,0 +1,91 @@
+{
+  "phase": "V9-06D9-Y",
+  "generated_at": "2026-07-06T02:55:28+07:00",
+  "task_mode": "READ_ONLY_QA_CLOSURE",
+  "d9x_commit": "4208252834c2ecbd6b142479e2ba56aa891f5650",
+  "preflight_head_note": "PASS_WITH_HEAD_NOTE — local/remote HEAD f125cf3807847bbffe9b693db06ec3e04c270b43; D9-X commit is ancestor",
+  "admin_checks": {
+    "top_level_reviews_menu": {
+      "expected": "fp02-reviews present",
+      "result": "PASS",
+      "notes": "Registered in inc/admin-options.php (D9-U); operator confirmed top-level Reviews admin good"
+    },
+    "reviews_row_count": {
+      "expected": 10,
+      "actual": 10,
+      "result": "PASS",
+      "notes": "D9-X DB validation + frontend DOM count"
+    },
+    "first_review_author": {
+      "expected": "Андрей, Москва",
+      "actual": "Андрей, Москва",
+      "result": "PASS",
+      "notes": "D9-X post-repair-admin-validation.json + operator confirmation"
+    },
+    "site_settings_duplicate_absent": {
+      "expected": "absent",
+      "result": "PASS",
+      "notes": "D9-W duplicate cleanup; operator confirmed duplicate Reviews module in Site Settings is gone"
+    },
+    "home_reviews_teaser_blocker_absent": {
+      "expected": "absent",
+      "result": "PASS",
+      "notes": "D9-U/D9-X admin-options.php hides deprecated field; operator confirmed Home #4 no teaser blocker"
+    },
+    "max_row_blocker_absent": {
+      "expected": "absent",
+      "result": "PASS",
+      "notes": "Operator confirmation; authenticated admin screenshot not captured"
+    }
+  },
+  "frontend_checks": {
+    "home_first_review": {
+      "expected": "Андрей, Москва",
+      "actual": "Андрей, Москва",
+      "result": "PASS"
+    },
+    "otzyvy_first_review": {
+      "expected": "Андрей, Москва",
+      "actual": "Андрей, Москва",
+      "result": "PASS"
+    },
+    "source_mode": {
+      "expected": "OPTIONS",
+      "actual": "OPTIONS",
+      "result": "PASS",
+      "notes": "First author matches admin data, not static fallback Александр"
+    },
+    "home_slider_unchanged": {
+      "expected": true,
+      "actual": true,
+      "result": "PASS",
+      "notes": "reviews__slider present; operator confirmed slider unchanged"
+    },
+    "otzyvy_archive_layout": {
+      "expected": true,
+      "actual": true,
+      "result": "PASS",
+      "notes": "review-archive-card list present; no Home slider on archive"
+    },
+    "home_review_count": {
+      "expected": 10,
+      "actual": 10,
+      "result": "PASS",
+      "notes": "DOM slide nodes >= 10; swiper wrapper may add duplicate class match"
+    },
+    "otzyvy_review_count": {
+      "expected": 10,
+      "actual": 10,
+      "result": "PASS"
+    },
+    "php_fatal": {
+      "expected": false,
+      "result": "PASS"
+    },
+    "route_smoke_all_200": {
+      "expected": true,
+      "result": "PASS"
+    }
+  },
+  "result": "PASS"
+}

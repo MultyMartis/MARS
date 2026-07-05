@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D9-X REVIEWS ADMIN-TO-FRONTEND BINDING REPAIR PASS — fp02-reviews synced with operator edit; Home + /otzyvy/ show Андрей; source OPTIONS; NEXT: D9-Y admin visual QA
+**Status:** V9-06D9-Y REVIEWS ADMIN VISUAL QA + CLOSURE PASS — Reviews admin/frontend chain CLOSED; operator confirmed «всё хорошо»; Home + /otzyvy/ show Андрей; source OPTIONS; NEXT: D9-Z WordPress readiness audit
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

@@ -1,0 +1,46 @@
+{
+  "phase": "V9-06D9-Y",
+  "generated_at": "2026-07-06T02:55:28+07:00",
+  "base_url": "http://shpigovsky.test",
+  "routes": {
+    "/": {
+      "status": 200,
+      "ok": true,
+      "php_fatal": false,
+      "home_first_author": "Андрей, Москва",
+      "home_slide_count": 10,
+      "has_reviews_slider": true,
+      "source_mode": "OPTIONS"
+    },
+    "/otzyvy/": {
+      "status": 200,
+      "ok": true,
+      "php_fatal": false,
+      "first_review_author": "Андрей, Москва",
+      "archive_card_count": 10,
+      "has_archive_layout": true,
+      "has_slider": false,
+      "source_mode": "OPTIONS"
+    },
+    "/uslugi/": {
+      "status": 200,
+      "ok": true,
+      "php_fatal": false
+    },
+    "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/": {
+      "status": 200,
+      "ok": true,
+      "php_fatal": false
+    },
+    "/kontakty/": {
+      "status": 200,
+      "ok": true,
+      "php_fatal": false
+    }
+  },
+  "all_routes_200": true,
+  "home_first_author": "Андрей, Москва",
+  "otzyvy_first_author": "Андрей, Москва",
+  "source_mode": "OPTIONS",
+  "result": "PASS"
+}
