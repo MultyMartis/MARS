@@ -1,0 +1,17 @@
+{
+    "phase": "V9-06D9-K",
+    "generated_at": "2026-07-05T14:56:28+00:00",
+    "checkpoint_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d9k-controlled-media-upload-pre-20260705-145628",
+    "dump_created": true,
+    "dump_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d9k-controlled-media-upload-pre-20260705-145628/mars_wp_fp0002.sql",
+    "dump_sha256": "a668523f887f562648a19efd3d1279fdbec7f17c255b11231db55f3e9edfbc24",
+    "pre_media_values_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d9k-controlled-media-upload-pre-20260705-145628/home-page-4-pre-media-values.json",
+    "attachment_inventory_before_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d9k-controlled-media-upload-pre-20260705-145628/attachment-inventory-before.json",
+    "uploads_inventory_before_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d9k-controlled-media-upload-pre-20260705-145628/uploads-inventory-before.json",
+    "restore_instructions": {
+        "full": "mysql -u root mars_wp_fp0002 < X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d9k-controlled-media-upload-pre-20260705-145628/mars_wp_fp0002.sql",
+        "media_fields": "Restore home-page-4-pre-media-values.json via update_field",
+        "attachments": "Delete attachment IDs listed in D9-K attachment-manifest if rolling back uploads only"
+    },
+    "result": "PASS"
+}

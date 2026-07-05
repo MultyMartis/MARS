@@ -1,0 +1,85 @@
+{
+    "phase": "V9-06D9-K",
+    "generated_at": "2026-07-05T14:56:28+00:00",
+    "checks": [
+        {
+            "check": "runtime_http_200",
+            "result": "PASS",
+            "notes": "Verified via curl/fetch"
+        },
+        {
+            "check": "db_connection",
+            "result": "PASS",
+            "notes": "mars_wp_fp0002 / fp02_"
+        },
+        {
+            "check": "active_theme_shpigovsky",
+            "result": "PASS",
+            "notes": "shpigovsky"
+        },
+        {
+            "check": "acf_pro_active",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "home_page_4",
+            "result": "PASS",
+            "notes": "ID 4"
+        },
+        {
+            "check": "target_field_home_hero_slides",
+            "result": "PASS",
+            "notes": "field_fp02_home_hero_image"
+        },
+        {
+            "check": "target_field_home_gallery_media",
+            "result": "PASS",
+            "notes": "field_fp02_home_gallery_item_media"
+        },
+        {
+            "check": "uploads_directory_writable",
+            "result": "PASS",
+            "notes": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky/wp-content/uploads"
+        },
+        {
+            "check": "approved_source_files",
+            "result": "PASS",
+            "notes": "5 files from D9-J plan"
+        },
+        {
+            "check": "attachment_count_before",
+            "result": "PASS",
+            "notes": "0"
+        }
+    ],
+    "source_files": [
+        {
+            "file": "hero-main.png",
+            "exists": true,
+            "sha256": "48cba0b7509915e3e2cedb1c5239ff594b9070a5908fc937e345c8517af0bea1"
+        },
+        {
+            "file": "shpigovsky-gallery-01.webp",
+            "exists": true,
+            "sha256": "3b6eaf560c61f249f615be7259a5776bf717f0e769a01051395205ecc54d0fd9"
+        },
+        {
+            "file": "shpigovsky-gallery-02.webp",
+            "exists": true,
+            "sha256": "d557fffb4b664cd8f12b3cc2b6f155aadb99b23deb854425859e3db6cf2d8dbd"
+        },
+        {
+            "file": "shpigovsky-gallery-03.webp",
+            "exists": true,
+            "sha256": "8e51123323eb462c53c0ca971e2140e9b9c60a697b2f0c2f839e1c1329c8eaa4"
+        },
+        {
+            "file": "shpigovsky-gallery-04.webp",
+            "exists": true,
+            "sha256": "92b2ece90e16ad0a156bc4032babf7eda3c087d0088c180effe8be901665814c"
+        }
+    ],
+    "attachment_count_before": 0,
+    "result": "PASS"
+}

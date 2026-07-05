@@ -1,0 +1,39 @@
+{
+    "phase": "V9-06D9-K",
+    "generated_at": "2026-07-05T14:56:28+00:00",
+    "page_id": 4,
+    "attachment_count": 0,
+    "home_hero_slides": {
+        "row_count": 1,
+        "rows": [
+            {
+                "index": 0,
+                "title": "Шпиговский дом",
+                "text": "Центр профилактики и лечения зависимостей",
+                "image": {
+                    "empty": true,
+                    "attachment_id": null,
+                    "url": "",
+                    "alt": ""
+                }
+            }
+        ]
+    },
+    "home_gallery_media": {
+        "row_count": 0,
+        "rows": []
+    },
+    "frontend": {
+        "http_status": 200,
+        "hero_image_url": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/img/hero/hero-main.png",
+        "gallery_image_urls": [
+            "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/img/content/gallery/shpigovsky-gallery-01.webp",
+            "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/img/content/gallery/shpigovsky-gallery-02.webp",
+            "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/img/content/gallery/shpigovsky-gallery-03.webp",
+            "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/img/content/gallery/shpigovsky-gallery-04.webp"
+        ],
+        "gallery_count": 4,
+        "uses_theme_fallback_hero": true,
+        "uses_theme_fallback_gallery": true
+    }
+}

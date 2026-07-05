@@ -1,0 +1,95 @@
+{
+    "phase": "V9-06D9-K",
+    "generated_at": "2026-07-05T14:56:36+00:00",
+    "attachment_count_after": 5,
+    "created_attachment_ids": [
+        89,
+        90,
+        91,
+        92,
+        93
+    ],
+    "home_hero_slides_after": {
+        "row_count": 1,
+        "rows": [
+            {
+                "index": 0,
+                "title": "Шпиговский дом",
+                "text": "Центр профилактики и лечения зависимостей",
+                "image": {
+                    "empty": false,
+                    "attachment_id": 89,
+                    "url": "http://shpigovsky.test/wp-content/uploads/2026/07/hero-main.png",
+                    "alt": "Шпиговский дом — центр профилактики и лечения зависимостей"
+                }
+            }
+        ]
+    },
+    "home_gallery_media_after": {
+        "row_count": 4,
+        "rows": [
+            {
+                "index": 0,
+                "title": "Лечение зависимости от алкоголя",
+                "text": "",
+                "media": {
+                    "empty": false,
+                    "attachment_id": 90,
+                    "url": "http://shpigovsky.test/wp-content/uploads/2026/07/shpigovsky-gallery-01.webp",
+                    "alt": "Лечение зависимости от алкоголя"
+                }
+            },
+            {
+                "index": 1,
+                "title": "Лудомания лечение зависимости",
+                "text": "",
+                "media": {
+                    "empty": false,
+                    "attachment_id": 91,
+                    "url": "http://shpigovsky.test/wp-content/uploads/2026/07/shpigovsky-gallery-02.webp",
+                    "alt": "Лудомания лечение зависимости"
+                }
+            },
+            {
+                "index": 2,
+                "title": "Лечение подростковой зависимости",
+                "text": "",
+                "media": {
+                    "empty": false,
+                    "attachment_id": 92,
+                    "url": "http://shpigovsky.test/wp-content/uploads/2026/07/shpigovsky-gallery-03.webp",
+                    "alt": "Лечение подростковой зависимости"
+                }
+            },
+            {
+                "index": 3,
+                "title": "Зависимость от постоянных покупок",
+                "text": "",
+                "media": {
+                    "empty": false,
+                    "attachment_id": 93,
+                    "url": "http://shpigovsky.test/wp-content/uploads/2026/07/shpigovsky-gallery-04.webp",
+                    "alt": "Зависимость от постоянных покупок"
+                }
+            }
+        ]
+    },
+    "frontend_after": {
+        "http_status": 200,
+        "hero_image_url": "http://shpigovsky.test/wp-content/uploads/2026/07/hero-main.png",
+        "gallery_image_urls": [
+            "http://shpigovsky.test/wp-content/uploads/2026/07/shpigovsky-gallery-01.webp",
+            "http://shpigovsky.test/wp-content/uploads/2026/07/shpigovsky-gallery-02.webp",
+            "http://shpigovsky.test/wp-content/uploads/2026/07/shpigovsky-gallery-03.webp",
+            "http://shpigovsky.test/wp-content/uploads/2026/07/shpigovsky-gallery-04.webp"
+        ],
+        "gallery_count": 4,
+        "uses_theme_fallback_hero": false,
+        "uses_theme_fallback_gallery": false
+    },
+    "baseline_attachment_count": 0,
+    "only_approved_fields_changed": true,
+    "options_unchanged": true,
+    "services_unchanged": true,
+    "result": "PASS"
+}

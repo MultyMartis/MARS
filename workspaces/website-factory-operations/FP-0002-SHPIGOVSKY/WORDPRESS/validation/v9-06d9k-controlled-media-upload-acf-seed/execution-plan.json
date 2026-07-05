@@ -1,0 +1,107 @@
+{
+    "phase": "V9-06D9-K",
+    "generated_at": "2026-07-05T14:56:28+00:00",
+    "approved_file_count": 5,
+    "files": [
+        {
+            "key": "hero",
+            "source_path": "X:/AI MARS/workspaces/fp-0002-shpigovsky-v9/src/img/hero/hero-main.png",
+            "target_filename": "hero-main.png",
+            "title": "Шпиговский дом — центр профилактики и лечения зависимостей",
+            "alt_text": "Шпиговский дом — центр профилактики и лечения зависимостей",
+            "caption": "",
+            "description": "Home hero — seeded from static V9 authority",
+            "target_acf_field": "home_hero_slides[0].image",
+            "target_object_id": 4,
+            "expected_visual_impact": "SHOULD_MATCH_CURRENT_FALLBACK",
+            "source_checksum": "48cba0b7509915e3e2cedb1c5239ff594b9070a5908fc937e345c8517af0bea1",
+            "source_dimensions": {
+                "width": 2230,
+                "height": 1246
+            },
+            "source_size_bytes": 3809988
+        },
+        {
+            "key": "gallery-01",
+            "source_path": "X:/AI MARS/workspaces/fp-0002-shpigovsky-v9/src/img/content/gallery/shpigovsky-gallery-01.webp",
+            "target_filename": "shpigovsky-gallery-01.webp",
+            "title": "Лечение зависимости от алкоголя",
+            "alt_text": "Лечение зависимости от алкоголя",
+            "caption": "",
+            "description": "Home gallery — seeded from static V9 authority",
+            "target_acf_field": "home_gallery_media[0].media",
+            "target_object_id": 4,
+            "gallery_row_title": "Лечение зависимости от алкоголя",
+            "expected_visual_impact": "SHOULD_MATCH_CURRENT_FALLBACK",
+            "source_checksum": "3b6eaf560c61f249f615be7259a5776bf717f0e769a01051395205ecc54d0fd9",
+            "source_dimensions": {
+                "width": 621,
+                "height": 938
+            },
+            "source_size_bytes": 31788
+        },
+        {
+            "key": "gallery-02",
+            "source_path": "X:/AI MARS/workspaces/fp-0002-shpigovsky-v9/src/img/content/gallery/shpigovsky-gallery-02.webp",
+            "target_filename": "shpigovsky-gallery-02.webp",
+            "title": "Лудомания лечение зависимости",
+            "alt_text": "Лудомания лечение зависимости",
+            "caption": "",
+            "description": "Home gallery — seeded from static V9 authority",
+            "target_acf_field": "home_gallery_media[1].media",
+            "target_object_id": 4,
+            "gallery_row_title": "Лудомания лечение зависимости",
+            "expected_visual_impact": "SHOULD_MATCH_CURRENT_FALLBACK",
+            "source_checksum": "d557fffb4b664cd8f12b3cc2b6f155aadb99b23deb854425859e3db6cf2d8dbd",
+            "source_dimensions": {
+                "width": 1113,
+                "height": 738
+            },
+            "source_size_bytes": 39370
+        },
+        {
+            "key": "gallery-03",
+            "source_path": "X:/AI MARS/workspaces/fp-0002-shpigovsky-v9/src/img/content/gallery/shpigovsky-gallery-03.webp",
+            "target_filename": "shpigovsky-gallery-03.webp",
+            "title": "Лечение подростковой зависимости",
+            "alt_text": "Лечение подростковой зависимости",
+            "caption": "",
+            "description": "Home gallery — seeded from static V9 authority",
+            "target_acf_field": "home_gallery_media[2].media",
+            "target_object_id": 4,
+            "gallery_row_title": "Лечение подростковой зависимости",
+            "expected_visual_impact": "SHOULD_MATCH_CURRENT_FALLBACK",
+            "source_checksum": "8e51123323eb462c53c0ca971e2140e9b9c60a697b2f0c2f839e1c1329c8eaa4",
+            "source_dimensions": {
+                "width": 1171,
+                "height": 864
+            },
+            "source_size_bytes": 37520
+        },
+        {
+            "key": "gallery-04",
+            "source_path": "X:/AI MARS/workspaces/fp-0002-shpigovsky-v9/src/img/content/gallery/shpigovsky-gallery-04.webp",
+            "target_filename": "shpigovsky-gallery-04.webp",
+            "title": "Зависимость от постоянных покупок",
+            "alt_text": "Зависимость от постоянных покупок",
+            "caption": "",
+            "description": "Home gallery — seeded from static V9 authority",
+            "target_acf_field": "home_gallery_media[3].media",
+            "target_object_id": 4,
+            "gallery_row_title": "Зависимость от постоянных покупок",
+            "expected_visual_impact": "SHOULD_MATCH_CURRENT_FALLBACK",
+            "source_checksum": "92b2ece90e16ad0a156bc4032babf7eda3c087d0088c180effe8be901665814c",
+            "source_dimensions": {
+                "width": 1296,
+                "height": 921
+            },
+            "source_size_bytes": 157850
+        }
+    ],
+    "acf_seed_targets": [
+        "home_hero_slides[0].image",
+        "home_gallery_media"
+    ],
+    "includes_non_approved_fields": false,
+    "result": "PASS"
+}

@@ -1,0 +1,100 @@
+{
+    "phase": "V9-06D9-K",
+    "generated_at": "2026-07-05T14:56:28+00:00",
+    "checks": [
+        {
+            "check": "five_source_files_exist",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "upload_target_writable",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "home_page_4_only",
+            "result": "PASS",
+            "notes": "All ACF targets post_id=4"
+        },
+        {
+            "check": "hero_preserves_slide_text",
+            "result": "PASS",
+            "notes": "Seed merges image into existing row 0"
+        },
+        {
+            "check": "gallery_four_rows",
+            "result": "PASS",
+            "notes": "home_gallery_media receives 4 repeater rows"
+        },
+        {
+            "check": "no_options_writes",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "no_source_schema_changes",
+            "result": "PASS",
+            "notes": ""
+        }
+    ],
+    "files": [
+        {
+            "file": "hero-main.png",
+            "source_exists": true,
+            "checksum": "48cba0b7509915e3e2cedb1c5239ff594b9070a5908fc937e345c8517af0bea1",
+            "uploads_writable": true,
+            "filename_conflict": false,
+            "conflict_handling": "none",
+            "target_acf_field": "home_hero_slides[0].image",
+            "target_object_id": 4,
+            "result": "PASS"
+        },
+        {
+            "file": "shpigovsky-gallery-01.webp",
+            "source_exists": true,
+            "checksum": "3b6eaf560c61f249f615be7259a5776bf717f0e769a01051395205ecc54d0fd9",
+            "uploads_writable": true,
+            "filename_conflict": false,
+            "conflict_handling": "none",
+            "target_acf_field": "home_gallery_media[0].media",
+            "target_object_id": 4,
+            "result": "PASS"
+        },
+        {
+            "file": "shpigovsky-gallery-02.webp",
+            "source_exists": true,
+            "checksum": "d557fffb4b664cd8f12b3cc2b6f155aadb99b23deb854425859e3db6cf2d8dbd",
+            "uploads_writable": true,
+            "filename_conflict": false,
+            "conflict_handling": "none",
+            "target_acf_field": "home_gallery_media[1].media",
+            "target_object_id": 4,
+            "result": "PASS"
+        },
+        {
+            "file": "shpigovsky-gallery-03.webp",
+            "source_exists": true,
+            "checksum": "8e51123323eb462c53c0ca971e2140e9b9c60a697b2f0c2f839e1c1329c8eaa4",
+            "uploads_writable": true,
+            "filename_conflict": false,
+            "conflict_handling": "none",
+            "target_acf_field": "home_gallery_media[2].media",
+            "target_object_id": 4,
+            "result": "PASS"
+        },
+        {
+            "file": "shpigovsky-gallery-04.webp",
+            "source_exists": true,
+            "checksum": "92b2ece90e16ad0a156bc4032babf7eda3c087d0088c180effe8be901665814c",
+            "uploads_writable": true,
+            "filename_conflict": false,
+            "conflict_handling": "none",
+            "target_acf_field": "home_gallery_media[3].media",
+            "target_object_id": 4,
+            "result": "PASS"
+        }
+    ],
+    "verdict": "SAFE_TO_APPLY",
+    "result": "PASS"
+}

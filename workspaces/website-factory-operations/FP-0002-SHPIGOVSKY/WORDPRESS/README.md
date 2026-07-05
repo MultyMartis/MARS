@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D9-J MEDIA SELECTION UPLOAD PLAN PASS — NEXT: D9-K controlled media upload + ACF seed
+**Status:** V9-06D9-K CONTROLLED MEDIA UPLOAD + ACF SEED PASS — NEXT: D9-L operator media review
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---
@@ -238,3 +238,7 @@ D9-F **PARTIAL PASS**: Read-only QA after D9-D/D9-E. Home 19/19 sections + order
 ## V9-06D9-G FAQ micro visual repair (2026-07-05)
 
 D9-G **PASS**: Fixed FAQ heading/id/aria transplant typo in `template-parts/home/faq.php` (`comfort-heading` → `faq-heading`; heading text → Нас часто спрашивают); resolved duplicate `comfort-heading` id. Bounded runtime delivery (1 file). No DB/ACF/options/menu writes. Post-repair Home + route smoke ALL PASS. ACF editability readiness: READY. Evidence: `validation/v9-06d9g-micro-visual-repair-faq-heading/`. Report: `reports/FP-0002-V9-06D9G-FAQ-MICRO-VISUAL-REPAIR-REPORT-v1.md`. Next: **CREATE_V9_06D9H_ACF_ADMIN_EDITABILITY_WIRING_TASK**.
+
+## V9-06D9-K controlled media upload + ACF seed (2026-07-05)
+
+D9-K **PASS**: 5 Home media uploads + ACF seed on page #4 (hero image + 4 gallery rows). Attachments 89–93; DB checkpoint PASS; visual regression PASS; routes ALL_200. No source/theme/ACF JSON writes. Evidence: `validation/v9-06d9k-controlled-media-upload-acf-seed/`. Report: `reports/FP-0002-V9-06D9K-CONTROLLED-MEDIA-UPLOAD-ACF-SEED-REPORT-v1.md`. Next: D9-L operator media review.

@@ -1,0 +1,56 @@
+{
+    "phase": "V9-06D9-K",
+    "generated_at": "2026-07-05T14:56:35+00:00",
+    "fields": [
+        {
+            "field": "home_hero_slides[0].image",
+            "result": "PASS",
+            "old_state": {
+                "row_count": 1,
+                "rows": [
+                    {
+                        "index": 0,
+                        "title": "Шпиговский дом",
+                        "text": "Центр профилактики и лечения зависимостей",
+                        "image": {
+                            "empty": true,
+                            "attachment_id": null,
+                            "url": "",
+                            "alt": ""
+                        }
+                    }
+                ]
+            },
+            "new_attachment_id": 89,
+            "readback_attachment_id": 89,
+            "slide_title_preserved": true,
+            "slide_text_preserved": true,
+            "update_field_return": false
+        },
+        {
+            "field": "home_gallery_media",
+            "result": "PASS",
+            "old_state": {
+                "row_count": 0,
+                "rows": []
+            },
+            "new_attachment_ids": [
+                89,
+                90,
+                91,
+                92,
+                93
+            ],
+            "readback_attachment_ids": [
+                90,
+                91,
+                92,
+                93
+            ],
+            "row_count": 4,
+            "update_field_return": 727
+        }
+    ],
+    "acf_value_writes": 2,
+    "result": "PASS"
+}
