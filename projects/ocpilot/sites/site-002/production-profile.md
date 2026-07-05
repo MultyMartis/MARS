@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-06 (Run 4.177 — catalog sort menu order)
+**Last updated:** 2026-07-06 (Run 4.178 — parallel MARS 1C cron wrapper)
 
 ---
 
@@ -69,7 +69,8 @@ Do not claim that Production exactly matches TEST unless evidence proves it.
 | Current M9.x baselines | [baselines/](baselines/) — TEST-proven checkpoints |
 | Post-corporate-page checkpoints | Home Commercial Trust · Corporate Intro · Custom Proof Strip · Delivery Summary · PDP Body Category Classes |
 | Production baseline parent | [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| Current Production checkpoint | [baselines/SITE-002-STABLE-PROD-SORT-AZ-01.md](baselines/SITE-002-STABLE-PROD-SORT-AZ-01.md) |
+| Current Production checkpoint | [baselines/SITE-002-STABLE-PROD-CRON-WRAPPER-01.md](baselines/SITE-002-STABLE-PROD-CRON-WRAPPER-01.md) |
+| MARS 1C cron wrapper | **PREPARED** — `/storage/mars-tools/cron/` + HTTP gateway; Sergey legacy import **preserved**; Beget cron **not activated** (Run 4.178) |
 | Catalog default sort (Production) | `pd.name ASC` when `sort`/`order` omitted |
 
 ---

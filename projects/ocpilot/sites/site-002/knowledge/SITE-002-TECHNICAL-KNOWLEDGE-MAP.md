@@ -11,11 +11,12 @@
 | **Production profile** | [../production-profile.md](../production-profile.md) |
 | **Production storage root** | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\` |
 | **Production baseline** | Parent baseline `SITE-002-STABLE-PROD-INITIAL-01` · [../baselines/SITE-002-STABLE-PROD-INITIAL-01.md](../baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| **Current Production checkpoint** | **ISSUED** — `SITE-002-STABLE-PROD-SORT-AZ-01` · [../baselines/SITE-002-STABLE-PROD-SORT-AZ-01.md](../baselines/SITE-002-STABLE-PROD-SORT-AZ-01.md) |
+| **Current Production checkpoint** | **ISSUED** — `SITE-002-STABLE-PROD-CRON-WRAPPER-01` · [../baselines/SITE-002-STABLE-PROD-CRON-WRAPPER-01.md](../baselines/SITE-002-STABLE-PROD-CRON-WRAPPER-01.md) |
 | **Production parity with TEST checkpoints** | **VERIFIED** — file + HTTP evidence (Run 4.171-R1) |
 | **First controlled Production change** | **COMPLETE** — Run 4.173; single-file text-only FTP deploy |
 | **Catalog default sort (Production)** | **COMPLETE** — Run 4.176; default `pd.name ASC` in `category.php` |
 | **Catalog sort menu (Production)** | **COMPLETE** — Run 4.177; menu order in `category.twig`; «Умолчанию» removed |
+| **MARS 1C cron wrapper (Production)** | **PREPARED** — Run 4.178; parallel `mars-tools` wrapper; Sergey legacy preserved; Beget cron **not activated** |
 
 **TEST-derived knowledge classification:** Implementation evidence and reusable technical knowledge. **Not** automatic proof of current Production parity.
 
@@ -107,6 +108,27 @@ single-Twig-file FTP deploy with backup, dry-run, verification, rollback readine
 ```
 
 Does not prove multi-file frontend deploy, CSS/JS deploy, cache clearing, or database operations.
+
+### Parallel MARS 1C cron wrapper (Run 4.178 — 2026-07-06)
+
+| Field | Value |
+|-------|-------|
+| Operation | `SITE-002-PROD-CRON-WRAPPER-01` |
+| Status | **PREPARED — CRON ACTIVATION PENDING** |
+| Remote files | `/storage/mars-tools/cron/mars_1c_import_wrapper.php` · `/public_html/mars-tools/cron/mars_1c_http_gateway.php` |
+| Legacy Sergey import | **PRESERVED** — `cronjob.php`, `import_1C*.php` untouched |
+| Real import executed | **No** |
+| Beget cron | **Not activated** |
+| Checkpoint | `SITE-002-STABLE-PROD-CRON-WRAPPER-01` |
+| Report | [../reports/SITE-002-PROD-CRON-WRAPPER-01.md](../reports/SITE-002-PROD-CRON-WRAPPER-01.md) |
+
+Proven operational boundary:
+
+```text
+parallel MARS-only wrapper upload under mars-tools — no legacy import mutation
+```
+
+Does not prove Beget cron activation, real 1C import execution, or DB cron table changes.
 
 ---
 
