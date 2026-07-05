@@ -1,0 +1,116 @@
+{
+    "phase": "V9-06D9-I",
+    "generated_at": "2026-07-05T14:12:25+00:00",
+    "checks": [
+        {
+            "check": "all_target_fields_exist",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "home_page_4_only",
+            "result": "PASS",
+            "notes": "All targets post_id=4"
+        },
+        {
+            "check": "no_media_attachment_ids",
+            "result": "PASS",
+            "notes": "Text/repeaters only"
+        },
+        {
+            "check": "no_options_writes",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "expected_write_count",
+            "result": "PASS",
+            "notes": "10"
+        }
+    ],
+    "fields": [
+        {
+            "field": "home_recovery_intro_heading",
+            "exists": true,
+            "home_page_scope": true,
+            "serializable": true,
+            "media_required": false,
+            "result": "PASS"
+        },
+        {
+            "field": "home_recovery_intro_lead_1",
+            "exists": true,
+            "home_page_scope": true,
+            "serializable": true,
+            "media_required": false,
+            "result": "PASS"
+        },
+        {
+            "field": "home_recovery_intro_lead_2",
+            "exists": true,
+            "home_page_scope": true,
+            "serializable": true,
+            "media_required": false,
+            "result": "PASS"
+        },
+        {
+            "field": "home_intro_bands",
+            "exists": true,
+            "home_page_scope": true,
+            "serializable": true,
+            "media_required": false,
+            "result": "PASS"
+        },
+        {
+            "field": "home_specialists_heading",
+            "exists": true,
+            "home_page_scope": true,
+            "serializable": true,
+            "media_required": false,
+            "result": "PASS"
+        },
+        {
+            "field": "home_comfort_heading",
+            "exists": true,
+            "home_page_scope": true,
+            "serializable": true,
+            "media_required": false,
+            "result": "PASS"
+        },
+        {
+            "field": "home_comfort_lead",
+            "exists": true,
+            "home_page_scope": true,
+            "serializable": true,
+            "media_required": false,
+            "result": "PASS"
+        },
+        {
+            "field": "home_reviews_heading",
+            "exists": true,
+            "home_page_scope": true,
+            "serializable": true,
+            "media_required": false,
+            "result": "PASS"
+        },
+        {
+            "field": "home_articles_heading",
+            "exists": true,
+            "home_page_scope": true,
+            "serializable": true,
+            "media_required": false,
+            "result": "PASS"
+        },
+        {
+            "field": "home_faq_heading",
+            "exists": true,
+            "home_page_scope": true,
+            "serializable": true,
+            "media_required": false,
+            "result": "PASS"
+        }
+    ],
+    "expected_write_count": 10,
+    "verdict": "SAFE_TO_APPLY",
+    "result": "PASS"
+}

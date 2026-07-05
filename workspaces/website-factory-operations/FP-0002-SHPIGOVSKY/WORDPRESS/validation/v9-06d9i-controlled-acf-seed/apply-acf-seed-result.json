@@ -1,0 +1,124 @@
+{
+    "phase": "V9-06D9-I",
+    "generated_at": "2026-07-05T14:12:25+00:00",
+    "object_id": 4,
+    "fields_attempted": [
+        "home_recovery_intro_heading",
+        "home_recovery_intro_lead_1",
+        "home_recovery_intro_lead_2",
+        "home_intro_bands",
+        "home_specialists_heading",
+        "home_comfort_heading",
+        "home_comfort_lead",
+        "home_reviews_heading",
+        "home_articles_heading",
+        "home_faq_heading"
+    ],
+    "fields_written": [
+        "home_recovery_intro_heading",
+        "home_recovery_intro_lead_1",
+        "home_recovery_intro_lead_2",
+        "home_intro_bands",
+        "home_specialists_heading",
+        "home_comfort_heading",
+        "home_comfort_lead",
+        "home_reviews_heading",
+        "home_articles_heading",
+        "home_faq_heading"
+    ],
+    "fields_skipped": [
+        "home_hero_slides",
+        "home_advantages",
+        "home_gallery_media",
+        "home_faq_items",
+        "home_cta_title",
+        "home_cta_text",
+        "home_service_nav_items",
+        "home_reviews_teaser",
+        "home_blog_teaser_enabled"
+    ],
+    "field_results": {
+        "home_recovery_intro_heading": {
+            "old_summary": "empty",
+            "new_summary": "Шпиговский дом&nbsp;&mdash; восстановление, построенное вокруг человека",
+            "old_hash": "empty",
+            "new_hash": "f00e8d75d80399a1243d0c71ce941e219a6125636239707bda3692554814e39f",
+            "result": "WRITTEN",
+            "acf_return": 642
+        },
+        "home_recovery_intro_lead_1": {
+            "old_summary": "empty",
+            "new_summary": "Мы&nbsp;убеждены, зависимость невозможно эффективно лечить по&nbsp;шаблону. З...",
+            "old_hash": "empty",
+            "new_hash": "268f0bfccfa6841e59173d610492366989977c5cb0da6217e89a4eba75bf3ef8",
+            "result": "WRITTEN",
+            "acf_return": 644
+        },
+        "home_recovery_intro_lead_2": {
+            "old_summary": "empty",
+            "new_summary": "Поэтому в&nbsp;&laquo;Шпиговском Доме&raquo; мы&nbsp;создаём персонализирован...",
+            "old_hash": "empty",
+            "new_hash": "aed4dfffef3c78f5b2e3a9c192edcf84774851e119c6323feee7c192e9f9fd15",
+            "result": "WRITTEN",
+            "acf_return": 646
+        },
+        "home_intro_bands": {
+            "old_summary": "empty",
+            "new_summary": "array[6]",
+            "old_hash": "empty",
+            "new_hash": "381ef78c325d9c11fb79489290f46c11f072527b7995a502035d0feecb688223",
+            "result": "WRITTEN",
+            "acf_return": 672
+        },
+        "home_specialists_heading": {
+            "old_summary": "empty",
+            "new_summary": "Специалисты центра",
+            "old_hash": "empty",
+            "new_hash": "37641c4d7d6b93172676a3488a1b80449785d1993de0f8ec92ce10f25dbfde98",
+            "result": "WRITTEN",
+            "acf_return": 674
+        },
+        "home_comfort_heading": {
+            "old_summary": "empty",
+            "new_summary": "Комфорт, приватность, забота",
+            "old_hash": "empty",
+            "new_hash": "be64d116986e376c0452f9101f9c34cf4e81d63927967bbf6347ed90b4504c97",
+            "result": "WRITTEN",
+            "acf_return": 676
+        },
+        "home_comfort_lead": {
+            "old_summary": "empty",
+            "new_summary": "Разговор&nbsp;— это уже первый шаг. Мы расскажем, что можем предложить именно...",
+            "old_hash": "empty",
+            "new_hash": "50ca8eb2ba27d65daaa3c5c6c106c28744767e4da258d237237374319f4f29c7",
+            "result": "WRITTEN",
+            "acf_return": 678
+        },
+        "home_reviews_heading": {
+            "old_summary": "empty",
+            "new_summary": "Отзывы",
+            "old_hash": "empty",
+            "new_hash": "a2aea6d0f6dac218af7f783633c2b35a931ec3fe976f8f46b33dc08483401f76",
+            "result": "WRITTEN",
+            "acf_return": 680
+        },
+        "home_articles_heading": {
+            "old_summary": "empty",
+            "new_summary": "Статьи",
+            "old_hash": "empty",
+            "new_hash": "279e6b2bd1dcb491233629e634a46751a8c751312e50ca8ca4436ea902a6c40a",
+            "result": "WRITTEN",
+            "acf_return": 682
+        },
+        "home_faq_heading": {
+            "old_summary": "empty",
+            "new_summary": "Нас часто спрашивают",
+            "old_hash": "empty",
+            "new_hash": "c82800c187d57efaa12730345c212515eacdfa8badf0bb04dff3e19e405d3882",
+            "result": "WRITTEN",
+            "acf_return": 684
+        }
+    },
+    "errors": [],
+    "result": "PASS"
+}

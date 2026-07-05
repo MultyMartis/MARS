@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-05 (V9-06D9-H ACF Admin Editability Wiring PASS)
+**Last updated:** 2026-07-05 (V9-06D9-I Controlled ACF Seed PASS)
 
-**Current WordPress phase:** V9-06D9-H ACF Admin Editability Wiring **PASS** — Home + Footer ACF schema/template wiring with static V9 fallbacks; 9 new Home heading/lead fields; `inc/home-fallbacks.php`; bounded runtime delivery (14 files); no DB/ACF value writes; post-implementation validation PASS (19 sections, FAQ contract, routes ALL_200). Recommended next: **D9-I Controlled ACF Seed**. Report: `WORDPRESS/reports/FP-0002-V9-06D9H-ACF-ADMIN-EDITABILITY-WIRING-REPORT-v1.md`. Prior: D9-G FAQ micro repair, D9-F visual parity QA, D9-E slider repair, D9-D home transplant.
+**Current WordPress phase:** V9-06D9-I Controlled ACF Seed **PASS** — 10 safe Home page #4 ACF fields seeded from static V9 authority; DB checkpoint PASS; no source/theme/ACF JSON changes; post-seed validation PASS (19 sections, FAQ contract, routes ALL_200). Skipped media/deferred fields for D9-J. Recommended next: **D9-J Media Selection Upload Plan**. Report: `WORDPRESS/reports/FP-0002-V9-06D9I-CONTROLLED-ACF-SEED-REPORT-v1.md`. Prior: D9-H ACF wiring, D9-G FAQ repair, D9-D home transplant.
 
 ## Active frontend workspace (V9)
 

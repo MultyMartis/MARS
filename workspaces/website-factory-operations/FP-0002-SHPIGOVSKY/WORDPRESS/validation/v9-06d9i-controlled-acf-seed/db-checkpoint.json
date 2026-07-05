@@ -1,0 +1,15 @@
+{
+    "phase": "V9-06D9-I",
+    "generated_at": "2026-07-05T14:12:25+00:00",
+    "checkpoint_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d9i-controlled-acf-seed-pre-20260705-141225",
+    "dump_created": true,
+    "dump_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d9i-controlled-acf-seed-pre-20260705-141225/mars_wp_fp0002.sql",
+    "dump_sha256": "c1548bdb7d4a1f62c20da194012e84bf1808b372912563780b83f999863c1507",
+    "metadata_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d9i-controlled-acf-seed-pre-20260705-141225/manifest.json",
+    "home_pre_values_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d9i-controlled-acf-seed-pre-20260705-141225/home-page-4-pre-values.json",
+    "restore_instructions": {
+        "full": "mysql -u root mars_wp_fp0002 < X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06d9i-controlled-acf-seed-pre-20260705-141225/mars_wp_fp0002.sql",
+        "field": "Restore from home-page-4-pre-values.json via update_field per field"
+    },
+    "result": "PASS"
+}

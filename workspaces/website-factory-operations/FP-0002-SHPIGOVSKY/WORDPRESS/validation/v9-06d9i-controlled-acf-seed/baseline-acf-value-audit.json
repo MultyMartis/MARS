@@ -1,0 +1,219 @@
+{
+    "phase": "V9-06D9-I",
+    "generated_at": "2026-07-05T14:12:25+00:00",
+    "page_id": 4,
+    "fields": [
+        {
+            "field_name": "home_hero_slides",
+            "field_key": "field_fp02_home_hero_slides",
+            "field_type": "repeater",
+            "current_summary": "array[1]",
+            "empty": false,
+            "fallback_used_on_frontend": false,
+            "seed_eligibility": "SKIP_ALREADY_POPULATED",
+            "write_planned": false,
+            "skip_reason": "Already populated; hero image deferred D9-J; text change would alter MVP tagline"
+        },
+        {
+            "field_name": "home_recovery_intro_heading",
+            "field_key": "field_fp02_home_recovery_intro_heading",
+            "field_type": "text",
+            "current_summary": "empty",
+            "empty": true,
+            "fallback_used_on_frontend": true,
+            "seed_eligibility": "SAFE_TEXT_SEED",
+            "write_planned": true,
+            "skip_reason": ""
+        },
+        {
+            "field_name": "home_recovery_intro_lead_1",
+            "field_key": "field_fp02_home_recovery_intro_lead_1",
+            "field_type": "textarea",
+            "current_summary": "empty",
+            "empty": true,
+            "fallback_used_on_frontend": true,
+            "seed_eligibility": "SAFE_TEXT_SEED",
+            "write_planned": true,
+            "skip_reason": ""
+        },
+        {
+            "field_name": "home_recovery_intro_lead_2",
+            "field_key": "field_fp02_home_recovery_intro_lead_2",
+            "field_type": "textarea",
+            "current_summary": "empty",
+            "empty": true,
+            "fallback_used_on_frontend": true,
+            "seed_eligibility": "SAFE_TEXT_SEED",
+            "write_planned": true,
+            "skip_reason": ""
+        },
+        {
+            "field_name": "home_intro_bands",
+            "field_key": "field_fp02_home_intro_bands",
+            "field_type": "repeater",
+            "current_summary": "empty",
+            "empty": true,
+            "fallback_used_on_frontend": true,
+            "seed_eligibility": "SAFE_REPEATER_SEED",
+            "write_planned": true,
+            "skip_reason": ""
+        },
+        {
+            "field_name": "home_advantages",
+            "field_key": "field_fp02_home_advantages",
+            "field_type": "repeater",
+            "current_summary": "array[6]",
+            "empty": false,
+            "fallback_used_on_frontend": false,
+            "seed_eligibility": "SKIP_ALREADY_POPULATED",
+            "write_planned": false,
+            "skip_reason": "Seeded D8-B; matches visible feature-grid"
+        },
+        {
+            "field_name": "home_gallery_media",
+            "field_key": "field_fp02_home_gallery_media",
+            "field_type": "repeater",
+            "current_summary": "empty",
+            "empty": true,
+            "fallback_used_on_frontend": true,
+            "seed_eligibility": "SKIP_MEDIA_D9J",
+            "write_planned": false,
+            "skip_reason": "Media attachment required; deferred to D9-J"
+        },
+        {
+            "field_name": "home_specialists_heading",
+            "field_key": "field_fp02_home_specialists_heading",
+            "field_type": "text",
+            "current_summary": "empty",
+            "empty": true,
+            "fallback_used_on_frontend": true,
+            "seed_eligibility": "SAFE_TEXT_SEED",
+            "write_planned": true,
+            "skip_reason": ""
+        },
+        {
+            "field_name": "home_comfort_heading",
+            "field_key": "field_fp02_home_comfort_heading",
+            "field_type": "text",
+            "current_summary": "empty",
+            "empty": true,
+            "fallback_used_on_frontend": true,
+            "seed_eligibility": "SAFE_TEXT_SEED",
+            "write_planned": true,
+            "skip_reason": ""
+        },
+        {
+            "field_name": "home_comfort_lead",
+            "field_key": "field_fp02_home_comfort_lead",
+            "field_type": "textarea",
+            "current_summary": "empty",
+            "empty": true,
+            "fallback_used_on_frontend": true,
+            "seed_eligibility": "SAFE_TEXT_SEED",
+            "write_planned": true,
+            "skip_reason": ""
+        },
+        {
+            "field_name": "home_reviews_heading",
+            "field_key": "field_fp02_home_reviews_heading",
+            "field_type": "text",
+            "current_summary": "empty",
+            "empty": true,
+            "fallback_used_on_frontend": true,
+            "seed_eligibility": "SAFE_TEXT_SEED",
+            "write_planned": true,
+            "skip_reason": ""
+        },
+        {
+            "field_name": "home_articles_heading",
+            "field_key": "field_fp02_home_articles_heading",
+            "field_type": "text",
+            "current_summary": "empty",
+            "empty": true,
+            "fallback_used_on_frontend": true,
+            "seed_eligibility": "SAFE_TEXT_SEED",
+            "write_planned": true,
+            "skip_reason": ""
+        },
+        {
+            "field_name": "home_faq_heading",
+            "field_key": "field_fp02_home_faq_heading",
+            "field_type": "text",
+            "current_summary": "empty",
+            "empty": true,
+            "fallback_used_on_frontend": true,
+            "seed_eligibility": "SAFE_TEXT_SEED",
+            "write_planned": true,
+            "skip_reason": ""
+        },
+        {
+            "field_name": "home_faq_items",
+            "field_key": "field_fp02_home_faq_items",
+            "field_type": "repeater",
+            "current_summary": "array[5]",
+            "empty": false,
+            "fallback_used_on_frontend": false,
+            "seed_eligibility": "SKIP_ALREADY_POPULATED",
+            "write_planned": false,
+            "skip_reason": "Seeded D8-B with 5 items; full V9 fallback has 10 — expansion would change visual"
+        },
+        {
+            "field_name": "home_cta_title",
+            "field_key": "field_fp02_home_cta_title",
+            "field_type": "text",
+            "current_summary": "Остались вопросы?",
+            "empty": false,
+            "fallback_used_on_frontend": false,
+            "seed_eligibility": "SKIP_ALREADY_POPULATED",
+            "write_planned": false,
+            "skip_reason": "Already seeded; matches V9 final-form"
+        },
+        {
+            "field_name": "home_cta_text",
+            "field_key": "field_fp02_home_cta_text",
+            "field_type": "textarea",
+            "current_summary": "Опишите вашу ситуацию в форме заявки, и мы расскажем, как сможем помочь",
+            "empty": false,
+            "fallback_used_on_frontend": false,
+            "seed_eligibility": "SKIP_ALREADY_POPULATED",
+            "write_planned": false,
+            "skip_reason": "Already seeded; matches V9 final-form"
+        },
+        {
+            "field_name": "home_service_nav_items",
+            "field_key": "field_fp02_home_service_nav_items",
+            "field_type": "repeater",
+            "current_summary": "array[3]",
+            "empty": false,
+            "fallback_used_on_frontend": false,
+            "seed_eligibility": "SKIP_OPERATOR_DATA",
+            "write_planned": false,
+            "skip_reason": "Service CPT accordion primary; operator/deferred"
+        },
+        {
+            "field_name": "home_reviews_teaser",
+            "field_key": "field_fp02_home_reviews_teaser",
+            "field_type": "repeater",
+            "current_summary": "empty",
+            "empty": true,
+            "fallback_used_on_frontend": true,
+            "seed_eligibility": "SKIP_PRODUCTION_REVIEW",
+            "write_planned": false,
+            "skip_reason": "Production-review content; deferred"
+        },
+        {
+            "field_name": "home_blog_teaser_enabled",
+            "field_key": "field_fp02_home_blog_teaser_enabled",
+            "field_type": "true_false",
+            "current_summary": "empty",
+            "empty": true,
+            "fallback_used_on_frontend": true,
+            "seed_eligibility": "SKIP_UNCLEAR",
+            "write_planned": false,
+            "skip_reason": "No published posts; enabling would not improve MVP"
+        }
+    ],
+    "writable_count": 10,
+    "skipped_count": 9,
+    "result": "PASS"
+}

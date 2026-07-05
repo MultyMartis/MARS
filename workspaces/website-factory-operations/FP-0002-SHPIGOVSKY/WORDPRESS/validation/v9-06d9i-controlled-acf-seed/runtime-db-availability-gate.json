@@ -1,0 +1,139 @@
+{
+    "phase": "V9-06D9-I",
+    "generated_at": "2026-07-05T14:12:25+00:00",
+    "checks": [
+        {
+            "check": "runtime_http_200",
+            "result": "PASS",
+            "notes": "HTTP 200"
+        },
+        {
+            "check": "db_connection",
+            "result": "PASS",
+            "notes": "mars_wp_fp0002"
+        },
+        {
+            "check": "theme_shpigovsky",
+            "result": "PASS",
+            "notes": "shpigovsky"
+        },
+        {
+            "check": "acf_pro_active",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "home_page_4",
+            "result": "PASS",
+            "notes": "ID 4"
+        },
+        {
+            "check": "d9h_field_group",
+            "result": "PASS",
+            "notes": "group_fp02_page_home"
+        },
+        {
+            "check": "target_fields",
+            "result": "PASS",
+            "notes": "19 fields"
+        }
+    ],
+    "field_checks": [
+        {
+            "field": "home_hero_slides",
+            "registered": true,
+            "result": "PASS"
+        },
+        {
+            "field": "home_recovery_intro_heading",
+            "registered": true,
+            "result": "PASS"
+        },
+        {
+            "field": "home_recovery_intro_lead_1",
+            "registered": true,
+            "result": "PASS"
+        },
+        {
+            "field": "home_recovery_intro_lead_2",
+            "registered": true,
+            "result": "PASS"
+        },
+        {
+            "field": "home_intro_bands",
+            "registered": true,
+            "result": "PASS"
+        },
+        {
+            "field": "home_advantages",
+            "registered": true,
+            "result": "PASS"
+        },
+        {
+            "field": "home_gallery_media",
+            "registered": true,
+            "result": "PASS"
+        },
+        {
+            "field": "home_specialists_heading",
+            "registered": true,
+            "result": "PASS"
+        },
+        {
+            "field": "home_comfort_heading",
+            "registered": true,
+            "result": "PASS"
+        },
+        {
+            "field": "home_comfort_lead",
+            "registered": true,
+            "result": "PASS"
+        },
+        {
+            "field": "home_reviews_heading",
+            "registered": true,
+            "result": "PASS"
+        },
+        {
+            "field": "home_articles_heading",
+            "registered": true,
+            "result": "PASS"
+        },
+        {
+            "field": "home_faq_heading",
+            "registered": true,
+            "result": "PASS"
+        },
+        {
+            "field": "home_faq_items",
+            "registered": true,
+            "result": "PASS"
+        },
+        {
+            "field": "home_cta_title",
+            "registered": true,
+            "result": "PASS"
+        },
+        {
+            "field": "home_cta_text",
+            "registered": true,
+            "result": "PASS"
+        },
+        {
+            "field": "home_service_nav_items",
+            "registered": true,
+            "result": "PASS"
+        },
+        {
+            "field": "home_reviews_teaser",
+            "registered": true,
+            "result": "PASS"
+        },
+        {
+            "field": "home_blog_teaser_enabled",
+            "registered": true,
+            "result": "PASS"
+        }
+    ],
+    "result": "PASS"
+}

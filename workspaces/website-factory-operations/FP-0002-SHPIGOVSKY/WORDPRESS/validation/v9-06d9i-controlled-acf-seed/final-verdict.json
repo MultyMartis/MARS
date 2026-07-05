@@ -1,0 +1,15 @@
+{
+  "task": "V9-06D9-I",
+  "generated_at": "2026-07-05T14:13:39.380Z",
+  "verdict": "PASS",
+  "preflight_head_gate": "PARTIAL",
+  "preflight_note": "Local HEAD 94678d27 is 1 commit ahead of required D9-H HEAD b58225fc (governance-only .cursorrules/AGENTS.md); remote matches required HEAD; D9-H runtime base unchanged.",
+  "seeded_field_count": 10,
+  "skipped_field_count": 9,
+  "db_checkpoint": "PASS",
+  "home_visual_regression": "PASS",
+  "admin_editability": "PASS",
+  "route_smoke": "ALL_200",
+  "no_scope_drift": "PASS",
+  "recommended_next": "CREATE_V9_06D9J_MEDIA_SELECTION_UPLOAD_PLAN_TASK"
+}

@@ -215,3 +215,7 @@ D9-G **PASS**: Repaired FAQ heading contract in `template-parts/home/faq.php` â€
 ## V9-06D9-H ACF admin editability wiring (2026-07-05)
 
 D9-H **PASS**: Wired Home + Footer ACF schema and templates over D9-G static V9 transplant. Added 9 heading/lead fields to `group_fp02_page_home`; created `inc/home-fallbacks.php`; wired hero, recovery-intro, FAQ, gallery, feature-grid, section headings, final-form, footer CTA labels. Bounded runtime delivery: 14 files (13 theme + 1 ACF JSON). No DB/ACF value/options/menu writes. Post-implementation: 19/19 sections, FAQ contract, hero CTA, sliders/dots, routes ALL_200. Evidence: `validation/v9-06d9h-acf-admin-editability-wiring/`. Report: `reports/FP-0002-V9-06D9H-ACF-ADMIN-EDITABILITY-WIRING-REPORT-v1.md`. Next: D9-I controlled ACF seed.
+
+## V9-06D9-I controlled ACF seed (2026-07-05)
+
+D9-I **PASS**: Seeded 10 safe Home page #4 ACF fields from static V9 authority (`inc/home-fallbacks.php` + D9-H template fallbacks). DB checkpoint before writes. No source/theme/ACF JSON/options/menu changes; no media uploads. Post-seed: 19/19 sections, FAQ contract, hero CTA, routes ALL_200; admin fields populated for recovery intro, intro bands, section headings. Skipped: hero image, gallery media (D9-J), FAQ expansion (5 items D8-B), already-populated D8-B fields. Preflight strict HEAD gate PARTIAL (local +1 governance commit; remote at D9-H HEAD). Evidence: `validation/v9-06d9i-controlled-acf-seed/`. Report: `reports/FP-0002-V9-06D9I-CONTROLLED-ACF-SEED-REPORT-v1.md`. Next: D9-J media selection upload plan.
