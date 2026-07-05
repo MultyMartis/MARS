@@ -1,0 +1,50 @@
+{
+  "task": "V9-06D9-A",
+  "static": {
+    "found": true,
+    "selector": "section.hero.hero--home",
+    "hasMediaLayer": true,
+    "hasImage": true,
+    "imageSrc": "/assets/img/hero/hero-main.png",
+    "imageDisplay": "block",
+    "imageVisibility": "visible",
+    "heroMinHeight": "0px",
+    "heroHeight": "620px",
+    "heroPaddingTop": "0px",
+    "heroPaddingBottom": "0px",
+    "heroBackgroundImage": "none",
+    "title": "Шпиговский дом",
+    "tagline": "Центр профилактики и лечения зависимостей",
+    "hasCta": true,
+    "ctaText": "Записаться на консультацию",
+    "rect": {
+      "width": 1425,
+      "height": 620
+    }
+  },
+  "runtime": {
+    "found": true,
+    "selector": "section.hero.hero--home",
+    "hasMediaLayer": false,
+    "hasImage": false,
+    "imageSrc": null,
+    "imageDisplay": null,
+    "imageVisibility": null,
+    "heroMinHeight": "0px",
+    "heroHeight": "620px",
+    "heroPaddingTop": "0px",
+    "heroPaddingBottom": "0px",
+    "heroBackgroundImage": "none",
+    "title": "Шпиговский дом",
+    "tagline": "Центр профилактики и лечения зависимостей",
+    "hasCta": true,
+    "ctaText": "Заказать звонок",
+    "rect": {
+      "width": 1425,
+      "height": 620
+    }
+  },
+  "staticHeroImageUrl": "http://127.0.0.1:9876/assets/img/hero/hero-main.png",
+  "runtimeHeroImagePresent": false,
+  "likelyRootCause": "ACF_IMAGE_NOT_SEEDED"
+}

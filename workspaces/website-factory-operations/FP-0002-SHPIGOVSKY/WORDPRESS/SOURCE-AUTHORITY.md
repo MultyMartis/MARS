@@ -79,6 +79,10 @@ D8-E **COMPLETE (PASS)**: Contacts page #20 ACF only — 3 field writes (`contac
 
 D8-G **COMPLETE (PARTIAL PASS)**: Read-only post-seed QA after D8-A…E. Route matrix ALL_200; ACF integrity PASS; visual smoke 11/11 required screenshots PASS; admin usability PARTIAL (English ACF labels); no-scope-drift PASS. Zero DB/ACF/runtime/source mutations. Local helpers `_runner.py` / `_screenshots.mjs` used but not committed. Strict HEAD gate PASS_WITH_HEAD_NOTE (branch synced; +1 ancestor commit after D8-E). Readiness: **READY_FOR_OPERATOR_VISUAL_REVIEW**. Evidence: `validation/v9-06d8g-post-seed-qa/`. Report: `reports/FP-0002-V9-06D8G-POST-SEED-QA-REPORT-v1.md`. Next: operator visual review; optional D8-F admin UX repair.
 
+## V9-06D9-A visual parity audit (2026-07-05)
+
+D9-A **COMPLETE (FAIL)**: Read-only static V9 dist vs local WP runtime visual parity audit after operator visual review. Home section transfer FAIL (20 static vs 6 runtime sections). Hero parity FAIL (no `hero__media`; ACF image not seeded). Header/nav typography PARTIAL (computed tokens match on shared items; 5 Inter woff2 HTTP 404 at `/assets/fonts/`). Global font/asset parity FAIL. 18 comparable screenshots captured. Zero DB/ACF/runtime/source/theme/plugin/ACF JSON/V9 mutations. Local helper `_audit_runner.mjs` used but not committed. Strict HEAD gate PASS_WITH_HEAD_NOTE (required D8-G HEAD `4a22b701` is ancestor; actual `ed009cbb` +1 commit; branch synced 0/0). Evidence: `validation/v9-06d9a-visual-parity-audit/`. Report: `reports/FP-0002-V9-06D9A-VISUAL-PARITY-AUDIT-REPORT-v1.md`. Next: **CREATE_V9_06D9C_HOME_HERO_PARITY_REPAIR_TASK** (recommended).
+
 ## V9 implementation
 
 V9 frontend HTML/CSS/JS integration is **NOT INCLUDED** in V9-06C. V9 frontend remains under `workspaces/fp-0002-shpigovsky-v9/`.

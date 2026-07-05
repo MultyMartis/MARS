@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-05 (V9-06D8-G Post-Seed QA COMPLETE)
+**Last updated:** 2026-07-05 (V9-06D9-A Visual Parity Audit COMPLETE — FAIL)
 
-**Current WordPress phase:** V9-06D8-G Post-Seed QA **COMPLETE (PARTIAL PASS)** — read-only QA after D8-A…E; route matrix ALL_200; ACF integrity PASS; visual smoke PASS; readiness **READY_FOR_OPERATOR_VISUAL_REVIEW**. Next: operator visual review at `http://shpigovsky.test/`. Report: `WORDPRESS/reports/FP-0002-V9-06D8G-POST-SEED-QA-REPORT-v1.md`.
+**Current WordPress phase:** V9-06D9-A Visual Parity Audit **COMPLETE (FAIL)** — static V9 vs WP runtime parity gap documented; hero/sections/fonts fail; repair required. Recommended next: **D9-C home hero parity repair**. Report: `WORDPRESS/reports/FP-0002-V9-06D9A-VISUAL-PARITY-AUDIT-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

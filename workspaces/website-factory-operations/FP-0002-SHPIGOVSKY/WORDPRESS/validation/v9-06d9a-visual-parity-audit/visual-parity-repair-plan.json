@@ -1,0 +1,100 @@
+{
+  "task": "V9-06D9-A",
+  "recommendedSequence": ["D9-C", "D9-B", "D9-D", "D9-E", "D9-F"],
+  "tasks": [
+    {
+      "id": "D9-B",
+      "title": "Header/Nav Typography + Font/Asset Parity Repair",
+      "objective": "Fix Inter @font-face 404s and align nav chrome with V9 static",
+      "suspectedFiles": [
+        "WORDPRESS/theme/shpigovsky/assets/css/v9-style.css",
+        "WORDPRESS/theme/shpigovsky/inc/assets.php",
+        "WORDPRESS/theme/shpigovsky/template-parts/layout/header.php",
+        "WORDPRESS/theme/shpigovsky/template-parts/navigation/primary-desktop.php"
+      ],
+      "mutationType": "CSS path rewrite (root /assets/ → theme-relative); optional menu structure review",
+      "dbWriteNeeded": false,
+      "sourceRepairNeeded": true,
+      "runtimeDeliveryNeeded": true,
+      "mediaAuthorizationNeeded": false,
+      "risk": "MEDIUM — CSS rebuild/delivery scope must stay bounded",
+      "acceptanceCriteria": "All Inter woff2 requests HTTP 200; nav typography visually matches static on shared items; no font synthesis on Cyrillic body text"
+    },
+    {
+      "id": "D9-C",
+      "title": "Home Hero Markup/Asset Parity Repair",
+      "objective": "Restore photo hero with overlay matching static V9",
+      "suspectedFiles": [
+        "WORDPRESS/theme/shpigovsky/template-parts/home/hero.php",
+        "WORDPRESS/acf-json/group_home.json (read-only reference)",
+        "runtime media library / theme assets/img/hero/"
+      ],
+      "mutationType": "ACF seed home_hero_slides image + MEDIA_UPLOAD hero-main.png; optional static fallback when ACF empty",
+      "dbWriteNeeded": true,
+      "sourceRepairNeeded": "optional fallback in hero.php",
+      "runtimeDeliveryNeeded": true,
+      "mediaAuthorizationNeeded": true,
+      "risk": "LOW-MEDIUM — bounded ACF + media only",
+      "acceptanceCriteria": "hero__media renders; hero-main.png HTTP 200; desktop hero top screenshot parity with static"
+    },
+    {
+      "id": "D9-D",
+      "title": "Home Missing Sections Transfer Repair",
+      "objective": "Port remaining 12 V9 home sections and seed required ACF",
+      "suspectedFiles": [
+        "WORDPRESS/theme/shpigovsky/front-page.php",
+        "WORDPRESS/theme/shpigovsky/template-parts/home/*.php (new partials)",
+        "workspaces/fp-0002-shpigovsky-v9/src/partials/sections/home-*.html"
+      ],
+      "mutationType": "TEMPLATE_HTML_PORT + ACF_SEED + MEDIA_UPLOAD for gallery/reviews/specialists",
+      "dbWriteNeeded": true,
+      "sourceRepairNeeded": true,
+      "runtimeDeliveryNeeded": true,
+      "mediaAuthorizationNeeded": true,
+      "risk": "HIGH — large surface; wave by section priority",
+      "acceptanceCriteria": "Runtime home section count ≥18; gallery and articles render; section order matches V9"
+    },
+    {
+      "id": "D9-E",
+      "title": "Home Visual Density/Spacing/Contrast Repair",
+      "objective": "Fix degraded sections (accordion images, program cards, swiper) and enqueue vendor assets",
+      "suspectedFiles": [
+        "WORDPRESS/theme/shpigovsky/inc/assets.php",
+        "WORDPRESS/theme/shpigovsky/template-parts/home/treatment-prevention.php",
+        "WORDPRESS/theme/shpigovsky/template-parts/home/rehabilitation-program.php"
+      ],
+      "mutationType": "CSS_TOKEN_REPAIR; Swiper/Fancybox enqueue; content/media gap fill",
+      "dbWriteNeeded": "partial",
+      "sourceRepairNeeded": true,
+      "runtimeDeliveryNeeded": true,
+      "mediaAuthorizationNeeded": "partial",
+      "risk": "MEDIUM",
+      "acceptanceCriteria": "Home full-page screenshot byte size and section density within operator tolerance of static"
+    },
+    {
+      "id": "D9-F",
+      "title": "Secondary Page Visual Parity Audit/Repair",
+      "objective": "Extend parity audit to hub/service/contacts after home repair",
+      "suspectedFiles": ["template-parts/services/*", "template-parts/contacts/*"],
+      "mutationType": "AUDIT then targeted repair",
+      "dbWriteNeeded": "TBD",
+      "sourceRepairNeeded": "TBD",
+      "runtimeDeliveryNeeded": true,
+      "mediaAuthorizationNeeded": "TBD",
+      "risk": "MEDIUM",
+      "acceptanceCriteria": "Secondary route screenshots within parity threshold"
+    },
+    {
+      "id": "D8-F",
+      "title": "Admin UX Repair (optional)",
+      "objective": "English ACF labels — deferred until visual parity",
+      "mutationType": "ACF JSON label localization",
+      "dbWriteNeeded": false,
+      "sourceRepairNeeded": true,
+      "runtimeDeliveryNeeded": true,
+      "risk": "LOW",
+      "acceptanceCriteria": "Olga admin usability PASS",
+      "note": "Must not precede D9 visual parity unless operator chooses"
+    }
+  ]
+}

@@ -1,0 +1,765 @@
+{
+  "task": "V9-06D9-A",
+  "staticSectionCount": 20,
+  "runtimeSectionCount": 6,
+  "staticSections": [
+    {
+      "index": 0,
+      "tag": "section",
+      "className": "hero hero--home",
+      "id": null,
+      "ariaLabel": null,
+      "textMarker": "Шпиговский дом",
+      "hasImage": true,
+      "childImgCount": 1
+    },
+    {
+      "index": 1,
+      "tag": "section",
+      "className": "home-recovery-intro",
+      "id": null,
+      "ariaLabel": "home-recovery-intro-heading",
+      "textMarker": "Шпиговский дом — восстановление, построенное вокруг человека",
+      "hasImage": false,
+      "childImgCount": 0
+    },
+    {
+      "index": 2,
+      "tag": "section",
+      "className": "founder-quote founder-quote--variant-b",
+      "id": null,
+      "ariaLabel": "founder-quote-label",
+      "textMarker": "Мы создавали «Шпиговский Дом» как место, где человек может п",
+      "hasImage": true,
+      "childImgCount": 1
+    },
+    {
+      "index": 3,
+      "tag": "section",
+      "className": "home-treatment-prevention",
+      "id": null,
+      "ariaLabel": "home-treatment-prevention-heading",
+      "textMarker": "Лечение и профилактика",
+      "hasImage": true,
+      "childImgCount": 12
+    },
+    {
+      "index": 4,
+      "tag": "section",
+      "className": "home-gallery",
+      "id": null,
+      "ariaLabel": "Фотогалерея центра",
+      "textMarker": "Лечение зависимости от алкоголя\n        \n        \n          ",
+      "hasImage": true,
+      "childImgCount": 4
+    },
+    {
+      "index": 5,
+      "tag": "section",
+      "className": "home-why-us no-top-padding--30",
+      "id": null,
+      "ariaLabel": "home-why-us-heading",
+      "textMarker": "Нас выбирают за мультидисциплинарный подход к лечению",
+      "hasImage": true,
+      "childImgCount": 4
+    },
+    {
+      "index": 6,
+      "tag": "section",
+      "className": "home-staff-photo no-top-padding no-top-padding--30",
+      "id": null,
+      "ariaLabel": "Команда центра",
+      "textMarker": "",
+      "hasImage": true,
+      "childImgCount": 1
+    },
+    {
+      "index": 7,
+      "tag": "section",
+      "className": "home-feature-grid no-top-padding no-top-padding--30",
+      "id": null,
+      "ariaLabel": "Преимущества центра",
+      "textMarker": "до 15 резидентов",
+      "hasImage": false,
+      "childImgCount": 0
+    },
+    {
+      "index": 8,
+      "tag": "section",
+      "className": "clinic-landscape no-top-padding",
+      "id": null,
+      "ariaLabel": "Территория клиники",
+      "textMarker": "",
+      "hasImage": true,
+      "childImgCount": 1
+    },
+    {
+      "index": 9,
+      "tag": "section",
+      "className": "home-recovery-life",
+      "id": null,
+      "ariaLabel": "home-recovery-life-title",
+      "textMarker": "Как меняется жизнь человека в процессе восстановления",
+      "hasImage": false,
+      "childImgCount": 0
+    },
+    {
+      "index": 10,
+      "tag": "section",
+      "className": "reviews",
+      "id": null,
+      "ariaLabel": "Отзывы",
+      "textMarker": "Отзывы",
+      "hasImage": false,
+      "childImgCount": 0
+    },
+    {
+      "index": 11,
+      "tag": "section",
+      "className": "home-rehabilitation-requirements",
+      "id": null,
+      "ariaLabel": "home-rehabilitation-requirements-heading",
+      "textMarker": "Что нужно для прохождения реабилитации и лечения",
+      "hasImage": true,
+      "childImgCount": 1
+    },
+    {
+      "index": 12,
+      "tag": "section",
+      "className": "home-rehabilitation-program",
+      "id": null,
+      "ariaLabel": "home-rehabilitation-program-heading",
+      "textMarker": "Программа центра включает 4 направления",
+      "hasImage": true,
+      "childImgCount": 4
+    },
+    {
+      "index": 13,
+      "tag": "section",
+      "className": "home-genotyping",
+      "id": null,
+      "ariaLabel": "home-genotyping-heading",
+      "textMarker": "Генотипирование — инструмент диагностики",
+      "hasImage": false,
+      "childImgCount": 0
+    },
+    {
+      "index": 14,
+      "tag": "section",
+      "className": "comfort",
+      "id": null,
+      "ariaLabel": "comfort-heading",
+      "textMarker": "Комфорт, приватность, забота",
+      "hasImage": true,
+      "childImgCount": 7
+    },
+    {
+      "index": 15,
+      "tag": "section",
+      "className": "home-videos",
+      "id": null,
+      "ariaLabel": "home-videos-heading",
+      "textMarker": "Видео о нашем центре",
+      "hasImage": true,
+      "childImgCount": 2
+    },
+    {
+      "index": 16,
+      "tag": "section",
+      "className": "specialists",
+      "id": null,
+      "ariaLabel": "specialists-heading",
+      "textMarker": "Специалисты центра",
+      "hasImage": true,
+      "childImgCount": 5
+    },
+    {
+      "index": 17,
+      "tag": "section",
+      "className": "home-articles",
+      "id": null,
+      "ariaLabel": "home-articles-heading",
+      "textMarker": "Статьи",
+      "hasImage": true,
+      "childImgCount": 3
+    },
+    {
+      "index": 18,
+      "tag": "section",
+      "className": "faq",
+      "id": null,
+      "ariaLabel": "faq-heading",
+      "textMarker": "Нас часто спрашивают",
+      "hasImage": false,
+      "childImgCount": 0
+    },
+    {
+      "index": 19,
+      "tag": "section",
+      "className": "final-form",
+      "id": null,
+      "ariaLabel": "final-form-heading",
+      "textMarker": "Остались вопросы?",
+      "hasImage": false,
+      "childImgCount": 0
+    }
+  ],
+  "runtimeSections": [
+    {
+      "index": 0,
+      "tag": "section",
+      "className": "hero hero--home",
+      "id": null,
+      "ariaLabel": null,
+      "textMarker": "Шпиговский дом",
+      "hasImage": false,
+      "childImgCount": 0
+    },
+    {
+      "index": 1,
+      "tag": "section",
+      "className": "home-feature-grid",
+      "id": null,
+      "ariaLabel": "Преимущества центра",
+      "textMarker": "до 15 резидентов",
+      "hasImage": false,
+      "childImgCount": 0
+    },
+    {
+      "index": 2,
+      "tag": "section",
+      "className": "home-treatment-prevention",
+      "id": null,
+      "ariaLabel": "home-treatment-prevention-heading",
+      "textMarker": "Лечение и профилактика",
+      "hasImage": false,
+      "childImgCount": 0
+    },
+    {
+      "index": 3,
+      "tag": "section",
+      "className": "home-rehabilitation-program",
+      "id": null,
+      "ariaLabel": "home-rehabilitation-program-heading",
+      "textMarker": "Программа центра включает 4 направления",
+      "hasImage": false,
+      "childImgCount": 0
+    },
+    {
+      "index": 4,
+      "tag": "section",
+      "className": "faq",
+      "id": null,
+      "ariaLabel": "faq-heading",
+      "textMarker": "Нас часто спрашивают",
+      "hasImage": false,
+      "childImgCount": 0
+    },
+    {
+      "index": 5,
+      "tag": "section",
+      "className": "final-form",
+      "id": null,
+      "ariaLabel": "final-form-heading",
+      "textMarker": "Остались вопросы?",
+      "hasImage": false,
+      "childImgCount": 0
+    }
+  ],
+  "sections": [
+    {
+      "name": "intro-section + hero",
+      "staticSelector": ".intro-section > section.hero.hero--home",
+      "wpPartial": "template-parts/home/hero.php",
+      "orderIndex": 1,
+      "staticPresent": true,
+      "runtimePresent": true,
+      "staticSection": {
+        "index": 0,
+        "tag": "section",
+        "className": "hero hero--home",
+        "id": null,
+        "ariaLabel": null,
+        "textMarker": "Шпиговский дом",
+        "hasImage": true,
+        "childImgCount": 1
+      },
+      "runtimeSection": {
+        "index": 0,
+        "tag": "section",
+        "className": "hero hero--home",
+        "id": null,
+        "ariaLabel": null,
+        "textMarker": "Шпиговский дом",
+        "hasImage": false,
+        "childImgCount": 0
+      },
+      "status": "TRANSFERRED_BUT_VISUALLY_DEGRADED",
+      "severity": "CRITICAL",
+      "recommendedRepairPhase": "D9-E"
+    },
+    {
+      "name": "home-recovery-intro",
+      "staticSelector": "section.home-recovery-intro",
+      "wpPartial": null,
+      "orderIndex": 2,
+      "staticPresent": true,
+      "runtimePresent": false,
+      "staticSection": {
+        "index": 1,
+        "tag": "section",
+        "className": "home-recovery-intro",
+        "id": null,
+        "ariaLabel": "home-recovery-intro-heading",
+        "textMarker": "Шпиговский дом — восстановление, построенное вокруг человека",
+        "hasImage": false,
+        "childImgCount": 0
+      },
+      "runtimeSection": null,
+      "status": "MISSING_FROM_WP_TEMPLATE",
+      "severity": "HIGH",
+      "recommendedRepairPhase": "D9-D"
+    },
+    {
+      "name": "founder-quote",
+      "staticSelector": "section.founder-quote",
+      "wpPartial": null,
+      "orderIndex": 3,
+      "staticPresent": true,
+      "runtimePresent": false,
+      "staticSection": {
+        "index": 2,
+        "tag": "section",
+        "className": "founder-quote founder-quote--variant-b",
+        "id": null,
+        "ariaLabel": "founder-quote-label",
+        "textMarker": "Мы создавали «Шпиговский Дом» как место, где человек может п",
+        "hasImage": true,
+        "childImgCount": 1
+      },
+      "runtimeSection": null,
+      "status": "MISSING_FROM_WP_TEMPLATE",
+      "severity": "HIGH",
+      "recommendedRepairPhase": "D9-D"
+    },
+    {
+      "name": "home-treatment-prevention",
+      "staticSelector": "section.home-treatment-prevention",
+      "wpPartial": "template-parts/home/treatment-prevention.php",
+      "orderIndex": 4,
+      "staticPresent": true,
+      "runtimePresent": true,
+      "staticSection": {
+        "index": 3,
+        "tag": "section",
+        "className": "home-treatment-prevention",
+        "id": null,
+        "ariaLabel": "home-treatment-prevention-heading",
+        "textMarker": "Лечение и профилактика",
+        "hasImage": true,
+        "childImgCount": 12
+      },
+      "runtimeSection": {
+        "index": 2,
+        "tag": "section",
+        "className": "home-treatment-prevention",
+        "id": null,
+        "ariaLabel": "home-treatment-prevention-heading",
+        "textMarker": "Лечение и профилактика",
+        "hasImage": false,
+        "childImgCount": 0
+      },
+      "status": "TRANSFERRED_AND_VISIBLE",
+      "severity": "MEDIUM",
+      "recommendedRepairPhase": "D9-E"
+    },
+    {
+      "name": "home-gallery",
+      "staticSelector": "section.home-gallery",
+      "wpPartial": "template-parts/home/gallery.php",
+      "orderIndex": 5,
+      "staticPresent": true,
+      "runtimePresent": false,
+      "staticSection": {
+        "index": 4,
+        "tag": "section",
+        "className": "home-gallery",
+        "id": null,
+        "ariaLabel": "Фотогалерея центра",
+        "textMarker": "Лечение зависимости от алкоголя\n        \n        \n          ",
+        "hasImage": true,
+        "childImgCount": 4
+      },
+      "runtimeSection": null,
+      "status": "TRANSFERRED_BUT_EMPTY",
+      "severity": "HIGH",
+      "recommendedRepairPhase": "D9-D"
+    },
+    {
+      "name": "home-why-us",
+      "staticSelector": "section.home-why-us",
+      "wpPartial": null,
+      "orderIndex": 6,
+      "staticPresent": true,
+      "runtimePresent": false,
+      "staticSection": {
+        "index": 5,
+        "tag": "section",
+        "className": "home-why-us no-top-padding--30",
+        "id": null,
+        "ariaLabel": "home-why-us-heading",
+        "textMarker": "Нас выбирают за мультидисциплинарный подход к лечению",
+        "hasImage": true,
+        "childImgCount": 4
+      },
+      "runtimeSection": null,
+      "status": "MISSING_FROM_WP_TEMPLATE",
+      "severity": "HIGH",
+      "recommendedRepairPhase": "D9-D"
+    },
+    {
+      "name": "home-staff-photo",
+      "staticSelector": "section.home-staff-photo",
+      "wpPartial": null,
+      "orderIndex": 7,
+      "staticPresent": true,
+      "runtimePresent": false,
+      "staticSection": {
+        "index": 6,
+        "tag": "section",
+        "className": "home-staff-photo no-top-padding no-top-padding--30",
+        "id": null,
+        "ariaLabel": "Команда центра",
+        "textMarker": "",
+        "hasImage": true,
+        "childImgCount": 1
+      },
+      "runtimeSection": null,
+      "status": "MISSING_FROM_WP_TEMPLATE",
+      "severity": "HIGH",
+      "recommendedRepairPhase": "D9-D"
+    },
+    {
+      "name": "home-feature-grid",
+      "staticSelector": "section.home-feature-grid",
+      "wpPartial": "template-parts/home/feature-grid.php",
+      "orderIndex": 8,
+      "staticPresent": true,
+      "runtimePresent": true,
+      "staticSection": {
+        "index": 7,
+        "tag": "section",
+        "className": "home-feature-grid no-top-padding no-top-padding--30",
+        "id": null,
+        "ariaLabel": "Преимущества центра",
+        "textMarker": "до 15 резидентов",
+        "hasImage": false,
+        "childImgCount": 0
+      },
+      "runtimeSection": {
+        "index": 1,
+        "tag": "section",
+        "className": "home-feature-grid",
+        "id": null,
+        "ariaLabel": "Преимущества центра",
+        "textMarker": "до 15 резидентов",
+        "hasImage": false,
+        "childImgCount": 0
+      },
+      "status": "TRANSFERRED_AND_VISIBLE",
+      "severity": "MEDIUM",
+      "recommendedRepairPhase": "D9-E"
+    },
+    {
+      "name": "clinic-landscape",
+      "staticSelector": "section.clinic-landscape",
+      "wpPartial": null,
+      "orderIndex": 9,
+      "staticPresent": true,
+      "runtimePresent": false,
+      "staticSection": {
+        "index": 8,
+        "tag": "section",
+        "className": "clinic-landscape no-top-padding",
+        "id": null,
+        "ariaLabel": "Территория клиники",
+        "textMarker": "",
+        "hasImage": true,
+        "childImgCount": 1
+      },
+      "runtimeSection": null,
+      "status": "MISSING_FROM_WP_TEMPLATE",
+      "severity": "HIGH",
+      "recommendedRepairPhase": "D9-D"
+    },
+    {
+      "name": "home-recovery-life",
+      "staticSelector": "section.home-recovery-life",
+      "wpPartial": null,
+      "orderIndex": 10,
+      "staticPresent": true,
+      "runtimePresent": false,
+      "staticSection": {
+        "index": 9,
+        "tag": "section",
+        "className": "home-recovery-life",
+        "id": null,
+        "ariaLabel": "home-recovery-life-title",
+        "textMarker": "Как меняется жизнь человека в процессе восстановления",
+        "hasImage": false,
+        "childImgCount": 0
+      },
+      "runtimeSection": null,
+      "status": "MISSING_FROM_WP_TEMPLATE",
+      "severity": "HIGH",
+      "recommendedRepairPhase": "D9-D"
+    },
+    {
+      "name": "reviews",
+      "staticSelector": "section.reviews",
+      "wpPartial": null,
+      "orderIndex": 11,
+      "staticPresent": true,
+      "runtimePresent": false,
+      "staticSection": {
+        "index": 10,
+        "tag": "section",
+        "className": "reviews",
+        "id": null,
+        "ariaLabel": "Отзывы",
+        "textMarker": "Отзывы",
+        "hasImage": false,
+        "childImgCount": 0
+      },
+      "runtimeSection": null,
+      "status": "MISSING_FROM_WP_TEMPLATE",
+      "severity": "HIGH",
+      "recommendedRepairPhase": "D9-D"
+    },
+    {
+      "name": "home-rehabilitation-requirements",
+      "staticSelector": "section.home-rehabilitation-requirements",
+      "wpPartial": null,
+      "orderIndex": 12,
+      "staticPresent": true,
+      "runtimePresent": false,
+      "staticSection": {
+        "index": 11,
+        "tag": "section",
+        "className": "home-rehabilitation-requirements",
+        "id": null,
+        "ariaLabel": "home-rehabilitation-requirements-heading",
+        "textMarker": "Что нужно для прохождения реабилитации и лечения",
+        "hasImage": true,
+        "childImgCount": 1
+      },
+      "runtimeSection": null,
+      "status": "MISSING_FROM_WP_TEMPLATE",
+      "severity": "HIGH",
+      "recommendedRepairPhase": "D9-D"
+    },
+    {
+      "name": "home-rehabilitation-program",
+      "staticSelector": "section.home-rehabilitation-program",
+      "wpPartial": "template-parts/home/rehabilitation-program.php",
+      "orderIndex": 13,
+      "staticPresent": true,
+      "runtimePresent": true,
+      "staticSection": {
+        "index": 12,
+        "tag": "section",
+        "className": "home-rehabilitation-program",
+        "id": null,
+        "ariaLabel": "home-rehabilitation-program-heading",
+        "textMarker": "Программа центра включает 4 направления",
+        "hasImage": true,
+        "childImgCount": 4
+      },
+      "runtimeSection": {
+        "index": 3,
+        "tag": "section",
+        "className": "home-rehabilitation-program",
+        "id": null,
+        "ariaLabel": "home-rehabilitation-program-heading",
+        "textMarker": "Программа центра включает 4 направления",
+        "hasImage": false,
+        "childImgCount": 0
+      },
+      "status": "TRANSFERRED_AND_VISIBLE",
+      "severity": "MEDIUM",
+      "recommendedRepairPhase": "D9-E"
+    },
+    {
+      "name": "home-genotyping",
+      "staticSelector": "section.home-genotyping",
+      "wpPartial": null,
+      "orderIndex": 14,
+      "staticPresent": true,
+      "runtimePresent": false,
+      "staticSection": {
+        "index": 13,
+        "tag": "section",
+        "className": "home-genotyping",
+        "id": null,
+        "ariaLabel": "home-genotyping-heading",
+        "textMarker": "Генотипирование — инструмент диагностики",
+        "hasImage": false,
+        "childImgCount": 0
+      },
+      "runtimeSection": null,
+      "status": "MISSING_FROM_WP_TEMPLATE",
+      "severity": "HIGH",
+      "recommendedRepairPhase": "D9-D"
+    },
+    {
+      "name": "comfort",
+      "staticSelector": "section.comfort",
+      "wpPartial": null,
+      "orderIndex": 15,
+      "staticPresent": true,
+      "runtimePresent": false,
+      "staticSection": {
+        "index": 14,
+        "tag": "section",
+        "className": "comfort",
+        "id": null,
+        "ariaLabel": "comfort-heading",
+        "textMarker": "Комфорт, приватность, забота",
+        "hasImage": true,
+        "childImgCount": 7
+      },
+      "runtimeSection": null,
+      "status": "MISSING_FROM_WP_TEMPLATE",
+      "severity": "HIGH",
+      "recommendedRepairPhase": "D9-D"
+    },
+    {
+      "name": "home-videos",
+      "staticSelector": "section.home-videos",
+      "wpPartial": null,
+      "orderIndex": 16,
+      "staticPresent": true,
+      "runtimePresent": false,
+      "staticSection": {
+        "index": 15,
+        "tag": "section",
+        "className": "home-videos",
+        "id": null,
+        "ariaLabel": "home-videos-heading",
+        "textMarker": "Видео о нашем центре",
+        "hasImage": true,
+        "childImgCount": 2
+      },
+      "runtimeSection": null,
+      "status": "MISSING_FROM_WP_TEMPLATE",
+      "severity": "HIGH",
+      "recommendedRepairPhase": "D9-D"
+    },
+    {
+      "name": "specialists",
+      "staticSelector": "section.specialists",
+      "wpPartial": null,
+      "orderIndex": 17,
+      "staticPresent": true,
+      "runtimePresent": false,
+      "staticSection": {
+        "index": 16,
+        "tag": "section",
+        "className": "specialists",
+        "id": null,
+        "ariaLabel": "specialists-heading",
+        "textMarker": "Специалисты центра",
+        "hasImage": true,
+        "childImgCount": 5
+      },
+      "runtimeSection": null,
+      "status": "MISSING_FROM_WP_TEMPLATE",
+      "severity": "HIGH",
+      "recommendedRepairPhase": "D9-D"
+    },
+    {
+      "name": "home-articles",
+      "staticSelector": "section.home-articles",
+      "wpPartial": "template-parts/home/articles-teaser.php",
+      "orderIndex": 18,
+      "staticPresent": true,
+      "runtimePresent": false,
+      "staticSection": {
+        "index": 17,
+        "tag": "section",
+        "className": "home-articles",
+        "id": null,
+        "ariaLabel": "home-articles-heading",
+        "textMarker": "Статьи",
+        "hasImage": true,
+        "childImgCount": 3
+      },
+      "runtimeSection": null,
+      "status": "TRANSFERRED_BUT_EMPTY",
+      "severity": "HIGH",
+      "recommendedRepairPhase": "D9-D"
+    },
+    {
+      "name": "faq",
+      "staticSelector": "section.faq",
+      "wpPartial": "template-parts/home/faq.php",
+      "orderIndex": 19,
+      "staticPresent": true,
+      "runtimePresent": true,
+      "staticSection": {
+        "index": 18,
+        "tag": "section",
+        "className": "faq",
+        "id": null,
+        "ariaLabel": "faq-heading",
+        "textMarker": "Нас часто спрашивают",
+        "hasImage": false,
+        "childImgCount": 0
+      },
+      "runtimeSection": {
+        "index": 4,
+        "tag": "section",
+        "className": "faq",
+        "id": null,
+        "ariaLabel": "faq-heading",
+        "textMarker": "Нас часто спрашивают",
+        "hasImage": false,
+        "childImgCount": 0
+      },
+      "status": "TRANSFERRED_AND_VISIBLE",
+      "severity": "MEDIUM",
+      "recommendedRepairPhase": "D9-E"
+    },
+    {
+      "name": "final-form",
+      "staticSelector": "section.final-form",
+      "wpPartial": "template-parts/components/final-form.php",
+      "orderIndex": 20,
+      "staticPresent": true,
+      "runtimePresent": true,
+      "staticSection": {
+        "index": 19,
+        "tag": "section",
+        "className": "final-form",
+        "id": null,
+        "ariaLabel": "final-form-heading",
+        "textMarker": "Остались вопросы?",
+        "hasImage": false,
+        "childImgCount": 0
+      },
+      "runtimeSection": {
+        "index": 5,
+        "tag": "section",
+        "className": "final-form",
+        "id": null,
+        "ariaLabel": "final-form-heading",
+        "textMarker": "Остались вопросы?",
+        "hasImage": false,
+        "childImgCount": 0
+      },
+      "status": "TRANSFERRED_AND_VISIBLE",
+      "severity": "MEDIUM",
+      "recommendedRepairPhase": "D9-E"
+    }
+  ]
+}

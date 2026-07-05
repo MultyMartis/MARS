@@ -1,0 +1,200 @@
+{
+  "task": "V9-06D9-A",
+  "staticCss": [
+    {
+      "url": "http://127.0.0.1:9876/assets/vendor/fancybox/fancybox.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:9876/assets/vendor/swiper/swiper-bundle.min.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:9876/assets/css/style.css",
+      "status": 200
+    }
+  ],
+  "runtimeCss": [
+    {
+      "url": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/css/v9-style.css?ver=1783184132",
+      "status": 200
+    }
+  ],
+  "staticFontAudit": {
+    "label": "static",
+    "fontRequests": 11,
+    "fontFailed": 0,
+    "failedUrls": [],
+    "cssRequests": [
+      {
+        "url": "http://127.0.0.1:9876/assets/vendor/fancybox/fancybox.css",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:9876/assets/vendor/swiper/swiper-bundle.min.css",
+        "status": 200
+      },
+      {
+        "url": "http://127.0.0.1:9876/assets/css/style.css",
+        "status": 200
+      }
+    ]
+  },
+  "runtimeFontAudit": {
+    "label": "runtime",
+    "fontRequests": 10,
+    "fontFailed": 5,
+    "failedUrls": [
+      {
+        "url": "http://shpigovsky.test/assets/fonts/inter/inter-300.woff2",
+        "status": 404
+      },
+      {
+        "url": "http://shpigovsky.test/assets/fonts/inter/inter-400-latin.woff2",
+        "status": 404
+      },
+      {
+        "url": "http://shpigovsky.test/assets/fonts/inter/inter-500.woff2",
+        "status": 404
+      },
+      {
+        "url": "http://shpigovsky.test/assets/fonts/inter/inter-500-latin.woff2",
+        "status": 404
+      },
+      {
+        "url": "http://shpigovsky.test/assets/fonts/inter/inter-300-latin.woff2",
+        "status": 404
+      }
+    ],
+    "cssRequests": [
+      {
+        "url": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/css/v9-style.css?ver=1783184132",
+        "status": 200
+      }
+    ]
+  },
+  "cssFontPathIssue": {
+    "description": "v9-style.css @font-face uses absolute /assets/fonts/ paths valid on static dist but 404 on WordPress unless root alias exists",
+    "staticRootFontStatus": [],
+    "runtimeRootFontStatus": [
+      {
+        "url": "http://shpigovsky.test/assets/fonts/inter/inter-300.woff2",
+        "status": 404
+      },
+      {
+        "url": "http://shpigovsky.test/assets/fonts/inter/inter-400-latin.woff2",
+        "status": 404
+      },
+      {
+        "url": "http://shpigovsky.test/assets/fonts/inter/inter-500.woff2",
+        "status": 404
+      },
+      {
+        "url": "http://shpigovsky.test/assets/fonts/inter/inter-500-latin.woff2",
+        "status": 404
+      },
+      {
+        "url": "http://shpigovsky.test/assets/fonts/inter/inter-300-latin.woff2",
+        "status": 404
+      }
+    ]
+  },
+  "keyTokens": {
+    "staticBody": {
+      "key": "body",
+      "base": "static",
+      "found": true,
+      "selector": "body",
+      "text": "8 (925) 183-64-64\n        \n\n        \n          \n            \n          \n        ",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1425,
+        "height": 900
+      },
+      "font-family": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+      "font-size": "18px",
+      "font-weight": "300",
+      "line-height": "24px",
+      "letter-spacing": "normal",
+      "color": "rgb(71, 83, 113)",
+      "opacity": "1",
+      "text-transform": "none",
+      "text-decoration": "none",
+      "font-style": "normal",
+      "font-stretch": "100%",
+      "font-synthesis": "weight style small-caps",
+      "-webkit-font-smoothing": "antialiased",
+      "text-rendering": "optimizelegibility",
+      "display": "block",
+      "align-items": "normal",
+      "gap": "normal",
+      "padding": "0px",
+      "margin": "0px",
+      "transform": "none",
+      "filter": "none",
+      "zoom": "1",
+      "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+      "parents": [
+        {
+          "tag": "HTML",
+          "className": "js-enabled js-reveal-ready",
+          "opacity": "1",
+          "transform": "none",
+          "filter": "none",
+          "fontSize": "16px",
+          "lineHeight": "normal",
+          "color": "rgb(0, 0, 0)"
+        }
+      ]
+    },
+    "runtimeBody": {
+      "key": "body",
+      "base": "runtime",
+      "found": true,
+      "selector": "body",
+      "text": "8 (925) 183-64-64\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t\n\t\t\n\n\t\t\n\t\t\t\n\t\t\t\t\n",
+      "bbox": {
+        "x": 0,
+        "y": 0,
+        "width": 1425,
+        "height": 900
+      },
+      "font-family": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+      "font-size": "18px",
+      "font-weight": "300",
+      "line-height": "24px",
+      "letter-spacing": "normal",
+      "color": "rgb(71, 83, 113)",
+      "opacity": "1",
+      "text-transform": "none",
+      "text-decoration": "none",
+      "font-style": "normal",
+      "font-stretch": "100%",
+      "font-synthesis": "weight style small-caps",
+      "-webkit-font-smoothing": "antialiased",
+      "text-rendering": "optimizelegibility",
+      "display": "block",
+      "align-items": "normal",
+      "gap": "normal",
+      "padding": "0px",
+      "margin": "0px",
+      "transform": "none",
+      "filter": "none",
+      "zoom": "1",
+      "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+      "parents": [
+        {
+          "tag": "HTML",
+          "className": "js-enabled js-reveal-ready",
+          "opacity": "1",
+          "transform": "none",
+          "filter": "none",
+          "fontSize": "16px",
+          "lineHeight": "normal",
+          "color": "rgb(0, 0, 0)"
+        }
+      ]
+    }
+  }
+}

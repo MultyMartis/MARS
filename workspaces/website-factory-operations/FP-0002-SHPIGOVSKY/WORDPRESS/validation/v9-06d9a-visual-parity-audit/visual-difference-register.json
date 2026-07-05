@@ -1,0 +1,126 @@
+{
+  "task": "V9-06D9-A",
+  "timestamp": "2026-07-05T00:00:00+07:00",
+  "differences": [
+    {
+      "id": "VD-001",
+      "route": "/",
+      "area": "hero image / overlay",
+      "staticState": "hero__media + hero-main.png visible; 620px photo hero with dark overlay panel",
+      "runtimeState": "hero markup present but hero__media absent; empty/light hero panel only",
+      "evidenceScreenshot": "screenshots/static-home-desktop-top.png vs screenshots/runtime-home-desktop-top.png",
+      "likelyRootCause": "ACF_IMAGE_NOT_SEEDED — home_hero_slides image empty; hero-main.png not in theme/runtime uploads",
+      "severity": "CRITICAL",
+      "repairType": "HERO_ASSET_REPAIR",
+      "recommendedNextTask": "D9-C"
+    },
+    {
+      "id": "VD-002",
+      "route": "/",
+      "area": "missing Home sections",
+      "staticState": "20 rendered sections (recovery intro, founder quote, gallery, reviews, specialists, etc.)",
+      "runtimeState": "6 rendered sections (hero shell, feature-grid, treatment-prevention, rehab-program, faq, final-form)",
+      "evidenceScreenshot": "screenshots/static-home-desktop-full.png vs screenshots/runtime-home-desktop-full.png",
+      "likelyRootCause": "TEMPLATE_HTML_PORT incomplete in D7-B wave (8 planned) + 12 V9 sections never ported; gallery/articles hidden by empty ACF",
+      "severity": "CRITICAL",
+      "repairType": "TEMPLATE_HTML_PORT",
+      "recommendedNextTask": "D9-D"
+    },
+    {
+      "id": "VD-003",
+      "route": "global",
+      "area": "Inter font loading",
+      "staticState": "11/11 font requests HTTP 200 via /assets/fonts/inter/*.woff2",
+      "runtimeState": "5/10 font requests HTTP 404 at http://shpigovsky.test/assets/fonts/... (absolute root paths in v9-style.css)",
+      "evidenceScreenshot": "global-typography-asset-font-audit.json",
+      "likelyRootCause": "FONT_ASSET_REPAIR — @font-face URLs use static-dist root /assets/ not theme-relative paths",
+      "severity": "HIGH",
+      "repairType": "FONT_ASSET_REPAIR",
+      "recommendedNextTask": "D9-B"
+    },
+    {
+      "id": "VD-004",
+      "route": "global header",
+      "area": "primary navigation structure",
+      "staticState": "V9 mega-menu: Лечение и профилактика + service dropdown columns",
+      "runtimeState": "WordPress flat menu: Главная, Услуги, Специалисты, О центре, Отзывы, Статьи, Контакты",
+      "evidenceScreenshot": "screenshots/static-header-desktop.png vs screenshots/runtime-header-desktop.png",
+      "likelyRootCause": "CONTENT_REVIEW — WP primary menu seeded differently from V9 static nav partial",
+      "severity": "HIGH",
+      "repairType": "CONTENT_REVIEW",
+      "recommendedNextTask": "D9-B"
+    },
+    {
+      "id": "VD-005",
+      "route": "/",
+      "area": "header/nav typography (computed)",
+      "staticState": "Shared nav items (Отзывы, Статьи, Контакты): Inter 16px/400, rgb(71,83,113), antialiased",
+      "runtimeState": "Same computed values on matching items; partial Inter 404 may cause synthesized rendering on Cyrillic",
+      "evidenceScreenshot": "screenshots/static-header-desktop.png vs screenshots/runtime-header-desktop.png",
+      "likelyRootCause": "FONT_ASSET_REPAIR partial load + nav structure mismatch (not pure CSS token drift)",
+      "severity": "MEDIUM",
+      "repairType": "FONT_ASSET_REPAIR",
+      "recommendedNextTask": "D9-B"
+    },
+    {
+      "id": "VD-006",
+      "route": "/",
+      "area": "home gallery",
+      "staticState": "home-gallery swiper with 4 images",
+      "runtimeState": "Section not rendered (home_gallery_media ACF empty)",
+      "evidenceScreenshot": "screenshots/static-home-desktop-full.png",
+      "likelyRootCause": "ACF_SEED_REQUIRED + MEDIA_UPLOAD_REQUIRED",
+      "severity": "HIGH",
+      "repairType": "ACF_SEED_REQUIRED",
+      "recommendedNextTask": "D9-D"
+    },
+    {
+      "id": "VD-007",
+      "route": "/",
+      "area": "home articles teaser",
+      "staticState": "home-articles grid with 3 posts",
+      "runtimeState": "Not rendered — no published posts or teaser disabled",
+      "evidenceScreenshot": "screenshots/static-home-desktop-full.png",
+      "likelyRootCause": "ACF_SEED_REQUIRED / CONTENT_REVIEW",
+      "severity": "MEDIUM",
+      "repairType": "CONTENT_REVIEW",
+      "recommendedNextTask": "D9-D"
+    },
+    {
+      "id": "VD-008",
+      "route": "/",
+      "area": "page visual density / length",
+      "staticState": "Full-page screenshot ~1.48 MB (rich imagery)",
+      "runtimeState": "Full-page screenshot ~46 KB (sparse text blocks)",
+      "evidenceScreenshot": "screenshot-manifest.json byte sizes",
+      "likelyRootCause": "Combined hero loss + 14 missing sections + empty media fields",
+      "severity": "CRITICAL",
+      "repairType": "TEMPLATE_HTML_PORT",
+      "recommendedNextTask": "D9-D"
+    },
+    {
+      "id": "VD-009",
+      "route": "global",
+      "area": "vendor CSS/JS (swiper, fancybox)",
+      "staticState": "style.css + swiper-bundle.min.css + fancybox.css loaded",
+      "runtimeState": "v9-style.css only; Swiper/Fancybox not enqueued in inc/assets.php",
+      "evidenceScreenshot": "global-typography-asset-font-audit.json",
+      "likelyRootCause": "CSS_TOKEN_REPAIR / deferred D7-A extension hook unused",
+      "severity": "MEDIUM",
+      "repairType": "CSS_TOKEN_REPAIR",
+      "recommendedNextTask": "D9-E"
+    },
+    {
+      "id": "VD-010",
+      "route": "/uslugi/",
+      "area": "secondary page density",
+      "staticState": "Rich hub layout ~1.24 MB screenshot",
+      "runtimeState": "Sparse hub ~68 KB screenshot",
+      "evidenceScreenshot": "screenshots/static-services-hub-desktop.png vs screenshots/runtime-services-hub-desktop.png",
+      "likelyRootCause": "Missing deferred sections + empty ACF media (not fully audited in D9-A)",
+      "severity": "MEDIUM",
+      "repairType": "DEFERRED_ACCEPTABLE",
+      "recommendedNextTask": "D9-F"
+    }
+  ]
+}

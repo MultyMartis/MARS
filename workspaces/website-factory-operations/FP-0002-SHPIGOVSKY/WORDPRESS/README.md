@@ -2,8 +2,8 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D8-G POST-SEED QA COMPLETE — ALL_200 — ACF INTEGRITY PASS — READY FOR OPERATOR VISUAL REVIEW
-**Classification:** CONTENT MODEL RUNTIME DELIVERED — D8-A…E SEEDED — D8-G QA COMPLETE
+**Status:** V9-06D9-A VISUAL PARITY AUDIT COMPLETE — FAIL — REPAIR REQUIRED (D9-C hero first)
+**Classification:** CONTENT MODEL RUNTIME DELIVERED — D8-A…E SEEDED — D9-A PARITY GAP DOCUMENTED
 
 ---
 
@@ -214,3 +214,11 @@ D8-D Services Hub page #5 ACF only: `services_hub_intro` (V9 heroLead) and `serv
 ## V9-06D8-E contacts content seed (2026-07-05)
 
 D8-E Contacts page #20 ACF only: `contacts_form_intro` (V9 intro), `contacts_address` (V9 Moscow consulting address), `contacts_blocks` (2 V9 location rows). Map/messengers/phones skipped (operator URLs or D8-A options canonical). DB checkpoint `v9-06d8e-contacts-content-seed-pre-20260704-211441`. Route smoke ALL_200. Contacts visual smoke PASS. No runtime/source/home/hub/service/options writes. Evidence: `validation/v9-06d8e-contacts-content-seed/`. Report: `reports/FP-0002-V9-06D8E-CONTACTS-CONTENT-SEED-REPORT-v1.md`. Next: D8-G post-seed QA (operator review).
+
+## V9-06D8-G post-seed QA (2026-07-05)
+
+D8-G **COMPLETE (PARTIAL PASS)**: Route matrix ALL_200; ACF integrity PASS; visual smoke PASS; admin usability PARTIAL. Readiness: **READY_FOR_OPERATOR_VISUAL_REVIEW**. Evidence: `validation/v9-06d8g-post-seed-qa/`. Report: `reports/FP-0002-V9-06D8G-POST-SEED-QA-REPORT-v1.md`. Next: operator visual review.
+
+## V9-06D9-A visual parity audit (2026-07-05)
+
+D9-A **COMPLETE (FAIL)**: Read-only static V9 vs WP runtime parity audit. Home: 20 static sections vs 6 runtime; hero image absent (ACF not seeded); 5/10 Inter font 404s (CSS root path bug); 18 screenshots captured. Zero DB/ACF/runtime/source mutations. Evidence: `validation/v9-06d9a-visual-parity-audit/`. Report: `reports/FP-0002-V9-06D9A-VISUAL-PARITY-AUDIT-REPORT-v1.md`. Next: **D9-C home hero parity repair** (recommended).
