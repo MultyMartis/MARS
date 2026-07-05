@@ -11,7 +11,7 @@
 | **Production profile** | [../production-profile.md](../production-profile.md) |
 | **Production storage root** | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\` |
 | **Production baseline** | Parent baseline `SITE-002-STABLE-PROD-INITIAL-01` · [../baselines/SITE-002-STABLE-PROD-INITIAL-01.md](../baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| **Current Production checkpoint** | **ISSUED** — `SITE-002-STABLE-PROD-CRON-BEGET-ACTIVE-01` · [../baselines/SITE-002-STABLE-PROD-CRON-BEGET-ACTIVE-01.md](../baselines/SITE-002-STABLE-PROD-CRON-BEGET-ACTIVE-01.md) |
+| **Current Production checkpoint** | **ISSUED** — `SITE-002-STABLE-PROD-HTML-BODY-FIX-01` · [../baselines/SITE-002-STABLE-PROD-HTML-BODY-FIX-01.md](../baselines/SITE-002-STABLE-PROD-HTML-BODY-FIX-01.md) |
 | **Production parity with TEST checkpoints** | **VERIFIED** — file + HTTP evidence (Run 4.171-R1) |
 | **First controlled Production change** | **COMPLETE** — Run 4.173; single-file text-only FTP deploy |
 | **Catalog default sort (Production)** | **COMPLETE** — Run 4.176; default `pd.name ASC` in `category.php` |
@@ -473,9 +473,11 @@ Product SEO URLs created during catalog import (`oc_seo_url` where `query LIKE '
 | Meta audit result | PASS 12 · WARN 14 · FAIL 17 |
 | Valid XML sitemap | **NOT FOUND** at audit time — `Sitemap:` omitted from robots |
 | Yandex Metrika / Webmaster (live Twig) | **VERIFIED** (Run 4.189) — Metrika in `footer.twig` (~L233–245); Webmaster meta in `header.twig` (~L21); live HTML confirmed on home/category/information |
+| Duplicate body / preloader (Production) | **FIXED** (Run 4.190) — duplicate `<body>` + global preloader + `page_overlay` were in `header.twig` L113–126 (same file, not include); removed; live HTML now 1× body on 4 sampled URLs · [report](../reports/SITE-002-PROD-HTML-BODY-DUPLICATE-FIX-01.md) |
 | Protected Twig (operator WIP) | `catalog/view/theme/default/template/common/header.twig`, `common/footer.twig` — **DO NOT OVERWRITE / DO NOT REFORMAT** — fresh-download live before any template work |
 | Yandex verification report | [SITE-002-PROD-YANDEX-CODES-VERIFY-01.md](../reports/SITE-002-PROD-YANDEX-CODES-VERIFY-01.md) |
 | Next meta operation | `SITE-002-PROD-SEO-META-FIX-01` (not authorized by default) |
+| Next sitemap operation | `SITE-002-PROD-SITEMAP-ENABLE-01` (planned after Run 4.190) |
 | Report | [SITE-002-PROD-SEO-READINESS-ROBOTS-01.md](../reports/SITE-002-PROD-SEO-READINESS-ROBOTS-01.md) |
 
 **robots.txt policy (Production):** block admin/system/storage/account/cart/checkout/search; allow `/catalog/view/` assets and `/image/`; disallow faceted query params (`sort`, `order`, `limit`, `page`, `filter_name`, `tracking`); Yandex `Clean-param: tracking`.

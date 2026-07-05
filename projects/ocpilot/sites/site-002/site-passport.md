@@ -28,7 +28,7 @@
 | **Production Profile** | [production-profile.md](production-profile.md) |
 | **Production connection** | **VERIFIED** — HTTP/admin (Run 4.171) + FTP/file baseline (Run 4.171-R1); path model reconciled (Run 4.172) |
 | **Production baseline** | **PARENT** — [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| **Current Production checkpoint** | **ISSUED** — [baselines/SITE-002-STABLE-PROD-SEO-ROBOTS-01.md](baselines/SITE-002-STABLE-PROD-SEO-ROBOTS-01.md) |
+| **Current Production checkpoint** | **ISSUED** — [baselines/SITE-002-STABLE-PROD-HTML-BODY-FIX-01.md](baselines/SITE-002-STABLE-PROD-HTML-BODY-FIX-01.md) |
 | **MARS 1C cron wrapper** | **ACTIVE — DAILY SCHEDULED** (Run 4.183) — Beget cron confirmed by operator; manual run SUCCESS (Run 4.181); HTTP gateway; wrapper v1.1.0; schedule `0 8 * * *` Moscow; Sergey legacy preserved; next run monitoring pending |
 | **Mail recipients** | **ACTIVE — ADMIN-MANAGED** (Run 4.187) — handler `checkout/anketa.php`; list via OpenCart `config_mail_alert_email`; operator updated admin **Additional Alert Emails**; delivery verified; no code deploy · [discovery](reports/SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01.md) · [confirmation](reports/SITE-002-PROD-MAIL-RECIPIENTS-ADMIN-ADD-01.md) |
 | **MARS 1C cron reports** | **CLEANED** (Run 4.184) — 19 redundant setup-date TXT reports removed; 3 current files preserved; [SITE-002-PROD-CRON-REPORTS-CLEANUP-01.md](reports/SITE-002-PROD-CRON-REPORTS-CLEANUP-01.md) |
@@ -49,13 +49,29 @@
 | **MANUAL UI REFINEMENTS ARE CANONICAL** | Operator manual CSS, Twig, JS, and UX edits on live TEST override older M9.x deploy snapshots |
 | **MANUAL CSS REFINEMENTS ARE CANONICAL** | Operator CSS edits on live TEST override repo work copies |
 | **MANUAL TWIG REFINEMENTS ARE CANONICAL** | Operator Twig edits on live TEST override repo work copies |
-| **Conflict resolution (Production)** | Current operational website authority = https://bzpm.ru/; current checkpoint `SITE-002-STABLE-PROD-SEO-ROBOTS-01`; robots.txt deployed; non-product meta audit complete; Yandex Metrika/Webmaster **VERIFIED** (Run 4.189) — operator Twig WIP in header/footer **DO NOT OVERWRITE**; catalog load-more append UX active; catalog default sort `pd.name ASC`; sort menu order A→Я, Я→А, cheaper, expensive |
+| **Conflict resolution (Production)** | Current operational website authority = https://bzpm.ru/; current checkpoint `SITE-002-STABLE-PROD-HTML-BODY-FIX-01`; duplicate body/preloader fixed in header.twig (Run 4.190); robots.txt deployed; non-product meta audit complete; Yandex Metrika/Webmaster **VERIFIED** (Run 4.189) — operator Twig WIP in header/footer **DO NOT OVERWRITE**; catalog load-more append UX active; catalog default sort `pd.name ASC`; sort menu order A→Я, Я→А, cheaper, expensive |
 | **Conflict resolution (TEST evidence)** | If documentation contradicts historical TEST state, live TEST on https://zpm.new-site.space/ remains evidence for TEST-era checkpoints |
 | **Do NOT use as visual baseline** | Pass 1.2 CSS/HTML/JS · `SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2` · pre-checkpoint work copies · `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01` · M9.13 About redesign work copies |
 
 ---
 
 ## Production checkpoint (current)
+
+| Field | Value |
+|-------|--------|
+| Name | `SITE-002-STABLE-PROD-HTML-BODY-FIX-01` |
+| Registered | 2026-07-06 |
+| Type | Stable Production checkpoint — duplicate body/preloader HTML fix |
+| Parent | `SITE-002-STABLE-PROD-SEO-ROBOTS-01` |
+| Operation | `SITE-002-PROD-HTML-BODY-DUPLICATE-FIX-01` |
+| Scope | `/public_html/catalog/view/theme/default/template/common/header.twig` only |
+| Report | [SITE-002-PROD-HTML-BODY-DUPLICATE-FIX-01.md](reports/SITE-002-PROD-HTML-BODY-DUPLICATE-FIX-01.md) |
+
+Verified proof boundary: single-file header.twig FTP deploy with backup, Yandex preservation gate, 4-URL HTML structure verification, rollback readiness.
+
+---
+
+## Prior Production checkpoint
 
 | Field | Value |
 |-------|--------|

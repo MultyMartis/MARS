@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-06 (Run 4.189 — Yandex Metrika/Webmaster codes verified on live; operator Twig WIP protected; checkpoint `SITE-002-STABLE-PROD-SEO-ROBOTS-01` retained)
+**Last updated:** 2026-07-06 (Run 4.190 — duplicate body/preloader/overlay fixed in live header.twig; Yandex codes preserved; checkpoint `SITE-002-STABLE-PROD-HTML-BODY-FIX-01`)
 
 ---
 
@@ -69,9 +69,10 @@ Do not claim that Production exactly matches TEST unless evidence proves it.
 | Current M9.x baselines | [baselines/](baselines/) — TEST-proven checkpoints |
 | Post-corporate-page checkpoints | Home Commercial Trust · Corporate Intro · Custom Proof Strip · Delivery Summary · PDP Body Category Classes |
 | Production baseline parent | [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| Current Production checkpoint | [baselines/SITE-002-STABLE-PROD-SEO-ROBOTS-01.md](baselines/SITE-002-STABLE-PROD-SEO-ROBOTS-01.md) |
+| Current Production checkpoint | [baselines/SITE-002-STABLE-PROD-HTML-BODY-FIX-01.md](baselines/SITE-002-STABLE-PROD-HTML-BODY-FIX-01.md) |
 | SEO readiness (Production) | **PARTIAL — ROBOTS DEPLOYED / META REVIEW REQUIRED** (Run 4.188) — non-product meta audit 43 URLs; product PDP excluded; robots.txt at `/public_html/robots.txt` verified; valid sitemap **NOT FOUND**; meta fix plan → `SITE-002-PROD-SEO-META-FIX-01` · [report](reports/SITE-002-PROD-SEO-READINESS-ROBOTS-01.md) |
 | Yandex analytics (Production) | **VERIFIED** (Run 4.189) — Metrika counter in `common/footer.twig` (masked `110***756`); Webmaster verification in `common/header.twig` (masked `13a***c77`); confirmed on live HTML (home, category, information); **OPERATOR WIP — DO NOT OVERWRITE** · [report](reports/SITE-002-PROD-YANDEX-CODES-VERIFY-01.md) |
+| HTML body structure (Production) | **FIXED** (Run 4.190) — duplicate `<body>` + global preloader + `page_overlay` removed from live `header.twig`; 4-URL HTML validation PASS; Yandex blocks unchanged · [report](reports/SITE-002-PROD-HTML-BODY-DUPLICATE-FIX-01.md) |
 | MARS 1C cron wrapper | **ACTIVE — DAILY SCHEDULED** (Run 4.183) — Beget cron row confirmed by operator; manual run **SUCCESS** (Run 4.181); wrapper v1.1.0; HTTP gateway; schedule `0 8 * * *` (Moscow → 12:00 Barnaul); token present not documented; next scheduled run monitoring pending; Sergey legacy **preserved** |
 | MARS 1C cron reports | **CLEANED** (Run 4.184) — `/storage/mars-tools/cron/reports/` retains 3 files: `index.html`, manual run `mars_1c_import_2026-07-05_205934.txt`, latest status `mars_1c_import_status_2026-07-05_212740.txt`; 19 redundant setup-date dry-run/status reports removed; backups in Storage; retention policy: keep daily run reports, not every diagnostic dry-run/status |
 | Catalog load more (Production) | **ACTIVE** (Run 4.185) — «Показать ещё» append via `initLoadMore()`; counter «Показано X из Y»; numeric pagination hidden when JS (`js-load-more`); rollback in Storage `deployments/SITE-002-PROD-LOAD-MORE-01/rollback/` |
