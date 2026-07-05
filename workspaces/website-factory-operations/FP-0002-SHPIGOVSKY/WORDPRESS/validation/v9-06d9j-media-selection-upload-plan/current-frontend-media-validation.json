@@ -1,0 +1,63 @@
+{
+  "phase": "V9-06D9-J",
+  "generated_at": "2026-07-05T14:36:37.240Z",
+  "mode": "READ_ONLY",
+  "home_checks": {
+    "sections_expected": 19,
+    "sections_found_count": 19,
+    "sections_found": [
+      "home-recovery-intro",
+      "founder-quote",
+      "home-treatment-prevention",
+      "home-gallery",
+      "home-why-us",
+      "home-staff-photo",
+      "home-feature-grid",
+      "clinic-landscape",
+      "home-recovery-life",
+      "reviews",
+      "home-rehabilitation-requirements",
+      "home-rehabilitation-program",
+      "home-genotyping",
+      "comfort",
+      "home-videos",
+      "specialists",
+      "home-articles",
+      "faq",
+      "final-form"
+    ],
+    "hero_image_present": true,
+    "hero_theme_fallback_url": true,
+    "gallery_fallback_present": true,
+    "broken_empty_src_imgs": 0,
+    "footer_present": true,
+    "media_from_theme_fallback": true
+  },
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "ok": true,
+      "has_fatal": false
+    },
+    {
+      "path": "/uslugi/",
+      "status": 200,
+      "ok": true,
+      "has_fatal": false
+    },
+    {
+      "path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "status": 200,
+      "ok": true,
+      "has_fatal": false
+    },
+    {
+      "path": "/kontakty/",
+      "status": 200,
+      "ok": true,
+      "has_fatal": false
+    }
+  ],
+  "result": "PASS"
+}

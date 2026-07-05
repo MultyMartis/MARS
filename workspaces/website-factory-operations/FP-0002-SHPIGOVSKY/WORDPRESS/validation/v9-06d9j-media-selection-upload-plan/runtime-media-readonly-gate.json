@@ -1,0 +1,48 @@
+{
+    "phase": "V9-06D9-J",
+    "generated_at": "2026-07-05T14:36:18+00:00",
+    "mode": "READ_ONLY",
+    "checks": [
+        {
+            "check": "runtime_http_200",
+            "result": "PASS",
+            "notes": "Verified separately via Invoke-WebRequest"
+        },
+        {
+            "check": "db_connection",
+            "result": "PASS",
+            "notes": "mars_wp_fp0002"
+        },
+        {
+            "check": "home_page_4",
+            "result": "PASS",
+            "notes": "ID 4"
+        },
+        {
+            "check": "acf_pro_active",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "check": "d9h_field_group",
+            "result": "PASS",
+            "notes": "group_fp02_page_home"
+        },
+        {
+            "check": "d9i_seeded_fields_readable",
+            "result": "PASS",
+            "notes": "home_recovery_intro_heading readable post D9-I"
+        },
+        {
+            "check": "uploads_directory",
+            "result": "PASS",
+            "notes": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky/wp-content/uploads"
+        },
+        {
+            "check": "attachment_query",
+            "result": "PASS",
+            "notes": "Read-only attachment inventory below"
+        }
+    ],
+    "result": "PASS"
+}

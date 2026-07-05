@@ -1,0 +1,45 @@
+{
+  "phase": "V9-06D9-K",
+  "planned_not_executed": true,
+  "generated_at": "2026-07-05T14:36:28Z",
+  "requirements": {
+    "db_checkpoint": "Full mars_wp_fp0002 mysqldump before K2/K3",
+    "uploads_manifest": "Exact list of new attachment IDs + file paths under wp-content/uploads",
+    "pre_values_json": "home-page-4-media-pre-values.json capturing home_hero_slides and home_gallery_media"
+  },
+  "rollback_methods": [
+    {
+      "method": "db_restore",
+      "steps": "Restore mysqldump from K1 checkpoint",
+      "scope": "Preferred full rollback"
+    },
+    {
+      "method": "attachment_delete",
+      "steps": "Delete only manifest-listed attachment IDs if operator approves exact list",
+      "scope": "Partial — does not revert ACF without DB restore"
+    }
+  ],
+  "forbidden": [
+    "broad uploads cleanup",
+    "full uploads deletion",
+    "wp media regenerate without separate approval"
+  ],
+  "risks": [
+    {
+      "risk": "Hero visual change if wrong image uploaded",
+      "prevention": "Checksum match hero-main.png from V9 src",
+      "rollback": "DB checkpoint restore"
+    },
+    {
+      "risk": "Gallery slide order mismatch",
+      "prevention": "Seed order matches home-fallbacks.php",
+      "rollback": "Clear repeater + restore checkpoint"
+    },
+    {
+      "risk": "Orphan attachments",
+      "prevention": "Manifest all created IDs",
+      "rollback": "Delete manifest IDs only"
+    }
+  ],
+  "result": "PASS"
+}

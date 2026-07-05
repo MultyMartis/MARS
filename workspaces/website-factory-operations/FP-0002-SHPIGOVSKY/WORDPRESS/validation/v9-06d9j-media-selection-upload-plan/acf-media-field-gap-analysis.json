@@ -1,0 +1,49 @@
+{
+  "phase": "V9-06D9-J",
+  "generated_at": "2026-07-05T14:36:28Z",
+  "fields": [
+    {
+      "field_name": "home_hero_slides.image",
+      "field_key": "field_fp02_home_hero_image",
+      "field_type": "image (repeater subfield)",
+      "target_object": "page #4",
+      "current_db_value": "text row present; image empty",
+      "current_frontend_output": "theme fallback hero-main.png",
+      "fallback_asset_used_now": "assets/img/hero/hero-main.png",
+      "recommended_media_source": "workspaces/fp-0002-shpigovsky-v9/src/img/hero/hero-main.png",
+      "upload_needed": "YES",
+      "seed_needed_after_upload": "YES",
+      "risk": "MEDIUM",
+      "notes": "Hero text already seeded D4/D8; image subfield empty — theme fallback active per D9-C"
+    },
+    {
+      "field_name": "home_gallery_media",
+      "field_key": "field_fp02_home_gallery_media",
+      "field_type": "repeater (title, text, media image)",
+      "target_object": "page #4",
+      "current_db_value": "empty repeater",
+      "current_frontend_output": "4 slides from shpigovsky_home_gallery_fallback_items()",
+      "fallback_asset_used_now": "img/content/gallery/shpigovsky-gallery-01..04.webp",
+      "recommended_media_source": "V9 src gallery webp set + fallback titles from home-fallbacks.php",
+      "upload_needed": "YES",
+      "seed_needed_after_upload": "YES",
+      "risk": "MEDIUM",
+      "notes": "Requires 4 attachments + repeater seed with title/text from static fallbacks"
+    },
+    {
+      "field_name": "home_reviews_teaser",
+      "field_key": "field_fp02_home_reviews_teaser",
+      "field_type": "repeater (title, text — no image subfield in schema)",
+      "target_object": "page #4",
+      "current_db_value": "empty",
+      "current_frontend_output": "static review cards in reviews.php template",
+      "fallback_asset_used_now": "N/A — text cards only in current MVP",
+      "recommended_media_source": "DEFER — production review content",
+      "upload_needed": "NO",
+      "seed_needed_after_upload": "OPERATOR_DECISION",
+      "risk": "HIGH",
+      "notes": "Deferred D9-I; not in D9-K MVP media scope"
+    }
+  ],
+  "result": "PASS"
+}

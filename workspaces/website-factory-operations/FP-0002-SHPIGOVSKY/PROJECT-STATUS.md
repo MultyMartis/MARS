@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-05 (V9-06D9-I Controlled ACF Seed PASS)
+**Last updated:** 2026-07-05 (V9-06D9-J Media Selection Upload Plan PASS)
 
-**Current WordPress phase:** V9-06D9-I Controlled ACF Seed **PASS** — 10 safe Home page #4 ACF fields seeded from static V9 authority; DB checkpoint PASS; no source/theme/ACF JSON changes; post-seed validation PASS (19 sections, FAQ contract, routes ALL_200). Skipped media/deferred fields for D9-J. Recommended next: **D9-J Media Selection Upload Plan**. Report: `WORDPRESS/reports/FP-0002-V9-06D9I-CONTROLLED-ACF-SEED-REPORT-v1.md`. Prior: D9-H ACF wiring, D9-G FAQ repair, D9-D home transplant.
+**Current WordPress phase:** V9-06D9-J Media Selection / Upload Plan **PASS** — read-only inventory of 40 Home media assets; WP Media Library empty (0 attachments); ACF gap: hero image + gallery repeater deferred from D9-I; D9-K plan for 5 uploads + seed documented; frontend baseline PASS (19 sections, routes ALL_200). No DB/source/theme writes. Recommended next: **D9-K Controlled Media Upload + ACF Seed**. Report: `WORDPRESS/reports/FP-0002-V9-06D9J-MEDIA-SELECTION-UPLOAD-PLAN-REPORT-v1.md`. Prior: D9-I ACF seed, D9-H wiring.
 
 ## Active frontend workspace (V9)
 

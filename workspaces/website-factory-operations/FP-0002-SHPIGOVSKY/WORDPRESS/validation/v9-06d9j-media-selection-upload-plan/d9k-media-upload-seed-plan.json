@@ -1,0 +1,198 @@
+{
+  "phase": "V9-06D9-K",
+  "planned_not_executed": true,
+  "generated_at": "2026-07-05T14:36:28Z",
+  "phases": {
+    "K1": {
+      "action": "DB checkpoint + media upload dry-run manifest review",
+      "targets": "all K2 candidates",
+      "safety": "Operator approves exact filename/field map",
+      "result": "PLANNED"
+    },
+    "K2": {
+      "action": "Upload 5 images (1 hero + 4 gallery)",
+      "targets": [
+        {
+          "source_file_path": "workspaces/fp-0002-shpigovsky-v9/src/img/hero/hero-main.png",
+          "target_wordpress_filename": "hero-main.png",
+          "target_title": "Шпиговский дом — центр профилактики и лечения зависимостей",
+          "alt_text": "Шпиговский дом — центр профилактики и лечения зависимостей",
+          "caption": "",
+          "description": "Home hero — seeded from static V9 authority",
+          "intended_wp_parent": 4,
+          "target_acf_field": "home_hero_slides.image",
+          "target_object_id": 4,
+          "expected_attachment_type": "image",
+          "expected_visual_impact": "SHOULD_MATCH_CURRENT_FALLBACK",
+          "rollback_strategy": "Restore DB checkpoint + delete attachment IDs from manifest",
+          "validation_method": "Post-seed visual regression + admin field verification"
+        },
+        {
+          "source_file_path": "workspaces/fp-0002-shpigovsky-v9/src/img/content/gallery/shpigovsky-gallery-01.webp",
+          "target_wordpress_filename": "shpigovsky-gallery-01.webp",
+          "target_title": "Лечение зависимости от алкоголя",
+          "alt_text": "Лечение зависимости от алкоголя",
+          "caption": "",
+          "description": "Home gallery — seeded from static V9 authority",
+          "intended_wp_parent": 4,
+          "target_acf_field": "home_gallery_media[0].media",
+          "target_object_id": 4,
+          "expected_attachment_type": "image",
+          "expected_visual_impact": "SHOULD_MATCH_CURRENT_FALLBACK",
+          "rollback_strategy": "Restore DB checkpoint + delete attachment IDs from manifest",
+          "validation_method": "Post-seed visual regression + admin field verification"
+        },
+        {
+          "source_file_path": "workspaces/fp-0002-shpigovsky-v9/src/img/content/gallery/shpigovsky-gallery-02.webp",
+          "target_wordpress_filename": "shpigovsky-gallery-02.webp",
+          "target_title": "Лудомания лечение зависимости",
+          "alt_text": "Лудомания лечение зависимости",
+          "caption": "",
+          "description": "Home gallery — seeded from static V9 authority",
+          "intended_wp_parent": 4,
+          "target_acf_field": "home_gallery_media[1].media",
+          "target_object_id": 4,
+          "expected_attachment_type": "image",
+          "expected_visual_impact": "SHOULD_MATCH_CURRENT_FALLBACK",
+          "rollback_strategy": "Restore DB checkpoint + delete attachment IDs from manifest",
+          "validation_method": "Post-seed visual regression + admin field verification"
+        },
+        {
+          "source_file_path": "workspaces/fp-0002-shpigovsky-v9/src/img/content/gallery/shpigovsky-gallery-03.webp",
+          "target_wordpress_filename": "shpigovsky-gallery-03.webp",
+          "target_title": "Лечение подростковой зависимости",
+          "alt_text": "Лечение подростковой зависимости",
+          "caption": "",
+          "description": "Home gallery — seeded from static V9 authority",
+          "intended_wp_parent": 4,
+          "target_acf_field": "home_gallery_media[2].media",
+          "target_object_id": 4,
+          "expected_attachment_type": "image",
+          "expected_visual_impact": "SHOULD_MATCH_CURRENT_FALLBACK",
+          "rollback_strategy": "Restore DB checkpoint + delete attachment IDs from manifest",
+          "validation_method": "Post-seed visual regression + admin field verification"
+        },
+        {
+          "source_file_path": "workspaces/fp-0002-shpigovsky-v9/src/img/content/gallery/shpigovsky-gallery-04.webp",
+          "target_wordpress_filename": "shpigovsky-gallery-04.webp",
+          "target_title": "Зависимость от постоянных покупок",
+          "alt_text": "Зависимость от постоянных покупок",
+          "caption": "",
+          "description": "Home gallery — seeded from static V9 authority",
+          "intended_wp_parent": 4,
+          "target_acf_field": "home_gallery_media[3].media",
+          "target_object_id": 4,
+          "expected_attachment_type": "image",
+          "expected_visual_impact": "SHOULD_MATCH_CURRENT_FALLBACK",
+          "rollback_strategy": "Restore DB checkpoint + delete attachment IDs from manifest",
+          "validation_method": "Post-seed visual regression + admin field verification"
+        }
+      ],
+      "safety": "No overwrite of existing attachments; manifest attachment IDs",
+      "result": "PLANNED"
+    },
+    "K3": {
+      "action": "Seed home_hero_slides[0].image + home_gallery_media repeater",
+      "targets": [
+        "field_fp02_home_hero_image",
+        "field_fp02_home_gallery_item_media"
+      ],
+      "safety": "Pre-values JSON for page 4 media fields only",
+      "result": "PLANNED"
+    },
+    "K4": {
+      "action": "Visual regression QA home + hero + gallery sections",
+      "targets": [
+        "/"
+      ],
+      "safety": "Compare to D9-J baseline screenshots",
+      "result": "PLANNED"
+    },
+    "K5": {
+      "action": "Admin media UX QA",
+      "targets": [
+        "wp-admin page 4 edit screen"
+      ],
+      "safety": "Verify image pickers show attachments",
+      "result": "PLANNED"
+    }
+  },
+  "upload_candidates": [
+    {
+      "source_file_path": "workspaces/fp-0002-shpigovsky-v9/src/img/hero/hero-main.png",
+      "target_wordpress_filename": "hero-main.png",
+      "target_title": "Шпиговский дом — центр профилактики и лечения зависимостей",
+      "alt_text": "Шпиговский дом — центр профилактики и лечения зависимостей",
+      "caption": "",
+      "description": "Home hero — seeded from static V9 authority",
+      "intended_wp_parent": 4,
+      "target_acf_field": "home_hero_slides.image",
+      "target_object_id": 4,
+      "expected_attachment_type": "image",
+      "expected_visual_impact": "SHOULD_MATCH_CURRENT_FALLBACK",
+      "rollback_strategy": "Restore DB checkpoint + delete attachment IDs from manifest",
+      "validation_method": "Post-seed visual regression + admin field verification"
+    },
+    {
+      "source_file_path": "workspaces/fp-0002-shpigovsky-v9/src/img/content/gallery/shpigovsky-gallery-01.webp",
+      "target_wordpress_filename": "shpigovsky-gallery-01.webp",
+      "target_title": "Лечение зависимости от алкоголя",
+      "alt_text": "Лечение зависимости от алкоголя",
+      "caption": "",
+      "description": "Home gallery — seeded from static V9 authority",
+      "intended_wp_parent": 4,
+      "target_acf_field": "home_gallery_media[0].media",
+      "target_object_id": 4,
+      "expected_attachment_type": "image",
+      "expected_visual_impact": "SHOULD_MATCH_CURRENT_FALLBACK",
+      "rollback_strategy": "Restore DB checkpoint + delete attachment IDs from manifest",
+      "validation_method": "Post-seed visual regression + admin field verification"
+    },
+    {
+      "source_file_path": "workspaces/fp-0002-shpigovsky-v9/src/img/content/gallery/shpigovsky-gallery-02.webp",
+      "target_wordpress_filename": "shpigovsky-gallery-02.webp",
+      "target_title": "Лудомания лечение зависимости",
+      "alt_text": "Лудомания лечение зависимости",
+      "caption": "",
+      "description": "Home gallery — seeded from static V9 authority",
+      "intended_wp_parent": 4,
+      "target_acf_field": "home_gallery_media[1].media",
+      "target_object_id": 4,
+      "expected_attachment_type": "image",
+      "expected_visual_impact": "SHOULD_MATCH_CURRENT_FALLBACK",
+      "rollback_strategy": "Restore DB checkpoint + delete attachment IDs from manifest",
+      "validation_method": "Post-seed visual regression + admin field verification"
+    },
+    {
+      "source_file_path": "workspaces/fp-0002-shpigovsky-v9/src/img/content/gallery/shpigovsky-gallery-03.webp",
+      "target_wordpress_filename": "shpigovsky-gallery-03.webp",
+      "target_title": "Лечение подростковой зависимости",
+      "alt_text": "Лечение подростковой зависимости",
+      "caption": "",
+      "description": "Home gallery — seeded from static V9 authority",
+      "intended_wp_parent": 4,
+      "target_acf_field": "home_gallery_media[2].media",
+      "target_object_id": 4,
+      "expected_attachment_type": "image",
+      "expected_visual_impact": "SHOULD_MATCH_CURRENT_FALLBACK",
+      "rollback_strategy": "Restore DB checkpoint + delete attachment IDs from manifest",
+      "validation_method": "Post-seed visual regression + admin field verification"
+    },
+    {
+      "source_file_path": "workspaces/fp-0002-shpigovsky-v9/src/img/content/gallery/shpigovsky-gallery-04.webp",
+      "target_wordpress_filename": "shpigovsky-gallery-04.webp",
+      "target_title": "Зависимость от постоянных покупок",
+      "alt_text": "Зависимость от постоянных покупок",
+      "caption": "",
+      "description": "Home gallery — seeded from static V9 authority",
+      "intended_wp_parent": 4,
+      "target_acf_field": "home_gallery_media[3].media",
+      "target_object_id": 4,
+      "expected_attachment_type": "image",
+      "expected_visual_impact": "SHOULD_MATCH_CURRENT_FALLBACK",
+      "rollback_strategy": "Restore DB checkpoint + delete attachment IDs from manifest",
+      "validation_method": "Post-seed visual regression + admin field verification"
+    }
+  ],
+  "result": "PASS"
+}

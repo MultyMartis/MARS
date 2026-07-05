@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D9-I CONTROLLED ACF SEED PASS — NEXT: D9-J media selection upload plan
+**Status:** V9-06D9-J MEDIA SELECTION UPLOAD PLAN PASS — NEXT: D9-K controlled media upload + ACF seed
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---
