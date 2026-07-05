@@ -1,0 +1,41 @@
+{
+  "phase": "V9-06D9-Z",
+  "generated_at": "2026-07-06T03:08:00+07:00",
+  "required_d9y_head": "00c9db0305b23cac1d061781e56e7530913c1f06",
+  "local_head": "00c9db0305b23cac1d061781e56e7530913c1f06",
+  "remote_head": "00c9db0305b23cac1d061781e56e7530913c1f06",
+  "branch": "mars/canonical-post-recovery",
+  "ahead": 0,
+  "behind": 0,
+  "d9_y_ancestor": true,
+  "pre_existing_staged_files": 0,
+  "foreign_wip": "present_unstaged",
+  "areas": [
+    {
+      "area": "Branch synced",
+      "status": "READY",
+      "notes": "Local HEAD equals remote HEAD equals D9-Y commit"
+    },
+    {
+      "area": "D9-Y HEAD lineage",
+      "status": "READY",
+      "notes": "Strict pass — exact D9-Y HEAD 00c9db03"
+    },
+    {
+      "area": "D9-P mixed-scope drift",
+      "status": "READY",
+      "notes": "Documented in FP-0002-V9-06D9P-GIT-SCOPE-DRIFT-AUDIT-REPORT-v1.md; no rollback performed"
+    },
+    {
+      "area": "Report chain coherence",
+      "status": "READY",
+      "notes": "D9-L through D9-Y reports and validation JSON present; Reviews chain closed D9-Y"
+    },
+    {
+      "area": "Foreign WIP staging discipline",
+      "status": "READY",
+      "notes": "Extensive unstaged M/?? across monorepo; none staged for D9-Z commit"
+    }
+  ],
+  "result": "READY"
+}

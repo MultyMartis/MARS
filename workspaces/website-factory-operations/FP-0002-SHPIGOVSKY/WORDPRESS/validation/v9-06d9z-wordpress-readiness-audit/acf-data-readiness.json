@@ -1,0 +1,75 @@
+{
+  "phase": "V9-06D9-Z",
+  "generated_at": "2026-07-06T03:08:00+07:00",
+  "canonical_acf_json_count": 14,
+  "canonical_acf_json_path": "WORDPRESS/acf-json/",
+  "runtime_acf_json_on_disk_count": 0,
+  "runtime_acf_json_note": "Field groups registered in DB; plugin load_json path configured; no loose JSON files under runtime wp-content/acf-json at audit time",
+  "acf_groups_db_publish_count": 14,
+  "acf_groups_db_trashed_duplicates": 3,
+  "acf_groups_db_trashed_note": "Three trashed group_fp02_site_options_reviews__trashed posts from D9-W cleanup; harmless; future optional DB hygiene",
+  "areas": [
+    {
+      "area": "ACF groups registered",
+      "status": "READY",
+      "groups": [
+        "group_fp02_blog_post_article_meta",
+        "group_fp02_page_contacts",
+        "group_fp02_page_home",
+        "group_fp02_page_institutional",
+        "group_fp02_page_legal",
+        "group_fp02_page_reviews",
+        "group_fp02_page_services_hub",
+        "group_fp02_service_faq",
+        "group_fp02_service_layout_hero",
+        "group_fp02_service_relationships",
+        "group_fp02_service_structured_sections",
+        "group_fp02_site_options_contacts",
+        "group_fp02_site_options_modal_cta",
+        "group_fp02_site_options_reviews"
+      ]
+    },
+    {
+      "area": "ACF JSON sync state",
+      "status": "PARTIAL",
+      "notes": "Canonical Git JSON (14 files) is source authority; runtime holds DB copies; no sync performed in D9-Z"
+    },
+    {
+      "area": "Home fields",
+      "status": "READY",
+      "notes": "D8-B advantages/FAQ seeded; D4/D9 hero/gallery; reviews from shared options not Home repeater"
+    },
+    {
+      "area": "Site options fields",
+      "status": "READY",
+      "notes": "D8-A site options seed; reviews on fp02-reviews context"
+    },
+    {
+      "area": "Reviews fields",
+      "status": "READY",
+      "notes": "10 rows fp02-reviews_reviews_items; first author Андрей, Москва; OPTIONS source mode"
+    },
+    {
+      "area": "Contacts fields",
+      "status": "READY",
+      "notes": "D8-E contacts page seed + D8-A org options"
+    },
+    {
+      "area": "Services fields",
+      "status": "READY",
+      "notes": "D8-C service MVP + D8-D hub seed"
+    },
+    {
+      "area": "Stale duplicate groups",
+      "status": "PARTIAL",
+      "notes": "3 trashed duplicate reviews option groups remain in DB trash; no active duplicate in Site Settings"
+    },
+    {
+      "area": "Orphan meta",
+      "status": "READY",
+      "orphan_postmeta_count": 0,
+      "notes": "No orphan postmeta rows; legacy home_reviews_teaser meta may exist but suppressed in admin"
+    }
+  ],
+  "result": "PARTIAL"
+}

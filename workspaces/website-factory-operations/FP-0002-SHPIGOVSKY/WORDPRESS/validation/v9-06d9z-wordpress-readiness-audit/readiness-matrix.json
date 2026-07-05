@@ -1,0 +1,54 @@
+{
+  "phase": "V9-06D9-Z",
+  "generated_at": "2026-07-06T03:08:00+07:00",
+  "domains": [
+    {
+      "domain": "Runtime",
+      "status": "READY",
+      "notes": "HTTP + DB reachable; shpigovsky theme; expected plugins active"
+    },
+    {
+      "domain": "Routes",
+      "status": "READY",
+      "notes": "8/8 key routes HTTP 200; no PHP fatals"
+    },
+    {
+      "domain": "Admin",
+      "status": "PARTIAL",
+      "notes": "Functional per D9-L..Y + operator confirmation; authenticated admin screenshots show login gate only"
+    },
+    {
+      "domain": "ACF/Data",
+      "status": "PARTIAL",
+      "notes": "14 groups active; reviews OPTIONS data OK; 3 trashed duplicate DB groups; runtime JSON-on-disk absent"
+    },
+    {
+      "domain": "Frontend Visual",
+      "status": "READY",
+      "notes": "Key routes render; Reviews chain visible; not full V9 pixel sign-off"
+    },
+    {
+      "domain": "Reviews Chain",
+      "status": "READY",
+      "notes": "CLOSED per D9-Y; Home + /otzyvy/ Андрей; OPTIONS mode"
+    },
+    {
+      "domain": "Content/Legal",
+      "status": "NEEDS_OPERATOR_REVIEW",
+      "notes": "10 deferred native pages + 3 legal templates + draft privacy garbled seed"
+    },
+    {
+      "domain": "Git/Evidence",
+      "status": "READY",
+      "notes": "Synced at D9-Y HEAD; D9-P drift documented"
+    },
+    {
+      "domain": "Production Migration",
+      "status": "DEFERRED",
+      "notes": "Local runtime only; not authorized"
+    }
+  ],
+  "overall_readiness": "PARTIAL",
+  "wordpress_stable_checkpoint_ready": false,
+  "result": "PARTIAL PASS"
+}

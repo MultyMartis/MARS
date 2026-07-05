@@ -1,0 +1,14 @@
+{
+  "phase": "V9-06D9-Z",
+  "generated_at": "2026-07-06T03:08:00+07:00",
+  "frontend_visual_smoke": "PASS",
+  "admin_visual_smoke": "PARTIAL",
+  "key_route_screenshots": "PASS",
+  "admin_authenticated_screenshots": "NOT_CAPTURED",
+  "operator_evidence_used": [
+    "D9-Y operator-confirmation.json",
+    "D9-Y reviews-closure-qa.json",
+    "D9-X binding repair DB validation"
+  ],
+  "result": "PARTIAL"
+}

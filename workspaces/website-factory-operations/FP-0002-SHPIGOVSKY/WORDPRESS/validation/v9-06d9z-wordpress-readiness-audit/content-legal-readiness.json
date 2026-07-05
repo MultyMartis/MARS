@@ -1,0 +1,124 @@
+{
+  "phase": "V9-06D9-Z",
+  "generated_at": "2026-07-06T03:08:00+07:00",
+  "prior_d9m_deferred_ids": [3, 6, 7, 8, 9, 10, 17, 19, 21, 25],
+  "pages": [
+    {
+      "page_id": 3,
+      "title": "Политика конфиденциальности",
+      "slug": "privacy-policy",
+      "status": "draft",
+      "post_content_length": 20026,
+      "classification": "GARBLED_LEGAL_SEED",
+      "recommended_action": "OPERATOR_REVIEW_REQUIRED",
+      "result": "NEEDS_OPERATOR_REVIEW"
+    },
+    {
+      "page_id": 6,
+      "title": "Зависимости",
+      "slug": "zavisimosti",
+      "status": "publish",
+      "post_content_length": 431,
+      "classification": "STARTER_PLACEHOLDER_NATIVE",
+      "recommended_action": "OPERATOR_REVIEW_REQUIRED",
+      "result": "NEEDS_OPERATOR_REVIEW",
+      "notes": "Service parent page; frontend served by CPT not native content"
+    },
+    {
+      "page_id": 7,
+      "title": "Психическое здоровье",
+      "status": "publish",
+      "post_content_length": 431,
+      "classification": "STARTER_PLACEHOLDER_NATIVE",
+      "result": "NEEDS_OPERATOR_REVIEW"
+    },
+    {
+      "page_id": 8,
+      "title": "Расстройства пищевого поведения",
+      "status": "publish",
+      "post_content_length": 431,
+      "classification": "STARTER_PLACEHOLDER_NATIVE",
+      "result": "NEEDS_OPERATOR_REVIEW"
+    },
+    {
+      "page_id": 9,
+      "title": "Генотипирование",
+      "status": "publish",
+      "post_content_length": 431,
+      "classification": "STARTER_PLACEHOLDER_NATIVE",
+      "result": "NEEDS_OPERATOR_REVIEW"
+    },
+    {
+      "page_id": 10,
+      "title": "Специалисты",
+      "status": "publish",
+      "post_content_length": 431,
+      "classification": "STARTER_PLACEHOLDER_NATIVE",
+      "result": "NEEDS_OPERATOR_REVIEW"
+    },
+    {
+      "page_id": 17,
+      "title": "Интервью и СМИ",
+      "status": "publish",
+      "post_content_length": 431,
+      "classification": "STARTER_PLACEHOLDER_NATIVE",
+      "result": "NEEDS_OPERATOR_REVIEW"
+    },
+    {
+      "page_id": 19,
+      "title": "Статьи",
+      "slug": "blog",
+      "status": "publish",
+      "post_content_length": 431,
+      "classification": "STARTER_PLACEHOLDER_NATIVE",
+      "result": "NEEDS_OPERATOR_REVIEW"
+    },
+    {
+      "page_id": 21,
+      "title": "Правовая информация",
+      "status": "publish",
+      "post_content_length": 431,
+      "classification": "STARTER_PLACEHOLDER_NATIVE",
+      "result": "NEEDS_OPERATOR_REVIEW"
+    },
+    {
+      "page_id": 25,
+      "title": "Политика конфиденциальности (системная)",
+      "status": "publish",
+      "post_content_length": 431,
+      "classification": "STARTER_PLACEHOLDER_NATIVE",
+      "result": "NEEDS_OPERATOR_REVIEW"
+    },
+    {
+      "page_id": 22,
+      "title": "Пользовательское соглашение",
+      "template": "page-templates/legal.php",
+      "post_content_length": 0,
+      "classification": "LEGAL_TEMPLATE_CLEARED_AWAITING_COPY",
+      "result": "NEEDS_OPERATOR_REVIEW"
+    },
+    {
+      "page_id": 23,
+      "title": "Согласие на обработку персональных данных",
+      "template": "page-templates/legal.php",
+      "post_content_length": 0,
+      "classification": "LEGAL_TEMPLATE_CLEARED_AWAITING_COPY",
+      "result": "NEEDS_OPERATOR_REVIEW"
+    },
+    {
+      "page_id": 24,
+      "title": "Политика Cookie-файлов",
+      "template": "page-templates/legal.php",
+      "post_content_length": 0,
+      "classification": "LEGAL_TEMPLATE_CLEARED_AWAITING_COPY",
+      "result": "NEEDS_OPERATOR_REVIEW"
+    }
+  ],
+  "summary": {
+    "native_legal_seed_pages": 1,
+    "starter_placeholder_pages": 9,
+    "legal_templates_awaiting_copy": 3,
+    "template_managed_pages_cleaned_d9m": 13
+  },
+  "result": "NEEDS_OPERATOR_REVIEW"
+}

@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-06 (V9-06D9-Y reviews admin visual QA + closure PASS)
+**Last updated:** 2026-07-06 (V9-06D9-Z WordPress readiness audit PARTIAL PASS)
 
-**Current WordPress phase:** V9-06D9-Y Reviews Admin Visual QA + Closure **PASS** — Reviews admin/frontend chain **CLOSED**. Operator confirmed «Проверил, всё хорошо. давай дальше» after D9-X binding repair. Home + `/otzyvy/` first review **Андрей, Москва**; source mode **OPTIONS**; 10 reviews on Home and archive; Site Settings duplicate absent; Home #4 teaser blocker absent. Frontend screenshots PASS; admin screenshots PARTIAL. Zero mutations in D9-Y. **Next: D9-Z WordPress readiness audit.** Report: `WORDPRESS/reports/FP-0002-V9-06D9Y-REVIEWS-ADMIN-VISUAL-QA-CLOSURE-REPORT-v1.md`. Prior D9-X: `WORDPRESS/reports/FP-0002-V9-06D9X-REVIEWS-ADMIN-TO-FRONTEND-BINDING-REPAIR-REPORT-v1.md`.
+**Current WordPress phase:** V9-06D9-Z WordPress Readiness Audit **PARTIAL PASS** — Runtime, routes, frontend key surfaces, and Reviews chain **READY/CLOSED**. Content/legal native pages **NEEDS_OPERATOR_REVIEW** (D9-M deferred set + legal templates). Admin/ACF **PARTIAL** (auth-gated screenshots; harmless trashed duplicate ACF groups). WordPress stable checkpoint **NOT READY**. **Next: V9-06E0 Legal / Native Content Review.** Report: `WORDPRESS/reports/FP-0002-V9-06D9Z-WORDPRESS-READINESS-AUDIT-REPORT-v1.md`. Prior D9-Y: Reviews chain CLOSED @ `00c9db03`.
 
 ## Active frontend workspace (V9)
 

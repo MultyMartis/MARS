@@ -1,0 +1,77 @@
+{
+  "phase": "V9-06D9-Z",
+  "generated_at": "2026-07-06T03:08:00+07:00",
+  "base_url": "http://shpigovsky.test",
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "expected_object": "Home page ID 4",
+      "php_fatal": false,
+      "template_fallback_mismatch": false,
+      "result": "PASS",
+      "notes": "Front page renders full V9-transplanted home sections"
+    },
+    {
+      "route": "/uslugi/",
+      "status": 200,
+      "expected_object": "Services hub page ID 5",
+      "php_fatal": false,
+      "template_fallback_mismatch": false,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "status": 200,
+      "expected_object": "Service parent CPT zavisimosti",
+      "php_fatal": false,
+      "template_fallback_mismatch": false,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "status": 200,
+      "expected_object": "Service CPT ID 74",
+      "php_fatal": false,
+      "template_fallback_mismatch": false,
+      "result": "PASS",
+      "service_id": 74
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/",
+      "status": 200,
+      "expected_object": "Service parent CPT psihicheskoe-zdorovie",
+      "php_fatal": false,
+      "template_fallback_mismatch": false,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "status": 200,
+      "expected_object": "Service parent CPT rasstroystva-pischevogo-povedeniya",
+      "php_fatal": false,
+      "template_fallback_mismatch": false,
+      "result": "PASS"
+    },
+    {
+      "route": "/kontakty/",
+      "status": 200,
+      "expected_object": "Contacts page ID 20",
+      "php_fatal": false,
+      "template_fallback_mismatch": false,
+      "result": "PASS"
+    },
+    {
+      "route": "/otzyvy/",
+      "status": 200,
+      "expected_object": "Reviews page ID 18",
+      "php_fatal": false,
+      "template_fallback_mismatch": false,
+      "result": "PASS",
+      "notes": "Archive card layout; first review Андрей, Москва; source OPTIONS"
+    }
+  ],
+  "all_routes_200": true,
+  "any_php_fatal": false,
+  "result": "READY"
+}

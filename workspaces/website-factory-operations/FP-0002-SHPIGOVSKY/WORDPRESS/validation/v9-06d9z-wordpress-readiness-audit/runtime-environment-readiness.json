@@ -1,0 +1,89 @@
+{
+  "phase": "V9-06D9-Z",
+  "generated_at": "2026-07-06T03:08:00+07:00",
+  "runtime_url": "http://shpigovsky.test/",
+  "runtime_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\",
+  "database": "mars_wp_fp0002",
+  "table_prefix": "fp02_",
+  "checks": [
+    {
+      "check": "runtime_http_reachable",
+      "result": "PASS",
+      "notes": "HTTP 200 on /"
+    },
+    {
+      "check": "database_readable",
+      "result": "PASS",
+      "notes": "Read-only pymysql probe to mars_wp_fp0002"
+    },
+    {
+      "check": "active_theme_shpigovsky",
+      "result": "PASS",
+      "value": "shpigovsky"
+    },
+    {
+      "check": "page_on_front_id_4",
+      "result": "PASS",
+      "value": "4"
+    },
+    {
+      "check": "show_on_front_page",
+      "result": "PASS",
+      "value": "page"
+    },
+    {
+      "check": "classic_editor_active",
+      "result": "PASS",
+      "plugins": ["classic-editor/classic-editor.php"]
+    },
+    {
+      "check": "classic_editor_replace_block",
+      "result": "PASS",
+      "value": "classic"
+    },
+    {
+      "check": "classic_editor_users_disallowed",
+      "result": "PASS",
+      "value": "disallow"
+    },
+    {
+      "check": "gutenberg_disabled",
+      "result": "PASS",
+      "notes": "Classic Editor plugin active; block editor not used for pages"
+    },
+    {
+      "check": "acf_pro_active",
+      "result": "PASS",
+      "plugins": ["advanced-custom-fields-pro/acf.php"]
+    },
+    {
+      "check": "shpigovsky_core_active",
+      "result": "PASS",
+      "plugins": ["shpigovsky-core/shpigovsky-core.php"]
+    },
+    {
+      "check": "acf_extended_pro_state",
+      "result": "DOCUMENTED",
+      "plugins": ["acf-extended-pro/acf-extended.php"],
+      "notes": "Active in runtime; classified operator-managed and not approved for FP-0002 use by default per SOURCE-AUTHORITY"
+    },
+    {
+      "check": "unexpected_plugin_changes",
+      "result": "PASS",
+      "active_plugins": [
+        "acf-extended-pro/acf-extended.php",
+        "advanced-custom-fields-pro/acf.php",
+        "classic-editor/classic-editor.php",
+        "metacode-wpilot/metacode-wpilot.php",
+        "shpigovsky-core/shpigovsky-core.php"
+      ],
+      "notes": "Matches D9-P runtime-admin-readonly-gate baseline; no install/update/delete in D9-Z"
+    },
+    {
+      "check": "wp_cli_available",
+      "result": "PARTIAL",
+      "notes": "wp-cli.phar present under X:\\MARS-Localhost\\tools\\wp-cli\\; php not in PATH for this session; DB probed via Python pymysql"
+    }
+  ],
+  "result": "READY"
+}

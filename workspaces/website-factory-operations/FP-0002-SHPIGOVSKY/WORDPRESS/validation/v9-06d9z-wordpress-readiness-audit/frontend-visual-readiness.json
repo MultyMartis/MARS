@@ -1,0 +1,63 @@
+{
+  "phase": "V9-06D9-Z",
+  "generated_at": "2026-07-06T03:08:00+07:00",
+  "areas": [
+    {
+      "area": "Home overall",
+      "status": "READY",
+      "notes": "Full home renders; hero, header, nav, messenger icons present; screenshot PASS"
+    },
+    {
+      "area": "Services hub",
+      "status": "READY",
+      "notes": "HTTP 200; hub template renders; screenshot PASS"
+    },
+    {
+      "area": "Service leaf (alcohol #74)",
+      "status": "READY",
+      "notes": "Priority MVP service page renders; screenshot PASS"
+    },
+    {
+      "area": "Contacts",
+      "status": "READY",
+      "notes": "Contacts template stacks render; screenshot PASS"
+    },
+    {
+      "area": "Reviews",
+      "status": "READY",
+      "notes": "Archive card list; 10 reviews; first Андрей, Москва; OPTIONS mode; screenshot PASS"
+    },
+    {
+      "area": "Header/footer",
+      "status": "READY",
+      "notes": "Global chrome present on all key routes"
+    },
+    {
+      "area": "Fonts/assets",
+      "status": "PARTIAL",
+      "notes": "Theme serves Inter from theme assets; historical D9-A /assets/fonts/ 404 class of issues may remain on non-home routes — not re-audited pixel-level in D9-Z"
+    },
+    {
+      "area": "Sliders/dots",
+      "status": "READY",
+      "notes": "Home reviews slider present; Swiper pagination repaired D9-E; operator confirmed unchanged D9-Y"
+    },
+    {
+      "area": "Broken images",
+      "status": "READY",
+      "notes": "No obvious broken-image placeholders on key routes; home DOM img probe clean"
+    },
+    {
+      "area": "Full V9 pixel parity",
+      "status": "DEFERRED",
+      "notes": "D9-A documented gaps; D9-B..H addressed major home/chrome parity; not a formal pixel-perfect sign-off"
+    }
+  ],
+  "dom_checks": {
+    "home_first_author": "Андрей, Москва",
+    "home_alexander_fallback_absent": true,
+    "otzyvy_first_author": "Андрей, Москва",
+    "source_mode": "OPTIONS"
+  },
+  "result": "READY"
+}

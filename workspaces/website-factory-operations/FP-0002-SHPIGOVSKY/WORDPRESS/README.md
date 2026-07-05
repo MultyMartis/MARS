@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06D9-Y REVIEWS ADMIN VISUAL QA + CLOSURE PASS — Reviews admin/frontend chain CLOSED; operator confirmed «всё хорошо»; Home + /otzyvy/ show Андрей; source OPTIONS; NEXT: D9-Z WordPress readiness audit
+**Status:** V9-06D9-Z WORDPRESS READINESS AUDIT PARTIAL PASS — Runtime/routes/frontend/Reviews READY; content/legal NEEDS_OPERATOR_REVIEW; NEXT: E0 legal/native content review
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---
@@ -290,3 +290,7 @@ D9-U **PASS**: Home `Reviews teaser` blocker removed (theme suppresses plugin-lo
 ## V9-06D9-V reviews admin + static layout reconciliation audit (2026-07-06)
 
 D9-V **PARTIAL PASS**: Read-only reconciliation audit. Operator findings after D9-U **substantiated**: duplicate Site Settings reviews module (stale duplicate ACF field-group DB post); empty top-level **Отзывы** admin (ACF storage context `option` vs `fp02-reviews` mismatch); `/otzyvy/` layout mismatch vs static V9 archive card list (WP uses Home slider + skeleton archive placeholder). Home slider matches static V9 Home authority. D9-U treated as committed but operator-unverified. Zero DB/source/theme/ACF JSON/runtime mutations. Screenshots NOT_CAPTURED (tooling). Evidence: `validation/v9-06d9v-reviews-admin-static-layout-reconciliation-audit/`. Report: `reports/FP-0002-V9-06D9V-REVIEWS-ADMIN-STATIC-LAYOUT-RECONCILIATION-AUDIT-REPORT-v1.md`. Next: D9-W combined admin + layout repair.
+
+## V9-06D9-Z WordPress readiness audit (2026-07-06)
+
+D9-Z **PARTIAL PASS**: Holistic read-only readiness audit after D9-L through D9-Y. Runtime/routes/frontend/Reviews **READY/CLOSED**; content/legal **NEEDS_OPERATOR_REVIEW**; admin/ACF **PARTIAL**. 8/8 key routes HTTP 200; 5 frontend + 3 admin (login gate) screenshots. Zero mutations. Strict HEAD gate **PASS** (`00c9db03`). WordPress stable checkpoint **NOT READY**. Evidence: `validation/v9-06d9z-wordpress-readiness-audit/`. Report: `reports/FP-0002-V9-06D9Z-WORDPRESS-READINESS-AUDIT-REPORT-v1.md`. Next: **CREATE_V9_06E0_LEGAL_NATIVE_CONTENT_REVIEW_TASK**.

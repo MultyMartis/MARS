@@ -1,0 +1,78 @@
+{
+  "phase": "V9-06D9-Z",
+  "generated_at": "2026-07-06T03:08:00+07:00",
+  "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "screenshots": {
+    "runtime-home-readiness-d9z.png": {
+      "captured": true,
+      "kind": "frontend",
+      "url": "http://shpigovsky.test/",
+      "bytes": 1083083,
+      "sha256": "1409D9796A98E81049D2535F33D5624DAFA1121F04FB7F0AC9D0BB7A75B653E4",
+      "result": "PASS"
+    },
+    "runtime-services-hub-readiness-d9z.png": {
+      "captured": true,
+      "kind": "frontend",
+      "url": "http://shpigovsky.test/uslugi/",
+      "bytes": 75106,
+      "sha256": "38C0201F56CCD673E81E61EBC679617616E3A15B79E19AADDD031099D60ABD2D",
+      "result": "PASS"
+    },
+    "runtime-service-74-readiness-d9z.png": {
+      "captured": true,
+      "kind": "frontend",
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "bytes": 139004,
+      "sha256": "B62CC9DB864626F5E3E7286565999CAB8195F6CF07489EF89BDE6A7DA28CB55B",
+      "result": "PASS"
+    },
+    "runtime-contacts-readiness-d9z.png": {
+      "captured": true,
+      "kind": "frontend",
+      "url": "http://shpigovsky.test/kontakty/",
+      "bytes": 91973,
+      "sha256": "B271F4CAB1B99F8A22C0699C702A8F83DCF6443360BA7C8C69FEF664B3A676DA",
+      "result": "PASS"
+    },
+    "runtime-reviews-readiness-d9z.png": {
+      "captured": true,
+      "kind": "frontend",
+      "url": "http://shpigovsky.test/otzyvy/",
+      "bytes": 112265,
+      "sha256": "6899761E3EDC4DFDD7D269DDE068C7992D3F51FDAA59D2DEAC28F60B63A38D18",
+      "result": "PASS"
+    },
+    "wp-admin-home-readiness-d9z.png": {
+      "captured": true,
+      "kind": "admin",
+      "url": "http://shpigovsky.test/wp-admin/post.php?post=4&action=edit",
+      "bytes": 24687,
+      "sha256": "DAF4AAD6C696D7D7B3C43053371FD1B57B8FC34E132BE5214F1D75AD9557282A",
+      "result": "PARTIAL",
+      "reason": "Shows wp-login.php — auth required for true admin screen"
+    },
+    "wp-admin-reviews-readiness-d9z.png": {
+      "captured": true,
+      "kind": "admin",
+      "url": "http://shpigovsky.test/wp-admin/admin.php?page=fp02-reviews",
+      "bytes": 25278,
+      "sha256": "FFA9DFD6B68910645AF2EB5B45CA7876460D7370C5A76B435A71084175A4CD93",
+      "result": "PARTIAL",
+      "reason": "Shows wp-login.php — auth required"
+    },
+    "wp-admin-site-settings-readiness-d9z.png": {
+      "captured": true,
+      "kind": "admin",
+      "url": "http://shpigovsky.test/wp-admin/admin.php?page=fp02-site-settings",
+      "bytes": 24984,
+      "sha256": "27EF401D5293798C0FC27760465650AD67A47D6B59F38962EDB699CFB4417B58",
+      "result": "PARTIAL",
+      "reason": "Shows wp-login.php — auth required"
+    }
+  },
+  "frontend_captured": 5,
+  "admin_captured": 3,
+  "admin_authenticated": 0,
+  "result": "PARTIAL"
+}

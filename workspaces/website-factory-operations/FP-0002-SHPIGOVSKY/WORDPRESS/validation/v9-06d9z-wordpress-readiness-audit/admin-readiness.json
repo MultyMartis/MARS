@@ -1,0 +1,58 @@
+{
+  "phase": "V9-06D9-Z",
+  "generated_at": "2026-07-06T03:08:00+07:00",
+  "task_mode": "READ_ONLY_AUDIT",
+  "areas": [
+    {
+      "area": "Home page #4 admin",
+      "status": "READY",
+      "notes": "Native editor hidden (D9-N); ACF Home group visible; post_content empty after D9-M; hero/gallery seeded"
+    },
+    {
+      "area": "Site Settings (fp02-site-settings)",
+      "status": "READY",
+      "notes": "Duplicate Reviews module absent (D9-W/D9-Y); contacts/modal CTA options present from D8-A"
+    },
+    {
+      "area": "Reviews admin (fp02-reviews)",
+      "status": "READY",
+      "notes": "Top-level menu registered D9-U; 10 rows in fp02-reviews_reviews_* options; first author Андрей, Москва (D9-X/Y); chain CLOSED"
+    },
+    {
+      "area": "Services admin",
+      "status": "READY",
+      "notes": "Service CPT ACF groups registered; MVP seed D8-C on priority service #74; hub seed D8-D on page #5"
+    },
+    {
+      "area": "Contacts admin",
+      "status": "READY",
+      "notes": "Page #20 ACF contacts group; D8-E seed applied; D9-P managed pages UX PASS"
+    },
+    {
+      "area": "Native editor hidden (template-managed)",
+      "status": "READY",
+      "notes": "D9-N allowlist hides editor on 13 template-managed pages"
+    },
+    {
+      "area": "Operator-review pages preserved",
+      "status": "READY",
+      "notes": "IDs 3,6-10,17,19,21,25 retain native editor and content per D9-P preservation QA"
+    },
+    {
+      "area": "Legal/operator-review pages",
+      "status": "NEEDS_OPERATOR_REVIEW",
+      "notes": "Draft privacy #3 (20k garbled seed); legal templates #22-24 cleared but need real copy review"
+    },
+    {
+      "area": "Authenticated admin screenshots",
+      "status": "PARTIAL",
+      "notes": "Headless capture shows wp-login.php only; operator confirmation + D9-X/Y DB/DOM evidence used"
+    },
+    {
+      "area": "Known blockers",
+      "status": "READY",
+      "notes": "No open Reviews chain blockers after D9-Y closure"
+    }
+  ],
+  "result": "PARTIAL"
+}
