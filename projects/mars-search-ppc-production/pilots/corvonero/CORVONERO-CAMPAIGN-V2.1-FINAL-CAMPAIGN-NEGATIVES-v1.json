@@ -1,0 +1,1664 @@
+{
+  "generated_at": "2026-06-30T12:55:31.000Z",
+  "policy": "V2.1_REBUILT_FROM_SCRATCH",
+  "template_junk_removed": [
+    "запчасти",
+    "ремонт",
+    "эвакуатор"
+  ],
+  "campaigns": [
+    {
+      "campaign_id": "CA-01-LOCAL",
+      "approved_safe_count": 23,
+      "rejected_count": 0,
+      "conflict_count_after_finalization": 0,
+      "items": [
+        {
+          "negative": "вакансия",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "работа программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "резюме",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "зарплата",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "стань программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "становится программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "скачать",
+          "category": "DOWNLOAD / FREE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "кряк",
+          "category": "DOWNLOAD / FREE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "сертификация",
+          "category": "EDUCATION",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "купить 1с",
+          "category": "BASE NON-COMMERCIAL",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "лицензия 1с",
+          "category": "BASE NON-COMMERCIAL",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удалённо",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удаленно",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "дистанционно",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "без выезда",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "по всей россии",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "по россии",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "по рф",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удалённый",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удаленный",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удалёнка",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удаленка",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "онлайн",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-01-REMOTE",
+      "approved_safe_count": 20,
+      "rejected_count": 1,
+      "conflict_count_after_finalization": 0,
+      "items": [
+        {
+          "negative": "вакансия",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "работа программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "резюме",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "зарплата",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "стань программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "становится программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "скачать",
+          "category": "DOWNLOAD / FREE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "кряк",
+          "category": "DOWNLOAD / FREE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "сертификация",
+          "category": "EDUCATION",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "купить 1с",
+          "category": "BASE NON-COMMERCIAL",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "лицензия 1с",
+          "category": "BASE NON-COMMERCIAL",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "новосибирск",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "новосибирский",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "новосибирская",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "нск",
+          "category": "GEO-MODE",
+          "decision": "REJECT",
+          "reason": "conflicts with 5 phrases"
+        },
+        {
+          "negative": "с выездом",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "выезд",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "в офис",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "на месте",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "приехать",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "с выездом специалиста",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-02-LOCAL",
+      "approved_safe_count": 23,
+      "rejected_count": 0,
+      "conflict_count_after_finalization": 0,
+      "items": [
+        {
+          "negative": "вакансия",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "работа программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "резюме",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "зарплата",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "стань программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "становится программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "скачать",
+          "category": "DOWNLOAD / FREE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "кряк",
+          "category": "DOWNLOAD / FREE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "сертификация",
+          "category": "EDUCATION",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "купить 1с",
+          "category": "BASE NON-COMMERCIAL",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "лицензия 1с",
+          "category": "BASE NON-COMMERCIAL",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удалённо",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удаленно",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "дистанционно",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "без выезда",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "по всей россии",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "по россии",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "по рф",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удалённый",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удаленный",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удалёнка",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удаленка",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "онлайн",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-02-REMOTE",
+      "approved_safe_count": 20,
+      "rejected_count": 1,
+      "conflict_count_after_finalization": 0,
+      "items": [
+        {
+          "negative": "вакансия",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "работа программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "резюме",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "зарплата",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "стань программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "становится программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "скачать",
+          "category": "DOWNLOAD / FREE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "кряк",
+          "category": "DOWNLOAD / FREE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "сертификация",
+          "category": "EDUCATION",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "купить 1с",
+          "category": "BASE NON-COMMERCIAL",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "лицензия 1с",
+          "category": "BASE NON-COMMERCIAL",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "новосибирск",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "новосибирский",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "новосибирская",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "нск",
+          "category": "GEO-MODE",
+          "decision": "REJECT",
+          "reason": "conflicts with 1 phrases"
+        },
+        {
+          "negative": "с выездом",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "выезд",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "в офис",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "на месте",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "приехать",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "с выездом специалиста",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-03-LOCAL",
+      "approved_safe_count": 23,
+      "rejected_count": 0,
+      "conflict_count_after_finalization": 0,
+      "items": [
+        {
+          "negative": "вакансия",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "работа программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "резюме",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "зарплата",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "стань программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "становится программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "скачать",
+          "category": "DOWNLOAD / FREE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "кряк",
+          "category": "DOWNLOAD / FREE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "сертификация",
+          "category": "EDUCATION",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "купить 1с",
+          "category": "BASE NON-COMMERCIAL",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "лицензия 1с",
+          "category": "BASE NON-COMMERCIAL",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удалённо",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удаленно",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "дистанционно",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "без выезда",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "по всей россии",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "по россии",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "по рф",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удалённый",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удаленный",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удалёнка",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удаленка",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "онлайн",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-03-REMOTE",
+      "approved_safe_count": 20,
+      "rejected_count": 1,
+      "conflict_count_after_finalization": 0,
+      "items": [
+        {
+          "negative": "вакансия",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "работа программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "резюме",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "зарплата",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "стань программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "становится программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "скачать",
+          "category": "DOWNLOAD / FREE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "кряк",
+          "category": "DOWNLOAD / FREE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "сертификация",
+          "category": "EDUCATION",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "купить 1с",
+          "category": "BASE NON-COMMERCIAL",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "лицензия 1с",
+          "category": "BASE NON-COMMERCIAL",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "новосибирск",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "новосибирский",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "новосибирская",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "нск",
+          "category": "GEO-MODE",
+          "decision": "REJECT",
+          "reason": "conflicts with 1 phrases"
+        },
+        {
+          "negative": "с выездом",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "выезд",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "в офис",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "на месте",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "приехать",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "с выездом специалиста",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-04-LOCAL",
+      "approved_safe_count": 23,
+      "rejected_count": 0,
+      "conflict_count_after_finalization": 0,
+      "items": [
+        {
+          "negative": "вакансия",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "работа программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "резюме",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "зарплата",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "стань программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "становится программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "скачать",
+          "category": "DOWNLOAD / FREE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "кряк",
+          "category": "DOWNLOAD / FREE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "сертификация",
+          "category": "EDUCATION",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "купить 1с",
+          "category": "BASE NON-COMMERCIAL",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "лицензия 1с",
+          "category": "BASE NON-COMMERCIAL",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удалённо",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удаленно",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "дистанционно",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "без выезда",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "по всей россии",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "по россии",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "по рф",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удалённый",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удаленный",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удалёнка",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удаленка",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "онлайн",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-04-REMOTE",
+      "approved_safe_count": 21,
+      "rejected_count": 0,
+      "conflict_count_after_finalization": 0,
+      "items": [
+        {
+          "negative": "вакансия",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "работа программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "резюме",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "зарплата",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "стань программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "становится программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "скачать",
+          "category": "DOWNLOAD / FREE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "кряк",
+          "category": "DOWNLOAD / FREE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "сертификация",
+          "category": "EDUCATION",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "купить 1с",
+          "category": "BASE NON-COMMERCIAL",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "лицензия 1с",
+          "category": "BASE NON-COMMERCIAL",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "новосибирск",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "новосибирский",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "новосибирская",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "нск",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "с выездом",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "выезд",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "в офис",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "на месте",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "приехать",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "с выездом специалиста",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-05-LOCAL",
+      "approved_safe_count": 24,
+      "rejected_count": 0,
+      "conflict_count_after_finalization": 0,
+      "items": [
+        {
+          "negative": "вакансия",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "работа программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "резюме",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "зарплата",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "стань программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "становится программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "скачать",
+          "category": "DOWNLOAD / FREE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "кряк",
+          "category": "DOWNLOAD / FREE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "сертификация",
+          "category": "EDUCATION",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "купить 1с",
+          "category": "BASE NON-COMMERCIAL",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "лицензия 1с",
+          "category": "BASE NON-COMMERCIAL",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "заказать коды маркировки",
+          "category": "SERVICE-SPECIFIC",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удалённо",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удаленно",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "дистанционно",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "без выезда",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "по всей россии",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "по россии",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "по рф",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удалённый",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удаленный",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удалёнка",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "удаленка",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "онлайн",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        }
+      ]
+    },
+    {
+      "campaign_id": "CA-05-REMOTE",
+      "approved_safe_count": 22,
+      "rejected_count": 0,
+      "conflict_count_after_finalization": 0,
+      "items": [
+        {
+          "negative": "вакансия",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "работа программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "резюме",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "зарплата",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "стань программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "становится программистом",
+          "category": "CAREER / EMPLOYMENT",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "скачать",
+          "category": "DOWNLOAD / FREE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "кряк",
+          "category": "DOWNLOAD / FREE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "сертификация",
+          "category": "EDUCATION",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "купить 1с",
+          "category": "BASE NON-COMMERCIAL",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "лицензия 1с",
+          "category": "BASE NON-COMMERCIAL",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "заказать коды маркировки",
+          "category": "SERVICE-SPECIFIC",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "новосибирск",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "новосибирский",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "новосибирская",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "нск",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "с выездом",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "выезд",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "в офис",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "на месте",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "приехать",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        },
+        {
+          "negative": "с выездом специалиста",
+          "category": "GEO-MODE",
+          "decision": "APPROVED_SAFE",
+          "reason": "zero conflicts"
+        }
+      ]
+    }
+  ],
+  "sets": {
+    "CA-01-LOCAL": [
+      "без выезда",
+      "вакансия",
+      "дистанционно",
+      "зарплата",
+      "кряк",
+      "купить 1с",
+      "лицензия 1с",
+      "онлайн",
+      "по всей россии",
+      "по россии",
+      "по рф",
+      "работа программистом",
+      "резюме",
+      "сертификация",
+      "скачать",
+      "становится программистом",
+      "стань программистом",
+      "удаленка",
+      "удаленно",
+      "удаленный",
+      "удалёнка",
+      "удалённо",
+      "удалённый"
+    ],
+    "CA-01-REMOTE": [
+      "в офис",
+      "вакансия",
+      "выезд",
+      "зарплата",
+      "кряк",
+      "купить 1с",
+      "лицензия 1с",
+      "на месте",
+      "новосибирск",
+      "новосибирская",
+      "новосибирский",
+      "приехать",
+      "работа программистом",
+      "резюме",
+      "с выездом",
+      "с выездом специалиста",
+      "сертификация",
+      "скачать",
+      "становится программистом",
+      "стань программистом"
+    ],
+    "CA-02-LOCAL": [
+      "без выезда",
+      "вакансия",
+      "дистанционно",
+      "зарплата",
+      "кряк",
+      "купить 1с",
+      "лицензия 1с",
+      "онлайн",
+      "по всей россии",
+      "по россии",
+      "по рф",
+      "работа программистом",
+      "резюме",
+      "сертификация",
+      "скачать",
+      "становится программистом",
+      "стань программистом",
+      "удаленка",
+      "удаленно",
+      "удаленный",
+      "удалёнка",
+      "удалённо",
+      "удалённый"
+    ],
+    "CA-02-REMOTE": [
+      "в офис",
+      "вакансия",
+      "выезд",
+      "зарплата",
+      "кряк",
+      "купить 1с",
+      "лицензия 1с",
+      "на месте",
+      "новосибирск",
+      "новосибирская",
+      "новосибирский",
+      "приехать",
+      "работа программистом",
+      "резюме",
+      "с выездом",
+      "с выездом специалиста",
+      "сертификация",
+      "скачать",
+      "становится программистом",
+      "стань программистом"
+    ],
+    "CA-03-LOCAL": [
+      "без выезда",
+      "вакансия",
+      "дистанционно",
+      "зарплата",
+      "кряк",
+      "купить 1с",
+      "лицензия 1с",
+      "онлайн",
+      "по всей россии",
+      "по россии",
+      "по рф",
+      "работа программистом",
+      "резюме",
+      "сертификация",
+      "скачать",
+      "становится программистом",
+      "стань программистом",
+      "удаленка",
+      "удаленно",
+      "удаленный",
+      "удалёнка",
+      "удалённо",
+      "удалённый"
+    ],
+    "CA-03-REMOTE": [
+      "в офис",
+      "вакансия",
+      "выезд",
+      "зарплата",
+      "кряк",
+      "купить 1с",
+      "лицензия 1с",
+      "на месте",
+      "новосибирск",
+      "новосибирская",
+      "новосибирский",
+      "приехать",
+      "работа программистом",
+      "резюме",
+      "с выездом",
+      "с выездом специалиста",
+      "сертификация",
+      "скачать",
+      "становится программистом",
+      "стань программистом"
+    ],
+    "CA-04-LOCAL": [
+      "без выезда",
+      "вакансия",
+      "дистанционно",
+      "зарплата",
+      "кряк",
+      "купить 1с",
+      "лицензия 1с",
+      "онлайн",
+      "по всей россии",
+      "по россии",
+      "по рф",
+      "работа программистом",
+      "резюме",
+      "сертификация",
+      "скачать",
+      "становится программистом",
+      "стань программистом",
+      "удаленка",
+      "удаленно",
+      "удаленный",
+      "удалёнка",
+      "удалённо",
+      "удалённый"
+    ],
+    "CA-04-REMOTE": [
+      "в офис",
+      "вакансия",
+      "выезд",
+      "зарплата",
+      "кряк",
+      "купить 1с",
+      "лицензия 1с",
+      "на месте",
+      "новосибирск",
+      "новосибирская",
+      "новосибирский",
+      "нск",
+      "приехать",
+      "работа программистом",
+      "резюме",
+      "с выездом",
+      "с выездом специалиста",
+      "сертификация",
+      "скачать",
+      "становится программистом",
+      "стань программистом"
+    ],
+    "CA-05-LOCAL": [
+      "без выезда",
+      "вакансия",
+      "дистанционно",
+      "заказать коды маркировки",
+      "зарплата",
+      "кряк",
+      "купить 1с",
+      "лицензия 1с",
+      "онлайн",
+      "по всей россии",
+      "по россии",
+      "по рф",
+      "работа программистом",
+      "резюме",
+      "сертификация",
+      "скачать",
+      "становится программистом",
+      "стань программистом",
+      "удаленка",
+      "удаленно",
+      "удаленный",
+      "удалёнка",
+      "удалённо",
+      "удалённый"
+    ],
+    "CA-05-REMOTE": [
+      "в офис",
+      "вакансия",
+      "выезд",
+      "заказать коды маркировки",
+      "зарплата",
+      "кряк",
+      "купить 1с",
+      "лицензия 1с",
+      "на месте",
+      "новосибирск",
+      "новосибирская",
+      "новосибирский",
+      "нск",
+      "приехать",
+      "работа программистом",
+      "резюме",
+      "с выездом",
+      "с выездом специалиста",
+      "сертификация",
+      "скачать",
+      "становится программистом",
+      "стань программистом"
+    ]
+  }
+}

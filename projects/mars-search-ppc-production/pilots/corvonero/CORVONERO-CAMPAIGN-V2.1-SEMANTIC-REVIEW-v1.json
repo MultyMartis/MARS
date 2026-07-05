@@ -1,0 +1,106 @@
+{
+  "generated_at": "2026-06-30T12:55:31.000Z",
+  "hold_operator_phrases": [
+    {
+      "phrase": "как написать тз для программиста 1с",
+      "source_campaign": "CA-01",
+      "source_group": "ca-01-specialist-extended",
+      "local_presence": false,
+      "remote_presence": false,
+      "classification": "HOLD_OPERATOR",
+      "final_target_campaign": "CA-01",
+      "final_target_mode": null,
+      "reason": "How-to без явного коммерческого сигнала",
+      "confidence": "MEDIUM"
+    },
+    {
+      "phrase": "нужен ли программист 1с",
+      "source_campaign": "CA-01",
+      "source_group": "ca-01-find-hire-specialist",
+      "local_presence": false,
+      "remote_presence": false,
+      "classification": "HOLD_OPERATOR",
+      "final_target_campaign": "CA-01",
+      "final_target_mode": null,
+      "reason": "Сомнительный информационный запрос «нужен ли программист»",
+      "confidence": "MEDIUM"
+    },
+    {
+      "phrase": "как писать тз программисту 1с",
+      "source_campaign": "CA-01",
+      "source_group": "ca-01-specialist-extended",
+      "local_presence": false,
+      "remote_presence": false,
+      "classification": "HOLD_OPERATOR",
+      "final_target_campaign": "CA-01",
+      "final_target_mode": null,
+      "reason": "How-to без явного коммерческого сигнала",
+      "confidence": "MEDIUM"
+    },
+    {
+      "phrase": "как написать техзадание для программиста 1с",
+      "source_campaign": "CA-01",
+      "source_group": "ca-01-specialist-extended",
+      "local_presence": false,
+      "remote_presence": false,
+      "classification": "HOLD_OPERATOR",
+      "final_target_campaign": "CA-01",
+      "final_target_mode": null,
+      "reason": "How-to без явного коммерческого сигнала",
+      "confidence": "MEDIUM"
+    },
+    {
+      "phrase": "как составить тз для программиста 1с",
+      "source_campaign": "CA-01",
+      "source_group": "ca-01-specialist-extended",
+      "local_presence": false,
+      "remote_presence": false,
+      "classification": "HOLD_OPERATOR",
+      "final_target_campaign": "CA-01",
+      "final_target_mode": null,
+      "reason": "How-to без явного коммерческого сигнала",
+      "confidence": "MEDIUM"
+    }
+  ],
+  "hold_operator_count": 5,
+  "hold_resolved_commercial": 0,
+  "cross_negative_deferred": [
+    {
+      "source_campaign": "CA-01",
+      "negative": "обслуживание",
+      "protected_target_campaign": "CA-02",
+      "included_phrases_affected": 4,
+      "conflict_count": 4,
+      "decision": "DEFER",
+      "reason": "Умеренный конфликт (2) — оценить коммерческую ценность"
+    },
+    {
+      "source_campaign": "CA-01",
+      "negative": "разработка",
+      "protected_target_campaign": "CA-03",
+      "included_phrases_affected": 8,
+      "conflict_count": 8,
+      "decision": "NARROW",
+      "reason": "Конфликт 4 — рекомендуется узкий минус вместо «разработка»"
+    },
+    {
+      "source_campaign": "CA-02",
+      "negative": "разработка",
+      "protected_target_campaign": "CA-03",
+      "included_phrases_affected": 8,
+      "conflict_count": 8,
+      "decision": "NARROW",
+      "reason": "Конфликт 4 — рекомендуется узкий минус вместо «разработка»"
+    },
+    {
+      "source_campaign": "CA-03",
+      "negative": "обслуживание",
+      "protected_target_campaign": "CA-02",
+      "included_phrases_affected": 4,
+      "conflict_count": 4,
+      "decision": "DEFER",
+      "reason": "Умеренный конфликт (2) — оценить коммерческую ценность"
+    }
+  ],
+  "operator_decisions_required": false
+}

@@ -1,0 +1,128 @@
+{
+  "authority_id": "corvonero-campaign-v2.1-group-negatives-v1",
+  "generated_at": "2026-06-30T12:55:31.000Z",
+  "groups": {
+    "ca-01-direct-service-order": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-01-find-hire-specialist": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-01-price-intent": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-01-remote-freelance-specialist": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-01-specialist-by-product": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-01-specialist-extended": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-01-specialist-search": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-02-direct-service-order": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-02-price-intent": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-02-support-and-maintenance": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-02-troubleshooting-not-working": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-03-direct-service-order": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-03-implementation": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-03-modification": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-04-integration": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-05-chestny-znak-service": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-05-integration": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-05-marking-codes": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-05-marking-setup": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-05-support-and-maintenance": {
+      "terms": [],
+      "rules": []
+    },
+    "ca-05-ts-piot": {
+      "terms": [],
+      "rules": []
+    }
+  },
+  "audit": [
+    {
+      "group_id": "ca-01-find-hire-specialist",
+      "negative": "программист 1с",
+      "decision": "REJECT",
+      "reason": "Dangerous group negative — blocks own phrases"
+    },
+    {
+      "group_id": "ca-01-specialist-extended",
+      "negative": "нужен",
+      "decision": "REJECT",
+      "reason": "Dangerous group negative — blocks own phrases"
+    },
+    {
+      "group_id": "ca-01-specialist-search",
+      "negative": "стоимость",
+      "decision": "REJECT",
+      "reason": "Dangerous group negative — blocks own phrases"
+    },
+    {
+      "group_id": "ca-01-specialist-search",
+      "negative": "найти",
+      "decision": "REJECT",
+      "reason": "Dangerous group negative — blocks own phrases"
+    },
+    {
+      "group_id": "ca-05-marking-setup",
+      "negative": "честный знак",
+      "decision": "REJECT",
+      "reason": "Dangerous group negative — blocks own phrases"
+    },
+    {
+      "group_id": "ca-05-marking-setup",
+      "negative": "коды маркировки",
+      "decision": "REJECT",
+      "reason": "Dangerous group negative — blocks own phrases"
+    }
+  ]
+}

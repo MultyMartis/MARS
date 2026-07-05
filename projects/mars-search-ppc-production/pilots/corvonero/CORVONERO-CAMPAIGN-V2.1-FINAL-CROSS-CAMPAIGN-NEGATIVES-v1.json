@@ -1,0 +1,160 @@
+{
+  "generated_at": "2026-06-30T12:55:31.000Z",
+  "rules": [
+    {
+      "source_campaign": "CA-01",
+      "negative": "сопровождение",
+      "protected_target_campaign": "CA-02",
+      "included_phrases_affected": 207,
+      "conflict_count": 207,
+      "decision": "REJECT",
+      "reason": "Слишком много конфликтов (120) с фразами целевой кампании"
+    },
+    {
+      "source_campaign": "CA-01",
+      "negative": "обслуживание",
+      "protected_target_campaign": "CA-02",
+      "included_phrases_affected": 4,
+      "conflict_count": 4,
+      "decision": "DEFER",
+      "reason": "Умеренный конфликт (2) — оценить коммерческую ценность"
+    },
+    {
+      "source_campaign": "CA-01",
+      "negative": "доработка",
+      "protected_target_campaign": "CA-03",
+      "included_phrases_affected": 86,
+      "conflict_count": 86,
+      "decision": "REJECT",
+      "reason": "Высокий конфликт (43) — широкий минус «доработка» блокирует смежные запросы"
+    },
+    {
+      "source_campaign": "CA-01",
+      "negative": "разработка",
+      "protected_target_campaign": "CA-03",
+      "included_phrases_affected": 8,
+      "conflict_count": 8,
+      "decision": "NARROW",
+      "reason": "Конфликт 4 — рекомендуется узкий минус вместо «разработка»"
+    },
+    {
+      "source_campaign": "CA-01",
+      "negative": "интеграция",
+      "protected_target_campaign": "CA-04",
+      "included_phrases_affected": 56,
+      "conflict_count": 56,
+      "decision": "REJECT",
+      "reason": "Высокий конфликт (30) — широкий минус «интеграция» блокирует смежные запросы"
+    },
+    {
+      "source_campaign": "CA-01",
+      "negative": "маркировка",
+      "protected_target_campaign": "CA-05",
+      "included_phrases_affected": 174,
+      "conflict_count": 174,
+      "decision": "REJECT",
+      "reason": "Слишком много конфликтов (87) с фразами целевой кампании"
+    },
+    {
+      "source_campaign": "CA-01",
+      "negative": "честный знак",
+      "protected_target_campaign": "CA-05",
+      "included_phrases_affected": 204,
+      "conflict_count": 204,
+      "decision": "REJECT",
+      "reason": "Слишком много конфликтов (102) с фразами целевой кампании"
+    },
+    {
+      "source_campaign": "CA-02",
+      "negative": "доработка",
+      "protected_target_campaign": "CA-03",
+      "included_phrases_affected": 86,
+      "conflict_count": 86,
+      "decision": "REJECT",
+      "reason": "Высокий конфликт (43) — широкий минус «доработка» блокирует смежные запросы"
+    },
+    {
+      "source_campaign": "CA-02",
+      "negative": "разработка",
+      "protected_target_campaign": "CA-03",
+      "included_phrases_affected": 8,
+      "conflict_count": 8,
+      "decision": "NARROW",
+      "reason": "Конфликт 4 — рекомендуется узкий минус вместо «разработка»"
+    },
+    {
+      "source_campaign": "CA-02",
+      "negative": "интеграция",
+      "protected_target_campaign": "CA-04",
+      "included_phrases_affected": 56,
+      "conflict_count": 56,
+      "decision": "REJECT",
+      "reason": "Высокий конфликт (30) — широкий минус «интеграция» блокирует смежные запросы"
+    },
+    {
+      "source_campaign": "CA-03",
+      "negative": "сопровождение",
+      "protected_target_campaign": "CA-02",
+      "included_phrases_affected": 207,
+      "conflict_count": 207,
+      "decision": "REJECT",
+      "reason": "Слишком много конфликтов (120) с фразами целевой кампании"
+    },
+    {
+      "source_campaign": "CA-03",
+      "negative": "обслуживание",
+      "protected_target_campaign": "CA-02",
+      "included_phrases_affected": 4,
+      "conflict_count": 4,
+      "decision": "DEFER",
+      "reason": "Умеренный конфликт (2) — оценить коммерческую ценность"
+    },
+    {
+      "source_campaign": "CA-03",
+      "negative": "интеграция",
+      "protected_target_campaign": "CA-04",
+      "included_phrases_affected": 56,
+      "conflict_count": 56,
+      "decision": "REJECT",
+      "reason": "Высокий конфликт (30) — широкий минус «интеграция» блокирует смежные запросы"
+    },
+    {
+      "source_campaign": "CA-03",
+      "negative": "маркировка",
+      "protected_target_campaign": "CA-05",
+      "included_phrases_affected": 174,
+      "conflict_count": 174,
+      "decision": "REJECT",
+      "reason": "Слишком много конфликтов (87) с фразами целевой кампании"
+    },
+    {
+      "source_campaign": "CA-04",
+      "negative": "маркировка",
+      "protected_target_campaign": "CA-05",
+      "included_phrases_affected": 174,
+      "conflict_count": 174,
+      "decision": "REJECT",
+      "reason": "Слишком много конфликтов (87) с фразами целевой кампании"
+    },
+    {
+      "source_campaign": "CA-04",
+      "negative": "честный знак",
+      "protected_target_campaign": "CA-05",
+      "included_phrases_affected": 204,
+      "conflict_count": 204,
+      "decision": "REJECT",
+      "reason": "Слишком много конфликтов (102) с фразами целевой кампании"
+    },
+    {
+      "source_campaign": "CA-05",
+      "negative": "программист",
+      "protected_target_campaign": "CA-01",
+      "included_phrases_affected": 539,
+      "conflict_count": 539,
+      "decision": "REJECT",
+      "reason": "Слишком много конфликтов (338) с фразами целевой кампании"
+    }
+  ],
+  "approved_safe_count": 0,
+  "binding_decision": "DO NOT APPLY IN CAMPAIGN V2.1"
+}

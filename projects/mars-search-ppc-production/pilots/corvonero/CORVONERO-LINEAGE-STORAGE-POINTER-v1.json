@@ -1,0 +1,79 @@
+{
+  "artifact": "CORVONERO-LINEAGE-STORAGE-POINTER-v1",
+  "project": "corvonero",
+  "scope": "V2.1-V2.5 historical lineage large row-level JSON storage route",
+  "created_at": "2026-07-05T05:25:00+07:00",
+  "repo_root": "X:\\AI MARS",
+  "storage_root": "X:\\AI MARS STORAGE",
+  "storage_folder": "X:\\AI MARS STORAGE\\archive\\corvonero\\lineage\\v2.1-v2.5-row-level-json-2026-07-05",
+  "policy": {
+    "repo_commit_strategy": "commit core and supporting lineage files; route large row-level JSON to Storage",
+    "source_authority": "historical lineage evidence only; not current launch authority",
+    "current_authority": "tracked V2.6/V2.6.1/V2.6.2 and later C2 hardening commits",
+    "execution_authorization": "none",
+    "direct_yandex_authorization": "none"
+  },
+  "files": [
+    {
+      "version": "V2.1",
+      "role": "row_level_phrase_allocation",
+      "repo_relative_path": "projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CAMPAIGN-V2.1-FINAL-PHRASE-ALLOCATION-v1.json",
+      "storage_path": "X:\\AI MARS STORAGE\\archive\\corvonero\\lineage\\v2.1-v2.5-row-level-json-2026-07-05\\CORVONERO-CAMPAIGN-V2.1-FINAL-PHRASE-ALLOCATION-v1.json",
+      "size_bytes": 674135,
+      "sha256": "fe1350ffff1e9381e8d906684fe963a2f022873d6faf40fac9df96168a7a87bb",
+      "copy_verified": true
+    },
+    {
+      "version": "V2.1",
+      "role": "row_level_semantic_audit",
+      "repo_relative_path": "projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CAMPAIGN-V2.1-SEMANTIC-AUDIT-v1.json",
+      "storage_path": "X:\\AI MARS STORAGE\\archive\\corvonero\\lineage\\v2.1-v2.5-row-level-json-2026-07-05\\CORVONERO-CAMPAIGN-V2.1-SEMANTIC-AUDIT-v1.json",
+      "size_bytes": 394800,
+      "sha256": "203d9a3e363d1dd24f274039aea3fcf46121d42c35b6a07be42e22ee2bf22036",
+      "copy_verified": true
+    },
+    {
+      "version": "V2.2",
+      "role": "row_level_strict_phrase_audit",
+      "repo_relative_path": "projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CAMPAIGN-V2.2-STRICT-PHRASE-AUDIT-v1.json",
+      "storage_path": "X:\\AI MARS STORAGE\\archive\\corvonero\\lineage\\v2.1-v2.5-row-level-json-2026-07-05\\CORVONERO-CAMPAIGN-V2.2-STRICT-PHRASE-AUDIT-v1.json",
+      "size_bytes": 608438,
+      "sha256": "d44b5e0b57cf1201a61eccd85214d2e493f5164456925b5b4b1e0a61babe4870",
+      "copy_verified": true
+    },
+    {
+      "version": "V2.3",
+      "role": "row_level_corrected_phrase_audit",
+      "repo_relative_path": "projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CAMPAIGN-V2.3-CORRECTED-PHRASE-AUDIT-v1.json",
+      "storage_path": "X:\\AI MARS STORAGE\\archive\\corvonero\\lineage\\v2.1-v2.5-row-level-json-2026-07-05\\CORVONERO-CAMPAIGN-V2.3-CORRECTED-PHRASE-AUDIT-v1.json",
+      "size_bytes": 683196,
+      "sha256": "a35aaf12950b789945c758e68a5b8aa8b84bbca31192056149236201f75a702a",
+      "copy_verified": true
+    },
+    {
+      "version": "V2.4",
+      "role": "row_level_final_phrase_authority",
+      "repo_relative_path": "projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CAMPAIGN-V2.4-FINAL-PHRASE-AUTHORITY-v1.json",
+      "storage_path": "X:\\AI MARS STORAGE\\archive\\corvonero\\lineage\\v2.1-v2.5-row-level-json-2026-07-05\\CORVONERO-CAMPAIGN-V2.4-FINAL-PHRASE-AUTHORITY-v1.json",
+      "size_bytes": 762812,
+      "sha256": "a9216536fd4791f956b1f935885580c5af676cb08c1ac7f7cbb83625537f7138",
+      "copy_verified": true
+    },
+    {
+      "version": "V2.5",
+      "role": "row_level_curated_phrase_authority",
+      "repo_relative_path": "projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CAMPAIGN-V2.5-CURATED-PHRASE-AUTHORITY-v1.json",
+      "storage_path": "X:\\AI MARS STORAGE\\archive\\corvonero\\lineage\\v2.1-v2.5-row-level-json-2026-07-05\\CORVONERO-CAMPAIGN-V2.5-CURATED-PHRASE-AUTHORITY-v1.json",
+      "size_bytes": 787887,
+      "sha256": "bc4c8768261a87cffa64e8d3ba24f929b55087bb6e0d4fdda656dffe0ff54f30",
+      "copy_verified": true
+    }
+  ],
+  "excluded_from_git_commit_subset": [
+    "projects/mars-search-ppc-production/pilots/corvonero/CORVONERO-CAMPAIGN-V2.1-GENERATION-v1.json"
+  ],
+  "notes": [
+    "Large row-level JSON files are preserved in Storage to avoid repo bloat while keeping replay evidence.",
+    "This ledger does not authorize script execution, Commander import, Direct launch, account mutation, advertising start, Storage mutation beyond the six copied files, Localhost mutation, Yandex/API access, or production execution."
+  ]
+}

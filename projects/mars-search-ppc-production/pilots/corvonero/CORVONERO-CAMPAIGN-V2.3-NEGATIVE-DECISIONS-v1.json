@@ -1,0 +1,2040 @@
+{
+  "generated_at": "2026-06-30T13:46:28.000Z",
+  "negatives": [
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "без выезда",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "REMOVE",
+      "reason": "LOCAL campaign should accept on-site-neutral queries; term too broad for LOCAL",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "вакансия",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "дистанционно",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "зарплата",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "кряк",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "купить 1с",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks software purchase intent — campaign sells services not licenses",
+      "sample_affected": [],
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "лицензия 1с",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "NARROW",
+      "reason": "Broad license term — keep only if phrase-match; no kept-phrase conflicts in V2.3",
+      "sample_affected": [],
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "онлайн",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "по всей россии",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks nationwide remote signal",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "по россии",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "по рф",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "работа программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "резюме",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "сертификация",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks certification lookup intent",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "скачать",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "становится программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "стань программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "удаленка",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "удаленно",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "удаленный",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "удалёнка",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "удалённо",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "negative": "удалённый",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "в офис",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "REMOTE campaign — blocks local-visit intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "вакансия",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "выезд",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "REMOTE campaign — blocks local-visit intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "зарплата",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "кряк",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "купить 1с",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks software purchase intent — campaign sells services not licenses",
+      "sample_affected": [],
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "лицензия 1с",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "NARROW",
+      "reason": "Broad license term — keep only if phrase-match; no kept-phrase conflicts in V2.3",
+      "sample_affected": [],
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "на месте",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "REMOTE campaign — blocks local-visit intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "новосибирск",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "REMOTE campaign — blocks local-visit intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "новосибирская",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "No conflict with V2.3 kept phrases; appropriate campaign filter",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "новосибирский",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "No conflict with V2.3 kept phrases; appropriate campaign filter",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "приехать",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "No conflict with V2.3 kept phrases; appropriate campaign filter",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "работа программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "резюме",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "с выездом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "REMOTE campaign — blocks local-visit intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "с выездом специалиста",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "No conflict with V2.3 kept phrases; appropriate campaign filter",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "сертификация",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks certification lookup intent",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "скачать",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "становится программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "negative": "стань программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "без выезда",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "REMOVE",
+      "reason": "LOCAL campaign should accept on-site-neutral queries; term too broad for LOCAL",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "вакансия",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "дистанционно",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "зарплата",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "кряк",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "купить 1с",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks software purchase intent — campaign sells services not licenses",
+      "sample_affected": [],
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "лицензия 1с",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "NARROW",
+      "reason": "Broad license term — keep only if phrase-match; no kept-phrase conflicts in V2.3",
+      "sample_affected": [],
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "онлайн",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "по всей россии",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks nationwide remote signal",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "по россии",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "по рф",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "работа программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "резюме",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "сертификация",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks certification lookup intent",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "скачать",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "становится программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "стань программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "удаленка",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "удаленно",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "удаленный",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "удалёнка",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "удалённо",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "negative": "удалённый",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "в офис",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "REMOTE campaign — blocks local-visit intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "вакансия",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "выезд",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "REMOTE campaign — blocks local-visit intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "зарплата",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "кряк",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "купить 1с",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks software purchase intent — campaign sells services not licenses",
+      "sample_affected": [],
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "лицензия 1с",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "NARROW",
+      "reason": "Broad license term — keep only if phrase-match; no kept-phrase conflicts in V2.3",
+      "sample_affected": [],
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "на месте",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "REMOTE campaign — blocks local-visit intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "новосибирск",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "REMOTE campaign — blocks local-visit intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "новосибирская",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "No conflict with V2.3 kept phrases; appropriate campaign filter",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "новосибирский",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "No conflict with V2.3 kept phrases; appropriate campaign filter",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "приехать",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "No conflict with V2.3 kept phrases; appropriate campaign filter",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "работа программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "резюме",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "с выездом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "REMOTE campaign — blocks local-visit intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "с выездом специалиста",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "No conflict with V2.3 kept phrases; appropriate campaign filter",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "сертификация",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks certification lookup intent",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "скачать",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "становится программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "negative": "стань программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "без выезда",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "REMOVE",
+      "reason": "LOCAL campaign should accept on-site-neutral queries; term too broad for LOCAL",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "вакансия",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "дистанционно",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "зарплата",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "кряк",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "купить 1с",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks software purchase intent — campaign sells services not licenses",
+      "sample_affected": [],
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "лицензия 1с",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "NARROW",
+      "reason": "Broad license term — keep only if phrase-match; no kept-phrase conflicts in V2.3",
+      "sample_affected": [],
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "онлайн",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "по всей россии",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks nationwide remote signal",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "по россии",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "по рф",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "работа программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "резюме",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "сертификация",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks certification lookup intent",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "скачать",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "становится программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "стань программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "удаленка",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "удаленно",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "удаленный",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "удалёнка",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "удалённо",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "negative": "удалённый",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "в офис",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "REMOTE campaign — blocks local-visit intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "вакансия",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "выезд",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "REMOTE campaign — blocks local-visit intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "зарплата",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "кряк",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "купить 1с",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks software purchase intent — campaign sells services not licenses",
+      "sample_affected": [],
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "лицензия 1с",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "NARROW",
+      "reason": "Broad license term — keep only if phrase-match; no kept-phrase conflicts in V2.3",
+      "sample_affected": [],
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "на месте",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "REMOTE campaign — blocks local-visit intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "новосибирск",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "REMOTE campaign — blocks local-visit intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "новосибирская",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "No conflict with V2.3 kept phrases; appropriate campaign filter",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "новосибирский",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "No conflict with V2.3 kept phrases; appropriate campaign filter",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "приехать",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "No conflict with V2.3 kept phrases; appropriate campaign filter",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "работа программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "резюме",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "с выездом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "REMOTE campaign — blocks local-visit intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "с выездом специалиста",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "No conflict with V2.3 kept phrases; appropriate campaign filter",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "сертификация",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks certification lookup intent",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "скачать",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "становится программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "negative": "стань программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "без выезда",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "REMOVE",
+      "reason": "LOCAL campaign should accept on-site-neutral queries; term too broad for LOCAL",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "вакансия",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "дистанционно",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "зарплата",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "кряк",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "купить 1с",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks software purchase intent — campaign sells services not licenses",
+      "sample_affected": [],
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "лицензия 1с",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "NARROW",
+      "reason": "Broad license term — keep only if phrase-match; no kept-phrase conflicts in V2.3",
+      "sample_affected": [],
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "онлайн",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "по всей россии",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks nationwide remote signal",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "по россии",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "по рф",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "работа программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "резюме",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "сертификация",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks certification lookup intent",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "скачать",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "становится программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "стань программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "удаленка",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "удаленно",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "удаленный",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "удалёнка",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "удалённо",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "negative": "удалённый",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "в офис",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "REMOTE campaign — blocks local-visit intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "вакансия",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "выезд",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "REMOTE campaign — blocks local-visit intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "зарплата",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "кряк",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "купить 1с",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks software purchase intent — campaign sells services not licenses",
+      "sample_affected": [],
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "лицензия 1с",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "NARROW",
+      "reason": "Broad license term — keep only if phrase-match; no kept-phrase conflicts in V2.3",
+      "sample_affected": [],
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "на месте",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "REMOTE campaign — blocks local-visit intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "новосибирск",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "REMOTE campaign — blocks local-visit intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "новосибирская",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "No conflict with V2.3 kept phrases; appropriate campaign filter",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "новосибирский",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "No conflict with V2.3 kept phrases; appropriate campaign filter",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "нск",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "No conflict with V2.3 kept phrases; appropriate campaign filter",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "приехать",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "No conflict with V2.3 kept phrases; appropriate campaign filter",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "работа программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "резюме",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "с выездом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "REMOTE campaign — blocks local-visit intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "с выездом специалиста",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "No conflict with V2.3 kept phrases; appropriate campaign filter",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "сертификация",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks certification lookup intent",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "скачать",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "становится программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "negative": "стань программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "без выезда",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "REMOVE",
+      "reason": "LOCAL campaign should accept on-site-neutral queries; term too broad for LOCAL",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "вакансия",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "дистанционно",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "заказать коды маркировки",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "No conflict with V2.3 kept phrases; appropriate campaign filter",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "зарплата",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "кряк",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "купить 1с",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks software purchase intent — campaign sells services not licenses",
+      "sample_affected": [],
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "лицензия 1с",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "NARROW",
+      "reason": "Broad license term — keep only if phrase-match; no kept-phrase conflicts in V2.3",
+      "sample_affected": [],
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "онлайн",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "по всей россии",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks nationwide remote signal",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "по россии",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "по рф",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "работа программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "резюме",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "сертификация",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks certification lookup intent",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "скачать",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "становится программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "стань программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "удаленка",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "удаленно",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "удаленный",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "удалёнка",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "удалённо",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "negative": "удалённый",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "LOCAL campaign — blocks remote intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "в офис",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "REMOTE campaign — blocks local-visit intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "вакансия",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "выезд",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "REMOTE campaign — blocks local-visit intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "заказать коды маркировки",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "No conflict with V2.3 kept phrases; appropriate campaign filter",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "зарплата",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "кряк",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "купить 1с",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks software purchase intent — campaign sells services not licenses",
+      "sample_affected": [],
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "лицензия 1с",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "NARROW",
+      "reason": "Broad license term — keep only if phrase-match; no kept-phrase conflicts in V2.3",
+      "sample_affected": [],
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "на месте",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "REMOTE campaign — blocks local-visit intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "новосибирск",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "REMOTE campaign — blocks local-visit intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "новосибирская",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "No conflict with V2.3 kept phrases; appropriate campaign filter",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "новосибирский",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "No conflict with V2.3 kept phrases; appropriate campaign filter",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "нск",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "No conflict with V2.3 kept phrases; appropriate campaign filter",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "приехать",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "No conflict with V2.3 kept phrases; appropriate campaign filter",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "работа программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "резюме",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "с выездом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "REMOTE campaign — blocks local-visit intent (expected)",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "с выездом специалиста",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "No conflict with V2.3 kept phrases; appropriate campaign filter",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "сертификация",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks certification lookup intent",
+      "sample_affected": [],
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "скачать",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "HOLD_OPERATOR"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "становится программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "negative": "стань программистом",
+      "included_phrases_affected": 0,
+      "conflict_count": 0,
+      "decision": "KEEP",
+      "reason": "Blocks career/junk intent",
+      "v22_decision": "KEEP"
+    }
+  ]
+}

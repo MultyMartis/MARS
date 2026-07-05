@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-06-30T14:24:18.000Z",
+  "audit_version": "V2.4-FINAL-AUTHORITY-v1",
+  "supersedes": "CORVONERO-CAMPAIGN-V2.3-CORRECTED-AUDIT",
+  "v23_status": "PARTIAL — MATERIAL ROW-LEVEL, GEO, GROUP AND NEGATIVE ERRORS REMAIN",
+  "verdict": "CORVONERO CAMPAIGN V2.4: PASS — FINAL SEMANTIC AUTHORITY READY FOR INDEPENDENT REVIEW",
+  "xlsx_generation": "NOT PERFORMED",
+  "accounting": {
+    "unique_phrases": 760,
+    "KEEP": 547,
+    "REJECT": 211,
+    "MOVE": 2,
+    "BOTH": 677,
+    "LOCAL_ONLY": 2,
+    "REMOTE_ONLY": 73,
+    "NONE": 8,
+    "final_groups": 37,
+    "final_ads": 37,
+    "negative_KEEP": 204,
+    "negative_REMOVE": 0,
+    "negative_NARROW": 15,
+    "v23_keep_to_reject": 12,
+    "v23_reject_to_keep": 5,
+    "geo_both_to_remote_only": 12,
+    "ca04_to_ca05_moves": 0,
+    "one_key_groups_merged": 2,
+    "generic_groups_removed": 0,
+    "rows_without_decision": 0,
+    "negative_hold_remaining": 0,
+    "validation_issues": 0
+  },
+  "validation": {
+    "issues": [],
+    "career_in_keep": []
+  },
+  "cross_campaign_negatives": {
+    "status": "NOT APPLIED",
+    "note": "Cross-campaign negatives not included in deployable authority.",
+    "future_embedded_campaign_negatives": "BLANK"
+  }
+}

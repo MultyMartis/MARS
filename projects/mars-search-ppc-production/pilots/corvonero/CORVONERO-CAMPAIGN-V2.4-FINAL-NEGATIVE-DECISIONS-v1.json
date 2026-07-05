@@ -1,0 +1,2195 @@
+{
+  "generated_at": "2026-06-30T14:24:18.000Z",
+  "negatives": [
+    {
+      "campaign": "CA-01-LOCAL",
+      "source_negative": "без выезда",
+      "final_negative": "без выезда",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — opposite delivery mode; blocks remote-only intent",
+      "v23_decision": "REMOVE"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "source_negative": "вакансия",
+      "final_negative": "вакансия",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "source_negative": "дистанционно",
+      "final_negative": "\"дистанционно\"",
+      "decision": "NARROW",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Broad remote signal on LOCAL — phrase-match; 0+ conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "source_negative": "зарплата",
+      "final_negative": "зарплата",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "source_negative": "кряк",
+      "final_negative": "кряк",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "source_negative": "купить 1с",
+      "final_negative": "купить 1с",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks software purchase — campaign sells services",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "source_negative": "лицензия 1с",
+      "final_negative": "\"лицензия 1с\"",
+      "decision": "NARROW",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Broad license term — phrase-match recommended",
+      "v23_decision": "NARROW"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "source_negative": "онлайн",
+      "final_negative": "онлайн",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "source_negative": "по всей россии",
+      "final_negative": "по всей россии",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "source_negative": "по россии",
+      "final_negative": "по россии",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "source_negative": "по рф",
+      "final_negative": "по рф",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "source_negative": "работа программистом",
+      "final_negative": "работа программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "source_negative": "резюме",
+      "final_negative": "резюме",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "source_negative": "сертификация",
+      "final_negative": "сертификация",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks certification lookup intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "source_negative": "скачать",
+      "final_negative": "скачать",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "source_negative": "становится программистом",
+      "final_negative": "становится программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "source_negative": "стань программистом",
+      "final_negative": "стань программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "source_negative": "удаленка",
+      "final_negative": "удаленка",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote-work slang",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "source_negative": "удаленно",
+      "final_negative": "удаленно",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "source_negative": "удаленный",
+      "final_negative": "удаленный",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "source_negative": "удалёнка",
+      "final_negative": "удалёнка",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote-work slang",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "source_negative": "удалённо",
+      "final_negative": "удалённо",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-LOCAL",
+      "source_negative": "удалённый",
+      "final_negative": "удалённый",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "source_negative": "в офис",
+      "final_negative": "в офис",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "REMOTE — blocks local-visit intent; no kept conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "source_negative": "вакансия",
+      "final_negative": "вакансия",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "source_negative": "выезд",
+      "final_negative": "выезд",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "REMOTE — blocks local-visit intent; no kept conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "source_negative": "зарплата",
+      "final_negative": "зарплата",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "source_negative": "кряк",
+      "final_negative": "кряк",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "source_negative": "купить 1с",
+      "final_negative": "купить 1с",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks software purchase — campaign sells services",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "source_negative": "лицензия 1с",
+      "final_negative": "\"лицензия 1с\"",
+      "decision": "NARROW",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Broad license term — phrase-match recommended",
+      "v23_decision": "NARROW"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "source_negative": "на месте",
+      "final_negative": "на месте",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "REMOTE — blocks local-visit intent; no kept conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "source_negative": "новосибирск",
+      "final_negative": "новосибирск",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "REMOTE — blocks local-visit intent; no kept conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "source_negative": "новосибирская",
+      "final_negative": "новосибирская",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Campaign-level negative appropriate for mode",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "source_negative": "новосибирский",
+      "final_negative": "новосибирский",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Campaign-level negative appropriate for mode",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "source_negative": "приехать",
+      "final_negative": "приехать",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Campaign-level negative appropriate for mode",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "source_negative": "работа программистом",
+      "final_negative": "работа программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "source_negative": "резюме",
+      "final_negative": "резюме",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "source_negative": "с выездом",
+      "final_negative": "с выездом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "REMOTE — blocks local-visit intent; no kept conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "source_negative": "с выездом специалиста",
+      "final_negative": "с выездом специалиста",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Campaign-level negative appropriate for mode",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "source_negative": "сертификация",
+      "final_negative": "сертификация",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks certification lookup intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "source_negative": "скачать",
+      "final_negative": "скачать",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "source_negative": "становится программистом",
+      "final_negative": "становится программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-01-REMOTE",
+      "source_negative": "стань программистом",
+      "final_negative": "стань программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "source_negative": "без выезда",
+      "final_negative": "без выезда",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — opposite delivery mode; blocks remote-only intent",
+      "v23_decision": "REMOVE"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "source_negative": "вакансия",
+      "final_negative": "вакансия",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "source_negative": "дистанционно",
+      "final_negative": "\"дистанционно\"",
+      "decision": "NARROW",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Broad remote signal on LOCAL — phrase-match; 0+ conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "source_negative": "зарплата",
+      "final_negative": "зарплата",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "source_negative": "кряк",
+      "final_negative": "кряк",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "source_negative": "купить 1с",
+      "final_negative": "купить 1с",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks software purchase — campaign sells services",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "source_negative": "лицензия 1с",
+      "final_negative": "\"лицензия 1с\"",
+      "decision": "NARROW",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Broad license term — phrase-match recommended",
+      "v23_decision": "NARROW"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "source_negative": "онлайн",
+      "final_negative": "онлайн",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "source_negative": "по всей россии",
+      "final_negative": "по всей россии",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "source_negative": "по россии",
+      "final_negative": "по россии",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "source_negative": "по рф",
+      "final_negative": "по рф",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "source_negative": "работа программистом",
+      "final_negative": "работа программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "source_negative": "резюме",
+      "final_negative": "резюме",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "source_negative": "сертификация",
+      "final_negative": "сертификация",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks certification lookup intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "source_negative": "скачать",
+      "final_negative": "скачать",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "source_negative": "становится программистом",
+      "final_negative": "становится программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "source_negative": "стань программистом",
+      "final_negative": "стань программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "source_negative": "удаленка",
+      "final_negative": "удаленка",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote-work slang",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "source_negative": "удаленно",
+      "final_negative": "удаленно",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "source_negative": "удаленный",
+      "final_negative": "удаленный",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "source_negative": "удалёнка",
+      "final_negative": "удалёнка",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote-work slang",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "source_negative": "удалённо",
+      "final_negative": "удалённо",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-LOCAL",
+      "source_negative": "удалённый",
+      "final_negative": "удалённый",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "source_negative": "в офис",
+      "final_negative": "в офис",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "REMOTE — blocks local-visit intent; no kept conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "source_negative": "вакансия",
+      "final_negative": "вакансия",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "source_negative": "выезд",
+      "final_negative": "выезд",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "REMOTE — blocks local-visit intent; no kept conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "source_negative": "зарплата",
+      "final_negative": "зарплата",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "source_negative": "кряк",
+      "final_negative": "кряк",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "source_negative": "купить 1с",
+      "final_negative": "купить 1с",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks software purchase — campaign sells services",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "source_negative": "лицензия 1с",
+      "final_negative": "\"лицензия 1с\"",
+      "decision": "NARROW",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Broad license term — phrase-match recommended",
+      "v23_decision": "NARROW"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "source_negative": "на месте",
+      "final_negative": "на месте",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "REMOTE — blocks local-visit intent; no kept conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "source_negative": "новосибирск",
+      "final_negative": "новосибирск",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "REMOTE — blocks local-visit intent; no kept conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "source_negative": "новосибирская",
+      "final_negative": "новосибирская",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Campaign-level negative appropriate for mode",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "source_negative": "новосибирский",
+      "final_negative": "новосибирский",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Campaign-level negative appropriate for mode",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "source_negative": "приехать",
+      "final_negative": "приехать",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Campaign-level negative appropriate for mode",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "source_negative": "работа программистом",
+      "final_negative": "работа программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "source_negative": "резюме",
+      "final_negative": "резюме",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "source_negative": "с выездом",
+      "final_negative": "с выездом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "REMOTE — blocks local-visit intent; no kept conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "source_negative": "с выездом специалиста",
+      "final_negative": "с выездом специалиста",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Campaign-level negative appropriate for mode",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "source_negative": "сертификация",
+      "final_negative": "сертификация",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks certification lookup intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "source_negative": "скачать",
+      "final_negative": "скачать",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "source_negative": "становится программистом",
+      "final_negative": "становится программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-02-REMOTE",
+      "source_negative": "стань программистом",
+      "final_negative": "стань программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "source_negative": "без выезда",
+      "final_negative": "без выезда",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — opposite delivery mode; blocks remote-only intent",
+      "v23_decision": "REMOVE"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "source_negative": "вакансия",
+      "final_negative": "вакансия",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "source_negative": "дистанционно",
+      "final_negative": "\"дистанционно\"",
+      "decision": "NARROW",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Broad remote signal on LOCAL — phrase-match; 0+ conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "source_negative": "зарплата",
+      "final_negative": "зарплата",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "source_negative": "кряк",
+      "final_negative": "кряк",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "source_negative": "купить 1с",
+      "final_negative": "купить 1с",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks software purchase — campaign sells services",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "source_negative": "лицензия 1с",
+      "final_negative": "\"лицензия 1с\"",
+      "decision": "NARROW",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Broad license term — phrase-match recommended",
+      "v23_decision": "NARROW"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "source_negative": "онлайн",
+      "final_negative": "онлайн",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "source_negative": "по всей россии",
+      "final_negative": "по всей россии",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "source_negative": "по россии",
+      "final_negative": "по россии",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "source_negative": "по рф",
+      "final_negative": "по рф",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "source_negative": "работа программистом",
+      "final_negative": "работа программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "source_negative": "резюме",
+      "final_negative": "резюме",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "source_negative": "сертификация",
+      "final_negative": "сертификация",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks certification lookup intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "source_negative": "скачать",
+      "final_negative": "скачать",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "source_negative": "становится программистом",
+      "final_negative": "становится программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "source_negative": "стань программистом",
+      "final_negative": "стань программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "source_negative": "удаленка",
+      "final_negative": "удаленка",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote-work slang",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "source_negative": "удаленно",
+      "final_negative": "удаленно",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "source_negative": "удаленный",
+      "final_negative": "удаленный",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "source_negative": "удалёнка",
+      "final_negative": "удалёнка",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote-work slang",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "source_negative": "удалённо",
+      "final_negative": "удалённо",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-LOCAL",
+      "source_negative": "удалённый",
+      "final_negative": "удалённый",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "source_negative": "в офис",
+      "final_negative": "в офис",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "REMOTE — blocks local-visit intent; no kept conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "source_negative": "вакансия",
+      "final_negative": "вакансия",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "source_negative": "выезд",
+      "final_negative": "выезд",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "REMOTE — blocks local-visit intent; no kept conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "source_negative": "зарплата",
+      "final_negative": "зарплата",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "source_negative": "кряк",
+      "final_negative": "кряк",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "source_negative": "купить 1с",
+      "final_negative": "купить 1с",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks software purchase — campaign sells services",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "source_negative": "лицензия 1с",
+      "final_negative": "\"лицензия 1с\"",
+      "decision": "NARROW",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Broad license term — phrase-match recommended",
+      "v23_decision": "NARROW"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "source_negative": "на месте",
+      "final_negative": "на месте",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "REMOTE — blocks local-visit intent; no kept conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "source_negative": "новосибирск",
+      "final_negative": "новосибирск",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "REMOTE — blocks local-visit intent; no kept conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "source_negative": "новосибирская",
+      "final_negative": "новосибирская",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Campaign-level negative appropriate for mode",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "source_negative": "новосибирский",
+      "final_negative": "новосибирский",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Campaign-level negative appropriate for mode",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "source_negative": "приехать",
+      "final_negative": "приехать",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Campaign-level negative appropriate for mode",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "source_negative": "работа программистом",
+      "final_negative": "работа программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "source_negative": "резюме",
+      "final_negative": "резюме",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "source_negative": "с выездом",
+      "final_negative": "с выездом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "REMOTE — blocks local-visit intent; no kept conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "source_negative": "с выездом специалиста",
+      "final_negative": "с выездом специалиста",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Campaign-level negative appropriate for mode",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "source_negative": "сертификация",
+      "final_negative": "сертификация",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks certification lookup intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "source_negative": "скачать",
+      "final_negative": "скачать",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "source_negative": "становится программистом",
+      "final_negative": "становится программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-03-REMOTE",
+      "source_negative": "стань программистом",
+      "final_negative": "стань программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "source_negative": "без выезда",
+      "final_negative": "без выезда",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — opposite delivery mode; blocks remote-only intent",
+      "v23_decision": "REMOVE"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "source_negative": "вакансия",
+      "final_negative": "вакансия",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "source_negative": "дистанционно",
+      "final_negative": "\"дистанционно\"",
+      "decision": "NARROW",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Broad remote signal on LOCAL — phrase-match; 0+ conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "source_negative": "зарплата",
+      "final_negative": "зарплата",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "source_negative": "кряк",
+      "final_negative": "кряк",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "source_negative": "купить 1с",
+      "final_negative": "купить 1с",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks software purchase — campaign sells services",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "source_negative": "лицензия 1с",
+      "final_negative": "\"лицензия 1с\"",
+      "decision": "NARROW",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Broad license term — phrase-match recommended",
+      "v23_decision": "NARROW"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "source_negative": "онлайн",
+      "final_negative": "онлайн",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "source_negative": "по всей россии",
+      "final_negative": "по всей россии",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "source_negative": "по россии",
+      "final_negative": "по россии",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "source_negative": "по рф",
+      "final_negative": "по рф",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "source_negative": "работа программистом",
+      "final_negative": "работа программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "source_negative": "резюме",
+      "final_negative": "резюме",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "source_negative": "сертификация",
+      "final_negative": "сертификация",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks certification lookup intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "source_negative": "скачать",
+      "final_negative": "скачать",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "source_negative": "становится программистом",
+      "final_negative": "становится программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "source_negative": "стань программистом",
+      "final_negative": "стань программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "source_negative": "удаленка",
+      "final_negative": "удаленка",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote-work slang",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "source_negative": "удаленно",
+      "final_negative": "удаленно",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "source_negative": "удаленный",
+      "final_negative": "удаленный",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "source_negative": "удалёнка",
+      "final_negative": "удалёнка",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote-work slang",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "source_negative": "удалённо",
+      "final_negative": "удалённо",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-LOCAL",
+      "source_negative": "удалённый",
+      "final_negative": "удалённый",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "source_negative": "в офис",
+      "final_negative": "в офис",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "REMOTE — blocks local-visit intent; no kept conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "source_negative": "вакансия",
+      "final_negative": "вакансия",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "source_negative": "выезд",
+      "final_negative": "выезд",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "REMOTE — blocks local-visit intent; no kept conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "source_negative": "зарплата",
+      "final_negative": "зарплата",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "source_negative": "кряк",
+      "final_negative": "кряк",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "source_negative": "купить 1с",
+      "final_negative": "купить 1с",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks software purchase — campaign sells services",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "source_negative": "лицензия 1с",
+      "final_negative": "\"лицензия 1с\"",
+      "decision": "NARROW",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Broad license term — phrase-match recommended",
+      "v23_decision": "NARROW"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "source_negative": "на месте",
+      "final_negative": "на месте",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "REMOTE — blocks local-visit intent; no kept conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "source_negative": "новосибирск",
+      "final_negative": "новосибирск",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "REMOTE — blocks local-visit intent; no kept conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "source_negative": "новосибирская",
+      "final_negative": "новосибирская",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Campaign-level negative appropriate for mode",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "source_negative": "новосибирский",
+      "final_negative": "новосибирский",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Campaign-level negative appropriate for mode",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "source_negative": "нск",
+      "final_negative": "нск",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Campaign-level negative appropriate for mode",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "source_negative": "приехать",
+      "final_negative": "приехать",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Campaign-level negative appropriate for mode",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "source_negative": "работа программистом",
+      "final_negative": "работа программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "source_negative": "резюме",
+      "final_negative": "резюме",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "source_negative": "с выездом",
+      "final_negative": "с выездом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "REMOTE — blocks local-visit intent; no kept conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "source_negative": "с выездом специалиста",
+      "final_negative": "с выездом специалиста",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Campaign-level negative appropriate for mode",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "source_negative": "сертификация",
+      "final_negative": "сертификация",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks certification lookup intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "source_negative": "скачать",
+      "final_negative": "скачать",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "source_negative": "становится программистом",
+      "final_negative": "становится программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-04-REMOTE",
+      "source_negative": "стань программистом",
+      "final_negative": "стань программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "source_negative": "без выезда",
+      "final_negative": "без выезда",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — opposite delivery mode; blocks remote-only intent",
+      "v23_decision": "REMOVE"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "source_negative": "вакансия",
+      "final_negative": "вакансия",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "source_negative": "дистанционно",
+      "final_negative": "\"дистанционно\"",
+      "decision": "NARROW",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Broad remote signal on LOCAL — phrase-match; 0+ conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "source_negative": "заказать коды маркировки",
+      "final_negative": "заказать коды маркировки",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Campaign-level negative appropriate for mode",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "source_negative": "зарплата",
+      "final_negative": "зарплата",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "source_negative": "кряк",
+      "final_negative": "кряк",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "source_negative": "купить 1с",
+      "final_negative": "купить 1с",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks software purchase — campaign sells services",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "source_negative": "лицензия 1с",
+      "final_negative": "\"лицензия 1с\"",
+      "decision": "NARROW",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Broad license term — phrase-match recommended",
+      "v23_decision": "NARROW"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "source_negative": "онлайн",
+      "final_negative": "онлайн",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "source_negative": "по всей россии",
+      "final_negative": "по всей россии",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "source_negative": "по россии",
+      "final_negative": "по россии",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "source_negative": "по рф",
+      "final_negative": "по рф",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "source_negative": "работа программистом",
+      "final_negative": "работа программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "source_negative": "резюме",
+      "final_negative": "резюме",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "source_negative": "сертификация",
+      "final_negative": "сертификация",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks certification lookup intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "source_negative": "скачать",
+      "final_negative": "скачать",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "source_negative": "становится программистом",
+      "final_negative": "становится программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "source_negative": "стань программистом",
+      "final_negative": "стань программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "source_negative": "удаленка",
+      "final_negative": "удаленка",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote-work slang",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "source_negative": "удаленно",
+      "final_negative": "удаленно",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "source_negative": "удаленный",
+      "final_negative": "удаленный",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "source_negative": "удалёнка",
+      "final_negative": "удалёнка",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote-work slang",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "source_negative": "удалённо",
+      "final_negative": "удалённо",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-LOCAL",
+      "source_negative": "удалённый",
+      "final_negative": "удалённый",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "LOCAL — blocks remote delivery signal",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "source_negative": "в офис",
+      "final_negative": "в офис",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "REMOTE — blocks local-visit intent; no kept conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "source_negative": "вакансия",
+      "final_negative": "вакансия",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "source_negative": "выезд",
+      "final_negative": "выезд",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "REMOTE — blocks local-visit intent; no kept conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "source_negative": "заказать коды маркировки",
+      "final_negative": "заказать коды маркировки",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Campaign-level negative appropriate for mode",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "source_negative": "зарплата",
+      "final_negative": "зарплата",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "source_negative": "кряк",
+      "final_negative": "кряк",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "source_negative": "купить 1с",
+      "final_negative": "купить 1с",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks software purchase — campaign sells services",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "source_negative": "лицензия 1с",
+      "final_negative": "\"лицензия 1с\"",
+      "decision": "NARROW",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Broad license term — phrase-match recommended",
+      "v23_decision": "NARROW"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "source_negative": "на месте",
+      "final_negative": "на месте",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "REMOTE — blocks local-visit intent; no kept conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "source_negative": "новосибирск",
+      "final_negative": "новосибирск",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "REMOTE — blocks local-visit intent; no kept conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "source_negative": "новосибирская",
+      "final_negative": "новосибирская",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Campaign-level negative appropriate for mode",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "source_negative": "новосибирский",
+      "final_negative": "новосибирский",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Campaign-level negative appropriate for mode",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "source_negative": "нск",
+      "final_negative": "нск",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Campaign-level negative appropriate for mode",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "source_negative": "приехать",
+      "final_negative": "приехать",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Campaign-level negative appropriate for mode",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "source_negative": "работа программистом",
+      "final_negative": "работа программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "source_negative": "резюме",
+      "final_negative": "резюме",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "source_negative": "с выездом",
+      "final_negative": "с выездом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "REMOTE — blocks local-visit intent; no kept conflicts",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "source_negative": "с выездом специалиста",
+      "final_negative": "с выездом специалиста",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Campaign-level negative appropriate for mode",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "source_negative": "сертификация",
+      "final_negative": "сертификация",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks certification lookup intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "source_negative": "скачать",
+      "final_negative": "скачать",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "source_negative": "становится программистом",
+      "final_negative": "становится программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    },
+    {
+      "campaign": "CA-05-REMOTE",
+      "source_negative": "стань программистом",
+      "final_negative": "стань программистом",
+      "decision": "KEEP",
+      "conflict_count": 0,
+      "affected_phrases": "",
+      "reason": "Blocks career/junk intent",
+      "v23_decision": "KEEP"
+    }
+  ]
+}
