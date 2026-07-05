@@ -16,7 +16,7 @@
 | **First controlled Production change** | **COMPLETE** — Run 4.173; single-file text-only FTP deploy |
 | **Catalog default sort (Production)** | **COMPLETE** — Run 4.176; default `pd.name ASC` in `category.php` |
 | **Catalog sort menu (Production)** | **COMPLETE** — Run 4.177; menu order in `category.twig`; «Умолчанию» removed |
-| **MARS 1C cron wrapper (Production)** | **MANUAL RUN VERIFIED** — Run 4.181; first controlled import SUCCESS; reports `/storage/mars-tools/cron/reports/`; Sergey legacy preserved; Beget cron **not activated**; activation **ready** |
+| **MARS 1C cron wrapper (Production)** | **ACTIVATION READY** — Run 4.182; wrapper gates PASS; HTTP gateway command prepared; manual run 4.181 SUCCESS; Beget cron **not activated** — operator panel HITL |
 
 **TEST-derived knowledge classification:** Implementation evidence and reusable technical knowledge. **Not** automatic proof of current Production parity.
 
@@ -201,6 +201,30 @@ Proven operational boundary:
 
 ```text
 MARS wrapper manual 1C import on Production — SUCCESS — Sergey legacy preserved — Beget cron not activated
+```
+
+### MARS 1C Beget cron activation (Run 4.182 — 2026-07-06)
+
+| Field | Value |
+|-------|-------|
+| Operation | `SITE-002-PROD-CRON-BEGET-ACTIVATE-01` |
+| Status | **ACTIVATION READY — OPERATOR PANEL ACTION REQUIRED** |
+| Wrapper gates | dry-run/status **200** · run without token **403** · lock **free** |
+| Manual run prerequisite | Run 4.181 **SUCCESS** — `mars_1c_import_2026-07-05_205934.txt` |
+| Cron schedule (Moscow) | `0 8 * * *` (= 12:00 Barnaul) |
+| Cron command channel | HTTP gateway — `mars_1c_http_gateway.php?mode=run&token=…` |
+| Token fingerprint | `7f113d` (actual command in Storage only) |
+| Beget panel inspection | **SAFE UNKNOWN** — SSH `crontab` unavailable |
+| Beget cron row created | **No** (operator HITL) |
+| Import in this operation | **No** |
+| Legacy Sergey import | **PRESERVED** |
+| Checkpoint | unchanged — `SITE-002-STABLE-PROD-CRON-MANUAL-RUN-01` |
+| Report | [../reports/SITE-002-PROD-CRON-BEGET-ACTIVATE-01.md](../reports/SITE-002-PROD-CRON-BEGET-ACTIVATE-01.md) |
+
+Proven operational boundary:
+
+```text
+MARS Beget cron activation prepared — wrapper ready — panel save pending operator
 ```
 
 ---

@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-06 (Run 4.181 — MARS 1C cron manual run verified)
+**Last updated:** 2026-07-06 (Run 4.182 — Beget 1C cron activation ready; operator panel HITL)
 
 ---
 
@@ -70,7 +70,7 @@ Do not claim that Production exactly matches TEST unless evidence proves it.
 | Post-corporate-page checkpoints | Home Commercial Trust · Corporate Intro · Custom Proof Strip · Delivery Summary · PDP Body Category Classes |
 | Production baseline parent | [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
 | Current Production checkpoint | [baselines/SITE-002-STABLE-PROD-CRON-MANUAL-RUN-01.md](baselines/SITE-002-STABLE-PROD-CRON-MANUAL-RUN-01.md) |
-| MARS 1C cron wrapper | **MANUAL RUN VERIFIED** — first controlled import **SUCCESS** (Run 4.181); wrapper v1.1.0; HTTP gateway channel; TXT reports `/storage/mars-tools/cron/reports/`; latest run `mars_1c_import_2026-07-05_205934.txt`; Sergey legacy **preserved**; Beget cron **not activated**; activation **ready**; recommended schedule `0 8 * * *` (Moscow → 12:00 Barnaul) |
+| MARS 1C cron wrapper | **ACTIVATION READY** (Run 4.182) — manual run **SUCCESS** (Run 4.181); wrapper v1.1.0; HTTP gateway channel; TXT reports `/storage/mars-tools/cron/reports/`; latest run `mars_1c_import_2026-07-05_205934.txt`; Sergey legacy **preserved**; Beget cron **not activated** — operator panel HITL; schedule `0 8 * * *` (Moscow → 12:00 Barnaul); command in Storage `SITE-002-PROD-CRON-BEGET-ACTIVATE-01/cron-command/` |
 | Catalog default sort (Production) | `pd.name ASC` when `sort`/`order` omitted |
 
 ---
