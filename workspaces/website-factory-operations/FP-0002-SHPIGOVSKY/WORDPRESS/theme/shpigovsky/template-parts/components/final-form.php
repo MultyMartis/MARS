@@ -11,19 +11,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$heading = shpigovsky_get_home_field( 'home_cta_title' );
-$lead    = shpigovsky_get_home_field( 'home_cta_text' );
+$heading = shpigovsky_home_text_or_fallback( 'home_cta_title', __( 'Остались вопросы?', 'shpigovsky' ) );
+$lead    = shpigovsky_home_text_or_fallback(
+	'home_cta_text',
+	__( 'Опишите вашу ситуацию в форме заявки, и мы расскажем, как сможем помочь', 'shpigovsky' )
+);
 
-if ( '' === $heading ) {
-	$heading = __( 'Остались вопросы?', 'shpigovsky' );
-}
-
-if ( '' === $lead ) {
-	$lead = __( 'Опишите вашу ситуацию в форме заявки, и мы расскажем, как сможем помочь', 'shpigovsky' );
-}
-
-// D9-D: static V9 submit label.
-$submit_label = __( 'Записаться на консультацию', 'shpigovsky' );
+$submit_label = shpigovsky_chrome_label_or_fallback(
+	'default_button_label',
+	__( 'Записаться на консультацию', 'shpigovsky' )
+);
 
 $consent_url = home_url( '/consent-personal-data/' );
 $privacy_url = home_url( '/privacy-policy/' );

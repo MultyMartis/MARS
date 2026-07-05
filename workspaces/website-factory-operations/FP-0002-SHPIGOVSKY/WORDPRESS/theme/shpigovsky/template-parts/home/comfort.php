@@ -12,18 +12,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$comfort_heading = shpigovsky_home_text_or_fallback( 'home_comfort_heading', 'Комфорт, приватность, забота' );
+$comfort_lead    = shpigovsky_home_text_or_fallback(
+	'home_comfort_lead',
+	'Разговор&nbsp;— это уже первый шаг. Мы расскажем, что можем предложить именно вам или вашему близкому&nbsp;— без давления и&nbsp;без шаблонных ответов.'
+);
+
 ?>
 <section data-reveal class="comfort"  aria-labelledby="comfort-heading">
   <div class="container">
     <div class="comfort__head">
-      <h2 class="comfort__heading" id="comfort-heading">Комфорт, приватность, забота</h2>
+      <h2 class="comfort__heading" id="comfort-heading"><?php echo esc_html( $comfort_heading ); ?></h2>
       <a class="comfort__all-link" href="<?php echo esc_url( home_url( '/o-centre/galereya-o-dome/' ) ); ?>">
         <span class="comfort__all-text">подробнее о&nbsp;доме</span>
         <span class="comfort__all-icon" aria-hidden="true"><i class="fas fa-play"></i></span>
       </a>
     </div>
 
-    <p class="comfort__lead">Разговор&nbsp;— это уже первый шаг. Мы расскажем, что можем предложить именно вам или вашему близкому&nbsp;— без давления и&nbsp;без шаблонных ответов.</p>
+    <p class="comfort__lead"><?php echo wp_kses_post( $comfort_lead ); ?></p>
 
     
       <div class="comfort__gallery">

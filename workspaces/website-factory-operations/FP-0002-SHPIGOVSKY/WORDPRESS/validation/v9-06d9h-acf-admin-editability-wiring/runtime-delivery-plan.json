@@ -1,0 +1,27 @@
+{
+  "task": "V9-06D9-H",
+  "generated_at": "2026-07-05T14:05:00+07:00",
+  "mode": "bounded_copy",
+  "theme_target": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky/wp-content/themes/shpigovsky/",
+  "acf_target": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky/wp-content/acf-json/",
+  "files": [
+    "theme/shpigovsky/functions.php",
+    "theme/shpigovsky/inc/home-fallbacks.php",
+    "theme/shpigovsky/template-parts/home/hero.php",
+    "theme/shpigovsky/template-parts/home/recovery-intro.php",
+    "theme/shpigovsky/template-parts/home/faq.php",
+    "theme/shpigovsky/template-parts/home/gallery.php",
+    "theme/shpigovsky/template-parts/home/feature-grid.php",
+    "theme/shpigovsky/template-parts/home/specialists.php",
+    "theme/shpigovsky/template-parts/home/comfort.php",
+    "theme/shpigovsky/template-parts/home/reviews.php",
+    "theme/shpigovsky/template-parts/home/articles-teaser.php",
+    "theme/shpigovsky/template-parts/components/final-form.php",
+    "theme/shpigovsky/template-parts/layout/footer.php",
+    "acf-json/group_fp02_page_home.json"
+  ],
+  "mirror": false,
+  "purge": false,
+  "deletes": 0,
+  "result": "PASS"
+}

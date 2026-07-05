@@ -1,0 +1,84 @@
+{
+  "task": "V9-06D9-H",
+  "generated_at": "2026-07-05T14:05:00+07:00",
+  "principles": [
+    "V9 HTML visual authority preserved",
+    "Static fallback when ACF empty",
+    "No DB seed in D9-H",
+    "Existing field names preserved"
+  ],
+  "waves": [
+    {
+      "area": "hero",
+      "template": "hero.php",
+      "acf": ["home_hero_slides", "default_button_label (options)"],
+      "fallback": "theme hero asset + static title/tagline/CTA",
+      "risk": "LOW"
+    },
+    {
+      "area": "recovery-intro",
+      "template": "recovery-intro.php",
+      "acf": ["home_recovery_intro_heading", "home_recovery_intro_lead_1", "home_recovery_intro_lead_2", "home_intro_bands"],
+      "fallback": "inc/home-fallbacks.php static V9 copy",
+      "risk": "LOW"
+    },
+    {
+      "area": "faq",
+      "template": "faq.php",
+      "acf": ["home_faq_heading", "home_faq_items"],
+      "fallback": "10-item static accordion",
+      "risk": "LOW"
+    },
+    {
+      "area": "gallery",
+      "template": "gallery.php",
+      "acf": ["home_gallery_media"],
+      "fallback": "4 theme gallery assets",
+      "risk": "LOW"
+    },
+    {
+      "area": "feature-grid",
+      "template": "feature-grid.php",
+      "acf": ["home_advantages"],
+      "fallback": "6 static cards",
+      "risk": "LOW"
+    },
+    {
+      "area": "section-headings",
+      "template": "specialists/comfort/reviews/articles-teaser",
+      "acf": ["home_specialists_heading", "home_comfort_heading", "home_comfort_lead", "home_reviews_heading", "home_articles_heading"],
+      "fallback": "static V9 headings",
+      "risk": "LOW"
+    },
+    {
+      "area": "final-form",
+      "template": "final-form.php",
+      "acf": ["home_cta_title", "home_cta_text", "default_button_label"],
+      "fallback": "static V9 labels",
+      "risk": "LOW"
+    },
+    {
+      "area": "footer",
+      "template": "footer.php",
+      "acf": ["site options contacts + modal CTA labels"],
+      "fallback": "static V9 phones/address + i18n CTA labels",
+      "risk": "LOW"
+    }
+  ],
+  "deferred_sections": [
+    "founder-quote",
+    "treatment-prevention body",
+    "why-us",
+    "staff-photo",
+    "clinic-landscape",
+    "recovery-life",
+    "reviews cards",
+    "rehabilitation blocks",
+    "genotyping",
+    "comfort gallery",
+    "videos",
+    "specialists cards",
+    "articles cards"
+  ],
+  "result": "COMPLETE"
+}

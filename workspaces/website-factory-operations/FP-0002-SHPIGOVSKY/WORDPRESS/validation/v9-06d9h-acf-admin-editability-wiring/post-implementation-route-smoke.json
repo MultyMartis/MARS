@@ -1,0 +1,50 @@
+{
+  "task": "V9-06D9-H",
+  "captured_at": "2026-07-05T13:59:22.254Z",
+  "routes": [
+    {
+      "path": "/",
+      "label": "home",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/uslugi/",
+      "label": "services-hub",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/uslugi/zavisimosti/",
+      "label": "service-73",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "label": "service-74",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/uslugi/psihicheskoe-zdorovie/",
+      "label": "service-77",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "label": "service-84",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "path": "/kontakty/",
+      "label": "contacts",
+      "status": 200,
+      "pass": true
+    }
+  ],
+  "all_200": true,
+  "result": "ALL_200"
+}

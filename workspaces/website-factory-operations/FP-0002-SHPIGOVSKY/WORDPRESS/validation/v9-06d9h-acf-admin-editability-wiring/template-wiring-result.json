@@ -1,0 +1,29 @@
+{
+  "task": "V9-06D9-H",
+  "generated_at": "2026-07-05T14:05:00+07:00",
+  "helper_added": "inc/home-fallbacks.php",
+  "sections": [
+    { "section": "hero", "template": "hero.php", "wired": true, "fallback_preserved": true, "result": "PASS" },
+    { "section": "recovery-intro", "template": "recovery-intro.php", "wired": true, "fallback_preserved": true, "result": "PASS" },
+    { "section": "founder-quote", "template": "founder-quote.php", "wired": false, "fallback_preserved": true, "result": "STATIC_OK" },
+    { "section": "treatment-prevention", "template": "treatment-prevention.php", "wired": false, "fallback_preserved": true, "result": "STATIC_OK" },
+    { "section": "gallery", "template": "gallery.php", "wired": true, "fallback_preserved": true, "result": "PASS" },
+    { "section": "why-us", "template": "why-us.php", "wired": false, "fallback_preserved": true, "result": "STATIC_OK" },
+    { "section": "staff-photo", "template": "staff-photo.php", "wired": false, "fallback_preserved": true, "result": "STATIC_OK" },
+    { "section": "feature-grid", "template": "feature-grid.php", "wired": true, "fallback_preserved": true, "result": "PASS" },
+    { "section": "clinic-landscape", "template": "clinic-landscape.php", "wired": false, "fallback_preserved": true, "result": "STATIC_OK" },
+    { "section": "recovery-life", "template": "recovery-life.php", "wired": false, "fallback_preserved": true, "result": "STATIC_OK" },
+    { "section": "reviews", "template": "reviews.php", "wired": "heading_only", "fallback_preserved": true, "result": "PARTIAL" },
+    { "section": "rehabilitation-requirements", "template": "rehabilitation-requirements.php", "wired": false, "fallback_preserved": true, "result": "STATIC_OK" },
+    { "section": "rehabilitation-program", "template": "rehabilitation-program.php", "wired": false, "fallback_preserved": true, "result": "STATIC_OK" },
+    { "section": "genotyping", "template": "genotyping.php", "wired": false, "fallback_preserved": true, "result": "STATIC_OK" },
+    { "section": "comfort", "template": "comfort.php", "wired": "heading_lead", "fallback_preserved": true, "result": "PARTIAL" },
+    { "section": "videos", "template": "videos.php", "wired": false, "fallback_preserved": true, "result": "STATIC_OK" },
+    { "section": "specialists", "template": "specialists.php", "wired": "heading_only", "fallback_preserved": true, "result": "PARTIAL" },
+    { "section": "articles-teaser", "template": "articles-teaser.php", "wired": "heading_only", "fallback_preserved": true, "result": "PARTIAL" },
+    { "section": "faq", "template": "faq.php", "wired": true, "fallback_preserved": true, "result": "PASS" },
+    { "section": "final-form", "template": "final-form.php", "wired": true, "fallback_preserved": true, "result": "PASS" },
+    { "section": "footer", "template": "footer.php", "wired": true, "fallback_preserved": true, "result": "PASS" }
+  ],
+  "result": "PASS"
+}

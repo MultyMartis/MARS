@@ -38,8 +38,8 @@ if ( empty( $schedule_lines ) ) {
 	$schedule_lines = array( 'пн-пт 09:00-19:00,', 'сб-вс 09:00-20:00' );
 }
 
-$callback_label    = __( 'Заказать звонок', 'shpigovsky' );
-$appointment_label = __( 'Записаться', 'shpigovsky' );
+$callback_label    = shpigovsky_chrome_label_or_fallback( 'default_callback_title', __( 'Заказать звонок', 'shpigovsky' ) );
+$appointment_label = shpigovsky_chrome_label_or_fallback( 'default_secondary_button_label', __( 'Записаться', 'shpigovsky' ) );
 ?>
 <footer class="site-footer" data-reveal role="contentinfo">
 	<div class="container">

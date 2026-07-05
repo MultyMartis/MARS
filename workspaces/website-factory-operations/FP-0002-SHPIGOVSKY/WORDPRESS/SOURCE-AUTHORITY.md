@@ -211,3 +211,7 @@ D9-F **PARTIAL PASS**: Read-only QA after D9-D/D9-E. Home 19/19 sections + order
 ## V9-06D9-G FAQ micro visual repair (2026-07-05)
 
 D9-G **PASS**: Repaired FAQ heading contract in `template-parts/home/faq.php` — `aria-labelledby` and heading `id` restored to `faq-heading`; heading text restored to `Нас часто спрашивают`; duplicate `comfort-heading` id eliminated. Bounded runtime delivery: 1 theme file. No DB/ACF/options/menu writes. Post-repair Home FAQ parity PASS; comfort section unchanged; route smoke ALL_200. ACF editability readiness: READY. Evidence: `validation/v9-06d9g-micro-visual-repair-faq-heading/`. Report: `reports/FP-0002-V9-06D9G-FAQ-MICRO-VISUAL-REPAIR-REPORT-v1.md`. Next: D9-H ACF admin editability wiring.
+
+## V9-06D9-H ACF admin editability wiring (2026-07-05)
+
+D9-H **PASS**: Wired Home + Footer ACF schema and templates over D9-G static V9 transplant. Added 9 heading/lead fields to `group_fp02_page_home`; created `inc/home-fallbacks.php`; wired hero, recovery-intro, FAQ, gallery, feature-grid, section headings, final-form, footer CTA labels. Bounded runtime delivery: 14 files (13 theme + 1 ACF JSON). No DB/ACF value/options/menu writes. Post-implementation: 19/19 sections, FAQ contract, hero CTA, sliders/dots, routes ALL_200. Evidence: `validation/v9-06d9h-acf-admin-editability-wiring/`. Report: `reports/FP-0002-V9-06D9H-ACF-ADMIN-EDITABILITY-WIRING-REPORT-v1.md`. Next: D9-I controlled ACF seed.

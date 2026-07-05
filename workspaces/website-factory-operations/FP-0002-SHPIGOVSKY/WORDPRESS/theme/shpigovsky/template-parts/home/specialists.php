@@ -12,11 +12,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$specialists_heading = shpigovsky_home_text_or_fallback( 'home_specialists_heading', 'Специалисты центра' );
+
 ?>
 <section data-reveal class="specialists" aria-labelledby="specialists-heading">
   <div class="container">
     <div class="specialists__head">
-      <h2 class="specialists__heading" id="specialists-heading">Специалисты центра</h2>
+      <h2 class="specialists__heading" id="specialists-heading"><?php echo esc_html( $specialists_heading ); ?></h2>
       <a class="specialists__all-link" href="<?php echo esc_url( home_url( '/o-centre/' ) ); ?>">
         <span class="specialists__all-text">все специалисты</span>
         <span class="specialists__all-icon" aria-hidden="true"><i class="fas fa-play"></i></span>

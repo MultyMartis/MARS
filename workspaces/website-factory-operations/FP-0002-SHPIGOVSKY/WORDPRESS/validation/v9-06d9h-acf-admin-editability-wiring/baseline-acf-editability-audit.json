@@ -1,0 +1,50 @@
+{
+  "task": "V9-06D9-H",
+  "generated_at": "2026-07-05T14:05:00+07:00",
+  "acf_storage_pattern": "WORDPRESS/acf-json/ -> runtime wp-content/acf-json/",
+  "home_field_group": "group_fp02_page_home",
+  "home_page_id": 4,
+  "pre_d9h_wired": [
+    { "field": "home_hero_slides", "template": "hero.php", "state": "WIRED_PARTIAL" },
+    { "field": "home_cta_title", "template": "final-form.php", "state": "WIRED" },
+    { "field": "home_cta_text", "template": "final-form.php", "state": "WIRED" }
+  ],
+  "pre_d9h_schema_only": [
+    "home_service_nav_items",
+    "home_advantages",
+    "home_intro_bands",
+    "home_reviews_teaser",
+    "home_blog_teaser_enabled",
+    "home_gallery_media",
+    "home_faq_items"
+  ],
+  "pre_d9h_static_only_sections": [
+    "founder-quote",
+    "treatment-prevention",
+    "why-us",
+    "staff-photo",
+    "clinic-landscape",
+    "recovery-life",
+    "rehabilitation-requirements",
+    "rehabilitation-program",
+    "genotyping",
+    "videos",
+    "specialists-cards",
+    "articles-cards",
+    "reviews-cards",
+    "comfort-gallery"
+  ],
+  "footer_options_wired_pre_d9h": [
+    "phone_primary",
+    "phone_secondary",
+    "site_email",
+    "site_address",
+    "opening_hours",
+    "social_links"
+  ],
+  "footer_static_pre_d9h": [
+    "footer CTA button labels",
+    "footer nav columns (wp_nav_menu + fallback)"
+  ],
+  "result": "COMPLETE"
+}

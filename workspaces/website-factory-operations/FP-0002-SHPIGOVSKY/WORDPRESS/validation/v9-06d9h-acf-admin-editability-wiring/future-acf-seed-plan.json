@@ -1,0 +1,17 @@
+{
+  "task": "V9-06D9-H",
+  "generated_at": "2026-07-05T14:05:00+07:00",
+  "recommended_next_wave": "D9-I Controlled ACF Seed",
+  "items": [
+    { "area": "home_recovery_intro_heading/leads", "seed_type": "safe_text", "wave": "D9-I", "notes": "Copy from static V9 recovery-intro" },
+    { "area": "home_intro_bands", "seed_type": "repeater", "wave": "D9-I", "notes": "Six recovery intro cards" },
+    { "area": "home_faq_heading", "seed_type": "safe_text", "wave": "D9-I", "notes": "Нас часто спрашивают" },
+    { "area": "home_faq_items", "seed_type": "repeater", "wave": "D9-I", "notes": "Operator review for Q1 lorem" },
+    { "area": "home_gallery_media", "seed_type": "image/media", "wave": "D9-J", "notes": "Requires media selection upload plan" },
+    { "area": "home_hero_slides.image", "seed_type": "image/media", "wave": "D9-J", "notes": "Hero image from media library" },
+    { "area": "specialists cards", "seed_type": "do-not-seed", "wave": "DEFER", "notes": "Needs repeater schema extension first" },
+    { "area": "reviews cards", "seed_type": "do-not-seed", "wave": "DEFER", "notes": "Production-review content" },
+    { "area": "treatment-prevention", "seed_type": "operator-supplied", "wave": "DEFER", "notes": "Service CPT primary; complex static accordion" }
+  ],
+  "result": "COMPLETE"
+}

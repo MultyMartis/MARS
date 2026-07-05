@@ -12,11 +12,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$reviews_heading = shpigovsky_home_text_or_fallback( 'home_reviews_heading', 'Отзывы' );
+
 ?>
 <section data-reveal class="reviews"  aria-label="Отзывы">
   <div class="container">
     <div class="reviews__heading">
-      <h2 class="reviews__title">Отзывы</h2>
+      <h2 class="reviews__title"><?php echo esc_html( $reviews_heading ); ?></h2>
       <a class="reviews__all-link" href="<?php echo esc_url( home_url( '/otzyvy/' ) ); ?>">
         <span class="reviews__all-text">Смотреть отзывы</span>
         <span class="reviews__all-icon" aria-hidden="true"><i class="fas fa-caret-right"></i></span>

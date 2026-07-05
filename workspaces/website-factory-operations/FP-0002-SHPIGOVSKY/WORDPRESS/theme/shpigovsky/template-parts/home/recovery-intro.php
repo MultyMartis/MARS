@@ -12,6 +12,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$intro_heading = shpigovsky_home_text_or_fallback(
+	'home_recovery_intro_heading',
+	'Шпиговский дом&nbsp;&mdash; восстановление, построенное вокруг человека'
+);
+$intro_lead_1 = shpigovsky_home_text_or_fallback(
+	'home_recovery_intro_lead_1',
+	'Мы&nbsp;убеждены, зависимость невозможно эффективно лечить по&nbsp;шаблону. За&nbsp;каждым случаем стоит уникальная история, особенности личности, семейной системы, биологии и&nbsp;жизненного опыта.'
+);
+$intro_lead_2 = shpigovsky_home_text_or_fallback(
+	'home_recovery_intro_lead_2',
+	'Поэтому в&nbsp;&laquo;Шпиговском Доме&raquo; мы&nbsp;создаём персонализированную программу восстановления, которая учитывает не&nbsp;только симптомы зависимости, но&nbsp;и&nbsp;её&nbsp;причины'
+);
+$intro_benefits = shpigovsky_home_recovery_intro_benefits_fallback();
+$intro_cards    = shpigovsky_home_repeater_or_fallback(
+	'home_intro_bands',
+	shpigovsky_home_intro_bands_fallback_items()
+);
+
 ?>
 <section data-reveal class="home-recovery-intro" aria-labelledby="home-recovery-intro-heading">
 
@@ -22,51 +40,32 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="home-recovery-intro--wrapper">
 
       <div class="home-recovery-intro__content">
-        <h2 class="home-recovery-intro__heading" id="home-recovery-intro-heading">Шпиговский дом&nbsp;&mdash; восстановление, построенное вокруг человека</h2>
-        <p class="home-recovery-intro__lead"><span>Мы&nbsp;убеждены, зависимость невозможно эффективно лечить по&nbsp;шаблону. За&nbsp;каждым случаем стоит уникальная история, особенности личности, семейной системы, биологии и&nbsp;жизненного опыта.</span></p>
-        <p class="home-recovery-intro__lead"><span>Поэтому в&nbsp;&laquo;Шпиговском Доме&raquo; мы&nbsp;создаём персонализированную программу восстановления, которая учитывает не&nbsp;только симптомы зависимости, но&nbsp;и&nbsp;её&nbsp;причины</span></p>
+        <h2 class="home-recovery-intro__heading" id="home-recovery-intro-heading"><?php echo wp_kses_post( $intro_heading ); ?></h2>
+        <p class="home-recovery-intro__lead"><span><?php echo wp_kses_post( $intro_lead_1 ); ?></span></p>
+        <p class="home-recovery-intro__lead"><span><?php echo wp_kses_post( $intro_lead_2 ); ?></span></p>
         <ul class="home-recovery-intro__benefits">
-          <li class="home-recovery-intro__benefits-item">Мультидисциплинарный подход и&nbsp;команда специалистов;</li>
-          <li class="home-recovery-intro__benefits-item">Персонализированная программа восстановления;</li>
-          <li class="home-recovery-intro__benefits-item">Работа с&nbsp;причинами зависимости, а&nbsp;не&nbsp;только с&nbsp;её&nbsp;проявлениями;</li>
-          <li class="home-recovery-intro__benefits-item">Вовлечение семьи и&nbsp;близких в&nbsp;процессвыздоровления;</li>
-          <li class="home-recovery-intro__benefits-item">Реабилитация без потери связи с&nbsp;жизнью;</li>
-          <li class="home-recovery-intro__benefits-item">Постлечебное сопровождение и&nbsp;поддержка ремиссии.</li>
+          <?php foreach ( $intro_benefits as $benefit ) : ?>
+          <li class="home-recovery-intro__benefits-item"><?php echo wp_kses_post( $benefit ); ?></li>
+          <?php endforeach; ?>
         </ul>
       </div>
 
       <ul class="home-recovery-intro__card-grid">
-        <li class="home-recovery-intro__card">
-          <span class="home-recovery-intro__card-icon" aria-hidden="true"><i class="fas fa-check"></i>
-          <h3 class="home-recovery-intro__card-title">Мультидисциплинарный подход</h3></span>
-          <p class="home-recovery-intro__card-text">Восстановление требует комплексного взгляда на&nbsp;проблему. С&nbsp;каждым клиентом работает команда специалистов: аддиктолог, психотера-певт, психолог, консультанты по&nbsp;химической зависимости и&nbsp;специалисты по&nbsp;работе с&nbsp;семьёй.</p>
-        </li>
-        <li class="home-recovery-intro__card">
-          <span class="home-recovery-intro__card-icon" aria-hidden="true"><i class="fas fa-check"></i>
-          <h3 class="home-recovery-intro__card-title">Персонализированная программа</h3></span>
-          <p class="home-recovery-intro__card-text">Мы&nbsp;не&nbsp;используем универсальные схемы лечения. Программа строится с&nbsp;учётом жизненной истории человека, его психологических особенностей, семейной ситуации, состояния здоровья и&nbsp;поставленных целей. Это позволяет сделать процесс устойчивым в&nbsp;долгосрочной перспективе.</p>
-        </li>
-        <li class="home-recovery-intro__card">
-          <span class="home-recovery-intro__card-icon" aria-hidden="true"><i class="fas fa-check"></i>
-          <h3 class="home-recovery-intro__card-title">Выявление и устранение причины зависимости</h3></span>
-          <p class="home-recovery-intro__card-text">Зависимость редко бывает основной проблемой&nbsp;&mdash; чаще она становится способом справляться со&nbsp;стрессом, внутренней болью или жизненными трудностями. Поэтому мы&nbsp;работаем не&nbsp;только с&nbsp;симптомами, но&nbsp;и&nbsp;помогаем понять причины сформировавшегося поведения.</p>
-        </li>
+        <?php foreach ( $intro_cards as $card ) : ?>
+          <?php
+			$card_title = isset( $card['title'] ) ? trim( (string) $card['title'] ) : '';
+			$card_text  = isset( $card['text'] ) ? trim( (string) $card['text'] ) : '';
 
+			if ( '' === $card_title && '' === $card_text ) {
+				continue;
+			}
+			?>
         <li class="home-recovery-intro__card">
           <span class="home-recovery-intro__card-icon" aria-hidden="true"><i class="fas fa-check"></i>
-          <h3 class="home-recovery-intro__card-title">Семья как часть выздоровления</h3></span>
-          <p class="home-recovery-intro__card-text">Зависимость затрагивает не&nbsp;только самого человека, но&nbsp;и&nbsp;его близких. Мы&nbsp;вовлекаем семью в&nbsp;процесс восстановления через консультации, семейные сессии и&nbsp;совместную работу со&nbsp;специалистами. Это помогает восстановить доверие, улучшить взаимопонимание и&nbsp;создать поддерживающую среду.</p>
+          <h3 class="home-recovery-intro__card-title"><?php echo wp_kses_post( $card_title ); ?></h3></span>
+          <p class="home-recovery-intro__card-text"><?php echo wp_kses_post( $card_text ); ?></p>
         </li>
-        <li class="home-recovery-intro__card">
-          <span class="home-recovery-intro__card-icon" aria-hidden="true"><i class="fas fa-check"></i>
-          <h3 class="home-recovery-intro__card-title">Реабилитаация без потери связи с&nbsp;жизнью</h3></span>
-          <p class="home-recovery-intro__card-text">Мы&nbsp;понимаем, насколько важно для многих людей сохранять связь с&nbsp;семьёй, работой и&nbsp;привычной жизнью. В&nbsp;зависимости от&nbsp;этапа программы и&nbsp;индивидуальных задач возможно использование гаджетов, решение рабочих вопросов и&nbsp;участие в&nbsp;значимых семейных событиях.</p>
-        </li>
-        <li class="home-recovery-intro__card">
-          <span class="home-recovery-intro__card-icon" aria-hidden="true"><i class="fas fa-check"></i>
-          <h3 class="home-recovery-intro__card-title">Долгосрочное сопровождение после</h3></span>
-          <p class="home-recovery-intro__card-text">Завершение программы&nbsp;&mdash; это не&nbsp;конец работы, а&nbsp;начало нового этапа жизни. После прохождения реабилитации мы&nbsp;продолжаем сопровождать выпускников, помогая справляться с&nbsp;возникающими трудностями, сохранять мотивацию и&nbsp;укреплять навыки трезвой жизни.</p>
-        </li>
+        <?php endforeach; ?>
       </ul>
     </div>
 

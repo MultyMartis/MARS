@@ -12,11 +12,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$articles_heading = shpigovsky_home_text_or_fallback( 'home_articles_heading', 'Статьи' );
+
 ?>
 <section class="home-articles" aria-labelledby="home-articles-heading">
   <div class="container">
     <div class="home-articles__head">
-      <h2 class="home-articles__heading" id="home-articles-heading">Статьи</h2>
+      <h2 class="home-articles__heading" id="home-articles-heading"><?php echo esc_html( $articles_heading ); ?></h2>
       <a class="home-articles__all-link" href="<?php echo esc_url( home_url( '/blog/' ) ); ?>">
         <span class="home-articles__all-text">все статьи</span>
         <span class="home-articles__all-icon" aria-hidden="true"><i class="fas fa-play"></i></span>

@@ -1,0 +1,26 @@
+{
+  "task": "V9-06D9-H",
+  "generated_at": "2026-07-05T14:05:00+07:00",
+  "fields": [
+    { "section": "hero", "template": "hero.php", "group": "group_fp02_page_home", "field": "home_hero_slides", "type": "repeater", "fallback": "static title/tagline + theme hero image", "seed_later": "text+image", "media_later": true },
+    { "section": "hero CTA", "template": "hero.php", "group": "group_fp02_site_options_modal_cta", "field": "default_button_label", "type": "text", "fallback": "Записаться на консультацию", "seed_later": "optional", "media_later": false },
+    { "section": "recovery-intro", "template": "recovery-intro.php", "group": "group_fp02_page_home", "field": "home_recovery_intro_heading", "type": "text", "fallback": "static V9 heading", "seed_later": "safe_text", "media_later": false },
+    { "section": "recovery-intro", "template": "recovery-intro.php", "group": "group_fp02_page_home", "field": "home_recovery_intro_lead_1", "type": "textarea", "fallback": "static V9 lead 1", "seed_later": "safe_text", "media_later": false },
+    { "section": "recovery-intro", "template": "recovery-intro.php", "group": "group_fp02_page_home", "field": "home_recovery_intro_lead_2", "type": "textarea", "fallback": "static V9 lead 2", "seed_later": "safe_text", "media_later": false },
+    { "section": "recovery-intro cards", "template": "recovery-intro.php", "group": "group_fp02_page_home", "field": "home_intro_bands", "type": "repeater", "fallback": "6 static cards", "seed_later": "repeater", "media_later": false },
+    { "section": "gallery", "template": "gallery.php", "group": "group_fp02_page_home", "field": "home_gallery_media", "type": "repeater", "fallback": "4 theme gallery assets", "seed_later": "repeater+media", "media_later": true },
+    { "section": "feature-grid", "template": "feature-grid.php", "group": "group_fp02_page_home", "field": "home_advantages", "type": "repeater", "fallback": "6 static cards", "seed_later": "repeater", "media_later": false },
+    { "section": "specialists", "template": "specialists.php", "group": "group_fp02_page_home", "field": "home_specialists_heading", "type": "text", "fallback": "Специалисты центра", "seed_later": "safe_text", "media_later": false },
+    { "section": "comfort", "template": "comfort.php", "group": "group_fp02_page_home", "field": "home_comfort_heading", "type": "text", "fallback": "Комфорт, приватность, забота", "seed_later": "safe_text", "media_later": false },
+    { "section": "comfort", "template": "comfort.php", "group": "group_fp02_page_home", "field": "home_comfort_lead", "type": "textarea", "fallback": "static V9 lead", "seed_later": "safe_text", "media_later": false },
+    { "section": "reviews", "template": "reviews.php", "group": "group_fp02_page_home", "field": "home_reviews_heading", "type": "text", "fallback": "Отзывы", "seed_later": "safe_text", "media_later": false },
+    { "section": "articles", "template": "articles-teaser.php", "group": "group_fp02_page_home", "field": "home_articles_heading", "type": "text", "fallback": "Статьи", "seed_later": "safe_text", "media_later": false },
+    { "section": "faq", "template": "faq.php", "group": "group_fp02_page_home", "field": "home_faq_heading", "type": "text", "fallback": "Нас часто спрашивают", "seed_later": "safe_text", "media_later": false },
+    { "section": "faq", "template": "faq.php", "group": "group_fp02_page_home", "field": "home_faq_items", "type": "repeater", "fallback": "10 static accordion items", "seed_later": "repeater", "media_later": false },
+    { "section": "final-form", "template": "final-form.php", "group": "group_fp02_page_home", "field": "home_cta_title", "type": "text", "fallback": "Остались вопросы?", "seed_later": "existing", "media_later": false },
+    { "section": "final-form", "template": "final-form.php", "group": "group_fp02_page_home", "field": "home_cta_text", "type": "textarea", "fallback": "static V9 lead", "seed_later": "existing", "media_later": false },
+    { "section": "footer contacts", "template": "footer.php", "group": "group_fp02_site_options_contacts", "field": "phone_primary", "type": "text", "fallback": "static V9 phones", "seed_later": "existing D8-A", "media_later": false },
+    { "section": "footer CTA", "template": "footer.php", "group": "group_fp02_site_options_modal_cta", "field": "default_callback_title", "type": "text", "fallback": "Заказать звонок", "seed_later": "optional", "media_later": false }
+  ],
+  "result": "COMPLETE"
+}

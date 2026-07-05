@@ -1,0 +1,31 @@
+{
+  "task": "V9-06D9-H",
+  "captured_at": "2026-07-05T13:59:22.254Z",
+  "acf_json_source": "WORDPRESS/acf-json/group_fp02_page_home.json",
+  "new_fields": [
+    "home_faq_heading",
+    "home_recovery_intro_heading",
+    "home_recovery_intro_lead_1",
+    "home_recovery_intro_lead_2",
+    "home_specialists_heading",
+    "home_comfort_heading",
+    "home_comfort_lead",
+    "home_reviews_heading",
+    "home_articles_heading"
+  ],
+  "wired_templates": [
+    "hero.php",
+    "recovery-intro.php",
+    "faq.php",
+    "gallery.php",
+    "feature-grid.php",
+    "specialists.php",
+    "comfort.php",
+    "reviews.php",
+    "articles-teaser.php",
+    "final-form.php",
+    "footer.php"
+  ],
+  "db_seed_performed": false,
+  "result": "PASS"
+}

@@ -38,8 +38,11 @@ if ( '' === $hero_text ) {
 	$hero_text = 'Центр профилактики и&nbsp;лечения зависимостей';
 }
 
-// D9-D: static V9 CTA authority — options wiring deferred to D9-E.
-$cta_label = __( 'Записаться на консультацию', 'shpigovsky' );
+// D9-H: hero CTA from site options with static V9 fallback.
+$cta_label = shpigovsky_chrome_label_or_fallback(
+	'default_button_label',
+	__( 'Записаться на консультацию', 'shpigovsky' )
+);
 ?>
 <section class="hero hero--home">
 	<?php if ( '' !== $hero_img_url ) : ?>
