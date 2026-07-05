@@ -462,6 +462,23 @@ Storefront read paths:
 
 Product SEO URLs created during catalog import (`oc_seo_url` where `query LIKE 'product_id=%'`). Category SEO preserved across product reset.
 
+#### Production SEO readiness (Run 4.188 — 2026-07-06)
+
+| Field | Value |
+|-------|--------|
+| Operation | `SITE-002-PROD-SEO-READINESS-ROBOTS-01` |
+| Checkpoint | `SITE-002-STABLE-PROD-SEO-ROBOTS-01` |
+| robots.txt | https://bzpm.ru/robots.txt — deployed; rollback in Storage `deployments/SITE-002-PROD-SEO-READINESS-ROBOTS-01/rollback/` |
+| Meta audit scope | **Non-product only** — 43 URLs; product PDP excluded |
+| Meta audit result | PASS 12 · WARN 14 · FAIL 17 |
+| Valid XML sitemap | **NOT FOUND** at audit time — `Sitemap:` omitted from robots |
+| Yandex Metrika / Webmaster (live Twig) | **SAFE UNKNOWN** — not detected in FTP header/footer at audit; operator WIP may be pending |
+| Protected Twig | `common/header.twig`, `common/footer.twig` — **DO NOT OVERWRITE** |
+| Next meta operation | `SITE-002-PROD-SEO-META-FIX-01` (not authorized by default) |
+| Report | [SITE-002-PROD-SEO-READINESS-ROBOTS-01.md](../reports/SITE-002-PROD-SEO-READINESS-ROBOTS-01.md) |
+
+**robots.txt policy (Production):** block admin/system/storage/account/cart/checkout/search; allow `/catalog/view/` assets and `/image/`; disallow faceted query params (`sort`, `order`, `limit`, `page`, `filter_name`, `tracking`); Yandex `Clean-param: tracking`.
+
 ### Images
 
 Physical files: `image/catalog/1c_import/`. Product reset does **not** delete image files; fresh import re-links paths.

@@ -24,6 +24,7 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `site-002-prod-cron-reports-cleanup-01.py` | MARS 1C cron reports cleanup — list, backup, exact delete, verify for `SITE-002-PROD-CRON-REPORTS-CLEANUP-01` |
 | `site-002-prod-load-more-01.py` | Multi-file Production catalog load-more deploy for `SITE-002-PROD-LOAD-MORE-01` |
 | `site-002-prod-mail-recipients-discovery-01.py` | Read-only Production mail/recipient FTP discovery for `SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01` |
+| `site-002-prod-seo-readiness-robots-01.py` | SEO readiness — non-product meta audit + single-file robots.txt deploy for `SITE-002-PROD-SEO-READINESS-ROBOTS-01` |
 
 ## Dependencies
 
@@ -46,4 +47,4 @@ No credentials are embedded in scripts or logs.
 - Does not download `config.php`, `admin/config.php`, `.env`
 - Sanitizes admin session tokens in stored observations
 
-`site-002-prod-text-change-01.py` is the only write-capable helper in this folder. It is operation-specific, supports only `/public_html/catalog/view/theme/default/template/information/guarantee.twig`, has mandatory dry-run and rollback manifests, and has no delete or rename functions.
+`site-002-prod-text-change-01.py` is operation-specific for guarantee.twig. `site-002-prod-seo-readiness-robots-01.py` supports only `/public_html/robots.txt` upload with mandatory backup, deploy gates, and rollback manifests. Neither tool has delete or rename functions for unrelated paths.
