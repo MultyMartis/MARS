@@ -11,9 +11,10 @@
 | **Production profile** | [../production-profile.md](../production-profile.md) |
 | **Production storage root** | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\` |
 | **Production baseline** | Parent baseline `SITE-002-STABLE-PROD-INITIAL-01` · [../baselines/SITE-002-STABLE-PROD-INITIAL-01.md](../baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| **Current Production checkpoint** | **ISSUED** — `SITE-002-STABLE-PROD-TEXT-CHANGE-01` · [../baselines/SITE-002-STABLE-PROD-TEXT-CHANGE-01.md](../baselines/SITE-002-STABLE-PROD-TEXT-CHANGE-01.md) |
+| **Current Production checkpoint** | **ISSUED** — `SITE-002-STABLE-PROD-SORT-AZ-01` · [../baselines/SITE-002-STABLE-PROD-SORT-AZ-01.md](../baselines/SITE-002-STABLE-PROD-SORT-AZ-01.md) |
 | **Production parity with TEST checkpoints** | **VERIFIED** — file + HTTP evidence (Run 4.171-R1) |
-| **First controlled Production change** | **COMPLETE** — Run 4.173; single-file text-only FTP deploy with backup and rollback readiness |
+| **First controlled Production change** | **COMPLETE** — Run 4.173; single-file text-only FTP deploy |
+| **Catalog default sort (Production)** | **COMPLETE** — Run 4.176; default `pd.name ASC` in `category.php` |
 
 **TEST-derived knowledge classification:** Implementation evidence and reusable technical knowledge. **Not** automatic proof of current Production parity.
 
@@ -63,7 +64,27 @@ Proven operational boundary:
 single-file text-only FTP deploy with backup and rollback readiness
 ```
 
-Do not generalize this proof to CSS/JS/controller deploys, database operations, admin saves, cache clearing, or bulk file operations.
+Do not generalize Run 4.173 proof to CSS/JS/controller deploys, database operations, admin saves, cache clearing, or bulk file operations.
+
+### Catalog default sort (Run 4.176 — 2026-07-05)
+
+| Field | Value |
+|-------|-------|
+| Operation | `SITE-002-PROD-SORT-AZ-01` |
+| Status | **COMPLETE** |
+| Remote file | `/public_html/catalog/controller/product/category.php` |
+| Change | default `p.date_added DESC` → `pd.name ASC` |
+| Verification | PASS — remote SHA, HTTP 200, desktop/mobile screenshots |
+| Checkpoint | `SITE-002-STABLE-PROD-SORT-AZ-01` |
+| Report | [../reports/SITE-002-PROD-SORT-AZ-01.md](../reports/SITE-002-PROD-SORT-AZ-01.md) |
+
+Proven operational boundary:
+
+```text
+single-controller-file FTP deploy with backup, dry-run, verification, rollback readiness
+```
+
+Explicit `sort`/`order` URL parameters still override defaults. Twig/CSS/JS not modified.
 
 ---
 

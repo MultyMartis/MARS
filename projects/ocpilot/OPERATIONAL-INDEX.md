@@ -184,6 +184,8 @@ Do not treat C:\ paths in this document as current write targets.
 
 | 4.175 | **SITE-002 Run 4.174 Commit Scope Reconciliation** | **COMPLETE — CONTAMINATION DOCUMENTED / OPERATOR DECISION REQUIRED** (2026-07-05; audit of `b8361aad` — 3 OCPilot + 28 FP-0002 paths; no revert — WIP overlap + operator choice pending) | [sites/site-002/reports/SITE-002-RUN-4-174-COMMIT-SCOPE-RECONCILIATION.md](sites/site-002/reports/SITE-002-RUN-4-174-COMMIT-SCOPE-RECONCILIATION.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
 
+| 4.176 | **SITE-002 Production Catalog Default Sort A→Я** | **COMPLETE — SINGLE-CONTROLLER PRODUCTION DEPLOY VERIFIED** (2026-07-05; `category.php` default `pd.name ASC`; backup + rollback readiness + HTTP/visual verification PASS) | [sites/site-002/reports/SITE-002-PROD-SORT-AZ-01.md](sites/site-002/reports/SITE-002-PROD-SORT-AZ-01.md), [sites/site-002/baselines/SITE-002-STABLE-PROD-SORT-AZ-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-SORT-AZ-01.md), [sites/site-002/production-profile.md](sites/site-002/production-profile.md), [sites/site-002/site-passport.md](sites/site-002/site-passport.md), [sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](sites/site-002/knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md), [OCPILOT-STATE.md](OCPILOT-STATE.md) |
+
 | 5 | **First Read-Only Site Audit** | **paused** (init done) | [sites/site-001/reports/RUN-5-FIRST-FINDINGS.md](sites/site-001/reports/RUN-5-FIRST-FINDINGS.md), [freeze/site-001-pre-runtime-bridge/](freeze/site-001-pre-runtime-bridge/README.md), [shared/external-access-runtime/](../../shared/external-access-runtime/README.md) |
 
 | 6 | **Catalog / Theme / Controller Planning** | planned | SAFE UNKNOWN — spec TBD after baseline + audit |

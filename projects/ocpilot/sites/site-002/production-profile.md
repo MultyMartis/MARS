@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-04 (Run 4.173 — first controlled Production change)
+**Last updated:** 2026-07-05 (Run 4.176 — catalog default sort A→Я)
 
 ---
 
@@ -69,7 +69,8 @@ Do not claim that Production exactly matches TEST unless evidence proves it.
 | Current M9.x baselines | [baselines/](baselines/) — TEST-proven checkpoints |
 | Post-corporate-page checkpoints | Home Commercial Trust · Corporate Intro · Custom Proof Strip · Delivery Summary · PDP Body Category Classes |
 | Production baseline parent | [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| Current Production checkpoint | [baselines/SITE-002-STABLE-PROD-TEXT-CHANGE-01.md](baselines/SITE-002-STABLE-PROD-TEXT-CHANGE-01.md) |
+| Current Production checkpoint | [baselines/SITE-002-STABLE-PROD-SORT-AZ-01.md](baselines/SITE-002-STABLE-PROD-SORT-AZ-01.md) |
+| Catalog default sort (Production) | `pd.name ASC` when `sort`/`order` omitted |
 
 ---
 
@@ -209,6 +210,30 @@ This does not prove generic deploy tooling for other file classes, cache clearin
 
 ---
 
+## Catalog default sort (Run 4.176)
+
+| Field | Value |
+|-------|-------|
+| Operation | `SITE-002-PROD-SORT-AZ-01` |
+| Status | **COMPLETE** |
+| Deploy method | single-controller FTP |
+| Remote target | `/public_html/catalog/controller/product/category.php` |
+| Change | default `p.date_added DESC` → `pd.name ASC` |
+| Rollback readiness | **VERIFIED** |
+| Post-deploy verification | **PASS** — remote hash, HTTP 200, desktop/mobile screenshots |
+| Current Production checkpoint | `SITE-002-STABLE-PROD-SORT-AZ-01` |
+| Report | [reports/SITE-002-PROD-SORT-AZ-01.md](reports/SITE-002-PROD-SORT-AZ-01.md) |
+
+Verified proof boundary:
+
+```text
+single-controller-file FTP deploy with backup, dry-run, verification, rollback readiness
+```
+
+Does not prove multi-file frontend deploy (Twig/CSS/JS), cache clearing, or database operations.
+
+---
+
 ## Approval gates
 
 Every Production **write** requires:
@@ -285,7 +310,7 @@ Deploy-tool preparation is a **separate task**.
 | FTP/SFTP connection | **VERIFIED** (Run 4.171-R1) |
 | Remote listing | **VERIFIED** — application root `/bzpm.ru/`; FTP chroot `/` → `public_html/` + `storage/` |
 | Production baseline | **SUPERSEDED BY TEXT CHANGE CHECKPOINT** — parent `SITE-002-STABLE-PROD-INITIAL-01` |
-| Current Production checkpoint | **ISSUED** — `SITE-002-STABLE-PROD-TEXT-CHANGE-01` (2026-07-04) |
+| Current Production checkpoint | **ISSUED** — `SITE-002-STABLE-PROD-SORT-AZ-01` (2026-07-05) |
 | Deploy profile | **VERIFIED FOR SINGLE-FILE TEXT-ONLY FTP DEPLOY** |
 | Rollback profile | **READINESS VERIFIED FOR SINGLE-FILE RESTORE** |
 | Verification profile | **VERIFIED** — file hash + HTTP + desktop/mobile screenshots |
