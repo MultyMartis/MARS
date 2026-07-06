@@ -500,7 +500,7 @@ Product SEO URLs created during catalog import (`oc_seo_url` where `query LIKE '
 | Meta audit scope | **Non-product only** — 43 URLs; product PDP excluded |
 | Meta audit result | PASS 12 · WARN 14 · FAIL 17 |
 | Valid XML sitemap | **VERIFIED** (Run 4.191) — https://bzpm.ru/sitemap.xml — 1320 URLs; OpenCart Google Sitemap feed enabled; robots `Sitemap:` deployed |
-| Non-product SEO meta fix | **PARTIAL** (Runs 4.192–4.193) — 4.192: `category.php` query-variant `X-Robots-Tag` + PLP meta defaults; `common/header.php` technical noindex; contact meta via `/storage/modification/.../contact.php` · 4.193: home `config_meta_description` trim via admin; category IDs 301/322/326 meta persisted; information admin saves do not propagate to live corp pages (SAFE UNKNOWN) |
+| Non-product SEO meta fix | **PARTIAL** (Runs 4.192–4.193, discovery 4.198) — 4.192: `category.php` defaults + technical noindex; contact via modification cache · 4.193: home + category 301/322/326 admin OK · **4.198: corp pages (`/about`, `/dealers`, `/delivery`, `/guarantee`, `/custom-equipment`, `/payment-methods`) runtime authority = custom `catalog/controller/information/*.php` with hardcoded `setDescription()` — admin information fields NOT read** · `/katalog` = `product/katalog.php` · blog = `blog/category.php` (hub missing description) · remaining PLP category IDs **331/354/358** |
 | OpenCart Document robots API | **Not available** — no `Document::setRobots()`; use `X-Robots-Tag` response header; `header.twig` hardcodes `<meta robots index,follow>` |
 | Yandex Metrika / Webmaster (live Twig) | **VERIFIED** (Run 4.189) — preserved after Run 4.192 |
 | Duplicate body / preloader (Production) | **FIXED** (Run 4.190) — unchanged by Run 4.192 |

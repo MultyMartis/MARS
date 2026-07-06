@@ -34,6 +34,7 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `site-002-prod-sitemap-enable-01.py` | Production sitemap enable + robots Sitemap directive for `SITE-002-PROD-SITEMAP-ENABLE-01` |
 | `site-002-prod-seo-meta-fix-01.py` | Non-product SEO meta fix — crawl, controller/modification deploy, admin attempt for `SITE-002-PROD-SEO-META-FIX-01` |
 | `site-002-prod-seo-meta-content-fix-01.py` | Non-product SEO meta **content** — copywriting, OpenCart admin SEO saves, verification for `SITE-002-PROD-SEO-META-CONTENT-FIX-01` |
+| `site-002-prod-seo-information-meta-runtime-discovery-01.py` | Read-only information/blog/katalog meta runtime authority discovery for `SITE-002-PROD-SEO-INFORMATION-META-RUNTIME-DISCOVERY-01` |
 
 ## Dependencies
 
