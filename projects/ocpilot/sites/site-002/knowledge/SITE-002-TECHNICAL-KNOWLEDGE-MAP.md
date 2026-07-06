@@ -16,8 +16,8 @@
 | **First controlled Production change** | **COMPLETE** — Run 4.173; single-file text-only FTP deploy |
 | **Catalog default sort (Production)** | **COMPLETE** — Run 4.176; default `pd.name ASC` in `category.php` |
 | **Catalog sort menu (Production)** | **COMPLETE** — Run 4.177; menu order in `category.twig`; «Умолчанию» removed |
-| **MARS 1C cron wrapper (Production)** | **ACTIVE — DAILY SCHEDULED** — Run 4.183; Beget cron row confirmed by operator; schedule `0 8 * * *`; manual run 4.181 SUCCESS; next scheduled run monitoring pending |
-| **MARS 1C cron reports (Production)** | **CLEANED** — Run 4.184; 3 files retained in `/storage/mars-tools/cron/reports/`; setup-date diagnostic dry-run/status removed |
+| **MARS 1C cron wrapper (Production)** | **OPERATIONAL — FIRST SCHEDULED RUN VERIFIED** — Run 4.194; automatic run SUCCESS 2026-07-06 08:00 Moscow; daily import OPERATIONAL |
+| **MARS 1C cron reports (Production)** | **CURRENT** — Run 4.194; first scheduled report `mars_1c_import_2026-07-06_080007.txt` verified on Production |
 
 **TEST-derived knowledge classification:** Implementation evidence and reusable technical knowledge. **Not** automatic proof of current Production parity.
 
@@ -273,6 +273,34 @@ Proven operational boundary:
 
 ```text
 MARS 1C cron reports directory cleaned — current reports preserved — wrapper/logs/cron untouched
+```
+
+### MARS 1C first scheduled cron run (Run 4.194 — 2026-07-06)
+
+| Field | Value |
+|-------|-------|
+| Operation | `SITE-002-PROD-CRON-FIRST-SCHEDULED-RUN-VERIFY-01` |
+| Status | **COMPLETE — FIRST SCHEDULED CRON RUN VERIFIED** |
+| Scheduled time | **2026-07-06T08:00:07+03:00** (08:00 Moscow / 12:00 Barnaul) |
+| Run ID | `mars-20260706-080002-09436ae7` |
+| Report file | `mars_1c_import_2026-07-06_080007.txt` |
+| Step 1 `1c` | **PASS** — `import0_1.xml` — 3.05 s |
+| Step 2 `1c_offers` | **PASS** — `offers0_1.xml` — 2.59 s |
+| Lock removed | **Yes** |
+| DB active after | **0** / **0** |
+| Final status | **SUCCESS** |
+| Duration field | `0 seconds` — **WARN only** (step durations non-zero) |
+| Daily 1C import | **OPERATIONAL** |
+| Import in this operation | **No** |
+| Beget cron change | **No** |
+| Legacy Sergey import | **PRESERVED** |
+| Checkpoint | `SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01` (parent SEO: `SITE-002-STABLE-PROD-SITEMAP-01`) |
+| Report | [../reports/SITE-002-PROD-CRON-FIRST-SCHEDULED-RUN-VERIFY-01.md](../reports/SITE-002-PROD-CRON-FIRST-SCHEDULED-RUN-VERIFY-01.md) |
+
+Proven operational boundary:
+
+```text
+MARS Beget daily 1C cron operational — first scheduled run SUCCESS — HTTP gateway — Sergey legacy preserved
 ```
 
 ---

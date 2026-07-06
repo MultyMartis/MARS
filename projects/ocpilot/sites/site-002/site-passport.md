@@ -1,7 +1,7 @@
 # SITE-002 — Site Passport
 
-**Status:** **STABLE PRODUCTION CHECKPOINT — CRON BEGET ACTIVE 01**
-**Run:** 4.184 — SITE-002 1C Cron Reports Cleanup (2026-07-06)
+**Status:** **STABLE PRODUCTION CHECKPOINT — CRON SCHEDULED RUN 01**
+**Run:** 4.194 — SITE-002 First Scheduled Cron Run Verification (2026-07-06)
 
 ---
 
@@ -28,11 +28,11 @@
 | **Production Profile** | [production-profile.md](production-profile.md) |
 | **Production connection** | **VERIFIED** — HTTP/admin (Run 4.171) + FTP/file baseline (Run 4.171-R1); path model reconciled (Run 4.172) |
 | **Production baseline** | **PARENT** — [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| **Current Production checkpoint** | **ISSUED** — [baselines/SITE-002-STABLE-PROD-SITEMAP-01.md](baselines/SITE-002-STABLE-PROD-SITEMAP-01.md) |
-| **MARS 1C cron wrapper** | **ACTIVE — DAILY SCHEDULED** (Run 4.183) — Beget cron confirmed by operator; manual run SUCCESS (Run 4.181); HTTP gateway; wrapper v1.1.0; schedule `0 8 * * *` Moscow; Sergey legacy preserved; next run monitoring pending |
+| **Current Production checkpoint** | **ISSUED** — [baselines/SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01.md](baselines/SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01.md) (cron closure; SEO parent [SITE-002-STABLE-PROD-SITEMAP-01.md](baselines/SITE-002-STABLE-PROD-SITEMAP-01.md)) |
+| **MARS 1C cron wrapper** | **OPERATIONAL — FIRST SCHEDULED RUN VERIFIED** (Run 4.194) — automatic run SUCCESS 2026-07-06 08:00 Moscow; run ID `mars-20260706-080002-09436ae7`; report `mars_1c_import_2026-07-06_080007.txt`; daily import OPERATIONAL; Sergey legacy preserved |
 | **Mail recipients** | **ACTIVE — ADMIN-MANAGED** (Run 4.187) — handler `checkout/anketa.php`; list via OpenCart `config_mail_alert_email`; operator updated admin **Additional Alert Emails**; delivery verified; no code deploy · [discovery](reports/SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01.md) · [confirmation](reports/SITE-002-PROD-MAIL-RECIPIENTS-ADMIN-ADD-01.md) |
-| **MARS 1C cron reports** | **CLEANED** (Run 4.184) — 19 redundant setup-date TXT reports removed; 3 current files preserved; [SITE-002-PROD-CRON-REPORTS-CLEANUP-01.md](reports/SITE-002-PROD-CRON-REPORTS-CLEANUP-01.md) |
-| **Current Status** | **STABLE PRODUCTION CHECKPOINT — CRON BEGET ACTIVE 01** |
+| **MARS 1C cron reports** | **CURRENT** (Run 4.194) — first scheduled report `mars_1c_import_2026-07-06_080007.txt` verified; prior manual run preserved; [SITE-002-PROD-CRON-FIRST-SCHEDULED-RUN-VERIFY-01.md](reports/SITE-002-PROD-CRON-FIRST-SCHEDULED-RUN-VERIFY-01.md) |
+| **Current Status** | **STABLE PRODUCTION CHECKPOINT — CRON SCHEDULED RUN 01** |
 | **Active baseline** | [baselines/SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01.md](baselines/SITE-002-STABLE-LIVE-HOME-COMMERCIAL-TRUST-01.md) · About: [M9.13-ABOUT-REDESIGN-02](baselines/SITE-002-STABLE-LIVE-M9.13-ABOUT-REDESIGN-02.md) · fonts: [LOCAL-FONTS-01](baselines/SITE-002-STABLE-LIVE-LOCAL-FONTS-01.md) |
 | **Technical Knowledge Map** | [knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md) — incl. [§7 Filter Architecture](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#7-filter-architecture), [§8 Live Files](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#8-live-files-with-business-logic), [§14 Commercial Trust Block](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#14-commercial-trust-block), [§16 Catalog State Persistence](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#16-catalog-state-persistence), [§17 About Page History](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#17-about-page-history), [§26 Operator Manual Polish 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#26-operator-manual-polish-01--superseded-visual-baseline-retained), [§27 Local Fonts 01](knowledge/SITE-002-TECHNICAL-KNOWLEDGE-MAP.md#27-local-fonts-01--active) |
 | **Operator manual JS (04B)** | [reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md](reports/SITE-002-M9.8.9-04B-OPERATOR-MANUAL-JS-POLISH-REGISTRATION.md) |
@@ -49,7 +49,7 @@
 | **MANUAL UI REFINEMENTS ARE CANONICAL** | Operator manual CSS, Twig, JS, and UX edits on live TEST override older M9.x deploy snapshots |
 | **MANUAL CSS REFINEMENTS ARE CANONICAL** | Operator CSS edits on live TEST override repo work copies |
 | **MANUAL TWIG REFINEMENTS ARE CANONICAL** | Operator Twig edits on live TEST override repo work copies |
-| **Conflict resolution (Production)** | Current operational website authority = https://bzpm.ru/; current checkpoint `SITE-002-STABLE-PROD-SITEMAP-01`; non-product SEO meta **PARTIAL** (Runs 4.192–4.193); valid XML sitemap at `/sitemap.xml` (Run 4.191); duplicate body/preloader fixed (Run 4.190); Yandex Metrika/Webmaster **VERIFIED** (Run 4.189) — operator Twig WIP in header/footer **DO NOT OVERWRITE** |
+| **Conflict resolution (Production)** | Current operational website authority = https://bzpm.ru/; cron checkpoint `SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01`; SEO parent `SITE-002-STABLE-PROD-SITEMAP-01`; daily 1C import **OPERATIONAL** (Run 4.194); non-product SEO meta **PARTIAL** (Runs 4.192–4.193); valid XML sitemap at `/sitemap.xml` (Run 4.191); duplicate body/preloader fixed (Run 4.190); Yandex Metrika/Webmaster **VERIFIED** (Run 4.189) — operator Twig WIP in header/footer **DO NOT OVERWRITE** |
 | **Conflict resolution (TEST evidence)** | If documentation contradicts historical TEST state, live TEST on https://zpm.new-site.space/ remains evidence for TEST-era checkpoints |
 | **Do NOT use as visual baseline** | Pass 1.2 CSS/HTML/JS · `SITE-002-STABLE-LIVE-CORPORATE-PAGES-VISUAL-POLISH-PASS-1.2` · pre-checkpoint work copies · `SITE-002-STABLE-LIVE-M9.8.9-CATALOG-UX-COMPLETE-01` · M9.13 About redesign work copies |
 

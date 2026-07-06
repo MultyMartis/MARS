@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-06
-**Evidence cutoff:** 2026-07-06 (SITE-002 Run **4.193** — non-product SEO meta **content** fix **PARTIAL** — home trim + 3 category PLP admin-persisted; corp information admin saves not reflected live; checkpoint unchanged `SITE-002-STABLE-PROD-SITEMAP-01`)
+**Evidence cutoff:** 2026-07-06 (SITE-002 Run **4.194** — first scheduled Beget 1C cron run **VERIFIED** — daily import **OPERATIONAL**; checkpoint `SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01`)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Non-product SEO meta content (Run 4.193 PARTIAL)** — home + 3 category PLP live-verified · corp/blog/katalog meta remaining · [SITE-002-PROD-SEO-META-CONTENT-FIX-01.md](sites/site-002/reports/SITE-002-PROD-SEO-META-CONTENT-FIX-01.md) |
+| Current SITE-002 focus | **Daily 1C import OPERATIONAL (Run 4.194)** — first scheduled cron SUCCESS · non-product SEO meta **PARTIAL** (Runs 4.192–4.193) remains open · [SITE-002-PROD-CRON-FIRST-SCHEDULED-RUN-VERIFY-01.md](sites/site-002/reports/SITE-002-PROD-CRON-FIRST-SCHEDULED-RUN-VERIFY-01.md) |
 
 ---
 
@@ -36,7 +36,7 @@
 | OpenCart admin read-only | **VERIFIED** — version 3.0.3.9 |
 | Historical TEST | **preserved** — https://zpm.new-site.space/ |
 | First Production baseline | **SUPERSEDED BY CONTROLLED TEXT CHANGE** — parent [SITE-002-STABLE-PROD-INITIAL-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| Current Production checkpoint | **ISSUED** — [SITE-002-STABLE-PROD-SITEMAP-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-SITEMAP-01.md) |
+| Current Production checkpoint | **ISSUED** — [SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01.md) (cron operational closure; SEO parent [SITE-002-STABLE-PROD-SITEMAP-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-SITEMAP-01.md)) |
 | First Production test / operation | **COMPLETE** — single-file text-only FTP deploy verified (Run 4.173) |
 | Second Production operation | **COMPLETE** — single-controller catalog sort deploy verified (Run 4.176) |
 | Third Production operation | **COMPLETE** — single-Twig catalog sort menu deploy verified (Run 4.177) |
@@ -54,6 +54,7 @@
 | Fifteenth Production operation | **COMPLETE** — Yandex codes verification (Run 4.189) — read-only FTP + HTTP; Metrika + Webmaster **VERIFIED** on live; operator Twig WIP protected; **no Production mutation** |
 | Sixteenth Production operation | **COMPLETE** — HTML body duplicate fix (Run 4.190) — single-file `header.twig` deploy; duplicate body/preloader/overlay removed; Yandex preserved; 4-URL HTML validation **PASS** |
 | Seventeenth Production operation | **COMPLETE** — sitemap enable (Run 4.191) — OpenCart Google Sitemap feed enabled; valid XML at `/sitemap.xml` (1320 URLs); robots.txt `Sitemap:` directive deployed; Yandex + single body preserved |
+| Eighteenth Production operation | **COMPLETE** — first scheduled Beget 1C cron run verification (Run 4.194) — automatic run SUCCESS at 08:00 Moscow; report `mars_1c_import_2026-07-06_080007.txt`; daily 1C import **OPERATIONAL**; checkpoint `SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01`; **no import in operation** |
 | Capture storage | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\captures\SITE-002-PROD-INITIAL-CAPTURE-01\` |
 
 Production tooling remains scoped and site-specific. Verified deploy classes: **single-file text-only FTP deploy** (Run 4.173), **single-controller-file FTP deploy** (Run 4.176), **single-Twig-file FTP deploy** (Run 4.177, 4.190), **multi-file catalog frontend FTP deploy** (Run 4.185), **single-file robots.txt FTP deploy** (Run 4.188, 4.191), and **OpenCart admin single-setting enable** (Run 4.191 — Google Sitemap feed). File-level Production checkpoint is `SITE-002-STABLE-PROD-SITEMAP-01`.
