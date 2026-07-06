@@ -889,6 +889,21 @@ See §6. Per-category PHP profiles control which attributes appear in sidebar an
 - Hub mode category cards with WebP images
 - Evidence: M9.7 image deploy reports
 
+### Neutral parent categories (Production Run 4.195)
+
+| Field | Value |
+|-------|-------|
+| Operation | `SITE-002-PROD-NEUTRAL-PARENT-CATEGORIES-ROLLOUT-01` |
+| Branch IDs | `322, 331, 301, 326, 354, 358, 207, 80, 86` |
+| New branches | 331 Полки настенные и настольные · 354 Тележки-шпильки и противни · 358 Шкафы и лари · 86 Стеллажи |
+| Tile authority | `system/library/zpm/category_visibility.php` → `$neutral_hub_branch_ids` |
+| Homepage cards | `buildHomepageCategoryCards()` — 9 `zpm-cat-card` |
+| Hub cards | `category.php` hub mode — same list |
+| Megamenu tiles | `prepareMegamenuCategories()` — already dynamic (9) |
+| Images | `image/catalog/Category-image/{slug}.webp` — **COMPOSER_ONLY_NO_API** |
+| Checkpoint | `SITE-002-STABLE-PROD-NEUTRAL-PARENT-CATEGORIES-01` |
+| Report | [SITE-002-PROD-NEUTRAL-PARENT-CATEGORIES-ROLLOUT-01.md](../reports/SITE-002-PROD-NEUTRAL-PARENT-CATEGORIES-ROLLOUT-01.md) |
+
 ### Megamenu (M9.7)
 
 - `prepareMegamenuCategories()` filters empty branches

@@ -1,7 +1,7 @@
 # SITE-002 — Site Passport
 
 **Status:** **STABLE PRODUCTION CHECKPOINT — CRON SCHEDULED RUN 01**
-**Run:** 4.194 — SITE-002 First Scheduled Cron Run Verification (2026-07-06)
+**Run:** 4.195 — SITE-002 Neutral Parent Categories Rollout (2026-07-06)
 
 ---
 
@@ -28,7 +28,7 @@
 | **Production Profile** | [production-profile.md](production-profile.md) |
 | **Production connection** | **VERIFIED** — HTTP/admin (Run 4.171) + FTP/file baseline (Run 4.171-R1); path model reconciled (Run 4.172) |
 | **Production baseline** | **PARENT** — [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| **Current Production checkpoint** | **ISSUED** — [baselines/SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01.md](baselines/SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01.md) (cron closure; SEO parent [SITE-002-STABLE-PROD-SITEMAP-01.md](baselines/SITE-002-STABLE-PROD-SITEMAP-01.md)) |
+| **Current Production checkpoint** | **ISSUED** — [baselines/SITE-002-STABLE-PROD-NEUTRAL-PARENT-CATEGORIES-01.md](baselines/SITE-002-STABLE-PROD-NEUTRAL-PARENT-CATEGORIES-01.md) (parent cron [SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01.md](baselines/SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01.md); SEO parent [SITE-002-STABLE-PROD-SITEMAP-01.md](baselines/SITE-002-STABLE-PROD-SITEMAP-01.md)) |
 | **MARS 1C cron wrapper** | **OPERATIONAL — FIRST SCHEDULED RUN VERIFIED** (Run 4.194) — automatic run SUCCESS 2026-07-06 08:00 Moscow; run ID `mars-20260706-080002-09436ae7`; report `mars_1c_import_2026-07-06_080007.txt`; daily import OPERATIONAL; Sergey legacy preserved |
 | **Mail recipients** | **ACTIVE — ADMIN-MANAGED** (Run 4.187) — handler `checkout/anketa.php`; list via OpenCart `config_mail_alert_email`; operator updated admin **Additional Alert Emails**; delivery verified; no code deploy · [discovery](reports/SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01.md) · [confirmation](reports/SITE-002-PROD-MAIL-RECIPIENTS-ADMIN-ADD-01.md) |
 | **MARS 1C cron reports** | **CURRENT** (Run 4.194) — first scheduled report `mars_1c_import_2026-07-06_080007.txt` verified; prior manual run preserved; [SITE-002-PROD-CRON-FIRST-SCHEDULED-RUN-VERIFY-01.md](reports/SITE-002-PROD-CRON-FIRST-SCHEDULED-RUN-VERIFY-01.md) |
