@@ -343,16 +343,31 @@ function shpigovsky_get_service_subnav_items( $variant ) {
 	);
 
 	if ( 'alcohol-special' === $variant ) {
-		array_splice(
-			$items,
-			1,
-			0,
+		return array(
 			array(
-				array(
-					'id'    => 'service-leaf-signs',
-					'label' => __( 'Признаки зависимости', 'shpigovsky' ),
-				),
-			)
+				'id'    => 'service-leaf-approach',
+				'label' => __( 'Наш подход к лечению', 'shpigovsky' ),
+			),
+			array(
+				'id'    => 'service-leaf-program',
+				'label' => __( 'Программа лечения', 'shpigovsky' ),
+			),
+			array(
+				'id'    => 'service-leaf-start',
+				'label' => __( 'С чего начать', 'shpigovsky' ),
+			),
+			array(
+				'id'    => 'service-leaf-specialists',
+				'label' => __( 'Специалисты', 'shpigovsky' ),
+			),
+			array(
+				'id'    => 'service-leaf-comfort',
+				'label' => __( 'Условия центра', 'shpigovsky' ),
+			),
+			array(
+				'id'    => 'service-leaf-reviews',
+				'label' => __( 'Отзывы о программе', 'shpigovsky' ),
+			),
 		);
 	}
 

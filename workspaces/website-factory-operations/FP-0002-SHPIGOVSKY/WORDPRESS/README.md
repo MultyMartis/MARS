@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E7B HERO SYSTEM FINALIZATION **PASS** — hero registry, shared partial, ACF hero_media admin fields, media seed (4 contexts), runtime delivery complete. Alcohol seed corrected to service ID 74. NEXT: **CREATE_V9_06E8_OPERATOR_HERO_VISUAL_QA_TASK**
+**Status:** V9-06E9 SERVICE LEAF LAYOUT PARITY **PASS** — alcohol leaf structural repair, 14 screenshots, runtime delivery. Program block remains V9 fixture/demo lorem per static authority. NEXT: **CREATE_V9_06E10_OPERATOR_VISUAL_QA_TASK**
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

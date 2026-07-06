@@ -1,0 +1,67 @@
+{
+  "before": {
+    "sections": [
+      "services-inner-hero-v2",
+      "service-leaf-intro-v1",
+      "service-leaf-bordered-info-v1",
+      "program-cta-band-section",
+      "service-leaf-signs-v1",
+      "service-leaf-approach-v1",
+      "clinic-landscape service-leaf-landscape-v1",
+      "services-program-v2 (titles only, no item-image)",
+      "service-leaf-stages-v1",
+      "service-leaf-corridor-v1",
+      "specialists",
+      "founder-quote founder-quote--variant-b",
+      "comfort",
+      "reviews (no id)",
+      "faq",
+      "final-form (generic heading id)"
+    ],
+    "analysis": {
+      "body_has_page_service_leaf_v1": true,
+      "main_has_page_service_leaf_v1__main": true,
+      "has_article_shpigovsky_service": true,
+      "has_program_images": false,
+      "has_service_leaf_reviews_id": false,
+      "has_service_leaf_final_form_heading": false,
+      "subnav_has_approach": false,
+      "subnav_has_reviews": false,
+      "subnav_has_intro": true,
+      "php_fatal": false,
+      "template": "alcohol-stack with article wrapper"
+    }
+  },
+  "after": {
+    "sections": [
+      "services-inner-hero-v2",
+      "service-leaf-intro-v1",
+      "service-leaf-bordered-info-v1",
+      "program-cta-band-section",
+      "service-leaf-signs-v1",
+      "service-leaf-approach-v1",
+      "clinic-landscape service-leaf-landscape-v1",
+      "services-program-v2 services-program-v2--play-link services-program-v2--intro-stacked services-program-v2--title-flush services-program-v2--item-body-spaced services-program-v2--item-image-stack-tall services-program-v2--media-frame-fixed",
+      "service-leaf-stages-v1",
+      "service-leaf-corridor-v1",
+      "specialists",
+      "founder-quote founder-quote--variant-b",
+      "comfort",
+      "reviews",
+      "faq",
+      "final-form"
+    ],
+    "analysis": {
+      "body_has_page_service_leaf_v1": true,
+      "main_has_page_service_leaf_v1__main": true,
+      "has_article_shpigovsky_service": false,
+      "has_program_images": true,
+      "has_service_leaf_reviews_id": true,
+      "has_service_leaf_final_form_heading": true,
+      "subnav_has_approach": true,
+      "subnav_has_reviews": true,
+      "subnav_has_intro": false,
+      "php_fatal": false
+    }
+  }
+}

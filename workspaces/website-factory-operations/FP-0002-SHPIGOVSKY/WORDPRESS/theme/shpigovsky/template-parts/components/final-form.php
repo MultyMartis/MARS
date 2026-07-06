@@ -11,11 +11,37 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$heading = shpigovsky_home_text_or_fallback( 'home_cta_title', __( 'Остались вопросы?', 'shpigovsky' ) );
-$lead    = shpigovsky_home_text_or_fallback(
-	'home_cta_text',
-	__( 'Опишите вашу ситуацию в форме заявки, и мы расскажем, как сможем помочь', 'shpigovsky' )
+$parsed_args = wp_parse_args(
+	$args ?? array(),
+	array(
+		'heading_id'  => 'final-form-heading',
+		'heading_text' => '',
+		'lead_text'   => '',
+		'lead_source' => 'final-section',
+		'section_modifier_class' => '',
+	)
 );
+
+$heading_id = trim( (string) $parsed_args['heading_id'] );
+$heading    = trim( (string) $parsed_args['heading_text'] );
+$lead       = trim( (string) $parsed_args['lead_text'] );
+$lead_source = trim( (string) $parsed_args['lead_source'] );
+$section_modifier_class = trim( (string) $parsed_args['section_modifier_class'] );
+
+if ( '' === $heading ) {
+	$heading = shpigovsky_home_text_or_fallback( 'home_cta_title', __( 'Остались вопросы?', 'shpigovsky' ) );
+}
+
+if ( '' === $lead ) {
+	$lead = shpigovsky_home_text_or_fallback(
+		'home_cta_text',
+		__( 'Опишите вашу ситуацию в форме заявки, и мы расскажем, как сможем помочь', 'shpigovsky' )
+	);
+}
+
+if ( '' === $lead_source ) {
+	$lead_source = 'final-section';
+}
 
 $submit_label = shpigovsky_chrome_label_or_fallback(
 	'default_button_label',
@@ -25,18 +51,18 @@ $submit_label = shpigovsky_chrome_label_or_fallback(
 $consent_url = home_url( '/consent-personal-data/' );
 $privacy_url = home_url( '/privacy-policy/' );
 ?>
-<section data-reveal class="final-form" aria-labelledby="final-form-heading">
+<section data-reveal class="final-form<?php echo '' !== $section_modifier_class ? ' ' . esc_attr( $section_modifier_class ) : ''; ?>" aria-labelledby="<?php echo esc_attr( $heading_id ); ?>">
 	<div class="container">
 		<div class="final-form__band">
 			<div class="final-form__copy">
-				<h2 class="final-form__heading" id="final-form-heading"><?php echo esc_html( $heading ); ?></h2>
+				<h2 class="final-form__heading" id="<?php echo esc_attr( $heading_id ); ?>"><?php echo esc_html( $heading ); ?></h2>
 				<p class="final-form__lead"><?php echo esc_html( $lead ); ?></p>
 			</div>
 
 			<form class="final-form__form" data-lead-form data-form-context="final" novalidate>
 				<div class="final-form__hidden" data-lead-form-hidden aria-hidden="true">
 					<input type="hidden" name="form_context" data-lead-hidden="form_context" value="final">
-					<input type="hidden" name="lead_source" data-lead-hidden="lead_source" value="final-section">
+					<input type="hidden" name="lead_source" data-lead-hidden="lead_source" value="<?php echo esc_attr( $lead_source ); ?>">
 					<input type="hidden" name="page_url" data-lead-hidden="page_url" value="">
 					<input type="hidden" name="page_title" data-lead-hidden="page_title" value="">
 					<input type="hidden" name="g-recaptcha-response" data-lead-hidden="g-recaptcha-response" value="">

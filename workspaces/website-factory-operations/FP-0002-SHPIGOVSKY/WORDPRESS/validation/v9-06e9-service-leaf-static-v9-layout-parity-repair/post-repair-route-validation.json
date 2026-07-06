@@ -1,0 +1,98 @@
+{
+  "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/": {
+    "http_status": 200,
+    "error": null,
+    "php_fatal": false,
+    "main_class": "page-service-leaf-v1__main site-main site-main--service site-main--service-leaf",
+    "body_class": "wp-singular service-template-default single single-service postid-74 wp-theme-shpigovsky page-service-leaf-v1",
+    "layout_checks": {
+      "body_has_page_service_leaf_v1": true,
+      "main_has_page_service_leaf_v1__main": true,
+      "has_article_shpigovsky_service": false,
+      "has_program_images": true,
+      "has_service_leaf_reviews_id": true,
+      "has_service_leaf_final_form_heading": true,
+      "subnav_has_approach": true,
+      "subnav_has_reviews": true,
+      "subnav_has_intro": false,
+      "php_fatal": false
+    }
+  },
+  "/uslugi/psihicheskoe-zdorovie/": {
+    "http_status": 200,
+    "error": null,
+    "php_fatal": false,
+    "main_class": "page-service-subdivision-v1__main site-main site-main--service site-main--service-subdivision",
+    "body_class": "wp-singular service-template-default single single-service postid-77 wp-theme-shpigovsky page-service-subdivision-v1"
+  },
+  "/uslugi/rasstroystva-pischevogo-povedeniya/": {
+    "http_status": 200,
+    "error": null,
+    "php_fatal": false,
+    "main_class": "page-service-subdivision-v1__main site-main site-main--service site-main--service-subdivision",
+    "body_class": "wp-singular service-template-default single single-service postid-84 wp-theme-shpigovsky page-service-subdivision-v1"
+  },
+  "/": {
+    "http_status": 200,
+    "error": null,
+    "php_fatal": false,
+    "main_class": "site-main site-main--front",
+    "body_class": "home wp-singular page-template-default page page-id-4 wp-theme-shpigovsky"
+  },
+  "/uslugi/": {
+    "http_status": 200,
+    "error": null,
+    "php_fatal": false,
+    "main_class": "page-uslugi-v2__main site-main site-main--services-hub",
+    "body_class": "wp-singular page-template page-template-page-templates page-template-services-hub page-template-page-templatesservices-hub-php page page-id-5 page-parent wp-theme-shpigovsky page-uslugi-v2"
+  },
+  "/kontakty/": {
+    "http_status": 200,
+    "error": null,
+    "php_fatal": false,
+    "main_class": "page-kontakty__main site-main site-main--contacts",
+    "body_class": "wp-singular page-template page-template-page-templates page-template-contacts page-template-page-templatescontacts-php page page-id-20 wp-theme-shpigovsky page-kontakty"
+  },
+  "/uslugi/zavisimosti/": {
+    "http_status": 200,
+    "error": null,
+    "php_fatal": false,
+    "main_class": "page-service-subdivision-v1__main site-main site-main--service site-main--service-subdivision",
+    "body_class": "wp-singular service-template-default single single-service postid-73 wp-theme-shpigovsky page-service-subdivision-v1"
+  },
+  "/otzyvy/": {
+    "http_status": 200,
+    "error": null,
+    "php_fatal": false,
+    "main_class": "page-otzyvy__main",
+    "body_class": "wp-singular page-template page-template-page-templates page-template-reviews page-template-page-templatesreviews-php page page-id-18 wp-theme-shpigovsky page-otzyvy"
+  },
+  "/privacy-policy/": {
+    "http_status": 200,
+    "error": null,
+    "php_fatal": false,
+    "main_class": "page-plain-content__main",
+    "body_class": "privacy-policy wp-singular page-template page-template-page-templates page-template-legal page-template-page-templateslegal-php page page-id-3 wp-theme-shpigovsky"
+  },
+  "/user-agreement/": {
+    "http_status": 200,
+    "error": null,
+    "php_fatal": false,
+    "main_class": "page-plain-content__main",
+    "body_class": "wp-singular page-template page-template-page-templates page-template-legal page-template-page-templateslegal-php page page-id-22 wp-theme-shpigovsky"
+  },
+  "/consent-personal-data/": {
+    "http_status": 200,
+    "error": null,
+    "php_fatal": false,
+    "main_class": "page-plain-content__main",
+    "body_class": "wp-singular page-template page-template-page-templates page-template-legal page-template-page-templateslegal-php page page-id-23 wp-theme-shpigovsky"
+  },
+  "/cookie-files-policy/": {
+    "http_status": 200,
+    "error": null,
+    "php_fatal": false,
+    "main_class": "page-plain-content__main",
+    "body_class": "wp-singular page-template page-template-page-templates page-template-legal page-template-page-templateslegal-php page page-id-24 wp-theme-shpigovsky"
+  }
+}

@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-06 (V9-06E7B Hero System Finalization PASS)
+**Last updated:** 2026-07-06 (V9-06E9 Service Leaf Layout Parity PASS)
 
-**Current WordPress phase:** V9-06E7B Hero System Finalization **PASS** — hero admin image system committed; ACF `hero_media` on home/hub/service/institutional; media seed for IDs 4,5,73,74; theme hero registry + shared `services-inner-hero-v2` partial. **Next: CREATE_V9_06E8_OPERATOR_HERO_VISUAL_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E7B-HERO-SYSTEM-FINALIZATION-SCOPE-RECONCILIATION-REPORT-v1.md`.
+**Current WordPress phase:** V9-06E9 Service Leaf Static V9 Layout Parity Repair **PASS** — alcohol leaf layout repaired (article wrapper removed, program images, static V9 subnav, section ids); 14 screenshots; 7 theme files; 0 DB writes. Program lorem remains V9 fixture/demo. **Next: CREATE_V9_06E10_OPERATOR_VISUAL_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E9-SERVICE-LEAF-STATIC-V9-LAYOUT-PARITY-REPAIR-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

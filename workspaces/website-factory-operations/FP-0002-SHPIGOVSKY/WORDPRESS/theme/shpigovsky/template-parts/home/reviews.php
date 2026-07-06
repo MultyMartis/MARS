@@ -11,15 +11,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-get_template_part(
-	'template-parts/shared/reviews-slider',
-	null,
+$slider_args = wp_parse_args(
+	$args ?? array(),
 	array(
 		'context'       => 'home',
 		'limit'         => 10,
 		'featured_only' => true,
 		'section_class' => 'reviews',
+		'section_id'    => '',
 		'show_heading'  => true,
 		'show_all_link' => true,
 	)
 );
+
+get_template_part( 'template-parts/shared/reviews-slider', null, $slider_args );

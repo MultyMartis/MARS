@@ -13,11 +13,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $args = wp_parse_args(
 	$args ?? array(),
-	array(
+		array(
 		'context'       => 'home',
 		'limit'         => 0,
 		'featured_only' => false,
 		'section_class' => 'reviews',
+		'section_id'    => '',
 		'show_heading'  => true,
 		'show_all_link' => true,
 	)
@@ -46,11 +47,12 @@ if ( empty( $items ) ) {
 }
 
 $section_class = trim( (string) $args['section_class'] );
+$section_id    = trim( (string) $args['section_id'] );
 $heading       = shpigovsky_get_reviews_heading( 'Отзывы' );
 $aria_label    = wp_strip_all_tags( $heading );
 
 ?>
-<section data-reveal class="<?php echo esc_attr( $section_class ); ?>" aria-label="<?php echo esc_attr( $aria_label ); ?>">
+<section data-reveal class="<?php echo esc_attr( $section_class ); ?>"<?php echo '' !== $section_id ? ' id="' . esc_attr( $section_id ) . '"' : ''; ?> aria-label="<?php echo esc_attr( $aria_label ); ?>">
   <div class="container">
 	<?php if ( ! empty( $args['show_heading'] ) ) : ?>
     <div class="reviews__heading">

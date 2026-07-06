@@ -1,0 +1,44 @@
+{
+  "gaps": [
+    {
+      "area": "main wrapper",
+      "static_v9": "page-service-leaf-v1__main direct sections",
+      "current_wp": "article.shpigovsky-service wrapper",
+      "gap": "EXTRA_WRAPPER",
+      "repair": "remove article wrapper from alcohol-stack",
+      "status_after": "MATCH"
+    },
+    {
+      "area": "program items",
+      "static_v9": "4 items with images",
+      "current_wp": "titles only",
+      "gap": "WRONG_IMAGE",
+      "repair": "use subdivision programme fallback with images",
+      "status_after": "MATCH"
+    },
+    {
+      "area": "subnav",
+      "static_v9": "approach/program/start/specialists/comfort/reviews",
+      "current_wp": "intro/signs/program/start/faq",
+      "gap": "WRONG_ORDER",
+      "repair": "alcohol-specific subnav in service-helpers",
+      "status_after": "MATCH"
+    },
+    {
+      "area": "reviews anchor",
+      "static_v9": "id=service-leaf-reviews",
+      "current_wp": "no section id",
+      "gap": "MISSING",
+      "repair": "pass section_id to reviews-slider",
+      "status_after": "MATCH"
+    },
+    {
+      "area": "final form heading",
+      "static_v9": "service-leaf-final-form-heading",
+      "current_wp": "final-form-heading",
+      "gap": "WRONG_CLASS",
+      "repair": "final-form args support",
+      "status_after": "MATCH"
+    }
+  ]
+}

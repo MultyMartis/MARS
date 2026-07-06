@@ -21,7 +21,7 @@ $cta_phone   = '' !== $cta_phone ? $cta_phone : '8 (925) 183-64-64';
 
 if ( 'alcohol-special' === $variant ) {
 	$demo       = shpigovsky_get_v9_alcohol_leaf_program_demo_copy();
-	$items      = shpigovsky_get_service_programme_fallback_items();
+	$items      = shpigovsky_get_service_subdivision_programme_fallback_items();
 	$section_class = 'services-program-v2 services-program-v2--play-link services-program-v2--intro-stacked services-program-v2--title-flush services-program-v2--item-body-spaced services-program-v2--item-image-stack-tall services-program-v2--media-frame-fixed';
 	?>
 <section data-reveal class="<?php echo esc_attr( $section_class ); ?>" id="<?php echo esc_attr( $section_id ); ?>" aria-labelledby="<?php echo esc_attr( $heading_id ); ?>">

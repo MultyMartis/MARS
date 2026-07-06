@@ -1,0 +1,28 @@
+{
+  "inventory": [
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "object_id": 74,
+      "template": "alcohol-stack",
+      "content_status": "PARTIAL_V9_FIXTURE_DEMO_PROGRAM",
+      "layout_status": "MATCH_STATIC_LEAF",
+      "needs_e9_repair": "NO"
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/",
+      "object_id": null,
+      "template": "subdivision-stack",
+      "content_status": "DEMO",
+      "layout_status": "MATCH_STATIC_SUBDIVISION",
+      "needs_e9_repair": "NO"
+    },
+    {
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "object_id": null,
+      "template": "subdivision-stack",
+      "content_status": "DEMO",
+      "layout_status": "MATCH_STATIC_SUBDIVISION",
+      "needs_e9_repair": "NO"
+    }
+  ]
+}

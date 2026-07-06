@@ -1,0 +1,36 @@
+{
+  "captured_at": "2026-07-06T16:22:52+00:00",
+  "before_manifest": [
+    {
+      "file": "runtime-alcohol-leaf-before-e9.png",
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "captured": true,
+      "sha256": "F54699600D19F6E34DABA35BBB698B887D5C610562B464351A5A513698F2DCA4"
+    },
+    {
+      "file": "static-v9-alcohol-leaf-reference-e9.png",
+      "url": "file:///X:/AI MARS/workspaces/fp-0002-shpigovsky-v9/dist/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/index.html",
+      "captured": true,
+      "sha256": "C57C6DB1A580469FC4B68ED90692A86E87C4CD0B8EA5E8D3CEC128FE17CD5782"
+    }
+  ],
+  "operator_evidence": {
+    "file": "operator-alcohol-leaf-before-e9.png",
+    "status": "NOT_FOUND_IN_WORKSPACE",
+    "note": "Operator screenshot referenced in charter was not present in workspace; runtime-before and static reference captured instead."
+  },
+  "before_analysis": {
+    "body_has_page_service_leaf_v1": true,
+    "main_has_page_service_leaf_v1__main": true,
+    "has_article_shpigovsky_service": true,
+    "has_program_images": false,
+    "has_service_leaf_reviews_id": false,
+    "has_service_leaf_final_form_heading": false,
+    "subnav_has_approach": false,
+    "subnav_has_reviews": false,
+    "subnav_has_intro": true,
+    "layout_status": "DRIFT"
+  },
+  "after_analysis_reference": "visual-result.json",
+  "result": "BASELINE_CAPTURED"
+}
