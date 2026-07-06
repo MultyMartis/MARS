@@ -917,6 +917,19 @@ See §6. Per-category PHP profiles control which attributes appear in sidebar an
 | Checkpoint | `SITE-002-STABLE-PROD-NEUTRAL-CATEGORY-IMAGES-WHITE-BG-01` |
 | Report | [SITE-002-PROD-NEUTRAL-CATEGORY-IMAGES-WHITE-BG-REFRESH-01.md](../reports/SITE-002-PROD-NEUTRAL-CATEGORY-IMAGES-WHITE-BG-REFRESH-01.md) |
 
+### Polki category image fix (Production Run 4.197)
+
+| Field | Value |
+|-------|-------|
+| Operation | `SITE-002-PROD-NEUTRAL-CATEGORY-IMAGE-POLKI-FIX-01` |
+| Refreshed ID | 331 Полки настенные и настольные |
+| Deploy | FTP overwrite master `polki-nastennye-i-nastolnye.webp` + cache `polki-nastennye-i-nastolnye-300x300.webp` |
+| Root cause | Stale dark OpenCart cache served on tiles while master passed corner heuristic in 4.196 |
+| Admin saves | **0** |
+| Generation | **COMPOSER_ONLY_NO_API** + Pillow normalize |
+| Checkpoint | `SITE-002-STABLE-PROD-POLKI-CATEGORY-IMAGE-01` |
+| Report | [SITE-002-PROD-NEUTRAL-CATEGORY-IMAGE-POLKI-FIX-01.md](../reports/SITE-002-PROD-NEUTRAL-CATEGORY-IMAGE-POLKI-FIX-01.md) |
+
 ### Megamenu (M9.7)
 
 - `prepareMegamenuCategories()` filters empty branches
