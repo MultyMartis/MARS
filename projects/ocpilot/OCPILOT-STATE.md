@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-07
-**Evidence cutoff:** 2026-07-07 (SITE-002 Run **4.204** — production `llms.txt` UTF-8 BOM encoding fix; checkpoint `SITE-002-STABLE-PROD-LLMS-TXT-UTF8-01`)
+**Evidence cutoff:** 2026-07-07 (SITE-002 Run **4.205** — public brand remediation `БЗПМ`→`ЗПМ`; checkpoint `SITE-002-STABLE-PROD-BRAND-ZPM-01`)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **llms.txt encoding fix (Run 4.204)** — UTF-8 BOM reupload verified · next **final meta inventory** · [SITE-002-PROD-LLMS-TXT-ENCODING-FIX-01.md](sites/site-002/reports/SITE-002-PROD-LLMS-TXT-ENCODING-FIX-01.md) |
+| Current SITE-002 focus | **Brand ZPM remediation (Run 4.205)** — public `БЗПМ` removed from sampled pages · next **final meta inventory** · [SITE-002-PROD-BRAND-ZPM-REMEDIATION-01.md](sites/site-002/reports/SITE-002-PROD-BRAND-ZPM-REMEDIATION-01.md) |
 
 ---
 
@@ -36,7 +36,7 @@
 | OpenCart admin read-only | **VERIFIED** — version 3.0.3.9 |
 | Historical TEST | **preserved** — https://zpm.new-site.space/ |
 | First Production baseline | **SUPERSEDED BY CONTROLLED TEXT CHANGE** — parent [SITE-002-STABLE-PROD-INITIAL-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| Current Production checkpoint | **ISSUED** — [SITE-002-STABLE-PROD-LLMS-TXT-UTF8-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-LLMS-TXT-UTF8-01.md) (parent [SITE-002-STABLE-PROD-LLMS-TXT-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-LLMS-TXT-01.md); cron [SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01.md); SEO [SITE-002-STABLE-PROD-SITEMAP-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-SITEMAP-01.md)) |
+| Current Production checkpoint | **ISSUED** — [SITE-002-STABLE-PROD-BRAND-ZPM-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-BRAND-ZPM-01.md) (parent [SITE-002-STABLE-PROD-LLMS-TXT-UTF8-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-LLMS-TXT-UTF8-01.md); cron [SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01.md); SEO [SITE-002-STABLE-PROD-SITEMAP-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-SITEMAP-01.md)) |
 | First Production test / operation | **COMPLETE** — single-file text-only FTP deploy verified (Run 4.173) |
 | Second Production operation | **COMPLETE** — single-controller catalog sort deploy verified (Run 4.176) |
 | Third Production operation | **COMPLETE** — single-Twig catalog sort menu deploy verified (Run 4.177) |
