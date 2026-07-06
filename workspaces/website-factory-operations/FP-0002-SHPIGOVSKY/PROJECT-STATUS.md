@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-07 (V9-06E10 Full Backup + WP Port Root Cause Audit PASS)
+**Last updated:** 2026-07-07 (V9-06E11 Static-to-WP Page Contract Inventory PASS)
 
-**Current WordPress phase:** V9-06E10 Full Backup + WordPress Port Root Cause Audit **PASS** — root cause identified: semantic PHP reconstruction (D7-D) not direct V9 HTML port; probe-only E9 PASS insufficient vs operator visual drift; governance contract v1 created. **E3 stable checkpoint remains invalidated.** **Next: CREATE_V9_06E11_STATIC_TO_WP_PAGE_CONTRACT_INVENTORY_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E10-FULL-BACKUP-WP-PORT-ROOT-CAUSE-AUDIT-REPORT-v1.md`.
+**Current WordPress phase:** V9-06E11 Static-to-WP Page Contract Inventory **PASS** — complete page-by-page contract register before repair: 33 static V9 pages inventoried; 31 WP routes probed; section-stack, template provenance, and content authority contracts created; 16/16 screenshots PASS. Alcohol leaf `/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/` classified **NEEDS_DIRECT_V9_REPLACEMENT** (E12 start). **E3 stable checkpoint remains invalidated.** **Next: CREATE_V9_06E12_DIRECT_STATIC_PORT_REPAIR_ALCOHOL_LEAF_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E11-STATIC-TO-WP-PAGE-CONTRACT-INVENTORY-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

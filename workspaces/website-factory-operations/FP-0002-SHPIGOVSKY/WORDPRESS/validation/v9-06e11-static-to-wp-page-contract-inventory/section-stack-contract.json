@@ -1,0 +1,1141 @@
+{
+  "task": "V9-06E11",
+  "generated_at": "2026-07-06T21:43:19.763975+00:00",
+  "contracts": [
+    {
+      "route": "/blog/nazvanie-stati/",
+      "static_page_type": "BLOG_ARTICLE",
+      "expected_static_section_order": [
+        "breadcrumbs",
+        "blog-article-hero__toc",
+        "blog-article-body",
+        "blog-article-conclusion",
+        "founder-quote",
+        "blog-article-sources",
+        "blog-article-related",
+        "program-cta-band-section"
+      ],
+      "expected_section_count": 8,
+      "current_wp_section_order": [
+        "shpigovsky-skeleton-breadcrumbs"
+      ],
+      "current_wp_section_count": 1,
+      "current_wp_live_probe": [
+        "shpigovsky-skeleton-breadcrumbs"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": null,
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/blog/nazvanie-stati.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/blog/",
+      "static_page_type": "BLOG_INDEX",
+      "expected_static_section_order": [
+        "breadcrumbs",
+        "blog-archive",
+        "blog-archive-pagination",
+        "program-cta-band-section",
+        "blog-expert-quote"
+      ],
+      "expected_section_count": 5,
+      "current_wp_section_order": [
+        "shpigovsky-skeleton-breadcrumbs"
+      ],
+      "current_wp_section_count": 1,
+      "current_wp_live_probe": [
+        "shpigovsky-skeleton-breadcrumbs"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": null,
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/blog.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/consent-personal-data/",
+      "static_page_type": "LEGAL",
+      "expected_static_section_order": [
+        "breadcrumbs",
+        "services-page-subnav",
+        "legal-document",
+        "final-form"
+      ],
+      "expected_section_count": 4,
+      "current_wp_section_order": [
+        "shpigovsky-skeleton-breadcrumbs",
+        "legal-document"
+      ],
+      "current_wp_section_count": 2,
+      "current_wp_live_probe": [
+        "shpigovsky-skeleton-breadcrumbs",
+        "legal-document"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": "page-templates/legal.php",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/consent-personal-data.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/cookie-files-policy/",
+      "static_page_type": "LEGAL",
+      "expected_static_section_order": [
+        "breadcrumbs",
+        "services-page-subnav",
+        "legal-document",
+        "final-form"
+      ],
+      "expected_section_count": 4,
+      "current_wp_section_order": [
+        "shpigovsky-skeleton-breadcrumbs",
+        "legal-document"
+      ],
+      "current_wp_section_count": 2,
+      "current_wp_live_probe": [
+        "shpigovsky-skeleton-breadcrumbs",
+        "legal-document"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": "page-templates/legal.php",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/cookie-files-policy.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/",
+      "static_page_type": "HOME",
+      "expected_static_section_order": [
+        "home-recovery-intro",
+        "founder-quote",
+        "home-treatment-prevention",
+        "home-gallery",
+        "home-why-us",
+        "home-staff-photo",
+        "home-feature-grid",
+        "clinic-landscape",
+        "home-recovery-life",
+        "reviews",
+        "home-rehabilitation-requirements",
+        "home-rehabilitation-program",
+        "home-genotyping",
+        "comfort",
+        "home-videos",
+        "specialists",
+        "home-articles",
+        "faq",
+        "final-form"
+      ],
+      "expected_section_count": 19,
+      "current_wp_section_order": [
+        "home-recovery-intro",
+        "founder-quote",
+        "home-treatment-prevention",
+        "home-gallery",
+        "home-why-us",
+        "home-staff-photo",
+        "home-feature-grid",
+        "clinic-landscape",
+        "home-recovery-life",
+        "reviews",
+        "home-rehabilitation-requirements",
+        "home-rehabilitation-program",
+        "home-genotyping",
+        "comfort",
+        "home-videos",
+        "specialists",
+        "home-articles",
+        "faq",
+        "final-form"
+      ],
+      "current_wp_section_count": 19,
+      "current_wp_live_probe": [
+        "home-recovery-intro",
+        "founder-quote",
+        "home-treatment-prevention",
+        "home-gallery",
+        "home-why-us",
+        "home-staff-photo",
+        "home-feature-grid",
+        "clinic-landscape",
+        "home-recovery-life",
+        "reviews",
+        "home-rehabilitation-requirements",
+        "home-rehabilitation-program",
+        "home-genotyping",
+        "comfort",
+        "home-videos",
+        "specialists",
+        "home-articles",
+        "faq",
+        "final-form"
+      ],
+      "status": "MATCH",
+      "responsible_wp_template_partial": "default",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/index.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/kontakty/",
+      "static_page_type": "CONTACTS",
+      "expected_static_section_order": [
+        "breadcrumbs",
+        "contacts-body",
+        "contacts-rehabilitation-steps"
+      ],
+      "expected_section_count": 3,
+      "current_wp_section_order": [
+        "shpigovsky-skeleton-breadcrumbs",
+        "contacts-body",
+        "contacts-rehabilitation-steps"
+      ],
+      "current_wp_section_count": 3,
+      "current_wp_live_probe": [
+        "shpigovsky-skeleton-breadcrumbs",
+        "contacts-body",
+        "contacts-rehabilitation-steps"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": "page-templates/contacts.php",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/kontakty.html",
+      "repair_recommendation": "E12 direct V9 HTML port"
+    },
+    {
+      "route": "/o-centre/galereya-o-dome/",
+      "static_page_type": "INSTITUTIONAL",
+      "expected_static_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "plain-page-content",
+        "final-form"
+      ],
+      "expected_section_count": 5,
+      "current_wp_section_order": [
+        "services-inner-hero-v2",
+        "shpigovsky-skeleton-breadcrumbs"
+      ],
+      "current_wp_section_count": 2,
+      "current_wp_live_probe": [
+        "services-inner-hero-v2",
+        "shpigovsky-skeleton-breadcrumbs"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": "page-templates/institutional.php",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/o-centre/galereya-o-dome.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/o-centre/o-nas/",
+      "static_page_type": "INSTITUTIONAL",
+      "expected_static_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "plain-page-content",
+        "final-form"
+      ],
+      "expected_section_count": 5,
+      "current_wp_section_order": [
+        "services-inner-hero-v2",
+        "shpigovsky-skeleton-breadcrumbs"
+      ],
+      "current_wp_section_count": 2,
+      "current_wp_live_probe": [
+        "services-inner-hero-v2",
+        "shpigovsky-skeleton-breadcrumbs"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": "page-templates/institutional.php",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/o-centre/o-nas.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/o-centre/programma-lecheniya/",
+      "static_page_type": "INSTITUTIONAL",
+      "expected_static_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "plain-page-content",
+        "final-form"
+      ],
+      "expected_section_count": 5,
+      "current_wp_section_order": [
+        "services-inner-hero-v2",
+        "shpigovsky-skeleton-breadcrumbs"
+      ],
+      "current_wp_section_count": 2,
+      "current_wp_live_probe": [
+        "services-inner-hero-v2",
+        "shpigovsky-skeleton-breadcrumbs"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": "page-templates/institutional.php",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/o-centre/programma-lecheniya.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/o-centre/rodstvennikam/",
+      "static_page_type": "INSTITUTIONAL",
+      "expected_static_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "plain-page-content",
+        "final-form"
+      ],
+      "expected_section_count": 5,
+      "current_wp_section_order": [
+        "services-inner-hero-v2",
+        "shpigovsky-skeleton-breadcrumbs"
+      ],
+      "current_wp_section_count": 2,
+      "current_wp_live_probe": [
+        "services-inner-hero-v2",
+        "shpigovsky-skeleton-breadcrumbs"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": "page-templates/institutional.php",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/o-centre/rodstvennikam.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/o-centre/specialistam/",
+      "static_page_type": "INSTITUTIONAL",
+      "expected_static_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "plain-page-content",
+        "final-form"
+      ],
+      "expected_section_count": 5,
+      "current_wp_section_order": [
+        "services-inner-hero-v2",
+        "shpigovsky-skeleton-breadcrumbs"
+      ],
+      "current_wp_section_count": 2,
+      "current_wp_live_probe": [
+        "services-inner-hero-v2",
+        "shpigovsky-skeleton-breadcrumbs"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": "page-templates/institutional.php",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/o-centre/specialistam.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/o-centre/",
+      "static_page_type": "INSTITUTIONAL",
+      "expected_static_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "institutional-narrative",
+        "founder-quote",
+        "services-category-section-v2",
+        "program-cta-band-section",
+        "program-approach-band",
+        "clinic-landscape",
+        "services-program-v2",
+        "infrastructure-narrative",
+        "specialists",
+        "reviews",
+        "final-form"
+      ],
+      "expected_section_count": 14,
+      "current_wp_section_order": [
+        "services-inner-hero-v2",
+        "shpigovsky-skeleton-breadcrumbs"
+      ],
+      "current_wp_section_count": 2,
+      "current_wp_live_probe": [
+        "services-inner-hero-v2",
+        "shpigovsky-skeleton-breadcrumbs"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": "page-templates/institutional.php",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/o-centre.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/otzyvy/",
+      "static_page_type": "REVIEWS",
+      "expected_static_section_order": [
+        "breadcrumbs",
+        "reviews-archive",
+        "reviews-archive-pagination",
+        "reviews-rehabilitation-requirements"
+      ],
+      "expected_section_count": 4,
+      "current_wp_section_order": [
+        "shpigovsky-skeleton-breadcrumbs",
+        "reviews-archive",
+        "reviews-rehabilitation-requirements"
+      ],
+      "current_wp_section_count": 3,
+      "current_wp_live_probe": [
+        "shpigovsky-skeleton-breadcrumbs",
+        "reviews-archive",
+        "reviews-rehabilitation-requirements"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": "page-templates/reviews.php",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/otzyvy.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/privacy-policy/",
+      "static_page_type": "LEGAL",
+      "expected_static_section_order": [
+        "breadcrumbs",
+        "services-page-subnav",
+        "legal-document",
+        "final-form"
+      ],
+      "expected_section_count": 4,
+      "current_wp_section_order": [
+        "shpigovsky-skeleton-breadcrumbs",
+        "legal-document"
+      ],
+      "current_wp_section_count": 2,
+      "current_wp_live_probe": [
+        "shpigovsky-skeleton-breadcrumbs",
+        "legal-document"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": "page-templates/legal.php",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/privacy-policy.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/user-agreement/",
+      "static_page_type": "LEGAL",
+      "expected_static_section_order": [
+        "breadcrumbs",
+        "services-page-subnav",
+        "legal-document",
+        "final-form"
+      ],
+      "expected_section_count": 4,
+      "current_wp_section_order": [
+        "shpigovsky-skeleton-breadcrumbs",
+        "legal-document"
+      ],
+      "current_wp_section_count": 2,
+      "current_wp_live_probe": [
+        "shpigovsky-skeleton-breadcrumbs",
+        "legal-document"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": "page-templates/legal.php",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/user-agreement.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "static_page_type": "SERVICE_LEAF",
+      "expected_static_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "service-leaf-intro-v1",
+        "service-leaf-bordered-info-v1",
+        "program-cta-band-section",
+        "service-leaf-signs-v1",
+        "service-leaf-approach-v1",
+        "clinic-landscape",
+        "services-program-v2",
+        "service-leaf-stages-v1",
+        "service-leaf-corridor-v1",
+        "specialists",
+        "founder-quote",
+        "comfort",
+        "reviews",
+        "faq",
+        "final-form"
+      ],
+      "expected_section_count": 18,
+      "current_wp_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "service-leaf-intro-v1",
+        "service-leaf-bordered-info-v1",
+        "program-cta-band-section",
+        "service-leaf-signs-v1",
+        "service-leaf-approach-v1",
+        "clinic-landscape",
+        "services-program-v2",
+        "service-leaf-stages-v1",
+        "service-leaf-corridor-v1",
+        "specialists",
+        "founder-quote",
+        "comfort",
+        "reviews",
+        "faq",
+        "final-form"
+      ],
+      "current_wp_section_count": 18,
+      "current_wp_live_probe": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "service-leaf-intro-v1",
+        "service-leaf-bordered-info-v1",
+        "program-cta-band-section",
+        "service-leaf-signs-v1",
+        "service-leaf-approach-v1",
+        "clinic-landscape",
+        "services-program-v2",
+        "service-leaf-stages-v1",
+        "service-leaf-corridor-v1",
+        "specialists",
+        "founder-quote",
+        "comfort",
+        "reviews",
+        "faq",
+        "final-form"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": "single-service.php → alcohol_special-stack",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/usluga-konechnaya-v1.html",
+      "repair_recommendation": "E12: replace alcohol-stack.php with direct static V9 section includes"
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "static_page_type": "SERVICE_SUBDIVISION",
+      "expected_static_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "services-category-section-v2",
+        "service-subdivision-nature-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "service-subdivision-stages-v1",
+        "service-subdivision-team-stats-v1",
+        "clinic-landscape",
+        "specialists",
+        "founder-quote",
+        "comfort",
+        "reviews",
+        "faq",
+        "final-form"
+      ],
+      "expected_section_count": 16,
+      "current_wp_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "services-category-section-v2",
+        "service-subdivision-nature-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "service-subdivision-stages-v1",
+        "service-subdivision-team-stats-v1",
+        "clinic-landscape",
+        "specialists",
+        "founder-quote",
+        "comfort",
+        "reviews",
+        "faq",
+        "final-form"
+      ],
+      "current_wp_section_count": 16,
+      "current_wp_live_probe": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "services-category-section-v2",
+        "service-subdivision-nature-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "service-subdivision-stages-v1",
+        "service-subdivision-team-stats-v1",
+        "clinic-landscape",
+        "specialists",
+        "founder-quote",
+        "comfort",
+        "reviews",
+        "faq",
+        "final-form"
+      ],
+      "status": "MATCH",
+      "responsible_wp_template_partial": null,
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/usluga-podrazdel-v1.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/uslugi/genotipirovanie/",
+      "static_page_type": "SERVICE_SUBDIVISION",
+      "expected_static_section_order": [
+        "services-inner-hero-v2",
+        "internal-page-nav",
+        "comfort",
+        "final-form"
+      ],
+      "expected_section_count": 4,
+      "current_wp_section_order": [],
+      "current_wp_section_count": 0,
+      "current_wp_live_probe": [],
+      "status": "DEFERRED",
+      "responsible_wp_template_partial": null,
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/uslugi/genotipirovanie.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/depressiya/",
+      "static_page_type": "SERVICE_LEAF",
+      "expected_static_section_order": [
+        "breadcrumbs",
+        "placeholder-page"
+      ],
+      "expected_section_count": 2,
+      "current_wp_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "service-leaf-intro-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "final-form"
+      ],
+      "current_wp_section_count": 7,
+      "current_wp_live_probe": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "service-leaf-intro-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "final-form"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": "single-service.php → placeholder-stack",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/uslugi/psihicheskoe-zdorovie/depressiya.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/emocionalnoe-vygoranie/",
+      "static_page_type": "SERVICE_LEAF",
+      "expected_static_section_order": [
+        "breadcrumbs",
+        "placeholder-page"
+      ],
+      "expected_section_count": 2,
+      "current_wp_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "service-leaf-intro-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "final-form"
+      ],
+      "current_wp_section_count": 7,
+      "current_wp_live_probe": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "service-leaf-intro-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "final-form"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": "single-service.php → placeholder-stack",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/uslugi/psihicheskoe-zdorovie/emocionalnoe-vygoranie.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/ptrs/",
+      "static_page_type": "SERVICE_LEAF",
+      "expected_static_section_order": [
+        "breadcrumbs",
+        "placeholder-page"
+      ],
+      "expected_section_count": 2,
+      "current_wp_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "service-leaf-intro-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "final-form"
+      ],
+      "current_wp_section_count": 7,
+      "current_wp_live_probe": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "service-leaf-intro-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "final-form"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": "single-service.php → placeholder-stack",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/uslugi/psihicheskoe-zdorovie/ptrs.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+      "static_page_type": "SERVICE_LEAF",
+      "expected_static_section_order": [
+        "breadcrumbs",
+        "placeholder-page"
+      ],
+      "expected_section_count": 2,
+      "current_wp_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "service-leaf-intro-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "final-form"
+      ],
+      "current_wp_section_count": 7,
+      "current_wp_live_probe": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "service-leaf-intro-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "final-form"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": "single-service.php → placeholder-stack",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/uslugi/psihicheskoe-zdorovie/rasstroystva-sna.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/travma/",
+      "static_page_type": "SERVICE_LEAF",
+      "expected_static_section_order": [
+        "breadcrumbs",
+        "placeholder-page"
+      ],
+      "expected_section_count": 2,
+      "current_wp_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "service-leaf-intro-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "final-form"
+      ],
+      "current_wp_section_count": 7,
+      "current_wp_live_probe": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "service-leaf-intro-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "final-form"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": "single-service.php → placeholder-stack",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/uslugi/psihicheskoe-zdorovie/travma.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+      "static_page_type": "SERVICE_LEAF",
+      "expected_static_section_order": [
+        "breadcrumbs",
+        "placeholder-page"
+      ],
+      "expected_section_count": 2,
+      "current_wp_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "service-leaf-intro-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "final-form"
+      ],
+      "current_wp_section_count": 7,
+      "current_wp_live_probe": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "service-leaf-intro-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "final-form"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": "single-service.php → placeholder-stack",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/",
+      "static_page_type": "SERVICE_SUBDIVISION",
+      "expected_static_section_order": [
+        "breadcrumbs",
+        "placeholder-page"
+      ],
+      "expected_section_count": 2,
+      "current_wp_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "services-category-section-v2",
+        "service-subdivision-nature-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "service-subdivision-stages-v1",
+        "service-subdivision-team-stats-v1",
+        "clinic-landscape",
+        "specialists",
+        "founder-quote",
+        "comfort",
+        "reviews",
+        "faq",
+        "final-form"
+      ],
+      "current_wp_section_count": 16,
+      "current_wp_live_probe": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "services-category-section-v2",
+        "service-subdivision-nature-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "service-subdivision-stages-v1",
+        "service-subdivision-team-stats-v1",
+        "clinic-landscape",
+        "specialists",
+        "founder-quote",
+        "comfort",
+        "reviews",
+        "faq",
+        "final-form"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": null,
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/uslugi/psihicheskoe-zdorovie.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+      "static_page_type": "SERVICE_LEAF",
+      "expected_static_section_order": [
+        "breadcrumbs",
+        "placeholder-page"
+      ],
+      "expected_section_count": 2,
+      "current_wp_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "service-leaf-intro-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "final-form"
+      ],
+      "current_wp_section_count": 7,
+      "current_wp_live_probe": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "service-leaf-intro-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "final-form"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": "single-service.php → placeholder-stack",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/",
+      "static_page_type": "SERVICE_LEAF",
+      "expected_static_section_order": [
+        "breadcrumbs",
+        "placeholder-page"
+      ],
+      "expected_section_count": 2,
+      "current_wp_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "service-leaf-intro-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "final-form"
+      ],
+      "current_wp_section_count": 7,
+      "current_wp_live_probe": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "service-leaf-intro-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "final-form"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": "single-service.php → placeholder-stack",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/nervnaya-bulimiya/",
+      "static_page_type": "SERVICE_LEAF",
+      "expected_static_section_order": [
+        "breadcrumbs",
+        "placeholder-page"
+      ],
+      "expected_section_count": 2,
+      "current_wp_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "service-leaf-intro-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "final-form"
+      ],
+      "current_wp_section_count": 7,
+      "current_wp_live_probe": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "service-leaf-intro-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "final-form"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": "single-service.php → placeholder-stack",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/uslugi/rasstroystva-pischevogo-povedeniya/nervnaya-bulimiya.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "static_page_type": "SERVICE_SUBDIVISION",
+      "expected_static_section_order": [
+        "breadcrumbs",
+        "placeholder-page"
+      ],
+      "expected_section_count": 2,
+      "current_wp_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "services-category-section-v2",
+        "service-subdivision-nature-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "service-subdivision-stages-v1",
+        "service-subdivision-team-stats-v1",
+        "clinic-landscape",
+        "specialists",
+        "founder-quote",
+        "comfort",
+        "reviews",
+        "faq",
+        "final-form"
+      ],
+      "current_wp_section_count": 16,
+      "current_wp_live_probe": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "services-category-section-v2",
+        "service-subdivision-nature-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "service-subdivision-stages-v1",
+        "service-subdivision-team-stats-v1",
+        "clinic-landscape",
+        "specialists",
+        "founder-quote",
+        "comfort",
+        "reviews",
+        "faq",
+        "final-form"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": null,
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/uslugi/rasstroystva-pischevogo-povedeniya.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/uslugi/zavisimosti/profilakticheskiy-analiz/",
+      "static_page_type": "SERVICE_LEAF",
+      "expected_static_section_order": [
+        "breadcrumbs",
+        "placeholder-page"
+      ],
+      "expected_section_count": 2,
+      "current_wp_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "service-leaf-intro-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "final-form"
+      ],
+      "current_wp_section_count": 7,
+      "current_wp_live_probe": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "service-leaf-intro-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "final-form"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": "single-service.php → placeholder-stack",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/uslugi/zavisimosti/profilakticheskiy-analiz.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/uslugi/zavisimosti/specialistam/",
+      "static_page_type": "SERVICE_LEAF",
+      "expected_static_section_order": [
+        "breadcrumbs",
+        "placeholder-page"
+      ],
+      "expected_section_count": 2,
+      "current_wp_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "service-leaf-intro-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "final-form"
+      ],
+      "current_wp_section_count": 7,
+      "current_wp_live_probe": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "service-leaf-intro-v1",
+        "program-cta-band-section",
+        "services-program-v2",
+        "final-form"
+      ],
+      "status": "SEMANTIC_REBUILD",
+      "responsible_wp_template_partial": "page-templates/institutional.php",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/uslugi/zavisimosti/specialistam.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/uslugi/",
+      "static_page_type": "SERVICES_HUB",
+      "expected_static_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "services-category-section-v2",
+        "services-program-v2",
+        "founder-quote",
+        "comfort",
+        "faq",
+        "final-form"
+      ],
+      "expected_section_count": 9,
+      "current_wp_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "services-category-section-v2",
+        "services-program-v2",
+        "founder-quote",
+        "comfort",
+        "faq",
+        "final-form"
+      ],
+      "current_wp_section_count": 9,
+      "current_wp_live_probe": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "services-category-section-v2",
+        "services-program-v2",
+        "founder-quote",
+        "comfort",
+        "faq",
+        "final-form"
+      ],
+      "status": "MATCH",
+      "responsible_wp_template_partial": "page-templates/services-hub.php",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/uslugi-v2.html",
+      "repair_recommendation": "Defer or demo classify"
+    },
+    {
+      "route": "/uslugi/",
+      "static_page_type": "SERVICES_HUB",
+      "expected_static_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "services-category-section-v2",
+        "services-program-v2",
+        "founder-quote",
+        "comfort",
+        "faq",
+        "final-form"
+      ],
+      "expected_section_count": 9,
+      "current_wp_section_order": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "services-category-section-v2",
+        "services-program-v2",
+        "founder-quote",
+        "comfort",
+        "faq",
+        "final-form"
+      ],
+      "current_wp_section_count": 9,
+      "current_wp_live_probe": [
+        "services-inner-hero-v2",
+        "breadcrumbs",
+        "services-page-subnav",
+        "services-category-section-v2",
+        "services-program-v2",
+        "founder-quote",
+        "comfort",
+        "faq",
+        "final-form"
+      ],
+      "status": "MATCH",
+      "responsible_wp_template_partial": "page-templates/services-hub.php",
+      "static_source_counterpart": "workspaces/fp-0002-shpigovsky-v9/src/pages/uslugi.html",
+      "repair_recommendation": "Defer or demo classify"
+    }
+  ],
+  "core_route_summary": {
+    "/blog/": "SEMANTIC_REBUILD",
+    "/consent-personal-data/": "SEMANTIC_REBUILD",
+    "/cookie-files-policy/": "SEMANTIC_REBUILD",
+    "/": "MATCH",
+    "/kontakty/": "SEMANTIC_REBUILD",
+    "/o-centre/": "SEMANTIC_REBUILD",
+    "/otzyvy/": "SEMANTIC_REBUILD",
+    "/privacy-policy/": "SEMANTIC_REBUILD",
+    "/user-agreement/": "SEMANTIC_REBUILD",
+    "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/": "SEMANTIC_REBUILD",
+    "/uslugi/zavisimosti/": "MATCH",
+    "/uslugi/psihicheskoe-zdorovie/": "SEMANTIC_REBUILD",
+    "/uslugi/rasstroystva-pischevogo-povedeniya/": "SEMANTIC_REBUILD",
+    "/uslugi/": "MATCH"
+  },
+  "result": "COMPLETE"
+}

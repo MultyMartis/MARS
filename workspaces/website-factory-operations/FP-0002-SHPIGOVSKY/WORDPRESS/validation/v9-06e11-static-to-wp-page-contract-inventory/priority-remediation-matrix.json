@@ -1,0 +1,380 @@
+{
+  "task": "V9-06E11",
+  "generated_at": "2026-07-06T21:44:10.651066+00:00",
+  "recommended_e12_start": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+  "routes": [
+    {
+      "route": "/blog/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "MEDIUM",
+      "repair_type": "SECTION_STACK_REPAIR",
+      "recommended_phase": "E15+",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "MEDIUM",
+      "screenshot_validation_required": false
+    },
+    {
+      "route": "/consent-personal-data/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "MEDIUM",
+      "repair_type": "SECTION_STACK_REPAIR",
+      "recommended_phase": "E15+",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "MEDIUM",
+      "screenshot_validation_required": false
+    },
+    {
+      "route": "/cookie-files-policy/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "MEDIUM",
+      "repair_type": "SECTION_STACK_REPAIR",
+      "recommended_phase": "E15+",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "MEDIUM",
+      "screenshot_validation_required": false
+    },
+    {
+      "route": "/",
+      "current_status": "MATCH",
+      "severity": "HIGH",
+      "repair_type": "NO_ACTION",
+      "recommended_phase": "E14",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "HIGH",
+      "screenshot_validation_required": true
+    },
+    {
+      "route": "/kontakty/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "MEDIUM",
+      "repair_type": "SECTION_STACK_REPAIR",
+      "recommended_phase": "E14",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "MEDIUM",
+      "screenshot_validation_required": true
+    },
+    {
+      "route": "/o-centre/galereya-o-dome/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "MEDIUM",
+      "repair_type": "SECTION_STACK_REPAIR",
+      "recommended_phase": "E15+",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "MEDIUM",
+      "screenshot_validation_required": false
+    },
+    {
+      "route": "/o-centre/o-nas/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "MEDIUM",
+      "repair_type": "SECTION_STACK_REPAIR",
+      "recommended_phase": "E15+",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "MEDIUM",
+      "screenshot_validation_required": false
+    },
+    {
+      "route": "/o-centre/programma-lecheniya/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "MEDIUM",
+      "repair_type": "SECTION_STACK_REPAIR",
+      "recommended_phase": "E15+",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "MEDIUM",
+      "screenshot_validation_required": false
+    },
+    {
+      "route": "/o-centre/rodstvennikam/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "MEDIUM",
+      "repair_type": "SECTION_STACK_REPAIR",
+      "recommended_phase": "E15+",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "MEDIUM",
+      "screenshot_validation_required": false
+    },
+    {
+      "route": "/o-centre/specialistam/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "MEDIUM",
+      "repair_type": "SECTION_STACK_REPAIR",
+      "recommended_phase": "E15+",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "MEDIUM",
+      "screenshot_validation_required": false
+    },
+    {
+      "route": "/o-centre/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "MEDIUM",
+      "repair_type": "SECTION_STACK_REPAIR",
+      "recommended_phase": "E15+",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "MEDIUM",
+      "screenshot_validation_required": false
+    },
+    {
+      "route": "/otzyvy/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "LOW",
+      "repair_type": "SECTION_STACK_REPAIR",
+      "recommended_phase": "E15",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "MEDIUM",
+      "screenshot_validation_required": false
+    },
+    {
+      "route": "/privacy-policy/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "LOW",
+      "repair_type": "SECTION_STACK_REPAIR",
+      "recommended_phase": "—",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "MEDIUM",
+      "screenshot_validation_required": false
+    },
+    {
+      "route": "/user-agreement/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "MEDIUM",
+      "repair_type": "SECTION_STACK_REPAIR",
+      "recommended_phase": "E15+",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "MEDIUM",
+      "screenshot_validation_required": false
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "CRITICAL",
+      "repair_type": "DIRECT_V9_REPLACEMENT",
+      "recommended_phase": "E12",
+      "dependencies": [
+        "E11 contract complete"
+      ],
+      "risk": "HIGH",
+      "screenshot_validation_required": true
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "current_status": "MATCH",
+      "severity": "HIGH",
+      "repair_type": "NO_ACTION",
+      "recommended_phase": "E13",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "HIGH",
+      "screenshot_validation_required": true
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/depressiya/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "MEDIUM",
+      "repair_type": "SECTION_STACK_REPAIR",
+      "recommended_phase": "E15+",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "MEDIUM",
+      "screenshot_validation_required": false
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/emocionalnoe-vygoranie/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "MEDIUM",
+      "repair_type": "SECTION_STACK_REPAIR",
+      "recommended_phase": "E15+",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "MEDIUM",
+      "screenshot_validation_required": false
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/ptrs/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "MEDIUM",
+      "repair_type": "SECTION_STACK_REPAIR",
+      "recommended_phase": "E15+",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "MEDIUM",
+      "screenshot_validation_required": false
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "MEDIUM",
+      "repair_type": "SECTION_STACK_REPAIR",
+      "recommended_phase": "E15+",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "MEDIUM",
+      "screenshot_validation_required": false
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/travma/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "MEDIUM",
+      "repair_type": "SECTION_STACK_REPAIR",
+      "recommended_phase": "E15+",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "MEDIUM",
+      "screenshot_validation_required": false
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "MEDIUM",
+      "repair_type": "SECTION_STACK_REPAIR",
+      "recommended_phase": "E15+",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "MEDIUM",
+      "screenshot_validation_required": false
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "MEDIUM",
+      "repair_type": "SECTION_STACK_REPAIR",
+      "recommended_phase": "E15+",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "MEDIUM",
+      "screenshot_validation_required": false
+    },
+    {
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "MEDIUM",
+      "repair_type": "SECTION_STACK_REPAIR",
+      "recommended_phase": "E15+",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "MEDIUM",
+      "screenshot_validation_required": false
+    },
+    {
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "MEDIUM",
+      "repair_type": "SECTION_STACK_REPAIR",
+      "recommended_phase": "E15+",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "MEDIUM",
+      "screenshot_validation_required": false
+    },
+    {
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/nervnaya-bulimiya/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "MEDIUM",
+      "repair_type": "SECTION_STACK_REPAIR",
+      "recommended_phase": "E15+",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "MEDIUM",
+      "screenshot_validation_required": false
+    },
+    {
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "MEDIUM",
+      "repair_type": "SECTION_STACK_REPAIR",
+      "recommended_phase": "E15+",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "MEDIUM",
+      "screenshot_validation_required": false
+    },
+    {
+      "route": "/uslugi/zavisimosti/profilakticheskiy-analiz/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "MEDIUM",
+      "repair_type": "SECTION_STACK_REPAIR",
+      "recommended_phase": "E15+",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "MEDIUM",
+      "screenshot_validation_required": false
+    },
+    {
+      "route": "/uslugi/zavisimosti/specialistam/",
+      "current_status": "SEMANTIC_REBUILD",
+      "severity": "MEDIUM",
+      "repair_type": "SECTION_STACK_REPAIR",
+      "recommended_phase": "E15+",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "MEDIUM",
+      "screenshot_validation_required": false
+    },
+    {
+      "route": "/uslugi/",
+      "current_status": "MATCH",
+      "severity": "HIGH",
+      "repair_type": "NO_ACTION",
+      "recommended_phase": "E13",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "HIGH",
+      "screenshot_validation_required": true
+    },
+    {
+      "route": "/uslugi/",
+      "current_status": "MATCH",
+      "severity": "HIGH",
+      "repair_type": "NO_ACTION",
+      "recommended_phase": "E13",
+      "dependencies": [
+        "E12 alcohol leaf PASS"
+      ],
+      "risk": "HIGH",
+      "screenshot_validation_required": true
+    }
+  ],
+  "result": "COMPLETE"
+}

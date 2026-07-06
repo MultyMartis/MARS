@@ -1,0 +1,20 @@
+# FP-0002 V9-06E11 Final Page Contract Register v1
+
+| Route | Final classification | Next action | Notes |
+|---|---|---|---|
+| /blog/ | DEFERRED | NO_ACTION | stack=SEMANTIC_REBUILD content=UNKNOWN |
+| /consent-personal-data/ | NEEDS_SECTION_STACK_REPAIR | SECTION_STACK_REPAIR | stack=SEMANTIC_REBUILD content=NATIVE_LEGAL_CONTENT |
+| /cookie-files-policy/ | NEEDS_SECTION_STACK_REPAIR | SECTION_STACK_REPAIR | stack=SEMANTIC_REBUILD content=NATIVE_LEGAL_CONTENT |
+| / | NEEDS_CONTENT_RESEED | CONTENT_RESEED | stack=MATCH content=DEMO_CONTENT |
+| /kontakty/ | NEEDS_DIRECT_V9_REPLACEMENT | DIRECT_V9_REPLACEMENT | stack=SEMANTIC_REBUILD content=EXACT_V9_CONTENT |
+| /o-centre/ | NEEDS_DIRECT_V9_REPLACEMENT | DIRECT_V9_REPLACEMENT | stack=SEMANTIC_REBUILD content=DEMO_CONTENT |
+| /otzyvy/ | ADMIN_DYNAMIC_READY | NO_ACTION | stack=SEMANTIC_REBUILD content=ADMIN_DYNAMIC_CONTENT |
+| /privacy-policy/ | NEEDS_SECTION_STACK_REPAIR | SECTION_STACK_REPAIR | stack=SEMANTIC_REBUILD content=NATIVE_LEGAL_CONTENT |
+| /user-agreement/ | NEEDS_SECTION_STACK_REPAIR | SECTION_STACK_REPAIR | stack=SEMANTIC_REBUILD content=NATIVE_LEGAL_CONTENT |
+| /uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/ | NEEDS_DIRECT_V9_REPLACEMENT | DIRECT_V9_REPLACEMENT | stack=SEMANTIC_REBUILD content=V9_FIXTURE_DEMO |
+| /uslugi/zavisimosti/ | NEEDS_CONTENT_RESEED | CONTENT_RESEED | stack=MATCH content=DEMO_CONTENT |
+| /uslugi/genotipirovanie/ | NEEDS_CONTENT_RESEED | CONTENT_RESEED | stack=DEFERRED content=UNKNOWN |
+| /uslugi/psihicheskoe-zdorovie/ | DEMO_ACCEPTED | DEMO_CLASSIFICATION_ONLY | stack=SEMANTIC_REBUILD content=UNKNOWN |
+| /uslugi/rasstroystva-pischevogo-povedeniya/ | DEMO_ACCEPTED | DEMO_CLASSIFICATION_ONLY | stack=SEMANTIC_REBUILD content=UNKNOWN |
+| /uslugi/ | NEEDS_CONTENT_RESEED | CONTENT_RESEED | stack=MATCH content=DEMO_CONTENT |
+| /uslugi/ | NEEDS_CONTENT_RESEED | CONTENT_RESEED | stack=MATCH content=DEMO_CONTENT |

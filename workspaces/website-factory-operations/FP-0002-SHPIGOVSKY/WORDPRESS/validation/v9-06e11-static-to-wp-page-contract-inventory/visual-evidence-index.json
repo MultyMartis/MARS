@@ -1,0 +1,52 @@
+{
+  "task": "V9-06E11",
+  "generated_at": "2026-07-06T21:44:10.649920+00:00",
+  "pairs": [
+    {
+      "label": "home",
+      "static": "screenshots/static-v9-home.png",
+      "wp": "screenshots/runtime-home.png"
+    },
+    {
+      "label": "services_hub",
+      "static": "screenshots/static-v9-uslugi-hub.png",
+      "wp": "screenshots/runtime-uslugi-hub.png"
+    },
+    {
+      "label": "subdivision",
+      "static": "screenshots/static-v9-uslugi-zavisimosti-subdivision.png",
+      "wp": "screenshots/runtime-uslugi-zavisimosti-subdivision.png"
+    },
+    {
+      "label": "alcohol_leaf",
+      "static": "screenshots/static-v9-alcohol-leaf.png",
+      "wp": "screenshots/runtime-alcohol-leaf.png"
+    },
+    {
+      "label": "contacts",
+      "static": "screenshots/static-v9-kontakty.png",
+      "wp": "screenshots/runtime-kontakty.png"
+    },
+    {
+      "label": "reviews",
+      "static": "screenshots/static-v9-otzyvy.png",
+      "wp": "screenshots/runtime-otzyvy.png"
+    },
+    {
+      "label": "legal_privacy",
+      "static": "screenshots/static-v9-privacy-policy.png",
+      "wp": "screenshots/runtime-privacy-policy.png"
+    },
+    {
+      "label": "demo_psihicheskoe",
+      "static": null,
+      "wp": "screenshots/runtime-psihicheskoe-zdorovie.png"
+    },
+    {
+      "label": "demo_rpp",
+      "static": null,
+      "wp": "screenshots/runtime-rasstroystva-pischevogo-povedeniya.png"
+    }
+  ],
+  "result": "PASS"
+}

@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E10 FULL BACKUP + WP PORT ROOT CAUSE AUDIT **PASS** — root cause: semantic reconstruction not direct V9 HTML port; governance contract v1; E3 checkpoint invalidated. NEXT: **CREATE_V9_06E11_STATIC_TO_WP_PAGE_CONTRACT_INVENTORY_TASK**
+**Status:** V9-06E11 STATIC-TO-WP PAGE CONTRACT INVENTORY **PASS** — 33 static pages + 31 WP routes mapped; section-stack/content/provenance contracts complete; 16 screenshots PASS. E12 priority: alcohol leaf direct V9 port. NEXT: **CREATE_V9_06E12_DIRECT_STATIC_PORT_REPAIR_ALCOHOL_LEAF_TASK**
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

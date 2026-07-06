@@ -1,0 +1,171 @@
+{
+  "task": "V9-06E11",
+  "generated_at": "2026-07-06T21:43:19.764994+00:00",
+  "items": [
+    {
+      "file_path": "WORDPRESS/theme/shpigovsky/template-parts/service/alcohol-stack.php",
+      "used_by_routes": [
+        "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+      ],
+      "provenance": "SEMANTIC_RECONSTRUCTION",
+      "static_v9_counterpart": "pages/usluga-konechnaya-v1.html",
+      "risk": "HIGH",
+      "allowed_future_use": "REPLACE_WITH_DIRECT_V9",
+      "notes": "E10 audit baseline; E11 contract inventory"
+    },
+    {
+      "file_path": "WORDPRESS/theme/shpigovsky/template-parts/service/leaf-stack.php",
+      "used_by_routes": [
+        "/uslugi/*/leaf routes"
+      ],
+      "provenance": "SEMANTIC_RECONSTRUCTION",
+      "static_v9_counterpart": "pages/usluga-konechnaya-v1.html (truncated 10 vs 17)",
+      "risk": "BLOCKER",
+      "allowed_future_use": "REPLACE_WITH_DIRECT_V9",
+      "notes": "E10 audit baseline; E11 contract inventory"
+    },
+    {
+      "file_path": "WORDPRESS/theme/shpigovsky/template-parts/service/subdivision-stack.php",
+      "used_by_routes": [
+        "/uslugi/zavisimosti/",
+        "/uslugi/psihicheskoe-zdorovie/"
+      ],
+      "provenance": "SEMANTIC_RECONSTRUCTION",
+      "static_v9_counterpart": "pages/usluga-podrazdel-v1.html",
+      "risk": "HIGH",
+      "allowed_future_use": "REPLACE_WITH_DIRECT_V9",
+      "notes": "E10 audit baseline; E11 contract inventory"
+    },
+    {
+      "file_path": "WORDPRESS/theme/shpigovsky/page-templates/services-hub.php",
+      "used_by_routes": [
+        "/uslugi/"
+      ],
+      "provenance": "SEMANTIC_RECONSTRUCTION",
+      "static_v9_counterpart": "pages/uslugi-v2.html",
+      "risk": "HIGH",
+      "allowed_future_use": "REPLACE_WITH_DIRECT_V9",
+      "notes": "E10 audit baseline; E11 contract inventory"
+    },
+    {
+      "file_path": "WORDPRESS/theme/shpigovsky/front-page.php",
+      "used_by_routes": [
+        "/"
+      ],
+      "provenance": "V9_ADAPTED_PARTIAL",
+      "static_v9_counterpart": "pages/index.html",
+      "risk": "MEDIUM",
+      "allowed_future_use": "KEEP_WITH_LIMITS",
+      "notes": "E10 audit baseline; E11 contract inventory"
+    },
+    {
+      "file_path": "WORDPRESS/theme/shpigovsky/page-templates/contacts.php",
+      "used_by_routes": [
+        "/kontakty/"
+      ],
+      "provenance": "V9_ADAPTED_PARTIAL",
+      "static_v9_counterpart": "pages/kontakty.html",
+      "risk": "MEDIUM",
+      "allowed_future_use": "KEEP_WITH_LIMITS",
+      "notes": "E10 audit baseline; E11 contract inventory"
+    },
+    {
+      "file_path": "WORDPRESS/theme/shpigovsky/page-templates/reviews.php",
+      "used_by_routes": [
+        "/otzyvy/"
+      ],
+      "provenance": "V9_ADAPTED_PARTIAL",
+      "static_v9_counterpart": "partials/sections/reviews.html",
+      "risk": "MEDIUM",
+      "allowed_future_use": "KEEP_WITH_LIMITS",
+      "notes": "E10 audit baseline; E11 contract inventory"
+    },
+    {
+      "file_path": "WORDPRESS/theme/shpigovsky/page-templates/legal.php",
+      "used_by_routes": [
+        "/privacy-policy/",
+        "/user-agreement/"
+      ],
+      "provenance": "V9_ADAPTED_PARTIAL",
+      "static_v9_counterpart": "legal pages",
+      "risk": "LOW",
+      "allowed_future_use": "KEEP",
+      "notes": "E10 audit baseline; E11 contract inventory"
+    },
+    {
+      "file_path": "WORDPRESS/theme/shpigovsky/inc/v9-static-content.php",
+      "used_by_routes": [
+        "hub",
+        "alcohol",
+        "service routes"
+      ],
+      "provenance": "DEMO_FALLBACK",
+      "static_v9_counterpart": "PHP re-encoding of V9 copy",
+      "risk": "HIGH",
+      "allowed_future_use": "DEPRECATE",
+      "notes": "E10 audit baseline; E11 contract inventory"
+    },
+    {
+      "file_path": "WORDPRESS/theme/shpigovsky/inc/home-fallbacks.php",
+      "used_by_routes": [
+        "/"
+      ],
+      "provenance": "DEMO_FALLBACK",
+      "static_v9_counterpart": "temp FAQ demo",
+      "risk": "HIGH",
+      "allowed_future_use": "DEPRECATE",
+      "notes": "E10 audit baseline; E11 contract inventory"
+    },
+    {
+      "file_path": "WORDPRESS/theme/shpigovsky/template-parts/home/specialists.php",
+      "used_by_routes": [
+        "home",
+        "subdivision",
+        "alcohol"
+      ],
+      "provenance": "V9_ADAPTED_PARTIAL",
+      "static_v9_counterpart": "partials/sections/specialists.html",
+      "risk": "MEDIUM",
+      "allowed_future_use": "KEEP_WITH_LIMITS",
+      "notes": "E10 audit baseline; E11 contract inventory"
+    },
+    {
+      "file_path": "WORDPRESS/theme/shpigovsky/template-parts/home/reviews.php",
+      "used_by_routes": [
+        "home",
+        "subdivision",
+        "alcohol"
+      ],
+      "provenance": "V9_ADAPTED_PARTIAL",
+      "static_v9_counterpart": "partials/sections/reviews.html",
+      "risk": "MEDIUM",
+      "allowed_future_use": "KEEP_WITH_LIMITS",
+      "notes": "E10 audit baseline; E11 contract inventory"
+    },
+    {
+      "file_path": "WORDPRESS/theme/shpigovsky/template-parts/service/signs.php",
+      "used_by_routes": [
+        "alcohol leaf",
+        "generic leaf"
+      ],
+      "provenance": "DEMO_FALLBACK",
+      "static_v9_counterpart": "partials/sections/service-leaf-signs-v1.html",
+      "risk": "HIGH",
+      "allowed_future_use": "REPLACE_WITH_DIRECT_V9",
+      "notes": "E10 audit baseline; E11 contract inventory"
+    },
+    {
+      "file_path": "WORDPRESS/theme/shpigovsky/template-parts/service/program.php",
+      "used_by_routes": [
+        "service routes"
+      ],
+      "provenance": "DEMO_FALLBACK",
+      "static_v9_counterpart": "partials/sections/services-program-v2.html",
+      "risk": "HIGH",
+      "allowed_future_use": "REPLACE_WITH_DIRECT_V9",
+      "notes": "E10 audit baseline; E11 contract inventory"
+    }
+  ],
+  "high_risk_count": 8,
+  "result": "COMPLETE"
+}

@@ -1,0 +1,214 @@
+{
+  "task": "V9-06E11",
+  "generated_at": "2026-07-06T21:43:19.765520+00:00",
+  "routes": [
+    {
+      "route": "/",
+      "expected_content_source": "EXACT_V9_CONTENT",
+      "current_content_source": "ACF+home-fallbacks+helpers",
+      "status": "DEMO_CONTENT",
+      "text_mutation_risk": "medium",
+      "repair_recommendation": "Direct static V9 copy port; ACF only for OPERATOR_REAL_CONTENT",
+      "sections": []
+    },
+    {
+      "route": "/uslugi/",
+      "expected_content_source": "EXACT_V9_CONTENT",
+      "current_content_source": "v9-static-content+CPT",
+      "status": "DEMO_CONTENT",
+      "text_mutation_risk": "high",
+      "repair_recommendation": "Direct static V9 copy port; ACF only for OPERATOR_REAL_CONTENT",
+      "sections": []
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "expected_content_source": "EXACT_V9_CONTENT",
+      "current_content_source": "ACF+helpers+v9-static",
+      "status": "DEMO_CONTENT",
+      "text_mutation_risk": "medium",
+      "repair_recommendation": "Direct static V9 copy port; ACF only for OPERATOR_REAL_CONTENT",
+      "sections": []
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "expected_content_source": "EXACT_V9_CONTENT",
+      "current_content_source": "v9-static+ACF seed #74",
+      "status": "V9_FIXTURE_DEMO",
+      "text_mutation_risk": "high",
+      "repair_recommendation": "Direct static V9 copy port; ACF only for OPERATOR_REAL_CONTENT",
+      "sections": []
+    },
+    {
+      "route": "/kontakty/",
+      "expected_content_source": "EXACT_V9_CONTENT",
+      "current_content_source": "ACF+contacts-helpers",
+      "status": "EXACT_V9_CONTENT",
+      "text_mutation_risk": "low",
+      "repair_recommendation": "Direct static V9 copy port; ACF only for OPERATOR_REAL_CONTENT",
+      "sections": []
+    },
+    {
+      "route": "/otzyvy/",
+      "expected_content_source": "V9_FIXTURE_DEMO",
+      "current_content_source": "fp02-reviews options",
+      "status": "ADMIN_DYNAMIC_CONTENT",
+      "text_mutation_risk": "low",
+      "repair_recommendation": "Direct static V9 copy port; ACF only for OPERATOR_REAL_CONTENT",
+      "sections": []
+    },
+    {
+      "route": "/privacy-policy/",
+      "expected_content_source": "NATIVE_LEGAL_CONTENT",
+      "current_content_source": "post_content E1 seed",
+      "status": "NATIVE_LEGAL_CONTENT",
+      "text_mutation_risk": "low",
+      "repair_recommendation": "Verify E1 seed; operator legal review",
+      "sections": []
+    },
+    {
+      "route": "/user-agreement/",
+      "expected_content_source": "NATIVE_LEGAL_CONTENT",
+      "current_content_source": "post_content E1 seed",
+      "status": "NATIVE_LEGAL_CONTENT",
+      "text_mutation_risk": "low",
+      "repair_recommendation": "Verify E1 seed; operator legal review",
+      "sections": []
+    },
+    {
+      "route": "/consent-personal-data/",
+      "expected_content_source": "NATIVE_LEGAL_CONTENT",
+      "current_content_source": "post_content E1 seed",
+      "status": "NATIVE_LEGAL_CONTENT",
+      "text_mutation_risk": "low",
+      "repair_recommendation": "Verify E1 seed; operator legal review",
+      "sections": []
+    },
+    {
+      "route": "/cookie-files-policy/",
+      "expected_content_source": "NATIVE_LEGAL_CONTENT",
+      "current_content_source": "post_content E1 seed",
+      "status": "NATIVE_LEGAL_CONTENT",
+      "text_mutation_risk": "low",
+      "repair_recommendation": "Verify E1 seed; operator legal review",
+      "sections": []
+    },
+    {
+      "route": "/o-centre/",
+      "expected_content_source": "V9_FIXTURE_DEMO",
+      "current_content_source": "institutional template",
+      "status": "DEMO_CONTENT",
+      "text_mutation_risk": "medium",
+      "repair_recommendation": "Direct static V9 copy port; ACF only for OPERATOR_REAL_CONTENT",
+      "sections": []
+    },
+    {
+      "route": "/blog/",
+      "expected_content_source": "DEFERRED",
+      "current_content_source": "none",
+      "status": "UNKNOWN",
+      "text_mutation_risk": "low",
+      "repair_recommendation": "Direct static V9 copy port; ACF only for OPERATOR_REAL_CONTENT",
+      "sections": []
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/depressiya/",
+      "expected_content_source": "DEFERRED",
+      "current_content_source": "leaf-stack generic",
+      "status": "DEMO_CONTENT",
+      "text_mutation_risk": "high",
+      "repair_recommendation": "DEFER until static copy approved or classify DEMO_ONLY",
+      "sections": []
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/emocionalnoe-vygoranie/",
+      "expected_content_source": "DEFERRED",
+      "current_content_source": "leaf-stack generic",
+      "status": "DEMO_CONTENT",
+      "text_mutation_risk": "high",
+      "repair_recommendation": "DEFER until static copy approved or classify DEMO_ONLY",
+      "sections": []
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/ptrs/",
+      "expected_content_source": "DEFERRED",
+      "current_content_source": "leaf-stack generic",
+      "status": "DEMO_CONTENT",
+      "text_mutation_risk": "high",
+      "repair_recommendation": "DEFER until static copy approved or classify DEMO_ONLY",
+      "sections": []
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+      "expected_content_source": "DEFERRED",
+      "current_content_source": "leaf-stack generic",
+      "status": "DEMO_CONTENT",
+      "text_mutation_risk": "high",
+      "repair_recommendation": "DEFER until static copy approved or classify DEMO_ONLY",
+      "sections": []
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/travma/",
+      "expected_content_source": "DEFERRED",
+      "current_content_source": "leaf-stack generic",
+      "status": "DEMO_CONTENT",
+      "text_mutation_risk": "high",
+      "repair_recommendation": "DEFER until static copy approved or classify DEMO_ONLY",
+      "sections": []
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+      "expected_content_source": "DEFERRED",
+      "current_content_source": "leaf-stack generic",
+      "status": "DEMO_CONTENT",
+      "text_mutation_risk": "high",
+      "repair_recommendation": "DEFER until static copy approved or classify DEMO_ONLY",
+      "sections": []
+    },
+    {
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+      "expected_content_source": "DEFERRED",
+      "current_content_source": "leaf-stack generic",
+      "status": "DEMO_CONTENT",
+      "text_mutation_risk": "high",
+      "repair_recommendation": "DEFER until static copy approved or classify DEMO_ONLY",
+      "sections": []
+    },
+    {
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/",
+      "expected_content_source": "DEFERRED",
+      "current_content_source": "leaf-stack generic",
+      "status": "DEMO_CONTENT",
+      "text_mutation_risk": "high",
+      "repair_recommendation": "DEFER until static copy approved or classify DEMO_ONLY",
+      "sections": []
+    },
+    {
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/nervnaya-bulimiya/",
+      "expected_content_source": "DEFERRED",
+      "current_content_source": "leaf-stack generic",
+      "status": "DEMO_CONTENT",
+      "text_mutation_risk": "high",
+      "repair_recommendation": "DEFER until static copy approved or classify DEMO_ONLY",
+      "sections": []
+    },
+    {
+      "route": "/uslugi/zavisimosti/profilakticheskiy-analiz/",
+      "expected_content_source": "DEFERRED",
+      "current_content_source": "leaf-stack generic",
+      "status": "DEMO_CONTENT",
+      "text_mutation_risk": "high",
+      "repair_recommendation": "DEFER until static copy approved or classify DEMO_ONLY",
+      "sections": []
+    },
+    {
+      "route": "/uslugi/zavisimosti/specialistam/",
+      "expected_content_source": "DEFERRED",
+      "current_content_source": "leaf-stack generic",
+      "status": "DEMO_CONTENT",
+      "text_mutation_risk": "high",
+      "repair_recommendation": "DEFER until static copy approved or classify DEMO_ONLY",
+      "sections": []
+    }
+  ],
+  "result": "COMPLETE"
+}
