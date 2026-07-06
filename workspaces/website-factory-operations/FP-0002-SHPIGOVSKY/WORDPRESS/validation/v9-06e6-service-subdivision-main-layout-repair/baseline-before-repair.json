@@ -1,0 +1,42 @@
+{
+  "route": "/uslugi/zavisimosti/",
+  "wp_object_id": 73,
+  "captured_at": "2026-07-06",
+  "e5_baseline_commit": "936754b7edd52dc3c3b46ebe7f356ada238d4aaf",
+  "http_status": 200,
+  "template": "single-service.php → template-parts/service/subdivision-stack.php",
+  "body_class": "wp-singular service-template-default single single-service postid-73 wp-theme-shpigovsky",
+  "body_class_missing": "page-service-subdivision-v1",
+  "main_wrapper": "page-service-subdivision-v1__main",
+  "hero_type": "services-inner-hero-v2",
+  "hero_image": "service-subdivision-hero.webp",
+  "hero_image_status": "PASS",
+  "layout_defects": [
+    "missing body class page-service-subdivision-v1 — subdivision CSS selectors not applied",
+    "article.shpigovsky-service--subdivision wrapper around main stack (not in static V9)",
+    "dependencies section missing V9 header marker and footer text",
+    "dependencies heading used hero title instead of static dependencies heading",
+    "program section missing V9 modifier classes, intro paragraphs, item media images, foot link",
+    "nature/team-stats copy drift from static V9 lorem authority"
+  ],
+  "section_order_after_hero": [
+    "internal-page-nav",
+    "service-subdivision-dependencies",
+    "service-subdivision-nature",
+    "service-subdivision-start",
+    "service-subdivision-program",
+    "service-subdivision-stages",
+    "service-subdivision-approach",
+    "clinic-landscape",
+    "service-subdivision-specialists",
+    "founder-quote",
+    "service-subdivision-comfort",
+    "reviews",
+    "service-subdivision-faq",
+    "final-form"
+  ],
+  "background_blocks": "PASS (E5 CSS path repair)",
+  "console_network_errors": "none observed in probe",
+  "screenshot": "runtime-zavisimosti-before-e6.png (E5 post-repair proxy)",
+  "result": "MISMATCH_CONFIRMED"
+}

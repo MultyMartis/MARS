@@ -315,3 +315,7 @@ E4 **PASS**: Read-only audit substantiating operator post-E3 visual findings. Se
 ## V9-06E5 services layout + shared background repair (2026-07-06)
 
 E5 **PARTIAL PASS**: Theme source repairs for services hub hero/layout (`services-inner-hero-v2`, `page-uslugi-v2__main`, `services-category-section-v2`, `services-program-v2`), subdivision hero theme fallback (`service-subdivision-hero.webp`), subdivision stack extension (nature/team-stats/shared blocks), and CSS background path repair (`../img/...` in `v9-style.css`). Bounded runtime delivery: 16 theme files. DB writes: 0. Evidence: `validation/v9-06e5-services-layout-shared-bg-repair/`. Report: `reports/FP-0002-V9-06E5-SERVICES-LAYOUT-SHARED-BG-REPAIR-REPORT-v1.md`. Next: **CREATE_V9_06E6_OPERATOR_VISUAL_QA_TASK**.
+
+## V9-06E6 service subdivision main layout repair (2026-07-06)
+
+E6 **PARTIAL PASS**: Scoped repair for `/uslugi/zavisimosti/` main layout — added `page-service-subdivision-v1` body class (CSS scope fix), removed extra article wrapper, aligned dependencies/program/nature/team-stats markup to static V9 authority. Hero image and E5 shared backgrounds preserved. Bounded runtime delivery: 7 theme files. DB writes: 0. Evidence: `validation/v9-06e6-service-subdivision-main-layout-repair/`. Report: `reports/FP-0002-V9-06E6-SERVICE-SUBDIVISION-MAIN-LAYOUT-REPAIR-REPORT-v1.md`. Next: **CREATE_V9_06E7_OPERATOR_VISUAL_QA_TASK**.

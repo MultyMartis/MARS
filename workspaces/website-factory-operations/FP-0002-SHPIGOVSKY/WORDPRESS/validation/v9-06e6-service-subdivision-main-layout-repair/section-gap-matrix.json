@@ -1,0 +1,17 @@
+{
+  "gaps": [
+    {"static_section": "body class page-service-subdivision-v1", "static_order": 0, "wp_presence": false, "status": "MISSING", "proposed_repair": "body_class filter in service-helpers.php", "result": "FIXED"},
+    {"static_section": "main wrapper", "static_order": 0, "wp_presence": true, "status": "MATCH", "proposed_repair": "preserve", "result": "PASS"},
+    {"static_section": "stack article wrapper", "static_order": 0, "wp_presence": true, "wp_extra": "article.shpigovsky-service--subdivision", "status": "EXTRA", "proposed_repair": "remove wrapper from subdivision-stack.php", "result": "FIXED"},
+    {"static_section": "dependencies header/marker/footer", "static_order": 2, "status": "PRESENT_WRONG_MARKUP", "proposed_repair": "children.php V9 header + footer text", "result": "FIXED"},
+    {"static_section": "dependencies heading", "static_order": 2, "status": "PRESENT_WRONG_CONTENT", "proposed_repair": "static heading fallback", "result": "FIXED"},
+    {"static_section": "nature copy", "static_order": 3, "status": "PRESENT_WRONG_CONTENT", "proposed_repair": "align to static V9 lorem", "result": "FIXED"},
+    {"static_section": "program modifiers/images/intros", "static_order": 5, "status": "PRESENT_WRONG_MARKUP", "proposed_repair": "subdivision branch in program.php", "result": "FIXED"},
+    {"static_section": "mid-cta source", "static_order": 4, "status": "PRESENT_WRONG_MARKUP", "proposed_repair": "service-subdivision-cta-01 source", "result": "FIXED"},
+    {"static_section": "team-stats card copy", "static_order": 7, "status": "PRESENT_WRONG_CONTENT", "proposed_repair": "static V9 lorem", "result": "FIXED"},
+    {"static_section": "stages", "static_order": 6, "status": "MATCH", "proposed_repair": "none", "result": "PASS"},
+    {"static_section": "shared blocks (clinic/specialists/founder/comfort/reviews/faq/final)", "static_order": "8-14", "status": "MATCH", "proposed_repair": "none", "result": "PASS"}
+  ],
+  "deferred": [],
+  "overall": "PARTIAL — structural/markup parity restored; operator pixel QA may still find minor spacing deltas"
+}

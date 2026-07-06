@@ -397,6 +397,94 @@ function shpigovsky_get_service_programme_fallback_items() {
 }
 
 /**
+ * Static V9 programme items for service subdivision layout parity.
+ *
+ * @return array<int, array{title:string,image:string,width:int,height:int,alt:string}>
+ */
+function shpigovsky_get_service_subdivision_programme_fallback_items() {
+	return array(
+		array(
+			'title'  => '01 — Генотипирование',
+			'image'  => shpigovsky_asset_uri( 'img/content/rehabilitation-program/program-genotyping.webp' ),
+			'width'  => 1216,
+			'height' => 1632,
+			'alt'    => 'Генотипирование',
+		),
+		array(
+			'title'  => '02 — Нейропсихологическая коррекция',
+			'image'  => shpigovsky_asset_uri( 'img/content/rehabilitation-program/program-neuropsychology.webp' ),
+			'width'  => 1632,
+			'height' => 1216,
+			'alt'    => 'Нейропсихологическая коррекция',
+		),
+		array(
+			'title'  => '03 — Психокоррекция',
+			'image'  => shpigovsky_asset_uri( 'img/content/rehabilitation-program/program-psychocorrection.webp' ),
+			'width'  => 880,
+			'height' => 1184,
+			'alt'    => 'Психокоррекция',
+		),
+		array(
+			'title'  => '04 — Кинезиотерапия',
+			'image'  => shpigovsky_asset_uri( 'img/content/rehabilitation-program/program-kinesiotherapy.webp' ),
+			'width'  => 880,
+			'height' => 1184,
+			'alt'    => 'Кинезиотерапия',
+		),
+	);
+}
+
+/**
+ * Static V9 dependencies section heading for subdivision pages.
+ *
+ * @return string
+ */
+function shpigovsky_get_service_subdivision_dependencies_heading() {
+	return __( 'Зависимости, которые мы лечим', 'shpigovsky' );
+}
+
+/**
+ * Static V9 dependencies section lead fallback.
+ *
+ * @return string
+ */
+function shpigovsky_get_service_subdivision_dependencies_lead_fallback() {
+	return 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
+}
+
+/**
+ * Static V9 dependencies section footer text fallback.
+ *
+ * @return string
+ */
+function shpigovsky_get_service_subdivision_dependencies_footer_fallback() {
+	return 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
+}
+
+/**
+ * Add V9 body class for service single routes.
+ *
+ * @param string[] $classes Body classes.
+ * @return string[]
+ */
+function shpigovsky_service_body_class( $classes ) {
+	if ( ! is_singular( 'service' ) ) {
+		return $classes;
+	}
+
+	$variant = shpigovsky_get_service_layout_variant();
+
+	if ( 'subdivision' === $variant ) {
+		$classes[] = 'page-service-subdivision-v1';
+	} elseif ( 'leaf' === $variant || 'alcohol-special' === $variant ) {
+		$classes[] = 'page-service-leaf-v1';
+	}
+
+	return $classes;
+}
+add_filter( 'body_class', 'shpigovsky_service_body_class' );
+
+/**
  * Resolve CTA band copy for service mid-page CTAs.
  *
  * @param int $post_id Service post ID.

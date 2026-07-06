@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E5 SERVICES LAYOUT + SHARED BG REPAIR **PARTIAL PASS** — hub hero/layout/CSS backgrounds repaired; subdivision hero image + stack extended; operator visual QA recommended. NEXT: **CREATE_V9_06E6_OPERATOR_VISUAL_QA_TASK**
+**Status:** V9-06E6 SERVICE SUBDIVISION MAIN LAYOUT REPAIR **PARTIAL PASS** — `/uslugi/zavisimosti/` body class + main markup/CSS scope repaired; operator visual QA recommended. NEXT: **CREATE_V9_06E7_OPERATOR_VISUAL_QA_TASK**
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

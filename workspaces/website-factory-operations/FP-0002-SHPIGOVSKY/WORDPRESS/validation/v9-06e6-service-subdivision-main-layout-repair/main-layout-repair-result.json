@@ -1,0 +1,27 @@
+{
+  "route": "/uslugi/zavisimosti/",
+  "files_changed": 7,
+  "before": {
+    "body_class_page_service_subdivision_v1": false,
+    "article_wrapper": true,
+    "dependencies_marker": false,
+    "dependencies_footer_text": false,
+    "program_images": false,
+    "program_modifiers_full": false
+  },
+  "after": {
+    "body_class_page_service_subdivision_v1": true,
+    "main_wrapper": "page-service-subdivision-v1__main",
+    "article_wrapper": false,
+    "hero_type": "services-inner-hero-v2",
+    "hero_image": "service-subdivision-hero.webp",
+    "dependencies_marker": true,
+    "dependencies_footer_text": true,
+    "dependencies_heading": "Зависимости, которые мы лечим",
+    "program_images": true,
+    "program_modifiers_full": true,
+    "section_ids_all_present": true,
+    "shared_backgrounds": "unchanged PASS"
+  },
+  "result": "PARTIAL_PASS"
+}

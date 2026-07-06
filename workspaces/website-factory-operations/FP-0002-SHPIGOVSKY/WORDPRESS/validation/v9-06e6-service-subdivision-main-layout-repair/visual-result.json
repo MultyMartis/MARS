@@ -1,0 +1,20 @@
+{
+  "primary": {
+    "static_reference": {"file": "static-v9-zavisimosti-reference-e6.png", "captured": true},
+    "before": {"file": "runtime-zavisimosti-before-e6.png", "captured": true, "source": "E5 proxy"},
+    "after": {"file": "runtime-zavisimosti-after-e6.png", "captured": true}
+  },
+  "section_evidence": [
+    {"file": "runtime-zavisimosti-main-top-e6.png", "captured": true},
+    {"file": "runtime-zavisimosti-main-middle-e6.png", "captured": true},
+    {"file": "runtime-zavisimosti-main-bottom-e6.png", "captured": true}
+  ],
+  "regression": [
+    {"file": "runtime-uslugi-regression-e6.png", "captured": true},
+    {"file": "runtime-home-regression-e6.png", "captured": true},
+    {"file": "runtime-service-74-regression-e6.png", "captured": true},
+    {"file": "runtime-reviews-regression-e6.png", "captured": true},
+    {"file": "runtime-privacy-policy-regression-e6.png", "captured": true}
+  ],
+  "result": "PASS"
+}

@@ -1,0 +1,15 @@
+{
+  "validated_at": "2026-07-06",
+  "routes": {
+    "/uslugi/zavisimosti/": {"http_status": 200, "php_fatal": false, "body_class": "page-service-subdivision-v1", "main_wrapper": "page-service-subdivision-v1__main", "hero_type": "services-inner-hero-v2", "hero_image": true, "section_stack": "PASS", "result": "PASS"},
+    "/uslugi/": {"http_status": 200, "php_fatal": false, "page_uslugi_v2_main": true, "services_inner_hero_v2": true, "result": "PASS"},
+    "/": {"http_status": 200, "php_fatal": false, "result": "PASS"},
+    "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/": {"http_status": 200, "php_fatal": false, "body_class": "page-service-leaf-v1", "result": "PASS"},
+    "/kontakty/": {"http_status": 200, "php_fatal": false, "result": "PASS"},
+    "/otzyvy/": {"http_status": 200, "php_fatal": false, "first_review_author": "Андрей, Москва", "result": "PASS"},
+    "/privacy-policy/": {"http_status": 200, "php_fatal": false, "result": "PASS"}
+  },
+  "shared_backgrounds": {"css_root_absolute_remaining": 0, "final_form_band": true, "program_cta_band": true, "result": "PASS"},
+  "legal_reviews_menu": "PASS",
+  "result": "PASS"
+}

@@ -1,0 +1,16 @@
+{
+  "scope": "/uslugi/zavisimosti/ main layout only",
+  "preserve": ["hero type services-inner-hero-v2", "hero image service-subdivision-hero.webp", "E5 shared backgrounds", "reviews/menu/legal"],
+  "files": [
+    {"file": "inc/service-helpers.php", "change": "Add page-service-subdivision-v1 body class; subdivision programme/dependencies fallbacks", "db_writes": 0},
+    {"file": "template-parts/service/subdivision-stack.php", "change": "Remove article wrapper; direct section stack in main", "db_writes": 0},
+    {"file": "template-parts/service/children.php", "change": "V9 dependencies header marker, heading, lead/footer fallbacks", "db_writes": 0},
+    {"file": "template-parts/service/program.php", "change": "Subdivision V9 modifiers, intros, item media, foot link; enrich ACF items with fallback images", "db_writes": 0},
+    {"file": "template-parts/service/nature.php", "change": "Static V9 lorem structure including second genotyping paragraph", "db_writes": 0},
+    {"file": "template-parts/service/mid-cta.php", "change": "Subdivision CTA source id", "db_writes": 0},
+    {"file": "template-parts/service/team-stats.php", "change": "Static V9 lorem card copy", "db_writes": 0}
+  ],
+  "deferred_sections": [],
+  "safety": "no DB writes; no media upload; no menu/legal/reviews changes",
+  "result": "APPROVED_FOR_IMPLEMENTATION"
+}

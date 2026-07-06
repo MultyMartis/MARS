@@ -1,0 +1,21 @@
+{
+  "authority": "workspaces/fp-0002-shpigovsky-v9/src/pages/usluga-podrazdel-v1.html",
+  "body_class": "page-service-subdivision-v1",
+  "main_class": "page-service-subdivision-v1__main",
+  "sections_after_hero": [
+    {"order": 1, "block": "internal-page-nav", "root_class": "services-page-subnav", "partial": "partials/components/internal-page-nav.html"},
+    {"order": 2, "block": "dependencies", "root_class": "services-category-section-v2 services-category-section-v2--subdivision-dependencies service-subdivision-dependencies-v1", "id": "service-subdivision-dependencies", "partial": "partials/sections/services-category-section-v2.html"},
+    {"order": 3, "block": "nature", "root_class": "service-subdivision-nature-v1", "id": "service-subdivision-nature", "partial": "partials/sections/service-subdivision-nature-v1.html"},
+    {"order": 4, "block": "mid-cta", "root_class": "program-cta-band", "id": "service-subdivision-start", "partial": "partials/components/program-cta-band.html"},
+    {"order": 5, "block": "program", "root_class": "services-program-v2 (subdivision modifiers)", "id": "service-subdivision-program", "partial": "partials/sections/services-program-v2.html"},
+    {"order": 6, "block": "stages", "root_class": "service-subdivision-stages-v1", "id": "service-subdivision-stages", "partial": "partials/sections/service-subdivision-stages-v1.html"},
+    {"order": 7, "block": "team-stats", "root_class": "service-subdivision-team-stats-v1", "id": "service-subdivision-approach", "partial": "partials/sections/service-subdivision-team-stats-v1.html"},
+    {"order": 8, "block": "clinic-landscape", "root_class": "clinic-landscape", "partial": "partials/sections/clinic-landscape.html"},
+    {"order": 9, "block": "specialists", "root_class": "specialists", "id": "service-subdivision-specialists", "partial": "partials/sections/specialists.html"},
+    {"order": 10, "block": "founder-quote", "root_class": "founder-quote founder-quote--variant-b", "partial": "partials/sections/founder-quote.html"},
+    {"order": 11, "block": "comfort", "root_class": "comfort", "id": "service-subdivision-comfort", "partial": "partials/sections/comfort.html"},
+    {"order": 12, "block": "reviews", "root_class": "reviews", "partial": "partials/sections/reviews.html"},
+    {"order": 13, "block": "faq", "root_class": "faq", "id": "service-subdivision-faq", "partial": "partials/sections/faq.html"},
+    {"order": 14, "block": "final-form", "root_class": "final-form", "partial": "partials/sections/final-form.html"}
+  ]
+}

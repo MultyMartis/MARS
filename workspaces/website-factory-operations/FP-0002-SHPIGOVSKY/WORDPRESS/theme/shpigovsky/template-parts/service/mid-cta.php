@@ -16,6 +16,10 @@ $variant  = get_query_var( 'shpigovsky_service_layout_variant', shpigovsky_get_s
 $cta      = shpigovsky_get_service_cta_band( $post_id );
 $section_id = 'subdivision' === $variant ? 'service-subdivision-start' : 'service-leaf-cta-01';
 
+if ( 'subdivision' === $variant ) {
+	$cta['source'] = 'service-subdivision-cta-01';
+}
+
 set_query_var(
 	'shpigovsky_program_cta_band',
 	array_merge(

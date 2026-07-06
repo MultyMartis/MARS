@@ -12,6 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $post_id = shpigovsky_get_current_service_id();
+$variant = get_query_var( 'shpigovsky_service_layout_variant', shpigovsky_get_service_layout_variant() );
 $posts   = array();
 
 if ( function_exists( 'get_field' ) ) {
@@ -34,15 +35,31 @@ if ( empty( $posts ) ) {
 	return;
 }
 
-$heading = shpigovsky_get_service_hero_title( $post_id );
-$lead    = shpigovsky_get_service_field( $post_id, 'intro_text' );
-
-if ( '' === $lead ) {
-	$lead = shpigovsky_get_service_field( $post_id, 'hero_lead' );
-}
-
 $section_id = 'service-subdivision-dependencies';
 $heading_id = 'service-subdivision-dependencies-heading';
+
+if ( 'subdivision' === $variant ) {
+	$heading = shpigovsky_get_service_subdivision_dependencies_heading();
+	$lead    = shpigovsky_get_service_field( $post_id, 'intro_text' );
+
+	if ( '' === $lead ) {
+		$lead = shpigovsky_get_service_field( $post_id, 'hero_lead' );
+	}
+
+	if ( '' === $lead ) {
+		$lead = shpigovsky_get_service_subdivision_dependencies_lead_fallback();
+	}
+
+	$footer_text = shpigovsky_get_service_subdivision_dependencies_footer_fallback();
+} else {
+	$heading     = shpigovsky_get_service_hero_title( $post_id );
+	$lead        = shpigovsky_get_service_field( $post_id, 'intro_text' );
+	$footer_text = '';
+
+	if ( '' === $lead ) {
+		$lead = shpigovsky_get_service_field( $post_id, 'hero_lead' );
+	}
+}
 ?>
 <section
 	data-reveal
@@ -51,9 +68,23 @@ $heading_id = 'service-subdivision-dependencies-heading';
 	aria-labelledby="<?php echo esc_attr( $heading_id ); ?>"
 >
 	<div class="container services-category-section-v2__container">
-		<h2 class="services-category-section-v2__heading" id="<?php echo esc_attr( $heading_id ); ?>">
-			<?php echo esc_html( $heading ); ?>
-		</h2>
+		<?php if ( 'subdivision' === $variant ) : ?>
+			<header class="services-category-section-v2__head">
+				<div class="services-category-section-v2__head-main">
+					<span class="services-category-section-v2__marker" aria-hidden="true">01</span>
+					<div class="services-category-section-v2__head-copy">
+						<h2 class="services-category-section-v2__heading" id="<?php echo esc_attr( $heading_id ); ?>">
+							<?php echo esc_html( $heading ); ?>
+						</h2>
+						<p class="services-category-section-v2__intro"></p>
+					</div>
+				</div>
+			</header>
+		<?php else : ?>
+			<h2 class="services-category-section-v2__heading" id="<?php echo esc_attr( $heading_id ); ?>">
+				<?php echo esc_html( $heading ); ?>
+			</h2>
+		<?php endif; ?>
 
 		<?php if ( '' !== $lead ) : ?>
 			<p class="services-category-section-v2__lead"><?php echo wp_kses_post( $lead ); ?></p>
@@ -88,6 +119,10 @@ $heading_id = 'service-subdivision-dependencies-heading';
 					</div>
 				</article>
 			<?php endforeach; ?>
+
+			<?php if ( 'subdivision' === $variant && '' !== $footer_text ) : ?>
+				<p class="service-subdivision-dependencies-v1__footer-text"><?php echo esc_html( $footer_text ); ?></p>
+			<?php endif; ?>
 		</div>
 	</div>
 </section>

@@ -1,0 +1,29 @@
+{
+  "route": "/uslugi/zavisimosti/",
+  "before_repair": {
+    "body_class": "single single-service postid-73 (missing page-service-subdivision-v1)",
+    "stack_wrapper": "article.shpigovsky-service--subdivision",
+    "sections": [
+      {"order": 1, "section": "hero", "root_class": "services-inner-hero-v2", "source": "template-parts/service/inner-hero.php"},
+      {"order": 2, "section": "subnav", "root_class": "services-page-subnav", "source": "template-parts/service/subnav.php"},
+      {"order": 3, "section": "dependencies", "root_class": "service-subdivision-dependencies-v1", "source": "template-parts/service/children.php", "note": "simplified heading markup"},
+      {"order": 4, "section": "nature", "root_class": "service-subdivision-nature-v1", "source": "template-parts/service/nature.php"},
+      {"order": 5, "section": "mid-cta", "root_class": "program-cta-band", "source": "template-parts/service/mid-cta.php"},
+      {"order": 6, "section": "program", "root_class": "services-program-v2", "source": "template-parts/service/program.php", "note": "missing images/modifiers"},
+      {"order": 7, "section": "stages", "root_class": "service-subdivision-stages-v1", "source": "template-parts/service/stages.php"},
+      {"order": 8, "section": "team-stats", "root_class": "service-subdivision-team-stats-v1", "source": "template-parts/service/team-stats.php"},
+      {"order": 9, "section": "clinic-landscape", "root_class": "clinic-landscape", "source": "template-parts/home/clinic-landscape.php"},
+      {"order": 10, "section": "specialists", "root_class": "specialists", "source": "template-parts/home/specialists.php"},
+      {"order": 11, "section": "founder-quote", "root_class": "founder-quote", "source": "template-parts/home/founder-quote.php"},
+      {"order": 12, "section": "comfort", "root_class": "comfort", "source": "template-parts/home/comfort.php"},
+      {"order": 13, "section": "reviews", "root_class": "reviews", "source": "template-parts/home/reviews.php"},
+      {"order": 14, "section": "faq", "root_class": "faq", "source": "template-parts/service/faq.php"},
+      {"order": 15, "section": "final-form", "root_class": "final-form", "source": "template-parts/components/final-form.php"}
+    ]
+  },
+  "after_repair": {
+    "body_class": "page-service-subdivision-v1",
+    "stack_wrapper": "none (direct main children)",
+    "markup_parity_probe": "PASS"
+  }
+}

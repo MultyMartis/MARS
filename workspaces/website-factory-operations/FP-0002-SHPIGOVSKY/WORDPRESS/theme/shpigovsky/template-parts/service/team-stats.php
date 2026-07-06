@@ -58,19 +58,19 @@ $program_url = home_url( '/o-centre/programma-lecheniya/' );
 		<ul class="home-feature-grid__card-grid service-subdivision-team-stats-v1__approach-cards">
 			<li class="home-feature-grid__card service-subdivision-team-stats-v1__approach-card">
 				<h3 class="home-feature-grid__card-title"><?php echo esc_html__( 'диагностические инструменты', 'shpigovsky' ); ?></h3>
-				<p class="home-feature-grid__card-text"><?php echo esc_html__( 'Комплексная оценка состояния помогает увидеть картину целиком и выбрать точки воздействия.', 'shpigovsky' ); ?></p>
+				<p class="home-feature-grid__card-text"><?php echo esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor', 'shpigovsky' ); ?></p>
 			</li>
 			<li class="home-feature-grid__card service-subdivision-team-stats-v1__approach-card">
 				<h3 class="home-feature-grid__card-title"><?php echo esc_html__( 'психиатрия', 'shpigovsky' ); ?></h3>
-				<p class="home-feature-grid__card-text"><?php echo esc_html__( 'Медикаментозная и клиническая поддержка при сопутствующих расстройствах и острых состояниях.', 'shpigovsky' ); ?></p>
+				<p class="home-feature-grid__card-text"><?php echo esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor', 'shpigovsky' ); ?></p>
 			</li>
 			<li class="home-feature-grid__card service-subdivision-team-stats-v1__approach-card">
 				<h3 class="home-feature-grid__card-title"><?php echo esc_html__( 'функциональная терапия', 'shpigovsky' ); ?></h3>
-				<p class="home-feature-grid__card-text"><?php echo esc_html__( 'Восстановление телесных ресурсов и режима как часть устойчивой ремиссии.', 'shpigovsky' ); ?></p>
+				<p class="home-feature-grid__card-text"><?php echo esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor', 'shpigovsky' ); ?></p>
 			</li>
 			<li class="home-feature-grid__card service-subdivision-team-stats-v1__approach-card">
 				<h3 class="home-feature-grid__card-title"><?php echo esc_html__( 'комплементарная терапия', 'shpigovsky' ); ?></h3>
-				<p class="home-feature-grid__card-text"><?php echo esc_html__( 'Дополнительные методы, усиливающие основную программу и снижающие риск срыва.', 'shpigovsky' ); ?></p>
+				<p class="home-feature-grid__card-text"><?php echo esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor', 'shpigovsky' ); ?></p>
 			</li>
 		</ul>
 	</div>

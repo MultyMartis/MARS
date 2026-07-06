@@ -1,0 +1,14 @@
+{
+  "phase": "V9-06E6",
+  "verdict": "PARTIAL_PASS",
+  "zavisimosti_main_layout": "PARTIAL",
+  "zavisimosti_hero": "UNCHANGED_PASS",
+  "zavisimosti_hero_image": "PASS",
+  "section_stack": "PASS",
+  "shared_backgrounds": "PASS",
+  "legal_reviews_menu_regression": "PASS",
+  "core_route_regression": "PASS",
+  "no_scope_drift": "PASS",
+  "recommended_next_phase": "CREATE_V9_06E7_OPERATOR_VISUAL_QA_TASK",
+  "notes": "Primary root cause was missing page-service-subdivision-v1 body class and subdivision-specific markup drift. Structural parity restored; operator visual sign-off recommended for pixel-level QA."
+}
