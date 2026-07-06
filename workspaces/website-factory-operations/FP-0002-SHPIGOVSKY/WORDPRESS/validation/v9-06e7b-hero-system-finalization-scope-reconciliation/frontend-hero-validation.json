@@ -1,0 +1,82 @@
+{
+  "generated_at": "2026-07-06T19:00:57.828957+07:00",
+  "routes": [
+    {
+      "route": "/",
+      "http_status": 200,
+      "hero_image_url": "http://shpigovsky.test/wp-content/uploads/2026/07/hero-main.png",
+      "source": "admin_field",
+      "php_fatal": false,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/",
+      "http_status": 200,
+      "hero_image_url": "http://shpigovsky.test/wp-content/uploads/2026/07/services-hero.webp",
+      "source": "admin_field",
+      "php_fatal": false,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "http_status": 200,
+      "hero_image_url": "http://shpigovsky.test/wp-content/uploads/2026/07/service-subdivision-hero.webp",
+      "source": "admin_field",
+      "php_fatal": false,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "http_status": 200,
+      "hero_image_url": "http://shpigovsky.test/wp-content/uploads/2026/07/service-leaf-alcohol-hero.webp",
+      "source": "admin_field",
+      "php_fatal": false,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/",
+      "http_status": 200,
+      "hero_image_url": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/img/content/services/service-subdivision-hero.webp",
+      "source": "fallback",
+      "php_fatal": false,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "http_status": 200,
+      "hero_image_url": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/img/content/services/service-subdivision-hero.webp",
+      "source": "fallback",
+      "php_fatal": false,
+      "result": "PASS"
+    },
+    {
+      "route": "/o-centre/",
+      "http_status": 200,
+      "hero_image_url": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/img/content/o-centre/o-centre-hero.webp",
+      "source": "fallback",
+      "php_fatal": false,
+      "result": "PASS"
+    }
+  ],
+  "regression": {
+    "/privacy-policy/": {
+      "route": "/privacy-policy/",
+      "http_status": 200,
+      "hero_image_url": null,
+      "source": "none",
+      "php_fatal": false,
+      "result": "PASS"
+    },
+    "/otzyvy/": {
+      "route": "/otzyvy/",
+      "http_status": 200,
+      "hero_image_url": null,
+      "source": "none",
+      "php_fatal": false,
+      "result": "PASS",
+      "first_review_author": "Андрей, Москва",
+      "reviews_regression": "PASS"
+    }
+  },
+  "result": "PASS"
+}

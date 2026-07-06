@@ -1,0 +1,113 @@
+{
+  "phase": "V9-06E7B",
+  "generated_at": "2026-07-06T18:58:46.055734+07:00",
+  "entries": [
+    {
+      "path": "WORDPRESS/theme/shpigovsky/functions.php",
+      "status": "modified",
+      "category": "HERO_THEME_SOURCE",
+      "reason": "E7 hero registry/theme partials/helpers",
+      "stage_allowed": "YES"
+    },
+    {
+      "path": "WORDPRESS/theme/shpigovsky/inc/home-helpers.php",
+      "status": "modified",
+      "category": "HERO_THEME_SOURCE",
+      "reason": "E7 hero registry/theme partials/helpers",
+      "stage_allowed": "YES"
+    },
+    {
+      "path": "WORDPRESS/theme/shpigovsky/inc/service-helpers.php",
+      "status": "modified",
+      "category": "HERO_THEME_SOURCE",
+      "reason": "E7 hero registry/theme partials/helpers",
+      "stage_allowed": "YES"
+    },
+    {
+      "path": "WORDPRESS/theme/shpigovsky/inc/hero-helpers.php",
+      "status": "untracked",
+      "category": "HERO_THEME_SOURCE",
+      "reason": "E7 hero registry/theme partials/helpers",
+      "stage_allowed": "YES"
+    },
+    {
+      "path": "WORDPRESS/theme/shpigovsky/inc/institutional-helpers.php",
+      "status": "untracked",
+      "category": "HERO_THEME_SOURCE",
+      "reason": "E7 hero registry/theme partials/helpers",
+      "stage_allowed": "YES"
+    },
+    {
+      "path": "WORDPRESS/theme/shpigovsky/template-parts/home/hero.php",
+      "status": "modified",
+      "category": "HERO_THEME_SOURCE",
+      "reason": "E7 hero registry/theme partials/helpers",
+      "stage_allowed": "YES"
+    },
+    {
+      "path": "WORDPRESS/theme/shpigovsky/template-parts/services-hub/hero.php",
+      "status": "modified",
+      "category": "HERO_THEME_SOURCE",
+      "reason": "E7 hero registry/theme partials/helpers",
+      "stage_allowed": "YES"
+    },
+    {
+      "path": "WORDPRESS/theme/shpigovsky/template-parts/service/inner-hero.php",
+      "status": "modified",
+      "category": "HERO_THEME_SOURCE",
+      "reason": "E7 hero registry/theme partials/helpers",
+      "stage_allowed": "YES"
+    },
+    {
+      "path": "WORDPRESS/theme/shpigovsky/template-parts/shared/services-inner-hero-v2.php",
+      "status": "untracked",
+      "category": "HERO_THEME_SOURCE",
+      "reason": "E7 hero registry/theme partials/helpers",
+      "stage_allowed": "YES"
+    },
+    {
+      "path": "WORDPRESS/theme/shpigovsky/template-parts/institutional/hero.php",
+      "status": "untracked",
+      "category": "HERO_THEME_SOURCE",
+      "reason": "E7 hero registry/theme partials/helpers",
+      "stage_allowed": "YES"
+    },
+    {
+      "path": "WORDPRESS/theme/shpigovsky/page-templates/institutional.php",
+      "status": "modified",
+      "category": "HERO_THEME_SOURCE",
+      "reason": "E7 hero registry/theme partials/helpers",
+      "stage_allowed": "YES"
+    },
+    {
+      "path": "WORDPRESS/plugins/shpigovsky-core/src/Fields/FieldGroups.php",
+      "status": "modified",
+      "category": "HERO_PROJECT_PLUGIN_SOURCE",
+      "reason": "FP-0002 hero_media ACF field groups in project plugin",
+      "stage_allowed": "YES"
+    },
+    {
+      "path": "WORDPRESS/architecture/FP-0002-FIELD-OWNERSHIP-MATRIX-v1.json",
+      "status": "modified",
+      "category": "HERO_ARCHITECTURE_DOC",
+      "reason": "Field ownership matrix hero fields update",
+      "stage_allowed": "YES"
+    },
+    {
+      "path": "WORDPRESS/validation/v9-06e7-hero-media-system-seed/hero-context-inventory.json",
+      "status": "untracked",
+      "category": "HERO_VALIDATION_EVIDENCE",
+      "reason": "Hero context inventory for seed",
+      "stage_allowed": "YES"
+    },
+    {
+      "path": "WORDPRESS/validation/v9-06e7-hero-media-system-seed/_hero_media_seed_runner.php",
+      "status": "untracked",
+      "category": "FOREIGN_WIP_PRESERVE",
+      "reason": "Temporary seed runner — explicit NOT FOR GIT",
+      "stage_allowed": "NO"
+    }
+  ],
+  "unclassified_count": 0,
+  "result": "PASS"
+}

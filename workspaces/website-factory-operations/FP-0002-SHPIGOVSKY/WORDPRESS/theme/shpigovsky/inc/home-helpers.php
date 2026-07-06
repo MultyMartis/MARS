@@ -118,24 +118,7 @@ function shpigovsky_get_home_repeater( $field_name ) {
  * @return array{url:string,alt:string,width:int,height:int}
  */
 function shpigovsky_get_home_hero_image_fallback() {
-	$relative = 'assets/img/hero/hero-main.png';
-	$path     = SHPIGOVSKY_THEME_DIR . '/' . $relative;
-
-	if ( ! is_readable( $path ) ) {
-		return array(
-			'url'    => '',
-			'alt'    => '',
-			'width'  => 0,
-			'height' => 0,
-		);
-	}
-
-	return array(
-		'url'    => SHPIGOVSKY_THEME_URI . '/' . $relative,
-		'alt'    => '',
-		'width'  => 2230,
-		'height' => 1246,
-	);
+	return shpigovsky_get_hero_theme_fallback( 'home' );
 }
 
 /**

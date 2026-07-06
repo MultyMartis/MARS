@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-07-06T19:00:57.828957+07:00",
+  "method": "DB postmeta hero_media after corrective alcohol ID fix",
+  "objects": [
+    {
+      "object_id": 4,
+      "context_key": "home",
+      "post_slug": "glavnaya",
+      "hero_media_meta": "302",
+      "value_seeded": true,
+      "result": "PASS"
+    },
+    {
+      "object_id": 5,
+      "context_key": "services_hub",
+      "post_slug": "uslugi",
+      "hero_media_meta": "303",
+      "value_seeded": true,
+      "result": "PASS"
+    },
+    {
+      "object_id": 73,
+      "context_key": "service_subdivision",
+      "post_slug": "zavisimosti",
+      "hero_media_meta": "304",
+      "value_seeded": true,
+      "result": "PASS"
+    },
+    {
+      "object_id": 74,
+      "context_key": "service_leaf_alcohol",
+      "post_slug": "lechenie-alkogolnoy-zavisimosti",
+      "hero_media_meta": "305",
+      "value_seeded": true,
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS"
+}

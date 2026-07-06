@@ -1,0 +1,74 @@
+{
+  "phase": "V9-06E7",
+  "generated_at": "2026-07-06",
+  "hero_layouts": {
+    "home": {
+      "css": "hero hero--home",
+      "template": "template-parts/home/hero.php",
+      "routes": ["/"],
+      "acf_image_fields": ["hero_media", "home_hero_slides[0].image"],
+      "resolution_order": ["hero_media", "home_hero_slides[0].image", "theme:img/hero/hero-main.png"],
+      "text_fields": ["home_hero_slides[0].title", "home_hero_slides[0].text"]
+    },
+    "services_inner_v2": {
+      "css": "services-inner-hero-v2",
+      "shared_template": "template-parts/shared/services-inner-hero-v2.php",
+      "contexts": {
+        "services_hub": {
+          "template": "template-parts/services-hub/hero.php",
+          "page_template": "page-templates/services-hub.php",
+          "routes": ["/uslugi/"],
+          "acf_image_field": "hero_media",
+          "fallback": "theme:img/content/services/services-hero.webp",
+          "text_fields": ["hero_eyebrow", "hero_title_override", "services_hub_intro"]
+        },
+        "service_subdivision": {
+          "template": "template-parts/service/inner-hero.php",
+          "post_type": "service",
+          "variant": "subdivision",
+          "acf_image_field": "hero_media",
+          "fallback": "theme:img/content/services/service-subdivision-hero.webp",
+          "text_fields": ["hero_eyebrow", "hero_title_override", "hero_lead", "hero_cta_label"]
+        },
+        "service_leaf_alcohol": {
+          "template": "template-parts/service/inner-hero.php",
+          "post_type": "service",
+          "variant": "leaf|alcohol-special",
+          "slug_hint": "lechenie-alkogolnoy-zavisimosti",
+          "acf_image_field": "hero_media",
+          "fallback": "theme:img/content/services/service-leaf-alcohol-hero.webp"
+        },
+        "service_leaf_genotyping": {
+          "template": "template-parts/service/inner-hero.php",
+          "post_type": "service",
+          "slug_hint": "genotipirovanie",
+          "acf_image_field": "hero_media",
+          "fallback": "theme:img/content/rehabilitation-program/program-genotyping.webp"
+        },
+        "institutional": {
+          "template": "template-parts/institutional/hero.php",
+          "page_template": "page-templates/institutional.php",
+          "routes": ["/o-centre/", "/o-centre/*"],
+          "acf_image_field": "hero_media",
+          "fallback": "theme:img/content/o-centre/o-centre-hero.webp",
+          "text_fields": ["hero_eyebrow", "hero_title_override", "hero_lead", "hero_cta_label"]
+        }
+      }
+    }
+  },
+  "no_hero_routes": [
+    {"template": "page-templates/contacts.php", "route": "/kontakty/"},
+    {"template": "page-templates/reviews.php", "route": "/otzyvy/"},
+    {"template": "page-templates/legal.php", "route": "legal pages"},
+    {"template": "single-post", "route": "/blog/*"}
+  ],
+  "deprecated_layout": {
+    "hero_inner": {
+      "css": "hero hero--inner",
+      "status": "REPLACED_BY_services_inner_v2_on_hub",
+      "note": "uslugi.html used hero-inner; WP authority is uslugi-v2.html"
+    }
+  },
+  "seed_runner": "validation/v9-06e7-hero-media-system-seed/_hero_media_seed_runner.php",
+  "helper_registry": "theme/shpigovsky/inc/hero-helpers.php::shpigovsky_get_hero_context_registry()"
+}

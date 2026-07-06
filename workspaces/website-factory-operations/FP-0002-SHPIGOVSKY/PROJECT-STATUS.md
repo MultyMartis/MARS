@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-06 (V9-06E6 Service Subdivision Main Layout Repair PARTIAL PASS)
+**Last updated:** 2026-07-06 (V9-06E7B Hero System Finalization PASS)
 
-**Current WordPress phase:** V9-06E6 Repair **PARTIAL PASS** — `/uslugi/zavisimosti/` main layout body class + subdivision markup repaired (dependencies/program/CSS scope). Hero/shared BG from E5 preserved. **Next: CREATE_V9_06E7_OPERATOR_VISUAL_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E6-SERVICE-SUBDIVISION-MAIN-LAYOUT-REPAIR-REPORT-v1.md`.
+**Current WordPress phase:** V9-06E7B Hero System Finalization **PASS** — hero admin image system committed; ACF `hero_media` on home/hub/service/institutional; media seed for IDs 4,5,73,74; theme hero registry + shared `services-inner-hero-v2` partial. **Next: CREATE_V9_06E8_OPERATOR_HERO_VISUAL_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E7B-HERO-SYSTEM-FINALIZATION-SCOPE-RECONCILIATION-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

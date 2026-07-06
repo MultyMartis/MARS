@@ -1,0 +1,141 @@
+{
+  "command": "\"X:\\MARS-Localhost\\laragon\\bin\\php\\php-8.3.30-Win32-vs16-x64\\php.exe\" \"X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\validation\\v9-06e7-hero-media-system-seed\\_hero_media_seed_runner.php\" all",
+  "exit_code": 0,
+  "stdout_summary": "{\n    \"mode\": \"all\",\n    \"baseline\": {\n        \"phase\": \"V9-06E7\",\n        \"generated_at\": \"2026-07-06T11:58:47+00:00\",\n        \"rows\": [\n            {\n                \"key\": \"home\",\n                \"object_id\": 4,\n                \"field\": \"hero_media\",\n                \"current\": {\n                    \"empty\": true\n                }\n            },\n            {\n                \"key\": \"services_hub\",\n                \"object_id\": 5,\n                \"field\": \"hero_media\",\n                \"current\": {\n                    \"empty\": true\n                }\n            },\n            {\n                \"key\": \"service_subdivision\",\n                \"object_id\": 73,\n                \"field\": \"hero_media\",\n                \"current\": {\n                    \"empty\": true\n                }\n            },\n            {\n                \"key\": \"service_leaf_alcohol\",\n                \"object_id\": 77,\n                \"field\": \"hero_media\",\n                \"current\": {\n                    \"empty\": true\n                }\n            }\n        ]\n    },\n    \"seed\": {\n        \"phase\": \"V9-06E7\",\n        \"generated_at\": \"2026-07-06T11:58:52+00:00\",\n        \"results\": [\n            {\n                \"key\": \"home\",\n                \"object_id\": 4,\n                \"field\": \"hero_media\",\n                \"attachment_id\": 302,\n                \"url\": \"http://shpigovsky.test/wp-content/uploads/2026/07/hero-main.png\",\n                \"result\": \"PASS\"\n            },\n            {\n                \"key\": \"services_hub\",\n                \"object_id\": 5,\n                \"field\": \"hero_media\",\n                \"attachment_id\": 303,\n                \"url\": \"http://shpigovsky.test/wp-content/uploads/2026/07/services-hero.webp\",\n                \"result\": \"PASS\"\n            },\n            {\n                \"key\": \"service_subdivision\",\n                \"object_id\": 73,\n                \"field\": \"hero_media\",\n                \"attachment_id\": 304,\n                \"url\": \"http://shpigovsky.test/wp-content/uploads/2026/07/",
+  "stderr_summary": "",
+  "seed_result_file": "X:/AI MARS/workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e7-hero-media-system-seed/hero-media-seed-result.json",
+  "seed_data": {
+    "mode": "all",
+    "baseline": {
+      "phase": "V9-06E7",
+      "generated_at": "2026-07-06T11:58:47+00:00",
+      "rows": [
+        {
+          "key": "home",
+          "object_id": 4,
+          "field": "hero_media",
+          "current": {
+            "empty": true
+          }
+        },
+        {
+          "key": "services_hub",
+          "object_id": 5,
+          "field": "hero_media",
+          "current": {
+            "empty": true
+          }
+        },
+        {
+          "key": "service_subdivision",
+          "object_id": 73,
+          "field": "hero_media",
+          "current": {
+            "empty": true
+          }
+        },
+        {
+          "key": "service_leaf_alcohol",
+          "object_id": 77,
+          "field": "hero_media",
+          "current": {
+            "empty": true
+          }
+        }
+      ]
+    },
+    "seed": {
+      "phase": "V9-06E7",
+      "generated_at": "2026-07-06T11:58:52+00:00",
+      "results": [
+        {
+          "key": "home",
+          "object_id": 4,
+          "field": "hero_media",
+          "attachment_id": 302,
+          "url": "http://shpigovsky.test/wp-content/uploads/2026/07/hero-main.png",
+          "result": "PASS"
+        },
+        {
+          "key": "services_hub",
+          "object_id": 5,
+          "field": "hero_media",
+          "attachment_id": 303,
+          "url": "http://shpigovsky.test/wp-content/uploads/2026/07/services-hero.webp",
+          "result": "PASS"
+        },
+        {
+          "key": "service_subdivision",
+          "object_id": 73,
+          "field": "hero_media",
+          "attachment_id": 304,
+          "url": "http://shpigovsky.test/wp-content/uploads/2026/07/service-subdivision-hero.webp",
+          "result": "PASS"
+        },
+        {
+          "key": "service_leaf_alcohol",
+          "object_id": 77,
+          "field": "hero_media",
+          "attachment_id": 305,
+          "url": "http://shpigovsky.test/wp-content/uploads/2026/07/service-leaf-alcohol-hero.webp",
+          "result": "PASS"
+        }
+      ],
+      "result": "PASS"
+    },
+    "verify": {
+      "phase": "V9-06E7",
+      "generated_at": "2026-07-06T11:58:52+00:00",
+      "rows": [
+        {
+          "key": "home",
+          "object_id": 4,
+          "field": "hero_media",
+          "seeded": true,
+          "url": "http://shpigovsky.test/wp-content/uploads/2026/07/hero-main.png",
+          "result": "PASS"
+        },
+        {
+          "key": "services_hub",
+          "object_id": 5,
+          "field": "hero_media",
+          "seeded": true,
+          "url": "http://shpigovsky.test/wp-content/uploads/2026/07/services-hero.webp",
+          "result": "PASS"
+        },
+        {
+          "key": "service_subdivision",
+          "object_id": 73,
+          "field": "hero_media",
+          "seeded": true,
+          "url": "http://shpigovsky.test/wp-content/uploads/2026/07/service-subdivision-hero.webp",
+          "result": "PASS"
+        },
+        {
+          "key": "service_leaf_alcohol",
+          "object_id": 77,
+          "field": "hero_media",
+          "seeded": true,
+          "url": "http://shpigovsky.test/wp-content/uploads/2026/07/service-leaf-alcohol-hero.webp",
+          "result": "PASS"
+        }
+      ],
+      "result": "PASS"
+    }
+  },
+  "result": "PASS",
+  "alcohol_id_correction": {
+    "actions": [
+      {
+        "action": "cleared_wrong_77",
+        "attachment_was": "305"
+      }
+    ],
+    "php_stdout": "{\"update_74\":true,\"get\":{\"ID\":305,\"id\":305,\"title\":\"РђР»РєРѕРіРѕР»СЊРЅР°СЏ Р·Р°РІРёСЃРёРјРѕСЃС‚СЊ вЂ” hero\",\"filename\":\"service-leaf-alcohol-hero.webp\",\"filesize\":154422,\"url\":\"http:\\/\\/shpigovsky.test\\/wp-content\\/uploads\\/2026\\/07\\/service-leaf-alcohol-hero.webp\",\"link\":\"http:\\/\\/shpigovsky.test\\/uslugi\\/psihicheskoe-zdorovie\\/%d0%b0%d0%bb%d0%ba%d0%be%d0%b3%d0%be%d0%bb%d1%8c%d0%bd%d0%b0%d1%8f-%d0%b7%d0%b0%d0%b2%d0%b8%d1%81%d0%b8%d0%bc%d0%be%d1%81%d1%82%d1%8c-hero\\/\",\"alt\":\"\",\"author\":\"0\",\"description\":\"\",\"caption\":\"\",\"name\":\"%d0%b0%d0%bb%d0%ba%d0%be%d0%b3%d0%be%d0%bb%d1%8c%d0%bd%d0%b0%d1%8f-%d0%b7%d0%b0%d0%b2%d0%b8%d1%81%d0%b8%d0%bc%d0%be%d1%81%d1%82%d1%8c-hero\",\"status\":\"inherit\",\"uploaded_to\":77,\"date\":\"2026-07-06 11:58:52\",\"modified\":\"2026-07-06 11:58:52\",\"menu_order\":0,\"mime_type\":\"image\\/webp\",\"type\":\"image\",\"subtype\":\"webp\",\"icon\":\"http:\\/\\/shpigovsky.test\\/wp-includes\\/images\\/media\\/default.png\",\"width\":850,\"height\":567,\"sizes\":{\"thumbnail\":\"http:\\/\\/shpigovsky.test\\/wp-content\\/uploads\\/2026\\/07\\/service-leaf-alcohol-hero-150x150.webp\",\"thumbnail-width\":150,\"thumbnail-height\":150,\"medium\":\"http:\\/\\/shpigovsky.test\\/wp-content\\/uploads\\/2026\\/07\\/service-leaf-alcohol-hero-300x200.webp\",\"medium-width\":300,\"medium-height\":200,\"medium_large\":\"http:\\/\\/shpigovsky.test\\/wp-content\\/uploads\\/2026\\/07\\/service-leaf-alcohol-hero-768x512.webp\",\"medium_large-width\":768,\"medium_large-height\":512,\"large\":\"http:\\/\\/shpigovsky.test\\/wp-content\\/uploads\\/2026\\/07\\/service-leaf-alcohol-hero.webp\",\"large-width\":850,\"large-height\":567,\"1536x1536\":\"http:\\/\\/shpigovsky.test\\/wp-content\\/uploads\\/2026\\/07\\/service-leaf-alcohol-hero.webp\",\"1536x1536-width\":850,\"1536x1536-height\":567,\"2048x2048\":\"http:\\/\\/shpigovsky.test\\/wp-content\\/uploads\\/2026\\/07\\/service-leaf-alcohol-hero.webp\",\"2048x2048-width\":850,\"2048x2048-height\":567}}}",
+    "php_exit": 0,
+    "hero_media_74": "305",
+    "hero_media_77": null
+  },
+  "corrected_object_id_74": true,
+  "notes": "Initial seed used wrong ID 77 (mental health); corrected to 74 (alcohol) within E7B scope"
+}

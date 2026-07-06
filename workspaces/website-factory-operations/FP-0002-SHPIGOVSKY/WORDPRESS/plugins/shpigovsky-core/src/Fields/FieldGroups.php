@@ -27,7 +27,7 @@ final class FieldGroups implements ModuleInterface {
 	/**
 	 * Deterministic modified timestamp for canonical JSON source.
 	 */
-	public const MODIFIED = 1783158780;
+	public const MODIFIED = 1783166400;
 
 	/**
 	 * {@inheritdoc}
@@ -118,7 +118,7 @@ final class FieldGroups implements ModuleInterface {
 				self::field( 'field_fp02_hero_eyebrow_service', 'Надзаголовок', 'hero_eyebrow', 'text' ),
 				self::field( 'field_fp02_hero_title_override_service', 'Заголовок H1 override', 'hero_title_override', 'text' ),
 				self::field( 'field_fp02_hero_lead_service', 'Лид', 'hero_lead', 'textarea', array( 'rows' => 4 ) ),
-				self::field( 'field_fp02_hero_media_service', 'Медиа hero', 'hero_media', 'image', array( 'return_format' => 'array', 'preview_size' => 'medium' ) ),
+				self::field( 'field_fp02_hero_media_service', 'Hero image', 'hero_media', 'image', array( 'instructions' => 'Hero background image for this service. Empty falls back to theme asset by layout variant.', 'return_format' => 'array', 'preview_size' => 'medium' ) ),
 				self::field( 'field_fp02_hero_cta_label_service', 'CTA label', 'hero_cta_label', 'text' ),
 				self::field( 'field_fp02_hero_cta_target_service', 'CTA target', 'hero_cta_target', 'url' ),
 			),
@@ -239,6 +239,17 @@ final class FieldGroups implements ModuleInterface {
 			'group_fp02_page_home',
 			'Page — Home',
 			array(
+				self::field(
+					'field_fp02_hero_media_home',
+					'Hero image',
+					'hero_media',
+					'image',
+					array(
+						'instructions' => 'Primary hero image. Overrides slide image when set. Empty falls back to Hero slides image, then theme asset.',
+						'return_format' => 'array',
+						'preview_size'  => 'medium',
+					)
+				),
 				self::repeater(
 					'field_fp02_home_hero_slides',
 					'Hero slides',
@@ -274,7 +285,20 @@ final class FieldGroups implements ModuleInterface {
 			'group_fp02_page_services_hub',
 			'Page — Services Hub',
 			array(
-				self::field( 'field_fp02_services_hub_intro', 'Intro', 'services_hub_intro', 'textarea', array( 'rows' => 5 ) ),
+				self::field( 'field_fp02_hero_eyebrow_hub', 'Hero eyebrow', 'hero_eyebrow', 'text' ),
+				self::field( 'field_fp02_hero_title_override_hub', 'Hero H1 override', 'hero_title_override', 'text' ),
+				self::field(
+					'field_fp02_hero_media_hub',
+					'Hero image',
+					'hero_media',
+					'image',
+					array(
+						'instructions' => 'Hero background image for /uslugi/. Empty falls back to theme asset services-hero.webp.',
+						'return_format' => 'array',
+						'preview_size'  => 'medium',
+					)
+				),
+				self::field( 'field_fp02_services_hub_intro', 'Hero lead / intro', 'services_hub_intro', 'textarea', array( 'rows' => 5 ) ),
 				self::field( 'field_fp02_services_hub_query_mode', 'Query display mode', 'services_hub_query_mode', 'select', array( 'choices' => array( 'grouped_by_parent' => 'Grouped by parent', 'flat' => 'Flat' ), 'default_value' => 'grouped_by_parent' ) ),
 				self::field( 'field_fp02_services_hub_show_placeholders', 'Show placeholder services', 'services_hub_show_placeholders', 'true_false' ),
 				self::repeater( 'field_fp02_services_hub_faq_items', 'FAQ', 'services_hub_faq_items', 15, self::faq_subfields( 'services_hub' ) ),
@@ -293,6 +317,21 @@ final class FieldGroups implements ModuleInterface {
 			'group_fp02_page_institutional',
 			'Page — Institutional',
 			array(
+				self::field( 'field_fp02_hero_eyebrow_institutional', 'Hero eyebrow', 'hero_eyebrow', 'text' ),
+				self::field( 'field_fp02_hero_title_override_institutional', 'Hero H1 override', 'hero_title_override', 'text' ),
+				self::field( 'field_fp02_hero_lead_institutional', 'Hero lead', 'hero_lead', 'textarea', array( 'rows' => 4 ) ),
+				self::field(
+					'field_fp02_hero_media_institutional',
+					'Hero image',
+					'hero_media',
+					'image',
+					array(
+						'instructions' => 'Hero background image. Empty falls back to theme asset o-centre-hero.webp.',
+						'return_format' => 'array',
+						'preview_size'  => 'medium',
+					)
+				),
+				self::field( 'field_fp02_hero_cta_label_institutional', 'Hero CTA label', 'hero_cta_label', 'text' ),
 				self::field( 'field_fp02_institutional_placeholder_notice', 'Placeholder notice', 'institutional_placeholder_notice', 'textarea', array( 'rows' => 3 ) ),
 				self::repeater( 'field_fp02_institutional_content_sections', 'Content sections', 'institutional_content_sections', 8, self::media_text_subfields( 'institutional_section' ) ),
 				self::repeater( 'field_fp02_institutional_stages', 'Stages', 'institutional_stages', 8, self::title_text_subfields( 'institutional_stages' ) ),

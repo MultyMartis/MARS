@@ -1,0 +1,43 @@
+{
+  "phase": "V9-06E7B",
+  "generated_at": "2026-07-06T18:58:46.063415+07:00",
+  "file": "plugins/shpigovsky-core/src/Fields/FieldGroups.php",
+  "checks": [
+    {
+      "check": "project_owned_plugin",
+      "result": "PASS",
+      "notes": "shpigovsky-core is FP-0002 project plugin"
+    },
+    {
+      "check": "touches_third_party",
+      "result": "PASS",
+      "notes": "No third-party plugin files modified"
+    },
+    {
+      "check": "hero_fields_only_delta",
+      "result": "PASS",
+      "notes": "hero_media + hub/institutional hero text fields + MODIFIED bump"
+    },
+    {
+      "check": "field_locations_correct",
+      "result": "PASS",
+      "notes": "front_page, services-hub template, institutional template, service post_type"
+    },
+    {
+      "check": "duplicates_existing_groups",
+      "result": "PASS",
+      "notes": "Fields added to existing groups; no duplicate group keys"
+    },
+    {
+      "check": "acf_json_required",
+      "result": "PASS",
+      "notes": "Local PHP registration via FieldGroups.php; no separate ACF JSON delta required"
+    },
+    {
+      "check": "verdict",
+      "result": "ACCEPTED_PROJECT_PLUGIN_SOURCE_CHANGE",
+      "notes": "Scoped hero admin field ownership"
+    }
+  ],
+  "verdict": "ACCEPTED_PROJECT_PLUGIN_SOURCE_CHANGE"
+}

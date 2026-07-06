@@ -72,21 +72,10 @@ function shpigovsky_get_service_hero_image( $post_id ) {
  * @return array{url:string,alt:string,width:int,height:int}
  */
 function shpigovsky_get_service_default_hero_image( $variant ) {
-	if ( 'subdivision' === $variant ) {
-		return array(
-			'url'    => shpigovsky_asset_uri( 'img/content/services/service-subdivision-hero.webp' ),
-			'alt'    => '',
-			'width'  => 1134,
-			'height' => 613,
-		);
-	}
+	$post_id     = shpigovsky_get_current_service_id();
+	$context_key = shpigovsky_get_service_hero_context_key( $post_id, $variant );
 
-	return array(
-		'url'    => '',
-		'alt'    => '',
-		'width'  => 0,
-		'height' => 0,
-	);
+	return shpigovsky_get_hero_theme_fallback( $context_key );
 }
 
 /**
