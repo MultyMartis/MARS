@@ -311,3 +311,7 @@ E3 **PASS**: Read-only stable checkpoint. Confirmed local runtime **STABLE_LOCAL
 ## V9-06E4 services layout + shared background visual reconciliation audit (2026-07-06)
 
 E4 **PASS**: Read-only audit substantiating operator post-E3 visual findings. Services hub `/uslugi/` uses wrong `hero--inner` partial (static authority: `services-inner-hero-v2`). Subdivision `/uslugi/zavisimosti/` correct hero type but `hero_media` empty. Shared backgrounds broken by CSS root paths `/assets/...` (404 on WP; assets present in theme). No source/theme/ACF/runtime mutations in E4. Evidence: `validation/v9-06e4-services-layout-shared-bg-visual-reconciliation-audit/`. Report: `reports/FP-0002-V9-06E4-SERVICES-LAYOUT-SHARED-BG-VISUAL-RECONCILIATION-AUDIT-REPORT-v1.md`. Next: **CREATE_V9_06E5_SERVICES_LAYOUT_SHARED_BG_REPAIR_TASK**.
+
+## V9-06E5 services layout + shared background repair (2026-07-06)
+
+E5 **PARTIAL PASS**: Theme source repairs for services hub hero/layout (`services-inner-hero-v2`, `page-uslugi-v2__main`, `services-category-section-v2`, `services-program-v2`), subdivision hero theme fallback (`service-subdivision-hero.webp`), subdivision stack extension (nature/team-stats/shared blocks), and CSS background path repair (`../img/...` in `v9-style.css`). Bounded runtime delivery: 16 theme files. DB writes: 0. Evidence: `validation/v9-06e5-services-layout-shared-bg-repair/`. Report: `reports/FP-0002-V9-06E5-SERVICES-LAYOUT-SHARED-BG-REPAIR-REPORT-v1.md`. Next: **CREATE_V9_06E6_OPERATOR_VISUAL_QA_TASK**.

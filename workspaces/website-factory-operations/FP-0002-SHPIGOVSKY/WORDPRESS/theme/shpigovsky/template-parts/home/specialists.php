@@ -12,13 +12,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$section_id = isset( $args['section_id'] ) ? (string) $args['section_id'] : '';
+$heading_id = isset( $args['heading_id'] ) ? (string) $args['heading_id'] : 'specialists-heading';
 $specialists_heading = shpigovsky_home_text_or_fallback( 'home_specialists_heading', 'Специалисты центра' );
 
 ?>
-<section data-reveal class="specialists" aria-labelledby="specialists-heading">
+<section data-reveal class="specialists"<?php echo '' !== $section_id ? ' id="' . esc_attr( $section_id ) . '"' : ''; ?> aria-labelledby="<?php echo esc_attr( $heading_id ); ?>">
   <div class="container">
     <div class="specialists__head">
-      <h2 class="specialists__heading" id="specialists-heading"><?php echo esc_html( $specialists_heading ); ?></h2>
+      <h2 class="specialists__heading" id="<?php echo esc_attr( $heading_id ); ?>"><?php echo esc_html( $specialists_heading ); ?></h2>
       <a class="specialists__all-link" href="<?php echo esc_url( home_url( '/o-centre/' ) ); ?>">
         <span class="specialists__all-text">все специалисты</span>
         <span class="specialists__all-icon" aria-hidden="true"><i class="fas fa-play"></i></span>

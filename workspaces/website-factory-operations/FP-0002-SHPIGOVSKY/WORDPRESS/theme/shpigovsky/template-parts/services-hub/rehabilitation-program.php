@@ -2,7 +2,7 @@
 /**
  * Template part: services-hub/rehabilitation-program.php
  *
- * V9 services hub variant of the rehabilitation program block.
+ * V9 services hub variant — services-program-v2 with static asset fallbacks.
  *
  * @package Shpigovsky
  */
@@ -12,55 +12,108 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $program_url = home_url( '/o-centre/programma-lecheniya/' );
+$cta_phone   = shpigovsky_get_site_option( 'phone_primary' );
+$cta_phone   = '' !== $cta_phone ? $cta_phone : '8 (925) 183-64-64';
+$cta_label   = shpigovsky_get_site_option( 'default_button_label' );
+$cta_label   = '' !== $cta_label ? $cta_label : __( 'Записаться', 'shpigovsky' );
 
-$directions = array(
+$items = array(
 	array(
 		'title' => '01 — Генотипирование',
-		'text'  => 'Выявление причин эндогенной природы зависимости служит дополнительным инструментом в индивидуальной схеме лечения и реабилитации.',
+		'image' => shpigovsky_asset_uri( 'img/content/rehabilitation-program/program-genotyping.webp' ),
+		'width' => 1216,
+		'height' => 1632,
+		'alt'   => 'Генотипирование',
 	),
 	array(
 		'title' => '02 — Нейропсихологическая коррекция',
-		'text'  => 'БОС-терапия проводится с использованием специального оборудования для обучения сознательному контролю функций организма.',
+		'image' => shpigovsky_asset_uri( 'img/content/rehabilitation-program/program-neuropsychology.webp' ),
+		'width' => 1632,
+		'height' => 1216,
+		'alt'   => 'Нейропсихологическая коррекция',
 	),
 	array(
 		'title' => '03 — Психокоррекция',
-		'text'  => 'Работа с глубинными причинами зависимости и формирование внутренней опоры и новой стратегии совладания со стрессом.',
+		'image' => shpigovsky_asset_uri( 'img/content/rehabilitation-program/program-psychocorrection.webp' ),
+		'width' => 880,
+		'height' => 1184,
+		'alt'   => 'Психокоррекция',
 	),
 	array(
 		'title' => '04 — Кинезиотерапия',
-		'text'  => 'Физическая нагрузка поддерживает восстановление естественной выработки нейромедиаторов в рамках программы сопровождения.',
+		'image' => shpigovsky_asset_uri( 'img/content/rehabilitation-program/program-kinesiotherapy.webp' ),
+		'width' => 880,
+		'height' => 1184,
+		'alt'   => 'Кинезиотерапия',
 	),
 );
 ?>
-<section data-reveal class="home-rehabilitation-program" aria-labelledby="services-hub-rehabilitation-program-heading">
-	<div class="container">
-		<div class="home-rehabilitation-program__head">
-			<h2 class="home-rehabilitation-program__heading" id="services-hub-rehabilitation-program-heading">
+<section data-reveal class="services-program-v2 services-program-v2--media-frame-fixed services-program-v2--item-image-stack-tall services-program-v2--item-body-mobile-pad services-program-v2--item-media-mobile-pad" id="services-program" aria-labelledby="services-program-v2-heading">
+	<div class="container services-program-v2__container">
+		<header class="services-program-v2__head">
+			<h2 class="services-program-v2__heading" id="services-program-v2-heading">
 				<?php echo esc_html__( 'Наша программа включает 4 направления', 'shpigovsky' ); ?>
 			</h2>
-			<a class="home-rehabilitation-program__all-link" href="<?php echo esc_url( $program_url ); ?>">
-				<span class="home-rehabilitation-program__all-text"><?php echo esc_html__( 'подробнее', 'shpigovsky' ); ?></span>
-				<span class="home-rehabilitation-program__all-icon" aria-hidden="true"><i class="fas fa-play"></i></span>
+			<a class="services-program-v2__head-link" href="<?php echo esc_url( $program_url ); ?>">
+				<span class="services-program-v2__head-link-text"><?php echo esc_html__( 'подробнее', 'shpigovsky' ); ?></span>
+				<span class="services-program-v2__head-link-icon" aria-hidden="true"><img class="services-program-v2__head-link-icon-image" src="<?php echo esc_url( shpigovsky_asset_uri( 'svg/external-link.svg' ) ); ?>" width="20" height="20" alt=""></span>
 			</a>
-		</div>
+		</header>
 
-		<p class="home-rehabilitation-program__lead">
-			<?php echo esc_html__( 'Не просто снимаем симптомы. Мы помогаем разобраться в том, что именно в жизни и истории привело к этой точке.', 'shpigovsky' ); ?>
+		<p class="services-program-v2__lead">
+			<?php echo esc_html__( 'Боль бывает очень похожей у разных людей — но путь к восстановлению всегда индивидуален. Именно поэтому в нашем центре не существует стандартных программ.', 'shpigovsky' ); ?>
 		</p>
 
-		<p class="home-rehabilitation-program__intro">
+		<p class="services-program-v2__intro">
 			<?php echo esc_html__( 'Каждый человек приходит к нам со своей историей. Именно поэтому универсальных программ в нашем центре не существует.', 'shpigovsky' ); ?>
 		</p>
 
-		<div class="home-rehabilitation-program__directions">
-			<?php foreach ( $directions as $direction ) : ?>
-				<article class="home-rehabilitation-program__direction">
-					<div class="home-rehabilitation-program__direction--wrapper">
-						<h3 class="home-rehabilitation-program__direction-title"><?php echo esc_html( $direction['title'] ); ?></h3>
-						<p class="home-rehabilitation-program__direction-text"><?php echo esc_html( $direction['text'] ); ?></p>
+		<div class="services-program-v2__grid">
+			<?php foreach ( $items as $item ) : ?>
+				<article class="services-program-v2__item">
+					<div class="services-program-v2__item-body">
+						<h3 class="services-program-v2__item-title"><?php echo esc_html( $item['title'] ); ?></h3>
+					</div>
+					<div class="services-program-v2__item-media">
+						<img
+							class="services-program-v2__item-image"
+							src="<?php echo esc_url( $item['image'] ); ?>"
+							width="<?php echo (int) $item['width']; ?>"
+							height="<?php echo (int) $item['height']; ?>"
+							alt="<?php echo esc_attr( $item['alt'] ); ?>"
+							loading="lazy"
+							decoding="async"
+						>
 					</div>
 				</article>
 			<?php endforeach; ?>
 		</div>
+
+		<?php
+		set_query_var(
+			'shpigovsky_program_cta_band',
+			array(
+				'title'          => __( 'Запишитесь на гостевой визит', 'shpigovsky' ),
+				'subtitle'       => __( 'Вы сможете все посмотреть и задать вопросы лично', 'shpigovsky' ),
+				'phone'          => $cta_phone,
+				'phone_hint'     => '',
+				'button_label'   => $cta_label,
+				'modal_source'   => 'services-program-guest',
+				'section_id'     => '',
+				'heading_id'     => '',
+				'heading_text'   => '',
+				'wrap_section'   => false,
+				'wrap_container' => false,
+				'button_first'   => false,
+				'margin_flush'   => false,
+			)
+		);
+		get_template_part( 'template-parts/components/program-cta-band' );
+		?>
+
+		<a class="services-program-v2__foot-link" href="<?php echo esc_url( $program_url ); ?>">
+			<span class="services-program-v2__foot-link-text"><?php echo esc_html__( 'подробнее о программе', 'shpigovsky' ); ?></span>
+			<span class="services-program-v2__foot-link-icon" aria-hidden="true"><img class="services-program-v2__foot-link-icon-image" src="<?php echo esc_url( shpigovsky_asset_uri( 'svg/external-link.svg' ) ); ?>" width="20" height="20" alt=""></span>
+		</a>
 	</div>
 </section>

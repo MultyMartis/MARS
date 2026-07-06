@@ -1,0 +1,38 @@
+{
+  "route": "/uslugi/zavisimosti/",
+  "wp_object_id": 73,
+  "before": {
+    "hero_type": "services-inner-hero-v2",
+    "hero_image": false,
+    "main_wrapper": "page-service-subdivision-v1__main",
+    "section_count": 7
+  },
+  "after": {
+    "hero_type": "services-inner-hero-v2",
+    "hero_image": "service-subdivision-hero.webp",
+    "hero_source": "theme_fallback",
+    "main_wrapper": "page-service-subdivision-v1__main",
+    "sections_added": [
+      "service-subdivision-nature-v1",
+      "service-subdivision-team-stats-v1",
+      "clinic-landscape",
+      "specialists",
+      "founder-quote",
+      "comfort",
+      "reviews"
+    ],
+    "stages_fix": "service-subdivision-stages-v1 id service-subdivision-stages (duplicate start id resolved)"
+  },
+  "files_changed": [
+    "template-parts/service/inner-hero.php",
+    "template-parts/service/subdivision-stack.php",
+    "template-parts/service/stages.php",
+    "template-parts/service/nature.php",
+    "template-parts/service/team-stats.php",
+    "inc/service-helpers.php",
+    "template-parts/home/comfort.php",
+    "template-parts/home/specialists.php"
+  ],
+  "content_parity_note": "Nature/team-stats use static V9 fallback copy; not full pixel parity with static lorem blocks",
+  "result": "PARTIAL"
+}

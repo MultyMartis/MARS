@@ -1,0 +1,18 @@
+{
+  "phase": "V9-06E5",
+  "mode": "BASELINE_REPAIR_AUDIT",
+  "e4_commit": "33ca7504c5a564e5e4c701e8db6a4a3abcc658ef",
+  "head_at_audit": "6b24c8f7fd8c571c1d23aff0c7bf9323b84bf67b",
+  "checks": [
+    {"check": "uslugi_hero_wrong_class", "result": "REPRODUCED", "notes": "hero hero--inner before repair"},
+    {"check": "uslugi_hero_image_missing", "result": "REPRODUCED", "notes": "services-hero.webp not wired"},
+    {"check": "uslugi_main_wrapper_drift", "result": "REPRODUCED", "notes": "page-uslugi vs page-uslugi-v2__main"},
+    {"check": "zavisimosti_hero_type_correct", "result": "REPRODUCED", "notes": "services-inner-hero-v2 present"},
+    {"check": "zavisimosti_hero_image_missing", "result": "REPRODUCED", "notes": "hero_media empty on #73"},
+    {"check": "shared_background_css_404", "result": "REPRODUCED", "notes": "url(/assets/...) in v9-style.css"},
+    {"check": "assets_present_theme", "result": "PASS", "notes": "services-hero, service-subdivision-hero, home-final-form-background present"},
+    {"check": "static_v9_authority", "result": "PASS", "notes": "uslugi-v2.html and usluga-podrazdel-v1.html available"},
+    {"check": "legal_reviews_menu_baseline", "result": "PASS", "notes": "no mutation scope; reviews author Андрей, Москва confirmed on /otzyvy/"}
+  ],
+  "result": "READY_FOR_REPAIR"
+}

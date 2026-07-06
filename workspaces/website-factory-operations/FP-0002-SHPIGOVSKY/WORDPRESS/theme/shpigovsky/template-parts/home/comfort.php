@@ -12,6 +12,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$section_id  = isset( $args['section_id'] ) ? (string) $args['section_id'] : '';
+$heading_id  = isset( $args['heading_id'] ) ? (string) $args['heading_id'] : 'comfort-heading';
 $comfort_heading = shpigovsky_home_text_or_fallback( 'home_comfort_heading', 'Комфорт, приватность, забота' );
 $comfort_lead    = shpigovsky_home_text_or_fallback(
 	'home_comfort_lead',
@@ -19,10 +21,10 @@ $comfort_lead    = shpigovsky_home_text_or_fallback(
 );
 
 ?>
-<section data-reveal class="comfort"  aria-labelledby="comfort-heading">
+<section data-reveal class="comfort"<?php echo '' !== $section_id ? ' id="' . esc_attr( $section_id ) . '"' : ''; ?> aria-labelledby="<?php echo esc_attr( $heading_id ); ?>">
   <div class="container">
     <div class="comfort__head">
-      <h2 class="comfort__heading" id="comfort-heading"><?php echo esc_html( $comfort_heading ); ?></h2>
+      <h2 class="comfort__heading" id="<?php echo esc_attr( $heading_id ); ?>"><?php echo esc_html( $comfort_heading ); ?></h2>
       <a class="comfort__all-link" href="<?php echo esc_url( home_url( '/o-centre/galereya-o-dome/' ) ); ?>">
         <span class="comfort__all-text">подробнее о&nbsp;доме</span>
         <span class="comfort__all-icon" aria-hidden="true"><i class="fas fa-play"></i></span>

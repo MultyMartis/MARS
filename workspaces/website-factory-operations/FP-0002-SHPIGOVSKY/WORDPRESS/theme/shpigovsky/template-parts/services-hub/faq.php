@@ -9,13 +9,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$faq_items = shpigovsky_get_services_hub_repeater( 'services_hub_faq_items' );
+$section_id = isset( $args['section_id'] ) ? (string) $args['section_id'] : '';
+$faq_items  = shpigovsky_get_services_hub_repeater( 'services_hub_faq_items' );
 
 if ( empty( $faq_items ) ) {
 	return;
 }
 ?>
-<section data-reveal class="faq" aria-labelledby="services-hub-faq-heading">
+<section data-reveal class="faq"<?php echo '' !== $section_id ? ' id="' . esc_attr( $section_id ) . '"' : ''; ?> aria-labelledby="services-hub-faq-heading">
 	<div class="container">
 		<h2 class="faq__heading" id="services-hub-faq-heading">
 			<?php echo esc_html__( 'Нас часто спрашивают', 'shpigovsky' ); ?>

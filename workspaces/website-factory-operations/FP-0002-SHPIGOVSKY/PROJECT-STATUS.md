@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-06 (V9-06E4 Services Layout + Shared BG Visual Reconciliation Audit PASS)
+**Last updated:** 2026-07-06 (V9-06E5 Services Layout + Shared BG Repair PARTIAL PASS)
 
-**Current WordPress phase:** V9-06E4 Visual Reconciliation Audit **PASS** — operator findings substantiated (services hub hero/layout; subdivision hero image; shared CSS backgrounds). E3 stable checkpoint remains valid @ `8c935957`. **Next: CREATE_V9_06E5_SERVICES_LAYOUT_SHARED_BG_REPAIR_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E4-SERVICES-LAYOUT-SHARED-BG-VISUAL-RECONCILIATION-AUDIT-REPORT-v1.md`.
+**Current WordPress phase:** V9-06E5 Repair **PARTIAL PASS** — `/uslugi/` hub hero/layout repaired; `/uslugi/zavisimosti/` hero image + stack extended; shared CSS background paths fixed. **Next: CREATE_V9_06E6_OPERATOR_VISUAL_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E5-SERVICES-LAYOUT-SHARED-BG-REPAIR-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

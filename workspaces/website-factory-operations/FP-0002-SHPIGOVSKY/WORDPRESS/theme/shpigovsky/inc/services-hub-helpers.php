@@ -149,18 +149,172 @@ function shpigovsky_get_service_field( $post_id, $field_name ) {
  */
 function shpigovsky_get_services_hub_group_modifier( $slug ) {
 	$map = array(
-		'zavisimosti'                         => 'services-category-hub--addictions services-category-hub--no-gallery',
-		'psihicheskoe-zdorovie'               => 'services-category-hub--mental-health services-category-hub--no-gallery',
-		'rasstroystva-pischevogo-povedeniya'  => 'services-category-hub--eating-disorders services-category-hub--no-gallery services-category-hub--compact',
-		'genotipirovanie'                     => 'services-category-hub--genotyping services-category-hub--no-gallery services-category-hub--compact',
+		'zavisimosti'                        => 'services-category-section-v2--addictions',
+		'psihicheskoe-zdorovie'              => 'services-category-section-v2--mental-health',
+		'rasstroystva-pischevogo-povedeniya' => 'services-category-section-v2--eating-disorders',
+		'genotipirovanie'                    => 'services-category-section-v2--genotyping',
 	);
 
 	if ( isset( $map[ $slug ] ) ) {
 		return $map[ $slug ];
 	}
 
-	return 'services-category-hub--no-gallery';
+	return '';
 }
+
+/**
+ * V9 block id for a services hub group slug.
+ *
+ * @param string $slug Parent service slug.
+ * @return string
+ */
+function shpigovsky_get_services_hub_group_block_id( $slug ) {
+	$map = array(
+		'zavisimosti'                        => 'services-category-addictions',
+		'psihicheskoe-zdorovie'              => 'services-category-mental-health',
+		'rasstroystva-pischevogo-povedeniya' => 'services-category-eating-disorders',
+		'genotipirovanie'                    => 'services-category-genotyping',
+	);
+
+	if ( isset( $map[ $slug ] ) ) {
+		return $map[ $slug ];
+	}
+
+	return 'services-category-' . sanitize_html_class( $slug );
+}
+
+/**
+ * Static V9 gallery fallback images for a services hub group slug.
+ *
+ * @param string $slug Parent service slug.
+ * @return array<int, array{url:string,width:int,height:int,alt:string,caption:string}>
+ */
+function shpigovsky_get_services_hub_group_gallery( $slug ) {
+	$map = array(
+		'zavisimosti' => array(
+			array(
+				'url'     => shpigovsky_asset_uri( 'img/content/services/services-addictions-01.webp' ),
+				'width'   => 994,
+				'height'  => 751,
+				'alt'     => '',
+				'caption' => 'Лечение интернет зависимости',
+			),
+			array(
+				'url'     => shpigovsky_asset_uri( 'img/content/services/services-addictions-02.webp' ),
+				'width'   => 744,
+				'height'  => 566,
+				'alt'     => '',
+				'caption' => 'Компьютерная зависимость',
+			),
+			array(
+				'url'     => shpigovsky_asset_uri( 'img/content/services/services-addictions-03.webp' ),
+				'width'   => 748,
+				'height'  => 716,
+				'alt'     => '',
+				'caption' => 'Лечение опиумной зависимости',
+			),
+		),
+		'psihicheskoe-zdorovie' => array(
+			array(
+				'url'     => shpigovsky_asset_uri( 'img/content/services/services-mental-health-01.webp' ),
+				'width'   => 690,
+				'height'  => 512,
+				'alt'     => '',
+				'caption' => 'Хроническая усталось',
+			),
+			array(
+				'url'     => shpigovsky_asset_uri( 'img/content/services/services-mental-health-02.webp' ),
+				'width'   => 902,
+				'height'  => 763,
+				'alt'     => '',
+				'caption' => 'Стресс',
+			),
+			array(
+				'url'     => shpigovsky_asset_uri( 'img/content/services/services-mental-health-03.webp' ),
+				'width'   => 905,
+				'height'  => 602,
+				'alt'     => '',
+				'caption' => 'Нарциссизм',
+			),
+		),
+	);
+
+	return isset( $map[ $slug ] ) ? $map[ $slug ] : array();
+}
+
+/**
+ * Marker icon label for a services hub group slug.
+ *
+ * @param string $slug Parent service slug.
+ * @return string
+ */
+function shpigovsky_get_services_hub_group_icon( $slug ) {
+	$map = array(
+		'zavisimosti'                        => '01',
+		'psihicheskoe-zdorovie'              => '02',
+		'rasstroystva-pischevogo-povedeniya' => '03',
+		'genotipirovanie'                    => '04',
+	);
+
+	return isset( $map[ $slug ] ) ? $map[ $slug ] : '01';
+}
+
+/**
+ * In-page subnav anchors for the services hub route.
+ *
+ * @return array<int, array{id:string,label:string}>
+ */
+function shpigovsky_get_services_hub_subnav_items() {
+	$items = array();
+
+	foreach ( shpigovsky_get_services_hub_groups() as $group ) {
+		if ( ! is_array( $group ) ) {
+			continue;
+		}
+
+		$section_id = isset( $group['section_id'] ) ? trim( (string) $group['section_id'] ) : '';
+		$title      = isset( $group['title'] ) ? trim( (string) $group['title'] ) : '';
+
+		if ( '' === $section_id || '' === $title ) {
+			continue;
+		}
+
+		$items[] = array(
+			'id'    => $section_id,
+			'label' => $title,
+		);
+	}
+
+	$items[] = array(
+		'id'    => 'services-program',
+		'label' => __( 'Программа', 'shpigovsky' ),
+	);
+	$items[] = array(
+		'id'    => 'services-comfort',
+		'label' => __( 'Условия центра', 'shpigovsky' ),
+	);
+	$items[] = array(
+		'id'    => 'services-faq',
+		'label' => __( 'Вопрос/Ответ', 'shpigovsky' ),
+	);
+
+	return $items;
+}
+
+/**
+ * Add V9 body class for services hub route.
+ *
+ * @param string[] $classes Body classes.
+ * @return string[]
+ */
+function shpigovsky_services_hub_body_class( $classes ) {
+	if ( is_page_template( 'page-templates/services-hub.php' ) ) {
+		$classes[] = 'page-uslugi-v2';
+	}
+
+	return $classes;
+}
+add_filter( 'body_class', 'shpigovsky_services_hub_body_class' );
 
 /**
  * Build child service card data from a service post.
@@ -289,11 +443,15 @@ function shpigovsky_get_services_hub_groups() {
 			'slug'           => $slug,
 			'lead_primary'   => $lead_primary,
 			'lead_secondary' => $lead_secondary,
+			'intro'          => $lead_primary,
+			'lead'           => $lead_secondary,
 			'modifier_class' => shpigovsky_get_services_hub_group_modifier( $slug ),
-			'section_id'     => 'services-category-' . sanitize_html_class( $slug ) . '-heading',
+			'block_id'       => shpigovsky_get_services_hub_group_block_id( $slug ),
+			'section_id'     => shpigovsky_get_services_hub_group_block_id( $slug ) . '-heading',
+			'icon'           => shpigovsky_get_services_hub_group_icon( $slug ),
 			'cta_source'     => 'services-' . sanitize_html_class( $slug ),
 			'children'       => $cards,
-			'gallery'        => array(),
+			'gallery'        => shpigovsky_get_services_hub_group_gallery( $slug ),
 		);
 	}
 

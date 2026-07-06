@@ -1,0 +1,32 @@
+{
+  "file": "WORDPRESS/theme/shpigovsky/assets/css/v9-style.css",
+  "rules_repaired": [
+    {
+      "selector": ".home-recovery-life (background)",
+      "before": "url(\"/assets/img/content/recovery-life/recovery-life-section-bg.webp\")",
+      "after": "url(\"../img/content/recovery-life/recovery-life-section-bg.webp\")",
+      "result": "PASS"
+    },
+    {
+      "selector": ".final-form__band::before",
+      "before": "url(\"/assets/img/content/home-final-form/home-final-form-background.webp\")",
+      "after": "url(\"../img/content/home-final-form/home-final-form-background.webp\")",
+      "result": "PASS"
+    },
+    {
+      "selector": ".program-cta-band::before",
+      "before": "url(\"/assets/img/content/home-final-form/home-final-form-background.webp\")",
+      "after": "url(\"../img/content/home-final-form/home-final-form-background.webp\")",
+      "result": "PASS"
+    },
+    {
+      "selector": ".home-rehabilitation-requirements__cta-band::before",
+      "before": "url(\"/assets/img/content/home-final-form/home-final-form-background.webp\")",
+      "after": "url(\"../img/content/home-final-form/home-final-form-background.webp\")",
+      "result": "PASS"
+    }
+  ],
+  "root_absolute_assets_remaining": 0,
+  "theme_asset_http_200": true,
+  "result": "PASS"
+}

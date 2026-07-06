@@ -20330,7 +20330,7 @@ body.is-modal-scroll-locked {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: url("/assets/img/content/recovery-life/recovery-life-section-bg.webp");
+  background-image: url("../img/content/recovery-life/recovery-life-section-bg.webp");
   background-size: contain;
   background-position: center;
   opacity: 0.4;
@@ -20684,7 +20684,7 @@ body.is-modal-scroll-locked {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/assets/img/content/home-final-form/home-final-form-background.webp");
+  background-image: url("../img/content/home-final-form/home-final-form-background.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -21268,7 +21268,7 @@ body.is-modal-scroll-locked {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/assets/img/content/home-final-form/home-final-form-background.webp");
+  background-image: url("../img/content/home-final-form/home-final-form-background.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -23695,7 +23695,7 @@ body[data-offcanvas-state=open] {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/assets/img/content/home-final-form/home-final-form-background.webp");
+  background-image: url("../img/content/home-final-form/home-final-form-background.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

@@ -1,0 +1,19 @@
+{
+  "primary_pairs": [
+    {"runtime": "runtime-uslugi-repaired-e5.png", "static": "static-v9-uslugi-reference-e5.png", "result": "CAPTURED"},
+    {"runtime": "runtime-zavisimosti-repaired-e5.png", "static": "static-v9-zavisimosti-reference-e5.png", "result": "CAPTURED"}
+  ],
+  "background_shots": [
+    "runtime-final-form-bg-e5.png",
+    "runtime-service-subdivision-start-bg-e5.png",
+    "runtime-rehabilitation-cta-bg-e5.png"
+  ],
+  "regression_shots": [
+    "runtime-home-regression-e5.png",
+    "runtime-service-74-regression-e5.png",
+    "runtime-reviews-regression-e5.png",
+    "runtime-privacy-policy-regression-e5.png"
+  ],
+  "operator_visual_qa_required": true,
+  "result": "PARTIAL"
+}

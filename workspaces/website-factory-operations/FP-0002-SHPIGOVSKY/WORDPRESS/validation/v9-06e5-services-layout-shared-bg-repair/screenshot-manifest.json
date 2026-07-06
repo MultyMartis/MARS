@@ -1,0 +1,93 @@
+{
+  "shots": [
+    {
+      "file": "runtime-uslugi-repaired-e5.png",
+      "url": "http://shpigovsky.test/uslugi/",
+      "kind": "runtime",
+      "captured": true,
+      "sha256": "C5336D1ED2164B96650CEAFD5B851F3233AE4AE49E7F41DD5143E8D5275D015D",
+      "error": null
+    },
+    {
+      "file": "runtime-zavisimosti-repaired-e5.png",
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/",
+      "kind": "runtime",
+      "captured": true,
+      "sha256": "DC9BAB71A0F442F45602F2CEDDA0175F3AB9EAD4270E7EC6550F79B4D993F4F7",
+      "error": null
+    },
+    {
+      "file": "static-v9-uslugi-reference-e5.png",
+      "url": "file:///X:/AI MARS/workspaces/fp-0002-shpigovsky-v9/dist/uslugi/index.html",
+      "kind": "static",
+      "captured": true,
+      "sha256": "D06537D5B9293F33ED2021B4E414594470C4E2515FB71FE44C3636A37A8B3366",
+      "error": null
+    },
+    {
+      "file": "static-v9-zavisimosti-reference-e5.png",
+      "url": "file:///X:/AI MARS/workspaces/fp-0002-shpigovsky-v9/dist/uslugi/zavisimosti/index.html",
+      "kind": "static",
+      "captured": true,
+      "sha256": "057642BEA25BB58F0478FC2CE98B4A1969663DD7BCEF597E51C19EEBDBD7E684",
+      "error": null
+    },
+    {
+      "file": "runtime-final-form-bg-e5.png",
+      "url": "http://shpigovsky.test/uslugi/",
+      "kind": "runtime-bg",
+      "captured": true,
+      "sha256": "C5336D1ED2164B96650CEAFD5B851F3233AE4AE49E7F41DD5143E8D5275D015D",
+      "error": null
+    },
+    {
+      "file": "runtime-service-subdivision-start-bg-e5.png",
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/",
+      "kind": "runtime-bg",
+      "captured": true,
+      "sha256": "DC9BAB71A0F442F45602F2CEDDA0175F3AB9EAD4270E7EC6550F79B4D993F4F7",
+      "error": null
+    },
+    {
+      "file": "runtime-rehabilitation-cta-bg-e5.png",
+      "url": "http://shpigovsky.test/",
+      "kind": "runtime-bg",
+      "captured": true,
+      "sha256": "4CE2D25B27877370917834BF55A28FA8B3E7E71CB0FBF64F374702BCF15F33A4",
+      "error": null
+    },
+    {
+      "file": "runtime-home-regression-e5.png",
+      "url": "http://shpigovsky.test/",
+      "kind": "regression",
+      "captured": true,
+      "sha256": "B2CC993A2BE86A85F7D90C7111B402E0EEA4196E62CBFD9EACF54016F4923188",
+      "error": null
+    },
+    {
+      "file": "runtime-service-74-regression-e5.png",
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "kind": "regression",
+      "captured": true,
+      "sha256": "3DE4B6A88266EADB702BD79A83613B80815F5BEAFA867E90E69F18B2250A33E3",
+      "error": null
+    },
+    {
+      "file": "runtime-reviews-regression-e5.png",
+      "url": "http://shpigovsky.test/otzyvy/",
+      "kind": "regression",
+      "captured": true,
+      "sha256": "D3C0B8EBF72EB594E7B65CF7AD872CBADAF767F7B59A920912499F8E7DC65CB7",
+      "error": null
+    },
+    {
+      "file": "runtime-privacy-policy-regression-e5.png",
+      "url": "http://shpigovsky.test/privacy-policy/",
+      "kind": "regression",
+      "captured": true,
+      "sha256": "85DE26EC5EAA91E300C165DC8150D48A18E798D11ED661176EC998035E0C2526",
+      "error": null
+    }
+  ],
+  "captured_at": "2026-07-06T10:39:56.256Z"
+}

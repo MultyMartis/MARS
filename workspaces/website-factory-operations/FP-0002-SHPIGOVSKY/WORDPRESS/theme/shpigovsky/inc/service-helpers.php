@@ -66,6 +66,30 @@ function shpigovsky_get_service_hero_image( $post_id ) {
 }
 
 /**
+ * Theme asset fallback for service hero images when ACF hero_media is empty.
+ *
+ * @param string $variant Layout variant slug.
+ * @return array{url:string,alt:string,width:int,height:int}
+ */
+function shpigovsky_get_service_default_hero_image( $variant ) {
+	if ( 'subdivision' === $variant ) {
+		return array(
+			'url'    => shpigovsky_asset_uri( 'img/content/services/service-subdivision-hero.webp' ),
+			'alt'    => '',
+			'width'  => 1134,
+			'height' => 613,
+		);
+	}
+
+	return array(
+		'url'    => '',
+		'alt'    => '',
+		'width'  => 0,
+		'height' => 0,
+	);
+}
+
+/**
  * Resolve service H1 title with optional ACF override.
  *
  * @param int $post_id Service post ID.
@@ -280,12 +304,28 @@ function shpigovsky_get_service_subnav_items( $variant ) {
 				'label' => __( 'Зависимости', 'shpigovsky' ),
 			),
 			array(
+				'id'    => 'service-subdivision-nature',
+				'label' => __( 'Природа зависимости', 'shpigovsky' ),
+			),
+			array(
 				'id'    => 'service-subdivision-program',
 				'label' => __( 'Программа лечения', 'shpigovsky' ),
 			),
 			array(
 				'id'    => 'service-subdivision-start',
 				'label' => __( 'С чего начать', 'shpigovsky' ),
+			),
+			array(
+				'id'    => 'service-subdivision-approach',
+				'label' => __( 'Наш подход к лечению', 'shpigovsky' ),
+			),
+			array(
+				'id'    => 'service-subdivision-specialists',
+				'label' => __( 'Специалисты', 'shpigovsky' ),
+			),
+			array(
+				'id'    => 'service-subdivision-comfort',
+				'label' => __( 'Условия центра', 'shpigovsky' ),
 			),
 			array(
 				'id'    => 'service-subdivision-faq',

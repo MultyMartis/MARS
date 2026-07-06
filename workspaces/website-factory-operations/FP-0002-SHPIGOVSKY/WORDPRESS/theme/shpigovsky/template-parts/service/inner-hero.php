@@ -20,6 +20,17 @@ $image      = shpigovsky_get_service_hero_image( $post_id );
 $img_url    = shpigovsky_acf_image_url( $image );
 $img_alt    = shpigovsky_acf_image_alt( $image );
 
+if ( '' === $img_url ) {
+	$fallback = shpigovsky_get_service_default_hero_image( $variant );
+	$img_url  = isset( $fallback['url'] ) ? $fallback['url'] : '';
+	$img_alt  = isset( $fallback['alt'] ) ? $fallback['alt'] : '';
+	$img_w    = isset( $fallback['width'] ) ? (int) $fallback['width'] : 1134;
+	$img_h    = isset( $fallback['height'] ) ? (int) $fallback['height'] : 613;
+} else {
+	$img_w = 1134;
+	$img_h = 613;
+}
+
 if ( '' === $eyebrow ) {
 	$eyebrow = __( 'Заболевания, которые мы лечим', 'shpigovsky' );
 }
@@ -42,8 +53,8 @@ $cta_source = 'subdivision' === $variant ? 'service-subdivision-hero-v1' : 'serv
 				<img
 					class="services-inner-hero-v2__image"
 					src="<?php echo esc_url( $img_url ); ?>"
-					width="1134"
-					height="613"
+					width="<?php echo (int) $img_w; ?>"
+					height="<?php echo (int) $img_h; ?>"
 					alt="<?php echo esc_attr( $img_alt ); ?>"
 				>
 				<div class="services-inner-hero-v2__overlay"></div>

@@ -1,0 +1,13 @@
+{
+  "phase": "V9-06E5",
+  "waves": [
+    {"order": 1, "component": "Shared CSS paths", "planned_repair": "Replace 4 root /assets/ urls with ../img/ relative paths in v9-style.css", "safety": "CSS-only"},
+    {"order": 2, "component": "Services hub hero", "planned_repair": "services-inner-hero-v2 + services-hero.webp theme fallback", "safety": "Template-only"},
+    {"order": 3, "component": "Services hub layout", "planned_repair": "page-uslugi-v2__main, services-category-section-v2, services-program-v2, subnav, founder/comfort/cta", "safety": "Route-scoped"},
+    {"order": 4, "component": "Subdivision hero image", "planned_repair": "shpigovsky_get_service_default_hero_image fallback", "safety": "No DB"},
+    {"order": 5, "component": "Subdivision layout stack", "planned_repair": "nature, team-stats, clinic, specialists, founder, comfort, reviews; stages-v1 id fix", "safety": "Static fallback partials"},
+    {"order": 6, "component": "Validation", "planned_repair": "Route probe + screenshots + regression", "safety": "Read-only"}
+  ],
+  "db_writes": 0,
+  "result": "APPROVED"
+}

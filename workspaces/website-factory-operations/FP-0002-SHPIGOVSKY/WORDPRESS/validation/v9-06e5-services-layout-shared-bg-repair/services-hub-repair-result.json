@@ -1,0 +1,27 @@
+{
+  "route": "/uslugi/",
+  "before": {
+    "hero_type": "hero hero--inner",
+    "hero_image": false,
+    "main_wrapper": "page-uslugi",
+    "section_stack": "services-category-hub + home-rehabilitation-program"
+  },
+  "after": {
+    "hero_type": "services-inner-hero-v2",
+    "hero_image": "services-hero.webp",
+    "main_wrapper": "page-uslugi-v2__main",
+    "body_class": "page-uslugi-v2",
+    "section_stack": "inner-hero, subnav, services-category-section-v2 xN, services-program-v2, founder-quote, comfort, program-cta-band, faq, final-form"
+  },
+  "files_changed": [
+    "template-parts/services-hub/hero.php",
+    "page-templates/services-hub.php",
+    "template-parts/services-hub/service-group.php",
+    "template-parts/services-hub/rehabilitation-program.php",
+    "template-parts/services-hub/faq.php",
+    "template-parts/components/service-card.php",
+    "inc/services-hub-helpers.php"
+  ],
+  "content_parity_note": "Category copy still from WP service CPT/ACF; static V9 gallery fallbacks wired for addictions and mental-health groups",
+  "result": "PASS"
+}

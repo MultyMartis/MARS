@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E4 SERVICES LAYOUT + SHARED BG VISUAL RECONCILIATION AUDIT **PASS** — operator findings substantiated on `/uslugi/` and `/uslugi/zavisimosti/`; E3 stable checkpoint remains valid ancestor; NEXT: **CREATE_V9_06E5_SERVICES_LAYOUT_SHARED_BG_REPAIR_TASK**
+**Status:** V9-06E5 SERVICES LAYOUT + SHARED BG REPAIR **PARTIAL PASS** — hub hero/layout/CSS backgrounds repaired; subdivision hero image + stack extended; operator visual QA recommended. NEXT: **CREATE_V9_06E6_OPERATOR_VISUAL_QA_TASK**
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---
