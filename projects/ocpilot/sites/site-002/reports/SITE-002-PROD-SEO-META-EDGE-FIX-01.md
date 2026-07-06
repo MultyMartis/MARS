@@ -258,7 +258,14 @@ Tool: [site-002-prod-seo-meta-edge-fix-01.py](../tools/site-002-prod-seo-meta-ed
 
 ## 23. Git status
 
-Repository docs/report/checkpoint/tool updated by this operation. Storage artefacts not in git.
+| Item | Value |
+|------|-------|
+| Commit | `86ac62ec` — `ocpilot: fix SITE-002 edge category metadata` |
+| Branch | `mars/canonical-post-recovery` |
+| Pushed | yes → `origin/mars/canonical-post-recovery` |
+| Files committed | 9 (report, checkpoint, tool, OPERATIONAL-INDEX, OCPILOT-STATE, production-profile, site-passport, knowledge map, tools README) |
+| Storage artefacts | not in git |
+| Foreign WIP | present — not staged |
 
 ---
 
