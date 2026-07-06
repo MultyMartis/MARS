@@ -23,6 +23,7 @@ require_once SHPIGOVSKY_THEME_DIR . '/inc/home-helpers.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/hero-helpers.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/home-fallbacks.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/home-vendors.php';
+require_once SHPIGOVSKY_THEME_DIR . '/inc/alcohol-direct-v9-vendors.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/v9-static-content.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/services-hub-helpers.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/service-helpers.php';

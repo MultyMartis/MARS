@@ -45,15 +45,10 @@ get_template_part( 'template-parts/service/alcohol-direct-v9/stages' );
 // 11. service-leaf-corridor-v1.
 get_template_part( 'template-parts/service/corridor' );
 
-// 12–15. Shared V9 sections with service-leaf IDs (static partial parity documented in E12).
-get_template_part(
-	'template-parts/home/specialists',
-	null,
-	array(
-		'section_id' => 'service-leaf-specialists',
-		'heading_id' => 'service-leaf-specialists-heading',
-	)
-);
+// 12. specialists — direct V9 (not home/specialists.php; requires Swiper on alcohol leaf).
+get_template_part( 'template-parts/service/alcohol-direct-v9/specialists' );
+
+// 13–15. Shared V9 sections with service-leaf IDs.
 
 get_template_part(
 	'template-parts/home/founder-quote',

@@ -1,0 +1,26 @@
+{
+  "components": [
+    {
+      "component": "alcohol-direct-v9.php",
+      "role": "Stack orchestrator",
+      "provenance": "HOME_PARTIAL_REUSE",
+      "risk": "HIGH",
+      "notes": "Called template-parts/home/specialists before E13"
+    },
+    {
+      "component": "home/specialists.php",
+      "role": "Rendered specialists block",
+      "provenance": "HOME_PARTIAL_REUSE",
+      "risk": "HIGH",
+      "notes": "Same markup as static but wrong vendor context"
+    },
+    {
+      "component": "home-vendors.php",
+      "role": "Swiper enqueue",
+      "provenance": "UNKNOWN",
+      "risk": "CRITICAL",
+      "notes": "is_front_page() gate prevented Swiper on alcohol leaf"
+    }
+  ],
+  "root_cause": "Missing Swiper JS/CSS on alcohol leaf; slider not initialized"
+}

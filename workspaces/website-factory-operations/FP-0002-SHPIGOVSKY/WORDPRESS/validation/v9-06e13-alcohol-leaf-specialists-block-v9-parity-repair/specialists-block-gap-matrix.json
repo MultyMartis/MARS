@@ -1,0 +1,39 @@
+{
+  "gaps": [
+    {
+      "area": "renderer",
+      "static_v9": "partials/sections/specialists.html",
+      "wp_before": "home/specialists.php",
+      "gap": "WRONG_CONTENT_SOURCE",
+      "repair": "alcohol-direct-v9/specialists.php"
+    },
+    {
+      "area": "swiper_vendor",
+      "static_v9": "loaded",
+      "wp_before": "missing",
+      "gap": "WRONG_LAYOUT_MODE",
+      "repair": "alcohol-direct-v9-vendors.php"
+    },
+    {
+      "area": "card_sizing",
+      "static_v9": "3.5 slides constrained",
+      "wp_before": "full-width unstretched",
+      "gap": "WRONG_SIZE",
+      "repair": "Swiper init"
+    },
+    {
+      "area": "section_id",
+      "static_v9": "service-leaf-specialists",
+      "wp_before": "service-leaf-specialists",
+      "gap": "MATCH",
+      "repair": "none"
+    },
+    {
+      "area": "markup",
+      "static_v9": "specialists__*",
+      "wp_before": "specialists__*",
+      "gap": "MATCH",
+      "repair": "none"
+    }
+  ]
+}

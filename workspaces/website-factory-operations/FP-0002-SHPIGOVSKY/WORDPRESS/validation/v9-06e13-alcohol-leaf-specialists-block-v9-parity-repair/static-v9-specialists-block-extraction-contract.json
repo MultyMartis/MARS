@@ -1,0 +1,19 @@
+{
+  "source": "X:\\AI MARS\\workspaces\\fp-0002-shpigovsky-v9\\src\\partials\\sections\\specialists.html",
+  "section_root_class": "specialists",
+  "section_id": "service-leaf-specialists",
+  "heading_id": "service-leaf-specialists-heading",
+  "heading_text": "Специалисты центра",
+  "section_modifier_class": "",
+  "list_wrapper": "specialists__slider swiper",
+  "card_wrapper": "specialists__card swiper-slide",
+  "image_class": "specialists__photo",
+  "image_height_css": "260px",
+  "card_count": 5,
+  "swiper_config": {
+    "slidesPerView": 3.5,
+    "spaceBetween": 30
+  },
+  "content_classification": "EXACT_V9_COPY",
+  "static_partial_excerpt": "<section data-reveal class=\"specialists@@sectionModifierClass\" @@if (sectionId !== '') { id=\"@@sectionId\" } aria-labelledby=\"@@headingId\">\n  <div class=\"container\">\n    <div class=\"specialists__head\">\n      <h2 class=\"specialists__heading\" id=\"@@headingId\">@@headingText</h2>\n      <a class=\"specialists__all-link\" href=\"/o-centre/\">\n        <span class=\"specialists__all-text\">все специалисты</span>\n        <span class=\"specialists__all-icon\" aria-hidden=\"true\"><i class=\"fas fa-play\"></i></span>\n "
+}

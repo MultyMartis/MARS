@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-07-06T22:20:38.851982+00:00",
+  "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+  "static_source": "X:\\AI MARS\\workspaces\\fp-0002-shpigovsky-v9\\src\\pages\\usluga-konechnaya-v1.html",
+  "static_partial": "X:\\AI MARS\\workspaces\\fp-0002-shpigovsky-v9\\src\\partials\\sections\\specialists.html",
+  "before_analysis": {
+    "has_service_leaf_specialists_id": true,
+    "has_specialists_slider": true,
+    "has_data_specialists_slider": true,
+    "card_count": 5,
+    "has_swiper_slide": true,
+    "has_pagination": true,
+    "uses_home_partial_marker": false,
+    "swiper_js_enqueued": false,
+    "swiper_css_enqueued": false,
+    "v9_shell_enqueued": true,
+    "photo_height_rule_present": true,
+    "block_html_length": 3304
+  },
+  "root_cause": "Swiper vendor enqueued only on is_front_page(); alcohol leaf specialists slider uninitialized → oversized cards",
+  "wp_renderer_before": "template-parts/home/specialists.php",
+  "before_screenshots": [
+    {
+      "file": "runtime-alcohol-specialists-before-e13.png",
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/#service-leaf-specialists",
+      "captured": true,
+      "sha256": "043A64A0463860BC23407AE6B90BBDD24AF8717BDFB2A4379B7F7BCE5BE38842",
+      "error": null
+    },
+    {
+      "file": "runtime-full-alcohol-leaf-before-e13.png",
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "captured": true,
+      "sha256": "3755CADFA0D1CD8BE3CCC501D585F57B8A6AF981BD87C3F9E51422B8802687DA",
+      "error": null
+    },
+    {
+      "file": "static-v9-alcohol-specialists-reference-e13-before.png",
+      "url": "file:///X:/AI%20MARS/workspaces/fp-0002-shpigovsky-v9/dist/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/index.html#service-leaf-specialists",
+      "captured": true,
+      "sha256": "967E2A7E19EAF367EC3408E7F75B603B7B7CA7D81E6456F698B2E8F8D38C93EB",
+      "error": null
+    },
+    {
+      "file": "static-v9-full-alcohol-leaf-reference-e13-before.png",
+      "url": "file:///X:/AI%20MARS/workspaces/fp-0002-shpigovsky-v9/dist/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/index.html",
+      "captured": true,
+      "sha256": "C57C6DB1A580469FC4B68ED90692A86E87C4CD0B8EA5E8D3CEC128FE17CD5782",
+      "error": null
+    }
+  ],
+  "operator_screenshot": "operator screenshot only available in Web-GPT chat"
+}

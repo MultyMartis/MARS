@@ -394,6 +394,53 @@ function shpigovsky_get_v9_alcohol_leaf_faq_items() {
 }
 
 /**
+ * Specialists cards — static V9 authority (partials/sections/specialists.html).
+ *
+ * Shared fixture used on home and service leaf; alcohol leaf renders via alcohol-direct-v9/specialists.php.
+ *
+ * @return array<int, array{image:string,width:int,height:int,name:string,role:string}>
+ */
+function shpigovsky_get_v9_specialists_cards() {
+	return array(
+		array(
+			'image'  => 'img/content/home-specialists/sergey-shpigovsky.webp',
+			'width'  => 615,
+			'height' => 605,
+			'name'   => 'Сергей Юрьевич Шпиговский',
+			'role'   => 'Аддиктолог, интервенционист',
+		),
+		array(
+			'image'  => 'img/content/home-specialists/maxim-kazakov.webp',
+			'width'  => 657,
+			'height' => 605,
+			'name'   => 'Максим Михайлович Казаков',
+			'role'   => 'Психолог, преподаватель психологии, гештальт-терапевт',
+		),
+		array(
+			'image'  => 'img/content/home-specialists/darya-kostyuk.webp',
+			'width'  => 643,
+			'height' => 610,
+			'name'   => 'Дарья Владимировна Костюк',
+			'role'   => 'Психолог, EMDR терапевт, телесно-ориентированный терапевт',
+		),
+		array(
+			'image'  => 'img/content/home-specialists/sergey-shpigovsky.webp',
+			'width'  => 615,
+			'height' => 605,
+			'name'   => 'Сергей Юрьевич Шпиговский',
+			'role'   => 'Аддиктолог, интервенционист',
+		),
+		array(
+			'image'  => 'img/content/home-specialists/tatyana-shapiguzova.webp',
+			'width'  => 643,
+			'height' => 610,
+			'name'   => 'Шапигузова Татьяна Андреевна',
+			'role'   => 'Сертифицированный гонг-мастер, звукотерапевт и&nbsp;преподаватель Кундалини йоги.',
+		),
+	);
+}
+
+/**
  * Contacts location map image paths (theme assets).
  *
  * @return array{mo:string,moscow:string}

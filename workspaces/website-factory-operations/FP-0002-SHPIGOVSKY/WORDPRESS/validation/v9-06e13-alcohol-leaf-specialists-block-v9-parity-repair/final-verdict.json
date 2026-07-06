@@ -1,0 +1,35 @@
+{
+  "verdict": "PASS",
+  "block_pass": true,
+  "swiper_fixed": true,
+  "screenshots_pass": true,
+  "regression_pass": true,
+  "before_analysis": {
+    "has_service_leaf_specialists_id": true,
+    "has_specialists_slider": true,
+    "has_data_specialists_slider": true,
+    "card_count": 5,
+    "has_swiper_slide": true,
+    "has_pagination": true,
+    "uses_home_partial_marker": false,
+    "swiper_js_enqueued": false,
+    "swiper_css_enqueued": false,
+    "v9_shell_enqueued": true,
+    "photo_height_rule_present": true,
+    "block_html_length": 3304
+  },
+  "after_analysis": {
+    "has_service_leaf_specialists_id": true,
+    "has_specialists_slider": true,
+    "has_data_specialists_slider": true,
+    "card_count": 5,
+    "has_swiper_slide": true,
+    "has_pagination": true,
+    "uses_home_partial_marker": false,
+    "swiper_js_enqueued": true,
+    "swiper_css_enqueued": true,
+    "v9_shell_enqueued": true,
+    "photo_height_rule_present": true,
+    "block_html_length": 3352
+  }
+}

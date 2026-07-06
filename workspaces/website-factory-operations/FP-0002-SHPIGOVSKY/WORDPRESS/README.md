@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E12 DIRECT STATIC V9 PORT REPAIR — ALCOHOL LEAF **PASS** — direct V9 section stack via `alcohol-direct-v9.php`; approach/stages/FAQ ACF bypass; 16 screenshots PASS; 0 DB writes. NEXT: **CREATE_V9_06E13_OPERATOR_ALCOHOL_LEAF_VISUAL_QA_TASK**
+**Status:** V9-06E13 ALCOHOL LEAF SPECIALISTS BLOCK V9 PARITY REPAIR **PASS** — direct V9 specialists partial + Swiper vendor on alcohol leaf; HOME_PARTIAL_REUSE removed; root cause: `home-vendors.php` front-page-only gate; 16 screenshots PASS; 0 DB writes. NEXT: **CREATE_V9_06E14_OPERATOR_ALCOHOL_LEAF_VISUAL_QA_TASK**
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-07 (V9-06E12 Direct Static V9 Port Repair — Alcohol Leaf PASS)
+**Last updated:** 2026-07-07 (V9-06E13 Alcohol Leaf Specialists Block V9 Parity Repair PASS)
 
-**Current WordPress phase:** V9-06E12 Direct Static V9 Port Repair — Alcohol Leaf **PASS** — `/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/` now renders via `alcohol-direct-v9.php` direct section stack from `usluga-konechnaya-v1.html`; approach/stages/FAQ ACF orchestration bypassed; hero admin system preserved; 16/16 screenshots PASS; 0 DB writes. **E3 stable checkpoint remains invalidated.** **Next: CREATE_V9_06E13_OPERATOR_ALCOHOL_LEAF_VISUAL_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E12-DIRECT-STATIC-V9-PORT-REPAIR-ALCOHOL-LEAF-REPORT-v1.md`.
+**Current WordPress phase:** V9-06E13 Alcohol Leaf Specialists Block V9 Parity Repair **PASS** — specialists block on `/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/` repaired via `alcohol-direct-v9/specialists.php` + page-scoped Swiper vendor; HOME_PARTIAL_REUSE removed; root cause was `home-vendors.php` front-page-only gate; 16/16 screenshots PASS; 0 DB writes. **E3 stable checkpoint remains invalidated.** **Next: CREATE_V9_06E14_OPERATOR_ALCOHOL_LEAF_VISUAL_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E13-ALCOHOL-LEAF-SPECIALISTS-BLOCK-V9-PARITY-REPAIR-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 
