@@ -500,7 +500,8 @@ Product SEO URLs created during catalog import (`oc_seo_url` where `query LIKE '
 | Meta audit scope | **Non-product only** — 43 URLs; product PDP excluded |
 | Meta audit result | PASS 12 · WARN 14 · FAIL 17 |
 | Valid XML sitemap | **VERIFIED** (Run 4.191) — https://bzpm.ru/sitemap.xml — 1320 URLs; OpenCart Google Sitemap feed enabled; robots `Sitemap:` deployed |
-| Non-product SEO meta fix | **INFORMATION META COMPLETE** (Run 4.199) — 4.192: technical noindex + contact/stoly · 4.193: home + category 301/322/326 admin · 4.198: authority mapped · **4.199: corp 6 controllers + `product/katalog.php` + `blog/category.php` (hub + news fallback theme_id=1) patched; category admin SEO 331/354/358 verified** · product PDP meta deferred |
+| Non-product SEO meta fix | **INFORMATION META COMPLETE** (Run 4.199) — 4.192: technical noindex + contact/stoly · 4.193: home + category 301/322/326 admin · 4.198: authority mapped · **4.199: corp 6 controllers + `product/katalog.php` + `blog/category.php` (hub + news fallback theme_id=1) patched; category admin SEO 331/354/358 verified** |
+| Product PDP meta generator | **MAPPED** (Run 4.200) — import-time: `import_1C_process.php` → `meta_description = mb_substr(strip_tags(description),0,160)`, `meta_title = name`, no `meta_keyword`; runtime: `product.php` pass-through DB fields; no OC modification overlay; 24 PDP sample: 8 missing description, 24 missing keywords, 0 «купить»; FIX planned `SITE-002-PROD-SEO-PRODUCT-META-GENERATOR-FIX-01` · [report](../reports/SITE-002-PROD-SEO-PRODUCT-META-GENERATOR-DISCOVERY-01.md) |
 | OpenCart Document robots API | **Not available** — no `Document::setRobots()`; use `X-Robots-Tag` response header; `header.twig` hardcodes `<meta robots index,follow>` |
 | Yandex Metrika / Webmaster (live Twig) | **VERIFIED** (Run 4.189) — preserved after Run 4.192 |
 | Duplicate body / preloader (Production) | **FIXED** (Run 4.190) — unchanged by Run 4.192 |

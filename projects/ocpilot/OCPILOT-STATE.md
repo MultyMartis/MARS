@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-06
-**Evidence cutoff:** 2026-07-06 (SITE-002 Run **4.199** — information meta runtime fix; corp/katalog/blog meta verified; checkpoint `SITE-002-STABLE-PROD-SEO-INFORMATION-META-01`)
+**Evidence cutoff:** 2026-07-06 (SITE-002 Run **4.200** — product meta generator discovery; import-time + runtime authority mapped; checkpoint unchanged `SITE-002-STABLE-PROD-SEO-INFORMATION-META-01`)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Information meta runtime fix (Run 4.199)** — corp/katalog/blog meta live verified · next product meta generator discovery · [SITE-002-PROD-SEO-INFORMATION-META-RUNTIME-FIX-01.md](sites/site-002/reports/SITE-002-PROD-SEO-INFORMATION-META-RUNTIME-FIX-01.md) |
+| Current SITE-002 focus | **Product meta generator discovery (Run 4.200)** — import-time meta in `import_1C_process.php`; runtime pass-through `product.php`; next **FIX** + **llms.txt** · [SITE-002-PROD-SEO-PRODUCT-META-GENERATOR-DISCOVERY-01.md](sites/site-002/reports/SITE-002-PROD-SEO-PRODUCT-META-GENERATOR-DISCOVERY-01.md) |
 
 ---
 
