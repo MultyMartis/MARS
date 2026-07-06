@@ -42,6 +42,7 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `site-002-prod-llms-txt-01.py` | Production llms.txt deploy — discovery, draft, single-file FTP upload, verification for `SITE-002-PROD-LLMS-TXT-01` |
 | `site-002-prod-llms-txt-encoding-fix-01.py` | Production llms.txt UTF-8 BOM encoding fix — diagnose, backup, single-file reupload, optional `.htaccess` for `SITE-002-PROD-LLMS-TXT-ENCODING-FIX-01` |
 | `site-002-prod-brand-zpm-remediation-01.py` | Public brand remediation — `БЗПМ`→`ЗПМ` in llms.txt, controllers, product generator, category admin SEO for `SITE-002-PROD-BRAND-ZPM-REMEDIATION-01` |
+| `site-002-prod-seo-meta-final-inventory-01.py` | Read-only final public meta inventory + brand regression audit for `SITE-002-PROD-SEO-META-FINAL-INVENTORY-01` (Run 4.206) |
 
 ## Dependencies
 
