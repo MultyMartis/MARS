@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-06 (Run 4.195 — neutral parent category tiles 9 on home/hub; checkpoint `SITE-002-STABLE-PROD-NEUTRAL-PARENT-CATEGORIES-01`)
+**Last updated:** 2026-07-06 (Run 4.196 — neutral category images white-bg refresh; checkpoint `SITE-002-STABLE-PROD-NEUTRAL-CATEGORY-IMAGES-WHITE-BG-01`)
 
 ---
 
@@ -69,7 +69,7 @@ Do not claim that Production exactly matches TEST unless evidence proves it.
 | Current M9.x baselines | [baselines/](baselines/) — TEST-proven checkpoints |
 | Post-corporate-page checkpoints | Home Commercial Trust · Corporate Intro · Custom Proof Strip · Delivery Summary · PDP Body Category Classes |
 | Production baseline parent | [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| Current Production checkpoint | [baselines/SITE-002-STABLE-PROD-NEUTRAL-PARENT-CATEGORIES-01.md](baselines/SITE-002-STABLE-PROD-NEUTRAL-PARENT-CATEGORIES-01.md) (parent cron [SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01.md](baselines/SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01.md); SEO parent [SITE-002-STABLE-PROD-SITEMAP-01.md](baselines/SITE-002-STABLE-PROD-SITEMAP-01.md)) |
+| Current Production checkpoint | [baselines/SITE-002-STABLE-PROD-NEUTRAL-CATEGORY-IMAGES-WHITE-BG-01.md](baselines/SITE-002-STABLE-PROD-NEUTRAL-CATEGORY-IMAGES-WHITE-BG-01.md) (parent [SITE-002-STABLE-PROD-NEUTRAL-PARENT-CATEGORIES-01.md](baselines/SITE-002-STABLE-PROD-NEUTRAL-PARENT-CATEGORIES-01.md); cron [SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01.md](baselines/SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01.md); SEO [SITE-002-STABLE-PROD-SITEMAP-01.md](baselines/SITE-002-STABLE-PROD-SITEMAP-01.md)) |
 | SEO readiness (Production) | **META PARTIAL** (Runs 4.192–4.193) — home description trimmed (157 chars); 3 category PLP admin-persisted; query-variant/technical noindex (4.192); corp information admin saves not reflected live; blog/katalog remaining · [meta content report](reports/SITE-002-PROD-SEO-META-CONTENT-FIX-01.md) · [meta fix report](reports/SITE-002-PROD-SEO-META-FIX-01.md) |
 | Yandex analytics (Production) | **VERIFIED** (Run 4.189) — Metrika counter in `common/footer.twig` (masked `110***756`); Webmaster verification in `common/header.twig` (masked `13a***c77`); confirmed on live HTML (home, category, information); **OPERATOR WIP — DO NOT OVERWRITE** · [report](reports/SITE-002-PROD-YANDEX-CODES-VERIFY-01.md) |
 | HTML body structure (Production) | **FIXED** (Run 4.190) — duplicate `<body>` + global preloader + `page_overlay` removed from live `header.twig`; 4-URL HTML validation PASS; Yandex blocks unchanged · [report](reports/SITE-002-PROD-HTML-BODY-DUPLICATE-FIX-01.md) |
@@ -77,6 +77,7 @@ Do not claim that Production exactly matches TEST unless evidence proves it.
 | MARS 1C cron reports | **CURRENT** (Run 4.194) — `/storage/mars-tools/cron/reports/` includes first scheduled run `mars_1c_import_2026-07-06_080007.txt` plus prior manual run and status files; Run 4.184 cleanup retained policy |
 | Catalog load more (Production) | **ACTIVE** (Run 4.185) — «Показать ещё» append via `initLoadMore()`; counter «Показано X из Y»; numeric pagination hidden when JS (`js-load-more`); rollback in Storage `deployments/SITE-002-PROD-LOAD-MORE-01/rollback/` |
 | Neutral parent category tiles (Production) | **ACTIVE** (Run 4.195) — 9 branches on homepage/hub `zpm-cat-card`; IDs `322,331,301,326,354,358,207,80,86`; 4 new WebP images (`stellazhi`, `polki-nastennye-i-nastolnye`, `shkafy-i-lari`, `telezhki-shpilki-i-protivni`); `category_visibility.php` only; **COMPOSER_ONLY_NO_API** · [report](reports/SITE-002-PROD-NEUTRAL-PARENT-CATEGORIES-ROLLOUT-01.md) |
+| Neutral category image white-bg refresh (Production) | **ACTIVE** (Run 4.196) — 3 images refreshed to white studio style (354/358/86); 331 kept; master `1800×1200` + cache `300×300` FTP overwrite; 0 admin saves; **COMPOSER_ONLY_NO_API** · [report](reports/SITE-002-PROD-NEUTRAL-CATEGORY-IMAGES-WHITE-BG-REFRESH-01.md) |
 | Mail recipients architecture (Production) | **ACTIVE — ADMIN-MANAGED** (Run 4.186 discovery + Run 4.187 confirmation) — unified form handler `catalog/controller/checkout/anketa.php`; active recipients from OpenCart **`config_mail_alert_email`** (comma-separated); operator updated via admin **Additional Alert Emails**; delivery verified; order alerts share same setting; legacy hardcoded email in anketa **inactive**; no custom admin section; no code deploy · [discovery](reports/SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01.md) · [confirmation](reports/SITE-002-PROD-MAIL-RECIPIENTS-ADMIN-ADD-01.md) |
 | Catalog default sort (Production) | `pd.name ASC` when `sort`/`order` omitted |
 

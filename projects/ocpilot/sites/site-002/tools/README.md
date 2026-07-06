@@ -24,6 +24,7 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `site-002-prod-cron-reports-cleanup-01.py` | MARS 1C cron reports cleanup — list, backup, exact delete, verify for `SITE-002-PROD-CRON-REPORTS-CLEANUP-01` |
 | `site-002-prod-cron-first-scheduled-run-verify-01.py` | First scheduled Beget 1C cron run verification — FTP report read, parse, site health for `SITE-002-PROD-CRON-FIRST-SCHEDULED-RUN-VERIFY-01` |
 | `site-002-prod-neutral-parent-categories-rollout-01.py` | Neutral parent category tiles + WebP images — discover, deploy `category_visibility.php`, admin image fields for `SITE-002-PROD-NEUTRAL-PARENT-CATEGORIES-ROLLOUT-01` |
+| `site-002-prod-neutral-category-images-white-bg-refresh-01.py` | White-background refresh for 3 neutral category tile images — audit, Composer+Pillow normalize, FTP master/cache overwrite for `SITE-002-PROD-NEUTRAL-CATEGORY-IMAGES-WHITE-BG-REFRESH-01` |
 | `site-002-prod-load-more-01.py` | Multi-file Production catalog load-more deploy for `SITE-002-PROD-LOAD-MORE-01` |
 | `site-002-prod-mail-recipients-discovery-01.py` | Read-only Production mail/recipient FTP discovery for `SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01` |
 | `site-002-prod-seo-readiness-robots-01.py` | SEO readiness — non-product meta audit + single-file robots.txt deploy for `SITE-002-PROD-SEO-READINESS-ROBOTS-01` |

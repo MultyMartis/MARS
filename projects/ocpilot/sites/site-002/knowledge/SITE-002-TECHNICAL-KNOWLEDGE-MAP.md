@@ -904,6 +904,19 @@ See §6. Per-category PHP profiles control which attributes appear in sidebar an
 | Checkpoint | `SITE-002-STABLE-PROD-NEUTRAL-PARENT-CATEGORIES-01` |
 | Report | [SITE-002-PROD-NEUTRAL-PARENT-CATEGORIES-ROLLOUT-01.md](../reports/SITE-002-PROD-NEUTRAL-PARENT-CATEGORIES-ROLLOUT-01.md) |
 
+### Neutral category image white-bg refresh (Production Run 4.196)
+
+| Field | Value |
+|-------|-------|
+| Operation | `SITE-002-PROD-NEUTRAL-CATEGORY-IMAGES-WHITE-BG-REFRESH-01` |
+| Refreshed IDs | 354 Тележки-шпильки и противни · 358 Шкафы и лари · 86 Стеллажи |
+| Kept unchanged | 331 Полки настенные и настольные |
+| Deploy | FTP overwrite masters `image/catalog/Category-image/*.webp` + cache `image/cache/...-300x300.webp` |
+| Admin saves | **0** |
+| Generation | **COMPOSER_ONLY_NO_API** + Pillow normalize |
+| Checkpoint | `SITE-002-STABLE-PROD-NEUTRAL-CATEGORY-IMAGES-WHITE-BG-01` |
+| Report | [SITE-002-PROD-NEUTRAL-CATEGORY-IMAGES-WHITE-BG-REFRESH-01.md](../reports/SITE-002-PROD-NEUTRAL-CATEGORY-IMAGES-WHITE-BG-REFRESH-01.md) |
+
 ### Megamenu (M9.7)
 
 - `prepareMegamenuCategories()` filters empty branches
