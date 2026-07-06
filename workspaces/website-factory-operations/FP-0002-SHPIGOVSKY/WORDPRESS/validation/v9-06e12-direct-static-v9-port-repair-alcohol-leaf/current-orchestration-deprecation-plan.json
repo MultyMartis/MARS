@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "component": "alcohol-stack.php semantic partial chain",
+      "role": "ACF/home partial orchestration",
+      "decision": "BYPASS_FOR_ALCOHOL",
+      "notes": "Replaced by alcohol-direct-v9.php"
+    },
+    {
+      "component": "service/approach.php",
+      "role": "ACF programme_items",
+      "decision": "REPLACE_WITH_DIRECT_V9",
+      "notes": "alcohol-direct-v9/approach.php"
+    },
+    {
+      "component": "service/stages.php",
+      "role": "ACF stages repeater",
+      "decision": "REPLACE_WITH_DIRECT_V9",
+      "notes": "alcohol-direct-v9/stages.php"
+    },
+    {
+      "component": "service/faq.php",
+      "role": "ACF faq_items",
+      "decision": "REPLACE_WITH_DIRECT_V9",
+      "notes": "alcohol-direct-v9/faq.php"
+    },
+    {
+      "component": "service/inner-hero.php",
+      "role": "Hero admin image",
+      "decision": "KEEP_FOR_HERO",
+      "notes": "E7B hero_media preserved"
+    },
+    {
+      "component": "service/subnav.php",
+      "role": "Alcohol V9 anchor list",
+      "decision": "KEEP_FOR_SHELL",
+      "notes": "E9 alcohol-special subnav"
+    },
+    {
+      "component": "home/clinic-landscape.php",
+      "role": "Static V9 landscape",
+      "decision": "KEEP_FOR_SHELL",
+      "notes": "Exact markup match documented"
+    }
+  ]
+}

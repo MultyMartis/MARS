@@ -1,0 +1,28 @@
+{
+  "files_created": [
+    "template-parts/service/alcohol-direct-v9.php",
+    "template-parts/service/alcohol-direct-v9/approach.php",
+    "template-parts/service/alcohol-direct-v9/stages.php",
+    "template-parts/service/alcohol-direct-v9/faq.php"
+  ],
+  "files_updated": [
+    "template-parts/service/alcohol-stack.php",
+    "inc/v9-static-content.php"
+  ],
+  "after_analysis": {
+    "body_has_page_service_leaf_v1": true,
+    "main_has_page_service_leaf_v1__main": true,
+    "has_article_shpigovsky_service": false,
+    "has_program_images": true,
+    "has_service_leaf_reviews_id": true,
+    "has_service_leaf_final_form_heading": true,
+    "has_staff_image": true,
+    "has_stages_lead": true,
+    "has_stages_support": true,
+    "has_approach_cards_text": true,
+    "faq_panel_count": 10,
+    "subnav_has_approach": true,
+    "subnav_has_reviews": true,
+    "php_fatal": false
+  }
+}

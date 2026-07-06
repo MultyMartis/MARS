@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-07 (V9-06E11 Static-to-WP Page Contract Inventory PASS)
+**Last updated:** 2026-07-07 (V9-06E12 Direct Static V9 Port Repair — Alcohol Leaf PASS)
 
-**Current WordPress phase:** V9-06E11 Static-to-WP Page Contract Inventory **PASS** — complete page-by-page contract register before repair: 33 static V9 pages inventoried; 31 WP routes probed; section-stack, template provenance, and content authority contracts created; 16/16 screenshots PASS. Alcohol leaf `/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/` classified **NEEDS_DIRECT_V9_REPLACEMENT** (E12 start). **E3 stable checkpoint remains invalidated.** **Next: CREATE_V9_06E12_DIRECT_STATIC_PORT_REPAIR_ALCOHOL_LEAF_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E11-STATIC-TO-WP-PAGE-CONTRACT-INVENTORY-REPORT-v1.md`.
+**Current WordPress phase:** V9-06E12 Direct Static V9 Port Repair — Alcohol Leaf **PASS** — `/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/` now renders via `alcohol-direct-v9.php` direct section stack from `usluga-konechnaya-v1.html`; approach/stages/FAQ ACF orchestration bypassed; hero admin system preserved; 16/16 screenshots PASS; 0 DB writes. **E3 stable checkpoint remains invalidated.** **Next: CREATE_V9_06E13_OPERATOR_ALCOHOL_LEAF_VISUAL_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E12-DIRECT-STATIC-V9-PORT-REPAIR-ALCOHOL-LEAF-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

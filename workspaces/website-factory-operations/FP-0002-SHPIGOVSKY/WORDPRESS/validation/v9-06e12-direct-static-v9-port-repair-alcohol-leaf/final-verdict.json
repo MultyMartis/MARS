@@ -1,0 +1,22 @@
+{
+  "verdict": "PASS",
+  "layout_pass": true,
+  "screenshots_pass": true,
+  "regression_pass": true,
+  "after_analysis": {
+    "body_has_page_service_leaf_v1": true,
+    "main_has_page_service_leaf_v1__main": true,
+    "has_article_shpigovsky_service": false,
+    "has_program_images": true,
+    "has_service_leaf_reviews_id": true,
+    "has_service_leaf_final_form_heading": true,
+    "has_staff_image": true,
+    "has_stages_lead": true,
+    "has_stages_support": true,
+    "has_approach_cards_text": true,
+    "faq_panel_count": 10,
+    "subnav_has_approach": true,
+    "subnav_has_reviews": true,
+    "php_fatal": false
+  }
+}
