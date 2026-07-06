@@ -39,6 +39,7 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `site-002-prod-seo-product-meta-generator-discovery-01.py` | Read-only product PDP meta generator discovery — live samples + FTP source for `SITE-002-PROD-SEO-PRODUCT-META-GENERATOR-DISCOVERY-01` |
 | `site-002-prod-seo-product-meta-generator-fix-01.py` | Product PDP meta runtime generator — single-controller deploy for `SITE-002-PROD-SEO-PRODUCT-META-GENERATOR-FIX-01` |
 | `site-002-prod-seo-product-meta-keywords-tune-01.py` | Product PDP meta keywords generator v1.1 tune — filter/cap keywords only for `SITE-002-PROD-SEO-PRODUCT-META-KEYWORDS-TUNE-01` |
+| `site-002-prod-llms-txt-01.py` | Production llms.txt deploy — discovery, draft, single-file FTP upload, verification for `SITE-002-PROD-LLMS-TXT-01` |
 
 ## Dependencies
 
