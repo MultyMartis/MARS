@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-06 (V9-06E9 Service Leaf Layout Parity PASS)
+**Last updated:** 2026-07-07 (V9-06E10 Full Backup + WP Port Root Cause Audit PASS)
 
-**Current WordPress phase:** V9-06E9 Service Leaf Static V9 Layout Parity Repair **PASS** — alcohol leaf layout repaired (article wrapper removed, program images, static V9 subnav, section ids); 14 screenshots; 7 theme files; 0 DB writes. Program lorem remains V9 fixture/demo. **Next: CREATE_V9_06E10_OPERATOR_VISUAL_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E9-SERVICE-LEAF-STATIC-V9-LAYOUT-PARITY-REPAIR-REPORT-v1.md`.
+**Current WordPress phase:** V9-06E10 Full Backup + WordPress Port Root Cause Audit **PASS** — root cause identified: semantic PHP reconstruction (D7-D) not direct V9 HTML port; probe-only E9 PASS insufficient vs operator visual drift; governance contract v1 created. **E3 stable checkpoint remains invalidated.** **Next: CREATE_V9_06E11_STATIC_TO_WP_PAGE_CONTRACT_INVENTORY_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E10-FULL-BACKUP-WP-PORT-ROOT-CAUSE-AUDIT-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

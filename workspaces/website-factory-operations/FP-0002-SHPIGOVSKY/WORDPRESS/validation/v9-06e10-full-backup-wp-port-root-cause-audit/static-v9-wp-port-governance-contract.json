@@ -1,0 +1,18 @@
+{
+  "contract_id": "FP-0002-V9-06E10-STATIC-V9-WP-PORT-GOVERNANCE-CONTRACT-v1",
+  "mandatory_rules": [
+    {"id": 1, "rule": "Static V9 HTML (src/ + dist/) is primary layout authority for all V9-backed pages"},
+    {"id": 2, "rule": "Use direct section-stack parity; semantic reconstruction forbidden unless explicitly ADAPTED and justified"},
+    {"id": 3, "rule": "Every repair task must publish static-to-WP section map before any code change"},
+    {"id": 4, "rule": "No PASS on visual/layout tasks without static-vs-WP screenshots for each required route"},
+    {"id": 5, "rule": "DOM class probes are diagnostic only; never sufficient for layout PASS"},
+    {"id": 6, "rule": "No extra blocks on WP page unless listed DEMO or OPERATOR_APPROVED"},
+    {"id": 7, "rule": "No missing V9 blocks unless listed DEFERRED with operator sign-off"},
+    {"id": 8, "rule": "Content classification required: EXACT_V9 | DEMO | OPERATOR_REAL_CONTENT | DEFERRED — no mixed mutated text"},
+    {"id": 9, "rule": "OLD_PRE_V9 partials are HIGH RISK; must not ship on V9-backed routes without audit"},
+    {"id": 10, "rule": "Every repair updates final content/demo inventory JSON + architecture doc"}
+  ],
+  "task_preamble_required": true,
+  "stop_tokens": ["STOP — NO STATIC SECTION MAP", "STOP — PROBE-ONLY VALIDATION", "STOP — SEMANTIC REBUILD WITHOUT CHARTER"],
+  "result": "CREATED"
+}

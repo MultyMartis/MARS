@@ -1,0 +1,28 @@
+{
+  "task": "V9-06E10",
+  "phases": [
+    {
+      "phase": "E11",
+      "goal": "Full static-to-WP page contract inventory",
+      "scope": "All V9 routes from v9-route-manifest.json",
+      "deliverables": ["section map per page", "content classification", "provenance per partial", "gap matrix", "repair action per route"],
+      "notes": "Read-only planning; no repair"
+    },
+    {
+      "phase": "E12",
+      "goal": "One-page-at-a-time strict V9 replacement",
+      "start_route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "method": "Replace inner markup from static partials; fork home partials where service-leaf context differs",
+      "notes": "Screenshot gate per page; no broad refactor"
+    },
+    {
+      "phase": "E13",
+      "goal": "Stable checkpoint refresh",
+      "condition": "Screenshot parity ALL required routes",
+      "notes": "E3 checkpoint remains invalidated until E13"
+    }
+  ],
+  "explicitly_forbidden": ["broad blind refactor", "probe-only PASS", "ACF seed without static trace"],
+  "recommended_next": "CREATE_V9_06E11_STATIC_TO_WP_PAGE_CONTRACT_INVENTORY_TASK",
+  "result": "CREATED"
+}

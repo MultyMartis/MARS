@@ -1,0 +1,52 @@
+{
+  "task": "V9-06E10",
+  "content_sources_audited": [
+    "inc/v9-static-content.php",
+    "inc/service-helpers.php",
+    "inc/services-hub-helpers.php",
+    "inc/home-helpers.php",
+    "inc/home-fallbacks.php",
+    "inc/contacts-helpers.php",
+    "inc/reviews-helpers.php",
+    "ACF JSON + DB postmeta (read-only)",
+    "D8-C service seed fields"
+  ],
+  "routes": [
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "fields": [
+        {"field": "hero_title/lead/cta", "expected": "static usluga-konechnaya-v1.html", "current": "ACF + inner-hero.php hardcoded alcohol fallbacks", "drift_risk": "medium", "can_mutate": true},
+        {"field": "intro/bordered-info/approach", "expected": "inc/v9-static-content.php", "current": "v9-static-content for alcohol-special variant", "drift_risk": "low", "can_mutate": false},
+        {"field": "signs", "expected": "static service-leaf-signs-v1.html", "current": "ACF signs repeater OR v9 fallback", "drift_risk": "high", "can_mutate": true},
+        {"field": "program", "expected": "static services-program-v2 fixture", "current": "v9-static-content demo lorem + image fallback items", "drift_risk": "low", "can_mutate": false},
+        {"field": "reviews", "expected": "static reviews.html 10 slides", "current": "ACF fp02-reviews options (OPTIONS mode)", "drift_risk": "medium", "can_mutate": true},
+        {"field": "faq", "expected": "static faq.html service-leaf items", "current": "ACF faq_items OR service helper fallback", "drift_risk": "medium", "can_mutate": true}
+      ],
+      "recommended_authority": "EXACT_V9 static for all non-operator fields; ACF only for OPERATOR_REAL_CONTENT"
+    },
+    {
+      "route": "/uslugi/",
+      "fields": [
+        {"field": "hub group copy", "expected": "uslugi-v2.html", "current": "v9-static-content + CPT titles", "drift_risk": "medium", "can_mutate": true},
+        {"field": "child card text", "expected": "static card copy", "current": "v9-static-content + demo lorem for some slugs", "drift_risk": "high", "can_mutate": true}
+      ],
+      "recommended_authority": "Static V9 for copy; CPT for URLs/order only"
+    },
+    {
+      "route": "/",
+      "fields": [
+        {"field": "section headings/copy", "expected": "index.html + home partials", "current": "ACF + home-fallbacks.php", "drift_risk": "medium", "can_mutate": true},
+        {"field": "reviews", "expected": "static reviews", "current": "OPTIONS fp02-reviews", "drift_risk": "low", "can_mutate": true}
+      ],
+      "recommended_authority": "Hybrid: static fallbacks until operator seeds"
+    }
+  ],
+  "mutation_paths": [
+    "ACF get_field wins when populated (D8-C seed on service #74)",
+    "CPT title/excerpt used when static fallback empty",
+    "home-fallbacks.php demo FAQ text",
+    "v9-static-content.php demo lorem in program/signs hub cards",
+    "reviews-helpers.php OPTIONS overrides static slider"
+  ],
+  "result": "COMPLETE"
+}

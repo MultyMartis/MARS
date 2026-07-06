@@ -1,0 +1,88 @@
+{
+  "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+  "operator_evidence_available": false,
+  "operator_description": "WordPress page still visually diverges from approved static V9 despite E9 repair PASS; suspected wrong/old/generic partial assembly",
+  "static_v9_section_stack": [
+    "services-inner-hero-v2",
+    "breadcrumbs",
+    "services-page-subnav",
+    "service-leaf-intro-v1",
+    "service-leaf-bordered-info-v1",
+    "program-cta-band-section",
+    "service-leaf-signs-v1",
+    "service-leaf-approach-v1",
+    "clinic-landscape",
+    "services-program-v2",
+    "service-leaf-stages-v1",
+    "service-leaf-corridor-v1",
+    "specialists",
+    "founder-quote",
+    "comfort",
+    "reviews",
+    "faq",
+    "final-form"
+  ],
+  "wp_runtime_section_stack": [
+    "services-inner-hero-v2",
+    "breadcrumbs",
+    "services-page-subnav",
+    "service-leaf-intro-v1",
+    "service-leaf-bordered-info-v1",
+    "program-cta-band-section",
+    "service-leaf-signs-v1",
+    "service-leaf-approach-v1",
+    "clinic-landscape",
+    "services-program-v2",
+    "service-leaf-stages-v1",
+    "service-leaf-corridor-v1",
+    "specialists",
+    "founder-quote",
+    "comfort",
+    "reviews",
+    "faq",
+    "final-form"
+  ],
+  "static_v9_section_count": 18,
+  "wp_section_count": 18,
+  "subnav_present_in_wp_dom": true,
+  "blocks_missing_in_wp": [],
+  "blocks_extra_in_wp": [
+    "breadcrumbs",
+    "services-page-subnav"
+  ],
+  "order_differences": false,
+  "likely_sources": [
+    {
+      "area": "Architecture",
+      "difference": "WP uses PHP partial orchestration + ACF/helpers, not direct V9 HTML includes",
+      "source": "D7-D semantic reconstruction; inc/service-template-loader.php"
+    },
+    {
+      "area": "Shared home partials on leaf",
+      "difference": "clinic-landscape, specialists, founder-quote, comfort, reviews loaded from template-parts/home/*",
+      "source": "alcohol-stack.php lines 37-117"
+    },
+    {
+      "area": "Content mutation path",
+      "difference": "ACF service fields (D8-C seed) can override v9-static-content fallbacks",
+      "source": "inc/service-helpers.php; D8-C services MVP seed"
+    },
+    {
+      "area": "Generic leaf stack",
+      "difference": "Non-alcohol leaf routes use leaf-stack.php with only 10 sections vs 17 in static V9",
+      "source": "template-parts/service/leaf-stack.php"
+    },
+    {
+      "area": "Validation gap",
+      "difference": "E8/E9 accepted DOM-class probes; operator rejected probe-only parity",
+      "source": "E8 report operator rejection; E9 visual-result.json"
+    },
+    {
+      "area": "Demo/fixture copy",
+      "difference": "Program/signs sections contain V9 fixture lorem visible in both static and WP",
+      "source": "inc/v9-static-content.php; static usluga-konechnaya-v1.html"
+    }
+  ],
+  "http_status": 200,
+  "fetch_error": null
+}

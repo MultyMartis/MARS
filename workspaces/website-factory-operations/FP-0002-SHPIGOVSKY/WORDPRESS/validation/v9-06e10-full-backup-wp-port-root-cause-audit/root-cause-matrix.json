@@ -1,0 +1,97 @@
+{
+  "task": "V9-06E10",
+  "root_causes": [
+    {
+      "id": "RC-01",
+      "cause": "Static V9 HTML not used as direct section-stack source",
+      "evidence": "All WP routes use PHP partial orchestration (D7-D); zero direct HTML includes from src/",
+      "affected_routes": ["all V9-backed routes"],
+      "severity": "CRITICAL",
+      "governance_fix": "Mandate static-to-WP section map + DIRECT_V9_PORT or explicit ADAPTED justification",
+      "technical_remediation": "E12 one-page strict replacement starting alcohol leaf"
+    },
+    {
+      "id": "RC-02",
+      "cause": "Semantic reconstruction architecture from D7-D",
+      "evidence": "service-template-loader.php maps variants to stack slugs; partials rebuild markup from ACF/helpers",
+      "affected_routes": ["/uslugi/", "service CPT routes"],
+      "severity": "HIGH",
+      "governance_fix": "Ban SEMANTIC_RECONSTRUCTION for operator-approved V9 pages",
+      "technical_remediation": "Replace stacks with static-derived partials per section"
+    },
+    {
+      "id": "RC-03",
+      "cause": "Home partials on service pages",
+      "evidence": "alcohol-stack.php lines 37-117 use template-parts/home/*",
+      "affected_routes": ["/uslugi/zavisimosti/", "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"],
+      "severity": "HIGH",
+      "governance_fix": "Shared partials must declare static V9 counterpart + service-leaf parameter contract",
+      "technical_remediation": "Fork or parameterize home partials for service-leaf context"
+    },
+    {
+      "id": "RC-04",
+      "cause": "Probe-only validation false PASS",
+      "evidence": "E10: DOM section stacks match static/WP for alcohol; operator still sees drift; E9 PASS on probes",
+      "affected_routes": ["/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"],
+      "severity": "HIGH",
+      "governance_fix": "Screenshot parity gate mandatory; DOM probes diagnostic only",
+      "technical_remediation": "E11 inventory + E12 pixel-level repair"
+    },
+    {
+      "id": "RC-05",
+      "cause": "Generic leaf-stack missing sections",
+      "evidence": "leaf-stack.php 10 sections vs static 17",
+      "affected_routes": ["non-alcohol service leaf CPT routes"],
+      "severity": "HIGH",
+      "governance_fix": "No route may use truncated stack without DEFERRED register entry",
+      "technical_remediation": "Align leaf-stack to alcohol-stack or static authority"
+    },
+    {
+      "id": "RC-06",
+      "cause": "ACF/seed content overrides static V9 fallbacks",
+      "evidence": "D8-C service seed; intro.php ACF-first for non-alcohol-special",
+      "affected_routes": ["service CPT routes"],
+      "severity": "MEDIUM",
+      "governance_fix": "Content classification: EXACT_V9 | DEMO | OPERATOR | DEFERRED",
+      "technical_remediation": "Static V9 wins for EXACT_V9 fields until operator edit"
+    },
+    {
+      "id": "RC-07",
+      "cause": "Pre-V9 partials and V6 foundation authority",
+      "evidence": "SOURCE-AUTHORITY: theme from V6 + runtime deltas; institutional/blog skeleton markers",
+      "affected_routes": ["/o-centre/", "blog routes"],
+      "severity": "MEDIUM",
+      "governance_fix": "Mark OLD_PRE_V9_PARTIAL high risk in task charter",
+      "technical_remediation": "Exclude from V9 parity scope until inventoried"
+    },
+    {
+      "id": "RC-08",
+      "cause": "Repair tasks patch symptoms not replace wrong stacks",
+      "evidence": "E9 removed article wrapper, fixed subnav ids — structural class match but inner markup unchanged",
+      "affected_routes": ["/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"],
+      "severity": "HIGH",
+      "governance_fix": "Repairs must diff static HTML inner markup not only section class order",
+      "technical_remediation": "E12 full section replacement from static partials"
+    },
+    {
+      "id": "RC-09",
+      "cause": "Demo fixture lorem in static V9 misread as WP invention",
+      "evidence": "services-program-v2 lorem in usluga-konechnaya-v1.html and inc/v9-static-content.php",
+      "affected_routes": ["/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/", "/uslugi/"],
+      "severity": "LOW",
+      "governance_fix": "DEMO inventory mandatory in every visual task",
+      "technical_remediation": "Operator decision: keep fixture or replace with real copy"
+    },
+    {
+      "id": "RC-10",
+      "cause": "Insufficient stop conditions in task prompts",
+      "evidence": "E5/E6/E8/E9 continued after partial parity; E3 checkpoint falsely declared stable",
+      "affected_routes": ["all"],
+      "severity": "MEDIUM",
+      "governance_fix": "New governance contract §1-10",
+      "technical_remediation": "E11 inventory before any E12 repair"
+    }
+  ],
+  "primary_root_cause": "RC-01 + RC-02 + RC-04",
+  "result": "COMPLETE"
+}

@@ -1,0 +1,32 @@
+{
+  "task": "V9-06E10",
+  "scope": "WORDPRESS/theme/shpigovsky/page-templates, template-parts, inc",
+  "high_risk_partials": [
+    {"file": "template-parts/service/leaf-stack.php", "provenance": "SEMANTIC_RECONSTRUCTION", "risk": "high", "reason": "10 sections vs 17 in static V9 leaf"},
+    {"file": "template-parts/home/faq.php", "provenance": "DEMO_FALLBACK", "risk": "high", "reason": "Temporary FAQ demo text in home-fallbacks"},
+    {"file": "template-parts/service/signs.php", "provenance": "DEMO_FALLBACK", "risk": "high", "reason": "Alcohol signs may show ACF/seed lorem"},
+    {"file": "template-parts/service/program.php", "provenance": "DEMO_FALLBACK", "risk": "high", "reason": "V9 fixture lorem program copy"},
+    {"file": "inc/v9-static-content.php", "provenance": "DEMO_FALLBACK", "risk": "high", "reason": "PHP re-encoding of V9 copy incl. lorem"},
+    {"file": "inc/home-fallbacks.php", "provenance": "DEMO_FALLBACK", "risk": "high", "reason": "Static fallbacks + temp FAQ text"},
+    {"file": "template-parts/legal/document-page.php", "provenance": "DEMO_FALLBACK", "risk": "high", "reason": "Demo notice + post_content not static include"}
+  ],
+  "service_leaf_stack_partials": [
+    {"partial": "service/alcohol-stack.php", "used_by": ["/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"], "provenance": "SEMANTIC_RECONSTRUCTION", "static_counterpart": "pages/usluga-konechnaya-v1.html", "exactness": "reconstructed", "risk": "medium"},
+    {"partial": "service/inner-hero.php", "used_by": ["service routes"], "provenance": "ACF_DYNAMIC_REBUILD", "static_counterpart": "partials/sections/services-inner-hero-v2.html", "exactness": "adapted", "risk": "low"},
+    {"partial": "service/bordered-info.php", "used_by": ["alcohol leaf"], "provenance": "DIRECT_V9_PORT", "static_counterpart": "partials/sections/service-leaf-bordered-info-v1.html", "exactness": "adapted", "risk": "low"},
+    {"partial": "home/clinic-landscape.php", "used_by": ["home", "subdivision", "alcohol leaf"], "provenance": "V9_ADAPTED_PARTIAL", "static_counterpart": "partials/sections/clinic-landscape.html", "exactness": "adapted", "risk": "medium"},
+    {"partial": "home/specialists.php", "used_by": ["home", "subdivision", "alcohol leaf"], "provenance": "V9_ADAPTED_PARTIAL", "static_counterpart": "partials/sections/specialists.html", "exactness": "adapted", "risk": "medium"},
+    {"partial": "home/reviews.php", "used_by": ["home", "subdivision", "alcohol leaf"], "provenance": "V9_ADAPTED_PARTIAL", "static_counterpart": "partials/sections/reviews.html", "exactness": "adapted", "risk": "medium"}
+  ],
+  "provenance_counts": {
+    "DIRECT_V9_PORT": 8,
+    "V9_ADAPTED_PARTIAL": 35,
+    "OLD_PRE_V9_PARTIAL": 6,
+    "SEMANTIC_RECONSTRUCTION": 12,
+    "DEMO_FALLBACK": 7,
+    "ACF_DYNAMIC_REBUILD": 18,
+    "UNKNOWN": 2
+  },
+  "full_inventory_ref": "architecture/FP-0002-V9-06E10-TEMPLATE-PARTIAL-PROVENANCE-AUDIT-v1.md",
+  "result": "COMPLETE"
+}

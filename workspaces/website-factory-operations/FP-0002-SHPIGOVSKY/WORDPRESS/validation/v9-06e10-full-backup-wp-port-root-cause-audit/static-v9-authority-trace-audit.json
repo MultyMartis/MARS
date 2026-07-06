@@ -1,0 +1,109 @@
+{
+  "task": "V9-06E10",
+  "audit_type": "static_v9_authority_trace",
+  "authority_roots": {
+    "static_src": "workspaces/fp-0002-shpigovsky-v9/src/",
+    "static_dist": "workspaces/fp-0002-shpigovsky-v9/dist/",
+    "wp_theme": "WORDPRESS/theme/shpigovsky/"
+  },
+  "routes": [
+    {
+      "route": "/",
+      "static_source": "src/pages/index.html",
+      "static_dist": "dist/index.html",
+      "wp_template": "front-page.php",
+      "partial_stack": "template-parts/home/* (19 sections) + components/final-form.php",
+      "content_sources": ["ACF group_fp02_page_home", "inc/home-helpers.php", "inc/home-fallbacks.php", "inc/reviews-helpers.php"],
+      "uses_exact_v9_html_stack": false,
+      "uses_semantic_reconstruction": true,
+      "mixed_v8_v9_partials": false,
+      "authority_status": "ADAPTED_V9_WITH_ACF_OVERLAY",
+      "notes": "D9-D transplanted 19-section orchestration; not byte-for-byte HTML port."
+    },
+    {
+      "route": "/uslugi/",
+      "static_source": "src/pages/uslugi-v2.html",
+      "static_dist": "dist/uslugi/index.html",
+      "wp_template": "page-templates/services-hub.php",
+      "partial_stack": "services-hub/* + home/founder-quote + home/comfort + shared hero",
+      "content_sources": ["ACF services hub", "Service CPT query", "inc/services-hub-helpers.php", "inc/v9-static-content.php"],
+      "uses_exact_v9_html_stack": false,
+      "uses_semantic_reconstruction": true,
+      "mixed_v8_v9_partials": true,
+      "authority_status": "SEMANTIC_REBUILD",
+      "notes": "E4/E5/E8 repairs layered on D7-C hub; CPT-driven groups replace static includes."
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "static_source": "src/pages/usluga-podrazdel-v1.html",
+      "static_dist": "dist/uslugi/zavisimosti/index.html",
+      "wp_template": "single-service.php → subdivision-stack.php",
+      "partial_stack": "service/subdivision-stack + home/* shared blocks",
+      "content_sources": ["ACF service fields", "inc/service-helpers.php", "inc/v9-static-content.php"],
+      "uses_exact_v9_html_stack": false,
+      "uses_semantic_reconstruction": true,
+      "mixed_v8_v9_partials": true,
+      "authority_status": "ADAPTED_V9_PARTIAL",
+      "notes": "E6 removed article wrapper; still uses home partials for landscape/specialists/comfort/reviews."
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "static_source": "src/pages/usluga-konechnaya-v1.html",
+      "static_dist": "dist/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/index.html",
+      "wp_template": "single-service.php → alcohol-stack.php",
+      "partial_stack": "17 service-specific + 5 home/shared partials",
+      "content_sources": ["inc/v9-static-content.php", "ACF service #74 fields (D8-C seed)", "inc/service-helpers.php"],
+      "uses_exact_v9_html_stack": false,
+      "uses_semantic_reconstruction": true,
+      "mixed_v8_v9_partials": true,
+      "authority_status": "DOM_STACK_MATCH_VISUAL_DRIFT",
+      "notes": "E10 probe: 18 main section/nav classes match static dist order. Operator still reports visual drift — inner markup/home partial context likely cause."
+    },
+    {
+      "route": "/kontakty/",
+      "static_source": "src/pages/kontakty.html",
+      "static_dist": "dist/kontakty/index.html",
+      "wp_template": "page-templates/contacts.php",
+      "partial_stack": "contacts/map-body + contacts/rehabilitation-steps",
+      "content_sources": ["ACF contacts page", "inc/contacts-helpers.php", "static V9 location fallback"],
+      "uses_exact_v9_html_stack": false,
+      "uses_semantic_reconstruction": true,
+      "mixed_v8_v9_partials": false,
+      "authority_status": "ADAPTED_V9",
+      "notes": "E8 restored V9 map/photo layout."
+    },
+    {
+      "route": "/otzyvy/",
+      "static_source": "src/pages/otzyvy.html",
+      "static_dist": "dist/otzyvy/index.html",
+      "wp_template": "page-templates/reviews.php",
+      "partial_stack": "reviews/archive-list + reviews/rehabilitation-requirements",
+      "content_sources": ["ACF fp02-reviews options", "inc/reviews-helpers.php", "static fallback"],
+      "uses_exact_v9_html_stack": false,
+      "uses_semantic_reconstruction": true,
+      "mixed_v8_v9_partials": false,
+      "authority_status": "ADAPTED_V9",
+      "notes": "D9-W replaced Home slider with archive list per static authority."
+    },
+    {
+      "route": "legal pages",
+      "static_source": "src/pages/privacy-policy.html + partials/sections/legal/content/*.html",
+      "static_dist": "dist/privacy-policy/index.html etc.",
+      "wp_template": "page-templates/legal.php → legal/document-page.php",
+      "partial_stack": "legal/document-page.php only",
+      "content_sources": ["WordPress post_content (E1 seeded from V9)", "demo notice in template"],
+      "uses_exact_v9_html_stack": false,
+      "uses_semantic_reconstruction": true,
+      "mixed_v8_v9_partials": false,
+      "authority_status": "CONTENT_EXACT_SHELL_ADAPTED",
+      "notes": "E1 seeded exact V9 legal body copy into native content."
+    }
+  ],
+  "summary": {
+    "routes_with_direct_v9_html_port": 0,
+    "routes_with_semantic_reconstruction": 7,
+    "routes_with_home_partial_reuse_on_non_home": 3,
+    "static_v9_docs_read_by_agents": "PARTIAL — D7-D/E8/E9 referenced src pages; no task enforced full HTML diff before repair",
+    "result": "COMPLETE"
+  }
+}

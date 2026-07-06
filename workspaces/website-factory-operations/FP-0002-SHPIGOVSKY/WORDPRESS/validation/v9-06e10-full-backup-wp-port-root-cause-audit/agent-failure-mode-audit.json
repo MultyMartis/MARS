@@ -1,0 +1,77 @@
+{
+  "task": "V9-06E10",
+  "waves_reviewed": ["E4", "E5", "E6", "E7B", "E8", "E9"],
+  "failure_modes": [
+    {
+      "id": "FM-01",
+      "mode": "Semantic reconstruction permitted as V9 parity",
+      "evidence": "D7-D architecture design: 'V9-compatible' partials with ACF bindings; SOURCE-AUTHORITY theme origin V6+deltas",
+      "impact": "HIGH — WP pages assembled from PHP helpers, not static HTML section includes",
+      "fix": "Governance contract: direct section-stack port required; ban semantic rebuild without static-to-WP map"
+    },
+    {
+      "id": "FM-02",
+      "mode": "Probe-only layout PASS without operator screenshots",
+      "evidence": "E8 operator rejected probe-only gate; E9 claimed PASS on DOM class probes + agent screenshots only",
+      "impact": "HIGH — E9 PASS while operator reports continued visual drift on alcohol leaf",
+      "fix": "No layout PASS without side-by-side static V9 vs WP screenshots signed by operator or explicit OPERATOR_DEFERRED"
+    },
+    {
+      "id": "FM-03",
+      "mode": "Partial success language ('as far as possible', PARTIAL PASS)",
+      "evidence": "E5/E6/E8 all PARTIAL PASS; E3 stable checkpoint declared then invalidated",
+      "impact": "MEDIUM — cumulative drift accepted across waves",
+      "fix": "Hard FAIL on any required section mismatch; no stable checkpoint without full route inventory"
+    },
+    {
+      "id": "FM-04",
+      "mode": "Home partials reused on service routes",
+      "evidence": "alcohol-stack.php loads template-parts/home/clinic-landscape, specialists, comfort, reviews, founder-quote",
+      "impact": "HIGH — home context defaults (heading ids, slider config) may diverge from service-leaf V9 partials",
+      "fix": "Service-specific partials or parameterized includes with static V9 service-leaf args enforced"
+    },
+    {
+      "id": "FM-05",
+      "mode": "Generic leaf-stack truncated vs static V9",
+      "evidence": "leaf-stack.php: 10 sections vs usluga-konechnaya-v1.html: 17 sections",
+      "impact": "HIGH — non-alcohol leaf services structurally wrong",
+      "fix": "One static leaf authority stack; variant args only for copy/images"
+    },
+    {
+      "id": "FM-06",
+      "mode": "ACF/DB seed treated as authority over static V9",
+      "evidence": "D8-C seeded service #74 ACF fields; intro.php reads ACF before v9-static-content for non-alcohol paths",
+      "impact": "MEDIUM — content can mutate away from static HTML",
+      "fix": "Classify fields EXACT_V9 vs OPERATOR_EDITABLE; static wins until operator replaces"
+    },
+    {
+      "id": "FM-07",
+      "mode": "Demo/lorem fixture accepted without DEMO label in UI",
+      "evidence": "Program/signs lorem in static V9 and WP; operator may perceive as 'invented' blocks",
+      "impact": "MEDIUM — visual noise mistaken for wrong partials",
+      "fix": "Explicit DEMO/ FIXTURE inventory per section in reports"
+    },
+    {
+      "id": "FM-08",
+      "mode": "No page-by-page static-to-WP trace contract before repair",
+      "evidence": "E9 created leaf map only for alcohol; other routes never had pre-repair section inventory gate",
+      "impact": "HIGH — repairs patch symptoms (wrapper, subnav) not systemic architecture",
+      "fix": "E11 full page contract inventory mandatory before any repair"
+    },
+    {
+      "id": "FM-09",
+      "mode": "SOURCE-AUTHORITY.md too weak on V9 HTML primacy",
+      "evidence": "Doc traces theme to V6 foundation; V9 listed as 'separate authority' not binding on WP port tasks",
+      "impact": "MEDIUM — agents follow WP skeleton docs over static HTML",
+      "fix": "Add FP-0002 Static V9 WP Port Governance Contract as mandatory task preamble"
+    },
+    {
+      "id": "FM-10",
+      "mode": "Runtime delivery without git/runtime hash gate",
+      "evidence": "Multiple waves delivered theme files; operator may view stale runtime vs latest git",
+      "impact": "LOW — E10 backup captures runtime; E9 delivery verified in report",
+      "fix": "Post-delivery hash manifest required in visual QA tasks"
+    }
+  ],
+  "result": "COMPLETE"
+}
