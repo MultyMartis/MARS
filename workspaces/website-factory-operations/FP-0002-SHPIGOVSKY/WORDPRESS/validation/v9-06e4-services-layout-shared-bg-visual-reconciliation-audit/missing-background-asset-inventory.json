@@ -1,0 +1,56 @@
+{
+  "inventory": [
+    {
+      "asset": "home-final-form-background.webp",
+      "static_dist_path": "workspaces/fp-0002-shpigovsky-v9/dist/assets/img/content/home-final-form/home-final-form-background.webp",
+      "wp_git_theme_path": "WORDPRESS/theme/shpigovsky/assets/img/content/home-final-form/home-final-form-background.webp",
+      "runtime_theme_path": "wp-content/themes/shpigovsky/assets/img/content/home-final-form/home-final-form-background.webp",
+      "exists_git_theme": true,
+      "exists_runtime_theme": true,
+      "expected_url_css": "/assets/img/content/home-final-form/home-final-form-background.webp",
+      "expected_url_theme": "/wp-content/themes/shpigovsky/assets/img/content/home-final-form/home-final-form-background.webp",
+      "http_status_css_url": 404,
+      "http_status_theme_url": 200,
+      "sha256": "24709e1776acf397b2a644c97a229c4bb0cb12ed8d013e0e65e5fa34ce98ebfa",
+      "status": "PRESENT_BUT_CSS_PATH_WRONG",
+      "notes": "File delivered; CSS references static root path"
+    },
+    {
+      "asset": "services-hero.webp",
+      "static_dist_path": "workspaces/fp-0002-shpigovsky-v9/dist/assets/img/content/services/services-hero.webp",
+      "wp_git_theme_path": "WORDPRESS/theme/shpigovsky/assets/img/content/services/services-hero.webp",
+      "runtime_theme_path": "wp-content/themes/shpigovsky/assets/img/content/services/services-hero.webp",
+      "exists_git_theme": true,
+      "exists_runtime_theme": true,
+      "expected_url_static": "/assets/img/content/services/services-hero.webp",
+      "http_status_theme_url": 200,
+      "sha256": "f4fcac4135e2d7155327ebc6b785ad8e651f4497f9fbdc608b443d0bed586e08",
+      "status": "PRESENT_NOT_WIRED",
+      "notes": "Services hub hero template does not reference image"
+    },
+    {
+      "asset": "service-subdivision-hero.webp",
+      "static_dist_path": "workspaces/fp-0002-shpigovsky-v9/dist/assets/img/content/services/service-subdivision-hero.webp",
+      "wp_git_theme_path": "WORDPRESS/theme/shpigovsky/assets/img/content/services/service-subdivision-hero.webp",
+      "runtime_theme_path": "wp-content/themes/shpigovsky/assets/img/content/services/service-subdivision-hero.webp",
+      "exists_git_theme": true,
+      "exists_runtime_theme": true,
+      "expected_url_static": "/assets/img/content/services/service-subdivision-hero.webp",
+      "http_status_theme_url": 200,
+      "sha256": "cf14159f9c100242c065f410a955bf96014ffa7df96e7db97cde37440ed3dda9",
+      "status": "PRESENT_ACF_EMPTY",
+      "notes": "Service #73 hero_media unset; theme has no default fallback"
+    },
+    {
+      "asset": "recovery-life-section-bg.webp",
+      "static_dist_path": "workspaces/fp-0002-shpigovsky-v9/dist/assets/img/content/recovery-life/recovery-life-section-bg.webp",
+      "wp_git_theme_path": "WORDPRESS/theme/shpigovsky/assets/img/content/recovery-life/recovery-life-section-bg.webp",
+      "exists_git_theme": "UNKNOWN_E4",
+      "exists_runtime_theme": "UNKNOWN_E4",
+      "http_status_css_url": 404,
+      "status": "CSS_PATH_WRONG_IF_PRESENT",
+      "notes": "Secondary shared background; same /assets/ CSS pattern"
+    }
+  ],
+  "result": "COMPLETE"
+}

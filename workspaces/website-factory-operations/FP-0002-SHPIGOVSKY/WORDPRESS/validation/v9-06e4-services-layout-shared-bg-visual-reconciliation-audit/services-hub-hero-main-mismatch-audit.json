@@ -1,0 +1,28 @@
+{
+  "route": "/uslugi/",
+  "current_template": "page-templates/services-hub.php",
+  "current_hero_partial": "template-parts/services-hub/hero.php",
+  "current_hero_class": "hero hero--inner",
+  "why_home_hero": "services-hub/hero.php hardcodes generic inner hero markup (hero__eyebrow, hero__tagline, hero__title) — copied from home inner hero pattern, not services-inner-hero-v2",
+  "home_hero_hardcoded": true,
+  "shared_partial_mismatch": true,
+  "acf_fallback_cause": false,
+  "static_v9_hero_type": "services-inner-hero-v2",
+  "static_v9_hero_partial": "partials/sections/services-inner-hero-v2.html",
+  "expected_image_asset": "assets/img/content/services/services-hero.webp",
+  "asset_in_runtime_theme": true,
+  "asset_in_git_theme": true,
+  "asset_referenced_in_template": false,
+  "main_wrapper_static": "page-uslugi-v2__main",
+  "main_wrapper_wp": "page-uslugi site-main site-main--services-hub",
+  "body_class_static": "page-uslugi-v2",
+  "body_class_wp": "page-uslugi missing — no body_class filter for services hub",
+  "e5_source_files": [
+    "WORDPRESS/theme/shpigovsky/page-templates/services-hub.php",
+    "WORDPRESS/theme/shpigovsky/template-parts/services-hub/hero.php",
+    "WORDPRESS/theme/shpigovsky/inc/services-hub-helpers.php (body_class filter if added)",
+    "WORDPRESS/theme/shpigovsky/template-parts/service/inner-hero.php (reuse candidate)"
+  ],
+  "root_cause": "TEMPLATE_WRAPPER + wrong hero partial — services hub never wired to V9 services-inner-hero-v2 stack",
+  "result": "MISMATCH_CONFIRMED"
+}

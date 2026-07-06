@@ -1,0 +1,36 @@
+{
+  "route": "/uslugi/zavisimosti/",
+  "wp_object_id": 73,
+  "current_template": "single-service.php → template-parts/service/subdivision-stack.php",
+  "hero_type": "services-inner-hero-v2",
+  "hero_type_correct": true,
+  "hero_image_missing_reason": "ACF field hero_media empty on service #73; inner-hero.php skips media block when img_url empty",
+  "expected_static_image": "assets/img/content/services/service-subdivision-hero.webp",
+  "asset_exists_git_theme": true,
+  "asset_exists_runtime_theme": true,
+  "css_missing": false,
+  "helper_fallback_wrong": "No theme fallback to default subdivision hero asset when hero_media empty",
+  "layout_differences": [
+    "missing service-subdivision-nature-v1",
+    "missing service-subdivision-team-stats-v1",
+    "missing clinic-landscape",
+    "missing specialists",
+    "missing founder-quote",
+    "missing comfort",
+    "missing reviews",
+    "stages partial renders service-leaf-stages-v1 not service-subdivision-stages-v1",
+    "duplicate id service-subdivision-start on mid-cta and stages"
+  ],
+  "service_subdivision_start_heading_present": true,
+  "service_subdivision_start_background_missing": true,
+  "service_subdivision_start_background_cause": "CSS_PATH — program-cta-band::before uses /assets/... root URL (404 on WP)",
+  "e5_source_files": [
+    "WORDPRESS/theme/shpigovsky/template-parts/service/inner-hero.php",
+    "WORDPRESS/theme/shpigovsky/inc/service-helpers.php",
+    "WORDPRESS/theme/shpigovsky/template-parts/service/subdivision-stack.php",
+    "WORDPRESS/theme/shpigovsky/template-parts/service/stages.php",
+    "WORDPRESS/theme/shpigovsky/assets/css/v9-style.css"
+  ],
+  "db_writes_likely_e5": "hero_media attachment ID seed for service #73 unless theme fallback added",
+  "result": "MISMATCH_CONFIRMED"
+}

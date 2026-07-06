@@ -1,0 +1,93 @@
+{
+  "mismatches": [
+    {
+      "id": "E4-001",
+      "category": "SERVICES_HUB_HERO_TYPE",
+      "static_expected": "services-inner-hero-v2 with image",
+      "wp_current": "hero hero--inner (home-style inner hero)",
+      "root_cause": "TEMPLATE_WRAPPER — services-hub/hero.php uses wrong partial",
+      "proposed_e5_repair": "Replace services-hub/hero.php with services-inner-hero-v2 markup; wire services-hero.webp",
+      "source_files": ["template-parts/services-hub/hero.php", "page-templates/services-hub.php"],
+      "runtime_files": ["same after delivery"],
+      "db_writes_needed": false,
+      "risk": "MEDIUM"
+    },
+    {
+      "id": "E4-002",
+      "category": "SERVICES_HUB_MAIN_LAYOUT",
+      "static_expected": "body page-uslugi-v2; main page-uslugi-v2__main; services-category-section-v2 stack",
+      "wp_current": "main page-uslugi; services-category-hub; home-rehabilitation-program",
+      "root_cause": "TEMPLATE_WRAPPER — hub stack simplified vs V9",
+      "proposed_e5_repair": "Align main/body classes; replace hub category partials with V9 section-v2; swap program block to services-program-v2; add missing sections",
+      "source_files": ["page-templates/services-hub.php", "template-parts/services-hub/*"],
+      "db_writes_needed": false,
+      "risk": "HIGH"
+    },
+    {
+      "id": "E4-003",
+      "category": "SERVICES_HUB_HERO_IMAGE",
+      "static_expected": "services-hero.webp in hero media",
+      "wp_current": "no img element",
+      "root_cause": "TEMPLATE_WRAPPER — image not referenced",
+      "proposed_e5_repair": "Use get_template_directory_uri() default hero in new services-inner-hero-v2 partial",
+      "source_files": ["template-parts/services-hub/hero.php"],
+      "db_writes_needed": false,
+      "risk": "LOW"
+    },
+    {
+      "id": "E4-004",
+      "category": "SUBDIVISION_HERO_IMAGE",
+      "static_expected": "service-subdivision-hero.webp",
+      "wp_current": "hero_media ACF empty — media block omitted",
+      "root_cause": "fallback data missing",
+      "proposed_e5_repair": "Seed hero_media on service #73 OR add theme default fallback asset path",
+      "source_files": ["template-parts/service/inner-hero.php", "inc/service-helpers.php"],
+      "db_writes_needed": "OPTIONAL — hero_media attachment ID",
+      "risk": "LOW"
+    },
+    {
+      "id": "E4-005",
+      "category": "SUBDIVISION_LAYOUT",
+      "static_expected": "14-section subdivision stack per usluga-podrazdel-v1.html",
+      "wp_current": "7-section subdivision-stack (missing nature, team-stats, clinic, specialists, founder, comfort, reviews)",
+      "root_cause": "TEMPLATE_WRAPPER — incomplete stack orchestrator",
+      "proposed_e5_repair": "Extend subdivision-stack.php with missing V9 partials",
+      "source_files": ["template-parts/service/subdivision-stack.php", "new partials"],
+      "db_writes_needed": false,
+      "risk": "HIGH"
+    },
+    {
+      "id": "E4-006",
+      "category": "FINAL_FORM_BACKGROUND",
+      "static_expected": "final-form__band::before background visible",
+      "wp_current": "markup present; background 404",
+      "root_cause": "CSS_PATH — url(/assets/...) on WP host",
+      "proposed_e5_repair": "Rewrite 4 root-absolute url() rules to theme-relative paths in v9-style.css",
+      "source_files": ["assets/css/v9-style.css"],
+      "db_writes_needed": false,
+      "risk": "LOW"
+    },
+    {
+      "id": "E4-007",
+      "category": "CTA_BAND_BACKGROUND",
+      "static_expected": "program-cta-band + home-rehabilitation-requirements__cta-band backgrounds",
+      "wp_current": "classes present; ::before background 404",
+      "root_cause": "CSS_PATH",
+      "proposed_e5_repair": "Same CSS path fix as E4-006",
+      "source_files": ["assets/css/v9-style.css"],
+      "db_writes_needed": false,
+      "risk": "LOW"
+    },
+    {
+      "id": "E4-008",
+      "category": "ASSET_DELIVERY",
+      "static_expected": "hero + background assets in theme",
+      "wp_current": "key assets present in git + runtime theme",
+      "root_cause": "not missing — wiring/CSS issue",
+      "proposed_e5_repair": "No bulk asset wave unless recovery-life asset missing",
+      "db_writes_needed": false,
+      "risk": "LOW"
+    }
+  ],
+  "result": "COMPLETE"
+}

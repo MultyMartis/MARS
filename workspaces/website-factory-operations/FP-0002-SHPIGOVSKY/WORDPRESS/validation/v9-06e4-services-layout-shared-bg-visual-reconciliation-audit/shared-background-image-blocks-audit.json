@@ -1,0 +1,56 @@
+{
+  "blocks": [
+    {
+      "block": "final-form-heading / final-form__band",
+      "static_selector": ".final-form__band::before",
+      "wp_selector": ".final-form__band::before",
+      "expected_asset": "assets/img/content/home-final-form/home-final-form-background.webp",
+      "runtime_css_rule": "background-image: url(\"/assets/img/content/home-final-form/home-final-form-background.webp\")",
+      "asset_in_git_theme": true,
+      "asset_in_runtime_theme": true,
+      "url_root_http_status": 404,
+      "url_theme_http_status": 200,
+      "affected_routes": ["/", "/uslugi/", "/uslugi/zavisimosti/", "/kontakty/", "/otzyvy/"],
+      "root_cause": "CSS_PATH"
+    },
+    {
+      "block": "service-subdivision-start-heading / program-cta-band",
+      "static_selector": ".program-cta-band::before",
+      "wp_selector": ".program-cta-band::before",
+      "expected_asset": "assets/img/content/home-final-form/home-final-form-background.webp",
+      "runtime_css_rule": "background-image: url(\"/assets/img/content/home-final-form/home-final-form-background.webp\")",
+      "asset_in_git_theme": true,
+      "asset_in_runtime_theme": true,
+      "url_root_http_status": 404,
+      "url_theme_http_status": 200,
+      "affected_routes": ["/uslugi/zavisimosti/", "service stacks with mid-cta"],
+      "root_cause": "CSS_PATH"
+    },
+    {
+      "block": "home-rehabilitation-requirements__cta-band",
+      "static_selector": ".home-rehabilitation-requirements__cta-band::before",
+      "wp_selector": ".home-rehabilitation-requirements__cta-band::before",
+      "expected_asset": "assets/img/content/home-final-form/home-final-form-background.webp",
+      "runtime_css_rule": "background-image: url(\"/assets/img/content/home-final-form/home-final-form-background.webp\")",
+      "asset_in_git_theme": true,
+      "asset_in_runtime_theme": true,
+      "url_root_http_status": 404,
+      "url_theme_http_status": 200,
+      "affected_routes": ["/", "home rehabilitation requirements section", "service-leaf-stages-v1 embedded CTA"],
+      "root_cause": "CSS_PATH"
+    },
+    {
+      "block": "recovery-life-section-bg",
+      "static_selector": ".home-recovery-life (background)",
+      "wp_selector": "v9-style.css line ~20333",
+      "expected_asset": "assets/img/content/recovery-life/recovery-life-section-bg.webp",
+      "runtime_css_rule": "url(\"/assets/img/content/recovery-life/recovery-life-section-bg.webp\")",
+      "url_root_http_status": 404,
+      "affected_routes": ["home recovery-life if rendered"],
+      "root_cause": "CSS_PATH"
+    }
+  ],
+  "css_root_absolute_count": 4,
+  "pattern": "V9 static dist uses root-relative /assets/... which works on static host; WP theme serves assets under /wp-content/themes/shpigovsky/assets/...",
+  "result": "MISSING_CONFIRMED — visual backgrounds broken due to URL resolution, not missing files"
+}

@@ -1,0 +1,49 @@
+{
+  "phase": "V9-06E5",
+  "mode": "REPAIR_AUTHORIZED_BY_OPERATOR_NEXT",
+  "waves": [
+    {
+      "order": 1,
+      "component": "Shared CSS background paths",
+      "planned_repair": "Fix 4 url(\"/assets/...\") rules in v9-style.css to theme-relative paths (e.g. ../img/... or enqueue-time variable strategy)",
+      "safety": "Source-only CSS; bounded runtime delivery; no DB",
+      "blocks": ["final-form__band", "program-cta-band", "home-rehabilitation-requirements__cta-band", "recovery-life"]
+    },
+    {
+      "order": 2,
+      "component": "/uslugi/ services hub hero",
+      "planned_repair": "Replace hero--inner with services-inner-hero-v2; default services-hero.webp from theme assets",
+      "safety": "Template source change; verify page #5 only",
+      "blocks": ["SERVICES_HUB_HERO_TYPE", "SERVICES_HUB_HERO_IMAGE"]
+    },
+    {
+      "order": 3,
+      "component": "/uslugi/ main layout",
+      "planned_repair": "Add page-uslugi-v2 body/main classes; align category sections to services-category-section-v2; services-program-v2; add nav/founder/comfort/cta per static order",
+      "safety": "Large template wave — route-scoped smoke after delivery",
+      "blocks": ["SERVICES_HUB_MAIN_LAYOUT"]
+    },
+    {
+      "order": 4,
+      "component": "/uslugi/zavisimosti/ hero image",
+      "planned_repair": "Theme fallback for empty hero_media OR controlled ACF seed for service #73 with service-subdivision-hero.webp",
+      "safety": "Prefer theme fallback first; DB seed only if operator charters",
+      "blocks": ["SUBDIVISION_HERO_IMAGE"]
+    },
+    {
+      "order": 5,
+      "component": "/uslugi/zavisimosti/ layout stack",
+      "planned_repair": "Complete subdivision-stack sections; fix service-subdivision-stages-v1 vs service-leaf-stages-v1; resolve duplicate service-subdivision-start id",
+      "safety": "Incremental partial adds; compare static section order",
+      "blocks": ["SUBDIVISION_LAYOUT"]
+    },
+    {
+      "order": 6,
+      "component": "Validation",
+      "planned_repair": "Re-run E4 screenshot pairs; route smoke; legal/reviews/menu regression",
+      "safety": "Read-only validation gate before operator visual sign-off"
+    }
+  ],
+  "recommended_task": "CREATE_V9_06E5_SERVICES_LAYOUT_SHARED_BG_REPAIR_TASK",
+  "result": "READY"
+}

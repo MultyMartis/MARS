@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E3 WORDPRESS STABLE CHECKPOINT DECLARED — local runtime STABLE_LOCAL after D9/E0/E1/E2; routes/menus/legal/reviews READY; admin screenshots PARTIAL; NEXT: E4 operator final visual pass
+**Status:** V9-06E4 SERVICES LAYOUT + SHARED BG VISUAL RECONCILIATION AUDIT **PASS** — operator findings substantiated on `/uslugi/` and `/uslugi/zavisimosti/`; E3 stable checkpoint remains valid ancestor; NEXT: **CREATE_V9_06E5_SERVICES_LAYOUT_SHARED_BG_REPAIR_TASK**
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---
@@ -297,4 +297,8 @@ D9-Z **PARTIAL PASS**: Holistic read-only readiness audit after D9-L through D9-
 
 ## V9-06E3 WordPress stable checkpoint (2026-07-06)
 
-E3 **PASS**: Read-only stable checkpoint after E2. Runtime **STABLE_LOCAL**; routes 13/13 PASS; menus/footer/legal/reviews **READY**; admin editability **PARTIAL** (auth screenshots); 11/11 frontend screenshots PASS. Stable checkpoint **DECLARED** at HEAD `e3ec2022`. Zero DB/source/theme/ACF JSON/runtime mutations. Evidence: `validation/v9-06e3-wordpress-stable-checkpoint/`. Report: `reports/FP-0002-V9-06E3-WORDPRESS-STABLE-CHECKPOINT-REPORT-v1.md`. Next: **CREATE_V9_06E4_OPERATOR_FINAL_VISUAL_PASS_TASK**.
+E3 **PASS**: Read-only stable checkpoint after E2. Runtime **STABLE_LOCAL**; routes 13/13 PASS; menus/footer/legal/reviews **READY**; admin editability **PARTIAL** (auth screenshots); 11/11 frontend screenshots PASS. Stable checkpoint **DECLARED** at commit `8c935957`. Zero DB/source/theme/ACF JSON/runtime mutations. Evidence: `validation/v9-06e3-wordpress-stable-checkpoint/`. Report: `reports/FP-0002-V9-06E3-WORDPRESS-STABLE-CHECKPOINT-REPORT-v1.md`.
+
+## V9-06E4 services layout + shared background visual reconciliation audit (2026-07-06)
+
+E4 **PASS**: Read-only visual reconciliation after operator manual pass post-E3. **MISMATCH_CONFIRMED** on `/uslugi/` (wrong `hero--inner` vs static `services-inner-hero-v2`; main/layout drift). **MISSING_CONFIRMED** hero image on `/uslugi/zavisimosti/` (`hero_media` empty; asset in theme). **MISSING_CONFIRMED** shared backgrounds (`final-form__band`, `program-cta-band`, `home-rehabilitation-requirements__cta-band`) — root cause **CSS_PATH** (`/assets/...` 404 on WP; files present in theme). 4/4 screenshots captured (runtime + static V9 reference). Zero DB/source/theme/ACF JSON/runtime mutations. Evidence: `validation/v9-06e4-services-layout-shared-bg-visual-reconciliation-audit/`. Report: `reports/FP-0002-V9-06E4-SERVICES-LAYOUT-SHARED-BG-VISUAL-RECONCILIATION-AUDIT-REPORT-v1.md`. Next: **CREATE_V9_06E5_SERVICES_LAYOUT_SHARED_BG_REPAIR_TASK**.

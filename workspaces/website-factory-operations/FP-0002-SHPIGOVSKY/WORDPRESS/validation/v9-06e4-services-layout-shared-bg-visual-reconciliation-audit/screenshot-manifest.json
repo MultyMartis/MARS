@@ -1,0 +1,40 @@
+{
+  "shots": [
+    {
+      "file": "runtime-uslugi-current-e4.png",
+      "url": "http://shpigovsky.test/uslugi/",
+      "kind": "runtime",
+      "captured": true,
+      "bytes": 75796,
+      "sha256": "FDC71D0A2CF90C6AA829F5237294BD36DF18C72B6C12043094AB4C44ADD4F98A",
+      "error": null
+    },
+    {
+      "file": "runtime-zavisimosti-current-e4.png",
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/",
+      "kind": "runtime",
+      "captured": true,
+      "bytes": 111974,
+      "sha256": "16FF8D84E82CD57F53A0D331791C6EC6D8C4E394E976A2243C051DBB1EEAD25A",
+      "error": null
+    },
+    {
+      "file": "static-v9-uslugi-reference-e4.png",
+      "url": "file:///X:/AI MARS/workspaces/fp-0002-shpigovsky-v9/dist/uslugi/index.html",
+      "kind": "static",
+      "captured": true,
+      "bytes": 33662,
+      "sha256": "D06537D5B9293F33ED2021B4E414594470C4E2515FB71FE44C3636A37A8B3366",
+      "error": null
+    },
+    {
+      "file": "static-v9-zavisimosti-reference-e4.png",
+      "url": "file:///X:/AI MARS/workspaces/fp-0002-shpigovsky-v9/dist/uslugi/zavisimosti/index.html",
+      "kind": "static",
+      "captured": true,
+      "bytes": 33664,
+      "sha256": "057642BEA25BB58F0478FC2CE98B4A1969663DD7BCEF597E51C19EEBDBD7E684",
+      "error": null
+    }
+  ]
+}

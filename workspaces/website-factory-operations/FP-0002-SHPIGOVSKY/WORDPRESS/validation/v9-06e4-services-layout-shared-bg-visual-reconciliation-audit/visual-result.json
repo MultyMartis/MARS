@@ -1,0 +1,9 @@
+{
+  "task": "V9-06E4",
+  "operator_findings_validated": true,
+  "runtime_uslugi": "MISMATCH — wrong hero, missing image, layout drift",
+  "runtime_zavisimosti": "PARTIAL — correct hero type, missing image, layout drift",
+  "shared_backgrounds": "CONFIRMED — CSS /assets/ path 404 on WP; files exist in theme",
+  "screenshots_captured": 4,
+  "static_reference_available": true
+}

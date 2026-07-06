@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-06 (V9-06E3 WordPress Stable Checkpoint DECLARED)
+**Last updated:** 2026-07-06 (V9-06E4 Services Layout + Shared BG Visual Reconciliation Audit PASS)
 
-**Current WordPress phase:** V9-06E3 WordPress Stable Checkpoint **PASS / DECLARED** — local runtime **STABLE_LOCAL**; routes/menus/legal/reviews **READY**; admin screenshots **PARTIAL**; baseline E2 @ `e3ec2022`. **Next: CREATE_V9_06E4_OPERATOR_FINAL_VISUAL_PASS_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E3-WORDPRESS-STABLE-CHECKPOINT-REPORT-v1.md`. Prior E2 @ `e3ec2022`.
+**Current WordPress phase:** V9-06E4 Visual Reconciliation Audit **PASS** — operator findings substantiated (services hub hero/layout; subdivision hero image; shared CSS backgrounds). E3 stable checkpoint remains valid @ `8c935957`. **Next: CREATE_V9_06E5_SERVICES_LAYOUT_SHARED_BG_REPAIR_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E4-SERVICES-LAYOUT-SHARED-BG-VISUAL-RECONCILIATION-AUDIT-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

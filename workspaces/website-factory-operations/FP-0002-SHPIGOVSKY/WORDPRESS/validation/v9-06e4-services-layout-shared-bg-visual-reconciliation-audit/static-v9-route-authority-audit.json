@@ -1,0 +1,76 @@
+{
+  "task": "V9-06E4",
+  "authority": "workspaces/fp-0002-shpigovsky-v9",
+  "routes": [
+    {
+      "route": "/uslugi/",
+      "source_file": "workspaces/fp-0002-shpigovsky-v9/src/pages/uslugi-v2.html",
+      "dist_file": "workspaces/fp-0002-shpigovsky-v9/dist/uslugi/index.html",
+      "expected_title": "Услуги V2 — Шпиговский дом",
+      "expected_body_class": "page-uslugi-v2",
+      "expected_main_classes": "page-uslugi-v2__main",
+      "expected_hero_type": "services-inner-hero-v2",
+      "expected_hero_classes": "services-inner-hero-v2",
+      "expected_hero_image": "assets/img/content/services/services-hero.webp",
+      "expected_hero_image_dist_url": "/assets/img/content/services/services-hero.webp",
+      "expected_section_order": [
+        "services-inner-hero-v2",
+        "internal-page-nav (nav)",
+        "services-category-section-v2--addictions",
+        "services-category-section-v2--mental-health",
+        "services-category-section-v2--eating-disorders",
+        "services-program-v2",
+        "founder-quote",
+        "comfort",
+        "program-cta-band",
+        "faq",
+        "final-form"
+      ],
+      "expected_final_form": "final-form with final-form__band background",
+      "expected_cta_blocks": ["services-program-v2 embedded CTA band", "program-cta-band secondary"],
+      "css_selectors": [
+        ".page-uslugi-v2 .services-inner-hero-v2",
+        ".page-uslugi-v2 .services-category-section-v2",
+        ".final-form__band::before",
+        ".program-cta-band::before"
+      ],
+      "result": "AUTHORITY_FOUND"
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "source_file": "workspaces/fp-0002-shpigovsky-v9/src/pages/usluga-podrazdel-v1.html",
+      "dist_file": "workspaces/fp-0002-shpigovsky-v9/dist/uslugi/zavisimosti/index.html",
+      "expected_title": "Лечение алкогольной зависимости — Шпиговский дом (fixture canonical for subdivision template)",
+      "expected_body_class": "page-service-subdivision-v1",
+      "expected_main_classes": "page-service-subdivision-v1__main",
+      "expected_hero_type": "services-inner-hero-v2",
+      "expected_hero_image": "assets/img/content/services/service-subdivision-hero.webp",
+      "expected_hero_image_dist_url": "/assets/img/content/services/service-subdivision-hero.webp",
+      "expected_section_order": [
+        "services-inner-hero-v2",
+        "internal-page-nav (nav)",
+        "service-subdivision-dependencies-v1",
+        "service-subdivision-nature-v1",
+        "program-cta-band-section id=service-subdivision-start",
+        "services-program-v2",
+        "service-subdivision-stages-v1",
+        "service-subdivision-team-stats-v1",
+        "clinic-landscape",
+        "specialists",
+        "founder-quote",
+        "comfort",
+        "reviews",
+        "faq",
+        "final-form"
+      ],
+      "expected_final_form": "final-form id=service-subdivision-final-form-heading",
+      "expected_cta_blocks": ["program-cta-band-section id=service-subdivision-start heading id=service-subdivision-start-heading"],
+      "css_selectors": [
+        ".services-inner-hero-v2__image",
+        ".program-cta-band::before",
+        ".final-form__band::before"
+      ],
+      "result": "AUTHORITY_FOUND"
+    }
+  ]
+}

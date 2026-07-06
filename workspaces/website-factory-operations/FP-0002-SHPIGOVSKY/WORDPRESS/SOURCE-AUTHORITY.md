@@ -306,4 +306,8 @@ E2 **PASS**: Removed legal width caps (`.legal-document__container` 900px, `.leg
 
 ## V9-06E3 WordPress stable checkpoint (2026-07-06)
 
-E3 **PASS**: Read-only stable checkpoint. Confirmed local runtime **STABLE_LOCAL** after D9 waves + E0→E2 legal chain. Routes/menus/footer/legal/reviews **READY**; admin **PARTIAL** (auth screenshots); 11 frontend screenshots PASS. Stable checkpoint **DECLARED** at HEAD `e3ec20224c24974432ea88158f29aa13bde2c94a`. Zero DB/source/theme/ACF JSON/runtime mutations. Evidence: `validation/v9-06e3-wordpress-stable-checkpoint/`. Report: `reports/FP-0002-V9-06E3-WORDPRESS-STABLE-CHECKPOINT-REPORT-v1.md`. Next: **CREATE_V9_06E4_OPERATOR_FINAL_VISUAL_PASS_TASK**.
+E3 **PASS**: Read-only stable checkpoint. Confirmed local runtime **STABLE_LOCAL** after D9 waves + E0→E2 legal chain. Routes/menus/footer/legal/reviews **READY**; admin **PARTIAL** (auth screenshots); 11 frontend screenshots PASS. Stable checkpoint **DECLARED** at commit `8c935957048c1f9b3d6ae1fee36ac3b5d2fcb222`. Zero DB/source/theme/ACF JSON/runtime mutations. Evidence: `validation/v9-06e3-wordpress-stable-checkpoint/`. Report: `reports/FP-0002-V9-06E3-WORDPRESS-STABLE-CHECKPOINT-REPORT-v1.md`.
+
+## V9-06E4 services layout + shared background visual reconciliation audit (2026-07-06)
+
+E4 **PASS**: Read-only audit substantiating operator post-E3 visual findings. Services hub `/uslugi/` uses wrong `hero--inner` partial (static authority: `services-inner-hero-v2`). Subdivision `/uslugi/zavisimosti/` correct hero type but `hero_media` empty. Shared backgrounds broken by CSS root paths `/assets/...` (404 on WP; assets present in theme). No source/theme/ACF/runtime mutations in E4. Evidence: `validation/v9-06e4-services-layout-shared-bg-visual-reconciliation-audit/`. Report: `reports/FP-0002-V9-06E4-SERVICES-LAYOUT-SHARED-BG-VISUAL-RECONCILIATION-AUDIT-REPORT-v1.md`. Next: **CREATE_V9_06E5_SERVICES_LAYOUT_SHARED_BG_REPAIR_TASK**.
