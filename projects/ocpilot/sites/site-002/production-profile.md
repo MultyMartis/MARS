@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-07 (Run 4.203 — production llms.txt deploy; checkpoint `SITE-002-STABLE-PROD-LLMS-TXT-01`)
+**Last updated:** 2026-07-07 (Run 4.204 — production llms.txt UTF-8 BOM encoding fix; checkpoint `SITE-002-STABLE-PROD-LLMS-TXT-UTF8-01`)
 
 ---
 
@@ -69,8 +69,8 @@ Do not claim that Production exactly matches TEST unless evidence proves it.
 | Current M9.x baselines | [baselines/](baselines/) — TEST-proven checkpoints |
 | Post-corporate-page checkpoints | Home Commercial Trust · Corporate Intro · Custom Proof Strip · Delivery Summary · PDP Body Category Classes |
 | Production baseline parent | [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| Current Production checkpoint | [baselines/SITE-002-STABLE-PROD-LLMS-TXT-01.md](baselines/SITE-002-STABLE-PROD-LLMS-TXT-01.md) (parent [SITE-002-STABLE-PROD-SEO-PRODUCT-META-KEYWORDS-01.md](baselines/SITE-002-STABLE-PROD-SEO-PRODUCT-META-KEYWORDS-01.md); cron [SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01.md](baselines/SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01.md)) |
-| SEO readiness (Production) | **LLMS.TXT DEPLOYED** (Run 4.203) — `/public_html/llms.txt` · https://bzpm.ru/llms.txt · AI-agent site guide; robots/sitemap unchanged · product meta keywords v1.1 (Run 4.202) preserved · [llms.txt report](reports/SITE-002-PROD-LLMS-TXT-01.md) · [keywords tune](reports/SITE-002-PROD-SEO-PRODUCT-META-KEYWORDS-TUNE-01.md) · next **final meta inventory** |
+| Current Production checkpoint | [baselines/SITE-002-STABLE-PROD-LLMS-TXT-UTF8-01.md](baselines/SITE-002-STABLE-PROD-LLMS-TXT-UTF8-01.md) (parent [SITE-002-STABLE-PROD-LLMS-TXT-01.md](baselines/SITE-002-STABLE-PROD-LLMS-TXT-01.md); cron [SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01.md](baselines/SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01.md)) |
+| SEO readiness (Production) | **LLMS.TXT UTF-8 VERIFIED** (Run 4.204) — `/public_html/llms.txt` · https://bzpm.ru/llms.txt · UTF-8 BOM; readable Cyrillic; robots/sitemap unchanged · product meta keywords v1.1 (Run 4.202) preserved · [encoding fix report](reports/SITE-002-PROD-LLMS-TXT-ENCODING-FIX-01.md) · [llms.txt deploy](reports/SITE-002-PROD-LLMS-TXT-01.md) · next **final meta inventory** |
 | Yandex analytics (Production) | **VERIFIED** (Run 4.189) — Metrika counter in `common/footer.twig` (masked `110***756`); Webmaster verification in `common/header.twig` (masked `13a***c77`); confirmed on live HTML (home, category, information); **OPERATOR WIP — DO NOT OVERWRITE** · [report](reports/SITE-002-PROD-YANDEX-CODES-VERIFY-01.md) |
 | HTML body structure (Production) | **FIXED** (Run 4.190) — duplicate `<body>` + global preloader + `page_overlay` removed from live `header.twig`; 4-URL HTML validation PASS; Yandex blocks unchanged · [report](reports/SITE-002-PROD-HTML-BODY-DUPLICATE-FIX-01.md) |
 | MARS 1C cron wrapper | **OPERATIONAL — FIRST SCHEDULED RUN VERIFIED** (Run 4.194) — Beget cron first automatic run SUCCESS 2026-07-06 08:00 Moscow; run ID `mars-20260706-080002-09436ae7`; report `mars_1c_import_2026-07-06_080007.txt`; steps `1c`+`1c_offers` PASS; lock removed; schedule `0 8 * * *` (Moscow → 12:00 Barnaul); wrapper v1.1.0; HTTP gateway; Sergey legacy **preserved**; duration 0s field **WARN only** |
