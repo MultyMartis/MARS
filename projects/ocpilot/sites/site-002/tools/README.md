@@ -37,6 +37,7 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `site-002-prod-seo-information-meta-runtime-discovery-01.py` | Read-only information/blog/katalog meta runtime authority discovery for `SITE-002-PROD-SEO-INFORMATION-META-RUNTIME-DISCOVERY-01` |
 | `site-002-prod-seo-information-meta-runtime-fix-01.py` | Information/blog/katalog meta runtime fix — controller patches + category admin SEO for `SITE-002-PROD-SEO-INFORMATION-META-RUNTIME-FIX-01` |
 | `site-002-prod-seo-product-meta-generator-discovery-01.py` | Read-only product PDP meta generator discovery — live samples + FTP source for `SITE-002-PROD-SEO-PRODUCT-META-GENERATOR-DISCOVERY-01` |
+| `site-002-prod-seo-product-meta-generator-fix-01.py` | Product PDP meta runtime generator — single-controller deploy for `SITE-002-PROD-SEO-PRODUCT-META-GENERATOR-FIX-01` |
 
 ## Dependencies
 
