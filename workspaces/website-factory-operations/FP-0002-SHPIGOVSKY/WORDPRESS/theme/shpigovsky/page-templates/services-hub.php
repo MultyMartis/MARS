@@ -46,15 +46,16 @@ get_header();
 
 	$cta_phone = shpigovsky_get_site_option( 'phone_primary' );
 	$cta_phone = '' !== $cta_phone ? $cta_phone : '8 (925) 183-64-64';
+	$v9_cta    = shpigovsky_get_v9_services_hub_program_copy()['secondary_cta'];
 	set_query_var(
 		'shpigovsky_program_cta_band',
 		array(
-			'title'          => __( 'Запишитесь на гостевой визит', 'shpigovsky' ),
-			'subtitle'       => __( 'Вы сможете все посмотреть и задать вопросы лично', 'shpigovsky' ),
+			'title'          => $v9_cta['title'],
+			'subtitle'       => $v9_cta['subtitle'],
 			'phone'          => $cta_phone,
 			'phone_hint'     => '',
-			'button_label'   => shpigovsky_get_site_option( 'default_button_label' ) ?: __( 'Записаться', 'shpigovsky' ),
-			'modal_source'   => 'services-program-cta-secondary',
+			'button_label'   => $v9_cta['button_label'],
+			'modal_source'   => $v9_cta['source'],
 			'section_id'     => '',
 			'heading_id'     => '',
 			'heading_text'   => '',

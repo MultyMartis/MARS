@@ -36,9 +36,10 @@ $source       = isset( $band['source'] ) ? trim( (string) $band['source'] ) : 'p
 $section_id   = isset( $band['section_id'] ) ? trim( (string) $band['section_id'] ) : 'program-cta-band';
 $heading_id   = isset( $band['heading_id'] ) ? trim( (string) $band['heading_id'] ) : 'program-cta-band-heading';
 $heading_text = isset( $band['heading_text'] ) ? trim( (string) $band['heading_text'] ) : $title;
-$wrap_section = ! empty( $band['wrap_section'] );
-$button_first = ! empty( $band['button_first'] );
-$margin_flush = ! empty( $band['margin_flush'] );
+$wrap_section   = ! empty( $band['wrap_section'] );
+$wrap_container = ! empty( $band['wrap_container'] );
+$button_first   = ! empty( $band['button_first'] );
+$margin_flush   = ! empty( $band['margin_flush'] );
 
 if ( '' === $title && '' === $button_label ) {
 	return;
@@ -62,6 +63,10 @@ if ( $wrap_section ) :
 		<?php if ( '' !== $heading_text ) : ?>
 			<h2 class="visually-hidden" id="<?php echo esc_attr( $heading_id ); ?>"><?php echo esc_html( $heading_text ); ?></h2>
 		<?php endif; ?>
+<?php endif; ?>
+
+<?php if ( $wrap_container && ! $wrap_section ) : ?>
+<div class="container">
 <?php endif; ?>
 
 	<div class="<?php echo esc_attr( $band_class ); ?>">
@@ -92,6 +97,10 @@ if ( $wrap_section ) :
 			data-modal-submit-text="<?php echo esc_attr( $button_label ); ?>"
 		><?php echo esc_html( $button_label ); ?></button>
 	</div>
+
+<?php if ( $wrap_container && ! $wrap_section ) : ?>
+</div>
+<?php endif; ?>
 
 <?php if ( $wrap_section ) : ?>
 	</div>

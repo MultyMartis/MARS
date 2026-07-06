@@ -1,0 +1,13 @@
+{
+  "checkpoint_path": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e8-static-v9-content-main-layout-authority-repair-pre-20260706-230100",
+  "dump_file": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e8-static-v9-content-main-layout-authority-repair-pre-20260706-230100\\mars_wp_fp0002-partial.sql",
+  "dump_size_bytes": 1470738,
+  "tables": [
+    "fp02_posts",
+    "fp02_postmeta",
+    "fp02_options"
+  ],
+  "result": "PASS",
+  "db_writes_in_e8": 0,
+  "restore": "mysql -u root mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e8-static-v9-content-main-layout-authority-repair-pre-20260706-230100\\mars_wp_fp0002-partial.sql\""
+}

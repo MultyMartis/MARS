@@ -1,0 +1,75 @@
+{
+  "generated_at": "2026-07-06T16:02:01.883963+00:00",
+  "authority_root": "workspaces/fp-0002-shpigovsky-v9/src/",
+  "pages": [
+    {
+      "route": "/uslugi/",
+      "static_source": "src/pages/uslugi-v2.html",
+      "dist": "dist/uslugi/index.html",
+      "page_type": "SERVICES_HUB",
+      "has_exact_copy": true,
+      "has_exact_layout": true,
+      "should_be_exact_v9_on_wp": true,
+      "wp_parity_before": "CONTENT_AND_LAYOUT_DRIFT",
+      "wp_parity_after": "MATCH"
+    },
+    {
+      "route": "/kontakty/",
+      "static_source": "src/pages/kontakty.html",
+      "dist": "dist/kontakty/index.html",
+      "page_type": "CONTACTS",
+      "has_exact_copy": true,
+      "has_exact_layout": true,
+      "should_be_exact_v9_on_wp": true,
+      "wp_parity_before": "LAYOUT_DRIFT",
+      "wp_parity_after": "MATCH"
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "static_source": "src/pages/usluga-konechnaya-v1.html",
+      "dist": "dist/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/index.html",
+      "page_type": "SERVICE_LEAF",
+      "has_exact_copy": "PARTIAL_DEMO_LOREM",
+      "has_exact_layout": true,
+      "should_be_exact_v9_on_wp": true,
+      "wp_parity_before": "CONTENT_AND_LAYOUT_DRIFT",
+      "wp_parity_after": "MATCH_LAYOUT_DEMO_PROGRAM"
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/",
+      "static_source": "src/pages/uslugi/psihicheskoe-zdorovie.html",
+      "page_type": "SERVICE_SUBDIVISION",
+      "has_exact_copy": false,
+      "has_exact_layout": false,
+      "should_be_exact_v9_on_wp": false,
+      "wp_parity_after": "TEMPLATE_MATCH_DEMO_CONTENT"
+    },
+    {
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "static_source": "src/pages/uslugi/rasstroystva-pischevogo-povedeniya.html",
+      "page_type": "SERVICE_SUBDIVISION",
+      "has_exact_copy": false,
+      "has_exact_layout": false,
+      "should_be_exact_v9_on_wp": false,
+      "wp_parity_after": "TEMPLATE_MATCH_DEMO_CONTENT"
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "static_source": "src/pages/usluga-podrazdel-v1.html",
+      "page_type": "SERVICE_SUBDIVISION",
+      "has_exact_copy": "PARTIAL_DEMO",
+      "has_exact_layout": true,
+      "should_be_exact_v9_on_wp": true,
+      "wp_parity_after": "MATCH_E6_ACCEPTED"
+    },
+    {
+      "route": "/",
+      "static_source": "src/pages/index.html",
+      "page_type": "HOME",
+      "has_exact_copy": true,
+      "has_exact_layout": true,
+      "should_be_exact_v9_on_wp": true,
+      "wp_parity_after": "REGRESSION_PASS"
+    }
+  ]
+}

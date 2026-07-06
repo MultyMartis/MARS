@@ -575,3 +575,7 @@ PARTIAL PASS: read-only visual route QA. All seven required routes HTTP 200; Ser
 ## 2026-07-06 — V9-06D9-V reviews admin + static layout reconciliation audit
 
 PARTIAL PASS: read-only audit. Operator post-D9-U findings confirmed: duplicate reviews in Site Settings; empty top-level Отзывы admin; /otzyvy/ layout mismatch (slider vs static archive list). Home slider matches static V9. D9-U committed but operator-unverified. Zero DB/source/theme/runtime mutations. Next: CREATE_V9_06D9W_REVIEWS_ADMIN_AND_LAYOUT_REPAIR_TASK.
+
+## 2026-07-06 — V9-06E8 static V9 content + main layout authority repair
+
+PARTIAL PASS: V9 static content/layout authority repair for `/uslugi/`, `/kontakty/`, alcohol service leaf. Theme `v9-static-content.php` + 17 template/helper updates; 0 DB writes; runtime delivered. E3 stable checkpoint invalidated. Automated route probe ALL_200. Next: CREATE_V9_06E9_OPERATOR_STATIC_PARITY_VISUAL_QA_TASK.

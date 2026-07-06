@@ -2,7 +2,7 @@
 /**
  * Template part: services-hub/rehabilitation-program.php
  *
- * V9 services hub variant — services-program-v2 with static asset fallbacks.
+ * V9 services hub variant — services-program-v2 with static V9 copy authority.
  *
  * @package Shpigovsky
  */
@@ -12,10 +12,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $program_url = home_url( '/o-centre/programma-lecheniya/' );
+$v9_program  = shpigovsky_get_v9_services_hub_program_copy();
 $cta_phone   = shpigovsky_get_site_option( 'phone_primary' );
 $cta_phone   = '' !== $cta_phone ? $cta_phone : '8 (925) 183-64-64';
-$cta_label   = shpigovsky_get_site_option( 'default_button_label' );
-$cta_label   = '' !== $cta_label ? $cta_label : __( 'Записаться', 'shpigovsky' );
 
 $items = array(
 	array(
@@ -52,7 +51,7 @@ $items = array(
 	<div class="container services-program-v2__container">
 		<header class="services-program-v2__head">
 			<h2 class="services-program-v2__heading" id="services-program-v2-heading">
-				<?php echo esc_html__( 'Наша программа включает 4 направления', 'shpigovsky' ); ?>
+				<?php echo esc_html( $v9_program['heading'] ); ?>
 			</h2>
 			<a class="services-program-v2__head-link" href="<?php echo esc_url( $program_url ); ?>">
 				<span class="services-program-v2__head-link-text"><?php echo esc_html__( 'подробнее', 'shpigovsky' ); ?></span>
@@ -61,11 +60,11 @@ $items = array(
 		</header>
 
 		<p class="services-program-v2__lead">
-			<?php echo esc_html__( 'Боль бывает очень похожей у разных людей — но путь к восстановлению всегда индивидуален. Именно поэтому в нашем центре не существует стандартных программ.', 'shpigovsky' ); ?>
+			<?php echo esc_html( $v9_program['lead'] ); ?>
 		</p>
 
 		<p class="services-program-v2__intro">
-			<?php echo esc_html__( 'Каждый человек приходит к нам со своей историей. Именно поэтому универсальных программ в нашем центре не существует.', 'shpigovsky' ); ?>
+			<?php echo esc_html( $v9_program['intro'] ); ?>
 		</p>
 
 		<div class="services-program-v2__grid">
@@ -93,12 +92,12 @@ $items = array(
 		set_query_var(
 			'shpigovsky_program_cta_band',
 			array(
-				'title'          => __( 'Запишитесь на гостевой визит', 'shpigovsky' ),
-				'subtitle'       => __( 'Вы сможете все посмотреть и задать вопросы лично', 'shpigovsky' ),
+				'title'          => $v9_program['cta']['title'],
+				'subtitle'       => $v9_program['cta']['subtitle'],
 				'phone'          => $cta_phone,
 				'phone_hint'     => '',
-				'button_label'   => $cta_label,
-				'modal_source'   => 'services-program-guest',
+				'button_label'   => $v9_program['cta']['button_label'],
+				'modal_source'   => $v9_program['cta']['source'],
 				'section_id'     => '',
 				'heading_id'     => '',
 				'heading_text'   => '',

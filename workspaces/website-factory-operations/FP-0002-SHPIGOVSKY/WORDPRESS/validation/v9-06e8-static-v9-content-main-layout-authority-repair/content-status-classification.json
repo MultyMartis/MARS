@@ -1,0 +1,28 @@
+{
+  "routes": {
+    "/uslugi/": {
+      "before": "CONTENT_AND_LAYOUT_DRIFT_REQUIRES_REPAIR",
+      "after": "EXACT_V9_CONTENT_AND_LAYOUT"
+    },
+    "/kontakty/": {
+      "before": "LAYOUT_DRIFT_REQUIRES_REPAIR",
+      "after": "EXACT_V9_CONTENT_AND_LAYOUT"
+    },
+    "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/": {
+      "before": "CONTENT_AND_LAYOUT_DRIFT_REQUIRES_REPAIR",
+      "after": "EXACT_V9_LAYOUT"
+    },
+    "/uslugi/psihicheskoe-zdorovie/": {
+      "before": "UNKNOWN",
+      "after": "TEMPLATE_MATCH_DEMO_CONTENT"
+    },
+    "/uslugi/rasstroystva-pischevogo-povedeniya/": {
+      "before": "UNKNOWN",
+      "after": "TEMPLATE_MATCH_DEMO_CONTENT"
+    },
+    "/uslugi/zavisimosti/": {
+      "before": "EXACT_V9_LAYOUT",
+      "after": "EXACT_V9_LAYOUT"
+    }
+  }
+}

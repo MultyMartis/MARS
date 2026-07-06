@@ -56,5 +56,17 @@ $cta_band      = shpigovsky_get_contacts_cta_band();
 				</ul>
 			</div>
 		<?php endif; ?>
+
+		<div class="home-rehabilitation-requirements__photo-bleed contacts-rehabilitation-steps__photo-bleed">
+			<img
+				class="home-rehabilitation-requirements__photo contacts-rehabilitation-steps__photo"
+				src="<?php echo esc_url( shpigovsky_asset_uri( 'img/content/contacts/contacts-rehabilitation-interior.png' ) ); ?>"
+				width="1170"
+				height="580"
+				alt="<?php esc_attr_e( 'Интерьер клиники', 'shpigovsky' ); ?>"
+				loading="lazy"
+				decoding="async"
+			>
+		</div>
 	</div>
 </section>

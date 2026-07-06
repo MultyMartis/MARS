@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'SHPIGOVSKY_THEME_VERSION', '0.7.0-d7e-contacts-template' );
+define( 'SHPIGOVSKY_THEME_VERSION', '0.7.0-e8-v9-content-layout-authority' );
 define( 'SHPIGOVSKY_THEME_DIR', get_template_directory() );
 define( 'SHPIGOVSKY_THEME_URI', get_template_directory_uri() );
 define( 'SHPIGOVSKY_THEME_SKELETON', false );
@@ -23,6 +23,7 @@ require_once SHPIGOVSKY_THEME_DIR . '/inc/home-helpers.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/hero-helpers.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/home-fallbacks.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/home-vendors.php';
+require_once SHPIGOVSKY_THEME_DIR . '/inc/v9-static-content.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/services-hub-helpers.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/service-helpers.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/service-template-loader.php';

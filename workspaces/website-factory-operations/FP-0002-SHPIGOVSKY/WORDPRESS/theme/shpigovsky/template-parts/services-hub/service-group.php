@@ -36,8 +36,10 @@ if ( '' === $block_id ) {
 	$block_id = str_replace( '-heading', '', $section_id );
 }
 
-$cta_label = shpigovsky_get_site_option( 'default_button_label' );
-$cta_label = '' !== $cta_label ? $cta_label : __( 'Записаться на консультацию', 'shpigovsky' );
+$cta_label = isset( $group['cta_label'] ) ? trim( (string) $group['cta_label'] ) : '';
+if ( '' === $cta_label ) {
+	$cta_label = __( 'Записаться на консультацию', 'shpigovsky' );
+}
 ?>
 <section data-reveal class="services-category-section-v2 <?php echo esc_attr( $modifier_class ); ?>" id="<?php echo esc_attr( $block_id ); ?>" aria-labelledby="<?php echo esc_attr( $section_id ); ?>">
 	<div class="container services-category-section-v2__container">

@@ -208,6 +208,8 @@ function shpigovsky_get_contacts_static_locations() {
 		? trim( $page_address )
 		: 'Москва, ул. Ленина, 3';
 
+	$map_images = shpigovsky_get_v9_contacts_map_images();
+
 	return array(
 		array(
 			'title'         => 'Центр профилактики и лечения зависимости',
@@ -217,8 +219,8 @@ function shpigovsky_get_contacts_static_locations() {
 			'hours_label'   => 'Режим работы',
 			'email'         => $email,
 			'email_label'   => 'почта',
-			'map_image'     => '',
-			'map_embed'     => shpigovsky_get_contacts_map_embed_url(),
+			'map_image'     => $map_images['mo'],
+			'map_embed'     => '',
 			'map_alt'       => 'Карта расположения центра в Московской области',
 		),
 		array(
@@ -229,8 +231,8 @@ function shpigovsky_get_contacts_static_locations() {
 			'hours_label'   => 'Режим работы',
 			'email'         => $email,
 			'email_label'   => 'почта',
-			'map_image'     => '',
-			'map_embed'     => shpigovsky_get_contacts_map_embed_url(),
+			'map_image'     => $map_images['moscow'],
+			'map_embed'     => '',
 			'map_alt'       => 'Карта расположения консультационного офиса в Москве',
 		),
 	);
@@ -242,43 +244,28 @@ function shpigovsky_get_contacts_static_locations() {
  * @return array<int, array<string, string>>
  */
 function shpigovsky_get_contacts_locations() {
-	$blocks = shpigovsky_get_contacts_repeater( 'contacts_blocks' );
+	$locations = shpigovsky_get_contacts_static_locations();
+	$blocks    = shpigovsky_get_contacts_repeater( 'contacts_blocks' );
 
 	if ( empty( $blocks ) ) {
-		return shpigovsky_get_contacts_static_locations();
+		return $locations;
 	}
 
-	$locations   = array();
-	$email       = shpigovsky_get_contacts_email();
-	$hours_lines = shpigovsky_get_contacts_hours_lines();
-	$hours_html  = implode( '<br>', array_map( 'esc_html', $hours_lines ) );
-	$map_embed   = shpigovsky_get_contacts_map_embed_url();
-
-	foreach ( $blocks as $block ) {
-		$title = isset( $block['title'] ) ? trim( (string) $block['title'] ) : '';
-		$text  = isset( $block['text'] ) ? trim( (string) $block['text'] ) : '';
-
-		if ( '' === $title && '' === $text ) {
+	foreach ( $blocks as $index => $block ) {
+		if ( ! isset( $locations[ $index ] ) || ! is_array( $block ) ) {
 			continue;
 		}
 
-		$locations[] = array(
-			'title'         => $title,
-			'address'       => $text,
-			'address_label' => '',
-			'hours_html'    => $hours_html,
-			'hours_label'   => '' !== $hours_html ? 'Режим работы' : '',
-			'email'         => $email,
-			'email_label'   => '' !== $email ? 'почта' : '',
-			'map_image'     => '',
-			'map_embed'     => $map_embed,
-			'map_alt'       => $title,
-			'simplified'    => '1',
-		);
-	}
+		$title = isset( $block['title'] ) ? trim( (string) $block['title'] ) : '';
+		$text  = isset( $block['text'] ) ? trim( (string) $block['text'] ) : '';
 
-	if ( empty( $locations ) ) {
-		return shpigovsky_get_contacts_static_locations();
+		if ( '' !== $title ) {
+			$locations[ $index ]['title'] = $title;
+		}
+
+		if ( '' !== $text ) {
+			$locations[ $index ]['address'] = $text;
+		}
 	}
 
 	return $locations;

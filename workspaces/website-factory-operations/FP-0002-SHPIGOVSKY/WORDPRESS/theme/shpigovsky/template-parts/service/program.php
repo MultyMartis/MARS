@@ -15,6 +15,58 @@ $section_id = 'subdivision' === $variant ? 'service-subdivision-program' : 'serv
 $heading_id = $section_id . '-heading';
 $program_url = home_url( '/o-centre/programma-lecheniya/' );
 
+$program_url = home_url( '/o-centre/programma-lecheniya/' );
+$cta_phone   = shpigovsky_get_site_option( 'phone_primary' );
+$cta_phone   = '' !== $cta_phone ? $cta_phone : '8 (925) 183-64-64';
+
+if ( 'alcohol-special' === $variant ) {
+	$demo       = shpigovsky_get_v9_alcohol_leaf_program_demo_copy();
+	$items      = shpigovsky_get_service_programme_fallback_items();
+	$section_class = 'services-program-v2 services-program-v2--play-link services-program-v2--intro-stacked services-program-v2--title-flush services-program-v2--item-body-spaced services-program-v2--item-image-stack-tall services-program-v2--media-frame-fixed';
+	?>
+<section data-reveal class="<?php echo esc_attr( $section_class ); ?>" id="<?php echo esc_attr( $section_id ); ?>" aria-labelledby="<?php echo esc_attr( $heading_id ); ?>">
+	<div class="container services-program-v2__container">
+		<header class="services-program-v2__head">
+			<h2 class="services-program-v2__heading" id="<?php echo esc_attr( $heading_id ); ?>">
+				<?php echo esc_html__( 'Наша программа включает 4 направления', 'shpigovsky' ); ?>
+			</h2>
+			<a class="home-rehabilitation-program__all-link services-program-v2__all-link" href="<?php echo esc_url( $program_url ); ?>">
+				<span class="home-rehabilitation-program__all-text"><?php echo esc_html__( 'подробнее', 'shpigovsky' ); ?></span>
+				<span class="home-rehabilitation-program__all-icon" aria-hidden="true"><i class="fas fa-play"></i></span>
+			</a>
+		</header>
+
+		<p class="services-program-v2__lead"><?php echo esc_html( $demo['lead'] ); ?></p>
+		<p class="services-program-v2__intro"><?php echo esc_html( $demo['intro'] ); ?></p>
+		<p class="services-program-v2__intro services-program-v2__intro--continued"><?php echo esc_html( $demo['intro2'] ); ?></p>
+
+		<div class="services-program-v2__grid">
+			<?php foreach ( $items as $item ) : ?>
+				<?php
+				$title = isset( $item['title'] ) ? trim( (string) $item['title'] ) : '';
+				$image = isset( $item['image'] ) ? trim( (string) $item['image'] ) : '';
+				$width = isset( $item['width'] ) ? (int) $item['width'] : 0;
+				$height = isset( $item['height'] ) ? (int) $item['height'] : 0;
+				$alt   = isset( $item['alt'] ) ? trim( (string) $item['alt'] ) : $title;
+				?>
+				<article class="services-program-v2__item">
+					<div class="services-program-v2__item-body">
+						<h3 class="services-program-v2__item-title"><?php echo esc_html( $title ); ?></h3>
+					</div>
+					<?php if ( '' !== $image ) : ?>
+						<div class="services-program-v2__item-media">
+							<img class="services-program-v2__item-image" src="<?php echo esc_url( $image ); ?>" width="<?php echo esc_attr( (string) $width ); ?>" height="<?php echo esc_attr( (string) $height ); ?>" alt="<?php echo esc_attr( $alt ); ?>" loading="lazy" decoding="async">
+						</div>
+					<?php endif; ?>
+				</article>
+			<?php endforeach; ?>
+		</div>
+	</div>
+</section>
+	<?php
+	return;
+}
+
 if ( 'subdivision' === $variant ) {
 	$items = shpigovsky_get_service_repeater( $post_id, 'programme_items' );
 	$fallback_items = shpigovsky_get_service_subdivision_programme_fallback_items();

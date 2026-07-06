@@ -1,0 +1,16 @@
+{
+  "routes": {
+    "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/": {
+      "layout": "PASS",
+      "content": "PARTIAL_DEMO_PROGRAM_LOREM"
+    },
+    "/uslugi/psihicheskoe-zdorovie/": {
+      "layout": "PASS_SUBDIVISION",
+      "content": "DEMO"
+    },
+    "/uslugi/rasstroystva-pischevogo-povedeniya/": {
+      "layout": "PASS_SUBDIVISION",
+      "content": "DEMO"
+    }
+  }
+}

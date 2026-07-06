@@ -273,15 +273,18 @@ function shpigovsky_get_services_hub_subnav_items() {
 		}
 
 		$section_id = isset( $group['section_id'] ) ? trim( (string) $group['section_id'] ) : '';
+		$slug       = isset( $group['slug'] ) ? trim( (string) $group['slug'] ) : '';
 		$title      = isset( $group['title'] ) ? trim( (string) $group['title'] ) : '';
+		$v9         = '' !== $slug ? shpigovsky_get_v9_services_hub_group_copy( $slug ) : null;
+		$label      = null !== $v9 && '' !== $v9['subnav_label'] ? $v9['subnav_label'] : $title;
 
-		if ( '' === $section_id || '' === $title ) {
+		if ( '' === $section_id || '' === $label ) {
 			continue;
 		}
 
 		$items[] = array(
 			'id'    => $section_id,
-			'label' => $title,
+			'label' => $label,
 		);
 	}
 
@@ -327,27 +330,34 @@ function shpigovsky_build_services_hub_child_card( $child ) {
 		return null;
 	}
 
-	$title = get_the_title( $child );
+	$slug  = $child->post_name;
+	$v9    = shpigovsky_get_v9_services_hub_child_copy( $slug );
+	$title = null !== $v9 && '' !== $v9['title'] ? $v9['title'] : get_the_title( $child );
 	$url   = get_permalink( $child );
 
 	if ( '' === $title ) {
 		return null;
 	}
 
-	$text = shpigovsky_get_service_field( $child->ID, 'intro_text' );
+	if ( null !== $v9 ) {
+		$text = $v9['text'];
+	} else {
+		$text = shpigovsky_get_service_field( $child->ID, 'intro_text' );
 
-	if ( '' === $text ) {
-		$text = shpigovsky_get_service_field( $child->ID, 'hero_lead' );
-	}
+		if ( '' === $text ) {
+			$text = shpigovsky_get_service_field( $child->ID, 'hero_lead' );
+		}
 
-	if ( '' === $text ) {
-		$text = trim( (string) get_the_excerpt( $child ) );
+		if ( '' === $text ) {
+			$text = trim( (string) get_the_excerpt( $child ) );
+		}
 	}
 
 	return array(
 		'title' => $title,
 		'url'   => is_string( $url ) ? $url : '',
 		'text'  => $text,
+		'slug'  => $slug,
 	);
 }
 
@@ -429,17 +439,36 @@ function shpigovsky_get_services_hub_groups() {
 		}
 
 		$slug = $parent->post_name;
+		$v9   = shpigovsky_get_v9_services_hub_group_copy( $slug );
 
-		$lead_primary   = shpigovsky_get_service_field( $parent->ID, 'hero_lead' );
-		$lead_secondary = shpigovsky_get_service_field( $parent->ID, 'intro_text' );
+		if ( null !== $v9 ) {
+			$lead_primary   = $v9['intro'];
+			$lead_secondary = $v9['lead'];
+			$group_title    = $v9['title'];
+		} else {
+			$lead_primary   = shpigovsky_get_service_field( $parent->ID, 'hero_lead' );
+			$lead_secondary = shpigovsky_get_service_field( $parent->ID, 'intro_text' );
+			$group_title    = get_the_title( $parent );
 
-		if ( '' === $lead_secondary ) {
-			$lead_secondary = shpigovsky_get_service_field( $parent->ID, 'intro_note' );
+			if ( '' === $lead_secondary ) {
+				$lead_secondary = shpigovsky_get_service_field( $parent->ID, 'intro_note' );
+			}
+		}
+
+		$gallery = shpigovsky_get_services_hub_group_gallery( $slug );
+		$captions = shpigovsky_get_v9_services_hub_gallery_captions( $slug );
+
+		if ( ! empty( $captions ) ) {
+			foreach ( $gallery as $index => $image ) {
+				if ( isset( $captions[ $index ] ) ) {
+					$gallery[ $index ]['caption'] = $captions[ $index ];
+				}
+			}
 		}
 
 		$groups[] = array(
 			'parent_id'      => $parent->ID,
-			'title'          => get_the_title( $parent ),
+			'title'          => $group_title,
 			'slug'           => $slug,
 			'lead_primary'   => $lead_primary,
 			'lead_secondary' => $lead_secondary,
@@ -451,7 +480,8 @@ function shpigovsky_get_services_hub_groups() {
 			'icon'           => shpigovsky_get_services_hub_group_icon( $slug ),
 			'cta_source'     => 'services-' . sanitize_html_class( $slug ),
 			'children'       => $cards,
-			'gallery'        => shpigovsky_get_services_hub_group_gallery( $slug ),
+			'gallery'        => $gallery,
+			'cta_label'      => null !== $v9 ? $v9['cta_label'] : 'Записаться на консультацию',
 		);
 	}
 
