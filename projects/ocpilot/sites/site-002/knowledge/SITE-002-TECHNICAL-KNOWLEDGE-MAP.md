@@ -509,7 +509,8 @@ Product SEO URLs created during catalog import (`oc_seo_url` where `query LIKE '
 | PDP keyword gap follow-up (Production) | **COMPLETE — NO MUTATION REQUIRED** (Run 4.208) — 11 Run 4.206 “missing keywords” = hub/category PLP (`page--category`); 0 true PDP gaps; `product.php` v1.1 unchanged · [report](../reports/SITE-002-PROD-SEO-PRODUCT-META-GENERATOR-TUNE-02.md) |
 | Sitemap delta audit (Production) | **COMPLETE — MINOR REVIEW ITEMS** (Run 4.209) — baseline 1320 (4.206) → live **1377**; +59/−2; konditerskiy-inventar catalog growth; 0 RED on added; 2 YELLOW category meta · [report](../reports/SITE-002-PROD-SITEMAP-DELTA-AUDIT-01.md) |
 | New catalog branch onboarding (Production) | **COMPLETE** (Run 4.210 + 4.211) — 1C growth onboarding; admin category SEO for ids **360/361/88/141/140**; parent-aware resolution for `/lari/proizvodstvennye-lari` · [follow-up report](../reports/SITE-002-PROD-CATALOG-BRANCH-ONBOARDING-FOLLOWUP-01.md) · [Run 4.210](../reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-01.md) |
-| Post-1C catalog monitor (Production) | **SCHEDULER VERIFIED — TASK ENABLED** (Run 4.216) — runner quoting fix for `X:\AI MARS` paths; Windows Task LastTaskResult **0**; daily **12:30 Barnaul**; prior read-only pass **NO ONBOARDING NEEDED** (Run 4.213) · [runner fix](../reports/SITE-002-POST-1C-MONITOR-SCHEDULER-RUNNER-FIX-01.md) · [readiness](../reports/SITE-002-POST-1C-MONITOR-SCHEDULER-READINESS-01.md) · [runbook](../runbooks/SITE-002-POST-1C-MONITOR-AUTOMATION-RUNBOOK.md) · [tool](../tools/site-002-post-1c-monitor-runner.ps1) · [monitor](../tools/site-002-prod-post-1c-catalog-onboarding-monitor-02.py) |
+| Post-1C catalog monitor (Production) | **SCHEDULER VERIFIED — TASK ENABLED** (Run 4.216) — runner quoting fix for `X:\AI MARS` paths; Windows Task LastTaskResult **0**; daily **12:30 Barnaul**; server-side migration **DEFERRED**; prior read-only pass **NO ONBOARDING NEEDED** (Run 4.213) · [runner fix](../reports/SITE-002-POST-1C-MONITOR-SCHEDULER-RUNNER-FIX-01.md) · [readiness](../reports/SITE-002-POST-1C-MONITOR-SCHEDULER-READINESS-01.md) · [runbook](../runbooks/SITE-002-POST-1C-MONITOR-AUTOMATION-RUNBOOK.md) · [tool](../tools/site-002-post-1c-monitor-runner.ps1) · [monitor](../tools/site-002-prod-post-1c-catalog-onboarding-monitor-02.py) |
+| UX task intake (Production) | **CHARTERS READY** (Run 4.217) — Task 01: Лари (id **88**) + Кондитерский инвентарь (id **360**) missing from home/hub `zpm-cat-card` tiles; authority `category_visibility.php` + admin images (Run 4.195 pattern) · Task 02: PDP attribute «Дополнительные сведения» in `spec-table` — **66%** sampled PDPs; controller extraction recommended · future ops `SITE-002-PROD-NEW-SECTIONS-ENTRYPOINTS-01` / `SITE-002-PROD-PDP-EXTRA-INFO-ATTRIBUTE-LAYOUT-01` · [intake report](../reports/SITE-002-PROD-UX-TASK-INTAKE-01.md) · [tool](../tools/site-002-prod-ux-task-intake-01.py) |
 | OpenCart Document robots API | **Not available** — no `Document::setRobots()`; use `X-Robots-Tag` response header; `header.twig` hardcodes `<meta robots index,follow>` |
 | Yandex Metrika / Webmaster (live Twig) | **VERIFIED** (Run 4.189) — preserved after Run 4.192 |
 | Duplicate body / preloader (Production) | **FIXED** (Run 4.190) — unchanged by Run 4.192 |
@@ -912,6 +913,29 @@ See §6. Per-category PHP profiles control which attributes appear in sidebar an
 | Images | `image/catalog/Category-image/{slug}.webp` — **COMPOSER_ONLY_NO_API** |
 | Checkpoint | `SITE-002-STABLE-PROD-NEUTRAL-PARENT-CATEGORIES-01` |
 | Report | [SITE-002-PROD-NEUTRAL-PARENT-CATEGORIES-ROLLOUT-01.md](../reports/SITE-002-PROD-NEUTRAL-PARENT-CATEGORIES-ROLLOUT-01.md) |
+
+### Pending new section entry points (intake Run 4.217)
+
+| Field | Value |
+|-------|-------|
+| Sections | **Лари** (category_id **88**) · **Кондитерский инвентарь** (category_id **360**) |
+| Live PLP | HTTP 200; meta onboarded (Runs 4.210–4.211) |
+| Megamenu | Present |
+| Homepage/hub `zpm-cat-card` | **Absent** (still 9 tiles from Run 4.195 set) |
+| Future implementation | Extend `$neutral_hub_branch_ids` + category tile images — charter `SITE-002-PROD-NEW-SECTIONS-ENTRYPOINTS-01` |
+| Intake report | [SITE-002-PROD-UX-TASK-INTAKE-01.md](../reports/SITE-002-PROD-UX-TASK-INTAKE-01.md) |
+
+### PDP attribute «Дополнительные сведения» (intake Run 4.217)
+
+| Field | Value |
+|-------|-------|
+| Issue | Long prose attribute inside `spec-table` breaks compact specs layout |
+| Sample prevalence | **66/100** PDPs (66%) in random sitemap sample |
+| Authority | `product.php` → `getProductAttributes()` → `attribute_groups` → Twig `spec-table` |
+| Recommended fix | Controller extraction; render separate block below `product-content__specs-toggle-wrap` |
+| Data changes | **None** — display-only |
+| Future operation | `SITE-002-PROD-PDP-EXTRA-INFO-ATTRIBUTE-LAYOUT-01` |
+| Intake report | [SITE-002-PROD-UX-TASK-INTAKE-01.md](../reports/SITE-002-PROD-UX-TASK-INTAKE-01.md) |
 
 ### Neutral category image white-bg refresh (Production Run 4.196)
 

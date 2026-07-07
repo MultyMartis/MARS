@@ -54,6 +54,7 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `site-002-post-1c-monitor-runner.ps1` | Local scheduled runner — invokes read-only post-1C monitor; call-operator quoting for `X:\AI MARS` paths; logs under Storage `scheduled-monitors/post-1c/` (Run 4.215 / **4.216 fix**) |
 | `install-site-002-post-1c-monitor-task.ps1` | Windows Task install — `MARS_SITE_002_Post_1C_Catalog_Monitor`; **disabled by default**; `-Enable -ConfirmEnable` for enabled task (Run 4.215) |
 | `uninstall-site-002-post-1c-monitor-task.ps1` | Windows Task uninstall — exact task name only (Run 4.215) |
+| `site-002-prod-ux-task-intake-01.py` | Read-only UX task intake — new section tiles + PDP «Дополнительные сведения» authority for `SITE-002-PROD-UX-TASK-INTAKE-01` (Run 4.217) |
 
 ### Post-1C monitor scheduler notes (Run 4.216)
 
