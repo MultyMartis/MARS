@@ -1,7 +1,7 @@
 # SITE-002 — Site Passport
 
-**Status:** **STABLE PRODUCTION CHECKPOINT — CATALOG NEW BRANCH 01** (new 1C branch onboarding Run 4.210; 4 admin category SEO saves)
-**Run:** 4.210 — SITE-002 New Catalog Branch Onboarding (2026-07-07)
+**Status:** **STABLE PRODUCTION CHECKPOINT — CATALOG BRANCH FOLLOWUP 01** (deferred lari branch resolved Run 4.211; 1 admin category SEO save)
+**Run:** 4.211 — SITE-002 Catalog Branch Onboarding Follow-up (2026-07-07)
 
 ---
 
@@ -28,10 +28,10 @@
 | **Production Profile** | [production-profile.md](production-profile.md) |
 | **Production connection** | **VERIFIED** — HTTP/admin (Run 4.171) + FTP/file baseline (Run 4.171-R1); path model reconciled (Run 4.172) |
 | **Production baseline** | **PARENT** — [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| **Current Production checkpoint** | **ISSUED** — [baselines/SITE-002-STABLE-PROD-CATALOG-NEW-BRANCH-01.md](baselines/SITE-002-STABLE-PROD-CATALOG-NEW-BRANCH-01.md) (parent [SITE-002-STABLE-PROD-SEO-META-EDGE-01.md](baselines/SITE-002-STABLE-PROD-SEO-META-EDGE-01.md); brand [SITE-002-STABLE-PROD-BRAND-ZPM-01.md](baselines/SITE-002-STABLE-PROD-BRAND-ZPM-01.md)) |
+| **Current Production checkpoint** | **ISSUED** — [baselines/SITE-002-STABLE-PROD-CATALOG-BRANCH-FOLLOWUP-01.md](baselines/SITE-002-STABLE-PROD-CATALOG-BRANCH-FOLLOWUP-01.md) (parent [SITE-002-STABLE-PROD-CATALOG-NEW-BRANCH-01.md](baselines/SITE-002-STABLE-PROD-CATALOG-NEW-BRANCH-01.md); brand [SITE-002-STABLE-PROD-BRAND-ZPM-01.md](baselines/SITE-002-STABLE-PROD-BRAND-ZPM-01.md)) |
 | **Public brand policy** | **ЗПМ** — correct public Russian brand · **БЗПМ** forbidden in public copy/meta/llms/generated output · domain `bzpm.ru` unchanged · **0 violations after Run 4.207 edge fix** |
 | **Deep PLP meta edge fix** | **COMPLETE — DEEP PLP META VERIFIED** (Run 4.207) — [report](reports/SITE-002-PROD-SEO-META-EDGE-FIX-01.md) |
-| **New catalog branch onboarding** | **PARTIAL — DEFERRED SAFE UNKNOWN** (Run 4.210) — konditerskiy-inventar/formy-konditerskie meta configured (ids 360/361); lari meta strengthened (88/141); 1 deferred · [report](reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-01.md) · prior [Run 4.209](reports/SITE-002-PROD-SITEMAP-DELTA-AUDIT-01.md) |
+| **New catalog branch onboarding** | **COMPLETE** (Run 4.210 + 4.211) — konditerskiy-inventar/formy-konditerskie (360/361); lari branches (88/141/140); deferred `/lari/proizvodstvennye-lari` resolved · [follow-up](reports/SITE-002-PROD-CATALOG-BRANCH-ONBOARDING-FOLLOWUP-01.md) · [Run 4.210](reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-01.md) |
 | **MARS 1C cron wrapper** | **OPERATIONAL — FIRST SCHEDULED RUN VERIFIED** (Run 4.194) — automatic run SUCCESS 2026-07-06 08:00 Moscow; run ID `mars-20260706-080002-09436ae7`; report `mars_1c_import_2026-07-06_080007.txt`; daily import OPERATIONAL; Sergey legacy preserved |
 | **Mail recipients** | **ACTIVE — ADMIN-MANAGED** (Run 4.187) — handler `checkout/anketa.php`; list via OpenCart `config_mail_alert_email`; operator updated admin **Additional Alert Emails**; delivery verified; no code deploy · [discovery](reports/SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01.md) · [confirmation](reports/SITE-002-PROD-MAIL-RECIPIENTS-ADMIN-ADD-01.md) |
 | **MARS 1C cron reports** | **CURRENT** (Run 4.194) — first scheduled report `mars_1c_import_2026-07-06_080007.txt` verified; prior manual run preserved; [SITE-002-PROD-CRON-FIRST-SCHEDULED-RUN-VERIFY-01.md](reports/SITE-002-PROD-CRON-FIRST-SCHEDULED-RUN-VERIFY-01.md) |

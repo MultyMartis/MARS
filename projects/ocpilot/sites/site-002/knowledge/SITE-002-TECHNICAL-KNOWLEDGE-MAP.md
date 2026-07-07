@@ -508,7 +508,7 @@ Product SEO URLs created during catalog import (`oc_seo_url` where `query LIKE '
 | Deep PLP meta edge fix (Production) | **COMPLETE — DEEP PLP META VERIFIED** (Run 4.207) — 66 sub-category admin SEO descriptions; authority `category_description[1][meta_description]`; 0 FTP/DB · [report](../reports/SITE-002-PROD-SEO-META-EDGE-FIX-01.md) |
 | PDP keyword gap follow-up (Production) | **COMPLETE — NO MUTATION REQUIRED** (Run 4.208) — 11 Run 4.206 “missing keywords” = hub/category PLP (`page--category`); 0 true PDP gaps; `product.php` v1.1 unchanged · [report](../reports/SITE-002-PROD-SEO-PRODUCT-META-GENERATOR-TUNE-02.md) |
 | Sitemap delta audit (Production) | **COMPLETE — MINOR REVIEW ITEMS** (Run 4.209) — baseline 1320 (4.206) → live **1377**; +59/−2; konditerskiy-inventar catalog growth; 0 RED on added; 2 YELLOW category meta · [report](../reports/SITE-002-PROD-SITEMAP-DELTA-AUDIT-01.md) |
-| New catalog branch onboarding (Production) | **PARTIAL — DEFERRED SAFE UNKNOWN** (Run 4.210) — 1C growth onboarding; admin category SEO for ids **360/361/88/141**; daily growth rule documented; 1 deferred `/lari/proizvodstvennye-lari` · [report](../reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-01.md) |
+| New catalog branch onboarding (Production) | **COMPLETE** (Run 4.210 + 4.211) — 1C growth onboarding; admin category SEO for ids **360/361/88/141/140**; parent-aware resolution for `/lari/proizvodstvennye-lari` · [follow-up report](../reports/SITE-002-PROD-CATALOG-BRANCH-ONBOARDING-FOLLOWUP-01.md) · [Run 4.210](../reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-01.md) |
 | OpenCart Document robots API | **Not available** — no `Document::setRobots()`; use `X-Robots-Tag` response header; `header.twig` hardcodes `<meta robots index,follow>` |
 | Yandex Metrika / Webmaster (live Twig) | **VERIFIED** (Run 4.189) — preserved after Run 4.192 |
 | Duplicate body / preloader (Production) | **FIXED** (Run 4.190) — unchanged by Run 4.192 |
@@ -1064,15 +1064,16 @@ Before **any** task touching **trust block**, **certificates**, **dealers form**
 - Post-import verify: product count, index coverage, sample PLP price range
 - Never assume index is current without checking `oc_product_price_index` row count
 
-### 1C catalog growth onboarding (Run 4.210)
+### 1C catalog growth onboarding (Run 4.210 + 4.211)
 
 - Daily 1C import may add categories/products — **normal growth**, not default garbage
 - New sitemap URLs → classify: PRODUCT_PDP vs CATEGORY_PLP vs CATEGORY_HUB vs TECHNICAL
 - **Onboard** new category PLP/hub (admin `meta_description` only) — do **not** delete/hide/noindex by default
 - PDP meta → product generator track; category PLP meta → admin category SEO track
 - Post-import monitoring: diff sitemap for new CATEGORY_PLP with missing meta (see Run 4.209 classifier)
-- Onboarded 2026-07-07: category ids **360** (konditerskiy-inventar), **361** (formy-konditerskie), **88** (lari), **141** (skladskie-lari)
-- Deferred: `/lari/proizvodstvennye-lari` — SAFE UNKNOWN `category_id`
+- Onboarded 2026-07-07: category ids **360** (konditerskiy-inventar), **361** (formy-konditerskie), **88** (lari), **141** (skladskie-lari), **140** (proizvodstvennye-lari under Лари)
+- **Parent-aware resolution** required when admin names duplicate (e.g. «Производственные» id 140 under Лари vs id 130 under Шкафы)
+- Deferred Run 4.210 `/lari/proizvodstvennye-lari` — **RESOLVED** Run 4.211 → category_id **140**, HIGH confidence
 
 ### Filter change rules
 
