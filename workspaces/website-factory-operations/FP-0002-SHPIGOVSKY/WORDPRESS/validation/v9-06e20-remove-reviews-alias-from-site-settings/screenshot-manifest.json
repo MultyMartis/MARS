@@ -1,0 +1,22 @@
+{
+    "wave": "V9-06E20",
+    "result": "PARTIAL",
+    "notes": "Admin/frontend screenshots not captured in CLI runner; validation via source/DB/HTTP probes",
+    "items": [
+        {
+            "name": "admin-site-settings-menu-no-reviews-alias-e20.png",
+            "captured": false,
+            "result": "PARTIAL"
+        },
+        {
+            "name": "admin-top-level-reviews-still-visible-e20.png",
+            "captured": false,
+            "result": "PARTIAL"
+        },
+        {
+            "name": "runtime-home-reviews-regression-e20.png",
+            "captured": false,
+            "result": "PARTIAL"
+        }
+    ]
+}

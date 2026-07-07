@@ -1,0 +1,26 @@
+{
+    "wave": "V9-06E20",
+    "result": "PASS",
+    "steps": [
+        {
+            "component": "OptionsPage.php",
+            "action": "Remove fp02-block-reviews registration and batch1 promotion",
+            "safety": "No data migration"
+        },
+        {
+            "component": "ACF JSON",
+            "action": "Remove fp02-block-reviews location; keep fp02-reviews",
+            "safety": "Canonical storage unchanged"
+        },
+        {
+            "component": "Runtime DB",
+            "action": "acf_import_field_group for reviews group only if dual location in DB",
+            "safety": "Metadata only"
+        },
+        {
+            "component": "Top-level Отзывы",
+            "action": "Preserve theme admin-options.php fp02-reviews menu",
+            "safety": "No theme edit required"
+        }
+    ]
+}

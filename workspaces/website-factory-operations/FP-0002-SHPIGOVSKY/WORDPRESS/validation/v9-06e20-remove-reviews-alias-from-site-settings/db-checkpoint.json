@@ -1,0 +1,16 @@
+{
+  "wave": "V9-06E20",
+  "result": "PASS",
+  "checkpoint_path": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e20-remove-reviews-alias-from-site-settings-pre-20260708-022042",
+  "dump_file": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e20-remove-reviews-alias-from-site-settings-pre-20260708-022042\\mars_wp_fp0002.sql",
+  "dump_sha256": "61D475EB22DA8DAE7CD4AA95D9D7747F9ECDC2983CDF081303DD597F1E2C03FB",
+  "dump_size_bytes": 2193011,
+  "dump_note": "Fresh mysqldump via X:\\MARS-Localhost\\laragon\\bin\\mysql\\mysql-8.4.3-winx64\\bin\\mysqldump.exe (tablespaces warning only; dump complete)",
+  "db": "mars_wp_fp0002",
+  "prefix": "fp02_",
+  "e19_baseline_commit": "65dd966e3b819f919941b4e5e784f2c6243dfd7a",
+  "snapshots": [
+    "options-reviews-snapshot.json"
+  ],
+  "restore_instructions": "mysql --host=127.0.0.1 --user=mli_shpigovsky_app mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e20-remove-reviews-alias-from-site-settings-pre-20260708-022042\\mars_wp_fp0002.sql\""
+}

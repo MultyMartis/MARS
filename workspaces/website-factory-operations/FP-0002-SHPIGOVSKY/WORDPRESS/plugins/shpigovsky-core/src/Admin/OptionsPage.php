@@ -137,10 +137,6 @@ final class OptionsPage implements ModuleInterface {
 				'menu_slug'  => 'fp02-block-specialists',
 			),
 			array(
-				'menu_title' => __( 'Отзывы', 'shpigovsky-core' ),
-				'menu_slug'  => 'fp02-block-reviews',
-			),
-			array(
 				'menu_title' => __( 'CTA-блоки', 'shpigovsky-core' ),
 				'menu_slug'  => 'fp02-block-cta-bands',
 			),
@@ -180,9 +176,7 @@ final class OptionsPage implements ModuleInterface {
 				'autoload'    => false,
 			);
 
-			if ( 'fp02-block-reviews' === $block['menu_slug'] ) {
-				$subpage['post_id'] = 'fp02-reviews';
-			} elseif ( $is_batch1 ) {
+			if ( $is_batch1 ) {
 				$subpage['post_id'] = $block['menu_slug'];
 			}
 
@@ -201,7 +195,6 @@ final class OptionsPage implements ModuleInterface {
 		return array(
 			'fp02-block-final-form',
 			'fp02-block-specialists',
-			'fp02-block-reviews',
 			'fp02-block-cta-bands',
 		);
 	}
@@ -265,18 +258,7 @@ final class OptionsPage implements ModuleInterface {
 			return;
 		}
 
-		if ( in_array( $page, self::get_batch1_fielded_block_slugs(), true ) && 'fp02-block-reviews' !== $page ) {
-			return;
-		}
-
-		if ( 'fp02-block-reviews' === $page ) {
-			echo '<div class="notice notice-info"><p>';
-			echo esc_html__( 'Алиас редактирования отзывов (V9-06E18). Данные сохраняются в том же хранилище, что и меню «Отзывы».', 'shpigovsky-core' );
-			echo ' ';
-			echo '<a href="' . esc_url( admin_url( 'admin.php?page=fp02-reviews' ) ) . '">';
-			echo esc_html__( 'Открыть верхнее меню «Отзывы»', 'shpigovsky-core' );
-			echo '</a>';
-			echo '</p></div>';
+		if ( in_array( $page, self::get_batch1_fielded_block_slugs(), true ) ) {
 			return;
 		}
 

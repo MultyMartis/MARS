@@ -1,0 +1,22 @@
+{
+    "wave": "V9-06E20",
+    "result": "PASS",
+    "files": [
+        {
+            "source": "WORDPRESS/plugins/shpigovsky-core/src/Admin/OptionsPage.php",
+            "runtime": "wp-content/plugins/shpigovsky-core/src/Admin/OptionsPage.php",
+            "sha256_source": "DCF3568B6B060D68E0AEAE4347ADDDB1B202F684F2F10B76FF2775ED8E4C4C3C",
+            "sha256_runtime": "DCF3568B6B060D68E0AEAE4347ADDDB1B202F684F2F10B76FF2775ED8E4C4C3C",
+            "delivered": true,
+            "result": "PASS"
+        },
+        {
+            "source": "WORDPRESS/acf-json/group_fp02_site_options_reviews.json",
+            "runtime": "acf-json/group_fp02_site_options_reviews.json",
+            "sha256_source": "C70C6460114826C08C0D6EFBC7E73CBBAF964E2FD828840E493D4584C302E49C",
+            "sha256_runtime": "C70C6460114826C08C0D6EFBC7E73CBBAF964E2FD828840E493D4584C302E49C",
+            "delivered": true,
+            "result": "PASS"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "wave": "V9-06E20",
+    "result": "PASS",
+    "notes": "HTTP probe only; no browser console capture in CLI runner",
+    "checks": [
+        {
+            "check": "no_php_fatal_on_routes",
+            "result": "PASS"
+        },
+        {
+            "check": "home_reviews_marker",
+            "result": "PASS"
+        },
+        {
+            "check": "otzyvy_route",
+            "result": "PASS"
+        }
+    ]
+}

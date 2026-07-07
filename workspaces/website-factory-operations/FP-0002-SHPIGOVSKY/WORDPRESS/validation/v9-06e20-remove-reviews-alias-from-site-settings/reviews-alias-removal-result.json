@@ -1,0 +1,22 @@
+{
+    "wave": "V9-06E20",
+    "result": "PASS",
+    "before": {
+        "reviews_alias_under_site_settings": true,
+        "field_group_locations": [
+            "fp02-reviews",
+            "fp02-block-reviews"
+        ],
+        "alias_page_registered": true
+    },
+    "after": {
+        "reviews_alias_under_site_settings": false,
+        "field_group_locations": [
+            "fp02-reviews"
+        ],
+        "alias_page_registered": false,
+        "top_level_reviews": true,
+        "reviews_storage": "fp02-reviews",
+        "review_rows": 10
+    }
+}

@@ -1,0 +1,82 @@
+{
+    "wave": "V9-06E20",
+    "result": "PASS",
+    "admin_screenshots": "PARTIAL",
+    "site_settings_branch": [
+        {
+            "title": "Общие настройки",
+            "slug": "fp02-site-settings-general"
+        },
+        {
+            "title": "Повторяемые блоки",
+            "slug": "fp02-site-settings-blocks"
+        },
+        {
+            "title": "Общие настройки",
+            "slug": "fp02-site-settings-general"
+        },
+        {
+            "title": "Повторяемые блоки",
+            "slug": "fp02-site-settings-blocks"
+        },
+        {
+            "title": "Финальная форма",
+            "slug": "fp02-block-final-form"
+        },
+        {
+            "title": "Специалисты",
+            "slug": "fp02-block-specialists"
+        },
+        {
+            "title": "CTA-блоки",
+            "slug": "fp02-block-cta-bands"
+        }
+    ],
+    "checks": [
+        {
+            "admin_item": "fp02-site-settings-general",
+            "result": "PASS",
+            "notes": "Site Settings branch"
+        },
+        {
+            "admin_item": "fp02-site-settings-blocks",
+            "result": "PASS",
+            "notes": "Site Settings branch"
+        },
+        {
+            "admin_item": "fp02-block-final-form",
+            "result": "PASS",
+            "notes": "Site Settings branch"
+        },
+        {
+            "admin_item": "fp02-block-specialists",
+            "result": "PASS",
+            "notes": "Site Settings branch"
+        },
+        {
+            "admin_item": "fp02-block-cta-bands",
+            "result": "PASS",
+            "notes": "Site Settings branch"
+        },
+        {
+            "admin_item": "Отзывы alias absent from Site Settings",
+            "result": "PASS",
+            "notes": "fp02-block-reviews removed from OptionsPage registration"
+        },
+        {
+            "admin_item": "top-level Отзывы",
+            "result": "PASS",
+            "notes": "slug fp02-reviews; post_id fp02-reviews"
+        },
+        {
+            "admin_item": "reviews field group canonical location",
+            "result": "PASS",
+            "notes": "dual location removed"
+        },
+        {
+            "admin_item": "reviews data preserved",
+            "result": "PASS",
+            "notes": "sample author: Андрей, Москва"
+        }
+    ]
+}

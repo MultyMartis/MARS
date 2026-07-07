@@ -213,13 +213,6 @@
                 "operator": "==",
                 "value": "fp02-reviews"
             }
-        ],
-        [
-            {
-                "param": "options_page",
-                "operator": "==",
-                "value": "fp02-block-reviews"
-            }
         ]
     ],
     "menu_order": 2,
@@ -229,7 +222,7 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
-    "description": "FP-0002 V9-06D9-U options reviews — fp02-reviews + fp02-block-reviews alias (E18).",
+    "description": "FP-0002 V9-06D9-U options reviews — fp02-reviews canonical (E20 removed alias).",
     "show_in_rest": 0,
-    "modified": 1783690000
+    "modified": 1783780000
 }

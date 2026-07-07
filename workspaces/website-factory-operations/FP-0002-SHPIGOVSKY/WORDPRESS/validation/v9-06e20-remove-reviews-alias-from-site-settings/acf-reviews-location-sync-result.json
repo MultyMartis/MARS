@@ -1,0 +1,18 @@
+{
+    "wave": "V9-06E20",
+    "result": "PASS",
+    "data": {
+        "group": "group_fp02_site_options_reviews",
+        "before_locations": [
+            "fp02-reviews",
+            "fp02-block-reviews"
+        ],
+        "after_locations": [
+            "fp02-reviews"
+        ],
+        "db_write": true,
+        "import_result": "acf_update_field_group",
+        "alias_removed": true,
+        "canonical_preserved": true
+    }
+}

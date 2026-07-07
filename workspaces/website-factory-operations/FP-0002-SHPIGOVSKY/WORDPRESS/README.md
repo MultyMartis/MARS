@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E19 REUSABLE BLOCKS ADMIN VISIBILITY REPAIR **PASS** — Batch 1 admin pages visible under **Настройки сайта** (flat 2-level menu); reviews dual-location synced; **1** plugin file; **1** DB write; runtime delivered; frontend 8/8 PASS; admin screenshots PARTIAL. NEXT: **CREATE_V9_06E20_OPERATOR_REUSABLE_BLOCKS_ADMIN_QA_TASK**
+**Status:** V9-06E20 REMOVE REVIEWS ALIAS FROM SITE SETTINGS **PASS** — **Отзывы** removed from **Настройки сайта**; top-level **Отзывы** preserved; reviews field group single location `fp02-reviews`; **1** plugin file; **1** ACF JSON; **1** ACF metadata DB write; fresh DB dump checkpoint; runtime delivered; frontend 7/7 PASS; admin screenshots PARTIAL. NEXT: **CREATE_V9_06E21_REUSABLE_BLOCKS_BATCH_2_FIELDS_TASK**
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

@@ -1,0 +1,37 @@
+{
+  "wave": "V9-06E20",
+  "phase": "BASELINE",
+  "result": "PASS",
+  "data": {
+    "site_settings_submenu_before": [
+      "fp02-site-settings-general",
+      "fp02-site-settings-blocks",
+      "fp02-block-final-form",
+      "fp02-block-specialists",
+      "fp02-block-reviews",
+      "fp02-block-cta-bands"
+    ],
+    "reviews_alias_present": true,
+    "top_level_reviews": {
+      "slug": "fp02-reviews",
+      "post_id": "fp02-reviews",
+      "registered": true
+    },
+    "field_group": {
+      "key": "group_fp02_site_options_reviews",
+      "locations": [
+        "fp02-reviews",
+        "fp02-block-reviews"
+      ],
+      "dual_location": true
+    },
+    "reviews_data": {
+      "context": "fp02-reviews",
+      "review_rows": 10,
+      "sample_author": "Андрей, Москва",
+      "options_prefix": "fp02-reviews_",
+      "options_count": 166
+    },
+    "risk": "Removing alias must not unregister top-level fp02-reviews or mutate fp02-reviews_* options"
+  }
+}
