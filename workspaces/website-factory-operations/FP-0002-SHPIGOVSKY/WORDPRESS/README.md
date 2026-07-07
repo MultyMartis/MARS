@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E14 SERVICE ADMIN FIELDS + SERVICE TREE DEMO CONTENT REPAIR **PASS** — `service_short_description` ACF field + hub rendering; dependencies tree repaired (3 demo leaves, specialistam service trashed); psych/eating subdivision demo seeded; **46** DB writes; DB checkpoint YES. NEXT: **CREATE_V9_06E15_OPERATOR_SERVICE_TREE_VISUAL_QA_TASK**
+**Status:** V9-06E15 SERVICE MINI-DESCRIPTION SOURCE + SUBDIVISION SLIDERS REGRESSION REPAIR **PASS** — ACF-first mini-description hardening + subdivision Swiper vendors; **2** DB writes (seed repair); DB checkpoint YES; **11/11** screenshots PASS. NEXT: **CREATE_V9_06E16_OPERATOR_SERVICE_TREE_VISUAL_QA_TASK**
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

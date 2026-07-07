@@ -1,0 +1,10 @@
+{
+  "changed_files": [
+    "inc/services-hub-helpers.php"
+  ],
+  "priority": "ACF_FIELD -> post_meta -> V9_FALLBACK -> DEMO_FALLBACK",
+  "source_resolver": "shpigovsky_resolve_service_mini_description_source",
+  "grouped_path": "shpigovsky_build_services_hub_child_card -> shpigovsky_get_service_mini_description",
+  "flat_path": "shpigovsky_get_services_hub_flat_group -> same child card builder",
+  "result": "PASS"
+}

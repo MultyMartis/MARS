@@ -128,11 +128,21 @@ function shpigovsky_get_services_hub_repeater( $field_name ) {
  * @return string
  */
 function shpigovsky_get_service_field( $post_id, $field_name ) {
-	if ( ! function_exists( 'get_field' ) || $post_id <= 0 ) {
+	$post_id = (int) $post_id;
+
+	if ( $post_id <= 0 ) {
 		return '';
 	}
 
-	$value = get_field( $field_name, $post_id );
+	$value = '';
+
+	if ( function_exists( 'get_field' ) ) {
+		$value = get_field( $field_name, $post_id );
+	}
+
+	if ( ( '' === $value || null === $value ) && '' !== $field_name ) {
+		$value = get_post_meta( $post_id, $field_name, true );
+	}
 
 	if ( is_array( $value ) || is_object( $value ) ) {
 		return '';
@@ -341,6 +351,42 @@ function shpigovsky_get_service_demo_mini_description_fallback( $slug ) {
 }
 
 /**
+ * Resolve service mini-description source attribution for validation tooling.
+ *
+ * @param int $post_id Service post ID.
+ * @return string One of: ACF_FIELD, V9_FALLBACK, DEMO_FALLBACK, EMPTY.
+ */
+function shpigovsky_resolve_service_mini_description_source( $post_id ) {
+	$post_id = (int) $post_id;
+
+	if ( $post_id <= 0 ) {
+		return 'EMPTY';
+	}
+
+	$admin = shpigovsky_get_service_field( $post_id, 'service_short_description' );
+
+	if ( '' !== $admin ) {
+		return 'ACF_FIELD';
+	}
+
+	$post = get_post( $post_id );
+
+	if ( ! $post instanceof WP_Post ) {
+		return 'EMPTY';
+	}
+
+	$v9 = shpigovsky_get_v9_services_hub_child_copy( $post->post_name );
+
+	if ( null !== $v9 && '' !== trim( (string) $v9['text'] ) ) {
+		return 'V9_FALLBACK';
+	}
+
+	$demo = shpigovsky_get_service_demo_mini_description_fallback( $post->post_name );
+
+	return '' !== $demo ? 'DEMO_FALLBACK' : 'EMPTY';
+}
+
+/**
  * Resolve service mini-description for services hub cards.
  *
  * Priority: ACF field → V9 static authority → DEMO fallback.
@@ -355,10 +401,10 @@ function shpigovsky_get_service_mini_description( $post_id ) {
 		return '';
 	}
 
-	$acf = shpigovsky_get_service_field( $post_id, 'service_short_description' );
+	$admin = shpigovsky_get_service_field( $post_id, 'service_short_description' );
 
-	if ( '' !== $acf ) {
-		return $acf;
+	if ( '' !== $admin ) {
+		return $admin;
 	}
 
 	$post = get_post( $post_id );

@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-07 (V9-06E14 Service Admin Fields + Service Tree Demo Content Repair PASS)
+**Last updated:** 2026-07-07 (V9-06E15 Service Mini-Description Source + Subdivision Sliders Regression Repair PASS)
 
-**Current WordPress phase:** V9-06E14 Service Admin Fields + Service Tree Demo Content Repair **PASS** — `service_short_description` admin field wired to `/uslugi/` hub cards (grouped + flat); dependencies tree repaired (service 76 trashed; 3 demo leaves 314–316; profilakticheskiy last); psych/eating subdivisions demo-seeded; **46** DB writes; DB checkpoint YES; **10/10** screenshots PASS. **E3 stable checkpoint remains invalidated.** **Next: CREATE_V9_06E15_OPERATOR_SERVICE_TREE_VISUAL_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E14-SERVICE-ADMIN-FIELDS-SERVICE-TREE-DEMO-CONTENT-REPAIR-REPORT-v1.md`.
+**Current WordPress phase:** V9-06E15 Service Mini-Description Source + Subdivision Sliders Regression Repair **PASS** — ACF-first mini-description hardening (`post_meta` fallback + source resolver); subdivision Swiper vendors for `/uslugi/zavisimosti/` specialists/reviews sliders; hub grouped **14/14** + flat **17/17** admin source PASS; **2** DB writes; DB checkpoint YES; **11/11** screenshots PASS. **E3 stable checkpoint remains invalidated.** **Next: CREATE_V9_06E16_OPERATOR_SERVICE_TREE_VISUAL_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E15-SERVICE-MINI-DESCRIPTION-SOURCE-SUBDIVISION-SLIDERS-REGRESSION-REPAIR-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

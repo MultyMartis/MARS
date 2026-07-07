@@ -1,0 +1,15 @@
+{
+  "changed_files": [
+    "inc/service-subdivision-vendors.php",
+    "functions.php"
+  ],
+  "route_condition": "shpigovsky_is_service_subdivision_slider_page",
+  "sliders": [
+    "specialists__slider",
+    "reviews__slider"
+  ],
+  "vendor": "swiper-bundle",
+  "home_regression": "unchanged is_front_page gate",
+  "alcohol_regression": "excluded via shpigovsky_is_alcohol_direct_v9_page",
+  "result": "PASS"
+}

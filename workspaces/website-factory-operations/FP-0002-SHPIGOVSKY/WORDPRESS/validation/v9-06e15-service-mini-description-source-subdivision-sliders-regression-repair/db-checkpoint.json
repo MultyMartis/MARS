@@ -1,0 +1,8 @@
+{
+  "checkpoint_path": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e15-service-mini-description-source-subdivision-sliders-regression-repair-pre-20260707T115432Z",
+  "dump_file": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e15-service-mini-description-source-subdivision-sliders-regression-repair-pre-20260707T115432Z\\mars_wp_fp0002.sql",
+  "dump_sha256": "0CD718D34A19D40144B728ED3702B294102026B2FD258D385DE5D4B304622E97",
+  "services_hub_query_mode_before": "grouped_by_parent",
+  "restore_instructions": "1. mysql -h127.0.0.1 -uroot mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e15-service-mini-description-source-subdivision-sliders-regression-repair-pre-20260707T115432Z\\mars_wp_fp0002.sql\"\n2. Verify fp02_postmeta service_short_description and services_hub_query_mode",
+  "result": "PASS"
+}

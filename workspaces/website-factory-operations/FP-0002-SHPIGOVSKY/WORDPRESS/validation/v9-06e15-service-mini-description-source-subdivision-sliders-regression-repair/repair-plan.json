@@ -1,0 +1,25 @@
+{
+  "components": [
+    {
+      "name": "mini_description_source",
+      "files": [
+        "inc/services-hub-helpers.php"
+      ],
+      "priority": "ACF_FIELD -> post_meta fallback -> V9 -> DEMO"
+    },
+    {
+      "name": "subdivision_sliders",
+      "files": [
+        "inc/service-subdivision-vendors.php",
+        "functions.php"
+      ],
+      "route": "subdivision layout service singular"
+    },
+    {
+      "name": "seed_repair",
+      "scope": "service_short_description only via update_field"
+    }
+  ],
+  "safety": "no tree/menu/legal/reviews changes",
+  "result": "APPROVED"
+}

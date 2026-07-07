@@ -1,0 +1,210 @@
+{
+  "generated_at": "2026-07-07T11:51:23.711914+00:00",
+  "services_hub_query_mode": "grouped_by_parent",
+  "mini_description_audit": [
+    {
+      "id": 73,
+      "title": "Зависимости",
+      "slug": "zavisimosti",
+      "parent": 0,
+      "admin_field_value": "DEMO — направление лечения зависимостей. Карточка раздела для плоского режима отображения /uslugi/.",
+      "acf_reference_meta": "field_fp02_service_short_description",
+      "source_attribution_db": "ACF_FIELD",
+      "rendered_grouped_match_admin": false,
+      "admin_nonempty": true
+    },
+    {
+      "id": 74,
+      "title": "Лечение алкогольной зависимости",
+      "slug": "lechenie-alkogolnoy-zavisimosti",
+      "parent": 73,
+      "admin_field_value": "Алкоголь не становится проблемой в один день — зачастую это постепенный процесс, в котором граница между «нормой» и зависимостью стирается незаметно. В основе — нейробиологические изменения в системе вознаграждения мозга, которые делают отказ физически и психологически тяжёлым без посторонней помощи. Мы работаем с причинами и помогаем выйти из замкнутого круга устойчиво.",
+      "acf_reference_meta": "field_fp02_service_short_description",
+      "source_attribution_db": "ACF_FIELD",
+      "rendered_grouped_match_admin": true,
+      "admin_nonempty": true
+    },
+    {
+      "id": 314,
+      "title": "Наркотическая зависимость",
+      "slug": "narkoticheskaya-zavisimost",
+      "parent": 73,
+      "admin_field_value": "Наркотическая зависимость — одно из наиболее сложных состояний: она затрагивает одновременно биохимию мозга, психологию человека и его социальную жизнь. За ней почти всегда стоит что-то, что предшествовало употреблению, — боль, травма, невозможность справиться со стрессом иначе. Наша задача — разобраться и выстроить путь к восстановлению, который будет работать в реальной жизни.",
+      "acf_reference_meta": "field_fp02_service_short_description",
+      "source_attribution_db": "ACF_FIELD",
+      "rendered_grouped_match_admin": true,
+      "admin_nonempty": true
+    },
+    {
+      "id": 315,
+      "title": "Лекарственная зависимость",
+      "slug": "lekarstvennaya-zavisimost",
+      "parent": 73,
+      "admin_field_value": "Лекарственная зависимость нередко формируется там, где меньше всего ждёшь — на фоне лечения тревоги, боли или бессонницы. Это не безответственность: некоторые препараты меняют работу мозга так, что организм перестаёт справляться без них. Мы работаем с этим состоянием бережно и без осуждения — с вниманием к тому, что изначально привело к приёму препаратов.",
+      "acf_reference_meta": "field_fp02_service_short_description",
+      "source_attribution_db": "ACF_FIELD",
+      "rendered_grouped_match_admin": true,
+      "admin_nonempty": true
+    },
+    {
+      "id": 316,
+      "title": "Поведенческие зависимости",
+      "slug": "povedencheskie-zavisimosti",
+      "parent": 73,
+      "admin_field_value": "Игромания, шопоголизм, интернет-зависимость, сексуальная зависимость — эти состояния часто воспринимаются как «ненастоящие», что делает их ещё тяжелее. Между тем механизм здесь тот же, что и при химических зависимостях: нарушение работы системы вознаграждения мозга, то есть когда мозг ищет во внешних стимулах то, что не может получить естественным путём. Мы относимся к поведенческим зависимостям как к действительным состояниям — и работаем с ними соответственно.",
+      "acf_reference_meta": "field_fp02_service_short_description",
+      "source_attribution_db": "ACF_FIELD",
+      "rendered_grouped_match_admin": true,
+      "admin_nonempty": true
+    },
+    {
+      "id": 75,
+      "title": "Профилактический анализ",
+      "slug": "profilakticheskiy-analiz",
+      "parent": 73,
+      "admin_field_value": "DEMO — краткое описание профилактического анализа для карточки на /uslugi/. Техническое наполнение; финальный текст будет согласован оператором.",
+      "acf_reference_meta": "field_fp02_service_short_description",
+      "source_attribution_db": "ACF_FIELD",
+      "rendered_grouped_match_admin": true,
+      "admin_nonempty": true
+    },
+    {
+      "id": 77,
+      "title": "Психическое здоровье",
+      "slug": "psihicheskoe-zdorovie",
+      "parent": 0,
+      "admin_field_value": "DEMO — направление психического здоровья. Карточка раздела для плоского режима отображения /uslugi/.",
+      "acf_reference_meta": "field_fp02_service_short_description",
+      "source_attribution_db": "ACF_FIELD",
+      "rendered_grouped_match_admin": false,
+      "admin_nonempty": true
+    },
+    {
+      "id": 78,
+      "title": "Депрессия",
+      "slug": "depressiya",
+      "parent": 77,
+      "admin_field_value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      "acf_reference_meta": "field_fp02_service_short_description",
+      "source_attribution_db": "ACF_FIELD",
+      "rendered_grouped_match_admin": true,
+      "admin_nonempty": true
+    },
+    {
+      "id": 79,
+      "title": "ПТСР",
+      "slug": "ptrs",
+      "parent": 77,
+      "admin_field_value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      "acf_reference_meta": "field_fp02_service_short_description",
+      "source_attribution_db": "ACF_FIELD",
+      "rendered_grouped_match_admin": true,
+      "admin_nonempty": true
+    },
+    {
+      "id": 80,
+      "title": "Эмоциональное выгорание",
+      "slug": "emocionalnoe-vygoranie",
+      "parent": 77,
+      "admin_field_value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      "acf_reference_meta": "field_fp02_service_short_description",
+      "source_attribution_db": "ACF_FIELD",
+      "rendered_grouped_match_admin": true,
+      "admin_nonempty": true
+    },
+    {
+      "id": 81,
+      "title": "Тревожные расстройства",
+      "slug": "trevozhnye-rasstroystva",
+      "parent": 77,
+      "admin_field_value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      "acf_reference_meta": "field_fp02_service_short_description",
+      "source_attribution_db": "ACF_FIELD",
+      "rendered_grouped_match_admin": true,
+      "admin_nonempty": true
+    },
+    {
+      "id": 82,
+      "title": "Расстройства сна",
+      "slug": "rasstroystva-sna",
+      "parent": 77,
+      "admin_field_value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      "acf_reference_meta": "field_fp02_service_short_description",
+      "source_attribution_db": "ACF_FIELD",
+      "rendered_grouped_match_admin": true,
+      "admin_nonempty": true
+    },
+    {
+      "id": 83,
+      "title": "Травма",
+      "slug": "travma",
+      "parent": 77,
+      "admin_field_value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      "acf_reference_meta": "field_fp02_service_short_description",
+      "source_attribution_db": "ACF_FIELD",
+      "rendered_grouped_match_admin": true,
+      "admin_nonempty": true
+    },
+    {
+      "id": 84,
+      "title": "Расстройства пищевого поведения",
+      "slug": "rasstroystva-pischevogo-povedeniya",
+      "parent": 0,
+      "admin_field_value": "DEMO — направление расстройств пищевого поведения. Карточка раздела для плоского режима отображения /uslugi/.",
+      "acf_reference_meta": "field_fp02_service_short_description",
+      "source_attribution_db": "ACF_FIELD",
+      "rendered_grouped_match_admin": false,
+      "admin_nonempty": true
+    },
+    {
+      "id": 85,
+      "title": "Анорексия",
+      "slug": "anoreksiya",
+      "parent": 84,
+      "admin_field_value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      "acf_reference_meta": "field_fp02_service_short_description",
+      "source_attribution_db": "ACF_FIELD",
+      "rendered_grouped_match_admin": true,
+      "admin_nonempty": true
+    },
+    {
+      "id": 86,
+      "title": "Нервная булимия",
+      "slug": "nervnaya-bulimiya",
+      "parent": 84,
+      "admin_field_value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      "acf_reference_meta": "field_fp02_service_short_description",
+      "source_attribution_db": "ACF_FIELD",
+      "rendered_grouped_match_admin": true,
+      "admin_nonempty": true
+    },
+    {
+      "id": 87,
+      "title": "Компульсивное переедание",
+      "slug": "kompulsivnoe-pereedanie",
+      "parent": 84,
+      "admin_field_value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      "acf_reference_meta": "field_fp02_service_short_description",
+      "source_attribution_db": "ACF_FIELD",
+      "rendered_grouped_match_admin": true,
+      "admin_nonempty": true
+    }
+  ],
+  "slider_audit": {
+    "route": "/uslugi/zavisimosti/",
+    "http_status": 200,
+    "swiper_css_loaded": false,
+    "swiper_js_loaded": false,
+    "specialists_slider_dom": true,
+    "reviews_slider_dom": true,
+    "v9_shell_loaded": true,
+    "home_vendors_gated_front_page_only": true,
+    "alcohol_vendors_route_scoped": true,
+    "subdivision_vendor_loader_present": false
+  },
+  "root_causes": [
+    "Subdivision route /uslugi/zavisimosti/ renders specialists/reviews sliders but Swiper vendor is not enqueued (gated to is_front_page and alcohol leaf only)",
+    "E14 seeded EXACT_V9 mini-descriptions identical to V9 static map — operator perceived HTML source when admin field matched static copy; profilakticheskiy DEMO text was visually distinct"
+  ],
+  "mini_description_root_cause": "Admin field values present in DB; rendering path uses ACF first. Operator QA failure driven by indistinguishable EXACT_V9 seeded admin text vs static fallback and missing post_meta fallback hardening."
+}
