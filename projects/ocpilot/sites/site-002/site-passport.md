@@ -1,7 +1,7 @@
 # SITE-002 — Site Passport
 
-**Status:** **STABLE PRODUCTION CHECKPOINT — CATALOG BRANCH FOLLOWUP 01** (post-1C monitor Run 4.212: sitemap unchanged; 0 onboarding needs)
-**Run:** 4.212 — SITE-002 Post-1C Catalog Onboarding Monitor (2026-07-07)
+**Status:** **STABLE PRODUCTION CHECKPOINT — CATALOG BRANCH FOLLOWUP 01** (post-1C monitor Run 4.213: sitemap unchanged; 0 onboarding needs)
+**Run:** 4.213 — SITE-002 Post-1C Catalog Onboarding Monitor 02 (2026-07-07)
 
 ---
 
@@ -32,7 +32,7 @@
 | **Public brand policy** | **ЗПМ** — correct public Russian brand · **БЗПМ** forbidden in public copy/meta/llms/generated output · domain `bzpm.ru` unchanged · **0 violations after Run 4.207 edge fix** |
 | **Deep PLP meta edge fix** | **COMPLETE — DEEP PLP META VERIFIED** (Run 4.207) — [report](reports/SITE-002-PROD-SEO-META-EDGE-FIX-01.md) |
 | **New catalog branch onboarding** | **COMPLETE** (Run 4.210 + 4.211) — konditerskiy-inventar/formy-konditerskie (360/361); lari branches (88/141/140); deferred `/lari/proizvodstvennye-lari` resolved · [follow-up](reports/SITE-002-PROD-CATALOG-BRANCH-ONBOARDING-FOLLOWUP-01.md) · [Run 4.210](reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-01.md) |
-| **Post-1C catalog monitor** | **COMPLETE — NO ONBOARDING NEEDED** (Run 4.212) — read-only after 1C SUCCESS 08:00 Moscow; sitemap **1377** unchanged; +0/−0; audit baseline [SITE-002-POST-1C-CATALOG-MONITOR-01](baselines/SITE-002-POST-1C-CATALOG-MONITOR-01.md) · [report](reports/SITE-002-PROD-POST-1C-CATALOG-ONBOARDING-MONITOR-01.md) |
+| **Post-1C catalog monitor** | **COMPLETE — NO ONBOARDING NEEDED** (Run 4.213) — read-only repeat; baseline Run 4.212; sitemap **1377** unchanged; +0/−0; audit baseline [SITE-002-POST-1C-CATALOG-MONITOR-02](baselines/SITE-002-POST-1C-CATALOG-MONITOR-02.md) · [report](reports/SITE-002-PROD-POST-1C-CATALOG-ONBOARDING-MONITOR-02.md) · prior [Run 4.212](reports/SITE-002-PROD-POST-1C-CATALOG-ONBOARDING-MONITOR-01.md) |
 | **MARS 1C cron wrapper** | **OPERATIONAL — FIRST SCHEDULED RUN VERIFIED** (Run 4.194) — automatic run SUCCESS 2026-07-06 08:00 Moscow; run ID `mars-20260706-080002-09436ae7`; report `mars_1c_import_2026-07-06_080007.txt`; daily import OPERATIONAL; Sergey legacy preserved |
 | **Mail recipients** | **ACTIVE — ADMIN-MANAGED** (Run 4.187) — handler `checkout/anketa.php`; list via OpenCart `config_mail_alert_email`; operator updated admin **Additional Alert Emails**; delivery verified; no code deploy · [discovery](reports/SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01.md) · [confirmation](reports/SITE-002-PROD-MAIL-RECIPIENTS-ADMIN-ADD-01.md) |
 | **MARS 1C cron reports** | **CURRENT** (Run 4.194) — first scheduled report `mars_1c_import_2026-07-06_080007.txt` verified; prior manual run preserved; [SITE-002-PROD-CRON-FIRST-SCHEDULED-RUN-VERIFY-01.md](reports/SITE-002-PROD-CRON-FIRST-SCHEDULED-RUN-VERIFY-01.md) |

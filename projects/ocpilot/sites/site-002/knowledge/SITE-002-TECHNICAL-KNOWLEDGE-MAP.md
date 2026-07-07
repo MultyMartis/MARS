@@ -509,7 +509,7 @@ Product SEO URLs created during catalog import (`oc_seo_url` where `query LIKE '
 | PDP keyword gap follow-up (Production) | **COMPLETE — NO MUTATION REQUIRED** (Run 4.208) — 11 Run 4.206 “missing keywords” = hub/category PLP (`page--category`); 0 true PDP gaps; `product.php` v1.1 unchanged · [report](../reports/SITE-002-PROD-SEO-PRODUCT-META-GENERATOR-TUNE-02.md) |
 | Sitemap delta audit (Production) | **COMPLETE — MINOR REVIEW ITEMS** (Run 4.209) — baseline 1320 (4.206) → live **1377**; +59/−2; konditerskiy-inventar catalog growth; 0 RED on added; 2 YELLOW category meta · [report](../reports/SITE-002-PROD-SITEMAP-DELTA-AUDIT-01.md) |
 | New catalog branch onboarding (Production) | **COMPLETE** (Run 4.210 + 4.211) — 1C growth onboarding; admin category SEO for ids **360/361/88/141/140**; parent-aware resolution for `/lari/proizvodstvennye-lari` · [follow-up report](../reports/SITE-002-PROD-CATALOG-BRANCH-ONBOARDING-FOLLOWUP-01.md) · [Run 4.210](../reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-01.md) |
-| Post-1C catalog monitor (Production) | **COMPLETE — NO ONBOARDING NEEDED** (Run 4.212) — read-only sitemap delta after 1C SUCCESS; **1377** unchanged; +0/−0; reusable monitor rule · [report](../reports/SITE-002-PROD-POST-1C-CATALOG-ONBOARDING-MONITOR-01.md) · [tool](../tools/site-002-prod-post-1c-catalog-onboarding-monitor-01.py) |
+| Post-1C catalog monitor (Production) | **COMPLETE — NO ONBOARDING NEEDED** (Run 4.213) — read-only repeat; baseline Run 4.212 full URL set; **1377** unchanged; +0/−0; reusable monitor rule confirmed · [report](../reports/SITE-002-PROD-POST-1C-CATALOG-ONBOARDING-MONITOR-02.md) · [tool](../tools/site-002-prod-post-1c-catalog-onboarding-monitor-02.py) · prior [Run 4.212](../reports/SITE-002-PROD-POST-1C-CATALOG-ONBOARDING-MONITOR-01.md) |
 | OpenCart Document robots API | **Not available** — no `Document::setRobots()`; use `X-Robots-Tag` response header; `header.twig` hardcodes `<meta robots index,follow>` |
 | Yandex Metrika / Webmaster (live Twig) | **VERIFIED** (Run 4.189) — preserved after Run 4.192 |
 | Duplicate body / preloader (Production) | **FIXED** (Run 4.190) — unchanged by Run 4.192 |
@@ -1071,7 +1071,7 @@ Before **any** task touching **trust block**, **certificates**, **dealers form**
 - New sitemap URLs → classify: PRODUCT_PDP vs CATEGORY_PLP vs CATEGORY_HUB vs TECHNICAL
 - **Onboard** new category PLP/hub (admin `meta_description` only) — do **not** delete/hide/noindex by default
 - PDP meta → product generator track; category PLP meta → admin category SEO track
-- Post-import monitoring: diff sitemap for new CATEGORY_PLP with missing meta — **automated** via `site-002-prod-post-1c-catalog-onboarding-monitor-01.py` (Run 4.212); repeat after each daily 1C import
+- Post-import monitoring: diff sitemap for new CATEGORY_PLP with missing meta — **automated** via `site-002-prod-post-1c-catalog-onboarding-monitor-02.py` (Run 4.213 repeat; baseline from prior monitor); repeat after each daily 1C import
 - Onboarded 2026-07-07: category ids **360** (konditerskiy-inventar), **361** (formy-konditerskie), **88** (lari), **141** (skladskie-lari), **140** (proizvodstvennye-lari under Лари)
 - **Parent-aware resolution** required when admin names duplicate (e.g. «Производственные» id 140 under Лари vs id 130 under Шкафы)
 - Deferred Run 4.210 `/lari/proizvodstvennye-lari` — **RESOLVED** Run 4.211 → category_id **140**, HIGH confidence
