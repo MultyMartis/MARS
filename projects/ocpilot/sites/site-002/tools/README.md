@@ -61,8 +61,10 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `site-002-prod-category-entrypoints-sort-az-01.py` | Category entrypoints A→Z display sort deploy for megamenu/homepage/neutral hub for `SITE-002-PROD-CATEGORY-ENTRYPOINTS-SORT-AZ-01` (Run 4.221) |
 | `site-002-prod-mail-system-discovery-01.py` | Read-only Production mail system discovery — forms HTTP crawl + FTP source map + redesign charters for `SITE-002-PROD-MAIL-SYSTEM-DISCOVERY-01` (Run 4.222) |
 | `site-002-prod-mail-design-system-01.py` | Mail design system foundation — `ZpmMailRenderer`, fixtures, previews, gated single-file FTP deploy for `SITE-002-PROD-MAIL-DESIGN-SYSTEM-01` (Run 4.223) |
+| `site-002-prod-mail-admin-forms-01.py` | Admin form mail redesign — anketa + renderer integration, service info, gated deploy + controlled test submit for `SITE-002-PROD-MAIL-ADMIN-FORMS-01` (Run 4.224) |
+| `checkout_anketa_mail_admin_forms.php` | Patched `checkout/anketa.php` source for Run 4.224 (repo reference; deployed to Production) |
 | `site-002-mail-design-system-preview-01.php` | Local preview generator for mail design system (no SMTP; uses fixtures + renderer) |
-| `mail_renderer.php` | Shared `ZpmMailRenderer` source — deployed to Production `system/library/zpm/mail_renderer.php` (inactive until integration) |
+| `mail_renderer.php` | Shared `ZpmMailRenderer` source — deployed to Production `system/library/zpm/mail_renderer.php`; integrated by `checkout/anketa.php` (Run 4.224) |
 
 ### Post-1C monitor scheduler notes (Run 4.216)
 

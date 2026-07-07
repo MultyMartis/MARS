@@ -291,6 +291,13 @@ class ZpmMailRenderer {
 
 		$map = array(
 			'ip' => 'IP',
+			'remote_addr' => 'REMOTE_ADDR',
+			'x_forwarded_for' => 'X-Forwarded-For',
+			'x_real_ip' => 'X-Real-IP',
+			'cf_connecting_ip' => 'CF-Connecting-IP',
+			'browser' => 'Браузер',
+			'device' => 'Устройство',
+			'os' => 'ОС',
 			'user_agent' => 'User-Agent',
 			'referrer' => 'Referrer',
 			'utm' => 'UTM',
