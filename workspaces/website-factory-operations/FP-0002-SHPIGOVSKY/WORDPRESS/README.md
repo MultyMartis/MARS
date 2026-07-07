@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E16 OPERATOR QA CLOSURE + REUSABLE BLOCKS / CLONE / CLEANUP ARCHITECTURE AUDIT **PASS** — E15 operator QA closed; pre-change backup YES; admin IA + reusable blocks + clone + cleanup plans documented; **0** DB/source changes. NEXT: **CREATE_V9_06E17_SITE_SETTINGS_IA_SKELETON_TASK**
+**Status:** V9-06E17 SITE SETTINGS IA SKELETON **PASS** — admin IA skeleton (Общие настройки + Повторяемые блоки); contacts/modal/CTA relocated with `post_id=option`; top-level Отзывы unchanged; DB checkpoint YES; **0** DB writes; runtime delivered. NEXT: **CREATE_V9_06E18_REUSABLE_BLOCKS_BATCH_1_FIELDS_TASK**
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---
@@ -306,3 +306,7 @@ E4 **PASS**: Read-only visual reconciliation after operator manual pass post-E3.
 ## V9-06E8 static V9 content + main layout authority repair (2026-07-06)
 
 E8 **PARTIAL PASS**: Enforced static V9 template authority for `/uslugi/`, `/kontakty/`, alcohol service leaf layout. Added `inc/v9-static-content.php`; 18 theme files; 0 DB writes; runtime delivered. Hub content/CTA/program + contacts maps/photo + alcohol full leaf stack repaired. E3 stable checkpoint **invalidated** for content parity. Automated probe ALL_200. Operator visual QA deferred to E9. Evidence: `validation/v9-06e8-static-v9-content-main-layout-authority-repair/`. Report: `reports/FP-0002-V9-06E8-STATIC-V9-CONTENT-MAIN-LAYOUT-AUTHORITY-REPAIR-REPORT-v1.md`. Next: **CREATE_V9_06E9_OPERATOR_STATIC_PARITY_VISUAL_QA_TASK**.
+
+## V9-06E17 site settings IA skeleton (2026-07-07)
+
+E17 **PASS**: Site Settings admin IA skeleton. Parent `fp02-site-settings` redirect; **Общие настройки** (`fp02-site-settings-general`, `post_id=option`) with contacts + modal/CTA field groups relocated; **Повторяемые блоки** parent + 12 skeleton block subpages per E16 inventory; top-level **Отзывы** (`fp02-reviews`) unchanged. DB checkpoint `v9-06e17-site-settings-ia-skeleton-pre-20260707-235348`. **2** plugin + **2** ACF JSON; **0** DB writes; runtime delivered. Routes 8/8 HTTP 200. Evidence: `validation/v9-06e17-site-settings-ia-skeleton/`. Report: `reports/FP-0002-V9-06E17-SITE-SETTINGS-IA-SKELETON-REPORT-v1.md`. Next: **CREATE_V9_06E18_REUSABLE_BLOCKS_BATCH_1_FIELDS_TASK**.

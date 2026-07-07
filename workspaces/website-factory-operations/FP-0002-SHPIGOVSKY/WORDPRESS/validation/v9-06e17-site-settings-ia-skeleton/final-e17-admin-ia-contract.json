@@ -1,0 +1,50 @@
+{
+  "wave": "V9-06E17",
+  "contract_type": "FINAL_E17_ADMIN_IA",
+  "result": "PASS",
+  "parent_menu": {
+    "title": "Настройки сайта",
+    "slug": "fp02-site-settings",
+    "redirect": true
+  },
+  "subpages": [
+    {"title": "Общие настройки", "slug": "fp02-site-settings-general", "status": "ACTIVE", "post_id": "option"},
+    {"title": "Повторяемые блоки", "slug": "fp02-site-settings-blocks", "status": "ACTIVE_REDIRECT_PARENT"}
+  ],
+  "block_subpages": [
+    {"title": "Шапка", "slug": "fp02-block-header", "status": "SKELETON"},
+    {"title": "Подвал", "slug": "fp02-block-footer", "status": "SKELETON"},
+    {"title": "Финальная форма", "slug": "fp02-block-final-form", "status": "SKELETON"},
+    {"title": "Модальное окно", "slug": "fp02-block-consultation-modal", "status": "SKELETON"},
+    {"title": "Специалисты", "slug": "fp02-block-specialists", "status": "SKELETON"},
+    {"title": "Отзывы", "slug": "fp02-block-reviews", "status": "SKELETON_PLACEHOLDER"},
+    {"title": "CTA-блоки", "slug": "fp02-block-cta-bands", "status": "SKELETON"},
+    {"title": "Комфорт", "slug": "fp02-block-comfort", "status": "SKELETON"},
+    {"title": "Требования и преимущества", "slug": "fp02-block-advantages", "status": "SKELETON"},
+    {"title": "Цитата основателя", "slug": "fp02-block-founder-quote", "status": "SKELETON"},
+    {"title": "Фоновые секции", "slug": "fp02-block-backgrounds", "status": "SKELETON"},
+    {"title": "Герои / fallback-изображения", "slug": "fp02-block-hero-fallbacks", "status": "SKELETON"}
+  ],
+  "active_field_groups": {
+    "fp02-site-settings-general": ["group_fp02_site_options_contacts", "group_fp02_site_options_modal_cta"]
+  },
+  "legacy_active_admin": {
+    "fp02-reviews": {
+      "location": "top-level menu",
+      "field_group": "group_fp02_site_options_reviews",
+      "post_id": "fp02-reviews",
+      "deferred_relocation": "E18+"
+    }
+  },
+  "storage_compatibility": {
+    "site_options": "option post_id unchanged",
+    "reviews": "fp02-reviews post_id unchanged",
+    "frontend_reads": "unchanged"
+  },
+  "deferred_e18": [
+    "Add field groups to block subpages",
+    "Migrate reviews from fp02-reviews to fp02-block-reviews with seed script",
+    "Split modal/CTA fields per E16 restructure plan",
+    "Frontend renderer migration per block"
+  ]
+}

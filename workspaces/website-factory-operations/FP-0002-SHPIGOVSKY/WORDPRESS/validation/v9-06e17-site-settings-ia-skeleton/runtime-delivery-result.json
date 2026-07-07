@@ -1,0 +1,42 @@
+{
+  "wave": "V9-06E17",
+  "validation_type": "RUNTIME_DELIVERY",
+  "result": "PASS",
+  "runtime_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky",
+  "files": [
+    {
+      "source": "WORDPRESS/plugins/shpigovsky-core/src/Admin/OptionsPage.php",
+      "runtime": "wp-content/plugins/shpigovsky-core/src/Admin/OptionsPage.php",
+      "sha256_before": "624E57C7D08B12A128E7A204C8F0E75B993851D8C8BC1C82F276CADBCF71D92F",
+      "sha256_after": "BB8D33B895D886233896BA354C3FF44DB604BC4B79CC5DC2B7FAF7EF832E5DAE",
+      "delivered": true,
+      "result": "PASS"
+    },
+    {
+      "source": "WORDPRESS/plugins/shpigovsky-core/src/Fields/FieldGroups.php",
+      "runtime": "wp-content/plugins/shpigovsky-core/src/Fields/FieldGroups.php",
+      "sha256_before": "EC6F093E64D41ABC4A1B23FF85838F09AA975B912468CD0186826BF2E2EAA438",
+      "sha256_after": "5B321145788A79AD062A3743468DCC3AA38AFDFF6D68C8AF1DF19BAE046DA1DA",
+      "delivered": true,
+      "result": "PASS"
+    },
+    {
+      "source": "WORDPRESS/acf-json/group_fp02_site_options_contacts.json",
+      "runtime": "wp-content/acf-json/group_fp02_site_options_contacts.json",
+      "sha256_before": "MISSING",
+      "sha256_after": "7B9F8E57D04EF827460849E393A185BA1641EF82946559C6B315F4F25D7D983C",
+      "delivered": true,
+      "result": "PASS",
+      "note": "Runtime file was missing; created from canonical source"
+    },
+    {
+      "source": "WORDPRESS/acf-json/group_fp02_site_options_modal_cta.json",
+      "runtime": "wp-content/acf-json/group_fp02_site_options_modal_cta.json",
+      "sha256_before": "MISSING",
+      "sha256_after": "FE0BDC9B34E734EA63E3640338FF78918CD2CB6A8CFA7FA6FEF1330EBD396DFC",
+      "delivered": true,
+      "result": "PASS",
+      "note": "Runtime file was missing; created from canonical source"
+    }
+  ]
+}

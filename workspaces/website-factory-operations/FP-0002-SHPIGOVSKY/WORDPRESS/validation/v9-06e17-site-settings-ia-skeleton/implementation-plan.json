@@ -1,0 +1,61 @@
+{
+  "wave": "V9-06E17",
+  "plan_type": "SITE_SETTINGS_IA_SKELETON",
+  "result": "COMPLETE",
+  "admin_menu_structure": {
+    "parent": {
+      "menu_title": "Настройки сайта",
+      "menu_slug": "fp02-site-settings",
+      "redirect": true
+    },
+    "children": [
+      {
+        "menu_title": "Общие настройки",
+        "menu_slug": "fp02-site-settings-general",
+        "post_id": "option",
+        "field_groups_relocated": ["group_fp02_site_options_contacts", "group_fp02_site_options_modal_cta"]
+      },
+      {
+        "menu_title": "Повторяемые блоки",
+        "menu_slug": "fp02-site-settings-blocks",
+        "redirect": true,
+        "skeleton_children": [
+          {"menu_title": "Шапка", "menu_slug": "fp02-block-header"},
+          {"menu_title": "Подвал", "menu_slug": "fp02-block-footer"},
+          {"menu_title": "Финальная форма", "menu_slug": "fp02-block-final-form"},
+          {"menu_title": "Модальное окно", "menu_slug": "fp02-block-consultation-modal"},
+          {"menu_title": "Специалисты", "menu_slug": "fp02-block-specialists"},
+          {"menu_title": "Отзывы", "menu_slug": "fp02-block-reviews", "status": "skeleton_only"},
+          {"menu_title": "CTA-блоки", "menu_slug": "fp02-block-cta-bands"},
+          {"menu_title": "Комфорт", "menu_slug": "fp02-block-comfort"},
+          {"menu_title": "Требования и преимущества", "menu_slug": "fp02-block-advantages"},
+          {"menu_title": "Цитата основателя", "menu_slug": "fp02-block-founder-quote"},
+          {"menu_title": "Фоновые секции", "menu_slug": "fp02-block-backgrounds"},
+          {"menu_title": "Герои / fallback-изображения", "menu_slug": "fp02-block-hero-fallbacks"}
+        ]
+      }
+    ]
+  },
+  "reviews_strategy": {
+    "e17_action": "placeholder_subpage_only",
+    "active_admin": "top-level fp02-reviews unchanged",
+    "data_migration": "NONE"
+  },
+  "field_placement": {
+    "moved_to_general": ["all contacts + modal/CTA fields from fp02-site-settings"],
+    "remain_top_level": ["fp02-reviews"],
+    "skeleton_only": "all fp02-block-* subpages"
+  },
+  "runtime_delivery_files": [
+    "plugins/shpigovsky-core/src/Admin/OptionsPage.php",
+    "plugins/shpigovsky-core/src/Fields/FieldGroups.php",
+    "acf-json/group_fp02_site_options_contacts.json",
+    "acf-json/group_fp02_site_options_modal_cta.json"
+  ],
+  "safety": {
+    "frontend_renderer_migration": false,
+    "reusable_block_content_migration": false,
+    "reviews_data_changes": false,
+    "option_storage_changes": false
+  }
+}

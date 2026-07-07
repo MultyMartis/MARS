@@ -1,0 +1,52 @@
+{
+  "wave": "V9-06E17",
+  "audit_type": "BASELINE_ADMIN_IA_OPTION_STORAGE",
+  "result": "COMPLETE",
+  "before_e17": {
+    "parent_menu": {
+      "menu_title": "Настройки сайта",
+      "menu_slug": "fp02-site-settings",
+      "registered_by": "plugins/shpigovsky-core/src/Admin/OptionsPage.php",
+      "redirect": false,
+      "field_groups": ["group_fp02_site_options_contacts", "group_fp02_site_options_modal_cta"]
+    },
+    "reviews_menu": {
+      "menu_title": "Отзывы",
+      "menu_slug": "fp02-reviews",
+      "post_id_context": "fp02-reviews",
+      "registered_by": "theme/shpigovsky/inc/admin-options.php",
+      "field_group": "group_fp02_site_options_reviews"
+    },
+    "option_storage": {
+      "site_settings_fields": {
+        "acf_post_id": "option",
+        "wp_options_prefix": "options_",
+        "read_helper": "shpigovsky_get_site_option() uses get_field($name, 'option')"
+      },
+      "reviews_fields": {
+        "acf_post_id": "fp02-reviews",
+        "wp_options_prefix": "fp02-reviews_",
+        "read_helper": "reviews-helpers.php reads fp02-reviews context first"
+      }
+    }
+  },
+  "compatibility_proof": {
+    "location_change_only": true,
+    "storage_key_unchanged_when_post_id_option": true,
+    "frontend_reads_unchanged": true,
+    "menu_slug_parent_stable": true,
+    "reviews_deferred": true
+  },
+  "risks": [
+    {
+      "risk": "Moving field groups without post_id=option would change wp_options keys",
+      "mitigation": "fp02-site-settings-general registered with post_id=option",
+      "status": "MITIGATED"
+    },
+    {
+      "risk": "Relocating reviews admin could break fp02-reviews storage",
+      "mitigation": "E17 keeps top-level fp02-reviews; fp02-block-reviews skeleton only",
+      "status": "MITIGATED"
+    }
+  ]
+}

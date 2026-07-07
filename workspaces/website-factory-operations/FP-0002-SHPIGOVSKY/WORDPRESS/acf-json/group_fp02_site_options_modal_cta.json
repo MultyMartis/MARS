@@ -129,7 +129,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "fp02-site-settings"
+                "value": "fp02-site-settings-general"
             }
         ]
     ],
@@ -142,5 +142,5 @@
     "active": true,
     "description": "FP-0002 V9-06C canonical source field group. Runtime registration occurs only after delivery authorization.",
     "show_in_rest": 0,
-    "modified": 1783158780
+    "modified": 1783603200
 }

@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-07 (V9-06E16 Operator QA Closure + Reusable Blocks / Clone / Cleanup Architecture Audit PASS)
+**Last updated:** 2026-07-07 (V9-06E17 Site Settings IA Skeleton PASS)
 
-**Current WordPress phase:** V9-06E16 Operator QA Closure + Architecture Audit **PASS** — E15 operator QA closure documented; full pre-change backup at `X:\MARS-Localhost\backups\wordpress\projects\shpigovsky\v9-06e16-pre-admin-architecture-and-cleanup-audit-20260707-223340`; Site Settings IA audit; reusable blocks inventory (14 blocks); admin architecture + restructure plans; service duplicate design; obsolete pages audit (IDs 9, 21, 25); **0** DB/source/runtime changes. **E3 stable checkpoint remains invalidated.** **Next: CREATE_V9_06E17_SITE_SETTINGS_IA_SKELETON_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E16-OPERATOR-QA-CLOSURE-REUSABLE-BLOCKS-CLONE-CLEANUP-AUDIT-REPORT-v1.md`.
+**Current WordPress phase:** V9-06E17 Site Settings IA Skeleton **PASS** — admin IA skeleton: **Общие настройки** + **Повторяемые блоки** (12 skeleton subpages); contacts/modal/CTA field groups relocated with `post_id=option` storage preserved; top-level **Отзывы** unchanged. DB checkpoint `v9-06e17-site-settings-ia-skeleton-pre-20260707-235348`; **0** DB writes; **2** plugin + **2** ACF JSON; runtime delivered. Routes 8/8 PASS. **E3 stable checkpoint remains invalidated.** **Next: CREATE_V9_06E18_REUSABLE_BLOCKS_BATCH_1_FIELDS_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E17-SITE-SETTINGS-IA-SKELETON-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

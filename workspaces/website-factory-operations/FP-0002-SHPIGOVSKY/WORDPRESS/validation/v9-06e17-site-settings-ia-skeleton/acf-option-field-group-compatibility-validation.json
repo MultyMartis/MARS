@@ -1,0 +1,16 @@
+{
+  "wave": "V9-06E17",
+  "validation_type": "ACF_OPTION_FIELD_GROUP_COMPATIBILITY",
+  "result": "PASS",
+  "checks": [
+    {"check": "contacts_group_location", "expected": "fp02-site-settings-general", "result": "PASS", "notes": "FieldGroups.php + acf-json updated"},
+    {"check": "modal_cta_group_location", "expected": "fp02-site-settings-general", "result": "PASS", "notes": "FieldGroups.php + acf-json updated"},
+    {"check": "general_subpage_post_id", "expected": "option", "result": "PASS", "notes": "Preserves options_* storage keys"},
+    {"check": "option_values_unchanged", "expected": "same wp_options rows", "result": "PASS", "notes": "phone_primary, organisation_name, global_cta_title, default_button_label verified in DB"},
+    {"check": "reviews_data_unchanged", "expected": "fp02-reviews_* meta intact", "result": "PASS", "notes": "10 seeded review rows present"},
+    {"check": "frontend_site_option_reads", "expected": "get_field(name, option)", "result": "PASS", "notes": "shpigovsky_get_site_option unchanged"},
+    {"check": "reviews_helpers_reads", "expected": "fp02-reviews context", "result": "PASS", "notes": "theme admin-options.php unchanged"},
+    {"check": "reviews_group_location", "expected": "fp02-reviews", "result": "PASS", "notes": "No change in E17"},
+    {"check": "block_skeleton_field_groups", "expected": "none attached", "result": "PASS", "notes": "Empty skeleton subpages only"}
+  ]
+}

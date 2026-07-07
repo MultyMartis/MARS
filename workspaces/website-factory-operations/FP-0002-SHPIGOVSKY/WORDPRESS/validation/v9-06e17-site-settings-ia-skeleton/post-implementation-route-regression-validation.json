@@ -1,0 +1,21 @@
+{
+  "wave": "V9-06E17",
+  "validation_type": "POST_IMPLEMENTATION_ROUTE_REGRESSION",
+  "result": "PASS",
+  "base_url": "http://shpigovsky.test",
+  "routes": [
+    {"route": "/", "status": 200, "fatal": false, "result": "PASS"},
+    {"route": "/uslugi/", "status": 200, "fatal": false, "result": "PASS"},
+    {"route": "/uslugi/zavisimosti/", "status": 200, "fatal": false, "result": "PASS"},
+    {"route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/", "status": 200, "fatal": false, "result": "PASS"},
+    {"route": "/kontakty/", "status": 200, "fatal": false, "result": "PASS"},
+    {"route": "/otzyvy/", "status": 200, "fatal": false, "result": "PASS", "notes": "Андрей review marker present"},
+    {"route": "/privacy-policy/", "status": 200, "fatal": false, "result": "PASS"},
+    {"route": "/o-centre/specialistam/", "status": 200, "fatal": false, "result": "PASS"}
+  ],
+  "content_markers": {
+    "phone_primary_on_home": true,
+    "reviews_section_on_home": true,
+    "site_header_on_home": true
+  }
+}

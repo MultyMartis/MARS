@@ -27,7 +27,7 @@ final class FieldGroups implements ModuleInterface {
 	/**
 	 * Deterministic modified timestamp for canonical JSON source.
 	 */
-	public const MODIFIED = 1783252800;
+	public const MODIFIED = 1783603200;
 
 	/**
 	 * {@inheritdoc}
@@ -460,7 +460,7 @@ final class FieldGroups implements ModuleInterface {
 				self::repeater( 'field_fp02_social_links', 'Messengers / socials', 'social_links', 8, array( self::field( 'field_fp02_social_label', 'Label', 'label', 'text' ), self::field( 'field_fp02_social_url', 'URL', 'url', 'url' ) ) ),
 				self::field( 'field_fp02_legal_org_identifiers', 'Legal organisation identifiers', 'legal_org_identifiers', 'textarea', array( 'rows' => 4 ) ),
 			),
-			self::location( 'options_page', '==', 'fp02-site-settings' )
+			self::location( 'options_page', '==', 'fp02-site-settings-general' )
 		);
 	}
 
@@ -482,7 +482,7 @@ final class FieldGroups implements ModuleInterface {
 				self::field( 'field_fp02_global_cta_title', 'Global CTA title', 'global_cta_title', 'text' ),
 				self::field( 'field_fp02_global_cta_text', 'Global CTA text', 'global_cta_text', 'textarea', array( 'rows' => 3 ) ),
 			),
-			self::location( 'options_page', '==', 'fp02-site-settings' )
+			self::location( 'options_page', '==', 'fp02-site-settings-general' )
 		);
 	}
 

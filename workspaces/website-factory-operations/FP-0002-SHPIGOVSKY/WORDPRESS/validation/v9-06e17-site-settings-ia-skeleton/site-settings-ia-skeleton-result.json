@@ -1,0 +1,39 @@
+{
+  "wave": "V9-06E17",
+  "implementation_type": "SITE_SETTINGS_IA_SKELETON",
+  "result": "PASS",
+  "changes": {
+    "parent_fp02_site_settings": {
+      "before": {"redirect": false, "direct_fields": true},
+      "after": {"redirect": true, "subpages": ["fp02-site-settings-general", "fp02-site-settings-blocks"]},
+      "menu_slug_unchanged": true
+    },
+    "general_settings": {
+      "menu_slug": "fp02-site-settings-general",
+      "post_id": "option",
+      "active_field_groups": ["group_fp02_site_options_contacts", "group_fp02_site_options_modal_cta"],
+      "status": "ACTIVE"
+    },
+    "reusable_blocks_parent": {
+      "menu_slug": "fp02-site-settings-blocks",
+      "redirect": true,
+      "status": "ACTIVE_SKELETON"
+    },
+    "block_subpages": {
+      "count": 12,
+      "status": "SKELETON_ONLY",
+      "admin_notice": "render_skeleton_admin_notice on block pages"
+    },
+    "reviews_admin": {
+      "top_level_fp02_reviews": "UNCHANGED_ACTIVE",
+      "fp02_block_reviews": "SKELETON_PLACEHOLDER_ONLY"
+    },
+    "storage_compatibility": {
+      "site_options_post_id": "option",
+      "reviews_post_id": "fp02-reviews",
+      "frontend_helpers_unchanged": true
+    }
+  },
+  "source_files_modified": 4,
+  "theme_files_modified": 0
+}

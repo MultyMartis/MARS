@@ -1,0 +1,23 @@
+{
+  "wave": "V9-06E17",
+  "screenshots": [
+    {"name": "admin-site-settings-parent-e17", "captured": false, "result": "PARTIAL", "notes": "No wp-admin auth"},
+    {"name": "admin-general-settings-e17", "captured": false, "result": "PARTIAL", "notes": "No wp-admin auth"},
+    {"name": "admin-reusable-blocks-parent-e17", "captured": false, "result": "PARTIAL", "notes": "No wp-admin auth"},
+    {"name": "admin-reusable-blocks-subpages-e17", "captured": false, "result": "PARTIAL", "notes": "No wp-admin auth"},
+    {"name": "admin-existing-settings-accessible-e17", "captured": false, "result": "PARTIAL", "notes": "Validated via source + DB"},
+    {"name": "admin-reviews-menu-regression-e17", "captured": false, "result": "PARTIAL", "notes": "theme admin-options.php unchanged"},
+    {"name": "runtime-home-regression-e17", "captured": false, "result": "PARTIAL", "notes": "HTTP probe PASS; screenshot not captured"},
+    {"name": "runtime-uslugi-regression-e17", "captured": false, "result": "PARTIAL", "notes": "HTTP probe PASS"},
+    {"name": "runtime-zavisimosti-regression-e17", "captured": false, "result": "PARTIAL", "notes": "HTTP probe PASS"},
+    {"name": "runtime-alcohol-leaf-regression-e17", "captured": false, "result": "PARTIAL", "notes": "HTTP probe PASS"},
+    {"name": "runtime-contacts-regression-e17", "captured": false, "result": "PARTIAL", "notes": "HTTP probe PASS"},
+    {"name": "runtime-reviews-regression-e17", "captured": false, "result": "PARTIAL", "notes": "HTTP probe PASS"},
+    {"name": "runtime-privacy-regression-e17", "captured": false, "result": "PARTIAL", "notes": "HTTP probe PASS"}
+  ],
+  "summary": {
+    "admin_captured": 0,
+    "frontend_captured": 0,
+    "http_validation": "PASS"
+  }
+}

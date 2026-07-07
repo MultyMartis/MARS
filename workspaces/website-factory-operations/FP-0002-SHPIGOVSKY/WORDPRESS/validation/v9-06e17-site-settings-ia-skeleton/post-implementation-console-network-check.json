@@ -1,0 +1,9 @@
+{
+  "wave": "V9-06E17",
+  "validation_type": "POST_IMPLEMENTATION_CONSOLE_NETWORK",
+  "result": "PASS",
+  "method": "HTTP_only_probe",
+  "notes": "Headless browser console/network capture not run; HTTP 200 + no PHP fatal markers on all regression routes",
+  "console_errors": [],
+  "network_failures": []
+}

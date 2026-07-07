@@ -1,0 +1,23 @@
+{
+  "wave": "V9-06E17",
+  "result": "PASS",
+  "checkpoint_path": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e17-site-settings-ia-skeleton-pre-20260707-235348",
+  "dump_file": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e17-site-settings-ia-skeleton-pre-20260707-235348\\mars_wp_fp0002.sql",
+  "dump_sha256": "29030308DE6CE1F2A5C694AB2B1C4B6332837603EAA90CD2015903CC7C31D7A0",
+  "dump_size_bytes": 2115304,
+  "db": "mars_wp_fp0002",
+  "prefix": "fp02_",
+  "e16_baseline_commit": "cb2959c06202c66ffd5a52d30ee597a877d8f709",
+  "snapshots": [
+    "db-snapshots/options-acf-snapshot.txt",
+    "db-snapshots/options-count.txt"
+  ],
+  "captured_option_keys_sample": [
+    "options_phone_primary",
+    "options_organisation_name",
+    "options_global_cta_title",
+    "options_default_button_label",
+    "fp02-reviews_reviews_items_*"
+  ],
+  "restore_instructions": "mysql --host=127.0.0.1 --user=root mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e17-site-settings-ia-skeleton-pre-20260707-235348\\mars_wp_fp0002.sql\""
+}
