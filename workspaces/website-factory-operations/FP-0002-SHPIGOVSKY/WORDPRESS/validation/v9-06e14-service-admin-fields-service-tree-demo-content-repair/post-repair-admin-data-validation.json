@@ -1,0 +1,278 @@
+{
+  "mini_description_seeded_count": 17,
+  "specialistam_service_status": "trash",
+  "canonical_specialistam_page_status": "publish",
+  "zavisimosti_children_order": [
+    {
+      "post_name": "lechenie-alkogolnoy-zavisimosti",
+      "menu_order": 10
+    },
+    {
+      "post_name": "narkoticheskaya-zavisimost",
+      "menu_order": 20
+    },
+    {
+      "post_name": "lekarstvennaya-zavisimost",
+      "menu_order": 30
+    },
+    {
+      "post_name": "povedencheskie-zavisimosti",
+      "menu_order": 40
+    },
+    {
+      "post_name": "profilakticheskiy-analiz",
+      "menu_order": 50
+    }
+  ],
+  "profilakticheskiy_last": true,
+  "new_slugs_present": true,
+  "repair_runner": {
+    "generated_at": "2026-07-07T10:43:29+00:00",
+    "mini_description_seed": [
+      {
+        "id": 73,
+        "title": "Зависимости",
+        "slug": "zavisimosti",
+        "parent": 0,
+        "before": "",
+        "after": "DEMO — направление лечения зависимостей. Карточка раздела для плоского режима отображения /uslugi/.",
+        "status": "DEMO",
+        "layout": "subdivision"
+      },
+      {
+        "id": 74,
+        "title": "Лечение алкогольной зависимости",
+        "slug": "lechenie-alkogolnoy-zavisimosti",
+        "parent": 73,
+        "before": "",
+        "after": "Алкоголь не становится проблемой в один день — зачастую это постепенный процесс, в котором граница между «нормой» и зависимостью стирается незаметно. В основе — нейробиологические изменения в системе вознаграждения мозга, которые делают отказ физически и психологически тяжёлым без посторонней помощи. Мы работаем с причинами и помогаем выйти из замкнутого круга устойчиво.",
+        "status": "EXACT_V9",
+        "layout": "alcohol_special"
+      },
+      {
+        "id": 314,
+        "title": "Наркотическая зависимость",
+        "slug": "narkoticheskaya-zavisimost",
+        "parent": 73,
+        "before": "Наркотическая зависимость — одно из наиболее сложных состояний: она затрагивает одновременно биохимию мозга, психологию человека и его социальную жизнь. За ней почти всегда стоит что-то, что предшествовало употреблению, — боль, травма, невозможность справиться со стрессом иначе. Наша задача — разобраться и выстроить путь к восстановлению, который будет работать в реальной жизни.",
+        "after": "Наркотическая зависимость — одно из наиболее сложных состояний: она затрагивает одновременно биохимию мозга, психологию человека и его социальную жизнь. За ней почти всегда стоит что-то, что предшествовало употреблению, — боль, травма, невозможность справиться со стрессом иначе. Наша задача — разобраться и выстроить путь к восстановлению, который будет работать в реальной жизни.",
+        "status": "PRESERVED",
+        "layout": "placeholder"
+      },
+      {
+        "id": 315,
+        "title": "Лекарственная зависимость",
+        "slug": "lekarstvennaya-zavisimost",
+        "parent": 73,
+        "before": "Лекарственная зависимость нередко формируется там, где меньше всего ждёшь — на фоне лечения тревоги, боли или бессонницы. Это не безответственность: некоторые препараты меняют работу мозга так, что организм перестаёт справляться без них. Мы работаем с этим состоянием бережно и без осуждения — с вниманием к тому, что изначально привело к приёму препаратов.",
+        "after": "Лекарственная зависимость нередко формируется там, где меньше всего ждёшь — на фоне лечения тревоги, боли или бессонницы. Это не безответственность: некоторые препараты меняют работу мозга так, что организм перестаёт справляться без них. Мы работаем с этим состоянием бережно и без осуждения — с вниманием к тому, что изначально привело к приёму препаратов.",
+        "status": "PRESERVED",
+        "layout": "placeholder"
+      },
+      {
+        "id": 316,
+        "title": "Поведенческие зависимости",
+        "slug": "povedencheskie-zavisimosti",
+        "parent": 73,
+        "before": "Игромания, шопоголизм, интернет-зависимость, сексуальная зависимость — эти состояния часто воспринимаются как «ненастоящие», что делает их ещё тяжелее. Между тем механизм здесь тот же, что и при химических зависимостях: нарушение работы системы вознаграждения мозга, то есть когда мозг ищет во внешних стимулах то, что не может получить естественным путём. Мы относимся к поведенческим зависимостям как к действительным состояниям — и работаем с ними соответственно.",
+        "after": "Игромания, шопоголизм, интернет-зависимость, сексуальная зависимость — эти состояния часто воспринимаются как «ненастоящие», что делает их ещё тяжелее. Между тем механизм здесь тот же, что и при химических зависимостях: нарушение работы системы вознаграждения мозга, то есть когда мозг ищет во внешних стимулах то, что не может получить естественным путём. Мы относимся к поведенческим зависимостям как к действительным состояниям — и работаем с ними соответственно.",
+        "status": "PRESERVED",
+        "layout": "placeholder"
+      },
+      {
+        "id": 75,
+        "title": "Профилактический анализ",
+        "slug": "profilakticheskiy-analiz",
+        "parent": 73,
+        "before": "",
+        "after": "DEMO — краткое описание профилактического анализа для карточки на /uslugi/. Техническое наполнение; финальный текст будет согласован оператором.",
+        "status": "DEMO",
+        "layout": "placeholder"
+      },
+      {
+        "id": 77,
+        "title": "Психическое здоровье",
+        "slug": "psihicheskoe-zdorovie",
+        "parent": 0,
+        "before": "DEMO — направление психического здоровья. Карточка раздела для плоского режима отображения /uslugi/.",
+        "after": "DEMO — направление психического здоровья. Карточка раздела для плоского режима отображения /uslugi/.",
+        "status": "PRESERVED",
+        "layout": "subdivision"
+      },
+      {
+        "id": 78,
+        "title": "Депрессия",
+        "slug": "depressiya",
+        "parent": 77,
+        "before": "",
+        "after": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+        "status": "DEMO",
+        "layout": "placeholder"
+      },
+      {
+        "id": 79,
+        "title": "ПТСР",
+        "slug": "ptrs",
+        "parent": 77,
+        "before": "",
+        "after": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+        "status": "DEMO",
+        "layout": "placeholder"
+      },
+      {
+        "id": 80,
+        "title": "Эмоциональное выгорание",
+        "slug": "emocionalnoe-vygoranie",
+        "parent": 77,
+        "before": "",
+        "after": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+        "status": "DEMO",
+        "layout": "placeholder"
+      },
+      {
+        "id": 81,
+        "title": "Тревожные расстройства",
+        "slug": "trevozhnye-rasstroystva",
+        "parent": 77,
+        "before": "",
+        "after": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+        "status": "DEMO",
+        "layout": "placeholder"
+      },
+      {
+        "id": 82,
+        "title": "Расстройства сна",
+        "slug": "rasstroystva-sna",
+        "parent": 77,
+        "before": "",
+        "after": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+        "status": "DEMO",
+        "layout": "placeholder"
+      },
+      {
+        "id": 83,
+        "title": "Травма",
+        "slug": "travma",
+        "parent": 77,
+        "before": "",
+        "after": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+        "status": "DEMO",
+        "layout": "placeholder"
+      },
+      {
+        "id": 84,
+        "title": "Расстройства пищевого поведения",
+        "slug": "rasstroystva-pischevogo-povedeniya",
+        "parent": 0,
+        "before": "DEMO — направление расстройств пищевого поведения. Карточка раздела для плоского режима отображения /uslugi/.",
+        "after": "DEMO — направление расстройств пищевого поведения. Карточка раздела для плоского режима отображения /uslugi/.",
+        "status": "PRESERVED",
+        "layout": "subdivision"
+      },
+      {
+        "id": 85,
+        "title": "Анорексия",
+        "slug": "anoreksiya",
+        "parent": 84,
+        "before": "",
+        "after": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+        "status": "DEMO",
+        "layout": "placeholder"
+      },
+      {
+        "id": 86,
+        "title": "Нервная булимия",
+        "slug": "nervnaya-bulimiya",
+        "parent": 84,
+        "before": "",
+        "after": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+        "status": "DEMO",
+        "layout": "placeholder"
+      },
+      {
+        "id": 87,
+        "title": "Компульсивное переедание",
+        "slug": "kompulsivnoe-pereedanie",
+        "parent": 84,
+        "before": "",
+        "after": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+        "status": "DEMO",
+        "layout": "placeholder"
+      }
+    ],
+    "dependencies_tree": {
+      "specialistam_service": {
+        "service_id": 76,
+        "before_status": "publish",
+        "canonical_page_id": 15,
+        "canonical_page_status": "publish",
+        "action": "wp_trash_post",
+        "after_status": "trash"
+      },
+      "child_order": {
+        "74": 10,
+        "75": 50,
+        "314": 20,
+        "315": 30,
+        "316": 40
+      }
+    },
+    "new_leaves": [
+      {
+        "id": 314,
+        "slug": "narkoticheskaya-zavisimost",
+        "title": "Наркотическая зависимость",
+        "route": "http://shpigovsky.test/uslugi/zavisimosti/narkoticheskaya-zavisimost/",
+        "parent": 73,
+        "menu_order": 20,
+        "created": true,
+        "content_status": "DEMO",
+        "layout": "leaf"
+      },
+      {
+        "id": 315,
+        "slug": "lekarstvennaya-zavisimost",
+        "title": "Лекарственная зависимость",
+        "route": "http://shpigovsky.test/uslugi/zavisimosti/lekarstvennaya-zavisimost/",
+        "parent": 73,
+        "menu_order": 30,
+        "created": true,
+        "content_status": "DEMO",
+        "layout": "leaf"
+      },
+      {
+        "id": 316,
+        "slug": "povedencheskie-zavisimosti",
+        "title": "Поведенческие зависимости",
+        "route": "http://shpigovsky.test/uslugi/zavisimosti/povedencheskie-zavisimosti/",
+        "parent": 73,
+        "menu_order": 40,
+        "created": true,
+        "content_status": "DEMO",
+        "layout": "leaf"
+      }
+    ],
+    "psych_eating": [
+      {
+        "id": 77,
+        "slug": "psihicheskoe-zdorovie",
+        "route": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/",
+        "layout_variant": "subdivision",
+        "content_status": "DEMO",
+        "hero_seeded": true,
+        "intro_seeded": true
+      },
+      {
+        "id": 84,
+        "slug": "rasstroystva-pischevogo-povedeniya",
+        "route": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/",
+        "layout_variant": "subdivision",
+        "content_status": "DEMO",
+        "hero_seeded": true,
+        "intro_seeded": true
+      }
+    ],
+    "db_write_count": 46
+  },
+  "result": "PASS"
+}

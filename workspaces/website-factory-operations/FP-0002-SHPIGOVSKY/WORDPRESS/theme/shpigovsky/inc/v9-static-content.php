@@ -54,12 +54,29 @@ function shpigovsky_get_v9_services_hub_group_copy( $slug ) {
 }
 
 /**
+ * Resolve V9 hub child slug aliases (WP route slug may differ from static V9 filename).
+ *
+ * @param string $slug Service post slug.
+ * @return string
+ */
+function shpigovsky_resolve_v9_services_hub_child_slug( $slug ) {
+	$aliases = array(
+		'narkoticheskaya-zavisimost' => 'lechenie-narkoticheskoy-zavisimosti',
+		'lekarstvennaya-zavisimost'  => 'lekarstva',
+		'povedencheskie-zavisimosti' => 'lechenie-povedencheskoy-zavisimosti',
+	);
+
+	return isset( $aliases[ $slug ] ) ? $aliases[ $slug ] : $slug;
+}
+
+/**
  * Hub child card static V9 copy keyed by child service slug.
  *
  * @param string $slug Child service slug.
  * @return array{title:string,text:string}|null
  */
 function shpigovsky_get_v9_services_hub_child_copy( $slug ) {
+	$slug = shpigovsky_resolve_v9_services_hub_child_slug( $slug );
 	$demo_lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.';
 
 	$map = array(
@@ -78,6 +95,22 @@ function shpigovsky_get_v9_services_hub_child_copy( $slug ) {
 		'lechenie-povedencheskoy-zavisimosti' => array(
 			'title' => 'Поведенческие зависимости',
 			'text'  => 'Игромания, шопоголизм, интернет-зависимость, сексуальная зависимость — эти состояния часто воспринимаются как «ненастоящие», что делает их ещё тяжелее. Между тем механизм здесь тот же, что и при химических зависимостях: нарушение работы системы вознаграждения мозга, то есть когда мозг ищет во внешних стимулах то, что не может получить естественным путём. Мы относимся к поведенческим зависимостям как к действительным состояниям — и работаем с ними соответственно.',
+		),
+		'narkoticheskaya-zavisimost' => array(
+			'title' => 'Наркотическая зависимость',
+			'text'  => 'Наркотическая зависимость — одно из наиболее сложных состояний: она затрагивает одновременно биохимию мозга, психологию человека и его социальную жизнь. За ней почти всегда стоит что-то, что предшествовало употреблению, — боль, травма, невозможность справиться со стрессом иначе. Наша задача — разобраться и выстроить путь к восстановлению, который будет работать в реальной жизни.',
+		),
+		'lekarstvennaya-zavisimost' => array(
+			'title' => 'Лекарственная зависимость',
+			'text'  => 'Лекарственная зависимость нередко формируется там, где меньше всего ждёшь — на фоне лечения тревоги, боли или бессонницы. Это не безответственность: некоторые препараты меняют работу мозга так, что организм перестаёт справляться без них. Мы работаем с этим состоянием бережно и без осуждения — с вниманием к тому, что изначально привело к приёму препаратов.',
+		),
+		'povedencheskie-zavisimosti' => array(
+			'title' => 'Поведенческие зависимости',
+			'text'  => 'Игромания, шопоголизм, интернет-зависимость, сексуальная зависимость — эти состояния часто воспринимаются как «ненастоящие», что делает их ещё тяжелее. Между тем механизм здесь тот же, что и при химических зависимостях: нарушение работы системы вознаграждения мозга, то есть когда мозг ищет во внешних стимулах то, что не может получить естественным путём. Мы относимся к поведенческим зависимостям как к действительным состояниям — и работаем с ними соответственно.',
+		),
+		'profilakticheskiy-analiz' => array(
+			'title' => 'Профилактический анализ',
+			'text'  => 'DEMO — краткое описание профилактического анализа для карточки на /uslugi/. Техническое наполнение; финальный текст будет согласован оператором.',
 		),
 		'depressiya' => array(
 			'title' => 'Депрессия',

@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-07 (V9-06E13 Alcohol Leaf Specialists Block V9 Parity Repair PASS)
+**Last updated:** 2026-07-07 (V9-06E14 Service Admin Fields + Service Tree Demo Content Repair PASS)
 
-**Current WordPress phase:** V9-06E13 Alcohol Leaf Specialists Block V9 Parity Repair **PASS** — specialists block on `/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/` repaired via `alcohol-direct-v9/specialists.php` + page-scoped Swiper vendor; HOME_PARTIAL_REUSE removed; root cause was `home-vendors.php` front-page-only gate; 16/16 screenshots PASS; 0 DB writes. **E3 stable checkpoint remains invalidated.** **Next: CREATE_V9_06E14_OPERATOR_ALCOHOL_LEAF_VISUAL_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E13-ALCOHOL-LEAF-SPECIALISTS-BLOCK-V9-PARITY-REPAIR-REPORT-v1.md`.
+**Current WordPress phase:** V9-06E14 Service Admin Fields + Service Tree Demo Content Repair **PASS** — `service_short_description` admin field wired to `/uslugi/` hub cards (grouped + flat); dependencies tree repaired (service 76 trashed; 3 demo leaves 314–316; profilakticheskiy last); psych/eating subdivisions demo-seeded; **46** DB writes; DB checkpoint YES; **10/10** screenshots PASS. **E3 stable checkpoint remains invalidated.** **Next: CREATE_V9_06E15_OPERATOR_SERVICE_TREE_VISUAL_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E14-SERVICE-ADMIN-FIELDS-SERVICE-TREE-DEMO-CONTENT-REPAIR-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

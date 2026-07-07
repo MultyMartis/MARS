@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E13 ALCOHOL LEAF SPECIALISTS BLOCK V9 PARITY REPAIR **PASS** — direct V9 specialists partial + Swiper vendor on alcohol leaf; HOME_PARTIAL_REUSE removed; root cause: `home-vendors.php` front-page-only gate; 16 screenshots PASS; 0 DB writes. NEXT: **CREATE_V9_06E14_OPERATOR_ALCOHOL_LEAF_VISUAL_QA_TASK**
+**Status:** V9-06E14 SERVICE ADMIN FIELDS + SERVICE TREE DEMO CONTENT REPAIR **PASS** — `service_short_description` ACF field + hub rendering; dependencies tree repaired (3 demo leaves, specialistam service trashed); psych/eating subdivision demo seeded; **46** DB writes; DB checkpoint YES. NEXT: **CREATE_V9_06E15_OPERATOR_SERVICE_TREE_VISUAL_QA_TASK**
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

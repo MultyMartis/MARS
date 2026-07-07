@@ -1,0 +1,19 @@
+{
+  "specialistam_service": {
+    "service_id": 76,
+    "before_status": "publish",
+    "canonical_page_id": 15,
+    "canonical_page_status": "publish",
+    "action": "wp_trash_post",
+    "after_status": "trash"
+  },
+  "child_order": {
+    "74": 10,
+    "75": 50,
+    "314": 20,
+    "315": 30,
+    "316": 40
+  },
+  "canonical_page_id": 15,
+  "result": "PASS"
+}

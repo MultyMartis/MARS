@@ -1,0 +1,7 @@
+{
+  "checkpoint_path": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e14-service-admin-fields-service-tree-demo-content-repair-pre-20260707T104328Z",
+  "dump_file": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e14-service-admin-fields-service-tree-demo-content-repair-pre-20260707T104328Z\\mars_wp_fp0002.sql",
+  "dump_sha256": "D7FAE2B0FAA345CACA75E998D7DCEA1D0C1A64DC69064B0C560F267A58C777D0",
+  "restore_instructions": "1. mysql -h127.0.0.1 -uroot mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e14-service-admin-fields-service-tree-demo-content-repair-pre-20260707T104328Z\\mars_wp_fp0002.sql\"\n2. Verify fp02_posts service tree and fp02_postmeta service_short_description",
+  "result": "PASS"
+}

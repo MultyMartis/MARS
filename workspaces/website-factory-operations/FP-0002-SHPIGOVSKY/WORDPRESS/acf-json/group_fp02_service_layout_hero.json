@@ -80,6 +80,24 @@
             "rows": 4
         },
         {
+            "key": "field_fp02_service_short_description",
+            "label": "Мини-описание",
+            "name": "service_short_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Краткий текст для карточки услуги на странице /uslugi/ (оба режима отображения).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 4
+        },
+        {
             "key": "field_fp02_hero_media_service",
             "label": "Медиа hero",
             "name": "hero_media",
@@ -151,5 +169,5 @@
     "active": true,
     "description": "FP-0002 V9-06C canonical source field group. Runtime registration occurs only after delivery authorization.",
     "show_in_rest": 0,
-    "modified": 1783158780
+    "modified": 1783252800
 }

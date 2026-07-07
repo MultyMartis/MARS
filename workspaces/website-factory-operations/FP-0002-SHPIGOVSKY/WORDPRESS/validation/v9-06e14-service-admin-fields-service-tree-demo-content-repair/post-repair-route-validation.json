@@ -1,0 +1,110 @@
+{
+  "routes": [
+    {
+      "route": "/uslugi/",
+      "expected": "200",
+      "http_status": 200,
+      "fetch_error": null,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "expected": "200",
+      "http_status": 200,
+      "fetch_error": null,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "expected": "200",
+      "http_status": 200,
+      "fetch_error": null,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/zavisimosti/narkoticheskaya-zavisimost/",
+      "expected": "200",
+      "http_status": 200,
+      "fetch_error": null,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/zavisimosti/lekarstvennaya-zavisimost/",
+      "expected": "200",
+      "http_status": 200,
+      "fetch_error": null,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/zavisimosti/povedencheskie-zavisimosti/",
+      "expected": "200",
+      "http_status": 200,
+      "fetch_error": null,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/",
+      "expected": "200",
+      "http_status": 200,
+      "fetch_error": null,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "expected": "200",
+      "http_status": 200,
+      "fetch_error": null,
+      "result": "PASS"
+    },
+    {
+      "route": "/o-centre/specialistam/",
+      "expected": "200",
+      "http_status": 200,
+      "fetch_error": null,
+      "result": "PASS"
+    },
+    {
+      "route": "/",
+      "expected": "200",
+      "http_status": 200,
+      "fetch_error": null,
+      "result": "PASS"
+    },
+    {
+      "route": "/kontakty/",
+      "expected": "200",
+      "http_status": 200,
+      "fetch_error": null,
+      "result": "PASS"
+    },
+    {
+      "route": "/otzyvy/",
+      "expected": "200",
+      "http_status": 200,
+      "fetch_error": null,
+      "result": "PASS"
+    },
+    {
+      "route": "/privacy-policy/",
+      "expected": "200",
+      "http_status": 200,
+      "fetch_error": null,
+      "result": "PASS"
+    },
+    {
+      "route": "/user-agreement/",
+      "expected": "200",
+      "http_status": 200,
+      "fetch_error": null,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/zavisimosti/specialistam/",
+      "expected": "not_public",
+      "http_status": 404,
+      "fetch_error": null,
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS"
+}

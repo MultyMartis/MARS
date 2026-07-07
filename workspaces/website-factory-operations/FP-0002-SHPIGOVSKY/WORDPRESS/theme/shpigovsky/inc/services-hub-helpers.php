@@ -320,6 +320,63 @@ function shpigovsky_services_hub_body_class( $classes ) {
 add_filter( 'body_class', 'shpigovsky_services_hub_body_class' );
 
 /**
+ * DEMO mini-description fallback when ACF and V9 static are empty.
+ *
+ * @param string $slug Service post slug.
+ * @return string
+ */
+function shpigovsky_get_service_demo_mini_description_fallback( $slug ) {
+	$demos = array(
+		'zavisimosti'                        => 'DEMO — направление лечения зависимостей. Карточка раздела для плоского режима отображения /uslugi/.',
+		'psihicheskoe-zdorovie'              => 'DEMO — направление психического здоровья. Карточка раздела для плоского режима отображения /uslugi/.',
+		'rasstroystva-pischevogo-povedeniya' => 'DEMO — направление расстройств пищевого поведения. Карточка раздела для плоского режима отображения /uslugi/.',
+		'genotipirovanie'                    => 'DEMO — направление генотипирования. Карточка раздела для плоского режима отображения /uslugi/.',
+	);
+
+	if ( isset( $demos[ $slug ] ) ) {
+		return $demos[ $slug ];
+	}
+
+	return 'DEMO — краткое описание услуги для карточки на /uslugi/. Контент ожидает согласования оператором.';
+}
+
+/**
+ * Resolve service mini-description for services hub cards.
+ *
+ * Priority: ACF field → V9 static authority → DEMO fallback.
+ *
+ * @param int $post_id Service post ID.
+ * @return string
+ */
+function shpigovsky_get_service_mini_description( $post_id ) {
+	$post_id = (int) $post_id;
+
+	if ( $post_id <= 0 ) {
+		return '';
+	}
+
+	$acf = shpigovsky_get_service_field( $post_id, 'service_short_description' );
+
+	if ( '' !== $acf ) {
+		return $acf;
+	}
+
+	$post = get_post( $post_id );
+
+	if ( ! $post instanceof WP_Post ) {
+		return '';
+	}
+
+	$v9 = shpigovsky_get_v9_services_hub_child_copy( $post->post_name );
+
+	if ( null !== $v9 && '' !== trim( (string) $v9['text'] ) ) {
+		return trim( (string) $v9['text'] );
+	}
+
+	return shpigovsky_get_service_demo_mini_description_fallback( $post->post_name );
+}
+
+/**
  * Build child service card data from a service post.
  *
  * @param WP_Post $child Child service post.
@@ -339,19 +396,7 @@ function shpigovsky_build_services_hub_child_card( $child ) {
 		return null;
 	}
 
-	if ( null !== $v9 ) {
-		$text = $v9['text'];
-	} else {
-		$text = shpigovsky_get_service_field( $child->ID, 'intro_text' );
-
-		if ( '' === $text ) {
-			$text = shpigovsky_get_service_field( $child->ID, 'hero_lead' );
-		}
-
-		if ( '' === $text ) {
-			$text = trim( (string) get_the_excerpt( $child ) );
-		}
-	}
+	$text = shpigovsky_get_service_mini_description( $child->ID );
 
 	return array(
 		'title' => $title,

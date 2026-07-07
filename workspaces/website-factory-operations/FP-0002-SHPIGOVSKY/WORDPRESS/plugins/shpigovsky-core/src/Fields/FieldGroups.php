@@ -27,7 +27,7 @@ final class FieldGroups implements ModuleInterface {
 	/**
 	 * Deterministic modified timestamp for canonical JSON source.
 	 */
-	public const MODIFIED = 1783166400;
+	public const MODIFIED = 1783252800;
 
 	/**
 	 * {@inheritdoc}
@@ -118,6 +118,16 @@ final class FieldGroups implements ModuleInterface {
 				self::field( 'field_fp02_hero_eyebrow_service', 'Надзаголовок', 'hero_eyebrow', 'text' ),
 				self::field( 'field_fp02_hero_title_override_service', 'Заголовок H1 override', 'hero_title_override', 'text' ),
 				self::field( 'field_fp02_hero_lead_service', 'Лид', 'hero_lead', 'textarea', array( 'rows' => 4 ) ),
+				self::field(
+					'field_fp02_service_short_description',
+					'Мини-описание',
+					'service_short_description',
+					'textarea',
+					array(
+						'instructions' => 'Краткий текст для карточки услуги на странице /uslugi/ (оба режима отображения).',
+						'rows'         => 4,
+					)
+				),
 				self::field( 'field_fp02_hero_media_service', 'Hero image', 'hero_media', 'image', array( 'instructions' => 'Hero background image for this service. Empty falls back to theme asset by layout variant.', 'return_format' => 'array', 'preview_size' => 'medium' ) ),
 				self::field( 'field_fp02_hero_cta_label_service', 'CTA label', 'hero_cta_label', 'text' ),
 				self::field( 'field_fp02_hero_cta_target_service', 'CTA target', 'hero_cta_target', 'url' ),

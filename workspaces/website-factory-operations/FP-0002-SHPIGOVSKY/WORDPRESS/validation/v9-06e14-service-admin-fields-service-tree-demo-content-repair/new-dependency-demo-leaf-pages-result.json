@@ -1,0 +1,38 @@
+{
+  "pages": [
+    {
+      "id": 314,
+      "slug": "narkoticheskaya-zavisimost",
+      "title": "Наркотическая зависимость",
+      "route": "http://shpigovsky.test/uslugi/zavisimosti/narkoticheskaya-zavisimost/",
+      "parent": 73,
+      "menu_order": 20,
+      "created": true,
+      "content_status": "DEMO",
+      "layout": "leaf"
+    },
+    {
+      "id": 315,
+      "slug": "lekarstvennaya-zavisimost",
+      "title": "Лекарственная зависимость",
+      "route": "http://shpigovsky.test/uslugi/zavisimosti/lekarstvennaya-zavisimost/",
+      "parent": 73,
+      "menu_order": 30,
+      "created": true,
+      "content_status": "DEMO",
+      "layout": "leaf"
+    },
+    {
+      "id": 316,
+      "slug": "povedencheskie-zavisimosti",
+      "title": "Поведенческие зависимости",
+      "route": "http://shpigovsky.test/uslugi/zavisimosti/povedencheskie-zavisimosti/",
+      "parent": 73,
+      "menu_order": 40,
+      "created": true,
+      "content_status": "DEMO",
+      "layout": "leaf"
+    }
+  ],
+  "result": "PASS"
+}
