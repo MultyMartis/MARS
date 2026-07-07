@@ -48,6 +48,7 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `site-002-prod-sitemap-delta-audit-01.py` | Read-only sitemap delta audit — compare Run 4.206 baseline (1320) vs live (1377); classify added/removed URLs for `SITE-002-PROD-SITEMAP-DELTA-AUDIT-01` (Run 4.209) |
 | `site-002-prod-catalog-new-branch-onboarding-01.py` | New 1C catalog branch onboarding — category PLP meta via admin category SEO for `SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-01` (Run 4.210) |
 | `site-002-prod-catalog-branch-onboarding-followup-01.py` | Deferred lari branch follow-up — parent-aware category_id resolution + admin category SEO for `SITE-002-PROD-CATALOG-BRANCH-ONBOARDING-FOLLOWUP-01` (Run 4.211) |
+| `site-002-prod-post-1c-catalog-onboarding-monitor-01.py` | Read-only post-1C catalog onboarding monitor — sitemap delta, category onboarding needs, PDP sanity, brand/test markers for `SITE-002-PROD-POST-1C-CATALOG-ONBOARDING-MONITOR-01` (Run 4.212) |
 
 ## Dependencies
 
