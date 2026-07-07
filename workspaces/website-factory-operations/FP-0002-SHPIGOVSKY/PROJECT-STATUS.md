@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-07 (V9-06E15 Service Mini-Description Source + Subdivision Sliders Regression Repair PASS)
+**Last updated:** 2026-07-07 (V9-06E16 Operator QA Closure + Reusable Blocks / Clone / Cleanup Architecture Audit PASS)
 
-**Current WordPress phase:** V9-06E15 Service Mini-Description Source + Subdivision Sliders Regression Repair **PASS** — ACF-first mini-description hardening (`post_meta` fallback + source resolver); subdivision Swiper vendors for `/uslugi/zavisimosti/` specialists/reviews sliders; hub grouped **14/14** + flat **17/17** admin source PASS; **2** DB writes; DB checkpoint YES; **11/11** screenshots PASS. **E3 stable checkpoint remains invalidated.** **Next: CREATE_V9_06E16_OPERATOR_SERVICE_TREE_VISUAL_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E15-SERVICE-MINI-DESCRIPTION-SOURCE-SUBDIVISION-SLIDERS-REGRESSION-REPAIR-REPORT-v1.md`.
+**Current WordPress phase:** V9-06E16 Operator QA Closure + Architecture Audit **PASS** — E15 operator QA closure documented; full pre-change backup at `X:\MARS-Localhost\backups\wordpress\projects\shpigovsky\v9-06e16-pre-admin-architecture-and-cleanup-audit-20260707-223340`; Site Settings IA audit; reusable blocks inventory (14 blocks); admin architecture + restructure plans; service duplicate design; obsolete pages audit (IDs 9, 21, 25); **0** DB/source/runtime changes. **E3 stable checkpoint remains invalidated.** **Next: CREATE_V9_06E17_SITE_SETTINGS_IA_SKELETON_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E16-OPERATOR-QA-CLOSURE-REUSABLE-BLOCKS-CLONE-CLEANUP-AUDIT-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

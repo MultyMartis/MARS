@@ -1,0 +1,77 @@
+{
+  "wave": "V9-06E16",
+  "design_type": "SERVICE_DUPLICATE_FEATURE",
+  "result": "COMPLETE",
+  "cpt": {
+    "post_type": "service",
+    "hierarchical": true,
+    "rewrite_slug": "uslugi",
+    "supports": ["title", "editor", "excerpt", "thumbnail", "page-attributes", "revisions"],
+    "registration": "plugins/shpigovsky-core/src/ContentTypes/Service.php"
+  },
+  "current_admin": {
+    "list_columns": ["fp02_service_layout", "menu_order via page-attributes"],
+    "existing_row_actions": "default WordPress only (no duplicate)",
+    "hooks_present": "EditorRestrictions for columns/metaboxes; no clone hook"
+  },
+  "copy_allowlist_meta": [
+    "post_parent",
+    "menu_order",
+    "service_layout_variant",
+    "service_short_description",
+    "hero_eyebrow",
+    "hero_title_override",
+    "hero_lead",
+    "hero_media",
+    "hero_cta_label",
+    "hero_cta_target",
+    "intro_text",
+    "intro_note",
+    "signs_items",
+    "programme_items",
+    "stages",
+    "cta_title",
+    "cta_text",
+    "cta_button_label",
+    "cta_button_target",
+    "faq_items",
+    "manual_related_services",
+    "_wp_page_template if used on service"
+  ],
+  "copy_denylist_or_reset": [
+    "ID",
+    "post_name (slug) — generate unique",
+    "post_status — force draft",
+    "post_date / post_modified",
+    "post_author — set current user",
+    "guid",
+    "comment_count",
+    "_edit_lock",
+    "_edit_last"
+  ],
+  "media_policy": "Reuse attachment IDs from hero_media/thumbnail; do not duplicate media files by default",
+  "expected_behavior": {
+    "action_label": "Дублировать",
+    "scope": "service CPT list and/or row action only",
+    "new_status": "draft",
+    "title_suffix": " — копия",
+    "slug_strategy": "append -copy or -copy-2 until unique among all statuses",
+    "redirect_after": "edit screen for new draft",
+    "capability": "edit_posts or edit_service capability equivalent"
+  },
+  "implementation_sketch": {
+    "location": "plugins/shpigovsky-core/src/Admin/ServiceDuplicate.php (new module)",
+    "hook": "admin_action_fp02_duplicate_service + row action link with nonce",
+    "engine": "wp_insert_post + copy_post_meta for ACF keys on allowlist",
+    "acf": "use get_fields/post_meta bulk copy; respect RepeaterValidation limits",
+    "permalink": "no flush required for draft",
+    "audit_log": "documentation + optional admin notice only (no custom DB log table)"
+  },
+  "risks": [
+    {"area": "accidental publish", "level": "HIGH", "mitigation": "draft-only + admin notice"},
+    {"area": "slug collision with live route", "level": "HIGH", "mitigation": "unique slug helper + draft status"},
+    {"area": "nested permalink parent chain", "level": "MEDIUM", "mitigation": "copy post_parent verbatim"},
+    {"area": "placeholder layout proliferation", "level": "LOW", "mitigation": "operator training"}
+  ],
+  "validation": ["clone subdivision parent", "clone alcohol leaf", "verify draft 404 or preview only", "verify menu_order preserved"]
+}

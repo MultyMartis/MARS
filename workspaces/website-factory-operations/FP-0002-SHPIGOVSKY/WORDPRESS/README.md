@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E15 SERVICE MINI-DESCRIPTION SOURCE + SUBDIVISION SLIDERS REGRESSION REPAIR **PASS** — ACF-first mini-description hardening + subdivision Swiper vendors; **2** DB writes (seed repair); DB checkpoint YES; **11/11** screenshots PASS. NEXT: **CREATE_V9_06E16_OPERATOR_SERVICE_TREE_VISUAL_QA_TASK**
+**Status:** V9-06E16 OPERATOR QA CLOSURE + REUSABLE BLOCKS / CLONE / CLEANUP ARCHITECTURE AUDIT **PASS** — E15 operator QA closed; pre-change backup YES; admin IA + reusable blocks + clone + cleanup plans documented; **0** DB/source changes. NEXT: **CREATE_V9_06E17_SITE_SETTINGS_IA_SKELETON_TASK**
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

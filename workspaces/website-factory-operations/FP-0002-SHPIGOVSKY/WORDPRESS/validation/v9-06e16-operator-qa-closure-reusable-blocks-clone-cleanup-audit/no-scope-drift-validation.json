@@ -1,0 +1,41 @@
+{
+  "wave": "V9-06E16",
+  "validation_type": "NO_SCOPE_DRIFT",
+  "result": "PASS",
+  "checks": {
+    "db_writes_except_backup": 0,
+    "source_theme_changes": 0,
+    "project_plugin_changes": 0,
+    "third_party_plugin_changes": 0,
+    "acf_json_changes": 0,
+    "runtime_delivery": false,
+    "page_delete_trash_draft_changes": 0,
+    "service_clone_implementation": false,
+    "reusable_blocks_implementation": false,
+    "admin_settings_implementation": false,
+    "legal_text_writes": 0,
+    "reviews_data_writes": 0,
+    "menu_writes": 0,
+    "privacy_setting_writes": 0,
+    "rewrite_flush": false,
+    "plugin_install_update_delete": false,
+    "ocpilot_writes": 0,
+    "production_migration": false,
+    "v9_src_changes": 0,
+    "v9_dist_changes": 0,
+    "db_dump_committed": false,
+    "backup_payload_committed": false,
+    "runtime_snapshot_committed": false,
+    "helper_temp_committed": false,
+    "secrets_committed": 0
+  },
+  "allowed_writes": [
+    "WORDPRESS/reports/FP-0002-V9-06E16-*",
+    "WORDPRESS/architecture/FP-0002-V9-06E16-*",
+    "WORDPRESS/validation/v9-06e16-*",
+    "WORDPRESS/README.md",
+    "WORDPRESS/SOURCE-AUTHORITY.md",
+    "FP-0002-SHPIGOVSKY/PROJECT-STATUS.md"
+  ],
+  "notes": "Full DB dump written only to MARS-Localhost backup root outside Git."
+}

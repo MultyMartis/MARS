@@ -1,0 +1,32 @@
+{
+  "wave": "V9-06E16",
+  "checkpoint_type": "PRE_CHANGE_BACKUP",
+  "result": "PASS",
+  "timestamp_utc": "2026-07-07T15:33:40Z",
+  "backup_root": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e16-pre-admin-architecture-and-cleanup-audit-20260707-223340",
+  "database": {
+    "name": "mars_wp_fp0002",
+    "prefix": "fp02_",
+    "full_dump": "mars_wp_fp0002.sql",
+    "dump_size_bytes": 2115365,
+    "dump_result": "PASS"
+  },
+  "snapshots": [
+    {"name": "live-probe-e16.txt", "scope": "privacy option, candidate pages, menu terms"},
+    {"name": "pages-posts.json", "scope": "all non-trash pages"},
+    {"name": "service-posts.json", "scope": "all non-trash service CPT"},
+    {"name": "options-menus-meta-counts.txt", "scope": "ACF options keys, menu refs, service meta counts"},
+    {"name": "route-probe-e16.json", "scope": "frontend HTTP status probes"}
+  ],
+  "runtime_inventories": [
+    {"surface": "runtime-theme", "file": "runtime-theme/inventory-hash.json"},
+    {"surface": "runtime-plugin-shpigovsky-core", "file": "runtime-plugin/inventory-hash.json"},
+    {"surface": "repo-acf-json", "file": "acf-json/inventory-hash.json"}
+  ],
+  "restore_instructions": "RESTORE-INSTRUCTIONS.md",
+  "manifest": "backup-manifest.json",
+  "e15_baseline_commit": "a8d825b0",
+  "git_head_at_backup": "9c5d95104ffff5cb9e281d6872606c281bb2e10d",
+  "committed_to_git": false,
+  "notes": "Checkpoint metadata only in Git; dump and payload remain outside repository."
+}

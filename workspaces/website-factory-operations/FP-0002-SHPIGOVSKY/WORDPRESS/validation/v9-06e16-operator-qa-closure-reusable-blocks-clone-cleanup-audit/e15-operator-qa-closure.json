@@ -1,0 +1,29 @@
+{
+  "wave": "V9-06E16",
+  "closure_type": "E15_OPERATOR_QA_CLOSURE",
+  "e15_baseline_commit": "a8d825b0",
+  "e15_baseline_message": "FP-0002: repair service descriptions and subdivision sliders",
+  "operator_statement": "Всё что ты перечислил - я проверил и это ок. Не забываем бэкапиться перед следующими изменениями.",
+  "operator_statement_short": "Всё что ты перечислил - я проверил и это ок.",
+  "closure_date": "2026-07-07",
+  "result": "PASS",
+  "areas": [
+    {"area": "uslugi_grouped_mode", "operator_status": "PASS", "notes": "Operator verified grouped hub cards and ordering"},
+    {"area": "uslugi_flat_mode", "operator_status": "PASS", "notes": "Operator verified flat hub mode"},
+    {"area": "service_mini_descriptions", "operator_status": "PASS", "notes": "ACF-first mini descriptions on service cards"},
+    {"area": "zavisimosti_specialists_slider", "operator_status": "PASS", "notes": "/uslugi/zavisimosti/ specialists__slider"},
+    {"area": "zavisimosti_reviews_slider", "operator_status": "PASS", "notes": "/uslugi/zavisimosti/ reviews__slider"},
+    {"area": "service_ordering", "operator_status": "PASS", "notes": "menu_order respected in hub and tree"},
+    {"area": "zavisimosti_specialistam_404", "operator_status": "PASS", "notes": "/uslugi/zavisimosti/specialistam/ returns 404 by design"},
+    {"area": "o_centre_specialistam_public", "operator_status": "PASS", "notes": "/o-centre/specialistam/ remains public"},
+    {"area": "alcohol_leaf", "operator_status": "PASS", "notes": "Direct V9 alcohol leaf"},
+    {"area": "home", "operator_status": "PASS", "notes": "Homepage regression clear"},
+    {"area": "contacts", "operator_status": "PASS", "notes": "Contacts page"},
+    {"area": "reviews", "operator_status": "PASS", "notes": "Reviews page and shared slider"},
+    {"area": "legal_pages", "operator_status": "PASS", "notes": "Legal shell pages including /privacy-policy/"}
+  ],
+  "evidence_refs": [
+    "WORDPRESS/reports/FP-0002-V9-06E15-SERVICE-MINI-DESCRIPTION-SOURCE-SUBDIVISION-SLIDERS-REGRESSION-REPAIR-REPORT-v1.md",
+    "WORDPRESS/validation/v9-06e15-service-mini-description-source-subdivision-sliders-regression-repair/final-verdict.json"
+  ]
+}

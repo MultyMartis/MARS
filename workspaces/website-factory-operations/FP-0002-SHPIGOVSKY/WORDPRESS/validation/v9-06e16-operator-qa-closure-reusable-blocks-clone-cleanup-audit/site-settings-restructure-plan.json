@@ -1,0 +1,42 @@
+{
+  "wave": "V9-06E16",
+  "plan_type": "SITE_SETTINGS_RESTRUCTURE",
+  "result": "COMPLETE",
+  "current_fp02_site_settings_fields": [
+    {"field": "organisation_name", "group": "contacts", "target": "Общие настройки", "migration": "relocate location only"},
+    {"field": "phone_primary", "group": "contacts", "target": "Общие настройки", "migration": "relocate"},
+    {"field": "phone_secondary", "group": "contacts", "target": "Общие настройки", "migration": "relocate"},
+    {"field": "site_email", "group": "contacts", "target": "Общие настройки", "migration": "relocate"},
+    {"field": "site_address", "group": "contacts", "target": "Общие настройки", "migration": "relocate"},
+    {"field": "opening_hours", "group": "contacts", "target": "Общие настройки", "migration": "relocate"},
+    {"field": "map_link", "group": "contacts", "target": "Общие настройки", "migration": "relocate"},
+    {"field": "social_links", "group": "contacts", "target": "Общие настройки", "migration": "relocate"},
+    {"field": "legal_org_identifiers", "group": "contacts", "target": "Общие настройки", "migration": "relocate"},
+    {"field": "default_callback_title", "group": "modal_cta", "target": "Повторяемые блоки → Модальное окно", "migration": "split group"},
+    {"field": "default_callback_text", "group": "modal_cta", "target": "Повторяемые блоки → Модальное окно", "migration": "split group"},
+    {"field": "default_button_label", "group": "modal_cta", "target": "Общие настройки (global default) + referenced by blocks", "migration": "keep global default"},
+    {"field": "default_secondary_button_label", "group": "modal_cta", "target": "Общие настройки", "migration": "relocate"},
+    {"field": "default_consent_text_reference", "group": "modal_cta", "target": "Повторяемые блоки → Финальная форма", "migration": "split"},
+    {"field": "global_cta_title", "group": "modal_cta", "target": "Повторяемые блоки → CTA-блоки", "migration": "split"},
+    {"field": "global_cta_text", "group": "modal_cta", "target": "Повторяемые блоки → CTA-блоки", "migration": "split"}
+  ],
+  "stay_page_local": [
+    {"surface": "Home front page", "group": "group_fp02_page_home", "reason": "page-specific hero, FAQ, gallery"},
+    {"surface": "Services hub page", "group": "group_fp02_page_services_hub", "reason": "hub query mode and hub FAQ"},
+    {"surface": "Service CPT", "groups": ["layout_hero", "structured_sections", "faq", "relationships"], "reason": "per-service content"},
+    {"surface": "Contacts/Reviews/Legal/Institutional pages", "groups": "page_*", "reason": "route-specific"}
+  ],
+  "proposed_slugs": {
+    "general": "fp02-site-settings-general",
+    "blocks_parent": "fp02-site-settings-blocks",
+    "blocks_children_prefix": "fp02-block-"
+  },
+  "acf_changes": [
+    "acf_add_options_sub_page for general and each block",
+    "Update field group location rules from options_page==fp02-site-settings to new slugs",
+    "Phase 1: register subpages with alias read layer; Phase 2: migrate locations; Phase 3: remove flat fp02-site-settings fields"
+  ],
+  "seeding": "Copy existing wp_options ACF values to new option post_id contexts where slugs change (especially fp02-reviews → fp02-block-reviews)",
+  "risk": "MEDIUM",
+  "operator_labels_ru": true
+}

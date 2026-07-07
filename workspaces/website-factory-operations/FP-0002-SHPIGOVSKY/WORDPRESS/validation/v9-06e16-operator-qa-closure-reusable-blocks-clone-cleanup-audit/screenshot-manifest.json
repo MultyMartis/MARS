@@ -1,0 +1,17 @@
+{
+  "wave": "V9-06E16",
+  "result": "PARTIAL",
+  "admin_auth_available": false,
+  "screenshots": [
+    {"name": "wp-admin-site-settings-e16", "captured": false, "result": "PARTIAL", "notes": "No authenticated admin session in E16; structure verified via source + DB"},
+    {"name": "wp-admin-fp02-reviews-e16", "captured": false, "result": "PARTIAL", "notes": "Top-level Отзывы menu confirmed in source"},
+    {"name": "runtime-uslugi-e16", "captured": false, "result": "REFERENCED", "notes": "Use E15 validation/v9-06e15-*/screenshots; route probe 200"},
+    {"name": "runtime-uslugi-zavisimosti-e16", "captured": false, "result": "REFERENCED", "notes": "E15 operator PASS; route probe 200"},
+    {"name": "runtime-genotipirovanie-e16", "captured": false, "result": "PROBE", "notes": "HTTP 404 at /uslugi/genotipirovanie/"},
+    {"name": "runtime-privacy-policy-page-e16", "captured": false, "result": "PROBE", "notes": "HTTP 200 duplicate page ID 25"},
+    {"name": "runtime-privacy-policy-e16", "captured": false, "result": "PROBE", "notes": "HTTP 200 canonical ID 3"},
+    {"name": "runtime-o-centre-specialistam-e16", "captured": false, "result": "PROBE", "notes": "HTTP 200 regression clear"},
+    {"name": "runtime-zavisimosti-specialistam-404-e16", "captured": false, "result": "PROBE", "notes": "HTTP 404 by design"}
+  ],
+  "route_probe_file": "route-probe-e16.json"
+}

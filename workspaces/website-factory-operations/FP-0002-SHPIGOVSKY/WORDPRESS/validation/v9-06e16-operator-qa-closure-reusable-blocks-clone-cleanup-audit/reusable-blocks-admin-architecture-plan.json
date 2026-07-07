@@ -1,0 +1,65 @@
+{
+  "wave": "V9-06E16",
+  "plan_type": "REUSABLE_BLOCKS_ADMIN_ARCHITECTURE",
+  "result": "COMPLETE",
+  "admin_menu_ia": {
+    "parent": {
+      "menu_title": "Настройки сайта",
+      "menu_slug": "fp02-site-settings",
+      "capability": "manage_options"
+    },
+    "children": [
+      {
+        "menu_title": "Общие настройки",
+        "menu_slug": "fp02-site-settings-general",
+        "parent_slug": "fp02-site-settings",
+        "field_groups": ["group_fp02_site_options_contacts", "group_fp02_site_options_modal_cta"]
+      },
+      {
+        "menu_title": "Повторяемые блоки",
+        "menu_slug": "fp02-site-settings-blocks",
+        "parent_slug": "fp02-site-settings",
+        "redirect": true,
+        "children": [
+          {"menu_title": "Шапка", "menu_slug": "fp02-block-header"},
+          {"menu_title": "Подвал", "menu_slug": "fp02-block-footer"},
+          {"menu_title": "Финальная форма", "menu_slug": "fp02-block-final-form"},
+          {"menu_title": "Модальное окно", "menu_slug": "fp02-block-consultation-modal"},
+          {"menu_title": "Специалисты", "menu_slug": "fp02-block-specialists"},
+          {"menu_title": "Отзывы", "menu_slug": "fp02-block-reviews"},
+          {"menu_title": "CTA-блоки", "menu_slug": "fp02-block-cta-bands"},
+          {"menu_title": "Комфорт", "menu_slug": "fp02-block-comfort"},
+          {"menu_title": "Требования и преимущества", "menu_slug": "fp02-block-advantages"},
+          {"menu_title": "Цитата основателя", "menu_slug": "fp02-block-founder-quote"},
+          {"menu_title": "Фоновые секции", "menu_slug": "fp02-block-backgrounds"},
+          {"menu_title": "Герои / fallback-изображения", "menu_slug": "fp02-block-hero-fallbacks"}
+        ]
+      }
+    ]
+  },
+  "field_grouping_principles": [
+    "One options subpage per reusable block group; avoid duplicate fields across groups",
+    "Global repeaters live on fp02-block-* options pages with autoload=false where heavy",
+    "Page/service-specific hero and CTA overrides remain on page/service field groups",
+    "Relocate fp02-reviews under Повторяемые блоки → Отзывы; deprecate separate top-level Отзывы menu after migration",
+    "Use Russian admin labels; retire English group titles during migration",
+    "Images reference media library attachment IDs; no binary duplication on service clone"
+  ],
+  "migration_strategy_summary": [
+    {"block": "rb-final-form", "current": "home_cta_* + site button label", "target": "fp02-block-final-form", "seed": "current option/home values", "renderer_change": "final-form.php read block options first"},
+    {"block": "rb-reviews-slider", "current": "fp02-reviews top-level", "target": "fp02-block-reviews", "seed": "migrate options context fp02-reviews → block slug", "renderer_change": "reviews-helpers.php option context switch with fallback"},
+    {"block": "rb-specialists-slider", "current": "v9-static-content hardcoded", "target": "fp02-block-specialists repeater", "seed": "V9 static cards", "renderer_change": "home/specialists.php + alcohol-direct-v9/specialists.php consume repeater"},
+    {"block": "rb-header/footer", "current": "fp02-site-settings contacts+cta", "target": "split: general vs block-specific chrome fields", "seed": "existing options", "renderer_change": "minimal if field names aliased"}
+  ],
+  "backward_compatibility": {
+    "empty_option_fallback": "preserve current V9 static / hardcoded fallbacks",
+    "alias_reads": "shpigovsky_get_site_option may read legacy option keys during transition",
+    "no_visual_drift_gate": "screenshot parity required per block migration",
+    "reviews_context": "maintain fp02-reviews data until explicit migration script copies to block slug"
+  },
+  "implementation_owner": {
+    "plugin": "acf_add_options_sub_page registration in shpigovsky-core Admin/OptionsPage.php",
+    "fields": "FieldGroups.php + acf-json per block group",
+    "theme": "render consumers only; no new top-level menus in theme long-term"
+  }
+}

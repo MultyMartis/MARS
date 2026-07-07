@@ -1,0 +1,22 @@
+{
+  "wave": "V9-06E16",
+  "evidence_index": [
+    {"id": "E15-CLOSURE", "path": "e15-operator-qa-closure.json", "type": "operator_qa_closure"},
+    {"id": "BACKUP", "path": "pre-change-backup-checkpoint.json", "type": "backup_metadata"},
+    {"id": "ADMIN-IA", "path": "current-site-settings-admin-ia-audit.json", "type": "admin_audit"},
+    {"id": "BLOCKS-INV", "path": "reusable-blocks-inventory.json", "type": "inventory"},
+    {"id": "BLOCKS-PLAN", "path": "reusable-blocks-admin-architecture-plan.json", "type": "architecture_plan"},
+    {"id": "SETTINGS-PLAN", "path": "site-settings-restructure-plan.json", "type": "restructure_plan"},
+    {"id": "CLONE-DESIGN", "path": "service-duplicate-feature-design.json", "type": "feature_design"},
+    {"id": "CLEANUP-AUDIT", "path": "obsolete-pages-cleanup-audit.json", "type": "cleanup_audit"},
+    {"id": "SEQUENCE", "path": "future-implementation-sequence.json", "type": "implementation_sequence"},
+    {"id": "ROUTES", "path": "route-probe-e16.json", "type": "runtime_probe"},
+    {"id": "DRIFT", "path": "no-scope-drift-validation.json", "type": "scope_gate"},
+    {"id": "VERDICT", "path": "final-verdict.json", "type": "verdict"}
+  ],
+  "external_backup": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e16-pre-admin-architecture-and-cleanup-audit-20260707-223340",
+  "authority_refs": [
+    "WORDPRESS/architecture/FP-0002-V9-06E10-STATIC-V9-WP-PORT-GOVERNANCE-CONTRACT-v1.md",
+    "WORDPRESS/reports/FP-0002-V9-06E15-SERVICE-MINI-DESCRIPTION-SOURCE-SUBDIVISION-SLIDERS-REGRESSION-REPAIR-REPORT-v1.md"
+  ]
+}

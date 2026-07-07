@@ -1,0 +1,49 @@
+{
+  "wave": "V9-06E16",
+  "plan_type": "FUTURE_IMPLEMENTATION_SEQUENCE",
+  "result": "COMPLETE",
+  "phases": [
+    {
+      "phase": "E17",
+      "goal": "Site Settings IA skeleton: Общие настройки + Повторяемые блоки parent/subpages; alias reads; no renderer migration or harmless aliases only",
+      "db_checkpoint": "YES",
+      "source_scope": ["plugins/shpigovsky-core/src/Admin/OptionsPage.php", "plugins/shpigovsky-core/src/Fields/FieldGroups.php", "acf-json new group shells"],
+      "db_scope": "options page registration only; optional copy seed to new option contexts",
+      "validation": ["admin menu tree screenshot", "existing frontend routes unchanged", "fp02-site-settings fields still editable"],
+      "rollback": "restore E16 DB dump; revert plugin/ACF JSON commit",
+      "stop_conditions": ["duplicate admin fields visible", "reviews data loss", "frontend regression on E15 routes"]
+    },
+    {
+      "phase": "E18",
+      "goal": "First reusable blocks batch: final form, specialists, reviews (relocate fp02-reviews), CTA defaults; renderer migration with fallbacks",
+      "db_checkpoint": "YES",
+      "source_scope": ["theme render consumers", "FieldGroups + acf-json block groups", "reviews-helpers.php option context"],
+      "db_scope": "seed block option values from current fp02-reviews and hardcoded V9 fixtures",
+      "validation": ["per-block screenshot parity", "home + zavisimosti sliders", "reviews page + archive"],
+      "rollback": "DB restore + revert source wave",
+      "stop_conditions": ["visual drift vs E15 operator baseline", "empty block with no fallback"]
+    },
+    {
+      "phase": "E19",
+      "goal": "Service duplicate feature: row action Дублировать, draft clone, meta copy allowlist",
+      "db_checkpoint": "YES",
+      "source_scope": ["plugins/shpigovsky-core new Admin/ServiceDuplicate.php", "ModuleRegistry"],
+      "db_scope": "new draft service posts only via operator action",
+      "validation": ["clone subdivision + leaf", "unique slug", "draft not public"],
+      "rollback": "delete test drafts + revert plugin",
+      "stop_conditions": ["published clone", "slug collision on publish route"]
+    },
+    {
+      "phase": "E20",
+      "goal": "Obsolete pages cleanup: trash IDs 9, 25, 21 after re-verification",
+      "db_checkpoint": "YES",
+      "source_scope": ["optional hub DEMO map cleanup in theme helpers"],
+      "db_scope": "trash pages only; do not change wp_page_for_privacy_policy",
+      "validation": ["route probes", "legal footer links", "privacy option still 3"],
+      "rollback": "restore from trash via DB backup",
+      "stop_conditions": ["privacy page affected", "new 404 on linked route"]
+    }
+  ],
+  "sequence_rationale": "Admin IA before block migration; block admin before service clone; page cleanup last after URLs verified",
+  "recommended_first_task": "CREATE_V9_06E17_SITE_SETTINGS_IA_SKELETON_TASK"
+}
