@@ -510,7 +510,8 @@ Product SEO URLs created during catalog import (`oc_seo_url` where `query LIKE '
 | Sitemap delta audit (Production) | **COMPLETE — MINOR REVIEW ITEMS** (Run 4.209) — baseline 1320 (4.206) → live **1377**; +59/−2; konditerskiy-inventar catalog growth; 0 RED on added; 2 YELLOW category meta · [report](../reports/SITE-002-PROD-SITEMAP-DELTA-AUDIT-01.md) |
 | New catalog branch onboarding (Production) | **COMPLETE** (Run 4.210 + 4.211) — 1C growth onboarding; admin category SEO for ids **360/361/88/141/140**; parent-aware resolution for `/lari/proizvodstvennye-lari` · [follow-up report](../reports/SITE-002-PROD-CATALOG-BRANCH-ONBOARDING-FOLLOWUP-01.md) · [Run 4.210](../reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-01.md) |
 | Post-1C catalog monitor (Production) | **SCHEDULER VERIFIED — TASK ENABLED** (Run 4.216) — runner quoting fix for `X:\AI MARS` paths; Windows Task LastTaskResult **0**; daily **12:30 Barnaul**; server-side migration **DEFERRED**; prior read-only pass **NO ONBOARDING NEEDED** (Run 4.213) · [runner fix](../reports/SITE-002-POST-1C-MONITOR-SCHEDULER-RUNNER-FIX-01.md) · [readiness](../reports/SITE-002-POST-1C-MONITOR-SCHEDULER-READINESS-01.md) · [runbook](../runbooks/SITE-002-POST-1C-MONITOR-AUTOMATION-RUNBOOK.md) · [tool](../tools/site-002-post-1c-monitor-runner.ps1) · [monitor](../tools/site-002-prod-post-1c-catalog-onboarding-monitor-02.py) |
-| UX task intake (Production) | **CHARTERS READY** (Run 4.217) — Task 01: Лари (id **88**) + Кондитерский инвентарь (id **360**) missing from home/hub `zpm-cat-card` tiles; authority `category_visibility.php` + admin images (Run 4.195 pattern) · Task 02: PDP attribute «Дополнительные сведения» in `spec-table` — **66%** sampled PDPs; controller extraction recommended · future ops `SITE-002-PROD-NEW-SECTIONS-ENTRYPOINTS-01` / `SITE-002-PROD-PDP-EXTRA-INFO-ATTRIBUTE-LAYOUT-01` · [intake report](../reports/SITE-002-PROD-UX-TASK-INTAKE-01.md) · [tool](../tools/site-002-prod-ux-task-intake-01.py) |
+| UX task intake (Production) | **CHARTERS READY** (Run 4.217) — Task 01 pending `SITE-002-PROD-NEW-SECTIONS-ENTRYPOINTS-01` · Task 02 **DONE** Run 4.218 · [intake report](../reports/SITE-002-PROD-UX-TASK-INTAKE-01.md) |
+| PDP extra info layout (Production) | **COMPLETE — EXTRA INFO BLOCK VERIFIED** (Run 4.218) — «Дополнительные сведения» display-only extraction in `product.php`; block in `producttabs.twig` after `product-content__specs-toggle-wrap`; CSS `assets/css/style.css`; meta generator preserved; 0 DB/admin/data · [report](../reports/SITE-002-PROD-PDP-EXTRA-INFO-ATTRIBUTE-LAYOUT-01.md) · [tool](../tools/site-002-prod-pdp-extra-info-attribute-layout-01.py) · checkpoint `SITE-002-STABLE-PROD-PDP-EXTRA-INFO-LAYOUT-01` |
 | OpenCart Document robots API | **Not available** — no `Document::setRobots()`; use `X-Robots-Tag` response header; `header.twig` hardcodes `<meta robots index,follow>` |
 | Yandex Metrika / Webmaster (live Twig) | **VERIFIED** (Run 4.189) — preserved after Run 4.192 |
 | Duplicate body / preloader (Production) | **FIXED** (Run 4.190) — unchanged by Run 4.192 |
@@ -925,17 +926,21 @@ See §6. Per-category PHP profiles control which attributes appear in sidebar an
 | Future implementation | Extend `$neutral_hub_branch_ids` + category tile images — charter `SITE-002-PROD-NEW-SECTIONS-ENTRYPOINTS-01` |
 | Intake report | [SITE-002-PROD-UX-TASK-INTAKE-01.md](../reports/SITE-002-PROD-UX-TASK-INTAKE-01.md) |
 
-### PDP attribute «Дополнительные сведения» (intake Run 4.217)
+### PDP attribute «Дополнительные сведения» (Run 4.218 — LIVE)
 
 | Field | Value |
 |-------|-------|
-| Issue | Long prose attribute inside `spec-table` breaks compact specs layout |
-| Sample prevalence | **66/100** PDPs (66%) in random sitemap sample |
-| Authority | `product.php` → `getProductAttributes()` → `attribute_groups` → Twig `spec-table` |
-| Recommended fix | Controller extraction; render separate block below `product-content__specs-toggle-wrap` |
-| Data changes | **None** — display-only |
-| Future operation | `SITE-002-PROD-PDP-EXTRA-INFO-ATTRIBUTE-LAYOUT-01` |
-| Intake report | [SITE-002-PROD-UX-TASK-INTAKE-01.md](../reports/SITE-002-PROD-UX-TASK-INTAKE-01.md) |
+| Rule | Attribute **«Дополнительные сведения»** is **not** rendered in `spec-table`; shown as `product-content__extra-info` immediately after `product-content__specs-toggle-wrap` |
+| Controller | `/public_html/catalog/controller/product/product.php` — `$data['extra_info_attribute']` extracted from display `attribute_groups` **after** meta generator + `super_atts` |
+| Twig authority | `/public_html/catalog/view/theme/default/template/product/producttabs.twig` (not `product.twig`) |
+| CSS | `/public_html/assets/css/style.css` — `.product-content__extra-info`, `.product-extra-info__title`, `.product-extra-info__text` |
+| Data / DB / admin | **No changes** — display-only |
+| Meta generator | Uses unfiltered `$attribute_groups` at load time — **preserved** |
+| Modification overlays | **Absent** for PDP controller/template |
+| Rollback | `source-before/` in deployment folder — re-upload 3 files |
+| Checkpoint | `SITE-002-STABLE-PROD-PDP-EXTRA-INFO-LAYOUT-01` |
+| Report | [SITE-002-PROD-PDP-EXTRA-INFO-ATTRIBUTE-LAYOUT-01.md](../reports/SITE-002-PROD-PDP-EXTRA-INFO-ATTRIBUTE-LAYOUT-01.md) |
+| Intake (historical) | [SITE-002-PROD-UX-TASK-INTAKE-01.md](../reports/SITE-002-PROD-UX-TASK-INTAKE-01.md) — 66/100 sample prevalence |
 
 ### Neutral category image white-bg refresh (Production Run 4.196)
 
