@@ -1,0 +1,71 @@
+{
+    "wave": "V9-06E24",
+    "result": "PASS",
+    "routes": [
+        {
+            "route": "/",
+            "php_fatal_absent": true,
+            "result": "PASS"
+        },
+        {
+            "route": "/uslugi/",
+            "php_fatal_absent": true,
+            "result": "PASS"
+        },
+        {
+            "route": "/uslugi/zavisimosti/",
+            "php_fatal_absent": true,
+            "result": "PASS"
+        },
+        {
+            "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+            "php_fatal_absent": true,
+            "result": "PASS"
+        },
+        {
+            "route": "/uslugi/zavisimosti/narkoticheskaya-zavisimost/",
+            "php_fatal_absent": true,
+            "result": "PASS"
+        },
+        {
+            "route": "/uslugi/zavisimosti/lekarstvennaya-zavisimost/",
+            "php_fatal_absent": true,
+            "result": "PASS"
+        },
+        {
+            "route": "/uslugi/zavisimosti/povedencheskie-zavisimosti/",
+            "php_fatal_absent": true,
+            "result": "PASS"
+        },
+        {
+            "route": "/uslugi/psihicheskoe-zdorovie/",
+            "php_fatal_absent": true,
+            "result": "PASS"
+        },
+        {
+            "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+            "php_fatal_absent": true,
+            "result": "PASS"
+        },
+        {
+            "route": "/kontakty/",
+            "php_fatal_absent": true,
+            "result": "PASS"
+        },
+        {
+            "route": "/o-centre/",
+            "php_fatal_absent": true,
+            "result": "PASS"
+        },
+        {
+            "route": "/otzyvy/",
+            "php_fatal_absent": true,
+            "result": "PASS"
+        },
+        {
+            "route": "/privacy-policy/",
+            "php_fatal_absent": true,
+            "result": "PASS"
+        }
+    ]
+}

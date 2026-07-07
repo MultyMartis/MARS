@@ -1,0 +1,107 @@
+{
+    "wave": "V9-06E24",
+    "result": "PASS",
+    "db_writes": 10,
+    "entities": [
+        {
+            "context": "home",
+            "post_id": 4,
+            "route": "\/",
+            "before": "",
+            "after": "Заказать звонок",
+            "seed_source": "CURRENT_HARDCODED",
+            "overwrite": true,
+            "result": "PASS"
+        },
+        {
+            "context": "services_hub",
+            "post_id": 5,
+            "route": "\/uslugi\/",
+            "before": "",
+            "after": "Заказать звонок",
+            "seed_source": "CURRENT_HARDCODED",
+            "overwrite": true,
+            "result": "PASS"
+        },
+        {
+            "context": "service_subdivision",
+            "post_id": 73,
+            "route": "\/uslugi\/zavisimosti\/",
+            "before": "",
+            "after": "Заказать звонок",
+            "seed_source": "CURRENT_HARDCODED",
+            "overwrite": true,
+            "result": "PASS"
+        },
+        {
+            "context": "service_leaf_alcohol",
+            "post_id": 74,
+            "route": "\/uslugi\/zavisimosti\/lechenie-alkogolnoy-zavisimosti\/",
+            "before": "",
+            "after": "Записаться на консультацию",
+            "seed_source": "V9_STATIC",
+            "overwrite": true,
+            "result": "PASS"
+        },
+        {
+            "context": "service_leaf_narcotic",
+            "post_id": 314,
+            "route": "\/uslugi\/zavisimosti\/narkoticheskaya-zavisimost\/",
+            "before": "",
+            "after": "Заказать звонок",
+            "seed_source": "CURRENT_HARDCODED",
+            "overwrite": true,
+            "result": "PASS"
+        },
+        {
+            "context": "service_leaf_medicinal",
+            "post_id": 315,
+            "route": "\/uslugi\/zavisimosti\/lekarstvennaya-zavisimost\/",
+            "before": "",
+            "after": "Заказать звонок",
+            "seed_source": "CURRENT_HARDCODED",
+            "overwrite": true,
+            "result": "PASS"
+        },
+        {
+            "context": "service_leaf_behavioral",
+            "post_id": 316,
+            "route": "\/uslugi\/zavisimosti\/povedencheskie-zavisimosti\/",
+            "before": "",
+            "after": "Заказать звонок",
+            "seed_source": "CURRENT_HARDCODED",
+            "overwrite": true,
+            "result": "PASS"
+        },
+        {
+            "context": "service_leaf_psych",
+            "post_id": 77,
+            "route": "\/uslugi\/psihicheskoe-zdorovie\/",
+            "before": "",
+            "after": "Заказать звонок",
+            "seed_source": "CURRENT_HARDCODED",
+            "overwrite": true,
+            "result": "PASS"
+        },
+        {
+            "context": "service_leaf_eating",
+            "post_id": 84,
+            "route": "\/uslugi\/rasstroystva-pischevogo-povedeniya\/",
+            "before": "",
+            "after": "Заказать звонок",
+            "seed_source": "CURRENT_HARDCODED",
+            "overwrite": true,
+            "result": "PASS"
+        },
+        {
+            "context": "institutional_o_centre",
+            "post_id": 11,
+            "route": "\/o-centre\/",
+            "before": "",
+            "after": "Заказать звонок",
+            "seed_source": "CURRENT_HARDCODED",
+            "overwrite": true,
+            "result": "PASS"
+        }
+    ]
+}

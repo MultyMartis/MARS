@@ -7,9 +7,14 @@
             "label": "Вариант макета",
             "name": "service_layout_variant",
             "aria-label": "",
+            "prefix": "acf",
             "type": "select",
+            "value": null,
+            "menu_order": 0,
             "instructions": "Allowed V9-06C values: subdivision, standard, extended, alcohol_special, placeholder.",
             "required": 1,
+            "id": "",
+            "class": "",
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -25,16 +30,35 @@
                 "alcohol_special": "Алкогольная зависимость",
                 "placeholder": "Заглушка"
             },
-            "return_format": "value"
+            "return_format": "value",
+            "_name": "service_layout_variant",
+            "_valid": 1,
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "create_options": 0,
+            "save_options": 0,
+            "allow_custom": 0,
+            "search_placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": ""
         },
         {
             "key": "field_fp02_hero_eyebrow_service",
             "label": "Надзаголовок",
             "name": "hero_eyebrow",
             "aria-label": "",
+            "prefix": "acf",
             "type": "text",
+            "value": null,
+            "menu_order": 1,
             "instructions": "",
             "required": 0,
+            "id": "",
+            "class": "",
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -42,16 +66,26 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": ""
+            "placeholder": "",
+            "_name": "hero_eyebrow",
+            "_valid": 1,
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_fp02_hero_title_override_service",
             "label": "Заголовок H1 override",
             "name": "hero_title_override",
             "aria-label": "",
+            "prefix": "acf",
             "type": "text",
+            "value": null,
+            "menu_order": 2,
             "instructions": "",
             "required": 0,
+            "id": "",
+            "class": "",
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -59,16 +93,26 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": ""
+            "placeholder": "",
+            "_name": "hero_title_override",
+            "_valid": 1,
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_fp02_hero_lead_service",
             "label": "Лид",
             "name": "hero_lead",
             "aria-label": "",
+            "prefix": "acf",
             "type": "textarea",
+            "value": null,
+            "menu_order": 3,
             "instructions": "",
             "required": 0,
+            "id": "",
+            "class": "",
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -77,16 +121,26 @@
             },
             "default_value": "",
             "placeholder": "",
-            "rows": 4
+            "rows": 4,
+            "_name": "hero_lead",
+            "_valid": 1,
+            "new_lines": "",
+            "maxlength": "",
+            "acfe_textarea_code": 0
         },
         {
             "key": "field_fp02_service_short_description",
             "label": "Мини-описание",
             "name": "service_short_description",
             "aria-label": "",
+            "prefix": "acf",
             "type": "textarea",
+            "value": null,
+            "menu_order": 4,
             "instructions": "Краткий текст для карточки услуги на странице /uslugi/ (оба режима отображения).",
             "required": 0,
+            "id": "",
+            "class": "",
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -95,16 +149,26 @@
             },
             "default_value": "",
             "placeholder": "",
-            "rows": 4
+            "rows": 4,
+            "_name": "service_short_description",
+            "_valid": 1,
+            "new_lines": "",
+            "maxlength": "",
+            "acfe_textarea_code": 0
         },
         {
             "key": "field_fp02_hero_media_service",
-            "label": "Медиа hero",
+            "label": "Hero image",
             "name": "hero_media",
             "aria-label": "",
+            "prefix": "acf",
             "type": "image",
-            "instructions": "",
+            "value": null,
+            "menu_order": 5,
+            "instructions": "Hero background image for this service. Empty falls back to theme asset by layout variant.",
             "required": 0,
+            "id": "",
+            "class": "",
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -114,16 +178,34 @@
             "default_value": "",
             "placeholder": "",
             "return_format": "array",
-            "preview_size": "medium"
+            "preview_size": "medium",
+            "_name": "hero_media",
+            "_valid": 1,
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": "",
+            "uploader": "",
+            "acfe_thumbnail": 0,
+            "upload_folder": ""
         },
         {
             "key": "field_fp02_hero_cta_label_service",
-            "label": "CTA label",
+            "label": "Текст кнопки в hero-блоке",
             "name": "hero_cta_label",
             "aria-label": "",
+            "prefix": "acf",
             "type": "text",
-            "instructions": "",
+            "value": null,
+            "menu_order": 6,
+            "instructions": "Индивидуальный текст кнопки для hero-блока этой страницы/услуги. Если оставить пустым, используется текущий текст по умолчанию.",
             "required": 0,
+            "id": "",
+            "class": "",
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -131,16 +213,26 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": ""
+            "placeholder": "",
+            "_name": "hero_cta_label",
+            "_valid": 1,
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_fp02_hero_cta_target_service",
             "label": "CTA target",
             "name": "hero_cta_target",
             "aria-label": "",
+            "prefix": "acf",
             "type": "url",
+            "value": null,
+            "menu_order": 7,
             "instructions": "",
             "required": 0,
+            "id": "",
+            "class": "",
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -148,7 +240,9 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": ""
+            "placeholder": "",
+            "_name": "hero_cta_target",
+            "_valid": 1
         }
     ],
     "location": [
@@ -169,5 +263,9 @@
     "active": true,
     "description": "FP-0002 V9-06C canonical source field group. Runtime registration occurs only after delivery authorization.",
     "show_in_rest": 0,
-    "modified": 1783252800
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1783953600,
+    "_valid": true
 }

@@ -1,0 +1,97 @@
+{
+    "wave": "V9-06E24",
+    "result": "PASS",
+    "routes": [
+        {
+            "route": "/",
+            "http_200": true,
+            "hero_cta_ok": true,
+            "expected_cta": "Записаться",
+            "result": "PASS"
+        },
+        {
+            "route": "/uslugi/",
+            "http_200": true,
+            "hero_cta_ok": true,
+            "expected_cta": "Записаться",
+            "result": "PASS"
+        },
+        {
+            "route": "/uslugi/zavisimosti/",
+            "http_200": true,
+            "hero_cta_ok": true,
+            "expected_cta": "Записаться",
+            "result": "PASS"
+        },
+        {
+            "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+            "http_200": true,
+            "hero_cta_ok": true,
+            "expected_cta": "Записаться на консультацию",
+            "result": "PASS"
+        },
+        {
+            "route": "/uslugi/zavisimosti/narkoticheskaya-zavisimost/",
+            "http_200": true,
+            "hero_cta_ok": true,
+            "expected_cta": "Записаться",
+            "result": "PASS"
+        },
+        {
+            "route": "/uslugi/zavisimosti/lekarstvennaya-zavisimost/",
+            "http_200": true,
+            "hero_cta_ok": true,
+            "expected_cta": "Записаться",
+            "result": "PASS"
+        },
+        {
+            "route": "/uslugi/zavisimosti/povedencheskie-zavisimosti/",
+            "http_200": true,
+            "hero_cta_ok": true,
+            "expected_cta": "Записаться",
+            "result": "PASS"
+        },
+        {
+            "route": "/uslugi/psihicheskoe-zdorovie/",
+            "http_200": true,
+            "hero_cta_ok": true,
+            "expected_cta": "Записаться",
+            "result": "PASS"
+        },
+        {
+            "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+            "http_200": true,
+            "hero_cta_ok": true,
+            "expected_cta": "Записаться",
+            "result": "PASS"
+        },
+        {
+            "route": "/kontakty/",
+            "http_200": true,
+            "hero_cta_ok": true,
+            "expected_cta": null,
+            "result": "PASS"
+        },
+        {
+            "route": "/o-centre/",
+            "http_200": true,
+            "hero_cta_ok": true,
+            "expected_cta": "Записаться",
+            "result": "PASS"
+        },
+        {
+            "route": "/otzyvy/",
+            "http_200": true,
+            "hero_cta_ok": true,
+            "expected_cta": null,
+            "result": "PASS"
+        },
+        {
+            "route": "/privacy-policy/",
+            "http_200": true,
+            "hero_cta_ok": true,
+            "expected_cta": null,
+            "result": "PASS"
+        }
+    ]
+}

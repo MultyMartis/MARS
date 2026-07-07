@@ -23,10 +23,7 @@ if ( '' === $hero_text ) {
 	$hero_text = 'Центр профилактики и&nbsp;лечения зависимостей';
 }
 
-$cta_label = shpigovsky_chrome_label_or_fallback(
-	'default_button_label',
-	__( 'Записаться на консультацию', 'shpigovsky' )
-);
+$cta_label = shpigovsky_get_local_hero_cta_label( shpigovsky_get_front_page_id() );
 ?>
 <section class="hero hero--home">
 	<?php if ( '' !== $hero_image['url'] ) : ?>

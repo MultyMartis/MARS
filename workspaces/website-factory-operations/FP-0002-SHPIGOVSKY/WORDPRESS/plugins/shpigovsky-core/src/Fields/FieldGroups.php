@@ -27,7 +27,7 @@ final class FieldGroups implements ModuleInterface {
 	/**
 	 * Deterministic modified timestamp for canonical JSON source.
 	 */
-	public const MODIFIED = 1783780000;
+	public const MODIFIED = 1783953600;
 
 	/**
 	 * {@inheritdoc}
@@ -135,7 +135,15 @@ final class FieldGroups implements ModuleInterface {
 					)
 				),
 				self::field( 'field_fp02_hero_media_service', 'Hero image', 'hero_media', 'image', array( 'instructions' => 'Hero background image for this service. Empty falls back to theme asset by layout variant.', 'return_format' => 'array', 'preview_size' => 'medium' ) ),
-				self::field( 'field_fp02_hero_cta_label_service', 'CTA label', 'hero_cta_label', 'text' ),
+				self::field(
+					'field_fp02_hero_cta_label_service',
+					'Текст кнопки в hero-блоке',
+					'hero_cta_label',
+					'text',
+					array(
+						'instructions' => 'Индивидуальный текст кнопки для hero-блока этой страницы/услуги. Если оставить пустым, используется текущий текст по умолчанию.',
+					)
+				),
 				self::field( 'field_fp02_hero_cta_target_service', 'CTA target', 'hero_cta_target', 'url' ),
 			),
 			self::location( 'post_type', '==', 'service' )
@@ -266,6 +274,15 @@ final class FieldGroups implements ModuleInterface {
 						'preview_size'  => 'medium',
 					)
 				),
+				self::field(
+					'field_fp02_hero_cta_label_home',
+					'Текст кнопки в hero-блоке',
+					'hero_cta_label',
+					'text',
+					array(
+						'instructions' => 'Индивидуальный текст кнопки для hero-блока этой страницы/услуги. Если оставить пустым, используется текущий текст по умолчанию.',
+					)
+				),
 				self::repeater(
 					'field_fp02_home_hero_slides',
 					'Hero slides',
@@ -315,6 +332,15 @@ final class FieldGroups implements ModuleInterface {
 					)
 				),
 				self::field( 'field_fp02_services_hub_intro', 'Hero lead / intro', 'services_hub_intro', 'textarea', array( 'rows' => 5 ) ),
+				self::field(
+					'field_fp02_hero_cta_label_hub',
+					'Текст кнопки в hero-блоке',
+					'hero_cta_label',
+					'text',
+					array(
+						'instructions' => 'Индивидуальный текст кнопки для hero-блока этой страницы/услуги. Если оставить пустым, используется текущий текст по умолчанию.',
+					)
+				),
 				self::field( 'field_fp02_services_hub_query_mode', 'Query display mode', 'services_hub_query_mode', 'select', array( 'choices' => array( 'grouped_by_parent' => 'Grouped by parent', 'flat' => 'Flat' ), 'default_value' => 'grouped_by_parent' ) ),
 				self::field( 'field_fp02_services_hub_show_placeholders', 'Show placeholder services', 'services_hub_show_placeholders', 'true_false' ),
 				self::repeater( 'field_fp02_services_hub_faq_items', 'FAQ', 'services_hub_faq_items', 15, self::faq_subfields( 'services_hub' ) ),
@@ -347,7 +373,15 @@ final class FieldGroups implements ModuleInterface {
 						'preview_size'  => 'medium',
 					)
 				),
-				self::field( 'field_fp02_hero_cta_label_institutional', 'Hero CTA label', 'hero_cta_label', 'text' ),
+				self::field(
+					'field_fp02_hero_cta_label_institutional',
+					'Текст кнопки в hero-блоке',
+					'hero_cta_label',
+					'text',
+					array(
+						'instructions' => 'Индивидуальный текст кнопки для hero-блока этой страницы/услуги. Если оставить пустым, используется текущий текст по умолчанию.',
+					)
+				),
 				self::field( 'field_fp02_institutional_placeholder_notice', 'Placeholder notice', 'institutional_placeholder_notice', 'textarea', array( 'rows' => 3 ) ),
 				self::repeater( 'field_fp02_institutional_content_sections', 'Content sections', 'institutional_content_sections', 8, self::media_text_subfields( 'institutional_section' ) ),
 				self::repeater( 'field_fp02_institutional_stages', 'Stages', 'institutional_stages', 8, self::title_text_subfields( 'institutional_stages' ) ),

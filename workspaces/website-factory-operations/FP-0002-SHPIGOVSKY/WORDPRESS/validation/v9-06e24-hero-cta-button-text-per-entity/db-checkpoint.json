@@ -1,0 +1,14 @@
+{
+    "wave": "V9-06E24",
+    "result": "PASS",
+    "checkpoint_path": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e24-hero-cta-button-text-per-entity-pre-20260707-212945",
+    "dump_file": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e24-hero-cta-button-text-per-entity-pre-20260707-212945\\mars_wp_fp0002.sql",
+    "dump_sha256": "81F44938880CCB9188388FC0154F6C306A75C67E478967D35BBE21325D1399BA",
+    "dump_size_bytes": 1810428,
+    "dump_note": "Fresh mysqldump via X:\\MARS-Localhost\\laragon\\bin\\mysql\\mysql-8.4.3-winx64\\bin\\mysqldump.exe",
+    "db": "mars_wp_fp0002",
+    "prefix": "fp02_",
+    "e22_baseline_commit": "cad17f71b21bc5af98c89524f92cbbeda10dbc96",
+    "head_note": "E24 at cad17f71 (E22 ancestor PASS)",
+    "restore_instructions": "mysql --host=127.0.0.1 --user=root mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e24-hero-cta-button-text-per-entity-pre-20260707-212945\\mars_wp_fp0002.sql\""
+}

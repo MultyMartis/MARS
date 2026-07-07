@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-08 (V9-06E22 Remove Global Heroes Settings PASS)
+**Last updated:** 2026-07-08 (V9-06E24 Hero CTA Button Text Per Entity PASS)
 
-**Current WordPress phase:** V9-06E22 Remove Global Heroes Settings **PASS** — removed global `Герои` from **Настройки сайта** and `group_fp02_block_hero_fallbacks`; restored local/entity hero authority (E7B); preserved E21 Шапка/Подвал/Комфорт + Batch 1; top-level **Отзывы** unchanged. Fresh DB checkpoint `v9-06e22-remove-global-heroes-settings-pre-20260708-034456`; **2** plugin + **2** theme files; **1** ACF JSON deleted; **1** ACF DB write; runtime delivered. Routes 9/9 PASS; admin screenshots PARTIAL. **Next: CREATE_V9_06E23_OPERATOR_ADMIN_HERO_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E22-REMOVE-GLOBAL-HEROES-SETTINGS-REPORT-v1.md`.
+**Current WordPress phase:** V9-06E24 Hero CTA Button Text Per Entity **PASS** — local `hero_cta_label` (**Текст кнопки в hero-блоке**) on home, services hub, service, institutional hero field groups; `shpigovsky_get_local_hero_cta_label()` frontend fallback chain; **10** hero CTA postmeta seeds; E22 local hero architecture preserved (no global `Герои`). Fresh DB checkpoint `v9-06e24-hero-cta-button-text-per-entity-pre-20260707-212945`; **1** plugin + **5** theme + **4** ACF JSON; runtime delivered. Routes 13/13 PASS; admin screenshots PARTIAL. **Next: CREATE_V9_06E25_OPERATOR_HERO_CTA_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E24-HERO-CTA-BUTTON-TEXT-PER-ENTITY-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

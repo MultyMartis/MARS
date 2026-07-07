@@ -1,0 +1,21 @@
+{
+    "wave": "V9-06E24",
+    "result": "PASS",
+    "canonical_field_name": "hero_cta_label",
+    "canonical_field_label": "Текст кнопки в hero-блоке",
+    "hero_button_text_alias": "hero_cta_label (project convention)",
+    "local_field_groups": [
+        "group_fp02_page_home",
+        "group_fp02_page_services_hub",
+        "group_fp02_service_layout_hero",
+        "group_fp02_page_institutional"
+    ],
+    "global_hero_settings": false,
+    "e22_architecture_preserved": true,
+    "fallback_chain": [
+        "local hero_cta_label",
+        "route fallback",
+        "site default_button_label",
+        "static V9"
+    ]
+}

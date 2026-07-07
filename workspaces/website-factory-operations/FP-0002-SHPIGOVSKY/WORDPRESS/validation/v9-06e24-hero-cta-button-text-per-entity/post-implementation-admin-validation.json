@@ -1,0 +1,45 @@
+{
+    "wave": "V9-06E24",
+    "result": "PASS",
+    "checks": [
+        {
+            "context": "local_hero_home",
+            "post_id": 4,
+            "field_visible": true,
+            "result": "PASS"
+        },
+        {
+            "context": "local_hero_services_hub",
+            "post_id": 5,
+            "field_visible": true,
+            "result": "PASS"
+        },
+        {
+            "context": "local_hero_subdivision",
+            "post_id": 73,
+            "field_visible": true,
+            "result": "PASS"
+        },
+        {
+            "context": "local_hero_alcohol",
+            "post_id": 74,
+            "field_visible": true,
+            "result": "PASS"
+        },
+        {
+            "context": "no_global_heroes",
+            "field_visible": false,
+            "result": "PASS"
+        },
+        {
+            "context": "batch2_header_footer_comfort",
+            "field_visible": true,
+            "result": "PASS"
+        },
+        {
+            "context": "top_level_reviews",
+            "field_visible": true,
+            "result": "PASS"
+        }
+    ]
+}

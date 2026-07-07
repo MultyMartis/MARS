@@ -43,7 +43,6 @@ function shpigovsky_get_institutional_hero_context( $page_id ) {
 	$eyebrow    = shpigovsky_get_institutional_field( $page_id, 'hero_eyebrow' );
 	$title      = shpigovsky_get_institutional_field( $page_id, 'hero_title_override' );
 	$lead       = shpigovsky_get_institutional_field( $page_id, 'hero_lead' );
-	$cta_label  = shpigovsky_get_institutional_field( $page_id, 'hero_cta_label' );
 	$cta_source = '' !== $slug ? $slug . '-hero' : 'institutional-hero';
 
 	if ( '' === $eyebrow ) {
@@ -54,9 +53,7 @@ function shpigovsky_get_institutional_hero_context( $page_id ) {
 		$title = get_the_title( $page_id );
 	}
 
-	if ( '' === $cta_label ) {
-		$cta_label = shpigovsky_get_hero_default_cta_label();
-	}
+	$cta_label = shpigovsky_get_local_hero_cta_label( $page_id );
 
 	return array(
 		'title_id'   => $title_id,

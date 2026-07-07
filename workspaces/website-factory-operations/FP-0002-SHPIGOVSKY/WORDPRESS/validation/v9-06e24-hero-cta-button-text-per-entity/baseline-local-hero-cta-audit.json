@@ -1,0 +1,288 @@
+{
+    "wave": "V9-06E24",
+    "result": "PASS",
+    "canonical_field_name": "hero_cta_label",
+    "canonical_field_label": "Текст кнопки в hero-блоке",
+    "hero_owning_contexts": [
+        {
+            "context_key": "home",
+            "entity_type": "page",
+            "post_id": 4,
+            "route": "/",
+            "field_group": "group_fp02_page_home",
+            "hero_fields": [
+                "hero_media",
+                "hero_cta_label"
+            ],
+            "has_hero_cta_button": true,
+            "current_cta_source": "SITE_OPTION_DEFAULT_BUTTON_LABEL",
+            "current_local_value": "",
+            "current_effective_cta": "Заказать звонок",
+            "e24_field_needed": true,
+            "canonical_field_name": "hero_cta_label",
+            "canonical_field_label": "Текст кнопки в hero-блоке"
+        },
+        {
+            "context_key": "services_hub",
+            "entity_type": "page",
+            "post_id": 5,
+            "route": "/uslugi/",
+            "field_group": "group_fp02_page_services_hub",
+            "hero_fields": [
+                "hero_media",
+                "hero_cta_label"
+            ],
+            "has_hero_cta_button": true,
+            "current_cta_source": "GLOBAL_DEFAULT_CTA_HELPER",
+            "current_local_value": "",
+            "current_effective_cta": "Заказать звонок",
+            "e24_field_needed": true,
+            "canonical_field_name": "hero_cta_label",
+            "canonical_field_label": "Текст кнопки в hero-блоке"
+        },
+        {
+            "context_key": "service_subdivision",
+            "entity_type": "service",
+            "post_id": 0,
+            "route": "/uslugi/zavisimosti/",
+            "field_group": "group_fp02_service_layout_hero",
+            "hero_fields": [
+                "hero_media",
+                "hero_cta_label"
+            ],
+            "has_hero_cta_button": true,
+            "current_cta_source": "GLOBAL_DEFAULT_CTA_HELPER",
+            "current_local_value": "",
+            "current_effective_cta": "Заказать звонок",
+            "e24_field_needed": true,
+            "canonical_field_name": "hero_cta_label",
+            "canonical_field_label": "Текст кнопки в hero-блоке"
+        },
+        {
+            "context_key": "service_leaf_alcohol",
+            "entity_type": "service",
+            "post_id": 0,
+            "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+            "field_group": "group_fp02_service_layout_hero",
+            "hero_fields": [
+                "hero_media",
+                "hero_cta_label"
+            ],
+            "has_hero_cta_button": true,
+            "current_cta_source": "ROUTE_HARDCODED_ALCOHOL",
+            "current_local_value": "",
+            "current_effective_cta": "Заказать звонок",
+            "e24_field_needed": true,
+            "canonical_field_name": "hero_cta_label",
+            "canonical_field_label": "Текст кнопки в hero-блоке"
+        },
+        {
+            "context_key": "service_leaf_narcotic",
+            "entity_type": "service",
+            "post_id": 0,
+            "route": "/uslugi/zavisimosti/narkoticheskaya-zavisimost/",
+            "field_group": "group_fp02_service_layout_hero",
+            "hero_fields": [
+                "hero_media",
+                "hero_cta_label"
+            ],
+            "has_hero_cta_button": true,
+            "current_cta_source": "GLOBAL_DEFAULT_CTA_HELPER",
+            "current_local_value": "",
+            "current_effective_cta": "Заказать звонок",
+            "e24_field_needed": true,
+            "canonical_field_name": "hero_cta_label",
+            "canonical_field_label": "Текст кнопки в hero-блоке"
+        },
+        {
+            "context_key": "service_leaf_psych",
+            "entity_type": "service",
+            "post_id": 0,
+            "route": "/uslugi/psihicheskoe-zdorovie/",
+            "field_group": "group_fp02_service_layout_hero",
+            "hero_fields": [
+                "hero_media",
+                "hero_cta_label"
+            ],
+            "has_hero_cta_button": true,
+            "current_cta_source": "GLOBAL_DEFAULT_CTA_HELPER",
+            "current_local_value": "",
+            "current_effective_cta": "Заказать звонок",
+            "e24_field_needed": true,
+            "canonical_field_name": "hero_cta_label",
+            "canonical_field_label": "Текст кнопки в hero-блоке"
+        },
+        {
+            "context_key": "service_leaf_eating",
+            "entity_type": "service",
+            "post_id": 0,
+            "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+            "field_group": "group_fp02_service_layout_hero",
+            "hero_fields": [
+                "hero_media",
+                "hero_cta_label"
+            ],
+            "has_hero_cta_button": true,
+            "current_cta_source": "GLOBAL_DEFAULT_CTA_HELPER",
+            "current_local_value": "",
+            "current_effective_cta": "Заказать звонок",
+            "e24_field_needed": true,
+            "canonical_field_name": "hero_cta_label",
+            "canonical_field_label": "Текст кнопки в hero-блоке"
+        },
+        {
+            "context_key": "institutional_o_centre",
+            "entity_type": "page",
+            "post_id": 11,
+            "route": "/o-centre/",
+            "field_group": "group_fp02_page_institutional",
+            "hero_fields": [
+                "hero_media",
+                "hero_cta_label"
+            ],
+            "has_hero_cta_button": true,
+            "current_cta_source": "GLOBAL_DEFAULT_CTA_HELPER",
+            "current_local_value": "",
+            "current_effective_cta": "Заказать звонок",
+            "e24_field_needed": true,
+            "canonical_field_name": "hero_cta_label",
+            "canonical_field_label": "Текст кнопки в hero-блоке"
+        },
+        {
+            "context_key": "contacts",
+            "entity_type": "page",
+            "post_id": 20,
+            "route": "/kontakty/",
+            "field_group": "group_fp02_page_contacts",
+            "hero_fields": [
+                "hero_media",
+                "hero_cta_label"
+            ],
+            "has_hero_cta_button": false,
+            "current_cta_source": "NO_CURRENT_HERO_CTA",
+            "current_local_value": "",
+            "current_effective_cta": "Заказать звонок",
+            "e24_field_needed": false,
+            "canonical_field_name": "hero_cta_label",
+            "canonical_field_label": "Текст кнопки в hero-блоке"
+        },
+        {
+            "context_key": "privacy",
+            "entity_type": "page",
+            "post_id": 3,
+            "route": "/privacy-policy/",
+            "field_group": "group_fp02_page_legal",
+            "hero_fields": [
+                "hero_media",
+                "hero_cta_label"
+            ],
+            "has_hero_cta_button": false,
+            "current_cta_source": "NO_CURRENT_HERO_CTA",
+            "current_local_value": "",
+            "current_effective_cta": "Заказать звонок",
+            "e24_field_needed": false,
+            "canonical_field_name": "hero_cta_label",
+            "canonical_field_label": "Текст кнопки в hero-блоке"
+        }
+    ],
+    "acf_field_groups": [
+        {
+            "group_key": "group_fp02_page_home",
+            "title": "Page — Home",
+            "source": "FieldGroups.php + acf-json",
+            "field_names": [
+                "hero_media",
+                "home_hero_slides",
+                "home_service_nav_items",
+                "home_advantages",
+                "home_intro_bands",
+                "home_reviews_teaser",
+                "home_blog_teaser_enabled",
+                "home_gallery_media",
+                "home_faq_items",
+                "home_cta_title",
+                "home_cta_text"
+            ],
+            "has_hero_cta": false
+        },
+        {
+            "group_key": "group_fp02_page_services_hub",
+            "title": "Page — Services Hub",
+            "source": "FieldGroups.php + acf-json",
+            "field_names": [
+                "hero_eyebrow",
+                "hero_title_override",
+                "hero_media",
+                "services_hub_intro",
+                "services_hub_query_mode",
+                "services_hub_show_placeholders",
+                "services_hub_faq_items"
+            ],
+            "has_hero_cta": false
+        },
+        {
+            "group_key": "group_fp02_service_layout_hero",
+            "title": "Service — Layout and Hero",
+            "source": "FieldGroups.php + acf-json",
+            "field_names": [
+                "service_layout_variant",
+                "hero_eyebrow",
+                "hero_title_override",
+                "hero_lead",
+                "service_short_description",
+                "hero_media",
+                "hero_cta_label",
+                "hero_cta_target"
+            ],
+            "has_hero_cta": true
+        },
+        {
+            "group_key": "group_fp02_page_institutional",
+            "title": "Page — Institutional",
+            "source": "FieldGroups.php + acf-json",
+            "field_names": [
+                "hero_eyebrow",
+                "hero_title_override",
+                "hero_lead",
+                "hero_media",
+                "hero_cta_label",
+                "institutional_placeholder_notice",
+                "institutional_content_sections",
+                "institutional_stages",
+                "infrastructure_g0_g5"
+            ],
+            "has_hero_cta": true
+        }
+    ],
+    "frontend_renderers": [
+        {
+            "context": "home",
+            "partial": "template-parts/home/hero.php",
+            "before": "shpigovsky_chrome_label_or_fallback(default_button_label)",
+            "after": "shpigovsky_get_local_hero_cta_label(front_page_id)"
+        },
+        {
+            "context": "services_hub",
+            "partial": "template-parts/services-hub/hero.php",
+            "before": "shpigovsky_get_hero_default_cta_label()",
+            "after": "shpigovsky_get_local_hero_cta_label(services_hub_page_id)"
+        },
+        {
+            "context": "service",
+            "partial": "template-parts/service/inner-hero.php",
+            "before": "hero_cta_label + route fallback",
+            "after": "shpigovsky_get_local_hero_cta_label(post_id, route_fallback)"
+        },
+        {
+            "context": "institutional",
+            "partial": "inc/institutional-helpers.php",
+            "before": "hero_cta_label + default",
+            "after": "shpigovsky_get_local_hero_cta_label(page_id)"
+        }
+    ],
+    "global_hero_absence": {
+        "heroes_under_site_settings": false,
+        "global_hero_option_rows": 0,
+        "block_hero_read_layer": "ABSENT_PASS"
+    }
+}

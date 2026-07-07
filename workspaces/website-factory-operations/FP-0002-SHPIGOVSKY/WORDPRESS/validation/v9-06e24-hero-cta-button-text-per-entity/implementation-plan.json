@@ -1,0 +1,33 @@
+{
+    "wave": "V9-06E24",
+    "result": "PASS",
+    "field_group_updates": [
+        {
+            "group": "group_fp02_page_home",
+            "field": "hero_cta_label",
+            "key": "field_fp02_hero_cta_label_home",
+            "action": "add"
+        },
+        {
+            "group": "group_fp02_page_services_hub",
+            "field": "hero_cta_label",
+            "key": "field_fp02_hero_cta_label_hub",
+            "action": "add"
+        },
+        {
+            "group": "group_fp02_service_layout_hero",
+            "field": "hero_cta_label",
+            "key": "field_fp02_hero_cta_label_service",
+            "action": "relabel"
+        },
+        {
+            "group": "group_fp02_page_institutional",
+            "field": "hero_cta_label",
+            "key": "field_fp02_hero_cta_label_institutional",
+            "action": "relabel"
+        }
+    ],
+    "seed_plan": "Seed hero_cta_label from CURRENT_HARDCODED / V9_STATIC / ROUTE_FALLBACK where empty",
+    "frontend_plan": "shpigovsky_get_local_hero_cta_label() — local → route → site default → static",
+    "no_global_hero": true
+}

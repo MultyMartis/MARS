@@ -1,0 +1,20 @@
+{
+    "wave": "V9-06E24",
+    "result": "PASS",
+    "helper": "shpigovsky_get_local_hero_cta_label",
+    "fallback_chain": [
+        "local hero_cta_label",
+        "route-specific fallback",
+        "default_button_label site option",
+        "static V9 Записаться на консультацию"
+    ],
+    "no_global_hero_option": true,
+    "files": [
+        "plugins/shpigovsky-core/src/Fields/FieldGroups.php",
+        "theme/shpigovsky/inc/hero-helpers.php",
+        "theme/shpigovsky/inc/institutional-helpers.php",
+        "theme/shpigovsky/template-parts/home/hero.php",
+        "theme/shpigovsky/template-parts/services-hub/hero.php",
+        "theme/shpigovsky/template-parts/service/inner-hero.php"
+    ]
+}

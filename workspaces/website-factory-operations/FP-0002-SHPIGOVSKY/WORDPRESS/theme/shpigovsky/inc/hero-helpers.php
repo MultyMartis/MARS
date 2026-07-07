@@ -280,3 +280,34 @@ function shpigovsky_get_hero_default_cta_label() {
 
 	return '' !== $label ? $label : __( 'Записаться на консультацию', 'shpigovsky' );
 }
+
+/**
+ * Resolve local/entity hero CTA button label with route and global fallbacks.
+ *
+ * Fallback chain: local hero_cta_label → route-specific fallback → site default → static V9.
+ *
+ * @param int    $post_id        Page or service post ID.
+ * @param string $route_fallback Optional route-specific label when local field is empty.
+ * @return string
+ */
+function shpigovsky_get_local_hero_cta_label( $post_id, $route_fallback = '' ) {
+	$local = '';
+
+	if ( $post_id > 0 && function_exists( 'get_field' ) ) {
+		$value = get_field( 'hero_cta_label', $post_id );
+
+		if ( is_string( $value ) ) {
+			$local = trim( $value );
+		}
+	}
+
+	if ( '' !== $local ) {
+		return $local;
+	}
+
+	if ( '' !== $route_fallback ) {
+		return $route_fallback;
+	}
+
+	return shpigovsky_get_hero_default_cta_label();
+}

@@ -1,0 +1,87 @@
+{
+    "wave": "V9-06E24",
+    "result": "PASS",
+    "runtime_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky",
+    "files": [
+        {
+            "source": "WORDPRESS/plugins/shpigovsky-core/src/Fields/FieldGroups.php",
+            "runtime": "wp-content/plugins/shpigovsky-core/src/Fields/FieldGroups.php",
+            "sha256_before": "DB99B8908971BDEFF38EE86C56D6AD93EB51765D56D0B756AC692D8E674BD6A6",
+            "sha256_after": "483C8F950BC3F61F4F449DC0EA548B262CB2D65F3328937B623F874EC1F3C007",
+            "delivered": true,
+            "result": "PASS"
+        },
+        {
+            "source": "WORDPRESS/theme/shpigovsky/inc/hero-helpers.php",
+            "runtime": "wp-content/themes/shpigovsky/inc/hero-helpers.php",
+            "sha256_before": "44DA91AD2E043E114FE18025713C692EF993A88FC465FF0194E2DAC79249DEBD",
+            "sha256_after": "6D40CD281DD5FE7C4903D7F747C9C604145C1F14F5638272DCD21B761656927F",
+            "delivered": true,
+            "result": "PASS"
+        },
+        {
+            "source": "WORDPRESS/theme/shpigovsky/inc/institutional-helpers.php",
+            "runtime": "wp-content/themes/shpigovsky/inc/institutional-helpers.php",
+            "sha256_before": "1FDFF44623B86471EB44DF18DBA4300645D5DCD8E9DAD37742B5649A47BA4C66",
+            "sha256_after": "7B380BAAB17E926635ABAD915B9AD80ECEE415C26CAFD04C6FC4BAF78E776BA0",
+            "delivered": true,
+            "result": "PASS"
+        },
+        {
+            "source": "WORDPRESS/theme/shpigovsky/template-parts/home/hero.php",
+            "runtime": "wp-content/themes/shpigovsky/template-parts/home/hero.php",
+            "sha256_before": "951E43F30FE98FE7411D6F1C8CBBA3077C6ECCD9650DC74B34D9943B96ECE639",
+            "sha256_after": "CE6925389F7842231D9D1C847D7D443556856F41A21C941503DED76B25E91076",
+            "delivered": true,
+            "result": "PASS"
+        },
+        {
+            "source": "WORDPRESS/theme/shpigovsky/template-parts/services-hub/hero.php",
+            "runtime": "wp-content/themes/shpigovsky/template-parts/services-hub/hero.php",
+            "sha256_before": "4750C188DF575297D4A1602A09D84B5C28384C39B94390B10E759C68D8CD964E",
+            "sha256_after": "E9572C3ED5436C4B0F47D7F8632B1C14371932811BDAA70EF715159F5952A138",
+            "delivered": true,
+            "result": "PASS"
+        },
+        {
+            "source": "WORDPRESS/theme/shpigovsky/template-parts/service/inner-hero.php",
+            "runtime": "wp-content/themes/shpigovsky/template-parts/service/inner-hero.php",
+            "sha256_before": "9530DFA681FCECC0C5ACB52CF9C409049E38E5BDBE8EF5635CB788DC22DAB513",
+            "sha256_after": "F41D24ABFE7A83A6345872CC29EE42B36065AB9E5DABED82F5E22599FE578027",
+            "delivered": true,
+            "result": "PASS"
+        },
+        {
+            "source": "WORDPRESS/acf-json/group_fp02_page_home.json",
+            "runtime": "wp-content/acf-json/group_fp02_page_home.json",
+            "sha256_before": "DEC36E882A8120911E59CC791F7FD18A3B3B901F01EC127C7EB3D40DAF2AEA00",
+            "sha256_after": "DEC36E882A8120911E59CC791F7FD18A3B3B901F01EC127C7EB3D40DAF2AEA00",
+            "delivered": true,
+            "result": "FAIL"
+        },
+        {
+            "source": "WORDPRESS/acf-json/group_fp02_page_services_hub.json",
+            "runtime": "wp-content/acf-json/group_fp02_page_services_hub.json",
+            "sha256_before": "081984CE77FEB1B76239CFB6F294A22C08C5416671CB4C80B029EB412424D8E9",
+            "sha256_after": "081984CE77FEB1B76239CFB6F294A22C08C5416671CB4C80B029EB412424D8E9",
+            "delivered": true,
+            "result": "FAIL"
+        },
+        {
+            "source": "WORDPRESS/acf-json/group_fp02_service_layout_hero.json",
+            "runtime": "wp-content/acf-json/group_fp02_service_layout_hero.json",
+            "sha256_before": "874524CA18D1AAFA9BB8AD73BA674A0AF2B5C522170FD956032D125B00A2791B",
+            "sha256_after": "874524CA18D1AAFA9BB8AD73BA674A0AF2B5C522170FD956032D125B00A2791B",
+            "delivered": true,
+            "result": "PASS"
+        },
+        {
+            "source": "WORDPRESS/acf-json/group_fp02_page_institutional.json",
+            "runtime": "wp-content/acf-json/group_fp02_page_institutional.json",
+            "sha256_before": "53F76E58ED3993A2D135E508403FE550208F85766322A5C19671FB05D84AC7E0",
+            "sha256_after": "53F76E58ED3993A2D135E508403FE550208F85766322A5C19671FB05D84AC7E0",
+            "delivered": true,
+            "result": "PASS"
+        }
+    ]
+}

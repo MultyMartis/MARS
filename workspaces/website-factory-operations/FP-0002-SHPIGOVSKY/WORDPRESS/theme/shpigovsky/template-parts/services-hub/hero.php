@@ -36,7 +36,7 @@ get_template_part(
 		'eyebrow'      => $eyebrow,
 		'title'        => $title,
 		'lead'         => $lead,
-		'cta_label'    => shpigovsky_get_hero_default_cta_label(),
+		'cta_label'    => shpigovsky_get_local_hero_cta_label( shpigovsky_get_services_hub_page_id() ),
 		'cta_source'   => 'services-hero-v2',
 		'image_url'    => $image['url'],
 		'image_alt'    => $image['alt'],

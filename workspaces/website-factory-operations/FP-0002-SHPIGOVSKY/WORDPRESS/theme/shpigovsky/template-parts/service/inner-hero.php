@@ -15,8 +15,8 @@ $title_id   = 'subdivision' === $variant ? 'service-subdivision-hero-title' : 's
 $hero_title = shpigovsky_get_service_hero_title( $post_id );
 $hero_lead  = shpigovsky_get_service_field( $post_id, 'hero_lead' );
 $eyebrow    = shpigovsky_get_service_field( $post_id, 'hero_eyebrow' );
-$cta_label  = shpigovsky_get_service_field( $post_id, 'hero_cta_label' );
 $image      = shpigovsky_get_service_hero_image_resolved( $post_id, $variant );
+$cta_route  = '';
 
 if ( '' === $eyebrow ) {
 	$eyebrow = __( 'Заболевания, которые мы лечим', 'shpigovsky' );
@@ -31,17 +31,17 @@ if ( 'alcohol-special' === $variant ) {
 		$hero_lead = 'В центре реабилитации Шпиговский Дом мы понимаем, что каждый человек уникален, поэтому мы не предложим вам универсальный подход к лечению. Путь в борьбе с алкогольной зависимостью может быть только индивидуальным.';
 	}
 
-	if ( '' === $cta_label || 'Записаться' === $cta_label ) {
-		$cta_label = 'Записаться на консультацию';
-	}
+	$cta_route = 'Записаться на консультацию';
 }
 
 if ( '' === $hero_title ) {
 	$hero_title = get_the_title( $post_id );
 }
 
-if ( '' === $cta_label ) {
-	$cta_label = shpigovsky_get_hero_default_cta_label();
+$cta_label = shpigovsky_get_local_hero_cta_label( $post_id, $cta_route );
+
+if ( 'alcohol-special' === $variant && 'Записаться' === $cta_label ) {
+	$cta_label = 'Записаться на консультацию';
 }
 
 $cta_source = 'subdivision' === $variant ? 'service-subdivision-hero-v1' : 'service-leaf-hero-v1';
