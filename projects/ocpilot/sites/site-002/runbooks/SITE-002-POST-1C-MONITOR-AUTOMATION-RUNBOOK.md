@@ -2,7 +2,7 @@
 
 **Site:** SITE-002 (ЗПМ / https://bzpm.ru/)  
 **Operation family:** read-only post-1C catalog onboarding monitor  
-**Last updated:** 2026-07-07 (Run 4.215)
+**Last updated:** 2026-07-07 (Run 4.216)
 
 ---
 
@@ -12,9 +12,9 @@
 |-----------|------------|
 | 1C import (Beget cron) | **YES** — daily 08:00 Moscow / 12:00 Barnaul |
 | Sitemap (`/sitemap.xml`) | **YES** — OpenCart Google Sitemap feed (Run 4.214) |
-| MARS post-1C monitor | **NO** until operator installs and enables Windows Task |
+| MARS post-1C monitor | **YES** (local) — after operator install + enable; verified Run 4.216 |
 
-After scheduler readiness (Run 4.215): **package ready**; automatic runs only after install + enable.
+After scheduler readiness (Run 4.215) and runner fix (Run 4.216): operator-installed task verified; **LastTaskResult 0** on success; **LastTaskResult 2** indicates execution failure (e.g. path quoting before fix).
 
 ---
 
@@ -116,6 +116,8 @@ Adjust with `-At "HH:mm"` on install if needed.
 
 Files: `run.log`, `run-summary.json`, `run-summary.md`, optional `run.stderr.log`
 
+**Path with spaces:** runner uses PowerShell call-operator (`& $py.Path $MonitorScript ...`) so `X:\AI MARS\...` paths are passed as a single argument. If `LastTaskResult` is **2**, check `run.stderr.log` for `can't open file 'X:\\AI'` (historical quoting bug, fixed Run 4.216).
+
 **Full monitor artefacts** (Python deployment output):
 
 `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\deployments\SITE-002-PROD-POST-1C-CATALOG-ONBOARDING-MONITOR-02\`
@@ -150,6 +152,7 @@ Running the monitor on Production server cron is **possible later** but requires
 
 ## Related documents
 
+- [SITE-002-POST-1C-MONITOR-SCHEDULER-RUNNER-FIX-01.md](../reports/SITE-002-POST-1C-MONITOR-SCHEDULER-RUNNER-FIX-01.md)
 - [SITE-002-POST-1C-MONITOR-SCHEDULER-READINESS-01.md](../reports/SITE-002-POST-1C-MONITOR-SCHEDULER-READINESS-01.md)
 - [SITE-002-PROD-POST-1C-CATALOG-ONBOARDING-MONITOR-02.md](../reports/SITE-002-PROD-POST-1C-CATALOG-ONBOARDING-MONITOR-02.md)
 - [SITE-002-PROD-SITEMAP-AUTHORITY-DISCOVERY-01.md](../reports/SITE-002-PROD-SITEMAP-AUTHORITY-DISCOVERY-01.md)

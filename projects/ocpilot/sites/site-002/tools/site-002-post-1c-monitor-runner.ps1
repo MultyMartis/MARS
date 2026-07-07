@@ -21,7 +21,7 @@ $ErrorActionPreference = 'Stop'
 $RepoRoot = 'X:\AI MARS'
 $MonitorScript = Join-Path $RepoRoot 'projects\ocpilot\sites\site-002\tools\site-002-prod-post-1c-catalog-onboarding-monitor-02.py'
 $ScheduledRoot = 'X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\scheduled-monitors\post-1c'
-$OperationId = 'SITE-002-POST-1C-MONITOR-SCHEDULER-READINESS-01'
+$OperationId = 'SITE-002-POST-1C-MONITOR-SCHEDULER-RUNNER-FIX-01'
 $ProductionUrl = 'https://bzpm.ru/'
 $SitemapUrl = 'https://bzpm.ru/sitemap.xml'
 
@@ -68,6 +68,7 @@ $summary = [ordered]@{
     timezone_display   = [TimeZoneInfo]::Local.DisplayName
     python             = $null
     monitor_script_exists = (Test-Path -LiteralPath $MonitorScript)
+    monitor_script_path_single_argument = $null
     exit_code          = 0
     status             = 'pending'
     dry_run_sitemap_probe = $null
@@ -150,8 +151,16 @@ try {
     }
 
     "Executing monitor: $MonitorScript" | Out-File -FilePath $logPath -Append -Encoding utf8
-    $proc = Start-Process -FilePath $py.Path -ArgumentList @($MonitorScript, '--skip-removed-crawl') -WorkingDirectory $RepoRoot -NoNewWindow -Wait -PassThru -RedirectStandardOutput $logPath -RedirectStandardError (Join-Path $runDir 'run.stderr.log')
-    $exitCode = $proc.ExitCode
+    "Monitor script path passed as single argument: true" | Out-File -FilePath $logPath -Append -Encoding utf8
+    $summary.monitor_script_path_single_argument = $true
+
+    $stderrPath = Join-Path $runDir 'run.stderr.log'
+    $monitorArgs = @('--skip-removed-crawl')
+
+    Set-Location -LiteralPath $RepoRoot
+    & $py.Path $MonitorScript @monitorArgs 1>> $logPath 2> $stderrPath
+    $exitCode = $LASTEXITCODE
+    if ($null -eq $exitCode) { $exitCode = 0 }
     if ($exitCode -ne 0) {
         $summary.status = 'failed'
         $summary.error = "Monitor exited with code $exitCode"
