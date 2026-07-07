@@ -1,7 +1,7 @@
 # SITE-002 — Site Passport
 
-**Status:** **STABLE PRODUCTION CHECKPOINT — PDP EXTRA INFO LAYOUT 01** (Run 4.218: «Дополнительные сведения» separate block verified; Run 4.219 entrypoints **PARTIAL — image assets required**; parent `SITE-002-STABLE-PROD-CATALOG-BRANCH-FOLLOWUP-01`)
-**Run:** 4.219 — SITE-002 New Sections Entrypoints (2026-07-07)
+**Status:** **STABLE PRODUCTION CHECKPOINT — NEW SECTIONS ENTRYPOINTS 02** (Run 4.220: lari/konditerskiy tiles verified; Run 4.218 PDP extra info preserved; parent `SITE-002-STABLE-PROD-PDP-EXTRA-INFO-LAYOUT-01`)
+**Run:** 4.220 — SITE-002 New Sections Entrypoints 02 (2026-07-07)
 
 ---
 
@@ -28,11 +28,11 @@
 | **Production Profile** | [production-profile.md](production-profile.md) |
 | **Production connection** | **VERIFIED** — HTTP/admin (Run 4.171) + FTP/file baseline (Run 4.171-R1); path model reconciled (Run 4.172) |
 | **Production baseline** | **PARENT** — [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| **Current Production checkpoint** | **ISSUED** — [baselines/SITE-002-STABLE-PROD-CATALOG-BRANCH-FOLLOWUP-01.md](baselines/SITE-002-STABLE-PROD-CATALOG-BRANCH-FOLLOWUP-01.md) (parent [SITE-002-STABLE-PROD-CATALOG-NEW-BRANCH-01.md](baselines/SITE-002-STABLE-PROD-CATALOG-NEW-BRANCH-01.md); brand [SITE-002-STABLE-PROD-BRAND-ZPM-01.md](baselines/SITE-002-STABLE-PROD-BRAND-ZPM-01.md)) |
+| **Current Production checkpoint** | **ISSUED** — [baselines/SITE-002-STABLE-PROD-NEW-SECTIONS-ENTRYPOINTS-02.md](baselines/SITE-002-STABLE-PROD-NEW-SECTIONS-ENTRYPOINTS-02.md) (parent [SITE-002-STABLE-PROD-PDP-EXTRA-INFO-LAYOUT-01.md](baselines/SITE-002-STABLE-PROD-PDP-EXTRA-INFO-LAYOUT-01.md)) |
 | **Public brand policy** | **ЗПМ** — correct public Russian brand · **БЗПМ** forbidden in public copy/meta/llms/generated output · domain `bzpm.ru` unchanged · **0 violations after Run 4.207 edge fix** |
 | **Deep PLP meta edge fix** | **COMPLETE — DEEP PLP META VERIFIED** (Run 4.207) — [report](reports/SITE-002-PROD-SEO-META-EDGE-FIX-01.md) |
 | **New catalog branch onboarding** | **COMPLETE** (Run 4.210 + 4.211) — konditerskiy-inventar/formy-konditerskie (360/361); lari branches (88/141/140); deferred `/lari/proizvodstvennye-lari` resolved · [follow-up](reports/SITE-002-PROD-CATALOG-BRANCH-ONBOARDING-FOLLOWUP-01.md) · [Run 4.210](reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-01.md) |
-| **Accepted UX tasks (intake)** | (1) new section tiles — **PARTIAL** Run 4.219 (image assets required for IDs 88/360) · [entrypoints report](reports/SITE-002-PROD-NEW-SECTIONS-ENTRYPOINTS-01.md) · (2) PDP «Дополнительные сведения» — **DONE** Run 4.218 · [layout report](reports/SITE-002-PROD-PDP-EXTRA-INFO-ATTRIBUTE-LAYOUT-01.md) · [intake report](reports/SITE-002-PROD-UX-TASK-INTAKE-01.md) |
+| **Accepted UX tasks (intake)** | (1) new section tiles — **DONE** Run 4.220 · [entrypoints 02 report](reports/SITE-002-PROD-NEW-SECTIONS-ENTRYPOINTS-02.md) · (2) PDP «Дополнительные сведения» — **DONE** Run 4.218 · [layout report](reports/SITE-002-PROD-PDP-EXTRA-INFO-ATTRIBUTE-LAYOUT-01.md) · [intake report](reports/SITE-002-PROD-UX-TASK-INTAKE-01.md) |
 | **Post-1C catalog monitor** | **SCHEDULER VERIFIED — TASK ENABLED** (Run 4.216) — Windows Task `MARS_SITE_002_Post_1C_Catalog_Monitor`; runner quoting fix for `X:\AI MARS` paths; LastTaskResult **0**; daily **12:30 Barnaul** / **08:30 Moscow** · server-side migration **DEFERRED** · [runner fix](reports/SITE-002-POST-1C-MONITOR-SCHEDULER-RUNNER-FIX-01.md) · [readiness](reports/SITE-002-POST-1C-MONITOR-SCHEDULER-READINESS-01.md) · [runbook](runbooks/SITE-002-POST-1C-MONITOR-AUTOMATION-RUNBOOK.md) · prior monitor [Run 4.213](reports/SITE-002-PROD-POST-1C-CATALOG-ONBOARDING-MONITOR-02.md) |
 | **Sitemap authority** | **COMPLETE — AUTO-GENERATED FEED CONFIRMED** (Run 4.214) — OpenCart `extension/feed/google_sitemap`; physical file absent; live per-request; MARS does not manually edit XML; audit baseline [SITE-002-SITEMAP-AUTHORITY-DISCOVERY-01](baselines/SITE-002-SITEMAP-AUTHORITY-DISCOVERY-01.md) · [report](reports/SITE-002-PROD-SITEMAP-AUTHORITY-DISCOVERY-01.md) |
 | **MARS 1C cron wrapper** | **OPERATIONAL — FIRST SCHEDULED RUN VERIFIED** (Run 4.194) — automatic run SUCCESS 2026-07-06 08:00 Moscow; run ID `mars-20260706-080002-09436ae7`; report `mars_1c_import_2026-07-06_080007.txt`; daily import OPERATIONAL; Sergey legacy preserved |
