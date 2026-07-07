@@ -46,6 +46,7 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `site-002-prod-seo-meta-edge-fix-01.py` | Deep sub-category PLP meta edge fix via admin category SEO for `SITE-002-PROD-SEO-META-EDGE-FIX-01` (Run 4.207) |
 | `site-002-prod-seo-product-meta-generator-tune-02.py` | PDP keyword gap follow-up — classify Run 4.206 11 missing-keyword URLs; read-only `product.php` authority for `SITE-002-PROD-SEO-PRODUCT-META-GENERATOR-TUNE-02` (Run 4.208) |
 | `site-002-prod-sitemap-delta-audit-01.py` | Read-only sitemap delta audit — compare Run 4.206 baseline (1320) vs live (1377); classify added/removed URLs for `SITE-002-PROD-SITEMAP-DELTA-AUDIT-01` (Run 4.209) |
+| `site-002-prod-catalog-new-branch-onboarding-01.py` | New 1C catalog branch onboarding — category PLP meta via admin category SEO for `SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-01` (Run 4.210) |
 
 ## Dependencies
 
