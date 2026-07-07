@@ -506,6 +506,7 @@ Product SEO URLs created during catalog import (`oc_seo_url` where `query LIKE '
 | Public brand policy (Production) | **ACTIVE + REGRESSION VERIFIED** (Run 4.205 + 4.206 + 4.207) — correct public Russian brand: **ЗПМ** · forbidden in public content: **БЗПМ** · domain remains **bzpm.ru** · Run 4.207: 0 forbidden brand on 66 fixed deep PLP targets |
 | Final meta inventory (Production) | **COMPLETE — MINOR EDGE ISSUES** (Run 4.206) — 320 URLs crawled; sitemap 1320; robots/llms/Yandex/body verified · [report](../reports/SITE-002-PROD-SEO-META-FINAL-INVENTORY-01.md) |
 | Deep PLP meta edge fix (Production) | **COMPLETE — DEEP PLP META VERIFIED** (Run 4.207) — 66 sub-category admin SEO descriptions; authority `category_description[1][meta_description]`; 0 FTP/DB · [report](../reports/SITE-002-PROD-SEO-META-EDGE-FIX-01.md) |
+| PDP keyword gap follow-up (Production) | **COMPLETE — NO MUTATION REQUIRED** (Run 4.208) — 11 Run 4.206 “missing keywords” = hub/category PLP (`page--category`); 0 true PDP gaps; `product.php` v1.1 unchanged · [report](../reports/SITE-002-PROD-SEO-PRODUCT-META-GENERATOR-TUNE-02.md) |
 | OpenCart Document robots API | **Not available** — no `Document::setRobots()`; use `X-Robots-Tag` response header; `header.twig` hardcodes `<meta robots index,follow>` |
 | Yandex Metrika / Webmaster (live Twig) | **VERIFIED** (Run 4.189) — preserved after Run 4.192 |
 | Duplicate body / preloader (Production) | **FIXED** (Run 4.190) — unchanged by Run 4.192 |

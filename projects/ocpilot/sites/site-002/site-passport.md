@@ -1,7 +1,7 @@
 # SITE-002 — Site Passport
 
-**Status:** **STABLE PRODUCTION CHECKPOINT — SEO META EDGE 01** (deep PLP meta edge fix Run 4.207 complete)
-**Run:** 4.207 — SITE-002 Meta Edge Fix (2026-07-07)
+**Status:** **STABLE PRODUCTION CHECKPOINT — SEO META EDGE 01** (PDP keyword gap follow-up Run 4.208 complete — no mutation)
+**Run:** 4.208 — SITE-002 Product Meta Generator Tune 02 (2026-07-07)
 
 ---
 
@@ -30,7 +30,8 @@
 | **Production baseline** | **PARENT** — [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
 | **Current Production checkpoint** | **ISSUED** — [baselines/SITE-002-STABLE-PROD-SEO-META-EDGE-01.md](baselines/SITE-002-STABLE-PROD-SEO-META-EDGE-01.md) (parent [SITE-002-STABLE-PROD-BRAND-ZPM-01.md](baselines/SITE-002-STABLE-PROD-BRAND-ZPM-01.md); cron [SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01.md](baselines/SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01.md)) |
 | **Public brand policy** | **ЗПМ** — correct public Russian brand · **БЗПМ** forbidden in public copy/meta/llms/generated output · domain `bzpm.ru` unchanged · **0 violations after Run 4.207 edge fix** |
-| **Deep PLP meta edge fix** | **COMPLETE — DEEP PLP META VERIFIED** (Run 4.207) — [report](reports/SITE-002-PROD-SEO-META-EDGE-FIX-01.md) · prior inventory [Run 4.206](reports/SITE-002-PROD-SEO-META-FINAL-INVENTORY-01.md) |
+| **Deep PLP meta edge fix** | **COMPLETE — DEEP PLP META VERIFIED** (Run 4.207) — [report](reports/SITE-002-PROD-SEO-META-EDGE-FIX-01.md) |
+| **PDP keyword gap follow-up** | **COMPLETE — NO MUTATION REQUIRED** (Run 4.208) — 11/11 sample gaps are hub/category PLP; 0 true PDP gaps · [report](reports/SITE-002-PROD-SEO-PRODUCT-META-GENERATOR-TUNE-02.md) · prior inventory [Run 4.206](reports/SITE-002-PROD-SEO-META-FINAL-INVENTORY-01.md) |
 | **MARS 1C cron wrapper** | **OPERATIONAL — FIRST SCHEDULED RUN VERIFIED** (Run 4.194) — automatic run SUCCESS 2026-07-06 08:00 Moscow; run ID `mars-20260706-080002-09436ae7`; report `mars_1c_import_2026-07-06_080007.txt`; daily import OPERATIONAL; Sergey legacy preserved |
 | **Mail recipients** | **ACTIVE — ADMIN-MANAGED** (Run 4.187) — handler `checkout/anketa.php`; list via OpenCart `config_mail_alert_email`; operator updated admin **Additional Alert Emails**; delivery verified; no code deploy · [discovery](reports/SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01.md) · [confirmation](reports/SITE-002-PROD-MAIL-RECIPIENTS-ADMIN-ADD-01.md) |
 | **MARS 1C cron reports** | **CURRENT** (Run 4.194) — first scheduled report `mars_1c_import_2026-07-06_080007.txt` verified; prior manual run preserved; [SITE-002-PROD-CRON-FIRST-SCHEDULED-RUN-VERIFY-01.md](reports/SITE-002-PROD-CRON-FIRST-SCHEDULED-RUN-VERIFY-01.md) |
