@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-07 (Run 4.219 — new section entrypoints partial; image assets required for IDs 88/360; checkpoint unchanged `SITE-002-STABLE-PROD-PDP-EXTRA-INFO-LAYOUT-01`)
+**Last updated:** 2026-07-08 (Run 4.222 — mail system read-only discovery; redesign charters ready; checkpoint unchanged `SITE-002-STABLE-PROD-CATEGORY-ENTRYPOINTS-SORT-AZ-01`)
 
 ---
 
@@ -81,6 +81,7 @@ Do not claim that Production exactly matches TEST unless evidence proves it.
 | Neutral category image white-bg refresh (Production) | **ACTIVE** (Run 4.196) — 3 images refreshed to white studio style (354/358/86); 331 deferred; master `1800×1200` + cache `300×300` FTP overwrite; 0 admin saves; **COMPOSER_ONLY_NO_API** · [report](reports/SITE-002-PROD-NEUTRAL-CATEGORY-IMAGES-WHITE-BG-REFRESH-01.md) |
 | Polki category image fix (Production) | **ACTIVE** (Run 4.197) — ID 331 Полки настенные и настольные refreshed; master+cache FTP overwrite; stale dark cache replaced; 0 admin saves; **COMPOSER_ONLY_NO_API** · [report](reports/SITE-002-PROD-NEUTRAL-CATEGORY-IMAGE-POLKI-FIX-01.md) |
 | Mail recipients architecture (Production) | **ACTIVE — ADMIN-MANAGED** (Run 4.186 discovery + Run 4.187 confirmation) — unified form handler `catalog/controller/checkout/anketa.php`; active recipients from OpenCart **`config_mail_alert_email`** (comma-separated); operator updated via admin **Additional Alert Emails**; delivery verified; order alerts share same setting; legacy hardcoded email in anketa **inactive**; no custom admin section; no code deploy · [discovery](reports/SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01.md) · [confirmation](reports/SITE-002-PROD-MAIL-RECIPIENTS-ADMIN-ADD-01.md) |
+| Mail system architecture (Production) | **DISCOVERED — REDESIGN CHARTERS READY** (Run 4.222) — read-only full mail map: 29 public forms → anketa; standard OC twig mails (order/account/affiliate); no service info in admin form mail today; hybrid shared-renderer recommended; 5 future charters; Beget backup confirmed; 0 Production mutation · [report](reports/SITE-002-PROD-MAIL-SYSTEM-DISCOVERY-01.md) · [audit baseline](baselines/SITE-002-MAIL-SYSTEM-DISCOVERY-01.md) |
 | Catalog default sort (Production) | `pd.name ASC` when `sort`/`order` omitted |
 
 ---

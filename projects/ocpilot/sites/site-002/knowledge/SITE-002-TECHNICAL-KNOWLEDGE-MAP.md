@@ -307,7 +307,7 @@ MARS Beget daily 1C cron operational — first scheduled run SUCCESS — HTTP ga
 
 **Environment (TEST-era evidence):** TEST — https://zpm.new-site.space/
 **Authority (TEST-era checkpoints):** `SITE-002-STABLE-LIVE-LOCAL-FONTS-01`
-**Created:** 2026-06-19  
+**Created:** 2026-06-19
 **Purpose:** Persistent technical reference for operators and agents working on SITE-002.
 
 **Evidence cutoff:** M9.8.9 filter recovery (06D–06M) + filter UX polish (04–08A) + tooltips (01) + Commercial Trust (03B/03C) + catalog state persistence (09A–09C) + hub cleanup (10) + operator manual polish (2026-06-21 live state) + M9.13 About Company redesign/polish/rejection/restoration (2026-06-23) + BZPM recovery closeout (2026-06-28).
@@ -1945,8 +1945,8 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 
 ## 31. Custom OEM Proof Strip — Commercial Trust Reuse (ACTIVE)
 
-**Checkpoint:** `SITE-002-STABLE-LIVE-CUSTOM-PROOF-STRIP-01`  
-**Scope:** `/custom-equipment` — `.zpm-custom-oem__proof-strip` only  
+**Checkpoint:** `SITE-002-STABLE-LIVE-CUSTOM-PROOF-STRIP-01`
+**Scope:** `/custom-equipment` — `.zpm-custom-oem__proof-strip` only
 **Status:** **ACTIVE / PASS** (2026-06-29)
 
 | Item | Value |
@@ -1966,8 +1966,8 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 
 ## 32. Delivery Summary — Commercial Trust Reuse (ACTIVE)
 
-**Checkpoint:** `SITE-002-STABLE-LIVE-DELIVERY-SUMMARY-01`  
-**Scope:** `/delivery` — `.zpm-delivery-summary` only  
+**Checkpoint:** `SITE-002-STABLE-LIVE-DELIVERY-SUMMARY-01`
+**Scope:** `/delivery` — `.zpm-delivery-summary` only
 **Status:** **ACTIVE / PASS** (2026-06-29)
 
 | Item | Value |
@@ -2015,4 +2015,31 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 
 ---
 
-*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-06 (Run 4.187 — mail recipients admin update confirmed).*
+## 34. Mail System Architecture (Production — DISCOVERED)
+
+**Discovery:** Run 4.222 — `SITE-002-PROD-MAIL-SYSTEM-DISCOVERY-01` (2026-07-08)
+**Status:** **DISCOVERED — redesign charters ready; no Production mutation**
+
+| Item | Production value |
+|------|------------------|
+| **Form mail handler** | `catalog/controller/checkout/anketa.php` — minimal inline HTML; no twig template |
+| **Dialogs** | 1 product question · 2 callback · 3 price · 5 review (trigger SAFE UNKNOWN) · 7 dealers/wholesale |
+| **Frontend** | `zpm-form` → `POST checkout/anketa` via `main.js`; CSRF + reCAPTCHA v3 |
+| **Admin recipients** | `config_mail_alert_email` (Run 4.186/4.187) |
+| **Service info in admin mail** | **absent** — IP/UA/referrer/page URL not sent today |
+| **Customer form copy** | **not implemented** |
+| **Standard OC mails** | `catalog/controller/mail/*` + `template/mail/*.twig` — default OpenCart 3.0.3.9 layout |
+| **Order customer mail** | HTML `mail/order_add.twig` (680px tables, includes order IP) |
+| **Order admin alert** | text `mail/order_alert.twig` → `config_email` + alert list |
+| **Recommended redesign** | Hybrid shared renderer under `system/library/zpm` + twig wrappers |
+| **Staged roadmap** | (1) admin forms + service info → (2) customer form copy → (3) account → (4) order → (5) polish |
+| **Future charters** | `SITE-002-PROD-MAIL-DESIGN-SYSTEM-01` … `ORDER-TRANSACTIONAL-01` |
+| **Report** | [SITE-002-PROD-MAIL-SYSTEM-DISCOVERY-01.md](../reports/SITE-002-PROD-MAIL-SYSTEM-DISCOVERY-01.md) |
+| **Audit baseline** | [SITE-002-MAIL-SYSTEM-DISCOVERY-01.md](../baselines/SITE-002-MAIL-SYSTEM-DISCOVERY-01.md) |
+| **Storage** | `.../deployments/SITE-002-PROD-MAIL-SYSTEM-DISCOVERY-01\` |
+
+**Change rules:** Mail redesign requires explicit charter per stage. Do not send test mail from Production without operator approval. Do not expose SMTP secrets. Admin service-info block is admin-only — never include IP/UA in customer-facing mail.
+
+---
+
+*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-08 (Run 4.222 — mail system discovery complete).*

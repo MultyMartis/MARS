@@ -59,6 +59,7 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `site-002-prod-new-sections-entrypoints-01.py` | New section entrypoint tiles — category visibility + Category-image gate for lari/konditerskiy for `SITE-002-PROD-NEW-SECTIONS-ENTRYPOINTS-01` (Run 4.219) |
 | `site-002-prod-new-sections-entrypoints-02.py` | Composer-only category images + entrypoint tiles deploy for lari/konditerskiy for `SITE-002-PROD-NEW-SECTIONS-ENTRYPOINTS-02` (Run 4.220) |
 | `site-002-prod-category-entrypoints-sort-az-01.py` | Category entrypoints A→Z display sort deploy for megamenu/homepage/neutral hub for `SITE-002-PROD-CATEGORY-ENTRYPOINTS-SORT-AZ-01` (Run 4.221) |
+| `site-002-prod-mail-system-discovery-01.py` | Read-only Production mail system discovery — forms HTTP crawl + FTP source map + redesign charters for `SITE-002-PROD-MAIL-SYSTEM-DISCOVERY-01` (Run 4.222) |
 
 ### Post-1C monitor scheduler notes (Run 4.216)
 
