@@ -499,7 +499,7 @@ Product SEO URLs created during catalog import (`oc_seo_url` where `query LIKE '
 | robots.txt | https://bzpm.ru/robots.txt — deployed; rollback in Storage `deployments/SITE-002-PROD-SEO-READINESS-ROBOTS-01/rollback/` |
 | Meta audit scope | **Non-product only** — 43 URLs; product PDP excluded |
 | Meta audit result | PASS 12 · WARN 14 · FAIL 17 |
-| Valid XML sitemap | **VERIFIED** (Run 4.191; count **1377** at Run 4.209) — https://bzpm.ru/sitemap.xml — OpenCart Google Sitemap feed enabled; robots `Sitemap:` deployed |
+| Valid XML sitemap | **AUTO-GENERATED FEED CONFIRMED** (Run 4.214) — https://bzpm.ru/sitemap.xml — OpenCart Google Sitemap `extension/feed/google_sitemap`; physical file **absent**; `.htaccess` rewrite; live per-request; count **1377**; MARS monitor-only — no manual XML edit · [authority discovery](../reports/SITE-002-PROD-SITEMAP-AUTHORITY-DISCOVERY-01.md) · [enable Run 4.191](../reports/SITE-002-PROD-SITEMAP-ENABLE-01.md) |
 | Non-product SEO meta fix | **INFORMATION META COMPLETE** (Run 4.199) — 4.192: technical noindex + contact/stoly · 4.193: home + category 301/322/326 admin · 4.198: authority mapped · **4.199: corp 6 controllers + `product/katalog.php` + `blog/category.php` (hub + news fallback theme_id=1) patched; category admin SEO 331/354/358 verified** |
 | Product PDP meta generator | **DEPLOYED** (Run 4.201 + 4.202) — runtime fallback in `product.php`: preserve manual meta (≥80 chars, not import-stub); generate description/keywords when empty/weak; **keywords v1.1** (Run 4.202): numeric-only filter, max 18 phrases / ~300 chars, family `pickAttributePhrase` (no raw attribute dump); import-time unchanged in `import_1C_process.php`; 24 deep PDP sample: 0 empty description, 24/24 CLEAN keywords · [keywords tune](../reports/SITE-002-PROD-SEO-PRODUCT-META-KEYWORDS-TUNE-01.md) · [fix report](../reports/SITE-002-PROD-SEO-PRODUCT-META-GENERATOR-FIX-01.md) · [discovery](../reports/SITE-002-PROD-SEO-PRODUCT-META-GENERATOR-DISCOVERY-01.md) |
 | llms.txt (AI agent guide) | **ZPM BRAND + UTF-8 BOM VERIFIED** (Run 4.205) — `/public_html/llms.txt` · https://bzpm.ru/llms.txt — public brand **ЗПМ** (not БЗПМ); UTF-8 BOM preserved; plain Markdown site summary; does not replace robots.txt or sitemap.xml · [brand remediation](../reports/SITE-002-PROD-BRAND-ZPM-REMEDIATION-01.md) · [encoding fix](../reports/SITE-002-PROD-LLMS-TXT-ENCODING-FIX-01.md) |
@@ -1075,6 +1075,18 @@ Before **any** task touching **trust block**, **certificates**, **dealers form**
 - Onboarded 2026-07-07: category ids **360** (konditerskiy-inventar), **361** (formy-konditerskie), **88** (lari), **141** (skladskie-lari), **140** (proizvodstvennye-lari under Лари)
 - **Parent-aware resolution** required when admin names duplicate (e.g. «Производственные» id 140 under Лари vs id 130 under Шкафы)
 - Deferred Run 4.210 `/lari/proizvodstvennye-lari` — **RESOLVED** Run 4.211 → category_id **140**, HIGH confidence
+
+### Sitemap authority (Run 4.214)
+
+- **Authority:** OpenCart built-in Google Sitemap feed — `catalog/controller/extension/feed/google_sitemap.php`
+- **Route:** `extension/feed/google_sitemap` · public URL `https://bzpm.ru/sitemap.xml` via `.htaccess` `RewriteRule ^sitemap.xml$ index.php?route=extension/feed/google_sitemap [L]`
+- **Physical file:** `/public_html/sitemap.xml` — **absent** (not manually maintained)
+- **Generation:** live per HTTP request from catalog models — **no** feed-level cache, **no** disk write
+- **Data sources:** `getProducts()` (status=1), recursive `getCategories()` (status=1), `getInformations()` (status=1), `getManufacturers()` — URLs via `url->link()` + SEO rewrite
+- **Noindex/canonical:** **not** checked in feed — external SEO audit required for mismatches
+- **1C relationship:** daily import updates DB → sitemap reflects on next fetch; **no** manual regeneration by MARS
+- **MARS policy:** monitor/audit delta only; **never** hand-edit `sitemap.xml` in normal ops; onboard new categories via admin SEO, do not remove new URLs by default
+- Tool: `site-002-prod-sitemap-authority-discovery-01.py` · [report](../reports/SITE-002-PROD-SITEMAP-AUTHORITY-DISCOVERY-01.md)
 
 ### Filter change rules
 
