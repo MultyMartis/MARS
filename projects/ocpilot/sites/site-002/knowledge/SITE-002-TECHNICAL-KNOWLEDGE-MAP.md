@@ -2033,7 +2033,7 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 | **Order admin alert** | text `mail/order_alert.twig` → `config_email` + alert list |
 | **Recommended redesign** | Hybrid shared renderer under `system/library/zpm` + twig wrappers |
 | **Staged roadmap** | (1) admin forms + service info → (2) customer form copy → (3) account → (4) order → (5) polish |
-| **Future charters** | `SITE-002-PROD-MAIL-DESIGN-SYSTEM-01` … `ORDER-TRANSACTIONAL-01` |
+| **Future charters** | `SITE-002-PROD-MAIL-ADMIN-FORMS-01` … `ORDER-TRANSACTIONAL-01` (design system charter **complete** — Run 4.223) |
 | **Report** | [SITE-002-PROD-MAIL-SYSTEM-DISCOVERY-01.md](../reports/SITE-002-PROD-MAIL-SYSTEM-DISCOVERY-01.md) |
 | **Audit baseline** | [SITE-002-MAIL-SYSTEM-DISCOVERY-01.md](../baselines/SITE-002-MAIL-SYSTEM-DISCOVERY-01.md) |
 | **Storage** | `.../deployments/SITE-002-PROD-MAIL-SYSTEM-DISCOVERY-01\` |
@@ -2042,4 +2042,29 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 
 ---
 
-*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-08 (Run 4.222 — mail system discovery complete).*
+## 35. Mail Design System (Production — FOUNDATION ACTIVE)
+
+**Operation:** Run 4.223 — `SITE-002-PROD-MAIL-DESIGN-SYSTEM-01` (2026-07-08)
+**Status:** **FOUNDATION ACTIVE** — shared renderer deployed **inactive**; no live trigger changes
+
+| Item | Production value |
+|------|------------------|
+| **Renderer class** | `ZpmMailRenderer` |
+| **Remote path** | `/public_html/system/library/zpm/mail_renderer.php` |
+| **SHA-256** | `1685983e7b27dd12fae2805f3d25580e08d991d485a4e274c60f3b20f3384991` |
+| **Live references** | **none** — not loaded by anketa or mail controllers yet |
+| **Brand in templates** | **ЗПМ** (not БЗПМ) |
+| **Layout** | 600px table-based, inline CSS, plain text fallback |
+| **Admin preview** | service info block supported in `renderAdminForm()` |
+| **Customer preview** | no IP/UA/referrer in `renderCustomerFormConfirmation()` |
+| **Next integration** | `SITE-002-PROD-MAIL-ADMIN-FORMS-01` — patch `checkout/anketa.php` |
+| **Report** | [SITE-002-PROD-MAIL-DESIGN-SYSTEM-01.md](../reports/SITE-002-PROD-MAIL-DESIGN-SYSTEM-01.md) |
+| **Checkpoint** | [SITE-002-STABLE-PROD-MAIL-DESIGN-SYSTEM-01.md](../baselines/SITE-002-STABLE-PROD-MAIL-DESIGN-SYSTEM-01.md) |
+| **Repo source** | [mail_renderer.php](../tools/mail_renderer.php) · [orchestrator](../tools/site-002-prod-mail-design-system-01.py) |
+| **Storage** | `.../deployments/SITE-002-PROD-MAIL-DESIGN-SYSTEM-01\` (previews, fixtures, verification) |
+
+**Change rules:** Do not wire renderer into live triggers without `SITE-002-PROD-MAIL-ADMIN-FORMS-01` charter. Renderer must remain send-free. Preview HTML stays in Storage — not public web root.
+
+---
+
+*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-08 (Run 4.223 — mail design system foundation complete).*

@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-08 (Run 4.222 — mail system read-only discovery; redesign charters ready; checkpoint unchanged `SITE-002-STABLE-PROD-CATEGORY-ENTRYPOINTS-SORT-AZ-01`)
+**Last updated:** 2026-07-08 (Run 4.223 — mail design system foundation; shared renderer deployed inactive; checkpoint `SITE-002-STABLE-PROD-MAIL-DESIGN-SYSTEM-01`)
 
 ---
 
@@ -69,7 +69,8 @@ Do not claim that Production exactly matches TEST unless evidence proves it.
 | Current M9.x baselines | [baselines/](baselines/) — TEST-proven checkpoints |
 | Post-corporate-page checkpoints | Home Commercial Trust · Corporate Intro · Custom Proof Strip · Delivery Summary · PDP Body Category Classes |
 | Production baseline parent | [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| Current Production checkpoint | [baselines/SITE-002-STABLE-PROD-CATEGORY-ENTRYPOINTS-SORT-AZ-01.md](baselines/SITE-002-STABLE-PROD-CATEGORY-ENTRYPOINTS-SORT-AZ-01.md) (parent [SITE-002-STABLE-PROD-NEW-SECTIONS-ENTRYPOINTS-02.md](baselines/SITE-002-STABLE-PROD-NEW-SECTIONS-ENTRYPOINTS-02.md)) |
+| Current Production checkpoint | [baselines/SITE-002-STABLE-PROD-MAIL-DESIGN-SYSTEM-01.md](baselines/SITE-002-STABLE-PROD-MAIL-DESIGN-SYSTEM-01.md) (parent [SITE-002-STABLE-PROD-CATEGORY-ENTRYPOINTS-SORT-AZ-01.md](baselines/SITE-002-STABLE-PROD-CATEGORY-ENTRYPOINTS-SORT-AZ-01.md)) |
+| Mail design system (Production) | **FOUNDATION ACTIVE** (Run 4.223) — `ZpmMailRenderer` at `system/library/zpm/mail_renderer.php`; inactive (no live trigger references); previews in Storage; next integration `SITE-002-PROD-MAIL-ADMIN-FORMS-01` · [report](reports/SITE-002-PROD-MAIL-DESIGN-SYSTEM-01.md) · [audit baseline](baselines/SITE-002-MAIL-DESIGN-SYSTEM-01.md) |
 | Category entrypoints display sort (Production) | **ACTIVE** (Run 4.221) — megamenu + homepage + neutral hub **А → Я** by Russian name; `sortCategoriesByRussianName()` in `category_visibility.php`; hub sort in `category.php`; membership/images unchanged · [report](reports/SITE-002-PROD-CATEGORY-ENTRYPOINTS-SORT-AZ-01.md) |
 | SEO readiness (Production) | **NEW SECTION ENTRYPOINTS VERIFIED** (Run 4.220) — lari/konditerskiy tiles on homepage/hub; Composer-only images; IDs 88/360 in whitelist · [report](reports/SITE-002-PROD-NEW-SECTIONS-ENTRYPOINTS-02.md) · **PDP EXTRA INFO LAYOUT VERIFIED** (Run 4.218) — display-only extraction; meta generator preserved · [report](reports/SITE-002-PROD-PDP-EXTRA-INFO-ATTRIBUTE-LAYOUT-01.md) · **SITEMAP AUTHORITY CONFIRMED** (Run 4.214) — AUTO-GENERATED OpenCart Google Sitemap feed; route `extension/feed/google_sitemap`; `.htaccess` rewrite; live per-request; **1377** URLs; MARS monitor/audit only — no manual XML edit · [authority report](reports/SITE-002-PROD-SITEMAP-AUTHORITY-DISCOVERY-01.md) · **Post-1C monitor scheduler** (Run 4.216) — Windows Task verified LastTaskResult **0**; task enabled · [runner fix report](reports/SITE-002-POST-1C-MONITOR-SCHEDULER-RUNNER-FIX-01.md) · [runbook](runbooks/SITE-002-POST-1C-MONITOR-AUTOMATION-RUNBOOK.md) |
 | Yandex analytics (Production) | **VERIFIED** (Run 4.189) — Metrika counter in `common/footer.twig` (masked `110***756`); Webmaster verification in `common/header.twig` (masked `13a***c77`); confirmed on live HTML (home, category, information); **OPERATOR WIP — DO NOT OVERWRITE** · [report](reports/SITE-002-PROD-YANDEX-CODES-VERIFY-01.md) |
