@@ -1,7 +1,7 @@
 # SITE-002 — Site Passport
 
-**Status:** **STABLE PRODUCTION CHECKPOINT — NEW SECTIONS ENTRYPOINTS 02** (Run 4.220: lari/konditerskiy tiles verified; Run 4.218 PDP extra info preserved; parent `SITE-002-STABLE-PROD-PDP-EXTRA-INFO-LAYOUT-01`)
-**Run:** 4.220 — SITE-002 New Sections Entrypoints 02 (2026-07-07)
+**Status:** **STABLE PRODUCTION CHECKPOINT — CATEGORY ENTRYPOINTS SORT AZ** (Run 4.221: megamenu/home/hub A→Z verified; Run 4.220 entrypoints preserved; parent `SITE-002-STABLE-PROD-NEW-SECTIONS-ENTRYPOINTS-02`)
+**Run:** 4.221 — SITE-002 Category Entrypoints Sort А→Я (2026-07-08)
 
 ---
 
@@ -28,7 +28,7 @@
 | **Production Profile** | [production-profile.md](production-profile.md) |
 | **Production connection** | **VERIFIED** — HTTP/admin (Run 4.171) + FTP/file baseline (Run 4.171-R1); path model reconciled (Run 4.172) |
 | **Production baseline** | **PARENT** — [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| **Current Production checkpoint** | **ISSUED** — [baselines/SITE-002-STABLE-PROD-NEW-SECTIONS-ENTRYPOINTS-02.md](baselines/SITE-002-STABLE-PROD-NEW-SECTIONS-ENTRYPOINTS-02.md) (parent [SITE-002-STABLE-PROD-PDP-EXTRA-INFO-LAYOUT-01.md](baselines/SITE-002-STABLE-PROD-PDP-EXTRA-INFO-LAYOUT-01.md)) |
+| **Current Production checkpoint** | **ISSUED** — [baselines/SITE-002-STABLE-PROD-CATEGORY-ENTRYPOINTS-SORT-AZ-01.md](baselines/SITE-002-STABLE-PROD-CATEGORY-ENTRYPOINTS-SORT-AZ-01.md) (parent [SITE-002-STABLE-PROD-NEW-SECTIONS-ENTRYPOINTS-02.md](baselines/SITE-002-STABLE-PROD-NEW-SECTIONS-ENTRYPOINTS-02.md)) |
 | **Public brand policy** | **ЗПМ** — correct public Russian brand · **БЗПМ** forbidden in public copy/meta/llms/generated output · domain `bzpm.ru` unchanged · **0 violations after Run 4.207 edge fix** |
 | **Deep PLP meta edge fix** | **COMPLETE — DEEP PLP META VERIFIED** (Run 4.207) — [report](reports/SITE-002-PROD-SEO-META-EDGE-FIX-01.md) |
 | **New catalog branch onboarding** | **COMPLETE** (Run 4.210 + 4.211) — konditerskiy-inventar/formy-konditerskie (360/361); lari branches (88/141/140); deferred `/lari/proizvodstvennye-lari` resolved · [follow-up](reports/SITE-002-PROD-CATALOG-BRANCH-ONBOARDING-FOLLOWUP-01.md) · [Run 4.210](reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-01.md) |

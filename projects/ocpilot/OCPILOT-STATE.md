@@ -1,8 +1,8 @@
 # OCPilot — Program State
 
 **Status:** living state document — **not** automated router  
-**Last updated:** 2026-07-07
-**Evidence cutoff:** 2026-07-07 (SITE-002 Run **4.220** — new section entrypoints 02; Composer images + cards verified; checkpoint `SITE-002-STABLE-PROD-NEW-SECTIONS-ENTRYPOINTS-02`)
+**Last updated:** 2026-07-08
+**Evidence cutoff:** 2026-07-08 (SITE-002 Run **4.221** — category entrypoints sort A→Z; home/hub/megamenu verified; checkpoint `SITE-002-STABLE-PROD-CATEGORY-ENTRYPOINTS-SORT-AZ-01`)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **New section entrypoints 02 (Run 4.220)** — **COMPLETE — COMPOSER IMAGES AND CARDS VERIFIED** for Лари (88) and Кондитерский инвентарь (360); homepage/hub tiles 9→11; Composer-only WebP + admin image fields + `category_visibility.php`; **COMPOSER_ONLY_NO_API** · [SITE-002-PROD-NEW-SECTIONS-ENTRYPOINTS-02.md](sites/site-002/reports/SITE-002-PROD-NEW-SECTIONS-ENTRYPOINTS-02.md) · checkpoint `SITE-002-STABLE-PROD-NEW-SECTIONS-ENTRYPOINTS-02` · PDP extra info (Run 4.218) preserved · post-1C monitor local task remains enabled ([Run 4.216](sites/site-002/reports/SITE-002-POST-1C-MONITOR-SCHEDULER-RUNNER-FIX-01.md)) |
+| Current SITE-002 focus | **Category entrypoints sort A→Z (Run 4.221)** — **COMPLETE — HOME HUB MEGAMENU VERIFIED**; megamenu + homepage + neutral hub display **А → Я** by Russian name; 2-file PHP deploy (`category_visibility.php`, `category.php`); 11 branch IDs/images unchanged · [SITE-002-PROD-CATEGORY-ENTRYPOINTS-SORT-AZ-01.md](sites/site-002/reports/SITE-002-PROD-CATEGORY-ENTRYPOINTS-SORT-AZ-01.md) · checkpoint `SITE-002-STABLE-PROD-CATEGORY-ENTRYPOINTS-SORT-AZ-01` · parent Run 4.220 entrypoints preserved · post-1C monitor local task remains enabled ([Run 4.216](sites/site-002/reports/SITE-002-POST-1C-MONITOR-SCHEDULER-RUNNER-FIX-01.md)) |
 
 ---
 
@@ -36,7 +36,7 @@
 | OpenCart admin read-only | **VERIFIED** — version 3.0.3.9 |
 | Historical TEST | **preserved** — https://zpm.new-site.space/ |
 | First Production baseline | **SUPERSEDED BY CONTROLLED TEXT CHANGE** — parent [SITE-002-STABLE-PROD-INITIAL-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| Current Production checkpoint | **ISSUED** — [SITE-002-STABLE-PROD-NEW-SECTIONS-ENTRYPOINTS-02.md](sites/site-002/baselines/SITE-002-STABLE-PROD-NEW-SECTIONS-ENTRYPOINTS-02.md) (parent [SITE-002-STABLE-PROD-PDP-EXTRA-INFO-LAYOUT-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-PDP-EXTRA-INFO-LAYOUT-01.md)) |
+| Current Production checkpoint | **ISSUED** — [SITE-002-STABLE-PROD-CATEGORY-ENTRYPOINTS-SORT-AZ-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-CATEGORY-ENTRYPOINTS-SORT-AZ-01.md) (parent [SITE-002-STABLE-PROD-NEW-SECTIONS-ENTRYPOINTS-02.md](sites/site-002/baselines/SITE-002-STABLE-PROD-NEW-SECTIONS-ENTRYPOINTS-02.md)) |
 | First Production test / operation | **COMPLETE** — single-file text-only FTP deploy verified (Run 4.173) |
 | Second Production operation | **COMPLETE** — single-controller catalog sort deploy verified (Run 4.176) |
 | Third Production operation | **COMPLETE** — single-Twig catalog sort menu deploy verified (Run 4.177) |

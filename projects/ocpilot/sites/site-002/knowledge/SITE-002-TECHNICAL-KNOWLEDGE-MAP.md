@@ -923,7 +923,8 @@ See §6. Per-category PHP profiles control which attributes appear in sidebar an
 | Live PLP | HTTP 200; meta onboarded (Runs 4.210–4.211) |
 | Megamenu | Present |
 | Homepage/hub `zpm-cat-card` | **11 tiles** (Run 4.220) — IDs incl. **88** (`lari`), **360** (`konditerskiy-inventar`) |
-| Future implementation | **COMPLETE** Run 4.220 — `$neutral_hub_branch_ids` + Category-image WebP for IDs 88/360 · **COMPOSER_ONLY_NO_API** · [report](../reports/SITE-002-PROD-NEW-SECTIONS-ENTRYPOINTS-02.md) · [tool](../tools/site-002-prod-new-sections-entrypoints-02.py) |
+| Display sort | **А → Я** by Russian name (Run 4.221) — `sortCategoriesByRussianName()` |
+| Future implementation | **COMPLETE** Run 4.220 + **4.221** — whitelist + images + A→Z display · [4.220 report](../reports/SITE-002-PROD-NEW-SECTIONS-ENTRYPOINTS-02.md) · [4.221 report](../reports/SITE-002-PROD-CATEGORY-ENTRYPOINTS-SORT-AZ-01.md) · [tool](../tools/site-002-prod-category-entrypoints-sort-az-01.py) |
 | Intake report | [SITE-002-PROD-UX-TASK-INTAKE-01.md](../reports/SITE-002-PROD-UX-TASK-INTAKE-01.md) |
 
 ### PDP attribute «Дополнительные сведения» (Run 4.218 — LIVE)
