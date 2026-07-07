@@ -1,0 +1,51 @@
+{
+    "wave": "V9-06E22",
+    "result": "PASS",
+    "checks": {
+        "site_settings_children_runtime": [],
+        "site_settings_children_source": [
+            "fp02-block-header",
+            "fp02-block-footer",
+            "fp02-block-final-form",
+            "fp02-block-specialists",
+            "fp02-block-cta-bands",
+            "fp02-block-comfort",
+            "fp02-site-settings-general",
+            "fp02-site-settings-blocks"
+        ],
+        "fielded_block_slugs_source": [
+            "fp02-block-final-form",
+            "fp02-block-specialists",
+            "fp02-block-cta-bands",
+            "fp02-block-header",
+            "fp02-block-footer",
+            "fp02-block-comfort"
+        ],
+        "heroes_absent_under_site_settings": true,
+        "batch2_present": {
+            "fp02-block-header": true,
+            "fp02-block-footer": true,
+            "fp02-block-comfort": true
+        },
+        "batch1_present": {
+            "fp02-block-final-form": true,
+            "fp02-block-specialists": true,
+            "fp02-block-cta-bands": true
+        },
+        "top_level_reviews": [],
+        "top_level_reviews_acf_option_page": true,
+        "acf_groups": {
+            "group_fp02_block_header": "PASS",
+            "group_fp02_block_footer": "PASS",
+            "group_fp02_block_comfort": "PASS"
+        },
+        "global_hero_group_absent": true,
+        "local_hero_groups": {
+            "group_fp02_service_layout_hero": "PRESENT",
+            "group_fp02_page_home": "PRESENT",
+            "group_fp02_page_services_hub": "PRESENT",
+            "group_fp02_page_institutional": "PRESENT"
+        },
+        "admin_screenshots": "PARTIAL"
+    }
+}

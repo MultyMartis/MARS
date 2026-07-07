@@ -1,0 +1,24 @@
+{
+    "wave": "V9-06E22",
+    "result": "PASS",
+    "site_settings_menu": [
+        "Общие настройки",
+        "Повторяемые блоки",
+        "Финальная форма",
+        "Специалисты",
+        "CTA-блоки",
+        "Шапка",
+        "Подвал",
+        "Комфорт / преимущества"
+    ],
+    "heroes_removed_from_site_settings": true,
+    "global_hero_settings_used": false,
+    "local_hero_authority": true,
+    "fallback_chain": "local/entity hero_media → theme asset registry → safe fallback",
+    "e21_preserved": [
+        "Шапка",
+        "Подвал",
+        "Комфорт / преимущества"
+    ],
+    "top_level_reviews_preserved": true
+}

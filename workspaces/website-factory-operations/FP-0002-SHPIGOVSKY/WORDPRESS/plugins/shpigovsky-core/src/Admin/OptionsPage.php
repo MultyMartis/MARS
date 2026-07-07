@@ -156,10 +156,6 @@ final class OptionsPage implements ModuleInterface {
 				'menu_title' => __( 'Фоновые секции', 'shpigovsky-core' ),
 				'menu_slug'  => 'fp02-block-backgrounds',
 			),
-			array(
-				'menu_title' => __( 'Герои', 'shpigovsky-core' ),
-				'menu_slug'  => 'fp02-block-hero-fallbacks',
-			),
 		);
 
 		$subpages = array();
@@ -208,7 +204,6 @@ final class OptionsPage implements ModuleInterface {
 		return array(
 			'fp02-block-header',
 			'fp02-block-footer',
-			'fp02-block-hero-fallbacks',
 			'fp02-block-comfort',
 		);
 	}

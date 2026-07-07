@@ -392,13 +392,6 @@ function shpigovsky_get_footer_block_context() {
 }
 
 /**
- * ACF options context for hero fallbacks block admin.
- */
-function shpigovsky_get_hero_fallbacks_block_context() {
-	return 'fp02-block-hero-fallbacks';
-}
-
-/**
  * ACF options context for comfort / benefits block admin.
  */
 function shpigovsky_get_comfort_block_context() {
@@ -548,69 +541,6 @@ function shpigovsky_get_footer_appointment_label( $static_fallback = '' ) {
 	}
 
 	return shpigovsky_chrome_label_or_fallback( 'default_secondary_button_label', $static_fallback );
-}
-
-/**
- * Resolve global hero fallback image from block options.
- *
- * @param string $context_key Hero context registry key.
- * @return array{url:string,alt:string,width:int,height:int}|null
- */
-function shpigovsky_get_block_hero_fallback_image( $context_key ) {
-	if ( ! function_exists( 'get_field' ) ) {
-		return null;
-	}
-
-	$context   = shpigovsky_get_hero_fallbacks_block_context();
-	$image     = get_field( 'hero_fallback_' . $context_key . '_image', $context );
-	$media_url = shpigovsky_acf_image_url( $image );
-
-	if ( '' !== $media_url ) {
-		$width  = 0;
-		$height = 0;
-		$alt    = shpigovsky_acf_image_alt( $image );
-
-		if ( is_array( $image ) ) {
-			$width  = ! empty( $image['width'] ) ? (int) $image['width'] : 0;
-			$height = ! empty( $image['height'] ) ? (int) $image['height'] : 0;
-		}
-
-		$registry = shpigovsky_get_hero_context_registry();
-
-		if ( ( $width <= 0 || $height <= 0 ) && isset( $registry[ $context_key ] ) ) {
-			$width  = (int) $registry[ $context_key ]['fallback_width'];
-			$height = (int) $registry[ $context_key ]['fallback_height'];
-		}
-
-		if ( '' === $alt && isset( $registry[ $context_key ] ) ) {
-			$alt = (string) $registry[ $context_key ]['fallback_alt'];
-		}
-
-		return array(
-			'url'    => $media_url,
-			'alt'    => $alt,
-			'width'  => $width,
-			'height' => $height,
-		);
-	}
-
-	$asset = shpigovsky_get_block_option_scalar( 'hero_fallback_' . $context_key . '_asset', $context );
-
-	if ( '' !== $asset ) {
-		$registry = shpigovsky_get_hero_context_registry();
-		$path     = SHPIGOVSKY_THEME_DIR . '/assets/' . ltrim( $asset, '/' );
-
-		if ( is_readable( $path ) ) {
-			return array(
-				'url'    => shpigovsky_asset_uri( $asset ),
-				'alt'    => isset( $registry[ $context_key ] ) ? (string) $registry[ $context_key ]['fallback_alt'] : '',
-				'width'  => isset( $registry[ $context_key ] ) ? (int) $registry[ $context_key ]['fallback_width'] : 0,
-				'height' => isset( $registry[ $context_key ] ) ? (int) $registry[ $context_key ]['fallback_height'] : 0,
-			);
-		}
-	}
-
-	return null;
 }
 
 /**

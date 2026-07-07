@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-08 (V9-06E21 Reusable Blocks Batch 2 Fields PARTIAL PASS)
+**Last updated:** 2026-07-08 (V9-06E22 Remove Global Heroes Settings PASS)
 
-**Current WordPress phase:** V9-06E21 Reusable Blocks Batch 2 Fields **PARTIAL PASS** — Batch 2 ACF option pages (Шапка, Подвал, Герои, Комфорт / преимущества) under **Настройки сайта**; renderer migration with fallbacks; **26** option fields seeded; E20 IA preserved (no reviews alias). Fresh DB checkpoint `v9-06e21-reusable-blocks-batch-2-fields-pre-20260708-024557`; **2** plugin + **6** theme + **4** ACF JSON; runtime delivered. Routes 9/9 PASS; screenshots PARTIAL. **Next: CREATE_V9_06E22_OPERATOR_REUSABLE_BLOCKS_ADMIN_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E21-REUSABLE-BLOCKS-BATCH-2-FIELDS-REPORT-v1.md`.
+**Current WordPress phase:** V9-06E22 Remove Global Heroes Settings **PASS** — removed global `Герои` from **Настройки сайта** and `group_fp02_block_hero_fallbacks`; restored local/entity hero authority (E7B); preserved E21 Шапка/Подвал/Комфорт + Batch 1; top-level **Отзывы** unchanged. Fresh DB checkpoint `v9-06e22-remove-global-heroes-settings-pre-20260708-034456`; **2** plugin + **2** theme files; **1** ACF JSON deleted; **1** ACF DB write; runtime delivered. Routes 9/9 PASS; admin screenshots PARTIAL. **Next: CREATE_V9_06E23_OPERATOR_ADMIN_HERO_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E22-REMOVE-GLOBAL-HEROES-SETTINGS-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

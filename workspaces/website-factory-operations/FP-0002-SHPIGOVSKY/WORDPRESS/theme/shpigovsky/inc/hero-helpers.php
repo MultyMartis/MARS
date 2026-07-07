@@ -115,12 +115,6 @@ function shpigovsky_get_hero_theme_fallback( $context_key ) {
 	}
 
 	$context = $registry[ $context_key ];
-	$block_fallback = shpigovsky_get_block_hero_fallback_image( $context_key );
-
-	if ( is_array( $block_fallback ) && '' !== $block_fallback['url'] ) {
-		return $block_fallback;
-	}
-
 	$path    = SHPIGOVSKY_THEME_DIR . '/assets/' . ltrim( $context['fallback_asset'], '/' );
 
 	if ( ! is_readable( $path ) ) {

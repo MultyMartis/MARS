@@ -1,0 +1,37 @@
+{
+    "wave": "V9-06E22",
+    "result": "PASS",
+    "files": [
+        {
+            "source": "WORDPRESS/plugins/shpigovsky-core/src/Admin/OptionsPage.php",
+            "runtime": "wp-content/plugins/shpigovsky-core/src/Admin/OptionsPage.php",
+            "delivered": true,
+            "result": "PASS"
+        },
+        {
+            "source": "WORDPRESS/plugins/shpigovsky-core/src/Fields/FieldGroups.php",
+            "runtime": "wp-content/plugins/shpigovsky-core/src/Fields/FieldGroups.php",
+            "delivered": true,
+            "result": "PASS"
+        },
+        {
+            "source": "WORDPRESS/theme/shpigovsky/inc/reusable-blocks-helpers.php",
+            "runtime": "wp-content/themes/shpigovsky/inc/reusable-blocks-helpers.php",
+            "delivered": true,
+            "result": "PASS"
+        },
+        {
+            "source": "WORDPRESS/theme/shpigovsky/inc/hero-helpers.php",
+            "runtime": "wp-content/themes/shpigovsky/inc/hero-helpers.php",
+            "delivered": true,
+            "result": "PASS"
+        },
+        {
+            "source": "WORDPRESS/acf-json/group_fp02_block_hero_fallbacks.json",
+            "runtime": "wp-content/acf-json/group_fp02_block_hero_fallbacks.json",
+            "delivered": true,
+            "result": "PASS",
+            "action": "deleted"
+        }
+    ]
+}

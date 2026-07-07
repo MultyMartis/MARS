@@ -1,0 +1,60 @@
+{
+    "wave": "V9-06E22",
+    "result": "PARTIAL",
+    "http_evidence": [
+        {
+            "route": "/",
+            "status": 200,
+            "result": "PASS",
+            "notes": []
+        },
+        {
+            "route": "/uslugi/",
+            "status": 200,
+            "result": "PASS",
+            "notes": []
+        },
+        {
+            "route": "/uslugi/zavisimosti/",
+            "status": 200,
+            "result": "PASS",
+            "notes": []
+        },
+        {
+            "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+            "status": 200,
+            "result": "PASS",
+            "notes": []
+        },
+        {
+            "route": "/kontakty/",
+            "status": 200,
+            "result": "PASS",
+            "notes": []
+        },
+        {
+            "route": "/otzyvy/",
+            "status": 200,
+            "result": "PASS",
+            "notes": []
+        },
+        {
+            "route": "/privacy-policy/",
+            "status": 200,
+            "result": "PASS",
+            "notes": []
+        },
+        {
+            "route": "/o-centre/specialistam/",
+            "status": 200,
+            "result": "PASS",
+            "notes": []
+        },
+        {
+            "route": "/o-centre/",
+            "status": 200,
+            "result": "PASS",
+            "notes": []
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "wave": "V9-06E22",
+    "result": "PASS",
+    "admin_ia": {
+        "heroes_under_site_settings_before": true,
+        "option_page_slug": "fp02-block-hero-fallbacks",
+        "menu_title": "Герои",
+        "field_group_key": "group_fp02_block_hero_fallbacks",
+        "field_count": 13
+    },
+    "global_hero_fields": [
+        {
+            "context_key": "home",
+            "image_field": "hero_fallback_home_image",
+            "asset_field": "hero_fallback_home_asset",
+            "option_context": "fp02-block-hero-fallbacks",
+            "safe_to_remove": true
+        },
+        {
+            "context_key": "services_hub",
+            "image_field": "hero_fallback_services_hub_image",
+            "asset_field": "hero_fallback_services_hub_asset",
+            "option_context": "fp02-block-hero-fallbacks",
+            "safe_to_remove": true
+        },
+        {
+            "context_key": "service_subdivision",
+            "image_field": "hero_fallback_service_subdivision_image",
+            "asset_field": "hero_fallback_service_subdivision_asset",
+            "option_context": "fp02-block-hero-fallbacks",
+            "safe_to_remove": true
+        },
+        {
+            "context_key": "service_leaf_alcohol",
+            "image_field": "hero_fallback_service_leaf_alcohol_image",
+            "asset_field": "hero_fallback_service_leaf_alcohol_asset",
+            "option_context": "fp02-block-hero-fallbacks",
+            "safe_to_remove": true
+        },
+        {
+            "context_key": "service_leaf_genotyping",
+            "image_field": "hero_fallback_service_leaf_genotyping_image",
+            "asset_field": "hero_fallback_service_leaf_genotyping_asset",
+            "option_context": "fp02-block-hero-fallbacks",
+            "safe_to_remove": true
+        },
+        {
+            "context_key": "institutional",
+            "image_field": "hero_fallback_institutional_image",
+            "asset_field": "hero_fallback_institutional_asset",
+            "option_context": "fp02-block-hero-fallbacks",
+            "safe_to_remove": true
+        }
+    ],
+    "local_hero_architecture": {
+        "groups": {
+            "group_fp02_service_layout_hero": "PRESENT",
+            "group_fp02_page_home": "PRESENT",
+            "group_fp02_page_services_hub": "PRESENT",
+            "group_fp02_page_institutional": "PRESENT"
+        },
+        "postmeta": {
+            "home": {
+                "post_id": 4,
+                "hero_media": "302"
+            },
+            "services_hub": {
+                "post_id": 5,
+                "hero_media": "303"
+            },
+            "service_subdivision": {
+                "post_id": 0,
+                "hero_media": null
+            },
+            "service_leaf_alcohol": {
+                "post_id": 0,
+                "hero_media": null
+            }
+        },
+        "fallback_chain_after_e22": "local hero_media → theme asset → safe fallback"
+    },
+    "risk_map": {
+        "remove_global_heroes_admin": "must_remove",
+        "local_hero_field_groups": "must_preserve"
+    }
+}

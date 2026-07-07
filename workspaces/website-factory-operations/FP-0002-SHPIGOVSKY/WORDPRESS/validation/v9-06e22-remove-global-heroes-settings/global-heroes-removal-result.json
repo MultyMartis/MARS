@@ -1,0 +1,30 @@
+{
+    "wave": "V9-06E22",
+    "result": "PASS",
+    "items": [
+        {
+            "item": "site_settings_heroes_menu",
+            "before": "present",
+            "after": "removed",
+            "result": "PASS"
+        },
+        {
+            "item": "field_group_registration",
+            "before": "group_fp02_block_hero_fallbacks",
+            "after": "removed",
+            "result": "PASS"
+        },
+        {
+            "item": "frontend_block_hero_read_layer",
+            "before": "shpigovsky_get_block_hero_fallback_image",
+            "after": "removed",
+            "result": "PASS"
+        },
+        {
+            "item": "local_hero_field_groups",
+            "before": "present",
+            "after": "preserved",
+            "result": "PASS"
+        }
+    ]
+}

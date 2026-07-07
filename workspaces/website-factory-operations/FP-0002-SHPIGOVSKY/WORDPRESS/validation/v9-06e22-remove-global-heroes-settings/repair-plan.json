@@ -1,0 +1,21 @@
+{
+    "wave": "V9-06E22",
+    "result": "PASS",
+    "steps": [
+        {
+            "component": "Admin IA",
+            "repair": "Remove Герои from Site Settings",
+            "safety": "PASS"
+        },
+        {
+            "component": "ACF",
+            "repair": "Remove group_fp02_block_hero_fallbacks",
+            "safety": "PASS"
+        },
+        {
+            "component": "Frontend",
+            "repair": "Remove block hero read layer",
+            "safety": "PASS"
+        }
+    ]
+}

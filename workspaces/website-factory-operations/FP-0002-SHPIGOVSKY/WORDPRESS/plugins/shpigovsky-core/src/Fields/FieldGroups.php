@@ -88,7 +88,6 @@ final class FieldGroups implements ModuleInterface {
 			self::block_cta_bands(),
 			self::block_header(),
 			self::block_footer(),
-			self::block_hero_fallbacks(),
 			self::block_comfort_benefits(),
 		);
 	}
@@ -773,66 +772,6 @@ final class FieldGroups implements ModuleInterface {
 				),
 			),
 			self::location( 'options_page', '==', 'fp02-block-footer' )
-		);
-	}
-
-	/**
-	 * Reusable block — global hero fallback images (V9-06E21 Batch 2).
-	 *
-	 * @return array<string, mixed>
-	 */
-	private static function block_hero_fallbacks() {
-		$contexts = array(
-			'home'                    => 'Главная',
-			'services_hub'            => 'Хаб услуг /uslugi/',
-			'service_subdivision'     => 'Подраздел услуг',
-			'service_leaf_alcohol'    => 'Лист — алкогольная зависимость',
-			'service_leaf_genotyping' => 'Лист — генотипирование',
-			'institutional'           => 'Институциональные страницы',
-		);
-
-		$fields = array(
-			self::field(
-				'field_fp02_hero_fallbacks_note',
-				'Политика fallback',
-				'hero_fallbacks_note',
-				'message',
-				array(
-					'message' => 'Глобальные fallback-изображения. Page-local hero_media на страницах/услугах имеет приоритет. Не заменяет поля героя на отдельных страницах.',
-					'new_lines' => 'wpautop',
-					'esc_html' => 0,
-				)
-			),
-		);
-
-		foreach ( $contexts as $key => $label ) {
-			$fields[] = self::field(
-				'field_fp02_hero_fallback_' . $key . '_image',
-				$label . ' — изображение',
-				'hero_fallback_' . $key . '_image',
-				'image',
-				array(
-					'return_format' => 'array',
-					'preview_size'  => 'medium',
-					'instructions'  => 'Опционально. Пусто — theme asset ниже, затем встроенный V9 fallback.',
-				)
-			);
-			$fields[] = self::field(
-				'field_fp02_hero_fallback_' . $key . '_asset',
-				$label . ' — theme asset path',
-				'hero_fallback_' . $key . '_asset',
-				'text',
-				array(
-					'instructions' => 'Относительный путь в theme/assets для fallback без медиа.',
-				)
-			);
-		}
-
-		return self::group(
-			'group_fp02_block_hero_fallbacks',
-			'Reusable Block — Hero Fallbacks',
-			$fields,
-			self::location( 'options_page', '==', 'fp02-block-hero-fallbacks' )
 		);
 	}
 

@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E21 REUSABLE BLOCKS BATCH 2 FIELDS **PARTIAL PASS** — Batch 2 admin fields (Шапка, Подвал, Герои, Комфорт / преимущества) + renderer migration + seed; **4** ACF JSON; **2** plugin + **6** theme files; fresh DB checkpoint; runtime delivered; frontend 9/9 PASS; screenshots PARTIAL (Playwright/admin). NEXT: **CREATE_V9_06E22_OPERATOR_REUSABLE_BLOCKS_ADMIN_QA_TASK**
+**Status:** V9-06E22 REMOVE GLOBAL HEROES SETTINGS **PASS** — removed global `Герои` from **Настройки сайта** + `group_fp02_block_hero_fallbacks`; restored local/entity hero authority (E7B); preserved E21 Шапка/Подвал/Комфорт + Batch 1; **2** plugin + **2** theme files; **1** ACF JSON deleted; fresh DB checkpoint; runtime delivered; frontend 9/9 PASS; admin screenshots PARTIAL. NEXT: **CREATE_V9_06E23_OPERATOR_ADMIN_HERO_QA_TASK**
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---
