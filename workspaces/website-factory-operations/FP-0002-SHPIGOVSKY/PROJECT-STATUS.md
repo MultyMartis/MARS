@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-08 (V9-06E18 Reusable Blocks Batch 1 Fields PASS)
+**Last updated:** 2026-07-08 (V9-06E19 Reusable Blocks Admin Visibility Repair PASS)
 
-**Current WordPress phase:** V9-06E18 Reusable Blocks Batch 1 Fields **PASS** — admin fields for final form, specialists, reviews alias, CTA bands under **Повторяемые блоки**; seeded batch 1 options; frontend renderer migration with fallbacks; reviews `fp02-reviews` storage preserved. DB checkpoint `v9-06e18-reusable-blocks-batch-1-fields-pre-20260708-001410`; **2** plugin + **7** theme + **4** ACF JSON; runtime delivered. Routes 8/8 PASS; frontend screenshots PASS; admin screenshots PARTIAL. **E3 stable checkpoint remains invalidated.** **Next: CREATE_V9_06E19_OPERATOR_REUSABLE_BLOCKS_ADMIN_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E18-REUSABLE-BLOCKS-BATCH-1-FIELDS-REPORT-v1.md`.
+**Current WordPress phase:** V9-06E19 Reusable Blocks Admin Visibility Repair **PASS** — operator E18 rejection addressed: Batch 1 pages (`Финальная форма`, `Специалисты`, `Отзывы`, `CTA-блоки`) registered as visible siblings under **Настройки сайта**; reviews dual-location synced; top-level **Отзывы** preserved. DB checkpoint `v9-06e19-reusable-blocks-admin-visibility-repair-pre-20260708-005100`; **1** plugin file; **1** DB write; runtime delivered. Routes 8/8 PASS; admin screenshots PARTIAL. **E3 stable checkpoint remains invalidated.** **Next: CREATE_V9_06E20_OPERATOR_REUSABLE_BLOCKS_ADMIN_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E19-REUSABLE-BLOCKS-ADMIN-VISIBILITY-REPAIR-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

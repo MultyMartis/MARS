@@ -1,0 +1,68 @@
+{
+    "wave": "V9-06E19",
+    "result": "PASS",
+    "root_cause": "WordPress admin supports only 2 menu levels. E18 registered Batch 1 block pages with parent_slug fp02-site-settings-blocks (3rd level), so they never appeared in sidebar.",
+    "operator_message_cause": "Повторяемые блоки container had redirect=true but no visible children; ACF showed no field groups on container page.",
+    "field_group_slug_mismatch": false,
+    "runtime_delivery_incomplete": false,
+    "after_repair_probe": {
+        "submenu_fp02_site_settings": [],
+        "batch1_visible_in_submenu": {
+            "fp02-block-final-form": false,
+            "fp02-block-specialists": false,
+            "fp02-block-reviews": false,
+            "fp02-block-cta-bands": false
+        },
+        "field_groups": {
+            "group_fp02_block_final_form": {
+                "active": true,
+                "location": [
+                    [
+                        {
+                            "param": "options_page",
+                            "operator": "==",
+                            "value": "fp02-block-final-form"
+                        }
+                    ]
+                ]
+            },
+            "group_fp02_block_specialists": {
+                "active": true,
+                "location": [
+                    [
+                        {
+                            "param": "options_page",
+                            "operator": "==",
+                            "value": "fp02-block-specialists"
+                        }
+                    ]
+                ]
+            },
+            "group_fp02_block_cta_bands": {
+                "active": true,
+                "location": [
+                    [
+                        {
+                            "param": "options_page",
+                            "operator": "==",
+                            "value": "fp02-block-cta-bands"
+                        }
+                    ]
+                ]
+            },
+            "group_fp02_site_options_reviews": {
+                "active": true,
+                "location": [
+                    [
+                        {
+                            "param": "options_page",
+                            "operator": "==",
+                            "value": "fp02-reviews"
+                        }
+                    ]
+                ]
+            }
+        },
+        "reviews_legacy_menu": []
+    }
+}

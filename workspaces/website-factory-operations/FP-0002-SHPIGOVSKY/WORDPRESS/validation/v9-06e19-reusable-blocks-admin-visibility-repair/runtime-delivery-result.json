@@ -1,0 +1,16 @@
+{
+    "wave": "V9-06E19",
+    "validation_type": "RUNTIME_DELIVERY",
+    "result": "PASS",
+    "runtime_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky",
+    "files": [
+        {
+            "source": "WORDPRESS/plugins/shpigovsky-core/src/Admin/OptionsPage.php",
+            "runtime": "wp-content/plugins/shpigovsky-core/src/Admin/OptionsPage.php",
+            "sha256_before": "D2DFC5E61857457250E36B7F1304F50C15FF2F7C6037EC8310DB65534C535A57",
+            "sha256_after": "553ECE181DC343B88F4F58705962E869ADEA08E04D7B489B3E0B258A1C7D8B18",
+            "delivered": true,
+            "result": "PASS"
+        }
+    ]
+}

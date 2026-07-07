@@ -1,0 +1,14 @@
+{
+  "wave": "V9-06E19",
+  "result": "PASS",
+  "routes": [
+    {"route": "/", "http_status": 200, "result": "PASS"},
+    {"route": "/uslugi/", "http_status": 200, "result": "PASS"},
+    {"route": "/uslugi/zavisimosti/", "http_status": 200, "result": "PASS"},
+    {"route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/", "http_status": 200, "result": "PASS"},
+    {"route": "/kontakty/", "http_status": 200, "result": "PASS"},
+    {"route": "/otzyvy/", "http_status": 200, "result": "PASS"},
+    {"route": "/privacy-policy/", "http_status": 200, "result": "PASS"},
+    {"route": "/o-centre/specialistam/", "http_status": 200, "result": "PASS"}
+  ]
+}

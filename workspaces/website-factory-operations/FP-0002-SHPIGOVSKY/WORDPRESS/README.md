@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E18 REUSABLE BLOCKS BATCH 1 FIELDS **PASS** — Batch 1 admin fields (final form, specialists, reviews alias, CTA bands); seeded options; renderer migration with fallbacks; DB checkpoint YES; runtime delivered. NEXT: **CREATE_V9_06E19_OPERATOR_REUSABLE_BLOCKS_ADMIN_QA_TASK**
+**Status:** V9-06E19 REUSABLE BLOCKS ADMIN VISIBILITY REPAIR **PASS** — Batch 1 admin pages visible under **Настройки сайта** (flat 2-level menu); reviews dual-location synced; **1** plugin file; **1** DB write; runtime delivered; frontend 8/8 PASS; admin screenshots PARTIAL. NEXT: **CREATE_V9_06E20_OPERATOR_REUSABLE_BLOCKS_ADMIN_QA_TASK**
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

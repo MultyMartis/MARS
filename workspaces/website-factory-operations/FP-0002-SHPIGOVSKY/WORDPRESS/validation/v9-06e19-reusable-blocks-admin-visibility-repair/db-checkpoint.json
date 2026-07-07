@@ -1,0 +1,13 @@
+{
+  "wave": "V9-06E19",
+  "result": "PASS",
+  "checkpoint_path": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e19-reusable-blocks-admin-visibility-repair-pre-20260708-005100",
+  "dump_file": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e19-reusable-blocks-admin-visibility-repair-pre-20260708-005100\\mars_wp_fp0002.sql",
+  "dump_sha256": "4CDF0695B845E8B93BD4B1DC7AC0B15345DA83A7CB02BBB9E9E4B6D07BE10A43",
+  "dump_size_bytes": 1570586,
+  "dump_note": "mysqldump unavailable in PATH; pre-repair dump copied from E18 checkpoint",
+  "db": "mars_wp_fp0002",
+  "prefix": "fp02_",
+  "e18_baseline_commit": "ea7ffd128c08460d9ab291ce8807cf9469ac975b",
+  "restore_instructions": "mysql --host=127.0.0.1 --user=mli_shpigovsky_app mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e19-reusable-blocks-admin-visibility-repair-pre-20260708-005100\\mars_wp_fp0002.sql\""
+}

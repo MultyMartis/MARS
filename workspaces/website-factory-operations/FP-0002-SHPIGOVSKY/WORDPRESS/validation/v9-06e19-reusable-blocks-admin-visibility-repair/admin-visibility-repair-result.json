@@ -1,0 +1,9 @@
+{
+    "wave": "V9-06E19",
+    "result": "PASS",
+    "repair": "Batch 1 option subpages parent_slug changed from fp02-site-settings-blocks to fp02-site-settings",
+    "container_page": "fp02-site-settings-blocks redirect disabled; info notice with Batch 1 links",
+    "changed_files": [
+        "plugins/shpigovsky-core/src/Admin/OptionsPage.php"
+    ]
+}

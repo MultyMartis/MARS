@@ -1,0 +1,22 @@
+{
+    "wave": "V9-06E19",
+    "result": "PASS",
+    "steps": [
+        {
+            "component": "option_page_registration",
+            "action": "Register Batch 1 subpages with parent_slug fp02-site-settings"
+        },
+        {
+            "component": "blocks_container",
+            "action": "Disable redirect; show navigation notice on fp02-site-settings-blocks"
+        },
+        {
+            "component": "field_group_locations",
+            "action": "No change — slugs unchanged"
+        },
+        {
+            "component": "reviews_compatibility",
+            "action": "Preserve fp02-reviews top-level; alias post_id unchanged"
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+  "wave": "V9-06E19",
+  "result": "PASS",
+  "admin_screenshots": "PARTIAL",
+  "wordpress_menu_limitation": "WordPress/ACF support only 2 admin menu levels. Batch 1 pages are registered as direct children of fp02-site-settings (ACF resolves to fp02-site-settings-general after parent redirect). Skeleton blocks remain under fp02-site-settings-blocks (3rd level, deferred).",
+  "items": [
+    {"admin_item": "Настройки сайта", "visible": true, "fields": "n/a", "result": "PASS"},
+    {"admin_item": "Общие настройки", "visible": true, "fields": true, "result": "PASS"},
+    {"admin_item": "Повторяемые блоки", "visible": true, "fields": false, "result": "PASS", "notes": "Container notice with Batch 1 links"},
+    {"admin_item": "Финальная форма", "visible": true, "fields": true, "result": "PASS", "parent_slug": "fp02-site-settings-general"},
+    {"admin_item": "Специалисты", "visible": true, "fields": true, "result": "PASS", "parent_slug": "fp02-site-settings-general"},
+    {"admin_item": "Отзывы (alias)", "visible": true, "fields": true, "result": "PASS", "parent_slug": "fp02-site-settings-general", "post_id": "fp02-reviews"},
+    {"admin_item": "CTA-блоки", "visible": true, "fields": true, "result": "PASS", "parent_slug": "fp02-site-settings-general"},
+    {"admin_item": "old top-level Отзывы", "visible": true, "fields": true, "result": "PASS", "slug": "fp02-reviews"}
+  ],
+  "acf_probe": {
+    "batch1_parent_slug": "fp02-site-settings-general",
+    "reviews_dual_location": true
+  }
+}

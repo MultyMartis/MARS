@@ -1,0 +1,13 @@
+{
+  "wave": "V9-06E19",
+  "result": "PASS",
+  "sync_performed": true,
+  "sync_command": "wp acf json import group_fp02_site_options_reviews.json",
+  "db_writes": 1,
+  "groups": [
+    {"group": "group_fp02_block_final_form", "location": "fp02-block-final-form", "sync": "not_required", "result": "PASS"},
+    {"group": "group_fp02_block_specialists", "location": "fp02-block-specialists", "sync": "not_required", "result": "PASS"},
+    {"group": "group_fp02_block_cta_bands", "location": "fp02-block-cta-bands", "sync": "not_required", "result": "PASS"},
+    {"group": "group_fp02_site_options_reviews", "location": "fp02-reviews + fp02-block-reviews", "sync": "imported", "result": "PASS"}
+  ]
+}

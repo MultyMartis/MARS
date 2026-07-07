@@ -99,7 +99,7 @@ final class OptionsPage implements ModuleInterface {
 				'menu_title'  => __( 'Повторяемые блоки', 'shpigovsky-core' ),
 				'menu_slug'   => self::BLOCKS_PARENT_SLUG,
 				'parent_slug' => self::PARENT_SLUG,
-				'redirect'    => true,
+				'redirect'    => false,
 				'capability'  => 'manage_options',
 			)
 		);
@@ -169,17 +169,21 @@ final class OptionsPage implements ModuleInterface {
 		$subpages = array();
 
 		foreach ( $blocks as $block ) {
+			$is_batch1 = in_array( $block['menu_slug'], self::get_batch1_fielded_block_slugs(), true );
+
 			$subpage = array(
 				'page_title'  => $block['menu_title'],
 				'menu_title'  => $block['menu_title'],
 				'menu_slug'   => $block['menu_slug'],
-				'parent_slug' => self::BLOCKS_PARENT_SLUG,
+				'parent_slug' => $is_batch1 ? self::PARENT_SLUG : self::BLOCKS_PARENT_SLUG,
 				'capability'  => 'manage_options',
 				'autoload'    => false,
 			);
 
 			if ( 'fp02-block-reviews' === $block['menu_slug'] ) {
 				$subpage['post_id'] = 'fp02-reviews';
+			} elseif ( $is_batch1 ) {
+				$subpage['post_id'] = $block['menu_slug'];
 			}
 
 			$subpages[] = $subpage;
@@ -200,6 +204,22 @@ final class OptionsPage implements ModuleInterface {
 			'fp02-block-reviews',
 			'fp02-block-cta-bands',
 		);
+	}
+
+	/**
+	 * Resolve reusable-block menu title by slug for admin notices.
+	 *
+	 * @param string $slug Menu slug.
+	 * @return string
+	 */
+	public static function get_block_menu_title_by_slug( $slug ) {
+		foreach ( self::get_reusable_block_subpages() as $subpage ) {
+			if ( ( $subpage['menu_slug'] ?? '' ) === $slug ) {
+				return (string) ( $subpage['menu_title'] ?? '' );
+			}
+		}
+
+		return '';
 	}
 
 	/**
@@ -226,6 +246,20 @@ final class OptionsPage implements ModuleInterface {
 
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only admin screen detection.
 		$page = isset( $_GET['page'] ) ? sanitize_key( wp_unslash( $_GET['page'] ) ) : '';
+
+		if ( self::BLOCKS_PARENT_SLUG === $page ) {
+			echo '<div class="notice notice-info"><p>';
+			echo esc_html__( 'Контейнер повторяемых блоков. Редактируйте Batch 1 через подстраницы ниже в меню «Настройки сайта».', 'shpigovsky-core' );
+			echo '</p><ul style="list-style:disc;margin-left:1.5em;">';
+			foreach ( self::get_batch1_fielded_block_slugs() as $slug ) {
+				$title = self::get_block_menu_title_by_slug( $slug );
+				if ( $title ) {
+					echo '<li><a href="' . esc_url( admin_url( 'admin.php?page=' . $slug ) ) . '">' . esc_html( $title ) . '</a></li>';
+				}
+			}
+			echo '</ul></div>';
+			return;
+		}
 
 		if ( ! in_array( $page, self::get_skeleton_block_slugs(), true ) ) {
 			return;
