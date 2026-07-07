@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-08
-**Evidence cutoff:** 2026-07-08 (SITE-002 Run **4.224** — admin form mail redesign; `checkout/anketa.php` integrated with `ZpmMailRenderer`; checkpoint `SITE-002-STABLE-PROD-MAIL-ADMIN-FORMS-01`)
+**Evidence cutoff:** 2026-07-08 (SITE-002 Run **4.225** — admin form mail inbox confirmation; Run **4.224** operator-verified; checkpoint `SITE-002-STABLE-PROD-MAIL-ADMIN-FORMS-01` unchanged)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Mail admin forms (Run 4.224)** — **PARTIAL — DEPLOYED, MAILBOX DELIVERY CONFIRMATION PENDING**; `checkout/anketa.php` uses `ZpmMailRenderer::renderAdminForm()` + service info; 1 controlled test submit `ok: true`; mailbox visual pending · [SITE-002-PROD-MAIL-ADMIN-FORMS-01.md](sites/site-002/reports/SITE-002-PROD-MAIL-ADMIN-FORMS-01.md) · checkpoint `SITE-002-STABLE-PROD-MAIL-ADMIN-FORMS-01` · next `SITE-002-PROD-MAIL-CUSTOMER-FORMS-01` · post-1C monitor local task remains enabled ([Run 4.216](sites/site-002/reports/SITE-002-POST-1C-MONITOR-SCHEDULER-RUNNER-FIX-01.md)) |
+| Current SITE-002 focus | **Mail admin forms (Run 4.224)** — **COMPLETE — OPERATOR-VERIFIED** (Run 4.225 inbox confirmation); `checkout/anketa.php` uses `ZpmMailRenderer::renderAdminForm()` + service info; mailbox delivery/design/service info confirmed by operator · [SITE-002-PROD-MAIL-ADMIN-FORMS-01.md](sites/site-002/reports/SITE-002-PROD-MAIL-ADMIN-FORMS-01.md) · [inbox confirmation](sites/site-002/reports/SITE-002-PROD-MAIL-ADMIN-FORMS-INBOX-CONFIRMATION-01.md) · checkpoint `SITE-002-STABLE-PROD-MAIL-ADMIN-FORMS-01` · next `SITE-002-PROD-MAIL-CUSTOMER-FORMS-01` · post-1C monitor local task remains enabled ([Run 4.216](sites/site-002/reports/SITE-002-POST-1C-MONITOR-SCHEDULER-RUNNER-FIX-01.md)) |
 
 ---
 

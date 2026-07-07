@@ -1,11 +1,11 @@
 # REPORT — SITE-002 Mail Admin Forms
 
-**Operation ID:** SITE-002-PROD-MAIL-ADMIN-FORMS-01  
-**OCPilot Run:** 4.224 — SITE-002 Mail Admin Forms  
-**Date:** 2026-07-08  
-**Environment:** PRODUCTION (`https://bzpm.ru/`)  
-**Baseline before:** SITE-002-STABLE-PROD-MAIL-DESIGN-SYSTEM-01  
-**Checkpoint after:** SITE-002-STABLE-PROD-MAIL-ADMIN-FORMS-01  
+**Operation ID:** SITE-002-PROD-MAIL-ADMIN-FORMS-01
+**OCPilot Run:** 4.224 — SITE-002 Mail Admin Forms
+**Date:** 2026-07-08
+**Environment:** PRODUCTION (`https://bzpm.ru/`)
+**Baseline before:** SITE-002-STABLE-PROD-MAIL-DESIGN-SYSTEM-01
+**Checkpoint after:** SITE-002-STABLE-PROD-MAIL-ADMIN-FORMS-01
 
 ---
 
@@ -309,3 +309,17 @@ Application path verified: renderer integration live, controlled test submit `ok
 **SITE-002-PROD-MAIL-CUSTOMER-FORMS-01** — optional customer confirmation emails for forms (no service info in customer copy).
 
 Then: account transactional → order transactional mail redesign stages.
+
+---
+
+## Addendum — Operator inbox confirmation
+
+**Date:** 2026-07-08
+**Follow-up operation:** SITE-002-PROD-MAIL-ADMIN-FORMS-INBOX-CONFIRMATION-01 (OCPilot Run 4.225)
+
+**Confirmation:** Mailbox delivery, email design, service info block, and admin-side data confirmed by operator after controlled test submit from Run 4.224 (marker `MARS TEST MAIL ADMIN FORMS 01`). No issues reported.
+
+**Updated operational interpretation:** Run 4.224 is now treated as **operator-verified complete** for admin form mail redesign. Original §23 verdict at report time remains accurate historical record (mailbox was pending then).
+
+**Follow-up report:** [SITE-002-PROD-MAIL-ADMIN-FORMS-INBOX-CONFIRMATION-01.md](SITE-002-PROD-MAIL-ADMIN-FORMS-INBOX-CONFIRMATION-01.md)
+

@@ -2019,7 +2019,8 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 
 **Discovery:** Run 4.222 — `SITE-002-PROD-MAIL-SYSTEM-DISCOVERY-01` (2026-07-08)
 **Admin forms integration:** Run 4.224 — `SITE-002-PROD-MAIL-ADMIN-FORMS-01` (2026-07-08)
-**Status:** **ACTIVE — admin form mail redesigned; customer/standard mails unchanged**
+**Inbox confirmation:** Run 4.225 — `SITE-002-PROD-MAIL-ADMIN-FORMS-INBOX-CONFIRMATION-01` (2026-07-08)
+**Status:** **ACTIVE — admin form mail redesigned and operator-verified; customer/standard mails unchanged**
 
 | Item | Production value |
 |------|------------------|
@@ -2035,6 +2036,7 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 | **Staged roadmap** | ~~(1) admin forms~~ → (2) customer form copy → (3) account → (4) order → (5) polish |
 | **Next charter** | `SITE-002-PROD-MAIL-CUSTOMER-FORMS-01` |
 | **Report** | [SITE-002-PROD-MAIL-ADMIN-FORMS-01.md](../reports/SITE-002-PROD-MAIL-ADMIN-FORMS-01.md) |
+| **Inbox confirmation** | Run 4.225 — operator verified mailbox delivery/design/service info · [SITE-002-PROD-MAIL-ADMIN-FORMS-INBOX-CONFIRMATION-01.md](../reports/SITE-002-PROD-MAIL-ADMIN-FORMS-INBOX-CONFIRMATION-01.md) |
 | **Checkpoint** | [SITE-002-STABLE-PROD-MAIL-ADMIN-FORMS-01.md](../baselines/SITE-002-STABLE-PROD-MAIL-ADMIN-FORMS-01.md) |
 | **Storage** | `.../deployments/SITE-002-PROD-MAIL-ADMIN-FORMS-01\` |
 
@@ -2045,8 +2047,8 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 ## 35. Mail Design System (Production — ACTIVE)
 
 **Operation:** Run 4.223 — `SITE-002-PROD-MAIL-DESIGN-SYSTEM-01` (2026-07-08)
-**Integration:** Run 4.224 — anketa admin forms
-**Status:** **ACTIVE** — renderer integrated for admin form mail
+**Integration:** Run 4.224 — anketa admin forms · Run 4.225 — operator inbox confirmation
+**Status:** **ACTIVE** — renderer integrated for admin form mail; operator-verified
 
 | Item | Production value |
 |------|------------------|
@@ -2064,4 +2066,4 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 
 ---
 
-*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-08 (Run 4.224 — admin form mail redesign deployed).*
+*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-08 (Run 4.225 — admin form mail inbox confirmation; Run 4.224 operator-verified).*

@@ -27,7 +27,7 @@
 
 - Controlled test submit: `ok: true` (dialog 2, marker `MARS TEST MAIL ADMIN FORMS 01`)
 - Live sanity: PASS (home, catalog, PDP, stoly, llms, robots, sitemap)
-- Mailbox delivery: operator confirmation **pending**
+- Mailbox delivery: **operator-verified** (Run 4.225 follow-up; marker `MARS TEST MAIL ADMIN FORMS 01`)
 
 ## Preserved from parent
 
