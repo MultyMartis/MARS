@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-07
-**Evidence cutoff:** 2026-07-07 (SITE-002 Run **4.208** — PDP keyword gap follow-up; 11/11 category/hub false positives; 0 true PDP gaps; no mutation; checkpoint `SITE-002-STABLE-PROD-SEO-META-EDGE-01`)
+**Evidence cutoff:** 2026-07-07 (SITE-002 Run **4.209** — sitemap delta audit; 1320→1377 net +57; 59 added / 2 removed; normal catalog growth; 0 `БЗПМ`; 0 Production mutation; checkpoint `SITE-002-STABLE-PROD-SEO-META-EDGE-01`)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **PDP keyword gap follow-up (Run 4.208)** — 11 Run 4.206 candidates = hub/category PLP; 0 true PDP gaps; no `product.php` change · [SITE-002-PROD-SEO-PRODUCT-META-GENERATOR-TUNE-02.md](sites/site-002/reports/SITE-002-PROD-SEO-PRODUCT-META-GENERATOR-TUNE-02.md) |
+| Current SITE-002 focus | **Sitemap delta audit (Run 4.209)** — 1320→1377 (+57 net); konditerskiy-inventar catalog growth; 0 RED on added; optional category meta for 2 PLPs · [SITE-002-PROD-SITEMAP-DELTA-AUDIT-01.md](sites/site-002/reports/SITE-002-PROD-SITEMAP-DELTA-AUDIT-01.md) |
 
 ---
 

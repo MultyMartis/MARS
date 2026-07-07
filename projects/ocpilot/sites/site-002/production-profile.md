@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-07 (Run 4.208 — PDP keyword gap follow-up; 0 mutation; checkpoint `SITE-002-STABLE-PROD-SEO-META-EDGE-01`)
+**Last updated:** 2026-07-07 (Run 4.209 — sitemap delta audit; live 1377 URLs; 0 mutation; checkpoint `SITE-002-STABLE-PROD-SEO-META-EDGE-01`)
 
 ---
 
@@ -70,7 +70,7 @@ Do not claim that Production exactly matches TEST unless evidence proves it.
 | Post-corporate-page checkpoints | Home Commercial Trust · Corporate Intro · Custom Proof Strip · Delivery Summary · PDP Body Category Classes |
 | Production baseline parent | [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
 | Current Production checkpoint | [baselines/SITE-002-STABLE-PROD-SEO-META-EDGE-01.md](baselines/SITE-002-STABLE-PROD-SEO-META-EDGE-01.md) (parent [SITE-002-STABLE-PROD-BRAND-ZPM-01.md](baselines/SITE-002-STABLE-PROD-BRAND-ZPM-01.md); cron [SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01.md](baselines/SITE-002-STABLE-PROD-CRON-SCHEDULED-RUN-01.md)) |
-| SEO readiness (Production) | **PDP KEYWORD GAP FOLLOW-UP COMPLETE** (Run 4.208) — 11 Run 4.206 sample gaps = hub/category PLP; 0 true PDP gaps; `product.php` unchanged · prior edge fix [Run 4.207](reports/SITE-002-PROD-SEO-META-EDGE-FIX-01.md) · inventory [Run 4.206](reports/SITE-002-PROD-SEO-META-FINAL-INVENTORY-01.md) · [tune 02 report](reports/SITE-002-PROD-SEO-PRODUCT-META-GENERATOR-TUNE-02.md) |
+| SEO readiness (Production) | **SITEMAP DELTA AUDIT COMPLETE** (Run 4.209) — live sitemap **1377** URLs (was 1320 at Run 4.206); +59/−2 delta = net +57; normal catalog growth; 0 forbidden `БЗПМ` on delta · prior tune [Run 4.208](reports/SITE-002-PROD-SEO-PRODUCT-META-GENERATOR-TUNE-02.md) · [delta audit report](reports/SITE-002-PROD-SITEMAP-DELTA-AUDIT-01.md) |
 | Yandex analytics (Production) | **VERIFIED** (Run 4.189) — Metrika counter in `common/footer.twig` (masked `110***756`); Webmaster verification in `common/header.twig` (masked `13a***c77`); confirmed on live HTML (home, category, information); **OPERATOR WIP — DO NOT OVERWRITE** · [report](reports/SITE-002-PROD-YANDEX-CODES-VERIFY-01.md) |
 | HTML body structure (Production) | **FIXED** (Run 4.190) — duplicate `<body>` + global preloader + `page_overlay` removed from live `header.twig`; 4-URL HTML validation PASS; Yandex blocks unchanged · [report](reports/SITE-002-PROD-HTML-BODY-DUPLICATE-FIX-01.md) |
 | MARS 1C cron wrapper | **OPERATIONAL — FIRST SCHEDULED RUN VERIFIED** (Run 4.194) — Beget cron first automatic run SUCCESS 2026-07-06 08:00 Moscow; run ID `mars-20260706-080002-09436ae7`; report `mars_1c_import_2026-07-06_080007.txt`; steps `1c`+`1c_offers` PASS; lock removed; schedule `0 8 * * *` (Moscow → 12:00 Barnaul); wrapper v1.1.0; HTTP gateway; Sergey legacy **preserved**; duration 0s field **WARN only** |
