@@ -1,0 +1,12 @@
+{
+  "wave": "V9-06E18",
+  "validation_type": "VISUAL_PARITY",
+  "result": "PASS",
+  "notes": "Chrome headless screenshots captured post-seed; no visual drift detected on accepted routes.",
+  "blocks": [
+    {"block": "Финальная форма", "result": "PASS"},
+    {"block": "Специалисты", "result": "PASS"},
+    {"block": "Отзывы", "result": "PASS"},
+    {"block": "CTA-блоки", "result": "PASS"}
+  ]
+}

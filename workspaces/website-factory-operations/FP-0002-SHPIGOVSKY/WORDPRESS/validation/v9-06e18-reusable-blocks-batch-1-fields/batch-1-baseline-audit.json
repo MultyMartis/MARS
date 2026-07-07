@@ -1,0 +1,47 @@
+{
+  "wave": "V9-06E18",
+  "validation_type": "BATCH_1_BASELINE_AUDIT",
+  "result": "PASS",
+  "blocks": [
+    {
+      "block_id": "rb-final-form",
+      "name_ru": "Финальная форма",
+      "routes": ["/", "/uslugi/", "/uslugi/zavisimosti/", "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/", "service stacks"],
+      "template_files": ["theme/shpigovsky/template-parts/components/final-form.php"],
+      "current_source": "home_cta_* + default_button_label + hardcoded labels",
+      "editable_before": "PARTIAL",
+      "risk": "LOW",
+      "fallback": "home ACF → site option → static i18n"
+    },
+    {
+      "block_id": "rb-specialists-slider",
+      "name_ru": "Специалисты",
+      "routes": ["/", "/uslugi/zavisimosti/", "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"],
+      "template_files": ["theme/shpigovsky/template-parts/home/specialists.php", "theme/shpigovsky/template-parts/service/alcohol-direct-v9/specialists.php"],
+      "current_source": "hardcoded PHP + v9-static-content fixture",
+      "editable_before": "NO",
+      "risk": "HIGH",
+      "fallback": "V9 static cards via shpigovsky_get_v9_specialists_cards()"
+    },
+    {
+      "block_id": "rb-reviews-slider",
+      "name_ru": "Отзывы",
+      "routes": ["/", "/uslugi/zavisimosti/", "/otzyvy/"],
+      "template_files": ["theme/shpigovsky/template-parts/shared/reviews-slider.php", "theme/shpigovsky/template-parts/reviews/archive-list.php"],
+      "current_source": "fp02-reviews options repeater",
+      "editable_before": "YES",
+      "risk": "MEDIUM",
+      "fallback": "V9 static fallback items in reviews-helpers.php"
+    },
+    {
+      "block_id": "rb-program-cta-band",
+      "name_ru": "CTA-блоки",
+      "routes": ["/uslugi/", "service subdivision/leaf stacks"],
+      "template_files": ["theme/shpigovsky/template-parts/components/program-cta-band.php", "theme/shpigovsky/inc/service-helpers.php"],
+      "current_source": "service cta_* + site phone/button options",
+      "editable_before": "PARTIAL",
+      "risk": "MEDIUM",
+      "fallback": "global_cta_* / hardcoded Russian defaults"
+    }
+  ]
+}

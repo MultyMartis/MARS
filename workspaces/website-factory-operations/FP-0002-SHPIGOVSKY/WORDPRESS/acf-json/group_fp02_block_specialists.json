@@ -1,0 +1,103 @@
+{
+    "key": "group_fp02_block_specialists",
+    "title": "Reusable Block — Specialists",
+    "fields": [
+        {
+            "key": "field_fp02_specialists_section_heading",
+            "label": "Заголовок секции",
+            "name": "specialists_section_heading",
+            "type": "text"
+        },
+        {
+            "key": "field_fp02_specialists_all_link_label",
+            "label": "Текст ссылки «все специалисты»",
+            "name": "specialists_all_link_label",
+            "type": "text"
+        },
+        {
+            "key": "field_fp02_specialists_all_link_url",
+            "label": "URL ссылки «все специалисты»",
+            "name": "specialists_all_link_url",
+            "type": "url"
+        },
+        {
+            "key": "field_fp02_specialists_items",
+            "label": "Специалисты",
+            "name": "specialists_items",
+            "type": "repeater",
+            "layout": "row",
+            "button_label": "Добавить",
+            "min": 0,
+            "max": 12,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_specialist_photo",
+                    "label": "Фото (медиа)",
+                    "name": "specialist_photo",
+                    "type": "image",
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "instructions": "Опционально. Пусто — theme asset path ниже или V9 fallback."
+                },
+                {
+                    "key": "field_fp02_specialist_photo_asset",
+                    "label": "Theme asset path",
+                    "name": "specialist_photo_asset",
+                    "type": "text",
+                    "instructions": "Относительный путь в theme/assets, напр. img/content/home-specialists/sergey-shpigovsky.webp"
+                },
+                {
+                    "key": "field_fp02_specialist_photo_width",
+                    "label": "Ширина (px)",
+                    "name": "specialist_photo_width",
+                    "type": "number",
+                    "min": 0
+                },
+                {
+                    "key": "field_fp02_specialist_photo_height",
+                    "label": "Высота (px)",
+                    "name": "specialist_photo_height",
+                    "type": "number",
+                    "min": 0
+                },
+                {
+                    "key": "field_fp02_specialist_name",
+                    "label": "Имя",
+                    "name": "specialist_name",
+                    "type": "text"
+                },
+                {
+                    "key": "field_fp02_specialist_role",
+                    "label": "Роль / специализация",
+                    "name": "specialist_role",
+                    "type": "textarea",
+                    "rows": 3
+                },
+                {
+                    "key": "field_fp02_specialist_link",
+                    "label": "Ссылка (опционально)",
+                    "name": "specialist_link",
+                    "type": "url"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "fp02-block-specialists"
+            }
+        ]
+    ],
+    "menu_order": 11,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true,
+    "description": "FP-0002 V9-06E18 Batch 1 — specialists reusable block.",
+    "show_in_rest": 0,
+    "modified": 1783690000
+}

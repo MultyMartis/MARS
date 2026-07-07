@@ -1,0 +1,55 @@
+{
+  "wave": "V9-06E18",
+  "validation_type": "FINAL_BATCH_1_CONTRACT",
+  "result": "PASS",
+  "blocks": [
+    {
+      "block": "Финальная форма",
+      "admin_location": "fp02-block-final-form",
+      "field_group": "group_fp02_block_final_form",
+      "option_context": "fp02-block-final-form",
+      "seed_status": "SEEDED",
+      "frontend_consumers": ["final-form.php"],
+      "fallback_chain": ["block option", "home_cta_*", "static i18n"],
+      "visual_status": "PASS",
+      "admin_editability": "PASS",
+      "deferred": []
+    },
+    {
+      "block": "Специалисты",
+      "admin_location": "fp02-block-specialists",
+      "field_group": "group_fp02_block_specialists",
+      "option_context": "fp02-block-specialists",
+      "seed_status": "SEEDED",
+      "frontend_consumers": ["home/specialists.php", "alcohol-direct-v9/specialists.php"],
+      "fallback_chain": ["block repeater", "v9-static cards"],
+      "visual_status": "PASS",
+      "admin_editability": "PASS",
+      "deferred": ["MEDIA_ATTACHMENT_DEFERRED for specialist photos"]
+    },
+    {
+      "block": "Отзывы",
+      "admin_location": "fp02-block-reviews (alias) + fp02-reviews (canonical)",
+      "field_group": "group_fp02_site_options_reviews",
+      "option_context": "fp02-reviews",
+      "seed_status": "PRESERVED",
+      "frontend_consumers": ["reviews-slider.php", "reviews/archive-list.php"],
+      "fallback_chain": ["fp02-reviews options", "legacy option", "static fallback"],
+      "visual_status": "PASS",
+      "admin_editability": "PASS",
+      "deferred": ["full relocation from top-level menu"]
+    },
+    {
+      "block": "CTA-блоки",
+      "admin_location": "fp02-block-cta-bands",
+      "field_group": "group_fp02_block_cta_bands",
+      "option_context": "fp02-block-cta-bands",
+      "seed_status": "SEEDED",
+      "frontend_consumers": ["program-cta-band.php", "service-helpers.php"],
+      "fallback_chain": ["service cta_*", "block defaults", "global_cta_*", "static"],
+      "visual_status": "PASS",
+      "admin_editability": "PASS",
+      "deferred": ["page-local CTA content not migrated"]
+    }
+  ]
+}

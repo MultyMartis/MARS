@@ -1,0 +1,71 @@
+{
+  "wave": "V9-06E18",
+  "validation_type": "RUNTIME_DELIVERY",
+  "result": "PASS",
+  "runtime_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky",
+  "files": [
+    {
+      "source": "WORDPRESS/theme/shpigovsky/template-parts/home/specialists.php",
+      "runtime": "wp-content/themes/shpigovsky/template-parts/home/specialists.php",
+      "sha256_after": "E3C02B34E65CA17E8EF05C2887A9B9A842E07679F2733F43EE37F126EDC8FE08",
+      "delivered": true,
+      "result": "PASS"
+    },
+    {
+      "source": "WORDPRESS/theme/shpigovsky/template-parts/service/alcohol-direct-v9/specialists.php",
+      "runtime": "wp-content/themes/shpigovsky/template-parts/service/alcohol-direct-v9/specialists.php",
+      "sha256_after": "86BAA9D6536519673035EA62E4AADB6CB091D4E144554BF86B96889E90B433D0",
+      "delivered": true,
+      "result": "PASS"
+    },
+    {
+      "source": "WORDPRESS/theme/shpigovsky/template-parts/components/final-form.php",
+      "runtime": "wp-content/themes/shpigovsky/template-parts/components/final-form.php",
+      "sha256_after": "2A517AEFDF7F462743EFB95E44F6D0B38D957BF3FD90653A23A0DA56A1BF3055",
+      "delivered": true,
+      "result": "PASS"
+    },
+    {
+      "source": "WORDPRESS/theme/shpigovsky/inc/service-helpers.php",
+      "runtime": "wp-content/themes/shpigovsky/inc/service-helpers.php",
+      "sha256_after": "99657FD14EC08A2F11071A94495D7E664B52E5EB6520DCD93F1EC0E8EB2A75A6",
+      "delivered": true,
+      "result": "PASS"
+    },
+    {
+      "source": "WORDPRESS/theme/shpigovsky/inc/reusable-blocks-helpers.php",
+      "runtime": "wp-content/themes/shpigovsky/inc/reusable-blocks-helpers.php",
+      "sha256_after": "BAA76EBB75351D386D2CE66A352FE09D436ECD9892D8E941AA9BCE2B932E5E29",
+      "delivered": true,
+      "result": "PASS"
+    },
+    {
+      "source": "WORDPRESS/plugins/shpigovsky-core/src/Admin/OptionsPage.php",
+      "runtime": "wp-content/plugins/shpigovsky-core/src/Admin/OptionsPage.php",
+      "sha256_after": "D2DFC5E61857457250E36B7F1304F50C15FF2F7C6037EC8310DB65534C535A57",
+      "delivered": true,
+      "result": "PASS"
+    },
+    {
+      "source": "WORDPRESS/plugins/shpigovsky-core/src/Fields/FieldGroups.php",
+      "runtime": "wp-content/plugins/shpigovsky-core/src/Fields/FieldGroups.php",
+      "sha256_after": "063AEE97A14C9D37A31153EC14A6DB41B3E70DA702E351B29C190E5E90FB1808",
+      "delivered": true,
+      "result": "PASS"
+    },
+    {
+      "source": "WORDPRESS/theme/shpigovsky/functions.php",
+      "runtime": "wp-content/themes/shpigovsky/functions.php",
+      "sha256_after": "ADF6138861CE4FA43E6B7DFC299DB21D94746DDAD0E22630D405C208208FCA1E",
+      "delivered": true,
+      "result": "PASS"
+    },
+    {
+      "source": "WORDPRESS/theme/shpigovsky/inc/admin-options.php",
+      "runtime": "wp-content/themes/shpigovsky/inc/admin-options.php",
+      "sha256_after": "765F847247621D9278166F4E837B25A7C62B747E1203FE163DDD4916867E030D",
+      "delivered": true,
+      "result": "PASS"
+    }
+  ]
+}

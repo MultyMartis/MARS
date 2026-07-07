@@ -27,7 +27,7 @@ final class FieldGroups implements ModuleInterface {
 	/**
 	 * Deterministic modified timestamp for canonical JSON source.
 	 */
-	public const MODIFIED = 1783603200;
+	public const MODIFIED = 1783690000;
 
 	/**
 	 * {@inheritdoc}
@@ -83,6 +83,9 @@ final class FieldGroups implements ModuleInterface {
 			self::blog_post_article_meta(),
 			self::site_options_contacts(),
 			self::site_options_modal_cta(),
+			self::block_final_form(),
+			self::block_specialists(),
+			self::block_cta_bands(),
 		);
 	}
 
@@ -483,6 +486,150 @@ final class FieldGroups implements ModuleInterface {
 				self::field( 'field_fp02_global_cta_text', 'Global CTA text', 'global_cta_text', 'textarea', array( 'rows' => 3 ) ),
 			),
 			self::location( 'options_page', '==', 'fp02-site-settings-general' )
+		);
+	}
+
+	/**
+	 * Reusable block — final form group (V9-06E18 Batch 1).
+	 *
+	 * @return array<string, mixed>
+	 */
+	private static function block_final_form() {
+		return self::group(
+			'group_fp02_block_final_form',
+			'Reusable Block — Final Form',
+			array(
+				self::field(
+					'field_fp02_final_form_heading',
+					'Заголовок',
+					'final_form_heading',
+					'text',
+					array(
+						'instructions' => 'Пусто — home_cta_title, затем статический fallback.',
+					)
+				),
+				self::field(
+					'field_fp02_final_form_lead',
+					'Подзаголовок / лид',
+					'final_form_lead',
+					'textarea',
+					array(
+						'rows'         => 3,
+						'instructions' => 'Пусто — home_cta_text, затем статический fallback.',
+					)
+				),
+				self::field(
+					'field_fp02_final_form_submit_label',
+					'Текст кнопки отправки',
+					'final_form_submit_label',
+					'text',
+					array(
+						'instructions' => 'Пусто — default_button_label из Общих настроек.',
+					)
+				),
+				self::field( 'field_fp02_final_form_name_label', 'Подпись поля «Имя»', 'final_form_name_label', 'text' ),
+				self::field( 'field_fp02_final_form_phone_label', 'Подпись поля «Телефон»', 'final_form_phone_label', 'text' ),
+				self::field( 'field_fp02_final_form_message_label', 'Подпись поля «Сообщение»', 'final_form_message_label', 'text' ),
+				self::field( 'field_fp02_final_form_name_placeholder', 'Placeholder «Имя»', 'final_form_name_placeholder', 'text' ),
+				self::field( 'field_fp02_final_form_phone_placeholder', 'Placeholder «Телефон»', 'final_form_phone_placeholder', 'text' ),
+				self::field( 'field_fp02_final_form_message_placeholder', 'Placeholder «Сообщение»', 'final_form_message_placeholder', 'text' ),
+			),
+			self::location( 'options_page', '==', 'fp02-block-final-form' )
+		);
+	}
+
+	/**
+	 * Reusable block — specialists group (V9-06E18 Batch 1).
+	 *
+	 * @return array<string, mixed>
+	 */
+	private static function block_specialists() {
+		return self::group(
+			'group_fp02_block_specialists',
+			'Reusable Block — Specialists',
+			array(
+				self::field( 'field_fp02_specialists_section_heading', 'Заголовок секции', 'specialists_section_heading', 'text' ),
+				self::field( 'field_fp02_specialists_all_link_label', 'Текст ссылки «все специалисты»', 'specialists_all_link_label', 'text' ),
+				self::field( 'field_fp02_specialists_all_link_url', 'URL ссылки «все специалисты»', 'specialists_all_link_url', 'url' ),
+				self::repeater(
+					'field_fp02_specialists_items',
+					'Специалисты',
+					'specialists_items',
+					12,
+					array(
+						self::field(
+							'field_fp02_specialist_photo',
+							'Фото (медиа)',
+							'specialist_photo',
+							'image',
+							array(
+								'return_format' => 'array',
+								'preview_size'  => 'medium',
+								'instructions'  => 'Опционально. Пусто — theme asset path ниже или V9 fallback.',
+							)
+						),
+						self::field(
+							'field_fp02_specialist_photo_asset',
+							'Theme asset path',
+							'specialist_photo_asset',
+							'text',
+							array(
+								'instructions' => 'Относительный путь в theme/assets, напр. img/content/home-specialists/sergey-shpigovsky.webp',
+							)
+						),
+						self::field( 'field_fp02_specialist_photo_width', 'Ширина (px)', 'specialist_photo_width', 'number', array( 'min' => 0 ) ),
+						self::field( 'field_fp02_specialist_photo_height', 'Высота (px)', 'specialist_photo_height', 'number', array( 'min' => 0 ) ),
+						self::field( 'field_fp02_specialist_name', 'Имя', 'specialist_name', 'text' ),
+						self::field( 'field_fp02_specialist_role', 'Роль / специализация', 'specialist_role', 'textarea', array( 'rows' => 3 ) ),
+						self::field( 'field_fp02_specialist_link', 'Ссылка (опционально)', 'specialist_link', 'url' ),
+					)
+				),
+			),
+			self::location( 'options_page', '==', 'fp02-block-specialists' )
+		);
+	}
+
+	/**
+	 * Reusable block — global CTA band defaults (V9-06E18 Batch 1).
+	 *
+	 * @return array<string, mixed>
+	 */
+	private static function block_cta_bands() {
+		return self::group(
+			'group_fp02_block_cta_bands',
+			'Reusable Block — CTA Bands',
+			array(
+				self::field(
+					'field_fp02_cta_band_default_title',
+					'Заголовок CTA по умолчанию',
+					'cta_band_default_title',
+					'text',
+					array(
+						'instructions' => 'Используется когда у услуги нет cta_title. Пусто — global_cta_title из Общих настроек.',
+					)
+				),
+				self::field(
+					'field_fp02_cta_band_default_subtitle',
+					'Текст CTA по умолчанию',
+					'cta_band_default_subtitle',
+					'textarea',
+					array(
+						'rows'         => 3,
+						'instructions' => 'Пусто — global_cta_text из Общих настроек.',
+					)
+				),
+				self::field( 'field_fp02_cta_band_phone_hint', 'Подпись телефона', 'cta_band_phone_hint', 'text' ),
+				self::field(
+					'field_fp02_cta_band_default_button_label',
+					'Текст кнопки по умолчанию',
+					'cta_band_default_button_label',
+					'text',
+					array(
+						'instructions' => 'Пусто — default_button_label из Общих настроек.',
+					)
+				),
+			),
+			self::location( 'options_page', '==', 'fp02-block-cta-bands' )
 		);
 	}
 

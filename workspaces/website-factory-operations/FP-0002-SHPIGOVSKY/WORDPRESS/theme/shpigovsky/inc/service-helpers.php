@@ -504,22 +504,22 @@ function shpigovsky_get_service_cta_band( $post_id ) {
 	$default_cta  = '' !== $default_cta ? $default_cta : __( 'Записаться', 'shpigovsky' );
 
 	if ( '' === $title ) {
-		$title = __( 'Запишитесь на встречу', 'shpigovsky' );
+		$title = shpigovsky_get_cta_band_default_title();
 	}
 
 	if ( '' === $subtitle ) {
-		$subtitle = __( 'Опишите ситуацию в удобном для вас формате. Первый разговор ни к чему не обязывает, но может стать шагом к переменам.', 'shpigovsky' );
+		$subtitle = shpigovsky_get_cta_band_default_subtitle();
 	}
 
 	if ( '' === $button_label ) {
-		$button_label = $default_cta;
+		$button_label = shpigovsky_get_cta_band_default_button_label( $default_cta );
 	}
 
 	return array(
 		'title'        => $title,
 		'subtitle'     => $subtitle,
 		'phone'        => $phone,
-		'phone_hint'   => __( 'Или позвоните нам', 'shpigovsky' ),
+		'phone_hint'   => shpigovsky_get_cta_band_phone_hint(),
 		'button_label' => $button_label,
 		'source'       => 'service-cta-' . $post_id,
 	);

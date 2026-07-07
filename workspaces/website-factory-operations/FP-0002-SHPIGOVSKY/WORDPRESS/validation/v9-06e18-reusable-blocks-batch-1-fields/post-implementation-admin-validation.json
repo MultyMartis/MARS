@@ -1,0 +1,14 @@
+{
+  "wave": "V9-06E18",
+  "validation_type": "POST_IMPLEMENTATION_ADMIN",
+  "result": "PASS",
+  "admin_screenshots": "PARTIAL",
+  "items": [
+    {"admin_item": "fp02-block-final-form fields", "result": "PASS", "notes": "group_fp02_block_final_form registered"},
+    {"admin_item": "fp02-block-specialists fields", "result": "PASS", "notes": "group_fp02_block_specialists registered"},
+    {"admin_item": "fp02-block-cta-bands fields", "result": "PASS", "notes": "group_fp02_block_cta_bands registered"},
+    {"admin_item": "fp02-block-reviews alias", "result": "PASS", "notes": "dual location + post_id fp02-reviews"},
+    {"admin_item": "fp02-site-settings-general regression", "result": "PASS", "notes": "contacts + modal CTA groups intact"},
+    {"admin_item": "fp02-reviews legacy menu", "result": "PASS", "notes": "top-level menu unchanged"}
+  ]
+}

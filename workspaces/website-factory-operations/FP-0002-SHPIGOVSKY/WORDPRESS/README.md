@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E17 SITE SETTINGS IA SKELETON **PASS** — admin IA skeleton (Общие настройки + Повторяемые блоки); contacts/modal/CTA relocated with `post_id=option`; top-level Отзывы unchanged; DB checkpoint YES; **0** DB writes; runtime delivered. NEXT: **CREATE_V9_06E18_REUSABLE_BLOCKS_BATCH_1_FIELDS_TASK**
+**Status:** V9-06E18 REUSABLE BLOCKS BATCH 1 FIELDS **PASS** — Batch 1 admin fields (final form, specialists, reviews alias, CTA bands); seeded options; renderer migration with fallbacks; DB checkpoint YES; runtime delivered. NEXT: **CREATE_V9_06E19_OPERATOR_REUSABLE_BLOCKS_ADMIN_QA_TASK**
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

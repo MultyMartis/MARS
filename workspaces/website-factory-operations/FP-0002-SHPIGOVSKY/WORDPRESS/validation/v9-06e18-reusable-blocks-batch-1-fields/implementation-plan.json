@@ -1,0 +1,39 @@
+{
+  "wave": "V9-06E18",
+  "validation_type": "IMPLEMENTATION_PLAN",
+  "result": "PASS",
+  "blocks": [
+    {
+      "block": "Финальная форма",
+      "admin_slug": "fp02-block-final-form",
+      "field_group": "group_fp02_block_final_form",
+      "seed_source": "home_cta_* + CURRENT_HARDCODED labels",
+      "renderer_migration": "final-form.php → reusable-blocks-helpers",
+      "safety": "PASS"
+    },
+    {
+      "block": "Специалисты",
+      "admin_slug": "fp02-block-specialists",
+      "field_group": "group_fp02_block_specialists",
+      "seed_source": "V9_STATIC cards via specialist_photo_asset",
+      "renderer_migration": "home/specialists.php + alcohol-direct-v9/specialists.php",
+      "safety": "PASS"
+    },
+    {
+      "block": "Отзывы",
+      "admin_slug": "fp02-block-reviews",
+      "field_group": "group_fp02_site_options_reviews",
+      "seed_source": "ALIAS_ONLY — no data move",
+      "renderer_migration": "none — fp02-reviews storage preserved",
+      "safety": "PASS"
+    },
+    {
+      "block": "CTA-блоки",
+      "admin_slug": "fp02-block-cta-bands",
+      "field_group": "group_fp02_block_cta_bands",
+      "seed_source": "global_cta_* + CURRENT_HARDCODED defaults",
+      "renderer_migration": "service-helpers.php shpigovsky_get_service_cta_band",
+      "safety": "PASS"
+    }
+  ]
+}

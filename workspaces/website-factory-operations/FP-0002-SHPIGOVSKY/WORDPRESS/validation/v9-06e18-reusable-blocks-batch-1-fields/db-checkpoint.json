@@ -1,0 +1,16 @@
+{
+  "wave": "V9-06E18",
+  "result": "PASS",
+  "checkpoint_path": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e18-reusable-blocks-batch-1-fields-pre-20260708-001410",
+  "dump_file": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e18-reusable-blocks-batch-1-fields-pre-20260708-001410\\mars_wp_fp0002.sql",
+  "dump_sha256": "4CDF0695B845E8B93BD4B1DC7AC0B15345DA83A7CB02BBB9E9E4B6D07BE10A43",
+  "dump_size_bytes": 1570586,
+  "db": "mars_wp_fp0002",
+  "prefix": "fp02_",
+  "e17_baseline_commit": "5ad621a9e5db13f0200fd751f8c38c7971d7578b",
+  "snapshots": [
+    "db-snapshots/options-acf-snapshot.txt",
+    "db-snapshots/options-count.txt"
+  ],
+  "restore_instructions": "mysql --host=127.0.0.1 --user=root mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e18-reusable-blocks-batch-1-fields-pre-20260708-001410\\mars_wp_fp0002.sql\""
+}

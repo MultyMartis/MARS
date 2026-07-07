@@ -1,0 +1,26 @@
+{
+  "wave": "V9-06E18",
+  "validation_type": "SCREENSHOT_MANIFEST",
+  "result": "PASS",
+  "admin_screenshots": "PARTIAL",
+  "frontend_screenshots": "PASS",
+  "items": [
+    {"name": "runtime-home-batch1-blocks-e18.png", "captured": true, "result": "PASS"},
+    {"name": "runtime-home-specialists-e18.png", "captured": true, "result": "PASS"},
+    {"name": "runtime-home-reviews-e18.png", "captured": true, "result": "PASS"},
+    {"name": "runtime-home-final-form-e18.png", "captured": true, "result": "PASS"},
+    {"name": "runtime-zavisimosti-specialists-e18.png", "captured": true, "result": "PASS"},
+    {"name": "runtime-zavisimosti-reviews-e18.png", "captured": true, "result": "PASS"},
+    {"name": "runtime-alcohol-specialists-e18.png", "captured": true, "result": "PASS"},
+    {"name": "runtime-alcohol-final-form-e18.png", "captured": true, "result": "PASS"},
+    {"name": "runtime-contacts-final-form-e18.png", "captured": true, "result": "PASS", "notes": "contacts page regression — no final-form block on route"},
+    {"name": "runtime-otzyvy-reviews-e18.png", "captured": true, "result": "PASS", "notes": "archive list layout"},
+    {"name": "runtime-privacy-regression-e18.png", "captured": true, "result": "PASS"},
+    {"name": "admin-reusable-final-form-fields-e18.png", "captured": false, "result": "PARTIAL"},
+    {"name": "admin-reusable-specialists-fields-e18.png", "captured": false, "result": "PARTIAL"},
+    {"name": "admin-reusable-reviews-fields-or-alias-e18.png", "captured": false, "result": "PARTIAL"},
+    {"name": "admin-reusable-cta-fields-e18.png", "captured": false, "result": "PARTIAL"},
+    {"name": "admin-general-settings-regression-e18.png", "captured": false, "result": "PARTIAL"},
+    {"name": "admin-old-reviews-regression-e18.png", "captured": false, "result": "PARTIAL"}
+  ]
+}

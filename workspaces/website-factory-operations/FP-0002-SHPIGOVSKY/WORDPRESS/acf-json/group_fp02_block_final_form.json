@@ -1,0 +1,82 @@
+{
+    "key": "group_fp02_block_final_form",
+    "title": "Reusable Block — Final Form",
+    "fields": [
+        {
+            "key": "field_fp02_final_form_heading",
+            "label": "Заголовок",
+            "name": "final_form_heading",
+            "type": "text",
+            "instructions": "Пусто — home_cta_title, затем статический fallback."
+        },
+        {
+            "key": "field_fp02_final_form_lead",
+            "label": "Подзаголовок / лид",
+            "name": "final_form_lead",
+            "type": "textarea",
+            "rows": 3,
+            "instructions": "Пусто — home_cta_text, затем статический fallback."
+        },
+        {
+            "key": "field_fp02_final_form_submit_label",
+            "label": "Текст кнопки отправки",
+            "name": "final_form_submit_label",
+            "type": "text",
+            "instructions": "Пусто — default_button_label из Общих настроек."
+        },
+        {
+            "key": "field_fp02_final_form_name_label",
+            "label": "Подпись поля «Имя»",
+            "name": "final_form_name_label",
+            "type": "text"
+        },
+        {
+            "key": "field_fp02_final_form_phone_label",
+            "label": "Подпись поля «Телефон»",
+            "name": "final_form_phone_label",
+            "type": "text"
+        },
+        {
+            "key": "field_fp02_final_form_message_label",
+            "label": "Подпись поля «Сообщение»",
+            "name": "final_form_message_label",
+            "type": "text"
+        },
+        {
+            "key": "field_fp02_final_form_name_placeholder",
+            "label": "Placeholder «Имя»",
+            "name": "final_form_name_placeholder",
+            "type": "text"
+        },
+        {
+            "key": "field_fp02_final_form_phone_placeholder",
+            "label": "Placeholder «Телефон»",
+            "name": "final_form_phone_placeholder",
+            "type": "text"
+        },
+        {
+            "key": "field_fp02_final_form_message_placeholder",
+            "label": "Placeholder «Сообщение»",
+            "name": "final_form_message_placeholder",
+            "type": "text"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "fp02-block-final-form"
+            }
+        ]
+    ],
+    "menu_order": 10,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true,
+    "description": "FP-0002 V9-06E18 Batch 1 — final form reusable block.",
+    "show_in_rest": 0,
+    "modified": 1783690000
+}

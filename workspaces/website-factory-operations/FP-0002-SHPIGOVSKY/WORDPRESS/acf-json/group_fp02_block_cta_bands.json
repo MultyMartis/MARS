@@ -1,0 +1,52 @@
+{
+    "key": "group_fp02_block_cta_bands",
+    "title": "Reusable Block — CTA Bands",
+    "fields": [
+        {
+            "key": "field_fp02_cta_band_default_title",
+            "label": "Заголовок CTA по умолчанию",
+            "name": "cta_band_default_title",
+            "type": "text",
+            "instructions": "Используется когда у услуги нет cta_title. Пусто — global_cta_title из Общих настроек."
+        },
+        {
+            "key": "field_fp02_cta_band_default_subtitle",
+            "label": "Текст CTA по умолчанию",
+            "name": "cta_band_default_subtitle",
+            "type": "textarea",
+            "rows": 3,
+            "instructions": "Пусто — global_cta_text из Общих настроек."
+        },
+        {
+            "key": "field_fp02_cta_band_phone_hint",
+            "label": "Подпись телефона",
+            "name": "cta_band_phone_hint",
+            "type": "text"
+        },
+        {
+            "key": "field_fp02_cta_band_default_button_label",
+            "label": "Текст кнопки по умолчанию",
+            "name": "cta_band_default_button_label",
+            "type": "text",
+            "instructions": "Пусто — default_button_label из Общих настроек."
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "fp02-block-cta-bands"
+            }
+        ]
+    ],
+    "menu_order": 12,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true,
+    "description": "FP-0002 V9-06E18 Batch 1 — global CTA band defaults.",
+    "show_in_rest": 0,
+    "modified": 1783690000
+}

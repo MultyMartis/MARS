@@ -169,7 +169,7 @@ final class OptionsPage implements ModuleInterface {
 		$subpages = array();
 
 		foreach ( $blocks as $block ) {
-			$subpages[] = array(
+			$subpage = array(
 				'page_title'  => $block['menu_title'],
 				'menu_title'  => $block['menu_title'],
 				'menu_slug'   => $block['menu_slug'],
@@ -177,9 +177,29 @@ final class OptionsPage implements ModuleInterface {
 				'capability'  => 'manage_options',
 				'autoload'    => false,
 			);
+
+			if ( 'fp02-block-reviews' === $block['menu_slug'] ) {
+				$subpage['post_id'] = 'fp02-reviews';
+			}
+
+			$subpages[] = $subpage;
 		}
 
 		return $subpages;
+	}
+
+	/**
+	 * Batch 1 reusable blocks with active ACF fields (E18).
+	 *
+	 * @return array<int, string>
+	 */
+	public static function get_batch1_fielded_block_slugs() {
+		return array(
+			'fp02-block-final-form',
+			'fp02-block-specialists',
+			'fp02-block-reviews',
+			'fp02-block-cta-bands',
+		);
 	}
 
 	/**
@@ -211,12 +231,23 @@ final class OptionsPage implements ModuleInterface {
 			return;
 		}
 
+		if ( in_array( $page, self::get_batch1_fielded_block_slugs(), true ) && 'fp02-block-reviews' !== $page ) {
+			return;
+		}
+
+		if ( 'fp02-block-reviews' === $page ) {
+			echo '<div class="notice notice-info"><p>';
+			echo esc_html__( 'Алиас редактирования отзывов (V9-06E18). Данные сохраняются в том же хранилище, что и меню «Отзывы».', 'shpigovsky-core' );
+			echo ' ';
+			echo '<a href="' . esc_url( admin_url( 'admin.php?page=fp02-reviews' ) ) . '">';
+			echo esc_html__( 'Открыть верхнее меню «Отзывы»', 'shpigovsky-core' );
+			echo '</a>';
+			echo '</p></div>';
+			return;
+		}
+
 		echo '<div class="notice notice-info"><p>';
 		echo esc_html__( 'Скелет подстраницы повторяемого блока (V9-06E17). Поля и миграция данных будут добавлены в следующих волнах.', 'shpigovsky-core' );
-		if ( 'fp02-block-reviews' === $page ) {
-			echo ' ';
-			echo esc_html__( 'Активное редактирование отзывов остаётся в меню «Отзывы» до явной миграции.', 'shpigovsky-core' );
-		}
 		echo '</p></div>';
 	}
 }

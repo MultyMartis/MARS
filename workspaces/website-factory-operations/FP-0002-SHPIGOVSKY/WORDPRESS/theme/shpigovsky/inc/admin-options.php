@@ -53,7 +53,7 @@ function shpigovsky_force_reviews_options_save_context( $post_id ) {
 	// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- ACF handles nonce verification.
 	$page = isset( $_GET['page'] ) ? sanitize_key( wp_unslash( $_GET['page'] ) ) : '';
 
-	if ( 'fp02-reviews' === $page ) {
+	if ( 'fp02-reviews' === $page || 'fp02-block-reviews' === $page ) {
 		return shpigovsky_get_reviews_options_context();
 	}
 

@@ -1,0 +1,39 @@
+{
+  "wave": "V9-06E18",
+  "validation_type": "BATCH_1_ADMIN_FIELDS",
+  "result": "PASS",
+  "blocks": [
+    {
+      "block": "Финальная форма",
+      "admin_location": "Настройки сайта → Повторяемые блоки → Финальная форма",
+      "field_group": "group_fp02_block_final_form",
+      "fields_created": 9,
+      "result": "PASS",
+      "notes": "heading, lead, submit + form labels/placeholders"
+    },
+    {
+      "block": "Специалисты",
+      "admin_location": "Настройки сайта → Повторяемые блоки → Специалисты",
+      "field_group": "group_fp02_block_specialists",
+      "fields_created": 4,
+      "result": "PASS",
+      "notes": "heading, all-link, repeater with photo asset path"
+    },
+    {
+      "block": "Отзывы",
+      "admin_location": "Настройки сайта → Повторяемые блоки → Отзывы",
+      "field_group": "group_fp02_site_options_reviews",
+      "fields_created": 0,
+      "result": "PASS",
+      "notes": "ALIAS_ONLY — dual location, post_id fp02-reviews"
+    },
+    {
+      "block": "CTA-блоки",
+      "admin_location": "Настройки сайта → Повторяемые блоки → CTA-блоки",
+      "field_group": "group_fp02_block_cta_bands",
+      "fields_created": 4,
+      "result": "PASS",
+      "notes": "global program-cta-band defaults"
+    }
+  ]
+}

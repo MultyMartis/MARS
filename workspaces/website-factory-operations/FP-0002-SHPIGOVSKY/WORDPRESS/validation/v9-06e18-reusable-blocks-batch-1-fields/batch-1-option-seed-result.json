@@ -1,0 +1,13 @@
+{
+  "wave": "V9-06E18",
+  "validation_type": "BATCH_1_OPTION_SEED",
+  "result": "PASS",
+  "items": [
+    {"block": "Финальная форма", "field": "final_form_heading", "context": "fp02-block-final-form", "seed_source": "CURRENT_HARDCODED", "result": "SEEDED"},
+    {"block": "Финальная форма", "field": "final_form_lead", "context": "fp02-block-final-form", "seed_source": "CURRENT_HARDCODED", "result": "SEEDED"},
+    {"block": "Финальная форма", "field": "final_form_submit_label", "context": "fp02-block-final-form", "seed_source": "CURRENT_OPTION", "result": "SEEDED"},
+    {"block": "Специалисты", "field": "specialists_items", "context": "fp02-block-specialists", "seed_source": "V9_STATIC", "result": "SEEDED", "notes": "5 cards via specialist_photo_asset — MEDIA_ATTACHMENT_DEFERRED"},
+    {"block": "CTA-блоки", "field": "cta_band_default_title", "context": "fp02-block-cta-bands", "seed_source": "CURRENT_OPTION", "result": "SEEDED"},
+    {"block": "Отзывы", "field": "reviews_items", "context": "fp02-reviews", "seed_source": "EXISTING_REVIEWS_STORAGE", "result": "PRESERVED", "notes": "no rewrite in E18"}
+  ]
+}

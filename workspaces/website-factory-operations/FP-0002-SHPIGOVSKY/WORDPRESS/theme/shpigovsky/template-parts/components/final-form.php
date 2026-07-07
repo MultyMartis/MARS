@@ -29,24 +29,28 @@ $lead_source = trim( (string) $parsed_args['lead_source'] );
 $section_modifier_class = trim( (string) $parsed_args['section_modifier_class'] );
 
 if ( '' === $heading ) {
-	$heading = shpigovsky_home_text_or_fallback( 'home_cta_title', __( 'Остались вопросы?', 'shpigovsky' ) );
+	$heading = shpigovsky_get_final_form_heading();
 }
 
 if ( '' === $lead ) {
-	$lead = shpigovsky_home_text_or_fallback(
-		'home_cta_text',
-		__( 'Опишите вашу ситуацию в форме заявки, и мы расскажем, как сможем помочь', 'shpigovsky' )
-	);
+	$lead = shpigovsky_get_final_form_lead();
 }
 
 if ( '' === $lead_source ) {
 	$lead_source = 'final-section';
 }
 
-$submit_label = shpigovsky_chrome_label_or_fallback(
-	'default_button_label',
-	__( 'Записаться на консультацию', 'shpigovsky' )
-);
+$submit_label = shpigovsky_get_final_form_submit_label();
+$name_label   = shpigovsky_get_final_form_field_label( 'final_form_name_label', __( 'Ваше имя', 'shpigovsky' ) );
+$phone_label  = shpigovsky_get_final_form_field_label( 'final_form_phone_label', __( 'Ваш телефон', 'shpigovsky' ) );
+$message_label = shpigovsky_get_final_form_field_label( 'final_form_message_label', __( 'Опишите ситуацию', 'shpigovsky' ) );
+$name_placeholder = shpigovsky_get_final_form_field_label( 'final_form_name_placeholder', __( 'Ваше имя', 'shpigovsky' ) );
+$phone_placeholder = shpigovsky_get_block_option_scalar( 'final_form_phone_placeholder', shpigovsky_get_final_form_block_context() );
+$message_placeholder = shpigovsky_get_final_form_field_label( 'final_form_message_placeholder', __( 'Опишите ситуацию', 'shpigovsky' ) );
+
+if ( '' === $phone_placeholder ) {
+	$phone_placeholder = '+7 999 999 - 99 - 99';
+}
 
 $consent_url = home_url( '/consent-personal-data/' );
 $privacy_url = home_url( '/privacy-policy/' );
@@ -69,21 +73,21 @@ $privacy_url = home_url( '/privacy-policy/' );
 				</div>
 				<div class="final-form__row">
 					<div class="final-form__field" data-lead-field-wrap>
-						<label class="final-form__label" for="final-form-name"><?php echo esc_html__( 'Ваше имя', 'shpigovsky' ); ?></label>
+						<label class="final-form__label" for="final-form-name"><?php echo esc_html( $name_label ); ?></label>
 						<input
 							class="final-form__input"
 							type="text"
 							id="final-form-name"
 							name="name"
 							autocomplete="name"
-							placeholder="<?php echo esc_attr__( 'Ваше имя', 'shpigovsky' ); ?>"
+							placeholder="<?php echo esc_attr( $name_placeholder ); ?>"
 							required
 							aria-describedby="final-form-name-error"
 						>
 						<span class="final-form__field-error" data-lead-field-error id="final-form-name-error" hidden></span>
 					</div>
 					<div class="final-form__field" data-lead-field-wrap>
-						<label class="final-form__label" for="final-form-phone"><?php echo esc_html__( 'Ваш телефон', 'shpigovsky' ); ?></label>
+						<label class="final-form__label" for="final-form-phone"><?php echo esc_html( $phone_label ); ?></label>
 						<input
 							class="final-form__input"
 							type="tel"
@@ -91,7 +95,7 @@ $privacy_url = home_url( '/privacy-policy/' );
 							name="phone"
 							data-phone-input
 							inputmode="tel"
-							placeholder="+7 999 999 - 99 - 99"
+							placeholder="<?php echo esc_attr( $phone_placeholder ); ?>"
 							autocomplete="tel"
 							required
 							aria-describedby="final-form-phone-error"
@@ -100,13 +104,13 @@ $privacy_url = home_url( '/privacy-policy/' );
 					</div>
 				</div>
 				<div class="final-form__field final-form__field_message" data-lead-field-wrap>
-					<label class="final-form__label" for="final-form-message"><?php echo esc_html__( 'Опишите ситуацию', 'shpigovsky' ); ?></label>
+					<label class="final-form__label" for="final-form-message"><?php echo esc_html( $message_label ); ?></label>
 					<textarea
 						class="final-form__textarea"
 						id="final-form-message"
 						name="message"
 						rows="4"
-						placeholder="<?php echo esc_attr__( 'Опишите ситуацию', 'shpigovsky' ); ?>"
+						placeholder="<?php echo esc_attr( $message_placeholder ); ?>"
 						required
 						aria-describedby="final-form-message-error"
 					></textarea>

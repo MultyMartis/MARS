@@ -1,0 +1,70 @@
+{
+    "wave": "V9-06E18",
+    "result": "PASS",
+    "routes": [
+        {
+            "route": "/",
+            "http_status": 200,
+            "result": "PASS",
+            "notes": "",
+            "reviews_source": "OPTIONS",
+            "specialists_cards": 5
+        },
+        {
+            "route": "/uslugi/",
+            "http_status": 200,
+            "result": "PASS",
+            "notes": "",
+            "reviews_source": "N/A",
+            "specialists_cards": null
+        },
+        {
+            "route": "/uslugi/zavisimosti/",
+            "http_status": 200,
+            "result": "PASS",
+            "notes": "",
+            "reviews_source": "OPTIONS",
+            "specialists_cards": 5
+        },
+        {
+            "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+            "http_status": 200,
+            "result": "PASS",
+            "notes": "",
+            "reviews_source": "N/A",
+            "specialists_cards": 5
+        },
+        {
+            "route": "/kontakty/",
+            "http_status": 200,
+            "result": "PASS",
+            "notes": "",
+            "reviews_source": "N/A",
+            "specialists_cards": null
+        },
+        {
+            "route": "/otzyvy/",
+            "http_status": 200,
+            "result": "PASS",
+            "notes": "",
+            "reviews_source": "N/A",
+            "specialists_cards": null
+        },
+        {
+            "route": "/privacy-policy/",
+            "http_status": 200,
+            "result": "PASS",
+            "notes": "",
+            "reviews_source": "N/A",
+            "specialists_cards": null
+        },
+        {
+            "route": "/o-centre/specialistam/",
+            "http_status": 200,
+            "result": "PASS",
+            "notes": "",
+            "reviews_source": "N/A",
+            "specialists_cards": null
+        }
+    ]
+}

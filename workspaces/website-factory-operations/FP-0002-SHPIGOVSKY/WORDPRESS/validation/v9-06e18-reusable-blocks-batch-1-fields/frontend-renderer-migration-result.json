@@ -1,0 +1,35 @@
+{
+  "wave": "V9-06E18",
+  "validation_type": "FRONTEND_RENDERER_MIGRATION",
+  "result": "PASS",
+  "blocks": [
+    {
+      "block": "Финальная форма",
+      "consumers": ["template-parts/components/final-form.php", "service stacks", "home", "/uslugi/"],
+      "before": "home_cta_* + chrome label fallback",
+      "after": "fp02-block-final-form → home → static",
+      "result": "PASS"
+    },
+    {
+      "block": "Специалисты",
+      "consumers": ["home/specialists.php", "alcohol-direct-v9/specialists.php", "subdivision-stack"],
+      "before": "hardcoded cards / v9-static-content only",
+      "after": "fp02-block-specialists repeater → v9-static fixture",
+      "result": "PASS"
+    },
+    {
+      "block": "Отзывы",
+      "consumers": ["shared/reviews-slider.php", "reviews/archive-list.php"],
+      "before": "fp02-reviews options",
+      "after": "unchanged storage; alias admin only",
+      "result": "PASS"
+    },
+    {
+      "block": "CTA-блоки",
+      "consumers": ["program-cta-band.php", "service-helpers.php"],
+      "before": "service cta_* + hardcoded defaults",
+      "after": "service override → fp02-block-cta-bands → global_cta_* → static",
+      "result": "PASS"
+    }
+  ]
+}

@@ -2,8 +2,7 @@
 /**
  * Direct V9 port: specialists section (usluga-konechnaya-v1.html).
  *
- * Exact static V9 markup from partials/sections/specialists.html — not home/specialists.php.
- * Swiper vendor required: inc/alcohol-direct-v9-vendors.php.
+ * V9-06E18: shared specialists block data source with home/subdivision renderers.
  *
  * @package Shpigovsky
  */
@@ -12,15 +11,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$cards = shpigovsky_get_v9_specialists_cards();
+$cards          = shpigovsky_get_specialists_cards();
+$heading        = shpigovsky_get_specialists_section_heading();
+$all_link_label = shpigovsky_get_specialists_all_link_label();
+$all_link_url   = shpigovsky_get_specialists_all_link_url();
 
 ?>
 <section data-reveal class="specialists" id="service-leaf-specialists" aria-labelledby="service-leaf-specialists-heading">
   <div class="container">
     <div class="specialists__head">
-      <h2 class="specialists__heading" id="service-leaf-specialists-heading">Специалисты центра</h2>
-      <a class="specialists__all-link" href="<?php echo esc_url( home_url( '/o-centre/' ) ); ?>">
-        <span class="specialists__all-text">все специалисты</span>
+      <h2 class="specialists__heading" id="service-leaf-specialists-heading"><?php echo esc_html( $heading ); ?></h2>
+      <a class="specialists__all-link" href="<?php echo esc_url( $all_link_url ); ?>">
+        <span class="specialists__all-text"><?php echo esc_html( $all_link_label ); ?></span>
         <span class="specialists__all-icon" aria-hidden="true"><i class="fas fa-play"></i></span>
       </a>
     </div>
@@ -29,7 +31,7 @@ $cards = shpigovsky_get_v9_specialists_cards();
       <div class="specialists__wrapper swiper-wrapper">
         <?php foreach ( $cards as $card ) : ?>
         <article class="specialists__card swiper-slide">
-          <img class="specialists__photo" src="<?php echo esc_url( shpigovsky_asset_uri( $card['image'] ) ); ?>" width="<?php echo (int) $card['width']; ?>" height="<?php echo (int) $card['height']; ?>" alt="<?php echo esc_attr( $card['name'] ); ?>" loading="lazy" decoding="async">
+          <img class="specialists__photo" src="<?php echo esc_url( $card['image'] ); ?>" width="<?php echo (int) $card['width']; ?>" height="<?php echo (int) $card['height']; ?>" alt="<?php echo esc_attr( $card['name'] ); ?>" loading="lazy" decoding="async">
           <h3 class="specialists__name"><?php echo esc_html( $card['name'] ); ?></h3>
           <p class="specialists__role"><?php echo wp_kses_post( $card['role'] ); ?></p>
         </article>
