@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-07 (Run 4.218 — PDP extra info attribute layout; 3 scoped FTP files; meta generator preserved; checkpoint `SITE-002-STABLE-PROD-PDP-EXTRA-INFO-LAYOUT-01`)
+**Last updated:** 2026-07-07 (Run 4.219 — new section entrypoints partial; image assets required for IDs 88/360; checkpoint unchanged `SITE-002-STABLE-PROD-PDP-EXTRA-INFO-LAYOUT-01`)
 
 ---
 

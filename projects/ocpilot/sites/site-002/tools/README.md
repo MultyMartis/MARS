@@ -56,6 +56,7 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `uninstall-site-002-post-1c-monitor-task.ps1` | Windows Task uninstall — exact task name only (Run 4.215) |
 | `site-002-prod-ux-task-intake-01.py` | Read-only UX task intake — new section tiles + PDP «Дополнительные сведения» authority for `SITE-002-PROD-UX-TASK-INTAKE-01` (Run 4.217) |
 | `site-002-prod-pdp-extra-info-attribute-layout-01.py` | Controlled Production PDP patch — move «Дополнительные сведения» out of specs table for `SITE-002-PROD-PDP-EXTRA-INFO-ATTRIBUTE-LAYOUT-01` (Run 4.218) |
+| `site-002-prod-new-sections-entrypoints-01.py` | New section entrypoint tiles — category visibility + Category-image gate for lari/konditerskiy for `SITE-002-PROD-NEW-SECTIONS-ENTRYPOINTS-01` (Run 4.219) |
 
 ### Post-1C monitor scheduler notes (Run 4.216)
 
