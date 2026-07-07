@@ -1,0 +1,31 @@
+/* ZPM form loading state — SITE-002-PROD-MAIL-CUSTOMER-FORMS-01 (Run 4.226) */
+.zpm-form--loading {
+  position: relative;
+}
+.zpm-form--loading::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.65);
+  z-index: 20;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.zpm-form--loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 36px;
+  height: 36px;
+  margin: -18px 0 0 -18px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #0f766e;
+  border-radius: 50%;
+  animation: zpm-form-spin 0.75s linear infinite;
+  z-index: 21;
+  pointer-events: none;
+}
+@keyframes zpm-form-spin {
+  to { transform: rotate(360deg); }
+}

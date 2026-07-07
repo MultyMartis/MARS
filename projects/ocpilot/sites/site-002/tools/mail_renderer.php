@@ -80,7 +80,7 @@ class ZpmMailRenderer {
 	}
 
 	public function renderCustomerFormConfirmation($data, $options = array()) {
-		$title = isset($data['subject']) ? $data['subject'] : 'Заявка принята';
+		$title = isset($data['subject']) ? $data['subject'] : 'ЗПМ: заявка получена';
 		$dialog = isset($data['dialog_label']) ? $data['dialog_label'] : 'Обращение с сайта';
 
 		$summary = array(
@@ -89,16 +89,40 @@ class ZpmMailRenderer {
 		if (!empty($data['submitted_at'])) {
 			$summary[] = array('label' => 'Дата', 'value' => $data['submitted_at']);
 		}
+		if (!empty($data['product'])) {
+			$summary[] = array('label' => 'Товар', 'value' => $data['product']);
+		}
 
 		$sections = array(
+			$this->componentMessageBlock(
+				'Заявка получена',
+				'Мы получили вашу заявку на сайте ' . $this->brand . '.'
+			),
 			$this->componentSummaryCard('Спасибо за обращение', $summary),
 			$this->componentMessageBlock(
 				'Что дальше',
 				isset($data['next_step'])
 					? $data['next_step']
-					: 'Мы получили вашу заявку и свяжемся с вами в ближайшее рабочее время.'
+					: 'Специалист свяжется с вами по указанным контактам.'
 			),
 		);
+
+		$contact_rows = array();
+		if (!empty($data['author'])) {
+			$contact_rows[] = array('label' => 'Имя', 'value' => $data['author']);
+		}
+		if (!empty($data['phone'])) {
+			$contact_rows[] = array('label' => 'Телефон', 'value' => $data['phone']);
+		}
+		if (!empty($data['email'])) {
+			$contact_rows[] = array('label' => 'E-mail', 'value' => $data['email']);
+		}
+		if ($contact_rows) {
+			$sections[] = $this->componentKeyValueTable('Ваши контактные данные', $contact_rows);
+		}
+		if (!empty($data['message'])) {
+			$sections[] = $this->componentMessageBlock('Ваше сообщение', $data['message']);
+		}
 
 		if (!empty($data['cta_url']) && !empty($data['cta_label'])) {
 			$sections[] = $this->componentButton($data['cta_label'], $data['cta_url']);

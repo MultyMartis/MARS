@@ -2015,30 +2015,32 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 
 ---
 
-## 34. Mail System Architecture (Production — ADMIN FORMS ACTIVE)
+## 34. Mail System Architecture (Production — CUSTOMER FORMS ACTIVE)
 
 **Discovery:** Run 4.222 — `SITE-002-PROD-MAIL-SYSTEM-DISCOVERY-01` (2026-07-08)
 **Admin forms integration:** Run 4.224 — `SITE-002-PROD-MAIL-ADMIN-FORMS-01` (2026-07-08)
 **Inbox confirmation:** Run 4.225 — `SITE-002-PROD-MAIL-ADMIN-FORMS-INBOX-CONFIRMATION-01` (2026-07-08)
-**Status:** **ACTIVE — admin form mail redesigned and operator-verified; customer/standard mails unchanged**
+**Customer forms integration:** Run 4.226 — `SITE-002-PROD-MAIL-CUSTOMER-FORMS-01` (2026-07-08)
+**Status:** **ACTIVE — admin + conditional customer form mail; form loading UX; standard OC mails unchanged**
 
 | Item | Production value |
 |------|------------------|
-| **Form mail handler** | `catalog/controller/checkout/anketa.php` — `ZpmMailRenderer::renderAdminForm()` |
-| **Subject** | `ЗПМ: новая заявка — {dialog_label}` |
+| **Form mail handler** | `catalog/controller/checkout/anketa.php` — `renderAdminForm()` + conditional `renderCustomerFormConfirmation()` |
+| **Subject (admin)** | `ЗПМ: новая заявка — {dialog_label}` |
+| **Subject (customer)** | `ЗПМ: заявка получена — {dialog_label}` |
 | **Dialogs** | 1 product question · 2 callback · 3 price · 5 review · 7 dealers/wholesale |
-| **Frontend** | `zpm-form` → `POST checkout/anketa` via `main.js`; CSRF + reCAPTCHA v3 |
+| **Frontend** | `zpm-form` → `POST checkout/anketa` via `main.js`; CSRF + reCAPTCHA v3; **`zpm-form--loading`** + abort on modal close |
 | **Admin recipients** | `config_mail_alert_email` (Run 4.186/4.187) — unchanged |
+| **Customer recipient rule** | posted valid **email** OR logged-in customer account email; else skip (not error) |
 | **Service info in admin mail** | **active** — IP, UA, browser, device, OS, referrer, page URL, dialog, UTM, city=unknown |
-| **JSON response** | `ok: true` only after mail send attempt (Run 4.224 fix) |
-| **Customer form copy** | **not implemented** |
+| **Service info in customer mail** | **forbidden** |
+| **JSON response** | `ok: true` after admin send success; customer send failure does not break response |
 | **Standard OC mails** | `catalog/controller/mail/*` + `template/mail/*.twig` — **unchanged** |
-| **Staged roadmap** | ~~(1) admin forms~~ → (2) customer form copy → (3) account → (4) order → (5) polish |
-| **Next charter** | `SITE-002-PROD-MAIL-CUSTOMER-FORMS-01` |
-| **Report** | [SITE-002-PROD-MAIL-ADMIN-FORMS-01.md](../reports/SITE-002-PROD-MAIL-ADMIN-FORMS-01.md) |
-| **Inbox confirmation** | Run 4.225 — operator verified mailbox delivery/design/service info · [SITE-002-PROD-MAIL-ADMIN-FORMS-INBOX-CONFIRMATION-01.md](../reports/SITE-002-PROD-MAIL-ADMIN-FORMS-INBOX-CONFIRMATION-01.md) |
-| **Checkpoint** | [SITE-002-STABLE-PROD-MAIL-ADMIN-FORMS-01.md](../baselines/SITE-002-STABLE-PROD-MAIL-ADMIN-FORMS-01.md) |
-| **Storage** | `.../deployments/SITE-002-PROD-MAIL-ADMIN-FORMS-01\` |
+| **Staged roadmap** | ~~(1) admin forms~~ → ~~(2) customer form copy~~ → (3) account → (4) order → (5) polish |
+| **Next charter** | `SITE-002-PROD-MAIL-ACCOUNT-TRANSACTIONAL-01` |
+| **Report** | [SITE-002-PROD-MAIL-CUSTOMER-FORMS-01.md](../reports/SITE-002-PROD-MAIL-CUSTOMER-FORMS-01.md) |
+| **Checkpoint** | [SITE-002-STABLE-PROD-MAIL-CUSTOMER-FORMS-01.md](../baselines/SITE-002-STABLE-PROD-MAIL-CUSTOMER-FORMS-01.md) |
+| **Storage** | `.../deployments/SITE-002-PROD-MAIL-CUSTOMER-FORMS-01\` |
 
 **Change rules:** Mail redesign requires explicit charter per stage. Do not expose SMTP secrets. Admin service-info block is admin-only — never include IP/UA in customer-facing mail.
 
@@ -2047,23 +2049,24 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 ## 35. Mail Design System (Production — ACTIVE)
 
 **Operation:** Run 4.223 — `SITE-002-PROD-MAIL-DESIGN-SYSTEM-01` (2026-07-08)
-**Integration:** Run 4.224 — anketa admin forms · Run 4.225 — operator inbox confirmation
-**Status:** **ACTIVE** — renderer integrated for admin form mail; operator-verified
+**Integration:** Run 4.224 — anketa admin forms · Run 4.225 — operator inbox confirmation · Run 4.226 — customer confirmations + loading UX
+**Status:** **ACTIVE** — renderer integrated for admin + customer form mail
 
 | Item | Production value |
 |------|------------------|
 | **Renderer class** | `ZpmMailRenderer` |
 | **Remote path** | `/public_html/system/library/zpm/mail_renderer.php` |
-| **Live references** | `checkout/anketa.php` → `renderAdminForm()` |
+| **Live references** | `checkout/anketa.php` → `renderAdminForm()` + `renderCustomerFormConfirmation()` |
 | **Brand in templates** | **ЗПМ** (not БЗПМ) |
 | **Layout** | 600px table-based, inline CSS, plain text fallback |
 | **Admin mail** | service info block in `renderAdminForm()` |
-| **Customer preview** | `renderCustomerFormConfirmation()` — not wired to live triggers |
-| **Repo source** | [mail_renderer.php](../tools/mail_renderer.php) · [anketa patch](../tools/checkout_anketa_mail_admin_forms.php) · [orchestrator](../tools/site-002-prod-mail-admin-forms-01.py) |
-| **Checkpoint** | [SITE-002-STABLE-PROD-MAIL-ADMIN-FORMS-01.md](../baselines/SITE-002-STABLE-PROD-MAIL-ADMIN-FORMS-01.md) |
+| **Customer mail** | `renderCustomerFormConfirmation()` — contact fields + message; **no service info** |
+| **Form loading UX** | `assets/js/main.js` — global `zpmFormSetLoading` / `AbortController`; `assets/css/style.css` — `.zpm-form--loading` |
+| **Repo source** | [mail_renderer.php](../tools/mail_renderer.php) · [anketa patch](../tools/checkout_anketa_mail_customer_forms.php) · [orchestrator](../tools/site-002-prod-mail-customer-forms-01.py) |
+| **Checkpoint** | [SITE-002-STABLE-PROD-MAIL-CUSTOMER-FORMS-01.md](../baselines/SITE-002-STABLE-PROD-MAIL-CUSTOMER-FORMS-01.md) |
 
-**Change rules:** Renderer must remain send-free (render only). Customer copy integration requires `SITE-002-PROD-MAIL-CUSTOMER-FORMS-01` charter.
+**Change rules:** Renderer must remain send-free (render only). Account/order mail integration requires separate charters.
 
 ---
 
-*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-08 (Run 4.225 — admin form mail inbox confirmation; Run 4.224 operator-verified).*
+*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-08 (Run 4.226 — customer form confirmations + loading UX).*
