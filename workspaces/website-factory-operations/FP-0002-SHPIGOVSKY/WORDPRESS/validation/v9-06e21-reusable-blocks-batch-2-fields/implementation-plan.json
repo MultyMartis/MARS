@@ -1,0 +1,43 @@
+{
+  "wave": "V9-06E21",
+  "result": "PASS",
+  "admin_ia": {
+    "batch2_direct_children_under_site_settings": [
+      { "label": "Шапка", "slug": "fp02-block-header" },
+      { "label": "Подвал", "slug": "fp02-block-footer" },
+      { "label": "Герои", "slug": "fp02-block-hero-fallbacks" },
+      { "label": "Комфорт / преимущества", "slug": "fp02-block-comfort" }
+    ],
+    "reviews_alias_restore": false
+  },
+  "blocks": [
+    {
+      "block": "Шапка",
+      "fields": ["header_logo", "header_logo_asset", "header_callback_label"],
+      "seed_source": "THEME_ASSET_FALLBACK / CURRENT_OPTION",
+      "renderer": "template-parts/layout/header.php",
+      "safety": "PASS"
+    },
+    {
+      "block": "Подвал",
+      "fields": ["footer_logo", "footer_logo_asset", "footer_copyright_suffix", "footer_credit_text", "footer_credit_url", "footer_callback_label", "footer_appointment_label"],
+      "seed_source": "CURRENT_HARDCODED / CURRENT_OPTION",
+      "renderer": "template-parts/layout/footer.php",
+      "safety": "PASS"
+    },
+    {
+      "block": "Герои",
+      "fields": ["hero_fallback_{context}_image", "hero_fallback_{context}_asset"],
+      "seed_source": "THEME_ASSET_FALLBACK",
+      "renderer": "inc/hero-helpers.php",
+      "safety": "PASS"
+    },
+    {
+      "block": "Комфорт / преимущества",
+      "fields": ["comfort_*", "rehab_requirements_*", "comfort_gallery_items repeater"],
+      "seed_source": "V9_STATIC / THEME_ASSET_FALLBACK",
+      "renderer": "template-parts/home/comfort.php, rehabilitation-requirements.php",
+      "safety": "PASS"
+    }
+  ]
+}

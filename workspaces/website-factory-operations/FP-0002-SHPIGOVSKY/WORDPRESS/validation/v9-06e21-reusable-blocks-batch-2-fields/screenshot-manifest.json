@@ -1,0 +1,26 @@
+{
+  "wave": "V9-06E21",
+  "result": "PARTIAL",
+  "frontend_screenshots": [
+    { "file": "runtime-home-header-e21.png", "captured": false, "result": "PARTIAL", "notes": "Playwright unavailable in validation environment; HTTP marker validation PASS" },
+    { "file": "runtime-home-hero-e21.png", "captured": false, "result": "PARTIAL", "notes": "Playwright unavailable" },
+    { "file": "runtime-home-comfort-or-benefits-e21.png", "captured": false, "result": "PARTIAL", "notes": "Playwright unavailable" },
+    { "file": "runtime-home-footer-e21.png", "captured": false, "result": "PARTIAL", "notes": "Playwright unavailable" },
+    { "file": "runtime-uslugi-header-footer-e21.png", "captured": false, "result": "PARTIAL", "notes": "Playwright unavailable" },
+    { "file": "runtime-zavisimosti-hero-and-shared-blocks-e21.png", "captured": false, "result": "PARTIAL", "notes": "Playwright unavailable" },
+    { "file": "runtime-alcohol-hero-and-footer-e21.png", "captured": false, "result": "PARTIAL", "notes": "Playwright unavailable" },
+    { "file": "runtime-contacts-header-footer-e21.png", "captured": false, "result": "PARTIAL", "notes": "Playwright unavailable" },
+    { "file": "runtime-otzyvy-regression-e21.png", "captured": false, "result": "PARTIAL", "notes": "Playwright unavailable" },
+    { "file": "runtime-privacy-legal-footer-e21.png", "captured": false, "result": "PARTIAL", "notes": "Playwright unavailable" }
+  ],
+  "admin_screenshots": [
+    { "file": "admin-site-settings-menu-e21.png", "captured": false, "result": "PARTIAL", "notes": "No authenticated admin session in agent environment" },
+    { "file": "admin-header-fields-e21.png", "captured": false, "result": "PARTIAL" },
+    { "file": "admin-footer-fields-e21.png", "captured": false, "result": "PARTIAL" },
+    { "file": "admin-heroes-fields-e21.png", "captured": false, "result": "PARTIAL" },
+    { "file": "admin-comfort-benefits-fields-e21.png", "captured": false, "result": "PARTIAL" },
+    { "file": "admin-no-reviews-alias-e21.png", "captured": false, "result": "PARTIAL" },
+    { "file": "admin-top-level-reviews-preserved-e21.png", "captured": false, "result": "PARTIAL" },
+    { "file": "admin-batch1-regression-e21.png", "captured": false, "result": "PARTIAL" }
+  ]
+}

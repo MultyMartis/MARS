@@ -1,0 +1,22 @@
+{
+    "wave": "V9-06E21",
+    "result": "PARTIAL",
+    "checks": {
+        "no_reviews_under_site_settings": true,
+        "top_level_reviews_slug": "fp02-reviews",
+        "batch2_slugs": [
+            "fp02-block-header",
+            "fp02-block-footer",
+            "fp02-block-hero-fallbacks",
+            "fp02-block-comfort"
+        ],
+        "acf_groups": {
+            "group_fp02_block_header": "PASS",
+            "group_fp02_block_footer": "PASS",
+            "group_fp02_block_hero_fallbacks": "PASS",
+            "group_fp02_block_comfort": "PASS"
+        },
+        "admin_screenshots": "PARTIAL",
+        "notes": "CLI context: wp admin submenu not populated; slugs verified via OptionsPage source + ACF group registration."
+    }
+}

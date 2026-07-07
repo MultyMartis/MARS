@@ -1,0 +1,35 @@
+{
+    "wave": "V9-06E21",
+    "result": "PASS",
+    "items": [
+        {
+            "block": "Шапка",
+            "consumers": [
+                "template-parts/layout/header.php"
+            ],
+            "result": "PASS"
+        },
+        {
+            "block": "Подвал",
+            "consumers": [
+                "template-parts/layout/footer.php"
+            ],
+            "result": "PASS"
+        },
+        {
+            "block": "Герои",
+            "consumers": [
+                "inc/hero-helpers.php"
+            ],
+            "result": "PASS"
+        },
+        {
+            "block": "Комфорт / преимущества",
+            "consumers": [
+                "template-parts/home/comfort.php",
+                "template-parts/home/rehabilitation-requirements.php"
+            ],
+            "result": "PASS"
+        }
+    ]
+}

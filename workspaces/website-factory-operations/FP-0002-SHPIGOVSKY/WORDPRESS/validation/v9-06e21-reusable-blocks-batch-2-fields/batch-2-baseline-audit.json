@@ -1,0 +1,39 @@
+{
+  "wave": "V9-06E21",
+  "result": "PASS",
+  "blocks": [
+    {
+      "block_id": "rb-header-chrome",
+      "name_ru": "Шапка",
+      "current_source": "ACF option (Общие настройки: phones, address, hours, social_links) + hardcoded logo.svg + WP nav menu",
+      "editable_before": "PARTIAL",
+      "risk": "MEDIUM",
+      "notes": "WP_NAV_MENU_AUTHORITY for primary nav; Batch 2 adds header_logo, header_callback_label override"
+    },
+    {
+      "block_id": "rb-footer-chrome",
+      "name_ru": "Подвал",
+      "current_source": "ACF general options + hardcoded footer fallbacks + wp_nav_menu (footer_services, footer_o_centre, legal)",
+      "editable_before": "PARTIAL",
+      "risk": "MEDIUM",
+      "notes": "Legal menu targets unchanged; Batch 2 adds copyright/credit/logo/footer CTA label overrides"
+    },
+    {
+      "block_id": "rb-hero-fallbacks",
+      "name_ru": "Герои / fallback-изображения",
+      "current_source": "page/service hero_media ACF + theme asset fallbacks in hero-helpers registry",
+      "editable_before": "PARTIAL",
+      "risk": "HIGH",
+      "notes": "Page-local hero fields preserved; global fallback map only"
+    },
+    {
+      "block_id": "rb-comfort-gallery",
+      "name_ru": "Комфорт / преимущества",
+      "current_source": "hardcoded comfort.php + rehabilitation-requirements.php + V9 assets",
+      "editable_before": "NO",
+      "risk": "MEDIUM",
+      "notes": "home_advantages remains page-local on front page; Batch 2 covers comfort gallery + rehab requirements shared block"
+    }
+  ],
+  "additional_shared_cta_bands": "Excluded — already Batch 1 CTA-блоки (fp02-block-cta-bands)"
+}

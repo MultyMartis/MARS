@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$logo_url            = shpigovsky_asset_uri( 'img/branding/logo.svg' );
+$logo_url            = shpigovsky_get_footer_logo_url();
 $brand_label         = shpigovsky_brand_label();
 $phone_primary       = shpigovsky_format_phone_display( shpigovsky_get_site_option( 'phone_primary' ) );
 $phone_secondary     = shpigovsky_format_phone_display( shpigovsky_get_site_option( 'phone_secondary' ) );
@@ -38,8 +38,11 @@ if ( empty( $schedule_lines ) ) {
 	$schedule_lines = array( 'пн-пт 09:00-19:00,', 'сб-вс 09:00-20:00' );
 }
 
-$callback_label    = shpigovsky_chrome_label_or_fallback( 'default_callback_title', __( 'Заказать звонок', 'shpigovsky' ) );
-$appointment_label = shpigovsky_chrome_label_or_fallback( 'default_secondary_button_label', __( 'Записаться', 'shpigovsky' ) );
+$callback_label    = shpigovsky_get_footer_callback_label();
+$appointment_label = shpigovsky_get_footer_appointment_label();
+$footer_credit_url = shpigovsky_get_footer_credit_url();
+$footer_credit_text = shpigovsky_get_footer_credit_text();
+$footer_copyright_suffix = shpigovsky_get_footer_copyright_suffix();
 ?>
 <footer class="site-footer" data-reveal role="contentinfo">
 	<div class="container">
@@ -142,8 +145,14 @@ $appointment_label = shpigovsky_chrome_label_or_fallback( 'default_secondary_but
 			</nav>
 		</div>
 		<div class="site-footer__legal">
-			<p class="site-footer__copyright">&copy; <?php echo esc_html( gmdate( 'Y' ) ); ?> <?php esc_html_e( 'Все права защищены.', 'shpigovsky' ); ?></p>
-			<p class="site-footer__credit"><?php esc_html_e( 'Разработка и продвижение: Overseo', 'shpigovsky' ); ?></p>
+			<p class="site-footer__copyright">&copy; <?php echo esc_html( gmdate( 'Y' ) ); ?> <?php echo esc_html( $footer_copyright_suffix ); ?></p>
+			<p class="site-footer__credit">
+				<?php if ( '' !== $footer_credit_url ) : ?>
+					<a href="<?php echo esc_url( $footer_credit_url ); ?>"><?php echo esc_html( $footer_credit_text ); ?></a>
+				<?php else : ?>
+					<?php echo esc_html( $footer_credit_text ); ?>
+				<?php endif; ?>
+			</p>
 		</div>
 	</div>
 </footer>

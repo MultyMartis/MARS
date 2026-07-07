@@ -376,3 +376,704 @@ function shpigovsky_get_cta_band_default_button_label( $static_fallback = '' ) {
 
 	return shpigovsky_chrome_label_or_fallback( 'default_button_label', $static_fallback );
 }
+
+/**
+ * ACF options context for header block admin.
+ */
+function shpigovsky_get_header_block_context() {
+	return 'fp02-block-header';
+}
+
+/**
+ * ACF options context for footer block admin.
+ */
+function shpigovsky_get_footer_block_context() {
+	return 'fp02-block-footer';
+}
+
+/**
+ * ACF options context for hero fallbacks block admin.
+ */
+function shpigovsky_get_hero_fallbacks_block_context() {
+	return 'fp02-block-hero-fallbacks';
+}
+
+/**
+ * ACF options context for comfort / benefits block admin.
+ */
+function shpigovsky_get_comfort_block_context() {
+	return 'fp02-block-comfort';
+}
+
+/**
+ * Resolve header logo URL with block → theme asset fallback.
+ *
+ * @return string
+ */
+function shpigovsky_get_header_logo_url() {
+	$context = shpigovsky_get_header_block_context();
+
+	if ( function_exists( 'get_field' ) ) {
+		$media = get_field( 'header_logo', $context );
+		$url   = shpigovsky_acf_image_url( $media );
+
+		if ( '' !== $url ) {
+			return $url;
+		}
+	}
+
+	$asset = shpigovsky_get_block_option_scalar( 'header_logo_asset', $context );
+
+	if ( '' === $asset ) {
+		$asset = 'img/branding/logo.svg';
+	}
+
+	return shpigovsky_asset_uri( $asset );
+}
+
+/**
+ * Resolve header callback button label.
+ *
+ * @param string $static_fallback Static fallback label.
+ * @return string
+ */
+function shpigovsky_get_header_callback_label( $static_fallback = '' ) {
+	$block = shpigovsky_get_block_option_scalar( 'header_callback_label', shpigovsky_get_header_block_context() );
+
+	if ( '' !== $block ) {
+		return $block;
+	}
+
+	if ( '' === $static_fallback ) {
+		$static_fallback = __( 'Заказать звонок', 'shpigovsky' );
+	}
+
+	return shpigovsky_chrome_label_or_fallback( 'default_button_label', $static_fallback );
+}
+
+/**
+ * Resolve footer logo URL with block → theme asset fallback.
+ *
+ * @return string
+ */
+function shpigovsky_get_footer_logo_url() {
+	$context = shpigovsky_get_footer_block_context();
+
+	if ( function_exists( 'get_field' ) ) {
+		$media = get_field( 'footer_logo', $context );
+		$url   = shpigovsky_acf_image_url( $media );
+
+		if ( '' !== $url ) {
+			return $url;
+		}
+	}
+
+	$asset = shpigovsky_get_block_option_scalar( 'footer_logo_asset', $context );
+
+	if ( '' === $asset ) {
+		$asset = 'img/branding/logo.svg';
+	}
+
+	return shpigovsky_asset_uri( $asset );
+}
+
+/**
+ * Resolve footer copyright suffix text.
+ *
+ * @param string $static_fallback Static fallback suffix.
+ * @return string
+ */
+function shpigovsky_get_footer_copyright_suffix( $static_fallback = 'Все права защищены.' ) {
+	$block = shpigovsky_get_block_option_scalar( 'footer_copyright_suffix', shpigovsky_get_footer_block_context() );
+
+	return '' !== $block ? $block : $static_fallback;
+}
+
+/**
+ * Resolve footer developer credit text.
+ *
+ * @param string $static_fallback Static fallback credit.
+ * @return string
+ */
+function shpigovsky_get_footer_credit_text( $static_fallback = 'Разработка и продвижение: Overseo' ) {
+	$block = shpigovsky_get_block_option_scalar( 'footer_credit_text', shpigovsky_get_footer_block_context() );
+
+	return '' !== $block ? $block : $static_fallback;
+}
+
+/**
+ * Resolve footer developer credit URL.
+ *
+ * @return string
+ */
+function shpigovsky_get_footer_credit_url() {
+	return shpigovsky_get_block_option_scalar( 'footer_credit_url', shpigovsky_get_footer_block_context() );
+}
+
+/**
+ * Resolve footer callback button label.
+ *
+ * @param string $static_fallback Static fallback label.
+ * @return string
+ */
+function shpigovsky_get_footer_callback_label( $static_fallback = '' ) {
+	$block = shpigovsky_get_block_option_scalar( 'footer_callback_label', shpigovsky_get_footer_block_context() );
+
+	if ( '' !== $block ) {
+		return $block;
+	}
+
+	if ( '' === $static_fallback ) {
+		$static_fallback = __( 'Заказать звонок', 'shpigovsky' );
+	}
+
+	return shpigovsky_chrome_label_or_fallback( 'default_callback_title', $static_fallback );
+}
+
+/**
+ * Resolve footer appointment button label.
+ *
+ * @param string $static_fallback Static fallback label.
+ * @return string
+ */
+function shpigovsky_get_footer_appointment_label( $static_fallback = '' ) {
+	$block = shpigovsky_get_block_option_scalar( 'footer_appointment_label', shpigovsky_get_footer_block_context() );
+
+	if ( '' !== $block ) {
+		return $block;
+	}
+
+	if ( '' === $static_fallback ) {
+		$static_fallback = __( 'Записаться', 'shpigovsky' );
+	}
+
+	return shpigovsky_chrome_label_or_fallback( 'default_secondary_button_label', $static_fallback );
+}
+
+/**
+ * Resolve global hero fallback image from block options.
+ *
+ * @param string $context_key Hero context registry key.
+ * @return array{url:string,alt:string,width:int,height:int}|null
+ */
+function shpigovsky_get_block_hero_fallback_image( $context_key ) {
+	if ( ! function_exists( 'get_field' ) ) {
+		return null;
+	}
+
+	$context   = shpigovsky_get_hero_fallbacks_block_context();
+	$image     = get_field( 'hero_fallback_' . $context_key . '_image', $context );
+	$media_url = shpigovsky_acf_image_url( $image );
+
+	if ( '' !== $media_url ) {
+		$width  = 0;
+		$height = 0;
+		$alt    = shpigovsky_acf_image_alt( $image );
+
+		if ( is_array( $image ) ) {
+			$width  = ! empty( $image['width'] ) ? (int) $image['width'] : 0;
+			$height = ! empty( $image['height'] ) ? (int) $image['height'] : 0;
+		}
+
+		$registry = shpigovsky_get_hero_context_registry();
+
+		if ( ( $width <= 0 || $height <= 0 ) && isset( $registry[ $context_key ] ) ) {
+			$width  = (int) $registry[ $context_key ]['fallback_width'];
+			$height = (int) $registry[ $context_key ]['fallback_height'];
+		}
+
+		if ( '' === $alt && isset( $registry[ $context_key ] ) ) {
+			$alt = (string) $registry[ $context_key ]['fallback_alt'];
+		}
+
+		return array(
+			'url'    => $media_url,
+			'alt'    => $alt,
+			'width'  => $width,
+			'height' => $height,
+		);
+	}
+
+	$asset = shpigovsky_get_block_option_scalar( 'hero_fallback_' . $context_key . '_asset', $context );
+
+	if ( '' !== $asset ) {
+		$registry = shpigovsky_get_hero_context_registry();
+		$path     = SHPIGOVSKY_THEME_DIR . '/assets/' . ltrim( $asset, '/' );
+
+		if ( is_readable( $path ) ) {
+			return array(
+				'url'    => shpigovsky_asset_uri( $asset ),
+				'alt'    => isset( $registry[ $context_key ] ) ? (string) $registry[ $context_key ]['fallback_alt'] : '',
+				'width'  => isset( $registry[ $context_key ] ) ? (int) $registry[ $context_key ]['fallback_width'] : 0,
+				'height' => isset( $registry[ $context_key ] ) ? (int) $registry[ $context_key ]['fallback_height'] : 0,
+			);
+		}
+	}
+
+	return null;
+}
+
+/**
+ * Resolve comfort section heading.
+ *
+ * @param string $static_fallback Static fallback heading.
+ * @return string
+ */
+function shpigovsky_get_comfort_heading( $static_fallback = 'Комфорт, приватность, забота' ) {
+	$block = shpigovsky_get_block_option_scalar( 'comfort_heading', shpigovsky_get_comfort_block_context() );
+
+	if ( '' !== $block ) {
+		return $block;
+	}
+
+	return shpigovsky_home_text_or_fallback( 'home_comfort_heading', $static_fallback );
+}
+
+/**
+ * Resolve comfort section lead.
+ *
+ * @param string $static_fallback Static fallback lead.
+ * @return string
+ */
+function shpigovsky_get_comfort_lead( $static_fallback = '' ) {
+	$block = shpigovsky_get_block_option_scalar( 'comfort_lead', shpigovsky_get_comfort_block_context() );
+
+	if ( '' !== $block ) {
+		return $block;
+	}
+
+	if ( '' === $static_fallback ) {
+		$static_fallback = 'Разговор&nbsp;— это уже первый шаг. Мы расскажем, что можем предложить именно вам или вашему близкому&nbsp;— без давления и&nbsp;без шаблонных ответов.';
+	}
+
+	return shpigovsky_home_text_or_fallback( 'home_comfort_lead', $static_fallback );
+}
+
+/**
+ * Resolve comfort all-link label.
+ *
+ * @param string $static_fallback Static fallback label.
+ * @return string
+ */
+function shpigovsky_get_comfort_all_link_label( $static_fallback = 'подробнее о&nbsp;доме' ) {
+	$block = shpigovsky_get_block_option_scalar( 'comfort_all_link_label', shpigovsky_get_comfort_block_context() );
+
+	return '' !== $block ? $block : $static_fallback;
+}
+
+/**
+ * Resolve comfort all-link URL.
+ *
+ * @param string $static_fallback Static fallback URL.
+ * @return string
+ */
+function shpigovsky_get_comfort_all_link_url( $static_fallback = '' ) {
+	$block = shpigovsky_get_block_option_scalar( 'comfort_all_link_url', shpigovsky_get_comfort_block_context() );
+
+	if ( '' !== $block ) {
+		return $block;
+	}
+
+	if ( '' === $static_fallback ) {
+		$static_fallback = home_url( '/o-centre/galereya-o-dome/' );
+	}
+
+	return $static_fallback;
+}
+
+/**
+ * Default comfort gallery rows from V9 static assets.
+ *
+ * @return array<int, array<string, mixed>>
+ */
+function shpigovsky_get_comfort_gallery_static_rows() {
+	return array(
+		array(
+			'gallery_image_asset'    => 'img/branding/logo.svg',
+			'gallery_is_decor'         => true,
+			'gallery_is_wide'          => false,
+			'gallery_fancybox_enabled' => false,
+			'gallery_image_width'      => 0,
+			'gallery_image_height'     => 0,
+		),
+		array(
+			'gallery_image_asset'    => 'img/content/home-comfort/comfort-room-01.webp',
+			'gallery_is_decor'         => false,
+			'gallery_is_wide'          => true,
+			'gallery_fancybox_enabled' => true,
+			'gallery_image_width'      => 1957,
+			'gallery_image_height'     => 1113,
+		),
+		array(
+			'gallery_image_asset'    => 'img/content/home-comfort/comfort-room-02.webp',
+			'gallery_fancybox_enabled' => true,
+			'gallery_image_width'      => 1881,
+			'gallery_image_height'     => 1246,
+		),
+		array(
+			'gallery_image_asset'    => 'img/content/home-comfort/comfort-room-03.webp',
+			'gallery_fancybox_enabled' => true,
+			'gallery_image_width'      => 1623,
+			'gallery_image_height'     => 1155,
+		),
+		array(
+			'gallery_image_asset'    => 'img/content/home-comfort/comfort-room-04.webp',
+			'gallery_fancybox_enabled' => true,
+			'gallery_image_width'      => 1610,
+			'gallery_image_height'     => 1146,
+		),
+		array(
+			'gallery_image_asset'    => 'img/content/home-comfort/comfort-room-05.webp',
+			'gallery_fancybox_enabled' => true,
+			'gallery_image_width'      => 1276,
+			'gallery_image_height'     => 1136,
+		),
+		array(
+			'gallery_image_asset'    => 'img/content/home-comfort/comfort-room-06.webp',
+			'gallery_is_wide'          => true,
+			'gallery_fancybox_enabled' => true,
+			'gallery_image_width'      => 2201,
+			'gallery_image_height'     => 1227,
+		),
+	);
+}
+
+/**
+ * Normalize one comfort gallery row for rendering.
+ *
+ * @param array<string, mixed> $row          ACF row.
+ * @param array<string, mixed> $fallback_row Static fallback row.
+ * @return array<string, mixed>|null
+ */
+function shpigovsky_normalize_comfort_gallery_row( $row, $fallback_row ) {
+	if ( ! is_array( $row ) ) {
+		return null;
+	}
+
+	$media     = isset( $row['gallery_image'] ) ? $row['gallery_image'] : null;
+	$media_url = shpigovsky_acf_image_url( $media );
+	$asset     = isset( $row['gallery_image_asset'] ) ? trim( (string) $row['gallery_image_asset'] ) : '';
+	$url       = $media_url;
+
+	if ( '' === $url && '' !== $asset ) {
+		$url = shpigovsky_asset_uri( $asset );
+	} elseif ( '' === $url && is_array( $fallback_row ) && ! empty( $fallback_row['gallery_image_asset'] ) ) {
+		$url = shpigovsky_asset_uri( (string) $fallback_row['gallery_image_asset'] );
+	}
+
+	if ( '' === $url ) {
+		return null;
+	}
+
+	$width  = isset( $row['gallery_image_width'] ) ? (int) $row['gallery_image_width'] : 0;
+	$height = isset( $row['gallery_image_height'] ) ? (int) $row['gallery_image_height'] : 0;
+
+	if ( $width <= 0 && is_array( $fallback_row ) ) {
+		$width = isset( $fallback_row['gallery_image_width'] ) ? (int) $fallback_row['gallery_image_width'] : 0;
+	}
+
+	if ( $height <= 0 && is_array( $fallback_row ) ) {
+		$height = isset( $fallback_row['gallery_image_height'] ) ? (int) $fallback_row['gallery_image_height'] : 0;
+	}
+
+	$is_decor = ! empty( $row['gallery_is_decor'] );
+	if ( ! $is_decor && is_array( $fallback_row ) ) {
+		$is_decor = ! empty( $fallback_row['gallery_is_decor'] );
+	}
+
+	$is_wide = ! empty( $row['gallery_is_wide'] );
+	if ( ! $is_wide && is_array( $fallback_row ) ) {
+		$is_wide = ! empty( $fallback_row['gallery_is_wide'] );
+	}
+
+	$fancybox = array_key_exists( 'gallery_fancybox_enabled', $row ) ? ! empty( $row['gallery_fancybox_enabled'] ) : null;
+	if ( null === $fancybox && is_array( $fallback_row ) ) {
+		$fancybox = ! empty( $fallback_row['gallery_fancybox_enabled'] );
+	}
+	if ( null === $fancybox ) {
+		$fancybox = ! $is_decor;
+	}
+
+	return array(
+		'url'      => $url,
+		'width'    => $width,
+		'height'   => $height,
+		'is_decor' => $is_decor,
+		'is_wide'  => $is_wide,
+		'fancybox' => $fancybox,
+	);
+}
+
+/**
+ * Resolve comfort gallery items for rendering.
+ *
+ * @return array<int, array<string, mixed>>
+ */
+function shpigovsky_get_comfort_gallery_items() {
+	$fallback = shpigovsky_get_comfort_gallery_static_rows();
+	$rows     = array();
+
+	if ( function_exists( 'get_field' ) ) {
+		$candidate = get_field( 'comfort_gallery_items', shpigovsky_get_comfort_block_context() );
+
+		if ( is_array( $candidate ) && ! empty( $candidate ) ) {
+			$rows = $candidate;
+		}
+	}
+
+	if ( empty( $rows ) ) {
+		$rows = $fallback;
+	}
+
+	$items = array();
+
+	foreach ( $rows as $index => $row ) {
+		$fallback_row = isset( $fallback[ $index ] ) ? $fallback[ $index ] : ( ! empty( $fallback ) ? $fallback[0] : array() );
+		$item         = shpigovsky_normalize_comfort_gallery_row( $row, $fallback_row );
+
+		if ( null !== $item ) {
+			$items[] = $item;
+		}
+	}
+
+	if ( ! empty( $items ) ) {
+		return $items;
+	}
+
+	$mapped = array();
+
+	foreach ( $fallback as $fallback_row ) {
+		$mapped[] = shpigovsky_normalize_comfort_gallery_row( $fallback_row, $fallback_row );
+	}
+
+	return $mapped;
+}
+
+/**
+ * Default rehabilitation requirements steps from V9 static.
+ *
+ * @return array<int, array{title:string,text:string}>
+ */
+function shpigovsky_get_rehab_requirements_static_steps() {
+	return array(
+		array(
+			'title' => 'Связаться с нами',
+			'text'  => 'Расскажите нам о своей ситуации — в удобном для вас формате и в удобное время. Первый разговор ни к чему не обязывает, но часто становится началом перемен.',
+		),
+		array(
+			'title' => 'Определить цели и программу',
+			'text'  => 'Вместе со специалистами центра мы разберёмся, что именно происходит, и составим программу, которая отвечает вашей ситуации.',
+		),
+		array(
+			'title' => 'Выбрать категорию номера, период стационарного проживания',
+			'text'  => 'Комфорт среды — часть восстановления. Мы подберём условия проживания, которые подойдут именно вам, и согласуем удобные сроки.',
+		),
+		array(
+			'title' => 'Начать реабилитацию и лечение',
+			'text'  => 'С первого дня рядом с вами будет команда специалистов. Здесь начинается то, ради чего вы пришли. Мы с вами — шаг за шагом, в вашем темпе.',
+		),
+	);
+}
+
+/**
+ * Resolve rehabilitation requirements block scalar with block → static fallback.
+ *
+ * @param string $field_name      Block field name.
+ * @param string $static_fallback Static fallback.
+ * @return string
+ */
+function shpigovsky_get_rehab_requirements_scalar( $field_name, $static_fallback ) {
+	$block = shpigovsky_get_block_option_scalar( $field_name, shpigovsky_get_comfort_block_context() );
+
+	return '' !== $block ? $block : $static_fallback;
+}
+
+/**
+ * Resolve rehabilitation requirements steps.
+ *
+ * @return array<int, array{title:string,text:string}>
+ */
+function shpigovsky_get_rehab_requirements_steps() {
+	$fallback = shpigovsky_get_rehab_requirements_static_steps();
+	$rows     = array();
+
+	if ( function_exists( 'get_field' ) ) {
+		$candidate = get_field( 'rehab_requirements_steps', shpigovsky_get_comfort_block_context() );
+
+		if ( is_array( $candidate ) && ! empty( $candidate ) ) {
+			$rows = $candidate;
+		}
+	}
+
+	if ( empty( $rows ) ) {
+		return $fallback;
+	}
+
+	$steps = array();
+
+	foreach ( $rows as $index => $row ) {
+		if ( ! is_array( $row ) ) {
+			continue;
+		}
+
+		$title = isset( $row['step_title'] ) ? trim( (string) $row['step_title'] ) : '';
+		$text  = isset( $row['step_text'] ) ? trim( (string) $row['step_text'] ) : '';
+
+		if ( '' === $title && isset( $fallback[ $index ]['title'] ) ) {
+			$title = (string) $fallback[ $index ]['title'];
+		}
+
+		if ( '' === $text && isset( $fallback[ $index ]['text'] ) ) {
+			$text = (string) $fallback[ $index ]['text'];
+		}
+
+		if ( '' === $title && '' === $text ) {
+			continue;
+		}
+
+		$steps[] = array(
+			'title' => $title,
+			'text'  => $text,
+		);
+	}
+
+	return ! empty( $steps ) ? $steps : $fallback;
+}
+
+/**
+ * Resolve rehabilitation requirements support items.
+ *
+ * @return string[]
+ */
+function shpigovsky_get_rehab_requirements_support_items() {
+	$fallback = array(
+		'Интервенция на лечение — мотивация вас или ваших близких;',
+		'Круглосуточная поддержка психологов — в любое время будет оказана помощь;',
+		'Занятия в мини-группах — эффективная работа с каждым;',
+		'По договоренности, возможность удалённой работы в условиях стационара.',
+	);
+
+	$rows = array();
+
+	if ( function_exists( 'get_field' ) ) {
+		$candidate = get_field( 'rehab_requirements_support_items', shpigovsky_get_comfort_block_context() );
+
+		if ( is_array( $candidate ) && ! empty( $candidate ) ) {
+			$rows = $candidate;
+		}
+	}
+
+	if ( empty( $rows ) ) {
+		return $fallback;
+	}
+
+	$items = array();
+
+	foreach ( $rows as $index => $row ) {
+		$text = '';
+
+		if ( is_array( $row ) ) {
+			$text = isset( $row['item_text'] ) ? trim( (string) $row['item_text'] ) : '';
+		}
+
+		if ( '' === $text && isset( $fallback[ $index ] ) ) {
+			$text = (string) $fallback[ $index ];
+		}
+
+		if ( '' !== $text ) {
+			$items[] = $text;
+		}
+	}
+
+	return ! empty( $items ) ? $items : $fallback;
+}
+
+/**
+ * Resolve rehabilitation requirements photo descriptor.
+ *
+ * @return array{url:string,alt:string,width:int,height:int}
+ */
+function shpigovsky_get_rehab_requirements_photo() {
+	$context  = shpigovsky_get_comfort_block_context();
+	$fallback = array(
+		'url'    => shpigovsky_asset_uri( 'img/content/rehabilitation-requirements/shpigovsky-interior-corridor.webp' ),
+		'alt'    => 'Интерьер клиники — коридор с картинами',
+		'width'  => 2187,
+		'height' => 1231,
+	);
+
+	if ( function_exists( 'get_field' ) ) {
+		$media = get_field( 'rehab_requirements_photo', $context );
+		$url   = shpigovsky_acf_image_url( $media );
+
+		if ( '' !== $url ) {
+			$alt_field = shpigovsky_get_block_option_scalar( 'rehab_requirements_photo_alt', $context );
+			$alt       = '' !== $alt_field ? $alt_field : shpigovsky_acf_image_alt( $media );
+			if ( '' === $alt ) {
+				$alt = $fallback['alt'];
+			}
+
+			$width_field  = (int) shpigovsky_get_block_option_scalar( 'rehab_requirements_photo_width', $context );
+			$height_field = (int) shpigovsky_get_block_option_scalar( 'rehab_requirements_photo_height', $context );
+
+			return array(
+				'url'    => $url,
+				'alt'    => $alt,
+				'width'  => $width_field > 0 ? $width_field : ( is_array( $media ) && ! empty( $media['width'] ) ? (int) $media['width'] : $fallback['width'] ),
+				'height' => $height_field > 0 ? $height_field : ( is_array( $media ) && ! empty( $media['height'] ) ? (int) $media['height'] : $fallback['height'] ),
+			);
+		}
+	}
+
+	$asset = shpigovsky_get_block_option_scalar( 'rehab_requirements_photo_asset', $context );
+
+	if ( '' !== $asset ) {
+		$width_field  = (int) shpigovsky_get_block_option_scalar( 'rehab_requirements_photo_width', $context );
+		$height_field = (int) shpigovsky_get_block_option_scalar( 'rehab_requirements_photo_height', $context );
+
+		return array(
+			'url'    => shpigovsky_asset_uri( $asset ),
+			'alt'    => shpigovsky_get_rehab_requirements_scalar( 'rehab_requirements_photo_alt', $fallback['alt'] ),
+			'width'  => $width_field > 0 ? $width_field : $fallback['width'],
+			'height' => $height_field > 0 ? $height_field : $fallback['height'],
+		);
+	}
+
+	$width_field  = (int) shpigovsky_get_block_option_scalar( 'rehab_requirements_photo_width', $context );
+	$height_field = (int) shpigovsky_get_block_option_scalar( 'rehab_requirements_photo_height', $context );
+
+	return array(
+		'url'    => $fallback['url'],
+		'alt'    => shpigovsky_get_rehab_requirements_scalar( 'rehab_requirements_photo_alt', $fallback['alt'] ),
+		'width'  => $width_field > 0 ? $width_field : $fallback['width'],
+		'height' => $height_field > 0 ? $height_field : $fallback['height'],
+	);
+}
+
+/**
+ * Resolve rehabilitation requirements CTA phone display and href.
+ *
+ * @return array{display:string,href:string}
+ */
+function shpigovsky_get_rehab_requirements_cta_phone() {
+	$display = shpigovsky_get_rehab_requirements_scalar( 'rehab_requirements_cta_phone', '' );
+
+	if ( '' === $display ) {
+		$display = shpigovsky_format_phone_display( shpigovsky_get_site_option( 'phone_primary' ) );
+	}
+
+	if ( '' === $display ) {
+		$display = '8 (925) 183-64-64';
+	}
+
+	$href = shpigovsky_phone_href( $display );
+
+	if ( '' === $href ) {
+		$href = 'tel:+79251836464';
+	}
+
+	return array(
+		'display' => $display,
+		'href'    => $href,
+	);
+}

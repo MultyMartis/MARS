@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$logo_url      = shpigovsky_asset_uri( 'img/branding/logo.svg' );
+$logo_url      = shpigovsky_get_header_logo_url();
 $brand_label   = shpigovsky_brand_label();
 $phone_primary = shpigovsky_format_phone_display( shpigovsky_get_site_option( 'phone_primary' ) );
 $phone_secondary = shpigovsky_format_phone_display( shpigovsky_get_site_option( 'phone_secondary' ) );
@@ -17,8 +17,7 @@ $phone_primary_href = shpigovsky_phone_href( $phone_primary );
 $phone_secondary_href = shpigovsky_phone_href( $phone_secondary );
 $address_lines = shpigovsky_split_option_lines( shpigovsky_get_site_option( 'site_address' ) );
 $schedule_lines = shpigovsky_split_option_lines( shpigovsky_get_site_option( 'opening_hours' ) );
-$callback_label = shpigovsky_get_site_option( 'default_button_label' );
-$callback_label = '' !== $callback_label ? $callback_label : __( 'Заказать звонок', 'shpigovsky' );
+$callback_label = shpigovsky_get_header_callback_label();
 
 if ( is_front_page() ) {
 	echo '<div class="intro-section">' . "\n"; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped

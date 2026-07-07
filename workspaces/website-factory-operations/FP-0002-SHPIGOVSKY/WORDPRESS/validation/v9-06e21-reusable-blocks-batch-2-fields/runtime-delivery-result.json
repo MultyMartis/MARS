@@ -1,0 +1,104 @@
+{
+    "wave": "V9-06E21",
+    "validation_type": "RUNTIME_DELIVERY",
+    "result": "PASS",
+    "runtime_root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky",
+    "files": [
+        {
+            "source": "WORDPRESS/plugins/shpigovsky-core/src/Admin/OptionsPage.php",
+            "runtime": "wp-content/plugins/shpigovsky-core/src/Admin/OptionsPage.php",
+            "sha256_before": "5D29AA9D94A149428CD02A9038B30CA390E98D1E34DB9362CB56E5F72BE07CDF",
+            "sha256_after": "5D29AA9D94A149428CD02A9038B30CA390E98D1E34DB9362CB56E5F72BE07CDF",
+            "delivered": true,
+            "result": "PASS"
+        },
+        {
+            "source": "WORDPRESS/plugins/shpigovsky-core/src/Fields/FieldGroups.php",
+            "runtime": "wp-content/plugins/shpigovsky-core/src/Fields/FieldGroups.php",
+            "sha256_before": "43A68693CAB52FB3DDAB475B21A8F2D1D3366B0A345A9A8A6223718FCF74F65C",
+            "sha256_after": "43A68693CAB52FB3DDAB475B21A8F2D1D3366B0A345A9A8A6223718FCF74F65C",
+            "delivered": true,
+            "result": "PASS"
+        },
+        {
+            "source": "WORDPRESS/theme/shpigovsky/inc/reusable-blocks-helpers.php",
+            "runtime": "wp-content/themes/shpigovsky/inc/reusable-blocks-helpers.php",
+            "sha256_before": "50C1ADF1F11CEF983705FEB7D355B05AB5187ED659C70F93306259AC05EA0BFA",
+            "sha256_after": "50C1ADF1F11CEF983705FEB7D355B05AB5187ED659C70F93306259AC05EA0BFA",
+            "delivered": true,
+            "result": "PASS"
+        },
+        {
+            "source": "WORDPRESS/theme/shpigovsky/inc/hero-helpers.php",
+            "runtime": "wp-content/themes/shpigovsky/inc/hero-helpers.php",
+            "sha256_before": "28D605754C4C543B1C430F6F3AC26272169A759B763187DF5C32C7740C067DC5",
+            "sha256_after": "28D605754C4C543B1C430F6F3AC26272169A759B763187DF5C32C7740C067DC5",
+            "delivered": true,
+            "result": "PASS"
+        },
+        {
+            "source": "WORDPRESS/theme/shpigovsky/template-parts/layout/header.php",
+            "runtime": "wp-content/themes/shpigovsky/template-parts/layout/header.php",
+            "sha256_before": "DD770BA1C0B27951ED8B623578F40E0A44F7D25CA897C6F4251CD05B7DFB28C2",
+            "sha256_after": "DD770BA1C0B27951ED8B623578F40E0A44F7D25CA897C6F4251CD05B7DFB28C2",
+            "delivered": true,
+            "result": "PASS"
+        },
+        {
+            "source": "WORDPRESS/theme/shpigovsky/template-parts/layout/footer.php",
+            "runtime": "wp-content/themes/shpigovsky/template-parts/layout/footer.php",
+            "sha256_before": "196B76C4C8DDCB3873944E058FBEC6F0D331933C80F24BCB61CD03CFAE8BC4FC",
+            "sha256_after": "196B76C4C8DDCB3873944E058FBEC6F0D331933C80F24BCB61CD03CFAE8BC4FC",
+            "delivered": true,
+            "result": "PASS"
+        },
+        {
+            "source": "WORDPRESS/theme/shpigovsky/template-parts/home/comfort.php",
+            "runtime": "wp-content/themes/shpigovsky/template-parts/home/comfort.php",
+            "sha256_before": "6B173DF5D0406F983183A38447110405CA935F7D1EA75E7528ADA275BA08110E",
+            "sha256_after": "6B173DF5D0406F983183A38447110405CA935F7D1EA75E7528ADA275BA08110E",
+            "delivered": true,
+            "result": "PASS"
+        },
+        {
+            "source": "WORDPRESS/theme/shpigovsky/template-parts/home/rehabilitation-requirements.php",
+            "runtime": "wp-content/themes/shpigovsky/template-parts/home/rehabilitation-requirements.php",
+            "sha256_before": "9EC71948BE10C81B8A5CD98A90758ED2AAF57EAD29C0E8DF9B001311448CFB84",
+            "sha256_after": "9EC71948BE10C81B8A5CD98A90758ED2AAF57EAD29C0E8DF9B001311448CFB84",
+            "delivered": true,
+            "result": "PASS"
+        },
+        {
+            "source": "WORDPRESS/acf-json/group_fp02_block_header.json",
+            "runtime": "wp-content/acf-json/group_fp02_block_header.json",
+            "sha256_before": "MISSING",
+            "sha256_after": "8F6E970EDFE18107BB44928D91FE658A60264FB875B3B292040CA82EFA741157",
+            "delivered": true,
+            "result": "PASS"
+        },
+        {
+            "source": "WORDPRESS/acf-json/group_fp02_block_footer.json",
+            "runtime": "wp-content/acf-json/group_fp02_block_footer.json",
+            "sha256_before": "MISSING",
+            "sha256_after": "780D42406F4FF46F3132A49DCD4A7F20278D0C0404183CD4DF5233926736E76E",
+            "delivered": true,
+            "result": "PASS"
+        },
+        {
+            "source": "WORDPRESS/acf-json/group_fp02_block_hero_fallbacks.json",
+            "runtime": "wp-content/acf-json/group_fp02_block_hero_fallbacks.json",
+            "sha256_before": "MISSING",
+            "sha256_after": "0744167683EB50A04D10180C8244EA6F55EF33F648AD564C7AA05B4F99567793",
+            "delivered": true,
+            "result": "PASS"
+        },
+        {
+            "source": "WORDPRESS/acf-json/group_fp02_block_comfort.json",
+            "runtime": "wp-content/acf-json/group_fp02_block_comfort.json",
+            "sha256_before": "MISSING",
+            "sha256_after": "64EEFCF0559AC38ADE8D0DACFD20D146125352FE495F0766B5CCA4B7D3EBEC2D",
+            "delivered": true,
+            "result": "PASS"
+        }
+    ]
+}

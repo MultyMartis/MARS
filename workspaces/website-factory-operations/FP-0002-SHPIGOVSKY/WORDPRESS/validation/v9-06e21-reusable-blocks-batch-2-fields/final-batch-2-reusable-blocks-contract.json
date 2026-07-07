@@ -1,0 +1,57 @@
+{
+  "wave": "V9-06E21",
+  "result": "PASS",
+  "blocks": [
+    {
+      "block": "Шапка",
+      "admin_location": "Настройки сайта → Шапка",
+      "field_group": "group_fp02_block_header",
+      "option_context": "fp02-block-header",
+      "seed_status": "PASS",
+      "frontend_consumers": ["template-parts/layout/header.php"],
+      "fallback_chain": ["block option", "general site option", "static i18n"],
+      "visual_status": "PASS",
+      "admin_editability": "PASS",
+      "deferred": ["header_logo media attachment — MEDIA_ATTACHMENT_DEFERRED"]
+    },
+    {
+      "block": "Подвал",
+      "admin_location": "Настройки сайта → Подвал",
+      "field_group": "group_fp02_block_footer",
+      "option_context": "fp02-block-footer",
+      "seed_status": "PASS",
+      "frontend_consumers": ["template-parts/layout/footer.php"],
+      "fallback_chain": ["block option", "general site option", "D9-D static footer fallbacks"],
+      "visual_status": "PASS",
+      "admin_editability": "PASS",
+      "deferred": ["footer_logo media attachment — MEDIA_ATTACHMENT_DEFERRED"]
+    },
+    {
+      "block": "Герои",
+      "admin_location": "Настройки сайта → Герои",
+      "field_group": "group_fp02_block_hero_fallbacks",
+      "option_context": "fp02-block-hero-fallbacks",
+      "seed_status": "PASS",
+      "frontend_consumers": ["inc/hero-helpers.php"],
+      "fallback_chain": ["page/service hero_media", "block global fallback", "theme asset registry", "V9 static"],
+      "visual_status": "PASS",
+      "admin_editability": "PASS",
+      "deferred": ["hero fallback media attachments — MEDIA_ATTACHMENT_DEFERRED; theme asset paths seeded"]
+    },
+    {
+      "block": "Комфорт / преимущества",
+      "admin_location": "Настройки сайта → Комфорт / преимущества",
+      "field_group": "group_fp02_block_comfort",
+      "option_context": "fp02-block-comfort",
+      "seed_status": "PASS",
+      "frontend_consumers": ["template-parts/home/comfort.php", "template-parts/home/rehabilitation-requirements.php"],
+      "fallback_chain": ["block repeater/scalars", "home page ACF text helpers", "V9 static"],
+      "visual_status": "PASS",
+      "admin_editability": "PASS",
+      "deferred": ["gallery media attachments — theme asset paths seeded"]
+    }
+  ],
+  "reviews_alias_removed": true,
+  "top_level_reviews_canonical": "fp02-reviews",
+  "batch1_intact": true
+}

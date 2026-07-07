@@ -2,8 +2,7 @@
 /**
  * Template part: home/comfort.php
  *
- * D9-D: static V9 visual authority with theme asset fallbacks.
- * Future ACF wiring: D9-E wave.
+ * V9-06E21: block options with V9 static fallback.
  *
  * @package Shpigovsky
  */
@@ -12,50 +11,49 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$section_id  = isset( $args['section_id'] ) ? (string) $args['section_id'] : '';
-$heading_id  = isset( $args['heading_id'] ) ? (string) $args['heading_id'] : 'comfort-heading';
-$comfort_heading = shpigovsky_home_text_or_fallback( 'home_comfort_heading', 'Комфорт, приватность, забота' );
-$comfort_lead    = shpigovsky_home_text_or_fallback(
-	'home_comfort_lead',
-	'Разговор&nbsp;— это уже первый шаг. Мы расскажем, что можем предложить именно вам или вашему близкому&nbsp;— без давления и&nbsp;без шаблонных ответов.'
-);
+$section_id      = isset( $args['section_id'] ) ? (string) $args['section_id'] : '';
+$heading_id      = isset( $args['heading_id'] ) ? (string) $args['heading_id'] : 'comfort-heading';
+$comfort_heading = shpigovsky_get_comfort_heading();
+$comfort_lead    = shpigovsky_get_comfort_lead();
+$comfort_link    = shpigovsky_get_comfort_all_link_label();
+$comfort_link_url = shpigovsky_get_comfort_all_link_url();
+$gallery_items   = shpigovsky_get_comfort_gallery_items();
 
 ?>
 <section data-reveal class="comfort"<?php echo '' !== $section_id ? ' id="' . esc_attr( $section_id ) . '"' : ''; ?> aria-labelledby="<?php echo esc_attr( $heading_id ); ?>">
   <div class="container">
     <div class="comfort__head">
       <h2 class="comfort__heading" id="<?php echo esc_attr( $heading_id ); ?>"><?php echo esc_html( $comfort_heading ); ?></h2>
-      <a class="comfort__all-link" href="<?php echo esc_url( home_url( '/o-centre/galereya-o-dome/' ) ); ?>">
-        <span class="comfort__all-text">подробнее о&nbsp;доме</span>
+      <a class="comfort__all-link" href="<?php echo esc_url( $comfort_link_url ); ?>">
+        <span class="comfort__all-text"><?php echo wp_kses_post( $comfort_link ); ?></span>
         <span class="comfort__all-icon" aria-hidden="true"><i class="fas fa-play"></i></span>
       </a>
     </div>
 
     <p class="comfort__lead"><?php echo wp_kses_post( $comfort_lead ); ?></p>
 
-    
-      <div class="comfort__gallery">
-      <div class="comfort__gallery-item comfort__gallery-item_decor">
-        <img class="comfort__gallery-image" src="<?php echo esc_url( shpigovsky_asset_uri( 'img/branding/logo.svg' ) ); ?>" width="auto" height="auto" alt="" loading="lazy" decoding="async">
-      </div>
-      <a class="comfort__gallery-item comfort__gallery-item--wide" href="<?php echo esc_url( shpigovsky_asset_uri( 'img/content/home-comfort/comfort-room-01.webp' ) ); ?>" data-fancybox="comfort">
-        <img class="comfort__gallery-image" src="<?php echo esc_url( shpigovsky_asset_uri( 'img/content/home-comfort/comfort-room-01.webp' ) ); ?>" width="1957" height="1113" alt="" loading="lazy" decoding="async">
-      </a>
-      <a class="comfort__gallery-item" href="<?php echo esc_url( shpigovsky_asset_uri( 'img/content/home-comfort/comfort-room-02.webp' ) ); ?>" data-fancybox="comfort">
-        <img class="comfort__gallery-image" src="<?php echo esc_url( shpigovsky_asset_uri( 'img/content/home-comfort/comfort-room-02.webp' ) ); ?>" width="1881" height="1246" alt="" loading="lazy" decoding="async">
-      </a>
-      <a class="comfort__gallery-item" href="<?php echo esc_url( shpigovsky_asset_uri( 'img/content/home-comfort/comfort-room-03.webp' ) ); ?>" data-fancybox="comfort">
-        <img class="comfort__gallery-image" src="<?php echo esc_url( shpigovsky_asset_uri( 'img/content/home-comfort/comfort-room-03.webp' ) ); ?>" width="1623" height="1155" alt="" loading="lazy" decoding="async">
-      </a>
-      <a class="comfort__gallery-item" href="<?php echo esc_url( shpigovsky_asset_uri( 'img/content/home-comfort/comfort-room-04.webp' ) ); ?>" data-fancybox="comfort">
-        <img class="comfort__gallery-image" src="<?php echo esc_url( shpigovsky_asset_uri( 'img/content/home-comfort/comfort-room-04.webp' ) ); ?>" width="1610" height="1146" alt="" loading="lazy" decoding="async">
-      </a>
-      <a class="comfort__gallery-item" href="<?php echo esc_url( shpigovsky_asset_uri( 'img/content/home-comfort/comfort-room-05.webp' ) ); ?>" data-fancybox="comfort">
-        <img class="comfort__gallery-image" src="<?php echo esc_url( shpigovsky_asset_uri( 'img/content/home-comfort/comfort-room-05.webp' ) ); ?>" width="1276" height="1136" alt="" loading="lazy" decoding="async">
-      </a>
-      <a class="comfort__gallery-item comfort__gallery-item--wide" href="<?php echo esc_url( shpigovsky_asset_uri( 'img/content/home-comfort/comfort-room-06.webp' ) ); ?>" data-fancybox="comfort">
-        <img class="comfort__gallery-image" src="<?php echo esc_url( shpigovsky_asset_uri( 'img/content/home-comfort/comfort-room-06.webp' ) ); ?>" width="2201" height="1227" alt="" loading="lazy" decoding="async">
-      </a>
+    <div class="comfort__gallery">
+      <?php foreach ( $gallery_items as $item ) : ?>
+        <?php
+		$item_classes = array( 'comfort__gallery-item' );
+
+		if ( ! empty( $item['is_decor'] ) ) {
+			$item_classes[] = 'comfort__gallery-item_decor';
+		}
+
+		if ( ! empty( $item['is_wide'] ) ) {
+			$item_classes[] = 'comfort__gallery-item--wide';
+		}
+
+		$width_attr  = ! empty( $item['width'] ) ? (int) $item['width'] : 0;
+		$height_attr = ! empty( $item['height'] ) ? (int) $item['height'] : 0;
+		$tag         = ! empty( $item['fancybox'] ) ? 'a' : 'div';
+		$href_attr   = ! empty( $item['fancybox'] ) ? ' href="' . esc_url( $item['url'] ) . '" data-fancybox="comfort"' : '';
+		?>
+      <<?php echo esc_html( $tag ); ?> class="<?php echo esc_attr( implode( ' ', $item_classes ) ); ?>"<?php echo $href_attr; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+        <img class="comfort__gallery-image" src="<?php echo esc_url( $item['url'] ); ?>"<?php echo $width_attr > 0 ? ' width="' . esc_attr( (string) $width_attr ) . '"' : ' width="auto"'; ?><?php echo $height_attr > 0 ? ' height="' . esc_attr( (string) $height_attr ) . '"' : ' height="auto"'; ?> alt="" loading="lazy" decoding="async">
+      </<?php echo esc_html( $tag ); ?>>
+      <?php endforeach; ?>
     </div>
   </div>
 </section>

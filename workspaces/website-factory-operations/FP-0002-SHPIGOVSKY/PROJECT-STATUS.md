@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-08 (V9-06E20 Remove Reviews Alias From Site Settings PASS)
+**Last updated:** 2026-07-08 (V9-06E21 Reusable Blocks Batch 2 Fields PARTIAL PASS)
 
-**Current WordPress phase:** V9-06E20 Remove Reviews Alias From Site Settings **PASS** — operator E19 QA correction: **Отзывы** removed from **Настройки сайта** alias (`fp02-block-reviews`); top-level **Отзывы** (`fp02-reviews`) and all review data preserved; Batch 1 siblings (`Финальная форма`, `Специалисты`, `CTA-блоки`) intact. Fresh DB checkpoint `v9-06e20-remove-reviews-alias-from-site-settings-pre-20260708-022042`; **1** plugin file; **1** ACF JSON; **1** ACF metadata DB write; runtime delivered. Routes 7/7 PASS; admin screenshots PARTIAL. **E3 stable checkpoint remains invalidated.** **Next: CREATE_V9_06E21_REUSABLE_BLOCKS_BATCH_2_FIELDS_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E20-REMOVE-REVIEWS-ALIAS-FROM-SITE-SETTINGS-REPORT-v1.md`.
+**Current WordPress phase:** V9-06E21 Reusable Blocks Batch 2 Fields **PARTIAL PASS** — Batch 2 ACF option pages (Шапка, Подвал, Герои, Комфорт / преимущества) under **Настройки сайта**; renderer migration with fallbacks; **26** option fields seeded; E20 IA preserved (no reviews alias). Fresh DB checkpoint `v9-06e21-reusable-blocks-batch-2-fields-pre-20260708-024557`; **2** plugin + **6** theme + **4** ACF JSON; runtime delivered. Routes 9/9 PASS; screenshots PARTIAL. **Next: CREATE_V9_06E22_OPERATOR_REUSABLE_BLOCKS_ADMIN_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E21-REUSABLE-BLOCKS-BATCH-2-FIELDS-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

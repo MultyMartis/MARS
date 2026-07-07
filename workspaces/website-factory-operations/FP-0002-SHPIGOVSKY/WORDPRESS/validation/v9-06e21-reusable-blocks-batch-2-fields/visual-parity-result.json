@@ -1,0 +1,9 @@
+{
+  "wave": "V9-06E21",
+  "result": "PARTIAL",
+  "method": "HTTP 200 + DOM marker probes on 9 routes; no Playwright PNG capture in environment",
+  "frontend_routes_pass": 9,
+  "frontend_routes_fail": 0,
+  "visual_drift_detected": false,
+  "notes": "All accepted routes return 200 with expected markers (site-header, site-footer, comfort, hero, reviews). Screenshot PNG evidence deferred — operator may capture locally."
+}

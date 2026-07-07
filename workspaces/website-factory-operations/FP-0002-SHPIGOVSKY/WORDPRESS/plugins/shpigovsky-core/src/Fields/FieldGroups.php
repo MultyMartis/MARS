@@ -27,7 +27,7 @@ final class FieldGroups implements ModuleInterface {
 	/**
 	 * Deterministic modified timestamp for canonical JSON source.
 	 */
-	public const MODIFIED = 1783690000;
+	public const MODIFIED = 1783780000;
 
 	/**
 	 * {@inheritdoc}
@@ -86,6 +86,10 @@ final class FieldGroups implements ModuleInterface {
 			self::block_final_form(),
 			self::block_specialists(),
 			self::block_cta_bands(),
+			self::block_header(),
+			self::block_footer(),
+			self::block_hero_fallbacks(),
+			self::block_comfort_benefits(),
 		);
 	}
 
@@ -630,6 +634,269 @@ final class FieldGroups implements ModuleInterface {
 				),
 			),
 			self::location( 'options_page', '==', 'fp02-block-cta-bands' )
+		);
+	}
+
+	/**
+	 * Reusable block — header chrome (V9-06E21 Batch 2).
+	 *
+	 * @return array<string, mixed>
+	 */
+	private static function block_header() {
+		return self::group(
+			'group_fp02_block_header',
+			'Reusable Block — Header',
+			array(
+				self::field(
+					'field_fp02_header_logo',
+					'Логотип (медиа)',
+					'header_logo',
+					'image',
+					array(
+						'return_format' => 'array',
+						'preview_size'  => 'medium',
+						'instructions'  => 'Опционально. Пусто — theme asset ниже или img/branding/logo.svg.',
+					)
+				),
+				self::field(
+					'field_fp02_header_logo_asset',
+					'Theme asset path логотипа',
+					'header_logo_asset',
+					'text',
+					array(
+						'default_value' => 'img/branding/logo.svg',
+						'instructions'  => 'Относительный путь в theme/assets.',
+					)
+				),
+				self::field(
+					'field_fp02_header_callback_label',
+					'Текст кнопки «Заказать звонок» в шапке',
+					'header_callback_label',
+					'text',
+					array(
+						'instructions' => 'Пусто — default_button_label из Общих настроек.',
+					)
+				),
+				self::field(
+					'field_fp02_header_general_settings_note',
+					'Контакты и навигация',
+					'header_general_settings_note',
+					'message',
+					array(
+						'message' => 'Телефоны, адрес, часы работы и мессенджеры редактируются в «Общие настройки». Навигация — через меню WordPress (WP_NAV_MENU_AUTHORITY).',
+						'new_lines' => 'wpautop',
+						'esc_html' => 0,
+					)
+				),
+			),
+			self::location( 'options_page', '==', 'fp02-block-header' )
+		);
+	}
+
+	/**
+	 * Reusable block — footer chrome (V9-06E21 Batch 2).
+	 *
+	 * @return array<string, mixed>
+	 */
+	private static function block_footer() {
+		return self::group(
+			'group_fp02_block_footer',
+			'Reusable Block — Footer',
+			array(
+				self::field(
+					'field_fp02_footer_logo',
+					'Логотип подвала (медиа)',
+					'footer_logo',
+					'image',
+					array(
+						'return_format' => 'array',
+						'preview_size'  => 'medium',
+						'instructions'  => 'Опционально. Пусто — theme asset ниже.',
+					)
+				),
+				self::field(
+					'field_fp02_footer_logo_asset',
+					'Theme asset path логотипа',
+					'footer_logo_asset',
+					'text',
+					array(
+						'default_value' => 'img/branding/logo.svg',
+					)
+				),
+				self::field(
+					'field_fp02_footer_copyright_suffix',
+					'Текст copyright после года',
+					'footer_copyright_suffix',
+					'text',
+					array(
+						'default_value' => 'Все права защищены.',
+					)
+				),
+				self::field(
+					'field_fp02_footer_credit_text',
+					'Текст разработчика',
+					'footer_credit_text',
+					'text',
+					array(
+						'default_value' => 'Разработка и продвижение: Overseo',
+					)
+				),
+				self::field( 'field_fp02_footer_credit_url', 'Ссылка разработчика', 'footer_credit_url', 'url' ),
+				self::field(
+					'field_fp02_footer_callback_label',
+					'Текст кнопки «Заказать звонок»',
+					'footer_callback_label',
+					'text',
+					array(
+						'instructions' => 'Пусто — default_callback_title из Общих настроек.',
+					)
+				),
+				self::field(
+					'field_fp02_footer_appointment_label',
+					'Текст кнопки «Записаться»',
+					'footer_appointment_label',
+					'text',
+					array(
+						'instructions' => 'Пусто — default_secondary_button_label из Общих настроек.',
+					)
+				),
+				self::field(
+					'field_fp02_footer_nav_note',
+					'Навигация и legal',
+					'footer_nav_note',
+					'message',
+					array(
+						'message' => 'Меню подвала и legal-ссылки остаются WordPress menu authority. Контент legal-страниц не редактируется здесь.',
+						'new_lines' => 'wpautop',
+						'esc_html' => 0,
+					)
+				),
+			),
+			self::location( 'options_page', '==', 'fp02-block-footer' )
+		);
+	}
+
+	/**
+	 * Reusable block — global hero fallback images (V9-06E21 Batch 2).
+	 *
+	 * @return array<string, mixed>
+	 */
+	private static function block_hero_fallbacks() {
+		$contexts = array(
+			'home'                    => 'Главная',
+			'services_hub'            => 'Хаб услуг /uslugi/',
+			'service_subdivision'     => 'Подраздел услуг',
+			'service_leaf_alcohol'    => 'Лист — алкогольная зависимость',
+			'service_leaf_genotyping' => 'Лист — генотипирование',
+			'institutional'           => 'Институциональные страницы',
+		);
+
+		$fields = array(
+			self::field(
+				'field_fp02_hero_fallbacks_note',
+				'Политика fallback',
+				'hero_fallbacks_note',
+				'message',
+				array(
+					'message' => 'Глобальные fallback-изображения. Page-local hero_media на страницах/услугах имеет приоритет. Не заменяет поля героя на отдельных страницах.',
+					'new_lines' => 'wpautop',
+					'esc_html' => 0,
+				)
+			),
+		);
+
+		foreach ( $contexts as $key => $label ) {
+			$fields[] = self::field(
+				'field_fp02_hero_fallback_' . $key . '_image',
+				$label . ' — изображение',
+				'hero_fallback_' . $key . '_image',
+				'image',
+				array(
+					'return_format' => 'array',
+					'preview_size'  => 'medium',
+					'instructions'  => 'Опционально. Пусто — theme asset ниже, затем встроенный V9 fallback.',
+				)
+			);
+			$fields[] = self::field(
+				'field_fp02_hero_fallback_' . $key . '_asset',
+				$label . ' — theme asset path',
+				'hero_fallback_' . $key . '_asset',
+				'text',
+				array(
+					'instructions' => 'Относительный путь в theme/assets для fallback без медиа.',
+				)
+			);
+		}
+
+		return self::group(
+			'group_fp02_block_hero_fallbacks',
+			'Reusable Block — Hero Fallbacks',
+			$fields,
+			self::location( 'options_page', '==', 'fp02-block-hero-fallbacks' )
+		);
+	}
+
+	/**
+	 * Reusable block — comfort / requirements / benefits (V9-06E21 Batch 2).
+	 *
+	 * @return array<string, mixed>
+	 */
+	private static function block_comfort_benefits() {
+		return self::group(
+			'group_fp02_block_comfort',
+			'Reusable Block — Comfort / Benefits',
+			array(
+				self::field( 'field_fp02_comfort_heading', 'Комфорт — заголовок', 'comfort_heading', 'text' ),
+				self::field( 'field_fp02_comfort_lead', 'Комфорт — лид', 'comfort_lead', 'textarea', array( 'rows' => 4 ) ),
+				self::field( 'field_fp02_comfort_all_link_label', 'Комфорт — текст ссылки', 'comfort_all_link_label', 'text' ),
+				self::field( 'field_fp02_comfort_all_link_url', 'Комфорт — URL ссылки', 'comfort_all_link_url', 'url' ),
+				self::repeater(
+					'field_fp02_comfort_gallery_items',
+					'Комфорт — галерея',
+					'comfort_gallery_items',
+					12,
+					array(
+						self::field( 'field_fp02_comfort_gallery_image', 'Изображение (медиа)', 'gallery_image', 'image', array( 'return_format' => 'array' ) ),
+						self::field( 'field_fp02_comfort_gallery_asset', 'Theme asset path', 'gallery_image_asset', 'text' ),
+						self::field( 'field_fp02_comfort_gallery_width', 'Ширина', 'gallery_image_width', 'number', array( 'min' => 0 ) ),
+						self::field( 'field_fp02_comfort_gallery_height', 'Высота', 'gallery_image_height', 'number', array( 'min' => 0 ) ),
+						self::field( 'field_fp02_comfort_gallery_is_decor', 'Декор (логотип)', 'gallery_is_decor', 'true_false' ),
+						self::field( 'field_fp02_comfort_gallery_is_wide', 'Широкий элемент', 'gallery_is_wide', 'true_false' ),
+						self::field( 'field_fp02_comfort_gallery_fancybox', 'Fancybox', 'gallery_fancybox_enabled', 'true_false', array( 'default_value' => 1 ) ),
+					)
+				),
+				self::field( 'field_fp02_rehab_requirements_heading', 'Требования — заголовок', 'rehab_requirements_heading', 'text' ),
+				self::field( 'field_fp02_rehab_requirements_intro', 'Требования — вводный текст', 'rehab_requirements_intro', 'textarea', array( 'rows' => 3 ) ),
+				self::repeater(
+					'field_fp02_rehab_requirements_steps',
+					'Требования — шаги',
+					'rehab_requirements_steps',
+					8,
+					array(
+						self::field( 'field_fp02_rehab_step_title', 'Заголовок', 'step_title', 'text' ),
+						self::field( 'field_fp02_rehab_step_text', 'Текст', 'step_text', 'textarea', array( 'rows' => 3 ) ),
+					)
+				),
+				self::field( 'field_fp02_rehab_requirements_cta_lead', 'Требования — CTA лид', 'rehab_requirements_cta_lead', 'textarea', array( 'rows' => 2 ) ),
+				self::field( 'field_fp02_rehab_requirements_cta_phone', 'Требования — телефон CTA', 'rehab_requirements_cta_phone', 'text', array( 'instructions' => 'Пусто — phone_primary из Общих настроек или статический fallback.' ) ),
+				self::field( 'field_fp02_rehab_requirements_cta_button_label', 'Требования — кнопка CTA', 'rehab_requirements_cta_button_label', 'text' ),
+				self::field( 'field_fp02_rehab_requirements_support_heading', 'Требования — заголовок поддержки', 'rehab_requirements_support_heading', 'text' ),
+				self::repeater(
+					'field_fp02_rehab_requirements_support_items',
+					'Требования — пункты поддержки',
+					'rehab_requirements_support_items',
+					8,
+					array(
+						self::field( 'field_fp02_rehab_support_item_text', 'Текст', 'item_text', 'textarea', array( 'rows' => 2 ) ),
+					)
+				),
+				self::field( 'field_fp02_rehab_requirements_photo', 'Требования — фото (медиа)', 'rehab_requirements_photo', 'image', array( 'return_format' => 'array' ) ),
+				self::field( 'field_fp02_rehab_requirements_photo_asset', 'Требования — theme asset path', 'rehab_requirements_photo_asset', 'text' ),
+				self::field( 'field_fp02_rehab_requirements_photo_alt', 'Требования — alt фото', 'rehab_requirements_photo_alt', 'text' ),
+				self::field( 'field_fp02_rehab_requirements_photo_width', 'Требования — ширина фото', 'rehab_requirements_photo_width', 'number', array( 'min' => 0 ) ),
+				self::field( 'field_fp02_rehab_requirements_photo_height', 'Требования — высота фото', 'rehab_requirements_photo_height', 'number', array( 'min' => 0 ) ),
+			),
+			self::location( 'options_page', '==', 'fp02-block-comfort' )
 		);
 	}
 

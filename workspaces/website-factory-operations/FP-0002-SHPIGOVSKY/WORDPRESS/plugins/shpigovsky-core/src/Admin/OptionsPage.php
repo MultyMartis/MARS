@@ -141,7 +141,7 @@ final class OptionsPage implements ModuleInterface {
 				'menu_slug'  => 'fp02-block-cta-bands',
 			),
 			array(
-				'menu_title' => __( 'Комфорт', 'shpigovsky-core' ),
+				'menu_title' => __( 'Комфорт / преимущества', 'shpigovsky-core' ),
 				'menu_slug'  => 'fp02-block-comfort',
 			),
 			array(
@@ -157,7 +157,7 @@ final class OptionsPage implements ModuleInterface {
 				'menu_slug'  => 'fp02-block-backgrounds',
 			),
 			array(
-				'menu_title' => __( 'Герои / fallback-изображения', 'shpigovsky-core' ),
+				'menu_title' => __( 'Герои', 'shpigovsky-core' ),
 				'menu_slug'  => 'fp02-block-hero-fallbacks',
 			),
 		);
@@ -165,18 +165,18 @@ final class OptionsPage implements ModuleInterface {
 		$subpages = array();
 
 		foreach ( $blocks as $block ) {
-			$is_batch1 = in_array( $block['menu_slug'], self::get_batch1_fielded_block_slugs(), true );
+			$is_fielded = in_array( $block['menu_slug'], self::get_fielded_block_slugs(), true );
 
 			$subpage = array(
 				'page_title'  => $block['menu_title'],
 				'menu_title'  => $block['menu_title'],
 				'menu_slug'   => $block['menu_slug'],
-				'parent_slug' => $is_batch1 ? self::PARENT_SLUG : self::BLOCKS_PARENT_SLUG,
+				'parent_slug' => $is_fielded ? self::PARENT_SLUG : self::BLOCKS_PARENT_SLUG,
 				'capability'  => 'manage_options',
 				'autoload'    => false,
 			);
 
-			if ( $is_batch1 ) {
+			if ( $is_fielded ) {
 				$subpage['post_id'] = $block['menu_slug'];
 			}
 
@@ -196,6 +196,32 @@ final class OptionsPage implements ModuleInterface {
 			'fp02-block-final-form',
 			'fp02-block-specialists',
 			'fp02-block-cta-bands',
+		);
+	}
+
+	/**
+	 * Batch 2 reusable blocks with active ACF fields (V9-06E21).
+	 *
+	 * @return array<int, string>
+	 */
+	public static function get_batch2_fielded_block_slugs() {
+		return array(
+			'fp02-block-header',
+			'fp02-block-footer',
+			'fp02-block-hero-fallbacks',
+			'fp02-block-comfort',
+		);
+	}
+
+	/**
+	 * All reusable blocks with active ACF fields (Batch 1 + Batch 2).
+	 *
+	 * @return array<int, string>
+	 */
+	public static function get_fielded_block_slugs() {
+		return array_merge(
+			self::get_batch1_fielded_block_slugs(),
+			self::get_batch2_fielded_block_slugs()
 		);
 	}
 
@@ -242,9 +268,9 @@ final class OptionsPage implements ModuleInterface {
 
 		if ( self::BLOCKS_PARENT_SLUG === $page ) {
 			echo '<div class="notice notice-info"><p>';
-			echo esc_html__( 'Контейнер повторяемых блоков. Редактируйте Batch 1 через подстраницы ниже в меню «Настройки сайта».', 'shpigovsky-core' );
+			echo esc_html__( 'Контейнер повторяемых блоков. Редактируемые блоки — в подстраницах меню «Настройки сайта».', 'shpigovsky-core' );
 			echo '</p><ul style="list-style:disc;margin-left:1.5em;">';
-			foreach ( self::get_batch1_fielded_block_slugs() as $slug ) {
+			foreach ( self::get_fielded_block_slugs() as $slug ) {
 				$title = self::get_block_menu_title_by_slug( $slug );
 				if ( $title ) {
 					echo '<li><a href="' . esc_url( admin_url( 'admin.php?page=' . $slug ) ) . '">' . esc_html( $title ) . '</a></li>';
@@ -258,7 +284,7 @@ final class OptionsPage implements ModuleInterface {
 			return;
 		}
 
-		if ( in_array( $page, self::get_batch1_fielded_block_slugs(), true ) ) {
+		if ( in_array( $page, self::get_fielded_block_slugs(), true ) ) {
 			return;
 		}
 

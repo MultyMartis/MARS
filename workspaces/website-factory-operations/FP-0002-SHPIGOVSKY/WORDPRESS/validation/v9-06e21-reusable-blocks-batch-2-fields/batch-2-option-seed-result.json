@@ -1,0 +1,372 @@
+{
+    "wave": "V9-06E21",
+    "result": "PASS",
+    "items": [
+        {
+            "context": "fp02-block-header",
+            "field": "header_logo_asset",
+            "before": null,
+            "after": "img/branding/logo.svg",
+            "result": "SEEDED",
+            "seed_source": "THEME_ASSET_FALLBACK"
+        },
+        {
+            "context": "fp02-block-footer",
+            "field": "footer_logo_asset",
+            "before": null,
+            "after": "img/branding/logo.svg",
+            "result": "SEEDED",
+            "seed_source": "THEME_ASSET_FALLBACK"
+        },
+        {
+            "context": "fp02-block-footer",
+            "field": "footer_copyright_suffix",
+            "before": null,
+            "after": "Все права защищены.",
+            "result": "SEEDED",
+            "seed_source": "CURRENT_HARDCODED"
+        },
+        {
+            "context": "fp02-block-footer",
+            "field": "footer_credit_text",
+            "before": null,
+            "after": "Разработка и продвижение: Overseo",
+            "result": "SEEDED",
+            "seed_source": "CURRENT_HARDCODED"
+        },
+        {
+            "context": "fp02-block-comfort",
+            "field": "comfort_heading",
+            "before": null,
+            "after": "Комфорт, приватность, забота",
+            "result": "SEEDED",
+            "seed_source": "V9_STATIC"
+        },
+        {
+            "context": "fp02-block-comfort",
+            "field": "comfort_lead",
+            "before": null,
+            "after": "Разговор — это уже первый шаг. Мы расскажем, что можем предложить именно вам или вашему близкому — без давления и без шаблонных ответов.",
+            "result": "SEEDED",
+            "seed_source": "V9_STATIC"
+        },
+        {
+            "context": "fp02-block-comfort",
+            "field": "comfort_all_link_label",
+            "before": null,
+            "after": "подробнее о&nbsp;доме",
+            "result": "SEEDED",
+            "seed_source": "V9_STATIC"
+        },
+        {
+            "context": "fp02-block-comfort",
+            "field": "comfort_all_link_url",
+            "before": null,
+            "after": "http://shpigovsky.test/o-centre/galereya-o-dome/",
+            "result": "SEEDED",
+            "seed_source": "V9_STATIC"
+        },
+        {
+            "context": "fp02-block-comfort",
+            "field": "comfort_gallery_items",
+            "before": [
+                {
+                    "gallery_image": false,
+                    "gallery_image_asset": "img/branding/logo.svg",
+                    "gallery_image_width": "0",
+                    "gallery_image_height": "0",
+                    "gallery_is_decor": true,
+                    "gallery_is_wide": false,
+                    "gallery_fancybox_enabled": true
+                },
+                {
+                    "gallery_image": false,
+                    "gallery_image_asset": "img/content/home-comfort/comfort-room-01.webp",
+                    "gallery_image_width": "1957",
+                    "gallery_image_height": "1113",
+                    "gallery_is_decor": false,
+                    "gallery_is_wide": true,
+                    "gallery_fancybox_enabled": true
+                },
+                {
+                    "gallery_image": false,
+                    "gallery_image_asset": "img/content/home-comfort/comfort-room-02.webp",
+                    "gallery_image_width": "1881",
+                    "gallery_image_height": "1246",
+                    "gallery_is_decor": false,
+                    "gallery_is_wide": false,
+                    "gallery_fancybox_enabled": true
+                },
+                {
+                    "gallery_image": false,
+                    "gallery_image_asset": "img/content/home-comfort/comfort-room-03.webp",
+                    "gallery_image_width": "1623",
+                    "gallery_image_height": "1155",
+                    "gallery_is_decor": false,
+                    "gallery_is_wide": false,
+                    "gallery_fancybox_enabled": true
+                },
+                {
+                    "gallery_image": false,
+                    "gallery_image_asset": "img/content/home-comfort/comfort-room-04.webp",
+                    "gallery_image_width": "1610",
+                    "gallery_image_height": "1146",
+                    "gallery_is_decor": false,
+                    "gallery_is_wide": false,
+                    "gallery_fancybox_enabled": true
+                },
+                {
+                    "gallery_image": false,
+                    "gallery_image_asset": "img/content/home-comfort/comfort-room-05.webp",
+                    "gallery_image_width": "1276",
+                    "gallery_image_height": "1136",
+                    "gallery_is_decor": false,
+                    "gallery_is_wide": false,
+                    "gallery_fancybox_enabled": true
+                },
+                {
+                    "gallery_image": false,
+                    "gallery_image_asset": "img/content/home-comfort/comfort-room-06.webp",
+                    "gallery_image_width": "2201",
+                    "gallery_image_height": "1227",
+                    "gallery_is_decor": false,
+                    "gallery_is_wide": true,
+                    "gallery_fancybox_enabled": true
+                }
+            ],
+            "after": [
+                {
+                    "gallery_image": false,
+                    "gallery_image_asset": "img/branding/logo.svg",
+                    "gallery_image_width": "0",
+                    "gallery_image_height": "0",
+                    "gallery_is_decor": true,
+                    "gallery_is_wide": false,
+                    "gallery_fancybox_enabled": true
+                },
+                {
+                    "gallery_image": false,
+                    "gallery_image_asset": "img/content/home-comfort/comfort-room-01.webp",
+                    "gallery_image_width": "1957",
+                    "gallery_image_height": "1113",
+                    "gallery_is_decor": false,
+                    "gallery_is_wide": true,
+                    "gallery_fancybox_enabled": true
+                },
+                {
+                    "gallery_image": false,
+                    "gallery_image_asset": "img/content/home-comfort/comfort-room-02.webp",
+                    "gallery_image_width": "1881",
+                    "gallery_image_height": "1246",
+                    "gallery_is_decor": false,
+                    "gallery_is_wide": false,
+                    "gallery_fancybox_enabled": true
+                },
+                {
+                    "gallery_image": false,
+                    "gallery_image_asset": "img/content/home-comfort/comfort-room-03.webp",
+                    "gallery_image_width": "1623",
+                    "gallery_image_height": "1155",
+                    "gallery_is_decor": false,
+                    "gallery_is_wide": false,
+                    "gallery_fancybox_enabled": true
+                },
+                {
+                    "gallery_image": false,
+                    "gallery_image_asset": "img/content/home-comfort/comfort-room-04.webp",
+                    "gallery_image_width": "1610",
+                    "gallery_image_height": "1146",
+                    "gallery_is_decor": false,
+                    "gallery_is_wide": false,
+                    "gallery_fancybox_enabled": true
+                },
+                {
+                    "gallery_image": false,
+                    "gallery_image_asset": "img/content/home-comfort/comfort-room-05.webp",
+                    "gallery_image_width": "1276",
+                    "gallery_image_height": "1136",
+                    "gallery_is_decor": false,
+                    "gallery_is_wide": false,
+                    "gallery_fancybox_enabled": true
+                },
+                {
+                    "gallery_image": false,
+                    "gallery_image_asset": "img/content/home-comfort/comfort-room-06.webp",
+                    "gallery_image_width": "2201",
+                    "gallery_image_height": "1227",
+                    "gallery_is_decor": false,
+                    "gallery_is_wide": true,
+                    "gallery_fancybox_enabled": true
+                }
+            ],
+            "result": "SKIPPED_EXISTING",
+            "seed_source": "V9_STATIC"
+        },
+        {
+            "context": "fp02-block-comfort",
+            "field": "rehab_requirements_heading",
+            "before": null,
+            "after": "Что нужно для прохождения реабилитации и лечения",
+            "result": "SEEDED",
+            "seed_source": "V9_STATIC"
+        },
+        {
+            "context": "fp02-block-comfort",
+            "field": "rehab_requirements_intro",
+            "before": null,
+            "after": "Мы гарантируем конфиденциальность, уважение к личности, поддержание комфортной, психологически безопасной атмосферы.",
+            "result": "SEEDED",
+            "seed_source": "V9_STATIC"
+        },
+        {
+            "context": "fp02-block-comfort",
+            "field": "rehab_requirements_steps",
+            "before": null,
+            "after": [
+                {
+                    "step_title": "Связаться с нами",
+                    "step_text": "Расскажите нам о своей ситуации — в удобном для вас формате и в удобное время. Первый разговор ни к чему не обязывает, но часто становится началом перемен."
+                },
+                {
+                    "step_title": "Определить цели и программу",
+                    "step_text": "Вместе со специалистами центра мы разберёмся, что именно происходит, и составим программу, которая отвечает вашей ситуации."
+                },
+                {
+                    "step_title": "Выбрать категорию номера, период стационарного проживания",
+                    "step_text": "Комфорт среды — часть восстановления. Мы подберём условия проживания, которые подойдут именно вам, и согласуем удобные сроки."
+                },
+                {
+                    "step_title": "Начать реабилитацию и лечение",
+                    "step_text": "С первого дня рядом с вами будет команда специалистов. Здесь начинается то, ради чего вы пришли. Мы с вами — шаг за шагом, в вашем темпе."
+                }
+            ],
+            "result": "SEEDED",
+            "seed_source": "V9_STATIC"
+        },
+        {
+            "context": "fp02-block-comfort",
+            "field": "rehab_requirements_cta_lead",
+            "before": null,
+            "after": "Узнайте подробнее об условиях поступления и стоимости лечения по телефону горячей линии",
+            "result": "SEEDED",
+            "seed_source": "V9_STATIC"
+        },
+        {
+            "context": "fp02-block-comfort",
+            "field": "rehab_requirements_cta_button_label",
+            "before": null,
+            "after": "Записаться",
+            "result": "SEEDED",
+            "seed_source": "V9_STATIC"
+        },
+        {
+            "context": "fp02-block-comfort",
+            "field": "rehab_requirements_support_heading",
+            "before": null,
+            "after": "Поддержка осуществляется на всех этапах:",
+            "result": "SEEDED",
+            "seed_source": "V9_STATIC"
+        },
+        {
+            "context": "fp02-block-comfort",
+            "field": "rehab_requirements_support_items",
+            "before": null,
+            "after": [
+                {
+                    "item_text": "Интервенция на лечение — мотивация вас или ваших близких;"
+                },
+                {
+                    "item_text": "Круглосуточная поддержка психологов — в любое время будет оказана помощь;"
+                },
+                {
+                    "item_text": "Занятия в мини-группах — эффективная работа с каждым;"
+                },
+                {
+                    "item_text": "По договоренности, возможность удалённой работы в условиях стационара."
+                }
+            ],
+            "result": "SEEDED",
+            "seed_source": "V9_STATIC"
+        },
+        {
+            "context": "fp02-block-comfort",
+            "field": "rehab_requirements_photo_asset",
+            "before": null,
+            "after": "img/content/rehabilitation-requirements/shpigovsky-interior-corridor.webp",
+            "result": "SEEDED",
+            "seed_source": "THEME_ASSET_FALLBACK"
+        },
+        {
+            "context": "fp02-block-comfort",
+            "field": "rehab_requirements_photo_alt",
+            "before": null,
+            "after": "Интерьер клиники — коридор с картинами",
+            "result": "SEEDED",
+            "seed_source": "V9_STATIC"
+        },
+        {
+            "context": "fp02-block-comfort",
+            "field": "rehab_requirements_photo_width",
+            "before": null,
+            "after": 2187,
+            "result": "SEEDED",
+            "seed_source": "V9_STATIC"
+        },
+        {
+            "context": "fp02-block-comfort",
+            "field": "rehab_requirements_photo_height",
+            "before": null,
+            "after": 1231,
+            "result": "SEEDED",
+            "seed_source": "V9_STATIC"
+        },
+        {
+            "context": "fp02-block-hero-fallbacks",
+            "field": "hero_fallback_home_asset",
+            "before": null,
+            "after": "img/hero/hero-main.png",
+            "result": "SEEDED",
+            "seed_source": "THEME_ASSET_FALLBACK"
+        },
+        {
+            "context": "fp02-block-hero-fallbacks",
+            "field": "hero_fallback_services_hub_asset",
+            "before": null,
+            "after": "img/content/services/services-hero.webp",
+            "result": "SEEDED",
+            "seed_source": "THEME_ASSET_FALLBACK"
+        },
+        {
+            "context": "fp02-block-hero-fallbacks",
+            "field": "hero_fallback_service_subdivision_asset",
+            "before": null,
+            "after": "img/content/services/service-subdivision-hero.webp",
+            "result": "SEEDED",
+            "seed_source": "THEME_ASSET_FALLBACK"
+        },
+        {
+            "context": "fp02-block-hero-fallbacks",
+            "field": "hero_fallback_service_leaf_alcohol_asset",
+            "before": null,
+            "after": "img/content/services/service-leaf-alcohol-hero.webp",
+            "result": "SEEDED",
+            "seed_source": "THEME_ASSET_FALLBACK"
+        },
+        {
+            "context": "fp02-block-hero-fallbacks",
+            "field": "hero_fallback_service_leaf_genotyping_asset",
+            "before": null,
+            "after": "img/content/rehabilitation-program/program-genotyping.webp",
+            "result": "SEEDED",
+            "seed_source": "THEME_ASSET_FALLBACK"
+        },
+        {
+            "context": "fp02-block-hero-fallbacks",
+            "field": "hero_fallback_institutional_asset",
+            "before": null,
+            "after": "img/content/o-centre/o-centre-hero.webp",
+            "result": "SEEDED",
+            "seed_source": "THEME_ASSET_FALLBACK"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "wave": "V9-06E21",
+    "result": "PASS",
+    "blocks": [
+        {
+            "block": "Шапка",
+            "slug": "fp02-block-header",
+            "group": "group_fp02_block_header",
+            "result": "PASS"
+        },
+        {
+            "block": "Подвал",
+            "slug": "fp02-block-footer",
+            "group": "group_fp02_block_footer",
+            "result": "PASS"
+        },
+        {
+            "block": "Герои",
+            "slug": "fp02-block-hero-fallbacks",
+            "group": "group_fp02_block_hero_fallbacks",
+            "result": "PASS"
+        },
+        {
+            "block": "Комфорт / преимущества",
+            "slug": "fp02-block-comfort",
+            "group": "group_fp02_block_comfort",
+            "result": "PASS"
+        }
+    ]
+}
