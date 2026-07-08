@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-07-08T17:54:41.053996+00:00",
+  "wave": "V9-06E25",
+  "files": {
+    "new": [
+      "src/Admin/ServiceDuplicate.php"
+    ],
+    "modified": [
+      "src/ModuleRegistry.php",
+      "shpigovsky-core.php"
+    ]
+  },
+  "module_id": "admin.service-duplicate",
+  "class": "Shpigovsky\\Core\\Admin\\ServiceDuplicate",
+  "hooks": [
+    "post_row_actions",
+    "admin_post_fp02_duplicate_service",
+    "admin_notices"
+  ],
+  "copy_behavior": {
+    "post_fields_copied": [
+      "post_content",
+      "post_excerpt",
+      "post_parent",
+      "menu_order"
+    ],
+    "post_fields_changed": [
+      "post_title (+ suffix)",
+      "post_name (unique slug)",
+      "post_status (draft)",
+      "post_author (current user)"
+    ],
+    "postmeta": "all except SYSTEM_SKIP and duplicate markers",
+    "taxonomies": "all object taxonomies if any",
+    "thumbnail": "via _thumbnail_id postmeta reuse",
+    "media": "attachment IDs reused — no file duplication"
+  },
+  "safety": {
+    "source_unchanged": true,
+    "no_publish": true,
+    "no_rewrite_flush": true,
+    "no_nav_menu_updates": true
+  },
+  "validation": {
+    "source": "zavisimosti ID 73",
+    "cleanup": "leave draft duplicate as validation artifact"
+  },
+  "result": "PASS"
+}

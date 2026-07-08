@@ -1,0 +1,56 @@
+{
+  "generated_at": "2026-07-08T17:54:55.995132+00:00",
+  "checks": [
+    {
+      "route": "/",
+      "network_ok": true,
+      "console_fatal_marker": false
+    },
+    {
+      "route": "/uslugi/",
+      "network_ok": true,
+      "console_fatal_marker": false
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "network_ok": true,
+      "console_fatal_marker": false
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "network_ok": true,
+      "console_fatal_marker": false
+    },
+    {
+      "route": "/uslugi/zavisimosti/narkoticheskaya-zavisimost/",
+      "network_ok": true,
+      "console_fatal_marker": false
+    },
+    {
+      "route": "/uslugi/zavisimosti/lekarstvennaya-zavisimost/",
+      "network_ok": true,
+      "console_fatal_marker": false
+    },
+    {
+      "route": "/uslugi/zavisimosti/povedencheskie-zavisimosti/",
+      "network_ok": true,
+      "console_fatal_marker": false
+    },
+    {
+      "route": "/kontakty/",
+      "network_ok": true,
+      "console_fatal_marker": false
+    },
+    {
+      "route": "/otzyvy/",
+      "network_ok": true,
+      "console_fatal_marker": false
+    },
+    {
+      "route": "/privacy-policy/",
+      "network_ok": true,
+      "console_fatal_marker": false
+    }
+  ],
+  "result": "PASS"
+}

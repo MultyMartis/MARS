@@ -1,0 +1,25 @@
+{
+  "wave": "V9-06E25",
+  "post_type": "service",
+  "action_label": "Дублировать",
+  "nonce_action": "fp02_duplicate_service",
+  "capabilities": [
+    "edit_post",
+    "create_posts"
+  ],
+  "duplicate_status": "draft",
+  "title_suffix": " — копия",
+  "media_reuse": "attachment IDs only — no file duplication",
+  "validation": "PASS",
+  "limitations": [
+    "Admin UI screenshots require operator wp-admin session"
+  ],
+  "operator_qa_checklist": [
+    "Open Услуги list → confirm Дублировать row action",
+    "Duplicate a service → confirm draft with — копия suffix",
+    "Verify hero_cta_label and structured sections copied",
+    "Confirm Настройки сайта has no Герои",
+    "Publish manually only after review"
+  ],
+  "result": "PASS"
+}

@@ -1,0 +1,91 @@
+{
+  "result": "PASS",
+  "source_service_id": 73,
+  "duplicate_service_id": 746,
+  "source_before": {
+    "ID": 73,
+    "post_title": "Зависимости",
+    "post_status": "publish",
+    "post_parent": 0,
+    "menu_order": 10,
+    "post_modified": "2026-07-04 00:04:34",
+    "meta_count": 75
+  },
+  "source_after_unchanged": {
+    "post_title": true,
+    "post_status": true,
+    "post_parent": true,
+    "menu_order": true,
+    "post_modified": true
+  },
+  "duplicate": {
+    "post_title": "Зависимости — копия",
+    "post_name": "zavisimosti-kopiya",
+    "post_status": "draft",
+    "post_parent": 0,
+    "menu_order": 10,
+    "title_suffix_ok": true,
+    "status_draft": true,
+    "parent_copied": true,
+    "menu_order_copied": true
+  },
+  "meta_comparison": {
+    "source": {
+      "hero_cta_label": "Заказать звонок",
+      "_hero_cta_label": "field_fp02_hero_cta_label_institutional",
+      "hero_media": "304",
+      "_hero_media": "field_fp02_hero_media_institutional",
+      "hero_lead": "Направление «Зависимости». Минимальное наполнение для визуальной проверки маршрута. Полная миграция контента выполняется отдельной фазой.",
+      "_hero_lead": "field_fp02_hero_lead_service",
+      "service_layout_variant": "subdivision",
+      "_service_layout_variant": "field_fp02_service_layout_variant",
+      "service_short_description": "DEMO — направление лечения зависимостей. Карточка раздела для плоского режима отображения /uslugi/.",
+      "_service_short_description": "field_fp02_service_short_description",
+      "programme_items": "4",
+      "_programme_items": "field_fp02_programme_items_service",
+      "intro_text": "",
+      "_intro_text": "",
+      "faq_items": "5",
+      "_faq_items": "field_fp02_faq_items_service",
+      "_thumbnail_id": "",
+      "_fp02_duplicated_from": "",
+      "_fp02_duplicated_at": "",
+      "_fp02_duplicate_wave": ""
+    },
+    "duplicate": {
+      "hero_cta_label": "Заказать звонок",
+      "_hero_cta_label": "field_fp02_hero_cta_label_institutional",
+      "hero_media": "304",
+      "_hero_media": "field_fp02_hero_media_institutional",
+      "hero_lead": "Направление «Зависимости». Минимальное наполнение для визуальной проверки маршрута. Полная миграция контента выполняется отдельной фазой.",
+      "_hero_lead": "field_fp02_hero_lead_service",
+      "service_layout_variant": "subdivision",
+      "_service_layout_variant": "field_fp02_service_layout_variant",
+      "service_short_description": "DEMO — направление лечения зависимостей. Карточка раздела для плоского режима отображения /uslugi/.",
+      "_service_short_description": "field_fp02_service_short_description",
+      "programme_items": "4",
+      "_programme_items": "field_fp02_programme_items_service",
+      "intro_text": "",
+      "_intro_text": "",
+      "faq_items": "5",
+      "_faq_items": "field_fp02_faq_items_service",
+      "_thumbnail_id": "",
+      "_fp02_duplicated_from": "73",
+      "_fp02_duplicated_at": "2026-07-08T17:54:42+00:00",
+      "_fp02_duplicate_wave": "V9-06E25"
+    }
+  },
+  "hero_cta_label_copied": true,
+  "hero_media_id_copied": true,
+  "programme_items_count_source": 4,
+  "programme_items_count_duplicate": 4,
+  "duplicate_markers": {
+    "_fp02_duplicated_from": "73",
+    "_fp02_duplicated_at": "2026-07-08T17:54:42+00:00",
+    "_fp02_duplicate_wave": "V9-06E25"
+  },
+  "edit_url": "http://shpigovsky.test/wp-admin/post.php?post=746&action=edit",
+  "public_url": "http://shpigovsky.test/uslugi/zavisimosti-kopiya/",
+  "public_http_status": 404,
+  "public_visibility_blocked": true
+}

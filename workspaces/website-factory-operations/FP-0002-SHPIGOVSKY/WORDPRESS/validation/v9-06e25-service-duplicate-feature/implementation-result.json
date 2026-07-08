@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-07-08T17:54:41.078086+00:00",
+  "module_id": "admin.service-duplicate",
+  "class": "Shpigovsky\\Core\\Admin\\ServiceDuplicate",
+  "row_action": "Дублировать",
+  "nonce_action": "fp02_duplicate_service",
+  "admin_post_action": "fp02_duplicate_service",
+  "capabilities": [
+    "edit_post",
+    "create_posts"
+  ],
+  "duplicate_status": "draft",
+  "title_suffix": " — копия",
+  "author_policy": "current_user_with_source_fallback",
+  "duplicate_markers": [
+    "_fp02_duplicated_from",
+    "_fp02_duplicated_at",
+    "_fp02_duplicate_wave"
+  ],
+  "meta_skip_keys": [
+    "_edit_lock",
+    "_edit_last",
+    "_wp_old_slug",
+    "_wp_trash_meta_status",
+    "_wp_trash_meta_time",
+    "_fp02_duplicated_from",
+    "_fp02_duplicated_at",
+    "_fp02_duplicate_wave"
+  ],
+  "files_changed": [
+    "shpigovsky-core.php",
+    "src/ModuleRegistry.php",
+    "src/Admin/ServiceDuplicate.php"
+  ],
+  "result": "PASS"
+}

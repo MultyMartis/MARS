@@ -1,0 +1,12 @@
+{
+  "wave": "V9-06E25",
+  "checkpoint_path": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e25-service-duplicate-feature-pre-20260708T175440Z",
+  "dump_file": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e25-service-duplicate-feature-pre-20260708T175440Z\\mars_wp_fp0002.sql",
+  "dump_sha256": "968DDE351EDDA12172DC4A8167CBC28D9690B252D55F2483E5ECDD4EE8DD2AB0",
+  "dump_size_bytes": 2063424,
+  "service_count": 18,
+  "restore_instructions": "mysql -h127.0.0.1 -uroot mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e25-service-duplicate-feature-pre-20260708T175440Z\\mars_wp_fp0002.sql\"",
+  "global_hero_options_count": 0,
+  "result": "PASS",
+  "generated_at": "2026-07-08T17:54:40.994409+00:00"
+}

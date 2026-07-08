@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E24A SERVICE STRUCTURED SECTIONS REQUIRED FIELD POLISH **PASS** — operator ref `Программа / условия` resolved to optional `programme_items` (`Пункты программы`) in `group_fp02_service_structured_sections`; explicit optional flags + validation filter; ACF JSON resync from PHP; **2** plugin files + **1** ACF JSON; fresh DB checkpoint; runtime delivered; routes 10/10 PASS; admin screenshots PARTIAL. E24 `hero_cta_label` preserved — no global `Герои`. Prior: V9-06E24 HERO CTA **PASS**. NEXT: **CREATE_V9_06E25_SERVICE_DUPLICATE_FEATURE_TASK**
+**Status:** V9-06E25 SERVICE DUPLICATE FEATURE **PASS** — admin row action `Дублировать` for `service` CPT; safe draft copy with ` — копия` suffix; ACF/postmeta + local hero (`hero_cta_label`, `hero_media`) copied by reference; media IDs reused; duplicate markers `_fp02_duplicated_*`; **3** plugin files; fresh DB checkpoint `v9-06e25-service-duplicate-feature-pre-20260708T175440Z`; runtime delivered; routes 11/11 PASS; test duplicate draft ID **746** left as validation artifact; admin screenshots PARTIAL. E24/E24A preserved — no global `Герои`. Prior: V9-06E24A structured sections **PASS**. NEXT: **CREATE_V9_06E26_BLOG_AND_OTHER_PAGES_PORTING_ARCHITECTURE_AUDIT_TASK**
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

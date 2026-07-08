@@ -9,6 +9,7 @@ namespace Shpigovsky\Core;
 
 use Shpigovsky\Core\Admin\EditorRestrictions;
 use Shpigovsky\Core\Admin\OptionsPage;
+use Shpigovsky\Core\Admin\ServiceDuplicate;
 use Shpigovsky\Core\ContentTypes\Service;
 use Shpigovsky\Core\Fields\AcfIntegration;
 use Shpigovsky\Core\Fields\FieldGroups;
@@ -83,6 +84,12 @@ final class ModuleRegistry {
 		'admin.editor-restrictions' => array(
 			'module'            => 'Admin',
 			'class'             => EditorRestrictions::class,
+			'status'            => self::ENABLED_IN_CONTENT_MODEL,
+			'runtime_delivered' => false,
+		),
+		'admin.service-duplicate'   => array(
+			'module'            => 'Admin',
+			'class'             => ServiceDuplicate::class,
 			'status'            => self::ENABLED_IN_CONTENT_MODEL,
 			'runtime_delivered' => false,
 		),

@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-08 (V9-06E24A service structured sections required field polish PASS)
+**Last updated:** 2026-07-09 (V9-06E25 service duplicate feature PASS)
 
-**Current WordPress phase:** V9-06E24A Service Structured Sections Required Field Polish **PASS** — operator admin issue `Программа / условия` mapped to optional `programme_items` repeater in Service — Structured Sections; explicit `required=0` + instructions on repeater/subfields; `validate_optional_programme_items` filter; ACF JSON resync from PHP source; **2** plugin + **1** ACF JSON; fresh DB checkpoint `v9-06e24a-service-structured-sections-required-field-polish-pre-20260708T173446Z`; runtime delivered; routes 10/10 PASS; admin screenshots PARTIAL. E24 `hero_cta_label` preserved — no global `Герои`. **Next: CREATE_V9_06E25_SERVICE_DUPLICATE_FEATURE_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E24A-SERVICE-STRUCTURED-SECTIONS-REQUIRED-FIELD-POLISH-REPORT-v1.md`. Prior E24: `WORDPRESS/reports/FP-0002-V9-06E24-HERO-CTA-BUTTON-TEXT-PER-ENTITY-REPORT-v1.md`.
+**Current WordPress phase:** V9-06E25 Service Duplicate Feature **PASS** — admin `Дублировать` row action on `service` CPT; draft duplicate with ` — копия` suffix; full ACF/postmeta copy including E24 `hero_cta_label` and local hero media IDs; structured sections + FAQ copied; media reused without file duplication; **3** plugin files; fresh DB checkpoint `v9-06e25-service-duplicate-feature-pre-20260708T175440Z`; runtime delivered; routes 11/11 PASS; controlled test duplicate draft ID **746** (`Зависимости — копия`); admin screenshots PARTIAL. E24/E24A preserved — no global `Герои`. **Next: CREATE_V9_06E26_BLOG_AND_OTHER_PAGES_PORTING_ARCHITECTURE_AUDIT_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E25-SERVICE-DUPLICATE-FEATURE-REPORT-v1.md`. Prior E24A: `WORDPRESS/reports/FP-0002-V9-06E24A-SERVICE-STRUCTURED-SECTIONS-REQUIRED-FIELD-POLISH-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

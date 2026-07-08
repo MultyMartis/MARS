@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-07-08T17:55:10.083076+00:00",
+  "chrome_available": true,
+  "admin_screenshots": {
+    "reason": "wp-admin auth not available in headless runner — source/DB evidence used",
+    "required": [
+      "admin-services-list-duplicate-action-e25.png",
+      "admin-duplicate-created-draft-e25.png",
+      "admin-duplicate-hero-cta-copied-e25.png",
+      "admin-duplicate-structured-sections-copied-e25.png",
+      "admin-no-global-heroes-settings-e25.png"
+    ],
+    "captured": []
+  },
+  "frontend_screenshots": [
+    {
+      "file": "runtime-services-hub-regression-e25.png",
+      "url": "http://shpigovsky.test/uslugi/",
+      "captured": true,
+      "sha256": "D6D67B8B7A59C40F233134D549A0FE0A43779A58237D2F5901F3F8BCCF2DF925",
+      "error": null
+    },
+    {
+      "file": "runtime-zavisimosti-regression-e25.png",
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/",
+      "captured": true,
+      "sha256": "11180B55451614CAAAFCF00B7A7B548125A1E7470741F714F1AAFDA95077CBE2",
+      "error": null
+    },
+    {
+      "file": "runtime-alcohol-service-regression-e25.png",
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "captured": true,
+      "sha256": "B81C7C06DE8BC6D2A65079034ABADB4692964F21E78341666A27B392362D5D0E",
+      "error": null
+    }
+  ],
+  "result": "PARTIAL"
+}
