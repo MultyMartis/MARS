@@ -9,7 +9,9 @@
 |---|---|
 | Branch | `mars/canonical-post-recovery` |
 | Published tip (start of sync task) | `7d5a62da8738a38324ee2059f6e13bed0762fc74` |
-| Tip subject | ocpilot: review SITE-002 post-1C catalog hygiene |
+| Tip subject (start) | ocpilot: review SITE-002 post-1C catalog hygiene |
+| Final published tip (after sync docs) | `303de66e289b4ae75ca7e06de05183c728033334` |
+| Final tip subject | FP-0002: document E24 sync resolution |
 | E24 commit contained | `bb86fd1e14cff403ed9f0445afdca8930c5c7ff9` |
 | E24 subject | FP-0002: add local hero CTA button text field |
 | Pre-E24 FP baseline | `cad17f71` (remove global hero settings) |

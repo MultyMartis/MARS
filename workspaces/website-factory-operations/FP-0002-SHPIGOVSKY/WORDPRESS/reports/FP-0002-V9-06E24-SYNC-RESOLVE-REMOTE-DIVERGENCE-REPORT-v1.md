@@ -96,12 +96,12 @@ Evidence: `validation/v9-06e24-sync-resolve-remote-divergence/post-sync-validati
 
 | Item | Result | Notes |
 |---|---|---|
-| Feature/E24 push | NOT NEEDED | dry-run: Everything up-to-date |
-| Local HEAD | `7d5a62da` | |
-| Remote tracking HEAD | `7d5a62da` | |
-| Remote actual HEAD | `7d5a62da` | |
+| Feature/E24 push | NOT NEEDED | already on tip `7d5a62da` |
+| Docs evidence push | PASS | `7d5a62da..303de66e` normal push |
+| Local HEAD | `303de66e` | docs commit |
+| Remote tracking HEAD | `303de66e` | |
+| Remote actual HEAD | `303de66e` | `ls-remote` match |
 | Ahead / behind | 0 / 0 | |
-| Docs commit push | (see git checkpoint) | exact allowlist after docs commit |
 
 Evidence: `validation/v9-06e24-sync-resolve-remote-divergence/push-result.json`
 
@@ -121,8 +121,8 @@ Evidence: `validation/v9-06e24-sync-resolve-remote-divergence/push-result.json`
 
 ## 10. Git checkpoint
 
-- Exact staged files: E24-SYNC report/architecture/validation JSON + three status docs (exact allowlist)
-- Staged list inspected: YES (required before docs commit)
+- Exact staged files: 15 allowlisted E24-SYNC report/architecture/validation JSON + three status docs
+- Staged list inspected: YES
 - Runtime files staged: NO
 - OCPilot files staged: NO
 - DB dumps staged: NO
@@ -130,10 +130,10 @@ Evidence: `validation/v9-06e24-sync-resolve-remote-divergence/push-result.json`
 - Helper/temp files staged: NO
 - Secrets staged: NO
 - Sync merge commit: N/A (not required)
-- Docs commit if any: `FP-0002: document E24 sync resolution` (expected)
-- Final local HEAD: (after docs commit + push)
-- Final remote HEAD: (after docs commit + push)
-- Result: PASS (divergence already resolved; docs publish separate)
+- Docs commit: `303de66e` — FP-0002: document E24 sync resolution
+- Final local HEAD: `303de66e289b4ae75ca7e06de05183c728033334`
+- Final remote HEAD: `303de66e289b4ae75ca7e06de05183c728033334`
+- Result: PASS
 
 ## 11. Final verdict
 
@@ -213,4 +213,4 @@ Secrets committed:
 0
 
 Final published baseline:
-7d5a62da8738a38324ee2059f6e13bed0762fc74
+303de66e289b4ae75ca7e06de05183c728033334

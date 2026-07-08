@@ -1,15 +1,25 @@
 {
   "wave": "V9-06E24-SYNC",
-  "recorded_at": "2026-07-08T19:05:39+07:00",
-  "push_attempted": false,
-  "push_status": "NOT_NEEDED_ALREADY_UP_TO_DATE",
-  "dry_run_output": "Everything up-to-date",
-  "local_head": "7d5a62da8738a38324ee2059f6e13bed0762fc74",
-  "remote_tracking_head": "7d5a62da8738a38324ee2059f6e13bed0762fc74",
-  "remote_actual_head_ls_remote": "7d5a62da8738a38324ee2059f6e13bed0762fc74",
+  "recorded_at": "2026-07-08T19:12:00+07:00",
+  "feature_e24_push": {
+    "push_attempted": false,
+    "push_status": "NOT_NEEDED_ALREADY_UP_TO_DATE",
+    "dry_run_output": "Everything up-to-date",
+    "notes": "At task start E24 already on tip 7d5a62da"
+  },
+  "docs_evidence_push": {
+    "push_attempted": true,
+    "push_status": "SUCCESS",
+    "push_exit_code": 0,
+    "range": "7d5a62da..303de66e",
+    "docs_commit": "303de66e289b4ae75ca7e06de05183c728033334",
+    "subject": "FP-0002: document E24 sync resolution"
+  },
+  "local_head": "303de66e289b4ae75ca7e06de05183c728033334",
+  "remote_tracking_head": "303de66e289b4ae75ca7e06de05183c728033334",
+  "remote_actual_head_ls_remote": "303de66e289b4ae75ca7e06de05183c728033334",
   "ahead": 0,
   "behind": 0,
   "force_push_used": false,
-  "result": "PASS",
-  "notes": "E24 bb86fd1e already published under tip 7d5a62da on origin/mars/canonical-post-recovery. No additional feature push required. Docs-only commit will be pushed if created."
+  "result": "PASS"
 }
