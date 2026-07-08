@@ -66,12 +66,15 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `site-002-post-1c-catalog-hygiene-review-01.py` | Read-only post-1C catalog hygiene review — added URL HTTP/meta/brand/duplicate audit after scheduled monitor for `SITE-002-POST-1C-CATALOG-HYGIENE-REVIEW-01` (Run 4.227) |
 | `site-002-post-1c-garbage-marker-fixture-test.py` | Strict garbage marker fixture regression — local harness for `SITE-002-POST-1C-MONITOR-ARTIFACTS-HARDENING-01` (Run 4.228) |
 | `site-002-prod-info-page-forms-discovery-01.py` | Read-only info page corp CTA form discovery — HTTP inventory + FTP source map + integration charter for `SITE-002-PROD-INFO-PAGE-FORMS-DISCOVERY-01` (Run 4.229) |
+| `site-002-prod-info-page-forms-integration-01.py` | Info page corp CTA forms integration — 14-file deploy, mail extension, corp CTA JS handler, 5 controlled test submits for `SITE-002-PROD-INFO-PAGE-FORMS-INTEGRATION-01` (Run 4.230) |
 | *(documentation only)* | Run **4.225** inbox confirmation — `SITE-002-PROD-MAIL-ADMIN-FORMS-INBOX-CONFIRMATION-01`; operator verified mailbox delivery/design; no script; report at [../reports/SITE-002-PROD-MAIL-ADMIN-FORMS-INBOX-CONFIRMATION-01.md](../reports/SITE-002-PROD-MAIL-ADMIN-FORMS-INBOX-CONFIRMATION-01.md) |
 | `checkout_anketa_mail_admin_forms.php` | Patched `checkout/anketa.php` source for Run 4.224 (repo reference; superseded by customer-forms variant for Run 4.226) |
-| `checkout_anketa_mail_customer_forms.php` | Patched `checkout/anketa.php` source for Run 4.226 — customer confirmations + admin mail (repo reference; deployed to Production) |
+| `checkout_anketa_mail_customer_forms.php` | Patched `checkout/anketa.php` source for Run 4.226 — customer confirmations + admin mail (repo reference; superseded by info-page-forms variant for Run 4.230) |
+| `checkout_anketa_info_page_forms.php` | Patched `checkout/anketa.php` source for Run 4.230 — dialogs 8–11 + extra fields (repo reference; deployed to Production) |
 | `site-002-mail-design-system-preview-01.php` | Local preview generator for mail design system (no SMTP; uses fixtures + renderer) |
 | `mail_renderer.php` | Shared `ZpmMailRenderer` source — deployed to Production `system/library/zpm/mail_renderer.php`; customer + admin render methods |
-| `zpm-form-loading.css` | Loader overlay snippet appended to Production `assets/css/style.css` (Run 4.226) |
+| `zpm-corp-cta-forms.js` | Corp CTA submit handler snippet merged into Production `main.js` (Run 4.230) |
+| `zpm-corp-cta-success.css` | Inline success/error styles appended to Production `style.css` (Run 4.230) |
 
 ### Post-1C monitor scheduler notes (Run 4.216 / **4.228 hardening**)
 

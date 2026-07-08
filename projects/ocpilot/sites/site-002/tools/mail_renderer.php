@@ -50,10 +50,16 @@ class ZpmMailRenderer {
 		if (!empty($data['submitted_at'])) {
 			$summary[] = array('label' => 'Дата', 'value' => $data['submitted_at']);
 		}
+		if (!empty($data['page_url'])) {
+			$summary[] = array('label' => 'Страница', 'value' => $data['page_url']);
+		}
 
 		$contact_rows = array();
 		if (!empty($data['author'])) {
 			$contact_rows[] = array('label' => 'Имя', 'value' => $data['author']);
+		}
+		if (!empty($data['company'])) {
+			$contact_rows[] = array('label' => 'Организация', 'value' => $data['company']);
 		}
 		if (!empty($data['phone'])) {
 			$contact_rows[] = array('label' => 'Телефон', 'value' => $data['phone']);
@@ -71,6 +77,9 @@ class ZpmMailRenderer {
 		}
 		if (!empty($data['message'])) {
 			$sections[] = $this->componentMessageBlock('Сообщение', $data['message']);
+		}
+		if (!empty($data['extra_fields']) && is_array($data['extra_fields'])) {
+			$sections[] = $this->componentKeyValueTable('Дополнительные данные', $data['extra_fields']);
 		}
 		if (!empty($data['service_info']) && is_array($data['service_info'])) {
 			$sections[] = $this->componentServiceInfo($data['service_info'], isset($data['page_url']) ? $data['page_url'] : '');
@@ -122,6 +131,9 @@ class ZpmMailRenderer {
 		}
 		if (!empty($data['message'])) {
 			$sections[] = $this->componentMessageBlock('Ваше сообщение', $data['message']);
+		}
+		if (!empty($data['extra_fields']) && is_array($data['extra_fields'])) {
+			$sections[] = $this->componentKeyValueTable('Данные заявки', $data['extra_fields']);
 		}
 
 		if (!empty($data['cta_url']) && !empty($data['cta_label'])) {

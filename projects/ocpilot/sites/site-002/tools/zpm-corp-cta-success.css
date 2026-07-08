@@ -1,0 +1,22 @@
+
+/* ZPM corp CTA inline success/error — SITE-002-PROD-INFO-PAGE-FORMS-INTEGRATION-01 (Run 4.230) */
+.zpm-corp-cta__form-card .zpm-corp-cta__success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+  min-height: 200px;
+  padding: 24px 16px;
+}
+.zpm-corp-cta__form-card .zpm-corp-cta__error {
+  margin-top: 12px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #b42318;
+  background: #fef3f2;
+  border: 1px solid #fecdca;
+}

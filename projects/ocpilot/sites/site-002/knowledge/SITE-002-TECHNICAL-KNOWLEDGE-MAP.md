@@ -2118,16 +2118,18 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 | Item | Value |
 |------|-------|
 | **Pages** | `/custom-equipment`, `/payment-methods`, `/delivery`, `/dealers`, `/guarantee` |
-| **Form location** | Bottom `.zpm-corp-cta` block — templates `sections/corpcta-*.twig` |
-| **Live status** | **Broken** — `zpm-form` markup present; **no** `data-fb-form`; **no** corp-page submit handler |
+| **Form location** | Bottom `.zpm-corp-cta` block — **live markup in `information/*.twig`** (inline); `sections/corpcta-*.twig` partials also updated |
+| **Live status (post 4.230)** | **Integrated** — corp CTA handler in `main.js`; `checkout/anketa` dialogs 7–11 |
 | **Root cause** | `action=#` + handlers only bind `[data-fb-form]` (popup) and `.zpm-dealers[data-dealers] .zpm-form` |
 | **Popup success reuse** | `fancyboxforms.twig` — icon `#zpm_ico__successful` + «Спасибо» / «Ваша заявка отправлена!» |
 | **Recommended dialogs** | 8 delivery · 9 payment · 10 warranty · 11 custom-equipment · 7 dealers (existing) |
-| **Next task** | `SITE-002-PROD-INFO-PAGE-FORMS-INTEGRATION-01` |
-| **Production checkpoint** | unchanged `SITE-002-STABLE-PROD-MAIL-CUSTOMER-FORMS-01` |
+| **Next task** | customer inbox confirmation (deferred); account/order transactional mail |
+| **Production checkpoint** | `SITE-002-STABLE-PROD-INFO-PAGE-FORMS-01` (Run 4.230) |
+| **Integration report** | [SITE-002-PROD-INFO-PAGE-FORMS-INTEGRATION-01.md](../reports/SITE-002-PROD-INFO-PAGE-FORMS-INTEGRATION-01.md) |
+| **Integration baseline** | [SITE-002-STABLE-PROD-INFO-PAGE-FORMS-01.md](../baselines/SITE-002-STABLE-PROD-INFO-PAGE-FORMS-01.md) |
 | **Report** | [SITE-002-PROD-INFO-PAGE-FORMS-DISCOVERY-01.md](../reports/SITE-002-PROD-INFO-PAGE-FORMS-DISCOVERY-01.md) |
 | **Baseline** | [SITE-002-INFO-PAGE-FORMS-DISCOVERY-01.md](../baselines/SITE-002-INFO-PAGE-FORMS-DISCOVERY-01.md) |
 
 ---
 
-*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-09 (Run 4.229 — info page corp CTA forms discovery).*
+*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-09 (Run 4.230 — info page corp CTA forms integration).*
