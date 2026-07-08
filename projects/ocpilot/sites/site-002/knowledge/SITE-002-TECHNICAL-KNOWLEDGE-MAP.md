@@ -2021,6 +2021,7 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 **Admin forms integration:** Run 4.224 — `SITE-002-PROD-MAIL-ADMIN-FORMS-01` (2026-07-08)
 **Inbox confirmation:** Run 4.225 — `SITE-002-PROD-MAIL-ADMIN-FORMS-INBOX-CONFIRMATION-01` (2026-07-08)
 **Customer forms integration:** Run 4.226 — `SITE-002-PROD-MAIL-CUSTOMER-FORMS-01` (2026-07-08)
+**Customer delivery confirmation:** Run 4.231 — `SITE-002-PROD-MAIL-CUSTOMER-FORMS-DELIVERY-CONFIRMATION-01` (2026-07-09) — controlled submit dialog 11 `ok: true` with operator mailbox `i***@mail.ru`; **operator mailbox visual confirmation pending**
 **Status:** **ACTIVE — admin + conditional customer form mail; form loading UX; standard OC mails unchanged**
 
 | Item | Production value |
@@ -2049,7 +2050,7 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 ## 35. Mail Design System (Production — ACTIVE)
 
 **Operation:** Run 4.223 — `SITE-002-PROD-MAIL-DESIGN-SYSTEM-01` (2026-07-08)
-**Integration:** Run 4.224 — anketa admin forms · Run 4.225 — operator inbox confirmation · Run 4.226 — customer confirmations + loading UX
+**Integration:** Run 4.224 — anketa admin forms · Run 4.225 — operator inbox confirmation · Run 4.226 — customer confirmations + loading UX · Run 4.231 — customer delivery retest (mailbox pending)
 **Status:** **ACTIVE** — renderer integrated for admin + customer form mail
 
 | Item | Production value |

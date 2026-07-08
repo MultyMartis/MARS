@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-09
-**Evidence cutoff:** 2026-07-09 (SITE-002 Run **4.230** — info page corp CTA forms integration; 5 forms verified; checkpoint `SITE-002-STABLE-PROD-INFO-PAGE-FORMS-01`)
+**Evidence cutoff:** 2026-07-09 (SITE-002 Run **4.231** — customer form email delivery confirmation; controlled submit `ok: true`; operator mailbox check pending; checkpoint unchanged `SITE-002-STABLE-PROD-INFO-PAGE-FORMS-01`)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Info page corp CTA forms integration (Run 4.230)** — **COMPLETE — FIVE CORP CTA FORMS VERIFIED**; AJAX + mail + inline success on 5 corp pages; dialogs 7/8/9/10/11 · [SITE-002-PROD-INFO-PAGE-FORMS-INTEGRATION-01.md](sites/site-002/reports/SITE-002-PROD-INFO-PAGE-FORMS-INTEGRATION-01.md) · checkpoint `SITE-002-STABLE-PROD-INFO-PAGE-FORMS-01` |
+| Current SITE-002 focus | **Customer form email delivery confirmation (Run 4.231)** — **PARTIAL — OPERATOR MAILBOX CHECK PENDING**; 1 controlled submit dialog 11 `ok: true` with operator mailbox; Run 4.226 customer path retested · [SITE-002-PROD-MAIL-CUSTOMER-FORMS-DELIVERY-CONFIRMATION-01.md](sites/site-002/reports/SITE-002-PROD-MAIL-CUSTOMER-FORMS-DELIVERY-CONFIRMATION-01.md) · checkpoint unchanged `SITE-002-STABLE-PROD-INFO-PAGE-FORMS-01` |
 
 ---
 

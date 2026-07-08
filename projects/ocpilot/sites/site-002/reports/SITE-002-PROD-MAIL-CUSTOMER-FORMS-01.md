@@ -298,4 +298,25 @@ Application path verified: conditional customer send, admin mail preserved, both
 2. **SITE-002-PROD-MAIL-ACCOUNT-TRANSACTIONAL-01** — registration, password reset, account mails.
 3. **SITE-002-PROD-MAIL-ORDER-TRANSACTIONAL-01** — order confirmation, admin alert, status mails.
 
+---
+
+## Addendum — Customer delivery confirmation
+
+**Follow-up operation:** `SITE-002-PROD-MAIL-CUSTOMER-FORMS-DELIVERY-CONFIRMATION-01` (OCPilot Run **4.231**, 2026-07-09)
+
+| Item | Result |
+|------|--------|
+| Prior gap | Run 4.226 Test A used non-deliverable `test@example.invalid` — customer inbox delivery **SAFE UNKNOWN** |
+| Controlled retest | One submit on `/custom-equipment` dialog **11** with operator mailbox `i***@mail.ru` |
+| Marker | `MARS TEST CUSTOMER DELIVERY CONFIRMATION 01` |
+| Submit result | HTTP **200**, JSON **`ok: true`** |
+| Customer send path | **expected active** (valid posted email) |
+| Mailbox visual confirmation | **pending operator** — mirror Run 4.225 gate |
+| Production/code mutation | **none** |
+| Checkpoint | unchanged `SITE-002-STABLE-PROD-INFO-PAGE-FORMS-01` |
+
+**Report:** [SITE-002-PROD-MAIL-CUSTOMER-FORMS-DELIVERY-CONFIRMATION-01.md](SITE-002-PROD-MAIL-CUSTOMER-FORMS-DELIVERY-CONFIRMATION-01.md)
+
+**Verdict (Run 4.231):** **SITE-002 CUSTOMER FORMS DELIVERY CONFIRMATION PARTIAL — OPERATOR MAILBOX CHECK PENDING**
+
 Storage: `mail-after/future-standard-mail-spec.md`
