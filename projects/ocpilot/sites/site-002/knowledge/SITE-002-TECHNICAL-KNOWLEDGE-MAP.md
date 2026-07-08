@@ -2069,4 +2069,28 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 
 ---
 
-*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-08 (Run 4.226 — customer form confirmations + loading UX).*
+## 36. Post-1C Catalog Hygiene (2026-07-08)
+
+**Operation:** Run 4.227 — `SITE-002-POST-1C-CATALOG-HYGIENE-REVIEW-01` (2026-07-08)
+**Related import:** `mars-20260708-080001-bb67ff2b` — SUCCESS
+**Scheduled monitor:** `2026-07-08_12-30-02` — exit **0**
+
+| Item | Value |
+|------|-------|
+| **Sitemap before** | **1377** (Run 4.212 baseline) |
+| **Sitemap after** | **1408** |
+| **Added URLs** | **31** — all PRODUCT_PDP |
+| **Groups** | 8 подтоварники + 23 зонты вытяжные ЗВЦ |
+| **Onboarding needs** | **0** |
+| **Public БЗПМ** | **0** |
+| **Hygiene verdict** | **31 ADDED URLS PASS** |
+| **Monitor garbage hits** | 31 — **false positives** (`/assets/img/demo/`, «Пример эксплуатации» docs) |
+| **Production checkpoint** | unchanged `SITE-002-STABLE-PROD-MAIL-CUSTOMER-FORMS-01` |
+| **Audit baseline** | [SITE-002-POST-1C-CATALOG-HYGIENE-REVIEW-2026-07-08.md](../baselines/SITE-002-POST-1C-CATALOG-HYGIENE-REVIEW-2026-07-08.md) |
+| **Report** | [SITE-002-POST-1C-CATALOG-HYGIENE-REVIEW-01.md](../reports/SITE-002-POST-1C-CATALOG-HYGIENE-REVIEW-01.md) |
+| **Tool** | [site-002-post-1c-catalog-hygiene-review-01.py](../tools/site-002-post-1c-catalog-hygiene-review-01.py) |
+| **Optional follow-up** | `SITE-002-POST-1C-MONITOR-ARTIFACTS-HARDENING-01` |
+
+---
+
+*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-08 (Run 4.227 — post-1C catalog hygiene review).*
