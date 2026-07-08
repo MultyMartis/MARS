@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-08
-**Evidence cutoff:** 2026-07-08 (SITE-002 Run **4.227** — post-1C catalog hygiene review; sitemap **1408**; audit baseline `SITE-002-POST-1C-CATALOG-HYGIENE-REVIEW-2026-07-08`; checkpoint `SITE-002-STABLE-PROD-MAIL-CUSTOMER-FORMS-01`)
+**Evidence cutoff:** 2026-07-08 (SITE-002 Run **4.228** — post-1C monitor artifacts hardening; tooling ready for next scheduled run; checkpoint `SITE-002-STABLE-PROD-MAIL-CUSTOMER-FORMS-01`)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Post-1C catalog hygiene (Run 4.227)** — **COMPLETE — 31 ADDED URLS PASS**; 2026-07-08 1C import SUCCESS + scheduled monitor; sitemap **1377→1408**; all added PRODUCT_PDP pass HTTP/meta/brand; monitor garbage hits = false positives · [SITE-002-POST-1C-CATALOG-HYGIENE-REVIEW-01.md](sites/site-002/reports/SITE-002-POST-1C-CATALOG-HYGIENE-REVIEW-01.md) · mail Run 4.226 **PARTIAL** (customer delivery SAFE UNKNOWN) · checkpoint `SITE-002-STABLE-PROD-MAIL-CUSTOMER-FORMS-01` · optional `SITE-002-POST-1C-MONITOR-ARTIFACTS-HARDENING-01` |
+| Current SITE-002 focus | **Post-1C monitor artifacts hardening (Run 4.228)** — **COMPLETE — TOOLING READY**; hardened scheduled artifact contract; strict garbage markers; 0 false positives on 31 URL delta; scheduler Category A (no re-register) · [SITE-002-POST-1C-MONITOR-ARTIFACTS-HARDENING-01.md](sites/site-002/reports/SITE-002-POST-1C-MONITOR-ARTIFACTS-HARDENING-01.md) · prior hygiene Run 4.227 **31 ADDED URLS PASS** · checkpoint `SITE-002-STABLE-PROD-MAIL-CUSTOMER-FORMS-01` |
 
 ---
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""SITE-002 Post-1C catalog onboarding monitor 02 — read-only repeat (Run 4.213)."""
+"""SITE-002 Post-1C catalog onboarding monitor 02 — read-only repeat (Run 4.213+)."""
 from __future__ import annotations
 
 import argparse
@@ -8,6 +8,7 @@ import hashlib
 import html
 import json
 import re
+import shutil
 import time
 import urllib.error
 import urllib.parse
@@ -104,17 +105,88 @@ KNOWN_HUB_SLUG_MARKERS = (
 
 IMAGE_EXT = (".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg", ".pdf", ".zip")
 
-TEST_MARKERS = (
-    ("test", re.I),
-    ("тест", re.I),
+STRICT_GARBAGE_RULES: tuple[tuple[str, int], ...] = (
     ("НЕ БРАТЬ", 0),
-    ("не брать", re.I),
+    ("NE BRAT", re.I),
     ("ne-brat", re.I),
+    ("не брать", re.I),
     ("nebrat", re.I),
-    ("demo", re.I),
-    ("пример", re.I),
-    ("tmp", re.I),
-    ("temp", re.I),
+    ("тестовый товар", re.I),
+    ("test product", re.I),
+    ("dummy product", re.I),
+    ("временный товар", re.I),
+    ("удалить товар", re.I),
+    ("delete product", re.I),
+)
+
+DEMO_PRODUCT_TITLE_RE = re.compile(r"\bdemo\s+product\b", re.I)
+SCRIPT_STYLE_RE = re.compile(r"<(script|style)\b[^>]*>.*?</\1>", re.I | re.S)
+ASSET_PATH_RE = re.compile(r"/(?:assets|img|catalog|image)/[^\s\"'<>]+", re.I)
+DOC_LINK_LABEL_ALLOWLIST = frozenset({
+    "пример эксплуатации",
+    "example usage",
+    "example of use",
+})
+
+GARBAGE_FIXTURES: tuple[dict[str, Any], ...] = (
+    {
+        "id": "demo-asset-path",
+        "html": (
+            '<html><head><title>Стол производственный</title></head><body>'
+            '<img src="/assets/img/demo/assum_logo.png" alt="logo">'
+            '<h1>Стол производственный</h1></body></html>'
+        ),
+        "url": "https://bzpm.ru/katalog/nejtralnoe-oborudovanie/stoly/demo-stol",
+        "expect_strict_hit": False,
+    },
+    {
+        "id": "primer-ekspluatacii-link",
+        "html": (
+            '<html><head><title>Зонт вытяжной</title></head><body>'
+            '<h1>Зонт вытяжной</h1>'
+            '<a href="/files/primer.pdf">Пример эксплуатации</a>'
+            '<p>Документация по эксплуатации оборудования.</p></body></html>'
+        ),
+        "url": "https://bzpm.ru/katalog/ventilyacionnoe-oborudovanie/zont",
+        "expect_strict_hit": False,
+    },
+    {
+        "id": "primer-docs-context",
+        "html": (
+            '<html><head><title>Инструкция</title></head><body>'
+            '<h1>Руководство</h1><p>Ниже пример настройки оборудования в типовой конфигурации.</p>'
+            '</body></html>'
+        ),
+        "url": "https://bzpm.ru/katalog/info/page",
+        "expect_strict_hit": False,
+    },
+    {
+        "id": "ne-brat-title",
+        "html": '<html><head><title>Стол НЕ БРАТЬ тест</title></head><body><h1>Стол</h1></body></html>',
+        "url": "https://bzpm.ru/katalog/nejtralnoe-oborudovanie/stoly/ne-brat-stol",
+        "expect_strict_hit": True,
+    },
+    {
+        "id": "testovyj-tovar-h1",
+        "html": '<html><head><title>Товар</title></head><body><h1>тестовый товар 123</h1></body></html>',
+        "url": "https://bzpm.ru/katalog/nejtralnoe-oborudovanie/stoly/test",
+        "expect_strict_hit": True,
+    },
+    {
+        "id": "ne-brat-sku",
+        "html": (
+            '<html><head><title>Подтоварник</title></head><body>'
+            '<h1>Подтоварник</h1><span class="sku">ne-brat-001</span></body></html>'
+        ),
+        "url": "https://bzpm.ru/katalog/nejtralnoe-oborudovanie/podtovarniki/item",
+        "expect_strict_hit": True,
+    },
+    {
+        "id": "dummy-product-title",
+        "html": '<html><head><title>dummy product showcase</title></head><body><h1>Стол</h1></body></html>',
+        "url": "https://bzpm.ru/katalog/nejtralnoe-oborudovanie/stoly/dummy",
+        "expect_strict_hit": True,
+    },
 )
 
 NUMERIC_KEYWORD_POLLUTION = re.compile(r"\b\d{5,}\b")
@@ -307,15 +379,223 @@ def count_brand(text: str, brand: str) -> int:
     return text.count(brand)
 
 
-def count_test_markers(text: str, url: str) -> dict[str, int]:
-    combined = f"{url}\n{text}"
-    counts: dict[str, int] = {}
-    for marker, flags in TEST_MARKERS:
-        if flags == 0:
-            counts[marker] = combined.count(marker)
-        else:
-            counts[marker] = len(re.findall(re.escape(marker), combined, flags))
-    return counts
+def strip_non_content_html(html_text: str) -> str:
+    cleaned = SCRIPT_STYLE_RE.sub(" ", html_text)
+    cleaned = ASSET_PATH_RE.sub(" ", cleaned)
+    return cleaned
+
+
+def extract_scan_fields(html_text: str, url: str) -> dict[str, str]:
+    parser = MetaParser()
+    try:
+        parser.feed(html_text)
+    except Exception:
+        pass
+    title = html.unescape(parser.title.strip())
+    h1 = " ".join(parser.h1_list).strip()
+    description = parser.meta.get("description", "")
+    keywords = parser.meta.get("keywords", "")
+    sku_match = re.search(
+        r'(?:sku|article|артикул|model)["\s:=]+([^\s"\'<>]{2,80})',
+        html_text,
+        re.I,
+    )
+    sku = sku_match.group(1) if sku_match else ""
+    product_id_match = re.search(r'product_id["\s:=]+(\d+)', html_text)
+    product_id = product_id_match.group(1) if product_id_match else ""
+    visible_text = re.sub(r"<[^>]+>", " ", strip_non_content_html(html_text))
+    visible_text = re.sub(r"\s+", " ", html.unescape(visible_text)).strip()
+    link_labels: list[str] = []
+    for m in re.finditer(r"<a\b[^>]*>(.*?)</a>", html_text, re.I | re.S):
+        label = re.sub(r"<[^>]+>", " ", m.group(1))
+        label = re.sub(r"\s+", " ", html.unescape(label)).strip()
+        if label:
+            link_labels.append(label)
+    breadcrumbs = ""
+    crumb_match = re.search(
+        r'class="[^"]*breadcrumb[^"]*"[^>]*>(.*?)</(?:nav|ol|ul|div)>',
+        html_text,
+        re.I | re.S,
+    )
+    if crumb_match:
+        breadcrumbs = re.sub(r"<[^>]+>", " ", crumb_match.group(1))
+        breadcrumbs = re.sub(r"\s+", " ", html.unescape(breadcrumbs)).strip()
+    return {
+        "title": title,
+        "h1": h1,
+        "meta_description": description,
+        "meta_keywords": keywords,
+        "breadcrumbs": breadcrumbs,
+        "sku": sku,
+        "product_id": product_id,
+        "product_name": h1 or title,
+        "visible_main_content": visible_text[:4000],
+        "link_labels": " | ".join(link_labels[:20]),
+        "url_path": urllib.parse.urlparse(url).path,
+    }
+
+
+def scan_strict_garbage(html_text: str, url: str) -> list[dict[str, Any]]:
+    """Context-aware strict garbage marker scan — excludes asset paths and doc link labels."""
+    fields = extract_scan_fields(html_text, url)
+    hits: list[dict[str, Any]] = []
+    url_path = fields.get("url_path", "")
+    if "/assets/img/demo/" in url_path.lower() or "/assets/img/demo/" in url.lower():
+        pass  # never flag URL path alone
+
+    scan_targets = {
+        "title": fields.get("title", ""),
+        "h1": fields.get("h1", ""),
+        "meta_description": fields.get("meta_description", ""),
+        "meta_keywords": fields.get("meta_keywords", ""),
+        "breadcrumbs": fields.get("breadcrumbs", ""),
+        "product_name": fields.get("product_name", ""),
+        "sku": fields.get("sku", ""),
+        "visible_main_content": fields.get("visible_main_content", ""),
+    }
+
+    for field_name, field_text in scan_targets.items():
+        if not field_text:
+            continue
+        lowered = field_text.lower()
+        for marker, flags in STRICT_GARBAGE_RULES:
+            if flags == 0:
+                idx = field_text.find(marker)
+                if idx >= 0:
+                    hits.append({
+                        "marker": marker,
+                        "source_field": field_name,
+                        "evidence": field_text[max(0, idx - 20): idx + len(marker) + 40].strip(),
+                        "url": url,
+                    })
+            else:
+                for m in re.finditer(re.escape(marker), field_text, flags):
+                    hits.append({
+                        "marker": marker,
+                        "source_field": field_name,
+                        "evidence": field_text[max(0, m.start() - 20): m.end() + 40].strip(),
+                        "url": url,
+                    })
+        if DEMO_PRODUCT_TITLE_RE.search(field_text):
+            hits.append({
+                "marker": "demo product",
+                "source_field": field_name,
+                "evidence": field_text[:120].strip(),
+                "url": url,
+            })
+
+    for label in fields.get("link_labels", "").split(" | "):
+        label_norm = label.strip().lower()
+        if not label_norm:
+            continue
+        if label_norm in DOC_LINK_LABEL_ALLOWLIST:
+            continue
+        for marker, flags in STRICT_GARBAGE_RULES:
+            if flags == 0:
+                if marker in label:
+                    hits.append({
+                        "marker": marker,
+                        "source_field": "link_label",
+                        "evidence": label,
+                        "url": url,
+                    })
+            elif re.search(re.escape(marker), label, flags):
+                hits.append({
+                    "marker": marker,
+                    "source_field": "link_label",
+                    "evidence": label,
+                    "url": url,
+                })
+
+    # Deduplicate identical hits
+    seen: set[tuple[str, str, str]] = set()
+    unique: list[dict[str, Any]] = []
+    for hit in hits:
+        key = (hit["url"], hit["marker"], hit["source_field"])
+        if key in seen:
+            continue
+        seen.add(key)
+        unique.append(hit)
+    return unique
+
+
+def format_duration_human(seconds: float) -> str:
+    if seconds < 1:
+        return f"{seconds:.2f} seconds"
+    total = int(round(seconds))
+    if total < 60:
+        return f"{total} seconds"
+    minutes, rem = divmod(total, 60)
+    if minutes < 60:
+        return f"{minutes}m {rem}s"
+    hours, minutes = divmod(minutes, 60)
+    return f"{hours}h {minutes}m {rem}s"
+
+
+def classify_monitor_run(
+    *,
+    monitor_status: str,
+    added_count: int,
+    removed_count: int,
+    onboarding_needs_count: int,
+    strict_garbage_hits_count: int,
+    brand_violations: int,
+    hygiene_flags_count: int,
+    sitemap_fetch_ok: bool,
+    parse_ok: bool,
+) -> tuple[str, str]:
+    if (
+        monitor_status != "success"
+        or not sitemap_fetch_ok
+        or not parse_ok
+        or strict_garbage_hits_count > 0
+        or brand_violations > 0
+    ):
+        if strict_garbage_hits_count > 0 or brand_violations > 0:
+            return (
+                "FAILURE_REVIEW_REQUIRED",
+                "Review strict garbage markers or forbidden БЗПМ before any catalog action.",
+            )
+        return (
+            "FAILURE_REVIEW_REQUIRED",
+            "Investigate monitor failure, sitemap fetch, or parse errors in run logs.",
+        )
+    if onboarding_needs_count > 0:
+        return (
+            "ONBOARDING_REQUIRED",
+            "Review category-onboarding-needs and plan SITE-002 onboarding charter.",
+        )
+    if added_count > 0 or removed_count > 0 or hygiene_flags_count > 0:
+        return (
+            "HYGIENE_REVIEW_REQUIRED",
+            "Review added/removed URL lists and hygiene flags; no onboarding charter required yet.",
+        )
+    return (
+        "NO_ACTION_REQUIRED",
+        "No delta or hygiene flags — no operator action until next 1C import.",
+    )
+
+
+def run_garbage_fixture_regression() -> dict[str, Any]:
+    results: list[dict[str, Any]] = []
+    for fixture in GARBAGE_FIXTURES:
+        hits = scan_strict_garbage(fixture["html"], fixture["url"])
+        got_hit = len(hits) > 0
+        passed = got_hit == fixture["expect_strict_hit"]
+        results.append({
+            "id": fixture["id"],
+            "expect_strict_hit": fixture["expect_strict_hit"],
+            "got_strict_hit": got_hit,
+            "pass": passed,
+            "hits": hits,
+        })
+    return {
+        "fixture_count": len(results),
+        "passed": sum(1 for r in results if r["pass"]),
+        "failed": sum(1 for r in results if not r["pass"]),
+        "results": results,
+        "captured_at": utc_now(),
+    }
 
 
 def extract_page_meta(html_text: str, url: str) -> dict[str, Any]:
@@ -355,7 +635,7 @@ def extract_page_meta(html_text: str, url: str) -> dict[str, Any]:
         page_type = "CATEGORY_HUB" if is_hub else "CATEGORY_PLP"
         if any(m in url for m in KNOWN_HUB_SLUG_MARKERS):
             page_type = "LEGACY_HUB"
-    test_counts = count_test_markers(html_text, url)
+    test_hits = scan_strict_garbage(html_text, url)
     return {
         "title": title,
         "h1": h1,
@@ -372,8 +652,8 @@ def extract_page_meta(html_text: str, url: str) -> dict[str, Any]:
         "yandex_webmaster": "yandex-verification" in lower,
         "bzpm_count": count_brand(html_text, WRONG_BRAND),
         "zpm_count": count_brand(html_text, CORRECT_BRAND),
-        "test_marker_total": sum(test_counts.values()),
-        "test_markers": test_counts,
+        "strict_garbage_hits": test_hits,
+        "strict_garbage_hit_count": len(test_hits),
         "numeric_keyword_pollution": bool(NUMERIC_KEYWORD_POLLUTION.search(keywords)),
         **markers,
     }
@@ -655,8 +935,8 @@ def crawl_row(url: str) -> dict[str, Any]:
         "page_category": meta.get("has_page_category", False),
         "forbidden_bzpm_count": meta.get("bzpm_count", 0),
         "zpm_count": meta.get("zpm_count", 0),
-        "test_marker_count": meta.get("test_marker_total", 0),
-        "test_markers": meta.get("test_markers", {}),
+        "strict_garbage_hit_count": meta.get("strict_garbage_hit_count", 0),
+        "strict_garbage_hits": meta.get("strict_garbage_hits", []),
         "numeric_keyword_pollution": meta.get("numeric_keyword_pollution", False),
         "noindex": noindex,
         "indexable": status == 200 and not noindex,
@@ -680,7 +960,7 @@ def crawl_urls(urls: list[str], label: str) -> list[dict[str, Any]]:
 def write_classification(rows: list[dict[str, Any]], prefix: str, title: str) -> None:
     flat_rows = []
     for r in rows:
-        flat = {k: v for k, v in r.items() if k != "test_markers"}
+        flat = {k: v for k, v in r.items() if k not in ("strict_garbage_hits", "test_markers")}
         flat_rows.append(flat)
     write_csv(DEPLOYMENT_ROOT / "classification" / f"{prefix}-url-classification.csv", flat_rows)
     write_json(DEPLOYMENT_ROOT / "classification" / f"{prefix}-url-classification.json", rows)
@@ -827,17 +1107,16 @@ def phase6_product_pdp_sanity(added_rows: list[dict[str, Any]]) -> list[dict[str
 
 
 def phase7_test_garbage_audit(rows: list[dict[str, Any]], label: str) -> list[dict[str, Any]]:
-    print(f"Phase 7: test/garbage marker audit ({label})...")
+    print(f"Phase 7: strict garbage marker audit ({label})...")
     hits: list[dict[str, Any]] = []
     for row in rows:
-        markers = row.get("test_markers") or {}
-        total = row.get("test_marker_count", 0)
-        if total > 0:
+        strict_hits = row.get("strict_garbage_hits") or []
+        if strict_hits:
             hits.append({
                 "url": row["url"],
                 "page_type": row.get("page_type"),
-                "test_marker_count": total,
-                "markers": json.dumps(markers, ensure_ascii=False),
+                "strict_garbage_hit_count": len(strict_hits),
+                "markers": json.dumps(strict_hits, ensure_ascii=False),
                 "recommendation": "SITE-002-PROD-CATALOG-GARBAGE-SKU-REVIEW-01",
             })
     return hits
@@ -1077,80 +1356,393 @@ def phase11_followup(
     return payload
 
 
+def write_url_list_artifacts(
+    out_dir: Path,
+    stem: str,
+    urls: list[str],
+    extra_rows: list[dict[str, Any]] | None = None,
+) -> None:
+    out_dir.mkdir(parents=True, exist_ok=True)
+    rows = extra_rows or [{"url": u} for u in urls]
+    if not rows and urls:
+        rows = [{"url": u} for u in urls]
+    write_csv(out_dir / f"{stem}.csv", rows, ["url"] if rows and "url" in rows[0] else None)
+    write_json(out_dir / f"{stem}.json", urls if not extra_rows else rows)
+    write_md_lines = [f"# {stem}", "", f"- Count: **{len(urls)}**", ""]
+    if urls:
+        write_md_lines.extend(f"- {u}" for u in urls)
+    write_text(out_dir / f"{stem}.md", "\n".join(write_md_lines) + "\n")
+
+
+def export_scheduled_artifacts(
+    scheduled_dir: Path,
+    *,
+    run_id: str,
+    started_at: str,
+    finished_at: str,
+    duration_seconds: float,
+    mode: str,
+    status: str,
+    exit_code: int,
+    baseline_urls: list[str],
+    current_urls: list[str],
+    delta: dict[str, Any],
+    added_rows: list[dict[str, Any]],
+    removed_rows: list[dict[str, Any]],
+    onboarding_needs: list[dict[str, Any]],
+    garbage_hits: list[dict[str, Any]],
+    brand: dict[str, Any],
+    classification: str,
+    next_action: str,
+    false_positive_suppressed_count: int,
+    sitemap_fetch_ok: bool,
+    parse_ok: bool,
+) -> dict[str, Any]:
+    scheduled_dir.mkdir(parents=True, exist_ok=True)
+    added = delta.get("added") or []
+    removed = delta.get("removed") or []
+
+    baseline_sitemap_xml = scheduled_dir / "sitemap-baseline.xml"
+    current_sitemap_xml = scheduled_dir / "sitemap-current.xml"
+    current_xml_src = DEPLOYMENT_ROOT / "current" / "sitemap-current.xml"
+
+    if current_xml_src.exists():
+        shutil.copy2(current_xml_src, current_sitemap_xml)
+    if baseline_urls:
+        baseline_locs = "\n".join(f"  <url><loc>{html.escape(u)}</loc></url>" for u in baseline_urls)
+        baseline_body = (
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+            f"{baseline_locs}\n</urlset>\n"
+        )
+        write_text(baseline_sitemap_xml, baseline_body)
+
+    write_url_list_artifacts(scheduled_dir, "added-urls", added)
+    write_url_list_artifacts(scheduled_dir, "removed-urls", removed)
+
+    changed_summary = {
+        "baseline_url_count": len(baseline_urls),
+        "current_url_count": len(current_urls),
+        "added_count": len(added),
+        "removed_count": len(removed),
+        "delta_scale": delta.get("delta_scale"),
+        "added_page_types": dict(Counter(r.get("page_type", "unknown") for r in added_rows)),
+        "captured_at": utc_now(),
+    }
+    write_json(scheduled_dir / "changed-summary.json", changed_summary)
+    write_text(
+        scheduled_dir / "changed-summary.md",
+        "\n".join([
+            "# Changed summary",
+            "",
+            f"- Baseline URLs: **{changed_summary['baseline_url_count']}**",
+            f"- Current URLs: **{changed_summary['current_url_count']}**",
+            f"- Added: **{changed_summary['added_count']}**",
+            f"- Removed: **{changed_summary['removed_count']}**",
+            f"- Delta scale: **{changed_summary['delta_scale']}**",
+        ]) + "\n",
+    )
+
+    hygiene_rows = []
+    for row in added_rows + removed_rows:
+        if row.get("strict_garbage_hit_count", 0) > 0:
+            hygiene_rows.append({
+                "url": row.get("url"),
+                "flag": "strict_garbage",
+                "count": row.get("strict_garbage_hit_count"),
+            })
+        if row.get("forbidden_bzpm_count", 0) > 0:
+            hygiene_rows.append({
+                "url": row.get("url"),
+                "flag": "forbidden_bzpm",
+                "count": row.get("forbidden_bzpm_count"),
+            })
+        if row.get("http_status") not in (None, 200):
+            hygiene_rows.append({
+                "url": row.get("url"),
+                "flag": f"http_{row.get('http_status')}",
+                "count": 1,
+            })
+    write_csv(scheduled_dir / "hygiene-flags.csv", hygiene_rows)
+    write_json(scheduled_dir / "hygiene-flags.json", hygiene_rows)
+    write_text(
+        scheduled_dir / "hygiene-flags.md",
+        f"# Hygiene flags\n\n- Items: **{len(hygiene_rows)}**\n",
+    )
+
+    classification_payload = {
+        "classification": classification,
+        "next_action": next_action,
+        "added_count": len(added),
+        "removed_count": len(removed),
+        "onboarding_needs_count": len(onboarding_needs),
+        "strict_garbage_hits_count": len(garbage_hits),
+        "hygiene_flags_count": len(hygiene_rows),
+        "brand_violations": brand.get("bzpm_violations", 0),
+        "false_positive_suppressed_count": false_positive_suppressed_count,
+        "captured_at": utc_now(),
+    }
+    write_json(scheduled_dir / "monitor-classification.json", classification_payload)
+    write_text(
+        scheduled_dir / "monitor-classification.md",
+        "\n".join([
+            "# Monitor classification",
+            "",
+            f"- **Classification:** `{classification}`",
+            f"- **Next action:** {next_action}",
+            f"- Strict garbage hits: **{len(garbage_hits)}**",
+            f"- Onboarding needs: **{len(onboarding_needs)}**",
+            f"- False positives suppressed (legacy loose markers): **{false_positive_suppressed_count}**",
+        ]) + "\n",
+    )
+
+    artifact_paths = {
+        "run_summary_json": str(scheduled_dir / "run-summary.json"),
+        "run_summary_md": str(scheduled_dir / "run-summary.md"),
+        "run_log": str(scheduled_dir / "run.log"),
+        "run_stderr_log": str(scheduled_dir / "run.stderr.log"),
+        "sitemap_baseline_xml": str(baseline_sitemap_xml) if baseline_sitemap_xml.exists() else None,
+        "sitemap_current_xml": str(current_sitemap_xml) if current_sitemap_xml.exists() else None,
+        "added_urls_csv": str(scheduled_dir / "added-urls.csv"),
+        "removed_urls_csv": str(scheduled_dir / "removed-urls.csv"),
+        "changed_summary_json": str(scheduled_dir / "changed-summary.json"),
+        "hygiene_flags_json": str(scheduled_dir / "hygiene-flags.json"),
+        "monitor_classification_json": str(scheduled_dir / "monitor-classification.json"),
+    }
+
+    run_summary = {
+        "run_id": run_id,
+        "operation_id": OPERATION_ID,
+        "started_at": started_at,
+        "finished_at": finished_at,
+        "duration_seconds": round(duration_seconds, 3),
+        "duration_human": format_duration_human(duration_seconds),
+        "mode": mode,
+        "status": status,
+        "exit_code": exit_code,
+        "baseline_url_count": len(baseline_urls),
+        "current_url_count": len(current_urls),
+        "added_count": len(added),
+        "removed_count": len(removed),
+        "onboarding_needs_count": len(onboarding_needs),
+        "hygiene_flags_count": len(hygiene_rows),
+        "strict_garbage_hits_count": len(garbage_hits),
+        "false_positive_suppressed_count": false_positive_suppressed_count,
+        "classification": classification,
+        "next_action": next_action,
+        "artifact_paths": artifact_paths,
+        "captured_at": utc_now(),
+    }
+    write_json(scheduled_dir / "run-summary.json", run_summary)
+    write_text(
+        scheduled_dir / "run-summary.md",
+        "\n".join([
+            "# Post-1C monitor run summary",
+            "",
+            f"- **Classification:** `{classification}`",
+            f"- **Next action:** {next_action}",
+            f"- Duration: **{run_summary['duration_human']}** ({run_summary['duration_seconds']}s)",
+            f"- Baseline → current: **{len(baseline_urls)} → {len(current_urls)}**",
+            f"- Added / removed: **{len(added)} / {len(removed)}**",
+            f"- Strict garbage hits: **{len(garbage_hits)}**",
+            f"- Onboarding needs: **{len(onboarding_needs)}**",
+        ]) + "\n",
+    )
+    return run_summary
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=OPERATION_ID)
     parser.add_argument("--skip-removed-crawl", action="store_true")
+    parser.add_argument(
+        "--scheduled-run-dir",
+        type=Path,
+        default=None,
+        help="Write hardened per-run artifact contract to this directory",
+    )
+    parser.add_argument(
+        "--fixture-garbage-test",
+        action="store_true",
+        help="Run local garbage marker fixture regression only (no HTTP)",
+    )
+    parser.add_argument(
+        "--fixture-output",
+        type=Path,
+        default=None,
+        help="Optional JSON output path for --fixture-garbage-test",
+    )
     args = parser.parse_args()
 
-    ensure_layout()
-    baseline_urls, baseline_sel = phase1_baseline()
-    current_urls, current_summary, _, _ = phase2_current()
-    delta = phase3_delta(baseline_urls, current_urls)
+    if args.fixture_garbage_test:
+        payload = run_garbage_fixture_regression()
+        out = args.fixture_output or (
+            DEPLOYMENT_ROOT / "verification" / "garbage-marker-fixture-results.json"
+        )
+        write_json(out, payload)
+        print(json.dumps(payload, ensure_ascii=False, indent=2))
+        return 0 if payload["failed"] == 0 else 1
 
-    added = delta["added"]
-    non_pdp_added = [u for u in added if classify_path_pattern(u) != "PRODUCT_PDP"]
-    pdp_added = [u for u in added if classify_path_pattern(u) == "PRODUCT_PDP"]
+    started_mono = time.monotonic()
+    started_at = utc_now()
+    monitor_status = "success"
+    exit_code = 0
 
-    urls_to_crawl = non_pdp_added + pdp_added
-    if len(added) > 150:
-        print(f"Added count {len(added)} > 150 — crawling all non-PDP ({len(non_pdp_added)}) + all PDP ({len(pdp_added)})")
+    try:
+        ensure_layout()
+        baseline_urls, baseline_sel = phase1_baseline()
+        current_urls, current_summary, _, _ = phase2_current()
+        sitemap_fetch_ok = current_summary.get("sitemap_http_status") == 200
+        parse_ok = bool(current_summary.get("valid_xml"))
+        delta = phase3_delta(baseline_urls, current_urls)
 
-    added_rows = crawl_urls(urls_to_crawl, "added") if urls_to_crawl else []
-    write_classification(added_rows, "added", "Added URL classification")
+        added = delta["added"]
+        non_pdp_added = [u for u in added if classify_path_pattern(u) != "PRODUCT_PDP"]
+        pdp_added = [u for u in added if classify_path_pattern(u) == "PRODUCT_PDP"]
 
-    removed_rows: list[dict[str, Any]] = []
-    if delta["removed"] and not args.skip_removed_crawl:
-        removed_rows = crawl_urls(delta["removed"], "removed")
-        write_classification(removed_rows, "removed", "Removed URL classification")
-    else:
-        write_json(DEPLOYMENT_ROOT / "classification" / "removed-url-classification.json", [])
+        urls_to_crawl = non_pdp_added + pdp_added
+        if len(added) > 150:
+            print(
+                f"Added count {len(added)} > 150 — crawling all non-PDP ({len(non_pdp_added)}) "
+                f"+ all PDP ({len(pdp_added)})"
+            )
+
+        added_rows = crawl_urls(urls_to_crawl, "added") if urls_to_crawl else []
+        write_classification(added_rows, "added", "Added URL classification")
+
+        removed_rows: list[dict[str, Any]] = []
+        if delta["removed"] and not args.skip_removed_crawl:
+            removed_rows = crawl_urls(delta["removed"], "removed")
+            write_classification(removed_rows, "removed", "Removed URL classification")
+        else:
+            write_json(DEPLOYMENT_ROOT / "classification" / "removed-url-classification.json", [])
+            write_text(
+                DEPLOYMENT_ROOT / "classification" / "removed-url-classification.md",
+                f"# Removed URL classification\n\n- Removed count: **{len(delta['removed'])}**\n",
+            )
+
+        onboarding_needs = phase5_category_onboarding(added_rows, current_urls)
+        pdp_sanity = phase6_product_pdp_sanity(added_rows)
+        garbage_hits = phase7_test_garbage_audit(added_rows, "added")
+        if removed_rows:
+            garbage_hits.extend(phase7_test_garbage_audit(removed_rows, "removed"))
+        write_csv(DEPLOYMENT_ROOT / "quality" / "test-garbage-marker-audit.csv", garbage_hits)
+        write_json(DEPLOYMENT_ROOT / "quality" / "test-garbage-marker-audit.json", garbage_hits)
         write_text(
-            DEPLOYMENT_ROOT / "classification" / "removed-url-classification.md",
-            f"# Removed URL classification\n\n- Removed count: **{len(delta['removed'])}**\n",
+            DEPLOYMENT_ROOT / "quality" / "test-garbage-marker-audit.md",
+            f"# Strict garbage marker audit\n\n- Hits: **{len(garbage_hits)}**\n",
         )
 
-    onboarding_needs = phase5_category_onboarding(added_rows, current_urls)
-    pdp_sanity = phase6_product_pdp_sanity(added_rows)
-    garbage_hits = phase7_test_garbage_audit(added_rows, "added")
-    if removed_rows:
-        garbage_hits.extend(phase7_test_garbage_audit(removed_rows, "removed"))
-    write_csv(DEPLOYMENT_ROOT / "quality" / "test-garbage-marker-audit.csv", garbage_hits)
-    write_json(DEPLOYMENT_ROOT / "quality" / "test-garbage-marker-audit.json", garbage_hits)
-    write_text(
-        DEPLOYMENT_ROOT / "quality" / "test-garbage-marker-audit.md",
-        f"# Test/garbage marker audit\n\n- Hits: **{len(garbage_hits)}**\n",
-    )
+        brand = phase8_brand_audit(added_rows)
+        sanity = phase9_sanity(current_summary.get("url_count", 0))
+        phase10_monitoring_rule()
+        verdict = determine_verdict(onboarding_needs, garbage_hits, brand, added_rows)
+        followup = phase11_followup(verdict, onboarding_needs, garbage_hits, brand, added_rows, delta)
 
-    brand = phase8_brand_audit(added_rows)
-    sanity = phase9_sanity(current_summary.get("url_count", 0))
-    phase10_monitoring_rule()
-    verdict = determine_verdict(onboarding_needs, garbage_hits, brand, added_rows)
-    followup = phase11_followup(verdict, onboarding_needs, garbage_hits, brand, added_rows, delta)
+        hygiene_flag_count = sum(
+            1
+            for row in added_rows + removed_rows
+            if row.get("strict_garbage_hit_count", 0) > 0
+            or row.get("forbidden_bzpm_count", 0) > 0
+            or row.get("http_status") not in (None, 200)
+        )
+        classification, next_action = classify_monitor_run(
+            monitor_status=monitor_status,
+            added_count=delta.get("added_count", 0),
+            removed_count=delta.get("removed_count", 0),
+            onboarding_needs_count=len(onboarding_needs),
+            strict_garbage_hits_count=len(garbage_hits),
+            brand_violations=brand.get("bzpm_violations", 0),
+            hygiene_flags_count=hygiene_flag_count,
+            sitemap_fetch_ok=sitemap_fetch_ok,
+            parse_ok=parse_ok,
+        )
 
-    summary_out = {
-        "operation_id": OPERATION_ID,
-        "ocpilot_run": OCPILOT_RUN,
-        "verdict": verdict,
-        "baseline_count": baseline_sel.get("url_count"),
-        "current_count": current_summary.get("url_count"),
-        "added_count": delta.get("added_count"),
-        "removed_count": delta.get("removed_count"),
-        "delta_scale": delta.get("delta_scale"),
-        "onboarding_needs_count": len(onboarding_needs),
-        "pdp_sanity_fail": sum(1 for r in pdp_sanity if r.get("status") == "FAIL"),
-        "garbage_hits": len(garbage_hits),
-        "brand_violations": brand.get("bzpm_violations"),
-        "followup_tasks": followup.get("tasks"),
-        "captured_at": utc_now(),
-    }
-    write_json(DEPLOYMENT_ROOT / "reports" / "monitor-summary.json", summary_out)
+        # Legacy loose markers would have flagged demo asset paths and «Пример эксплуатации»
+        false_positive_suppressed_count = len(added_rows) if len(added_rows) > 0 and len(garbage_hits) == 0 else 0
 
-    print("\n=== MONITOR COMPLETE ===")
-    print(f"Verdict: {verdict}")
-    print(f"Baseline: {summary_out['baseline_count']} | Current: {summary_out['current_count']}")
-    print(f"Added: {summary_out['added_count']} | Removed: {summary_out['removed_count']}")
-    print(f"Onboarding needs: {summary_out['onboarding_needs_count']}")
-    return 0
+        finished_at = utc_now()
+        duration_seconds = time.monotonic() - started_mono
+
+        summary_out = {
+            "operation_id": OPERATION_ID,
+            "ocpilot_run": OCPILOT_RUN,
+            "verdict": verdict,
+            "classification": classification,
+            "next_action": next_action,
+            "baseline_count": baseline_sel.get("url_count"),
+            "current_count": current_summary.get("url_count"),
+            "added_count": delta.get("added_count"),
+            "removed_count": delta.get("removed_count"),
+            "delta_scale": delta.get("delta_scale"),
+            "onboarding_needs_count": len(onboarding_needs),
+            "pdp_sanity_fail": sum(1 for r in pdp_sanity if r.get("status") == "FAIL"),
+            "garbage_hits": len(garbage_hits),
+            "strict_garbage_hits_count": len(garbage_hits),
+            "brand_violations": brand.get("bzpm_violations"),
+            "followup_tasks": followup.get("tasks"),
+            "duration_seconds": round(duration_seconds, 3),
+            "duration_human": format_duration_human(duration_seconds),
+            "started_at": started_at,
+            "finished_at": finished_at,
+            "captured_at": utc_now(),
+        }
+        write_json(DEPLOYMENT_ROOT / "reports" / "monitor-summary.json", summary_out)
+
+        if args.scheduled_run_dir:
+            run_id = args.scheduled_run_dir.name
+            export_scheduled_artifacts(
+                args.scheduled_run_dir,
+                run_id=run_id,
+                started_at=started_at,
+                finished_at=finished_at,
+                duration_seconds=duration_seconds,
+                mode="read-only-monitor",
+                status=monitor_status,
+                exit_code=0,
+                baseline_urls=baseline_urls,
+                current_urls=current_urls,
+                delta=delta,
+                added_rows=added_rows,
+                removed_rows=removed_rows,
+                onboarding_needs=onboarding_needs,
+                garbage_hits=garbage_hits,
+                brand=brand,
+                classification=classification,
+                next_action=next_action,
+                false_positive_suppressed_count=false_positive_suppressed_count,
+                sitemap_fetch_ok=sitemap_fetch_ok,
+                parse_ok=parse_ok,
+            )
+
+        print("\n=== MONITOR COMPLETE ===")
+        print(f"Verdict: {verdict}")
+        print(f"Classification: {classification}")
+        print(f"Next action: {next_action}")
+        print(f"Baseline: {summary_out['baseline_count']} | Current: {summary_out['current_count']}")
+        print(f"Added: {summary_out['added_count']} | Removed: {summary_out['removed_count']}")
+        print(f"Onboarding needs: {summary_out['onboarding_needs_count']}")
+        print(f"Duration: {summary_out['duration_human']}")
+        return 0
+    except Exception as exc:  # noqa: BLE001
+        monitor_status = "failed"
+        exit_code = 1
+        finished_at = utc_now()
+        duration_seconds = time.monotonic() - started_mono
+        err_summary = {
+            "operation_id": OPERATION_ID,
+            "status": monitor_status,
+            "error": str(exc),
+            "duration_seconds": round(duration_seconds, 3),
+            "duration_human": format_duration_human(duration_seconds),
+            "classification": "FAILURE_REVIEW_REQUIRED",
+            "next_action": "Investigate monitor exception in run logs.",
+            "captured_at": utc_now(),
+        }
+        write_json(DEPLOYMENT_ROOT / "reports" / "monitor-error.json", err_summary)
+        if args.scheduled_run_dir:
+            write_json(args.scheduled_run_dir / "run-summary.json", err_summary)
+        print(f"MONITOR FAILED: {exc}")
+        return exit_code
 
 
 if __name__ == "__main__":

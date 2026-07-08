@@ -2089,8 +2089,26 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 | **Audit baseline** | [SITE-002-POST-1C-CATALOG-HYGIENE-REVIEW-2026-07-08.md](../baselines/SITE-002-POST-1C-CATALOG-HYGIENE-REVIEW-2026-07-08.md) |
 | **Report** | [SITE-002-POST-1C-CATALOG-HYGIENE-REVIEW-01.md](../reports/SITE-002-POST-1C-CATALOG-HYGIENE-REVIEW-01.md) |
 | **Tool** | [site-002-post-1c-catalog-hygiene-review-01.py](../tools/site-002-post-1c-catalog-hygiene-review-01.py) |
-| **Optional follow-up** | `SITE-002-POST-1C-MONITOR-ARTIFACTS-HARDENING-01` |
+| **Optional follow-up** | ~~`SITE-002-POST-1C-MONITOR-ARTIFACTS-HARDENING-01`~~ **DONE** Run 4.228 |
 
 ---
 
-*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-08 (Run 4.227 — post-1C catalog hygiene review).*
+## 37. Post-1C Monitor Artifacts Hardening (2026-07-08)
+
+**Operation:** Run 4.228 — `SITE-002-POST-1C-MONITOR-ARTIFACTS-HARDENING-01`
+
+| Item | Value |
+|------|-------|
+| **Artifact contract** | Per scheduled folder: added/removed URLs, sitemap snapshots, hygiene flags, classification |
+| **Strict garbage hits (31 URL retest)** | **0** (was 31 false positives in Run 4.227) |
+| **Duration in run-summary** | **yes** (`duration_seconds` + `duration_human`) |
+| **UTF-8 logs** | Runner uses UTF-8 process capture |
+| **Classification** | `HYGIENE_REVIEW_REQUIRED` when delta exists without onboarding |
+| **Scheduler impact** | Category **A** — no task re-registration |
+| **Production checkpoint** | unchanged `SITE-002-STABLE-PROD-MAIL-CUSTOMER-FORMS-01` |
+| **Report** | [SITE-002-POST-1C-MONITOR-ARTIFACTS-HARDENING-01.md](../reports/SITE-002-POST-1C-MONITOR-ARTIFACTS-HARDENING-01.md) |
+| **Baseline** | [SITE-002-POST-1C-MONITOR-ARTIFACTS-HARDENING-01.md](../baselines/SITE-002-POST-1C-MONITOR-ARTIFACTS-HARDENING-01.md) |
+
+---
+
+*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-08 (Run 4.228 — post-1C monitor artifacts hardening).*

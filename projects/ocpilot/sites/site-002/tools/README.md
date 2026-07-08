@@ -64,6 +64,7 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `site-002-prod-mail-admin-forms-01.py` | Admin form mail redesign — anketa + renderer integration, service info, gated deploy + controlled test submit for `SITE-002-PROD-MAIL-ADMIN-FORMS-01` (Run 4.224) |
 | `site-002-prod-mail-customer-forms-01.py` | Customer form confirmations + loading/abort UX — anketa + renderer + main.js + CSS, gated deploy + 2 controlled test submits for `SITE-002-PROD-MAIL-CUSTOMER-FORMS-01` (Run 4.226) |
 | `site-002-post-1c-catalog-hygiene-review-01.py` | Read-only post-1C catalog hygiene review — added URL HTTP/meta/brand/duplicate audit after scheduled monitor for `SITE-002-POST-1C-CATALOG-HYGIENE-REVIEW-01` (Run 4.227) |
+| `site-002-post-1c-garbage-marker-fixture-test.py` | Strict garbage marker fixture regression — local harness for `SITE-002-POST-1C-MONITOR-ARTIFACTS-HARDENING-01` (Run 4.228) |
 | *(documentation only)* | Run **4.225** inbox confirmation — `SITE-002-PROD-MAIL-ADMIN-FORMS-INBOX-CONFIRMATION-01`; operator verified mailbox delivery/design; no script; report at [../reports/SITE-002-PROD-MAIL-ADMIN-FORMS-INBOX-CONFIRMATION-01.md](../reports/SITE-002-PROD-MAIL-ADMIN-FORMS-INBOX-CONFIRMATION-01.md) |
 | `checkout_anketa_mail_admin_forms.php` | Patched `checkout/anketa.php` source for Run 4.224 (repo reference; superseded by customer-forms variant for Run 4.226) |
 | `checkout_anketa_mail_customer_forms.php` | Patched `checkout/anketa.php` source for Run 4.226 — customer confirmations + admin mail (repo reference; deployed to Production) |
@@ -71,11 +72,14 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `mail_renderer.php` | Shared `ZpmMailRenderer` source — deployed to Production `system/library/zpm/mail_renderer.php`; customer + admin render methods |
 | `zpm-form-loading.css` | Loader overlay snippet appended to Production `assets/css/style.css` (Run 4.226) |
 
-### Post-1C monitor scheduler notes (Run 4.216)
+### Post-1C monitor scheduler notes (Run 4.216 / **4.228 hardening**)
 
 - Runner supports repository paths with spaces (`X:\AI MARS`) via PowerShell call-operator invocation.
 - Successful Windows Task `LastTaskResult` is **0**; **2** means runner/monitor execution failure — check `scheduled-monitors/post-1c/<timestamp>/run.stderr.log`.
 - Per-run logs: `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\scheduled-monitors\post-1c\`
+- **Hardened artifact contract (Run 4.228):** each run folder includes `added-urls.*`, `removed-urls.*`, `sitemap-baseline.xml`, `sitemap-current.xml`, `hygiene-flags.*`, `monitor-classification.*`, `changed-summary.*`, UTF-8 `run.log`/`run.stderr.log`, and `run-summary` with `duration_seconds`, `classification`, `next_action`.
+- **Strict garbage markers:** context-aware scan; no false positives on `/assets/img/demo/` or «Пример эксплуатации» doc links.
+- **Classification:** `NO_ACTION_REQUIRED` | `HYGIENE_REVIEW_REQUIRED` | `ONBOARDING_REQUIRED` | `FAILURE_REVIEW_REQUIRED`.
 
 ## Dependencies
 
