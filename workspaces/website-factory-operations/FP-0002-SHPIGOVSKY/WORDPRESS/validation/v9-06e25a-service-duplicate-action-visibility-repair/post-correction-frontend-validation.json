@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-07-08T18:20:18.618396+00:00",
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "error": null,
+      "has_fatal": false,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/",
+      "status": 200,
+      "error": null,
+      "has_fatal": false,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "status": 200,
+      "error": null,
+      "has_fatal": false,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "status": 200,
+      "error": null,
+      "has_fatal": false,
+      "result": "PASS"
+    },
+    {
+      "route": "/kontakty/",
+      "status": 200,
+      "error": null,
+      "has_fatal": false,
+      "result": "PASS"
+    },
+    {
+      "route": "/otzyvy/",
+      "status": 200,
+      "error": null,
+      "has_fatal": false,
+      "result": "PASS"
+    },
+    {
+      "route": "/privacy-policy/",
+      "status": 200,
+      "error": null,
+      "has_fatal": false,
+      "result": "PASS"
+    }
+  ],
+  "draft_746_public": {
+    "status": 404,
+    "is_public_draft": false
+  },
+  "result": "PASS"
+}

@@ -1,0 +1,23 @@
+{
+  "wave": "V9-06E25A",
+  "generated_at": "2026-07-08T18:20:15.479206+00:00",
+  "list_table": {
+    "hooks": [
+      "page_row_actions",
+      "post_row_actions"
+    ],
+    "guard": "service post type + can_duplicate_post + dedupe key fp02_duplicate"
+  },
+  "edit_screen": {
+    "component": "side meta box",
+    "title": "Дублирование",
+    "button": "Дублировать услугу"
+  },
+  "copy_logic": "preserve E25 duplicate_service unchanged",
+  "runtime_delivery": [
+    "shpigovsky-core.php",
+    "src/Admin/ServiceDuplicate.php"
+  ],
+  "new_duplicate_creation": "none",
+  "result": "PASS"
+}

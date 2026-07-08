@@ -1,0 +1,36 @@
+{
+  "wave": "V9-06E25A",
+  "checkpoint_path": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e25a-service-duplicate-action-visibility-repair-pre-20260708T181800Z",
+  "dump_file": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e25a-service-duplicate-action-visibility-repair-pre-20260708T181800Z\\mars_wp_fp0002.sql",
+  "dump_sha256": "28050E4EF55A07D6BE562B6FAE46CC1DC8FE9051BC354D90B0DE9C4ACF587277",
+  "dump_size_bytes": 2071993,
+  "service_count": 19,
+  "draft_duplicate_746": {
+    "ID": 746,
+    "post_title": "Зависимости — копия",
+    "post_name": "zavisimosti-kopiya",
+    "post_status": "draft",
+    "post_parent": 0
+  },
+  "draft_duplicate_746_meta": [
+    {
+      "post_id": 746,
+      "meta_key": "_fp02_duplicate_wave",
+      "meta_value": "V9-06E25"
+    },
+    {
+      "post_id": 746,
+      "meta_key": "_fp02_duplicated_from",
+      "meta_value": "73"
+    },
+    {
+      "post_id": 746,
+      "meta_key": "hero_cta_label",
+      "meta_value": "Заказать звонок"
+    }
+  ],
+  "global_hero_options_count": 0,
+  "restore_instructions": "mysql -h127.0.0.1 -uroot mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e25a-service-duplicate-action-visibility-repair-pre-20260708T181800Z\\mars_wp_fp0002.sql\"",
+  "result": "PASS",
+  "generated_at": "2026-07-08T18:20:15.477388+00:00"
+}

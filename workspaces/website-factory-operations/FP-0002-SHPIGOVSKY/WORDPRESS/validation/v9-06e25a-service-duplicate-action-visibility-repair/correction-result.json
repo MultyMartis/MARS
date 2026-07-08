@@ -1,0 +1,32 @@
+{
+  "wave": "V9-06E25A",
+  "generated_at": "2026-07-08T18:20:15.479626+00:00",
+  "page_row_actions": {
+    "before": false,
+    "after": true,
+    "result": "PASS"
+  },
+  "post_row_actions": {
+    "before": true,
+    "after": true,
+    "result": "PASS"
+  },
+  "edit_meta_box": {
+    "before": false,
+    "after": true,
+    "result": "PASS"
+  },
+  "duplicate_url_helper": {
+    "before": false,
+    "after": true,
+    "result": "PASS"
+  },
+  "capability_mapping_fix": {
+    "before": "literal create_posts",
+    "after": "CPT-mapped create_posts",
+    "result": "PASS"
+  },
+  "copy_logic_preserved": true,
+  "version": "0.3.3-v9-06e25a-source",
+  "result": "PASS"
+}

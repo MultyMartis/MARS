@@ -1,0 +1,19 @@
+{
+  "wave": "V9-06E25A",
+  "generated_at": "2026-07-08T18:20:15.478196+00:00",
+  "module_registered": true,
+  "runtime_file_matches_source": true,
+  "hooks_in_source": {
+    "page_row_actions": true,
+    "post_row_actions": true,
+    "add_meta_boxes": true,
+    "admin_post_fp02_duplicate_service": true
+  },
+  "service_cpt_hierarchical": true,
+  "root_cause": "E25 hooked only post_row_actions while hierarchical service CPT uses page_row_actions; E25 also used literal create_posts capability which is false for service CPT (mapped create cap is edit_posts)",
+  "edit_screen_meta_box_before_e25a": false,
+  "edit_screen_meta_box_after_source_fix": true,
+  "capability_checks": "user_can_duplicate uses CPT-mapped create_posts cap",
+  "nonce_action": "fp02_duplicate_service",
+  "result": "PASS"
+}

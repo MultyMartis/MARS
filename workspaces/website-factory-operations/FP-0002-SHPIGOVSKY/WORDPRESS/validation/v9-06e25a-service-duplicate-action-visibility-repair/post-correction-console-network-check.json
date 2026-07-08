@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-07-08T18:20:26.052484+00:00",
+  "checks": [
+    {
+      "route": "/",
+      "http_status": 200,
+      "console_fatal": false
+    },
+    {
+      "route": "/uslugi/",
+      "http_status": 200,
+      "console_fatal": false
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "http_status": 200,
+      "console_fatal": false
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "http_status": 200,
+      "console_fatal": false
+    },
+    {
+      "route": "/kontakty/",
+      "http_status": 200,
+      "console_fatal": false
+    },
+    {
+      "route": "/otzyvy/",
+      "http_status": 200,
+      "console_fatal": false
+    },
+    {
+      "route": "/privacy-policy/",
+      "http_status": 200,
+      "console_fatal": false
+    }
+  ],
+  "result": "PASS"
+}

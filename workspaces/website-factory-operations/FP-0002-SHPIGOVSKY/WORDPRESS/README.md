@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E25 SERVICE DUPLICATE FEATURE **PASS** — admin row action `Дублировать` for `service` CPT; safe draft copy with ` — копия` suffix; ACF/postmeta + local hero (`hero_cta_label`, `hero_media`) copied by reference; media IDs reused; duplicate markers `_fp02_duplicated_*`; **3** plugin files; fresh DB checkpoint `v9-06e25-service-duplicate-feature-pre-20260708T175440Z`; runtime delivered; routes 11/11 PASS; test duplicate draft ID **746** left as validation artifact; admin screenshots PARTIAL. E24/E24A preserved — no global `Герои`. Prior: V9-06E24A structured sections **PASS**. NEXT: **CREATE_V9_06E26_BLOG_AND_OTHER_PAGES_PORTING_ARCHITECTURE_AUDIT_TASK**
+**Status:** V9-06E25A SERVICE DUPLICATE ACTION VISIBILITY REPAIR **PASS** — `Дублировать` row action now on `page_row_actions` (hierarchical CPT) + edit-screen meta box `Дублирование`; CPT-mapped capability fix; E25 copy logic preserved; **2** plugin files; DB checkpoint `v9-06e25a-service-duplicate-action-visibility-repair-pre-20260708T181800Z`; runtime delivered; routes 7/7 PASS; draft **746** preserved; admin screenshots **3/3 PASS**. Prior E25 duplicate handler PASS but UI was invisible. NEXT: **CREATE_V9_06E25_OPERATOR_SERVICE_DUPLICATE_QA_TASK**
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

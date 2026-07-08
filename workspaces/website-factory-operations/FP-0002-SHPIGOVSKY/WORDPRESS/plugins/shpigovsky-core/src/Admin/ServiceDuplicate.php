@@ -65,9 +65,71 @@ final class ServiceDuplicate implements ModuleInterface {
 	 * {@inheritdoc}
 	 */
 	public static function register() {
+		// Hierarchical CPTs (service) use page_row_actions; flat CPTs use post_row_actions.
+		add_filter( 'page_row_actions', array( __CLASS__, 'add_row_action' ), 10, 2 );
 		add_filter( 'post_row_actions', array( __CLASS__, 'add_row_action' ), 10, 2 );
+		add_action( 'add_meta_boxes', array( __CLASS__, 'register_meta_boxes' ) );
 		add_action( 'admin_post_' . self::ADMIN_ACTION, array( __CLASS__, 'handle_admin_post' ) );
 		add_action( 'admin_notices', array( __CLASS__, 'render_duplicate_notice' ) );
+	}
+
+	/**
+	 * Whether the current user may duplicate services (CPT-mapped create cap).
+	 *
+	 * @param int $post_id Optional service post ID for edit_post check.
+	 * @return bool
+	 */
+	public static function user_can_duplicate( $post_id = 0 ) {
+		$post_type = get_post_type_object( Service::POST_TYPE );
+
+		if ( ! $post_type || empty( $post_type->cap->create_posts ) ) {
+			return false;
+		}
+
+		$post_id = (int) $post_id;
+
+		if ( $post_id > 0 && ! current_user_can( 'edit_post', $post_id ) ) {
+			return false;
+		}
+
+		return current_user_can( $post_type->cap->create_posts );
+	}
+
+	/**
+	 * Whether the current user may duplicate a service post.
+	 *
+	 * @param WP_Post $post Service post.
+	 * @return bool
+	 */
+	public static function can_duplicate_post( WP_Post $post ) {
+		if ( Service::POST_TYPE !== $post->post_type ) {
+			return false;
+		}
+
+		if ( wp_is_post_autosave( $post ) || wp_is_post_revision( $post ) ) {
+			return false;
+		}
+
+		if ( in_array( $post->post_status, array( 'auto-draft', 'trash' ), true ) ) {
+			return false;
+		}
+
+		return self::user_can_duplicate( (int) $post->ID );
+	}
+
+	/**
+	 * Build nonce-protected duplicate URL for a service post.
+	 *
+	 * @param int $post_id Service post ID.
+	 * @return string
+	 */
+	public static function get_duplicate_url( $post_id ) {
+		return wp_nonce_url(
+			admin_url(
+				'admin-post.php?action=' . self::ADMIN_ACTION . '&post_id=' . (int) $post_id
+			),
+			self::NONCE_ACTION . '_' . (int) $post_id
+		);
 	}
 
 	/**
@@ -78,24 +140,15 @@ final class ServiceDuplicate implements ModuleInterface {
 	 * @return array<string,string>
 	 */
 	public static function add_row_action( $actions, $post ) {
-		if ( ! $post instanceof WP_Post || Service::POST_TYPE !== $post->post_type ) {
+		if ( ! $post instanceof WP_Post || ! self::can_duplicate_post( $post ) ) {
 			return $actions;
 		}
 
-		if ( wp_is_post_autosave( $post ) || wp_is_post_revision( $post ) ) {
+		if ( isset( $actions['fp02_duplicate'] ) ) {
 			return $actions;
 		}
 
-		if ( ! current_user_can( 'edit_post', $post->ID ) || ! current_user_can( 'create_posts' ) ) {
-			return $actions;
-		}
-
-		$url = wp_nonce_url(
-			admin_url(
-				'admin-post.php?action=' . self::ADMIN_ACTION . '&post_id=' . (int) $post->ID
-			),
-			self::NONCE_ACTION . '_' . (int) $post->ID
-		);
+		$url = self::get_duplicate_url( (int) $post->ID );
 
 		$actions['fp02_duplicate'] = sprintf(
 			'<a href="%s" aria-label="%s">%s</a>',
@@ -111,6 +164,50 @@ final class ServiceDuplicate implements ModuleInterface {
 		);
 
 		return $actions;
+	}
+
+	/**
+	 * Register edit-screen duplicate meta box.
+	 */
+	public static function register_meta_boxes() {
+		add_meta_box(
+			'fp02_service_duplicate',
+			__( 'Дублирование', 'shpigovsky-core' ),
+			array( __CLASS__, 'render_meta_box' ),
+			Service::POST_TYPE,
+			'side',
+			'default'
+		);
+	}
+
+	/**
+	 * Render duplicate control on the service edit screen.
+	 *
+	 * @param WP_Post $post Current post.
+	 */
+	public static function render_meta_box( $post ) {
+		if ( ! $post instanceof WP_Post ) {
+			return;
+		}
+
+		if ( 'auto-draft' === $post->post_status ) {
+			echo '<p>' . esc_html__( 'Сохраните услугу, чтобы появилась возможность дублирования.', 'shpigovsky-core' ) . '</p>';
+			return;
+		}
+
+		if ( ! self::can_duplicate_post( $post ) ) {
+			echo '<p>' . esc_html__( 'Недостаточно прав для дублирования.', 'shpigovsky-core' ) . '</p>';
+			return;
+		}
+
+		$url = self::get_duplicate_url( (int) $post->ID );
+
+		printf(
+			'<p><a href="%1$s" class="button button-secondary">%2$s</a></p><p class="description">%3$s</p>',
+			esc_url( $url ),
+			esc_html__( 'Дублировать услугу', 'shpigovsky-core' ),
+			esc_html__( 'Создаст черновик-копию этой услуги со всеми ACF-полями и медиа-ссылками.', 'shpigovsky-core' )
+		);
 	}
 
 	/**
@@ -139,7 +236,7 @@ final class ServiceDuplicate implements ModuleInterface {
 			wp_die( esc_html__( 'Нельзя дублировать автосохранение или ревизию.', 'shpigovsky-core' ), 400 );
 		}
 
-		if ( ! current_user_can( 'edit_post', $source_id ) || ! current_user_can( 'create_posts' ) ) {
+		if ( ! self::user_can_duplicate( $source_id ) ) {
 			wp_die( esc_html__( 'Недостаточно прав для дублирования услуги.', 'shpigovsky-core' ), 403 );
 		}
 

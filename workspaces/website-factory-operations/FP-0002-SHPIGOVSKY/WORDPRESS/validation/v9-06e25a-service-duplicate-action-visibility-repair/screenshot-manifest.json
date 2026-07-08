@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-07-08T18:20:34.846764+00:00",
+  "screenshots": [
+    {
+      "file": "admin-services-list-duplicate-action-visible-e25a.png",
+      "url": "http://shpigovsky.test/wp-admin/edit.php?post_type=service",
+      "captured": true,
+      "sha256": "F32988ADD9A223B6BE6467CC01525E9F0573D4AD0B0BE1E2B2296B21C198FA6F",
+      "error": null
+    },
+    {
+      "file": "admin-service-edit-duplicate-metabox-visible-e25a.png",
+      "url": "http://shpigovsky.test/wp-admin/post.php?post=73&action=edit",
+      "captured": true,
+      "sha256": "660B1CD3E32CDE5F7E9BEE7B3925FC6D6917E2CB4A907CE449A38D8DF6209499",
+      "error": null
+    },
+    {
+      "file": "admin-duplicate-action-url-nonce-e25a.png",
+      "url": "http://shpigovsky.test/wp-admin/post.php?post=73&action=edit",
+      "captured": true,
+      "sha256": "660B1CD3E32CDE5F7E9BEE7B3925FC6D6917E2CB4A907CE449A38D8DF6209499",
+      "error": null
+    }
+  ],
+  "html_fallback": {
+    "row_action_eval": {
+      "post_id": 73,
+      "post_type": "service",
+      "hierarchical": true,
+      "actions": [
+        "fp02_duplicate"
+      ],
+      "duplicate_html": "<a href=\"http://shpigovsky.test/wp-admin/admin-post.php?action=fp02_duplicate_service&#038;post_id=73&#038;_wpnonce=d0cf5c1f76\" aria-label=\"Р”СѓР±Р»РёСЂРѕРІР°С‚СЊ СѓСЃР»СѓРіСѓ В«Р—Р°РІРёСЃРёРјРѕСЃС‚РёВ»\">Р”СѓР±Р»РёСЂРѕРІР°С‚СЊ</a>"
+    },
+    "meta_box_eval": {
+      "post_id": 73,
+      "has_button": true,
+      "has_note": true,
+      "html": "<p><a href=\"http://shpigovsky.test/wp-admin/admin-post.php?action=fp02_duplicate_service&#038;post_id=73&#038;_wpnonce=d0cf5c1f76\" class=\"button button-secondary\">Р”СѓР±Р»РёСЂРѕРІР°С‚СЊ СѓСЃР»СѓРіСѓ</a></p><p class=\"description\">РЎРѕР·РґР°СЃС‚ С‡РµСЂРЅРѕРІРёРє-РєРѕРїРёСЋ СЌС‚РѕР№ СѓСЃР»СѓРіРё СЃРѕ РІСЃРµРјРё ACF-РїРѕР»СЏРјРё Рё РјРµРґРёР°-СЃСЃС‹Р»РєР°РјРё.</p>"
+    }
+  }
+}

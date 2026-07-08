@@ -1,0 +1,26 @@
+{
+  "wave": "V9-06E25A",
+  "ui_entry_points": [
+    "list table row action Дублировать",
+    "edit screen meta box button Дублировать услугу"
+  ],
+  "hooks": [
+    "page_row_actions",
+    "post_row_actions",
+    "add_meta_boxes",
+    "admin_post_fp02_duplicate_service"
+  ],
+  "guards": [
+    "service post type only",
+    "can_duplicate_post",
+    "no auto-draft/trash/revision"
+  ],
+  "nonce_action": "fp02_duplicate_service_{post_id}",
+  "handler": "handle_admin_post preserved",
+  "copy_logic": "duplicate_service preserved",
+  "operator_qa": [
+    "Open Услуги list — hover row — see Дублировать",
+    "Open service edit — side box Дублирование — click Дублировать услугу"
+  ],
+  "result": "PASS"
+}

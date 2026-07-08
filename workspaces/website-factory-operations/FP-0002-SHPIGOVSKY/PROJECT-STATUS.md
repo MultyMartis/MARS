@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-09 (V9-06E25 service duplicate feature PASS)
+**Last updated:** 2026-07-09 (V9-06E25A service duplicate action visibility repair PASS)
 
-**Current WordPress phase:** V9-06E25 Service Duplicate Feature **PASS** — admin `Дублировать` row action on `service` CPT; draft duplicate with ` — копия` suffix; full ACF/postmeta copy including E24 `hero_cta_label` and local hero media IDs; structured sections + FAQ copied; media reused without file duplication; **3** plugin files; fresh DB checkpoint `v9-06e25-service-duplicate-feature-pre-20260708T175440Z`; runtime delivered; routes 11/11 PASS; controlled test duplicate draft ID **746** (`Зависимости — копия`); admin screenshots PARTIAL. E24/E24A preserved — no global `Герои`. **Next: CREATE_V9_06E26_BLOG_AND_OTHER_PAGES_PORTING_ARCHITECTURE_AUDIT_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E25-SERVICE-DUPLICATE-FEATURE-REPORT-v1.md`. Prior E24A: `WORDPRESS/reports/FP-0002-V9-06E24A-SERVICE-STRUCTURED-SECTIONS-REQUIRED-FIELD-POLISH-REPORT-v1.md`.
+**Current WordPress phase:** V9-06E25A Service Duplicate Action Visibility Repair **PASS** — `Дублировать` visible on `page_row_actions` + edit meta box `Дублирование`; CPT capability mapping fix; E25 copy logic preserved; **2** plugin files; DB checkpoint `v9-06e25a-service-duplicate-action-visibility-repair-pre-20260708T181800Z`; runtime delivered; routes 7/7 PASS; draft **746** preserved; admin screenshots 3/3 PASS. **Next: CREATE_V9_06E25_OPERATOR_SERVICE_DUPLICATE_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E25A-SERVICE-DUPLICATE-ACTION-VISIBILITY-REPAIR-REPORT-v1.md`. Prior E25: duplicate handler worked but admin UI was invisible — corrected in E25A.
 
 ## Active frontend workspace (V9)
 

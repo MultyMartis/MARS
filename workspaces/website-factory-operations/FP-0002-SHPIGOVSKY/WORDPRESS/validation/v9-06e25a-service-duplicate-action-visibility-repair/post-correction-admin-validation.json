@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-07-08T18:20:18.617777+00:00",
+  "hook_state": {
+    "module_enabled": true,
+    "has_page_row": true,
+    "has_post_row": true,
+    "has_meta_box": true,
+    "has_admin_post": true,
+    "service_hierarchical": true
+  },
+  "row_action_eval_post_73": {
+    "post_id": 73,
+    "post_type": "service",
+    "hierarchical": true,
+    "actions": [
+      "fp02_duplicate"
+    ],
+    "duplicate_html": "<a href=\"http://shpigovsky.test/wp-admin/admin-post.php?action=fp02_duplicate_service&#038;post_id=73&#038;_wpnonce=d0cf5c1f76\" aria-label=\"Р”СѓР±Р»РёСЂРѕРІР°С‚СЊ СѓСЃР»СѓРіСѓ В«Р—Р°РІРёСЃРёРјРѕСЃС‚РёВ»\">Р”СѓР±Р»РёСЂРѕРІР°С‚СЊ</a>"
+  },
+  "meta_box_eval_post_73": {
+    "post_id": 73,
+    "has_button": true,
+    "has_note": true,
+    "html": "<p><a href=\"http://shpigovsky.test/wp-admin/admin-post.php?action=fp02_duplicate_service&#038;post_id=73&#038;_wpnonce=d0cf5c1f76\" class=\"button button-secondary\">Р”СѓР±Р»РёСЂРѕРІР°С‚СЊ СѓСЃР»СѓРіСѓ</a></p><p class=\"description\">РЎРѕР·РґР°СЃС‚ С‡РµСЂРЅРѕРІРёРє-РєРѕРїРёСЋ СЌС‚РѕР№ СѓСЃР»СѓРіРё СЃРѕ РІСЃРµРјРё ACF-РїРѕР»СЏРјРё Рё РјРµРґРёР°-СЃСЃС‹Р»РєР°РјРё.</p>"
+  },
+  "list_table_row_action_visible": true,
+  "row_action_label_present": false,
+  "nonce_in_row_action": true,
+  "edit_screen_button_visible": true,
+  "edit_screen_note_visible": true,
+  "service_only": true,
+  "draft_746_exists": true,
+  "draft_746_status": "draft",
+  "no_new_duplicate_created": true,
+  "global_hero_options": [],
+  "result": "PASS"
+}
