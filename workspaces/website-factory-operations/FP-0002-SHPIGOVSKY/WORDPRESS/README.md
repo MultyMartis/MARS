@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E25A SERVICE DUPLICATE ACTION VISIBILITY REPAIR **PASS** — `Дублировать` row action now on `page_row_actions` (hierarchical CPT) + edit-screen meta box `Дублирование`; CPT-mapped capability fix; E25 copy logic preserved; **2** plugin files; DB checkpoint `v9-06e25a-service-duplicate-action-visibility-repair-pre-20260708T181800Z`; runtime delivered; routes 7/7 PASS; draft **746** preserved; admin screenshots **3/3 PASS**. Prior E25 duplicate handler PASS but UI was invisible. NEXT: **CREATE_V9_06E25_OPERATOR_SERVICE_DUPLICATE_QA_TASK**
+**Status:** V9-06E26 BLOG AND OTHER PAGES PORTING ARCHITECTURE AUDIT **PASS** — read-only audit; canonical blog route `/blog/`; standard WP `post`; permalink GAP `/%postname%/` → target `/blog/%postname%/`; institutional + blog templates skeleton-only; E26A–E26D wave plan documented; WPilot deferred; **0** DB writes; **0** runtime delivery. Evidence: `validation/v9-06e26-blog-and-other-pages-porting-architecture-audit/`. Report: `reports/FP-0002-V9-06E26-BLOG-AND-OTHER-PAGES-PORTING-ARCHITECTURE-AUDIT-REPORT-v1.md`. NEXT: **CREATE_V9_06E26A_ABOUT_PAGE_WORDPRESS_ACF_PORT_TASK**. Prior E25A: service duplicate visibility repair PASS @ `7a6674db`.
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

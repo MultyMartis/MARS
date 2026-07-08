@@ -1,0 +1,54 @@
+{
+  "task_id": "V9-06E26",
+  "generated_at": "2026-07-08T19:05:35Z",
+  "document": "future-wave-acceptance-criteria",
+  "result": "PASS",
+  "acceptance_criteria": [
+    {
+      "wave": "E26A",
+      "criteria": [
+        "/o-centre/ contains all 12 required V9 sections.",
+        "ACF-driven content renders without placeholders.",
+        "Template structure matches approved architecture proposal."
+      ]
+    },
+    {
+      "wave": "E26B",
+      "criteria": [
+        "/blog/ resolves as archive and reflects page_for_posts.",
+        "Archive supports empty and non-empty dataset states.",
+        "Canonical + breadcrumbs aligned with /blog/ route."
+      ]
+    },
+    {
+      "wave": "E26C",
+      "criteria": [
+        "Single post route follows /blog/%postname%/.",
+        "Article meta fields render from ACF with fallbacks.",
+        "Lower stack sections are functional and non-placeholder."
+      ]
+    },
+    {
+      "wave": "E26D",
+      "criteria": [
+        "Demo seed includes representative posts and categories.",
+        "Smoke tests pass for archive and single routes.",
+        "Evidence bundle documents parity and unresolved gaps."
+      ]
+    }
+  ],
+  "evidence": [
+    "Static V9: 33 pages in forge manifest; canonical blog route /blog/ NOT /articles/.",
+    "WP probe 2026-07-08: page_for_posts=19; permalink_structure=/%postname%/; blog_public=0; posts=[]; categories=1 empty.",
+    "Blog templates are skeleton-only (home.php, single.php, article-content/lower-stack placeholders).",
+    "Institutional template is skeleton-only (institutional.php + hero); institutional-narrative placeholder; 12 V9 sections missing on /o-centre/.",
+    "ACF exists: group_fp02_page_institutional and group_fp02_blog_post_article_meta.",
+    "No article CPT detected; standard post must be used.",
+    "Draft 746 mismatch: E25A documented, but E26 probe get_post(746)=null.",
+    "Obsolete WP pages for E27: IDs 10, 17, 25, 21.",
+    "Already ported: home, services hub, alcohol leaf, contacts, reviews, legal shells, service tree.",
+    "E26 waves: E26A o-centre, E26B blog archive, E26C blog single, E26D demo seed.",
+    "WPilot future fields planned but not implemented.",
+    "Recommended next task: CREATE_V9_06E26A_ABOUT_PAGE_WORDPRESS_ACF_PORT_TASK."
+  ]
+}

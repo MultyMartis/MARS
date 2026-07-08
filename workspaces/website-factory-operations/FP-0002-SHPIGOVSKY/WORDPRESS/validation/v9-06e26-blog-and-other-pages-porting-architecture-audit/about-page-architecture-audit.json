@@ -1,0 +1,39 @@
+{
+  "task_id": "V9-06E26",
+  "generated_at": "2026-07-08T19:05:35Z",
+  "document": "about-page-architecture-audit",
+  "result": "PASS",
+  "target_route": "/o-centre/",
+  "current_state": [
+    "institutional.php has hero-only implementation.",
+    "institutional-narrative remains placeholder.",
+    "12 required V9 sections are missing."
+  ],
+  "acf_alignment": {
+    "group": "group_fp02_page_institutional",
+    "available_structures": [
+      "hero fields",
+      "repeaters"
+    ],
+    "coverage_status": "partial"
+  },
+  "delivery_contract": [
+    "Deliver all 12 missing V9 sections with ACF-backed content model.",
+    "Preserve section order and route parity with static V9.",
+    "Block E26 closeout until /o-centre/ visual and content parity is proven."
+  ],
+  "evidence": [
+    "Static V9: 33 pages in forge manifest; canonical blog route /blog/ NOT /articles/.",
+    "WP probe 2026-07-08: page_for_posts=19; permalink_structure=/%postname%/; blog_public=0; posts=[]; categories=1 empty.",
+    "Blog templates are skeleton-only (home.php, single.php, article-content/lower-stack placeholders).",
+    "Institutional template is skeleton-only (institutional.php + hero); institutional-narrative placeholder; 12 V9 sections missing on /o-centre/.",
+    "ACF exists: group_fp02_page_institutional and group_fp02_blog_post_article_meta.",
+    "No article CPT detected; standard post must be used.",
+    "Draft 746 mismatch: E25A documented, but E26 probe get_post(746)=null.",
+    "Obsolete WP pages for E27: IDs 10, 17, 25, 21.",
+    "Already ported: home, services hub, alcohol leaf, contacts, reviews, legal shells, service tree.",
+    "E26 waves: E26A o-centre, E26B blog archive, E26C blog single, E26D demo seed.",
+    "WPilot future fields planned but not implemented.",
+    "Recommended next task: CREATE_V9_06E26A_ABOUT_PAGE_WORDPRESS_ACF_PORT_TASK."
+  ]
+}

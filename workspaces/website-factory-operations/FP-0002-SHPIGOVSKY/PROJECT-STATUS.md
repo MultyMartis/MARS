@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-09 (V9-06E25A service duplicate action visibility repair PASS)
+**Last updated:** 2026-07-09 (V9-06E26 blog and other pages porting architecture audit PASS)
 
-**Current WordPress phase:** V9-06E25A Service Duplicate Action Visibility Repair **PASS** — `Дублировать` visible on `page_row_actions` + edit meta box `Дублирование`; CPT capability mapping fix; E25 copy logic preserved; **2** plugin files; DB checkpoint `v9-06e25a-service-duplicate-action-visibility-repair-pre-20260708T181800Z`; runtime delivered; routes 7/7 PASS; draft **746** preserved; admin screenshots 3/3 PASS. **Next: CREATE_V9_06E25_OPERATOR_SERVICE_DUPLICATE_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E25A-SERVICE-DUPLICATE-ACTION-VISIBILITY-REPAIR-REPORT-v1.md`. Prior E25: duplicate handler worked but admin UI was invisible — corrected in E25A.
+**Current WordPress phase:** V9-06E26 Blog And Other Pages Porting Architecture Audit **PASS** — documentation-only; canonical blog `/blog/`; standard WP `post` recommended; permalink structure GAP documented; `/o-centre/` hub needs 12 V9 sections (E26A); blog archive/single skeleton (E26B–E26C); fixture seed planned (E26D); WPilot metadata planned only; **0** DB writes; **0** runtime delivery. **Next: CREATE_V9_06E26A_ABOUT_PAGE_WORDPRESS_ACF_PORT_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E26-BLOG-AND-OTHER-PAGES-PORTING-ARCHITECTURE-AUDIT-REPORT-v1.md`. Prior E25A: service duplicate visibility repair PASS @ baseline `7a6674db`.
 
 ## Active frontend workspace (V9)
 

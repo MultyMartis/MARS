@@ -1,0 +1,46 @@
+{
+  "task_id": "V9-06E26",
+  "generated_at": "2026-07-08T19:05:35Z",
+  "document": "static-v9-route-inventory",
+  "result": "PASS",
+  "route_inventory": {
+    "manifest_total_pages": 33,
+    "canonical_blog_archive_route": "/blog/",
+    "non_canonical_blog_archive_routes": [
+      "/articles/"
+    ],
+    "already_ported_routes": [
+      "/",
+      "/uslugi/",
+      "/uslugi/vyvod-iz-zapoya/",
+      "/kontakty/",
+      "/otzyvy/",
+      "/pravovaya-informaciya/",
+      "/derevo-uslug/"
+    ],
+    "priority_unported_routes": [
+      "/o-centre/",
+      "/blog/",
+      "/blog/<postname>/"
+    ]
+  },
+  "validation_checks": [
+    "V9 manifest cardinality captured as 33 pages.",
+    "Canonical blog route fixed to /blog/ for all downstream planning.",
+    "Legacy /articles/ explicitly marked as invalid target."
+  ],
+  "evidence": [
+    "Static V9: 33 pages in forge manifest; canonical blog route /blog/ NOT /articles/.",
+    "WP probe 2026-07-08: page_for_posts=19; permalink_structure=/%postname%/; blog_public=0; posts=[]; categories=1 empty.",
+    "Blog templates are skeleton-only (home.php, single.php, article-content/lower-stack placeholders).",
+    "Institutional template is skeleton-only (institutional.php + hero); institutional-narrative placeholder; 12 V9 sections missing on /o-centre/.",
+    "ACF exists: group_fp02_page_institutional and group_fp02_blog_post_article_meta.",
+    "No article CPT detected; standard post must be used.",
+    "Draft 746 mismatch: E25A documented, but E26 probe get_post(746)=null.",
+    "Obsolete WP pages for E27: IDs 10, 17, 25, 21.",
+    "Already ported: home, services hub, alcohol leaf, contacts, reviews, legal shells, service tree.",
+    "E26 waves: E26A o-centre, E26B blog archive, E26C blog single, E26D demo seed.",
+    "WPilot future fields planned but not implemented.",
+    "Recommended next task: CREATE_V9_06E26A_ABOUT_PAGE_WORDPRESS_ACF_PORT_TASK."
+  ]
+}
