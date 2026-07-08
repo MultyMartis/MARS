@@ -1,0 +1,8 @@
+{
+  "wave": "V9-06E24A",
+  "checkpoint_path": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e24a-service-structured-sections-required-field-polish-pre-20260708T173446Z",
+  "dump_file": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e24a-service-structured-sections-required-field-polish-pre-20260708T173446Z\\mars_wp_fp0002.sql",
+  "dump_sha256": "69F86DE293F4CEB2AB239511B264C0ED4B04E1739CF8E2A5C9C6D7F6293560E5",
+  "restore_instructions": "mysql -h127.0.0.1 -uroot mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e24a-service-structured-sections-required-field-polish-pre-20260708T173446Z\\mars_wp_fp0002.sql\"",
+  "result": "PASS"
+}

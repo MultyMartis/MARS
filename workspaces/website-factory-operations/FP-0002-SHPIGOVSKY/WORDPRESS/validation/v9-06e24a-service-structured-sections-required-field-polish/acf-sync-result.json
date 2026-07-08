@@ -1,0 +1,25 @@
+{
+    "wave": "V9-06E24A",
+    "result": "PASS",
+    "groups": [
+        {
+            "field_group": "group_fp02_service_structured_sections",
+            "programme_items_label": "Пункты программы",
+            "programme_items_required": 0,
+            "sub_fields": [
+                {
+                    "name": "title",
+                    "label": "Заголовок",
+                    "required": 0
+                },
+                {
+                    "name": "text",
+                    "label": "Текст",
+                    "required": 0
+                }
+            ],
+            "sync": "php_export_import",
+            "result": "PASS"
+        }
+    ]
+}

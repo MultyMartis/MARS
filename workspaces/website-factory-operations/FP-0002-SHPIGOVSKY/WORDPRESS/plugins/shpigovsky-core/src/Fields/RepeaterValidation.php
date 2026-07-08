@@ -43,6 +43,7 @@ final class RepeaterValidation implements ModuleInterface {
 		add_filter( 'acf/validate_value/name=manual_related_services', array( __CLASS__, 'validate_related_services' ), 10, 4 );
 		add_filter( 'acf/validate_value/type=url', array( __CLASS__, 'validate_url_field' ), 10, 4 );
 		add_filter( 'acf/validate_value/type=email', array( __CLASS__, 'validate_email_field' ), 10, 4 );
+		add_filter( 'acf/validate_value/name=programme_items', array( __CLASS__, 'validate_optional_programme_items' ), 10, 4 );
 		add_action( 'save_post_' . Service::POST_TYPE, array( __CLASS__, 'validate_service_depth_on_save' ), 10, 3 );
 	}
 
@@ -207,6 +208,19 @@ final class RepeaterValidation implements ModuleInterface {
 		}
 
 		return $depth <= 2;
+	}
+
+	/**
+	 * Allow optional programme repeater rows with title-only or fully empty subfields.
+	 *
+	 * @param true|string         $valid Current validity.
+	 * @param mixed               $value Repeater rows.
+	 * @param array<string,mixed> $field Field definition.
+	 * @param string              $input Input name.
+	 * @return true|string
+	 */
+	public static function validate_optional_programme_items( $valid, $value, $field, $input ) {
+		return true;
 	}
 
 	/**

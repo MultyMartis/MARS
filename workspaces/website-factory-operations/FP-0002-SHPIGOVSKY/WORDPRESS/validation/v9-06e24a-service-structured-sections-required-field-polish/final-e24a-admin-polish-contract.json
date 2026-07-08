@@ -1,0 +1,24 @@
+{
+  "wave": "V9-06E24A",
+  "field_group": "group_fp02_service_structured_sections",
+  "field_key": "field_fp02_programme_items_service",
+  "field_name": "programme_items",
+  "admin_label": "Пункты программы",
+  "operator_reference_label": "Программа / условия",
+  "method": "A",
+  "required_state": {
+    "repeater": 0,
+    "title": 0,
+    "text": 0
+  },
+  "frontend_usage": "USED_FRONTEND",
+  "save_blocker_status": "REMOVED",
+  "hero_cta_preserved": true,
+  "global_heroes_absent": true,
+  "operator_qa_checklist": [
+    "Save service Зависимости without filling programme text rows",
+    "Confirm hero CTA field still visible",
+    "Confirm no global Герои settings page"
+  ],
+  "result": "PASS"
+}

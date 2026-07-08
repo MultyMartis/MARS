@@ -1,0 +1,26 @@
+{
+  "wave": "V9-06E24A",
+  "method": "A",
+  "method_reason": "programme_items is USED_FRONTEND with static fallback; operator save blocker resolved by explicit optional flags + validation filter",
+  "components": [
+    {
+      "component": "field_fp02_programme_items_service",
+      "decision": "required=0 + instructions",
+      "reason": "optional programme block",
+      "safety": "frontend fallback preserved"
+    },
+    {
+      "component": "programme subfields title/text",
+      "decision": "required=0 explicit",
+      "reason": "partial rows must not block save",
+      "safety": "no content migration"
+    },
+    {
+      "component": "RepeaterValidation::validate_optional_programme_items",
+      "decision": "acf filter",
+      "reason": "defensive optional validation",
+      "safety": "max-row hook unchanged"
+    }
+  ],
+  "result": "PASS"
+}

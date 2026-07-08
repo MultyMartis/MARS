@@ -392,4 +392,8 @@ E24 **PASS**: Local hero CTA editability — field `hero_cta_label` (**Текс�
 
 E24-SYNC **PASS**: After `git fetch`, local and `origin/mars/canonical-post-recovery` already equal at tip `7d5a62da` (contains E24 `bb86fd1e`). No merge, rebase, reset, stash, clean, or force push. Historical operator-reported tip `5bd7d516` is dangling only. Foreign WIP preserved. Evidence: `validation/v9-06e24-sync-resolve-remote-divergence/`. Report: `reports/FP-0002-V9-06E24-SYNC-RESOLVE-REMOTE-DIVERGENCE-REPORT-v1.md`. Next: **CREATE_V9_06E25_OPERATOR_HERO_CTA_QA_TASK**.
 
+## V9-06E24A service structured sections required field polish (2026-07-08)
+
+E24A **PASS**: Operator admin polish — `Программа / условия` resolved to optional `programme_items` (`Пункты программы`) in `group_fp02_service_structured_sections`; explicit optional flags + `validate_optional_programme_items`; ACF JSON resync from PHP; **2** plugin + **1** ACF JSON; DB checkpoint `v9-06e24a-service-structured-sections-required-field-polish-pre-20260708T173446Z`. E24 `hero_cta_label` preserved; no global `Герои`. Routes 10/10 PASS; admin screenshots PARTIAL. Evidence: `validation/v9-06e24a-service-structured-sections-required-field-polish/`. Report: `reports/FP-0002-V9-06E24A-SERVICE-STRUCTURED-SECTIONS-REQUIRED-FIELD-POLISH-REPORT-v1.md`. Next: **CREATE_V9_06E25_SERVICE_DUPLICATE_FEATURE_TASK**.
+
 **Primary authority rule (E10/E11/E12/E13/E14):** Static V9 HTML (`fp-0002-shpigovsky-v9/src/` + `dist/`) is primary layout/copy authority. WordPress must achieve direct section-stack parity — not semantic PHP reconstruction. Hub mini-descriptions: admin field primary; V9 static secondary; DEMO explicit where no V9 page exists. No invented clinical copy.

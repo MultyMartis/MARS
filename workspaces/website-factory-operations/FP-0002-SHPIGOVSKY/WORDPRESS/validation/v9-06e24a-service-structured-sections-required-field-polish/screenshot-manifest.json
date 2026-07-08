@@ -1,0 +1,16 @@
+{
+  "wave": "V9-06E24A",
+  "required_admin": [
+    "admin-zavisimosti-program-conditions-optional-e24a.png",
+    "admin-zavisimosti-save-no-required-error-e24a.png",
+    "admin-service-hero-cta-still-visible-e24a.png",
+    "admin-no-global-heroes-settings-e24a.png"
+  ],
+  "captured_frontend": [
+    "runtime-zavisimosti-no-broken-program-block-e24a.png",
+    "runtime-alcohol-service-regression-e24a.png",
+    "runtime-home-hero-cta-regression-e24a.png"
+  ],
+  "admin_capture_reason": "wp-admin auth not available in automated runner",
+  "result": "PARTIAL"
+}

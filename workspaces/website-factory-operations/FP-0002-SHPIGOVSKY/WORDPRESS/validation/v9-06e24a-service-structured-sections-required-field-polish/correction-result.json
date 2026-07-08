@@ -1,0 +1,22 @@
+{
+  "wave": "V9-06E24A",
+  "field": "field_fp02_programme_items_service",
+  "label": "Пункты программы",
+  "operator_reference_label": "Программа / условия",
+  "before": {
+    "required": 0,
+    "subfields_required": 0,
+    "validation_probe": {
+      "programme_items_title_only": "PASS",
+      "programme_items_empty": "PASS"
+    }
+  },
+  "after": {
+    "required": 0,
+    "subfields_required": 0,
+    "instructions_added": true,
+    "validation_filter_added": true
+  },
+  "method": "A",
+  "result": "PASS"
+}

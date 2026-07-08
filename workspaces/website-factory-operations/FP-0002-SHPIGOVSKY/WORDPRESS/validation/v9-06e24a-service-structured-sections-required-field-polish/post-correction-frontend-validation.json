@@ -1,0 +1,83 @@
+{
+  "generated_at": "2026-07-08T17:34:59.690427+00:00",
+  "routes": [
+    {
+      "route": "/uslugi/",
+      "http_status": 200,
+      "result": "PASS",
+      "notes": [],
+      "error": null
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "http_status": 200,
+      "result": "PASS",
+      "notes": [
+        "services-program-v2"
+      ],
+      "error": null
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "http_status": 200,
+      "result": "PASS",
+      "notes": [
+        "services-program-v2",
+        "hero-cta-check-manual"
+      ],
+      "error": null
+    },
+    {
+      "route": "/uslugi/zavisimosti/narkoticheskaya-zavisimost/",
+      "http_status": 200,
+      "result": "PASS",
+      "notes": [],
+      "error": null
+    },
+    {
+      "route": "/uslugi/zavisimosti/lekarstvennaya-zavisimost/",
+      "http_status": 200,
+      "result": "PASS",
+      "notes": [],
+      "error": null
+    },
+    {
+      "route": "/uslugi/zavisimosti/povedencheskie-zavisimosti/",
+      "http_status": 200,
+      "result": "PASS",
+      "notes": [
+        "services-program-v2"
+      ],
+      "error": null
+    },
+    {
+      "route": "/",
+      "http_status": 200,
+      "result": "PASS",
+      "notes": [],
+      "error": null
+    },
+    {
+      "route": "/kontakty/",
+      "http_status": 200,
+      "result": "PASS",
+      "notes": [],
+      "error": null
+    },
+    {
+      "route": "/otzyvy/",
+      "http_status": 200,
+      "result": "PASS",
+      "notes": [],
+      "error": null
+    },
+    {
+      "route": "/privacy-policy/",
+      "http_status": 200,
+      "result": "PASS",
+      "notes": [],
+      "error": null
+    }
+  ],
+  "result": "PASS"
+}

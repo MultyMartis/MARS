@@ -178,8 +178,32 @@ final class FieldGroups implements ModuleInterface {
 					'programme_items',
 					6,
 					array(
-						self::field( 'field_fp02_programme_item_title_service', 'Заголовок', 'title', 'text' ),
-						self::field( 'field_fp02_programme_item_text_service', 'Текст', 'text', 'textarea', array( 'rows' => 3 ) ),
+						self::field(
+							'field_fp02_programme_item_title_service',
+							'Заголовок',
+							'title',
+							'text',
+							array(
+								'required'     => 0,
+								'instructions' => 'Optional. Leave empty to omit row on save.',
+							)
+						),
+						self::field(
+							'field_fp02_programme_item_text_service',
+							'Текст',
+							'text',
+							'textarea',
+							array(
+								'required'     => 0,
+								'rows'         => 3,
+								'instructions' => 'Optional. Theme uses static fallback when programme block is empty.',
+							)
+						),
+					),
+					0,
+					array(
+						'required'     => 0,
+						'instructions' => 'Optional programme block. Empty or partial rows do not block save; frontend falls back to static V9 programme when unset.',
 					)
 				),
 				self::repeater(
@@ -943,21 +967,25 @@ final class FieldGroups implements ModuleInterface {
 	 * @param int               $max Max rows.
 	 * @param array<int, mixed> $sub_fields Sub fields.
 	 * @param int               $min Min rows.
+	 * @param array<string,mixed> $args Repeater field overrides.
 	 * @return array<string, mixed>
 	 */
-	private static function repeater( $key, $label, $name, $max, array $sub_fields, $min = 0 ) {
+	private static function repeater( $key, $label, $name, $max, array $sub_fields, $min = 0, array $args = array() ) {
 		return self::field(
 			$key,
 			$label,
 			$name,
 			'repeater',
-			array(
-				'instructions' => 'Bounded repeater. Max rows are enforced in source and validation hooks.',
-				'layout'       => 'row',
-				'button_label' => 'Добавить',
-				'min'          => $min,
-				'max'          => $max,
-				'sub_fields'   => $sub_fields,
+			array_merge(
+				array(
+					'instructions' => 'Bounded repeater. Max rows are enforced in source and validation hooks.',
+					'layout'       => 'row',
+					'button_label' => 'Добавить',
+					'min'          => $min,
+					'max'          => $max,
+					'sub_fields'   => $sub_fields,
+				),
+				$args
 			)
 		);
 	}

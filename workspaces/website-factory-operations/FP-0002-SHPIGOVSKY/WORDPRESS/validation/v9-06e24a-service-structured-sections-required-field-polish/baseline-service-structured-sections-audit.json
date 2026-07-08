@@ -1,0 +1,92 @@
+{
+  "generated_at": "2026-07-08T17:34:47.781059+00:00",
+  "operator_label_reference": "Программа / условия",
+  "resolved_admin_label": "Пункты программы",
+  "acf_group": "group_fp02_service_structured_sections",
+  "acf_group_title": "Service — Structured Sections",
+  "field_key": "field_fp02_programme_items_service",
+  "field_name": "programme_items",
+  "field_type": "repeater",
+  "required_before": 0,
+  "nested_fields": [
+    {
+      "key": "field_fp02_programme_item_title_service",
+      "label": "Заголовок",
+      "name": "title",
+      "type": "text",
+      "required": 0
+    },
+    {
+      "key": "field_fp02_programme_item_text_service",
+      "label": "Текст",
+      "name": "text",
+      "type": "textarea",
+      "required": 0
+    }
+  ],
+  "frontend_usage": "USED_FRONTEND",
+  "frontend_renderer": "template-parts/service/program.php, template-parts/service/approach.php",
+  "frontend_empty_behavior": "static V9 fallback via shpigovsky_get_service_subdivision_programme_fallback_items()",
+  "affected_services": {
+    "73": {
+      "title": "Зависимости",
+      "slug": "zavisimosti",
+      "programme_items": [
+        {
+          "title": "01 — Генотипирование",
+          "text": ""
+        },
+        {
+          "title": "02 — Нейропсихологическая коррекция",
+          "text": ""
+        },
+        {
+          "title": "03 — Психокоррекция",
+          "text": ""
+        },
+        {
+          "title": "04 — Кинезиотерапия",
+          "text": ""
+        }
+      ],
+      "hero_cta_label": "Заказать звонок"
+    },
+    "74": {
+      "title": "Лечение алкогольной зависимости",
+      "slug": "lechenie-alkogolnoy-zavisimosti",
+      "programme_items": [
+        {
+          "title": "01 — Генотипирование",
+          "text": ""
+        },
+        {
+          "title": "02 — Нейропсихологическая коррекция",
+          "text": ""
+        },
+        {
+          "title": "03 — Психокоррекция",
+          "text": ""
+        },
+        {
+          "title": "04 — Кинезиотерапия",
+          "text": ""
+        }
+      ],
+      "hero_cta_label": "Записаться на консультацию"
+    }
+  },
+  "e24_hero_cta_relation": "UNRELATED — hero_cta_label in group_fp02_service_layout_hero preserved",
+  "global_hero_options": [],
+  "db_programme_field": {
+    "ID": 202,
+    "post_title": "Пункты программы",
+    "post_excerpt": "programme_items",
+    "post_content": "a:15:{s:10:\"aria-label\";s:0:\"\";s:4:\"type\";s:8:\"repeater\";s:12:\"instructions\";s:71:\"Bounded repeater. Max rows are enforced in source and validation hooks.\";s:8:\"required\";i:0;s:17:\"conditional_logic\";i:0;s:7:\"wrapper\";a:3:{s:5:\"width\";s:0:\"\";s:5:\"class\";s:0:\"\";s:2:\"id\";s:0:\"\";}s:13:\"default_value\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";s:6:\"layout\";s:3:\"row\";s:12:\"button_label\";s:16:\"Добавить\";s:3:\"min\";i:0;s:3:\"max\";i:6;s:13:\"rows_per_page\";i:20;s:9:\"collapsed\";s:0:\"\";s:29:\"acfe_repeater_stylised_button\";i:0;}"
+  },
+  "validation_probe": {
+    "programme_items_title_only": "PASS",
+    "programme_items_empty": "PASS"
+  },
+  "classification": "USED_FRONTEND",
+  "result": "PASS"
+}

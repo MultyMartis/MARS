@@ -102,7 +102,7 @@
             "name": "programme_items",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "Bounded repeater. Max rows are enforced in source and validation hooks.",
+            "instructions": "Optional programme block. Empty or partial rows do not block save; frontend falls back to static V9 programme when unset.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -123,7 +123,7 @@
                     "name": "title",
                     "aria-label": "",
                     "type": "text",
-                    "instructions": "",
+                    "instructions": "Optional. Leave empty to omit row on save.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -140,7 +140,7 @@
                     "name": "text",
                     "aria-label": "",
                     "type": "textarea",
-                    "instructions": "",
+                    "instructions": "Optional. Theme uses static fallback when programme block is empty.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -300,5 +300,5 @@
     "active": true,
     "description": "FP-0002 V9-06C canonical source field group. Runtime registration occurs only after delivery authorization.",
     "show_in_rest": 0,
-    "modified": 1783158780
+    "modified": 1783953600
 }
