@@ -1,0 +1,57 @@
+{
+  "wave": "V9-06E24-SYNC",
+  "recorded_at": "2026-07-08T19:05:39+07:00",
+  "checks": [
+    {
+      "check": "bb86fd1e_ancestor_of_HEAD",
+      "result": "PASS",
+      "notes": "git merge-base --is-ancestor bb86fd1e HEAD exit 0"
+    },
+    {
+      "check": "remote_pre_sync_HEAD_ancestor_of_HEAD",
+      "result": "PASS",
+      "notes": "origin tip was already 7d5a62da; equal to HEAD"
+    },
+    {
+      "check": "no_staged_files",
+      "result": "PASS",
+      "notes": "git diff --cached --name-only empty before docs staging"
+    },
+    {
+      "check": "foreign_WIP_preserved",
+      "result": "PASS",
+      "notes": "56 modified + 482 untracked left untouched"
+    },
+    {
+      "check": "E24_changed_files_present",
+      "result": "PASS",
+      "notes": "hero-helpers.php, FieldGroups.php, E24 report present in HEAD tree"
+    },
+    {
+      "check": "E24_docs_evidence_present",
+      "result": "PASS",
+      "notes": "architecture + validation/v9-06e24-hero-cta-button-text-per-entity present"
+    },
+    {
+      "check": "hero_cta_label_present",
+      "result": "PASS",
+      "notes": "FieldGroups.php + ACF JSON group_fp02_page_home.json + helper shpigovsky_get_local_hero_cta_label()"
+    },
+    {
+      "check": "global_Heroes_not_restored",
+      "result": "PASS",
+      "notes": "No Герои / group_fp02_block_hero_fallbacks restore signals in FieldGroups.php / hero-helpers.php scoped search"
+    },
+    {
+      "check": "no_runtime_db_helper_staged",
+      "result": "PASS",
+      "notes": "No merge staging; docs-only commit planned with exact allowlist"
+    },
+    {
+      "check": "no_force_push_required",
+      "result": "PASS",
+      "notes": "Branch already fast-forward equal; push dry-run Everything up-to-date"
+    }
+  ],
+  "result": "PASS"
+}

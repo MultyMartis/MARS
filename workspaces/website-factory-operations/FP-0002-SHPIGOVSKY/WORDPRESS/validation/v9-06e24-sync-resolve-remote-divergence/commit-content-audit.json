@@ -1,0 +1,74 @@
+{
+  "wave": "V9-06E24-SYNC",
+  "recorded_at": "2026-07-08T19:05:39+07:00",
+  "local_e24_commit": {
+    "hash": "bb86fd1e14cff403ed9f0445afdca8930c5c7ff9",
+    "short": "bb86fd1e",
+    "side": "local_and_canonical_history",
+    "subject": "FP-0002: add local hero CTA button text field",
+    "classification": "same_FP-0002_E24-related",
+    "risk": "none",
+    "files_touched_count": 38,
+    "primary_areas": [
+      "WORDPRESS/acf-json",
+      "WORDPRESS/plugins/shpigovsky-core",
+      "WORDPRESS/theme/shpigovsky",
+      "WORDPRESS/architecture E24",
+      "WORDPRESS/validation/v9-06e24-hero-cta-button-text-per-entity",
+      "WORDPRESS/reports E24",
+      "status docs"
+    ]
+  },
+  "canonical_post_e24_ocpilot_commit": {
+    "hash": "7d5a62da8738a38324ee2059f6e13bed0762fc74",
+    "short": "7d5a62da",
+    "side": "canonical_published_tip",
+    "subject": "ocpilot: review SITE-002 post-1C catalog hygiene",
+    "classification": "OCPilot/foreign_work",
+    "risk": "none_for_e24",
+    "overlap_with_e24_files": false,
+    "files_touched_count": 9
+  },
+  "canonical_pre_e24_ocpilot_commit": {
+    "hash": "db02660146dcdb2be275a5e8917c2ca0f5430a16",
+    "short": "db026601",
+    "side": "canonical_history_parent_of_e24",
+    "subject": "ocpilot: add SITE-002 customer form confirmations",
+    "classification": "OCPilot/foreign_work",
+    "risk": "none_for_e24",
+    "overlap_with_e24_files": false,
+    "files_touched_count": 12
+  },
+  "operator_reported_remote_tip_at_push_rejection": {
+    "hash": "5bd7d5164827e2cd6de5d32add91554f3acd40d8",
+    "short": "5bd7d516",
+    "side": "dangling_orphaned_tip_not_on_branch",
+    "subject": "ocpilot: add SITE-002 customer form confirmations",
+    "classification": "OCPilot/foreign_work_with_mixed_E24_tree",
+    "risk": "historical_only",
+    "parent": "cad17f71b21bc5af98c89524f92cbbeda10dbc96",
+    "tree": "9e9e56eb66091fd774aaef1036f93a0c05133950",
+    "same_tree_as_e24": true,
+    "reachable_from_current_branch": false,
+    "note": "Reflog: commit 5bd7 → reset HEAD~1 to cad17f71 → recommit ocpilot as db026601 → E24 bb86fd1e. Not present on origin tip."
+  },
+  "remote_only_commits_after_fetch": [],
+  "file_overlap_analysis": {
+    "e24_vs_db026601": {
+      "overlap": false,
+      "overlap_count": 0,
+      "risk": "none"
+    },
+    "e24_vs_7d5a62da": {
+      "overlap": false,
+      "overlap_count": 0,
+      "risk": "none"
+    },
+    "current_remote_only_set": {
+      "overlap": false,
+      "note": "No remote-only commits after fetch"
+    }
+  },
+  "stop_conditions_triggered": false,
+  "result": "PASS"
+}

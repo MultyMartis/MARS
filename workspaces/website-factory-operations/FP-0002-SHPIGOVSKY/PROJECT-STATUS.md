@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-08 (V9-06E24 Hero CTA Button Text Per Entity PASS)
+**Last updated:** 2026-07-08 (V9-06E24-SYNC remote divergence resolve PASS — E24 published)
 
-**Current WordPress phase:** V9-06E24 Hero CTA Button Text Per Entity **PASS** — local `hero_cta_label` (**Текст кнопки в hero-блоке**) on home, services hub, service, institutional hero field groups; `shpigovsky_get_local_hero_cta_label()` frontend fallback chain; **10** hero CTA postmeta seeds; E22 local hero architecture preserved (no global `Герои`). Fresh DB checkpoint `v9-06e24-hero-cta-button-text-per-entity-pre-20260707-212945`; **1** plugin + **5** theme + **4** ACF JSON; runtime delivered. Routes 13/13 PASS; admin screenshots PARTIAL. **Next: CREATE_V9_06E25_OPERATOR_HERO_CTA_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E24-HERO-CTA-BUTTON-TEXT-PER-ENTITY-REPORT-v1.md`.
+**Current WordPress phase:** V9-06E24 Hero CTA Button Text Per Entity **PASS** — local `hero_cta_label` (**Текст кнопки в hero-блоке**) on home, services hub, service, institutional hero field groups; `shpigovsky_get_local_hero_cta_label()` frontend fallback chain; **10** hero CTA postmeta seeds; E22 local hero architecture preserved (no global `Герои`). Fresh DB checkpoint `v9-06e24-hero-cta-button-text-per-entity-pre-20260707-212945`; **1** plugin + **5** theme + **4** ACF JSON; runtime delivered. Routes 13/13 PASS; admin screenshots PARTIAL. **V9-06E24-SYNC PASS** — after fetch, branch already synced; E24 `bb86fd1e` published under tip `7d5a62da` (no merge/force needed). **Next: CREATE_V9_06E25_OPERATOR_HERO_CTA_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E24-HERO-CTA-BUTTON-TEXT-PER-ENTITY-REPORT-v1.md`. Sync: `WORDPRESS/reports/FP-0002-V9-06E24-SYNC-RESOLVE-REMOTE-DIVERGENCE-REPORT-v1.md`.
 
 ## Active frontend workspace (V9)
 

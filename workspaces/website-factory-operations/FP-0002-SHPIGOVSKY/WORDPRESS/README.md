@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E24 HERO CTA BUTTON TEXT PER ENTITY **PASS** — local `hero_cta_label` (**Текст кнопки в hero-блоке**) on home, services hub, service, institutional hero groups; `shpigovsky_get_local_hero_cta_label()` frontend chain; **10** hero CTA postmeta seeds; **1** plugin + **5** theme + **4** ACF JSON; fresh DB checkpoint; runtime delivered; routes 13/13 PASS; admin screenshots PARTIAL. E22 local hero architecture preserved — no global `Герои`. NEXT: **CREATE_V9_06E25_OPERATOR_HERO_CTA_QA_TASK**
+**Status:** V9-06E24 HERO CTA BUTTON TEXT PER ENTITY **PASS** — local `hero_cta_label` (**Текст кнопки в hero-блоке**) on home, services hub, service, institutional hero groups; `shpigovsky_get_local_hero_cta_label()` frontend chain; **10** hero CTA postmeta seeds; **1** plugin + **5** theme + **4** ACF JSON; fresh DB checkpoint; runtime delivered; routes 13/13 PASS; admin screenshots PARTIAL. E22 local hero architecture preserved — no global `Герои`. **V9-06E24-SYNC PASS** — E24 `bb86fd1e` published under tip `7d5a62da` (already synced; no merge/force). NEXT: **CREATE_V9_06E25_OPERATOR_HERO_CTA_QA_TASK**
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

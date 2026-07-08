@@ -1,0 +1,62 @@
+{
+  "wave": "V9-06E24-SYNC",
+  "task": "resolve-remote-divergence",
+  "recorded_at": "2026-07-08T19:05:39+07:00",
+  "preflight": {
+    "volume": "X",
+    "label": "AI WS",
+    "repository": "X:\\AI MARS",
+    "branch": "mars/canonical-post-recovery",
+    "pre_existing_staged_files": [],
+    "local_e24_commit_present": true,
+    "local_e24_commit": "bb86fd1e14cff403ed9f0445afdca8930c5c7ff9",
+    "foreign_wip": {
+      "modified_count": 56,
+      "untracked_count": 482,
+      "touched": false,
+      "categories": [
+        "forge-wordpress runtime reports",
+        "ocpilot site-002 WIP",
+        "fp-0002 v7/v8 workspace WIP",
+        ".recovery-temp / .restore-test-temp",
+        "helper/temp validation runners",
+        "other untracked project WIP"
+      ]
+    }
+  },
+  "before_fetch": {
+    "local_head": "7d5a62da8738a38324ee2059f6e13bed0762fc74",
+    "local_short": "7d5a62da",
+    "remote_tracking_head": "7d5a62da8738a38324ee2059f6e13bed0762fc74",
+    "remote_actual_head_ls_remote": "7d5a62da8738a38324ee2059f6e13bed0762fc74",
+    "ahead": 0,
+    "behind": 0
+  },
+  "after_fetch": {
+    "fetch_exit_code": 0,
+    "local_head": "7d5a62da8738a38324ee2059f6e13bed0762fc74",
+    "remote_tracking_head": "7d5a62da8738a38324ee2059f6e13bed0762fc74",
+    "remote_actual_head_ls_remote": "7d5a62da8738a38324ee2059f6e13bed0762fc74",
+    "merge_base": "7d5a62da8738a38324ee2059f6e13bed0762fc74",
+    "local_is_ancestor_of_remote": true,
+    "remote_is_ancestor_of_local": true,
+    "ahead": 0,
+    "behind": 0,
+    "local_only_commits": [],
+    "remote_only_commits": []
+  },
+  "historical_context": {
+    "last_accepted_pushed_baseline_before_e24": "cad17f71b21bc5af98c89524f92cbbeda10dbc96",
+    "local_e24_commit": "bb86fd1e14cff403ed9f0445afdca8930c5c7ff9",
+    "operator_reported_remote_after_push_rejection": "5bd7d5164827e2cd6de5d32add91554f3acd40d8",
+    "note": "At task start, remote and local already equal at 7d5a62da. Tip 5bd7d516 is dangling (not on branch); reflog shows it was superseded by reset+recommit: db026601 (ocpilot) then bb86fd1e (E24) then 7d5a62da (ocpilot hygiene)."
+  },
+  "current_ancestry": [
+    "7d5a62da ocpilot: review SITE-002 post-1C catalog hygiene",
+    "bb86fd1e FP-0002: add local hero CTA button text field",
+    "db026601 ocpilot: add SITE-002 customer form confirmations",
+    "cad17f71 FP-0002: remove global hero settings"
+  ],
+  "divergence_state": "NONE_ALREADY_SYNCED",
+  "result": "PASS"
+}

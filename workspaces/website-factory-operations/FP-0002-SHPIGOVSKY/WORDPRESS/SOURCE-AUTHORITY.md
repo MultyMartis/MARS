@@ -388,4 +388,8 @@ E22 **PASS**: Operator E21 rejection follow-up — removed global `Герои` f
 
 E24 **PASS**: Local hero CTA editability — field `hero_cta_label` (**Текст кнопки в hero-блоке**) on `group_fp02_page_home`, `group_fp02_page_services_hub`, `group_fp02_service_layout_hero`, `group_fp02_page_institutional`; helper `shpigovsky_get_local_hero_cta_label()`; **10** postmeta seeds; **1** plugin + **5** theme + **4** ACF JSON; DB checkpoint `v9-06e24-hero-cta-button-text-per-entity-pre-20260707-212945`. No global `Герои`. E22/E21 preserved. Routes 13/13 PASS. Evidence: `validation/v9-06e24-hero-cta-button-text-per-entity/`. Report: `reports/FP-0002-V9-06E24-HERO-CTA-BUTTON-TEXT-PER-ENTITY-REPORT-v1.md`. Next: **CREATE_V9_06E25_OPERATOR_HERO_CTA_QA_TASK**.
 
+## V9-06E24-SYNC resolve remote divergence (2026-07-08)
+
+E24-SYNC **PASS**: After `git fetch`, local and `origin/mars/canonical-post-recovery` already equal at tip `7d5a62da` (contains E24 `bb86fd1e`). No merge, rebase, reset, stash, clean, or force push. Historical operator-reported tip `5bd7d516` is dangling only. Foreign WIP preserved. Evidence: `validation/v9-06e24-sync-resolve-remote-divergence/`. Report: `reports/FP-0002-V9-06E24-SYNC-RESOLVE-REMOTE-DIVERGENCE-REPORT-v1.md`. Next: **CREATE_V9_06E25_OPERATOR_HERO_CTA_QA_TASK**.
+
 **Primary authority rule (E10/E11/E12/E13/E14):** Static V9 HTML (`fp-0002-shpigovsky-v9/src/` + `dist/`) is primary layout/copy authority. WordPress must achieve direct section-stack parity — not semantic PHP reconstruction. Hub mini-descriptions: admin field primary; V9 static secondary; DEMO explicit where no V9 page exists. No invented clinical copy.
