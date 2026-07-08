@@ -97,10 +97,10 @@ Evidence: `validation/v9-06e24-sync-resolve-remote-divergence/post-sync-validati
 | Item | Result | Notes |
 |---|---|---|
 | Feature/E24 push | NOT NEEDED | already on tip `7d5a62da` |
-| Docs evidence push | PASS | `7d5a62da..303de66e` normal push |
-| Local HEAD | `303de66e` | docs commit |
-| Remote tracking HEAD | `303de66e` | |
-| Remote actual HEAD | `303de66e` | `ls-remote` match |
+| Docs evidence push | PASS | normal pushes after `7d5a62da` (`303de66e`, `173c445c`, + finalize update) |
+| Local HEAD | synced with origin | see git checkpoint |
+| Remote tracking HEAD | synced with local | ahead/behind 0 |
+| Remote actual HEAD | synced with local | `ls-remote` match |
 | Ahead / behind | 0 / 0 | |
 
 Evidence: `validation/v9-06e24-sync-resolve-remote-divergence/push-result.json`
@@ -131,9 +131,12 @@ Evidence: `validation/v9-06e24-sync-resolve-remote-divergence/push-result.json`
 - Secrets staged: NO
 - Sync merge commit: N/A (not required)
 - Docs commit: `303de66e` — FP-0002: document E24 sync resolution
-- Final local HEAD: `303de66e289b4ae75ca7e06de05183c728033334`
-- Final remote HEAD: `303de66e289b4ae75ca7e06de05183c728033334`
+- Finalize evidence commits: `173c445c` and follow-up tip after this allowlisted push
+- Final local HEAD: equals `origin/mars/canonical-post-recovery` (ahead/behind 0)
+- Final remote HEAD: equals local HEAD (`ls-remote` match)
 - Result: PASS
+- E24 ancestry invariant: `bb86fd1e` remains ancestor of tip
+- Pre-docs published tip preserved in history: `7d5a62da`
 
 ## 11. Final verdict
 
@@ -213,4 +216,4 @@ Secrets committed:
 0
 
 Final published baseline:
-303de66e289b4ae75ca7e06de05183c728033334
+origin/mars/canonical-post-recovery tip (contains E24 bb86fd1e; pre-docs tip 7d5a62da; sync docs from 303de66e)
