@@ -335,3 +335,28 @@ Selective commit planned for discovery docs + tool only. Storage and downloaded 
 6. verification + rollback bundle.
 
 Inherited pending (unchanged): post-1C Lari reparent verification (Run 4.235).
+
+---
+
+## Addendum — Operator routing decision
+
+**Date:** 2026-07-09
+
+**Decision:**
+The operator clarified that `/contact` is the accepted canonical contacts URL for SITE-002. `/kontakty` is not required and its 404 status is not considered a production issue.
+
+**Impact:**
+The Option E implementation recommendation from this discovery is **rejected**. Do not migrate `/contact` to `/kontakty`.
+
+No implementation task should be launched for:
+
+- DB keyword `contact` → `kontakty`;
+- 301 `/contact` → `/kontakty`;
+- header/footer/corp link changes to `/kontakty`;
+- `llms.txt` change to `/kontakty`;
+- sitemap patch for `/kontakty`.
+
+**Optional separate future task:**
+Consider native contact route sitemap inclusion for `/contact`, not `/kontakty`, if SEO hygiene requires it (`SITE-002-PROD-CONTACT-SITEMAP-INCLUSION-01`).
+
+**Authority:** Run 4.238 — [SITE-002-PROD-CONTACTS-URL-ROUTING-DECISION-01.md](SITE-002-PROD-CONTACTS-URL-ROUTING-DECISION-01.md)
