@@ -1,0 +1,49 @@
+{
+  "task_id": "V9-06E29A",
+  "generated_at": "2026-07-09T20:18:16.557028+00:00",
+  "origins": [
+    {
+      "title": "Галерея о доме",
+      "origin": "STATIC_V9_ROUTE_MANIFEST_PLACEHOLDER",
+      "evidence": [
+        "v9-route-manifest.json: /o-centre/galereya-o-dome/ status PLACEHOLDER",
+        "E27A static-v9-vs-wp-route-matrix PLACEHOLDER bucket",
+        "WP page #14 child of institutional hub #11"
+      ]
+    },
+    {
+      "title": "О нас",
+      "origin": "STATIC_V9_ROUTE_MANIFEST_PLACEHOLDER",
+      "evidence": [
+        "v9-route-manifest.json: /o-centre/o-nas/ status PLACEHOLDER",
+        "Static V9 src plain-page-content stub with demo-placeholder marker"
+      ]
+    },
+    {
+      "title": "Программа лечения",
+      "origin": "STATIC_V9_ROUTE_MANIFEST_PLACEHOLDER",
+      "evidence": [
+        "v9-route-manifest.json: /o-centre/programma-lecheniya/ status PLACEHOLDER",
+        "Footer menu exposure declared in manifest",
+        "Linked from /o-centre/ approach/program sections (hardcoded URLs)"
+      ]
+    },
+    {
+      "title": "Родственникам",
+      "origin": "INSTITUTIONAL_CHILD_PLACEHOLDER",
+      "evidence": [
+        "V9 manifest PLACEHOLDER institutional child",
+        "WP seed structural page under parent #11"
+      ]
+    },
+    {
+      "title": "Специалистам",
+      "origin": "INSTITUTIONAL_CHILD_PLACEHOLDER",
+      "evidence": [
+        "V9 manifest: /o-centre/specialistam/ PLACEHOLDER (canonical institutional route)",
+        "E14 trashed service CPT duplicate; page #15 retained",
+        "Distinct from STATIC_ONLY /uslugi/zavisimosti/specialistam/ (no WP owner)"
+      ]
+    }
+  ]
+}

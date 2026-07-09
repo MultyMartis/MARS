@@ -1,0 +1,32 @@
+{
+  "task_id": "V9-06E29A",
+  "generated_at": "2026-07-09T20:18:16.557028+00:00",
+  "why_named_pages_exist": "Static V9 route manifest declares five institutional child routes as PLACEHOLDER_PENDING_CONTENT; WP structural seed created matching pages for URL/menu IA completeness.",
+  "design_authority": "partial — stub plain-page-content layout in static V9 only; no approved full design",
+  "placeholder_decisions": {
+    "О нас": "KEEP_PLACEHOLDER_FOR_LATER_PORT",
+    "Программа лечения": "KEEP_PLACEHOLDER_FOR_LATER_PORT",
+    "Галерея о доме": "KEEP_PLACEHOLDER_FOR_LATER_PORT",
+    "Специалистам": "KEEP_PLACEHOLDER_FOR_LATER_PORT",
+    "Родственникам": "KEEP_PLACEHOLDER_FOR_LATER_PORT"
+  },
+  "ocentre_public_readiness": "PASS",
+  "ocentre_admin_parity_readiness": "PARTIAL",
+  "e28_minor_superseded_note": "E28 checked legacy field names institutional_intro/blocks/team (not in current ACF JSON). E26A about_* fields ARE seeded and populated on page #11 as of E29A probe.",
+  "missing_admin_areas": [
+    "hero_media empty — theme asset fallback only",
+    "founder-quote section — static partial, no page #11 ACF",
+    "clinic-landscape section — static partial, no page #11 ACF",
+    "program CTA bands — static copy helper + site phone option, not page-local ACF",
+    "specialists/reviews/final-form — shared options pages (fp02-block-specialists, fp02-reviews, fp02-block-final-form), not obvious on page #11 edit screen",
+    "about_program_* contains lorem ipsum seed placeholders — operator should replace",
+    "infrastructure gallery images — static V9 theme assets when repeater media empty",
+    "child institutional pages #12–16 — no body content model wired (hero + empty article shell only)"
+  ],
+  "implementation_type": "MIXED_DB_AND_SOURCE — hero_media seed + shared-block admin UX + optional ACF/template for founder/clinic; child page port is separate E29C wave",
+  "blockers": 0,
+  "majors": 0,
+  "minors": 2,
+  "recommended_next_task": "CREATE_V9_06E29B_OCENTRE_ADMIN_PARITY_IMPLEMENTATION_TASK",
+  "operator_approval_required": true
+}

@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-09 (V9-06E28 final WordPress readiness QA PASS / GO_WITH_MINOR_POLISH)
+**Last updated:** 2026-07-10 (V9-06E29A placeholder pages + o-centre admin parity decision audit PASS)
 
-**Current WordPress phase:** V9-06E28 Final WordPress Readiness QA **PASS** (`GO_WITH_MINOR_POLISH`) — 35 routes checked; 12/12 core routes HTTP 200; 0 blockers; menu `#301` stable; E27 trash intact; 1 minor ACF admin gap on `/o-centre/` institutional fields. **Next: CREATE_V9_06E29_OPERATOR_VISUAL_POLISH_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E28-FINAL-WORDPRESS-READINESS-QA-REPORT-v1.md`. Prior E27D: PASS @ `60291b8e`.
+**Current WordPress phase:** V9-06E29A Placeholder Pages And O-Centre Admin Parity Decision Audit **PASS** — 5 institutional child placeholders classified KEEP_PLACEHOLDER_FOR_LATER_PORT; `/o-centre/` public PASS / admin PARTIAL; E28 legacy field probe superseded (about_* seeded). **Next: CREATE_V9_06E29B_OCENTRE_ADMIN_PARITY_IMPLEMENTATION_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E29A-PLACEHOLDER-PAGES-AND-OCENTRE-ADMIN-PARITY-DECISION-AUDIT-REPORT-v1.md`. Prior E28: PASS @ `7457e50d` ancestor.
 
 ## Active frontend workspace (V9)
 

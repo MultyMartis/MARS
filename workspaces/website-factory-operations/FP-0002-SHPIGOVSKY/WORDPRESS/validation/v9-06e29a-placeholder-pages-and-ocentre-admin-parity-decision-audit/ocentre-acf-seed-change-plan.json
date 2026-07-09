@@ -1,0 +1,200 @@
+{
+  "task_id": "V9-06E29A",
+  "generated_at": "2026-07-09T20:18:16.557028+00:00",
+  "classification": "MIXED_DB_AND_SOURCE",
+  "e26a_seed_status": "COMPLETE for hub about_* repeaters — E29B focuses on remaining gaps",
+  "db_seed_only_fields": [
+    "hero_eyebrow",
+    "hero_title_override",
+    "hero_lead",
+    "hero_media",
+    "hero_cta_label",
+    "about_narrative_heading",
+    "about_narrative_lead",
+    "about_who_treat_heading",
+    "about_who_treat_intro",
+    "about_who_treat_lead",
+    "about_who_treat_callout",
+    "about_approach_heading",
+    "about_approach_highlight",
+    "about_approach_intro",
+    "about_program_heading",
+    "about_program_lead",
+    "about_program_intro",
+    "about_program_intro2",
+    "about_narrative_paragraphs",
+    "about_who_treat_spectrum",
+    "about_who_treat_cards",
+    "about_program_items",
+    "infrastructure_g0_g5"
+  ],
+  "requires_new_acf_definition": [
+    "founder_quote_section",
+    "clinic_landscape_section"
+  ],
+  "requires_template_binding": [
+    "founder_quote",
+    "clinic_landscape",
+    "final_form_o_centre_copy"
+  ],
+  "shared_block_admin": [
+    "fp02-block-specialists",
+    "fp02-reviews",
+    "fp02-block-final-form"
+  ],
+  "seed_plan": [
+    {
+      "field": "hero_eyebrow",
+      "action": "verify_existing_seed",
+      "acf_definition_exists": true,
+      "template_binding_required": false
+    },
+    {
+      "field": "hero_title_override",
+      "action": "verify_existing_seed",
+      "acf_definition_exists": true,
+      "template_binding_required": false
+    },
+    {
+      "field": "hero_lead",
+      "action": "verify_existing_seed",
+      "acf_definition_exists": true,
+      "template_binding_required": false
+    },
+    {
+      "field": "hero_media",
+      "action": "seed_from_v9_static_fallback",
+      "acf_definition_exists": true,
+      "template_binding_required": false
+    },
+    {
+      "field": "hero_cta_label",
+      "action": "verify_existing_seed",
+      "acf_definition_exists": true,
+      "template_binding_required": false
+    },
+    {
+      "field": "about_narrative_heading",
+      "action": "verify_existing_seed",
+      "acf_definition_exists": true,
+      "template_binding_required": false
+    },
+    {
+      "field": "about_narrative_lead",
+      "action": "verify_existing_seed",
+      "acf_definition_exists": true,
+      "template_binding_required": false
+    },
+    {
+      "field": "about_who_treat_heading",
+      "action": "verify_existing_seed",
+      "acf_definition_exists": true,
+      "template_binding_required": false
+    },
+    {
+      "field": "about_who_treat_intro",
+      "action": "verify_existing_seed",
+      "acf_definition_exists": true,
+      "template_binding_required": false
+    },
+    {
+      "field": "about_who_treat_lead",
+      "action": "verify_existing_seed",
+      "acf_definition_exists": true,
+      "template_binding_required": false
+    },
+    {
+      "field": "about_who_treat_callout",
+      "action": "verify_existing_seed",
+      "acf_definition_exists": true,
+      "template_binding_required": false
+    },
+    {
+      "field": "about_approach_heading",
+      "action": "verify_existing_seed",
+      "acf_definition_exists": true,
+      "template_binding_required": false
+    },
+    {
+      "field": "about_approach_highlight",
+      "action": "verify_existing_seed",
+      "acf_definition_exists": true,
+      "template_binding_required": false
+    },
+    {
+      "field": "about_approach_intro",
+      "action": "verify_existing_seed",
+      "acf_definition_exists": true,
+      "template_binding_required": false
+    },
+    {
+      "field": "about_program_heading",
+      "action": "verify_existing_seed",
+      "acf_definition_exists": true,
+      "template_binding_required": false
+    },
+    {
+      "field": "about_program_lead",
+      "action": "replace_lorem_with_v9_static_copy",
+      "acf_definition_exists": true,
+      "template_binding_required": false
+    },
+    {
+      "field": "about_program_intro",
+      "action": "replace_lorem_with_v9_static_copy",
+      "acf_definition_exists": true,
+      "template_binding_required": false
+    },
+    {
+      "field": "about_program_intro2",
+      "action": "replace_lorem_with_v9_static_copy",
+      "acf_definition_exists": true,
+      "template_binding_required": false
+    },
+    {
+      "field": "about_narrative_paragraphs",
+      "action": "verify_existing_seed",
+      "acf_definition_exists": true,
+      "template_binding_required": false
+    },
+    {
+      "field": "about_who_treat_spectrum",
+      "action": "verify_existing_seed",
+      "acf_definition_exists": true,
+      "template_binding_required": false
+    },
+    {
+      "field": "about_who_treat_cards",
+      "action": "verify_existing_seed",
+      "acf_definition_exists": true,
+      "template_binding_required": false
+    },
+    {
+      "field": "about_program_items",
+      "action": "verify_existing_seed",
+      "acf_definition_exists": true,
+      "template_binding_required": false
+    },
+    {
+      "field": "infrastructure_g0_g5",
+      "action": "verify_existing_seed",
+      "acf_definition_exists": true,
+      "template_binding_required": false
+    },
+    {
+      "field": "founder_quote",
+      "action": "template_binding_required_or_new_acf_group",
+      "acf_definition_exists": false,
+      "template_binding_required": true
+    },
+    {
+      "field": "clinic_landscape",
+      "action": "template_binding_required_or_new_acf_group",
+      "acf_definition_exists": false,
+      "template_binding_required": true
+    }
+  ],
+  "runtime_delivery_needed": "maybe — only if template binding added for founder/clinic blocks",
+  "rollback": "Restore DB checkpoint from pre-E29B; no ACF JSON change if seed-only",
+  "validation": "Compare /o-centre/ screenshots + ACF admin field population + section markers"
+}

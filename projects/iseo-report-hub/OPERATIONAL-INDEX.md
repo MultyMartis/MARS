@@ -26,7 +26,7 @@
 |-------|-------|
 | **Status** | planned / product architecture |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | Project charter + architecture persist (v0.1) |
+| **Active stage** | WordPress data model / admin UX planning (v0.1) |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -69,6 +69,11 @@
 | 5 | [product/I-SEO-REPORT-HUB-REPORT-MODEL-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-MODEL-v0.1.md) | Report model |
 | 6 | [product/I-SEO-REPORT-HUB-MVP-SCOPE-v0.1.md](product/I-SEO-REPORT-HUB-MVP-SCOPE-v0.1.md) | MVP scope |
 | 7 | [reports/REPORT-iseo-report-hub-project-charter-architecture-persist-01.md](reports/REPORT-iseo-report-hub-project-charter-architecture-persist-01.md) | Persist closeout report |
+| 8 | [product/I-SEO-REPORT-HUB-WORDPRESS-DATA-MODEL-v0.1.md](product/I-SEO-REPORT-HUB-WORDPRESS-DATA-MODEL-v0.1.md) | WordPress data model planning |
+| 9 | [product/I-SEO-REPORT-HUB-ADMIN-UX-FLOW-v0.1.md](product/I-SEO-REPORT-HUB-ADMIN-UX-FLOW-v0.1.md) | Admin UX flow planning |
+| 10 | [product/I-SEO-REPORT-HUB-WEB-REPORT-STRUCTURE-v0.1.md](product/I-SEO-REPORT-HUB-WEB-REPORT-STRUCTURE-v0.1.md) | Client web report structure |
+| 11 | [product/I-SEO-REPORT-HUB-IMPLEMENTATION-BRIEF-v0.1.md](product/I-SEO-REPORT-HUB-IMPLEMENTATION-BRIEF-v0.1.md) | Implementation brief for Anton |
+| 12 | [reports/REPORT-iseo-report-hub-wordpress-data-model-admin-ux-planning-01.md](reports/REPORT-iseo-report-hub-wordpress-data-model-admin-ux-planning-01.md) | Planning closeout report |
 
 ---
 
@@ -113,11 +118,11 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. Product architecture draft review (operator)
-2. WordPress data model / admin UX planning
-3. Report block model refinement
-4. Work dictionary extraction/sanitization (из Nikita materials; **exclude** credential sheet)
-5. MVP implementation planning charter
+1. **Operator review** of WordPress data model / admin UX planning docs (v0.1)
+2. **Choose next path:** optional Website Factory prototype charter **OR** implementation specification pass
+3. Work dictionary extraction/sanitization (из Nikita materials; **exclude** credential sheet)
+4. Report block model refinement (if needed post-review)
+5. MVP implementation charter (HITL) for Anton / i-seo.su
 6. **Later (operator charter):** Website Factory workspace for HTML/static UI demos — SEO specialist admin screens, client web report pages, weekly checkpoint / monthly final sketches, report block layout prototypes; **no workspace created until separate charter**
 7. Later: n8n/API/AI integration (events only; human approval gates)
 

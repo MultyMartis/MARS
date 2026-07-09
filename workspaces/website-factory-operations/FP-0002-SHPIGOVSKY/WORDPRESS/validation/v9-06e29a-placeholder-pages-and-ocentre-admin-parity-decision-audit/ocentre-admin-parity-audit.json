@@ -1,0 +1,302 @@
+{
+  "task_id": "V9-06E29A",
+  "generated_at": "2026-07-09T20:18:16.557028+00:00",
+  "page_id": 11,
+  "template": "page-templates/institutional.php",
+  "route_status": 200,
+  "public_readiness": "PASS",
+  "admin_editability_readiness": "PARTIAL",
+  "section_map": [
+    {
+      "section": "hero",
+      "frontend_present": true,
+      "frontend_source": "hero_* ACF + title fallback",
+      "editability": "PARTIALLY_EDITABLE"
+    },
+    {
+      "section": "breadcrumbs_subnav",
+      "frontend_present": true,
+      "frontend_source": "hardcoded V9 subnav + breadcrumb helpers",
+      "editability": "NOT_EDITABLE_TEMPLATE_FALLBACK"
+    },
+    {
+      "section": "institutional_narrative",
+      "frontend_present": true,
+      "frontend_source": "about_narrative_* ACF + V9 static fallback",
+      "editability": "PARTIALLY_EDITABLE"
+    },
+    {
+      "section": "founder_quote",
+      "frontend_present": true,
+      "frontend_source": "home/founder-quote static partial",
+      "editability": "NOT_EDITABLE_TEMPLATE_FALLBACK"
+    },
+    {
+      "section": "who_we_treat",
+      "frontend_present": true,
+      "frontend_source": "about_who_treat_* ACF + V9 static fallback",
+      "editability": "PARTIALLY_EDITABLE"
+    },
+    {
+      "section": "program_cta_1",
+      "frontend_present": true,
+      "frontend_source": "shpigovsky_get_about_guest_cta_band() static + site phone option",
+      "editability": "PARTIALLY_EDITABLE"
+    },
+    {
+      "section": "approach_band",
+      "frontend_present": true,
+      "frontend_source": "about_approach_* ACF + V9 static fallback",
+      "editability": "PARTIALLY_EDITABLE"
+    },
+    {
+      "section": "clinic_landscape",
+      "frontend_present": true,
+      "frontend_source": "home/clinic-landscape static partial",
+      "editability": "NOT_EDITABLE_TEMPLATE_FALLBACK"
+    },
+    {
+      "section": "about_program",
+      "frontend_present": false,
+      "frontend_source": "about_program_* ACF + V9 static fallback",
+      "editability": "PARTIALLY_EDITABLE"
+    },
+    {
+      "section": "infrastructure_narrative",
+      "frontend_present": true,
+      "frontend_source": "infrastructure_g0_g5 ACF text + static gallery assets",
+      "editability": "PARTIALLY_EDITABLE"
+    },
+    {
+      "section": "guest_cta",
+      "frontend_present": true,
+      "frontend_source": "static guest CTA copy + site phone",
+      "editability": "PARTIALLY_EDITABLE"
+    },
+    {
+      "section": "specialists",
+      "frontend_present": true,
+      "frontend_source": "fp02-block-specialists options + V9 static cards",
+      "editability": "PARTIALLY_EDITABLE"
+    },
+    {
+      "section": "reviews",
+      "frontend_present": true,
+      "frontend_source": "fp02-reviews options + static fallback",
+      "editability": "PARTIALLY_EDITABLE"
+    },
+    {
+      "section": "final_form",
+      "frontend_present": true,
+      "frontend_source": "hardcoded heading/lead in template args + fp02-block-final-form options",
+      "editability": "PARTIALLY_EDITABLE"
+    }
+  ],
+  "acf_field_state": [
+    {
+      "field": "hero_eyebrow",
+      "present_in_db": true,
+      "empty": false,
+      "value_preview": "Место, где наступает выздоровление"
+    },
+    {
+      "field": "hero_title_override",
+      "present_in_db": true,
+      "empty": false,
+      "value_preview": "Шпиговский дом"
+    },
+    {
+      "field": "hero_lead",
+      "present_in_db": true,
+      "empty": false,
+      "value_preview": "— реабилитационный центр профилактики и лечения зависимостей и нарушений психического здоровья."
+    },
+    {
+      "field": "hero_media",
+      "present_in_db": false,
+      "empty": true,
+      "value_preview": null
+    },
+    {
+      "field": "hero_cta_label",
+      "present_in_db": true,
+      "empty": false,
+      "value_preview": "Заказать звонок"
+    },
+    {
+      "field": "about_narrative_heading",
+      "present_in_db": true,
+      "empty": false,
+      "value_preview": "Шпиговсикй дом — место, где видят человека, а не только диагноз"
+    },
+    {
+      "field": "about_narrative_lead",
+      "present_in_db": true,
+      "empty": false,
+      "value_preview": "Ведем прием и консультируем в Москве и Московской области. Для нас не существует границ в привычном понимании этого слов..."
+    },
+    {
+      "field": "about_who_treat_heading",
+      "present_in_db": true,
+      "empty": false,
+      "value_preview": "Разные люди, разные истории — одно общее: что-то пошло не так"
+    },
+    {
+      "field": "about_who_treat_intro",
+      "present_in_db": true,
+      "empty": false,
+      "value_preview": "К нам приходят люди, которые устали. Устали бороться с собой, устали притворяться, что всё в порядке, устали от схем, ко..."
+    },
+    {
+      "field": "about_who_treat_lead",
+      "present_in_db": true,
+      "empty": false,
+      "value_preview": "Мы работаем с широким спектром состояний:"
+    },
+    {
+      "field": "about_who_treat_callout",
+      "present_in_db": true,
+      "empty": false,
+      "value_preview": "Нас не беспокоит социальный статус или прошлое человека. Нас беспокоит его настоящее — и то, каким может стать его будущ..."
+    },
+    {
+      "field": "about_approach_heading",
+      "present_in_db": true,
+      "empty": false,
+      "value_preview": "Наш подход к лечению"
+    },
+    {
+      "field": "about_approach_highlight",
+      "present_in_db": true,
+      "empty": false,
+      "value_preview": "Мы используем мультидисциплинарный подход — когда лечение одного пациента обеспечивается командой специалистов разных пр..."
+    },
+    {
+      "field": "about_approach_intro",
+      "present_in_db": true,
+      "empty": false,
+      "value_preview": "Лечение в нашем реабилитационном центре совмещает современный и мультидисциплинарный подход направленный на устранение и..."
+    },
+    {
+      "field": "about_program_heading",
+      "present_in_db": true,
+      "empty": false,
+      "value_preview": "Наша программа включает 4 направления"
+    },
+    {
+      "field": "about_program_lead",
+      "present_in_db": true,
+      "empty": false,
+      "value_preview": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq..."
+    },
+    {
+      "field": "about_program_intro",
+      "present_in_db": true,
+      "empty": false,
+      "value_preview": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq..."
+    },
+    {
+      "field": "about_program_intro2",
+      "present_in_db": true,
+      "empty": false,
+      "value_preview": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq..."
+    },
+    {
+      "field": "about_narrative_paragraphs",
+      "present_in_db": true,
+      "empty": false,
+      "value_preview": "4"
+    },
+    {
+      "field": "about_who_treat_spectrum",
+      "present_in_db": true,
+      "empty": false,
+      "value_preview": "3"
+    },
+    {
+      "field": "about_who_treat_cards",
+      "present_in_db": true,
+      "empty": false,
+      "value_preview": "4"
+    },
+    {
+      "field": "about_program_items",
+      "present_in_db": true,
+      "empty": false,
+      "value_preview": "4"
+    },
+    {
+      "field": "infrastructure_g0_g5",
+      "present_in_db": true,
+      "empty": false,
+      "value_preview": "6"
+    },
+    {
+      "field": "institutional_placeholder_notice",
+      "present_in_db": false,
+      "empty": true,
+      "value_preview": null
+    },
+    {
+      "field": "institutional_content_sections",
+      "present_in_db": false,
+      "empty": true,
+      "value_preview": null
+    },
+    {
+      "field": "institutional_stages",
+      "present_in_db": false,
+      "empty": true,
+      "value_preview": null
+    },
+    {
+      "field": "institutional_intro",
+      "present_in_db": false,
+      "empty": true,
+      "value_preview": null
+    },
+    {
+      "field": "institutional_blocks",
+      "present_in_db": false,
+      "empty": true,
+      "value_preview": null
+    },
+    {
+      "field": "institutional_team",
+      "present_in_db": false,
+      "empty": true,
+      "value_preview": null
+    }
+  ],
+  "postmeta_count": 106,
+  "e26a_fields_seeded_reported": [
+    "about_narrative_heading",
+    "about_narrative_lead",
+    "about_who_treat_heading",
+    "about_who_treat_intro",
+    "about_who_treat_lead",
+    "about_who_treat_callout",
+    "about_approach_heading",
+    "about_approach_highlight",
+    "about_approach_intro",
+    "about_program_heading",
+    "about_program_lead",
+    "about_program_intro",
+    "about_program_intro2",
+    "hero_eyebrow",
+    "hero_title_override",
+    "hero_lead",
+    "hero_cta_label",
+    "about_narrative_paragraphs",
+    "about_who_treat_spectrum",
+    "about_who_treat_cards",
+    "about_program_items",
+    "infrastructure_g0_g5"
+  ],
+  "legacy_unused_fields_empty": [
+    "institutional_intro",
+    "institutional_blocks",
+    "institutional_team"
+  ],
+  "notes": "E28 flagged institutional_intro/blocks/team (legacy/unused). E26A about_* + infrastructure_g0_g5 ARE seeded on page #11. Remaining gaps: hero_media, founder/clinic static partials, shared block admin locations, child page content model."
+}
