@@ -1,0 +1,77 @@
+{
+  "task_id": "V9-06E27A",
+  "generated_at": "2026-07-09T16:33:59.707089+00:00",
+  "db_writes": 0,
+  "before": {
+    "counts": {
+      "page": {
+        "auto-draft": 1,
+        "draft": 1,
+        "publish": 22
+      },
+      "post": {
+        "publish": 1
+      },
+      "service": {
+        "publish": 17
+      },
+      "nav_menu_item": {
+        "publish": 13
+      },
+      "acf-field-group": {
+        "auto-draft": 1,
+        "publish": 43,
+        "trash": 3
+      },
+      "revision": {
+        "inherit": 67
+      }
+    },
+    "options": {
+      "page_on_front": "4",
+      "page_for_posts": "19",
+      "show_on_front": "page",
+      "permalink_structure": "/blog/%postname%/",
+      "blog_public": "0",
+      "wp_page_for_privacy_policy": "3"
+    },
+    "terms_count": 5
+  },
+  "after": {
+    "counts": {
+      "page": {
+        "auto-draft": 1,
+        "draft": 1,
+        "publish": 22
+      },
+      "post": {
+        "publish": 1
+      },
+      "service": {
+        "publish": 17
+      },
+      "nav_menu_item": {
+        "publish": 13
+      },
+      "acf-field-group": {
+        "auto-draft": 1,
+        "publish": 43,
+        "trash": 3
+      },
+      "revision": {
+        "inherit": 67
+      }
+    },
+    "options": {
+      "page_on_front": "4",
+      "page_for_posts": "19",
+      "show_on_front": "page",
+      "permalink_structure": "/blog/%postname%/",
+      "blog_public": "0",
+      "wp_page_for_privacy_policy": "3"
+    },
+    "terms_count": 5
+  },
+  "result": "PASS",
+  "note": "Read-only audit; before/after snapshots identical"
+}

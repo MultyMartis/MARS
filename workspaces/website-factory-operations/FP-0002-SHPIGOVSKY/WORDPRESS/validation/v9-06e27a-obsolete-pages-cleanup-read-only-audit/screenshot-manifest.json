@@ -1,0 +1,42 @@
+{
+  "task_id": "V9-06E27A",
+  "generated_at": "2026-07-09T16:33:59.707094+00:00",
+  "admin_screenshots": "NOT_CAPTURED — read-only audit without WP admin session in this run",
+  "frontend_evidence": [
+    {
+      "route": "/",
+      "http_status": 200,
+      "evidence": "route-health-placeholder-audit.json"
+    },
+    {
+      "route": "/o-centre/",
+      "http_status": 200,
+      "evidence": "route-health-placeholder-audit.json"
+    },
+    {
+      "route": "/blog/",
+      "http_status": 200,
+      "evidence": "route-health-placeholder-audit.json"
+    },
+    {
+      "route": "/blog/nazvanie-stati/",
+      "http_status": 200,
+      "evidence": "route-health-placeholder-audit.json"
+    },
+    {
+      "route": "/specyalisty/",
+      "http_status": 200,
+      "evidence": "cleanup candidate placeholder"
+    },
+    {
+      "route": "/uslugi/genotipirovanie/",
+      "http_status": 404,
+      "evidence": "cleanup candidate"
+    },
+    {
+      "route": "/privacy-policy-page/",
+      "http_status": 200,
+      "evidence": "duplicate privacy candidate"
+    }
+  ]
+}

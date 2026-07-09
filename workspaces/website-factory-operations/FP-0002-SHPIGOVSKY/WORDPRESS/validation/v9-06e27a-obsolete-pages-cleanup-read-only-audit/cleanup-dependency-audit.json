@@ -1,0 +1,164 @@
+{
+  "task_id": "V9-06E27A",
+  "generated_at": "2026-07-09T16:33:59.706981+00:00",
+  "candidates": [
+    {
+      "id": 6,
+      "type": "page",
+      "title": "Зависимости",
+      "path": "/uslugi/zavisimosti/",
+      "status": "publish",
+      "category": "NEEDS_OPERATOR_DECISION",
+      "dependencies": {
+        "menu_items": [
+          {
+            "menu_item_id": 301,
+            "menu_id": 2,
+            "menu_name": "Primary",
+            "menu_slug": "primary",
+            "object_id": "6",
+            "item_type": "post_type",
+            "url": "",
+            "menu_order": 2
+          }
+        ],
+        "parent_child": 5,
+        "is_privacy_page": false,
+        "is_front_page": false,
+        "is_posts_page": false,
+        "service_cpt_conflict": "/uslugi/zavisimosti/"
+      },
+      "risk_level": "HIGH",
+      "cleanup_safety": "REQUIRES_DEPENDENCY_RESOLUTION",
+      "proposed_future_action": "operator_decision"
+    },
+    {
+      "id": 7,
+      "type": "page",
+      "title": "Психическое здоровье",
+      "path": "/uslugi/psihicheskoe-zdorovie/",
+      "status": "publish",
+      "category": "NEEDS_OPERATOR_DECISION",
+      "dependencies": {
+        "menu_items": [],
+        "parent_child": 5,
+        "is_privacy_page": false,
+        "is_front_page": false,
+        "is_posts_page": false,
+        "service_cpt_conflict": "/uslugi/psihicheskoe-zdorovie/"
+      },
+      "risk_level": "HIGH",
+      "cleanup_safety": "REQUIRES_DEPENDENCY_RESOLUTION",
+      "proposed_future_action": "operator_decision"
+    },
+    {
+      "id": 8,
+      "type": "page",
+      "title": "Расстройства пищевого поведения",
+      "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "status": "publish",
+      "category": "NEEDS_OPERATOR_DECISION",
+      "dependencies": {
+        "menu_items": [],
+        "parent_child": 5,
+        "is_privacy_page": false,
+        "is_front_page": false,
+        "is_posts_page": false,
+        "service_cpt_conflict": "/uslugi/rasstroystva-pischevogo-povedeniya/"
+      },
+      "risk_level": "HIGH",
+      "cleanup_safety": "REQUIRES_DEPENDENCY_RESOLUTION",
+      "proposed_future_action": "operator_decision"
+    },
+    {
+      "id": 9,
+      "type": "page",
+      "title": "Генотипирование",
+      "path": "/uslugi/genotipirovanie/",
+      "status": "publish",
+      "category": "CLEANUP_CANDIDATE_TRASH",
+      "dependencies": {
+        "menu_items": [],
+        "parent_child": 5,
+        "is_privacy_page": false,
+        "is_front_page": false,
+        "is_posts_page": false
+      },
+      "risk_level": "LOW",
+      "cleanup_safety": "SAFE_AFTER_APPROVAL",
+      "proposed_future_action": "trash"
+    },
+    {
+      "id": 10,
+      "type": "page",
+      "title": "Специалисты",
+      "path": "/specyalisty/",
+      "status": "publish",
+      "category": "CLEANUP_CANDIDATE_TRASH",
+      "dependencies": {
+        "menu_items": [],
+        "parent_child": 0,
+        "is_privacy_page": false,
+        "is_front_page": false,
+        "is_posts_page": false
+      },
+      "risk_level": "LOW",
+      "cleanup_safety": "SAFE_AFTER_APPROVAL",
+      "proposed_future_action": "trash"
+    },
+    {
+      "id": 17,
+      "type": "page",
+      "title": "Интервью и СМИ",
+      "path": "/o-centre/intervyu-i-smi/",
+      "status": "publish",
+      "category": "CLEANUP_CANDIDATE_TRASH",
+      "dependencies": {
+        "menu_items": [],
+        "parent_child": 11,
+        "is_privacy_page": false,
+        "is_front_page": false,
+        "is_posts_page": false
+      },
+      "risk_level": "LOW",
+      "cleanup_safety": "SAFE_AFTER_APPROVAL",
+      "proposed_future_action": "trash"
+    },
+    {
+      "id": 21,
+      "type": "page",
+      "title": "Правовая информация",
+      "path": "/pravovaya-informaciya-pilzovatelyu/",
+      "status": "draft",
+      "category": "CLEANUP_CANDIDATE_DRAFT",
+      "dependencies": {
+        "menu_items": [],
+        "parent_child": 0,
+        "is_privacy_page": false,
+        "is_front_page": false,
+        "is_posts_page": false
+      },
+      "risk_level": "LOW",
+      "cleanup_safety": "SAFE_AFTER_APPROVAL",
+      "proposed_future_action": "trash"
+    },
+    {
+      "id": 25,
+      "type": "page",
+      "title": "Политика конфиденциальности (системная)",
+      "path": "/privacy-policy-page/",
+      "status": "publish",
+      "category": "CLEANUP_CANDIDATE_TRASH",
+      "dependencies": {
+        "menu_items": [],
+        "parent_child": 0,
+        "is_privacy_page": false,
+        "is_front_page": false,
+        "is_posts_page": false
+      },
+      "risk_level": "MEDIUM",
+      "cleanup_safety": "REQUIRES_DEPENDENCY_RESOLUTION",
+      "proposed_future_action": "trash"
+    }
+  ]
+}

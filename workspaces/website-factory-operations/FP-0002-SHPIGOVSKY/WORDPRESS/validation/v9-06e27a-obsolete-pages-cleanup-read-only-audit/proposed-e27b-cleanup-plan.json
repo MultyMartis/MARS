@@ -1,0 +1,134 @@
+{
+  "task_id": "V9-06E27A",
+  "generated_at": "2026-07-09T16:33:59.707074+00:00",
+  "note": "PLAN ONLY — not executed in E27A",
+  "batch_a_low_risk_cleanup": {
+    "operation": "trash",
+    "objects": [
+      {
+        "id": 9,
+        "type": "page",
+        "path": "/uslugi/genotipirovanie/",
+        "reason": "Legacy genotipirovanie page; HTTP 404; superseded by service CPT model"
+      },
+      {
+        "id": 10,
+        "type": "page",
+        "path": "/specyalisty/",
+        "reason": "Orphan specialists page; not in V9 manifest or menus"
+      },
+      {
+        "id": 17,
+        "type": "page",
+        "path": "/o-centre/intervyu-i-smi/",
+        "reason": "Intervyu i SMI; not in V9 manifest; skeleton placeholder"
+      },
+      {
+        "id": 21,
+        "type": "page",
+        "path": "/pravovaya-informaciya-pilzovatelyu/",
+        "reason": "Draft legal hub superseded by IDs 3,22-24"
+      },
+      {
+        "id": 25,
+        "type": "page",
+        "path": "/privacy-policy-page/",
+        "reason": "Duplicate privacy shell; canonical is ID 3 /privacy-policy/"
+      }
+    ],
+    "risk": "LOW-MEDIUM",
+    "needs_approval": true,
+    "rollback": "restore from trash in WP admin or DB checkpoint before E27B",
+    "validation_routes": [
+      "/",
+      "/uslugi/",
+      "/o-centre/",
+      "/blog/",
+      "/privacy-policy/"
+    ]
+  },
+  "batch_b_operator_decision": {
+    "operation": "decision_required",
+    "objects": [
+      {
+        "id": 6,
+        "type": "page",
+        "path": "/uslugi/zavisimosti/",
+        "reason": "Legacy child page under hub; route owned by page not service CPT #73"
+      },
+      {
+        "id": 7,
+        "type": "page",
+        "path": "/uslugi/psihicheskoe-zdorovie/",
+        "reason": "Legacy child page; conflicts with service CPT #77 at same path"
+      },
+      {
+        "id": 8,
+        "type": "page",
+        "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+        "reason": "Legacy child page; conflicts with service CPT #84 at same path"
+      }
+    ],
+    "risk": "HIGH",
+    "needs_approval": true
+  },
+  "batch_c_redirect_candidates": {
+    "operation": "redirect_later",
+    "objects": [
+      {
+        "from_route": "/privacy-policy-page/",
+        "to_route": "/privacy-policy/",
+        "object_id": 25,
+        "reason": "duplicate privacy URL"
+      },
+      {
+        "from_route": "/glavnaya/",
+        "to_route": "/",
+        "object_id": 4,
+        "reason": "slug alias; front page already serves /"
+      }
+    ],
+    "risk": "MEDIUM",
+    "needs_approval": true,
+    "note": "Implement only after trash/ownership resolution; not in E27B default"
+  },
+  "batch_d_keep_list": {
+    "operation": "leave",
+    "count": 33,
+    "object_ids": [
+      3,
+      4,
+      5,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      19,
+      20,
+      22,
+      23,
+      24,
+      73,
+      74,
+      75,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      314,
+      315,
+      316,
+      750
+    ]
+  }
+}

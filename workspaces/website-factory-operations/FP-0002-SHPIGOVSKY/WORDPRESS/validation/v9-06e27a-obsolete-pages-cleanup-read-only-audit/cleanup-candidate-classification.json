@@ -1,0 +1,668 @@
+{
+  "task_id": "V9-06E27A",
+  "generated_at": "2026-07-09T16:33:59.707054+00:00",
+  "summary_counts": {
+    "MUST_NOT_TOUCH": 3,
+    "KEEP_CANONICAL": 11,
+    "NEEDS_OPERATOR_DECISION": 3,
+    "CLEANUP_CANDIDATE_TRASH": 4,
+    "KEEP_PLACEHOLDER_FOR_LATER_PORT": 18,
+    "CLEANUP_CANDIDATE_DRAFT": 1,
+    "KEEP_DEMO_LOCAL": 1
+  },
+  "items": [
+    {
+      "id": 3,
+      "type": "page",
+      "title": "Политика конфиденциальности",
+      "slug": "privacy-policy",
+      "path": "/privacy-policy/",
+      "status": "publish",
+      "category": "MUST_NOT_TOUCH",
+      "reason": "Canonical WordPress privacy page; legal menu + wp_page_for_privacy_policy",
+      "risk_level": "LOW",
+      "dependencies": {
+        "in_menu": true,
+        "parent": 0
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 4,
+      "type": "page",
+      "title": "Главная",
+      "slug": "glavnaya",
+      "path": "/glavnaya/",
+      "status": "publish",
+      "category": "MUST_NOT_TOUCH",
+      "reason": "Front page (page_on_front); canonical home",
+      "risk_level": "LOW",
+      "dependencies": {
+        "in_menu": false,
+        "parent": 0
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 5,
+      "type": "page",
+      "title": "Услуги",
+      "slug": "uslugi",
+      "path": "/uslugi/",
+      "status": "publish",
+      "category": "KEEP_CANONICAL",
+      "reason": "Services hub page; primary + footer menu",
+      "risk_level": "LOW",
+      "dependencies": {
+        "in_menu": true,
+        "parent": 0
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 6,
+      "type": "page",
+      "title": "Зависимости",
+      "slug": "zavisimosti",
+      "path": "/uslugi/zavisimosti/",
+      "status": "publish",
+      "category": "NEEDS_OPERATOR_DECISION",
+      "reason": "Legacy child page under hub; route owned by page not service CPT #73",
+      "risk_level": "HIGH",
+      "dependencies": {
+        "in_menu": true,
+        "parent": 5
+      },
+      "proposed_future_action": "resolve page vs service CPT ownership before trash"
+    },
+    {
+      "id": 7,
+      "type": "page",
+      "title": "Психическое здоровье",
+      "slug": "psihicheskoe-zdorovie",
+      "path": "/uslugi/psihicheskoe-zdorovie/",
+      "status": "publish",
+      "category": "NEEDS_OPERATOR_DECISION",
+      "reason": "Legacy child page; conflicts with service CPT #77 at same path",
+      "risk_level": "HIGH",
+      "dependencies": {
+        "in_menu": false,
+        "parent": 5
+      },
+      "proposed_future_action": "resolve page vs service CPT ownership before trash"
+    },
+    {
+      "id": 8,
+      "type": "page",
+      "title": "Расстройства пищевого поведения",
+      "slug": "rasstroystva-pischevogo-povedeniya",
+      "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "status": "publish",
+      "category": "NEEDS_OPERATOR_DECISION",
+      "reason": "Legacy child page; conflicts with service CPT #84 at same path",
+      "risk_level": "HIGH",
+      "dependencies": {
+        "in_menu": false,
+        "parent": 5
+      },
+      "proposed_future_action": "resolve page vs service CPT ownership before trash"
+    },
+    {
+      "id": 9,
+      "type": "page",
+      "title": "Генотипирование",
+      "slug": "genotipirovanie",
+      "path": "/uslugi/genotipirovanie/",
+      "status": "publish",
+      "category": "CLEANUP_CANDIDATE_TRASH",
+      "reason": "Legacy genotipirovanie page; HTTP 404; superseded by service CPT model",
+      "risk_level": "LOW",
+      "dependencies": {
+        "in_menu": false,
+        "parent": 5
+      },
+      "proposed_future_action": "wp post delete <id> --force=0 (trash)"
+    },
+    {
+      "id": 10,
+      "type": "page",
+      "title": "Специалисты",
+      "slug": "specyalisty",
+      "path": "/specyalisty/",
+      "status": "publish",
+      "category": "CLEANUP_CANDIDATE_TRASH",
+      "reason": "Orphan specialists page; not in V9 manifest or menus",
+      "risk_level": "LOW",
+      "dependencies": {
+        "in_menu": false,
+        "parent": 0
+      },
+      "proposed_future_action": "wp post delete <id> --force=0 (trash)"
+    },
+    {
+      "id": 11,
+      "type": "page",
+      "title": "О центре",
+      "slug": "o-centre",
+      "path": "/o-centre/",
+      "status": "publish",
+      "category": "KEEP_CANONICAL",
+      "reason": "O-centre hub; E26A accepted port",
+      "risk_level": "LOW",
+      "dependencies": {
+        "in_menu": true,
+        "parent": 0
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 12,
+      "type": "page",
+      "title": "О нас",
+      "slug": "o-nas",
+      "path": "/o-centre/o-nas/",
+      "status": "publish",
+      "category": "KEEP_PLACEHOLDER_FOR_LATER_PORT",
+      "reason": "Institutional child; V9 PLACEHOLDER",
+      "risk_level": "LOW",
+      "dependencies": {
+        "in_menu": false,
+        "parent": 11
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 13,
+      "type": "page",
+      "title": "Программа лечения",
+      "slug": "programma-lecheniya",
+      "path": "/o-centre/programma-lecheniya/",
+      "status": "publish",
+      "category": "KEEP_PLACEHOLDER_FOR_LATER_PORT",
+      "reason": "Institutional child; V9 PLACEHOLDER",
+      "risk_level": "LOW",
+      "dependencies": {
+        "in_menu": false,
+        "parent": 11
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 14,
+      "type": "page",
+      "title": "Галерея о доме",
+      "slug": "galereya-o-dome",
+      "path": "/o-centre/galereya-o-dome/",
+      "status": "publish",
+      "category": "KEEP_PLACEHOLDER_FOR_LATER_PORT",
+      "reason": "Institutional child; V9 PLACEHOLDER",
+      "risk_level": "LOW",
+      "dependencies": {
+        "in_menu": false,
+        "parent": 11
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 15,
+      "type": "page",
+      "title": "Специалистам",
+      "slug": "specialistam",
+      "path": "/o-centre/specialistam/",
+      "status": "publish",
+      "category": "KEEP_PLACEHOLDER_FOR_LATER_PORT",
+      "reason": "Institutional child; V9 PLACEHOLDER",
+      "risk_level": "LOW",
+      "dependencies": {
+        "in_menu": false,
+        "parent": 11
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 16,
+      "type": "page",
+      "title": "Родственникам",
+      "slug": "rodstvennikam",
+      "path": "/o-centre/rodstvennikam/",
+      "status": "publish",
+      "category": "KEEP_PLACEHOLDER_FOR_LATER_PORT",
+      "reason": "Institutional child; V9 PLACEHOLDER",
+      "risk_level": "LOW",
+      "dependencies": {
+        "in_menu": false,
+        "parent": 11
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 17,
+      "type": "page",
+      "title": "Интервью и СМИ",
+      "slug": "intervyu-i-smi",
+      "path": "/o-centre/intervyu-i-smi/",
+      "status": "publish",
+      "category": "CLEANUP_CANDIDATE_TRASH",
+      "reason": "Intervyu i SMI; not in V9 manifest; skeleton placeholder",
+      "risk_level": "LOW",
+      "dependencies": {
+        "in_menu": false,
+        "parent": 11
+      },
+      "proposed_future_action": "wp post delete <id> --force=0 (trash)"
+    },
+    {
+      "id": 18,
+      "type": "page",
+      "title": "Отзывы",
+      "slug": "otzyvy",
+      "path": "/otzyvy/",
+      "status": "publish",
+      "category": "KEEP_CANONICAL",
+      "reason": "Reviews archive; primary menu",
+      "risk_level": "LOW",
+      "dependencies": {
+        "in_menu": true,
+        "parent": 0
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 19,
+      "type": "page",
+      "title": "Статьи",
+      "slug": "blog",
+      "path": "/blog/",
+      "status": "publish",
+      "category": "MUST_NOT_TOUCH",
+      "reason": "Posts page (page_for_posts); blog archive",
+      "risk_level": "LOW",
+      "dependencies": {
+        "in_menu": true,
+        "parent": 0
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 20,
+      "type": "page",
+      "title": "Контакты",
+      "slug": "kontakty",
+      "path": "/kontakty/",
+      "status": "publish",
+      "category": "KEEP_CANONICAL",
+      "reason": "Contacts; primary + footer menu",
+      "risk_level": "LOW",
+      "dependencies": {
+        "in_menu": true,
+        "parent": 0
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 21,
+      "type": "page",
+      "title": "Правовая информация",
+      "slug": "pravovaya-informaciya-pilzovatelyu",
+      "path": "/pravovaya-informaciya-pilzovatelyu/",
+      "status": "draft",
+      "category": "CLEANUP_CANDIDATE_DRAFT",
+      "reason": "Draft legal hub superseded by IDs 3,22-24",
+      "risk_level": "LOW",
+      "dependencies": {
+        "in_menu": false,
+        "parent": 0
+      },
+      "proposed_future_action": "already draft; trash in E27B"
+    },
+    {
+      "id": 22,
+      "type": "page",
+      "title": "Пользовательское соглашение",
+      "slug": "user-agreement",
+      "path": "/user-agreement/",
+      "status": "publish",
+      "category": "KEEP_CANONICAL",
+      "reason": "Legal user agreement; legal menu",
+      "risk_level": "LOW",
+      "dependencies": {
+        "in_menu": true,
+        "parent": 0
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 23,
+      "type": "page",
+      "title": "Согласие на обработку персональных данных",
+      "slug": "consent-personal-data",
+      "path": "/consent-personal-data/",
+      "status": "publish",
+      "category": "KEEP_CANONICAL",
+      "reason": "Legal consent; legal menu",
+      "risk_level": "LOW",
+      "dependencies": {
+        "in_menu": true,
+        "parent": 0
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 24,
+      "type": "page",
+      "title": "Политика Cookie-файлов",
+      "slug": "cookie-files-policy",
+      "path": "/cookie-files-policy/",
+      "status": "publish",
+      "category": "KEEP_CANONICAL",
+      "reason": "Legal cookie policy; legal menu",
+      "risk_level": "LOW",
+      "dependencies": {
+        "in_menu": true,
+        "parent": 0
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 25,
+      "type": "page",
+      "title": "Политика конфиденциальности (системная)",
+      "slug": "privacy-policy-page",
+      "path": "/privacy-policy-page/",
+      "status": "publish",
+      "category": "CLEANUP_CANDIDATE_TRASH",
+      "reason": "Duplicate privacy shell; canonical is ID 3",
+      "risk_level": "MEDIUM",
+      "dependencies": {
+        "in_menu": false,
+        "parent": 0
+      },
+      "proposed_future_action": "wp post delete <id> --force=0 (trash)"
+    },
+    {
+      "id": 73,
+      "type": "service",
+      "title": "Зависимости",
+      "slug": "zavisimosti",
+      "path": "/uslugi/zavisimosti/",
+      "status": "publish",
+      "category": "KEEP_CANONICAL",
+      "reason": "Canonical dependencies subdivision CPT",
+      "risk_level": "LOW",
+      "dependencies": {
+        "parent": 0,
+        "is_duplicate": false
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 74,
+      "type": "service",
+      "title": "Лечение алкогольной зависимости",
+      "slug": "lechenie-alkogolnoy-zavisimosti",
+      "path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "status": "publish",
+      "category": "KEEP_CANONICAL",
+      "reason": "Canonical alcohol treatment leaf; MVP seeded",
+      "risk_level": "LOW",
+      "dependencies": {
+        "parent": 73,
+        "is_duplicate": false
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 75,
+      "type": "service",
+      "title": "Профилактический анализ",
+      "slug": "profilakticheskiy-analiz",
+      "path": "/uslugi/zavisimosti/profilakticheskiy-analiz/",
+      "status": "publish",
+      "category": "KEEP_PLACEHOLDER_FOR_LATER_PORT",
+      "reason": "V9 PLACEHOLDER service leaf",
+      "risk_level": "LOW",
+      "dependencies": {
+        "parent": 73,
+        "is_duplicate": false
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 77,
+      "type": "service",
+      "title": "Психическое здоровье",
+      "slug": "psihicheskoe-zdorovie",
+      "path": "/uslugi/psihicheskoe-zdorovie/",
+      "status": "publish",
+      "category": "KEEP_CANONICAL",
+      "reason": "Mental health subdivision CPT",
+      "risk_level": "LOW",
+      "dependencies": {
+        "parent": 0,
+        "is_duplicate": false
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 78,
+      "type": "service",
+      "title": "Депрессия",
+      "slug": "depressiya",
+      "path": "/uslugi/psihicheskoe-zdorovie/depressiya/",
+      "status": "publish",
+      "category": "KEEP_PLACEHOLDER_FOR_LATER_PORT",
+      "reason": "V9 PLACEHOLDER leaf",
+      "risk_level": "LOW",
+      "dependencies": {
+        "parent": 77,
+        "is_duplicate": false
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 79,
+      "type": "service",
+      "title": "ПТСР",
+      "slug": "ptrs",
+      "path": "/uslugi/psihicheskoe-zdorovie/ptrs/",
+      "status": "publish",
+      "category": "KEEP_PLACEHOLDER_FOR_LATER_PORT",
+      "reason": "V9 PLACEHOLDER leaf",
+      "risk_level": "LOW",
+      "dependencies": {
+        "parent": 77,
+        "is_duplicate": false
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 80,
+      "type": "service",
+      "title": "Эмоциональное выгорание",
+      "slug": "emocionalnoe-vygoranie",
+      "path": "/uslugi/psihicheskoe-zdorovie/emocionalnoe-vygoranie/",
+      "status": "publish",
+      "category": "KEEP_PLACEHOLDER_FOR_LATER_PORT",
+      "reason": "V9 PLACEHOLDER leaf",
+      "risk_level": "LOW",
+      "dependencies": {
+        "parent": 77,
+        "is_duplicate": false
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 81,
+      "type": "service",
+      "title": "Тревожные расстройства",
+      "slug": "trevozhnye-rasstroystva",
+      "path": "/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+      "status": "publish",
+      "category": "KEEP_PLACEHOLDER_FOR_LATER_PORT",
+      "reason": "V9 PLACEHOLDER leaf",
+      "risk_level": "LOW",
+      "dependencies": {
+        "parent": 77,
+        "is_duplicate": false
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 82,
+      "type": "service",
+      "title": "Расстройства сна",
+      "slug": "rasstroystva-sna",
+      "path": "/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+      "status": "publish",
+      "category": "KEEP_PLACEHOLDER_FOR_LATER_PORT",
+      "reason": "V9 PLACEHOLDER leaf",
+      "risk_level": "LOW",
+      "dependencies": {
+        "parent": 77,
+        "is_duplicate": false
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 83,
+      "type": "service",
+      "title": "Травма",
+      "slug": "travma",
+      "path": "/uslugi/psihicheskoe-zdorovie/travma/",
+      "status": "publish",
+      "category": "KEEP_PLACEHOLDER_FOR_LATER_PORT",
+      "reason": "V9 PLACEHOLDER leaf",
+      "risk_level": "LOW",
+      "dependencies": {
+        "parent": 77,
+        "is_duplicate": false
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 84,
+      "type": "service",
+      "title": "Расстройства пищевого поведения",
+      "slug": "rasstroystva-pischevogo-povedeniya",
+      "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "status": "publish",
+      "category": "KEEP_CANONICAL",
+      "reason": "Eating disorders subdivision CPT",
+      "risk_level": "LOW",
+      "dependencies": {
+        "parent": 0,
+        "is_duplicate": false
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 85,
+      "type": "service",
+      "title": "Анорексия",
+      "slug": "anoreksiya",
+      "path": "/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+      "status": "publish",
+      "category": "KEEP_PLACEHOLDER_FOR_LATER_PORT",
+      "reason": "V9 PLACEHOLDER leaf",
+      "risk_level": "LOW",
+      "dependencies": {
+        "parent": 84,
+        "is_duplicate": false
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 86,
+      "type": "service",
+      "title": "Нервная булимия",
+      "slug": "nervnaya-bulimiya",
+      "path": "/uslugi/rasstroystva-pischevogo-povedeniya/nervnaya-bulimiya/",
+      "status": "publish",
+      "category": "KEEP_PLACEHOLDER_FOR_LATER_PORT",
+      "reason": "V9 PLACEHOLDER leaf",
+      "risk_level": "LOW",
+      "dependencies": {
+        "parent": 84,
+        "is_duplicate": false
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 87,
+      "type": "service",
+      "title": "Компульсивное переедание",
+      "slug": "kompulsivnoe-pereedanie",
+      "path": "/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/",
+      "status": "publish",
+      "category": "KEEP_PLACEHOLDER_FOR_LATER_PORT",
+      "reason": "V9 PLACEHOLDER leaf",
+      "risk_level": "LOW",
+      "dependencies": {
+        "parent": 84,
+        "is_duplicate": false
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 314,
+      "type": "service",
+      "title": "Наркотическая зависимость",
+      "slug": "narkoticheskaya-zavisimost",
+      "path": "/uslugi/zavisimosti/narkoticheskaya-zavisimost/",
+      "status": "publish",
+      "category": "KEEP_PLACEHOLDER_FOR_LATER_PORT",
+      "reason": "WP-only service leaf (not in static V9 manifest)",
+      "risk_level": "LOW",
+      "dependencies": {
+        "parent": 73,
+        "is_duplicate": false
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 315,
+      "type": "service",
+      "title": "Лекарственная зависимость",
+      "slug": "lekarstvennaya-zavisimost",
+      "path": "/uslugi/zavisimosti/lekarstvennaya-zavisimost/",
+      "status": "publish",
+      "category": "KEEP_PLACEHOLDER_FOR_LATER_PORT",
+      "reason": "WP-only service leaf (not in static V9 manifest)",
+      "risk_level": "LOW",
+      "dependencies": {
+        "parent": 73,
+        "is_duplicate": false
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 316,
+      "type": "service",
+      "title": "Поведенческие зависимости",
+      "slug": "povedencheskie-zavisimosti",
+      "path": "/uslugi/zavisimosti/povedencheskie-zavisimosti/",
+      "status": "publish",
+      "category": "KEEP_PLACEHOLDER_FOR_LATER_PORT",
+      "reason": "WP-only service leaf (not in static V9 manifest)",
+      "risk_level": "LOW",
+      "dependencies": {
+        "parent": 73,
+        "is_duplicate": false
+      },
+      "proposed_future_action": "no action"
+    },
+    {
+      "id": 750,
+      "type": "post",
+      "title": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём",
+      "slug": "nazvanie-stati",
+      "path": "/blog/nazvanie-stati/",
+      "status": "publish",
+      "category": "KEEP_DEMO_LOCAL",
+      "reason": "E26D demo blog post for local visual QA",
+      "risk_level": "LOW",
+      "dependencies": {},
+      "proposed_future_action": "no action"
+    }
+  ]
+}

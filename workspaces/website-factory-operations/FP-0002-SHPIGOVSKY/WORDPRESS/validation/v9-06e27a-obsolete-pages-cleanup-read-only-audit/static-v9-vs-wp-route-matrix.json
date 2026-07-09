@@ -1,0 +1,396 @@
+{
+  "task_id": "V9-06E27A",
+  "generated_at": "2026-07-09T16:33:59.706792+00:00",
+  "rows": [
+    {
+      "static_v9_route": "/",
+      "wp_route": "/",
+      "wp_object_id": null,
+      "object_type": null,
+      "status": null,
+      "http_status": 200,
+      "static_status": "APPROVED_FULL",
+      "result": "STATIC_ONLY"
+    },
+    {
+      "static_v9_route": "/blog/",
+      "wp_route": "/blog/",
+      "wp_object_id": 19,
+      "object_type": "page",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "APPROVED_FULL",
+      "result": "MATCH"
+    },
+    {
+      "static_v9_route": "/blog/nazvanie-stati/",
+      "wp_route": "/blog/nazvanie-stati/",
+      "wp_object_id": 750,
+      "object_type": "post",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "APPROVED_FULL",
+      "result": "MATCH"
+    },
+    {
+      "static_v9_route": "/consent-personal-data/",
+      "wp_route": "/consent-personal-data/",
+      "wp_object_id": 23,
+      "object_type": "page",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "LEGAL_DEMO_DOCUMENT",
+      "result": "MATCH"
+    },
+    {
+      "static_v9_route": "/cookie-files-policy/",
+      "wp_route": "/cookie-files-policy/",
+      "wp_object_id": 24,
+      "object_type": "page",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "LEGAL_DEMO_DOCUMENT",
+      "result": "MATCH"
+    },
+    {
+      "static_v9_route": null,
+      "wp_route": "/glavnaya/",
+      "wp_object_id": 4,
+      "object_type": "page",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": null,
+      "result": "WP_ONLY"
+    },
+    {
+      "static_v9_route": "/kontakty/",
+      "wp_route": "/kontakty/",
+      "wp_object_id": 20,
+      "object_type": "page",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "APPROVED_FULL",
+      "result": "MATCH"
+    },
+    {
+      "static_v9_route": "/o-centre/",
+      "wp_route": "/o-centre/",
+      "wp_object_id": 11,
+      "object_type": "page",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "APPROVED_FULL",
+      "result": "MATCH"
+    },
+    {
+      "static_v9_route": "/o-centre/galereya-o-dome/",
+      "wp_route": "/o-centre/galereya-o-dome/",
+      "wp_object_id": 14,
+      "object_type": "page",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "PLACEHOLDER",
+      "result": "PLACEHOLDER"
+    },
+    {
+      "static_v9_route": null,
+      "wp_route": "/o-centre/intervyu-i-smi/",
+      "wp_object_id": 17,
+      "object_type": "page",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": null,
+      "result": "OBSOLETE_CANDIDATE"
+    },
+    {
+      "static_v9_route": "/o-centre/o-nas/",
+      "wp_route": "/o-centre/o-nas/",
+      "wp_object_id": 12,
+      "object_type": "page",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "PLACEHOLDER",
+      "result": "PLACEHOLDER"
+    },
+    {
+      "static_v9_route": "/o-centre/programma-lecheniya/",
+      "wp_route": "/o-centre/programma-lecheniya/",
+      "wp_object_id": 13,
+      "object_type": "page",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "PLACEHOLDER",
+      "result": "PLACEHOLDER"
+    },
+    {
+      "static_v9_route": "/o-centre/rodstvennikam/",
+      "wp_route": "/o-centre/rodstvennikam/",
+      "wp_object_id": 16,
+      "object_type": "page",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "PLACEHOLDER",
+      "result": "PLACEHOLDER"
+    },
+    {
+      "static_v9_route": "/o-centre/specialistam/",
+      "wp_route": "/o-centre/specialistam/",
+      "wp_object_id": 15,
+      "object_type": "page",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "PLACEHOLDER",
+      "result": "PLACEHOLDER"
+    },
+    {
+      "static_v9_route": "/otzyvy/",
+      "wp_route": "/otzyvy/",
+      "wp_object_id": 18,
+      "object_type": "page",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "APPROVED_FULL",
+      "result": "MATCH"
+    },
+    {
+      "static_v9_route": null,
+      "wp_route": "/privacy-policy-page/",
+      "wp_object_id": 25,
+      "object_type": "page",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": null,
+      "result": "OBSOLETE_CANDIDATE"
+    },
+    {
+      "static_v9_route": "/privacy-policy/",
+      "wp_route": "/privacy-policy/",
+      "wp_object_id": 3,
+      "object_type": "page",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "LEGAL_DEMO_DOCUMENT",
+      "result": "MATCH"
+    },
+    {
+      "static_v9_route": null,
+      "wp_route": "/specyalisty/",
+      "wp_object_id": 10,
+      "object_type": "page",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": null,
+      "result": "OBSOLETE_CANDIDATE"
+    },
+    {
+      "static_v9_route": "/user-agreement/",
+      "wp_route": "/user-agreement/",
+      "wp_object_id": 22,
+      "object_type": "page",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "LEGAL_DEMO_DOCUMENT",
+      "result": "MATCH"
+    },
+    {
+      "static_v9_route": "/uslugi/",
+      "wp_route": "/uslugi/",
+      "wp_object_id": 5,
+      "object_type": "page",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "APPROVED_FULL",
+      "result": "MATCH"
+    },
+    {
+      "static_v9_route": null,
+      "wp_route": "/uslugi/genotipirovanie/",
+      "wp_object_id": 9,
+      "object_type": "page",
+      "status": "publish",
+      "http_status": 404,
+      "static_status": null,
+      "result": "OBSOLETE_CANDIDATE"
+    },
+    {
+      "static_v9_route": "/uslugi/psihicheskoe-zdorovie/",
+      "wp_route": "/uslugi/psihicheskoe-zdorovie/",
+      "wp_object_id": 77,
+      "object_type": "service",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "PLACEHOLDER",
+      "result": "PLACEHOLDER"
+    },
+    {
+      "static_v9_route": "/uslugi/psihicheskoe-zdorovie/depressiya/",
+      "wp_route": "/uslugi/psihicheskoe-zdorovie/depressiya/",
+      "wp_object_id": 78,
+      "object_type": "service",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "PLACEHOLDER",
+      "result": "PLACEHOLDER"
+    },
+    {
+      "static_v9_route": "/uslugi/psihicheskoe-zdorovie/emocionalnoe-vygoranie/",
+      "wp_route": "/uslugi/psihicheskoe-zdorovie/emocionalnoe-vygoranie/",
+      "wp_object_id": 80,
+      "object_type": "service",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "PLACEHOLDER",
+      "result": "PLACEHOLDER"
+    },
+    {
+      "static_v9_route": "/uslugi/psihicheskoe-zdorovie/ptrs/",
+      "wp_route": "/uslugi/psihicheskoe-zdorovie/ptrs/",
+      "wp_object_id": 79,
+      "object_type": "service",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "PLACEHOLDER",
+      "result": "PLACEHOLDER"
+    },
+    {
+      "static_v9_route": "/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+      "wp_route": "/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+      "wp_object_id": 82,
+      "object_type": "service",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "PLACEHOLDER",
+      "result": "PLACEHOLDER"
+    },
+    {
+      "static_v9_route": "/uslugi/psihicheskoe-zdorovie/travma/",
+      "wp_route": "/uslugi/psihicheskoe-zdorovie/travma/",
+      "wp_object_id": 83,
+      "object_type": "service",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "PLACEHOLDER",
+      "result": "PLACEHOLDER"
+    },
+    {
+      "static_v9_route": "/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+      "wp_route": "/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+      "wp_object_id": 81,
+      "object_type": "service",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "PLACEHOLDER",
+      "result": "PLACEHOLDER"
+    },
+    {
+      "static_v9_route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "wp_route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "wp_object_id": 84,
+      "object_type": "service",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "PLACEHOLDER",
+      "result": "PLACEHOLDER"
+    },
+    {
+      "static_v9_route": "/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+      "wp_route": "/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+      "wp_object_id": 85,
+      "object_type": "service",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "PLACEHOLDER",
+      "result": "PLACEHOLDER"
+    },
+    {
+      "static_v9_route": "/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/",
+      "wp_route": "/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/",
+      "wp_object_id": 87,
+      "object_type": "service",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "PLACEHOLDER",
+      "result": "PLACEHOLDER"
+    },
+    {
+      "static_v9_route": "/uslugi/rasstroystva-pischevogo-povedeniya/nervnaya-bulimiya/",
+      "wp_route": "/uslugi/rasstroystva-pischevogo-povedeniya/nervnaya-bulimiya/",
+      "wp_object_id": 86,
+      "object_type": "service",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "PLACEHOLDER",
+      "result": "PLACEHOLDER"
+    },
+    {
+      "static_v9_route": "/uslugi/zavisimosti/",
+      "wp_route": "/uslugi/zavisimosti/",
+      "wp_object_id": 73,
+      "object_type": "service",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "APPROVED_FULL",
+      "result": "MATCH"
+    },
+    {
+      "static_v9_route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "wp_route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "wp_object_id": 74,
+      "object_type": "service",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "APPROVED_FULL",
+      "result": "MATCH"
+    },
+    {
+      "static_v9_route": null,
+      "wp_route": "/uslugi/zavisimosti/lekarstvennaya-zavisimost/",
+      "wp_object_id": 315,
+      "object_type": "service",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": null,
+      "result": "WP_ONLY"
+    },
+    {
+      "static_v9_route": null,
+      "wp_route": "/uslugi/zavisimosti/narkoticheskaya-zavisimost/",
+      "wp_object_id": 314,
+      "object_type": "service",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": null,
+      "result": "WP_ONLY"
+    },
+    {
+      "static_v9_route": null,
+      "wp_route": "/uslugi/zavisimosti/povedencheskie-zavisimosti/",
+      "wp_object_id": 316,
+      "object_type": "service",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": null,
+      "result": "WP_ONLY"
+    },
+    {
+      "static_v9_route": "/uslugi/zavisimosti/profilakticheskiy-analiz/",
+      "wp_route": "/uslugi/zavisimosti/profilakticheskiy-analiz/",
+      "wp_object_id": 75,
+      "object_type": "service",
+      "status": "publish",
+      "http_status": 200,
+      "static_status": "PLACEHOLDER",
+      "result": "PLACEHOLDER"
+    },
+    {
+      "static_v9_route": "/uslugi/zavisimosti/specialistam/",
+      "wp_route": null,
+      "wp_object_id": null,
+      "object_type": null,
+      "status": null,
+      "http_status": null,
+      "static_status": "PLACEHOLDER",
+      "result": "STATIC_ONLY"
+    }
+  ]
+}

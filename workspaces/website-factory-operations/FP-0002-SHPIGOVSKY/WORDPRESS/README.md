@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E26D Demo Blog Content And Visual QA **PASS** — demo post `750` at `/blog/nazvanie-stati/`; archive card + single validated. Evidence: `validation/v9-06e26d-demo-blog-content-and-visual-qa/`. Report: `reports/FP-0002-V9-06E26D-DEMO-BLOG-CONTENT-AND-VISUAL-QA-REPORT-v1.md`. NEXT: **CREATE_V9_06E26D_OPERATOR_BLOG_VISUAL_QA_TASK**. Prior E26C: single PASS @ `0b5dadf` — single post template at `/blog/{slug}/`; `group_fp02_blog_post_article_meta` extended; TOC/related/CTA/FAQ-ready; 0 posts seeded; runtime delivered. Evidence: `validation/v9-06e26c-blog-single-template-wordpress-acf-port/`. Report: `reports/FP-0002-V9-06E26C-BLOG-SINGLE-TEMPLATE-WORDPRESS-ACF-PORT-REPORT-v1.md`. NEXT: **CREATE_V9_06E26D_DEMO_BLOG_CONTENT_AND_VISUAL_QA_TASK**. Prior E26B: archive PASS @ `586d213d`.
+**Status:** V9-06E27A Obsolete Pages Cleanup Read-Only Audit **PASS** — 41 objects audited; 38 routes probed; Batch A trash candidates IDs `9,10,17,21,25`; ownership debt pages `6,7,8` deferred. Evidence: `validation/v9-06e27a-obsolete-pages-cleanup-read-only-audit/`. Report: `reports/FP-0002-V9-06E27A-OBSOLETE-PAGES-CLEANUP-READ-ONLY-AUDIT-REPORT-v1.md`. NEXT: **CREATE_V9_06E27B_LOW_RISK_OBSOLETE_CLEANUP_TASK**. Prior E26D-POLISH: encoding PASS @ `e302f95` — demo post `750` preserved.
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-09 (V9-06E26D demo blog content and visual QA PASS)
+**Last updated:** 2026-07-09 (V9-06E27A obsolete pages cleanup read-only audit PASS)
 
-**Current WordPress phase:** V9-06E26D Demo Blog Content And Visual QA **PASS** — demo post `750` at `/blog/nazvanie-stati/`; archive card + single validated. **Next: CREATE_V9_06E26D_OPERATOR_BLOG_VISUAL_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E26D-DEMO-BLOG-CONTENT-AND-VISUAL-QA-REPORT-v1.md`. Prior E26C: single PASS @ `0b5dadf`.
+**Current WordPress phase:** V9-06E27A Obsolete Pages Cleanup Read-Only Audit **PASS** — 41 objects audited; 5 Batch A trash candidates; 3 ownership-debt pages deferred. **Next: CREATE_V9_06E27B_LOW_RISK_OBSOLETE_CLEANUP_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E27A-OBSOLETE-PAGES-CLEANUP-READ-ONLY-AUDIT-REPORT-v1.md`. Prior E26D-POLISH: encoding PASS @ `e302f95`; demo post `750` preserved.
 
 ## Active frontend workspace (V9)
 
