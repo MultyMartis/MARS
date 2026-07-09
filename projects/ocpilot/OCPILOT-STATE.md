@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-10
-**Evidence cutoff:** 2026-07-10 (SITE-002 Run **4.241** — Full Tech SEO Audit **COMPLETE**; Run **4.240** post-1C verification **still BLOCKED**; checkpoint unchanged `SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01`)
+**Evidence cutoff:** 2026-07-10 (SITE-002 Run **4.242** — Audit Wave C Redirect Hygiene **NO-OP COMPLETE**; AUDIT-006 resolved; Run **4.240** post-1C verification **still BLOCKED**; checkpoint unchanged `SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01`)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Full Tech SEO Audit (Run 4.241)** — **COMPLETE** — 1408 sitemap URLs all HTTP 200; 0 broken internal links; 0 public **БЗПМ**; issue register + roadmap ready · [SITE-002-PROD-FULL-TECH-SEO-AUDIT-01.md](sites/site-002/reports/SITE-002-PROD-FULL-TECH-SEO-AUDIT-01.md) · Storage `audits/SITE-002-PROD-FULL-TECH-SEO-AUDIT-01/` · **Post-1C verification (Run 4.240)** still **BLOCKED** · checkpoint unchanged `SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01` |
+| Current SITE-002 focus | **Audit Wave C Redirect Hygiene (Run 4.242)** — **NO-OP COMPLETE** — flat Lari **301** + bare `/index.php` **301** confirmed; AUDIT-006 closed; 0 mutation · [SITE-002-PROD-AUDIT-WAVE-C-REDIRECT-HYGIENE-01.md](sites/site-002/reports/SITE-002-PROD-AUDIT-WAVE-C-REDIRECT-HYGIENE-01.md) · **Post-1C verification (Run 4.240)** still **BLOCKED** · checkpoint unchanged `SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01` |
 
 ---
 

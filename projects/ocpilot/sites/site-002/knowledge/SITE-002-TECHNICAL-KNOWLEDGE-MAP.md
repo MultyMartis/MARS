@@ -1155,9 +1155,19 @@ Before **any** task touching **trust block**, **certificates**, **dealers form**
 - **Accepted:** `/contact` canonical; `/kontakty` 404; post-1C verification pending (Run 4.240)
 - **Top hygiene items:** flat Lari URLs without 301 (canonical OK); 7 legacy `index.php?route=information` sitemap entries; optional `/contact` sitemap inclusion; missing alt bulk
 - **Issue register:** Storage `audits/SITE-002-PROD-FULL-TECH-SEO-AUDIT-01/issue-register/` (11 items: P2×3, P3×5, P4×3)
+- **AUDIT-006:** **resolved** Run 4.242 — flat Lari **301** confirmed; Run 4.241 false positive (urllib auto-follow)
 - **Roadmap:** Storage `audits/SITE-002-PROD-FULL-TECH-SEO-AUDIT-01/roadmap/`
 - **Checkpoint:** unchanged `SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01`
 - Tool: `site-002-prod-full-tech-seo-audit-01.py` · [report](../reports/SITE-002-PROD-FULL-TECH-SEO-AUDIT-01.md)
+
+### Audit Wave C Redirect Hygiene (Run 4.242)
+
+- **Status:** **COMPLETE — NO-OP** (2026-07-10)
+- **Scope:** verify AUDIT-006 flat Lari **301** + optional AUDIT-010 bare `/index.php` alias; read-only HTTP (curl), FTP source mirrors, DB SELECT
+- **Result:** all 3 flat Lari URLs **301** to nested; nested **200**; bare `/index.php` **301** to `/`; `index.php?route=...` functional; **0** mutation
+- **Authority:** Run 4.235 `.htaccess` rules active since Lari reparent
+- **Checkpoint:** unchanged `SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01`
+- Tool: `site-002-prod-audit-wave-c-redirect-hygiene-01.py` · [report](../reports/SITE-002-PROD-AUDIT-WAVE-C-REDIRECT-HYGIENE-01.md)
 
 ### Post-1C monitor scheduler (Run 4.215 / 4.216)
 
