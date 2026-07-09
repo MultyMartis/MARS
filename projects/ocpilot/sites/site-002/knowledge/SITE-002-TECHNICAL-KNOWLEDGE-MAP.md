@@ -1159,6 +1159,8 @@ Before **any** task touching **trust block**, **certificates**, **dealers form**
 - **AUDIT-007:** **fixed** Run 4.243 — sitemap emits route-based `information/*` pretty URLs
 - **AUDIT-004:** **fixed** Run 4.243 — redundant `compare-products`/`wishlist` seo_url rows removed
 - **AUDIT-002:** **fixed** Run 4.243 — `/contact` in sitemap
+- **AUDIT-008:** **fixed** Run 4.244 — meta description on `/about_us`, `/brands/assum`, `/terms`
+- **AUDIT-009:** **fixed** Run 4.244 — H1 on `/brands/assum`
 - **Roadmap:** Storage `audits/SITE-002-PROD-FULL-TECH-SEO-AUDIT-01/roadmap/`
 - **Checkpoint:** unchanged `SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01`
 - Tool: `site-002-prod-full-tech-seo-audit-01.py` · [report](../reports/SITE-002-PROD-FULL-TECH-SEO-AUDIT-01.md)
@@ -1180,6 +1182,15 @@ Before **any** task touching **trust block**, **certificates**, **dealers form**
 - **`google_sitemap.php`:** emits distinct `information/*` routes from `oc_seo_url`; skips migrated legacy `information_id` 6/9/10/11/12/13/14
 - **Checkpoint:** `SITE-002-STABLE-PROD-AUDIT-WAVE-B-SEO-FOUNDATION-01`
 - Tool: `site-002-prod-audit-wave-b-seo-foundation-01.py` · mirror `google_sitemap-site-002-prod-audit-wave-b-seo-foundation-01.php` · [report](../reports/SITE-002-PROD-AUDIT-WAVE-B-SEO-FOUNDATION-01.md)
+
+### Audit Wave E Info Meta H1 (Run 4.244)
+
+- **Status:** **COMPLETE** (2026-07-10)
+- **Scope:** AUDIT-008 missing meta on `/about_us`, `/brands/assum`, `/terms`; AUDIT-009 missing H1 on `/brands/assum`
+- **Owners:** `oc_information_description` id **4** + **5** (about_us, terms); Assum = `manufacturer_id=11` via `product/manufacturer.php` + `manufacturer_info.twig`
+- **Result:** 2 DB `meta_description` updates; 2 FTP uploads (Assum scoped `setDescription` + brand PLP `h2`→`h1`); regression **PASS**; public **БЗПМ** **0**
+- **Checkpoint:** `SITE-002-STABLE-PROD-AUDIT-WAVE-E-INFO-META-H1-01`
+- Tool: `site-002-prod-audit-wave-e-info-meta-h1-01.py` · mirrors `manufacturer-site-002-prod-audit-wave-e-info-meta-h1-01.php`, `manufacturer_info-site-002-prod-audit-wave-e-info-meta-h1-01.twig` · [report](../reports/SITE-002-PROD-AUDIT-WAVE-E-INFO-META-H1-01.md)
 
 ### Post-1C monitor scheduler (Run 4.215 / 4.216)
 

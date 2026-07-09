@@ -1,7 +1,7 @@
 # SITE-002 — Site Passport
 
-**Status:** **STABLE PRODUCTION CHECKPOINT — AUDIT WAVE B SEO FOUNDATION** (checkpoint `SITE-002-STABLE-PROD-AUDIT-WAVE-B-SEO-FOUNDATION-01`; Run 4.243 sitemap pretty URLs + SEO duplicates cleaned)
-**Run:** 4.243 — SITE-002 Audit Wave B SEO Foundation (2026-07-10)
+**Status:** **STABLE PRODUCTION CHECKPOINT — AUDIT WAVE E INFO META H1** (checkpoint `SITE-002-STABLE-PROD-AUDIT-WAVE-E-INFO-META-H1-01`; Run 4.244 edge info meta + Assum H1 fixed)
+**Run:** 4.244 — SITE-002 Audit Wave E Info Meta H1 (2026-07-10)
 
 ---
 
