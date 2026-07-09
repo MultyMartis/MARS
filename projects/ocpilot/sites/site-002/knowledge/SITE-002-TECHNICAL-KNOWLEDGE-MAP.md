@@ -2021,8 +2021,9 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 **Admin forms integration:** Run 4.224 — `SITE-002-PROD-MAIL-ADMIN-FORMS-01` (2026-07-08)
 **Inbox confirmation:** Run 4.225 — `SITE-002-PROD-MAIL-ADMIN-FORMS-INBOX-CONFIRMATION-01` (2026-07-08)
 **Customer forms integration:** Run 4.226 — `SITE-002-PROD-MAIL-CUSTOMER-FORMS-01` (2026-07-08)
-**Customer delivery confirmation:** Run 4.231 — `SITE-002-PROD-MAIL-CUSTOMER-FORMS-DELIVERY-CONFIRMATION-01` (2026-07-09) — controlled submit dialog 11 `ok: true` with operator mailbox `i***@mail.ru`; **operator mailbox visual confirmation pending**
-**Status:** **ACTIVE — admin + conditional customer form mail; form loading UX; standard OC mails unchanged**
+**Customer delivery confirmation:** Run 4.231 — `SITE-002-PROD-MAIL-CUSTOMER-FORMS-DELIVERY-CONFIRMATION-01` (2026-07-09) — controlled submit dialog 11 `ok: true` with operator mailbox `i***@mail.ru`
+**Customer inbox confirmation:** Run 4.232 — `SITE-002-PROD-MAIL-CUSTOMER-FORMS-INBOX-CONFIRMATION-01` (2026-07-09) — operator verified delivery/design/no service info issue
+**Status:** **ACTIVE — admin + conditional customer form mail operator-verified; form loading UX; standard OC mails unchanged**
 
 | Item | Production value |
 |------|------------------|
@@ -2050,7 +2051,7 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 ## 35. Mail Design System (Production — ACTIVE)
 
 **Operation:** Run 4.223 — `SITE-002-PROD-MAIL-DESIGN-SYSTEM-01` (2026-07-08)
-**Integration:** Run 4.224 — anketa admin forms · Run 4.225 — operator inbox confirmation · Run 4.226 — customer confirmations + loading UX · Run 4.231 — customer delivery retest (mailbox pending)
+**Integration:** Run 4.224 — anketa admin forms · Run 4.225 — operator inbox confirmation · Run 4.226 — customer confirmations + loading UX · Run 4.231 — customer delivery retest · Run 4.232 — customer inbox confirmation (operator-verified)
 **Status:** **ACTIVE** — renderer integrated for admin + customer form mail
 
 | Item | Production value |
@@ -2124,7 +2125,7 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 | **Root cause** | `action=#` + handlers only bind `[data-fb-form]` (popup) and `.zpm-dealers[data-dealers] .zpm-form` |
 | **Popup success reuse** | `fancyboxforms.twig` — icon `#zpm_ico__successful` + «Спасибо» / «Ваша заявка отправлена!» |
 | **Recommended dialogs** | 8 delivery · 9 payment · 10 warranty · 11 custom-equipment · 7 dealers (existing) |
-| **Next task** | customer inbox confirmation (deferred); account/order transactional mail |
+| **Next task** | ~~customer inbox confirmation~~ **DONE** Run 4.232; account/order transactional mail |
 | **Production checkpoint** | `SITE-002-STABLE-PROD-INFO-PAGE-FORMS-01` (Run 4.230) |
 | **Integration report** | [SITE-002-PROD-INFO-PAGE-FORMS-INTEGRATION-01.md](../reports/SITE-002-PROD-INFO-PAGE-FORMS-INTEGRATION-01.md) |
 | **Integration baseline** | [SITE-002-STABLE-PROD-INFO-PAGE-FORMS-01.md](../baselines/SITE-002-STABLE-PROD-INFO-PAGE-FORMS-01.md) |
@@ -2133,4 +2134,4 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 
 ---
 
-*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-09 (Run 4.230 — info page corp CTA forms integration).*
+*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-09 (Run 4.232 — customer form email inbox confirmation).*

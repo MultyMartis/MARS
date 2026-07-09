@@ -223,3 +223,15 @@ Controlled submit on `/custom-equipment` dialog 11 succeeded (`ok: true`) using 
 1. **Operator mailbox confirmation** — inspect `i***@mail.ru` for marker `MARS TEST CUSTOMER DELIVERY CONFIRMATION 01`; confirm subject `ЗПМ: заявка получена — Оборудование на заказ`; confirm no IP/UA/referrer/service block.
 2. On operator approval, close Run 4.226 customer delivery SAFE UNKNOWN with documentation-only follow-up (mirror 4.225).
 3. **SITE-002-PROD-MAIL-ACCOUNT-TRANSACTIONAL-01** — registration, password reset, account mails.
+
+---
+
+## Addendum — Customer inbox confirmation
+
+**Date:** 2026-07-09
+
+**Confirmation:** Customer mailbox delivery/design/no service info issue confirmed by operator.
+
+**Related follow-up:** SITE-002-PROD-MAIL-CUSTOMER-FORMS-INBOX-CONFIRMATION-01 (OCPilot Run **4.232**)
+
+**Operational status (follow-up):** Run 4.231 treated as **SITE-002 CUSTOMER FORMS DELIVERY CONFIRMATION COMPLETE — CUSTOMER EMAIL OPERATOR-VERIFIED**. Original Run 4.231 report verdict at test time remains on record; this addendum closes the operator mailbox pending gate.

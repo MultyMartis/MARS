@@ -320,3 +320,15 @@ Application path verified: conditional customer send, admin mail preserved, both
 **Verdict (Run 4.231):** **SITE-002 CUSTOMER FORMS DELIVERY CONFIRMATION PARTIAL — OPERATOR MAILBOX CHECK PENDING**
 
 Storage: `mail-after/future-standard-mail-spec.md`
+
+---
+
+## Addendum — Customer inbox confirmation
+
+**Date:** 2026-07-09
+
+**Confirmation:** Customer mailbox delivery/design/no service info issue confirmed by operator.
+
+**Related follow-up:** SITE-002-PROD-MAIL-CUSTOMER-FORMS-INBOX-CONFIRMATION-01 (OCPilot Run **4.232**)
+
+**Operational status (follow-up):** Run 4.226 treated as **SITE-002 MAIL CUSTOMER FORMS COMPLETE — CUSTOMER CONFIRMATIONS OPERATOR-VERIFIED**. Original Run 4.226 report verdict at deploy time remains on record; this addendum closes the customer delivery SAFE UNKNOWN via operator confirmation (mirror Run 4.225 pattern for admin mail).
