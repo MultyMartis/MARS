@@ -1,0 +1,27 @@
+{
+  "task": "V9-06E26A-POLISH",
+  "result": "PASS",
+  "static_v9": {
+    "parent_block": "infrastructure-narrative__group infrastructure-narrative__group--g5 (via comfort-gallery include inside infrastructure-narrative container)",
+    "decor_item_classes": "comfort__gallery-item comfort__gallery-item_decor",
+    "element_type": "div",
+    "logo_structure": "<div class=\"comfort__gallery-item comfort__gallery-item_decor\"><img class=\"comfort__gallery-image\" src=\"assets/img/branding/logo.svg\" width=\"auto\" height=\"auto\" alt=\"\" loading=\"lazy\" decoding=\"async\"></div>",
+    "asset_path": "assets/img/branding/logo.svg",
+    "position": "first child inside comfort__gallery before six fancybox-linked gallery items",
+    "aria_alt": "empty alt (decorative)",
+    "is_decorative": true,
+    "fancybox": false,
+    "source_files": [
+      "workspaces/fp-0002-shpigovsky-v9/src/partials/components/comfort-gallery-decor.html",
+      "workspaces/fp-0002-shpigovsky-v9/src/partials/components/comfort-gallery.html",
+      "workspaces/fp-0002-shpigovsky-v9/src/partials/sections/infrastructure-narrative.html"
+    ]
+  },
+  "current_wp_before_fix": {
+    "g5_group_present": true,
+    "decor_item_present": false,
+    "first_child": "comfort__gallery-item comfort__gallery-item--wide (o-centre-infrastructure-13.webp)",
+    "responsible_partial": "WORDPRESS/theme/shpigovsky/template-parts/institutional/infrastructure-narrative.php"
+  },
+  "decision": "Hardcode static decor markup as first child in g5 comfort__gallery; reuse shpigovsky_asset_uri('img/branding/logo.svg'); no ACF/DB changes"
+}

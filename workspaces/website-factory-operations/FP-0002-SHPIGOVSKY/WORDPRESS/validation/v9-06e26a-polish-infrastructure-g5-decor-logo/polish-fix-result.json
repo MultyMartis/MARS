@@ -1,0 +1,18 @@
+{
+  "task": "V9-06E26A-POLISH",
+  "result": "PASS",
+  "changed_files": [
+    "WORDPRESS/theme/shpigovsky/template-parts/institutional/infrastructure-narrative.php"
+  ],
+  "before": {
+    "g5_first_child": "a.comfort__gallery-item.comfort__gallery-item--wide",
+    "comfort__gallery-item_decor": false
+  },
+  "after": {
+    "g5_first_child": "div.comfort__gallery-item.comfort__gallery-item_decor",
+    "comfort__gallery-item_decor": true,
+    "logo_src": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/img/branding/logo.svg"
+  },
+  "acf_changes": 0,
+  "db_changes": 0
+}

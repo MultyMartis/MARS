@@ -1,0 +1,13 @@
+{
+  "task": "V9-06E26A-POLISH",
+  "result": "PASS",
+  "screenshots_available": false,
+  "static_snippet": "<div class=\"comfort__gallery-item comfort__gallery-item_decor\"><img class=\"comfort__gallery-image\" src=\"assets/img/branding/logo.svg\" width=\"auto\" height=\"auto\" alt=\"\" loading=\"lazy\" decoding=\"async\"></div>",
+  "runtime_snippet_after": "<div class=\"comfort__gallery-item comfort__gallery-item_decor\"><img class=\"comfort__gallery-image\" src=\"http://shpigovsky.test/wp-content/themes/shpigovsky/assets/img/branding/logo.svg\" width=\"auto\" height=\"auto\" alt=\"\" loading=\"lazy\" decoding=\"async\"></div>",
+  "parity": {
+    "classes_match": true,
+    "position_match": true,
+    "asset_match": true,
+    "decorative_alt_empty": true
+  }
+}

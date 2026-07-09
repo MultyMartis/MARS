@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E26A ABOUT PAGE WORDPRESS ACF PORT **PASS** — `/o-centre/` full 14-section V9 stack live; ACF hub fields + seed on page #11; local hero preserved; runtime delivered; regression routes 200; blog/permalink untouched. Evidence: `validation/v9-06e26a-about-page-wordpress-acf-port/`. Report: `reports/FP-0002-V9-06E26A-ABOUT-PAGE-WORDPRESS-ACF-PORT-REPORT-v1.md`. NEXT: **CREATE_V9_06E26A_OPERATOR_ABOUT_PAGE_QA_TASK**. Prior E26: architecture audit PASS @ `83a5cce6`.
+**Status:** V9-06E26A-POLISH Infrastructure G5 Decor Logo **PASS** — `/o-centre/` g5 gallery decor logo restored per static V9; 1 theme partial; runtime delivered; no ACF/DB changes. Evidence: `validation/v9-06e26a-polish-infrastructure-g5-decor-logo/`. Report: `reports/FP-0002-V9-06E26A-POLISH-INFRASTRUCTURE-G5-DECOR-LOGO-REPORT-v1.md`. NEXT: **CREATE_V9_06E26B_BLOG_ARCHIVE_WORDPRESS_ACF_PORT_TASK**. Prior E26A: about page port PASS @ `2d586200`.
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

@@ -1,0 +1,24 @@
+{
+  "task": "V9-06E26A-POLISH",
+  "result": "PASS",
+  "primary_route": {
+    "route": "/o-centre/",
+    "http_status": 200,
+    "php_fatal": false,
+    "infrastructure_narrative__group--g5": true,
+    "comfort__gallery-item_decor_first_in_g5": true,
+    "logo_asset_resolves": true,
+    "decor_count_on_page": 1,
+    "duplicate_decor": false,
+    "g5_fancybox_items": 6,
+    "other_sections_intact": true
+  },
+  "regression_routes": [
+    { "route": "/", "http_status": 200 },
+    { "route": "/blog/", "http_status": 200 },
+    { "route": "/uslugi/", "http_status": 200 },
+    { "route": "/kontakty/", "http_status": 200 }
+  ],
+  "blog_permalink_changed": false,
+  "global_hero_changed": false
+}

@@ -1,0 +1,17 @@
+{
+  "task": "V9-06E26A-POLISH",
+  "result": "PASS",
+  "file_to_edit": "WORDPRESS/theme/shpigovsky/template-parts/institutional/infrastructure-narrative.php",
+  "markup_to_add": "<div class=\"comfort__gallery-item comfort__gallery-item_decor\"><img class=\"comfort__gallery-image\" src=\"{shpigovsky_asset_uri img/branding/logo.svg}\" width=\"auto\" height=\"auto\" alt=\"\" loading=\"lazy\" decoding=\"async\"></div>",
+  "asset_reference": "img/branding/logo.svg via shpigovsky_asset_uri()",
+  "acf_changes": 0,
+  "db_changes": 0,
+  "validation_route": "/o-centre/",
+  "marker_checks": [
+    "infrastructure-narrative__group--g5",
+    "comfort__gallery-item_decor as first gallery child",
+    "logo.svg resolves HTTP 200",
+    "no duplicate decor item",
+    "six existing g5 fancybox items unchanged"
+  ]
+}

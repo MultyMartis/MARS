@@ -72,6 +72,17 @@ $fb_group = isset( $context['fancybox_group'] ) ? (string) $context['fancybox_gr
 		<?php if ( ! empty( $g5_items ) ) : ?>
 			<div class="infrastructure-narrative__group infrastructure-narrative__group--g5" data-inf-group="g5">
 				<div class="comfort__gallery">
+					<div class="comfort__gallery-item comfort__gallery-item_decor">
+						<img
+							class="comfort__gallery-image"
+							src="<?php echo esc_url( shpigovsky_asset_uri( 'img/branding/logo.svg' ) ); ?>"
+							width="auto"
+							height="auto"
+							alt=""
+							loading="lazy"
+							decoding="async"
+						>
+					</div>
 					<?php
 					$wide_indexes = array( 0, 5 );
 					foreach ( $g5_items as $index => $image ) :

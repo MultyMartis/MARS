@@ -1,0 +1,18 @@
+{
+  "task": "V9-06E26A-POLISH",
+  "result": "PASS",
+  "checks": [
+    {
+      "url": "http://shpigovsky.test/o-centre/",
+      "http_status": 200,
+      "php_fatal_in_body": false
+    },
+    {
+      "url": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/img/branding/logo.svg",
+      "http_status": 200,
+      "content_type": "image/svg+xml"
+    }
+  ],
+  "console_errors": "not instrumented — server-side HTML marker validation used",
+  "network_failures": []
+}
