@@ -922,7 +922,7 @@ See §6. Per-category PHP profiles control which attributes appear in sidebar an
 | Sections | **Лари** (category_id **88**) · **Кондитерский инвентарь** (category_id **360**) |
 | Live PLP | HTTP 200; meta onboarded (Runs 4.210–4.211) |
 | Megamenu | Present |
-| Homepage/hub `zpm-cat-card` | **11 tiles** (Run 4.220) — IDs incl. **88** (`lari`), **360** (`konditerskiy-inventar`) |
+| Homepage/hub `zpm-cat-card` | **10 tiles** (Run 4.236) — IDs `322,331,301,326,354,358,207,80,86,360`; **88** Лари removed from parent tiles; **358** kept |
 | Display sort | **А → Я** by Russian name (Run 4.221) — `sortCategoriesByRussianName()` |
 | Future implementation | **COMPLETE** Run 4.220 + **4.221** — whitelist + images + A→Z display · [4.220 report](../reports/SITE-002-PROD-NEW-SECTIONS-ENTRYPOINTS-02.md) · [4.221 report](../reports/SITE-002-PROD-CATEGORY-ENTRYPOINTS-SORT-AZ-01.md) · [tool](../tools/site-002-prod-category-entrypoints-sort-az-01.py) |
 | Intake report | [SITE-002-PROD-UX-TASK-INTAKE-01.md](../reports/SITE-002-PROD-UX-TASK-INTAKE-01.md) |
@@ -1123,9 +1123,17 @@ Before **any** task touching **trust block**, **certificates**, **dealers form**
 - **Redirects:** `.htaccess` 301 old flat `/lari` tree → nested
 - **Root cause (nested→flat):** `seo_pro.php` `validate()` used stale `cache.category.seopath` (old `79_88` path) — fixed by cache purge + `getPathByCategory()` now reads `oc_category_path`
 - **Patched files:** `seo_pro.php`, `seo_url.php`, `category_visibility.php`, `category.php`, `.htaccess`
-- **Entrypoints:** homepage marketing tile **Лари** kept; href nested; `buildCategoryPathParam()` + `product/katalog` links
-- **Sitemap:** nested lari URLs only; old flat category URLs absent
+- **Entrypoints:** nested **Лари** page/redirect/sitemap from Run 4.235 **unchanged**; parent tile **88** removed Run 4.236
 - Tool: `site-002-prod-category-lari-reparent-implementation-01.py` · [report](../reports/SITE-002-PROD-CATEGORY-LARI-REPARENT-IMPLEMENTATION-01.md) · [checkpoint](../baselines/SITE-002-STABLE-PROD-CATEGORY-LARI-REPARENT-01.md)
+
+### Parent Category Tiles Lari removal (Run 4.236)
+
+- **Terminology:** Parent Category Tiles / Витрина родительских категорий
+- **Status:** **COMPLETE**
+- **Patch:** removed **88** from `$neutral_hub_branch_ids` in `category_visibility.php`
+- **After:** homepage + neutral hub **10** `zpm-cat-card` tiles; **358** Шкафы и лари present; standalone **Лари** parent tile absent
+- **Unchanged:** **Лари** child on `/shkafy-i-lari`; nested URL **200**; old flat **301**; no DB/SEO/redirect edits
+- Tool: `site-002-prod-parent-category-tiles-lari-removal-01.py` · [report](../reports/SITE-002-PROD-PARENT-CATEGORY-TILES-LARI-REMOVAL-01.md) · [checkpoint](../baselines/SITE-002-STABLE-PROD-PARENT-CATEGORY-TILES-LARI-REMOVAL-01.md)
 
 ### Sitemap authority (Run 4.214)
 
@@ -2173,4 +2181,4 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 
 ---
 
-*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-09 (Run 4.235 — category Lari reparent implementation).*
+*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-09 (Run 4.236 — Parent Category Tiles Lari removal).*
