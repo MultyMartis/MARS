@@ -1,0 +1,17 @@
+{
+  "wave": "V9-06E26A",
+  "result": "PASS",
+  "checkpoint_path": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e26a-about-page-wordpress-acf-port-pre-20260709-115450",
+  "dump_file": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e26a-about-page-wordpress-acf-port-pre-20260709-115450\\mars_wp_fp0002.sql",
+  "dump_sha256": "D7C68470D185E9467F7A42866EADF60078144E5CC9ADEE2AAC2EEE3465FD1D2C",
+  "dump_size_bytes": 2003833,
+  "dump_note": "Fresh mysqldump via X:\\MARS-Localhost\\laragon\\bin\\mysql\\mysql-8.4.3-winx64\\bin\\mysqldump.exe",
+  "db": "mars_wp_fp0002",
+  "prefix": "fp02_",
+  "e26_baseline_commit": "83a5cce667147d0963bbd63face431dc05f0cd44",
+  "snapshots": [
+    "page-11-snapshot.json",
+    "preservation-snapshot.json"
+  ],
+  "restore_instructions": "mysql --host=127.0.0.1 --user=root mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e26a-about-page-wordpress-acf-port-pre-20260709-115450\\mars_wp_fp0002.sql\""
+}

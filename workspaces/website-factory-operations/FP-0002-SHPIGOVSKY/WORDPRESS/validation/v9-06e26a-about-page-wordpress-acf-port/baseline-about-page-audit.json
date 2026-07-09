@@ -1,0 +1,24 @@
+{
+  "page_id": 11,
+  "route": "/o-centre/",
+  "template": "institutional.php",
+  "static_sections": [
+    "hero",
+    "internal-nav",
+    "who-we-are",
+    "founder-quote",
+    "who-we-treat",
+    "cta-1",
+    "our-approach",
+    "clinic-landscape",
+    "our-program",
+    "our-home",
+    "guest-cta",
+    "specialists",
+    "reviews",
+    "final-form"
+  ],
+  "wp_before": "hero + placeholder institutional-narrative only",
+  "missing_before": 12,
+  "result": "PASS"
+}

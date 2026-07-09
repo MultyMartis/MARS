@@ -149,6 +149,328 @@
             "append": ""
         },
         {
+            "key": "field_fp02_about_narrative_heading",
+            "label": "О центре — Кто мы: заголовок",
+            "name": "about_narrative_heading",
+            "type": "text",
+            "menu_order": 5,
+            "conditional_logic": [
+                [
+                    {
+                        "param": "page",
+                        "operator": "==",
+                        "value": "11"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "required": 0,
+            "instructions": "Секция #who-we-are. Пустое значение — static V9 fallback."
+        },
+        {
+            "key": "field_fp02_about_narrative_lead",
+            "label": "О центре — Кто мы: лид",
+            "name": "about_narrative_lead",
+            "type": "textarea",
+            "menu_order": 6,
+            "conditional_logic": [
+                [
+                    {
+                        "param": "page",
+                        "operator": "==",
+                        "value": "11"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "required": 0,
+            "rows": 3
+        },
+        {
+            "key": "field_fp02_about_who_treat_heading",
+            "label": "О центре — Кого лечим: заголовок",
+            "name": "about_who_treat_heading",
+            "type": "text",
+            "menu_order": 7,
+            "conditional_logic": [
+                [
+                    {
+                        "param": "page",
+                        "operator": "==",
+                        "value": "11"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "required": 0
+        },
+        {
+            "key": "field_fp02_about_who_treat_intro",
+            "label": "О центре — Кого лечим: вводный текст",
+            "name": "about_who_treat_intro",
+            "type": "textarea",
+            "menu_order": 8,
+            "conditional_logic": [
+                [
+                    {
+                        "param": "page",
+                        "operator": "==",
+                        "value": "11"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "required": 0,
+            "rows": 4
+        },
+        {
+            "key": "field_fp02_about_who_treat_lead",
+            "label": "О центре — Кого лечим: лид",
+            "name": "about_who_treat_lead",
+            "type": "textarea",
+            "menu_order": 9,
+            "conditional_logic": [
+                [
+                    {
+                        "param": "page",
+                        "operator": "==",
+                        "value": "11"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "required": 0,
+            "rows": 2
+        },
+        {
+            "key": "field_fp02_about_who_treat_callout",
+            "label": "О центре — Кого лечим: выноска",
+            "name": "about_who_treat_callout",
+            "type": "textarea",
+            "menu_order": 10,
+            "conditional_logic": [
+                [
+                    {
+                        "param": "page",
+                        "operator": "==",
+                        "value": "11"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "required": 0,
+            "rows": 2
+        },
+        {
+            "key": "field_fp02_about_approach_heading",
+            "label": "О центре — Подход: заголовок",
+            "name": "about_approach_heading",
+            "type": "text",
+            "menu_order": 11,
+            "conditional_logic": [
+                [
+                    {
+                        "param": "page",
+                        "operator": "==",
+                        "value": "11"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "required": 0
+        },
+        {
+            "key": "field_fp02_about_approach_highlight",
+            "label": "О центре — Подход: акцент",
+            "name": "about_approach_highlight",
+            "type": "textarea",
+            "menu_order": 12,
+            "conditional_logic": [
+                [
+                    {
+                        "param": "page",
+                        "operator": "==",
+                        "value": "11"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "required": 0,
+            "rows": 3
+        },
+        {
+            "key": "field_fp02_about_approach_intro",
+            "label": "О центре — Подход: вводный текст",
+            "name": "about_approach_intro",
+            "type": "textarea",
+            "menu_order": 13,
+            "conditional_logic": [
+                [
+                    {
+                        "param": "page",
+                        "operator": "==",
+                        "value": "11"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "required": 0,
+            "rows": 3
+        },
+        {
+            "key": "field_fp02_about_program_heading",
+            "label": "О центре — Программа: заголовок",
+            "name": "about_program_heading",
+            "type": "text",
+            "menu_order": 14,
+            "conditional_logic": [
+                [
+                    {
+                        "param": "page",
+                        "operator": "==",
+                        "value": "11"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "required": 0
+        },
+        {
+            "key": "field_fp02_about_program_lead",
+            "label": "О центре — Программа: лид",
+            "name": "about_program_lead",
+            "type": "textarea",
+            "menu_order": 15,
+            "conditional_logic": [
+                [
+                    {
+                        "param": "page",
+                        "operator": "==",
+                        "value": "11"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "required": 0,
+            "rows": 2
+        },
+        {
+            "key": "field_fp02_about_program_intro",
+            "label": "О центре — Программа: вводный текст 1",
+            "name": "about_program_intro",
+            "type": "textarea",
+            "menu_order": 16,
+            "conditional_logic": [
+                [
+                    {
+                        "param": "page",
+                        "operator": "==",
+                        "value": "11"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "required": 0,
+            "rows": 3
+        },
+        {
+            "key": "field_fp02_about_program_intro2",
+            "label": "О центре — Программа: вводный текст 2",
+            "name": "about_program_intro2",
+            "type": "textarea",
+            "menu_order": 17,
+            "conditional_logic": [
+                [
+                    {
+                        "param": "page",
+                        "operator": "==",
+                        "value": "11"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "required": 0,
+            "rows": 3
+        },
+        {
             "key": "field_fp02_institutional_placeholder_notice",
             "label": "Placeholder notice",
             "name": "institutional_placeholder_notice",
@@ -406,18 +728,26 @@
         },
         {
             "key": "field_fp02_infrastructure_g0_g5",
-            "label": "Infrastructure G0-G5",
+            "label": "Наш Дом — Infrastructure G0-G5",
             "name": "infrastructure_g0_g5",
             "aria-label": "",
             "prefix": "acf",
             "type": "repeater",
             "value": null,
             "menu_order": 8,
-            "instructions": "Bounded repeater. Max rows are enforced in source and validation hooks.",
+            "instructions": "G0 intro + G1-G4 bullets for /o-centre/ hub. Images use static V9 theme assets when media empty.",
             "required": 0,
             "id": "",
             "class": "",
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "param": "page",
+                        "operator": "==",
+                        "value": "11"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -560,6 +890,6 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1783158780,
+    "modified": 1784044800,
     "_valid": true
 }

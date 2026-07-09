@@ -1,0 +1,60 @@
+{
+  "sections": [
+    {
+      "static": "institutional-narrative",
+      "partial": "institutional/institutional-narrative.php",
+      "acf": "about_narrative_*"
+    },
+    {
+      "static": "founder-quote",
+      "partial": "institutional/founder-quote.php",
+      "acf": "reuse home static"
+    },
+    {
+      "static": "who-we-treat",
+      "partial": "institutional/who-we-treat.php",
+      "acf": "about_who_treat_*"
+    },
+    {
+      "static": "program-cta-band",
+      "partial": "components/program-cta-band.php",
+      "acf": "reusable CTA bands"
+    },
+    {
+      "static": "program-approach-band",
+      "partial": "institutional/approach-band.php",
+      "acf": "about_approach_*"
+    },
+    {
+      "static": "clinic-landscape",
+      "partial": "home/clinic-landscape.php",
+      "acf": "theme asset fallback"
+    },
+    {
+      "static": "services-program-v2",
+      "partial": "institutional/about-program.php",
+      "acf": "about_program_*"
+    },
+    {
+      "static": "infrastructure-narrative",
+      "partial": "institutional/infrastructure-narrative.php",
+      "acf": "infrastructure_g0_g5"
+    },
+    {
+      "static": "specialists",
+      "partial": "home/specialists.php",
+      "acf": "fp02-block-specialists"
+    },
+    {
+      "static": "reviews",
+      "partial": "home/reviews.php",
+      "acf": "reviews options"
+    },
+    {
+      "static": "final-form",
+      "partial": "components/final-form.php",
+      "acf": "fp02-block-final-form"
+    }
+  ],
+  "result": "PASS"
+}

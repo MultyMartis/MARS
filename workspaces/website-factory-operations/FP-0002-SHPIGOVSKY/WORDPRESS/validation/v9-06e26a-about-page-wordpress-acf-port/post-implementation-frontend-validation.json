@@ -1,0 +1,83 @@
+{
+  "routes": [
+    {
+      "route": "/o-centre/",
+      "status": 200,
+      "php_fatal": false,
+      "markers": {
+        "hero": true,
+        "internal-nav": true,
+        "who-we-are": true,
+        "founder-quote": true,
+        "who-we-treat": true,
+        "cta-1": true,
+        "our-approach": true,
+        "clinic-landscape": true,
+        "our-program": true,
+        "our-home": true,
+        "guest-cta": true,
+        "specialists": true,
+        "reviews": true,
+        "final-form": true
+      },
+      "result": "PASS"
+    },
+    {
+      "route": "/",
+      "status": 200,
+      "php_fatal": false,
+      "markers": null,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/",
+      "status": 200,
+      "php_fatal": false,
+      "markers": null,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "status": 200,
+      "php_fatal": false,
+      "markers": null,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "status": 200,
+      "php_fatal": false,
+      "markers": null,
+      "result": "PASS"
+    },
+    {
+      "route": "/kontakty/",
+      "status": 200,
+      "php_fatal": false,
+      "markers": null,
+      "result": "PASS"
+    },
+    {
+      "route": "/otzyvy/",
+      "status": 200,
+      "php_fatal": false,
+      "markers": null,
+      "result": "PASS"
+    },
+    {
+      "route": "/privacy-policy/",
+      "status": 200,
+      "php_fatal": false,
+      "markers": null,
+      "result": "PASS"
+    },
+    {
+      "route": "/blog/",
+      "status": 200,
+      "php_fatal": false,
+      "markers": null,
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS"
+}

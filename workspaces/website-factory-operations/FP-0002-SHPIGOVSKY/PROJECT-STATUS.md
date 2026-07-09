@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-09 (V9-06E26 blog and other pages porting architecture audit PASS)
+**Last updated:** 2026-07-09 (V9-06E26A about page WordPress ACF port PASS)
 
-**Current WordPress phase:** V9-06E26 Blog And Other Pages Porting Architecture Audit **PASS** — documentation-only; canonical blog `/blog/`; standard WP `post` recommended; permalink structure GAP documented; `/o-centre/` hub needs 12 V9 sections (E26A); blog archive/single skeleton (E26B–E26C); fixture seed planned (E26D); WPilot metadata planned only; **0** DB writes; **0** runtime delivery. **Next: CREATE_V9_06E26A_ABOUT_PAGE_WORDPRESS_ACF_PORT_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E26-BLOG-AND-OTHER-PAGES-PORTING-ARCHITECTURE-AUDIT-REPORT-v1.md`. Prior E25A: service duplicate visibility repair PASS @ baseline `7a6674db`.
+**Current WordPress phase:** V9-06E26A About Page WordPress ACF Port **PASS** — `/o-centre/` full 14-section V9 stack; ACF hub fields on page #11; local hero + `hero_cta_label` preserved; runtime delivered; regression routes 200; blog/permalink untouched. **Next: CREATE_V9_06E26A_OPERATOR_ABOUT_PAGE_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E26A-ABOUT-PAGE-WORDPRESS-ACF-PORT-REPORT-v1.md`. Prior E26: architecture audit PASS @ `83a5cce6`.
 
 ## Active frontend workspace (V9)
 

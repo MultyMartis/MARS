@@ -27,7 +27,7 @@ final class FieldGroups implements ModuleInterface {
 	/**
 	 * Deterministic modified timestamp for canonical JSON source.
 	 */
-	public const MODIFIED = 1783953600;
+	public const MODIFIED = 1784044800;
 
 	/**
 	 * {@inheritdoc}
@@ -379,6 +379,8 @@ final class FieldGroups implements ModuleInterface {
 	 * @return array<string, mixed>
 	 */
 	private static function page_institutional() {
+		$hub_only = self::about_hub_conditional();
+
 		return self::group(
 			'group_fp02_page_institutional',
 			'Page — Institutional',
@@ -406,12 +408,202 @@ final class FieldGroups implements ModuleInterface {
 						'instructions' => 'Индивидуальный текст кнопки для hero-блока этой страницы/услуги. Если оставить пустым, используется текущий текст по умолчанию.',
 					)
 				),
+				self::field(
+					'field_fp02_about_narrative_heading',
+					'О центре — Кто мы: заголовок',
+					'about_narrative_heading',
+					'text',
+					array(
+						'conditional_logic' => $hub_only,
+						'instructions'      => 'Секция #who-we-are. Пустое значение — static V9 fallback.',
+					)
+				),
+				self::field(
+					'field_fp02_about_narrative_lead',
+					'О центре — Кто мы: лид',
+					'about_narrative_lead',
+					'textarea',
+					array(
+						'conditional_logic' => $hub_only,
+						'rows'              => 3,
+					)
+				),
+				self::repeater(
+					'field_fp02_about_narrative_paragraphs',
+					'О центре — Кто мы: абзацы',
+					'about_narrative_paragraphs',
+					6,
+					array(
+						self::field( 'field_fp02_about_narrative_paragraph_text', 'Абзац', 'text', 'textarea', array( 'rows' => 3 ) ),
+					),
+					0,
+					array( 'conditional_logic' => $hub_only )
+				),
+				self::field(
+					'field_fp02_about_who_treat_heading',
+					'О центре — Кого лечим: заголовок',
+					'about_who_treat_heading',
+					'text',
+					array( 'conditional_logic' => $hub_only )
+				),
+				self::field(
+					'field_fp02_about_who_treat_intro',
+					'О центре — Кого лечим: вводный текст',
+					'about_who_treat_intro',
+					'textarea',
+					array(
+						'conditional_logic' => $hub_only,
+						'rows'              => 4,
+					)
+				),
+				self::field(
+					'field_fp02_about_who_treat_lead',
+					'О центре — Кого лечим: лид',
+					'about_who_treat_lead',
+					'textarea',
+					array(
+						'conditional_logic' => $hub_only,
+						'rows'              => 2,
+					)
+				),
+				self::repeater(
+					'field_fp02_about_who_treat_spectrum',
+					'О центре — Кого лечим: спектр состояний',
+					'about_who_treat_spectrum',
+					3,
+					self::title_text_subfields( 'about_who_treat_spectrum' ),
+					0,
+					array( 'conditional_logic' => $hub_only )
+				),
+				self::field(
+					'field_fp02_about_who_treat_callout',
+					'О центре — Кого лечим: выноска',
+					'about_who_treat_callout',
+					'textarea',
+					array(
+						'conditional_logic' => $hub_only,
+						'rows'              => 2,
+					)
+				),
+				self::repeater(
+					'field_fp02_about_who_treat_cards',
+					'О центре — Кого лечим: карточки',
+					'about_who_treat_cards',
+					4,
+					self::title_text_subfields( 'about_who_treat_cards' ),
+					0,
+					array( 'conditional_logic' => $hub_only )
+				),
+				self::field(
+					'field_fp02_about_approach_heading',
+					'О центре — Подход: заголовок',
+					'about_approach_heading',
+					'text',
+					array( 'conditional_logic' => $hub_only )
+				),
+				self::field(
+					'field_fp02_about_approach_highlight',
+					'О центре — Подход: акцент',
+					'about_approach_highlight',
+					'textarea',
+					array(
+						'conditional_logic' => $hub_only,
+						'rows'              => 3,
+					)
+				),
+				self::field(
+					'field_fp02_about_approach_intro',
+					'О центре — Подход: вводный текст',
+					'about_approach_intro',
+					'textarea',
+					array(
+						'conditional_logic' => $hub_only,
+						'rows'              => 3,
+					)
+				),
+				self::field(
+					'field_fp02_about_program_heading',
+					'О центре — Программа: заголовок',
+					'about_program_heading',
+					'text',
+					array( 'conditional_logic' => $hub_only )
+				),
+				self::field(
+					'field_fp02_about_program_lead',
+					'О центре — Программа: лид',
+					'about_program_lead',
+					'textarea',
+					array(
+						'conditional_logic' => $hub_only,
+						'rows'              => 2,
+					)
+				),
+				self::field(
+					'field_fp02_about_program_intro',
+					'О центре — Программа: вводный текст 1',
+					'about_program_intro',
+					'textarea',
+					array(
+						'conditional_logic' => $hub_only,
+						'rows'              => 3,
+					)
+				),
+				self::field(
+					'field_fp02_about_program_intro2',
+					'О центре — Программа: вводный текст 2',
+					'about_program_intro2',
+					'textarea',
+					array(
+						'conditional_logic' => $hub_only,
+						'rows'              => 3,
+					)
+				),
+				self::repeater(
+					'field_fp02_about_program_items',
+					'О центре — Программа: направления',
+					'about_program_items',
+					4,
+					array(
+						self::field( 'field_fp02_about_program_item_title', 'Заголовок', 'title', 'text' ),
+						self::field( 'field_fp02_about_program_item_image', 'Изображение', 'image', 'image', array( 'return_format' => 'array' ) ),
+					),
+					0,
+					array( 'conditional_logic' => $hub_only )
+				),
 				self::field( 'field_fp02_institutional_placeholder_notice', 'Placeholder notice', 'institutional_placeholder_notice', 'textarea', array( 'rows' => 3 ) ),
 				self::repeater( 'field_fp02_institutional_content_sections', 'Content sections', 'institutional_content_sections', 8, self::media_text_subfields( 'institutional_section' ) ),
 				self::repeater( 'field_fp02_institutional_stages', 'Stages', 'institutional_stages', 8, self::title_text_subfields( 'institutional_stages' ) ),
-				self::repeater( 'field_fp02_infrastructure_g0_g5', 'Infrastructure G0-G5', 'infrastructure_g0_g5', 6, self::media_text_subfields( 'infrastructure_g' ), 6 ),
+				self::repeater(
+					'field_fp02_infrastructure_g0_g5',
+					'Наш Дом — Infrastructure G0-G5',
+					'infrastructure_g0_g5',
+					6,
+					self::media_text_subfields( 'infrastructure_g' ),
+					6,
+					array(
+						'conditional_logic' => $hub_only,
+						'instructions'      => 'G0 intro + G1-G4 bullets for /o-centre/ hub. Images use static V9 theme assets when media empty.',
+					)
+				),
 			),
 			self::location( 'page_template', '==', 'page-templates/institutional.php' )
+		);
+	}
+
+	/**
+	 * Conditional logic: /o-centre/ hub page only (ID 11).
+	 *
+	 * @return array<int, array<int, array<string, string>>>
+	 */
+	private static function about_hub_conditional() {
+		return array(
+			array(
+				array(
+					'param'    => 'page',
+					'operator' => '==',
+					'value'    => '11',
+				),
+			),
 		);
 	}
 

@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E26 BLOG AND OTHER PAGES PORTING ARCHITECTURE AUDIT **PASS** — read-only audit; canonical blog route `/blog/`; standard WP `post`; permalink GAP `/%postname%/` → target `/blog/%postname%/`; institutional + blog templates skeleton-only; E26A–E26D wave plan documented; WPilot deferred; **0** DB writes; **0** runtime delivery. Evidence: `validation/v9-06e26-blog-and-other-pages-porting-architecture-audit/`. Report: `reports/FP-0002-V9-06E26-BLOG-AND-OTHER-PAGES-PORTING-ARCHITECTURE-AUDIT-REPORT-v1.md`. NEXT: **CREATE_V9_06E26A_ABOUT_PAGE_WORDPRESS_ACF_PORT_TASK**. Prior E25A: service duplicate visibility repair PASS @ `7a6674db`.
+**Status:** V9-06E26A ABOUT PAGE WORDPRESS ACF PORT **PASS** — `/o-centre/` full 14-section V9 stack live; ACF hub fields + seed on page #11; local hero preserved; runtime delivered; regression routes 200; blog/permalink untouched. Evidence: `validation/v9-06e26a-about-page-wordpress-acf-port/`. Report: `reports/FP-0002-V9-06E26A-ABOUT-PAGE-WORDPRESS-ACF-PORT-REPORT-v1.md`. NEXT: **CREATE_V9_06E26A_OPERATOR_ABOUT_PAGE_QA_TASK**. Prior E26: architecture audit PASS @ `83a5cce6`.
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---
