@@ -22,6 +22,9 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `site-002-prod-full-tech-seo-audit-01.py` | Read-only full Production technical/SEO/site health audit — sitemap crawl, HTTP/meta/links/assets/catalog/forms/brand/security + DB/FTP cross-check — `SITE-002-PROD-FULL-TECH-SEO-AUDIT-01` (Run 4.241) |
 | `site-002-prod-audit-wave-c-redirect-hygiene-01.py` | Audit Wave C redirect hygiene — curl-based verify flat Lari 301 + index.php alias; read-only FTP/DB; gated deploy (no-op if already fixed) — `SITE-002-PROD-AUDIT-WAVE-C-REDIRECT-HYGIENE-01` (Run 4.242) |
 | `site-002-prod-audit-wave-b-seo-foundation-01.py` | Audit Wave B SEO foundation — sitemap pretty URLs for `information/*` routes; scoped seo_url duplicate cleanup; gated FTP + DB — `SITE-002-PROD-AUDIT-WAVE-B-SEO-FOUNDATION-01` (Run 4.243) |
+| `site-002-prod-audit-wave-e-info-meta-h1-01.py` | Audit Wave E info meta + Assum H1 — scoped DB meta for `/about_us` `/terms`; manufacturer controller/twig patch for `/brands/assum`; gated FTP + DB — `SITE-002-PROD-AUDIT-WAVE-E-INFO-META-H1-01` (Run 4.244) |
+| `manufacturer-site-002-prod-audit-wave-e-info-meta-h1-01.php` | Patched manufacturer controller mirror deployed Run 4.244 — Assum scoped `setDescription` |
+| `manufacturer_info-site-002-prod-audit-wave-e-info-meta-h1-01.twig` | Patched manufacturer PLP twig mirror deployed Run 4.244 — brand heading `h2`→`h1` |
 | `google_sitemap-site-002-prod-audit-wave-b-seo-foundation-01.php` | Patched sitemap controller mirror deployed Run 4.243 — route-based information URL emission |
 | `mars_1c_import_wrapper.php` | Patched MARS 1C wrapper mirror v1.1.1 — repo reference; deployed to `/storage/mars-tools/cron/` (Run 4.239) |
 | `site-002-prod-cron-activation-preflight-01.py` | MARS 1C cron activation preflight — token config, DB readonly, gated manual run for `SITE-002-PROD-CRON-ACTIVATION-PREFLIGHT-01` |

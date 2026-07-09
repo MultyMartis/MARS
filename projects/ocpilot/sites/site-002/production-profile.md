@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-10 (Run 4.243 — Audit Wave B SEO Foundation **COMPLETE**; sitemap pretty URLs; AUDIT-007/004/002 fixed; Run 4.240 post-1C verification **still BLOCKED**; checkpoint `SITE-002-STABLE-PROD-AUDIT-WAVE-B-SEO-FOUNDATION-01`)
+**Last updated:** 2026-07-10 (Run 4.244 — Audit Wave E Info Meta H1 **COMPLETE**; AUDIT-008/009 fixed; Run 4.240 post-1C verification **still BLOCKED**; checkpoint `SITE-002-STABLE-PROD-AUDIT-WAVE-E-INFO-META-H1-01`)
 
 ---
 
