@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-10 (V9-06E29B o-centre admin parity implementation PASS)
+**Last updated:** 2026-07-10 (V9-06E29B-R2 canonical branch reconciliation + E29B implementation PASS)
 
-**Current WordPress phase:** V9-06E29B O-Centre Admin Parity Implementation **PASS** — page #11 hero_media/founder/clinic admin parity; shared blocks documented; frontend parity PASS; placeholders #12–16 untouched. **Next: CREATE_V9_06E29B_OPERATOR_OCENTRE_ADMIN_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E29B-OCENTRE-ADMIN-PARITY-IMPLEMENTATION-REPORT-v1.md`. Prior E29A: PASS (read-only audit).
+**Current WordPress phase:** V9-06E29B O-Centre Admin Parity Implementation **PASS** — page #11 hero_media/founder/clinic admin parity; shared blocks documented; frontend parity PASS; placeholders #12–16 untouched. E29A Placeholder Pages And O-Centre Admin Parity Decision Audit **PASS** @ remote baseline `49ffdafe` — 5 institutional child placeholders classified KEEP_PLACEHOLDER_FOR_LATER_PORT. E29B first preserved on safety branch `safety/fp-0002-e29b-local-ee6c8d8b` during divergence; reconciled in V9-06E29B-R2. **Next: CREATE_V9_06E29B_OPERATOR_OCENTRE_ADMIN_QA_TASK**. Reports: `WORDPRESS/reports/FP-0002-V9-06E29A-PLACEHOLDER-PAGES-AND-OCENTRE-ADMIN-PARITY-DECISION-AUDIT-REPORT-v1.md`, `WORDPRESS/reports/FP-0002-V9-06E29B-OCENTRE-ADMIN-PARITY-IMPLEMENTATION-REPORT-v1.md`. Prior E28: PASS @ `7457e50d` ancestor.
 
 ## Active frontend workspace (V9)
 

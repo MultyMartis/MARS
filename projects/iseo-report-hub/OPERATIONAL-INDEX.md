@@ -26,7 +26,7 @@
 |-------|-------|
 | **Status** | planned / product architecture |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | Report Structure Demo v0.2 planning (platform-neutral) |
+| **Active stage** | Report Structure Demo v0.2 planning (platform-neutral); WordPress data model / admin UX planning (v0.1) complete |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---

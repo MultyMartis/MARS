@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E29B O-Centre Admin Parity Implementation **PASS** — page #11 hero_media/founder/clinic ACF seeded + template binding; shared blocks documented; frontend parity PASS; placeholders #12–16 untouched. Evidence: `validation/v9-06e29b-ocentre-admin-parity-implementation/`. Report: `reports/FP-0002-V9-06E29B-OCENTRE-ADMIN-PARITY-IMPLEMENTATION-REPORT-v1.md`. NEXT: **CREATE_V9_06E29B_OPERATOR_OCENTRE_ADMIN_QA_TASK**. Prior E29A: PASS (read-only audit).
+**Status:** V9-06E29A Placeholder Pages And O-Centre Admin Parity Decision Audit **PASS** @ `49ffdafe` — 5/5 named placeholders inventoried; `/o-centre/` public PASS / admin PARTIAL at audit time. V9-06E29B O-Centre Admin Parity Implementation **PASS** @ `ee6c8d8b` — page #11 hero_media/founder/clinic ACF seeded + template binding; shared blocks documented; frontend parity PASS; placeholders #12–16 untouched. Reconciled on canonical branch in V9-06E29B-R2. Evidence: `validation/v9-06e29a-placeholder-pages-and-ocentre-admin-parity-decision-audit/`, `validation/v9-06e29b-ocentre-admin-parity-implementation/`. Reports: `reports/FP-0002-V9-06E29A-PLACEHOLDER-PAGES-AND-OCENTRE-ADMIN-PARITY-DECISION-AUDIT-REPORT-v1.md`, `reports/FP-0002-V9-06E29B-OCENTRE-ADMIN-PARITY-IMPLEMENTATION-REPORT-v1.md`. NEXT: **CREATE_V9_06E29B_OPERATOR_OCENTRE_ADMIN_QA_TASK**. Prior E28: PASS @ `7457e50d` ancestor.
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---
