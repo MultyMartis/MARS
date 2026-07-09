@@ -170,3 +170,43 @@ registry/project-registry.md
 ---
 
 **Task status:** **COMPLETE**
+
+---
+
+## Addendum — Website Factory Binding
+
+**Date:** 2026-07-10  
+**Task:** I-SEO REPORT HUB WEBSITE FACTORY BINDING + SCOPED COMMIT 01
+
+### Operator decision persisted
+
+Website Factory is bound to i-SEO Report Hub as the **preferred MARS methodology and future workspace lane** for:
+- HTML/static UI demos and visual/UX exploration before WordPress implementation;
+- SEO specialist admin UI sketches;
+- client web report page demos;
+- weekly checkpoint and monthly final report screen sketches;
+- report block layout prototypes.
+
+**Boundary preserved:**
+- **WordPress on i-seo.su** — production/runtime/report source of truth (unchanged).
+- **Website Factory** — methodology + prototype/workspace delivery lane only; **not** runtime owner, production engine, or WordPress implementation owner.
+- **n8n** — external automation/AI helper (unchanged).
+- **MARS** — documentation/project locus; **not** runtime executor.
+
+### Documentation updates (this addendum wave)
+
+| File | Change |
+|------|--------|
+| `projects/iseo-report-hub/OPERATIONAL-INDEX.md` | Website Factory expanded in related systems + next stages |
+| `projects/iseo-report-hub/product/I-SEO-REPORT-HUB-WORDPRESS-PRODUCT-ARCHITECTURE-v0.1.md` | Section **Website Factory UI / Prototype Boundary** |
+| `projects/iseo-report-hub/product/I-SEO-REPORT-HUB-MVP-SCOPE-v0.1.md` | Supporting UI/prototype scope + explicit out-of-task exclusions |
+| This report | Addendum appended |
+
+### Not performed
+
+- No Website Factory workspace created
+- No HTML demo / static prototype / code
+- No runtime, WordPress plugin, n8n workflow, or API integration
+- No registry change for Website Factory binding (registry row from prior persist retained as-is unless separately chartered)
+
+**Addendum status:** **COMPLETE** (pending scoped commit per operator charter)

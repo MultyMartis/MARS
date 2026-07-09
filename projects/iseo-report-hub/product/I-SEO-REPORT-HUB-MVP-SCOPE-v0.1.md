@@ -106,6 +106,18 @@ Exact test plan: **SAFE UNKNOWN** — defined in implementation charter.
 | **iframe/embed Topvisor** | Only if technically and legally safe |
 | **Client comment/reaction** | **SAFE UNKNOWN** business need |
 
+### Supporting scope — UI / prototype lane (pre-implementation)
+
+| Capability | Notes |
+|------------|-------|
+| **Website Factory HTML/static UI demos** | Optional **before** WordPress build — admin/report screen sketches, block layout prototypes, client web report page demos; **methodology + future workspace only**; **not** runtime owner |
+| **Visual/UX exploration** | Operator-chartered Website Factory workspace using gulp starter/build patterns; output informs WP admin UX planning — **does not replace** i-seo.su implementation |
+
+**Out of this documentation task (explicit):**
+- **No Website Factory workspace created**
+- **No HTML demo or static prototype built**
+- **No runtime, plugin, or n8n workflow**
+
 ---
 
 ## 6. Dependencies before implementation

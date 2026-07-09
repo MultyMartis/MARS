@@ -195,7 +195,25 @@ Private link mechanism (token length, expiry, auth): **SAFE UNKNOWN** — implem
 
 ---
 
-## 11. SAFE UNKNOWN
+## 11. Website Factory UI / Prototype Boundary
+
+**Production target unchanged:** Report Hub production and client web reports remain **WordPress on i-seo.su** — source of truth, admin workspace, and approved report renderer.
+
+**Website Factory role (MARS documentation + future workspace lane):**
+- Preferred methodology for **HTML/static UI demos**, visual/UX exploration, and screen sketches **before** WordPress implementation.
+- May prototype: SEO specialist admin UI, client web report page layouts, weekly checkpoint screens, monthly final report screens, report block compositions.
+- Uses existing MARS gulp starter / Website Factory build approach when a demo workspace is chartered — **not** automatic factory runtime.
+
+**Explicit exclusions:**
+- Website Factory **does not** own Report Hub runtime, production deployment, or WordPress plugin/module implementation.
+- Website Factory output is **not** the deployed Report Hub or client-facing production reports.
+- **No demo workspace** is created by documentation tasks alone.
+
+**Future workspace:** A Report Hub–scoped Website Factory workspace may be created **only** under a separate operator charter (HITL). This architecture persist task creates **documentation binding only**.
+
+---
+
+## 12. SAFE UNKNOWN
 
 - Custom post types vs custom tables vs hybrid storage on WordPress
 - Plugin vs theme-module vs site-specific mu-plugin packaging
