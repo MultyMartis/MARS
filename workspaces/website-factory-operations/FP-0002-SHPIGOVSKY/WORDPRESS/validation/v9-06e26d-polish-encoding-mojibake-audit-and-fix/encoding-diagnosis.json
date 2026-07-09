@@ -1,0 +1,13 @@
+{
+  "wave": "V9-06E26D-POLISH",
+  "result": "PASS",
+  "database_charset": "utf8mb4",
+  "database_collation": "utf8mb4_unicode_ci",
+  "wp_db_charset": "utf8",
+  "wp_db_collate": "",
+  "schema_migration_needed": false,
+  "likely_cause": "Stored taxonomy term name for default category (term_id=1) contains mojibake (UTF-8 Cyrillic misinterpreted and re-saved as box-drawing Unicode). Schema charset utf8mb4 is correct; issue is bad stored value, not connection/collation mismatch.",
+  "scope": "primarily E26D-visible default category; post #750 title/content hex-valid UTF-8",
+  "affected_tables": [],
+  "connection_charset_note": "wp-config DB_CHARSET=utf8; DB layer utf8mb4 — no migration required"
+}

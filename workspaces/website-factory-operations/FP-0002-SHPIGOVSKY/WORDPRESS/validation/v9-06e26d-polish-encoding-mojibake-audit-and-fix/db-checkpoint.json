@@ -1,0 +1,36 @@
+{
+  "wave": "V9-06E26D-POLISH",
+  "result": "PASS",
+  "checkpoint_path": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e26d-polish-encoding-mojibake-audit-and-fix-pre-20260709-155416",
+  "dump_file": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e26d-polish-encoding-mojibake-audit-and-fix-pre-20260709-155416\\mars_wp_fp0002.sql",
+  "dump_sha256": "A38FCCC0AAC442C0308138A87FC8B573FBED6C9011A6F7F4895D990D8C94BD53",
+  "dump_size_bytes": 2179587,
+  "db": "mars_wp_fp0002",
+  "prefix": "fp02_",
+  "e26d_baseline_commit": "df133acee61efc6a28a692d3a4fe4e4770fe8bd7",
+  "charset_collation": {
+    "charset": "utf8mb4",
+    "collation": "utf8mb4_unicode_ci"
+  },
+  "wp_options": {
+    "page_for_posts": "19",
+    "page_on_front": "4",
+    "show_on_front": "page",
+    "permalink_structure": "/blog/%postname%/",
+    "blog_public": "0"
+  },
+  "snapshots": [
+    "charset-collation-snapshot.json",
+    "wp-options-snapshot.json",
+    "posts-snapshot.json",
+    "terms-snapshot.json",
+    "demo-post-750-snapshot.json",
+    "preservation-snapshot.json",
+    "blog-archive-marker-snapshot.json",
+    "blog-single-marker-snapshot.json",
+    "o-centre-marker-snapshot.json",
+    "service-duplicate-marker-snapshot.json",
+    "RESTORE.md"
+  ],
+  "restore_instructions": "mysql --host=127.0.0.1 --user=root mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e26d-polish-encoding-mojibake-audit-and-fix-pre-20260709-155416\\mars_wp_fp0002.sql\""
+}

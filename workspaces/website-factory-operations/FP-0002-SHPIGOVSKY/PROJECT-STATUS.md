@@ -579,3 +579,8 @@ PARTIAL PASS: read-only audit. Operator post-D9-U findings confirmed: duplicate 
 ## 2026-07-06 — V9-06E8 static V9 content + main layout authority repair
 
 PARTIAL PASS: V9 static content/layout authority repair for `/uslugi/`, `/kontakty/`, alcohol service leaf. Theme `v9-static-content.php` + 17 template/helper updates; 0 DB writes; runtime delivered. E3 stable checkpoint invalidated. Automated route probe ALL_200. Next: CREATE_V9_06E9_OPERATOR_STATIC_PARITY_VISUAL_QA_TASK.
+
+## V9-06E26D-POLISH (2026-07-09)
+
+- Encoding mojibake audit/fix: default category term repaired (2 DB rows).
+- Report: `reports/FP-0002-V9-06E26D-POLISH-ENCODING-MOJIBAKE-AUDIT-AND-FIX-REPORT-v1.md`

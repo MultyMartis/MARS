@@ -1,0 +1,43 @@
+{
+  "wave": "V9-06E26D-POLISH",
+  "root_cause": "Stored taxonomy term name for default category (term_id=1) contains mojibake (UTF-8 Cyrillic misinterpreted and re-saved as box-drawing Unicode). Schema charset utf8mb4 is correct; issue is bad stored value, not connection/collation mismatch.",
+  "affected_rows": [
+    {
+      "table": "fp02_terms",
+      "primary_key": 1,
+      "field": "name",
+      "before_value": "╨С╨╡╨╖ ╤А╤Г╨▒╤А╨╕╨║╨╕",
+      "after_value": "Без рубрики",
+      "transformation_method": "exact_value_update_with_before_guard",
+      "confidence": "HIGH",
+      "action": "apply",
+      "validation_surface": "wp-admin/edit.php category column; wp-admin/edit-tags.php; /blog/",
+      "sql_guard": "WHERE term_id=%s AND name=%s",
+      "rows_affected": 1,
+      "result": "PASS"
+    },
+    {
+      "table": "fp02_terms",
+      "primary_key": 1,
+      "field": "slug",
+      "before_value": "%d0%b1%d0%b5%d0%b7-%d1%80%d1%83%d0%b1%d1%80%d0%b8%d0%ba%d0%b8",
+      "after_value": "bez-rubriki",
+      "transformation_method": "exact_value_update_with_before_guard",
+      "confidence": "MEDIUM",
+      "action": "apply",
+      "validation_surface": "wp-admin/edit.php category column; wp-admin/edit-tags.php; /blog/",
+      "sql_guard": "WHERE term_id=%s AND slug=%s",
+      "rows_affected": 1,
+      "result": "PASS"
+    }
+  ],
+  "schema_migration_needed": false,
+  "remaining_suspicious": [],
+  "skipped_low_confidence": [],
+  "operator_qa_checklist": [
+    "Open wp-admin/edit.php — category column shows Без рубрики",
+    "Open wp-admin/edit-tags.php?taxonomy=category",
+    "Confirm /blog/ and /blog/nazvanie-stati/ unchanged"
+  ],
+  "recommended_next_phase": "CREATE_V9_06E26D_OPERATOR_ENCODING_QA_TASK"
+}

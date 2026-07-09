@@ -1,0 +1,68 @@
+{
+  "wave": "V9-06E26D-POLISH",
+  "admin": {
+    "posts_list_category_column": "expected_fixed_db_evidence_only",
+    "categories_list": "expected_fixed_db_evidence_only",
+    "demo_post_edit": "expected_fixed_db_evidence_only",
+    "auth_limitation": "no_wp_admin_session_in_runner"
+  },
+  "frontend": {
+    "wave": "V9-06E26D-POLISH",
+    "result": "PASS",
+    "routes": {
+      "/": {
+        "http_status": 200,
+        "ok": true,
+        "has_fatal": false
+      },
+      "/o-centre/": {
+        "http_status": 200,
+        "ok": true,
+        "has_fatal": false
+      },
+      "/uslugi/": {
+        "http_status": 200,
+        "ok": true,
+        "has_fatal": false
+      },
+      "/uslugi/zavisimosti/": {
+        "http_status": 200,
+        "ok": true,
+        "has_fatal": false
+      },
+      "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/": {
+        "http_status": 200,
+        "ok": true,
+        "has_fatal": false
+      },
+      "/kontakty/": {
+        "http_status": 200,
+        "ok": true,
+        "has_fatal": false
+      },
+      "/otzyvy/": {
+        "http_status": 200,
+        "ok": true,
+        "has_fatal": false
+      },
+      "/privacy-policy/": {
+        "http_status": 200,
+        "ok": true,
+        "has_fatal": false
+      },
+      "/blog/": {
+        "http_status": 200,
+        "ok": true,
+        "has_fatal": false
+      },
+      "/blog/nazvanie-stati/": {
+        "http_status": 200,
+        "ok": true,
+        "has_fatal": false
+      }
+    },
+    "blog_card_visible": true,
+    "single_intact": true,
+    "category_mojibake_on_frontend": false
+  }
+}

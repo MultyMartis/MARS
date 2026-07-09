@@ -310,3 +310,8 @@ E8 **PARTIAL PASS**: Enforced static V9 template authority for `/uslugi/`, `/kon
 ## V9-06E17 site settings IA skeleton (2026-07-07)
 
 E17 **PASS**: Site Settings admin IA skeleton. Parent `fp02-site-settings` redirect; **Общие настройки** (`fp02-site-settings-general`, `post_id=option`) with contacts + modal/CTA field groups relocated; **Повторяемые блоки** parent + 12 skeleton block subpages per E16 inventory; top-level **Отзывы** (`fp02-reviews`) unchanged. DB checkpoint `v9-06e17-site-settings-ia-skeleton-pre-20260707-235348`. **2** plugin + **2** ACF JSON; **0** DB writes; runtime delivered. Routes 8/8 HTTP 200. Evidence: `validation/v9-06e17-site-settings-ia-skeleton/`. Report: `reports/FP-0002-V9-06E17-SITE-SETTINGS-IA-SKELETON-REPORT-v1.md`. Next: **CREATE_V9_06E18_REUSABLE_BLOCKS_BATCH_1_FIELDS_TASK**.
+
+## V9-06E26D-POLISH (2026-07-09)
+
+- Encoding mojibake audit/fix: default category term repaired (2 DB rows).
+- Report: `reports/FP-0002-V9-06E26D-POLISH-ENCODING-MOJIBAKE-AUDIT-AND-FIX-REPORT-v1.md`

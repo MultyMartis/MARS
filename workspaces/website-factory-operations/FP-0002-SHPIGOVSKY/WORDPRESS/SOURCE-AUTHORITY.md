@@ -425,3 +425,8 @@ E26D **PASS**: Demo blog article seeded — post ID `750` at `/blog/nazvanie-sta
 E26C **PASS**: Blog single template port — V9 `page-blog-article` stack for standard `post` at `/blog/{slug}/`; extended `group_fp02_blog_post_article_meta` (23 fields); TOC auto from h2/h3; optional conclusion/sources/FAQ/related/CTA; **14** theme files + **1** plugin file + **1** ACF JSON; DB checkpoint `v9-06e26c-blog-single-template-wordpress-acf-port-pre-20260709-134131`; bounded runtime delivery; archive regression PASS; `/blog/nazvanie-stati/` 404 at 0 posts; 0 DB writes; no published content seed. Evidence: `validation/v9-06e26c-blog-single-template-wordpress-acf-port/`. Report: `reports/FP-0002-V9-06E26C-BLOG-SINGLE-TEMPLATE-WORDPRESS-ACF-PORT-REPORT-v1.md`. Next: **CREATE_V9_06E26D_DEMO_BLOG_CONTENT_AND_VISUAL_QA_TASK**.
 
 **Primary authority rule (E10/E11/E12/E13/E14):** Static V9 HTML (`fp-0002-shpigovsky-v9/src/` + `dist/`) is primary layout/copy authority. WordPress must achieve direct section-stack parity — not semantic PHP reconstruction. Hub mini-descriptions: admin field primary; V9 static secondary; DEMO explicit where no V9 page exists. No invented clinical copy.
+
+## V9-06E26D-POLISH (2026-07-09)
+
+- Encoding mojibake audit/fix: default category term repaired (2 DB rows).
+- Report: `reports/FP-0002-V9-06E26D-POLISH-ENCODING-MOJIBAKE-AUDIT-AND-FIX-REPORT-v1.md`
