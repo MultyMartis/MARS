@@ -1,0 +1,39 @@
+{
+  "acf_pro_active": true,
+  "classic_editor_active": true,
+  "shpigovsky_core_active": true,
+  "mu_plugins": [
+    "mars-local-runtime.php"
+  ],
+  "wpilot": {
+    "detected": false
+  },
+  "active_plugins": [
+    "acf-extended-pro/acf-extended.php",
+    "advanced-custom-fields-pro/acf.php",
+    "classic-editor/classic-editor.php",
+    "metacode-wpilot/metacode-wpilot.php",
+    "shpigovsky-core/shpigovsky-core.php"
+  ],
+  "checks": [
+    {
+      "check": "acf_pro_active",
+      "result": "PASS"
+    },
+    {
+      "check": "shpigovsky_core_active",
+      "result": "PASS"
+    },
+    {
+      "check": "wpilot_write_disabled",
+      "result": "PASS"
+    },
+    {
+      "check": "no_secrets_in_reports",
+      "result": "PASS"
+    }
+  ],
+  "task_id": "V9-06E28",
+  "generated_at": "2026-07-09T19:10:54.529652+00:00",
+  "result": "PASS"
+}

@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-10 (V9-06E27D page service ownership implementation PASS)
+**Last updated:** 2026-07-09 (V9-06E28 final WordPress readiness QA PASS / GO_WITH_MINOR_POLISH)
 
-**Current WordPress phase:** V9-06E27D Page Service Ownership Implementation **PASS** — menu `#301` retargeted to `/uslugi/zavisimosti/` (custom URL binding); shadow pages `#6/#7/#8` in Trash; service CPT `#73/#77/#84` remain canonical route owners; all accepted routes HTTP 200. **Next: CREATE_V9_06E28_FINAL_WORDPRESS_READINESS_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E27D-PAGE-SERVICE-OWNERSHIP-IMPLEMENTATION-REPORT-v1.md`. Prior E27C: decision PASS @ `acf77934`; E27B: Batch A trash PASS @ `d6caab42`; demo post `750` preserved.
+**Current WordPress phase:** V9-06E28 Final WordPress Readiness QA **PASS** (`GO_WITH_MINOR_POLISH`) — 35 routes checked; 12/12 core routes HTTP 200; 0 blockers; menu `#301` stable; E27 trash intact; 1 minor ACF admin gap on `/o-centre/` institutional fields. **Next: CREATE_V9_06E29_OPERATOR_VISUAL_POLISH_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E28-FINAL-WORDPRESS-READINESS-QA-REPORT-v1.md`. Prior E27D: PASS @ `60291b8e`.
 
 ## Active frontend workspace (V9)
 

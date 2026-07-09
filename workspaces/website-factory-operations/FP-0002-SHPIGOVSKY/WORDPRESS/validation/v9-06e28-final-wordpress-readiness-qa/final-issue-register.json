@@ -1,0 +1,37 @@
+{
+  "task_id": "V9-06E28",
+  "generated_at": "2026-07-09T19:10:54.529685+00:00",
+  "issues": [
+    {
+      "id": "MN_ACF_EMPTY",
+      "severity": "MINOR",
+      "title": "Some ACF spot-check fields empty",
+      "note": "Non-critical empty fields"
+    },
+    {
+      "id": "L1",
+      "severity": "ACCEPTED_LIMITATION",
+      "title": "Demo blog post #750",
+      "note": "Local MVP demo content; not production editorial."
+    },
+    {
+      "id": "L2",
+      "severity": "ACCEPTED_LIMITATION",
+      "title": "Placeholder FAQ/copy on some service sections",
+      "note": "D8-C LOCAL_MVP_PLACEHOLDER values retained."
+    },
+    {
+      "id": "L3",
+      "severity": "ACCEPTED_LIMITATION",
+      "title": "blog_public local visibility",
+      "note": "Recorded as-is; local non-production indexing posture."
+    }
+  ],
+  "counts": {
+    "BLOCKER": 0,
+    "MAJOR": 0,
+    "MINOR": 1,
+    "ACCEPTED_LIMITATION": 3
+  },
+  "result": "PASS"
+}

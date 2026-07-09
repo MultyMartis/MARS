@@ -1,0 +1,42 @@
+{
+  "task_id": "V9-06E28",
+  "generated_at": "2026-07-09T19:10:46.832633+00:00",
+  "checks": [
+    {
+      "check": "archive_http_200",
+      "result": "PASS"
+    },
+    {
+      "check": "archive_not_empty_state",
+      "result": "PASS"
+    },
+    {
+      "check": "demo_card_links_single",
+      "result": "PASS"
+    },
+    {
+      "check": "single_http_200",
+      "result": "PASS"
+    },
+    {
+      "check": "single_owner_750",
+      "result": "PASS"
+    },
+    {
+      "check": "toc_or_body_visible",
+      "result": "PASS"
+    },
+    {
+      "check": "no_mojibake_single",
+      "result": "PASS"
+    },
+    {
+      "check": "demo_status_documented",
+      "result": "PASS",
+      "note": "ACCEPTED_LIMITATION demo post #750 local MVP"
+    }
+  ],
+  "archive_h1": "Статьи о зависимостях, диагностике и методах лечения",
+  "single_h1": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём",
+  "result": "PASS"
+}

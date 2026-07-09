@@ -1,0 +1,175 @@
+{
+  "acf_pro_active": true,
+  "acf_groups_registered": 44,
+  "acf_group_keys_sample": [
+    "group_fp02_blog_post_article_meta",
+    "group_fp02_blog_archive_settings",
+    "group_fp02_page_contacts",
+    "group_fp02_page_home",
+    "group_fp02_page_home",
+    "group_fp02_page_home",
+    "group_fp02_page_home",
+    "group_fp02_page_institutional",
+    "group_fp02_page_institutional",
+    "group_fp02_page_institutional",
+    "group_fp02_page_institutional",
+    "group_fp02_page_institutional",
+    "group_fp02_page_legal",
+    "group_fp02_page_reviews",
+    "group_fp02_page_services_hub",
+    "group_fp02_page_services_hub",
+    "group_fp02_page_services_hub",
+    "group_fp02_page_services_hub",
+    "group_fp02_block_cta_bands",
+    "group_fp02_block_comfort"
+  ],
+  "acf_json_runtime_count": 8,
+  "removed_aliases_detected": [],
+  "site_settings": [
+    {
+      "field": "organisation_name",
+      "empty": false,
+      "result": "PASS"
+    },
+    {
+      "field": "phone_primary",
+      "empty": false,
+      "result": "PASS"
+    },
+    {
+      "field": "global_cta_title",
+      "empty": false,
+      "result": "PASS"
+    },
+    {
+      "field": "social_links",
+      "empty": false,
+      "result": "PASS"
+    }
+  ],
+  "spot_checks": [
+    {
+      "scope": "page_11_o_centre",
+      "field": "institutional_intro",
+      "empty": true,
+      "row_count": 0,
+      "result": "WARN"
+    },
+    {
+      "scope": "page_11_o_centre",
+      "field": "institutional_blocks",
+      "empty": true,
+      "row_count": 0,
+      "result": "WARN"
+    },
+    {
+      "scope": "page_11_o_centre",
+      "field": "institutional_team",
+      "empty": true,
+      "row_count": 0,
+      "result": "WARN"
+    },
+    {
+      "scope": "page_19_blog_archive",
+      "field": "blog_archive_intro",
+      "empty": false,
+      "row_count": 1,
+      "result": "PASS"
+    },
+    {
+      "scope": "page_19_blog_archive",
+      "field": "blog_archive_featured",
+      "empty": true,
+      "row_count": 0,
+      "result": "WARN"
+    },
+    {
+      "scope": "post_750_demo",
+      "field": "article_intro",
+      "empty": true,
+      "row_count": 0,
+      "result": "WARN"
+    },
+    {
+      "scope": "post_750_demo",
+      "field": "article_body",
+      "empty": true,
+      "row_count": 0,
+      "result": "WARN"
+    },
+    {
+      "scope": "post_750_demo",
+      "field": "article_conclusion",
+      "empty": true,
+      "row_count": 0,
+      "result": "WARN"
+    },
+    {
+      "scope": "post_750_demo",
+      "field": "article_sources",
+      "empty": true,
+      "row_count": 0,
+      "result": "WARN"
+    },
+    {
+      "scope": "post_750_demo",
+      "field": "article_cta",
+      "empty": true,
+      "row_count": 0,
+      "result": "WARN"
+    },
+    {
+      "scope": "service_73",
+      "field": "hero_lead",
+      "empty": false,
+      "row_count": 1,
+      "result": "PASS"
+    },
+    {
+      "scope": "service_73",
+      "field": "programme_items",
+      "empty": false,
+      "row_count": 4,
+      "result": "PASS"
+    },
+    {
+      "scope": "service_73",
+      "field": "stages",
+      "empty": false,
+      "row_count": 4,
+      "result": "PASS"
+    },
+    {
+      "scope": "service_73",
+      "field": "faq_items",
+      "empty": false,
+      "row_count": 5,
+      "result": "PASS"
+    },
+    {
+      "scope": "service_74",
+      "field": "intro_note",
+      "empty": false,
+      "row_count": 1,
+      "result": "PASS"
+    },
+    {
+      "scope": "service_74",
+      "field": "signs_items",
+      "empty": false,
+      "row_count": 9,
+      "result": "PASS"
+    },
+    {
+      "scope": "service_74",
+      "field": "programme_items",
+      "empty": false,
+      "row_count": 4,
+      "result": "PASS"
+    }
+  ],
+  "admin_mojibake_post_ids": [],
+  "result": "PARTIAL",
+  "task_id": "V9-06E28",
+  "generated_at": "2026-07-09T19:10:26.893736+00:00"
+}

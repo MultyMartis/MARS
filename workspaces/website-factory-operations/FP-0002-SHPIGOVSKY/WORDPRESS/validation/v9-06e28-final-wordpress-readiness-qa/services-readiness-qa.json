@@ -1,0 +1,59 @@
+{
+  "task_id": "V9-06E28",
+  "generated_at": "2026-07-09T19:10:52.388462+00:00",
+  "checks": [
+    {
+      "route": "/uslugi/",
+      "http_status": 200,
+      "owner_id": 5,
+      "expected_id": 5,
+      "structured_sections": true,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "http_status": 200,
+      "owner_id": 73,
+      "expected_id": 73,
+      "structured_sections": true,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/",
+      "http_status": 200,
+      "owner_id": 77,
+      "expected_id": 77,
+      "structured_sections": true,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "http_status": 200,
+      "owner_id": 84,
+      "expected_id": 84,
+      "structured_sections": true,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "http_status": 200,
+      "owner_id": 74,
+      "expected_id": 74,
+      "structured_sections": true,
+      "result": "PASS"
+    },
+    {
+      "check": "shadow_page_6_trash",
+      "result": "PASS"
+    },
+    {
+      "check": "shadow_page_7_trash",
+      "result": "PASS"
+    },
+    {
+      "check": "shadow_page_8_trash",
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS"
+}

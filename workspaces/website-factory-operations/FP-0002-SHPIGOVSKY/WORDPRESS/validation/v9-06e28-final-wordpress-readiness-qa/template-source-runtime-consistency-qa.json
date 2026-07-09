@@ -1,0 +1,63 @@
+{
+  "task_id": "V9-06E28",
+  "generated_at": "2026-07-09T19:10:31.641313+00:00",
+  "source_theme": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky",
+  "runtime_theme": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky",
+  "source_plugin": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core",
+  "runtime_plugin": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\shpigovsky-core",
+  "theme_compare_summary": {
+    "total": 617,
+    "missing_runtime": 0,
+    "hash_mismatch": 2
+  },
+  "plugin_compare_summary": {
+    "total": 17,
+    "missing_runtime": 0,
+    "hash_mismatch": 0
+  },
+  "theme_missing_runtime": [],
+  "plugin_missing_runtime": [],
+  "hash_mismatches_sample": [
+    {
+      "relative_path": "template-parts/service/nature.php",
+      "source_exists": true,
+      "runtime_exists": true,
+      "source_sha256": "D522713AAD85AF43D3302869481FDF17FDC9C83A8342F0928E1328699EDFD2E6",
+      "runtime_sha256": "7AFDF522FE4A57C6DE5B5924DABC69CC354451FC1B76139071C3EC7A4505F6D1",
+      "match": false
+    },
+    {
+      "relative_path": "template-parts/service/subdivision-stack.php",
+      "source_exists": true,
+      "runtime_exists": true,
+      "source_sha256": "A13F4D98763E2A05E37843AACC150C60961559F5020E105113525EA3DFE422C1",
+      "runtime_sha256": "2A6A00CDE0626FFE3A6526AD2009A72CFA231FD594EDDBD076816AAED453DCEC",
+      "match": false
+    }
+  ],
+  "acf_json_source_count": 21,
+  "acf_json_runtime_count": 8,
+  "acf_json_only_in_source": [
+    "group_fp02_block_cta_bands.json",
+    "group_fp02_block_final_form.json",
+    "group_fp02_block_specialists.json",
+    "group_fp02_page_contacts.json",
+    "group_fp02_page_home.json",
+    "group_fp02_page_legal.json",
+    "group_fp02_page_reviews.json",
+    "group_fp02_page_services_hub.json",
+    "group_fp02_service_faq.json",
+    "group_fp02_service_layout_hero.json"
+  ],
+  "acf_json_only_in_runtime": [],
+  "service_permalinks_source_exists": true,
+  "service_permalinks_runtime_exists": true,
+  "service_permalinks_hash_match": true,
+  "permalink_contract": {
+    "permalink_structure": "/blog/%postname%/",
+    "service_rewrite": true,
+    "service_74_slug": "lechenie-alkogolnoy-zavisimosti",
+    "service_74_link": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+  },
+  "result": "PASS"
+}

@@ -446,3 +446,8 @@ E27B **PASS**: Operator-authorized Batch A cleanup per E27A plan. Fresh DB check
 ## V9-06E27A obsolete pages cleanup read-only audit (2026-07-09)
 
 E27A **PASS**: Read-only inventory of obsolete/placeholder/orphaned WP objects before final readiness QA. **41** objects audited (23 pages, 1 post, 17 services); **38** routes HTTP-probed; static V9 manifest compared. Batch A trash candidates: page IDs **9, 10, 17, 21, 25**. Ownership debt (operator decision): pages **6, 7, 8** vs service CPT at same paths; Primary menu still references page **#6**. Demo post **#750** classified **KEEP_DEMO_LOCAL**. E25 duplicate draft **#746** not present in current DB. **0** DB writes; **0** runtime/source mutations; **0** cleanup executed. Evidence: `validation/v9-06e27a-obsolete-pages-cleanup-read-only-audit/`. Report: `reports/FP-0002-V9-06E27A-OBSOLETE-PAGES-CLEANUP-READ-ONLY-AUDIT-REPORT-v1.md`. Superseded by E27B execution.
+
+
+## V9-06E28 final WordPress readiness QA (2026-07-09)
+
+E28 **COMPLETE (PASS / GO_WITH_MINOR_POLISH)**: Read-only final local WordPress readiness QA after E26A–E27D. 35 routes inventoried; 12 core accepted routes HTTP 200; menu `#301` → `/uslugi/zavisimosti/`; DB trash/options/objects validated; ACF/admin PARTIAL (o-centre institutional fields empty in DB, page renders); template/source/runtime PASS; frontend smoke PASS; forms NOT_SENT_BY_POLICY; blog/services/legal/trash/security PASS. Zero DB/source/runtime mutations. HEAD note: `84dd9b07` (+1 ahead of remote; baseline `60291b8e` ancestor). Evidence: `validation/v9-06e28-final-wordpress-readiness-qa/`. Report: `reports/FP-0002-V9-06E28-FINAL-WORDPRESS-READINESS-QA-REPORT-v1.md`. Next: **CREATE_V9_06E29_OPERATOR_VISUAL_POLISH_TASK**.

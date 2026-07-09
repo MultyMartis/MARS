@@ -1,0 +1,312 @@
+{
+  "task_id": "V9-06E28",
+  "generated_at": "2026-07-09T19:10:25.681756+00:00",
+  "menu_checksum": "F728EBCF658217924BE4BDAFD059AC2DE3583DDABC0CDFA57434B8F81C481CA9",
+  "primary_menu_count": 6,
+  "total_menu_items": 13,
+  "menus": [
+    "Footer",
+    "Legal",
+    "Primary"
+  ],
+  "menu_item_301": {
+    "menu_item_id": 301,
+    "menu_name": "Primary",
+    "menu_slug": "primary",
+    "label": "Зависимости",
+    "menu_order": 2,
+    "item_type": "custom",
+    "object_id": "0",
+    "object_type": "custom",
+    "url": "/uslugi/zavisimosti/",
+    "parent_item_id": "0"
+  },
+  "menu_item_301_checks": {
+    "pass": true,
+    "notes": [
+      "label=OK",
+      "url=OK (/uslugi/zavisimosti/)",
+      "not_page_6=OK",
+      "custom_type=OK"
+    ]
+  },
+  "trashed_page_references": [],
+  "menu_url_health": [
+    {
+      "menu_item_id": 27,
+      "label": "Лечение и профилактика",
+      "menu": "Primary",
+      "url": "",
+      "path": "/",
+      "http_status": 200,
+      "result": "PASS"
+    },
+    {
+      "menu_item_id": 301,
+      "label": "Зависимости",
+      "menu": "Primary",
+      "url": "/uslugi/zavisimosti/",
+      "path": "/uslugi/zavisimosti/",
+      "http_status": 200,
+      "result": "PASS"
+    },
+    {
+      "menu_item_id": 29,
+      "label": "О центре",
+      "menu": "Primary",
+      "url": "",
+      "path": "/",
+      "http_status": 200,
+      "result": "PASS"
+    },
+    {
+      "menu_item_id": 30,
+      "label": "Отзывы",
+      "menu": "Primary",
+      "url": "",
+      "path": "/",
+      "http_status": 200,
+      "result": "PASS"
+    },
+    {
+      "menu_item_id": 31,
+      "label": "Статьи",
+      "menu": "Primary",
+      "url": "",
+      "path": "/",
+      "http_status": 200,
+      "result": "PASS"
+    },
+    {
+      "menu_item_id": 32,
+      "label": "Контакты",
+      "menu": "Primary",
+      "url": "",
+      "path": "/",
+      "http_status": 200,
+      "result": "PASS"
+    },
+    {
+      "menu_item_id": 33,
+      "label": "Услуги",
+      "menu": "Footer",
+      "url": "",
+      "path": "/",
+      "http_status": 200,
+      "result": "PASS"
+    },
+    {
+      "menu_item_id": 34,
+      "label": "О центре",
+      "menu": "Footer",
+      "url": "",
+      "path": "/",
+      "http_status": 200,
+      "result": "PASS"
+    },
+    {
+      "menu_item_id": 35,
+      "label": "Контакты",
+      "menu": "Footer",
+      "url": "",
+      "path": "/",
+      "http_status": 200,
+      "result": "PASS"
+    },
+    {
+      "menu_item_id": 37,
+      "label": "Политика конфиденциальности",
+      "menu": "Legal",
+      "url": "",
+      "path": "/",
+      "http_status": 200,
+      "result": "PASS"
+    },
+    {
+      "menu_item_id": 38,
+      "label": "Пользовательское соглашение",
+      "menu": "Legal",
+      "url": "",
+      "path": "/",
+      "http_status": 200,
+      "result": "PASS"
+    },
+    {
+      "menu_item_id": 39,
+      "label": "Согласие на обработку персональных данных",
+      "menu": "Legal",
+      "url": "",
+      "path": "/",
+      "http_status": 200,
+      "result": "PASS"
+    },
+    {
+      "menu_item_id": 40,
+      "label": "Политика Cookie-файлов",
+      "menu": "Legal",
+      "url": "",
+      "path": "/",
+      "http_status": 200,
+      "result": "PASS"
+    }
+  ],
+  "items": [
+    {
+      "menu_item_id": 27,
+      "menu_name": "Primary",
+      "menu_slug": "primary",
+      "label": "Лечение и профилактика",
+      "menu_order": 1,
+      "item_type": "post_type",
+      "object_id": "5",
+      "object_type": "page",
+      "url": "",
+      "parent_item_id": "0"
+    },
+    {
+      "menu_item_id": 301,
+      "menu_name": "Primary",
+      "menu_slug": "primary",
+      "label": "Зависимости",
+      "menu_order": 2,
+      "item_type": "custom",
+      "object_id": "0",
+      "object_type": "custom",
+      "url": "/uslugi/zavisimosti/",
+      "parent_item_id": "0"
+    },
+    {
+      "menu_item_id": 29,
+      "menu_name": "Primary",
+      "menu_slug": "primary",
+      "label": "О центре",
+      "menu_order": 3,
+      "item_type": "post_type",
+      "object_id": "11",
+      "object_type": "page",
+      "url": "",
+      "parent_item_id": "0"
+    },
+    {
+      "menu_item_id": 30,
+      "menu_name": "Primary",
+      "menu_slug": "primary",
+      "label": "Отзывы",
+      "menu_order": 4,
+      "item_type": "post_type",
+      "object_id": "18",
+      "object_type": "page",
+      "url": "",
+      "parent_item_id": "0"
+    },
+    {
+      "menu_item_id": 31,
+      "menu_name": "Primary",
+      "menu_slug": "primary",
+      "label": "Статьи",
+      "menu_order": 5,
+      "item_type": "post_type",
+      "object_id": "19",
+      "object_type": "page",
+      "url": "",
+      "parent_item_id": "0"
+    },
+    {
+      "menu_item_id": 32,
+      "menu_name": "Primary",
+      "menu_slug": "primary",
+      "label": "Контакты",
+      "menu_order": 6,
+      "item_type": "post_type",
+      "object_id": "20",
+      "object_type": "page",
+      "url": "",
+      "parent_item_id": "0"
+    },
+    {
+      "menu_item_id": 33,
+      "menu_name": "Footer",
+      "menu_slug": "footer",
+      "label": "Услуги",
+      "menu_order": 0,
+      "item_type": "post_type",
+      "object_id": "5",
+      "object_type": "page",
+      "url": "",
+      "parent_item_id": "0"
+    },
+    {
+      "menu_item_id": 34,
+      "menu_name": "Footer",
+      "menu_slug": "footer",
+      "label": "О центре",
+      "menu_order": 2,
+      "item_type": "post_type",
+      "object_id": "11",
+      "object_type": "page",
+      "url": "",
+      "parent_item_id": "0"
+    },
+    {
+      "menu_item_id": 35,
+      "menu_name": "Footer",
+      "menu_slug": "footer",
+      "label": "Контакты",
+      "menu_order": 3,
+      "item_type": "post_type",
+      "object_id": "20",
+      "object_type": "page",
+      "url": "",
+      "parent_item_id": "0"
+    },
+    {
+      "menu_item_id": 37,
+      "menu_name": "Legal",
+      "menu_slug": "legal",
+      "label": "Политика конфиденциальности",
+      "menu_order": 1,
+      "item_type": "post_type",
+      "object_id": "3",
+      "object_type": "page",
+      "url": "",
+      "parent_item_id": "0"
+    },
+    {
+      "menu_item_id": 38,
+      "menu_name": "Legal",
+      "menu_slug": "legal",
+      "label": "Пользовательское соглашение",
+      "menu_order": 2,
+      "item_type": "post_type",
+      "object_id": "22",
+      "object_type": "page",
+      "url": "",
+      "parent_item_id": "0"
+    },
+    {
+      "menu_item_id": 39,
+      "menu_name": "Legal",
+      "menu_slug": "legal",
+      "label": "Согласие на обработку персональных данных",
+      "menu_order": 3,
+      "item_type": "post_type",
+      "object_id": "23",
+      "object_type": "page",
+      "url": "",
+      "parent_item_id": "0"
+    },
+    {
+      "menu_item_id": 40,
+      "menu_name": "Legal",
+      "menu_slug": "legal",
+      "label": "Политика Cookie-файлов",
+      "menu_order": 4,
+      "item_type": "post_type",
+      "object_id": "24",
+      "object_type": "page",
+      "url": "",
+      "parent_item_id": "0"
+    }
+  ],
+  "result": "PASS"
+}

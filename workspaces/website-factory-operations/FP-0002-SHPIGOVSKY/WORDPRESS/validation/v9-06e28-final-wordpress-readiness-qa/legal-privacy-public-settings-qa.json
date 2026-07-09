@@ -1,0 +1,41 @@
+{
+  "task_id": "V9-06E28",
+  "generated_at": "2026-07-09T19:10:53.365405+00:00",
+  "options": {
+    "page_on_front": "4",
+    "page_for_posts": "19",
+    "show_on_front": "page",
+    "permalink_structure": "/blog/%postname%/",
+    "blog_public": "0",
+    "wp_page_for_privacy_policy": "3"
+  },
+  "checks": [
+    {
+      "check": "privacy_route_200",
+      "result": "PASS"
+    },
+    {
+      "check": "privacy_page_3_publish",
+      "result": "PASS"
+    },
+    {
+      "check": "duplicate_privacy_25_trash",
+      "result": "PASS"
+    },
+    {
+      "check": "privacy_option_points_to_3",
+      "result": "PASS"
+    },
+    {
+      "check": "blog_public_recorded",
+      "result": "PASS",
+      "value": "0"
+    },
+    {
+      "check": "no_policy_text_mutation_in_task",
+      "result": "PASS",
+      "note": "read-only QA"
+    }
+  ],
+  "result": "PASS"
+}

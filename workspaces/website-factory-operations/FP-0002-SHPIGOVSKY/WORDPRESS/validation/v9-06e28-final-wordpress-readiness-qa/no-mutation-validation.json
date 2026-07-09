@@ -1,0 +1,55 @@
+{
+  "task_id": "V9-06E28",
+  "generated_at": "2026-07-09T19:10:54.529698+00:00",
+  "db_write_count_expected": 0,
+  "db_write_count_actual": 0,
+  "source_mutation_expected": 0,
+  "before": {
+    "options": {
+      "page_on_front": "4",
+      "page_for_posts": "19",
+      "show_on_front": "page",
+      "permalink_structure": "/blog/%postname%/",
+      "blog_public": "0",
+      "wp_page_for_privacy_policy": "3"
+    },
+    "trash_ids": {
+      "6": "trash",
+      "7": "trash",
+      "8": "trash",
+      "9": "trash",
+      "10": "trash",
+      "17": "trash",
+      "21": "trash",
+      "25": "trash"
+    },
+    "menu_checksum": "D7FD8F74EF6A0AC025AC8EB7F8DDC48A0AA03AFA9ACCFE71AA1C929A96F1DEE7",
+    "page_counts": {}
+  },
+  "after": {
+    "options": {
+      "page_on_front": "4",
+      "page_for_posts": "19",
+      "show_on_front": "page",
+      "permalink_structure": "/blog/%postname%/",
+      "blog_public": "0",
+      "wp_page_for_privacy_policy": "3"
+    },
+    "trash_ids": {
+      "6": "trash",
+      "7": "trash",
+      "8": "trash",
+      "9": "trash",
+      "10": "trash",
+      "17": "trash",
+      "21": "trash",
+      "25": "trash"
+    },
+    "menu_checksum": "D7FD8F74EF6A0AC025AC8EB7F8DDC48A0AA03AFA9ACCFE71AA1C929A96F1DEE7",
+    "page_counts": {}
+  },
+  "menu_checksum_unchanged": true,
+  "options_unchanged": true,
+  "trash_state_unchanged": true,
+  "result": "PASS"
+}

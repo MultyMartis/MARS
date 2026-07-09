@@ -1,0 +1,65 @@
+{
+  "task_id": "V9-06E28",
+  "generated_at": "2026-07-09T19:10:53.426329+00:00",
+  "e27b_e27d_trashed_pages": [
+    {
+      "ID": 9,
+      "post_title": "Генотипирование",
+      "post_status": "trash"
+    },
+    {
+      "ID": 10,
+      "post_title": "Специалисты",
+      "post_status": "trash"
+    },
+    {
+      "ID": 17,
+      "post_title": "Интервью и СМИ",
+      "post_status": "trash"
+    },
+    {
+      "ID": 21,
+      "post_title": "Правовая информация",
+      "post_status": "trash"
+    },
+    {
+      "ID": 25,
+      "post_title": "Политика конфиденциальности (системная)",
+      "post_status": "trash"
+    },
+    {
+      "ID": 6,
+      "post_title": "Зависимости",
+      "post_status": "trash"
+    },
+    {
+      "ID": 7,
+      "post_title": "Психическое здоровье",
+      "post_status": "trash"
+    },
+    {
+      "ID": 8,
+      "post_title": "Расстройства пищевого поведения",
+      "post_status": "trash"
+    }
+  ],
+  "all_expected_trash": true,
+  "checkpoints_found": [
+    {
+      "path": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e27d-page-service-ownership-implementation-pre-20260709-183427",
+      "name": "v9-06e27d-page-service-ownership-implementation-pre-20260709-183427",
+      "exists": true
+    },
+    {
+      "path": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e27b-low-risk-obsolete-cleanup-pre-20260709-171947",
+      "name": "v9-06e27b-low-risk-obsolete-cleanup-pre-20260709-171947",
+      "exists": true
+    }
+  ],
+  "rollback_docs": [
+    "architecture/FP-0002-V9-06E27B-ROLLBACK-INSTRUCTIONS-v1.md",
+    "architecture/FP-0002-V9-06E27D-ROLLBACK-INSTRUCTIONS-v1.md"
+  ],
+  "qa_db_checkpoint_created": false,
+  "result": "PASS"
+}

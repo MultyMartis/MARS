@@ -1,0 +1,267 @@
+{
+  "task_id": "V9-06E28",
+  "generated_at": "2026-07-09T19:10:25.698069+00:00",
+  "counts": {
+    "page": {
+      "auto-draft": 1,
+      "publish": 15,
+      "trash": 8
+    },
+    "post": {
+      "publish": 1
+    },
+    "service": {
+      "publish": 17
+    },
+    "review": {},
+    "nav_menu_item": {
+      "publish": 13
+    }
+  },
+  "protected_objects": {
+    "front_page_4": {
+      "ID": 4,
+      "post_title": "Главная",
+      "post_name": "glavnaya",
+      "post_status": "publish",
+      "post_type": "page",
+      "post_modified": "2026-07-08 20:14:08"
+    },
+    "privacy_page_3": {
+      "ID": 3,
+      "post_title": "Политика конфиденциальности",
+      "post_name": "privacy-policy",
+      "post_status": "publish",
+      "post_type": "page",
+      "post_modified": "2026-07-02 18:53:38"
+    },
+    "blog_archive_19": {
+      "ID": 19,
+      "post_title": "Статьи",
+      "post_name": "blog",
+      "post_status": "publish",
+      "post_type": "page",
+      "post_modified": "2026-07-02 18:53:38"
+    },
+    "demo_post_750": {
+      "ID": 750,
+      "post_title": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём",
+      "post_name": "nazvanie-stati",
+      "post_status": "publish",
+      "post_type": "post",
+      "post_modified": "2026-05-05 10:00:00"
+    },
+    "o_centre_11": {
+      "ID": 11,
+      "post_title": "О центре",
+      "post_name": "o-centre",
+      "post_status": "publish",
+      "post_type": "page",
+      "post_modified": "2026-07-05 18:46:24"
+    }
+  },
+  "services": {
+    "73": {
+      "ID": 73,
+      "post_title": "Зависимости",
+      "post_name": "zavisimosti",
+      "post_status": "publish",
+      "post_type": "service",
+      "post_modified": "2026-07-04 00:04:34"
+    },
+    "74": {
+      "ID": 74,
+      "post_title": "Лечение алкогольной зависимости",
+      "post_name": "lechenie-alkogolnoy-zavisimosti",
+      "post_status": "publish",
+      "post_type": "service",
+      "post_modified": "2026-07-08 20:16:49"
+    },
+    "77": {
+      "ID": 77,
+      "post_title": "Психическое здоровье",
+      "post_name": "psihicheskoe-zdorovie",
+      "post_status": "publish",
+      "post_type": "service",
+      "post_modified": "2026-07-04 00:04:34"
+    },
+    "84": {
+      "ID": 84,
+      "post_title": "Расстройства пищевого поведения",
+      "post_name": "rasstroystva-pischevogo-povedeniya",
+      "post_status": "publish",
+      "post_type": "service",
+      "post_modified": "2026-07-04 00:04:34"
+    }
+  },
+  "e27b_trashed": {
+    "9": {
+      "ID": 9,
+      "post_title": "Генотипирование",
+      "post_name": "genotipirovanie__trashed",
+      "post_status": "trash",
+      "post_type": "page",
+      "post_modified": "2026-07-09 20:20:06"
+    },
+    "10": {
+      "ID": 10,
+      "post_title": "Специалисты",
+      "post_name": "specyalisty__trashed",
+      "post_status": "trash",
+      "post_type": "page",
+      "post_modified": "2026-07-09 20:20:06"
+    },
+    "17": {
+      "ID": 17,
+      "post_title": "Интервью и СМИ",
+      "post_name": "intervyu-i-smi__trashed",
+      "post_status": "trash",
+      "post_type": "page",
+      "post_modified": "2026-07-09 20:20:06"
+    },
+    "21": {
+      "ID": 21,
+      "post_title": "Правовая информация",
+      "post_name": "pravovaya-informaciya-pilzovatelyu__trashed",
+      "post_status": "trash",
+      "post_type": "page",
+      "post_modified": "2026-07-09 20:20:06"
+    },
+    "25": {
+      "ID": 25,
+      "post_title": "Политика конфиденциальности (системная)",
+      "post_name": "privacy-policy-page__trashed",
+      "post_status": "trash",
+      "post_type": "page",
+      "post_modified": "2026-07-09 20:20:06"
+    }
+  },
+  "e27d_trashed": {
+    "6": {
+      "ID": 6,
+      "post_title": "Зависимости",
+      "post_name": "zavisimosti__trashed",
+      "post_status": "trash",
+      "post_type": "page",
+      "post_modified": "2026-07-09 21:34:47"
+    },
+    "7": {
+      "ID": 7,
+      "post_title": "Психическое здоровье",
+      "post_name": "psihicheskoe-zdorovie__trashed",
+      "post_status": "trash",
+      "post_type": "page",
+      "post_modified": "2026-07-09 21:34:47"
+    },
+    "8": {
+      "ID": 8,
+      "post_title": "Расстройства пищевого поведения",
+      "post_name": "rasstroystva-pischevogo-povedeniya__trashed",
+      "post_status": "trash",
+      "post_type": "page",
+      "post_modified": "2026-07-09 21:34:47"
+    }
+  },
+  "options": {
+    "page_on_front": "4",
+    "page_for_posts": "19",
+    "show_on_front": "page",
+    "permalink_structure": "/blog/%postname%/",
+    "blog_public": "0",
+    "wp_page_for_privacy_policy": "3"
+  },
+  "checks": [
+    {
+      "check": "front_page_4_publish",
+      "result": "PASS"
+    },
+    {
+      "check": "privacy_page_3_publish",
+      "result": "PASS"
+    },
+    {
+      "check": "blog_archive_19_publish",
+      "result": "PASS"
+    },
+    {
+      "check": "demo_post_750_publish",
+      "result": "PASS"
+    },
+    {
+      "check": "service_73_publish",
+      "result": "PASS"
+    },
+    {
+      "check": "service_77_publish",
+      "result": "PASS"
+    },
+    {
+      "check": "service_84_publish",
+      "result": "PASS"
+    },
+    {
+      "check": "service_74_publish",
+      "result": "PASS"
+    },
+    {
+      "check": "page_9_trash",
+      "result": "PASS"
+    },
+    {
+      "check": "page_10_trash",
+      "result": "PASS"
+    },
+    {
+      "check": "page_17_trash",
+      "result": "PASS"
+    },
+    {
+      "check": "page_21_trash",
+      "result": "PASS"
+    },
+    {
+      "check": "page_25_trash",
+      "result": "PASS"
+    },
+    {
+      "check": "page_6_trash",
+      "result": "PASS"
+    },
+    {
+      "check": "page_7_trash",
+      "result": "PASS"
+    },
+    {
+      "check": "page_8_trash",
+      "result": "PASS"
+    },
+    {
+      "check": "page_on_front_is_4",
+      "result": "PASS"
+    },
+    {
+      "check": "page_for_posts_is_19",
+      "result": "PASS"
+    },
+    {
+      "check": "privacy_option_is_3",
+      "result": "PASS"
+    },
+    {
+      "check": "permalink_blog_postname",
+      "result": "PASS",
+      "value": "/blog/%postname%/"
+    },
+    {
+      "check": "blog_public_recorded",
+      "result": "PASS",
+      "value": "0"
+    },
+    {
+      "check": "critical_mojibake_absent",
+      "result": "PASS",
+      "samples": []
+    }
+  ],
+  "result": "PASS"
+}
