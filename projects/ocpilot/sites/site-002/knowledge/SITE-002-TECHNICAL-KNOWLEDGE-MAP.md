@@ -2172,7 +2172,7 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 | **Server 1C reports path** | `/storage/mars-tools/cron/reports/mars_1c_import_YYYY-MM-DD_HHMMSS.txt` |
 | **Server 1C logs path** | `/storage/mars-tools/cron/logs/mars_1c_import_YYYYMMDD.log` |
 | **2026-07-08 import run ID** | `mars-20260708-080001-bb67ff2b` — **SUCCESS** (FTP-confirmed) |
-| **TXT Duration anomaly** | `Duration: 0 seconds` systemic on all run-mode reports — **WARNING** only |
+| **TXT Duration anomaly** | **FIX DEPLOYED** (Run 4.239) — pre-patch reports show `0 seconds`; wrapper v1.1.1 passes run wall start; **confirm on next import** |
 | **Scheduled monitor folder** | `scheduled-monitors/post-1c/2026-07-08_12-30-02` — pre-hardening (summary+log) |
 | **Post-4.228 scheduled hardened run** | **SAFE UNKNOWN** — observe 2026-07-10 12:30 |
 | **Task Scheduler** | Re-verified OK — enabled; LastTaskResult **0** |
@@ -2181,7 +2181,24 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 
 ---
 
-## 40. Contacts URL Routing (Production — DECIDED 2026-07-09)
+## 40. Cron Run Reports Duration Fix (Production — 2026-07-09)
+
+**Operation:** Run 4.239 — `SITE-002-PROD-CRON-RUN-REPORTS-DURATION-FIX-01`
+
+| Item | Value |
+|------|-------|
+| **Wrapper path** | `/storage/mars-tools/cron/mars_1c_import_wrapper.php` |
+| **Version** | **1.1.1** |
+| **Root cause** | `mars_report_begin()` called after import in `mars_mode_run()` — `$startedAt` ≈ report write time |
+| **Fix** | Optional `$wallStartedAt` param; pass run `$started` from `mars_mode_run()` |
+| **Pre-patch anomaly** | All run-mode TXT through 2026-07-09 showed `Duration: 0 seconds` |
+| **Confirmation** | **PENDING** — next scheduled 1C import |
+| **Report** | [SITE-002-PROD-CRON-RUN-REPORTS-DURATION-FIX-01.md](../reports/SITE-002-PROD-CRON-RUN-REPORTS-DURATION-FIX-01.md) |
+| **Checkpoint** | [SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01.md](../baselines/SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01.md) |
+
+---
+
+## 41. Contacts URL Routing (Production — DECIDED 2026-07-09)
 
 **Operations:** Run 4.237 — `SITE-002-PROD-CONTACTS-URL-ROUTING-REVIEW-01` (read-only discovery) · Run 4.238 — `SITE-002-PROD-CONTACTS-URL-ROUTING-DECISION-01` (operator decision)
 

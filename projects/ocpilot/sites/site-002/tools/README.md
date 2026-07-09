@@ -17,6 +17,8 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `site-002-prod-sort-menu-order-01.py` | Exact single-Twig Production catalog sort menu deploy for `SITE-002-PROD-SORT-MENU-ORDER-01` |
 | `site-002-prod-cron-wrapper-01.py` | Parallel MARS 1C cron wrapper — legacy map, prepare, upload, verify for `SITE-002-PROD-CRON-WRAPPER-01` |
 | `site-002-prod-cron-run-reports-01.py` | MARS 1C wrapper TXT reports — download, enhance, deploy, verify for `SITE-002-PROD-CRON-RUN-REPORTS-01` |
+| `site-002-prod-cron-run-reports-duration-fix-01.py` | MARS 1C wrapper TXT duration fix — discover, patch, fixture, deploy, verify for `SITE-002-PROD-CRON-RUN-REPORTS-DURATION-FIX-01` (Run 4.239) |
+| `mars_1c_import_wrapper.php` | Patched MARS 1C wrapper mirror v1.1.1 — repo reference; deployed to `/storage/mars-tools/cron/` (Run 4.239) |
 | `site-002-prod-cron-activation-preflight-01.py` | MARS 1C cron activation preflight — token config, DB readonly, gated manual run for `SITE-002-PROD-CRON-ACTIVATION-PREFLIGHT-01` |
 | `site-002-prod-cron-manual-run-01.py` | MARS 1C controlled manual import run — wrapper gates, single `--run`, post-run verify for `SITE-002-PROD-CRON-MANUAL-RUN-01` |
 | `site-002-prod-cron-beget-activate-01.py` | Beget 1C cron activation prep — wrapper recheck, cron command, panel instructions for `SITE-002-PROD-CRON-BEGET-ACTIVATE-01` |
