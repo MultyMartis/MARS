@@ -1,8 +1,8 @@
 # OCPilot — Program State
 
 **Status:** living state document — **not** automated router  
-**Last updated:** 2026-07-09
-**Evidence cutoff:** 2026-07-09 (SITE-002 Run **4.239** — Cron run reports duration fix; wrapper v1.1.1 deployed; TXT `Duration` reporting bug patched; **next import confirmation pending**; checkpoint `SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01`)
+**Last updated:** 2026-07-10
+**Evidence cutoff:** 2026-07-10 (SITE-002 Run **4.240** — Post-1C Lari reparent + duration verification **BLOCKED** — next import not observed after Run 4.239 deploy; checkpoint unchanged `SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01`)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Cron run reports duration fix (Run 4.239)** — **COMPLETE**; wrapper `mars_1c_import_wrapper.php` v**1.1.1** deployed; TXT total `Duration` uses run wall start; **no import triggered**; **next scheduled import confirmation pending** · [SITE-002-PROD-CRON-RUN-REPORTS-DURATION-FIX-01.md](sites/site-002/reports/SITE-002-PROD-CRON-RUN-REPORTS-DURATION-FIX-01.md) · checkpoint `SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01` · Run 4.235 post-1C verification **still pending** |
+| Current SITE-002 focus | **Post-1C verification (Run 4.240)** — **BLOCKED** — timing gate: no import TXT after Run 4.239 deploy (`2026-07-09T17:07:52+00:00`); latest import `mars_1c_import_2026-07-09_080009.txt` (pre-patch); Run **4.235** post-1C Lari verification **still pending** · Run **4.239** duration confirmation **still pending** · [SITE-002-PROD-POST-1C-LARI-REPARENT-AND-DURATION-VERIFICATION-01.md](sites/site-002/reports/SITE-002-PROD-POST-1C-LARI-REPARENT-AND-DURATION-VERIFICATION-01.md) · checkpoint unchanged `SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01` |
 
 ---
 
