@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E27B Low-Risk Obsolete Cleanup **PASS** — Batch A executed: pages `#9,#10,#17,#21,#25` moved to Trash (5 DB writes); ownership debt `#6,#7,#8` deferred; demo post `750` preserved. Evidence: `validation/v9-06e27b-low-risk-obsolete-cleanup/`. Report: `reports/FP-0002-V9-06E27B-LOW-RISK-OBSOLETE-CLEANUP-REPORT-v1.md`. NEXT: **CREATE_V9_06E27C_PAGE_SERVICE_OWNERSHIP_DECISION_TASK**. Prior E27A: read-only audit PASS @ `2570a9a3`.
+**Status:** V9-06E27C Page Service Ownership Decision **PASS** — read-only audit complete; service CPT `#73/#77/#84` confirmed as runtime + recommended canonical owners; legacy pages `#6/#7/#8` flagged for E27D trash after menu `#301` retarget. Evidence: `validation/v9-06e27c-page-service-ownership-decision/`. Report: `reports/FP-0002-V9-06E27C-PAGE-SERVICE-OWNERSHIP-DECISION-REPORT-v1.md`. NEXT: **CREATE_V9_06E27D_PAGE_SERVICE_OWNERSHIP_IMPLEMENTATION_TASK**. Prior E27B: Batch A cleanup PASS @ `d6caab42`.
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

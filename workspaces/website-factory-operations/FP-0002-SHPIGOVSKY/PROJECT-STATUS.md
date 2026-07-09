@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-09 (V9-06E27B low-risk obsolete cleanup PASS)
+**Last updated:** 2026-07-10 (V9-06E27C page service ownership decision PASS)
 
-**Current WordPress phase:** V9-06E27B Low-Risk Obsolete Cleanup **PASS** — 5 obsolete pages trashed (#9,#10,#17,#21,#25); ownership debt #6,#7,#8 unchanged. **Next: CREATE_V9_06E27C_PAGE_SERVICE_OWNERSHIP_DECISION_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E27B-LOW-RISK-OBSOLETE-CLEANUP-REPORT-v1.md`. Prior E27A: read-only audit PASS @ `2570a9a3`; demo post `750` preserved.
+**Current WordPress phase:** V9-06E27C Page Service Ownership Decision **PASS** — service CPT confirmed canonical for `/uslugi/zavisimosti/`, `/uslugi/psihicheskoe-zdorovie/`, `/uslugi/rasstroystva-pischevogo-povedeniya/`; Primary menu item `#301` still links page `#6` (retarget in E27D). **Next: CREATE_V9_06E27D_PAGE_SERVICE_OWNERSHIP_IMPLEMENTATION_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E27C-PAGE-SERVICE-OWNERSHIP-DECISION-REPORT-v1.md`. Prior E27B: Batch A trash PASS @ `d6caab42`; demo post `750` preserved.
 
 ## Active frontend workspace (V9)
 

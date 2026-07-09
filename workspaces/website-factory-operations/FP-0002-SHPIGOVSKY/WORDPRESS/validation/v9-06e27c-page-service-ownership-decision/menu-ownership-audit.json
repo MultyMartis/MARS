@@ -1,0 +1,112 @@
+{
+  "task_id": "V9-06E27C",
+  "generated_at": "2026-07-09T18:04:15.170808+00:00",
+  "menus_audited": [
+    "Primary",
+    "Footer",
+    "Legal"
+  ],
+  "conflict_items": [
+    {
+      "menu_name": "Primary",
+      "menu_slug": "primary",
+      "menu_item_id": 301,
+      "label": "Зависимости",
+      "linked_object_id": 6,
+      "linked_object_type": "page",
+      "item_type": "post_type",
+      "url": "/uslugi/zavisimosti/",
+      "route_path": "/uslugi/zavisimosti/",
+      "menu_order": 2,
+      "parent_item_id": "0",
+      "current_route_owner": {
+        "route": "/uslugi/zavisimosti/",
+        "http_status": 200,
+        "final_url": "http://shpigovsky.test/uslugi/zavisimosti/",
+        "queried_object_type": "service",
+        "queried_object_id": 73,
+        "primary_h1": "Зависимости",
+        "title_tag": "Зависимости &#8212; Шпиговский — локальная разработка",
+        "body_markers": {
+          "body_class": "wp-singular service-template-default single single-service postid-73 wp-theme-shpigovsky page-service-subdivision-v1",
+          "post_id": "73",
+          "is_single_service": true,
+          "has_service_subdivision": true,
+          "canonical_url": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        "template_hint": "single-service.php (subdivision)",
+        "static_v9_role": "SERVICE_SUBDIVISION",
+        "static_v9_status": "APPROVED_FULL",
+        "conflict_objects": [
+          {
+            "type": "page",
+            "id": 6
+          },
+          {
+            "type": "service",
+            "id": 73
+          }
+        ],
+        "current_owner": {
+          "type": "service",
+          "id": 73
+        },
+        "conflict_severity": "high",
+        "canonical_expectation": "FAM-SERVICE-SUBDIVISION"
+      },
+      "menu_route_mismatch": true,
+      "recommendation": "RECOMMENDED_MENU_RETARGET_LATER — retarget menu item #301 from page #6 to service CPT #73"
+    }
+  ],
+  "all_uslugi_related_items": [
+    {
+      "menu_name": "Primary",
+      "menu_slug": "primary",
+      "menu_item_id": 301,
+      "label": "Зависимости",
+      "linked_object_id": 6,
+      "linked_object_type": "page",
+      "item_type": "post_type",
+      "url": "/uslugi/zavisimosti/",
+      "route_path": "/uslugi/zavisimosti/",
+      "menu_order": 2,
+      "parent_item_id": "0",
+      "current_route_owner": {
+        "route": "/uslugi/zavisimosti/",
+        "http_status": 200,
+        "final_url": "http://shpigovsky.test/uslugi/zavisimosti/",
+        "queried_object_type": "service",
+        "queried_object_id": 73,
+        "primary_h1": "Зависимости",
+        "title_tag": "Зависимости &#8212; Шпиговский — локальная разработка",
+        "body_markers": {
+          "body_class": "wp-singular service-template-default single single-service postid-73 wp-theme-shpigovsky page-service-subdivision-v1",
+          "post_id": "73",
+          "is_single_service": true,
+          "has_service_subdivision": true,
+          "canonical_url": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        "template_hint": "single-service.php (subdivision)",
+        "static_v9_role": "SERVICE_SUBDIVISION",
+        "static_v9_status": "APPROVED_FULL",
+        "conflict_objects": [
+          {
+            "type": "page",
+            "id": 6
+          },
+          {
+            "type": "service",
+            "id": 73
+          }
+        ],
+        "current_owner": {
+          "type": "service",
+          "id": 73
+        },
+        "conflict_severity": "high",
+        "canonical_expectation": "FAM-SERVICE-SUBDIVISION"
+      },
+      "menu_route_mismatch": true
+    }
+  ]
+}

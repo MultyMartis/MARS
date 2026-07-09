@@ -1,0 +1,492 @@
+{
+  "task_id": "V9-06E27C",
+  "generated_at": "2026-07-09T18:04:15.170808+00:00",
+  "objects": [
+    {
+      "id": 6,
+      "type": "page",
+      "title": "Зависимости",
+      "slug": "zavisimosti",
+      "path": "/uslugi/zavisimosti/",
+      "status": "publish",
+      "parent_id": 5,
+      "menu_order": 0,
+      "modified": "2026-07-02 18:53:38",
+      "content_len": 431,
+      "excerpt_len": 0,
+      "page_template": "default",
+      "content_class": "full_or_template_managed",
+      "meta_count": 0,
+      "acf_field_ref_count": 0,
+      "key_acf_fields": [],
+      "acf_field_preview": [],
+      "menu_references": [
+        {
+          "menu_item_id": 301,
+          "menu_name": "Primary",
+          "menu_slug": "primary",
+          "menu_order": 2,
+          "object_id": "6",
+          "object_type": "page",
+          "item_url": "",
+          "parent_item": "0"
+        }
+      ],
+      "service_children": [],
+      "is_canonical_v9_route": true,
+      "route_status": "live",
+      "rendering_source": "legacy page object (shadowed at runtime)",
+      "content_state": "legacy_generic_page_copy",
+      "current_role": "shadow_legacy_page"
+    },
+    {
+      "id": 7,
+      "type": "page",
+      "title": "Психическое здоровье",
+      "slug": "psihicheskoe-zdorovie",
+      "path": "/uslugi/psihicheskoe-zdorovie/",
+      "status": "publish",
+      "parent_id": 5,
+      "menu_order": 0,
+      "modified": "2026-07-02 18:53:38",
+      "content_len": 431,
+      "excerpt_len": 0,
+      "page_template": "default",
+      "content_class": "full_or_template_managed",
+      "meta_count": 0,
+      "acf_field_ref_count": 0,
+      "key_acf_fields": [],
+      "acf_field_preview": [],
+      "menu_references": [],
+      "service_children": [],
+      "is_canonical_v9_route": true,
+      "route_status": "live",
+      "rendering_source": "legacy page object (shadowed at runtime)",
+      "content_state": "legacy_generic_page_copy",
+      "current_role": "shadow_legacy_page"
+    },
+    {
+      "id": 8,
+      "type": "page",
+      "title": "Расстройства пищевого поведения",
+      "slug": "rasstroystva-pischevogo-povedeniya",
+      "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "status": "publish",
+      "parent_id": 5,
+      "menu_order": 0,
+      "modified": "2026-07-02 18:53:38",
+      "content_len": 431,
+      "excerpt_len": 0,
+      "page_template": "default",
+      "content_class": "full_or_template_managed",
+      "meta_count": 0,
+      "acf_field_ref_count": 0,
+      "key_acf_fields": [],
+      "acf_field_preview": [],
+      "menu_references": [],
+      "service_children": [],
+      "is_canonical_v9_route": true,
+      "route_status": "live",
+      "rendering_source": "legacy page object (shadowed at runtime)",
+      "content_state": "legacy_generic_page_copy",
+      "current_role": "shadow_legacy_page"
+    },
+    {
+      "id": 73,
+      "type": "service",
+      "title": "Зависимости",
+      "slug": "zavisimosti",
+      "path": "/uslugi/zavisimosti/",
+      "status": "publish",
+      "parent_id": 0,
+      "menu_order": 10,
+      "modified": "2026-07-04 00:04:34",
+      "content_len": 140,
+      "excerpt_len": 50,
+      "page_template": "default",
+      "content_class": "full_or_template_managed",
+      "meta_count": 75,
+      "acf_field_ref_count": 0,
+      "key_acf_fields": [
+        "content_source",
+        "created_by_phase",
+        "faq_items",
+        "faq_items_0_answer",
+        "faq_items_0_question",
+        "faq_items_1_answer",
+        "faq_items_1_question",
+        "faq_items_2_answer",
+        "faq_items_2_question",
+        "faq_items_3_answer",
+        "faq_items_3_question",
+        "faq_items_4_answer",
+        "faq_items_4_question",
+        "hero_cta_label",
+        "hero_lead"
+      ],
+      "acf_field_preview": [
+        {
+          "key": "content_source",
+          "preview": "pending"
+        },
+        {
+          "key": "created_by_phase",
+          "preview": "V9-06D.2"
+        },
+        {
+          "key": "faq_items",
+          "preview": "5"
+        },
+        {
+          "key": "faq_items_0_answer",
+          "preview": "Это временный технический текст для проверки блока FAQ. Здесь будет размещён финальный ответ о формате обращения и порядке первичного контакта с центром. Текст не является маркетинговым обещанием и не"
+        },
+        {
+          "key": "faq_items_0_question",
+          "preview": "Анонимное лечение или нет?"
+        },
+        {
+          "key": "faq_items_1_answer",
+          "preview": "Это временный технический текст для проверки высоты аккордеона. В финальной версии здесь будет описан типовой порядок этапов сопровождения без указания конкретных сроков. Длительность программы зависи"
+        },
+        {
+          "key": "faq_items_1_question",
+          "preview": "Как долго длится реабилитация?"
+        },
+        {
+          "key": "faq_items_2_answer",
+          "preview": "Это временный технический текст для проверки блока FAQ. Здесь будет размещён финальный ответ о том, как семье подготовиться к разговору с близким человеком. Материал носит справочный характер и не сод"
+        }
+      ],
+      "menu_references": [],
+      "service_children": [
+        {
+          "id": 74,
+          "title": "Лечение алкогольной зависимости",
+          "slug": "lechenie-alkogolnoy-zavisimosti",
+          "path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+        },
+        {
+          "id": 314,
+          "title": "Наркотическая зависимость",
+          "slug": "narkoticheskaya-zavisimost",
+          "path": "/uslugi/zavisimosti/narkoticheskaya-zavisimost/"
+        },
+        {
+          "id": 315,
+          "title": "Лекарственная зависимость",
+          "slug": "lekarstvennaya-zavisimost",
+          "path": "/uslugi/zavisimosti/lekarstvennaya-zavisimost/"
+        },
+        {
+          "id": 316,
+          "title": "Поведенческие зависимости",
+          "slug": "povedencheskie-zavisimosti",
+          "path": "/uslugi/zavisimosti/povedencheskie-zavisimosti/"
+        },
+        {
+          "id": 75,
+          "title": "Профилактический анализ",
+          "slug": "profilakticheskiy-analiz",
+          "path": "/uslugi/zavisimosti/profilakticheskiy-analiz/"
+        }
+      ],
+      "is_canonical_v9_route": true,
+      "route_status": "live",
+      "rendering_source": "single-service.php (runtime winner)",
+      "content_state": "acf_template_managed",
+      "current_role": "canonical_route_owner"
+    },
+    {
+      "id": 77,
+      "type": "service",
+      "title": "Психическое здоровье",
+      "slug": "psihicheskoe-zdorovie",
+      "path": "/uslugi/psihicheskoe-zdorovie/",
+      "status": "publish",
+      "parent_id": 0,
+      "menu_order": 50,
+      "modified": "2026-07-04 00:04:34",
+      "content_len": 140,
+      "excerpt_len": 50,
+      "page_template": "default",
+      "content_class": "full_or_template_managed",
+      "meta_count": 77,
+      "acf_field_ref_count": 0,
+      "key_acf_fields": [
+        "content_source",
+        "created_by_phase",
+        "faq_items",
+        "faq_items_0_answer",
+        "faq_items_0_question",
+        "faq_items_1_answer",
+        "faq_items_1_question",
+        "faq_items_2_answer",
+        "faq_items_2_question",
+        "faq_items_3_answer",
+        "faq_items_3_question",
+        "faq_items_4_answer",
+        "faq_items_4_question",
+        "hero_cta_label",
+        "hero_lead"
+      ],
+      "acf_field_preview": [
+        {
+          "key": "content_source",
+          "preview": "pending"
+        },
+        {
+          "key": "created_by_phase",
+          "preview": "V9-06D.2"
+        },
+        {
+          "key": "faq_items",
+          "preview": "5"
+        },
+        {
+          "key": "faq_items_0_answer",
+          "preview": "Это временный технический текст для проверки блока FAQ. Здесь будет размещён финальный ответ о формате обращения и порядке первичного контакта с центром. Текст не является маркетинговым обещанием и не"
+        },
+        {
+          "key": "faq_items_0_question",
+          "preview": "Анонимное лечение или нет?"
+        },
+        {
+          "key": "faq_items_1_answer",
+          "preview": "Это временный технический текст для проверки высоты аккордеона. В финальной версии здесь будет описан типовой порядок этапов сопровождения без указания конкретных сроков. Длительность программы зависи"
+        },
+        {
+          "key": "faq_items_1_question",
+          "preview": "Как долго длится реабилитация?"
+        },
+        {
+          "key": "faq_items_2_answer",
+          "preview": "Это временный технический текст для проверки блока FAQ. Здесь будет размещён финальный ответ о том, как семье подготовиться к разговору с близким человеком. Материал носит справочный характер и не сод"
+        }
+      ],
+      "menu_references": [],
+      "service_children": [
+        {
+          "id": 78,
+          "title": "Депрессия",
+          "slug": "depressiya",
+          "path": "/uslugi/psihicheskoe-zdorovie/depressiya/"
+        },
+        {
+          "id": 79,
+          "title": "ПТСР",
+          "slug": "ptrs",
+          "path": "/uslugi/psihicheskoe-zdorovie/ptrs/"
+        },
+        {
+          "id": 80,
+          "title": "Эмоциональное выгорание",
+          "slug": "emocionalnoe-vygoranie",
+          "path": "/uslugi/psihicheskoe-zdorovie/emocionalnoe-vygoranie/"
+        },
+        {
+          "id": 81,
+          "title": "Тревожные расстройства",
+          "slug": "trevozhnye-rasstroystva",
+          "path": "/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/"
+        },
+        {
+          "id": 82,
+          "title": "Расстройства сна",
+          "slug": "rasstroystva-sna",
+          "path": "/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/"
+        },
+        {
+          "id": 83,
+          "title": "Травма",
+          "slug": "travma",
+          "path": "/uslugi/psihicheskoe-zdorovie/travma/"
+        }
+      ],
+      "is_canonical_v9_route": true,
+      "route_status": "live",
+      "rendering_source": "single-service.php (runtime winner)",
+      "content_state": "acf_template_managed",
+      "current_role": "canonical_route_owner"
+    },
+    {
+      "id": 84,
+      "type": "service",
+      "title": "Расстройства пищевого поведения",
+      "slug": "rasstroystva-pischevogo-povedeniya",
+      "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "status": "publish",
+      "parent_id": 0,
+      "menu_order": 120,
+      "modified": "2026-07-04 00:04:34",
+      "content_len": 140,
+      "excerpt_len": 50,
+      "page_template": "default",
+      "content_class": "full_or_template_managed",
+      "meta_count": 76,
+      "acf_field_ref_count": 0,
+      "key_acf_fields": [
+        "content_source",
+        "created_by_phase",
+        "faq_items",
+        "faq_items_0_answer",
+        "faq_items_0_question",
+        "faq_items_1_answer",
+        "faq_items_1_question",
+        "faq_items_2_answer",
+        "faq_items_2_question",
+        "faq_items_3_answer",
+        "faq_items_3_question",
+        "faq_items_4_answer",
+        "faq_items_4_question",
+        "hero_cta_label",
+        "hero_lead"
+      ],
+      "acf_field_preview": [
+        {
+          "key": "content_source",
+          "preview": "pending"
+        },
+        {
+          "key": "created_by_phase",
+          "preview": "V9-06D.2"
+        },
+        {
+          "key": "faq_items",
+          "preview": "5"
+        },
+        {
+          "key": "faq_items_0_answer",
+          "preview": "Это временный технический текст для проверки блока FAQ. Здесь будет размещён финальный ответ о формате обращения и порядке первичного контакта с центром. Текст не является маркетинговым обещанием и не"
+        },
+        {
+          "key": "faq_items_0_question",
+          "preview": "Анонимное лечение или нет?"
+        },
+        {
+          "key": "faq_items_1_answer",
+          "preview": "Это временный технический текст для проверки высоты аккордеона. В финальной версии здесь будет описан типовой порядок этапов сопровождения без указания конкретных сроков. Длительность программы зависи"
+        },
+        {
+          "key": "faq_items_1_question",
+          "preview": "Как долго длится реабилитация?"
+        },
+        {
+          "key": "faq_items_2_answer",
+          "preview": "Это временный технический текст для проверки блока FAQ. Здесь будет размещён финальный ответ о том, как семье подготовиться к разговору с близким человеком. Материал носит справочный характер и не сод"
+        }
+      ],
+      "menu_references": [],
+      "service_children": [
+        {
+          "id": 85,
+          "title": "Анорексия",
+          "slug": "anoreksiya",
+          "path": "/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/"
+        },
+        {
+          "id": 86,
+          "title": "Нервная булимия",
+          "slug": "nervnaya-bulimiya",
+          "path": "/uslugi/rasstroystva-pischevogo-povedeniya/nervnaya-bulimiya/"
+        },
+        {
+          "id": 87,
+          "title": "Компульсивное переедание",
+          "slug": "kompulsivnoe-pereedanie",
+          "path": "/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/"
+        }
+      ],
+      "is_canonical_v9_route": true,
+      "route_status": "live",
+      "rendering_source": "single-service.php (runtime winner)",
+      "content_state": "acf_template_managed",
+      "current_role": "canonical_route_owner"
+    },
+    {
+      "id": 74,
+      "type": "service",
+      "title": "Лечение алкогольной зависимости",
+      "slug": "lechenie-alkogolnoy-zavisimosti",
+      "path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "status": "publish",
+      "parent_id": 73,
+      "modified": "2026-07-08 20:16:49",
+      "content_len": 140,
+      "note": "zavisimosti_tree_child",
+      "is_canonical_v9_route": true,
+      "route_status": "live",
+      "rendering_source": "single-service.php child",
+      "content_state": "template_fixture",
+      "current_role": "service_leaf_child"
+    },
+    {
+      "id": 314,
+      "type": "service",
+      "title": "Наркотическая зависимость",
+      "slug": "narkoticheskaya-zavisimost",
+      "path": "/uslugi/zavisimosti/narkoticheskaya-zavisimost/",
+      "status": "publish",
+      "parent_id": 73,
+      "modified": "2026-07-07 13:43:29",
+      "content_len": 0,
+      "note": "zavisimosti_tree_child",
+      "is_canonical_v9_route": true,
+      "route_status": "live",
+      "rendering_source": "single-service.php child",
+      "content_state": "skeleton_or_empty",
+      "current_role": "service_leaf_child"
+    },
+    {
+      "id": 315,
+      "type": "service",
+      "title": "Лекарственная зависимость",
+      "slug": "lekarstvennaya-zavisimost",
+      "path": "/uslugi/zavisimosti/lekarstvennaya-zavisimost/",
+      "status": "publish",
+      "parent_id": 73,
+      "modified": "2026-07-07 13:43:29",
+      "content_len": 0,
+      "note": "zavisimosti_tree_child",
+      "is_canonical_v9_route": true,
+      "route_status": "live",
+      "rendering_source": "single-service.php child",
+      "content_state": "skeleton_or_empty",
+      "current_role": "service_leaf_child"
+    },
+    {
+      "id": 316,
+      "type": "service",
+      "title": "Поведенческие зависимости",
+      "slug": "povedencheskie-zavisimosti",
+      "path": "/uslugi/zavisimosti/povedencheskie-zavisimosti/",
+      "status": "publish",
+      "parent_id": 73,
+      "modified": "2026-07-07 13:43:29",
+      "content_len": 0,
+      "note": "zavisimosti_tree_child",
+      "is_canonical_v9_route": true,
+      "route_status": "live",
+      "rendering_source": "single-service.php child",
+      "content_state": "skeleton_or_empty",
+      "current_role": "service_leaf_child"
+    },
+    {
+      "id": 75,
+      "type": "service",
+      "title": "Профилактический анализ",
+      "slug": "profilakticheskiy-analiz",
+      "path": "/uslugi/zavisimosti/profilakticheskiy-analiz/",
+      "status": "publish",
+      "parent_id": 73,
+      "modified": "2026-07-07 13:43:29",
+      "content_len": 140,
+      "note": "zavisimosti_tree_child",
+      "is_canonical_v9_route": true,
+      "route_status": "live",
+      "rendering_source": "single-service.php child",
+      "content_state": "template_fixture",
+      "current_role": "service_leaf_child"
+    }
+  ]
+}

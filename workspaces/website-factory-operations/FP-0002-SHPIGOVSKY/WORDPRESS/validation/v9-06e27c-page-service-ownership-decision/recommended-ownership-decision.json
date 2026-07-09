@@ -1,0 +1,82 @@
+{
+  "task_id": "V9-06E27C",
+  "generated_at": "2026-07-09T18:04:15.170808+00:00",
+  "recommendation_summary": "RECOMMENDED_KEEP_SERVICE_CPT",
+  "decisions": [
+    {
+      "route": "/uslugi/zavisimosti/",
+      "canonical_owner": {
+        "type": "service",
+        "id": 73
+      },
+      "page_6": "RECOMMENDED_TRASH_PAGE_LATER",
+      "service_73": "RECOMMENDED_KEEP_SERVICE_CPT",
+      "menu": "RECOMMENDED_MENU_RETARGET_LATER",
+      "redirect": "NOT_NEEDED",
+      "rewrite_permalink": "NOT_NEEDED"
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/",
+      "canonical_owner": {
+        "type": "service",
+        "id": 77
+      },
+      "page_7": "RECOMMENDED_TRASH_PAGE_LATER",
+      "service_77": "RECOMMENDED_KEEP_SERVICE_CPT",
+      "menu": "NO_MENU_CONFLICT",
+      "redirect": "NOT_NEEDED",
+      "rewrite_permalink": "NOT_NEEDED"
+    },
+    {
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "canonical_owner": {
+        "type": "service",
+        "id": 84
+      },
+      "page_8": "RECOMMENDED_TRASH_PAGE_LATER",
+      "service_84": "RECOMMENDED_KEEP_SERVICE_CPT",
+      "menu": "NO_MENU_CONFLICT",
+      "redirect": "NOT_NEEDED",
+      "rewrite_permalink": "NOT_NEEDED"
+    }
+  ],
+  "must_not_touch": [
+    {
+      "type": "page",
+      "id": 3,
+      "reason": "privacy policy canonical"
+    },
+    {
+      "type": "page",
+      "id": 4,
+      "reason": "front page"
+    },
+    {
+      "type": "page",
+      "id": 5,
+      "reason": "services hub /uslugi/"
+    },
+    {
+      "type": "page",
+      "id": 19,
+      "reason": "blog archive"
+    },
+    {
+      "type": "post",
+      "id": 750,
+      "reason": "demo blog fixture"
+    },
+    {
+      "type": "service",
+      "id": 74,
+      "reason": "canonical alcohol leaf"
+    },
+    {
+      "type": "service",
+      "id": 75,
+      "reason": "profilakticheskiy-analiz leaf"
+    }
+  ],
+  "operator_decision_required": false,
+  "notes": "Recommendation is evidence-complete; operator approval needed only to execute E27D implementation"
+}

@@ -1,0 +1,86 @@
+{
+  "task_id": "V9-06E27C",
+  "generated_at": "2026-07-09T18:04:15.170808+00:00",
+  "db_writes": 0,
+  "before": {
+    "pages": {
+      "6": {
+        "ID": "6",
+        "post_status": "publish",
+        "post_modified": "2026-07-02 18:53:38"
+      },
+      "7": {
+        "ID": "7",
+        "post_status": "publish",
+        "post_modified": "2026-07-02 18:53:38"
+      },
+      "8": {
+        "ID": "8",
+        "post_status": "publish",
+        "post_modified": "2026-07-02 18:53:38"
+      }
+    },
+    "services": {
+      "73": {
+        "ID": "73",
+        "post_status": "publish",
+        "post_modified": "2026-07-04 00:04:34"
+      }
+    },
+    "options": {
+      "page_on_front": "4",
+      "page_for_posts": "19",
+      "permalink_structure": "/blog/%postname%/",
+      "blog_public": "0",
+      "wp_page_for_privacy_policy": "3"
+    },
+    "menu_checksum": "550eea2aae13c7e0a9bafd78ce5f170925be04fe1f1a0b17078d22dd7f4dfcd5"
+  },
+  "after": {
+    "pages": {
+      "6": {
+        "ID": "6",
+        "post_status": "publish",
+        "post_modified": "2026-07-02 18:53:38"
+      },
+      "7": {
+        "ID": "7",
+        "post_status": "publish",
+        "post_modified": "2026-07-02 18:53:38"
+      },
+      "8": {
+        "ID": "8",
+        "post_status": "publish",
+        "post_modified": "2026-07-02 18:53:38"
+      }
+    },
+    "services": {
+      "73": {
+        "ID": "73",
+        "post_status": "publish",
+        "post_modified": "2026-07-04 00:04:34"
+      }
+    },
+    "options": {
+      "page_on_front": "4",
+      "page_for_posts": "19",
+      "permalink_structure": "/blog/%postname%/",
+      "blog_public": "0",
+      "wp_page_for_privacy_policy": "3"
+    },
+    "menu_checksum": "550eea2aae13c7e0a9bafd78ce5f170925be04fe1f1a0b17078d22dd7f4dfcd5"
+  },
+  "unchanged": {
+    "pages_6_7_8_status": "publish",
+    "service_73_status": "publish",
+    "menu_checksum": "550eea2aae13c7e0a9bafd78ce5f170925be04fe1f1a0b17078d22dd7f4dfcd5",
+    "options": {
+      "page_on_front": "4",
+      "page_for_posts": "19",
+      "permalink_structure": "/blog/%postname%/",
+      "blog_public": "0",
+      "wp_page_for_privacy_policy": "3"
+    }
+  },
+  "result": "PASS"
+}

@@ -1,0 +1,67 @@
+{
+  "task_id": "V9-06E27C",
+  "generated_at": "2026-07-09T18:04:15.170808+00:00",
+  "options": [
+    {
+      "option": "A",
+      "name": "Service CPT owns conflicted subdivision routes",
+      "description": "Confirm service #73/#77/#84 as canonical owners; retarget Primary menu; trash legacy pages #6/#7/#8",
+      "benefits": [
+        "Matches FP-0002 WordPress architecture and ServicePermalinks contract",
+        "Matches static V9 SERVICE_SUBDIVISION intent",
+        "Preserves ACF-backed service templates and child tree under #73",
+        "No URL change — no redirect required",
+        "Runtime already serves service CPT today"
+      ],
+      "risks": [
+        "Menu retarget must precede page trash for #6",
+        "Operator must approve trash of three legacy pages"
+      ],
+      "required_future_changes": [
+        "Retarget Primary menu item #301 to service #73",
+        "Trash pages #6, #7, #8 after menu validation"
+      ],
+      "rollback": "Restore pages from trash; revert menu item to page #6",
+      "verdict": "RECOMMENDED"
+    },
+    {
+      "option": "B",
+      "name": "Page owns conflicted subdivision routes",
+      "description": "Keep pages #6/#7/#8; demote or remove service CPT objects at same paths",
+      "benefits": [
+        "Preserves existing Primary menu object link without retarget"
+      ],
+      "risks": [
+        "Breaks service CPT hierarchy and child routes under #73",
+        "Requires rewrite/permalink surgery or service CPT trash",
+        "Contradicts static V9 manifest and architecture docs",
+        "Loses ACF service subdivision templates",
+        "High regression risk for alcohol leaf #74 and zavisimosti children"
+      ],
+      "required_future_changes": [
+        "Trash or reparent services #73/#77/#84",
+        "Rebuild subdivision rendering on page templates"
+      ],
+      "rollback": "Complex — service tree restoration",
+      "verdict": "NOT_RECOMMENDED"
+    },
+    {
+      "option": "C",
+      "name": "Keep both temporarily",
+      "description": "No ownership resolution; retain duplicate page and service objects",
+      "benefits": [
+        "Defers operator decision",
+        "No immediate DB writes"
+      ],
+      "risks": [
+        "Menu ambiguity for #6 vs #73",
+        "Admin confusion — two objects same title/path",
+        "SEO/canonical ambiguity if page ever wins rewrite race",
+        "Blocks final WordPress readiness QA"
+      ],
+      "required_future_changes": [],
+      "rollback": "N/A — status quo",
+      "verdict": "NOT_RECOMMENDED_EXCEPT_AS_INTERIM"
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "task_id": "V9-06E27C",
+  "generated_at": "2026-07-09T18:04:15.170808+00:00",
+  "baseline_commit": "d6caab422bc9301caf3f90631558b43e1c9e3bfb",
+  "conflict_diagnosis": "Legacy hub-child pages #6/#7/#8 duplicate service CPT subdivision routes; rewrite rules assign runtime to service CPT; Primary menu still links page #6",
+  "current_route_owner": {
+    "/uslugi/zavisimosti/": {
+      "type": "service",
+      "id": 73
+    },
+    "/uslugi/psihicheskoe-zdorovie/": {
+      "type": "service",
+      "id": 77
+    },
+    "/uslugi/rasstroystva-pischevogo-povedeniya/": {
+      "type": "service",
+      "id": 84
+    }
+  },
+  "current_menu_owner": {
+    "/uslugi/zavisimosti/": {
+      "menu_item_id": 301,
+      "type": "page",
+      "id": 6
+    }
+  },
+  "recommended_canonical_owner": [
+    {
+      "route": "/uslugi/zavisimosti/",
+      "canonical_owner": {
+        "type": "service",
+        "id": 73
+      },
+      "page_6": "RECOMMENDED_TRASH_PAGE_LATER",
+      "service_73": "RECOMMENDED_KEEP_SERVICE_CPT",
+      "menu": "RECOMMENDED_MENU_RETARGET_LATER",
+      "redirect": "NOT_NEEDED",
+      "rewrite_permalink": "NOT_NEEDED"
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/",
+      "canonical_owner": {
+        "type": "service",
+        "id": 77
+      },
+      "page_7": "RECOMMENDED_TRASH_PAGE_LATER",
+      "service_77": "RECOMMENDED_KEEP_SERVICE_CPT",
+      "menu": "NO_MENU_CONFLICT",
+      "redirect": "NOT_NEEDED",
+      "rewrite_permalink": "NOT_NEEDED"
+    },
+    {
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "canonical_owner": {
+        "type": "service",
+        "id": 84
+      },
+      "page_8": "RECOMMENDED_TRASH_PAGE_LATER",
+      "service_84": "RECOMMENDED_KEEP_SERVICE_CPT",
+      "menu": "NO_MENU_CONFLICT",
+      "redirect": "NOT_NEEDED",
+      "rewrite_permalink": "NOT_NEEDED"
+    }
+  ],
+  "must_not_touch_yet": [
+    {
+      "type": "page",
+      "id": 3,
+      "reason": "privacy policy canonical"
+    },
+    {
+      "type": "page",
+      "id": 4,
+      "reason": "front page"
+    },
+    {
+      "type": "page",
+      "id": 5,
+      "reason": "services hub /uslugi/"
+    },
+    {
+      "type": "page",
+      "id": 19,
+      "reason": "blog archive"
+    },
+    {
+      "type": "post",
+      "id": 750,
+      "reason": "demo blog fixture"
+    },
+    {
+      "type": "service",
+      "id": 74,
+      "reason": "canonical alcohol leaf"
+    },
+    {
+      "type": "service",
+      "id": 75,
+      "reason": "profilakticheskiy-analiz leaf"
+    }
+  ],
+  "operator_decision": "Approve Option A and authorize E27D implementation",
+  "proposed_e27d_scope": [
+    {
+      "step": 1,
+      "action": "Fresh DB checkpoint (mysqldump + SHA256)",
+      "object_ids": [],
+      "safety": "Mandatory pre-write",
+      "validation": "db-checkpoint.json + RESTORE.md"
+    },
+    {
+      "step": 2,
+      "action": "Retarget Primary menu item #301 from page #6 to service CPT #73",
+      "object_ids": [
+        301,
+        6,
+        73
+      ],
+      "safety": "Single menu meta update; no permalink change",
+      "validation": "Menu resolves to service; /uslugi/zavisimosti/ still 200 service #73"
+    },
+    {
+      "step": 3,
+      "action": "Post-menu HTTP + menu validation",
+      "object_ids": [
+        301,
+        73
+      ],
+      "safety": "Read-only probes before page trash",
+      "validation": "menu_route_alignment PASS"
+    },
+    {
+      "step": 4,
+      "action": "Trash legacy pages #6, #7, #8",
+      "object_ids": [
+        6,
+        7,
+        8
+      ],
+      "safety": "wp_trash_post only; no permanent delete",
+      "validation": "Pages in trash; routes unchanged (service still owns)"
+    },
+    {
+      "step": 5,
+      "action": "Post-cleanup route validation",
+      "object_ids": [
+        73,
+        74,
+        75,
+        77,
+        84
+      ],
+      "safety": "HTTP probe all zavisimosti + subdivision routes",
+      "validation": "post-cleanup-route-validation.json"
+    }
+  ],
+  "risks": [
+    "Menu retarget must precede page trash for #6",
+    "Operator must approve trash of three legacy pages"
+  ],
+  "rollback_notes": "Restore pages #6-#8 from trash; revert menu item #301 to page #6; or full DB checkpoint restore",
+  "recommended_next_task": "CREATE_V9_06E27D_PAGE_SERVICE_OWNERSHIP_IMPLEMENTATION_TASK",
+  "result": "PASS"
+}

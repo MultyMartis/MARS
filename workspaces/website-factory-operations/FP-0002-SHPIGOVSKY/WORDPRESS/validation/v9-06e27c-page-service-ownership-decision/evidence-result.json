@@ -1,0 +1,37 @@
+{
+  "task_id": "V9-06E27C",
+  "generated_at": "2026-07-09T18:04:15.170808+00:00",
+  "sources": [
+    {
+      "source": "pymysql_read_only",
+      "result": "PASS"
+    },
+    {
+      "source": "http_route_probe",
+      "result": "PASS",
+      "routes_probed": 10
+    },
+    {
+      "source": "service_permalinks_source",
+      "path": "plugins/shpigovsky-core/src/Permalinks/ServicePermalinks.php",
+      "result": "PASS"
+    },
+    {
+      "source": "static_v9_manifest",
+      "path": "workspaces/fp-0002-shpigovsky-v9/tools/v9-route-manifest.json",
+      "result": "PASS"
+    },
+    {
+      "source": "e27a_dependency_audit",
+      "result": "PASS"
+    },
+    {
+      "source": "e27b_post_cleanup_validation",
+      "result": "PASS"
+    },
+    {
+      "source": "wp_admin_screenshots",
+      "result": "NOT_CAPTURED"
+    }
+  ]
+}

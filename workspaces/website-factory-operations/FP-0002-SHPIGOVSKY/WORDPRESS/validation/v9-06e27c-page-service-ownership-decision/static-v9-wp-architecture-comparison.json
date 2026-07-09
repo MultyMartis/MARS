@@ -1,0 +1,81 @@
+{
+  "task_id": "V9-06E27C",
+  "generated_at": "2026-07-09T18:04:15.170808+00:00",
+  "rows": [
+    {
+      "route": "/uslugi/zavisimosti/",
+      "static_v9_exists": true,
+      "static_v9_role": "SERVICE_SUBDIVISION",
+      "static_v9_status": "APPROVED_FULL",
+      "wp_page_object": {
+        "id": 6,
+        "exists": true,
+        "status": "publish"
+      },
+      "wp_service_object": {
+        "id": 73,
+        "exists": true,
+        "status": "publish"
+      },
+      "current_rendered_owner": {
+        "type": "service",
+        "id": 73
+      },
+      "recommended_canonical_owner": {
+        "type": "service",
+        "id": 73
+      },
+      "notes": "Legacy page #6 is shadow duplicate; service #73 is runtime and architecture owner"
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/",
+      "static_v9_exists": true,
+      "static_v9_role": "SERVICE_SUBDIVISION",
+      "static_v9_status": "PLACEHOLDER",
+      "wp_page_object": {
+        "id": 7,
+        "exists": true,
+        "status": "publish"
+      },
+      "wp_service_object": {
+        "id": 77,
+        "exists": true,
+        "status": "publish"
+      },
+      "current_rendered_owner": {
+        "type": "service",
+        "id": 77
+      },
+      "recommended_canonical_owner": {
+        "type": "service",
+        "id": 77
+      },
+      "notes": "Legacy page #7 is shadow duplicate; service #77 is runtime and architecture owner"
+    },
+    {
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "static_v9_exists": true,
+      "static_v9_role": "SERVICE_SUBDIVISION",
+      "static_v9_status": "PLACEHOLDER",
+      "wp_page_object": {
+        "id": 8,
+        "exists": true,
+        "status": "publish"
+      },
+      "wp_service_object": {
+        "id": 84,
+        "exists": true,
+        "status": "publish"
+      },
+      "current_rendered_owner": {
+        "type": "service",
+        "id": 84
+      },
+      "recommended_canonical_owner": {
+        "type": "service",
+        "id": 84
+      },
+      "notes": "Legacy page #8 is shadow duplicate; service #84 is runtime and architecture owner"
+    }
+  ]
+}

@@ -431,9 +431,13 @@ E26C **PASS**: Blog single template port — V9 `page-blog-article` stack for st
 - Encoding mojibake audit/fix: default category term repaired (2 DB rows).
 - Report: `reports/FP-0002-V9-06E26D-POLISH-ENCODING-MOJIBAKE-AUDIT-AND-FIX-REPORT-v1.md`
 
+## V9-06E27C page service ownership decision (2026-07-10)
+
+E27C **PASS**: Read-only ownership decision audit for pages **#6, #7, #8** vs service CPT **#73, #77, #84**. HTTP probes confirm **service CPT owns** all three conflicted subdivision routes (`postid-73/77/84`, `single-service` templates). Legacy pages are shadow DB duplicates (431 B generic copy, 0 ACF). Primary menu item **#301** still links page **#6** while route serves service **#73** — **menu_route_mismatch**. Recommendation: **Option A** — keep service CPT; E27D to retarget menu **#301** then trash pages **#6–#8**; no redirects or rewrite flush needed. Hub page **#5**, protected pages, demo **#750**, service **#73** child tree preserved. **0** DB writes; **0** mutations. Evidence: `validation/v9-06e27c-page-service-ownership-decision/`. Report: `reports/FP-0002-V9-06E27C-PAGE-SERVICE-OWNERSHIP-DECISION-REPORT-v1.md`. Next: **CREATE_V9_06E27D_PAGE_SERVICE_OWNERSHIP_IMPLEMENTATION_TASK**.
+
 ## V9-06E27B low-risk obsolete cleanup (2026-07-09)
 
-E27B **PASS**: Operator-authorized Batch A cleanup per E27A plan. Fresh DB checkpoint `v9-06e27b-low-risk-obsolete-cleanup-pre-20260709-171947` before writes. **5** pages moved to Trash via `wp_trash_post()`: IDs **9, 10, 17, 21, 25** (4 publish + 1 draft → trash). Ownership debt pages **6, 7, 8** not touched. Protected **#3, #4, #19**, demo post **#750**, service **#73** unchanged. **10/10** accepted routes HTTP 200; **5/5** candidate routes HTTP 404. No menu/permalink/redirect/rewrite/source/runtime changes. Evidence: `validation/v9-06e27b-low-risk-obsolete-cleanup/`. Report: `reports/FP-0002-V9-06E27B-LOW-RISK-OBSOLETE-CLEANUP-REPORT-v1.md`. Next: **CREATE_V9_06E27C_PAGE_SERVICE_OWNERSHIP_DECISION_TASK**.
+E27B **PASS**: Operator-authorized Batch A cleanup per E27A plan. Fresh DB checkpoint `v9-06e27b-low-risk-obsolete-cleanup-pre-20260709-171947` before writes. **5** pages moved to Trash via `wp_trash_post()`: IDs **9, 10, 17, 21, 25** (4 publish + 1 draft → trash). Ownership debt pages **6, 7, 8** not touched. Protected **#3, #4, #19**, demo post **#750**, service **#73** unchanged. **10/10** accepted routes HTTP 200; **5/5** candidate routes HTTP 404. No menu/permalink/redirect/rewrite/source/runtime changes. Evidence: `validation/v9-06e27b-low-risk-obsolete-cleanup/`. Report: `reports/FP-0002-V9-06E27B-LOW-RISK-OBSOLETE-CLEANUP-REPORT-v1.md`. Next: **CREATE_V9_06E27C_PAGE_SERVICE_OWNERSHIP_DECISION_TASK** (completed in E27C).
 
 ## V9-06E27A obsolete pages cleanup read-only audit (2026-07-09)
 

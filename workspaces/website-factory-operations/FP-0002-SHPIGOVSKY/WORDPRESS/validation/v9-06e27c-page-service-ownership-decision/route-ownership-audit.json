@@ -1,0 +1,334 @@
+{
+  "task_id": "V9-06E27C",
+  "generated_at": "2026-07-09T18:04:15.170808+00:00",
+  "routes": [
+    {
+      "route": "/uslugi/",
+      "http_status": 200,
+      "final_url": "http://shpigovsky.test/uslugi/",
+      "queried_object_type": "page",
+      "queried_object_id": 5,
+      "primary_h1": "Лечение и профилактика",
+      "title_tag": "Услуги &#8212; Шпиговский — локальная разработка",
+      "body_markers": {
+        "body_class": "wp-singular page-template page-template-page-templates page-template-services-hub page-template-page-templatesservices-hub-php page page-id-5 page-parent wp-theme-shpigovsky page-uslugi-v2",
+        "page_id": "5",
+        "page_template_class": true,
+        "has_page_uslugi_v2": true,
+        "has_services_hub": true,
+        "canonical_url": "http://shpigovsky.test/uslugi/"
+      },
+      "template_hint": "services-hub.php",
+      "static_v9_role": "SERVICES_HUB",
+      "static_v9_status": "APPROVED_FULL",
+      "conflict_objects": [],
+      "current_owner": {
+        "type": "page",
+        "id": 5
+      },
+      "conflict_severity": "none",
+      "canonical_expectation": "FAM-SERVICES-HUB",
+      "menu_points_to": null,
+      "page_wins": true,
+      "service_cpt_wins": false,
+      "notes": "Hub page #5 — no conflict"
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "http_status": 200,
+      "final_url": "http://shpigovsky.test/uslugi/zavisimosti/",
+      "queried_object_type": "service",
+      "queried_object_id": 73,
+      "primary_h1": "Зависимости",
+      "title_tag": "Зависимости &#8212; Шпиговский — локальная разработка",
+      "body_markers": {
+        "body_class": "wp-singular service-template-default single single-service postid-73 wp-theme-shpigovsky page-service-subdivision-v1",
+        "post_id": "73",
+        "is_single_service": true,
+        "has_service_subdivision": true,
+        "canonical_url": "http://shpigovsky.test/uslugi/zavisimosti/"
+      },
+      "template_hint": "single-service.php (subdivision)",
+      "static_v9_role": "SERVICE_SUBDIVISION",
+      "static_v9_status": "APPROVED_FULL",
+      "conflict_objects": [
+        {
+          "type": "page",
+          "id": 6
+        },
+        {
+          "type": "service",
+          "id": 73
+        }
+      ],
+      "current_owner": {
+        "type": "service",
+        "id": 73
+      },
+      "conflict_severity": "high",
+      "canonical_expectation": "FAM-SERVICE-SUBDIVISION",
+      "menu_points_to": {
+        "type": "page",
+        "id": 6,
+        "menu_item_id": 301
+      },
+      "page_wins": false,
+      "service_cpt_wins": true,
+      "notes": "Primary menu item #301 links page #6 but HTTP serves service #73"
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "http_status": 200,
+      "final_url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "queried_object_type": "service",
+      "queried_object_id": 74,
+      "primary_h1": "Центр лечения алкогольной зависимости",
+      "title_tag": "Лечение алкогольной зависимости &#8212; Шпиговский — локальная разработка",
+      "body_markers": {
+        "body_class": "wp-singular service-template-default single single-service postid-74 wp-theme-shpigovsky page-service-leaf-v1",
+        "post_id": "74",
+        "is_single_service": true,
+        "has_service_leaf": true,
+        "canonical_url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+      },
+      "template_hint": "single-service.php (leaf)",
+      "static_v9_role": "SERVICE_LEAF",
+      "static_v9_status": "APPROVED_FULL",
+      "conflict_objects": [],
+      "current_owner": {
+        "type": "service",
+        "id": 74
+      },
+      "conflict_severity": "none",
+      "canonical_expectation": "FAM-SERVICE-LEAF",
+      "menu_points_to": null,
+      "page_wins": false,
+      "service_cpt_wins": true,
+      "notes": ""
+    },
+    {
+      "route": "/uslugi/zavisimosti/profilakticheskiy-analiz/",
+      "http_status": 200,
+      "final_url": "http://shpigovsky.test/uslugi/zavisimosti/profilakticheskiy-analiz/",
+      "queried_object_type": "service",
+      "queried_object_id": 75,
+      "primary_h1": "Профилактический анализ",
+      "title_tag": "Профилактический анализ &#8212; Шпиговский — локальная разработка",
+      "body_markers": {
+        "body_class": "wp-singular service-template-default single single-service postid-75 wp-theme-shpigovsky page-service-leaf-v1",
+        "post_id": "75",
+        "is_single_service": true,
+        "has_service_leaf": true,
+        "canonical_url": "http://shpigovsky.test/uslugi/zavisimosti/profilakticheskiy-analiz/"
+      },
+      "template_hint": "single-service.php (leaf)",
+      "static_v9_role": "SERVICE_LEAF",
+      "static_v9_status": "PLACEHOLDER",
+      "conflict_objects": [],
+      "current_owner": {
+        "type": "service",
+        "id": 75
+      },
+      "conflict_severity": "none",
+      "canonical_expectation": "FAM-SERVICE-LEAF",
+      "menu_points_to": null,
+      "page_wins": false,
+      "service_cpt_wins": true,
+      "notes": ""
+    },
+    {
+      "route": "/uslugi/zavisimosti/specialistam/",
+      "http_status": 404,
+      "final_url": "http://shpigovsky.test/uslugi/zavisimosti/specialistam/",
+      "queried_object_type": null,
+      "queried_object_id": null,
+      "primary_h1": "Страница не найдена",
+      "title_tag": "Страница не найдена &#8212; Шпиговский — локальная разработка",
+      "body_markers": {
+        "body_class": "error404 wp-theme-shpigovsky"
+      },
+      "template_hint": "unknown",
+      "static_v9_role": "SERVICE_LEAF",
+      "static_v9_status": "PLACEHOLDER",
+      "conflict_objects": [],
+      "current_owner": {
+        "type": null,
+        "id": null
+      },
+      "conflict_severity": "none",
+      "canonical_expectation": "FAM-SERVICE-LEAF",
+      "menu_points_to": null,
+      "page_wins": false,
+      "service_cpt_wins": false,
+      "notes": "Static V9 route has no WP service object yet"
+    },
+    {
+      "route": "/uslugi/zavisimosti/lekarstvennaya-zavisimost/",
+      "http_status": 200,
+      "final_url": "http://shpigovsky.test/uslugi/zavisimosti/lekarstvennaya-zavisimost/",
+      "queried_object_type": "service",
+      "queried_object_id": 315,
+      "primary_h1": "Лекарственная зависимость",
+      "title_tag": "Лекарственная зависимость &#8212; Шпиговский — локальная разработка",
+      "body_markers": {
+        "body_class": "wp-singular service-template-default single single-service postid-315 wp-theme-shpigovsky page-service-leaf-v1",
+        "post_id": "315",
+        "is_single_service": true,
+        "has_service_leaf": true,
+        "canonical_url": "http://shpigovsky.test/uslugi/zavisimosti/lekarstvennaya-zavisimost/"
+      },
+      "template_hint": "single-service.php (leaf)",
+      "static_v9_role": null,
+      "static_v9_status": null,
+      "conflict_objects": [],
+      "current_owner": {
+        "type": "service",
+        "id": 315
+      },
+      "conflict_severity": "none",
+      "canonical_expectation": null,
+      "menu_points_to": null,
+      "page_wins": false,
+      "service_cpt_wins": true,
+      "notes": ""
+    },
+    {
+      "route": "/uslugi/zavisimosti/narkoticheskaya-zavisimost/",
+      "http_status": 200,
+      "final_url": "http://shpigovsky.test/uslugi/zavisimosti/narkoticheskaya-zavisimost/",
+      "queried_object_type": "service",
+      "queried_object_id": 314,
+      "primary_h1": "Наркотическая зависимость",
+      "title_tag": "Наркотическая зависимость &#8212; Шпиговский — локальная разработка",
+      "body_markers": {
+        "body_class": "wp-singular service-template-default single single-service postid-314 wp-theme-shpigovsky page-service-leaf-v1",
+        "post_id": "314",
+        "is_single_service": true,
+        "has_service_leaf": true,
+        "canonical_url": "http://shpigovsky.test/uslugi/zavisimosti/narkoticheskaya-zavisimost/"
+      },
+      "template_hint": "single-service.php (leaf)",
+      "static_v9_role": null,
+      "static_v9_status": null,
+      "conflict_objects": [],
+      "current_owner": {
+        "type": "service",
+        "id": 314
+      },
+      "conflict_severity": "none",
+      "canonical_expectation": null,
+      "menu_points_to": null,
+      "page_wins": false,
+      "service_cpt_wins": true,
+      "notes": ""
+    },
+    {
+      "route": "/uslugi/zavisimosti/povedencheskie-zavisimosti/",
+      "http_status": 200,
+      "final_url": "http://shpigovsky.test/uslugi/zavisimosti/povedencheskie-zavisimosti/",
+      "queried_object_type": "service",
+      "queried_object_id": 316,
+      "primary_h1": "Поведенческие зависимости",
+      "title_tag": "Поведенческие зависимости &#8212; Шпиговский — локальная разработка",
+      "body_markers": {
+        "body_class": "wp-singular service-template-default single single-service postid-316 wp-theme-shpigovsky page-service-leaf-v1",
+        "post_id": "316",
+        "is_single_service": true,
+        "has_service_leaf": true,
+        "canonical_url": "http://shpigovsky.test/uslugi/zavisimosti/povedencheskie-zavisimosti/"
+      },
+      "template_hint": "single-service.php (leaf)",
+      "static_v9_role": null,
+      "static_v9_status": null,
+      "conflict_objects": [],
+      "current_owner": {
+        "type": "service",
+        "id": 316
+      },
+      "conflict_severity": "none",
+      "canonical_expectation": null,
+      "menu_points_to": null,
+      "page_wins": false,
+      "service_cpt_wins": true,
+      "notes": ""
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/",
+      "http_status": 200,
+      "final_url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/",
+      "queried_object_type": "service",
+      "queried_object_id": 77,
+      "primary_h1": "Психическое здоровье",
+      "title_tag": "Психическое здоровье &#8212; Шпиговский — локальная разработка",
+      "body_markers": {
+        "body_class": "wp-singular service-template-default single single-service postid-77 wp-theme-shpigovsky page-service-subdivision-v1",
+        "post_id": "77",
+        "is_single_service": true,
+        "has_service_subdivision": true,
+        "canonical_url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/"
+      },
+      "template_hint": "single-service.php (subdivision)",
+      "static_v9_role": "SERVICE_SUBDIVISION",
+      "static_v9_status": "PLACEHOLDER",
+      "conflict_objects": [
+        {
+          "type": "page",
+          "id": 7
+        },
+        {
+          "type": "service",
+          "id": 77
+        }
+      ],
+      "current_owner": {
+        "type": "service",
+        "id": 77
+      },
+      "conflict_severity": "high",
+      "canonical_expectation": "FAM-SERVICE-SUBDIVISION",
+      "menu_points_to": null,
+      "page_wins": false,
+      "service_cpt_wins": true,
+      "notes": "Legacy page #7 shadowed by service #77"
+    },
+    {
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "http_status": 200,
+      "final_url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "queried_object_type": "service",
+      "queried_object_id": 84,
+      "primary_h1": "Расстройства пищевого поведения",
+      "title_tag": "Расстройства пищевого поведения &#8212; Шпиговский — локальная разработка",
+      "body_markers": {
+        "body_class": "wp-singular service-template-default single single-service postid-84 wp-theme-shpigovsky page-service-subdivision-v1",
+        "post_id": "84",
+        "is_single_service": true,
+        "has_service_subdivision": true,
+        "canonical_url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/"
+      },
+      "template_hint": "single-service.php (subdivision)",
+      "static_v9_role": "SERVICE_SUBDIVISION",
+      "static_v9_status": "PLACEHOLDER",
+      "conflict_objects": [
+        {
+          "type": "page",
+          "id": 8
+        },
+        {
+          "type": "service",
+          "id": 84
+        }
+      ],
+      "current_owner": {
+        "type": "service",
+        "id": 84
+      },
+      "conflict_severity": "high",
+      "canonical_expectation": "FAM-SERVICE-SUBDIVISION",
+      "menu_points_to": null,
+      "page_wins": false,
+      "service_cpt_wins": true,
+      "notes": "Legacy page #8 shadowed by service #84"
+    }
+  ]
+}

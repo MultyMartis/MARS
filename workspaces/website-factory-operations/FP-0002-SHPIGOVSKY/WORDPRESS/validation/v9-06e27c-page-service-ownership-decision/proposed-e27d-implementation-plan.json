@@ -1,0 +1,69 @@
+{
+  "task_id": "V9-06E27D",
+  "planned_from": "V9-06E27C",
+  "generated_at": "2026-07-09T18:04:15.170808+00:00",
+  "execution_mode": "BOUNDED_DB_CLEANUP_AND_MENU_RETARGET",
+  "prerequisite": "Operator approval of E27C recommendation (Option A)",
+  "steps": [
+    {
+      "step": 1,
+      "action": "Fresh DB checkpoint (mysqldump + SHA256)",
+      "object_ids": [],
+      "safety": "Mandatory pre-write",
+      "validation": "db-checkpoint.json + RESTORE.md"
+    },
+    {
+      "step": 2,
+      "action": "Retarget Primary menu item #301 from page #6 to service CPT #73",
+      "object_ids": [
+        301,
+        6,
+        73
+      ],
+      "safety": "Single menu meta update; no permalink change",
+      "validation": "Menu resolves to service; /uslugi/zavisimosti/ still 200 service #73"
+    },
+    {
+      "step": 3,
+      "action": "Post-menu HTTP + menu validation",
+      "object_ids": [
+        301,
+        73
+      ],
+      "safety": "Read-only probes before page trash",
+      "validation": "menu_route_alignment PASS"
+    },
+    {
+      "step": 4,
+      "action": "Trash legacy pages #6, #7, #8",
+      "object_ids": [
+        6,
+        7,
+        8
+      ],
+      "safety": "wp_trash_post only; no permanent delete",
+      "validation": "Pages in trash; routes unchanged (service still owns)"
+    },
+    {
+      "step": 5,
+      "action": "Post-cleanup route validation",
+      "object_ids": [
+        73,
+        74,
+        75,
+        77,
+        84
+      ],
+      "safety": "HTTP probe all zavisimosti + subdivision routes",
+      "validation": "post-cleanup-route-validation.json"
+    }
+  ],
+  "stop_conditions": [
+    "Menu retarget fails or route owner changes unexpectedly",
+    "Any protected page/service status changes",
+    "Permalink or rewrite flush required (should not happen)"
+  ],
+  "rollback": "Restore pages #6-#8 from trash; revert menu item #301 to page #6; or full DB checkpoint restore",
+  "redirects_needed": false,
+  "rewrite_flush_needed": false
+}
