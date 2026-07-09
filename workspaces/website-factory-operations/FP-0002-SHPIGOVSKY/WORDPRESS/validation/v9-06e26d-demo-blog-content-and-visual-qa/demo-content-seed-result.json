@@ -1,0 +1,33 @@
+{
+  "wave": "V9-06E26D",
+  "result": "PASS",
+  "action": "create",
+  "post_id": 750,
+  "slug": "nazvanie-stati",
+  "status": "publish",
+  "url": "http://shpigovsky.test/blog/nazvanie-stati/",
+  "db_write_count": 14,
+  "acf_fields": [
+    "article_lead",
+    "article_reading_time",
+    "article_author_label",
+    "article_hide_author_public",
+    "article_show_date_public",
+    "article_show_toc",
+    "article_toc_title",
+    "article_conclusion_heading",
+    "article_conclusion_quote",
+    "article_source_items",
+    "article_source_file_name",
+    "article_editor_status",
+    "article_content_qa_status"
+  ],
+  "media_strategy": "theme_asset_fallback_no_upload",
+  "content_sections": {
+    "h2_count": 5,
+    "h3_count": 12,
+    "inline_images": 4,
+    "sources_count": 8,
+    "faq_count": 0
+  }
+}

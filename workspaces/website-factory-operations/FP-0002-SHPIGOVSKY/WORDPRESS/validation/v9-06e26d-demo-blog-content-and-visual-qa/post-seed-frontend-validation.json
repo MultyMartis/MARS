@@ -1,0 +1,96 @@
+{
+  "wave": "V9-06E26D",
+  "result": "PASS",
+  "demo_post_id": 750,
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/o-centre/",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/kontakty/",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/otzyvy/",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/privacy-policy/",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/blog/",
+      "status": 200,
+      "result": "PASS",
+      "markers": {
+        "page-blog": true,
+        "blog-archive": true,
+        "blog-archive__heading": true,
+        "blog-archive-card": true,
+        "blog-lower-stack": true
+      },
+      "empty_state_absent": true,
+      "card_links_to_single": true
+    },
+    {
+      "route": "/blog/nazvanie-stati/",
+      "status": 200,
+      "result": "PASS",
+      "markers": {
+        "page-blog-article": true,
+        "blog-article": true,
+        "blog-article-hero": true,
+        "blog-article-body": true,
+        "blog-article-lower-stack": true,
+        "program-cta-band-section": true
+      },
+      "h1_present": true,
+      "toc_present": true,
+      "lead_present": true,
+      "conclusion_present": true,
+      "sources_present": true,
+      "cta_present": true
+    }
+  ],
+  "archive_checks": {
+    "http_200": true,
+    "card_visible": true,
+    "empty_state_hidden": true,
+    "card_links_single": true
+  },
+  "single_checks": {
+    "http_200": true,
+    "breadcrumbs": false,
+    "toc": true,
+    "lead": true,
+    "conclusion": true,
+    "sources": true,
+    "cta": true
+  },
+  "regression_pass": true
+}

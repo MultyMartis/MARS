@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-09 (V9-06E26C blog single template WordPress ACF port PASS)
+**Last updated:** 2026-07-09 (V9-06E26D demo blog content and visual QA PASS)
 
-**Current WordPress phase:** V9-06E26C Blog Single Template WordPress ACF Port **PASS** — `/blog/{slug}/` single stack; extended `group_fp02_blog_post_article_meta`; TOC/related/CTA/FAQ-ready; 0 posts seeded; runtime delivered. **Next: CREATE_V9_06E26D_DEMO_BLOG_CONTENT_AND_VISUAL_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E26C-BLOG-SINGLE-TEMPLATE-WORDPRESS-ACF-PORT-REPORT-v1.md`. Prior E26B: archive PASS @ `586d213d`.
+**Current WordPress phase:** V9-06E26D Demo Blog Content And Visual QA **PASS** — demo post `750` at `/blog/nazvanie-stati/`; archive card + single validated. **Next: CREATE_V9_06E26D_OPERATOR_BLOG_VISUAL_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E26D-DEMO-BLOG-CONTENT-AND-VISUAL-QA-REPORT-v1.md`. Prior E26C: single PASS @ `0b5dadf`.
 
 ## Active frontend workspace (V9)
 

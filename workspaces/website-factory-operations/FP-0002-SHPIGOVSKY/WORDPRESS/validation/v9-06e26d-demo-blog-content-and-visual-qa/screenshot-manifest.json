@@ -1,0 +1,73 @@
+{
+  "manifest": [
+    {
+      "file": "runtime-blog-archive-with-card-desktop-e26d.png",
+      "url": "http://shpigovsky.test/blog/",
+      "viewport": "1440x1200",
+      "captured": true,
+      "bytes": 223892,
+      "sha256": "D1487B55D4D540E4FDB3E8A18F93323FA9E23383C3446F5E2EB31EC88721F571",
+      "result": "PASS"
+    },
+    {
+      "file": "runtime-blog-single-desktop-e26d.png",
+      "url": "http://shpigovsky.test/blog/nazvanie-stati/",
+      "viewport": "1440x2200",
+      "captured": true,
+      "bytes": 413844,
+      "sha256": "50E35A34579CD7EE36895B651F01132A51587DA76ED04689892E6E3FA1DE55DB",
+      "result": "PASS"
+    },
+    {
+      "file": "runtime-blog-single-toc-e26d.png",
+      "url": "http://shpigovsky.test/blog/nazvanie-stati/",
+      "viewport": "1440x900",
+      "captured": true,
+      "bytes": 119740,
+      "sha256": "58F8D586D21AA09C2026A8EE63676FEFDBE76E5F3945C18038BDD56BCE0DF78A",
+      "result": "PASS"
+    },
+    {
+      "file": "runtime-blog-single-final-cta-e26d.png",
+      "url": "http://shpigovsky.test/blog/nazvanie-stati/#blog-article-cta-01",
+      "viewport": "1440x900",
+      "captured": true,
+      "bytes": 119740,
+      "sha256": "58F8D586D21AA09C2026A8EE63676FEFDBE76E5F3945C18038BDD56BCE0DF78A",
+      "result": "PASS"
+    },
+    {
+      "file": "runtime-blog-archive-with-card-mobile-e26d.png",
+      "url": "http://shpigovsky.test/blog/",
+      "viewport": "390x1400",
+      "captured": true,
+      "bytes": 113391,
+      "sha256": "F03766CF22ACB5B1BE45F99EB567B6B50B917812F58FD769804AB7255B8F3AC1",
+      "result": "PASS"
+    },
+    {
+      "file": "runtime-blog-single-mobile-e26d.png",
+      "url": "http://shpigovsky.test/blog/nazvanie-stati/",
+      "viewport": "390x2600",
+      "captured": true,
+      "bytes": 241891,
+      "sha256": "DE4677DD654F77388DD2CBAFDE3DDA843F5A83DF1B6B9E29E50BE273293E1ECC",
+      "result": "PASS"
+    },
+    {
+      "file": "admin-demo-post-article-meta-e26d.png",
+      "url": "http://shpigovsky.test/wp-admin/post.php?post=DEMO_ID&action=edit",
+      "captured": false,
+      "result": "PARTIAL",
+      "note": "Auth required; not captured in headless E26D"
+    },
+    {
+      "file": "admin-demo-post-status-e26d.png",
+      "url": "http://shpigovsky.test/wp-admin/edit.php",
+      "captured": false,
+      "result": "PARTIAL",
+      "note": "Auth required; not captured in headless E26D"
+    }
+  ],
+  "result": "PASS"
+}

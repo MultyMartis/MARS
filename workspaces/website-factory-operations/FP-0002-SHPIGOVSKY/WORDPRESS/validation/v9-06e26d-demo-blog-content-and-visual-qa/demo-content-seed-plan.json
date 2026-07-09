@@ -1,0 +1,49 @@
+{
+  "wave": "V9-06E26D",
+  "result": "PASS",
+  "existing_post_check": {
+    "slug_match": null,
+    "published_posts": [],
+    "auto_drafts": [
+      {
+        "ID": 64,
+        "post_title": "Черновик",
+        "post_name": "",
+        "post_status": "auto-draft"
+      }
+    ],
+    "safe_to_seed": true
+  },
+  "plan": {
+    "title": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём",
+    "slug": "nazvanie-stati",
+    "status": "publish",
+    "post_type": "post",
+    "content_source": "X:\\AI MARS\\workspaces\\fp-0002-shpigovsky-v9\\src\\partials\\sections\\blog-article-content.html",
+    "excerpt": "В статье расскажем о подходах к лечению и профилактике зависимости",
+    "category": null,
+    "tags": [],
+    "post_date": "2026-05-05 10:00:00",
+    "featured_image_strategy": "theme_asset_fallback_no_upload",
+    "acf_fields": [
+      "article_lead",
+      "article_reading_time",
+      "article_author_label",
+      "article_hide_author_public",
+      "article_show_date_public",
+      "article_show_toc",
+      "article_toc_title",
+      "article_conclusion_heading",
+      "article_conclusion_quote",
+      "article_source_items",
+      "article_source_file_name",
+      "article_editor_status",
+      "article_content_qa_status"
+    ],
+    "validation_routes": [
+      "/blog/",
+      "/blog/nazvanie-stati/"
+    ],
+    "overwrite_policy": "safe_demo_only"
+  }
+}

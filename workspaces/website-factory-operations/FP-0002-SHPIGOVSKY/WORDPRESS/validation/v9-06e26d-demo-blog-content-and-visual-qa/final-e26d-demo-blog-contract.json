@@ -1,0 +1,62 @@
+{
+  "wave": "V9-06E26D",
+  "demo_post_id": 750,
+  "title": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём",
+  "slug": "nazvanie-stati",
+  "status": "publish",
+  "url": "http://shpigovsky.test/blog/nazvanie-stati/",
+  "category_tags": [],
+  "acf_summary": [
+    "article_lead",
+    "article_reading_time",
+    "article_author_label",
+    "article_hide_author_public",
+    "article_show_date_public",
+    "article_show_toc",
+    "article_toc_title",
+    "article_conclusion_heading",
+    "article_conclusion_quote",
+    "article_source_items",
+    "article_source_file_name",
+    "article_editor_status",
+    "article_content_qa_status"
+  ],
+  "content_sections": {
+    "h2_count": 5,
+    "h3_count": 12,
+    "inline_images": 4,
+    "sources_count": 8,
+    "faq_count": 0
+  },
+  "media_strategy": "theme_asset_fallback_no_upload",
+  "archive_behavior": {
+    "http_200": true,
+    "card_visible": true,
+    "empty_state_hidden": true,
+    "card_links_single": true
+  },
+  "single_behavior": {
+    "http_200": true,
+    "breadcrumbs": false,
+    "toc": true,
+    "lead": true,
+    "conclusion": true,
+    "sources": true,
+    "cta": true
+  },
+  "limitations": [
+    "1 demo post only",
+    "related posts hidden",
+    "no WPilot",
+    "admin screenshots partial"
+  ],
+  "wpilot_boundary": "future automation only",
+  "operator_qa_checklist": [
+    "Verify /blog/ card desktop/mobile",
+    "Verify /blog/nazvanie-stati/ desktop/mobile",
+    "Confirm TOC anchors",
+    "Confirm conclusion quote and sources",
+    "Regression routes unchanged"
+  ],
+  "recommended_next_phase": "CREATE_V9_06E26D_OPERATOR_BLOG_VISUAL_QA_TASK"
+}
