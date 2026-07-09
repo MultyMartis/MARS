@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-09
-**Evidence cutoff:** 2026-07-09 (SITE-002 Run **4.232** — customer form email inbox confirmation; operator verified delivery/design/no service info issue; Runs 4.226/4.231 customer mailbox gates closed; checkpoint unchanged `SITE-002-STABLE-PROD-INFO-PAGE-FORMS-01`)
+**Evidence cutoff:** 2026-07-09 (SITE-002 Run **4.233** — post-1C import logs and monitor artifacts audit; 2026-07-08 import SUCCESS FTP-confirmed; TXT duration 0s systemic WARNING; Task Scheduler re-verified; post-4.228 hardened scheduled run pending 2026-07-10; checkpoint unchanged `SITE-002-STABLE-PROD-INFO-PAGE-FORMS-01`)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Customer form email inbox confirmation (Run 4.232)** — **COMPLETE — CUSTOMER EMAIL OPERATOR-VERIFIED**; operator confirmed delivery/design/no service info issue; Runs 4.226/4.231 mailbox gates closed · [SITE-002-PROD-MAIL-CUSTOMER-FORMS-INBOX-CONFIRMATION-01.md](sites/site-002/reports/SITE-002-PROD-MAIL-CUSTOMER-FORMS-INBOX-CONFIRMATION-01.md) · checkpoint unchanged `SITE-002-STABLE-PROD-INFO-PAGE-FORMS-01` |
+| Current SITE-002 focus | **Post-1C import logs and monitor artifacts audit (Run 4.233)** — **COMPLETE — CORRECTIVE TASKS RECOMMENDED**; FTP-confirmed 2026-07-08 import SUCCESS; monitor pre-hardening artifacts documented; observe 2026-07-10 scheduled run for hardened contract · [SITE-002-POST-1C-IMPORT-LOGS-AND-MONITOR-ARTIFACTS-AUDIT-01.md](sites/site-002/reports/SITE-002-POST-1C-IMPORT-LOGS-AND-MONITOR-ARTIFACTS-AUDIT-01.md) · checkpoint unchanged `SITE-002-STABLE-PROD-INFO-PAGE-FORMS-01` |
 
 ---
 

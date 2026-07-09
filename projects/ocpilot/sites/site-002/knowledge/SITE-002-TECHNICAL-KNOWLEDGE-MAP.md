@@ -2134,4 +2134,22 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 
 ---
 
-*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-09 (Run 4.232 — customer form email inbox confirmation).*
+## 39. Post-1C Import Logs and Monitor Artifacts Audit (2026-07-09)
+
+**Operation:** Run 4.233 — `SITE-002-POST-1C-IMPORT-LOGS-AND-MONITOR-ARTIFACTS-AUDIT-01`
+
+| Item | Value |
+|------|-------|
+| **Server 1C reports path** | `/storage/mars-tools/cron/reports/mars_1c_import_YYYY-MM-DD_HHMMSS.txt` |
+| **Server 1C logs path** | `/storage/mars-tools/cron/logs/mars_1c_import_YYYYMMDD.log` |
+| **2026-07-08 import run ID** | `mars-20260708-080001-bb67ff2b` — **SUCCESS** (FTP-confirmed) |
+| **TXT Duration anomaly** | `Duration: 0 seconds` systemic on all run-mode reports — **WARNING** only |
+| **Scheduled monitor folder** | `scheduled-monitors/post-1c/2026-07-08_12-30-02` — pre-hardening (summary+log) |
+| **Post-4.228 scheduled hardened run** | **SAFE UNKNOWN** — observe 2026-07-10 12:30 |
+| **Task Scheduler** | Re-verified OK — enabled; LastTaskResult **0** |
+| **Audit storage** | `deployments/SITE-002-POST-1C-IMPORT-LOGS-AND-MONITOR-ARTIFACTS-AUDIT-01/` |
+| **Report** | [SITE-002-POST-1C-IMPORT-LOGS-AND-MONITOR-ARTIFACTS-AUDIT-01.md](../reports/SITE-002-POST-1C-IMPORT-LOGS-AND-MONITOR-ARTIFACTS-AUDIT-01.md) |
+
+---
+
+*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-09 (Run 4.233 — post-1C import logs and monitor artifacts audit).*

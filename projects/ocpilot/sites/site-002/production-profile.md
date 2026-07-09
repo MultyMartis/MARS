@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-09 (Run 4.232 — customer form email inbox confirmation; operator verified delivery/design/no service info; checkpoint unchanged `SITE-002-STABLE-PROD-INFO-PAGE-FORMS-01`)
+**Last updated:** 2026-07-09 (Run 4.233 — post-1C import logs and monitor artifacts audit; FTP-confirmed import logs; checkpoint unchanged `SITE-002-STABLE-PROD-INFO-PAGE-FORMS-01`)
 
 ---
 
@@ -77,7 +77,7 @@ Do not claim that Production exactly matches TEST unless evidence proves it.
 | Yandex analytics (Production) | **VERIFIED** (Run 4.189) — Metrika counter in `common/footer.twig` (masked `110***756`); Webmaster verification in `common/header.twig` (masked `13a***c77`); confirmed on live HTML (home, category, information); **OPERATOR WIP — DO NOT OVERWRITE** · [report](reports/SITE-002-PROD-YANDEX-CODES-VERIFY-01.md) |
 | HTML body structure (Production) | **FIXED** (Run 4.190) — duplicate `<body>` + global preloader + `page_overlay` removed from live `header.twig`; 4-URL HTML validation PASS; Yandex blocks unchanged · [report](reports/SITE-002-PROD-HTML-BODY-DUPLICATE-FIX-01.md) |
 | MARS 1C cron wrapper | **OPERATIONAL — FIRST SCHEDULED RUN VERIFIED** (Run 4.194) — Beget cron first automatic run SUCCESS 2026-07-06 08:00 Moscow; run ID `mars-20260706-080002-09436ae7`; report `mars_1c_import_2026-07-06_080007.txt`; steps `1c`+`1c_offers` PASS; lock removed; schedule `0 8 * * *` (Moscow → 12:00 Barnaul); wrapper v1.1.0; HTTP gateway; Sergey legacy **preserved**; duration 0s field **WARN only** |
-| MARS 1C cron reports | **CURRENT** (Run 4.194) — `/storage/mars-tools/cron/reports/` includes first scheduled run `mars_1c_import_2026-07-06_080007.txt` plus prior manual run and status files; Run 4.184 cleanup retained policy |
+| MARS 1C cron reports | **CURRENT — FTP AUDITED** (Run 4.233) — `/storage/mars-tools/cron/reports/` holds daily TXT reports through `mars_1c_import_2026-07-09_080009.txt`; logs in `/storage/mars-tools/cron/logs/mars_1c_import_YYYYMMDD.log`; 2026-07-08 run `mars-20260708-080001-bb67ff2b` SUCCESS; TXT `Duration: 0 seconds` **systemic WARNING** (step durations correct) · [audit report](reports/SITE-002-POST-1C-IMPORT-LOGS-AND-MONITOR-ARTIFACTS-AUDIT-01.md) |
 | Catalog load more (Production) | **ACTIVE** (Run 4.185) — «Показать ещё» append via `initLoadMore()`; counter «Показано X из Y»; numeric pagination hidden when JS (`js-load-more`); rollback in Storage `deployments/SITE-002-PROD-LOAD-MORE-01/rollback/` |
 | Neutral parent category tiles (Production) | **ACTIVE** (Run 4.195 + **4.220** + **4.221**) — **11** branches on homepage/hub/megamenu `zpm-cat-card`; IDs `322,331,301,326,354,358,207,80,86,88,360`; display order **А → Я** (Run 4.221); WebP images incl. `lari`, `konditerskiy-inventar` (Run 4.220); `category_visibility.php` · [4.195 report](reports/SITE-002-PROD-NEUTRAL-PARENT-CATEGORIES-ROLLOUT-01.md) · [4.220 report](reports/SITE-002-PROD-NEW-SECTIONS-ENTRYPOINTS-02.md) · [4.221 report](reports/SITE-002-PROD-CATEGORY-ENTRYPOINTS-SORT-AZ-01.md) |
 | Neutral category image white-bg refresh (Production) | **ACTIVE** (Run 4.196) — 3 images refreshed to white studio style (354/358/86); 331 deferred; master `1800×1200` + cache `300×300` FTP overwrite; 0 admin saves; **COMPOSER_ONLY_NO_API** · [report](reports/SITE-002-PROD-NEUTRAL-CATEGORY-IMAGES-WHITE-BG-REFRESH-01.md) |
