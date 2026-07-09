@@ -1,7 +1,7 @@
 # SITE-002 — Site Passport
 
-**Status:** **STABLE PRODUCTION CHECKPOINT — CATEGORY ENTRYPOINTS SORT AZ** (Run 4.221: megamenu/home/hub A→Z verified; Run 4.220 entrypoints preserved; parent `SITE-002-STABLE-PROD-NEW-SECTIONS-ENTRYPOINTS-02`)
-**Run:** 4.221 — SITE-002 Category Entrypoints Sort А→Я (2026-07-08)
+**Status:** **STABLE PRODUCTION CHECKPOINT — CRON DURATION FIX** (checkpoint `SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01`; Run 4.241 full tech SEO audit complete — read-only, no new checkpoint)
+**Run:** 4.241 — SITE-002 Full Tech SEO Audit (2026-07-10)
 
 ---
 

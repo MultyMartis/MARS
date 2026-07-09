@@ -1147,6 +1147,18 @@ Before **any** task touching **trust block**, **certificates**, **dealers form**
 - **MARS policy:** monitor/audit delta only; **never** hand-edit `sitemap.xml` in normal ops; onboard new categories via admin SEO, do not remove new URLs by default
 - Tool: `site-002-prod-sitemap-authority-discovery-01.py` · [report](../reports/SITE-002-PROD-SITEMAP-AUTHORITY-DISCOVERY-01.md)
 
+### Full Tech SEO Audit (Run 4.241)
+
+- **Status:** **COMPLETE — READ-ONLY** (2026-07-10)
+- **Scope:** 1417 URL HTTP crawl; meta/canonical/H1; internal links; assets/images; sitemap/robots/llms; catalog 237 categories + 1156 products; information/forms static; brand scan; security surface; DB + FTP cross-check
+- **Result:** 1408/1408 sitemap URLs HTTP **200**; **0** broken internal links; **0** public **БЗПМ**; **0** broken core CSS/JS
+- **Accepted:** `/contact` canonical; `/kontakty` 404; post-1C verification pending (Run 4.240)
+- **Top hygiene items:** flat Lari URLs without 301 (canonical OK); 7 legacy `index.php?route=information` sitemap entries; optional `/contact` sitemap inclusion; missing alt bulk
+- **Issue register:** Storage `audits/SITE-002-PROD-FULL-TECH-SEO-AUDIT-01/issue-register/` (11 items: P2×3, P3×5, P4×3)
+- **Roadmap:** Storage `audits/SITE-002-PROD-FULL-TECH-SEO-AUDIT-01/roadmap/`
+- **Checkpoint:** unchanged `SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01`
+- Tool: `site-002-prod-full-tech-seo-audit-01.py` · [report](../reports/SITE-002-PROD-FULL-TECH-SEO-AUDIT-01.md)
+
 ### Post-1C monitor scheduler (Run 4.215 / 4.216)
 
 - **1C import:** automatic Beget cron **08:00 Moscow** / **12:00 Barnaul**
