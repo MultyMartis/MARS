@@ -1,0 +1,48 @@
+{
+  "task_id": "V9-06E27B",
+  "generated_at": "2026-07-09T17:20:26.717204+00:00",
+  "result": "PASS",
+  "counts_before": {
+    "page": {
+      "auto-draft": 1,
+      "draft": 1,
+      "publish": 22
+    },
+    "post": {
+      "publish": 1
+    },
+    "service": {
+      "publish": 17
+    }
+  },
+  "counts_after": {
+    "page": {
+      "auto-draft": 1,
+      "publish": 18,
+      "trash": 5
+    },
+    "post": {
+      "publish": 1
+    },
+    "service": {
+      "publish": 17
+    }
+  },
+  "changed_ids": [
+    9,
+    10,
+    17,
+    21,
+    25
+  ],
+  "approved_ids_only": true,
+  "protected_ids_unchanged": true,
+  "menu_unchanged": true,
+  "options_unchanged": true,
+  "source_changes": 0,
+  "runtime_changes": 0,
+  "permalink_changes": false,
+  "rewrite_flush": false,
+  "redirects_created": 0,
+  "menu_changes": 0
+}

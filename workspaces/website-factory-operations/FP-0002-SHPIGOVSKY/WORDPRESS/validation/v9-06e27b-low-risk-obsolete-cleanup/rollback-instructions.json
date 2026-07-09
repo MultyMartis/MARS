@@ -1,0 +1,62 @@
+{
+  "task_id": "V9-06E27B",
+  "generated_at": "2026-07-09T17:20:26.716452+00:00",
+  "result": "PASS",
+  "items": [
+    {
+      "page_id": 9,
+      "title": "Генотипирование",
+      "path": "/uslugi/genotipirovanie__trashed/",
+      "restore_action": "WP Admin → Pages → Trash → Restore 'Генотипирование' (ID 9)",
+      "db_restore_action": "UPDATE fp02_posts SET post_status='publish' WHERE ID=9",
+      "wp_cli_restore": "wp post update 9 --post_status=publish",
+      "validation_after_restore": "/uslugi/genotipirovanie__trashed/",
+      "checkpoint_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e27b-low-risk-obsolete-cleanup-pre-20260709-171947",
+      "full_db_restore": "mysql --host=127.0.0.1 --user=root mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e27b-low-risk-obsolete-cleanup-pre-20260709-171947\\mars_wp_fp0002.sql\""
+    },
+    {
+      "page_id": 10,
+      "title": "Специалисты",
+      "path": "/specyalisty__trashed/",
+      "restore_action": "WP Admin → Pages → Trash → Restore 'Специалисты' (ID 10)",
+      "db_restore_action": "UPDATE fp02_posts SET post_status='publish' WHERE ID=10",
+      "wp_cli_restore": "wp post update 10 --post_status=publish",
+      "validation_after_restore": "/specyalisty__trashed/",
+      "checkpoint_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e27b-low-risk-obsolete-cleanup-pre-20260709-171947",
+      "full_db_restore": "mysql --host=127.0.0.1 --user=root mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e27b-low-risk-obsolete-cleanup-pre-20260709-171947\\mars_wp_fp0002.sql\""
+    },
+    {
+      "page_id": 17,
+      "title": "Интервью и СМИ",
+      "path": "/o-centre/intervyu-i-smi__trashed/",
+      "restore_action": "WP Admin → Pages → Trash → Restore 'Интервью и СМИ' (ID 17)",
+      "db_restore_action": "UPDATE fp02_posts SET post_status='publish' WHERE ID=17",
+      "wp_cli_restore": "wp post update 17 --post_status=publish",
+      "validation_after_restore": "/o-centre/intervyu-i-smi__trashed/",
+      "checkpoint_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e27b-low-risk-obsolete-cleanup-pre-20260709-171947",
+      "full_db_restore": "mysql --host=127.0.0.1 --user=root mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e27b-low-risk-obsolete-cleanup-pre-20260709-171947\\mars_wp_fp0002.sql\""
+    },
+    {
+      "page_id": 21,
+      "title": "Правовая информация",
+      "path": "/pravovaya-informaciya-pilzovatelyu__trashed/",
+      "restore_action": "WP Admin → Pages → Trash → Restore 'Правовая информация' (ID 21)",
+      "db_restore_action": "UPDATE fp02_posts SET post_status='draft' WHERE ID=21",
+      "wp_cli_restore": "wp post update 21 --post_status=draft",
+      "validation_after_restore": "/pravovaya-informaciya-pilzovatelyu__trashed/",
+      "checkpoint_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e27b-low-risk-obsolete-cleanup-pre-20260709-171947",
+      "full_db_restore": "mysql --host=127.0.0.1 --user=root mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e27b-low-risk-obsolete-cleanup-pre-20260709-171947\\mars_wp_fp0002.sql\""
+    },
+    {
+      "page_id": 25,
+      "title": "Политика конфиденциальности (системная)",
+      "path": "/privacy-policy-page__trashed/",
+      "restore_action": "WP Admin → Pages → Trash → Restore 'Политика конфиденциальности (системная)' (ID 25)",
+      "db_restore_action": "UPDATE fp02_posts SET post_status='publish' WHERE ID=25",
+      "wp_cli_restore": "wp post update 25 --post_status=publish",
+      "validation_after_restore": "/privacy-policy-page__trashed/",
+      "checkpoint_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e27b-low-risk-obsolete-cleanup-pre-20260709-171947",
+      "full_db_restore": "mysql --host=127.0.0.1 --user=root mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e27b-low-risk-obsolete-cleanup-pre-20260709-171947\\mars_wp_fp0002.sql\""
+    }
+  ]
+}

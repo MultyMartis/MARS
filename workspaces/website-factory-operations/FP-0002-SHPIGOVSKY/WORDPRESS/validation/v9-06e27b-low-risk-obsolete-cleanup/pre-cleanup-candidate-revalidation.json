@@ -1,0 +1,127 @@
+{
+  "task_id": "V9-06E27B",
+  "generated_at": "2026-07-09T17:20:04.504033+00:00",
+  "result": "PASS",
+  "candidates": [
+    {
+      "page_id": 9,
+      "title": "Генотипирование",
+      "path": "/uslugi/genotipirovanie/",
+      "current_status": "publish",
+      "post_type": "page",
+      "dependency_check": "PASS",
+      "issues": [],
+      "approved_action": "trash",
+      "e27a_reason": "Legacy genotipirovanie page; HTTP 404; superseded by service CPT model",
+      "result": "PASS"
+    },
+    {
+      "page_id": 10,
+      "title": "Специалисты",
+      "path": "/specyalisty/",
+      "current_status": "publish",
+      "post_type": "page",
+      "dependency_check": "PASS",
+      "issues": [],
+      "approved_action": "trash",
+      "e27a_reason": "Orphan specialists page; not in V9 manifest or menus",
+      "result": "PASS"
+    },
+    {
+      "page_id": 17,
+      "title": "Интервью и СМИ",
+      "path": "/o-centre/intervyu-i-smi/",
+      "current_status": "publish",
+      "post_type": "page",
+      "dependency_check": "PASS",
+      "issues": [],
+      "approved_action": "trash",
+      "e27a_reason": "Intervyu i SMI; not in V9 manifest; skeleton placeholder",
+      "result": "PASS"
+    },
+    {
+      "page_id": 21,
+      "title": "Правовая информация",
+      "path": "/pravovaya-informaciya-pilzovatelyu/",
+      "current_status": "draft",
+      "post_type": "page",
+      "dependency_check": "PASS",
+      "issues": [],
+      "approved_action": "trash",
+      "e27a_reason": "Draft legal hub superseded by IDs 3,22-24",
+      "result": "PASS"
+    },
+    {
+      "page_id": 25,
+      "title": "Политика конфиденциальности (системная)",
+      "path": "/privacy-policy-page/",
+      "current_status": "publish",
+      "post_type": "page",
+      "dependency_check": "PASS",
+      "issues": [],
+      "approved_action": "trash",
+      "e27a_reason": "Duplicate privacy shell; canonical is ID 3 /privacy-policy/",
+      "result": "PASS"
+    }
+  ],
+  "protected_objects": [
+    {
+      "id": 3,
+      "type": "page",
+      "status": "publish",
+      "unchanged_expected": true
+    },
+    {
+      "id": 4,
+      "type": "page",
+      "status": "publish",
+      "unchanged_expected": true
+    },
+    {
+      "id": 6,
+      "type": "page",
+      "status": "publish",
+      "unchanged_expected": true
+    },
+    {
+      "id": 7,
+      "type": "page",
+      "status": "publish",
+      "unchanged_expected": true
+    },
+    {
+      "id": 8,
+      "type": "page",
+      "status": "publish",
+      "unchanged_expected": true
+    },
+    {
+      "id": 19,
+      "type": "page",
+      "status": "publish",
+      "unchanged_expected": true
+    },
+    {
+      "id": 750,
+      "type": "post",
+      "status": "publish",
+      "unchanged_expected": true
+    },
+    {
+      "id": 73,
+      "type": "service",
+      "status": "publish",
+      "unchanged_expected": true
+    }
+  ],
+  "options_snapshot": {
+    "page_on_front": "4",
+    "page_for_posts": "19",
+    "show_on_front": "page",
+    "permalink_structure": "/blog/%postname%/",
+    "blog_public": "0",
+    "wp_page_for_privacy_policy": "3"
+  },
+  "e27a_batch_a_operation": "trash",
+  "page_21_trash_authorized": true
+}

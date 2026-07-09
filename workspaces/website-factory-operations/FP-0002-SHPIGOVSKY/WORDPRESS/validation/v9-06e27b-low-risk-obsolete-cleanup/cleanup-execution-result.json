@@ -1,0 +1,89 @@
+{
+  "task_id": "V9-06E27B",
+  "generated_at": "2026-07-09T17:20:11.079808+00:00",
+  "result": "PASS",
+  "pages_trashed": 5,
+  "operations": [
+    {
+      "page_id": 9,
+      "title": "Генотипирование",
+      "path": "/uslugi/genotipirovanie__trashed/",
+      "before_status": "publish",
+      "after_status": "trash",
+      "operation": "wp_trash_post(9)",
+      "result": "PASS",
+      "route_after": {
+        "route": "/uslugi/genotipirovanie__trashed/",
+        "http_status": 404,
+        "final_url": "http://shpigovsky.test/uslugi/genotipirovanie__trashed/",
+        "body_len": 53488
+      },
+      "rollback": "wp post update 9 --post_status=publish"
+    },
+    {
+      "page_id": 10,
+      "title": "Специалисты",
+      "path": "/specyalisty__trashed/",
+      "before_status": "publish",
+      "after_status": "trash",
+      "operation": "wp_trash_post(10)",
+      "result": "PASS",
+      "route_after": {
+        "route": "/specyalisty__trashed/",
+        "http_status": 404,
+        "final_url": "http://shpigovsky.test/specyalisty__trashed/",
+        "body_len": 53488
+      },
+      "rollback": "wp post update 10 --post_status=publish"
+    },
+    {
+      "page_id": 17,
+      "title": "Интервью и СМИ",
+      "path": "/o-centre/intervyu-i-smi__trashed/",
+      "before_status": "publish",
+      "after_status": "trash",
+      "operation": "wp_trash_post(17)",
+      "result": "PASS",
+      "route_after": {
+        "route": "/o-centre/intervyu-i-smi__trashed/",
+        "http_status": 404,
+        "final_url": "http://shpigovsky.test/o-centre/intervyu-i-smi__trashed/",
+        "body_len": 53488
+      },
+      "rollback": "wp post update 17 --post_status=publish"
+    },
+    {
+      "page_id": 21,
+      "title": "Правовая информация",
+      "path": "/pravovaya-informaciya-pilzovatelyu__trashed/",
+      "before_status": "draft",
+      "after_status": "trash",
+      "operation": "wp_trash_post(21)",
+      "result": "PASS",
+      "route_after": {
+        "route": "/pravovaya-informaciya-pilzovatelyu__trashed/",
+        "http_status": 404,
+        "final_url": "http://shpigovsky.test/pravovaya-informaciya-pilzovatelyu__trashed/",
+        "body_len": 53488
+      },
+      "rollback": "wp post update 21 --post_status=draft"
+    },
+    {
+      "page_id": 25,
+      "title": "Политика конфиденциальности (системная)",
+      "path": "/privacy-policy-page__trashed/",
+      "before_status": "publish",
+      "after_status": "trash",
+      "operation": "wp_trash_post(25)",
+      "result": "PASS",
+      "route_after": {
+        "route": "/privacy-policy-page__trashed/",
+        "http_status": 404,
+        "final_url": "http://shpigovsky.test/privacy-policy-page__trashed/",
+        "body_len": 53488
+      },
+      "rollback": "wp post update 25 --post_status=publish"
+    }
+  ],
+  "db_writes": 5
+}

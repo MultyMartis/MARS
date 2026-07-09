@@ -1,0 +1,586 @@
+{
+  "task_id": "V9-06E27B",
+  "wave": "V9-06E27B",
+  "generated_at": "2026-07-09T17:20:04.396809+00:00",
+  "result": "PASS",
+  "checkpoint_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e27b-low-risk-obsolete-cleanup-pre-20260709-171947",
+  "dump_file": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e27b-low-risk-obsolete-cleanup-pre-20260709-171947/mars_wp_fp0002.sql",
+  "dump_sha256": "BD9557230A86D7F77E05387C1466C216C4937E72E42912FF028BA45C181855E5",
+  "dump_size_bytes": 2011954,
+  "dump_note": "Fresh mysqldump via X:\\MARS-Localhost\\laragon\\bin\\mysql\\mysql-8.4.3-winx64\\bin\\mysqldump.exe",
+  "db": "mars_wp_fp0002",
+  "prefix": "fp02_",
+  "e27b_baseline_commit": "2570a9a3cf6ee30858ec586a3a76ec03317f8539",
+  "approved_candidate_ids": [
+    9,
+    10,
+    17,
+    21,
+    25
+  ],
+  "candidates_before": {
+    "9": {
+      "ID": 9,
+      "post_title": "Генотипирование",
+      "post_name": "genotipirovanie",
+      "post_status": "publish",
+      "post_type": "page",
+      "post_parent": 5,
+      "menu_order": 0,
+      "post_modified": "2026-07-02 18:53:38",
+      "path": "/uslugi/genotipirovanie/",
+      "page_template": "default",
+      "meta_count": 0,
+      "meta_snapshot": [],
+      "in_menu": false,
+      "menu_items": [],
+      "is_front_page": false,
+      "is_posts_page": false,
+      "is_privacy_page": false
+    },
+    "10": {
+      "ID": 10,
+      "post_title": "Специалисты",
+      "post_name": "specyalisty",
+      "post_status": "publish",
+      "post_type": "page",
+      "post_parent": 0,
+      "menu_order": 0,
+      "post_modified": "2026-07-02 18:53:38",
+      "path": "/specyalisty/",
+      "page_template": "default",
+      "meta_count": 1,
+      "meta_snapshot": [
+        {
+          "meta_key": "_edit_lock",
+          "meta_value": "1783267519:2"
+        }
+      ],
+      "in_menu": false,
+      "menu_items": [],
+      "is_front_page": false,
+      "is_posts_page": false,
+      "is_privacy_page": false
+    },
+    "17": {
+      "ID": 17,
+      "post_title": "Интервью и СМИ",
+      "post_name": "intervyu-i-smi",
+      "post_status": "publish",
+      "post_type": "page",
+      "post_parent": 11,
+      "menu_order": 0,
+      "post_modified": "2026-07-02 18:53:38",
+      "path": "/o-centre/intervyu-i-smi/",
+      "page_template": "default",
+      "meta_count": 0,
+      "meta_snapshot": [],
+      "in_menu": false,
+      "menu_items": [],
+      "is_front_page": false,
+      "is_posts_page": false,
+      "is_privacy_page": false
+    },
+    "21": {
+      "ID": 21,
+      "post_title": "Правовая информация",
+      "post_name": "pravovaya-informaciya-pilzovatelyu",
+      "post_status": "draft",
+      "post_type": "page",
+      "post_parent": 0,
+      "menu_order": 0,
+      "post_modified": "2026-07-02 18:53:38",
+      "path": "/pravovaya-informaciya-pilzovatelyu/",
+      "page_template": "default",
+      "meta_count": 0,
+      "meta_snapshot": [],
+      "in_menu": false,
+      "menu_items": [],
+      "is_front_page": false,
+      "is_posts_page": false,
+      "is_privacy_page": false
+    },
+    "25": {
+      "ID": 25,
+      "post_title": "Политика конфиденциальности (системная)",
+      "post_name": "privacy-policy-page",
+      "post_status": "publish",
+      "post_type": "page",
+      "post_parent": 0,
+      "menu_order": 0,
+      "post_modified": "2026-07-02 18:53:38",
+      "path": "/privacy-policy-page/",
+      "page_template": "default",
+      "meta_count": 0,
+      "meta_snapshot": [],
+      "in_menu": false,
+      "menu_items": [],
+      "is_front_page": false,
+      "is_posts_page": false,
+      "is_privacy_page": false
+    }
+  },
+  "protected_objects": {
+    "pages": {
+      "3": {
+        "ID": 3,
+        "post_title": "Политика конфиденциальности",
+        "post_name": "privacy-policy",
+        "post_status": "publish",
+        "post_type": "page",
+        "post_parent": 0,
+        "menu_order": 0,
+        "post_modified": "2026-07-02 18:53:38",
+        "path": "/privacy-policy/",
+        "page_template": "page-templates/legal.php",
+        "meta_count": 1,
+        "meta_snapshot": [
+          {
+            "meta_key": "_wp_page_template",
+            "meta_value": "page-templates/legal.php"
+          }
+        ],
+        "in_menu": true,
+        "menu_items": [
+          {
+            "menu_item_id": 37,
+            "menu_name": "Legal",
+            "object_id": "3"
+          }
+        ],
+        "is_front_page": false,
+        "is_posts_page": false,
+        "is_privacy_page": true
+      },
+      "4": {
+        "ID": 4,
+        "post_title": "Главная",
+        "post_name": "glavnaya",
+        "post_status": "publish",
+        "post_type": "page",
+        "post_parent": 0,
+        "menu_order": 0,
+        "post_modified": "2026-07-08 20:14:08",
+        "path": "/glavnaya/",
+        "page_template": "default",
+        "meta_count": 161,
+        "meta_snapshot": [
+          {
+            "meta_key": "_edit_last",
+            "meta_value": "2"
+          },
+          {
+            "meta_key": "_edit_lock",
+            "meta_value": "1783530711:2"
+          },
+          {
+            "meta_key": "_hero_cta_label",
+            "meta_value": "field_fp02_hero_cta_label_home"
+          },
+          {
+            "meta_key": "_hero_media",
+            "meta_value": "field_fp02_hero_media_home"
+          },
+          {
+            "meta_key": "_home_advantages",
+            "meta_value": "field_fp02_home_advantages"
+          },
+          {
+            "meta_key": "_home_advantages_0_text",
+            "meta_value": "field_fp02_home_advantages_text"
+          },
+          {
+            "meta_key": "_home_advantages_0_title",
+            "meta_value": "field_fp02_home_advantages_title"
+          },
+          {
+            "meta_key": "_home_advantages_1_text",
+            "meta_value": "field_fp02_home_advantages_text"
+          },
+          {
+            "meta_key": "_home_advantages_1_title",
+            "meta_value": "field_fp02_home_advantages_title"
+          },
+          {
+            "meta_key": "_home_advantages_2_text",
+            "meta_value": "field_fp02_home_advantages_text"
+          },
+          {
+            "meta_key": "_home_advantages_2_title",
+            "meta_value": "field_fp02_home_advantages_title"
+          },
+          {
+            "meta_key": "_home_advantages_3_text",
+            "meta_value": "field_fp02_home_advantages_text"
+          },
+          {
+            "meta_key": "_home_advantages_3_title",
+            "meta_value": "field_fp02_home_advantages_title"
+          },
+          {
+            "meta_key": "_home_advantages_4_text",
+            "meta_value": "field_fp02_home_advantages_text"
+          },
+          {
+            "meta_key": "_home_advantages_4_title",
+            "meta_value": "field_fp02_home_advantages_title"
+          },
+          {
+            "meta_key": "_home_advantages_5_text",
+            "meta_value": "field_fp02_home_advantages_text"
+          },
+          {
+            "meta_key": "_home_advantages_5_title",
+            "meta_value": "field_fp02_home_advantages_title"
+          },
+          {
+            "meta_key": "_home_articles_heading",
+            "meta_value": "field_fp02_home_articles_heading"
+          },
+          {
+            "meta_key": "_home_blog_teaser_enabled",
+            "meta_value": "field_fp02_home_blog_teaser_enabled"
+          },
+          {
+            "meta_key": "_home_comfort_heading",
+            "meta_value": "field_fp02_home_comfort_heading"
+          },
+          {
+            "meta_key": "_home_comfort_lead",
+            "meta_value": "field_fp02_home_comfort_lead"
+          },
+          {
+            "meta_key": "_home_cta_text",
+            "meta_value": "field_fp02_home_cta_text"
+          },
+          {
+            "meta_key": "_home_cta_title",
+            "meta_value": "field_fp02_home_cta_title"
+          },
+          {
+            "meta_key": "_home_faq_heading",
+            "meta_value": "field_fp02_home_faq_heading"
+          },
+          {
+            "meta_key": "_home_faq_items",
+            "meta_value": "field_fp02_home_faq_items"
+          },
+          {
+            "meta_key": "_home_faq_items_0_answer",
+            "meta_value": "field_fp02_home_faq_answer"
+          },
+          {
+            "meta_key": "_home_faq_items_0_question",
+            "meta_value": "field_fp02_home_faq_question"
+          },
+          {
+            "meta_key": "_home_faq_items_1_answer",
+            "meta_value": "field_fp02_home_faq_answer"
+          },
+          {
+            "meta_key": "_home_faq_items_1_question",
+            "meta_value": "field_fp02_home_faq_question"
+          },
+          {
+            "meta_key": "_home_faq_items_2_answer",
+            "meta_value": "field_fp02_home_faq_answer"
+          },
+          {
+            "meta_key": "_home_faq_items_2_question",
+            "meta_value": "field_fp02_home_faq_question"
+          },
+          {
+            "meta_key": "_home_faq_items_3_answer",
+            "meta_value": "field_fp02_home_faq_answer"
+          },
+          {
+            "meta_key": "_home_faq_items_3_question",
+            "meta_value": "field_fp02_home_faq_question"
+          },
+          {
+            "meta_key": "_home_faq_items_4_answer",
+            "meta_value": "field_fp02_home_faq_answer"
+          },
+          {
+            "meta_key": "_home_faq_items_4_question",
+            "meta_value": "field_fp02_home_faq_question"
+          },
+          {
+            "meta_key": "_home_gallery_media",
+            "meta_value": "field_fp02_home_gallery_media"
+          },
+          {
+            "meta_key": "_home_gallery_media_0_media",
+            "meta_value": "field_fp02_home_gallery_item_media"
+          },
+          {
+            "meta_key": "_home_gallery_media_0_text",
+            "meta_value": "field_fp02_home_gallery_item_text"
+          },
+          {
+            "meta_key": "_home_gallery_media_0_title",
+            "meta_value": "field_fp02_home_gallery_item_title"
+          },
+          {
+            "meta_key": "_home_gallery_media_1_media",
+            "meta_value": "field_fp02_home_gallery_item_media"
+          },
+          {
+            "meta_key": "_home_gallery_media_1_text",
+            "meta_value": "field_fp02_home_gallery_item_text"
+          },
+          {
+            "meta_key": "_home_gallery_media_1_title",
+            "meta_value": "field_fp02_home_gallery_item_title"
+          },
+          {
+            "meta_key": "_home_gallery_media_2_media",
+            "meta_value": "field_fp02_home_gallery_item_media"
+          },
+          {
+            "meta_key": "_home_gallery_media_2_text",
+            "meta_value": "field_fp02_home_gallery_item_text"
+          },
+          {
+            "meta_key": "_home_gallery_media_2_title",
+            "meta_value": "field_fp02_home_gallery_item_title"
+          },
+          {
+            "meta_key": "_home_gallery_media_3_media",
+            "meta_value": "field_fp02_home_gallery_item_media"
+          },
+          {
+            "meta_key": "_home_gallery_media_3_text",
+            "meta_value": "field_fp02_home_gallery_item_text"
+          },
+          {
+            "meta_key": "_home_gallery_media_3_title",
+            "meta_value": "field_fp02_home_gallery_item_title"
+          },
+          {
+            "meta_key": "_home_hero_slides",
+            "meta_value": "field_fp02_home_hero_slides"
+          },
+          {
+            "meta_key": "_home_hero_slides_0_image",
+            "meta_value": "field_fp02_home_hero_image"
+          }
+        ],
+        "in_menu": false,
+        "menu_items": [],
+        "is_front_page": true,
+        "is_posts_page": false,
+        "is_privacy_page": false
+      },
+      "6": {
+        "ID": 6,
+        "post_title": "Зависимости",
+        "post_name": "zavisimosti",
+        "post_status": "publish",
+        "post_type": "page",
+        "post_parent": 5,
+        "menu_order": 0,
+        "post_modified": "2026-07-02 18:53:38",
+        "path": "/uslugi/zavisimosti/",
+        "page_template": "default",
+        "meta_count": 0,
+        "meta_snapshot": [],
+        "in_menu": true,
+        "menu_items": [
+          {
+            "menu_item_id": 301,
+            "menu_name": "Primary",
+            "object_id": "6"
+          }
+        ],
+        "is_front_page": false,
+        "is_posts_page": false,
+        "is_privacy_page": false
+      },
+      "7": {
+        "ID": 7,
+        "post_title": "Психическое здоровье",
+        "post_name": "psihicheskoe-zdorovie",
+        "post_status": "publish",
+        "post_type": "page",
+        "post_parent": 5,
+        "menu_order": 0,
+        "post_modified": "2026-07-02 18:53:38",
+        "path": "/uslugi/psihicheskoe-zdorovie/",
+        "page_template": "default",
+        "meta_count": 0,
+        "meta_snapshot": [],
+        "in_menu": false,
+        "menu_items": [],
+        "is_front_page": false,
+        "is_posts_page": false,
+        "is_privacy_page": false
+      },
+      "8": {
+        "ID": 8,
+        "post_title": "Расстройства пищевого поведения",
+        "post_name": "rasstroystva-pischevogo-povedeniya",
+        "post_status": "publish",
+        "post_type": "page",
+        "post_parent": 5,
+        "menu_order": 0,
+        "post_modified": "2026-07-02 18:53:38",
+        "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+        "page_template": "default",
+        "meta_count": 0,
+        "meta_snapshot": [],
+        "in_menu": false,
+        "menu_items": [],
+        "is_front_page": false,
+        "is_posts_page": false,
+        "is_privacy_page": false
+      },
+      "19": {
+        "ID": 19,
+        "post_title": "Статьи",
+        "post_name": "blog",
+        "post_status": "publish",
+        "post_type": "page",
+        "post_parent": 0,
+        "menu_order": 0,
+        "post_modified": "2026-07-02 18:53:38",
+        "path": "/blog/",
+        "page_template": "default",
+        "meta_count": 15,
+        "meta_snapshot": [
+          {
+            "meta_key": "_edit_lock",
+            "meta_value": "1783610113:2"
+          },
+          {
+            "meta_key": "blog_archive_card_link_label",
+            "meta_value": "Читать"
+          },
+          {
+            "meta_key": "blog_archive_empty_text",
+            "meta_value": "Мы готовим материалы для этого раздела. Загляните позже или запишитесь на консультацию — первый разговор ни к чему не обязывает."
+          },
+          {
+            "meta_key": "blog_archive_empty_title",
+            "meta_value": "Статей пока нет"
+          },
+          {
+            "meta_key": "blog_archive_expert_cta_label",
+            "meta_value": "Записаться на консультацию"
+          },
+          {
+            "meta_key": "blog_archive_expert_name",
+            "meta_value": "Сергей Юрьевич Шпиговский"
+          },
+          {
+            "meta_key": "blog_archive_expert_quote_text",
+            "meta_value": "Мы делимся здесь практическими материалами о зависимостях и восстановлении — простым языком, без запугивания и без обещаний мгновенного результата."
+          },
+          {
+            "meta_key": "blog_archive_expert_role",
+            "meta_value": "Основатель центра. Аддиктолог, интервенционист"
+          },
+          {
+            "meta_key": "blog_archive_final_cta_button_label",
+            "meta_value": "Записаться"
+          },
+          {
+            "meta_key": "blog_archive_final_cta_phone",
+            "meta_value": "8 (925) 183-64-64"
+          },
+          {
+            "meta_key": "blog_archive_final_cta_phone_hint",
+            "meta_value": "Или позвоните нам"
+          },
+          {
+            "meta_key": "blog_archive_final_cta_text",
+            "meta_value": "Опишите ситуацию в удобном для вас формате. Первый разговор ни к чему не обязывает, но может стать шагом к переменам."
+          },
+          {
+            "meta_key": "blog_archive_final_cta_title",
+            "meta_value": "Запишитесь на встречу"
+          },
+          {
+            "meta_key": "blog_archive_intro",
+            "meta_value": "Специалисты центра реабилитации Шпиговский Дом рассказывают о видах зависимостей, что говорит о их наличии, какие подходы в лечении существуют, какие методы дают действительно хороший результат"
+          },
+          {
+            "meta_key": "blog_archive_title",
+            "meta_value": "Статьи о зависимостях, диагностике и методах лечения"
+          }
+        ],
+        "in_menu": true,
+        "menu_items": [
+          {
+            "menu_item_id": 31,
+            "menu_name": "Primary",
+            "object_id": "19"
+          }
+        ],
+        "is_front_page": false,
+        "is_posts_page": true,
+        "is_privacy_page": false
+      }
+    },
+    "posts": {
+      "750": {
+        "ID": 750,
+        "post_title": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём",
+        "post_name": "nazvanie-stati",
+        "post_status": "publish",
+        "post_type": "post",
+        "post_modified": "2026-05-05 10:00:00",
+        "route": "/blog/nazvanie-stati/"
+      }
+    },
+    "services": {
+      "73": {
+        "ID": 73,
+        "post_title": "Зависимости",
+        "post_name": "zavisimosti",
+        "post_status": "publish",
+        "post_parent": 0,
+        "post_type": "service",
+        "post_modified": "2026-07-04 00:04:34"
+      }
+    }
+  },
+  "options_before": {
+    "page_on_front": "4",
+    "page_for_posts": "19",
+    "show_on_front": "page",
+    "permalink_structure": "/blog/%postname%/",
+    "blog_public": "0",
+    "wp_page_for_privacy_policy": "3"
+  },
+  "counts_before": {
+    "page": {
+      "auto-draft": 1,
+      "draft": 1,
+      "publish": 22
+    },
+    "post": {
+      "publish": 1
+    },
+    "service": {
+      "publish": 17
+    }
+  },
+  "menu_checksum_before": "920861DE34336E8F16039B865CF9C818CF4B2F04ED9CA5D5532627025A3CAF8C",
+  "snapshots": [
+    "options.json",
+    "counts.json",
+    "candidates_before.json",
+    "protected_pages.json",
+    "protected_posts.json",
+    "protected_services.json",
+    "menu_items.json",
+    "pages.json",
+    "posts.json",
+    "services.json",
+    "core_routes_before.json",
+    "candidate_routes_before.json",
+    "RESTORE.md"
+  ],
+  "restore_instructions": "mysql --host=127.0.0.1 --user=root mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e27b-low-risk-obsolete-cleanup-pre-20260709-171947\\mars_wp_fp0002.sql\""
+}

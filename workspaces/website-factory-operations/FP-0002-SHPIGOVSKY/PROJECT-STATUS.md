@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-09 (V9-06E27A obsolete pages cleanup read-only audit PASS)
+**Last updated:** 2026-07-09 (V9-06E27B low-risk obsolete cleanup PASS)
 
-**Current WordPress phase:** V9-06E27A Obsolete Pages Cleanup Read-Only Audit **PASS** — 41 objects audited; 5 Batch A trash candidates; 3 ownership-debt pages deferred. **Next: CREATE_V9_06E27B_LOW_RISK_OBSOLETE_CLEANUP_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E27A-OBSOLETE-PAGES-CLEANUP-READ-ONLY-AUDIT-REPORT-v1.md`. Prior E26D-POLISH: encoding PASS @ `e302f95`; demo post `750` preserved.
+**Current WordPress phase:** V9-06E27B Low-Risk Obsolete Cleanup **PASS** — 5 obsolete pages trashed (#9,#10,#17,#21,#25); ownership debt #6,#7,#8 unchanged. **Next: CREATE_V9_06E27C_PAGE_SERVICE_OWNERSHIP_DECISION_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E27B-LOW-RISK-OBSOLETE-CLEANUP-REPORT-v1.md`. Prior E27A: read-only audit PASS @ `2570a9a3`; demo post `750` preserved.
 
 ## Active frontend workspace (V9)
 

@@ -1,0 +1,126 @@
+{
+  "task_id": "V9-06E27B",
+  "generated_at": "2026-07-09T17:20:04.508590+00:00",
+  "result": "PASS",
+  "operations": [
+    {
+      "page_id": 9,
+      "current_title": "Генотипирование",
+      "current_path": "/uslugi/genotipirovanie/",
+      "current_status": "publish",
+      "approved_action": "trash",
+      "reason": "Legacy genotipirovanie page; HTTP 404; superseded by service CPT model",
+      "rollback": "WP Admin Trash → Restore page #9; or full DB restore from X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e27b-low-risk-obsolete-cleanup-pre-20260709-171947",
+      "validation_routes": [
+        "/",
+        "/o-centre/",
+        "/blog/",
+        "/blog/nazvanie-stati/",
+        "/uslugi/",
+        "/uslugi/zavisimosti/",
+        "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+        "/kontakty/",
+        "/otzyvy/",
+        "/privacy-policy/",
+        "/uslugi/genotipirovanie/"
+      ]
+    },
+    {
+      "page_id": 10,
+      "current_title": "Специалисты",
+      "current_path": "/specyalisty/",
+      "current_status": "publish",
+      "approved_action": "trash",
+      "reason": "Orphan specialists page; not in V9 manifest or menus",
+      "rollback": "WP Admin Trash → Restore page #10; or full DB restore from X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e27b-low-risk-obsolete-cleanup-pre-20260709-171947",
+      "validation_routes": [
+        "/",
+        "/o-centre/",
+        "/blog/",
+        "/blog/nazvanie-stati/",
+        "/uslugi/",
+        "/uslugi/zavisimosti/",
+        "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+        "/kontakty/",
+        "/otzyvy/",
+        "/privacy-policy/",
+        "/specyalisty/"
+      ]
+    },
+    {
+      "page_id": 17,
+      "current_title": "Интервью и СМИ",
+      "current_path": "/o-centre/intervyu-i-smi/",
+      "current_status": "publish",
+      "approved_action": "trash",
+      "reason": "Intervyu i SMI; not in V9 manifest; skeleton placeholder",
+      "rollback": "WP Admin Trash → Restore page #17; or full DB restore from X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e27b-low-risk-obsolete-cleanup-pre-20260709-171947",
+      "validation_routes": [
+        "/",
+        "/o-centre/",
+        "/blog/",
+        "/blog/nazvanie-stati/",
+        "/uslugi/",
+        "/uslugi/zavisimosti/",
+        "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+        "/kontakty/",
+        "/otzyvy/",
+        "/privacy-policy/",
+        "/o-centre/intervyu-i-smi/"
+      ]
+    },
+    {
+      "page_id": 21,
+      "current_title": "Правовая информация",
+      "current_path": "/pravovaya-informaciya-pilzovatelyu/",
+      "current_status": "draft",
+      "approved_action": "trash",
+      "reason": "Draft legal hub superseded by IDs 3,22-24",
+      "rollback": "WP Admin Trash → Restore page #21; or full DB restore from X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e27b-low-risk-obsolete-cleanup-pre-20260709-171947",
+      "validation_routes": [
+        "/",
+        "/o-centre/",
+        "/blog/",
+        "/blog/nazvanie-stati/",
+        "/uslugi/",
+        "/uslugi/zavisimosti/",
+        "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+        "/kontakty/",
+        "/otzyvy/",
+        "/privacy-policy/",
+        "/pravovaya-informaciya-pilzovatelyu/"
+      ]
+    },
+    {
+      "page_id": 25,
+      "current_title": "Политика конфиденциальности (системная)",
+      "current_path": "/privacy-policy-page/",
+      "current_status": "publish",
+      "approved_action": "trash",
+      "reason": "Duplicate privacy shell; canonical is ID 3 /privacy-policy/",
+      "rollback": "WP Admin Trash → Restore page #25; or full DB restore from X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e27b-low-risk-obsolete-cleanup-pre-20260709-171947",
+      "validation_routes": [
+        "/",
+        "/o-centre/",
+        "/blog/",
+        "/blog/nazvanie-stati/",
+        "/uslugi/",
+        "/uslugi/zavisimosti/",
+        "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+        "/kontakty/",
+        "/otzyvy/",
+        "/privacy-policy/",
+        "/privacy-policy-page/"
+      ]
+    }
+  ],
+  "forbidden_ids": [
+    6,
+    7,
+    8
+  ],
+  "no_redirects": true,
+  "no_menu_changes": true,
+  "no_permalink_changes": true,
+  "no_rewrite_flush": true
+}

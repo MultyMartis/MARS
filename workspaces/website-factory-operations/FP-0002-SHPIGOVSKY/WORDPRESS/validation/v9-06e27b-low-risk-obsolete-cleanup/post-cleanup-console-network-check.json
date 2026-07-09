@@ -1,0 +1,117 @@
+{
+  "task_id": "V9-06E27B",
+  "generated_at": "2026-07-09T17:20:26.715724+00:00",
+  "method": "urllib HTTP probe (headless)",
+  "screenshots_available": false,
+  "core_routes": [
+    {
+      "route": "/",
+      "http_status": 200,
+      "expected": 200,
+      "result": "PASS",
+      "notes": "accepted route"
+    },
+    {
+      "route": "/o-centre/",
+      "http_status": 200,
+      "expected": 200,
+      "result": "PASS",
+      "notes": "accepted route"
+    },
+    {
+      "route": "/blog/",
+      "http_status": 200,
+      "expected": 200,
+      "result": "PASS",
+      "notes": "accepted route"
+    },
+    {
+      "route": "/blog/nazvanie-stati/",
+      "http_status": 200,
+      "expected": 200,
+      "result": "PASS",
+      "notes": "accepted route"
+    },
+    {
+      "route": "/uslugi/",
+      "http_status": 200,
+      "expected": 200,
+      "result": "PASS",
+      "notes": "accepted route"
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "http_status": 200,
+      "expected": 200,
+      "result": "PASS",
+      "notes": "accepted route"
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "http_status": 200,
+      "expected": 200,
+      "result": "PASS",
+      "notes": "accepted route"
+    },
+    {
+      "route": "/kontakty/",
+      "http_status": 200,
+      "expected": 200,
+      "result": "PASS",
+      "notes": "accepted route"
+    },
+    {
+      "route": "/otzyvy/",
+      "http_status": 200,
+      "expected": 200,
+      "result": "PASS",
+      "notes": "accepted route"
+    },
+    {
+      "route": "/privacy-policy/",
+      "http_status": 200,
+      "expected": 200,
+      "result": "PASS",
+      "notes": "accepted route"
+    }
+  ],
+  "candidate_routes": [
+    {
+      "route": "/uslugi/genotipirovanie/",
+      "http_status": 404,
+      "expected": "404_or_no_public_route",
+      "result": "PASS",
+      "notes": "obsolete candidate after trash"
+    },
+    {
+      "route": "/specyalisty/",
+      "http_status": 404,
+      "expected": "404_or_no_public_route",
+      "result": "PASS",
+      "notes": "obsolete candidate after trash"
+    },
+    {
+      "route": "/o-centre/intervyu-i-smi/",
+      "http_status": 404,
+      "expected": "404_or_no_public_route",
+      "result": "PASS",
+      "notes": "obsolete candidate after trash"
+    },
+    {
+      "route": "/pravovaya-informaciya-pilzovatelyu/",
+      "http_status": 404,
+      "expected": "404_or_no_public_route",
+      "result": "PASS",
+      "notes": "obsolete candidate after trash"
+    },
+    {
+      "route": "/privacy-policy-page/",
+      "http_status": 404,
+      "expected": "404_or_no_public_route",
+      "result": "PASS",
+      "notes": "obsolete candidate after trash"
+    }
+  ],
+  "result": "PASS",
+  "notes": "No browser console capture; HTTP status evidence only"
+}
