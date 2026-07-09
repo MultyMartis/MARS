@@ -26,7 +26,7 @@
 |-------|-------|
 | **Status** | planned / product architecture |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | WordPress data model / admin UX planning (v0.1) |
+| **Active stage** | Website Factory prototype charter (v0.1) |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -74,6 +74,9 @@
 | 10 | [product/I-SEO-REPORT-HUB-WEB-REPORT-STRUCTURE-v0.1.md](product/I-SEO-REPORT-HUB-WEB-REPORT-STRUCTURE-v0.1.md) | Client web report structure |
 | 11 | [product/I-SEO-REPORT-HUB-IMPLEMENTATION-BRIEF-v0.1.md](product/I-SEO-REPORT-HUB-IMPLEMENTATION-BRIEF-v0.1.md) | Implementation brief for Anton |
 | 12 | [reports/REPORT-iseo-report-hub-wordpress-data-model-admin-ux-planning-01.md](reports/REPORT-iseo-report-hub-wordpress-data-model-admin-ux-planning-01.md) | Planning closeout report |
+| 13 | [product/I-SEO-REPORT-HUB-WEBSITE-FACTORY-PROTOTYPE-CHARTER-v0.1.md](product/I-SEO-REPORT-HUB-WEBSITE-FACTORY-PROTOTYPE-CHARTER-v0.1.md) | Website Factory prototype charter |
+| 14 | [product/I-SEO-REPORT-HUB-WEBSITE-FACTORY-DEMO-BRIEF-v0.1.md](product/I-SEO-REPORT-HUB-WEBSITE-FACTORY-DEMO-BRIEF-v0.1.md) | Website Factory demo build brief |
+| 15 | [reports/REPORT-iseo-report-hub-website-factory-prototype-charter-01.md](reports/REPORT-iseo-report-hub-website-factory-prototype-charter-01.md) | Prototype charter closeout report |
 
 ---
 
@@ -118,12 +121,12 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Operator review** of WordPress data model / admin UX planning docs (v0.1)
-2. **Choose next path:** optional Website Factory prototype charter **OR** implementation specification pass
+1. **Operator review** of Website Factory prototype charter + demo brief (v0.1)
+2. **Choose next path:** authorize **Website Factory demo build charter** (static HTML workspace) **OR** revise prototype screens/scope before build
 3. Work dictionary extraction/sanitization (из Nikita materials; **exclude** credential sheet)
 4. Report block model refinement (if needed post-review)
 5. MVP implementation charter (HITL) for Anton / i-seo.su
-6. **Later (operator charter):** Website Factory workspace for HTML/static UI demos — SEO specialist admin screens, client web report pages, weekly checkpoint / monthly final sketches, report block layout prototypes; **no workspace created until separate charter**
+6. **Website Factory demo build (operator charter only):** workspace candidate `workspaces/website-factory-operations/iseo-report-hub-prototype/` — **not created until separate build task**; see [I-SEO-REPORT-HUB-WEBSITE-FACTORY-DEMO-BRIEF-v0.1.md](product/I-SEO-REPORT-HUB-WEBSITE-FACTORY-DEMO-BRIEF-v0.1.md)
 7. Later: n8n/API/AI integration (events only; human approval gates)
 
 ---
