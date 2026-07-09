@@ -1117,7 +1117,7 @@ Before **any** task touching **trust block**, **certificates**, **dealers form**
 
 ### Category Lari reparent implementation (Run 4.235)
 
-- **Status:** **ACTIVE — PARTIAL** (post-1C import verification pending — Run 4.240 **BLOCKED** 2026-07-10)
+- **Status:** **ACTIVE — LARI CONFIRMED** (Run 4.248 DB+HTTP+sitemap PASS; post-import revert not observed)
 - **DB:** `88.parent_id=358`; `category_path` rebuilt for **88/140/141**
 - **Canonical URL:** `/katalog/nejtralnoe-oborudovanie/shkafy-i-lari/lari`
 - **Redirects:** `.htaccess` 301 old flat `/lari` tree → nested
@@ -2237,7 +2237,7 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 | **Root cause** | `mars_report_begin()` called after import in `mars_mode_run()` — `$startedAt` ≈ report write time |
 | **Fix** | Optional `$wallStartedAt` param; pass run `$started` from `mars_mode_run()` |
 | **Pre-patch anomaly** | All run-mode TXT through 2026-07-09 showed `Duration: 0 seconds` |
-| **Confirmation** | **PENDING** — Run **4.240 BLOCKED** (2026-07-10); latest TXT `mars_1c_import_2026-07-09_080009.txt` predates deploy `2026-07-09T17:07:52+00:00` |
+| **Confirmation** | **PENDING** — Run **4.248 PARTIAL** (2026-07-10); latest TXT still pre-patch; await **2026-07-10 08:00 MSK+** import |
 | **Report** | [SITE-002-PROD-CRON-RUN-REPORTS-DURATION-FIX-01.md](../reports/SITE-002-PROD-CRON-RUN-REPORTS-DURATION-FIX-01.md) |
 | **Checkpoint** | [SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01.md](../baselines/SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01.md) |
 
@@ -2272,21 +2272,34 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 
 ## 42. Post-1C Lari Reparent and Duration Verification (Production — 2026-07-10)
 
-**Operation:** Run 4.240 — `SITE-002-PROD-POST-1C-LARI-REPARENT-AND-DURATION-VERIFICATION-01`
+**Operation:** Run 4.240 — `SITE-002-PROD-POST-1C-LARI-REPARENT-AND-DURATION-VERIFICATION-01` (timing gate only — **superseded by Run 4.248** for current-state checks)
 
 | Item | Value |
 |------|-------|
 | **Mode** | Read-only verification — **no mutation** |
 | **Timing gate** | Latest import TXT must postdate Run 4.239 deploy |
 | **Deploy 4.239** | `2026-07-09T17:07:52+00:00` |
-| **Latest import TXT** | `mars_1c_import_2026-07-09_080009.txt` (08:00 Moscow — **pre-patch**) |
-| **Gate result** | **BLOCKED** — next post-patch import not observed |
-| **Run 4.235 pending** | **unchanged** — Lari post-1C persistence not verified |
-| **Run 4.239 pending** | **unchanged** — Duration fix not confirmed on live cron |
-| **Tool** | `site-002-prod-post-1c-lari-reparent-and-duration-verification-01.py` |
-| **Report** | [SITE-002-PROD-POST-1C-LARI-REPARENT-AND-DURATION-VERIFICATION-01.md](../reports/SITE-002-PROD-POST-1C-LARI-REPARENT-AND-DURATION-VERIFICATION-01.md) |
-| **Storage** | `deployments/SITE-002-PROD-POST-1C-LARI-REPARENT-AND-DURATION-VERIFICATION-01/` |
+| **Gate result (4.240)** | **BLOCKED** — import gate only; phases 2–6 skipped |
 
 ---
 
-*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-10 (Run 4.240 — Post-1C verification blocked; timing gate).*
+## 43. Post-1C Lari Reparent and Duration Verification 02 (Production — 2026-07-10)
+
+**Operation:** Run 4.248 — `SITE-002-PROD-POST-1C-LARI-REPARENT-AND-DURATION-VERIFICATION-02`
+
+| Item | Value |
+|------|-------|
+| **Mode** | Read-only verification — **no mutation** |
+| **Worktree** | `X:\AI MARS STORAGE\git-sync-e01\repo` (clean; origin `0d1174a3`) |
+| **Latest import TXT** | `mars_1c_import_2026-07-09_080009.txt` — still **pre-patch** |
+| **Lari DB/HTTP/sitemap** | **PASS** — reparent intact at verification time |
+| **Duration fix (4.239)** | **NOT CONFIRMED** — no post-patch import |
+| **Monitor hardened (4.228)** | **NOT OBSERVED** — latest folder `2026-07-08_12-30-02` pre-hardening |
+| **Verdict** | **PARTIAL** — Lari confirmed; Duration pending |
+| **Tool** | `site-002-prod-post-1c-lari-reparent-and-duration-verification-02.py` |
+| **Report** | [SITE-002-PROD-POST-1C-LARI-REPARENT-AND-DURATION-VERIFICATION-02.md](../reports/SITE-002-PROD-POST-1C-LARI-REPARENT-AND-DURATION-VERIFICATION-02.md) |
+| **Storage** | `verification/SITE-002-PROD-POST-1C-LARI-REPARENT-AND-DURATION-VERIFICATION-02/` |
+
+---
+
+*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-10 (Run 4.248 — Post-1C verification partial; Lari confirmed, Duration pending).*
