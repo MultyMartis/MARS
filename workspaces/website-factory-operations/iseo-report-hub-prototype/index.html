@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Панель специалиста — i-SEO Report Hub (Демо)</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="admin-shell">
+    <aside class="sidebar">
+      <div class="sidebar__brand">
+        <p class="sidebar__brand-title">i-SEO Report Hub</p>
+        <p class="sidebar__brand-sub">Прототип / Демо v0.1</p>
+      </div>
+      <nav class="sidebar__nav">
+        <p class="sidebar__section-label">Специалист</p>
+        <a href="index.html" data-page="index.html">Панель специалиста</a>
+        <a href="project.html" data-page="project.html">Проект и отчётный цикл</a>
+        <a href="weekly.html" data-page="weekly.html">Недельный чекпоинт</a>
+        <a href="monthly.html" data-page="monthly.html">Месячный отчёт</a>
+        <p class="sidebar__section-label">Проверка и клиент</p>
+        <a href="review.html" data-page="review.html">Очередь проверки</a>
+        <a href="client-report.html" data-page="client-report.html">Клиентский отчёт</a>
+      </nav>
+      <div class="sidebar__footer">Только демо-данные · Без сервера</div>
+    </aside>
+
+    <div class="admin-main">
+      <header class="topbar">
+        <h1 class="topbar__title">Панель SEO-специалиста</h1>
+        <div class="topbar__meta">
+          <span>SEO-специалист Демо</span>
+          <span class="badge badge--prototype">Прототип / Демо</span>
+        </div>
+      </header>
+
+      <main class="page-content">
+        <div class="prototype-banner">
+          <strong>Прототип / Демо v0.1</strong> — статический прототип Website Factory. Не production, не WordPress, не подключено к API или n8n.
+        </div>
+
+        <div class="alert alert--warning">
+          <strong>Требуют действия:</strong> 1 недельный чекпоинт и 1 месячный отчёт ожидают заполнения или проверки.
+          <ul class="alert__list">
+            <li>Демо-клиент Industrial Tools — Неделя 3: не заполнено поле «Краткое резюме»</li>
+            <li>Демо-клиент Industrial Tools — Закрытие месяца: черновик, не отправлен на проверку</li>
+          </ul>
+        </div>
+
+        <section class="mb-24">
+          <h2 class="card__title mb-16">KPI по назначенным проектам</h2>
+          <div class="grid-4">
+            <div class="kpi-card">
+              <div class="kpi-card__label">Органические визиты</div>
+              <div class="kpi-card__value">4 820</div>
+              <div class="kpi-card__delta">+12% к прошлому месяцу</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-card__label">Видимость</div>
+              <div class="kpi-card__value">+8%</div>
+              <div class="kpi-card__delta">рост за период</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-card__label">Запросы в ТОП-10</div>
+              <div class="kpi-card__value">146</div>
+              <div class="kpi-card__delta">+9 новых</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-card__label">Лиды / формы</div>
+              <div class="kpi-card__value">23</div>
+              <div class="kpi-card__delta">E-commerce профиль</div>
+            </div>
+          </div>
+        </section>
+
+        <div class="grid-2 mb-24">
+          <div class="card">
+            <div class="card__header">
+              <h2 class="card__title">Сроки</h2>
+            </div>
+            <div class="card__body">
+              <div class="deadline-card mb-16">
+                <div class="deadline-card__date">До 12 июля 2026</div>
+                <strong>Недельный чекпоинт — Неделя 3</strong> — Демо-клиент Industrial Tools
+                <div class="mt-16"><span class="badge badge--review">Нужна проверка</span></div>
+              </div>
+              <div class="deadline-card">
+                <div class="deadline-card__date">До 20 июля 2026</div>
+                <strong>Закрытие месяца</strong> — Демо-клиент Industrial Tools
+                <div class="mt-16"><span class="badge badge--draft">Черновик</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__header">
+              <h2 class="card__title">Быстрые ссылки</h2>
+            </div>
+            <div class="card__body">
+              <div class="quick-links">
+                <a href="project.html">Проект и отчётный цикл</a>
+                <a href="weekly.html">Недельный чекпоинт</a>
+                <a href="monthly.html">Месячный отчёт</a>
+                <a href="review.html">Очередь проверки</a>
+                <a href="client-report.html">Клиентский отчёт</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-24">
+          <div class="card__header">
+            <h2 class="card__title">Мои проекты</h2>
+          </div>
+          <div class="card__body" style="padding:0;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Клиент</th>
+                  <th>Проект</th>
+                  <th>Период</th>
+                  <th>Нед. 1</th>
+                  <th>Нед. 2</th>
+                  <th>Нед. 3</th>
+                  <th>Закрытие</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Демо-клиент Industrial Tools</td>
+                  <td>SEO продвижение интернет-магазина</td>
+                  <td>Июль 2026</td>
+                  <td><span class="badge badge--completed">Готово</span></td>
+                  <td><span class="badge badge--completed">Готово</span></td>
+                  <td><span class="badge badge--review">Нужна проверка</span></td>
+                  <td><span class="badge badge--draft">Черновик</span></td>
+                  <td><a href="project.html">Открыть →</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__header">
+            <h2 class="card__title">Отчёты, требующие действия</h2>
+          </div>
+          <div class="card__body" style="padding:0;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Тип</th>
+                  <th>Проект</th>
+                  <th>Статус</th>
+                  <th>Не заполнены поля</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Недельный чекпоинт</td>
+                  <td>Демо-клиент Industrial Tools — Неделя 3</td>
+                  <td><span class="badge badge--review">Нужна проверка</span></td>
+                  <td class="text-muted">Краткое резюме</td>
+                  <td><a href="weekly.html">Редактировать →</a></td>
+                </tr>
+                <tr>
+                  <td>Месячный отчёт</td>
+                  <td>Демо-клиент Industrial Tools — Июль 2026</td>
+                  <td><span class="badge badge--draft">Черновик</span></td>
+                  <td class="text-muted">Резюме для клиента, блок трафика</td>
+                  <td><a href="monthly.html">Редактировать →</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="assets/js/demo.js"></script>
+</body>
+</html>

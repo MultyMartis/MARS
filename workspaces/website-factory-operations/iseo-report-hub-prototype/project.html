@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Проект и отчётный цикл — i-SEO Report Hub (Демо)</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="admin-shell">
+    <aside class="sidebar">
+      <div class="sidebar__brand">
+        <p class="sidebar__brand-title">i-SEO Report Hub</p>
+        <p class="sidebar__brand-sub">Прототип / Демо v0.1</p>
+      </div>
+      <nav class="sidebar__nav">
+        <p class="sidebar__section-label">Специалист</p>
+        <a href="index.html" data-page="index.html">Панель специалиста</a>
+        <a href="project.html" data-page="project.html">Проект и отчётный цикл</a>
+        <a href="weekly.html" data-page="weekly.html">Недельный чекпоинт</a>
+        <a href="monthly.html" data-page="monthly.html">Месячный отчёт</a>
+        <p class="sidebar__section-label">Проверка и клиент</p>
+        <a href="review.html" data-page="review.html">Очередь проверки</a>
+        <a href="client-report.html" data-page="client-report.html">Клиентский отчёт</a>
+      </nav>
+      <div class="sidebar__footer">Только демо-данные · Без сервера</div>
+    </aside>
+
+    <div class="admin-main">
+      <header class="topbar">
+        <h1 class="topbar__title">Проект и отчётный цикл</h1>
+        <div class="topbar__meta">
+          <span>SEO-специалист Демо</span>
+        </div>
+      </header>
+
+      <main class="page-content">
+        <div class="prototype-banner">
+          <strong>Прототип / Демо</strong> — обзор отчётного цикла для одного проекта.
+        </div>
+
+        <header class="page-header">
+          <h2 class="page-header__title">SEO продвижение интернет-магазина</h2>
+          <p class="page-header__subtitle">Отчётный цикл — Июль 2026</p>
+          <div class="meta-row">
+            <div class="meta-item"><span class="meta-item__label">Клиент:</span> <strong>Демо-клиент Industrial Tools</strong></div>
+            <div class="meta-item"><span class="meta-item__label">Сайт:</span> demo-tools.example</div>
+            <div class="meta-item"><span class="meta-item__label">Профиль:</span> <span class="badge badge--submitted">E-commerce</span></div>
+            <div class="meta-item"><span class="meta-item__label">Специалист:</span> SEO-специалист Демо</div>
+            <div class="meta-item"><span class="meta-item__label">Проверяющий:</span> Руководитель SEO Демо</div>
+          </div>
+        </header>
+
+        <section class="mb-24">
+          <h3 class="card__title mb-16">Статус чекпоинтов</h3>
+          <div class="checkpoint-strip">
+            <div class="checkpoint-card">
+              <div class="checkpoint-card__label">Неделя 1</div>
+              <span class="badge badge--completed">Готово</span>
+            </div>
+            <div class="checkpoint-card">
+              <div class="checkpoint-card__label">Неделя 2</div>
+              <span class="badge badge--completed">Готово</span>
+            </div>
+            <div class="checkpoint-card is-active">
+              <div class="checkpoint-card__label">Неделя 3</div>
+              <span class="badge badge--review">Нужна проверка</span>
+            </div>
+            <div class="checkpoint-card">
+              <div class="checkpoint-card__label">Закрытие месяца</div>
+              <span class="badge badge--draft">Черновик</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-24">
+          <h3 class="card__title mb-16">Снимок KPI</h3>
+          <div class="grid-4">
+            <div class="kpi-card">
+              <div class="kpi-card__label">Органические визиты</div>
+              <div class="kpi-card__value">4 820</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-card__label">Видимость</div>
+              <div class="kpi-card__value">+8%</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-card__label">Запросы в ТОП-10</div>
+              <div class="kpi-card__value">146</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-card__label">Лиды / формы</div>
+              <div class="kpi-card__value">23</div>
+            </div>
+          </div>
+        </section>
+
+        <div class="grid-2 mb-24">
+          <div class="card">
+            <div class="card__header">
+              <h3 class="card__title">Последние подтверждения</h3>
+            </div>
+            <div class="card__body">
+              <div class="evidence-card">
+                <div class="evidence-card__icon">📎</div>
+                <div>
+                  <div class="evidence-card__url"><a href="https://example.com/evidence-1" target="_blank" rel="noopener">example.com/evidence-1</a></div>
+                  <div class="text-muted">Скриншот индексации категорий</div>
+                </div>
+              </div>
+              <div class="evidence-card">
+                <div class="evidence-card__icon">📎</div>
+                <div>
+                  <div class="evidence-card__url"><a href="https://example.com/evidence-2" target="_blank" rel="noopener">example.com/evidence-2</a></div>
+                  <div class="text-muted">Отчёт по внутренним ссылкам</div>
+                </div>
+              </div>
+              <div class="evidence-card">
+                <div class="evidence-card__icon">📎</div>
+                <div>
+                  <div class="evidence-card__url"><a href="https://example.com/evidence-3" target="_blank" rel="noopener">example.com/evidence-3</a></div>
+                  <div class="text-muted">Тематический материал — публикация</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__header">
+              <h3 class="card__title">Topvisor</h3>
+            </div>
+            <div class="card__body">
+              <div class="topvisor-card">
+                <p class="topvisor-card__title">Отчёт Topvisor</p>
+                <p class="topvisor-card__desc">Ссылка на позиции и видимость за июль 2026.</p>
+                <a class="btn btn--primary" href="https://example.com/topvisor-demo-report" target="_blank" rel="noopener">Открыть отчёт Topvisor</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__header">
+            <h3 class="card__title">Быстрые действия</h3>
+          </div>
+          <div class="card__body">
+            <div class="btn-group">
+              <a class="btn btn--primary" href="weekly.html">Недельный чекпоинт (Неделя 3)</a>
+              <a class="btn btn--secondary" href="monthly.html">Месячный отчёт</a>
+              <a class="btn btn--ghost" href="client-report.html">Предпросмотр клиентского отчёта</a>
+              <button class="btn btn--secondary" data-demo-action="submit">Отправить на проверку</button>
+            </div>
+            <p class="form-hint mt-16" data-demo-feedback hidden></p>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="assets/js/demo.js"></script>
+</body>
+</html>

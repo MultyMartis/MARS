@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Месячный отчёт — i-SEO Report Hub (Демо)</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="admin-shell">
+    <aside class="sidebar">
+      <div class="sidebar__brand">
+        <p class="sidebar__brand-title">i-SEO Report Hub</p>
+        <p class="sidebar__brand-sub">Прототип / Демо v0.1</p>
+      </div>
+      <nav class="sidebar__nav">
+        <p class="sidebar__section-label">Специалист</p>
+        <a href="index.html" data-page="index.html">Панель специалиста</a>
+        <a href="project.html" data-page="project.html">Проект и отчётный цикл</a>
+        <a href="weekly.html" data-page="weekly.html">Недельный чекпоинт</a>
+        <a href="monthly.html" data-page="monthly.html">Месячный отчёт</a>
+        <p class="sidebar__section-label">Проверка и клиент</p>
+        <a href="review.html" data-page="review.html">Очередь проверки</a>
+        <a href="client-report.html" data-page="client-report.html">Клиентский отчёт</a>
+      </nav>
+      <div class="sidebar__footer">Только демо-данные · Без сервера</div>
+    </aside>
+
+    <div class="admin-main">
+      <header class="topbar">
+        <h1 class="topbar__title">Редактор месячного отчёта</h1>
+        <div class="topbar__meta">
+          <span>Июль 2026</span>
+          <span class="badge badge--draft">Черновик</span>
+        </div>
+      </header>
+
+      <main class="page-content">
+        <div class="prototype-banner">
+          <strong>Прототип / Демо</strong> — сборка месячного отчёта (закрытие месяца). Без сервера.
+        </div>
+
+        <header class="page-header">
+          <h2 class="page-header__title">Демо-клиент Industrial Tools — Закрытие месяца</h2>
+          <p class="page-header__subtitle">SEO продвижение интернет-магазина · E-commerce · demo-tools.example</p>
+        </header>
+
+        <div class="grid-2 mb-24">
+          <div class="alert alert--warning">
+            <strong>Не заполнены блоки:</strong>
+            <ul class="alert__list">
+              <li>Резюме для клиента — не заполнено</li>
+              <li>Блок трафика — требует интерпретации</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="card__header"><h3 class="card__title">Статус проверки</h3></div>
+            <div class="card__body">
+              <p><span class="badge badge--draft">Черновик</span></p>
+              <p class="text-muted mt-16">Проверяющий: Руководитель SEO Демо</p>
+              <p class="text-muted">Не отправлено на проверку</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="report-block is-missing mb-16">
+          <div class="report-block__header">
+            Резюме для клиента
+            <span class="badge badge--revision">Не заполнено</span>
+          </div>
+          <div class="report-block__body">
+            <textarea class="form-textarea" placeholder="Краткое резюме месяца для клиента…"></textarea>
+          </div>
+        </div>
+
+        <div class="report-block mb-16">
+          <div class="report-block__header">Карточки KPI</div>
+          <div class="report-block__body">
+            <div class="grid-4">
+              <div class="kpi-card">
+                <div class="kpi-card__label">Органические визиты</div>
+                <div class="kpi-card__value">4 820</div>
+              </div>
+              <div class="kpi-card">
+                <div class="kpi-card__label">Видимость</div>
+                <div class="kpi-card__value">+8%</div>
+              </div>
+              <div class="kpi-card">
+                <div class="kpi-card__label">Запросы в ТОП-10</div>
+                <div class="kpi-card__value">146</div>
+              </div>
+              <div class="kpi-card">
+                <div class="kpi-card__label">Лиды / формы</div>
+                <div class="kpi-card__value">23</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="report-block is-missing mb-16">
+          <div class="report-block__header">
+            Трафик
+            <span class="badge badge--review">Требует интерпретации</span>
+          </div>
+          <div class="report-block__body">
+            <div class="chart-placeholder mb-16">График трафика — заглушка</div>
+            <textarea class="form-textarea" placeholder="Краткая интерпретация динамики трафика…"></textarea>
+          </div>
+        </div>
+
+        <div class="report-block mb-16">
+          <div class="report-block__header">Позиции / Видимость</div>
+          <div class="report-block__body">
+            <div class="chart-placeholder chart-placeholder--sm mb-16">График видимости — заглушка</div>
+            <div class="topvisor-card">
+              <p class="topvisor-card__title">Topvisor — внешний отчёт</p>
+              <p class="topvisor-card__desc">Ссылка на полный отчёт по позициям за июль 2026.</p>
+              <input class="form-input mb-16" type="url" value="https://example.com/topvisor-demo-report">
+              <a class="btn btn--secondary" href="https://example.com/topvisor-demo-report" target="_blank" rel="noopener">Открыть Topvisor</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="report-block mb-16">
+          <div class="report-block__header">Лиды / Конверсии (E-commerce)</div>
+          <div class="report-block__body">
+            <p>Заявки через формы: <strong>23</strong> за месяц. Основной источник — категории инструментов и карточки товаров.</p>
+            <textarea class="form-textarea mt-16">Комментарий специалиста: рост лидов связан с обновлением метаданных категорий и публикацией тематического материала.</textarea>
+          </div>
+        </div>
+
+        <div class="report-block mb-16">
+          <div class="report-block__header">Выполненные работы (сводка за месяц)</div>
+          <div class="report-block__body">
+            <ul class="checklist">
+              <li><input type="checkbox" checked> Проверили техническое состояние сайта</li>
+              <li><input type="checkbox" checked> Обновили метаданные для приоритетных категорий</li>
+              <li><input type="checkbox" checked> Добавили новые внутренние ссылки</li>
+              <li><input type="checkbox" checked> Проверили индексацию важных страниц</li>
+              <li><input type="checkbox" checked> Подготовили и разместили тематический материал</li>
+              <li><input type="checkbox" checked> Добавили внешний отчёт по позициям</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="report-block mb-16">
+          <div class="report-block__header">Сводка по неделям</div>
+          <div class="report-block__body">
+            <div class="weekly-summary-grid">
+              <div class="weekly-summary-item">
+                <div class="weekly-summary-item__week">Неделя 1</div>
+                <span class="badge badge--completed">Готово</span>
+                <p class="text-muted mt-16">Техаудит, метаданные категорий</p>
+              </div>
+              <div class="weekly-summary-item">
+                <div class="weekly-summary-item__week">Неделя 2</div>
+                <span class="badge badge--completed">Готово</span>
+                <p class="text-muted mt-16">Внутренние ссылки, индексация</p>
+              </div>
+              <div class="weekly-summary-item">
+                <div class="weekly-summary-item__week">Неделя 3</div>
+                <span class="badge badge--review">Нужна проверка</span>
+                <p class="text-muted mt-16">Контент, Topvisor, доработки</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="report-block mb-16">
+          <div class="report-block__header">Профильный блок — Контент (E-commerce)</div>
+          <div class="report-block__body">
+            <textarea class="form-textarea">Опубликован тематический материал по выбору инструментов. Планируется расширение контент-кластера в следующем месяце.</textarea>
+          </div>
+        </div>
+
+        <div class="report-block mb-16">
+          <div class="report-block__header">Риски / Блокеры</div>
+          <div class="report-block__body">
+            <textarea class="form-textarea">- Часть товарных страниц требует проверки индексации
+- Нужно согласовать тексты для новых категорий
+- Не все цели по формам готовы к автоматическому импорту</textarea>
+          </div>
+        </div>
+
+        <div class="report-block mb-16">
+          <div class="report-block__header">План на следующий месяц</div>
+          <div class="report-block__body">
+            <textarea class="form-textarea">- Продолжить работу с категориями
+- Расширить семантическое ядро
+- Проверить страницы с низким CTR
+- Подготовить новые материалы
+- Настроить импорт данных позже</textarea>
+          </div>
+        </div>
+
+        <div class="report-block mb-24">
+          <div class="report-block__header">Подтверждения / Приложение</div>
+          <div class="report-block__body">
+            <div class="evidence-card">
+              <div class="evidence-card__icon">📎</div>
+              <div class="evidence-card__url"><a href="https://example.com/evidence-1">example.com/evidence-1</a></div>
+            </div>
+            <div class="evidence-card">
+              <div class="evidence-card__icon">📎</div>
+              <div class="evidence-card__url"><a href="https://example.com/evidence-2">example.com/evidence-2</a></div>
+            </div>
+            <div class="evidence-card">
+              <div class="evidence-card__icon">📎</div>
+              <div class="evidence-card__url"><a href="https://example.com/evidence-3">example.com/evidence-3</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-actions">
+          <div class="btn-group">
+            <button class="btn btn--secondary" data-demo-action="save">Сохранить черновик</button>
+            <button class="btn btn--primary" data-demo-action="submit">Отправить на проверку</button>
+            <a class="btn btn--ghost" href="client-report.html" data-demo-action="preview">Предпросмотр клиентского отчёта</a>
+            <button class="btn btn--success is-disabled" disabled>Опубликовать (после утверждения)</button>
+          </div>
+          <p class="form-hint mt-16" data-demo-feedback hidden></p>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="assets/js/demo.js"></script>
+</body>
+</html>
