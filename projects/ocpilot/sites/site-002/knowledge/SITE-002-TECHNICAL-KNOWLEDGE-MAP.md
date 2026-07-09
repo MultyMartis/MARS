@@ -1113,11 +1113,19 @@ Before **any** task touching **trust block**, **certificates**, **dealers form**
 - **Target:** `88.parent_id = 358` → public path `/katalog/nejtralnoe-oborudovanie/shkafy-i-lari/lari`
 - **Children of 88:** **140** Производственные, **141** Складские — `category_path` cascade required
 - **SEO keyword** `lari` unchanged (`oc_seo_url` single-segment); full path from `category_path`
-- **Sitemap:** old `/lari` tree present (1408 URLs total); nested target absent
-- **Entrypoints:** whitelist IDs incl. **88** and **358** as top-level neutral branch tiles (`category_visibility.php`)
-- **1C ownership:** **MIXED** — verify `import0_1.xml` group parent before implementation
-- **Recommendation:** hybrid reparent (admin/DB) + 301 redirects + post-import monitor
-- Tool: `site-002-prod-category-lari-reparent-discovery-01.py` · [report](../reports/SITE-002-PROD-CATEGORY-LARI-REPARENT-DISCOVERY-01.md) · charter in Storage `deployments/SITE-002-PROD-CATEGORY-LARI-REPARENT-DISCOVERY-01/implementation-charter/`
+- Tool: `site-002-prod-category-lari-reparent-discovery-01.py` · [report](../reports/SITE-002-PROD-CATEGORY-LARI-REPARENT-DISCOVERY-01.md)
+
+### Category Lari reparent implementation (Run 4.235)
+
+- **Status:** **ACTIVE — PARTIAL** (post-1C import verification pending)
+- **DB:** `88.parent_id=358`; `category_path` rebuilt for **88/140/141**
+- **Canonical URL:** `/katalog/nejtralnoe-oborudovanie/shkafy-i-lari/lari`
+- **Redirects:** `.htaccess` 301 old flat `/lari` tree → nested
+- **Root cause (nested→flat):** `seo_pro.php` `validate()` used stale `cache.category.seopath` (old `79_88` path) — fixed by cache purge + `getPathByCategory()` now reads `oc_category_path`
+- **Patched files:** `seo_pro.php`, `seo_url.php`, `category_visibility.php`, `category.php`, `.htaccess`
+- **Entrypoints:** homepage marketing tile **Лари** kept; href nested; `buildCategoryPathParam()` + `product/katalog` links
+- **Sitemap:** nested lari URLs only; old flat category URLs absent
+- Tool: `site-002-prod-category-lari-reparent-implementation-01.py` · [report](../reports/SITE-002-PROD-CATEGORY-LARI-REPARENT-IMPLEMENTATION-01.md) · [checkpoint](../baselines/SITE-002-STABLE-PROD-CATEGORY-LARI-REPARENT-01.md)
 
 ### Sitemap authority (Run 4.214)
 
@@ -2165,4 +2173,4 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 
 ---
 
-*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-09 (Run 4.234 — category Lari reparent discovery).*
+*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-09 (Run 4.235 — category Lari reparent implementation).*

@@ -67,6 +67,12 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `site-002-post-1c-garbage-marker-fixture-test.py` | Strict garbage marker fixture regression — local harness for `SITE-002-POST-1C-MONITOR-ARTIFACTS-HARDENING-01` (Run 4.228) |
 | `site-002-post-1c-import-logs-and-monitor-artifacts-audit-01.py` | Read-only post-1C import logs + monitor artifacts audit — FTP index/download, local inventory, Task Scheduler inspection for `SITE-002-POST-1C-IMPORT-LOGS-AND-MONITOR-ARTIFACTS-AUDIT-01` (Run 4.233) |
 | `site-002-prod-category-lari-reparent-discovery-01.py` | Read-only category Lari reparent discovery — HTTP snapshots, DB SELECT, FTP source map, sitemap/entrypoint analysis, implementation charter for `SITE-002-PROD-CATEGORY-LARI-REPARENT-DISCOVERY-01` (Run 4.234) |
+| `site-002-prod-category-lari-reparent-implementation-01.py` | Controlled category Lari reparent implementation — 1C gate, DB migration, FTP patches, HTTP verification for `SITE-002-PROD-CATEGORY-LARI-REPARENT-IMPLEMENTATION-01` (Run 4.235) |
+| `site-002-prod-category-lari-final-fix-01.py` | Final SEO/url fix wave — `seo_url`, `category_visibility`, `category.php`, htaccess redirects (Run 4.235 helper) |
+| `site-002-prod-category-lari-seopath-cache-clear-01.py` | Scoped purge of `category.seopath` / `seo_pro` caches after reparent (Run 4.235 helper) |
+| `site-002-prod-category-lari-seopro-patch-01.py` | Patch `seo_pro.php` `getPathByCategory()` to use `oc_category_path` (Run 4.235 helper) |
+| `site-002-category-lari-reparent.sql` | Sanitized apply SQL plan (no credentials) |
+| `site-002-category-lari-reparent-rollback.sql` | Sanitized rollback SQL plan (no credentials) |
 | `site-002-prod-info-page-forms-discovery-01.py` | Read-only info page corp CTA form discovery — HTTP inventory + FTP source map + integration charter for `SITE-002-PROD-INFO-PAGE-FORMS-DISCOVERY-01` (Run 4.229) |
 | `site-002-prod-info-page-forms-integration-01.py` | Info page corp CTA forms integration — 14-file deploy, mail extension, corp CTA JS handler, 5 controlled test submits for `SITE-002-PROD-INFO-PAGE-FORMS-INTEGRATION-01` (Run 4.230) |
 | `site-002-prod-mail-customer-forms-delivery-confirmation-01.py` | Customer form email delivery confirmation — 1 controlled submit with operator mailbox, sanity checks, mailbox gate for `SITE-002-PROD-MAIL-CUSTOMER-FORMS-DELIVERY-CONFIRMATION-01` (Run 4.231) |
