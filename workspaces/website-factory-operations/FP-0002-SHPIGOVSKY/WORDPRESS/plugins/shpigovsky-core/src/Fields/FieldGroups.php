@@ -81,6 +81,7 @@ final class FieldGroups implements ModuleInterface {
 			self::page_reviews(),
 			self::page_legal(),
 			self::blog_post_article_meta(),
+			self::blog_archive_settings(),
 			self::site_options_contacts(),
 			self::site_options_modal_cta(),
 			self::block_final_form(),
@@ -693,6 +694,60 @@ final class FieldGroups implements ModuleInterface {
 				self::field( 'field_fp02_related_posts', 'Related posts', 'related_posts', 'relationship', array( 'post_type' => array( 'post' ), 'max' => 3, 'return_format' => 'object' ) ),
 			),
 			self::location( 'post_type', '==', 'post' )
+		);
+	}
+
+	/**
+	 * Blog archive settings group (posts page).
+	 *
+	 * @return array<string, mixed>
+	 */
+	private static function blog_archive_settings() {
+		return self::group(
+			'group_fp02_blog_archive_settings',
+			'Blog — Archive Settings',
+			array(
+				self::field( 'field_fp02_blog_archive_eyebrow', 'Eyebrow', 'blog_archive_eyebrow', 'text' ),
+				self::field( 'field_fp02_blog_archive_title', 'Archive H1', 'blog_archive_title', 'text' ),
+				self::field( 'field_fp02_blog_archive_lead', 'Lead', 'blog_archive_lead', 'textarea', array( 'rows' => 3 ) ),
+				self::field( 'field_fp02_blog_archive_intro', 'Intro', 'blog_archive_intro', 'textarea', array( 'rows' => 4 ) ),
+				self::field( 'field_fp02_blog_archive_featured_label', 'Featured label', 'blog_archive_featured_label', 'text' ),
+				self::field( 'field_fp02_blog_archive_all_label', 'All articles label', 'blog_archive_all_label', 'text' ),
+				self::field( 'field_fp02_blog_archive_empty_title', 'Empty state title', 'blog_archive_empty_title', 'text' ),
+				self::field( 'field_fp02_blog_archive_empty_text', 'Empty state text', 'blog_archive_empty_text', 'textarea', array( 'rows' => 3 ) ),
+				self::field( 'field_fp02_blog_archive_card_link_label', 'Card link label', 'blog_archive_card_link_label', 'text', array( 'default_value' => 'Читать' ) ),
+				self::field(
+					'field_fp02_blog_archive_card_fallback_image',
+					'Card fallback image',
+					'blog_archive_card_fallback_image',
+					'image',
+					array(
+						'return_format' => 'array',
+						'preview_size'  => 'medium',
+					)
+				),
+				self::field( 'field_fp02_blog_archive_final_cta_title', 'Final CTA title', 'blog_archive_final_cta_title', 'text' ),
+				self::field( 'field_fp02_blog_archive_final_cta_text', 'Final CTA text', 'blog_archive_final_cta_text', 'textarea', array( 'rows' => 3 ) ),
+				self::field( 'field_fp02_blog_archive_final_cta_phone', 'Final CTA phone', 'blog_archive_final_cta_phone', 'text' ),
+				self::field( 'field_fp02_blog_archive_final_cta_phone_hint', 'Final CTA phone hint', 'blog_archive_final_cta_phone_hint', 'text' ),
+				self::field( 'field_fp02_blog_archive_final_cta_button_label', 'Final CTA button label', 'blog_archive_final_cta_button_label', 'text' ),
+				self::field( 'field_fp02_blog_archive_final_cta_button_url', 'Final CTA button URL', 'blog_archive_final_cta_button_url', 'url' ),
+				self::field( 'field_fp02_blog_archive_expert_quote_text', 'Expert quote text', 'blog_archive_expert_quote_text', 'textarea', array( 'rows' => 5 ) ),
+				self::field( 'field_fp02_blog_archive_expert_name', 'Expert name', 'blog_archive_expert_name', 'text' ),
+				self::field( 'field_fp02_blog_archive_expert_role', 'Expert role', 'blog_archive_expert_role', 'text' ),
+				self::field(
+					'field_fp02_blog_archive_expert_photo',
+					'Expert photo',
+					'blog_archive_expert_photo',
+					'image',
+					array(
+						'return_format' => 'array',
+						'preview_size'  => 'medium',
+					)
+				),
+				self::field( 'field_fp02_blog_archive_expert_cta_label', 'Expert CTA label', 'blog_archive_expert_cta_label', 'text' ),
+			),
+			self::location( 'page_type', '==', 'posts_page' )
 		);
 	}
 

@@ -1,0 +1,77 @@
+{
+  "result": "PASS",
+  "files": [
+    {
+      "source": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\home.php",
+      "runtime": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\home.php",
+      "sha256_before": "561F2C85C32E70AC58C7D93F18908BF90CD2D004E7E24BC440F1A7DC0592DBD8",
+      "sha256_after": "4F8CD38AC38B7AC9E12C5CC96A7F640659E8E7C03DA2EEC2449E3B51DEB9E864"
+    },
+    {
+      "source": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\functions.php",
+      "runtime": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\functions.php",
+      "sha256_before": "C0C608BC81C41874D9649A66CBEBB4CCFAB4136C5A62073A6B5BCE40158AB7FF",
+      "sha256_after": "8831CBE1A8FD02AF6C55610B394AB73B3AB965BE42759513327C46CBED87B08E"
+    },
+    {
+      "source": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\inc\\blog-helpers.php",
+      "runtime": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\inc\\blog-helpers.php",
+      "sha256_before": null,
+      "sha256_after": "7DFB4F05D085D3AD547901BDDC753CB6ECAF74F00DB3CC2A64A24B744BDC9ED7"
+    },
+    {
+      "source": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\layout\\body-start.php",
+      "runtime": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\template-parts\\layout\\body-start.php",
+      "sha256_before": "F016A76C03265A576AD8BABC800815E5C7B5A27C0CDAD4BDE7BD6AEDD6180716",
+      "sha256_after": "DDFE318B1721CDEEAB62C50529D6C21453EB42FDD2B7D8B521884CA9D2EB03D5"
+    },
+    {
+      "source": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\blog\\archive-list.php",
+      "runtime": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\template-parts\\blog\\archive-list.php",
+      "sha256_before": "803EF14BC02DA630261914BD8353432179535EBB1A00C0B8797E944B800B6366",
+      "sha256_after": "53FD7346C74FE8AECA5E4C121779865C04E4C938A4299AD8DF7E4165F7324D93"
+    },
+    {
+      "source": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\blog\\empty-state.php",
+      "runtime": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\template-parts\\blog\\empty-state.php",
+      "sha256_before": null,
+      "sha256_after": "E4ED6C5D88B97CE7CF7C798452EE3FFE54983CDD22C26F87D62BF4EA6282AE84"
+    },
+    {
+      "source": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\blog\\pagination.php",
+      "runtime": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\template-parts\\blog\\pagination.php",
+      "sha256_before": null,
+      "sha256_after": "BC5A20975EBE47157272AD2140DE277A96513F2ACCFAA97C0A83DFBDE1EBC47C"
+    },
+    {
+      "source": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\blog\\lower-stack.php",
+      "runtime": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\template-parts\\blog\\lower-stack.php",
+      "sha256_before": null,
+      "sha256_after": "FBFBE54FB842165A886B351CEFCD24C04747A9F43C0AC29CB634AC98BC144B14"
+    },
+    {
+      "source": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\blog\\expert-quote.php",
+      "runtime": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\template-parts\\blog\\expert-quote.php",
+      "sha256_before": null,
+      "sha256_after": "2D928F1C9BA90885C58F48F31614CBECEC1628887BD89E6186AD35A46CE62619"
+    },
+    {
+      "source": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\components\\blog-archive-card.php",
+      "runtime": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\template-parts\\components\\blog-archive-card.php",
+      "sha256_before": "8DB3A164FE9383C52D2E73FE8393C8666D8FD01A45E63B136A6C7E2D5B309792",
+      "sha256_after": "72F85BB6D115A348282E56A8290DD1BBDBDA2750C06E37E9A16D8A9460BF9C3E"
+    },
+    {
+      "source": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core\\src\\Fields\\FieldGroups.php",
+      "runtime": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\shpigovsky-core\\src\\Fields\\FieldGroups.php",
+      "sha256_before": "090A5304F58F565F20F4E94F9DB3C480044373ACF821885B50D7D3227B006AAD",
+      "sha256_after": "48A668EDAFF9A343782D7932AB6ED2CA034F036567D758BB7A422A544B3DCF0E"
+    },
+    {
+      "source": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\acf-json\\group_fp02_blog_archive_settings.json",
+      "runtime": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\acf-json\\group_fp02_blog_archive_settings.json",
+      "sha256_before": null,
+      "sha256_after": "20E6917EE458B98C4E24DE9E921E5F6FB4460A566CF7108E6A244D74CB318253"
+    }
+  ]
+}

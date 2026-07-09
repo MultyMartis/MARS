@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-09 (V9-06E26A-POLISH infrastructure g5 decor logo PASS)
+**Last updated:** 2026-07-09 (V9-06E26B blog archive WordPress ACF port PASS)
 
-**Current WordPress phase:** V9-06E26A-POLISH Infrastructure G5 Decor Logo **PASS** — `/o-centre/` g5 `comfort__gallery-item_decor` restored; 1 theme partial; runtime delivered; no ACF/DB changes. **Next: CREATE_V9_06E26B_BLOG_ARCHIVE_WORDPRESS_ACF_PORT_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E26A-POLISH-INFRASTRUCTURE-G5-DECOR-LOGO-REPORT-v1.md`. Prior E26A: about page port PASS @ `2d586200`.
+**Current WordPress phase:** V9-06E26B Blog Archive WordPress ACF Port **PASS** — `/blog/` archive stack; `group_fp02_blog_archive_settings`; permalink `/blog/%postname%/`; empty state; runtime delivered. **Next: CREATE_V9_06E26C_BLOG_SINGLE_TEMPLATE_WORDPRESS_ACF_PORT_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E26B-BLOG-ARCHIVE-WORDPRESS-ACF-PORT-REPORT-v1.md`. Prior E26A-POLISH: decor logo PASS @ `0d629fbc`.
 
 ## Active frontend workspace (V9)
 

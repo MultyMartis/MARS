@@ -1,0 +1,32 @@
+{
+  "wave": "V9-06E26B",
+  "archive_template": {
+    "primary": "home.php",
+    "parts": [
+      "archive-list.php",
+      "empty-state.php",
+      "pagination.php",
+      "lower-stack.php",
+      "expert-quote.php",
+      "blog-archive-card.php"
+    ]
+  },
+  "acf": {
+    "group": "group_fp02_blog_archive_settings",
+    "location": "page_type == posts_page"
+  },
+  "data": {
+    "seed_page": 19,
+    "posts_created": 0,
+    "categories_seeded": 0
+  },
+  "permalink": {
+    "decision": "APPLY",
+    "target": "/blog/%postname%/"
+  },
+  "validation": {
+    "primary_route": "/blog/",
+    "empty_state_required": true,
+    "single_template": "deferred E26C"
+  }
+}

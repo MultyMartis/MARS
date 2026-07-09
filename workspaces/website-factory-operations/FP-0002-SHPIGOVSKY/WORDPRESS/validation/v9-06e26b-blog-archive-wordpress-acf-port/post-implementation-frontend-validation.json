@@ -1,0 +1,64 @@
+{
+  "result": "PASS",
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/o-centre/",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/kontakty/",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/otzyvy/",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/privacy-policy/",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/blog/",
+      "status": 200,
+      "result": "PASS",
+      "markers": {
+        "page-blog": true,
+        "blog-archive": true,
+        "blog-archive__heading": true,
+        "blog-archive__intro": true,
+        "blog-lower-stack": true,
+        "blog-expert-quote": true,
+        "program-cta-band-section": true,
+        "blog-archive__empty-state": true,
+        "blog-archive-card": false
+      },
+      "skeleton": false,
+      "empty_state": true,
+      "h1": true
+    }
+  ]
+}

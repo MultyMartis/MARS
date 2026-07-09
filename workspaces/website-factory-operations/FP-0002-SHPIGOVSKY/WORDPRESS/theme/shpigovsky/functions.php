@@ -31,6 +31,7 @@ require_once SHPIGOVSKY_THEME_DIR . '/inc/service-helpers.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/service-template-loader.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/contacts-helpers.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/reviews-helpers.php';
+require_once SHPIGOVSKY_THEME_DIR . '/inc/blog-helpers.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/reusable-blocks-helpers.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/institutional-about-v9-content.php';
 require_once SHPIGOVSKY_THEME_DIR . '/inc/institutional-helpers.php';

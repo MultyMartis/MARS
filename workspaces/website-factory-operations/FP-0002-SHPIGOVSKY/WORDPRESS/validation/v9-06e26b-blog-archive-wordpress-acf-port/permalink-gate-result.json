@@ -1,0 +1,9 @@
+{
+  "decision": "APPLY",
+  "reason": "posts_count=0; no published article URLs depend on /%postname%/ structure",
+  "before": "/blog/%postname%/",
+  "after": "/blog/%postname%/",
+  "rewrite_flush": true,
+  "flush_output": "/blog/%postname%/",
+  "flush_stderr": ""
+}

@@ -1,0 +1,22 @@
+{
+  "result": "PASS",
+  "blog_route": {
+    "route": "/blog/",
+    "status": 200,
+    "result": "PASS",
+    "markers": {
+      "page-blog": true,
+      "blog-archive": true,
+      "blog-archive__heading": true,
+      "blog-archive__intro": true,
+      "blog-lower-stack": true,
+      "blog-expert-quote": true,
+      "program-cta-band-section": true,
+      "blog-archive__empty-state": true,
+      "blog-archive-card": false
+    },
+    "skeleton": false,
+    "empty_state": true,
+    "h1": true
+  }
+}

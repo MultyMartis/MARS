@@ -1,0 +1,64 @@
+{
+  "wave": "V9-06E26B",
+  "result": "PASS",
+  "static_v9_sections": [
+    {
+      "order": 1,
+      "name": "breadcrumbs",
+      "markers": [
+        "blog-page__breadcrumbs",
+        "breadcrumbs"
+      ],
+      "filters": false
+    },
+    {
+      "order": 2,
+      "name": "archive-list",
+      "markers": [
+        "blog-archive",
+        "blog-archive__heading",
+        "blog-archive__intro",
+        "blog-archive__grid",
+        "blog-archive-pagination"
+      ],
+      "filters": false
+    },
+    {
+      "order": 3,
+      "name": "lower-stack-cta",
+      "markers": [
+        "blog-lower-stack",
+        "program-cta-band-section",
+        "blog-cta-01"
+      ],
+      "filters": false
+    },
+    {
+      "order": 4,
+      "name": "expert-quote",
+      "markers": [
+        "blog-expert-quote"
+      ],
+      "filters": false
+    }
+  ],
+  "current_wp_before": {
+    "page_for_posts": 19,
+    "route": "/blog/",
+    "template": "home.php skeleton",
+    "posts_count": 0,
+    "categories_count": 1,
+    "permalink_structure": "/%postname%/",
+    "gaps": [
+      "skeleton markup",
+      "no ACF archive settings",
+      "no empty state",
+      "no lower stack"
+    ]
+  },
+  "permalink_gap": {
+    "current": "/%postname%/",
+    "target": "/blog/%postname%/",
+    "decision": "APPLY in E26B"
+  }
+}

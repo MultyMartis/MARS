@@ -1,0 +1,25 @@
+{
+  "wave": "V9-06E26B",
+  "archive_route": "/blog/",
+  "page_for_posts": 19,
+  "permalink_structure": "/blog/%postname%/",
+  "template_files": [
+    "home.php",
+    "inc/blog-helpers.php",
+    "template-parts/blog/archive-list.php",
+    "template-parts/blog/empty-state.php",
+    "template-parts/blog/pagination.php",
+    "template-parts/blog/lower-stack.php",
+    "template-parts/blog/expert-quote.php",
+    "template-parts/components/blog-archive-card.php"
+  ],
+  "acf_group": "group_fp02_blog_archive_settings",
+  "category_filter": "absent in static V9 — intentionally not implemented",
+  "empty_state": "blog-archive__empty-state when posts_count=0",
+  "pagination": "blog-archive-pagination via paginate_links",
+  "deferred": {
+    "E26C": "blog single template",
+    "E26D": "demo content seeding",
+    "WPilot": "future only"
+  }
+}
