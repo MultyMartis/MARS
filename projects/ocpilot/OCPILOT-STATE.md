@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-10
-**Evidence cutoff:** 2026-07-10 (SITE-002 Run **4.248** — Post-1C Lari/Duration Verification 02 **PARTIAL** — Lari **CONFIRMED**, Duration **PENDING**; checkpoint `SITE-002-STABLE-PROD-AUDIT-WAVE-E-INFO-META-H1-01` unchanged; Wave E origin **`0d1174a3`** via temp worktree)
+**Evidence cutoff:** 2026-07-10 (SITE-002 Run **4.248** — Post-1C Lari/Duration Verification 02 **PARTIAL** — Lari **CONFIRMED**, Duration **PENDING**; Run **4.249** git sync pushed rebased docs `cb699c0b` from original `916e5f9e`; checkpoint `SITE-002-STABLE-PROD-AUDIT-WAVE-E-INFO-META-H1-01` unchanged)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -27,6 +27,7 @@
 | Run 4.245 report on origin | **yes** — [SITE-002-GIT-SYNC-PUSH-BLOCKED-WAVE-E-01.md](sites/site-002/reports/SITE-002-GIT-SYNC-PUSH-BLOCKED-WAVE-E-01.md) |
 | Main worktree (`X:\AI MARS`) | **reconciled in FP-0002 V9-06E29B-R2** — foreign WIP preserved; no stash/reset/clean performed |
 | Preferred git sync pattern | **clean temp worktree** under `X:\AI MARS STORAGE\git-sync-e01\` or `git-sync-e02\` for future isolated pushes |
+| Run 4.248 origin push (Run 4.249) | original `916e5f9e` → rebased **`cb699c0b`** on origin base `98a38a77`; report [SITE-002-GIT-SYNC-PUSH-POST-1C-VERIFICATION-02.md](sites/site-002/reports/SITE-002-GIT-SYNC-PUSH-POST-1C-VERIFICATION-02.md) |
 
 ---
 
