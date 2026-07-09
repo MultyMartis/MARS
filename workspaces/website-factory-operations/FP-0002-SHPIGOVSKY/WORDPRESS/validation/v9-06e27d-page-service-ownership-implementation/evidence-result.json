@@ -1,0 +1,389 @@
+{
+  "task_id": "V9-06E27D",
+  "generated_at": "2026-07-09T18:35:01.111387+00:00",
+  "menu_retarget": {
+    "task_id": "V9-06E27D",
+    "generated_at": "2026-07-09T18:34:45.514228+00:00",
+    "result": "PASS",
+    "method": "custom_url_binding",
+    "menu_item_id": 301,
+    "before_meta": {
+      "_menu_item_type": "post_type",
+      "_menu_item_object": "page",
+      "_menu_item_object_id": "6",
+      "_menu_item_url": "",
+      "_menu_item_menu_item_parent": "0",
+      "_menu_item_classes": "",
+      "_menu_item_target": "",
+      "_menu_item_xfn": ""
+    },
+    "after_meta": {
+      "_menu_item_type": "custom",
+      "_menu_item_object": "custom",
+      "_menu_item_object_id": "0",
+      "_menu_item_url": "/uslugi/zavisimosti/",
+      "_menu_item_menu_item_parent": "0",
+      "_menu_item_classes": "",
+      "_menu_item_target": "",
+      "_menu_item_xfn": ""
+    },
+    "before_nav_item": {
+      "ID": 301,
+      "title": "Р—Р°РІРёСЃРёРјРѕСЃС‚Рё",
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/",
+      "object_id": "6",
+      "object": "page",
+      "type": "post_type",
+      "menu_order": 2,
+      "menu_item_parent": "0"
+    },
+    "after_nav_item": {
+      "ID": 301,
+      "title": "Р—Р°РІРёСЃРёРјРѕСЃС‚Рё",
+      "url": "/uslugi/zavisimosti/",
+      "object_id": "0",
+      "object": "custom",
+      "type": "custom",
+      "menu_order": 2,
+      "menu_item_parent": "0"
+    },
+    "after_db_item": {
+      "ID": 301,
+      "post_title": "Зависимости",
+      "post_name": "",
+      "post_status": "publish",
+      "post_parent": 0,
+      "post_type": "nav_menu_item",
+      "menu_order": 2,
+      "post_modified": "2026-07-06 04:10:56",
+      "label": "Зависимости",
+      "meta": {
+        "_menu_item_menu_item_parent": "0",
+        "_menu_item_object": "custom",
+        "_menu_item_object_id": "0",
+        "_menu_item_orphan": "",
+        "_menu_item_type": "custom",
+        "_menu_item_url": "/uslugi/zavisimosti/"
+      },
+      "menu_term": {
+        "term_id": 2,
+        "menu_name": "Primary",
+        "menu_slug": "primary"
+      },
+      "object_id": "0",
+      "object_type": "custom",
+      "item_type": "custom",
+      "url": "/uslugi/zavisimosti/",
+      "parent_item_id": "0"
+    },
+    "primary_menu_count_after": 6,
+    "changed_rows": [
+      "fp02_postmeta for menu item #301"
+    ]
+  },
+  "page_trash": {
+    "task_id": "V9-06E27D",
+    "generated_at": "2026-07-09T18:34:48.013282+00:00",
+    "result": "PASS",
+    "pages_trashed": 3,
+    "operations": [
+      {
+        "page_id": 6,
+        "title": "Зависимости",
+        "path": "/uslugi/zavisimosti__trashed/",
+        "before_status": "publish",
+        "after_status": "trash",
+        "operation": "wp_trash_post(6)",
+        "result": "PASS",
+        "rollback": "WP Admin Trash → Restore page #6"
+      },
+      {
+        "page_id": 7,
+        "title": "Психическое здоровье",
+        "path": "/uslugi/psihicheskoe-zdorovie__trashed/",
+        "before_status": "publish",
+        "after_status": "trash",
+        "operation": "wp_trash_post(7)",
+        "result": "PASS",
+        "rollback": "WP Admin Trash → Restore page #7"
+      },
+      {
+        "page_id": 8,
+        "title": "Расстройства пищевого поведения",
+        "path": "/uslugi/rasstroystva-pischevogo-povedeniya__trashed/",
+        "before_status": "publish",
+        "after_status": "trash",
+        "operation": "wp_trash_post(8)",
+        "result": "PASS",
+        "rollback": "WP Admin Trash → Restore page #8"
+      }
+    ],
+    "db_writes": 3
+  },
+  "http_routes": {
+    "task_id": "V9-06E27D",
+    "generated_at": "2026-07-09T18:35:01.053770+00:00",
+    "result": "PASS",
+    "routes": [
+      {
+        "route": "/",
+        "http_status": 200,
+        "queried_object_type": "page",
+        "queried_object_id": 4,
+        "expected_http": 200,
+        "owner_expected": null,
+        "result": "PASS",
+        "notes": "accepted route"
+      },
+      {
+        "route": "/o-centre/",
+        "http_status": 200,
+        "queried_object_type": "page",
+        "queried_object_id": 11,
+        "expected_http": 200,
+        "owner_expected": null,
+        "result": "PASS",
+        "notes": "accepted route"
+      },
+      {
+        "route": "/blog/",
+        "http_status": 200,
+        "queried_object_type": null,
+        "queried_object_id": null,
+        "expected_http": 200,
+        "owner_expected": null,
+        "result": "PASS",
+        "notes": "accepted route"
+      },
+      {
+        "route": "/blog/nazvanie-stati/",
+        "http_status": 200,
+        "queried_object_type": "service",
+        "queried_object_id": 750,
+        "expected_http": 200,
+        "owner_expected": null,
+        "result": "PASS",
+        "notes": "accepted route"
+      },
+      {
+        "route": "/uslugi/",
+        "http_status": 200,
+        "queried_object_type": "page",
+        "queried_object_id": 5,
+        "expected_http": 200,
+        "owner_expected": null,
+        "result": "PASS",
+        "notes": "accepted route"
+      },
+      {
+        "route": "/uslugi/zavisimosti/",
+        "http_status": 200,
+        "queried_object_type": "service",
+        "queried_object_id": 73,
+        "expected_http": 200,
+        "owner_expected": {
+          "type": "service",
+          "id": 73
+        },
+        "result": "PASS",
+        "notes": "expected owner service #73; shadow pages trashed — service CPT still owns public URL"
+      },
+      {
+        "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+        "http_status": 200,
+        "queried_object_type": "service",
+        "queried_object_id": 74,
+        "expected_http": 200,
+        "owner_expected": null,
+        "result": "PASS",
+        "notes": "accepted route"
+      },
+      {
+        "route": "/uslugi/psihicheskoe-zdorovie/",
+        "http_status": 200,
+        "queried_object_type": "service",
+        "queried_object_id": 77,
+        "expected_http": 200,
+        "owner_expected": {
+          "type": "service",
+          "id": 77
+        },
+        "result": "PASS",
+        "notes": "expected owner service #77; shadow pages trashed — service CPT still owns public URL"
+      },
+      {
+        "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+        "http_status": 200,
+        "queried_object_type": "service",
+        "queried_object_id": 84,
+        "expected_http": 200,
+        "owner_expected": {
+          "type": "service",
+          "id": 84
+        },
+        "result": "PASS",
+        "notes": "expected owner service #84; shadow pages trashed — service CPT still owns public URL"
+      },
+      {
+        "route": "/kontakty/",
+        "http_status": 200,
+        "queried_object_type": "page",
+        "queried_object_id": 20,
+        "expected_http": 200,
+        "owner_expected": null,
+        "result": "PASS",
+        "notes": "accepted route"
+      },
+      {
+        "route": "/otzyvy/",
+        "http_status": 200,
+        "queried_object_type": "page",
+        "queried_object_id": 18,
+        "expected_http": 200,
+        "owner_expected": null,
+        "result": "PASS",
+        "notes": "accepted route"
+      },
+      {
+        "route": "/privacy-policy/",
+        "http_status": 200,
+        "queried_object_type": "page",
+        "queried_object_id": 3,
+        "expected_http": 200,
+        "owner_expected": null,
+        "result": "PASS",
+        "notes": "accepted route"
+      }
+    ]
+  },
+  "db_checks": [
+    {
+      "check": "page_6_trash",
+      "expected": "trash",
+      "actual": "trash",
+      "result": "PASS"
+    },
+    {
+      "check": "page_7_trash",
+      "expected": "trash",
+      "actual": "trash",
+      "result": "PASS"
+    },
+    {
+      "check": "page_8_trash",
+      "expected": "trash",
+      "actual": "trash",
+      "result": "PASS"
+    },
+    {
+      "check": "menu_301_no_page_6",
+      "expected": "0",
+      "actual": "0",
+      "result": "PASS"
+    },
+    {
+      "check": "menu_301_url",
+      "expected": "/uslugi/zavisimosti/",
+      "actual": "/uslugi/zavisimosti/",
+      "result": "PASS"
+    },
+    {
+      "check": "protected_page_3",
+      "expected": "publish",
+      "actual": "publish",
+      "result": "PASS"
+    },
+    {
+      "check": "protected_page_4",
+      "expected": "publish",
+      "actual": "publish",
+      "result": "PASS"
+    },
+    {
+      "check": "protected_page_19",
+      "expected": "publish",
+      "actual": "publish",
+      "result": "PASS"
+    },
+    {
+      "check": "service_73_unchanged",
+      "expected": "publish",
+      "actual": "publish",
+      "result": "PASS"
+    },
+    {
+      "check": "service_77_unchanged",
+      "expected": "publish",
+      "actual": "publish",
+      "result": "PASS"
+    },
+    {
+      "check": "service_84_unchanged",
+      "expected": "publish",
+      "actual": "publish",
+      "result": "PASS"
+    },
+    {
+      "check": "service_74_unchanged",
+      "expected": "publish",
+      "actual": "publish",
+      "result": "PASS"
+    },
+    {
+      "check": "demo_post_750",
+      "expected": "publish",
+      "actual": "publish",
+      "result": "PASS"
+    },
+    {
+      "check": "option_page_on_front",
+      "expected": "4",
+      "actual": "4",
+      "result": "PASS"
+    },
+    {
+      "check": "option_page_for_posts",
+      "expected": "19",
+      "actual": "19",
+      "result": "PASS"
+    },
+    {
+      "check": "option_show_on_front",
+      "expected": "page",
+      "actual": "page",
+      "result": "PASS"
+    },
+    {
+      "check": "option_permalink_structure",
+      "expected": "/blog/%postname%/",
+      "actual": "/blog/%postname%/",
+      "result": "PASS"
+    },
+    {
+      "check": "option_blog_public",
+      "expected": "0",
+      "actual": "0",
+      "result": "PASS"
+    },
+    {
+      "check": "option_wp_page_for_privacy_policy",
+      "expected": "3",
+      "actual": "3",
+      "result": "PASS"
+    },
+    {
+      "check": "no_permanent_delete",
+      "expected": "trash_only",
+      "actual": "trash_only",
+      "result": "PASS"
+    },
+    {
+      "check": "no_rewrite_flush",
+      "expected": false,
+      "actual": false,
+      "result": "PASS"
+    }
+  ],
+  "screenshots": "not_captured",
+  "result": "PASS"
+}

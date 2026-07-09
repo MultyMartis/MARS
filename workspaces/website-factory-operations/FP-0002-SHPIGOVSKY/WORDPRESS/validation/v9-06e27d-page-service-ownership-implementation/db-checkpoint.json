@@ -1,0 +1,1244 @@
+{
+  "task_id": "V9-06E27D",
+  "wave": "V9-06E27D",
+  "generated_at": "2026-07-09T18:34:39.999574+00:00",
+  "result": "PASS",
+  "checkpoint_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e27d-page-service-ownership-implementation-pre-20260709-183427",
+  "dump_file": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e27d-page-service-ownership-implementation-pre-20260709-183427/mars_wp_fp0002.sql",
+  "dump_sha256": "EF99EA958B38290777E27AFDCDD1958FB823492E6494A2241FBE0001E3C66D13",
+  "dump_size_bytes": 2012709,
+  "dump_note": "Fresh mysqldump via X:\\MARS-Localhost\\laragon\\bin\\mysql\\mysql-8.4.3-winx64\\bin\\mysqldump.exe",
+  "db": "mars_wp_fp0002",
+  "prefix": "fp02_",
+  "e27c_baseline_commit": "acf77934b396add288c8d14601453212c6477cbc",
+  "menu_item_301_before": {
+    "ID": 301,
+    "post_title": "Зависимости",
+    "post_name": "",
+    "post_status": "publish",
+    "post_parent": 0,
+    "post_type": "nav_menu_item",
+    "menu_order": 2,
+    "post_modified": "2026-07-06 04:10:56",
+    "label": "Зависимости",
+    "meta": {
+      "_menu_item_menu_item_parent": "0",
+      "_menu_item_object": "page",
+      "_menu_item_object_id": "6",
+      "_menu_item_orphan": "",
+      "_menu_item_type": "post_type",
+      "_menu_item_url": ""
+    },
+    "menu_term": {
+      "term_id": 2,
+      "menu_name": "Primary",
+      "menu_slug": "primary"
+    },
+    "object_id": "6",
+    "object_type": "page",
+    "item_type": "post_type",
+    "url": "/uslugi/zavisimosti/",
+    "parent_item_id": "0"
+  },
+  "shadow_pages_before": {
+    "6": {
+      "ID": 6,
+      "post_title": "Зависимости",
+      "post_name": "zavisimosti",
+      "post_status": "publish",
+      "post_parent": 5,
+      "post_type": "page",
+      "menu_order": 0,
+      "post_modified": "2026-07-02 18:53:38",
+      "path": "/uslugi/zavisimosti/",
+      "meta": [],
+      "meta_count": 0,
+      "menu_references": [
+        {
+          "menu_item_id": 301,
+          "menu_name": "Primary"
+        }
+      ],
+      "in_menu": true,
+      "is_front_page": false,
+      "is_posts_page": false,
+      "is_privacy_page": false
+    },
+    "7": {
+      "ID": 7,
+      "post_title": "Психическое здоровье",
+      "post_name": "psihicheskoe-zdorovie",
+      "post_status": "publish",
+      "post_parent": 5,
+      "post_type": "page",
+      "menu_order": 0,
+      "post_modified": "2026-07-02 18:53:38",
+      "path": "/uslugi/psihicheskoe-zdorovie/",
+      "meta": [],
+      "meta_count": 0,
+      "menu_references": [],
+      "in_menu": false,
+      "is_front_page": false,
+      "is_posts_page": false,
+      "is_privacy_page": false
+    },
+    "8": {
+      "ID": 8,
+      "post_title": "Расстройства пищевого поведения",
+      "post_name": "rasstroystva-pischevogo-povedeniya",
+      "post_status": "publish",
+      "post_parent": 5,
+      "post_type": "page",
+      "menu_order": 0,
+      "post_modified": "2026-07-02 18:53:38",
+      "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "meta": [],
+      "meta_count": 0,
+      "menu_references": [],
+      "in_menu": false,
+      "is_front_page": false,
+      "is_posts_page": false,
+      "is_privacy_page": false
+    }
+  },
+  "protected_objects": {
+    "pages": {
+      "3": {
+        "ID": 3,
+        "post_title": "Политика конфиденциальности",
+        "post_name": "privacy-policy",
+        "post_status": "publish",
+        "post_parent": 0,
+        "post_type": "page",
+        "menu_order": 0,
+        "post_modified": "2026-07-02 18:53:38",
+        "path": "/privacy-policy/",
+        "meta": [
+          {
+            "meta_key": "_wp_page_template",
+            "meta_value": "page-templates/legal.php"
+          }
+        ],
+        "meta_count": 1,
+        "menu_references": [
+          {
+            "menu_item_id": 37,
+            "menu_name": "Legal"
+          }
+        ],
+        "in_menu": true,
+        "is_front_page": false,
+        "is_posts_page": false,
+        "is_privacy_page": true
+      },
+      "4": {
+        "ID": 4,
+        "post_title": "Главная",
+        "post_name": "glavnaya",
+        "post_status": "publish",
+        "post_parent": 0,
+        "post_type": "page",
+        "menu_order": 0,
+        "post_modified": "2026-07-08 20:14:08",
+        "path": "/glavnaya/",
+        "meta": [
+          {
+            "meta_key": "_edit_last",
+            "meta_value": "2"
+          },
+          {
+            "meta_key": "_edit_lock",
+            "meta_value": "1783530711:2"
+          },
+          {
+            "meta_key": "_hero_cta_label",
+            "meta_value": "field_fp02_hero_cta_label_home"
+          },
+          {
+            "meta_key": "_hero_media",
+            "meta_value": "field_fp02_hero_media_home"
+          },
+          {
+            "meta_key": "_home_advantages",
+            "meta_value": "field_fp02_home_advantages"
+          },
+          {
+            "meta_key": "_home_advantages_0_text",
+            "meta_value": "field_fp02_home_advantages_text"
+          },
+          {
+            "meta_key": "_home_advantages_0_title",
+            "meta_value": "field_fp02_home_advantages_title"
+          },
+          {
+            "meta_key": "_home_advantages_1_text",
+            "meta_value": "field_fp02_home_advantages_text"
+          },
+          {
+            "meta_key": "_home_advantages_1_title",
+            "meta_value": "field_fp02_home_advantages_title"
+          },
+          {
+            "meta_key": "_home_advantages_2_text",
+            "meta_value": "field_fp02_home_advantages_text"
+          },
+          {
+            "meta_key": "_home_advantages_2_title",
+            "meta_value": "field_fp02_home_advantages_title"
+          },
+          {
+            "meta_key": "_home_advantages_3_text",
+            "meta_value": "field_fp02_home_advantages_text"
+          },
+          {
+            "meta_key": "_home_advantages_3_title",
+            "meta_value": "field_fp02_home_advantages_title"
+          },
+          {
+            "meta_key": "_home_advantages_4_text",
+            "meta_value": "field_fp02_home_advantages_text"
+          },
+          {
+            "meta_key": "_home_advantages_4_title",
+            "meta_value": "field_fp02_home_advantages_title"
+          },
+          {
+            "meta_key": "_home_advantages_5_text",
+            "meta_value": "field_fp02_home_advantages_text"
+          },
+          {
+            "meta_key": "_home_advantages_5_title",
+            "meta_value": "field_fp02_home_advantages_title"
+          },
+          {
+            "meta_key": "_home_articles_heading",
+            "meta_value": "field_fp02_home_articles_heading"
+          },
+          {
+            "meta_key": "_home_blog_teaser_enabled",
+            "meta_value": "field_fp02_home_blog_teaser_enabled"
+          },
+          {
+            "meta_key": "_home_comfort_heading",
+            "meta_value": "field_fp02_home_comfort_heading"
+          },
+          {
+            "meta_key": "_home_comfort_lead",
+            "meta_value": "field_fp02_home_comfort_lead"
+          },
+          {
+            "meta_key": "_home_cta_text",
+            "meta_value": "field_fp02_home_cta_text"
+          },
+          {
+            "meta_key": "_home_cta_title",
+            "meta_value": "field_fp02_home_cta_title"
+          },
+          {
+            "meta_key": "_home_faq_heading",
+            "meta_value": "field_fp02_home_faq_heading"
+          },
+          {
+            "meta_key": "_home_faq_items",
+            "meta_value": "field_fp02_home_faq_items"
+          },
+          {
+            "meta_key": "_home_faq_items_0_answer",
+            "meta_value": "field_fp02_home_faq_answer"
+          },
+          {
+            "meta_key": "_home_faq_items_0_question",
+            "meta_value": "field_fp02_home_faq_question"
+          },
+          {
+            "meta_key": "_home_faq_items_1_answer",
+            "meta_value": "field_fp02_home_faq_answer"
+          },
+          {
+            "meta_key": "_home_faq_items_1_question",
+            "meta_value": "field_fp02_home_faq_question"
+          },
+          {
+            "meta_key": "_home_faq_items_2_answer",
+            "meta_value": "field_fp02_home_faq_answer"
+          },
+          {
+            "meta_key": "_home_faq_items_2_question",
+            "meta_value": "field_fp02_home_faq_question"
+          },
+          {
+            "meta_key": "_home_faq_items_3_answer",
+            "meta_value": "field_fp02_home_faq_answer"
+          },
+          {
+            "meta_key": "_home_faq_items_3_question",
+            "meta_value": "field_fp02_home_faq_question"
+          },
+          {
+            "meta_key": "_home_faq_items_4_answer",
+            "meta_value": "field_fp02_home_faq_answer"
+          },
+          {
+            "meta_key": "_home_faq_items_4_question",
+            "meta_value": "field_fp02_home_faq_question"
+          },
+          {
+            "meta_key": "_home_gallery_media",
+            "meta_value": "field_fp02_home_gallery_media"
+          },
+          {
+            "meta_key": "_home_gallery_media_0_media",
+            "meta_value": "field_fp02_home_gallery_item_media"
+          },
+          {
+            "meta_key": "_home_gallery_media_0_text",
+            "meta_value": "field_fp02_home_gallery_item_text"
+          },
+          {
+            "meta_key": "_home_gallery_media_0_title",
+            "meta_value": "field_fp02_home_gallery_item_title"
+          },
+          {
+            "meta_key": "_home_gallery_media_1_media",
+            "meta_value": "field_fp02_home_gallery_item_media"
+          },
+          {
+            "meta_key": "_home_gallery_media_1_text",
+            "meta_value": "field_fp02_home_gallery_item_text"
+          },
+          {
+            "meta_key": "_home_gallery_media_1_title",
+            "meta_value": "field_fp02_home_gallery_item_title"
+          },
+          {
+            "meta_key": "_home_gallery_media_2_media",
+            "meta_value": "field_fp02_home_gallery_item_media"
+          },
+          {
+            "meta_key": "_home_gallery_media_2_text",
+            "meta_value": "field_fp02_home_gallery_item_text"
+          },
+          {
+            "meta_key": "_home_gallery_media_2_title",
+            "meta_value": "field_fp02_home_gallery_item_title"
+          },
+          {
+            "meta_key": "_home_gallery_media_3_media",
+            "meta_value": "field_fp02_home_gallery_item_media"
+          },
+          {
+            "meta_key": "_home_gallery_media_3_text",
+            "meta_value": "field_fp02_home_gallery_item_text"
+          },
+          {
+            "meta_key": "_home_gallery_media_3_title",
+            "meta_value": "field_fp02_home_gallery_item_title"
+          },
+          {
+            "meta_key": "_home_hero_slides",
+            "meta_value": "field_fp02_home_hero_slides"
+          },
+          {
+            "meta_key": "_home_hero_slides_0_image",
+            "meta_value": "field_fp02_home_hero_image"
+          },
+          {
+            "meta_key": "_home_hero_slides_0_text",
+            "meta_value": "field_fp02_home_hero_text"
+          },
+          {
+            "meta_key": "_home_hero_slides_0_title",
+            "meta_value": "field_fp02_home_hero_title"
+          },
+          {
+            "meta_key": "_home_intro_bands",
+            "meta_value": "field_fp02_home_intro_bands"
+          },
+          {
+            "meta_key": "_home_intro_bands_0_text",
+            "meta_value": "field_fp02_home_intro_bands_text"
+          },
+          {
+            "meta_key": "_home_intro_bands_0_title",
+            "meta_value": "field_fp02_home_intro_bands_title"
+          },
+          {
+            "meta_key": "_home_intro_bands_1_text",
+            "meta_value": "field_fp02_home_intro_bands_text"
+          },
+          {
+            "meta_key": "_home_intro_bands_1_title",
+            "meta_value": "field_fp02_home_intro_bands_title"
+          },
+          {
+            "meta_key": "_home_intro_bands_2_text",
+            "meta_value": "field_fp02_home_intro_bands_text"
+          },
+          {
+            "meta_key": "_home_intro_bands_2_title",
+            "meta_value": "field_fp02_home_intro_bands_title"
+          },
+          {
+            "meta_key": "_home_intro_bands_3_text",
+            "meta_value": "field_fp02_home_intro_bands_text"
+          },
+          {
+            "meta_key": "_home_intro_bands_3_title",
+            "meta_value": "field_fp02_home_intro_bands_title"
+          },
+          {
+            "meta_key": "_home_intro_bands_4_text",
+            "meta_value": "field_fp02_home_intro_bands_text"
+          },
+          {
+            "meta_key": "_home_intro_bands_4_title",
+            "meta_value": "field_fp02_home_intro_bands_title"
+          },
+          {
+            "meta_key": "_home_intro_bands_5_text",
+            "meta_value": "field_fp02_home_intro_bands_text"
+          },
+          {
+            "meta_key": "_home_intro_bands_5_title",
+            "meta_value": "field_fp02_home_intro_bands_title"
+          },
+          {
+            "meta_key": "_home_recovery_intro_heading",
+            "meta_value": "field_fp02_home_recovery_intro_heading"
+          },
+          {
+            "meta_key": "_home_recovery_intro_lead_1",
+            "meta_value": "field_fp02_home_recovery_intro_lead_1"
+          },
+          {
+            "meta_key": "_home_recovery_intro_lead_2",
+            "meta_value": "field_fp02_home_recovery_intro_lead_2"
+          },
+          {
+            "meta_key": "_home_reviews_heading",
+            "meta_value": "field_fp02_home_reviews_heading"
+          },
+          {
+            "meta_key": "_home_reviews_teaser",
+            "meta_value": "field_fp02_home_reviews_teaser"
+          },
+          {
+            "meta_key": "_home_reviews_teaser_0_text",
+            "meta_value": "field_fp02_home_reviews_teaser_text"
+          },
+          {
+            "meta_key": "_home_reviews_teaser_0_title",
+            "meta_value": "field_fp02_home_reviews_teaser_title"
+          },
+          {
+            "meta_key": "_home_service_nav_items",
+            "meta_value": "field_fp02_home_service_nav_items"
+          },
+          {
+            "meta_key": "_home_service_nav_items_0_text",
+            "meta_value": "field_fp02_home_service_nav_text"
+          },
+          {
+            "meta_key": "_home_service_nav_items_0_title",
+            "meta_value": "field_fp02_home_service_nav_title"
+          },
+          {
+            "meta_key": "_home_service_nav_items_1_text",
+            "meta_value": "field_fp02_home_service_nav_text"
+          },
+          {
+            "meta_key": "_home_service_nav_items_1_title",
+            "meta_value": "field_fp02_home_service_nav_title"
+          },
+          {
+            "meta_key": "_home_service_nav_items_2_text",
+            "meta_value": "field_fp02_home_service_nav_text"
+          },
+          {
+            "meta_key": "_home_service_nav_items_2_title",
+            "meta_value": "field_fp02_home_service_nav_title"
+          },
+          {
+            "meta_key": "_home_specialists_heading",
+            "meta_value": "field_fp02_home_specialists_heading"
+          },
+          {
+            "meta_key": "_wp_page_template",
+            "meta_value": "default"
+          },
+          {
+            "meta_key": "hero_cta_label",
+            "meta_value": "Заказать звонок"
+          },
+          {
+            "meta_key": "hero_media",
+            "meta_value": "302"
+          },
+          {
+            "meta_key": "home_advantages",
+            "meta_value": "6"
+          },
+          {
+            "meta_key": "home_advantages_0_text",
+            "meta_value": "В нашем Доме ценится личное пространство каждого. Такой формат позволяет проявлять заботу о каждом, уделять максимум терапевтического внимания."
+          },
+          {
+            "meta_key": "home_advantages_0_title",
+            "meta_value": "до 15 резидентов"
+          },
+          {
+            "meta_key": "home_advantages_1_text",
+            "meta_value": "В нашем Доме нет запертых дверей и решеток на окнах. Мы не закрываем, не удерживаем насильно — мы успешно работаем с мотивацией."
+          },
+          {
+            "meta_key": "home_advantages_1_title",
+            "meta_value": "нет решеток и замков"
+          },
+          {
+            "meta_key": "home_advantages_2_text",
+            "meta_value": "Все групповые мероприятия ведут дипломированные специалисты — психологи."
+          },
+          {
+            "meta_key": "home_advantages_2_title",
+            "meta_value": "дипломированные специалисты"
+          },
+          {
+            "meta_key": "home_advantages_3_text",
+            "meta_value": "Для формирования новых полезных привычек и желаний. Находятся на цокольном этаже, доступ к ним открыт всегда."
+          },
+          {
+            "meta_key": "home_advantages_3_title",
+            "meta_value": "Бассейн и сауна"
+          },
+          {
+            "meta_key": "home_advantages_4_text",
+            "meta_value": "Для поддержания физической формы и получения удовольствия от спортивных нагрузок."
+          },
+          {
+            "meta_key": "home_advantages_4_title",
+            "meta_value": "Тренажерный комплекс"
+          },
+          {
+            "meta_key": "home_advantages_5_text",
+            "meta_value": "У нас созданы прекрасные условия для комфортного преодоления зависимости и возможности изменить свою жизнь к лучшему."
+          },
+          {
+            "meta_key": "home_advantages_5_title",
+            "meta_value": "Выбор категории номера"
+          },
+          {
+            "meta_key": "home_articles_heading",
+            "meta_value": "Статьи"
+          },
+          {
+            "meta_key": "home_blog_teaser_enabled",
+            "meta_value": "0"
+          },
+          {
+            "meta_key": "home_comfort_heading",
+            "meta_value": "Комфорт, приватность, забота"
+          },
+          {
+            "meta_key": "home_comfort_lead",
+            "meta_value": "Разговор&nbsp;— это уже первый шаг. Мы расскажем, что можем предложить именно вам или вашему близкому&nbsp;— без давления и&nbsp;без шаблонных ответов."
+          },
+          {
+            "meta_key": "home_cta_text",
+            "meta_value": "Опишите вашу ситуацию в форме заявки, и мы расскажем, как сможем помочь"
+          },
+          {
+            "meta_key": "home_cta_title",
+            "meta_value": "Остались вопросы?"
+          },
+          {
+            "meta_key": "home_faq_heading",
+            "meta_value": "Нас часто спрашивают"
+          },
+          {
+            "meta_key": "home_faq_items",
+            "meta_value": "5"
+          },
+          {
+            "meta_key": "home_faq_items_0_answer",
+            "meta_value": "Это временный технический текст для проверки блока FAQ. Здесь будет размещён финальный ответ о формате обращения и порядке первичного контакта с центром. Текст не является маркетинговым обещанием и не заменяет консультацию специалиста. Финальная редакция будет согласована оператором отдельно."
+          },
+          {
+            "meta_key": "home_faq_items_0_question",
+            "meta_value": "Анонимное лечение или нет?"
+          },
+          {
+            "meta_key": "home_faq_items_1_answer",
+            "meta_value": "Это временный технический текст для проверки высоты аккордеона. В финальной версии здесь будет описан типовой порядок этапов сопровождения без указания конкретных сроков. Длительность программы зависит от индивидуального запроса и согласуется на консультации."
+          },
+          {
+            "meta_key": "home_faq_items_1_question",
+            "meta_value": "Как долго длится реабилитация?"
+          },
+          {
+            "meta_key": "home_faq_items_2_answer",
+            "meta_value": "Это временный технический текст для проверки блока FAQ. Здесь будет размещён финальный ответ о том, как семье подготовиться к разговору с близким человеком. Материал носит справочный характер и не содержит обещаний результата."
+          },
+          {
+            "meta_key": "home_faq_items_2_question",
+            "meta_value": "Как уговорить близкого пройти лечение от зависимости?"
+          },
+          {
+            "meta_key": "home_faq_items_3_answer",
+            "meta_value": "Это временный технический текст для проверки аккордеона. В финальной версии здесь будет нейтральное описание сценариев, когда самостоятельные попытки требуют дополнительной поддержки. Текст не содержит медицинских утверждений и не описывает гарантированный исход."
+          },
+          {
+            "meta_key": "home_faq_items_3_question",
+            "meta_value": "Можно ли самостоятельно перестать употреблять наркотики?"
+          },
+          {
+            "meta_key": "home_faq_items_4_answer",
+            "meta_value": "Это временный технический текст для проверки блока FAQ. Здесь будет размещён финальный ответ с ориентирами для самонаблюдения без диагностических формулировок. Материал предназначен для проверки типографики; контент будет заменён после согласования с оператором."
+          },
+          {
+            "meta_key": "home_faq_items_4_question",
+            "meta_value": "Как понять, что у меня есть проблемы с алкоголем?"
+          },
+          {
+            "meta_key": "home_gallery_media",
+            "meta_value": "4"
+          },
+          {
+            "meta_key": "home_gallery_media_0_media",
+            "meta_value": "90"
+          },
+          {
+            "meta_key": "home_gallery_media_0_text",
+            "meta_value": ""
+          },
+          {
+            "meta_key": "home_gallery_media_0_title",
+            "meta_value": "Лечение зависимости от алкоголя"
+          },
+          {
+            "meta_key": "home_gallery_media_1_media",
+            "meta_value": "91"
+          },
+          {
+            "meta_key": "home_gallery_media_1_text",
+            "meta_value": ""
+          },
+          {
+            "meta_key": "home_gallery_media_1_title",
+            "meta_value": "Лудомания лечение зависимости"
+          },
+          {
+            "meta_key": "home_gallery_media_2_media",
+            "meta_value": "92"
+          },
+          {
+            "meta_key": "home_gallery_media_2_text",
+            "meta_value": ""
+          },
+          {
+            "meta_key": "home_gallery_media_2_title",
+            "meta_value": "Лечение подростковой зависимости"
+          },
+          {
+            "meta_key": "home_gallery_media_3_media",
+            "meta_value": "93"
+          },
+          {
+            "meta_key": "home_gallery_media_3_text",
+            "meta_value": ""
+          },
+          {
+            "meta_key": "home_gallery_media_3_title",
+            "meta_value": "Зависимость от постоянных покупок"
+          },
+          {
+            "meta_key": "home_hero_slides",
+            "meta_value": "1"
+          },
+          {
+            "meta_key": "home_hero_slides_0_image",
+            "meta_value": "89"
+          },
+          {
+            "meta_key": "home_hero_slides_0_text",
+            "meta_value": "Центр профилактики и лечения зависимостей"
+          },
+          {
+            "meta_key": "home_hero_slides_0_title",
+            "meta_value": "Шпиговский дом"
+          },
+          {
+            "meta_key": "home_intro_bands",
+            "meta_value": "6"
+          },
+          {
+            "meta_key": "home_intro_bands_0_text",
+            "meta_value": "Восстановление требует комплексного взгляда на&nbsp;проблему. С&nbsp;каждым клиентом работает команда специалистов: аддиктолог, психотера-певт, психолог, консультанты по&nbsp;химической зависимости и&nbsp;специалисты по&nbsp;работе с&nbsp;семьёй."
+          },
+          {
+            "meta_key": "home_intro_bands_0_title",
+            "meta_value": "Мультидисциплинарный подход"
+          },
+          {
+            "meta_key": "home_intro_bands_1_text",
+            "meta_value": "Мы&nbsp;не&nbsp;используем универсальные схемы лечения. Программа строится с&nbsp;учётом жизненной истории человека, его психологических особенностей, семейной ситуации, состояния здоровья и&nbsp;поставленных целей. Это позволяет сделать процесс устойчивым в&nbsp;долгосрочной перспективе."
+          },
+          {
+            "meta_key": "home_intro_bands_1_title",
+            "meta_value": "Персонализированная программа"
+          },
+          {
+            "meta_key": "home_intro_bands_2_text",
+            "meta_value": "Зависимость редко бывает основной проблемой&nbsp;&mdash; чаще она становится способом справляться со&nbsp;стрессом, внутренней болью или жизненными трудностями. Поэтому мы&nbsp;работаем не&nbsp;только с&nbsp;симптомами, но&nbsp;и&nbsp;помогаем понять причины сформировавшегося поведения."
+          },
+          {
+            "meta_key": "home_intro_bands_2_title",
+            "meta_value": "Выявление и устранение причины зависимости"
+          },
+          {
+            "meta_key": "home_intro_bands_3_text",
+            "meta_value": "Зависимость затрагивает не&nbsp;только самого человека, но&nbsp;и&nbsp;его близких. Мы&nbsp;вовлекаем семью в&nbsp;процесс восстановления через консультации, семейные сессии и&nbsp;совместную работу со&nbsp;специалистами. Это помогает восстановить доверие, улучшить взаимопонимание и&nbsp;создать поддерживающую среду."
+          },
+          {
+            "meta_key": "home_intro_bands_3_title",
+            "meta_value": "Семья как часть выздоровления"
+          },
+          {
+            "meta_key": "home_intro_bands_4_text",
+            "meta_value": "Мы&nbsp;понимаем, насколько важно для многих людей сохранять связь с&nbsp;семьёй, работой и&nbsp;привычной жизнью. В&nbsp;зависимости от&nbsp;этапа программы и&nbsp;индивидуальных задач возможно использование гаджетов, решение рабочих вопросов и&nbsp;участие в&nbsp;значимых семейных событиях."
+          },
+          {
+            "meta_key": "home_intro_bands_4_title",
+            "meta_value": "Реабилитаация без потери связи с&nbsp;жизнью"
+          },
+          {
+            "meta_key": "home_intro_bands_5_text",
+            "meta_value": "Завершение программы&nbsp;&mdash; это не&nbsp;конец работы, а&nbsp;начало нового этапа жизни. После прохождения реабилитации мы&nbsp;продолжаем сопровождать выпускников, помогая справляться с&nbsp;возникающими трудностями, сохранять мотивацию и&nbsp;укреплять навыки трезвой жизни."
+          },
+          {
+            "meta_key": "home_intro_bands_5_title",
+            "meta_value": "Долгосрочное сопровождение после"
+          },
+          {
+            "meta_key": "home_recovery_intro_heading",
+            "meta_value": "Шпиговский дом&nbsp;&mdash; восстановление, построенное вокруг человека"
+          },
+          {
+            "meta_key": "home_recovery_intro_lead_1",
+            "meta_value": "Мы&nbsp;убеждены, зависимость невозможно эффективно лечить по&nbsp;шаблону. За&nbsp;каждым случаем стоит уникальная история, особенности личности, семейной системы, биологии и&nbsp;жизненного опыта."
+          },
+          {
+            "meta_key": "home_recovery_intro_lead_2",
+            "meta_value": "Поэтому в&nbsp;&laquo;Шпиговском Доме&raquo; мы&nbsp;создаём персонализированную программу восстановления, которая учитывает не&nbsp;только симптомы зависимости, но&nbsp;и&nbsp;её&nbsp;причины"
+          },
+          {
+            "meta_key": "home_reviews_heading",
+            "meta_value": "Отзывы"
+          },
+          {
+            "meta_key": "home_reviews_teaser",
+            "meta_value": "1"
+          },
+          {
+            "meta_key": "home_reviews_teaser_0_text",
+            "meta_value": "12"
+          },
+          {
+            "meta_key": "home_reviews_teaser_0_title",
+            "meta_value": "3123123"
+          },
+          {
+            "meta_key": "home_service_nav_items",
+            "meta_value": "3"
+          },
+          {
+            "meta_key": "home_service_nav_items_0_text",
+            "meta_value": ""
+          },
+          {
+            "meta_key": "home_service_nav_items_0_title",
+            "meta_value": "Зависимости"
+          },
+          {
+            "meta_key": "home_service_nav_items_1_text",
+            "meta_value": ""
+          },
+          {
+            "meta_key": "home_service_nav_items_1_title",
+            "meta_value": "Психическое здоровье"
+          },
+          {
+            "meta_key": "home_service_nav_items_2_text",
+            "meta_value": ""
+          },
+          {
+            "meta_key": "home_service_nav_items_2_title",
+            "meta_value": "Расстройства пищевого поведения"
+          },
+          {
+            "meta_key": "home_specialists_heading",
+            "meta_value": "Специалисты центра"
+          },
+          {
+            "meta_key": "migration_status",
+            "meta_value": "minimal_seed"
+          },
+          {
+            "meta_key": "seeded_by_phase",
+            "meta_value": "V9-06D.4"
+          }
+        ],
+        "meta_count": 161,
+        "menu_references": [],
+        "in_menu": false,
+        "is_front_page": true,
+        "is_posts_page": false,
+        "is_privacy_page": false
+      },
+      "19": {
+        "ID": 19,
+        "post_title": "Статьи",
+        "post_name": "blog",
+        "post_status": "publish",
+        "post_parent": 0,
+        "post_type": "page",
+        "menu_order": 0,
+        "post_modified": "2026-07-02 18:53:38",
+        "path": "/blog/",
+        "meta": [
+          {
+            "meta_key": "_edit_lock",
+            "meta_value": "1783610113:2"
+          },
+          {
+            "meta_key": "blog_archive_card_link_label",
+            "meta_value": "Читать"
+          },
+          {
+            "meta_key": "blog_archive_empty_text",
+            "meta_value": "Мы готовим материалы для этого раздела. Загляните позже или запишитесь на консультацию — первый разговор ни к чему не обязывает."
+          },
+          {
+            "meta_key": "blog_archive_empty_title",
+            "meta_value": "Статей пока нет"
+          },
+          {
+            "meta_key": "blog_archive_expert_cta_label",
+            "meta_value": "Записаться на консультацию"
+          },
+          {
+            "meta_key": "blog_archive_expert_name",
+            "meta_value": "Сергей Юрьевич Шпиговский"
+          },
+          {
+            "meta_key": "blog_archive_expert_quote_text",
+            "meta_value": "Мы делимся здесь практическими материалами о зависимостях и восстановлении — простым языком, без запугивания и без обещаний мгновенного результата."
+          },
+          {
+            "meta_key": "blog_archive_expert_role",
+            "meta_value": "Основатель центра. Аддиктолог, интервенционист"
+          },
+          {
+            "meta_key": "blog_archive_final_cta_button_label",
+            "meta_value": "Записаться"
+          },
+          {
+            "meta_key": "blog_archive_final_cta_phone",
+            "meta_value": "8 (925) 183-64-64"
+          },
+          {
+            "meta_key": "blog_archive_final_cta_phone_hint",
+            "meta_value": "Или позвоните нам"
+          },
+          {
+            "meta_key": "blog_archive_final_cta_text",
+            "meta_value": "Опишите ситуацию в удобном для вас формате. Первый разговор ни к чему не обязывает, но может стать шагом к переменам."
+          },
+          {
+            "meta_key": "blog_archive_final_cta_title",
+            "meta_value": "Запишитесь на встречу"
+          },
+          {
+            "meta_key": "blog_archive_intro",
+            "meta_value": "Специалисты центра реабилитации Шпиговский Дом рассказывают о видах зависимостей, что говорит о их наличии, какие подходы в лечении существуют, какие методы дают действительно хороший результат"
+          },
+          {
+            "meta_key": "blog_archive_title",
+            "meta_value": "Статьи о зависимостях, диагностике и методах лечения"
+          }
+        ],
+        "meta_count": 15,
+        "menu_references": [
+          {
+            "menu_item_id": 31,
+            "menu_name": "Primary"
+          }
+        ],
+        "in_menu": true,
+        "is_front_page": false,
+        "is_posts_page": true,
+        "is_privacy_page": false
+      }
+    },
+    "services": {
+      "73": {
+        "ID": 73,
+        "post_title": "Зависимости",
+        "post_name": "zavisimosti",
+        "post_status": "publish",
+        "post_parent": 0,
+        "post_type": "service",
+        "menu_order": 10,
+        "post_modified": "2026-07-04 00:04:34",
+        "children": [
+          {
+            "ID": 74,
+            "post_title": "Лечение алкогольной зависимости",
+            "post_name": "lechenie-alkogolnoy-zavisimosti",
+            "post_status": "publish",
+            "post_parent": 73
+          },
+          {
+            "ID": 314,
+            "post_title": "Наркотическая зависимость",
+            "post_name": "narkoticheskaya-zavisimost",
+            "post_status": "publish",
+            "post_parent": 73
+          },
+          {
+            "ID": 315,
+            "post_title": "Лекарственная зависимость",
+            "post_name": "lekarstvennaya-zavisimost",
+            "post_status": "publish",
+            "post_parent": 73
+          },
+          {
+            "ID": 316,
+            "post_title": "Поведенческие зависимости",
+            "post_name": "povedencheskie-zavisimosti",
+            "post_status": "publish",
+            "post_parent": 73
+          },
+          {
+            "ID": 75,
+            "post_title": "Профилактический анализ",
+            "post_name": "profilakticheskiy-analiz",
+            "post_status": "publish",
+            "post_parent": 73
+          }
+        ]
+      },
+      "77": {
+        "ID": 77,
+        "post_title": "Психическое здоровье",
+        "post_name": "psihicheskoe-zdorovie",
+        "post_status": "publish",
+        "post_parent": 0,
+        "post_type": "service",
+        "menu_order": 50,
+        "post_modified": "2026-07-04 00:04:34",
+        "children": [
+          {
+            "ID": 78,
+            "post_title": "Депрессия",
+            "post_name": "depressiya",
+            "post_status": "publish",
+            "post_parent": 77
+          },
+          {
+            "ID": 79,
+            "post_title": "ПТСР",
+            "post_name": "ptrs",
+            "post_status": "publish",
+            "post_parent": 77
+          },
+          {
+            "ID": 80,
+            "post_title": "Эмоциональное выгорание",
+            "post_name": "emocionalnoe-vygoranie",
+            "post_status": "publish",
+            "post_parent": 77
+          },
+          {
+            "ID": 81,
+            "post_title": "Тревожные расстройства",
+            "post_name": "trevozhnye-rasstroystva",
+            "post_status": "publish",
+            "post_parent": 77
+          },
+          {
+            "ID": 82,
+            "post_title": "Расстройства сна",
+            "post_name": "rasstroystva-sna",
+            "post_status": "publish",
+            "post_parent": 77
+          },
+          {
+            "ID": 83,
+            "post_title": "Травма",
+            "post_name": "travma",
+            "post_status": "publish",
+            "post_parent": 77
+          }
+        ]
+      },
+      "84": {
+        "ID": 84,
+        "post_title": "Расстройства пищевого поведения",
+        "post_name": "rasstroystva-pischevogo-povedeniya",
+        "post_status": "publish",
+        "post_parent": 0,
+        "post_type": "service",
+        "menu_order": 120,
+        "post_modified": "2026-07-04 00:04:34",
+        "children": [
+          {
+            "ID": 85,
+            "post_title": "Анорексия",
+            "post_name": "anoreksiya",
+            "post_status": "publish",
+            "post_parent": 84
+          },
+          {
+            "ID": 86,
+            "post_title": "Нервная булимия",
+            "post_name": "nervnaya-bulimiya",
+            "post_status": "publish",
+            "post_parent": 84
+          },
+          {
+            "ID": 87,
+            "post_title": "Компульсивное переедание",
+            "post_name": "kompulsivnoe-pereedanie",
+            "post_status": "publish",
+            "post_parent": 84
+          }
+        ]
+      },
+      "74": {
+        "ID": 74,
+        "post_title": "Лечение алкогольной зависимости",
+        "post_name": "lechenie-alkogolnoy-zavisimosti",
+        "post_status": "publish",
+        "post_parent": 73,
+        "post_type": "service",
+        "menu_order": 10,
+        "post_modified": "2026-07-08 20:16:49",
+        "children": []
+      }
+    },
+    "post_750": {
+      "ID": 750,
+      "post_title": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём",
+      "post_name": "nazvanie-stati",
+      "post_status": "publish",
+      "post_parent": 0,
+      "post_type": "post",
+      "menu_order": 0,
+      "post_modified": "2026-05-05 10:00:00"
+    }
+  },
+  "options_before": {
+    "page_on_front": "4",
+    "page_for_posts": "19",
+    "show_on_front": "page",
+    "permalink_structure": "/blog/%postname%/",
+    "blog_public": "0",
+    "wp_page_for_privacy_policy": "3"
+  },
+  "menu_checksum_before": "C751DC4C5285FE8832FDAAD614CE0A0627C3AF2EBE015B1885C769230EFD896C",
+  "primary_menu_count_before": 6,
+  "core_routes_before": {
+    "/": {
+      "route": "/",
+      "http_status": 200,
+      "final_url": "http://shpigovsky.test/",
+      "body_len": 140179,
+      "queried_object_id": 4,
+      "queried_object_type": "page",
+      "body_markers": {
+        "body_class": "home wp-singular page-template-default page page-id-4 wp-theme-shpigovsky",
+        "page_id": "4",
+        "is_single_service": false,
+        "canonical_url": "http://shpigovsky.test/"
+      },
+      "primary_h1": "Шпиговский дом"
+    },
+    "/o-centre/": {
+      "route": "/o-centre/",
+      "http_status": 200,
+      "final_url": "http://shpigovsky.test/o-centre/",
+      "body_len": 112871,
+      "queried_object_id": 11,
+      "queried_object_type": "page",
+      "body_markers": {
+        "body_class": "wp-singular page-template page-template-page-templates page-template-institutional page-template-page-templatesinstitutional-php page page-id-11 page-parent wp-theme-shpigovsky page-o-centre",
+        "page_id": "11",
+        "is_single_service": false,
+        "canonical_url": "http://shpigovsky.test/o-centre/"
+      },
+      "primary_h1": "Шпиговский дом"
+    },
+    "/blog/": {
+      "route": "/blog/",
+      "http_status": 200,
+      "final_url": "http://shpigovsky.test/blog/",
+      "body_len": 60200,
+      "queried_object_id": null,
+      "queried_object_type": null,
+      "body_markers": {
+        "body_class": "blog wp-theme-shpigovsky page-blog",
+        "is_single_service": false
+      },
+      "primary_h1": "Статьи о зависимостях, диагностике и методах лечения"
+    },
+    "/blog/nazvanie-stati/": {
+      "route": "/blog/nazvanie-stati/",
+      "http_status": 200,
+      "final_url": "http://shpigovsky.test/blog/nazvanie-stati/",
+      "body_len": 80947,
+      "queried_object_id": 750,
+      "queried_object_type": "service",
+      "body_markers": {
+        "body_class": "wp-singular post-template-default single single-post postid-750 single-format-standard wp-theme-shpigovsky page-blog-article",
+        "post_id": "750",
+        "is_single_service": false,
+        "canonical_url": "http://shpigovsky.test/blog/nazvanie-stati/"
+      },
+      "primary_h1": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём"
+    },
+    "/uslugi/": {
+      "route": "/uslugi/",
+      "http_status": 200,
+      "final_url": "http://shpigovsky.test/uslugi/",
+      "body_len": 105983,
+      "queried_object_id": 5,
+      "queried_object_type": "page",
+      "body_markers": {
+        "body_class": "wp-singular page-template page-template-page-templates page-template-services-hub page-template-page-templatesservices-hub-php page page-id-5 page-parent wp-theme-shpigovsky page-uslugi-v2",
+        "page_id": "5",
+        "is_single_service": false,
+        "canonical_url": "http://shpigovsky.test/uslugi/"
+      },
+      "primary_h1": "Лечение и профилактика"
+    },
+    "/uslugi/zavisimosti/": {
+      "route": "/uslugi/zavisimosti/",
+      "http_status": 200,
+      "final_url": "http://shpigovsky.test/uslugi/zavisimosti/",
+      "body_len": 116906,
+      "queried_object_id": 73,
+      "queried_object_type": "service",
+      "body_markers": {
+        "body_class": "wp-singular service-template-default single single-service postid-73 wp-theme-shpigovsky page-service-subdivision-v1",
+        "post_id": "73",
+        "is_single_service": true,
+        "canonical_url": "http://shpigovsky.test/uslugi/zavisimosti/"
+      },
+      "primary_h1": "Зависимости"
+    },
+    "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/": {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "http_status": 200,
+      "final_url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "body_len": 117360,
+      "queried_object_id": 74,
+      "queried_object_type": "service",
+      "body_markers": {
+        "body_class": "wp-singular service-template-default single single-service postid-74 wp-theme-shpigovsky page-service-leaf-v1",
+        "post_id": "74",
+        "is_single_service": true,
+        "canonical_url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+      },
+      "primary_h1": "Центр лечения алкогольной зависимости"
+    },
+    "/uslugi/psihicheskoe-zdorovie/": {
+      "route": "/uslugi/psihicheskoe-zdorovie/",
+      "http_status": 200,
+      "final_url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/",
+      "body_len": 118187,
+      "queried_object_id": 77,
+      "queried_object_type": "service",
+      "body_markers": {
+        "body_class": "wp-singular service-template-default single single-service postid-77 wp-theme-shpigovsky page-service-subdivision-v1",
+        "post_id": "77",
+        "is_single_service": true,
+        "canonical_url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/"
+      },
+      "primary_h1": "Психическое здоровье"
+    },
+    "/uslugi/rasstroystva-pischevogo-povedeniya/": {
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "http_status": 200,
+      "final_url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "body_len": 115684,
+      "queried_object_id": 84,
+      "queried_object_type": "service",
+      "body_markers": {
+        "body_class": "wp-singular service-template-default single single-service postid-84 wp-theme-shpigovsky page-service-subdivision-v1",
+        "post_id": "84",
+        "is_single_service": true,
+        "canonical_url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/"
+      },
+      "primary_h1": "Расстройства пищевого поведения"
+    },
+    "/kontakty/": {
+      "route": "/kontakty/",
+      "http_status": 200,
+      "final_url": "http://shpigovsky.test/kontakty/",
+      "body_len": 64142,
+      "queried_object_id": 20,
+      "queried_object_type": "page",
+      "body_markers": {
+        "body_class": "wp-singular page-template page-template-page-templates page-template-contacts page-template-page-templatescontacts-php page page-id-20 wp-theme-shpigovsky page-kontakty",
+        "page_id": "20",
+        "is_single_service": false,
+        "canonical_url": "http://shpigovsky.test/kontakty/"
+      },
+      "primary_h1": "Контакты"
+    },
+    "/otzyvy/": {
+      "route": "/otzyvy/",
+      "http_status": 200,
+      "final_url": "http://shpigovsky.test/otzyvy/",
+      "body_len": 70798,
+      "queried_object_id": 18,
+      "queried_object_type": "page",
+      "body_markers": {
+        "body_class": "wp-singular page-template page-template-page-templates page-template-reviews page-template-page-templatesreviews-php page page-id-18 wp-theme-shpigovsky page-otzyvy",
+        "page_id": "18",
+        "is_single_service": false,
+        "canonical_url": "http://shpigovsky.test/otzyvy/"
+      },
+      "primary_h1": "Отзывы о&nbsp;центре лечения и&nbsp;профилактики зависимостей"
+    },
+    "/privacy-policy/": {
+      "route": "/privacy-policy/",
+      "http_status": 200,
+      "final_url": "http://shpigovsky.test/privacy-policy/",
+      "body_len": 62238,
+      "queried_object_id": 3,
+      "queried_object_type": "page",
+      "body_markers": {
+        "body_class": "privacy-policy wp-singular page-template page-template-page-templates page-template-legal page-template-page-templateslegal-php page page-id-3 wp-theme-shpigovsky",
+        "page_id": "3",
+        "is_single_service": false,
+        "canonical_url": "http://shpigovsky.test/privacy-policy/"
+      },
+      "primary_h1": "Политика конфиденциальности"
+    }
+  },
+  "snapshots": [
+    "menu_item_301",
+    "shadow_pages",
+    "protected_pages",
+    "protected_services",
+    "demo_post_750",
+    "options",
+    "menu_items",
+    "menu_checksum",
+    "services_tree",
+    "core_routes_before",
+    "RESTORE.md"
+  ],
+  "restore_instructions": "mysql --host=127.0.0.1 --user=root mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e27d-page-service-ownership-implementation-pre-20260709-183427\\mars_wp_fp0002.sql\""
+}

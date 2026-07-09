@@ -1,0 +1,80 @@
+{
+  "task_id": "V9-06E27D",
+  "generated_at": "2026-07-09T18:34:45.514228+00:00",
+  "result": "PASS",
+  "method": "custom_url_binding",
+  "menu_item_id": 301,
+  "before_meta": {
+    "_menu_item_type": "post_type",
+    "_menu_item_object": "page",
+    "_menu_item_object_id": "6",
+    "_menu_item_url": "",
+    "_menu_item_menu_item_parent": "0",
+    "_menu_item_classes": "",
+    "_menu_item_target": "",
+    "_menu_item_xfn": ""
+  },
+  "after_meta": {
+    "_menu_item_type": "custom",
+    "_menu_item_object": "custom",
+    "_menu_item_object_id": "0",
+    "_menu_item_url": "/uslugi/zavisimosti/",
+    "_menu_item_menu_item_parent": "0",
+    "_menu_item_classes": "",
+    "_menu_item_target": "",
+    "_menu_item_xfn": ""
+  },
+  "before_nav_item": {
+    "ID": 301,
+    "title": "Р—Р°РІРёСЃРёРјРѕСЃС‚Рё",
+    "url": "http://shpigovsky.test/uslugi/zavisimosti/",
+    "object_id": "6",
+    "object": "page",
+    "type": "post_type",
+    "menu_order": 2,
+    "menu_item_parent": "0"
+  },
+  "after_nav_item": {
+    "ID": 301,
+    "title": "Р—Р°РІРёСЃРёРјРѕСЃС‚Рё",
+    "url": "/uslugi/zavisimosti/",
+    "object_id": "0",
+    "object": "custom",
+    "type": "custom",
+    "menu_order": 2,
+    "menu_item_parent": "0"
+  },
+  "after_db_item": {
+    "ID": 301,
+    "post_title": "Зависимости",
+    "post_name": "",
+    "post_status": "publish",
+    "post_parent": 0,
+    "post_type": "nav_menu_item",
+    "menu_order": 2,
+    "post_modified": "2026-07-06 04:10:56",
+    "label": "Зависимости",
+    "meta": {
+      "_menu_item_menu_item_parent": "0",
+      "_menu_item_object": "custom",
+      "_menu_item_object_id": "0",
+      "_menu_item_orphan": "",
+      "_menu_item_type": "custom",
+      "_menu_item_url": "/uslugi/zavisimosti/"
+    },
+    "menu_term": {
+      "term_id": 2,
+      "menu_name": "Primary",
+      "menu_slug": "primary"
+    },
+    "object_id": "0",
+    "object_type": "custom",
+    "item_type": "custom",
+    "url": "/uslugi/zavisimosti/",
+    "parent_item_id": "0"
+  },
+  "primary_menu_count_after": 6,
+  "changed_rows": [
+    "fp02_postmeta for menu item #301"
+  ]
+}

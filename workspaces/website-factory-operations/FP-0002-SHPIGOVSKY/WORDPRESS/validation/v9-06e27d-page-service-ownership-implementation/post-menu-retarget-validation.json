@@ -1,0 +1,61 @@
+{
+  "task_id": "V9-06E27D",
+  "generated_at": "2026-07-09T18:34:46.641250+00:00",
+  "result": "PASS",
+  "checks": [
+    {
+      "check": "menu_item_exists",
+      "expected": true,
+      "actual": true,
+      "result": "PASS"
+    },
+    {
+      "check": "label_unchanged",
+      "expected": "Зависимости",
+      "actual": "Зависимости",
+      "result": "PASS"
+    },
+    {
+      "check": "menu_url",
+      "expected": "/uslugi/zavisimosti/",
+      "actual": "/uslugi/zavisimosti/",
+      "result": "PASS"
+    },
+    {
+      "check": "no_page_6_reference",
+      "expected": "not 6",
+      "actual": "0",
+      "result": "PASS"
+    },
+    {
+      "check": "primary_menu_count",
+      "expected": 6,
+      "actual": 6,
+      "result": "PASS"
+    },
+    {
+      "check": "no_menu_refs_page_6",
+      "expected": 0,
+      "actual": 0,
+      "result": "PASS"
+    },
+    {
+      "check": "page_6_still_publish",
+      "expected": "publish",
+      "actual": "publish",
+      "result": "PASS"
+    },
+    {
+      "check": "route_zavisimosti_200",
+      "expected": 200,
+      "actual": 200,
+      "result": "PASS"
+    },
+    {
+      "check": "route_owner_service_73",
+      "expected": 73,
+      "actual": 73,
+      "result": "PASS"
+    }
+  ]
+}

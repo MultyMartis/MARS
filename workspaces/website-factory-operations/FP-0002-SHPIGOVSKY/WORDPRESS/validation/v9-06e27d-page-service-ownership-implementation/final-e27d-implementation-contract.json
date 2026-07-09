@@ -1,0 +1,46 @@
+{
+  "task_id": "V9-06E27D",
+  "generated_at": "2026-07-09T18:35:01.110808+00:00",
+  "baseline_commit": "acf77934b396add288c8d14601453212c6477cbc",
+  "menu_retarget_method": "custom_url_binding",
+  "menu_item_301_final": {
+    "label": "Зависимости",
+    "url": "/uslugi/zavisimosti/",
+    "object_binding": "custom_url",
+    "object_id": "0"
+  },
+  "pages_final": {
+    "6": "trash",
+    "7": "trash",
+    "8": "trash"
+  },
+  "services_final": {
+    "73": "publish",
+    "77": "publish",
+    "84": "publish",
+    "74": "publish"
+  },
+  "route_ownership": {
+    "/uslugi/zavisimosti/": {
+      "type": "service",
+      "id": 73
+    },
+    "/uslugi/psihicheskoe-zdorovie/": {
+      "type": "service",
+      "id": 77
+    },
+    "/uslugi/rasstroystva-pischevogo-povedeniya/": {
+      "type": "service",
+      "id": 84
+    }
+  },
+  "redirects_needed": false,
+  "rewrite_flush_needed": false,
+  "rollback_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e27d-page-service-ownership-implementation-pre-20260709-183427",
+  "remaining_limitations": [
+    "Trashed shadow pages remain in DB Trash; not permanently deleted",
+    "Menu item uses custom URL binding rather than service CPT object binding"
+  ],
+  "recommended_next_task": "CREATE_V9_06E28_FINAL_WORDPRESS_READINESS_QA_TASK",
+  "result": "PASS"
+}

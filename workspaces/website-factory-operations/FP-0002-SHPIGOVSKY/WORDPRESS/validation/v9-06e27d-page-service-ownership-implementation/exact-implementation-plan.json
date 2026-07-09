@@ -1,0 +1,46 @@
+{
+  "task_id": "V9-06E27D",
+  "generated_at": "2026-07-09T18:34:44.274094+00:00",
+  "result": "PASS",
+  "menu_retarget_method": "custom_url_binding",
+  "menu_retarget_reason": "URL unchanged; service CPT #73 already owns runtime route; avoids CPT nav object binding risk",
+  "steps": [
+    {
+      "step": "A",
+      "action": "Retarget menu item #301 in place",
+      "object_ids": [
+        301
+      ],
+      "method": "custom_url_binding",
+      "meta_changes": {
+        "_menu_item_type": "custom",
+        "_menu_item_object": "custom",
+        "_menu_item_object_id": "0",
+        "_menu_item_url": "/uslugi/zavisimosti/"
+      },
+      "preserve": [
+        "label",
+        "menu_order",
+        "parent",
+        "menu assignment",
+        "classes",
+        "target",
+        "xfn"
+      ]
+    },
+    {
+      "step": "B",
+      "action": "Trash shadow pages",
+      "object_ids": [
+        6,
+        7,
+        8
+      ],
+      "method": "wp_trash_post",
+      "safety": "no permanent delete"
+    }
+  ],
+  "no_redirects": true,
+  "no_permalink_changes": true,
+  "no_rewrite_flush": true
+}

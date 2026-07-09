@@ -1,0 +1,44 @@
+{
+  "task_id": "V9-06E27D",
+  "generated_at": "2026-07-09T18:35:01.055329+00:00",
+  "result": "PASS",
+  "step_a_menu": {
+    "menu_item_id": 301,
+    "restore_action": "Restore menu item #301 meta from checkpoint menu_item_301.json",
+    "meta_restore": {
+      "_menu_item_type": "post_type",
+      "_menu_item_object": "page",
+      "_menu_item_object_id": "6",
+      "_menu_item_url": "",
+      "_menu_item_menu_item_parent": "0",
+      "_menu_item_classes": "",
+      "_menu_item_target": "",
+      "_menu_item_xfn": ""
+    },
+    "validation": "Primary menu label Зависимости links to page #6"
+  },
+  "step_b_pages": [
+    {
+      "page_id": 6,
+      "restore_action": "WP Admin → Pages → Trash → Restore (ID 6)",
+      "wp_cli": "wp post update 6 --post_status=publish",
+      "validation": "/uslugi/zavisimosti__trashed/"
+    },
+    {
+      "page_id": 7,
+      "restore_action": "WP Admin → Pages → Trash → Restore (ID 7)",
+      "wp_cli": "wp post update 7 --post_status=publish",
+      "validation": "/uslugi/psihicheskoe-zdorovie__trashed/"
+    },
+    {
+      "page_id": 8,
+      "restore_action": "WP Admin → Pages → Trash → Restore (ID 8)",
+      "wp_cli": "wp post update 8 --post_status=publish",
+      "validation": "/uslugi/rasstroystva-pischevogo-povedeniya__trashed/"
+    }
+  ],
+  "full_db_restore": {
+    "checkpoint_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e27d-page-service-ownership-implementation-pre-20260709-183427",
+    "command": "mysql --host=127.0.0.1 --user=root mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e27d-page-service-ownership-implementation-pre-20260709-183427\\mars_wp_fp0002.sql\""
+  }
+}

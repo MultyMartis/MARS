@@ -1,0 +1,136 @@
+{
+  "task_id": "V9-06E27D",
+  "generated_at": "2026-07-09T18:35:01.053770+00:00",
+  "result": "PASS",
+  "routes": [
+    {
+      "route": "/",
+      "http_status": 200,
+      "queried_object_type": "page",
+      "queried_object_id": 4,
+      "expected_http": 200,
+      "owner_expected": null,
+      "result": "PASS",
+      "notes": "accepted route"
+    },
+    {
+      "route": "/o-centre/",
+      "http_status": 200,
+      "queried_object_type": "page",
+      "queried_object_id": 11,
+      "expected_http": 200,
+      "owner_expected": null,
+      "result": "PASS",
+      "notes": "accepted route"
+    },
+    {
+      "route": "/blog/",
+      "http_status": 200,
+      "queried_object_type": null,
+      "queried_object_id": null,
+      "expected_http": 200,
+      "owner_expected": null,
+      "result": "PASS",
+      "notes": "accepted route"
+    },
+    {
+      "route": "/blog/nazvanie-stati/",
+      "http_status": 200,
+      "queried_object_type": "service",
+      "queried_object_id": 750,
+      "expected_http": 200,
+      "owner_expected": null,
+      "result": "PASS",
+      "notes": "accepted route"
+    },
+    {
+      "route": "/uslugi/",
+      "http_status": 200,
+      "queried_object_type": "page",
+      "queried_object_id": 5,
+      "expected_http": 200,
+      "owner_expected": null,
+      "result": "PASS",
+      "notes": "accepted route"
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "http_status": 200,
+      "queried_object_type": "service",
+      "queried_object_id": 73,
+      "expected_http": 200,
+      "owner_expected": {
+        "type": "service",
+        "id": 73
+      },
+      "result": "PASS",
+      "notes": "expected owner service #73; shadow pages trashed — service CPT still owns public URL"
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "http_status": 200,
+      "queried_object_type": "service",
+      "queried_object_id": 74,
+      "expected_http": 200,
+      "owner_expected": null,
+      "result": "PASS",
+      "notes": "accepted route"
+    },
+    {
+      "route": "/uslugi/psihicheskoe-zdorovie/",
+      "http_status": 200,
+      "queried_object_type": "service",
+      "queried_object_id": 77,
+      "expected_http": 200,
+      "owner_expected": {
+        "type": "service",
+        "id": 77
+      },
+      "result": "PASS",
+      "notes": "expected owner service #77; shadow pages trashed — service CPT still owns public URL"
+    },
+    {
+      "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "http_status": 200,
+      "queried_object_type": "service",
+      "queried_object_id": 84,
+      "expected_http": 200,
+      "owner_expected": {
+        "type": "service",
+        "id": 84
+      },
+      "result": "PASS",
+      "notes": "expected owner service #84; shadow pages trashed — service CPT still owns public URL"
+    },
+    {
+      "route": "/kontakty/",
+      "http_status": 200,
+      "queried_object_type": "page",
+      "queried_object_id": 20,
+      "expected_http": 200,
+      "owner_expected": null,
+      "result": "PASS",
+      "notes": "accepted route"
+    },
+    {
+      "route": "/otzyvy/",
+      "http_status": 200,
+      "queried_object_type": "page",
+      "queried_object_id": 18,
+      "expected_http": 200,
+      "owner_expected": null,
+      "result": "PASS",
+      "notes": "accepted route"
+    },
+    {
+      "route": "/privacy-policy/",
+      "http_status": 200,
+      "queried_object_type": "page",
+      "queried_object_id": 3,
+      "expected_http": 200,
+      "owner_expected": null,
+      "result": "PASS",
+      "notes": "accepted route"
+    }
+  ]
+}

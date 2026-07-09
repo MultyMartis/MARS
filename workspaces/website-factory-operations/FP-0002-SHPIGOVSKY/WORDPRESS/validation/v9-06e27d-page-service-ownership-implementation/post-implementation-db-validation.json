@@ -1,0 +1,133 @@
+{
+  "task_id": "V9-06E27D",
+  "generated_at": "2026-07-09T18:34:48.101125+00:00",
+  "result": "PASS",
+  "checks": [
+    {
+      "check": "page_6_trash",
+      "expected": "trash",
+      "actual": "trash",
+      "result": "PASS"
+    },
+    {
+      "check": "page_7_trash",
+      "expected": "trash",
+      "actual": "trash",
+      "result": "PASS"
+    },
+    {
+      "check": "page_8_trash",
+      "expected": "trash",
+      "actual": "trash",
+      "result": "PASS"
+    },
+    {
+      "check": "menu_301_no_page_6",
+      "expected": "0",
+      "actual": "0",
+      "result": "PASS"
+    },
+    {
+      "check": "menu_301_url",
+      "expected": "/uslugi/zavisimosti/",
+      "actual": "/uslugi/zavisimosti/",
+      "result": "PASS"
+    },
+    {
+      "check": "protected_page_3",
+      "expected": "publish",
+      "actual": "publish",
+      "result": "PASS"
+    },
+    {
+      "check": "protected_page_4",
+      "expected": "publish",
+      "actual": "publish",
+      "result": "PASS"
+    },
+    {
+      "check": "protected_page_19",
+      "expected": "publish",
+      "actual": "publish",
+      "result": "PASS"
+    },
+    {
+      "check": "service_73_unchanged",
+      "expected": "publish",
+      "actual": "publish",
+      "result": "PASS"
+    },
+    {
+      "check": "service_77_unchanged",
+      "expected": "publish",
+      "actual": "publish",
+      "result": "PASS"
+    },
+    {
+      "check": "service_84_unchanged",
+      "expected": "publish",
+      "actual": "publish",
+      "result": "PASS"
+    },
+    {
+      "check": "service_74_unchanged",
+      "expected": "publish",
+      "actual": "publish",
+      "result": "PASS"
+    },
+    {
+      "check": "demo_post_750",
+      "expected": "publish",
+      "actual": "publish",
+      "result": "PASS"
+    },
+    {
+      "check": "option_page_on_front",
+      "expected": "4",
+      "actual": "4",
+      "result": "PASS"
+    },
+    {
+      "check": "option_page_for_posts",
+      "expected": "19",
+      "actual": "19",
+      "result": "PASS"
+    },
+    {
+      "check": "option_show_on_front",
+      "expected": "page",
+      "actual": "page",
+      "result": "PASS"
+    },
+    {
+      "check": "option_permalink_structure",
+      "expected": "/blog/%postname%/",
+      "actual": "/blog/%postname%/",
+      "result": "PASS"
+    },
+    {
+      "check": "option_blog_public",
+      "expected": "0",
+      "actual": "0",
+      "result": "PASS"
+    },
+    {
+      "check": "option_wp_page_for_privacy_policy",
+      "expected": "3",
+      "actual": "3",
+      "result": "PASS"
+    },
+    {
+      "check": "no_permanent_delete",
+      "expected": "trash_only",
+      "actual": "trash_only",
+      "result": "PASS"
+    },
+    {
+      "check": "no_rewrite_flush",
+      "expected": false,
+      "actual": false,
+      "result": "PASS"
+    }
+  ]
+}

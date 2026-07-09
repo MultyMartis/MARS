@@ -1,0 +1,39 @@
+{
+  "task_id": "V9-06E27D",
+  "generated_at": "2026-07-09T18:34:48.013282+00:00",
+  "result": "PASS",
+  "pages_trashed": 3,
+  "operations": [
+    {
+      "page_id": 6,
+      "title": "Зависимости",
+      "path": "/uslugi/zavisimosti__trashed/",
+      "before_status": "publish",
+      "after_status": "trash",
+      "operation": "wp_trash_post(6)",
+      "result": "PASS",
+      "rollback": "WP Admin Trash → Restore page #6"
+    },
+    {
+      "page_id": 7,
+      "title": "Психическое здоровье",
+      "path": "/uslugi/psihicheskoe-zdorovie__trashed/",
+      "before_status": "publish",
+      "after_status": "trash",
+      "operation": "wp_trash_post(7)",
+      "result": "PASS",
+      "rollback": "WP Admin Trash → Restore page #7"
+    },
+    {
+      "page_id": 8,
+      "title": "Расстройства пищевого поведения",
+      "path": "/uslugi/rasstroystva-pischevogo-povedeniya__trashed/",
+      "before_status": "publish",
+      "after_status": "trash",
+      "operation": "wp_trash_post(8)",
+      "result": "PASS",
+      "rollback": "WP Admin Trash → Restore page #8"
+    }
+  ],
+  "db_writes": 3
+}

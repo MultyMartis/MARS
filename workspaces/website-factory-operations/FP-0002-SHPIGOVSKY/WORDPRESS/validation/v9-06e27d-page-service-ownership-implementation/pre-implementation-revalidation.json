@@ -1,0 +1,356 @@
+{
+  "task_id": "V9-06E27D",
+  "generated_at": "2026-07-09T18:34:44.265413+00:00",
+  "result": "PASS",
+  "checks": [
+    {
+      "object": "menu_item_301",
+      "expected": {
+        "id": 301,
+        "label": "Зависимости",
+        "linked_page": 6,
+        "primary_menu": true,
+        "url": "/uslugi/zavisimosti/"
+      },
+      "actual": {
+        "ID": 301,
+        "post_title": "Зависимости",
+        "post_name": "",
+        "post_status": "publish",
+        "post_parent": 0,
+        "post_type": "nav_menu_item",
+        "menu_order": 2,
+        "post_modified": "2026-07-06 04:10:56",
+        "label": "Зависимости",
+        "meta": {
+          "_menu_item_menu_item_parent": "0",
+          "_menu_item_object": "page",
+          "_menu_item_object_id": "6",
+          "_menu_item_orphan": "",
+          "_menu_item_type": "post_type",
+          "_menu_item_url": ""
+        },
+        "menu_term": {
+          "term_id": 2,
+          "menu_name": "Primary",
+          "menu_slug": "primary"
+        },
+        "object_id": "6",
+        "object_type": "page",
+        "item_type": "post_type",
+        "url": "/uslugi/zavisimosti/",
+        "parent_item_id": "0"
+      },
+      "url_resolves": true,
+      "issues": [],
+      "result": "PASS"
+    },
+    {
+      "object": "page_6",
+      "expected": "publish_shadow_legacy",
+      "actual": {
+        "ID": 6,
+        "post_title": "Зависимости",
+        "post_name": "zavisimosti",
+        "post_status": "publish",
+        "post_parent": 5,
+        "post_type": "page",
+        "menu_order": 0,
+        "post_modified": "2026-07-02 18:53:38",
+        "path": "/uslugi/zavisimosti/",
+        "meta": [],
+        "meta_count": 0,
+        "menu_references": [
+          {
+            "menu_item_id": 301,
+            "menu_name": "Primary"
+          }
+        ],
+        "in_menu": true,
+        "is_front_page": false,
+        "is_posts_page": false,
+        "is_privacy_page": false
+      },
+      "issues": [],
+      "result": "PASS"
+    },
+    {
+      "object": "page_7",
+      "expected": "publish_shadow_legacy",
+      "actual": {
+        "ID": 7,
+        "post_title": "Психическое здоровье",
+        "post_name": "psihicheskoe-zdorovie",
+        "post_status": "publish",
+        "post_parent": 5,
+        "post_type": "page",
+        "menu_order": 0,
+        "post_modified": "2026-07-02 18:53:38",
+        "path": "/uslugi/psihicheskoe-zdorovie/",
+        "meta": [],
+        "meta_count": 0,
+        "menu_references": [],
+        "in_menu": false,
+        "is_front_page": false,
+        "is_posts_page": false,
+        "is_privacy_page": false
+      },
+      "issues": [],
+      "result": "PASS"
+    },
+    {
+      "object": "page_8",
+      "expected": "publish_shadow_legacy",
+      "actual": {
+        "ID": 8,
+        "post_title": "Расстройства пищевого поведения",
+        "post_name": "rasstroystva-pischevogo-povedeniya",
+        "post_status": "publish",
+        "post_parent": 5,
+        "post_type": "page",
+        "menu_order": 0,
+        "post_modified": "2026-07-02 18:53:38",
+        "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+        "meta": [],
+        "meta_count": 0,
+        "menu_references": [],
+        "in_menu": false,
+        "is_front_page": false,
+        "is_posts_page": false,
+        "is_privacy_page": false
+      },
+      "issues": [],
+      "result": "PASS"
+    },
+    {
+      "object": "service_73",
+      "expected": "publish_route_200",
+      "actual": {
+        "ID": 73,
+        "post_title": "Зависимости",
+        "post_name": "zavisimosti",
+        "post_status": "publish",
+        "post_parent": 0,
+        "post_type": "service",
+        "menu_order": 10,
+        "post_modified": "2026-07-04 00:04:34",
+        "children": [
+          {
+            "ID": 74,
+            "post_title": "Лечение алкогольной зависимости",
+            "post_name": "lechenie-alkogolnoy-zavisimosti",
+            "post_status": "publish",
+            "post_parent": 73
+          },
+          {
+            "ID": 314,
+            "post_title": "Наркотическая зависимость",
+            "post_name": "narkoticheskaya-zavisimost",
+            "post_status": "publish",
+            "post_parent": 73
+          },
+          {
+            "ID": 315,
+            "post_title": "Лекарственная зависимость",
+            "post_name": "lekarstvennaya-zavisimost",
+            "post_status": "publish",
+            "post_parent": 73
+          },
+          {
+            "ID": 316,
+            "post_title": "Поведенческие зависимости",
+            "post_name": "povedencheskie-zavisimosti",
+            "post_status": "publish",
+            "post_parent": 73
+          },
+          {
+            "ID": 75,
+            "post_title": "Профилактический анализ",
+            "post_name": "profilakticheskiy-analiz",
+            "post_status": "publish",
+            "post_parent": 73
+          }
+        ]
+      },
+      "route_probe": {
+        "route": "/uslugi/zavisimosti/",
+        "http_status": 200,
+        "final_url": "http://shpigovsky.test/uslugi/zavisimosti/",
+        "body_len": 116906,
+        "queried_object_id": 73,
+        "queried_object_type": "service",
+        "body_markers": {
+          "body_class": "wp-singular service-template-default single single-service postid-73 wp-theme-shpigovsky page-service-subdivision-v1",
+          "post_id": "73",
+          "is_single_service": true,
+          "canonical_url": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        "primary_h1": "Зависимости"
+      },
+      "issues": [],
+      "result": "PASS"
+    },
+    {
+      "object": "service_77",
+      "expected": "publish_route_200",
+      "actual": {
+        "ID": 77,
+        "post_title": "Психическое здоровье",
+        "post_name": "psihicheskoe-zdorovie",
+        "post_status": "publish",
+        "post_parent": 0,
+        "post_type": "service",
+        "menu_order": 50,
+        "post_modified": "2026-07-04 00:04:34",
+        "children": [
+          {
+            "ID": 78,
+            "post_title": "Депрессия",
+            "post_name": "depressiya",
+            "post_status": "publish",
+            "post_parent": 77
+          },
+          {
+            "ID": 79,
+            "post_title": "ПТСР",
+            "post_name": "ptrs",
+            "post_status": "publish",
+            "post_parent": 77
+          },
+          {
+            "ID": 80,
+            "post_title": "Эмоциональное выгорание",
+            "post_name": "emocionalnoe-vygoranie",
+            "post_status": "publish",
+            "post_parent": 77
+          },
+          {
+            "ID": 81,
+            "post_title": "Тревожные расстройства",
+            "post_name": "trevozhnye-rasstroystva",
+            "post_status": "publish",
+            "post_parent": 77
+          },
+          {
+            "ID": 82,
+            "post_title": "Расстройства сна",
+            "post_name": "rasstroystva-sna",
+            "post_status": "publish",
+            "post_parent": 77
+          },
+          {
+            "ID": 83,
+            "post_title": "Травма",
+            "post_name": "travma",
+            "post_status": "publish",
+            "post_parent": 77
+          }
+        ]
+      },
+      "route_probe": {
+        "route": "/uslugi/psihicheskoe-zdorovie/",
+        "http_status": 200,
+        "final_url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/",
+        "body_len": 118187,
+        "queried_object_id": 77,
+        "queried_object_type": "service",
+        "body_markers": {
+          "body_class": "wp-singular service-template-default single single-service postid-77 wp-theme-shpigovsky page-service-subdivision-v1",
+          "post_id": "77",
+          "is_single_service": true,
+          "canonical_url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/"
+        },
+        "primary_h1": "Психическое здоровье"
+      },
+      "issues": [],
+      "result": "PASS"
+    },
+    {
+      "object": "service_84",
+      "expected": "publish_route_200",
+      "actual": {
+        "ID": 84,
+        "post_title": "Расстройства пищевого поведения",
+        "post_name": "rasstroystva-pischevogo-povedeniya",
+        "post_status": "publish",
+        "post_parent": 0,
+        "post_type": "service",
+        "menu_order": 120,
+        "post_modified": "2026-07-04 00:04:34",
+        "children": [
+          {
+            "ID": 85,
+            "post_title": "Анорексия",
+            "post_name": "anoreksiya",
+            "post_status": "publish",
+            "post_parent": 84
+          },
+          {
+            "ID": 86,
+            "post_title": "Нервная булимия",
+            "post_name": "nervnaya-bulimiya",
+            "post_status": "publish",
+            "post_parent": 84
+          },
+          {
+            "ID": 87,
+            "post_title": "Компульсивное переедание",
+            "post_name": "kompulsivnoe-pereedanie",
+            "post_status": "publish",
+            "post_parent": 84
+          }
+        ]
+      },
+      "route_probe": {
+        "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+        "http_status": 200,
+        "final_url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/",
+        "body_len": 115684,
+        "queried_object_id": 84,
+        "queried_object_type": "service",
+        "body_markers": {
+          "body_class": "wp-singular service-template-default single single-service postid-84 wp-theme-shpigovsky page-service-subdivision-v1",
+          "post_id": "84",
+          "is_single_service": true,
+          "canonical_url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/"
+        },
+        "primary_h1": "Расстройства пищевого поведения"
+      },
+      "issues": [],
+      "result": "PASS"
+    },
+    {
+      "object": "service_74",
+      "expected": "publish_route_200",
+      "actual": {
+        "ID": 74,
+        "post_title": "Лечение алкогольной зависимости",
+        "post_name": "lechenie-alkogolnoy-zavisimosti",
+        "post_status": "publish",
+        "post_parent": 73,
+        "post_type": "service",
+        "menu_order": 10,
+        "post_modified": "2026-07-08 20:16:49",
+        "children": []
+      },
+      "route_probe": {
+        "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+        "http_status": 200,
+        "final_url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+        "body_len": 117360,
+        "queried_object_id": 74,
+        "queried_object_type": "service",
+        "body_markers": {
+          "body_class": "wp-singular service-template-default single single-service postid-74 wp-theme-shpigovsky page-service-leaf-v1",
+          "post_id": "74",
+          "is_single_service": true,
+          "canonical_url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+        },
+        "primary_h1": "Центр лечения алкогольной зависимости"
+      },
+      "issues": [],
+      "result": "PASS"
+    }
+  ],
+  "checkpoint_ref": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e27d-page-service-ownership-implementation-pre-20260709-183427"
+}

@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E27C Page Service Ownership Decision **PASS** — read-only audit complete; service CPT `#73/#77/#84` confirmed as runtime + recommended canonical owners; legacy pages `#6/#7/#8` flagged for E27D trash after menu `#301` retarget. Evidence: `validation/v9-06e27c-page-service-ownership-decision/`. Report: `reports/FP-0002-V9-06E27C-PAGE-SERVICE-OWNERSHIP-DECISION-REPORT-v1.md`. NEXT: **CREATE_V9_06E27D_PAGE_SERVICE_OWNERSHIP_IMPLEMENTATION_TASK**. Prior E27B: Batch A cleanup PASS @ `d6caab42`.
+**Status:** V9-06E27D Page Service Ownership Implementation **PASS** — menu item `#301` retargeted (`custom_url_binding` → `/uslugi/zavisimosti/`); legacy shadow pages `#6/#7/#8` moved to Trash; service CPT `#73/#77/#84` preserved as route owners; all accepted routes HTTP 200; no redirects/permalink/rewrite changes. Evidence: `validation/v9-06e27d-page-service-ownership-implementation/`. Report: `reports/FP-0002-V9-06E27D-PAGE-SERVICE-OWNERSHIP-IMPLEMENTATION-REPORT-v1.md`. NEXT: **CREATE_V9_06E28_FINAL_WORDPRESS_READINESS_QA_TASK**. Prior E27C: decision PASS @ `acf77934`; E27B: Batch A cleanup PASS @ `d6caab42`.
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---
