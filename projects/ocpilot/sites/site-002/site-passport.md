@@ -1,7 +1,7 @@
 # SITE-002 — Site Passport
 
-**Status:** **STABLE PRODUCTION CHECKPOINT — CRON DURATION FIX** (checkpoint `SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01`; Run 4.242 redirect hygiene no-op complete — AUDIT-006 resolved)
-**Run:** 4.242 — SITE-002 Audit Wave C Redirect Hygiene (2026-07-10)
+**Status:** **STABLE PRODUCTION CHECKPOINT — AUDIT WAVE B SEO FOUNDATION** (checkpoint `SITE-002-STABLE-PROD-AUDIT-WAVE-B-SEO-FOUNDATION-01`; Run 4.243 sitemap pretty URLs + SEO duplicates cleaned)
+**Run:** 4.243 — SITE-002 Audit Wave B SEO Foundation (2026-07-10)
 
 ---
 

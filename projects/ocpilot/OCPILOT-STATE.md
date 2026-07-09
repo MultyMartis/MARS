@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-10
-**Evidence cutoff:** 2026-07-10 (SITE-002 Run **4.242** — Audit Wave C Redirect Hygiene **NO-OP COMPLETE**; AUDIT-006 resolved; Run **4.240** post-1C verification **still BLOCKED**; checkpoint unchanged `SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01`)
+**Evidence cutoff:** 2026-07-10 (SITE-002 Run **4.243** — Audit Wave B SEO Foundation **COMPLETE**; sitemap pretty URLs + SEO duplicates cleaned; checkpoint `SITE-002-STABLE-PROD-AUDIT-WAVE-B-SEO-FOUNDATION-01`; Run **4.240** post-1C verification **still BLOCKED**)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Audit Wave C Redirect Hygiene (Run 4.242)** — **NO-OP COMPLETE** — flat Lari **301** + bare `/index.php` **301** confirmed; AUDIT-006 closed; 0 mutation · [SITE-002-PROD-AUDIT-WAVE-C-REDIRECT-HYGIENE-01.md](sites/site-002/reports/SITE-002-PROD-AUDIT-WAVE-C-REDIRECT-HYGIENE-01.md) · **Post-1C verification (Run 4.240)** still **BLOCKED** · checkpoint unchanged `SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01` |
+| Current SITE-002 focus | **Audit Wave B SEO Foundation (Run 4.243)** — **COMPLETE** — sitemap legacy information URLs removed; `/contact` added; `compare-products`/`wishlist` SEO duplicates cleaned; 1 FTP + scoped DB DELETE · [SITE-002-PROD-AUDIT-WAVE-B-SEO-FOUNDATION-01.md](sites/site-002/reports/SITE-002-PROD-AUDIT-WAVE-B-SEO-FOUNDATION-01.md) · checkpoint `SITE-002-STABLE-PROD-AUDIT-WAVE-B-SEO-FOUNDATION-01` · **Post-1C verification (Run 4.240)** still **BLOCKED** |
 
 ---
 
@@ -36,7 +36,7 @@
 | OpenCart admin read-only | **VERIFIED** — version 3.0.3.9 |
 | Historical TEST | **preserved** — https://zpm.new-site.space/ |
 | First Production baseline | **SUPERSEDED BY CONTROLLED TEXT CHANGE** — parent [SITE-002-STABLE-PROD-INITIAL-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| Current Production checkpoint | **ISSUED** — [SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01.md) (parent [SITE-002-STABLE-PROD-PARENT-CATEGORY-TILES-LARI-REMOVAL-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-PARENT-CATEGORY-TILES-LARI-REMOVAL-01.md)) |
+| Current Production checkpoint | **ISSUED** — [SITE-002-STABLE-PROD-AUDIT-WAVE-B-SEO-FOUNDATION-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-AUDIT-WAVE-B-SEO-FOUNDATION-01.md) (parent [SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01.md](sites/site-002/baselines/SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01.md)) |
 | First Production test / operation | **COMPLETE** — single-file text-only FTP deploy verified (Run 4.173) |
 | Second Production operation | **COMPLETE** — single-controller catalog sort deploy verified (Run 4.176) |
 | Third Production operation | **COMPLETE** — single-Twig catalog sort menu deploy verified (Run 4.177) |

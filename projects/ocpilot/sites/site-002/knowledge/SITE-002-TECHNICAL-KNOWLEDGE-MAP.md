@@ -1153,9 +1153,12 @@ Before **any** task touching **trust block**, **certificates**, **dealers form**
 - **Scope:** 1417 URL HTTP crawl; meta/canonical/H1; internal links; assets/images; sitemap/robots/llms; catalog 237 categories + 1156 products; information/forms static; brand scan; security surface; DB + FTP cross-check
 - **Result:** 1408/1408 sitemap URLs HTTP **200**; **0** broken internal links; **0** public **БЗПМ**; **0** broken core CSS/JS
 - **Accepted:** `/contact` canonical; `/kontakty` 404; post-1C verification pending (Run 4.240)
-- **Top hygiene items:** flat Lari URLs without 301 (canonical OK); 7 legacy `index.php?route=information` sitemap entries; optional `/contact` sitemap inclusion; missing alt bulk
+- **Top hygiene items:** ~~flat Lari URLs without 301~~ **resolved** Run 4.242; ~~7 legacy `index.php?route=information` sitemap entries~~ **fixed** Run 4.243; ~~optional `/contact` sitemap inclusion~~ **fixed** Run 4.243; missing alt bulk (deferred)
 - **Issue register:** Storage `audits/SITE-002-PROD-FULL-TECH-SEO-AUDIT-01/issue-register/` (11 items: P2×3, P3×5, P4×3)
 - **AUDIT-006:** **resolved** Run 4.242 — flat Lari **301** confirmed; Run 4.241 false positive (urllib auto-follow)
+- **AUDIT-007:** **fixed** Run 4.243 — sitemap emits route-based `information/*` pretty URLs
+- **AUDIT-004:** **fixed** Run 4.243 — redundant `compare-products`/`wishlist` seo_url rows removed
+- **AUDIT-002:** **fixed** Run 4.243 — `/contact` in sitemap
 - **Roadmap:** Storage `audits/SITE-002-PROD-FULL-TECH-SEO-AUDIT-01/roadmap/`
 - **Checkpoint:** unchanged `SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01`
 - Tool: `site-002-prod-full-tech-seo-audit-01.py` · [report](../reports/SITE-002-PROD-FULL-TECH-SEO-AUDIT-01.md)
@@ -1168,6 +1171,15 @@ Before **any** task touching **trust block**, **certificates**, **dealers form**
 - **Authority:** Run 4.235 `.htaccess` rules active since Lari reparent
 - **Checkpoint:** unchanged `SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01`
 - Tool: `site-002-prod-audit-wave-c-redirect-hygiene-01.py` · [report](../reports/SITE-002-PROD-AUDIT-WAVE-C-REDIRECT-HYGIENE-01.md)
+
+### Audit Wave B SEO Foundation (Run 4.243)
+
+- **Status:** **COMPLETE** (2026-07-10)
+- **Scope:** sitemap controller patch for route-based `information/*` URLs; scoped DELETE of redundant `compare-products`/`wishlist` seo_url rows; `/contact` sitemap inclusion
+- **Result:** sitemap 1408→**1409**; **0** legacy `index.php?route=information` URLs; `/contact` present; 1 FTP upload; 2 seo_url rows deleted (928/927) with backup
+- **`google_sitemap.php`:** emits distinct `information/*` routes from `oc_seo_url`; skips migrated legacy `information_id` 6/9/10/11/12/13/14
+- **Checkpoint:** `SITE-002-STABLE-PROD-AUDIT-WAVE-B-SEO-FOUNDATION-01`
+- Tool: `site-002-prod-audit-wave-b-seo-foundation-01.py` · mirror `google_sitemap-site-002-prod-audit-wave-b-seo-foundation-01.php` · [report](../reports/SITE-002-PROD-AUDIT-WAVE-B-SEO-FOUNDATION-01.md)
 
 ### Post-1C monitor scheduler (Run 4.215 / 4.216)
 
