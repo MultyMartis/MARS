@@ -15,7 +15,7 @@
 | **Owner / product architect** | Андрей |
 | **Business owner / vision source** | Никита / i-SEO |
 | **Developer** | Антон |
-| **Platform direction** | WordPress-based internal tool on i-seo.su |
+| **Platform direction** | **Reopened** — WordPress on i-seo.su remains option; custom PHP + MySQL candidate; see [I-SEO-REPORT-HUB-PLATFORM-OPTIONS-v0.1.md](product/I-SEO-REPORT-HUB-PLATFORM-OPTIONS-v0.1.md) |
 | **Implementation** | **Not started** — no plugin, no runtime, no n8n workflow |
 
 ---
@@ -26,7 +26,7 @@
 |-------|-------|
 | **Status** | planned / product architecture |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | Website Factory prototype charter (v0.1) |
+| **Active stage** | Report Structure Demo v0.2 planning (platform-neutral) |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -46,14 +46,28 @@
 
 ---
 
+## Operator review — static demo v0.1 (2026-07-10)
+
+| Decision | Status |
+|----------|--------|
+| Workflow mechanics (admin → weekly → monthly → review → client) | **Accepted** — demo v0.1 sufficient for mechanical demonstration |
+| Report structure fidelity | **Not accepted** — generic fields; does not match intended SEO report structure |
+| SEO specialist feedback | **Deferred** — do **not** show v0.1 to SEO specialists as report prototype |
+| Platform | **Pivot** — WordPress/i-seo.su no longer sole production assumption; PHP + MySQL custom system is accepted candidate |
+| Next stage | **Report Structure Demo v0.2** — inject real report structure + 3 demo projects into static demo |
+
+**Demo workspace (unchanged in pivot task):** `workspaces/website-factory-operations/iseo-report-hub-prototype/` — v0.1 localized static HTML.
+
+---
+
 ## Current approved decisions (summary)
 
 1. Report Hub — **операционная система отчётности**, не PDF-only tool.
-2. **WordPress / i-seo.su** — source of truth для reports и workflow.
+2. **Platform** — **platform-neutral until decision gate**; WordPress on i-seo.su **or** custom PHP + MySQL — see platform options v0.1.
 3. **n8n** — external helper (AI, reminders, notifications); **не** SoT.
-4. **Primary client output** — web report pages на i-seo.su; PDF optional later.
+4. **Primary client output** — web report pages (hosting TBD by platform choice); PDF optional later.
 5. **Reporting period** — 1 month; 3 weekly checkpoints + 1 monthly final.
-6. **MVP** — internal WP admin, manual data, evidence, Topvisor external link, approval/publish.
+6. **MVP direction** — internal admin, manual data, evidence, Topvisor external link, approval/publish (implementation platform TBD).
 7. **Credentials/secrets** — отдельный secure integration concern; **не** в report content.
 
 ---
@@ -77,6 +91,12 @@
 | 13 | [product/I-SEO-REPORT-HUB-WEBSITE-FACTORY-PROTOTYPE-CHARTER-v0.1.md](product/I-SEO-REPORT-HUB-WEBSITE-FACTORY-PROTOTYPE-CHARTER-v0.1.md) | Website Factory prototype charter |
 | 14 | [product/I-SEO-REPORT-HUB-WEBSITE-FACTORY-DEMO-BRIEF-v0.1.md](product/I-SEO-REPORT-HUB-WEBSITE-FACTORY-DEMO-BRIEF-v0.1.md) | Website Factory demo build brief |
 | 15 | [reports/REPORT-iseo-report-hub-website-factory-prototype-charter-01.md](reports/REPORT-iseo-report-hub-website-factory-prototype-charter-01.md) | Prototype charter closeout report |
+| 16 | [reports/REPORT-iseo-report-hub-website-factory-static-demo-build-01.md](reports/REPORT-iseo-report-hub-website-factory-static-demo-build-01.md) | Static demo build closeout |
+| 17 | [reports/REPORT-iseo-report-hub-website-factory-demo-russian-localization-01.md](reports/REPORT-iseo-report-hub-website-factory-demo-russian-localization-01.md) | Demo Russian localization closeout |
+| 18 | [product/I-SEO-REPORT-HUB-PLATFORM-OPTIONS-v0.1.md](product/I-SEO-REPORT-HUB-PLATFORM-OPTIONS-v0.1.md) | Platform options (WP vs PHP+MySQL) |
+| 19 | [product/I-SEO-REPORT-HUB-REPORT-STRUCTURE-MODEL-v0.2.md](product/I-SEO-REPORT-HUB-REPORT-STRUCTURE-MODEL-v0.2.md) | Report structure model for demo v0.2 |
+| 20 | [product/I-SEO-REPORT-HUB-DEMO-CONTENT-PACK-v0.1.md](product/I-SEO-REPORT-HUB-DEMO-CONTENT-PACK-v0.1.md) | Sanitized demo content for 3 projects |
+| 21 | [reports/REPORT-iseo-report-hub-platform-pivot-report-structure-modeling-01.md](reports/REPORT-iseo-report-hub-platform-pivot-report-structure-modeling-01.md) | Platform pivot + structure modeling closeout |
 
 ---
 
@@ -121,12 +141,12 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Operator review** of Website Factory prototype charter + demo brief (v0.1)
-2. **Choose next path:** authorize **Website Factory demo build charter** (static HTML workspace) **OR** revise prototype screens/scope before build
-3. Work dictionary extraction/sanitization (из Nikita materials; **exclude** credential sheet)
-4. Report block model refinement (if needed post-review)
-5. MVP implementation charter (HITL) for Anton / i-seo.su
-6. **Website Factory demo build (operator charter only):** workspace candidate `workspaces/website-factory-operations/iseo-report-hub-prototype/` — **not created until separate build task**; see [I-SEO-REPORT-HUB-WEBSITE-FACTORY-DEMO-BRIEF-v0.1.md](product/I-SEO-REPORT-HUB-WEBSITE-FACTORY-DEMO-BRIEF-v0.1.md)
+1. **Report Structure Demo v0.2** — inject report structure model v0.2 + demo content pack (3 projects) into static demo workspace; **no platform implementation**
+2. **Operator review** of demo v0.2 structure and UX
+3. **SEO specialist feedback** — only after v0.2; **not** on v0.1 mechanics-only demo
+4. **Platform decision gate** — after structure + feedback; see platform options v0.1
+5. Work dictionary extraction/sanitization (из Nikita materials; **exclude** credential sheet)
+6. MVP implementation charter (HITL) — platform TBD (Anton / i-SEO)
 7. Later: n8n/API/AI integration (events only; human approval gates)
 
 ---
@@ -139,4 +159,5 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **No n8n workflow exists**
 - **No client portal exists**
 - **No autonomous publication**
-- **Website Factory is not runtime owner** — methodology + prototype lane only; WordPress on i-seo.su remains production/report SoT
+- **Website Factory is not runtime owner** — methodology + prototype lane only; production platform **not decided** (see platform options v0.1)
+- **Static demo v0.1 is not SEO specialist-ready** — workflow mechanics only
