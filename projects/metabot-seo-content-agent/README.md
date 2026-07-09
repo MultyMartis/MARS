@@ -43,6 +43,21 @@ MARS stores **sanitized** descriptions, maps, and contracts only. **Secrets, tok
 
 ---
 
+## MetaBOT foundation (terminology layer)
+
+**Canonical product** remains **MetaBOT — SEO Content Agent** (`project_id`: `metabot-seo-content-agent`).
+
+Broader **MetaBOT** working terminology (external automation/bot contour), **MetaBOT Developer** (planned/conceptual — **not** live runtime), and n8n development discipline are documented in:
+
+| File | Purpose |
+|------|---------|
+| [OPERATIONAL-INDEX.md](OPERATIONAL-INDEX.md) | Standard MARS operational entry — status, boundaries, work lines |
+| [metabot-terminology-and-roles-v1.md](metabot-terminology-and-roles-v1.md) | Names, roles, ecosystem boundaries |
+| [metabot-developer-concept-v1.md](metabot-developer-concept-v1.md) | Planned engineering sub-contour for n8n scheme work |
+| [n8n-project-development-rules-v1.md](n8n-project-development-rules-v1.md) | Safe MARS-assisted n8n workflow evolution rules |
+
+---
+
 ## Documentation pack (this folder)
 
 | File | Purpose |

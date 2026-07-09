@@ -1,0 +1,1483 @@
+{
+  "updatedAt": "2026-05-11T15:52:38.731Z",
+  "createdAt": "2026-05-04T12:33:01.357Z",
+  "id": "AR6QxGt8ZKH0xG2T",
+  "name": "SEO Content Agent Beta.v14 - Admin",
+  "description": null,
+  "active": true,
+  "isArchived": false,
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "seo-content-agent-admin",
+        "options": {
+          "responseCode": {
+            "values": {}
+          },
+          "responseData": "{\"ok\": true}"
+        }
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        14752,
+        23808
+      ],
+      "id": "9c2eb104-4e80-4e14-8a45-246532d097cf",
+      "name": "Webhook",
+      "webhookId": "REDACTED_WEBHOOK_ID"
+    },
+    {
+      "parameters": {
+        "jsCode": "function splitMessage(text, maxLen = 3600) {\n  const chunks = [];\n  let rest = String(text || '').trim();\n\n  while (rest.length > maxLen) {\n    let cut = rest.lastIndexOf('\\n\\n', maxLen);\n    if (cut < 1000) cut = rest.lastIndexOf('\\n', maxLen);\n    if (cut < 1000) cut = maxLen;\n\n    chunks.push(rest.slice(0, cut).trim());\n    rest = rest.slice(cut).trim();\n  }\n\n  if (rest) chunks.push(rest);\n  return chunks;\n}\n\nconst body = $json.body || {};\nconst command = String(body.admin_command || '').trim().toLowerCase();\nconst chatId = String(body.chat_id || body.message?.chat?.id || '').replace(/^=/, '');\n\nlet text = '';\n\nif (command === 'help') {\n  text = `SEO Content Agent — команды\n\n/run — полный pipeline:\nSEO ТЗ → SEO текст → SEO QA → Factcheck\n\n/outline — создать только SEO-ТЗ\n/text — написать SEO-текст по ТЗ\n/seoqa — проверить текст по ТЗ\n/factcheck — проверить факты\n/get task-id — получить сохранённый результат\n/examples — подробные примеры заданий\n\nAdmin-команды:\n/help — справка\n/examples — примеры заданий\n/locks — активные задачи\n/health — проверка Sheets\n/stop-all-flow — сбросить активные задачи\n\nДополнительные флаги:\n--strict — строгий режим без обещаний и рискованных формулировок\n--tables yes — таблицы обязательны\n--tables no — без таблиц\n--from task-id — использовать сохранённый результат\n\nПример:\n\n/run --strict\nТип: страница услуги\nТема: SEO-аудит сайта\nТаблицы: да\n\nБриф:\nУслуга SEO-аудита сайта.\nВ услугу входит техническая проверка, анализ структуры, контента и индексации.\nБез гарантий.\nБез сроков.`;\n} else if (command === 'examples') {\n  text = `SEO Content Agent — примеры заданий\n\nНиже готовые примеры, которые можно копировать целиком в Telegram.\n\nВажно:\n— чем подробнее бриф, тем лучше результат;\n— факты, цены, сроки, гарантии и ограничения лучше указывать явно;\n— если нужны таблицы, указывайте Таблицы: да или --tables yes;\n— если нужны осторожные формулировки без обещаний, используйте --strict.\n\n==============================\n1. Страница услуги с таблицами\n==============================\n\n/run --strict --tables yes\nТип: страница услуги\nТема: SEO-аудит сайта\nТаблицы: да\n\nБриф:\nУслуга SEO-аудита сайта.\nВ услугу входит техническая проверка сайта, анализ структуры, контента, индексации, robots.txt, sitemap.xml, метатегов, URL, дублей страниц и внутренней перелинковки.\nНужно подготовить коммерческий SEO-текст для страницы услуги.\nБез гарантий роста позиций, трафика и заявок.\nБез обещаний сроков.\nНужно объяснить, что клиент получает отчёт с найденными проблемами и рекомендациями.\n\n==============================\n2. Страница услуги без таблиц\n==============================\n\n/run --strict --tables no\nТип: страница услуги\nТема: Настройка Яндекс Директ\nТаблицы: нет\n\nБриф:\nУслуга настройки рекламных кампаний в Яндекс Директ.\nВ работу входит сбор семантики, группировка ключевых фраз, подготовка объявлений, настройка минус-фраз, базовая настройка аналитики и запуск рекламных кампаний.\nНе обещать заявки, продажи, окупаемость и быстрый результат.\nТекст нужен для коммерческой страницы услуги.\nCTA нейтральный: обсудить задачу или запросить консультацию.\n\n==============================\n3. Категория товаров с таблицами\n==============================\n\n/run --strict --tables yes\nТип: категория товаров\nТема: Металлические стеллажи для склада\nТаблицы: да\n\nБриф:\nКатегория интернет-магазина: металлические складские стеллажи.\nВ ассортименте могут быть полочные, паллетные, консольные и архивные стеллажи.\nНужно подготовить SEO-ТЗ и текст для категории.\nСделать акцент на выборе по нагрузке, размерам, назначению и условиям эксплуатации.\nНе указывать цены, сроки поставки и наличие, если этих данных нет в брифе.\nТаблица нужна для сравнения типов стеллажей.\n\n==============================\n4. Информационная статья\n==============================\n\n/run --strict --tables yes\nТип: информационная статья\nТема: Как проверить robots.txt на сайте\nТаблицы: да\n\nБриф:\nНужно подготовить информационную статью о проверке файла robots.txt.\nРаскрыть, что такое robots.txt, где он находится, какие директивы используются, какие ошибки встречаются, как проверить доступность файла и связь с sitemap.xml.\nНе продавать услугу напрямую.\nНе обещать рост позиций или трафика.\nМожно добавить таблицу с типовыми ошибками и пояснениями.\n\n==============================\n5. Статья без коммерческих призывов\n==============================\n\n/run --strict --tables no\nТип: информационная статья\nТема: Что такое технический SEO-аудит\nТаблицы: нет\n\nБриф:\nНужна нейтральная информационная статья без коммерческих CTA.\nОбъяснить, что такое технический SEO-аудит, какие зоны сайта обычно проверяются, зачем фиксировать технические проблемы, как результаты аудита можно использовать в дальнейшей работе.\nНе использовать прямые призывы заказать услугу.\nНе обещать рост трафика, позиций, продаж или заявок.\n\n==============================\n6. Проверка SEO QA\n==============================\n\n/seoqa --strict\nТип проверки: SEO QA\nТема: SEO-аудит сайта\n\nТЗ:\nВ тексте должны быть раскрыты: техническая проверка, индексация, структура сайта, метатеги, robots.txt, sitemap.xml, внутренняя перелинковка, отчёт и рекомендации.\nНельзя обещать рост позиций, трафика, заявок и продаж.\n\nТекст:\nВставьте сюда готовый SEO-текст, который нужно проверить по ТЗ.\n\n==============================\n7. Factcheck\n==============================\n\n/factcheck --strict\nТип проверки: factcheck\nТема: SEO-аудит сайта\n\nБриф:\nВ услугу входит техническая проверка сайта, анализ структуры, контента, индексации, robots.txt, sitemap.xml, метатегов и внутренней перелинковки.\nНет данных о гарантиях, сроках, ценах, кейсах и сертификациях.\n\nТекст:\nВставьте сюда текст, который нужно проверить на неподтверждённые факты, гарантии, обещания и рискованные формулировки.\n\n==============================\n8. Получение результата по task_id\n==============================\n\n/get seo20260508010203abc123\n\nГде seo20260508010203abc123 — это Task ID из прошлого результата.\n\n==============================\n9. Повторное использование через --from\n==============================\n\n/text --from seo20260508010203abc123 --strict\n\nДополнение:\nНа основе сохранённого SEO-ТЗ напиши SEO-текст в коммерческом стиле.\nБез обещаний результата, сроков, роста трафика, позиций, заявок и продаж.\n\nЕщё пример:\n\n/seoqa --from seo20260508010203abc123 --strict\n\nПроверь сохранённый результат по требованиям ТЗ и найди слабые места.\n\n==============================\nКороткая схема выбора команды\n==============================\n\n/run — полный цикл: ТЗ → текст → SEO QA → Factcheck\n/outline — только SEO-ТЗ\n/text — только текст\n/seoqa — проверка текста по ТЗ\n/factcheck — проверка фактов и рискованных формулировок\n/get task_id — получить сохранённый результат\n/text --from task_id — написать текст на основе сохранённого результата\n/seoqa --from task_id — проверить сохранённый результат\n/examples — показать эту статью`;\n} else {\n  text = `Admin Workflow\n\nКоманда пока не реализована: /${command || 'unknown'}\n\nДоступные admin-команды:\n/help\n/examples`;\n}\n\nconst chunks = splitMessage(text);\n\nreturn chunks.map((chunk, index) => ({\n  json: {\n    chat_id: chatId,\n    telegram_text: chunks.length > 1 ? `[Часть ${index + 1}/${chunks.length}]\\n\\n${chunk}` : chunk,\n    chunk_index: index,\n    chunk_count: chunks.length,\n    admin_command: command\n  }\n}));"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        15872,
+        24272
+      ],
+      "id": "2a17f033-cc2e-4b02-b259-e78ac34880af",
+      "name": "Build Admin Response"
+    },
+    {
+      "parameters": {
+        "chatId": "REDACTED_PERSONAL_ID",
+        "text": "={{ $json.telegram_text }}",
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "id": "2fad27e2-eb1d-4b28-966c-7785fad3a281",
+      "name": "Send Admin Telegram",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        16656,
+        24080
+      ],
+      "webhookId": "REDACTED_WEBHOOK_ID",
+      "credentials": "REDACTED_CREDENTIAL"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "f3d5f741-5185-44bd-9998-4f6af751a467",
+              "leftValue": "={{ $json.body.admin_command }}",
+              "rightValue": "stop-all-flow",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        14960,
+        23808
+      ],
+      "id": "75f6285e-d91b-46d0-a865-a3a7fee5a786",
+      "name": "Route Stop All Flow"
+    },
+    {
+      "parameters": {
+        "jsCode": "const now = new Date().toISOString();\n\nreturn items.map(item => {\n  return {\n    json: {\n      row_number: item.json.row_number,\n      lock_key: item.json.lock_key,\n      status: 'cancelled',\n      finished_at: now,\n      cancel_reason: 'admin_stop_all_flow'\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        15456,
+        23648
+      ],
+      "id": "81d85006-38cc-4c09-b054-8edc3de3f547",
+      "name": "Prepare Cancelled Locks"
+    },
+    {
+      "parameters": {
+        "chatId": "REDACTED_PERSONAL_ID",
+        "text": "=✅ Активные задачи сброшены.\n\nНовые задачи можно запускать.",
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "id": "813e2093-1396-46c2-91a8-0996b61e354f",
+      "name": "Send Stop All Flow Success",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        15920,
+        23648
+      ],
+      "webhookId": "REDACTED_WEBHOOK_ID",
+      "credentials": "REDACTED_CREDENTIAL"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "REDACTED_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 2116752312,
+          "mode": "list",
+          "cachedResultName": "seo_active_jobs",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/REDACTED_SHEET_ID/edit#gid=2116752312"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "chat_id",
+              "lookupValue": "={{ $json.body.chat_id }}"
+            },
+            {
+              "lookupColumn": "status",
+              "lookupValue": "active"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        15216,
+        23648
+      ],
+      "id": "ac8d16b4-8d7a-46b9-bc6d-a207045baffb",
+      "name": "Lookup Active Locks",
+      "credentials": "REDACTED_CREDENTIAL"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "REDACTED_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 2116752312,
+          "mode": "list",
+          "cachedResultName": "seo_active_jobs",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/REDACTED_SHEET_ID/edit#gid=2116752312"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "status": "={{ $json.status }}",
+            "finished_at": "={{ $json.finished_at }}",
+            "row_number": 0,
+            "cancel_reason": "={{ $json.cancel_reason }}",
+            "lock_key": "={{ $json.lock_key }}"
+          },
+          "matchingColumns": [
+            "lock_key"
+          ],
+          "schema": [
+            {
+              "id": "lock_key",
+              "displayName": "lock_key",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "chat_id",
+              "displayName": "chat_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "user_id",
+              "displayName": "user_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "username",
+              "displayName": "username",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "task_id",
+              "displayName": "task_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "created_at",
+              "displayName": "created_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "expires_at",
+              "displayName": "expires_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "status",
+              "displayName": "status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "finished_at",
+              "displayName": "finished_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "cancel_reason",
+              "displayName": "cancel_reason",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        15696,
+        23648
+      ],
+      "id": "98edb0bf-18df-461d-ba89-05bd5f8359f6",
+      "name": "Cancel Active Locks",
+      "credentials": "REDACTED_CREDENTIAL"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "5a1ac6f8-cc05-4dbe-8f70-0ccaf27a4da5",
+              "leftValue": "={{ $json.body.admin_command }}",
+              "rightValue": "locks",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        15216,
+        23888
+      ],
+      "id": "2b5a6249-bce5-46a5-af99-eec1af0cf23d",
+      "name": "Route Locks"
+    },
+    {
+      "parameters": {
+        "jsCode": "const body = $('Webhook').first().json.body || {};\nconst chatId = String(body.chat_id || body.message?.chat?.id || '').replace(/^=/, '');\n\nconst now = Date.now();\n\nconst rows = items\n  .map(item => item.json || {})\n  .filter(row => {\n    const status = String(row.status || '').trim().toLowerCase();\n    const expiresAt = Date.parse(String(row.expires_at || '').trim());\n\n    return (\n      status === 'active' &&\n      Number.isFinite(expiresAt) &&\n      expiresAt > now\n    );\n  });\n\nlet text = '';\n\nif (!rows.length) {\n  text = 'Активных задач нет.';\n} else {\n  text = 'Активные задачи:\\n\\n';\n\n  rows.forEach((row, index) => {\n    text += `${index + 1}. lock_key: ${row.lock_key || '-'}\\n`;\n    text += `   task_id: ${row.task_id || '-'}\\n`;\n    text += `   created_at: ${row.created_at || '-'}\\n`;\n    text += `   expires_at: ${row.expires_at || '-'}\\n`;\n    text += `   status: ${row.status || '-'}\\n\\n`;\n  });\n}\n\nreturn [{\n  json: {\n    chat_id: chatId,\n    telegram_text: text,\n    admin_command: 'locks'\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        16240,
+        23856
+      ],
+      "id": "62df54f3-9034-4d86-a512-4ac65696fd97",
+      "name": "Format Locks Response"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "REDACTED_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 2116752312,
+          "mode": "list",
+          "cachedResultName": "seo_active_jobs",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/REDACTED_SHEET_ID/edit#gid=2116752312"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "chat_id",
+              "lookupValue": "={{ $('Webhook').first().json.body.chat_id }}"
+            },
+            {
+              "lookupColumn": "status",
+              "lookupValue": "active"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        16000,
+        23856
+      ],
+      "id": "9c2543ca-9599-47de-aff6-a4946d99ece0",
+      "name": "Lookup Locks",
+      "alwaysOutputData": true,
+      "credentials": "REDACTED_CREDENTIAL"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "f9d97a97-dad8-4bdf-a330-5b393dd9c5a4",
+              "leftValue": "={{ $json.body.admin_command }}",
+              "rightValue": "health",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": "=",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        15360,
+        24096
+      ],
+      "id": "8675949e-97aa-4a0c-9801-4cb7e0f0f92f",
+      "name": "Route Health"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "REDACTED_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 2116752312,
+          "mode": "list",
+          "cachedResultName": "seo_active_jobs",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/REDACTED_SHEET_ID/edit#gid=2116752312"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        15648,
+        24032
+      ],
+      "id": "dd880faf-7d62-4313-8714-8bc37f7c8eb4",
+      "name": "Health Check Active Jobs",
+      "alwaysOutputData": true,
+      "credentials": "REDACTED_CREDENTIAL",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "REDACTED_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1910541765,
+          "mode": "list",
+          "cachedResultName": "memory",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/REDACTED_SHEET_ID/edit#gid=1910541765"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        15904,
+        24016
+      ],
+      "id": "8225ebb8-63f4-4369-9143-e950fc9407db",
+      "name": "Health Check Memory",
+      "alwaysOutputData": true,
+      "credentials": "REDACTED_CREDENTIAL",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "const body = $('Webhook').first().json.body || {};\nconst chatId = String(body.chat_id || body.message?.chat?.id || '').replace(/^=/, '');\n\nfunction getNodeItems(nodeName) {\n  try {\n    return $(nodeName).all();\n  } catch (e) {\n    return [{\n      json: {\n        __health_error: String(e.message || e)\n      }\n    }];\n  }\n}\n\nfunction checkSheet(nodeName) {\n  const nodeItems = getNodeItems(nodeName);\n\n  if (!Array.isArray(nodeItems) || nodeItems.length === 0) {\n    return {\n      ok: false,\n      message: 'нет output items'\n    };\n  }\n\n  const first = nodeItems[0]?.json || {};\n\n  if (first.__health_error) {\n    return {\n      ok: false,\n      message: first.__health_error\n    };\n  }\n\n  if (first.error) {\n    return {\n      ok: false,\n      message: String(first.error)\n    };\n  }\n\n  if (first.message && /error|ошибка|bad request/i.test(String(first.message))) {\n    return {\n      ok: false,\n      message: String(first.message)\n    };\n  }\n\n  return {\n    ok: true,\n    message: `лист читается, items: ${nodeItems.length}`\n  };\n}\n\nconst activeJobs = checkSheet('Health Check Active Jobs');\nconst memory = checkSheet('Health Check Memory');\n\nconst allOk = activeJobs.ok && memory.ok;\n\nconst text = [\n  'Health Check — SEO Content Agent',\n  '',\n  `Google Sheets: ${allOk ? 'OK' : 'ERROR'}`,\n  `seo_active_jobs: ${activeJobs.ok ? 'OK' : 'ERROR'} — ${activeJobs.message}`,\n  `memory: ${memory.ok ? 'OK' : 'ERROR'} — ${memory.message}`,\n  '',\n  `Статус: ${allOk ? 'система доступна' : 'есть проблема с доступом к таблицам'}`\n].join('\\n');\n\nreturn [{\n  json: {\n    chat_id: chatId,\n    telegram_text: text,\n    admin_command: 'health'\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        16112,
+        24016
+      ],
+      "id": "390875e5-278a-4546-ac95-b5c0287bae64",
+      "name": "Format Health Response"
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Route Stop All Flow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Admin Response": {
+      "main": [
+        [
+          {
+            "node": "Send Admin Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Route Stop All Flow": {
+      "main": [
+        [
+          {
+            "node": "Lookup Active Locks",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Route Locks",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Cancelled Locks": {
+      "main": [
+        [
+          {
+            "node": "Cancel Active Locks",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lookup Active Locks": {
+      "main": [
+        [
+          {
+            "node": "Prepare Cancelled Locks",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cancel Active Locks": {
+      "main": [
+        [
+          {
+            "node": "Send Stop All Flow Success",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Route Locks": {
+      "main": [
+        [
+          {
+            "node": "Lookup Locks",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Route Health",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Locks Response": {
+      "main": [
+        [
+          {
+            "node": "Send Admin Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lookup Locks": {
+      "main": [
+        [
+          {
+            "node": "Format Locks Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Route Health": {
+      "main": [
+        [
+          {
+            "node": "Health Check Active Jobs",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Build Admin Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Health Check Active Jobs": {
+      "main": [
+        [
+          {
+            "node": "Health Check Memory",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Health Check Memory": {
+      "main": [
+        [
+          {
+            "node": "Format Health Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Health Response": {
+      "main": [
+        [
+          {
+            "node": "Send Admin Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "staticData": null,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "pinData": "REDACTED_PINNED_DATA",
+  "versionId": "ad098e43-2762-4757-ad3e-a8d01fdd8dcc",
+  "activeVersionId": "ad098e43-2762-4757-ad3e-a8d01fdd8dcc",
+  "versionCounter": 598,
+  "triggerCount": 1,
+  "shared": [
+    {
+      "updatedAt": "2026-05-04T12:33:01.367Z",
+      "createdAt": "2026-05-04T12:33:01.367Z",
+      "role": "workflow:owner",
+      "workflowId": "AR6QxGt8ZKH0xG2T",
+      "projectId": "m0cYMcwypxfVeob3",
+      "project": {
+        "updatedAt": "2026-04-04T13:33:43.728Z",
+        "createdAt": "2026-04-04T13:23:03.195Z",
+        "id": "m0cYMcwypxfVeob3",
+        "name": "Andrey MetaCode <multy.martis@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "creatorId": "b6e6266b-1652-480f-8734-2dcdf151cf20"
+      }
+    }
+  ],
+  "tags": [
+    {
+      "updatedAt": "2026-05-04T12:33:42.598Z",
+      "createdAt": "2026-05-04T12:33:42.598Z",
+      "id": "HjnGBeNXbAsrnAdC",
+      "name": "i-SEO"
+    },
+    {
+      "updatedAt": "2026-04-25T16:02:32.402Z",
+      "createdAt": "2026-04-25T16:02:32.402Z",
+      "id": "k50c1IixdJeXE3tp",
+      "name": "MetaBOT"
+    }
+  ],
+  "activeVersion": {
+    "updatedAt": "2026-05-10T19:26:48.000Z",
+    "createdAt": "2026-05-08T16:36:13.122Z",
+    "versionId": "ad098e43-2762-4757-ad3e-a8d01fdd8dcc",
+    "workflowId": "AR6QxGt8ZKH0xG2T",
+    "nodes": [
+      {
+        "parameters": {
+          "httpMethod": "POST",
+          "path": "seo-content-agent-admin",
+          "options": {
+            "responseCode": {
+              "values": {}
+            },
+            "responseData": "{\"ok\": true}"
+          }
+        },
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 2.1,
+        "position": [
+          14752,
+          23808
+        ],
+        "id": "9c2eb104-4e80-4e14-8a45-246532d097cf",
+        "name": "Webhook",
+        "webhookId": "REDACTED_WEBHOOK_ID"
+      },
+      {
+        "parameters": {
+          "jsCode": "function splitMessage(text, maxLen = 3600) {\n  const chunks = [];\n  let rest = String(text || '').trim();\n\n  while (rest.length > maxLen) {\n    let cut = rest.lastIndexOf('\\n\\n', maxLen);\n    if (cut < 1000) cut = rest.lastIndexOf('\\n', maxLen);\n    if (cut < 1000) cut = maxLen;\n\n    chunks.push(rest.slice(0, cut).trim());\n    rest = rest.slice(cut).trim();\n  }\n\n  if (rest) chunks.push(rest);\n  return chunks;\n}\n\nconst body = $json.body || {};\nconst command = String(body.admin_command || '').trim().toLowerCase();\nconst chatId = String(body.chat_id || body.message?.chat?.id || '').replace(/^=/, '');\n\nlet text = '';\n\nif (command === 'help') {\n  text = `SEO Content Agent — команды\n\n/run — полный pipeline:\nSEO ТЗ → SEO текст → SEO QA → Factcheck\n\n/outline — создать только SEO-ТЗ\n/text — написать SEO-текст по ТЗ\n/seoqa — проверить текст по ТЗ\n/factcheck — проверить факты\n/get task-id — получить сохранённый результат\n/examples — подробные примеры заданий\n\nAdmin-команды:\n/help — справка\n/examples — примеры заданий\n/locks — активные задачи\n/health — проверка Sheets\n/stop-all-flow — сбросить активные задачи\n\nДополнительные флаги:\n--strict — строгий режим без обещаний и рискованных формулировок\n--tables yes — таблицы обязательны\n--tables no — без таблиц\n--from task-id — использовать сохранённый результат\n\nПример:\n\n/run --strict\nТип: страница услуги\nТема: SEO-аудит сайта\nТаблицы: да\n\nБриф:\nУслуга SEO-аудита сайта.\nВ услугу входит техническая проверка, анализ структуры, контента и индексации.\nБез гарантий.\nБез сроков.`;\n} else if (command === 'examples') {\n  text = `SEO Content Agent — примеры заданий\n\nНиже готовые примеры, которые можно копировать целиком в Telegram.\n\nВажно:\n— чем подробнее бриф, тем лучше результат;\n— факты, цены, сроки, гарантии и ограничения лучше указывать явно;\n— если нужны таблицы, указывайте Таблицы: да или --tables yes;\n— если нужны осторожные формулировки без обещаний, используйте --strict.\n\n==============================\n1. Страница услуги с таблицами\n==============================\n\n/run --strict --tables yes\nТип: страница услуги\nТема: SEO-аудит сайта\nТаблицы: да\n\nБриф:\nУслуга SEO-аудита сайта.\nВ услугу входит техническая проверка сайта, анализ структуры, контента, индексации, robots.txt, sitemap.xml, метатегов, URL, дублей страниц и внутренней перелинковки.\nНужно подготовить коммерческий SEO-текст для страницы услуги.\nБез гарантий роста позиций, трафика и заявок.\nБез обещаний сроков.\nНужно объяснить, что клиент получает отчёт с найденными проблемами и рекомендациями.\n\n==============================\n2. Страница услуги без таблиц\n==============================\n\n/run --strict --tables no\nТип: страница услуги\nТема: Настройка Яндекс Директ\nТаблицы: нет\n\nБриф:\nУслуга настройки рекламных кампаний в Яндекс Директ.\nВ работу входит сбор семантики, группировка ключевых фраз, подготовка объявлений, настройка минус-фраз, базовая настройка аналитики и запуск рекламных кампаний.\nНе обещать заявки, продажи, окупаемость и быстрый результат.\nТекст нужен для коммерческой страницы услуги.\nCTA нейтральный: обсудить задачу или запросить консультацию.\n\n==============================\n3. Категория товаров с таблицами\n==============================\n\n/run --strict --tables yes\nТип: категория товаров\nТема: Металлические стеллажи для склада\nТаблицы: да\n\nБриф:\nКатегория интернет-магазина: металлические складские стеллажи.\nВ ассортименте могут быть полочные, паллетные, консольные и архивные стеллажи.\nНужно подготовить SEO-ТЗ и текст для категории.\nСделать акцент на выборе по нагрузке, размерам, назначению и условиям эксплуатации.\nНе указывать цены, сроки поставки и наличие, если этих данных нет в брифе.\nТаблица нужна для сравнения типов стеллажей.\n\n==============================\n4. Информационная статья\n==============================\n\n/run --strict --tables yes\nТип: информационная статья\nТема: Как проверить robots.txt на сайте\nТаблицы: да\n\nБриф:\nНужно подготовить информационную статью о проверке файла robots.txt.\nРаскрыть, что такое robots.txt, где он находится, какие директивы используются, какие ошибки встречаются, как проверить доступность файла и связь с sitemap.xml.\nНе продавать услугу напрямую.\nНе обещать рост позиций или трафика.\nМожно добавить таблицу с типовыми ошибками и пояснениями.\n\n==============================\n5. Статья без коммерческих призывов\n==============================\n\n/run --strict --tables no\nТип: информационная статья\nТема: Что такое технический SEO-аудит\nТаблицы: нет\n\nБриф:\nНужна нейтральная информационная статья без коммерческих CTA.\nОбъяснить, что такое технический SEO-аудит, какие зоны сайта обычно проверяются, зачем фиксировать технические проблемы, как результаты аудита можно использовать в дальнейшей работе.\nНе использовать прямые призывы заказать услугу.\nНе обещать рост трафика, позиций, продаж или заявок.\n\n==============================\n6. Проверка SEO QA\n==============================\n\n/seoqa --strict\nТип проверки: SEO QA\nТема: SEO-аудит сайта\n\nТЗ:\nВ тексте должны быть раскрыты: техническая проверка, индексация, структура сайта, метатеги, robots.txt, sitemap.xml, внутренняя перелинковка, отчёт и рекомендации.\nНельзя обещать рост позиций, трафика, заявок и продаж.\n\nТекст:\nВставьте сюда готовый SEO-текст, который нужно проверить по ТЗ.\n\n==============================\n7. Factcheck\n==============================\n\n/factcheck --strict\nТип проверки: factcheck\nТема: SEO-аудит сайта\n\nБриф:\nВ услугу входит техническая проверка сайта, анализ структуры, контента, индексации, robots.txt, sitemap.xml, метатегов и внутренней перелинковки.\nНет данных о гарантиях, сроках, ценах, кейсах и сертификациях.\n\nТекст:\nВставьте сюда текст, который нужно проверить на неподтверждённые факты, гарантии, обещания и рискованные формулировки.\n\n==============================\n8. Получение результата по task_id\n==============================\n\n/get seo20260508010203abc123\n\nГде seo20260508010203abc123 — это Task ID из прошлого результата.\n\n==============================\n9. Повторное использование через --from\n==============================\n\n/text --from seo20260508010203abc123 --strict\n\nДополнение:\nНа основе сохранённого SEO-ТЗ напиши SEO-текст в коммерческом стиле.\nБез обещаний результата, сроков, роста трафика, позиций, заявок и продаж.\n\nЕщё пример:\n\n/seoqa --from seo20260508010203abc123 --strict\n\nПроверь сохранённый результат по требованиям ТЗ и найди слабые места.\n\n==============================\nКороткая схема выбора команды\n==============================\n\n/run — полный цикл: ТЗ → текст → SEO QA → Factcheck\n/outline — только SEO-ТЗ\n/text — только текст\n/seoqa — проверка текста по ТЗ\n/factcheck — проверка фактов и рискованных формулировок\n/get task_id — получить сохранённый результат\n/text --from task_id — написать текст на основе сохранённого результата\n/seoqa --from task_id — проверить сохранённый результат\n/examples — показать эту статью`;\n} else {\n  text = `Admin Workflow\n\nКоманда пока не реализована: /${command || 'unknown'}\n\nДоступные admin-команды:\n/help\n/examples`;\n}\n\nconst chunks = splitMessage(text);\n\nreturn chunks.map((chunk, index) => ({\n  json: {\n    chat_id: chatId,\n    telegram_text: chunks.length > 1 ? `[Часть ${index + 1}/${chunks.length}]\\n\\n${chunk}` : chunk,\n    chunk_index: index,\n    chunk_count: chunks.length,\n    admin_command: command\n  }\n}));"
+        },
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          15872,
+          24272
+        ],
+        "id": "2a17f033-cc2e-4b02-b259-e78ac34880af",
+        "name": "Build Admin Response"
+      },
+      {
+        "parameters": {
+          "chatId": "REDACTED_PERSONAL_ID",
+          "text": "={{ $json.telegram_text }}",
+          "additionalFields": {
+            "appendAttribution": false,
+            "parse_mode": "HTML"
+          }
+        },
+        "id": "2fad27e2-eb1d-4b28-966c-7785fad3a281",
+        "name": "Send Admin Telegram",
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "position": [
+          16656,
+          24080
+        ],
+        "webhookId": "REDACTED_WEBHOOK_ID",
+        "credentials": "REDACTED_CREDENTIAL"
+      },
+      {
+        "parameters": {
+          "conditions": {
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 3
+            },
+            "conditions": [
+              {
+                "id": "f3d5f741-5185-44bd-9998-4f6af751a467",
+                "leftValue": "={{ $json.body.admin_command }}",
+                "rightValue": "stop-all-flow",
+                "operator": {
+                  "type": "string",
+                  "operation": "equals",
+                  "name": "filter.operator.equals"
+                }
+              }
+            ],
+            "combinator": "and"
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.3,
+        "position": [
+          14960,
+          23808
+        ],
+        "id": "75f6285e-d91b-46d0-a865-a3a7fee5a786",
+        "name": "Route Stop All Flow"
+      },
+      {
+        "parameters": {
+          "jsCode": "const now = new Date().toISOString();\n\nreturn items.map(item => {\n  return {\n    json: {\n      row_number: item.json.row_number,\n      lock_key: item.json.lock_key,\n      status: 'cancelled',\n      finished_at: now,\n      cancel_reason: 'admin_stop_all_flow'\n    }\n  };\n});"
+        },
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          15456,
+          23648
+        ],
+        "id": "81d85006-38cc-4c09-b054-8edc3de3f547",
+        "name": "Prepare Cancelled Locks"
+      },
+      {
+        "parameters": {
+          "chatId": "REDACTED_PERSONAL_ID",
+          "text": "=✅ Активные задачи сброшены.\n\nНовые задачи можно запускать.",
+          "additionalFields": {
+            "appendAttribution": false,
+            "parse_mode": "HTML"
+          }
+        },
+        "id": "813e2093-1396-46c2-91a8-0996b61e354f",
+        "name": "Send Stop All Flow Success",
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "position": [
+          15920,
+          23648
+        ],
+        "webhookId": "REDACTED_WEBHOOK_ID",
+        "credentials": "REDACTED_CREDENTIAL"
+      },
+      {
+        "parameters": {
+          "documentId": {
+            "__rl": true,
+            "value": "REDACTED_SHEET_ID",
+            "mode": "id"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 2116752312,
+            "mode": "list",
+            "cachedResultName": "seo_active_jobs",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/REDACTED_SHEET_ID/edit#gid=2116752312"
+          },
+          "filtersUI": {
+            "values": [
+              {
+                "lookupColumn": "chat_id",
+                "lookupValue": "={{ $json.body.chat_id }}"
+              },
+              {
+                "lookupColumn": "status",
+                "lookupValue": "active"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          15216,
+          23648
+        ],
+        "id": "ac8d16b4-8d7a-46b9-bc6d-a207045baffb",
+        "name": "Lookup Active Locks",
+        "credentials": "REDACTED_CREDENTIAL"
+      },
+      {
+        "parameters": {
+          "operation": "update",
+          "documentId": {
+            "__rl": true,
+            "value": "REDACTED_SHEET_ID",
+            "mode": "id"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 2116752312,
+            "mode": "list",
+            "cachedResultName": "seo_active_jobs",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/REDACTED_SHEET_ID/edit#gid=2116752312"
+          },
+          "columns": {
+            "mappingMode": "defineBelow",
+            "value": {
+              "status": "={{ $json.status }}",
+              "finished_at": "={{ $json.finished_at }}",
+              "row_number": 0,
+              "cancel_reason": "={{ $json.cancel_reason }}",
+              "lock_key": "={{ $json.lock_key }}"
+            },
+            "matchingColumns": [
+              "lock_key"
+            ],
+            "schema": [
+              {
+                "id": "lock_key",
+                "displayName": "lock_key",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "chat_id",
+                "displayName": "chat_id",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "user_id",
+                "displayName": "user_id",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "username",
+                "displayName": "username",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "task_id",
+                "displayName": "task_id",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "created_at",
+                "displayName": "created_at",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "expires_at",
+                "displayName": "expires_at",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "status",
+                "displayName": "status",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "finished_at",
+                "displayName": "finished_at",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "cancel_reason",
+                "displayName": "cancel_reason",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "row_number",
+                "displayName": "row_number",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "number",
+                "canBeUsedToMatch": true,
+                "readOnly": true,
+                "removed": false
+              }
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          15696,
+          23648
+        ],
+        "id": "98edb0bf-18df-461d-ba89-05bd5f8359f6",
+        "name": "Cancel Active Locks",
+        "credentials": "REDACTED_CREDENTIAL"
+      },
+      {
+        "parameters": {
+          "conditions": {
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 3
+            },
+            "conditions": [
+              {
+                "id": "5a1ac6f8-cc05-4dbe-8f70-0ccaf27a4da5",
+                "leftValue": "={{ $json.body.admin_command }}",
+                "rightValue": "locks",
+                "operator": {
+                  "type": "string",
+                  "operation": "equals",
+                  "name": "filter.operator.equals"
+                }
+              }
+            ],
+            "combinator": "and"
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.3,
+        "position": [
+          15216,
+          23888
+        ],
+        "id": "2b5a6249-bce5-46a5-af99-eec1af0cf23d",
+        "name": "Route Locks"
+      },
+      {
+        "parameters": {
+          "jsCode": "const body = $('Webhook').first().json.body || {};\nconst chatId = String(body.chat_id || body.message?.chat?.id || '').replace(/^=/, '');\n\nconst now = Date.now();\n\nconst rows = items\n  .map(item => item.json || {})\n  .filter(row => {\n    const status = String(row.status || '').trim().toLowerCase();\n    const expiresAt = Date.parse(String(row.expires_at || '').trim());\n\n    return (\n      status === 'active' &&\n      Number.isFinite(expiresAt) &&\n      expiresAt > now\n    );\n  });\n\nlet text = '';\n\nif (!rows.length) {\n  text = 'Активных задач нет.';\n} else {\n  text = 'Активные задачи:\\n\\n';\n\n  rows.forEach((row, index) => {\n    text += `${index + 1}. lock_key: ${row.lock_key || '-'}\\n`;\n    text += `   task_id: ${row.task_id || '-'}\\n`;\n    text += `   created_at: ${row.created_at || '-'}\\n`;\n    text += `   expires_at: ${row.expires_at || '-'}\\n`;\n    text += `   status: ${row.status || '-'}\\n\\n`;\n  });\n}\n\nreturn [{\n  json: {\n    chat_id: chatId,\n    telegram_text: text,\n    admin_command: 'locks'\n  }\n}];"
+        },
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          16240,
+          23856
+        ],
+        "id": "62df54f3-9034-4d86-a512-4ac65696fd97",
+        "name": "Format Locks Response"
+      },
+      {
+        "parameters": {
+          "documentId": {
+            "__rl": true,
+            "value": "REDACTED_SHEET_ID",
+            "mode": "id"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 2116752312,
+            "mode": "list",
+            "cachedResultName": "seo_active_jobs",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/REDACTED_SHEET_ID/edit#gid=2116752312"
+          },
+          "filtersUI": {
+            "values": [
+              {
+                "lookupColumn": "chat_id",
+                "lookupValue": "={{ $('Webhook').first().json.body.chat_id }}"
+              },
+              {
+                "lookupColumn": "status",
+                "lookupValue": "active"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          16000,
+          23856
+        ],
+        "id": "9c2543ca-9599-47de-aff6-a4946d99ece0",
+        "name": "Lookup Locks",
+        "alwaysOutputData": true,
+        "credentials": "REDACTED_CREDENTIAL"
+      },
+      {
+        "parameters": {
+          "conditions": {
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "strict",
+              "version": 3
+            },
+            "conditions": [
+              {
+                "id": "f9d97a97-dad8-4bdf-a330-5b393dd9c5a4",
+                "leftValue": "={{ $json.body.admin_command }}",
+                "rightValue": "health",
+                "operator": {
+                  "type": "string",
+                  "operation": "equals",
+                  "name": "filter.operator.equals"
+                }
+              }
+            ],
+            "combinator": "and"
+          },
+          "looseTypeValidation": "=",
+          "options": {}
+        },
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.3,
+        "position": [
+          15360,
+          24096
+        ],
+        "id": "8675949e-97aa-4a0c-9801-4cb7e0f0f92f",
+        "name": "Route Health"
+      },
+      {
+        "parameters": {
+          "documentId": {
+            "__rl": true,
+            "value": "REDACTED_SHEET_ID",
+            "mode": "id"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 2116752312,
+            "mode": "list",
+            "cachedResultName": "seo_active_jobs",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/REDACTED_SHEET_ID/edit#gid=2116752312"
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          15648,
+          24032
+        ],
+        "id": "dd880faf-7d62-4313-8714-8bc37f7c8eb4",
+        "name": "Health Check Active Jobs",
+        "alwaysOutputData": true,
+        "credentials": "REDACTED_CREDENTIAL",
+        "onError": "continueRegularOutput"
+      },
+      {
+        "parameters": {
+          "documentId": {
+            "__rl": true,
+            "value": "REDACTED_SHEET_ID",
+            "mode": "id"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 1910541765,
+            "mode": "list",
+            "cachedResultName": "memory",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/REDACTED_SHEET_ID/edit#gid=1910541765"
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          15904,
+          24016
+        ],
+        "id": "8225ebb8-63f4-4369-9143-e950fc9407db",
+        "name": "Health Check Memory",
+        "alwaysOutputData": true,
+        "credentials": "REDACTED_CREDENTIAL",
+        "onError": "continueRegularOutput"
+      },
+      {
+        "parameters": {
+          "jsCode": "const body = $('Webhook').first().json.body || {};\nconst chatId = String(body.chat_id || body.message?.chat?.id || '').replace(/^=/, '');\n\nfunction getNodeItems(nodeName) {\n  try {\n    return $(nodeName).all();\n  } catch (e) {\n    return [{\n      json: {\n        __health_error: String(e.message || e)\n      }\n    }];\n  }\n}\n\nfunction checkSheet(nodeName) {\n  const nodeItems = getNodeItems(nodeName);\n\n  if (!Array.isArray(nodeItems) || nodeItems.length === 0) {\n    return {\n      ok: false,\n      message: 'нет output items'\n    };\n  }\n\n  const first = nodeItems[0]?.json || {};\n\n  if (first.__health_error) {\n    return {\n      ok: false,\n      message: first.__health_error\n    };\n  }\n\n  if (first.error) {\n    return {\n      ok: false,\n      message: String(first.error)\n    };\n  }\n\n  if (first.message && /error|ошибка|bad request/i.test(String(first.message))) {\n    return {\n      ok: false,\n      message: String(first.message)\n    };\n  }\n\n  return {\n    ok: true,\n    message: `лист читается, items: ${nodeItems.length}`\n  };\n}\n\nconst activeJobs = checkSheet('Health Check Active Jobs');\nconst memory = checkSheet('Health Check Memory');\n\nconst allOk = activeJobs.ok && memory.ok;\n\nconst text = [\n  'Health Check — SEO Content Agent',\n  '',\n  `Google Sheets: ${allOk ? 'OK' : 'ERROR'}`,\n  `seo_active_jobs: ${activeJobs.ok ? 'OK' : 'ERROR'} — ${activeJobs.message}`,\n  `memory: ${memory.ok ? 'OK' : 'ERROR'} — ${memory.message}`,\n  '',\n  `Статус: ${allOk ? 'система доступна' : 'есть проблема с доступом к таблицам'}`\n].join('\\n');\n\nreturn [{\n  json: {\n    chat_id: chatId,\n    telegram_text: text,\n    admin_command: 'health'\n  }\n}];"
+        },
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          16112,
+          24016
+        ],
+        "id": "390875e5-278a-4546-ac95-b5c0287bae64",
+        "name": "Format Health Response"
+      }
+    ],
+    "connections": {
+      "Webhook": {
+        "main": [
+          [
+            {
+              "node": "Route Stop All Flow",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Build Admin Response": {
+        "main": [
+          [
+            {
+              "node": "Send Admin Telegram",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Route Stop All Flow": {
+        "main": [
+          [
+            {
+              "node": "Lookup Active Locks",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "Route Locks",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Prepare Cancelled Locks": {
+        "main": [
+          [
+            {
+              "node": "Cancel Active Locks",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Lookup Active Locks": {
+        "main": [
+          [
+            {
+              "node": "Prepare Cancelled Locks",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Cancel Active Locks": {
+        "main": [
+          [
+            {
+              "node": "Send Stop All Flow Success",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Route Locks": {
+        "main": [
+          [
+            {
+              "node": "Lookup Locks",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "Route Health",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Format Locks Response": {
+        "main": [
+          [
+            {
+              "node": "Send Admin Telegram",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Lookup Locks": {
+        "main": [
+          [
+            {
+              "node": "Format Locks Response",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Route Health": {
+        "main": [
+          [
+            {
+              "node": "Health Check Active Jobs",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "Build Admin Response",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Health Check Active Jobs": {
+        "main": [
+          [
+            {
+              "node": "Health Check Memory",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Health Check Memory": {
+        "main": [
+          [
+            {
+              "node": "Format Health Response",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Format Health Response": {
+        "main": [
+          [
+            {
+              "node": "Send Admin Telegram",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "authors": "Andrey MetaCode",
+    "name": "Version ad098e43",
+    "description": "",
+    "autosaved": true,
+    "workflowPublishHistory": [
+      {
+        "createdAt": "2026-05-08T16:53:34.500Z",
+        "id": 169,
+        "workflowId": "AR6QxGt8ZKH0xG2T",
+        "versionId": "ad098e43-2762-4757-ad3e-a8d01fdd8dcc",
+        "event": "activated",
+        "userId": "REDACTED_PERSONAL_ID"
+      },
+      {
+        "createdAt": "2026-05-10T06:07:10.361Z",
+        "id": 178,
+        "workflowId": "AR6QxGt8ZKH0xG2T",
+        "versionId": "ad098e43-2762-4757-ad3e-a8d01fdd8dcc",
+        "event": "activated",
+        "userId": "REDACTED_PERSONAL_ID"
+      },
+      {
+        "createdAt": "2026-05-10T10:37:34.474Z",
+        "id": 185,
+        "workflowId": "AR6QxGt8ZKH0xG2T",
+        "versionId": "ad098e43-2762-4757-ad3e-a8d01fdd8dcc",
+        "event": "activated",
+        "userId": "REDACTED_PERSONAL_ID"
+      },
+      {
+        "createdAt": "2026-05-10T17:35:08.822Z",
+        "id": 205,
+        "workflowId": "AR6QxGt8ZKH0xG2T",
+        "versionId": "ad098e43-2762-4757-ad3e-a8d01fdd8dcc",
+        "event": "activated",
+        "userId": "REDACTED_PERSONAL_ID"
+      },
+      {
+        "createdAt": "2026-05-10T19:26:48.824Z",
+        "id": 209,
+        "workflowId": "AR6QxGt8ZKH0xG2T",
+        "versionId": "ad098e43-2762-4757-ad3e-a8d01fdd8dcc",
+        "event": "activated",
+        "userId": "REDACTED_PERSONAL_ID"
+      },
+      {
+        "createdAt": "2026-05-10T06:06:36.997Z",
+        "id": 175,
+        "workflowId": "AR6QxGt8ZKH0xG2T",
+        "versionId": "ad098e43-2762-4757-ad3e-a8d01fdd8dcc",
+        "event": "deactivated",
+        "userId": "REDACTED_PERSONAL_ID"
+      },
+      {
+        "createdAt": "2026-05-10T10:22:51.246Z",
+        "id": 184,
+        "workflowId": "AR6QxGt8ZKH0xG2T",
+        "versionId": "ad098e43-2762-4757-ad3e-a8d01fdd8dcc",
+        "event": "deactivated",
+        "userId": "REDACTED_PERSONAL_ID"
+      },
+      {
+        "createdAt": "2026-05-10T15:30:27.447Z",
+        "id": 202,
+        "workflowId": "AR6QxGt8ZKH0xG2T",
+        "versionId": "ad098e43-2762-4757-ad3e-a8d01fdd8dcc",
+        "event": "deactivated",
+        "userId": "REDACTED_PERSONAL_ID"
+      },
+      {
+        "createdAt": "2026-05-10T19:25:58.709Z",
+        "id": 207,
+        "workflowId": "AR6QxGt8ZKH0xG2T",
+        "versionId": "ad098e43-2762-4757-ad3e-a8d01fdd8dcc",
+        "event": "deactivated",
+        "userId": "REDACTED_PERSONAL_ID"
+      }
+    ]
+  }
+}
