@@ -69,6 +69,7 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `site-002-prod-category-lari-reparent-discovery-01.py` | Read-only category Lari reparent discovery — HTTP snapshots, DB SELECT, FTP source map, sitemap/entrypoint analysis, implementation charter for `SITE-002-PROD-CATEGORY-LARI-REPARENT-DISCOVERY-01` (Run 4.234) |
 | `site-002-prod-category-lari-reparent-implementation-01.py` | Controlled category Lari reparent implementation — 1C gate, DB migration, FTP patches, HTTP verification for `SITE-002-PROD-CATEGORY-LARI-REPARENT-IMPLEMENTATION-01` (Run 4.235) |
 | `site-002-prod-parent-category-tiles-lari-removal-01.py` | Parent Category Tiles adjustment — remove **88** from `$neutral_hub_branch_ids`, single-file FTP deploy, verification for `SITE-002-PROD-PARENT-CATEGORY-TILES-LARI-REMOVAL-01` (Run 4.236) |
+| `site-002-prod-contacts-url-routing-review-01.py` | Read-only contacts URL routing discovery — HTTP snapshots, DB SELECT, FTP source map, sitemap/links inventory, implementation charter for `SITE-002-PROD-CONTACTS-URL-ROUTING-REVIEW-01` (Run 4.237) |
 | `site-002-prod-category-lari-final-fix-01.py` | Final SEO/url fix wave — `seo_url`, `category_visibility`, `category.php`, htaccess redirects (Run 4.235 helper) |
 | `site-002-prod-category-lari-seopath-cache-clear-01.py` | Scoped purge of `category.seopath` / `seo_pro` caches after reparent (Run 4.235 helper) |
 | `site-002-prod-category-lari-seopro-patch-01.py` | Patch `seo_pro.php` `getPathByCategory()` to use `oc_category_path` (Run 4.235 helper) |

@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-09
-**Evidence cutoff:** 2026-07-09 (SITE-002 Run **4.236** — Parent Category Tiles Lari removal; **88** removed from parent tile whitelist; homepage/hub **10** tiles; checkpoint `SITE-002-STABLE-PROD-PARENT-CATEGORY-TILES-LARI-REMOVAL-01`)
+**Evidence cutoff:** 2026-07-09 (SITE-002 Run **4.237** — Contacts URL routing review; `/kontakty` **404**; live contacts **`/contact`**; implementation charter ready; checkpoint unchanged `SITE-002-STABLE-PROD-PARENT-CATEGORY-TILES-LARI-REMOVAL-01`)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Parent Category Tiles Lari removal (Run 4.236)** — **COMPLETE**; **88** removed from `$neutral_hub_branch_ids`; homepage + neutral hub **10** parent tiles; **358** Шкафы и лари kept; nested **Лари** page/child/301 unchanged · [SITE-002-PROD-PARENT-CATEGORY-TILES-LARI-REMOVAL-01.md](sites/site-002/reports/SITE-002-PROD-PARENT-CATEGORY-TILES-LARI-REMOVAL-01.md) · checkpoint `SITE-002-STABLE-PROD-PARENT-CATEGORY-TILES-LARI-REMOVAL-01` · Run 4.235 post-1C verification **still pending** |
+| Current SITE-002 focus | **Contacts URL routing review (Run 4.237)** — **COMPLETE**; `/kontakty` **404**; working contacts at **`/contact`** (native `information/contact`, `oc_seo_url` id **846**); no broken internal `/kontakty` links; sitemap omits contact route; **Option E** implementation charter ready · [SITE-002-PROD-CONTACTS-URL-ROUTING-REVIEW-01.md](sites/site-002/reports/SITE-002-PROD-CONTACTS-URL-ROUTING-REVIEW-01.md) · checkpoint unchanged `SITE-002-STABLE-PROD-PARENT-CATEGORY-TILES-LARI-REMOVAL-01` · Run 4.235 post-1C verification **still pending** |
 
 ---
 

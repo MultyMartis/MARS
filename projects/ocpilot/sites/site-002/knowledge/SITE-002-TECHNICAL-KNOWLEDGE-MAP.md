@@ -2181,4 +2181,29 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 
 ---
 
-*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-09 (Run 4.236 — Parent Category Tiles Lari removal).*
+## 40. Contacts URL Routing (Production — REVIEWED 2026-07-09)
+
+**Operation:** Run 4.237 — `SITE-002-PROD-CONTACTS-URL-ROUTING-REVIEW-01` (read-only)
+
+| Item | Production value |
+|------|------------------|
+| **Target URL (desired)** | `/kontakty` — **404** today |
+| **Live contacts URL** | **`/contact`** — **200** |
+| **Route owner** | Native OpenCart `information/contact` — **not** `oc_information` page |
+| **Controller** | `catalog/controller/information/contact.php` |
+| **Template** | `catalog/view/theme/default/template/information/contact.twig` — cards, map, requisites, native POST form |
+| **SEO URL** | `oc_seo_url` id **846** — keyword `contact` → query `information/contact` |
+| **`kontakty` SEO row** | **Absent** — root cause of `/kontakty` 404 |
+| **Information page «Контакты»** | **Does not exist** — ids 4/7 are О нас / Пользовательское соглашение |
+| **Internal links** | header/footer + 5 corp pages → `/contact` (**working**; no `/kontakty` links) |
+| **Sitemap** | **Neither** `/contact` nor `/kontakty` — `google_sitemap.php` lists `oc_information` only |
+| **`llms.txt`** | References `https://bzpm.ru/contact` |
+| **Recommended fix** | **Option E** — keyword swap to `kontakty` + 301 `/contact` + link updates + sitemap feed patch |
+| **Report** | [SITE-002-PROD-CONTACTS-URL-ROUTING-REVIEW-01.md](../reports/SITE-002-PROD-CONTACTS-URL-ROUTING-REVIEW-01.md) |
+| **Implementation charter** | Storage `deployments/SITE-002-PROD-CONTACTS-URL-ROUTING-REVIEW-01/implementation-charter/` |
+
+**Change rules:** Do not create duplicate contacts information page. Preserve native contact form mail (`config_email`). Do not edit Yandex blocks in header/footer. Clear SEO cache after `oc_seo_url` change.
+
+---
+
+*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-09 (Run 4.237 — Contacts URL routing review).*
