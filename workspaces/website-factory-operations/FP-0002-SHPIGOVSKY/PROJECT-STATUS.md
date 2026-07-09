@@ -1,9 +1,9 @@
 # FP-0002 — Project Status
 
 **Factory Project:** FP-0002 — Shpigovsky.ru  
-**Last updated:** 2026-07-09 (V9-06E26B blog archive WordPress ACF port PASS)
+**Last updated:** 2026-07-09 (V9-06E26C blog single template WordPress ACF port PASS)
 
-**Current WordPress phase:** V9-06E26B Blog Archive WordPress ACF Port **PASS** — `/blog/` archive stack; `group_fp02_blog_archive_settings`; permalink `/blog/%postname%/`; empty state; runtime delivered. **Next: CREATE_V9_06E26C_BLOG_SINGLE_TEMPLATE_WORDPRESS_ACF_PORT_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E26B-BLOG-ARCHIVE-WORDPRESS-ACF-PORT-REPORT-v1.md`. Prior E26A-POLISH: decor logo PASS @ `0d629fbc`.
+**Current WordPress phase:** V9-06E26C Blog Single Template WordPress ACF Port **PASS** — `/blog/{slug}/` single stack; extended `group_fp02_blog_post_article_meta`; TOC/related/CTA/FAQ-ready; 0 posts seeded; runtime delivered. **Next: CREATE_V9_06E26D_DEMO_BLOG_CONTENT_AND_VISUAL_QA_TASK**. Report: `WORDPRESS/reports/FP-0002-V9-06E26C-BLOG-SINGLE-TEMPLATE-WORDPRESS-ACF-PORT-REPORT-v1.md`. Prior E26B: archive PASS @ `586d213d`.
 
 ## Active frontend workspace (V9)
 

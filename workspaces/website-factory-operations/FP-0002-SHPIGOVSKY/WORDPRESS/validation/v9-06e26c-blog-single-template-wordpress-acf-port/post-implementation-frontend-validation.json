@@ -1,0 +1,90 @@
+{
+  "result": "PASS",
+  "regression_routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/o-centre/",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/kontakty/",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/otzyvy/",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/privacy-policy/",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/blog/",
+      "status": 200,
+      "result": "PASS",
+      "markers": {
+        "page-blog": true,
+        "blog-archive": true,
+        "blog-archive__heading": true,
+        "blog-lower-stack": true,
+        "blog-archive__empty-state": true
+      },
+      "archive_regression": true
+    }
+  ],
+  "missing_fixture_route": {
+    "route": "/blog/nazvanie-stati/",
+    "status": 404,
+    "result": "PASS"
+  },
+  "source_template_checks": {
+    "theme/shpigovsky/single.php": {
+      "exists": true,
+      "bytes": 873
+    },
+    "theme/shpigovsky/template-parts/blog/single-hero.php": {
+      "exists": true,
+      "bytes": 3167
+    },
+    "theme/shpigovsky/template-parts/blog/toc.php": {
+      "exists": true,
+      "bytes": 1052
+    },
+    "theme/shpigovsky/template-parts/blog/related.php": {
+      "exists": true,
+      "bytes": 1323
+    }
+  },
+  "runtime_single_markers": {
+    "page-blog-article": true,
+    "blog-article": true,
+    "blog-article-hero": true,
+    "blog-article-body": false,
+    "blog-article-lower-stack": false,
+    "program-cta-band-section": false
+  },
+  "published_posts": 0
+}

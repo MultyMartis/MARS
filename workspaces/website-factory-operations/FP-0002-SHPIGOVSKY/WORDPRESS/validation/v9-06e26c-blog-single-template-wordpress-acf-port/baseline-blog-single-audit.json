@@ -1,0 +1,48 @@
+{
+  "wave": "V9-06E26C",
+  "result": "PASS",
+  "static_fixture": "workspaces/fp-0002-shpigovsky-v9/src/pages/blog/nazvanie-stati.html",
+  "static_sections": [
+    {"order": 1, "name": "breadcrumbs", "markers": ["blog-article-hero__breadcrumbs", "breadcrumbs__list"], "decision": "IMPLEMENT"},
+    {"order": 2, "name": "hero_title_h1", "markers": ["blog-article-hero__title"], "decision": "WP_TITLE"},
+    {"order": 3, "name": "hero_meta", "markers": ["blog-article-hero__meta", "blog-article-hero__date", "blog-article-hero__reading-time", "blog-article-hero__author"], "decision": "ACF+WP"},
+    {"order": 4, "name": "toc", "markers": ["blog-article-hero__toc"], "decision": "AUTO_FROM_H2_H3"},
+    {"order": 5, "name": "featured_image", "markers": ["blog-article-hero__media"], "decision": "WP_FEATURED_IMAGE"},
+    {"order": 6, "name": "lead_excerpt", "markers": ["blog-article-hero__excerpt", "block-whith-red-line"], "decision": "ACF_LEAD_OR_EXCERPT"},
+    {"order": 7, "name": "body_typography", "markers": ["blog-article-body", "blog-article-body__content"], "decision": "THE_CONTENT"},
+    {"order": 8, "name": "conclusion_founder_quote", "markers": ["blog-article-conclusion", "founder-quote"], "decision": "ACF_OPTIONAL"},
+    {"order": 9, "name": "sources", "markers": ["blog-article-sources"], "decision": "ACF_REPEATER_OPTIONAL"},
+    {"order": 10, "name": "related_posts", "markers": ["blog-article-related", "blog-related-card"], "decision": "ACF_OR_CATEGORY_FALLBACK"},
+    {"order": 11, "name": "final_cta", "markers": ["blog-article-lower-stack", "program-cta-band-section"], "decision": "ACF_OR_ARCHIVE_FALLBACK"}
+  ],
+  "current_wp_before": {
+    "single_php": "skeleton",
+    "article_content": "placeholder",
+    "article_lower_stack": "placeholder",
+    "posts_count": 0,
+    "permalink_structure": "/blog/%postname%/"
+  },
+  "article_meta_gap": {
+    "existing_fields_preserved": true,
+    "fields_added": [
+      "article_eyebrow",
+      "article_lead",
+      "article_author_label",
+      "article_show_toc",
+      "article_toc_title",
+      "article_conclusion_heading",
+      "article_conclusion_quote",
+      "article_source_items",
+      "article_faq_items",
+      "article_final_cta_title",
+      "article_final_cta_text",
+      "article_final_cta_button_label",
+      "article_final_cta_button_url",
+      "article_source_file_name",
+      "article_source_import_date",
+      "article_editor_status",
+      "article_content_qa_status"
+    ]
+  },
+  "validation_post_decision": "OPTION_A_NO_DB_CONTENT_SEED"
+}

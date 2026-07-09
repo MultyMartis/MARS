@@ -1,7 +1,7 @@
 <?php
 /**
  * Template part: blog/article-content.php
- * V9-06B skeleton — inert placeholder. V9 markup in V9-07+.
+ * V9-06E26C — delegates to single-content partial.
  *
  * @package Shpigovsky
  */
@@ -9,6 +9,5 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-?>
-<!-- shpigovsky-skeleton: template-parts/blog/article-content.php -->
 
+get_template_part( 'template-parts/blog/single-content' );

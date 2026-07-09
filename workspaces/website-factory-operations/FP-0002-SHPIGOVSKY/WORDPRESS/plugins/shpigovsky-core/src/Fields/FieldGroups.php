@@ -686,12 +686,43 @@ final class FieldGroups implements ModuleInterface {
 			'group_fp02_blog_post_article_meta',
 			'Blog Post — Article Meta',
 			array(
+				self::field( 'field_fp02_article_eyebrow', 'Eyebrow', 'article_eyebrow', 'text' ),
+				self::field( 'field_fp02_article_lead', 'Lead / announcement', 'article_lead', 'textarea', array( 'rows' => 4 ) ),
 				self::field( 'field_fp02_article_source_label', 'Source label', 'article_source_label', 'text' ),
 				self::field( 'field_fp02_article_reading_time', 'Reading time', 'article_reading_time', 'number', array( 'min' => 0 ) ),
 				self::field( 'field_fp02_article_disclaimer', 'Article disclaimer', 'article_disclaimer', 'textarea', array( 'rows' => 3 ) ),
 				self::field( 'field_fp02_article_hide_author_public', 'Hide author publicly', 'article_hide_author_public', 'true_false', array( 'default_value' => 1 ) ),
+				self::field( 'field_fp02_article_author_label', 'Author label override', 'article_author_label', 'text' ),
 				self::field( 'field_fp02_article_show_date_public', 'Show date publicly', 'article_show_date_public', 'true_false', array( 'default_value' => 1 ) ),
+				self::field( 'field_fp02_article_show_toc', 'Show table of contents', 'article_show_toc', 'true_false', array( 'default_value' => 1 ) ),
+				self::field( 'field_fp02_article_toc_title', 'TOC title', 'article_toc_title', 'text', array( 'default_value' => 'Оглавление:' ) ),
+				self::field( 'field_fp02_article_conclusion_heading', 'Conclusion heading', 'article_conclusion_heading', 'text', array( 'default_value' => 'Заключение' ) ),
+				self::field( 'field_fp02_article_conclusion_quote', 'Conclusion quote', 'article_conclusion_quote', 'textarea', array( 'rows' => 5 ) ),
+				self::repeater(
+					'field_fp02_article_source_items',
+					'Sources',
+					'article_source_items',
+					20,
+					array(
+						self::field( 'field_fp02_article_source_text', 'Source text', 'source_text', 'textarea', array( 'rows' => 2 ) ),
+					)
+				),
+				self::repeater(
+					'field_fp02_article_faq_items',
+					'FAQ items',
+					'article_faq_items',
+					15,
+					self::faq_subfields( 'article' )
+				),
 				self::field( 'field_fp02_related_posts', 'Related posts', 'related_posts', 'relationship', array( 'post_type' => array( 'post' ), 'max' => 3, 'return_format' => 'object' ) ),
+				self::field( 'field_fp02_article_final_cta_title', 'Final CTA title', 'article_final_cta_title', 'text' ),
+				self::field( 'field_fp02_article_final_cta_text', 'Final CTA text', 'article_final_cta_text', 'textarea', array( 'rows' => 3 ) ),
+				self::field( 'field_fp02_article_final_cta_button_label', 'Final CTA button label', 'article_final_cta_button_label', 'text' ),
+				self::field( 'field_fp02_article_final_cta_button_url', 'Final CTA button URL', 'article_final_cta_button_url', 'url' ),
+				self::field( 'field_fp02_article_source_file_name', 'WPilot source file name', 'article_source_file_name', 'text' ),
+				self::field( 'field_fp02_article_source_import_date', 'WPilot source import date', 'article_source_import_date', 'text' ),
+				self::field( 'field_fp02_article_editor_status', 'WPilot editor status', 'article_editor_status', 'text' ),
+				self::field( 'field_fp02_article_content_qa_status', 'WPilot content QA status', 'article_content_qa_status', 'text' ),
 			),
 			self::location( 'post_type', '==', 'post' )
 		);

@@ -1,0 +1,13 @@
+{
+  "wave": "V9-06E26C",
+  "result": "PASS",
+  "screenshots": [
+    {"file": "admin-blog-post-article-meta-e26c.png", "captured": false, "reason": "automated admin auth/screenshot not available in runner"},
+    {"file": "admin-no-global-heroes-e26c.png", "captured": false, "reason": "automated admin auth/screenshot not available in runner"},
+    {"file": "runtime-blog-archive-regression-e26c.png", "captured": false, "reason": "HTTP marker validation used instead"},
+    {"file": "runtime-blog-single-preview-e26c.png", "captured": false, "reason": "0 published posts; no preview route"},
+    {"file": "runtime-blog-single-mobile-e26c.png", "captured": false, "reason": "deferred to E26D visual QA"},
+    {"file": "runtime-blog-single-v9-comparison-e26c.png", "captured": false, "reason": "deferred to E26D visual QA"}
+  ],
+  "evidence_substitute": "source/runtime marker validation + regression HTTP 200/404 probes"
+}

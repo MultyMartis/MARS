@@ -3,6 +3,41 @@
     "title": "Blog Post — Article Meta",
     "fields": [
         {
+            "key": "field_fp02_article_eyebrow",
+            "label": "Eyebrow",
+            "name": "article_eyebrow",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_article_lead",
+            "label": "Lead / announcement",
+            "name": "article_lead",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 4
+        },
+        {
             "key": "field_fp02_article_source_label",
             "label": "Source label",
             "name": "article_source_label",
@@ -73,6 +108,23 @@
             "placeholder": ""
         },
         {
+            "key": "field_fp02_article_author_label",
+            "label": "Author label override",
+            "name": "article_author_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
             "key": "field_fp02_article_show_date_public",
             "label": "Show date publicly",
             "name": "article_show_date_public",
@@ -88,6 +140,164 @@
             },
             "default_value": 1,
             "placeholder": ""
+        },
+        {
+            "key": "field_fp02_article_show_toc",
+            "label": "Show table of contents",
+            "name": "article_show_toc",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_article_toc_title",
+            "label": "TOC title",
+            "name": "article_toc_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Оглавление:",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_article_conclusion_heading",
+            "label": "Conclusion heading",
+            "name": "article_conclusion_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Заключение",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_article_conclusion_quote",
+            "label": "Conclusion quote",
+            "name": "article_conclusion_quote",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 5
+        },
+        {
+            "key": "field_fp02_article_source_items",
+            "label": "Sources",
+            "name": "article_source_items",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "button_label": "Добавить",
+            "min": 0,
+            "max": 20,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_article_source_text",
+                    "label": "Source text",
+                    "name": "source_text",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "rows": 2
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_article_faq_items",
+            "label": "FAQ items",
+            "name": "article_faq_items",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "button_label": "Добавить",
+            "min": 0,
+            "max": 15,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_article_faq_question",
+                    "label": "Вопрос",
+                    "name": "question",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_fp02_article_faq_answer",
+                    "label": "Ответ",
+                    "name": "answer",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "rows": 4
+                }
+            ]
         },
         {
             "key": "field_fp02_related_posts",
@@ -110,6 +320,143 @@
             ],
             "max": 3,
             "return_format": "object"
+        },
+        {
+            "key": "field_fp02_article_final_cta_title",
+            "label": "Final CTA title",
+            "name": "article_final_cta_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_article_final_cta_text",
+            "label": "Final CTA text",
+            "name": "article_final_cta_text",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3
+        },
+        {
+            "key": "field_fp02_article_final_cta_button_label",
+            "label": "Final CTA button label",
+            "name": "article_final_cta_button_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_article_final_cta_button_url",
+            "label": "Final CTA button URL",
+            "name": "article_final_cta_button_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_article_source_file_name",
+            "label": "WPilot source file name",
+            "name": "article_source_file_name",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_article_source_import_date",
+            "label": "WPilot source import date",
+            "name": "article_source_import_date",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_article_editor_status",
+            "label": "WPilot editor status",
+            "name": "article_editor_status",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_article_content_qa_status",
+            "label": "WPilot content QA status",
+            "name": "article_content_qa_status",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -128,7 +475,7 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
-    "description": "FP-0002 V9-06C canonical source field group. Runtime registration occurs only after delivery authorization.",
+    "description": "FP-0002 V9-06E26C blog single article meta field group.",
     "show_in_rest": 0,
-    "modified": 1783158780
+    "modified": 1783604469
 }

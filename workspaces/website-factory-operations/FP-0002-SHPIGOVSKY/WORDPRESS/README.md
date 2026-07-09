@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E26B Blog Archive WordPress ACF Port **PASS** — `/blog/` archive stack implemented; `group_fp02_blog_archive_settings`; permalink `/blog/%postname%/`; empty state at 0 posts; runtime delivered. Evidence: `validation/v9-06e26b-blog-archive-wordpress-acf-port/`. Report: `reports/FP-0002-V9-06E26B-BLOG-ARCHIVE-WORDPRESS-ACF-PORT-REPORT-v1.md`. NEXT: **CREATE_V9_06E26C_BLOG_SINGLE_TEMPLATE_WORDPRESS_ACF_PORT_TASK**. Prior E26A-POLISH: decor logo PASS @ `0d629fbc`.
+**Status:** V9-06E26C Blog Single Template WordPress ACF Port **PASS** — single post template at `/blog/{slug}/`; `group_fp02_blog_post_article_meta` extended; TOC/related/CTA/FAQ-ready; 0 posts seeded; runtime delivered. Evidence: `validation/v9-06e26c-blog-single-template-wordpress-acf-port/`. Report: `reports/FP-0002-V9-06E26C-BLOG-SINGLE-TEMPLATE-WORDPRESS-ACF-PORT-REPORT-v1.md`. NEXT: **CREATE_V9_06E26D_DEMO_BLOG_CONTENT_AND_VISUAL_QA_TASK**. Prior E26B: archive PASS @ `586d213d`.
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

@@ -1,0 +1,35 @@
+{
+  "wave": "V9-06E26C",
+  "result": "PASS",
+  "group": "group_fp02_blog_post_article_meta",
+  "fields_before": 6,
+  "fields_after": 23,
+  "fields_added": [
+    "article_eyebrow",
+    "article_lead",
+    "article_author_label",
+    "article_show_toc",
+    "article_toc_title",
+    "article_conclusion_heading",
+    "article_conclusion_quote",
+    "article_source_items",
+    "article_faq_items",
+    "article_final_cta_title",
+    "article_final_cta_text",
+    "article_final_cta_button_label",
+    "article_final_cta_button_url",
+    "article_source_file_name",
+    "article_source_import_date",
+    "article_editor_status",
+    "article_content_qa_status"
+  ],
+  "fields_preserved": [
+    "article_source_label",
+    "article_reading_time",
+    "article_disclaimer",
+    "article_hide_author_public",
+    "article_show_date_public",
+    "related_posts"
+  ],
+  "wpilot_fields_passive_only": true
+}

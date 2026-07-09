@@ -1,0 +1,29 @@
+{
+  "wave": "V9-06E26C",
+  "result": "PASS",
+  "single_route": "/blog/{slug}/",
+  "permalink_structure": "/blog/%postname%/",
+  "content_type": "post",
+  "template_files": [
+    "theme/shpigovsky/single.php",
+    "theme/shpigovsky/inc/blog-helpers.php",
+    "theme/shpigovsky/template-parts/blog/single-hero.php",
+    "theme/shpigovsky/template-parts/blog/single-meta.php",
+    "theme/shpigovsky/template-parts/blog/toc.php",
+    "theme/shpigovsky/template-parts/blog/single-content.php",
+    "theme/shpigovsky/template-parts/blog/single-conclusion.php",
+    "theme/shpigovsky/template-parts/blog/single-sources.php",
+    "theme/shpigovsky/template-parts/blog/faq.php",
+    "theme/shpigovsky/template-parts/blog/related.php",
+    "theme/shpigovsky/template-parts/blog/single-lower-stack.php",
+    "theme/shpigovsky/template-parts/components/blog-related-card.php"
+  ],
+  "acf_group": "group_fp02_blog_post_article_meta",
+  "toc_behavior": "auto from h2/h3 when article_show_toc true",
+  "faq_behavior": "render when article_faq_items non-empty else hidden",
+  "related_behavior": "related_posts ACF else same-category latest publish, max 3, exclude current",
+  "final_cta_behavior": "article_final_cta_* else blog archive CTA fallback",
+  "validation_post": "none; Option A",
+  "e26d_remainder": "demo blog content seed + public visual QA",
+  "wpilot_boundary": "passive metadata fields only; no automation"
+}

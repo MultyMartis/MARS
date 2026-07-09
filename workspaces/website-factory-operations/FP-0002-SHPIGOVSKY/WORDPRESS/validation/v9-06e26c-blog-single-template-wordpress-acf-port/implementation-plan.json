@@ -1,0 +1,37 @@
+{
+  "wave": "V9-06E26C",
+  "result": "PASS",
+  "single_template": {
+    "approach": "single.php orchestrates V9 article stack for standard post",
+    "template_parts": [
+      "template-parts/blog/single-hero.php",
+      "template-parts/blog/single-meta.php",
+      "template-parts/blog/toc.php",
+      "template-parts/blog/single-content.php",
+      "template-parts/blog/single-conclusion.php",
+      "template-parts/blog/single-sources.php",
+      "template-parts/blog/faq.php",
+      "template-parts/blog/related.php",
+      "template-parts/blog/single-lower-stack.php",
+      "template-parts/components/blog-related-card.php"
+    ],
+    "non_post_fallback": "unchanged generic single skeleton not required; is_singular(post) only"
+  },
+  "acf_plan": {
+    "group": "group_fp02_blog_post_article_meta",
+    "preserve_existing": true,
+    "wp_core_boundary": "title, content, excerpt, featured image, categories, tags"
+  },
+  "content_plan": {
+    "toc": "generate from h2/h3 with stable ids via the_content filter",
+    "faq": "render only when article_faq_items populated",
+    "related": "related_posts ACF or latest in same category",
+    "final_cta": "article_final_cta_* or blog archive CTA fallback"
+  },
+  "validation_plan": {
+    "db_seed": "none",
+    "archive_regression": true,
+    "fixture_route_404": "/blog/nazvanie-stati/",
+    "e26d_followup": "demo content + visual QA"
+  }
+}

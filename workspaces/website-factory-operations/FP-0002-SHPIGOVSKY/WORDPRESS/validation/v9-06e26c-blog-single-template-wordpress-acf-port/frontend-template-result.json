@@ -1,0 +1,18 @@
+{
+  "wave": "V9-06E26C",
+  "result": "PASS",
+  "sections": [
+    {"partial": "single.php", "implemented": true, "notes": "V9 page-blog-article main wrapper"},
+    {"partial": "single-hero.php", "implemented": true, "notes": "breadcrumbs, title, meta, toc, media, lead"},
+    {"partial": "single-meta.php", "implemented": true, "notes": "date, reading time, author"},
+    {"partial": "toc.php", "implemented": true, "notes": "auto h2/h3 anchors"},
+    {"partial": "single-content.php", "implemented": true, "notes": "the_content typography container"},
+    {"partial": "single-conclusion.php", "implemented": true, "notes": "optional founder quote"},
+    {"partial": "single-sources.php", "implemented": true, "notes": "optional repeater sources"},
+    {"partial": "faq.php", "implemented": true, "notes": "optional accordion, hidden when empty"},
+    {"partial": "related.php", "implemented": true, "notes": "ACF/category fallback, hidden when empty"},
+    {"partial": "single-lower-stack.php", "implemented": true, "notes": "program CTA band"},
+    {"partial": "blog-related-card.php", "implemented": true, "notes": "related card component"}
+  ],
+  "helpers": "inc/blog-helpers.php extended for single article"
+}

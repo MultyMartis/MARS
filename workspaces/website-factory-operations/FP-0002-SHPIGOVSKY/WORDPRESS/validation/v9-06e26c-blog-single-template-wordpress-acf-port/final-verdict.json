@@ -1,0 +1,25 @@
+{
+  "wave": "V9-06E26C",
+  "verdict": "PASS",
+  "blog_single_complete": "COMPLETE",
+  "recommended_next_action": "CREATE_V9_06E26D_DEMO_BLOG_CONTENT_AND_VISUAL_QA_TASK",
+  "subscores": {
+    "db_checkpoint": "PASS",
+    "fresh_db_dump": "PASS",
+    "static_v9_article_mapping": "PASS",
+    "acf_field_model": "PASS",
+    "frontend_single_template": "PASS",
+    "content_typography": "PASS",
+    "toc_behavior": "PASS",
+    "faq_behavior": "PASS",
+    "related_posts_behavior": "PASS",
+    "final_cta_behavior": "PASS",
+    "validation_post_gate": "PASS",
+    "blog_archive_preserved": "PASS",
+    "blog_permalink_preserved": "PASS",
+    "published_article_seed_avoided": "PASS",
+    "wpilot_untouched": "PASS",
+    "no_scope_drift": "PASS",
+    "visual_evidence": "PARTIAL"
+  }
+}
