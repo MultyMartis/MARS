@@ -522,6 +522,83 @@ final class FieldGroups implements ModuleInterface {
 						'rows'              => 3,
 					)
 				),
+				self::repeater(
+					'field_fp02_about_founder_quote_paragraphs',
+					'О центре — Слово основателя: абзацы',
+					'about_founder_quote_paragraphs',
+					6,
+					array(
+						self::field( 'field_fp02_about_founder_quote_paragraph_text', 'Абзац', 'text', 'textarea', array( 'rows' => 3 ) ),
+					),
+					0,
+					array(
+						'conditional_logic' => $hub_only,
+						'instructions'      => 'Секция founder-quote на /o-centre/. Пустые значения — static V9 fallback.',
+					)
+				),
+				self::field(
+					'field_fp02_about_founder_name',
+					'О центре — Слово основателя: имя',
+					'about_founder_name',
+					'text',
+					array( 'conditional_logic' => $hub_only )
+				),
+				self::field(
+					'field_fp02_about_founder_role',
+					'О центре — Слово основателя: должность',
+					'about_founder_role',
+					'text',
+					array( 'conditional_logic' => $hub_only )
+				),
+				self::field(
+					'field_fp02_about_founder_photo',
+					'О центре — Слово основателя: фото',
+					'about_founder_photo',
+					'image',
+					array(
+						'conditional_logic' => $hub_only,
+						'return_format'     => 'array',
+						'preview_size'      => 'medium',
+						'instructions'      => 'Пустое значение — theme asset founder-sergey-shpigovsky.png.',
+					)
+				),
+				self::field(
+					'field_fp02_about_founder_cta_label',
+					'О центре — Слово основателя: текст кнопки',
+					'about_founder_cta_label',
+					'text',
+					array( 'conditional_logic' => $hub_only )
+				),
+				self::field(
+					'field_fp02_about_clinic_landscape_image',
+					'О центре — Территория клиники: изображение',
+					'about_clinic_landscape_image',
+					'image',
+					array(
+						'conditional_logic' => $hub_only,
+						'return_format'     => 'array',
+						'preview_size'      => 'medium',
+						'instructions'      => 'Пустое значение — theme asset shpigovsky-clinic-landscape.webp.',
+					)
+				),
+				self::field(
+					'field_fp02_about_clinic_landscape_alt',
+					'О центре — Территория клиники: alt-текст',
+					'about_clinic_landscape_alt',
+					'text',
+					array( 'conditional_logic' => $hub_only )
+				),
+				self::field(
+					'field_fp02_about_hub_admin_note_shared_blocks',
+					'О центре — Общие блоки (редактирование)',
+					'about_hub_admin_note_shared_blocks',
+					'message',
+					array(
+						'conditional_logic' => $hub_only,
+						'message'           => 'Специалисты: Настройки сайта → fp02-block-specialists. Отзывы: меню «Отзывы» (fp02-reviews). Финальная форма: Настройки сайта → fp02-block-final-form. Телефон в CTA-лентах: Настройки сайта → контакты (phone_primary).',
+						'new_lines'         => 'br',
+					)
+				),
 				self::field(
 					'field_fp02_about_program_heading',
 					'О центре — Программа: заголовок',

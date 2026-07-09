@@ -2,7 +2,7 @@
 
 **Project:** FP-0002 — Шпиговский  
 **Surface:** `WORDPRESS/`  
-**Status:** V9-06E28 Final WordPress Readiness QA **PASS** — `GO_WITH_MINOR_POLISH`; 35 routes checked / 12 core routes HTTP 200; menu `#301` stable; E27B/E27D trash intact; 0 blockers / 0 majors / 1 minor (o-centre institutional ACF admin seed gap). Evidence: `validation/v9-06e28-final-wordpress-readiness-qa/`. Report: `reports/FP-0002-V9-06E28-FINAL-WORDPRESS-READINESS-QA-REPORT-v1.md`. NEXT: **CREATE_V9_06E29_OPERATOR_VISUAL_POLISH_TASK**. Prior E27D: ownership implementation PASS @ `60291b8e`.
+**Status:** V9-06E29B O-Centre Admin Parity Implementation **PASS** — page #11 hero_media/founder/clinic ACF seeded + template binding; shared blocks documented; frontend parity PASS; placeholders #12–16 untouched. Evidence: `validation/v9-06e29b-ocentre-admin-parity-implementation/`. Report: `reports/FP-0002-V9-06E29B-OCENTRE-ADMIN-PARITY-IMPLEMENTATION-REPORT-v1.md`. NEXT: **CREATE_V9_06E29B_OPERATOR_OCENTRE_ADMIN_QA_TASK**. Prior E29A: PASS (read-only audit).
 **Classification:** MVP SKELETON DOCUMENTED — FULL V9 VISUAL PARITY WAVE PLAN APPROVED
 
 ---

@@ -1,0 +1,71 @@
+{
+  "task_id": "V9-06E29B",
+  "generated_at": "2026-07-10T03:53:18.347300+07:00",
+  "backup_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e29b-full-site-backup-pre-20260710-035311",
+  "db_dump": {
+    "path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e29b-full-site-backup-pre-20260710-035311/mars_wp_fp0002.sql",
+    "sha256": "478e95a8b4694ff9e2a54cc7c10c4942397b16bde427b739e470b27811a14e90",
+    "database": "mars_wp_fp0002"
+  },
+  "runtime_filesystem": {
+    "source": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky",
+    "destination": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e29b-full-site-backup-pre-20260710-035311/runtime-site",
+    "file_count": 6857,
+    "total_bytes": 295450333
+  },
+  "repository_snapshot": {
+    "head": "58c8f0b7301378c0309dc005b79cf2408b43d982",
+    "branch": "mars/canonical-post-recovery",
+    "git_status_excerpt": [
+      "## mars/canonical-post-recovery...origin/mars/canonical-post-recovery [ahead 5, behind 2]",
+      " M projects/mars-website-factory/subsystems/forge-wordpress/runtime/reports/fp0002-v9-05c-admission/fp0002-mutation-baseline-after.json",
+      " M projects/mars-website-factory/subsystems/forge-wordpress/runtime/reports/fp0002-v9-05c-admission/fp0002-mutation-baseline-before.json",
+      " M projects/mars-website-factory/subsystems/forge-wordpress/runtime/reports/fp0002-v9-05c-admission/receipts/wp-inspect-indexing_state.json",
+      " M projects/mars-website-factory/subsystems/forge-wordpress/runtime/reports/fp0002-v9-05c-admission/receipts/wp-inspect-page.json",
+      " M projects/mars-website-factory/subsystems/forge-wordpress/runtime/reports/fp0002-v9-05c-admission/receipts/wp-inspect-page_structure.json",
+      " M projects/mars-website-factory/subsystems/forge-wordpress/runtime/reports/fp0002-v9-05c-admission/receipts/wp-inspect-pages.json",
+      " M projects/mars-website-factory/subsystems/forge-wordpress/runtime/reports/fp0002-v9-05c-admission/receipts/wp-inspect-plugins.json",
+      " M projects/mars-website-factory/subsystems/forge-wordpress/runtime/reports/fp0002-v9-05c-admission/receipts/wp-inspect-site_info.json",
+      " M projects/mars-website-factory/subsystems/forge-wordpress/runtime/reports/fp0002-v9-05c-admission/receipts/wp-inspect-themes.json",
+      " M workspaces/fp-0002-shpigovsky-v7/package-lock.json",
+      " M workspaces/fp-0002-shpigovsky-v7/plans/static-client-demo/evidence/PASS-2-GENERATION-RECEIPT.json",
+      " M workspaces/fp-0002-shpigovsky-v7/plans/static-client-demo/evidence/PASS-2-GENERATION-RECEIPT.md",
+      " M workspaces/fp-0002-shpigovsky-v7/plans/static-client-demo/evidence/pass-3-navigation/PASS-3-ACTIVE-STATE-VALIDATION.json",
+      " M workspaces/fp-0002-shpigovsky-v7/plans/static-client-demo/evidence/pass-3-navigation/PASS-3-CARD-CHILD-MAPPING.md",
+      " M workspaces/fp-0002-shpigovsky-v7/plans/static-client-demo/evidence/pass-3-navigation/PASS-3-CTA-CLASSIFICATION.md",
+      " M workspaces/fp-0002-shpigovsky-v7/plans/static-client-demo/evidence/pass-3-navigation/PASS-3-FINAL.md",
+      " M workspaces/fp-0002-shpigovsky-v7/plans/static-client-demo/evidence/pass-3-navigation/PASS-3-FUNCTIONAL-WALKTHROUGHS.json",
+      " M workspaces/fp-0002-shpigovsky-v7/plans/static-client-demo/evidence/pass-3-navigation/PASS-3-GENERATION-RECEIPT.json",
+      " M workspaces/fp-0002-shpigovsky-v7/plans/static-client-demo/evidence/pass-3-navigation/PASS-3-INTERNAL-LINK-CRAWL.json",
+      " M workspaces/fp-0002-shpigovsky-v7/plans/static-client-demo/evidence/pass-3-navigation/PASS-3-INTERNAL-LINK-CRAWL.md",
+      " M workspaces/fp-0002-shpigovsky-v7/plans/static-client-demo/evidence/pass-3-navigation/PASS-3-LINK-CLASSIFICATION.json",
+      " M workspaces/fp-0002-shpigovsky-v7/plans/static-client-demo/evidence/pass-3-navigation/PASS-3-LINK-GRAPH.json",
+      " M workspaces/fp-0002-shpigovsky-v7/plans/static-client-demo/evidence/pass-3-navigation/PASS-3-LINK-GRAPH.md",
+      " M workspaces/fp-0002-shpigovsky-v7/plans/static-client-demo/evidence/pass-3-navigation/PASS-3-NAVIGATION-REGISTRY-FINAL.json",
+      " M workspaces/fp-0002-shpigovsky-v8/audits/consolidation-checkpoint/data/FP-0002-V8-CF003-CF009-CONSOLIDATION-CHECKPOINT.json",
+      " M workspaces/fp-0002-shpigovsky-v8/audits/consolidation-checkpoint/data/FP-0002-V8-RETIRED-NAMES-AUDIT.json",
+      " M workspaces/fp-0002-shpigovsky-v8/audits/o-centre-implementation/data/FP-0002-V8-OCENTRE-INFRASTRUCTURE-RUNTIME-QA.json",
+      " M workspaces/fp-0002-shpigovsky-v8/foundation/FP-0002-V8-OPERATIONAL-STATUS.md",
+      " M workspaces/fp-0002-shpigovsky-v8/src/pages/o-centre.html",
+      " M workspaces/fp-0002-shpigovsky-v8/src/pages/usluga-konechnaya-v1.html",
+      " M workspaces/fp-0002-shpigovsky-v8/src/pages/usluga-podrazdel-v1.html",
+      " M workspaces/fp-0002-shpigovsky-v8/src/pages/uslugi-v2.html",
+      " M workspaces/fp-0002-shpigovsky-v8/src/partials/layout/header.html",
+      " M workspaces/fp-0002-shpigovsky-v8/src/partials/sections/home-genotyping.html",
+      " M workspaces/fp-0002-shpigovsky-v8/src/partials/sections/home-treatment-prevention.html",
+      " M workspaces/fp-0002-shpigovsky-v8/src/partials/sections/home-why-us.html",
+      " M workspaces/fp-0002-shpigovsky-v8/src/scss/style.scss",
+      " M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/PROJECT-STATUS.md",
+      " M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/README.md"
+    ]
+  },
+  "page_11_pre_state": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e29b-full-site-backup-pre-20260710-035311/page-11-pre-state.json",
+  "o_centre_html_pre": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e29b-full-site-backup-pre-20260710-035311/o-centre-html-pre.html",
+  "restore_instructions": {
+    "db_only": "mysql -h127.0.0.1 -uroot mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e29b-full-site-backup-pre-20260710-035311\\mars_wp_fp0002.sql\"",
+    "runtime_only": "robocopy \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e29b-full-site-backup-pre-20260710-035311\\runtime-site\" \"X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\" /E (operator-approved)",
+    "full": "Restore DB then runtime copy",
+    "page_11_partial": "Restore postmeta from X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e29b-full-site-backup-pre-20260710-035311\\page-11-pre-state.json"
+  },
+  "result": "PASS"
+}

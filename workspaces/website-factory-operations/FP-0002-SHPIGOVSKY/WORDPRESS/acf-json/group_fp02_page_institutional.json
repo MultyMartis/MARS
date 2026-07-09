@@ -1,14 +1,40 @@
 {
     "key": "group_fp02_page_institutional",
     "title": "Page — Institutional",
+    "local": "json",
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/institutional.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "FP-0002 V9-06C canonical source field group. Runtime registration occurs only after delivery authorization.",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1784044800,
+    "_valid": true,
+    "local_file": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\/acf-json\/group_fp02_page_institutional.json",
     "fields": [
         {
             "key": "field_fp02_hero_eyebrow_institutional",
-            "label": "Hero eyebrow",
             "name": "hero_eyebrow",
+            "type": "text",
+            "parent": "group_fp02_page_institutional",
+            "label": "Hero eyebrow",
             "aria-label": "",
             "prefix": "acf",
-            "type": "text",
             "value": null,
             "menu_order": 0,
             "instructions": "",
@@ -31,11 +57,12 @@
         },
         {
             "key": "field_fp02_hero_title_override_institutional",
-            "label": "Hero H1 override",
             "name": "hero_title_override",
+            "type": "text",
+            "parent": "group_fp02_page_institutional",
+            "label": "Hero H1 override",
             "aria-label": "",
             "prefix": "acf",
-            "type": "text",
             "value": null,
             "menu_order": 1,
             "instructions": "",
@@ -58,11 +85,12 @@
         },
         {
             "key": "field_fp02_hero_lead_institutional",
-            "label": "Hero lead",
             "name": "hero_lead",
+            "type": "textarea",
+            "parent": "group_fp02_page_institutional",
+            "label": "Hero lead",
             "aria-label": "",
             "prefix": "acf",
-            "type": "textarea",
             "value": null,
             "menu_order": 2,
             "instructions": "",
@@ -86,11 +114,12 @@
         },
         {
             "key": "field_fp02_hero_media_institutional",
-            "label": "Hero image",
             "name": "hero_media",
+            "type": "image",
+            "parent": "group_fp02_page_institutional",
+            "label": "Hero image",
             "aria-label": "",
             "prefix": "acf",
-            "type": "image",
             "value": null,
             "menu_order": 3,
             "instructions": "Hero background image. Empty falls back to theme asset o-centre-hero.webp.",
@@ -123,14 +152,15 @@
         },
         {
             "key": "field_fp02_hero_cta_label_institutional",
-            "label": "Текст кнопки в hero-блоке",
             "name": "hero_cta_label",
+            "type": "text",
+            "parent": "group_fp02_page_institutional",
+            "label": "Текст кнопки в hero-блоке",
             "aria-label": "",
             "prefix": "acf",
-            "type": "text",
             "value": null,
             "menu_order": 4,
-            "instructions": "Индивидуальный текст кнопки для hero-блока этой страницы/услуги. Если оставить пустым, используется текущий текст по умолчанию.",
+            "instructions": "Индивидуальный текст кнопки для hero-блока этой страницы\/услуги. Если оставить пустым, используется текущий текст по умолчанию.",
             "required": 0,
             "id": "",
             "class": "",
@@ -149,11 +179,19 @@
             "append": ""
         },
         {
+            "ID": 0,
             "key": "field_fp02_about_narrative_heading",
             "label": "О центре — Кто мы: заголовок",
             "name": "about_narrative_heading",
+            "aria-label": "",
+            "prefix": "acf",
             "type": "text",
+            "value": null,
             "menu_order": 5,
+            "instructions": "Секция #who-we-are. Пустое значение — static V9 fallback.",
+            "required": 0,
+            "id": "",
+            "class": "",
             "conditional_logic": [
                 [
                     {
@@ -163,6 +201,7 @@
                     }
                 ]
             ],
+            "parent": "group_fp02_page_institutional",
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -170,315 +209,475 @@
             },
             "default_value": "",
             "placeholder": "",
-            "required": 0,
-            "instructions": "Секция #who-we-are. Пустое значение — static V9 fallback."
+            "_name": "about_narrative_heading",
+            "_valid": 1,
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
         },
         {
+            "ID": 0,
             "key": "field_fp02_about_narrative_lead",
             "label": "О центре — Кто мы: лид",
             "name": "about_narrative_lead",
-            "type": "textarea",
-            "menu_order": 6,
-            "conditional_logic": [
-                [
-                    {
-                        "param": "page",
-                        "operator": "==",
-                        "value": "11"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "required": 0,
-            "rows": 3
-        },
-        {
-            "key": "field_fp02_about_who_treat_heading",
-            "label": "О центре — Кого лечим: заголовок",
-            "name": "about_who_treat_heading",
-            "type": "text",
-            "menu_order": 7,
-            "conditional_logic": [
-                [
-                    {
-                        "param": "page",
-                        "operator": "==",
-                        "value": "11"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "required": 0
-        },
-        {
-            "key": "field_fp02_about_who_treat_intro",
-            "label": "О центре — Кого лечим: вводный текст",
-            "name": "about_who_treat_intro",
-            "type": "textarea",
-            "menu_order": 8,
-            "conditional_logic": [
-                [
-                    {
-                        "param": "page",
-                        "operator": "==",
-                        "value": "11"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "required": 0,
-            "rows": 4
-        },
-        {
-            "key": "field_fp02_about_who_treat_lead",
-            "label": "О центре — Кого лечим: лид",
-            "name": "about_who_treat_lead",
-            "type": "textarea",
-            "menu_order": 9,
-            "conditional_logic": [
-                [
-                    {
-                        "param": "page",
-                        "operator": "==",
-                        "value": "11"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "required": 0,
-            "rows": 2
-        },
-        {
-            "key": "field_fp02_about_who_treat_callout",
-            "label": "О центре — Кого лечим: выноска",
-            "name": "about_who_treat_callout",
-            "type": "textarea",
-            "menu_order": 10,
-            "conditional_logic": [
-                [
-                    {
-                        "param": "page",
-                        "operator": "==",
-                        "value": "11"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "required": 0,
-            "rows": 2
-        },
-        {
-            "key": "field_fp02_about_approach_heading",
-            "label": "О центре — Подход: заголовок",
-            "name": "about_approach_heading",
-            "type": "text",
-            "menu_order": 11,
-            "conditional_logic": [
-                [
-                    {
-                        "param": "page",
-                        "operator": "==",
-                        "value": "11"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "required": 0
-        },
-        {
-            "key": "field_fp02_about_approach_highlight",
-            "label": "О центре — Подход: акцент",
-            "name": "about_approach_highlight",
-            "type": "textarea",
-            "menu_order": 12,
-            "conditional_logic": [
-                [
-                    {
-                        "param": "page",
-                        "operator": "==",
-                        "value": "11"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "required": 0,
-            "rows": 3
-        },
-        {
-            "key": "field_fp02_about_approach_intro",
-            "label": "О центре — Подход: вводный текст",
-            "name": "about_approach_intro",
-            "type": "textarea",
-            "menu_order": 13,
-            "conditional_logic": [
-                [
-                    {
-                        "param": "page",
-                        "operator": "==",
-                        "value": "11"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "required": 0,
-            "rows": 3
-        },
-        {
-            "key": "field_fp02_about_program_heading",
-            "label": "О центре — Программа: заголовок",
-            "name": "about_program_heading",
-            "type": "text",
-            "menu_order": 14,
-            "conditional_logic": [
-                [
-                    {
-                        "param": "page",
-                        "operator": "==",
-                        "value": "11"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "required": 0
-        },
-        {
-            "key": "field_fp02_about_program_lead",
-            "label": "О центре — Программа: лид",
-            "name": "about_program_lead",
-            "type": "textarea",
-            "menu_order": 15,
-            "conditional_logic": [
-                [
-                    {
-                        "param": "page",
-                        "operator": "==",
-                        "value": "11"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "required": 0,
-            "rows": 2
-        },
-        {
-            "key": "field_fp02_about_program_intro",
-            "label": "О центре — Программа: вводный текст 1",
-            "name": "about_program_intro",
-            "type": "textarea",
-            "menu_order": 16,
-            "conditional_logic": [
-                [
-                    {
-                        "param": "page",
-                        "operator": "==",
-                        "value": "11"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "required": 0,
-            "rows": 3
-        },
-        {
-            "key": "field_fp02_about_program_intro2",
-            "label": "О центре — Программа: вводный текст 2",
-            "name": "about_program_intro2",
-            "type": "textarea",
-            "menu_order": 17,
-            "conditional_logic": [
-                [
-                    {
-                        "param": "page",
-                        "operator": "==",
-                        "value": "11"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "required": 0,
-            "rows": 3
-        },
-        {
-            "key": "field_fp02_institutional_placeholder_notice",
-            "label": "Placeholder notice",
-            "name": "institutional_placeholder_notice",
             "aria-label": "",
             "prefix": "acf",
             "type": "textarea",
             "value": null,
-            "menu_order": 5,
+            "menu_order": 6,
+            "instructions": "",
+            "required": 0,
+            "id": "",
+            "class": "",
+            "conditional_logic": [
+                [
+                    {
+                        "param": "page",
+                        "operator": "==",
+                        "value": "11"
+                    }
+                ]
+            ],
+            "parent": "group_fp02_page_institutional",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3,
+            "_name": "about_narrative_lead",
+            "_valid": 1,
+            "new_lines": "",
+            "maxlength": "",
+            "acfe_textarea_code": 0
+        },
+        {
+            "ID": 0,
+            "key": "field_fp02_about_who_treat_heading",
+            "label": "О центре — Кого лечим: заголовок",
+            "name": "about_who_treat_heading",
+            "aria-label": "",
+            "prefix": "acf",
+            "type": "text",
+            "value": null,
+            "menu_order": 7,
+            "instructions": "",
+            "required": 0,
+            "id": "",
+            "class": "",
+            "conditional_logic": [
+                [
+                    {
+                        "param": "page",
+                        "operator": "==",
+                        "value": "11"
+                    }
+                ]
+            ],
+            "parent": "group_fp02_page_institutional",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "_name": "about_who_treat_heading",
+            "_valid": 1,
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "ID": 0,
+            "key": "field_fp02_about_who_treat_intro",
+            "label": "О центре — Кого лечим: вводный текст",
+            "name": "about_who_treat_intro",
+            "aria-label": "",
+            "prefix": "acf",
+            "type": "textarea",
+            "value": null,
+            "menu_order": 8,
+            "instructions": "",
+            "required": 0,
+            "id": "",
+            "class": "",
+            "conditional_logic": [
+                [
+                    {
+                        "param": "page",
+                        "operator": "==",
+                        "value": "11"
+                    }
+                ]
+            ],
+            "parent": "group_fp02_page_institutional",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 4,
+            "_name": "about_who_treat_intro",
+            "_valid": 1,
+            "new_lines": "",
+            "maxlength": "",
+            "acfe_textarea_code": 0
+        },
+        {
+            "ID": 0,
+            "key": "field_fp02_about_who_treat_lead",
+            "label": "О центре — Кого лечим: лид",
+            "name": "about_who_treat_lead",
+            "aria-label": "",
+            "prefix": "acf",
+            "type": "textarea",
+            "value": null,
+            "menu_order": 9,
+            "instructions": "",
+            "required": 0,
+            "id": "",
+            "class": "",
+            "conditional_logic": [
+                [
+                    {
+                        "param": "page",
+                        "operator": "==",
+                        "value": "11"
+                    }
+                ]
+            ],
+            "parent": "group_fp02_page_institutional",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 2,
+            "_name": "about_who_treat_lead",
+            "_valid": 1,
+            "new_lines": "",
+            "maxlength": "",
+            "acfe_textarea_code": 0
+        },
+        {
+            "ID": 0,
+            "key": "field_fp02_about_who_treat_callout",
+            "label": "О центре — Кого лечим: выноска",
+            "name": "about_who_treat_callout",
+            "aria-label": "",
+            "prefix": "acf",
+            "type": "textarea",
+            "value": null,
+            "menu_order": 10,
+            "instructions": "",
+            "required": 0,
+            "id": "",
+            "class": "",
+            "conditional_logic": [
+                [
+                    {
+                        "param": "page",
+                        "operator": "==",
+                        "value": "11"
+                    }
+                ]
+            ],
+            "parent": "group_fp02_page_institutional",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 2,
+            "_name": "about_who_treat_callout",
+            "_valid": 1,
+            "new_lines": "",
+            "maxlength": "",
+            "acfe_textarea_code": 0
+        },
+        {
+            "ID": 0,
+            "key": "field_fp02_about_approach_heading",
+            "label": "О центре — Подход: заголовок",
+            "name": "about_approach_heading",
+            "aria-label": "",
+            "prefix": "acf",
+            "type": "text",
+            "value": null,
+            "menu_order": 11,
+            "instructions": "",
+            "required": 0,
+            "id": "",
+            "class": "",
+            "conditional_logic": [
+                [
+                    {
+                        "param": "page",
+                        "operator": "==",
+                        "value": "11"
+                    }
+                ]
+            ],
+            "parent": "group_fp02_page_institutional",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "_name": "about_approach_heading",
+            "_valid": 1,
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "ID": 0,
+            "key": "field_fp02_about_approach_highlight",
+            "label": "О центре — Подход: акцент",
+            "name": "about_approach_highlight",
+            "aria-label": "",
+            "prefix": "acf",
+            "type": "textarea",
+            "value": null,
+            "menu_order": 12,
+            "instructions": "",
+            "required": 0,
+            "id": "",
+            "class": "",
+            "conditional_logic": [
+                [
+                    {
+                        "param": "page",
+                        "operator": "==",
+                        "value": "11"
+                    }
+                ]
+            ],
+            "parent": "group_fp02_page_institutional",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3,
+            "_name": "about_approach_highlight",
+            "_valid": 1,
+            "new_lines": "",
+            "maxlength": "",
+            "acfe_textarea_code": 0
+        },
+        {
+            "ID": 0,
+            "key": "field_fp02_about_approach_intro",
+            "label": "О центре — Подход: вводный текст",
+            "name": "about_approach_intro",
+            "aria-label": "",
+            "prefix": "acf",
+            "type": "textarea",
+            "value": null,
+            "menu_order": 13,
+            "instructions": "",
+            "required": 0,
+            "id": "",
+            "class": "",
+            "conditional_logic": [
+                [
+                    {
+                        "param": "page",
+                        "operator": "==",
+                        "value": "11"
+                    }
+                ]
+            ],
+            "parent": "group_fp02_page_institutional",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3,
+            "_name": "about_approach_intro",
+            "_valid": 1,
+            "new_lines": "",
+            "maxlength": "",
+            "acfe_textarea_code": 0
+        },
+        {
+            "ID": 0,
+            "key": "field_fp02_about_program_heading",
+            "label": "О центре — Программа: заголовок",
+            "name": "about_program_heading",
+            "aria-label": "",
+            "prefix": "acf",
+            "type": "text",
+            "value": null,
+            "menu_order": 14,
+            "instructions": "",
+            "required": 0,
+            "id": "",
+            "class": "",
+            "conditional_logic": [
+                [
+                    {
+                        "param": "page",
+                        "operator": "==",
+                        "value": "11"
+                    }
+                ]
+            ],
+            "parent": "group_fp02_page_institutional",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "_name": "about_program_heading",
+            "_valid": 1,
+            "maxlength": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "ID": 0,
+            "key": "field_fp02_about_program_lead",
+            "label": "О центре — Программа: лид",
+            "name": "about_program_lead",
+            "aria-label": "",
+            "prefix": "acf",
+            "type": "textarea",
+            "value": null,
+            "menu_order": 15,
+            "instructions": "",
+            "required": 0,
+            "id": "",
+            "class": "",
+            "conditional_logic": [
+                [
+                    {
+                        "param": "page",
+                        "operator": "==",
+                        "value": "11"
+                    }
+                ]
+            ],
+            "parent": "group_fp02_page_institutional",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 2,
+            "_name": "about_program_lead",
+            "_valid": 1,
+            "new_lines": "",
+            "maxlength": "",
+            "acfe_textarea_code": 0
+        },
+        {
+            "ID": 0,
+            "key": "field_fp02_about_program_intro",
+            "label": "О центре — Программа: вводный текст 1",
+            "name": "about_program_intro",
+            "aria-label": "",
+            "prefix": "acf",
+            "type": "textarea",
+            "value": null,
+            "menu_order": 16,
+            "instructions": "",
+            "required": 0,
+            "id": "",
+            "class": "",
+            "conditional_logic": [
+                [
+                    {
+                        "param": "page",
+                        "operator": "==",
+                        "value": "11"
+                    }
+                ]
+            ],
+            "parent": "group_fp02_page_institutional",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3,
+            "_name": "about_program_intro",
+            "_valid": 1,
+            "new_lines": "",
+            "maxlength": "",
+            "acfe_textarea_code": 0
+        },
+        {
+            "ID": 0,
+            "key": "field_fp02_about_program_intro2",
+            "label": "О центре — Программа: вводный текст 2",
+            "name": "about_program_intro2",
+            "aria-label": "",
+            "prefix": "acf",
+            "type": "textarea",
+            "value": null,
+            "menu_order": 17,
+            "instructions": "",
+            "required": 0,
+            "id": "",
+            "class": "",
+            "conditional_logic": [
+                [
+                    {
+                        "param": "page",
+                        "operator": "==",
+                        "value": "11"
+                    }
+                ]
+            ],
+            "parent": "group_fp02_page_institutional",
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3,
+            "_name": "about_program_intro2",
+            "_valid": 1,
+            "new_lines": "",
+            "maxlength": "",
+            "acfe_textarea_code": 0
+        },
+        {
+            "key": "field_fp02_institutional_placeholder_notice",
+            "name": "institutional_placeholder_notice",
+            "type": "textarea",
+            "parent": "group_fp02_page_institutional",
+            "label": "Placeholder notice",
+            "aria-label": "",
+            "prefix": "acf",
+            "value": null,
+            "menu_order": 18,
             "instructions": "",
             "required": 0,
             "id": "",
@@ -500,13 +699,14 @@
         },
         {
             "key": "field_fp02_institutional_content_sections",
-            "label": "Content sections",
             "name": "institutional_content_sections",
+            "type": "repeater",
+            "parent": "group_fp02_page_institutional",
+            "label": "Content sections",
             "aria-label": "",
             "prefix": "acf",
-            "type": "repeater",
             "value": null,
-            "menu_order": 6,
+            "menu_order": 19,
             "instructions": "Bounded repeater. Max rows are enforced in source and validation hooks.",
             "required": 0,
             "id": "",
@@ -525,15 +725,19 @@
             "max": 8,
             "_name": "institutional_content_sections",
             "_valid": 1,
+            "rows_per_page": 20,
+            "collapsed": "",
+            "acfe_repeater_stylised_button": 0,
             "sub_fields": [
                 {
-                    "ID": 0,
                     "key": "field_fp02_institutional_section_title",
-                    "label": "Заголовок",
                     "name": "title",
+                    "type": "text",
+                    "parent": "field_fp02_institutional_content_sections",
+                    "ID": 0,
+                    "label": "Заголовок",
                     "aria-label": "",
                     "prefix": "acf",
-                    "type": "text",
                     "value": null,
                     "menu_order": 0,
                     "instructions": "",
@@ -541,7 +745,6 @@
                     "id": "",
                     "class": "",
                     "conditional_logic": 0,
-                    "parent": "field_fp02_institutional_content_sections",
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -557,13 +760,14 @@
                     "parent_repeater": "field_fp02_institutional_content_sections"
                 },
                 {
-                    "ID": 0,
                     "key": "field_fp02_institutional_section_text",
-                    "label": "Текст",
                     "name": "text",
+                    "type": "textarea",
+                    "parent": "field_fp02_institutional_content_sections",
+                    "ID": 0,
+                    "label": "Текст",
                     "aria-label": "",
                     "prefix": "acf",
-                    "type": "textarea",
                     "value": null,
                     "menu_order": 1,
                     "instructions": "",
@@ -571,7 +775,6 @@
                     "id": "",
                     "class": "",
                     "conditional_logic": 0,
-                    "parent": "field_fp02_institutional_content_sections",
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -588,13 +791,14 @@
                     "parent_repeater": "field_fp02_institutional_content_sections"
                 },
                 {
-                    "ID": 0,
                     "key": "field_fp02_institutional_section_media",
-                    "label": "Медиа",
                     "name": "media",
+                    "type": "image",
+                    "parent": "field_fp02_institutional_content_sections",
+                    "ID": 0,
+                    "label": "Медиа",
                     "aria-label": "",
                     "prefix": "acf",
-                    "type": "image",
                     "value": null,
                     "menu_order": 2,
                     "instructions": "",
@@ -602,7 +806,6 @@
                     "id": "",
                     "class": "",
                     "conditional_logic": 0,
-                    "parent": "field_fp02_institutional_content_sections",
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -627,20 +830,18 @@
                     "upload_folder": "",
                     "parent_repeater": "field_fp02_institutional_content_sections"
                 }
-            ],
-            "rows_per_page": 20,
-            "collapsed": "",
-            "acfe_repeater_stylised_button": 0
+            ]
         },
         {
             "key": "field_fp02_institutional_stages",
-            "label": "Stages",
             "name": "institutional_stages",
+            "type": "repeater",
+            "parent": "group_fp02_page_institutional",
+            "label": "Stages",
             "aria-label": "",
             "prefix": "acf",
-            "type": "repeater",
             "value": null,
-            "menu_order": 7,
+            "menu_order": 20,
             "instructions": "Bounded repeater. Max rows are enforced in source and validation hooks.",
             "required": 0,
             "id": "",
@@ -659,15 +860,19 @@
             "max": 8,
             "_name": "institutional_stages",
             "_valid": 1,
+            "rows_per_page": 20,
+            "collapsed": "",
+            "acfe_repeater_stylised_button": 0,
             "sub_fields": [
                 {
-                    "ID": 0,
                     "key": "field_fp02_institutional_stages_title",
-                    "label": "Заголовок",
                     "name": "title",
+                    "type": "text",
+                    "parent": "field_fp02_institutional_stages",
+                    "ID": 0,
+                    "label": "Заголовок",
                     "aria-label": "",
                     "prefix": "acf",
-                    "type": "text",
                     "value": null,
                     "menu_order": 0,
                     "instructions": "",
@@ -675,7 +880,6 @@
                     "id": "",
                     "class": "",
                     "conditional_logic": 0,
-                    "parent": "field_fp02_institutional_stages",
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -691,13 +895,14 @@
                     "parent_repeater": "field_fp02_institutional_stages"
                 },
                 {
-                    "ID": 0,
                     "key": "field_fp02_institutional_stages_text",
-                    "label": "Текст",
                     "name": "text",
+                    "type": "textarea",
+                    "parent": "field_fp02_institutional_stages",
+                    "ID": 0,
+                    "label": "Текст",
                     "aria-label": "",
                     "prefix": "acf",
-                    "type": "textarea",
                     "value": null,
                     "menu_order": 1,
                     "instructions": "",
@@ -705,7 +910,6 @@
                     "id": "",
                     "class": "",
                     "conditional_logic": 0,
-                    "parent": "field_fp02_institutional_stages",
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -721,21 +925,19 @@
                     "acfe_textarea_code": 0,
                     "parent_repeater": "field_fp02_institutional_stages"
                 }
-            ],
-            "rows_per_page": 20,
-            "collapsed": "",
-            "acfe_repeater_stylised_button": 0
+            ]
         },
         {
             "key": "field_fp02_infrastructure_g0_g5",
-            "label": "Наш Дом — Infrastructure G0-G5",
             "name": "infrastructure_g0_g5",
+            "type": "repeater",
+            "parent": "group_fp02_page_institutional",
+            "label": "Наш Дом — Infrastructure G0-G5",
             "aria-label": "",
             "prefix": "acf",
-            "type": "repeater",
             "value": null,
-            "menu_order": 8,
-            "instructions": "G0 intro + G1-G4 bullets for /o-centre/ hub. Images use static V9 theme assets when media empty.",
+            "menu_order": 21,
+            "instructions": "G0 intro + G1-G4 bullets for \/o-centre\/ hub. Images use static V9 theme assets when media empty.",
             "required": 0,
             "id": "",
             "class": "",
@@ -761,15 +963,19 @@
             "max": 6,
             "_name": "infrastructure_g0_g5",
             "_valid": 1,
+            "rows_per_page": 20,
+            "collapsed": "",
+            "acfe_repeater_stylised_button": 0,
             "sub_fields": [
                 {
-                    "ID": 0,
                     "key": "field_fp02_infrastructure_g_title",
-                    "label": "Заголовок",
                     "name": "title",
+                    "type": "text",
+                    "parent": "field_fp02_infrastructure_g0_g5",
+                    "ID": 0,
+                    "label": "Заголовок",
                     "aria-label": "",
                     "prefix": "acf",
-                    "type": "text",
                     "value": null,
                     "menu_order": 0,
                     "instructions": "",
@@ -777,7 +983,6 @@
                     "id": "",
                     "class": "",
                     "conditional_logic": 0,
-                    "parent": "field_fp02_infrastructure_g0_g5",
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -793,13 +998,14 @@
                     "parent_repeater": "field_fp02_infrastructure_g0_g5"
                 },
                 {
-                    "ID": 0,
                     "key": "field_fp02_infrastructure_g_text",
-                    "label": "Текст",
                     "name": "text",
+                    "type": "textarea",
+                    "parent": "field_fp02_infrastructure_g0_g5",
+                    "ID": 0,
+                    "label": "Текст",
                     "aria-label": "",
                     "prefix": "acf",
-                    "type": "textarea",
                     "value": null,
                     "menu_order": 1,
                     "instructions": "",
@@ -807,7 +1013,6 @@
                     "id": "",
                     "class": "",
                     "conditional_logic": 0,
-                    "parent": "field_fp02_infrastructure_g0_g5",
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -824,13 +1029,14 @@
                     "parent_repeater": "field_fp02_infrastructure_g0_g5"
                 },
                 {
-                    "ID": 0,
                     "key": "field_fp02_infrastructure_g_media",
-                    "label": "Медиа",
                     "name": "media",
+                    "type": "image",
+                    "parent": "field_fp02_infrastructure_g0_g5",
+                    "ID": 0,
+                    "label": "Медиа",
                     "aria-label": "",
                     "prefix": "acf",
-                    "type": "image",
                     "value": null,
                     "menu_order": 2,
                     "instructions": "",
@@ -838,7 +1044,6 @@
                     "id": "",
                     "class": "",
                     "conditional_logic": 0,
-                    "parent": "field_fp02_infrastructure_g0_g5",
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -863,33 +1068,7 @@
                     "upload_folder": "",
                     "parent_repeater": "field_fp02_infrastructure_g0_g5"
                 }
-            ],
-            "rows_per_page": 20,
-            "collapsed": "",
-            "acfe_repeater_stylised_button": 0
+            ]
         }
-    ],
-    "location": [
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "page-templates/institutional.php"
-            }
-        ]
-    ],
-    "menu_order": 0,
-    "position": "normal",
-    "style": "default",
-    "label_placement": "top",
-    "instruction_placement": "label",
-    "hide_on_screen": "",
-    "active": true,
-    "description": "FP-0002 V9-06C canonical source field group. Runtime registration occurs only after delivery authorization.",
-    "show_in_rest": 0,
-    "display_title": "",
-    "allow_ai_access": false,
-    "ai_description": "",
-    "modified": 1784044800,
-    "_valid": true
+    ]
 }

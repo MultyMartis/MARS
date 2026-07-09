@@ -32,7 +32,7 @@ $is_about = shpigovsky_is_about_hub_page( $page_id );
 		get_template_part( 'template-parts/components/program-cta-band' );
 
 		get_template_part( 'template-parts/institutional/approach-band' );
-		get_template_part( 'template-parts/home/clinic-landscape' );
+		get_template_part( 'template-parts/institutional/clinic-landscape' );
 		get_template_part( 'template-parts/institutional/about-program' );
 		get_template_part( 'template-parts/institutional/infrastructure-narrative' );
 

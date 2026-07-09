@@ -151,6 +151,43 @@ function shpigovsky_get_v9_about_program_copy() {
 }
 
 /**
+ * Founder quote static copy for /o-centre/ hub.
+ *
+ * @return array{paragraphs:array<int,string>,name:string,role:string,photo:string,photo_width:int,photo_height:int,cta_label:string,label:string}
+ */
+function shpigovsky_get_v9_about_founder_quote_copy() {
+	return array(
+		'label'         => 'Слово основателя',
+		'paragraphs'    => array(
+			'Мы создавали «Шпиговский Дом» как место, где человек может получить профессиональную помощь, не теряя связь с собственной жизнью.',
+			'Многие боятся обратиться за лечением, потому что опасаются потерять семью, работу и привычный уклад жизни.',
+			'Мы считаем, что современная реабилитация должна помогать человеку восстанавливать себя, сохраняя то, что для него действительно важно.',
+			'«Наша цель — создать безопасное пространство для изменений. Наша задача — не изолировать человека от жизни, а помочь ему вернуть контроль над ней.»',
+		),
+		'name'          => 'Сергей Юрьевич Шпиговский',
+		'role'          => 'Основатель центра. Аддиктолог, интервенционист',
+		'photo'         => 'img/content/founder-sergey-shpigovsky.png',
+		'photo_width'   => 1281,
+		'photo_height'  => 1278,
+		'cta_label'     => 'Записаться на консультацию',
+	);
+}
+
+/**
+ * Clinic landscape static copy for /o-centre/ hub.
+ *
+ * @return array{image:string,width:int,height:int,alt:string}
+ */
+function shpigovsky_get_v9_about_clinic_landscape_copy() {
+	return array(
+		'image'  => 'img/content/pre-reviews/shpigovsky-clinic-landscape.webp',
+		'width'  => 1139,
+		'height' => 584,
+		'alt'    => 'Здание и территория реабилитационного центра',
+	);
+}
+
+/**
  * Guest visit CTA band defaults for about hub.
  *
  * @return array{title:string,subtitle:string,button_label:string,source:string}

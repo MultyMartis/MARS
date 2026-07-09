@@ -1,0 +1,49 @@
+{
+  "task_id": "V9-06E29B",
+  "generated_at": "2026-07-10T03:53:18.356168+07:00",
+  "areas": [
+    {
+      "area": "A_hero_media",
+      "work_type": "DB_SEED_ONLY",
+      "action": "Seed hero_media attachment from V9 o-centre-hero.webp",
+      "safety": "LOW"
+    },
+    {
+      "area": "B_founder_quote",
+      "work_type": "ACF_FIELD_DEFINITION_REQUIRED+TEMPLATE_BINDING_REQUIRED+DB_SEED",
+      "action": "Add about_founder_* fields; bind institutional/founder-quote.php; seed static copy",
+      "safety": "LOW"
+    },
+    {
+      "area": "C_clinic_landscape",
+      "work_type": "ACF_FIELD_DEFINITION_REQUIRED+TEMPLATE_BINDING_REQUIRED+DB_SEED",
+      "action": "Add about_clinic_landscape_* fields; institutional/clinic-landscape.php; seed image",
+      "safety": "LOW"
+    },
+    {
+      "area": "D_cta_bands",
+      "work_type": "ACCEPTED_SHARED_BLOCK",
+      "action": "Document phone_primary + static guest CTA helper; no page-local duplication",
+      "safety": "NONE"
+    },
+    {
+      "area": "E_shared_blocks",
+      "work_type": "EDITABLE_SHARED_OPTIONS",
+      "action": "Admin message field + document fp02-block-specialists, fp02-reviews, fp02-block-final-form",
+      "safety": "NONE"
+    },
+    {
+      "area": "F_about_program_lorem",
+      "work_type": "OPERATOR_DECISION_REQUIRED",
+      "action": "V9 authority also contains lorem; no replacement without operator copy",
+      "safety": "NONE"
+    },
+    {
+      "area": "G_visible_blocks",
+      "work_type": "MATRIX",
+      "action": "See post-implementation admin parity validation",
+      "safety": "LOW"
+    }
+  ],
+  "result": "PASS"
+}

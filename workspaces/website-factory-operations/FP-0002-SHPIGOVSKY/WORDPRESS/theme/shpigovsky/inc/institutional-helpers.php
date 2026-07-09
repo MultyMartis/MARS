@@ -267,6 +267,103 @@ function shpigovsky_get_about_program_context( $page_id ) {
 }
 
 /**
+ * Founder quote context for about hub (ACF with V9 fallback).
+ *
+ * @param int $page_id Page ID.
+ * @return array<string,mixed>
+ */
+function shpigovsky_get_about_founder_quote_context( $page_id ) {
+	$static = shpigovsky_get_v9_about_founder_quote_copy();
+
+	$name      = shpigovsky_get_institutional_field( $page_id, 'about_founder_name' );
+	$role      = shpigovsky_get_institutional_field( $page_id, 'about_founder_role' );
+	$cta_label = shpigovsky_get_institutional_field( $page_id, 'about_founder_cta_label' );
+	$paragraphs = array();
+	$rows       = shpigovsky_get_institutional_repeater_or_static( $page_id, 'about_founder_quote_paragraphs', array() );
+
+	if ( ! empty( $rows ) ) {
+		foreach ( $rows as $row ) {
+			$text = isset( $row['text'] ) ? trim( (string) $row['text'] ) : '';
+
+			if ( '' !== $text ) {
+				$paragraphs[] = $text;
+			}
+		}
+	}
+
+	if ( empty( $paragraphs ) ) {
+		$paragraphs = $static['paragraphs'];
+	}
+
+	$photo = array(
+		'url'    => shpigovsky_asset_uri( $static['photo'] ),
+		'alt'    => $static['name'],
+		'width'  => $static['photo_width'],
+		'height' => $static['photo_height'],
+	);
+
+	if ( function_exists( 'get_field' ) && $page_id > 0 ) {
+		$image = get_field( 'about_founder_photo', $page_id );
+
+		if ( is_array( $image ) && ! empty( $image['url'] ) ) {
+			$photo = array(
+				'url'    => (string) $image['url'],
+				'alt'    => ! empty( $image['alt'] ) ? (string) $image['alt'] : $static['name'],
+				'width'  => ! empty( $image['width'] ) ? (int) $image['width'] : $static['photo_width'],
+				'height' => ! empty( $image['height'] ) ? (int) $image['height'] : $static['photo_height'],
+			);
+		}
+	}
+
+	return array(
+		'label'      => $static['label'],
+		'paragraphs' => $paragraphs,
+		'name'       => '' !== $name ? $name : $static['name'],
+		'role'       => '' !== $role ? $role : $static['role'],
+		'photo'      => $photo,
+		'cta_label'  => '' !== $cta_label ? $cta_label : $static['cta_label'],
+	);
+}
+
+/**
+ * Clinic landscape context for about hub (ACF with V9 fallback).
+ *
+ * @param int $page_id Page ID.
+ * @return array{image:string,width:int,height:int,alt:string}
+ */
+function shpigovsky_get_about_clinic_landscape_context( $page_id ) {
+	$static = shpigovsky_get_v9_about_clinic_landscape_copy();
+	$alt    = shpigovsky_get_institutional_field( $page_id, 'about_clinic_landscape_alt' );
+
+	$image = array(
+		'url'    => shpigovsky_asset_uri( $static['image'] ),
+		'width'  => $static['width'],
+		'height' => $static['height'],
+		'alt'    => '' !== $alt ? $alt : $static['alt'],
+	);
+
+	if ( function_exists( 'get_field' ) && $page_id > 0 ) {
+		$acf_image = get_field( 'about_clinic_landscape_image', $page_id );
+
+		if ( is_array( $acf_image ) && ! empty( $acf_image['url'] ) ) {
+			$image = array(
+				'url'    => (string) $acf_image['url'],
+				'width'  => ! empty( $acf_image['width'] ) ? (int) $acf_image['width'] : $static['width'],
+				'height' => ! empty( $acf_image['height'] ) ? (int) $acf_image['height'] : $static['height'],
+				'alt'    => '' !== $alt ? $alt : ( ! empty( $acf_image['alt'] ) ? (string) $acf_image['alt'] : $static['alt'] ),
+			);
+		}
+	}
+
+	return array(
+		'image'  => $image['url'],
+		'width'  => $image['width'],
+		'height' => $image['height'],
+		'alt'    => $image['alt'],
+	);
+}
+
+/**
  * Guest CTA band context for about hub.
  *
  * @param string $source CTA source slug.

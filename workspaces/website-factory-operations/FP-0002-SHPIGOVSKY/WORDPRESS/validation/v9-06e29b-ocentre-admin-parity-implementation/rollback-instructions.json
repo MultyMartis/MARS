@@ -1,0 +1,17 @@
+{
+  "task_id": "V9-06E29B",
+  "backup_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e29b-full-site-backup-pre-20260710-035311",
+  "db_restore": "mysql -h127.0.0.1 -uroot mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e29b-full-site-backup-pre-20260710-035311\\mars_wp_fp0002.sql\"",
+  "runtime_restore": "robocopy \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e29b-full-site-backup-pre-20260710-035311\\runtime-site\" \"X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\" /E (operator-approved)",
+  "page_11_partial": "Restore postmeta from X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e29b-full-site-backup-pre-20260710-035311\\page-11-pre-state.json",
+  "verification_routes": [
+    "/",
+    "/blog/",
+    "/blog/nazvanie-stati/",
+    "/uslugi/",
+    "/uslugi/zavisimosti/",
+    "/kontakty/",
+    "/privacy-policy/",
+    "/o-centre/"
+  ]
+}

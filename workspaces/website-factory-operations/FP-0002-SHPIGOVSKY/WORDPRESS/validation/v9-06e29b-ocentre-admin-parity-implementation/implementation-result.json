@@ -1,0 +1,53 @@
+{
+  "task_id": "V9-06E29B",
+  "generated_at": "2026-07-10T03:53:22.343294+07:00",
+  "areas": {
+    "hero_media": {
+      "key": "hero_media",
+      "field": "hero_media",
+      "attachment_id": 753,
+      "url": "http://shpigovsky.test/wp-content/uploads/2026/07/o-centre-hero.webp",
+      "result": "PASS"
+    },
+    "founder_quote": {
+      "text_seed": [
+        {
+          "field": "about_founder_quote_paragraphs",
+          "result": "PASS"
+        },
+        {
+          "field": "about_founder_name",
+          "result": "PASS"
+        },
+        {
+          "field": "about_founder_role",
+          "result": "PASS"
+        },
+        {
+          "field": "about_founder_cta_label",
+          "result": "PASS"
+        },
+        {
+          "field": "about_clinic_landscape_alt",
+          "result": "PASS"
+        }
+      ],
+      "template": "institutional/founder-quote.php"
+    },
+    "clinic_landscape": {
+      "image_seed": [
+        {
+          "key": "clinic_landscape",
+          "field": "about_clinic_landscape_image",
+          "attachment_id": 755,
+          "url": "http://shpigovsky.test/wp-content/uploads/2026/07/shpigovsky-clinic-landscape.webp",
+          "result": "PASS"
+        }
+      ]
+    },
+    "about_program_lorem": "UNCHANGED — V9 authority also lorem"
+  },
+  "source_files_changed": 6,
+  "db_writes": "page #11 postmeta only",
+  "result": "PASS"
+}

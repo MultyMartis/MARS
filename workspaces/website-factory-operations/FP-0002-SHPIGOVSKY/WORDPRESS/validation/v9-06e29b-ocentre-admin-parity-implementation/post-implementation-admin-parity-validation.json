@@ -1,0 +1,83 @@
+{
+  "task_id": "V9-06E29B",
+  "generated_at": "2026-07-10T03:53:23.301254+07:00",
+  "sections": [
+    {
+      "section": "hero",
+      "final_admin_editability": "FULLY_EDITABLE_PAGE_ACF",
+      "result": "PASS"
+    },
+    {
+      "section": "institutional_narrative",
+      "final_admin_editability": "FULLY_EDITABLE_PAGE_ACF",
+      "result": "PASS"
+    },
+    {
+      "section": "founder_quote",
+      "final_admin_editability": "FULLY_EDITABLE_PAGE_ACF",
+      "result": "PASS"
+    },
+    {
+      "section": "who_we_treat",
+      "final_admin_editability": "FULLY_EDITABLE_PAGE_ACF",
+      "result": "PASS"
+    },
+    {
+      "section": "program_cta_1",
+      "final_admin_editability": "ACCEPTED_TEMPLATE_FALLBACK",
+      "result": "PASS",
+      "notes": "Copy static; phone from site options"
+    },
+    {
+      "section": "approach_band",
+      "final_admin_editability": "FULLY_EDITABLE_PAGE_ACF",
+      "result": "PASS"
+    },
+    {
+      "section": "clinic_landscape",
+      "final_admin_editability": "FULLY_EDITABLE_PAGE_ACF",
+      "result": "PASS"
+    },
+    {
+      "section": "about_program",
+      "final_admin_editability": "FULLY_EDITABLE_PAGE_ACF",
+      "result": "PARTIAL",
+      "notes": "Lorem in V9 authority fields"
+    },
+    {
+      "section": "infrastructure_narrative",
+      "final_admin_editability": "FULLY_EDITABLE_PAGE_ACF",
+      "result": "PASS"
+    },
+    {
+      "section": "guest_cta",
+      "final_admin_editability": "ACCEPTED_TEMPLATE_FALLBACK",
+      "result": "PASS"
+    },
+    {
+      "section": "specialists",
+      "final_admin_editability": "EDITABLE_SHARED_OPTIONS",
+      "result": "PASS",
+      "admin_location": "fp02-block-specialists"
+    },
+    {
+      "section": "reviews",
+      "final_admin_editability": "EDITABLE_SHARED_OPTIONS",
+      "result": "PASS",
+      "admin_location": "fp02-reviews"
+    },
+    {
+      "section": "final_form",
+      "final_admin_editability": "EDITABLE_SHARED_OPTIONS",
+      "result": "PASS",
+      "admin_location": "fp02-block-final-form"
+    },
+    {
+      "section": "breadcrumbs_subnav",
+      "final_admin_editability": "ACCEPTED_TEMPLATE_FALLBACK",
+      "result": "PASS"
+    }
+  ],
+  "hero_media_seeded": true,
+  "result": "PASS"
+}

@@ -1,0 +1,42 @@
+{
+  "task_id": "V9-06E29B",
+  "generated_at": "2026-07-10T03:53:29.289014+07:00",
+  "routes": [
+    {
+      "route": "/",
+      "http": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/blog/",
+      "http": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/blog/nazvanie-stati/",
+      "http": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/",
+      "http": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "http": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/kontakty/",
+      "http": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/privacy-policy/",
+      "http": 200,
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS"
+}
