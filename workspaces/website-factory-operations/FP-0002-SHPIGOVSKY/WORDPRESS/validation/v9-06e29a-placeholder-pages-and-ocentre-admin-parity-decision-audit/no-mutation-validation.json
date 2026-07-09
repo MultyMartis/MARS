@@ -1,0 +1,101 @@
+{
+  "task_id": "V9-06E29A",
+  "generated_at": "2026-07-09T20:18:16.557028+00:00",
+  "db_write_count": 0,
+  "source_diff_docs_only": true,
+  "before": {
+    "named_pages_status": {
+      "О нас": "publish",
+      "Программа лечения": "publish",
+      "Галерея о доме": "publish",
+      "Специалистам": "publish",
+      "Родственникам": "publish"
+    },
+    "page_11_postmeta_count": 106,
+    "menu_checksum_sha256": "b621d3cd35ac61798a1ce79ffc0c21dd12e1eedc0877a7e27624e948a4048be4",
+    "options": {
+      "blog_public": "0",
+      "permalink_structure": "/blog/%postname%/",
+      "page_on_front": "4",
+      "show_on_front": "page",
+      "page_for_posts": "19"
+    }
+  },
+  "after": {
+    "named_pages_status": {
+      "О нас": "publish",
+      "Программа лечения": "publish",
+      "Галерея о доме": "publish",
+      "Специалистам": "publish",
+      "Родственникам": "publish"
+    },
+    "page_11_postmeta_count": 106,
+    "menu_checksum_sha256": "b621d3cd35ac61798a1ce79ffc0c21dd12e1eedc0877a7e27624e948a4048be4",
+    "options": {
+      "blog_public": "0",
+      "permalink_structure": "/blog/%postname%/",
+      "page_on_front": "4",
+      "show_on_front": "page",
+      "page_for_posts": "19"
+    }
+  },
+  "protected_objects": {
+    "3": {
+      "ID": 3,
+      "post_status": "publish",
+      "post_type": "page",
+      "post_title": "Политика конфиденциальности"
+    },
+    "4": {
+      "ID": 4,
+      "post_status": "publish",
+      "post_type": "page",
+      "post_title": "Главная"
+    },
+    "11": {
+      "ID": 11,
+      "post_status": "publish",
+      "post_type": "page",
+      "post_title": "О центре"
+    },
+    "19": {
+      "ID": 19,
+      "post_status": "publish",
+      "post_type": "page",
+      "post_title": "Статьи"
+    },
+    "750": {
+      "ID": 750,
+      "post_status": "publish",
+      "post_type": "post",
+      "post_title": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём"
+    },
+    "73": {
+      "ID": 73,
+      "post_status": "publish",
+      "post_type": "service",
+      "post_title": "Зависимости"
+    },
+    "74": {
+      "ID": 74,
+      "post_status": "publish",
+      "post_type": "service",
+      "post_title": "Лечение алкогольной зависимости"
+    },
+    "77": {
+      "ID": 77,
+      "post_status": "publish",
+      "post_type": "service",
+      "post_title": "Психическое здоровье"
+    },
+    "84": {
+      "ID": 84,
+      "post_status": "publish",
+      "post_type": "service",
+      "post_title": "Расстройства пищевого поведения"
+    }
+  },
+  "rewrite_flush": false,
+  "permalink_changes": false,
+  "result": "PASS"
+}

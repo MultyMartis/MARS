@@ -1,0 +1,78 @@
+{
+  "task_id": "V9-06E29A",
+  "generated_at": "2026-07-09T20:18:16.557028+00:00",
+  "placeholder_pages": [
+    {
+      "item": "О нас",
+      "id": 12,
+      "url": "http://shpigovsky.test/o-centre/o-nas/",
+      "current_state": "publish / PLACEHOLDER",
+      "origin": "STATIC_V9_ROUTE_MANIFEST_PLACEHOLDER",
+      "route_risk": "LOW",
+      "admin_risk": "LOW",
+      "design_layout_authority": "partial",
+      "recommended_decision": "keep",
+      "future_task": "E29C"
+    },
+    {
+      "item": "Программа лечения",
+      "id": 13,
+      "url": "http://shpigovsky.test/o-centre/programma-lecheniya/",
+      "current_state": "publish / PLACEHOLDER",
+      "origin": "STATIC_V9_ROUTE_MANIFEST_PLACEHOLDER",
+      "route_risk": "LOW",
+      "admin_risk": "LOW",
+      "design_layout_authority": "partial",
+      "recommended_decision": "keep",
+      "future_task": "E29C"
+    },
+    {
+      "item": "Галерея о доме",
+      "id": 14,
+      "url": "http://shpigovsky.test/o-centre/galereya-o-dome/",
+      "current_state": "publish / PLACEHOLDER",
+      "origin": "STATIC_V9_ROUTE_MANIFEST_PLACEHOLDER",
+      "route_risk": "LOW",
+      "admin_risk": "LOW",
+      "design_layout_authority": "partial",
+      "recommended_decision": "keep",
+      "future_task": "E29C"
+    },
+    {
+      "item": "Специалистам",
+      "id": 15,
+      "url": "http://shpigovsky.test/o-centre/specialistam/",
+      "current_state": "publish / PLACEHOLDER",
+      "origin": "STATIC_V9_ROUTE_MANIFEST_PLACEHOLDER",
+      "route_risk": "LOW",
+      "admin_risk": "LOW",
+      "design_layout_authority": "partial",
+      "recommended_decision": "keep",
+      "future_task": "E29C"
+    },
+    {
+      "item": "Родственникам",
+      "id": 16,
+      "url": "http://shpigovsky.test/o-centre/rodstvennikam/",
+      "current_state": "publish / PLACEHOLDER",
+      "origin": "STATIC_V9_ROUTE_MANIFEST_PLACEHOLDER",
+      "route_risk": "LOW",
+      "admin_risk": "LOW",
+      "design_layout_authority": "partial",
+      "recommended_decision": "keep",
+      "future_task": "E29C"
+    }
+  ],
+  "ocentre": {
+    "item": "/o-centre/",
+    "id": 11,
+    "url": "http://shpigovsky.test/o-centre/",
+    "current_state": "public PASS; admin PARTIAL",
+    "origin": "E26A full hub port",
+    "route_risk": "NONE",
+    "admin_risk": "MEDIUM",
+    "design_layout_authority": "yes",
+    "recommended_decision": "seed ACF + expose shared blocks",
+    "future_task": "E29B"
+  }
+}

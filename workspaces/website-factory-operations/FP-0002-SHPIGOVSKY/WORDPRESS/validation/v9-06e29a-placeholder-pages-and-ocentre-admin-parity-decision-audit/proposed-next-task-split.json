@@ -1,0 +1,31 @@
+{
+  "task_id": "V9-06E29A",
+  "generated_at": "2026-07-09T20:18:16.557028+00:00",
+  "tasks": [
+    {
+      "id": "E29B",
+      "name": "O-Centre Admin Parity Implementation",
+      "purpose": "Make /o-centre/ page #11 editable from admin for all public blocks",
+      "scope": [
+        "DB checkpoint",
+        "Seed empty about_* and infrastructure_g0_g5 from V9 static fallbacks",
+        "Verify shared block options (specialists/reviews/final-form)",
+        "Optional: add ACF for founder-quote and clinic-landscape if operator requires"
+      ],
+      "needs_operator_approval": true
+    },
+    {
+      "id": "E29C",
+      "name": "Named Placeholder Pages Cleanup / Draft Decision",
+      "purpose": "Apply approved decisions for five institutional child placeholders",
+      "scope": [
+        "draft",
+        "keep placeholder",
+        "port later",
+        "trash only if operator approves"
+      ],
+      "needs_operator_approval": true
+    }
+  ],
+  "recommended_split": "E29B first (admin parity), then E29C after operator placeholder policy decision"
+}
