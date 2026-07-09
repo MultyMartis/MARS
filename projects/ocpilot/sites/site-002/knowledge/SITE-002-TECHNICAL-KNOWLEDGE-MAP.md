@@ -1106,6 +1106,19 @@ Before **any** task touching **trust block**, **certificates**, **dealers form**
 - **Parent-aware resolution** required when admin names duplicate (e.g. «Производственные» id 140 under Лари vs id 130 under Шкафы)
 - Deferred Run 4.210 `/lari/proizvodstvennye-lari` — **RESOLVED** Run 4.211 → category_id **140**, HIGH confidence
 
+### Category Lari reparent discovery (Run 4.234)
+
+- **Лари** category_id **88** — current `parent_id=79` (direct under neutral hub); **wrong** vs 1C business grouping
+- **Шкафы и лари** category_id **358** — sibling under 79; current child **359** (Шкафы кухонные)
+- **Target:** `88.parent_id = 358` → public path `/katalog/nejtralnoe-oborudovanie/shkafy-i-lari/lari`
+- **Children of 88:** **140** Производственные, **141** Складские — `category_path` cascade required
+- **SEO keyword** `lari` unchanged (`oc_seo_url` single-segment); full path from `category_path`
+- **Sitemap:** old `/lari` tree present (1408 URLs total); nested target absent
+- **Entrypoints:** whitelist IDs incl. **88** and **358** as top-level neutral branch tiles (`category_visibility.php`)
+- **1C ownership:** **MIXED** — verify `import0_1.xml` group parent before implementation
+- **Recommendation:** hybrid reparent (admin/DB) + 301 redirects + post-import monitor
+- Tool: `site-002-prod-category-lari-reparent-discovery-01.py` · [report](../reports/SITE-002-PROD-CATEGORY-LARI-REPARENT-DISCOVERY-01.md) · charter in Storage `deployments/SITE-002-PROD-CATEGORY-LARI-REPARENT-DISCOVERY-01/implementation-charter/`
+
 ### Sitemap authority (Run 4.214)
 
 - **Authority:** OpenCart built-in Google Sitemap feed — `catalog/controller/extension/feed/google_sitemap.php`
@@ -2152,4 +2165,4 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 
 ---
 
-*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-09 (Run 4.233 — post-1C import logs and monitor artifacts audit).*
+*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-09 (Run 4.234 — category Lari reparent discovery).*
