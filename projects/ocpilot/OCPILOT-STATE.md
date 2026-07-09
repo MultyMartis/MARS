@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-10
-**Evidence cutoff:** 2026-07-10 (SITE-002 Run **4.244** — Audit Wave E Info Meta H1 **COMPLETE**; AUDIT-008/009 fixed; checkpoint `SITE-002-STABLE-PROD-AUDIT-WAVE-E-INFO-META-H1-01`; Run **4.240** post-1C verification **still BLOCKED**)
+**Evidence cutoff:** 2026-07-10 (SITE-002 Run **4.244** — Audit Wave E Info Meta H1 **COMPLETE**; Wave E origin authority synchronized through pushed commit **`679a2b5d`** (Run **4.245** git sync + Run **4.246** authority realign); checkpoint `SITE-002-STABLE-PROD-AUDIT-WAVE-E-INFO-META-H1-01`; Run **4.240** post-1C verification **still BLOCKED**)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,17 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Audit Wave E Info Meta H1 (Run 4.244)** — **COMPLETE** — meta on `/about_us` `/terms` (DB); Assum meta+H1 (2 FTP files); AUDIT-008/009 fixed · [SITE-002-PROD-AUDIT-WAVE-E-INFO-META-H1-01.md](sites/site-002/reports/SITE-002-PROD-AUDIT-WAVE-E-INFO-META-H1-01.md) · checkpoint `SITE-002-STABLE-PROD-AUDIT-WAVE-E-INFO-META-H1-01` · **Post-1C verification (Run 4.240)** still **BLOCKED** |
+| Current SITE-002 focus | **Audit Wave E Info Meta H1 (Run 4.244)** — **COMPLETE** — meta on `/about_us` `/terms` (DB); Assum meta+H1 (2 FTP files); AUDIT-008/009 fixed · [SITE-002-PROD-AUDIT-WAVE-E-INFO-META-H1-01.md](sites/site-002/reports/SITE-002-PROD-AUDIT-WAVE-E-INFO-META-H1-01.md) · checkpoint `SITE-002-STABLE-PROD-AUDIT-WAVE-E-INFO-META-H1-01` · Wave E docs on origin via **`679a2b5d`** (Run **4.245**) · authority/report sync Run **4.246** · **Post-1C verification (Run 4.240)** still **BLOCKED** |
+
+### Git authority note (SITE-002 Wave E — 2026-07-10)
+
+| Field | Value |
+|-------|--------|
+| Wave E production checkpoint | `SITE-002-STABLE-PROD-AUDIT-WAVE-E-INFO-META-H1-01` — **unchanged** |
+| Origin Wave E commit | **`679a2b5d`** — cherry-pick equivalent of local `b562f59c` (Run **4.245**) |
+| Run 4.245 report on origin | **yes** — [SITE-002-GIT-SYNC-PUSH-BLOCKED-WAVE-E-01.md](sites/site-002/reports/SITE-002-GIT-SYNC-PUSH-BLOCKED-WAVE-E-01.md) |
+| Main worktree (`X:\AI MARS`) | **may remain diverged/dirty** — do **not** stash/reset/clean without operator charter |
+| Preferred git sync pattern | **clean temp worktree** under `X:\AI MARS STORAGE\git-sync-e01\` or `git-sync-e02\` until main worktree intentionally reconciled |
 
 ---
 
