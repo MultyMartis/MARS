@@ -76,9 +76,11 @@ SANITY_URLS = (
 ONBOARDED_CATEGORY_PATHS = {
     "katalog/nejtralnoe-oborudovanie/konditerskiy-inventar",
     "katalog/nejtralnoe-oborudovanie/konditerskiy-inventar/formy-konditerskie",
-    "katalog/nejtralnoe-oborudovanie/lari",
-    "katalog/nejtralnoe-oborudovanie/lari/skladskie-lari",
-    "katalog/nejtralnoe-oborudovanie/lari/proizvodstvennye-lari",
+    "katalog/nejtralnoe-oborudovanie/shkafy-i-lari/lari",
+    "katalog/nejtralnoe-oborudovanie/shkafy-i-lari/lari/proizvodstvennye-lari",
+    "katalog/nejtralnoe-oborudovanie/shkafy-i-lari/lari/skladskie-lari",
+    "katalog/nejtralnoe-oborudovanie/shkafy-i-lari/shkafy-dlya-hleba",
+    "katalog/tehnologicheskoe-oborudovanie",
 }
 
 TECHNICAL_QUERY_PATTERNS = (
