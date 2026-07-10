@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-10 (Run 4.253 — Catalog onboarding review **COMPLETE** — 5 needs classified; charter ready; checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01`; next `SITE-002-PROD-CATALOG-ONBOARDING-IMPLEMENTATION-01`)
+**Last updated:** 2026-07-10 (Run 4.254 — Category meta onboarding **COMPLETE** — ids **362/363/88/141** meta_description updated; duplicate **88/141** resolved; 4 scoped DB UPDATEs; checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01`; next `SITE-002-PROD-CATEGORY-ENTRYPOINT-ONBOARDING-01`)
 
 ---
 
