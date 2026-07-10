@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-10
-**Evidence cutoff:** 2026-07-10 (SITE-002 Run **4.255** — Category Entrypoint Onboarding **COMPLETE** — monitor `ONBOARDED_CATEGORY_PATHS` updated flat→nested Lari + ids **362/363**; manual run onboarding needs **0**; classification **HYGIENE_REVIEW_REQUIRED**; 0 production mutation; checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01`; runner sync to `X:\AI MARS` recommended)
+**Evidence cutoff:** 2026-07-10 (SITE-002 Run **4.256** — Local Runtime Monitor Sync **COMPLETE** — monitor script `f6586600` synced into `X:\AI MARS`; Task Scheduler manual run `2026-07-10_18-41-12`; onboarding needs **0**; classification **HYGIENE_REVIEW_REQUIRED**; 0 production mutation; checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01`)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Category Entrypoint Onboarding (Run 4.255)** — **COMPLETE** — monitor allowlist nested Lari paths + ids **362/363**; manual run onboarding needs **0**; classification **HYGIENE_REVIEW_REQUIRED** · [SITE-002-PROD-CATEGORY-ENTRYPOINT-ONBOARDING-01.md](sites/site-002/reports/SITE-002-PROD-CATEGORY-ENTRYPOINT-ONBOARDING-01.md) · checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01` · optional spotcheck after next 1C import · **sync runner code to `X:\AI MARS` recommended** |
+| Current SITE-002 focus | **Local Runtime Monitor Sync (Run 4.256)** — **COMPLETE** — monitor script synced into `X:\AI MARS` from `f6586600`; Task Scheduler manual run onboarding needs **0**; classification **HYGIENE_REVIEW_REQUIRED** · [SITE-002-LOCAL-RUNTIME-MONITOR-SYNC-01.md](sites/site-002/reports/SITE-002-LOCAL-RUNTIME-MONITOR-SYNC-01.md) · checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01` · optional spotcheck after next 1C import |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 

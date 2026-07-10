@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-10 (Run 4.255 — Category entrypoint onboarding **COMPLETE** — monitor `ONBOARDED_CATEGORY_PATHS` nested Lari + ids **362/363**; manual run onboarding needs **0**; classification **HYGIENE_REVIEW_REQUIRED**; checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01`; sync runner to `X:\AI MARS` recommended)
+**Last updated:** 2026-07-10 (Run 4.256 — Local runtime monitor sync **COMPLETE** — monitor script `f6586600` synced into `X:\AI MARS`; Task Scheduler manual run `2026-07-10_18-41-12`; onboarding needs **0**; classification **HYGIENE_REVIEW_REQUIRED**; checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01`)
 
 ---
 
