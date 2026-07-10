@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-10 (Run 4.252 — Stable checkpoint consolidation **COMPLETE** — checkpoint `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01`; Duration **CONFIRMED**; Lari **CONFIRMED**; monitor **CONFIRMED_MANUALLY**; natural scheduled post-hardening **NOT CLAIMED**; next `SITE-002-PROD-CATALOG-ONBOARDING-REVIEW-01`)
+**Last updated:** 2026-07-10 (Run 4.253 — Catalog onboarding review **COMPLETE** — 5 needs classified; charter ready; checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01`; next `SITE-002-PROD-CATALOG-ONBOARDING-IMPLEMENTATION-01`)
 
 ---
 
