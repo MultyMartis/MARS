@@ -1,0 +1,144 @@
+{
+  "date": "2026-07-10",
+  "harnessMethod": "SANDBOX_PATCH_APPLIED_HARNESS_LOCAL",
+  "productionIds": {
+    "intake": {
+      "id": "x8EbTGKNdlBprLvk",
+      "name": "SEO Content Agent Beta.v14 - Intake"
+    },
+    "worker": {
+      "id": "p4mqb4VuPcemIDlC",
+      "name": "SEO Content Agent Beta.v14 - Worker"
+    },
+    "admin": {
+      "id": "AR6QxGt8ZKH0xG2T",
+      "name": "SEO Content Agent Beta.v14 - Admin"
+    }
+  },
+  "sandbox": {
+    "reuseDecision": "Reused existing sandbox SEO Content Agent Beta.v14 - Worker.sandbox-pc14 (id=l4FRqKABF25SnXSj)",
+    "id": "l4FRqKABF25SnXSj",
+    "name": "SEO Content Agent Beta.v14 - Worker.sandbox-pc14",
+    "active": false,
+    "webhookPath": "seo-content-agent-worker-sandbox-pc14",
+    "beforePatchSource": "reused local before export",
+    "deactivated": false
+  },
+  "patch": {
+    "nodes": [
+      "Strict Cleanup",
+      "Format Run Pipeline"
+    ],
+    "strictCleanupVersion": "v14-strict-cleanup-pc14-r1",
+    "strictAlreadyPatched": true,
+    "formatAlreadyPatched": true
+  },
+  "safetyGate": {
+    "productionWorkerModified": false,
+    "productionIntakeModified": false,
+    "productionAdminModified": false,
+    "openRouterCalls": false,
+    "telegramCalls": false,
+    "googleSheetsWrites": false,
+    "sandboxOnlyTarget": "l4FRqKABF25SnXSj",
+    "allowedNodesOnly": true
+  },
+  "tests": {
+    "PC14_T01": {
+      "pass": true,
+      "outputText": "внимательное снятие деталей",
+      "strictCount": 0,
+      "violations": []
+    },
+    "PC14_T02": {
+      "pass": true,
+      "outputText": "для наглядности восприятия",
+      "strictCount": 0
+    },
+    "PC14_T03": {
+      "pass": true,
+      "outputText": "что при этом возможно определить состояние",
+      "strictCount": 0
+    },
+    "PC14_T04": {
+      "pass": true,
+      "outputText": "Затем проводится разборка устройства, включающая внимательное снятие деталей и узлов. для наглядности восприятия информации представлена таблица. Мультиметр применяется для проверки электрических цепей и компонентов, что при этом возможно определить их состояние.",
+      "strictCount": 0,
+      "banner": false
+    },
+    "PC14_T05": {
+      "pass": true,
+      "outputText": "Диагностика фиксирует состояние узлов. Таблица показывает проверяемые параметры. После ремонта выполняется сборка устройства.",
+      "unchanged": true,
+      "strictCount": 0
+    },
+    "PC14_T06": {
+      "pass": true,
+      "strictCount": 1,
+      "banner": true,
+      "bannerSnippet": "Task ID: sandbox-pc14-T06\n\nSEO Pipeline /run\nТаблицы: auto\n\nSTRICT QA REJECT\nМатериал отправлен для проверки, но не готов к публикации.\nПричина: обнаружены strict-маркеры: гибкость\nПеред использованием текст нужно очистить или перегенерировать.\n=== 1. SEO ТЗ ===\n\nH1: Тест\n\nТаблицы:\nRequired: нет\n\nСтруктура:\n\n=== 2. SEO Текст ===\n\n# Тест\n\nгибкость процесса ремонта\n\nТаблицы использованы: нет\n\n=== 3.",
+      "contentPreserved": true
+    },
+    "PC14_T07": {
+      "pass": true,
+      "banner": false,
+      "hasSeoTz": true
+    }
+  },
+  "staticChecks": {
+    "PC14_T08": {
+      "pass": true,
+      "diff": {
+        "changedNodes": [
+          "Format Run Pipeline",
+          "Strict Cleanup"
+        ],
+        "unexpectedChanges": [],
+        "connectionsChanged": false,
+        "onlyAllowedNodesChanged": true
+      },
+      "lockChecks": {
+        "Close Lock Before Sending": true,
+        "Close Single Lock Before Sending": true,
+        "Finish Lock": true
+      },
+      "productionWorkerUnchanged": true,
+      "getNodesUnchanged": true,
+      "targetNodesPatched": true,
+      "note": "jsCode-only diff vs production-clone baseline; lock/get compared to production"
+    }
+  },
+  "diffVerification": {
+    "changedNodes": [
+      "Format Run Pipeline",
+      "Strict Cleanup"
+    ],
+    "unexpectedChanges": [],
+    "connectionsChanged": false,
+    "onlyAllowedNodesChanged": true
+  },
+  "errors": [],
+  "productionSafety": {
+    "workerId": "p4mqb4VuPcemIDlC",
+    "updatedAtBefore": "2026-07-10T09:09:55.305Z",
+    "updatedAtAfter": "2026-07-10T09:09:55.305Z",
+    "productionUnchanged": true,
+    "finalCheck": {
+      "updatedAtUnchanged": true,
+      "nodesCountUnchanged": true
+    }
+  },
+  "testsSummary": {
+    "allPass": true,
+    "PC14_T01": true,
+    "PC14_T02": true,
+    "PC14_T03": true,
+    "PC14_T04": true,
+    "PC14_T05": true,
+    "PC14_T06": true,
+    "PC14_T07": true,
+    "PC14_T08": true
+  },
+  "finalDecision": "PC14_READY_FOR_PRODUCTION_PROPOSAL",
+  "taskStatus": "COMPLETE — PC-14 sandbox patch applied and harness verified"
+}
