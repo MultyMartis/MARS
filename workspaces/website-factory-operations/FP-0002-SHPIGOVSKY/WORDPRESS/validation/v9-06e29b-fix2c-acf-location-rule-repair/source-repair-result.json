@@ -1,0 +1,15 @@
+{
+  "task_id": "V9-06E29B-FIX2C",
+  "generated_at": "2026-07-10T15:22:57.407637+07:00",
+  "strategy": "split_institutional_into_hub_and_child_location_groups",
+  "removed": [
+    "group_fp02_page_institutional"
+  ],
+  "added": [
+    "group_fp02_page_ocentre_hub",
+    "group_fp02_page_institutional_child"
+  ],
+  "invalid_conditional_logic_removed": true,
+  "field_names_preserved": true,
+  "result": "PASS"
+}

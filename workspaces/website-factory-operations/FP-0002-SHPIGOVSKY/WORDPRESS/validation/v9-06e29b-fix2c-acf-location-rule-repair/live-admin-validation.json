@@ -1,0 +1,51 @@
+{
+  "task_id": "V9-06E29B-FIX2C",
+  "generated_at": "2026-07-10T15:30:00+07:00",
+  "acf_api": {
+    "page_id": 11,
+    "groups_attached": [
+      {
+        "key": "group_fp02_page_ocentre_hub",
+        "title": "Page — O-Centre Hub",
+        "ID": 951
+      }
+    ],
+    "group_count": 1,
+    "hub_key_attached": true,
+    "child_key_attached": false,
+    "legacy_institutional_attached": false,
+    "hub_field_count_top": 33,
+    "hub_field_count_flat": 44,
+    "missing_required": [],
+    "child_only_on_page_11": {
+      "institutional_content_sections": false,
+      "institutional_stages": false,
+      "institutional_placeholder_notice": false
+    },
+    "result": "PASS"
+  },
+  "areas": [
+    {"area": "hero", "expected": "visible", "actual": "visible", "result": "PASS"},
+    {"area": "founder_quote", "expected": "visible", "actual": "visible", "result": "PASS"},
+    {"area": "clinic_landscape", "expected": "visible", "actual": "visible", "result": "PASS"},
+    {"area": "narrative_about", "expected": "visible", "actual": "visible", "result": "PASS"},
+    {"area": "who_we_treat", "expected": "visible", "actual": "visible", "result": "PASS"},
+    {"area": "approach", "expected": "visible", "actual": "visible", "result": "PASS"},
+    {"area": "program", "expected": "visible", "actual": "visible", "result": "PASS"},
+    {"area": "infrastructure", "expected": "visible", "actual": "visible", "result": "PASS"},
+    {"area": "shared_block_guidance", "expected": "visible", "actual": "visible", "result": "PASS", "evidence": "label: О центре — Общие блоки (редактирование)"},
+    {"area": "cta_site_phone_guidance", "expected": "visible", "actual": "visible", "result": "PASS", "evidence": "label: О центре — CTA и телефон"}
+  ],
+  "child_only_hidden": [
+    {"field": "institutional_content_sections", "expected": "hidden", "actual": "hidden", "result": "PASS"},
+    {"field": "institutional_stages", "expected": "hidden", "actual": "hidden", "result": "PASS"},
+    {"field": "institutional_placeholder_notice", "expected": "hidden", "actual": "hidden", "result": "PASS"}
+  ],
+  "evidence": {
+    "admin_url": "http://shpigovsky.test/wp-admin/post.php?post=11&action=edit",
+    "html_evidence": "X:/AI MARS/workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e29b-fix2c-acf-location-rule-repair/admin-page-11-field-labels.html",
+    "screenshot_captured": false,
+    "operator_recheck_required": true
+  },
+  "result": "PARTIAL"
+}

@@ -1,0 +1,843 @@
+{
+    "key": "group_fp02_page_ocentre_hub",
+    "title": "Page — O-Centre Hub",
+    "fields": [
+        {
+            "key": "field_fp02_hero_eyebrow_institutional",
+            "label": "Hero eyebrow",
+            "name": "hero_eyebrow",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_hero_title_override_institutional",
+            "label": "Hero H1 override",
+            "name": "hero_title_override",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_hero_lead_institutional",
+            "label": "Hero lead",
+            "name": "hero_lead",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 4
+        },
+        {
+            "key": "field_fp02_hero_media_institutional",
+            "label": "Hero image",
+            "name": "hero_media",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Hero background image. Empty falls back to theme asset o-centre-hero.webp.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "return_format": "array",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_fp02_hero_cta_label_institutional",
+            "label": "Текст кнопки в hero-блоке",
+            "name": "hero_cta_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Индивидуальный текст кнопки для hero-блока этой страницы/услуги. Если оставить пустым, используется текущий текст по умолчанию.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_about_hub_admin_overview",
+            "label": "О центре — Обзор редактирования",
+            "name": "about_hub_admin_overview",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "message": "Блоки ниже соответствуют публичной странице /o-centre/ сверху вниз: Hero → Кто мы → Слово основателя → Кого лечим → Подход → Территория → Программа → Инфраструктура. Общие блоки (специалисты, отзывы, форма) — см. раздел ниже.",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_fp02_about_narrative_heading",
+            "label": "О центре — Кто мы: заголовок",
+            "name": "about_narrative_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Секция #who-we-are. Пустое значение — static V9 fallback.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_about_narrative_lead",
+            "label": "О центре — Кто мы: лид",
+            "name": "about_narrative_lead",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3
+        },
+        {
+            "key": "field_fp02_about_narrative_paragraphs",
+            "label": "О центре — Кто мы: абзацы",
+            "name": "about_narrative_paragraphs",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Bounded repeater. Max rows are enforced in source and validation hooks.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "layout": "row",
+            "button_label": "Добавить",
+            "min": 0,
+            "max": 6,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_about_narrative_paragraph_text",
+                    "label": "Абзац",
+                    "name": "text",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "rows": 3
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_about_who_treat_heading",
+            "label": "О центре — Кого лечим: заголовок",
+            "name": "about_who_treat_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_about_who_treat_intro",
+            "label": "О центре — Кого лечим: вводный текст",
+            "name": "about_who_treat_intro",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 4
+        },
+        {
+            "key": "field_fp02_about_who_treat_lead",
+            "label": "О центре — Кого лечим: лид",
+            "name": "about_who_treat_lead",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 2
+        },
+        {
+            "key": "field_fp02_about_who_treat_spectrum",
+            "label": "О центре — Кого лечим: спектр состояний",
+            "name": "about_who_treat_spectrum",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Bounded repeater. Max rows are enforced in source and validation hooks.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "layout": "row",
+            "button_label": "Добавить",
+            "min": 0,
+            "max": 3,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_about_who_treat_spectrum_title",
+                    "label": "Заголовок",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_fp02_about_who_treat_spectrum_text",
+                    "label": "Текст",
+                    "name": "text",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "rows": 3
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_about_who_treat_callout",
+            "label": "О центре — Кого лечим: выноска",
+            "name": "about_who_treat_callout",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 2
+        },
+        {
+            "key": "field_fp02_about_who_treat_cards",
+            "label": "О центре — Кого лечим: карточки",
+            "name": "about_who_treat_cards",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Bounded repeater. Max rows are enforced in source and validation hooks.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "layout": "row",
+            "button_label": "Добавить",
+            "min": 0,
+            "max": 4,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_about_who_treat_cards_title",
+                    "label": "Заголовок",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_fp02_about_who_treat_cards_text",
+                    "label": "Текст",
+                    "name": "text",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "rows": 3
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_about_approach_heading",
+            "label": "О центре — Подход: заголовок",
+            "name": "about_approach_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_about_approach_highlight",
+            "label": "О центре — Подход: акцент",
+            "name": "about_approach_highlight",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3
+        },
+        {
+            "key": "field_fp02_about_approach_intro",
+            "label": "О центре — Подход: вводный текст",
+            "name": "about_approach_intro",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3
+        },
+        {
+            "key": "field_fp02_about_founder_quote_paragraphs",
+            "label": "О центре — Слово основателя: абзацы",
+            "name": "about_founder_quote_paragraphs",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Секция founder-quote на /o-centre/. Пустые значения — static V9 fallback.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "layout": "row",
+            "button_label": "Добавить",
+            "min": 0,
+            "max": 6,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_about_founder_quote_paragraph_text",
+                    "label": "Абзац",
+                    "name": "text",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "rows": 3
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_about_founder_name",
+            "label": "О центре — Слово основателя: имя",
+            "name": "about_founder_name",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_about_founder_role",
+            "label": "О центре — Слово основателя: должность",
+            "name": "about_founder_role",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_about_founder_photo",
+            "label": "О центре — Слово основателя: фото",
+            "name": "about_founder_photo",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Пустое значение — theme asset founder-sergey-shpigovsky.png.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "return_format": "array",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_fp02_about_founder_cta_label",
+            "label": "О центре — Слово основателя: текст кнопки",
+            "name": "about_founder_cta_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_about_clinic_landscape_image",
+            "label": "О центре — Территория клиники: изображение",
+            "name": "about_clinic_landscape_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Пустое значение — theme asset shpigovsky-clinic-landscape.webp.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "return_format": "array",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_fp02_about_clinic_landscape_alt",
+            "label": "О центре — Территория клиники: alt-текст",
+            "name": "about_clinic_landscape_alt",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_about_hub_admin_note_shared_blocks",
+            "label": "О центре — Общие блоки (редактирование)",
+            "name": "about_hub_admin_note_shared_blocks",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "message": "Специалисты: Настройки сайта → fp02-block-specialists. Отзывы: меню «Отзывы» (fp02-reviews). Финальная форма: Настройки сайта → fp02-block-final-form.",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_fp02_about_hub_admin_note_cta_phone",
+            "label": "О центре — CTA и телефон",
+            "name": "about_hub_admin_note_cta_phone",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "message": "CTA-ленты program-cta-band на странице используют шаблонный fallback. Телефон: Настройки сайта → контакты (phone_primary).",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_fp02_about_program_heading",
+            "label": "О центре — Программа: заголовок",
+            "name": "about_program_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_about_program_lead",
+            "label": "О центре — Программа: лид",
+            "name": "about_program_lead",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 2
+        },
+        {
+            "key": "field_fp02_about_program_intro",
+            "label": "О центре — Программа: вводный текст 1",
+            "name": "about_program_intro",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3
+        },
+        {
+            "key": "field_fp02_about_program_intro2",
+            "label": "О центре — Программа: вводный текст 2",
+            "name": "about_program_intro2",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3
+        },
+        {
+            "key": "field_fp02_about_program_items",
+            "label": "О центре — Программа: направления",
+            "name": "about_program_items",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Bounded repeater. Max rows are enforced in source and validation hooks.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "layout": "row",
+            "button_label": "Добавить",
+            "min": 0,
+            "max": 4,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_about_program_item_title",
+                    "label": "Заголовок",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_fp02_about_program_item_image",
+                    "label": "Изображение",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "return_format": "array"
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_infrastructure_g0_g5",
+            "label": "Наш Дом — Infrastructure G0-G5",
+            "name": "infrastructure_g0_g5",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "G0 intro + G1-G4 bullets for /o-centre/ hub. Images use static V9 theme assets when media empty.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "layout": "row",
+            "button_label": "Добавить",
+            "min": 6,
+            "max": 6,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_infrastructure_g_title",
+                    "label": "Заголовок",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_fp02_infrastructure_g_text",
+                    "label": "Текст",
+                    "name": "text",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "rows": 3
+                },
+                {
+                    "key": "field_fp02_infrastructure_g_media",
+                    "label": "Медиа",
+                    "name": "media",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "return_format": "array"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "11"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "FP-0002 V9-06C canonical source field group. Runtime registration occurs only after delivery authorization.",
+    "show_in_rest": 0,
+    "modified": 1784200800
+}

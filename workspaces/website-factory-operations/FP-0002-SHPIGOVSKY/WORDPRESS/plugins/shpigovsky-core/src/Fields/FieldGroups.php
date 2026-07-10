@@ -27,7 +27,7 @@ final class FieldGroups implements ModuleInterface {
 	/**
 	 * Deterministic modified timestamp for canonical JSON source.
 	 */
-	public const MODIFIED = 1784044800;
+	public const MODIFIED = 1784200800;
 
 	/**
 	 * {@inheritdoc}
@@ -76,7 +76,8 @@ final class FieldGroups implements ModuleInterface {
 			self::service_relationships(),
 			self::page_home(),
 			self::page_services_hub(),
-			self::page_institutional(),
+			self::page_ocentre_hub(),
+			self::page_institutional_child(),
 			self::page_contacts(),
 			self::page_reviews(),
 			self::page_legal(),
@@ -375,16 +376,14 @@ final class FieldGroups implements ModuleInterface {
 	}
 
 	/**
-	 * Institutional page group.
+	 * O-centre hub page group (page #11 only).
 	 *
 	 * @return array<string, mixed>
 	 */
-	private static function page_institutional() {
-		$hub_only = self::about_hub_conditional();
-
+	private static function page_ocentre_hub() {
 		return self::group(
-			'group_fp02_page_institutional',
-			'Page — Institutional',
+			'group_fp02_page_ocentre_hub',
+			'Page — O-Centre Hub',
 			array(
 				self::field( 'field_fp02_hero_eyebrow_institutional', 'Hero eyebrow', 'hero_eyebrow', 'text' ),
 				self::field( 'field_fp02_hero_title_override_institutional', 'Hero H1 override', 'hero_title_override', 'text' ),
@@ -410,13 +409,22 @@ final class FieldGroups implements ModuleInterface {
 					)
 				),
 				self::field(
+					'field_fp02_about_hub_admin_overview',
+					'О центре — Обзор редактирования',
+					'about_hub_admin_overview',
+					'message',
+					array(
+						'message'   => 'Блоки ниже соответствуют публичной странице /o-centre/ сверху вниз: Hero → Кто мы → Слово основателя → Кого лечим → Подход → Территория → Программа → Инфраструктура. Общие блоки (специалисты, отзывы, форма) — см. раздел ниже.',
+						'new_lines' => 'br',
+					)
+				),
+				self::field(
 					'field_fp02_about_narrative_heading',
 					'О центре — Кто мы: заголовок',
 					'about_narrative_heading',
 					'text',
 					array(
-						'conditional_logic' => $hub_only,
-						'instructions'      => 'Секция #who-we-are. Пустое значение — static V9 fallback.',
+						'instructions' => 'Секция #who-we-are. Пустое значение — static V9 fallback.',
 					)
 				),
 				self::field(
@@ -425,8 +433,7 @@ final class FieldGroups implements ModuleInterface {
 					'about_narrative_lead',
 					'textarea',
 					array(
-						'conditional_logic' => $hub_only,
-						'rows'              => 3,
+						'rows' => 3,
 					)
 				),
 				self::repeater(
@@ -436,16 +443,13 @@ final class FieldGroups implements ModuleInterface {
 					6,
 					array(
 						self::field( 'field_fp02_about_narrative_paragraph_text', 'Абзац', 'text', 'textarea', array( 'rows' => 3 ) ),
-					),
-					0,
-					array( 'conditional_logic' => $hub_only )
+					)
 				),
 				self::field(
 					'field_fp02_about_who_treat_heading',
 					'О центре — Кого лечим: заголовок',
 					'about_who_treat_heading',
-					'text',
-					array( 'conditional_logic' => $hub_only )
+					'text'
 				),
 				self::field(
 					'field_fp02_about_who_treat_intro',
@@ -453,8 +457,7 @@ final class FieldGroups implements ModuleInterface {
 					'about_who_treat_intro',
 					'textarea',
 					array(
-						'conditional_logic' => $hub_only,
-						'rows'              => 4,
+						'rows' => 4,
 					)
 				),
 				self::field(
@@ -463,8 +466,7 @@ final class FieldGroups implements ModuleInterface {
 					'about_who_treat_lead',
 					'textarea',
 					array(
-						'conditional_logic' => $hub_only,
-						'rows'              => 2,
+						'rows' => 2,
 					)
 				),
 				self::repeater(
@@ -472,9 +474,7 @@ final class FieldGroups implements ModuleInterface {
 					'О центре — Кого лечим: спектр состояний',
 					'about_who_treat_spectrum',
 					3,
-					self::title_text_subfields( 'about_who_treat_spectrum' ),
-					0,
-					array( 'conditional_logic' => $hub_only )
+					self::title_text_subfields( 'about_who_treat_spectrum' )
 				),
 				self::field(
 					'field_fp02_about_who_treat_callout',
@@ -482,8 +482,7 @@ final class FieldGroups implements ModuleInterface {
 					'about_who_treat_callout',
 					'textarea',
 					array(
-						'conditional_logic' => $hub_only,
-						'rows'              => 2,
+						'rows' => 2,
 					)
 				),
 				self::repeater(
@@ -491,16 +490,13 @@ final class FieldGroups implements ModuleInterface {
 					'О центре — Кого лечим: карточки',
 					'about_who_treat_cards',
 					4,
-					self::title_text_subfields( 'about_who_treat_cards' ),
-					0,
-					array( 'conditional_logic' => $hub_only )
+					self::title_text_subfields( 'about_who_treat_cards' )
 				),
 				self::field(
 					'field_fp02_about_approach_heading',
 					'О центре — Подход: заголовок',
 					'about_approach_heading',
-					'text',
-					array( 'conditional_logic' => $hub_only )
+					'text'
 				),
 				self::field(
 					'field_fp02_about_approach_highlight',
@@ -508,8 +504,7 @@ final class FieldGroups implements ModuleInterface {
 					'about_approach_highlight',
 					'textarea',
 					array(
-						'conditional_logic' => $hub_only,
-						'rows'              => 3,
+						'rows' => 3,
 					)
 				),
 				self::field(
@@ -518,8 +513,7 @@ final class FieldGroups implements ModuleInterface {
 					'about_approach_intro',
 					'textarea',
 					array(
-						'conditional_logic' => $hub_only,
-						'rows'              => 3,
+						'rows' => 3,
 					)
 				),
 				self::repeater(
@@ -532,23 +526,20 @@ final class FieldGroups implements ModuleInterface {
 					),
 					0,
 					array(
-						'conditional_logic' => $hub_only,
-						'instructions'      => 'Секция founder-quote на /o-centre/. Пустые значения — static V9 fallback.',
+						'instructions' => 'Секция founder-quote на /o-centre/. Пустые значения — static V9 fallback.',
 					)
 				),
 				self::field(
 					'field_fp02_about_founder_name',
 					'О центре — Слово основателя: имя',
 					'about_founder_name',
-					'text',
-					array( 'conditional_logic' => $hub_only )
+					'text'
 				),
 				self::field(
 					'field_fp02_about_founder_role',
 					'О центре — Слово основателя: должность',
 					'about_founder_role',
-					'text',
-					array( 'conditional_logic' => $hub_only )
+					'text'
 				),
 				self::field(
 					'field_fp02_about_founder_photo',
@@ -556,18 +547,16 @@ final class FieldGroups implements ModuleInterface {
 					'about_founder_photo',
 					'image',
 					array(
-						'conditional_logic' => $hub_only,
-						'return_format'     => 'array',
-						'preview_size'      => 'medium',
-						'instructions'      => 'Пустое значение — theme asset founder-sergey-shpigovsky.png.',
+						'return_format' => 'array',
+						'preview_size'  => 'medium',
+						'instructions'  => 'Пустое значение — theme asset founder-sergey-shpigovsky.png.',
 					)
 				),
 				self::field(
 					'field_fp02_about_founder_cta_label',
 					'О центре — Слово основателя: текст кнопки',
 					'about_founder_cta_label',
-					'text',
-					array( 'conditional_logic' => $hub_only )
+					'text'
 				),
 				self::field(
 					'field_fp02_about_clinic_landscape_image',
@@ -575,18 +564,16 @@ final class FieldGroups implements ModuleInterface {
 					'about_clinic_landscape_image',
 					'image',
 					array(
-						'conditional_logic' => $hub_only,
-						'return_format'     => 'array',
-						'preview_size'      => 'medium',
-						'instructions'      => 'Пустое значение — theme asset shpigovsky-clinic-landscape.webp.',
+						'return_format' => 'array',
+						'preview_size'  => 'medium',
+						'instructions'  => 'Пустое значение — theme asset shpigovsky-clinic-landscape.webp.',
 					)
 				),
 				self::field(
 					'field_fp02_about_clinic_landscape_alt',
 					'О центре — Территория клиники: alt-текст',
 					'about_clinic_landscape_alt',
-					'text',
-					array( 'conditional_logic' => $hub_only )
+					'text'
 				),
 				self::field(
 					'field_fp02_about_hub_admin_note_shared_blocks',
@@ -594,17 +581,25 @@ final class FieldGroups implements ModuleInterface {
 					'about_hub_admin_note_shared_blocks',
 					'message',
 					array(
-						'conditional_logic' => $hub_only,
-						'message'           => 'Специалисты: Настройки сайта → fp02-block-specialists. Отзывы: меню «Отзывы» (fp02-reviews). Финальная форма: Настройки сайта → fp02-block-final-form. Телефон в CTA-лентах: Настройки сайта → контакты (phone_primary).',
-						'new_lines'         => 'br',
+						'message'   => 'Специалисты: Настройки сайта → fp02-block-specialists. Отзывы: меню «Отзывы» (fp02-reviews). Финальная форма: Настройки сайта → fp02-block-final-form.',
+						'new_lines' => 'br',
+					)
+				),
+				self::field(
+					'field_fp02_about_hub_admin_note_cta_phone',
+					'О центре — CTA и телефон',
+					'about_hub_admin_note_cta_phone',
+					'message',
+					array(
+						'message'   => 'CTA-ленты program-cta-band на странице используют шаблонный fallback. Телефон: Настройки сайта → контакты (phone_primary).',
+						'new_lines' => 'br',
 					)
 				),
 				self::field(
 					'field_fp02_about_program_heading',
 					'О центре — Программа: заголовок',
 					'about_program_heading',
-					'text',
-					array( 'conditional_logic' => $hub_only )
+					'text'
 				),
 				self::field(
 					'field_fp02_about_program_lead',
@@ -612,8 +607,7 @@ final class FieldGroups implements ModuleInterface {
 					'about_program_lead',
 					'textarea',
 					array(
-						'conditional_logic' => $hub_only,
-						'rows'              => 2,
+						'rows' => 2,
 					)
 				),
 				self::field(
@@ -622,8 +616,7 @@ final class FieldGroups implements ModuleInterface {
 					'about_program_intro',
 					'textarea',
 					array(
-						'conditional_logic' => $hub_only,
-						'rows'              => 3,
+						'rows' => 3,
 					)
 				),
 				self::field(
@@ -632,8 +625,7 @@ final class FieldGroups implements ModuleInterface {
 					'about_program_intro2',
 					'textarea',
 					array(
-						'conditional_logic' => $hub_only,
-						'rows'              => 3,
+						'rows' => 3,
 					)
 				),
 				self::repeater(
@@ -644,13 +636,8 @@ final class FieldGroups implements ModuleInterface {
 					array(
 						self::field( 'field_fp02_about_program_item_title', 'Заголовок', 'title', 'text' ),
 						self::field( 'field_fp02_about_program_item_image', 'Изображение', 'image', 'image', array( 'return_format' => 'array' ) ),
-					),
-					0,
-					array( 'conditional_logic' => $hub_only )
+					)
 				),
-				self::field( 'field_fp02_institutional_placeholder_notice', 'Placeholder notice', 'institutional_placeholder_notice', 'textarea', array( 'rows' => 3 ) ),
-				self::repeater( 'field_fp02_institutional_content_sections', 'Content sections', 'institutional_content_sections', 8, self::media_text_subfields( 'institutional_section' ) ),
-				self::repeater( 'field_fp02_institutional_stages', 'Stages', 'institutional_stages', 8, self::title_text_subfields( 'institutional_stages' ) ),
 				self::repeater(
 					'field_fp02_infrastructure_g0_g5',
 					'Наш Дом — Infrastructure G0-G5',
@@ -659,29 +646,59 @@ final class FieldGroups implements ModuleInterface {
 					self::media_text_subfields( 'infrastructure_g' ),
 					6,
 					array(
-						'conditional_logic' => $hub_only,
-						'instructions'      => 'G0 intro + G1-G4 bullets for /o-centre/ hub. Images use static V9 theme assets when media empty.',
+						'instructions' => 'G0 intro + G1-G4 bullets for /o-centre/ hub. Images use static V9 theme assets when media empty.',
 					)
 				),
 			),
-			self::location( 'page_template', '==', 'page-templates/institutional.php' )
+			self::location_page_id( 11 )
 		);
 	}
 
 	/**
-	 * Conditional logic: /o-centre/ hub page only (ID 11).
+	 * Institutional child pages group (pages #12-#16).
 	 *
-	 * @return array<int, array<int, array<string, string>>>
+	 * @return array<string, mixed>
 	 */
-	private static function about_hub_conditional() {
-		return array(
+	private static function page_institutional_child() {
+		return self::group(
+			'group_fp02_page_institutional_child',
+			'Page — Institutional Child',
 			array(
-				array(
-					'param'    => 'page',
-					'operator' => '==',
-					'value'    => '11',
+				self::field(
+					'field_fp02_institutional_child_pages_note',
+					'Institutional child pages — note',
+					'institutional_child_pages_note',
+					'message',
+					array(
+						'message'   => 'Content sections и Stages — для дочерних institutional-страниц. На странице «О центре» (#11) не используются публичным шаблоном.',
+						'new_lines' => 'br',
+					)
+				),
+				self::field(
+					'field_fp02_institutional_placeholder_notice',
+					'Placeholder notice',
+					'institutional_placeholder_notice',
+					'textarea',
+					array(
+						'rows' => 3,
+					)
+				),
+				self::repeater(
+					'field_fp02_institutional_content_sections',
+					'Content sections',
+					'institutional_content_sections',
+					8,
+					self::media_text_subfields( 'institutional_section' )
+				),
+				self::repeater(
+					'field_fp02_institutional_stages',
+					'Stages',
+					'institutional_stages',
+					8,
+					self::title_text_subfields( 'institutional_stages' )
 				),
 			),
+			self::institutional_child_locations()
 		);
 	}
 
@@ -1261,12 +1278,14 @@ final class FieldGroups implements ModuleInterface {
 	 * @param array<int, mixed>   $location Location.
 	 * @return array<string, mixed>
 	 */
-	private static function group( $key, $title, array $fields, array $location ) {
+	private static function group( $key, $title, array $fields, $location ) {
+		$location_rules = ( isset( $location[0]['param'] ) ) ? array( $location ) : $location;
+
 		return array(
 			'key'                   => $key,
 			'title'                 => $title,
 			'fields'                => $fields,
-			'location'              => array( $location ),
+			'location'              => $location_rules,
 			'menu_order'            => 0,
 			'position'              => 'normal',
 			'style'                 => 'default',
@@ -1360,6 +1379,63 @@ final class FieldGroups implements ModuleInterface {
 				'operator' => $operator,
 				'value'    => $value,
 			),
+		);
+	}
+
+	/**
+	 * Location rule: specific page ID.
+	 *
+	 * @param int $page_id Page ID.
+	 * @return array<int, array<string, string>>
+	 */
+	private static function location_page_id( $page_id ) {
+		return array(
+			array(
+				'param'    => 'post_type',
+				'operator' => '==',
+				'value'    => 'page',
+			),
+			array(
+				'param'    => 'page',
+				'operator' => '==',
+				'value'    => (string) $page_id,
+			),
+		);
+	}
+
+	/**
+	 * Location rule: institutional child page by ID.
+	 *
+	 * @param int $page_id Page ID.
+	 * @return array<int, array<string, string>>
+	 */
+	private static function location_institutional_child_page( $page_id ) {
+		return array(
+			array(
+				'param'    => 'page_template',
+				'operator' => '==',
+				'value'    => 'page-templates/institutional.php',
+			),
+			array(
+				'param'    => 'page',
+				'operator' => '==',
+				'value'    => (string) $page_id,
+			),
+		);
+	}
+
+	/**
+	 * OR location rules for institutional placeholder pages #12-#16.
+	 *
+	 * @return array<int, array<int, array<string, string>>>
+	 */
+	private static function institutional_child_locations() {
+		return array(
+			self::location_institutional_child_page( 12 ),
+			self::location_institutional_child_page( 13 ),
+			self::location_institutional_child_page( 14 ),
+			self::location_institutional_child_page( 15 ),
+			self::location_institutional_child_page( 16 ),
 		);
 	}
 

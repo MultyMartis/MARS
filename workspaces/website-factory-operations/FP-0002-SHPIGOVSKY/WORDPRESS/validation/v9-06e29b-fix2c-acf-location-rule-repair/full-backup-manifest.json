@@ -1,0 +1,28 @@
+{
+  "task_id": "V9-06E29B-FIX2C",
+  "generated_at": "2026-07-10T15:22:57.633143+07:00",
+  "backup_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e29b-fix2c-acf-location-rule-repair-pre-20260710-152257",
+  "db_dump": {
+    "path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e29b-fix2c-acf-location-rule-repair-pre-20260710-152257/mars_wp_fp0002.sql",
+    "sha256": "d28af9ea322d78faa295b3ab92a74922da880ac8353ab9707a879f920acc5abd",
+    "database": "mars_wp_fp0002"
+  },
+  "acf_groups_export": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e29b-fix2c-acf-location-rule-repair-pre-20260710-152257/acf-groups-export.json",
+  "page_11_pre_state": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e29b-fix2c-acf-location-rule-repair-pre-20260710-152257/page-11-pre-state.json",
+  "o_centre_html_pre": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e29b-fix2c-acf-location-rule-repair-pre-20260710-152257/o-centre-html-pre.html",
+  "runtime_candidate_snapshot": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e29b-fix2c-acf-location-rule-repair-pre-20260710-152257/runtime-candidate-files",
+  "restore_instructions": {
+    "db": "mysql -h127.0.0.1 -uroot mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e29b-fix2c-acf-location-rule-repair-pre-20260710-152257\\mars_wp_fp0002.sql\"",
+    "page_11_postmeta": "Restore from X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e29b-fix2c-acf-location-rule-repair-pre-20260710-152257\\page-11-pre-state.json",
+    "source_files": "git checkout -- exact FIX2C paths",
+    "runtime_files": "Copy from X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e29b-fix2c-acf-location-rule-repair-pre-20260710-152257\\runtime-candidate-files",
+    "validation_routes": [
+      "/",
+      "/blog/",
+      "/uslugi/zavisimosti/",
+      "/privacy-policy/",
+      "/o-centre/"
+    ]
+  },
+  "result": "PASS"
+}

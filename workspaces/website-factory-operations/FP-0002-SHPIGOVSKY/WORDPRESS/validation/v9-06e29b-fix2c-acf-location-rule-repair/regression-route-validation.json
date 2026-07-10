@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-07-10T15:23:08.657445+07:00",
+  "routes": [
+    {
+      "route": "/",
+      "http": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/blog/",
+      "http": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "http": 200,
+      "result": "PASS"
+    },
+    {
+      "route": "/privacy-policy/",
+      "http": 200,
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS"
+}
