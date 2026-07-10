@@ -1,0 +1,228 @@
+{
+  "date": "2026-07-10",
+  "harnessMethod": "PRODUCTION_PATCH_APPLIED_HARNESS_LOCAL",
+  "production": {
+    "id": "p4mqb4VuPcemIDlC",
+    "name": "SEO Content Agent Beta.v14 - Worker"
+  },
+  "baseline": {
+    "id": "p4mqb4VuPcemIDlC",
+    "name": "SEO Content Agent Beta.v14 - Worker",
+    "active": true,
+    "updatedAt": "2026-07-10T09:09:55.305Z",
+    "nodeCount": 91,
+    "strictCleanup": {
+      "exists": true,
+      "version": "v13-strict-cleanup-after-text-repair",
+      "alreadyPatched": false
+    },
+    "formatRunPipeline": {
+      "exists": true,
+      "alreadyPatched": false,
+      "hasBanner": false
+    },
+    "pc07": {
+      "pass": true,
+      "taskIdValue": "[present]",
+      "schemaRemoved": false,
+      "exprOk": true
+    }
+  },
+  "patch": {
+    "nodes": [
+      "Strict Cleanup",
+      "Format Run Pipeline"
+    ],
+    "strictCleanupVersion": "v14-strict-cleanup-pc14-r1",
+    "strictAlreadyPatched": false,
+    "formatAlreadyPatched": false,
+    "source": "sandbox-pc14 after-patch sanitized jsCode"
+  },
+  "safetyGate": {
+    "productionWorkerModified": true,
+    "productionIntakeModified": false,
+    "productionAdminModified": false,
+    "openRouterCalls": false,
+    "telegramCalls": false,
+    "googleSheetsWrites": false,
+    "allowedNodesOnly": true,
+    "targetWorkflowId": "p4mqb4VuPcemIDlC"
+  },
+  "diffVerification": {
+    "nodeDiff": {
+      "changedNodes": [
+        "Format Run Pipeline",
+        "Strict Cleanup"
+      ],
+      "unexpectedChanges": [
+        {
+          "name": "Send Telegram Local",
+          "reason": "modified"
+        },
+        {
+          "name": "Send Telegram Single",
+          "reason": "modified"
+        },
+        {
+          "name": "Send Telegram Run",
+          "reason": "modified"
+        },
+        {
+          "name": "Send Telegram Memory Get",
+          "reason": "modified"
+        },
+        {
+          "name": "Webhook",
+          "reason": "modified"
+        },
+        {
+          "name": "Status Outline",
+          "reason": "modified"
+        },
+        {
+          "name": "Status Strategy",
+          "reason": "modified"
+        },
+        {
+          "name": "Status Text",
+          "reason": "modified"
+        },
+        {
+          "name": "Status SEO QA",
+          "reason": "modified"
+        },
+        {
+          "name": "Status Factcheck",
+          "reason": "modified"
+        },
+        {
+          "name": "Status Final",
+          "reason": "modified"
+        },
+        {
+          "name": "Wait",
+          "reason": "modified"
+        },
+        {
+          "name": "Status Complete",
+          "reason": "modified"
+        },
+        {
+          "name": "Status Single",
+          "reason": "modified"
+        },
+        {
+          "name": "Status Single Complete",
+          "reason": "modified"
+        }
+      ],
+      "connectionsChanged": false,
+      "onlyAllowedNodesChanged": false
+    },
+    "jsDiff": {
+      "changedNodes": [
+        "Format Run Pipeline",
+        "Strict Cleanup"
+      ],
+      "unexpectedChanges": [],
+      "connectionsChanged": false,
+      "onlyAllowedNodesChanged": true
+    }
+  },
+  "guardComparison": {
+    "pass": true,
+    "mismatches": []
+  },
+  "tests": {
+    "PC14_PROD_01A": {
+      "pass": true,
+      "outputText": "внимательное снятие деталей",
+      "strictCount": 0,
+      "violations": []
+    },
+    "PC14_PROD_01B": {
+      "pass": true,
+      "outputText": "для наглядности восприятия",
+      "strictCount": 0
+    },
+    "PC14_PROD_01C": {
+      "pass": true,
+      "outputText": "что при этом возможно определить состояние",
+      "strictCount": 0
+    },
+    "PC14_PROD_01D": {
+      "pass": true,
+      "outputText": "Затем проводится разборка устройства, включающая внимательное снятие деталей и узлов. для наглядности восприятия информации представлена таблица. Мультиметр применяется для проверки электрических цепей и компонентов, что при этом возможно определить их состояние.",
+      "strictCount": 0,
+      "banner": false
+    },
+    "PC14_PROD_01E": {
+      "pass": true,
+      "outputText": "Диагностика фиксирует состояние узлов. Таблица показывает проверяемые параметры. После ремонта выполняется сборка устройства.",
+      "unchanged": true,
+      "strictCount": 0
+    },
+    "PC14_PROD_01F": {
+      "pass": true,
+      "strictCount": 1,
+      "banner": true,
+      "bannerSnippet": "Task ID: sandbox-pc14-T06\n\nSEO Pipeline /run\nТаблицы: auto\n\nSTRICT QA REJECT\nМатериал отправлен для проверки, но не готов к публикации.\nПричина: обнаружены strict-маркеры: гибкость\nПеред использованием текст нужно очистить или перегенерировать.\n=== 1. SEO ТЗ ===\n\nH1: Тест\n\nТаблицы:\nRequired: нет\n\nСтруктура:\n\n=== 2. SEO Текст ===\n\n# Тест\n\nгибкость процесса ремонта\n\nТаблицы использованы: нет\n\n=== 3.",
+      "contentPreserved": true
+    },
+    "PC14_PROD_01G": {
+      "pass": true,
+      "banner": false,
+      "hasSeoTz": true
+    },
+    "PC14_PROD_01H": {
+      "pass": true,
+      "diff": {
+        "changedNodes": [
+          "Format Run Pipeline",
+          "Strict Cleanup"
+        ],
+        "unexpectedChanges": [],
+        "connectionsChanged": false,
+        "onlyAllowedNodesChanged": true
+      },
+      "lockChecks": {
+        "Close Lock Before Sending": true,
+        "Close Single Lock Before Sending": true,
+        "Finish Lock": true
+      },
+      "getNodesUnchanged": true
+    }
+  },
+  "rollback": {
+    "attempted": false
+  },
+  "errors": [],
+  "postApply": {
+    "id": "p4mqb4VuPcemIDlC",
+    "name": "SEO Content Agent Beta.v14 - Worker",
+    "active": true,
+    "activeUnchanged": true,
+    "updatedAt": "2026-07-10T14:58:37.818Z",
+    "nodeCount": 91,
+    "nodeCountUnchanged": true,
+    "pc07": {
+      "pass": true,
+      "taskIdValue": "[present]",
+      "schemaRemoved": false,
+      "exprOk": true
+    }
+  },
+  "testsSummary": {
+    "PC14_PROD_01A": true,
+    "PC14_PROD_01B": true,
+    "PC14_PROD_01C": true,
+    "PC14_PROD_01D": true,
+    "PC14_PROD_01E": true,
+    "PC14_PROD_01F": true,
+    "PC14_PROD_01G": true,
+    "PC14_PROD_01H": true,
+    "allPass": true
+  },
+  "finalDecision": "PC14_PRODUCTION_APPLIED_HARNESS_VERIFIED_AWAITING_OPERATOR_SMOKE",
+  "taskStatus": "COMPLETE — PC-14 production patch applied and local harness verified"
+}

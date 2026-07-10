@@ -1,0 +1,81 @@
+{
+  "nodeDiff": {
+    "changedNodes": [
+      "Format Run Pipeline",
+      "Strict Cleanup"
+    ],
+    "unexpectedChanges": [
+      {
+        "name": "Send Telegram Local",
+        "reason": "modified"
+      },
+      {
+        "name": "Send Telegram Single",
+        "reason": "modified"
+      },
+      {
+        "name": "Send Telegram Run",
+        "reason": "modified"
+      },
+      {
+        "name": "Send Telegram Memory Get",
+        "reason": "modified"
+      },
+      {
+        "name": "Webhook",
+        "reason": "modified"
+      },
+      {
+        "name": "Status Outline",
+        "reason": "modified"
+      },
+      {
+        "name": "Status Strategy",
+        "reason": "modified"
+      },
+      {
+        "name": "Status Text",
+        "reason": "modified"
+      },
+      {
+        "name": "Status SEO QA",
+        "reason": "modified"
+      },
+      {
+        "name": "Status Factcheck",
+        "reason": "modified"
+      },
+      {
+        "name": "Status Final",
+        "reason": "modified"
+      },
+      {
+        "name": "Wait",
+        "reason": "modified"
+      },
+      {
+        "name": "Status Complete",
+        "reason": "modified"
+      },
+      {
+        "name": "Status Single",
+        "reason": "modified"
+      },
+      {
+        "name": "Status Single Complete",
+        "reason": "modified"
+      }
+    ],
+    "connectionsChanged": false,
+    "onlyAllowedNodesChanged": false
+  },
+  "jsDiff": {
+    "changedNodes": [
+      "Format Run Pipeline",
+      "Strict Cleanup"
+    ],
+    "unexpectedChanges": [],
+    "connectionsChanged": false,
+    "onlyAllowedNodesChanged": true
+  }
+}
