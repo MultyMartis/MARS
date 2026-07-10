@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-10 (Run 4.256 — Local runtime monitor sync **COMPLETE** — monitor script `f6586600` synced into `X:\AI MARS`; Task Scheduler manual run `2026-07-10_18-41-12`; onboarding needs **0**; classification **HYGIENE_REVIEW_REQUIRED**; checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01`)
+**Last updated:** 2026-07-10 (MARS-INFRA-RUNTIME-SPLIT-SITE-002-01 — scheduler detached from dirty `X:\AI MARS`; runtime checkout `X:\AI MARS STORAGE\runtime-checkouts\site-002-monitor\repo`; manual run `2026-07-10_20-17-16`; onboarding needs **0**; checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01`)
 
 ---
 

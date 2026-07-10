@@ -1101,7 +1101,7 @@ Before **any** task touching **trust block**, **certificates**, **dealers form**
 - New sitemap URLs → classify: PRODUCT_PDP vs CATEGORY_PLP vs CATEGORY_HUB vs TECHNICAL
 - **Onboard** new category PLP/hub (admin `meta_description` only) — do **not** delete/hide/noindex by default
 - PDP meta → product generator track; category PLP meta → admin category SEO track
-- Post-import monitoring: diff sitemap for new CATEGORY_PLP with missing meta — tool `site-002-prod-post-1c-catalog-onboarding-monitor-02.py`; **local scheduler verified** (Run 4.216) via `site-002-post-1c-monitor-runner.ps1` + Windows Task `MARS_SITE_002_Post_1C_Catalog_Monitor` — **enabled**; hardened artifacts **CONFIRMED_MANUALLY** Run 4.251/4.252/4.255/4.256; Run **4.255** allowlist nested Lari paths + ids **362/363**; Run **4.256** synced monitor into `X:\AI MARS`; manual run `2026-07-10_18-41-12` — classification **HYGIENE_REVIEW_REQUIRED**, onboarding needs **0** · [runtime sync report](../reports/SITE-002-LOCAL-RUNTIME-MONITOR-SYNC-01.md) · [entrypoint report](../reports/SITE-002-PROD-CATEGORY-ENTRYPOINT-ONBOARDING-01.md) · [meta report](../reports/SITE-002-PROD-CATEGORY-META-ONBOARDING-01.md) · [runbook](../runbooks/SITE-002-POST-1C-MONITOR-AUTOMATION-RUNBOOK.md)
+- Post-import monitoring: diff sitemap for new CATEGORY_PLP with missing meta — tool `site-002-prod-post-1c-catalog-onboarding-monitor-02.py`; **local scheduler verified** (Run 4.216) via `site-002-post-1c-monitor-runner.ps1` + Windows Task `MARS_SITE_002_Post_1C_Catalog_Monitor` — **enabled**; hardened artifacts **CONFIRMED_MANUALLY** Run 4.251/4.252/4.255/4.256/4.257; Run **4.255** allowlist nested Lari paths + ids **362/363**; Run **4.257** scheduler detached from dirty `X:\AI MARS` → runtime checkout `X:\AI MARS STORAGE\runtime-checkouts\site-002-monitor\repo` @ `56f9bae7`; manual run `2026-07-10_20-17-16` — classification **HYGIENE_REVIEW_REQUIRED**, onboarding needs **0** · [infra runtime split report](../../mars-infrastructure/reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-01.md) · [runtime checkouts](../../mars-infrastructure/runtime-checkouts.md) · [runbook](../runbooks/SITE-002-POST-1C-MONITOR-AUTOMATION-RUNBOOK.md)
 - Onboarded 2026-07-07: category ids **360** (konditerskiy-inventar), **361** (formy-konditerskie), **88** (lari), **141** (skladskie-lari), **140** (proizvodstvennye-lari under Лари)
 - **Parent-aware resolution** required when admin names duplicate (e.g. «Производственные» id 140 under Лари vs id 130 under Шкафы)
 - Deferred Run 4.210 `/lari/proizvodstvennye-lari` — **RESOLVED** Run 4.211 → category_id **140**, HIGH confidence
@@ -1192,12 +1192,13 @@ Before **any** task touching **trust block**, **certificates**, **dealers form**
 - **Checkpoint:** `SITE-002-STABLE-PROD-AUDIT-WAVE-E-INFO-META-H1-01`
 - Tool: `site-002-prod-audit-wave-e-info-meta-h1-01.py` · mirrors `manufacturer-site-002-prod-audit-wave-e-info-meta-h1-01.php`, `manufacturer_info-site-002-prod-audit-wave-e-info-meta-h1-01.twig` · [report](../reports/SITE-002-PROD-AUDIT-WAVE-E-INFO-META-H1-01.md)
 
-### Post-1C monitor scheduler (Run 4.215 / 4.216)
+### Post-1C monitor scheduler (Run 4.215 / 4.216 / **4.257 runtime split**)
 
 - **1C import:** automatic Beget cron **08:00 Moscow** / **12:00 Barnaul**
 - **Sitemap:** automatic OpenCart feed (see § above) — no manual XML edit
 - **MARS monitor:** read-only Python monitor; **automatic locally** after operator install+enable (Run 4.216 verified)
-- **Runner:** `site-002-post-1c-monitor-runner.ps1` — uses call-operator for paths with spaces (`X:\AI MARS`); logs under `X:\AI MARS STORAGE\...\scheduled-monitors\post-1c\`
+- **Runtime checkout (Run 4.257):** `X:\AI MARS STORAGE\runtime-checkouts\site-002-monitor\repo` @ `origin/mars/canonical-post-recovery` — **do not** run scheduled monitor from dirty `X:\AI MARS`
+- **Runner:** `site-002-post-1c-monitor-runner.ps1` — `RepoRoot` derived from script path; logs under `X:\AI MARS STORAGE\...\scheduled-monitors\post-1c\`
 - **Task name:** `MARS_SITE_002_Post_1C_Catalog_Monitor` — **enabled**; LastTaskResult **0** expected on success; **2** = execution failure (historically path quoting)
 - **Recommended schedule:** **12:30 Barnaul** (30 min after import)
 - **Server cron alternative:** deferred — separate operation required

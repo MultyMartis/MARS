@@ -63,8 +63,8 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `site-002-prod-post-1c-catalog-onboarding-monitor-01.py` | Read-only post-1C catalog onboarding monitor — sitemap delta, category onboarding needs, PDP sanity, brand/test markers for `SITE-002-PROD-POST-1C-CATALOG-ONBOARDING-MONITOR-01` (Run 4.212) |
 | `site-002-prod-post-1c-catalog-onboarding-monitor-02.py` | Read-only post-1C catalog onboarding monitor repeat — baseline from Run 4.212; sitemap delta, category onboarding needs, PDP sanity, brand/test markers for `SITE-002-PROD-POST-1C-CATALOG-ONBOARDING-MONITOR-02` (Run 4.213) |
 | `site-002-prod-sitemap-authority-discovery-01.py` | Read-only sitemap authority discovery — physical vs route, feed controller, data sources, 1C relationship, cache behavior, policy for `SITE-002-PROD-SITEMAP-AUTHORITY-DISCOVERY-01` (Run 4.214) |
-| `site-002-post-1c-monitor-runner.ps1` | Local scheduled runner — invokes read-only post-1C monitor; call-operator quoting for `X:\AI MARS` paths; logs under Storage `scheduled-monitors/post-1c/` (Run 4.215 / **4.216 fix**) |
-| `install-site-002-post-1c-monitor-task.ps1` | Windows Task install — `MARS_SITE_002_Post_1C_Catalog_Monitor`; **disabled by default**; `-Enable -ConfirmEnable` for enabled task (Run 4.215) |
+| `site-002-post-1c-monitor-runner.ps1` | Local scheduled runner — invokes read-only post-1C monitor; `RepoRoot` from script path (Run **4.257** runtime checkout); logs under Storage `scheduled-monitors/post-1c/` (Run 4.215 / **4.216 fix**) |
+| `install-site-002-post-1c-monitor-task.ps1` | Windows Task install — `MARS_SITE_002_Post_1C_Catalog_Monitor`; `RepoRoot` from script path; **disabled by default**; `-Enable -ConfirmEnable` for enabled task (Run 4.215) |
 | `uninstall-site-002-post-1c-monitor-task.ps1` | Windows Task uninstall — exact task name only (Run 4.215) |
 | `site-002-prod-ux-task-intake-01.py` | Read-only UX task intake — new section tiles + PDP «Дополнительные сведения» authority for `SITE-002-PROD-UX-TASK-INTAKE-01` (Run 4.217) |
 | `site-002-prod-pdp-extra-info-attribute-layout-01.py` | Controlled Production PDP patch — move «Дополнительные сведения» out of specs table for `SITE-002-PROD-PDP-EXTRA-INFO-ATTRIBUTE-LAYOUT-01` (Run 4.218) |
@@ -106,16 +106,17 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `zpm-corp-cta-forms.js` | Corp CTA submit handler snippet merged into Production `main.js` (Run 4.230) |
 | `zpm-corp-cta-success.css` | Inline success/error styles appended to Production `style.css` (Run 4.230) |
 
-### Post-1C monitor scheduler notes (Run 4.216 / **4.228 hardening** / **4.251 manual** / **4.252 checkpoint** / **4.253 review**)
+### Post-1C monitor scheduler notes (Run 4.216 / **4.228 hardening** / **4.251 manual** / **4.252 checkpoint** / **4.253 review** / **4.257 runtime split**)
 
-- Runner supports repository paths with spaces (`X:\AI MARS`) via PowerShell call-operator invocation.
+- **Run 4.257:** Task Scheduler detached from dirty `X:\AI MARS` — runtime checkout `X:\AI MARS STORAGE\runtime-checkouts\site-002-monitor\repo` @ `56f9bae7`; manual run `2026-07-10_20-17-16`; onboarding needs **0** · [infra report](../../../mars-infrastructure/reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-01.md) · [runtime checkouts](../../../mars-infrastructure/runtime-checkouts.md)
+- Runner `RepoRoot` derived from `$PSScriptRoot` (not hardcoded `X:\AI MARS`).
 - Successful Windows Task `LastTaskResult` is **0**; **2** means runner/monitor execution failure — check `scheduled-monitors/post-1c/<timestamp>/run.stderr.log`.
 - Per-run logs: `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\scheduled-monitors\post-1c\`
 - **Run 4.252:** checkpoint `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01` — manual monitor verified; natural post-hardening scheduled timing on 2026-07-10 **NOT CLAIMED** (workstation off); onboarding **ONBOARDING_REQUIRED** (5 needs) · [consolidation report](../reports/SITE-002-STABLE-CHECKPOINT-CONSOLIDATION-01.md)
 - **Run 4.253:** onboarding review **COMPLETE** — 5 category PLP needs classified; meta gaps on ids **362/363**; duplicate meta **88/141**; monitor allowlist drift (flat vs nested Lari); charter ready · [review report](../reports/SITE-002-PROD-CATALOG-ONBOARDING-REVIEW-01.md)
 - **Run 4.254:** category meta onboarding **COMPLETE** — ids **362/363/88/141** `meta_description` onboarded/deduped via scoped DB UPDATE; HTTP/sitemap **PASS** · [meta onboarding report](../reports/SITE-002-PROD-CATEGORY-META-ONBOARDING-01.md)
 - **Run 4.255:** category entrypoint onboarding **COMPLETE** — `ONBOARDED_CATEGORY_PATHS` updated (flat→nested Lari + **362/363**); manual run `2026-07-10_18-16-39`; onboarding needs **0**; classification **HYGIENE_REVIEW_REQUIRED** · [entrypoint report](../reports/SITE-002-PROD-CATEGORY-ENTRYPOINT-ONBOARDING-01.md)
-- **Run 4.256:** local runtime monitor sync **COMPLETE** — monitor script `f6586600` copied into `X:\AI MARS`; Task Scheduler manual run `2026-07-10_18-41-12`; onboarding needs **0**; classification **HYGIENE_REVIEW_REQUIRED** · [runtime sync report](../reports/SITE-002-LOCAL-RUNTIME-MONITOR-SYNC-01.md)
+- **Run 4.256:** local runtime monitor sync **COMPLETE** — monitor script `f6586600` copied into `X:\AI MARS` (superseded for scheduler by Run 4.257) · [runtime sync report](../reports/SITE-002-LOCAL-RUNTIME-MONITOR-SYNC-01.md)
 - **Run 4.251:** operator-approved manual `Start-ScheduledTask` produced folder `2026-07-10_13-27-20` with full hardened contract — validates runner/monitor code · [report](../reports/SITE-002-LOCAL-MONITOR-MANUAL-RUN-01.md)
 - **Hardened artifact contract (Run 4.228):** each run folder includes `added-urls.*`, `removed-urls.*`, `sitemap-baseline.xml`, `sitemap-current.xml`, `hygiene-flags.*`, `monitor-classification.*`, `changed-summary.*`, UTF-8 `run.log`/`run.stderr.log`, and `run-summary` with `duration_seconds`, `classification`, `next_action`.
 - **Strict garbage markers:** context-aware scan; no false positives on `/assets/img/demo/` or «Пример эксплуатации» doc links.
