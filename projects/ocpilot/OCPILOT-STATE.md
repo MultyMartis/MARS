@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-10
-**Evidence cutoff:** 2026-07-10 (SITE-002 Run **4.248** — Post-1C Lari/Duration Verification 02 **PARTIAL** — Lari **CONFIRMED**, Duration **PENDING**; Run **4.249** git sync pushed rebased docs `cb699c0b` from original `916e5f9e`; checkpoint `SITE-002-STABLE-PROD-AUDIT-WAVE-E-INFO-META-H1-01` unchanged)
+**Evidence cutoff:** 2026-07-10 (SITE-002 Run **4.250** — Duration and Monitor Verification 03 **PARTIAL** — Duration **CONFIRMED** (`6.17s` post-patch import), Lari **CONFIRMED**, monitor hardened artifacts **NOT OBSERVED**; checkpoint `SITE-002-STABLE-PROD-AUDIT-WAVE-E-INFO-META-H1-01` unchanged)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Post-1C Lari/Duration Verification (Run 4.248)** — **PARTIAL** — Lari reparent DB+HTTP+sitemap **CONFIRMED**; Run **4.239** Duration fix **PENDING** (no post-patch import TXT); monitor hardened artifacts **NOT OBSERVED** · [SITE-002-PROD-POST-1C-LARI-REPARENT-AND-DURATION-VERIFICATION-02.md](sites/site-002/reports/SITE-002-PROD-POST-1C-LARI-REPARENT-AND-DURATION-VERIFICATION-02.md) · checkpoint `SITE-002-STABLE-PROD-AUDIT-WAVE-E-INFO-META-H1-01` · await **2026-07-10+** scheduled import + monitor |
+| Current SITE-002 focus | **Duration and Monitor Verification (Run 4.250)** — **PARTIAL** — Run **4.239** Duration fix **CONFIRMED** (`mars_1c_import_2026-07-10_080008.txt`, 6.17s); Lari **CONFIRMED**; monitor hardened artifacts **NOT OBSERVED** (last scheduled `2026-07-08_12-30-02`; next Task Scheduler **2026-07-11 12:30 +07**) · [SITE-002-PROD-DURATION-MONITOR-VERIFICATION-03.md](sites/site-002/reports/SITE-002-PROD-DURATION-MONITOR-VERIFICATION-03.md) · checkpoint `SITE-002-STABLE-PROD-AUDIT-WAVE-E-INFO-META-H1-01` · await **2026-07-11** scheduled monitor |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 

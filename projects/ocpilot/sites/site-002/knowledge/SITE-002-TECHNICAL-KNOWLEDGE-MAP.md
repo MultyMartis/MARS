@@ -1117,7 +1117,7 @@ Before **any** task touching **trust block**, **certificates**, **dealers form**
 
 ### Category Lari reparent implementation (Run 4.235)
 
-- **Status:** **ACTIVE — LARI CONFIRMED** (Run 4.248 DB+HTTP+sitemap PASS; post-import revert not observed)
+- **Status:** **ACTIVE — LARI CONFIRMED** (Run 4.248 + Run 4.250 quick recheck PASS; post-import revert not observed)
 - **DB:** `88.parent_id=358`; `category_path` rebuilt for **88/140/141**
 - **Canonical URL:** `/katalog/nejtralnoe-oborudovanie/shkafy-i-lari/lari`
 - **Redirects:** `.htaccess` 301 old flat `/lari` tree → nested
@@ -2217,9 +2217,9 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 | **Server 1C reports path** | `/storage/mars-tools/cron/reports/mars_1c_import_YYYY-MM-DD_HHMMSS.txt` |
 | **Server 1C logs path** | `/storage/mars-tools/cron/logs/mars_1c_import_YYYYMMDD.log` |
 | **2026-07-08 import run ID** | `mars-20260708-080001-bb67ff2b` — **SUCCESS** (FTP-confirmed) |
-| **TXT Duration anomaly** | **FIX DEPLOYED** (Run 4.239) — pre-patch reports show `0 seconds`; wrapper v1.1.1 passes run wall start; **confirm on next import** |
+| **TXT Duration anomaly** | **FIX CONFIRMED** (Run 4.250) — post-patch `mars_1c_import_2026-07-10_080008.txt` Duration **6.17s** |
 | **Scheduled monitor folder** | `scheduled-monitors/post-1c/2026-07-08_12-30-02` — pre-hardening (summary+log) |
-| **Post-4.228 scheduled hardened run** | **SAFE UNKNOWN** — observe 2026-07-10 12:30 |
+| **Post-4.228 scheduled hardened run** | **NOT OBSERVED** (Run 4.250) — next Task Scheduler **2026-07-11 12:30 +07** |
 | **Task Scheduler** | Re-verified OK — enabled; LastTaskResult **0** |
 | **Audit storage** | `deployments/SITE-002-POST-1C-IMPORT-LOGS-AND-MONITOR-ARTIFACTS-AUDIT-01/` |
 | **Report** | [SITE-002-POST-1C-IMPORT-LOGS-AND-MONITOR-ARTIFACTS-AUDIT-01.md](../reports/SITE-002-POST-1C-IMPORT-LOGS-AND-MONITOR-ARTIFACTS-AUDIT-01.md) |
@@ -2237,7 +2237,7 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 | **Root cause** | `mars_report_begin()` called after import in `mars_mode_run()` — `$startedAt` ≈ report write time |
 | **Fix** | Optional `$wallStartedAt` param; pass run `$started` from `mars_mode_run()` |
 | **Pre-patch anomaly** | All run-mode TXT through 2026-07-09 showed `Duration: 0 seconds` |
-| **Confirmation** | **PENDING** — Run **4.248 PARTIAL** (2026-07-10); latest TXT still pre-patch; await **2026-07-10 08:00 MSK+** import |
+| **Confirmation** | **CONFIRMED** — Run **4.250** (2026-07-10); post-patch TXT `mars_1c_import_2026-07-10_080008.txt`; Duration **6.17 seconds**; Run ID `mars-20260710-080001-df983482` |
 | **Report** | [SITE-002-PROD-CRON-RUN-REPORTS-DURATION-FIX-01.md](../reports/SITE-002-PROD-CRON-RUN-REPORTS-DURATION-FIX-01.md) |
 | **Checkpoint** | [SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01.md](../baselines/SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01.md) |
 
@@ -2302,4 +2302,25 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 
 ---
 
-*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-10 (Run 4.248 — Post-1C verification partial; Lari confirmed, Duration pending).*
+## 44. Duration and Monitor Verification 03 (Production — 2026-07-10)
+
+**Operation:** Run 4.250 — `SITE-002-PROD-DURATION-MONITOR-VERIFICATION-03`
+
+| Item | Value |
+|------|-------|
+| **Mode** | Read-only verification — **no mutation** |
+| **Worktree** | `X:\AI MARS STORAGE\git-sync-e01\repo` (origin `bf4ba612`) |
+| **Post-patch import TXT** | `mars_1c_import_2026-07-10_080008.txt` — Duration **6.17s** SUCCESS |
+| **Duration fix (4.239)** | **CONFIRMED** |
+| **Lari** | **CONFIRMED** — DB + HTTP quick recheck |
+| **SEO regression** | **PASS** — sitemap **1424** URLs; 0 flat Lari; `/contact` present |
+| **Monitor hardened (4.228)** | **NOT OBSERVED** — no folder after 2026-07-10 12:30 +07 |
+| **Task Scheduler** | Last run 2026-07-08; next **2026-07-11 12:30 +07** |
+| **Verdict** | **PARTIAL** — Duration confirmed; monitor not observed |
+| **Tool** | `site-002-prod-duration-monitor-verification-03.py` |
+| **Report** | [SITE-002-PROD-DURATION-MONITOR-VERIFICATION-03.md](../reports/SITE-002-PROD-DURATION-MONITOR-VERIFICATION-03.md) |
+| **Storage** | `verification/SITE-002-PROD-DURATION-MONITOR-VERIFICATION-03/` |
+
+---
+
+*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-10 (Run 4.250 — Duration confirmed; monitor hardened artifacts not observed).*
