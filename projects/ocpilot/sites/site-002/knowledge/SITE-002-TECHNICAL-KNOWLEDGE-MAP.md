@@ -11,7 +11,7 @@
 | **Production profile** | [../production-profile.md](../production-profile.md) |
 | **Production storage root** | `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\` |
 | **Production baseline** | Parent baseline `SITE-002-STABLE-PROD-INITIAL-01` · [../baselines/SITE-002-STABLE-PROD-INITIAL-01.md](../baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| **Current Production checkpoint** | **ISSUED** — `SITE-002-STABLE-PROD-HTML-BODY-FIX-01` · [../baselines/SITE-002-STABLE-PROD-HTML-BODY-FIX-01.md](../baselines/SITE-002-STABLE-PROD-HTML-BODY-FIX-01.md) |
+| **Current Production checkpoint** | **ISSUED** — `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01` · [../baselines/SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01.md](../baselines/SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01.md) (parent Wave E) |
 | **Production parity with TEST checkpoints** | **VERIFIED** — file + HTTP evidence (Run 4.171-R1) |
 | **First controlled Production change** | **COMPLETE** — Run 4.173; single-file text-only FTP deploy |
 | **Catalog default sort (Production)** | **COMPLETE** — Run 4.176; default `pd.name ASC` in `category.php` |
@@ -509,7 +509,7 @@ Product SEO URLs created during catalog import (`oc_seo_url` where `query LIKE '
 | PDP keyword gap follow-up (Production) | **COMPLETE — NO MUTATION REQUIRED** (Run 4.208) — 11 Run 4.206 “missing keywords” = hub/category PLP (`page--category`); 0 true PDP gaps; `product.php` v1.1 unchanged · [report](../reports/SITE-002-PROD-SEO-PRODUCT-META-GENERATOR-TUNE-02.md) |
 | Sitemap delta audit (Production) | **COMPLETE — MINOR REVIEW ITEMS** (Run 4.209) — baseline 1320 (4.206) → live **1377**; +59/−2; konditerskiy-inventar catalog growth; 0 RED on added; 2 YELLOW category meta · [report](../reports/SITE-002-PROD-SITEMAP-DELTA-AUDIT-01.md) |
 | New catalog branch onboarding (Production) | **COMPLETE** (Run 4.210 + 4.211) — 1C growth onboarding; admin category SEO for ids **360/361/88/141/140**; parent-aware resolution for `/lari/proizvodstvennye-lari` · [follow-up report](../reports/SITE-002-PROD-CATALOG-BRANCH-ONBOARDING-FOLLOWUP-01.md) · [Run 4.210](../reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-01.md) |
-| Post-1C catalog monitor (Production) | **SCHEDULER VERIFIED — TASK ENABLED** (Run 4.216) — runner quoting fix for `X:\AI MARS` paths; Windows Task LastTaskResult **0**; daily **12:30 Barnaul**; server-side migration **DEFERRED**; prior read-only pass **NO ONBOARDING NEEDED** (Run 4.213) · [runner fix](../reports/SITE-002-POST-1C-MONITOR-SCHEDULER-RUNNER-FIX-01.md) · [readiness](../reports/SITE-002-POST-1C-MONITOR-SCHEDULER-READINESS-01.md) · [runbook](../runbooks/SITE-002-POST-1C-MONITOR-AUTOMATION-RUNBOOK.md) · [tool](../tools/site-002-post-1c-monitor-runner.ps1) · [monitor](../tools/site-002-prod-post-1c-catalog-onboarding-monitor-02.py) |
+| Post-1C catalog monitor (Production) | **RUNNER CONFIRMED — META ONBOARDED** (Runs 4.251–**4.254**) — manual folder `2026-07-10_13-27-20`; classification **ONBOARDING_REQUIRED** (5 category PLP needs); Run **4.254** meta **COMPLETE** — ids **362/363/88/141** `meta_description` onboarded/deduped; id **140** entrypoint deferred · [meta onboarding](../reports/SITE-002-PROD-CATEGORY-META-ONBOARDING-01.md) · [review](../reports/SITE-002-PROD-CATALOG-ONBOARDING-REVIEW-01.md) · [consolidation](../reports/SITE-002-STABLE-CHECKPOINT-CONSOLIDATION-01.md) · [runbook](../runbooks/SITE-002-POST-1C-MONITOR-AUTOMATION-RUNBOOK.md) · [monitor](../tools/site-002-prod-post-1c-catalog-onboarding-monitor-02.py) |
 | UX task intake (Production) | Task 01 **DONE** Run 4.220 — lari/konditerskiy tiles verified · Task 02 **DONE** Run 4.218 · [intake report](../reports/SITE-002-PROD-UX-TASK-INTAKE-01.md) · [entrypoints 02 report](../reports/SITE-002-PROD-NEW-SECTIONS-ENTRYPOINTS-02.md) |
 | PDP extra info layout (Production) | **COMPLETE — EXTRA INFO BLOCK VERIFIED** (Run 4.218) — «Дополнительные сведения» display-only extraction in `product.php`; block in `producttabs.twig` after `product-content__specs-toggle-wrap`; CSS `assets/css/style.css`; meta generator preserved; 0 DB/admin/data · [report](../reports/SITE-002-PROD-PDP-EXTRA-INFO-ATTRIBUTE-LAYOUT-01.md) · [tool](../tools/site-002-prod-pdp-extra-info-attribute-layout-01.py) · checkpoint `SITE-002-STABLE-PROD-PDP-EXTRA-INFO-LAYOUT-01` |
 | OpenCart Document robots API | **Not available** — no `Document::setRobots()`; use `X-Robots-Tag` response header; `header.twig` hardcodes `<meta robots index,follow>` |
@@ -1101,7 +1101,7 @@ Before **any** task touching **trust block**, **certificates**, **dealers form**
 - New sitemap URLs → classify: PRODUCT_PDP vs CATEGORY_PLP vs CATEGORY_HUB vs TECHNICAL
 - **Onboard** new category PLP/hub (admin `meta_description` only) — do **not** delete/hide/noindex by default
 - PDP meta → product generator track; category PLP meta → admin category SEO track
-- Post-import monitoring: diff sitemap for new CATEGORY_PLP with missing meta — tool `site-002-prod-post-1c-catalog-onboarding-monitor-02.py`; **local scheduler verified** (Run 4.216) via `site-002-post-1c-monitor-runner.ps1` + Windows Task `MARS_SITE_002_Post_1C_Catalog_Monitor` — **enabled**; LastTaskResult **0**; recommended **12:30 Barnaul** / **08:30 Moscow** · [runner fix report](../reports/SITE-002-POST-1C-MONITOR-SCHEDULER-RUNNER-FIX-01.md) · [runbook](../runbooks/SITE-002-POST-1C-MONITOR-AUTOMATION-RUNBOOK.md)
+- Post-import monitoring: diff sitemap for new CATEGORY_PLP with missing meta — tool `site-002-prod-post-1c-catalog-onboarding-monitor-02.py`; **local scheduler verified** (Run 4.216) via `site-002-post-1c-monitor-runner.ps1` + Windows Task `MARS_SITE_002_Post_1C_Catalog_Monitor` — **enabled**; hardened artifacts **CONFIRMED_MANUALLY** Run 4.251/4.252 (`2026-07-10_13-27-20`); classification **ONBOARDING_REQUIRED** (5 needs); Run **4.254** meta onboarding **COMPLETE** for ids **362/363/88/141** (scoped DB `meta_description`); id **140** entrypoint + monitor `ONBOARDED_CATEGORY_PATHS` nested paths — next **`SITE-002-PROD-CATEGORY-ENTRYPOINT-ONBOARDING-01`** · [meta report](../reports/SITE-002-PROD-CATEGORY-META-ONBOARDING-01.md) · [review report](../reports/SITE-002-PROD-CATALOG-ONBOARDING-REVIEW-01.md) · [consolidation report](../reports/SITE-002-STABLE-CHECKPOINT-CONSOLIDATION-01.md) · [runbook](../runbooks/SITE-002-POST-1C-MONITOR-AUTOMATION-RUNBOOK.md)
 - Onboarded 2026-07-07: category ids **360** (konditerskiy-inventar), **361** (formy-konditerskie), **88** (lari), **141** (skladskie-lari), **140** (proizvodstvennye-lari under Лари)
 - **Parent-aware resolution** required when admin names duplicate (e.g. «Производственные» id 140 under Лари vs id 130 under Шкафы)
 - Deferred Run 4.210 `/lari/proizvodstvennye-lari` — **RESOLVED** Run 4.211 → category_id **140**, HIGH confidence
@@ -1117,7 +1117,7 @@ Before **any** task touching **trust block**, **certificates**, **dealers form**
 
 ### Category Lari reparent implementation (Run 4.235)
 
-- **Status:** **ACTIVE — PARTIAL** (post-1C import verification pending — Run 4.240 **BLOCKED** 2026-07-10)
+- **Status:** **ACTIVE — LARI CONFIRMED** (Run 4.248 + Run 4.250 quick recheck PASS; post-import revert not observed)
 - **DB:** `88.parent_id=358`; `category_path` rebuilt for **88/140/141**
 - **Canonical URL:** `/katalog/nejtralnoe-oborudovanie/shkafy-i-lari/lari`
 - **Redirects:** `.htaccess` 301 old flat `/lari` tree → nested
@@ -2217,9 +2217,9 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 | **Server 1C reports path** | `/storage/mars-tools/cron/reports/mars_1c_import_YYYY-MM-DD_HHMMSS.txt` |
 | **Server 1C logs path** | `/storage/mars-tools/cron/logs/mars_1c_import_YYYYMMDD.log` |
 | **2026-07-08 import run ID** | `mars-20260708-080001-bb67ff2b` — **SUCCESS** (FTP-confirmed) |
-| **TXT Duration anomaly** | **FIX DEPLOYED** (Run 4.239) — pre-patch reports show `0 seconds`; wrapper v1.1.1 passes run wall start; **confirm on next import** |
-| **Scheduled monitor folder** | `scheduled-monitors/post-1c/2026-07-08_12-30-02` — pre-hardening (summary+log) |
-| **Post-4.228 scheduled hardened run** | **SAFE UNKNOWN** — observe 2026-07-10 12:30 |
+| **TXT Duration anomaly** | **FIX CONFIRMED** (Run 4.250) — post-patch `mars_1c_import_2026-07-10_080008.txt` Duration **6.17s** |
+| **Scheduled monitor folder** | `scheduled-monitors/post-1c/2026-07-08_12-30-02` — pre-hardening (summary+log); latest hardened **manual** folder `2026-07-10_13-27-20` (Run 4.251) |
+| **Post-4.228 scheduled hardened run** | **CONFIRMED_MANUAL** (Run 4.251) — natural 12:30 timing **still NOT OBSERVED**; next Task Scheduler **2026-07-11 12:30 +07** |
 | **Task Scheduler** | Re-verified OK — enabled; LastTaskResult **0** |
 | **Audit storage** | `deployments/SITE-002-POST-1C-IMPORT-LOGS-AND-MONITOR-ARTIFACTS-AUDIT-01/` |
 | **Report** | [SITE-002-POST-1C-IMPORT-LOGS-AND-MONITOR-ARTIFACTS-AUDIT-01.md](../reports/SITE-002-POST-1C-IMPORT-LOGS-AND-MONITOR-ARTIFACTS-AUDIT-01.md) |
@@ -2237,7 +2237,7 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 | **Root cause** | `mars_report_begin()` called after import in `mars_mode_run()` — `$startedAt` ≈ report write time |
 | **Fix** | Optional `$wallStartedAt` param; pass run `$started` from `mars_mode_run()` |
 | **Pre-patch anomaly** | All run-mode TXT through 2026-07-09 showed `Duration: 0 seconds` |
-| **Confirmation** | **PENDING** — Run **4.240 BLOCKED** (2026-07-10); latest TXT `mars_1c_import_2026-07-09_080009.txt` predates deploy `2026-07-09T17:07:52+00:00` |
+| **Confirmation** | **CONFIRMED** — Run **4.250** (2026-07-10); post-patch TXT `mars_1c_import_2026-07-10_080008.txt`; Duration **6.17 seconds**; Run ID `mars-20260710-080001-df983482` |
 | **Report** | [SITE-002-PROD-CRON-RUN-REPORTS-DURATION-FIX-01.md](../reports/SITE-002-PROD-CRON-RUN-REPORTS-DURATION-FIX-01.md) |
 | **Checkpoint** | [SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01.md](../baselines/SITE-002-STABLE-PROD-CRON-RUN-REPORTS-DURATION-FIX-01.md) |
 
@@ -2272,21 +2272,78 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 
 ## 42. Post-1C Lari Reparent and Duration Verification (Production — 2026-07-10)
 
-**Operation:** Run 4.240 — `SITE-002-PROD-POST-1C-LARI-REPARENT-AND-DURATION-VERIFICATION-01`
+**Operation:** Run 4.240 — `SITE-002-PROD-POST-1C-LARI-REPARENT-AND-DURATION-VERIFICATION-01` (timing gate only — **superseded by Run 4.248** for current-state checks)
 
 | Item | Value |
 |------|-------|
 | **Mode** | Read-only verification — **no mutation** |
 | **Timing gate** | Latest import TXT must postdate Run 4.239 deploy |
 | **Deploy 4.239** | `2026-07-09T17:07:52+00:00` |
-| **Latest import TXT** | `mars_1c_import_2026-07-09_080009.txt` (08:00 Moscow — **pre-patch**) |
-| **Gate result** | **BLOCKED** — next post-patch import not observed |
-| **Run 4.235 pending** | **unchanged** — Lari post-1C persistence not verified |
-| **Run 4.239 pending** | **unchanged** — Duration fix not confirmed on live cron |
-| **Tool** | `site-002-prod-post-1c-lari-reparent-and-duration-verification-01.py` |
-| **Report** | [SITE-002-PROD-POST-1C-LARI-REPARENT-AND-DURATION-VERIFICATION-01.md](../reports/SITE-002-PROD-POST-1C-LARI-REPARENT-AND-DURATION-VERIFICATION-01.md) |
-| **Storage** | `deployments/SITE-002-PROD-POST-1C-LARI-REPARENT-AND-DURATION-VERIFICATION-01/` |
+| **Gate result (4.240)** | **BLOCKED** — import gate only; phases 2–6 skipped |
 
 ---
 
-*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-10 (Run 4.240 — Post-1C verification blocked; timing gate).*
+## 43. Post-1C Lari Reparent and Duration Verification 02 (Production — 2026-07-10)
+
+**Operation:** Run 4.248 — `SITE-002-PROD-POST-1C-LARI-REPARENT-AND-DURATION-VERIFICATION-02`
+
+| Item | Value |
+|------|-------|
+| **Mode** | Read-only verification — **no mutation** |
+| **Worktree** | `X:\AI MARS STORAGE\git-sync-e01\repo` (clean; origin `0d1174a3`) |
+| **Latest import TXT** | `mars_1c_import_2026-07-09_080009.txt` — still **pre-patch** |
+| **Lari DB/HTTP/sitemap** | **PASS** — reparent intact at verification time |
+| **Duration fix (4.239)** | **NOT CONFIRMED** — no post-patch import |
+| **Monitor hardened (4.228)** | **NOT OBSERVED** — latest folder `2026-07-08_12-30-02` pre-hardening |
+| **Verdict** | **PARTIAL** — Lari confirmed; Duration pending |
+| **Tool** | `site-002-prod-post-1c-lari-reparent-and-duration-verification-02.py` |
+| **Report** | [SITE-002-PROD-POST-1C-LARI-REPARENT-AND-DURATION-VERIFICATION-02.md](../reports/SITE-002-PROD-POST-1C-LARI-REPARENT-AND-DURATION-VERIFICATION-02.md) |
+| **Storage** | `verification/SITE-002-PROD-POST-1C-LARI-REPARENT-AND-DURATION-VERIFICATION-02/` |
+
+---
+
+## 44. Duration and Monitor Verification 03 (Production — 2026-07-10)
+
+**Operation:** Run 4.250 — `SITE-002-PROD-DURATION-MONITOR-VERIFICATION-03`
+
+| Item | Value |
+|------|-------|
+| **Mode** | Read-only verification — **no mutation** |
+| **Worktree** | `X:\AI MARS STORAGE\git-sync-e01\repo` (origin `bf4ba612`) |
+| **Post-patch import TXT** | `mars_1c_import_2026-07-10_080008.txt` — Duration **6.17s** SUCCESS |
+| **Duration fix (4.239)** | **CONFIRMED** |
+| **Lari** | **CONFIRMED** — DB + HTTP quick recheck |
+| **SEO regression** | **PASS** — sitemap **1424** URLs; 0 flat Lari; `/contact` present |
+| **Monitor hardened (4.228)** | **NOT OBSERVED** — no folder after 2026-07-10 12:30 +07 (superseded by Run 4.251 manual confirmation) |
+| **Task Scheduler** | Last run 2026-07-08; next **2026-07-11 12:30 +07** |
+| **Verdict** | **PARTIAL** — Duration confirmed; monitor not observed on natural schedule |
+| **Tool** | `site-002-prod-duration-monitor-verification-03.py` |
+| **Report** | [SITE-002-PROD-DURATION-MONITOR-VERIFICATION-03.md](../reports/SITE-002-PROD-DURATION-MONITOR-VERIFICATION-03.md) |
+| **Storage** | `verification/SITE-002-PROD-DURATION-MONITOR-VERIFICATION-03/` |
+
+---
+
+## 45. Local Monitor Manual Run (Production — 2026-07-10)
+
+**Operation:** Run 4.251 — `SITE-002-LOCAL-MONITOR-MANUAL-RUN-01`
+
+| Item | Value |
+|------|-------|
+| **Mode** | Operator-approved manual Task Scheduler trigger — read-only monitor |
+| **Trigger** | `Start-ScheduledTask` on `\MARS_SITE_002_Post_1C_Catalog_Monitor` |
+| **Task LastTaskResult** | **0** |
+| **Run folder** | `scheduled-monitors/post-1c/2026-07-10_13-27-20` |
+| **Hardened contract (4.228)** | **CONFIRMED_MANUAL** — all artifact families present |
+| **Duration** | **91.378s** |
+| **Classification** | **ONBOARDING_REQUIRED** (`monitor-classification.json`) |
+| **Sitemap delta** | baseline **1377** → current **1424**; +61 / −14 |
+| **Natural scheduled timing** | **still NOT OBSERVED** — manual ≠ 12:30 daily slot |
+| **Next Task Scheduler** | **2026-07-11 12:30 +07** (unchanged) |
+| **Production mutation** | **0** |
+| **Checkpoint** | unchanged `SITE-002-STABLE-PROD-AUDIT-WAVE-E-INFO-META-H1-01` |
+| **Report** | [SITE-002-LOCAL-MONITOR-MANUAL-RUN-01.md](../reports/SITE-002-LOCAL-MONITOR-MANUAL-RUN-01.md) |
+| **Storage** | `verification/SITE-002-LOCAL-MONITOR-MANUAL-RUN-01/` |
+
+---
+
+*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-10 (Run 4.251 — hardened artifacts confirmed manually; natural scheduled timing still pending).*
