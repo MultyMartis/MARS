@@ -26,7 +26,7 @@
 |-------|-------|
 | **Status** | planned / product architecture |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | Report Structure Demo v0.2 planning (platform-neutral); WordPress data model / admin UX planning (v0.1) complete |
+| **Active stage** | Report content architecture v0.1 complete; next: Static Demo v0.3 (project type selector + staged demo states) |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -57,6 +57,22 @@
 | Next stage | **Report Structure Demo v0.2** — inject real report structure + 3 demo projects into static demo |
 
 **Demo workspace (unchanged in pivot task):** `workspaces/website-factory-operations/iseo-report-hub-prototype/` — v0.1 localized static HTML.
+
+---
+
+## Operator review — static demo v0.2 (2026-07-10)
+
+| Decision | Status |
+|----------|--------|
+| Direction / mechanics / structure | **Accepted** — v0.2 closer to intended SEO report workflow |
+| Report block **content depth** | **Not sufficient** — blocks need full content architecture before next demo iteration |
+| Full block lists by site/project type | **Required** — documented in Report Type Block Matrix v0.1 |
+| Project type selection model | **Required for demo v0.3** — specified in Report Content Architecture v0.1 |
+| Staged demo reports (complete / W3 / W1) | **Required for demo v0.3** — specified in Demo Report States v0.1 |
+| SEO specialist feedback | **Deferred** — do **not** schedule until operator approves demo v0.3 |
+| Next stage | **Static Demo v0.3** — project type selector + full report content architecture + staged demo states |
+
+**Demo workspace:** `workspaces/website-factory-operations/iseo-report-hub-prototype/` — v0.2 static HTML exists; **not modified** in report content architecture task.
 
 ---
 
@@ -97,6 +113,11 @@
 | 19 | [product/I-SEO-REPORT-HUB-REPORT-STRUCTURE-MODEL-v0.2.md](product/I-SEO-REPORT-HUB-REPORT-STRUCTURE-MODEL-v0.2.md) | Report structure model for demo v0.2 |
 | 20 | [product/I-SEO-REPORT-HUB-DEMO-CONTENT-PACK-v0.1.md](product/I-SEO-REPORT-HUB-DEMO-CONTENT-PACK-v0.1.md) | Sanitized demo content for 3 projects |
 | 21 | [reports/REPORT-iseo-report-hub-platform-pivot-report-structure-modeling-01.md](reports/REPORT-iseo-report-hub-platform-pivot-report-structure-modeling-01.md) | Platform pivot + structure modeling closeout |
+| 22 | [product/I-SEO-REPORT-HUB-REPORT-CONTENT-ARCHITECTURE-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-CONTENT-ARCHITECTURE-v0.1.md) | Report content architecture (philosophy, objects, flows) |
+| 23 | [product/I-SEO-REPORT-HUB-REPORT-TYPE-BLOCK-MATRIX-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-TYPE-BLOCK-MATRIX-v0.1.md) | Full block matrix by project/site type |
+| 24 | [product/I-SEO-REPORT-HUB-DEMO-REPORT-STATES-v0.1.md](product/I-SEO-REPORT-HUB-DEMO-REPORT-STATES-v0.1.md) | Staged demo scenarios for v0.3 |
+| 25 | [reports/REPORT-iseo-report-hub-static-demo-v0.2-report-structure-injection-01.md](reports/REPORT-iseo-report-hub-static-demo-v0.2-report-structure-injection-01.md) | Static demo v0.2 build closeout |
+| 26 | [reports/REPORT-iseo-report-hub-report-content-architecture-01.md](reports/REPORT-iseo-report-hub-report-content-architecture-01.md) | Report content architecture closeout |
 
 ---
 
@@ -141,9 +162,9 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Report Structure Demo v0.2** — inject report structure model v0.2 + demo content pack (3 projects) into static demo workspace; **no platform implementation**
-2. **Operator review** of demo v0.2 structure and UX
-3. **SEO specialist feedback** — only after v0.2; **not** on v0.1 mechanics-only demo
+1. **Static Demo v0.3** — project type selector + Report Content Architecture v0.1 + Block Matrix v0.1 + Demo Report States v0.1; **no platform implementation**
+2. **Operator review** of demo v0.3 lifecycle clarity, block content depth, and project-type differentiation
+3. **SEO specialist feedback** — only after operator approves v0.3; **not** on v0.1/v0.2 without content architecture
 4. **Platform decision gate** — after structure + feedback; see platform options v0.1
 5. Work dictionary extraction/sanitization (из Nikita materials; **exclude** credential sheet)
 6. MVP implementation charter (HITL) — platform TBD (Anton / i-SEO)
