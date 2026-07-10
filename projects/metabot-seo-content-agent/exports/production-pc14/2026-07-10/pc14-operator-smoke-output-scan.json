@@ -1,0 +1,100 @@
+{
+  "task_id": "seo20260710153252t5pgjd",
+  "cleanup_classification": "PC14_TEXT_CLEANUP_PASS_TZ_RESIDUAL",
+  "scans": [
+    {
+      "label": "full_output",
+      "length": 11778,
+      "hits": [
+        {
+          "family": "аккуратн*",
+          "match": "аккуратное",
+          "pattern": "аккуратное"
+        },
+        {
+          "family": "аккуратн*",
+          "match": "аккуратно",
+          "pattern": "аккуратно"
+        },
+        {
+          "family": "удобств*/удобн*",
+          "match": "удобства",
+          "pattern": "удобства"
+        },
+        {
+          "family": "позволя*",
+          "match": "позволяет",
+          "pattern": "позволяет"
+        }
+      ]
+    },
+    {
+      "label": "seo_tz_section",
+      "length": 4196,
+      "hits": [
+        {
+          "family": "аккуратн*",
+          "match": "аккуратное",
+          "pattern": "аккуратное"
+        },
+        {
+          "family": "аккуратн*",
+          "match": "аккуратно",
+          "pattern": "аккуратно"
+        },
+        {
+          "family": "удобств*/удобн*",
+          "match": "удобства",
+          "pattern": "удобства"
+        },
+        {
+          "family": "позволя*",
+          "match": "позволяет",
+          "pattern": "позволяет"
+        }
+      ]
+    },
+    {
+      "label": "seo_text_section",
+      "length": 4849,
+      "hits": []
+    },
+    {
+      "label": "generated_content_markdown",
+      "length": 4595,
+      "hits": []
+    }
+  ],
+  "strict_risk_scan": {
+    "count": 8,
+    "verdict": "reject",
+    "markers": [
+      "обеспечения",
+      "обеспечение",
+      "контролируются",
+      "контроль",
+      "контроля",
+      "безопасности",
+      "специализированные",
+      "надежность"
+    ],
+    "backlog_classification": "PC14_FOLLOWUP_STRICT_FAMILY_BACKLOG"
+  },
+  "seoqa": {
+    "verdict": "reject",
+    "score": 70
+  },
+  "factcheck": {
+    "verdict": "approved"
+  },
+  "tz_residual_notes": {
+    "phrase_for_udobstva_vospriyatiya": "для удобства восприятия",
+    "brief_forbidden_word_quotes_in_tz": [
+      "аккуратное",
+      "удобства",
+      "позволяет"
+    ],
+    "seo_text_section_clean": true,
+    "generated_content_markdown_clean": true
+  }
+}
