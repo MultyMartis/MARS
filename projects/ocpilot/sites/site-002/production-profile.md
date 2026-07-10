@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-10 (Run 4.250 — Duration/monitor verification **PARTIAL** — Duration **CONFIRMED**, monitor **NOT OBSERVED**; checkpoint `SITE-002-STABLE-PROD-AUDIT-WAVE-E-INFO-META-H1-01` unchanged)
+**Last updated:** 2026-07-10 (Run 4.251 — Local monitor manual run **COMPLETE** — hardened artifacts **CONFIRMED_MANUAL**; natural scheduled timing **still NOT OBSERVED**; Duration **CONFIRMED** from Run 4.250; checkpoint `SITE-002-STABLE-PROD-AUDIT-WAVE-E-INFO-META-H1-01` unchanged)
 
 ---
 

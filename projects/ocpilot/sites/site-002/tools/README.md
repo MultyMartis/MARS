@@ -102,11 +102,12 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `zpm-corp-cta-forms.js` | Corp CTA submit handler snippet merged into Production `main.js` (Run 4.230) |
 | `zpm-corp-cta-success.css` | Inline success/error styles appended to Production `style.css` (Run 4.230) |
 
-### Post-1C monitor scheduler notes (Run 4.216 / **4.228 hardening**)
+### Post-1C monitor scheduler notes (Run 4.216 / **4.228 hardening** / **4.251 manual confirmation**)
 
 - Runner supports repository paths with spaces (`X:\AI MARS`) via PowerShell call-operator invocation.
 - Successful Windows Task `LastTaskResult` is **0**; **2** means runner/monitor execution failure — check `scheduled-monitors/post-1c/<timestamp>/run.stderr.log`.
 - Per-run logs: `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\scheduled-monitors\post-1c\`
+- **Run 4.251:** operator-approved manual `Start-ScheduledTask` produced folder `2026-07-10_13-27-20` with full hardened contract — validates runner/monitor code; natural 12:30 scheduled timing still awaits **2026-07-11** run · [report](../reports/SITE-002-LOCAL-MONITOR-MANUAL-RUN-01.md)
 - **Hardened artifact contract (Run 4.228):** each run folder includes `added-urls.*`, `removed-urls.*`, `sitemap-baseline.xml`, `sitemap-current.xml`, `hygiene-flags.*`, `monitor-classification.*`, `changed-summary.*`, UTF-8 `run.log`/`run.stderr.log`, and `run-summary` with `duration_seconds`, `classification`, `next_action`.
 - **Strict garbage markers:** context-aware scan; no false positives on `/assets/img/demo/` or «Пример эксплуатации» doc links.
 - **Classification:** `NO_ACTION_REQUIRED` | `HYGIENE_REVIEW_REQUIRED` | `ONBOARDING_REQUIRED` | `FAILURE_REVIEW_REQUIRED`.

@@ -2218,8 +2218,8 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 | **Server 1C logs path** | `/storage/mars-tools/cron/logs/mars_1c_import_YYYYMMDD.log` |
 | **2026-07-08 import run ID** | `mars-20260708-080001-bb67ff2b` — **SUCCESS** (FTP-confirmed) |
 | **TXT Duration anomaly** | **FIX CONFIRMED** (Run 4.250) — post-patch `mars_1c_import_2026-07-10_080008.txt` Duration **6.17s** |
-| **Scheduled monitor folder** | `scheduled-monitors/post-1c/2026-07-08_12-30-02` — pre-hardening (summary+log) |
-| **Post-4.228 scheduled hardened run** | **NOT OBSERVED** (Run 4.250) — next Task Scheduler **2026-07-11 12:30 +07** |
+| **Scheduled monitor folder** | `scheduled-monitors/post-1c/2026-07-08_12-30-02` — pre-hardening (summary+log); latest hardened **manual** folder `2026-07-10_13-27-20` (Run 4.251) |
+| **Post-4.228 scheduled hardened run** | **CONFIRMED_MANUAL** (Run 4.251) — natural 12:30 timing **still NOT OBSERVED**; next Task Scheduler **2026-07-11 12:30 +07** |
 | **Task Scheduler** | Re-verified OK — enabled; LastTaskResult **0** |
 | **Audit storage** | `deployments/SITE-002-POST-1C-IMPORT-LOGS-AND-MONITOR-ARTIFACTS-AUDIT-01/` |
 | **Report** | [SITE-002-POST-1C-IMPORT-LOGS-AND-MONITOR-ARTIFACTS-AUDIT-01.md](../reports/SITE-002-POST-1C-IMPORT-LOGS-AND-MONITOR-ARTIFACTS-AUDIT-01.md) |
@@ -2314,13 +2314,36 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 | **Duration fix (4.239)** | **CONFIRMED** |
 | **Lari** | **CONFIRMED** — DB + HTTP quick recheck |
 | **SEO regression** | **PASS** — sitemap **1424** URLs; 0 flat Lari; `/contact` present |
-| **Monitor hardened (4.228)** | **NOT OBSERVED** — no folder after 2026-07-10 12:30 +07 |
+| **Monitor hardened (4.228)** | **NOT OBSERVED** — no folder after 2026-07-10 12:30 +07 (superseded by Run 4.251 manual confirmation) |
 | **Task Scheduler** | Last run 2026-07-08; next **2026-07-11 12:30 +07** |
-| **Verdict** | **PARTIAL** — Duration confirmed; monitor not observed |
+| **Verdict** | **PARTIAL** — Duration confirmed; monitor not observed on natural schedule |
 | **Tool** | `site-002-prod-duration-monitor-verification-03.py` |
 | **Report** | [SITE-002-PROD-DURATION-MONITOR-VERIFICATION-03.md](../reports/SITE-002-PROD-DURATION-MONITOR-VERIFICATION-03.md) |
 | **Storage** | `verification/SITE-002-PROD-DURATION-MONITOR-VERIFICATION-03/` |
 
 ---
 
-*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-10 (Run 4.250 — Duration confirmed; monitor hardened artifacts not observed).*
+## 45. Local Monitor Manual Run (Production — 2026-07-10)
+
+**Operation:** Run 4.251 — `SITE-002-LOCAL-MONITOR-MANUAL-RUN-01`
+
+| Item | Value |
+|------|-------|
+| **Mode** | Operator-approved manual Task Scheduler trigger — read-only monitor |
+| **Trigger** | `Start-ScheduledTask` on `\MARS_SITE_002_Post_1C_Catalog_Monitor` |
+| **Task LastTaskResult** | **0** |
+| **Run folder** | `scheduled-monitors/post-1c/2026-07-10_13-27-20` |
+| **Hardened contract (4.228)** | **CONFIRMED_MANUAL** — all artifact families present |
+| **Duration** | **91.378s** |
+| **Classification** | **ONBOARDING_REQUIRED** (`monitor-classification.json`) |
+| **Sitemap delta** | baseline **1377** → current **1424**; +61 / −14 |
+| **Natural scheduled timing** | **still NOT OBSERVED** — manual ≠ 12:30 daily slot |
+| **Next Task Scheduler** | **2026-07-11 12:30 +07** (unchanged) |
+| **Production mutation** | **0** |
+| **Checkpoint** | unchanged `SITE-002-STABLE-PROD-AUDIT-WAVE-E-INFO-META-H1-01` |
+| **Report** | [SITE-002-LOCAL-MONITOR-MANUAL-RUN-01.md](../reports/SITE-002-LOCAL-MONITOR-MANUAL-RUN-01.md) |
+| **Storage** | `verification/SITE-002-LOCAL-MONITOR-MANUAL-RUN-01/` |
+
+---
+
+*Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-10 (Run 4.251 — hardened artifacts confirmed manually; natural scheduled timing still pending).*
