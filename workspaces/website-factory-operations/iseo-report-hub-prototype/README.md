@@ -1,4 +1,4 @@
-# i-SEO Report Hub — статический прототип Website Factory v0.1
+# i-SEO Report Hub — статический прототип v0.4
 
 **Статус:** только прототип / демо — **НЕ production**
 
@@ -6,34 +6,48 @@
 
 ## Что это
 
-Этот workspace — **self-contained static HTML/CSS/JS** прототип **i-SEO Report Hub**, созданный в рамках prototype lane MARS Website Factory. Он визуализирует админский workflow, структуру клиентского web-отчёта и цели для будущей реализации на WordPress (i-seo.su).
+Self-contained static HTML/CSS/JS прототип **i-SEO Report Hub** в рамках prototype lane MARS Website Factory.
 
-### Архитектура v0.1 (важно)
+### v0.3 → v0.4
 
-- Текущая **v0.1 демка** — автономный статический HTML/CSS/JS **без Gulp**.
-- Прототип относится к **Website Factory prototype lane** и совместим с ним по назначению.
-- **Не требуется** `npm install`, сборка или build-шаг — откройте `index.html` в браузере.
-- Полноценный gulp workspace (по образцу Website Factory) может быть отдельным этапом позже, если оператор решит мигрировать или пересоздать демо.
-- Текущая цель — быстрый визуальный обзор и UX-валидация для SEO-специалистов.
+| v0.3 | v0.4 |
+|------|------|
+| Report Content Architecture + Type Block Matrix | **+ INTLSEO / i-seo.su inspired visual style** |
+| Staged lifecycle (Final / W3 / W1) | **+ Рабочая панель SEO-специалиста** (`specialist-workspace.html`) |
+| Weekly / monthly structured views | **+ Чек-листы, тексты, KPI, evidence mockups, readiness panel** |
+| Dashboard + review queue | **+ Ясное разделение: workspace = заполнение, weekly/monthly = structured view** |
+
+### Архитектура (без изменений)
+
+- Автономный статический HTML/CSS/JS **без Gulp**
+- **Не требуется** `npm install`, сборка или build-шаг
+- Откройте `index.html` в браузере
 
 ## Чего это НЕ является
 
 - **Не** production-код
-- **Не** WordPress-плагин, тема или PHP
-- **Не** подключено к n8n, API или любому backend
-- **Не** использует реальные клиентские данные, учётные записи или секреты
-- **Не** развёрнуто и не хостится
+- **Не** WordPress, PHP, MySQL
+- **Не** n8n, API или backend
+- **Не** реальные клиентские данные или секреты
+- **Не** реальная загрузка файлов или скриншотов
 
-Весь контент — **только фейковые/санитизированные демо-данные**.
+Весь контент — **санитизированные демо-данные** (`*.example`).
 
 ---
 
-## Исходная документация
+## Платформа
 
-- [I-SEO-REPORT-HUB-WEBSITE-FACTORY-PROTOTYPE-CHARTER-v0.1.md](../../../projects/iseo-report-hub/product/I-SEO-REPORT-HUB-WEBSITE-FACTORY-PROTOTYPE-CHARTER-v0.1.md)
-- [I-SEO-REPORT-HUB-WEBSITE-FACTORY-DEMO-BRIEF-v0.1.md](../../../projects/iseo-report-hub/product/I-SEO-REPORT-HUB-WEBSITE-FACTORY-DEMO-BRIEF-v0.1.md)
-- [I-SEO-REPORT-HUB-ADMIN-UX-FLOW-v0.1.md](../../../projects/iseo-report-hub/product/I-SEO-REPORT-HUB-ADMIN-UX-FLOW-v0.1.md)
-- [I-SEO-REPORT-HUB-WEB-REPORT-STRUCTURE-v0.1.md](../../../projects/iseo-report-hub/product/I-SEO-REPORT-HUB-WEB-REPORT-STRUCTURE-v0.1.md)
+**Платформа не выбрана.** Реализация **не начата**.
+
+---
+
+## Demo projects (v0.4 staged)
+
+| Проект | Тип | Стадия | Client report |
+|--------|-----|--------|---------------|
+| **Регион Сервис** | Local / Regional | Final published (100%) | ✓ Доступен |
+| **Industrial Tools** | E-commerce | Week 3 active, monthly draft (58%) | ✗ Не готов |
+| **Инжиниринг Сервис** | Service / Corporate | Week 1 active, monthly shell (12%) | ✗ Не готов |
 
 ---
 
@@ -41,45 +55,36 @@
 
 | Файл | Экран |
 |------|--------|
-| `index.html` | Панель SEO-специалиста |
-| `project.html` | Проект и отчётный цикл |
-| `weekly.html` | Редактор недельного чекпоинта |
-| `monthly.html` | Редактор месячного отчёта |
-| `client-report.html` | Клиентский web-отчёт |
-| `review.html` | Очередь проверки (вид проверяющего) |
+| `index.html` | Dashboard — lifecycle matrix, project cards |
+| `specialist-workspace.html` | **Рабочая панель SEO** — заполнение отчёта (чек-листы, тексты, KPI, evidence) |
+| `project.html` | Project detail — type block list, lifecycle |
+| `weekly.html` | Structured weekly view — W1/W2/W3 states (заполнение → workspace) |
+| `monthly.html` | Structured monthly view — type block matrix + anatomy |
+| `client-report.html` | Client report — gate для B/C |
+| `review.html` | Review queue — staged statuses |
 
 ---
 
 ## Как открыть
 
-Откройте `index.html` в локальном браузере (`file://` или через простой static server). **Без build-шага. Без npm install.**
+`X:\AI MARS\workspaces\website-factory-operations\iseo-report-hub-prototype\index.html`
 
-Рекомендуемый порядок просмотра:
+**Без build. Без npm.**
 
-1. `index.html` — панель специалиста
-2. `project.html` — обзор отчётного цикла
-3. `weekly.html` — редактор недельного чекпоинта
-4. `monthly.html` — редактор месячного отчёта
-5. `review.html` — очередь проверки
-6. `client-report.html` — клиентский отчёт
+### Рекомендуемый порядок review (оператор)
 
----
-
-## Демо-данные
-
-- **Клиент:** Демо-клиент Industrial Tools
-- **Сайт:** demo-tools.example
-- **Проект:** SEO продвижение интернет-магазина
-- **Профиль:** E-commerce
-- **Период:** Июль 2026
+1. `index.html` — dashboard, lifecycle matrix, v0.4 overview
+2. `specialist-workspace.html` — **главный новый экран** — заполнение отчёта
+3. `monthly.html` — structured monthly view, type block matrix
+4. `client-report.html?project=local` — полный client report
+5. `weekly.html` — structured weekly view, связь с workspace
+6. `review.html` — queue: B primary, C not in queue
 
 ---
 
-## Следующие шаги
+## Готовность
 
-1. Визуальный обзор оператором русскоязычной локализованной демки
-2. Доработка прототипа по обратной связи **ИЛИ**
-3. Переход к спецификации WordPress-реализации / MVP charter
+**SEO feedback: not yet** — отложено до operator visual/content review v0.4.
 
 ---
 
@@ -89,6 +94,7 @@
 iseo-report-hub-prototype/
   README.md
   index.html
+  specialist-workspace.html
   project.html
   weekly.html
   monthly.html

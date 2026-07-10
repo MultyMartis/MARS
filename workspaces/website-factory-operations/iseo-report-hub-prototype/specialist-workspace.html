@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рабочая панель SEO-специалиста — i-SEO Report Hub (Демо v0.4)</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="iseo-shell">
+  <div class="admin-shell">
+    <aside class="sidebar">
+      <div class="sidebar__brand">
+        <p class="sidebar__brand-mark">INTLSEO</p>
+        <p class="sidebar__brand-title">i-SEO Report Hub</p>
+        <p class="sidebar__brand-sub">Статический демо v0.4</p>
+      </div>
+      <nav class="sidebar__nav">
+        <p class="sidebar__section-label">Главное</p>
+        <a href="index.html" data-page="index.html">Обзор проектов</a>
+        <a href="specialist-workspace.html" data-page="specialist-workspace.html" class="sidebar__nav-highlight">Рабочая панель SEO</a>
+        <p class="sidebar__section-label">Отчёты</p>
+        <a href="project.html" data-page="project.html">Проект и цикл</a>
+        <a href="weekly.html" data-page="weekly.html">Недельный чекпоинт</a>
+        <a href="monthly.html" data-page="monthly.html">Месячный отчёт</a>
+        <p class="sidebar__section-label">Проверка и клиент</p>
+        <a href="review.html" data-page="review.html">Очередь проверки</a>
+        <a href="client-report.html" data-page="client-report.html">Клиентский отчёт</a>
+      </nav>
+      <div class="sidebar__footer">Демо-данные · Без сервера · v0.4</div>
+    </aside>
+
+    <div class="admin-main">
+      <header class="iseo-header">
+        <div>
+          <div class="iseo-header__brand">
+            <span class="iseo-header__mark">INTLSEO</span>
+            <h1 class="iseo-header__title">Рабочая панель SEO-специалиста</h1>
+          </div>
+          <p class="iseo-header__sub">Заполнение отчёта · чек-листы · тексты · подтверждения · готовность</p>
+        </div>
+        <div class="topbar-cta">
+          <span class="badge badge--prototype">Демо v0.4</span>
+          <a class="brand-cta brand-cta--outline" href="monthly.html">Структура monthly →</a>
+        </div>
+      </header>
+
+      <main class="page-content" data-specialist-workspace>
+        <div class="prototype-banner prototype-banner--v04">
+          <strong>Демо v0.4:</strong> ежедневная рабочая панель SEO-специалиста. Здесь заполняются данные; weekly/monthly показывают структурированный вид отчёта.
+        </div>
+
+        <div class="platform-note">
+          <strong>Платформа не выбрана:</strong> WordPress / PHP+MySQL / Hybrid TBD. Static prototype only — без backend, без реальной загрузки файлов.
+        </div>
+
+        <div class="specialist-grid">
+          <div class="work-panel">
+
+            <section class="mb-24">
+              <div class="section-heading">
+                <span class="section-number">01</span>
+                <div class="section-heading__text">
+                  <h2>Выбор проекта и периода</h2>
+                  <p>Три staged demo-проекта · выберите стадию отчётного цикла</p>
+                </div>
+              </div>
+
+              <div class="grid-3 mb-16">
+                <article class="service-card" data-project-card="local">
+                  <div class="service-card__num">01</div>
+                  <h3 class="service-card__title">Регион Сервис</h3>
+                  <p class="service-card__desc">Local / Regional · финальный отчёт готов · client report ✓</p>
+                  <span class="badge badge--type-local">Local</span>
+                  <span class="badge badge--approved">Published</span>
+                </article>
+                <article class="service-card is-selected" data-project-card="ecommerce">
+                  <div class="service-card__num">02</div>
+                  <h3 class="service-card__title">Industrial Tools</h3>
+                  <p class="service-card__desc">E-commerce · 3-я неделя · monthly draft · client не готов</p>
+                  <span class="badge badge--type-ecommerce">E-commerce</span>
+                  <span class="badge badge--review">W3</span>
+                </article>
+                <article class="service-card" data-project-card="service">
+                  <div class="service-card__num">03</div>
+                  <h3 class="service-card__title">Инжиниринг Сервис</h3>
+                  <p class="service-card__desc">Service / Corporate · 1-я неделя · monthly shell</p>
+                  <span class="badge badge--type-service">Service</span>
+                  <span class="badge badge--draft">W1</span>
+                </article>
+              </div>
+
+              <div class="form-card">
+                <div class="form-card__header">Стадия отчётного цикла</div>
+                <div class="form-card__body">
+                  <div class="stage-selector mb-16">
+                    <button type="button" class="stage-btn" data-stage-btn="w1">Week 1</button>
+                    <button type="button" class="stage-btn" data-stage-btn="w2">Week 2</button>
+                    <button type="button" class="stage-btn is-active" data-stage-btn="w3">Week 3</button>
+                    <button type="button" class="stage-btn" data-stage-btn="final">Final monthly</button>
+                  </div>
+                  <div data-ws-meta></div>
+                </div>
+              </div>
+            </section>
+
+            <section class="mb-24">
+              <div class="section-heading">
+                <span class="section-number">02</span>
+                <div class="section-heading__text">
+                  <h2>Обязательные блоки отчёта</h2>
+                  <p>Type Block Matrix для выбранного типа сайта</p>
+                </div>
+              </div>
+              <div class="form-card">
+                <div class="form-card__body" data-ws-blocks></div>
+              </div>
+            </section>
+
+            <section class="mb-24">
+              <div class="section-heading">
+                <span class="section-number">03</span>
+                <div class="section-heading__text">
+                  <h2>Выполненные работы</h2>
+                  <p>Чек-лист по категориям · visibility · заметки</p>
+                </div>
+              </div>
+              <div data-ws-works></div>
+            </section>
+
+            <section class="mb-24">
+              <div class="section-heading">
+                <span class="section-number">04</span>
+                <div class="section-heading__text">
+                  <h2>Текстовые блоки</h2>
+                  <p>Клиентский текст и внутренние заметки разделены</p>
+                </div>
+              </div>
+              <div class="form-card">
+                <div class="form-card__body">
+                  <div class="form-group">
+                    <label class="form-label">Краткое резюме для клиента <span class="visibility-badge visibility-badge--client">клиенту</span></label>
+                    <textarea class="mock-textarea" rows="3" data-ws-text="client-summary" placeholder="Executive summary для client report…"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Что изменилось <span class="visibility-badge visibility-badge--client">клиенту</span></label>
+                    <textarea class="mock-textarea" rows="3" data-ws-text="changes"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Интерпретация показателей <span class="visibility-badge visibility-badge--client">клиенту</span></label>
+                    <textarea class="mock-textarea" rows="3" data-ws-text="interpretation"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Риски / блокеры <span class="visibility-badge visibility-badge--client">клиенту</span> <span class="visibility-badge visibility-badge--internal">внутреннее</span></label>
+                    <textarea class="mock-textarea" rows="2" data-ws-text="blockers"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">План на следующую неделю / месяц <span class="visibility-badge visibility-badge--client">клиенту</span></label>
+                    <textarea class="mock-textarea" rows="3" data-ws-text="next-plan"></textarea>
+                  </div>
+                  <div class="form-group form-note-internal">
+                    <label class="form-label">Внутренняя заметка <span class="visibility-badge visibility-badge--internal">внутреннее</span></label>
+                    <textarea class="mock-textarea" rows="2" data-ws-text="internal-note"></textarea>
+                    <p class="form-hint">Не попадёт в клиентский отчёт без reviewer approval.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="mb-24">
+              <div class="section-heading">
+                <span class="section-number">05</span>
+                <div class="section-heading__text">
+                  <h2>KPI и источники данных</h2>
+                  <p>Метрики с интерпретацией и переключателем видимости</p>
+                </div>
+              </div>
+              <div class="form-card">
+                <div class="form-card__body" data-ws-kpi></div>
+              </div>
+            </section>
+
+            <section class="mb-24">
+              <div class="section-heading">
+                <span class="section-number">06</span>
+                <div class="section-heading__text">
+                  <h2>Подтверждения и скриншоты</h2>
+                  <p>Ссылки, источники, привязка к блокам — без реальной загрузки</p>
+                </div>
+              </div>
+              <div class="form-card">
+                <div class="form-card__body">
+                  <div class="upload-zone" data-upload-zone data-demo-action="add-screenshot">
+                    <div class="upload-zone__icon">📎</div>
+                    <strong>Перетащите скриншот или выберите файл</strong>
+                    <p class="form-hint mt-16">Static demo — файлы не загружаются</p>
+                  </div>
+                  <div class="mt-16" data-ws-evidence></div>
+                  <button type="button" class="btn btn--ghost mt-16" data-demo-action="add-evidence">+ Добавить подтверждение</button>
+                </div>
+              </div>
+            </section>
+
+            <section class="mb-24">
+              <div class="section-heading">
+                <span class="section-number">08</span>
+                <div class="section-heading__text">
+                  <h2>Действия</h2>
+                  <p>Сохранение, проверка, предпросмотр — demo messages only</p>
+                </div>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="brand-cta" data-demo-action="save">Сохранить черновик</button>
+                <button type="button" class="btn btn--primary" data-demo-action="submit">Отправить на проверку</button>
+                <button type="button" class="btn btn--secondary" data-demo-action="add-work">Добавить работу</button>
+                <button type="button" class="btn btn--secondary" data-demo-action="add-screenshot">Добавить скриншот</button>
+                <a href="#" class="btn btn--ghost" data-ws-preview>Предпросмотр клиентского отчёта</a>
+              </div>
+              <p class="form-hint mt-16" data-demo-feedback hidden></p>
+            </section>
+          </div>
+
+          <aside>
+            <div class="readiness-panel">
+              <h3 class="readiness-panel__title"><span class="section-number" style="font-size:18px;display:inline;">07</span> Проверка готовности</h3>
+              <div data-ws-readiness></div>
+              <h4 class="card__title mt-24 mb-8" style="font-size:13px;">Что осталось заполнить</h4>
+              <div data-ws-remain></div>
+              <h4 class="card__title mt-24 mb-8" style="font-size:13px;">Правила качества</h4>
+              <div class="quality-rule">Каждое утверждение в client report должно иметь evidence или источник данных.</div>
+              <div class="quality-rule">Факты, интерпретация и риски — отдельные слои. Не смешивать.</div>
+              <div class="quality-rule">Внутренние заметки не публикуются без reviewer approval.</div>
+              <div class="quality-rule">Weekly чекпоинты сворачиваются в monthly final после W3.</div>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="assets/js/demo.js"></script>
+</body>
+</html>

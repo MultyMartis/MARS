@@ -1,185 +1,117 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Панель специалиста — i-SEO Report Hub (Демо)</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
-  <div class="admin-shell">
-    <aside class="sidebar">
-      <div class="sidebar__brand">
-        <p class="sidebar__brand-title">i-SEO Report Hub</p>
-        <p class="sidebar__brand-sub">Прототип / Демо v0.1</p>
-      </div>
-      <nav class="sidebar__nav">
-        <p class="sidebar__section-label">Специалист</p>
-        <a href="index.html" data-page="index.html">Панель специалиста</a>
-        <a href="project.html" data-page="project.html">Проект и отчётный цикл</a>
-        <a href="weekly.html" data-page="weekly.html">Недельный чекпоинт</a>
-        <a href="monthly.html" data-page="monthly.html">Месячный отчёт</a>
-        <p class="sidebar__section-label">Проверка и клиент</p>
-        <a href="review.html" data-page="review.html">Очередь проверки</a>
-        <a href="client-report.html" data-page="client-report.html">Клиентский отчёт</a>
-      </nav>
-      <div class="sidebar__footer">Только демо-данные · Без сервера</div>
-    </aside>
-
-    <div class="admin-main">
-      <header class="topbar">
-        <h1 class="topbar__title">Панель SEO-специалиста</h1>
-        <div class="topbar__meta">
-          <span>SEO-специалист Демо</span>
-          <span class="badge badge--prototype">Прототип / Демо</span>
-        </div>
-      </header>
-
-      <main class="page-content">
-        <div class="prototype-banner">
-          <strong>Прототип / Демо v0.1</strong> — статический прототип Website Factory. Не production, не WordPress, не подключено к API или n8n.
-        </div>
-
-        <div class="alert alert--warning">
-          <strong>Требуют действия:</strong> 1 недельный чекпоинт и 1 месячный отчёт ожидают заполнения или проверки.
-          <ul class="alert__list">
-            <li>Демо-клиент Industrial Tools — Неделя 3: не заполнено поле «Краткое резюме»</li>
-            <li>Демо-клиент Industrial Tools — Закрытие месяца: черновик, не отправлен на проверку</li>
-          </ul>
-        </div>
-
-        <section class="mb-24">
-          <h2 class="card__title mb-16">KPI по назначенным проектам</h2>
-          <div class="grid-4">
-            <div class="kpi-card">
-              <div class="kpi-card__label">Органические визиты</div>
-              <div class="kpi-card__value">4 820</div>
-              <div class="kpi-card__delta">+12% к прошлому месяцу</div>
-            </div>
-            <div class="kpi-card">
-              <div class="kpi-card__label">Видимость</div>
-              <div class="kpi-card__value">+8%</div>
-              <div class="kpi-card__delta">рост за период</div>
-            </div>
-            <div class="kpi-card">
-              <div class="kpi-card__label">Запросы в ТОП-10</div>
-              <div class="kpi-card__value">146</div>
-              <div class="kpi-card__delta">+9 новых</div>
-            </div>
-            <div class="kpi-card">
-              <div class="kpi-card__label">Лиды / формы</div>
-              <div class="kpi-card__value">23</div>
-              <div class="kpi-card__delta">E-commerce профиль</div>
-            </div>
-          </div>
-        </section>
-
-        <div class="grid-2 mb-24">
-          <div class="card">
-            <div class="card__header">
-              <h2 class="card__title">Сроки</h2>
-            </div>
-            <div class="card__body">
-              <div class="deadline-card mb-16">
-                <div class="deadline-card__date">До 12 июля 2026</div>
-                <strong>Недельный чекпоинт — Неделя 3</strong> — Демо-клиент Industrial Tools
-                <div class="mt-16"><span class="badge badge--review">Нужна проверка</span></div>
-              </div>
-              <div class="deadline-card">
-                <div class="deadline-card__date">До 20 июля 2026</div>
-                <strong>Закрытие месяца</strong> — Демо-клиент Industrial Tools
-                <div class="mt-16"><span class="badge badge--draft">Черновик</span></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card__header">
-              <h2 class="card__title">Быстрые ссылки</h2>
-            </div>
-            <div class="card__body">
-              <div class="quick-links">
-                <a href="project.html">Проект и отчётный цикл</a>
-                <a href="weekly.html">Недельный чекпоинт</a>
-                <a href="monthly.html">Месячный отчёт</a>
-                <a href="review.html">Очередь проверки</a>
-                <a href="client-report.html">Клиентский отчёт</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card mb-24">
-          <div class="card__header">
-            <h2 class="card__title">Мои проекты</h2>
-          </div>
-          <div class="card__body" style="padding:0;">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th>Клиент</th>
-                  <th>Проект</th>
-                  <th>Период</th>
-                  <th>Нед. 1</th>
-                  <th>Нед. 2</th>
-                  <th>Нед. 3</th>
-                  <th>Закрытие</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Демо-клиент Industrial Tools</td>
-                  <td>SEO продвижение интернет-магазина</td>
-                  <td>Июль 2026</td>
-                  <td><span class="badge badge--completed">Готово</span></td>
-                  <td><span class="badge badge--completed">Готово</span></td>
-                  <td><span class="badge badge--review">Нужна проверка</span></td>
-                  <td><span class="badge badge--draft">Черновик</span></td>
-                  <td><a href="project.html">Открыть →</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__header">
-            <h2 class="card__title">Отчёты, требующие действия</h2>
-          </div>
-          <div class="card__body" style="padding:0;">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th>Тип</th>
-                  <th>Проект</th>
-                  <th>Статус</th>
-                  <th>Не заполнены поля</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Недельный чекпоинт</td>
-                  <td>Демо-клиент Industrial Tools — Неделя 3</td>
-                  <td><span class="badge badge--review">Нужна проверка</span></td>
-                  <td class="text-muted">Краткое резюме</td>
-                  <td><a href="weekly.html">Редактировать →</a></td>
-                </tr>
-                <tr>
-                  <td>Месячный отчёт</td>
-                  <td>Демо-клиент Industrial Tools — Июль 2026</td>
-                  <td><span class="badge badge--draft">Черновик</span></td>
-                  <td class="text-muted">Резюме для клиента, блок трафика</td>
-                  <td><a href="monthly.html">Редактировать →</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </main>
-    </div>
-  </div>
-  <script src="assets/js/demo.js"></script>
-</body>
-</html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Обзор проектов — i-SEO Report Hub (Демо v0.4)</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="iseo-shell">
+  <div class="admin-shell">
+    <aside class="sidebar">
+      <div class="sidebar__brand">
+        <p class="sidebar__brand-mark">INTLSEO</p>
+        <p class="sidebar__brand-title">i-SEO Report Hub</p>
+        <p class="sidebar__brand-sub">Статический демо v0.4</p>
+      </div>
+      <nav class="sidebar__nav">
+        <p class="sidebar__section-label">Главное</p>
+        <a href="index.html" data-page="index.html">Обзор проектов</a>
+        <a href="specialist-workspace.html" data-page="specialist-workspace.html" class="sidebar__nav-highlight">Рабочая панель SEO</a>
+        <p class="sidebar__section-label">Отчёты</p>
+        <a href="project.html" data-page="project.html">Проект и цикл</a>
+        <a href="weekly.html" data-page="weekly.html">Недельный чекпоинт</a>
+        <a href="monthly.html" data-page="monthly.html">Месячный отчёт</a>
+        <p class="sidebar__section-label">Проверка и клиент</p>
+        <a href="review.html" data-page="review.html">Очередь проверки</a>
+        <a href="client-report.html" data-page="client-report.html">Клиентский отчёт</a>
+      </nav>
+      <div class="sidebar__footer">Демо-данные · Без сервера · v0.4</div>
+    </aside>
+
+    <div class="admin-main">
+      <header class="iseo-header">
+        <div>
+          <div class="iseo-header__brand">
+            <span class="iseo-header__mark">INTLSEO</span>
+            <h1 class="iseo-header__title">i-SEO Report Hub</h1>
+          </div>
+          <p class="iseo-header__sub">Внутренний продукт отчётности · обзор проектов и lifecycle</p>
+        </div>
+        <div class="topbar-cta">
+          <span class="badge badge--prototype">Демо v0.4</span>
+          <a class="brand-cta" href="specialist-workspace.html">Открыть рабочую панель SEO</a>
+        </div>
+      </header>
+
+      <main class="page-content">
+        <div class="prototype-banner prototype-banner--v04">
+          <strong>Демо v0.4:</strong> INTLSEO-inspired UI + рабочая панель SEO-специалиста. Report Content Architecture, Type Block Matrix, staged lifecycle (Final / W3 / W1).
+        </div>
+
+        <div class="platform-note">
+          <strong>Платформа не выбрана:</strong> WordPress / PHP+MySQL / Hybrid рассматриваются. Реализация не начата.
+        </div>
+
+        <div class="alert alert--info mb-24">
+          <strong>SEO feedback: not yet</strong> — отложено до operator visual/content review v0.4.
+        </div>
+
+        <section class="mb-24">
+          <div class="section-heading">
+            <span class="section-number">01</span>
+            <div class="section-heading__text">
+              <h2>Проекты — staged reporting lifecycle (Июль 2026)</h2>
+              <p>Три демо-сценария: Local Final · E-commerce W3 · Service W1</p>
+            </div>
+          </div>
+          <div class="project-cards" data-dashboard-cards></div>
+        </section>
+
+        <section class="mb-24">
+          <div class="section-heading">
+            <span class="section-number">02</span>
+            <div class="section-heading__text">
+              <h2>Lifecycle matrix — W1 / W2 / W3 / Final</h2>
+            </div>
+          </div>
+          <div class="card card--agency">
+            <div class="card__body" style="padding:0;" data-lifecycle-matrix></div>
+          </div>
+        </section>
+
+        <div class="grid-2 mb-24">
+          <div class="card card--agency">
+            <div class="card__header"><h2 class="card__title">Быстрые ссылки</h2></div>
+            <div class="card__body">
+              <div class="quick-links">
+                <a href="specialist-workspace.html" class="brand-cta" style="font-size:12px;padding:6px 12px;">Заполнить отчёт →</a>
+                <a href="specialist-workspace.html?project=ecommerce">Рабочая панель (E-com W3)</a>
+                <a href="project.html">Проект и цикл</a>
+                <a href="weekly.html?project=service">Weekly — W1 (Инжиниринг)</a>
+                <a href="monthly.html">Месячный отчёт</a>
+                <a href="review.html">Очередь проверки</a>
+                <a href="client-report.html?project=local">Клиентский отчёт ✓</a>
+              </div>
+            </div>
+          </div>
+          <div class="card card--agency">
+            <div class="card__header"><h2 class="card__title">v0.4 — что нового</h2></div>
+            <div class="card__body">
+              <ul class="checklist">
+                <li><input type="checkbox" checked disabled> INTLSEO / i-seo.su inspired visual style</li>
+                <li><input type="checkbox" checked disabled> Рабочая панель SEO-специалиста (specialist-workspace.html)</li>
+                <li><input type="checkbox" checked disabled> Чек-листы, тексты, KPI, evidence mockups</li>
+                <li><input type="checkbox" checked disabled> Readiness panel + visibility controls</li>
+                <li><input type="checkbox" checked disabled> v0.3: lifecycle, type matrix, staged projects</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="assets/js/demo.js"></script>
+</body>
+</html>
+

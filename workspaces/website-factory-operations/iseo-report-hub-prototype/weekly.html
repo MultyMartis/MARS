@@ -3,181 +3,146 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Недельный чекпоинт — i-SEO Report Hub (Демо)</title>
+  <title>Недельный чекпоинт — i-SEO Report Hub (Демо v0.4)</title>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+<body class="iseo-shell">
   <div class="admin-shell">
     <aside class="sidebar">
       <div class="sidebar__brand">
+        <p class="sidebar__brand-mark">INTLSEO</p>
         <p class="sidebar__brand-title">i-SEO Report Hub</p>
-        <p class="sidebar__brand-sub">Прототип / Демо v0.1</p>
+        <p class="sidebar__brand-sub">Статический демо v0.4</p>
       </div>
       <nav class="sidebar__nav">
-        <p class="sidebar__section-label">Специалист</p>
-        <a href="index.html" data-page="index.html">Панель специалиста</a>
-        <a href="project.html" data-page="project.html">Проект и отчётный цикл</a>
+        <p class="sidebar__section-label">Главное</p>
+        <a href="index.html" data-page="index.html">Обзор проектов</a>
+        <a href="specialist-workspace.html" data-page="specialist-workspace.html" class="sidebar__nav-highlight">Рабочая панель SEO</a>
+        <p class="sidebar__section-label">Отчёты</p>
+        <a href="project.html" data-page="project.html">Проект и цикл</a>
         <a href="weekly.html" data-page="weekly.html">Недельный чекпоинт</a>
         <a href="monthly.html" data-page="monthly.html">Месячный отчёт</a>
         <p class="sidebar__section-label">Проверка и клиент</p>
         <a href="review.html" data-page="review.html">Очередь проверки</a>
         <a href="client-report.html" data-page="client-report.html">Клиентский отчёт</a>
       </nav>
-      <div class="sidebar__footer">Только демо-данные · Без сервера</div>
+      <div class="sidebar__footer">Демо-данные · Без сервера · v0.4</div>
     </aside>
 
     <div class="admin-main">
-      <header class="topbar">
-        <h1 class="topbar__title">Редактор недельного чекпоинта</h1>
-        <div class="topbar__meta">
-          <span data-week-indicator>Неделя 3</span>
-          <span class="badge badge--review">Нужна проверка</span>
+      <header class="iseo-header">
+        <div>
+          <div class="iseo-header__brand">
+            <span class="iseo-header__mark">INTLSEO</span>
+            <h1 class="iseo-header__title">Структурированный вид недельного чекпоинта</h1>
+          </div>
+          <p class="iseo-header__sub"><span data-week-indicator>Неделя 3</span> · <span data-weekly-status></span></p>
+        </div>
+        <div class="topbar-cta">
+          <a class="brand-cta" href="specialist-workspace.html">Заполнить отчёт в рабочей панели</a>
         </div>
       </header>
 
-      <main class="page-content">
-        <div class="prototype-banner">
-          <strong>Прототип / Демо</strong> — быстрое заполнение недельного чекпоинта. Контролы не сохраняют данные.
+      <main class="page-content" data-weekly-editor>
+        <div class="workspace-note">
+          <strong>Это structured view/editor.</strong> Ежедневное заполнение чек-листов, текстов и подтверждений — в <a href="specialist-workspace.html">рабочей панели SEO</a>. Weekly чекпоинты сворачиваются в monthly final.
         </div>
 
-        <div class="alert alert--warning">
-          <strong>Не заполнены поля:</strong>
-          <ul class="alert__list">
-            <li>Краткое резюме — обязательное поле</li>
-          </ul>
+        <div class="prototype-banner prototype-banner--v04">
+          <strong>Демо v0.4</strong> — просмотр недельного чекпоинта по lifecycle. Для ввода данных → <a href="specialist-workspace.html">specialist-workspace.html</a>.
         </div>
+
+        <div data-project-tabs data-default-project="ecommerce">
+          <div class="grid-2 mb-24">
+            <div class="form-group project-selector">
+              <label class="form-label" for="project-select-weekly">Проект / тип</label>
+              <select class="form-select" id="project-select-weekly" data-project-select>
+                <option value="local">Регион Сервис — Local / Regional (Final complete)</option>
+                <option value="ecommerce" selected>Industrial Tools — E-commerce (W3 active)</option>
+                <option value="service">Инжиниринг Сервис — Service / Corporate (W1 active)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="week-select">Неделя (1–3)</label>
+              <select class="form-select" id="week-select" data-week-select>
+                <option value="1">Неделя 1</option>
+                <option value="2">Неделя 2</option>
+                <option value="3" selected>Неделя 3</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-24" data-weekly-lifecycle></div>
 
         <header class="page-header">
-          <h2 class="page-header__title">Демо-клиент Industrial Tools — SEO продвижение интернет-магазина</h2>
-          <p class="page-header__subtitle">Отчётный цикл — Июль 2026</p>
+          <h2 class="page-header__title" data-weekly-title>—</h2>
+          <p class="page-header__subtitle">Отчётный цикл — Июль 2026 · Weekly checkpoint</p>
         </header>
 
-        <div class="grid-2 mb-24">
-          <div class="form-group">
-            <label class="form-label" for="week-select">Неделя</label>
-            <select class="form-select" id="week-select" data-week-select>
-              <option value="1">Неделя 1 — готово</option>
-              <option value="2">Неделя 2 — готово</option>
-              <option value="3" selected>Неделя 3 — нужна проверка</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Статус</label>
-            <div><span class="badge badge--review">Нужна проверка</span></div>
-          </div>
-        </div>
+        <div data-weekly-empty hidden></div>
 
-        <div class="card mb-24">
-          <div class="card__header"><h3 class="card__title">Краткое резюме</h3></div>
-          <div class="card__body">
-            <div class="form-group">
-              <textarea class="form-textarea" placeholder="Краткое резюме недели (обязательно)…"></textarea>
-              <p class="form-hint is-error">Поле обязательно для отправки на проверку</p>
-            </div>
+        <div data-weekly-content>
+          <div class="report-block mb-16">
+            <div class="report-block__header"><span>Краткое резюме недели</span></div>
+            <div class="report-block__body"><textarea class="form-textarea" data-field="summary" rows="4"></textarea></div>
           </div>
-        </div>
 
-        <div class="card mb-24">
-          <div class="card__header"><h3 class="card__title">Выполненные работы за неделю</h3></div>
-          <div class="card__body">
-            <ul class="checklist">
-              <li><input type="checkbox" checked> Проверили техническое состояние сайта</li>
-              <li><input type="checkbox" checked> Обновили метаданные для приоритетных категорий</li>
-              <li><input type="checkbox" checked> Добавили новые внутренние ссылки</li>
-              <li><input type="checkbox"> Проверили индексацию важных страниц</li>
-              <li><input type="checkbox"> Подготовили и разместили тематический материал</li>
-              <li><input type="checkbox" checked> Добавили внешний отчёт по позициям</li>
-            </ul>
+          <div class="report-block mb-16">
+            <div class="report-block__header"><span>Выполненные работы</span></div>
+            <div class="report-block__body"><ul class="checklist" data-field="works-list"></ul></div>
           </div>
-        </div>
 
-        <div class="grid-2 mb-24">
-          <div class="card">
-            <div class="card__header"><h3 class="card__title">Заметки по метрикам</h3></div>
-            <div class="card__body">
-              <textarea class="form-textarea">Органический трафик стабилен (+3% к прошлой неделе). Видимость по коммерческим запросам выросла. Лиды через формы — 6 за неделю.</textarea>
+          <div class="grid-2 mb-16">
+            <div class="report-block">
+              <div class="report-block__header"><span>Метрики / наблюдения</span></div>
+              <div class="report-block__body"><textarea class="form-textarea" data-field="metrics" rows="4"></textarea></div>
+            </div>
+            <div class="report-block">
+              <div class="report-block__header"><span>Блокеры <span class="visibility-badge visibility-badge--internal">внутреннее</span></span></div>
+              <div class="report-block__body"><textarea class="form-textarea" data-field="blockers" rows="4"></textarea></div>
             </div>
           </div>
-          <div class="card">
-            <div class="card__header"><h3 class="card__title">Блокеры и риски</h3></div>
-            <div class="card__body">
-              <textarea class="form-textarea">- Часть товарных страниц требует проверки индексации
-- Нужно согласовать тексты для новых категорий
-- Не все цели по формам готовы к автоматическому импорту</textarea>
-            </div>
-          </div>
-        </div>
 
-        <div class="card mb-24">
-          <div class="card__header"><h3 class="card__title">Ссылки на подтверждения</h3></div>
-          <div class="card__body">
-            <div class="evidence-card">
-              <div class="evidence-card__icon">🔗</div>
-              <input class="form-input" type="url" value="https://example.com/evidence-1" readonly>
-            </div>
-            <div class="evidence-card">
-              <div class="evidence-card__icon">🔗</div>
-              <input class="form-input" type="url" value="https://example.com/evidence-2" readonly>
-            </div>
-            <div class="evidence-card">
-              <div class="evidence-card__icon">🔗</div>
-              <input class="form-input" type="url" value="https://example.com/evidence-3" readonly>
-            </div>
+          <div class="report-block mb-16">
+            <div class="report-block__header"><span>Подтверждения</span></div>
+            <div class="report-block__body" data-field="evidence-list"></div>
           </div>
-        </div>
 
-        <div class="card mb-24">
-          <div class="card__header"><h3 class="card__title">Topvisor</h3></div>
-          <div class="card__body">
-            <div class="topvisor-card">
-              <p class="topvisor-card__title">Ссылка на отчёт Topvisor</p>
-              <input class="form-input mb-16" type="url" value="https://example.com/topvisor-demo-report">
-              <a class="btn btn--secondary" href="https://example.com/topvisor-demo-report" target="_blank" rel="noopener">Предпросмотр ссылки</a>
+          <div class="grid-2 mb-16">
+            <div class="report-block">
+              <div class="report-block__header"><span>План на следующую неделю</span></div>
+              <div class="report-block__body"><textarea class="form-textarea" data-field="next-plan" rows="4"></textarea></div>
+            </div>
+            <div class="report-block">
+              <div class="report-block__header"><span>Внутренние заметки <span class="visibility-badge visibility-badge--internal">внутреннее</span></span></div>
+              <div class="report-block__body"><textarea class="form-textarea" data-field="internal-notes" rows="4"></textarea></div>
             </div>
           </div>
-        </div>
 
-        <div class="grid-2 mb-24">
-          <div class="card">
-            <div class="card__header"><h3 class="card__title">План на следующую неделю</h3></div>
-            <div class="card__body">
-              <textarea class="form-textarea">- Продолжить работу с категориями
-- Расширить семантическое ядро
-- Проверить страницы с низким CTR</textarea>
-            </div>
+          <div class="report-block mb-16">
+            <div class="report-block__header"><span>Связь с monthly final</span></div>
+            <div class="report-block__body"><p class="form-hint" data-field="feeds-monthly">—</p></div>
           </div>
-          <div class="card">
-            <div class="card__header"><h3 class="card__title">Внутренние заметки</h3></div>
-            <div class="card__body">
-              <div class="form-note-internal">
-                <p class="form-label">Только для специалиста — не видно клиенту</p>
-                <textarea class="form-textarea">Клиент просил ускорить материалы по power tools. Согласовать с руководителем SEO до публикации.</textarea>
+
+          <div class="report-block mb-24">
+            <div class="report-block__header"><span>Готово к проверке</span></div>
+            <div class="report-block__body">
+              <div class="toggle-row">
+                <input type="checkbox" id="ready-review" data-field="ready-review">
+                <label for="ready-review">Готово к проверке</label>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="card mb-24">
-          <div class="card__header"><h3 class="card__title">Публикация</h3></div>
-          <div class="card__body">
-            <div class="toggle-row">
-              <input type="checkbox" id="ready-review">
-              <label for="ready-review">Готово к проверке</label>
+          <div class="section-actions">
+            <div class="btn-group">
+              <button class="btn btn--secondary" data-demo-action="save">Сохранить черновик</button>
+              <button class="btn btn--primary" data-demo-action="submit">Отправить на проверку</button>
+              <a class="btn btn--ghost" href="monthly.html">Месячный отчёт →</a>
             </div>
-            <div class="toggle-row">
-              <input type="checkbox" id="publish-client" disabled>
-              <label for="publish-client" class="text-muted">Опубликовать клиенту (доступно после утверждения)</label>
-            </div>
+            <p class="form-hint mt-16" data-demo-feedback hidden></p>
           </div>
-        </div>
-
-        <div class="section-actions">
-          <div class="btn-group">
-            <button class="btn btn--secondary" data-demo-action="save">Сохранить черновик</button>
-            <button class="btn btn--primary" data-demo-action="submit">Отправить на проверку</button>
-            <a class="btn btn--ghost" href="project.html">← К проекту</a>
-          </div>
-          <p class="form-hint mt-16" data-demo-feedback hidden></p>
         </div>
       </main>
     </div>

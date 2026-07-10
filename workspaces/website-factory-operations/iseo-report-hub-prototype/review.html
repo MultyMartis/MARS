@@ -3,78 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Очередь проверки — i-SEO Report Hub (Демо)</title>
+  <title>Очередь проверки — i-SEO Report Hub (Демо v0.4)</title>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+<body class="iseo-shell">
   <div class="admin-shell">
     <aside class="sidebar">
       <div class="sidebar__brand">
+        <p class="sidebar__brand-mark">INTLSEO</p>
         <p class="sidebar__brand-title">i-SEO Report Hub</p>
-        <p class="sidebar__brand-sub">Прототип / Демо v0.1</p>
+        <p class="sidebar__brand-sub">Статический демо v0.4</p>
       </div>
       <nav class="sidebar__nav">
-        <p class="sidebar__section-label">Специалист</p>
-        <a href="index.html" data-page="index.html">Панель специалиста</a>
-        <a href="project.html" data-page="project.html">Проект и отчётный цикл</a>
+        <p class="sidebar__section-label">Главное</p>
+        <a href="index.html" data-page="index.html">Обзор проектов</a>
+        <a href="specialist-workspace.html" data-page="specialist-workspace.html" class="sidebar__nav-highlight">Рабочая панель SEO</a>
+        <p class="sidebar__section-label">Отчёты</p>
+        <a href="project.html" data-page="project.html">Проект и цикл</a>
         <a href="weekly.html" data-page="weekly.html">Недельный чекпоинт</a>
         <a href="monthly.html" data-page="monthly.html">Месячный отчёт</a>
         <p class="sidebar__section-label">Проверка и клиент</p>
         <a href="review.html" data-page="review.html">Очередь проверки</a>
         <a href="client-report.html" data-page="client-report.html">Клиентский отчёт</a>
       </nav>
-      <div class="sidebar__footer">Только демо-данные · Без сервера</div>
+      <div class="sidebar__footer">Демо-данные · Без сервера · v0.4</div>
     </aside>
 
     <div class="admin-main">
-      <header class="topbar">
-        <h1 class="topbar__title">Очередь проверки</h1>
-        <div class="topbar__meta">
-          <span>Руководитель SEO Демо</span>
-          <span class="badge badge--review">2 в очереди</span>
+      <header class="iseo-header">
+        <div>
+          <div class="iseo-header__brand">
+            <span class="iseo-header__mark">INTLSEO</span>
+            <h1 class="iseo-header__title">Очередь проверки</h1>
+          </div>
+          <p class="iseo-header__sub">Руководитель SEO Demo · W3 + draft в очереди</p>
+        </div>
+        <div class="topbar-cta">
+          <a class="brand-cta brand-cta--outline" href="specialist-workspace.html?project=ecommerce">Открыть рабочую панель</a>
         </div>
       </header>
 
       <main class="page-content">
-        <div class="prototype-banner">
-          <strong>Прототип / Демо</strong> — вид проверяющего (руководитель SEO). Утверждение и доработка без сервера.
+        <div class="prototype-banner prototype-banner--v04">
+          <strong>Демо v0.4</strong> — staged review: A published, B W3 needs review, C W1 not in queue.
         </div>
 
         <div class="card mb-24">
-          <div class="card__header">
-            <h2 class="card__title">Отчёты, ожидающие проверки</h2>
-          </div>
+          <div class="card__header"><h2 class="card__title">Review queue</h2></div>
           <div class="card__body" style="padding:0;">
             <table class="data-table">
               <thead>
                 <tr>
-                  <th>Тип</th>
                   <th>Проект</th>
-                  <th>Специалист</th>
-                  <th>Статус</th>
-                  <th>Срок</th>
-                  <th>Не заполнены поля</th>
+                  <th>Тип</th>
+                  <th>Стадия</th>
+                  <th>Weekly</th>
+                  <th>Monthly</th>
+                  <th>Client</th>
+                  <th>Действие</th>
                   <th></th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Недельный чекпоинт</td>
-                  <td>Демо-клиент Industrial Tools — Неделя 3</td>
-                  <td>SEO-специалист Демо</td>
-                  <td><span class="badge badge--review">Нужна проверка</span></td>
-                  <td>12 июля 2026</td>
-                  <td class="text-muted">Краткое резюме</td>
-                  <td><a href="weekly.html">Открыть →</a></td>
+                  <td>Регион Сервис</td>
+                  <td><span class="badge badge--type-local">Local</span></td>
+                  <td><span class="badge badge--approved">Опубликован</span></td>
+                  <td>W1–W3 ✓</td>
+                  <td>100%</td>
+                  <td>✓</td>
+                  <td>Архив</td>
+                  <td><a href="client-report.html?project=local">Client ✓</a></td>
+                </tr>
+                <tr class="is-highlight">
+                  <td>Industrial Tools</td>
+                  <td><span class="badge badge--type-ecommerce">E-commerce</span></td>
+                  <td><span class="badge badge--review">W3 на проверке</span></td>
+                  <td>W3 ◐</td>
+                  <td>58%</td>
+                  <td>—</td>
+                  <td>Завершить Traffic, Orders</td>
+                  <td><a href="monthly.html?project=ecommerce">Monthly →</a></td>
                 </tr>
                 <tr>
-                  <td>Месячный отчёт</td>
-                  <td>Демо-клиент Industrial Tools — Июль 2026</td>
-                  <td>SEO-специалист Демо</td>
-                  <td><span class="badge badge--submitted">Отправлено</span></td>
-                  <td>20 июля 2026</td>
-                  <td class="text-muted">Резюме для клиента, блок трафика</td>
-                  <td><a href="monthly.html">Открыть →</a></td>
+                  <td>Инжиниринг Сервис</td>
+                  <td><span class="badge badge--type-service">Service</span></td>
+                  <td><span class="badge badge--draft">W1 в работе</span></td>
+                  <td>W1 ◐</td>
+                  <td>12%</td>
+                  <td>—</td>
+                  <td>Не в очереди</td>
+                  <td><a href="weekly.html?project=service">Weekly →</a></td>
                 </tr>
               </tbody>
             </table>
@@ -83,54 +102,48 @@
 
         <div class="grid-2">
           <div class="card">
-            <div class="card__header">
-              <h2 class="card__title">Панель быстрой проверки</h2>
-            </div>
-            <div class="card__body">
-              <p class="mb-16"><strong>Демо-клиент Industrial Tools — Неделя 3</strong></p>
-              <p class="text-muted mb-16">Специалист: SEO-специалист Демо · Период: Июль 2026</p>
-
-              <div class="alert alert--info mb-16">
-                <strong>Не заполнены обязательные поля:</strong>
-                <ul class="alert__list">
-                  <li>Краткое резюме недели</li>
-                </ul>
+            <div class="card__header"><h2 class="card__title">Панель проверки</h2></div>
+            <div class="card__body" data-review-detail>
+              <div class="form-group">
+                <label class="form-label" for="review-project-select">Выберите отчёт</label>
+                <select class="form-select" id="review-project-select" data-review-project-select>
+                  <option value="local">Регион Сервис — опубликован</option>
+                  <option value="ecommerce" selected>Industrial Tools — W3 + draft</option>
+                  <option value="service">Инжиниринг Сервис — W1 active</option>
+                </select>
               </div>
 
-              <div class="review-panel">
-                <p class="form-label">Комментарий проверяющего</p>
-                <textarea class="form-textarea" placeholder="Комментарий для специалиста…">Пожалуйста, добавьте краткое резюме за Неделю 3 перед утверждением. Остальные блоки заполнены корректно.</textarea>
+              <p class="mb-16"><strong data-review-project-name>—</strong></p>
+              <p class="text-muted mb-16">Специалист: <span data-review-specialist>—</span></p>
+              <p class="mb-16">Статус: <span data-review-status>—</span></p>
+
+              <div class="alert alert--warning mb-16">
+                <strong>Not-ready reason:</strong>
+                <p data-review-not-ready>—</p>
+              </div>
+
+              <div class="alert alert--warning mb-16">
+                <strong>Замечания по блокам:</strong>
+                <ul data-review-missing></ul>
+              </div>
+
+              <div class="alert alert--info mb-16">
+                <strong>Type block matrix:</strong>
+                <div class="block-chips" data-review-blocks></div>
+              </div>
+
+              <div class="alert alert--info mb-16">
+                <strong>Требуемое действие reviewer:</strong>
+                <p data-review-action>—</p>
               </div>
 
               <div class="btn-group mt-24">
                 <button class="btn btn--success" data-demo-action="approve">Утвердить</button>
                 <button class="btn btn--danger" data-demo-action="revision">Запросить доработку</button>
-                <a class="btn btn--ghost" href="monthly.html">Месячный отчёт</a>
-                <a class="btn btn--ghost" href="client-report.html">Предпросмотр клиентского отчёта</a>
+                <a class="btn btn--ghost" href="monthly.html?project=ecommerce">Monthly</a>
+                <a class="btn btn--ghost" href="weekly.html?project=ecommerce">Weekly W3</a>
               </div>
               <p class="form-hint mt-16" data-demo-feedback hidden></p>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card__header">
-              <h2 class="card__title">История комментариев</h2>
-            </div>
-            <div class="card__body">
-              <div class="review-thread">
-                <div class="review-comment">
-                  <div class="review-comment__meta">Руководитель SEO Демо · 9 июля 2026, 14:30</div>
-                  <p>Неделя 2 утверждена. Переходите к Неделе 3 — не забудьте ссылку на Topvisor.</p>
-                </div>
-                <div class="review-comment">
-                  <div class="review-comment__meta">SEO-специалист Демо · 9 июля 2026, 16:15</div>
-                  <p>Неделя 3 почти готова, добавлю резюме завтра.</p>
-                </div>
-                <div class="review-comment">
-                  <div class="review-comment__meta">Руководитель SEO Демо · 10 июля 2026, 09:00</div>
-                  <p>Ожидаю краткое резюме за Неделю 3. Месячный отчёт пока в черновике — резюме для клиента обязательно.</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
