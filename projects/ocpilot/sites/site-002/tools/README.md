@@ -93,6 +93,8 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | *(documentation only)* | Run **4.232** customer inbox confirmation — `SITE-002-PROD-MAIL-CUSTOMER-FORMS-INBOX-CONFIRMATION-01`; operator verified mailbox delivery/design/no service info issue; no script; report at [../reports/SITE-002-PROD-MAIL-CUSTOMER-FORMS-INBOX-CONFIRMATION-01.md](../reports/SITE-002-PROD-MAIL-CUSTOMER-FORMS-INBOX-CONFIRMATION-01.md) |
 | *(documentation only)* | Run **4.225** inbox confirmation — `SITE-002-PROD-MAIL-ADMIN-FORMS-INBOX-CONFIRMATION-01`; operator verified mailbox delivery/design; no script; report at [../reports/SITE-002-PROD-MAIL-ADMIN-FORMS-INBOX-CONFIRMATION-01.md](../reports/SITE-002-PROD-MAIL-ADMIN-FORMS-INBOX-CONFIRMATION-01.md) |
 | *(documentation only)* | Run **4.245** git sync — `SITE-002-GIT-SYNC-PUSH-BLOCKED-WAVE-E-01`; temp worktree cherry-pick push of Wave E commit to origin; no script; report at [../reports/SITE-002-GIT-SYNC-PUSH-BLOCKED-WAVE-E-01.md](../reports/SITE-002-GIT-SYNC-PUSH-BLOCKED-WAVE-E-01.md) |
+| *(documentation only)* | Run **4.252** stable checkpoint consolidation — `SITE-002-STABLE-CHECKPOINT-CONSOLIDATION-01`; checkpoint `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01`; Duration **CONFIRMED**; Lari **CONFIRMED**; monitor **CONFIRMED_MANUALLY**; natural scheduled post-hardening **NOT CLAIMED**; next `SITE-002-PROD-CATALOG-ONBOARDING-REVIEW-01`; no script; report at [../reports/SITE-002-STABLE-CHECKPOINT-CONSOLIDATION-01.md](../reports/SITE-002-STABLE-CHECKPOINT-CONSOLIDATION-01.md) |
+| *(documentation only)* | Run **4.251** local monitor manual run — `SITE-002-LOCAL-MONITOR-MANUAL-RUN-01`; operator-approved Task Scheduler trigger; hardened artifacts **CONFIRMED_MANUAL**; no script; report at [../reports/SITE-002-LOCAL-MONITOR-MANUAL-RUN-01.md](../reports/SITE-002-LOCAL-MONITOR-MANUAL-RUN-01.md) |
 | *(documentation only)* | Run **4.246** git authority realign — `SITE-002-GIT-AUTHORITY-REALIGN-AFTER-WAVE-E-01`; docs-only authority sync for Run 4.245; no script; report at [../reports/SITE-002-GIT-AUTHORITY-REALIGN-AFTER-WAVE-E-01.md](../reports/SITE-002-GIT-AUTHORITY-REALIGN-AFTER-WAVE-E-01.md) |
 | `checkout_anketa_mail_admin_forms.php` | Patched `checkout/anketa.php` source for Run 4.224 (repo reference; superseded by customer-forms variant for Run 4.226) |
 | `checkout_anketa_mail_customer_forms.php` | Patched `checkout/anketa.php` source for Run 4.226 — customer confirmations + admin mail (repo reference; superseded by info-page-forms variant for Run 4.230) |
@@ -102,12 +104,13 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `zpm-corp-cta-forms.js` | Corp CTA submit handler snippet merged into Production `main.js` (Run 4.230) |
 | `zpm-corp-cta-success.css` | Inline success/error styles appended to Production `style.css` (Run 4.230) |
 
-### Post-1C monitor scheduler notes (Run 4.216 / **4.228 hardening** / **4.251 manual confirmation**)
+### Post-1C monitor scheduler notes (Run 4.216 / **4.228 hardening** / **4.251 manual** / **4.252 checkpoint**)
 
 - Runner supports repository paths with spaces (`X:\AI MARS`) via PowerShell call-operator invocation.
 - Successful Windows Task `LastTaskResult` is **0**; **2** means runner/monitor execution failure — check `scheduled-monitors/post-1c/<timestamp>/run.stderr.log`.
 - Per-run logs: `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\scheduled-monitors\post-1c\`
-- **Run 4.251:** operator-approved manual `Start-ScheduledTask` produced folder `2026-07-10_13-27-20` with full hardened contract — validates runner/monitor code; natural 12:30 scheduled timing still awaits **2026-07-11** run · [report](../reports/SITE-002-LOCAL-MONITOR-MANUAL-RUN-01.md)
+- **Run 4.252:** checkpoint `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01` — manual monitor verified; natural post-hardening scheduled timing on 2026-07-10 **NOT CLAIMED** (workstation off); onboarding **ONBOARDING_REQUIRED** (5 needs) · [consolidation report](../reports/SITE-002-STABLE-CHECKPOINT-CONSOLIDATION-01.md)
+- **Run 4.251:** operator-approved manual `Start-ScheduledTask` produced folder `2026-07-10_13-27-20` with full hardened contract — validates runner/monitor code · [report](../reports/SITE-002-LOCAL-MONITOR-MANUAL-RUN-01.md)
 - **Hardened artifact contract (Run 4.228):** each run folder includes `added-urls.*`, `removed-urls.*`, `sitemap-baseline.xml`, `sitemap-current.xml`, `hygiene-flags.*`, `monitor-classification.*`, `changed-summary.*`, UTF-8 `run.log`/`run.stderr.log`, and `run-summary` with `duration_seconds`, `classification`, `next_action`.
 - **Strict garbage markers:** context-aware scan; no false positives on `/assets/img/demo/` or «Пример эксплуатации» doc links.
 - **Classification:** `NO_ACTION_REQUIRED` | `HYGIENE_REVIEW_REQUIRED` | `ONBOARDING_REQUIRED` | `FAILURE_REVIEW_REQUIRED`.

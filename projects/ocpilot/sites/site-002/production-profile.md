@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-10 (Run 4.251 — Local monitor manual run **COMPLETE** — hardened artifacts **CONFIRMED_MANUAL**; natural scheduled timing **still NOT OBSERVED**; Duration **CONFIRMED** from Run 4.250; checkpoint `SITE-002-STABLE-PROD-AUDIT-WAVE-E-INFO-META-H1-01` unchanged)
+**Last updated:** 2026-07-10 (Run 4.252 — Stable checkpoint consolidation **COMPLETE** — checkpoint `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01`; Duration **CONFIRMED**; Lari **CONFIRMED**; monitor **CONFIRMED_MANUALLY**; natural scheduled post-hardening **NOT CLAIMED**; next `SITE-002-PROD-CATALOG-ONBOARDING-REVIEW-01`)
 
 ---
 
@@ -69,7 +69,7 @@ Do not claim that Production exactly matches TEST unless evidence proves it.
 | Current M9.x baselines | [baselines/](baselines/) — TEST-proven checkpoints |
 | Post-corporate-page checkpoints | Home Commercial Trust · Corporate Intro · Custom Proof Strip · Delivery Summary · PDP Body Category Classes |
 | Production baseline parent | [baselines/SITE-002-STABLE-PROD-INITIAL-01.md](baselines/SITE-002-STABLE-PROD-INITIAL-01.md) |
-| Current Production checkpoint | [baselines/SITE-002-STABLE-PROD-MAIL-ADMIN-FORMS-01.md](baselines/SITE-002-STABLE-PROD-MAIL-ADMIN-FORMS-01.md) (parent [SITE-002-STABLE-PROD-MAIL-DESIGN-SYSTEM-01.md](baselines/SITE-002-STABLE-PROD-MAIL-DESIGN-SYSTEM-01.md)) |
+| Current Production checkpoint | [baselines/SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01.md](baselines/SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01.md) (parent [SITE-002-STABLE-PROD-AUDIT-WAVE-E-INFO-META-H1-01.md](baselines/SITE-002-STABLE-PROD-AUDIT-WAVE-E-INFO-META-H1-01.md)) |
 | Mail design system (Production) | **ACTIVE — CUSTOMER CONFIRMATIONS + LOADING UX** (Run 4.226) — `ZpmMailRenderer` in `checkout/anketa.php`; admin emails ЗПМ-styled + service info (Run 4.224/4.225); **customer confirmations conditional** on posted email or logged-in customer email — **no service info in customer copy**; form loading state `zpm-form--loading` + abort on modal close · **delivery retest** Run 4.231 — controlled submit `ok: true` with operator mailbox · **inbox confirmation** Run 4.232 — operator verified delivery/design/no service info issue · [report](reports/SITE-002-PROD-MAIL-CUSTOMER-FORMS-01.md) · [delivery confirmation](reports/SITE-002-PROD-MAIL-CUSTOMER-FORMS-DELIVERY-CONFIRMATION-01.md) · [inbox confirmation](reports/SITE-002-PROD-MAIL-CUSTOMER-FORMS-INBOX-CONFIRMATION-01.md) · [checkpoint](baselines/SITE-002-STABLE-PROD-MAIL-CUSTOMER-FORMS-01.md) |
 | Info page corp CTA forms (Production) | **ACTIVE — INTEGRATED** (Run 4.230) — 5 corp footer forms on `/custom-equipment`, `/payment-methods`, `/delivery`, `/dealers`, `/guarantee` submit via `checkout/anketa`; dialogs 7/8/9/10/11; inline success-state; live markup in `information/*.twig` · [report](reports/SITE-002-PROD-INFO-PAGE-FORMS-INTEGRATION-01.md) · [checkpoint](baselines/SITE-002-STABLE-PROD-INFO-PAGE-FORMS-01.md) |
 | Category entrypoints display sort (Production) | **ACTIVE** (Run 4.221) — megamenu + homepage + neutral hub **А → Я** by Russian name; `sortCategoriesByRussianName()` in `category_visibility.php`; hub sort in `category.php`; membership/images unchanged · [report](reports/SITE-002-PROD-CATEGORY-ENTRYPOINTS-SORT-AZ-01.md) |
