@@ -1,0 +1,77 @@
+{
+  "date": "2026-07-10",
+  "task_id": "seo20260710103247agk8ki",
+  "verification_source": "n8n_readonly_execution_data",
+  "production_patch": {
+    "pass": true,
+    "workflow_id": "p4mqb4VuPcemIDlC",
+    "workflow_name": "SEO Content Agent Beta.v14 - Worker",
+    "active": true,
+    "updatedAt": "2026-07-10T09:09:55.305Z",
+    "task_id_mapping": "={{ $('Route Command').first().json.task_id }}",
+    "expected_mapping": "={{ $('Route Command').first().json.task_id }}",
+    "task_id_schema_removed": false,
+    "node_disabled": false
+  },
+  "matched_worker_execution": {
+    "execution_id": "3340",
+    "status": "success",
+    "startedAt": "2026-07-10T10:32:44.737Z",
+    "stoppedAt": "2026-07-10T10:34:12.443Z",
+    "workflowId": "p4mqb4VuPcemIDlC"
+  },
+  "matched_intake_execution": {
+    "execution_id": "3339",
+    "status": "success",
+    "startedAt": "2026-07-10T10:32:39.717Z",
+    "stoppedAt": "2026-07-10T10:32:44.758Z",
+    "workflowId": "x8EbTGKNdlBprLvk"
+  },
+  "route_command": {
+    "task_id": "seo20260710103247agk8ki",
+    "mode": "run",
+    "route": "run",
+    "command_valid": true,
+    "task_input_present": true
+  },
+  "memory_row": {
+    "task_id": "seo20260710103247agk8ki",
+    "status": "ok",
+    "mode": "run",
+    "timestamp": "2026-07-10T10:34:10.593Z",
+    "input_present": true,
+    "output_present": true,
+    "output_length": 9506
+  },
+  "active_jobs_close_lock": {
+    "task_id": "seo20260710103247agk8ki",
+    "status": "done",
+    "lock_key_present": true,
+    "lock_key_pattern": "chat:REDACTED:<timestamp>",
+    "created_at": "2026-07-10T10:32:42.737Z",
+    "expires_at": "2026-07-10T11:02:42.738Z",
+    "finished_at": "2026-07-10T10:34:08.146Z"
+  },
+  "pc07_checks": {
+    "memory_row_exists": true,
+    "memory_task_id_matches": true,
+    "memory_mode_run": true,
+    "memory_output_nonempty": true,
+    "active_jobs_status_done": true,
+    "active_jobs_task_id_not_pending": true,
+    "active_jobs_task_id_matches": true,
+    "active_jobs_finished_at_set": true,
+    "active_jobs_lock_key_present": true,
+    "route_task_id_matches": true,
+    "active_jobs_created_at_corresponds": true,
+    "active_jobs_expires_at_corresponds": true
+  },
+  "active_jobs_lock_create": {
+    "source": "intake_execution_3339_Create_Lock_Row",
+    "task_id_at_create": "pending",
+    "status_at_create": "active",
+    "created_at": "2026-07-10T10:32:42.737Z",
+    "expires_at": "2026-07-10T11:02:42.738Z",
+    "lock_key_pattern": "chat:REDACTED:1783679559789"
+  }
+}
