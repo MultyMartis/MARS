@@ -1,0 +1,14 @@
+{
+  "node": "Close Lock Before Sending",
+  "before": {
+    "status": "done",
+    "finished_at": "={{ new Date().toISOString() }}",
+    "lock_key": "={{ $('Store Worker Meta').first().json.worker_lock_key }}"
+  },
+  "after": {
+    "status": "done",
+    "finished_at": "={{ new Date().toISOString() }}",
+    "lock_key": "={{ $('Store Worker Meta').first().json.worker_lock_key }}",
+    "task_id": "={{ $('Route Command').first().json.task_id }}"
+  }
+}
