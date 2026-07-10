@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-10
-**Evidence cutoff:** 2026-07-10 (SITE-002 infra Run **MARS-INFRA-RUNTIME-SPLIT-SITE-002-01** / OCPilot **4.257** — scheduler detached from dirty `X:\AI MARS`; runtime checkout `X:\AI MARS STORAGE\runtime-checkouts\site-002-monitor\repo` @ `56f9bae7`; manual run `2026-07-10_20-17-16`; onboarding needs **0**; classification **HYGIENE_REVIEW_REQUIRED**; 0 production mutation; checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01`)
+**Evidence cutoff:** 2026-07-10 (SITE-002 infra Run **MARS-INFRA-RUNTIME-SPLIT-SITE-002-SCHEDULED-SPOTCHECK-01** / OCPilot **4.258** — scheduler confirmed on runtime checkout `X:\AI MARS STORAGE\runtime-checkouts\site-002-monitor\repo` @ `bd3021bf`; natural scheduled run after split **pending** next `2026-07-11 12:30 +07`; latest manual `2026-07-10_20-17-16`; onboarding needs **0**; Git/runtime brief published; 0 production mutation; checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01`)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Infra Runtime Split (MARS-INFRA-RUNTIME-SPLIT-SITE-002-01 / Run 4.257)** — **COMPLETE** — Task Scheduler `MARS_SITE_002_Post_1C_Catalog_Monitor` runs from clean runtime checkout (not dirty `X:\AI MARS`); manual run onboarding needs **0**; classification **HYGIENE_REVIEW_REQUIRED** · [infra report](../mars-infrastructure/reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-01.md) · [runtime checkouts](../mars-infrastructure/runtime-checkouts.md) · checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01` |
+| Current SITE-002 focus | **Infra Scheduled Spotcheck (MARS-INFRA-RUNTIME-SPLIT-SITE-002-SCHEDULED-SPOTCHECK-01 / Run 4.258)** — **PARTIAL** — scheduler confirmed on runtime checkout; natural run after split **not yet observed** (next `2026-07-11 12:30 +07`); Git/runtime brief for project chats published · [spotcheck report](../mars-infrastructure/reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-SCHEDULED-SPOTCHECK-01.md) · [Git brief](../mars-infrastructure/GIT-RUNTIME-BRIEF-FOR-PROJECT-CHATS.md) · [runtime split](../mars-infrastructure/reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-01.md) · checkpoint unchanged |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 

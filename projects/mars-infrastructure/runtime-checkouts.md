@@ -2,7 +2,7 @@
 
 **Document role:** Human-operated registry of clean Git checkouts used for scheduled/local runtime — **not** a runtime product.
 
-**Last updated:** 2026-07-10 (`MARS-INFRA-RUNTIME-SPLIT-SITE-002-01`)
+**Last updated:** 2026-07-10 (`MARS-INFRA-RUNTIME-SPLIT-SITE-002-SCHEDULED-SPOTCHECK-01`)
 
 ---
 
@@ -20,7 +20,7 @@ Scheduled and unattended local jobs must **not** execute from the dirty developm
 | Job | `MARS_SITE_002_Post_1C_Catalog_Monitor` |
 | Path | `X:\AI MARS STORAGE\runtime-checkouts\site-002-monitor\repo` |
 | Source ref | `origin/mars/canonical-post-recovery` |
-| Pinned commit (2026-07-10) | `56f9bae7` |
+| Pinned commit (2026-07-10) | `bd3021bf` (was `56f9bae7` at initial sparse clone) |
 | Checkout method | Sparse clone — cone `projects/ocpilot` |
 | Runner | `projects/ocpilot/sites/site-002/tools/site-002-post-1c-monitor-runner.ps1` |
 | WorkingDirectory | Same as repo root above |
@@ -47,4 +47,10 @@ If full checkout fails on Windows long paths, prefer **sparse clone/worktree** l
 ## Related reports
 
 - [MARS-INFRA-RUNTIME-SPLIT-SITE-002-01.md](reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-01.md)
+- [MARS-INFRA-RUNTIME-SPLIT-SITE-002-SCHEDULED-SPOTCHECK-01.md](reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-SCHEDULED-SPOTCHECK-01.md)
+- [GIT-RUNTIME-BRIEF-FOR-PROJECT-CHATS.md](GIT-RUNTIME-BRIEF-FOR-PROJECT-CHATS.md)
 - Audit: `X:\AI MARS STORAGE\mars-infrastructure\git-hygiene\MARS-GIT-TOPOLOGY-AND-RUNTIME-SAFETY-AUDIT-01\`
+
+### Spotcheck note (2026-07-10)
+
+Scheduled spotcheck confirmed Task Scheduler points to this runtime checkout; natural daily run after split **not yet observed** (next `2026-07-11 12:30 +07`). Latest artifact `2026-07-10_20-17-16` is manual post-split verification with `onboarding_needs_count=0`.
