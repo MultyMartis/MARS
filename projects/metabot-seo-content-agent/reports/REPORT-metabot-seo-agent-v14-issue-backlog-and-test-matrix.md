@@ -378,4 +378,19 @@ Additive history only — does not rewrite §5 issue rows.
 
 Related original quality issues remain documented: **IB-10** (Text Repair strict regression), **IB-11** (central strict policy drift). FU-02 is the direct follow-up from current smoke residual, not a rewrite of those rows.
 
+---
+
+## 16. Status Appendix — PC14-FU-02 Audit (2026-07-13)
+
+Additive history only — does not rewrite §5 issue rows or §15 FU-01 closeout facts.
+
+| Item | Status |
+|------|--------|
+| **PC14-FU-02 audit** | **COMPLETE** — `PC14_FU02_READY_FOR_SANDBOX_PATCH_PROPOSAL` |
+| Root cause | LLM `outline.tables.decision_reason` → Format Run Pipeline SEO ТЗ; Strict Cleanup/Risk scan final text only |
+| Selected path | **FU-02A / Option B** — TZ-side cleanup sanitizer (v15 family map); final SEO Text untouched |
+| **Next step** | `PC14_FU02_SANDBOX_PATCH_PROPOSAL` |
+| Audit report | [REPORT-metabot-seo-agent-v14-pc14-fu02-tz-strict-residual-cleanup-audit-proposal.md](REPORT-metabot-seo-agent-v14-pc14-fu02-tz-strict-residual-cleanup-audit-proposal.md) |
+| Proposed tests | TZ01–TZ07 · NR01–NR08 · SG01–SG05 (see FU-02 audit §9) |
+
 Awaiting operator review.

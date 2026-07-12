@@ -175,11 +175,13 @@ Groundtruth rule: [shared/contracts/groundtruth-ownership-rule-v1.md](../../shar
 | PC-07 | `PC07_PRODUCTION_APPLIED_VERIFIED` |
 | PC-14 | `PC14_PRODUCTION_APPLIED_VERIFIED_WITH_FOLLOWUP_STRICT_BACKLOG` |
 | PC14-FU-01 | **COMPLETE** — `PC14_FU01_CLOSED_NEXT_SELECTED` |
+| PC14-FU-02 audit | **COMPLETE** — `PC14_FU02_READY_FOR_SANDBOX_PATCH_PROPOSAL` |
 | Production Worker | `p4mqb4VuPcemIDlC` active · Strict Cleanup `v15-strict-cleanup-pc14-fu01-r1` |
-| Next backlog | `PC14_FU02_TZ_STRICT_RESIDUAL_CLEANUP_AUDIT` (read-only audit/proposal first) |
+| Selected path | **FU-02A / Option B** — TZ-side cleanup sanitizer (outline/`decision_reason`); final SEO Text untouched |
+| Next backlog | `PC14_FU02_SANDBOX_PATCH_PROPOSAL` |
 
-Closeout: [reports/REPORT-metabot-seo-agent-v14-pc14-fu01-closeout-next-backlog-selection.md](reports/REPORT-metabot-seo-agent-v14-pc14-fu01-closeout-next-backlog-selection.md)  
-Prior smoke: [reports/REPORT-metabot-seo-agent-v14-pc14-fu01-operator-smoke-verification.md](reports/REPORT-metabot-seo-agent-v14-pc14-fu01-operator-smoke-verification.md)
+FU-02 audit: [reports/REPORT-metabot-seo-agent-v14-pc14-fu02-tz-strict-residual-cleanup-audit-proposal.md](reports/REPORT-metabot-seo-agent-v14-pc14-fu02-tz-strict-residual-cleanup-audit-proposal.md)  
+FU-01 closeout: [reports/REPORT-metabot-seo-agent-v14-pc14-fu01-closeout-next-backlog-selection.md](reports/REPORT-metabot-seo-agent-v14-pc14-fu01-closeout-next-backlog-selection.md)
 
 Foundation pack review remains available:
 
@@ -187,7 +189,7 @@ Foundation pack review remains available:
 - [metabot-developer-concept-v1.md](metabot-developer-concept-v1.md)
 - [n8n-project-development-rules-v1.md](n8n-project-development-rules-v1.md)
 
-Then (when FU-02 wave allows capacity): **work line 1** — re-study live 3-workflow SEO Agent graphs with operator — before unrelated workflow evolution.
+Then (after FU-02 sandbox/production wave, when capacity allows): **work line 1** — re-study live 3-workflow SEO Agent graphs with operator — before unrelated workflow evolution.
 
 ---
 
