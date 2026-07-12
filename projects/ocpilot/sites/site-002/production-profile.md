@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-12 (MARS-INFRA-RUNTIME-SPLIT-SITE-002-NATURAL-RUN-VERIFY-01 — natural scheduled run confirmed from runtime checkout; artifact `2026-07-12_12-30-02`; LastTaskResult **0**; classification **ONBOARDING_REQUIRED**; onboarding needs **2** new branches; old Lari FPs did not return; 0 production/scheduler mutation; checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01`)
+**Last updated:** 2026-07-12 (Run 4.260 — SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-02 — categories **364** + **365** meta onboarded; allowlist + runtime sync; manual monitor needs **0**; checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01`)
 
 ---
 

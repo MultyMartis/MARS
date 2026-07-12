@@ -80,7 +80,9 @@ ONBOARDED_CATEGORY_PATHS = {
     "katalog/nejtralnoe-oborudovanie/shkafy-i-lari/lari/proizvodstvennye-lari",
     "katalog/nejtralnoe-oborudovanie/shkafy-i-lari/lari/skladskie-lari",
     "katalog/nejtralnoe-oborudovanie/shkafy-i-lari/shkafy-dlya-hleba",
+    "katalog/nejtralnoe-oborudovanie/stellazhi/stellazhi-standart/stellazhi-standart-vysota-1600",
     "katalog/tehnologicheskoe-oborudovanie",
+    "katalog/tehnologicheskoe-oborudovanie/posuda-i-inventar",
 }
 
 TECHNICAL_QUERY_PATTERNS = (

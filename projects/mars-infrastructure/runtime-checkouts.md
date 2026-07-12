@@ -2,7 +2,7 @@
 
 **Document role:** Human-operated registry of clean Git checkouts used for scheduled/local runtime — **not** a runtime product.
 
-**Last updated:** 2026-07-12 (`MARS-INFRA-RUNTIME-SPLIT-SITE-002-NATURAL-RUN-VERIFY-01`)
+**Last updated:** 2026-07-12 (`SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-02` / Run 4.260)
 
 ---
 
@@ -21,6 +21,7 @@ Scheduled and unattended local jobs must **not** execute from the dirty developm
 | Path | `X:\AI MARS STORAGE\runtime-checkouts\site-002-monitor\repo` |
 | Source ref | `origin/mars/canonical-post-recovery` |
 | Pinned commit (2026-07-10) | `bd3021bf` (was `56f9bae7` at initial sparse clone) |
+| Working file sync (Run 4.260) | monitor script allowlist exact-copied from authority; SHA match; file dirty vs pinned HEAD until later refresh |
 | Checkout method | Sparse clone — cone `projects/ocpilot` |
 | Runner | `projects/ocpilot/sites/site-002/tools/site-002-post-1c-monitor-runner.ps1` |
 | WorkingDirectory | Same as repo root above |
@@ -55,3 +56,7 @@ If full checkout fails on Windows long paths, prefer **sparse clone/worktree** l
 ### Natural run verify (2026-07-12)
 
 Natural scheduled run **confirmed** from this runtime checkout: LastTaskResult **0**, artifact `2026-07-12_12-30-02`, `repo_root` = runtime checkout. Monitor classification **ONBOARDING_REQUIRED** with onboarding needs **2** (new category branches; old Lari FPs did not return). Dirty main still unused. See [natural run verify report](reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-NATURAL-RUN-VERIFY-01.md).
+
+### Onboarding 02 allowlist sync (2026-07-12)
+
+Run **4.260** exact-copied updated monitor allowlist into this runtime checkout (file dirty vs pinned `bd3021bf` until refresh). Manual verification artifact `2026-07-12_22-19-55`: onboarding needs **0**. See [SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-02.md](../ocpilot/sites/site-002/reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-02.md).

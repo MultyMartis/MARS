@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-12
-**Evidence cutoff:** 2026-07-12 (SITE-002 infra Run **MARS-INFRA-RUNTIME-SPLIT-SITE-002-NATURAL-RUN-VERIFY-01** / OCPilot **4.259** — natural scheduled run **confirmed** from runtime checkout; artifact `2026-07-12_12-30-02`; LastTaskResult **0**; `repo_root` runtime checkout; classification **ONBOARDING_REQUIRED**; onboarding needs **2** (new category branches; old Lari FPs did not return); dirty main unused; 0 production/scheduler mutation; checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01`)
+**Evidence cutoff:** 2026-07-12 (SITE-002 Run **4.260** / `SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-02` — categories **364**/`posuda-i-inventar` + **365**/`stellazhi-standart-vysota-1600` meta + allowlist onboarded; runtime sync; manual monitor `2026-07-12_22-19-55` needs **0**; classification **HYGIENE_REVIEW_REQUIRED** baseline-delta only; dirty main untouched; checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01`)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Infra Natural Run Verify (MARS-INFRA-RUNTIME-SPLIT-SITE-002-NATURAL-RUN-VERIFY-01 / Run 4.259)** — **FAILED — ONBOARDING REGRESSION** — natural run from clean runtime **confirmed**; artifact `2026-07-12_12-30-02`; needs **2** new branches (`posuda-i-inventar`, `stellazhi-standart-vysota-1600`); next charter onboarding follow-up · [natural run verify](../mars-infrastructure/reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-NATURAL-RUN-VERIFY-01.md) · [Git brief](../mars-infrastructure/GIT-RUNTIME-BRIEF-FOR-PROJECT-CHATS.md) · checkpoint unchanged |
+| Current SITE-002 focus | **Catalog New Branch Onboarding 02 (Run 4.260)** — **COMPLETE — NEEDS ZERO** — ids **364**/`posuda-i-inventar` + **365**/`stellazhi-standart-vysota-1600`; meta + allowlist + runtime sync; monitor `2026-07-12_22-19-55` · [onboarding report](sites/site-002/reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-02.md) · prior natural verify [4.259](../mars-infrastructure/reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-NATURAL-RUN-VERIFY-01.md) · checkpoint unchanged |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 
