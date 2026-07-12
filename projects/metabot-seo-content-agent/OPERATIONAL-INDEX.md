@@ -168,13 +168,26 @@ Groundtruth rule: [shared/contracts/groundtruth-ownership-rule-v1.md](../../shar
 
 ## Current Next Step
 
-**Operator review** of MetaBOT Foundation Pack v1:
+**v14 patch status (2026-07-13):**
+
+| Item | Status |
+|------|--------|
+| PC-07 | `PC07_PRODUCTION_APPLIED_VERIFIED` |
+| PC-14 | `PC14_PRODUCTION_APPLIED_VERIFIED_WITH_FOLLOWUP_STRICT_BACKLOG` |
+| PC14-FU-01 | **COMPLETE** — `PC14_FU01_CLOSED_NEXT_SELECTED` |
+| Production Worker | `p4mqb4VuPcemIDlC` active · Strict Cleanup `v15-strict-cleanup-pc14-fu01-r1` |
+| Next backlog | `PC14_FU02_TZ_STRICT_RESIDUAL_CLEANUP_AUDIT` (read-only audit/proposal first) |
+
+Closeout: [reports/REPORT-metabot-seo-agent-v14-pc14-fu01-closeout-next-backlog-selection.md](reports/REPORT-metabot-seo-agent-v14-pc14-fu01-closeout-next-backlog-selection.md)  
+Prior smoke: [reports/REPORT-metabot-seo-agent-v14-pc14-fu01-operator-smoke-verification.md](reports/REPORT-metabot-seo-agent-v14-pc14-fu01-operator-smoke-verification.md)
+
+Foundation pack review remains available:
 
 - [metabot-terminology-and-roles-v1.md](metabot-terminology-and-roles-v1.md)
 - [metabot-developer-concept-v1.md](metabot-developer-concept-v1.md)
 - [n8n-project-development-rules-v1.md](n8n-project-development-rules-v1.md)
 
-Then: **work line 1** — re-study live 3-workflow SEO Agent graphs with operator — before any workflow evolution.
+Then (when FU-02 wave allows capacity): **work line 1** — re-study live 3-workflow SEO Agent graphs with operator — before unrelated workflow evolution.
 
 ---
 

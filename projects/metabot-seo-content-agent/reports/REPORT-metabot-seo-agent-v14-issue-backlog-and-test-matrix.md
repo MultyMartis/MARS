@@ -360,4 +360,22 @@ No existing docs modified. No staging. No commit.
 
 ---
 
+## 15. Status Appendix — PC14-FU-01 Closeout (2026-07-13)
+
+Additive history only — does not rewrite §5 issue rows.
+
+| Item | Status |
+|------|--------|
+| **PC14-FU-01** | **COMPLETE** — `PC14_FU01_CLOSED_NEXT_SELECTED` |
+| Production Worker | `p4mqb4VuPcemIDlC` active on Strict Cleanup `v15-strict-cleanup-pc14-fu01-r1` |
+| Production apply | commit `ebfaeb22` |
+| Operator smoke | commit `5541811c` · Task ID `seo20260712201612oo0m85` |
+| Final SEO Text | clean for PC-14 R1 + FU-01 families |
+| SEO QA / Factcheck | approved · score `100` / approved |
+| Known residual | `для удобства восприятия` in SEO ТЗ only (outside final SEO Text) |
+| **Next selected** | `PC14_FU02_TZ_STRICT_RESIDUAL_CLEANUP_AUDIT` — read-only audit/proposal first |
+| Closeout report | [REPORT-metabot-seo-agent-v14-pc14-fu01-closeout-next-backlog-selection.md](REPORT-metabot-seo-agent-v14-pc14-fu01-closeout-next-backlog-selection.md) |
+
+Related original quality issues remain documented: **IB-10** (Text Repair strict regression), **IB-11** (central strict policy drift). FU-02 is the direct follow-up from current smoke residual, not a rewrite of those rows.
+
 Awaiting operator review.
