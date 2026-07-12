@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-12 (Run 4.260 — SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-02 — categories **364** + **365** meta onboarded; allowlist + runtime sync; manual monitor needs **0**; checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01`)
+**Last updated:** 2026-07-12 (Run 4.261 — SITE-002-MONITOR-BASELINE-REFRESH-01 — monitor baseline **1377→1530**; post-refresh `2026-07-12_22-55-45` **NO_ACTION_REQUIRED**; monitor checkpoint `SITE-002-STABLE-PROD-POST-1C-MONITOR-BASELINE-1530-01`; production content checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01`)
 
 ---
 
