@@ -1962,10 +1962,12 @@ Dual class on Home section: `zpm-commercial-trust zpm-dealers` + `data-dealers` 
 
 | Item | Value |
 |------|--------|
-| **Status** | **ACTIVE / PASS on TEST** (2026-06-29 closeout) — all 6 intro assets HTTP 200 |
-| **Checkpoint** | `SITE-002-STABLE-LIVE-CORPORATE-INTRO-BLOCKS-01` |
+| **Status** | **ACTIVE / PASS on TEST** (2026-06-29) · **Production `/delivery` markup restored** (Run **4.263**, 2026-07-12/13) |
+| **Checkpoint** | `SITE-002-STABLE-LIVE-CORPORATE-INTRO-BLOCKS-01` (TEST-era pattern authority; Production stability checkpoint unchanged) |
 | **Report** | [SITE-002-CORPORATE-INTRO-BLOCKS-01.md](../reports/SITE-002-CORPORATE-INTRO-BLOCKS-01.md) |
 | **Baseline** | [SITE-002-STABLE-LIVE-CORPORATE-INTRO-BLOCKS-01.md](../baselines/SITE-002-STABLE-LIVE-CORPORATE-INTRO-BLOCKS-01.md) |
+| **Production discovery** | [SITE-002-PROD-INFO-PAGE-HERO-IMAGES-DISCOVERY-01.md](../reports/SITE-002-PROD-INFO-PAGE-HERO-IMAGES-DISCOVERY-01.md) · [discovery baseline](../baselines/SITE-002-INFO-PAGE-HERO-IMAGES-DISCOVERY-01.md) |
+| **Production restore** | [SITE-002-PROD-INFO-PAGE-HERO-IMAGES-RESTORE-01.md](../reports/SITE-002-PROD-INFO-PAGE-HERO-IMAGES-RESTORE-01.md) — exact FTP file `delivery.twig`; asset `/assets/img/corporate/delivery-intro.jpg` pre-existing; CSS unchanged |
 | **Deploy** | [corporate-intro-blocks-work/deploy-manifest.json](../reports/corporate-intro-blocks-work/deploy-manifest.json) |
 | **Pre-deploy backups** | `backups/*.pre-site-002-corp-intro-blocks-01.bak` |
 
@@ -1976,6 +1978,7 @@ Dual class on Home section: `zpm-commercial-trust zpm-dealers` + `data-dealers` 
 - Assets path: `/assets/img/corporate/{page}-intro.jpg`
 - About hero image remains `/assets/img/about-page-img.jpg` (not intro asset)
 - Custom OEM proof strip remains `/assets/img/about-page-img.jpg`
+- Production note: `/delivery` briefly had text-only lead after delivery-summary work; restored Run 4.263
 
 ### CSS
 
@@ -1984,6 +1987,7 @@ Append marker: `SITE-002 — Corporate intro image blocks (zpm-corp-intro)` in `
 ### Rollback
 
 `reports/corporate-intro-blocks-work/site-002-corp-intro-blocks-rollback.py`
+Production restore rollback: Storage `…/SITE-002-PROD-INFO-PAGE-HERO-IMAGES-RESTORE-01/backup/` → re-STOR `delivery.twig`
 
 ---
 
