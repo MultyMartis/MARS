@@ -1,0 +1,168 @@
+{
+  "task_id": "seo20260712201612oo0m85",
+  "decision_label": "PC14_FU01_OPERATOR_SMOKE_VERIFIED_WITH_TZ_RESIDUAL_NOTE",
+  "area_marker_scans": {
+    "user_prompt": {
+      "label": "user_prompt",
+      "length": 397,
+      "hits": [
+        {
+          "family": "аккуратн*",
+          "group": "PC14_R1",
+          "match": "аккуратн"
+        },
+        {
+          "family": "удобств*",
+          "group": "PC14_R1",
+          "match": "удобств"
+        },
+        {
+          "family": "позволя*",
+          "group": "PC14_R1",
+          "match": "позволя"
+        },
+        {
+          "family": "обеспеч*",
+          "group": "FU01",
+          "match": "обеспеч"
+        },
+        {
+          "family": "контрол*",
+          "group": "FU01",
+          "match": "контрол"
+        },
+        {
+          "family": "безопасн*",
+          "group": "FU01",
+          "match": "безопасн"
+        },
+        {
+          "family": "специализирован*",
+          "group": "FU01",
+          "match": "специализирован"
+        },
+        {
+          "family": "надежн*",
+          "group": "FU01",
+          "match": "надежн"
+        }
+      ],
+      "hit_count": 8
+    },
+    "seo_tz_section": {
+      "label": "seo_tz_section",
+      "length": 4023,
+      "hits": [
+        {
+          "family": "удобств*",
+          "group": "PC14_R1",
+          "match": "удобств"
+        }
+      ],
+      "hit_count": 1
+    },
+    "seo_strategy_section": {
+      "label": "seo_strategy_section",
+      "length": 7333,
+      "hits": [],
+      "hit_count": 0
+    },
+    "seo_text_section": {
+      "label": "seo_text_section",
+      "length": 5000,
+      "hits": [],
+      "hit_count": 0
+    },
+    "generated_content_markdown": {
+      "label": "generated_content_markdown",
+      "length": 4712,
+      "hits": [],
+      "hit_count": 0
+    },
+    "seo_qa_section": {
+      "label": "seo_qa_section",
+      "length": 887,
+      "hits": [],
+      "hit_count": 0
+    },
+    "factcheck_section": {
+      "label": "factcheck_section",
+      "length": 131,
+      "hits": [],
+      "hit_count": 0
+    },
+    "full_output": {
+      "label": "full_output",
+      "length": 10197,
+      "hits": [
+        {
+          "family": "удобств*",
+          "group": "PC14_R1",
+          "match": "удобств"
+        }
+      ],
+      "hit_count": 1
+    }
+  },
+  "tz_residual_notes": {
+    "udobstva_in_seo_tz": true,
+    "udobstva_snippet_redacted": "роверками целесообразно представить в табличном формате для удобства восприятия. Идеи таблиц: 1. Методы и параметры диагностики",
+    "prompt_hits_expected": true,
+    "prompt_hit_count": 8
+  },
+  "strict_risk_scan": {
+    "count": 0,
+    "markers": []
+  },
+  "seoqa": {
+    "verdict": "approved",
+    "score": 100,
+    "raw_keys": [
+      "chat_id",
+      "task_id",
+      "task_raw",
+      "task_input",
+      "flags",
+      "strict",
+      "no_factcheck",
+      "outline_only",
+      "text_only",
+      "tables_policy",
+      "outline",
+      "seo_strategy",
+      "generated_text",
+      "content_score",
+      "strict_cleanup",
+      "table_sanity_check",
+      "strict_risk_scan",
+      "seoqa"
+    ]
+  },
+  "factcheck": {
+    "verdict": "approved",
+    "raw_keys": [
+      "chat_id",
+      "task_id",
+      "task_raw",
+      "task_input",
+      "flags",
+      "strict",
+      "no_factcheck",
+      "outline_only",
+      "text_only",
+      "tables_policy",
+      "outline",
+      "seo_strategy",
+      "generated_text",
+      "seoqa",
+      "content_score",
+      "factcheck"
+    ]
+  },
+  "banner_verification": {
+    "banner_present": false,
+    "banner_index": -1,
+    "seo_tz_index": 67,
+    "expected_absent_for_approved_qa": true
+  }
+}
