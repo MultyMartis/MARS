@@ -1,0 +1,12 @@
+{
+  "node": "Strict Cleanup",
+  "fromVersion": "v14-strict-cleanup-pc14-r1",
+  "toVersion": "v15-strict-cleanup-pc14-fu01-r1",
+  "productionHasFu01": false,
+  "productionMatchesPc14Baseline": true,
+  "beforeLength": 6107,
+  "afterLength": 8358,
+  "source": "sandbox JJI9J4A3K5R0Mm2t after-patch Strict Cleanup jsCode",
+  "patchScope": "jsCode-only",
+  "nonTargetsConfirmed": true
+}
