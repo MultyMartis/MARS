@@ -2,7 +2,7 @@
 
 **Document role:** Human-operated registry of clean Git checkouts used for scheduled/local runtime — **not** a runtime product.
 
-**Last updated:** 2026-07-12 (`SITE-002-MONITOR-BASELINE-REFRESH-01` / Run 4.261)
+**Last updated:** 2026-07-13 (`MARS-INFRA-RUNTIME-CHECKOUT-PIN-SITE-002-01` / Run 4.262)
 
 ---
 
@@ -20,8 +20,9 @@ Scheduled and unattended local jobs must **not** execute from the dirty developm
 | Job | `MARS_SITE_002_Post_1C_Catalog_Monitor` |
 | Path | `X:\AI MARS STORAGE\runtime-checkouts\site-002-monitor\repo` |
 | Source ref | `origin/mars/canonical-post-recovery` |
-| Pinned commit (2026-07-10) | `bd3021bf` (was `56f9bae7` at initial sparse clone) |
-| Working file sync (Run 4.261) | monitor script (allowlist + baseline constants) exact-copied from authority; SHA match; file dirty vs pinned HEAD until later refresh |
+| Pinned commit (2026-07-13) | `0ab7e9f5` (was `bd3021bf` / earlier `56f9bae7`) |
+| Status | **clean** vs HEAD (Run **4.262** pin) |
+| Prior working file sync (Run 4.261) | monitor script was exact-copied then dirty vs old HEAD; superseded by hard reset to `0ab7e9f5` |
 | Checkout method | Sparse clone — cone `projects/ocpilot` |
 | Runner | `projects/ocpilot/sites/site-002/tools/site-002-post-1c-monitor-runner.ps1` |
 | WorkingDirectory | Same as repo root above |
@@ -64,3 +65,7 @@ Run **4.260** exact-copied updated monitor allowlist into this runtime checkout 
 ### Monitor baseline refresh sync (2026-07-12)
 
 Run **4.261** refreshed storage sitemap baseline **1377→1530** and exact-copied updated monitor-02 constants into this runtime checkout. Manual verification artifact `2026-07-12_22-55-45`: classification **`NO_ACTION_REQUIRED`**; needs **0**; 1530→1530. See [SITE-002-MONITOR-BASELINE-REFRESH-01.md](../ocpilot/sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-01.md).
+
+### Runtime checkout pin (2026-07-13)
+
+Run **4.262** / `MARS-INFRA-RUNTIME-CHECKOUT-PIN-SITE-002-01`: `git reset --hard 0ab7e9f5` inside runtime checkout (path unchanged). Status **clean**. Manual verify artifact `2026-07-13_00-05-00`: **`NO_ACTION_REQUIRED`**; needs **0**; 1530→1530. Scheduler unchanged (still points to this path). See [MARS-INFRA-RUNTIME-CHECKOUT-PIN-SITE-002-01.md](reports/MARS-INFRA-RUNTIME-CHECKOUT-PIN-SITE-002-01.md).

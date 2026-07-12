@@ -71,18 +71,18 @@ Scheduled and unattended local jobs **must not** execute from dirty `X:\AI MARS`
 
 ## 6. SITE-002 current status
 
-| Field | Value (2026-07-12 natural run verify) |
+| Field | Value (2026-07-13 runtime pin / Run 4.262) |
 |-------|------------------------------|
 | Scheduled task | `MARS_SITE_002_Post_1C_Catalog_Monitor` |
-| Runtime checkout | `X:\AI MARS STORAGE\runtime-checkouts\site-002-monitor\repo` @ `bd3021bf` |
-| Scheduler points to main | **No** (detached in Run 4.257) |
-| Latest run folder | `2026-07-12_12-30-02` (natural scheduled) |
-| Natural scheduled run after split | **Confirmed** — LastTaskResult **0**; `repo_root` = runtime checkout |
-| onboarding_needs_count | **2** (new branches; old Lari FPs did not return) |
-| classification | **ONBOARDING_REQUIRED** |
+| Runtime checkout | `X:\AI MARS STORAGE\runtime-checkouts\site-002-monitor\repo` @ `0ab7e9f5` (**clean**) |
+| Scheduler points to main | **No** (detached in Run 4.257; unchanged in 4.262) |
+| Latest verify folder | `2026-07-13_00-05-00` (manual from pinned runtime) |
+| Natural scheduled run after split | **Confirmed** earlier (`2026-07-12_12-30-02`) |
+| onboarding_needs_count | **0** (post pin) |
+| classification | **NO_ACTION_REQUIRED** |
 | Production mutation | **0** |
 
-Reports: [MARS-INFRA-RUNTIME-SPLIT-SITE-002-01](reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-01.md) · [scheduled spotcheck](reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-SCHEDULED-SPOTCHECK-01.md) · [natural run verify](reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-NATURAL-RUN-VERIFY-01.md)
+Reports: [runtime checkout pin](reports/MARS-INFRA-RUNTIME-CHECKOUT-PIN-SITE-002-01.md) · [baseline refresh](../ocpilot/sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-01.md) · [MARS-INFRA-RUNTIME-SPLIT-SITE-002-01](reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-01.md) · [natural run verify](reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-NATURAL-RUN-VERIFY-01.md)
 
 ---
 
