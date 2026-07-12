@@ -2,7 +2,7 @@
 
 **Document role:** Human-operated registry of clean Git checkouts used for scheduled/local runtime — **not** a runtime product.
 
-**Last updated:** 2026-07-10 (`MARS-INFRA-RUNTIME-SPLIT-SITE-002-SCHEDULED-SPOTCHECK-01`)
+**Last updated:** 2026-07-12 (`MARS-INFRA-RUNTIME-SPLIT-SITE-002-NATURAL-RUN-VERIFY-01`)
 
 ---
 
@@ -48,9 +48,10 @@ If full checkout fails on Windows long paths, prefer **sparse clone/worktree** l
 
 - [MARS-INFRA-RUNTIME-SPLIT-SITE-002-01.md](reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-01.md)
 - [MARS-INFRA-RUNTIME-SPLIT-SITE-002-SCHEDULED-SPOTCHECK-01.md](reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-SCHEDULED-SPOTCHECK-01.md)
+- [MARS-INFRA-RUNTIME-SPLIT-SITE-002-NATURAL-RUN-VERIFY-01.md](reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-NATURAL-RUN-VERIFY-01.md)
 - [GIT-RUNTIME-BRIEF-FOR-PROJECT-CHATS.md](GIT-RUNTIME-BRIEF-FOR-PROJECT-CHATS.md)
 - Audit: `X:\AI MARS STORAGE\mars-infrastructure\git-hygiene\MARS-GIT-TOPOLOGY-AND-RUNTIME-SAFETY-AUDIT-01\`
 
-### Spotcheck note (2026-07-10)
+### Natural run verify (2026-07-12)
 
-Scheduled spotcheck confirmed Task Scheduler points to this runtime checkout; natural daily run after split **not yet observed** (next `2026-07-11 12:30 +07`). Latest artifact `2026-07-10_20-17-16` is manual post-split verification with `onboarding_needs_count=0`.
+Natural scheduled run **confirmed** from this runtime checkout: LastTaskResult **0**, artifact `2026-07-12_12-30-02`, `repo_root` = runtime checkout. Monitor classification **ONBOARDING_REQUIRED** with onboarding needs **2** (new category branches; old Lari FPs did not return). Dirty main still unused. See [natural run verify report](reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-NATURAL-RUN-VERIFY-01.md).

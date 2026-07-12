@@ -106,10 +106,11 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `zpm-corp-cta-forms.js` | Corp CTA submit handler snippet merged into Production `main.js` (Run 4.230) |
 | `zpm-corp-cta-success.css` | Inline success/error styles appended to Production `style.css` (Run 4.230) |
 
-### Post-1C monitor scheduler notes (Run 4.216 / **4.228 hardening** / **4.251 manual** / **4.252 checkpoint** / **4.253 review** / **4.257 runtime split** / **4.258 scheduled spotcheck**)
+### Post-1C monitor scheduler notes (Run 4.216 / **4.228 hardening** / **4.251 manual** / **4.252 checkpoint** / **4.253 review** / **4.257 runtime split** / **4.258 scheduled spotcheck** / **4.259 natural verify**)
 
 - **Run 4.257:** Task Scheduler detached from dirty `X:\AI MARS` — runtime checkout `X:\AI MARS STORAGE\runtime-checkouts\site-002-monitor\repo` @ `bd3021bf`; manual run `2026-07-10_20-17-16`; onboarding needs **0** · [infra report](../../../mars-infrastructure/reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-01.md) · [runtime checkouts](../../../mars-infrastructure/runtime-checkouts.md)
 - **Run 4.258:** scheduled spotcheck **PARTIAL** — scheduler confirmed on runtime checkout; natural run after split pending `2026-07-11 12:30 +07`; Git/runtime brief for project chats · [spotcheck report](../../../mars-infrastructure/reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-SCHEDULED-SPOTCHECK-01.md) · [Git brief](../../../mars-infrastructure/GIT-RUNTIME-BRIEF-FOR-PROJECT-CHATS.md)
+- **Run 4.259:** natural run verify — artifact `2026-07-12_12-30-02` **confirmed** from runtime checkout; LastTaskResult **0**; classification **ONBOARDING_REQUIRED**; onboarding needs **2** (new branches; old Lari FPs did not return); 0 production/scheduler mutation · [natural run verify](../../../mars-infrastructure/reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-NATURAL-RUN-VERIFY-01.md)
 - Runner `RepoRoot` derived from `$PSScriptRoot` (not hardcoded `X:\AI MARS`).
 - Successful Windows Task `LastTaskResult` is **0**; **2** means runner/monitor execution failure — check `scheduled-monitors/post-1c/<timestamp>/run.stderr.log`.
 - Per-run logs: `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\scheduled-monitors\post-1c\`

@@ -1,7 +1,7 @@
 # MARS Git / Runtime Brief for Project Chats
 
 **Document role:** Short reference for OCPilot, MetaBOT, WP Forge, Website Factory, iSEO, FP-0002 and other MARS project chats — **not** automated enforcement.  
-**Last updated:** 2026-07-10 (`MARS-INFRA-RUNTIME-SPLIT-SITE-002-SCHEDULED-SPOTCHECK-01`)  
+**Last updated:** 2026-07-12 (`MARS-INFRA-RUNTIME-SPLIT-SITE-002-NATURAL-RUN-VERIFY-01`)
 **Audit basis:** [MARS-GIT-TOPOLOGY-AND-RUNTIME-SAFETY-AUDIT-01](https://github.com/MultyMartis/MARS) (storage mirror under `X:\AI MARS STORAGE\mars-infrastructure\git-hygiene\`)
 
 ---
@@ -71,18 +71,18 @@ Scheduled and unattended local jobs **must not** execute from dirty `X:\AI MARS`
 
 ## 6. SITE-002 current status
 
-| Field | Value (2026-07-10 spotcheck) |
+| Field | Value (2026-07-12 natural run verify) |
 |-------|------------------------------|
 | Scheduled task | `MARS_SITE_002_Post_1C_Catalog_Monitor` |
 | Runtime checkout | `X:\AI MARS STORAGE\runtime-checkouts\site-002-monitor\repo` @ `bd3021bf` |
 | Scheduler points to main | **No** (detached in Run 4.257) |
-| Latest run folder | `2026-07-10_20-17-16` (manual post-split verify) |
-| Natural scheduled run after split | **Pending** — next `2026-07-11 12:30 +07` |
-| onboarding_needs_count | **0** |
-| classification | **HYGIENE_REVIEW_REQUIRED** |
+| Latest run folder | `2026-07-12_12-30-02` (natural scheduled) |
+| Natural scheduled run after split | **Confirmed** — LastTaskResult **0**; `repo_root` = runtime checkout |
+| onboarding_needs_count | **2** (new branches; old Lari FPs did not return) |
+| classification | **ONBOARDING_REQUIRED** |
 | Production mutation | **0** |
 
-Reports: [MARS-INFRA-RUNTIME-SPLIT-SITE-002-01](reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-01.md) · [scheduled spotcheck](reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-SCHEDULED-SPOTCHECK-01.md)
+Reports: [MARS-INFRA-RUNTIME-SPLIT-SITE-002-01](reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-01.md) · [scheduled spotcheck](reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-SCHEDULED-SPOTCHECK-01.md) · [natural run verify](reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-NATURAL-RUN-VERIFY-01.md)
 
 ---
 
