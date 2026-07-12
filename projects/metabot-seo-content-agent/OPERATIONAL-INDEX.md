@@ -176,10 +176,12 @@ Groundtruth rule: [shared/contracts/groundtruth-ownership-rule-v1.md](../../shar
 | PC-14 | `PC14_PRODUCTION_APPLIED_VERIFIED_WITH_FOLLOWUP_STRICT_BACKLOG` |
 | PC14-FU-01 | **COMPLETE** — `PC14_FU01_CLOSED_NEXT_SELECTED` |
 | PC14-FU-02 audit | **COMPLETE** — `PC14_FU02_READY_FOR_SANDBOX_PATCH_PROPOSAL` |
+| PC14-FU-02 sandbox proposal | **COMPLETE** — `PC14_FU02_READY_FOR_SANDBOX_IMPLEMENTATION` |
 | Production Worker | `p4mqb4VuPcemIDlC` active · Strict Cleanup `v15-strict-cleanup-pc14-fu01-r1` |
-| Selected path | **FU-02A / Option B** — TZ-side cleanup sanitizer (outline/`decision_reason`); final SEO Text untouched |
-| Next backlog | `PC14_FU02_SANDBOX_PATCH_PROPOSAL` |
+| Selected path | **FU-02A / Option B** — Strategy A insert `TZ Strict Cleanup` after `Run Extract Outline` (+ companion `$()` retargets); final SEO Text / Strict Cleanup / Format unchanged |
+| Next backlog | `PC14_FU02_SANDBOX_PATCH_IMPLEMENTATION` |
 
+FU-02 sandbox proposal: [reports/REPORT-metabot-seo-agent-v14-pc14-fu02-sandbox-patch-proposal.md](reports/REPORT-metabot-seo-agent-v14-pc14-fu02-sandbox-patch-proposal.md)  
 FU-02 audit: [reports/REPORT-metabot-seo-agent-v14-pc14-fu02-tz-strict-residual-cleanup-audit-proposal.md](reports/REPORT-metabot-seo-agent-v14-pc14-fu02-tz-strict-residual-cleanup-audit-proposal.md)  
 FU-01 closeout: [reports/REPORT-metabot-seo-agent-v14-pc14-fu01-closeout-next-backlog-selection.md](reports/REPORT-metabot-seo-agent-v14-pc14-fu01-closeout-next-backlog-selection.md)
 

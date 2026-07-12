@@ -389,8 +389,25 @@ Additive history only — does not rewrite §5 issue rows or §15 FU-01 closeout
 | **PC14-FU-02 audit** | **COMPLETE** — `PC14_FU02_READY_FOR_SANDBOX_PATCH_PROPOSAL` |
 | Root cause | LLM `outline.tables.decision_reason` → Format Run Pipeline SEO ТЗ; Strict Cleanup/Risk scan final text only |
 | Selected path | **FU-02A / Option B** — TZ-side cleanup sanitizer (v15 family map); final SEO Text untouched |
-| **Next step** | `PC14_FU02_SANDBOX_PATCH_PROPOSAL` |
+| **Next step (at audit close)** | `PC14_FU02_SANDBOX_PATCH_PROPOSAL` |
 | Audit report | [REPORT-metabot-seo-agent-v14-pc14-fu02-tz-strict-residual-cleanup-audit-proposal.md](REPORT-metabot-seo-agent-v14-pc14-fu02-tz-strict-residual-cleanup-audit-proposal.md) |
 | Proposed tests | TZ01–TZ07 · NR01–NR08 · SG01–SG05 (see FU-02 audit §9) |
+
+---
+
+## 17. Status Appendix — PC14-FU-02 Sandbox Patch Proposal (2026-07-13)
+
+Additive history only — does not rewrite §5 / §15 / §16 facts.
+
+| Item | Status |
+|------|--------|
+| **PC14-FU-02 sandbox proposal** | **COMPLETE** — `PC14_FU02_READY_FOR_SANDBOX_IMPLEMENTATION` |
+| Graph strategy | **Strategy A** — insert `TZ Strict Cleanup` after `Run Extract Outline`; retarget `Restore Outline Data` + `Extract SEO Strategy` |
+| Fallback | **Strategy B** — sanitize inside `Run Extract Outline` if insertion risk materializes |
+| Non-targets | Strict Cleanup v15 · Strict Risk Scanner · Format Run Pipeline · PC-07 · final SEO Text |
+| Sandbox name | `SEO Content Agent Beta.v14 - Worker.sandbox-pc14-fu02` |
+| **Next step** | `PC14_FU02_SANDBOX_PATCH_IMPLEMENTATION` |
+| Proposal report | [REPORT-metabot-seo-agent-v14-pc14-fu02-sandbox-patch-proposal.md](REPORT-metabot-seo-agent-v14-pc14-fu02-sandbox-patch-proposal.md) |
+| Harness | TZ01–TZ07 · NR01–NR09 · SG01–SG05 |
 
 Awaiting operator review.
