@@ -1,0 +1,42 @@
+{
+  "changedCodeNodes": [
+    "Strict Cleanup"
+  ],
+  "unexpectedCodeChanges": [],
+  "connectionsChanged": false,
+  "onlyAllowedJsCodeChanged": true,
+  "formatUnchanged": true,
+  "scannerUnchanged": true,
+  "lockChecks": {
+    "Close Lock Before Sending": {
+      "columnsUnchanged": true,
+      "jsCodeUnchanged": true
+    },
+    "Close Single Lock Before Sending": {
+      "columnsUnchanged": true,
+      "jsCodeUnchanged": true
+    },
+    "Finish Lock": {
+      "columnsUnchanged": true,
+      "jsCodeUnchanged": true
+    }
+  },
+  "nonTargetJsCodeUnchanged": {
+    "Format Run Pipeline": true,
+    "Strict Risk Scanner": true,
+    "Route Command": true,
+    "Close Lock Before Sending": true,
+    "Close Single Lock Before Sending": true,
+    "Finish Lock": true,
+    "Append Memory Run": true,
+    "Append Memory Local": true,
+    "Append Memory Single": true
+  },
+  "activeUnchanged": true,
+  "nodeCountUnchanged": true,
+  "pc07Preserved": true,
+  "guardComparison": {
+    "pass": true,
+    "mismatches": []
+  }
+}

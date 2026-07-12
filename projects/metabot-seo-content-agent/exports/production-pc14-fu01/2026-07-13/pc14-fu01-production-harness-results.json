@@ -1,0 +1,288 @@
+{
+  "date": "2026-07-13",
+  "harnessMethod": "PRODUCTION_PATCH_APPLIED_HARNESS_LOCAL",
+  "finalDecision": "PC14_FU01_PRODUCTION_APPLIED_HARNESS_VERIFIED",
+  "testsSummary": {
+    "FU01-S01": true,
+    "FU01-S02": true,
+    "FU01-S03": true,
+    "FU01-S04": true,
+    "FU01-S05": true,
+    "FU01-S06": true,
+    "FU01-S07": true,
+    "FU01-S08": true,
+    "FU01-S09": true,
+    "FU01-S10": true,
+    "FU01-S11": true,
+    "FU01-S12": true,
+    "FU01-S13": true,
+    "FU01-R01": true,
+    "FU01-R02": true,
+    "FU01-R03": true,
+    "FU01-R04": true,
+    "FU01-C01": true,
+    "FU01-C02": true,
+    "FU01-C03": true,
+    "FU01-B01": true,
+    "FU01-B02": true,
+    "FU01-B03": true,
+    "FU01-G01": true,
+    "FU01-G02": true,
+    "FU01-G03": true,
+    "allPass": true
+  },
+  "results": {
+    "FU01-S01": {
+      "pass": true,
+      "input": "для обеспечения безопасности перед работами",
+      "outputText": "перед началом работ",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-S02": {
+      "pass": true,
+      "input": "обеспечение доступа к платам",
+      "outputText": "доступ к платам",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-S03": {
+      "pass": true,
+      "input": "контролируются параметры",
+      "outputText": "параметры фиксируются",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-S04": {
+      "pass": true,
+      "input": "параметры контролируются",
+      "outputText": "параметры фиксируются",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-S05": {
+      "pass": true,
+      "input": "контроль качества",
+      "outputText": "проверка результата",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-S06": {
+      "pass": true,
+      "input": "параметры контроля",
+      "outputText": "проверяемые параметры",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-S07": {
+      "pass": true,
+      "input": "метод контроля",
+      "outputText": "метод проверки",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-S08": {
+      "pass": true,
+      "input": "специализированные инструменты",
+      "outputText": "инструменты для измерений",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-S09": {
+      "pass": true,
+      "input": "специализированное оборудование",
+      "outputText": "оборудование для проверки",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-S10": {
+      "pass": true,
+      "input": "специализированные методы",
+      "outputText": "методы проверки",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-S11": {
+      "pass": true,
+      "input": "надежность соединений",
+      "outputText": "состояние соединений",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-S12": {
+      "pass": true,
+      "input": "надёжность работы",
+      "outputText": "параметры работы",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-S13": {
+      "pass": true,
+      "input": "Для обеспечения безопасности перед работами выполняется контроль качества, используются специализированные инструменты, проверяется надежность соединений.",
+      "outputText": "перед началом работ выполняется проверка результата, используются инструменты для измерений, проверяется состояние соединений.",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-R01": {
+      "pass": true,
+      "input": "аккуратное снятие деталей",
+      "outputText": "внимательное снятие деталей",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-R02": {
+      "pass": true,
+      "input": "для удобства восприятия",
+      "outputText": "для наглядности восприятия",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-R03": {
+      "pass": true,
+      "input": "что позволяет определить",
+      "outputText": "что при этом возможно определить",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-R04": {
+      "pass": true,
+      "input": "Аккуратное описание для удобства восприятия позволяет определить порядок проверки.",
+      "outputText": "внимательное описание для наглядности восприятия при этом возможно определить порядок проверки.",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-C01": {
+      "pass": true,
+      "input": "Диагностика включает проверку давления, температуры и состояния электрических цепей.",
+      "outputText": "Диагностика включает проверку давления, температуры и состояния электрических цепей.",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-C02": {
+      "pass": true,
+      "input": "После сборки фиксируются параметры работы устройства.",
+      "outputText": "После сборки фиксируются параметры работы устройства.",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-C03": {
+      "pass": true,
+      "input": "Разборка выполняется после отключения устройства от сети.",
+      "outputText": "Разборка выполняется после отключения устройства от сети.",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-B01": {
+      "pass": true,
+      "strictCount": 1,
+      "banner": true,
+      "note": "formatter runtime exercised locally; Format Run Pipeline is non-target"
+    },
+    "FU01-B02": {
+      "pass": true,
+      "strictCount": 0,
+      "banner": false,
+      "outputText": "перед началом работ"
+    },
+    "FU01-B03": {
+      "pass": true,
+      "formatUnchanged": true,
+      "note": "Banner logic diff empty — Format Run Pipeline jsCode unchanged vs before-patch baseline"
+    },
+    "FU01-G01": {
+      "pass": true,
+      "expected": "={{ $('Route Command').first().json.task_id }}",
+      "actual": "={{ $('Route Command').first().json.task_id }}",
+      "note": "Close Lock Before Sending task_id mapping unchanged"
+    },
+    "FU01-G02": {
+      "pass": true,
+      "diff": {
+        "changedCodeNodes": [
+          "Strict Cleanup"
+        ],
+        "unexpectedCodeChanges": []
+      },
+      "note": "Only Strict Cleanup jsCode (+ sandbox safety disables) in scope"
+    },
+    "FU01-G03": {
+      "pass": true,
+      "lockChecks": {
+        "Close Lock Before Sending": {
+          "columnsUnchanged": true,
+          "jsCodeUnchanged": true
+        },
+        "Close Single Lock Before Sending": {
+          "columnsUnchanged": true,
+          "jsCodeUnchanged": true
+        },
+        "Finish Lock": {
+          "columnsUnchanged": true,
+          "jsCodeUnchanged": true
+        }
+      },
+      "note": "Lock/memory node jsCode/mappings untouched vs production"
+    }
+  },
+  "required": [
+    "FU01-S01",
+    "FU01-S02",
+    "FU01-S03",
+    "FU01-S04",
+    "FU01-S05",
+    "FU01-S06",
+    "FU01-S07",
+    "FU01-S08",
+    "FU01-S09",
+    "FU01-S10",
+    "FU01-S11",
+    "FU01-S12",
+    "FU01-S13",
+    "FU01-R01",
+    "FU01-R02",
+    "FU01-R03",
+    "FU01-R04",
+    "FU01-C01",
+    "FU01-C02",
+    "FU01-C03",
+    "FU01-B01",
+    "FU01-B02",
+    "FU01-B03",
+    "FU01-G01",
+    "FU01-G02",
+    "FU01-G03"
+  ],
+  "production": {
+    "id": "p4mqb4VuPcemIDlC",
+    "name": "SEO Content Agent Beta.v14 - Worker",
+    "activeBefore": true,
+    "activeAfter": true,
+    "updatedAtBefore": "2026-07-10T14:58:37.818Z",
+    "updatedAtAfter": "2026-07-12T19:11:34.090Z",
+    "nodeCountBefore": 91,
+    "nodeCountAfter": 91
+  },
+  "telegramSmoke": {
+    "executed": false
+  }
+}

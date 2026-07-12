@@ -1,0 +1,27 @@
+{
+  "id": "p4mqb4VuPcemIDlC",
+  "name": "SEO Content Agent Beta.v14 - Worker",
+  "active": true,
+  "updatedAt": "2026-07-10T14:58:37.818Z",
+  "versionId": "d2a26e32-a785-49d9-95d8-c0539eb92ac0",
+  "nodeCount": 91,
+  "strictCleanup": {
+    "hasV14": true,
+    "hasV15": false,
+    "length": 6107,
+    "version": "v14-strict-cleanup-pc14-r1"
+  },
+  "formatRunPipeline": {
+    "hasBanner": true,
+    "length": 12435
+  },
+  "scannerLength": 4003,
+  "pc07": {
+    "pass": true,
+    "taskIdValue": "={{ $('Route Command').first().json.task_id }}",
+    "schemaRemoved": false,
+    "exprOk": true,
+    "removedOk": true
+  },
+  "driftVsPc14After": []
+}
