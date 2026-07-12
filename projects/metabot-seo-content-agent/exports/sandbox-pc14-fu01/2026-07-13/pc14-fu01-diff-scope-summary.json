@@ -1,0 +1,31 @@
+{
+  "changedCodeNodes": [
+    "Strict Cleanup"
+  ],
+  "unexpectedCodeChanges": [],
+  "connectionsChanged": false,
+  "onlyAllowedJsCodeChanged": true,
+  "disabledOrSandboxMeta": [],
+  "formatUnchanged": true,
+  "scannerUnchanged": true,
+  "lockChecks": {
+    "Close Lock Before Sending": {
+      "columnsUnchangedVsProd": true,
+      "jsCodeUnchangedVsProd": true
+    },
+    "Close Single Lock Before Sending": {
+      "columnsUnchangedVsProd": true,
+      "jsCodeUnchangedVsProd": true
+    },
+    "Finish Lock": {
+      "columnsUnchangedVsProd": true,
+      "jsCodeUnchangedVsProd": true
+    }
+  },
+  "nonTargetJsCodeUnchangedVsProd": {
+    "Format Run Pipeline": true,
+    "Strict Risk Scanner": true,
+    "Route Command": true
+  },
+  "productionUnchanged": true
+}

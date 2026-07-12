@@ -1,0 +1,12 @@
+{
+  "node": "Strict Cleanup",
+  "fromVersion": "v14-strict-cleanup-pc14-r1",
+  "toVersion": "v15-strict-cleanup-pc14-fu01-r1",
+  "alreadyPatched": false,
+  "beforeLength": 6107,
+  "afterLength": 8358,
+  "beforeHasApplyFu01": false,
+  "afterHasApplyFu01": true,
+  "legacyHelpEnsureFixed": true,
+  "legacySafetyLogisticsRemoved": true
+}

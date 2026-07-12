@@ -1,0 +1,413 @@
+{
+  "date": "2026-07-13",
+  "evidenceDateNote": "Using 2026-07-13 (task local date / proposal header). Proposal §16 listed 2026-07-10 as a stale placeholder; all FU-01 evidence kept in one 2026-07-13 directory.",
+  "harnessMethod": "SANDBOX_PATCH_APPLIED_HARNESS_LOCAL",
+  "productionIds": {
+    "intake": {
+      "id": "x8EbTGKNdlBprLvk",
+      "name": "SEO Content Agent Beta.v14 - Intake"
+    },
+    "worker": {
+      "id": "p4mqb4VuPcemIDlC",
+      "name": "SEO Content Agent Beta.v14 - Worker"
+    },
+    "admin": {
+      "id": "AR6QxGt8ZKH0xG2T",
+      "name": "SEO Content Agent Beta.v14 - Admin"
+    }
+  },
+  "sandbox": {
+    "reuseDecision": "Created fresh sandbox SEO Content Agent Beta.v14 - Worker.sandbox-pc14-fu01",
+    "disabledNodesOnCreate": [
+      "Send Telegram Local",
+      "OpenRouter Single Mode",
+      "Send Telegram Single",
+      "Run Outline",
+      "Run Text",
+      "Run SEO QA",
+      "Run Factcheck",
+      "Send Telegram Run",
+      "Append Memory Local",
+      "Append Memory Single",
+      "Append Memory Run",
+      "Send Telegram Memory Get",
+      "Run Auto Polish Text",
+      "Finish Lock",
+      "Status Outline",
+      "Status Strategy",
+      "Status Text",
+      "Status SEO QA",
+      "Status Factcheck",
+      "Status Final",
+      "Run SEO Strategy",
+      "Status Complete",
+      "Close Lock Before Sending",
+      "Run Text Repair",
+      "Status Single",
+      "Close Single Lock Before Sending",
+      "Status Single Complete",
+      "Run Single Text Repair"
+    ],
+    "id": "JJI9J4A3K5R0Mm2t",
+    "name": "SEO Content Agent Beta.v14 - Worker.sandbox-pc14-fu01",
+    "activeBefore": false,
+    "webhookPath": "seo-content-agent-worker-sandbox-pc14-fu01",
+    "nodeCountBefore": 91,
+    "updatedAtBefore": "2026-07-12T18:15:25.280Z",
+    "beforePatchSource": "fresh production clone baseline (side-effects disabled)",
+    "disabledNodesBaseline": [
+      "Send Telegram Local",
+      "OpenRouter Single Mode",
+      "Send Telegram Single",
+      "Run Outline",
+      "Run Text",
+      "Run SEO QA",
+      "Run Factcheck",
+      "Send Telegram Run",
+      "Append Memory Local",
+      "Append Memory Single",
+      "Append Memory Run",
+      "Send Telegram Memory Get",
+      "Run Auto Polish Text",
+      "Finish Lock",
+      "Status Outline",
+      "Status Strategy",
+      "Status Text",
+      "Status SEO QA",
+      "Status Factcheck",
+      "Status Final",
+      "Run SEO Strategy",
+      "Status Complete",
+      "Close Lock Before Sending",
+      "Run Text Repair",
+      "Status Single",
+      "Close Single Lock Before Sending",
+      "Status Single Complete",
+      "Run Single Text Repair"
+    ],
+    "disabledNodesOnPatch": [
+      "Append Memory Local",
+      "Append Memory Run",
+      "Append Memory Single",
+      "Close Lock Before Sending",
+      "Close Single Lock Before Sending",
+      "Finish Lock",
+      "OpenRouter Single Mode",
+      "Run Auto Polish Text",
+      "Run Factcheck",
+      "Run Outline",
+      "Run SEO QA",
+      "Run SEO Strategy",
+      "Run Single Text Repair",
+      "Run Text",
+      "Run Text Repair",
+      "Send Telegram Local",
+      "Send Telegram Memory Get",
+      "Send Telegram Run",
+      "Send Telegram Single",
+      "Status Complete",
+      "Status Factcheck",
+      "Status Final",
+      "Status Outline",
+      "Status SEO QA",
+      "Status Single",
+      "Status Single Complete",
+      "Status Strategy",
+      "Status Text"
+    ],
+    "nodeCountAfter": 91,
+    "updatedAtAfter": "2026-07-12T18:15:26.052Z",
+    "activeAfter": false,
+    "deactivated": false
+  },
+  "patch": {
+    "nodes": [
+      "Strict Cleanup"
+    ],
+    "strictCleanupVersion": "v15-strict-cleanup-pc14-fu01-r1",
+    "alreadyPatched": false,
+    "formatUnchanged": true,
+    "scannerUnchanged": true
+  },
+  "safetyGate": {
+    "productionWorkerModified": false,
+    "productionIntakeModified": false,
+    "productionAdminModified": false,
+    "openRouterCalls": false,
+    "telegramCalls": false,
+    "googleSheetsWrites": false,
+    "sandboxOnlyTarget": "JJI9J4A3K5R0Mm2t",
+    "allowedJsCodeNodesOnly": true,
+    "nonTargetJsCodeUnchangedVsProd": {
+      "Format Run Pipeline": true,
+      "Strict Risk Scanner": true,
+      "Route Command": true
+    }
+  },
+  "tests": {
+    "FU01-S01": {
+      "pass": true,
+      "input": "для обеспечения безопасности перед работами",
+      "outputText": "перед началом работ",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-S02": {
+      "pass": true,
+      "input": "обеспечение доступа к платам",
+      "outputText": "доступ к платам",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-S03": {
+      "pass": true,
+      "input": "контролируются параметры",
+      "outputText": "параметры фиксируются",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-S04": {
+      "pass": true,
+      "input": "параметры контролируются",
+      "outputText": "параметры фиксируются",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-S05": {
+      "pass": true,
+      "input": "контроль качества",
+      "outputText": "проверка результата",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-S06": {
+      "pass": true,
+      "input": "параметры контроля",
+      "outputText": "проверяемые параметры",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-S07": {
+      "pass": true,
+      "input": "метод контроля",
+      "outputText": "метод проверки",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-S08": {
+      "pass": true,
+      "input": "специализированные инструменты",
+      "outputText": "инструменты для измерений",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-S09": {
+      "pass": true,
+      "input": "специализированное оборудование",
+      "outputText": "оборудование для проверки",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-S10": {
+      "pass": true,
+      "input": "специализированные методы",
+      "outputText": "методы проверки",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-S11": {
+      "pass": true,
+      "input": "надежность соединений",
+      "outputText": "состояние соединений",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-S12": {
+      "pass": true,
+      "input": "надёжность работы",
+      "outputText": "параметры работы",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-S13": {
+      "pass": true,
+      "input": "Для обеспечения безопасности перед работами выполняется контроль качества, используются специализированные инструменты, проверяется надежность соединений.",
+      "outputText": "перед началом работ выполняется проверка результата, используются инструменты для измерений, проверяется состояние соединений.",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-R01": {
+      "pass": true,
+      "input": "аккуратное снятие деталей",
+      "outputText": "внимательное снятие деталей",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-R02": {
+      "pass": true,
+      "input": "для удобства восприятия",
+      "outputText": "для наглядности восприятия",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-R03": {
+      "pass": true,
+      "input": "что позволяет определить",
+      "outputText": "что при этом возможно определить",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-R04": {
+      "pass": true,
+      "input": "Аккуратное описание для удобства восприятия позволяет определить порядок проверки.",
+      "outputText": "внимательное описание для наглядности восприятия при этом возможно определить порядок проверки.",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-C01": {
+      "pass": true,
+      "input": "Диагностика включает проверку давления, температуры и состояния электрических цепей.",
+      "outputText": "Диагностика включает проверку давления, температуры и состояния электрических цепей.",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-C02": {
+      "pass": true,
+      "input": "После сборки фиксируются параметры работы устройства.",
+      "outputText": "После сборки фиксируются параметры работы устройства.",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-C03": {
+      "pass": true,
+      "input": "Разборка выполняется после отключения устройства от сети.",
+      "outputText": "Разборка выполняется после отключения устройства от сети.",
+      "strictCount": 0,
+      "violations": [],
+      "labels": []
+    },
+    "FU01-B01": {
+      "pass": true,
+      "strictCount": 1,
+      "banner": true,
+      "note": "formatter runtime exercised locally; Format Run Pipeline is non-target"
+    },
+    "FU01-B02": {
+      "pass": true,
+      "strictCount": 0,
+      "banner": false,
+      "outputText": "перед началом работ"
+    },
+    "FU01-B03": {
+      "pass": true,
+      "formatUnchanged": true,
+      "note": "Banner logic diff empty — Format Run Pipeline jsCode unchanged vs before-patch baseline"
+    },
+    "FU01-G01": {
+      "pass": true,
+      "expected": "={{ $('Route Command').first().json.task_id }}",
+      "actual": "={{ $('Route Command').first().json.task_id }}",
+      "note": "Close Lock Before Sending task_id mapping unchanged"
+    },
+    "FU01-G02": {
+      "pass": true,
+      "diff": {
+        "changedCodeNodes": [
+          "Strict Cleanup"
+        ],
+        "unexpectedCodeChanges": [],
+        "connectionsChanged": false
+      },
+      "note": "Only Strict Cleanup jsCode (+ sandbox safety disables) in scope"
+    },
+    "FU01-G03": {
+      "pass": true,
+      "lockChecks": {
+        "Close Lock Before Sending": {
+          "columnsUnchangedVsProd": true,
+          "jsCodeUnchangedVsProd": true
+        },
+        "Close Single Lock Before Sending": {
+          "columnsUnchangedVsProd": true,
+          "jsCodeUnchangedVsProd": true
+        },
+        "Finish Lock": {
+          "columnsUnchangedVsProd": true,
+          "jsCodeUnchangedVsProd": true
+        }
+      },
+      "note": "Lock/memory node jsCode/mappings untouched vs production"
+    }
+  },
+  "diffVerification": {
+    "changedCodeNodes": [
+      "Strict Cleanup"
+    ],
+    "unexpectedCodeChanges": [],
+    "disabledOrSandboxMeta": [],
+    "connectionsChanged": false,
+    "onlyAllowedJsCodeChanged": true
+  },
+  "errors": [],
+  "testsSummary": {
+    "allPass": true,
+    "byId": {
+      "FU01-S01": true,
+      "FU01-S02": true,
+      "FU01-S03": true,
+      "FU01-S04": true,
+      "FU01-S05": true,
+      "FU01-S06": true,
+      "FU01-S07": true,
+      "FU01-S08": true,
+      "FU01-S09": true,
+      "FU01-S10": true,
+      "FU01-S11": true,
+      "FU01-S12": true,
+      "FU01-S13": true,
+      "FU01-R01": true,
+      "FU01-R02": true,
+      "FU01-R03": true,
+      "FU01-R04": true,
+      "FU01-C01": true,
+      "FU01-C02": true,
+      "FU01-C03": true,
+      "FU01-B01": true,
+      "FU01-B02": true,
+      "FU01-B03": true,
+      "FU01-G01": true,
+      "FU01-G02": true,
+      "FU01-G03": true
+    }
+  },
+  "productionSafety": {
+    "workerId": "p4mqb4VuPcemIDlC",
+    "name": "SEO Content Agent Beta.v14 - Worker",
+    "updatedAtBefore": "2026-07-10T14:58:37.818Z",
+    "updatedAtAfter": "2026-07-10T14:58:37.818Z",
+    "productionUnchanged": true,
+    "strictStillV14": true,
+    "strictNotFu01": true
+  },
+  "finalDecision": "PC14_FU01_SANDBOX_PATCH_APPLIED_HARNESS_VERIFIED",
+  "taskStatus": "COMPLETE — PC14-FU-01 sandbox patch implemented and harness verified"
+}
