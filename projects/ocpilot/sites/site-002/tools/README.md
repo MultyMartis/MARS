@@ -101,13 +101,13 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | *(documentation only)* | Run **4.246** git authority realign — `SITE-002-GIT-AUTHORITY-REALIGN-AFTER-WAVE-E-01`; docs-only authority sync for Run 4.245; no script; report at [../reports/SITE-002-GIT-AUTHORITY-REALIGN-AFTER-WAVE-E-01.md](../reports/SITE-002-GIT-AUTHORITY-REALIGN-AFTER-WAVE-E-01.md) |
 | `checkout_anketa_mail_admin_forms.php` | Patched `checkout/anketa.php` source for Run 4.224 (repo reference; superseded by customer-forms variant for Run 4.226) |
 | `checkout_anketa_mail_customer_forms.php` | Patched `checkout/anketa.php` source for Run 4.226 — customer confirmations + admin mail (repo reference; superseded by info-page-forms variant for Run 4.230) |
-| `checkout_anketa_info_page_forms.php` | Patched `checkout/anketa.php` source for Run 4.230 — dialogs 8–11 + extra fields (repo reference; deployed to Production) |
+| `checkout_anketa_info_page_forms.php` | Patched `checkout/anketa.php` source for Run 4.230 — dialogs 8–11 + extra fields; **+ Run 4.264 empty-lead user-content guard** (repo reference; deployed to Production) |
 | `site-002-mail-design-system-preview-01.php` | Local preview generator for mail design system (no SMTP; uses fixtures + renderer) |
 | `mail_renderer.php` | Shared `ZpmMailRenderer` source — deployed to Production `system/library/zpm/mail_renderer.php`; customer + admin render methods |
 | `zpm-corp-cta-forms.js` | Corp CTA submit handler snippet merged into Production `main.js` (Run 4.230) |
 | `zpm-corp-cta-success.css` | Inline success/error styles appended to Production `style.css` (Run 4.230) |
 
-### Post-1C monitor scheduler notes (Run 4.216 / **4.228 hardening** / **4.251 manual** / **4.252 checkpoint** / **4.253 review** / **4.257 runtime split** / **4.258 scheduled spotcheck** / **4.259 natural verify** / **4.260 onboarding 02** / **4.261 baseline refresh** / **4.262 runtime pin**)
+### Post-1C monitor scheduler notes (Run 4.216 / **4.228 hardening** / **4.251 manual** / **4.252 checkpoint** / **4.253 review** / **4.257 runtime split** / **4.258 scheduled spotcheck** / **4.259 natural verify** / **4.260 onboarding 02** / **4.261 baseline refresh** / **4.262 runtime pin** / **4.264 1C+form mail audit**)
 
 - **Run 4.257:** Task Scheduler detached from dirty `X:\AI MARS` — runtime checkout `X:\AI MARS STORAGE\runtime-checkouts\site-002-monitor\repo` (later pinned in 4.262); manual run `2026-07-10_20-17-16`; onboarding needs **0** · [infra report](../../../mars-infrastructure/reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-01.md) · [runtime checkouts](../../../mars-infrastructure/runtime-checkouts.md)
 - **Run 4.258:** scheduled spotcheck **PARTIAL** — scheduler confirmed on runtime checkout; natural run after split pending `2026-07-11 12:30 +07`; Git/runtime brief for project chats · [spotcheck report](../../../mars-infrastructure/reports/MARS-INFRA-RUNTIME-SPLIT-SITE-002-SCHEDULED-SPOTCHECK-01.md) · [Git brief](../../../mars-infrastructure/GIT-RUNTIME-BRIEF-FOR-PROJECT-CHATS.md)
@@ -115,6 +115,7 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 - **Run 4.260:** catalog new branch onboarding 02 — ids **364**/`posuda-i-inventar` + **365**/`stellazhi-standart-vysota-1600`; exact meta UPDATE + allowlist + runtime sync; manual monitor `2026-07-12_22-19-55` needs **0**; classification **HYGIENE_REVIEW_REQUIRED** (baseline-delta only); checkpoint unchanged · [report](../reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-02.md)
 - **Run 4.261:** monitor baseline refresh — **1377→1530**; manual `2026-07-12_22-55-45` **NO_ACTION_REQUIRED** · [report](../reports/SITE-002-MONITOR-BASELINE-REFRESH-01.md)
 - **Run 4.262:** runtime checkout pin — `reset --hard 0ab7e9f5`; status **clean**; scheduler unchanged; manual `2026-07-13_00-05-00` **NO_ACTION_REQUIRED**; 1530→1530 · [infra report](../../../mars-infrastructure/reports/MARS-INFRA-RUNTIME-CHECKOUT-PIN-SITE-002-01.md)
+- **Run 4.264:** 1C logs + form mail audit — latest import SUCCESS; natural monitor `2026-07-13_13-00-39` **NO_ACTION_REQUIRED**; empty-lead root cause = permissive anketa; backend guard deployed; temp recipient only `client.leads@polygon-ws.ru` · [report](../reports/SITE-002-PROD-1C-LOGS-AND-FORM-MAIL-AUDIT-01.md)
 - Runner `RepoRoot` derived from `$PSScriptRoot` (not hardcoded `X:\AI MARS`).
 - Successful Windows Task `LastTaskResult` is **0**; **2** means runner/monitor execution failure — check `scheduled-monitors/post-1c/<timestamp>/run.stderr.log`.
 - Per-run logs: `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\scheduled-monitors\post-1c\`

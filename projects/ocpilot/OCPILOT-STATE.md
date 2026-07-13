@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-13
-**Evidence cutoff:** 2026-07-13 (SITE-002 Run **4.263** / `SITE-002-PROD-INFO-PAGE-HERO-IMAGES-RESTORE-01` — `/delivery` corp-intro restored; 1 FTP twig; 0 image/CSS/DB; prior Run **4.262** runtime pin clean @ `0ab7e9f5`)
+**Evidence cutoff:** 2026-07-14 (SITE-002 Run **4.264** / `SITE-002-PROD-1C-LOGS-AND-FORM-MAIL-AUDIT-01` — 1C+monitor healthy; empty-lead guard in `anketa.php`; temp recipient only `client.leads@polygon-ws.ru`; prior Run **4.263** delivery intro)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Info Page Hero Images Restore (Run 4.263)** — **COMPLETE — `/delivery` `.zpm-corp-intro` restored** · asset `/assets/img/corporate/delivery-intro.jpg` · [restore report](sites/site-002/reports/SITE-002-PROD-INFO-PAGE-HERO-IMAGES-RESTORE-01.md) · discovery [PARTIAL](sites/site-002/reports/SITE-002-PROD-INFO-PAGE-HERO-IMAGES-DISCOVERY-01.md) · prior runtime pin [4.262](../mars-infrastructure/reports/MARS-INFRA-RUNTIME-CHECKOUT-PIN-SITE-002-01.md) · Production checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01` |
+| Current SITE-002 focus | **1C Logs and Form Mail Audit (Run 4.264)** — **COMPLETE — EMPTY LEAD ROOT CAUSE FIXED** · 1C SUCCESS + monitor **NO_ACTION_REQUIRED** 1530 · anketa empty-lead guard · temp mail alert **only** `client.leads@polygon-ws.ru` (`info@bzpm.ru` not restored) · [audit report](sites/site-002/reports/SITE-002-PROD-1C-LOGS-AND-FORM-MAIL-AUDIT-01.md) · prior delivery intro [4.263](sites/site-002/reports/SITE-002-PROD-INFO-PAGE-HERO-IMAGES-RESTORE-01.md) · Production checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01` |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 

@@ -2082,7 +2082,7 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 | **Form markup** | `zpm-form` + hidden `dialog` (1/2/3/5/7) in Fancybox, PLP Commercial Trust, corporate `corpcta-form-*` partials |
 | **Security** | CSRF session token + Google reCAPTCHA v3 |
 | **DB persist** | `catalog/model/checkout/anketa.php` → `addanketa()` |
-| **Active recipients** | OpenCart setting **`config_mail_alert_email`** — comma-separated; loop in anketa + order alert |
+| **Active recipients** | OpenCart setting **`config_mail_alert_email`** — comma-separated; loop in anketa + order alert · **temp test (Run 4.264):** only `client.leads@polygon-ws.ru`; `info@bzpm.ru` not restored |
 | **Admin path** | **System → Settings → Mail → Additional Alert Emails** (*Дополнительные адреса оповещения*) |
 | **Operator update** | Run 4.187 — recipient list updated in admin; delivery verified by operator |
 | **From / SMTP** | OpenCart mail settings (`config_email`, `config_mail_*`) — **unchanged** (Run 4.187) |
@@ -2095,7 +2095,7 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 | **Confirmation report** | [SITE-002-PROD-MAIL-RECIPIENTS-ADMIN-ADD-01.md](../reports/SITE-002-PROD-MAIL-RECIPIENTS-ADMIN-ADD-01.md) |
 | **Storage artefacts** | Discovery: `.../SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01\` · Confirmation: `.../SITE-002-PROD-MAIL-RECIPIENTS-ADMIN-ADD-01\` |
 
-**Change rules:** Recipients are managed through OpenCart native Mail Alert Emails — do not hardcode in `anketa.php` unless admin path is unavailable. Do not edit anketa/mail paths during unrelated catalog/cron work. Verify CSRF + reCAPTCHA after any anketa change. Mask recipient emails in reports.
+**Change rules:** Recipients are managed through OpenCart native Mail Alert Emails — do not hardcode in `anketa.php` unless admin path is unavailable. Do not edit anketa/mail paths during unrelated catalog/cron work. Verify CSRF + reCAPTCHA after any anketa change. Mask recipient emails in reports. **Empty-lead guard (Run 4.264):** anketa rejects POST when all user-content fields are empty (HTTP 400) — prevents service-only admin mails.
 
 ---
 
@@ -2116,7 +2116,7 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 | **Subject (customer)** | `ЗПМ: заявка получена — {dialog_label}` |
 | **Dialogs** | 1 product question · 2 callback · 3 price · 5 review · 7 dealers/wholesale |
 | **Frontend** | `zpm-form` → `POST checkout/anketa` via `main.js`; CSRF + reCAPTCHA v3; **`zpm-form--loading`** + abort on modal close |
-| **Admin recipients** | `config_mail_alert_email` (Run 4.186/4.187) — unchanged |
+| **Admin recipients** | `config_mail_alert_email` (Run 4.186/4.187) — **temp only** `client.leads@polygon-ws.ru` (Run 4.264); empty-lead user-content guard in anketa |
 | **Customer recipient rule** | posted valid **email** OR logged-in customer account email; else skip (not error) |
 | **Service info in admin mail** | **active** — IP, UA, browser, device, OS, referrer, page URL, dialog, UTM, city=unknown |
 | **Service info in customer mail** | **forbidden** |
