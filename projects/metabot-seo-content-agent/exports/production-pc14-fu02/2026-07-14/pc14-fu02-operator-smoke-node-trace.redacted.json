@@ -1,0 +1,191 @@
+{
+  "execution_id": "3346",
+  "status": "error",
+  "lastNodeExecuted": "TZ Strict Cleanup",
+  "error": {
+    "message": "structuredClone is not defined [line 250]",
+    "name": "ReferenceError",
+    "stack_head": [
+      "ReferenceError: structuredClone is not defined",
+      "at sanitizeOutline (evalmachine.<anonymous>:250:13)",
+      "at VmCodeWrapper (evalmachine.<anonymous>:279:17)",
+      "at evalmachine.<anonymous>:293:2",
+      "at Script.runInContext (node:vm:149:12)",
+      "at runInContext (node:vm:301:6)"
+    ]
+  },
+  "node_trace": {
+    "Webhook": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1783966807512,
+      "executionTime": 0,
+      "error": null,
+      "item_count": 1
+    },
+    "Wait": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1783966807513,
+      "executionTime": 3002,
+      "error": null,
+      "item_count": 1
+    },
+    "Store Worker Meta": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1783966810516,
+      "executionTime": 40,
+      "error": null,
+      "item_count": 1
+    },
+    "Set Raw Input": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1783966810556,
+      "executionTime": 2,
+      "error": null,
+      "item_count": 1
+    },
+    "Route Command": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1783966810558,
+      "executionTime": 58,
+      "error": null,
+      "item_count": 1
+    },
+    "Switch Route": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1783966810616,
+      "executionTime": 5,
+      "error": null,
+      "item_count": 0
+    },
+    "Status Outline": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1783966810621,
+      "executionTime": 60,
+      "error": null,
+      "item_count": 1
+    },
+    "Restore Route Data": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1783966810681,
+      "executionTime": 41,
+      "error": null,
+      "item_count": 1
+    },
+    "Build Outline Payload": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1783966810722,
+      "executionTime": 55,
+      "error": null,
+      "item_count": 1
+    },
+    "Run Outline": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1783966810777,
+      "executionTime": 29675,
+      "error": null,
+      "item_count": 1
+    },
+    "Run Extract Outline": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1783966840454,
+      "executionTime": 59,
+      "error": null,
+      "item_count": 1
+    },
+    "TZ Strict Cleanup": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1783966840513,
+      "executionTime": 105,
+      "error": {
+        "message": "structuredClone is not defined [line 250]",
+        "name": null
+      },
+      "item_count": 0
+    },
+    "Switch Run After Outline": {
+      "executed": false,
+      "run_count": 0
+    },
+    "Restore Outline Data": {
+      "executed": false,
+      "run_count": 0
+    },
+    "Extract SEO Strategy": {
+      "executed": false,
+      "run_count": 0
+    },
+    "Format Run Pipeline": {
+      "executed": false,
+      "run_count": 0
+    },
+    "Strict Cleanup": {
+      "executed": false,
+      "run_count": 0
+    },
+    "Append Memory Run": {
+      "executed": false,
+      "run_count": 0
+    },
+    "Close Lock Before Sending": {
+      "executed": false,
+      "run_count": 0
+    },
+    "Send Telegram Run": {
+      "executed": false,
+      "run_count": 0
+    }
+  },
+  "key_path": {
+    "Run Extract Outline": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1783966840454,
+      "executionTime": 59,
+      "error": null,
+      "item_count": 1
+    },
+    "TZ Strict Cleanup": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1783966840513,
+      "executionTime": 105,
+      "error": {
+        "message": "structuredClone is not defined [line 250]",
+        "name": null
+      },
+      "item_count": 0
+    },
+    "Switch Run After Outline": {
+      "executed": false,
+      "run_count": 0
+    },
+    "Format Run Pipeline": {
+      "executed": false,
+      "run_count": 0
+    },
+    "Append Memory Run": {
+      "executed": false,
+      "run_count": 0
+    },
+    "Close Lock Before Sending": {
+      "executed": false,
+      "run_count": 0
+    },
+    "Send Telegram Run": {
+      "executed": false,
+      "run_count": 0
+    }
+  }
+}

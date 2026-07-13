@@ -1,0 +1,106 @@
+{
+  "diagnostic_target": "PC14_FU02_OPERATOR_SMOKE_TIMEOUT_DIAGNOSTICS",
+  "generated_at": "2026-07-13T19:09:16.945Z",
+  "decision_candidate": "PC14_FU02_SMOKE_TIMEOUT_DIAGNOSED_RETRY_BLOCKED",
+  "recommended_next_candidate": "PC14_FU02_FIX_REQUIRED_BEFORE_RETRY",
+  "time_windows": {
+    "operator_local_utc_plus_7": {
+      "smoke_run": "2026-07-14 01:20",
+      "health_locks": "2026-07-14 01:57",
+      "investigated": "2026-07-14 01:15–02:05"
+    },
+    "utc": {
+      "primary": [
+        "2026-07-13T18:15:00.000Z",
+        "2026-07-13T19:05:00.000Z"
+      ],
+      "smoke_run": "2026-07-13T18:20:03Z–18:20:40Z",
+      "health_locks": "2026-07-13T18:57:16Z–18:57:36Z"
+    }
+  },
+  "production_worker": {
+    "id": "p4mqb4VuPcemIDlC",
+    "name": "SEO Content Agent Beta.v14 - Worker",
+    "active": true,
+    "nodes": 92,
+    "updatedAt": "2026-07-13T16:40:11.596Z",
+    "sanitizer": "TZ Strict Cleanup",
+    "sanitizer_version": "v1-tz-strict-cleanup-pc14-fu02-r1"
+  },
+  "matched_executions": {
+    "intake": "3345",
+    "worker": "3346",
+    "admin_health_or_locks": [
+      "3350",
+      "3348"
+    ],
+    "intake_health_locks_relay": [
+      "3347",
+      "3349"
+    ]
+  },
+  "task_id": "seo202607131820100448ul",
+  "answers": {
+    "q1_intake_occurred": true,
+    "q2_intake_status": "success",
+    "q3_real_task_id": "seo202607131820100448ul",
+    "q4_worker_started": true,
+    "q5_worker_outcome": "error",
+    "q6_failed_node": "TZ Strict Cleanup",
+    "q6_error": "structuredClone is not defined [line 250]",
+    "q7_run_extract_outline": true,
+    "q8_tz_strict_cleanup": true,
+    "q9_switch_run_after_outline": false,
+    "q10_final_generation_continued": false,
+    "q11_format_run_pipeline": false,
+    "q12_telegram_final_send": false,
+    "q13_memory_row": false,
+    "q14_active_jobs_created": true,
+    "q15_active_jobs_closed_by_worker": false,
+    "q16_close_with": "not_closed_by_worker_close_lock",
+    "q17_locks_empty_reason": "Admin /locks Format Locks Response returned empty-active message (exec 3350). Lookup Locks first item showed task_id=pending status=active (possibly unrelated sheet row). Worker never ran Close Lock. Exact smoke lock_key row fate SAFE UNKNOWN without chat-keyed Sheets read.",
+    "q18_likely_cause": "FU-02 TZ Strict Cleanup patch — structuredClone unavailable in n8n Code node VM",
+    "q19_retry_safe": false,
+    "q20_safest_next": "Fix TZ Strict Cleanup to replace structuredClone with JSON.parse(JSON.stringify(...)) or equivalent sandbox-safe clone; sandbox+harness; then production re-apply; then short smoke"
+  },
+  "root_cause": {
+    "type": "FU02_SANITIZER_RUNTIME_INCOMPATIBILITY",
+    "detail": "TZ Strict Cleanup jsCode uses structuredClone (lines 250 and 275). Local Node harness has structuredClone so harness passed; n8n task-runner VM does not define structuredClone → ReferenceError stops Worker after Run Extract Outline success (~33s total, OpenRouter outline OK).",
+    "structuredClone_hits": [
+      {
+        "line": 250,
+        "text": "const o = structuredClone(outline);",
+        "source": "live_worker_jsCode_GET"
+      },
+      {
+        "line": 275,
+        "text": "out.generated_text = structuredClone(out.generated_text);",
+        "source": "live_worker_jsCode_GET"
+      }
+    ],
+    "not_caused_by": [
+      "OpenRouter timeout",
+      "n8n execution wall-clock timeout",
+      "Telegram final send failure",
+      "output chunking"
+    ]
+  },
+  "fu02_patch_impact": "Causal — production FU-02 sanitizer node is the failing node; outline generation succeeded; failure is in FU-02 added Code node.",
+  "production_safety": "NOT safe to retry same /run smoke until structuredClone is replaced. /health and Sheets connectivity OK. Worker remains active with broken sanitizer on /run outline path.",
+  "lock_note": {
+    "intake_create": "pending/active at Intake 3345",
+    "worker_close": "not executed",
+    "admin_locks_exec": "3350",
+    "admin_format_text": "Активных задач нет.",
+    "admin_lookup_first_sample": {
+      "task_id": "pending",
+      "status": "active"
+    },
+    "health_exec": "3348",
+    "health_active_jobs_sample": {
+      "task_id": "pending",
+      "status": "done",
+      "note": "likely sheet sample row for readability, not smoke-specific"
+    }
+  }
+}

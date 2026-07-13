@@ -1,0 +1,137 @@
+[
+  {
+    "execution_id": "3350",
+    "status": "success",
+    "startedAt": "2026-07-13T18:57:36.368Z",
+    "stoppedAt": "2026-07-13T18:57:36.937Z",
+    "lastNodeExecuted": "Send Admin Telegram",
+    "executed_nodes": [
+      "Format Locks Response",
+      "Lookup Locks",
+      "Route Locks",
+      "Route Stop All Flow",
+      "Send Admin Telegram",
+      "Webhook"
+    ],
+    "snippets": {
+      "Webhook": {
+        "admin_command": null,
+        "task_id": null,
+        "status": null,
+        "telegram_text_preview": null,
+        "telegram_parts": 0,
+        "active_rows": null,
+        "locks_preview": null
+      },
+      "Route Locks": {
+        "admin_command": null,
+        "task_id": null,
+        "status": null,
+        "telegram_text_preview": null,
+        "telegram_parts": 0,
+        "active_rows": null,
+        "locks_preview": null
+      },
+      "Lookup Locks": {
+        "admin_command": null,
+        "task_id": "pending",
+        "status": "active",
+        "telegram_text_preview": null,
+        "telegram_parts": 0,
+        "active_rows": null,
+        "locks_preview": null
+      },
+      "Format Locks Response": {
+        "admin_command": "locks",
+        "task_id": null,
+        "status": null,
+        "telegram_text_preview": "Активных задач нет.",
+        "telegram_parts": 1,
+        "active_rows": null,
+        "locks_preview": null
+      },
+      "Send Admin Telegram": {
+        "admin_command": null,
+        "task_id": null,
+        "status": null,
+        "telegram_text_preview": null,
+        "telegram_parts": 0,
+        "active_rows": null,
+        "locks_preview": null
+      }
+    }
+  },
+  {
+    "execution_id": "3348",
+    "status": "success",
+    "startedAt": "2026-07-13T18:57:16.397Z",
+    "stoppedAt": "2026-07-13T18:57:30.356Z",
+    "lastNodeExecuted": "Send Admin Telegram",
+    "executed_nodes": [
+      "Format Health Response",
+      "Health Check Active Jobs",
+      "Health Check Memory",
+      "Route Health",
+      "Route Locks",
+      "Route Stop All Flow",
+      "Send Admin Telegram",
+      "Webhook"
+    ],
+    "snippets": {
+      "Webhook": {
+        "admin_command": null,
+        "task_id": null,
+        "status": null,
+        "telegram_text_preview": null,
+        "telegram_parts": 0,
+        "active_rows": null,
+        "locks_preview": null
+      },
+      "Route Health": {
+        "admin_command": null,
+        "task_id": null,
+        "status": null,
+        "telegram_text_preview": null,
+        "telegram_parts": 0,
+        "active_rows": null,
+        "locks_preview": null
+      },
+      "Health Check Active Jobs": {
+        "admin_command": null,
+        "task_id": "pending",
+        "status": "done",
+        "telegram_text_preview": null,
+        "telegram_parts": 0,
+        "active_rows": null,
+        "locks_preview": null
+      },
+      "Health Check Memory": {
+        "admin_command": null,
+        "task_id": "seo202605111457224r0vo9",
+        "status": "ok",
+        "telegram_text_preview": null,
+        "telegram_parts": 0,
+        "active_rows": null,
+        "locks_preview": null
+      },
+      "Format Health Response": {
+        "admin_command": "health",
+        "task_id": null,
+        "status": null,
+        "telegram_text_preview": "Health Check — SEO Content Agent\n\nGoogle Sheets: OK\nseo_active_jobs: OK — лист читается, items: 27\nmemory: OK — лист читается, items: 621\n\nСтатус: система доступна",
+        "telegram_parts": 1,
+        "active_rows": null,
+        "locks_preview": null
+      },
+      "Send Admin Telegram": {
+        "admin_command": null,
+        "task_id": null,
+        "status": null,
+        "telegram_text_preview": null,
+        "telegram_parts": 0,
+        "active_rows": null,
+        "locks_preview": null
+      }
+    }
+  }
+]

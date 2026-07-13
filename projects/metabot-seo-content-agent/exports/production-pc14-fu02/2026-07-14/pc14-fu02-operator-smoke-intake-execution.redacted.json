@@ -1,0 +1,43 @@
+{
+  "execution_id": "3345",
+  "workflow_id": "x8EbTGKNdlBprLvk",
+  "label": "intake_smoke_run",
+  "status": "success",
+  "startedAt": "2026-07-13T18:20:03.074Z",
+  "stoppedAt": "2026-07-13T18:20:07.518Z",
+  "finished": true,
+  "lastNodeExecuted": "Send To Worker",
+  "error": null,
+  "create_lock": {
+    "task_id": "pending",
+    "status": "active",
+    "mode": null,
+    "lock_key": "REDACTED_LOCK_KEY"
+  },
+  "send_task_accepted": {
+    "ok": true
+  },
+  "worker_payload_brief": {
+    "task_id": null,
+    "mode": null,
+    "has_text": false,
+    "text_preview": ""
+  },
+  "executed_nodes": [
+    "Build User Lock Key",
+    "Build Worker Payload",
+    "Check Active Lock",
+    "Create Lock Row",
+    "Debug Lock State",
+    "Detect Local Command",
+    "IF Admin Command",
+    "IF Busy",
+    "IF Local Command",
+    "Lookup Active Locks",
+    "Route Retrieval Command",
+    "Send Task Accepted",
+    "Send To Worker",
+    "Telegram Trigger"
+  ],
+  "note": "Smoke /run Intake at operator 01:20 (UTC+7) / 18:20 UTC"
+}

@@ -1,0 +1,31 @@
+{
+  "source": "n8n_node_outputs_readonly",
+  "intake_create_lock": {
+    "task_id": "pending",
+    "status": "active",
+    "mode": null,
+    "lock_key": "REDACTED_LOCK_KEY"
+  },
+  "worker_close_lock": {
+    "executed": false,
+    "note": "Close Lock Before Sending did not run — Worker errored at TZ Strict Cleanup"
+  },
+  "observed_task_id_real": "seo202607131820100448ul",
+  "observed_intake_placeholder_task_id": "pending",
+  "operator_locks_at_0157": "Активных задач нет.",
+  "lock_lifecycle_interpretation": "Lock row created as pending/active at Intake 3345. Worker failed before Close Lock. By 01:57 /locks reported no active tasks. Direct Sheets row read not performed this task; SAFE UNKNOWN whether row was auto-cleaned, expired, filtered out by Admin /locks query, or still present but not shown as active.",
+  "admin_window_executions": [
+    {
+      "id": "3350",
+      "startedAt": "2026-07-13T18:57:36.368Z",
+      "last": "Send Admin Telegram",
+      "status": "success"
+    },
+    {
+      "id": "3348",
+      "startedAt": "2026-07-13T18:57:16.397Z",
+      "last": "Send Admin Telegram",
+      "status": "success"
+    }
+  ]
+}
