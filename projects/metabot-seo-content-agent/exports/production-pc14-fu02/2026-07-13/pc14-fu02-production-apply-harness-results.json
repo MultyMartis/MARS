@@ -1,0 +1,278 @@
+{
+  "date": "2026-07-13",
+  "harnessMethod": "PRODUCTION_PATCH_APPLIED_HARNESS_LOCAL",
+  "version": "v1-tz-strict-cleanup-pc14-fu02-r1",
+  "finalDecision": "PC14_FU02_PRODUCTION_APPLIED_HARNESS_VERIFIED",
+  "testsSummary": {
+    "TZ01": true,
+    "TZ02": true,
+    "TZ03": true,
+    "TZ04": true,
+    "TZ05": true,
+    "TZ06": true,
+    "TZ07": true,
+    "NR01": true,
+    "NR02": true,
+    "NR03": true,
+    "NR04": true,
+    "NR05": true,
+    "NR06": true,
+    "NR07": true,
+    "NR08": true,
+    "NR09": true,
+    "SG01": true,
+    "SG02": true,
+    "SG03": true,
+    "SG04": true,
+    "SG05": true,
+    "allPass": true
+  },
+  "results": {
+    "TZ01": {
+      "pass": true,
+      "input": "для удобства восприятия",
+      "output": "для структурированного представления",
+      "meta": {
+        "version": "v1-tz-strict-cleanup-pc14-fu02-r1",
+        "count": 1,
+        "families": [
+          "удобств"
+        ],
+        "fields": [
+          "outline.tables.decision_reason"
+        ],
+        "skipped_empty": []
+      },
+      "markdownUnchanged": true
+    },
+    "TZ02": {
+      "pass": true,
+      "input": "что позволяет определить",
+      "output": "за счет этого можно определить",
+      "meta": {
+        "version": "v1-tz-strict-cleanup-pc14-fu02-r1",
+        "count": 1,
+        "families": [
+          "позволя"
+        ],
+        "fields": [
+          "outline.tables.decision_reason"
+        ],
+        "skipped_empty": []
+      },
+      "markdownUnchanged": true
+    },
+    "TZ03": {
+      "pass": true,
+      "input": "для обеспечения безопасности",
+      "output": "для соблюдения требований работы",
+      "meta": {
+        "version": "v1-tz-strict-cleanup-pc14-fu02-r1",
+        "count": 1,
+        "families": [
+          "обеспеч",
+          "безопасн"
+        ],
+        "fields": [
+          "outline.tables.decision_reason"
+        ],
+        "skipped_empty": []
+      },
+      "markdownUnchanged": true
+    },
+    "TZ04": {
+      "pass": true,
+      "input": "контроль качества",
+      "output": "проверка результата",
+      "meta": {
+        "version": "v1-tz-strict-cleanup-pc14-fu02-r1",
+        "count": 1,
+        "families": [
+          "контрол"
+        ],
+        "fields": [
+          "outline.tables.decision_reason"
+        ],
+        "skipped_empty": []
+      },
+      "markdownUnchanged": true
+    },
+    "TZ05": {
+      "pass": true,
+      "input": "специализированные инструменты",
+      "output": "профильные инструменты",
+      "meta": {
+        "version": "v1-tz-strict-cleanup-pc14-fu02-r1",
+        "count": 1,
+        "families": [
+          "специализирован"
+        ],
+        "fields": [
+          "outline.tables.decision_reason"
+        ],
+        "skipped_empty": []
+      },
+      "markdownUnchanged": true
+    },
+    "TZ06": {
+      "pass": true,
+      "input": "надежность соединений",
+      "output": "стабильность соединений",
+      "meta": {
+        "version": "v1-tz-strict-cleanup-pc14-fu02-r1",
+        "count": 1,
+        "families": [
+          "надежн"
+        ],
+        "fields": [
+          "outline.tables.decision_reason"
+        ],
+        "skipped_empty": []
+      },
+      "markdownUnchanged": true
+    },
+    "TZ07": {
+      "pass": true,
+      "input": "Для обеспечения безопасности и удобства восприятия проводится контроль качества специализированными инструментами, что позволяет оценить надежность соединений.",
+      "output": "для соблюдения требований работы и структурированного представления проводится проверка результата профильными инструментами, за счет этого можно оценить стабильность соединений.",
+      "meta": {
+        "version": "v1-tz-strict-cleanup-pc14-fu02-r1",
+        "count": 6,
+        "families": [
+          "удобств",
+          "позволя",
+          "обеспеч",
+          "контрол",
+          "безопасн",
+          "специализирован",
+          "надежн"
+        ],
+        "fields": [
+          "outline.tables.decision_reason"
+        ],
+        "skipped_empty": []
+      },
+      "markdownUnchanged": true
+    },
+    "NR01": {
+      "pass": true,
+      "input": "для удобства восприятия",
+      "output": "для структурированного представления",
+      "meta": {
+        "version": "v1-tz-strict-cleanup-pc14-fu02-r1",
+        "count": 1,
+        "families": [
+          "удобств"
+        ],
+        "fields": [
+          "outline.tables.decision_reason"
+        ],
+        "skipped_empty": []
+      },
+      "markdownUnchanged": true
+    },
+    "NR02": {
+      "pass": true,
+      "detail": "Strict Cleanup v15 node unchanged"
+    },
+    "NR03": {
+      "pass": true,
+      "detail": "Strict Risk Scanner unchanged"
+    },
+    "NR04": {
+      "pass": true,
+      "detail": "Format Run Pipeline unchanged"
+    },
+    "NR05": {
+      "pass": true,
+      "strictCount": 0
+    },
+    "NR06": {
+      "pass": true,
+      "snippet": "Таблицы: auto\n\n=== 1. SEO ТЗ ===\n\nH1: Диагностика электрооборудования\n\nTitle options:\n1. Диагностика электрооборудования — порядок работ\n\nMeta description:\nКраткое описание услуги диагностики.\n\nТаблицы:\nRequired: да\nПричина: для структурированного "
+    },
+    "NR07": {
+      "pass": true
+    },
+    "NR08": {
+      "pass": true,
+      "detail": "No OpenRouter/Telegram/Sheets side effects in sandbox harness"
+    },
+    "NR09": {
+      "pass": true
+    },
+    "SG01": {
+      "pass": true,
+      "detail": {
+        "addedNodes": [
+          "TZ Strict Cleanup"
+        ],
+        "changedCodeNodes": [
+          "Extract SEO Strategy",
+          "Restore Outline Data"
+        ],
+        "unexpectedCodeChanges": []
+      }
+    },
+    "SG02": {
+      "pass": true,
+      "detail": "No lock/memory/get/Telegram/OpenRouter logic changes beyond sandbox disables"
+    },
+    "SG03": {
+      "pass": true,
+      "closeLockTaskId": "={{ $('Route Command').first().json.task_id }}"
+    },
+    "SG04": {
+      "pass": true,
+      "detail": "Production workflow active state / content unchanged"
+    },
+    "SG05": {
+      "pass": true,
+      "detail": "Sandbox remains inactive"
+    }
+  },
+  "required": [
+    "TZ01",
+    "TZ02",
+    "TZ03",
+    "TZ04",
+    "TZ05",
+    "TZ06",
+    "TZ07",
+    "NR01",
+    "NR02",
+    "NR03",
+    "NR04",
+    "NR05",
+    "NR06",
+    "NR07",
+    "NR08",
+    "NR09",
+    "SG01",
+    "SG02",
+    "SG03",
+    "SG04",
+    "SG05"
+  ],
+  "production": {
+    "id": "p4mqb4VuPcemIDlC",
+    "name": "SEO Content Agent Beta.v14 - Worker",
+    "activeBefore": true,
+    "activeAfter": true,
+    "updatedAtBefore": "2026-07-12T19:11:34.090Z",
+    "updatedAtAfter": "2026-07-13T16:40:11.596Z",
+    "nodeCountBefore": 91,
+    "nodeCountAfter": 92
+  },
+  "telegramSmoke": {
+    "executed": false
+  },
+  "sideEffects": {
+    "openRouter": false,
+    "telegram": false,
+    "googleSheets": false,
+    "intake": false,
+    "admin": false,
+    "sandbox": false
+  }
+}

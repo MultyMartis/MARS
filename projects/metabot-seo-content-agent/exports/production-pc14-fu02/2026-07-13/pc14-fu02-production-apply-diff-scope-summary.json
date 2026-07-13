@@ -1,0 +1,48 @@
+{
+  "status": "applied",
+  "strategy": "A",
+  "scopeOk": true,
+  "addedNodes": [
+    "TZ Strict Cleanup"
+  ],
+  "changedCodeNodes": [
+    "Extract SEO Strategy",
+    "Restore Outline Data"
+  ],
+  "removedNodes": [],
+  "unexpectedCodeChanges": [],
+  "connectionsChanged": true,
+  "expectedConnectionPresent": true,
+  "nonTargetUnchanged": {
+    "Run Extract Outline": true,
+    "Format Run Pipeline": true,
+    "Strict Cleanup": true,
+    "Strict Risk Scanner": true,
+    "Route Command": true,
+    "Close Lock Before Sending": true,
+    "Close Single Lock Before Sending": true,
+    "Finish Lock": true,
+    "Append Memory Run": true,
+    "Append Memory Local": true,
+    "Append Memory Single": true
+  },
+  "lockChecks": {
+    "Close Lock Before Sending": {
+      "columnsUnchanged": true,
+      "jsCodeUnchanged": true
+    },
+    "Close Single Lock Before Sending": {
+      "columnsUnchanged": true,
+      "jsCodeUnchanged": true
+    },
+    "Finish Lock": {
+      "columnsUnchanged": true,
+      "jsCodeUnchanged": true
+    }
+  },
+  "activeUnchanged": true,
+  "nodeCountBefore": 91,
+  "nodeCountAfter": 92,
+  "pc07Preserved": true,
+  "sandboxMutated": false
+}
