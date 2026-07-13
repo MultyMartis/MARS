@@ -1,0 +1,19 @@
+{
+  "hotfixId": "PC14_FU02_HOTFIX01_STRUCTUREDCLONE_VM_SAFE",
+  "scopeOk": true,
+  "graph": "Run Extract Outline → TZ Strict Cleanup → Switch Run After Outline",
+  "retargetsPreserved": {
+    "restoreOutlineData": true,
+    "extractSeoStrategy": true
+  },
+  "productionUnchanged": true,
+  "sandboxInactive": true,
+  "changedCodeNodes": [
+    "TZ Strict Cleanup"
+  ],
+  "unexpectedCodeChanges": [],
+  "connectionsChanged": false,
+  "expectedConnectionPresent": true,
+  "version": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+  "structuredCloneRemainingInSandboxTz": 0
+}

@@ -1,0 +1,275 @@
+{
+  "version": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+  "brokenVersion": "v1-tz-strict-cleanup-pc14-fu02-r1",
+  "allPass": true,
+  "vmAllPass": true,
+  "required": [
+    "TZ01",
+    "TZ02",
+    "TZ03",
+    "TZ04",
+    "TZ05",
+    "TZ06",
+    "TZ07",
+    "NR01",
+    "NR02",
+    "NR03",
+    "NR04",
+    "NR05",
+    "NR06",
+    "NR07",
+    "NR08",
+    "NR09",
+    "SG01",
+    "SG02",
+    "SG03",
+    "SG04",
+    "SG05",
+    "VM01",
+    "VM02",
+    "VM03",
+    "VM04",
+    "VM05",
+    "VM06"
+  ],
+  "results": {
+    "TZ01": {
+      "pass": true,
+      "input": "для удобства восприятия",
+      "output": "для структурированного представления",
+      "meta": {
+        "version": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+        "count": 1,
+        "families": [
+          "удобств"
+        ],
+        "fields": [
+          "outline.tables.decision_reason"
+        ],
+        "skipped_empty": []
+      },
+      "markdownUnchanged": true
+    },
+    "TZ02": {
+      "pass": true,
+      "input": "что позволяет определить",
+      "output": "за счет этого можно определить",
+      "meta": {
+        "version": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+        "count": 1,
+        "families": [
+          "позволя"
+        ],
+        "fields": [
+          "outline.tables.decision_reason"
+        ],
+        "skipped_empty": []
+      },
+      "markdownUnchanged": true
+    },
+    "TZ03": {
+      "pass": true,
+      "input": "для обеспечения безопасности",
+      "output": "для соблюдения требований работы",
+      "meta": {
+        "version": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+        "count": 1,
+        "families": [
+          "обеспеч",
+          "безопасн"
+        ],
+        "fields": [
+          "outline.tables.decision_reason"
+        ],
+        "skipped_empty": []
+      },
+      "markdownUnchanged": true
+    },
+    "TZ04": {
+      "pass": true,
+      "input": "контроль качества",
+      "output": "проверка результата",
+      "meta": {
+        "version": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+        "count": 1,
+        "families": [
+          "контрол"
+        ],
+        "fields": [
+          "outline.tables.decision_reason"
+        ],
+        "skipped_empty": []
+      },
+      "markdownUnchanged": true
+    },
+    "TZ05": {
+      "pass": true,
+      "input": "специализированные инструменты",
+      "output": "профильные инструменты",
+      "meta": {
+        "version": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+        "count": 1,
+        "families": [
+          "специализирован"
+        ],
+        "fields": [
+          "outline.tables.decision_reason"
+        ],
+        "skipped_empty": []
+      },
+      "markdownUnchanged": true
+    },
+    "TZ06": {
+      "pass": true,
+      "input": "надежность соединений",
+      "output": "стабильность соединений",
+      "meta": {
+        "version": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+        "count": 1,
+        "families": [
+          "надежн"
+        ],
+        "fields": [
+          "outline.tables.decision_reason"
+        ],
+        "skipped_empty": []
+      },
+      "markdownUnchanged": true
+    },
+    "TZ07": {
+      "pass": true,
+      "input": "Для обеспечения безопасности и удобства восприятия проводится контроль качества специализированными инструментами, что позволяет оценить надежность соединений.",
+      "output": "для соблюдения требований работы и структурированного представления проводится проверка результата профильными инструментами, за счет этого можно оценить стабильность соединений.",
+      "meta": {
+        "version": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+        "count": 6,
+        "families": [
+          "удобств",
+          "позволя",
+          "обеспеч",
+          "контрол",
+          "безопасн",
+          "специализирован",
+          "надежн"
+        ],
+        "fields": [
+          "outline.tables.decision_reason"
+        ],
+        "skipped_empty": []
+      },
+      "markdownUnchanged": true
+    },
+    "NR01": {
+      "pass": true,
+      "input": "для удобства восприятия",
+      "output": "для структурированного представления",
+      "meta": {
+        "version": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+        "count": 1,
+        "families": [
+          "удобств"
+        ],
+        "fields": [
+          "outline.tables.decision_reason"
+        ],
+        "skipped_empty": []
+      },
+      "markdownUnchanged": true
+    },
+    "NR02": {
+      "pass": true,
+      "detail": "Strict Cleanup v15 node unchanged"
+    },
+    "NR03": {
+      "pass": true,
+      "detail": "Strict Risk Scanner unchanged"
+    },
+    "NR04": {
+      "pass": true,
+      "detail": "Format Run Pipeline unchanged"
+    },
+    "NR05": {
+      "pass": true,
+      "strictCount": 0
+    },
+    "NR06": {
+      "pass": true,
+      "snippet": "Таблицы: auto\n\n=== 1. SEO ТЗ ===\n\nH1: Диагностика электрооборудования\n\nTitle options:\n1. Диагностика электрооборудования — порядок работ\n\nMeta description:\nКраткое описание услуги диагностики.\n\nТаблицы:\nRequired: да\nПричина: для структурированного "
+    },
+    "NR07": {
+      "pass": true
+    },
+    "NR08": {
+      "pass": true,
+      "detail": "No OpenRouter/Telegram/Sheets side effects in sandbox harness"
+    },
+    "NR09": {
+      "pass": true
+    },
+    "SG01": {
+      "pass": true,
+      "detail": {
+        "changedCodeNodes": [
+          "TZ Strict Cleanup"
+        ],
+        "addedNodes": [],
+        "removedNodes": [],
+        "unexpectedCodeChanges": [],
+        "disabledOrSandboxMeta": [],
+        "connectionsChanged": false,
+        "expectedConnectionPresent": true,
+        "retargetsPreserved": {
+          "restoreOutlineData": true,
+          "extractSeoStrategy": true
+        },
+        "scopeOk": true
+      }
+    },
+    "SG02": {
+      "pass": true,
+      "detail": "No lock/memory/get/Telegram/OpenRouter logic changes beyond sandbox disables"
+    },
+    "SG03": {
+      "pass": true,
+      "closeLockTaskId": "={{ $('Route Command').first().json.task_id }}"
+    },
+    "SG04": {
+      "pass": true,
+      "detail": "Production workflow active state / content unchanged"
+    },
+    "SG05": {
+      "pass": true,
+      "detail": "Sandbox remains inactive"
+    },
+    "VM01": {
+      "pass": true,
+      "structuredCloneHits": 0,
+      "detail": "Static scan: 0 structuredClone in TZ Strict Cleanup"
+    },
+    "VM02": {
+      "pass": true,
+      "hits": [],
+      "detail": "Static scan: no obvious Node-only APIs"
+    },
+    "VM03": {
+      "pass": true,
+      "version": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+      "detail": "Restricted VM (structuredClone undefined) — no ReferenceError"
+    },
+    "VM04": {
+      "pass": true,
+      "output": "для структурированного представления",
+      "detail": "Diagnostic failure case in restricted VM"
+    },
+    "VM05": {
+      "pass": true,
+      "inputUnchanged": true,
+      "behavior": "Node uses shallow spread of $json then clonePlain for outline/generated_text; original input object passed into the runner must remain deep-equal to pre-call snapshot (no in-place mutation of outline / generated_text).",
+      "detail": "clonePlain must not mutate caller input unexpectedly"
+    },
+    "VM06": {
+      "pass": true,
+      "detail": "Arrays and nested plain objects preserved after clone/sanitize"
+    }
+  }
+}
