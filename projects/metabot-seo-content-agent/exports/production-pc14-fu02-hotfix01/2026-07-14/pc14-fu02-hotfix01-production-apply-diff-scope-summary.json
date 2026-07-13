@@ -1,0 +1,52 @@
+{
+  "status": "applied",
+  "hotfixId": "PC14_FU02_HOTFIX01_STRUCTUREDCLONE_VM_SAFE",
+  "scopeOk": true,
+  "changedCodeNodes": [
+    "TZ Strict Cleanup"
+  ],
+  "addedNodes": [],
+  "removedNodes": [],
+  "unexpectedCodeChanges": [],
+  "connectionsChanged": false,
+  "expectedConnectionPresent": true,
+  "nonTargetUnchanged": {
+    "Run Extract Outline": true,
+    "Format Run Pipeline": true,
+    "Strict Cleanup": true,
+    "Strict Risk Scanner": true,
+    "Route Command": true,
+    "Restore Outline Data": true,
+    "Extract SEO Strategy": true,
+    "Close Lock Before Sending": true,
+    "Close Single Lock Before Sending": true,
+    "Finish Lock": true,
+    "Append Memory Run": true,
+    "Append Memory Local": true,
+    "Append Memory Single": true
+  },
+  "lockChecks": {
+    "Close Lock Before Sending": {
+      "columnsUnchanged": true,
+      "jsCodeUnchanged": true
+    },
+    "Close Single Lock Before Sending": {
+      "columnsUnchanged": true,
+      "jsCodeUnchanged": true
+    },
+    "Finish Lock": {
+      "columnsUnchanged": true,
+      "jsCodeUnchanged": true
+    }
+  },
+  "activeUnchanged": true,
+  "nodeCountBefore": 92,
+  "nodeCountAfter": 92,
+  "pc07Preserved": true,
+  "sandboxMutated": false,
+  "updatedAtBefore": "2026-07-13T16:40:11.596Z",
+  "updatedAtAfter": "2026-07-13T21:49:02.829Z",
+  "tzVersionAfter": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+  "structuredCloneCountAfter": 0,
+  "clonePlainPresent": true
+}
