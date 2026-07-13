@@ -177,10 +177,14 @@ Groundtruth rule: [shared/contracts/groundtruth-ownership-rule-v1.md](../../shar
 | PC14-FU-01 | **COMPLETE** — `PC14_FU01_CLOSED_NEXT_SELECTED` |
 | PC14-FU-02 audit | **COMPLETE** — `PC14_FU02_READY_FOR_SANDBOX_PATCH_PROPOSAL` |
 | PC14-FU-02 sandbox proposal | **COMPLETE** — `PC14_FU02_READY_FOR_SANDBOX_IMPLEMENTATION` |
-| Production Worker | `p4mqb4VuPcemIDlC` active · Strict Cleanup `v15-strict-cleanup-pc14-fu01-r1` |
+| PC14-FU-02 sandbox implementation | **COMPLETE** — `PC14_FU02_SANDBOX_PATCH_APPLIED_HARNESS_VERIFIED` (`ee0c4653`) |
+| PC14-FU-02 production proposal | **COMPLETE** — `PC14_FU02_READY_FOR_PRODUCTION_APPROVAL` |
+| Production Worker | `p4mqb4VuPcemIDlC` active · Strict Cleanup `v15-strict-cleanup-pc14-fu01-r1` · no TZ node (pre-FU02) |
 | Selected path | **FU-02A / Option B** — Strategy A insert `TZ Strict Cleanup` after `Run Extract Outline` (+ companion `$()` retargets); final SEO Text / Strict Cleanup / Format unchanged |
-| Next backlog | `PC14_FU02_SANDBOX_PATCH_IMPLEMENTATION` |
+| Next backlog | `PC14_FU02_PRODUCTION_APPLY` — **operator-approved only** |
 
+FU-02 production proposal: [reports/REPORT-metabot-seo-agent-v14-pc14-fu02-production-proposal.md](reports/REPORT-metabot-seo-agent-v14-pc14-fu02-production-proposal.md)  
+FU-02 sandbox evidence: [reports/REPORT-metabot-seo-agent-v14-pc14-fu02-sandbox-patch-implementation.md](reports/REPORT-metabot-seo-agent-v14-pc14-fu02-sandbox-patch-implementation.md)  
 FU-02 sandbox proposal: [reports/REPORT-metabot-seo-agent-v14-pc14-fu02-sandbox-patch-proposal.md](reports/REPORT-metabot-seo-agent-v14-pc14-fu02-sandbox-patch-proposal.md)  
 FU-02 audit: [reports/REPORT-metabot-seo-agent-v14-pc14-fu02-tz-strict-residual-cleanup-audit-proposal.md](reports/REPORT-metabot-seo-agent-v14-pc14-fu02-tz-strict-residual-cleanup-audit-proposal.md)  
 FU-01 closeout: [reports/REPORT-metabot-seo-agent-v14-pc14-fu01-closeout-next-backlog-selection.md](reports/REPORT-metabot-seo-agent-v14-pc14-fu01-closeout-next-backlog-selection.md)

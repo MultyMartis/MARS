@@ -406,8 +406,40 @@ Additive history only — does not rewrite §5 / §15 / §16 facts.
 | Fallback | **Strategy B** — sanitize inside `Run Extract Outline` if insertion risk materializes |
 | Non-targets | Strict Cleanup v15 · Strict Risk Scanner · Format Run Pipeline · PC-07 · final SEO Text |
 | Sandbox name | `SEO Content Agent Beta.v14 - Worker.sandbox-pc14-fu02` |
-| **Next step** | `PC14_FU02_SANDBOX_PATCH_IMPLEMENTATION` |
+| **Next step (at proposal close)** | `PC14_FU02_SANDBOX_PATCH_IMPLEMENTATION` |
 | Proposal report | [REPORT-metabot-seo-agent-v14-pc14-fu02-sandbox-patch-proposal.md](REPORT-metabot-seo-agent-v14-pc14-fu02-sandbox-patch-proposal.md) |
 | Harness | TZ01–TZ07 · NR01–NR09 · SG01–SG05 |
+
+---
+
+## 18. Status Appendix — PC14-FU-02 Sandbox Implementation (2026-07-13)
+
+Additive history only — does not rewrite §5 / §15–§17 facts.
+
+| Item | Status |
+|------|--------|
+| **PC14-FU-02 sandbox implementation** | **COMPLETE** — `PC14_FU02_SANDBOX_PATCH_APPLIED_HARNESS_VERIFIED` |
+| Sandbox ID | `WCBIB9L2I8VbGtRs` |
+| Strategy | **A** |
+| Version | `v1-tz-strict-cleanup-pc14-fu02-r1` |
+| Harness | TZ01–TZ07 · NR01–NR09 · SG01–SG05 **PASS** |
+| Commit | `ee0c4653` |
+| Implementation report | [REPORT-metabot-seo-agent-v14-pc14-fu02-sandbox-patch-implementation.md](REPORT-metabot-seo-agent-v14-pc14-fu02-sandbox-patch-implementation.md) |
+
+---
+
+## 19. Status Appendix — PC14-FU-02 Production Proposal (2026-07-13)
+
+Additive history only — does not rewrite §5 / §15–§18 facts.
+
+| Item | Status |
+|------|--------|
+| **PC14-FU-02 production proposal** | **COMPLETE** — `PC14_FU02_READY_FOR_PRODUCTION_APPROVAL` |
+| Fresh production GET | `p4mqb4VuPcemIDlC` active · 91 nodes · no TZ node · Strict Cleanup v15 · PC-07 intact |
+| Proposed patch | Strategy A insert `TZ Strict Cleanup` + retarget `Restore Outline Data` / `Extract SEO Strategy` |
+| Production apply | **not performed** |
+| **Next step** | `PC14_FU02_PRODUCTION_APPLY` — **operator-approved only** |
+| Proposal report | [REPORT-metabot-seo-agent-v14-pc14-fu02-production-proposal.md](REPORT-metabot-seo-agent-v14-pc14-fu02-production-proposal.md) |
+| Evidence | `exports/production-pc14-fu02/2026-07-13/` |
 
 Awaiting operator review.

@@ -1,0 +1,47 @@
+{
+  "status": "proposed_only_not_applied",
+  "productionUnchanged": true,
+  "strategy": "A",
+  "decision": "PC14_FU02_READY_FOR_PRODUCTION_APPROVAL",
+  "blockers": [],
+  "intendedAdditions": [
+    "TZ Strict Cleanup"
+  ],
+  "intendedRemovals": [],
+  "intendedConnectionPath": "Run Extract Outline → TZ Strict Cleanup → Switch Run After Outline",
+  "intendedRetargets": [
+    "Restore Outline Data",
+    "Extract SEO Strategy"
+  ],
+  "unchangedAreas": [
+    "Strict Cleanup v15",
+    "Strict Risk Scanner",
+    "Format Run Pipeline",
+    "Route Command",
+    "PC-07 lock mapping",
+    "memory/active_jobs",
+    "Telegram",
+    "OpenRouter",
+    "Sheets",
+    "/get",
+    "credentials",
+    "active state"
+  ],
+  "baselineChecks": {
+    "active": true,
+    "nodeCount": 91,
+    "hasTzStrictCleanup": false,
+    "expectedPreGraph": true,
+    "strictCleanupVersion": "v15-strict-cleanup-pc14-fu01-r1",
+    "closeLockOk": true,
+    "nonTargetDriftCount": 0,
+    "sandboxGraphOk": true
+  },
+  "sourceSandbox": {
+    "id": "WCBIB9L2I8VbGtRs",
+    "name": "SEO Content Agent Beta.v14 - Worker.sandbox-pc14-fu02",
+    "commit": "ee0c4653",
+    "harness": "TZ01–TZ07 / NR01–NR09 / SG01–SG05 PASS"
+  },
+  "nextGate": "PC14_FU02_PRODUCTION_APPLY"
+}

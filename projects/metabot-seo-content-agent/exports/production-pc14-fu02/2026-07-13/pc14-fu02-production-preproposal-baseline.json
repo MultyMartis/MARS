@@ -1,0 +1,99 @@
+{
+  "date": "2026-07-13",
+  "purpose": "PC14-FU02 production pre-proposal fresh verification",
+  "method": "GET_ONLY",
+  "proposalStatus": "proposed_only_not_applied",
+  "productionUnchanged": true,
+  "production": {
+    "id": "p4mqb4VuPcemIDlC",
+    "name": "SEO Content Agent Beta.v14 - Worker",
+    "active": true,
+    "nodeCount": 91,
+    "updatedAt": "2026-07-12T19:11:34.090Z",
+    "versionId": "040cd33a-dceb-467f-af39-fa9ea12e2950"
+  },
+  "expectedBaseline": {
+    "strictCleanupVersion": "v15-strict-cleanup-pc14-fu01-r1",
+    "tzVersion": "v1-tz-strict-cleanup-pc14-fu02-r1",
+    "closeLockExpr": "={{ $('Route Command').first().json.task_id }}",
+    "nodeCount": 91,
+    "sandboxNodeCountAfter": 92,
+    "sandboxId": "WCBIB9L2I8VbGtRs",
+    "updatedAtFu01Apply": "2026-07-12T19:11:34.090Z"
+  },
+  "decision": "PC14_FU02_READY_FOR_PRODUCTION_APPROVAL",
+  "blockers": [],
+  "checks": {
+    "name": "SEO Content Agent Beta.v14 - Worker",
+    "id": "p4mqb4VuPcemIDlC",
+    "active": true,
+    "nodeCount": 91,
+    "updatedAt": "2026-07-12T19:11:34.090Z",
+    "updatedAtMatchesFu01Apply": true,
+    "hasTzStrictCleanup": false,
+    "hasRunExtractOutline": true,
+    "hasSwitchRunAfterOutline": true,
+    "extractTargets": [
+      "Switch Run After Outline"
+    ],
+    "expectedPreGraph": true,
+    "strictCleanupVersion": "v15-strict-cleanup-pc14-fu01-r1",
+    "hasV15": true,
+    "formatHasStrictQaReject": true,
+    "closeLockMapping": "={{ $('Route Command').first().json.task_id }}",
+    "closeLockOk": true,
+    "nonTargetDrift": [],
+    "sandboxGraphOk": true,
+    "sandboxHasTzVersion": true,
+    "sandboxTzJsCodeLength": 11770,
+    "sandboxNodeCount": 92,
+    "proposedPatch": {
+      "strategy": "A",
+      "insertNode": "TZ Strict Cleanup",
+      "version": "v1-tz-strict-cleanup-pc14-fu02-r1",
+      "graph": "Run Extract Outline → TZ Strict Cleanup → Switch Run After Outline",
+      "retargets": [
+        "Restore Outline Data",
+        "Extract SEO Strategy"
+      ],
+      "sourceSandboxId": "WCBIB9L2I8VbGtRs",
+      "preserveActive": true,
+      "preserveStrictCleanupV15": true,
+      "preserveScanner": true,
+      "preserveFormat": true,
+      "preservePc07": true
+    }
+  },
+  "hashes": {
+    "rawSha256": "5ddb632307b0a806dafe4fb8ba6c25559e8080d389556c472cb83b3f26f11f69",
+    "sanitizedSha256": "94b8c66034da7e1a048ea87cbb5d5a1a62988a87d6adbf5734473a13503e89df",
+    "strictCleanupSha256": "db3156c15457ed8dd3a788281aa87ebc3afc140a2114d4bf33712a9e8f116180",
+    "sandboxTzStrictCleanupSha256": "66d11305ef4dcf114dc085d57dc3e5241d281ae61ed1ab8399cb6ff271f14dec"
+  },
+  "evidence": {
+    "rawLocal": "local/pc14-fu02-production-proposal-2026-07-13/worker.raw.json",
+    "sanitized": "SEO-Content-Agent-Beta-v14-Worker.production-pc14-fu02.preproposal.sanitized.json",
+    "fu01AfterApply": "exports/production-pc14-fu01/2026-07-13/SEO-Content-Agent-Beta-v14-Worker.production-pc14-fu01.after-apply.sanitized.json",
+    "sandboxAfter": "exports/sandbox-pc14-fu02/2026-07-13/SEO-Content-Agent-Beta-v14-Worker.sandbox-pc14-fu02.after-patch.sanitized.json",
+    "sandboxCommit": "ee0c4653"
+  },
+  "sanitizerStats": {
+    "credentialsRedacted": 42,
+    "tokensRedacted": 36,
+    "webhookUrlsRedacted": 0,
+    "webhookIdsRedacted": 30,
+    "sheetIdsRedacted": 22,
+    "personalIdsRedacted": 38,
+    "pinDataRemoved": 1,
+    "executionDataRemoved": 0,
+    "riskyPatternsRemaining": [],
+    "reviewLabelsOnly": [
+      "Google Sheets URL (redacted)",
+      "Google Sheets URL host",
+      "webhookId reference",
+      "chat_id reference",
+      "user_id reference",
+      "Authorization reference"
+    ]
+  }
+}
