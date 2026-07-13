@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-14
-**Evidence cutoff:** 2026-07-14 (SITE-002 Run **4.265** / `SITE-002-PROD-FORM-EMPTY-LEAD-GUARD-FOLLOWUP-01` — empty mail was pre-patch test; live guard OK service-only/whitespace 400; prior Run **4.264** empty-lead guard + temp recipient only `client.leads@polygon-ws.ru`)
+**Evidence cutoff:** 2026-07-14 (SITE-002 Run **4.266** / `SITE-002-PROD-FORM-MAIL-FULL-TEST-RERUN-01` — full form mail rerun: 8 valid 200 + 3 negatives 400; mailbox operator checklist pending; prior Run **4.265** guard verify; temp recipient only `client.leads@polygon-ws.ru`)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Form Empty Lead Guard Follow-up (Run 4.265)** — **COMPLETE — EMPTY EMAIL WAS PRE-PATCH, CURRENT GUARD OK** · service-only/whitespace blocked · temp mail alert **only** `client.leads@polygon-ws.ru` (`info@bzpm.ru` not restored) · [follow-up](sites/site-002/reports/SITE-002-PROD-FORM-EMPTY-LEAD-GUARD-FOLLOWUP-01.md) · prior [4.264 audit](sites/site-002/reports/SITE-002-PROD-1C-LOGS-AND-FORM-MAIL-AUDIT-01.md) · Production checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01` |
+| Current SITE-002 focus | **Form Mail Full Test Rerun (Run 4.266)** — **PARTIAL — MAILBOX OPERATOR CONFIRMATION NEEDED** · 8 valid forms HTTP 200 · empty/service-only/whitespace blocked (400) · temp mail alert **only** `client.leads@polygon-ws.ru` (`info@bzpm.ru` not restored) · [full rerun](sites/site-002/reports/SITE-002-PROD-FORM-MAIL-FULL-TEST-RERUN-01.md) · prior [4.265 follow-up](sites/site-002/reports/SITE-002-PROD-FORM-EMPTY-LEAD-GUARD-FOLLOWUP-01.md) · Production checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01` |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 
