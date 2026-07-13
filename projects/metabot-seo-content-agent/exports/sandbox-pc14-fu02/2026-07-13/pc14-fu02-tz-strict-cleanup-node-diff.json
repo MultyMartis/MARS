@@ -1,0 +1,31 @@
+{
+  "strategy": "A",
+  "nodeAdded": "TZ Strict Cleanup",
+  "version": "v1-tz-strict-cleanup-pc14-fu02-r1",
+  "connectionChange": {
+    "before": "Run Extract Outline → Switch Run After Outline",
+    "after": "Run Extract Outline → TZ Strict Cleanup → Switch Run After Outline"
+  },
+  "retargets": [
+    {
+      "node": "Restore Outline Data",
+      "from": "$('Run Extract Outline')",
+      "to": "$('TZ Strict Cleanup')",
+      "changed": true
+    },
+    {
+      "node": "Extract SEO Strategy",
+      "from": "$node['Run Extract Outline']",
+      "to": "$node['TZ Strict Cleanup']",
+      "changed": true
+    }
+  ],
+  "runExtractOutlineUnchanged": true,
+  "strictCleanupUnchanged": true,
+  "scannerUnchanged": true,
+  "formatUnchanged": true,
+  "restoreOutlineRetargeted": true,
+  "extractSeoStrategyRetargeted": true,
+  "tzNodeJsCodeLength": 11770,
+  "tzHasVersion": true
+}

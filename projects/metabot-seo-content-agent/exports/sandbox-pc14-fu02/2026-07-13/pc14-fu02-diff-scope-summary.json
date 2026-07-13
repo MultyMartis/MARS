@@ -1,0 +1,56 @@
+{
+  "strategy": "A",
+  "changedCodeNodes": [
+    "Extract SEO Strategy",
+    "Restore Outline Data"
+  ],
+  "addedNodes": [
+    "TZ Strict Cleanup"
+  ],
+  "removedNodes": [],
+  "unexpectedCodeChanges": [],
+  "disabledOrSandboxMeta": [],
+  "connectionsChanged": true,
+  "expectedConnectionPresent": true,
+  "scopeOk": true,
+  "formatUnchanged": true,
+  "scannerUnchanged": true,
+  "strictCleanupUnchanged": true,
+  "runExtractOutlineUnchanged": true,
+  "lockChecks": {
+    "Close Lock Before Sending": {
+      "columnsUnchangedVsProd": true,
+      "jsCodeUnchangedVsProd": true
+    },
+    "Close Single Lock Before Sending": {
+      "columnsUnchangedVsProd": true,
+      "jsCodeUnchangedVsProd": true
+    },
+    "Finish Lock": {
+      "columnsUnchangedVsProd": true,
+      "jsCodeUnchangedVsProd": true
+    }
+  },
+  "nonTargetJsCodeUnchangedVsProd": {
+    "Run Extract Outline": true,
+    "Format Run Pipeline": true,
+    "Strict Cleanup": true,
+    "Strict Risk Scanner": true,
+    "Route Command": true
+  },
+  "productionUnchanged": true,
+  "retargets": [
+    {
+      "node": "Restore Outline Data",
+      "from": "$('Run Extract Outline')",
+      "to": "$('TZ Strict Cleanup')",
+      "changed": true
+    },
+    {
+      "node": "Extract SEO Strategy",
+      "from": "$node['Run Extract Outline']",
+      "to": "$node['TZ Strict Cleanup']",
+      "changed": true
+    }
+  ]
+}
