@@ -1,0 +1,112 @@
+{
+  "status": "proposed_only_not_applied",
+  "productionUnchanged": true,
+  "sandboxUnchanged": true,
+  "hotfixId": "PC14_FU02_HOTFIX01_STRUCTUREDCLONE_VM_SAFE",
+  "proposal": "PC14_FU02_HOTFIX01_PRODUCTION_PROPOSAL",
+  "decision": "PC14_FU02_HOTFIX01_READY_FOR_PRODUCTION_APPROVAL",
+  "recommendedNext": "PC14_FU02_HOTFIX01_PRODUCTION_APPLY",
+  "blockers": [],
+  "intendedChanges": [
+    "TZ Strict Cleanup jsCode: structuredClone ×2 → clonePlain",
+    "version v1-tz-strict-cleanup-pc14-fu02-r1 → v1.1-tz-strict-cleanup-pc14-fu02-hotfix01"
+  ],
+  "intendedRemovals": [],
+  "intendedNodeCountDelta": 0,
+  "intendedConnectionChanges": false,
+  "intendedRetargetChanges": false,
+  "unchangedAreas": [
+    "Strict Cleanup v15",
+    "Strict Risk Scanner",
+    "Format Run Pipeline",
+    "Route Command",
+    "PC-07 lock mapping",
+    "memory/active_jobs",
+    "Telegram",
+    "OpenRouter",
+    "Sheets",
+    "/get",
+    "credentials",
+    "active state",
+    "node count 92",
+    "graph Extract → TZ → Switch",
+    "retargets Restore Outline Data / Extract SEO Strategy",
+    "Intake",
+    "Admin"
+  ],
+  "baselineChecks": {
+    "id": "p4mqb4VuPcemIDlC",
+    "name": "SEO Content Agent Beta.v14 - Worker",
+    "active": true,
+    "nodeCount": 92,
+    "updatedAt": "2026-07-13T16:40:11.596Z",
+    "updatedAtMatchesFu02Apply": true,
+    "hasTzStrictCleanup": true,
+    "tzVersion": "v1-tz-strict-cleanup-pc14-fu02-r1",
+    "structuredCloneCount": 2,
+    "clonePlainPresent": false,
+    "graphOk": true,
+    "retargets": {
+      "restoreOutlineData": true,
+      "extractSeoStrategy": true
+    },
+    "closeLockMapping": "={{ $('Route Command').first().json.task_id }}",
+    "closeLockOk": true,
+    "tzMatchesBrokenBaseline": true,
+    "tzCodeLength": 11770,
+    "nonTargetDrift": []
+  },
+  "sandboxChecks": {
+    "id": "6xpeMYaPxK7uGkIM",
+    "name": "SEO Content Agent Beta.v14 - Worker.sandbox-pc14-fu02-hotfix01",
+    "active": false,
+    "nodeCount": 92,
+    "liveGetOk": true,
+    "tzVersion": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+    "structuredCloneCount": 0,
+    "clonePlainPresent": true,
+    "graphOk": true,
+    "retargets": {
+      "restoreOutlineData": true,
+      "extractSeoStrategy": true
+    },
+    "tzCodeLength": 12044,
+    "harnessAllPass": true,
+    "harnessVmAllPass": true,
+    "scopeOk": true
+  },
+  "proposedPatch": {
+    "hotfixId": "PC14_FU02_HOTFIX01_STRUCTUREDCLONE_VM_SAFE",
+    "node": "TZ Strict Cleanup",
+    "fromVersion": "v1-tz-strict-cleanup-pc14-fu02-r1",
+    "toVersion": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+    "jsCodeOnly": true,
+    "replaceStructuredCloneWithClonePlain": true,
+    "structuredCloneBefore": 2,
+    "structuredCloneAfterExpected": 0,
+    "preserveActive": true,
+    "preserveNodeCount": 92,
+    "preserveGraph": true,
+    "preserveRetargets": true,
+    "sourceSandboxId": "6xpeMYaPxK7uGkIM",
+    "beforeLength": 11770,
+    "afterLength": 12044
+  },
+  "sourceSandbox": {
+    "id": "6xpeMYaPxK7uGkIM",
+    "name": "SEO Content Agent Beta.v14 - Worker.sandbox-pc14-fu02-hotfix01",
+    "commit": "e9d12305",
+    "harness": "TZ01–TZ07 / NR01–NR09 / SG01–SG05 / VM01–VM06 PASS"
+  },
+  "productionTarget": {
+    "id": "p4mqb4VuPcemIDlC",
+    "name": "SEO Content Agent Beta.v14 - Worker"
+  },
+  "nextGate": "PC14_FU02_HOTFIX01_PRODUCTION_APPLY",
+  "hashes": {
+    "prodRawSha256": "c757eea7d25cdfc9d98c3ed4dd736b9425d9e23c757e516c558a8a2a5ebf2d56",
+    "prodSanitizedSha256": "1091e322a13f5727fcfdd03350fad917a0a75303a165b6104fc12298d54bc051",
+    "prodTzSha256": "66d11305ef4dcf114dc085d57dc3e5241d281ae61ed1ab8399cb6ff271f14dec",
+    "sandboxTzSha256": "3d328466dc32c36b89c02a7afde29cef4c6dfc36e953d6966c399dda3f203da6"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "status": "proposed_only_not_applied",
+  "hotfixId": "PC14_FU02_HOTFIX01_STRUCTUREDCLONE_VM_SAFE",
+  "productionUnchanged": true,
+  "sandboxUnchanged": true,
+  "node": "TZ Strict Cleanup",
+  "fromVersion": "v1-tz-strict-cleanup-pc14-fu02-r1",
+  "toVersion": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+  "productionHasBrokenVersion": true,
+  "productionStructuredCloneCount": 2,
+  "sandboxHasHotfixVersion": true,
+  "sandboxStructuredCloneCount": 0,
+  "sandboxClonePlainPresent": true,
+  "beforeLength": 11770,
+  "afterLength": 12044,
+  "jsCodeWouldChange": true,
+  "patchScope": "jsCode-and-version-marker-only",
+  "preserve": {
+    "workflowId": "p4mqb4VuPcemIDlC",
+    "workflowName": "SEO Content Agent Beta.v14 - Worker",
+    "active": true,
+    "nodeCount": 92,
+    "graph": "Run Extract Outline → TZ Strict Cleanup → Switch Run After Outline",
+    "retargets": [
+      "Restore Outline Data",
+      "Extract SEO Strategy"
+    ],
+    "nonTargets": [
+      "Strict Cleanup",
+      "Strict Risk Scanner",
+      "Format Run Pipeline",
+      "Route Command",
+      "PC-07 Close Lock mapping",
+      "memory/active_jobs",
+      "Telegram",
+      "OpenRouter",
+      "Sheets",
+      "/get",
+      "credentials"
+    ]
+  },
+  "source": {
+    "sandboxId": "6xpeMYaPxK7uGkIM",
+    "sandboxName": "SEO Content Agent Beta.v14 - Worker.sandbox-pc14-fu02-hotfix01",
+    "commit": "e9d12305"
+  },
+  "blockers": [],
+  "decision": "PC14_FU02_HOTFIX01_READY_FOR_PRODUCTION_APPROVAL"
+}
