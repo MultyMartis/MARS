@@ -1,0 +1,264 @@
+{
+  "design": "PC14_FU03_SANDBOX_DESIGN",
+  "based_on_proposal": "PC14_FU03_REPAIR_LOOP_PROPOSAL_READY_FOR_SANDBOX_DESIGN",
+  "proposal_commit": "56e82a05",
+  "related_smoke_task_id": "seo20260713221847nksocr",
+  "related_worker_execution": "3352",
+  "sandbox_workflow": {
+    "name": "SEO Content Agent Beta.v14 - Worker.sandbox-pc14-fu03",
+    "clone_from": {
+      "production_worker_id_reference_only": "p4mqb4VuPcemIDlC",
+      "production_name": "SEO Content Agent Beta.v14 - Worker",
+      "baseline_nodes": 92,
+      "baseline_updated_at_reference": "2026-07-13T21:49:02.829Z",
+      "tz_strict_cleanup_version": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01"
+    },
+    "active": false,
+    "webhook_path_pattern": "seo-content-agent-worker-sandbox-pc14-fu03",
+    "credential_policy": "preserve_all_production_credential_references_unchanged",
+    "side_effect_nodes_disable_in_harness": [
+      "Send Telegram Run",
+      "Send Telegram Local",
+      "Send Telegram Single",
+      "Send Telegram Memory Get",
+      "Append Memory Run",
+      "Append Memory Local",
+      "Append Memory Single",
+      "Run Outline",
+      "Run SEO Strategy",
+      "Run Text",
+      "Run Text Repair",
+      "Run SEO QA",
+      "Run Factcheck",
+      "Run Strict Surface Repair",
+      "Close Lock Before Sending",
+      "Close Single Lock Before Sending",
+      "Finish Lock",
+      "OpenRouter Single Mode"
+    ]
+  },
+  "insertion_point": {
+    "after": "Normalize Run Output",
+    "before": "Format Run Pipeline",
+    "rationale": "All generation, TZ cleanup, text repair, SEO QA, factcheck, and Normalize Run Output complete before final public composition. PC-07 lock chain and early graph untouched."
+  },
+  "connection_removals": [
+    {
+      "from": "Normalize Run Output",
+      "to": "Format Run Pipeline",
+      "action": "remove_direct_edge"
+    }
+  ],
+  "nodes_to_add": [
+    {
+      "name": "Build Final Public Payload",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "version_marker": "v1-pc14-fu03-build-final-public-payload",
+      "position_hint": "between Normalize Run Output and Final Surface Strict Scan",
+      "insert_after": "Normalize Run Output",
+      "js_responsibilities": [
+        "Read normalized run item (outline, seo_strategy, generated_text, seoqa, factcheck, flags, task_id, brief)",
+        "Detect NL strict trigger phrases in brief; set meta.strict_surface_requested and meta.effective_strict_surface_gate",
+        "Parse custom NL banned words into meta.custom_task_markers[] (task-scoped only; do not mutate central SOT)",
+        "Build public_payload.surfaces (seo_tz, seo_strategy_public, seo_text, seo_qa_public, factcheck_public, tables_summary)",
+        "Apply HIDE_RAW_STRATEGY_JSON: seo_strategy_public = human summary bullets only (headings, table titles, intent); no JSON.stringify(table_strategy)",
+        "Set seo_qa_public.include_summary and factcheck_public.include_summary as candidate true (subject to scan)",
+        "Build telegram.parts_preview via lightweight compose (same section order as Format Run Pipeline will use)",
+        "Store internal_raw (seo_strategy_raw, seoqa_raw, factcheck_raw, normalize_run_output ref)",
+        "Initialize meta.strict_surface_status=pending, meta.repair_attempts=0",
+        "Pass through lock/task routing fields unchanged for PC-07"
+      ],
+      "outputs_to": ["Final Surface Strict Scan"]
+    },
+    {
+      "name": "Final Surface Strict Scan",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "version_marker": "v1-pc14-fu03-final-surface-strict-scan",
+      "insert_after": "Build Final Public Payload",
+      "js_responsibilities": [
+        "Embed central STRICT_MARKER_SOT v1 (shared snippet; see data-contracts)",
+        "Merge meta.custom_task_markers into scan list for this task only",
+        "Walk all public_payload.surfaces + telegram.parts_preview strings",
+        "Emit strict_surface_scan { verdict, count, residuals[], surfaces_scanned[], blocked, version }",
+        "Set meta.strict_surface_status = clean | dirty",
+        "Never mutate surface text in scan node (detect only)"
+      ],
+      "outputs_to": ["IF Final Surface Clean"]
+    },
+    {
+      "name": "IF Final Surface Clean",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "insert_after": "Final Surface Strict Scan",
+      "condition": "{{ $json.strict_surface_scan.verdict === 'clean' }}",
+      "true_branch_to": "Format Run Pipeline",
+      "false_branch_to": "Build Strict Surface Repair Payload"
+    },
+    {
+      "name": "Build Strict Surface Repair Payload",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "version_marker": "v1-pc14-fu03-build-strict-repair-payload",
+      "branch": "dirty_first_scan",
+      "js_responsibilities": [
+        "Increment meta.repair_attempts (must stay <= max_repair_attempts)",
+        "Build OpenRouter chat payload mirroring Run Text Repair / Run SEO QA pattern",
+        "Include strict_marker_sot, residuals[], public_payload.surfaces (repairable only), protected_fields list",
+        "System prompt: rewrite ONLY listed field paths; preserve task_id, headings, entities, table rows/columns; no new claims",
+        "Request JSON response matching repair_response contract",
+        "Set skip_http=true flag when harness offline mode"
+      ],
+      "outputs_to": ["Run Strict Surface Repair"]
+    },
+    {
+      "name": "Run Strict Surface Repair",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "branch": "dirty_first_scan",
+      "credential": "preserve_existing_openrouter_credential_reference",
+      "model_reference": "match Run Text Repair or Run SEO QA (openai/gpt-4.1-mini via OpenRouter)",
+      "url": "https://openrouter.ai/api/v1/chat/completions",
+      "body": "={{ JSON.stringify($json.openrouter_payload) }}",
+      "timeout_options": "mirror existing HTTP LLM nodes",
+      "outputs_to": ["Extract Strict Surface Repair"]
+    },
+    {
+      "name": "Extract Strict Surface Repair",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "version_marker": "v1-pc14-fu03-extract-strict-surface-repair",
+      "branch": "dirty_first_scan",
+      "js_responsibilities": [
+        "Parse OpenRouter response JSON from repair LLM",
+        "Validate repair_response schema",
+        "Merge repaired_surfaces into public_payload only at allowed field paths",
+        "Preserve protected_fields (task_id, mode, chat_id, lock fields, table structure keys)",
+        "Rebuild telegram.parts_preview after merge",
+        "On parse failure: set meta.strict_surface_status=dirty, repair_error=unparseable"
+      ],
+      "outputs_to": ["Final Surface Strict Re-Scan"]
+    },
+    {
+      "name": "Final Surface Strict Re-Scan",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "version_marker": "v1-pc14-fu03-final-surface-strict-rescan",
+      "branch": "dirty_first_scan",
+      "js_responsibilities": [
+        "Re-run identical scan logic as Final Surface Strict Scan (duplicate SOT snippet)",
+        "Emit strict_surface_rescan with same contract shape",
+        "Update meta.strict_surface_status"
+      ],
+      "outputs_to": ["IF Repaired Surface Clean"]
+    },
+    {
+      "name": "IF Repaired Surface Clean",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "branch": "dirty_first_scan",
+      "condition": "{{ $json.strict_surface_rescan.verdict === 'clean' }}",
+      "true_branch_to": "Format Run Pipeline",
+      "false_branch_to": "Format Strict Reject Message"
+    },
+    {
+      "name": "Format Strict Reject Message",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "version_marker": "v1-pc14-fu03-format-strict-reject",
+      "branch": "dirty_after_repair",
+      "js_responsibilities": [
+        "Build single telegram part: STRICT QA REJECT — output blocked before final send",
+        "Include task_id, residual_count, per-residual surface/family/field_path/snippet (max 5 snippets)",
+        "Set memory_status=blocked_dirty, strict_surface_status=blocked_dirty",
+        "Set public_payload=null for approved send; attach blocked_diagnostic object",
+        "Produce telegram_parts array compatible with Take First Item / Parse Mode (one short part)",
+        "Do NOT include full SEO text, raw Strategy JSON, or polluted QA summary"
+      ],
+      "outputs_to": ["Take First Item"]
+    }
+  ],
+  "nodes_to_modify": [
+    {
+      "name": "Format Run Pipeline",
+      "change_type": "minimal_jsCode_edit",
+      "version_marker_add": "v14-pc14-fu03-public-payload-consumer",
+      "changes": [
+        "If item.json.public_payload present: render Telegram parts from public_payload.surfaces + telegram.parts_preview only",
+        "Remove JSON.stringify(seoStrategy.table_strategy) dump from default Telegram output",
+        "Render seo_strategy_public as human-readable bullets (if non-empty)",
+        "Include seo_qa_public.summary only when public_payload.surfaces.seo_qa_public.include_summary === true",
+        "Include factcheck_public.summary only when include_summary === true",
+        "Set meta.memory_status on output: approved_clean when strict_surface_status=clean and repair_attempts=0; repair_attempted_clean when repair_attempts>=1 and rescan clean",
+        "When public_payload absent (legacy partial runs / outline-only shortcuts): preserve existing behavior for sandbox safety",
+        "Do NOT re-run strict scan or invent new free-text blocks after gate"
+      ],
+      "risk": "medium",
+      "downstream_preserved": [
+        "Take First Item",
+        "Close Lock Before Sending",
+        "Parse Mode",
+        "Send Telegram Run",
+        "Prepare Memory Row Run"
+      ]
+    },
+    {
+      "name": "Prepare Memory Row Run",
+      "change_type": "additive_fields",
+      "changes": [
+        "Read memory_status from Format Run Pipeline or Format Strict Reject Message item",
+        "Write strict_surface_status, repair_attempts, sanitized_payload JSON (approved paths only), blocked_diagnostic JSON (blocked path), raw_internal_ref pointer",
+        "Never set status approved when memory_status is blocked_dirty",
+        "Preserve existing timestamp, task_id, mode, chat_id, user fields"
+      ],
+      "proposed_sheet_columns_additive": [
+        "memory_status",
+        "strict_surface_status",
+        "repair_attempts",
+        "sanitized_payload",
+        "blocked_diagnostic",
+        "raw_internal_ref"
+      ],
+      "risk": "medium"
+    },
+    {
+      "name": "Route Command",
+      "change_type": "optional_small_flag_parse",
+      "optional": true,
+      "changes": [
+        "If brief matches NL patterns (не используй слова, запрещённые слова, запрещенные слова): set flags.strict_surface_requested=true on route item",
+        "Extract quoted/comma-separated custom banned tokens into flags.custom_banned_words[] when parseable",
+        "Do not set flags.strict=true unless explicit --strict (preserve existing PC-14 behavior)"
+      ],
+      "risk": "low"
+    }
+  ],
+  "nodes_preserve_unchanged": [
+    "Close Lock Before Sending",
+    "Finish Lock",
+    "Restore Format Run Items",
+    "Restore Format Run Items After Lock",
+    "Restore Lock Context",
+    "Take First Item",
+    "Parse Mode",
+    "Send Telegram Run",
+    "TZ Strict Cleanup",
+    "Strict Cleanup",
+    "Strict Risk Scanner",
+    "Postcheck Strict Claims",
+    "Normalize Run Output (body except downstream edge)",
+    "All Intake/Admin workflows"
+  ],
+  "estimated_node_count_after": "101 (92 + 9 new; IF nodes count as 2 logical branches, 2 IF nodes)",
+  "max_repair_attempts": {
+    "default": 1,
+    "sandbox_constant": "MAX_STRICT_SURFACE_REPAIR_ATTEMPTS = 1",
+    "operator_override": 2,
+    "enforcement": "Build Strict Surface Repair Payload refuses second attempt unless meta.allow_second_repair=true (future operator flag; default false in sandbox v1)"
+  },
+  "js_cleanup_freeze": {
+    "policy": "No new marker families or synonym remaps in TZ Strict Cleanup, Strict Cleanup, Strict Risk Scanner, Postcheck, or Format FINAL STRICT GATE for FU03 scope",
+    "allowed_js_changes": "Final gate nodes only (Build Final Public Payload, Scan, Repair extract, Format consumer, Reject formatter)"
+  }
+}

@@ -1,0 +1,314 @@
+{
+  "design": "PC14_FU03_SANDBOX_DESIGN",
+  "proposal_commit": "56e82a05",
+  "vm_constraints": {
+    "no_structuredClone": true,
+    "no_unavailable_node_apis": true,
+    "plain_js_only": true,
+    "clone_pattern": "JSON.parse(JSON.stringify(obj)) or shallow spread for known shapes"
+  },
+  "strict_marker_sot": {
+    "version": "v1-pc14-fu03-strict-marker-sot",
+    "location": "Duplicated as const STRICT_MARKER_SOT in: Final Surface Strict Scan, Final Surface Strict Re-Scan, Build Strict Surface Repair Payload (for LLM context), optional inline in Build Final Public Payload for custom merge only",
+    "shape": {
+      "version": "string",
+      "families": [
+        {
+          "id": "string-kebab",
+          "label": "human label",
+          "stem": "regex stem without anchors",
+          "flags": "giu",
+          "severity": "hard | custom",
+          "replacement_guidance": "neutral factual wording; no new claims",
+          "examples": ["array of example banned substrings"]
+        }
+      ]
+    },
+    "families": [
+      {
+        "id": "akuratn",
+        "label": "аккуратн*",
+        "stem": "аккуратн",
+        "flags": "giu",
+        "severity": "hard",
+        "replacement_guidance": "Remove or replace with neutral process description",
+        "examples": ["аккуратно", "аккуратный"]
+      },
+      {
+        "id": "udobstv",
+        "label": "удобств*",
+        "stem": "удобств",
+        "flags": "giu",
+        "severity": "hard",
+        "replacement_guidance": "Use structural/factual phrasing without convenience claims",
+        "examples": ["удобства", "удобство"]
+      },
+      {
+        "id": "udobn",
+        "label": "удобн*",
+        "stem": "удобн",
+        "flags": "giu",
+        "severity": "hard",
+        "replacement_guidance": "Avoid convenience adjectives",
+        "examples": ["удобный", "удобная"]
+      },
+      {
+        "id": "pozvolya",
+        "label": "позволя*",
+        "stem": "позволя",
+        "flags": "giu",
+        "severity": "hard",
+        "replacement_guidance": "State facts directly without 'allows/enables'",
+        "examples": ["позволяет", "позволяют"]
+      },
+      {
+        "id": "obespech",
+        "label": "обеспеч*",
+        "stem": "обеспеч",
+        "flags": "giu",
+        "severity": "hard",
+        "replacement_guidance": "Describe mechanism without guarantee verbs",
+        "examples": ["обеспечивает", "обеспечение"]
+      },
+      {
+        "id": "kontrol",
+        "label": "контрол*",
+        "stem": "контрол",
+        "flags": "giu",
+        "severity": "hard",
+        "replacement_guidance": "Use check/verify nouns sparingly; prefer factual steps",
+        "examples": ["контроль", "контролировать"]
+      },
+      {
+        "id": "bezopasn",
+        "label": "безопасн*",
+        "stem": "безопасн",
+        "flags": "giu",
+        "severity": "hard",
+        "replacement_guidance": "Avoid safety superlatives; cite verifiable checks if needed",
+        "examples": ["безопасность", "безопасный"]
+      },
+      {
+        "id": "specializ",
+        "label": "специализирован*",
+        "stem": "специализир",
+        "flags": "giu",
+        "severity": "hard",
+        "replacement_guidance": "Name equipment/process without specialization claims",
+        "examples": ["специализированный"]
+      },
+      {
+        "id": "nadezhn",
+        "label": "надежн* / надёжн*",
+        "stem": "надежн|надёжн",
+        "flags": "giu",
+        "severity": "hard",
+        "replacement_guidance": "Avoid reliability claims",
+        "examples": ["надежный", "надёжность"]
+      },
+      {
+        "id": "naglyadn",
+        "label": "наглядн*",
+        "stem": "наглядн",
+        "flags": "giu",
+        "severity": "hard",
+        "replacement_guidance": "Replace perception/clarity marketing with structural description",
+        "examples": ["наглядности", "наглядный"],
+        "note": "Added from smoke 3352 synonym escape after Strict Cleanup remap"
+      }
+    ],
+    "custom_task_markers": {
+      "scope": "per-task only; merged at scan time",
+      "source": "Route Command NL parse OR Build Final Public Payload brief parse",
+      "shape": {
+        "id": "custom-{index}",
+        "label": "operator token",
+        "stem": "escaped literal or stem",
+        "flags": "giu",
+        "severity": "custom",
+        "replacement_guidance": "Remove or neutralize per brief"
+      },
+      "must_not": "Permanently append to central SOT file/object in repo without operator charter"
+    },
+    "detection_helper_pseudocode": "for each family: new RegExp(family.stem, family.flags); test each string leaf in surface walk"
+  },
+  "public_payload": {
+    "version": "v1-pc14-fu03-public-payload",
+    "required_top_level": ["meta", "surfaces", "telegram", "internal"],
+    "meta": {
+      "task_id": "string",
+      "mode": "string",
+      "tables_policy": "string",
+      "strict_surface_status": "pending | clean | dirty | blocked_dirty",
+      "strict_surface_requested": "boolean — NL trigger detected",
+      "effective_strict_surface_gate": "boolean — true when NL trigger OR always true for hard SOT enforcement",
+      "repair_attempts": "number 0..max",
+      "memory_status": "approved_clean | repair_attempted_clean | blocked_dirty | failed (set before memory append)",
+      "custom_task_markers": "array optional"
+    },
+    "surfaces": {
+      "seo_tz": {
+        "type": "string markdown",
+        "source_fields": ["outline render — sections, tables.decision_reason, faq list"],
+        "scanned": true
+      },
+      "seo_strategy_public": {
+        "type": "string markdown",
+        "policy": "HIDE_RAW_STRATEGY_JSON",
+        "content": "bullets: primary keyword, h1, section intents, table titles only",
+        "scanned": true,
+        "must_not_contain": "JSON.stringify(table_strategy)"
+      },
+      "seo_text": {
+        "type": "string markdown",
+        "source": "generated_text.content_markdown",
+        "scanned": true
+      },
+      "seo_qa_public": {
+        "verdict": "string — always included in Format",
+        "score": "number — always included",
+        "summary": "string | null — candidate; include_summary flag set true only if scan clean",
+        "include_summary": "boolean",
+        "scanned_fields": ["summary when include_summary true"]
+      },
+      "factcheck_public": {
+        "verdict": "string — always",
+        "summary": "string | null",
+        "include_summary": "boolean",
+        "scanned_fields": ["summary when include_summary true"]
+      },
+      "tables_summary": {
+        "type": "string",
+        "source": "allowlisted table explanation lines from text/tz",
+        "scanned": true
+      }
+    },
+    "telegram": {
+      "parts_preview": "array of { part_index, text } — full composed candidate",
+      "send_mode": "full | diagnostic_only"
+    },
+    "internal": {
+      "seo_strategy_raw": "object",
+      "seoqa_raw": "object",
+      "factcheck_raw": "object",
+      "strict_scan_history": "array of scan results",
+      "normalize_run_output_ref": "object optional",
+      "debug_only": true
+    }
+  },
+  "strict_surface_scan_result": {
+    "version": "v1-pc14-fu03-final-surface-scan",
+    "verdict": "clean | dirty",
+    "count": "number",
+    "residuals": [
+      {
+        "marker_family_id": "string",
+        "marker_label": "string",
+        "match": "matched substring",
+        "surface": "seo_tz | seo_strategy_public | seo_text | seo_qa_public | factcheck_public | tables_summary | telegram_preview",
+        "field_path": "dot.path e.g. surfaces.seo_qa_public.summary",
+        "snippet": "±40 chars context",
+        "severity": "hard | custom"
+      }
+    ],
+    "surfaces_scanned": ["array of surface keys"],
+    "blocked": "boolean — true when verdict dirty and used for gate",
+    "scanned_at": "ISO8601"
+  },
+  "strict_surface_repair_payload": {
+    "task_id": "string",
+    "strict_marker_sot": "STRICT_MARKER_SOT object",
+    "residuals": "strict_surface_scan_result.residuals",
+    "public_payload": "public_payload.surfaces repairable subset",
+    "protected_fields": [
+      "meta.task_id",
+      "meta.mode",
+      "meta.tables_policy",
+      "surfaces.seo_text table row/column structure",
+      "outline entity lists",
+      "headings h1-h3 text (may rephrase banned words only)",
+      "table row keys and column headers"
+    ],
+    "repair_instructions": {
+      "max_fields": "only paths listed in residuals",
+      "forbid_new_claims": true,
+      "forbid_new_entities": true,
+      "language": "ru",
+      "output_format": "JSON only matching repair_response"
+    },
+    "openrouter_payload": "standard chat completions wrapper",
+    "expected_response_schema": "repair_response"
+  },
+  "repair_response": {
+    "status": "ok | partial | error",
+    "repaired_surfaces": {
+      "description": "object with same keys as public_payload.surfaces; only changed fields populated",
+      "example_paths": [
+        "surfaces.seo_strategy_public",
+        "surfaces.seo_qa_public.summary",
+        "surfaces.seo_text"
+      ]
+    },
+    "unchanged_protected_fields": ["array of field paths left untouched"],
+    "notes": "string optional — repair LLM notes",
+    "errors": ["array of strings when status error"]
+  },
+  "memory_row": {
+    "version": "v1-pc14-fu03-memory-row",
+    "fields": {
+      "timestamp": "ISO8601 — existing",
+      "task_id": "string — existing",
+      "mode": "string — existing",
+      "chat_id": "string — existing",
+      "user_id": "string — existing",
+      "username": "string — existing",
+      "memory_status": "approved_clean | repair_attempted_clean | blocked_dirty | failed",
+      "strict_surface_status": "clean | dirty | blocked_dirty",
+      "repair_attempts": "number",
+      "sanitized_payload": "JSON string of public_payload when approved; empty when blocked",
+      "blocked_diagnostic": "JSON string when blocked_dirty; null otherwise",
+      "raw_internal_ref": "JSON string or compressed ref to internal.* for debug",
+      "updated_at": "ISO8601"
+    },
+    "rules": [
+      "blocked_dirty must not populate sanitized_payload with full polluted composite",
+      "approved_clean requires strict_surface_scan.verdict clean and repair_attempts=0",
+      "repair_attempted_clean requires repair_attempts>=1 and rescan clean"
+    ]
+  },
+  "get_contract": {
+    "command": "/get {task_id}",
+    "responses": {
+      "approved_clean": {
+        "body": "sanitized_payload public surfaces + meta",
+        "includes_raw_strategy_json": false
+      },
+      "repair_attempted_clean": {
+        "body": "same as approved_clean",
+        "meta_flag": "repair_attempts >= 1"
+      },
+      "blocked_dirty": {
+        "body": "blocked_diagnostic only: banner, task_id, residuals summary",
+        "includes_full_text": false
+      },
+      "failed": {
+        "body": "existing failure / not-found semantics preserved"
+      },
+      "not_found": "unchanged PC get verification behavior"
+    },
+    "admin_raw_future": "optional; out of sandbox v1 scope"
+  },
+  "format_run_pipeline_input_expectation": {
+    "when_public_payload_present": "Render exclusively from public_payload; ignore raw seo_strategy for Telegram",
+    "when_absent": "Legacy shortcut behavior unchanged",
+    "output_fields": ["telegram_parts", "memory_status", "public_payload echo", "chunk_index", "task_id"]
+  },
+  "blocked_diagnostic": {
+    "banner": "STRICT QA REJECT — output blocked before final send",
+    "task_id": "string",
+    "residual_count": "number",
+    "residuals_summary": "array max 5 of { surface, family, field_path, snippet }",
+    "strict_surface_status": "blocked_dirty",
+    "repair_attempts": "number"
+  }
+}

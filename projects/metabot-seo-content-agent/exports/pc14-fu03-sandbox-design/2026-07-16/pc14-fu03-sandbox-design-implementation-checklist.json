@@ -1,0 +1,115 @@
+{
+  "design": "PC14_FU03_SANDBOX_DESIGN",
+  "next_implementation_label": "PC14_FU03_SANDBOX_IMPLEMENTATION",
+  "preflight_before_implementation": [
+    "Verify X:\\AI MARS, volume AI WS, branch mars/canonical-post-recovery",
+    "Confirm production Worker p4mqb4VuPcemIDlC active=true, 92 nodes (re-export readonly baseline)",
+    "Empty staged index",
+    "Read safe-workflow-patch-protocol-v1.md and n8n-import-safe-generation-rules-v1.md"
+  ],
+  "implementation_steps_ordered": [
+    {
+      "step": 1,
+      "action": "Export production Worker readonly sanitized JSON to exports/pc14-fu03-sandbox-implementation/{date}/baseline/",
+      "artifact": "SEO-Content-Agent-Beta-v14-Worker.production-pc14-fu03-baseline.sanitized.json"
+    },
+    {
+      "step": 2,
+      "action": "Clone workflow in n8n as SEO Content Agent Beta.v14 - Worker.sandbox-pc14-fu03; active=false; new webhook path",
+      "artifact": "sandbox workflow id recorded in manifest"
+    },
+    {
+      "step": 3,
+      "action": "Remove edge Normalize Run Output → Format Run Pipeline",
+      "verify": "graph-plan connection_removals"
+    },
+    {
+      "step": 4,
+      "action": "Add 9 nodes per node-plan with positions after Normalize Run Output column",
+      "verify": "node count ~101"
+    },
+    {
+      "step": 5,
+      "action": "Wire connections per graph-plan including Format Strict Reject → Take First Item and optional → Prepare Memory Row Run",
+      "verify": "connection diff JSON"
+    },
+    {
+      "step": 6,
+      "action": "Patch Format Run Pipeline jsCode — public_payload consumer branch; remove Strategy JSON dump",
+      "verify": "FU03-STRATEGY-HIDE fixture"
+    },
+    {
+      "step": 7,
+      "action": "Patch Prepare Memory Row Run — memory_status and sanitized/blocked fields",
+      "verify": "FU03-MEM-01/02"
+    },
+    {
+      "step": 8,
+      "action": "Optional: patch Route Command NL strict detection",
+      "verify": "FU03-STRICT-01"
+    },
+    {
+      "step": 9,
+      "action": "Implement pc14-fu03-sandbox-harness.mjs with all FU03-* cases",
+      "verify": "pc14-fu03-sandbox-harness-results.json allPass true"
+    },
+    {
+      "step": 10,
+      "action": "Export after-patch sanitized sandbox JSON",
+      "artifact": "SEO-Content-Agent-Beta-v14-Worker.sandbox-pc14-fu03.after-patch.sanitized.json"
+    },
+    {
+      "step": 11,
+      "action": "Generate node-diff, graph-diff, connection-diff, credential-preservation, close-lock-mapping evidence",
+      "verify": "allowlist scope"
+    },
+    {
+      "step": 12,
+      "action": "Secret scan on all new exports",
+      "verify": "PASS_WITH_REVIEW_LABELS"
+    },
+    {
+      "step": 13,
+      "action": "Write REPORT-metabot-seo-agent-v14-pc14-fu03-sandbox-implementation.md",
+      "decision_target": "PC14_FU03_SANDBOX_APPLIED_HARNESS_VERIFIED or blocked status"
+    }
+  ],
+  "allowlisted_modified_node_names": [
+    "Format Run Pipeline",
+    "Prepare Memory Row Run",
+    "Route Command"
+  ],
+  "allowlisted_new_node_names": [
+    "Build Final Public Payload",
+    "Final Surface Strict Scan",
+    "IF Final Surface Clean",
+    "Build Strict Surface Repair Payload",
+    "Run Strict Surface Repair",
+    "Extract Strict Surface Repair",
+    "Final Surface Strict Re-Scan",
+    "IF Repaired Surface Clean",
+    "Format Strict Reject Message"
+  ],
+  "forbidden_in_implementation": [
+    "Production workflow mutation",
+    "Intake/Admin mutation",
+    "New JS cleanup families in TZ Strict Cleanup / Strict Cleanup / Strict Risk Scanner",
+    "structuredClone in new code",
+    "git add . / commit / push unless separate persist charter",
+    "Live Telegram/OpenRouter/Sheets in harness"
+  ],
+  "evidence_outputs_required": [
+    "sandbox workflow id",
+    "before/after sanitized sandbox exports",
+    "pc14-fu03-sandbox-node-diff.json",
+    "pc14-fu03-sandbox-graph-diff.json",
+    "pc14-fu03-sandbox-connection-diff.json",
+    "pc14-fu03-sandbox-credential-preservation.json",
+    "pc14-fu03-sandbox-close-lock-mapping.json",
+    "pc14-fu03-sandbox-harness-results.json",
+    "pc14-fu03-sandbox-scope-summary.json",
+    "PC14-FU03-SANDBOX-IMPLEMENTATION-MANIFEST.md",
+    "rollback notes (delete sandbox workflow id)"
+  ],
+  "rollback_notes": "Delete sandbox workflow by id; production p4mqb4VuPcemIDlC remains source of truth; revert git evidence files only via operator git charter"
+}

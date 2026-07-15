@@ -1,0 +1,239 @@
+{
+  "design": "PC14_FU03_SANDBOX_DESIGN",
+  "proposal_commit": "56e82a05",
+  "production_baseline_worker_id_reference_only": "p4mqb4VuPcemIDlC",
+  "graph_before": {
+    "label": "Production tail (post HOTFIX01) — relevant Run path only",
+    "chain": [
+      "Postcheck Strict Claims",
+      "Status Final",
+      "Restore Postcheck Data",
+      "Normalize Run Output",
+      "Format Run Pipeline"
+    ],
+    "format_run_pipeline_fanout": [
+      {
+        "to": "Prepare Memory Row Run",
+        "note": "Parallel memory path from Format output items"
+      },
+      {
+        "to": "Take First Item",
+        "note": "Primary Telegram send path"
+      }
+    ],
+    "telegram_send_chain": [
+      "Take First Item",
+      "Status Complete",
+      "Restore Format Run Items",
+      "Close Lock Before Sending",
+      "Restore Format Run Items After Lock",
+      "Parse Mode",
+      "Send Telegram Run",
+      "Restore Lock Context",
+      "Finish Lock"
+    ],
+    "memory_chain_after_send": [
+      "Prepare Memory Row Run",
+      "Append Memory Run"
+    ],
+    "normalize_to_format_edge": {
+      "from": "Normalize Run Output",
+      "to": "Format Run Pipeline",
+      "type": "main",
+      "index": 0
+    },
+    "format_alternate_inputs_preserved": [
+      "Switch Run After Outline → Format Run Pipeline (outline-only shortcut)",
+      "Switch Run After Text → Format Run Pipeline (text-only shortcut)",
+      "Switch Run Factcheck → Format Run Pipeline (skip factcheck shortcut)"
+    ],
+    "note": "Shortcut switches bypass full Run path; FU03 gate applies only on full Run path entering via Normalize Run Output. Shortcuts unchanged in sandbox v1 unless later chartered."
+  },
+  "graph_after": {
+    "label": "Sandbox FU03 — full Run path tail",
+    "new_chain": [
+      "Postcheck Strict Claims",
+      "Status Final",
+      "Restore Postcheck Data",
+      "Normalize Run Output",
+      "Build Final Public Payload",
+      "Final Surface Strict Scan",
+      "IF Final Surface Clean"
+    ],
+    "clean_branch": {
+      "condition": "strict_surface_scan.verdict === 'clean'",
+      "path": [
+        "IF Final Surface Clean (true)",
+        "Format Run Pipeline (modified — consumes public_payload)",
+        "Take First Item",
+        "Status Complete",
+        "Restore Format Run Items",
+        "Close Lock Before Sending",
+        "Restore Format Run Items After Lock",
+        "Parse Mode",
+        "Send Telegram Run",
+        "Restore Lock Context",
+        "Finish Lock",
+        "Prepare Memory Row Run (memory_status=approved_clean)",
+        "Append Memory Run"
+      ]
+    },
+    "dirty_repair_success_branch": {
+      "condition": "first scan dirty; repair + rescan clean",
+      "path": [
+        "IF Final Surface Clean (false)",
+        "Build Strict Surface Repair Payload",
+        "Run Strict Surface Repair",
+        "Extract Strict Surface Repair",
+        "Final Surface Strict Re-Scan",
+        "IF Repaired Surface Clean (true)",
+        "Format Run Pipeline",
+        "… same send/lock/memory as clean_branch …",
+        "Prepare Memory Row Run (memory_status=repair_attempted_clean)"
+      ]
+    },
+    "dirty_repair_fail_branch": {
+      "condition": "rescan still dirty OR repair unparseable",
+      "path": [
+        "IF Final Surface Clean (false)",
+        "Build Strict Surface Repair Payload",
+        "Run Strict Surface Repair",
+        "Extract Strict Surface Repair",
+        "Final Surface Strict Re-Scan",
+        "IF Repaired Surface Clean (false)",
+        "Format Strict Reject Message",
+        "Take First Item",
+        "Status Complete",
+        "Restore Format Run Items",
+        "Close Lock Before Sending",
+        "Restore Format Run Items After Lock",
+        "Parse Mode",
+        "Send Telegram Run (diagnostic only)",
+        "Restore Lock Context",
+        "Finish Lock",
+        "Prepare Memory Row Run (memory_status=blocked_dirty)",
+        "Append Memory Run"
+      ]
+    }
+  },
+  "connection_changes": {
+    "remove": [
+      {
+        "from": "Normalize Run Output",
+        "to": "Format Run Pipeline",
+        "output": "main",
+        "index": 0
+      }
+    ],
+    "add": [
+      {
+        "from": "Normalize Run Output",
+        "to": "Build Final Public Payload",
+        "output": "main",
+        "index": 0
+      },
+      {
+        "from": "Build Final Public Payload",
+        "to": "Final Surface Strict Scan",
+        "output": "main",
+        "index": 0
+      },
+      {
+        "from": "Final Surface Strict Scan",
+        "to": "IF Final Surface Clean",
+        "output": "main",
+        "index": 0
+      },
+      {
+        "from": "IF Final Surface Clean",
+        "to": "Format Run Pipeline",
+        "output": "main",
+        "index": 0,
+        "branch": "true"
+      },
+      {
+        "from": "IF Final Surface Clean",
+        "to": "Build Strict Surface Repair Payload",
+        "output": "main",
+        "index": 1,
+        "branch": "false"
+      },
+      {
+        "from": "Build Strict Surface Repair Payload",
+        "to": "Run Strict Surface Repair",
+        "output": "main",
+        "index": 0
+      },
+      {
+        "from": "Run Strict Surface Repair",
+        "to": "Extract Strict Surface Repair",
+        "output": "main",
+        "index": 0
+      },
+      {
+        "from": "Extract Strict Surface Repair",
+        "to": "Final Surface Strict Re-Scan",
+        "output": "main",
+        "index": 0
+      },
+      {
+        "from": "Final Surface Strict Re-Scan",
+        "to": "IF Repaired Surface Clean",
+        "output": "main",
+        "index": 0
+      },
+      {
+        "from": "IF Repaired Surface Clean",
+        "to": "Format Run Pipeline",
+        "output": "main",
+        "index": 0,
+        "branch": "true"
+      },
+      {
+        "from": "IF Repaired Surface Clean",
+        "to": "Format Strict Reject Message",
+        "output": "main",
+        "index": 1,
+        "branch": "false"
+      },
+      {
+        "from": "Format Strict Reject Message",
+        "to": "Take First Item",
+        "output": "main",
+        "index": 0,
+        "note": "Bypass Format Run Pipeline on block path; joins existing send chain"
+      }
+    ],
+    "preserve_unchanged": [
+      "Format Run Pipeline → Take First Item",
+      "Format Run Pipeline → Prepare Memory Row Run",
+      "Take First Item → Status Complete → … → Finish Lock",
+      "Close Lock Before Sending expressions (PC-07 real task_id mapping)",
+      "All shortcut Switch → Format Run Pipeline edges"
+    ]
+  },
+  "routing_merge_notes": {
+    "format_run_pipeline_inputs_after": [
+      "Switch Run After Outline (unchanged shortcut)",
+      "Switch Run After Text (unchanged shortcut)",
+      "Switch Run Factcheck (unchanged shortcut)",
+      "IF Final Surface Clean → true (new full-run clean)",
+      "IF Repaired Surface Clean → true (new full-run repair-clean)"
+    ],
+    "take_first_item_inputs_after": [
+      "Format Run Pipeline (approved paths)",
+      "Format Strict Reject Message (blocked path — new)"
+    ],
+    "prepare_memory_row_run_trigger": "Still fed from Format Run Pipeline on approved paths; on blocked path Format Strict Reject Message must also reach Prepare Memory Row Run OR Prepare Memory Row reads from last send item — implementation choice: Format Strict Reject Message sets same top-level fields (task_id, telegram_parts) and connects Format Strict Reject → Take First Item only; add parallel edge Format Strict Reject → Prepare Memory Row Run for blocked memory append (recommended lower risk than rewiring Finish Lock order)"
+  },
+  "recommended_blocked_memory_wiring": {
+    "add_edge": {
+      "from": "Format Strict Reject Message",
+      "to": "Prepare Memory Row Run",
+      "note": "Parallel to Take First Item; ensures blocked_dirty row written even if send path differs"
+    }
+  },
+  "ascii_before": "Restore Postcheck Data → Normalize Run Output → Format Run Pipeline → {Take First Item → …Send…Finish Lock | Prepare Memory Row Run}",
+  "ascii_after_clean": "… → Normalize → Build Public Payload → Scan → IF clean → Format (public) → Take First Item → … → Memory approved_clean",
+  "ascii_after_block": "… → Scan dirty → Repair → Re-Scan → IF still dirty → Format Reject → Take First Item → … → Memory blocked_dirty"
+}

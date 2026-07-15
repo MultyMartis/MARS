@@ -1,0 +1,115 @@
+{
+  "design": "PC14_FU03_SANDBOX_DESIGN",
+  "proposal_commit": "56e82a05",
+  "risks": [
+    {
+      "id": "R1",
+      "risk": "Graph complexity / branch wiring errors",
+      "severity": "medium",
+      "impact": "high",
+      "mitigation": "Sandbox-first; static graph-plan diff; FU03-SCOPE-01 lock mapping check; single insertion point after Normalize; blocked path joins existing Take First Item"
+    },
+    {
+      "id": "R2",
+      "risk": "Repair loop latency and OpenRouter cost",
+      "severity": "medium",
+      "impact": "medium",
+      "mitigation": "max 1 repair default; hide Strategy JSON reduces tokens; harness mocks LLM offline"
+    },
+    {
+      "id": "R3",
+      "risk": "LLM repair hallucination or claim invention",
+      "severity": "medium",
+      "impact": "high",
+      "mitigation": "Rewrite-only contract; protected_fields; mandatory re-scan; block if still dirty"
+    },
+    {
+      "id": "R4",
+      "risk": "False positives block legitimate content",
+      "severity": "medium",
+      "impact": "medium",
+      "mitigation": "Reuse proven PC14/FU01/FU02 stems; FIX-CLEAN-01 harness; operator review наглядн* addition"
+    },
+    {
+      "id": "R5",
+      "risk": "False negatives via new synonyms",
+      "severity": "medium",
+      "impact": "high",
+      "mitigation": "Freeze JS synonym remaps; update central SOT only; no per-smoke regex patches"
+    },
+    {
+      "id": "R6",
+      "risk": "Poor UX when output blocked",
+      "severity": "high",
+      "impact": "medium",
+      "mitigation": "Short diagnostic with task_id + residual summary; memory blocked_dirty; /get honesty"
+    },
+    {
+      "id": "R7",
+      "risk": "Google Sheets memory schema drift",
+      "severity": "medium",
+      "impact": "medium",
+      "mitigation": "Additive columns documented in data-contracts; sandbox append to test sheet or mock; no column wipe"
+    },
+    {
+      "id": "R8",
+      "risk": "/get backward compatibility break",
+      "severity": "medium",
+      "impact": "high",
+      "mitigation": "Preserve not-found paths; status-aware body selection; FU03-GET-01/02 harness; reuse PC get verification patterns"
+    },
+    {
+      "id": "R9",
+      "risk": "Hidden Strategy JSON reduces operator transparency",
+      "severity": "low",
+      "impact": "medium",
+      "mitigation": "Human-readable seo_strategy_public bullets; document tradeoff; admin raw deferred"
+    },
+    {
+      "id": "R10",
+      "risk": "NL custom marker over-trigger",
+      "severity": "medium",
+      "impact": "medium",
+      "mitigation": "Narrow NL phrase list; parse quoted lists only when explicit; custom markers task-scoped"
+    },
+    {
+      "id": "R11",
+      "risk": "Format Run Pipeline edit regression",
+      "severity": "medium",
+      "impact": "high",
+      "mitigation": "Minimal branch: if public_payload use new renderer else legacy; harness both paths; shortcut switches unchanged"
+    },
+    {
+      "id": "R12",
+      "risk": "Close lock failure on blocked branch",
+      "severity": "high",
+      "impact": "high",
+      "mitigation": "Route Format Strict Reject through same Take First Item → Close Lock Before Sending chain; PC-07 expressions untouched"
+    },
+    {
+      "id": "R13",
+      "risk": "SOT snippet drift across 4 Code nodes",
+      "severity": "medium",
+      "impact": "medium",
+      "mitigation": "Single version string v1-pc14-fu03-strict-marker-sot; harness FU03-SOT-01; implementation copies from one canonical block in patch script"
+    }
+  ],
+  "rollback_model": {
+    "sandbox_bad": "Delete sandbox workflow SEO Content Agent Beta.v14 - Worker.sandbox-pc14-fu03 from n8n UI or API; no production impact",
+    "production": "Unchanged throughout design and sandbox implementation until separate production proposal + operator approval",
+    "live_traffic": "Zero during sandbox (active=false; distinct webhook path)",
+    "git_evidence": "Sandbox exports and harness results are additive; rollback = do not merge production proposal",
+    "memory_sheet": "If sandbox test append used wrong columns, revert rows manually; no MIR/purge"
+  },
+  "production_proposal_prerequisites": [
+    "PC14_FU03_SANDBOX_IMPLEMENTATION complete with harness allPass",
+    "Sanitized before/after sandbox exports",
+    "Allowlisted node diff (9 add, 2-3 modify max)",
+    "Credential preservation evidence",
+    "PC-07 Close Lock mapping byte-stable diff",
+    "Secret scan PASS_WITH_REVIEW_LABELS",
+    "Operator approval of Strategy hide UX",
+    "Smoke re-run plan on sandbox webhook (optional chartered live call)",
+    "Production apply via safe-workflow-patch-protocol-v1.md"
+  ]
+}

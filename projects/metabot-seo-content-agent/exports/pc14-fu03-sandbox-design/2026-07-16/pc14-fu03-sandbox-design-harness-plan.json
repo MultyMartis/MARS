@@ -1,0 +1,221 @@
+{
+  "design": "PC14_FU03_SANDBOX_DESIGN",
+  "proposal_commit": "56e82a05",
+  "harness_environment": "offline Node.js harness + sandbox workflow static JSON validation",
+  "side_effects": {
+    "telegram": false,
+    "openrouter": false,
+    "google_sheets": false,
+    "production_mutation": false,
+    "live_run": false
+  },
+  "harness_entrypoints": {
+    "primary_script_proposed": "projects/metabot-seo-content-agent/exports/pc14-fu03-sandbox-design/2026-07-16/pc14-fu03-sandbox-harness.mjs (created at implementation)",
+    "sot_scan_unit": "extract Final Surface Strict Scan jsCode logic into testable function scanPublicPayload(payload, sot, customMarkers)",
+    "repair_merge_unit": "extract Extract Strict Surface Repair merge logic",
+    "format_consumer_unit": "mock Format Run Pipeline public_payload branch"
+  },
+  "fixtures": {
+    "smoke_3352_dirty": {
+      "id": "FIX-SMOKE-3352",
+      "task_id": "seo20260713221847nksocr",
+      "execution_id": "3352",
+      "strict_flag": false,
+      "nl_banned_list_in_brief": true,
+      "expected_first_scan": "dirty",
+      "expected_residual_surfaces": [
+        "seo_strategy_public or internal strategy reason mapped",
+        "seo_qa_public.summary",
+        "seo_text near-synonym наглядн*"
+      ],
+      "source": "pc14-fu03-residual-surface-analysis.json + execution redacted outputs"
+    },
+    "clean_no_residuals": {
+      "id": "FIX-CLEAN-01",
+      "description": "Synthetic public_payload with neutral wording only",
+      "expected_first_scan": "clean",
+      "expected_memory_status": "approved_clean"
+    },
+    "dirty_repair_success": {
+      "id": "FIX-REPAIR-OK",
+      "description": "Smoke residuals + mocked repair_response with neutral rewrites",
+      "expected_rescan": "clean",
+      "expected_memory_status": "repair_attempted_clean"
+    },
+    "dirty_repair_fail": {
+      "id": "FIX-REPAIR-FAIL",
+      "description": "Repair returns still-banned wording or unparseable JSON",
+      "expected_rescan": "dirty",
+      "expected_memory_status": "blocked_dirty",
+      "expected_telegram": "diagnostic only"
+    },
+    "custom_nl_banned_words": {
+      "id": "FIX-NL-CUSTOM",
+      "brief_fragment": "не используй слова: экспертиза, премиальный",
+      "expected_custom_markers": 2,
+      "expected_scan_hits": "custom severity on those tokens"
+    },
+    "strategy_hidden": {
+      "id": "FIX-STRATEGY-HIDE",
+      "assert": "telegram composed text does not contain table_strategy JSON keys or raw reason dump"
+    },
+    "qa_summary_omitted_when_dirty": {
+      "id": "FIX-QA-OMIT",
+      "assert": "When summary fails scan and repair fails, Format output has verdict/score only"
+    },
+    "memory_get_approved": {
+      "id": "FIX-GET-APPROVED",
+      "memory_status": "approved_clean",
+      "assert": "/get body matches sanitized_payload"
+    },
+    "memory_get_blocked": {
+      "id": "FIX-GET-BLOCKED",
+      "memory_status": "blocked_dirty",
+      "assert": "/get body is diagnostic only; no content_markdown"
+    }
+  },
+  "cases": [
+    {
+      "id": "FU03-SOT-01",
+      "type": "unit",
+      "assert": "STRICT_MARKER_SOT families length >= 11 including наглядн*; all PC14/FU01/FU02 stems present",
+      "fixture": "inline sot object"
+    },
+    {
+      "id": "FU03-SCAN-01",
+      "type": "unit",
+      "assert": "Detects banned stem in surfaces.seo_tz string",
+      "fixture": "FIX-CLEAN-01 mutated tz"
+    },
+    {
+      "id": "FU03-SCAN-02",
+      "type": "unit",
+      "assert": "Detects residual in seo_strategy_public (not only content_markdown)",
+      "fixture": "FIX-SMOKE-3352"
+    },
+    {
+      "id": "FU03-SCAN-03",
+      "type": "unit",
+      "assert": "Detects residual in seo_text",
+      "fixture": "FIX-SMOKE-3352"
+    },
+    {
+      "id": "FU03-SCAN-04",
+      "type": "unit",
+      "assert": "When include_summary true, scans seo_qa_public.summary",
+      "fixture": "FIX-SMOKE-3352"
+    },
+    {
+      "id": "FU03-SCAN-05",
+      "type": "unit",
+      "assert": "When include_summary true, scans factcheck_public.summary",
+      "fixture": "synthetic factcheck summary with контрол*"
+    },
+    {
+      "id": "FU03-SCAN-06",
+      "type": "unit",
+      "assert": "Scans concatenated telegram.parts_preview text",
+      "fixture": "composed preview with embedded banned token"
+    },
+    {
+      "id": "FU03-REPAIR-01",
+      "type": "unit",
+      "assert": "Build Strict Surface Repair Payload includes residuals, SOT, protected_fields, task_id",
+      "fixture": "FIX-SMOKE-3352 scan output"
+    },
+    {
+      "id": "FU03-REPAIR-02",
+      "type": "integration_mock",
+      "assert": "After mocked repair, Strategy public surface has no удобств* / наглядн*",
+      "fixture": "FIX-REPAIR-OK"
+    },
+    {
+      "id": "FU03-REPAIR-03",
+      "type": "integration_mock",
+      "assert": "QA summary cleaned or include_summary set false",
+      "fixture": "FIX-REPAIR-OK"
+    },
+    {
+      "id": "FU03-REPAIR-04",
+      "type": "unit",
+      "assert": "task_id, mode, tables_policy unchanged after merge",
+      "fixture": "FIX-REPAIR-OK"
+    },
+    {
+      "id": "FU03-BLOCK-01",
+      "type": "integration_mock",
+      "assert": "Blocked path telegram text contains STRICT QA REJECT banner; excludes full SEO text",
+      "fixture": "FIX-REPAIR-FAIL"
+    },
+    {
+      "id": "FU03-MEM-01",
+      "type": "unit",
+      "assert": "Prepare Memory Row outputs memory_status approved_clean on clean path",
+      "fixture": "FIX-CLEAN-01"
+    },
+    {
+      "id": "FU03-MEM-02",
+      "type": "unit",
+      "assert": "Prepare Memory Row outputs memory_status blocked_dirty; sanitized_payload empty",
+      "fixture": "FIX-REPAIR-FAIL"
+    },
+    {
+      "id": "FU03-GET-01",
+      "type": "contract",
+      "assert": "get handler selects sanitized_payload for approved statuses",
+      "fixture": "FIX-GET-APPROVED",
+      "note": "May use Admin/Intake read-only mock if Worker-only harness insufficient"
+    },
+    {
+      "id": "FU03-GET-02",
+      "type": "contract",
+      "assert": "get handler returns blocked_diagnostic only for blocked_dirty",
+      "fixture": "FIX-GET-BLOCKED"
+    },
+    {
+      "id": "FU03-STRICT-01",
+      "type": "unit",
+      "assert": "Brief with «не используй слова» sets strict_surface_requested=true",
+      "fixture": "FIX-NL-CUSTOM"
+    },
+    {
+      "id": "FU03-STRICT-02",
+      "type": "unit",
+      "assert": "Scan runs hard SOT when flags.strict=false and no NL trigger",
+      "fixture": "FIX-SMOKE-3352"
+    },
+    {
+      "id": "FU03-SCOPE-01",
+      "type": "static_diff",
+      "assert": "Close Lock Before Sending jsCode expressions unchanged vs production baseline export",
+      "fixture": "sanitized workflow diff"
+    },
+    {
+      "id": "FU03-SCOPE-02",
+      "type": "static_diff",
+      "assert": "Credential IDs count unchanged; only REDACTED refs in sanitized export",
+      "fixture": "sandbox vs production sanitized export"
+    },
+    {
+      "id": "FU03-SCOPE-03",
+      "type": "process",
+      "assert": "Production workflow p4mqb4VuPcemIDlC not modified during sandbox implementation",
+      "fixture": "implementation checklist sign-off"
+    }
+  ],
+  "workflow_json_validation": [
+    "n8n-import-safe-generation-rules-v1.md compliance",
+    "No structuredClone in new jsCode",
+    "IF node conditions use strict_surface_scan.verdict string compare",
+    "New node names unique within workflow",
+    "active=false on sandbox clone"
+  ],
+  "gate_before_production_proposal": [
+    "All FU03-* cases green",
+    "Sandbox sanitized export secret scan PASS",
+    "Node diff allowlist matches node-plan",
+    "Graph diff matches graph-plan",
+    "Operator review of Strategy hide UX"
+  ],
+  "expected_harness_output_file": "pc14-fu03-sandbox-harness-results.json"
+}
