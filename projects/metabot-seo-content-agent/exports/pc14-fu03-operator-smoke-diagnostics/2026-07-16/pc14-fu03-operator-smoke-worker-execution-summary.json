@@ -1,0 +1,1240 @@
+{
+  "label": "worker",
+  "execution_id": "3354",
+  "status": "error",
+  "startedAt": "2026-07-15T21:30:35.550Z",
+  "stoppedAt": "2026-07-15T21:32:34.782Z",
+  "finished": false,
+  "mode": "webhook",
+  "duration_ms": 119232,
+  "lastNodeExecuted": "Restore Format Run Items",
+  "error": {
+    "message": "Cannot assign to read only property 'name' of object 'Error: Node 'Format Run Pipeline' hasn't been executed'",
+    "name": null,
+    "node": null
+  },
+  "in_primary_window": true,
+  "in_wide_window": true,
+  "anchors_hit": [
+    "PC14-FU03",
+    "production apply",
+    "кофемашин",
+    "для удобства восприятия",
+    "SEO-план",
+    "SEO ТЗ",
+    "аккуратное",
+    "удобства"
+  ],
+  "likely_smoke": true,
+  "route": {
+    "task_id": "seo202607152130389k7zou",
+    "mode": "run"
+  },
+  "close_lock": null,
+  "prepare_memory": null,
+  "memory": null,
+  "final_scan": {
+    "strict_surface_status": "dirty"
+  },
+  "re_scan": {
+    "strict_surface_status": "dirty"
+  },
+  "public_payload_keys": [
+    "chat_id",
+    "task_id",
+    "task_raw",
+    "task_input",
+    "flags",
+    "strict",
+    "no_factcheck",
+    "outline_only",
+    "text_only",
+    "tables_policy",
+    "outline",
+    "seo_strategy",
+    "generated_text",
+    "seoqa",
+    "content_score",
+    "factcheck",
+    "postcheck_strict_claims",
+    "normalize_run_output",
+    "public_payload",
+    "strict_surface_requested",
+    "memory_status_candidate",
+    "strict_surface_status",
+    "repair_attempts"
+  ],
+  "repair_extract_keys": [
+    "chat_id",
+    "task_id",
+    "task_raw",
+    "task_input",
+    "flags",
+    "strict",
+    "no_factcheck",
+    "outline_only",
+    "text_only",
+    "tables_policy",
+    "outline",
+    "seo_strategy",
+    "generated_text",
+    "seoqa",
+    "content_score",
+    "factcheck",
+    "postcheck_strict_claims",
+    "normalize_run_output",
+    "public_payload",
+    "strict_surface_requested",
+    "memory_status_candidate",
+    "strict_surface_status",
+    "repair_attempts",
+    "strict_surface_scan",
+    "strict_surface_repair",
+    "skip_http",
+    "repair_extract"
+  ],
+  "if_final_surface_clean_branch": "false_dirty",
+  "if_repaired_surface_clean_branch": "false_dirty",
+  "format_item_count": 0,
+  "reject_item_count": 1,
+  "format_first_preview": null,
+  "reject_first_preview": null,
+  "take_first_preview": null,
+  "telegram_send_count": 0,
+  "telegram_send_previews": [],
+  "status_complete_preview": null,
+  "status_final_preview": null,
+  "fu03_nodes_executed": {
+    "Build Final Public Payload": true,
+    "Final Surface Strict Scan": true,
+    "IF Final Surface Clean": true,
+    "Build Strict Surface Repair Payload": true,
+    "Run Strict Surface Repair": true,
+    "Extract Strict Surface Repair": true,
+    "Final Surface Strict Re-Scan": true,
+    "IF Repaired Surface Clean": true,
+    "Format Strict Reject Message": true
+  },
+  "node_trace": {
+    "Route Command": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151038648,
+      "executionTime": 66,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Create Lock Row": {
+      "executed": false,
+      "run_count": 0,
+      "startTime": null,
+      "executionTime": null,
+      "error": null,
+      "item_count": 0
+    },
+    "Status Outline": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151038720,
+      "executionTime": 86,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Run Outline": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151038914,
+      "executionTime": 15666,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Run Extract Outline": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151054581,
+      "executionTime": 53,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "TZ Strict Cleanup": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151054634,
+      "executionTime": 173,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Switch Run After Outline": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151054807,
+      "executionTime": 3,
+      "error": null,
+      "item_count": 0,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 0
+        },
+        {
+          "branch_index": 1,
+          "item_count": 1
+        }
+      ]
+    },
+    "Restore Outline Data": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151054874,
+      "executionTime": 49,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Extract SEO Strategy": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151066946,
+      "executionTime": 57,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Run Text": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151067188,
+      "executionTime": 13588,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Run Extract Text": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151080777,
+      "executionTime": 49,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Normalize Run Output": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151123152,
+      "executionTime": 40,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Build Final Public Payload": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151123193,
+      "executionTime": 45,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Final Surface Strict Scan": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151123238,
+      "executionTime": 51,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "IF Final Surface Clean": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151123290,
+      "executionTime": 15,
+      "error": null,
+      "item_count": 0,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 0
+        },
+        {
+          "branch_index": 1,
+          "item_count": 1
+        }
+      ]
+    },
+    "Build Strict Surface Repair Payload": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151123305,
+      "executionTime": 49,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Run Strict Surface Repair": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151123354,
+      "executionTime": 30984,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Extract Strict Surface Repair": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151154339,
+      "executionTime": 100,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Final Surface Strict Re-Scan": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151154439,
+      "executionTime": 69,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "IF Repaired Surface Clean": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151154509,
+      "executionTime": 12,
+      "error": null,
+      "item_count": 0,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 0
+        },
+        {
+          "branch_index": 1,
+          "item_count": 1
+        }
+      ]
+    },
+    "Format Strict Reject Message": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151154522,
+      "executionTime": 49,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Format Run Pipeline": {
+      "executed": false,
+      "run_count": 0,
+      "startTime": null,
+      "executionTime": null,
+      "error": null,
+      "item_count": 0
+    },
+    "Take First Item": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151154571,
+      "executionTime": 89,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Strict Cleanup": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151111763,
+      "executionTime": 178,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Strict Risk Scanner": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151112107,
+      "executionTime": 162,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Prepare Memory Row Run": {
+      "executed": false,
+      "run_count": 0,
+      "startTime": null,
+      "executionTime": null,
+      "error": null,
+      "item_count": 0
+    },
+    "Append Memory Run": {
+      "executed": false,
+      "run_count": 0,
+      "startTime": null,
+      "executionTime": null,
+      "error": null,
+      "item_count": 0
+    },
+    "Close Lock Before Sending": {
+      "executed": false,
+      "run_count": 0,
+      "startTime": null,
+      "executionTime": null,
+      "error": null,
+      "item_count": 0
+    },
+    "Restore Format Run Items After Lock": {
+      "executed": false,
+      "run_count": 0,
+      "startTime": null,
+      "executionTime": null,
+      "error": null,
+      "item_count": 0
+    },
+    "Send Telegram Run": {
+      "executed": false,
+      "run_count": 0,
+      "startTime": null,
+      "executionTime": null,
+      "error": null,
+      "item_count": 0
+    },
+    "Status Complete": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151154660,
+      "executionTime": 84,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Status Final": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151122945,
+      "executionTime": 170,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Send Progress": {
+      "executed": false,
+      "run_count": 0,
+      "startTime": null,
+      "executionTime": null,
+      "error": null,
+      "item_count": 0
+    },
+    "Notify Progress": {
+      "executed": false,
+      "run_count": 0,
+      "startTime": null,
+      "executionTime": null,
+      "error": null,
+      "item_count": 0
+    },
+    "Prepare Progress Message": {
+      "executed": false,
+      "run_count": 0,
+      "startTime": null,
+      "executionTime": null,
+      "error": null,
+      "item_count": 0
+    },
+    "Status Complete Message": {
+      "executed": false,
+      "run_count": 0,
+      "startTime": null,
+      "executionTime": null,
+      "error": null,
+      "item_count": 0
+    },
+    "Webhook": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151035569,
+      "executionTime": 1,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Wait": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151035570,
+      "executionTime": 3001,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Store Worker Meta": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151038571,
+      "executionTime": 73,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Set Raw Input": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151038645,
+      "executionTime": 3,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Switch Route": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151038715,
+      "executionTime": 5,
+      "error": null,
+      "item_count": 0,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 0
+        },
+        {
+          "branch_index": 1,
+          "item_count": 0
+        },
+        {
+          "branch_index": 2,
+          "item_count": 1
+        },
+        {
+          "branch_index": 3,
+          "item_count": 0
+        },
+        {
+          "branch_index": 4,
+          "item_count": 0
+        }
+      ]
+    },
+    "Restore Route Data": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151038806,
+      "executionTime": 44,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Build Outline Payload": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151038850,
+      "executionTime": 64,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Status Strategy": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151054811,
+      "executionTime": 63,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Build SEO Strategy Payload": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151054923,
+      "executionTime": 67,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Run SEO Strategy": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151054993,
+      "executionTime": 11952,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Status Text": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151067003,
+      "executionTime": 86,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Restore SEO Strategy Data": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151067090,
+      "executionTime": 48,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Build Text Payload": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151067139,
+      "executionTime": 49,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Auto Fix Text": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151080826,
+      "executionTime": 34,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Auto Polish Text": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151080860,
+      "executionTime": 39,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Run Auto Polish Text": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151080899,
+      "executionTime": 13655,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Extract Auto Polish Text": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151094555,
+      "executionTime": 122,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Ensure FAQ Text": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151094677,
+      "executionTime": 38,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Commercial Layer Text": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151094716,
+      "executionTime": 86,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Final Text Cleanup": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151094802,
+      "executionTime": 192,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Hard Final Cleanup": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151094995,
+      "executionTime": 252,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Build Text Repair Payload": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151095248,
+      "executionTime": 192,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Run Text Repair": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151095440,
+      "executionTime": 16268,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Extract Text Repair": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151111709,
+      "executionTime": 54,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Table Sanity Check": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151111942,
+      "executionTime": 165,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Compute Content Score": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151112269,
+      "executionTime": 48,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Switch Run After Text": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151112317,
+      "executionTime": 4,
+      "error": null,
+      "item_count": 0,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 0
+        },
+        {
+          "branch_index": 1,
+          "item_count": 1
+        }
+      ]
+    },
+    "Status SEO QA": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151112322,
+      "executionTime": 65,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Restore Content Score Data": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151112387,
+      "executionTime": 41,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Build SEOQA Payload": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151112428,
+      "executionTime": 54,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Run SEO QA": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151112483,
+      "executionTime": 7540,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Run Extract SEO QA": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151120023,
+      "executionTime": 136,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Switch Run Factcheck": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151120159,
+      "executionTime": 6,
+      "error": null,
+      "item_count": 0,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 0
+        },
+        {
+          "branch_index": 1,
+          "item_count": 1
+        }
+      ]
+    },
+    "Status Factcheck": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151120166,
+      "executionTime": 69,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Build Factcheck Payload": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151120236,
+      "executionTime": 39,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Run Factcheck": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151120276,
+      "executionTime": 2550,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Run Extract Factcheck": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151122826,
+      "executionTime": 77,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Postcheck Strict Claims": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151122903,
+      "executionTime": 42,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Restore Postcheck Data": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151123115,
+      "executionTime": 37,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Restore Format Run Items": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151154744,
+      "executionTime": 37,
+      "error": {
+        "message": "Cannot assign to read only property 'name' of object 'Error: Node 'Format Run Pipeline' hasn't been executed'",
+        "name": null
+      },
+      "item_count": 0,
+      "branches": []
+    }
+  },
+  "executed_node_names": [
+    "Auto Fix Text",
+    "Auto Polish Text",
+    "Build Factcheck Payload",
+    "Build Final Public Payload",
+    "Build Outline Payload",
+    "Build SEO Strategy Payload",
+    "Build SEOQA Payload",
+    "Build Strict Surface Repair Payload",
+    "Build Text Payload",
+    "Build Text Repair Payload",
+    "Commercial Layer Text",
+    "Compute Content Score",
+    "Ensure FAQ Text",
+    "Extract Auto Polish Text",
+    "Extract SEO Strategy",
+    "Extract Strict Surface Repair",
+    "Extract Text Repair",
+    "Final Surface Strict Re-Scan",
+    "Final Surface Strict Scan",
+    "Final Text Cleanup",
+    "Format Strict Reject Message",
+    "Hard Final Cleanup",
+    "IF Final Surface Clean",
+    "IF Repaired Surface Clean",
+    "Normalize Run Output",
+    "Postcheck Strict Claims",
+    "Restore Content Score Data",
+    "Restore Format Run Items",
+    "Restore Outline Data",
+    "Restore Postcheck Data",
+    "Restore Route Data",
+    "Restore SEO Strategy Data",
+    "Route Command",
+    "Run Auto Polish Text",
+    "Run Extract Factcheck",
+    "Run Extract Outline",
+    "Run Extract SEO QA",
+    "Run Extract Text",
+    "Run Factcheck",
+    "Run Outline",
+    "Run SEO QA",
+    "Run SEO Strategy",
+    "Run Strict Surface Repair",
+    "Run Text",
+    "Run Text Repair",
+    "Set Raw Input",
+    "Status Complete",
+    "Status Factcheck",
+    "Status Final",
+    "Status Outline",
+    "Status SEO QA",
+    "Status Strategy",
+    "Status Text",
+    "Store Worker Meta",
+    "Strict Cleanup",
+    "Strict Risk Scanner",
+    "Switch Route",
+    "Switch Run After Outline",
+    "Switch Run After Text",
+    "Switch Run Factcheck",
+    "TZ Strict Cleanup",
+    "Table Sanity Check",
+    "Take First Item",
+    "Wait",
+    "Webhook"
+  ],
+  "failure_node": "Restore Format Run Items",
+  "failure_message": "Cannot assign to read only property 'name' of object 'Error: Node 'Format Run Pipeline' hasn't been executed'",
+  "real_task_id": "seo202607152130389k7zou",
+  "reject_prepared": true,
+  "reject_memory_status": "blocked_dirty",
+  "reject_strict_surface_status": "blocked_dirty",
+  "reject_repair_attempts": 1,
+  "reject_residual_count": 17,
+  "reject_telegram_text_preview": "Task ID: seo202607152130389k7zou\n\nSTRICT QA REJECT — output blocked before final send\nResidual count: 17\nRepair attempts: 1\n1. seo_text / удобн* @ surfaces.seo_text — ктильный осмотр | Причина таблицы: для удобного восприятия этапов диагностики и пара\n2. seo_text / удобн* @ surfaces.seo_text — необходимости) | Причина таблицы: для удобного восприятия информации о деталях и ин\n3. seo_text / удобн* @ surfaces.seo_text — микроконтроллера| Причина таблицы: для удобного восприятия параметров настройк",
+  "take_first_had_reject_payload": true,
+  "status_complete_ok": true,
+  "status_final_ok": true,
+  "initial_scan_verdict": "dirty",
+  "initial_scan_count": 11,
+  "rescan_verdict": "dirty",
+  "rescan_count": 17,
+  "run_strict_surface_repair_ms": 30984,
+  "send_telegram_run_executed": false,
+  "prepare_memory_executed": false,
+  "append_memory_executed": false,
+  "close_lock_executed": false
+}

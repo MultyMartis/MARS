@@ -1,0 +1,40 @@
+{
+  "execution_id": "3354",
+  "status": "error",
+  "lastNodeExecuted": "Restore Format Run Items",
+  "path": [
+    "Normalize Run Output",
+    "Build Final Public Payload",
+    "Final Surface Strict Scan (dirty)",
+    "IF Final Surface Clean [false]",
+    "Build Strict Surface Repair Payload",
+    "Run Strict Surface Repair (~31s live OK)",
+    "Extract Strict Surface Repair",
+    "Final Surface Strict Re-Scan (dirty)",
+    "IF Repaired Surface Clean [false]",
+    "Format Strict Reject Message (diagnostic prepared)",
+    "Take First Item (reject payload present)",
+    "Status Complete (ok=true) — preface Telegram",
+    "Restore Format Run Items — ERROR referencing Format Run Pipeline",
+    "Close Lock / Restore After Lock / Parse Mode / Send Telegram Run — NOT REACHED",
+    "Prepare Memory Row Run / Append Memory Run — NOT EXECUTED"
+  ],
+  "if_final_surface_clean_branch": "false_dirty",
+  "if_repaired_surface_clean_branch": "false_dirty",
+  "format_run_pipeline_executed": false,
+  "format_strict_reject_executed": true,
+  "take_first_item_executed": true,
+  "send_telegram_run_executed": false,
+  "close_lock_executed": false,
+  "fu03_nodes_executed": {
+    "Build Final Public Payload": true,
+    "Final Surface Strict Scan": true,
+    "IF Final Surface Clean": true,
+    "Build Strict Surface Repair Payload": true,
+    "Run Strict Surface Repair": true,
+    "Extract Strict Surface Repair": true,
+    "Final Surface Strict Re-Scan": true,
+    "IF Repaired Surface Clean": true,
+    "Format Strict Reject Message": true
+  }
+}

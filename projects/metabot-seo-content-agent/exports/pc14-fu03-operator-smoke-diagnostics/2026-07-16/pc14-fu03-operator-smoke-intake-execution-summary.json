@@ -1,0 +1,270 @@
+{
+  "label": "intake",
+  "execution_id": "3353",
+  "status": "success",
+  "startedAt": "2026-07-15T21:30:28.906Z",
+  "stoppedAt": "2026-07-15T21:30:35.574Z",
+  "finished": true,
+  "mode": "webhook",
+  "duration_ms": 6668,
+  "lastNodeExecuted": "Send To Worker",
+  "error": null,
+  "in_primary_window": true,
+  "in_wide_window": true,
+  "anchors_hit": [
+    "PC14-FU03",
+    "production apply",
+    "кофемашин",
+    "для удобства восприятия",
+    "SEO-план",
+    "SEO ТЗ",
+    "аккуратное",
+    "удобства"
+  ],
+  "lock_key_matched": true,
+  "likely_smoke": true,
+  "route": null,
+  "create_lock": {
+    "task_id": "pending",
+    "status": "active",
+    "lock_key": "chat:499423375:1784151029009",
+    "created_at": "2026-07-15T21:30:32.713Z",
+    "expires_at": "2026-07-15T22:00:32.713Z"
+  },
+  "send_to_worker": true,
+  "send_to_admin": false,
+  "send_accepted": true,
+  "send_accepted_preview": null,
+  "send_worker_preview": null,
+  "send_admin_preview": null,
+  "node_trace": {
+    "Telegram Trigger": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151028924,
+      "executionTime": 1,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Detect Local Command": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151028925,
+      "executionTime": 63,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "IF Local Command": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151028988,
+      "executionTime": 2,
+      "error": null,
+      "item_count": 0,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 0
+        },
+        {
+          "branch_index": 1,
+          "item_count": 1
+        }
+      ]
+    },
+    "IF Admin Command": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151028990,
+      "executionTime": 1,
+      "error": null,
+      "item_count": 0,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 0
+        },
+        {
+          "branch_index": 1,
+          "item_count": 1
+        }
+      ]
+    },
+    "Route Retrieval Command": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151028991,
+      "executionTime": 1,
+      "error": null,
+      "item_count": 0,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 0
+        },
+        {
+          "branch_index": 1,
+          "item_count": 1
+        }
+      ]
+    },
+    "Build User Lock Key": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151028992,
+      "executionTime": 23,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Lookup Active Locks": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151029015,
+      "executionTime": 2111,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Check Active Lock": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151031126,
+      "executionTime": 25,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Debug Lock State": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151031151,
+      "executionTime": 19,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "IF Busy": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151031170,
+      "executionTime": 2,
+      "error": null,
+      "item_count": 0,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 0
+        },
+        {
+          "branch_index": 1,
+          "item_count": 1
+        }
+      ]
+    },
+    "Create Lock Row": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151031172,
+      "executionTime": 4079,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Send Task Accepted": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151035251,
+      "executionTime": 62,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Build Worker Payload": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151035313,
+      "executionTime": 26,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    },
+    "Send To Worker": {
+      "executed": true,
+      "run_count": 1,
+      "startTime": 1784151035339,
+      "executionTime": 235,
+      "error": null,
+      "item_count": 1,
+      "branches": [
+        {
+          "branch_index": 0,
+          "item_count": 1
+        }
+      ]
+    }
+  },
+  "executed_node_names": [
+    "Build User Lock Key",
+    "Build Worker Payload",
+    "Check Active Lock",
+    "Create Lock Row",
+    "Debug Lock State",
+    "Detect Local Command",
+    "IF Admin Command",
+    "IF Busy",
+    "IF Local Command",
+    "Lookup Active Locks",
+    "Route Retrieval Command",
+    "Send Task Accepted",
+    "Send To Worker",
+    "Telegram Trigger"
+  ]
+}

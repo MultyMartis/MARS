@@ -1,0 +1,141 @@
+{
+  "diagnostic_target": "PC14_FU03_OPERATOR_SMOKE_DIAGNOSTICS",
+  "generated_at": "2026-07-15T21:45:32.503Z",
+  "windows": {
+    "operator_local_utc_plus_7": "2026-07-16 04:30–04:36",
+    "primary_utc": {
+      "start": "2026-07-15T21:30:00.000Z",
+      "end": "2026-07-15T21:36:30.000Z"
+    },
+    "wide_utc": {
+      "start": "2026-07-15T21:00:00.000Z",
+      "end": "2026-07-15T22:00:00.000Z"
+    }
+  },
+  "lock_key": "chat:499423375:1784151029009",
+  "counts": {
+    "intake_primary": 3,
+    "worker_primary": 1,
+    "admin_primary": 2
+  },
+  "primary_window_executions": {
+    "intake": [
+      {
+        "id": "3357",
+        "status": "success",
+        "mode": "webhook",
+        "startedAt": "2026-07-15T21:35:56.777Z",
+        "stoppedAt": "2026-07-15T21:35:56.914Z",
+        "finished": true,
+        "workflowId": "x8EbTGKNdlBprLvk",
+        "duration_ms": 137
+      },
+      {
+        "id": "3355",
+        "status": "success",
+        "mode": "webhook",
+        "startedAt": "2026-07-15T21:35:50.045Z",
+        "stoppedAt": "2026-07-15T21:35:50.254Z",
+        "finished": true,
+        "workflowId": "x8EbTGKNdlBprLvk",
+        "duration_ms": 209
+      },
+      {
+        "id": "3353",
+        "status": "success",
+        "mode": "webhook",
+        "startedAt": "2026-07-15T21:30:28.906Z",
+        "stoppedAt": "2026-07-15T21:30:35.574Z",
+        "finished": true,
+        "workflowId": "x8EbTGKNdlBprLvk",
+        "duration_ms": 6668
+      }
+    ],
+    "worker": [
+      {
+        "id": "3354",
+        "status": "error",
+        "mode": "webhook",
+        "startedAt": "2026-07-15T21:30:35.550Z",
+        "stoppedAt": "2026-07-15T21:32:34.782Z",
+        "finished": false,
+        "workflowId": "p4mqb4VuPcemIDlC",
+        "duration_ms": 119232
+      }
+    ],
+    "admin": [
+      {
+        "id": "3358",
+        "status": "success",
+        "mode": "webhook",
+        "startedAt": "2026-07-15T21:35:56.899Z",
+        "stoppedAt": "2026-07-15T21:36:24.826Z",
+        "finished": true,
+        "workflowId": "AR6QxGt8ZKH0xG2T",
+        "duration_ms": 27927
+      },
+      {
+        "id": "3356",
+        "status": "success",
+        "mode": "webhook",
+        "startedAt": "2026-07-15T21:35:50.233Z",
+        "stoppedAt": "2026-07-15T21:35:52.174Z",
+        "finished": true,
+        "workflowId": "AR6QxGt8ZKH0xG2T",
+        "duration_ms": 1941
+      }
+    ]
+  },
+  "selected": {
+    "intake_id": "3353",
+    "worker_id": "3354",
+    "admin_locks_id": null,
+    "admin_health_id": "3358"
+  },
+  "smoke_matches": {
+    "intake": [
+      {
+        "id": "3353",
+        "status": "success",
+        "startedAt": "2026-07-15T21:30:28.906Z",
+        "anchors": [
+          "PC14-FU03",
+          "production apply",
+          "кофемашин",
+          "для удобства восприятия",
+          "SEO-план",
+          "SEO ТЗ",
+          "аккуратное",
+          "удобства"
+        ],
+        "lock_key_matched": true,
+        "task_id": "pending"
+      }
+    ],
+    "worker": [
+      {
+        "id": "3354",
+        "status": "error",
+        "startedAt": "2026-07-15T21:30:35.550Z",
+        "stoppedAt": "2026-07-15T21:32:34.782Z",
+        "anchors": [
+          "PC14-FU03",
+          "production apply",
+          "кофемашин",
+          "для удобства восприятия",
+          "SEO-план",
+          "SEO ТЗ",
+          "аккуратное",
+          "удобства"
+        ],
+        "task_id": "seo202607152130389k7zou",
+        "lastNodeExecuted": "Restore Format Run Items",
+        "error": {
+          "message": "Cannot assign to read only property 'name' of object 'Error: Node 'Format Run Pipeline' hasn't been executed'",
+          "name": null,
+          "node": null
+        }
+      }
+    ]
+  }
+}

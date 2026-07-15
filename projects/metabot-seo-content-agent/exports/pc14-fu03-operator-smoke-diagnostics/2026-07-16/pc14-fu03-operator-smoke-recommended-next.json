@@ -1,0 +1,17 @@
+{
+  "decision": "PC14_FU03_OPERATOR_SMOKE_DIAGNOSED_FIX_REQUIRED",
+  "recommended_next_step": "PC14_FU03_DIAGNOSTICS_PERSIST",
+  "then": "PC14_FU03_HOTFIX01_SANDBOX_DESIGN",
+  "hotfix_intent": [
+    "Make Restore Format Run Items restore from current reject/format items without requiring Format Run Pipeline execution",
+    "Make Restore Format Run Items After Lock equally reject-safe",
+    "Ensure blocked_dirty reject chunks reach Send Telegram Run",
+    "Ensure Close Lock uses Route Command task_id and memory append runs on reject path",
+    "Offline harness: add reject-path end-to-end case covering restore/close/send"
+  ],
+  "do_not": [
+    "Retry /run before HOTFIX01",
+    "Full production rollback as first choice",
+    "Clear lock without operator charter (may auto-expire)"
+  ]
+}

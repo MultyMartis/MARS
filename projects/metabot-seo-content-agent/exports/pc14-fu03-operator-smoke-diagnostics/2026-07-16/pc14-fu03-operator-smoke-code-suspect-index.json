@@ -1,0 +1,24 @@
+{
+  "primary_failing_node": "Restore Format Run Items",
+  "secondary_same_bug_risk": "Restore Format Run Items After Lock",
+  "bug": {
+    "description": "Both restore nodes hardcode $('Format Run Pipeline').all(). On FU03 reject branch Format Run Pipeline is intentionally skipped, so restore throws ExpressionError and aborts send/close-lock path.",
+    "code_snippet": "const formattedItems = $('Format Run Pipeline').all();\nreturn formattedItems.map((item) => ({ json: { ...item.json } }));"
+  },
+  "reject_path_produces_correct_payload": true,
+  "reject_node": "Format Strict Reject Message",
+  "reject_connects_to": [
+    "Take First Item",
+    "Prepare Memory Row Run"
+  ],
+  "send_path_dependency_chain": "Take First Item → Status Complete → Restore Format Run Items → Close Lock Before Sending → Restore Format Run Items After Lock → Parse Mode → Send Telegram Run",
+  "classification_labels": [
+    "C",
+    "D",
+    "E",
+    "G",
+    "I",
+    "J",
+    "K"
+  ]
+}
