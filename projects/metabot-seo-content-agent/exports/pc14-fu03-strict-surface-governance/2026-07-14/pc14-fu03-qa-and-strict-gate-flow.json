@@ -1,0 +1,173 @@
+{
+  "audit": "PC14_FU03_STRICT_OUTPUT_SURFACE_GOVERNANCE_AUDIT",
+  "execution_order_observed": [
+    "Webhook",
+    "Wait",
+    "Store Worker Meta",
+    "Set Raw Input",
+    "Route Command",
+    "Switch Route",
+    "Status Outline",
+    "Restore Route Data",
+    "Build Outline Payload",
+    "Run Outline",
+    "Run Extract Outline",
+    "TZ Strict Cleanup",
+    "Switch Run After Outline",
+    "Status Strategy",
+    "Restore Outline Data",
+    "Build SEO Strategy Payload",
+    "Run SEO Strategy",
+    "Extract SEO Strategy",
+    "Status Text",
+    "Restore SEO Strategy Data",
+    "Build Text Payload",
+    "Run Text",
+    "Run Extract Text",
+    "Auto Fix Text",
+    "Auto Polish Text",
+    "Run Auto Polish Text",
+    "Extract Auto Polish Text",
+    "Ensure FAQ Text",
+    "Commercial Layer Text",
+    "Final Text Cleanup",
+    "Hard Final Cleanup",
+    "Build Text Repair Payload",
+    "Run Text Repair",
+    "Extract Text Repair",
+    "Strict Cleanup",
+    "Table Sanity Check",
+    "Strict Risk Scanner",
+    "Compute Content Score",
+    "Switch Run After Text",
+    "Status SEO QA",
+    "Restore Content Score Data",
+    "Build SEOQA Payload",
+    "Run SEO QA",
+    "Run Extract SEO QA",
+    "Switch Run Factcheck",
+    "Status Factcheck",
+    "Build Factcheck Payload",
+    "Run Factcheck",
+    "Run Extract Factcheck",
+    "Postcheck Strict Claims",
+    "Status Final",
+    "Restore Postcheck Data",
+    "Normalize Run Output",
+    "Format Run Pipeline",
+    "Take First Item",
+    "Status Complete",
+    "Restore Format Run Items",
+    "Close Lock Before Sending",
+    "Restore Format Run Items After Lock",
+    "Parse Mode",
+    "Send Telegram Run",
+    "Restore Lock Context",
+    "Finish Lock",
+    "Prepare Memory Row Run",
+    "Append Memory Run"
+  ],
+  "qa_ownership": {
+    "nodes": [
+      "Build SEOQA Payload",
+      "Run SEO QA",
+      "Run Extract SEO QA",
+      "Status SEO QA"
+    ],
+    "implementation": "LLM via OpenRouter HTTP (Build SEOQA Payload → Run SEO QA)",
+    "model_default": "openai/gpt-4.1-mini",
+    "receives": {
+      "seo_text_content_markdown": true,
+      "outline": true,
+      "seo_strategy": true,
+      "original_brief": true,
+      "strict_risk_scan": true,
+      "content_score": true,
+      "table_sanity_check": true,
+      "final_telegram_text": false,
+      "banned_markers_in_prompt": "partial — forbidden claim markers list; missing явное удобств*/удобн* as hard family"
+    },
+    "verdict_affects_final_send": "soft — Format shows STRICT QA REJECT banner if reject OR strict_risk_scan.count>0, but still sends material",
+    "force_repair_retry": false,
+    "runs_before_format": true,
+    "generates_own_summary_after_strict_scan": true
+  },
+  "deterministic_layers": {
+    "tz_strict_cleanup": {
+      "version": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+      "fields": "outline.* string fields incl. tables.decision_reason; NOT seo_strategy; NOT seoqa; NOT content_markdown primary",
+      "smoke": {
+        "version": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+        "count": 1,
+        "families": [
+          "удобств"
+        ],
+        "fields": [
+          "outline.tables.decision_reason"
+        ],
+        "skipped_empty": []
+      }
+    },
+    "strict_cleanup": {
+      "version": "v15-strict-cleanup-pc14-fu01-r1",
+      "fields": "generated_text.content_markdown only",
+      "smoke": {
+        "applied": true,
+        "version": "v15-strict-cleanup-pc14-fu01-r1",
+        "replacements_count": 1,
+        "families_patched": [
+          "аккуратн",
+          "удобств",
+          "позволя",
+          "обеспеч",
+          "контрол",
+          "безопасн",
+          "специализирован",
+          "надежн"
+        ]
+      }
+    },
+    "strict_risk_scanner": {
+      "version": "v13-run-strict-risk-scanner-hard-v4",
+      "fields": "generated_text.content_markdown only",
+      "smoke": {
+        "count": 0,
+        "verdict": "ok",
+        "passed": true
+      }
+    },
+    "postcheck_strict_claims": {
+      "fields": "content_markdown only; gated by input.strict",
+      "smoke": {
+        "applied": true,
+        "strict": false,
+        "text_length": 2757,
+        "count": 0,
+        "violations": [],
+        "seoqa_forced_reject": false
+      },
+      "missing_families_vs_pc14": [
+        "удобств",
+        "удобн",
+        "позволя"
+      ]
+    },
+    "format_final_strict_gate": {
+      "fields": "content_markdown only when strict=true",
+      "does_not_scan": [
+        "seo_strategy",
+        "seoqa.summary",
+        "factcheck.summary",
+        "full telegram composite"
+      ],
+      "banner_condition": "seoqa.verdict==reject OR strict_risk_scan.count>0"
+    }
+  },
+  "observed_timing": {
+    "strict_scan_before_llm_qa": true,
+    "llm_qa_before_format": true,
+    "format_after_qa_and_factcheck": true,
+    "tz_cleanup_before_strategy_llm": true,
+    "strategy_llm_can_reintroduce_banned_phrase": true
+  }
+}

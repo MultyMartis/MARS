@@ -1,0 +1,48 @@
+{
+  "audit": "PC14_FU03_STRICT_OUTPUT_SURFACE_GOVERNANCE_AUDIT",
+  "preferred_decision": "PC14_FU03_GOVERNANCE_AUDIT_COMPLETE_REPAIR_LOOP_RECOMMENDED",
+  "preferred_next": "PC14_FU03_REPAIR_LOOP_PROPOSAL",
+  "layers": [
+    {
+      "layer": "Generation Prompt Contract",
+      "owns": "Central strict marker family list; prohibit banned stems in all generated objects including outline/strategy/text/QA",
+      "sot": true
+    },
+    {
+      "layer": "LLM SEO QA",
+      "owns": "Semantic quality, coverage, claims; must treat central marker list as hard constraints across all reviewed objects",
+      "not_owns": "Endless synonym rewriting via regex"
+    },
+    {
+      "layer": "LLM Repair Loop (bounded)",
+      "owns": "Rewrite affected surfaces given residual list from JS scan gate; max N attempts",
+      "trigger": "Final surface scan fail"
+    },
+    {
+      "layer": "Deterministic JS Scan Gate",
+      "owns": "Detect residuals on ALL user-visible surfaces before send; block/approve; no creative rewrite",
+      "sot_for_send_decision": true
+    },
+    {
+      "layer": "Limited Deterministic Cleanup",
+      "owns": "Safe technical fields only (known outline.decision_reason / content_markdown phrase maps already shipped); freeze expansion",
+      "anti_pattern": "Adding one regex per new smoke residual forever"
+    },
+    {
+      "layer": "Final Telegram Surface Gate",
+      "owns": "Compose only allowed surfaces; hide/sanitize strategy debug JSON; optionally omit or sanitize QA/factcheck summaries if they fail scan"
+    }
+  ],
+  "infinite_js_risk": {
+    "exists": true,
+    "loop_mechanism": "Each new residual surface (strategy reason, QA summary, synonym after cleanup) prompts another JS regex patch → cleanup introduces new synonyms → more patches",
+    "controlled_if": "JS cleanup expansion frozen; JS scan is gate-only; LLM repair owns rewrite; marker SOT centralized"
+  },
+  "recommendations": {
+    "block_final_send_on_any_user_visible_strict_hit": true,
+    "qa_factcheck_summaries_policy": "scan or sanitize or omit from user-visible telegram if hits",
+    "strategy_debug_json_policy": "hide from telegram or sanitize; keep in memory/internal if needed",
+    "get_behavior": "serve last sanitized approved payload; if only polluted stored, flag STRICT residual on /get",
+    "memory_storage": "store raw internals + sanitized user payload separately; never mark polluted as approved"
+  }
+}

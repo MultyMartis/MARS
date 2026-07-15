@@ -1,0 +1,100 @@
+{
+  "audit": "PC14_FU03_STRICT_OUTPUT_SURFACE_GOVERNANCE_AUDIT",
+  "task_id": "seo20260713221847nksocr",
+  "execution_id": "3352",
+  "strict_flag": false,
+  "route_flags": {
+    "strict": false,
+    "no_factcheck": false,
+    "outline_only": false,
+    "text_only": false,
+    "tables_policy": "auto"
+  },
+  "surfaces": [
+    {
+      "surface": "Task ID / metadata header",
+      "source_node": "Format Run Pipeline",
+      "generated_by": "js",
+      "scanned_by_strict_scanner": false,
+      "cleaned_by_strict_cleanup": false,
+      "repaired_by_llm": false,
+      "in_final_telegram": true
+    },
+    {
+      "surface": "SEO ТЗ (outline) — Причина tables.decision_reason",
+      "source_node": "Run Outline → Run Extract Outline → TZ Strict Cleanup → Format Run Pipeline",
+      "generated_by": "llm",
+      "cleaned_by": "TZ Strict Cleanup (outline fields only)",
+      "scanned_by_strict_scanner": false,
+      "cleaned_by_strict_cleanup": "tz_only",
+      "repaired_by_llm": false,
+      "in_final_telegram": true,
+      "smoke_result": "PASS after TZ cleanup — residual removed from decision_reason",
+      "smoke_value": "для структурированного представления этапов ремонта кофемашины и ключевых проверяемых параметров"
+    },
+    {
+      "surface": "SEO Strategy — table_strategy.reason (JSON dump)",
+      "source_node": "Run SEO Strategy → Extract SEO Strategy → Format Run Pipeline",
+      "generated_by": "llm",
+      "scanned_by_strict_scanner": false,
+      "cleaned_by_strict_cleanup": false,
+      "repaired_by_llm": false,
+      "in_final_telegram": true,
+      "smoke_result": "FAIL residual — для удобства восприятия in strategy.reason",
+      "smoke_value": "для удобства восприятия этапов ремонта кофемашины и ключевых проверяемых параметров"
+    },
+    {
+      "surface": "SEO Текст content_markdown (incl. table explanation)",
+      "source_node": "Run Text → … → Strict Cleanup → Format Run Pipeline",
+      "generated_by": "llm",
+      "scanned_by_strict_scanner": true,
+      "cleaned_by_strict_cleanup": true,
+      "repaired_by_llm": true,
+      "repair_nodes": [
+        "Run Text Repair"
+      ],
+      "in_final_telegram": true,
+      "smoke_result": "PARTIAL — удобства replaced to наглядности; perception wording remains",
+      "note": "Strict Cleanup maps удобства→наглядности, producing «для наглядности восприятия» style residual"
+    },
+    {
+      "surface": "FAQ (inside SEO Text / outline FAQ list)",
+      "source_node": "Ensure FAQ Text / outline.faq → Format",
+      "generated_by": "llm+js",
+      "scanned_by_strict_scanner": "text body only if inside content_markdown",
+      "cleaned_by_strict_cleanup": "text body only if inside content_markdown",
+      "repaired_by_llm": "via text repair path",
+      "in_final_telegram": true
+    },
+    {
+      "surface": "SEO QA verdict/score/summary",
+      "source_node": "Run SEO QA → Run Extract SEO QA → Format Run Pipeline",
+      "generated_by": "llm",
+      "scanned_by_strict_scanner": false,
+      "cleaned_by_strict_cleanup": false,
+      "repaired_by_llm": false,
+      "in_final_telegram": true,
+      "smoke_result": "FAIL residual in QA summary — для удобства восприятия",
+      "smoke_value": "Текст полностью соответствует исходному брифу, outline и SEO стратегии. Все обязательные разделы (Диагностика кофемашины, Разборка и проверка электрических цепей, Сборка после ремонта) раскрыты подробно и нейтрально, без использования запрещённых слов. Таблица присутствует, структурирует этапы ремонта для удобства восприятия, как указано в брифе. FAQ отражает ключевые вопросы и ответы по теме. Структура Markdown корректна, грамматических ошибок и неподтверждённых заявлений нет. Использованы все приоритетные сущности естественно. Нет нарушений strict_risk_scan и table_sanity_check."
+    },
+    {
+      "surface": "Factcheck verdict/summary",
+      "source_node": "Run Factcheck → Run Extract Factcheck → Format",
+      "generated_by": "llm",
+      "scanned_by_strict_scanner": false,
+      "cleaned_by_strict_cleanup": false,
+      "repaired_by_llm": false,
+      "in_final_telegram": true
+    },
+    {
+      "surface": "STRICT QA REJECT banner (conditional)",
+      "source_node": "Format Run Pipeline",
+      "generated_by": "js",
+      "scanned_by_strict_scanner": "uses strict_risk_scan.count / seoqa.verdict",
+      "cleaned_by_strict_cleanup": false,
+      "repaired_by_llm": false,
+      "in_final_telegram": "if reject/risk",
+      "smoke_result": "NOT SHOWN — seoqa approved and strict_risk_scan.count=0"
+    }
+  ]
+}

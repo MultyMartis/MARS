@@ -1,0 +1,1148 @@
+{
+  "audit": "PC14_FU03_STRICT_OUTPUT_SURFACE_GOVERNANCE_AUDIT",
+  "source_export": "X:\\AI MARS\\projects\\metabot-seo-content-agent\\exports\\production-pc14-fu02-hotfix01\\2026-07-14\\SEO-Content-Agent-Beta-v14-Worker.production-pc14-fu02-hotfix01.after-apply.sanitized.json",
+  "worker": {
+    "id": "p4mqb4VuPcemIDlC",
+    "name": "SEO Content Agent Beta.v14 - Worker",
+    "active": true,
+    "node_count": 92,
+    "updatedAt": "2026-07-13T21:49:02.829Z"
+  },
+  "nodes": {
+    "Build Outline Payload": {
+      "present": true,
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "category": "js_code",
+      "inputs": [
+        {
+          "from": "Restore Route Data",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Run Outline"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {
+        "decision_reason": 1,
+        "outline": 3,
+        "tables": 10,
+        "faq": 1
+      },
+      "marker_family_mentions": {},
+      "jsCode_length": 3637,
+      "parameters_keys": [
+        "jsCode"
+      ]
+    },
+    "Run Outline": {
+      "present": true,
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "category": "llm_or_http",
+      "inputs": [
+        {
+          "from": "Build Outline Payload",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Run Extract Outline"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {},
+      "marker_family_mentions": {},
+      "jsCode_length": 0,
+      "parameters_keys": [
+        "method",
+        "url",
+        "sendHeaders",
+        "headerParameters",
+        "sendBody",
+        "specifyBody",
+        "jsonBody",
+        "options"
+      ]
+    },
+    "Run Extract Outline": {
+      "present": true,
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "category": "js_code",
+      "inputs": [
+        {
+          "from": "Run Outline",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "TZ Strict Cleanup"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {
+        "decision_reason": 1,
+        "outline": 5,
+        "factcheck": 2,
+        "tables": 3,
+        "faq": 1
+      },
+      "marker_family_mentions": {},
+      "jsCode_length": 1462,
+      "parameters_keys": [
+        "jsCode"
+      ]
+    },
+    "TZ Strict Cleanup": {
+      "present": true,
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "category": "js_code",
+      "inputs": [
+        {
+          "from": "Run Extract Outline",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Switch Run After Outline"
+        }
+      ],
+      "version_marker": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+      "field_mentions": {
+        "decision_reason": 2,
+        "outline": 21,
+        "tables": 7,
+        "faq": 3,
+        "generated_text": 3
+      },
+      "marker_family_mentions": {
+        "аккурат": 6,
+        "удобств": 10,
+        "удобн": 13,
+        "позволя": 12,
+        "обеспечен": 7,
+        "контроль": 5,
+        "безопасност": 9,
+        "специализир": 9,
+        "наглядн": 7,
+        "восприяти": 2
+      },
+      "jsCode_length": 12044,
+      "parameters_keys": [
+        "jsCode"
+      ]
+    },
+    "Switch Run After Outline": {
+      "present": true,
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "category": "other",
+      "inputs": [
+        {
+          "from": "TZ Strict Cleanup",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Format Run Pipeline"
+        },
+        {
+          "out": "main",
+          "to": "Status Strategy"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {},
+      "marker_family_mentions": {},
+      "jsCode_length": 0,
+      "parameters_keys": [
+        "rules",
+        "options"
+      ]
+    },
+    "Build SEO Strategy Payload": {
+      "present": true,
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "category": "js_code",
+      "inputs": [
+        {
+          "from": "Restore Outline Data",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Run SEO Strategy"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {
+        "outline": 3,
+        "strategy": 5,
+        "seo_strategy": 1,
+        "tables": 3,
+        "faq": 1,
+        "table_strategy": 1,
+        "recommended_tables": 1
+      },
+      "marker_family_mentions": {},
+      "jsCode_length": 1527,
+      "parameters_keys": [
+        "jsCode"
+      ]
+    },
+    "Run SEO Strategy": {
+      "present": true,
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "category": "llm_or_http",
+      "inputs": [
+        {
+          "from": "Build SEO Strategy Payload",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Extract SEO Strategy"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {},
+      "marker_family_mentions": {},
+      "jsCode_length": 0,
+      "parameters_keys": [
+        "method",
+        "url",
+        "sendHeaders",
+        "headerParameters",
+        "sendBody",
+        "specifyBody",
+        "jsonBody",
+        "options"
+      ]
+    },
+    "Extract SEO Strategy": {
+      "present": true,
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "category": "js_code",
+      "inputs": [
+        {
+          "from": "Run SEO Strategy",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Status Text"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {
+        "outline": 1,
+        "strategy": 9,
+        "seo_strategy": 5,
+        "tables": 2,
+        "faq": 1,
+        "table_strategy": 1,
+        "recommended_tables": 1
+      },
+      "marker_family_mentions": {},
+      "jsCode_length": 1224,
+      "parameters_keys": [
+        "jsCode"
+      ]
+    },
+    "Restore Outline Data": {
+      "present": true,
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "category": "js_code",
+      "inputs": [
+        {
+          "from": "Status Strategy",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Build SEO Strategy Payload"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {
+        "outline": 2
+      },
+      "marker_family_mentions": {},
+      "jsCode_length": 144,
+      "parameters_keys": [
+        "jsCode"
+      ]
+    },
+    "Restore SEO Strategy Data": {
+      "present": true,
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "category": "js_code",
+      "inputs": [
+        {
+          "from": "Status Text",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Build Text Payload"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {
+        "strategy": 3
+      },
+      "marker_family_mentions": {},
+      "jsCode_length": 149,
+      "parameters_keys": [
+        "jsCode"
+      ]
+    },
+    "Status Outline": {
+      "present": true,
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "category": "other",
+      "inputs": [
+        {
+          "from": "Switch Route",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Restore Route Data"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {},
+      "marker_family_mentions": {},
+      "jsCode_length": 0,
+      "parameters_keys": [
+        "operation",
+        "chatId",
+        "messageId",
+        "text",
+        "additionalFields"
+      ]
+    },
+    "Status Strategy": {
+      "present": true,
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "category": "other",
+      "inputs": [
+        {
+          "from": "Switch Run After Outline",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Restore Outline Data"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {},
+      "marker_family_mentions": {},
+      "jsCode_length": 0,
+      "parameters_keys": [
+        "operation",
+        "chatId",
+        "messageId",
+        "text",
+        "additionalFields"
+      ]
+    },
+    "Status Text": {
+      "present": true,
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "category": "other",
+      "inputs": [
+        {
+          "from": "Extract SEO Strategy",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Restore SEO Strategy Data"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {},
+      "marker_family_mentions": {},
+      "jsCode_length": 0,
+      "parameters_keys": [
+        "operation",
+        "chatId",
+        "messageId",
+        "text",
+        "additionalFields"
+      ]
+    },
+    "Strict Cleanup": {
+      "present": true,
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "category": "js_code",
+      "inputs": [
+        {
+          "from": "Extract Text Repair",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Table Sanity Check"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {
+        "content_markdown": 2,
+        "generated_text": 2
+      },
+      "marker_family_mentions": {
+        "аккурат": 5,
+        "удобств": 4,
+        "удобн": 2,
+        "позволя": 11,
+        "обеспечен": 6,
+        "контроль": 6,
+        "безопасност": 6,
+        "специализир": 7,
+        "наглядн": 2
+      },
+      "jsCode_length": 8358,
+      "parameters_keys": [
+        "jsCode"
+      ]
+    },
+    "Strict Risk Scanner": {
+      "present": true,
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "category": "js_code",
+      "inputs": [
+        {
+          "from": "Table Sanity Check",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Compute Content Score"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {
+        "content_markdown": 1,
+        "strict_risk": 1,
+        "generated_text": 1
+      },
+      "marker_family_mentions": {
+        "аккурат": 2,
+        "удобств": 2,
+        "удобн": 2,
+        "позволя": 2,
+        "контроль": 1,
+        "безопасност": 2,
+        "специализир": 2
+      },
+      "jsCode_length": 4003,
+      "parameters_keys": [
+        "jsCode"
+      ]
+    },
+    "Final Text Cleanup": {
+      "present": true,
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "category": "js_code",
+      "inputs": [
+        {
+          "from": "Commercial Layer Text",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Hard Final Cleanup"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {
+        "content_markdown": 2,
+        "generated_text": 2
+      },
+      "marker_family_mentions": {},
+      "jsCode_length": 1971,
+      "parameters_keys": [
+        "jsCode"
+      ]
+    },
+    "Hard Final Cleanup": {
+      "present": true,
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "category": "js_code",
+      "inputs": [
+        {
+          "from": "Final Text Cleanup",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Build Text Repair Payload"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {},
+      "marker_family_mentions": {},
+      "jsCode_length": 250,
+      "parameters_keys": [
+        "jsCode"
+      ]
+    },
+    "Postcheck Strict Claims": {
+      "present": true,
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "category": "js_code",
+      "inputs": [
+        {
+          "from": "Run Extract Factcheck",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Status Final"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {
+        "content_markdown": 1,
+        "factcheck": 11,
+        "generated_text": 4
+      },
+      "marker_family_mentions": {
+        "аккурат": 2,
+        "контроль": 1,
+        "безопасност": 2,
+        "специализир": 2
+      },
+      "jsCode_length": 3364,
+      "parameters_keys": [
+        "jsCode"
+      ]
+    },
+    "Build Text Repair Payload": {
+      "present": true,
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "category": "js_code",
+      "inputs": [
+        {
+          "from": "Hard Final Cleanup",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Run Text Repair"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {
+        "content_markdown": 1,
+        "outline": 2,
+        "faq": 2,
+        "generated_text": 1
+      },
+      "marker_family_mentions": {
+        "удобств": 3
+      },
+      "jsCode_length": 2819,
+      "parameters_keys": [
+        "jsCode"
+      ]
+    },
+    "Run Text Repair": {
+      "present": true,
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "category": "llm_or_http",
+      "inputs": [
+        {
+          "from": "Build Text Repair Payload",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Extract Text Repair"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {},
+      "marker_family_mentions": {},
+      "jsCode_length": 0,
+      "parameters_keys": [
+        "method",
+        "url",
+        "sendHeaders",
+        "headerParameters",
+        "sendBody",
+        "specifyBody",
+        "jsonBody",
+        "options"
+      ]
+    },
+    "Extract Text Repair": {
+      "present": true,
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "category": "js_code",
+      "inputs": [
+        {
+          "from": "Run Text Repair",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Strict Cleanup"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {
+        "content_markdown": 2,
+        "generated_text": 3
+      },
+      "marker_family_mentions": {},
+      "jsCode_length": 1049,
+      "parameters_keys": [
+        "jsCode"
+      ]
+    },
+    "Build SEOQA Payload": {
+      "present": true,
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "category": "js_code",
+      "inputs": [
+        {
+          "from": "Restore Content Score Data",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Run SEO QA"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {
+        "content_markdown": 2,
+        "outline": 8,
+        "strategy": 3,
+        "seo_strategy": 2,
+        "tables": 6,
+        "faq": 2,
+        "strict_risk": 4,
+        "generated_text": 5
+      },
+      "marker_family_mentions": {
+        "аккурат": 1,
+        "позволя": 1,
+        "контроль": 1,
+        "безопасност": 1
+      },
+      "jsCode_length": 3628,
+      "parameters_keys": [
+        "jsCode"
+      ]
+    },
+    "Run SEO QA": {
+      "present": true,
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "category": "llm_or_http",
+      "inputs": [
+        {
+          "from": "Build SEOQA Payload",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Run Extract SEO QA"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {},
+      "marker_family_mentions": {},
+      "jsCode_length": 0,
+      "parameters_keys": [
+        "method",
+        "url",
+        "sendHeaders",
+        "headerParameters",
+        "sendBody",
+        "specifyBody",
+        "jsonBody",
+        "options"
+      ]
+    },
+    "Run Extract SEO QA": {
+      "present": true,
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "category": "js_code",
+      "inputs": [
+        {
+          "from": "Run SEO QA",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Switch Run Factcheck"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {
+        "outline": 4,
+        "strategy": 2,
+        "seo_strategy": 2,
+        "factcheck": 2,
+        "tables": 3,
+        "strict_risk": 5,
+        "generated_text": 2
+      },
+      "marker_family_mentions": {},
+      "jsCode_length": 4161,
+      "parameters_keys": [
+        "jsCode"
+      ]
+    },
+    "Status SEO QA": {
+      "present": true,
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "category": "other",
+      "inputs": [
+        {
+          "from": "Switch Run After Text",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Restore Content Score Data"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {},
+      "marker_family_mentions": {},
+      "jsCode_length": 0,
+      "parameters_keys": [
+        "operation",
+        "chatId",
+        "messageId",
+        "text",
+        "additionalFields"
+      ]
+    },
+    "Build Factcheck Payload": {
+      "present": true,
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "category": "js_code",
+      "inputs": [
+        {
+          "from": "Status Factcheck",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Run Factcheck"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {
+        "outline": 2,
+        "strategy": 2,
+        "seo_strategy": 2,
+        "factcheck": 1,
+        "generated_text": 2
+      },
+      "marker_family_mentions": {
+        "позволя": 1
+      },
+      "jsCode_length": 2764,
+      "parameters_keys": [
+        "jsCode"
+      ]
+    },
+    "Run Factcheck": {
+      "present": true,
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "category": "llm_or_http",
+      "inputs": [
+        {
+          "from": "Build Factcheck Payload",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Run Extract Factcheck"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {},
+      "marker_family_mentions": {},
+      "jsCode_length": 0,
+      "parameters_keys": [
+        "method",
+        "url",
+        "sendHeaders",
+        "headerParameters",
+        "sendBody",
+        "specifyBody",
+        "jsonBody",
+        "options"
+      ]
+    },
+    "Run Extract Factcheck": {
+      "present": true,
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "category": "js_code",
+      "inputs": [
+        {
+          "from": "Run Factcheck",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Postcheck Strict Claims"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {
+        "outline": 4,
+        "strategy": 2,
+        "seo_strategy": 2,
+        "factcheck": 9,
+        "tables": 2,
+        "generated_text": 2
+      },
+      "marker_family_mentions": {},
+      "jsCode_length": 1579,
+      "parameters_keys": [
+        "jsCode"
+      ]
+    },
+    "Switch Run Factcheck": {
+      "present": true,
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "category": "other",
+      "inputs": [
+        {
+          "from": "Run Extract SEO QA",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Format Run Pipeline"
+        },
+        {
+          "out": "main",
+          "to": "Status Factcheck"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {},
+      "marker_family_mentions": {},
+      "jsCode_length": 0,
+      "parameters_keys": [
+        "rules",
+        "options"
+      ]
+    },
+    "Status Factcheck": {
+      "present": true,
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "category": "other",
+      "inputs": [
+        {
+          "from": "Switch Run Factcheck",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Build Factcheck Payload"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {},
+      "marker_family_mentions": {},
+      "jsCode_length": 0,
+      "parameters_keys": [
+        "operation",
+        "chatId",
+        "messageId",
+        "text",
+        "additionalFields"
+      ]
+    },
+    "Format Run Pipeline": {
+      "present": true,
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "category": "js_code",
+      "inputs": [
+        {
+          "from": "Switch Run After Outline",
+          "out": "main"
+        },
+        {
+          "from": "Switch Run After Text",
+          "out": "main"
+        },
+        {
+          "from": "Switch Run Factcheck",
+          "out": "main"
+        },
+        {
+          "from": "Normalize Run Output",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Prepare Memory Row Run"
+        },
+        {
+          "out": "main",
+          "to": "Take First Item"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {
+        "content_markdown": 2,
+        "decision_reason": 2,
+        "outline": 23,
+        "strategy": 28,
+        "seo_strategy": 1,
+        "factcheck": 20,
+        "tables": 12,
+        "faq": 3,
+        "strict_risk": 1,
+        "telegram": 1,
+        "generated_text": 1,
+        "table_strategy": 4
+      },
+      "marker_family_mentions": {
+        "аккурат": 2,
+        "удобств": 2,
+        "позволя": 2,
+        "контроль": 1,
+        "безопасност": 2,
+        "специализир": 2
+      },
+      "jsCode_length": 12435,
+      "parameters_keys": [
+        "jsCode"
+      ]
+    },
+    "Send Telegram Run": {
+      "present": true,
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "category": "other",
+      "inputs": [
+        {
+          "from": "Parse Mode",
+          "out": "main"
+        }
+      ],
+      "outputs": [
+        {
+          "out": "main",
+          "to": "Restore Lock Context"
+        }
+      ],
+      "version_marker": null,
+      "field_mentions": {},
+      "marker_family_mentions": {},
+      "jsCode_length": 0,
+      "parameters_keys": [
+        "chatId",
+        "text",
+        "additionalFields"
+      ]
+    },
+    "Save Memory": {
+      "present": false
+    },
+    "Close Lock": {
+      "present": false
+    }
+  },
+  "live_readonly": {
+    "id": "p4mqb4VuPcemIDlC",
+    "name": "SEO Content Agent Beta.v14 - Worker",
+    "active": true,
+    "node_count": 92,
+    "updatedAt": "2026-07-13T21:49:02.829Z",
+    "tz_version": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+    "structuredClone_count": 0,
+    "clonePlain_present": true
+  },
+  "smoke_execution": {
+    "id": "3352",
+    "status": "success",
+    "mode": "webhook",
+    "startedAt": "2026-07-13T22:18:44.044Z",
+    "stoppedAt": "2026-07-13T22:19:58.784Z",
+    "finished": true,
+    "node_names_executed": [
+      "Webhook",
+      "Wait",
+      "Store Worker Meta",
+      "Set Raw Input",
+      "Route Command",
+      "Switch Route",
+      "Status Outline",
+      "Restore Route Data",
+      "Build Outline Payload",
+      "Run Outline",
+      "Run Extract Outline",
+      "TZ Strict Cleanup",
+      "Switch Run After Outline",
+      "Status Strategy",
+      "Restore Outline Data",
+      "Build SEO Strategy Payload",
+      "Run SEO Strategy",
+      "Extract SEO Strategy",
+      "Status Text",
+      "Restore SEO Strategy Data",
+      "Build Text Payload",
+      "Run Text",
+      "Run Extract Text",
+      "Auto Fix Text",
+      "Auto Polish Text",
+      "Run Auto Polish Text",
+      "Extract Auto Polish Text",
+      "Ensure FAQ Text",
+      "Commercial Layer Text",
+      "Final Text Cleanup",
+      "Hard Final Cleanup",
+      "Build Text Repair Payload",
+      "Run Text Repair",
+      "Extract Text Repair",
+      "Strict Cleanup",
+      "Table Sanity Check",
+      "Strict Risk Scanner",
+      "Compute Content Score",
+      "Switch Run After Text",
+      "Status SEO QA",
+      "Restore Content Score Data",
+      "Build SEOQA Payload",
+      "Run SEO QA",
+      "Run Extract SEO QA",
+      "Switch Run Factcheck",
+      "Status Factcheck",
+      "Build Factcheck Payload",
+      "Run Factcheck",
+      "Run Extract Factcheck",
+      "Postcheck Strict Claims",
+      "Status Final",
+      "Restore Postcheck Data",
+      "Normalize Run Output",
+      "Format Run Pipeline",
+      "Take First Item",
+      "Status Complete",
+      "Restore Format Run Items",
+      "Close Lock Before Sending",
+      "Restore Format Run Items After Lock",
+      "Parse Mode",
+      "Send Telegram Run",
+      "Restore Lock Context",
+      "Finish Lock",
+      "Prepare Memory Row Run",
+      "Append Memory Run"
+    ]
+  },
+  "family_definition_locations": {
+    "tz_strict_cleanup": "FAMILY_MARKERS + phrase maps in TZ Strict Cleanup",
+    "strict_cleanup_text": "applyPc14Families + applyFu01Families in Strict Cleanup v15",
+    "strict_risk_scanner": "checks[] labels in Strict Risk Scanner",
+    "format_gate": "strictChecks[] in Format Run Pipeline (content_markdown; when strict)",
+    "postcheck": "checks[] in Postcheck Strict Claims (content_markdown; when strict)",
+    "llm_qa_prompt": "Forbidden claim markers list in Build SEOQA Payload (partial overlap)",
+    "duplication": "DUPLICATED — not centralized shared module"
+  }
+}
