@@ -1,0 +1,13 @@
+path_or_check,expected,actual,result,notes
+scan_scope,targets would-be only,no staging performed,SKIPPED,preflight BLOCKED before staging
+secrets,0,not scanned for commit (no stage),SKIPPED,N/A while BLOCKED
+sql_files,0,0 in would-include set,PASS,targets are .md and .csv only
+binary,0,text files only,PASS,would-include are text
+large_files,<100KB,5795+733 bytes,PASS,small docs/evidence
+foreign_path_as_staged,0,0 staged,PASS,nothing staged
+product_code,0,0 would-include,PASS,report+csv only
+runtime_backup,0,not in include set,PASS,excluded
+uploads,0,not in include set,PASS,excluded
+browser_cache,0,not in include set,PASS,excluded
+git_add_dot,NO,NO,PASS,not used
+HEAD_gate,dba97a38 or newer FP0002 persistence,fdbed1ad metabot,FAIL,STOP

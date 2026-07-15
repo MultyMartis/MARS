@@ -1,0 +1,12 @@
+check,expected,actual,result,notes
+workspace,X:\AI MARS,X:\AI MARS,PASS,cwd matches
+volume_label,AI WS,AI WS,PASS,required volume
+branch,mars/canonical-post-recovery,mars/canonical-post-recovery,PASS,canonical branch
+HEAD_exact,dba97a3833fc5853dde434aba0da3bbfc875d9fe,fdbed1ad22109ec6d6a4d472b08694b27f8a8132,FAIL,HEAD advanced after base; not FP-0002 persistence microcommit tip
+HEAD_is_fp0002_persistence_newer,FP-0002 scoped persistence commit at HEAD,fdbed1ad docs(metabot): add pc14 fu03 sandbox design,FAIL,actual HEAD is MetaBOT docs commit — exception does not apply
+base_is_ancestor,YES,YES,PASS,persistence commit present in history but not HEAD
+staged_before,0,0,PASS,empty index required
+foreign_WIP_present,YES (untouched),YES,PASS,foreign WIP observed; must remain untouched
+fp0002_micro_tail_present,YES,YES,PASS,persistence.md modified + postcommit-validation.csv untracked
+push_allowed,NO,NO,PASS,push forbidden by charter
+preflight_verdict,PROCEED only if HEAD matches expected OR newer FP-0002 persistence,BLOCKED HEAD=fdbed1ad22109ec6d6a4d472b08694b27f8a8132 (metabot),BLOCKED,STOP per section 4

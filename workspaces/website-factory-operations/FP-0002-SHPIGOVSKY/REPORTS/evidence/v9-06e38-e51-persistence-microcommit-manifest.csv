@@ -1,0 +1,7 @@
+path,git_status,include,reason,scope_ok,size_bytes,notes
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E38-E51-persistence.md,M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E38-E51-persistence.md,yes_if_proceed,postcommit report hash / final report touch,YES,5795,would-include; commit skipped due BLOCKED HEAD
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e38-e51-persistence-postcommit-validation.csv,?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e38-e51-persistence-postcommit-validation.csv,yes_if_proceed,postcommit validation CSV tail,YES,733,would-include; commit skipped due BLOCKED HEAD
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e38-e51-persistence-microcommit-preflight.csv,??,local_only,BLOCKED preflight evidence,YES,1118,created for STOP evidence; not staged
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e38-e51-persistence-microcommit-manifest.csv,??,local_only,BLOCKED micro-manifest,YES,1138,this file; not staged
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e38-e51-persistence-microcommit-safety-scan.csv,??,local_only,BLOCKED safety scan,YES,743,not staged
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e38-e51-persistence-microcommit-staged-diff.csv,??,local_only,BLOCKED staged-diff placeholder,YES,170,records no staging

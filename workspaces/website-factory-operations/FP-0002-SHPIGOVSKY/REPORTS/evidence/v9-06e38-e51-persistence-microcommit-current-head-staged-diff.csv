@@ -1,0 +1,16 @@
+path,staged_status,manifest_included,scope_ok,product_code,foreign_path,result,notes
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E38-E51-persistence.md,M,yes,yes,no,no,PASS,core persistence report
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e38-e51-persistence-postcommit-validation.csv,A,yes,yes,no,no,PASS,core postcommit validation
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E38-E51-persistence-microcommit.md,A,yes,yes,no,no,PASS,prior BLOCKED report
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e38-e51-persistence-microcommit-preflight.csv,A,yes,yes,no,no,PASS,prior BLOCKED preflight
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e38-e51-persistence-microcommit-manifest.csv,A,yes,yes,no,no,PASS,prior BLOCKED manifest
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e38-e51-persistence-microcommit-safety-scan.csv,A,yes,yes,no,no,PASS,prior BLOCKED safety
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e38-e51-persistence-microcommit-staged-diff.csv,A,yes,yes,no,no,PASS,prior BLOCKED staged-diff
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E38-E51-persistence-microcommit-current-head.md,A,yes,yes,no,no,PASS,current-head report
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e38-e51-persistence-microcommit-current-head-preflight.csv,A,yes,yes,no,no,PASS,current-head preflight
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e38-e51-persistence-microcommit-current-head-manifest.csv,A,yes,yes,no,no,PASS,current-head manifest
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e38-e51-persistence-microcommit-current-head-safety-scan.csv,A,yes,yes,no,no,PASS,current-head safety
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e38-e51-persistence-microcommit-current-head-staged-diff.csv,A,yes,yes,no,no,PASS,this file after add
+check_foreign_paths,0,yes,yes,no,no,PASS,0 MetaBOT/OCPilot/iSEO
+check_product_code,0,yes,yes,no,no,PASS,0 theme/plugin/ACF
+check_scope_prefix,all under FP-0002-SHPIGOVSKY/REPORTS,yes,yes,no,no,PASS,exact-path staging only

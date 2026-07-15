@@ -1,0 +1,17 @@
+check,expected,actual,result,notes
+workspace,X:\AI MARS,X:\AI MARS,PASS,
+volume_label,AI WS,AI WS,PASS,Get-Volume -DriveLetter X
+branch,mars/canonical-post-recovery,mars/canonical-post-recovery,PASS,
+head_before,*,a64da2708aa71942b81322b4df10dd7aadcc73d7,PASS,docs(metabot): add pc14 fu03 sandbox implementation evidence
+head_must_equal_dba97a38,NOT REQUIRED,a64da2708aa71942b81322b4df10dd7aadcc73d7,PASS,monorepo-aware gate; HEAD may advance via other MARS scoped commits
+base_persistence_commit,dba97a3833fc5853dde434aba0da3bbfc875d9fe,dba97a3833fc5853dde434aba0da3bbfc875d9fe,PASS,docs(fp0002): persist v9 e38-e51 wordpress accepted state
+base_is_ancestor_of_head,exit 0,exit 0,PASS,git merge-base --is-ancestor dba97a38 HEAD
+commits_since_base,*,2,PASS,fdbed1ad + a64da270 MetaBOT docs
+staged_before,0,0,PASS,git diff --cached --name-only empty
+foreign_wip_present,YES,YES,PASS,~418 status lines; untouched
+fp0002_micro_tail_present,YES,YES,PASS,persistence.md M + postcommit csv ?? + prior BLOCKED microcommit artifacts ??
+monorepo_aware_gate,YES,YES,PASS,operator authorized proceed on current HEAD if ancestor OK
+push_allowed,NO,NO,PASS,
+reset_clean_stash,NO,NO,PASS,not used
+git_add_dot,NO,NO,PASS,exact paths only planned
+result,PASS,PASS,PASS,proceed to micro-manifest/safety/stage/commit

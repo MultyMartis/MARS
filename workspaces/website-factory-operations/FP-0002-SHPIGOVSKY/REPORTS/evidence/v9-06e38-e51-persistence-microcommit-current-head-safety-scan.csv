@@ -1,0 +1,16 @@
+path_or_check,expected,actual,result,notes
+scope_prefix,FP-0002-SHPIGOVSKY/REPORTS only,all targets under REPORTS/,PASS,no product theme/plugin/ACF
+product_code_in_targets,0,0,PASS,docs/evidence text only
+foreign_path_in_targets,0,0,PASS,no MetaBOT/OCPilot/iSEO/OpenCart paths
+secrets_patterns,0,0,PASS,scanned password/api_key/secret/private key/mysql/wp-config/AKIA
+sql_files,0,0,PASS,no .sql
+binary_null_bytes,0,0,PASS,no NUL bytes in targets
+large_files_gt_100kb,0,0,PASS,largest target ~6KB
+uploads_paths,0,0,PASS,none
+runtime_backup_payload,0,0,PASS,none
+browser_cache_chrome_profile,0,0,PASS,none
+incoming_temp_zip_pycache,0,0,PASS,none
+git_add_dot,NO,NO,PASS,exact-path staging only
+reset_clean_stash,NO,NO,PASS,not used
+push,NO,NO,PASS,not allowed
+overall,PASS,PASS,PASS,safe to stage exact include set

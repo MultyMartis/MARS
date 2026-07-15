@@ -74,9 +74,9 @@ Evidence: `REPORTS/evidence/v9-06e38-e51-persistence-staged-diff.csv`
 | Item | Value |
 |---|---|
 | Commit attempted | YES |
-| Commit hash | _(filled post-commit)_ |
+| Commit hash | `dba97a3833fc5853dde434aba0da3bbfc875d9fe` |
 | Commit message | `docs(fp0002): persist v9 e38-e51 wordpress accepted state` |
-| Files committed | 4356+ |
+| Files committed | 4359 |
 | Push attempted | NO |
 | Push result | NOT ATTEMPTED |
 
@@ -84,11 +84,11 @@ Evidence: `REPORTS/evidence/v9-06e38-e51-persistence-staged-diff.csv`
 
 | Check | Expected | Actual | Result |
 |---|---|---|---|
-| Commit contains only FP-0002 paths | YES | _(post-commit)_ | _(post-commit)_ |
-| No staged files remain | YES | _(post-commit)_ | _(post-commit)_ |
-| Foreign WIP remains untouched | YES | _(post-commit)_ | _(post-commit)_ |
-| Key freeze markers present | YES | E42/E44/E47/E49/E50/E51 | _(post-commit)_ |
-| HEAD after | | _(post-commit)_ | |
+| Commit contains only FP-0002 paths | YES | 4359/4359 | PASS |
+| No staged files remain | YES | 0 | PASS |
+| Foreign WIP remains untouched | YES | ~179 foreign status lines unchanged | PASS |
+| Key freeze markers present | YES | 7 freeze markers in commit | PASS |
+| HEAD after | `dba97a3833fc5853dde434aba0da3bbfc875d9fe` | `dba97a3833fc5853dde434aba0da3bbfc875d9fe` | PASS |
 
 Evidence: `REPORTS/evidence/v9-06e38-e51-persistence-postcommit-validation.csv`
 
@@ -160,7 +160,7 @@ Commit created:
 YES
 
 Commit hash:
-_(filled post-commit)_
+dba97a3833fc5853dde434aba0da3bbfc875d9fe
 
 Push:
 NO

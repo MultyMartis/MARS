@@ -1,0 +1,13 @@
+path,git_status,include,reason,scope_ok,size_bytes,notes
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E38-E51-persistence.md,M,yes,persistence report postcommit tail,yes,5795,expected core target
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e38-e51-persistence-postcommit-validation.csv,??,yes,postcommit validation CSV,yes,733,expected core target
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E38-E51-persistence-microcommit.md,??,yes,prior BLOCKED microcommit report (small text),yes,5992,allowed previous attempt artifact
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e38-e51-persistence-microcommit-preflight.csv,??,yes,prior BLOCKED preflight evidence,yes,1118,allowed previous attempt artifact
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e38-e51-persistence-microcommit-manifest.csv,??,yes,prior BLOCKED manifest evidence,yes,1528,allowed previous attempt artifact
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e38-e51-persistence-microcommit-safety-scan.csv,??,yes,prior BLOCKED safety evidence,yes,743,allowed previous attempt artifact
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e38-e51-persistence-microcommit-staged-diff.csv,??,yes,prior BLOCKED staged-diff evidence,yes,170,allowed previous attempt artifact
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E38-E51-persistence-microcommit-current-head.md,??,yes,current-head monorepo-aware microcommit report,yes,6850,generated this attempt before commit
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e38-e51-persistence-microcommit-current-head-preflight.csv,??,yes,current-head preflight evidence,yes,1316,generated this attempt
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e38-e51-persistence-microcommit-current-head-manifest.csv,??,yes,current-head micro-manifest,yes,2557,this file size refreshed at write
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e38-e51-persistence-microcommit-current-head-safety-scan.csv,??,yes,current-head safety scan,yes,828,generated this attempt
+workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/evidence/v9-06e38-e51-persistence-microcommit-current-head-staged-diff.csv,??,yes,current-head staged-diff before commit,yes,2390,written after staging
