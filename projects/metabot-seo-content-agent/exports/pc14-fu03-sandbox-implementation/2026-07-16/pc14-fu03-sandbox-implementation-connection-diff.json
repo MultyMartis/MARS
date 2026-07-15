@@ -1,0 +1,80 @@
+{
+  "before": {
+    "Normalize Run Output": [
+      [
+        "Format Run Pipeline"
+      ]
+    ],
+    "Format Run Pipeline": [
+      [
+        "Prepare Memory Row Run",
+        "Take First Item"
+      ]
+    ]
+  },
+  "after": {
+    "Normalize Run Output": [
+      [
+        "Build Final Public Payload"
+      ]
+    ],
+    "Build Final Public Payload": [
+      [
+        "Final Surface Strict Scan"
+      ]
+    ],
+    "Final Surface Strict Scan": [
+      [
+        "IF Final Surface Clean"
+      ]
+    ],
+    "IF Final Surface Clean": [
+      [
+        "Format Run Pipeline"
+      ],
+      [
+        "Build Strict Surface Repair Payload"
+      ]
+    ],
+    "Build Strict Surface Repair Payload": [
+      [
+        "Run Strict Surface Repair"
+      ]
+    ],
+    "Run Strict Surface Repair": [
+      [
+        "Extract Strict Surface Repair"
+      ]
+    ],
+    "Extract Strict Surface Repair": [
+      [
+        "Final Surface Strict Re-Scan"
+      ]
+    ],
+    "Final Surface Strict Re-Scan": [
+      [
+        "IF Repaired Surface Clean"
+      ]
+    ],
+    "IF Repaired Surface Clean": [
+      [
+        "Format Run Pipeline"
+      ],
+      [
+        "Format Strict Reject Message"
+      ]
+    ],
+    "Format Strict Reject Message": [
+      [
+        "Take First Item",
+        "Prepare Memory Row Run"
+      ]
+    ],
+    "Format Run Pipeline": [
+      [
+        "Prepare Memory Row Run",
+        "Take First Item"
+      ]
+    ]
+  }
+}

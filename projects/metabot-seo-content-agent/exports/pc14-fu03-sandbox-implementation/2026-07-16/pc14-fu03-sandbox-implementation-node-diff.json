@@ -1,0 +1,65 @@
+{
+  "added": [
+    "Build Final Public Payload",
+    "Build Strict Surface Repair Payload",
+    "Extract Strict Surface Repair",
+    "Final Surface Strict Re-Scan",
+    "Final Surface Strict Scan",
+    "Format Strict Reject Message",
+    "IF Final Surface Clean",
+    "IF Repaired Surface Clean",
+    "Run Strict Surface Repair"
+  ],
+  "removed": [],
+  "modifiedCode": [
+    "Format Run Pipeline",
+    "Prepare Memory Row Run"
+  ],
+  "unexpected": [],
+  "expectedAdded": [
+    "Build Final Public Payload",
+    "Build Strict Surface Repair Payload",
+    "Extract Strict Surface Repair",
+    "Final Surface Strict Re-Scan",
+    "Final Surface Strict Scan",
+    "Format Strict Reject Message",
+    "IF Final Surface Clean",
+    "IF Repaired Surface Clean",
+    "Run Strict Surface Repair"
+  ],
+  "addedMatchesExpected": true,
+  "preserve_unchanged_checked": [
+    {
+      "name": "Close Lock Before Sending",
+      "jsCode_unchanged": true
+    },
+    {
+      "name": "TZ Strict Cleanup",
+      "jsCode_unchanged": true
+    },
+    {
+      "name": "Strict Cleanup",
+      "jsCode_unchanged": true
+    },
+    {
+      "name": "Strict Risk Scanner",
+      "jsCode_unchanged": true
+    },
+    {
+      "name": "Postcheck Strict Claims",
+      "jsCode_unchanged": true
+    },
+    {
+      "name": "Normalize Run Output",
+      "jsCode_unchanged": true
+    },
+    {
+      "name": "Take First Item",
+      "jsCode_unchanged": true
+    },
+    {
+      "name": "Finish Lock",
+      "jsCode_unchanged": true
+    }
+  ]
+}

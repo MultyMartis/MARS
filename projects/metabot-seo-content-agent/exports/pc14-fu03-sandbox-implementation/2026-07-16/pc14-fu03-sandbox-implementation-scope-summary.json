@@ -1,0 +1,33 @@
+{
+  "sandbox_id": "tVGWi7Ud3zz2eGKo",
+  "sandbox_name": "SEO Content Agent Beta.v14 - Worker.sandbox-pc14-fu03",
+  "production_id": "p4mqb4VuPcemIDlC",
+  "production_unchanged": true,
+  "nodes_before": 92,
+  "nodes_after": 101,
+  "new_nodes": [
+    "Build Final Public Payload",
+    "Final Surface Strict Scan",
+    "IF Final Surface Clean",
+    "Build Strict Surface Repair Payload",
+    "Run Strict Surface Repair",
+    "Extract Strict Surface Repair",
+    "Final Surface Strict Re-Scan",
+    "IF Repaired Surface Clean",
+    "Format Strict Reject Message"
+  ],
+  "modified_nodes": [
+    "Format Run Pipeline",
+    "Prepare Memory Row Run"
+  ],
+  "route_command": "unchanged (NL detect in Build Final Public Payload)",
+  "sot_version": "v1-pc14-fu03-strict-marker-sot",
+  "format_version": "v14-pc14-fu03-public-payload-consumer",
+  "side_effects": {
+    "telegram": false,
+    "openrouter_live": false,
+    "sheets_write": false,
+    "production_mutation": false,
+    "sandbox_active": false
+  }
+}

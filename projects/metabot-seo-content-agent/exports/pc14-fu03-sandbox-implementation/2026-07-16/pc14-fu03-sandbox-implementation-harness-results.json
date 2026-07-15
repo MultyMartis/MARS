@@ -1,0 +1,175 @@
+{
+  "allPass": true,
+  "requiredTotal": 21,
+  "requiredPassed": 21,
+  "requiredFailed": [],
+  "results": [
+    {
+      "id": "FU03-SOT-01",
+      "pass": true,
+      "detail": "SOT embedded with 10 stems + version",
+      "sot_version": "v1-pc14-fu03-strict-marker-sot"
+    },
+    {
+      "id": "FU03-SCAN-01",
+      "pass": true,
+      "detail": "seo_tz scanned",
+      "count": 0
+    },
+    {
+      "id": "FU03-SCAN-02",
+      "pass": true,
+      "detail": "strategy public residual detected"
+    },
+    {
+      "id": "FU03-SCAN-03",
+      "pass": true,
+      "detail": "seo_text наглядн* detected"
+    },
+    {
+      "id": "FU03-SCAN-04",
+      "pass": true,
+      "detail": "QA summary residual detected"
+    },
+    {
+      "id": "FU03-SCAN-05",
+      "pass": true,
+      "detail": "factcheck summary residual detected"
+    },
+    {
+      "id": "FU03-SCAN-06",
+      "pass": true,
+      "detail": "telegram preview residual detected"
+    },
+    {
+      "id": "FU03-REPAIR-01",
+      "pass": true,
+      "detail": "repair payload includes residuals/SOT/protected/task_id"
+    },
+    {
+      "id": "FU03-REPAIR-02",
+      "pass": true,
+      "detail": "strategy public cleaned after mock repair"
+    },
+    {
+      "id": "FU03-REPAIR-03",
+      "pass": true,
+      "detail": "QA summary cleaned or omitted"
+    },
+    {
+      "id": "FU03-REPAIR-04",
+      "pass": true,
+      "detail": "protected meta unchanged"
+    },
+    {
+      "id": "FU03-MEM-repair-clean",
+      "pass": true,
+      "detail": "memory repair_attempted_clean",
+      "optional": true
+    },
+    {
+      "id": "FU03-BLOCK-01",
+      "pass": true,
+      "detail": "blocked diagnostic only"
+    },
+    {
+      "id": "FU03-MEM-02",
+      "pass": true,
+      "detail": "memory blocked_dirty, empty sanitized_payload"
+    },
+    {
+      "id": "FU03-GET-02",
+      "pass": true,
+      "detail": "get blocked returns diagnostic only"
+    },
+    {
+      "id": "FU03-CLEAN-PATH",
+      "pass": true,
+      "detail": "clean fixture first scan clean",
+      "optional": true
+    },
+    {
+      "id": "FU03-MEM-01",
+      "pass": true,
+      "detail": "memory approved_clean"
+    },
+    {
+      "id": "FU03-GET-01",
+      "pass": true,
+      "detail": "get returns sanitized payload"
+    },
+    {
+      "id": "FU03-STRATEGY-HIDE",
+      "pass": true,
+      "detail": "raw strategy JSON hidden",
+      "optional": true
+    },
+    {
+      "id": "FU03-STRICT-01",
+      "pass": true,
+      "detail": "NL «не используй слова» triggers strict_surface_requested"
+    },
+    {
+      "id": "FU03-STRICT-02",
+      "pass": true,
+      "detail": "hard SOT enforced without strict flag / NL"
+    },
+    {
+      "id": "FU03-SCOPE-01",
+      "pass": true,
+      "detail": "Close Lock Before Sending task_id mapping preserved"
+    },
+    {
+      "id": "FU03-SCOPE-02",
+      "pass": true,
+      "detail": "credential refs preserved without literal sk- secrets in nodes"
+    },
+    {
+      "id": "FU03-SCOPE-03",
+      "pass": true,
+      "detail": "production Worker not mutated (runner attestation)"
+    },
+    {
+      "id": "FU03-GRAPH-01",
+      "pass": true,
+      "detail": "graph wiring matches design",
+      "optional": true,
+      "graph": {
+        "missing_nodes": [],
+        "normalize_to_build": true,
+        "no_direct_normalize_to_format": true,
+        "if_clean_true": true,
+        "if_clean_false": true,
+        "if_repaired_true": true,
+        "if_repaired_false": true,
+        "reject_to_take_first": true,
+        "reject_to_memory": true,
+        "format_has_consumer": true,
+        "active_false": true,
+        "ok": true
+      }
+    },
+    {
+      "id": "FU03-FORMAT-01",
+      "pass": true,
+      "detail": "Format public_payload consumer present",
+      "optional": true
+    },
+    {
+      "id": "FU03-VM-01",
+      "pass": true,
+      "detail": "no structuredClone in new Code nodes",
+      "optional": true
+    },
+    {
+      "id": "FU03-NL-CUSTOM",
+      "pass": true,
+      "detail": "custom task markers scanned",
+      "optional": true,
+      "markers": 2,
+      "hits": 4
+    }
+  ],
+  "sandboxName": "SEO Content Agent Beta.v14 - Worker.sandbox-pc14-fu03",
+  "nodeCount": 101
+}

@@ -1,0 +1,6 @@
+{
+  "preserved": true,
+  "before_task_id": "={{ $('Route Command').first().json.task_id }}",
+  "after_task_id": "={{ $('Route Command').first().json.task_id }}",
+  "expected_expression": "={{ $('Route Command').first().json.task_id }}"
+}
