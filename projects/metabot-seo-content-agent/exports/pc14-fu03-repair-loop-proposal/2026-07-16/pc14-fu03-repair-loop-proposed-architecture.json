@@ -1,0 +1,65 @@
+{
+  "proposal": "PC14_FU03_REPAIR_LOOP_PROPOSAL",
+  "based_on_audit": "PC14_FU03_GOVERNANCE_AUDIT_COMPLETE_REPAIR_LOOP_RECOMMENDED",
+  "audit_commit": "230b490a",
+  "related_smoke_task_id": "seo20260713221847nksocr",
+  "related_worker_execution": "3352",
+  "worker_id": "p4mqb4VuPcemIDlC",
+  "recommended_option": "C",
+  "recommended_option_label": "Final multi-surface JS scan gate + bounded LLM repair loop",
+  "governance_change": {
+    "summary": "Sandbox-first Worker governance: central strict marker SOT, final multi-surface scan gate over all user-visible public surfaces, bounded LLM repair (max 1 by default), re-scan, hard block send on residual dirty, Strategy hide-by-default, QA/factcheck summary only if clean, memory/raw vs sanitized + /get contract.",
+    "not_in_scope": [
+      "Another narrow JS regex patch for Strategy or QA summary",
+      "Production mutation",
+      "Sandbox mutation in this proposal task",
+      "PC-07 Close Lock remapping",
+      "Credential changes"
+    ]
+  },
+  "layers": [
+    {
+      "id": "central_marker_sot",
+      "role": "Single JS family list reused by scan, repair payload, optional prompt injection",
+      "owns": "Detection contract for hard forbidden stems",
+      "does_not_own": "Semantic rewrite"
+    },
+    {
+      "id": "final_public_payload_builder",
+      "role": "Compose allowlisted user-visible surfaces before send",
+      "owns": "Public vs internal separation; Strategy surface policy; QA/factcheck include policy"
+    },
+    {
+      "id": "final_multi_surface_scan_gate",
+      "role": "Deterministic SoT for send decision",
+      "owns": "Clean/dirty verdict + residual inventory across public surfaces",
+      "does_not_own": "Creative cleanup rewrite maps"
+    },
+    {
+      "id": "bounded_llm_repair_loop",
+      "role": "Rewrite only residual-hit surfaces",
+      "max_attempts_default": 1,
+      "max_attempts_operator_override": 2,
+      "owns": "Structured JSON repair of listed surfaces",
+      "does_not_own": "Infinite retry"
+    },
+    {
+      "id": "strict_reject_block",
+      "role": "Hard stop on dirty after repair",
+      "owns": "Block full content send; short diagnostic only; memory blocked_dirty"
+    },
+    {
+      "id": "limited_js_cleanup_freeze",
+      "role": "Keep existing TZ/text cleanup as compatibility only",
+      "owns": "Freeze expansion of synonym remap arms race",
+      "anti_pattern": "New regex per residual per smoke"
+    }
+  ],
+  "control_flow": {
+    "pass_first_scan": "Build Final Public Payload → Final Surface Strict Scan clean → Format/send approved → memory approved_clean",
+    "fail_first_scan": "Build Strict Repair Payload → Run Strict Surface Repair (LLM) → Extract → Final Surface Strict Re-Scan",
+    "pass_after_repair": "Format/send approved → memory repair_attempted_clean",
+    "fail_after_repair": "Format Strict Reject Message → send diagnostic only → close lock → memory blocked_dirty (no approved payload)"
+  },
+  "insertion_principle": "Least-risky rewire: insert gate after Normalize Run Output / as Format candidate gate before Take First Item + Send Telegram Run and before approved memory append. Do not rewire early generation or PC-07 lock chain."
+}

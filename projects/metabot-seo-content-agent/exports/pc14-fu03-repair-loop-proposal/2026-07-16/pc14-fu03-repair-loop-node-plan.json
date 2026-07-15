@@ -1,0 +1,131 @@
+{
+  "proposal": "PC14_FU03_REPAIR_LOOP_PROPOSAL",
+  "target_workflow": "SEO Content Agent Beta.v14 - Worker (sandbox clone first)",
+  "production_worker_id_reference_only": "p4mqb4VuPcemIDlC",
+  "current_nodes_after_hotfix01": 92,
+  "least_risky_insertion": "After Normalize Run Output, before Format Run Pipeline (or Format-as-candidate then gate before Send).",
+  "preserve_untouched": [
+    "Close Lock Before Sending mapping (PC-07)",
+    "Finish Lock",
+    "Telegram credential nodes",
+    "OpenRouter credential usage",
+    "Google Sheets credential usage",
+    "Webhook / Route Command core (except optional strict NL flag detection if chartered)",
+    "TZ Strict Cleanup / Strict Cleanup / Strict Risk Scanner as-is for v1 (freeze expansion)"
+  ],
+  "keep_pipeline_through": [
+    "Run Extract Outline",
+    "TZ Strict Cleanup",
+    "Run SEO Strategy / Extract SEO Strategy",
+    "Text + Repair + Strict Cleanup + Strict Risk Scanner",
+    "Build SEOQA / Run SEO QA / Factcheck",
+    "Postcheck Strict Claims",
+    "Normalize Run Output"
+  ],
+  "nodes_to_add": [
+    {
+      "name": "Build Final Public Payload",
+      "type": "n8n-nodes-base.code",
+      "purpose": "Canonical public_payload + internal_raw + repairable_fields; apply Strategy hide policy; apply QA/factcheck include policy; detect NL strict trigger into effective_strict_surface_gate",
+      "insert_after": "Normalize Run Output",
+      "version_marker_proposed": "v1-pc14-fu03-build-final-public-payload"
+    },
+    {
+      "name": "Final Surface Strict Scan",
+      "type": "n8n-nodes-base.code",
+      "purpose": "Scan all public surfaces via central marker SOT; emit residuals[] + clean/dirty",
+      "insert_after": "Build Final Public Payload",
+      "version_marker_proposed": "v1-pc14-fu03-final-surface-strict-scan"
+    },
+    {
+      "name": "IF Final Surface Clean",
+      "type": "n8n-nodes-base.if",
+      "purpose": "Branch clean vs dirty",
+      "insert_after": "Final Surface Strict Scan"
+    },
+    {
+      "name": "Build Strict Repair Payload",
+      "type": "n8n-nodes-base.code",
+      "purpose": "OpenRouter payload with public surfaces + residual list + marker SOT + repair contract",
+      "branch": "dirty",
+      "version_marker_proposed": "v1-pc14-fu03-build-strict-repair-payload"
+    },
+    {
+      "name": "Run Strict Surface Repair",
+      "type": "n8n-nodes-base.httpRequest",
+      "purpose": "Single OpenRouter LLM repair call (bounded)",
+      "branch": "dirty"
+    },
+    {
+      "name": "Extract Strict Surface Repair",
+      "type": "n8n-nodes-base.code",
+      "purpose": "Parse structured JSON repair; merge only affected repairable fields; preserve task_id/metadata",
+      "branch": "dirty"
+    },
+    {
+      "name": "Final Surface Strict Re-Scan",
+      "type": "n8n-nodes-base.code",
+      "purpose": "Re-use same scanner SOT on repaired public payload",
+      "branch": "dirty",
+      "version_marker_proposed": "v1-pc14-fu03-final-surface-strict-rescan"
+    },
+    {
+      "name": "IF Repaired Clean",
+      "type": "n8n-nodes-base.if",
+      "purpose": "Pass to format/send or reject",
+      "branch": "dirty"
+    },
+    {
+      "name": "Format Strict Reject Message",
+      "type": "n8n-nodes-base.code",
+      "purpose": "Short diagnostic only: STRICT QA REJECT — output blocked; task_id; residual summary",
+      "branch": "dirty_after_repair"
+    }
+  ],
+  "nodes_to_modify": [
+    {
+      "name": "Format Run Pipeline",
+      "change": "Consume approved public_payload only; stop dumping raw JSON.stringify(seoStrategy.table_strategy); render Strategy public summary/h1 bullets if present; include QA/factcheck summary only when public_payload says include_summary=true; prefer scanning already done — Format must not invent new unscanned text",
+      "risk": "medium — large existing jsCode; prefer minimal edits + call into shared SOT helpers duplicated carefully in sandbox design"
+    },
+    {
+      "name": "Prepare Memory Row Run",
+      "change": "Persist memory_status + sanitized_payload + optional raw_internal_ref fields; never write approved_clean for dirty",
+      "risk": "medium — Sheets column contract must be designed in sandbox design"
+    },
+    {
+      "name": "Route Command / flag parse (optional small)",
+      "change": "If brief matches NL 'не используй слова' / 'запрещённые слова', set effective_strict_surface_gate=true even when flags.strict=false",
+      "risk": "low–medium — false-positive over-trigger mitigation required"
+    }
+  ],
+  "clean_path": [
+    "Normalize Run Output",
+    "Build Final Public Payload",
+    "Final Surface Strict Scan",
+    "IF Final Surface Clean (true)",
+    "Format Run Pipeline",
+    "existing: Take First Item → … → Send Telegram Run → … → Prepare Memory Row Run (approved_clean) → Append Memory Run"
+  ],
+  "dirty_repair_path": [
+    "IF Final Surface Clean (false)",
+    "Build Strict Repair Payload",
+    "Run Strict Surface Repair",
+    "Extract Strict Surface Repair",
+    "Final Surface Strict Re-Scan",
+    "IF Repaired Clean (true) → Format Run Pipeline → send → memory repair_attempted_clean",
+    "IF Repaired Clean (false) → Format Strict Reject Message → send diagnostic → close lock → memory blocked_dirty"
+  ],
+  "max_repair_attempts": {
+    "default": 1,
+    "operator_approved_override": 2,
+    "no_open_loop": true
+  },
+  "estimated_new_nodes": "8–10",
+  "estimated_modified_nodes": "2–3",
+  "scope_guards": {
+    "FU03-SCOPE-01": "no PC-07 Close Lock mapping changes",
+    "FU03-SCOPE-02": "no Telegram/OpenRouter/Sheets credential changes",
+    "FU03-SCOPE-03": "no production mutation in proposal/design stages"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "proposal": "PC14_FU03_REPAIR_LOOP_PROPOSAL",
+  "risks": [
+    {
+      "id": "R1",
+      "risk": "Graph complexity from new IF/repair nodes",
+      "severity": "medium",
+      "impact": "medium",
+      "mitigation": "Least-risky insert after Normalize; keep early generation untouched; sandbox-first; import-safe grammar checks"
+    },
+    {
+      "id": "R2",
+      "risk": "Repair loop cost/time (extra OpenRouter call)",
+      "severity": "medium",
+      "impact": "medium",
+      "mitigation": "Max 1 repair by default; hide Strategy reduces repair surface; timeout budget mirrored from existing HTTP nodes"
+    },
+    {
+      "id": "R3",
+      "risk": "LLM repair hallucination / claim invention",
+      "severity": "medium",
+      "impact": "high",
+      "mitigation": "Repair contract: rewrite only residual fields; no new claims; preserve entities/tables/task_id; re-scan mandatory; block if dirty"
+    },
+    {
+      "id": "R4",
+      "risk": "False positives blocking clean content",
+      "severity": "medium",
+      "impact": "medium",
+      "mitigation": "Family stems already used PC14/FU01/FU02; harness clean-case; optional review of наглядн* addition"
+    },
+    {
+      "id": "R5",
+      "risk": "False negatives (synonyms escape SOT)",
+      "severity": "medium",
+      "impact": "high",
+      "mitigation": "Freeze synonym rewrite maps that create new escapes; central SOT updates for known near-synonyms; do not rely on JS remap alone"
+    },
+    {
+      "id": "R6",
+      "risk": "UX of blocked output",
+      "severity": "high",
+      "impact": "medium",
+      "mitigation": "Clear short diagnostic with task_id + residual summary; memory blocked_dirty; /get returns diagnostic not silent approved"
+    },
+    {
+      "id": "R7",
+      "risk": "Memory schema changes",
+      "severity": "medium",
+      "impact": "medium",
+      "mitigation": "Sandbox design documents Sheets columns; additive fields preferred; no broad sheet wipe"
+    },
+    {
+      "id": "R8",
+      "risk": "/get compatibility break",
+      "severity": "medium",
+      "impact": "high",
+      "mitigation": "Preserve not-found/success contracts; status-aware body only; reuse verified get harness patterns"
+    },
+    {
+      "id": "R9",
+      "risk": "Hidden Strategy block product impact",
+      "severity": "medium",
+      "impact": "low–medium",
+      "mitigation": "Preferred hide raw JSON; optional human summary; admin raw later; documented tradeoff"
+    },
+    {
+      "id": "R10",
+      "risk": "Strict flag over-triggering from NL detection",
+      "severity": "medium",
+      "impact": "medium",
+      "mitigation": "Narrow NL phrases; hard SOT always on final gate anyway; harness for non-strict clean briefs"
+    },
+    {
+      "id": "R11",
+      "risk": "Infinite JS cleanup expansion if proposal ignored",
+      "severity": "high if Option A chosen",
+      "impact": "high",
+      "mitigation": "Recommend Option C; freeze cleanup expansion policy in design charter"
+    }
+  ]
+}

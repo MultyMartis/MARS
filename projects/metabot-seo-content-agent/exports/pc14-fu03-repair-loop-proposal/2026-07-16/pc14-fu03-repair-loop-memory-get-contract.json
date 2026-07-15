@@ -1,0 +1,62 @@
+{
+  "proposal": "PC14_FU03_REPAIR_LOOP_PROPOSAL",
+  "memory_statuses": [
+    {
+      "status": "approved_clean",
+      "meaning": "Final multi-surface scan passed with zero residuals; no repair used",
+      "telegram": "full approved public payload",
+      "public_get": "sanitized approved payload"
+    },
+    {
+      "status": "repair_attempted_clean",
+      "meaning": "First scan dirty; repair succeeded; re-scan clean",
+      "telegram": "full approved public payload (post-repair)",
+      "public_get": "sanitized approved payload"
+    },
+    {
+      "status": "blocked_dirty",
+      "meaning": "Residuals remain after repair budget (or repair failed/unparseable)",
+      "telegram": "short STRICT QA REJECT diagnostic only",
+      "public_get": "diagnostic + residual summary; no polluted full text as approved"
+    },
+    {
+      "status": "failed",
+      "meaning": "Pipeline failure unrelated to strict surface governance (HTTP/LLM/parse/lock)",
+      "telegram": "existing error UX",
+      "public_get": "failure marker; no approved content"
+    }
+  ],
+  "storage_separation": {
+    "sanitized_approved_payload": "Only when status is approved_clean or repair_attempted_clean",
+    "raw_internal_payload": "Always storable as debug/internal; never marked approved if dirty",
+    "rule": "Never mark polluted user-visible composite as approved"
+  },
+  "get_contract": {
+    "command": "/get task_id",
+    "public_behavior": [
+      "If status approved_clean or repair_attempted_clean → return sanitized approved payload",
+      "If status blocked_dirty → return STRICT diagnostic + residual inventory only",
+      "If status failed / not found → existing not-found / failed behavior",
+      "Raw internals never via public /get"
+    ],
+    "admin_only_raw": "Optional future Admin path; not required for FU03 sandbox v1",
+    "compatibility": "Preserve existing /get success vs not-found paths (PC get verification); add status-aware payload selection without breaking lock lifecycle"
+  },
+  "strict_reject_message_shape": {
+    "banner": "STRICT QA REJECT — output blocked before final send",
+    "include": [
+      "task_id",
+      "residual_count",
+      "per-residual: surface, family, field_path, short snippet"
+    ],
+    "exclude": [
+      "full SEO text",
+      "raw Strategy JSON",
+      "full QA summary if polluted"
+    ]
+  },
+  "lock_behavior": {
+    "note": "Close lock still required on blocked path (PC-07 mapping untouched); send diagnostic then finish lock",
+    "do_not_change": "Close Lock Before Sending expression mapping from PC-07"
+  }
+}

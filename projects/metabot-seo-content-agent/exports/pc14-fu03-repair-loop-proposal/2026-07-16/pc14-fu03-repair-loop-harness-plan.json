@@ -1,0 +1,128 @@
+{
+  "proposal": "PC14_FU03_REPAIR_LOOP_PROPOSAL",
+  "harness_environment": "sandbox Worker clone + offline fixture harness preferred",
+  "side_effects": {
+    "telegram": false,
+    "openrouter": false,
+    "google_sheets": false,
+    "production": false
+  },
+  "fixtures": {
+    "primary_smoke": {
+      "task_id": "seo20260713221847nksocr",
+      "execution_id": "3352",
+      "expected_residuals_pre_governance": [
+        "Strategy table_strategy.reason: для удобства восприятия…",
+        "SEO QA summary: для удобства восприятия…",
+        "SEO Text near-synonym: для наглядности восприятия…"
+      ],
+      "strict_flag": false,
+      "nl_banned_list_in_brief": true
+    }
+  },
+  "cases": [
+    {
+      "id": "FU03-SOT-01",
+      "assert": "Centralized marker list includes PC14/FU01/FU02 families (+ recommended наглядн*)"
+    },
+    {
+      "id": "FU03-SCAN-01",
+      "assert": "Scans SEO ТЗ public surface"
+    },
+    {
+      "id": "FU03-SCAN-02",
+      "assert": "Scans SEO Strategy public surface (not only content_markdown)"
+    },
+    {
+      "id": "FU03-SCAN-03",
+      "assert": "Scans SEO Text"
+    },
+    {
+      "id": "FU03-SCAN-04",
+      "assert": "Scans SEO QA summary if included"
+    },
+    {
+      "id": "FU03-SCAN-05",
+      "assert": "Scans Factcheck summary if included"
+    },
+    {
+      "id": "FU03-SCAN-06",
+      "assert": "Scans final Telegram preview / composed public text"
+    },
+    {
+      "id": "FU03-REPAIR-01",
+      "assert": "Build residual repair payload with residual list + SOT"
+    },
+    {
+      "id": "FU03-REPAIR-02",
+      "assert": "Repair cleans Strategy reason when Strategy public fields are repairable (or Strategy hide policy removes residual)"
+    },
+    {
+      "id": "FU03-REPAIR-03",
+      "assert": "Repair cleans or omits QA summary residual per policy"
+    },
+    {
+      "id": "FU03-REPAIR-04",
+      "assert": "Repair does not mutate Task ID / metadata"
+    },
+    {
+      "id": "FU03-BLOCK-01",
+      "assert": "Dirty after repair blocks full output; diagnostic only"
+    },
+    {
+      "id": "FU03-MEM-01",
+      "assert": "Memory status approved_clean on clean path"
+    },
+    {
+      "id": "FU03-MEM-02",
+      "assert": "Memory status blocked_dirty on block path"
+    },
+    {
+      "id": "FU03-GET-01",
+      "assert": " /get returns sanitized approved payload"
+    },
+    {
+      "id": "FU03-GET-02",
+      "assert": " /get blocked dirty returns diagnostic only"
+    },
+    {
+      "id": "FU03-STRICT-01",
+      "assert": "NL «не используй слова» triggers strict surface gate even if flags.strict=false"
+    },
+    {
+      "id": "FU03-STRICT-02",
+      "assert": "Hard SOT families enforced even without strict flag"
+    },
+    {
+      "id": "FU03-SCOPE-01",
+      "assert": "No changes to PC-07 Close Lock mapping"
+    },
+    {
+      "id": "FU03-SCOPE-02",
+      "assert": "No credential changes"
+    },
+    {
+      "id": "FU03-SCOPE-03",
+      "assert": "No production mutation in sandbox design/implement stages until approval"
+    }
+  ],
+  "additional_scenarios": [
+    "top-level TZ phrase residual fixture",
+    "Strategy JSON residual fixture",
+    "QA summary residual fixture",
+    "Text near-synonym residual fixture",
+    "strict=false + NL ban list",
+    "strict=true explicit",
+    "clean output pass-through",
+    "repair success",
+    "repair fail / unparseable",
+    "Strategy hide policy",
+    "QA/factcheck summary omit vs include"
+  ],
+  "gate_before_production_proposal": [
+    "All FU03-* harness labels green on sandbox",
+    "Import-safe sandbox workflow JSON validated",
+    "Diff limited to allowlisted nodes",
+    "Secret scan pass"
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "proposal": "PC14_FU03_REPAIR_LOOP_PROPOSAL",
+  "central_marker_sot": {
+    "location": "Single JS object/function inside Worker Code nodes (shared snippet duplicated into Build Final Public Payload, Final Surface Strict Scan, Re-Scan, Build Strict Repair Payload; optional prompt injection)",
+    "families_required_pc14_fu01_fu02": [
+      "аккуратн*",
+      "удобств*",
+      "удобн*",
+      "позволя*",
+      "обеспеч*",
+      "контрол*",
+      "безопасн*",
+      "специализирован*",
+      "надежн*",
+      "надёжн*"
+    ],
+    "families_recommended_from_fu03_smoke": [
+      {
+        "family": "наглядн*",
+        "reason": "Strict Cleanup synonym remap produced residual «наглядности восприятия» in smoke 3352; scan must catch it or cleanup remap must be frozen/removed"
+      }
+    ],
+    "enforcement": {
+      "hard_sot_always": true,
+      "comment": "Hard SOT families enforced on final public surfaces regardless of flags.strict",
+      "nl_strict_triggers_surface_gate": true,
+      "nl_patterns": [
+        "не используй слова",
+        "запрещённые слова",
+        "запрещенные слова"
+      ]
+    },
+    "anti_infinite_js": "New families update SOT + repair prompt only; do not add new broad rewrite maps across TZ/Strict Cleanup/Scanner/Postcheck/Format"
+  },
+  "public_payload_shape": {
+    "seo_tz": "user-visible SEO ТЗ / outline render fields",
+    "seo_strategy_public": "sanitized human-readable strategy summary only (not raw table_strategy JSON dump)",
+    "seo_text": "content_markdown and related public text",
+    "seo_qa_public": {
+      "verdict": true,
+      "score": true,
+      "summary": "include only if clean after final scan/repair"
+    },
+    "factcheck_public": {
+      "verdict": true,
+      "summary": "include only if clean after final scan/repair"
+    },
+    "metadata": "task_id, tables_policy, pipeline labels (non-content)",
+    "tables_summary": "allowlisted table explanation fields that are user-visible",
+    "telegram_parts_preview": "composed public message candidate for multi-part send"
+  },
+  "internal_raw": {
+    "seo_strategy_raw": "full seo_strategy object including table_strategy",
+    "seoqa_raw": "full seoqa including polluted summary if any",
+    "factcheck_raw": "full factcheck",
+    "strict_scan_history": "first + repair scan residual lists",
+    "debug_only": true,
+    "not_returned_by_public_get": true
+  },
+  "strategy_policy": {
+    "preferred": "HIDE_RAW_STRATEGY_JSON",
+    "behavior": "Do not dump JSON.stringify(seoStrategy.table_strategy) into Telegram. Optionally render a short human-readable Strategy summary (headings / table titles / intent bullets) that also passes final scan.",
+    "alternative_not_preferred": "Sanitize raw Strategy JSON fields via repair loop and allow dump if clean",
+    "tradeoffs": {
+      "preferred_pros": [
+        "Removes primary residual channel proven in smoke 3352",
+        "Reduces debug noise for operators",
+        "Less repair surface area"
+      ],
+      "preferred_cons": [
+        "Less transparency of machine Strategy JSON in chat",
+        "Product may want debug Strategy — resolve via admin-only /get raw later"
+      ],
+      "sanitize_dump_pros": [
+        "Keeps Strategy JSON visible"
+      ],
+      "sanitize_dump_cons": [
+        "Larger residual risk surface",
+        "Nested JSON still hard to keep clean",
+        "Higher repair cost"
+      ]
+    }
+  },
+  "qa_factcheck_summary_policy": {
+    "preferred": "VERDICT_SCORE_ALWAYS_SUMMARY_IF_CLEAN",
+    "behavior": "Always show SEO QA / Factcheck verdict (+ score for QA). Include free-text summary only when that summary field passes final multi-surface scan (after repair if needed). If still dirty after repair budget → omit summary from Telegram and treat residual as block if any other public surface remains dirty; if only summary dirty and Strategy already hidden, prefer omit summary rather than block full send ONLY when operator product decision later overrides — default for this proposal: any public residual after repair BLOCKS full content send.",
+    "alternatives": {
+      "verdict_only_always": "Simpler UX, less transparency",
+      "always_include_then_repair": "More repair traffic for summaries"
+    },
+    "tradeoffs": {
+      "preferred_pros": [
+        "Keeps useful QA transparency when clean",
+        "Prevents QA echo of banned phrase into Telegram (smoke residual)"
+      ],
+      "preferred_cons": [
+        "Summary may disappear on polluted runs",
+        "Slightly more Format branching"
+      ]
+    }
+  },
+  "scanned_surfaces": [
+    "seo_tz",
+    "seo_strategy_public",
+    "seo_text",
+    "seo_qa_public.summary (if included)",
+    "factcheck_public.summary (if included)",
+    "tables_summary",
+    "telegram_parts_preview / full composed public text"
+  ],
+  "not_scanned_as_user_visible": [
+    "task_raw brief (input, not output)",
+    "internal_raw.*",
+    "OpenRouter payload dumps",
+    "progress Status* messages (out of this FU03 gate scope unless later chartered)"
+  ]
+}
