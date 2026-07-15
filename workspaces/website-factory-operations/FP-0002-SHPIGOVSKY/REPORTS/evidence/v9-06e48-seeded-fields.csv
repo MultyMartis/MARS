@@ -1,0 +1,117 @@
+post_id,field_name,action,seed_source,notes,preview
+74,service_general_team_image,preserved,accepted_demo_image,"control image if missing",non-scalar
+74,service_general_clinic_landscape_image,preserved,accepted_demo_image,"control image if missing",non-scalar
+74,service_general_corridor_image,preserved,accepted_demo_image,"control image if missing",non-scalar
+314,service_general_intro_heading,seeded,page_title_demo,"page-specific neutral demo","Лечение наркотической зависимости — состояние, с кото"
+314,service_general_intro_highlight,seeded,neutral_demo,"neutral demo highlight","DEMO — ЭТО НЕ ПРИГОВОР. ЭТО СОСТОЯНИЕ, КОТОРОЕ ПОДДАЁТСЯ "
+314,service_general_bordered_info_items,seeded,page_title_demo,"neutral bordered",array:3
+314,service_general_signs_heading,seeded,page_title_demo,"neutral signs","Признаки, на которые стоит обратить внимание (Лечение �"
+314,service_general_signs_intro,seeded,page_title_demo,"neutral signs","DEMO — если вы замечаете у себя или близкого изменения, с"
+314,service_general_signs_items,seeded,neutral_demo,"neutral signs",array:5
+314,service_general_signs_editorial,seeded,page_title_demo,"neutral signs editorial","DEMO — краткий редакционный блок для страницы «Лечение �"
+314,service_general_approach_heading,seeded,page_title_demo,"neutral approach","Наш подход к работе с запросом «Лечение наркотической "
+314,service_general_approach_highlight,seeded,neutral_demo,"neutral approach","DEMO — МЫ СОЧЕТАЕМ ДИАГНОСТИКУ, ТЕРАПИЮ И ПОДДЕРЖКУ СЕМЬ"
+314,service_general_approach_intro,seeded,page_title_demo,"neutral approach","DEMO — лечение по направлению «Лечение наркотической за"
+314,service_general_approach_more_label,seeded,neutral_demo,"neutral approach link",подробнее
+314,service_general_approach_more_url,seeded,neutral_demo,"neutral approach link",http://shpigovsky.test/o-centre/programma-lecheniya/
+314,service_general_approach_cards,seeded,neutral_demo,"neutral approach cards",array:4
+314,service_general_team_image,seeded,accepted_demo_image,"shared accepted demo image",1238
+314,service_general_clinic_landscape_image,preserved,accepted_demo_image,"shared accepted demo image",non-scalar
+314,service_general_corridor_image,preserved,accepted_demo_image,"shared accepted demo image",non-scalar
+314,service_general_program_heading,seeded,neutral_demo,"neutral program","Наша программа включает 4 направления"
+314,service_general_program_more_label,seeded,neutral_demo,"neutral program",подробнее
+314,service_general_program_lead,seeded,page_title_demo,"neutral program","DEMO — программа для «Лечение наркотической зависимост�"
+314,service_general_program_intro_items,seeded,page_title_demo,"neutral program",array:2
+314,service_general_stages_heading,seeded,neutral_demo,"neutral stages","Что нужно для начала работы с нами"
+314,service_general_stages_lead,seeded,neutral_demo,"neutral stages","DEMO — мы соблюдаем конфиденциальность и уважение к гра�"
+314,service_general_stages_items,seeded,neutral_demo,"neutral stages",array:4
+314,service_general_stages_support_heading,seeded,neutral_demo,"neutral stages","Поддержка осуществляется на всех этапах:"
+314,service_general_stages_support_items,seeded,neutral_demo,"neutral stages",array:4
+314,service_general_faq_heading,seeded,neutral_demo,"neutral faq","Нас часто спрашивают"
+314,service_general_faq_items,seeded,page_title_demo,"neutral faq",array:3
+314,service_general_specialists_visible,preserved,historic_layout,"already set (toggle already set)",0
+314,service_general_children_visible,seeded,automatic_children,"keep automatic child tiles visible",1
+78,service_general_intro_heading,seeded,page_title_demo,"page-specific neutral demo","Депрессия — состояние, с которым можно работать систе�"
+78,service_general_intro_highlight,seeded,neutral_demo,"neutral demo highlight","DEMO — ЭТО НЕ ПРИГОВОР. ЭТО СОСТОЯНИЕ, КОТОРОЕ ПОДДАЁТСЯ "
+78,service_general_bordered_info_items,seeded,page_title_demo,"neutral bordered",array:3
+78,service_general_signs_heading,seeded,page_title_demo,"neutral signs","Признаки, на которые стоит обратить внимание (Депресси"
+78,service_general_signs_intro,seeded,page_title_demo,"neutral signs","DEMO — если вы замечаете у себя или близкого изменения, с"
+78,service_general_signs_items,seeded,neutral_demo,"neutral signs",array:5
+78,service_general_signs_editorial,seeded,page_title_demo,"neutral signs editorial","DEMO — краткий редакционный блок для страницы «Депресси"
+78,service_general_approach_heading,seeded,page_title_demo,"neutral approach","Наш подход к работе с запросом «Депрессия»"
+78,service_general_approach_highlight,seeded,neutral_demo,"neutral approach","DEMO — МЫ СОЧЕТАЕМ ДИАГНОСТИКУ, ТЕРАПИЮ И ПОДДЕРЖКУ СЕМЬ"
+78,service_general_approach_intro,seeded,page_title_demo,"neutral approach","DEMO — лечение по направлению «Депрессия» строится как �"
+78,service_general_approach_more_label,seeded,neutral_demo,"neutral approach link",подробнее
+78,service_general_approach_more_url,seeded,neutral_demo,"neutral approach link",http://shpigovsky.test/o-centre/programma-lecheniya/
+78,service_general_approach_cards,seeded,neutral_demo,"neutral approach cards",array:4
+78,service_general_team_image,seeded,accepted_demo_image,"shared accepted demo image",1238
+78,service_general_clinic_landscape_image,preserved,accepted_demo_image,"shared accepted demo image",non-scalar
+78,service_general_corridor_image,preserved,accepted_demo_image,"shared accepted demo image",non-scalar
+78,service_general_program_heading,seeded,neutral_demo,"neutral program","Наша программа включает 4 направления"
+78,service_general_program_more_label,seeded,neutral_demo,"neutral program",подробнее
+78,service_general_program_lead,seeded,page_title_demo,"neutral program","DEMO — программа для «Депрессия»: медицинская, психотер�"
+78,service_general_program_intro_items,seeded,page_title_demo,"neutral program",array:2
+78,service_general_stages_heading,seeded,neutral_demo,"neutral stages","Что нужно для начала работы с нами"
+78,service_general_stages_lead,seeded,neutral_demo,"neutral stages","DEMO — мы соблюдаем конфиденциальность и уважение к гра�"
+78,service_general_stages_items,seeded,neutral_demo,"neutral stages",array:4
+78,service_general_stages_support_heading,seeded,neutral_demo,"neutral stages","Поддержка осуществляется на всех этапах:"
+78,service_general_stages_support_items,seeded,neutral_demo,"neutral stages",array:4
+78,service_general_faq_heading,seeded,neutral_demo,"neutral faq","Нас часто спрашивают"
+78,service_general_faq_items,seeded,page_title_demo,"neutral faq",array:3
+78,service_general_specialists_visible,preserved,historic_layout,"already set (toggle already set)",0
+81,service_general_intro_heading,seeded,page_title_demo,"page-specific neutral demo","Тревожные расстройства — состояние, с которым можно р�"
+81,service_general_intro_highlight,seeded,neutral_demo,"neutral demo highlight","DEMO — ЭТО НЕ ПРИГОВОР. ЭТО СОСТОЯНИЕ, КОТОРОЕ ПОДДАЁТСЯ "
+81,service_general_bordered_info_items,seeded,page_title_demo,"neutral bordered",array:3
+81,service_general_signs_heading,seeded,page_title_demo,"neutral signs","Признаки, на которые стоит обратить внимание (Тревожны"
+81,service_general_signs_intro,seeded,page_title_demo,"neutral signs","DEMO — если вы замечаете у себя или близкого изменения, с"
+81,service_general_signs_items,seeded,neutral_demo,"neutral signs",array:5
+81,service_general_signs_editorial,seeded,page_title_demo,"neutral signs editorial","DEMO — краткий редакционный блок для страницы «Тревожны"
+81,service_general_approach_heading,seeded,page_title_demo,"neutral approach","Наш подход к работе с запросом «Тревожные расстройств�"
+81,service_general_approach_highlight,seeded,neutral_demo,"neutral approach","DEMO — МЫ СОЧЕТАЕМ ДИАГНОСТИКУ, ТЕРАПИЮ И ПОДДЕРЖКУ СЕМЬ"
+81,service_general_approach_intro,seeded,page_title_demo,"neutral approach","DEMO — лечение по направлению «Тревожные расстройства» "
+81,service_general_approach_more_label,seeded,neutral_demo,"neutral approach link",подробнее
+81,service_general_approach_more_url,seeded,neutral_demo,"neutral approach link",http://shpigovsky.test/o-centre/programma-lecheniya/
+81,service_general_approach_cards,seeded,neutral_demo,"neutral approach cards",array:4
+81,service_general_team_image,seeded,accepted_demo_image,"shared accepted demo image",1238
+81,service_general_clinic_landscape_image,seeded,accepted_demo_image,"shared accepted demo image",1239
+81,service_general_corridor_image,seeded,accepted_demo_image,"shared accepted demo image",1709
+81,service_general_program_heading,seeded,neutral_demo,"neutral program","Наша программа включает 4 направления"
+81,service_general_program_more_label,seeded,neutral_demo,"neutral program",подробнее
+81,service_general_program_lead,seeded,page_title_demo,"neutral program","DEMO — программа для «Тревожные расстройства»: медицинс"
+81,service_general_program_intro_items,seeded,page_title_demo,"neutral program",array:2
+81,service_general_stages_heading,seeded,neutral_demo,"neutral stages","Что нужно для начала работы с нами"
+81,service_general_stages_lead,seeded,neutral_demo,"neutral stages","DEMO — мы соблюдаем конфиденциальность и уважение к гра�"
+81,service_general_stages_items,seeded,neutral_demo,"neutral stages",array:4
+81,service_general_stages_support_heading,seeded,neutral_demo,"neutral stages","Поддержка осуществляется на всех этапах:"
+81,service_general_stages_support_items,seeded,neutral_demo,"neutral stages",array:4
+81,service_general_faq_heading,seeded,neutral_demo,"neutral faq","Нас часто спрашивают"
+81,service_general_faq_items,seeded,page_title_demo,"neutral faq",array:3
+81,service_general_specialists_visible,seeded,historic_layout,"preserve no-specialists leaf layout",0
+85,service_general_intro_heading,seeded,page_title_demo,"page-specific neutral demo","Анорексия — состояние, с которым можно работать систе�"
+85,service_general_intro_highlight,seeded,neutral_demo,"neutral demo highlight","DEMO — ЭТО НЕ ПРИГОВОР. ЭТО СОСТОЯНИЕ, КОТОРОЕ ПОДДАЁТСЯ "
+85,service_general_bordered_info_items,seeded,page_title_demo,"neutral bordered",array:3
+85,service_general_signs_heading,seeded,page_title_demo,"neutral signs","Признаки, на которые стоит обратить внимание (Анорекси"
+85,service_general_signs_intro,seeded,page_title_demo,"neutral signs","DEMO — если вы замечаете у себя или близкого изменения, с"
+85,service_general_signs_items,seeded,neutral_demo,"neutral signs",array:5
+85,service_general_signs_editorial,seeded,page_title_demo,"neutral signs editorial","DEMO — краткий редакционный блок для страницы «Анорекси"
+85,service_general_approach_heading,seeded,page_title_demo,"neutral approach","Наш подход к работе с запросом «Анорексия»"
+85,service_general_approach_highlight,seeded,neutral_demo,"neutral approach","DEMO — МЫ СОЧЕТАЕМ ДИАГНОСТИКУ, ТЕРАПИЮ И ПОДДЕРЖКУ СЕМЬ"
+85,service_general_approach_intro,seeded,page_title_demo,"neutral approach","DEMO — лечение по направлению «Анорексия» строится как �"
+85,service_general_approach_more_label,seeded,neutral_demo,"neutral approach link",подробнее
+85,service_general_approach_more_url,seeded,neutral_demo,"neutral approach link",http://shpigovsky.test/o-centre/programma-lecheniya/
+85,service_general_approach_cards,seeded,neutral_demo,"neutral approach cards",array:4
+85,service_general_team_image,seeded,accepted_demo_image,"shared accepted demo image",1238
+85,service_general_clinic_landscape_image,seeded,accepted_demo_image,"shared accepted demo image",1239
+85,service_general_corridor_image,seeded,accepted_demo_image,"shared accepted demo image",1709
+85,service_general_program_heading,seeded,neutral_demo,"neutral program","Наша программа включает 4 направления"
+85,service_general_program_more_label,seeded,neutral_demo,"neutral program",подробнее
+85,service_general_program_lead,seeded,page_title_demo,"neutral program","DEMO — программа для «Анорексия»: медицинская, психотер�"
+85,service_general_program_intro_items,seeded,page_title_demo,"neutral program",array:2
+85,service_general_stages_heading,seeded,neutral_demo,"neutral stages","Что нужно для начала работы с нами"
+85,service_general_stages_lead,seeded,neutral_demo,"neutral stages","DEMO — мы соблюдаем конфиденциальность и уважение к гра�"
+85,service_general_stages_items,seeded,neutral_demo,"neutral stages",array:4
+85,service_general_stages_support_heading,seeded,neutral_demo,"neutral stages","Поддержка осуществляется на всех этапах:"
+85,service_general_stages_support_items,seeded,neutral_demo,"neutral stages",array:4
+85,service_general_faq_heading,seeded,neutral_demo,"neutral faq","Нас часто спрашивают"
+85,service_general_faq_items,seeded,page_title_demo,"neutral faq",array:3
+85,service_general_specialists_visible,seeded,historic_layout,"preserve no-specialists leaf layout",0

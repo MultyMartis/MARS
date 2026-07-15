@@ -1,0 +1,173 @@
+{
+    "74": {
+        "post_id": 74,
+        "title": "Лечение алкогольной зависимости",
+        "role": "service",
+        "groups": [
+            {
+                "visible_order": 1,
+                "title": "Макет страницы услуги",
+                "key": "group_fp02_service_layout_hero",
+                "menu_order": 0,
+                "source": "json",
+                "field_count": 13
+            },
+            {
+                "visible_order": 2,
+                "title": "Hero страницы услуги",
+                "key": "group_fp02_service_hero",
+                "menu_order": 1,
+                "source": "json",
+                "field_count": 7
+            },
+            {
+                "visible_order": 3,
+                "title": "Услуга — блоки страницы",
+                "key": "group_fp02_service_general_parity",
+                "menu_order": 2,
+                "source": "json",
+                "field_count": 64
+            }
+        ],
+        "keys": [
+            "group_fp02_service_layout_hero",
+            "group_fp02_service_hero",
+            "group_fp02_service_general_parity"
+        ]
+    },
+    "314": {
+        "post_id": 314,
+        "title": "Лечение наркотической зависимости",
+        "role": "service",
+        "groups": [
+            {
+                "visible_order": 1,
+                "title": "Макет страницы услуги",
+                "key": "group_fp02_service_layout_hero",
+                "menu_order": 0,
+                "source": "json",
+                "field_count": 13
+            },
+            {
+                "visible_order": 2,
+                "title": "Hero страницы услуги",
+                "key": "group_fp02_service_hero",
+                "menu_order": 1,
+                "source": "json",
+                "field_count": 7
+            },
+            {
+                "visible_order": 3,
+                "title": "Услуга — блоки страницы",
+                "key": "group_fp02_service_general_parity",
+                "menu_order": 2,
+                "source": "json",
+                "field_count": 64
+            }
+        ],
+        "keys": [
+            "group_fp02_service_layout_hero",
+            "group_fp02_service_hero",
+            "group_fp02_service_general_parity"
+        ]
+    },
+    "78": {
+        "post_id": 78,
+        "title": "Депрессия",
+        "role": "service",
+        "groups": [
+            {
+                "visible_order": 1,
+                "title": "Макет страницы услуги",
+                "key": "group_fp02_service_layout_hero",
+                "menu_order": 0,
+                "source": "json",
+                "field_count": 13
+            },
+            {
+                "visible_order": 2,
+                "title": "Hero страницы услуги",
+                "key": "group_fp02_service_hero",
+                "menu_order": 1,
+                "source": "json",
+                "field_count": 7
+            },
+            {
+                "visible_order": 3,
+                "title": "Услуга — блоки страницы",
+                "key": "group_fp02_service_general_parity",
+                "menu_order": 2,
+                "source": "json",
+                "field_count": 64
+            }
+        ],
+        "keys": [
+            "group_fp02_service_layout_hero",
+            "group_fp02_service_hero",
+            "group_fp02_service_general_parity"
+        ]
+    },
+    "73": {
+        "post_id": 73,
+        "title": "Зависимости",
+        "role": "section",
+        "groups": [
+            {
+                "visible_order": 1,
+                "title": "Service — FAQ",
+                "key": "group_fp02_service_faq",
+                "menu_order": 0,
+                "source": "php",
+                "field_count": 1
+            },
+            {
+                "visible_order": 2,
+                "title": "Service — Relationships \/ Related Services",
+                "key": "group_fp02_service_relationships",
+                "menu_order": 0,
+                "source": "php",
+                "field_count": 1
+            },
+            {
+                "visible_order": 3,
+                "title": "Service — Structured Sections",
+                "key": "group_fp02_service_structured_sections",
+                "menu_order": 0,
+                "source": "php",
+                "field_count": 9
+            },
+            {
+                "visible_order": 4,
+                "title": "Макет страницы услуги",
+                "key": "group_fp02_service_layout_hero",
+                "menu_order": 0,
+                "source": "json",
+                "field_count": 13
+            },
+            {
+                "visible_order": 5,
+                "title": "Hero страницы услуги",
+                "key": "group_fp02_service_hero",
+                "menu_order": 1,
+                "source": "json",
+                "field_count": 7
+            },
+            {
+                "visible_order": 6,
+                "title": "Service — Раздел (блоки по порядку сайта)",
+                "key": "group_fp02_service_section_parity",
+                "menu_order": 2,
+                "source": "json",
+                "field_count": 55
+            }
+        ],
+        "keys": [
+            "group_fp02_service_faq",
+            "group_fp02_service_relationships",
+            "group_fp02_service_structured_sections",
+            "group_fp02_service_layout_hero",
+            "group_fp02_service_hero",
+            "group_fp02_service_section_parity"
+        ]
+    }
+}

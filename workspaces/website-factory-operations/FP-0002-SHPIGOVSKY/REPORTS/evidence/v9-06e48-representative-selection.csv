@@ -1,0 +1,6 @@
+post_id,title,url,parent_section,representative_type,reason,rollout_action,notes
+74,"Лечение алкогольной зависимости",http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/,Зависимости,accepted_base_control,"E47 accepted/frozen alcohol base; control only",validate_only_seed_missing_images_if_any,
+314,"Лечение наркотической зависимости",http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/,Зависимости,child_tiles_complex,"Parent under Зависимости with automatic child service tiles",seed_missing_acf_neutral_preserve_children,
+78,Депрессия,http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/depressiya/,"Психическое здоровье",ordinary_nested,"Ordinary nested leaf (Депрессия) under Психическое здоровье",seed_missing_acf_neutral,
+81,"Тревожные расстройства",http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/,"Психическое здоровье",psych_section,"Representative Услуга under section #77 besides #78",seed_missing_acf_neutral,
+85,Анорексия,http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/,"Расстройства пищевого поведения",rpp_section,"Representative Услуга under RPP section #84",seed_missing_acf_neutral,

@@ -1,0 +1,33 @@
+{
+    "group_exists": true,
+    "items_field": {
+        "key": "field_fp02_reviews_items",
+        "name": "reviews_items"
+    },
+    "subfields": [
+        {
+            "key": "field_fp02_review_author_label",
+            "name": "author_label",
+            "label": "Author label",
+            "type": "text"
+        },
+        {
+            "key": "field_fp02_review_text",
+            "name": "text",
+            "label": "Review text",
+            "type": "textarea"
+        },
+        {
+            "key": "field_fp02_review_meta",
+            "name": "metadata",
+            "label": "Metadata",
+            "type": "text"
+        },
+        {
+            "key": "field_fp02_review_source",
+            "name": "source",
+            "label": "Source",
+            "type": "text"
+        }
+    ]
+}

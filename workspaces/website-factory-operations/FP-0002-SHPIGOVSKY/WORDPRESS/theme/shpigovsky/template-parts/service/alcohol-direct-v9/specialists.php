@@ -3,6 +3,7 @@
  * Direct V9 port: specialists section (usluga-konechnaya-v1.html).
  *
  * V9-06E18: shared specialists block data source with home/subdivision renderers.
+ * V9-06E34: cards from `/specyalisty/` child pages; card links to specialist pages.
  *
  * @package Shpigovsky
  */
@@ -31,9 +32,15 @@ $all_link_url   = shpigovsky_get_specialists_all_link_url();
       <div class="specialists__wrapper swiper-wrapper">
         <?php foreach ( $cards as $card ) : ?>
         <article class="specialists__card swiper-slide">
-          <img class="specialists__photo" src="<?php echo esc_url( $card['image'] ); ?>" width="<?php echo (int) $card['width']; ?>" height="<?php echo (int) $card['height']; ?>" alt="<?php echo esc_attr( $card['name'] ); ?>" loading="lazy" decoding="async">
-          <h3 class="specialists__name"><?php echo esc_html( $card['name'] ); ?></h3>
-          <p class="specialists__role"><?php echo wp_kses_post( $card['role'] ); ?></p>
+          <?php if ( ! empty( $card['link'] ) ) : ?>
+          <a class="specialists__card-link" href="<?php echo esc_url( $card['link'] ); ?>">
+          <?php endif; ?>
+            <img class="specialists__photo" src="<?php echo esc_url( $card['image'] ); ?>" width="<?php echo (int) $card['width']; ?>" height="<?php echo (int) $card['height']; ?>" alt="<?php echo esc_attr( $card['name'] ); ?>" loading="lazy" decoding="async">
+            <h3 class="specialists__name"><?php echo esc_html( $card['name'] ); ?></h3>
+            <p class="specialists__role"><?php echo wp_kses_post( $card['role'] ); ?></p>
+          <?php if ( ! empty( $card['link'] ) ) : ?>
+          </a>
+          <?php endif; ?>
         </article>
         <?php endforeach; ?>
       </div>

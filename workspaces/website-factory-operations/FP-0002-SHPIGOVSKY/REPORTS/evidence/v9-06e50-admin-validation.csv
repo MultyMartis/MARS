@@ -1,0 +1,9 @@
+page,expected,actual,result,notes
+"#73 Зависимости","demo/current in ACF; role=section; layout=subdivision","role=section layout=subdivision nature_heading=Природа зависимости 000101 team=1238 corridor=1709 land=1239",PASS,
+"#77 Психическое здоровье","demo/current in ACF; role=section; layout=subdivision","role=section layout=subdivision nature_heading=Природа психических состояний team=1238 corridor=1709 land=1239",PASS,
+"#84 Расстройства пищевого поведения","demo/current in ACF; role=section; layout=subdivision","role=section layout=subdivision nature_heading=Природа расстройств пищевого поведения team=1238 corridor=1709 land=1239",PASS,
+"#74 control","service model preserved",role=service,PASS,
+"#314 control","service model preserved",role=service,PASS,
+"#78 control","service model preserved",role=service,PASS,
+"#81 control","service model preserved",role=service,PASS,
+"#85 control","service model preserved",role=service,PASS,

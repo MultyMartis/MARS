@@ -40,11 +40,23 @@ $context = shpigovsky_get_about_program_context( $page_id );
 
 		<div class="services-program-v2__grid">
 			<?php foreach ( $context['items'] as $item ) : ?>
+				<?php
+				$item_url = isset( $item['url'] ) ? trim( (string) $item['url'] ) : '';
+				?>
 				<article class="services-program-v2__item">
 					<div class="services-program-v2__item-body">
-						<h3 class="services-program-v2__item-title"><?php echo esc_html( $item['title'] ); ?></h3>
+						<h3 class="services-program-v2__item-title">
+							<?php if ( '' !== $item_url ) : ?>
+								<a class="services-program-v2__item-title-link" href="<?php echo esc_url( $item_url ); ?>"><?php echo esc_html( $item['title'] ); ?></a>
+							<?php else : ?>
+								<?php echo esc_html( $item['title'] ); ?>
+							<?php endif; ?>
+						</h3>
 					</div>
 					<div class="services-program-v2__item-media">
+						<?php if ( '' !== $item_url ) : ?>
+							<a class="services-program-v2__item-image-link" href="<?php echo esc_url( $item_url ); ?>">
+						<?php endif; ?>
 						<img
 							class="services-program-v2__item-image"
 							src="<?php echo esc_url( $item['image'] ); ?>"
@@ -54,6 +66,9 @@ $context = shpigovsky_get_about_program_context( $page_id );
 							loading="lazy"
 							decoding="async"
 						>
+						<?php if ( '' !== $item_url ) : ?>
+							</a>
+						<?php endif; ?>
 					</div>
 				</article>
 			<?php endforeach; ?>

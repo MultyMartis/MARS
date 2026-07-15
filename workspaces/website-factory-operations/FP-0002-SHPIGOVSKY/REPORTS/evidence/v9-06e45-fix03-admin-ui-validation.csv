@@ -1,0 +1,7 @@
+page,id,level,ui_expected,ui_actual,role_layout,result
+Zavisimosti,73,first,selector visible; no override; no technical dropdown,first-level button_group + help; technical prepare_field false,section/subdivision,PASS
+Psihicheskoe zdorovie,77,first,selector visible,first-level selector,section/subdivision,PASS
+RPP,84,first,selector visible,first-level selector,section/subdivision,PASS
+Narcotic,314,nested,auto-service notice; no override,nested message auto Usluga,service/service_general,PASS
+Alcohol,74,nested,auto-service notice,nested auto; corrected section/subdivision->service,service/service_general,PASS
+Depression,78,nested,auto-service notice,nested auto,service/service_general,PASS

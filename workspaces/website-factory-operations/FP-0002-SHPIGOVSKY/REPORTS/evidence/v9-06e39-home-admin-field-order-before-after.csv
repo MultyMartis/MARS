@@ -1,0 +1,21 @@
+order_before,order_after,field_name,label_before,label_after,type,section,action,notes
+1,1,hero_media,Hero image,Изображение hero,image,Hero,reorder+localize,key preserved
+2,2,hero_cta_label,Текст кнопки в hero-блоке,Текст кнопки в hero-блоке,text,Hero,localize,already RU
+3,3,home_hero_slides,Hero slides,Слайды hero,repeater,Hero,reorder+localize,subfields RU
+4,11,home_advantages,Advantages / trust,Преимущества / доверие,repeater,Feature grid,move+localize,moved after gallery to match frontend
+5,7,home_intro_bands,Intro bands,Карточки введения,repeater,Recovery intro,move+localize,grouped with recovery intro
+6,4,home_recovery_intro_heading,Recovery intro — заголовок,Введение о восстановлении — заголовок,text,Recovery intro,move+localize,before intro_bands
+7,5,home_recovery_intro_lead_1,Recovery intro — абзац 1,Введение о восстановлении — абзац 1,textarea,Recovery intro,move+localize,
+8,6,home_recovery_intro_lead_2,Recovery intro — абзац 2,Введение о восстановлении — абзац 2,textarea,Recovery intro,move+localize,
+,8,home_founder_quote_source_notice,(n/a),Цитата основателя на главной,message,Founder quote,add notice,new automated notice; no meta
+,9,home_treatment_source_notice,(n/a),Лечение и профилактика на главной,message,Treatment accordion,add notice,new automated notice; no meta
+9,10,home_gallery_source_notice,Галерея на главной,Галерея на главной,message,Gallery,move+localize,message text refreshed RU i18n
+10,14,home_specialists_source_notice,Специалисты на главной,Специалисты на главной,message,Specialists,move+localize,was too early
+11,15,home_articles_heading,Articles — заголовок,Статьи — заголовок,text,Articles,localize,
+12,16,home_articles_source_notice,Статьи на главной,Статьи на главной,message,Articles,localize,
+13,13,home_comfort_source_notice,Комфорт на главной,Комфорт на главной,message,Comfort,move+localize,after reviews per frontend
+14,12,home_reviews_source_notice,Отзывы на главной,Отзывы на главной,message,Reviews,move+localize,before comfort per frontend
+15,17,home_faq_heading,Заголовок FAQ,Заголовок FAQ,text,FAQ,localize,
+16,18,home_faq_items,FAQ,Вопросы и ответы (FAQ),repeater,FAQ,localize,
+17,19,home_cta_title,CTA title,CTA / форма — заголовок (fallback),text,Final form,localize,fallback chain documented
+18,20,home_cta_text,CTA text,CTA / форма — текст (fallback),textarea,Final form,localize,fallback chain documented

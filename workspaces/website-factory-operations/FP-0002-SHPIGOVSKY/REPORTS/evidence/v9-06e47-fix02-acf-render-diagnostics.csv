@@ -1,0 +1,6 @@
+area,finding,root_cause_candidate,confirmed yes/no,fix,notes
+"nested_role_field","#74 nested depth=2; prepare_editor_role_field → type=message name=""""; all 68 parity fields previously had when_service conditional on field_fp02_service_editor_role","ACF JS conditionals cannot evaluate message/empty-name controller → fields stay hidden while group title still shows","yes","when_service() returns 0; rely on load_field_groups role filter","verified via WP_ADMIN bootstrap"
+"field_definitions","68 top-level fields; 0 nonempty conditionals after fix","empty/invalid field defs","no","n/a","field count preserved"
+"acf_filters","FIX01 role filter keeps parity for service; hides for section","filter strips fields","no","kept","#74 keys=group_fp02_service_layout_hero|group_fp02_service_hero|group_fp02_service_general_parity"
+"admin_metaboxes","revisionsdiv/postexcerpt supported by CPT","default WP metabox clutter","yes","remove_meta_box in EditorRestrictions","revisions_hidden=1; excerpt_hidden=1"
+"admin_js_css_postbox","no evidence of collapsed-only preference as sole cause; empty body from conditionals","postbox user meta","no","n/a","primary fix is conditional removal"

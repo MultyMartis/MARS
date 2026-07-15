@@ -1,0 +1,23 @@
+field_group,field_name,field_label,current_section,target_section,meta_key_preserved,action,notes
+group_fp02_service_layout_hero,service_editor_role,Макет страницы услуги,Service — Layout and Hero,Service — Layout,yes,keep_in_layout,Title of group renamed; field stays layout-only
+group_fp02_service_layout_hero,service_layout_advanced_heading,Расширенные настройки шаблона,Service — Layout and Hero,Service — Layout,yes,keep_in_layout,Technical/hidden FIX03
+group_fp02_service_layout_hero,service_layout_override_enabled,Ручной технический шаблон,Service — Layout and Hero,Service — Layout,yes,keep_in_layout,Technical/hidden FIX03
+group_fp02_service_layout_hero,service_layout_variant,Технический шаблон,Service — Layout and Hero,Service — Layout,yes,keep_in_layout,Technical/hidden FIX03
+group_fp02_service_layout_hero,service_layout_hub_heading,Карточка и показ на /uslugi/,n/a,Service — Layout,n/a,added_message,Clarifies catalog/hub fields vs layout vs hero
+group_fp02_service_layout_hero,service_short_description,Мини-описание,Service — Layout and Hero,Service — Layout,yes,keep_in_layout,Hub/catalog — not hero; residual under Layout
+group_fp02_service_layout_hero,service_child_services_enabled,Показывать дочерние услуги,Service — Layout and Hero,Service — Layout,yes,keep_in_layout,Service-role only; not hero
+group_fp02_service_layout_hero,service_child_services_heading,Заголовок блока дочерних услуг,Service — Layout and Hero,Service — Layout,yes,keep_in_layout,Service-role only
+group_fp02_service_layout_hero,service_category_section_lead,Текст под мини-описанием на странице «Услуги»,Service — Layout and Hero,Service — Layout,yes,keep_in_layout,Hub section lead
+group_fp02_service_layout_hero,service_show_in_text_list,Показывать в текстовом списке,Service — Layout and Hero,Service — Layout,yes,keep_in_layout,Hub visibility
+group_fp02_service_layout_hero,service_show_in_slider,Показывать в слайдере,Service — Layout and Hero,Service — Layout,yes,keep_in_layout,Hub visibility
+group_fp02_service_layout_hero,service_show_on_home_gallery,Показывать в слайдере на главной,Service — Layout and Hero,Service — Layout,yes,keep_in_layout,Home gallery flag
+group_fp02_service_layout_hero,service_slider_image,Изображение для слайдера,Service — Layout and Hero,Service — Layout,yes,keep_in_layout,Hub image
+group_fp02_service_hero,service_hero_heading,Hero страницы услуги,n/a,Hero страницы услуги,n/a,added_message,Shared hero notice for Раздел and Услуга
+group_fp02_service_hero,hero_eyebrow,Надзаголовок,Service — Layout and Hero,Hero страницы услуги,yes,moved_to_hero,Meta key preserved
+group_fp02_service_hero,hero_title_override,Заголовок H1 override,Service — Layout and Hero,Hero страницы услуги,yes,moved_to_hero,Meta key preserved
+group_fp02_service_hero,hero_lead,Лид,Service — Layout and Hero,Hero страницы услуги,yes,moved_to_hero,Meta key preserved
+group_fp02_service_hero,hero_media,Изображение (Hero),Service — Layout and Hero,Hero страницы услуги,yes,moved_to_hero,Label RU polish; meta key preserved
+group_fp02_service_hero,hero_cta_label,Текст кнопки в hero-блоке,Service — Layout and Hero,Hero страницы услуги,yes,moved_to_hero,Meta key preserved
+group_fp02_service_hero,hero_cta_target,Ссылка кнопки (CTA),Service — Layout and Hero,Hero страницы услуги,yes,moved_to_hero,Label RU polish; meta key preserved
+group_fp02_service_section_parity,section_hero_notice,1. Hero,Service — Раздел,Service — Раздел,yes,notice_updated,Points to Hero страницы услуги + Service — Layout
+DB_acf_field_group,group_fp02_service_layout_hero,Service — Layout and Hero,DB posts 186/523/545/572/679,disabled,n/a,soft_disabled,Set post_status=acf-disabled to remove mixed UI; meta on services untouched

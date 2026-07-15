@@ -1,0 +1,153 @@
+{
+    "routes": [
+        {
+            "route": "/o-centre/programma-lecheniya/",
+            "http": 200,
+            "final": "http://shpigovsky.test/o-centre/programma-lecheniya/",
+            "expected": 200,
+            "result": "PASS"
+        },
+        {
+            "route": "/o-centre/programma-lecheniya/genotipirovanie/",
+            "http": 200,
+            "final": "http://shpigovsky.test/o-centre/programma-lecheniya/genotipirovanie/",
+            "expected": 200,
+            "result": "PASS"
+        },
+        {
+            "route": "/o-centre/programma-lecheniya/neyropsihologicheskaya-korrektsiya/",
+            "http": 200,
+            "final": "http://shpigovsky.test/o-centre/programma-lecheniya/neyropsihologicheskaya-korrektsiya/",
+            "expected": 200,
+            "result": "PASS"
+        },
+        {
+            "route": "/o-centre/programma-lecheniya/psihokorrektsiya/",
+            "http": 200,
+            "final": "http://shpigovsky.test/o-centre/programma-lecheniya/psihokorrektsiya/",
+            "expected": 200,
+            "result": "PASS"
+        },
+        {
+            "route": "/o-centre/programma-lecheniya/kinezioterapiya/",
+            "http": 200,
+            "final": "http://shpigovsky.test/o-centre/programma-lecheniya/kinezioterapiya/",
+            "expected": 200,
+            "result": "PASS"
+        },
+        {
+            "route": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/internet-zavisimost/",
+            "http": 200,
+            "final": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/internet-zavisimost/",
+            "expected": 200,
+            "result": "PASS"
+        },
+        {
+            "route": "/uslugi/zavisimosti/lechenie-internet-zavisimosti/",
+            "http": 404,
+            "final": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-internet-zavisimosti/",
+            "expected": 404,
+            "result": "PASS"
+        },
+        {
+            "route": "/uslugi/genotipirovanie/",
+            "http": 404,
+            "final": "http://shpigovsky.test/uslugi/genotipirovanie/",
+            "expected": 404,
+            "result": "PASS"
+        },
+        {
+            "route": "/",
+            "http": 200,
+            "final": "http://shpigovsky.test/",
+            "expected": 200,
+            "result": "PASS"
+        },
+        {
+            "route": "/uslugi/",
+            "http": 200,
+            "final": "http://shpigovsky.test/uslugi/",
+            "expected": 200,
+            "result": "PASS"
+        },
+        {
+            "route": "/uslugi/zavisimosti/",
+            "http": 200,
+            "final": "http://shpigovsky.test/uslugi/zavisimosti/",
+            "expected": 200,
+            "result": "PASS"
+        },
+        {
+            "route": "/uslugi/psihicheskoe-zdorovie/",
+            "http": 200,
+            "final": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/",
+            "expected": 200,
+            "result": "PASS"
+        },
+        {
+            "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+            "http": 200,
+            "final": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/",
+            "expected": 200,
+            "result": "PASS"
+        },
+        {
+            "route": "/o-centre/",
+            "http": 200,
+            "final": "http://shpigovsky.test/o-centre/",
+            "expected": 200,
+            "result": "PASS"
+        },
+        {
+            "route": "/blog/",
+            "http": 200,
+            "final": "http://shpigovsky.test/blog/",
+            "expected": 200,
+            "result": "PASS"
+        },
+        {
+            "route": "/kontakty/",
+            "http": 200,
+            "final": "http://shpigovsky.test/kontakty/",
+            "expected": 200,
+            "result": "PASS"
+        }
+    ],
+    "home": {
+        "directions_block": true,
+        "direction_items": 37,
+        "title_links": 4,
+        "image_links": 4,
+        "more_links": 4,
+        "geno_url": true,
+        "neuro_url": true,
+        "psycho_url": true,
+        "kine_url": true
+    },
+    "uslugi": {
+        "geno_absent": true,
+        "duplicate_internet_absent": true,
+        "canonical_internet": true,
+        "markers_01": true,
+        "no_geno_title": true,
+        "program_grid": true,
+        "program_title_links": 4,
+        "program_image_links": 4,
+        "geno_category_absent": true
+    },
+    "service_program": {
+        "zavisimosti": {
+            "grid": true,
+            "title_links": 4,
+            "image_links": 4,
+            "geno": true
+        },
+        "psihicheskoe": {
+            "grid": true,
+            "title_links": 4,
+            "image_links": 4,
+            "geno": true
+        }
+    },
+    "route_pass": true
+}

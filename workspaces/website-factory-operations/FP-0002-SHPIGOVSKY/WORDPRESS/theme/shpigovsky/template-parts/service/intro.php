@@ -12,11 +12,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 $post_id = shpigovsky_get_current_service_id();
 $variant = get_query_var( 'shpigovsky_service_layout_variant', shpigovsky_get_service_layout_variant() );
 
-if ( 'alcohol-special' === $variant ) {
-	$v9       = shpigovsky_get_v9_alcohol_leaf_intro_copy();
-	$heading  = $v9['heading'];
-	$highlight = $v9['highlight'];
-	$intro    = '';
+if ( shpigovsky_is_service_general_variant( $variant ) ) {
+	$v9        = function_exists( 'shpigovsky_get_general_intro_copy' )
+		? shpigovsky_get_general_intro_copy( $post_id )
+		: array(
+			'heading'   => '',
+			'highlight' => '',
+		);
+	$heading   = isset( $v9['heading'] ) ? (string) $v9['heading'] : '';
+	$highlight = isset( $v9['highlight'] ) ? (string) $v9['highlight'] : '';
+	$intro     = '';
 } else {
 	$heading   = shpigovsky_get_service_hero_title( $post_id );
 	$intro     = shpigovsky_get_service_field( $post_id, 'intro_text' );

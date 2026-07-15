@@ -1,0 +1,620 @@
+{
+    "phase": "v9-06e38-fix01",
+    "home_id": 4,
+    "db_writes": 72,
+    "groups_before": [
+        {
+            "ID": 114,
+            "title": "Page — Home",
+            "status": "publish",
+            "name": "group_fp02_page_home"
+        },
+        {
+            "ID": 483,
+            "title": "Page — Home",
+            "status": "publish",
+            "name": "group_fp02_page_home"
+        },
+        {
+            "ID": 581,
+            "title": "Page — Home",
+            "status": "publish",
+            "name": "group_fp02_page_home"
+        },
+        {
+            "ID": 639,
+            "title": "Page — Home",
+            "status": "publish",
+            "name": "group_fp02_page_home"
+        }
+    ],
+    "groups_trashed": [
+        {
+            "ID": 114,
+            "action": "trash"
+        },
+        {
+            "ID": 483,
+            "action": "trash"
+        },
+        {
+            "ID": 581,
+            "action": "trash"
+        }
+    ],
+    "fields_trashed": [
+        {
+            "ID": 116,
+            "name": "title",
+            "title": "Заголовок",
+            "parent": 115,
+            "action": "trash"
+        },
+        {
+            "ID": 117,
+            "name": "text",
+            "title": "Текст",
+            "parent": 115,
+            "action": "trash"
+        },
+        {
+            "ID": 118,
+            "name": "image",
+            "title": "Изображение",
+            "parent": 115,
+            "action": "trash"
+        },
+        {
+            "ID": 115,
+            "name": "home_hero_slides",
+            "title": "Hero slides",
+            "parent": 114,
+            "action": "trash"
+        },
+        {
+            "ID": 123,
+            "name": "title",
+            "title": "Заголовок",
+            "parent": 122,
+            "action": "trash"
+        },
+        {
+            "ID": 124,
+            "name": "text",
+            "title": "Текст",
+            "parent": 122,
+            "action": "trash"
+        },
+        {
+            "ID": 122,
+            "name": "home_advantages",
+            "title": "Advantages / trust",
+            "parent": 114,
+            "action": "trash"
+        },
+        {
+            "ID": 126,
+            "name": "title",
+            "title": "Заголовок",
+            "parent": 125,
+            "action": "trash"
+        },
+        {
+            "ID": 127,
+            "name": "text",
+            "title": "Текст",
+            "parent": 125,
+            "action": "trash"
+        },
+        {
+            "ID": 125,
+            "name": "home_intro_bands",
+            "title": "Intro bands",
+            "parent": 114,
+            "action": "trash"
+        },
+        {
+            "ID": 131,
+            "name": "home_blog_teaser_enabled",
+            "title": "Blog teaser enabled",
+            "parent": 114,
+            "action": "trash"
+        },
+        {
+            "ID": 137,
+            "name": "question",
+            "title": "Вопрос",
+            "parent": 136,
+            "action": "trash"
+        },
+        {
+            "ID": 138,
+            "name": "answer",
+            "title": "Ответ",
+            "parent": 136,
+            "action": "trash"
+        },
+        {
+            "ID": 136,
+            "name": "home_faq_items",
+            "title": "FAQ",
+            "parent": 114,
+            "action": "trash"
+        },
+        {
+            "ID": 139,
+            "name": "home_faq_heading",
+            "title": "Заголовок FAQ",
+            "parent": 114,
+            "action": "trash"
+        },
+        {
+            "ID": 140,
+            "name": "home_recovery_intro_heading",
+            "title": "Recovery intro — заголовок",
+            "parent": 114,
+            "action": "trash"
+        },
+        {
+            "ID": 141,
+            "name": "home_recovery_intro_lead_1",
+            "title": "Recovery intro — абзац 1",
+            "parent": 114,
+            "action": "trash"
+        },
+        {
+            "ID": 142,
+            "name": "home_recovery_intro_lead_2",
+            "title": "Recovery intro — абзац 2",
+            "parent": 114,
+            "action": "trash"
+        },
+        {
+            "ID": 143,
+            "name": "home_specialists_heading",
+            "title": "Specialists — заголовок",
+            "parent": 114,
+            "action": "trash"
+        },
+        {
+            "ID": 144,
+            "name": "home_comfort_heading",
+            "title": "Comfort — заголовок",
+            "parent": 114,
+            "action": "trash"
+        },
+        {
+            "ID": 145,
+            "name": "home_comfort_lead",
+            "title": "Comfort — лид",
+            "parent": 114,
+            "action": "trash"
+        },
+        {
+            "ID": 146,
+            "name": "home_reviews_heading",
+            "title": "Reviews — заголовок",
+            "parent": 114,
+            "action": "trash"
+        },
+        {
+            "ID": 147,
+            "name": "home_articles_heading",
+            "title": "Articles — заголовок",
+            "parent": 114,
+            "action": "trash"
+        },
+        {
+            "ID": 148,
+            "name": "home_cta_title",
+            "title": "CTA title",
+            "parent": 114,
+            "action": "trash"
+        },
+        {
+            "ID": 149,
+            "name": "home_cta_text",
+            "title": "CTA text",
+            "parent": 114,
+            "action": "trash"
+        },
+        {
+            "ID": 485,
+            "name": "title",
+            "title": "Заголовок",
+            "parent": 484,
+            "action": "trash"
+        },
+        {
+            "ID": 486,
+            "name": "text",
+            "title": "Текст",
+            "parent": 484,
+            "action": "trash"
+        },
+        {
+            "ID": 487,
+            "name": "image",
+            "title": "Изображение",
+            "parent": 484,
+            "action": "trash"
+        },
+        {
+            "ID": 484,
+            "name": "home_hero_slides",
+            "title": "Hero slides",
+            "parent": 483,
+            "action": "trash"
+        },
+        {
+            "ID": 492,
+            "name": "title",
+            "title": "Заголовок",
+            "parent": 491,
+            "action": "trash"
+        },
+        {
+            "ID": 493,
+            "name": "text",
+            "title": "Текст",
+            "parent": 491,
+            "action": "trash"
+        },
+        {
+            "ID": 491,
+            "name": "home_advantages",
+            "title": "Advantages / trust",
+            "parent": 483,
+            "action": "trash"
+        },
+        {
+            "ID": 495,
+            "name": "title",
+            "title": "Заголовок",
+            "parent": 494,
+            "action": "trash"
+        },
+        {
+            "ID": 496,
+            "name": "text",
+            "title": "Текст",
+            "parent": 494,
+            "action": "trash"
+        },
+        {
+            "ID": 494,
+            "name": "home_intro_bands",
+            "title": "Intro bands",
+            "parent": 483,
+            "action": "trash"
+        },
+        {
+            "ID": 497,
+            "name": "home_blog_teaser_enabled",
+            "title": "Blog teaser enabled",
+            "parent": 483,
+            "action": "trash"
+        },
+        {
+            "ID": 503,
+            "name": "question",
+            "title": "Вопрос",
+            "parent": 502,
+            "action": "trash"
+        },
+        {
+            "ID": 504,
+            "name": "answer",
+            "title": "Ответ",
+            "parent": 502,
+            "action": "trash"
+        },
+        {
+            "ID": 502,
+            "name": "home_faq_items",
+            "title": "FAQ",
+            "parent": 483,
+            "action": "trash"
+        },
+        {
+            "ID": 505,
+            "name": "home_faq_heading",
+            "title": "Заголовок FAQ",
+            "parent": 483,
+            "action": "trash"
+        },
+        {
+            "ID": 506,
+            "name": "home_recovery_intro_heading",
+            "title": "Recovery intro — заголовок",
+            "parent": 483,
+            "action": "trash"
+        },
+        {
+            "ID": 507,
+            "name": "home_recovery_intro_lead_1",
+            "title": "Recovery intro — абзац 1",
+            "parent": 483,
+            "action": "trash"
+        },
+        {
+            "ID": 508,
+            "name": "home_recovery_intro_lead_2",
+            "title": "Recovery intro — абзац 2",
+            "parent": 483,
+            "action": "trash"
+        },
+        {
+            "ID": 509,
+            "name": "home_specialists_heading",
+            "title": "Specialists — заголовок",
+            "parent": 483,
+            "action": "trash"
+        },
+        {
+            "ID": 510,
+            "name": "home_comfort_heading",
+            "title": "Comfort — заголовок",
+            "parent": 483,
+            "action": "trash"
+        },
+        {
+            "ID": 511,
+            "name": "home_comfort_lead",
+            "title": "Comfort — лид",
+            "parent": 483,
+            "action": "trash"
+        },
+        {
+            "ID": 512,
+            "name": "home_reviews_heading",
+            "title": "Reviews — заголовок",
+            "parent": 483,
+            "action": "trash"
+        },
+        {
+            "ID": 513,
+            "name": "home_articles_heading",
+            "title": "Articles — заголовок",
+            "parent": 483,
+            "action": "trash"
+        },
+        {
+            "ID": 514,
+            "name": "home_cta_title",
+            "title": "CTA title",
+            "parent": 483,
+            "action": "trash"
+        },
+        {
+            "ID": 515,
+            "name": "home_cta_text",
+            "title": "CTA text",
+            "parent": 483,
+            "action": "trash"
+        },
+        {
+            "ID": 582,
+            "name": "hero_media",
+            "title": "Hero image",
+            "parent": 581,
+            "action": "trash"
+        },
+        {
+            "ID": 583,
+            "name": "hero_cta_label",
+            "title": "Текст кнопки в hero-блоке",
+            "parent": 581,
+            "action": "trash"
+        },
+        {
+            "ID": 585,
+            "name": "title",
+            "title": "Заголовок",
+            "parent": 584,
+            "action": "trash"
+        },
+        {
+            "ID": 586,
+            "name": "text",
+            "title": "Текст",
+            "parent": 584,
+            "action": "trash"
+        },
+        {
+            "ID": 587,
+            "name": "image",
+            "title": "Изображение",
+            "parent": 584,
+            "action": "trash"
+        },
+        {
+            "ID": 584,
+            "name": "home_hero_slides",
+            "title": "Hero slides",
+            "parent": 581,
+            "action": "trash"
+        },
+        {
+            "ID": 592,
+            "name": "title",
+            "title": "Заголовок",
+            "parent": 591,
+            "action": "trash"
+        },
+        {
+            "ID": 593,
+            "name": "text",
+            "title": "Текст",
+            "parent": 591,
+            "action": "trash"
+        },
+        {
+            "ID": 591,
+            "name": "home_advantages",
+            "title": "Advantages / trust",
+            "parent": 581,
+            "action": "trash"
+        },
+        {
+            "ID": 595,
+            "name": "title",
+            "title": "Заголовок",
+            "parent": 594,
+            "action": "trash"
+        },
+        {
+            "ID": 596,
+            "name": "text",
+            "title": "Текст",
+            "parent": 594,
+            "action": "trash"
+        },
+        {
+            "ID": 594,
+            "name": "home_intro_bands",
+            "title": "Intro bands",
+            "parent": 581,
+            "action": "trash"
+        },
+        {
+            "ID": 600,
+            "name": "home_blog_teaser_enabled",
+            "title": "Blog teaser enabled",
+            "parent": 581,
+            "action": "trash"
+        },
+        {
+            "ID": 606,
+            "name": "question",
+            "title": "Вопрос",
+            "parent": 605,
+            "action": "trash"
+        },
+        {
+            "ID": 607,
+            "name": "answer",
+            "title": "Ответ",
+            "parent": 605,
+            "action": "trash"
+        },
+        {
+            "ID": 605,
+            "name": "home_faq_items",
+            "title": "FAQ",
+            "parent": 581,
+            "action": "trash"
+        },
+        {
+            "ID": 608,
+            "name": "home_cta_title",
+            "title": "CTA title",
+            "parent": 581,
+            "action": "trash"
+        },
+        {
+            "ID": 609,
+            "name": "home_cta_text",
+            "title": "CTA text",
+            "parent": 581,
+            "action": "trash"
+        },
+        {
+            "ID": 658,
+            "name": "home_blog_teaser_enabled",
+            "title": "Blog teaser enabled",
+            "parent": 639,
+            "action": "trash_on_keep"
+        }
+    ],
+    "json_export": [
+        "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky/wp-content/acf-json/group_fp02_page_home.json",
+        "X:/AI MARS/workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/acf-json/group_fp02_page_home.json",
+        "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e38-fix01-home-admin-orphan-hygiene-before-20260713-193615/exports/group_fp02_page_home.json"
+    ],
+    "sync": {
+        "FieldGroups.php": {
+            "copied": true,
+            "source_hash": "f01c8d9b67532beec60add15056bc287355b655247208d1f10812783853f8525",
+            "runtime_hash": "f01c8d9b67532beec60add15056bc287355b655247208d1f10812783853f8525",
+            "match": true
+        },
+        "home_group_has_faq_heading": true,
+        "home_group_has_blog_teaser": false
+    },
+    "admin_fields_after": [],
+    "validation": {
+        "visible_fields": {
+            "home_faq_heading": "FAIL",
+            "home_recovery_intro_heading": "FAIL",
+            "home_recovery_intro_lead_1": "FAIL",
+            "home_recovery_intro_lead_2": "FAIL",
+            "home_articles_heading": "FAIL",
+            "home_gallery_source_notice": "FAIL",
+            "home_faq_items": "FAIL"
+        },
+        "absent_fields": {
+            "home_blog_teaser_enabled": "PASS",
+            "home_gallery_media": "PASS",
+            "home_reviews_teaser": "PASS",
+            "home_specialists_heading": "PASS",
+            "home_comfort_heading": "PASS",
+            "home_comfort_lead": "PASS",
+            "home_reviews_heading": "PASS"
+        },
+        "publish_home_groups_count": 1,
+        "duplicate_groups_cleaned": "PASS",
+        "home_group_php_blog_teaser_absent": "PASS",
+        "home_group_php_faq_heading_present": "PASS"
+    },
+    "classification": [],
+    "canonical_db_group_keep": 639,
+    "groups_after": [
+        {
+            "ID": 639,
+            "status": "publish"
+        }
+    ],
+    "meta_preserved": {
+        "home_faq_heading": {
+            "empty": false,
+            "preview": "Нас часто спрашивают"
+        },
+        "home_recovery_intro_heading": {
+            "empty": false,
+            "preview": "Шпиговский дом&nbsp;&mdash; восстановление, построенное вокруг человека"
+        },
+        "home_recovery_intro_lead_1": {
+            "empty": false,
+            "preview": "Мы&nbsp;убеждены, зависимость невозможно эффективно лечить по&nbsp;шаблону. За&n"
+        },
+        "home_recovery_intro_lead_2": {
+            "empty": false,
+            "preview": "Поэтому в&nbsp;&laquo;Шпиговском Доме&raquo; мы&nbsp;создаём персонализированную"
+        },
+        "home_articles_heading": {
+            "empty": false,
+            "preview": "Статьи"
+        },
+        "home_specialists_heading": {
+            "empty": false,
+            "preview": "Специалисты центра"
+        },
+        "home_comfort_heading": {
+            "empty": false,
+            "preview": "Комфорт, приватность, забота"
+        },
+        "home_comfort_lead": {
+            "empty": false,
+            "preview": "Разговор&nbsp;— это уже первый шаг. Мы расскажем, что можем предложить именно ва"
+        },
+        "home_reviews_heading": {
+            "empty": false,
+            "preview": "Отзывы"
+        },
+        "home_blog_teaser_enabled": {
+            "empty": false,
+            "preview": "1"
+        }
+    }
+}

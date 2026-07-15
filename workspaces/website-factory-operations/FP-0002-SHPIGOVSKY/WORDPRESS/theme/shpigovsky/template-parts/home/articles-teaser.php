@@ -2,8 +2,7 @@
 /**
  * Template part: home/articles-teaser.php
  *
- * D9-D: static V9 visual authority with theme asset fallbacks.
- * Future ACF wiring: D9-E wave.
+ * V9-06E35: published blog posts + Swiper (gallery options pattern; dots, no arrows).
  *
  * @package Shpigovsky
  */
@@ -12,7 +11,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+if ( ! shpigovsky_home_list_enabled( 'home_articles_visible' ) ) {
+	return;
+}
+
 $articles_heading = shpigovsky_home_text_or_fallback( 'home_articles_heading', 'Статьи' );
+$cards            = shpigovsky_get_home_articles_cards( 6 );
+$link_label       = function_exists( 'shpigovsky_get_blog_archive_card_link_label' )
+	? shpigovsky_get_blog_archive_card_link_label()
+	: 'Читать';
+
+if ( empty( $cards ) ) {
+	return;
+}
 
 ?>
 <section class="home-articles" aria-labelledby="home-articles-heading">
@@ -25,28 +36,39 @@ $articles_heading = shpigovsky_home_text_or_fallback( 'home_articles_heading', '
       </a>
     </div>
 
-    <div class="home-articles__grid" data-reveal-group>
-      <article class="home-articles__card" data-reveal>
-        <a class="home-articles__card-link" href="<?php echo esc_url( home_url( '/blog/nazvanie-stati/' ) ); ?>">
-          <img class="home-articles__image" src="<?php echo esc_url( shpigovsky_asset_uri( 'img/content/home-articles/article-alcohol-dependence.webp' ) ); ?>" width="1216" height="1632" alt="" loading="lazy" decoding="async">
-          <h3 class="home-articles__title">Лечение алкогольной зависимости: почему сила воли здесь ни&nbsp;при чём</h3>
-          <p class="home-articles__meta">Читать</p>
-        </a>
-      </article>
-      <article class="home-articles__card" data-reveal>
-        <a class="home-articles__card-link" href="<?php echo esc_url( home_url( '/blog/nazvanie-stati/' ) ); ?>">
-          <img class="home-articles__image" src="<?php echo esc_url( shpigovsky_asset_uri( 'img/content/home-articles/article-yoga-therapy.webp' ) ); ?>" width="1920" height="1280" alt="Йога в терапии" loading="lazy" decoding="async">
-          <h3 class="home-articles__title">Йога в&nbsp;терапии: снятие абстинентного синдрома, снижение кортизола</h3>
-          <p class="home-articles__meta">Читать</p>
-        </a>
-      </article>
-      <article class="home-articles__card" data-reveal>
-        <a class="home-articles__card-link" href="<?php echo esc_url( home_url( '/blog/nazvanie-stati/' ) ); ?>">
-          <img class="home-articles__image" src="<?php echo esc_url( shpigovsky_asset_uri( 'img/content/home-articles/article-bos-therapy.webp' ) ); ?>" width="2048" height="1365" alt="БОС-терапия" loading="lazy" decoding="async">
-          <h3 class="home-articles__title">БОС-терапия: тренировка конкретных зон мозга с&nbsp;помощью технологий</h3>
-          <p class="home-articles__meta">Читать</p>
-        </a>
-      </article>
+    <div class="home-articles__slider swiper" data-articles-slider data-reveal-group>
+      <div class="home-articles__wrapper swiper-wrapper">
+        <?php foreach ( $cards as $index => $card ) : ?>
+          <?php
+			$title        = isset( $card['title'] ) ? (string) $card['title'] : '';
+			$url          = isset( $card['url'] ) ? (string) $card['url'] : '';
+			$image_url    = isset( $card['image_url'] ) ? (string) $card['image_url'] : '';
+			$image_width  = isset( $card['image_width'] ) ? (int) $card['image_width'] : 1200;
+			$image_height = isset( $card['image_height'] ) ? (int) $card['image_height'] : 800;
+			$image_alt    = isset( $card['image_alt'] ) && '' !== trim( (string) $card['image_alt'] ) ? (string) $card['image_alt'] : $title;
+			$meta_label   = isset( $card['link_label'] ) && '' !== trim( (string) $card['link_label'] ) ? (string) $card['link_label'] : $link_label;
+			$is_lazy      = $index > 0;
+			?>
+        <article class="home-articles__card swiper-slide" data-reveal>
+          <a class="home-articles__card-link" href="<?php echo esc_url( $url ); ?>">
+            <?php if ( '' !== $image_url ) : ?>
+            <img
+              class="home-articles__image"
+              src="<?php echo esc_url( $image_url ); ?>"
+              width="<?php echo esc_attr( (string) $image_width ); ?>"
+              height="<?php echo esc_attr( (string) $image_height ); ?>"
+              alt="<?php echo esc_attr( $image_alt ); ?>"
+              <?php echo $is_lazy ? 'loading="lazy"' : ''; ?>
+              decoding="async"
+            >
+            <?php endif; ?>
+            <h3 class="home-articles__title"><?php echo esc_html( $title ); ?></h3>
+            <p class="home-articles__meta"><?php echo esc_html( $meta_label ); ?></p>
+          </a>
+        </article>
+        <?php endforeach; ?>
+      </div>
+      <div class="home-articles__pagination swiper-pagination" data-articles-pagination data-gallery-pagination></div>
     </div>
   </div>
 </section>

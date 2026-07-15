@@ -1,0 +1,7 @@
+page,id,role,technical_layout,alcohol_naming_removed,fields_visible,result,notes
+Зависимости,73,section,subdivision,YES (help uses service_general),section fields,PASS,effective subdivision
+Alcohol page,74,service,service_general,YES,service stack + static copy by ID,PASS,override off
+Narcotic dependency,314,service,service_general,YES,child services settings,PASS,child block on FE
+Depression,78,service,service_general,YES,service stack,PASS,
+Heroin child,1013,service,service_general,YES,service stack,PASS,
+ACF choices,-,-,-,alcohol_special not selectable,service_general labeled Услуга,PASS,probe JSON choices

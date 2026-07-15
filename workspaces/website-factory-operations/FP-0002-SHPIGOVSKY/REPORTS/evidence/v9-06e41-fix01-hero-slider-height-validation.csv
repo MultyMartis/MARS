@@ -1,0 +1,9 @@
+check,expected,actual,result,notes
+hero_desktop_height,similar to single-slide / ~620px at 1440 (70vh capped),620px,PASS,root cause: .hero--home-slider{height:100%} overrode .hero--home{height:70vh}
+hero_slide_media_height,match hero,620px,PASS,media fills slide
+second_slide_via_next,"Шпиговский дом 2","Шпиговский дом 2",PASS,nav next click
+nav_dots,2 arrows + 2 dots,2/2,PASS,settings preserved
+css_section_override_removed,no height:100% on section,removed from shared selector,PASS,E41-FIX01
+js_autoHeight,false,false,PASS,
+mobile_390_height,no collapse,465px,PASS,70vh of 844 capped by responsive rules
+hero_slider_markup,present,yes,PASS,hero--home-slider

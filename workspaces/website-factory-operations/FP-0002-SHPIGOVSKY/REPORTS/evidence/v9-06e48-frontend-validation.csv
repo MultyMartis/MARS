@@ -1,0 +1,15 @@
+post_id_or_route,title_or_label,http,bytes,fatal,alcohol_marker_hits,child_tiles,images_present,readmore_btn,result,notes
+home,home,200,168107,NO,7,no,True,absent_or_short,PASS,normalized_diff_bytes=26;likely_gallery_order_residual
+uslugi,uslugi,200,114882,NO,5,no,True,absent_or_short,PASS,whitespace_normalized_equal_to_before
+zavisimosti,zavisimosti,200,120111,NO,2,no,True,absent_or_short,PASS,whitespace_normalized_equal_to_before
+psihicheskoe,psihicheskoe,200,122615,NO,1,no,True,absent_or_short,PASS,whitespace_normalized_equal_to_before
+rpp,rpp,200,117719,NO,1,no,True,absent_or_short,PASS,whitespace_normalized_equal_to_before
+p74,p74,200,120935,NO,24,no,True,present,PASS,accepted_base;alk_hits=24
+p314,p314,200,107873,NO,0,yes,True,present,PASS,no_alcohol_in_main;DEMO_seeded
+p78,p78,200,104353,NO,0,no,True,present,PASS,no_alcohol_in_main;DEMO_seeded
+p81,p81,200,104561,NO,0,no,True,present,PASS,no_alcohol_in_main;DEMO_seeded
+p85,p85,200,104416,NO,0,no,True,present,PASS,no_alcohol_in_main;DEMO_seeded
+blog,blog,200,67516,NO,2,no,True,absent_or_short,PASS,
+specyalisty,specyalisty,200,56699,NO,0,no,True,absent_or_short,PASS,
+o-centre,o-centre,200,114626,NO,1,no,True,absent_or_short,PASS,
+kontakty,kontakty,200,64628,NO,0,no,True,absent_or_short,PASS,

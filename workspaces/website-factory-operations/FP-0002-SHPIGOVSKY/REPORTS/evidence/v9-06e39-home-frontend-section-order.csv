@@ -1,0 +1,21 @@
+order,frontend_section_class_or_id,template_partial,source_of_truth,admin_section_before,admin_section_after,editable_or_automated,notes
+1,hero hero--home,template-parts/home/hero.php,front-page.php include order,hero_media / hero_cta_label / home_hero_slides,hero_media / hero_cta_label / home_hero_slides,editable,ACF Home hero fields
+2,home-recovery-intro,template-parts/home/recovery-intro.php,front-page.php,home_advantages then intro then recovery (wrong order),recovery heading/leads + home_intro_bands,editable,intro_bands belong to recovery-intro render
+3,founder-quote founder-quote--variant-b,template-parts/home/founder-quote.php,front-page.php,(absent),home_founder_quote_source_notice,automated,Options: founder quote block
+4,home-treatment-prevention,template-parts/home/treatment-prevention.php,front-page.php,(absent),home_treatment_source_notice,automated,CPT service accordion
+5,home-gallery,template-parts/home/gallery.php,front-page.php,home_gallery_source_notice (after recovery; before specialists),home_gallery_source_notice,automated,CPT service_show_on_home_gallery
+6,home-why-us,template-parts/home/why-us.php,front-page.php,(absent),(absent),automated/static,Static V9 content; no Home ACF
+7,home-staff-photo,template-parts/home/staff-photo.php,front-page.php,(absent),(absent),automated/static,Static/media; no Home ACF
+8,home-feature-grid,template-parts/home/feature-grid.php,front-page.php,home_advantages (too early — after hero),home_advantages,editable,Moved after gallery notices
+9,clinic-landscape,template-parts/home/clinic-landscape.php,front-page.php,(absent),(absent),automated/static,Shared/static; absent from Home admin
+10,home-recovery-life,template-parts/home/recovery-life.php,front-page.php,(absent),(absent),automated/static,Static V9; absent from Home admin
+11,reviews,template-parts/home/reviews.php,front-page.php,home_reviews_source_notice (near end),home_reviews_source_notice,automated,Site Options / Reviews
+12,home-rehabilitation-requirements,template-parts/home/rehabilitation-requirements.php,front-page.php,(absent),(absent),automated/static,Absent from Home admin
+13,home-rehabilitation-program,template-parts/home/rehabilitation-program.php,front-page.php,(absent),(absent),automated/static,Absent from Home admin
+14,home-genotyping,template-parts/home/genotyping.php,front-page.php,(absent),(absent),automated/static,Absent from Home admin
+15,comfort,template-parts/home/comfort.php,front-page.php,home_comfort_source_notice (before reviews in old admin),home_comfort_source_notice,automated,Reusable block Comfort / Benefits
+16,home-videos,template-parts/home/videos.php,front-page.php,(absent),(absent),automated/static,Absent from Home admin
+17,specialists,template-parts/home/specialists.php,front-page.php,home_specialists_source_notice (too early — after gallery),home_specialists_source_notice,automated,Child pages /specyalisty/
+18,home-articles,template-parts/home/articles-teaser.php,front-page.php,home_articles_heading + notice,home_articles_heading + notice,editable+automated,Heading editable; cards from posts
+19,faq,template-parts/home/faq.php,front-page.php,home_faq_heading + home_faq_items,home_faq_heading + home_faq_items,editable,Order preserved near end
+20,final-form,template-parts/components/final-form.php,front-page.php,home_cta_title / home_cta_text,home_cta_title / home_cta_text,editable (fallback),Reusable Final Form has priority

@@ -1,22 +1,11 @@
 {
-  "phase": "V9-06D8-A",
-  "generated_at": "2026-07-04T20:21:00Z",
-  "mysql_available": false,
-  "port_3306_listening": false,
-  "db_name": "mars_wp_fp0002",
-  "table_prefix": "fp02_",
-  "db_host_expected": "127.0.0.1",
-  "wp_load_probe": "FAIL_DATABASE_CONNECTION",
-  "options_inspectable": false,
-  "wpilot_write_enabled": "UNKNOWN",
-  "gate_checks": {
-    "runtime_path_exists": true,
-    "php_cli_available": true,
-    "mysql_connection": false,
-    "http_domain_responds": false
-  },
-  "gate_result": "FAIL",
-  "stop_reason": "MySQL/DB unavailable — mutation gates cannot proceed",
-  "operator_action_required": "Start local Laragon/MySQL stack; confirm mars_wp_fp0002 reachable; re-run V9-06D8-A apply phase",
-  "result": "FAIL"
+    "phase": "V9-06D8-A",
+    "generated_at": "2026-07-04T20:32:41+00:00",
+    "mysql_available": true,
+    "db_name": "mars_wp_fp0002",
+    "table_prefix": "fp02_",
+    "options_inspectable": true,
+    "wpilot_write_enabled": null,
+    "gate_result": "PASS",
+    "result": "PASS"
 }

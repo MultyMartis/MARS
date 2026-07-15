@@ -43,6 +43,8 @@ final class EditorRestrictions implements ModuleInterface {
 		add_filter( 'manage_' . Service::POST_TYPE . '_posts_columns', array( __CLASS__, 'filter_service_columns' ) );
 		add_action( 'manage_' . Service::POST_TYPE . '_posts_custom_column', array( __CLASS__, 'render_service_column' ), 10, 2 );
 		add_action( 'admin_notices', array( __CLASS__, 'render_legal_blocker_notice' ) );
+		add_action( 'admin_notices', array( __CLASS__, 'render_service_layout_mismatch_notice' ) );
+		// FIX03: technical layout field hidden from normal UI; help removed.
 	}
 
 	/**
@@ -62,12 +64,15 @@ final class EditorRestrictions implements ModuleInterface {
 
 	/**
 	 * Remove irrelevant metaboxes for service editors after delivery activation.
+	 * V9-06E47-FIX02: also hide revisions + excerpt (not part of Услуга/Раздел editor model).
 	 */
 	public static function remove_irrelevant_metaboxes() {
 		remove_meta_box( 'commentsdiv', Service::POST_TYPE, 'normal' );
 		remove_meta_box( 'commentstatusdiv', Service::POST_TYPE, 'normal' );
 		remove_meta_box( 'trackbacksdiv', Service::POST_TYPE, 'normal' );
 		remove_meta_box( 'postcustom', Service::POST_TYPE, 'normal' );
+		remove_meta_box( 'revisionsdiv', Service::POST_TYPE, 'normal' );
+		remove_meta_box( 'postexcerpt', Service::POST_TYPE, 'normal' );
 	}
 
 	/**
@@ -124,5 +129,76 @@ final class EditorRestrictions implements ModuleInterface {
 				esc_html__( 'Эта legal-страница помечена как DEMO / production blocker. Снять можно только после операторской проверки текста.', 'shpigovsky-core' )
 			);
 		}
+	}
+
+	/**
+	 * Non-blocking mismatch warning for nesting vs layout (V9-06E44 legacy).
+	 * Skips when editor role is already set (E45 role warnings own that case).
+	 * Skips nested services (FIX03 auto-service).
+	 * Does not change saved values.
+	 */
+	public static function render_service_layout_mismatch_notice() {
+		$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
+
+		if ( ! $screen || Service::POST_TYPE !== $screen->post_type || 'post' !== $screen->base ) {
+			return;
+		}
+
+		if ( ! current_user_can( 'edit_posts' ) ) {
+			return;
+		}
+
+		$post_id = isset( $_GET['post'] ) ? (int) $_GET['post'] : 0; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+
+		if ( $post_id <= 0 || ! function_exists( 'get_field' ) ) {
+			return;
+		}
+
+		if ( class_exists( __NAMESPACE__ . '\\ServiceLayoutGovernance' )
+			&& method_exists( __NAMESPACE__ . '\\ServiceLayoutGovernance', 'is_nested_service' )
+			&& ServiceLayoutGovernance::is_nested_service( $post_id ) ) {
+			return;
+		}
+
+		$role = get_field( 'service_editor_role', $post_id );
+		if ( is_string( $role ) && '' !== $role ) {
+			return;
+		}
+
+		$layout = get_field( 'service_layout_variant', $post_id );
+		$layout = is_string( $layout ) ? $layout : '';
+
+		$child_query = new \WP_Query(
+			array(
+				'post_type'      => Service::POST_TYPE,
+				'post_parent'    => $post_id,
+				'post_status'    => array( 'publish', 'draft', 'pending', 'private' ),
+				'posts_per_page' => 1,
+				'fields'         => 'ids',
+			)
+		);
+		$children_count = (int) $child_query->found_posts;
+
+		$messages = array();
+
+		if ( $children_count > 0 && 'subdivision' !== $layout && 'placeholder' !== $layout ) {
+			$messages[] = __( 'У этой страницы есть дочерние услуги, но выбран не «Подраздел». Для раздела услуг обычно нужен макет «Подраздел». Значение не изменено автоматически.', 'shpigovsky-core' );
+		} elseif ( $children_count > 0 && 'placeholder' === $layout ) {
+			$messages[] = __( 'У этой страницы есть дочерние услуги, а выбран макет «Заглушка». Проверьте: это временный раздел или нужен «Подраздел». Значение не изменено автоматически.', 'shpigovsky-core' );
+		}
+
+		if ( 0 === $children_count && 'subdivision' === $layout ) {
+			$messages[] = __( 'Выбран макет «Подраздел», но дочерних услуг нет. Для конкретной услуги обычно выбирают «Стандартная услуга» или «Заглушка». Значение не изменено автоматически.', 'shpigovsky-core' );
+		}
+
+		if ( empty( $messages ) ) {
+			return;
+		}
+
+		echo '<div class="notice notice-warning fp02-service-layout-mismatch"><p><strong>' . esc_html__( 'Проверьте вариант макета', 'shpigovsky-core' ) . '</strong></p>';
+		foreach ( $messages as $msg ) {
+			echo '<p>' . esc_html( $msg ) . '</p>';
+		}
+		echo '</div>';
 	}
 }

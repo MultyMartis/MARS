@@ -1,0 +1,5 @@
+page,expected,actual,result
+"Home `/`","unchanged (200; freeze untouched)","200 OK; no freeze task product writes",PASS
+"Services hub `/uslugi/`",unchanged,"200 OK",PASS
+"Service controls #74/#314/#78/#81/#85",unchanged,"roles=service; routes 200",PASS
+"E49 services sample",preserved,"5 samples 200",PASS

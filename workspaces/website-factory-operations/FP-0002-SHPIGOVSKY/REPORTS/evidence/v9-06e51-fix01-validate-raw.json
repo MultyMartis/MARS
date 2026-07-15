@@ -1,0 +1,319 @@
+{
+    "cycle": [
+        {
+            "step": "A_start_placeholder",
+            "meta": {
+                "role": "placeholder",
+                "layout": "placeholder",
+                "resolve": "placeholder"
+            },
+            "frontend": {
+                "http": 200,
+                "mode": "placeholder",
+                "blocks": 0,
+                "fatal": 0,
+                "bytes": 56117,
+                "has_placeholder_stack": 1,
+                "has_h1": 1
+            },
+            "pass": true
+        },
+        {
+            "step": "B_save_as_service",
+            "meta": {
+                "role": "service",
+                "layout": "service_general",
+                "resolve": "service-general"
+            },
+            "frontend": {
+                "http": 200,
+                "mode": "service",
+                "blocks": 3,
+                "fatal": 0,
+                "bytes": 112333,
+                "has_placeholder_stack": 0,
+                "has_h1": 1
+            },
+            "pass": true
+        },
+        {
+            "step": "B2_update_field_role_only",
+            "meta": {
+                "role": "service",
+                "layout": "service_general",
+                "resolve": "service-general"
+            },
+            "pass": true
+        },
+        {
+            "step": "C_save_as_placeholder",
+            "meta": {
+                "role": "placeholder",
+                "layout": "placeholder",
+                "resolve": "placeholder"
+            },
+            "frontend": {
+                "http": 200,
+                "mode": "placeholder",
+                "blocks": 0,
+                "fatal": 0,
+                "bytes": 56117,
+                "has_placeholder_stack": 1,
+                "has_h1": 1
+            },
+            "pass": true
+        },
+        {
+            "step": "D_final_placeholder",
+            "meta": {
+                "role": "placeholder",
+                "layout": "placeholder",
+                "resolve": "placeholder"
+            },
+            "pass": true
+        }
+    ],
+    "content": {
+        "before": {
+            "count": 219,
+            "hash": "0e65a49f746b03975c6527564b5401b3"
+        },
+        "after": {
+            "count": 219,
+            "hash": "0e65a49f746b03975c6527564b5401b3",
+            "match": true,
+            "missing": [],
+            "added": []
+        }
+    },
+    "regression": [
+        {
+            "id": 74,
+            "meta": {
+                "role": "service",
+                "layout": "service_general",
+                "resolve": "service-general"
+            },
+            "frontend": {
+                "http": 200,
+                "mode": "service",
+                "blocks": 3,
+                "fatal": 0,
+                "bytes": 132868,
+                "has_placeholder_stack": 0,
+                "has_h1": 1
+            },
+            "pass": true
+        },
+        {
+            "id": 314,
+            "meta": {
+                "role": "service",
+                "layout": "service_general",
+                "resolve": "service-general"
+            },
+            "frontend": {
+                "http": 200,
+                "mode": "service",
+                "blocks": 3,
+                "fatal": 0,
+                "bytes": 116896,
+                "has_placeholder_stack": 0,
+                "has_h1": 1
+            },
+            "pass": true
+        },
+        {
+            "id": 81,
+            "meta": {
+                "role": "service",
+                "layout": "service_general",
+                "resolve": "service-general"
+            },
+            "frontend": {
+                "http": 200,
+                "mode": "service",
+                "blocks": 3,
+                "fatal": 0,
+                "bytes": 112695,
+                "has_placeholder_stack": 0,
+                "has_h1": 1
+            },
+            "pass": true
+        },
+        {
+            "id": 85,
+            "meta": {
+                "role": "service",
+                "layout": "service_general",
+                "resolve": "service-general"
+            },
+            "frontend": {
+                "http": 200,
+                "mode": "service",
+                "blocks": 3,
+                "fatal": 0,
+                "bytes": 112404,
+                "has_placeholder_stack": 0,
+                "has_h1": 1
+            },
+            "pass": true
+        },
+        {
+            "id": 73,
+            "meta": {
+                "role": "section",
+                "layout": "subdivision",
+                "resolve": "subdivision"
+            },
+            "frontend": {
+                "http": 200,
+                "mode": "section",
+                "blocks": 2,
+                "fatal": 0,
+                "bytes": 128926,
+                "has_placeholder_stack": 0,
+                "has_h1": 1
+            },
+            "pass": true
+        },
+        {
+            "id": 77,
+            "meta": {
+                "role": "section",
+                "layout": "subdivision",
+                "resolve": "subdivision"
+            },
+            "frontend": {
+                "http": 200,
+                "mode": "section",
+                "blocks": 2,
+                "fatal": 0,
+                "bytes": 130547,
+                "has_placeholder_stack": 0,
+                "has_h1": 1
+            },
+            "pass": true
+        },
+        {
+            "id": 84,
+            "meta": {
+                "role": "section",
+                "layout": "subdivision",
+                "resolve": "subdivision"
+            },
+            "frontend": {
+                "http": 200,
+                "mode": "section",
+                "blocks": 2,
+                "fatal": 0,
+                "bytes": 125557,
+                "has_placeholder_stack": 0,
+                "has_h1": 1
+            },
+            "pass": true
+        }
+    ],
+    "frontend": [
+        {
+            "route": "home",
+            "url": "http://shpigovsky.test/",
+            "http": 200,
+            "fatal": 0,
+            "pass": true
+        },
+        {
+            "route": "uslugi",
+            "url": "http://shpigovsky.test/uslugi/",
+            "http": 200,
+            "fatal": 0,
+            "pass": true
+        },
+        {
+            "route": "zavis",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/",
+            "http": 200,
+            "fatal": 0,
+            "pass": true
+        },
+        {
+            "route": "psih",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/",
+            "http": 200,
+            "fatal": 0,
+            "pass": true
+        },
+        {
+            "route": "rpp",
+            "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/",
+            "http": 200,
+            "fatal": 0,
+            "pass": true
+        },
+        {
+            "route": "p78",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/depressiya/",
+            "http": 200,
+            "fatal": 0,
+            "pass": true
+        },
+        {
+            "route": "p74",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+            "http": 200,
+            "fatal": 0,
+            "pass": true
+        },
+        {
+            "route": "p314",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+            "http": 200,
+            "fatal": 0,
+            "pass": true
+        },
+        {
+            "route": "p81",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+            "http": 200,
+            "fatal": 0,
+            "pass": true
+        },
+        {
+            "route": "p85",
+            "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+            "http": 200,
+            "fatal": 0,
+            "pass": true
+        },
+        {
+            "route": "blog",
+            "url": "http://shpigovsky.test/blog/",
+            "http": 200,
+            "fatal": 0,
+            "pass": true
+        },
+        {
+            "route": "spec",
+            "url": "http://shpigovsky.test/specyalisty/",
+            "http": 200,
+            "fatal": 0,
+            "pass": true
+        },
+        {
+            "route": "ocentre",
+            "url": "http://shpigovsky.test/o-centre/",
+            "http": 200,
+            "fatal": 0,
+            "pass": true
+        },
+        {
+            "route": "kontakty",
+            "url": "http://shpigovsky.test/kontakty/",
+            "http": 200,
+            "fatal": 0,
+            "pass": true
+        }
+    ],
+    "post_status_78": "publish",
+    "permalink_78": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/depressiya/"
+}

@@ -39,6 +39,7 @@ final class ServicePermalinks implements ModuleInterface {
 	 */
 	public static function register() {
 		add_action( 'init', array( __CLASS__, 'register_rewrite_rules' ), 20 );
+		add_filter( 'request', array( __CLASS__, 'filter_service_request' ), 10, 1 );
 		add_filter( 'post_type_link', array( __CLASS__, 'filter_service_permalink' ), 10, 2 );
 		add_filter( 'redirect_canonical', array( __CLASS__, 'filter_canonical_redirect' ), 10, 2 );
 	}
@@ -50,6 +51,13 @@ final class ServicePermalinks implements ModuleInterface {
 	 * Do not flush rewrite rules here; activation/migration flush is a later delivery boundary.
 	 */
 	public static function register_rewrite_rules() {
+		// Depth-3 Excel interim routes (V9-06E29C): zavisimosti/subdivision/leaf.
+		add_rewrite_rule(
+			'^uslugi/([^/]+)/([^/]+)/([^/]+)/?$',
+			'index.php?post_type=' . Service::POST_TYPE . '&' . Service::POST_TYPE . '=$matches[1]/$matches[2]/$matches[3]',
+			'top'
+		);
+
 		// Depth-2 must pass parent/child path: hierarchical CPT lookup uses get_page_by_path.
 		// Leaf-only $matches[2] fails for children (e.g. Service 74 under Service 73).
 		add_rewrite_rule(
@@ -84,6 +92,42 @@ final class ServicePermalinks implements ModuleInterface {
 		}
 
 		return home_url( user_trailingslashit( 'uslugi/' . $path ) );
+	}
+
+	/**
+	 * Resolve nested service path query vars to a concrete post ID.
+	 *
+	 * @param array<string, mixed> $query_vars Request query vars.
+	 * @return array<string, mixed>
+	 */
+	public static function filter_service_request( $query_vars ) {
+		if ( empty( $query_vars['post_type'] ) || Service::POST_TYPE !== $query_vars['post_type'] ) {
+			return $query_vars;
+		}
+
+		$path = '';
+
+		if ( ! empty( $query_vars[ Service::POST_TYPE ] ) ) {
+			$path = (string) $query_vars[ Service::POST_TYPE ];
+		} elseif ( ! empty( $query_vars['name'] ) && str_contains( (string) $query_vars['name'], '/' ) ) {
+			$path = (string) $query_vars['name'];
+		}
+
+		if ( '' === $path || ! str_contains( $path, '/' ) ) {
+			return $query_vars;
+		}
+
+		$post = get_page_by_path( $path, OBJECT, Service::POST_TYPE );
+
+		if ( ! $post instanceof \WP_Post || 'publish' !== $post->post_status ) {
+			return $query_vars;
+		}
+
+		$query_vars['p']         = (int) $post->ID;
+		$query_vars['post_type'] = Service::POST_TYPE;
+		unset( $query_vars[ Service::POST_TYPE ], $query_vars['name'] );
+
+		return $query_vars;
 	}
 
 	/**
@@ -137,7 +181,7 @@ final class ServicePermalinks implements ModuleInterface {
 			$depth++;
 		}
 
-		return implode( '/', array_slice( $slugs, 0, 2 ) );
+		return implode( '/', array_slice( $slugs, 0, 3 ) );
 	}
 
 	/**

@@ -1,0 +1,7 @@
+section_block,home_pattern_source,reusable_yes_no,applied_yes_no,reason,notes
+Stages steps+support,template-parts/home/rehabilitation-requirements.php (.home-rehabilitation-requirements__steps/support),yes,yes,Same OL/step markup already used by service/stages.php; fixed PHP then kept Home class hooks,section_stages_items mirrors rehab_requirements_steps title/text rows
+Nature cards,home-recovery-intro__card,yes,yes,already reused since E46,unchanged
+Nature text blocks,N/A unique subdivision subsections,no,partial,"Not a Home repeater; patterned after section_nature_cards ACF",new section_nature_text_blocks
+Program intros,Home rehab program intro_1/intro_2 pattern (E41),yes,yes,Converted fixed intro1/2 to repeater like Home multi-intro direction,CSS classes services-program-v2__intro preserved
+Mid CTA / program-cta-band,components/program-cta-band (shared),yes,yes,unchanged integration,label rename only
+Reviews/FAQ/Comfort/Specialists/Clinic,home/* partials,yes,yes,toggle-only on section stack,Home files not modified (0 home template hash mismatches vs backup)

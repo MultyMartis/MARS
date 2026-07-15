@@ -1,0 +1,3 @@
+test,expected,actual,result,notes
+"Optional section text empty","no hardcoded demo injected","lead_empty=yes helper_empty=yes lead_call_ok=yes helper_contract=yes http=200",PASS,"method=temporary clear+restore on #77 section_nature_lead; + code-level helper/template contract"
+"Value restored / preserved","original visible","meta_equal=yes fe_visible=yes http=200",PASS,"restored after temporary clear; no lasting mutation"

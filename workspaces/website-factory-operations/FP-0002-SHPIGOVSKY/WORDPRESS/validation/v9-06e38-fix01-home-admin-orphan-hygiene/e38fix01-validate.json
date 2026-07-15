@@ -1,0 +1,181 @@
+{
+    "acf_get_fields_count": 18,
+    "field_names": [
+        "hero_media",
+        "hero_cta_label",
+        "home_hero_slides",
+        "home_advantages",
+        "home_intro_bands",
+        "home_recovery_intro_heading",
+        "home_recovery_intro_lead_1",
+        "home_recovery_intro_lead_2",
+        "",
+        "",
+        "home_articles_heading",
+        "",
+        "",
+        "",
+        "home_faq_heading",
+        "home_faq_items",
+        "home_cta_title",
+        "home_cta_text"
+    ],
+    "fields_detail": [
+        {
+            "name": "hero_media",
+            "label": "Hero image",
+            "type": "image",
+            "key": "field_fp02_hero_media_home"
+        },
+        {
+            "name": "hero_cta_label",
+            "label": "Текст кнопки в hero-блоке",
+            "type": "text",
+            "key": "field_fp02_hero_cta_label_home"
+        },
+        {
+            "name": "home_hero_slides",
+            "label": "Hero slides",
+            "type": "repeater",
+            "key": "field_fp02_home_hero_slides"
+        },
+        {
+            "name": "home_advantages",
+            "label": "Advantages / trust",
+            "type": "repeater",
+            "key": "field_fp02_home_advantages"
+        },
+        {
+            "name": "home_intro_bands",
+            "label": "Intro bands",
+            "type": "repeater",
+            "key": "field_fp02_home_intro_bands"
+        },
+        {
+            "name": "home_recovery_intro_heading",
+            "label": "Recovery intro — заголовок",
+            "type": "text",
+            "key": "field_fp02_home_recovery_intro_heading"
+        },
+        {
+            "name": "home_recovery_intro_lead_1",
+            "label": "Recovery intro — абзац 1",
+            "type": "textarea",
+            "key": "field_fp02_home_recovery_intro_lead_1"
+        },
+        {
+            "name": "home_recovery_intro_lead_2",
+            "label": "Recovery intro — абзац 2",
+            "type": "textarea",
+            "key": "field_fp02_home_recovery_intro_lead_2"
+        },
+        {
+            "name": "",
+            "label": "Галерея на главной",
+            "type": "message",
+            "key": "field_fp02_home_gallery_source_notice"
+        },
+        {
+            "name": "",
+            "label": "Специалисты на главной",
+            "type": "message",
+            "key": "field_fp02_home_specialists_source_notice"
+        },
+        {
+            "name": "home_articles_heading",
+            "label": "Articles — заголовок",
+            "type": "text",
+            "key": "field_fp02_home_articles_heading"
+        },
+        {
+            "name": "",
+            "label": "Статьи на главной",
+            "type": "message",
+            "key": "field_fp02_home_articles_source_notice"
+        },
+        {
+            "name": "",
+            "label": "Комфорт на главной",
+            "type": "message",
+            "key": "field_fp02_home_comfort_source_notice"
+        },
+        {
+            "name": "",
+            "label": "Отзывы на главной",
+            "type": "message",
+            "key": "field_fp02_home_reviews_source_notice"
+        },
+        {
+            "name": "home_faq_heading",
+            "label": "Заголовок FAQ",
+            "type": "text",
+            "key": "field_fp02_home_faq_heading"
+        },
+        {
+            "name": "home_faq_items",
+            "label": "FAQ",
+            "type": "repeater",
+            "key": "field_fp02_home_faq_items"
+        },
+        {
+            "name": "home_cta_title",
+            "label": "CTA title",
+            "type": "text",
+            "key": "field_fp02_home_cta_title"
+        },
+        {
+            "name": "home_cta_text",
+            "label": "CTA text",
+            "type": "textarea",
+            "key": "field_fp02_home_cta_text"
+        }
+    ],
+    "groups_for_home": [
+        {
+            "key": "group_fp02_page_home",
+            "title": "Page — Home",
+            "ID": 639,
+            "local": "json",
+            "active": true
+        }
+    ],
+    "publish_db_home_groups": [
+        639
+    ],
+    "keep_639_publish_fields": [
+        "hero_media",
+        "hero_cta_label",
+        "home_hero_slides",
+        "home_advantages",
+        "home_intro_bands",
+        "home_faq_items",
+        "home_cta_title",
+        "home_cta_text"
+    ],
+    "save_probe": {
+        "before": "Нас часто спрашивают",
+        "update_ok": true,
+        "after_match": true
+    },
+    "home_http": 200,
+    "imsc42": 0,
+    "has_faq_heading": true,
+    "has_articles": true,
+    "has_recovery": true,
+    "has_specialists": true,
+    "has_gallery_swiper": true,
+    "has_services_accordion": true,
+    "routes": {
+        "/": 200,
+        "/uslugi/": 200,
+        "/blog/": 200,
+        "/specyalisty/": 200,
+        "/o-centre/": 200,
+        "/kontakty/": 200
+    },
+    "operator_css": {
+        "src": "a0091d53c19f4710b1289bd757154f9a8382c34c2543b91751b93491b4aa631e",
+        "rt": "a0091d53c19f4710b1289bd757154f9a8382c34c2543b91751b93491b4aa631e",
+        "match": true
+    }
+}

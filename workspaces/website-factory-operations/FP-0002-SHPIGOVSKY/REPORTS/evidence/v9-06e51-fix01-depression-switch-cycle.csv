@@ -1,0 +1,7 @@
+cycle_step,admin_selected,saved_role_meta,saved_layout_meta,frontend_mode,content_preserved,result,notes
+A_start,Заглушка,placeholder,placeholder,placeholder_stack H1,n/a,PASS,HTTP 200; stub bytes ~56k
+B_save_service,Услуга,service,service_general,full service blocks,yes,PASS,Stale layout=placeholder posted; guard+sync healed; ~112k; blocks>0
+B2_update_field_only,Услуга,service,service_general,service-general resolve,yes,PASS,Previously broken path without acf_save_post
+C_save_placeholder,Заглушка,placeholder,placeholder,placeholder_stack H1,yes,PASS,Stale layout=service_general posted; healed
+D_final,Заглушка,placeholder,placeholder,placeholder,yes,PASS,Operator-requested final test state
+content_fingerprint,,,,"",hash match 219 non-layout keys,PASS,before=after hash 0e65a49f746b03975c6527564b5401b3

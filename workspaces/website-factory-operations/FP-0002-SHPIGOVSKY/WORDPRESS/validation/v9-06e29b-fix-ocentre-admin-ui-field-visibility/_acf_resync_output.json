@@ -1,0 +1,90 @@
+{
+    "mode": "resync",
+    "source": "FieldGroups::get_field_groups",
+    "source_json": "X:/AI MARS/workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/acf-json/group_fp02_page_institutional.json",
+    "runtime_json": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky/wp-content/acf-json/group_fp02_page_institutional.json",
+    "deleted_db": [],
+    "import_ok": true,
+    "field_count": 37,
+    "missing_after": [],
+    "probe_after": {
+        "group_exists": true,
+        "group_key": "group_fp02_page_institutional",
+        "group_title": "Page — Institutional",
+        "group_id": 0,
+        "field_count_top": 37,
+        "field_count_flat": 53,
+        "visible_field_names": [
+            "hero_eyebrow",
+            "hero_title_override",
+            "hero_lead",
+            "hero_media",
+            "hero_cta_label",
+            "about_narrative_heading",
+            "about_narrative_lead",
+            "about_narrative_paragraphs",
+            "text",
+            "about_who_treat_heading",
+            "about_who_treat_intro",
+            "about_who_treat_lead",
+            "about_who_treat_spectrum",
+            "title",
+            "about_who_treat_callout",
+            "about_who_treat_cards",
+            "about_approach_heading",
+            "about_approach_highlight",
+            "about_approach_intro",
+            "about_founder_quote_paragraphs",
+            "about_founder_name",
+            "about_founder_role",
+            "about_founder_photo",
+            "about_founder_cta_label",
+            "about_clinic_landscape_image",
+            "about_clinic_landscape_alt",
+            "about_program_heading",
+            "about_program_lead",
+            "about_program_intro",
+            "about_program_intro2",
+            "about_program_items",
+            "image",
+            "institutional_placeholder_notice",
+            "institutional_content_sections",
+            "media",
+            "institutional_stages",
+            "infrastructure_g0_g5",
+            "about_hub_admin_overview",
+            "about_hub_admin_note_shared_blocks",
+            "about_hub_admin_note_cta_phone",
+            "institutional_child_pages_note"
+        ],
+        "missing_required": [],
+        "child_only_fields": [
+            {
+                "name": "institutional_content_sections",
+                "present": true
+            },
+            {
+                "name": "institutional_stages",
+                "present": true
+            },
+            {
+                "name": "institutional_placeholder_notice",
+                "present": true
+            }
+        ],
+        "page_11_group_keys": [
+            "group_fp02_page_institutional",
+            "group_fp02_page_institutional",
+            "group_fp02_page_institutional",
+            "group_fp02_page_institutional",
+            "group_fp02_page_institutional",
+            "group_fp02_page_institutional",
+            "group_fp02_page_institutional",
+            "group_fp02_page_institutional",
+            "group_fp02_page_institutional"
+        ],
+        "institutional_on_page_11": true,
+        "result": "PASS"
+    },
+    "result": "PASS"
+}

@@ -1,0 +1,13 @@
+file,function_or_block,frontend_block,fallback_type,fallback_preview,current_acf_field,current_admin_value_empty,must_seed_to_acf,action,notes
+"service-section-helpers.php","shpigovsky_section_text","many text fields","text","emergency short defaults","respective ACF","no-after-seed","no","kept_emergency_only","ACF seeded for #73/#77/#84"
+"service-section-helpers.php","shpigovsky_get_section_nature_text_blocks","nature text blocks","repeater rows","neuro/geno demo","section_nature_text_blocks","no","yes","seeded; emergency remains",""
+"service-section-helpers.php","shpigovsky_get_section_nature_fallback_cards","nature cards","repeater rows","2 cards lorem","section_nature_cards","no","yes","seeded; emergency remains",""
+"service-section-helpers.php","shpigovsky_get_section_program_intro_demo_fallback","program intros","repeater rows","2 lorem paras","section_program_intro_items","partial-#73","yes-#77/#84","seeded empty pages","#73 preserved"
+"service-section-helpers.php","shpigovsky_get_section_stages_items_fallback","stages items","repeater rows","4 steps","section_stages_items","no","yes","seeded from structured/demo",""
+"service-section-helpers.php","shpigovsky_get_section_stages_support_fallback","stages support","repeater rows","4 bullets","section_stages_support_items","no-#73","yes-#77/#84","seeded",""
+"service-section-helpers.php","shpigovsky_get_section_approach_fallback_cards","approach cards","repeater rows","4 cards","section_approach_cards","no-#73","yes-#77/#84","seeded",""
+"team-stats.php","corridor image","approach corridor","image","theme corridor.webp","section_corridor_image","yes-before","yes","seeded att 1709; emergency theme asset remains","Home not primary"
+"team-stats.php","team image","approach staff","image","theme staff-group.webp","section_team_image","yes-before","yes","seeded att 1238; emergency theme remains","reused Home ML id as section field"
+"clinic-landscape.php","section landscape","territory","image","theme landscape","section_clinic_landscape_image","no","no","already seeded FIX04 #1239","Home not primary"
+"children.php","dependencies chrome","children block","text","static heading/lorem","section_dependencies_*","no-#73","yes-#77/#84","seeded","children CPT automatic"
+"comfort/reviews/specialists","shared blocks","shared","global_home","n/a","visibility toggles","n/a","no","intentional_automatic","documented"

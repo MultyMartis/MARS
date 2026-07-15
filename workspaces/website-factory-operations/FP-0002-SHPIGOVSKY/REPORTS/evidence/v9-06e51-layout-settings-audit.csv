@@ -1,0 +1,8 @@
+post_type,post_id_or_group,field_group,field_name,current_choices_before,placeholder_available_before,placeholder_available_after,action,notes
+service,group_fp02_service_layout_hero,Макет страницы услуги,service_editor_role,"section,service",no,yes,restored_Заглушка,nested now Услуга|Заглушка
+service,group_fp02_service_layout_hero,Макет страницы услуги,service_layout_variant,"subdivision,service_general,standard,extended,placeholder(Legacy)",yes_legacy,yes_active,relabeled_sync_target,hidden technical UI
+page,group_fp02_page_layout_mode (new),Макет страницы,page_layout_mode,n/a,no,yes,created,location=generic.php only; default full
+page,Home/hub/contacts/etc,dedicated templates,n/a,n/a,no,no_by_design,documented_skip,dedicated page templates keep own layout; no mass enable
+service,"#73/#77/#84",same layout group,service_editor_role,section|service,no,yes,available_not_enabled,remain section
+service,"#74/#314/#81/#85",same,service_editor_role,service,no,yes,available_not_enabled,remain service
+service,#78,same,service_editor_role,service,no,yes,enabled_for_test,role+layout=placeholder

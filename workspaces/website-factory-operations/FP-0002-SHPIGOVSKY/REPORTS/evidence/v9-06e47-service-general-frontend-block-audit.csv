@@ -1,0 +1,19 @@
+frontend_order,block_class_or_id,block_label,template_partial,current_source,source_type,editable_now,required_admin_control,repeated_or_automatic,action,notes
+1,"services-inner-hero-v2 / inner-hero",Hero,template-parts/service/inner-hero.php,"Hero ACF group",ACF,yes,"Hero group fields",no,keep,"shared hero group"
+2,"internal-page-nav / subnav","Навигация по якорям",template-parts/service/subnav.php,"template anchors","hardcoded HTML",partial,toggle+notice,yes,toggle,"automatic anchors"
+3,service-leaf-intro-v1,Intro,template-parts/service/intro.php,service_general_intro_*,ACF,yes,heading+highlight,no,seeded,"was alcohol PHP static"
+4,service-leaf-bordered-info-v1,"Bordered info",template-parts/service/bordered-info.php,service_general_bordered_info_items,ACF,yes,repeater,yes,seeded,"was alcohol PHP static"
+5,"service-leaf-cta-01 / mid-cta","Mid CTA",template-parts/service/mid-cta.php,"phone + hardcoded CTA chrome","site settings + hardcoded",partial,toggle+notice,yes,toggle,"content shared; toggle only"
+6,service-leaf-signs-v1,Признаки,template-parts/service/signs.php,service_general_signs_*,ACF,yes,heading/intro/items/editorial,yes,seeded,"was alcohol PHP static"
+7,service-leaf-approach-v1,Подход,alcohol-direct-v9/approach.php,"service_general_approach_* + team image",ACF,yes,fields+cards+image,yes,seeded,"was alcohol PHP + theme staff image"
+8,clinic-landscape,Территория,home/clinic-landscape.php,service_general_clinic_landscape_image,ACF,yes,image+toggle,yes,seeded,"no longer Home as normal SoT"
+9,services-program-v2,Программа,template-parts/service/program.php,"service_general_program_* + catalog tiles","ACF + global/shared",partial,"chrome fields; tiles automatic",yes,seeded,"tiles remain catalogue fallback"
+10,service-leaf-stages-v1,Этапы,alcohol-direct-v9/stages.php,service_general_stages_*,ACF,yes,"stages+support repeaters",yes,seeded,"was alcohol PHP static"
+11,service-leaf-corridor-v1,Коридор,template-parts/service/corridor.php,service_general_corridor_image,ACF,yes,image+toggle,yes,seeded,"was theme asset"
+12,specialists,Специалисты,alcohol-direct-v9/specialists.php,"specialists child pages","child services / global",partial,toggle+notice,yes,toggle,"automatic cards"
+13,founder-quote,"Слово основателя",home/founder-quote.php,"shared template",global/shared,partial,toggle+notice,yes,toggle,
+14,comfort,Условия,home/comfort.php,"Comfort block options",global/shared,partial,toggle+notice,yes,toggle,
+15,reviews,Отзывы,home/reviews.php,"reviews CPT/settings",global/shared,partial,toggle+notice,yes,toggle,
+16,service-child-services,"Дочерние плитки",template-parts/service/child-services.php,"CPT children","child services",partial,toggle+notice,yes,toggle,"only if children"
+17,faq,FAQ,alcohol-direct-v9/faq.php,service_general_faq_*,ACF,yes,"heading+items repeater",yes,seeded,"was alcohol PHP static"
+18,final-form,"Финальная форма",components/final-form.php,"Final Form options",global/shared,partial,toggle+notice,yes,toggle,

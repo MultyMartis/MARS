@@ -1,0 +1,17 @@
+route,http,expect,has_header,has_h1,has_footer,has_service_blocks,has_placeholder_marker,noindex,fatal_hint,result,notes
+home,200,full,True,True,True,False,False,False,False,PASS,service-placeholder.svg image name only (not layout mode)
+uslugi,200,full,True,True,True,True,False,False,False,PASS,hub frozen visual not modified
+zavisimosti,200,full,True,True,True,True,False,False,False,PASS,section #73
+psihicheskoe-zdorovie,200,full,True,True,True,True,False,False,False,PASS,section #77
+rpp,200,full,True,True,True,True,False,False,False,PASS,section #84
+p78-depressiya,200,placeholder,True,True,True,False,True,False,False,PASS,main=H1 only; child-services CSS gated off
+p74-alcohol,200,full,True,True,True,True,False,False,False,PASS,full service preserved
+p314-narko,200,full,True,True,True,True,False,False,False,PASS,full service preserved
+p81-trevoga,200,full,True,True,True,True,False,False,False,PASS,full service preserved
+p85-anoreksiya,200,full,True,True,True,True,False,False,False,PASS,full service preserved
+p75-profilaktika,200,full,True,True,True,True,False,False,False,PASS,E49 leaf
+p79-ptsr,200,full,True,True,True,True,False,False,False,PASS,slug ptsr not ptrs
+blog,200,full,True,True,True,False,False,False,False,PASS,
+specyalisty,200,full,True,True,True,False,False,False,False,PASS,
+o-centre,200,full,True,True,True,True,False,False,False,PASS,
+kontakty,200,full,True,True,True,False,False,False,False,PASS,

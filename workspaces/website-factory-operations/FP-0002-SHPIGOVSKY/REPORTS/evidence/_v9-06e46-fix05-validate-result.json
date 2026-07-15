@@ -1,0 +1,41 @@
+{
+    "db_writes_est": 60,
+    "admin": {
+        "edit_73_loads": true,
+        "field_count": 55,
+        "has_team": true,
+        "has_corridor": true,
+        "has_landscape": true,
+        "team_73": 1238,
+        "corridor_73": 1709,
+        "landscape_73": 1239,
+        "bad_wording": [],
+        "classic_editor_support": true,
+        "home_staff": 1238,
+        "home_landscape": 1239
+    },
+    "team_resolve": {
+        "url": "http:\/\/shpigovsky.test\/wp-content\/uploads\/2026\/07\/shpigovsky-staff-group.webp",
+        "alt": "alt",
+        "width": 1139,
+        "height": 443,
+        "source": "acf:section_team_image"
+    },
+    "corridor_resolve": {
+        "url": "http:\/\/shpigovsky.test\/wp-content\/uploads\/2026\/07\/shpigovsky-interior-corridor.webp",
+        "alt": "Интерьер клиники — коридор с картинами",
+        "width": 2187,
+        "height": 1231,
+        "source": "acf:section_corridor_image"
+    },
+    "before_imgs": [
+        "http:\/\/shpigovsky.test\/wp-content\/themes\/shpigovsky\/assets\/img\/content\/rehabilitation-requirements\/shpigovsky-interior-corridor.webp",
+        "http:\/\/shpigovsky.test\/wp-content\/themes\/shpigovsky\/assets\/img\/content\/pre-reviews\/shpigovsky-staff-group.webp",
+        "http:\/\/shpigovsky.test\/wp-content\/uploads\/2026\/07\/shpigovsky-clinic-landscape-1.webp"
+    ],
+    "after_imgs": [
+        "http:\/\/shpigovsky.test\/wp-content\/uploads\/2026\/07\/shpigovsky-interior-corridor.webp",
+        "http:\/\/shpigovsky.test\/wp-content\/uploads\/2026\/07\/shpigovsky-staff-group.webp",
+        "http:\/\/shpigovsky.test\/wp-content\/uploads\/2026\/07\/shpigovsky-clinic-landscape-1.webp"
+    ]
+}

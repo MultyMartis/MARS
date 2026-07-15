@@ -1,0 +1,9 @@
+page_or_route,expected,actual,result,notes
+/,"unchanged freeze; HTTP 200","HTTP 200 size=185334",PASS,"no product writes in this freeze task"
+/uslugi/,"unchanged freeze; HTTP 200","HTTP 200 size=123600",PASS,"no product writes in this freeze task"
+/uslugi/zavisimosti/,"E50 section preserved; HTTP 200; role=section","HTTP 200 ph=n sectionish=y role=section size=128926",PASS,"E50 freeze preserved"
+/uslugi/psihicheskoe-zdorovie/,"E50 section preserved; HTTP 200; role=section","HTTP 200 ph=n sectionish=y role=section size=130547",PASS,"E50 freeze preserved"
+/uslugi/rasstroystva-pischevogo-povedeniya/,"E50 section preserved; HTTP 200; role=section","HTTP 200 ph=n sectionish=y role=section size=125557",PASS,"E50 freeze preserved"
+"Placeholder mode (E51)","available in code; #78 remains Услуга","placeholder-stack.php=yes #78=service/service_general",PASS,"Do not switch #78 to placeholder in freeze"
+"#78 final state",service/service_general,service/service_general,PASS,
+"#315 final state (E49-FIX01)",service/service_general,service/service_general,PASS,"restored by E49-FIX01; freeze retry expects Услуга"

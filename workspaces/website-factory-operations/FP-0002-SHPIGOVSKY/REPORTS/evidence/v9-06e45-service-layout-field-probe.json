@@ -1,0 +1,106 @@
+{
+    "module_enabled": true,
+    "fields": [
+        {
+            "key": "field_fp02_service_editor_role",
+            "name": "service_editor_role",
+            "type": "button_group",
+            "label": "Тип страницы услуги"
+        },
+        {
+            "key": "field_fp02_service_layout_advanced_heading",
+            "name": "",
+            "type": "message",
+            "label": "Расширенные настройки шаблона"
+        },
+        {
+            "key": "field_fp02_service_layout_override_enabled",
+            "name": "service_layout_override_enabled",
+            "type": "true_false",
+            "label": "Ручной технический шаблон"
+        },
+        {
+            "key": "field_fp02_service_layout_variant",
+            "name": "service_layout_variant",
+            "type": "select",
+            "label": "Технический шаблон"
+        },
+        {
+            "key": "field_fp02_hero_eyebrow_service",
+            "name": "hero_eyebrow",
+            "type": "text",
+            "label": "Надзаголовок"
+        },
+        {
+            "key": "field_fp02_hero_title_override_service",
+            "name": "hero_title_override",
+            "type": "text",
+            "label": "Заголовок H1 override"
+        },
+        {
+            "key": "field_fp02_hero_lead_service",
+            "name": "hero_lead",
+            "type": "textarea",
+            "label": "Лид"
+        },
+        {
+            "key": "field_fp02_service_short_description",
+            "name": "service_short_description",
+            "type": "textarea",
+            "label": "Мини-описание"
+        },
+        {
+            "key": "field_fp02_service_category_section_lead",
+            "name": "service_category_section_lead",
+            "type": "textarea",
+            "label": "Текст под мини-описанием на странице «Услуги»"
+        },
+        {
+            "key": "field_fp02_service_show_in_text_list",
+            "name": "service_show_in_text_list",
+            "type": "true_false",
+            "label": "Показывать в текстовом списке"
+        },
+        {
+            "key": "field_fp02_service_show_in_slider",
+            "name": "service_show_in_slider",
+            "type": "true_false",
+            "label": "Показывать в слайдере"
+        },
+        {
+            "key": "field_fp02_service_show_on_home_gallery",
+            "name": "service_show_on_home_gallery",
+            "type": "true_false",
+            "label": "Показывать в слайдере на главной"
+        },
+        {
+            "key": "field_fp02_service_slider_image",
+            "name": "service_slider_image",
+            "type": "image",
+            "label": "Изображение для слайдера"
+        },
+        {
+            "key": "field_fp02_hero_media_service",
+            "name": "hero_media",
+            "type": "image",
+            "label": "Hero image"
+        },
+        {
+            "key": "field_fp02_hero_cta_label_service",
+            "name": "hero_cta_label",
+            "type": "text",
+            "label": "Текст кнопки в hero-блоке"
+        },
+        {
+            "key": "field_fp02_hero_cta_target_service",
+            "name": "hero_cta_target",
+            "type": "url",
+            "label": "CTA target"
+        }
+    ],
+    "group": {
+        "key": "group_fp02_service_layout_hero",
+        "title": "Service — Layout and Hero",
+        "ID": 679
+    }
+}

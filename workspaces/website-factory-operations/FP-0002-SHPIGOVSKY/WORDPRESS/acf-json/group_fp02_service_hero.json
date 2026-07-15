@@ -1,0 +1,148 @@
+{
+    "key": "group_fp02_service_hero",
+    "title": "Hero страницы услуги",
+    "fields": [
+        {
+            "key": "field_fp02_service_hero_heading",
+            "label": "Hero страницы услуги",
+            "name": "service_hero_heading",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "message": "Общий блок hero для типов «Раздел» и «Услуга». Не дублируйте эти поля в других группах. Ключи meta сохранены (hero_eyebrow, hero_title_override, hero_lead, hero_media, hero_cta_label, hero_cta_target)."
+        },
+        {
+            "key": "field_fp02_hero_eyebrow_service",
+            "label": "Надзаголовок",
+            "name": "hero_eyebrow",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_hero_title_override_service",
+            "label": "Заголовок H1 override",
+            "name": "hero_title_override",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_hero_lead_service",
+            "label": "Лид",
+            "name": "hero_lead",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 4
+        },
+        {
+            "key": "field_fp02_hero_media_service",
+            "label": "Изображение (Hero)",
+            "name": "hero_media",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Фоновое изображение hero. Если пусто — fallback по теме\/макету.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "return_format": "array",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_fp02_hero_cta_label_service",
+            "label": "Текст кнопки в hero-блоке",
+            "name": "hero_cta_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Индивидуальный текст кнопки для hero. Если пусто — текст по умолчанию.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_hero_cta_target_service",
+            "label": "Ссылка кнопки (CTA)",
+            "name": "hero_cta_target",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "service"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "FP-0002 V9-06E46-FIX01: shared service hero fields (section + service). Meta keys preserved.",
+    "show_in_rest": 0,
+    "modified": 1784040457
+}

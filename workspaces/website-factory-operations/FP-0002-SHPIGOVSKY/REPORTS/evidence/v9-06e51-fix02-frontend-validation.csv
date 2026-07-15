@@ -1,0 +1,11 @@
+page,url,http,role,layout,placeholder_stack,child_tiles,result,notes
+#74,http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/,200,service,service_general,NO,n/a,PASS,
+#314,http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/,200,service,service_general,NO,YES,PASS,
+#81,http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/,200,service,service_general,NO,n/a,PASS,
+#85,http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/,200,service,service_general,NO,n/a,PASS,
+#73,http://shpigovsky.test/uslugi/zavisimosti/,200,section,subdivision,NO,n/a,PASS,
+#77,http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/,200,section,subdivision,NO,n/a,PASS,
+#84,http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/,200,section,subdivision,NO,n/a,PASS,
+#78,http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/depressiya/,200,service,service_general,NO,n/a,PASS,
+"Home /",http://shpigovsky.test/,200,n/a,n/a,NO,n/a,PASS,"frozen visual untouched (HTTP only)"
+/uslugi/,http://shpigovsky.test/uslugi/,200,n/a,n/a,NO,n/a,PASS,"hub HTTP only"

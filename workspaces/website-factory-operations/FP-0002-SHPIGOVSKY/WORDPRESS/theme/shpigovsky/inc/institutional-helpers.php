@@ -229,14 +229,25 @@ function shpigovsky_get_about_program_context( $page_id ) {
 	$items = shpigovsky_get_institutional_repeater_or_static( $page_id, 'about_program_items', array() );
 
 	if ( empty( $items ) ) {
-		$items = $static['items'];
+		foreach ( shpigovsky_get_program_direction_items( 'service' ) as $direction ) {
+			$items[] = array(
+				'title'  => $direction['title_display'],
+				'image'  => $direction['image'],
+				'width'  => $direction['width'],
+				'height' => $direction['height'],
+				'alt'    => $direction['alt'],
+				'url'    => $direction['url'],
+			);
+		}
 	} else {
 		$normalized = array();
+		$directions = shpigovsky_get_program_direction_items( 'service' );
 
 		foreach ( $items as $index => $row ) {
 			$fallback = isset( $static['items'][ $index ] ) ? $static['items'][ $index ] : array();
 			$image    = isset( $row['image'] ) && is_array( $row['image'] ) ? $row['image'] : array();
 			$asset    = isset( $fallback['image'] ) ? (string) $fallback['image'] : '';
+			$dir_url  = isset( $directions[ $index ]['url'] ) ? (string) $directions[ $index ]['url'] : '';
 
 			$normalized[] = array(
 				'title'  => isset( $row['title'] ) && '' !== trim( (string) $row['title'] ) ? trim( (string) $row['title'] ) : ( isset( $fallback['title'] ) ? $fallback['title'] : '' ),
@@ -244,6 +255,7 @@ function shpigovsky_get_about_program_context( $page_id ) {
 				'width'  => ! empty( $image['width'] ) ? (int) $image['width'] : ( isset( $fallback['width'] ) ? (int) $fallback['width'] : 0 ),
 				'height' => ! empty( $image['height'] ) ? (int) $image['height'] : ( isset( $fallback['height'] ) ? (int) $fallback['height'] : 0 ),
 				'alt'    => ! empty( $image['alt'] ) ? (string) $image['alt'] : ( isset( $fallback['alt'] ) ? (string) $fallback['alt'] : '' ),
+				'url'    => $dir_url,
 			);
 		}
 
@@ -253,6 +265,16 @@ function shpigovsky_get_about_program_context( $page_id ) {
 	if ( ! empty( $items ) && isset( $items[0]['image'] ) && false === strpos( (string) $items[0]['image'], '://' ) ) {
 		foreach ( $items as $index => $item ) {
 			$items[ $index ]['image'] = shpigovsky_asset_uri( (string) $item['image'] );
+		}
+	}
+
+	// Attach URLs for static-copy path when ACF empty used static items without url.
+	if ( ! empty( $items ) ) {
+		$directions = shpigovsky_get_program_direction_items( 'service' );
+		foreach ( $items as $index => $item ) {
+			if ( empty( $items[ $index ]['url'] ) && isset( $directions[ $index ]['url'] ) ) {
+				$items[ $index ]['url'] = $directions[ $index ]['url'];
+			}
 		}
 	}
 

@@ -2,8 +2,8 @@
 /**
  * Template part: home/recovery-life.php
  *
- * D9-D: static V9 visual authority with theme asset fallbacks.
- * Future ACF wiring: D9-E wave.
+ * V9-06E40: ACF-wired with static V9 fallbacks. Preserve E36 mobile CSS behavior.
+ * V9-06E41: stage wrapper/inner + month labels.
  *
  * @package Shpigovsky
  */
@@ -12,58 +12,99 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$heading = shpigovsky_home_text_or_fallback(
+	'home_recovery_life_heading',
+	'Как меняется жизнь человека в&nbsp;процессе восстановления'
+);
+$highlight = shpigovsky_home_text_or_fallback(
+	'home_recovery_life_highlight',
+	'У&nbsp;нас команда, а&nbsp;не&nbsp;конвейер. Каждый клиент получает полное внимание&nbsp;— психолога, нейропсихолога, специалиста по&nbsp;кинезиотерапии, специалиста по&nbsp;телесноориентированной терапии и&nbsp;координатора программы.'
+);
+
+$intro_rows = array();
+if ( shpigovsky_home_list_enabled( 'home_recovery_life_intro_enabled' ) ) {
+	$intro_rows = shpigovsky_home_filter_enabled_rows(
+		shpigovsky_home_repeater_or_fallback(
+			'home_recovery_life_intro',
+			shpigovsky_home_recovery_life_intro_fallback_rows()
+		)
+	);
+}
+
+$stage_rows = array();
+if ( shpigovsky_home_list_enabled( 'home_recovery_life_stages_enabled' ) ) {
+	$stage_rows = shpigovsky_home_filter_enabled_rows(
+		shpigovsky_home_repeater_or_fallback(
+			'home_recovery_life_stages',
+			shpigovsky_home_recovery_life_stages_fallback_rows()
+		)
+	);
+}
+
 ?>
 <section data-reveal class="home-recovery-life" aria-labelledby="home-recovery-life-title">
   <div class="container">
 
     <div class="home-recovery-life__content">
-      <h2 class="home-recovery-life__heading" id="home-recovery-life-title">Как меняется жизнь человека в&nbsp;процессе восстановления</h2>
+      <h2 class="home-recovery-life__heading" id="home-recovery-life-title"><?php echo wp_kses_post( $heading ); ?></h2>
 
-      <p class="home-recovery-life__highlight">У&nbsp;нас команда, а&nbsp;не&nbsp;конвейер. Каждый клиент получает полное внимание&nbsp;— психолога, нейропсихолога, специалиста по&nbsp;кинезиотерапии, специалиста по&nbsp;телесноориентированной терапии и&nbsp;координатора программы.</p>
+      <p class="home-recovery-life__highlight"><?php echo wp_kses_post( $highlight ); ?></p>
 
+      <?php if ( ! empty( $intro_rows ) ) : ?>
       <div class="home-recovery-life__intro">
-        <p class="home-recovery-life__intro-text"><span>Лечение в&nbsp;нашем реабилитационном центре совмещает современный и&nbsp;мультидисциплинарный подход направленный на&nbsp;устранение истинных причин зависимости.</span></p>
-        <p class="home-recovery-life__intro-text"><span>Мультидисциплинарный подход&nbsp;— это когда лечение одного пациента обеспечивается командой специалистов разных профилей. Такой подход становится залогом понимания и&nbsp;решения проблемы.</span></p>
+        <?php foreach ( $intro_rows as $row ) : ?>
+          <?php
+			$text = isset( $row['text'] ) ? trim( (string) $row['text'] ) : '';
+			if ( '' === $text ) {
+				continue;
+			}
+			?>
+        <p class="home-recovery-life__intro-text"><span><?php echo wp_kses_post( $text ); ?></span></p>
+        <?php endforeach; ?>
       </div>
+      <?php endif; ?>
 
     </div>
+      <?php if ( ! empty( $stage_rows ) ) : ?>
       <ol class="home-recovery-life__stages">
+        <?php
+		$stage_index = 0;
+		foreach ( $stage_rows as $stage ) :
+			$stage_index++;
+			$stage_title = isset( $stage['title'] ) ? trim( (string) $stage['title'] ) : '';
+			$items_text  = isset( $stage['items_text'] ) ? (string) $stage['items_text'] : '';
+			$items       = shpigovsky_home_lines_to_items( $items_text );
+			$stage_label = isset( $stage['stage_label'] ) ? trim( (string) $stage['stage_label'] ) : '';
+			if ( '' === $stage_label ) {
+				$stage_label = sprintf(
+					/* translators: %d: month number starting at 1 */
+					__( '%d месяц', 'shpigovsky' ),
+					$stage_index
+				);
+			}
+			if ( '' === $stage_title && empty( $items ) ) {
+				continue;
+			}
+			?>
         <li class="home-recovery-life__stage">
-          <h3 class="home-recovery-life__stage-title">От выживания к&nbsp;стабильности</h3>
-          <ul class="home-recovery-life__stage-list">
-            <li class="home-recovery-life__stage-item">уменьшается внутреннее напряжение;</li>
-            <li class="home-recovery-life__stage-item">нормализуется сон;</li>
-            <li class="home-recovery-life__stage-item">снижается выраженность тяги;</li>
-            <li class="home-recovery-life__stage-item">появляется чувство безопасности;</li>
-            <li class="home-recovery-life__stage-item">возникает готовность принимать помощь.</li>
-          </ul>
+          <p class="home-recovery-life__stage-label"><?php echo esc_html( $stage_label ); ?></p>
+          <div class="home-recovery-life__stage-inner">
+            <?php if ( '' !== $stage_title ) : ?>
+            <h3 class="home-recovery-life__stage-title"><?php echo wp_kses_post( $stage_title ); ?></h3>
+            <?php endif; ?>
+            <?php if ( ! empty( $items ) ) : ?>
+            <ul class="home-recovery-life__stage-list">
+              <?php foreach ( $items as $item ) : ?>
+              <li class="home-recovery-life__stage-item"><?php echo wp_kses_post( $item ); ?></li>
+              <?php endforeach; ?>
+            </ul>
+            <?php endif; ?>
+          </div>
         </li>
-        <li class="home-recovery-life__stage">
-          <h3 class="home-recovery-life__stage-title">От зависимости к&nbsp;пониманию себя</h3>
-          <ul class="home-recovery-life__stage-list">
-            <li class="home-recovery-life__stage-item">человек начинает понимать причины своего состояния;</li>
-            <li class="home-recovery-life__stage-item">появляются навыки управления эмоциями;</li>
-            <li class="home-recovery-life__stage-item">снижается потребность убегать от&nbsp;переживаний через вещества или поведение;</li>
-            <li class="home-recovery-life__stage-item">формируется внутренняя опора;</li>
-            <li class="home-recovery-life__stage-item">возвращается способность получать удовольствие от&nbsp;жизни.</li>
-          </ul>
-        </li>
-        <li class="home-recovery-life__stage">
-          <h3 class="home-recovery-life__stage-title">От контроля к&nbsp;свободе</h3>
-          <ul class="home-recovery-life__stage-list">
-            <li class="home-recovery-life__stage-item">восстанавливаются отношения с&nbsp;близкими;</li>
-            <li class="home-recovery-life__stage-item">появляются новые цели и&nbsp;интересы;</li>
-            <li class="home-recovery-life__stage-item">повышается стрессоустойчивость;</li>
-            <li class="home-recovery-life__stage-item">формируется уверенность в&nbsp;собственных силах;</li>
-            <li class="home-recovery-life__stage-item">человек строит новую систему жизни;</li>
-            <li class="home-recovery-life__stage-item">сохраняет устойчивую ремиссию;</li>
-            <li class="home-recovery-life__stage-item">реализует личные и&nbsp;профессиональные цели;</li>
-            <li class="home-recovery-life__stage-item">поддерживает эмоциональное благополучие;</li>
-            <li class="home-recovery-life__stage-item">продолжает развитие личности.</li>
-          </ul>
-        </li>
+        <?php endforeach; ?>
       </ol>
+      <?php endif; ?>
 
-    
+
   </div>
 </section>

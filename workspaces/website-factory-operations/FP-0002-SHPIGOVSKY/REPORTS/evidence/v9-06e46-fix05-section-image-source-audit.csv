@@ -1,0 +1,4 @@
+block,current_source,current_image_id,current_image_url,target_field_name,target_label,seed_post_ids,seed_image_id,frontend_expected,notes
+territory,acf:section_clinic_landscape_image,1239,http://shpigovsky.test/wp-content/uploads/2026/07/shpigovsky-clinic-landscape-1.webp,section_clinic_landscape_image,Изображение территории клиники,"73;77;84",1239,acf_primary,FIX04+FIX05
+team,acf:section_team_image,1238,http://shpigovsky.test/wp-content/uploads/2026/07/shpigovsky-staff-group.webp,section_team_image,Изображение команды,"73;77;84",1238,acf_primary,reused ML id from Home staff; Home field untouched
+corridor,acf:section_corridor_image,1709,http://shpigovsky.test/wp-content/uploads/2026/07/shpigovsky-interior-corridor.webp,section_corridor_image,Изображение коридора,"73;77;84",1709,acf_primary,attachment created from theme copy if missing

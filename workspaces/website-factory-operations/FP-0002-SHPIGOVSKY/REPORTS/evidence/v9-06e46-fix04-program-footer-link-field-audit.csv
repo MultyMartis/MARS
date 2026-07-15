@@ -1,0 +1,4 @@
+post_id,title,field_name,current_value_preview,used_on_frontend,fallback_if_hidden,action,notes
+73,Зависимости,section_program_footer_label,подробнее о программе ТЕСТ,yes,подробнее о программе (or stored meta),hide_from_admin_keep_meta,Removed from group_fp02_service_section_parity; FE program.php still calls shpigovsky_section_text
+77,Психическое здоровье,section_program_footer_label,(empty),yes,подробнее о программе,hide_from_admin_keep_meta,No stored value; FE uses fallback
+84,Расстройства пищевого поведения,section_program_footer_label,(empty),yes,подробнее о программе,hide_from_admin_keep_meta,No stored value; FE uses fallback

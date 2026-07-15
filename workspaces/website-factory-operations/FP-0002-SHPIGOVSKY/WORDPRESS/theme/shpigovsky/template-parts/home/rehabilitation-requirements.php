@@ -11,6 +11,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+if ( ! shpigovsky_home_list_enabled( 'home_rehab_requirements_visible' ) ) {
+	return;
+}
+
 $heading        = shpigovsky_get_rehab_requirements_scalar( 'rehab_requirements_heading', 'Что нужно для прохождения реабилитации и лечения' );
 $intro          = shpigovsky_get_rehab_requirements_scalar( 'rehab_requirements_intro', 'Мы гарантируем конфиденциальность, уважение к личности, поддержание комфортной, психологически безопасной атмосферы.' );
 $steps          = shpigovsky_get_rehab_requirements_steps();

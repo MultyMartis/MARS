@@ -1,0 +1,7 @@
+step,operator_action,expected,actual,result,proof,notes
+1,"Open #78 admin",Заглушка,placeholder,PASS,admin-78-edit-before-fix.html,
+2,"Select Услуга","acf-prefixed input posts service","acf_inputs=3;set service",PASS,dom-audit.csv,"FIX02 name prefix"
+3,Save/Update,accepted,302,PASS,save-trace.csv,http://shpigovsky.test/wp-admin/post.php?post=78&action=edit&message=1
+4,"Reload admin",Услуга,service,PASS,admin-78-edit-after.html,
+5,"Control remains Услуга",service,service/service,PASS,meta-truth.csv,
+6,"Frontend changes to full service","no placeholder-stack",http=200;ph=N,PASS,frontend-78-after.html,layout=service_general

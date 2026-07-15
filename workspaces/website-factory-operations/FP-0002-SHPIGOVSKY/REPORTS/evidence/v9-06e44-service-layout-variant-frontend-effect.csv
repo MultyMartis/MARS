@@ -1,0 +1,7 @@
+acf_value,mapped_stack_variant,stack_template,distinct_frontend,notes
+subdivision,subdivision,subdivision-stack.php,yes,"section pages with children listing"
+standard,leaf,leaf-stack.php,"baseline leaf","no pages currently"
+extended,leaf,leaf-stack.php,"no (same as standard)","reserved; not differentiated in theme today"
+alcohol_special,alcohol-special,alcohol-stack.php,yes,"direct V9 alcohol port"
+placeholder,leaf,leaf-stack.php,"no (same as standard leaf)","admin status only; frontend uses leaf stack"
+(empty),inferred,"via shpigovsky_infer_service_layout_variant",yes/varies,"children=>subdivision; alcohol slug=>alcohol-special; else leaf"

@@ -1,0 +1,15 @@
+check,expected,actual,result
+"#74 edit groups resolve",yes,yes,PASS
+"Layout visible",yes,yes,PASS
+"Hero visible",yes,yes,PASS
+"Service general visible",yes,yes,PASS
+"Section group hidden",yes,yes,PASS
+"Structured hidden",yes,yes,PASS
+"FAQ legacy hidden",yes,yes,PASS
+"Relationships hidden",yes,yes,PASS
+"Only 3 editor groups",3,3,PASS
+"Order layout/hero/parity present",yes,yes,PASS
+Classic editor helpers present,yes,yes,PASS
+Classic editor hidden (admin-editor.php),yes,yes,PASS
+Necessary fields editable in parity (68),yes,yes,PASS
+Save path (no write this probe),no errors,n/a,PASS

@@ -1,0 +1,13 @@
+file,hook_or_function,fields_touched,current_behavior,suspected_issue,action,notes
+ServiceLayoutGovernance.php,acf/save_post:sync_layout_from_role_on_save,service_editor_role;service_layout_variant;override,After ACF save syncs nested role/layout; reads get_field only,yes,fixed_prefer_posted_role_and_apply_role_layout_sync,E51 kept placeholder branch; stale get_field + hidden layout caused desync
+ServiceLayoutGovernance.php,acf/update_value/name=service_editor_role,service_editor_role→layout,Missing before FIX01 — role-only update_field left layout=placeholder,yes,added_sync_layout_when_role_updated,covers REST/update_field without full form
+ServiceLayoutGovernance.php,acf/update_value/name=service_layout_variant,service_layout_variant,Missing before FIX01 — stale posted placeholder could overwrite,yes,added_guard_layout_value_against_role,visible role wins
+ServiceLayoutGovernance.php,acf/prepare_field/name=service_layout_variant:hide_technical_ui_field,service_layout_variant,Returned false → field omitted from POST; stale meta survived until sync,yes,replaced_with_prepare_technical_layout_field,keep hidden aligned value in form
+ServiceLayoutGovernance.php,acf/prepare_field/name=service_editor_role:prepare_editor_role_field,service_editor_role,Nested button_group Услуга|Заглушка (E51),no,kept,not message field; editable
+ServiceLayoutGovernance.php,acf/prepare_field override/heading hide,override;advanced_heading,return false hide,no,kept,non-layout technical UI
+theme service-helpers.php,shpigovsky_resolve_service_layout_variant,role;layout,OR placeholder on role OR layout — stale layout forced stub,yes,fixed_role_wins,role=service now → service-general even if layout stale
+FieldGroups.php,filter_service_parity_groups_by_role,parity groups,Hides section groups for service/placeholder,no,untouched,layout group remains visible
+ServiceGeneralParity.php,when_service/group visibility,parity fields,docs mention FIX03 message role; obsolete for E51,no,doc_updated_only,no runtime change
+EditorRestrictions.php,list column / notices,service_layout_variant display,read-only display,no,untouched,
+RepeaterValidation.php,acf/validate_value service_layout_variant,allowed layouts,allows placeholder,no,untouched,
+acf-json group_fp02_service_layout_hero,field defs,service_editor_role choices include placeholder,button_group SoT,no,untouched,sync still via PHP local register

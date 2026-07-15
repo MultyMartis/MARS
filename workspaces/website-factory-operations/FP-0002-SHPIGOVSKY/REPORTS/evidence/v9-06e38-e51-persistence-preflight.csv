@@ -1,0 +1,10 @@
+check,expected,actual,result,notes
+repository,X:\AI MARS,X:\AI MARS,PASS,
+branch,mars/canonical-post-recovery,mars/canonical-post-recovery,PASS,
+HEAD,record,56e82a05a188995095522a6abca74fb8b9994b95,PASS,
+drive_label,AI WS,AI WS,PASS,verified via preflight shell
+staged_before,0,0,PASS,
+foreign_wip_lines,>0 expected,319,PASS,foreign WIP must remain untouched
+fp0002_wip_lines,>0 expected,524,PASS,
+clean_worktree_attempt,optional,FAILED,PASS,worktree add failed; exact-path main staging selected
+push_allowed,NO,NO,PASS,

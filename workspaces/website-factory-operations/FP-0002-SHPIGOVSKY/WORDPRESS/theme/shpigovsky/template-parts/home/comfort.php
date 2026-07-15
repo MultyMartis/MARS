@@ -11,6 +11,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+if ( is_front_page() && ! shpigovsky_home_list_enabled( 'home_comfort_visible' ) ) {
+	return;
+}
+
+if ( function_exists( 'shpigovsky_is_services_hub_page' ) && shpigovsky_is_services_hub_page() && ! shpigovsky_services_hub_list_enabled( 'services_hub_comfort_visible' ) ) {
+	return;
+}
+
 $section_id      = isset( $args['section_id'] ) ? (string) $args['section_id'] : '';
 $heading_id      = isset( $args['heading_id'] ) ? (string) $args['heading_id'] : 'comfort-heading';
 $comfort_heading = shpigovsky_get_comfort_heading();

@@ -1,0 +1,5 @@
+post_id,title,post_type,post_content_length,rendered_on_frontend,hide_editor_safe,chosen_method,notes
+73,Зависимости,service,140,no (section stack ACF-driven),yes,remove_post_type_support(service)+remove_meta_box+admin CSS,#postdivrich hidden on service edit screens; content preserved
+77,Психическое здоровье,service,140,no (section stack ACF-driven),yes,same as above,Compatible
+84,Расстройства пищевого поведения,service,140,no (section stack ACF-driven),yes,same as above,Compatible
+74,Лечение алкогольной зависимости (leaf sample),service,varies,optional fallback via intro.php only when intro ACF empty,yes,same CPT-wide hide,Editor hidden for all service CPT; post_content not deleted

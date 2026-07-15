@@ -1,0 +1,23 @@
+field_name,label,group,current_value_preview,imsc42_detected,frontend_match,render_source,classification,action
+hero_media,"Hero image",group_fp02_page_home,"302",no,no,"hero.php / hero-helpers",LIVE_FRONTEND_EDITABLE,keep
+hero_cta_label,"Текст кнопки в hero-блоке",group_fp02_page_home,"Заказать звонок",no,yes,"hero CTA",LIVE_FRONTEND_EDITABLE,strip_imsc42_keep
+home_hero_slides,"Hero slides",group_fp02_page_home,"1",no,yes,"hero.php",LIVE_FRONTEND_EDITABLE,strip_imsc42_keep
+home_advantages,"Advantages / trust",group_fp02_page_home,"6",no,yes,"feature-grid.php",LIVE_FRONTEND_EDITABLE,strip_imsc42_keep
+home_intro_bands,"Intro bands",group_fp02_page_home,"6",no,yes,"recovery-intro.php cards",LIVE_FRONTEND_EDITABLE,strip_imsc42_keep
+home_gallery_media,"Gallery / media bands (legacy)",group_fp02_page_home,"4",no,yes,"gallery.php uses service CPT",DEAD_LEGACY,removed_from_admin
+home_gallery_source_notice,"Галерея на главной",group_fp02_page_home,"",no,n/a,"informational only",AUTOMATED_NO_ADMIN_FIELD_NEEDED,message_notice_added
+home_reviews_teaser,"Reviews teaser",group_fp02_page_home,"1",no,yes,"reviews from options; theme already hid UI",DEAD_LEGACY,removed_from_admin
+home_blog_teaser_enabled,"Blog teaser enabled",group_fp02_page_home,"0",no,yes,"no theme read; articles from WP posts",DEAD_LEGACY,kept_with_instruction
+home_faq_items,"FAQ",group_fp02_page_home,"5",no,yes,"faq.php",LIVE_FRONTEND_EDITABLE,strip_imsc42_keep
+home_cta_title,"CTA title",group_fp02_page_home,"Остались вопросы?",no,yes,"reusable-blocks-helpers",LIVE_FRONTEND_EDITABLE,strip_imsc42_keep
+home_cta_text,"CTA text",group_fp02_page_home,"Опишите вашу ситуацию в форме заявки; и мы расскажем; как сможем помочь",no,yes,"reusable-blocks-helpers",LIVE_FRONTEND_EDITABLE,strip_imsc42_keep
+home_faq_heading,"Заголовок FAQ",stale_db_only,"Нас часто спрашивают",no,yes,"faq.php; not in FieldGroups.php",LIVE_FRONTEND_EDITABLE,leave_meta_unclear_admin
+home_recovery_intro_heading,"Recovery intro — заголовок",stale_db_only,"Шпиговский дом&nbsp;&mdash; восстановление; построенное вокруг человека",no,yes,"recovery-intro.php; not in FieldGroups.php",LIVE_FRONTEND_EDITABLE,leave_meta_unclear_admin
+home_recovery_intro_lead_1,"Recovery intro — абзац 1",stale_db_only,"Мы&nbsp;убеждены; зависимость невозможно эффективно лечить по&nbsp;шаблону. За&nbsp;каждым случаем с",no,yes,"recovery-intro.php",LIVE_FRONTEND_EDITABLE,leave_meta_unclear_admin
+home_recovery_intro_lead_2,"Recovery intro — абзац 2",stale_db_only,"Поэтому в&nbsp;&laquo;Шпиговском Доме&raquo; мы&nbsp;создаём персонализированную программу восстанов",no,yes,"recovery-intro.php",LIVE_FRONTEND_EDITABLE,leave_meta_unclear_admin
+home_specialists_heading,"Specialists — заголовок",stale_db_only,"Специалисты центра",no,yes,"fallback after specialists options block",LIVE_BUT_SHOULD_BE_AUTOMATED,leave_meta
+home_comfort_heading,"Comfort — заголовок",stale_db_only,"Комфорт; приватность; забота",no,yes,"comfort helpers; may also use block options",UNCLEAR_REVIEW,leave_meta
+home_comfort_lead,"Comfort — лид",stale_db_only,"Разговор&nbsp;— это уже первый шаг. Мы расскажем; что можем предложить именно вам или вашему близком",no,no,"comfort helpers",UNCLEAR_REVIEW,leave_meta
+home_reviews_heading,"Reviews — заголовок",stale_db_only,"Отзывы",no,yes,"reviews-helpers; not in FieldGroups.php",LIVE_FRONTEND_EDITABLE,leave_meta_unclear_admin
+home_articles_heading,"Articles — заголовок",stale_db_only,"Статьи",no,yes,"articles-teaser.php; cards from WP posts",LIVE_FRONTEND_EDITABLE,leave_meta_unclear_admin
+home_service_nav_items,"Service navigation / accordion",retired_e32,"3",no,yes,"accordion from service CPT",AUTOMATED_NO_ADMIN_FIELD_NEEDED,already_trashed

@@ -1,0 +1,7 @@
+check,expected,actual,result,notes
+admin_loads,"200 no login","200 login=no",PASS,len~644k
+visible_layout,Услуга/service,service,PASS,
+technical_layout_meta,service_general,service_general,PASS,
+service_blocks_present,yes,yes,PASS,
+placeholder_option_available,"yes not selected","yes checked=service",PASS,
+acf_content_still_present,yes,yes,PASS,"prior content metas intact; +4 empty ACF refs allowed"

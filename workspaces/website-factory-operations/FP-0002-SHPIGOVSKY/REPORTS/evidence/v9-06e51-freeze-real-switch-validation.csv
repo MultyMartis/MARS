@@ -1,0 +1,4 @@
+test,expected,actual,result,notes
+"Real admin save/reload path","selection persists via real wp-admin POST","FIX02 evidence present (auth form replay + reload); current prepare name=acf[field_fp02_service_editor_role]",PASS,"Method: FIX02 evidence + current prepared-field/meta; no #78 re-switch after operator acceptance"
+"Frontend follows saved layout","yes (Услуга → full service)","HTTP 200 ph_stack=no size=112333",PASS,"Current #78 frontend"
+"Final #78 state","Услуга / service / service_general","role=service layout=service_general",PASS,"Must remain Услуга"

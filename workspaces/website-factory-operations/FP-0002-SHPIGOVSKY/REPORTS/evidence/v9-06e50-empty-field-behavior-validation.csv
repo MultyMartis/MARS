@@ -1,0 +1,3 @@
+test,expected,actual,result,notes
+"optional nature lead cleared on #77","no hardcoded demo injected; lead hidden/empty","lead element absent or empty",PASS,"HTTP 200"
+"nature lead restored on #77","original visible",restored,PASS,

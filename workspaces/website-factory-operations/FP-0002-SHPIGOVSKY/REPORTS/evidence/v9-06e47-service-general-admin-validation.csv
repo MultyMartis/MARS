@@ -1,0 +1,9 @@
+check,expected,actual,result
+"Base edit loads / groups resolve",yes,yes,PASS
+"Role is Услуга",service,service,PASS
+"Hero group present",yes,yes,PASS
+"Service general group visible",yes,yes,PASS
+"Section group hidden",no,no,PASS
+"Demo data seeded",yes,"Алкогольная зависимость — это не персональный выбор",PASS
+"Repeaters populated",yes,signs=9,PASS
+"Classic editor hide helpers present",yes,yes,PASS

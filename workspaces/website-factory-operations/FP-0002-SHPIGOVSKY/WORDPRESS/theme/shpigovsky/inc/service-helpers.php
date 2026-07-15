@@ -66,6 +66,100 @@ function shpigovsky_get_service_hero_image( $post_id ) {
 }
 
 /**
+ * Neutral service placeholder image asset (theme-local SVG).
+ *
+ * @return array{url:string,width:int,height:int,alt:string,source:string}
+ */
+function shpigovsky_get_service_placeholder_image() {
+	return array(
+		'url'    => shpigovsky_asset_uri( 'images/service-placeholder.svg' ),
+		'width'  => 800,
+		'height' => 600,
+		'alt'    => __( 'Фото скоро будет', 'shpigovsky' ),
+		'source' => 'placeholder',
+	);
+}
+
+/**
+ * Resolve service card/page image with neutral placeholder fallback.
+ *
+ * Priority: service_slider_image → featured image → hero_media → placeholder.
+ * Does not overwrite or mutate existing media.
+ *
+ * @param int $post_id Service post ID.
+ * @return array{url:string,width:int,height:int,alt:string,source:string}
+ */
+function shpigovsky_get_service_image_or_placeholder( $post_id ) {
+	$post_id = (int) $post_id;
+	$title   = $post_id > 0 ? get_the_title( $post_id ) : '';
+	$title   = is_string( $title ) ? trim( $title ) : '';
+	$alt     = '' !== $title ? $title : __( 'Фото скоро будет', 'shpigovsky' );
+
+	if ( $post_id > 0 && function_exists( 'get_field' ) ) {
+		$acf_image = get_field( 'service_slider_image', $post_id );
+		if ( is_array( $acf_image ) && ! empty( $acf_image['url'] ) ) {
+			return array(
+				'url'    => (string) $acf_image['url'],
+				'width'  => isset( $acf_image['width'] ) ? (int) $acf_image['width'] : 0,
+				'height' => isset( $acf_image['height'] ) ? (int) $acf_image['height'] : 0,
+				'alt'    => ! empty( $acf_image['alt'] ) ? (string) $acf_image['alt'] : $alt,
+				'source' => 'slider_image',
+			);
+		}
+	}
+
+	if ( $post_id > 0 && has_post_thumbnail( $post_id ) ) {
+		$thumb_id = (int) get_post_thumbnail_id( $post_id );
+		$src      = wp_get_attachment_image_src( $thumb_id, 'large' );
+		if ( is_array( $src ) && ! empty( $src[0] ) ) {
+			$thumb_alt = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true );
+			return array(
+				'url'    => (string) $src[0],
+				'width'  => isset( $src[1] ) ? (int) $src[1] : 0,
+				'height' => isset( $src[2] ) ? (int) $src[2] : 0,
+				'alt'    => is_string( $thumb_alt ) && '' !== trim( $thumb_alt ) ? trim( $thumb_alt ) : $alt,
+				'source' => 'featured',
+			);
+		}
+	}
+
+	if ( $post_id > 0 && function_exists( 'get_field' ) ) {
+		$hero = get_field( 'hero_media', $post_id );
+		if ( is_array( $hero ) && ! empty( $hero['url'] ) ) {
+			return array(
+				'url'    => (string) $hero['url'],
+				'width'  => isset( $hero['width'] ) ? (int) $hero['width'] : 0,
+				'height' => isset( $hero['height'] ) ? (int) $hero['height'] : 0,
+				'alt'    => ! empty( $hero['alt'] ) ? (string) $hero['alt'] : $alt,
+				'source' => 'hero_media',
+			);
+		}
+	}
+
+	// Theme slug asset fallbacks for /uslugi/ gallery (non-placeholder) when present.
+	if ( $post_id > 0 && function_exists( 'shpigovsky_get_services_hub_slider_asset_fallback_map' ) ) {
+		$post = get_post( $post_id );
+		if ( $post instanceof WP_Post ) {
+			$fallbacks = shpigovsky_get_services_hub_slider_asset_fallback_map();
+			if ( isset( $fallbacks[ $post->post_name ] ) ) {
+				$fb = $fallbacks[ $post->post_name ];
+				return array(
+					'url'    => shpigovsky_asset_uri( $fb['asset'] ),
+					'width'  => (int) $fb['width'],
+					'height' => (int) $fb['height'],
+					'alt'    => $alt,
+					'source' => 'theme_slug_fallback',
+				);
+			}
+		}
+	}
+
+	$placeholder         = shpigovsky_get_service_placeholder_image();
+	$placeholder['alt']  = $alt;
+	return $placeholder;
+}
+
+/**
  * Theme asset fallback for service hero images when ACF hero_media is empty.
  *
  * @param string $variant Layout variant slug.
@@ -150,6 +244,9 @@ function shpigovsky_get_service_children( $post_id ) {
 /**
  * Map ACF layout value to theme stack variant slug.
  *
+ * V9-06E45-FIX02: `service_general` is the active general service stack.
+ * `alcohol_special` remains a legacy ACF alias mapping to the same stack.
+ *
  * @param string $acf_value Raw ACF select value.
  * @return string
  */
@@ -158,15 +255,60 @@ function shpigovsky_map_acf_layout_to_variant( $acf_value ) {
 		'subdivision'     => 'subdivision',
 		'standard'        => 'leaf',
 		'extended'        => 'leaf',
-		'alcohol_special' => 'alcohol-special',
-		'placeholder'     => 'leaf',
+		'service_general' => 'service-general',
+		'alcohol_special' => 'service-general', // legacy alias
+		'placeholder'     => 'placeholder',
 	);
 
 	return isset( $map[ $acf_value ] ) ? $map[ $acf_value ] : '';
 }
 
 /**
- * Infer layout variant from hierarchy when ACF is empty.
+ * Whether frontend variant is the general service stack (incl. legacy slug).
+ *
+ * @param string $variant Theme stack variant slug.
+ * @return bool
+ */
+function shpigovsky_is_service_general_variant( $variant ) {
+	return in_array( (string) $variant, array( 'service-general', 'alcohol-special' ), true );
+}
+
+/**
+ * Known alcohol page — preserves V9 alcohol-only static copy (not all service pages).
+ *
+ * @param int|null $post_id Optional post ID.
+ * @return bool
+ */
+function shpigovsky_is_known_alcohol_service_page( $post_id = null ) {
+	if ( null === $post_id ) {
+		$post_id = shpigovsky_get_current_service_id();
+	}
+
+	$post_id = (int) $post_id;
+	if ( $post_id <= 0 ) {
+		return false;
+	}
+
+	if ( 74 === $post_id ) {
+		return true;
+	}
+
+	$slug = (string) get_post_field( 'post_name', $post_id );
+	return 'lechenie-alkogolnoy-zavisimosti' === $slug;
+}
+
+/**
+ * Whether current/known post should render V9 alcohol static copy blocks.
+ *
+ * @param int|null $post_id Optional post ID.
+ * @return bool
+ */
+function shpigovsky_service_uses_alcohol_v9_static_copy( $post_id = null ) {
+	return shpigovsky_is_known_alcohol_service_page( $post_id );
+}
+
+/**
+ * Infer layout variant from hierarchy / known roots when ACF+role empty.
  *
  * @param int $post_id Service post ID.
  * @return string
@@ -175,22 +317,70 @@ function shpigovsky_infer_service_layout_variant( $post_id ) {
 	$post = get_post( $post_id );
 
 	if ( ! $post instanceof WP_Post ) {
-		return 'leaf';
+		return 'service-general';
 	}
 
-	if ( 'lechenie-alkogolnoy-zavisimosti' === $post->post_name ) {
-		return 'alcohol-special';
-	}
-
-	if ( shpigovsky_service_has_children( $post_id ) ) {
+	// Known subdivision roots only — children with nesting stay service stack.
+	// Alcohol page #74 is a service page (same stack); static copy gated separately.
+	$root_section_ids = array( 73, 77, 84 );
+	if ( in_array( (int) $post_id, $root_section_ids, true ) ) {
 		return 'subdivision';
 	}
 
-	return 'leaf';
+	if ( 0 === (int) $post->post_parent && shpigovsky_service_has_children( $post_id ) ) {
+		return 'subdivision';
+	}
+
+	return 'service-general';
 }
 
 /**
- * Resolve canonical service layout variant for routing.
+ * Service CPT hierarchy depth (1 = top-level, 2+ = nested).
+ *
+ * @param int $post_id Service post ID.
+ * @return int
+ */
+function shpigovsky_get_service_depth( $post_id ) {
+	if ( class_exists( '\\Shpigovsky\\Core\\Admin\\ServiceLayoutGovernance' )
+		&& method_exists( '\\Shpigovsky\\Core\\Admin\\ServiceLayoutGovernance', 'get_service_depth' ) ) {
+		return (int) \Shpigovsky\Core\Admin\ServiceLayoutGovernance::get_service_depth( $post_id );
+	}
+
+	$post_id = (int) $post_id;
+	if ( $post_id <= 0 ) {
+		return 0;
+	}
+
+	$depth  = 1;
+	$parent = (int) get_post_field( 'post_parent', $post_id );
+	$guard  = 0;
+	$seen   = array( $post_id => true );
+
+	while ( $parent > 0 && $guard < 20 ) {
+		if ( isset( $seen[ $parent ] ) ) {
+			break;
+		}
+		$seen[ $parent ] = true;
+		if ( 'service' !== get_post_type( $parent ) ) {
+			break;
+		}
+		++$depth;
+		$parent = (int) get_post_field( 'post_parent', $parent );
+		++$guard;
+	}
+
+	return $depth;
+}
+
+/**
+ * Resolve canonical service layout variant for routing (V9-06E51 / E51-FIX01).
+ *
+ * Effective stack — visible editor role wins over stale technical layout:
+ * - role placeholder → placeholder (nested allowed; content preserved)
+ * - role section → subdivision
+ * - role service → service-general
+ * - nested (depth 2+) without role → service-general (unless layout placeholder leftover with empty role)
+ * - empty role: derive from technical layout / hierarchy
  *
  * @param int|null $post_id Optional post ID; defaults to current post.
  * @return string
@@ -203,17 +393,114 @@ function shpigovsky_resolve_service_layout_variant( $post_id = null ) {
 	$post_id = (int) $post_id;
 
 	if ( $post_id <= 0 ) {
-		return 'leaf';
+		return 'service-general';
 	}
 
+	$role      = shpigovsky_get_service_field( $post_id, 'service_editor_role' );
+	$override  = (bool) shpigovsky_get_service_field( $post_id, 'service_layout_override_enabled' );
 	$acf_value = shpigovsky_get_service_field( $post_id, 'service_layout_variant' );
-	$variant   = shpigovsky_map_acf_layout_to_variant( $acf_value );
 
-	if ( '' !== $variant ) {
-		return $variant;
+	// V9-06E51-FIX01: explicit editor role always wins. Stale layout=placeholder
+	// must not keep the stub stack after a manual switch to Услуга / Раздел.
+	if ( 'placeholder' === $role ) {
+		return 'placeholder';
+	}
+	if ( 'section' === $role ) {
+		return 'subdivision';
+	}
+	if ( 'service' === $role ) {
+		return 'service-general';
+	}
+
+	// Depth 2+: nested services without an explicit role use the general stack.
+	if ( shpigovsky_get_service_depth( $post_id ) >= 2 ) {
+		return 'service-general';
+	}
+
+	// Legacy override path retained for stale meta; FIX03 admin UI no longer exposes it.
+	if ( $override ) {
+		$variant = shpigovsky_map_acf_layout_to_variant( $acf_value );
+		if ( '' !== $variant ) {
+			return $variant;
+		}
+	}
+
+	// Empty role: derive safely from technical layout / hierarchy.
+	$variant = shpigovsky_map_acf_layout_to_variant( $acf_value );
+	if ( 'subdivision' === $variant ) {
+		return 'subdivision';
+	}
+	if ( 'placeholder' === $variant ) {
+		return 'placeholder';
+	}
+	if ( shpigovsky_is_service_general_variant( $variant ) ) {
+		return 'service-general';
 	}
 
 	return shpigovsky_infer_service_layout_variant( $post_id );
+}
+
+/**
+ * Whether child-services tile block should render.
+ *
+ * @param int $post_id Service post ID.
+ * @return bool
+ */
+function shpigovsky_service_child_services_block_enabled( $post_id ) {
+	$post_id = (int) $post_id;
+	if ( $post_id <= 0 ) {
+		return false;
+	}
+
+	$enabled = shpigovsky_get_service_field( $post_id, 'service_child_services_enabled' );
+	if ( '' === $enabled || null === $enabled ) {
+		return true;
+	}
+
+	return (bool) $enabled;
+}
+
+/**
+ * Heading for child-services tile block.
+ *
+ * @param int $post_id Service post ID.
+ * @return string
+ */
+function shpigovsky_get_service_child_services_heading( $post_id ) {
+	$heading = shpigovsky_get_service_field( $post_id, 'service_child_services_heading' );
+	$heading = is_string( $heading ) ? trim( $heading ) : '';
+
+	if ( '' !== $heading ) {
+		return $heading;
+	}
+
+	return __( 'Направления внутри услуги', 'shpigovsky' );
+}
+
+/**
+ * Card image URL for a child service card (optional).
+ *
+ * @param int $post_id Child service ID.
+ * @return string
+ */
+function shpigovsky_get_service_child_card_image_url( $post_id ) {
+	$post_id = (int) $post_id;
+	if ( $post_id <= 0 ) {
+		return '';
+	}
+
+	$image = shpigovsky_get_service_field( $post_id, 'service_slider_image' );
+	if ( is_array( $image ) && ! empty( $image['url'] ) ) {
+		return (string) $image['url'];
+	}
+
+	$hero = shpigovsky_get_service_field( $post_id, 'hero_media' );
+	if ( is_array( $hero ) && ! empty( $hero['url'] ) ) {
+		return (string) $hero['url'];
+	}
+
+	$thumb = get_the_post_thumbnail_url( $post_id, 'medium' );
+	return is_string( $thumb ) ? $thumb : '';
 }
 
 /**
@@ -225,6 +512,10 @@ function shpigovsky_resolve_service_layout_variant( $post_id = null ) {
 function shpigovsky_get_service_main_class( $variant ) {
 	if ( 'subdivision' === $variant ) {
 		return 'page-service-subdivision-v1__main site-main site-main--service site-main--service-subdivision';
+	}
+
+	if ( 'placeholder' === $variant ) {
+		return 'page-service-placeholder-v1__main site-main site-main--service site-main--service-placeholder';
 	}
 
 	return 'page-service-leaf-v1__main site-main site-main--service site-main--service-leaf';
@@ -287,14 +578,38 @@ function shpigovsky_get_service_breadcrumb_trail( $post_id ) {
  */
 function shpigovsky_get_service_subnav_items( $variant ) {
 	if ( 'subdivision' === $variant ) {
+		// V9-06E50: labels from section ACF when present (avoid hardcoded «Зависимости» on all sections).
+		$post_id = function_exists( 'shpigovsky_get_current_service_id' )
+			? (int) shpigovsky_get_current_service_id()
+			: (int) get_the_ID();
+		$deps_label    = function_exists( 'shpigovsky_get_section_field' )
+			? shpigovsky_get_section_field( $post_id, 'section_dependencies_heading' )
+			: '';
+		$nature_label  = function_exists( 'shpigovsky_get_section_field' )
+			? shpigovsky_get_section_field( $post_id, 'section_nature_heading' )
+			: '';
+		$approach_label = function_exists( 'shpigovsky_get_section_field' )
+			? shpigovsky_get_section_field( $post_id, 'section_approach_heading' )
+			: '';
+
+		if ( '' === $deps_label ) {
+			$deps_label = __( 'Услуги раздела', 'shpigovsky' );
+		}
+		if ( '' === $nature_label ) {
+			$nature_label = __( 'Природа', 'shpigovsky' );
+		}
+		if ( '' === $approach_label ) {
+			$approach_label = __( 'Наш подход к лечению', 'shpigovsky' );
+		}
+
 		return array(
 			array(
 				'id'    => 'service-subdivision-dependencies',
-				'label' => __( 'Зависимости', 'shpigovsky' ),
+				'label' => $deps_label,
 			),
 			array(
 				'id'    => 'service-subdivision-nature',
-				'label' => __( 'Природа зависимости', 'shpigovsky' ),
+				'label' => $nature_label,
 			),
 			array(
 				'id'    => 'service-subdivision-program',
@@ -306,7 +621,7 @@ function shpigovsky_get_service_subnav_items( $variant ) {
 			),
 			array(
 				'id'    => 'service-subdivision-approach',
-				'label' => __( 'Наш подход к лечению', 'shpigovsky' ),
+				'label' => $approach_label,
 			),
 			array(
 				'id'    => 'service-subdivision-specialists',
@@ -342,7 +657,7 @@ function shpigovsky_get_service_subnav_items( $variant ) {
 		),
 	);
 
-	if ( 'alcohol-special' === $variant ) {
+	if ( shpigovsky_is_service_general_variant( $variant ) ) {
 		return array(
 			array(
 				'id'    => 'service-leaf-approach',
@@ -406,36 +721,20 @@ function shpigovsky_get_service_programme_fallback_items() {
  * @return array<int, array{title:string,image:string,width:int,height:int,alt:string}>
  */
 function shpigovsky_get_service_subdivision_programme_fallback_items() {
-	return array(
-		array(
-			'title'  => '01 — Генотипирование',
-			'image'  => shpigovsky_asset_uri( 'img/content/rehabilitation-program/program-genotyping.webp' ),
-			'width'  => 1216,
-			'height' => 1632,
-			'alt'    => 'Генотипирование',
-		),
-		array(
-			'title'  => '02 — Нейропсихологическая коррекция',
-			'image'  => shpigovsky_asset_uri( 'img/content/rehabilitation-program/program-neuropsychology.webp' ),
-			'width'  => 1632,
-			'height' => 1216,
-			'alt'    => 'Нейропсихологическая коррекция',
-		),
-		array(
-			'title'  => '03 — Психокоррекция',
-			'image'  => shpigovsky_asset_uri( 'img/content/rehabilitation-program/program-psychocorrection.webp' ),
-			'width'  => 880,
-			'height' => 1184,
-			'alt'    => 'Психокоррекция',
-		),
-		array(
-			'title'  => '04 — Кинезиотерапия',
-			'image'  => shpigovsky_asset_uri( 'img/content/rehabilitation-program/program-kinesiotherapy.webp' ),
-			'width'  => 880,
-			'height' => 1184,
-			'alt'    => 'Кинезиотерапия',
-		),
-	);
+	$items = array();
+
+	foreach ( shpigovsky_get_program_direction_items( 'service' ) as $direction ) {
+		$items[] = array(
+			'title'  => $direction['title_display'],
+			'image'  => $direction['image'],
+			'width'  => $direction['width'],
+			'height' => $direction['height'],
+			'alt'    => $direction['alt'],
+			'url'    => $direction['url'],
+		);
+	}
+
+	return $items;
 }
 
 /**
@@ -480,8 +779,12 @@ function shpigovsky_service_body_class( $classes ) {
 
 	if ( 'subdivision' === $variant ) {
 		$classes[] = 'page-service-subdivision-v1';
-	} elseif ( 'leaf' === $variant || 'alcohol-special' === $variant ) {
+	} elseif ( 'leaf' === $variant || shpigovsky_is_service_general_variant( $variant ) ) {
 		$classes[] = 'page-service-leaf-v1';
+		if ( shpigovsky_is_service_general_variant( $variant ) ) {
+			$classes[] = 'page-service-general-v1';
+			$classes[] = 'page-service-alcohol-special-legacy'; // CSS/legacy marker until styles fully renamed
+		}
 	}
 
 	return $classes;

@@ -1,0 +1,20 @@
+block,element,current_value_preview,source_file,target_acf_field,seeded,notes
+recovery-intro,benefits list (6 items),Мультидисциплинарный подход…; Персонализированная…,template-parts/home/recovery-intro.php + home-fallbacks.php,home_recovery_intro_benefits + home_recovery_intro_benefits_enabled,yes,Repeater text+item_enabled; list toggle default on
+treatment-prevention,heading,Лечение и профилактика,treatment-prevention.php,home_treatment_prevention_heading,yes,Accordion remains automated from CPT
+treatment-prevention,lead,Мы работаем с зависимостью…,treatment-prevention.php,home_treatment_prevention_lead,yes,
+gallery,display mode,random (default),home-helpers.php gallery,home_gallery_display_mode,yes,all|random|selected; eligibility E32 flag preserved
+gallery,random count,12,home-helpers.php,home_gallery_random_count,yes,Conditional on mode=random
+gallery,selected services,(empty default),home-helpers.php,home_gallery_selected_services,yes,Relationship service CPT; empty→random fallback
+why-us,heading,Нас выбирают за мультидисциплинарный…,why-us.php,home_why_us_heading,yes,
+why-us,lead,У нас команда а не конвейер…,why-us.php,home_why_us_lead,yes,
+why-us,body paragraphs (2),Лечение в нашем… / Мультидисциплинарный подход…,why-us.php,home_why_us_body + home_why_us_body_enabled,yes,
+why-us,link items (4),Диагностические инструменты; Психиатрия; …,why-us.php,home_why_us_items + home_why_us_items_enabled,yes,title+url+item_enabled
+staff-photo,image,theme asset shpigovsky-staff-group.webp → ML #1238,staff-photo.php,home_staff_photo_image,yes,Uploaded to Media Library
+clinic-landscape,image,theme asset clinic-landscape.webp → ML #1239,clinic-landscape.php,home_clinic_landscape_image,yes,Uploaded to Media Library
+recovery-life,heading,Как меняется жизнь человека…,recovery-life.php,home_recovery_life_heading,yes,
+recovery-life,highlight,У нас команда…,recovery-life.php,home_recovery_life_highlight,yes,
+recovery-life,intro paragraphs (2),same as why-us body texts,recovery-life.php,home_recovery_life_intro + enabled,yes,
+recovery-life,stages (3),От выживания… / От зависимости… / От контроля…,recovery-life.php,home_recovery_life_stages + enabled,yes,items_text newline list; E36 CSS preserved
+genotyping,heading+lead+body+list+cta,full static block content,genotyping.php,home_genotyping_* fields,yes,Home block only; not program page
+videos,heading,Видео о нашем центре,videos.php,home_videos_heading,yes,
+videos,items (2),interview.mp4 + center.mp4 with posters,videos.php,home_videos_items + enabled,yes,ML attachments #1240-1243; fancybox markup preserved

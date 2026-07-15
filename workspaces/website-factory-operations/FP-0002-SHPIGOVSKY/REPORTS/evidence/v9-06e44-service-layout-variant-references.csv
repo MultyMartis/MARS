@@ -1,0 +1,16 @@
+value,referenced_in_file,function_or_context,frontend_effect,admin_effect,validation_effect,notes
+subdivision,theme/inc/service-helpers.php,shpigovsky_map_acf_layout_to_variant,"maps to stack variant subdivision","label Подраздел","allowed enum","primary frontend stack=subdivision-stack"
+subdivision,theme/inc/service-template-loader.php,shpigovsky_service_stack_slug,"loads subdivision-stack",,,
+subdivision,theme/template-parts/service/subdivision-stack.php,orchestrator,"children/nature/team/comfort/reviews stack",,,
+subdivision,theme/inc/service-subdivision-vendors.php,"is_subdivision check","enables subdivision Swiper vendors",,,
+subdivision,plugins/.../FieldGroups.php,"service_category_section_lead conditional","hub category lead on /uslugi/","shows lead field only when subdivision",,E43-FIX01
+standard,theme/inc/service-helpers.php,shpigovsky_map_acf_layout_to_variant,"maps to leaf","label Стандартная услуга","allowed enum","currently 0 pages use this value"
+extended,theme/inc/service-helpers.php,shpigovsky_map_acf_layout_to_variant,"maps to leaf (SAME as standard)","label Расширенная услуга","allowed enum","NO distinct frontend stack today; 0 pages"
+alcohol_special,theme/inc/service-helpers.php,shpigovsky_map_acf_layout_to_variant,"maps to alcohol-special","label Алкогольная зависимость","allowed enum","page #74"
+alcohol_special,theme/inc/service-template-loader.php,"stack map","loads alcohol-stack",,,
+alcohol_special,theme/template-parts/service/alcohol-stack.php,alcohol-direct-v9,"distinct V9 alcohol port",,,
+alcohol_special,theme/inc/alcohol-direct-v9-vendors.php,"vendor gate","alcohol assets only",,,
+placeholder,theme/inc/service-helpers.php,shpigovsky_map_acf_layout_to_variant,"maps to leaf (SAME as standard)","list column Статус=Заглушка","allowed enum","18 pages; admin-significant primarily"
+placeholder,plugins/.../EditorRestrictions.php,"fp02_placeholder column",none,"shows Заглушка vs Контент",,
+*,plugins/.../RepeaterValidation.php,validate_service_layout,none,"blocks invalid enum on save","enum gate",
+*,plugins/.../EditorRestrictions.php,"render_service_layout_help + mismatch notice",none,"help block + non-blocking warnings","none (non-blocking)",V9-06E44

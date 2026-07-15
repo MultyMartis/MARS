@@ -1,0 +1,13 @@
+file,function_or_block,fallback_text_or_source,used_when,normal_content_source,action,notes
+inc/service-section-helpers.php,shpigovsky_get_section_nature_*_fallback,"nature lorem cards/blocks","ACF empty",no,keep_emergency_only,"removed from normal resolver path"
+inc/service-section-helpers.php,shpigovsky_get_section_program_intro_demo_fallback,"lorem intros","ACF empty",no,keep_emergency_only,"resolver returns empty"
+inc/service-section-helpers.php,shpigovsky_get_section_stages_items_fallback,"default stages","ACF+legacy empty",no,keep_emergency_only,"resolver returns empty"
+inc/service-section-helpers.php,shpigovsky_get_section_approach_fallback_cards,"approach lorem cards","ACF empty",no,keep_emergency_only,"template no longer calls"
+inc/service-section-helpers.php,shpigovsky_get_section_stages_support_fallback,"support bullets","ACF empty",no,keep_emergency_only,"template no longer calls"
+template-parts/service/nature.php,heading/lead/cards,"hardcoded nature copy","ACF empty",no,convert_to_empty_behavior,"hides optional empty text/cards"
+template-parts/service/team-stats.php,heading/intro/cards,"hardcoded approach copy","ACF empty",no,convert_to_empty_behavior,"hides optional empty text/cards"
+template-parts/service/stages.php,heading/lead/support,"hardcoded stages copy","ACF empty",no,convert_to_empty_behavior,"ACF only for subdivision"
+template-parts/service/children.php,heading/lead/footer,"dependencies PHP demos","ACF empty",no,remove_normal_fallback,"children list kept automatic"
+template-parts/service/program.php,"lead Lorem","lorem program lead","ACF+hero empty",no,remove_normal_fallback,"programme cards catalog kept shared"
+template-parts/service/faq.php,section_faq_heading,"Нас часто спрашивают","ACF empty on section",no,convert_to_empty_behavior,"leaf keeps default title"
+"image helpers","section_*_image theme asset","theme webp","image ACF empty",no,keep_emergency_only,"image emergency reserve OK"

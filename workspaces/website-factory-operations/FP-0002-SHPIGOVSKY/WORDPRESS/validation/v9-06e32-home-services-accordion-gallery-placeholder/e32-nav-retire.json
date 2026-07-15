@@ -1,0 +1,261 @@
+{
+    "actions": [
+        {
+            "ID": 646,
+            "action": "trash",
+            "result": true,
+            "name": "home_service_nav_items"
+        },
+        {
+            "ID": 647,
+            "action": "trash",
+            "result": true,
+            "name": "title"
+        },
+        {
+            "ID": 648,
+            "action": "trash",
+            "result": true,
+            "name": "text"
+        },
+        {
+            "ID": 588,
+            "action": "trash",
+            "result": true,
+            "name": "home_service_nav_items"
+        },
+        {
+            "ID": 589,
+            "action": "trash",
+            "result": true,
+            "name": "title"
+        },
+        {
+            "ID": 590,
+            "action": "trash",
+            "result": true,
+            "name": "text"
+        },
+        {
+            "ID": 488,
+            "action": "trash",
+            "result": true,
+            "name": "home_service_nav_items"
+        },
+        {
+            "ID": 489,
+            "action": "trash",
+            "result": true,
+            "name": "title"
+        },
+        {
+            "ID": 490,
+            "action": "trash",
+            "result": true,
+            "name": "text"
+        },
+        {
+            "ID": 119,
+            "action": "trash",
+            "result": true,
+            "name": "home_service_nav_items"
+        },
+        {
+            "ID": 120,
+            "action": "trash",
+            "result": true,
+            "name": "title"
+        },
+        {
+            "ID": 121,
+            "action": "trash",
+            "result": true,
+            "name": "text"
+        }
+    ],
+    "before": {
+        "nav_field_posts": [
+            {
+                "ID": 646,
+                "status": "publish",
+                "name": "home_service_nav_items",
+                "key": "field_fp02_home_service_nav_items",
+                "parent": 639,
+                "title": "Настройки service navigation / accordion"
+            },
+            {
+                "ID": 647,
+                "status": "publish",
+                "name": "title",
+                "key": "field_fp02_home_service_nav_title",
+                "parent": 646,
+                "title": "Заголовок"
+            },
+            {
+                "ID": 648,
+                "status": "publish",
+                "name": "text",
+                "key": "field_fp02_home_service_nav_text",
+                "parent": 646,
+                "title": "Текст"
+            },
+            {
+                "ID": 588,
+                "status": "publish",
+                "name": "home_service_nav_items",
+                "key": "field_fp02_home_service_nav_items",
+                "parent": 581,
+                "title": "Настройки service navigation / accordion"
+            },
+            {
+                "ID": 589,
+                "status": "publish",
+                "name": "title",
+                "key": "field_fp02_home_service_nav_title",
+                "parent": 588,
+                "title": "Заголовок"
+            },
+            {
+                "ID": 590,
+                "status": "publish",
+                "name": "text",
+                "key": "field_fp02_home_service_nav_text",
+                "parent": 588,
+                "title": "Текст"
+            },
+            {
+                "ID": 488,
+                "status": "publish",
+                "name": "home_service_nav_items",
+                "key": "field_fp02_home_service_nav_items",
+                "parent": 483,
+                "title": "Настройки service navigation / accordion"
+            },
+            {
+                "ID": 489,
+                "status": "publish",
+                "name": "title",
+                "key": "field_fp02_home_service_nav_title",
+                "parent": 488,
+                "title": "Заголовок"
+            },
+            {
+                "ID": 490,
+                "status": "publish",
+                "name": "text",
+                "key": "field_fp02_home_service_nav_text",
+                "parent": 488,
+                "title": "Текст"
+            },
+            {
+                "ID": 119,
+                "status": "publish",
+                "name": "home_service_nav_items",
+                "key": "field_fp02_home_service_nav_items",
+                "parent": 114,
+                "title": "Настройки service navigation / accordion"
+            },
+            {
+                "ID": 120,
+                "status": "publish",
+                "name": "title",
+                "key": "field_fp02_home_service_nav_title",
+                "parent": 119,
+                "title": "Заголовок"
+            },
+            {
+                "ID": 121,
+                "status": "publish",
+                "name": "text",
+                "key": "field_fp02_home_service_nav_text",
+                "parent": 119,
+                "title": "Текст"
+            }
+        ],
+        "group_114": [
+            "home_hero_slides:publish",
+            "home_service_nav_items:publish",
+            "home_advantages:publish",
+            "home_intro_bands:publish",
+            "home_blog_teaser_enabled:publish",
+            "home_gallery_media:publish",
+            "home_faq_items:publish",
+            "home_faq_heading:publish",
+            "home_recovery_intro_heading:publish",
+            "home_recovery_intro_lead_1:publish",
+            "home_recovery_intro_lead_2:publish",
+            "home_specialists_heading:publish",
+            "home_comfort_heading:publish",
+            "home_comfort_lead:publish",
+            "home_reviews_heading:publish",
+            "home_articles_heading:publish",
+            "home_cta_title:publish",
+            "home_cta_text:publish"
+        ],
+        "group_483": [
+            "home_hero_slides:publish",
+            "home_service_nav_items:publish",
+            "home_advantages:publish",
+            "home_intro_bands:publish",
+            "home_blog_teaser_enabled:publish",
+            "home_gallery_media:publish",
+            "home_faq_items:publish",
+            "home_faq_heading:publish",
+            "home_recovery_intro_heading:publish",
+            "home_recovery_intro_lead_1:publish",
+            "home_recovery_intro_lead_2:publish",
+            "home_specialists_heading:publish",
+            "home_comfort_heading:publish",
+            "home_comfort_lead:publish",
+            "home_reviews_heading:publish",
+            "home_articles_heading:publish",
+            "home_cta_title:publish",
+            "home_cta_text:publish"
+        ],
+        "group_581": [
+            "hero_media:publish",
+            "hero_cta_label:publish",
+            "home_hero_slides:publish",
+            "home_service_nav_items:publish",
+            "home_advantages:publish",
+            "home_intro_bands:publish",
+            "home_reviews_teaser:publish",
+            "home_blog_teaser_enabled:publish",
+            "home_gallery_media:publish",
+            "home_faq_items:publish",
+            "home_cta_title:publish",
+            "home_cta_text:publish"
+        ],
+        "group_639": [
+            "hero_media:publish",
+            "hero_cta_label:publish",
+            "home_hero_slides:publish",
+            "home_service_nav_items:publish",
+            "home_advantages:publish",
+            "home_intro_bands:publish",
+            "home_reviews_teaser:publish",
+            "home_blog_teaser_enabled:publish",
+            "home_gallery_media:publish",
+            "home_faq_items:publish",
+            "home_cta_title:publish",
+            "home_cta_text:publish"
+        ]
+    },
+    "after": {
+        "acf_get_field": null,
+        "group_fields": [
+            "hero_media",
+            "hero_cta_label",
+            "home_hero_slides",
+            "home_advantages",
+            "home_intro_bands",
+            "home_reviews_teaser",
+            "home_blog_teaser_enabled",
+            "home_gallery_media",
+            "home_faq_items",
+            "home_cta_title",
+            "home_cta_text"
+        ],
+        "has_nav": false
+    }
+}

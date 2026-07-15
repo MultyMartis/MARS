@@ -1,0 +1,20 @@
+{
+  "task_id": "V9-06E29B-FIX",
+  "generated_at": "2026-07-10T13:42:55.441146+07:00",
+  "backup_path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e29b-fix-ocentre-admin-ui-pre-20260710-134255",
+  "db_dump": {
+    "path": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e29b-fix-ocentre-admin-ui-pre-20260710-134255/mars_wp_fp0002.sql",
+    "sha256": "5d836ecfa89300483a2aed92afcf6ca7f9e8be2df1540d93baeaa2beec9da0a8",
+    "database": "mars_wp_fp0002"
+  },
+  "page_11_pre_state": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e29b-fix-ocentre-admin-ui-pre-20260710-134255/page-11-pre-state.json",
+  "o_centre_html_pre": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e29b-fix-ocentre-admin-ui-pre-20260710-134255/o-centre-html-pre.html",
+  "runtime_candidate_snapshot": "X:/MARS-Localhost/backups/wordpress/projects/shpigovsky/v9-06e29b-fix-ocentre-admin-ui-pre-20260710-134255/runtime-candidate-files",
+  "restore_instructions": {
+    "db": "mysql -h127.0.0.1 -uroot mars_wp_fp0002 < \"X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e29b-fix-ocentre-admin-ui-pre-20260710-134255\\mars_wp_fp0002.sql\"",
+    "page_11_postmeta": "Restore from X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e29b-fix-ocentre-admin-ui-pre-20260710-134255\\page-11-pre-state.json",
+    "source_files": "git checkout -- exact paths",
+    "runtime_files": "Copy from runtime_candidate_snapshot pre hashes"
+  },
+  "result": "PASS"
+}

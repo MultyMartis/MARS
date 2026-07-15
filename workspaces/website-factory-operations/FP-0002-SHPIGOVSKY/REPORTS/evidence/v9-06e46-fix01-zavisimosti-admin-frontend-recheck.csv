@@ -1,0 +1,21 @@
+frontend_order,frontend_block_class_or_description,visible_frontend_content,admin_section,source_of_truth,editable_directly,automatic_or_repeated,toggle_or_setting,status,notes
+1,inner-hero / services-inner-hero,eyebrow/H1/lead/image/CTA,Hero страницы услуги,ACF hero_* on service post,yes,no,n/a (always shown),OK,Separated from Layout in FIX01; #73 lead+media+cta populated
+2,service-subnav / anchor nav,anchor tabs under hero,Service — Раздел §2,template anchors + breadcrumb hierarchy,no,yes,section_nav_visible,INTENTIONAL_AUTOMATIC,Toggle + notice; items from template
+3,service-subdivision-dependencies / children,accepted dependencies list cards,Service — Раздел §3,child service pages + chrome ACF,partial,yes,section_dependencies_visible,OK,Heading/lead/footer editable; cards from children CPT
+4,nature block,Природа зависимости / neuro / geno,Service — Раздел §4,ACF section_nature_* + theme fallbacks,yes,no,section_nature_visible,OK,E46 moved hardcoded intros to ACF
+5,mid-cta band,CTA after nature (if present),Service — Раздел §5,shared CTA / section toggle,no,yes,section_mid_cta_visible,OK,Visibility on page; copy from shared CTA settings
+6,program block,Наша программа / genetics cards,Service — Раздел §6,ACF program intros + catalog relationship,partial,yes,section_program_visible,OK,Intros editable; card media from program catalog
+7,stages / process,Что нужно для прохождения…,Service — Раздел §7,ACF stages chrome + default stage items fallback,partial,no,section_stages_visible,OK,Chrome editable; stage body still fallback/hardcoded template list when empty
+8,team-stats / approach,Наш подход + clinic photos,Service — Раздел §8,ACF section_approach_* + assets,yes,no,section_approach_visible,OK,E46 ACF
+9,clinic-landscape,interior/gallery landscape,Service — Раздел §9,Home/clinic shared partial,no,yes,section_clinic_landscape_visible,INTENTIONAL_AUTOMATIC,Toggle + source notice
+10,specialists,specialist cards,Service — Раздел §10,Специалисты child pages,no,yes,section_specialists_visible,INTENTIONAL_AUTOMATIC,Toggle only on section page
+11,founder-quote,founder quote,Service — Раздел §11,shared template/static,no,yes,section_founder_quote_visible,INTENTIONAL_AUTOMATIC,Toggle + notice; not duplicated per section
+12,comfort,comfort/benefits gallery,Service — Раздел §12,block options Comfort,no,yes,section_comfort_visible,INTENTIONAL_AUTOMATIC,Toggle on section
+13,reviews,reviews strip,Service — Раздел §13,site reviews / home reviews data,no,yes,section_reviews_visible,OK,E46 fixed home-toggle leak; section has own toggle
+14,faq,Нас часто спрашивают,Service — Раздел §14 + Service — FAQ,section_faq_heading + faq_items repeater,yes,no,section_faq_visible,OK,Heading in parity group; items in FAQ group
+15,final-form,contact CTA form,Service — Раздел §15,Final Form options,no,yes,section_final_form_visible,INTENTIONAL_AUTOMATIC,Toggle on section
+—,WP title/content editor,page title used when hero override empty,WordPress core,post_title,yes,no,n/a,OK,H1 override empty on #73 → title Зависимости
+—,Layout selector,Макет Раздел/Услуга,Service — Layout,service_editor_role,yes,no,n/a,OK,Separated; no hero fields
+—,Hub catalog flags,mini-desc / uslugi visibility,Service — Layout (hub subsection),service_* hub fields,yes,no,n/a,OK,Remain under Layout group by design (not hero)
+—,mid-cta copy modeling,full mid-cta text system,n/a,shared CTA,no,yes,section_mid_cta_visible,NEEDS_E46_FIX02,Only if operator wants per-section mid-cta copy beyond toggle
+—,stages item bodies,default 4 stage texts when empty,theme stages.php fallbacks,theme __() fallbacks,no,no,section_stages_visible,NEEDS_E46_FIX02,Large modeling; chrome already ACF; document only

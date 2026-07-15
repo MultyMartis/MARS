@@ -1,0 +1,19 @@
+admin_order,field_name,field_label,field_type,field_group,visible_for_section,currently_used_frontend,frontend_block,action,notes
+1,service_editor_role,Макет страницы услуги,button_group,group_fp02_service_layout_hero,yes,yes,layout gate,keep,Раздел
+2,hero_*,Hero fields,mixed,group_fp02_service_layout_hero,yes,yes,Hero,keep,existing
+3,section_hero_notice,1. Hero,message,group_fp02_service_section_parity,yes,yes,Hero,added,pointer only
+4,section_nav_visible,Показывать навигацию,true_false,group_fp02_service_section_parity,yes,yes,Subnav,added,
+5,section_dependencies_*,Dependencies block,mixed,group_fp02_service_section_parity,yes,yes,Children,added,seeded #73
+6,section_nature_*,Nature block,mixed,group_fp02_service_section_parity,yes,yes,Nature,added,seeded #73
+7,section_mid_cta_visible,CTA toggle,true_false,group_fp02_service_section_parity,yes,yes,Mid CTA,added,
+8,section_program_*,Program copy,mixed,group_fp02_service_section_parity,yes,yes,Program,added,seeded #73
+9,section_stages_*,Stages chrome,mixed,group_fp02_service_section_parity,yes,yes,Stages,added,seeded #73
+10,section_approach_*,Approach block,mixed,group_fp02_service_section_parity,yes,yes,Approach,added,seeded #73
+11,section_clinic_landscape_visible,Clinic toggle,true_false,group_fp02_service_section_parity,yes,yes,Clinic,added,
+12,section_specialists_visible,Specialists toggle,true_false,group_fp02_service_section_parity,yes,yes,Specialists,added,
+13,section_founder_quote_visible,Founder toggle,true_false,group_fp02_service_section_parity,yes,yes,Founder,added,
+14,section_comfort_visible,Comfort toggle,true_false,group_fp02_service_section_parity,yes,yes,Comfort,added,
+15,section_reviews_visible,Reviews toggle,true_false,group_fp02_service_section_parity,yes,yes,Reviews,added,
+16,section_faq_*,FAQ,mixed,group_fp02_service_section_parity,yes,yes,FAQ,added,
+17,section_final_form_visible,Final form toggle,true_false,group_fp02_service_section_parity,yes,yes,Final form,added,
+18,intro_text/programme_items/stages/cta_*/faq_items,Structured/FAQ legacy,mixed,structured+faq groups,yes,yes,multiple,keep,existing fields remain

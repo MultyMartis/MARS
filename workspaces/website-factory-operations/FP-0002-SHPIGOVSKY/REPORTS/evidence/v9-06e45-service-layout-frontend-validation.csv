@@ -1,0 +1,8 @@
+route,post_id,expected_stack,resolved_helper,html_stack_hint,http,result
+/uslugi/,5,services_hub,services_hub,services_hub,200,PASS
+/uslugi/zavisimosti/,73,subdivision,subdivision,subdivision,200,PASS
+/uslugi/psihicheskoe-zdorovie/,77,subdivision,subdivision,subdivision,200,PASS
+/uslugi/rasstroystva-pischevogo-povedeniya/,84,subdivision,subdivision,subdivision,200,PASS
+/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/,74,alcohol-special,alcohol-special,leaf,200,PASS
+/uslugi/psihicheskoe-zdorovie/depressiya/,78,leaf,leaf,leaf,200,PASS
+/uslugi/psihicheskoe-zdorovie/stress/,1050,leaf,leaf,leaf,200,PASS

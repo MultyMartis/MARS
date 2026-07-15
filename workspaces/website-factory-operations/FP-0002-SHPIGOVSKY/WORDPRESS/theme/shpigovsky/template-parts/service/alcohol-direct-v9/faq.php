@@ -1,6 +1,6 @@
 <?php
 /**
- * Direct V9 port: faq section (usluga-konechnaya-v1.html).
+ * Service-leaf FAQ — ACF SoT (V9-06E47); visual parity with usluga-konechnaya-v1.
  *
  * @package Shpigovsky
  */
@@ -9,14 +9,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$faq_items  = shpigovsky_get_v9_alcohol_leaf_faq_items();
+$post_id    = shpigovsky_get_current_service_id();
+$faq_items  = function_exists( 'shpigovsky_get_general_faq_items' )
+	? shpigovsky_get_general_faq_items( $post_id )
+	: array();
 $section_id = 'service-leaf-faq';
 $heading_id = 'service-leaf-faq-heading';
+$heading    = function_exists( 'shpigovsky_general_text' )
+	? shpigovsky_general_text( $post_id, 'service_general_faq_heading', __( 'Нас часто спрашивают', 'shpigovsky' ) )
+	: __( 'Нас часто спрашивают', 'shpigovsky' );
+
+if ( empty( $faq_items ) ) {
+	return;
+}
 ?>
 <section data-reveal class="faq" id="<?php echo esc_attr( $section_id ); ?>" aria-labelledby="<?php echo esc_attr( $heading_id ); ?>">
 	<div class="container">
 		<h2 class="faq__heading" id="<?php echo esc_attr( $heading_id ); ?>">
-			<?php echo esc_html__( 'Нас часто спрашивают', 'shpigovsky' ); ?>
+			<?php echo esc_html( $heading ); ?>
 		</h2>
 
 		<div class="faq__list" data-accordion>

@@ -1,0 +1,5 @@
+block,field,attachment_media,url,frontend_render,result
+staff-photo,home_staff_photo_image,1238 shpigovsky-staff-group.webp,http://shpigovsky.test/wp-content/uploads/2026/07/shpigovsky-staff-group.webp,YES in Home HTML /uploads/...,PASS
+clinic-landscape,home_clinic_landscape_image,1239 shpigovsky-clinic-landscape.webp,http://shpigovsky.test/wp-content/uploads/2026/07/shpigovsky-clinic-landscape-1.webp,YES clinic-landscape in HTML,PASS
+videos[0],home_videos_items.video_file + poster,1240 + 1241,..../sergey-shpigovsky-interview.mp4 + poster.webp,YES fancybox link href uploads mp4,PASS
+videos[1],home_videos_items.video_file + poster,1242 + 1243,..../shpigovsky-center.mp4 + poster.webp,YES fancybox link href uploads mp4,PASS

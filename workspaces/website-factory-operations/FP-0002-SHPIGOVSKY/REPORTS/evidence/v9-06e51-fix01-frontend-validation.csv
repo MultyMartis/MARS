@@ -1,0 +1,12 @@
+page_id,route,expected_mode,http,placeholder_stack,service_blocks_signal,result,notes
+78,/uslugi/psihicheskoe-zdorovie/depressiya/ (as service),full service,200,0,3,PASS,During cycle B
+78,/uslugi/psihicheskoe-zdorovie/depressiya/ (as placeholder),stub H1,200,1,0,PASS,Final state
+74,/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/,full service,200,0,3,PASS,
+314,/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/,full service + child tiles,200,0,3,PASS,child-services YES
+81,/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/,full service,200,0,3,PASS,
+85,/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/,full service,200,0,3,PASS,
+73,/uslugi/zavisimosti/,section,200,0,section signals,PASS,
+77,/uslugi/psihicheskoe-zdorovie/,section,200,0,section signals,PASS,
+84,/uslugi/rasstroystva-pischevogo-povedeniya/,section,200,0,section signals,PASS,
+home,/,unchanged home,200,0,n/a,PASS,
+uslugi,/uslugi/,unchanged hub,200,0,n/a,PASS,

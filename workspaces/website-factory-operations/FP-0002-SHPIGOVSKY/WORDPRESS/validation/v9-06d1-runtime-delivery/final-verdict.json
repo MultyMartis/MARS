@@ -1,0 +1,71 @@
+{
+  "suite": "final-verdict",
+  "timestamp": "2026-07-04T02:17:54.2057602+07:00",
+  "verdict": "BLOCKED",
+  "v9_06d1": "NOT COMPLETE",
+  "blocker": "Canonical Shpigovsky Core source keeps skeleton gate enabled; service CPT, permalink, ACF field groups, Options Page, admin UX and validation modules are inert until the gate is explicitly disabled in source.",
+  "runtime_delivery": "NOT PERFORMED",
+  "theme_runtime": "NOT DELIVERED",
+  "shpigovsky_core_runtime": "NOT DELIVERED",
+  "acf_json_runtime": "NOT DELIVERED",
+  "content_model_activation": "NOT VERIFIED",
+  "service_cpt": "NOT_REGISTERED",
+  "service_objects": 0,
+  "acf_groups": "NOT_DISCOVERABLE_DUE_GATE",
+  "options_page": "NOT_REGISTERED_DUE_GATE",
+  "runtime_health": "PASS",
+  "rollback_readiness": "NOT_CREATED_NO_RUNTIME_WRITES",
+  "runtime_file_writes": 0,
+  "database_writes": 0,
+  "wordpress_object_writes": 0,
+  "v9_integration": "NOT STARTED",
+  "v9_06d2": "BLOCKED",
+  "validation_suites": [
+    {
+      "suite": "preflight",
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "result": "PASS"
+    },
+    {
+      "suite": "runtime-baseline",
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "result": "PASS"
+    },
+    {
+      "suite": "source-readiness",
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0,
+      "result": "BLOCKED"
+    },
+    {
+      "suite": "dry-run-plan",
+      "passed": 0,
+      "failed": 1,
+      "skipped": 0,
+      "result": "BLOCKED"
+    },
+    {
+      "suite": "source-php-lint",
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "result": "PASS"
+    },
+    {
+      "suite": "checkpoint/apply/post/runtime/content/wp-object/wpilot/rollback",
+      "passed": 0,
+      "failed": 0,
+      "skipped": 9,
+      "result": "SKIPPED_BLOCKED"
+    }
+  ],
+  "total_failures": 2,
+  "recommended_next_action": "OPERATOR_DECISION_REQUIRED",
+  "superseded_by": "FP-0002-V9-06C.1-SOURCE-ACTIVATION-GATE-RESOLUTION",
+  "superseded_note": "BLOCKED BY OLD SKELETON GATE — SUPERSEDED BY V9-06C.1 SOURCE FIX"
+}

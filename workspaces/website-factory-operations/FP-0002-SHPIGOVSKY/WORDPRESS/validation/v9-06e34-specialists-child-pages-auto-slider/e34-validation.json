@@ -1,0 +1,221 @@
+{
+    "parent": {
+        "ID": 1030,
+        "title": "Специалисты",
+        "url": "http://shpigovsky.test/specyalisty/",
+        "template": "page-templates/generic.php"
+    },
+    "children": [
+        {
+            "ID": 1031,
+            "title": "Сергей Юрьевич Шпиговский",
+            "slug": "shipovsky",
+            "url": "http://shpigovsky.test/specyalisty/shipovsky/",
+            "template": "page-templates/generic.php",
+            "menu_order": 10,
+            "thumb": 1092,
+            "excerpt": "Аддиктолог, интервенционист"
+        },
+        {
+            "ID": 1032,
+            "title": "Максим Михайлович Казаков",
+            "slug": "kazakov",
+            "url": "http://shpigovsky.test/specyalisty/kazakov/",
+            "template": "page-templates/generic.php",
+            "menu_order": 20,
+            "thumb": 1094,
+            "excerpt": "Психолог, преподаватель психологии, гештальт-терапевт"
+        },
+        {
+            "ID": 1033,
+            "title": "Дарья Владимировна Костюк",
+            "slug": "kostyuk",
+            "url": "http://shpigovsky.test/specyalisty/kostyuk/",
+            "template": "page-templates/generic.php",
+            "menu_order": 30,
+            "thumb": 1096,
+            "excerpt": "Психолог, EMDR терапевт, телесно-ориентированный терапевт"
+        },
+        {
+            "ID": 1097,
+            "title": "Шапигузова Татьяна Андреевна",
+            "slug": "shapiguzova",
+            "url": "http://shpigovsky.test/specyalisty/shapiguzova/",
+            "template": "page-templates/generic.php",
+            "menu_order": 40,
+            "thumb": 1098,
+            "excerpt": "Сертифицированный гонг-мастер, звукотерапевт и преподаватель Кундалини йоги."
+        }
+    ],
+    "child_count": 4,
+    "cards_from_query": [
+        {
+            "image": "http://shpigovsky.test/wp-content/uploads/2026/07/sergey-shpigovsky.webp",
+            "width": 615,
+            "height": 605,
+            "name": "Сергей Юрьевич Шпиговский",
+            "role": "Аддиктолог, интервенционист",
+            "link": "http://shpigovsky.test/specyalisty/shipovsky/"
+        },
+        {
+            "image": "http://shpigovsky.test/wp-content/uploads/2026/07/maxim-kazakov.webp",
+            "width": 657,
+            "height": 605,
+            "name": "Максим Михайлович Казаков",
+            "role": "Психолог, преподаватель психологии, гештальт-терапевт",
+            "link": "http://shpigovsky.test/specyalisty/kazakov/"
+        },
+        {
+            "image": "http://shpigovsky.test/wp-content/uploads/2026/07/darya-kostyuk.webp",
+            "width": 643,
+            "height": 610,
+            "name": "Дарья Владимировна Костюк",
+            "role": "Психолог, EMDR терапевт, телесно-ориентированный терапевт",
+            "link": "http://shpigovsky.test/specyalisty/kostyuk/"
+        },
+        {
+            "image": "http://shpigovsky.test/wp-content/uploads/2026/07/tatyana-shapiguzova.webp",
+            "width": 643,
+            "height": 610,
+            "name": "Шапигузова Татьяна Андреевна",
+            "role": "Сертифицированный гонг-мастер, звукотерапевт и преподаватель Кундалини йоги.",
+            "link": "http://shpigovsky.test/specyalisty/shapiguzova/"
+        }
+    ],
+    "cards_query_count": 4,
+    "home_slider": {
+        "slider_present": true,
+        "cards": 8,
+        "links": [
+            "http://shpigovsky.test/specyalisty/shipovsky/",
+            "http://shpigovsky.test/specyalisty/kazakov/",
+            "http://shpigovsky.test/specyalisty/kostyuk/",
+            "http://shpigovsky.test/specyalisty/shapiguzova/"
+        ],
+        "names": [
+            "Сергей Юрьевич Шпиговский",
+            "Максим Михайлович Казаков",
+            "Дарья Владимировна Костюк",
+            "Шапигузова Татьяна Андреевна"
+        ],
+        "all_link": "http://shpigovsky.test/specyalisty/",
+        "duplicates": []
+    },
+    "home_link_checks": [
+        {
+            "url": "http://shpigovsky.test/specyalisty/shipovsky/",
+            "http": 200,
+            "result": "PASS"
+        },
+        {
+            "url": "http://shpigovsky.test/specyalisty/kazakov/",
+            "http": 200,
+            "result": "PASS"
+        },
+        {
+            "url": "http://shpigovsky.test/specyalisty/kostyuk/",
+            "http": 200,
+            "result": "PASS"
+        },
+        {
+            "url": "http://shpigovsky.test/specyalisty/shapiguzova/",
+            "http": 200,
+            "result": "PASS"
+        }
+    ],
+    "card_count_matches": false,
+    "links_are_children": true,
+    "no_name_duplicates": true,
+    "all_link_is_spec": true,
+    "routes": [
+        {
+            "route": "/",
+            "url": "http://shpigovsky.test/",
+            "http": 200,
+            "bytes": 182535,
+            "fatal": false,
+            "result": "PASS"
+        },
+        {
+            "route": "/specyalisty/",
+            "url": "http://shpigovsky.test/specyalisty/",
+            "http": 200,
+            "bytes": 58049,
+            "fatal": false,
+            "result": "PASS"
+        },
+        {
+            "route": "/specyalisty/shipovsky/",
+            "url": "http://shpigovsky.test/specyalisty/shipovsky/",
+            "http": 200,
+            "bytes": 58356,
+            "fatal": false,
+            "result": "PASS"
+        },
+        {
+            "route": "/specyalisty/kazakov/",
+            "url": "http://shpigovsky.test/specyalisty/kazakov/",
+            "http": 200,
+            "bytes": 58398,
+            "fatal": false,
+            "result": "PASS"
+        },
+        {
+            "route": "/specyalisty/kostyuk/",
+            "url": "http://shpigovsky.test/specyalisty/kostyuk/",
+            "http": 200,
+            "bytes": 58401,
+            "fatal": false,
+            "result": "PASS"
+        },
+        {
+            "route": "/specyalisty/shapiguzova/",
+            "url": "http://shpigovsky.test/specyalisty/shapiguzova/",
+            "http": 200,
+            "bytes": 58471,
+            "fatal": false,
+            "result": "PASS"
+        },
+        {
+            "route": "/uslugi/",
+            "url": "http://shpigovsky.test/uslugi/",
+            "http": 200,
+            "bytes": 122606,
+            "fatal": false,
+            "result": "PASS"
+        },
+        {
+            "route": "/o-centre/",
+            "url": "http://shpigovsky.test/o-centre/",
+            "http": 200,
+            "bytes": 124020,
+            "fatal": false,
+            "result": "PASS"
+        },
+        {
+            "route": "/o-centre/programma-lecheniya/",
+            "url": "http://shpigovsky.test/o-centre/programma-lecheniya/",
+            "http": 200,
+            "bytes": 58206,
+            "fatal": false,
+            "result": "PASS"
+        },
+        {
+            "route": "/blog/",
+            "url": "http://shpigovsky.test/blog/",
+            "http": 200,
+            "bytes": 62838,
+            "fatal": false,
+            "result": "PASS"
+        },
+        {
+            "route": "/kontakty/",
+            "url": "http://shpigovsky.test/kontakty/",
+            "http": 200,
+            "bytes": 67527,
+            "fatal": false,
+            "result": "PASS"
+        }
+    ],
+    "templates_generic": true
+}

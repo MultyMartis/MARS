@@ -1,0 +1,85 @@
+post_id,field,before_state,after_state,action,seeded_value_or_source,existing_preserved,result,notes
+73,section_dependencies_heading,demo,demo,preserved,"Зависимости, которые мы лечим 000101",yes,PASS,
+73,section_dependencies_lead,demo,demo,preserved,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i",yes,PASS,
+73,section_dependencies_footer,demo,demo,preserved,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i",yes,PASS,
+73,section_nature_heading,demo,demo,preserved,"Природа зависимости 000101",yes,PASS,
+73,section_nature_lead,meaningful,meaningful,preserved,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i",yes,PASS,
+73,section_nature_text_blocks,empty,meaningful,seeded,"rows:2",n/a,PASS,empty_before_demo_or_image
+73,section_nature_cards,meaningful,meaningful,preserved,"rows:2",yes,PASS,
+73,section_program_heading,demo,demo,preserved,"Наша программа включает 4 направления ТЕСТ",yes,PASS,
+73,section_program_more_label,demo,demo,preserved,"подробнее ТЕСТ",yes,PASS,
+73,section_program_lead,demo,demo,preserved,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i",yes,PASS,
+73,section_program_intro_items,meaningful,meaningful,preserved,"rows:2",yes,PASS,
+73,section_stages_heading,meaningful,meaningful,preserved,"Что нужно для прохождения реабилитации и ле",yes,PASS,
+73,section_stages_lead,meaningful,meaningful,preserved,"Мы гарантируем конфиденциальность, уважени",yes,PASS,
+73,section_stages_items,empty,meaningful,seeded,"rows:4",n/a,PASS,empty_before_demo_or_image
+73,section_stages_support_heading,meaningful,meaningful,preserved,"Поддержка осуществляется на всех этапах:",yes,PASS,
+73,section_stages_support_items,meaningful,meaningful,preserved,"rows:4",yes,PASS,
+73,section_approach_heading,meaningful,meaningful,preserved,"Наш подход к лечению зависимостей",yes,PASS,
+73,section_approach_more_label,meaningful,meaningful,preserved,"подробнее",yes,PASS,
+73,section_approach_more_url,meaningful,meaningful,preserved,"http://shpigovsky.test/o-centre/programma-lecheniya/",yes,PASS,
+73,section_approach_highlight,meaningful,meaningful,preserved,"Мы используем мультидисциплинарный подход ",yes,PASS,
+73,section_approach_intro,meaningful,meaningful,preserved,"Лечение в нашем реабилитационном центре со�",yes,PASS,
+73,section_corridor_image,empty,meaningful,seeded,"1709",n/a,PASS,empty_before_demo_or_image
+73,section_corridor_image_alt,empty,meaningful,seeded,"Интерьер клиники — коридор с картинами",n/a,PASS,empty_before_demo_or_image
+73,section_team_image,empty,meaningful,seeded,"1238",n/a,PASS,empty_before_demo_or_image
+73,section_team_image_alt,empty,meaningful,seeded,"Команда специалистов реабилитационного це�",n/a,PASS,empty_before_demo_or_image
+73,section_approach_cards,meaningful,meaningful,preserved,"rows:4",yes,PASS,
+73,section_clinic_landscape_image,meaningful,meaningful,preserved,"1239",yes,PASS,
+73,section_faq_heading,meaningful,meaningful,preserved,"Нас часто спрашивают",yes,PASS,
+77,section_dependencies_heading,empty,meaningful,seeded,"Зависимости, которые мы лечим",n/a,PASS,empty_before_demo_or_image
+77,section_dependencies_lead,empty,meaningful,seeded,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i",n/a,PASS,empty_before_demo_or_image
+77,section_dependencies_footer,empty,meaningful,seeded,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i",n/a,PASS,empty_before_demo_or_image
+77,section_nature_heading,empty,meaningful,seeded,"Природа зависимости",n/a,PASS,empty_before_demo_or_image
+77,section_nature_lead,empty,meaningful,seeded,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i",n/a,PASS,empty_before_demo_or_image
+77,section_nature_text_blocks,empty,meaningful,seeded,"rows:2",n/a,PASS,empty_before_demo_or_image
+77,section_nature_cards,empty,meaningful,seeded,"rows:2",n/a,PASS,empty_before_demo_or_image
+77,section_program_heading,empty,meaningful,seeded,"Наша программа включает 4 направления",n/a,PASS,empty_before_demo_or_image
+77,section_program_more_label,empty,meaningful,seeded,"подробнее",n/a,PASS,empty_before_demo_or_image
+77,section_program_lead,empty,meaningful,seeded,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i",n/a,PASS,empty_before_demo_or_image
+77,section_program_intro_items,empty,meaningful,seeded,"rows:2",n/a,PASS,empty_before_demo_or_image
+77,section_stages_heading,empty,meaningful,seeded,"Что нужно для прохождения реабилитации и ле",n/a,PASS,empty_before_demo_or_image
+77,section_stages_lead,empty,meaningful,seeded,"Мы гарантируем конфиденциальность, уважени",n/a,PASS,empty_before_demo_or_image
+77,section_stages_items,empty,meaningful,seeded,"rows:4",n/a,PASS,empty_before_demo_or_image
+77,section_stages_support_heading,empty,meaningful,seeded,"Поддержка осуществляется на всех этапах:",n/a,PASS,empty_before_demo_or_image
+77,section_stages_support_items,empty,meaningful,seeded,"rows:4",n/a,PASS,empty_before_demo_or_image
+77,section_approach_heading,empty,meaningful,seeded,"Наш подход к лечению зависимостей",n/a,PASS,empty_before_demo_or_image
+77,section_approach_more_label,empty,meaningful,seeded,"подробнее",n/a,PASS,empty_before_demo_or_image
+77,section_approach_more_url,empty,meaningful,seeded,"http://shpigovsky.test/o-centre/programma-lecheniya/",n/a,PASS,empty_before_demo_or_image
+77,section_approach_highlight,empty,meaningful,seeded,"Мы используем мультидисциплинарный подход ",n/a,PASS,empty_before_demo_or_image
+77,section_approach_intro,empty,meaningful,seeded,"Лечение в нашем реабилитационном центре со�",n/a,PASS,empty_before_demo_or_image
+77,section_corridor_image,empty,meaningful,seeded,"1709",n/a,PASS,empty_before_demo_or_image
+77,section_corridor_image_alt,empty,meaningful,seeded,"Интерьер клиники — коридор с картинами",n/a,PASS,empty_before_demo_or_image
+77,section_team_image,empty,meaningful,seeded,"1238",n/a,PASS,empty_before_demo_or_image
+77,section_team_image_alt,empty,meaningful,seeded,"Команда специалистов реабилитационного це�",n/a,PASS,empty_before_demo_or_image
+77,section_approach_cards,empty,meaningful,seeded,"rows:4",n/a,PASS,empty_before_demo_or_image
+77,section_clinic_landscape_image,meaningful,meaningful,preserved,"1239",yes,PASS,
+77,section_faq_heading,empty,meaningful,seeded,"Нас часто спрашивают",n/a,PASS,empty_before_demo_or_image
+84,section_dependencies_heading,empty,meaningful,seeded,"Зависимости, которые мы лечим",n/a,PASS,empty_before_demo_or_image
+84,section_dependencies_lead,empty,meaningful,seeded,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i",n/a,PASS,empty_before_demo_or_image
+84,section_dependencies_footer,empty,meaningful,seeded,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i",n/a,PASS,empty_before_demo_or_image
+84,section_nature_heading,empty,meaningful,seeded,"Природа зависимости",n/a,PASS,empty_before_demo_or_image
+84,section_nature_lead,empty,meaningful,seeded,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i",n/a,PASS,empty_before_demo_or_image
+84,section_nature_text_blocks,empty,meaningful,seeded,"rows:2",n/a,PASS,empty_before_demo_or_image
+84,section_nature_cards,empty,meaningful,seeded,"rows:2",n/a,PASS,empty_before_demo_or_image
+84,section_program_heading,empty,meaningful,seeded,"Наша программа включает 4 направления",n/a,PASS,empty_before_demo_or_image
+84,section_program_more_label,empty,meaningful,seeded,"подробнее",n/a,PASS,empty_before_demo_or_image
+84,section_program_lead,empty,meaningful,seeded,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i",n/a,PASS,empty_before_demo_or_image
+84,section_program_intro_items,empty,meaningful,seeded,"rows:2",n/a,PASS,empty_before_demo_or_image
+84,section_stages_heading,empty,meaningful,seeded,"Что нужно для прохождения реабилитации и ле",n/a,PASS,empty_before_demo_or_image
+84,section_stages_lead,empty,meaningful,seeded,"Мы гарантируем конфиденциальность, уважени",n/a,PASS,empty_before_demo_or_image
+84,section_stages_items,empty,meaningful,seeded,"rows:4",n/a,PASS,empty_before_demo_or_image
+84,section_stages_support_heading,empty,meaningful,seeded,"Поддержка осуществляется на всех этапах:",n/a,PASS,empty_before_demo_or_image
+84,section_stages_support_items,empty,meaningful,seeded,"rows:4",n/a,PASS,empty_before_demo_or_image
+84,section_approach_heading,empty,meaningful,seeded,"Наш подход к лечению зависимостей",n/a,PASS,empty_before_demo_or_image
+84,section_approach_more_label,empty,meaningful,seeded,"подробнее",n/a,PASS,empty_before_demo_or_image
+84,section_approach_more_url,empty,meaningful,seeded,"http://shpigovsky.test/o-centre/programma-lecheniya/",n/a,PASS,empty_before_demo_or_image
+84,section_approach_highlight,empty,meaningful,seeded,"Мы используем мультидисциплинарный подход ",n/a,PASS,empty_before_demo_or_image
+84,section_approach_intro,empty,meaningful,seeded,"Лечение в нашем реабилитационном центре со�",n/a,PASS,empty_before_demo_or_image
+84,section_corridor_image,empty,meaningful,seeded,"1709",n/a,PASS,empty_before_demo_or_image
+84,section_corridor_image_alt,empty,meaningful,seeded,"Интерьер клиники — коридор с картинами",n/a,PASS,empty_before_demo_or_image
+84,section_team_image,empty,meaningful,seeded,"1238",n/a,PASS,empty_before_demo_or_image
+84,section_team_image_alt,empty,meaningful,seeded,"Команда специалистов реабилитационного це�",n/a,PASS,empty_before_demo_or_image
+84,section_approach_cards,empty,meaningful,seeded,"rows:4",n/a,PASS,empty_before_demo_or_image
+84,section_clinic_landscape_image,meaningful,meaningful,preserved,"1239",yes,PASS,
+84,section_faq_heading,empty,meaningful,seeded,"Нас часто спрашивают",n/a,PASS,empty_before_demo_or_image

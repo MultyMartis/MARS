@@ -1,0 +1,16 @@
+file,context,block,hardcoded_text_or_html_preview,should_be_editable,already_moved_to_acf,action,notes
+template-parts/service/inner-hero.php,subdivision hero,hero,default eyebrow «Заболевания…» alcohol H1 fallback,yes,yes,none,Uses ACF hero_* with theme fallbacks; #73 uses ACF lead/media/cta
+template-parts/service/nature.php,subdivision,nature,"Природа зависимости / Lorem fallbacks",yes,yes,none,E46 ACF section_nature_* with fallbacks; #73 seeded
+template-parts/service/team-stats.php,subdivision,approach,Наш подход к лечению зависимостей…,yes,yes,none,E46 ACF section_approach_*
+template-parts/service/program.php,subdivision,program,Наша программа включает 4 направления / подробнее,yes,yes,none,E46 ACF intros; cards from catalog
+template-parts/service/stages.php,subdivision,stages,"Что нужно… + 4 stage title/text defaults",partial,partial,document_FIX02,Chrome in ACF; stage item bodies remain theme defaults if empty — NEEDS_E46_FIX02 for full item modeling
+template-parts/service/children.php,subdivision,dependencies,узнать больше + chrome via ACF,partial,yes,none,Chrome ACF; link label minor theme string OK
+template-parts/service/faq.php,subdivision,faq,Нас часто спрашивают,yes,yes,none,section_faq_heading + faq_items
+template-parts/service/signs.php,leaf service,signs,Признаки зависимости,yes,no,out_of_scope,Услуга leaf — E47 candidate not E46 section
+template-parts/service/alcohol-direct-v9/*.php,alcohol service,various,alcohol special stack copy,yes,no,out_of_scope,service_general / alcohol — not section parity
+template-parts/home/clinic-landscape.php,reused on section,clinic,Home clinic image/content,no,n/a,none,Toggle section_clinic_landscape_visible; source Home/shared
+template-parts/home/specialists.php,reused,specialists,from specialists pages,no,n/a,none,Toggle only
+template-parts/home/founder-quote.php,reused,founder,shared quote copy,no,n/a,none,Toggle only; intentional
+template-parts/home/comfort.php,reused,comfort,options block,no,n/a,none,Toggle only
+template-parts/home/reviews.php,reused,reviews,reviews data,no,n/a,none,Toggle; home toggle scoped to front page (E46)
+template-parts/components/final-form.php,reused,final form,options Final Form,no,n/a,none,Toggle only

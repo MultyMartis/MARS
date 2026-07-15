@@ -1,0 +1,17 @@
+route,http,result,notes
+http://shpigovsky.test/,200,PASS,
+http://shpigovsky.test/uslugi/,200,PASS,
+http://shpigovsky.test/uslugi/zavisimosti/,200,PASS,
+http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/,200,PASS,
+http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/,200,PASS,
+http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/depressiya/,200,PASS,placeholder mode #78
+http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/,200,PASS,#74
+http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/,200,PASS,#314
+http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/,200,PASS,#81
+http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/,200,PASS,#85
+http://shpigovsky.test/uslugi/zavisimosti/profilakticheskiy-analiz/,200,PASS,#75
+http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/ptsr/,200,PASS,#79 slug ptsr
+http://shpigovsky.test/blog/,200,PASS,
+http://shpigovsky.test/specyalisty/,200,PASS,
+http://shpigovsky.test/o-centre/,200,PASS,
+http://shpigovsky.test/kontakty/,200,PASS,

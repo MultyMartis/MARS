@@ -1,0 +1,291 @@
+{
+  "task_id": "V9-06E29B-FIX",
+  "generated_at": "2026-07-10T13:42:56.882121+07:00",
+  "areas": [
+    {
+      "area": "hero",
+      "visible": true,
+      "editable": true,
+      "field_keys": [
+        "hero_eyebrow",
+        "hero_title_override",
+        "hero_lead",
+        "hero_media",
+        "hero_cta_label"
+      ],
+      "missing_visible": [],
+      "seeded": [
+        {
+          "field": "hero_eyebrow",
+          "present": true,
+          "empty": false
+        },
+        {
+          "field": "hero_title_override",
+          "present": true,
+          "empty": false
+        },
+        {
+          "field": "hero_lead",
+          "present": true,
+          "empty": false
+        },
+        {
+          "field": "hero_media",
+          "present": true,
+          "empty": false
+        },
+        {
+          "field": "hero_cta_label",
+          "present": true,
+          "empty": false
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "area": "founder_quote",
+      "visible": true,
+      "editable": true,
+      "field_keys": [
+        "about_founder_quote_paragraphs",
+        "about_founder_name",
+        "about_founder_role",
+        "about_founder_photo",
+        "about_founder_cta_label"
+      ],
+      "missing_visible": [],
+      "seeded": [
+        {
+          "field": "about_founder_quote_paragraphs",
+          "present": true,
+          "empty": false
+        },
+        {
+          "field": "about_founder_name",
+          "present": true,
+          "empty": false
+        },
+        {
+          "field": "about_founder_role",
+          "present": true,
+          "empty": false
+        },
+        {
+          "field": "about_founder_photo",
+          "present": true,
+          "empty": false
+        },
+        {
+          "field": "about_founder_cta_label",
+          "present": true,
+          "empty": false
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "area": "clinic_landscape",
+      "visible": true,
+      "editable": true,
+      "field_keys": [
+        "about_clinic_landscape_image",
+        "about_clinic_landscape_alt"
+      ],
+      "missing_visible": [],
+      "seeded": [
+        {
+          "field": "about_clinic_landscape_image",
+          "present": true,
+          "empty": false
+        },
+        {
+          "field": "about_clinic_landscape_alt",
+          "present": true,
+          "empty": false
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "area": "narrative_about",
+      "visible": true,
+      "editable": true,
+      "field_keys": [
+        "about_narrative_heading",
+        "about_narrative_lead",
+        "about_narrative_paragraphs"
+      ],
+      "missing_visible": [],
+      "seeded": [
+        {
+          "field": "about_narrative_heading",
+          "present": true,
+          "empty": false
+        },
+        {
+          "field": "about_narrative_lead",
+          "present": true,
+          "empty": false
+        },
+        {
+          "field": "about_narrative_paragraphs",
+          "present": true,
+          "empty": false
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "area": "who_we_treat",
+      "visible": true,
+      "editable": true,
+      "field_keys": [
+        "about_who_treat_heading",
+        "about_who_treat_intro",
+        "about_who_treat_lead",
+        "about_who_treat_callout"
+      ],
+      "missing_visible": [],
+      "seeded": [
+        {
+          "field": "about_who_treat_heading",
+          "present": true,
+          "empty": false
+        },
+        {
+          "field": "about_who_treat_intro",
+          "present": true,
+          "empty": false
+        },
+        {
+          "field": "about_who_treat_lead",
+          "present": true,
+          "empty": false
+        },
+        {
+          "field": "about_who_treat_callout",
+          "present": true,
+          "empty": false
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "area": "approach",
+      "visible": true,
+      "editable": true,
+      "field_keys": [
+        "about_approach_heading",
+        "about_approach_highlight",
+        "about_approach_intro"
+      ],
+      "missing_visible": [],
+      "seeded": [
+        {
+          "field": "about_approach_heading",
+          "present": true,
+          "empty": false
+        },
+        {
+          "field": "about_approach_highlight",
+          "present": true,
+          "empty": false
+        },
+        {
+          "field": "about_approach_intro",
+          "present": true,
+          "empty": false
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "area": "program",
+      "visible": true,
+      "editable": true,
+      "field_keys": [
+        "about_program_heading",
+        "about_program_lead",
+        "about_program_intro",
+        "about_program_items"
+      ],
+      "missing_visible": [],
+      "seeded": [
+        {
+          "field": "about_program_heading",
+          "present": true,
+          "empty": false
+        },
+        {
+          "field": "about_program_lead",
+          "present": true,
+          "empty": false
+        },
+        {
+          "field": "about_program_intro",
+          "present": true,
+          "empty": false
+        },
+        {
+          "field": "about_program_items",
+          "present": true,
+          "empty": false
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "area": "infrastructure",
+      "visible": true,
+      "editable": true,
+      "field_keys": [
+        "infrastructure_g0_g5"
+      ],
+      "missing_visible": [],
+      "seeded": [
+        {
+          "field": "infrastructure_g0_g5",
+          "present": true,
+          "empty": false
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "area": "shared_block_guidance",
+      "visible": true,
+      "editable": true,
+      "field_keys": [
+        "about_hub_admin_note_shared_blocks"
+      ],
+      "missing_visible": [],
+      "seeded": [
+        {
+          "field": "about_hub_admin_note_shared_blocks",
+          "present": false,
+          "empty": true
+        }
+      ],
+      "result": "PASS"
+    },
+    {
+      "area": "cta_site_phone_guidance",
+      "visible": true,
+      "editable": true,
+      "field_keys": [
+        "about_hub_admin_note_cta_phone"
+      ],
+      "missing_visible": [],
+      "seeded": [
+        {
+          "field": "about_hub_admin_note_cta_phone",
+          "present": false,
+          "empty": true
+        }
+      ],
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS"
+}

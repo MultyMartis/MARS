@@ -1,0 +1,4 @@
+route,expected,actual,result,notes
+`/uslugi/zavisimosti/`,"200 + section ACF content","HTTP 200 nature=yes approach=yes wrong_dep_copy=no",PASS,
+`/uslugi/psihicheskoe-zdorovie/`,"200 + section ACF content","HTTP 200 nature=yes approach=yes wrong_dep_copy=no",PASS,
+`/uslugi/rasstroystva-pischevogo-povedeniya/`,"200 + section ACF content","HTTP 200 nature=yes approach=yes wrong_dep_copy=no",PASS,

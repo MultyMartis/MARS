@@ -1,0 +1,7 @@
+scenario,expected,actual,result,notes
+long_text_initial,clamp + Читать больше + aria-expanded=false,native tablet: is-clamped maxHeight=120px button=Читать больше aria=false,PASS,alcohol #74 lorem overflows at 768
+first_click,expand + Скрыть + aria-expanded=true + button visible,afterExpand: is-expanded maxHeight=168px buttonText=Скрыть hidden=false aria=true,PASS,long-text sim
+second_click,collapse + Читать больше + aria-expanded=false,afterCollapse: is-clamped maxHeight=120px buttonText=Читать больше aria=false,PASS,
+short_text,button hidden + full text,shortText: buttonHidden=true maxHeight=none clientHeight=24,PASS,in-page sim no DB write
+resize_expanded,safe recalculation keep Скрыть if overflow,afterResizeExpanded@390: is-expanded maxHeight=336px Скрыть,PASS,
+no_js_fatal,yes,consoleErrors=[],PASS,playwright pageerror+console

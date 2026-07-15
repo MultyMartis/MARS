@@ -1,0 +1,37 @@
+field,type,section,default_or_seed,i18n_ready,result,notes
+home_recovery_intro_benefits_enabled,true_false,recovery-intro,1 / seeded 1,yes,PASS,Repeater list toggle
+home_recovery_intro_benefits,repeater,recovery-intro,6 rows seeded,yes,PASS,sub: text + item_enabled
+home_treatment_prevention_heading,text,treatment,seeded frontend text,yes,PASS,
+home_treatment_prevention_lead,textarea,treatment,seeded frontend text,yes,PASS,
+home_gallery_display_mode,select,gallery,random,yes,PASS,choices all/random/selected RU
+home_gallery_random_count,number,gallery,12,yes,PASS,conditional on random
+home_gallery_selected_services,relationship,gallery,empty default,yes,PASS,conditional on selected; service CPT
+home_why_us_heading,text,why-us,seeded,yes,PASS,
+home_why_us_lead,textarea,why-us,seeded,yes,PASS,
+home_why_us_body_enabled,true_false,why-us,1,yes,PASS,
+home_why_us_body,repeater,why-us,2 rows,yes,PASS,
+home_why_us_items_enabled,true_false,why-us,1,yes,PASS,
+home_why_us_items,repeater,why-us,4 rows,yes,PASS,
+home_staff_photo_image,image,staff-photo,attachment 1238,yes,PASS,
+home_clinic_landscape_image,image,clinic-landscape,attachment 1239,yes,PASS,
+home_recovery_life_heading,text,recovery-life,seeded,yes,PASS,
+home_recovery_life_highlight,textarea,recovery-life,seeded,yes,PASS,
+home_recovery_life_intro_enabled,true_false,recovery-life,1,yes,PASS,
+home_recovery_life_intro,repeater,recovery-life,2 rows,yes,PASS,
+home_recovery_life_stages_enabled,true_false,recovery-life,1,yes,PASS,
+home_recovery_life_stages,repeater,recovery-life,3 rows,yes,PASS,
+home_genotyping_heading,text,genotyping,seeded,yes,PASS,
+home_genotyping_link_text,text,genotyping,подробнее,yes,PASS,
+home_genotyping_link_url,url,genotyping,seeded service URL,yes,PASS,
+home_genotyping_lead,textarea,genotyping,seeded,yes,PASS,
+home_genotyping_body_enabled,true_false,genotyping,1,yes,PASS,
+home_genotyping_body,repeater,genotyping,2 rows,yes,PASS,
+home_genotyping_subheading,text,genotyping,seeded,yes,PASS,
+home_genotyping_list_intro,textarea,genotyping,seeded,yes,PASS,
+home_genotyping_items_enabled,true_false,genotyping,1,yes,PASS,
+home_genotyping_items,repeater,genotyping,4 rows,yes,PASS,
+home_genotyping_cta_label,text,genotyping,Записаться на консультацию,yes,PASS,
+home_videos_heading,text,videos,seeded,yes,PASS,
+home_videos_items_enabled,true_false,videos,1,yes,PASS,
+home_videos_items,repeater,videos,2 rows ML files,yes,PASS,sub: title video_file poster item_enabled
+home_gallery_source_notice,message,gallery,updated RU notice,yes,PASS,legacy manual gallery still not restored

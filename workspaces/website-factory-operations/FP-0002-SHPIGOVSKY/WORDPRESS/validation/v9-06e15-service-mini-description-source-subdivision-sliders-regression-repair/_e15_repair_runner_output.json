@@ -1,0 +1,176 @@
+{
+    "generated_at": "2026-07-07T11:54:33+00:00",
+    "seed_repair": [
+        {
+            "id": 73,
+            "title": "Зависимости",
+            "slug": "zavisimosti",
+            "before": "DEMO — направление лечения зависимостей. Карточка раздела для плоского режима отображения /uslugi/.",
+            "after": "DEMO — направление лечения зависимостей. Карточка раздела для плоского режима отображения /uslugi/.",
+            "source": "DEMO",
+            "acf_reference_meta": "field_fp02_service_short_description",
+            "result": "PASS"
+        },
+        {
+            "id": 74,
+            "title": "Лечение алкогольной зависимости",
+            "slug": "lechenie-alkogolnoy-zavisimosti",
+            "before": "E15-ADMIN-MARKER-74",
+            "after": "Алкоголь не становится проблемой в один день — зачастую это постепенный процесс, в котором граница между «нормой» и зависимостью стирается незаметно. В основе — нейробиологические изменения в системе вознаграждения мозга, которые делают отказ физически и психологически тяжёлым без посторонней помощи. Мы работаем с причинами и помогаем выйти из замкнутого круга устойчиво.",
+            "source": "EXACT_V9",
+            "acf_reference_meta": "field_fp02_service_short_description",
+            "result": "PASS"
+        },
+        {
+            "id": 314,
+            "title": "Наркотическая зависимость",
+            "slug": "narkoticheskaya-zavisimost",
+            "before": "Наркотическая зависимость — одно из наиболее сложных состояний: она затрагивает одновременно биохимию мозга, психологию человека и его социальную жизнь. За ней почти всегда стоит что-то, что предшествовало употреблению, — боль, травма, невозможность справиться со стрессом иначе. Наша задача — разобраться и выстроить путь к восстановлению, который будет работать в реальной жизни.",
+            "after": "Наркотическая зависимость — одно из наиболее сложных состояний: она затрагивает одновременно биохимию мозга, психологию человека и его социальную жизнь. За ней почти всегда стоит что-то, что предшествовало употреблению, — боль, травма, невозможность справиться со стрессом иначе. Наша задача — разобраться и выстроить путь к восстановлению, который будет работать в реальной жизни.",
+            "source": "EXACT_V9",
+            "acf_reference_meta": "field_fp02_service_short_description",
+            "result": "PASS"
+        },
+        {
+            "id": 315,
+            "title": "Лекарственная зависимость",
+            "slug": "lekarstvennaya-zavisimost",
+            "before": "Лекарственная зависимость нередко формируется там, где меньше всего ждёшь — на фоне лечения тревоги, боли или бессонницы. Это не безответственность: некоторые препараты меняют работу мозга так, что организм перестаёт справляться без них. Мы работаем с этим состоянием бережно и без осуждения — с вниманием к тому, что изначально привело к приёму препаратов.",
+            "after": "Лекарственная зависимость нередко формируется там, где меньше всего ждёшь — на фоне лечения тревоги, боли или бессонницы. Это не безответственность: некоторые препараты меняют работу мозга так, что организм перестаёт справляться без них. Мы работаем с этим состоянием бережно и без осуждения — с вниманием к тому, что изначально привело к приёму препаратов.",
+            "source": "EXACT_V9",
+            "acf_reference_meta": "field_fp02_service_short_description",
+            "result": "PASS"
+        },
+        {
+            "id": 316,
+            "title": "Поведенческие зависимости",
+            "slug": "povedencheskie-zavisimosti",
+            "before": "Игромания, шопоголизм, интернет-зависимость, сексуальная зависимость — эти состояния часто воспринимаются как «ненастоящие», что делает их ещё тяжелее. Между тем механизм здесь тот же, что и при химических зависимостях: нарушение работы системы вознаграждения мозга, то есть когда мозг ищет во внешних стимулах то, что не может получить естественным путём. Мы относимся к поведенческим зависимостям как к действительным состояниям — и работаем с ними соответственно.",
+            "after": "Игромания, шопоголизм, интернет-зависимость, сексуальная зависимость — эти состояния часто воспринимаются как «ненастоящие», что делает их ещё тяжелее. Между тем механизм здесь тот же, что и при химических зависимостях: нарушение работы системы вознаграждения мозга, то есть когда мозг ищет во внешних стимулах то, что не может получить естественным путём. Мы относимся к поведенческим зависимостям как к действительным состояниям — и работаем с ними соответственно.",
+            "source": "EXACT_V9",
+            "acf_reference_meta": "field_fp02_service_short_description",
+            "result": "PASS"
+        },
+        {
+            "id": 75,
+            "title": "Профилактический анализ",
+            "slug": "profilakticheskiy-analiz",
+            "before": "E15-ADMIN-MARKER-75",
+            "after": "DEMO — краткое описание профилактического анализа для карточки на /uslugi/. Техническое наполнение; финальный текст будет согласован оператором.",
+            "source": "DEMO",
+            "acf_reference_meta": "field_fp02_service_short_description",
+            "result": "PASS"
+        },
+        {
+            "id": 77,
+            "title": "Психическое здоровье",
+            "slug": "psihicheskoe-zdorovie",
+            "before": "DEMO — направление психического здоровья. Карточка раздела для плоского режима отображения /uslugi/.",
+            "after": "DEMO — направление психического здоровья. Карточка раздела для плоского режима отображения /uslugi/.",
+            "source": "DEMO",
+            "acf_reference_meta": "field_fp02_service_short_description",
+            "result": "PASS"
+        },
+        {
+            "id": 78,
+            "title": "Депрессия",
+            "slug": "depressiya",
+            "before": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+            "after": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+            "source": "DEMO",
+            "acf_reference_meta": "field_fp02_service_short_description",
+            "result": "PASS"
+        },
+        {
+            "id": 79,
+            "title": "ПТСР",
+            "slug": "ptrs",
+            "before": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+            "after": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+            "source": "DEMO",
+            "acf_reference_meta": "field_fp02_service_short_description",
+            "result": "PASS"
+        },
+        {
+            "id": 80,
+            "title": "Эмоциональное выгорание",
+            "slug": "emocionalnoe-vygoranie",
+            "before": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+            "after": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+            "source": "DEMO",
+            "acf_reference_meta": "field_fp02_service_short_description",
+            "result": "PASS"
+        },
+        {
+            "id": 81,
+            "title": "Тревожные расстройства",
+            "slug": "trevozhnye-rasstroystva",
+            "before": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+            "after": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+            "source": "DEMO",
+            "acf_reference_meta": "field_fp02_service_short_description",
+            "result": "PASS"
+        },
+        {
+            "id": 82,
+            "title": "Расстройства сна",
+            "slug": "rasstroystva-sna",
+            "before": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+            "after": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+            "source": "DEMO",
+            "acf_reference_meta": "field_fp02_service_short_description",
+            "result": "PASS"
+        },
+        {
+            "id": 83,
+            "title": "Травма",
+            "slug": "travma",
+            "before": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+            "after": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+            "source": "DEMO",
+            "acf_reference_meta": "field_fp02_service_short_description",
+            "result": "PASS"
+        },
+        {
+            "id": 84,
+            "title": "Расстройства пищевого поведения",
+            "slug": "rasstroystva-pischevogo-povedeniya",
+            "before": "DEMO — направление расстройств пищевого поведения. Карточка раздела для плоского режима отображения /uslugi/.",
+            "after": "DEMO — направление расстройств пищевого поведения. Карточка раздела для плоского режима отображения /uslugi/.",
+            "source": "DEMO",
+            "acf_reference_meta": "field_fp02_service_short_description",
+            "result": "PASS"
+        },
+        {
+            "id": 85,
+            "title": "Анорексия",
+            "slug": "anoreksiya",
+            "before": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+            "after": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+            "source": "DEMO",
+            "acf_reference_meta": "field_fp02_service_short_description",
+            "result": "PASS"
+        },
+        {
+            "id": 86,
+            "title": "Нервная булимия",
+            "slug": "nervnaya-bulimiya",
+            "before": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+            "after": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+            "source": "DEMO",
+            "acf_reference_meta": "field_fp02_service_short_description",
+            "result": "PASS"
+        },
+        {
+            "id": 87,
+            "title": "Компульсивное переедание",
+            "slug": "kompulsivnoe-pereedanie",
+            "before": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+            "after": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+            "source": "DEMO",
+            "acf_reference_meta": "field_fp02_service_short_description",
+            "result": "PASS"
+        }
+    ],
+    "db_write_count": 2
+}

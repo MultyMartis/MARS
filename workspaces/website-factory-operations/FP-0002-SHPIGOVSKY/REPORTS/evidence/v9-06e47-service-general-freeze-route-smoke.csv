@@ -1,0 +1,13 @@
+route,url,http,fatal_signal,debug_text,result,notes
+home,http://shpigovsky.test/,200,NO,NO,PASS,
+uslugi,http://shpigovsky.test/uslugi/,200,NO,NO,PASS,
+zavisimosti,http://shpigovsky.test/uslugi/zavisimosti/,200,NO,NO,PASS,#73
+psihicheskoe,http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/,200,NO,NO,PASS,#77
+rpp,http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/,200,NO,NO,PASS,#84
+alcohol,http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/,200,NO,NO,PASS,#74
+p314,http://shpigovsky.test/?p=314,200,NO,NO,PASS,
+p78,http://shpigovsky.test/?p=78,200,NO,NO,PASS,
+blog,http://shpigovsky.test/blog/,200,NO,NO,PASS,
+specyalisty,http://shpigovsky.test/specyalisty/,200,NO,NO,PASS,
+o-centre,http://shpigovsky.test/o-centre/,200,NO,NO,PASS,
+kontakty,http://shpigovsky.test/kontakty/,200,NO,NO,PASS,

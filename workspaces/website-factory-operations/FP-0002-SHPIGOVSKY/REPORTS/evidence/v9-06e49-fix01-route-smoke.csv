@@ -1,0 +1,16 @@
+route,url,http,fatal_markers,result,notes
+/,http://shpigovsky.test/,200,no,PASS,len=185462
+/uslugi/,http://shpigovsky.test/uslugi/,200,no,PASS,len=123600
+/uslugi/zavisimosti/,http://shpigovsky.test/uslugi/zavisimosti/,200,no,PASS,len=128926
+/uslugi/psihicheskoe-zdorovie/,http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/,200,no,PASS,len=130547
+/uslugi/rasstroystva-pischevogo-povedeniya/,http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/,200,no,PASS,len=125557
+#315,http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lekarstva/,200,no,PASS,len=113565
+#78,http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/depressiya/,200,no,PASS,len=112333
+#74,http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/,200,no,PASS,len=132868
+#314,http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/,200,no,PASS,len=116896
+#81,http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/,200,no,PASS,len=112695
+#85,http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/,200,no,PASS,len=112404
+/blog/,http://shpigovsky.test/blog/,200,no,PASS,len=70532
+/specyalisty/,http://shpigovsky.test/specyalisty/,200,no,PASS,len=58074
+/o-centre/,http://shpigovsky.test/o-centre/,200,no,PASS,len=124056
+/kontakty/,http://shpigovsky.test/kontakty/,200,no,PASS,len=67527

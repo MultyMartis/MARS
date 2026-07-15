@@ -1,0 +1,398 @@
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/PROJECT-STATUS.md
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/SOURCE-AUTHORITY.md
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/acf-json/group_fp02_block_specialists.json
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/acf-json/group_fp02_page_home.json
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/acf-json/group_fp02_service_layout_hero.json
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/acf-json/group_fp02_service_structured_sections.json
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/plugins/shpigovsky-core/src/Fields/FieldGroups.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/plugins/shpigovsky-core/src/Fields/RepeaterValidation.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/plugins/shpigovsky-core/src/Permalinks/ServicePermalinks.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/reports/FP-0002-V9-06D9C-HOME-HERO-PARITY-REPAIR-REPORT-v1.md
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/reports/FP-0002-V9-06D9L-ADMIN-EDITOR-ACF-VISIBILITY-REPAIR-REPORT-v1.md
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/reports/FP-0002-V9-06D9P-ADMIN-UX-QA-REPORT-v1.md
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/assets/css/v9-style.css
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/assets/js/v9-shell.js
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/functions.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/inc/admin-editor.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/inc/blog-helpers.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/inc/home-helpers.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/inc/institutional-helpers.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/inc/reusable-blocks-helpers.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/inc/service-helpers.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/inc/services-hub-helpers.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/inc/v9-static-content.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/components/service-card.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/home/articles-teaser.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/home/gallery.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/home/rehabilitation-program.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/home/specialists.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/home/treatment-prevention.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/institutional/about-program.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/institutional/clinic-landscape.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/institutional/founder-quote.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/service/alcohol-direct-v9/specialists.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/service/nature.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/service/program.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/service/subdivision-stack.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/services-hub/rehabilitation-program.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/services-hub/service-group.php
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8a-site-options-seed/apply-site-options-seed-result.json
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8a-site-options-seed/db-availability-gate.json
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8a-site-options-seed/dry-run-site-options-seed.json
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8a-site-options-seed/no-scope-drift-validation.json
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8a-site-options-seed/olga-admin-usability-after-seed.json
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8a-site-options-seed/post-seed-options-verification.json
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8a-site-options-seed/post-seed-route-smoke.json
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8a-site-options-seed/proposed-site-options-seed-payload.json
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8a-site-options-seed/runtime-identity-before.json
+ M workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8a-site-options-seed/site-options-field-allowlist.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/01_DESIGN/26.06.2026/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/01_DESIGN/Spig_v1.2.fig
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/INCOMING/02_CONTENT/video/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E29C-excel-structure-completion-generic-pages-favicon.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E30-services-catalog-child-services-listing-controls.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E31-program-pages-direction-links-validation-relax.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E32-home-services-accordion-gallery-service-placeholder.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E33-FIX01-uslugi-sliders-match-home-gallery.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E33-service-image-admin-binding-placeholder-uslugi-slider.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E34-specialists-child-pages-auto-slider.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/REPORT-FP-0002-V9-06E35-FIX01-alcohol-article-image-restore.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_logo_extract/temp.zip
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/_compare-hero-img.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/_decode-network.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/_deep-walk.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/_export-service-leaf-hero.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/_extract-arrow.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/_extract-blobs.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/_extract-fig-package002.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/_extract-service-leaf-pass-opening.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/_extract-services-block2b.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/_extract-subdivision-pass1.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/_extract-vector-raw.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/_fig-services-extract.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/_hero-asset.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/_hero-asset2.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/_hero-temp/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/_pass1-trees.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/_probe-leaf-hero.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/_recon-registry.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/_service-leaf-fig-extract.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/_walk-subdivision.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/export-o-centre-hero-compare.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/extract-lower-home-corrections-fig.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/extract-lower-home-fig.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/extract-o-centre-images-tabs.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/extract-o-centre-pass.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/extract-o-centre-spig-v1.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/hash-fig-zip-images.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/o-centre-infrastructure-forensics.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/probe-o-centre-hero.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/REPORTS/_fig_parse_temp/resolve-o-centre-tabs.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/architecture/FP-0002-V9-06E29B-FIX-ADMIN-UI-VALIDATION-v1.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/architecture/FP-0002-V9-06E29B-FIX-EXACT-FIX-PLAN-v1.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/architecture/FP-0002-V9-06E29B-FIX-FINAL-CONTRACT-v1.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/architecture/FP-0002-V9-06E29B-FIX-FULL-BACKUP-v1.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/architecture/FP-0002-V9-06E29B-FIX-IMPLEMENTATION-RESULT-v1.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/architecture/FP-0002-V9-06E29B-FIX-PRE-FIX-DIAGNOSIS-v1.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/architecture/FP-0002-V9-06E29B-FIX-ROLLBACK-INSTRUCTIONS-v1.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/reports/FP-0002-V9-06E29B-FIX-OCENTRE-ADMIN-UI-FIELD-VISIBILITY-REPORT-v1.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/assets/favicon/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/assets/images/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/inc/favicon.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/inc/program-direction-helpers.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/inc/services-hub-vendors.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/page-templates/generic.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/theme/shpigovsky/template-parts/generic/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/rewrite-flush-micro-gate/_orch-state.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/rewrite-flush-micro-gate/_post-snapshot.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/rewrite-flush-micro-gate/_runner.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d1-runtime-delivery-rerun/_generate_docs.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d1-runtime-delivery-rerun/_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d1-runtime-delivery-rerun/runner-summary.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d1-runtime-delivery/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d3-content-migration-planning/_generate_planning_docs.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d3-content-migration-planning/_inventory_readonly.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d4-minimal-content-seed-rerun/_probe.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d4-minimal-content-seed-rerun/_probe_perm.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d7a-runtime-delivery/_chrome-profile-tmp/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d7b-runtime-delivery/_chrome-profile-tmp/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d7c-runtime-delivery/_chrome-profile-tmp/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d7d-runtime-delivery/_chrome-profile-tmp/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d7e-runtime-delivery/_chrome-profile-tmp/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d7f-final-route-qa/_chrome-profile-tmp/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d7f-final-route-qa/_generate_docs.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d7f-final-route-qa/_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d7f-final-route-qa/_screenshots.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8-content-seed-planning/_generate_d8_planning.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8a-site-options-seed/_site_options_seed_runner.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8b-home-content-seed/_chrome-profile-tmp/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8b-home-content-seed/_home_content_seed_runner.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8b-home-content-seed/_screenshots.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8c-services-mvp-content-seed/_chrome-profile-tmp/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8c-services-mvp-content-seed/_screenshots.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8c-services-mvp-content-seed/_services_content_seed_runner.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8d-services-hub-content-seed/_chrome-profile-tmp/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8d-services-hub-content-seed/_generate_docs.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8d-services-hub-content-seed/_screenshots.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8d-services-hub-content-seed/_services_hub_content_seed_runner.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8e-contacts-content-seed/_chrome-profile-tmp/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8e-contacts-content-seed/_contacts_content_seed_runner.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8e-contacts-content-seed/_screenshots.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8g-post-seed-qa/_chrome-profile-tmp/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8g-post-seed-qa/_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d8g-post-seed-qa/_screenshots.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9a-visual-parity-audit/_audit_runner.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9a-visual-parity-audit/node_modules/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9a-visual-parity-audit/package.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9c-home-hero-parity-repair/_chrome-profile-tmp/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9c-home-hero-parity-repair/_d9c_runner.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9d-home-main-footer-static-v9-transplant/_d9d_finalize.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9d-home-main-footer-static-v9-transplant/_d9d_transplant_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9d-home-main-footer-static-v9-transplant/_d9d_validate.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9e-home-slider-vendor-pagination-repair/_chrome-profile-tmp/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9e-home-slider-vendor-pagination-repair/_d9e_runner.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9f-home-footer-visual-parity-qa/_chrome-profile-tmp/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9f-home-footer-visual-parity-qa/_d9f_runner.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9g-micro-visual-repair-faq-heading/_chrome-profile-tmp/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9g-micro-visual-repair-faq-heading/_d9g_runner.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9h-acf-admin-editability-wiring/_chrome-profile-tmp/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9h-acf-admin-editability-wiring/_d9h_runner.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9i-controlled-acf-seed/_chrome-profile-tmp/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9i-controlled-acf-seed/_d9i_acf_seed_runner.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9i-controlled-acf-seed/_d9i_runner.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9j-media-selection-upload-plan/_chrome-profile-tmp/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9j-media-selection-upload-plan/_d9j_generate_inventory.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9j-media-selection-upload-plan/_d9j_readonly_inventory.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9j-media-selection-upload-plan/_d9j_runner.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9k-controlled-media-upload-acf-seed/_chrome-profile-tmp/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9k-controlled-media-upload-acf-seed/_d9k_media_upload_seed_runner.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9k-controlled-media-upload-acf-seed/_d9k_runner.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9l-admin-editor-acf-visibility-repair/_checkpoint-meta-snapshot.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9l-admin-editor-acf-visibility-repair/_chrome-profile-tmp/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9l-admin-editor-acf-visibility-repair/_d9l_admin_repair_runner.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9l-admin-editor-acf-visibility-repair/_d9l_runner.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9m-native-page-content-cleanup/_chrome-profile-tmp/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9m-native-page-content-cleanup/_d9m_native_content_cleanup_runner.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9m-native-page-content-cleanup/_d9m_runner.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9n-hide-native-editor-template-pages/_chrome-profile-tmp/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9n-hide-native-editor-template-pages/_d9n_runner.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9n-hide-native-editor-template-pages/_d9n_runner.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9o-acf-reviews-teaser-required-flag-repair/_chrome-profile-tmp/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9o-acf-reviews-teaser-required-flag-repair/_d9o_db_probe.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9o-acf-reviews-teaser-required-flag-repair/_d9o_db_probe2.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9o-acf-reviews-teaser-required-flag-repair/_d9o_db_probe3.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9o-acf-reviews-teaser-required-flag-repair/_d9o_db_probe4.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9o-acf-reviews-teaser-required-flag-repair/_d9o_db_probe5.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9o-acf-reviews-teaser-required-flag-repair/_d9o_runner.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9o-acf-reviews-teaser-required-flag-repair/_d9o_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-admin-ux-qa/_chrome-profile-tmp/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-admin-ux-qa/_d9p_runner.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9p-admin-ux-qa/_d9p_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9r-reviews-shared-include-implementation/_d9r_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9s-controlled-reviews-options-seed/_acf_fields_probe.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9s-controlled-reviews-options-seed/_acf_probe.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9s-controlled-reviews-options-seed/_acf_probe.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9s-controlled-reviews-options-seed/_d9s_acf_reset_import.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9s-controlled-reviews-options-seed/_d9s_acf_sync.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9s-controlled-reviews-options-seed/_d9s_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9s-controlled-reviews-options-seed/_d9s_seed_apply.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9s-controlled-reviews-options-seed/_options_probe.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9s-controlled-reviews-options-seed/_options_probe.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9s-controlled-reviews-options-seed/_php_source_probe.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9s-controlled-reviews-options-seed/_probe.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9s-controlled-reviews-options-seed/_probe.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9s-controlled-reviews-options-seed/_seed_payload.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9t-reviews-options-key-fix-helper-normalization/_chrome-profile-tmp/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9t-reviews-options-key-fix-helper-normalization/_d9t_acf_sync.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9t-reviews-options-key-fix-helper-normalization/_d9t_baseline_probe.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9t-reviews-options-key-fix-helper-normalization/_d9t_options_meta_migration.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9t-reviews-options-key-fix-helper-normalization/_d9t_php_source_probe.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9t-reviews-options-key-fix-helper-normalization/_d9t_post_repair_db_admin.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9t-reviews-options-key-fix-helper-normalization/_d9t_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9t-reviews-options-key-fix-helper-normalization/_d9t_screenshots.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9t-reviews-options-key-fix-helper-normalization/baseline-collision-data-audit-probe.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9t-reviews-options-key-fix-helper-normalization/preflight.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9u-reviews-admin-ux-repair/__pycache__/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9u-reviews-admin-ux-repair/_d9u_acf_location_fix.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9u-reviews-admin-ux-repair/_d9u_acf_sync.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9u-reviews-admin-ux-repair/_d9u_baseline_probe.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9u-reviews-admin-ux-repair/_d9u_canonical_meta_migration.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9u-reviews-admin-ux-repair/_d9u_direct_meta_migration.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9u-reviews-admin-ux-repair/_d9u_frontend_probe.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9u-reviews-admin-ux-repair/_d9u_group_id_probe.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9u-reviews-admin-ux-repair/_d9u_groups_probe.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9u-reviews-admin-ux-repair/_d9u_location_probe.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9u-reviews-admin-ux-repair/_d9u_options_meta_probe.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9u-reviews-admin-ux-repair/_d9u_post_repair_admin.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9u-reviews-admin-ux-repair/_d9u_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9w-reviews-admin-and-layout-repair/_d9w_acf_sync.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9w-reviews-admin-and-layout-repair/_d9w_baseline_probe.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9w-reviews-admin-and-layout-repair/_d9w_duplicate_cleanup.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9w-reviews-admin-and-layout-repair/_d9w_post_repair_probe.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9w-reviews-admin-and-layout-repair/_d9w_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9w-reviews-admin-and-layout-repair/_d9w_storage_context_repair.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9x-reviews-admin-to-frontend-binding-repair/_d9x_baseline_probe.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9x-reviews-admin-to-frontend-binding-repair/_d9x_direct_meta_migration.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9x-reviews-admin-to-frontend-binding-repair/_d9x_options_context_migration.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9y-reviews-admin-visual-qa-closure/_chrome-profile-tmp-d9y/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9z-wordpress-readiness-audit/_chrome-profile-tmp-d9z/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06d9z-wordpress-readiness-audit/_d9z_screenshots.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e0-legal-native-content-review/_chrome-profile-tmp-e0/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e0-legal-native-content-review/_e0_db_probe_raw.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e0-legal-native-content-review/_e0_readonly_probe.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e0-legal-native-content-review/_e0_screenshots.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e0-legal-native-content-review/_e0_screenshots_out.txt
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e1-legal-static-copy-seed/_chrome-profile-tmp-e1/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e1-legal-static-copy-seed/_e1_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e1-legal-static-copy-seed/_e1_screenshots.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e10-full-backup-wp-port-root-cause-audit/_chrome-profile-tmp-e10/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e10-full-backup-wp-port-root-cause-audit/_e10_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e11-static-to-wp-page-contract-inventory/_chrome-profile-tmp-e11/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e11-static-to-wp-page-contract-inventory/_e11_gen_docs.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e11-static-to-wp-page-contract-inventory/_e11_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e12-direct-static-v9-port-repair-alcohol-leaf/_chrome-profile-tmp-e12/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e12-direct-static-v9-port-repair-alcohol-leaf/_e12_probe.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e12-direct-static-v9-port-repair-alcohol-leaf/_e12_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e13-alcohol-leaf-specialists-block-v9-parity-repair/_chrome-profile-tmp-e13/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e13-alcohol-leaf-specialists-block-v9-parity-repair/_e13_gen_docs.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e13-alcohol-leaf-specialists-block-v9-parity-repair/_e13_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e14-service-admin-fields-service-tree-demo-content-repair/_chrome-profile-tmp-e14/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e14-service-admin-fields-service-tree-demo-content-repair/_e14_probe.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e14-service-admin-fields-service-tree-demo-content-repair/_e14_repair.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e14-service-admin-fields-service-tree-demo-content-repair/_e14_repair_runner_output.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e14-service-admin-fields-service-tree-demo-content-repair/_e14_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e14-service-admin-fields-service-tree-demo-content-repair/_probe_out.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e15-service-mini-description-source-subdivision-sliders-regression-repair/__pycache__/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e15-service-mini-description-source-subdivision-sliders-regression-repair/_chrome-profile-tmp-e15/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e15-service-mini-description-source-subdivision-sliders-regression-repair/_e15_admin_change_test.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e15-service-mini-description-source-subdivision-sliders-regression-repair/_e15_baseline_probe.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e15-service-mini-description-source-subdivision-sliders-regression-repair/_e15_detail_probe.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e15-service-mini-description-source-subdivision-sliders-regression-repair/_e15_probe.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e15-service-mini-description-source-subdivision-sliders-regression-repair/_e15_repair.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e15-service-mini-description-source-subdivision-sliders-regression-repair/_e15_repair_runner_output.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e15-service-mini-description-source-subdivision-sliders-regression-repair/_e15_revalidate.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e15-service-mini-description-source-subdivision-sliders-regression-repair/_e15_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e15-service-mini-description-source-subdivision-sliders-regression-repair/_probe_out.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e18-reusable-blocks-batch-1-fields/_e18_runner.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e18-reusable-blocks-batch-1-fields/_e18_screenshots.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e18-reusable-blocks-batch-1-fields/_e18_seed.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e18-reusable-blocks-batch-1-fields/_e18_validate.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e19-reusable-blocks-admin-visibility-repair/_e19_admin_probe.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e19-reusable-blocks-admin-visibility-repair/_e19_runner.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e2-legal-layout-menu-alignment-repair/_chrome-profile-tmp-e2/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e2-legal-layout-menu-alignment-repair/_e2_db_probe.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e2-legal-layout-menu-alignment-repair/_e2_frontend_probe.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e2-legal-layout-menu-alignment-repair/_e2_probe2.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e2-legal-layout-menu-alignment-repair/_e2_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e2-legal-layout-menu-alignment-repair/_e2_screenshots.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e2-legal-layout-menu-alignment-repair/preflight.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e20-remove-reviews-alias-from-site-settings/_e20_acf_location_repair.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e20-remove-reviews-alias-from-site-settings/_e20_acf_sync.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e20-remove-reviews-alias-from-site-settings/_e20_admin_probe.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e20-remove-reviews-alias-from-site-settings/_e20_options_pages_dump.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e20-remove-reviews-alias-from-site-settings/_e20_refresh_validation.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e20-remove-reviews-alias-from-site-settings/_e20_runner.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e21-reusable-blocks-batch-2-fields/_e21_copy_load_test.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e21-reusable-blocks-batch-2-fields/_e21_export_all.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e21-reusable-blocks-batch-2-fields/_e21_export_test.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e21-reusable-blocks-batch-2-fields/_e21_probe.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e21-reusable-blocks-batch-2-fields/_e21_runner.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e21-reusable-blocks-batch-2-fields/_e21_screenshots.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e21-reusable-blocks-batch-2-fields/_e21_seed.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e21-reusable-blocks-batch-2-fields/_e21_seed_test.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e21-reusable-blocks-batch-2-fields/_e21_validate.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e22-remove-global-heroes-settings/_e22_runner.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e22-remove-global-heroes-settings/_e22_validate.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e24-hero-cta-button-text-per-entity/_e24_acf_resync.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e24-hero-cta-button-text-per-entity/_e24_import_from_php.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e24-hero-cta-button-text-per-entity/_e24_runner.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e24-hero-cta-button-text-per-entity/_e24_seed_services.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e24-hero-cta-button-text-per-entity/_probe_fields.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e24-hero-cta-button-text-per-entity/_probe_services.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e24a-service-structured-sections-required-field-polish/_chrome-profile-tmp-e24a/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e24a-service-structured-sections-required-field-polish/_e24a_probe.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e24a-service-structured-sections-required-field-polish/_e24a_resync.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e24a-service-structured-sections-required-field-polish/_e24a_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e25-service-duplicate-feature/_chrome-profile-tmp-e25/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e25-service-duplicate-feature/_e25_db_audit.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e25-service-duplicate-feature/_e25_db_audit_out.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e25-service-duplicate-feature/_e25_duplicate_test.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e25-service-duplicate-feature/_e25_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e25-service-duplicate-feature/runtime-alcohol-service-regression-e25.png
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e25-service-duplicate-feature/runtime-services-hub-regression-e25.png
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e25-service-duplicate-feature/runtime-zavisimosti-regression-e25.png
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e25a-service-duplicate-action-visibility-repair/_chrome-profile-tmp-e25a/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e25a-service-duplicate-action-visibility-repair/_e25a_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e26a-about-page-wordpress-acf-port/_e26a_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e26a-polish-infrastructure-g5-decor-logo/_runtime-o-centre-after.html
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e26a-polish-infrastructure-g5-decor-logo/_runtime-o-centre-before.html
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e26b-blog-archive-wordpress-acf-port/__pycache__/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e26b-blog-archive-wordpress-acf-port/_e26b_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e26c-blog-single-template-wordpress-acf-port/_e26c_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e26d-demo-blog-content-and-visual-qa/_chrome-profile-tmp-e26d/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e26d-demo-blog-content-and-visual-qa/_e26d_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e26d-demo-blog-content-and-visual-qa/_e26d_screenshots.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e26d-demo-blog-content-and-visual-qa/_e26d_seed.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e26d-demo-blog-content-and-visual-qa/fixture-data.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e26d-polish-encoding-mojibake-audit-and-fix/_e26d_polish_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e27a-obsolete-pages-cleanup-read-only-audit/_e27a_generate_artifacts.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e27a-obsolete-pages-cleanup-read-only-audit/_e27a_readonly_probe.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e27a-obsolete-pages-cleanup-read-only-audit/_probe_raw.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e27b-low-risk-obsolete-cleanup/_e27b_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e27b-low-risk-obsolete-cleanup/_e27b_trash.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e27c-page-service-ownership-decision/_e27c_generate_artifacts.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e27c-page-service-ownership-decision/_e27c_probe_out.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e27c-page-service-ownership-decision/_e27c_readonly_probe.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e27d-page-service-ownership-implementation/_e27d_generate_docs.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e27d-page-service-ownership-implementation/_e27d_menu_retarget.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e27d-page-service-ownership-implementation/_e27d_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e27d-page-service-ownership-implementation/_e27d_trash.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e27d-page-service-ownership-implementation/_runner_summary.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e28-final-wordpress-readiness-qa/_chrome-profile-tmp-e28/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e28-final-wordpress-readiness-qa/_e28_generate_docs.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e28-final-wordpress-readiness-qa/_e28_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e28-final-wordpress-readiness-qa/_e28_screenshots.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e28-final-wordpress-readiness-qa/_runner_summary.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e29a-placeholder-pages-and-ocentre-admin-parity-decision-audit/_e29a_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e29a-placeholder-pages-and-ocentre-admin-parity-decision-audit/_runner_summary.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e29b-fix-ocentre-admin-ui-field-visibility/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e29b-ocentre-admin-parity-implementation/_e29b_gen_docs.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e29b-ocentre-admin-parity-implementation/_e29b_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e29b-ocentre-admin-parity-implementation/_e29b_seed_runner.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e29b-ocentre-admin-parity-implementation/_export_acf_json.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e29b-ocentre-admin-parity-implementation/_seed-runner-output.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e29c-excel-structure-completion/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e3-wordpress-stable-checkpoint/_chrome-profile-tmp-e3/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e3-wordpress-stable-checkpoint/_e3_probe_out.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e3-wordpress-stable-checkpoint/_e3_readonly_probe.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e3-wordpress-stable-checkpoint/_e3_screenshots.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e30-services-catalog-child-services-listing-controls/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e31-program-pages-direction-links-validation-relax/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e32-home-services-accordion-gallery-placeholder/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e34-specialists-child-pages-auto-slider/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e4-services-layout-shared-bg-visual-reconciliation-audit/_chrome-profile-tmp-e4/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e4-services-layout-shared-bg-visual-reconciliation-audit/_e4_probe_out.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e4-services-layout-shared-bg-visual-reconciliation-audit/_e4_readonly_probe.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e4-services-layout-shared-bg-visual-reconciliation-audit/_e4_screenshots.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e5-services-layout-shared-bg-repair/_chrome-profile-tmp-e5/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e5-services-layout-shared-bg-repair/_e5_probe.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e5-services-layout-shared-bg-repair/_e5_screenshots.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e6-service-subdivision-main-layout-repair/_chrome-profile-tmp-e6/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e6-service-subdivision-main-layout-repair/_e6_detail_probe.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e6-service-subdivision-main-layout-repair/_e6_probe.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e6-service-subdivision-main-layout-repair/_e6_probe_out.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e6-service-subdivision-main-layout-repair/_e6_screenshots.mjs
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e6-service-subdivision-main-layout-repair/post-repair-probe.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e7-hero-media-system-seed/_hero_media_seed_runner.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e7-hero-media-system-seed/hero-media-seed-result.json
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e7b-hero-system-finalization-scope-reconciliation/_e7b_fix_alcohol_id.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e7b-hero-system-finalization-scope-reconciliation/_e7b_probe_ids.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e7b-hero-system-finalization-scope-reconciliation/_e7b_revalidate.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e7b-hero-system-finalization-scope-reconciliation/_e7b_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e7b-hero-system-finalization-scope-reconciliation/_fix_alcohol_seed.php
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e8-static-v9-content-main-layout-authority-repair/_e8_generate_docs.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e8-static-v9-content-main-layout-authority-repair/_e8_probe.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e9-service-leaf-static-v9-layout-parity-repair/_chrome-profile-tmp-e9/
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/validation/v9-06e9-service-leaf-static-v9-layout-parity-repair/_e9_runner.py
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/phase-07b-staged-diff-review.md
+?? workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/tools/__pycache__/

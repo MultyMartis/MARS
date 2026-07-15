@@ -1,0 +1,251 @@
+{
+    "wave": "V9-06E40",
+    "home_id": 4,
+    "php_fields": 55,
+    "db_fields": 20,
+    "media": {
+        "staff_id": 1238,
+        "land_id": 1239,
+        "v1_id": 1240,
+        "vp1_id": 1241,
+        "v2_id": 1242,
+        "vp2_id": 1243
+    },
+    "seeds": [
+        {
+            "field": "home_recovery_intro_benefits_enabled",
+            "update": true,
+            "read": "1"
+        },
+        {
+            "field": "home_recovery_intro_benefits",
+            "update": true,
+            "read": "array:6"
+        },
+        {
+            "field": "home_treatment_prevention_heading",
+            "update": true,
+            "read": "Лечение и&nbsp;профилактика"
+        },
+        {
+            "field": "home_treatment_prevention_lead",
+            "update": true,
+            "read": "Мы работаем с&nbsp;зависимостью не&nbsp;как с&nbsp;проступком, а&nbsp;как с&nbsp"
+        },
+        {
+            "field": "home_gallery_display_mode",
+            "update": true,
+            "read": "random"
+        },
+        {
+            "field": "home_gallery_random_count",
+            "update": true,
+            "read": "12"
+        },
+        {
+            "field": "home_why_us_heading",
+            "update": true,
+            "read": "Нас выбирают за&nbsp;мультидисциплинарный подход к&nbsp;лечению"
+        },
+        {
+            "field": "home_why_us_lead",
+            "update": true,
+            "read": "У&nbsp;нас команда, а&nbsp;не&nbsp;конвейер. Каждый клиент получает полное внима"
+        },
+        {
+            "field": "home_why_us_body_enabled",
+            "update": true,
+            "read": "1"
+        },
+        {
+            "field": "home_why_us_body",
+            "update": true,
+            "read": "array:2"
+        },
+        {
+            "field": "home_why_us_items_enabled",
+            "update": true,
+            "read": "1"
+        },
+        {
+            "field": "home_why_us_items",
+            "update": true,
+            "read": "array:4"
+        },
+        {
+            "field": "home_staff_photo_image",
+            "update": true,
+            "read": "array:24"
+        },
+        {
+            "field": "home_clinic_landscape_image",
+            "update": true,
+            "read": "array:24"
+        },
+        {
+            "field": "home_recovery_life_heading",
+            "update": true,
+            "read": "Как меняется жизнь человека в&nbsp;процессе восстановления"
+        },
+        {
+            "field": "home_recovery_life_highlight",
+            "update": true,
+            "read": "У&nbsp;нас команда, а&nbsp;не&nbsp;конвейер. Каждый клиент получает полное внима"
+        },
+        {
+            "field": "home_recovery_life_intro_enabled",
+            "update": true,
+            "read": "1"
+        },
+        {
+            "field": "home_recovery_life_intro",
+            "update": true,
+            "read": "array:2"
+        },
+        {
+            "field": "home_recovery_life_stages_enabled",
+            "update": true,
+            "read": "1"
+        },
+        {
+            "field": "home_recovery_life_stages",
+            "update": true,
+            "read": "array:3"
+        },
+        {
+            "field": "home_genotyping_heading",
+            "update": true,
+            "read": "Генотипирование&nbsp;— инструмент диагностики"
+        },
+        {
+            "field": "home_genotyping_link_text",
+            "update": true,
+            "read": "подробнее"
+        },
+        {
+            "field": "home_genotyping_link_url",
+            "update": true,
+            "read": "http://shpigovsky.test/uslugi/zavisimosti/profilakticheskiy-analiz/"
+        },
+        {
+            "field": "home_genotyping_lead",
+            "update": true,
+            "read": "анализ, который позволяет увидеть индивидуальные генетические особенности систем"
+        },
+        {
+            "field": "home_genotyping_body_enabled",
+            "update": true,
+            "read": "1"
+        },
+        {
+            "field": "home_genotyping_body",
+            "update": true,
+            "read": "array:2"
+        },
+        {
+            "field": "home_genotyping_subheading",
+            "update": true,
+            "read": "Кому полезно генетическоее исследование особенностей зависимости"
+        },
+        {
+            "field": "home_genotyping_list_intro",
+            "update": true,
+            "read": "В&nbsp;нашей лаборатории мы исследуем полиморфизмы генов, участвующих в&nbsp;инд"
+        },
+        {
+            "field": "home_genotyping_items_enabled",
+            "update": true,
+            "read": "1"
+        },
+        {
+            "field": "home_genotyping_items",
+            "update": true,
+            "read": "array:4"
+        },
+        {
+            "field": "home_genotyping_cta_label",
+            "update": true,
+            "read": "Записаться на консультацию"
+        },
+        {
+            "field": "home_videos_heading",
+            "update": true,
+            "read": "Видео о&nbsp;нашем центре"
+        },
+        {
+            "field": "home_videos_items_enabled",
+            "update": true,
+            "read": "1"
+        },
+        {
+            "field": "home_videos_items",
+            "update": true,
+            "read": "array:2"
+        }
+    ],
+    "checks": {
+        "home_http": 200,
+        "benefits_in_html": true,
+        "treatment_heading": true,
+        "why_us": true,
+        "staff": true,
+        "landscape": true,
+        "recovery_life": true,
+        "genotyping": true,
+        "videos": true,
+        "gallery_slider": true,
+        "admin_field_count": 20,
+        "eligible_count": 18,
+        "random_count": 12,
+        "all_count": 18,
+        "selected_count": 3,
+        "selected_ids": [
+            74,
+            314,
+            316
+        ],
+        "videos_count": 2,
+        "has_new_fields": {
+            "home_recovery_intro_benefits": false,
+            "home_gallery_display_mode": false,
+            "home_why_us_heading": false,
+            "home_staff_photo_image": false,
+            "home_videos_items": false,
+            "home_genotyping_heading": false
+        }
+    },
+    "admin_names": [
+        "hero_media",
+        "hero_cta_label",
+        "home_hero_slides",
+        "home_recovery_intro_heading",
+        "home_recovery_intro_lead_1",
+        "home_recovery_intro_lead_2",
+        "home_intro_bands",
+        "",
+        "",
+        "",
+        "home_advantages",
+        "",
+        "",
+        "",
+        "home_articles_heading",
+        "",
+        "home_faq_heading",
+        "home_faq_items",
+        "home_cta_title",
+        "home_cta_text"
+    ],
+    "video_urls": [
+        {
+            "title": "Интервью с&nbsp;Сергеем Шпиговским",
+            "url": "http://shpigovsky.test/wp-content/uploads/2026/07/sergey-shpigovsky-interview.mp4",
+            "poster": "http://shpigovsky.test/wp-content/uploads/2026/07/sergey-shpigovsky-interview-poster.webp"
+        },
+        {
+            "title": "Центр профилактики зависимостей Сергея Шпиговского",
+            "url": "http://shpigovsky.test/wp-content/uploads/2026/07/shpigovsky-center.mp4",
+            "poster": "http://shpigovsky.test/wp-content/uploads/2026/07/shpigovsky-center-poster.webp"
+        }
+    ]
+}

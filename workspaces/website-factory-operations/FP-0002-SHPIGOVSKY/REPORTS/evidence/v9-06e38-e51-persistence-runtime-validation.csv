@@ -1,0 +1,20 @@
+route/check,expected,actual,result,notes
+/,200,200,PASS,
+/uslugi/,200,200,PASS,
+/uslugi/zavisimosti/,200,200,PASS,
+/uslugi/psihicheskoe-zdorovie/,200,200,PASS,
+/uslugi/rasstroystva-pischevogo-povedeniya/,200,200,PASS,
+/blog/,200,200,PASS,
+/specyalisty/,200,200,PASS,
+/o-centre/,200,200,PASS,
+/kontakty/,200,200,PASS,
+#74,200,200,PASS,http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/
+#314,200,200,PASS,http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/
+#315,200,200,PASS,http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lekarstva/
+#78,200,200,PASS,http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/depressiya/
+#81,200,200,PASS,http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/
+#85,200,200,PASS,http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/
+#315 layout,service_general,service_general,PASS,post_meta
+#78 layout,service_general,service_general,PASS,post_meta
+#74 layout,service_general,service_general,PASS,post_meta
+unintended placeholders,0,0,PASS,inventory

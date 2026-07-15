@@ -1,0 +1,216 @@
+{
+  "suite": "runtime-baseline",
+  "timestamp": "2026-07-04T02:17:54.1401224+07:00",
+  "runtime": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky",
+  "real_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky",
+  "expected_runtime": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky",
+  "exact_runtime_root": true,
+  "target_manifests": {
+    "theme": {
+      "root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky",
+      "exists": true,
+      "files": 12,
+      "dirs": 5,
+      "aggregate_hash": "a5239c0abb0e5981a7957c857b9308239aa4ad82cc5b7d37b173cd5148c916db",
+      "reparse_escapes": 0,
+      "reparse_paths": [],
+      "file_list": [
+        {
+          "relative_path": "footer.php",
+          "size": 873,
+          "sha256": "9f2c0b763e13fd84d9d9b934cfa8cfed7a6d9004e2f60f1a91cd75169a96a723"
+        },
+        {
+          "relative_path": "front-page.php",
+          "size": 500,
+          "sha256": "f2cdd62dbd670d53570223ca02e114e0a2426768a2948581859ef1a0f3bb4f6b"
+        },
+        {
+          "relative_path": "functions.php",
+          "size": 432,
+          "sha256": "1160f8bf94e4255810ecdb91d3dd23885474389510a8d6f53cac910baf824a04"
+        },
+        {
+          "relative_path": "header.php",
+          "size": 841,
+          "sha256": "7e5e48a76b22100e8110b21e2210d90046618728c0ac5107938a82312f62f199"
+        },
+        {
+          "relative_path": "index.php",
+          "size": 786,
+          "sha256": "ee720dd789ae080163756e5fd5ce57e826702396ce7ee71f0937c89679b73935"
+        },
+        {
+          "relative_path": "README.md",
+          "size": 672,
+          "sha256": "9bff5312c820e807c4cfecec641dc4cfcab2bed04169aede64091c0e9ac2d63a"
+        },
+        {
+          "relative_path": "style.css",
+          "size": 432,
+          "sha256": "96c43e383f6514b16d7a16fb48e9e2c45be6d8661ee4e596d9e5825f40b1a417"
+        },
+        {
+          "relative_path": "assets/css/foundation.css",
+          "size": 755,
+          "sha256": "5b28778b853b1880bd2f901bc844164c8c3e6b9ba481ce65bf5229a7d9e4df5b"
+        },
+        {
+          "relative_path": "inc/assets.php",
+          "size": 477,
+          "sha256": "e4b1ebd239dfb5eabf400bdbfedc267a080529da7e815a1565ffcc3b76cd677c"
+        },
+        {
+          "relative_path": "inc/setup.php",
+          "size": 829,
+          "sha256": "fbfaf7d931a5af6563f56309ebc2fc88c76d2bcb579e242d46444072cfa166ba"
+        },
+        {
+          "relative_path": "languages/.gitkeep",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "relative_path": "template-parts/.gitkeep",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    "project_plugin": {
+      "root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\shpigovsky-core",
+      "exists": true,
+      "files": 4,
+      "dirs": 1,
+      "aggregate_hash": "0f209ba91e4c219f77b21a60c56a5f8a0c838cdce8a217dd15d77076da23e294",
+      "reparse_escapes": 0,
+      "reparse_paths": [],
+      "file_list": [
+        {
+          "relative_path": "index.php",
+          "size": 30,
+          "sha256": "8bc1530674ae3f74c2c450b8ef2d4c9c1081e718ab7f804096b4c1917e59d7b9"
+        },
+        {
+          "relative_path": "README.md",
+          "size": 191,
+          "sha256": "3e998eb056722ee6d4c29c35c99089a6921d5cbff60fc80a720844e9810c51b4"
+        },
+        {
+          "relative_path": "shpigovsky-core.php",
+          "size": 1608,
+          "sha256": "4dfe6377eaa7555b32589326ebfc281378c149fb2582d0e568865102c39e0e87"
+        },
+        {
+          "relative_path": "includes/class-bootstrap.php",
+          "size": 792,
+          "sha256": "1b1912e30990049e3fb19643f548b0811c3df95d012c1e0e36b874c8185749e6"
+        }
+      ]
+    },
+    "acf_json": {
+      "root": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\acf-json",
+      "exists": true,
+      "files": 0,
+      "dirs": 0,
+      "aggregate_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reparse_escapes": 0,
+      "reparse_paths": [],
+      "file_list": []
+    }
+  },
+  "http": {
+    "frontend_status": 200,
+    "wp_admin_status": 302
+  },
+  "wordpress_state": {
+    "site_url": "http://shpigovsky.test",
+    "home_url": "http://shpigovsky.test",
+    "db_name": "mars_wp_fp0002",
+    "table_prefix": "fp02_",
+    "active_theme": "shpigovsky",
+    "active_plugins": [
+      "acf-extended-pro/acf-extended.php",
+      "advanced-custom-fields-pro/acf.php",
+      "metacode-wpilot/metacode-wpilot.php",
+      "shpigovsky-core/shpigovsky-core.php"
+    ],
+    "plugins": {
+      "shpigovsky-core": true,
+      "acf-pro": true,
+      "acf-extended-pro": true,
+      "acf-free": false,
+      "wpilot": true
+    },
+    "acf": {
+      "function_exists": true,
+      "acf_pro_defined": true,
+      "acfe_defined": true,
+      "acfe_class": true
+    },
+    "wpilot": {
+      "options": {
+        "bridge_enabled": true,
+        "write_enabled": false,
+        "emergency_disabled": false,
+        "token_created_at": "2026-07-02 15:54:57",
+        "dev_confirmed": true,
+        "plugin_version": "0.3.0",
+        "schema_version": "0.2.0",
+        "token_revoked_at": "",
+        "last_token_used_at": "2026-07-02 17:18:36",
+        "last_connection_status": "success",
+        "last_connection_success_at": "2026-07-02 17:18:36",
+        "last_authorized_connection_at": "2026-07-02 17:18:36",
+        "last_authorized_endpoint": "indexing-state",
+        "last_connection_failure_at": "",
+        "last_connection_failure_reason": "",
+        "last_safety_error": "",
+        "allowed_post_types": [
+          "page"
+        ],
+        "retention_days": 30,
+        "backup_retention_max": 10
+      },
+      "write_enabled": false
+    },
+    "counts": {
+      "pages": {
+        "exists": true,
+        "publish": 22,
+        "all": 23
+      },
+      "posts": {
+        "exists": true,
+        "publish": 0,
+        "all": 1
+      },
+      "services": {
+        "exists": false,
+        "publish": 0,
+        "all": 0
+      },
+      "users": {
+        "total_users": 2,
+        "avail_roles": {
+          "administrator": 2,
+          "none": 0
+        }
+      }
+    },
+    "menus_count": 3,
+    "options_snapshot": {
+      "show_on_front": "page",
+      "page_on_front": "4",
+      "page_for_posts": "19",
+      "permalink_structure": "/%postname%/"
+    },
+    "service_post_type": {
+      "registered": false
+    },
+    "taxonomies_for_service": [],
+    "acf_option_like_keys_count": 1
+  },
+  "php_probe_exit_code": 0,
+  "result": "PASS"
+}

@@ -1,0 +1,13 @@
+check,expected,actual,result,notes
+/uslugi/zavisimosti/ HTTP,200,200,PASS,
+Stages leak $stages_heading,absent,absent,PASS,before index=51565
+Stages headings visible,Связаться с нами + support,present,PASS,
+Нейробиология/Генотипирование,present,present,PASS,repeater render
+Program intros,present,present,PASS,
+No debug/test text,yes,no FIX02/DEBUG strings,PASS,
+/uslugi/psihicheskoe-zdorovie/,200,200,PASS,no leak
+/uslugi/rasstroystva-pischevogo-povedeniya/,200,200,PASS,no leak
+Home /,unchanged visual,templates hash match backup; HTML gallery link dynamic variance,PASS_templates,"HTML hash differs: gallery link order (zavisimosti vs stress) — not theme change"
+/uslugi/,unchanged,HTML hash equal to before snapshot,PASS,
+Regression blog/spec/o-centre/kontakty + #74/#314/depressiya,200,all 200 no leak,PASS,
+Operator CSS v9-style,unchanged,SHA256 C858903F… match before,PASS,

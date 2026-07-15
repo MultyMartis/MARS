@@ -3,6 +3,8 @@
  * Template part: services-hub/rehabilitation-program.php
  *
  * V9 services hub variant — services-program-v2 with static V9 copy authority.
+ * V9-06E31: direction title/image link to program pages.
+ * V9-06E43: ACF editable copy + visibility toggle; cards remain program pages.
  *
  * @package Shpigovsky
  */
@@ -11,47 +13,47 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+if ( ! shpigovsky_services_hub_list_enabled( 'services_hub_program_visible' ) ) {
+	return;
+}
+
 $program_url = home_url( '/o-centre/programma-lecheniya/' );
 $v9_program  = shpigovsky_get_v9_services_hub_program_copy();
 $cta_phone   = shpigovsky_get_site_option( 'phone_primary' );
 $cta_phone   = '' !== $cta_phone ? $cta_phone : '8 (925) 183-64-64';
+$items       = shpigovsky_get_program_direction_items( 'service' );
 
-$items = array(
-	array(
-		'title' => '01 — Генотипирование',
-		'image' => shpigovsky_asset_uri( 'img/content/rehabilitation-program/program-genotyping.webp' ),
-		'width' => 1216,
-		'height' => 1632,
-		'alt'   => 'Генотипирование',
-	),
-	array(
-		'title' => '02 — Нейропсихологическая коррекция',
-		'image' => shpigovsky_asset_uri( 'img/content/rehabilitation-program/program-neuropsychology.webp' ),
-		'width' => 1632,
-		'height' => 1216,
-		'alt'   => 'Нейропсихологическая коррекция',
-	),
-	array(
-		'title' => '03 — Психокоррекция',
-		'image' => shpigovsky_asset_uri( 'img/content/rehabilitation-program/program-psychocorrection.webp' ),
-		'width' => 880,
-		'height' => 1184,
-		'alt'   => 'Психокоррекция',
-	),
-	array(
-		'title' => '04 — Кинезиотерапия',
-		'image' => shpigovsky_asset_uri( 'img/content/rehabilitation-program/program-kinesiotherapy.webp' ),
-		'width' => 880,
-		'height' => 1184,
-		'alt'   => 'Кинезиотерапия',
-	),
-);
+$heading = shpigovsky_get_services_hub_field( 'services_hub_program_heading' );
+$lead    = shpigovsky_get_services_hub_field( 'services_hub_program_lead' );
+$intro   = shpigovsky_get_services_hub_field( 'services_hub_program_intro' );
+$cta_title  = shpigovsky_get_services_hub_field( 'services_hub_program_cta_title' );
+$cta_sub    = shpigovsky_get_services_hub_field( 'services_hub_program_cta_subtitle' );
+$cta_button = shpigovsky_get_services_hub_field( 'services_hub_program_cta_button' );
+
+if ( '' === $heading ) {
+	$heading = $v9_program['heading'];
+}
+if ( '' === $lead ) {
+	$lead = $v9_program['lead'];
+}
+if ( '' === $intro ) {
+	$intro = $v9_program['intro'];
+}
+if ( '' === $cta_title ) {
+	$cta_title = $v9_program['cta']['title'];
+}
+if ( '' === $cta_sub ) {
+	$cta_sub = $v9_program['cta']['subtitle'];
+}
+if ( '' === $cta_button ) {
+	$cta_button = $v9_program['cta']['button_label'];
+}
 ?>
 <section data-reveal class="services-program-v2 services-program-v2--media-frame-fixed services-program-v2--item-image-stack-tall services-program-v2--item-body-mobile-pad services-program-v2--item-media-mobile-pad" id="services-program" aria-labelledby="services-program-v2-heading">
 	<div class="container services-program-v2__container">
 		<header class="services-program-v2__head">
 			<h2 class="services-program-v2__heading" id="services-program-v2-heading">
-				<?php echo esc_html( $v9_program['heading'] ); ?>
+				<?php echo esc_html( $heading ); ?>
 			</h2>
 			<a class="services-program-v2__head-link" href="<?php echo esc_url( $program_url ); ?>">
 				<span class="services-program-v2__head-link-text"><?php echo esc_html__( 'подробнее', 'shpigovsky' ); ?></span>
@@ -60,20 +62,23 @@ $items = array(
 		</header>
 
 		<p class="services-program-v2__lead">
-			<?php echo esc_html( $v9_program['lead'] ); ?>
+			<?php echo esc_html( $lead ); ?>
 		</p>
 
 		<p class="services-program-v2__intro">
-			<?php echo esc_html( $v9_program['intro'] ); ?>
+			<?php echo esc_html( $intro ); ?>
 		</p>
 
 		<div class="services-program-v2__grid">
 			<?php foreach ( $items as $item ) : ?>
 				<article class="services-program-v2__item">
 					<div class="services-program-v2__item-body">
-						<h3 class="services-program-v2__item-title"><?php echo esc_html( $item['title'] ); ?></h3>
+						<h3 class="services-program-v2__item-title">
+							<a class="services-program-v2__item-title-link" href="<?php echo esc_url( $item['url'] ); ?>"><?php echo esc_html( $item['title_display'] ); ?></a>
+						</h3>
 					</div>
 					<div class="services-program-v2__item-media">
+						<a class="services-program-v2__item-image-link" href="<?php echo esc_url( $item['url'] ); ?>">
 						<img
 							class="services-program-v2__item-image"
 							src="<?php echo esc_url( $item['image'] ); ?>"
@@ -83,6 +88,7 @@ $items = array(
 							loading="lazy"
 							decoding="async"
 						>
+						</a>
 					</div>
 				</article>
 			<?php endforeach; ?>
@@ -92,11 +98,11 @@ $items = array(
 		set_query_var(
 			'shpigovsky_program_cta_band',
 			array(
-				'title'          => $v9_program['cta']['title'],
-				'subtitle'       => $v9_program['cta']['subtitle'],
+				'title'          => $cta_title,
+				'subtitle'       => $cta_sub,
 				'phone'          => $cta_phone,
 				'phone_hint'     => '',
-				'button_label'   => $v9_program['cta']['button_label'],
+				'button_label'   => $cta_button,
 				'modal_source'   => $v9_program['cta']['source'],
 				'section_id'     => '',
 				'heading_id'     => '',

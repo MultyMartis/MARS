@@ -1,0 +1,5 @@
+page,expected,actual,result,notes
+"Home `/`","unchanged freeze; HTTP 200","HTTP 200 size=185313",PASS,"no product writes in this freeze task"
+"Services hub `/uslugi/`","unchanged freeze; HTTP 200","HTTP 200 size=123600",PASS,"no product writes in this freeze task"
+"Sections #73/#77/#84","Раздел/subdivision preserved",roles=section,PASS,
+"Services #74/#314/#81/#85/#78","Услуга/service_general preserved",roles=service,PASS,

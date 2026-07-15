@@ -1,6 +1,6 @@
 <?php
 /**
- * Service alcohol-special stack — delegates to direct static V9 port (V9-06E12).
+ * General service stack (legacy filename alcohol-stack) — V9-06E12 / FIX02 service_general.
  *
  * @package Shpigovsky
  */

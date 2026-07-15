@@ -1,0 +1,16 @@
+frontend_order,block_class_or_id,block_label,template_partial,current_source,source_type,editable_now,required_admin_control,proposed_field_or_setting,repeated_or_automatic,action,notes
+1,.services-inner-hero-v2 / #service-subdivision-hero-title,Hero,service/inner-hero.php,hero_eyebrow/title/lead/media/cta_label,ACF,yes,existing hero fields,keep layout_hero fields,no,keep,+ section_hero_notice pointer
+2,.internal-page-nav / subnav,Навигация по якорям,service/subnav.php,helper labels + breadcrumbs,automatic+hardcoded labels,partial,toggle,section_nav_visible,yes,toggle+notice,labels remain template-driven
+3,#service-subdivision-dependencies,Дочерние услуги,service/children.php,child CPT / manual_related + heading/lead/footer ACF,child services+ACF,yes,toggle+heading/lead/footer,section_dependencies_*,yes,acf+seed,#73 seeded
+4,#service-subdivision-nature,Природа зависимости,service/nature.php,section_nature_* ACF with template fallback,ACF,yes,full content fields,section_nature_*,no,acf+seed,was hardcoded
+5,#service-subdivision-start,CTA mid,service/mid-cta.php,cta_title/text/button + site phone,ACF+site settings,yes,toggle,section_mid_cta_visible,no,toggle+notice,content via structured CTA
+6,#service-subdivision-program,Программа,service/program.php,section_program_* + programme_items,ACF+fallback assets,yes,heading/intros/toggle,section_program_*,partial cards,acf+seed,
+7,#service-subdivision-stages / start,Этапы,service/stages.php,stages repeater + section_stages_*,ACF,yes,heading/lead/support/toggle,section_stages_*,yes,acf+seed,
+8,#service-subdivision-approach,Наш подход,service/team-stats.php,section_approach_* ACF,ACF+media,yes,full content+images,section_approach_*,no,acf+seed,was hardcoded
+9,.clinic-landscape,Территория клиники,home/clinic-landscape.php,Home ACF image,site/home settings,via Home,toggle+notice,section_clinic_landscape_visible,yes,toggle,shared block
+10,#service-subdivision-specialists,Специалисты,home/specialists.php,specialists pages + block options,child pages+options,via block options,toggle+notice,section_specialists_visible,yes,toggle,shared/automatic
+11,.founder-quote,Слово основателя,home/founder-quote.php,static template,hardcoded shared,no page copy,toggle+notice,section_founder_quote_visible,yes,toggle,content remains shared static
+12,#service-subdivision-comfort,Условия центра,home/comfort.php,Comfort block options,options ACF,via block,toggle+notice,section_comfort_visible,yes,toggle,
+13,.reviews,Отзывы,home/reviews.php,site reviews options,options ACF,via options,toggle+notice,section_reviews_visible,yes,toggle+bugfix,fixed home_reviews_visible gate
+14,#service-subdivision-faq,FAQ,service/faq.php,faq_items + section_faq_heading,ACF,yes,heading+toggle,section_faq_*,yes,acf+seed,
+15,.final-form,Финальная форма,components/final-form.php,Final Form options,options ACF,via options,toggle+notice,section_final_form_visible,yes,toggle,

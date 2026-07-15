@@ -3,13 +3,21 @@
  * Template part: home/founder-quote.php
  *
  * D9-D: static V9 visual authority with theme asset fallbacks.
- * Future ACF wiring: D9-E wave.
+ * V9-06E41: Home-level visibility toggle (content source remains external/static).
  *
  * @package Shpigovsky
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
+}
+
+if ( is_front_page() && ! shpigovsky_home_list_enabled( 'home_founder_quote_visible' ) ) {
+	return;
+}
+
+if ( function_exists( 'shpigovsky_is_services_hub_page' ) && shpigovsky_is_services_hub_page() && ! shpigovsky_services_hub_list_enabled( 'services_hub_founder_quote_visible' ) ) {
+	return;
 }
 
 ?>

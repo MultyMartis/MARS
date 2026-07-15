@@ -1,0 +1,11 @@
+file,function_or_block,frontend_block,fallback_type,fallback_preview,current_acf_field,current_admin_value_empty,must_seed_to_acf,action,notes
+v9-static-content.php,shpigovsky_get_v9_alcohol_leaf_intro_copy,intro,text,"intro copy",service_general_intro_*,no-after-seed,yes,emergency-only,"seeded #74"
+v9-static-content.php,shpigovsky_get_v9_alcohol_bordered_info_subsections,bordered-info,"repeater rows","3 subsections",service_general_bordered_info_items,no-after-seed,yes,emergency-only,"seeded #74"
+v9-static-content.php,shpigovsky_get_v9_alcohol_signs_copy,signs,text+repeater,"signs copy",service_general_signs_*,no-after-seed,yes,emergency-only,"seeded #74"
+v9-static-content.php,shpigovsky_get_v9_alcohol_leaf_approach_copy,approach,text+repeater,"approach copy",service_general_approach_*,no-after-seed,yes,emergency-only,"seeded #74"
+v9-static-content.php,shpigovsky_get_v9_alcohol_leaf_program_demo_copy,program,text,"lorem demos",service_general_program_*,no-after-seed,yes,emergency-only,"seeded #74"
+v9-static-content.php,shpigovsky_get_v9_alcohol_leaf_stages_copy,stages,text+repeater,"stages copy",service_general_stages_*,no-after-seed,yes,emergency-only,"seeded #74"
+v9-static-content.php,shpigovsky_get_v9_alcohol_leaf_faq_items,faq,"repeater rows","FAQ items",service_general_faq_items,no-after-seed,yes,emergency-only,"seeded #74"
+approach.php,"theme staff-group.webp","approach team image",theme_asset,staff-group.webp,service_general_team_image,no-after-seed,yes,emergency-only,"seeded #1238"
+corridor.php,"theme interior-corridor.webp",corridor,theme_asset,corridor.webp,service_general_corridor_image,no-after-seed,yes,emergency-only,"seeded #1709"
+clinic-landscape.php,home_clinic_landscape_image,landscape,global,"Home image",service_general_clinic_landscape_image,no-after-seed,yes,emergency-theme,"seeded #1239; Home untouched"

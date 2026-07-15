@@ -1,0 +1,12 @@
+check,expected,actual,result,notes
+#73 edit loads,yes,groups returned via acf_get_field_groups(post_id=73),PASS,Admin inventory JSON written
+Layout block separate,yes,title Service — Layout menu_order=0,PASS,No hero fields in group
+Hero block separate,yes,title Hero страницы услуги menu_order=1,PASS,7 fields including notice
+Mixed label removed,yes,no Service — Layout and Hero in active groups,PASS,5 DB duplicates set acf-disabled
+Hero fields populated,yes,lead len=258 media=304 cta=Заказать звонок,PASS,eyebrow/title override empty intentional
+Section fields remain,yes,group_fp02_service_section_parity 63 fields,PASS,Notice updated to new hero group name
+Admin order logical,yes,Layout(0) then Hero(1) then Раздел(2); FAQ/Structured also menu 0,PASS,Closest safe order; FAQ/Relationships pre-exist at menu_order 0
+Save validation,no errors,no fatal on load; meta keys unchanged,PASS,No destructive meta rewrite
+#77 compat,no fatal,layout+hero+parity visible role=section,PASS,lead preserved
+#84 compat,no fatal,layout+hero+parity visible role=section,PASS,lead preserved
+recheck_20260714_2215,layout separate + hero separate + mixed NONE in active,#73/#77/#84 PASS via acf_get_field_groups,PASS,DB 5x Layout and Hero remain acf-disabled only; operator CSS hash match; source/runtime hash match

@@ -1,0 +1,12 @@
+metabox_id,title,source,visible_before,visible_after,target_action,notes
+"revisionsdiv","Редакция","wp-core (revisions support)","visible","hidden","hide","removed / not registered"
+"postexcerpt","Отрывок","wp-core (excerpt support)","visible","hidden","hide","removed / not registered"
+"postdivrich","Classic editor","theme admin-editor.php","hidden","hidden","keep_hidden","removed / not registered"
+"commentstatusdiv","Discussion","EditorRestrictions","hidden","hidden","keep_hidden","removed / not registered"
+"commentsdiv","Comments","EditorRestrictions","hidden","hidden","keep_hidden","removed / not registered"
+"postcustom","Custom Fields","EditorRestrictions","hidden","hidden","keep_hidden","removed / not registered"
+"trackbacksdiv","Trackbacks","EditorRestrictions","hidden","hidden","keep_hidden","removed / not registered"
+"submitdiv","Publish","wp-core","visible","hidden","keep","removed / not registered"
+"pageparentdiv","Page Attributes","wp-core","visible","hidden","keep","removed / not registered"
+"postimagediv","Featured Image","wp-core","visible","hidden","keep","removed / not registered"
+"fp02_service_duplicate","Дублирование","unknown","unknown","visible","audit_only","context=side"

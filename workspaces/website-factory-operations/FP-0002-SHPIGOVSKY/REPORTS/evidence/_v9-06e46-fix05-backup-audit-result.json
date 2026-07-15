@@ -1,0 +1,79 @@
+{
+    "backup": "X:\/MARS-Localhost\/backups\/wordpress\/projects\/shpigovsky\/v9-06e46-fix05-section-demo-data-no-template-fallback-before-20260715-004351",
+    "meta_rows": 517,
+    "home_imgs": {
+        "home_clinic_landscape_image": 1239,
+        "home_staff_photo_image": 1238
+    },
+    "media_hits": {
+        "shpigovsky-staff-group": [
+            {
+                "ID": "1238",
+                "post_title": "Шпиговский — фото команды (Home)",
+                "file": "2026\/07\/shpigovsky-staff-group.webp"
+            }
+        ],
+        "shpigovsky-interior-corridor": [],
+        "shpigovsky-clinic-landscape": [
+            {
+                "ID": "1239",
+                "post_title": "Шпиговский — территория клиники (Home)",
+                "file": "2026\/07\/shpigovsky-clinic-landscape-1.webp"
+            },
+            {
+                "ID": "755",
+                "post_title": "Территория реабилитационного центра",
+                "file": "2026\/07\/shpigovsky-clinic-landscape.webp"
+            }
+        ]
+    },
+    "snap_summary": [
+        {
+            "route": "\/",
+            "url": "http:\/\/shpigovsky.test\/",
+            "http": 200,
+            "bytes": 185262,
+            "has_team_img": false,
+            "has_corridor": false,
+            "has_landscape": true
+        },
+        {
+            "route": "\/uslugi\/",
+            "url": "http:\/\/shpigovsky.test\/uslugi\/",
+            "http": 200,
+            "bytes": 123600,
+            "has_team_img": false,
+            "has_corridor": false,
+            "has_landscape": false
+        },
+        {
+            "route": "\/uslugi\/zavisimosti\/",
+            "url": "http:\/\/shpigovsky.test\/uslugi\/zavisimosti\/",
+            "http": 200,
+            "bytes": 128727,
+            "has_team_img": true,
+            "has_corridor": true,
+            "has_landscape": true
+        },
+        {
+            "route": "\/uslugi\/psihicheskoe-zdorovie\/",
+            "url": "http:\/\/shpigovsky.test\/uslugi\/psihicheskoe-zdorovie\/",
+            "http": 200,
+            "bytes": 132002,
+            "has_team_img": true,
+            "has_corridor": true,
+            "has_landscape": true
+        },
+        {
+            "route": "\/uslugi\/rasstroystva-pischevogo-povedeniya\/",
+            "url": "http:\/\/shpigovsky.test\/uslugi\/rasstroystva-pischevogo-povedeniya\/",
+            "http": 200,
+            "bytes": 126754,
+            "has_team_img": true,
+            "has_corridor": true,
+            "has_landscape": true
+        }
+    ],
+    "admin_field_count": 55,
+    "fallback_wording_count": 20
+}

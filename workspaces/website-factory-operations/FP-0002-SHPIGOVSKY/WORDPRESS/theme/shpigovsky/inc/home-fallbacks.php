@@ -303,13 +303,175 @@ function shpigovsky_home_intro_bands_fallback_items() {
  * @return string[]
  */
 function shpigovsky_home_recovery_intro_benefits_fallback() {
+	$rows = shpigovsky_home_recovery_intro_benefits_fallback_rows();
+	$out  = array();
+
+	foreach ( $rows as $row ) {
+		$text = isset( $row['text'] ) ? trim( (string) $row['text'] ) : '';
+		if ( '' !== $text ) {
+			$out[] = $text;
+		}
+	}
+
+	return $out;
+}
+
+/**
+ * Recovery intro benefits as repeater-shaped rows (V9-06E40).
+ *
+ * @return array<int, array{text:string,item_enabled:int}>
+ */
+function shpigovsky_home_recovery_intro_benefits_fallback_rows() {
 	return array(
-		'Мультидисциплинарный подход и&nbsp;команда специалистов;',
-		'Персонализированная программа восстановления;',
-		'Работа с&nbsp;причинами зависимости, а&nbsp;не&nbsp;только с&nbsp;её&nbsp;проявлениями;',
-		'Вовлечение семьи и&nbsp;близких в&nbsp;процессвыздоровления;',
-		'Реабилитация без потери связи с&nbsp;жизнью;',
-		'Постлечебное сопровождение и&nbsp;поддержка ремиссии.',
+		array( 'text' => 'Мультидисциплинарный подход и&nbsp;команда специалистов;', 'item_enabled' => 1 ),
+		array( 'text' => 'Персонализированная программа восстановления;', 'item_enabled' => 1 ),
+		array( 'text' => 'Работа с&nbsp;причинами зависимости, а&nbsp;не&nbsp;только с&nbsp;её&nbsp;проявлениями;', 'item_enabled' => 1 ),
+		array( 'text' => 'Вовлечение семьи и&nbsp;близких в&nbsp;процессвыздоровления;', 'item_enabled' => 1 ),
+		array( 'text' => 'Реабилитация без потери связи с&nbsp;жизнью;', 'item_enabled' => 1 ),
+		array( 'text' => 'Постлечебное сопровождение и&nbsp;поддержка ремиссии.', 'item_enabled' => 1 ),
+	);
+}
+
+/**
+ * Why-us body paragraphs fallback.
+ *
+ * @return array<int, array{text:string,item_enabled:int}>
+ */
+function shpigovsky_home_why_us_body_fallback_rows() {
+	return array(
+		array(
+			'text'         => 'Лечение в&nbsp;нашем реабилитационном центре совмещает современный и&nbsp;мультидисциплинарный подход направленный на&nbsp;устранение истинных причин зависимости.',
+			'item_enabled' => 1,
+		),
+		array(
+			'text'         => 'Мультидисциплинарный подход&nbsp;— это когда лечение одного пациента обеспечивается командой специалистов разных профилей. Такой подход становится залогом понимания и&nbsp;решения проблемы.',
+			'item_enabled' => 1,
+		),
+	);
+}
+
+/**
+ * Why-us link items fallback.
+ *
+ * @return array<int, array{title:string,url:string,item_enabled:int}>
+ */
+function shpigovsky_home_why_us_items_fallback_rows() {
+	return array(
+		array(
+			'title'        => 'Диагностические инструменты',
+			'url'          => home_url( '/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/' ),
+			'item_enabled' => 1,
+		),
+		array(
+			'title'        => 'Психиатрия',
+			'url'          => home_url( '/uslugi/zavisimosti/' ),
+			'item_enabled' => 1,
+		),
+		array(
+			'title'        => 'Функциональная терапия',
+			'url'          => home_url( '/uslugi/zavisimosti/' ),
+			'item_enabled' => 1,
+		),
+		array(
+			'title'        => 'Комплементарная терапия',
+			'url'          => home_url( '/uslugi/zavisimosti/' ),
+			'item_enabled' => 1,
+		),
+	);
+}
+
+/**
+ * Recovery-life intro paragraphs fallback.
+ *
+ * @return array<int, array{text:string,item_enabled:int}>
+ */
+function shpigovsky_home_recovery_life_intro_fallback_rows() {
+	return shpigovsky_home_why_us_body_fallback_rows();
+}
+
+/**
+ * Recovery-life stages fallback.
+ *
+ * @return array<int, array{stage_label:string,title:string,items_text:string,item_enabled:int}>
+ */
+function shpigovsky_home_recovery_life_stages_fallback_rows() {
+	return array(
+		array(
+			'stage_label'  => '1 месяц',
+			'title'        => 'От выживания к&nbsp;стабильности',
+			'items_text'   => "уменьшается внутреннее напряжение;\nнормализуется сон;\nснижается выраженность тяги;\nпоявляется чувство безопасности;\nвозникает готовность принимать помощь.",
+			'item_enabled' => 1,
+		),
+		array(
+			'stage_label'  => '2 месяц',
+			'title'        => 'От зависимости к&nbsp;пониманию себя',
+			'items_text'   => "человек начинает понимать причины своего состояния;\nпоявляются навыки управления эмоциями;\nснижается потребность убегать от&nbsp;переживаний через вещества или поведение;\nформируется внутренняя опора;\nвозвращается способность получать удовольствие от&nbsp;жизни.",
+			'item_enabled' => 1,
+		),
+		array(
+			'stage_label'  => '3 месяц',
+			'title'        => 'От контроля к&nbsp;свободе',
+			'items_text'   => "восстанавливаются отношения с&nbsp;близкими;\nпоявляются новые цели и&nbsp;интересы;\nповышается стрессоустойчивость;\nформируется уверенность в&nbsp;собственных силах;\nчеловек строит новую систему жизни;\nсохраняет устойчивую ремиссию;\nреализует личные и&nbsp;профессиональные цели;\nподдерживает эмоциональное благополучие;\nпродолжает развитие личности.",
+			'item_enabled' => 1,
+		),
+	);
+}
+
+/**
+ * Genotyping body paragraphs fallback.
+ *
+ * @return array<int, array{text:string,item_enabled:int}>
+ */
+function shpigovsky_home_genotyping_body_fallback_rows() {
+	return array(
+		array(
+			'text'         => 'Анализ позволяет выявить особенности чувствительности рецепторов к&nbsp;ключевым нейромедиаторам: дофамину, эндогенным опиатам, серотонину и&nbsp;другим. В&nbsp;основе концепции Синдрома Дефицита Удовлетворенности именно гипофункция этих систем&nbsp;— в&nbsp;частности мезолимбического дофаминового пути&nbsp;— объясняет, почему одни люди более уязвимы к&nbsp;развитию зависимостей, а&nbsp;другие нет.',
+			'item_enabled' => 1,
+		),
+		array(
+			'text'         => 'Результат генотипирования становится основой для построения персонализированной программы: мы знаем, с&nbsp;чем именно работаем,&nbsp;— и&nbsp;это меняет всё.',
+			'item_enabled' => 1,
+		),
+	);
+}
+
+/**
+ * Genotyping list items fallback.
+ *
+ * @return array<int, array{text:string,item_enabled:int}>
+ */
+function shpigovsky_home_genotyping_items_fallback_rows() {
+	return array(
+		array( 'text' => 'Люди с&nbsp;алкогольной или наркотической зависимостью;', 'item_enabled' => 1 ),
+		array( 'text' => 'Люди с&nbsp;нехимическими зависимостями (например, страдающие от&nbsp;переедания, игромании (лудомании), шопоголизма, интернет- или сексуальной зависимости);', 'item_enabled' => 1 ),
+		array( 'text' => 'Профильные специалисты (врачи-психиатры, аддиктологи, психотерапевты, нутрициологи и&nbsp;др);', 'item_enabled' => 1 ),
+		array( 'text' => 'Люди с&nbsp;компульсивным и&nbsp;дивиантны поведением.', 'item_enabled' => 1 ),
+	);
+}
+
+/**
+ * Home videos fallback (theme assets when Media Library empty).
+ *
+ * @return array<int, array{title:string,video_url:string,poster_url:string,item_enabled:int,width:int,height:int}>
+ */
+function shpigovsky_home_videos_fallback_rows() {
+	return array(
+		array(
+			'title'         => 'Интервью с&nbsp;Сергеем Шпиговским',
+			'video_url'     => shpigovsky_asset_uri( 'video/sergey-shpigovsky-interview.mp4' ),
+			'poster_url'    => shpigovsky_asset_uri( 'img/content/videos/sergey-shpigovsky-interview-poster.webp' ),
+			'item_enabled'  => 1,
+			'width'         => 1280,
+			'height'        => 720,
+		),
+		array(
+			'title'         => 'Центр профилактики зависимостей Сергея Шпиговского',
+			'video_url'     => shpigovsky_asset_uri( 'video/shpigovsky-center.mp4' ),
+			'poster_url'    => shpigovsky_asset_uri( 'img/content/videos/shpigovsky-center-poster.webp' ),
+			'item_enabled'  => 1,
+			'width'         => 1920,
+			'height'        => 1080,
+		),
 	);
 }
 

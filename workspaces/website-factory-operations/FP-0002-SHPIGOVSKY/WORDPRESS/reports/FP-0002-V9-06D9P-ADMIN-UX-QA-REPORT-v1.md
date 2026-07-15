@@ -225,7 +225,25 @@ Evidence: `validation/v9-06d9p-admin-ux-qa/no-scope-drift-validation.json`
 
 ## 12. Git checkpoint
 
-*(Filled after staging/commit.)*
+- Exact staged files: 28 (report, 4 architecture docs, 10 validation JSON, 10 screenshots, 3 status docs)
+- Staged list inspected: YES — no helpers, no chrome profile, no source/theme/ACF JSON
+- Source/theme files staged: NO
+- ACF JSON staged: NO
+- Runtime files staged: NO
+- Plugin files staged: NO
+- DB dumps staged: NO
+- Runtime snapshots staged: NO
+- Uploaded media files staged: NO (QA screenshots only under validation path)
+- Plugin source staged: NO
+- V9 src/dist staged: NO
+- Helper/temp files staged: NO
+- Secrets staged: NO
+- Commit: YES
+- Commit hash: b8361aad0f488ce2c3b4b05f274e12c21e2141a9
+- Push: YES (remote synced)
+- Local HEAD: b8361aad0f488ce2c3b4b05f274e12c21e2141a9
+- Remote HEAD: b8361aad0f488ce2c3b4b05f274e12c21e2141a9
+- Result: **PASS**
 
 ---
 

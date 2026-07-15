@@ -1,0 +1,109 @@
+{
+    "wave": "V9-06E31",
+    "result": "OK",
+    "db_writes": 28,
+    "service_actions": [
+        {
+            "item": "internet-zavisimost canonical",
+            "action": "SLIDER_ON_TEXT_OFF",
+            "id": 1017,
+            "old_url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/internet-zavisimost/",
+            "status": "publish",
+            "result": "OK"
+        },
+        {
+            "item": "lechenie-internet-zavisimosti duplicate",
+            "action": "TRASH",
+            "id": 1046,
+            "old_url": "/uslugi/zavisimosti/lechenie-internet-zavisimosti/",
+            "new_url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/internet-zavisimost/",
+            "status": "trash",
+            "result": "OK"
+        },
+        {
+            "item": "genotipirovanie service",
+            "action": "TRASH",
+            "id": 1029,
+            "old_url": "/uslugi/genotipirovanie/",
+            "new_url": "/o-centre/programma-lecheniya/genotipirovanie/",
+            "status": "trash",
+            "result": "OK"
+        }
+    ],
+    "page_actions": [
+        {
+            "title": "Генотипирование",
+            "action": "CREATED",
+            "id": 1053,
+            "parent_id": 13,
+            "template": "page-templates/generic.php",
+            "url": "http://shpigovsky.test/o-centre/programma-lecheniya/genotipirovanie/",
+            "placeholder": true,
+            "result": "OK"
+        },
+        {
+            "title": "Нейропсихологическая коррекция",
+            "action": "CREATED",
+            "id": 1054,
+            "parent_id": 13,
+            "template": "page-templates/generic.php",
+            "url": "http://shpigovsky.test/o-centre/programma-lecheniya/neyropsihologicheskaya-korrektsiya/",
+            "placeholder": true,
+            "result": "OK"
+        },
+        {
+            "title": "Психокоррекция",
+            "action": "CREATED",
+            "id": 1055,
+            "parent_id": 13,
+            "template": "page-templates/generic.php",
+            "url": "http://shpigovsky.test/o-centre/programma-lecheniya/psihokorrektsiya/",
+            "placeholder": true,
+            "result": "OK"
+        },
+        {
+            "title": "Кинезиотерапия",
+            "action": "CREATED",
+            "id": 1056,
+            "parent_id": 13,
+            "template": "page-templates/generic.php",
+            "url": "http://shpigovsky.test/o-centre/programma-lecheniya/kinezioterapiya/",
+            "placeholder": true,
+            "result": "OK"
+        }
+    ],
+    "acf_sync": {
+        "result": "PASS",
+        "path": "X:/AI MARS/workspaces/website-factory-operations/FP-0002-SHPIGOVSKY/WORDPRESS/acf-json/group_fp02_service_structured_sections.json",
+        "runtime": "X:/MARS-Localhost/sites/wordpress/projects/shpigovsky/wp-content/acf-json/group_fp02_service_structured_sections.json"
+    },
+    "admin_evidence": {
+        "test_target_id": 1073,
+        "method": "draft_service + empty ACF meta + acf_validate_value + is_within_max_rows",
+        "wp_update": "OK",
+        "field_checks": {
+            "field_fp02_signs_items_service": {
+                "label": "Признаки / симптомы",
+                "required": 0,
+                "min": 0,
+                "empty_ok": "PASS"
+            },
+            "field_fp02_programme_items_service": {
+                "label": "Пункты программы",
+                "required": 0,
+                "min": 0,
+                "empty_ok": "PASS"
+            },
+            "field_fp02_stages_service": {
+                "label": "Этапы",
+                "required": 0,
+                "min": 0,
+                "empty_ok": "PASS"
+            }
+        },
+        "max_rows_empty": "PASS",
+        "result": "PASS",
+        "note": "Draft placeholder left for operator cleanup; not published."
+    },
+    "redirect_note": "Duplicate internet + genotyping trashed; no 301 redirect pattern added — routes expected 404."
+}

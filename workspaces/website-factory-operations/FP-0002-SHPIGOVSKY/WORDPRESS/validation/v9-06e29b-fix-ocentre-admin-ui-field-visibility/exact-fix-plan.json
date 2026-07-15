@@ -1,0 +1,25 @@
+{
+  "task_id": "V9-06E29B-FIX",
+  "generated_at": "2026-07-10T13:42:55.253158+07:00",
+  "fixes": [
+    {
+      "area": "acf_json_db_sync",
+      "type": "Fix A",
+      "action": "Export institutional group from PHP; update source + runtime JSON; acf_import_field_group",
+      "result": "PLANNED"
+    },
+    {
+      "area": "admin_ux",
+      "type": "Fix B",
+      "action": "Hub overview message; split CTA/shared guidance; hide child-only repeaters on page #11",
+      "result": "PLANNED"
+    },
+    {
+      "area": "runtime_delivery",
+      "type": "Fix A",
+      "action": "Deliver FieldGroups.php + ACF JSON to runtime",
+      "result": "PLANNED"
+    }
+  ],
+  "result": "PASS"
+}

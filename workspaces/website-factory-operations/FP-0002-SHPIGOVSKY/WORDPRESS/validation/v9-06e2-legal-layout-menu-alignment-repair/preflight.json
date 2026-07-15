@@ -1,0 +1,16 @@
+{
+  "volume_label": "AI WS",
+  "branch": "mars/canonical-post-recovery",
+  "local_head": "b5be341375239d3c69990b6926ca77306446cce6",
+  "local_head_short": "b5be3413",
+  "remote_head": "b5be341375239d3c69990b6926ca77306446cce6",
+  "remote_head_short": "b5be3413",
+  "required_e1_head": "396c22c850779ed66959e0c0f34aa3229b9604fa",
+  "e1_ancestor_present": true,
+  "ahead": 0,
+  "behind": 0,
+  "staged_files": [],
+  "strict_head_gate": "PASS_WITH_HEAD_NOTE",
+  "strict_head_note": "Tip advanced to b5be3413; E1 ancestor verified",
+  "result": "PASS"
+}

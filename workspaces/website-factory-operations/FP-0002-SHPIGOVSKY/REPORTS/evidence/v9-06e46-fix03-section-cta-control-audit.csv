@@ -1,0 +1,7 @@
+field_name,field_label,field_type,current_value,used_on_frontend,frontend_source,action,notes
+section_mid_cta_notice,5. CTA «Раздел услуги»,message,n/a,no,n/a,remove_from_admin,Explanatory only; no FE render
+section_mid_cta_visible,Показывать CTA «Раздел услуги»,true_false,1 on #73/#77/#84,yes (visibility only),subdivision-stack.php → mid-cta.php,hide_ui_keep_meta,Toggle wired to FE visibility but has no content control; operator asked remove; meta kept default-ON
+cta_title,CTA title (Structured Sections),text,empty on #73,yes,shpigovsky_get_service_cta_band,keep,True content SoT for mid-cta title
+cta_text,CTA text (Structured Sections),textarea,empty on #73,yes,shpigovsky_get_service_cta_band,keep,SoT subtitle/text
+cta_button_label,CTA button label,text,empty on #73,yes,shpigovsky_get_service_cta_band,keep,SoT button
+phone_primary,phone (site options),option,site setting,yes,mid-cta / program-cta-band,keep,Phone from site settings

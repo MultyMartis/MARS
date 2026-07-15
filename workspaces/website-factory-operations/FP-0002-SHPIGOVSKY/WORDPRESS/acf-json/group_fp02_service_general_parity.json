@@ -1,0 +1,1221 @@
+{
+    "key": "group_fp02_service_general_parity",
+    "title": "Услуга — блоки страницы",
+    "fields": [
+        {
+            "key": "field_fp02_service_general_hero_notice",
+            "label": "1. Hero",
+            "name": "service_general_hero_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Контент hero редактируется в отдельной группе «Hero страницы услуги» (надзаголовок, H1 override, лид, изображение, текст\/ссылка кнопки). Макет — в группе «Макет страницы услуги».",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_service_general_nav_notice",
+            "label": "2. Навигация по якорям",
+            "name": "service_general_nav_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Автоматический блок: пункты якорей задаются шаблоном страницы услуги. Хлебные крошки — из иерархии услуг.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_service_general_nav_visible",
+            "label": "Показывать навигацию по якорям",
+            "name": "service_general_nav_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_service_general_intro_notice",
+            "label": "3. Intro",
+            "name": "service_general_intro_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Уникальный intro страницы услуги. Источник на сайте: значения ACF этой страницы.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_service_general_intro_visible",
+            "label": "Показывать intro",
+            "name": "service_general_intro_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_service_general_intro_heading",
+            "label": "Заголовок intro",
+            "name": "service_general_intro_heading",
+            "type": "text",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле оставить пустым, блок может использовать аварийный резерв.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_service_general_intro_highlight",
+            "label": "Выделенный текст intro",
+            "name": "service_general_intro_highlight",
+            "type": "textarea",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле оставить пустым, блок может использовать аварийный резерв.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 4
+        },
+        {
+            "key": "field_fp02_service_general_bordered_info_notice",
+            "label": "4. Информационные полосы",
+            "name": "service_general_bordered_info_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Уникальные текстовые полосы страницы услуги (заголовок + текст). Источник на сайте: ACF этой страницы.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_service_general_bordered_info_visible",
+            "label": "Показывать информационные полосы",
+            "name": "service_general_bordered_info_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_service_general_bordered_info_items",
+            "label": "Блоки информационных полос",
+            "name": "service_general_bordered_info_items",
+            "type": "repeater",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле оставить пустым, блок может использовать аварийный резерв.",
+            "required": 0,
+            "conditional_logic": 0,
+            "layout": "row",
+            "button_label": "Добавить блок",
+            "min": 0,
+            "max": 8,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_service_general_bordered_info_item_heading",
+                    "label": "Заголовок",
+                    "name": "heading",
+                    "type": "text"
+                },
+                {
+                    "key": "field_fp02_service_general_bordered_info_item_text",
+                    "label": "Текст",
+                    "name": "text",
+                    "type": "textarea",
+                    "rows": 4
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_service_general_mid_cta_notice",
+            "label": "5. Средний CTA",
+            "name": "service_general_mid_cta_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Блок середины страницы: телефон сайта общий. Тексты ниже — поля этой страницы (meta cta_*). Если пусто — стандартные подсказки темы.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_service_general_mid_cta_visible",
+            "label": "Показывать средний CTA",
+            "name": "service_general_mid_cta_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_service_general_cta_title",
+            "label": "Заголовок среднего CTA",
+            "name": "cta_title",
+            "type": "text",
+            "instructions": "Meta-ключ cta_title (совпадает с прежним Structured Sections). Пусто — текст по умолчанию.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_service_general_cta_text",
+            "label": "Текст среднего CTA",
+            "name": "cta_text",
+            "type": "textarea",
+            "instructions": "Meta-ключ cta_text. Пусто — текст по умолчанию.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3
+        },
+        {
+            "key": "field_fp02_service_general_cta_button_label",
+            "label": "Текст кнопки среднего CTA",
+            "name": "cta_button_label",
+            "type": "text",
+            "instructions": "Meta-ключ cta_button_label. Пусто — кнопка по умолчанию \/ опции сайта.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_service_general_cta_button_target",
+            "label": "Ссылка кнопки среднего CTA",
+            "name": "cta_button_target",
+            "type": "url",
+            "instructions": "Meta-ключ cta_button_target. Обычно не обязателен (телефон\/модалка).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_service_general_signs_notice",
+            "label": "6. Признаки",
+            "name": "service_general_signs_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Уникальный блок признаков\/симптомов этой страницы услуги. Источник на сайте: ACF этой страницы.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_service_general_signs_visible",
+            "label": "Показывать блок признаков",
+            "name": "service_general_signs_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_service_general_signs_heading",
+            "label": "Заголовок признаков",
+            "name": "service_general_signs_heading",
+            "type": "text",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле оставить пустым, блок может использовать аварийный резерв.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_service_general_signs_intro",
+            "label": "Intro признаков",
+            "name": "service_general_signs_intro",
+            "type": "textarea",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле оставить пустым, блок может использовать аварийный резерв.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3
+        },
+        {
+            "key": "field_fp02_service_general_signs_items",
+            "label": "Пункты признаков",
+            "name": "service_general_signs_items",
+            "type": "repeater",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле оставить пустым, блок может использовать аварийный резерв.",
+            "required": 0,
+            "conditional_logic": 0,
+            "layout": "table",
+            "button_label": "Добавить пункт",
+            "min": 0,
+            "max": 20,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_service_general_signs_item_text",
+                    "label": "Текст",
+                    "name": "text",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_service_general_signs_editorial",
+            "label": "Редакционный текст после признаков",
+            "name": "service_general_signs_editorial",
+            "type": "textarea",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле оставить пустым, блок может использовать аварийный резерв.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 4
+        },
+        {
+            "key": "field_fp02_service_general_approach_notice",
+            "label": "7. Наш подход к лечению",
+            "name": "service_general_approach_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Уникальный контент услуги: заголовки, тексты, изображение команды и карточки. Источник на сайте — ACF этой страницы.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_service_general_approach_visible",
+            "label": "Показывать блок «Наш подход»",
+            "name": "service_general_approach_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_service_general_approach_heading",
+            "label": "Заголовок подхода",
+            "name": "service_general_approach_heading",
+            "type": "text",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле оставить пустым, блок может использовать аварийный резерв.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_service_general_approach_more_label",
+            "label": "Текст ссылки «подробнее»",
+            "name": "service_general_approach_more_label",
+            "type": "text",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле оставить пустым, блок может использовать аварийный резерв.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_service_general_approach_more_url",
+            "label": "URL ссылки «подробнее»",
+            "name": "service_general_approach_more_url",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_service_general_approach_highlight",
+            "label": "Выделенный абзац (красная линия)",
+            "name": "service_general_approach_highlight",
+            "type": "textarea",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле оставить пустым, блок может использовать аварийный резерв.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3
+        },
+        {
+            "key": "field_fp02_service_general_approach_intro",
+            "label": "Intro подхода",
+            "name": "service_general_approach_intro",
+            "type": "textarea",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле оставить пустым, блок может использовать аварийный резерв.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3
+        },
+        {
+            "key": "field_fp02_service_general_team_image",
+            "label": "Изображение команды",
+            "name": "service_general_team_image",
+            "type": "image",
+            "instructions": "Выберите изображение для блока команды на этой странице услуги. Источник — ACF этой страницы услуги. Если поле оставить пустым, блок может использовать аварийный резерв темы.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_fp02_service_general_team_image_alt",
+            "label": "Alt изображения команды",
+            "name": "service_general_team_image_alt",
+            "type": "text",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле оставить пустым, блок может использовать аварийный резерв.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_service_general_approach_cards",
+            "label": "Карточки подхода",
+            "name": "service_general_approach_cards",
+            "type": "repeater",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле оставить пустым, блок может использовать аварийный резерв.",
+            "required": 0,
+            "conditional_logic": 0,
+            "layout": "row",
+            "button_label": "Добавить карточку",
+            "min": 0,
+            "max": 6,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_service_general_approach_card_title",
+                    "label": "Заголовок",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_fp02_service_general_approach_card_text",
+                    "label": "Текст",
+                    "name": "text",
+                    "type": "textarea",
+                    "rows": 3
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_service_general_clinic_landscape_notice",
+            "label": "8. Территория клиники",
+            "name": "service_general_clinic_landscape_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Изображение блока «Территория клиники» для <strong class=\"fp02-acf-notice-danger\">этой страницы услуги<\/strong>. Источник — ACF этой страницы (не Home). Если поле оставить пустым, блок может использовать аварийный резерв темы.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_service_general_clinic_landscape_visible",
+            "label": "Показывать территорию клиники",
+            "name": "service_general_clinic_landscape_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_service_general_clinic_landscape_image",
+            "label": "Изображение территории клиники",
+            "name": "service_general_clinic_landscape_image",
+            "type": "image",
+            "instructions": "Выберите изображение для блока «Территория клиники» на этой странице услуги. Источник — ACF этой страницы услуги. Если поле оставить пустым, блок может использовать аварийный резерв темы.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_fp02_service_general_program_notice",
+            "label": "9. Программа лечения",
+            "name": "service_general_program_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Карточки программы: автоматический блок из каталога программы лечения (общий справочник). Заголовок \/ «подробнее» \/ lead \/ intro редактируются ниже. Источник уникального текста — ACF этой страницы услуги.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_service_general_program_visible",
+            "label": "Показывать программу лечения",
+            "name": "service_general_program_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_service_general_program_heading",
+            "label": "Заголовок программы",
+            "name": "service_general_program_heading",
+            "type": "text",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле оставить пустым, блок может использовать аварийный резерв.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_service_general_program_more_label",
+            "label": "Текст ссылки «подробнее»",
+            "name": "service_general_program_more_label",
+            "type": "text",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле оставить пустым, блок может использовать аварийный резерв.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_service_general_program_lead",
+            "label": "Лид программы",
+            "name": "service_general_program_lead",
+            "type": "textarea",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле оставить пустым, блок может использовать аварийный резерв.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3
+        },
+        {
+            "key": "field_fp02_service_general_program_intro_items",
+            "label": "Intro программы",
+            "name": "service_general_program_intro_items",
+            "type": "repeater",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле оставить пустым, блок может использовать аварийный резерв.",
+            "required": 0,
+            "conditional_logic": 0,
+            "layout": "row",
+            "button_label": "Добавить intro",
+            "min": 0,
+            "max": 6,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_service_general_program_intro_item_text",
+                    "label": "Текст",
+                    "name": "text",
+                    "type": "textarea",
+                    "rows": 4
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_service_general_stages_notice",
+            "label": "10. Этапы лечения",
+            "name": "service_general_stages_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Этапы редактируются ниже. Источник: ACF этой страницы услуги.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_service_general_stages_visible",
+            "label": "Показывать блок этапов",
+            "name": "service_general_stages_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_service_general_stages_heading",
+            "label": "Заголовок этапов",
+            "name": "service_general_stages_heading",
+            "type": "text",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле оставить пустым, блок может использовать аварийный резерв.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_service_general_stages_lead",
+            "label": "Лид этапов",
+            "name": "service_general_stages_lead",
+            "type": "textarea",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле оставить пустым, блок может использовать аварийный резерв.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3
+        },
+        {
+            "key": "field_fp02_service_general_stages_items",
+            "label": "Этапы",
+            "name": "service_general_stages_items",
+            "type": "repeater",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле оставить пустым, блок может использовать аварийный резерв.",
+            "required": 0,
+            "conditional_logic": 0,
+            "layout": "row",
+            "button_label": "Добавить этап",
+            "min": 0,
+            "max": 8,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_service_general_stages_item_title",
+                    "label": "Заголовок",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_fp02_service_general_stages_item_text",
+                    "label": "Текст",
+                    "name": "text",
+                    "type": "textarea",
+                    "rows": 3
+                },
+                {
+                    "key": "field_fp02_service_general_stages_item_enabled",
+                    "label": "Показывать этап",
+                    "name": "enabled",
+                    "type": "true_false",
+                    "default_value": 1,
+                    "ui": 1
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_service_general_stages_support_heading",
+            "label": "Заголовок поддержки",
+            "name": "service_general_stages_support_heading",
+            "type": "text",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле оставить пустым, блок может использовать аварийный резерв.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_service_general_stages_support_items",
+            "label": "Пункты поддержки",
+            "name": "service_general_stages_support_items",
+            "type": "repeater",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле оставить пустым, блок может использовать аварийный резерв.",
+            "required": 0,
+            "conditional_logic": 0,
+            "layout": "table",
+            "button_label": "Добавить пункт",
+            "min": 0,
+            "max": 8,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_service_general_stages_support_item_text",
+                    "label": "Текст",
+                    "name": "text",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_service_general_corridor_notice",
+            "label": "11. Коридор \/ интерьер",
+            "name": "service_general_corridor_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Изображение блока коридора\/интерьера для <strong class=\"fp02-acf-notice-danger\">этой страницы услуги<\/strong>. Источник — ACF этой страницы. Если поле оставить пустым, блок может использовать аварийный резерв темы.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_service_general_corridor_visible",
+            "label": "Показывать блок коридора",
+            "name": "service_general_corridor_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_service_general_corridor_image",
+            "label": "Изображение коридора",
+            "name": "service_general_corridor_image",
+            "type": "image",
+            "instructions": "Выберите изображение для блока коридора\/интерьера на этой странице услуги. Источник — ACF этой страницы услуги. Если поле оставить пустым, блок может использовать аварийный резерв темы.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_fp02_service_general_corridor_image_alt",
+            "label": "Alt изображения коридора",
+            "name": "service_general_corridor_image_alt",
+            "type": "text",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле оставить пустым, блок может использовать аварийный резерв.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_service_general_specialists_notice",
+            "label": "12. Специалисты",
+            "name": "service_general_specialists_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Автоматический блок: карточки <strong class=\"fp02-acf-notice-danger\">из дочерних страниц «Специалисты»<\/strong>. Заголовок\/ссылка — в настройках переиспользуемого блока. На странице услуги — только показ\/скрытие. <a href=\"http:\/\/shpigovsky.test\/wp-admin\/edit.php?post_type=page\">Страницы<\/a>.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_service_general_specialists_visible",
+            "label": "Показывать специалистов",
+            "name": "service_general_specialists_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_service_general_founder_quote_notice",
+            "label": "13. Слово основателя",
+            "name": "service_general_founder_quote_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Общий статический блок (контент в шаблоне\/переиспользуемом блоке). На странице услуги — показ\/скрытие. Не дублируем текст на каждой странице услуги.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_service_general_founder_quote_visible",
+            "label": "Показывать слово основателя",
+            "name": "service_general_founder_quote_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_service_general_comfort_notice",
+            "label": "14. Условия центра",
+            "name": "service_general_comfort_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Общий блок: контент из переиспользуемого блока Comfort. На странице услуги — показ\/скрытие.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_service_general_comfort_visible",
+            "label": "Показывать условия центра",
+            "name": "service_general_comfort_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_service_general_reviews_notice",
+            "label": "15. Отзывы",
+            "name": "service_general_reviews_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Общий блок: отзывы из настроек сайта \/ CPT отзывов. На странице услуги — показ\/скрытие.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_service_general_reviews_visible",
+            "label": "Показывать отзывы",
+            "name": "service_general_reviews_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_service_general_children_notice",
+            "label": "16. Дочерние услуги",
+            "name": "service_general_children_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Автоматический блок: плитки дочерних услуг строятся <strong class=\"fp02-acf-notice-danger\">из <a href=\"http:\/\/shpigovsky.test\/wp-admin\/edit.php?post_type=service\">страниц услуг<\/a><\/strong> (дети текущего CPT). На странице услуги — показ\/скрытие.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_service_general_children_visible",
+            "label": "Показывать плитки дочерних услуг",
+            "name": "service_general_children_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_service_general_faq_notice",
+            "label": "17. FAQ",
+            "name": "service_general_faq_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Вопросы\/ответы — repeater FAQ этой страницы услуги. Ниже — заголовок секции и показ.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_service_general_faq_visible",
+            "label": "Показывать FAQ",
+            "name": "service_general_faq_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_service_general_faq_heading",
+            "label": "Заголовок FAQ",
+            "name": "service_general_faq_heading",
+            "type": "text",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле оставить пустым, блок может использовать аварийный резерв.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_service_general_faq_items",
+            "label": "Вопросы и ответы",
+            "name": "service_general_faq_items",
+            "type": "repeater",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. В ответе абзацы разделяйте пустой строкой. Если поле оставить пустым, блок может использовать аварийный резерв.",
+            "required": 0,
+            "conditional_logic": 0,
+            "layout": "row",
+            "button_label": "Добавить вопрос",
+            "min": 0,
+            "max": 20,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_service_general_faq_item_question",
+                    "label": "Вопрос",
+                    "name": "question",
+                    "type": "text"
+                },
+                {
+                    "key": "field_fp02_service_general_faq_item_answer",
+                    "label": "Ответ",
+                    "name": "answer",
+                    "type": "textarea",
+                    "rows": 5,
+                    "instructions": "Абзацы разделяйте пустой строкой."
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_service_general_final_form_notice",
+            "label": "18. Финальная форма",
+            "name": "service_general_final_form_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Общий блок: тексты формы из настроек Final Form. На странице услуги — показ\/скрытие.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_service_general_final_form_visible",
+            "label": "Показывать финальную форму",
+            "name": "service_general_final_form_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "service"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "FP-0002 V9-06E47\/FIX02 service general (Услуга) admin parity; field order mirrors alcohol-direct-v9.php; visibility via role group filter (no field-level when_service; nested FIX03 message field breaks ACF JS conditionals); no normal template-fallback wording.",
+    "show_in_rest": 0,
+    "modified": 1784454900
+}

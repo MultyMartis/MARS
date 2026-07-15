@@ -2,7 +2,8 @@
 /**
  * Template part: home/gallery.php
  *
- * D9-H: ACF wiring with static V9 fallback.
+ * V9-06E32: Home gallery slides are clickable service cards from the service CPT
+ * (depth-1 eligible services with service_show_on_home_gallery).
  *
  * @package Shpigovsky
  */
@@ -11,40 +12,48 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$fallback_slides = shpigovsky_home_gallery_fallback_items();
-$acf_rows        = shpigovsky_get_home_repeater( 'home_gallery_media' );
-$slide_count     = ! empty( $acf_rows ) ? count( $acf_rows ) : count( $fallback_slides );
+if ( ! shpigovsky_home_list_enabled( 'home_gallery_visible' ) ) {
+	return;
+}
+
+$slides = shpigovsky_get_home_gallery_service_slides();
+
+if ( empty( $slides ) ) {
+	return;
+}
 
 ?>
-<section data-reveal class="home-gallery" aria-label="Фотогалерея центра">
+<section data-reveal class="home-gallery" aria-label="Услуги центра">
   <div class="container">
     <div class="home-gallery__slider swiper" data-gallery-slider>
       <div class="home-gallery__wrapper swiper-wrapper">
-        <?php for ( $index = 0; $index < $slide_count; $index++ ) : ?>
+        <?php foreach ( $slides as $index => $slide ) : ?>
           <?php
-			$acf_row       = ! empty( $acf_rows[ $index ] ) && is_array( $acf_rows[ $index ] ) ? $acf_rows[ $index ] : array();
-			$fallback_row  = isset( $fallback_slides[ $index ] ) ? $fallback_slides[ $index ] : end( $fallback_slides );
-			$caption       = isset( $acf_row['title'] ) && '' !== trim( (string) $acf_row['title'] )
-				? trim( (string) $acf_row['title'] )
-				: (string) $fallback_row['title'];
-			$image         = shpigovsky_home_gallery_slide_image( $acf_row, $fallback_row );
-			$is_lazy       = ! empty( $fallback_row['lazy'] );
+			$title        = isset( $slide['title'] ) ? (string) $slide['title'] : '';
+			$url          = isset( $slide['url'] ) ? (string) $slide['url'] : '';
+			$image_url    = isset( $slide['image_url'] ) ? (string) $slide['image_url'] : '';
+			$width        = isset( $slide['width'] ) ? (int) $slide['width'] : 800;
+			$height       = isset( $slide['height'] ) ? (int) $slide['height'] : 600;
+			$alt          = isset( $slide['alt'] ) && '' !== trim( (string) $slide['alt'] ) ? (string) $slide['alt'] : $title;
+			$is_lazy      = $index > 0;
 			?>
         <figure class="home-gallery__slide swiper-slide">
-          <?php if ( '' !== $image['url'] ) : ?>
-          <img
-            class="home-gallery__image"
-            src="<?php echo esc_url( $image['url'] ); ?>"
-            width="<?php echo esc_attr( (string) $image['width'] ); ?>"
-            height="<?php echo esc_attr( (string) $image['height'] ); ?>"
-            alt=""
-            <?php echo $is_lazy ? 'loading="lazy"' : ''; ?>
-            decoding="async"
-          >
-          <?php endif; ?>
-          <figcaption class="home-gallery__caption"><?php echo wp_kses_post( $caption ); ?></figcaption>
+          <a class="home-gallery__link" href="<?php echo esc_url( $url ); ?>">
+            <?php if ( '' !== $image_url ) : ?>
+            <img
+              class="home-gallery__image"
+              src="<?php echo esc_url( $image_url ); ?>"
+              width="<?php echo esc_attr( (string) $width ); ?>"
+              height="<?php echo esc_attr( (string) $height ); ?>"
+              alt="<?php echo esc_attr( $alt ); ?>"
+              <?php echo $is_lazy ? 'loading="lazy"' : ''; ?>
+              decoding="async"
+            >
+            <?php endif; ?>
+            <figcaption class="home-gallery__caption"><?php echo esc_html( $title ); ?></figcaption>
+          </a>
         </figure>
-        <?php endfor; ?>
+        <?php endforeach; ?>
       </div>
       <div class="home-gallery__pagination swiper-pagination" data-gallery-pagination></div>
     </div>

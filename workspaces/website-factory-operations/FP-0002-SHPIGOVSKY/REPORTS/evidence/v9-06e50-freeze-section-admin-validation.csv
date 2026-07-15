@@ -1,0 +1,4 @@
+page,expected,actual,result,notes
+"#73 Зависимости","accepted section ACF model","role=section section=yes general=no nature_h=Природа зависимости 000101 approach=Наш подход к лечению зависимостей bad_help=no editor_support=yes; operator ТЕСТ=yes 000101=yes",PASS,
+"#77 Психическое здоровье","accepted section ACF model","role=section section=yes general=no nature_h=Природа психических состояний approach=Наш подход к работе с психическим здоровьем bad_help=no editor_support=yes; section-specific headings present",PASS,
+"#84 Расстройства пищевого поведения","accepted section ACF model","role=section section=yes general=no nature_h=Природа расстройств пищевого поведения approach=Наш подход к работе с расстройствами пищевого поведения bad_help=no editor_support=yes; section-specific headings present",PASS,

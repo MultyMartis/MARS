@@ -1,0 +1,1966 @@
+{
+  "preflight": {
+    "task_id": "V9-06E28",
+    "generated_at": "2026-07-09T19:09:37.455537+00:00",
+    "volume": {
+      "DriveLetter": "X",
+      "FileSystemLabel": "AI WS",
+      "HealthStatus": "Healthy"
+    },
+    "repository": "X:\\AI MARS",
+    "branch": "mars/canonical-post-recovery",
+    "local_head": "84dd9b07c71c51dff75f293056c9846c3ade0e88",
+    "local_short_head": "84dd9b07",
+    "remote_tracking_head": "7a44c02c40cdf72b02307e1f015736ce1a0080ca",
+    "remote_actual_head": "7a44c02c40cdf72b02307e1f015736ce1a0080ca",
+    "ahead": 1,
+    "behind": 0,
+    "required_baseline": "60291b8e52de4745ebc029d80a1b33e359516e13",
+    "baseline_ancestor_check": "PASS",
+    "head_note": "HEAD advanced to 84dd9b07; baseline 60291b8e is ancestor.",
+    "pre_existing_staged_files": [],
+    "foreign_wip": true,
+    "result": "PASS"
+  },
+  "route": {
+    "task_id": "V9-06E28",
+    "generated_at": "2026-07-09T19:10:25.617165+00:00",
+    "total_routes_checked": 35,
+    "core_routes_checked": 12,
+    "core_routes_pass": true,
+    "blockers": [],
+    "routes": [
+      {
+        "url": "http://shpigovsky.test/",
+        "route": "/",
+        "http_status": 200,
+        "owner_type": "page",
+        "owner_id": 4,
+        "expected_owner": {
+          "type": "page",
+          "id": 4
+        },
+        "template_marker": "home wp-singular page-template-default page page-id-4 wp-theme-shpigovsky",
+        "h1": "Шпиговский дом",
+        "title": "Шпиговский — локальная разработка",
+        "classification": "CANONICAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/o-centre/",
+        "route": "/o-centre/",
+        "http_status": 200,
+        "owner_type": "page",
+        "owner_id": 11,
+        "expected_owner": {
+          "type": "page",
+          "id": 11
+        },
+        "template_marker": "wp-singular page-template page-template-page-templates page-template-institutional page-template-page-templatesinstitutional-php page page-id-11 page-parent wp-theme-shpigovsky page-o-centre",
+        "h1": "Шпиговский дом",
+        "title": "О центре &#8212; Шпиговский — локальная разработка",
+        "classification": "CANONICAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/blog/",
+        "route": "/blog/",
+        "http_status": 200,
+        "owner_type": null,
+        "owner_id": null,
+        "expected_owner": {
+          "type": "page",
+          "id": 19,
+          "archive": true
+        },
+        "template_marker": "blog wp-theme-shpigovsky page-blog",
+        "h1": "Статьи о зависимостях, диагностике и методах лечения",
+        "title": "Статьи &#8212; Шпиговский — локальная разработка",
+        "classification": "CANONICAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/blog/nazvanie-stati/",
+        "route": "/blog/nazvanie-stati/",
+        "http_status": 200,
+        "owner_type": "post",
+        "owner_id": 750,
+        "expected_owner": {
+          "type": "post",
+          "id": 750
+        },
+        "template_marker": "wp-singular post-template-default single single-post postid-750 single-format-standard wp-theme-shpigovsky page-blog-article",
+        "h1": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём",
+        "title": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём &#8212; Шпиговский — локальная разработка",
+        "classification": "DEMO_LOCAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/uslugi/",
+        "route": "/uslugi/",
+        "http_status": 200,
+        "owner_type": "page",
+        "owner_id": 5,
+        "expected_owner": {
+          "type": "page",
+          "id": 5
+        },
+        "template_marker": "wp-singular page-template page-template-page-templates page-template-services-hub page-template-page-templatesservices-hub-php page page-id-5 wp-theme-shpigovsky page-uslugi-v2",
+        "h1": "Лечение и профилактика",
+        "title": "Услуги &#8212; Шпиговский — локальная разработка",
+        "classification": "CANONICAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/uslugi/zavisimosti/",
+        "route": "/uslugi/zavisimosti/",
+        "http_status": 200,
+        "owner_type": "service",
+        "owner_id": 73,
+        "expected_owner": {
+          "type": "service",
+          "id": 73
+        },
+        "template_marker": "wp-singular service-template-default single single-service postid-73 wp-theme-shpigovsky page-service-subdivision-v1",
+        "h1": "Зависимости",
+        "title": "Зависимости &#8212; Шпиговский — локальная разработка",
+        "classification": "CANONICAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+        "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+        "http_status": 200,
+        "owner_type": "service",
+        "owner_id": 74,
+        "expected_owner": {
+          "type": "service",
+          "id": 74
+        },
+        "template_marker": "wp-singular service-template-default single single-service postid-74 wp-theme-shpigovsky page-service-leaf-v1",
+        "h1": "Центр лечения алкогольной зависимости",
+        "title": "Лечение алкогольной зависимости &#8212; Шпиговский — локальная разработка",
+        "classification": "CANONICAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/",
+        "route": "/uslugi/psihicheskoe-zdorovie/",
+        "http_status": 200,
+        "owner_type": "service",
+        "owner_id": 77,
+        "expected_owner": {
+          "type": "service",
+          "id": 77
+        },
+        "template_marker": "wp-singular service-template-default single single-service postid-77 wp-theme-shpigovsky page-service-subdivision-v1",
+        "h1": "Психическое здоровье",
+        "title": "Психическое здоровье &#8212; Шпиговский — локальная разработка",
+        "classification": "CANONICAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/",
+        "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+        "http_status": 200,
+        "owner_type": "service",
+        "owner_id": 84,
+        "expected_owner": {
+          "type": "service",
+          "id": 84
+        },
+        "template_marker": "wp-singular service-template-default single single-service postid-84 wp-theme-shpigovsky page-service-subdivision-v1",
+        "h1": "Расстройства пищевого поведения",
+        "title": "Расстройства пищевого поведения &#8212; Шпиговский — локальная разработка",
+        "classification": "CANONICAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/kontakty/",
+        "route": "/kontakty/",
+        "http_status": 200,
+        "owner_type": "page",
+        "owner_id": 20,
+        "expected_owner": {
+          "type": "page",
+          "id": 20
+        },
+        "template_marker": "wp-singular page-template page-template-page-templates page-template-contacts page-template-page-templatescontacts-php page page-id-20 wp-theme-shpigovsky page-kontakty",
+        "h1": "Контакты",
+        "title": "Контакты &#8212; Шпиговский — локальная разработка",
+        "classification": "CANONICAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/otzyvy/",
+        "route": "/otzyvy/",
+        "http_status": 200,
+        "owner_type": "page",
+        "owner_id": 18,
+        "expected_owner": {
+          "type": "page",
+          "id": 18
+        },
+        "template_marker": "wp-singular page-template page-template-page-templates page-template-reviews page-template-page-templatesreviews-php page page-id-18 wp-theme-shpigovsky page-otzyvy",
+        "h1": "Отзывы о&nbsp;центре лечения и&nbsp;профилактики зависимостей",
+        "title": "Отзывы &#8212; Шпиговский — локальная разработка",
+        "classification": "CANONICAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/privacy-policy/",
+        "route": "/privacy-policy/",
+        "http_status": 200,
+        "owner_type": "page",
+        "owner_id": 3,
+        "expected_owner": {
+          "type": "page",
+          "id": 3
+        },
+        "template_marker": "privacy-policy wp-singular page-template page-template-page-templates page-template-legal page-template-page-templateslegal-php page page-id-3 wp-theme-shpigovsky",
+        "h1": "Политика конфиденциальности",
+        "title": "Политика конфиденциальности &#8212; Шпиговский — локальная разработка",
+        "classification": "CANONICAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/consent-personal-data/",
+        "route": "/consent-personal-data/",
+        "http_status": 200,
+        "owner_type": "page",
+        "owner_id": 23,
+        "expected_owner": null,
+        "template_marker": "wp-singular page-template page-template-page-templates page-template-legal page-template-page-templateslegal-php page page-id-23 wp-theme-shpigovsky",
+        "h1": "Согласие на обработку персональных данных",
+        "title": "Согласие на обработку персональных данных &#8212; Шпиговский — локальная разработка",
+        "classification": "DEMO_LOCAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/cookie-files-policy/",
+        "route": "/cookie-files-policy/",
+        "http_status": 200,
+        "owner_type": "page",
+        "owner_id": 24,
+        "expected_owner": null,
+        "template_marker": "wp-singular page-template page-template-page-templates page-template-legal page-template-page-templateslegal-php page page-id-24 wp-theme-shpigovsky",
+        "h1": "Политика Cookie-файлов",
+        "title": "Политика Cookie-файлов &#8212; Шпиговский — локальная разработка",
+        "classification": "DEMO_LOCAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/glavnaya/",
+        "route": "/glavnaya/",
+        "http_status": 200,
+        "owner_type": "page",
+        "owner_id": 4,
+        "expected_owner": null,
+        "template_marker": "home wp-singular page-template-default page page-id-4 wp-theme-shpigovsky",
+        "h1": "Шпиговский дом",
+        "title": "Шпиговский — локальная разработка",
+        "classification": "DEMO_LOCAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/o-centre/galereya-o-dome/",
+        "route": "/o-centre/galereya-o-dome/",
+        "http_status": 200,
+        "owner_type": "page",
+        "owner_id": 14,
+        "expected_owner": null,
+        "template_marker": "wp-singular page-template page-template-page-templates page-template-institutional page-template-page-templatesinstitutional-php page page-id-14 page-child parent-pageid-11 wp-theme-shpigovsky page-o-centre",
+        "h1": "Галерея о доме",
+        "title": "Галерея о доме &#8212; Шпиговский — локальная разработка",
+        "classification": "DEMO_LOCAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/o-centre/o-nas/",
+        "route": "/o-centre/o-nas/",
+        "http_status": 200,
+        "owner_type": "page",
+        "owner_id": 12,
+        "expected_owner": null,
+        "template_marker": "wp-singular page-template page-template-page-templates page-template-institutional page-template-page-templatesinstitutional-php page page-id-12 page-child parent-pageid-11 wp-theme-shpigovsky page-o-centre",
+        "h1": "О нас",
+        "title": "О нас &#8212; Шпиговский — локальная разработка",
+        "classification": "DEMO_LOCAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/o-centre/programma-lecheniya/",
+        "route": "/o-centre/programma-lecheniya/",
+        "http_status": 200,
+        "owner_type": "page",
+        "owner_id": 13,
+        "expected_owner": null,
+        "template_marker": "wp-singular page-template page-template-page-templates page-template-institutional page-template-page-templatesinstitutional-php page page-id-13 page-child parent-pageid-11 wp-theme-shpigovsky page-o-centre",
+        "h1": "Программа лечения",
+        "title": "Программа лечения &#8212; Шпиговский — локальная разработка",
+        "classification": "DEMO_LOCAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/o-centre/rodstvennikam/",
+        "route": "/o-centre/rodstvennikam/",
+        "http_status": 200,
+        "owner_type": "page",
+        "owner_id": 16,
+        "expected_owner": null,
+        "template_marker": "wp-singular page-template page-template-page-templates page-template-institutional page-template-page-templatesinstitutional-php page page-id-16 page-child parent-pageid-11 wp-theme-shpigovsky page-o-centre",
+        "h1": "Родственникам",
+        "title": "Родственникам &#8212; Шпиговский — локальная разработка",
+        "classification": "DEMO_LOCAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/o-centre/specialistam/",
+        "route": "/o-centre/specialistam/",
+        "http_status": 200,
+        "owner_type": "page",
+        "owner_id": 15,
+        "expected_owner": null,
+        "template_marker": "wp-singular page-template page-template-page-templates page-template-institutional page-template-page-templatesinstitutional-php page page-id-15 page-child parent-pageid-11 wp-theme-shpigovsky page-o-centre",
+        "h1": "Специалистам",
+        "title": "Специалистам &#8212; Шпиговский — локальная разработка",
+        "classification": "DEMO_LOCAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/user-agreement/",
+        "route": "/user-agreement/",
+        "http_status": 200,
+        "owner_type": "page",
+        "owner_id": 22,
+        "expected_owner": null,
+        "template_marker": "wp-singular page-template page-template-page-templates page-template-legal page-template-page-templateslegal-php page page-id-22 wp-theme-shpigovsky",
+        "h1": "Пользовательское соглашение",
+        "title": "Пользовательское соглашение &#8212; Шпиговский — локальная разработка",
+        "classification": "DEMO_LOCAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/uslugi/anoreksiya/",
+        "route": "/uslugi/anoreksiya/",
+        "http_status": 200,
+        "owner_type": "service",
+        "owner_id": 85,
+        "expected_owner": null,
+        "template_marker": "wp-singular service-template-default single single-service postid-85 wp-theme-shpigovsky page-service-leaf-v1",
+        "h1": "Анорексия",
+        "title": "Анорексия &#8212; Шпиговский — локальная разработка",
+        "classification": "DEMO_LOCAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/uslugi/depressiya/",
+        "route": "/uslugi/depressiya/",
+        "http_status": 200,
+        "owner_type": "service",
+        "owner_id": 78,
+        "expected_owner": null,
+        "template_marker": "wp-singular service-template-default single single-service postid-78 wp-theme-shpigovsky page-service-leaf-v1",
+        "h1": "Депрессия",
+        "title": "Депрессия &#8212; Шпиговский — локальная разработка",
+        "classification": "DEMO_LOCAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/uslugi/emocionalnoe-vygoranie/",
+        "route": "/uslugi/emocionalnoe-vygoranie/",
+        "http_status": 200,
+        "owner_type": "service",
+        "owner_id": 80,
+        "expected_owner": null,
+        "template_marker": "wp-singular service-template-default single single-service postid-80 wp-theme-shpigovsky page-service-leaf-v1",
+        "h1": "Эмоциональное выгорание",
+        "title": "Эмоциональное выгорание &#8212; Шпиговский — локальная разработка",
+        "classification": "DEMO_LOCAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/uslugi/kompulsivnoe-pereedanie/",
+        "route": "/uslugi/kompulsivnoe-pereedanie/",
+        "http_status": 200,
+        "owner_type": "service",
+        "owner_id": 87,
+        "expected_owner": null,
+        "template_marker": "wp-singular service-template-default single single-service postid-87 wp-theme-shpigovsky page-service-leaf-v1",
+        "h1": "Компульсивное переедание",
+        "title": "Компульсивное переедание &#8212; Шпиговский — локальная разработка",
+        "classification": "DEMO_LOCAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/uslugi/lechenie-alkogolnoy-zavisimosti/",
+        "route": "/uslugi/lechenie-alkogolnoy-zavisimosti/",
+        "http_status": 200,
+        "owner_type": "service",
+        "owner_id": 74,
+        "expected_owner": null,
+        "template_marker": "wp-singular service-template-default single single-service postid-74 wp-theme-shpigovsky page-service-leaf-v1",
+        "h1": "Центр лечения алкогольной зависимости",
+        "title": "Лечение алкогольной зависимости &#8212; Шпиговский — локальная разработка",
+        "classification": "DEMO_LOCAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/uslugi/lekarstvennaya-zavisimost/",
+        "route": "/uslugi/lekarstvennaya-zavisimost/",
+        "http_status": 200,
+        "owner_type": "service",
+        "owner_id": 315,
+        "expected_owner": null,
+        "template_marker": "wp-singular service-template-default single single-service postid-315 wp-theme-shpigovsky page-service-leaf-v1",
+        "h1": "Лекарственная зависимость",
+        "title": "Лекарственная зависимость &#8212; Шпиговский — локальная разработка",
+        "classification": "DEMO_LOCAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/uslugi/narkoticheskaya-zavisimost/",
+        "route": "/uslugi/narkoticheskaya-zavisimost/",
+        "http_status": 200,
+        "owner_type": "service",
+        "owner_id": 314,
+        "expected_owner": null,
+        "template_marker": "wp-singular service-template-default single single-service postid-314 wp-theme-shpigovsky page-service-leaf-v1",
+        "h1": "Наркотическая зависимость",
+        "title": "Наркотическая зависимость &#8212; Шпиговский — локальная разработка",
+        "classification": "DEMO_LOCAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/uslugi/nervnaya-bulimiya/",
+        "route": "/uslugi/nervnaya-bulimiya/",
+        "http_status": 200,
+        "owner_type": "service",
+        "owner_id": 86,
+        "expected_owner": null,
+        "template_marker": "wp-singular service-template-default single single-service postid-86 wp-theme-shpigovsky page-service-leaf-v1",
+        "h1": "Нервная булимия",
+        "title": "Нервная булимия &#8212; Шпиговский — локальная разработка",
+        "classification": "DEMO_LOCAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/uslugi/povedencheskie-zavisimosti/",
+        "route": "/uslugi/povedencheskie-zavisimosti/",
+        "http_status": 200,
+        "owner_type": "service",
+        "owner_id": 316,
+        "expected_owner": null,
+        "template_marker": "wp-singular service-template-default single single-service postid-316 wp-theme-shpigovsky page-service-leaf-v1",
+        "h1": "Поведенческие зависимости",
+        "title": "Поведенческие зависимости &#8212; Шпиговский — локальная разработка",
+        "classification": "DEMO_LOCAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/uslugi/profilakticheskiy-analiz/",
+        "route": "/uslugi/profilakticheskiy-analiz/",
+        "http_status": 200,
+        "owner_type": "service",
+        "owner_id": 75,
+        "expected_owner": null,
+        "template_marker": "wp-singular service-template-default single single-service postid-75 wp-theme-shpigovsky page-service-leaf-v1",
+        "h1": "Профилактический анализ",
+        "title": "Профилактический анализ &#8212; Шпиговский — локальная разработка",
+        "classification": "DEMO_LOCAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/uslugi/ptrs/",
+        "route": "/uslugi/ptrs/",
+        "http_status": 200,
+        "owner_type": "service",
+        "owner_id": 79,
+        "expected_owner": null,
+        "template_marker": "wp-singular service-template-default single single-service postid-79 wp-theme-shpigovsky page-service-leaf-v1",
+        "h1": "ПТСР",
+        "title": "ПТСР &#8212; Шпиговский — локальная разработка",
+        "classification": "DEMO_LOCAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/uslugi/rasstroystva-sna/",
+        "route": "/uslugi/rasstroystva-sna/",
+        "http_status": 200,
+        "owner_type": "service",
+        "owner_id": 82,
+        "expected_owner": null,
+        "template_marker": "wp-singular service-template-default single single-service postid-82 wp-theme-shpigovsky page-service-leaf-v1",
+        "h1": "Расстройства сна",
+        "title": "Расстройства сна &#8212; Шпиговский — локальная разработка",
+        "classification": "DEMO_LOCAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/uslugi/travma/",
+        "route": "/uslugi/travma/",
+        "http_status": 200,
+        "owner_type": "service",
+        "owner_id": 83,
+        "expected_owner": null,
+        "template_marker": "wp-singular service-template-default single single-service postid-83 wp-theme-shpigovsky page-service-leaf-v1",
+        "h1": "Травма",
+        "title": "Травма &#8212; Шпиговский — локальная разработка",
+        "classification": "DEMO_LOCAL_PASS",
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "url": "http://shpigovsky.test/uslugi/trevozhnye-rasstroystva/",
+        "route": "/uslugi/trevozhnye-rasstroystva/",
+        "http_status": 200,
+        "owner_type": "service",
+        "owner_id": 81,
+        "expected_owner": null,
+        "template_marker": "wp-singular service-template-default single single-service postid-81 wp-theme-shpigovsky page-service-leaf-v1",
+        "h1": "Тревожные расстройства",
+        "title": "Тревожные расстройства &#8212; Шпиговский — локальная разработка",
+        "classification": "DEMO_LOCAL_PASS",
+        "result": "PASS",
+        "notes": null
+      }
+    ],
+    "result": "PASS"
+  },
+  "menu": {
+    "task_id": "V9-06E28",
+    "generated_at": "2026-07-09T19:10:25.681756+00:00",
+    "menu_checksum": "F728EBCF658217924BE4BDAFD059AC2DE3583DDABC0CDFA57434B8F81C481CA9",
+    "primary_menu_count": 6,
+    "total_menu_items": 13,
+    "menus": [
+      "Footer",
+      "Legal",
+      "Primary"
+    ],
+    "menu_item_301": {
+      "menu_item_id": 301,
+      "menu_name": "Primary",
+      "menu_slug": "primary",
+      "label": "Зависимости",
+      "menu_order": 2,
+      "item_type": "custom",
+      "object_id": "0",
+      "object_type": "custom",
+      "url": "/uslugi/zavisimosti/",
+      "parent_item_id": "0"
+    },
+    "menu_item_301_checks": {
+      "pass": true,
+      "notes": [
+        "label=OK",
+        "url=OK (/uslugi/zavisimosti/)",
+        "not_page_6=OK",
+        "custom_type=OK"
+      ]
+    },
+    "trashed_page_references": [],
+    "menu_url_health": [
+      {
+        "menu_item_id": 27,
+        "label": "Лечение и профилактика",
+        "menu": "Primary",
+        "url": "",
+        "path": "/",
+        "http_status": 200,
+        "result": "PASS"
+      },
+      {
+        "menu_item_id": 301,
+        "label": "Зависимости",
+        "menu": "Primary",
+        "url": "/uslugi/zavisimosti/",
+        "path": "/uslugi/zavisimosti/",
+        "http_status": 200,
+        "result": "PASS"
+      },
+      {
+        "menu_item_id": 29,
+        "label": "О центре",
+        "menu": "Primary",
+        "url": "",
+        "path": "/",
+        "http_status": 200,
+        "result": "PASS"
+      },
+      {
+        "menu_item_id": 30,
+        "label": "Отзывы",
+        "menu": "Primary",
+        "url": "",
+        "path": "/",
+        "http_status": 200,
+        "result": "PASS"
+      },
+      {
+        "menu_item_id": 31,
+        "label": "Статьи",
+        "menu": "Primary",
+        "url": "",
+        "path": "/",
+        "http_status": 200,
+        "result": "PASS"
+      },
+      {
+        "menu_item_id": 32,
+        "label": "Контакты",
+        "menu": "Primary",
+        "url": "",
+        "path": "/",
+        "http_status": 200,
+        "result": "PASS"
+      },
+      {
+        "menu_item_id": 33,
+        "label": "Услуги",
+        "menu": "Footer",
+        "url": "",
+        "path": "/",
+        "http_status": 200,
+        "result": "PASS"
+      },
+      {
+        "menu_item_id": 34,
+        "label": "О центре",
+        "menu": "Footer",
+        "url": "",
+        "path": "/",
+        "http_status": 200,
+        "result": "PASS"
+      },
+      {
+        "menu_item_id": 35,
+        "label": "Контакты",
+        "menu": "Footer",
+        "url": "",
+        "path": "/",
+        "http_status": 200,
+        "result": "PASS"
+      },
+      {
+        "menu_item_id": 37,
+        "label": "Политика конфиденциальности",
+        "menu": "Legal",
+        "url": "",
+        "path": "/",
+        "http_status": 200,
+        "result": "PASS"
+      },
+      {
+        "menu_item_id": 38,
+        "label": "Пользовательское соглашение",
+        "menu": "Legal",
+        "url": "",
+        "path": "/",
+        "http_status": 200,
+        "result": "PASS"
+      },
+      {
+        "menu_item_id": 39,
+        "label": "Согласие на обработку персональных данных",
+        "menu": "Legal",
+        "url": "",
+        "path": "/",
+        "http_status": 200,
+        "result": "PASS"
+      },
+      {
+        "menu_item_id": 40,
+        "label": "Политика Cookie-файлов",
+        "menu": "Legal",
+        "url": "",
+        "path": "/",
+        "http_status": 200,
+        "result": "PASS"
+      }
+    ],
+    "items": [
+      {
+        "menu_item_id": 27,
+        "menu_name": "Primary",
+        "menu_slug": "primary",
+        "label": "Лечение и профилактика",
+        "menu_order": 1,
+        "item_type": "post_type",
+        "object_id": "5",
+        "object_type": "page",
+        "url": "",
+        "parent_item_id": "0"
+      },
+      {
+        "menu_item_id": 301,
+        "menu_name": "Primary",
+        "menu_slug": "primary",
+        "label": "Зависимости",
+        "menu_order": 2,
+        "item_type": "custom",
+        "object_id": "0",
+        "object_type": "custom",
+        "url": "/uslugi/zavisimosti/",
+        "parent_item_id": "0"
+      },
+      {
+        "menu_item_id": 29,
+        "menu_name": "Primary",
+        "menu_slug": "primary",
+        "label": "О центре",
+        "menu_order": 3,
+        "item_type": "post_type",
+        "object_id": "11",
+        "object_type": "page",
+        "url": "",
+        "parent_item_id": "0"
+      },
+      {
+        "menu_item_id": 30,
+        "menu_name": "Primary",
+        "menu_slug": "primary",
+        "label": "Отзывы",
+        "menu_order": 4,
+        "item_type": "post_type",
+        "object_id": "18",
+        "object_type": "page",
+        "url": "",
+        "parent_item_id": "0"
+      },
+      {
+        "menu_item_id": 31,
+        "menu_name": "Primary",
+        "menu_slug": "primary",
+        "label": "Статьи",
+        "menu_order": 5,
+        "item_type": "post_type",
+        "object_id": "19",
+        "object_type": "page",
+        "url": "",
+        "parent_item_id": "0"
+      },
+      {
+        "menu_item_id": 32,
+        "menu_name": "Primary",
+        "menu_slug": "primary",
+        "label": "Контакты",
+        "menu_order": 6,
+        "item_type": "post_type",
+        "object_id": "20",
+        "object_type": "page",
+        "url": "",
+        "parent_item_id": "0"
+      },
+      {
+        "menu_item_id": 33,
+        "menu_name": "Footer",
+        "menu_slug": "footer",
+        "label": "Услуги",
+        "menu_order": 0,
+        "item_type": "post_type",
+        "object_id": "5",
+        "object_type": "page",
+        "url": "",
+        "parent_item_id": "0"
+      },
+      {
+        "menu_item_id": 34,
+        "menu_name": "Footer",
+        "menu_slug": "footer",
+        "label": "О центре",
+        "menu_order": 2,
+        "item_type": "post_type",
+        "object_id": "11",
+        "object_type": "page",
+        "url": "",
+        "parent_item_id": "0"
+      },
+      {
+        "menu_item_id": 35,
+        "menu_name": "Footer",
+        "menu_slug": "footer",
+        "label": "Контакты",
+        "menu_order": 3,
+        "item_type": "post_type",
+        "object_id": "20",
+        "object_type": "page",
+        "url": "",
+        "parent_item_id": "0"
+      },
+      {
+        "menu_item_id": 37,
+        "menu_name": "Legal",
+        "menu_slug": "legal",
+        "label": "Политика конфиденциальности",
+        "menu_order": 1,
+        "item_type": "post_type",
+        "object_id": "3",
+        "object_type": "page",
+        "url": "",
+        "parent_item_id": "0"
+      },
+      {
+        "menu_item_id": 38,
+        "menu_name": "Legal",
+        "menu_slug": "legal",
+        "label": "Пользовательское соглашение",
+        "menu_order": 2,
+        "item_type": "post_type",
+        "object_id": "22",
+        "object_type": "page",
+        "url": "",
+        "parent_item_id": "0"
+      },
+      {
+        "menu_item_id": 39,
+        "menu_name": "Legal",
+        "menu_slug": "legal",
+        "label": "Согласие на обработку персональных данных",
+        "menu_order": 3,
+        "item_type": "post_type",
+        "object_id": "23",
+        "object_type": "page",
+        "url": "",
+        "parent_item_id": "0"
+      },
+      {
+        "menu_item_id": 40,
+        "menu_name": "Legal",
+        "menu_slug": "legal",
+        "label": "Политика Cookie-файлов",
+        "menu_order": 4,
+        "item_type": "post_type",
+        "object_id": "24",
+        "object_type": "page",
+        "url": "",
+        "parent_item_id": "0"
+      }
+    ],
+    "result": "PASS"
+  },
+  "db": {
+    "task_id": "V9-06E28",
+    "generated_at": "2026-07-09T19:10:25.698069+00:00",
+    "counts": {
+      "page": {
+        "auto-draft": 1,
+        "publish": 15,
+        "trash": 8
+      },
+      "post": {
+        "publish": 1
+      },
+      "service": {
+        "publish": 17
+      },
+      "review": {},
+      "nav_menu_item": {
+        "publish": 13
+      }
+    },
+    "protected_objects": {
+      "front_page_4": {
+        "ID": 4,
+        "post_title": "Главная",
+        "post_name": "glavnaya",
+        "post_status": "publish",
+        "post_type": "page",
+        "post_modified": "2026-07-08 20:14:08"
+      },
+      "privacy_page_3": {
+        "ID": 3,
+        "post_title": "Политика конфиденциальности",
+        "post_name": "privacy-policy",
+        "post_status": "publish",
+        "post_type": "page",
+        "post_modified": "2026-07-02 18:53:38"
+      },
+      "blog_archive_19": {
+        "ID": 19,
+        "post_title": "Статьи",
+        "post_name": "blog",
+        "post_status": "publish",
+        "post_type": "page",
+        "post_modified": "2026-07-02 18:53:38"
+      },
+      "demo_post_750": {
+        "ID": 750,
+        "post_title": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём",
+        "post_name": "nazvanie-stati",
+        "post_status": "publish",
+        "post_type": "post",
+        "post_modified": "2026-05-05 10:00:00"
+      },
+      "o_centre_11": {
+        "ID": 11,
+        "post_title": "О центре",
+        "post_name": "o-centre",
+        "post_status": "publish",
+        "post_type": "page",
+        "post_modified": "2026-07-05 18:46:24"
+      }
+    },
+    "services": {
+      "73": {
+        "ID": 73,
+        "post_title": "Зависимости",
+        "post_name": "zavisimosti",
+        "post_status": "publish",
+        "post_type": "service",
+        "post_modified": "2026-07-04 00:04:34"
+      },
+      "74": {
+        "ID": 74,
+        "post_title": "Лечение алкогольной зависимости",
+        "post_name": "lechenie-alkogolnoy-zavisimosti",
+        "post_status": "publish",
+        "post_type": "service",
+        "post_modified": "2026-07-08 20:16:49"
+      },
+      "77": {
+        "ID": 77,
+        "post_title": "Психическое здоровье",
+        "post_name": "psihicheskoe-zdorovie",
+        "post_status": "publish",
+        "post_type": "service",
+        "post_modified": "2026-07-04 00:04:34"
+      },
+      "84": {
+        "ID": 84,
+        "post_title": "Расстройства пищевого поведения",
+        "post_name": "rasstroystva-pischevogo-povedeniya",
+        "post_status": "publish",
+        "post_type": "service",
+        "post_modified": "2026-07-04 00:04:34"
+      }
+    },
+    "e27b_trashed": {
+      "9": {
+        "ID": 9,
+        "post_title": "Генотипирование",
+        "post_name": "genotipirovanie__trashed",
+        "post_status": "trash",
+        "post_type": "page",
+        "post_modified": "2026-07-09 20:20:06"
+      },
+      "10": {
+        "ID": 10,
+        "post_title": "Специалисты",
+        "post_name": "specyalisty__trashed",
+        "post_status": "trash",
+        "post_type": "page",
+        "post_modified": "2026-07-09 20:20:06"
+      },
+      "17": {
+        "ID": 17,
+        "post_title": "Интервью и СМИ",
+        "post_name": "intervyu-i-smi__trashed",
+        "post_status": "trash",
+        "post_type": "page",
+        "post_modified": "2026-07-09 20:20:06"
+      },
+      "21": {
+        "ID": 21,
+        "post_title": "Правовая информация",
+        "post_name": "pravovaya-informaciya-pilzovatelyu__trashed",
+        "post_status": "trash",
+        "post_type": "page",
+        "post_modified": "2026-07-09 20:20:06"
+      },
+      "25": {
+        "ID": 25,
+        "post_title": "Политика конфиденциальности (системная)",
+        "post_name": "privacy-policy-page__trashed",
+        "post_status": "trash",
+        "post_type": "page",
+        "post_modified": "2026-07-09 20:20:06"
+      }
+    },
+    "e27d_trashed": {
+      "6": {
+        "ID": 6,
+        "post_title": "Зависимости",
+        "post_name": "zavisimosti__trashed",
+        "post_status": "trash",
+        "post_type": "page",
+        "post_modified": "2026-07-09 21:34:47"
+      },
+      "7": {
+        "ID": 7,
+        "post_title": "Психическое здоровье",
+        "post_name": "psihicheskoe-zdorovie__trashed",
+        "post_status": "trash",
+        "post_type": "page",
+        "post_modified": "2026-07-09 21:34:47"
+      },
+      "8": {
+        "ID": 8,
+        "post_title": "Расстройства пищевого поведения",
+        "post_name": "rasstroystva-pischevogo-povedeniya__trashed",
+        "post_status": "trash",
+        "post_type": "page",
+        "post_modified": "2026-07-09 21:34:47"
+      }
+    },
+    "options": {
+      "page_on_front": "4",
+      "page_for_posts": "19",
+      "show_on_front": "page",
+      "permalink_structure": "/blog/%postname%/",
+      "blog_public": "0",
+      "wp_page_for_privacy_policy": "3"
+    },
+    "checks": [
+      {
+        "check": "front_page_4_publish",
+        "result": "PASS"
+      },
+      {
+        "check": "privacy_page_3_publish",
+        "result": "PASS"
+      },
+      {
+        "check": "blog_archive_19_publish",
+        "result": "PASS"
+      },
+      {
+        "check": "demo_post_750_publish",
+        "result": "PASS"
+      },
+      {
+        "check": "service_73_publish",
+        "result": "PASS"
+      },
+      {
+        "check": "service_77_publish",
+        "result": "PASS"
+      },
+      {
+        "check": "service_84_publish",
+        "result": "PASS"
+      },
+      {
+        "check": "service_74_publish",
+        "result": "PASS"
+      },
+      {
+        "check": "page_9_trash",
+        "result": "PASS"
+      },
+      {
+        "check": "page_10_trash",
+        "result": "PASS"
+      },
+      {
+        "check": "page_17_trash",
+        "result": "PASS"
+      },
+      {
+        "check": "page_21_trash",
+        "result": "PASS"
+      },
+      {
+        "check": "page_25_trash",
+        "result": "PASS"
+      },
+      {
+        "check": "page_6_trash",
+        "result": "PASS"
+      },
+      {
+        "check": "page_7_trash",
+        "result": "PASS"
+      },
+      {
+        "check": "page_8_trash",
+        "result": "PASS"
+      },
+      {
+        "check": "page_on_front_is_4",
+        "result": "PASS"
+      },
+      {
+        "check": "page_for_posts_is_19",
+        "result": "PASS"
+      },
+      {
+        "check": "privacy_option_is_3",
+        "result": "PASS"
+      },
+      {
+        "check": "permalink_blog_postname",
+        "result": "PASS",
+        "value": "/blog/%postname%/"
+      },
+      {
+        "check": "blog_public_recorded",
+        "result": "PASS",
+        "value": "0"
+      },
+      {
+        "check": "critical_mojibake_absent",
+        "result": "PASS",
+        "samples": []
+      }
+    ],
+    "result": "PASS"
+  },
+  "acf": {
+    "acf_pro_active": true,
+    "acf_groups_registered": 44,
+    "acf_group_keys_sample": [
+      "group_fp02_blog_post_article_meta",
+      "group_fp02_blog_archive_settings",
+      "group_fp02_page_contacts",
+      "group_fp02_page_home",
+      "group_fp02_page_home",
+      "group_fp02_page_home",
+      "group_fp02_page_home",
+      "group_fp02_page_institutional",
+      "group_fp02_page_institutional",
+      "group_fp02_page_institutional",
+      "group_fp02_page_institutional",
+      "group_fp02_page_institutional",
+      "group_fp02_page_legal",
+      "group_fp02_page_reviews",
+      "group_fp02_page_services_hub",
+      "group_fp02_page_services_hub",
+      "group_fp02_page_services_hub",
+      "group_fp02_page_services_hub",
+      "group_fp02_block_cta_bands",
+      "group_fp02_block_comfort"
+    ],
+    "acf_json_runtime_count": 8,
+    "removed_aliases_detected": [],
+    "site_settings": [
+      {
+        "field": "organisation_name",
+        "empty": false,
+        "result": "PASS"
+      },
+      {
+        "field": "phone_primary",
+        "empty": false,
+        "result": "PASS"
+      },
+      {
+        "field": "global_cta_title",
+        "empty": false,
+        "result": "PASS"
+      },
+      {
+        "field": "social_links",
+        "empty": false,
+        "result": "PASS"
+      }
+    ],
+    "spot_checks": [
+      {
+        "scope": "page_11_o_centre",
+        "field": "institutional_intro",
+        "empty": true,
+        "row_count": 0,
+        "result": "WARN"
+      },
+      {
+        "scope": "page_11_o_centre",
+        "field": "institutional_blocks",
+        "empty": true,
+        "row_count": 0,
+        "result": "WARN"
+      },
+      {
+        "scope": "page_11_o_centre",
+        "field": "institutional_team",
+        "empty": true,
+        "row_count": 0,
+        "result": "WARN"
+      },
+      {
+        "scope": "page_19_blog_archive",
+        "field": "blog_archive_intro",
+        "empty": false,
+        "row_count": 1,
+        "result": "PASS"
+      },
+      {
+        "scope": "page_19_blog_archive",
+        "field": "blog_archive_featured",
+        "empty": true,
+        "row_count": 0,
+        "result": "WARN"
+      },
+      {
+        "scope": "post_750_demo",
+        "field": "article_intro",
+        "empty": true,
+        "row_count": 0,
+        "result": "WARN"
+      },
+      {
+        "scope": "post_750_demo",
+        "field": "article_body",
+        "empty": true,
+        "row_count": 0,
+        "result": "WARN"
+      },
+      {
+        "scope": "post_750_demo",
+        "field": "article_conclusion",
+        "empty": true,
+        "row_count": 0,
+        "result": "WARN"
+      },
+      {
+        "scope": "post_750_demo",
+        "field": "article_sources",
+        "empty": true,
+        "row_count": 0,
+        "result": "WARN"
+      },
+      {
+        "scope": "post_750_demo",
+        "field": "article_cta",
+        "empty": true,
+        "row_count": 0,
+        "result": "WARN"
+      },
+      {
+        "scope": "service_73",
+        "field": "hero_lead",
+        "empty": false,
+        "row_count": 1,
+        "result": "PASS"
+      },
+      {
+        "scope": "service_73",
+        "field": "programme_items",
+        "empty": false,
+        "row_count": 4,
+        "result": "PASS"
+      },
+      {
+        "scope": "service_73",
+        "field": "stages",
+        "empty": false,
+        "row_count": 4,
+        "result": "PASS"
+      },
+      {
+        "scope": "service_73",
+        "field": "faq_items",
+        "empty": false,
+        "row_count": 5,
+        "result": "PASS"
+      },
+      {
+        "scope": "service_74",
+        "field": "intro_note",
+        "empty": false,
+        "row_count": 1,
+        "result": "PASS"
+      },
+      {
+        "scope": "service_74",
+        "field": "signs_items",
+        "empty": false,
+        "row_count": 9,
+        "result": "PASS"
+      },
+      {
+        "scope": "service_74",
+        "field": "programme_items",
+        "empty": false,
+        "row_count": 4,
+        "result": "PASS"
+      }
+    ],
+    "admin_mojibake_post_ids": [],
+    "result": "PARTIAL",
+    "task_id": "V9-06E28",
+    "generated_at": "2026-07-09T19:10:26.893736+00:00"
+  },
+  "template": {
+    "task_id": "V9-06E28",
+    "generated_at": "2026-07-09T19:10:31.641313+00:00",
+    "source_theme": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky",
+    "runtime_theme": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky",
+    "source_plugin": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core",
+    "runtime_plugin": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\plugins\\shpigovsky-core",
+    "theme_compare_summary": {
+      "total": 617,
+      "missing_runtime": 0,
+      "hash_mismatch": 2
+    },
+    "plugin_compare_summary": {
+      "total": 17,
+      "missing_runtime": 0,
+      "hash_mismatch": 0
+    },
+    "theme_missing_runtime": [],
+    "plugin_missing_runtime": [],
+    "hash_mismatches_sample": [
+      {
+        "relative_path": "template-parts/service/nature.php",
+        "source_exists": true,
+        "runtime_exists": true,
+        "source_sha256": "D522713AAD85AF43D3302869481FDF17FDC9C83A8342F0928E1328699EDFD2E6",
+        "runtime_sha256": "7AFDF522FE4A57C6DE5B5924DABC69CC354451FC1B76139071C3EC7A4505F6D1",
+        "match": false
+      },
+      {
+        "relative_path": "template-parts/service/subdivision-stack.php",
+        "source_exists": true,
+        "runtime_exists": true,
+        "source_sha256": "A13F4D98763E2A05E37843AACC150C60961559F5020E105113525EA3DFE422C1",
+        "runtime_sha256": "2A6A00CDE0626FFE3A6526AD2009A72CFA231FD594EDDBD076816AAED453DCEC",
+        "match": false
+      }
+    ],
+    "acf_json_source_count": 21,
+    "acf_json_runtime_count": 8,
+    "acf_json_only_in_source": [
+      "group_fp02_block_cta_bands.json",
+      "group_fp02_block_final_form.json",
+      "group_fp02_block_specialists.json",
+      "group_fp02_page_contacts.json",
+      "group_fp02_page_home.json",
+      "group_fp02_page_legal.json",
+      "group_fp02_page_reviews.json",
+      "group_fp02_page_services_hub.json",
+      "group_fp02_service_faq.json",
+      "group_fp02_service_layout_hero.json"
+    ],
+    "acf_json_only_in_runtime": [],
+    "service_permalinks_source_exists": true,
+    "service_permalinks_runtime_exists": true,
+    "service_permalinks_hash_match": true,
+    "permalink_contract": {
+      "permalink_structure": "/blog/%postname%/",
+      "service_rewrite": true,
+      "service_74_slug": "lechenie-alkogolnoy-zavisimosti",
+      "service_74_link": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+    },
+    "result": "PASS"
+  },
+  "frontend": {
+    "task_id": "V9-06E28",
+    "generated_at": "2026-07-09T19:10:41.675526+00:00",
+    "routes": [
+      {
+        "route": "/",
+        "http_status": 200,
+        "desktop": "PASS",
+        "mobile": "PASS",
+        "header": true,
+        "footer": true,
+        "h1": "Шпиговский дом",
+        "v9_css": true,
+        "v9_js": true,
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "route": "/o-centre/",
+        "http_status": 200,
+        "desktop": "PASS",
+        "mobile": "PASS",
+        "header": true,
+        "footer": true,
+        "h1": "Шпиговский дом",
+        "v9_css": true,
+        "v9_js": true,
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "route": "/blog/",
+        "http_status": 200,
+        "desktop": "PASS",
+        "mobile": "PASS",
+        "header": true,
+        "footer": true,
+        "h1": "Статьи о зависимостях, диагностике и методах лечения",
+        "v9_css": true,
+        "v9_js": true,
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "route": "/blog/nazvanie-stati/",
+        "http_status": 200,
+        "desktop": "PASS",
+        "mobile": "PASS",
+        "header": true,
+        "footer": true,
+        "h1": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём",
+        "v9_css": true,
+        "v9_js": true,
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "route": "/uslugi/",
+        "http_status": 200,
+        "desktop": "PASS",
+        "mobile": "PASS",
+        "header": true,
+        "footer": true,
+        "h1": "Лечение и профилактика",
+        "v9_css": true,
+        "v9_js": true,
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "route": "/uslugi/zavisimosti/",
+        "http_status": 200,
+        "desktop": "PASS",
+        "mobile": "PASS",
+        "header": true,
+        "footer": true,
+        "h1": "Зависимости",
+        "v9_css": true,
+        "v9_js": true,
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+        "http_status": 200,
+        "desktop": "PASS",
+        "mobile": "PASS",
+        "header": true,
+        "footer": true,
+        "h1": "Центр лечения алкогольной зависимости",
+        "v9_css": true,
+        "v9_js": true,
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "route": "/kontakty/",
+        "http_status": 200,
+        "desktop": "PASS",
+        "mobile": "PASS",
+        "header": true,
+        "footer": true,
+        "h1": "Контакты",
+        "v9_css": true,
+        "v9_js": true,
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "route": "/otzyvy/",
+        "http_status": 200,
+        "desktop": "PASS",
+        "mobile": "PASS",
+        "header": true,
+        "footer": true,
+        "h1": "Отзывы о&nbsp;центре лечения и&nbsp;профилактики зависимостей",
+        "v9_css": true,
+        "v9_js": true,
+        "result": "PASS",
+        "notes": null
+      },
+      {
+        "route": "/privacy-policy/",
+        "http_status": 200,
+        "desktop": "PASS",
+        "mobile": "PASS",
+        "header": true,
+        "footer": true,
+        "h1": "Политика конфиденциальности",
+        "v9_css": true,
+        "v9_js": true,
+        "result": "PASS",
+        "notes": null
+      }
+    ],
+    "result": "PASS"
+  },
+  "forms": {
+    "task_id": "V9-06E28",
+    "generated_at": "2026-07-09T19:10:44.700511+00:00",
+    "forms": [
+      {
+        "route": "/",
+        "forms_count": 2,
+        "submit_present": true,
+        "required_fields_marker": true,
+        "external_actions": [],
+        "production_endpoint_hardcoded": [],
+        "submit_policy": "NOT_SENT_BY_POLICY",
+        "result": "PASS"
+      },
+      {
+        "route": "/kontakty/",
+        "forms_count": 1,
+        "submit_present": true,
+        "required_fields_marker": true,
+        "external_actions": [],
+        "production_endpoint_hardcoded": [],
+        "submit_policy": "NOT_SENT_BY_POLICY",
+        "result": "PASS"
+      },
+      {
+        "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+        "forms_count": 2,
+        "submit_present": true,
+        "required_fields_marker": true,
+        "external_actions": [],
+        "production_endpoint_hardcoded": [],
+        "submit_policy": "NOT_SENT_BY_POLICY",
+        "result": "PASS"
+      }
+    ],
+    "result": "PASS"
+  },
+  "blog": {
+    "task_id": "V9-06E28",
+    "generated_at": "2026-07-09T19:10:46.832633+00:00",
+    "checks": [
+      {
+        "check": "archive_http_200",
+        "result": "PASS"
+      },
+      {
+        "check": "archive_not_empty_state",
+        "result": "PASS"
+      },
+      {
+        "check": "demo_card_links_single",
+        "result": "PASS"
+      },
+      {
+        "check": "single_http_200",
+        "result": "PASS"
+      },
+      {
+        "check": "single_owner_750",
+        "result": "PASS"
+      },
+      {
+        "check": "toc_or_body_visible",
+        "result": "PASS"
+      },
+      {
+        "check": "no_mojibake_single",
+        "result": "PASS"
+      },
+      {
+        "check": "demo_status_documented",
+        "result": "PASS",
+        "note": "ACCEPTED_LIMITATION demo post #750 local MVP"
+      }
+    ],
+    "archive_h1": "Статьи о зависимостях, диагностике и методах лечения",
+    "single_h1": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём",
+    "result": "PASS"
+  },
+  "services": {
+    "task_id": "V9-06E28",
+    "generated_at": "2026-07-09T19:10:52.388462+00:00",
+    "checks": [
+      {
+        "route": "/uslugi/",
+        "http_status": 200,
+        "owner_id": 5,
+        "expected_id": 5,
+        "structured_sections": true,
+        "result": "PASS"
+      },
+      {
+        "route": "/uslugi/zavisimosti/",
+        "http_status": 200,
+        "owner_id": 73,
+        "expected_id": 73,
+        "structured_sections": true,
+        "result": "PASS"
+      },
+      {
+        "route": "/uslugi/psihicheskoe-zdorovie/",
+        "http_status": 200,
+        "owner_id": 77,
+        "expected_id": 77,
+        "structured_sections": true,
+        "result": "PASS"
+      },
+      {
+        "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+        "http_status": 200,
+        "owner_id": 84,
+        "expected_id": 84,
+        "structured_sections": true,
+        "result": "PASS"
+      },
+      {
+        "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+        "http_status": 200,
+        "owner_id": 74,
+        "expected_id": 74,
+        "structured_sections": true,
+        "result": "PASS"
+      },
+      {
+        "check": "shadow_page_6_trash",
+        "result": "PASS"
+      },
+      {
+        "check": "shadow_page_7_trash",
+        "result": "PASS"
+      },
+      {
+        "check": "shadow_page_8_trash",
+        "result": "PASS"
+      }
+    ],
+    "result": "PASS"
+  },
+  "legal": {
+    "task_id": "V9-06E28",
+    "generated_at": "2026-07-09T19:10:53.365405+00:00",
+    "options": {
+      "page_on_front": "4",
+      "page_for_posts": "19",
+      "show_on_front": "page",
+      "permalink_structure": "/blog/%postname%/",
+      "blog_public": "0",
+      "wp_page_for_privacy_policy": "3"
+    },
+    "checks": [
+      {
+        "check": "privacy_route_200",
+        "result": "PASS"
+      },
+      {
+        "check": "privacy_page_3_publish",
+        "result": "PASS"
+      },
+      {
+        "check": "duplicate_privacy_25_trash",
+        "result": "PASS"
+      },
+      {
+        "check": "privacy_option_points_to_3",
+        "result": "PASS"
+      },
+      {
+        "check": "blog_public_recorded",
+        "result": "PASS",
+        "value": "0"
+      },
+      {
+        "check": "no_policy_text_mutation_in_task",
+        "result": "PASS",
+        "note": "read-only QA"
+      }
+    ],
+    "result": "PASS"
+  },
+  "trash": {
+    "task_id": "V9-06E28",
+    "generated_at": "2026-07-09T19:10:53.426329+00:00",
+    "e27b_e27d_trashed_pages": [
+      {
+        "ID": 9,
+        "post_title": "Генотипирование",
+        "post_status": "trash"
+      },
+      {
+        "ID": 10,
+        "post_title": "Специалисты",
+        "post_status": "trash"
+      },
+      {
+        "ID": 17,
+        "post_title": "Интервью и СМИ",
+        "post_status": "trash"
+      },
+      {
+        "ID": 21,
+        "post_title": "Правовая информация",
+        "post_status": "trash"
+      },
+      {
+        "ID": 25,
+        "post_title": "Политика конфиденциальности (системная)",
+        "post_status": "trash"
+      },
+      {
+        "ID": 6,
+        "post_title": "Зависимости",
+        "post_status": "trash"
+      },
+      {
+        "ID": 7,
+        "post_title": "Психическое здоровье",
+        "post_status": "trash"
+      },
+      {
+        "ID": 8,
+        "post_title": "Расстройства пищевого поведения",
+        "post_status": "trash"
+      }
+    ],
+    "all_expected_trash": true,
+    "checkpoints_found": [
+      {
+        "path": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e27d-page-service-ownership-implementation-pre-20260709-183427",
+        "name": "v9-06e27d-page-service-ownership-implementation-pre-20260709-183427",
+        "exists": true
+      },
+      {
+        "path": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e27b-low-risk-obsolete-cleanup-pre-20260709-171947",
+        "name": "v9-06e27b-low-risk-obsolete-cleanup-pre-20260709-171947",
+        "exists": true
+      }
+    ],
+    "rollback_docs": [
+      "architecture/FP-0002-V9-06E27B-ROLLBACK-INSTRUCTIONS-v1.md",
+      "architecture/FP-0002-V9-06E27D-ROLLBACK-INSTRUCTIONS-v1.md"
+    ],
+    "qa_db_checkpoint_created": false,
+    "result": "PASS"
+  },
+  "security": {
+    "acf_pro_active": true,
+    "classic_editor_active": true,
+    "shpigovsky_core_active": true,
+    "mu_plugins": [
+      "mars-local-runtime.php"
+    ],
+    "wpilot": {
+      "detected": false
+    },
+    "active_plugins": [
+      "acf-extended-pro/acf-extended.php",
+      "advanced-custom-fields-pro/acf.php",
+      "classic-editor/classic-editor.php",
+      "metacode-wpilot/metacode-wpilot.php",
+      "shpigovsky-core/shpigovsky-core.php"
+    ],
+    "checks": [
+      {
+        "check": "acf_pro_active",
+        "result": "PASS"
+      },
+      {
+        "check": "shpigovsky_core_active",
+        "result": "PASS"
+      },
+      {
+        "check": "wpilot_write_disabled",
+        "result": "PASS"
+      },
+      {
+        "check": "no_secrets_in_reports",
+        "result": "PASS"
+      }
+    ],
+    "task_id": "V9-06E28",
+    "generated_at": "2026-07-09T19:10:54.529652+00:00",
+    "result": "PASS"
+  },
+  "issues": {
+    "task_id": "V9-06E28",
+    "generated_at": "2026-07-09T19:10:54.529685+00:00",
+    "issues": [
+      {
+        "id": "MN_ACF_EMPTY",
+        "severity": "MINOR",
+        "title": "Some ACF spot-check fields empty",
+        "note": "Non-critical empty fields"
+      },
+      {
+        "id": "L1",
+        "severity": "ACCEPTED_LIMITATION",
+        "title": "Demo blog post #750",
+        "note": "Local MVP demo content; not production editorial."
+      },
+      {
+        "id": "L2",
+        "severity": "ACCEPTED_LIMITATION",
+        "title": "Placeholder FAQ/copy on some service sections",
+        "note": "D8-C LOCAL_MVP_PLACEHOLDER values retained."
+      },
+      {
+        "id": "L3",
+        "severity": "ACCEPTED_LIMITATION",
+        "title": "blog_public local visibility",
+        "note": "Recorded as-is; local non-production indexing posture."
+      }
+    ],
+    "counts": {
+      "BLOCKER": 0,
+      "MAJOR": 0,
+      "MINOR": 1,
+      "ACCEPTED_LIMITATION": 3
+    },
+    "result": "PASS"
+  },
+  "go_no_go": {
+    "task_id": "V9-06E28",
+    "generated_at": "2026-07-09T19:10:54.529691+00:00",
+    "decision": "GO_WITH_MINOR_POLISH",
+    "blocker_count": 0,
+    "major_count": 0,
+    "minor_count": 1,
+    "accepted_limitation_count": 3,
+    "core_routes_pass": true,
+    "rationale": "blockers=0 majors=0 minors=1",
+    "result": "GO_WITH_MINOR_POLISH"
+  },
+  "contract": {
+    "task_id": "V9-06E28",
+    "generated_at": "2026-07-09T19:10:54.529708+00:00",
+    "baseline_commit": "60291b8e52de4745ebc029d80a1b33e359516e13",
+    "actual_head": "84dd9b07c71c51dff75f293056c9846c3ade0e88",
+    "total_routes_checked": 35,
+    "total_routes_passing": 35,
+    "accepted_limitations": 3,
+    "blocker_count": 0,
+    "major_count": 0,
+    "minor_count": 1,
+    "db_mutation_count": 0,
+    "source_mutation_count": 0,
+    "wordpress_local_readiness_accepted": true,
+    "next_step": "CREATE_V9_06E29_OPERATOR_VISUAL_POLISH_TASK",
+    "result": "PASS"
+  },
+  "no_mutation": {
+    "task_id": "V9-06E28",
+    "generated_at": "2026-07-09T19:10:54.529698+00:00",
+    "db_write_count_expected": 0,
+    "db_write_count_actual": 0,
+    "source_mutation_expected": 0,
+    "before": {
+      "options": {
+        "page_on_front": "4",
+        "page_for_posts": "19",
+        "show_on_front": "page",
+        "permalink_structure": "/blog/%postname%/",
+        "blog_public": "0",
+        "wp_page_for_privacy_policy": "3"
+      },
+      "trash_ids": {
+        "6": "trash",
+        "7": "trash",
+        "8": "trash",
+        "9": "trash",
+        "10": "trash",
+        "17": "trash",
+        "21": "trash",
+        "25": "trash"
+      },
+      "menu_checksum": "D7FD8F74EF6A0AC025AC8EB7F8DDC48A0AA03AFA9ACCFE71AA1C929A96F1DEE7",
+      "page_counts": {}
+    },
+    "after": {
+      "options": {
+        "page_on_front": "4",
+        "page_for_posts": "19",
+        "show_on_front": "page",
+        "permalink_structure": "/blog/%postname%/",
+        "blog_public": "0",
+        "wp_page_for_privacy_policy": "3"
+      },
+      "trash_ids": {
+        "6": "trash",
+        "7": "trash",
+        "8": "trash",
+        "9": "trash",
+        "10": "trash",
+        "17": "trash",
+        "21": "trash",
+        "25": "trash"
+      },
+      "menu_checksum": "D7FD8F74EF6A0AC025AC8EB7F8DDC48A0AA03AFA9ACCFE71AA1C929A96F1DEE7",
+      "page_counts": {}
+    },
+    "menu_checksum_unchanged": true,
+    "options_unchanged": true,
+    "trash_state_unchanged": true,
+    "result": "PASS"
+  },
+  "verdict": {
+    "task_id": "V9-06E28",
+    "generated_at": "2026-07-09T19:10:54.529724+00:00",
+    "preflight": {
+      "task_id": "V9-06E28",
+      "generated_at": "2026-07-09T19:09:37.455537+00:00",
+      "volume": {
+        "DriveLetter": "X",
+        "FileSystemLabel": "AI WS",
+        "HealthStatus": "Healthy"
+      },
+      "repository": "X:\\AI MARS",
+      "branch": "mars/canonical-post-recovery",
+      "local_head": "84dd9b07c71c51dff75f293056c9846c3ade0e88",
+      "local_short_head": "84dd9b07",
+      "remote_tracking_head": "7a44c02c40cdf72b02307e1f015736ce1a0080ca",
+      "remote_actual_head": "7a44c02c40cdf72b02307e1f015736ce1a0080ca",
+      "ahead": 1,
+      "behind": 0,
+      "required_baseline": "60291b8e52de4745ebc029d80a1b33e359516e13",
+      "baseline_ancestor_check": "PASS",
+      "head_note": "HEAD advanced to 84dd9b07; baseline 60291b8e is ancestor.",
+      "pre_existing_staged_files": [],
+      "foreign_wip": true,
+      "result": "PASS"
+    },
+    "final_verdict": "PASS",
+    "read_only_discipline": "PASS",
+    "go_no_go": "GO_WITH_MINOR_POLISH",
+    "recommended_next_action": "CREATE_V9_06E29_OPERATOR_VISUAL_POLISH_TASK",
+    "area_results": {
+      "route": "PASS",
+      "menu": "PASS",
+      "db": "PASS",
+      "acf": "PARTIAL",
+      "template": "PASS",
+      "frontend": "PASS",
+      "forms": "PASS",
+      "blog": "PASS",
+      "services": "PASS",
+      "legal": "PASS",
+      "trash": "PASS",
+      "security": "PASS"
+    }
+  }
+}

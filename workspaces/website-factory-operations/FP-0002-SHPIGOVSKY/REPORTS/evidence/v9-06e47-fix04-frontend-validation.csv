@@ -1,0 +1,13 @@
+route,url,http,has_signs,has_read_more,result,notes
+home,http://shpigovsky.test/,200,false,false,PASS,frozen Home; no signs markup
+uslugi,http://shpigovsky.test/uslugi/,200,false,false,PASS,frozen hub; no signs markup
+zavisimosti,http://shpigovsky.test/uslugi/zavisimosti/,200,false,false,PASS,section #73; no service signs
+psihicheskoe,http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/,200,false,false,PASS,
+rpp,http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/,200,false,false,PASS,
+alcohol,http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/,200,true,true,PASS,toggle validated
+p314,http://shpigovsky.test/?p=314,200,false,false,PASS,no signs editorial seeded
+p78,http://shpigovsky.test/?p=78,200,false,false,PASS,no signs editorial seeded
+blog,http://shpigovsky.test/blog/,200,false,false,PASS,
+specyalisty,http://shpigovsky.test/specyalisty/,200,false,false,PASS,
+o-centre,http://shpigovsky.test/o-centre/,200,false,false,PASS,
+kontakty,http://shpigovsky.test/kontakty/,200,false,false,PASS,

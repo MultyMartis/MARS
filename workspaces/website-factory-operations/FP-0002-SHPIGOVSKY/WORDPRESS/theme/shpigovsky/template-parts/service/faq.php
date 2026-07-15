@@ -19,11 +19,17 @@ if ( empty( $faq_items ) ) {
 
 $section_id = 'subdivision' === $variant ? 'service-subdivision-faq' : 'service-leaf-faq';
 $heading_id = $section_id . '-heading';
+$faq_heading = __( 'Нас часто спрашивают', 'shpigovsky' );
+
+if ( 'subdivision' === $variant && function_exists( 'shpigovsky_section_text' ) ) {
+	// V9-06E50: ACF SoT; no hardcoded demo when empty (shared emergency title only for leaf).
+	$faq_heading = shpigovsky_section_text( $post_id, 'section_faq_heading', '' );
+}
 ?>
 <section data-reveal class="faq" id="<?php echo esc_attr( $section_id ); ?>" aria-labelledby="<?php echo esc_attr( $heading_id ); ?>">
 	<div class="container">
 		<h2 class="faq__heading" id="<?php echo esc_attr( $heading_id ); ?>">
-			<?php echo esc_html__( 'Нас часто спрашивают', 'shpigovsky' ); ?>
+			<?php echo esc_html( $faq_heading ); ?>
 		</h2>
 
 		<div class="faq__list" data-accordion>

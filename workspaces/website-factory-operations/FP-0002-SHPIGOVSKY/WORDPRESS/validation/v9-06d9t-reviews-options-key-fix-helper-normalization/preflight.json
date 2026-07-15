@@ -1,0 +1,16 @@
+{
+  "volume_label": "AI WS",
+  "branch": "mars/canonical-post-recovery",
+  "local_head": "a72ccd24c72f78fd7970327ce9d0181928016494",
+  "local_head_short": "a72ccd24",
+  "remote_head": "a72ccd24c72f78fd7970327ce9d0181928016494",
+  "remote_head_short": "a72ccd24",
+  "required_d9s_head": "937040c2ceab143861eae987f8a7338bce3a7f65",
+  "d9s_ancestor_present": true,
+  "ahead": 0,
+  "behind": 0,
+  "staged_files": [],
+  "strict_head_gate": "PARTIAL",
+  "strict_head_note": "HEAD advanced beyond D9-S; D9-S ancestor verified for repair baseline",
+  "result": "PASS"
+}

@@ -1,0 +1,185 @@
+{
+    "parent": {
+        "ID": 1030,
+        "title": "Специалисты",
+        "slug": "specyalisty",
+        "status": "publish",
+        "template": "page-templates/generic.php",
+        "url": "http://shpigovsky.test/specyalisty/",
+        "menu_order": 0,
+        "content_len": 206,
+        "excerpt": "",
+        "thumb": 0
+    },
+    "children": [
+        {
+            "ID": 1032,
+            "title": "Казаков",
+            "slug": "kazakov",
+            "status": "publish",
+            "template": "page-templates/generic.php",
+            "url": "http://shpigovsky.test/specyalisty/kazakov/",
+            "menu_order": 0,
+            "content_len": 206,
+            "excerpt": "",
+            "thumb": 0,
+            "content": "<!-- wp:paragraph --><p>Раздел находится в подготовке. Здесь будет опубликована информация по теме страницы.</p><!-- /wp:paragraph -->"
+        },
+        {
+            "ID": 1033,
+            "title": "Костюк",
+            "slug": "kostyuk",
+            "status": "publish",
+            "template": "page-templates/generic.php",
+            "url": "http://shpigovsky.test/specyalisty/kostyuk/",
+            "menu_order": 0,
+            "content_len": 206,
+            "excerpt": "",
+            "thumb": 0,
+            "content": "<!-- wp:paragraph --><p>Раздел находится в подготовке. Здесь будет опубликована информация по теме страницы.</p><!-- /wp:paragraph -->"
+        },
+        {
+            "ID": 1031,
+            "title": "Сергей Шпиговский",
+            "slug": "shipovsky",
+            "status": "publish",
+            "template": "page-templates/generic.php",
+            "url": "http://shpigovsky.test/specyalisty/shipovsky/",
+            "menu_order": 0,
+            "content_len": 206,
+            "excerpt": "",
+            "thumb": 0,
+            "content": "<!-- wp:paragraph --><p>Раздел находится в подготовке. Здесь будет опубликована информация по теме страницы.</p><!-- /wp:paragraph -->"
+        }
+    ],
+    "duplicates": [],
+    "static_slider": [
+        {
+            "image": "img/content/home-specialists/sergey-shpigovsky.webp",
+            "width": 615,
+            "height": 605,
+            "name": "Сергей Юрьевич Шпиговский",
+            "role": "Аддиктолог, интервенционист"
+        },
+        {
+            "image": "img/content/home-specialists/maxim-kazakov.webp",
+            "width": 657,
+            "height": 605,
+            "name": "Максим Михайлович Казаков",
+            "role": "Психолог, преподаватель психологии, гештальт-терапевт"
+        },
+        {
+            "image": "img/content/home-specialists/darya-kostyuk.webp",
+            "width": 643,
+            "height": 610,
+            "name": "Дарья Владимировна Костюк",
+            "role": "Психолог, EMDR терапевт, телесно-ориентированный терапевт"
+        },
+        {
+            "image": "img/content/home-specialists/sergey-shpigovsky.webp",
+            "width": 615,
+            "height": 605,
+            "name": "Сергей Юрьевич Шпиговский",
+            "role": "Аддиктолог, интервенционист"
+        },
+        {
+            "image": "img/content/home-specialists/tatyana-shapiguzova.webp",
+            "width": 643,
+            "height": 610,
+            "name": "Шапигузова Татьяна Андреевна",
+            "role": "Сертифицированный гонг-мастер, звукотерапевт и&nbsp;преподаватель Кундалини йоги."
+        }
+    ],
+    "acf_slider": [
+        {
+            "specialist_photo": false,
+            "specialist_photo_asset": "img/content/home-specialists/sergey-shpigovsky.webp",
+            "specialist_photo_width": "615",
+            "specialist_photo_height": "605",
+            "specialist_name": "Сергей Юрьевич Шпиговский",
+            "specialist_role": "Аддиктолог, интервенционист",
+            "specialist_link": ""
+        },
+        {
+            "specialist_photo": false,
+            "specialist_photo_asset": "img/content/home-specialists/maxim-kazakov.webp",
+            "specialist_photo_width": "657",
+            "specialist_photo_height": "605",
+            "specialist_name": "Максим Михайлович Казаков",
+            "specialist_role": "Психолог, преподаватель психологии, гештальт-терапевт",
+            "specialist_link": ""
+        },
+        {
+            "specialist_photo": false,
+            "specialist_photo_asset": "img/content/home-specialists/darya-kostyuk.webp",
+            "specialist_photo_width": "643",
+            "specialist_photo_height": "610",
+            "specialist_name": "Дарья Владимировна Костюк",
+            "specialist_role": "Психолог, EMDR терапевт, телесно-ориентированный терапевт",
+            "specialist_link": ""
+        },
+        {
+            "specialist_photo": false,
+            "specialist_photo_asset": "img/content/home-specialists/sergey-shpigovsky.webp",
+            "specialist_photo_width": "615",
+            "specialist_photo_height": "605",
+            "specialist_name": "Сергей Юрьевич Шпиговский",
+            "specialist_role": "Аддиктолог, интервенционист",
+            "specialist_link": ""
+        },
+        {
+            "specialist_photo": false,
+            "specialist_photo_asset": "img/content/home-specialists/tatyana-shapiguzova.webp",
+            "specialist_photo_width": "643",
+            "specialist_photo_height": "610",
+            "specialist_name": "Шапигузова Татьяна Андреевна",
+            "specialist_role": "Сертифицированный гонг-мастер, звукотерапевт и&nbsp;преподаватель Кундалини йоги.",
+            "specialist_link": ""
+        }
+    ],
+    "resolved_cards": [
+        {
+            "image": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/img/content/home-specialists/sergey-shpigovsky.webp",
+            "width": 615,
+            "height": 605,
+            "name": "Сергей Юрьевич Шпиговский",
+            "role": "Аддиктолог, интервенционист",
+            "link": ""
+        },
+        {
+            "image": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/img/content/home-specialists/maxim-kazakov.webp",
+            "width": 657,
+            "height": 605,
+            "name": "Максим Михайлович Казаков",
+            "role": "Психолог, преподаватель психологии, гештальт-терапевт",
+            "link": ""
+        },
+        {
+            "image": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/img/content/home-specialists/darya-kostyuk.webp",
+            "width": 643,
+            "height": 610,
+            "name": "Дарья Владимировна Костюк",
+            "role": "Психолог, EMDR терапевт, телесно-ориентированный терапевт",
+            "link": ""
+        },
+        {
+            "image": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/img/content/home-specialists/sergey-shpigovsky.webp",
+            "width": 615,
+            "height": 605,
+            "name": "Сергей Юрьевич Шпиговский",
+            "role": "Аддиктолог, интервенционист",
+            "link": ""
+        },
+        {
+            "image": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/img/content/home-specialists/tatyana-shapiguzova.webp",
+            "width": 643,
+            "height": 610,
+            "name": "Шапигузова Татьяна Андреевна",
+            "role": "Сертифицированный гонг-мастер, звукотерапевт и&nbsp;преподаватель Кундалини йоги.",
+            "link": ""
+        }
+    ],
+    "all_link_url": "http://shpigovsky.test/o-centre/",
+    "all_link_label": "все специалисты",
+    "section_heading": "Специалисты центра"
+}

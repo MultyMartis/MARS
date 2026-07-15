@@ -39,18 +39,20 @@ $section_id = 'service-subdivision-dependencies';
 $heading_id = 'service-subdivision-dependencies-heading';
 
 if ( 'subdivision' === $variant ) {
-	$heading = shpigovsky_get_service_subdivision_dependencies_heading();
-	$lead    = shpigovsky_get_service_field( $post_id, 'intro_text' );
+	// V9-06E50: ACF chrome only — no hardcoded demo when empty. Children list remains automatic.
+	$heading = shpigovsky_section_text( $post_id, 'section_dependencies_heading', '' );
+
+	$lead = shpigovsky_get_section_field( $post_id, 'section_dependencies_lead' );
+
+	if ( '' === $lead ) {
+		$lead = shpigovsky_get_service_field( $post_id, 'intro_text' );
+	}
 
 	if ( '' === $lead ) {
 		$lead = shpigovsky_get_service_field( $post_id, 'hero_lead' );
 	}
 
-	if ( '' === $lead ) {
-		$lead = shpigovsky_get_service_subdivision_dependencies_lead_fallback();
-	}
-
-	$footer_text = shpigovsky_get_service_subdivision_dependencies_footer_fallback();
+	$footer_text = shpigovsky_section_text( $post_id, 'section_dependencies_footer', '' );
 } else {
 	$heading     = shpigovsky_get_service_hero_title( $post_id );
 	$lead        = shpigovsky_get_service_field( $post_id, 'intro_text' );

@@ -1,0 +1,11 @@
+check,expected,actual,result
+#73 edit loads,yes,yes,PASS
+Territory image filled,yes,yes:1239,PASS
+Team image filled,yes,yes:1238,PASS
+Corridor image filled,yes,yes:1709,PASS
+has section_team_image field,yes,yes,PASS
+has section_corridor_image field,yes,yes,PASS
+No Home-as-primary wording,yes,yes,PASS
+Classic editor hidden,yes,still_supports,FAIL
+Home staff untouched,1238,1238,PASS
+Home landscape untouched,1239,1239,PASS

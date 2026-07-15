@@ -1,0 +1,6 @@
+phase,service_editor_role,service_layout_variant,source,result,notes
+visible_before_submit,"service (operator selected)",placeholder,form_replay,READY,"changed only role field + _acf_changed=1"
+meta_before_post,placeholder,placeholder,post_meta,INFO,
+http_post_response,service,placeholder,"wp-admin post.php",PASS,http://shpigovsky.test/wp-admin/post.php?post=78&action=edit&message=1
+meta_after_acf_hooks,service,service_general,post_meta,PASS,"expected service/service_general"
+admin_reload,service,service_general,admin_dom,PASS,"acf=3 bare=0"

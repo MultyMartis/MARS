@@ -1,0 +1,129 @@
+{
+  "routes": {
+    "/uslugi/": {
+      "http_status": 200,
+      "error": null,
+      "post_id": 5,
+      "post_type": "page",
+      "template": "page-templates/services-hub.php",
+      "body_class": "wp-singular page-template page-template-page-templates page-template-services-hub page-template-page-templatesservices-hub-php page page-id-5 page-parent wp-theme-shpigovsky",
+      "main_class": "page-uslugi site-main site-main--services-hub",
+      "hero_section_classes": [
+        "hero hero--inner"
+      ],
+      "services_inner_hero_present": false,
+      "hero_inner_present": true,
+      "hero_image_url": null,
+      "has_final_form_band": true,
+      "has_program_cta_band": false,
+      "has_service_subdivision_start": false,
+      "has_home_rehab_cta_band": false,
+      "hero_meta": [],
+      "hero_media_meta": null,
+      "section_order_sample": [
+        "hero hero--inner",
+        "services-category-hub services-category-hub--addictions services-category-hub--no-gallery",
+        "services-category-hub services-category-hub--mental-health services-category-hub--no-gallery",
+        "services-category-hub services-category-hub--eating-disorders services-category-hub--no-gallery services-category-hub--compact",
+        "home-rehabilitation-program",
+        "faq",
+        "final-form"
+      ]
+    },
+    "/uslugi/zavisimosti/": {
+      "http_status": 200,
+      "error": null,
+      "post_id": 73,
+      "post_type": "service",
+      "template": null,
+      "body_class": "wp-singular service-template-default single single-service postid-73 wp-theme-shpigovsky",
+      "main_class": "page-service-subdivision-v1__main site-main site-main--service site-main--service-subdivision",
+      "hero_section_classes": [
+        "services-inner-hero-v2"
+      ],
+      "services_inner_hero_present": true,
+      "hero_inner_present": false,
+      "hero_image_url": null,
+      "has_final_form_band": true,
+      "has_program_cta_band": true,
+      "has_service_subdivision_start": true,
+      "has_home_rehab_cta_band": false,
+      "hero_meta": [
+        {
+          "meta_key": "hero_lead",
+          "meta_value": "═ряЁртыхэшх л╟ртшёшьюёЄш╗. ╠шэшьры№эюх эряюыэхэшх фы  тшчєры№эющ яЁютхЁъш ьрЁ°ЁєЄр. ╧юыэр  ьшуЁрЎш  ъюэЄхэЄр т√яюыэ хЄё  юЄфхы№эющ Їрчющ."
+        },
+        {
+          "meta_key": "_hero_lead",
+          "meta_value": "field_fp02_hero_lead_service"
+        }
+      ],
+      "hero_media_meta": null,
+      "section_order_sample": [
+        "services-inner-hero-v2",
+        "services-category-section-v2 services-category-section-v2--subdivision-dependencies service-subdivision-dependencies-v1",
+        "program-cta-band-section",
+        "services-program-v2 services-program-v2--play-link services-program-v2--intro-stacked",
+        "service-leaf-stages-v1",
+        "faq",
+        "final-form"
+      ]
+    }
+  },
+  "assets": {
+    "assets/img/content/home-final-form/home-final-form-background.webp": {
+      "static_src_path": "X:\\AI MARS\\workspaces\\fp-0002-shpigovsky-v9\\src\\assets\\img\\content\\home-final-form\\home-final-form-background.webp",
+      "static_dist_path": "X:\\AI MARS\\workspaces\\fp-0002-shpigovsky-v9\\dist\\assets\\img\\content\\home-final-form\\home-final-form-background.webp",
+      "wp_git_theme_path": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\assets\\img\\content\\home-final-form\\home-final-form-background.webp",
+      "runtime_theme_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\assets\\img\\content\\home-final-form\\home-final-form-background.webp",
+      "exists_static_src": false,
+      "exists_static_dist": true,
+      "exists_git_theme": true,
+      "exists_runtime_theme": true,
+      "url_root": "http://shpigovsky.test/assets/img/content/home-final-form/home-final-form-background.webp",
+      "url_root_status": 404,
+      "url_theme": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/img/content/home-final-form/home-final-form-background.webp",
+      "url_theme_status": 200,
+      "static_dist_sha256": "24709e1776acf397b2a644c97a229c4bb0cb12ed8d013e0e65e5fa34ce98ebfa",
+      "git_theme_sha256": "24709e1776acf397b2a644c97a229c4bb0cb12ed8d013e0e65e5fa34ce98ebfa",
+      "runtime_theme_sha256": "24709e1776acf397b2a644c97a229c4bb0cb12ed8d013e0e65e5fa34ce98ebfa"
+    },
+    "assets/img/content/services/services-hero.webp": {
+      "static_src_path": "X:\\AI MARS\\workspaces\\fp-0002-shpigovsky-v9\\src\\assets\\img\\content\\services\\services-hero.webp",
+      "static_dist_path": "X:\\AI MARS\\workspaces\\fp-0002-shpigovsky-v9\\dist\\assets\\img\\content\\services\\services-hero.webp",
+      "wp_git_theme_path": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\assets\\img\\content\\services\\services-hero.webp",
+      "runtime_theme_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\assets\\img\\content\\services\\services-hero.webp",
+      "exists_static_src": false,
+      "exists_static_dist": true,
+      "exists_git_theme": true,
+      "exists_runtime_theme": true,
+      "url_root": "http://shpigovsky.test/assets/img/content/services/services-hero.webp",
+      "url_root_status": 404,
+      "url_theme": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/img/content/services/services-hero.webp",
+      "url_theme_status": 200,
+      "static_dist_sha256": "f4fcac4135e2d7155327ebc6b785ad8e651f4497f9fbdc608b443d0bed586e08",
+      "git_theme_sha256": "f4fcac4135e2d7155327ebc6b785ad8e651f4497f9fbdc608b443d0bed586e08",
+      "runtime_theme_sha256": "f4fcac4135e2d7155327ebc6b785ad8e651f4497f9fbdc608b443d0bed586e08"
+    },
+    "assets/img/content/services/service-subdivision-hero.webp": {
+      "static_src_path": "X:\\AI MARS\\workspaces\\fp-0002-shpigovsky-v9\\src\\assets\\img\\content\\services\\service-subdivision-hero.webp",
+      "static_dist_path": "X:\\AI MARS\\workspaces\\fp-0002-shpigovsky-v9\\dist\\assets\\img\\content\\services\\service-subdivision-hero.webp",
+      "wp_git_theme_path": "X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\assets\\img\\content\\services\\service-subdivision-hero.webp",
+      "runtime_theme_path": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\assets\\img\\content\\services\\service-subdivision-hero.webp",
+      "exists_static_src": false,
+      "exists_static_dist": true,
+      "exists_git_theme": true,
+      "exists_runtime_theme": true,
+      "url_root": "http://shpigovsky.test/assets/img/content/services/service-subdivision-hero.webp",
+      "url_root_status": 404,
+      "url_theme": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/img/content/services/service-subdivision-hero.webp",
+      "url_theme_status": 200,
+      "static_dist_sha256": "cf14159f9c100242c065f410a955bf96014ffa7df96e7db97cde37440ed3dda9",
+      "git_theme_sha256": "cf14159f9c100242c065f410a955bf96014ffa7df96e7db97cde37440ed3dda9",
+      "runtime_theme_sha256": "cf14159f9c100242c065f410a955bf96014ffa7df96e7db97cde37440ed3dda9"
+    }
+  },
+  "css_url_checks": {
+    "http://shpigovsky.test/assets/img/content/home-final-form/home-final-form-background.webp": 404
+  }
+}

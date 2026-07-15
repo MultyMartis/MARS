@@ -1,0 +1,281 @@
+{
+    "field_count": 55,
+    "cta_left": [],
+    "fields": [
+        {
+            "name": "",
+            "label": "1. Hero",
+            "type": "message"
+        },
+        {
+            "name": "",
+            "label": "2. Навигация по якорям",
+            "type": "message"
+        },
+        {
+            "name": "section_nav_visible",
+            "label": "Показывать навигацию по якорям",
+            "type": "true_false"
+        },
+        {
+            "name": "",
+            "label": "3. Дочерние услуги",
+            "type": "message"
+        },
+        {
+            "name": "section_dependencies_visible",
+            "label": "Показывать блок дочерних услуг",
+            "type": "true_false"
+        },
+        {
+            "name": "section_dependencies_heading",
+            "label": "Заголовок блока дочерних услуг",
+            "type": "text"
+        },
+        {
+            "name": "section_dependencies_lead",
+            "label": "Лид блока дочерних услуг",
+            "type": "textarea"
+        },
+        {
+            "name": "section_dependencies_footer",
+            "label": "Текст после списка дочерних услуг",
+            "type": "textarea"
+        },
+        {
+            "name": "",
+            "label": "4. Природа зависимости",
+            "type": "message"
+        },
+        {
+            "name": "section_nature_visible",
+            "label": "Показывать блок «Природа зависимости»",
+            "type": "true_false"
+        },
+        {
+            "name": "section_nature_heading",
+            "label": "Заголовок",
+            "type": "text"
+        },
+        {
+            "name": "section_nature_lead",
+            "label": "Лид",
+            "type": "textarea"
+        },
+        {
+            "name": "section_nature_text_blocks",
+            "label": "Текстовые блоки (подзаголовок + текст)",
+            "type": "repeater"
+        },
+        {
+            "name": "section_nature_cards",
+            "label": "Карточки проявлений",
+            "type": "repeater"
+        },
+        {
+            "name": "",
+            "label": "5. Программа лечения",
+            "type": "message"
+        },
+        {
+            "name": "section_program_visible",
+            "label": "Показывать программу лечения",
+            "type": "true_false"
+        },
+        {
+            "name": "section_program_heading",
+            "label": "Заголовок программы",
+            "type": "text"
+        },
+        {
+            "name": "section_program_more_label",
+            "label": "Текст ссылки «подробнее»",
+            "type": "text"
+        },
+        {
+            "name": "section_program_lead",
+            "label": "Лид программы",
+            "type": "textarea"
+        },
+        {
+            "name": "section_program_intro_items",
+            "label": "Intro программы",
+            "type": "repeater"
+        },
+        {
+            "name": "section_program_footer_label",
+            "label": "Текст нижней ссылки программы",
+            "type": "text"
+        },
+        {
+            "name": "",
+            "label": "6. Этапы \/ что нужно для лечения",
+            "type": "message"
+        },
+        {
+            "name": "section_stages_visible",
+            "label": "Показывать блок этапов",
+            "type": "true_false"
+        },
+        {
+            "name": "section_stages_heading",
+            "label": "Заголовок этапов",
+            "type": "text"
+        },
+        {
+            "name": "section_stages_lead",
+            "label": "Лид этапов",
+            "type": "textarea"
+        },
+        {
+            "name": "section_stages_items",
+            "label": "Этапы",
+            "type": "repeater"
+        },
+        {
+            "name": "section_stages_support_heading",
+            "label": "Заголовок поддержки",
+            "type": "text"
+        },
+        {
+            "name": "section_stages_support_items",
+            "label": "Пункты поддержки",
+            "type": "repeater"
+        },
+        {
+            "name": "",
+            "label": "7. Наш подход к лечению",
+            "type": "message"
+        },
+        {
+            "name": "section_approach_visible",
+            "label": "Показывать блок «Наш подход»",
+            "type": "true_false"
+        },
+        {
+            "name": "section_approach_heading",
+            "label": "Заголовок подхода",
+            "type": "text"
+        },
+        {
+            "name": "section_approach_more_label",
+            "label": "Текст ссылки «подробнее»",
+            "type": "text"
+        },
+        {
+            "name": "section_approach_more_url",
+            "label": "URL ссылки «подробнее»",
+            "type": "url"
+        },
+        {
+            "name": "section_approach_highlight",
+            "label": "Выделенный абзац (красная линия)",
+            "type": "textarea"
+        },
+        {
+            "name": "section_approach_intro",
+            "label": "Intro подхода",
+            "type": "textarea"
+        },
+        {
+            "name": "section_approach_corridor_image",
+            "label": "Изображение коридора",
+            "type": "image"
+        },
+        {
+            "name": "section_approach_corridor_alt",
+            "label": "Alt изображения коридора",
+            "type": "text"
+        },
+        {
+            "name": "section_approach_staff_image",
+            "label": "Изображение команды",
+            "type": "image"
+        },
+        {
+            "name": "section_approach_staff_alt",
+            "label": "Alt изображения команды",
+            "type": "text"
+        },
+        {
+            "name": "section_approach_cards",
+            "label": "Карточки подхода",
+            "type": "repeater"
+        },
+        {
+            "name": "",
+            "label": "8. Территория клиники",
+            "type": "message"
+        },
+        {
+            "name": "section_clinic_landscape_visible",
+            "label": "Показывать территорию клиники",
+            "type": "true_false"
+        },
+        {
+            "name": "",
+            "label": "9. Специалисты",
+            "type": "message"
+        },
+        {
+            "name": "section_specialists_visible",
+            "label": "Показывать специалистов",
+            "type": "true_false"
+        },
+        {
+            "name": "",
+            "label": "10. Слово основателя",
+            "type": "message"
+        },
+        {
+            "name": "section_founder_quote_visible",
+            "label": "Показывать слово основателя",
+            "type": "true_false"
+        },
+        {
+            "name": "",
+            "label": "11. Условия центра",
+            "type": "message"
+        },
+        {
+            "name": "section_comfort_visible",
+            "label": "Показывать условия центра",
+            "type": "true_false"
+        },
+        {
+            "name": "",
+            "label": "12. Отзывы",
+            "type": "message"
+        },
+        {
+            "name": "section_reviews_visible",
+            "label": "Показывать отзывы",
+            "type": "true_false"
+        },
+        {
+            "name": "",
+            "label": "13. FAQ",
+            "type": "message"
+        },
+        {
+            "name": "section_faq_visible",
+            "label": "Показывать FAQ",
+            "type": "true_false"
+        },
+        {
+            "name": "section_faq_heading",
+            "label": "Заголовок FAQ",
+            "type": "text"
+        },
+        {
+            "name": "",
+            "label": "14. Финальная форма",
+            "type": "message"
+        },
+        {
+            "name": "section_final_form_visible",
+            "label": "Показывать финальную форму",
+            "type": "true_false"
+        }
+    ]
+}

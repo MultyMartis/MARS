@@ -1,0 +1,83 @@
+{
+    "backup_root": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e50-service-sections-demo-acf-sot-before-20260715-222858",
+    "db_writes": 17,
+    "sync": [
+        {
+            "rel": "theme\/shpigovsky\/inc\/service-section-helpers.php",
+            "src": "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/theme\/shpigovsky\/inc\/service-section-helpers.php",
+            "dst": "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/themes\/shpigovsky\/inc\/service-section-helpers.php",
+            "match": true,
+            "copied": true,
+            "hash_src": "4f7911e72aea827339416d5615f0bfce",
+            "hash_dst": "4f7911e72aea827339416d5615f0bfce"
+        },
+        {
+            "rel": "theme\/shpigovsky\/template-parts\/service\/nature.php",
+            "src": "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/theme\/shpigovsky\/template-parts\/service\/nature.php",
+            "dst": "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/themes\/shpigovsky\/template-parts\/service\/nature.php",
+            "match": true,
+            "copied": true,
+            "hash_src": "0b43097c3dd26073a2dddd95e6fc9012",
+            "hash_dst": "0b43097c3dd26073a2dddd95e6fc9012"
+        },
+        {
+            "rel": "theme\/shpigovsky\/template-parts\/service\/team-stats.php",
+            "src": "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/theme\/shpigovsky\/template-parts\/service\/team-stats.php",
+            "dst": "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/themes\/shpigovsky\/template-parts\/service\/team-stats.php",
+            "match": true,
+            "copied": true,
+            "hash_src": "db52ec1a2e70910fa067478f0176053f",
+            "hash_dst": "db52ec1a2e70910fa067478f0176053f"
+        },
+        {
+            "rel": "theme\/shpigovsky\/template-parts\/service\/stages.php",
+            "src": "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/theme\/shpigovsky\/template-parts\/service\/stages.php",
+            "dst": "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/themes\/shpigovsky\/template-parts\/service\/stages.php",
+            "match": true,
+            "copied": true,
+            "hash_src": "73639379a3282addd5f1fd24bfb070e2",
+            "hash_dst": "73639379a3282addd5f1fd24bfb070e2"
+        },
+        {
+            "rel": "theme\/shpigovsky\/template-parts\/service\/children.php",
+            "src": "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/theme\/shpigovsky\/template-parts\/service\/children.php",
+            "dst": "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/themes\/shpigovsky\/template-parts\/service\/children.php",
+            "match": true,
+            "copied": true,
+            "hash_src": "238bc1e2b7343188155e53a904aca554",
+            "hash_dst": "238bc1e2b7343188155e53a904aca554"
+        },
+        {
+            "rel": "theme\/shpigovsky\/template-parts\/service\/program.php",
+            "src": "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/theme\/shpigovsky\/template-parts\/service\/program.php",
+            "dst": "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/themes\/shpigovsky\/template-parts\/service\/program.php",
+            "match": true,
+            "copied": true,
+            "hash_src": "c0dbe722297b6413e871374a5f126bb8",
+            "hash_dst": "c0dbe722297b6413e871374a5f126bb8"
+        },
+        {
+            "rel": "theme\/shpigovsky\/template-parts\/service\/faq.php",
+            "src": "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/theme\/shpigovsky\/template-parts\/service\/faq.php",
+            "dst": "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/themes\/shpigovsky\/template-parts\/service\/faq.php",
+            "match": true,
+            "copied": true,
+            "hash_src": "f7c31167375020988dba56a23d961247",
+            "hash_dst": "f7c31167375020988dba56a23d961247"
+        },
+        {
+            "rel": "plugins\/shpigovsky-core\/src\/Fields\/ServiceSectionParity.php",
+            "src": "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/plugins\/shpigovsky-core\/src\/Fields\/ServiceSectionParity.php",
+            "dst": "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/plugins\/shpigovsky-core\/src\/Fields\/ServiceSectionParity.php",
+            "match": true,
+            "copied": true,
+            "hash_src": "c79c227ef39d4df545ef20938072bbb1",
+            "hash_dst": "c79c227ef39d4df545ef20938072bbb1"
+        }
+    ],
+    "seeded_yes": 15,
+    "fe_pass": false,
+    "smoke_pass": true,
+    "empty_pass": false,
+    "sync_pass": true
+}

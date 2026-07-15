@@ -1,0 +1,9 @@
+check,expected,actual,result,notes
+#73 edit field group loads,yes,55 fields via acf_get_fields,PASS,PHP+JSON
+CTA dead block removed,yes,CTA_LEFT=0,PASS,no mid_cta fields
+Program intro visible,yes,section_program_intro_items present,PASS,
+Lower link text visible,yes,section_program_footer_label present,PASS,
+Section renumber after 5,5=Program .. 14=Final form,verified labels,PASS,
+No demo replacement in instructions,clear instructions,updated,PASS,
+Save validation,no errors,update_field intro seed OK,PASS,
+#77/#84 compatible,yes,#77 cleaned; #84 untouched; helpers OK,PASS,

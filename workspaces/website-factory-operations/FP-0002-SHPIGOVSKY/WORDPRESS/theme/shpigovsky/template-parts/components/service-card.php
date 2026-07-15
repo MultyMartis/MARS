@@ -2,7 +2,8 @@
 /**
  * Template part: components/service-card.php
  *
- * Expects query vars: service_card_title, service_card_url, service_card_text, service_card_variant.
+ * Expects query vars: service_card_title, service_card_url, service_card_text,
+ * service_card_variant, service_card_children.
  *
  * @package Shpigovsky
  */
@@ -11,10 +12,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$title   = get_query_var( 'service_card_title', '' );
-$url     = get_query_var( 'service_card_url', '' );
-$text    = get_query_var( 'service_card_text', '' );
-$variant = get_query_var( 'service_card_variant', 'hub' );
+$title    = get_query_var( 'service_card_title', '' );
+$url      = get_query_var( 'service_card_url', '' );
+$text     = get_query_var( 'service_card_text', '' );
+$variant  = get_query_var( 'service_card_variant', 'hub' );
+$children = get_query_var( 'service_card_children', array() );
 
 $title = is_string( $title ) ? trim( $title ) : '';
 
@@ -25,12 +27,22 @@ if ( '' === $title ) {
 $url  = is_string( $url ) ? trim( $url ) : '';
 $text = is_string( $text ) ? trim( $text ) : '';
 
+if ( ! is_array( $children ) ) {
+	$children = array();
+}
+
 if ( 'v2' === $variant ) :
 	?>
 	<article class="services-category-section-v2__service">
 		<div class="services-category-section-v2__service-head">
 			<h3 class="services-category-section-v2__service-title">
-				<span class="services-category-section-v2__service-name"><?php echo esc_html( $title ); ?></span>
+				<span class="services-category-section-v2__service-name">
+					<?php if ( '' !== $url ) : ?>
+						<a class="services-category-section-v2__service-name-link" href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $title ); ?></a>
+					<?php else : ?>
+						<?php echo esc_html( $title ); ?>
+					<?php endif; ?>
+				</span>
 				<span class="services-category-section-v2__service-leader" aria-hidden="true"></span>
 			</h3>
 			<?php if ( '' !== $url ) : ?>
@@ -42,6 +54,25 @@ if ( 'v2' === $variant ) :
 		</div>
 		<?php if ( '' !== $text ) : ?>
 			<p class="services-category-section-v2__service-text"><?php echo wp_kses_post( $text ); ?></p>
+		<?php endif; ?>
+		<?php if ( ! empty( $children ) ) : ?>
+			<ul class="services-category-section-v2__service-children">
+				<?php foreach ( $children as $child_link ) : ?>
+					<?php
+					if ( ! is_array( $child_link ) ) {
+						continue;
+					}
+					$child_title = isset( $child_link['title'] ) ? trim( (string) $child_link['title'] ) : '';
+					$child_url   = isset( $child_link['url'] ) ? trim( (string) $child_link['url'] ) : '';
+					if ( '' === $child_title || '' === $child_url ) {
+						continue;
+					}
+					?>
+					<li class="services-category-section-v2__service-child">
+						<a class="services-category-section-v2__service-child-link" href="<?php echo esc_url( $child_url ); ?>"><?php echo esc_html( $child_title ); ?></a>
+					</li>
+				<?php endforeach; ?>
+			</ul>
 		<?php endif; ?>
 	</article>
 	<?php

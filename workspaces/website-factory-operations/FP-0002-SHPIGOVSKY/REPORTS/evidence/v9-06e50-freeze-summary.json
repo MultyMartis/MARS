@@ -1,0 +1,218 @@
+{
+    "backup": "X:\\MARS-Localhost\\backups\\wordpress\\projects\\shpigovsky\\v9-06e50-service-sections-demo-acf-sot-freeze-accepted-before-next-phase-20260715-230201",
+    "db_writes": 2,
+    "admin": [
+        [
+            "#73 Зависимости",
+            "accepted section ACF model",
+            "role=section section=yes general=no nature_h=Природа зависимости 000101 approach=Наш подход к лечению зависимостей bad_help=no editor_support=yes; operator ТЕСТ=yes 000101=yes",
+            "PASS",
+            ""
+        ],
+        [
+            "#77 Психическое здоровье",
+            "accepted section ACF model",
+            "role=section section=yes general=no nature_h=Природа психических состояний approach=Наш подход к работе с психическим здоровьем bad_help=no editor_support=yes; section-specific headings present",
+            "PASS",
+            ""
+        ],
+        [
+            "#84 Расстройства пищевого поведения",
+            "accepted section ACF model",
+            "role=section section=yes general=no nature_h=Природа расстройств пищевого поведения approach=Наш подход к работе с расстройствами пищевого поведения bad_help=no editor_support=yes; section-specific headings present",
+            "PASS",
+            ""
+        ]
+    ],
+    "section_frontend": [
+        [
+            "`\/uslugi\/zavisimosti\/`",
+            "200 + ACF section content",
+            "HTTP 200 nature=yes approach=yes wrong_dep=no acf_heading_on_page=yes",
+            "PASS",
+            "heading=Природа зависимости 000101"
+        ],
+        [
+            "`\/uslugi\/psihicheskoe-zdorovie\/`",
+            "200 + ACF section content",
+            "HTTP 200 nature=yes approach=yes wrong_dep=no acf_heading_on_page=yes",
+            "PASS",
+            "heading=Природа психических состояний"
+        ],
+        [
+            "`\/uslugi\/rasstroystva-pischevogo-povedeniya\/`",
+            "200 + ACF section content",
+            "HTTP 200 nature=yes approach=yes wrong_dep=no acf_heading_on_page=yes",
+            "PASS",
+            "heading=Природа расстройств пищевого поведения"
+        ]
+    ],
+    "empty_field": [
+        [
+            "Optional section text empty",
+            "no hardcoded demo injected",
+            "lead_empty=yes helper_empty=yes lead_call_ok=yes helper_contract=yes http=200",
+            "PASS",
+            "method=temporary clear+restore on #77 section_nature_lead; + code-level helper\/template contract"
+        ],
+        [
+            "Value restored \/ preserved",
+            "original visible",
+            "meta_equal=yes fe_visible=yes http=200",
+            "PASS",
+            "restored after temporary clear; no lasting mutation"
+        ]
+    ],
+    "accepted": [
+        [
+            "Home `\/`",
+            "unchanged (200; freeze untouched)",
+            "200 OK; no freeze task product writes",
+            "PASS"
+        ],
+        [
+            "Services hub `\/uslugi\/`",
+            "unchanged",
+            "200 OK",
+            "PASS"
+        ],
+        [
+            "Service controls #74\/#314\/#78\/#81\/#85",
+            "unchanged",
+            "roles=service; routes 200",
+            "PASS"
+        ],
+        [
+            "E49 services sample",
+            "preserved",
+            "5 samples 200",
+            "PASS"
+        ]
+    ],
+    "smoke_pass": 19,
+    "smoke_total": 19,
+    "sync": [
+        [
+            "service-section-helpers.php",
+            "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/theme\/shpigovsky\/inc\/service-section-helpers.php",
+            "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/themes\/shpigovsky\/inc\/service-section-helpers.php",
+            "yes",
+            "PASS",
+            ""
+        ],
+        [
+            "nature.php",
+            "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/theme\/shpigovsky\/template-parts\/service\/nature.php",
+            "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/themes\/shpigovsky\/template-parts\/service\/nature.php",
+            "yes",
+            "PASS",
+            ""
+        ],
+        [
+            "team-stats.php",
+            "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/theme\/shpigovsky\/template-parts\/service\/team-stats.php",
+            "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/themes\/shpigovsky\/template-parts\/service\/team-stats.php",
+            "yes",
+            "PASS",
+            ""
+        ],
+        [
+            "stages.php",
+            "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/theme\/shpigovsky\/template-parts\/service\/stages.php",
+            "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/themes\/shpigovsky\/template-parts\/service\/stages.php",
+            "yes",
+            "PASS",
+            ""
+        ],
+        [
+            "children.php",
+            "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/theme\/shpigovsky\/template-parts\/service\/children.php",
+            "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/themes\/shpigovsky\/template-parts\/service\/children.php",
+            "yes",
+            "PASS",
+            ""
+        ],
+        [
+            "program.php",
+            "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/theme\/shpigovsky\/template-parts\/service\/program.php",
+            "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/themes\/shpigovsky\/template-parts\/service\/program.php",
+            "yes",
+            "PASS",
+            ""
+        ],
+        [
+            "faq.php",
+            "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/theme\/shpigovsky\/template-parts\/service\/faq.php",
+            "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/themes\/shpigovsky\/template-parts\/service\/faq.php",
+            "yes",
+            "PASS",
+            ""
+        ],
+        [
+            "service-helpers.php",
+            "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/theme\/shpigovsky\/inc\/service-helpers.php",
+            "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/themes\/shpigovsky\/inc\/service-helpers.php",
+            "yes",
+            "PASS",
+            ""
+        ],
+        [
+            "ServiceSectionParity.php",
+            "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/plugins\/shpigovsky-core\/src\/Fields\/ServiceSectionParity.php",
+            "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/plugins\/shpigovsky-core\/src\/Fields\/ServiceSectionParity.php",
+            "yes",
+            "PASS",
+            ""
+        ],
+        [
+            "group_fp02_service_section_parity.json",
+            "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/acf-json\/group_fp02_service_section_parity.json",
+            "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/acf-json\/group_fp02_service_section_parity.json",
+            "yes",
+            "PASS",
+            ""
+        ],
+        [
+            "group_fp02_service_general_parity.json",
+            "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/acf-json\/group_fp02_service_general_parity.json",
+            "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/acf-json\/group_fp02_service_general_parity.json",
+            "yes",
+            "PASS",
+            ""
+        ],
+        [
+            "group_fp02_service_layout_hero.json",
+            "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/acf-json\/group_fp02_service_layout_hero.json",
+            "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/acf-json\/group_fp02_service_layout_hero.json",
+            "yes",
+            "PASS",
+            ""
+        ],
+        [
+            "group_fp02_service_hero.json",
+            "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/acf-json\/group_fp02_service_hero.json",
+            "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/acf-json\/group_fp02_service_hero.json",
+            "yes",
+            "PASS",
+            ""
+        ],
+        [
+            "ServiceGeneralParity.php",
+            "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/plugins\/shpigovsky-core\/src\/Fields\/ServiceGeneralParity.php",
+            "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/plugins\/shpigovsky-core\/src\/Fields\/ServiceGeneralParity.php",
+            "yes",
+            "PASS",
+            ""
+        ],
+        [
+            "v9-style.css",
+            "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/theme\/shpigovsky\/assets\/css\/v9-style.css",
+            "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/themes\/shpigovsky\/assets\/css\/v9-style.css",
+            "no",
+            "PASS_DRIFT",
+            "operator CSS drift preserved; runtime=11a45abe… source=4cc96175…; matches known E47\/E50 operator runtime prefix"
+        ]
+    ],
+    "operator_css_runtime_sha256": "11a45abe87ae54b755133f3abb5807d388b45f5fd06070ee9310cd513f2fcf5a",
+    "operator_css_source_sha256": "4cc96175ac64e7d1d6f26f3411c9daf3a336d4f82a05c06e5f36c8db9e1c96fd"
+}

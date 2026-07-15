@@ -1,0 +1,90 @@
+/**
+ * Child services tile block — service stack (V9-06E45-FIX01).
+ * Additive styles only; does not alter operator V9 shells.
+ */
+
+.service-child-services {
+  padding: 48px 0 24px;
+}
+
+.service-child-services__heading {
+  margin: 0 0 28px;
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.service-child-services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.service-child-services__card {
+  margin: 0;
+  border: 1px solid rgba(20, 20, 20, 0.12);
+  background: #fff;
+}
+
+.service-child-services__card-link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.service-child-services__card-link:hover,
+.service-child-services__card-link:focus-visible {
+  color: inherit;
+}
+
+.service-child-services__card-media {
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #f3f3f3;
+}
+
+.service-child-services__card-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-child-services__card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 18px 20px;
+}
+
+.service-child-services__card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.service-child-services__card-text {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  opacity: 0.82;
+}
+
+@media (max-width: 1024px) {
+  .service-child-services__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 660px) {
+  .service-child-services {
+    padding: 36px 0 16px;
+  }
+
+  .service-child-services__grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}

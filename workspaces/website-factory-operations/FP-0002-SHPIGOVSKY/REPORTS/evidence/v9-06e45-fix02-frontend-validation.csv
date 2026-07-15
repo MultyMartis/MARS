@@ -1,0 +1,8 @@
+route,url,http,bytes,expected_stack,markers,visual_note,result
+/,http://shpigovsky.test/,200,185278,home-frozen,,snapshot_saved,PASS
+/uslugi/,http://shpigovsky.test/uslugi/,200,123590,hub-frozen,,snapshot_saved,PASS
+/uslugi/zavisimosti/,http://shpigovsky.test/uslugi/zavisimosti/,200,128591,subdivision,body:subdivision|child-services,snapshot_saved,PASS
+/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/,http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/,200,131440,service-general,body:leaf|body:service-general|body:legacy-alcohol-class|child-services,snapshot_saved,PASS
+/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/,http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/,200,97315,service-general,body:leaf|body:service-general|body:legacy-alcohol-class|child-services,snapshot_saved,PASS
+/uslugi/psihicheskoe-zdorovie/depressiya/,http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/depressiya/,200,92542,service-general,body:leaf|body:service-general|body:legacy-alcohol-class|child-services,snapshot_saved,PASS
+/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/geroin/,http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/geroin/,200,93036,service-general,body:leaf|body:service-general|body:legacy-alcohol-class|child-services,snapshot_saved,PASS

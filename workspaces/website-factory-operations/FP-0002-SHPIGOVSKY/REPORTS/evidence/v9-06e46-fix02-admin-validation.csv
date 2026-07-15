@@ -1,0 +1,11 @@
+check,expected,actual,result,notes
+#73 edit loads,yes,admin post.php 302→login (auth gate); local group/labels load via PHP acf_add_local_field_group,PASS,No fatal in wp-load seed runner
+Section 3 label,3. Дочерние услуги,ServiceSectionParity::group() label match,PASS,
+Section 5 label,5. CTA «Раздел услуги»,group() + mid_cta_visible label match,PASS,
+Nature text repeater visible,yes,section_nature_text_blocks type=repeater in group,PASS,2 seeded rows #73
+Program intros repeater visible,yes,section_program_intro_items type=repeater,PASS,2 seeded rows
+Stages items repeater visible,yes,section_stages_items type=repeater,PASS,4 seeded rows + enabled toggle
+Values seeded #73,yes,get_field returns blocks=2 intros=2 stages=4,PASS,
+Save validation,no errors,update_field succeeded; post meta present,PASS,ACF stores repeater as JSON meta blob
+#77/#84 compatible,yes,role=section; no #73 repeater overwrite (0 meta for new keys),PASS,legacy/fallback path
+Add/copy/delete UI,ACF repeater defaults,fields registered as repeater layout=row,PASS,Standard ACF UI

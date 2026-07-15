@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Whether the current request is the alcohol-special direct V9 stack.
+ * Whether the current request is the general service stack (legacy alcohol-special name).
  *
  * @return bool
  */
@@ -22,7 +22,9 @@ function shpigovsky_is_alcohol_direct_v9_page() {
 		return false;
 	}
 
-	return 'alcohol-special' === shpigovsky_resolve_service_layout_variant();
+	return function_exists( 'shpigovsky_is_service_general_variant' )
+		? shpigovsky_is_service_general_variant( shpigovsky_resolve_service_layout_variant() )
+		: ( 'service-general' === shpigovsky_resolve_service_layout_variant() );
 }
 
 /**

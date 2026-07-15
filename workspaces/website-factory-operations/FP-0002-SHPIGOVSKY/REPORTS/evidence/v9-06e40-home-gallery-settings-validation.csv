@@ -1,0 +1,5 @@
+mode,expected,actual,result,notes
+all,all eligible services,18 slides via helper probe,PASS,Eligible = published depth-1 + service_show_on_home_gallery
+random,N services default 12,helper returned 12; mode=random count=12,PASS,shuffle() per request (local prototype); HTML exact slide class count validated separately
+selected,selected services only in order,3 selected IDs → 3 slides,PASS,Empty selected list falls back to random; then restored to random default
+flag_interaction,service_show_on_home_gallery still filters,only flagged/default-true depth-1 included,PASS,E32/E33 eligibility preserved; no legacy home_gallery_media

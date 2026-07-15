@@ -27,7 +27,7 @@ final class FieldGroups implements ModuleInterface {
 	/**
 	 * Deterministic modified timestamp for canonical JSON source.
 	 */
-	public const MODIFIED = 1784200800;
+	public const MODIFIED = 1784452800;
 
 	/**
 	 * {@inheritdoc}
@@ -48,6 +48,86 @@ final class FieldGroups implements ModuleInterface {
 	 */
 	public static function register() {
 		add_action( 'acf/init', array( __CLASS__, 'register_field_groups' ), 20 );
+		// ACF 5.7.11+: acf/get_field_groups is deprecated alias of acf/load_field_groups.
+		add_filter( 'acf/load_field_groups', array( __CLASS__, 'filter_service_parity_groups_by_role' ), 30 );
+		add_filter( 'acf/get_field_groups', array( __CLASS__, 'filter_service_parity_groups_by_role' ), 30 );
+	}
+
+	/**
+	 * Hide opposite parity + legacy service groups for clean editor UX (V9-06E47 / E47-FIX01).
+	 *
+	 * Field-level conditional alone still leaves an empty metabox title; remove groups
+	 * from the edit screen list when role is known. Definitions and postmeta preserved.
+	 *
+	 * @param array<int, array<string, mixed>> $groups Field groups.
+	 * @return array<int, array<string, mixed>>
+	 */
+	public static function filter_service_parity_groups_by_role( $groups ) {
+		if ( ! is_array( $groups ) || empty( $groups ) ) {
+			return $groups;
+		}
+
+		$post_id = 0;
+		if ( function_exists( 'acf_get_form_data' ) ) {
+			$form_post = acf_get_form_data( 'post_id' );
+			if ( is_numeric( $form_post ) ) {
+				$post_id = (int) $form_post;
+			}
+		}
+		if ( $post_id <= 0 && isset( $_GET['post'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$post_id = (int) $_GET['post']; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		}
+		if ( $post_id <= 0 && function_exists( 'get_the_ID' ) ) {
+			$post_id = (int) get_the_ID();
+		}
+
+		if ( $post_id <= 0 || 'service' !== get_post_type( $post_id ) ) {
+			return $groups;
+		}
+
+		$role = '';
+		if ( function_exists( 'get_field' ) ) {
+			$role = (string) get_field( 'service_editor_role', $post_id );
+		}
+		if ( '' === $role ) {
+			$role = (string) get_post_meta( $post_id, 'service_editor_role', true );
+		}
+
+		if ( '' === $role ) {
+			return $groups;
+		}
+
+		// V9-06E47-FIX01: Услуга editor only needs Layout + Hero + Услуга blocks.
+		// V9-06E51: Заглушка keeps the same admin content groups as Услуга (content not deleted).
+		$hide_keys = array();
+		if ( 'service' === $role || 'placeholder' === $role ) {
+			$hide_keys = array(
+				'group_fp02_service_section_parity',
+				'group_fp02_service_structured_sections',
+				'group_fp02_service_faq',
+				'group_fp02_service_relationships',
+			);
+		} elseif ( 'section' === $role ) {
+			// Раздел: keep Structured Sections for shared mid-cta meta (E46-FIX03).
+			$hide_keys = array(
+				'group_fp02_service_general_parity',
+			);
+		}
+
+		if ( empty( $hide_keys ) ) {
+			return $groups;
+		}
+
+		$out = array();
+		foreach ( $groups as $group ) {
+			$key = isset( $group['key'] ) ? (string) $group['key'] : '';
+			if ( in_array( $key, $hide_keys, true ) ) {
+				continue;
+			}
+			$out[] = $group;
+		}
+
+		return $out;
 	}
 
 	/**
@@ -70,13 +150,17 @@ final class FieldGroups implements ModuleInterface {
 	 */
 	public static function get_field_groups() {
 		return array(
-			self::service_layout_hero(),
+			self::service_layout(),
+			self::service_hero(),
+			ServiceSectionParity::group(),
+			ServiceGeneralParity::group(),
 			self::service_structured_sections(),
 			self::service_faq(),
 			self::service_relationships(),
 			self::page_home(),
 			self::page_services_hub(),
 			self::page_ocentre_hub(),
+			self::page_layout_mode(),
 			self::page_institutional_child(),
 			self::page_contacts(),
 			self::page_reviews(),
@@ -95,61 +179,306 @@ final class FieldGroups implements ModuleInterface {
 	}
 
 	/**
-	 * Service layout and hero group.
+	 * Service layout group (layout selector + hub/catalog flags). Hero fields live in service_hero().
 	 *
 	 * @return array<string, mixed>
 	 */
-	private static function service_layout_hero() {
-		return self::group(
+	private static function service_layout() {
+		$group = self::group(
 			'group_fp02_service_layout_hero',
-			'Service — Layout and Hero',
+			__( 'Макет страницы услуги', 'shpigovsky-core' ),
 			array(
 				self::field(
+					'field_fp02_service_editor_role',
+					__( 'Макет страницы услуги', 'shpigovsky-core' ),
+					'service_editor_role',
+					'button_group',
+					array(
+						'instructions'  => __( 'Временный режим «Заглушка»: на фронте выводятся только шапка, навигация, H1 и подвал. Контент в полях не удаляется и может быть включён обратно сменой макета.', 'shpigovsky-core' ),
+						'required'      => 0,
+						'choices'       => array(
+							'section'     => __( 'Раздел', 'shpigovsky-core' ),
+							'service'     => __( 'Услуга', 'shpigovsky-core' ),
+							'placeholder' => __( 'Заглушка', 'shpigovsky-core' ),
+						),
+						'default_value' => '',
+						'return_format' => 'value',
+						'allow_null'    => 1,
+						'layout'        => 'horizontal',
+						'wrapper'       => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title fp02-service-layout-selector',
+							'id'    => '',
+						),
+					)
+				),
+				// Technical fields kept in meta for resolver/sync; hidden from normal admin UI (FIX03 prepare_field).
+				self::field(
+					'field_fp02_service_layout_advanced_heading',
+					__( 'Расширенные настройки шаблона', 'shpigovsky-core' ),
+					'service_layout_advanced_heading',
+					'message',
+					array(
+						'message' => __( 'Служебные параметры (скрыты в обычном UI). subdivision = Раздел; service_general = Услуга; placeholder = Заглушка; standard / extended — Legacy. alcohol_special — устаревший alias service_general.', 'shpigovsky-core' ),
+						'wrapper' => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title fp02-service-layout-advanced fp02-service-layout-technical-hidden',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_service_layout_override_enabled',
+					__( 'Ручной технический шаблон', 'shpigovsky-core' ),
+					'service_layout_override_enabled',
+					'true_false',
+					array(
+						'instructions'  => __( 'Служебное поле (скрыто в обычном UI). FIX03: синхронизация идёт по макету/глубине; override не используется редактором.', 'shpigovsky-core' ),
+						'default_value' => 0,
+						'ui'            => 1,
+						'wrapper'       => array(
+							'width' => '50',
+							'class' => 'fp02-service-layout-advanced fp02-service-layout-technical-hidden',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
 					'field_fp02_service_layout_variant',
-					'Вариант макета',
+					__( 'Технический шаблон', 'shpigovsky-core' ),
 					'service_layout_variant',
 					'select',
 					array(
-						'instructions' => 'Allowed V9-06C values: subdivision, standard, extended, alcohol_special, placeholder.',
-						'required'     => 1,
-						'choices'      => array(
-							'subdivision'     => 'Подраздел',
-							'standard'        => 'Стандартная услуга',
-							'extended'        => 'Расширенная услуга',
-							'alcohol_special' => 'Алкогольная зависимость',
-							'placeholder'     => 'Заглушка',
+						'instructions'  => __( 'Служебное поле (скрыто в обычном UI). Синхронизируется автоматически: Раздел→subdivision, Услуга→service_general, Заглушка→placeholder.', 'shpigovsky-core' ),
+						'required'      => 0,
+						'choices'       => array(
+							'subdivision'     => __( 'Раздел', 'shpigovsky-core' ),
+							'service_general' => __( 'Услуга', 'shpigovsky-core' ),
+							'placeholder'     => __( 'Заглушка', 'shpigovsky-core' ),
+							'standard'        => __( 'Legacy: стандартная услуга', 'shpigovsky-core' ),
+							'extended'        => __( 'Legacy: расширенная услуга', 'shpigovsky-core' ),
 						),
-						'default_value' => 'standard',
+						'default_value' => 'service_general',
 						'return_format' => 'value',
+						'wrapper'       => array(
+							'width' => '50',
+							'class' => 'fp02-service-layout-advanced fp02-service-layout-technical-hidden',
+							'id'    => '',
+						),
 					)
 				),
-				self::field( 'field_fp02_hero_eyebrow_service', 'Надзаголовок', 'hero_eyebrow', 'text' ),
-				self::field( 'field_fp02_hero_title_override_service', 'Заголовок H1 override', 'hero_title_override', 'text' ),
-				self::field( 'field_fp02_hero_lead_service', 'Лид', 'hero_lead', 'textarea', array( 'rows' => 4 ) ),
+				self::field(
+					'field_fp02_service_layout_hub_heading',
+					__( 'Карточка и показ на /uslugi/', 'shpigovsky-core' ),
+					'service_layout_hub_heading',
+					'message',
+					array(
+						'message' => __( 'Поля карточки/хаба (не hero и не макет шаблона). Мини-описание и флаги показа на /uslugi/ и главной.', 'shpigovsky-core' ),
+						'wrapper' => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
 				self::field(
 					'field_fp02_service_short_description',
-					'Мини-описание',
+					__( 'Мини-описание', 'shpigovsky-core' ),
 					'service_short_description',
 					'textarea',
 					array(
-						'instructions' => 'Краткий текст для карточки услуги на странице /uslugi/ (оба режима отображения).',
+						'instructions' => __( 'Краткий текст для карточки услуги на странице /uslugi/ и в блоке дочерних услуг. Для корневых разделов также выводится в блоке категории на /uslugi/.', 'shpigovsky-core' ),
 						'rows'         => 4,
 					)
 				),
-				self::field( 'field_fp02_hero_media_service', 'Hero image', 'hero_media', 'image', array( 'instructions' => 'Hero background image for this service. Empty falls back to theme asset by layout variant.', 'return_format' => 'array', 'preview_size' => 'medium' ) ),
 				self::field(
-					'field_fp02_hero_cta_label_service',
-					'Текст кнопки в hero-блоке',
-					'hero_cta_label',
-					'text',
+					'field_fp02_service_child_services_enabled',
+					__( 'Показывать дочерние услуги', 'shpigovsky-core' ),
+					'service_child_services_enabled',
+					'true_false',
 					array(
-						'instructions' => 'Индивидуальный текст кнопки для hero-блока этой страницы/услуги. Если оставить пустым, используется текущий текст по умолчанию.',
+						'instructions'      => __( 'Автоматический блок плиток дочерних услуг перед FAQ. Если дочерних страниц нет — блок не выводится.', 'shpigovsky-core' ),
+						'default_value'     => 1,
+						'ui'                => 1,
+						'conditional_logic' => array(
+							array(
+								array(
+									'field'    => 'field_fp02_service_editor_role',
+									'operator' => '==',
+									'value'    => 'service',
+								),
+							),
+						),
+						'wrapper'           => array(
+							'width' => '50',
+							'class' => '',
+							'id'    => '',
+						),
 					)
 				),
-				self::field( 'field_fp02_hero_cta_target_service', 'CTA target', 'hero_cta_target', 'url' ),
+				self::field(
+					'field_fp02_service_child_services_heading',
+					__( 'Заголовок блока дочерних услуг', 'shpigovsky-core' ),
+					'service_child_services_heading',
+					'text',
+					array(
+						'instructions'      => __( 'Если пусто — используется «Направления внутри услуги».', 'shpigovsky-core' ),
+						'default_value'     => '',
+						'placeholder'       => __( 'Направления внутри услуги', 'shpigovsky-core' ),
+						'conditional_logic' => array(
+							array(
+								array(
+									'field'    => 'field_fp02_service_editor_role',
+									'operator' => '==',
+									'value'    => 'service',
+								),
+							),
+						),
+						'wrapper'           => array(
+							'width' => '50',
+							'class' => '',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_service_category_section_lead',
+					__( 'Текст под мини-описанием на странице «Услуги»', 'shpigovsky-core' ),
+					'service_category_section_lead',
+					'textarea',
+					array(
+						'instructions'      => __( 'Выводится в блоке категории услуги на странице /uslugi/ под мини-описанием. Используется для корневых разделов (тип «Раздел» / технический шаблон subdivision).', 'shpigovsky-core' ),
+						'rows'              => 4,
+						'conditional_logic' => array(
+							array(
+								array(
+									'field'    => 'field_fp02_service_editor_role',
+									'operator' => '==',
+									'value'    => 'section',
+								),
+							),
+							array(
+								array(
+									'field'    => 'field_fp02_service_layout_variant',
+									'operator' => '==',
+									'value'    => 'subdivision',
+								),
+							),
+						),
+					)
+				),
+				self::field(
+					'field_fp02_service_show_in_text_list',
+					'Показывать в текстовом списке',
+					'service_show_in_text_list',
+					'true_false',
+					array(
+						'instructions'  => 'Показывать услугу в текстовом списке раздела на /uslugi/.',
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				self::field(
+					'field_fp02_service_show_in_slider',
+					'Показывать в слайдере',
+					'service_show_in_slider',
+					'true_false',
+					array(
+						'instructions'  => 'Показывать услугу карточкой в галерее/слайдере раздела на /uslugi/. Не путать с «Показывать в слайдере на главной».',
+						'default_value' => 0,
+						'ui'            => 1,
+					)
+				),
+				self::field(
+					'field_fp02_service_show_on_home_gallery',
+					'Показывать в слайдере на главной',
+					'service_show_on_home_gallery',
+					'true_false',
+					array(
+						'instructions'  => 'Отдельный флаг для слайдера услуг на главной (Home gallery). По умолчанию включено для услуг 1-го уровня (дети корневых разделов). Не связан с флагом слайдера /uslugi/.',
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				self::field(
+					'field_fp02_service_slider_image',
+					'Изображение для слайдера',
+					'service_slider_image',
+					'image',
+					array(
+						'instructions'  => 'Опционально. Если изображение не выбрано, на сайте используется заглушка.',
+						'return_format' => 'array',
+						'preview_size'  => 'medium',
+						'required'      => 0,
+					)
+				),
 			),
 			self::location( 'post_type', '==', 'service' )
 		);
+		$group['menu_order']  = 0;
+		$group['description'] = 'FP-0002 V9-06E46-FIX01: service layout (role/template) + hub/catalog flags. Hero separated to group_fp02_service_hero.';
+		return $group;
+	}
+
+	/**
+	 * Service hero group — shared for Раздел and Услуга. Meta keys unchanged.
+	 *
+	 * @return array<string, mixed>
+	 */
+	private static function service_hero() {
+		$group = self::group(
+			'group_fp02_service_hero',
+			__( 'Hero страницы услуги', 'shpigovsky-core' ),
+			array(
+				self::field(
+					'field_fp02_service_hero_heading',
+					__( 'Hero страницы услуги', 'shpigovsky-core' ),
+					'service_hero_heading',
+					'message',
+					array(
+						'message' => __( 'Общий блок hero для типов «Раздел» и «Услуга». Не дублируйте эти поля в других группах. Ключи meta сохранены (hero_eyebrow, hero_title_override, hero_lead, hero_media, hero_cta_label, hero_cta_target).', 'shpigovsky-core' ),
+						'wrapper' => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				self::field( 'field_fp02_hero_eyebrow_service', __( 'Надзаголовок', 'shpigovsky-core' ), 'hero_eyebrow', 'text' ),
+				self::field( 'field_fp02_hero_title_override_service', __( 'Заголовок H1 override', 'shpigovsky-core' ), 'hero_title_override', 'text' ),
+				self::field( 'field_fp02_hero_lead_service', __( 'Лид', 'shpigovsky-core' ), 'hero_lead', 'textarea', array( 'rows' => 4 ) ),
+				self::field(
+					'field_fp02_hero_media_service',
+					__( 'Изображение (Hero)', 'shpigovsky-core' ),
+					'hero_media',
+					'image',
+					array(
+						'instructions'  => __( 'Фоновое изображение hero. Если пусто — fallback по теме/макету.', 'shpigovsky-core' ),
+						'return_format' => 'array',
+						'preview_size'  => 'medium',
+					)
+				),
+				self::field(
+					'field_fp02_hero_cta_label_service',
+					__( 'Текст кнопки в hero-блоке', 'shpigovsky-core' ),
+					'hero_cta_label',
+					'text',
+					array(
+						'instructions' => __( 'Индивидуальный текст кнопки для hero. Если пусто — текст по умолчанию.', 'shpigovsky-core' ),
+					)
+				),
+				self::field(
+					'field_fp02_hero_cta_target_service',
+					__( 'Ссылка кнопки (CTA)', 'shpigovsky-core' ),
+					'hero_cta_target',
+					'url'
+				),
+			),
+			self::location( 'post_type', '==', 'service' )
+		);
+		$group['menu_order']  = 1;
+		$group['description'] = 'FP-0002 V9-06E46-FIX01: shared service hero fields (section + service). Meta keys preserved.';
+		return $group;
 	}
 
 	/**
@@ -170,8 +499,32 @@ final class FieldGroups implements ModuleInterface {
 					'signs_items',
 					12,
 					array(
-						self::field( 'field_fp02_signs_item_title_service', 'Заголовок', 'title', 'text' ),
-						self::field( 'field_fp02_signs_item_text_service', 'Текст', 'text', 'textarea', array( 'rows' => 3 ) ),
+						self::field(
+							'field_fp02_signs_item_title_service',
+							'Заголовок',
+							'title',
+							'text',
+							array(
+								'required'     => 0,
+								'instructions' => 'Optional.',
+							)
+						),
+						self::field(
+							'field_fp02_signs_item_text_service',
+							'Текст',
+							'text',
+							'textarea',
+							array(
+								'required'     => 0,
+								'rows'         => 3,
+								'instructions' => 'Optional.',
+							)
+						),
+					),
+					0,
+					array(
+						'required'     => 0,
+						'instructions' => 'Optional. Empty section does not block save.',
 					)
 				),
 				self::repeater(
@@ -214,8 +567,32 @@ final class FieldGroups implements ModuleInterface {
 					'stages',
 					8,
 					array(
-						self::field( 'field_fp02_stage_title_service', 'Заголовок', 'title', 'text' ),
-						self::field( 'field_fp02_stage_text_service', 'Текст', 'text', 'textarea', array( 'rows' => 3 ) ),
+						self::field(
+							'field_fp02_stage_title_service',
+							'Заголовок',
+							'title',
+							'text',
+							array(
+								'required'     => 0,
+								'instructions' => 'Optional.',
+							)
+						),
+						self::field(
+							'field_fp02_stage_text_service',
+							'Текст',
+							'text',
+							'textarea',
+							array(
+								'required'     => 0,
+								'rows'         => 3,
+								'instructions' => 'Optional.',
+							)
+						),
+					),
+					0,
+					array(
+						'required'     => 0,
+						'instructions' => 'Optional. Empty section does not block save.',
 					)
 				),
 				self::field( 'field_fp02_cta_title_service', 'CTA title', 'cta_title', 'text' ),
@@ -282,94 +659,1579 @@ final class FieldGroups implements ModuleInterface {
 	/**
 	 * Home page group.
 	 *
+	 * V9-06E39: admin field order follows front-page.php Home partial sequence.
+	 * V9-06E40: editable blocks expansion (benefits, treatment heading/lead, gallery
+	 * settings, why-us, staff/landscape images, recovery-life, genotyping, videos).
+	 * Labels/instructions use Russian source strings + shpigovsky-core i18n.
+	 *
 	 * @return array<string, mixed>
 	 */
 	private static function page_home() {
+		$gallery_mode_key  = 'field_fp02_home_gallery_display_mode';
+		$gallery_count_key = 'field_fp02_home_gallery_random_count';
+		$gallery_sel_key   = 'field_fp02_home_gallery_selected_services';
+
 		return self::group(
 			'group_fp02_page_home',
-			'Page — Home',
+			__( 'Страница — Главная', 'shpigovsky-core' ),
 			array(
+				// 1. Hero (template-parts/home/hero.php)
 				self::field(
 					'field_fp02_hero_media_home',
-					'Hero image',
+					__( 'Изображение hero (устарело)', 'shpigovsky-core' ),
 					'hero_media',
 					'image',
 					array(
-						'instructions' => 'Primary hero image. Overrides slide image when set. Empty falls back to Hero slides image, then theme asset.',
+						'instructions'  => __( 'Устарело: используйте «Слайды hero». Поле скрыто в админке; значение сохранено как legacy fallback.', 'shpigovsky-core' ),
 						'return_format' => 'array',
 						'preview_size'  => 'medium',
+						'wrapper'       => array(
+							'width' => '',
+							'class' => 'fp02-acf-legacy-retired',
+							'id'    => '',
+						),
 					)
 				),
 				self::field(
 					'field_fp02_hero_cta_label_home',
-					'Текст кнопки в hero-блоке',
+					__( 'Текст кнопки в hero-блоке', 'shpigovsky-core' ),
 					'hero_cta_label',
 					'text',
 					array(
-						'instructions' => 'Индивидуальный текст кнопки для hero-блока этой страницы/услуги. Если оставить пустым, используется текущий текст по умолчанию.',
+						'instructions' => __( 'Индивидуальный текст кнопки для hero-блока этой страницы. Если оставить пустым, используется текущий текст по умолчанию.', 'shpigovsky-core' ),
+						'wrapper'      => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
 					)
 				),
 				self::repeater(
 					'field_fp02_home_hero_slides',
-					'Hero slides',
+					__( 'Слайды hero', 'shpigovsky-core' ),
 					'home_hero_slides',
 					5,
 					array(
-						self::field( 'field_fp02_home_hero_title', 'Заголовок', 'title', 'text' ),
-						self::field( 'field_fp02_home_hero_text', 'Текст', 'text', 'textarea', array( 'rows' => 3 ) ),
-						self::field( 'field_fp02_home_hero_image', 'Изображение', 'image', 'image', array( 'return_format' => 'array' ) ),
+						self::field( 'field_fp02_home_hero_title', __( 'Заголовок', 'shpigovsky-core' ), 'title', 'text' ),
+						self::field( 'field_fp02_home_hero_text', __( 'Текст', 'shpigovsky-core' ), 'text', 'textarea', array( 'rows' => 3 ) ),
+						self::field( 'field_fp02_home_hero_image', __( 'Изображение', 'shpigovsky-core' ), 'image', 'image', array( 'return_format' => 'array' ) ),
+					),
+					0,
+					array(
+						'instructions' => __( 'Слайды hero на главной. При двух и более слайдах включается слайдер. Ограниченный повторитель; максимум строк задан в исходнике и проверках.', 'shpigovsky-core' ),
+						'button_label' => __( 'Добавить', 'shpigovsky-core' ),
+						'wrapper'      => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
 					)
 				),
-				self::repeater( 'field_fp02_home_service_nav_items', 'Настройки service navigation / accordion', 'home_service_nav_items', 6, self::title_text_subfields( 'home_service_nav' ) ),
-				self::repeater( 'field_fp02_home_advantages', 'Advantages / trust', 'home_advantages', 8, self::title_text_subfields( 'home_advantages' ) ),
-				self::repeater( 'field_fp02_home_intro_bands', 'Intro bands', 'home_intro_bands', 6, self::title_text_subfields( 'home_intro_bands' ) ),
-				self::repeater( 'field_fp02_home_reviews_teaser', 'Reviews teaser', 'home_reviews_teaser', 6, self::title_text_subfields( 'home_reviews_teaser' ) ),
-				self::field( 'field_fp02_home_blog_teaser_enabled', 'Blog teaser enabled', 'home_blog_teaser_enabled', 'true_false' ),
-				self::repeater( 'field_fp02_home_gallery_media', 'Gallery / media bands', 'home_gallery_media', 12, self::media_text_subfields( 'home_gallery_item' ) ),
-				self::repeater( 'field_fp02_home_faq_items', 'FAQ', 'home_faq_items', 15, self::faq_subfields( 'home' ) ),
-				self::field( 'field_fp02_home_cta_title', 'CTA title', 'home_cta_title', 'text' ),
-				self::field( 'field_fp02_home_cta_text', 'CTA text', 'home_cta_text', 'textarea', array( 'rows' => 3 ) ),
+				self::field(
+					'field_fp02_home_hero_autoplay_enabled',
+					__( 'Hero — автопрокрутка', 'shpigovsky-core' ),
+					'home_hero_autoplay_enabled',
+					'true_false',
+					array(
+						'instructions'  => __( 'Автопрокрутка слайдов hero (только если слайдов больше одного).', 'shpigovsky-core' ),
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				self::field(
+					'field_fp02_home_hero_autoplay_delay',
+					__( 'Hero — задержка автопрокрутки (мс)', 'shpigovsky-core' ),
+					'home_hero_autoplay_delay',
+					'number',
+					array(
+						'instructions'  => __( 'Пауза между слайдами в миллисекундах. По умолчанию 5000.', 'shpigovsky-core' ),
+						'default_value' => 5000,
+						'min'           => 1000,
+						'max'           => 60000,
+						'step'          => 500,
+					)
+				),
+				self::field(
+					'field_fp02_home_hero_arrows_enabled',
+					__( 'Hero — стрелки', 'shpigovsky-core' ),
+					'home_hero_arrows_enabled',
+					'true_false',
+					array(
+						'instructions'  => __( 'Показывать стрелки навигации (только если слайдов больше одного).', 'shpigovsky-core' ),
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				self::field(
+					'field_fp02_home_hero_dots_enabled',
+					__( 'Hero — точки', 'shpigovsky-core' ),
+					'home_hero_dots_enabled',
+					'true_false',
+					array(
+						'instructions'  => __( 'Показывать точки пагинации (только если слайдов больше одного).', 'shpigovsky-core' ),
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				// 2. Recovery intro (template-parts/home/recovery-intro.php)
+				self::field(
+					'field_fp02_home_recovery_intro_heading',
+					__( 'Введение о восстановлении — заголовок', 'shpigovsky-core' ),
+					'home_recovery_intro_heading',
+					'text',
+					array(
+						'instructions' => __( 'Заголовок блока «Шпиговский дом — восстановление…» на главной.', 'shpigovsky-core' ),
+						'wrapper'      => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_home_recovery_intro_lead_1',
+					__( 'Введение о восстановлении — абзац 1', 'shpigovsky-core' ),
+					'home_recovery_intro_lead_1',
+					'textarea',
+					array(
+						'rows'         => 4,
+						'instructions' => __( 'Первый абзац блока введения о восстановлении на главной.', 'shpigovsky-core' ),
+					)
+				),
+				self::field(
+					'field_fp02_home_recovery_intro_lead_2',
+					__( 'Введение о восстановлении — абзац 2', 'shpigovsky-core' ),
+					'home_recovery_intro_lead_2',
+					'textarea',
+					array(
+						'rows'         => 4,
+						'instructions' => __( 'Второй абзац блока введения о восстановлении на главной.', 'shpigovsky-core' ),
+					)
+				),
+				self::field(
+					'field_fp02_home_recovery_intro_benefits_enabled',
+					__( 'Список преимуществ — показывать', 'shpigovsky-core' ),
+					'home_recovery_intro_benefits_enabled',
+					'true_false',
+					array(
+						'instructions'  => __( 'Включить или скрыть список преимуществ в блоке введения о восстановлении.', 'shpigovsky-core' ),
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				self::repeater(
+					'field_fp02_home_recovery_intro_benefits',
+					__( 'Список преимуществ', 'shpigovsky-core' ),
+					'home_recovery_intro_benefits',
+					12,
+					array(
+						self::field( 'field_fp02_home_recovery_intro_benefit_text', __( 'Текст пункта', 'shpigovsky-core' ), 'text', 'text' ),
+						self::field(
+							'field_fp02_home_recovery_intro_benefit_enabled',
+							__( 'Показывать пункт', 'shpigovsky-core' ),
+							'item_enabled',
+							'true_false',
+							array(
+								'default_value' => 1,
+								'ui'            => 1,
+							)
+						),
+					),
+					0,
+					array(
+						'instructions' => __( 'Пункты списка преимуществ (ul.home-recovery-intro__benefits).', 'shpigovsky-core' ),
+						'button_label' => __( 'Добавить', 'shpigovsky-core' ),
+					)
+				),
+				self::repeater(
+					'field_fp02_home_intro_bands',
+					__( 'Карточки введения', 'shpigovsky-core' ),
+					'home_intro_bands',
+					6,
+					self::title_text_subfields( 'home_intro_bands' ),
+					0,
+					array(
+						'instructions' => __( 'Карточки в блоке введения о восстановлении. Ограниченный повторитель; максимум строк задан в исходнике и проверках.', 'shpigovsky-core' ),
+						'button_label' => __( 'Добавить', 'shpigovsky-core' ),
+						'wrapper'      => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				// 3. Founder quote — automated / options (template-parts/home/founder-quote.php)
+				self::field(
+					'field_fp02_home_founder_quote_source_notice',
+					__( 'Цитата основателя на главной', 'shpigovsky-core' ),
+					'home_founder_quote_source_notice',
+					'message',
+					array(
+						'message' => __( 'Автоматический блок: цитата основателя берётся из «Настройки сайта → Цитата основателя». На главной отдельных полей контента нет — только показ/скрытие.', 'shpigovsky-core' ),
+						'wrapper' => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_home_founder_quote_visible',
+					__( 'Показывать цитату основателя', 'shpigovsky-core' ),
+					'home_founder_quote_visible',
+					'true_false',
+					array(
+						'instructions'  => __( 'Показать или скрыть блок цитаты основателя на главной. Контент блока не редактируется здесь.', 'shpigovsky-core' ),
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				// 4. Treatment & prevention (template-parts/home/treatment-prevention.php)
+				self::field(
+					'field_fp02_home_treatment_prevention_heading',
+					__( 'Лечение и профилактика — заголовок', 'shpigovsky-core' ),
+					'home_treatment_prevention_heading',
+					'text',
+					array(
+						'instructions' => __( 'Заголовок секции «Лечение и профилактика» на главной.', 'shpigovsky-core' ),
+						'wrapper'      => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_home_treatment_prevention_lead',
+					__( 'Лечение и профилактика — описание', 'shpigovsky-core' ),
+					'home_treatment_prevention_lead',
+					'textarea',
+					array(
+						'rows'         => 3,
+						'instructions' => __( 'Лид/описание под заголовком секции «Лечение и профилактика».', 'shpigovsky-core' ),
+					)
+				),
+				self::field(
+					'field_fp02_home_treatment_source_notice',
+					__( 'Лечение и профилактика — аккордеон', 'shpigovsky-core' ),
+					'home_treatment_source_notice',
+					'message',
+					array(
+						'message' => __( 'Автоматический блок: аккордеон услуг формируется из иерархии CPT service. Редактируйте услуги в каталоге «Услуги». Заголовок и описание секции редактируются полями выше.', 'shpigovsky-core' ),
+					)
+				),
+				self::field(
+					'field_fp02_home_treatment_prevention_visible',
+					__( 'Показывать блок «Лечение и профилактика»', 'shpigovsky-core' ),
+					'home_treatment_prevention_visible',
+					'true_false',
+					array(
+						'instructions'  => __( 'Показать или скрыть весь блок на главной (включая аккордеон услуг).', 'shpigovsky-core' ),
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				// 5. Gallery / service slider (template-parts/home/gallery.php)
+				self::field(
+					'field_fp02_home_gallery_source_notice',
+					__( 'Галерея на главной', 'shpigovsky-core' ),
+					'home_gallery_source_notice',
+					'message',
+					array(
+						'message' => __( 'Слайдер галереи строится из услуг (CPT service) с флагом «Показывать в слайдере на главной». Ниже — режим отображения. Ручной блок Gallery / media bands не используется.', 'shpigovsky-core' ),
+						'wrapper' => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_home_gallery_visible',
+					__( 'Показывать галерею на главной', 'shpigovsky-core' ),
+					'home_gallery_visible',
+					'true_false',
+					array(
+						'instructions'  => __( 'Показать или скрыть слайдер галереи услуг на главной.', 'shpigovsky-core' ),
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				self::field(
+					$gallery_mode_key,
+					__( 'Галерея — режим отображения', 'shpigovsky-core' ),
+					'home_gallery_display_mode',
+					'select',
+					array(
+						'instructions'  => __( 'Как выбирать услуги для слайдера на главной. Eligible = опубликованные услуги 1-го уровня с включённым флагом «Показывать в слайдере на главной».', 'shpigovsky-core' ),
+						'choices'       => array(
+							'all'      => __( 'Показать все подходящие услуги', 'shpigovsky-core' ),
+							'random'   => __( 'Показать случайные N услуг', 'shpigovsky-core' ),
+							'selected' => __( 'Показать только выбранные услуги', 'shpigovsky-core' ),
+						),
+						'default_value' => 'random',
+						'allow_null'    => 0,
+						'ui'            => 1,
+						'return_format' => 'value',
+						'wrapper'       => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					$gallery_count_key,
+					__( 'Галерея — число случайных услуг', 'shpigovsky-core' ),
+					'home_gallery_random_count',
+					'number',
+					array(
+						'instructions'      => __( 'Сколько случайных eligible-услуг показывать (режим «случайные N»). По умолчанию 12.', 'shpigovsky-core' ),
+						'default_value'     => 12,
+						'min'               => 1,
+						'max'               => 48,
+						'step'              => 1,
+						'conditional_logic' => array(
+							array(
+								array(
+									'field'    => $gallery_mode_key,
+									'operator' => '==',
+									'value'    => 'random',
+								),
+							),
+						),
+					)
+				),
+				self::field(
+					$gallery_sel_key,
+					__( 'Галерея — выбранные услуги', 'shpigovsky-core' ),
+					'home_gallery_selected_services',
+					'relationship',
+					array(
+						'instructions'      => __( 'Услуги для режима «только выбранные». Порядок выбора сохраняется. Если список пуст — fallback на случайные N. Учитываются только опубликованные eligible-услуги.', 'shpigovsky-core' ),
+						'post_type'         => array( 'service' ),
+						'filters'           => array( 'search' ),
+						'return_format'     => 'id',
+						'max'               => 48,
+						'conditional_logic' => array(
+							array(
+								array(
+									'field'    => $gallery_mode_key,
+									'operator' => '==',
+									'value'    => 'selected',
+								),
+							),
+						),
+					)
+				),
+				// 6. Why-us (template-parts/home/why-us.php)
+				self::field(
+					'field_fp02_home_why_us_heading',
+					__( 'Почему нас выбирают — заголовок', 'shpigovsky-core' ),
+					'home_why_us_heading',
+					'text',
+					array(
+						'instructions' => __( 'Заголовок блока «Почему нас выбирают» на главной.', 'shpigovsky-core' ),
+						'wrapper'      => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_home_why_us_lead',
+					__( 'Почему нас выбирают — лид', 'shpigovsky-core' ),
+					'home_why_us_lead',
+					'textarea',
+					array(
+						'rows'         => 3,
+						'instructions' => __( 'Лид блока «Почему нас выбирают».', 'shpigovsky-core' ),
+					)
+				),
+				self::field(
+					'field_fp02_home_why_us_body_enabled',
+					__( 'Почему нас выбирают — абзацы показывать', 'shpigovsky-core' ),
+					'home_why_us_body_enabled',
+					'true_false',
+					array(
+						'instructions'  => __( 'Показать или скрыть абзацы тела блока.', 'shpigovsky-core' ),
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				self::repeater(
+					'field_fp02_home_why_us_body',
+					__( 'Почему нас выбирают — абзацы', 'shpigovsky-core' ),
+					'home_why_us_body',
+					6,
+					array(
+						self::field( 'field_fp02_home_why_us_body_text', __( 'Текст', 'shpigovsky-core' ), 'text', 'textarea', array( 'rows' => 3 ) ),
+						self::field(
+							'field_fp02_home_why_us_body_item_enabled',
+							__( 'Показывать', 'shpigovsky-core' ),
+							'item_enabled',
+							'true_false',
+							array(
+								'default_value' => 1,
+								'ui'            => 1,
+							)
+						),
+					),
+					0,
+					array(
+						'instructions' => __( 'Абзацы .home-why-us__body.', 'shpigovsky-core' ),
+						'button_label' => __( 'Добавить', 'shpigovsky-core' ),
+					)
+				),
+				self::field(
+					'field_fp02_home_why_us_items_enabled',
+					__( 'Почему нас выбирают — список ссылок показывать', 'shpigovsky-core' ),
+					'home_why_us_items_enabled',
+					'true_false',
+					array(
+						'instructions'  => __( 'Показать или скрыть список ссылок в блоке.', 'shpigovsky-core' ),
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				self::repeater(
+					'field_fp02_home_why_us_items',
+					__( 'Почему нас выбирают — ссылки', 'shpigovsky-core' ),
+					'home_why_us_items',
+					12,
+					array(
+						self::field( 'field_fp02_home_why_us_item_title', __( 'Название', 'shpigovsky-core' ), 'title', 'text' ),
+						self::field( 'field_fp02_home_why_us_item_url', __( 'Ссылка', 'shpigovsky-core' ), 'url', 'url' ),
+						self::field(
+							'field_fp02_home_why_us_item_enabled',
+							__( 'Показывать', 'shpigovsky-core' ),
+							'item_enabled',
+							'true_false',
+							array(
+								'default_value' => 1,
+								'ui'            => 1,
+							)
+						),
+					),
+					0,
+					array(
+						'instructions' => __( 'Ссылки-пункты списка в блоке «Почему нас выбирают».', 'shpigovsky-core' ),
+						'button_label' => __( 'Добавить', 'shpigovsky-core' ),
+					)
+				),
+				// 7. Staff photo (template-parts/home/staff-photo.php)
+				self::field(
+					'field_fp02_home_staff_photo_image',
+					__( 'Фото команды', 'shpigovsky-core' ),
+					'home_staff_photo_image',
+					'image',
+					array(
+						'instructions'  => __( 'Изображение блока «Команда центра». Выберите из медиабиблиотеки.', 'shpigovsky-core' ),
+						'return_format' => 'array',
+						'preview_size'  => 'medium',
+						'wrapper'       => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				// 8. Feature grid / advantages (template-parts/home/feature-grid.php)
+				self::repeater(
+					'field_fp02_home_advantages',
+					__( 'Преимущества / доверие', 'shpigovsky-core' ),
+					'home_advantages',
+					8,
+					self::title_text_subfields( 'home_advantages' ),
+					0,
+					array(
+						'instructions' => __( 'Карточки преимуществ (feature grid) на главной. Ограниченный повторитель; максимум строк задан в исходнике и проверках.', 'shpigovsky-core' ),
+						'button_label' => __( 'Добавить', 'shpigovsky-core' ),
+						'wrapper'      => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				// 9. Clinic landscape (template-parts/home/clinic-landscape.php)
+				self::field(
+					'field_fp02_home_clinic_landscape_image',
+					__( 'Территория клиники — изображение', 'shpigovsky-core' ),
+					'home_clinic_landscape_image',
+					'image',
+					array(
+						'instructions'  => __( 'Изображение блока «Территория клиники». Выберите из медиабиблиотеки.', 'shpigovsky-core' ),
+						'return_format' => 'array',
+						'preview_size'  => 'medium',
+						'wrapper'       => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				// 10. Recovery life (template-parts/home/recovery-life.php)
+				self::field(
+					'field_fp02_home_recovery_life_heading',
+					__( 'Как меняется жизнь — заголовок', 'shpigovsky-core' ),
+					'home_recovery_life_heading',
+					'text',
+					array(
+						'instructions' => __( 'Заголовок блока «Как меняется жизнь человека в процессе восстановления».', 'shpigovsky-core' ),
+						'wrapper'      => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_home_recovery_life_highlight',
+					__( 'Как меняется жизнь — акцент', 'shpigovsky-core' ),
+					'home_recovery_life_highlight',
+					'textarea',
+					array(
+						'rows'         => 3,
+						'instructions' => __( 'Выделенный абзац (.home-recovery-life__highlight).', 'shpigovsky-core' ),
+					)
+				),
+				self::field(
+					'field_fp02_home_recovery_life_intro_enabled',
+					__( 'Как меняется жизнь — вводные абзацы показывать', 'shpigovsky-core' ),
+					'home_recovery_life_intro_enabled',
+					'true_false',
+					array(
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				self::repeater(
+					'field_fp02_home_recovery_life_intro',
+					__( 'Как меняется жизнь — вводные абзацы', 'shpigovsky-core' ),
+					'home_recovery_life_intro',
+					6,
+					array(
+						self::field( 'field_fp02_home_recovery_life_intro_text', __( 'Текст', 'shpigovsky-core' ), 'text', 'textarea', array( 'rows' => 3 ) ),
+						self::field(
+							'field_fp02_home_recovery_life_intro_item_enabled',
+							__( 'Показывать', 'shpigovsky-core' ),
+							'item_enabled',
+							'true_false',
+							array(
+								'default_value' => 1,
+								'ui'            => 1,
+							)
+						),
+					),
+					0,
+					array(
+						'button_label' => __( 'Добавить', 'shpigovsky-core' ),
+					)
+				),
+				self::field(
+					'field_fp02_home_recovery_life_stages_enabled',
+					__( 'Как меняется жизнь — этапы показывать', 'shpigovsky-core' ),
+					'home_recovery_life_stages_enabled',
+					'true_false',
+					array(
+						'instructions'  => __( 'Показать или скрыть список этапов восстановления.', 'shpigovsky-core' ),
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				self::repeater(
+					'field_fp02_home_recovery_life_stages',
+					__( 'Как меняется жизнь — этапы', 'shpigovsky-core' ),
+					'home_recovery_life_stages',
+					8,
+					array(
+						self::field(
+							'field_fp02_home_recovery_life_stage_label',
+							__( 'Подпись месяца', 'shpigovsky-core' ),
+							'stage_label',
+							'text',
+							array(
+								'instructions' => __( 'Красная подпись над карточкой этапа (например «1 месяц»). Если пусто — подставляется порядковый номер.', 'shpigovsky-core' ),
+							)
+						),
+						self::field( 'field_fp02_home_recovery_life_stage_title', __( 'Заголовок этапа', 'shpigovsky-core' ), 'title', 'text' ),
+						self::field(
+							'field_fp02_home_recovery_life_stage_items',
+							__( 'Пункты этапа (по одному в строке)', 'shpigovsky-core' ),
+							'items_text',
+							'textarea',
+							array(
+								'rows'         => 6,
+								'instructions' => __( 'Каждый пункт списка — отдельная строка.', 'shpigovsky-core' ),
+							)
+						),
+						self::field(
+							'field_fp02_home_recovery_life_stage_enabled',
+							__( 'Показывать этап', 'shpigovsky-core' ),
+							'item_enabled',
+							'true_false',
+							array(
+								'default_value' => 1,
+								'ui'            => 1,
+							)
+						),
+					),
+					0,
+					array(
+						'instructions' => __( 'Этапы .home-recovery-life__stages.', 'shpigovsky-core' ),
+						'button_label' => __( 'Добавить', 'shpigovsky-core' ),
+						'wrapper'      => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				// 11. Reviews — automated (template-parts/home/reviews.php)
+				self::field(
+					'field_fp02_home_reviews_source_notice',
+					__( 'Отзывы на главной', 'shpigovsky-core' ),
+					'home_reviews_source_notice',
+					'message',
+					array(
+						'message' => __( 'Автоматический блок: заголовок и список отзывов — «Настройки сайта / Отзывы». Home-мета home_reviews_heading — только fallback, в админке главной не показывается.', 'shpigovsky-core' ),
+						'wrapper' => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_home_reviews_visible',
+					__( 'Показывать отзывы на главной', 'shpigovsky-core' ),
+					'home_reviews_visible',
+					'true_false',
+					array(
+						'instructions'  => __( 'Показать или скрыть блок отзывов на главной. Контент редактируется в «Отзывы».', 'shpigovsky-core' ),
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				// 12. Rehab requirements — automated reusable
+				self::field(
+					'field_fp02_home_rehab_requirements_source_notice',
+					__( 'Условия реабилитации на главной', 'shpigovsky-core' ),
+					'home_rehab_requirements_source_notice',
+					'message',
+					array(
+						'message' => __( 'Автоматический блок: контент берётся из «Повторяемые блоки — Условия реабилитации». На главной — только показ/скрытие.', 'shpigovsky-core' ),
+						'wrapper' => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_home_rehab_requirements_visible',
+					__( 'Показывать блок условий реабилитации', 'shpigovsky-core' ),
+					'home_rehab_requirements_visible',
+					'true_false',
+					array(
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				// 13. Rehab program — automated direction cards + editable intro
+				self::field(
+					'field_fp02_home_rehab_program_source_notice',
+					__( 'Программа / направления на главной', 'shpigovsky-core' ),
+					'home_rehab_program_source_notice',
+					'message',
+					array(
+						'message'  => self::home_rehab_program_source_notice_message(),
+						'esc_html' => 0,
+						'wrapper'  => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_home_rehabilitation_program_head',
+					__( 'Программа — заголовок', 'shpigovsky-core' ),
+					'home_rehabilitation_program_head',
+					'text',
+					array(
+						'instructions' => __( 'Заголовок секции программы / направлений на главной (рядом со ссылкой «подробнее»).', 'shpigovsky-core' ),
+					)
+				),
+				self::field(
+					'field_fp02_home_rehabilitation_program_lead',
+					__( 'Программа — описание', 'shpigovsky-core' ),
+					'home_rehabilitation_program_lead',
+					'textarea',
+					array(
+						'instructions' => __( 'Короткое описание (лид) под заголовком секции.', 'shpigovsky-core' ),
+						'rows'         => 3,
+						'new_lines'    => '',
+					)
+				),
+				self::field(
+					'field_fp02_home_rehabilitation_program_intro_1',
+					__( 'Программа — вводный текст 1', 'shpigovsky-core' ),
+					'home_rehabilitation_program_intro_1',
+					'textarea',
+					array(
+						'instructions' => __( 'Первый вводный абзац перед карточками направлений.', 'shpigovsky-core' ),
+						'rows'         => 4,
+						'new_lines'    => '',
+					)
+				),
+				self::field(
+					'field_fp02_home_rehabilitation_program_intro_2',
+					__( 'Программа — вводный текст 2', 'shpigovsky-core' ),
+					'home_rehabilitation_program_intro_2',
+					'textarea',
+					array(
+						'instructions' => __( 'Второй вводный абзац перед карточками направлений.', 'shpigovsky-core' ),
+						'rows'         => 4,
+						'new_lines'    => '',
+					)
+				),
+				self::field(
+					'field_fp02_home_rehab_program_visible',
+					__( 'Показывать блок программы / направлений', 'shpigovsky-core' ),
+					'home_rehab_program_visible',
+					'true_false',
+					array(
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				// 14. genotyping editable
+				self::field(
+					'field_fp02_home_genotyping_heading',
+					__( 'Генотипирование — заголовок', 'shpigovsky-core' ),
+					'home_genotyping_heading',
+					'text',
+					array(
+						'instructions' => __( 'Заголовок блока генотипирования на главной (не путать со страницей программы генотипирования).', 'shpigovsky-core' ),
+						'wrapper'      => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_home_genotyping_link_text',
+					__( 'Генотипирование — текст ссылки', 'shpigovsky-core' ),
+					'home_genotyping_link_text',
+					'text',
+					array(
+						'instructions' => __( 'Текст ссылки «подробнее» рядом с заголовком.', 'shpigovsky-core' ),
+					)
+				),
+				self::field(
+					'field_fp02_home_genotyping_link_url',
+					__( 'Генотипирование — URL ссылки', 'shpigovsky-core' ),
+					'home_genotyping_link_url',
+					'url',
+					array(
+						'instructions' => __( 'URL ссылки «подробнее». Если пусто — используется текущий URL услуги.', 'shpigovsky-core' ),
+					)
+				),
+				self::field(
+					'field_fp02_home_genotyping_lead',
+					__( 'Генотипирование — лид', 'shpigovsky-core' ),
+					'home_genotyping_lead',
+					'textarea',
+					array(
+						'rows' => 3,
+					)
+				),
+				self::field(
+					'field_fp02_home_genotyping_body_enabled',
+					__( 'Генотипирование — абзацы тела показывать', 'shpigovsky-core' ),
+					'home_genotyping_body_enabled',
+					'true_false',
+					array(
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				self::repeater(
+					'field_fp02_home_genotyping_body',
+					__( 'Генотипирование — абзацы тела', 'shpigovsky-core' ),
+					'home_genotyping_body',
+					6,
+					array(
+						self::field( 'field_fp02_home_genotyping_body_text', __( 'Текст', 'shpigovsky-core' ), 'text', 'textarea', array( 'rows' => 4 ) ),
+						self::field(
+							'field_fp02_home_genotyping_body_item_enabled',
+							__( 'Показывать', 'shpigovsky-core' ),
+							'item_enabled',
+							'true_false',
+							array(
+								'default_value' => 1,
+								'ui'            => 1,
+							)
+						),
+					),
+					0,
+					array(
+						'button_label' => __( 'Добавить', 'shpigovsky-core' ),
+					)
+				),
+				self::field(
+					'field_fp02_home_genotyping_subheading',
+					__( 'Генотипирование — подзаголовок списка', 'shpigovsky-core' ),
+					'home_genotyping_subheading',
+					'text'
+				),
+				self::field(
+					'field_fp02_home_genotyping_list_intro',
+					__( 'Генотипирование — текст перед списком', 'shpigovsky-core' ),
+					'home_genotyping_list_intro',
+					'textarea',
+					array(
+						'rows' => 4,
+					)
+				),
+				self::field(
+					'field_fp02_home_genotyping_items_enabled',
+					__( 'Генотипирование — список показывать', 'shpigovsky-core' ),
+					'home_genotyping_items_enabled',
+					'true_false',
+					array(
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				self::repeater(
+					'field_fp02_home_genotyping_items',
+					__( 'Генотипирование — пункты списка', 'shpigovsky-core' ),
+					'home_genotyping_items',
+					12,
+					array(
+						self::field( 'field_fp02_home_genotyping_item_text', __( 'Текст пункта', 'shpigovsky-core' ), 'text', 'textarea', array( 'rows' => 2 ) ),
+						self::field(
+							'field_fp02_home_genotyping_item_enabled',
+							__( 'Показывать', 'shpigovsky-core' ),
+							'item_enabled',
+							'true_false',
+							array(
+								'default_value' => 1,
+								'ui'            => 1,
+							)
+						),
+					),
+					0,
+					array(
+						'button_label' => __( 'Добавить', 'shpigovsky-core' ),
+					)
+				),
+				self::field(
+					'field_fp02_home_genotyping_cta_label',
+					__( 'Генотипирование — текст кнопки', 'shpigovsky-core' ),
+					'home_genotyping_cta_label',
+					'text',
+					array(
+						'instructions' => __( 'Текст кнопки записи на консультацию в блоке генотипирования.', 'shpigovsky-core' ),
+					)
+				),
+				// 15. Comfort — automated (template-parts/home/comfort.php)
+				self::field(
+					'field_fp02_home_comfort_source_notice',
+					__( 'Комфорт на главной', 'shpigovsky-core' ),
+					'home_comfort_source_notice',
+					'message',
+					array(
+						'message' => __( 'Автоматический блок: заголовок и лид блока «Комфорт» берутся из «Повторяемые блоки — Комфорт / преимущества». Home-мета home_comfort_* — только fallback, в админке главной не показываются.', 'shpigovsky-core' ),
+						'wrapper' => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_home_comfort_visible',
+					__( 'Показывать блок «Комфорт»', 'shpigovsky-core' ),
+					'home_comfort_visible',
+					'true_false',
+					array(
+						'instructions'  => __( 'Показать или скрыть блок комфорта на главной.', 'shpigovsky-core' ),
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				// 16. Videos (template-parts/home/videos.php)
+				self::field(
+					'field_fp02_home_videos_heading',
+					__( 'Видео — заголовок', 'shpigovsky-core' ),
+					'home_videos_heading',
+					'text',
+					array(
+						'instructions' => __( 'Заголовок блока «Видео о нашем центре».', 'shpigovsky-core' ),
+						'wrapper'      => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_home_videos_items_enabled',
+					__( 'Видео — список показывать', 'shpigovsky-core' ),
+					'home_videos_items_enabled',
+					'true_false',
+					array(
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				self::repeater(
+					'field_fp02_home_videos_items',
+					__( 'Видео — элементы', 'shpigovsky-core' ),
+					'home_videos_items',
+					8,
+					array(
+						self::field( 'field_fp02_home_videos_item_title', __( 'Заголовок / подпись', 'shpigovsky-core' ), 'title', 'text' ),
+						self::field(
+							'field_fp02_home_videos_item_file',
+							__( 'Видеофайл (медиабиблиотека)', 'shpigovsky-core' ),
+							'video_file',
+							'file',
+							array(
+								'return_format' => 'array',
+								'library'       => 'all',
+								'mime_types'    => 'mp4,webm,ogg',
+							)
+						),
+						self::field(
+							'field_fp02_home_videos_item_poster',
+							__( 'Постер', 'shpigovsky-core' ),
+							'poster',
+							'image',
+							array(
+								'return_format' => 'array',
+								'preview_size'  => 'medium',
+							)
+						),
+						self::field(
+							'field_fp02_home_videos_item_enabled',
+							__( 'Показывать', 'shpigovsky-core' ),
+							'item_enabled',
+							'true_false',
+							array(
+								'default_value' => 1,
+								'ui'            => 1,
+							)
+						),
+					),
+					0,
+					array(
+						'instructions' => __( 'Видео из медиабиблиотеки WordPress. Сохраняется разметка fancybox/ссылки текущего фронтенда.', 'shpigovsky-core' ),
+						'button_label' => __( 'Добавить', 'shpigovsky-core' ),
+					)
+				),
+				// 17. Specialists — automated (template-parts/home/specialists.php)
+				self::field(
+					'field_fp02_home_specialists_source_notice',
+					__( 'Специалисты на главной', 'shpigovsky-core' ),
+					'home_specialists_source_notice',
+					'message',
+					array(
+						'message' => __( 'Автоматический блок: карточки специалистов берутся из дочерних страниц /specyalisty/. Заголовок секции редактируйте в «Повторяемые блоки — Специалисты». Поле home_specialists_heading на главной сохранено только как fallback и скрыто из админки.', 'shpigovsky-core' ),
+						'wrapper' => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_home_specialists_visible',
+					__( 'Показывать специалистов на главной', 'shpigovsky-core' ),
+					'home_specialists_visible',
+					'true_false',
+					array(
+						'instructions'  => __( 'Показать или скрыть слайдер специалистов на главной.', 'shpigovsky-core' ),
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				// 18. Articles teaser (template-parts/home/articles-teaser.php)
+				self::field(
+					'field_fp02_home_articles_heading',
+					__( 'Статьи — заголовок', 'shpigovsky-core' ),
+					'home_articles_heading',
+					'text',
+					array(
+						'instructions' => __( 'Заголовок блока «Статьи» на главной. Сами карточки — опубликованные записи блога.', 'shpigovsky-core' ),
+						'wrapper'      => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_home_articles_source_notice',
+					__( 'Статьи на главной', 'shpigovsky-core' ),
+					'home_articles_source_notice',
+					'message',
+					array(
+						'message' => __( 'Автоматический блок: слайдер статей на главной формируется из опубликованных записей (posts). Переключатель Blog teaser enabled снят — тема его не читает.', 'shpigovsky-core' ),
+					)
+				),
+				self::field(
+					'field_fp02_home_articles_visible',
+					__( 'Показывать статьи на главной', 'shpigovsky-core' ),
+					'home_articles_visible',
+					'true_false',
+					array(
+						'instructions'  => __( 'Показать или скрыть блок статей на главной.', 'shpigovsky-core' ),
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				// 19. FAQ (template-parts/home/faq.php)
+				self::field(
+					'field_fp02_home_faq_heading',
+					__( 'Заголовок FAQ', 'shpigovsky-core' ),
+					'home_faq_heading',
+					'text',
+					array(
+						'instructions' => __( 'Заголовок секции FAQ на главной (например «Нас часто спрашивают»).', 'shpigovsky-core' ),
+						'wrapper'      => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				self::repeater(
+					'field_fp02_home_faq_items',
+					__( 'Вопросы и ответы (FAQ)', 'shpigovsky-core' ),
+					'home_faq_items',
+					15,
+					self::faq_subfields( 'home' ),
+					0,
+					array(
+						'instructions' => __( 'Вопросы и ответы на главной. Ограниченный повторитель; максимум строк задан в исходнике и проверках.', 'shpigovsky-core' ),
+						'button_label' => __( 'Добавить', 'shpigovsky-core' ),
+					)
+				),
+				// 20. Final form / CTA (template-parts/components/final-form.php)
+				self::field(
+					'field_fp02_home_cta_title',
+					__( 'CTA / форма — заголовок (fallback)', 'shpigovsky-core' ),
+					'home_cta_title',
+					'text',
+					array(
+						'instructions' => __( 'Fallback-заголовок финальной формы на главной. Приоритет: «Повторяемые блоки — Финальная форма», затем это поле, затем статический текст темы.', 'shpigovsky-core' ),
+					)
+				),
+				self::field(
+					'field_fp02_home_cta_text',
+					__( 'CTA / форма — текст (fallback)', 'shpigovsky-core' ),
+					'home_cta_text',
+					'textarea',
+					array(
+						'rows'         => 3,
+						'instructions' => __( 'Fallback-текст финальной формы на главной. Приоритет: «Повторяемые блоки — Финальная форма», затем это поле, затем статический текст темы.', 'shpigovsky-core' ),
+					)
+				),
 			),
 			self::location( 'page_type', '==', 'front_page' )
 		);
 	}
 
 	/**
-	 * Services hub page group.
+	 * Services hub page group (/uslugi/) — V9-06E43 admin parity.
+	 * Admin field order follows page-templates/services-hub.php frontend stack.
 	 *
 	 * @return array<string, mixed>
 	 */
 	private static function page_services_hub() {
 		return self::group(
 			'group_fp02_page_services_hub',
-			'Page — Services Hub',
+			__( 'Страница — Услуги (хаб)', 'shpigovsky-core' ),
 			array(
-				self::field( 'field_fp02_hero_eyebrow_hub', 'Hero eyebrow', 'hero_eyebrow', 'text' ),
-				self::field( 'field_fp02_hero_title_override_hub', 'Hero H1 override', 'hero_title_override', 'text' ),
-				self::field(
-					'field_fp02_hero_media_hub',
-					'Hero image',
-					'hero_media',
-					'image',
-					array(
-						'instructions' => 'Hero background image for /uslugi/. Empty falls back to theme asset services-hero.webp.',
-						'return_format' => 'array',
-						'preview_size'  => 'medium',
-					)
-				),
-				self::field( 'field_fp02_services_hub_intro', 'Hero lead / intro', 'services_hub_intro', 'textarea', array( 'rows' => 5 ) ),
+				// 1. Hero — services-inner-hero-v2
 				self::field(
 					'field_fp02_hero_cta_label_hub',
-					'Текст кнопки в hero-блоке',
+					__( 'Текст кнопки в hero-блоке', 'shpigovsky-core' ),
 					'hero_cta_label',
 					'text',
 					array(
-						'instructions' => 'Индивидуальный текст кнопки для hero-блока этой страницы/услуги. Если оставить пустым, используется текущий текст по умолчанию.',
+						'instructions' => __( 'Индивидуальный текст кнопки для hero-блока страницы «Услуги». Если оставить пустым, используется текст по умолчанию. На слайде можно задать свой текст кнопки.', 'shpigovsky-core' ),
+						'wrapper'      => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
 					)
 				),
-				self::field( 'field_fp02_services_hub_query_mode', 'Query display mode', 'services_hub_query_mode', 'select', array( 'choices' => array( 'grouped_by_parent' => 'Grouped by parent', 'flat' => 'Flat' ), 'default_value' => 'grouped_by_parent' ) ),
-				self::field( 'field_fp02_services_hub_show_placeholders', 'Show placeholder services', 'services_hub_show_placeholders', 'true_false' ),
-				self::repeater( 'field_fp02_services_hub_faq_items', 'FAQ', 'services_hub_faq_items', 15, self::faq_subfields( 'services_hub' ) ),
+				self::repeater(
+					'field_fp02_services_hero_slides',
+					__( 'Слайды hero', 'shpigovsky-core' ),
+					'services_hero_slides',
+					5,
+					array(
+						self::field( 'field_fp02_services_hero_slide_eyebrow', __( 'Надзаголовок', 'shpigovsky-core' ), 'eyebrow', 'text' ),
+						self::field( 'field_fp02_services_hero_slide_title', __( 'Заголовок', 'shpigovsky-core' ), 'title', 'text' ),
+						self::field( 'field_fp02_services_hero_slide_lead', __( 'Лид', 'shpigovsky-core' ), 'lead', 'textarea', array( 'rows' => 4 ) ),
+						self::field( 'field_fp02_services_hero_slide_image', __( 'Изображение', 'shpigovsky-core' ), 'image', 'image', array( 'return_format' => 'array', 'preview_size' => 'medium' ) ),
+						self::field( 'field_fp02_services_hero_slide_cta', __( 'Текст кнопки слайда', 'shpigovsky-core' ), 'cta_label', 'text', array( 'instructions' => __( 'Пусто — используется общая кнопка hero страницы.', 'shpigovsky-core' ) ) ),
+						self::field(
+							'field_fp02_services_hero_slide_enabled',
+							__( 'Показывать слайд', 'shpigovsky-core' ),
+							'item_enabled',
+							'true_false',
+							array(
+								'default_value' => 1,
+								'ui'            => 1,
+							)
+						),
+					),
+					0,
+					array(
+						'instructions' => __( 'Слайды hero на /uslugi/ (дизайн services-inner-hero-v2). При двух и более слайдах включается горизонтальный слайдер. Максимум 5 слайдов.', 'shpigovsky-core' ),
+						'button_label' => __( 'Добавить слайд', 'shpigovsky-core' ),
+						'wrapper'      => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_services_hero_autoplay_enabled',
+					__( 'Hero — автопрокрутка', 'shpigovsky-core' ),
+					'services_hero_autoplay_enabled',
+					'true_false',
+					array(
+						'instructions'  => __( 'Автопрокрутка слайдов hero (только если слайдов больше одного).', 'shpigovsky-core' ),
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				self::field(
+					'field_fp02_services_hero_autoplay_delay',
+					__( 'Hero — задержка автопрокрутки (мс)', 'shpigovsky-core' ),
+					'services_hero_autoplay_delay',
+					'number',
+					array(
+						'instructions'  => __( 'Пауза между слайдами в миллисекундах. По умолчанию 5000.', 'shpigovsky-core' ),
+						'default_value' => 5000,
+						'min'           => 1000,
+						'max'           => 60000,
+						'step'          => 500,
+					)
+				),
+				self::field(
+					'field_fp02_services_hero_arrows_enabled',
+					__( 'Hero — стрелки', 'shpigovsky-core' ),
+					'services_hero_arrows_enabled',
+					'true_false',
+					array(
+						'instructions'  => __( 'Показывать стрелки навигации (только если слайдов больше одного).', 'shpigovsky-core' ),
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				self::field(
+					'field_fp02_services_hero_dots_enabled',
+					__( 'Hero — точки', 'shpigovsky-core' ),
+					'services_hero_dots_enabled',
+					'true_false',
+					array(
+						'instructions'  => __( 'Показывать точки пагинации (только если слайдов больше одного).', 'shpigovsky-core' ),
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				// Legacy hero fields — retained as fallback, hidden in admin.
+				self::field(
+					'field_fp02_hero_eyebrow_hub',
+					__( 'Hero eyebrow (устарело)', 'shpigovsky-core' ),
+					'hero_eyebrow',
+					'text',
+					array(
+						'instructions' => __( 'Устарело: используйте «Слайды hero». Скрыто в админке; значение — legacy fallback.', 'shpigovsky-core' ),
+						'wrapper'      => array(
+							'width' => '',
+							'class' => 'fp02-acf-legacy-retired',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_hero_title_override_hub',
+					__( 'Hero H1 (устарело)', 'shpigovsky-core' ),
+					'hero_title_override',
+					'text',
+					array(
+						'instructions' => __( 'Устарело: используйте «Слайды hero». Скрыто в админке; значение — legacy fallback.', 'shpigovsky-core' ),
+						'wrapper'      => array(
+							'width' => '',
+							'class' => 'fp02-acf-legacy-retired',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_hero_media_hub',
+					__( 'Изображение hero (устарело)', 'shpigovsky-core' ),
+					'hero_media',
+					'image',
+					array(
+						'instructions'  => __( 'Устарело: используйте «Слайды hero». Скрыто в админке; значение — legacy fallback.', 'shpigovsky-core' ),
+						'return_format' => 'array',
+						'preview_size'  => 'medium',
+						'wrapper'       => array(
+							'width' => '',
+							'class' => 'fp02-acf-legacy-retired',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_services_hub_intro',
+					__( 'Hero lead (устарело)', 'shpigovsky-core' ),
+					'services_hub_intro',
+					'textarea',
+					array(
+						'rows'         => 5,
+						'instructions' => __( 'Устарело: используйте лид в «Слайдах hero». Скрыто в админке; значение — legacy fallback.', 'shpigovsky-core' ),
+						'wrapper'      => array(
+							'width' => '',
+							'class' => 'fp02-acf-legacy-retired',
+							'id'    => '',
+						),
+					)
+				),
+				// 2. Internal page nav
+				self::field(
+					'field_fp02_services_hub_nav_notice',
+					__( 'Навигация по разделам', 'shpigovsky-core' ),
+					'services_hub_nav_notice',
+					'message',
+					array(
+						'message'   => self::services_hub_catalog_source_notice_message(
+							__( 'Автоматический блок: пункты поднавигации строятся <strong class="fp02-acf-notice-danger">из родительских услуг CPT</strong>. На странице «Услуги» — только показ/скрытие.', 'shpigovsky-core' )
+						),
+						'new_lines' => 'wpautop',
+						'esc_html'  => 0,
+						'wrapper'   => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_services_hub_nav_visible',
+					__( 'Показывать навигацию по разделам', 'shpigovsky-core' ),
+					'services_hub_nav_visible',
+					'true_false',
+					array(
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				// 3. Service category groups / catalog
+				self::field(
+					'field_fp02_services_hub_catalog_notice',
+					__( 'Каталог услуг по разделам', 'shpigovsky-core' ),
+					'services_hub_catalog_notice',
+					'message',
+					array(
+						'message'   => self::services_hub_catalog_source_notice_message(
+							__( 'Автоматический блок: карточки и галереи разделов строятся <strong class="fp02-acf-notice-danger">из страниц услуг</strong>. На странице «Услуги» — настройки показа, режим списка и подписи к слайдерам категорий.', 'shpigovsky-core' )
+						),
+						'new_lines' => 'wpautop',
+						'esc_html'  => 0,
+						'wrapper'   => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_services_hub_catalog_visible',
+					__( 'Показывать каталог разделов', 'shpigovsky-core' ),
+					'services_hub_catalog_visible',
+					'true_false',
+					array(
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				self::field(
+					'field_fp02_services_hub_query_mode',
+					__( 'Режим отображения каталога', 'shpigovsky-core' ),
+					'services_hub_query_mode',
+					'select',
+					array(
+						'choices'       => array(
+							'grouped_by_parent' => __( 'Группами по родительским услугам', 'shpigovsky-core' ),
+							'flat'              => __( 'Плоский список', 'shpigovsky-core' ),
+						),
+						'default_value' => 'grouped_by_parent',
+						'instructions'  => __( 'Сгруппированный режим — канон V9 для /uslugi/.', 'shpigovsky-core' ),
+					)
+				),
+				self::field(
+					'field_fp02_services_hub_show_placeholders',
+					__( 'Показывать услуги-заглушки', 'shpigovsky-core' ),
+					'services_hub_show_placeholders',
+					'true_false',
+					array(
+						'instructions'  => __( 'Технический переключатель. В проде обычно выключен.', 'shpigovsky-core' ),
+						'default_value' => 0,
+						'ui'            => 1,
+					)
+				),
+				self::field(
+					'field_fp02_services_hub_category_gallery_dots_enabled',
+					__( 'Галереи разделов — точки', 'shpigovsky-core' ),
+					'services_hub_category_gallery_dots_enabled',
+					'true_false',
+					array(
+						'instructions'  => __( 'Точки пагинации у слайдеров карточек внутри разделов (как после E33-FIX01).', 'shpigovsky-core' ),
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				// 4. Rehabilitation program
+				self::field(
+					'field_fp02_services_hub_program_heading',
+					__( 'Программа — заголовок', 'shpigovsky-core' ),
+					'services_hub_program_heading',
+					'text',
+					array(
+						'instructions' => __( 'Заголовок блока «Наша программа включает…». Пусто — static V9 fallback.', 'shpigovsky-core' ),
+						'wrapper'      => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_services_hub_program_lead',
+					__( 'Программа — лид', 'shpigovsky-core' ),
+					'services_hub_program_lead',
+					'textarea',
+					array(
+						'rows' => 3,
+					)
+				),
+				self::field(
+					'field_fp02_services_hub_program_intro',
+					__( 'Программа — описание', 'shpigovsky-core' ),
+					'services_hub_program_intro',
+					'textarea',
+					array(
+						'rows' => 5,
+					)
+				),
+				self::field(
+					'field_fp02_services_hub_program_cta_title',
+					__( 'Программа — CTA заголовок', 'shpigovsky-core' ),
+					'services_hub_program_cta_title',
+					'text'
+				),
+				self::field(
+					'field_fp02_services_hub_program_cta_subtitle',
+					__( 'Программа — CTA подзаголовок', 'shpigovsky-core' ),
+					'services_hub_program_cta_subtitle',
+					'text'
+				),
+				self::field(
+					'field_fp02_services_hub_program_cta_button',
+					__( 'Программа — CTA кнопка', 'shpigovsky-core' ),
+					'services_hub_program_cta_button',
+					'text'
+				),
+				self::field(
+					'field_fp02_services_hub_program_notice',
+					__( 'Программа — источник карточек', 'shpigovsky-core' ),
+					'services_hub_program_notice',
+					'message',
+					array(
+						'message'   => self::services_hub_program_source_notice_message(),
+						'new_lines' => 'wpautop',
+						'esc_html'  => 0,
+					)
+				),
+				self::field(
+					'field_fp02_services_hub_program_visible',
+					__( 'Показывать блок программы', 'shpigovsky-core' ),
+					'services_hub_program_visible',
+					'true_false',
+					array(
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				// 5. Founder quote (automated/shared)
+				self::field(
+					'field_fp02_services_hub_founder_notice',
+					__( 'Цитата основателя', 'shpigovsky-core' ),
+					'services_hub_founder_notice',
+					'message',
+					array(
+						'message'   => __( 'Автоматический / общий блок: контент цитаты общий с главной (шаблон founder-quote). На странице «Услуги» — только показ/скрытие.', 'shpigovsky-core' ),
+						'new_lines' => 'wpautop',
+						'wrapper'   => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_services_hub_founder_quote_visible',
+					__( 'Показывать цитату основателя', 'shpigovsky-core' ),
+					'services_hub_founder_quote_visible',
+					'true_false',
+					array(
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				// 6. Comfort (reusable block)
+				self::field(
+					'field_fp02_services_hub_comfort_notice',
+					__( 'Комфорт', 'shpigovsky-core' ),
+					'services_hub_comfort_notice',
+					'message',
+					array(
+						'message'   => __( 'Автоматический блок: заголовок, лид и галерея берутся из «Повторяемые блоки — Комфорт / преимущества». На странице «Услуги» — только показ/скрытие.', 'shpigovsky-core' ),
+						'new_lines' => 'wpautop',
+						'wrapper'   => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_services_hub_comfort_visible',
+					__( 'Показывать блок «Комфорт»', 'shpigovsky-core' ),
+					'services_hub_comfort_visible',
+					'true_false',
+					array(
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				// 7. Secondary CTA band
+				self::field(
+					'field_fp02_services_hub_secondary_cta_title',
+					__( 'Второй CTA — заголовок', 'shpigovsky-core' ),
+					'services_hub_secondary_cta_title',
+					'text',
+					array(
+						'instructions' => __( 'Полоса CTA после блока «Комфорт». Пусто — static V9 fallback.', 'shpigovsky-core' ),
+						'wrapper'      => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_services_hub_secondary_cta_subtitle',
+					__( 'Второй CTA — подзаголовок', 'shpigovsky-core' ),
+					'services_hub_secondary_cta_subtitle',
+					'text'
+				),
+				self::field(
+					'field_fp02_services_hub_secondary_cta_button',
+					__( 'Второй CTA — кнопка', 'shpigovsky-core' ),
+					'services_hub_secondary_cta_button',
+					'text'
+				),
+				self::field(
+					'field_fp02_services_hub_secondary_cta_visible',
+					__( 'Показывать второй CTA', 'shpigovsky-core' ),
+					'services_hub_secondary_cta_visible',
+					'true_false',
+					array(
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				// 8. FAQ
+				self::field(
+					'field_fp02_services_hub_faq_heading',
+					__( 'FAQ — заголовок', 'shpigovsky-core' ),
+					'services_hub_faq_heading',
+					'text',
+					array(
+						'instructions' => __( 'Заголовок блока FAQ. Пусто — «Нас часто спрашивают».', 'shpigovsky-core' ),
+						'wrapper'      => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				self::repeater(
+					'field_fp02_services_hub_faq_items',
+					__( 'FAQ — вопросы', 'shpigovsky-core' ),
+					'services_hub_faq_items',
+					15,
+					self::faq_subfields( 'services_hub' ),
+					0,
+					array(
+						'instructions' => __( 'Вопросы и ответы на странице «Услуги».', 'shpigovsky-core' ),
+						'button_label' => __( 'Добавить', 'shpigovsky-core' ),
+					)
+				),
+				self::field(
+					'field_fp02_services_hub_faq_visible',
+					__( 'Показывать FAQ', 'shpigovsky-core' ),
+					'services_hub_faq_visible',
+					'true_false',
+					array(
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
+				// 9. Final form
+				self::field(
+					'field_fp02_services_hub_final_form_notice',
+					__( 'Финальная форма', 'shpigovsky-core' ),
+					'services_hub_final_form_notice',
+					'message',
+					array(
+						'message'   => __( 'Автоматический / общий блок: тексты финальной формы берутся из «Повторяемые блоки — Финальная форма». На странице «Услуги» — только показ/скрытие.', 'shpigovsky-core' ),
+						'new_lines' => 'wpautop',
+						'wrapper'   => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title',
+							'id'    => '',
+						),
+					)
+				),
+				self::field(
+					'field_fp02_services_hub_final_form_visible',
+					__( 'Показывать финальную форму', 'shpigovsky-core' ),
+					'services_hub_final_form_visible',
+					'true_false',
+					array(
+						'default_value' => 1,
+						'ui'            => 1,
+					)
+				),
 			),
 			self::location( 'page_template', '==', 'page-templates/services-hub.php' )
 		);
@@ -651,6 +2513,45 @@ final class FieldGroups implements ModuleInterface {
 				),
 			),
 			self::location_page_id( 11 )
+		);
+	}
+
+	/**
+	 * Shared page layout mode for Generic Content template pages (V9-06E51).
+	 * Temporary stub render: header / nav / H1 / footer. Content fields preserved.
+	 *
+	 * @return array<string, mixed>
+	 */
+	private static function page_layout_mode() {
+		return self::group(
+			'group_fp02_page_layout_mode',
+			__( 'Макет страницы', 'shpigovsky-core' ),
+			array(
+				self::field(
+					'field_fp02_page_layout_mode',
+					__( 'Макет страницы', 'shpigovsky-core' ),
+					'page_layout_mode',
+					'button_group',
+					array(
+						'instructions'  => __( 'Временный режим страницы. На фронте выводятся только шапка, навигация, H1 и подвал. Контент в полях не удаляется и может быть включён обратно сменой макета.', 'shpigovsky-core' ),
+						'required'      => 0,
+						'choices'       => array(
+							'full'        => __( 'Полная страница', 'shpigovsky-core' ),
+							'placeholder' => __( 'Заглушка', 'shpigovsky-core' ),
+						),
+						'default_value' => 'full',
+						'return_format' => 'value',
+						'allow_null'    => 0,
+						'layout'        => 'horizontal',
+						'wrapper'       => array(
+							'width' => '',
+							'class' => 'fp02-acf-section-title fp02-page-layout-selector',
+							'id'    => '',
+						),
+					)
+				),
+			),
+			self::location( 'page_template', '==', 'page-templates/generic.php' )
 		);
 	}
 
@@ -974,6 +2875,9 @@ final class FieldGroups implements ModuleInterface {
 	/**
 	 * Reusable block — specialists group (V9-06E18 Batch 1).
 	 *
+	 * V9-06E34: slider cards come from published child pages of `/specyalisty/`.
+	 * Manual specialists_items repeater retired from admin render path.
+	 *
 	 * @return array<string, mixed>
 	 */
 	private static function block_specialists() {
@@ -981,40 +2885,24 @@ final class FieldGroups implements ModuleInterface {
 			'group_fp02_block_specialists',
 			'Reusable Block — Specialists',
 			array(
+				self::field(
+					'field_fp02_specialists_source_notice',
+					'Источник слайдера',
+					'specialists_source_notice',
+					'message',
+					array(
+						'message' => 'V9-06E34: карточки слайдера автоматически берутся из дочерних страниц «Специалисты» (/specyalisty/). Добавляйте/переупорядочивайте специалистов через страницы (menu_order). Ручной repeater specialists_items больше не используется в рендере.',
+					)
+				),
 				self::field( 'field_fp02_specialists_section_heading', 'Заголовок секции', 'specialists_section_heading', 'text' ),
 				self::field( 'field_fp02_specialists_all_link_label', 'Текст ссылки «все специалисты»', 'specialists_all_link_label', 'text' ),
-				self::field( 'field_fp02_specialists_all_link_url', 'URL ссылки «все специалисты»', 'specialists_all_link_url', 'url' ),
-				self::repeater(
-					'field_fp02_specialists_items',
-					'Специалисты',
-					'specialists_items',
-					12,
+				self::field(
+					'field_fp02_specialists_all_link_url',
+					'URL ссылки «все специалисты»',
+					'specialists_all_link_url',
+					'url',
 					array(
-						self::field(
-							'field_fp02_specialist_photo',
-							'Фото (медиа)',
-							'specialist_photo',
-							'image',
-							array(
-								'return_format' => 'array',
-								'preview_size'  => 'medium',
-								'instructions'  => 'Опционально. Пусто — theme asset path ниже или V9 fallback.',
-							)
-						),
-						self::field(
-							'field_fp02_specialist_photo_asset',
-							'Theme asset path',
-							'specialist_photo_asset',
-							'text',
-							array(
-								'instructions' => 'Относительный путь в theme/assets, напр. img/content/home-specialists/sergey-shpigovsky.webp',
-							)
-						),
-						self::field( 'field_fp02_specialist_photo_width', 'Ширина (px)', 'specialist_photo_width', 'number', array( 'min' => 0 ) ),
-						self::field( 'field_fp02_specialist_photo_height', 'Высота (px)', 'specialist_photo_height', 'number', array( 'min' => 0 ) ),
-						self::field( 'field_fp02_specialist_name', 'Имя', 'specialist_name', 'text' ),
-						self::field( 'field_fp02_specialist_role', 'Роль / специализация', 'specialist_role', 'textarea', array( 'rows' => 3 ) ),
-						self::field( 'field_fp02_specialist_link', 'Ссылка (опционально)', 'specialist_link', 'url' ),
+						'instructions' => 'Пусто — /specyalisty/.',
 					)
 				),
 			),
@@ -1447,8 +3335,8 @@ final class FieldGroups implements ModuleInterface {
 	 */
 	private static function title_text_subfields( $prefix ) {
 		return array(
-			self::field( 'field_fp02_' . $prefix . '_title', 'Заголовок', 'title', 'text' ),
-			self::field( 'field_fp02_' . $prefix . '_text', 'Текст', 'text', 'textarea', array( 'rows' => 3 ) ),
+			self::field( 'field_fp02_' . $prefix . '_title', __( 'Заголовок', 'shpigovsky-core' ), 'title', 'text' ),
+			self::field( 'field_fp02_' . $prefix . '_text', __( 'Текст', 'shpigovsky-core' ), 'text', 'textarea', array( 'rows' => 3 ) ),
 		);
 	}
 
@@ -1474,8 +3362,103 @@ final class FieldGroups implements ModuleInterface {
 	 */
 	private static function faq_subfields( $prefix ) {
 		return array(
-			self::field( 'field_fp02_' . $prefix . '_faq_question', 'Вопрос', 'question', 'text' ),
-			self::field( 'field_fp02_' . $prefix . '_faq_answer', 'Ответ', 'answer', 'textarea', array( 'rows' => 4 ) ),
+			self::field( 'field_fp02_' . $prefix . '_faq_question', __( 'Вопрос', 'shpigovsky-core' ), 'question', 'text' ),
+			self::field( 'field_fp02_' . $prefix . '_faq_answer', __( 'Ответ', 'shpigovsky-core' ), 'answer', 'textarea', array( 'rows' => 4 ) ),
 		);
+	}
+
+	/**
+	 * Home rehab program auto-block notice (cards from program pages).
+	 * Builds admin-edit URL for /o-centre/programma-lecheniya/ without hardcoding host.
+	 *
+	 * @return string Safe HTML for ACF message field (esc_html disabled).
+	 */
+	private static function home_rehab_program_source_notice_message() {
+		$url  = '';
+		$page = function_exists( 'get_page_by_path' ) ? get_page_by_path( 'o-centre/programma-lecheniya' ) : null;
+
+		if ( $page instanceof \WP_Post ) {
+			$url = admin_url( 'post.php?post=' . (int) $page->ID . '&action=edit' );
+		}
+
+		if ( '' === $url && function_exists( 'home_url' ) ) {
+			$url = home_url( '/o-centre/programma-lecheniya/' );
+		}
+
+		$url = esc_url( $url );
+
+		return sprintf(
+			/* translators: %s: admin edit or frontend URL for treatment program pages */
+			__( 'Автоматический блок: карточки направлений строятся <strong class="fp02-acf-notice-danger">из страниц <a href="%s">программы лечения</a></strong>. На главной редактируются заголовок, описания и показ/скрытие блока.', 'shpigovsky-core' ),
+			$url
+		);
+	}
+
+	/**
+	 * Services hub program cards notice (same program pages source as Home).
+	 *
+	 * @return string Safe HTML for ACF message field (esc_html disabled).
+	 */
+	private static function services_hub_program_source_notice_message() {
+		$url  = '';
+		$page = function_exists( 'get_page_by_path' ) ? get_page_by_path( 'o-centre/programma-lecheniya' ) : null;
+
+		if ( $page instanceof \WP_Post ) {
+			$url = admin_url( 'post.php?post=' . (int) $page->ID . '&action=edit' );
+		}
+
+		if ( '' === $url && function_exists( 'home_url' ) ) {
+			$url = home_url( '/o-centre/programma-lecheniya/' );
+		}
+
+		$url = esc_url( $url );
+
+		return sprintf(
+			/* translators: %s: admin edit or frontend URL for treatment program pages */
+			__( 'Автоматический блок: карточки направлений строятся <strong class="fp02-acf-notice-danger">из страниц <a href="%s">программы лечения</a></strong>. На странице «Услуги» редактируются заголовок, описания и показ/скрытие блока.', 'shpigovsky-core' ),
+			$url
+		);
+	}
+
+	/**
+	 * Services hub catalog/nav notice with link to service CPT list.
+	 *
+	 * @param string $message Already-translated HTML message; may include a %s placeholder for the CPT admin URL.
+	 * @return string Safe HTML for ACF message field (esc_html disabled).
+	 */
+	private static function services_hub_catalog_source_notice_message( $message = '' ) {
+		$url = function_exists( 'admin_url' ) ? admin_url( 'edit.php?post_type=service' ) : '';
+		$url = esc_url( $url );
+
+		if ( '' === $message ) {
+			$message = __( 'Автоматический блок: карточки строятся <strong class="fp02-acf-notice-danger">из страниц услуг</strong>. На странице «Услуги» — настройки показа и подписи блока.', 'shpigovsky-core' );
+		}
+
+		if ( false !== strpos( $message, '%s' ) ) {
+			return sprintf( $message, $url );
+		}
+
+		if ( '' !== $url ) {
+			$message = str_replace(
+				'из страниц услуг',
+				sprintf(
+					/* translators: %s: services CPT admin list URL */
+					'из <a class="fp02-acf-notice-danger" href="%s">страниц услуг</a>',
+					$url
+				),
+				$message
+			);
+			$message = str_replace(
+				'из родительских услуг CPT',
+				sprintf(
+					/* translators: %s: services CPT admin list URL */
+					'из <a class="fp02-acf-notice-danger" href="%s">родительских услуг CPT</a>',
+					$url
+				),
+				$message
+			);
+		}
+
+		return $message;
 	}
 }

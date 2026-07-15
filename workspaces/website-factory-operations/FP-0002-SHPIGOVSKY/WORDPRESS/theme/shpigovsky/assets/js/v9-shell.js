@@ -285,21 +285,12 @@
 })();
 
 // FP-0002 v6 — home gallery swiper
+// V9-06E33-FIX01 — shared options also used by /uslugi/ category galleries
 (function initHomeGallery() {
 	'use strict';
 
-	function boot() {
-		var slider = document.querySelector('[data-gallery-slider]');
-
-		if (!slider || typeof window.Swiper !== 'function') {
-			return;
-		}
-
-		if (slider.swiper) {
-			return;
-		}
-
-		new window.Swiper(slider, {
+	function gallerySwiperOptions(slider) {
+		return {
 			slidesPerView: 4,
 			spaceBetween: 30,
 			loop: false,
@@ -330,7 +321,24 @@
 					spaceBetween: 30,
 				},
 			},
-		});
+		};
+	}
+
+	// Expose for /uslugi/ category galleries (same settings as Home).
+	window.shpigovskyGallerySwiperOptions = gallerySwiperOptions;
+
+	function boot() {
+		var slider = document.querySelector('[data-gallery-slider]');
+
+		if (!slider || typeof window.Swiper !== 'function') {
+			return;
+		}
+
+		if (slider.swiper) {
+			return;
+		}
+
+		new window.Swiper(slider, gallerySwiperOptions(slider));
 	}
 
 	if (document.readyState === 'loading') {
@@ -1550,4 +1558,571 @@
 	window.addEventListener('pageshow', updateVisibility);
 
 	updateVisibility();
+})();
+
+// FP-0002 V9-06E33-FIX01 — /uslugi/ category galleries: same Swiper settings as Home gallery (dots, no arrows)
+(function initServicesCategoryGalleries() {
+	'use strict';
+
+	function boot() {
+		if (typeof window.Swiper !== 'function') {
+			return;
+		}
+
+		var optionsFactory =
+			typeof window.shpigovskyGallerySwiperOptions === 'function'
+				? window.shpigovskyGallerySwiperOptions
+				: null;
+
+		document.querySelectorAll('[data-services-category-gallery]').forEach(function (slider) {
+			if (slider.swiper) {
+				return;
+			}
+
+			var options = optionsFactory
+				? optionsFactory(slider)
+				: {
+					slidesPerView: 4,
+					spaceBetween: 30,
+					loop: false,
+					autoplay: false,
+					navigation: false,
+					watchOverflow: true,
+					grabCursor: true,
+					pagination: (function () {
+						var pagination = slider.querySelector('[data-gallery-pagination]');
+						return pagination
+							? {
+								el: pagination,
+								clickable: true,
+							}
+							: false;
+					})(),
+					breakpoints: {
+						320: {
+							slidesPerView: 2.15,
+							spaceBetween: 10,
+						},
+						768: {
+							slidesPerView: 3.15,
+							spaceBetween: 20,
+						},
+						1025: {
+							slidesPerView: 3.5,
+							spaceBetween: 30,
+						},
+					},
+				};
+
+			new window.Swiper(slider, options);
+		});
+	}
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', boot);
+	} else {
+		boot();
+	}
+})();
+
+// FP-0002 V9-06E35 — home articles swiper (same options as Home gallery /uslugi/; dots, no arrows)
+(function initHomeArticlesSlider() {
+	'use strict';
+
+	function boot() {
+		if (typeof window.Swiper !== 'function') {
+			return;
+		}
+
+		var optionsFactory =
+			typeof window.shpigovskyGallerySwiperOptions === 'function'
+				? window.shpigovskyGallerySwiperOptions
+				: null;
+
+		document.querySelectorAll('[data-articles-slider]').forEach(function (slider) {
+			if (slider.swiper) {
+				return;
+			}
+
+			var options = optionsFactory
+				? optionsFactory(slider)
+				: {
+					slidesPerView: 4,
+					spaceBetween: 30,
+					loop: false,
+					autoplay: false,
+					navigation: false,
+					watchOverflow: true,
+					grabCursor: true,
+					pagination: false,
+					breakpoints: {
+						320: {
+							slidesPerView: 2.15,
+							spaceBetween: 10,
+						},
+						768: {
+							slidesPerView: 3.15,
+							spaceBetween: 20,
+						},
+						1025: {
+							slidesPerView: 3.5,
+							spaceBetween: 30,
+						},
+					},
+				};
+
+			var articlesPagination = slider.querySelector('[data-articles-pagination]');
+			if (articlesPagination) {
+				options.pagination = {
+					el: articlesPagination,
+					clickable: true,
+				};
+			}
+
+			new window.Swiper(slider, options);
+		});
+	}
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', boot);
+	} else {
+		boot();
+	}
+})();
+
+// FP-0002 V9-06E41 — Home hero slider (Swiper, horizontal)
+(function initHomeHeroSlider() {
+	'use strict';
+
+	function boot() {
+		var slider = document.querySelector('[data-hero-slider]');
+
+		if (!slider || typeof window.Swiper !== 'function') {
+			return;
+		}
+
+		if (slider.swiper) {
+			return;
+		}
+
+		var slides = slider.querySelectorAll('.swiper-slide');
+		if (!slides || slides.length < 2) {
+			return;
+		}
+
+		var autoplayOn = slider.getAttribute('data-hero-autoplay') === '1';
+		var arrowsOn = slider.getAttribute('data-hero-arrows') === '1';
+		var dotsOn = slider.getAttribute('data-hero-dots') === '1';
+		var delay = parseInt(slider.getAttribute('data-hero-delay') || '5000', 10);
+		if (!delay || delay < 1000) {
+			delay = 5000;
+		}
+
+		var paginationEl = slider.querySelector('[data-hero-pagination]');
+		var prevEl = slider.querySelector('[data-hero-prev]');
+		var nextEl = slider.querySelector('[data-hero-next]');
+
+		var options = {
+			slidesPerView: 1,
+			spaceBetween: 0,
+			loop: false,
+			speed: 600,
+			autoHeight: false,
+			watchOverflow: true,
+			grabCursor: true,
+			effect: 'slide',
+			direction: 'horizontal',
+			autoplay: autoplayOn
+				? {
+					delay: delay,
+					disableOnInteraction: false,
+					pauseOnMouseEnter: true,
+				}
+				: false,
+			pagination:
+				dotsOn && paginationEl
+					? {
+						el: paginationEl,
+						clickable: true,
+					}
+					: false,
+			navigation:
+				arrowsOn && prevEl && nextEl
+					? {
+						prevEl: prevEl,
+						nextEl: nextEl,
+					}
+					: false,
+		};
+
+		new window.Swiper(slider, options);
+	}
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', boot);
+	} else {
+		boot();
+	}
+})();
+
+// FP-0002 V9-06E43 — Services hub hero slider (services-inner-hero-v2, horizontal)
+(function initServicesHeroSlider() {
+	'use strict';
+
+	function boot() {
+		var slider = document.querySelector('[data-services-hero-slider]');
+
+		if (!slider || typeof window.Swiper !== 'function') {
+			return;
+		}
+
+		if (slider.swiper) {
+			return;
+		}
+
+		var slides = slider.querySelectorAll('.swiper-slide');
+		if (!slides || slides.length < 2) {
+			return;
+		}
+
+		var autoplayOn = slider.getAttribute('data-services-hero-autoplay') === '1';
+		var arrowsOn = slider.getAttribute('data-services-hero-arrows') === '1';
+		var dotsOn = slider.getAttribute('data-services-hero-dots') === '1';
+		var delay = parseInt(slider.getAttribute('data-services-hero-delay') || '5000', 10);
+		if (!delay || delay < 1000) {
+			delay = 5000;
+		}
+
+		var paginationEl = slider.querySelector('[data-services-hero-pagination]');
+		var prevEl = slider.querySelector('[data-services-hero-prev]');
+		var nextEl = slider.querySelector('[data-services-hero-next]');
+
+		var options = {
+			slidesPerView: 1,
+			spaceBetween: 0,
+			loop: false,
+			speed: 600,
+			autoHeight: false,
+			watchOverflow: true,
+			grabCursor: true,
+			effect: 'slide',
+			direction: 'horizontal',
+			autoplay: autoplayOn
+				? {
+					delay: delay,
+					disableOnInteraction: false,
+					pauseOnMouseEnter: true,
+				}
+				: false,
+			pagination:
+				dotsOn && paginationEl
+					? {
+						el: paginationEl,
+						clickable: true,
+					}
+					: false,
+			navigation:
+				arrowsOn && prevEl && nextEl
+					? {
+						prevEl: prevEl,
+						nextEl: nextEl,
+					}
+					: false,
+		};
+
+		new window.Swiper(slider, options);
+	}
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', boot);
+	} else {
+		boot();
+	}
+})();
+
+// FP-0002 V9-06E47-FIX04 — service signs editorial 5-line clamp / read-more toggle
+(function initServiceSignsReadMore() {
+	'use strict';
+
+	var LINE_COUNT = 5;
+	var TOLERANCE_PX = 2;
+	var RESIZE_DEBOUNCE_MS = 150;
+	var LABEL_MORE = 'Читать больше';
+	var LABEL_HIDE = 'Скрыть';
+	var prefersReducedMotion =
+		typeof window.matchMedia === 'function' &&
+		window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+	function getLineHeight(element) {
+		var styles = window.getComputedStyle(element);
+		var lineHeight = parseFloat(styles.lineHeight);
+
+		if (!lineHeight || Number.isNaN(lineHeight)) {
+			var fontSize = parseFloat(styles.fontSize) || 16;
+			lineHeight = fontSize * 1.5;
+		}
+
+		return lineHeight;
+	}
+
+	function setButtonLabel(button, expanded) {
+		button.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+		button.textContent = expanded ? LABEL_HIDE : LABEL_MORE;
+	}
+
+	function clearTransitionTimer(editorial) {
+		if (editorial._signsTransitionTimer) {
+			window.clearTimeout(editorial._signsTransitionTimer);
+			editorial._signsTransitionTimer = null;
+		}
+
+		if (editorial._signsTransitionEndHandler) {
+			editorial.removeEventListener('transitionend', editorial._signsTransitionEndHandler);
+			editorial._signsTransitionEndHandler = null;
+		}
+	}
+
+	function afterMaxHeightTransition(editorial, done) {
+		clearTransitionTimer(editorial);
+
+		function finish() {
+			clearTransitionTimer(editorial);
+			editorial.classList.remove('is-animated');
+			done();
+		}
+
+		function onTransitionEnd(event) {
+			if (event.target !== editorial || event.propertyName !== 'max-height') {
+				return;
+			}
+
+			finish();
+		}
+
+		if (prefersReducedMotion) {
+			finish();
+			return;
+		}
+
+		editorial._signsTransitionEndHandler = onTransitionEnd;
+		editorial.addEventListener('transitionend', onTransitionEnd);
+		editorial._signsTransitionTimer = window.setTimeout(finish, 500);
+	}
+
+	function measureNaturalHeight(editorial) {
+		var prevClamp = editorial.classList.contains('is-clamped');
+		var prevExpanded = editorial.classList.contains('is-expanded');
+		var prevAnimated = editorial.classList.contains('is-animated');
+		var prevClampVar = editorial.style.getPropertyValue('--signs-editorial-clamp-height');
+		var prevFullVar = editorial.style.getPropertyValue('--signs-editorial-full-height');
+
+		editorial.classList.remove('is-clamped', 'is-expanded', 'is-animated');
+		editorial.style.removeProperty('--signs-editorial-clamp-height');
+		editorial.style.removeProperty('--signs-editorial-full-height');
+		editorial.style.maxHeight = 'none';
+
+		var height = editorial.scrollHeight;
+
+		editorial.style.maxHeight = '';
+
+		if (prevClampVar) {
+			editorial.style.setProperty('--signs-editorial-clamp-height', prevClampVar);
+		}
+
+		if (prevFullVar) {
+			editorial.style.setProperty('--signs-editorial-full-height', prevFullVar);
+		}
+
+		editorial.classList.toggle('is-clamped', prevClamp);
+		editorial.classList.toggle('is-expanded', prevExpanded);
+		editorial.classList.toggle('is-animated', prevAnimated);
+
+		return height;
+	}
+
+	function expandEditorial(editorial, button, state) {
+		if (state.expanded || state.animating) {
+			return;
+		}
+
+		state.animating = true;
+		clearTransitionTimer(editorial);
+
+		var clampHeight = getLineHeight(editorial) * LINE_COUNT;
+		var fullHeight = measureNaturalHeight(editorial);
+
+		editorial.style.setProperty('--signs-editorial-clamp-height', clampHeight + 'px');
+		editorial.style.setProperty('--signs-editorial-full-height', fullHeight + 'px');
+		editorial.classList.add('is-clamped');
+		editorial.classList.remove('is-expanded');
+
+		// Force layout at clamp height before expanding.
+		void editorial.offsetHeight;
+
+		editorial.classList.add('is-animated');
+		editorial.classList.remove('is-clamped');
+		editorial.classList.add('is-expanded');
+		state.expanded = true;
+		setButtonLabel(button, true);
+		button.hidden = false;
+
+		afterMaxHeightTransition(editorial, function () {
+			state.animating = false;
+			editorial.style.setProperty(
+				'--signs-editorial-full-height',
+				measureNaturalHeight(editorial) + 'px'
+			);
+		});
+	}
+
+	function collapseEditorial(editorial, button, state) {
+		if (!state.expanded || state.animating) {
+			return;
+		}
+
+		state.animating = true;
+		clearTransitionTimer(editorial);
+
+		var clampHeight = getLineHeight(editorial) * LINE_COUNT;
+		var fullHeight = measureNaturalHeight(editorial);
+
+		editorial.style.setProperty('--signs-editorial-clamp-height', clampHeight + 'px');
+		editorial.style.setProperty('--signs-editorial-full-height', fullHeight + 'px');
+		editorial.classList.add('is-expanded');
+		editorial.classList.remove('is-clamped');
+
+		// Force layout at full height before collapsing.
+		void editorial.offsetHeight;
+
+		editorial.classList.add('is-animated');
+		editorial.classList.remove('is-expanded');
+		editorial.classList.add('is-clamped');
+		state.expanded = false;
+		setButtonLabel(button, false);
+		button.hidden = false;
+
+		afterMaxHeightTransition(editorial, function () {
+			state.animating = false;
+		});
+	}
+
+	function applyOverflowState(editorial, button, state, needsClamp, clampHeight, fullHeight) {
+		if (!needsClamp) {
+			clearTransitionTimer(editorial);
+			state.expanded = false;
+			state.animating = false;
+			editorial.classList.remove('is-clamped', 'is-expanded', 'is-animated');
+			editorial.style.removeProperty('--signs-editorial-clamp-height');
+			editorial.style.removeProperty('--signs-editorial-full-height');
+			editorial.style.maxHeight = '';
+			button.hidden = true;
+			setButtonLabel(button, false);
+			return;
+		}
+
+		editorial.style.setProperty('--signs-editorial-clamp-height', clampHeight + 'px');
+		editorial.style.setProperty('--signs-editorial-full-height', fullHeight + 'px');
+		button.hidden = false;
+
+		if (state.expanded) {
+			editorial.classList.remove('is-clamped', 'is-animated');
+			editorial.classList.add('is-expanded');
+			setButtonLabel(button, true);
+			return;
+		}
+
+		editorial.classList.remove('is-expanded', 'is-animated');
+		editorial.classList.add('is-clamped');
+		setButtonLabel(button, false);
+	}
+
+	function syncBlock(root) {
+		var editorial = root.querySelector('.service-leaf-signs-v1__editorial');
+		var button = root.querySelector('.service-leaf-signs-v1__read-more');
+
+		if (!editorial || !button) {
+			return;
+		}
+
+		if (!button._signsReadMoreState) {
+			button._signsReadMoreState = {
+				expanded: false,
+				animating: false
+			};
+		}
+
+		var state = button._signsReadMoreState;
+
+		if (state.animating) {
+			return;
+		}
+
+		var clampHeight = getLineHeight(editorial) * LINE_COUNT;
+		var fullHeight = measureNaturalHeight(editorial);
+		var needsClamp = fullHeight > clampHeight + TOLERANCE_PX;
+
+		applyOverflowState(editorial, button, state, needsClamp, clampHeight, fullHeight);
+
+		if (!button._signsReadMoreBound) {
+			button._signsReadMoreBound = true;
+			button.addEventListener('click', function (event) {
+				event.preventDefault();
+
+				if (state.animating) {
+					return;
+				}
+
+				if (state.expanded) {
+					collapseEditorial(editorial, button, state);
+				} else {
+					expandEditorial(editorial, button, state);
+				}
+			});
+		}
+	}
+
+	function syncAll() {
+		var roots = document.querySelectorAll('.service-leaf-signs-v1');
+
+		Array.prototype.forEach.call(roots, function (root) {
+			syncBlock(root);
+		});
+	}
+
+	function boot() {
+		function runSync() {
+			window.requestAnimationFrame(function () {
+				window.requestAnimationFrame(syncAll);
+			});
+		}
+
+		runSync();
+
+		if (document.fonts && document.fonts.ready && typeof document.fonts.ready.then === 'function') {
+			document.fonts.ready.then(function () {
+				runSync();
+			}).catch(function () {
+				/* ignore font readiness failures */
+			});
+		}
+
+		window.addEventListener('load', runSync);
+
+		var resizeTimer = null;
+		window.addEventListener('resize', function () {
+			if (resizeTimer) {
+				window.clearTimeout(resizeTimer);
+			}
+
+			resizeTimer = window.setTimeout(function () {
+				runSync();
+			}, RESIZE_DEBOUNCE_MS);
+		});
+	}
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', boot);
+	} else {
+		boot();
+	}
 })();

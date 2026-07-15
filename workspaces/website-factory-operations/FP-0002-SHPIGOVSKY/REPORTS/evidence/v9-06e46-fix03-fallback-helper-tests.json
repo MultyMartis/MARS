@@ -1,0 +1,44 @@
+{
+    "results": {
+        "empty": {
+            "footer": "подробнее о программе",
+            "footer_is_fallback": true,
+            "intros_count": 2,
+            "intro0_lorem": true
+        },
+        "partial": {
+            "footer": "USER_FOOTER_PARTIAL",
+            "footer_user_wins": true,
+            "intros": [
+                "USER_PARTIAL_INTRO_ONLY"
+            ],
+            "only_user_row": true,
+            "no_lorem_mixed": true
+        },
+        "filled": {
+            "footer": "USER_FOOTER_FULL",
+            "footer_user_wins": true,
+            "intros": [
+                "USER_INTRO_A",
+                "USER_INTRO_B"
+            ],
+            "user_only": true
+        }
+    },
+    "h73": {
+        "footer": "подробнее о программе ТЕСТ",
+        "intros": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        ],
+        "mid_cta_enabled": true
+    },
+    "db_writes_approx": 8,
+    "log": [
+        "SEEDED_INTRO_ITEMS count=2 ok=1",
+        "VERIFY get_field_type=array count=2 meta_count='2'",
+        "ADMIN_FIELDS=55 CTA_LEFT=0",
+        "RESTORED_77",
+        "77_footer='' intros=array (\n  0 => \n  array (\n    'field_fp02_section_program_intro_item_text' => 'USER_INTRO_A',\n  ),\n  1 => \n  array (\n    'field_fp02_section_program_intro_item_text' => 'USER_INTRO_B',\n  ),\n)"
+    ]
+}

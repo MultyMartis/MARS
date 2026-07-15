@@ -1,0 +1,10 @@
+requirement,implementation,result,notes
+page_specific_design,"services-inner-hero-v2 classes",PASS,
+slide_repeater,services_hero_slides,PASS,"seeded + probe"
+seeded_first_slide,"from current hero",PASS,
+multi_slide_frontend,data-services-hero-slider,PASS,
+autoplay_setting,data-services-hero-autoplay,PASS,
+arrows_setting,"data-services-hero-arrows / nav",PASS,
+dots_setting,data-services-hero-pagination,PASS,
+height_preserved,"min-height 320 CSS",PASS,"CSS min-height on slider mode"
+one_slide_hides_nav,"no slider attrs after restore",PASS,

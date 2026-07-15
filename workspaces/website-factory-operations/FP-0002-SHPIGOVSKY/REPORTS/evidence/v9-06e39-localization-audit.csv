@@ -1,0 +1,15 @@
+file,string/context,current_language,wrapped_before,wrapped_after,text_domain,action,notes
+WORDPRESS/theme/shpigovsky/style.css,Text Domain header,n/a,yes (shpigovsky),yes (shpigovsky),shpigovsky,keep,Already present
+WORDPRESS/theme/shpigovsky/inc/setup.php,load_theme_textdomain,n/a,yes,yes,shpigovsky,keep,Already loads languages/
+WORDPRESS/theme/shpigovsky/languages/,directory,n/a,missing,created,shpigovsky,create,Foundation dir + POT
+WORDPRESS/theme/shpigovsky/languages/shpigovsky.pot,POT catalog,RU source samples,missing,created,shpigovsky,create,Manual foundation POT; full extract deferred
+WORDPRESS/plugins/shpigovsky-core/shpigovsky-core.php,Text Domain header,n/a,yes (shpigovsky-core),yes,shpigovsky-core,keep,Already present
+WORDPRESS/plugins/shpigovsky-core/shpigovsky-core.php,load_plugin_textdomain,n/a,no,yes (init priority 0),shpigovsky-core,add,V9-06E39 bootstrap
+WORDPRESS/plugins/shpigovsky-core/languages/shpigovsky-core.pot,POT catalog,RU originals,missing,created,shpigovsky-core,create,Home ACF strings extractable for EN
+WORDPRESS/plugins/shpigovsky-core/src/Fields/FieldGroups.php,page_home group title,EN hardcoded,no,yes __(),shpigovsky-core,wrap+RU,Страница — Главная
+WORDPRESS/plugins/shpigovsky-core/src/Fields/FieldGroups.php,page_home field labels/instructions/messages,mixed EN/RU hardcoded,no,yes __() RU sources,shpigovsky-core,wrap+RU+reorder,Admin shows RU under locale ru_RU
+WORDPRESS/plugins/shpigovsky-core/src/Fields/FieldGroups.php,title_text_subfields / faq_subfields,RU hardcoded,no,yes __(),shpigovsky-core,wrap,Shared helpers used by Home + others
+WORDPRESS/acf-json/group_fp02_page_home.json,exported labels,mixed→RU,n/a,RU resolved strings,n/a (JSON),regenerate,Mirrors PHP after __() resolve
+runtime DB group #639,field menu_order + titles,mixed,partial,RU order match,n/a,DB sync+dedupe,One publish group; keys/meta preserved
+site locale (get_locale),WPLANG/options,ru_RU,n/a,n/a,n/a,audit,Russian admin source strings display as msgid
+en_US.po / .mo,English catalog,n/a,missing,not fabricated,shpigovsky-core,skip,No broken .mo; EN via future PO from POT

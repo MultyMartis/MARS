@@ -1,0 +1,328 @@
+{
+    "reorder": [
+        {
+            "id": 1029,
+            "slug": "genotipirovanie",
+            "menu_before": 0,
+            "menu_after": 200,
+            "action": "REORDERED_LAST"
+        }
+    ],
+    "created_or_updated": [
+        {
+            "title": "Лечение интернет зависимости",
+            "slug": "lechenie-internet-zavisimosti",
+            "parent_id": 73,
+            "trashed_matches": [],
+            "demo_source": "placeholder_same_level_as_leaf_under_zavisimosti",
+            "action": "CREATED",
+            "id": 1046,
+            "final_url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-internet-zavisimosti/",
+            "text_list": 0,
+            "slider": 1,
+            "result": "OK"
+        },
+        {
+            "title": "Компьютерная зависимость",
+            "slug": "kompyuternaya-zavisimost",
+            "parent_id": 73,
+            "trashed_matches": [],
+            "demo_source": "placeholder_same_level_as_leaf_under_zavisimosti",
+            "action": "CREATED",
+            "id": 1047,
+            "final_url": "http://shpigovsky.test/uslugi/zavisimosti/kompyuternaya-zavisimost/",
+            "text_list": 0,
+            "slider": 1,
+            "result": "OK"
+        },
+        {
+            "title": "Лечение опиумной зависимости",
+            "slug": "lechenie-opiumnoy-zavisimosti",
+            "parent_id": 73,
+            "trashed_matches": [],
+            "demo_source": "placeholder_same_level_as_leaf_under_zavisimosti",
+            "action": "CREATED",
+            "id": 1048,
+            "final_url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-opiumnoy-zavisimosti/",
+            "text_list": 0,
+            "slider": 1,
+            "result": "OK"
+        },
+        {
+            "title": "Хроническая усталость",
+            "slug": "hronicheskaya-ustalost",
+            "parent_id": 77,
+            "trashed_matches": [],
+            "demo_source": "placeholder_same_level_as_leaf_under_psihicheskoe-zdorovie",
+            "action": "CREATED",
+            "id": 1049,
+            "final_url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/hronicheskaya-ustalost/",
+            "text_list": 0,
+            "slider": 1,
+            "result": "OK"
+        },
+        {
+            "title": "Стресс",
+            "slug": "stress",
+            "parent_id": 77,
+            "trashed_matches": [],
+            "demo_source": "placeholder_same_level_as_leaf_under_psihicheskoe-zdorovie",
+            "action": "CREATED",
+            "id": 1050,
+            "final_url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/stress/",
+            "text_list": 0,
+            "slider": 1,
+            "result": "OK"
+        },
+        {
+            "title": "Нарциссизм",
+            "slug": "nartsissizm",
+            "parent_id": 77,
+            "trashed_matches": [],
+            "demo_source": "placeholder_same_level_as_leaf_under_psihicheskoe-zdorovie",
+            "action": "CREATED",
+            "id": 1051,
+            "final_url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/nartsissizm/",
+            "text_list": 0,
+            "slider": 1,
+            "result": "OK"
+        }
+    ],
+    "seeded_flags_count": 31,
+    "seeded_flags": [
+        {
+            "id": 73,
+            "slug": "zavisimosti",
+            "text_list": 1,
+            "slider": 0
+        },
+        {
+            "id": 74,
+            "slug": "lechenie-alkogolnoy-zavisimosti",
+            "text_list": 1,
+            "slider": 0
+        },
+        {
+            "id": 75,
+            "slug": "profilakticheskiy-analiz",
+            "text_list": 1,
+            "slider": 0
+        },
+        {
+            "id": 77,
+            "slug": "psihicheskoe-zdorovie",
+            "text_list": 1,
+            "slider": 0
+        },
+        {
+            "id": 78,
+            "slug": "depressiya",
+            "text_list": 1,
+            "slider": 0
+        },
+        {
+            "id": 79,
+            "slug": "ptsr",
+            "text_list": 1,
+            "slider": 0
+        },
+        {
+            "id": 80,
+            "slug": "emotsionalnoe-vygoranie",
+            "text_list": 1,
+            "slider": 0
+        },
+        {
+            "id": 81,
+            "slug": "trevozhnye-rasstroystva",
+            "text_list": 1,
+            "slider": 0
+        },
+        {
+            "id": 82,
+            "slug": "rasstroystva-sna",
+            "text_list": 1,
+            "slider": 0
+        },
+        {
+            "id": 83,
+            "slug": "travma",
+            "text_list": 1,
+            "slider": 0
+        },
+        {
+            "id": 84,
+            "slug": "rasstroystva-pischevogo-povedeniya",
+            "text_list": 1,
+            "slider": 0
+        },
+        {
+            "id": 85,
+            "slug": "anoreksiya",
+            "text_list": 1,
+            "slider": 0
+        },
+        {
+            "id": 86,
+            "slug": "buliniya",
+            "text_list": 1,
+            "slider": 0
+        },
+        {
+            "id": 87,
+            "slug": "kompulsivnoe-pereedanie",
+            "text_list": 1,
+            "slider": 0
+        },
+        {
+            "id": 314,
+            "slug": "lechenie-narkoticheskoy-zavisimosti",
+            "text_list": 1,
+            "slider": 0
+        },
+        {
+            "id": 315,
+            "slug": "lekarstva",
+            "text_list": 1,
+            "slider": 0
+        },
+        {
+            "id": 316,
+            "slug": "lechenie-povedencheskoy-zavisimosti",
+            "text_list": 1,
+            "slider": 0
+        },
+        {
+            "id": 1011,
+            "slug": "soli",
+            "text_list": 1,
+            "slider": 0
+        },
+        {
+            "id": 1012,
+            "slug": "matadon",
+            "text_list": 1,
+            "slider": 0
+        },
+        {
+            "id": 1013,
+            "slug": "geroin",
+            "text_list": 1,
+            "slider": 0
+        },
+        {
+            "id": 1016,
+            "slug": "ludomaniya",
+            "text_list": 1,
+            "slider": 0
+        },
+        {
+            "id": 1017,
+            "slug": "internet-zavisimost",
+            "text_list": 1,
+            "slider": 0
+        },
+        {
+            "id": 1018,
+            "slug": "sozavisimost",
+            "text_list": 1,
+            "slider": 0
+        },
+        {
+            "id": 1019,
+            "slug": "shopogolizm",
+            "text_list": 1,
+            "slider": 0
+        },
+        {
+            "id": 1029,
+            "slug": "genotipirovanie",
+            "text_list": 1,
+            "slider": 0
+        },
+        {
+            "id": 1046,
+            "slug": "lechenie-internet-zavisimosti",
+            "text_list": 0,
+            "slider": 1
+        },
+        {
+            "id": 1047,
+            "slug": "kompyuternaya-zavisimost",
+            "text_list": 0,
+            "slider": 1
+        },
+        {
+            "id": 1048,
+            "slug": "lechenie-opiumnoy-zavisimosti",
+            "text_list": 0,
+            "slider": 1
+        },
+        {
+            "id": 1049,
+            "slug": "hronicheskaya-ustalost",
+            "text_list": 0,
+            "slider": 1
+        },
+        {
+            "id": 1050,
+            "slug": "stress",
+            "text_list": 0,
+            "slider": 1
+        },
+        {
+            "id": 1051,
+            "slug": "nartsissizm",
+            "text_list": 0,
+            "slider": 1
+        }
+    ],
+    "group_summary": [
+        {
+            "slug": "zavisimosti",
+            "icon": "01",
+            "title": "Зависимости и пристрастия",
+            "text_count": 4,
+            "gallery_count": 3,
+            "gallery_captions": [
+                "Лечение интернет зависимости",
+                "Компьютерная зависимость",
+                "Лечение опиумной зависимости"
+            ]
+        },
+        {
+            "slug": "psihicheskoe-zdorovie",
+            "icon": "02",
+            "title": "Психическое здоровье",
+            "text_count": 6,
+            "gallery_count": 3,
+            "gallery_captions": [
+                "Хроническая усталость",
+                "Стресс",
+                "Нарциссизм"
+            ]
+        },
+        {
+            "slug": "rasstroystva-pischevogo-povedeniya",
+            "icon": "03",
+            "title": "Расстройства пищевого поведения",
+            "text_count": 3,
+            "gallery_count": 0,
+            "gallery_captions": []
+        },
+        {
+            "slug": "genotipirovanie",
+            "icon": "04",
+            "title": "Генотипирование",
+            "text_count": 1,
+            "gallery_count": 0,
+            "gallery_captions": []
+        }
+    ],
+    "existing_internet_note": {
+        "existing_slug": "internet-zavisimost",
+        "existing_path": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/internet-zavisimost/",
+        "note": "Kept intact. New gallery service lechenie-internet-zavisimosti is a separate slider card under zavisimosti."
+    },
+    "db_writes_estimate": 38
+}

@@ -1,0 +1,518 @@
+{
+  "suite": "source-php-lint",
+  "timestamp": "2026-07-04T02:17:44.8938352+07:00",
+  "php_cli": "X:\\MARS-Localhost\\laragon\\bin\\php\\php-8.3.30-Win32-vs16-x64\\php.exe",
+  "surfaces": [
+    {
+      "surface": "theme",
+      "files": 66,
+      "passed": 66,
+      "failed": 0,
+      "result": "PASS",
+      "details": [
+        {
+          "file": "404.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\404.php",
+          "passed": true
+        },
+        {
+          "file": "footer.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\footer.php",
+          "passed": true
+        },
+        {
+          "file": "front-page.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\front-page.php",
+          "passed": true
+        },
+        {
+          "file": "functions.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\functions.php",
+          "passed": true
+        },
+        {
+          "file": "header.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\header.php",
+          "passed": true
+        },
+        {
+          "file": "home.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\home.php",
+          "passed": true
+        },
+        {
+          "file": "index.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\index.php",
+          "passed": true
+        },
+        {
+          "file": "page.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\page.php",
+          "passed": true
+        },
+        {
+          "file": "search.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\search.php",
+          "passed": true
+        },
+        {
+          "file": "single-service.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\single-service.php",
+          "passed": true
+        },
+        {
+          "file": "single.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\single.php",
+          "passed": true
+        },
+        {
+          "file": "inc/assets.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\inc\\assets.php",
+          "passed": true
+        },
+        {
+          "file": "inc/service-template-loader.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\inc\\service-template-loader.php",
+          "passed": true
+        },
+        {
+          "file": "inc/setup.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\inc\\setup.php",
+          "passed": true
+        },
+        {
+          "file": "inc/template-tags.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\inc\\template-tags.php",
+          "passed": true
+        },
+        {
+          "file": "page-templates/contacts.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\page-templates\\contacts.php",
+          "passed": true
+        },
+        {
+          "file": "page-templates/institutional.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\page-templates\\institutional.php",
+          "passed": true
+        },
+        {
+          "file": "page-templates/legal.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\page-templates\\legal.php",
+          "passed": true
+        },
+        {
+          "file": "page-templates/reviews.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\page-templates\\reviews.php",
+          "passed": true
+        },
+        {
+          "file": "page-templates/services-hub.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\page-templates\\services-hub.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/blog/archive-list.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\blog\\archive-list.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/blog/article-content.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\blog\\article-content.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/blog/article-lower-stack.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\blog\\article-lower-stack.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/components/blog-archive-card.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\components\\blog-archive-card.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/components/final-form.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\components\\final-form.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/components/internal-page-nav.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\components\\internal-page-nav.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/components/program-cta-band.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\components\\program-cta-band.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/components/review-archive-card.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\components\\review-archive-card.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/components/scroll-to-top.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\components\\scroll-to-top.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/contacts/map-body.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\contacts\\map-body.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/contacts/rehabilitation-steps.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\contacts\\rehabilitation-steps.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/global/document-close.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\global\\document-close.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/global/document-open.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\global\\document-open.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/home/articles-teaser.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\home\\articles-teaser.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/home/faq.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\home\\faq.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/home/feature-grid.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\home\\feature-grid.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/home/gallery.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\home\\gallery.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/home/hero.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\home\\hero.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/home/rehabilitation-program.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\home\\rehabilitation-program.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/home/treatment-prevention.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\home\\treatment-prevention.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/institutional/infrastructure-narrative.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\institutional\\infrastructure-narrative.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/institutional/institutional-narrative.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\institutional\\institutional-narrative.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/layout/body-start.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\layout\\body-start.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/layout/footer.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\layout\\footer.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/layout/global-consultation-modal.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\layout\\global-consultation-modal.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/layout/head.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\layout\\head.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/layout/header.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\layout\\header.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/legal/document-page.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\legal\\document-page.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/navigation/breadcrumbs.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\navigation\\breadcrumbs.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/navigation/primary-desktop.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\navigation\\primary-desktop.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/navigation/primary-mobile.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\navigation\\primary-mobile.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/page/placeholder-notice.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\page\\placeholder-notice.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/page/plain-content.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\page\\plain-content.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/reviews/archive-list.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\reviews\\archive-list.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/reviews/reviews-section.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\reviews\\reviews-section.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/service/alcohol-stack.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\service\\alcohol-stack.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/service/approach.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\service\\approach.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/service/comfort.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\service\\comfort.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/service/faq.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\service\\faq.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/service/inner-hero.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\service\\inner-hero.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/service/intro.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\service\\intro.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/service/leaf-stack.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\service\\leaf-stack.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/service/program.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\service\\program.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/service/signs.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\service\\signs.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/service/stages.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\service\\stages.php",
+          "passed": true
+        },
+        {
+          "file": "template-parts/service/subdivision-stack.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\template-parts\\service\\subdivision-stack.php",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "surface": "project-plugin",
+      "files": 16,
+      "passed": 16,
+      "failed": 0,
+      "result": "PASS",
+      "details": [
+        {
+          "file": "index.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core\\index.php",
+          "passed": true
+        },
+        {
+          "file": "shpigovsky-core.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core\\shpigovsky-core.php",
+          "passed": true
+        },
+        {
+          "file": "inc/compat.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core\\inc\\compat.php",
+          "passed": true
+        },
+        {
+          "file": "src/Plugin.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core\\src\\Plugin.php",
+          "passed": true
+        },
+        {
+          "file": "src/Admin/EditorRestrictions.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core\\src\\Admin\\EditorRestrictions.php",
+          "passed": true
+        },
+        {
+          "file": "src/Admin/OptionsPage.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core\\src\\Admin\\OptionsPage.php",
+          "passed": true
+        },
+        {
+          "file": "src/ContentTypes/Service.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core\\src\\ContentTypes\\Service.php",
+          "passed": true
+        },
+        {
+          "file": "src/Contracts/ModuleInterface.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core\\src\\Contracts\\ModuleInterface.php",
+          "passed": true
+        },
+        {
+          "file": "src/Fields/AcfIntegration.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core\\src\\Fields\\AcfIntegration.php",
+          "passed": true
+        },
+        {
+          "file": "src/Fields/FieldGroups.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core\\src\\Fields\\FieldGroups.php",
+          "passed": true
+        },
+        {
+          "file": "src/Fields/RepeaterValidation.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core\\src\\Fields\\RepeaterValidation.php",
+          "passed": true
+        },
+        {
+          "file": "src/Forms/ConsultationHandler.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core\\src\\Forms\\ConsultationHandler.php",
+          "passed": true
+        },
+        {
+          "file": "src/Loader/Autoloader.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core\\src\\Loader\\Autoloader.php",
+          "passed": true
+        },
+        {
+          "file": "src/Migrations/MigrationRunner.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core\\src\\Migrations\\MigrationRunner.php",
+          "passed": true
+        },
+        {
+          "file": "src/Permalinks/ServicePermalinks.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core\\src\\Permalinks\\ServicePermalinks.php",
+          "passed": true
+        },
+        {
+          "file": "src/Settings/SiteSettings.php",
+          "exit_code": 0,
+          "output": "No syntax errors detected in X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\plugins\\shpigovsky-core\\src\\Settings\\SiteSettings.php",
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "result": "PASS"
+}

@@ -1,0 +1,10 @@
+file,line_or_context,block,current_text_preview,current_markup_needed,proposed_field,seed_target,action,notes
+service/nature.php,entire template,Nature,Природа зависимости + lorem subsections/cards,no,section_nature_*,#73,migrated,fallback retained
+service/team-stats.php,entire template,Approach,Наш подход... + cards/images,no (images ACF),section_approach_*,#73,migrated,fallback retained
+service/children.php,heading/lead/footer helpers,Dependencies,Зависимости которые мы лечим + lorem,no,section_dependencies_*,#73,migrated,
+service/program.php,subdivision intros,Program,Наша программа... + lorem intros,no,section_program_*,#73,migrated,
+service/stages.php,heading/lead/support,Stages,Что нужно... + support list,no,section_stages_*,#73,migrated,
+service/faq.php,heading,FAQ,Нас часто спрашивают,no,section_faq_heading,#73,migrated,
+inc/service-helpers.php,dependencies helpers,Dependencies fallbacks,static heading/lead/footer,no,fallbacks only,-,kept as fallback,
+home/founder-quote.php,static quote,Founder,Слово основателя copy,yes shared,toggle only,-,toggle only,not duplicated per section page
+home/reviews.php,home_reviews_visible gate,Reviews,was gating all contexts,n/a,section_reviews_visible,-,bugfix,front-page only for home toggle

@@ -1,9 +1,13 @@
 <?php
 /**
- * Admin editor UX — hide native content editor on template-managed pages (V9-06D9-N).
+ * Admin editor UX — hide native content editor on template-managed pages (V9-06D9-N)
+ * and on service CPT screens (V9-06E46-FIX04).
  *
  * Editing for these pages is via ACF metaboxes and theme templates; the Classic Editor
  * content box is empty after D9-M cleanup and confuses operators.
+ *
+ * Service CPT: post_content is not the admin content model (optional leftover fallback
+ * for leaf intro only). Values are preserved; editor UI is hidden for all service screens.
  *
  * @package Shpigovsky
  */
@@ -25,12 +29,7 @@ function shpigovsky_get_hide_native_editor_page_ids() {
 	return array(
 		4,  // Home (front page).
 		5,  // Services hub.
-		11, // О центре.
-		12, // О нас.
-		13, // Программа лечения.
-		14, // Галерея о доме.
-		15, // Специалистам.
-		16, // Родственникам.
+		11, // О центре hub.
 		18, // Отзывы.
 		20, // Контакты.
 	);
@@ -53,7 +52,7 @@ function shpigovsky_should_hide_native_editor( $page_id ) {
 }
 
 /**
- * Resolve page ID on page edit admin screens.
+ * Resolve post ID on post edit admin screens.
  *
  * @return int
  */
@@ -64,7 +63,7 @@ function shpigovsky_admin_edit_page_id() {
 
 	global $post;
 
-	if ( $post && 'page' === $post->post_type ) {
+	if ( $post && isset( $post->ID ) ) {
 		return (int) $post->ID;
 	}
 
@@ -72,10 +71,45 @@ function shpigovsky_admin_edit_page_id() {
 }
 
 /**
- * Remove editor support early on allowlisted page edit screens.
+ * Whether current admin edit screen is the service CPT.
+ *
+ * @return bool
+ */
+function shpigovsky_admin_is_service_edit_screen() {
+	if ( ! is_admin() ) {
+		return false;
+	}
+
+	$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
+
+	if ( $screen && isset( $screen->post_type ) && 'service' === $screen->post_type ) {
+		return true;
+	}
+
+	$post_id = shpigovsky_admin_edit_page_id();
+
+	if ( $post_id > 0 ) {
+		$post = get_post( $post_id );
+		return $post && 'service' === $post->post_type;
+	}
+
+	if ( isset( $_GET['post_type'] ) && 'service' === $_GET['post_type'] ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		return true;
+	}
+
+	return false;
+}
+
+/**
+ * Remove editor support early on allowlisted page edit screens and all service CPT screens.
  */
 function shpigovsky_maybe_remove_page_editor_support() {
 	if ( ! is_admin() ) {
+		return;
+	}
+
+	if ( shpigovsky_admin_is_service_edit_screen() ) {
+		remove_post_type_support( 'service', 'editor' );
 		return;
 	}
 
@@ -90,7 +124,7 @@ function shpigovsky_maybe_remove_page_editor_support() {
 add_action( 'admin_init', 'shpigovsky_maybe_remove_page_editor_support' );
 
 /**
- * Remove native content editor metabox on allowlisted pages.
+ * Remove native content editor metabox on allowlisted pages and service CPT.
  */
 function shpigovsky_hide_native_editor_metabox() {
 	if ( ! is_admin() ) {
@@ -99,7 +133,16 @@ function shpigovsky_hide_native_editor_metabox() {
 
 	$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
 
-	if ( ! $screen || 'post' !== $screen->base || 'page' !== $screen->post_type ) {
+	if ( ! $screen || 'post' !== $screen->base ) {
+		return;
+	}
+
+	if ( 'service' === $screen->post_type ) {
+		remove_meta_box( 'postdivrich', 'service', 'normal' );
+		return;
+	}
+
+	if ( 'page' !== $screen->post_type ) {
 		return;
 	}
 
@@ -121,9 +164,10 @@ function shpigovsky_hide_native_editor_admin_css() {
 		return;
 	}
 
-	$page_id = shpigovsky_admin_edit_page_id();
+	$hide = shpigovsky_admin_is_service_edit_screen()
+		|| shpigovsky_should_hide_native_editor( shpigovsky_admin_edit_page_id() );
 
-	if ( ! shpigovsky_should_hide_native_editor( $page_id ) ) {
+	if ( ! $hide ) {
 		return;
 	}
 
@@ -135,3 +179,41 @@ function shpigovsky_hide_native_editor_admin_css() {
 	</style>';
 }
 add_action( 'admin_head-post.php', 'shpigovsky_hide_native_editor_admin_css' );
+add_action( 'admin_head-post-new.php', 'shpigovsky_hide_native_editor_admin_css' );
+
+/**
+ * Enqueue FP02 ACF admin CSS (section titles ~20px, legacy field hide).
+ * V9-06E41 — front page; V9-06E43 — also Services hub page template.
+ * V9-06E44 — also service CPT screens (layout variant help styles).
+ */
+function shpigovsky_enqueue_home_acf_admin_css( $hook_suffix ) {
+	if ( ! in_array( $hook_suffix, array( 'post.php', 'post-new.php' ), true ) ) {
+		return;
+	}
+
+	$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
+	$is_service = $screen && isset( $screen->post_type ) && 'service' === $screen->post_type;
+
+	$page_id = shpigovsky_admin_edit_page_id();
+	$front   = (int) get_option( 'page_on_front' );
+	$is_home = $page_id > 0 && $front > 0 && $page_id === $front;
+	$is_hub  = $page_id > 0 && 'page-templates/services-hub.php' === (string) get_page_template_slug( $page_id );
+
+	if ( ! $is_home && ! $is_hub && ! $is_service ) {
+		return;
+	}
+
+	$rel = 'assets/css/admin-home-acf.css';
+
+	if ( ! is_readable( SHPIGOVSKY_THEME_DIR . '/' . $rel ) ) {
+		return;
+	}
+
+	wp_enqueue_style(
+		'shpigovsky-home-acf-admin',
+		SHPIGOVSKY_THEME_URI . '/' . $rel,
+		array(),
+		shpigovsky_asset_version( $rel )
+	);
+}
+add_action( 'admin_enqueue_scripts', 'shpigovsky_enqueue_home_acf_admin_css' );

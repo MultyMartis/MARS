@@ -1,0 +1,9 @@
+route,expected,actual,result,notes
+"#73 `/uslugi/zavisimosti/`","full section; no placeholder-stack","HTTP 200 ph=n sectionish=y size=128926",PASS,"role meta=section"
+"#77 `/uslugi/psihicheskoe-zdorovie/`","full section; no placeholder-stack","HTTP 200 ph=n sectionish=y size=130547",PASS,"role meta=section"
+"#84 `/uslugi/rasstroystva-pischevogo-povedeniya/`","full section; no placeholder-stack","HTTP 200 ph=n sectionish=y size=125557",PASS,"role meta=section"
+#78,"full service; no placeholder-stack; H1","HTTP 200 ph=n h1=y fullish=y children=y size=112333",PASS,
+#74,"full service; no placeholder-stack; H1","HTTP 200 ph=n h1=y fullish=y children=y size=132868",PASS,
+#314,"full service + child tiles; no placeholder-stack","HTTP 200 ph=n h1=y fullish=y children=y size=116896",PASS,
+#81,"full service; no placeholder-stack; H1","HTTP 200 ph=n h1=y fullish=y children=y size=112695",PASS,
+#85,"full service; no placeholder-stack; H1","HTTP 200 ph=n h1=y fullish=y children=y size=112404",PASS,

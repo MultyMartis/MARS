@@ -44,6 +44,8 @@ final class RepeaterValidation implements ModuleInterface {
 		add_filter( 'acf/validate_value/type=url', array( __CLASS__, 'validate_url_field' ), 10, 4 );
 		add_filter( 'acf/validate_value/type=email', array( __CLASS__, 'validate_email_field' ), 10, 4 );
 		add_filter( 'acf/validate_value/name=programme_items', array( __CLASS__, 'validate_optional_programme_items' ), 10, 4 );
+		add_filter( 'acf/validate_value/name=signs_items', array( __CLASS__, 'validate_optional_structured_repeater' ), 10, 4 );
+		add_filter( 'acf/validate_value/name=stages', array( __CLASS__, 'validate_optional_structured_repeater' ), 10, 4 );
 		add_action( 'save_post_' . Service::POST_TYPE, array( __CLASS__, 'validate_service_depth_on_save' ), 10, 3 );
 	}
 
@@ -80,13 +82,22 @@ final class RepeaterValidation implements ModuleInterface {
 			'field_fp02_programme_items_service'   => 6,
 			'field_fp02_stages_service'            => 8,
 			'field_fp02_faq_items_service'         => 15,
+			'field_fp02_section_nature_cards'      => 4,
+			'field_fp02_section_approach_cards'    => 6,
+			'field_fp02_section_stages_support_items' => 8,
 			'field_fp02_home_hero_slides'          => 5,
-			'field_fp02_home_service_nav_items'    => 6,
 			'field_fp02_home_advantages'           => 8,
 			'field_fp02_home_intro_bands'          => 6,
-			'field_fp02_home_reviews_teaser'       => 6,
-			'field_fp02_home_gallery_media'        => 12,
+			'field_fp02_home_recovery_intro_benefits' => 12,
+			'field_fp02_home_why_us_body'          => 6,
+			'field_fp02_home_why_us_items'         => 12,
+			'field_fp02_home_recovery_life_intro'  => 6,
+			'field_fp02_home_recovery_life_stages' => 8,
+			'field_fp02_home_genotyping_body'      => 6,
+			'field_fp02_home_genotyping_items'     => 12,
+			'field_fp02_home_videos_items'         => 8,
 			'field_fp02_home_faq_items'            => 15,
+			'field_fp02_services_hero_slides'      => 5,
 			'field_fp02_services_hub_faq_items'    => 15,
 			'field_fp02_institutional_content_sections' => 8,
 			'field_fp02_institutional_stages'      => 8,
@@ -105,7 +116,7 @@ final class RepeaterValidation implements ModuleInterface {
 	 * @return array<int, string>
 	 */
 	public static function get_allowed_service_layouts() {
-		return array( 'subdivision', 'standard', 'extended', 'alcohol_special', 'placeholder' );
+		return array( 'subdivision', 'standard', 'extended', 'service_general', 'alcohol_special', 'placeholder' );
 	}
 
 	/**
@@ -116,7 +127,15 @@ final class RepeaterValidation implements ModuleInterface {
 	 * @return bool
 	 */
 	public static function is_within_max_rows( $value, $max_rows ) {
-		return is_array( $value ) && count( $value ) <= $max_rows;
+		if ( null === $value || '' === $value || false === $value ) {
+			return true;
+		}
+
+		if ( ! is_array( $value ) ) {
+			return true;
+		}
+
+		return count( $value ) <= $max_rows;
 	}
 
 	/**
@@ -196,7 +215,7 @@ final class RepeaterValidation implements ModuleInterface {
 		$depth     = 1;
 		$parent_id = isset( $post->post_parent ) ? (int) $post->post_parent : 0;
 
-		while ( $parent_id > 0 && $depth <= 2 ) {
+		while ( $parent_id > 0 && $depth <= 3 ) {
 			$parent = get_post( $parent_id );
 
 			if ( ! $parent ) {
@@ -207,7 +226,7 @@ final class RepeaterValidation implements ModuleInterface {
 			$parent_id = (int) $parent->post_parent;
 		}
 
-		return $depth <= 2;
+		return $depth <= 3;
 	}
 
 	/**
@@ -220,6 +239,19 @@ final class RepeaterValidation implements ModuleInterface {
 	 * @return true|string
 	 */
 	public static function validate_optional_programme_items( $valid, $value, $field, $input ) {
+		return true;
+	}
+
+	/**
+	 * Allow empty optional structured repeaters (signs / stages).
+	 *
+	 * @param true|string         $valid Current validity.
+	 * @param mixed               $value Repeater rows.
+	 * @param array<string,mixed> $field Field definition.
+	 * @param string              $input Input name.
+	 * @return true|string
+	 */
+	public static function validate_optional_structured_repeater( $valid, $value, $field, $input ) {
 		return true;
 	}
 

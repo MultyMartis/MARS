@@ -1,0 +1,15 @@
+meta_key,meta_value_preview,role_in_layout,should_change_on_switch,notes
+service_editor_role,placeholder,visible_editor_role,yes,Primary admin selector; must persist Услуга↔Заглушка
+service_layout_variant,placeholder,technical_effective_layout,yes,Must sync to service_general / placeholder with role
+service_layout_override_enabled,0,advanced_flag,no,Stays 0; hidden UI
+_service_editor_role,field_fp02_service_editor_role,acf_field_ref,no,ACF key reference
+_service_layout_variant,field_fp02_service_layout_variant,acf_field_ref,no,ACF key reference
+_service_layout_override_enabled,field_fp02_service_layout_override_enabled,acf_field_ref,no,ACF key reference
+hero_eyebrow,(present),hero_content,no,Must preserve
+hero_title_override,(present),hero_content,no,Must preserve
+hero_lead,(present),hero_content,no,Must preserve
+hero_media,(present),hero_media,no,Must preserve
+service_general_* repeaters/toggles,(present many),service_general_content,no,Content fingerprint unchanged across switch cycle
+service_short_description,(present),hub_card,no,Hub/card meta preserved
+post_status,publish,wp_core,no,Unchanged
+permalink,/uslugi/psihicheskoe-zdorovie/depressiya/,wp_core,no,Unchanged

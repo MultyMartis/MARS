@@ -1,0 +1,9 @@
+page,post_id,expected_role,actual_role,expected_layout,actual_layout,expected_override,actual_override,result
+Зависимости,73,section,section,subdivision,subdivision,0,0,PASS
+"Психическое здоровье",77,section,section,subdivision,subdivision,0,0,PASS
+РПП,84,section,section,subdivision,subdivision,0,0,PASS
+"Alcohol special",74,service,service,alcohol_special,alcohol_special,1,1,PASS
+Depression,78,placeholder,placeholder,placeholder,placeholder,0,0,PASS
+"Placeholder sample stress",1050,placeholder,placeholder,placeholder,placeholder,0,0,PASS
+"Mismatch 314",314,placeholder,placeholder,placeholder,placeholder,0,0,PASS
+"Mismatch 316",316,placeholder,placeholder,placeholder,placeholder,0,0,PASS

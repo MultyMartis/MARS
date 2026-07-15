@@ -1,0 +1,12 @@
+check,expected,actual,result,notes
+#78 nested choices,Услуга|Заглушка button_group,prepare_editor_role_field nested choices set,PASS,Not message field
+#78 start role,placeholder,placeholder,PASS,
+#78 after save Услуга,service + service_general,service + service_general,PASS,acf_save_post + stale layout POST
+#78 after reload simulation get_field,service (before final restore),service,PASS,Meta persists
+#78 after save Заглушка,placeholder + placeholder,placeholder + placeholder,PASS,
+#78 final,Заглушка,placeholder/placeholder,PASS,Operator final
+Technical field UI,hidden but present/aligned,prepare_technical_layout_field wrapper acf-hidden,PASS,No longer return false
+Parity groups for placeholder,same as service (content editable),filter keeps general_parity,PASS,Untouched
+#74 role,service,service,PASS,
+#314 role,service,service,PASS,
+#73/#77/#84 role,section,section,PASS,

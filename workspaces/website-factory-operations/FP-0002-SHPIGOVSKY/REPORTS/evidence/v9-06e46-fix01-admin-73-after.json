@@ -1,0 +1,700 @@
+{
+    "post_id": 73,
+    "groups": [
+        {
+            "key": "group_fp02_service_faq",
+            "title": "Service тАФ FAQ",
+            "menu_order": 0,
+            "local": "php",
+            "field_count": 1,
+            "fields": [
+                {
+                    "name": "faq_items",
+                    "label": "FAQ",
+                    "type": "repeater"
+                }
+            ]
+        },
+        {
+            "key": "group_fp02_service_layout_hero",
+            "title": "Service тАФ Layout",
+            "menu_order": 0,
+            "local": "json",
+            "field_count": 13,
+            "fields": [
+                {
+                    "name": "service_editor_role",
+                    "label": "╨Ь╨░╨║╨╡╤В ╤Б╤В╤А╨░╨╜╨╕╤Ж╤Л ╤Г╤Б╨╗╤Г╨│╨╕",
+                    "type": "button_group"
+                },
+                {
+                    "name": "",
+                    "label": "╨а╨░╤Б╤И╨╕╤А╨╡╨╜╨╜╤Л╨╡ ╨╜╨░╤Б╤В╤А╨╛╨╣╨║╨╕ ╤И╨░╨▒╨╗╨╛╨╜╨░",
+                    "type": "message"
+                },
+                {
+                    "name": "service_layout_override_enabled",
+                    "label": "╨а╤Г╤З╨╜╨╛╨╣ ╤В╨╡╤Е╨╜╨╕╤З╨╡╤Б╨║╨╕╨╣ ╤И╨░╨▒╨╗╨╛╨╜",
+                    "type": "true_false"
+                },
+                {
+                    "name": "service_layout_variant",
+                    "label": "╨в╨╡╤Е╨╜╨╕╤З╨╡╤Б╨║╨╕╨╣ ╤И╨░╨▒╨╗╨╛╨╜",
+                    "type": "select"
+                },
+                {
+                    "name": "",
+                    "label": "╨Ъ╨░╤А╤В╨╛╤З╨║╨░ ╨╕ ╨┐╨╛╨║╨░╨╖ ╨╜╨░ \/uslugi\/",
+                    "type": "message"
+                },
+                {
+                    "name": "service_short_description",
+                    "label": "╨Ь╨╕╨╜╨╕-╨╛╨┐╨╕╤Б╨░╨╜╨╕╨╡",
+                    "type": "textarea"
+                },
+                {
+                    "name": "service_child_services_enabled",
+                    "label": "╨Я╨╛╨║╨░╨╖╤Л╨▓╨░╤В╤М ╨┤╨╛╤З╨╡╤А╨╜╨╕╨╡ ╤Г╤Б╨╗╤Г╨│╨╕",
+                    "type": "true_false"
+                },
+                {
+                    "name": "service_child_services_heading",
+                    "label": "╨Ч╨░╨│╨╛╨╗╨╛╨▓╨╛╨║ ╨▒╨╗╨╛╨║╨░ ╨┤╨╛╤З╨╡╤А╨╜╨╕╤Е ╤Г╤Б╨╗╤Г╨│",
+                    "type": "text"
+                },
+                {
+                    "name": "service_category_section_lead",
+                    "label": "╨в╨╡╨║╤Б╤В ╨┐╨╛╨┤ ╨╝╨╕╨╜╨╕-╨╛╨┐╨╕╤Б╨░╨╜╨╕╨╡╨╝ ╨╜╨░ ╤Б╤В╤А╨░╨╜╨╕╤Ж╨╡ ┬л╨г╤Б╨╗╤Г╨│╨╕┬╗",
+                    "type": "textarea"
+                },
+                {
+                    "name": "service_show_in_text_list",
+                    "label": "╨Я╨╛╨║╨░╨╖╤Л╨▓╨░╤В╤М ╨▓ ╤В╨╡╨║╤Б╤В╨╛╨▓╨╛╨╝ ╤Б╨┐╨╕╤Б╨║╨╡",
+                    "type": "true_false"
+                },
+                {
+                    "name": "service_show_in_slider",
+                    "label": "╨Я╨╛╨║╨░╨╖╤Л╨▓╨░╤В╤М ╨▓ ╤Б╨╗╨░╨╣╨┤╨╡╤А╨╡",
+                    "type": "true_false"
+                },
+                {
+                    "name": "service_show_on_home_gallery",
+                    "label": "╨Я╨╛╨║╨░╨╖╤Л╨▓╨░╤В╤М ╨▓ ╤Б╨╗╨░╨╣╨┤╨╡╤А╨╡ ╨╜╨░ ╨│╨╗╨░╨▓╨╜╨╛╨╣",
+                    "type": "true_false"
+                },
+                {
+                    "name": "service_slider_image",
+                    "label": "╨Ш╨╖╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╨╡ ╨┤╨╗╤П ╤Б╨╗╨░╨╣╨┤╨╡╤А╨░",
+                    "type": "image"
+                }
+            ]
+        },
+        {
+            "key": "group_fp02_service_relationships",
+            "title": "Service тАФ Relationships \/ Related Services",
+            "menu_order": 0,
+            "local": "php",
+            "field_count": 1,
+            "fields": [
+                {
+                    "name": "manual_related_services",
+                    "label": "╨б╨▓╤П╨╖╨░╨╜╨╜╤Л╨╡ ╤Г╤Б╨╗╤Г╨│╨╕ ╨▓╤А╤Г╤З╨╜╤Г╤О",
+                    "type": "relationship"
+                }
+            ]
+        },
+        {
+            "key": "group_fp02_service_structured_sections",
+            "title": "Service тАФ Structured Sections",
+            "menu_order": 0,
+            "local": "php",
+            "field_count": 9,
+            "fields": [
+                {
+                    "name": "intro_text",
+                    "label": "Intro text",
+                    "type": "textarea"
+                },
+                {
+                    "name": "intro_note",
+                    "label": "Intro note",
+                    "type": "textarea"
+                },
+                {
+                    "name": "signs_items",
+                    "label": "╨Я╤А╨╕╨╖╨╜╨░╨║╨╕ \/ ╤Б╨╕╨╝╨┐╤В╨╛╨╝╤Л",
+                    "type": "repeater"
+                },
+                {
+                    "name": "programme_items",
+                    "label": "╨Я╤Г╨╜╨║╤В╤Л ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╤Л",
+                    "type": "repeater"
+                },
+                {
+                    "name": "stages",
+                    "label": "╨н╤В╨░╨┐╤Л",
+                    "type": "repeater"
+                },
+                {
+                    "name": "cta_title",
+                    "label": "CTA title",
+                    "type": "text"
+                },
+                {
+                    "name": "cta_text",
+                    "label": "CTA text",
+                    "type": "textarea"
+                },
+                {
+                    "name": "cta_button_label",
+                    "label": "CTA button label",
+                    "type": "text"
+                },
+                {
+                    "name": "cta_button_target",
+                    "label": "CTA button target",
+                    "type": "url"
+                }
+            ]
+        },
+        {
+            "key": "group_fp02_service_structured_sections",
+            "title": "Service тАФ Structured Sections",
+            "menu_order": 0,
+            "local": "json",
+            "field_count": 9,
+            "fields": [
+                {
+                    "name": "intro_text",
+                    "label": "Intro text",
+                    "type": "textarea"
+                },
+                {
+                    "name": "intro_note",
+                    "label": "Intro note",
+                    "type": "textarea"
+                },
+                {
+                    "name": "signs_items",
+                    "label": "╨Я╤А╨╕╨╖╨╜╨░╨║╨╕ \/ ╤Б╨╕╨╝╨┐╤В╨╛╨╝╤Л",
+                    "type": "repeater"
+                },
+                {
+                    "name": "programme_items",
+                    "label": "╨Я╤Г╨╜╨║╤В╤Л ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╤Л",
+                    "type": "repeater"
+                },
+                {
+                    "name": "stages",
+                    "label": "╨н╤В╨░╨┐╤Л",
+                    "type": "repeater"
+                },
+                {
+                    "name": "cta_title",
+                    "label": "CTA title",
+                    "type": "text"
+                },
+                {
+                    "name": "cta_text",
+                    "label": "CTA text",
+                    "type": "textarea"
+                },
+                {
+                    "name": "cta_button_label",
+                    "label": "CTA button label",
+                    "type": "text"
+                },
+                {
+                    "name": "cta_button_target",
+                    "label": "CTA button target",
+                    "type": "url"
+                }
+            ]
+        },
+        {
+            "key": "group_fp02_service_structured_sections",
+            "title": "Service тАФ Structured Sections",
+            "menu_order": 0,
+            "local": "db",
+            "field_count": 9,
+            "fields": [
+                {
+                    "name": "intro_text",
+                    "label": "Intro text",
+                    "type": "textarea"
+                },
+                {
+                    "name": "intro_note",
+                    "label": "Intro note",
+                    "type": "textarea"
+                },
+                {
+                    "name": "signs_items",
+                    "label": "╨Я╤А╨╕╨╖╨╜╨░╨║╨╕ \/ ╤Б╨╕╨╝╨┐╤В╨╛╨╝╤Л",
+                    "type": "repeater"
+                },
+                {
+                    "name": "programme_items",
+                    "label": "╨Я╤Г╨╜╨║╤В╤Л ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╤Л",
+                    "type": "repeater"
+                },
+                {
+                    "name": "stages",
+                    "label": "╨н╤В╨░╨┐╤Л",
+                    "type": "repeater"
+                },
+                {
+                    "name": "cta_title",
+                    "label": "CTA title",
+                    "type": "text"
+                },
+                {
+                    "name": "cta_text",
+                    "label": "CTA text",
+                    "type": "textarea"
+                },
+                {
+                    "name": "cta_button_label",
+                    "label": "CTA button label",
+                    "type": "text"
+                },
+                {
+                    "name": "cta_button_target",
+                    "label": "CTA button target",
+                    "type": "url"
+                }
+            ]
+        },
+        {
+            "key": "group_fp02_service_structured_sections",
+            "title": "Service тАФ Structured Sections",
+            "menu_order": 0,
+            "local": "db",
+            "field_count": 9,
+            "fields": [
+                {
+                    "name": "intro_text",
+                    "label": "Intro text",
+                    "type": "textarea"
+                },
+                {
+                    "name": "intro_note",
+                    "label": "Intro note",
+                    "type": "textarea"
+                },
+                {
+                    "name": "signs_items",
+                    "label": "╨Я╤А╨╕╨╖╨╜╨░╨║╨╕ \/ ╤Б╨╕╨╝╨┐╤В╨╛╨╝╤Л",
+                    "type": "repeater"
+                },
+                {
+                    "name": "programme_items",
+                    "label": "╨Я╤Г╨╜╨║╤В╤Л ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╤Л",
+                    "type": "repeater"
+                },
+                {
+                    "name": "stages",
+                    "label": "╨н╤В╨░╨┐╤Л",
+                    "type": "repeater"
+                },
+                {
+                    "name": "cta_title",
+                    "label": "CTA title",
+                    "type": "text"
+                },
+                {
+                    "name": "cta_text",
+                    "label": "CTA text",
+                    "type": "textarea"
+                },
+                {
+                    "name": "cta_button_label",
+                    "label": "CTA button label",
+                    "type": "text"
+                },
+                {
+                    "name": "cta_button_target",
+                    "label": "CTA button target",
+                    "type": "url"
+                }
+            ]
+        },
+        {
+            "key": "group_fp02_service_hero",
+            "title": "Hero ╤Б╤В╤А╨░╨╜╨╕╤Ж╤Л ╤Г╤Б╨╗╤Г╨│╨╕",
+            "menu_order": 1,
+            "local": "json",
+            "field_count": 7,
+            "fields": [
+                {
+                    "name": "",
+                    "label": "Hero ╤Б╤В╤А╨░╨╜╨╕╤Ж╤Л ╤Г╤Б╨╗╤Г╨│╨╕",
+                    "type": "message"
+                },
+                {
+                    "name": "hero_eyebrow",
+                    "label": "╨Э╨░╨┤╨╖╨░╨│╨╛╨╗╨╛╨▓╨╛╨║",
+                    "type": "text"
+                },
+                {
+                    "name": "hero_title_override",
+                    "label": "╨Ч╨░╨│╨╛╨╗╨╛╨▓╨╛╨║ H1 override",
+                    "type": "text"
+                },
+                {
+                    "name": "hero_lead",
+                    "label": "╨Ы╨╕╨┤",
+                    "type": "textarea"
+                },
+                {
+                    "name": "hero_media",
+                    "label": "╨Ш╨╖╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╨╡ (Hero)",
+                    "type": "image"
+                },
+                {
+                    "name": "hero_cta_label",
+                    "label": "╨в╨╡╨║╤Б╤В ╨║╨╜╨╛╨┐╨║╨╕ ╨▓ hero-╨▒╨╗╨╛╨║╨╡",
+                    "type": "text"
+                },
+                {
+                    "name": "hero_cta_target",
+                    "label": "╨б╤Б╤Л╨╗╨║╨░ ╨║╨╜╨╛╨┐╨║╨╕ (CTA)",
+                    "type": "url"
+                }
+            ]
+        },
+        {
+            "key": "group_fp02_service_section_parity",
+            "title": "Service тАФ ╨а╨░╨╖╨┤╨╡╨╗ (╨▒╨╗╨╛╨║╨╕ ╨┐╨╛ ╨┐╨╛╤А╤П╨┤╨║╤Г ╤Б╨░╨╣╤В╨░)",
+            "menu_order": 2,
+            "local": "json",
+            "field_count": 63,
+            "fields": [
+                {
+                    "name": "",
+                    "label": "1. Hero",
+                    "type": "message"
+                },
+                {
+                    "name": "",
+                    "label": "2. ╨Э╨░╨▓╨╕╨│╨░╤Ж╨╕╤П ╨┐╨╛ ╤П╨║╨╛╤А╤П╨╝",
+                    "type": "message"
+                },
+                {
+                    "name": "section_nav_visible",
+                    "label": "╨Я╨╛╨║╨░╨╖╤Л╨▓╨░╤В╤М ╨╜╨░╨▓╨╕╨│╨░╤Ж╨╕╤О ╨┐╨╛ ╤П╨║╨╛╤А╤П╨╝",
+                    "type": "true_false"
+                },
+                {
+                    "name": "",
+                    "label": "3. ╨Ч╨░╨▓╨╕╤Б╨╕╨╝╨╛╤Б╤В╨╕ \/ ╨┤╨╛╤З╨╡╤А╨╜╨╕╨╡ ╤Г╤Б╨╗╤Г╨│╨╕",
+                    "type": "message"
+                },
+                {
+                    "name": "section_dependencies_visible",
+                    "label": "╨Я╨╛╨║╨░╨╖╤Л╨▓╨░╤В╤М ╨▒╨╗╨╛╨║ ╨┤╨╛╤З╨╡╤А╨╜╨╕╤Е ╤Г╤Б╨╗╤Г╨│",
+                    "type": "true_false"
+                },
+                {
+                    "name": "section_dependencies_heading",
+                    "label": "╨Ч╨░╨│╨╛╨╗╨╛╨▓╨╛╨║ ╨▒╨╗╨╛╨║╨░ ╨┤╨╛╤З╨╡╤А╨╜╨╕╤Е ╤Г╤Б╨╗╤Г╨│",
+                    "type": "text"
+                },
+                {
+                    "name": "section_dependencies_lead",
+                    "label": "╨Ы╨╕╨┤ ╨▒╨╗╨╛╨║╨░ ╨┤╨╛╤З╨╡╤А╨╜╨╕╤Е ╤Г╤Б╨╗╤Г╨│",
+                    "type": "textarea"
+                },
+                {
+                    "name": "section_dependencies_footer",
+                    "label": "╨в╨╡╨║╤Б╤В ╨┐╨╛╤Б╨╗╨╡ ╤Б╨┐╨╕╤Б╨║╨░ ╨┤╨╛╤З╨╡╤А╨╜╨╕╤Е ╤Г╤Б╨╗╤Г╨│",
+                    "type": "textarea"
+                },
+                {
+                    "name": "",
+                    "label": "4. ╨Я╤А╨╕╤А╨╛╨┤╨░ ╨╖╨░╨▓╨╕╤Б╨╕╨╝╨╛╤Б╤В╨╕",
+                    "type": "message"
+                },
+                {
+                    "name": "section_nature_visible",
+                    "label": "╨Я╨╛╨║╨░╨╖╤Л╨▓╨░╤В╤М ╨▒╨╗╨╛╨║ ┬л╨Я╤А╨╕╤А╨╛╨┤╨░ ╨╖╨░╨▓╨╕╤Б╨╕╨╝╨╛╤Б╤В╨╕┬╗",
+                    "type": "true_false"
+                },
+                {
+                    "name": "section_nature_heading",
+                    "label": "╨Ч╨░╨│╨╛╨╗╨╛╨▓╨╛╨║",
+                    "type": "text"
+                },
+                {
+                    "name": "section_nature_lead",
+                    "label": "╨Ы╨╕╨┤",
+                    "type": "textarea"
+                },
+                {
+                    "name": "section_nature_neurobiology_heading",
+                    "label": "╨Я╨╛╨┤╨╖╨░╨│╨╛╨╗╨╛╨▓╨╛╨║: ╨╜╨╡╨╣╤А╨╛╨▒╨╕╨╛╨╗╨╛╨│╨╕╤П",
+                    "type": "text"
+                },
+                {
+                    "name": "section_nature_neurobiology_text",
+                    "label": "╨в╨╡╨║╤Б╤В: ╨╜╨╡╨╣╤А╨╛╨▒╨╕╨╛╨╗╨╛╨│╨╕╤П",
+                    "type": "textarea"
+                },
+                {
+                    "name": "section_nature_genotyping_heading",
+                    "label": "╨Я╨╛╨┤╨╖╨░╨│╨╛╨╗╨╛╨▓╨╛╨║: ╨│╨╡╨╜╨╛╤В╨╕╨┐╨╕╤А╨╛╨▓╨░╨╜╨╕╨╡",
+                    "type": "text"
+                },
+                {
+                    "name": "section_nature_genotyping_text",
+                    "label": "╨в╨╡╨║╤Б╤В: ╨│╨╡╨╜╨╛╤В╨╕╨┐╨╕╤А╨╛╨▓╨░╨╜╨╕╨╡ (╨┤╨╛ ╤Б╤Б╤Л╨╗╨║╨╕)",
+                    "type": "textarea"
+                },
+                {
+                    "name": "section_nature_genotyping_link_label",
+                    "label": "╨в╨╡╨║╤Б╤В ╤Б╤Б╤Л╨╗╨║╨╕ ╨╜╨░ ╨│╨╡╨╜╨╛╤В╨╕╨┐╨╕╤А╨╛╨▓╨░╨╜╨╕╨╡",
+                    "type": "text"
+                },
+                {
+                    "name": "section_nature_genotyping_link_url",
+                    "label": "URL ╤Б╤Б╤Л╨╗╨║╨╕ ╨╜╨░ ╨│╨╡╨╜╨╛╤В╨╕╨┐╨╕╤А╨╛╨▓╨░╨╜╨╕╨╡",
+                    "type": "url"
+                },
+                {
+                    "name": "section_nature_genotyping_after_text",
+                    "label": "╨в╨╡╨║╤Б╤В: ╨│╨╡╨╜╨╛╤В╨╕╨┐╨╕╤А╨╛╨▓╨░╨╜╨╕╨╡ (╨┐╨╛╤Б╨╗╨╡ ╤Б╤Б╤Л╨╗╨║╨╕)",
+                    "type": "textarea"
+                },
+                {
+                    "name": "section_nature_cards",
+                    "label": "╨Ъ╨░╤А╤В╨╛╤З╨║╨╕ ╨┐╤А╨╛╤П╨▓╨╗╨╡╨╜╨╕╨╣",
+                    "type": "repeater"
+                },
+                {
+                    "name": "",
+                    "label": "5. CTA ┬л╨б ╤З╨╡╨│╨╛ ╨╜╨░╤З╨░╤В╤М┬╗",
+                    "type": "message"
+                },
+                {
+                    "name": "section_mid_cta_visible",
+                    "label": "╨Я╨╛╨║╨░╨╖╤Л╨▓╨░╤В╤М CTA ┬л╨б ╤З╨╡╨│╨╛ ╨╜╨░╤З╨░╤В╤М┬╗",
+                    "type": "true_false"
+                },
+                {
+                    "name": "",
+                    "label": "6. ╨Я╤А╨╛╨│╤А╨░╨╝╨╝╨░ ╨╗╨╡╤З╨╡╨╜╨╕╤П",
+                    "type": "message"
+                },
+                {
+                    "name": "section_program_visible",
+                    "label": "╨Я╨╛╨║╨░╨╖╤Л╨▓╨░╤В╤М ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╤Г ╨╗╨╡╤З╨╡╨╜╨╕╤П",
+                    "type": "true_false"
+                },
+                {
+                    "name": "section_program_heading",
+                    "label": "╨Ч╨░╨│╨╛╨╗╨╛╨▓╨╛╨║ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╤Л",
+                    "type": "text"
+                },
+                {
+                    "name": "section_program_more_label",
+                    "label": "╨в╨╡╨║╤Б╤В ╤Б╤Б╤Л╨╗╨║╨╕ ┬л╨┐╨╛╨┤╤А╨╛╨▒╨╜╨╡╨╡┬╗",
+                    "type": "text"
+                },
+                {
+                    "name": "section_program_lead",
+                    "label": "╨Ы╨╕╨┤ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╤Л",
+                    "type": "textarea"
+                },
+                {
+                    "name": "section_program_intro",
+                    "label": "Intro ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╤Л (1)",
+                    "type": "textarea"
+                },
+                {
+                    "name": "section_program_intro2",
+                    "label": "Intro ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╤Л (2)",
+                    "type": "textarea"
+                },
+                {
+                    "name": "section_program_footer_label",
+                    "label": "╨в╨╡╨║╤Б╤В ╨╜╨╕╨╢╨╜╨╡╨╣ ╤Б╤Б╤Л╨╗╨║╨╕ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╤Л",
+                    "type": "text"
+                },
+                {
+                    "name": "",
+                    "label": "7. ╨н╤В╨░╨┐╤Л \/ ╤З╤В╨╛ ╨╜╤Г╨╢╨╜╨╛ ╨┤╨╗╤П ╨╗╨╡╤З╨╡╨╜╨╕╤П",
+                    "type": "message"
+                },
+                {
+                    "name": "section_stages_visible",
+                    "label": "╨Я╨╛╨║╨░╨╖╤Л╨▓╨░╤В╤М ╨▒╨╗╨╛╨║ ╤Н╤В╨░╨┐╨╛╨▓",
+                    "type": "true_false"
+                },
+                {
+                    "name": "section_stages_heading",
+                    "label": "╨Ч╨░╨│╨╛╨╗╨╛╨▓╨╛╨║ ╤Н╤В╨░╨┐╨╛╨▓",
+                    "type": "text"
+                },
+                {
+                    "name": "section_stages_lead",
+                    "label": "╨Ы╨╕╨┤ ╤Н╤В╨░╨┐╨╛╨▓",
+                    "type": "textarea"
+                },
+                {
+                    "name": "section_stages_support_heading",
+                    "label": "╨Ч╨░╨│╨╛╨╗╨╛╨▓╨╛╨║ ╨┐╨╛╨┤╨┤╨╡╤А╨╢╨║╨╕",
+                    "type": "text"
+                },
+                {
+                    "name": "section_stages_support_items",
+                    "label": "╨Я╤Г╨╜╨║╤В╤Л ╨┐╨╛╨┤╨┤╨╡╤А╨╢╨║╨╕",
+                    "type": "repeater"
+                },
+                {
+                    "name": "",
+                    "label": "8. ╨Э╨░╤И ╨┐╨╛╨┤╤Е╨╛╨┤ ╨║ ╨╗╨╡╤З╨╡╨╜╨╕╤О",
+                    "type": "message"
+                },
+                {
+                    "name": "section_approach_visible",
+                    "label": "╨Я╨╛╨║╨░╨╖╤Л╨▓╨░╤В╤М ╨▒╨╗╨╛╨║ ┬л╨Э╨░╤И ╨┐╨╛╨┤╤Е╨╛╨┤┬╗",
+                    "type": "true_false"
+                },
+                {
+                    "name": "section_approach_heading",
+                    "label": "╨Ч╨░╨│╨╛╨╗╨╛╨▓╨╛╨║ ╨┐╨╛╨┤╤Е╨╛╨┤╨░",
+                    "type": "text"
+                },
+                {
+                    "name": "section_approach_more_label",
+                    "label": "╨в╨╡╨║╤Б╤В ╤Б╤Б╤Л╨╗╨║╨╕ ┬л╨┐╨╛╨┤╤А╨╛╨▒╨╜╨╡╨╡┬╗",
+                    "type": "text"
+                },
+                {
+                    "name": "section_approach_more_url",
+                    "label": "URL ╤Б╤Б╤Л╨╗╨║╨╕ ┬л╨┐╨╛╨┤╤А╨╛╨▒╨╜╨╡╨╡┬╗",
+                    "type": "url"
+                },
+                {
+                    "name": "section_approach_highlight",
+                    "label": "╨Т╤Л╨┤╨╡╨╗╨╡╨╜╨╜╤Л╨╣ ╨░╨▒╨╖╨░╤Ж (╨║╤А╨░╤Б╨╜╨░╤П ╨╗╨╕╨╜╨╕╤П)",
+                    "type": "textarea"
+                },
+                {
+                    "name": "section_approach_intro",
+                    "label": "Intro ╨┐╨╛╨┤╤Е╨╛╨┤╨░",
+                    "type": "textarea"
+                },
+                {
+                    "name": "section_approach_corridor_image",
+                    "label": "╨Ш╨╖╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╨╡ ╨║╨╛╤А╨╕╨┤╨╛╤А╨░",
+                    "type": "image"
+                },
+                {
+                    "name": "section_approach_corridor_alt",
+                    "label": "Alt ╨╕╨╖╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╤П ╨║╨╛╤А╨╕╨┤╨╛╤А╨░",
+                    "type": "text"
+                },
+                {
+                    "name": "section_approach_staff_image",
+                    "label": "╨Ш╨╖╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╨╡ ╨║╨╛╨╝╨░╨╜╨┤╤Л",
+                    "type": "image"
+                },
+                {
+                    "name": "section_approach_staff_alt",
+                    "label": "Alt ╨╕╨╖╨╛╨▒╤А╨░╨╢╨╡╨╜╨╕╤П ╨║╨╛╨╝╨░╨╜╨┤╤Л",
+                    "type": "text"
+                },
+                {
+                    "name": "section_approach_cards",
+                    "label": "╨Ъ╨░╤А╤В╨╛╤З╨║╨╕ ╨┐╨╛╨┤╤Е╨╛╨┤╨░",
+                    "type": "repeater"
+                },
+                {
+                    "name": "",
+                    "label": "9. ╨в╨╡╤А╤А╨╕╤В╨╛╤А╨╕╤П ╨║╨╗╨╕╨╜╨╕╨║╨╕",
+                    "type": "message"
+                },
+                {
+                    "name": "section_clinic_landscape_visible",
+                    "label": "╨Я╨╛╨║╨░╨╖╤Л╨▓╨░╤В╤М ╤В╨╡╤А╤А╨╕╤В╨╛╤А╨╕╤О ╨║╨╗╨╕╨╜╨╕╨║╨╕",
+                    "type": "true_false"
+                },
+                {
+                    "name": "",
+                    "label": "10. ╨б╨┐╨╡╤Ж╨╕╨░╨╗╨╕╤Б╤В╤Л",
+                    "type": "message"
+                },
+                {
+                    "name": "section_specialists_visible",
+                    "label": "╨Я╨╛╨║╨░╨╖╤Л╨▓╨░╤В╤М ╤Б╨┐╨╡╤Ж╨╕╨░╨╗╨╕╤Б╤В╨╛╨▓",
+                    "type": "true_false"
+                },
+                {
+                    "name": "",
+                    "label": "11. ╨б╨╗╨╛╨▓╨╛ ╨╛╤Б╨╜╨╛╨▓╨░╤В╨╡╨╗╤П",
+                    "type": "message"
+                },
+                {
+                    "name": "section_founder_quote_visible",
+                    "label": "╨Я╨╛╨║╨░╨╖╤Л╨▓╨░╤В╤М ╤Б╨╗╨╛╨▓╨╛ ╨╛╤Б╨╜╨╛╨▓╨░╤В╨╡╨╗╤П",
+                    "type": "true_false"
+                },
+                {
+                    "name": "",
+                    "label": "12. ╨г╤Б╨╗╨╛╨▓╨╕╤П ╤Ж╨╡╨╜╤В╤А╨░",
+                    "type": "message"
+                },
+                {
+                    "name": "section_comfort_visible",
+                    "label": "╨Я╨╛╨║╨░╨╖╤Л╨▓╨░╤В╤М ╤Г╤Б╨╗╨╛╨▓╨╕╤П ╤Ж╨╡╨╜╤В╤А╨░",
+                    "type": "true_false"
+                },
+                {
+                    "name": "",
+                    "label": "13. ╨Ю╤В╨╖╤Л╨▓╤Л",
+                    "type": "message"
+                },
+                {
+                    "name": "section_reviews_visible",
+                    "label": "╨Я╨╛╨║╨░╨╖╤Л╨▓╨░╤В╤М ╨╛╤В╨╖╤Л╨▓╤Л",
+                    "type": "true_false"
+                },
+                {
+                    "name": "",
+                    "label": "14. FAQ",
+                    "type": "message"
+                },
+                {
+                    "name": "section_faq_visible",
+                    "label": "╨Я╨╛╨║╨░╨╖╤Л╨▓╨░╤В╤М FAQ",
+                    "type": "true_false"
+                },
+                {
+                    "name": "section_faq_heading",
+                    "label": "╨Ч╨░╨│╨╛╨╗╨╛╨▓╨╛╨║ FAQ",
+                    "type": "text"
+                },
+                {
+                    "name": "",
+                    "label": "15. ╨д╨╕╨╜╨░╨╗╤М╨╜╨░╤П ╤Д╨╛╤А╨╝╨░",
+                    "type": "message"
+                },
+                {
+                    "name": "section_final_form_visible",
+                    "label": "╨Я╨╛╨║╨░╨╖╤Л╨▓╨░╤В╤М ╤Д╨╕╨╜╨░╨╗╤М╨╜╤Г╤О ╤Д╨╛╤А╨╝╤Г",
+                    "type": "true_false"
+                }
+            ]
+        }
+    ],
+    "hero_values": {
+        "hero_eyebrow": "",
+        "hero_title_override": "",
+        "hero_lead": "╨Э╨░╨┐╤А╨░╨▓╨╗╨╡╨╜╨╕╨╡ ┬л╨Ч╨░╨▓╨╕╤Б╨╕╨╝╨╛╤Б╤В╨╕┬╗. ╨Ь╨╕╨╜╨╕╨╝╨░╨╗╤М╨╜╨╛╨╡ ╨╜╨░╨┐╨╛╨╗╨╜╨╡╨╜╨╕╨╡ ╨┤╨╗╤П ╨▓╨╕╨╖╤Г╨░╨╗╤М╨╜╨╛╨╣ ╨┐╤А╨╛╨▓╨╡╤А╨║╨╕ ╨╝╨░╤А╤И╤А╤Г╤В╨░. ╨Я╨╛╨╗╨╜╨░╤П ╨╝╨╕╨│╤А╨░╤Ж╨╕╤П ╨║╨╛╨╜╤В╨╡╨╜╤В╨░ ╨▓╤Л╨┐╨╛╨╗╨╜╤П╨╡╤В╤Б╤П ╨╛╤В╨┤╨╡╨╗╤М╨╜╨╛╨╣ ╤Д╨░╨╖╨╛╨╣.",
+        "hero_cta_label": "╨Ч╨░╨║╨░╨╖╨░╤В╤М ╨╖╨▓╨╛╨╜╨╛╨║",
+        "hero_cta_target": "",
+        "hero_media_id": 304,
+        "role": "section"
+    }
+}

@@ -1,0 +1,9 @@
+page,id,role,effective_stack,fields_visible,warning,result,notes
+Зависимости,73,section,subdivision,role+layout+override+category_lead,,PASS,"layout=subdivision override=off children=6"
+"Психическое здоровье",77,section,subdivision,role+layout+override+category_lead,,PASS,"layout=subdivision override=off children=9"
+РПП,84,section,subdivision,role+layout+override+category_lead,,PASS,"layout=subdivision override=off children=3"
+Alcohol,74,service,alcohol-special,role+layout+override+child_services,,PASS,"layout=alcohol_special override=off children=0"
+"Narcotic dependency",314,service,alcohol-special,role+layout+override+child_services,service_with_children_ok,PASS,"layout=alcohol_special override=off children=4"
+Depression,78,service,alcohol-special,role+layout+override+child_services,,PASS,"layout=alcohol_special override=off children=0"
+#314,314,service,alcohol-special,role+layout+override+child_services,service_with_children_ok,PASS,"layout=alcohol_special override=off children=4"
+#316,316,service,alcohol-special,role+layout+override+child_services,service_with_children_ok,PASS,"layout=alcohol_special override=off children=4"

@@ -1,0 +1,10 @@
+check,expected,actual,result
+Edit screen group present,yes,group_fp02_service_section_parity registered,PASS
+Role remains Раздел,yes,service_editor_role=section for #73,PASS
+Admin order follows frontend,yes,numbered 1-15 section notices,PASS
+New fields visible for section,yes,conditional on role=section; 63 fields,PASS
+Values seeded,#73 yes,#73 seeded; #77/#84 toggles only,PASS
+Toggles/settings visible,yes,14 block toggles,PASS
+Notices clear,yes,fp02-acf-section-title + danger source notices,PASS
+Save validation,no errors,repeater limits added; no fatal,PASS
+Toggle OFF hides nature,yes,verified HTTP markup absent then restored,PASS

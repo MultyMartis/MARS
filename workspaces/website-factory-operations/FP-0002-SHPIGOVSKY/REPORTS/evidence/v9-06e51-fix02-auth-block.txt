@@ -1,0 +1,20 @@
+code=200
+is_login=1
+body_sample=<!DOCTYPE html>
+<html class="wp-toolbar"
+	lang="ru-RU">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Редактировать услугу &#8220;Депрессия&#8221; &lsaquo; Шпиговский — локальная разработка &#8212; WordPress</title>
+<script>
+addLoadEvent = function(func){if(typeof jQuery!=='undefined')jQuery(function(){func();});else if(typeof wpOnload!=='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};
+var ajaxurl = '/wp-admin/admin-ajax.php',
+	pagenow = 'service',
+	typenow = 'service',
+	adminpage = 'post-php',
+	thousandsSeparator = '&nbsp;',
+	decimalPoint = ',',
+	isRtl = 0;
+</script>
+			<style id="classic-editor-safari-18-temp-fix">
+			_::-webkit-full-page-me

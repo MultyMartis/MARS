@@ -186,7 +186,7 @@ function shpigovsky_get_service_hero_context_key( $post_id, $variant ) {
 	$post = get_post( $post_id );
 
 	if ( $post instanceof WP_Post ) {
-		if ( 'alcohol-special' === $variant || 'lechenie-alkogolnoy-zavisimosti' === $post->post_name ) {
+		if ( shpigovsky_is_service_general_variant( $variant ) || 'lechenie-alkogolnoy-zavisimosti' === $post->post_name ) {
 			return 'service_leaf_alcohol';
 		}
 
@@ -199,7 +199,9 @@ function shpigovsky_get_service_hero_context_key( $post_id, $variant ) {
 }
 
 /**
- * Resolve home hero image: hero_media > slide image > theme fallback.
+ * Resolve home hero image: first slide image > legacy hero_media > theme fallback.
+ *
+ * V9-06E41: slides are the primary source; standalone hero_media is legacy-only.
  *
  * @return array{url:string,alt:string,width:int,height:int}
  */
@@ -210,17 +212,21 @@ function shpigovsky_get_home_hero_image() {
 		return shpigovsky_get_hero_theme_fallback( 'home' );
 	}
 
+	$slides      = shpigovsky_get_home_repeater( 'home_hero_slides' );
+	$slide       = ! empty( $slides[0] ) && is_array( $slides[0] ) ? $slides[0] : array();
+	$slide_image = isset( $slide['image'] ) ? $slide['image'] : null;
+
+	if ( '' !== shpigovsky_acf_image_url( $slide_image ) ) {
+		return shpigovsky_resolve_hero_image( $slide_image, 'home' );
+	}
+
 	$direct_image = shpigovsky_get_hero_acf_image( $page_id, 'hero_media' );
 
 	if ( '' !== shpigovsky_acf_image_url( $direct_image ) ) {
 		return shpigovsky_resolve_hero_image( $direct_image, 'home' );
 	}
 
-	$slides      = shpigovsky_get_home_repeater( 'home_hero_slides' );
-	$slide       = ! empty( $slides[0] ) && is_array( $slides[0] ) ? $slides[0] : array();
-	$slide_image = isset( $slide['image'] ) ? $slide['image'] : null;
-
-	return shpigovsky_resolve_hero_image( $slide_image, 'home' );
+	return shpigovsky_get_hero_theme_fallback( 'home' );
 }
 
 /**

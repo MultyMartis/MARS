@@ -1,0 +1,1461 @@
+{
+    "key": "group_fp02_service_section_parity",
+    "title": "Service — Раздел (блоки по порядку сайта)",
+    "fields": [
+        {
+            "key": "field_fp02_section_hero_notice",
+            "label": "1. Hero",
+            "name": "section_hero_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Контент hero редактируется в отдельной группе «Hero страницы услуги» (надзаголовок, H1 override, лид, изображение, текст/ссылка кнопки). Макет — в «Service — Layout».",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_section_nav_notice",
+            "label": "2. Навигация по якорям",
+            "name": "section_nav_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Автоматический блок: пункты якорей задаются шаблоном раздела. Хлебные крошки — из иерархии услуг.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_section_nav_visible",
+            "label": "Показывать навигацию по якорям",
+            "name": "section_nav_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_section_dependencies_notice",
+            "label": "3. Дочерние услуги",
+            "name": "section_dependencies_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Автоматический блок: список дочерних услуг строится <strong class=\"fp02-acf-notice-danger\">из <a href=\"http://shpigovsky.test/wp-admin/edit.php?post_type=service\">страниц услуг</a></strong> (дети текущего раздела или ручной relationship). Ниже — заголовок/лид/футер и показ блока.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_section_dependencies_visible",
+            "label": "Показывать блок дочерних услуг",
+            "name": "section_dependencies_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_section_dependencies_heading",
+            "label": "Заголовок блока дочерних услуг",
+            "name": "section_dependencies_heading",
+            "type": "text",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле очистить, необязательный текст на сайте может скрыться. Аварийный резерв — только технический запас, не обычный источник контента.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_section_dependencies_lead",
+            "label": "Лид блока дочерних услуг",
+            "name": "section_dependencies_lead",
+            "type": "textarea",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле очистить, лид может скрыться (или подтянуться intro_text / hero_lead этой страницы, если они заполнены). Аварийный резерв — только технический запас.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 4
+        },
+        {
+            "key": "field_fp02_section_dependencies_footer",
+            "label": "Текст после списка дочерних услуг",
+            "name": "section_dependencies_footer",
+            "type": "textarea",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле очистить, необязательный текст на сайте может скрыться. Аварийный резерв — только технический запас, не обычный источник контента.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3
+        },
+        {
+            "key": "field_fp02_section_nature_notice",
+            "label": "4. Природа зависимости",
+            "name": "section_nature_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Уникальный контент страницы раздела. Заполнено демо-контентом — при необходимости замените вручную. Источник на сайте: значения ACF этой страницы.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_section_nature_visible",
+            "label": "Показывать блок «Природа зависимости»",
+            "name": "section_nature_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_section_nature_heading",
+            "label": "Заголовок",
+            "name": "section_nature_heading",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_section_nature_lead",
+            "label": "Лид",
+            "name": "section_nature_lead",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3
+        },
+        {
+            "key": "field_fp02_section_nature_text_blocks",
+            "label": "Текстовые блоки (подзаголовок + текст)",
+            "name": "section_nature_text_blocks",
+            "type": "repeater",
+            "instructions": "Строки вроде «Нейробиология» / «Генотипирование». Необязательные ссылка и текст после ссылки — для блоков со ссылкой. Заполнено демо-контентом. При необходимости замените вручную.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "layout": "row",
+            "button_label": "Добавить текстовый блок",
+            "min": 0,
+            "max": 8,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_section_nature_text_block_heading",
+                    "label": "Заголовок",
+                    "name": "heading",
+                    "type": "text"
+                },
+                {
+                    "key": "field_fp02_section_nature_text_block_text",
+                    "label": "Текст",
+                    "name": "text",
+                    "type": "textarea",
+                    "rows": 4
+                },
+                {
+                    "key": "field_fp02_section_nature_text_block_link_label",
+                    "label": "Текст ссылки (опционально)",
+                    "name": "link_label",
+                    "type": "text"
+                },
+                {
+                    "key": "field_fp02_section_nature_text_block_link_url",
+                    "label": "URL ссылки (опционально)",
+                    "name": "link_url",
+                    "type": "url"
+                },
+                {
+                    "key": "field_fp02_section_nature_text_block_after_text",
+                    "label": "Текст после ссылки (опционально)",
+                    "name": "after_text",
+                    "type": "textarea",
+                    "rows": 3
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_section_nature_cards",
+            "label": "Карточки проявлений",
+            "name": "section_nature_cards",
+            "type": "repeater",
+            "instructions": "До 4 карточек. Заполнено демо-контентом. При необходимости замените вручную. Если очистить, карточки на сайте могут скрыться. Аварийный резерв — только технический запас.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "layout": "row",
+            "button_label": "Добавить карточку",
+            "min": 0,
+            "max": 4,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_section_nature_card_title",
+                    "label": "Заголовок",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_fp02_section_nature_card_text",
+                    "label": "Текст",
+                    "name": "text",
+                    "type": "textarea",
+                    "rows": 3
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_section_program_notice",
+            "label": "5. Программа лечения",
+            "name": "section_program_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Карточки направлений: ACF «Пункты программы» на этой странице; изображения/ссылки направлений — из каталога программы лечения (общий справочник). Текст lead/intro редактируется ниже. Заполнено демо-контентом — при необходимости замените вручную.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_section_program_visible",
+            "label": "Показывать программу лечения",
+            "name": "section_program_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_section_program_heading",
+            "label": "Заголовок программы",
+            "name": "section_program_heading",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_section_program_more_label",
+            "label": "Текст ссылки «подробнее»",
+            "name": "section_program_more_label",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_section_program_lead",
+            "label": "Лид программы",
+            "name": "section_program_lead",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3
+        },
+        {
+            "key": "field_fp02_section_program_intro_items",
+            "label": "Intro программы",
+            "name": "section_program_intro_items",
+            "type": "repeater",
+            "instructions": "Абзацы intro. Заполнено демо-контентом. При необходимости замените вручную. Пустые строки игнорируются. Если все абзацы очистить, intro на сайте может скрыться. Аварийный резерв — только технический запас.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "layout": "row",
+            "button_label": "Добавить intro",
+            "min": 0,
+            "max": 6,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_section_program_intro_item_text",
+                    "label": "Текст",
+                    "name": "text",
+                    "type": "textarea",
+                    "rows": 4
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_section_stages_notice",
+            "label": "6. Этапы / что нужно для лечения",
+            "name": "section_stages_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Этапы редактируются ниже (паттерн как у блока «Что нужно…»). Источник: ACF этой страницы. Заполнено демо-контентом — при необходимости замените вручную.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_section_stages_visible",
+            "label": "Показывать блок этапов",
+            "name": "section_stages_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_section_stages_heading",
+            "label": "Заголовок этапов",
+            "name": "section_stages_heading",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_section_stages_lead",
+            "label": "Лид этапов",
+            "name": "section_stages_lead",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3
+        },
+        {
+            "key": "field_fp02_section_stages_items",
+            "label": "Этапы",
+            "name": "section_stages_items",
+            "type": "repeater",
+            "instructions": "Заголовок и текст каждого этапа. Заполнено демо-контентом. При необходимости замените вручную. Пустой repeater: этапы могут скрыться (или показаться legacy Structured Sections stages, если они есть). Аварийный резерв темы — только технический запас.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "layout": "row",
+            "button_label": "Добавить этап",
+            "min": 0,
+            "max": 8,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_section_stages_item_title",
+                    "label": "Заголовок",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_fp02_section_stages_item_text",
+                    "label": "Текст",
+                    "name": "text",
+                    "type": "textarea",
+                    "rows": 3
+                },
+                {
+                    "key": "field_fp02_section_stages_item_enabled",
+                    "label": "Показывать этап",
+                    "name": "enabled",
+                    "type": "true_false",
+                    "default_value": 1,
+                    "ui": 1
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_section_stages_support_heading",
+            "label": "Заголовок поддержки",
+            "name": "section_stages_support_heading",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_section_stages_support_items",
+            "label": "Пункты поддержки",
+            "name": "section_stages_support_items",
+            "type": "repeater",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если очистить, карточки на сайте могут скрыться. Аварийный резерв — только технический запас.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "layout": "table",
+            "button_label": "Добавить пункт",
+            "min": 0,
+            "max": 8,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_section_stages_support_item_text",
+                    "label": "Текст",
+                    "name": "text",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_section_approach_notice",
+            "label": "7. Наш подход к лечению",
+            "name": "section_approach_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Уникальный контент раздела: заголовки, тексты, изображения и карточки. Источник на сайте — ACF этой страницы. Заполнено демо-контентом; при необходимости замените вручную.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_section_approach_visible",
+            "label": "Показывать блок «Наш подход»",
+            "name": "section_approach_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_section_approach_heading",
+            "label": "Заголовок подхода",
+            "name": "section_approach_heading",
+            "type": "text",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_section_approach_more_label",
+            "label": "Текст ссылки «подробнее»",
+            "name": "section_approach_more_label",
+            "type": "text",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_section_approach_more_url",
+            "label": "URL ссылки «подробнее»",
+            "name": "section_approach_more_url",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_section_approach_highlight",
+            "label": "Выделенный абзац (красная линия)",
+            "name": "section_approach_highlight",
+            "type": "textarea",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3
+        },
+        {
+            "key": "field_fp02_section_approach_intro",
+            "label": "Intro подхода",
+            "name": "section_approach_intro",
+            "type": "textarea",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3
+        },
+        {
+            "key": "field_fp02_section_corridor_image",
+            "label": "Изображение коридора",
+            "name": "section_corridor_image",
+            "type": "image",
+            "instructions": "Выберите изображение для блока коридора/интерьера на этой странице раздела. Изображение используется на этой странице раздела. Если поле очистить, блок может использовать аварийный резерв темы (технический запас).",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_fp02_section_corridor_image_alt",
+            "label": "Alt изображения коридора",
+            "name": "section_corridor_image_alt",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_section_team_image",
+            "label": "Изображение команды",
+            "name": "section_team_image",
+            "type": "image",
+            "instructions": "Выберите изображение для блока команды на этой странице раздела. Изображение используется на этой странице раздела. Если поле очистить, блок может использовать аварийный резерв темы (технический запас).",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_fp02_section_team_image_alt",
+            "label": "Alt изображения команды",
+            "name": "section_team_image_alt",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_section_approach_cards",
+            "label": "Карточки подхода",
+            "name": "section_approach_cards",
+            "type": "repeater",
+            "instructions": "До 6 карточек. Заполнено демо-контентом. При необходимости замените вручную. Если очистить, карточки на сайте могут скрыться. Аварийный резерв — только технический запас.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "layout": "row",
+            "button_label": "Добавить карточку",
+            "min": 0,
+            "max": 6,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_section_approach_card_title",
+                    "label": "Заголовок",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_fp02_section_approach_card_text",
+                    "label": "Текст",
+                    "name": "text",
+                    "type": "textarea",
+                    "rows": 3
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_section_clinic_landscape_notice",
+            "label": "8. Территория клиники",
+            "name": "section_clinic_landscape_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Изображение блока «Территория клиники» для <strong class=\"fp02-acf-notice-danger\">этой страницы раздела</strong>. Источник — ACF этой страницы (не Home). Если поле очистить, блок может использовать аварийный резерв темы (технический запас).",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_section_clinic_landscape_visible",
+            "label": "Показывать территорию клиники",
+            "name": "section_clinic_landscape_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_section_clinic_landscape_image",
+            "label": "Изображение территории клиники",
+            "name": "section_clinic_landscape_image",
+            "type": "image",
+            "instructions": "Выберите изображение для блока «Территория клиники» на этой странице раздела. Изображение используется на этой странице раздела. Если поле очистить, блок может использовать аварийный резерв темы (технический запас).",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all"
+        },
+        {
+            "key": "field_fp02_section_specialists_notice",
+            "label": "9. Специалисты",
+            "name": "section_specialists_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Автоматический блок: карточки <strong class=\"fp02-acf-notice-danger\">из дочерних страниц «Специалисты»</strong>. Заголовок/ссылка — в настройках переиспользуемого блока. На странице раздела — только показ/скрытие.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_section_specialists_visible",
+            "label": "Показывать специалистов",
+            "name": "section_specialists_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_section_founder_quote_notice",
+            "label": "10. Слово основателя",
+            "name": "section_founder_quote_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Общий статический блок (контент в шаблоне). На странице раздела — показ/скрытие. Не дублируем текст на каждой странице раздела.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_section_founder_quote_visible",
+            "label": "Показывать слово основателя",
+            "name": "section_founder_quote_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_section_comfort_notice",
+            "label": "11. Условия центра",
+            "name": "section_comfort_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Автоматический/общий блок: контент из переиспользуемого блока Comfort. На странице раздела — показ/скрытие.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_section_comfort_visible",
+            "label": "Показывать условия центра",
+            "name": "section_comfort_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_section_reviews_notice",
+            "label": "12. Отзывы",
+            "name": "section_reviews_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Автоматический блок: отзывы из настроек сайта / CPT отзывов. На странице раздела — показ/скрытие (не зависит от тумблера Home).",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_section_reviews_visible",
+            "label": "Показывать отзывы",
+            "name": "section_reviews_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_section_faq_notice",
+            "label": "13. FAQ",
+            "name": "section_faq_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Вопросы/ответы — repeater FAQ этой страницы услуги. Ниже — заголовок секции и показ.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_section_faq_visible",
+            "label": "Показывать FAQ",
+            "name": "section_faq_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_section_faq_heading",
+            "label": "Заголовок FAQ",
+            "name": "section_faq_heading",
+            "type": "text",
+            "instructions": "Заполнено демо-контентом. При необходимости замените вручную. Если поле очистить, заголовок FAQ на сайте может скрыться или остаться пустым. Аварийный резерв — только технический запас.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_section_final_form_notice",
+            "label": "14. Финальная форма",
+            "name": "section_final_form_notice",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "message": "Общий блок: тексты формы из настроек Final Form. На странице раздела — показ/скрытие.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_section_final_form_visible",
+            "label": "Показывать финальную форму",
+            "name": "section_final_form_visible",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "service"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "FP-0002 V9-06E50 section demo ACF SoT; empty fields hide optional text; emergency reserve technical only.",
+    "show_in_rest": 0,
+    "modified": 1784452800
+}

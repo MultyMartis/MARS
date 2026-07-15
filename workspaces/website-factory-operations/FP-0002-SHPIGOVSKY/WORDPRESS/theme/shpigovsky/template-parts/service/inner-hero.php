@@ -22,7 +22,7 @@ if ( '' === $eyebrow ) {
 	$eyebrow = __( 'Заболевания, которые мы лечим', 'shpigovsky' );
 }
 
-if ( 'alcohol-special' === $variant ) {
+if ( shpigovsky_is_service_general_variant( $variant ) && shpigovsky_service_uses_alcohol_v9_static_copy( $post_id ) ) {
 	if ( '' === $hero_title || 'Лечение алкогольной зависимости' === $hero_title ) {
 		$hero_title = 'Центр лечения алкогольной зависимости';
 	}
@@ -40,7 +40,7 @@ if ( '' === $hero_title ) {
 
 $cta_label = shpigovsky_get_local_hero_cta_label( $post_id, $cta_route );
 
-if ( 'alcohol-special' === $variant && 'Записаться' === $cta_label ) {
+if ( shpigovsky_is_service_general_variant( $variant ) && shpigovsky_service_uses_alcohol_v9_static_copy( $post_id ) && 'Записаться' === $cta_label ) {
 	$cta_label = 'Записаться на консультацию';
 }
 

@@ -1,0 +1,11 @@
+area,before,after,result,notes
+expanded_state_button,hidden after expand,visible as Скрыть,PASS,v9-shell.js toggle
+collapse_behavior,not available,smooth max-height collapse,PASS,measured scrollHeight ↔ 5-line clamp
+button_label,one-way Читать больше,toggle Читать больше / Скрыть,PASS,Russian labels
+aria_expanded,false→true then stuck,false/true toggle,PASS,aria-controls preserved
+resize_behavior,skip when expanded + hide,recalculate; preserve state if overflow,PASS,debounce 150ms
+short_text,button hidden,button hidden + no clamp,PASS,in-page short-text sim
+php_signs,unchanged,unchanged,PASS,no markup change
+css_clamp,unchanged,unchanged,PASS,operator CSS not rewritten
+admin_acf,unchanged,unchanged,PASS,no admin wave
+db_writes,0,0,PASS,no content mutation

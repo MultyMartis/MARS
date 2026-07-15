@@ -1,0 +1,25 @@
+{
+    "parity_field_count": 55,
+    "has_footer_label": false,
+    "has_landscape_image": true,
+    "has_landscape_visible": true,
+    "notice_mentions_home": false,
+    "notice_section_specific": false,
+    "notice_text": "",
+    "section_image_73": 1239,
+    "section_image_77": 1239,
+    "section_image_84": 1239,
+    "footer_meta_73": "подробнее о программе ТЕСТ",
+    "post_content_73": 140,
+    "post_content_77": 140,
+    "post_content_84": 140,
+    "supports_editor_global": true,
+    "has_hide_helpers": true,
+    "home_landscape_untouched": 1239,
+    "hooks": {
+        "admin_init": true,
+        "add_meta_boxes": true,
+        "admin_head-post.php": true,
+        "admin_head-post-new.php": true
+    }
+}

@@ -44,7 +44,7 @@
             "name": "signs_items",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "Bounded repeater. Max rows are enforced in source and validation hooks.",
+            "instructions": "Optional. Empty section does not block save.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -65,7 +65,7 @@
                     "name": "title",
                     "aria-label": "",
                     "type": "text",
-                    "instructions": "",
+                    "instructions": "Optional.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -160,7 +160,7 @@
             "name": "stages",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "Bounded repeater. Max rows are enforced in source and validation hooks.",
+            "instructions": "Optional. Empty section does not block save.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -181,7 +181,7 @@
                     "name": "title",
                     "aria-label": "",
                     "type": "text",
-                    "instructions": "",
+                    "instructions": "Optional.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -198,7 +198,7 @@
                     "name": "text",
                     "aria-label": "",
                     "type": "textarea",
-                    "instructions": "",
+                    "instructions": "Optional.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {

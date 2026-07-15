@@ -1,0 +1,49 @@
+{
+    "db_writes": 29,
+    "actions": [
+        {
+            "specialist": "Сергей Юрьевич Шпиговский",
+            "action": "UPDATED",
+            "page_id": 1031,
+            "slug": "shipovsky",
+            "url": "http://shpigovsky.test/specyalisty/shipovsky/",
+            "menu_order": 10,
+            "thumb": 1092
+        },
+        {
+            "specialist": "Максим Михайлович Казаков",
+            "action": "UPDATED",
+            "page_id": 1032,
+            "slug": "kazakov",
+            "url": "http://shpigovsky.test/specyalisty/kazakov/",
+            "menu_order": 20,
+            "thumb": 1094
+        },
+        {
+            "specialist": "Дарья Владимировна Костюк",
+            "action": "UPDATED",
+            "page_id": 1033,
+            "slug": "kostyuk",
+            "url": "http://shpigovsky.test/specyalisty/kostyuk/",
+            "menu_order": 30,
+            "thumb": 1096
+        },
+        {
+            "specialist": "Шапигузова Татьяна Андреевна",
+            "action": "CREATED",
+            "page_id": 1097,
+            "slug": "shapiguzova",
+            "url": "http://shpigovsky.test/specyalisty/shapiguzova/",
+            "menu_order": 40,
+            "thumb": 1098
+        },
+        {
+            "specialist": "(block option)",
+            "action": "UPDATED_ALL_LINK",
+            "url": "http://shpigovsky.test/specyalisty/",
+            "previous": "http://shpigovsky.test/o-centre/"
+        }
+    ],
+    "parent_id": 1030,
+    "errors": []
+}

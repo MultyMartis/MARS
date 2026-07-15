@@ -41,6 +41,59 @@ function shpigovsky_get_services_hub_page_id() {
 }
 
 /**
+ * Whether the current request is the Services hub page.
+ *
+ * @return bool
+ */
+function shpigovsky_is_services_hub_page() {
+	return is_page_template( 'page-templates/services-hub.php' );
+}
+
+/**
+ * Read a boolean Services Hub ACF field safely.
+ *
+ * @param string $field_name Field name.
+ * @param bool   $default    Default when meta missing/empty.
+ * @return bool
+ */
+function shpigovsky_get_services_hub_bool( $field_name, $default = false ) {
+	$page_id = shpigovsky_get_services_hub_page_id();
+
+	if ( $page_id <= 0 ) {
+		return (bool) $default;
+	}
+
+	if ( function_exists( 'get_field' ) ) {
+		$value = get_field( $field_name, $page_id );
+		if ( null === $value || false === $value || '' === $value ) {
+			$raw = get_post_meta( $page_id, $field_name, true );
+			if ( '' === $raw || null === $raw ) {
+				return (bool) $default;
+			}
+			return (bool) $raw;
+		}
+		return (bool) $value;
+	}
+
+	$raw = get_post_meta( $page_id, $field_name, true );
+	if ( '' === $raw || null === $raw ) {
+		return (bool) $default;
+	}
+
+	return (bool) $raw;
+}
+
+/**
+ * Whether a Services hub toggle is enabled (default true).
+ *
+ * @param string $field_name Enabled field name.
+ * @return bool
+ */
+function shpigovsky_services_hub_list_enabled( $field_name ) {
+	return shpigovsky_get_services_hub_bool( $field_name, true );
+}
+
+/**
  * Read a scalar Services Hub ACF field safely.
  *
  * @param string $field_name Field name.
@@ -64,26 +117,6 @@ function shpigovsky_get_services_hub_field( $field_name ) {
 	}
 
 	return is_string( $value ) ? trim( $value ) : ( is_numeric( $value ) ? (string) $value : '' );
-}
-
-/**
- * Read a boolean Services Hub ACF field safely.
- *
- * @param string $field_name Field name.
- * @return bool
- */
-function shpigovsky_get_services_hub_bool( $field_name ) {
-	if ( ! function_exists( 'get_field' ) ) {
-		return false;
-	}
-
-	$page_id = shpigovsky_get_services_hub_page_id();
-
-	if ( $page_id <= 0 ) {
-		return false;
-	}
-
-	return (bool) get_field( $field_name, $page_id );
 }
 
 /**
@@ -194,66 +227,138 @@ function shpigovsky_get_services_hub_group_block_id( $slug ) {
 }
 
 /**
- * Static V9 gallery fallback images for a services hub group slug.
+ * Theme-asset fallback map for services hub slider cards by service slug.
  *
- * @param string $slug Parent service slug.
- * @return array<int, array{url:string,width:int,height:int,alt:string,caption:string}>
+ * @return array<string, array{asset:string,width:int,height:int}>
  */
-function shpigovsky_get_services_hub_group_gallery( $slug ) {
-	$map = array(
-		'zavisimosti' => array(
-			array(
-				'url'     => shpigovsky_asset_uri( 'img/content/services/services-addictions-01.webp' ),
-				'width'   => 994,
-				'height'  => 751,
-				'alt'     => '',
-				'caption' => 'Лечение интернет зависимости',
-			),
-			array(
-				'url'     => shpigovsky_asset_uri( 'img/content/services/services-addictions-02.webp' ),
-				'width'   => 744,
-				'height'  => 566,
-				'alt'     => '',
-				'caption' => 'Компьютерная зависимость',
-			),
-			array(
-				'url'     => shpigovsky_asset_uri( 'img/content/services/services-addictions-03.webp' ),
-				'width'   => 748,
-				'height'  => 716,
-				'alt'     => '',
-				'caption' => 'Лечение опиумной зависимости',
-			),
+function shpigovsky_get_services_hub_slider_asset_fallback_map() {
+	return array(
+		'internet-zavisimost'           => array(
+			'asset'  => 'img/content/services/services-addictions-01.webp',
+			'width'  => 994,
+			'height' => 751,
 		),
-		'psihicheskoe-zdorovie' => array(
-			array(
-				'url'     => shpigovsky_asset_uri( 'img/content/services/services-mental-health-01.webp' ),
-				'width'   => 690,
-				'height'  => 512,
-				'alt'     => '',
-				'caption' => 'Хроническая усталось',
-			),
-			array(
-				'url'     => shpigovsky_asset_uri( 'img/content/services/services-mental-health-02.webp' ),
-				'width'   => 902,
-				'height'  => 763,
-				'alt'     => '',
-				'caption' => 'Стресс',
-			),
-			array(
-				'url'     => shpigovsky_asset_uri( 'img/content/services/services-mental-health-03.webp' ),
-				'width'   => 905,
-				'height'  => 602,
-				'alt'     => '',
-				'caption' => 'Нарциссизм',
-			),
+		'kompyuternaya-zavisimost'      => array(
+			'asset'  => 'img/content/services/services-addictions-02.webp',
+			'width'  => 744,
+			'height' => 566,
+		),
+		'lechenie-opiumnoy-zavisimosti' => array(
+			'asset'  => 'img/content/services/services-addictions-03.webp',
+			'width'  => 748,
+			'height' => 716,
+		),
+		'hronicheskaya-ustalost'        => array(
+			'asset'  => 'img/content/services/services-mental-health-01.webp',
+			'width'  => 690,
+			'height' => 512,
+		),
+		'stress'                        => array(
+			'asset'  => 'img/content/services/services-mental-health-02.webp',
+			'width'  => 902,
+			'height' => 763,
+		),
+		'nartsissizm'                   => array(
+			'asset'  => 'img/content/services/services-mental-health-03.webp',
+			'width'  => 905,
+			'height' => 602,
 		),
 	);
-
-	return isset( $map[ $slug ] ) ? $map[ $slug ] : array();
 }
 
 /**
- * Marker icon label for a services hub group slug.
+ * Whether a service should appear in the /uslugi/ text list.
+ * Default true when meta is unset (legacy services).
+ *
+ * @param int $post_id Service post ID.
+ * @return bool
+ */
+function shpigovsky_service_show_in_text_list( $post_id ) {
+	$post_id = (int) $post_id;
+
+	if ( $post_id <= 0 ) {
+		return false;
+	}
+
+	if ( metadata_exists( 'post', $post_id, 'service_show_in_text_list' ) ) {
+		return (bool) (int) get_post_meta( $post_id, 'service_show_in_text_list', true );
+	}
+
+	return true;
+}
+
+/**
+ * Whether a service should appear in the /uslugi/ slider/gallery.
+ * Default false when meta is unset.
+ *
+ * @param int $post_id Service post ID.
+ * @return bool
+ */
+function shpigovsky_service_show_in_slider( $post_id ) {
+	$post_id = (int) $post_id;
+
+	if ( $post_id <= 0 ) {
+		return false;
+	}
+
+	if ( metadata_exists( 'post', $post_id, 'service_show_in_slider' ) ) {
+		return (bool) (int) get_post_meta( $post_id, 'service_show_in_slider', true );
+	}
+
+	return false;
+}
+
+/**
+ * Resolve slider/gallery image data for a service post.
+ *
+ * @param WP_Post $service Service post.
+ * @return array{url:string,width:int,height:int,alt:string,caption:string,permalink:string}|null
+ */
+function shpigovsky_build_services_hub_slider_card( $service ) {
+	if ( ! $service instanceof WP_Post ) {
+		return null;
+	}
+
+	$title = get_the_title( $service );
+	$url   = get_permalink( $service );
+	$url   = is_string( $url ) ? $url : '';
+	$title = is_string( $title ) ? trim( $title ) : '';
+
+	if ( '' === $title || '' === $url ) {
+		return null;
+	}
+
+	$image = function_exists( 'shpigovsky_get_service_image_or_placeholder' )
+		? shpigovsky_get_service_image_or_placeholder( (int) $service->ID )
+		: array();
+
+	if ( empty( $image['url'] ) ) {
+		return null;
+	}
+
+	return array(
+		'url'       => (string) $image['url'],
+		'width'     => isset( $image['width'] ) ? (int) $image['width'] : 0,
+		'height'    => isset( $image['height'] ) ? (int) $image['height'] : 0,
+		'alt'       => isset( $image['alt'] ) ? (string) $image['alt'] : $title,
+		'caption'   => $title,
+		'permalink' => $url,
+	);
+}
+
+/**
+ * Format automatic category marker from 1-based render index.
+ *
+ * @param int $index_one_based Render order index starting at 1.
+ * @return string
+ */
+function shpigovsky_format_services_hub_group_marker( $index_one_based ) {
+	$index_one_based = max( 1, (int) $index_one_based );
+	return sprintf( '%02d', $index_one_based );
+}
+
+/**
+ * Marker icon label for a services hub group slug (legacy fallback only).
  *
  * @param string $slug Parent service slug.
  * @return string
@@ -267,6 +372,54 @@ function shpigovsky_get_services_hub_group_icon( $slug ) {
 	);
 
 	return isset( $map[ $slug ] ) ? $map[ $slug ] : '01';
+}
+
+/**
+ * Direct child service links for inline wrap menu under a parent service card.
+ *
+ * @param int $parent_id Parent service post ID.
+ * @return array<int, array{title:string,url:string}>
+ */
+function shpigovsky_get_services_hub_child_links( $parent_id ) {
+	$parent_id = (int) $parent_id;
+
+	if ( $parent_id <= 0 || ! post_type_exists( 'service' ) ) {
+		return array();
+	}
+
+	$children = get_posts(
+		array(
+			'post_type'      => 'service',
+			'post_status'    => 'publish',
+			'post_parent'    => $parent_id,
+			'posts_per_page' => 40,
+			'orderby'        => 'menu_order',
+			'order'          => 'ASC',
+			'no_found_rows'  => true,
+		)
+	);
+
+	$links = array();
+
+	foreach ( $children as $child ) {
+		if ( ! $child instanceof WP_Post ) {
+			continue;
+		}
+
+		$title = get_the_title( $child );
+		$url   = get_permalink( $child );
+
+		if ( '' === $title || ! is_string( $url ) || '' === $url ) {
+			continue;
+		}
+
+		$links[] = array(
+			'title' => $title,
+			'url'   => $url,
+		);
+	}
+
+	return $links;
 }
 
 /**
@@ -387,6 +540,78 @@ function shpigovsky_resolve_service_mini_description_source( $post_id ) {
 }
 
 /**
+ * Resolve category-section intro for a root service on /uslugi/.
+ *
+ * Priority: service_short_description (Мини-описание) → V9 static intro → empty.
+ * V9-06E43-FIX01: category intro no longer hardcodes V9 as primary source.
+ *
+ * @param WP_Post     $parent Parent/root service post.
+ * @param array|null  $v9     Optional V9 group copy for $parent slug.
+ * @return string
+ */
+function shpigovsky_resolve_services_hub_category_intro( $parent, $v9 = null ) {
+	if ( ! $parent instanceof WP_Post ) {
+		return '';
+	}
+
+	$admin = shpigovsky_get_service_field( $parent->ID, 'service_short_description' );
+
+	if ( '' !== $admin ) {
+		return $admin;
+	}
+
+	if ( null === $v9 ) {
+		$v9 = shpigovsky_get_v9_services_hub_group_copy( $parent->post_name );
+	}
+
+	if ( null !== $v9 && isset( $v9['intro'] ) && '' !== trim( (string) $v9['intro'] ) ) {
+		return trim( (string) $v9['intro'] );
+	}
+
+	$hero_lead = shpigovsky_get_service_field( $parent->ID, 'hero_lead' );
+
+	return '' !== $hero_lead ? $hero_lead : '';
+}
+
+/**
+ * Resolve category-section lead for a root service on /uslugi/.
+ *
+ * Priority: service_category_section_lead → V9 static lead → intro_text/intro_note.
+ * V9-06E43-FIX01: editable admin field with V9/legacy fallback only when empty.
+ *
+ * @param WP_Post    $parent Parent/root service post.
+ * @param array|null $v9     Optional V9 group copy for $parent slug.
+ * @return string
+ */
+function shpigovsky_resolve_services_hub_category_lead( $parent, $v9 = null ) {
+	if ( ! $parent instanceof WP_Post ) {
+		return '';
+	}
+
+	$admin = shpigovsky_get_service_field( $parent->ID, 'service_category_section_lead' );
+
+	if ( '' !== $admin ) {
+		return $admin;
+	}
+
+	if ( null === $v9 ) {
+		$v9 = shpigovsky_get_v9_services_hub_group_copy( $parent->post_name );
+	}
+
+	if ( null !== $v9 && isset( $v9['lead'] ) && '' !== trim( (string) $v9['lead'] ) ) {
+		return trim( (string) $v9['lead'] );
+	}
+
+	$lead_secondary = shpigovsky_get_service_field( $parent->ID, 'intro_text' );
+
+	if ( '' === $lead_secondary ) {
+		$lead_secondary = shpigovsky_get_service_field( $parent->ID, 'intro_note' );
+	}
+
+	return $lead_secondary;
+}
+
+/**
  * Resolve service mini-description for services hub cards.
  *
  * Priority: ACF field → V9 static authority → DEMO fallback.
@@ -426,7 +651,7 @@ function shpigovsky_get_service_mini_description( $post_id ) {
  * Build child service card data from a service post.
  *
  * @param WP_Post $child Child service post.
- * @return array{title:string,url:string,text:string}|null
+ * @return array{title:string,url:string,text:string,slug:string,children:array<int,array{title:string,url:string}>}|null
  */
 function shpigovsky_build_services_hub_child_card( $child ) {
 	if ( ! $child instanceof WP_Post ) {
@@ -445,10 +670,11 @@ function shpigovsky_build_services_hub_child_card( $child ) {
 	$text = shpigovsky_get_service_mini_description( $child->ID );
 
 	return array(
-		'title' => $title,
-		'url'   => is_string( $url ) ? $url : '',
-		'text'  => $text,
-		'slug'  => $slug,
+		'title'    => $title,
+		'url'      => is_string( $url ) ? $url : '',
+		'text'     => $text,
+		'slug'     => $slug,
+		'children' => shpigovsky_get_services_hub_child_links( $child->ID ),
 	);
 }
 
@@ -488,7 +714,8 @@ function shpigovsky_get_services_hub_groups() {
 		return array();
 	}
 
-	$groups = array();
+	$groups       = array();
+	$marker_index = 0;
 
 	foreach ( $parents as $parent ) {
 		if ( ! $parent instanceof WP_Post ) {
@@ -500,21 +727,58 @@ function shpigovsky_get_services_hub_groups() {
 				'post_type'      => 'service',
 				'post_status'    => 'publish',
 				'post_parent'    => $parent->ID,
-				'posts_per_page' => 30,
+				'posts_per_page' => 40,
 				'orderby'        => 'menu_order',
 				'order'          => 'ASC',
 				'no_found_rows'  => true,
 			)
 		);
 
-		$cards = array();
+		$cards   = array();
+		$gallery = array();
 
 		foreach ( $children as $child ) {
-			$card = shpigovsky_build_services_hub_child_card( $child );
-
-			if ( null !== $card ) {
-				$cards[] = $card;
+			if ( ! $child instanceof WP_Post ) {
+				continue;
 			}
+
+			if ( shpigovsky_service_show_in_text_list( $child->ID ) ) {
+				$card = shpigovsky_build_services_hub_child_card( $child );
+
+				if ( null !== $card ) {
+					$cards[] = $card;
+				}
+			}
+
+			if ( shpigovsky_service_show_in_slider( $child->ID ) ) {
+				$slide = shpigovsky_build_services_hub_slider_card( $child );
+
+				if ( null !== $slide ) {
+					$gallery[] = $slide;
+				}
+			}
+		}
+
+		if ( empty( $cards ) ) {
+			if ( shpigovsky_service_show_in_text_list( $parent->ID ) ) {
+				$parent_card = shpigovsky_build_services_hub_child_card( $parent );
+
+				if ( null !== $parent_card ) {
+					$cards[] = $parent_card;
+				}
+			}
+		}
+
+		if ( empty( $gallery ) && shpigovsky_service_show_in_slider( $parent->ID ) ) {
+			$parent_slide = shpigovsky_build_services_hub_slider_card( $parent );
+
+			if ( null !== $parent_slide ) {
+				$gallery[] = $parent_slide;
+			}
+		}
+
+		if ( empty( $cards ) && empty( $gallery ) ) {
+			continue;
 		}
 
 		if ( empty( $cards ) ) {
@@ -532,35 +796,25 @@ function shpigovsky_get_services_hub_groups() {
 		$slug = $parent->post_name;
 		$v9   = shpigovsky_get_v9_services_hub_group_copy( $slug );
 
-		if ( null !== $v9 ) {
-			$lead_primary   = $v9['intro'];
-			$lead_secondary = $v9['lead'];
-			$group_title    = $v9['title'];
-		} else {
-			$lead_primary   = shpigovsky_get_service_field( $parent->ID, 'hero_lead' );
-			$lead_secondary = shpigovsky_get_service_field( $parent->ID, 'intro_text' );
-			$group_title    = get_the_title( $parent );
+		// V9-06E43-FIX01: category intro from mini-description; lead from dedicated field.
+		$lead_primary   = shpigovsky_resolve_services_hub_category_intro( $parent, $v9 );
+		$lead_secondary = shpigovsky_resolve_services_hub_category_lead( $parent, $v9 );
+		$group_title    = null !== $v9 && '' !== trim( (string) $v9['title'] )
+			? trim( (string) $v9['title'] )
+			: get_the_title( $parent );
 
-			if ( '' === $lead_secondary ) {
-				$lead_secondary = shpigovsky_get_service_field( $parent->ID, 'intro_note' );
-			}
-		}
+		++$marker_index;
 
-		$gallery = shpigovsky_get_services_hub_group_gallery( $slug );
-		$captions = shpigovsky_get_v9_services_hub_gallery_captions( $slug );
-
-		if ( ! empty( $captions ) ) {
-			foreach ( $gallery as $index => $image ) {
-				if ( isset( $captions[ $index ] ) ) {
-					$gallery[ $index ]['caption'] = $captions[ $index ];
-				}
-			}
+		$parent_url = get_permalink( $parent );
+		if ( ! is_string( $parent_url ) ) {
+			$parent_url = '';
 		}
 
 		$groups[] = array(
 			'parent_id'      => $parent->ID,
 			'title'          => $group_title,
 			'slug'           => $slug,
+			'url'            => $parent_url,
 			'lead_primary'   => $lead_primary,
 			'lead_secondary' => $lead_secondary,
 			'intro'          => $lead_primary,
@@ -568,7 +822,7 @@ function shpigovsky_get_services_hub_groups() {
 			'modifier_class' => shpigovsky_get_services_hub_group_modifier( $slug ),
 			'block_id'       => shpigovsky_get_services_hub_group_block_id( $slug ),
 			'section_id'     => shpigovsky_get_services_hub_group_block_id( $slug ) . '-heading',
-			'icon'           => shpigovsky_get_services_hub_group_icon( $slug ),
+			'icon'           => shpigovsky_format_services_hub_group_marker( $marker_index ),
 			'cta_source'     => 'services-' . sanitize_html_class( $slug ),
 			'children'       => $cards,
 			'gallery'        => $gallery,

@@ -1,0 +1,15 @@
+route,http,result,notes
+home,200,PASS,normalized_diff_bytes=26;likely_gallery_order_residual
+uslugi,200,PASS,whitespace_normalized_equal_to_before
+zavisimosti,200,PASS,whitespace_normalized_equal_to_before
+psihicheskoe,200,PASS,whitespace_normalized_equal_to_before
+rpp,200,PASS,whitespace_normalized_equal_to_before
+p74,200,PASS,accepted_base;alk_hits=24
+p314,200,PASS,no_alcohol_in_main;DEMO_seeded
+p78,200,PASS,no_alcohol_in_main;DEMO_seeded
+p81,200,PASS,no_alcohol_in_main;DEMO_seeded
+p85,200,PASS,no_alcohol_in_main;DEMO_seeded
+blog,200,PASS,
+specyalisty,200,PASS,
+o-centre,200,PASS,
+kontakty,200,PASS,

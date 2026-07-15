@@ -1,0 +1,10 @@
+order,frontend_block,admin_section,source_of_truth,editable_on_services_page,toggle_field,settings_fields,repeater,media_fields,notes
+1,services-inner-hero-v2,Hero / Слайды hero,Services hub ACF page #5,yes,services_hero_autoplay_enabled,services_hero_autoplay_delay; services_hero_arrows_enabled; services_hero_dots_enabled; hero_cta_label,services_hero_slides,services_hero_slides.image,Legacy hero_* hidden as fallback
+2,internal-page-nav,Навигация по разделам,Service CPT parents,no,services_hub_nav_visible,,,,"Automated notice + CPT link"
+3,services-category-section-v2,Каталог услуг по разделам,Service CPT + flags,partial,services_hub_catalog_visible,services_hub_query_mode; services_hub_show_placeholders; services_hub_category_gallery_dots_enabled,,,Cards/gallery automatic
+4,services-program-v2,Программа,Hub ACF copy + program pages,partial,services_hub_program_visible,services_hub_program_heading; lead; intro; cta_*,,,"Direction cards from program pages"
+5,founder-quote,Цитата основателя,Shared founder-quote partial,no,services_hub_founder_quote_visible,,,,Toggle only
+6,comfort,Комфорт,Reusable Comfort block,no,services_hub_comfort_visible,,,,Toggle only
+7,program-cta-band secondary,Второй CTA,Services hub ACF,yes,services_hub_secondary_cta_visible,services_hub_secondary_cta_title; subtitle; button,,,Seeded from V9
+8,faq,FAQ,Services hub ACF,yes,services_hub_faq_visible,services_hub_faq_heading,services_hub_faq_items,,Existing FAQ seeded
+9,final-form,Финальная форма,Reusable Final Form block,no,services_hub_final_form_visible,,,,Toggle only

@@ -1,0 +1,17 @@
+check,expected,actual,result,notes
+service_short_description_present,yes,yes,PASS,existing field retained
+service_category_section_lead_present,yes,yes,PASS,new field key field_fp02_service_category_section_lead
+service_layout_hero_field_count,13,13,PASS,was 12 before new lead field
+lead_conditional_on_subdivision,yes,yes,PASS,ACF conditional_logic layout==subdivision
+lead_label_ru,Текст под мини-описанием на странице «Услуги»,match,PASS,i18n shpigovsky-core
+lead_instructions_ru,Выводится в блоке категории…,match,PASS,i18n shpigovsky-core
+root_73_mini_seeded,yes,len368,PASS,
+root_73_lead_seeded,yes,len149,PASS,
+root_77_mini_seeded,yes,len358,PASS,
+root_77_lead_seeded,yes,len151,PASS,
+root_84_mini_seeded,yes,len236,PASS,
+root_84_lead_seeded,yes,len208,PASS,
+leaf_74_mini_intact,yes,len373,PASS,Алкогольная зависимость not broken
+leaf_lead_field_hidden_when_not_subdivision,yes,conditional,PASS,standard/alcohol_special leaves hide lead field
+acf_json_updated,yes,group_fp02_service_layout_hero.json,PASS,
+fieldgroups_php_updated,yes,FieldGroups.php,PASS,

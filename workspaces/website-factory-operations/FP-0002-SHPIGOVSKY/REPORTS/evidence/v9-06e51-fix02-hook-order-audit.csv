@@ -1,0 +1,9 @@
+hook,priority,function,field_or_context,reads,writes,issue,action
+acf/prepare_field/name=service_editor_role,20,ServiceLayoutGovernance::prepare_editor_role_field,service_editor_role,"post depth","choices/type/label (NOT name/key after FIX02)","Pre-FIX02 overwrote prepared acf[field] name → bare POST",fixed_stop_overwriting_name
+acf/prepare_field/name=service_layout_variant,20,ServiceLayoutGovernance::prepare_technical_layout_field,service_layout_variant,"effective role","hidden wrapper + aligned value","none for FIX02",kept
+acf/prepare_field/name=service_layout_override_enabled,20,hide_technical_ui_field,override,,"return false",none,kept
+acf/update_value/name=service_editor_role,20,sync_layout_when_role_updated,role→layout,"posted role",layout+override,"never fired when role not in $_POST[acf]",works_after_FIX02_name_fix
+acf/update_value/name=service_layout_variant,20,guard_layout_value_against_role,layout,"effective role","force mapped layout",none,kept
+acf/save_post,20,sync_layout_from_role_on_save,"service CPT","posted/effective role",apply_role_layout_sync,none,kept
+acf/load_field_groups,30,FieldGroups::filter_service_parity_groups_by_role,"parity groups","stored role","hide opposite groups","none for save",kept
+"frontend resolver",n/a,shpigovsky_resolve_service_layout_variant,theme,"role then layout",none,"none after FIX01 role-wins",kept

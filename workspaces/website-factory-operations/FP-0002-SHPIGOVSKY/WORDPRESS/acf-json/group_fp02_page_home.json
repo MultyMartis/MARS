@@ -1,88 +1,55 @@
 {
     "key": "group_fp02_page_home",
-    "title": "Page — Home",
+    "title": "Страница — Главная",
     "fields": [
         {
             "key": "field_fp02_hero_media_home",
-            "label": "Hero image",
+            "label": "Изображение hero (устарело)",
             "name": "hero_media",
             "aria-label": "",
-            "prefix": "acf",
             "type": "image",
-            "value": null,
-            "menu_order": 0,
-            "instructions": "Primary hero image. Overrides slide image when set. Empty falls back to Hero slides image, then theme asset.",
+            "instructions": "Устарело: используйте «Слайды hero». Поле скрыто в админке; значение сохранено как legacy fallback.",
             "required": 0,
-            "id": "",
-            "class": "",
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": "fp02-acf-legacy-retired",
                 "id": ""
             },
             "default_value": "",
             "placeholder": "",
             "return_format": "array",
-            "preview_size": "medium",
-            "_name": "hero_media",
-            "_valid": 1,
-            "library": "all",
-            "min_width": 0,
-            "min_height": 0,
-            "min_size": 0,
-            "max_width": 0,
-            "max_height": 0,
-            "max_size": 0,
-            "mime_types": "",
-            "uploader": "",
-            "acfe_thumbnail": 0,
-            "upload_folder": ""
+            "preview_size": "medium"
         },
         {
             "key": "field_fp02_hero_cta_label_home",
             "label": "Текст кнопки в hero-блоке",
             "name": "hero_cta_label",
             "aria-label": "",
-            "prefix": "acf",
             "type": "text",
-            "value": null,
-            "menu_order": 1,
-            "instructions": "Индивидуальный текст кнопки для hero-блока этой страницы/услуги. Если оставить пустым, используется текущий текст по умолчанию.",
+            "instructions": "Индивидуальный текст кнопки для hero-блока этой страницы. Если оставить пустым, используется текущий текст по умолчанию.",
             "required": 0,
-            "id": "",
-            "class": "",
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": "fp02-acf-section-title",
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "_name": "hero_cta_label",
-            "_valid": 1,
-            "maxlength": "",
-            "prepend": "",
-            "append": ""
+            "placeholder": ""
         },
         {
             "key": "field_fp02_home_hero_slides",
-            "label": "Hero slides",
+            "label": "Слайды hero",
             "name": "home_hero_slides",
             "aria-label": "",
-            "prefix": "acf",
             "type": "repeater",
-            "value": null,
-            "menu_order": 2,
-            "instructions": "Bounded repeater. Max rows are enforced in source and validation hooks.",
+            "instructions": "Слайды hero на главной. При двух и более слайдах включается слайдер. Ограниченный повторитель; максимум строк задан в исходнике и проверках.",
             "required": 0,
-            "id": "",
-            "class": "",
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": "fp02-acf-section-title",
                 "id": ""
             },
             "default_value": "",
@@ -91,55 +58,33 @@
             "button_label": "Добавить",
             "min": 0,
             "max": 5,
-            "_name": "home_hero_slides",
-            "_valid": 1,
             "sub_fields": [
                 {
-                    "ID": 0,
                     "key": "field_fp02_home_hero_title",
                     "label": "Заголовок",
                     "name": "title",
                     "aria-label": "",
-                    "prefix": "acf",
                     "type": "text",
-                    "value": null,
-                    "menu_order": 0,
                     "instructions": "",
                     "required": 0,
-                    "id": "",
-                    "class": "",
                     "conditional_logic": 0,
-                    "parent": "field_fp02_home_hero_slides",
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": "",
-                    "_name": "title",
-                    "_valid": 1,
-                    "maxlength": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_fp02_home_hero_slides"
+                    "placeholder": ""
                 },
                 {
-                    "ID": 0,
                     "key": "field_fp02_home_hero_text",
                     "label": "Текст",
                     "name": "text",
                     "aria-label": "",
-                    "prefix": "acf",
                     "type": "textarea",
-                    "value": null,
-                    "menu_order": 1,
                     "instructions": "",
                     "required": 0,
-                    "id": "",
-                    "class": "",
                     "conditional_logic": 0,
-                    "parent": "field_fp02_home_hero_slides",
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -147,30 +92,17 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "rows": 3,
-                    "_name": "text",
-                    "_valid": 1,
-                    "new_lines": "",
-                    "maxlength": "",
-                    "acfe_textarea_code": 0,
-                    "parent_repeater": "field_fp02_home_hero_slides"
+                    "rows": 3
                 },
                 {
-                    "ID": 0,
                     "key": "field_fp02_home_hero_image",
                     "label": "Изображение",
                     "name": "image",
                     "aria-label": "",
-                    "prefix": "acf",
                     "type": "image",
-                    "value": null,
-                    "menu_order": 2,
                     "instructions": "",
                     "required": 0,
-                    "id": "",
-                    "class": "",
                     "conditional_logic": 0,
-                    "parent": "field_fp02_home_hero_slides",
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -178,417 +110,109 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "return_format": "array",
-                    "_name": "image",
-                    "_valid": 1,
-                    "preview_size": "medium",
-                    "library": "all",
-                    "min_width": 0,
-                    "min_height": 0,
-                    "min_size": 0,
-                    "max_width": 0,
-                    "max_height": 0,
-                    "max_size": 0,
-                    "mime_types": "",
-                    "uploader": "",
-                    "acfe_thumbnail": 0,
-                    "upload_folder": "",
-                    "parent_repeater": "field_fp02_home_hero_slides"
+                    "return_format": "array"
                 }
-            ],
-            "rows_per_page": 20,
-            "collapsed": "",
-            "acfe_repeater_stylised_button": 0
+            ]
         },
         {
-            "key": "field_fp02_home_service_nav_items",
-            "label": "Настройки service navigation / accordion",
-            "name": "home_service_nav_items",
+            "key": "field_fp02_home_hero_autoplay_enabled",
+            "label": "Hero — автопрокрутка",
+            "name": "home_hero_autoplay_enabled",
             "aria-label": "",
-            "prefix": "acf",
-            "type": "repeater",
-            "value": null,
-            "menu_order": 3,
-            "instructions": "Bounded repeater. Max rows are enforced in source and validation hooks.",
-            "required": 0,
-            "id": "",
-            "class": "",
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "layout": "row",
-            "button_label": "Добавить",
-            "min": 0,
-            "max": 6,
-            "_name": "home_service_nav_items",
-            "_valid": 1,
-            "sub_fields": [
-                {
-                    "ID": 0,
-                    "key": "field_fp02_home_service_nav_title",
-                    "label": "Заголовок",
-                    "name": "title",
-                    "aria-label": "",
-                    "prefix": "acf",
-                    "type": "text",
-                    "value": null,
-                    "menu_order": 0,
-                    "instructions": "",
-                    "required": 0,
-                    "id": "",
-                    "class": "",
-                    "conditional_logic": 0,
-                    "parent": "field_fp02_home_service_nav_items",
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "_name": "title",
-                    "_valid": 1,
-                    "maxlength": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_fp02_home_service_nav_items"
-                },
-                {
-                    "ID": 0,
-                    "key": "field_fp02_home_service_nav_text",
-                    "label": "Текст",
-                    "name": "text",
-                    "aria-label": "",
-                    "prefix": "acf",
-                    "type": "textarea",
-                    "value": null,
-                    "menu_order": 1,
-                    "instructions": "",
-                    "required": 0,
-                    "id": "",
-                    "class": "",
-                    "conditional_logic": 0,
-                    "parent": "field_fp02_home_service_nav_items",
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "rows": 3,
-                    "_name": "text",
-                    "_valid": 1,
-                    "new_lines": "",
-                    "maxlength": "",
-                    "acfe_textarea_code": 0,
-                    "parent_repeater": "field_fp02_home_service_nav_items"
-                }
-            ],
-            "rows_per_page": 20,
-            "collapsed": "",
-            "acfe_repeater_stylised_button": 0
-        },
-        {
-            "key": "field_fp02_home_advantages",
-            "label": "Advantages / trust",
-            "name": "home_advantages",
-            "aria-label": "",
-            "prefix": "acf",
-            "type": "repeater",
-            "value": null,
-            "menu_order": 4,
-            "instructions": "Bounded repeater. Max rows are enforced in source and validation hooks.",
-            "required": 0,
-            "id": "",
-            "class": "",
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "layout": "row",
-            "button_label": "Добавить",
-            "min": 0,
-            "max": 8,
-            "_name": "home_advantages",
-            "_valid": 1,
-            "sub_fields": [
-                {
-                    "ID": 0,
-                    "key": "field_fp02_home_advantages_title",
-                    "label": "Заголовок",
-                    "name": "title",
-                    "aria-label": "",
-                    "prefix": "acf",
-                    "type": "text",
-                    "value": null,
-                    "menu_order": 0,
-                    "instructions": "",
-                    "required": 0,
-                    "id": "",
-                    "class": "",
-                    "conditional_logic": 0,
-                    "parent": "field_fp02_home_advantages",
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "_name": "title",
-                    "_valid": 1,
-                    "maxlength": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_fp02_home_advantages"
-                },
-                {
-                    "ID": 0,
-                    "key": "field_fp02_home_advantages_text",
-                    "label": "Текст",
-                    "name": "text",
-                    "aria-label": "",
-                    "prefix": "acf",
-                    "type": "textarea",
-                    "value": null,
-                    "menu_order": 1,
-                    "instructions": "",
-                    "required": 0,
-                    "id": "",
-                    "class": "",
-                    "conditional_logic": 0,
-                    "parent": "field_fp02_home_advantages",
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "rows": 3,
-                    "_name": "text",
-                    "_valid": 1,
-                    "new_lines": "",
-                    "maxlength": "",
-                    "acfe_textarea_code": 0,
-                    "parent_repeater": "field_fp02_home_advantages"
-                }
-            ],
-            "rows_per_page": 20,
-            "collapsed": "",
-            "acfe_repeater_stylised_button": 0
-        },
-        {
-            "key": "field_fp02_home_intro_bands",
-            "label": "Intro bands",
-            "name": "home_intro_bands",
-            "aria-label": "",
-            "prefix": "acf",
-            "type": "repeater",
-            "value": null,
-            "menu_order": 5,
-            "instructions": "Bounded repeater. Max rows are enforced in source and validation hooks.",
-            "required": 0,
-            "id": "",
-            "class": "",
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "layout": "row",
-            "button_label": "Добавить",
-            "min": 0,
-            "max": 6,
-            "_name": "home_intro_bands",
-            "_valid": 1,
-            "sub_fields": [
-                {
-                    "ID": 0,
-                    "key": "field_fp02_home_intro_bands_title",
-                    "label": "Заголовок",
-                    "name": "title",
-                    "aria-label": "",
-                    "prefix": "acf",
-                    "type": "text",
-                    "value": null,
-                    "menu_order": 0,
-                    "instructions": "",
-                    "required": 0,
-                    "id": "",
-                    "class": "",
-                    "conditional_logic": 0,
-                    "parent": "field_fp02_home_intro_bands",
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "_name": "title",
-                    "_valid": 1,
-                    "maxlength": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_fp02_home_intro_bands"
-                },
-                {
-                    "ID": 0,
-                    "key": "field_fp02_home_intro_bands_text",
-                    "label": "Текст",
-                    "name": "text",
-                    "aria-label": "",
-                    "prefix": "acf",
-                    "type": "textarea",
-                    "value": null,
-                    "menu_order": 1,
-                    "instructions": "",
-                    "required": 0,
-                    "id": "",
-                    "class": "",
-                    "conditional_logic": 0,
-                    "parent": "field_fp02_home_intro_bands",
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "rows": 3,
-                    "_name": "text",
-                    "_valid": 1,
-                    "new_lines": "",
-                    "maxlength": "",
-                    "acfe_textarea_code": 0,
-                    "parent_repeater": "field_fp02_home_intro_bands"
-                }
-            ],
-            "rows_per_page": 20,
-            "collapsed": "",
-            "acfe_repeater_stylised_button": 0
-        },
-        {
-            "key": "field_fp02_home_reviews_teaser",
-            "label": "Reviews teaser",
-            "name": "home_reviews_teaser",
-            "aria-label": "",
-            "prefix": "acf",
-            "type": "repeater",
-            "value": null,
-            "menu_order": 6,
-            "instructions": "Bounded repeater. Max rows are enforced in source and validation hooks.",
-            "required": 0,
-            "id": "",
-            "class": "",
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "layout": "row",
-            "button_label": "Добавить",
-            "min": 0,
-            "max": 6,
-            "_name": "home_reviews_teaser",
-            "_valid": 1,
-            "sub_fields": [
-                {
-                    "ID": 0,
-                    "key": "field_fp02_home_reviews_teaser_title",
-                    "label": "Заголовок",
-                    "name": "title",
-                    "aria-label": "",
-                    "prefix": "acf",
-                    "type": "text",
-                    "value": null,
-                    "menu_order": 0,
-                    "instructions": "",
-                    "required": 0,
-                    "id": "",
-                    "class": "",
-                    "conditional_logic": 0,
-                    "parent": "field_fp02_home_reviews_teaser",
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "_name": "title",
-                    "_valid": 1,
-                    "maxlength": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_fp02_home_reviews_teaser"
-                },
-                {
-                    "ID": 0,
-                    "key": "field_fp02_home_reviews_teaser_text",
-                    "label": "Текст",
-                    "name": "text",
-                    "aria-label": "",
-                    "prefix": "acf",
-                    "type": "textarea",
-                    "value": null,
-                    "menu_order": 1,
-                    "instructions": "",
-                    "required": 0,
-                    "id": "",
-                    "class": "",
-                    "conditional_logic": 0,
-                    "parent": "field_fp02_home_reviews_teaser",
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "rows": 3,
-                    "_name": "text",
-                    "_valid": 1,
-                    "new_lines": "",
-                    "maxlength": "",
-                    "acfe_textarea_code": 0,
-                    "parent_repeater": "field_fp02_home_reviews_teaser"
-                }
-            ],
-            "rows_per_page": 20,
-            "collapsed": "",
-            "acfe_repeater_stylised_button": 0
-        },
-        {
-            "key": "field_fp02_home_blog_teaser_enabled",
-            "label": "Blog teaser enabled",
-            "name": "home_blog_teaser_enabled",
-            "aria-label": "",
-            "prefix": "acf",
             "type": "true_false",
-            "value": null,
-            "menu_order": 7,
-            "instructions": "",
+            "instructions": "Автопрокрутка слайдов hero (только если слайдов больше одного).",
             "required": 0,
-            "id": "",
-            "class": "",
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_home_hero_autoplay_delay",
+            "label": "Hero — задержка автопрокрутки (мс)",
+            "name": "home_hero_autoplay_delay",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Пауза между слайдами в миллисекундах. По умолчанию 5000.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 5000,
+            "placeholder": "",
+            "min": 1000,
+            "max": 60000,
+            "step": 500
+        },
+        {
+            "key": "field_fp02_home_hero_arrows_enabled",
+            "label": "Hero — стрелки",
+            "name": "home_hero_arrows_enabled",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Показывать стрелки навигации (только если слайдов больше одного).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_home_hero_dots_enabled",
+            "label": "Hero — точки",
+            "name": "home_hero_dots_enabled",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Показывать точки пагинации (только если слайдов больше одного).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_home_recovery_intro_heading",
+            "label": "Введение о восстановлении — заголовок",
+            "name": "home_recovery_intro_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Заголовок блока «Шпиговский дом — восстановление…» на главной.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_home_recovery_intro_lead_1",
+            "label": "Введение о восстановлении — абзац 1",
+            "name": "home_recovery_intro_lead_1",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Первый абзац блока введения о восстановлении на главной.",
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -597,27 +221,52 @@
             },
             "default_value": "",
             "placeholder": "",
-            "_name": "home_blog_teaser_enabled",
-            "_valid": 1,
-            "message": "",
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": "",
-            "style": ""
+            "rows": 4
         },
         {
-            "key": "field_fp02_home_gallery_media",
-            "label": "Gallery / media bands",
-            "name": "home_gallery_media",
+            "key": "field_fp02_home_recovery_intro_lead_2",
+            "label": "Введение о восстановлении — абзац 2",
+            "name": "home_recovery_intro_lead_2",
             "aria-label": "",
-            "prefix": "acf",
-            "type": "repeater",
-            "value": null,
-            "menu_order": 8,
-            "instructions": "Bounded repeater. Max rows are enforced in source and validation hooks.",
+            "type": "textarea",
+            "instructions": "Второй абзац блока введения о восстановлении на главной.",
             "required": 0,
-            "id": "",
-            "class": "",
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 4
+        },
+        {
+            "key": "field_fp02_home_recovery_intro_benefits_enabled",
+            "label": "Список преимуществ — показывать",
+            "name": "home_recovery_intro_benefits_enabled",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Включить или скрыть список преимуществ в блоке введения о восстановлении.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_home_recovery_intro_benefits",
+            "label": "Список преимуществ",
+            "name": "home_recovery_intro_benefits",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Пункты списка преимуществ (ul.home-recovery-intro__benefits).",
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -630,55 +279,91 @@
             "button_label": "Добавить",
             "min": 0,
             "max": 12,
-            "_name": "home_gallery_media",
-            "_valid": 1,
             "sub_fields": [
                 {
-                    "ID": 0,
-                    "key": "field_fp02_home_gallery_item_title",
+                    "key": "field_fp02_home_recovery_intro_benefit_text",
+                    "label": "Текст пункта",
+                    "name": "text",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_fp02_home_recovery_intro_benefit_enabled",
+                    "label": "Показывать пункт",
+                    "name": "item_enabled",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 1,
+                    "placeholder": "",
+                    "ui": 1
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_home_intro_bands",
+            "label": "Карточки введения",
+            "name": "home_intro_bands",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Карточки в блоке введения о восстановлении. Ограниченный повторитель; максимум строк задан в исходнике и проверках.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "layout": "row",
+            "button_label": "Добавить",
+            "min": 0,
+            "max": 6,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_home_intro_bands_title",
                     "label": "Заголовок",
                     "name": "title",
                     "aria-label": "",
-                    "prefix": "acf",
                     "type": "text",
-                    "value": null,
-                    "menu_order": 0,
                     "instructions": "",
                     "required": 0,
-                    "id": "",
-                    "class": "",
                     "conditional_logic": 0,
-                    "parent": "field_fp02_home_gallery_media",
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": "",
-                    "_name": "title",
-                    "_valid": 1,
-                    "maxlength": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_fp02_home_gallery_media"
+                    "placeholder": ""
                 },
                 {
-                    "ID": 0,
-                    "key": "field_fp02_home_gallery_item_text",
+                    "key": "field_fp02_home_intro_bands_text",
                     "label": "Текст",
                     "name": "text",
                     "aria-label": "",
-                    "prefix": "acf",
                     "type": "textarea",
-                    "value": null,
-                    "menu_order": 1,
                     "instructions": "",
                     "required": 0,
-                    "id": "",
-                    "class": "",
                     "conditional_logic": 0,
-                    "parent": "field_fp02_home_gallery_media",
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -686,30 +371,1339 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "rows": 3,
-                    "_name": "text",
-                    "_valid": 1,
-                    "new_lines": "",
-                    "maxlength": "",
-                    "acfe_textarea_code": 0,
-                    "parent_repeater": "field_fp02_home_gallery_media"
-                },
+                    "rows": 3
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_home_founder_quote_source_notice",
+            "label": "Цитата основателя на главной",
+            "name": "home_founder_quote_source_notice",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "message": "Автоматический блок: цитата основателя берётся из «Настройки сайта → Цитата основателя». На главной отдельных полей контента нет — только показ\/скрытие."
+        },
+        {
+            "key": "field_fp02_home_founder_quote_visible",
+            "label": "Показывать цитату основателя",
+            "name": "home_founder_quote_visible",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Показать или скрыть блок цитаты основателя на главной. Контент блока не редактируется здесь.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_home_treatment_prevention_heading",
+            "label": "Лечение и профилактика — заголовок",
+            "name": "home_treatment_prevention_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Заголовок секции «Лечение и профилактика» на главной.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_home_treatment_prevention_lead",
+            "label": "Лечение и профилактика — описание",
+            "name": "home_treatment_prevention_lead",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Лид\/описание под заголовком секции «Лечение и профилактика».",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3
+        },
+        {
+            "key": "field_fp02_home_treatment_source_notice",
+            "label": "Лечение и профилактика — аккордеон",
+            "name": "home_treatment_source_notice",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "message": "Автоматический блок: аккордеон услуг формируется из иерархии CPT service. Редактируйте услуги в каталоге «Услуги». Заголовок и описание секции редактируются полями выше."
+        },
+        {
+            "key": "field_fp02_home_treatment_prevention_visible",
+            "label": "Показывать блок «Лечение и профилактика»",
+            "name": "home_treatment_prevention_visible",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Показать или скрыть весь блок на главной (включая аккордеон услуг).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_home_gallery_source_notice",
+            "label": "Галерея на главной",
+            "name": "home_gallery_source_notice",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "message": "Слайдер галереи строится из услуг (CPT service) с флагом «Показывать в слайдере на главной». Ниже — режим отображения. Ручной блок Gallery \/ media bands не используется."
+        },
+        {
+            "key": "field_fp02_home_gallery_visible",
+            "label": "Показывать галерею на главной",
+            "name": "home_gallery_visible",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Показать или скрыть слайдер галереи услуг на главной.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_home_gallery_display_mode",
+            "label": "Галерея — режим отображения",
+            "name": "home_gallery_display_mode",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Как выбирать услуги для слайдера на главной. Eligible = опубликованные услуги 1-го уровня с включённым флагом «Показывать в слайдере на главной».",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "default_value": "random",
+            "placeholder": "",
+            "choices": {
+                "all": "Показать все подходящие услуги",
+                "random": "Показать случайные N услуг",
+                "selected": "Показать только выбранные услуги"
+            },
+            "allow_null": 0,
+            "ui": 1,
+            "return_format": "value"
+        },
+        {
+            "key": "field_fp02_home_gallery_random_count",
+            "label": "Галерея — число случайных услуг",
+            "name": "home_gallery_random_count",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Сколько случайных eligible-услуг показывать (режим «случайные N»). По умолчанию 12.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_home_gallery_display_mode",
+                        "operator": "==",
+                        "value": "random"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 12,
+            "placeholder": "",
+            "min": 1,
+            "max": 48,
+            "step": 1
+        },
+        {
+            "key": "field_fp02_home_gallery_selected_services",
+            "label": "Галерея — выбранные услуги",
+            "name": "home_gallery_selected_services",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "Услуги для режима «только выбранные». Порядок выбора сохраняется. Если список пуст — fallback на случайные N. Учитываются только опубликованные eligible-услуги.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_home_gallery_display_mode",
+                        "operator": "==",
+                        "value": "selected"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "post_type": [
+                "service"
+            ],
+            "filters": [
+                "search"
+            ],
+            "return_format": "id",
+            "max": 48
+        },
+        {
+            "key": "field_fp02_home_why_us_heading",
+            "label": "Почему нас выбирают — заголовок",
+            "name": "home_why_us_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Заголовок блока «Почему нас выбирают» на главной.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_home_why_us_lead",
+            "label": "Почему нас выбирают — лид",
+            "name": "home_why_us_lead",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Лид блока «Почему нас выбирают».",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3
+        },
+        {
+            "key": "field_fp02_home_why_us_body_enabled",
+            "label": "Почему нас выбирают — абзацы показывать",
+            "name": "home_why_us_body_enabled",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Показать или скрыть абзацы тела блока.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_home_why_us_body",
+            "label": "Почему нас выбирают — абзацы",
+            "name": "home_why_us_body",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Абзацы .home-why-us__body.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "layout": "row",
+            "button_label": "Добавить",
+            "min": 0,
+            "max": 6,
+            "sub_fields": [
                 {
-                    "ID": 0,
-                    "key": "field_fp02_home_gallery_item_media",
-                    "label": "Медиа",
-                    "name": "media",
+                    "key": "field_fp02_home_why_us_body_text",
+                    "label": "Текст",
+                    "name": "text",
                     "aria-label": "",
-                    "prefix": "acf",
-                    "type": "image",
-                    "value": null,
-                    "menu_order": 2,
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
-                    "id": "",
-                    "class": "",
                     "conditional_logic": 0,
-                    "parent": "field_fp02_home_gallery_media",
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "rows": 3
+                },
+                {
+                    "key": "field_fp02_home_why_us_body_item_enabled",
+                    "label": "Показывать",
+                    "name": "item_enabled",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 1,
+                    "placeholder": "",
+                    "ui": 1
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_home_why_us_items_enabled",
+            "label": "Почему нас выбирают — список ссылок показывать",
+            "name": "home_why_us_items_enabled",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Показать или скрыть список ссылок в блоке.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_home_why_us_items",
+            "label": "Почему нас выбирают — ссылки",
+            "name": "home_why_us_items",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Ссылки-пункты списка в блоке «Почему нас выбирают».",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "layout": "row",
+            "button_label": "Добавить",
+            "min": 0,
+            "max": 12,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_home_why_us_item_title",
+                    "label": "Название",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_fp02_home_why_us_item_url",
+                    "label": "Ссылка",
+                    "name": "url",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_fp02_home_why_us_item_enabled",
+                    "label": "Показывать",
+                    "name": "item_enabled",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 1,
+                    "placeholder": "",
+                    "ui": 1
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_home_staff_photo_image",
+            "label": "Фото команды",
+            "name": "home_staff_photo_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Изображение блока «Команда центра». Выберите из медиабиблиотеки.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "return_format": "array",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_fp02_home_advantages",
+            "label": "Преимущества \/ доверие",
+            "name": "home_advantages",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Карточки преимуществ (feature grid) на главной. Ограниченный повторитель; максимум строк задан в исходнике и проверках.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "layout": "row",
+            "button_label": "Добавить",
+            "min": 0,
+            "max": 8,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_home_advantages_title",
+                    "label": "Заголовок",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_fp02_home_advantages_text",
+                    "label": "Текст",
+                    "name": "text",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "rows": 3
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_home_clinic_landscape_image",
+            "label": "Территория клиники — изображение",
+            "name": "home_clinic_landscape_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Изображение блока «Территория клиники». Выберите из медиабиблиотеки.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "return_format": "array",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_fp02_home_recovery_life_heading",
+            "label": "Как меняется жизнь — заголовок",
+            "name": "home_recovery_life_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Заголовок блока «Как меняется жизнь человека в процессе восстановления».",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_home_recovery_life_highlight",
+            "label": "Как меняется жизнь — акцент",
+            "name": "home_recovery_life_highlight",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Выделенный абзац (.home-recovery-life__highlight).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3
+        },
+        {
+            "key": "field_fp02_home_recovery_life_intro_enabled",
+            "label": "Как меняется жизнь — вводные абзацы показывать",
+            "name": "home_recovery_life_intro_enabled",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_home_recovery_life_intro",
+            "label": "Как меняется жизнь — вводные абзацы",
+            "name": "home_recovery_life_intro",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Bounded repeater. Max rows are enforced in source and validation hooks.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "layout": "row",
+            "button_label": "Добавить",
+            "min": 0,
+            "max": 6,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_home_recovery_life_intro_text",
+                    "label": "Текст",
+                    "name": "text",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "rows": 3
+                },
+                {
+                    "key": "field_fp02_home_recovery_life_intro_item_enabled",
+                    "label": "Показывать",
+                    "name": "item_enabled",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 1,
+                    "placeholder": "",
+                    "ui": 1
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_home_recovery_life_stages_enabled",
+            "label": "Как меняется жизнь — этапы показывать",
+            "name": "home_recovery_life_stages_enabled",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Показать или скрыть список этапов восстановления.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_home_recovery_life_stages",
+            "label": "Как меняется жизнь — этапы",
+            "name": "home_recovery_life_stages",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Этапы .home-recovery-life__stages.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "layout": "row",
+            "button_label": "Добавить",
+            "min": 0,
+            "max": 8,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_home_recovery_life_stage_label",
+                    "label": "Подпись месяца",
+                    "name": "stage_label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Красная подпись над карточкой этапа (например «1 месяц»). Если пусто — подставляется порядковый номер.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_fp02_home_recovery_life_stage_title",
+                    "label": "Заголовок этапа",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_fp02_home_recovery_life_stage_items",
+                    "label": "Пункты этапа (по одному в строке)",
+                    "name": "items_text",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Каждый пункт списка — отдельная строка.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "rows": 6
+                },
+                {
+                    "key": "field_fp02_home_recovery_life_stage_enabled",
+                    "label": "Показывать этап",
+                    "name": "item_enabled",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 1,
+                    "placeholder": "",
+                    "ui": 1
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_home_reviews_source_notice",
+            "label": "Отзывы на главной",
+            "name": "home_reviews_source_notice",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "message": "Автоматический блок: заголовок и список отзывов — «Настройки сайта \/ Отзывы». Home-мета home_reviews_heading — только fallback, в админке главной не показывается."
+        },
+        {
+            "key": "field_fp02_home_reviews_visible",
+            "label": "Показывать отзывы на главной",
+            "name": "home_reviews_visible",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Показать или скрыть блок отзывов на главной. Контент редактируется в «Отзывы».",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_home_rehab_requirements_source_notice",
+            "label": "Условия реабилитации на главной",
+            "name": "home_rehab_requirements_source_notice",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "message": "Автоматический блок: контент берётся из «Повторяемые блоки — Условия реабилитации». На главной — только показ\/скрытие."
+        },
+        {
+            "key": "field_fp02_home_rehab_requirements_visible",
+            "label": "Показывать блок условий реабилитации",
+            "name": "home_rehab_requirements_visible",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_home_rehab_program_source_notice",
+            "label": "Программа \/ направления на главной",
+            "name": "home_rehab_program_source_notice",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "message": "Автоматический блок: карточки направлений строятся <strong class=\"fp02-acf-notice-danger\">из страниц <a href=\"http:\/\/shpigovsky.test\/wp-admin\/post.php?post=13&#038;action=edit\">программы лечения<\/a><\/strong>. На главной редактируются заголовок, описания и показ\/скрытие блока.",
+            "esc_html": 0
+        },
+        {
+            "key": "field_fp02_home_rehabilitation_program_head",
+            "label": "Программа — заголовок",
+            "name": "home_rehabilitation_program_head",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Заголовок секции программы \/ направлений на главной (рядом со ссылкой «подробнее»).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_home_rehabilitation_program_lead",
+            "label": "Программа — описание",
+            "name": "home_rehabilitation_program_lead",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Короткое описание (лид) под заголовком секции.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_fp02_home_rehabilitation_program_intro_1",
+            "label": "Программа — вводный текст 1",
+            "name": "home_rehabilitation_program_intro_1",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Первый вводный абзац перед карточками направлений.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_fp02_home_rehabilitation_program_intro_2",
+            "label": "Программа — вводный текст 2",
+            "name": "home_rehabilitation_program_intro_2",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Второй вводный абзац перед карточками направлений.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
+            "key": "field_fp02_home_rehab_program_visible",
+            "label": "Показывать блок программы \/ направлений",
+            "name": "home_rehab_program_visible",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_home_genotyping_heading",
+            "label": "Генотипирование — заголовок",
+            "name": "home_genotyping_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Заголовок блока генотипирования на главной (не путать со страницей программы генотипирования).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_home_genotyping_link_text",
+            "label": "Генотипирование — текст ссылки",
+            "name": "home_genotyping_link_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Текст ссылки «подробнее» рядом с заголовком.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_home_genotyping_link_url",
+            "label": "Генотипирование — URL ссылки",
+            "name": "home_genotyping_link_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "URL ссылки «подробнее». Если пусто — используется текущий URL услуги.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_home_genotyping_lead",
+            "label": "Генотипирование — лид",
+            "name": "home_genotyping_lead",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3
+        },
+        {
+            "key": "field_fp02_home_genotyping_body_enabled",
+            "label": "Генотипирование — абзацы тела показывать",
+            "name": "home_genotyping_body_enabled",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_home_genotyping_body",
+            "label": "Генотипирование — абзацы тела",
+            "name": "home_genotyping_body",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Bounded repeater. Max rows are enforced in source and validation hooks.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "layout": "row",
+            "button_label": "Добавить",
+            "min": 0,
+            "max": 6,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_home_genotyping_body_text",
+                    "label": "Текст",
+                    "name": "text",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "rows": 4
+                },
+                {
+                    "key": "field_fp02_home_genotyping_body_item_enabled",
+                    "label": "Показывать",
+                    "name": "item_enabled",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 1,
+                    "placeholder": "",
+                    "ui": 1
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_home_genotyping_subheading",
+            "label": "Генотипирование — подзаголовок списка",
+            "name": "home_genotyping_subheading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_home_genotyping_list_intro",
+            "label": "Генотипирование — текст перед списком",
+            "name": "home_genotyping_list_intro",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 4
+        },
+        {
+            "key": "field_fp02_home_genotyping_items_enabled",
+            "label": "Генотипирование — список показывать",
+            "name": "home_genotyping_items_enabled",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_home_genotyping_items",
+            "label": "Генотипирование — пункты списка",
+            "name": "home_genotyping_items",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Bounded repeater. Max rows are enforced in source and validation hooks.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "layout": "row",
+            "button_label": "Добавить",
+            "min": 0,
+            "max": 12,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_home_genotyping_item_text",
+                    "label": "Текст пункта",
+                    "name": "text",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "rows": 2
+                },
+                {
+                    "key": "field_fp02_home_genotyping_item_enabled",
+                    "label": "Показывать",
+                    "name": "item_enabled",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 1,
+                    "placeholder": "",
+                    "ui": 1
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_home_genotyping_cta_label",
+            "label": "Генотипирование — текст кнопки",
+            "name": "home_genotyping_cta_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Текст кнопки записи на консультацию в блоке генотипирования.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_home_comfort_source_notice",
+            "label": "Комфорт на главной",
+            "name": "home_comfort_source_notice",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "message": "Автоматический блок: заголовок и лид блока «Комфорт» берутся из «Повторяемые блоки — Комфорт \/ преимущества». Home-мета home_comfort_* — только fallback, в админке главной не показываются."
+        },
+        {
+            "key": "field_fp02_home_comfort_visible",
+            "label": "Показывать блок «Комфорт»",
+            "name": "home_comfort_visible",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Показать или скрыть блок комфорта на главной.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_home_videos_heading",
+            "label": "Видео — заголовок",
+            "name": "home_videos_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Заголовок блока «Видео о нашем центре».",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_home_videos_items_enabled",
+            "label": "Видео — список показывать",
+            "name": "home_videos_items_enabled",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_home_videos_items",
+            "label": "Видео — элементы",
+            "name": "home_videos_items",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Видео из медиабиблиотеки WordPress. Сохраняется разметка fancybox\/ссылки текущего фронтенда.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "layout": "row",
+            "button_label": "Добавить",
+            "min": 0,
+            "max": 8,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_home_videos_item_title",
+                    "label": "Заголовок \/ подпись",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_fp02_home_videos_item_file",
+                    "label": "Видеофайл (медиабиблиотека)",
+                    "name": "video_file",
+                    "aria-label": "",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -718,40 +1712,162 @@
                     "default_value": "",
                     "placeholder": "",
                     "return_format": "array",
-                    "_name": "media",
-                    "_valid": 1,
-                    "preview_size": "medium",
                     "library": "all",
-                    "min_width": 0,
-                    "min_height": 0,
-                    "min_size": 0,
-                    "max_width": 0,
-                    "max_height": 0,
-                    "max_size": 0,
-                    "mime_types": "",
-                    "uploader": "",
-                    "acfe_thumbnail": 0,
-                    "upload_folder": "",
-                    "parent_repeater": "field_fp02_home_gallery_media"
+                    "mime_types": "mp4,webm,ogg"
+                },
+                {
+                    "key": "field_fp02_home_videos_item_poster",
+                    "label": "Постер",
+                    "name": "poster",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "return_format": "array",
+                    "preview_size": "medium"
+                },
+                {
+                    "key": "field_fp02_home_videos_item_enabled",
+                    "label": "Показывать",
+                    "name": "item_enabled",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 1,
+                    "placeholder": "",
+                    "ui": 1
                 }
-            ],
-            "rows_per_page": 20,
-            "collapsed": "",
-            "acfe_repeater_stylised_button": 0
+            ]
+        },
+        {
+            "key": "field_fp02_home_specialists_source_notice",
+            "label": "Специалисты на главной",
+            "name": "home_specialists_source_notice",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "message": "Автоматический блок: карточки специалистов берутся из дочерних страниц \/specyalisty\/. Заголовок секции редактируйте в «Повторяемые блоки — Специалисты». Поле home_specialists_heading на главной сохранено только как fallback и скрыто из админки."
+        },
+        {
+            "key": "field_fp02_home_specialists_visible",
+            "label": "Показывать специалистов на главной",
+            "name": "home_specialists_visible",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Показать или скрыть слайдер специалистов на главной.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_home_articles_heading",
+            "label": "Статьи — заголовок",
+            "name": "home_articles_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Заголовок блока «Статьи» на главной. Сами карточки — опубликованные записи блога.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_home_articles_source_notice",
+            "label": "Статьи на главной",
+            "name": "home_articles_source_notice",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "message": "Автоматический блок: слайдер статей на главной формируется из опубликованных записей (posts). Переключатель Blog teaser enabled снят — тема его не читает."
+        },
+        {
+            "key": "field_fp02_home_articles_visible",
+            "label": "Показывать статьи на главной",
+            "name": "home_articles_visible",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Показать или скрыть блок статей на главной.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_home_faq_heading",
+            "label": "Заголовок FAQ",
+            "name": "home_faq_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Заголовок секции FAQ на главной (например «Нас часто спрашивают»).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         },
         {
             "key": "field_fp02_home_faq_items",
-            "label": "FAQ",
+            "label": "Вопросы и ответы (FAQ)",
             "name": "home_faq_items",
             "aria-label": "",
-            "prefix": "acf",
             "type": "repeater",
-            "value": null,
-            "menu_order": 9,
-            "instructions": "Bounded repeater. Max rows are enforced in source and validation hooks.",
+            "instructions": "Вопросы и ответы на главной. Ограниченный повторитель; максимум строк задан в исходнике и проверках.",
             "required": 0,
-            "id": "",
-            "class": "",
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -764,55 +1880,33 @@
             "button_label": "Добавить",
             "min": 0,
             "max": 15,
-            "_name": "home_faq_items",
-            "_valid": 1,
             "sub_fields": [
                 {
-                    "ID": 0,
                     "key": "field_fp02_home_faq_question",
                     "label": "Вопрос",
                     "name": "question",
                     "aria-label": "",
-                    "prefix": "acf",
                     "type": "text",
-                    "value": null,
-                    "menu_order": 0,
                     "instructions": "",
                     "required": 0,
-                    "id": "",
-                    "class": "",
                     "conditional_logic": 0,
-                    "parent": "field_fp02_home_faq_items",
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": "",
-                    "_name": "question",
-                    "_valid": 1,
-                    "maxlength": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_fp02_home_faq_items"
+                    "placeholder": ""
                 },
                 {
-                    "ID": 0,
                     "key": "field_fp02_home_faq_answer",
                     "label": "Ответ",
                     "name": "answer",
                     "aria-label": "",
-                    "prefix": "acf",
                     "type": "textarea",
-                    "value": null,
-                    "menu_order": 1,
                     "instructions": "",
                     "required": 0,
-                    "id": "",
-                    "class": "",
                     "conditional_logic": 0,
-                    "parent": "field_fp02_home_faq_items",
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -820,32 +1914,18 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "rows": 4,
-                    "_name": "answer",
-                    "_valid": 1,
-                    "new_lines": "",
-                    "maxlength": "",
-                    "acfe_textarea_code": 0,
-                    "parent_repeater": "field_fp02_home_faq_items"
+                    "rows": 4
                 }
-            ],
-            "rows_per_page": 20,
-            "collapsed": "",
-            "acfe_repeater_stylised_button": 0
+            ]
         },
         {
             "key": "field_fp02_home_cta_title",
-            "label": "CTA title",
+            "label": "CTA \/ форма — заголовок (fallback)",
             "name": "home_cta_title",
             "aria-label": "",
-            "prefix": "acf",
             "type": "text",
-            "value": null,
-            "menu_order": 10,
-            "instructions": "",
+            "instructions": "Fallback-заголовок финальной формы на главной. Приоритет: «Повторяемые блоки — Финальная форма», затем это поле, затем статический текст темы.",
             "required": 0,
-            "id": "",
-            "class": "",
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -853,26 +1933,16 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "_name": "home_cta_title",
-            "_valid": 1,
-            "maxlength": "",
-            "prepend": "",
-            "append": ""
+            "placeholder": ""
         },
         {
             "key": "field_fp02_home_cta_text",
-            "label": "CTA text",
+            "label": "CTA \/ форма — текст (fallback)",
             "name": "home_cta_text",
             "aria-label": "",
-            "prefix": "acf",
             "type": "textarea",
-            "value": null,
-            "menu_order": 11,
-            "instructions": "",
+            "instructions": "Fallback-текст финальной формы на главной. Приоритет: «Повторяемые блоки — Финальная форма», затем это поле, затем статический текст темы.",
             "required": 0,
-            "id": "",
-            "class": "",
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -881,12 +1951,7 @@
             },
             "default_value": "",
             "placeholder": "",
-            "rows": 3,
-            "_name": "home_cta_text",
-            "_valid": 1,
-            "new_lines": "",
-            "maxlength": "",
-            "acfe_textarea_code": 0
+            "rows": 3
         }
     ],
     "location": [
@@ -906,12 +1971,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "FP-0002 V9-06C canonical source field group. Runtime registration occurs only after delivery authorization.",
-    "show_in_rest": 0,
-    "display_title": "",
-    "allow_ai_access": false,
-    "ai_description": "",
-    "local": "json",
-    "modified": 1783953600,
-    "local_file": "X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content/acf-json/group_fp02_page_home.json",
-    "_valid": true
+    "show_in_rest": 0
 }

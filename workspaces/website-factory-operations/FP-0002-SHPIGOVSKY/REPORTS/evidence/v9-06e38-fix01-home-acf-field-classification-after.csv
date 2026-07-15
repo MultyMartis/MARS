@@ -1,0 +1,31 @@
+field_name,before_classification,after_classification,action,admin_visible,render_source,notes
+hero_media,LIVE_FRONTEND_EDITABLE,LIVE_FRONTEND_EDITABLE,keep,yes,hero.php / hero-helpers,unchanged
+hero_cta_label,LIVE_FRONTEND_EDITABLE,LIVE_FRONTEND_EDITABLE,keep,yes,hero CTA,unchanged
+home_hero_slides,LIVE_FRONTEND_EDITABLE,LIVE_FRONTEND_EDITABLE,keep,yes,hero.php,unchanged
+home_advantages,LIVE_FRONTEND_EDITABLE,LIVE_FRONTEND_EDITABLE,keep,yes,feature-grid.php,unchanged
+home_intro_bands,LIVE_FRONTEND_EDITABLE,LIVE_FRONTEND_EDITABLE,keep,yes,recovery-intro.php cards,unchanged
+home_gallery_media,DEAD_LEGACY,DEAD_LEGACY,already_removed_e38,no,gallery.php uses service CPT,meta retained; DB field posts trashed E38
+home_gallery_source_notice,AUTOMATED_NO_ADMIN_FIELD_NEEDED,AUTOMATED_NO_ADMIN_FIELD_NEEDED,keep_message,yes (message),informational only,E38 notice retained
+home_reviews_teaser,DEAD_LEGACY,DEAD_LEGACY,already_removed_e38,no,reviews from options,meta retained
+home_blog_teaser_enabled,DEAD_LEGACY,DEAD_LEGACY_CONFIRMED,retired_from_admin,no,no theme read confirmed,meta value left intact (was 1); removed from FieldGroups.php + ACF JSON; DB field posts trashed
+home_faq_items,LIVE_FRONTEND_EDITABLE,LIVE_FRONTEND_EDITABLE,keep,yes,faq.php,unchanged
+home_cta_title,LIVE_FRONTEND_EDITABLE,LIVE_FRONTEND_EDITABLE,keep,yes,reusable-blocks-helpers,unchanged
+home_cta_text,LIVE_FRONTEND_EDITABLE,LIVE_FRONTEND_EDITABLE,keep,yes,reusable-blocks-helpers,unchanged
+home_faq_heading,LIVE_FRONTEND_EDITABLE (orphan),LIVE_FRONTEND_EDITABLE,re_registered,yes,faq.php,added to Page — Home FAQ section; meta preserved
+home_recovery_intro_heading,LIVE_FRONTEND_EDITABLE (orphan),LIVE_FRONTEND_EDITABLE,re_registered,yes,recovery-intro.php,added to Recovery intro section; meta preserved
+home_recovery_intro_lead_1,LIVE_FRONTEND_EDITABLE (orphan),LIVE_FRONTEND_EDITABLE,re_registered,yes,recovery-intro.php,added; meta preserved
+home_recovery_intro_lead_2,LIVE_FRONTEND_EDITABLE (orphan),LIVE_FRONTEND_EDITABLE,re_registered,yes,recovery-intro.php,added; meta preserved
+home_articles_heading,LIVE_FRONTEND_EDITABLE (orphan),LIVE_FRONTEND_EDITABLE,re_registered,yes,articles-teaser.php,cards still from WP posts; heading editable; meta preserved
+home_specialists_heading,LIVE_BUT_SHOULD_BE_AUTOMATED,FALLBACK_AFTER_BLOCK_OPTIONS,keep_meta_hidden_add_notice,no,reusable-blocks-helpers (after specialists_section_heading options),SoT = fp02-block-specialists options; Home meta fallback only; notice added
+home_comfort_heading,UNCLEAR_REVIEW,FALLBACK_AFTER_BLOCK_OPTIONS,keep_meta_hidden_add_notice,no,reusable-blocks-helpers (after comfort_heading options),SoT = fp02-block-comfort; notice added
+home_comfort_lead,UNCLEAR_REVIEW,FALLBACK_AFTER_BLOCK_OPTIONS,keep_meta_hidden_add_notice,no,reusable-blocks-helpers (after comfort_lead options),SoT = fp02-block-comfort; notice added
+home_reviews_heading,LIVE_FRONTEND_EDITABLE (orphan),FALLBACK_AFTER_OPTIONS,keep_meta_hidden_add_notice,no,reviews-helpers (after reviews_section_heading options),SoT = Site Options Reviews; notice added
+home_service_nav_items,AUTOMATED_NO_ADMIN_FIELD_NEEDED,AUTOMATED_NO_ADMIN_FIELD_NEEDED,already_trashed_e32,no,accordion from service CPT,unchanged
+home_specialists_source_notice,(new),AUTOMATED_NO_ADMIN_FIELD_NEEDED,message_notice_added,yes (message),informational only,FIX01
+home_articles_source_notice,(new),AUTOMATED_NO_ADMIN_FIELD_NEEDED,message_notice_added,yes (message),informational only,FIX01
+home_comfort_source_notice,(new),AUTOMATED_NO_ADMIN_FIELD_NEEDED,message_notice_added,yes (message),informational only,FIX01
+home_reviews_source_notice,(new),AUTOMATED_NO_ADMIN_FIELD_NEEDED,message_notice_added,yes (message),informational only,FIX01
+group_fp02_page_home_db_114,DUPLICATE_STALE_DB,TRASHED,trash_duplicate_group,n/a,n/a,kept meta; trashed group+fields
+group_fp02_page_home_db_483,DUPLICATE_STALE_DB,TRASHED,trash_duplicate_group,n/a,n/a,kept meta; trashed group+fields
+group_fp02_page_home_db_581,DUPLICATE_STALE_DB,TRASHED,trash_duplicate_group,n/a,n/a,kept meta; trashed group+fields
+group_fp02_page_home_db_639,CANONICAL_DB_KEEP,CANONICAL_DB_KEEP,keep_single_db_group,yes (with local JSON/PHP overlay),n/a,single publish DB Home group after cleanup

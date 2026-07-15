@@ -2,8 +2,7 @@
 /**
  * Template part: home/videos.php
  *
- * D9-D: static V9 visual authority with theme asset fallbacks.
- * Future ACF wiring: D9-E wave.
+ * V9-06E40: Media Library video/poster fields with theme asset fallback.
  *
  * @package Shpigovsky
  */
@@ -12,30 +11,54 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$heading = shpigovsky_home_text_or_fallback(
+	'home_videos_heading',
+	'Видео о&nbsp;нашем центре'
+);
+$videos = shpigovsky_get_home_videos_items();
+
+if ( empty( $videos ) ) {
+	return;
+}
+
 ?>
 <section data-reveal class="home-videos" aria-labelledby="home-videos-heading">
   <div class="container">
-    <h2 class="home-videos__heading" id="home-videos-heading">Видео о&nbsp;нашем центре</h2>
+    <h2 class="home-videos__heading" id="home-videos-heading"><?php echo wp_kses_post( $heading ); ?></h2>
 
     <div class="home-videos__grid">
+      <?php foreach ( $videos as $video ) : ?>
+        <?php
+			$title      = isset( $video['title'] ) ? (string) $video['title'] : '';
+			$video_url  = isset( $video['video_url'] ) ? (string) $video['video_url'] : '';
+			$poster_url = isset( $video['poster_url'] ) ? (string) $video['poster_url'] : '';
+			$width      = isset( $video['width'] ) ? (int) $video['width'] : 1280;
+			$height     = isset( $video['height'] ) ? (int) $video['height'] : 720;
+			if ( '' === $video_url ) {
+				continue;
+			}
+			$plain_title = wp_strip_all_tags( html_entity_decode( $title, ENT_QUOTES | ENT_HTML5, 'UTF-8' ) );
+			?>
       <figure class="home-videos__card">
         <a
           class="home-videos__link"
-          href="<?php echo esc_url( shpigovsky_asset_uri( 'video/sergey-shpigovsky-interview.mp4' ) ); ?>"
+          href="<?php echo esc_url( $video_url ); ?>"
           data-fancybox="home-videos"
           data-home-video
-          data-video-title="Интервью с&nbsp;Сергеем Шпиговским"
-          aria-label="Смотреть видео: интервью с&nbsp;Сергеем Шпиговским"
+          data-video-title="<?php echo esc_attr( $title ); ?>"
+          aria-label="<?php echo esc_attr( sprintf( 'Смотреть видео: %s', $plain_title ) ); ?>"
         >
+          <?php if ( '' !== $poster_url ) : ?>
           <img
             class="home-videos__preview-image"
-            src="<?php echo esc_url( shpigovsky_asset_uri( 'img/content/videos/sergey-shpigovsky-interview-poster.webp' ) ); ?>"
-            width="1280"
-            height="720"
-            alt="Превью видео: интервью с&nbsp;Сергеем Шпиговским"
+            src="<?php echo esc_url( $poster_url ); ?>"
+            width="<?php echo esc_attr( (string) $width ); ?>"
+            height="<?php echo esc_attr( (string) $height ); ?>"
+            alt="<?php echo esc_attr( sprintf( 'Превью видео: %s', $plain_title ) ); ?>"
             loading="lazy"
             decoding="async"
           >
+          <?php endif; ?>
           <span class="home-videos__play" aria-hidden="true">
             <span class="home-videos__play-button">
               <span class="home-videos__play-icon"><i class="fas fa-play"></i></span>
@@ -43,32 +66,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           </span>
         </a>
       </figure>
-
-      <figure class="home-videos__card">
-        <a
-          class="home-videos__link"
-          href="<?php echo esc_url( shpigovsky_asset_uri( 'video/shpigovsky-center.mp4' ) ); ?>"
-          data-fancybox="home-videos"
-          data-home-video
-          data-video-title="Центр профилактики зависимостей Сергея Шпиговского"
-          aria-label="Смотреть видео: центр профилактики зависимостей Сергея Шпиговского"
-        >
-          <img
-            class="home-videos__preview-image"
-            src="<?php echo esc_url( shpigovsky_asset_uri( 'img/content/videos/shpigovsky-center-poster.webp' ) ); ?>"
-            width="1920"
-            height="1080"
-            alt="Превью видео: центр профилактики зависимостей Сергея Шпиговского"
-            loading="lazy"
-            decoding="async"
-          >
-          <span class="home-videos__play" aria-hidden="true">
-            <span class="home-videos__play-button">
-              <span class="home-videos__play-icon"><i class="fas fa-play"></i></span>
-            </span>
-          </span>
-        </a>
-      </figure>
+      <?php endforeach; ?>
     </div>
   </div>
 </section>

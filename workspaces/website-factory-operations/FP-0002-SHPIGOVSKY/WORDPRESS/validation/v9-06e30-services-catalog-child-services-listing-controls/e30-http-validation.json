@@ -1,0 +1,149 @@
+{
+    "routes": [
+        {
+            "route": "/",
+            "http": 200,
+            "fatal": false,
+            "err": ""
+        },
+        {
+            "route": "/uslugi/",
+            "http": 200,
+            "fatal": false,
+            "err": ""
+        },
+        {
+            "route": "/uslugi/zavisimosti/",
+            "http": 200,
+            "fatal": false,
+            "err": ""
+        },
+        {
+            "route": "/uslugi/psihicheskoe-zdorovie/",
+            "http": 200,
+            "fatal": false,
+            "err": ""
+        },
+        {
+            "route": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+            "http": 200,
+            "fatal": false,
+            "err": ""
+        },
+        {
+            "route": "/uslugi/genotipirovanie/",
+            "http": 200,
+            "fatal": false,
+            "err": ""
+        },
+        {
+            "route": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+            "http": 200,
+            "fatal": false,
+            "err": ""
+        },
+        {
+            "route": "/uslugi/zavisimosti/lechenie-internet-zavisimosti/",
+            "http": 200,
+            "fatal": false,
+            "err": ""
+        },
+        {
+            "route": "/uslugi/zavisimosti/kompyuternaya-zavisimost/",
+            "http": 200,
+            "fatal": false,
+            "err": ""
+        },
+        {
+            "route": "/uslugi/zavisimosti/lechenie-opiumnoy-zavisimosti/",
+            "http": 200,
+            "fatal": false,
+            "err": ""
+        },
+        {
+            "route": "/uslugi/psihicheskoe-zdorovie/hronicheskaya-ustalost/",
+            "http": 200,
+            "fatal": false,
+            "err": ""
+        },
+        {
+            "route": "/uslugi/psihicheskoe-zdorovie/stress/",
+            "http": 200,
+            "fatal": false,
+            "err": ""
+        },
+        {
+            "route": "/uslugi/psihicheskoe-zdorovie/nartsissizm/",
+            "http": 200,
+            "fatal": false,
+            "err": ""
+        },
+        {
+            "route": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/geroin/",
+            "http": 200,
+            "fatal": false,
+            "err": ""
+        },
+        {
+            "route": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/matadon/",
+            "http": 200,
+            "fatal": false,
+            "err": ""
+        },
+        {
+            "route": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/soli/",
+            "http": 200,
+            "fatal": false,
+            "err": ""
+        },
+        {
+            "route": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lekarstva/",
+            "http": 200,
+            "fatal": false,
+            "err": ""
+        },
+        {
+            "route": "/o-centre/",
+            "http": 200,
+            "fatal": false,
+            "err": ""
+        },
+        {
+            "route": "/blog/",
+            "http": 200,
+            "fatal": false,
+            "err": ""
+        },
+        {
+            "route": "/kontakty/",
+            "http": 200,
+            "fatal": false,
+            "err": ""
+        }
+    ],
+    "dom": {
+        "markers": [
+            "01",
+            "02",
+            "03",
+            "04"
+        ],
+        "section_order": [
+            "services-category-addictions",
+            "services-category-addictions-heading",
+            "services-category-mental-health",
+            "services-category-mental-health-heading",
+            "services-category-eating-disorders",
+            "services-category-eating-disorders-heading",
+            "services-category-genotyping",
+            "services-category-genotyping-heading"
+        ],
+        "name_links": 14,
+        "child_menu_present": true,
+        "gallery_links": 6,
+        "genotyping_last": false,
+        "has_geroin_link": true,
+        "has_internet_gallery": true,
+        "has_ustalost_gallery": true
+    }
+}

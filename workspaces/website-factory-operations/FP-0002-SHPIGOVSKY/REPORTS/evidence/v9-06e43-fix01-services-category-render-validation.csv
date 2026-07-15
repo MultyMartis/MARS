@@ -1,0 +1,18 @@
+check,expected,actual,result,notes
+uslugi_http,200,200,PASS,
+intro_count,3,3,PASS,
+lead_count,3,3,PASS,
+intro_0_visual_match_before,identical,identical_len368,PASS,before/after HTML text match
+intro_1_visual_match_before,identical,identical_len358,PASS,
+intro_2_visual_match_before,identical,identical_len236,PASS,
+lead_0_visual_match_before,identical,identical_len149,PASS,
+lead_1_visual_match_before,identical,identical_len151,PASS,
+lead_2_visual_match_before,identical,identical_len208,PASS,
+intro_from_service_short_description,yes,yes_all_3_roots,PASS,shpigovsky_get_services_hub_groups probe
+lead_from_service_category_section_lead,yes,yes_all_3_roots,PASS,shpigovsky_get_services_hub_groups probe
+heading_links,>=3,3,PASS,E38 category heading links
+marker_links,>=3,3,PASS,
+category_galleries,present,2,PASS,data-services-category-gallery
+no_new_debug_markers,yes,no_new_markers,PASS,existing leaf DEMO lorem retained elsewhere
+home_acf_fields_unchanged,74,74,PASS,group_fp02_page_home
+operator_css_untouched_vs_prebackup,yes,hash_match,PASS,v9-style.css runtime==backup

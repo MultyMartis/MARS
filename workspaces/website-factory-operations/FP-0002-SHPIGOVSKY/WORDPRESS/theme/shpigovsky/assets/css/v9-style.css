@@ -19743,6 +19743,111 @@ body.is-modal-scroll-locked {
   flex: 0 0 auto;
 }
 
+/* V9-06E41 — Home hero slider */
+.hero--home .hero__slider,
+.hero--home .hero__slides,
+.hero--home .hero__slide {
+  height: 100%;
+  position: relative;
+}
+
+.hero--home-slider .hero__slider,
+.hero--home-slider .hero__slides,
+.hero--home-slider .hero__slide {
+  height: 100%;
+}
+
+.hero--home-slider .hero__slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-main);
+}
+
+.hero--home-slider .hero__slide {
+  position: relative;
+  height: 100%;
+}
+
+.hero--home-slider .hero__media {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* V9-06E41-FIX01 — multi-slide Swiper must fill .hero--home (70vh), not text height.
+   Absolute .hero__media does not contribute to flow; force wrapper/slide stretch. */
+.hero--home-slider .hero__slider.swiper,
+.hero--home-slider .swiper-wrapper,
+.hero--home-slider .hero__slides.swiper-wrapper,
+.hero--home-slider .hero__slide.swiper-slide {
+  height: 100% !important;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+.hero--home-slider .hero__content {
+  height: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  padding-top: clamp(24px, 4vh, 48px);
+  padding-bottom: clamp(24px, 4vh, 48px);
+}
+
+.hero__nav {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.75);
+  color: var(--color-text-primary);
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.hero__nav--prev {
+  left: 18px;
+}
+
+.hero__nav--next {
+  right: 18px;
+}
+
+.hero__nav:hover,
+.hero__nav:focus-visible {
+  background: #fff;
+}
+
+.hero__pagination {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 18px;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.hero__pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  margin: 0 !important;
+  background: rgba(255, 255, 255, 0.55);
+  opacity: 1;
+}
+
+.hero__pagination .swiper-pagination-bullet-active {
+  background: var(--color-accent);
+}
+
 /* ==========================================================================
    10. Home recovery intro (Section 01)
    ========================================================================== */
@@ -20124,6 +20229,14 @@ body.is-modal-scroll-locked {
   padding: 0;
 }
 
+.home-treatment-prevention__service-list > .home-treatment-prevention__service-list-item {
+  margin-bottom: 10px;
+}
+
+.home-treatment-prevention__service-list.home-treatment-prevention__service-list--children > .home-treatment-prevention__service-list-item {
+  margin-bottom: 0px;
+}
+
 .home-treatment-prevention__service-item {
   display: grid;
   grid-template-columns: auto 1fr auto;
@@ -20144,6 +20257,10 @@ body.is-modal-scroll-locked {
   font-weight: 300;
   text-transform: uppercase;
   color: var(--color-text-secondary);
+}
+
+.home-treatment-prevention__service-list--children .home-treatment-prevention__service-name {
+  text-transform: none;
 }
 
 .home-treatment-prevention__service-item:hover .home-treatment-prevention__service-name,
@@ -20200,6 +20317,25 @@ body.is-modal-scroll-locked {
   margin: var(--pad-gap-line) 0 0;
   padding: 0 var(--pad-gap-line);
   font-weight: var(--font-weight-heading);
+}
+
+/* V9-06E32: Home gallery service link slides + nested accordion children */
+.home-gallery__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.home-gallery__link:hover .home-gallery__caption,
+.home-gallery__link:focus-visible .home-gallery__caption {
+  color: var(--color-accent);
+}
+
+.home-treatment-prevention__service-list--children {
+  margin-top: var(--pad-gap-line);
+  padding-left: var(--pad-gap);
 }
 
 /* ==========================================================================
@@ -20394,6 +20530,25 @@ body.is-modal-scroll-locked {
 .home-recovery-life__stage {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  box-sizing: border-box;
+  height: auto;
+  width: 100%;
+  min-width: 0;
+}
+
+.home-recovery-life__stage-label {
+  margin: 0;
+  padding: 0 4px;
+  color: var(--color-accent);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.home-recovery-life__stage-inner {
+  display: flex;
+  flex-direction: column;
   gap: var(--pad-gap-line);
   box-sizing: border-box;
   padding: 41px 30px 30px;
@@ -20403,6 +20558,7 @@ body.is-modal-scroll-locked {
   justify-content: flex-end;
   height: auto;
   width: 100%;
+  min-width: 0;
 }
 
 .home-recovery-life__stage-title {
@@ -20559,7 +20715,8 @@ body.is-modal-scroll-locked {
 
 .reviews__pagination,
 .home-gallery__pagination,
-.specialists__pagination {
+.specialists__pagination,
+.home-articles__pagination {
   position: static;
   display: flex;
   justify-content: center;
@@ -20569,7 +20726,8 @@ body.is-modal-scroll-locked {
 
 .reviews__pagination .swiper-pagination-bullet,
 .home-gallery__pagination .swiper-pagination-bullet,
-.specialists__pagination .swiper-pagination-bullet {
+.specialists__pagination .swiper-pagination-bullet,
+.home-articles__pagination .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   margin: 0;
@@ -20581,7 +20739,8 @@ body.is-modal-scroll-locked {
 
 .reviews__pagination .swiper-pagination-bullet-active,
 .home-gallery__pagination .swiper-pagination-bullet-active,
-.specialists__pagination .swiper-pagination-bullet-active {
+.specialists__pagination .swiper-pagination-bullet-active,
+.home-articles__pagination .swiper-pagination-bullet-active {
   background-color: var(--color-text-primary);
 }
 
@@ -20935,6 +21094,52 @@ body.is-modal-scroll-locked {
   color: var(--color-text-secondary);
 }
 
+.home-rehabilitation-program__direction-image-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.home-rehabilitation-program__direction-title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.home-rehabilitation-program__direction-title-link:hover,
+.home-rehabilitation-program__direction-title-link:focus-visible {
+  text-decoration: underline;
+}
+
+.home-rehabilitation-program__direction-more {
+  display: inline-block;
+  margin-top: var(--pad-gap-line);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: var(--font-weight-heading);
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+.home-rehabilitation-program__direction-more:hover,
+.home-rehabilitation-program__direction-more:focus-visible {
+  text-decoration: underline;
+}
+
+.services-program-v2__item-title-link,
+.services-program-v2__item-image-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.services-program-v2__item-image-link {
+  display: block;
+}
+
+.services-program-v2__item-title-link:hover,
+.services-program-v2__item-title-link:focus-visible {
+  text-decoration: underline;
+}
+
 .home-genotyping__subheading {
   margin: 0 0 var(--pad-gap);
   font-size: var(--font-size-large);
@@ -21128,14 +21333,17 @@ body.is-modal-scroll-locked {
   text-align: center;
 }
 
-.home-articles__grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--pad-gap-line);
+.home-articles__slider {
+  overflow: hidden;
+}
+
+.home-articles__wrapper {
+  display: flex;
 }
 
 .home-articles__card {
   min-width: 0;
+  height: auto;
 }
 
 .home-articles__card-link {
@@ -21154,6 +21362,7 @@ body.is-modal-scroll-locked {
   object-fit: cover;
   object-position: center;
   border-radius: var(--radius-main);
+  background-color: #edf4f0;
 }
 
 .home-articles__title {
@@ -22300,6 +22509,18 @@ body[data-offcanvas-state=open] {
   .founder-quote--variant-b .founder-quote__photo {
     max-height: 480px;
   }
+  .home-recovery-life::before {
+    background-size: 70% auto;
+    background-position: right 4% bottom 8%;
+    opacity: 0.28;
+  }
+  .home-recovery-life__stages {
+    gap: var(--pad-gap-line);
+  }
+  .home-recovery-life__stage-inner {
+    padding: 32px 22px 24px;
+    min-width: 0;
+  }
 }
 @media (max-width: 1190px) {
   .site-header__top {
@@ -22394,6 +22615,24 @@ body[data-offcanvas-state=open] {
   .home-recovery-intro__card-grid {
     grid-template-columns: minmax(0, 1fr);
   }
+  .home-recovery-life::before {
+    background-size: 85% auto;
+    background-position: right -8% bottom 2%;
+    opacity: 0.22;
+  }
+  .home-recovery-life__stages {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: var(--pad-gap);
+  }
+  .home-recovery-life__stage {
+    width: 100%;
+  }
+  .home-recovery-life__stage-inner {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 28px 22px 22px;
+  }
   .founder-quote--variant-b .founder-quote__figure::before {
     background: linear-gradient(180deg, var(--color-page-background) 0%, rgba(218, 229, 240, 0.5) 18%, rgba(218, 229, 240, 0) 42%), linear-gradient(180deg, rgba(218, 229, 240, 0) 55%, rgba(218, 229, 240, 0.5) 100%);
   }
@@ -22451,8 +22690,8 @@ body[data-offcanvas-state=open] {
   .home-videos__grid {
     grid-template-columns: minmax(0, 1fr);
   }
-  .home-articles__grid {
-    grid-template-columns: minmax(0, 1fr);
+  .home-articles__image {
+    height: 200px;
   }
   .home-rehabilitation-program__head,
   .home-genotyping__head,
@@ -22582,6 +22821,51 @@ body[data-offcanvas-state=open] {
   }
   .founder-quote__text {
     max-width: none;
+  }
+  .home-recovery-life::before {
+    background-size: 110% auto;
+    background-position: center bottom -4%;
+    opacity: 0.16;
+  }
+  .home-recovery-life__highlight {
+    padding-left: var(--pad-gap-line);
+  }
+  .home-recovery-life__stage-title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .home-recovery-life__stage-item {
+    font-size: 15px;
+    line-height: 21px;
+  }
+  /* V9-06E37: home rehabilitation program direction cards — mobile stack */
+  .home-rehabilitation-program__direction {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--pad-gap-line);
+    padding: var(--pad-gap-line);
+    min-width: 0;
+  }
+  .home-rehabilitation-program__direction--img {
+    max-width: 100%;
+    width: 100%;
+  }
+  .home-rehabilitation-program__direction-image {
+    width: 100%;
+    max-height: 200px;
+  }
+  .home-rehabilitation-program__direction--wrapper {
+    min-width: 0;
+  }
+  .home-rehabilitation-program__direction-title {
+    overflow-wrap: anywhere;
+  }
+  .home-rehabilitation-program__direction-more {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding-top: var(--pad-gap-mini);
+    padding-bottom: var(--pad-gap-mini);
   }
 }
 @media (max-width: 560px) {
@@ -23264,6 +23548,34 @@ body[data-offcanvas-state=open] {
   color: var(--color-text-primary);
 }
 
+/* V9-06E38: category marker/heading links to category permalink */
+.page-uslugi-v2 .services-category-section-v2__marker-link,
+.page-uslugi-v2 .services-category-section-v2__heading-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-uslugi-v2 .services-category-section-v2__marker-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.page-uslugi-v2 .services-category-section-v2__marker-link:hover,
+.page-uslugi-v2 .services-category-section-v2__heading-link:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-uslugi-v2 .services-category-section-v2__marker-link:focus-visible,
+.page-uslugi-v2 .services-category-section-v2__heading-link:focus-visible {
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: 3px;
+}
+
 .page-o-centre .services-category-section-v2__marker {
   display: none;
 }
@@ -23322,7 +23634,6 @@ body[data-offcanvas-state=open] {
   flex-direction: column;
   gap: var(--pad-gap-line);
   padding-bottom: var(--pad-gap-line);
-  border-bottom: var(--border-width) solid var(--color-border-subtle);
 }
 
 .page-uslugi-v2 .services-category-section-v2__service:last-child {
@@ -24349,14 +24660,55 @@ body[data-offcanvas-state=open] {
   color: var(--color-text-secondary);
 }
 
+.page-service-leaf-v1 .service-leaf-signs-v1__editorial.is-clamped {
+  overflow: hidden;
+  max-height: var(--signs-editorial-clamp-height, 7.5em);
+}
+
+.page-service-leaf-v1 .service-leaf-signs-v1__editorial.is-expanded {
+  overflow: hidden;
+  max-height: var(--signs-editorial-full-height, none);
+}
+
+.page-service-leaf-v1 .service-leaf-signs-v1__editorial.is-animated {
+  transition: max-height 0.4s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-service-leaf-v1 .service-leaf-signs-v1__editorial.is-animated {
+    transition: none;
+  }
+}
+
 .page-service-leaf-v1 .service-leaf-signs-v1__read-more {
+  display: inline-block;
   margin: 0;
+  padding: 0;
   max-width: 900px;
+  border: 0;
+  background: transparent;
+  font: inherit;
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
   font-weight: var(--font-weight-heading);
+  text-align: left;
   text-transform: uppercase;
   color: var(--color-accent);
+  cursor: pointer;
+}
+
+.page-service-leaf-v1 .service-leaf-signs-v1__read-more:hover,
+.page-service-leaf-v1 .service-leaf-signs-v1__read-more:focus-visible {
+  color: var(--color-accent);
+  outline: none;
+}
+
+.page-service-leaf-v1 .service-leaf-signs-v1__read-more:focus-visible {
+  text-decoration: underline;
+}
+
+.page-service-leaf-v1 .service-leaf-signs-v1__read-more[hidden] {
+  display: none !important;
 }
 
 @media (max-width: 1024px) {
@@ -26890,6 +27242,20 @@ body[data-offcanvas-state=open] {
   font-weight: 600;
 }
 
+.generic-content-page__specialist-photo {
+  margin: 0 0 28px;
+  max-width: 360px;
+}
+
+.generic-content-page__specialist-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-main, 12px);
+  background-color: #f3efe8;
+  object-fit: cover;
+}
+
 .plain-page-content__body {
   max-width: 820px;
   font-size: 16px;
@@ -27186,5 +27552,215 @@ html.js-reveal-ready [data-reveal].is-revealed {
   .blog-archive-card:hover .blog-archive-card__image,
   .home-articles__card:hover .home-articles__image {
     transform: none;
+  }
+}
+
+/* FP-0002 V9-06E30 services catalog listing controls */
+.page-uslugi-v2 .services-category-section-v2__service-name-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-uslugi-v2 .services-category-section-v2__service-name-link:hover,
+.page-uslugi-v2 .services-category-section-v2__service-name-link:focus-visible {
+  text-decoration: underline;
+}
+
+.page-uslugi-v2 .services-category-section-v2__service-children {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-uslugi-v2 .services-category-section-v2__service-child {
+  margin: 0;
+  padding: 0;
+}
+
+.page-uslugi-v2 .services-category-section-v2__service-child-link {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  border-bottom: 1px dotted currentColor;
+}
+
+.page-uslugi-v2 .services-category-section-v2__service-child-link:hover,
+.page-uslugi-v2 .services-category-section-v2__service-child-link:focus-visible {
+  color: var(--color-text-primary);
+  border-bottom-style: solid;
+}
+
+.page-uslugi-v2 .services-category-section-v2__gallery-link {
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+}
+
+.page-uslugi-v2 .services-category-section-v2__gallery-link:hover .services-category-section-v2__caption,
+.page-uslugi-v2 .services-category-section-v2__gallery-link:focus-visible .services-category-section-v2__caption {
+  text-decoration: underline;
+}
+
+.page-uslugi-v2 .services-category-section-v2__gallery-link .services-category-section-v2__caption {
+  display: block;
+}
+
+/* ==========================================================================
+   V9-06E33-FIX01 — /uslugi/ category gallery = Home gallery Swiper + dots
+   (additive; no prev/next; preserve service card visuals)
+   ========================================================================== */
+.page-uslugi-v2 .services-category-section-v2__gallery[data-services-category-gallery] {
+  display: block;
+  overflow: visible;
+  margin-bottom: var(--pad-gap);
+}
+
+.page-uslugi-v2 .services-category-section-v2__gallery[data-services-category-gallery] .services-category-section-v2__gallery-item {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin: 0;
+  max-width: none;
+}
+
+.page-uslugi-v2 .services-category-section-v2__gallery-pagination,
+.page-uslugi-v2 .services-category-section-v2__gallery-pagination.swiper-pagination {
+  position: static;
+  display: flex;
+  justify-content: center;
+  gap: var(--pad-gap-line);
+  margin-top: var(--pad-gap);
+}
+
+.page-uslugi-v2 .services-category-section-v2__gallery-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  border: var(--border-width) solid var(--color-text-primary);
+  border-radius: var(--radius-full);
+  background-color: transparent;
+  opacity: 1;
+}
+
+.page-uslugi-v2 .services-category-section-v2__gallery-pagination .swiper-pagination-bullet-active {
+  background-color: var(--color-text-primary);
+}
+
+/* ==========================================================================
+   V9-06E34 — specialists card links to child pages (additive)
+   ========================================================================== */
+.specialists__card-link {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad-gap-line);
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.specialists__card-link:hover .specialists__name,
+.specialists__card-link:focus-visible .specialists__name {
+  text-decoration: underline;
+}
+
+/* V9-06E43 — Services hub hero slider (services-inner-hero-v2) */
+.services-inner-hero-v2--slider {
+  box-sizing: border-box;
+}
+
+.services-inner-hero-v2--slider .services-inner-hero-v2__slider.swiper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-main);
+}
+
+.services-inner-hero-v2--slider .services-inner-hero-v2__slides.swiper-wrapper,
+.services-inner-hero-v2--slider .services-inner-hero-v2__slide.swiper-slide {
+  box-sizing: border-box;
+  height: auto;
+  min-height: 320px;
+}
+
+.services-inner-hero-v2--slider .services-inner-hero-v2__shell {
+  min-height: 320px;
+}
+
+.services-inner-hero-v2--slider .services-inner-hero-v2__media {
+  min-height: 320px;
+}
+
+.services-inner-hero-v2--slider .services-inner-hero-v2__content {
+  padding-top: 40px;
+  padding-bottom: 52px;
+}
+
+.services-inner-hero-v2__nav {
+  position: absolute;
+  top: 50%;
+  z-index: 4;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #1d2327;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.services-inner-hero-v2__nav--prev {
+  left: 16px;
+}
+
+.services-inner-hero-v2__nav--next {
+  right: 16px;
+}
+
+.services-inner-hero-v2__pagination {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 16px;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.services-inner-hero-v2__pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  opacity: 0.45;
+  background: #fff;
+}
+
+.services-inner-hero-v2__pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .services-inner-hero-v2--slider .services-inner-hero-v2__slides.swiper-wrapper,
+  .services-inner-hero-v2--slider .services-inner-hero-v2__slide.swiper-slide,
+  .services-inner-hero-v2--slider .services-inner-hero-v2__shell,
+  .services-inner-hero-v2--slider .services-inner-hero-v2__media {
+    min-height: 280px;
+  }
+
+  .services-inner-hero-v2__nav {
+    width: 36px;
+    height: 36px;
+    font-size: 22px;
   }
 }

@@ -1,0 +1,694 @@
+{
+    "seed": [
+        {
+            "ID": 1019,
+            "title": "Зависимость от постоянных покупок",
+            "eligible": false,
+            "value": 0
+        },
+        {
+            "ID": 1017,
+            "title": "Интернет-зависимость",
+            "eligible": false,
+            "value": 0
+        },
+        {
+            "ID": 1013,
+            "title": "Лечение героиновой зависимости",
+            "eligible": false,
+            "value": 0
+        },
+        {
+            "ID": 1016,
+            "title": "Лечение игровой зависимости",
+            "eligible": false,
+            "value": 0
+        },
+        {
+            "ID": 1012,
+            "title": "Лечение метадоновой зависимости",
+            "eligible": false,
+            "value": 0
+        },
+        {
+            "ID": 1018,
+            "title": "Лечение созависимости",
+            "eligible": false,
+            "value": 0
+        },
+        {
+            "ID": 1011,
+            "title": "Лечение солевой зависимости",
+            "eligible": false,
+            "value": 0
+        },
+        {
+            "ID": 73,
+            "title": "Зависимости",
+            "eligible": false,
+            "value": 0
+        },
+        {
+            "ID": 74,
+            "title": "Лечение алкогольной зависимости",
+            "eligible": true,
+            "value": 1
+        },
+        {
+            "ID": 314,
+            "title": "Лечение наркотической зависимости",
+            "eligible": true,
+            "value": 1
+        },
+        {
+            "ID": 315,
+            "title": "Лечение лекарственной зависимости",
+            "eligible": false,
+            "value": 0
+        },
+        {
+            "ID": 316,
+            "title": "Поведенческие зависимости",
+            "eligible": true,
+            "value": 1
+        },
+        {
+            "ID": 75,
+            "title": "Профилактический анализ",
+            "eligible": true,
+            "value": 1
+        },
+        {
+            "ID": 77,
+            "title": "Психическое здоровье",
+            "eligible": false,
+            "value": 0
+        },
+        {
+            "ID": 78,
+            "title": "Депрессия",
+            "eligible": true,
+            "value": 1
+        },
+        {
+            "ID": 1047,
+            "title": "Компьютерная зависимость",
+            "eligible": true,
+            "value": 1
+        },
+        {
+            "ID": 1048,
+            "title": "Лечение опиумной зависимости",
+            "eligible": true,
+            "value": 1
+        },
+        {
+            "ID": 79,
+            "title": "ПТСР",
+            "eligible": true,
+            "value": 1
+        },
+        {
+            "ID": 80,
+            "title": "Эмоциональное выгорание",
+            "eligible": true,
+            "value": 1
+        },
+        {
+            "ID": 81,
+            "title": "Тревожные расстройства",
+            "eligible": true,
+            "value": 1
+        },
+        {
+            "ID": 82,
+            "title": "Расстройства сна",
+            "eligible": true,
+            "value": 1
+        },
+        {
+            "ID": 83,
+            "title": "Травма",
+            "eligible": true,
+            "value": 1
+        },
+        {
+            "ID": 84,
+            "title": "Расстройства пищевого поведения",
+            "eligible": false,
+            "value": 0
+        },
+        {
+            "ID": 1049,
+            "title": "Хроническая усталость",
+            "eligible": true,
+            "value": 1
+        },
+        {
+            "ID": 1050,
+            "title": "Стресс",
+            "eligible": true,
+            "value": 1
+        },
+        {
+            "ID": 1051,
+            "title": "Нарциссизм",
+            "eligible": true,
+            "value": 1
+        },
+        {
+            "ID": 85,
+            "title": "Анорексия",
+            "eligible": true,
+            "value": 1
+        },
+        {
+            "ID": 86,
+            "title": "Булимия",
+            "eligible": true,
+            "value": 1
+        },
+        {
+            "ID": 87,
+            "title": "Компульсивное переедание",
+            "eligible": true,
+            "value": 1
+        }
+    ],
+    "home_gallery_included": [
+        {
+            "ID": 74,
+            "title": "Лечение алкогольной зависимости",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+            "parent": 73,
+            "depth": 1,
+            "flag": "1",
+            "image_source": "hero_media",
+            "http": 200
+        },
+        {
+            "ID": 314,
+            "title": "Лечение наркотической зависимости",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+            "parent": 73,
+            "depth": 1,
+            "flag": "1",
+            "image_source": "placeholder",
+            "http": 200
+        },
+        {
+            "ID": 316,
+            "title": "Поведенческие зависимости",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+            "parent": 73,
+            "depth": 1,
+            "flag": "1",
+            "image_source": "placeholder",
+            "http": 200
+        },
+        {
+            "ID": 75,
+            "title": "Профилактический анализ",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/profilakticheskiy-analiz/",
+            "parent": 73,
+            "depth": 1,
+            "flag": "1",
+            "image_source": "placeholder",
+            "http": 200
+        },
+        {
+            "ID": 1047,
+            "title": "Компьютерная зависимость",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/kompyuternaya-zavisimost/",
+            "parent": 73,
+            "depth": 1,
+            "flag": "1",
+            "image_source": "theme_slug_fallback",
+            "http": 200
+        },
+        {
+            "ID": 1048,
+            "title": "Лечение опиумной зависимости",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-opiumnoy-zavisimosti/",
+            "parent": 73,
+            "depth": 1,
+            "flag": "1",
+            "image_source": "theme_slug_fallback",
+            "http": 200
+        },
+        {
+            "ID": 78,
+            "title": "Депрессия",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/depressiya/",
+            "parent": 77,
+            "depth": 1,
+            "flag": "1",
+            "image_source": "placeholder",
+            "http": 200
+        },
+        {
+            "ID": 79,
+            "title": "ПТСР",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/ptsr/",
+            "parent": 77,
+            "depth": 1,
+            "flag": "1",
+            "image_source": "placeholder",
+            "http": 200
+        },
+        {
+            "ID": 80,
+            "title": "Эмоциональное выгорание",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/emotsionalnoe-vygoranie/",
+            "parent": 77,
+            "depth": 1,
+            "flag": "1",
+            "image_source": "placeholder",
+            "http": 200
+        },
+        {
+            "ID": 81,
+            "title": "Тревожные расстройства",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+            "parent": 77,
+            "depth": 1,
+            "flag": "1",
+            "image_source": "placeholder",
+            "http": 200
+        },
+        {
+            "ID": 82,
+            "title": "Расстройства сна",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+            "parent": 77,
+            "depth": 1,
+            "flag": "1",
+            "image_source": "placeholder",
+            "http": 200
+        },
+        {
+            "ID": 83,
+            "title": "Травма",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/travma/",
+            "parent": 77,
+            "depth": 1,
+            "flag": "1",
+            "image_source": "placeholder",
+            "http": 200
+        },
+        {
+            "ID": 1049,
+            "title": "Хроническая усталость",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/hronicheskaya-ustalost/",
+            "parent": 77,
+            "depth": 1,
+            "flag": "1",
+            "image_source": "theme_slug_fallback",
+            "http": 200
+        },
+        {
+            "ID": 1050,
+            "title": "Стресс",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/stress/",
+            "parent": 77,
+            "depth": 1,
+            "flag": "1",
+            "image_source": "theme_slug_fallback",
+            "http": 200
+        },
+        {
+            "ID": 1051,
+            "title": "Нарциссизм",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/nartsissizm/",
+            "parent": 77,
+            "depth": 1,
+            "flag": "1",
+            "image_source": "theme_slug_fallback",
+            "http": 200
+        },
+        {
+            "ID": 85,
+            "title": "Анорексия",
+            "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+            "parent": 84,
+            "depth": 1,
+            "flag": "1",
+            "image_source": "placeholder",
+            "http": 200
+        },
+        {
+            "ID": 86,
+            "title": "Булимия",
+            "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/buliniya/",
+            "parent": 84,
+            "depth": 1,
+            "flag": "1",
+            "image_source": "placeholder",
+            "http": 200
+        },
+        {
+            "ID": 87,
+            "title": "Компульсивное переедание",
+            "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/",
+            "parent": 84,
+            "depth": 1,
+            "flag": "1",
+            "image_source": "placeholder",
+            "http": 200
+        }
+    ],
+    "accordion": [
+        {
+            "title": "Зависимости",
+            "item_count": 6,
+            "items": [
+                {
+                    "title": "Лечение алкогольной зависимости",
+                    "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+                    "children": []
+                },
+                {
+                    "title": "Лечение наркотической зависимости",
+                    "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+                    "children": [
+                        "Лечение героиновой зависимости",
+                        "Лечение метадоновой зависимости",
+                        "Лечение солевой зависимости",
+                        "Лечение лекарственной зависимости"
+                    ]
+                },
+                {
+                    "title": "Поведенческие зависимости",
+                    "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+                    "children": [
+                        "Зависимость от постоянных покупок",
+                        "Интернет-зависимость",
+                        "Лечение игровой зависимости",
+                        "Лечение созависимости"
+                    ]
+                },
+                {
+                    "title": "Профилактический анализ",
+                    "url": "http://shpigovsky.test/uslugi/zavisimosti/profilakticheskiy-analiz/",
+                    "children": []
+                },
+                {
+                    "title": "Компьютерная зависимость",
+                    "url": "http://shpigovsky.test/uslugi/zavisimosti/kompyuternaya-zavisimost/",
+                    "children": []
+                },
+                {
+                    "title": "Лечение опиумной зависимости",
+                    "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-opiumnoy-zavisimosti/",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "title": "Психическое здоровье",
+            "item_count": 9,
+            "items": [
+                {
+                    "title": "Депрессия",
+                    "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/depressiya/",
+                    "children": []
+                },
+                {
+                    "title": "ПТСР",
+                    "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/ptsr/",
+                    "children": []
+                },
+                {
+                    "title": "Эмоциональное выгорание",
+                    "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/emotsionalnoe-vygoranie/",
+                    "children": []
+                },
+                {
+                    "title": "Тревожные расстройства",
+                    "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+                    "children": []
+                },
+                {
+                    "title": "Расстройства сна",
+                    "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+                    "children": []
+                },
+                {
+                    "title": "Травма",
+                    "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/travma/",
+                    "children": []
+                },
+                {
+                    "title": "Хроническая усталость",
+                    "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/hronicheskaya-ustalost/",
+                    "children": []
+                },
+                {
+                    "title": "Стресс",
+                    "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/stress/",
+                    "children": []
+                },
+                {
+                    "title": "Нарциссизм",
+                    "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/nartsissizm/",
+                    "children": []
+                }
+            ]
+        },
+        {
+            "title": "Расстройства пищевого поведения",
+            "item_count": 3,
+            "items": [
+                {
+                    "title": "Анорексия",
+                    "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+                    "children": []
+                },
+                {
+                    "title": "Булимия",
+                    "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/buliniya/",
+                    "children": []
+                },
+                {
+                    "title": "Компульсивное переедание",
+                    "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/",
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "admin": {
+        "home_gallery_flag_field": {
+            "key": "field_fp02_service_show_on_home_gallery",
+            "label": "Показывать в слайдере на главной",
+            "name": "service_show_on_home_gallery"
+        },
+        "home_service_nav_items_field": "STILL_PRESENT",
+        "uslugi_slider_field": "PRESENT"
+    },
+    "routes": {
+        "/": {
+            "http": 200,
+            "fatal": false,
+            "bytes": 182748
+        },
+        "/uslugi/": {
+            "http": 200,
+            "fatal": false,
+            "bytes": 120066
+        },
+        "/uslugi/zavisimosti/": {
+            "http": 200,
+            "fatal": false,
+            "bytes": 128456
+        },
+        "/uslugi/psihicheskoe-zdorovie/": {
+            "http": 200,
+            "fatal": false,
+            "bytes": 131735
+        },
+        "/uslugi/rasstroystva-pischevogo-povedeniya/": {
+            "http": 200,
+            "fatal": false,
+            "bytes": 126487
+        },
+        "/o-centre/": {
+            "http": 200,
+            "fatal": false,
+            "bytes": 124083
+        },
+        "/o-centre/programma-lecheniya/": {
+            "http": 200,
+            "fatal": false,
+            "bytes": 58206
+        },
+        "/blog/": {
+            "http": 200,
+            "fatal": false,
+            "bytes": 62838
+        },
+        "/kontakty/": {
+            "http": 200,
+            "fatal": false,
+            "bytes": 67527
+        }
+    },
+    "placeholder": {
+        "asset": {
+            "url": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/images/service-placeholder.svg",
+            "width": 800,
+            "height": 600,
+            "alt": "Фото скоро будет",
+            "source": "placeholder"
+        },
+        "http": 200
+    },
+    "home_checks": {
+        "http": 200,
+        "has_accordion": true,
+        "has_gallery": true,
+        "has_gallery_link": true,
+        "has_placeholder": true,
+        "static_specialistam": true,
+        "has_povedencheskie": true,
+        "has_depressiya": true,
+        "has_narkoticheskoy": true,
+        "accordion_groups": [
+            "Зависимости",
+            "Психическое здоровье",
+            "Расстройства пищевого поведения"
+        ],
+        "gallery_link_count": 18,
+        "gallery_link_sample": [
+            "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+            "http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+            "http://shpigovsky.test/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+            "http://shpigovsky.test/uslugi/zavisimosti/profilakticheskiy-analiz/",
+            "http://shpigovsky.test/uslugi/zavisimosti/kompyuternaya-zavisimost/"
+        ],
+        "accordion_service_count": 30,
+        "accordion_service_sample": [
+            "Лечение алкогольной зависимости",
+            "Лечение наркотической зависимости",
+            "Лечение героиновой зависимости",
+            "Лечение метадоновой зависимости",
+            "Лечение солевой зависимости",
+            "Лечение лекарственной зависимости",
+            "Поведенческие зависимости",
+            "Зависимость от постоянных покупок",
+            "Интернет-зависимость",
+            "Лечение игровой зависимости",
+            "Лечение созависимости",
+            "Профилактический анализ"
+        ],
+        "accordion_links_checked": [
+            {
+                "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+                "http": 200
+            },
+            {
+                "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+                "http": 200
+            },
+            {
+                "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/geroin/",
+                "http": 200
+            },
+            {
+                "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/matadon/",
+                "http": 200
+            },
+            {
+                "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/soli/",
+                "http": 200
+            },
+            {
+                "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lekarstva/",
+                "http": 200
+            },
+            {
+                "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+                "http": 200
+            },
+            {
+                "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/shopogolizm/",
+                "http": 200
+            },
+            {
+                "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/internet-zavisimost/",
+                "http": 200
+            },
+            {
+                "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/ludomaniya/",
+                "http": 200
+            },
+            {
+                "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/sozavisimost/",
+                "http": 200
+            },
+            {
+                "url": "http://shpigovsky.test/uslugi/zavisimosti/profilakticheskiy-analiz/",
+                "http": 200
+            },
+            {
+                "url": "http://shpigovsky.test/uslugi/zavisimosti/kompyuternaya-zavisimost/",
+                "http": 200
+            },
+            {
+                "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-opiumnoy-zavisimosti/",
+                "http": 200
+            },
+            {
+                "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/depressiya/",
+                "http": 200
+            },
+            {
+                "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/ptsr/",
+                "http": 200
+            },
+            {
+                "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/emotsionalnoe-vygoranie/",
+                "http": 200
+            },
+            {
+                "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+                "http": 200
+            },
+            {
+                "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+                "http": 200
+            },
+            {
+                "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/travma/",
+                "http": 200
+            },
+            {
+                "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/hronicheskaya-ustalost/",
+                "http": 200
+            },
+            {
+                "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/stress/",
+                "http": 200
+            },
+            {
+                "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/nartsissizm/",
+                "http": 200
+            },
+            {
+                "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+                "http": 200
+            },
+            {
+                "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/buliniya/",
+                "http": 200
+            }
+        ],
+        "accordion_links_ok": 25,
+        "accordion_links_fail": 0
+    },
+    "seed_summary": {
+        "eligible_true": 18,
+        "non_eligible_false": 11,
+        "total_publish": 29
+    }
+}

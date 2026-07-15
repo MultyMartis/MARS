@@ -1,0 +1,9 @@
+step,action,expected,actual,result,notes
+0,Read #78 meta at start,role/layout placeholder,role=placeholder layout=placeholder resolve=placeholder,PASS,Post-E51 test state
+1,update_field(role=service) without save_post sync (pre-fix),role+layout service_general OR resolve service,role=service layout=placeholder resolve=placeholder,FAIL_PRE_FIX,Root cause A: update_value sync missing + resolver OR
+2,sync_layout_from_role_on_save after role=service,layout=service_general resolve=service-general,layout=service_general resolve=service-general,PASS,save_post path already able to heal when invoked
+3,acf_save_post with role=service and layout omitted/stale placeholder,persist service/service_general,service/service_general after FIX01,PASS,Includes intentional stale layout in POST
+4,acf_save_post role=placeholder with stale layout=service_general,persist placeholder/placeholder,placeholder/placeholder,PASS,Both directions
+5,Stale meta role=service layout=placeholder resolve probe (pre-fix),resolve=service-general,resolve=placeholder,FAIL_PRE_FIX,Root cause B: resolver OR treated layout placeholder as authority
+6,Same stale meta after resolver FIX01,resolve=service-general,resolve=service-general,PASS,Visible role wins
+7,update_field(role=service) only after FIX01,layout synced to service_general,layout=service_general resolve=service-general,PASS,acf/update_value sync

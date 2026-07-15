@@ -1,0 +1,15 @@
+route,url,http,has_signs,has_read_more,vs_fix04_ws_stable,result,notes
+home,http://shpigovsky.test/,200,false,false,PASS_RESIDUAL,PASS,gallery card order residual vs FIX04; structure OK; no signs/read-more
+uslugi,http://shpigovsky.test/uslugi/,200,false,false,EQUAL,PASS,frozen hub visual match FIX04 after nonce/ver stabilize
+zavisimosti,http://shpigovsky.test/uslugi/zavisimosti/,200,false,false,EQUAL,PASS,section #73
+psihicheskoe,http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/,200,false,false,n/a,PASS,HTTP 200 no fatal
+rpp,http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/,200,false,false,n/a,PASS,HTTP 200 no fatal
+alcohol,http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/,200,true,true,EQUAL,PASS,accepted visual; toggle revalidated
+p314,http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/,200,false,false,EQUAL,PASS,?p=314 snapshot equal FIX04
+p78,http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/depressiya/,200,false,false,EQUAL,PASS,?p=78 snapshot equal FIX04
+p77,http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/,200,false,false,n/a,PASS,?p=77 → same section URL 200
+p84,http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/,200,false,false,n/a,PASS,?p=84 → same section URL 200
+blog,http://shpigovsky.test/blog/,200,false,false,n/a,PASS,
+specyalisty,http://shpigovsky.test/specyalisty/,200,false,false,n/a,PASS,
+o-centre,http://shpigovsky.test/o-centre/,200,false,false,n/a,PASS,
+kontakty,http://shpigovsky.test/kontakty/,200,false,false,n/a,PASS,

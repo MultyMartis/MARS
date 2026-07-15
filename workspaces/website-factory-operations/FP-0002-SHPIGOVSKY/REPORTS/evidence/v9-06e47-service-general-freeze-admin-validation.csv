@@ -1,0 +1,5 @@
+page,expected,actual,result,notes
+#74,clean service model (3 groups; 68 fields; legacy hidden; classic/Редакция/Отрывок hidden),"groups=Макет страницы услуги|Hero страницы услуги|Услуга — блоки страницы; fields=68; repeaters=7; signs=yes; legacy=none; revisionsdiv+postexcerpt targeted; postdivrich removed via admin-editor.php",PASS,WP-CLI + FieldGroups::filter_service_parity_groups_by_role with post context
+#314,clean service model usable,"groups=3 same keys; fields=68; legacy=none; HTTP admin path N/A — ACF filter PASS",PASS,no fatal; service_general layout
+#78,clean service model usable,"groups=3 same keys; fields=68; legacy=none",PASS,no fatal
+#73,section model preserved; service group hidden,"role=section; has_general=no; has_section=yes; keys include layout+hero+section_parity (+section legacy FAQ/Relationships/Structured as accepted)",PASS,Услуга parity filtered out

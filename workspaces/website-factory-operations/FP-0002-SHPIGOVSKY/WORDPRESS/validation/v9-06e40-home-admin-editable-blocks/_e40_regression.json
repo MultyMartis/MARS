@@ -1,0 +1,62 @@
+{
+    "routes": [
+        {
+            "route": "/",
+            "http": 200,
+            "fatal": false,
+            "bytes": 182449,
+            "result": "PASS"
+        },
+        {
+            "route": "/uslugi/",
+            "http": 200,
+            "fatal": false,
+            "bytes": 123359,
+            "result": "PASS"
+        },
+        {
+            "route": "/blog/",
+            "http": 200,
+            "fatal": false,
+            "bytes": 70532,
+            "result": "PASS"
+        },
+        {
+            "route": "/specyalisty/",
+            "http": 200,
+            "fatal": false,
+            "bytes": 58051,
+            "result": "PASS"
+        },
+        {
+            "route": "/o-centre/",
+            "http": 200,
+            "fatal": false,
+            "bytes": 124031,
+            "result": "PASS"
+        },
+        {
+            "route": "/kontakty/",
+            "http": 200,
+            "fatal": false,
+            "bytes": 67527,
+            "result": "PASS"
+        }
+    ],
+    "gallery": 13,
+    "markers": {
+        "home-recovery-intro__benefits": true,
+        "home-treatment-prevention__heading": true,
+        "home-gallery__slider": true,
+        "home-why-us": true,
+        "home-staff-photo": true,
+        "clinic-landscape": true,
+        "home-recovery-life__stages": true,
+        "home-genotyping": true,
+        "home-videos": true,
+        "/uploads/2026/07/shpigovsky-staff-group": true,
+        "/uploads/2026/07/sergey-shpigovsky-interview.mp4": true,
+        "/uploads/2026/07/shpigovsky-center.mp4": true,
+        "imsc42": false
+    }
+}

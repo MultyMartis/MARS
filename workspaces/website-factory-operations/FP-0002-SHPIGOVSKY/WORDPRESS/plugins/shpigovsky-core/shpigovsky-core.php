@@ -34,6 +34,21 @@ Shpigovsky\Core\Loader\Autoloader::register( SHPIGOVSKY_CORE_DIR . 'src' );
 register_activation_hook( SHPIGOVSKY_CORE_FILE, array( 'Shpigovsky\Core\Plugin', 'activate' ) );
 register_deactivation_hook( SHPIGOVSKY_CORE_FILE, array( 'Shpigovsky\Core\Plugin', 'deactivate' ) );
 
+/**
+ * Load plugin text domain for admin/runtime strings (V9-06E39 localization foundation).
+ */
+add_action(
+	'init',
+	static function () {
+		load_plugin_textdomain(
+			'shpigovsky-core',
+			false,
+			dirname( plugin_basename( SHPIGOVSKY_CORE_FILE ) ) . '/languages'
+		);
+	},
+	0
+);
+
 add_action(
 	'plugins_loaded',
 	static function () {

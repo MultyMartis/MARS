@@ -1,0 +1,10 @@
+visible_order,group_title,group_key,source,field_count,editor_facing,currently_needed_for_frontend,overlaps_with_service_general_parity,target_action,notes
+1,Service — FAQ,group_fp02_service_faq,php,1,no,legacy_emergency,yes,hide_from_normal_ui,BEFORE FIX01 — FAQ now in Услуга parity
+2,Service — Layout,group_fp02_service_layout_hero,json,13,yes,yes,no,keep,BEFORE — retitled to Макет страницы услуги
+3,Service — Relationships / Related Services,group_fp02_service_relationships,php,1,no,partial_children_override,yes,hide_from_normal_ui,BEFORE — meta kept
+4,Service — Structured Sections,group_fp02_service_structured_sections,php,9,no,partial_cta_meta,yes,hide_from_normal_ui,BEFORE — one of 4 duplicate instances
+5,Service — Structured Sections,group_fp02_service_structured_sections,json,9,no,partial_cta_meta,yes,hide_from_normal_ui,BEFORE duplicate
+6,Service — Structured Sections,group_fp02_service_structured_sections,DB,9,no,partial_cta_meta,yes,hide_from_normal_ui,BEFORE duplicate — soft-disabled
+7,Service — Structured Sections,group_fp02_service_structured_sections,DB,9,no,partial_cta_meta,yes,hide_from_normal_ui,BEFORE duplicate — soft-disabled
+8,Hero страницы услуги,group_fp02_service_hero,json,7,yes,yes,no,keep,Desired position 2
+9,Услуга — блоки страницы,group_fp02_service_general_parity,json,64,yes,yes,no,keep,Desired position 3; after FIX01 = 68 fields with cta_*

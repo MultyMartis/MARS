@@ -1,0 +1,134 @@
+{
+    "mode": "all",
+    "page_id": 11,
+    "baseline": {
+        "phase": "V9-06E29B",
+        "generated_at": "2026-07-09T20:53:19+00:00",
+        "page_id": 11,
+        "post": {
+            "ID": 11,
+            "post_title": "О центре",
+            "post_name": "o-centre",
+            "post_status": "publish"
+        },
+        "postmeta_count": 106,
+        "acf_state": {
+            "hero_media": {
+                "empty": true
+            },
+            "about_founder_quote_paragraphs": {
+                "empty": true,
+                "type": "NULL"
+            },
+            "about_founder_name": {
+                "empty": true,
+                "type": "NULL"
+            },
+            "about_founder_role": {
+                "empty": true,
+                "type": "NULL"
+            },
+            "about_founder_photo": {
+                "empty": true
+            },
+            "about_founder_cta_label": {
+                "empty": true,
+                "type": "NULL"
+            },
+            "about_clinic_landscape_image": {
+                "empty": true
+            },
+            "about_clinic_landscape_alt": {
+                "empty": true,
+                "type": "NULL"
+            },
+            "about_program_lead": {
+                "empty": false,
+                "type": "string"
+            },
+            "about_program_intro": {
+                "empty": false,
+                "type": "string"
+            },
+            "about_program_intro2": {
+                "empty": false,
+                "type": "string"
+            }
+        }
+    },
+    "image_seed": [
+        {
+            "key": "hero_media",
+            "field": "hero_media",
+            "attachment_id": 753,
+            "url": "http://shpigovsky.test/wp-content/uploads/2026/07/o-centre-hero.webp",
+            "result": "PASS"
+        },
+        {
+            "key": "founder_photo",
+            "field": "about_founder_photo",
+            "attachment_id": 754,
+            "url": "http://shpigovsky.test/wp-content/uploads/2026/07/founder-sergey-shpigovsky.png",
+            "result": "PASS"
+        },
+        {
+            "key": "clinic_landscape",
+            "field": "about_clinic_landscape_image",
+            "attachment_id": 755,
+            "url": "http://shpigovsky.test/wp-content/uploads/2026/07/shpigovsky-clinic-landscape.webp",
+            "result": "PASS"
+        }
+    ],
+    "text_seed": [
+        {
+            "field": "about_founder_quote_paragraphs",
+            "result": "PASS"
+        },
+        {
+            "field": "about_founder_name",
+            "result": "PASS"
+        },
+        {
+            "field": "about_founder_role",
+            "result": "PASS"
+        },
+        {
+            "field": "about_founder_cta_label",
+            "result": "PASS"
+        },
+        {
+            "field": "about_clinic_landscape_alt",
+            "result": "PASS"
+        }
+    ],
+    "verify": {
+        "phase": "V9-06E29B",
+        "generated_at": "2026-07-09T20:53:22+00:00",
+        "rows": [
+            {
+                "field": "hero_media",
+                "seeded": true,
+                "url": "http://shpigovsky.test/wp-content/uploads/2026/07/o-centre-hero.webp",
+                "result": "PASS"
+            },
+            {
+                "field": "about_founder_photo",
+                "seeded": true,
+                "url": "http://shpigovsky.test/wp-content/uploads/2026/07/founder-sergey-shpigovsky.png",
+                "result": "PASS"
+            },
+            {
+                "field": "about_clinic_landscape_image",
+                "seeded": true,
+                "url": "http://shpigovsky.test/wp-content/uploads/2026/07/shpigovsky-clinic-landscape.webp",
+                "result": "PASS"
+            },
+            {
+                "field": "about_founder_quote_paragraphs",
+                "count": 4,
+                "result": "PASS"
+            }
+        ],
+        "result": "PASS"
+    }
+}

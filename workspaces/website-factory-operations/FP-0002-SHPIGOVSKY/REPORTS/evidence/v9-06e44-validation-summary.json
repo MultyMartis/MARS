@@ -1,0 +1,88 @@
+{
+    "home_page_id": 4,
+    "home_group_id": 1338,
+    "home_field_count": 74,
+    "help_action_registered": true,
+    "mismatch_notice_hook": true,
+    "help_html_ok": false,
+    "operator_css_untouched": true,
+    "validation_rows": [
+        {
+            "route": "\/",
+            "http_status": "200",
+            "fatal": "no",
+            "result": "PASS",
+            "notes": "home freeze marker hero--home present"
+        },
+        {
+            "route": "\/uslugi\/",
+            "http_status": "200",
+            "fatal": "no",
+            "result": "PASS",
+            "notes": "hero=yes intro=yes lead=yes slider=yes"
+        },
+        {
+            "route": "\/uslugi\/zavisimosti\/",
+            "http_status": "200",
+            "fatal": "no",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "route": "\/uslugi\/psihicheskoe-zdorovie\/",
+            "http_status": "200",
+            "fatal": "no",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "route": "\/uslugi\/rasstroystva-pischevogo-povedeniya\/",
+            "http_status": "200",
+            "fatal": "no",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "route": "\/uslugi\/zavisimosti\/lechenie-alkogolnoy-zavisimosti\/",
+            "http_status": "200",
+            "fatal": "no",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "route": "\/uslugi\/psihicheskoe-zdorovie\/depressiya\/",
+            "http_status": "200",
+            "fatal": "no",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "route": "\/blog\/",
+            "http_status": "200",
+            "fatal": "no",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "route": "\/specyalisty\/",
+            "http_status": "200",
+            "fatal": "no",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "route": "\/o-centre\/",
+            "http_status": "200",
+            "fatal": "no",
+            "result": "PASS",
+            "notes": ""
+        },
+        {
+            "route": "\/kontakty\/",
+            "http_status": "200",
+            "fatal": "no",
+            "result": "PASS",
+            "notes": ""
+        }
+    ]
+}

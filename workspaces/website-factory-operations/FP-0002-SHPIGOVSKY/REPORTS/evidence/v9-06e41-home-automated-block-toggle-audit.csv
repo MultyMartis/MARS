@@ -1,0 +1,21 @@
+frontend_order,block_class,block_label,source_of_truth,current_admin_control,needs_toggle,toggle_field,action,notes
+1,hero hero--home,Hero,Home ACF home_hero_slides (+ legacy hero_media),slides + CTA + legacy image,no,,IMPLEMENT_SLIDER,Standalone hero_media retired; slider settings added
+2,home-recovery-intro,Введение о восстановлении,Home ACF fields,direct editable fields,no,,NONE,HOME_EDITABLE_DIRECT
+3,founder-quote,Цитата основателя,Site Settings / static V9 (admin notice),message notice only,yes,home_founder_quote_visible,ADD_TOGGLE,Operator example block
+4,home-treatment-prevention,Лечение и профилактика,Home heading/lead + CPT service accordion,heading/lead + accordion notice,yes,home_treatment_prevention_visible,ADD_TOGGLE,Accordion automated from CPT
+5,home-gallery,Галерея услуг,CPT service + Home gallery settings,mode/count/selected,yes,home_gallery_visible,ADD_TOGGLE,List source external; settings remain
+6,home-why-us,Почему нас выбирают,Home ACF,direct editable,no,,NONE,HOME_EDITABLE_DIRECT
+7,home-staff-photo,Фото команды,Home ACF image,image field,no,,NONE,HOME_EDITABLE_DIRECT
+8,home-feature-grid / advantages,Преимущества,Home ACF repeater,repeater,no,,NONE,HOME_EDITABLE_DIRECT
+9,home-clinic-landscape,Территория,Home ACF image,image field,no,,NONE,HOME_EDITABLE_DIRECT
+10,home-recovery-life,Как меняется жизнь,Home ACF,direct editable + stages,no,,MARKUP_REWORK,Stage labels/markup E41
+11,reviews,Отзывы,Site Settings / Reviews options,message notice only,yes,home_reviews_visible,ADD_TOGGLE,Automated external
+12,home-rehabilitation-requirements,Что нужно для реабилитации,Reusable block options,none on Home admin,yes,home_rehab_requirements_visible,ADD_TOGGLE_AND_NOTICE,Automated reusable
+13,home-rehabilitation-program,Программа / направления,Program pages helper + static copy,none on Home admin,yes,home_rehab_program_visible,ADD_TOGGLE_AND_NOTICE,Directions from program pages
+14,home-genotyping,Генотипирование,Home ACF,direct editable,no,,NONE,HOME_EDITABLE_DIRECT
+15,comfort,Комфорт,Reusable blocks comfort,message notice only,yes,home_comfort_visible,ADD_TOGGLE,Automated external
+16,home-videos,Видео,Home ACF Media Library,direct editable,no,,NONE,HOME_EDITABLE_DIRECT
+17,specialists,Специалисты,/specyalisty/ children + reusable heading,message notice only,yes,home_specialists_visible,ADD_TOGGLE,Automated external
+18,home-articles,Статьи,WP posts + Home heading,heading + notice,yes,home_articles_visible,ADD_TOGGLE,Cards automated from posts
+19,home-faq,FAQ,Home ACF,direct editable,no,,NONE,HOME_EDITABLE_DIRECT
+20,final-form,Финальная форма,Reusable final-form + Home CTA fallback,fallback fields on Home,no,,STATIC_NO_TOGGLE_THIS_WAVE,Hybrid; keep always on unless operator asks

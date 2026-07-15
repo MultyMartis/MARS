@@ -1,0 +1,4 @@
+page,expected,actual,result,notes
+314,service model clean,clean,PASS,"role=service groups=group_fp02_service_layout_hero|group_fp02_service_hero|group_fp02_service_general_parity"
+78,service model clean,clean,PASS,"role=service groups=group_fp02_service_layout_hero|group_fp02_service_hero|group_fp02_service_general_parity"
+73,section model preserved,preserved,PASS,"role=section groups=group_fp02_service_faq|group_fp02_service_relationships|group_fp02_service_structured_sections|group_fp02_service_layout_hero|group_fp02_service_hero|group_fp02_service_section_parity"

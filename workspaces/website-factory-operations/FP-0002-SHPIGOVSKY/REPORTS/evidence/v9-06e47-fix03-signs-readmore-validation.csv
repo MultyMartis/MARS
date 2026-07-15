@@ -1,0 +1,10 @@
+scenario,expected,actual,result,notes
+desktop_demo_editorial_5_lines,button hidden when <=5 lines,"clientHeight=120 scrollHeight=120 buttonHidden=true isClamped=false",PASS,Demo lorem on #74 is exactly 5 lines at 1440px
+tablet_demo_editorial_gt_5,clamped + button visible,"isClamped=true buttonHidden=false clientHeight=120 scrollHeight=144",PASS,After fonts/load/rAF harden
+mobile_demo_editorial_gt_5,clamped + button visible,"isClamped=true buttonHidden=false scrollHeight=264",PASS,
+tablet_click_expand,smooth expand + button hide,"afterClick clientHeight=144 buttonHidden=true ariaExpanded=true",PASS,No console errors
+mobile_click_expand,smooth expand + button hide,"afterClick clientHeight=264 buttonHidden=true",PASS,
+forced_long_text_desktop,clamp then expand,"before isClamped+button; after full height button hidden",PASS,In-page simulation no DB write
+short_text_sim,button hidden,"buttonHidden=true isClamped=false scrollHeight=24",PASS,In-page simulation no DB write; no residual meta mutation
+resize_recalc,debounced recalculation,resize listener 150ms + runSync on fonts/load,PASS,Verified via tablet/mobile differing from desktop
+no_js_fatal,no pageerror,[],PASS,playwright-core probes

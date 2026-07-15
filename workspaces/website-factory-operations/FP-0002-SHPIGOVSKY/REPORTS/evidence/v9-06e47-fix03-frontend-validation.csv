@@ -1,0 +1,13 @@
+route,http,signs_block,readmore_button_markup,result,notes
+/,200,absent,absent,PASS,Home frozen; no signs markup; size residual known gallery
+/uslugi/,200,absent,absent,PASS,Hub frozen visual intent; no signs
+/uslugi/zavisimosti/,200,absent,absent,PASS,Section model; no service signs block
+/uslugi/psihicheskoe-zdorovie/,200,n/a,n/a,PASS,HTTP 200
+/uslugi/rasstroystva-pischevogo-povedeniya/,200,n/a,n/a,PASS,HTTP 200
+/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/,200,present,button present,PASS,Base #74; clamp/read-more behavior validated
+?p=314,200,absent,absent,PASS,No editorial signs seeded; no JS fatal
+?p=78,200,absent,absent,PASS,No signs block; no JS fatal
+/blog/,200,n/a,n/a,PASS,
+/specyalisty/,200,n/a,n/a,PASS,
+/o-centre/,200,n/a,n/a,PASS,
+/kontakty/,200,n/a,n/a,PASS,

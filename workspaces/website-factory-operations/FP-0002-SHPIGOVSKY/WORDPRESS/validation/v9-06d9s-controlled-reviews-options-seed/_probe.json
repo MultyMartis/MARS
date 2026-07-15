@@ -1,0 +1,55 @@
+{
+    "options_keys": [
+        {
+            "option_name": "_options_reviews_enabled",
+            "preview": "field_fp02_reviews_enabled"
+        },
+        {
+            "option_name": "_options_reviews_items",
+            "preview": "field_fp02_reviews_items"
+        },
+        {
+            "option_name": "_options_reviews_section_heading",
+            "preview": "field_fp02_reviews_section_heading"
+        },
+        {
+            "option_name": "options_reviews_enabled",
+            "preview": "1"
+        },
+        {
+            "option_name": "options_reviews_items",
+            "preview": "10"
+        },
+        {
+            "option_name": "options_reviews_section_heading",
+            "preview": "Отзывы"
+        }
+    ],
+    "get_field_reviews_items": 10,
+    "first_row_keys": [
+        "author_label",
+        "text",
+        "metadata",
+        "source"
+    ],
+    "first_row": {
+        "author_label": "",
+        "text": "",
+        "metadata": "",
+        "source": ""
+    },
+    "option_items_count": 0,
+    "resolved_count": 10,
+    "first_resolved": {
+        "author": "Александр, Москва",
+        "text": "Обратились в&nbsp;центр в&nbsp;непростой период. С&nbsp;первого контакта чувствовалось уважительное отношение и&nbsp;спокойный тон общения. Персонал отвечал на&nbsp;вопросы без спешки и&nbsp;давления.",
+        "rating": 5,
+        "context": "",
+        "source": "",
+        "date": "",
+        "featured": true,
+        "visible": true,
+        "is_demo": true
+    },
+    "source_mode": "FALLBACK"
+}

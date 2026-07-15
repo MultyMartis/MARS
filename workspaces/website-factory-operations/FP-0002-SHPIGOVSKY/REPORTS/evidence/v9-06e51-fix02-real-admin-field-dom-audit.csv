@@ -1,0 +1,5 @@
+selector_or_label,field_name,field_key,input_type,input_name,current_value,disabled,readonly,posted_expected,issue_found,notes
+role_radio_acf_prefixed,service_editor_role,field_fp02_service_editor_role,radio,acf[field_fp02_service_editor_role],placeholder,NO,NO,YES,,"acf=3 bare=0 (FIX02: bare input tags must be 0)"
+bare_name_input_tags,service_editor_role,field_fp02_service_editor_role,radio/hidden,service_editor_role,0,NO,NO,0,,"Pre-FIX02 root cause: bare name posted outside $_POST[acf]"
+acf_form_nonce,_acf_nonce,,hidden,_acf_nonce,present,NO,NO,YES,,"Required for real acf_save_post path"
+technical_layout_select,service_layout_variant,field_fp02_service_layout_variant,select,acf[field_fp02_service_layout_variant],placeholder,NO,NO,"present (may be stale placeholder until sync)",,"hidden via acf-hidden; still posted"

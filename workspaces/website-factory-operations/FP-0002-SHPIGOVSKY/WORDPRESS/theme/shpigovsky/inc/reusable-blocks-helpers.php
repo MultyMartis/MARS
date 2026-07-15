@@ -157,6 +157,8 @@ function shpigovsky_get_specialists_all_link_label( $static_fallback = 'все �
 /**
  * Resolve specialists all-link URL.
  *
+ * V9-06E34: default points to `/specyalisty/` parent page.
+ *
  * @param string $static_fallback Static fallback URL.
  * @return string
  */
@@ -168,121 +170,155 @@ function shpigovsky_get_specialists_all_link_url( $static_fallback = '' ) {
 	}
 
 	if ( '' === $static_fallback ) {
-		$static_fallback = home_url( '/o-centre/' );
+		$parent_id = shpigovsky_get_specialists_parent_page_id();
+		$static_fallback = $parent_id > 0 ? get_permalink( $parent_id ) : home_url( '/specyalisty/' );
 	}
 
 	return $static_fallback;
 }
 
 /**
- * Normalize one specialists repeater row into render-ready card data.
+ * Resolve Specialists parent page ID (`/specyalisty/`).
  *
- * @param array<string, mixed> $row          ACF repeater row.
- * @param array<string, mixed> $fallback_row Static fallback row matched by index.
+ * @return int
+ */
+function shpigovsky_get_specialists_parent_page_id() {
+	static $cached = null;
+
+	if ( null !== $cached ) {
+		return $cached;
+	}
+
+	$page = get_page_by_path( 'specyalisty' );
+	$cached = ( $page instanceof WP_Post ) ? (int) $page->ID : 0;
+
+	return $cached;
+}
+
+/**
+ * Specialist no-photo placeholder (theme-local SVG; distinct from service/blog placeholders).
+ *
+ * @return array{url:string,width:int,height:int,alt:string,source:string}
+ */
+function shpigovsky_get_specialist_placeholder_image() {
+	return array(
+		'url'    => shpigovsky_asset_uri( 'images/specialist-no-photo.svg' ),
+		'width'  => 640,
+		'height' => 640,
+		'alt'    => '',
+		'source' => 'specialist-placeholder',
+	);
+}
+
+/**
+ * Normalize a specialist child page into render-ready card data.
+ *
+ * @param WP_Post $page Specialist child page.
  * @return array{image:string,width:int,height:int,name:string,role:string,link:string}|null
  */
-function shpigovsky_normalize_specialist_card_row( $row, $fallback_row ) {
-	if ( ! is_array( $row ) ) {
+function shpigovsky_normalize_specialist_page_card( $page ) {
+	if ( ! ( $page instanceof WP_Post ) ) {
 		return null;
 	}
 
-	$name = isset( $row['specialist_name'] ) ? trim( (string) $row['specialist_name'] ) : '';
-	$role = isset( $row['specialist_role'] ) ? trim( (string) $row['specialist_role'] ) : '';
-	$link = isset( $row['specialist_link'] ) ? trim( (string) $row['specialist_link'] ) : '';
-
-	if ( '' === $name && '' === $role ) {
+	$name = trim( (string) $page->post_title );
+	if ( '' === $name ) {
 		return null;
 	}
 
-	if ( '' === $name && is_array( $fallback_row ) ) {
-		$name = isset( $fallback_row['name'] ) ? (string) $fallback_row['name'] : '';
+	$role = trim( (string) $page->post_excerpt );
+	if ( '' === $role ) {
+		$role = trim( (string) get_post_meta( $page->ID, '_shpigovsky_specialist_role', true ) );
+	}
+	if ( '' === $role ) {
+		$content = trim( wp_strip_all_tags( (string) $page->post_content ) );
+		if ( '' !== $content ) {
+			$role = wp_html_excerpt( $content, 160, '…' );
+		}
 	}
 
-	if ( '' === $role && is_array( $fallback_row ) ) {
-		$role = isset( $fallback_row['role'] ) ? (string) $fallback_row['role'] : '';
+	$width  = 615;
+	$height = 605;
+	$image  = '';
+
+	$thumb_id = (int) get_post_thumbnail_id( $page->ID );
+	if ( $thumb_id > 0 ) {
+		$src = wp_get_attachment_image_src( $thumb_id, 'full' );
+		if ( is_array( $src ) && ! empty( $src[0] ) ) {
+			$image  = (string) $src[0];
+			$width  = ! empty( $src[1] ) ? (int) $src[1] : $width;
+			$height = ! empty( $src[2] ) ? (int) $src[2] : $height;
+		}
 	}
 
-	$image_path = isset( $row['specialist_photo_asset'] ) ? trim( (string) $row['specialist_photo_asset'] ) : '';
-	$width      = isset( $row['specialist_photo_width'] ) ? (int) $row['specialist_photo_width'] : 0;
-	$height     = isset( $row['specialist_photo_height'] ) ? (int) $row['specialist_photo_height'] : 0;
-	$media      = isset( $row['specialist_photo'] ) ? $row['specialist_photo'] : null;
-	$media_url  = shpigovsky_acf_image_url( $media );
-
-	if ( '' !== $media_url ) {
-		$image_path = $media_url;
-		if ( is_array( $media ) ) {
-			if ( ! empty( $media['width'] ) ) {
-				$width = (int) $media['width'];
+	if ( '' === $image ) {
+		$asset = trim( (string) get_post_meta( $page->ID, '_shpigovsky_specialist_photo_asset', true ) );
+		if ( '' !== $asset ) {
+			$image = preg_match( '#^https?://#i', $asset ) ? $asset : shpigovsky_asset_uri( $asset );
+			$meta_w = (int) get_post_meta( $page->ID, '_shpigovsky_specialist_photo_width', true );
+			$meta_h = (int) get_post_meta( $page->ID, '_shpigovsky_specialist_photo_height', true );
+			if ( $meta_w > 0 ) {
+				$width = $meta_w;
 			}
-			if ( ! empty( $media['height'] ) ) {
-				$height = (int) $media['height'];
+			if ( $meta_h > 0 ) {
+				$height = $meta_h;
 			}
 		}
-	} elseif ( '' !== $image_path ) {
-		if ( ! preg_match( '#^https?://#i', $image_path ) ) {
-			$image_path = shpigovsky_asset_uri( $image_path );
-		}
-	} elseif ( is_array( $fallback_row ) && ! empty( $fallback_row['image'] ) ) {
-		$image_path = shpigovsky_asset_uri( (string) $fallback_row['image'] );
 	}
 
-	if ( '' === $image_path ) {
-		return null;
-	}
-
-	if ( $width <= 0 && is_array( $fallback_row ) ) {
-		$width = isset( $fallback_row['width'] ) ? (int) $fallback_row['width'] : 615;
-	}
-
-	if ( $height <= 0 && is_array( $fallback_row ) ) {
-		$height = isset( $fallback_row['height'] ) ? (int) $fallback_row['height'] : 605;
+	if ( '' === $image ) {
+		$placeholder = shpigovsky_get_specialist_placeholder_image();
+		$image       = $placeholder['url'];
+		$width       = $placeholder['width'];
+		$height      = $placeholder['height'];
 	}
 
 	return array(
-		'image'  => $image_path,
+		'image'  => $image,
 		'width'  => $width,
 		'height' => $height,
 		'name'   => $name,
 		'role'   => $role,
-		'link'   => $link,
+		'link'   => get_permalink( $page ),
 	);
 }
 
 /**
  * Resolve specialists cards for all reusable specialists renderers.
  *
- * Fallback order: block repeater → V9 static fixture.
+ * V9-06E34: automatic from published child pages of `/specyalisty/`.
+ * Manual ACF repeater / static fixture are no longer the active source.
  *
  * @return array<int, array{image:string,width:int,height:int,name:string,role:string,link:string}>
  */
 function shpigovsky_get_specialists_cards() {
-	$fallback = shpigovsky_get_v9_specialists_cards();
-	$rows     = array();
-
-	if ( function_exists( 'get_field' ) ) {
-		$candidate = get_field( 'specialists_items', shpigovsky_get_specialists_block_context() );
-
-		if ( is_array( $candidate ) ) {
-			$rows = $candidate;
-		}
+	$parent_id = shpigovsky_get_specialists_parent_page_id();
+	if ( $parent_id <= 0 ) {
+		return array();
 	}
 
-	if ( empty( $rows ) ) {
-		return $fallback;
-	}
+	$pages = get_posts(
+		array(
+			'post_type'      => 'page',
+			'post_parent'    => $parent_id,
+			'post_status'    => 'publish',
+			'numberposts'    => 50,
+			'orderby'        => array(
+				'menu_order' => 'ASC',
+				'title'      => 'ASC',
+			),
+		)
+	);
 
 	$cards = array();
-
-	foreach ( $rows as $index => $row ) {
-		$fallback_row = isset( $fallback[ $index ] ) ? $fallback[ $index ] : ( ! empty( $fallback ) ? $fallback[0] : array() );
-		$card         = shpigovsky_normalize_specialist_card_row( $row, $fallback_row );
-
+	foreach ( $pages as $page ) {
+		$card = shpigovsky_normalize_specialist_page_card( $page );
 		if ( null !== $card ) {
 			$cards[] = $card;
 		}
 	}
 
-	return ! empty( $cards ) ? $cards : $fallback;
+	return $cards;
 }
 
 /**

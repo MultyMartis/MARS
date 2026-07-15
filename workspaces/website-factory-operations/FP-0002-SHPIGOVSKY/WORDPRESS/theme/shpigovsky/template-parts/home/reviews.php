@@ -11,6 +11,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// V9-06E46: Home toggle applies only on front page (do not hide section/hub reviews).
+if ( is_front_page() && ! shpigovsky_home_list_enabled( 'home_reviews_visible' ) ) {
+	return;
+}
+
 $slider_args = wp_parse_args(
 	$args ?? array(),
 	array(

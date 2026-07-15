@@ -1,0 +1,133 @@
+{
+    "options_page_groups": [
+        {
+            "key": "group_fp02_site_options_contacts",
+            "title": "Site Options — Contacts and Organisation",
+            "fields": [
+                {
+                    "name": "organisation_name",
+                    "key": "field_fp02_org_name",
+                    "subfields": []
+                },
+                {
+                    "name": "phone_primary",
+                    "key": "field_fp02_phone_primary",
+                    "subfields": []
+                },
+                {
+                    "name": "phone_secondary",
+                    "key": "field_fp02_phone_secondary",
+                    "subfields": []
+                },
+                {
+                    "name": "site_email",
+                    "key": "field_fp02_site_email",
+                    "subfields": []
+                },
+                {
+                    "name": "site_address",
+                    "key": "field_fp02_site_address",
+                    "subfields": []
+                },
+                {
+                    "name": "opening_hours",
+                    "key": "field_fp02_opening_hours",
+                    "subfields": []
+                },
+                {
+                    "name": "map_link",
+                    "key": "field_fp02_map_link",
+                    "subfields": []
+                },
+                {
+                    "name": "social_links",
+                    "key": "field_fp02_social_links",
+                    "subfields": [
+                        "label",
+                        "url"
+                    ]
+                },
+                {
+                    "name": "legal_org_identifiers",
+                    "key": "field_fp02_legal_org_identifiers",
+                    "subfields": []
+                }
+            ]
+        },
+        {
+            "key": "group_fp02_site_options_modal_cta",
+            "title": "Site Options — Modal and Global CTA",
+            "fields": [
+                {
+                    "name": "default_callback_title",
+                    "key": "field_fp02_default_callback_title",
+                    "subfields": []
+                },
+                {
+                    "name": "default_callback_text",
+                    "key": "field_fp02_default_callback_text",
+                    "subfields": []
+                },
+                {
+                    "name": "default_button_label",
+                    "key": "field_fp02_default_button_label",
+                    "subfields": []
+                },
+                {
+                    "name": "default_secondary_button_label",
+                    "key": "field_fp02_default_secondary_button_label",
+                    "subfields": []
+                },
+                {
+                    "name": "default_consent_text_reference",
+                    "key": "field_fp02_default_consent_text_reference",
+                    "subfields": []
+                },
+                {
+                    "name": "global_cta_title",
+                    "key": "field_fp02_global_cta_title",
+                    "subfields": []
+                },
+                {
+                    "name": "global_cta_text",
+                    "key": "field_fp02_global_cta_text",
+                    "subfields": []
+                }
+            ]
+        },
+        {
+            "key": "group_fp02_site_options_reviews",
+            "title": "Site Options — Reviews",
+            "fields": [
+                {
+                    "name": "reviews_enabled",
+                    "key": "field_fp02_reviews_enabled",
+                    "subfields": []
+                },
+                {
+                    "name": "reviews_section_heading",
+                    "key": "field_fp02_reviews_section_heading",
+                    "subfields": []
+                },
+                {
+                    "name": "reviews_items",
+                    "key": "field_fp02_reviews_items",
+                    "subfields": [
+                        "author_label",
+                        "text",
+                        "metadata",
+                        "source"
+                    ]
+                }
+            ]
+        }
+    ],
+    "get_field_option_reviews_items": 10,
+    "first_option_row": {
+        "author_label": "Александр, Москва",
+        "text": "Обратились в&nbsp;центр в&nbsp;непростой период. С&nbsp;первого контакта чувствовалось уважительное отношение и&nbsp;спокойный тон общения. Персонал отвечал на&nbsp;вопросы без спешки и&nbsp;давления.",
+        "metadata": "",
+        "source": ""
+    },
+    "helper_option_items": 0
+}

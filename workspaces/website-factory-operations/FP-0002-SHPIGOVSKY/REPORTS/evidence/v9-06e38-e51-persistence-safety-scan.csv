@@ -1,0 +1,7 @@
+path_or_check,scan_type,result,action,notes
+foreign_paths_in_manifest,scope,0,PASS,manifest scoped to FP-0002 only
+git_add_dot,forbidden,not used,PASS,exact paths only
+blocked_credential_files,0,0,PASS,
+large_files_over_5mb_in_include,0,0,PASS,
+sql_dumps,0,0,PASS,none in include set
+chrome_profile_dirs,excluded,excluded,PASS,not staged

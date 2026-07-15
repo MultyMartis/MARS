@@ -1,0 +1,10 @@
+frontend_order,frontend_block,admin_section_current,admin_issue,required_fix,action_taken,notes
+1,Hero,1. Hero (pointer to Hero group),none after FIX01,none,none,Shared hero group untouched
+2,Якорная навигация,2. Навигация по якорям,none,none,none,Toggle only
+3,Дочерние услуги / Зависимости,"3. Зависимости / дочерние услуги",label wrong vs operator request,rename to «3. Дочерние услуги»,renamed in ServiceSectionParity + ACF JSON,description/children_notice kept
+4,Природа зависимости (нейробиология/генотипирование),"4. Природа… fixed pair fields",pairs not repeatable,convert subtitle/text pairs to repeater,section_nature_text_blocks seeded #73 (2 rows),cards repeater unchanged; legacy pair fields fallback retained
+5,CTA mid,5. CTA «С чего начать»,label wrong,rename to «5. CTA «Раздел услуги»»,renamed notice+toggle,Structured Sections CTA fields unchanged
+6,Программа лечения intros,Intro программы (1)/(2),not repeatable,repeater intros,section_program_intro_items seeded 2 rows,legacy intro/intro2 fallback
+7,Этапы,"7. Этапы… chrome only; PHP leak on FE",frontend shows raw PHP / broken,fix premature ?> + stages items parity,stages.php fixed; section_stages_items seeded 4 rows,Home rehab-requirements markup reused
+8,Наш подход,8. Наш подход,none in operator list,none,none,cards already repeater
+9-15,Shared/auto blocks,9–15 notices+toggles,none required,none,none,Home/shared patterns preserved

@@ -47,6 +47,25 @@ function shpigovsky_enqueue_assets() {
 		);
 	}
 
+	$child_css = SHPIGOVSKY_THEME_DIR . '/assets/css/service-child-services.css';
+	$is_placeholder_service = is_singular( 'service' )
+		&& function_exists( 'shpigovsky_resolve_service_layout_variant' )
+		&& 'placeholder' === shpigovsky_resolve_service_layout_variant();
+	if ( is_readable( $child_css ) && is_singular( 'service' ) && ! $is_placeholder_service ) {
+		$child_deps = array();
+		if ( wp_style_is( 'shpigovsky-v9', 'enqueued' ) || wp_style_is( 'shpigovsky-v9', 'registered' ) ) {
+			$child_deps[] = 'shpigovsky-v9';
+		} elseif ( wp_style_is( 'shpigovsky-foundation', 'enqueued' ) || wp_style_is( 'shpigovsky-foundation', 'registered' ) ) {
+			$child_deps[] = 'shpigovsky-foundation';
+		}
+		wp_enqueue_style(
+			'shpigovsky-service-child-services',
+			SHPIGOVSKY_THEME_URI . '/assets/css/service-child-services.css',
+			$child_deps,
+			shpigovsky_asset_version( 'css/service-child-services.css' )
+		);
+	}
+
 	$shell_js_path = SHPIGOVSKY_THEME_DIR . '/assets/js/v9-shell.js';
 
 	if ( is_readable( $shell_js_path ) ) {

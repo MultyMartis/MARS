@@ -9,6 +9,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+if ( ! shpigovsky_services_hub_list_enabled( 'services_hub_catalog_visible' ) ) {
+	return;
+}
+
 $groups = shpigovsky_get_services_hub_groups();
 
 if ( empty( $groups ) ) {

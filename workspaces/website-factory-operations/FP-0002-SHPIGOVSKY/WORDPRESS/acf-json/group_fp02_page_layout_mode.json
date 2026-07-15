@@ -1,0 +1,48 @@
+{
+    "key": "group_fp02_page_layout_mode",
+    "title": "Макет страницы",
+    "fields": [
+        {
+            "key": "field_fp02_page_layout_mode",
+            "label": "Макет страницы",
+            "name": "page_layout_mode",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "Временный режим страницы. На фронте выводятся только шапка, навигация, H1 и подвал. Контент в полях не удаляется и может быть включён обратно сменой макета.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "fp02-acf-section-title fp02-page-layout-selector",
+                "id": ""
+            },
+            "choices": {
+                "full": "Полная страница",
+                "placeholder": "Заглушка"
+            },
+            "default_value": "full",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/generic.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "V9-06E51 page placeholder\/stub layout mode for Generic Content template.",
+    "show_in_rest": 0,
+    "modified": 1721080800
+}

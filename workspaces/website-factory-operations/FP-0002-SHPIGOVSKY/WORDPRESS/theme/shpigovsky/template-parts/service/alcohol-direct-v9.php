@@ -1,9 +1,9 @@
 <?php
 /**
- * Direct static V9 section stack — usluga-konechnaya-v1.html authority.
+ * Direct static V9 section stack — general service stack (V9-06E45-FIX01 / V9-06E47).
  *
- * Replaces semantic ACF/home-partial orchestration for alcohol-special route only.
- * Hero admin image system preserved via inner-hero partial.
+ * Layout order matches usluga-konechnaya-v1 / service_general stack (legacy alcohol_special).
+ * Content SoT: ACF «Услуга — блоки страницы» (seeded). Alcohol PHP demos are emergency only.
  *
  * @package Shpigovsky
  */
@@ -12,79 +12,148 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$post_id = shpigovsky_get_current_service_id();
+
 // 1. services-inner-hero-v2 — KEEP_FOR_HERO (admin hero_media).
 get_template_part( 'template-parts/service/inner-hero' );
 
-// 2. internal-page-nav — static V9 alcohol anchor list via subnav helper.
-get_template_part( 'template-parts/service/subnav' );
+// 2. internal-page-nav.
+if ( shpigovsky_general_block_enabled( $post_id, 'service_general_nav_visible' ) ) {
+	get_template_part( 'template-parts/service/subnav' );
+}
 
-// 3–6. Direct V9 leaf sections (intro/bordered-info use alcohol-special branches in shared partials).
-get_template_part( 'template-parts/service/intro' );
-get_template_part( 'template-parts/service/bordered-info' );
-get_template_part( 'template-parts/service/mid-cta' );
-get_template_part( 'template-parts/service/signs' );
+// 3. Intro.
+if ( shpigovsky_general_block_enabled( $post_id, 'service_general_intro_visible' ) ) {
+	get_template_part( 'template-parts/service/intro' );
+}
 
-// 7. service-leaf-approach-v1 — direct V9 (not ACF programme_items).
-get_template_part( 'template-parts/service/alcohol-direct-v9/approach' );
+// 4. Bordered info.
+if ( shpigovsky_general_block_enabled( $post_id, 'service_general_bordered_info_visible' ) ) {
+	get_template_part( 'template-parts/service/bordered-info' );
+}
 
-// 8. clinic-landscape — static V9 markup proven in home/clinic-landscape.php.
-get_template_part(
-	'template-parts/home/clinic-landscape',
-	null,
-	array(
-		'modifier_class' => 'service-leaf-landscape-v1',
-	)
-);
+// 5. Mid CTA.
+if ( shpigovsky_general_block_enabled( $post_id, 'service_general_mid_cta_visible' ) ) {
+	get_template_part( 'template-parts/service/mid-cta' );
+}
 
-// 9. services-program-v2 — alcohol-special branch in program.php.
-get_template_part( 'template-parts/service/program' );
+// 6. Signs.
+if ( shpigovsky_general_block_enabled( $post_id, 'service_general_signs_visible' ) ) {
+	get_template_part( 'template-parts/service/signs' );
+}
 
-// 10. service-leaf-stages-v1 — direct V9 (not ACF stages).
-get_template_part( 'template-parts/service/alcohol-direct-v9/stages' );
+// 7. Approach — ACF-driven leaf approach when available; else programme_items partial.
+if ( shpigovsky_general_block_enabled( $post_id, 'service_general_approach_visible' ) ) {
+	$approach = function_exists( 'shpigovsky_get_general_approach_copy' )
+		? shpigovsky_get_general_approach_copy( $post_id )
+		: null;
+	if ( is_array( $approach ) && ! empty( $approach['cards'] ) ) {
+		get_template_part( 'template-parts/service/alcohol-direct-v9/approach' );
+	} else {
+		get_template_part( 'template-parts/service/approach' );
+	}
+}
 
-// 11. service-leaf-corridor-v1.
-get_template_part( 'template-parts/service/corridor' );
+// 8. clinic-landscape.
+if ( shpigovsky_general_block_enabled( $post_id, 'service_general_clinic_landscape_visible' ) ) {
+	get_template_part(
+		'template-parts/home/clinic-landscape',
+		null,
+		array(
+			'modifier_class' => 'service-leaf-landscape-v1',
+		)
+	);
+}
 
-// 12. specialists — direct V9 (not home/specialists.php; requires Swiper on alcohol leaf).
-get_template_part( 'template-parts/service/alcohol-direct-v9/specialists' );
+// 9. services-program-v2.
+if ( shpigovsky_general_block_enabled( $post_id, 'service_general_program_visible' ) ) {
+	get_template_part( 'template-parts/service/program' );
+}
 
-// 13–15. Shared V9 sections with service-leaf IDs.
+// 10. stages — ACF-driven leaf stages when available; else shared stages partial.
+if ( shpigovsky_general_block_enabled( $post_id, 'service_general_stages_visible' ) ) {
+	$stages = function_exists( 'shpigovsky_get_general_stages_copy' )
+		? shpigovsky_get_general_stages_copy( $post_id )
+		: null;
+	if ( is_array( $stages ) && ! empty( $stages['steps'] ) ) {
+		get_template_part( 'template-parts/service/alcohol-direct-v9/stages' );
+	} else {
+		get_template_part( 'template-parts/service/stages' );
+	}
+}
 
-get_template_part(
-	'template-parts/home/founder-quote',
-	null,
-	array(
-		'modal_source'   => 'service-leaf-founder',
-		'modifier_class' => ' founder-quote--variant-b',
-	)
-);
+// 11. corridor.
+if ( shpigovsky_general_block_enabled( $post_id, 'service_general_corridor_visible' ) ) {
+	get_template_part( 'template-parts/service/corridor' );
+}
 
-get_template_part(
-	'template-parts/home/comfort',
-	null,
-	array(
-		'section_id' => 'service-leaf-comfort',
-		'heading_id' => 'service-leaf-comfort-heading',
-	)
-);
+// 12. specialists — shared CPT cards (preserve historic alcohol visibility when unset).
+$show_specialists = shpigovsky_general_block_enabled( $post_id, 'service_general_specialists_visible' );
+if ( $show_specialists ) {
+	$specialists_meta_set = metadata_exists( 'post', $post_id, 'service_general_specialists_visible' );
+	if ( $specialists_meta_set || ( function_exists( 'shpigovsky_is_known_alcohol_service_page' ) && shpigovsky_is_known_alcohol_service_page( $post_id ) ) ) {
+		get_template_part( 'template-parts/service/alcohol-direct-v9/specialists' );
+	}
+}
 
-get_template_part(
-	'template-parts/home/reviews',
-	null,
-	array(
-		'section_id' => 'service-leaf-reviews',
-	)
-);
+// 13–15. Shared V9 sections.
+if ( shpigovsky_general_block_enabled( $post_id, 'service_general_founder_quote_visible' ) ) {
+	get_template_part(
+		'template-parts/home/founder-quote',
+		null,
+		array(
+			'modal_source'   => 'service-leaf-founder',
+			'modifier_class' => ' founder-quote--variant-b',
+		)
+	);
+}
 
-// 16. faq — direct V9 static items (not ACF faq_items).
-get_template_part( 'template-parts/service/alcohol-direct-v9/faq' );
+if ( shpigovsky_general_block_enabled( $post_id, 'service_general_comfort_visible' ) ) {
+	get_template_part(
+		'template-parts/home/comfort',
+		null,
+		array(
+			'section_id' => 'service-leaf-comfort',
+			'heading_id' => 'service-leaf-comfort-heading',
+		)
+	);
+}
 
-// 17. final-form — static V9 placement.
-get_template_part(
-	'template-parts/components/final-form',
-	null,
-	array(
-		'lead_source' => 'service-leaf-final-section',
-		'heading_id'  => 'service-leaf-final-form-heading',
-	)
-);
+if ( shpigovsky_general_block_enabled( $post_id, 'service_general_reviews_visible' ) ) {
+	get_template_part(
+		'template-parts/home/reviews',
+		null,
+		array(
+			'section_id' => 'service-leaf-reviews',
+		)
+	);
+}
+
+// 15b. Child services tile menu — before FAQ.
+if ( shpigovsky_general_block_enabled( $post_id, 'service_general_children_visible' ) ) {
+	get_template_part( 'template-parts/service/child-services' );
+}
+
+// 16. FAQ.
+if ( shpigovsky_general_block_enabled( $post_id, 'service_general_faq_visible' ) ) {
+	$faq_items = function_exists( 'shpigovsky_get_general_faq_items' )
+		? shpigovsky_get_general_faq_items( $post_id )
+		: array();
+	if ( ! empty( $faq_items ) ) {
+		get_template_part( 'template-parts/service/alcohol-direct-v9/faq' );
+	} else {
+		get_template_part( 'template-parts/service/faq' );
+	}
+}
+
+// 17. final-form.
+if ( shpigovsky_general_block_enabled( $post_id, 'service_general_final_form_visible' ) ) {
+	get_template_part(
+		'template-parts/components/final-form',
+		null,
+		array(
+			'lead_source' => 'service-leaf-final-section',
+			'heading_id'  => 'service-leaf-final-form-heading',
+		)
+	);
+}

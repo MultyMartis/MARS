@@ -1,0 +1,292 @@
+{
+    "routes": [
+        {
+            "path": "/",
+            "url": "http://shpigovsky.test/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/",
+            "url": "http://shpigovsky.test/uslugi/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/zavisimosti/",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/soli/",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/soli/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/matadon/",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/matadon/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/geroin/",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/geroin/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lekarstva/",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lekarstva/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/ludomaniya/",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/ludomaniya/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/internet-zavisimost/",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/internet-zavisimost/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/sozavisimost/",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/sozavisimost/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/shopogolizm/",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/shopogolizm/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/psihicheskoe-zdorovie/",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/psihicheskoe-zdorovie/depressiya/",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/depressiya/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/psihicheskoe-zdorovie/ptsr/",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/ptsr/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/psihicheskoe-zdorovie/emotsionalnoe-vygoranie/",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/emotsionalnoe-vygoranie/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/psihicheskoe-zdorovie/travma/",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/travma/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+            "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+            "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/rasstroystva-pischevogo-povedeniya/buliniya/",
+            "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/buliniya/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/",
+            "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/genotipirovanie/",
+            "url": "http://shpigovsky.test/uslugi/genotipirovanie/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/specyalisty/",
+            "url": "http://shpigovsky.test/specyalisty/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/specyalisty/shipovsky/",
+            "url": "http://shpigovsky.test/specyalisty/shipovsky/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/specyalisty/kazakov/",
+            "url": "http://shpigovsky.test/specyalisty/kazakov/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/specyalisty/kostyuk/",
+            "url": "http://shpigovsky.test/specyalisty/kostyuk/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/o-centre/",
+            "url": "http://shpigovsky.test/o-centre/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/o-centre/o-nas/",
+            "url": "http://shpigovsky.test/o-centre/o-nas/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/o-centre/programma-lecheniya/",
+            "url": "http://shpigovsky.test/o-centre/programma-lecheniya/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/o-centre/galereya-o-dome/",
+            "url": "http://shpigovsky.test/o-centre/galereya-o-dome/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/o-centre/specialistam/",
+            "url": "http://shpigovsky.test/o-centre/specialistam/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/o-centre/rodstvennikam/",
+            "url": "http://shpigovsky.test/o-centre/rodstvennikam/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/o-centre/intervyu-i-smi/",
+            "url": "http://shpigovsky.test/o-centre/intervyu-i-smi/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/otzyvy/",
+            "url": "http://shpigovsky.test/otzyvy/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/blog/",
+            "url": "http://shpigovsky.test/blog/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/blog/nazvanie-stati/",
+            "url": "http://shpigovsky.test/blog/nazvanie-stati/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/kontakty/",
+            "url": "http://shpigovsky.test/kontakty/",
+            "status": 200,
+            "ok": true
+        }
+    ],
+    "regression": [
+        {
+            "path": "/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/o-centre/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/blog/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/blog/nazvanie-stati/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/zavisimosti/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/psihicheskoe-zdorovie/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+            "status": 200,
+            "ok": true
+        },
+        {
+            "path": "/privacy-policy/",
+            "status": 200,
+            "ok": true
+        }
+    ]
+}

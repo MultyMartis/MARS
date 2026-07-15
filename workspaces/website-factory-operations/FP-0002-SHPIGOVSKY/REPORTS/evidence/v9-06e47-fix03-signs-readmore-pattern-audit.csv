@@ -1,0 +1,8 @@
+pattern,file,reusable yes/no,applied yes/no,reason,notes
+accordion_aria_expanded,assets/js/v9-shell.js initTreatmentAccordion,yes,yes (pattern inspiration),Reuse aria-expanded + button semantics,Not a multi-panel accordion; single expand-hide
+offcanvas_aria,assets/js/v9-shell.js initOffcanvas,yes,partial,aria-expanded sync pattern reused,No offcanvas coupling
+faq_aria_markup,template-parts/service/faq.php,yes,yes (markup inspiration),Real button + aria-expanded/controls,FAQ JS separate
+line_clamp_existing,assets/css/v9-style.css,no,no,No prior 5-line editorial clamp,Implemented new scoped max-height clamp
+blog_read_more_links,blog-archive-card / review cards,no,no,Those are navigation links not expanders,Avoided conflict
+swiper_init,assets/js/v9-shell.js,no,no,Not needed for clamp,No new library
+script_enqueue,inc/assets.php shpigovsky-v9-shell,yes,yes,Reuse existing v9-shell enqueue,No new script handle

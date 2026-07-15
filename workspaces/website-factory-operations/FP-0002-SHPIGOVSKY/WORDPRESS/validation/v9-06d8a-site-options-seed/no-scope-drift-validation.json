@@ -1,22 +1,27 @@
 {
-  "phase": "V9-06D8-A",
-  "generated_at": "2026-07-04T20:22:00Z",
-  "runtime_files_changed": 0,
-  "source_files_changed": 0,
-  "database_writes": 0,
-  "wordpress_content_writes": 0,
-  "acf_page_meta_writes": 0,
-  "options_writes": 0,
-  "rewrite_flush": false,
-  "permalink_rewrite_changed": false,
-  "menus_changed": 0,
-  "redirects_created": 0,
-  "object_create_delete": 0,
-  "media_uploads": 0,
-  "plugin_updates": 0,
-  "plugin_installs": 0,
-  "plugin_deletes": 0,
-  "external_api_keys_added": false,
-  "git_docs_only_writes": true,
-  "result": "PASS"
+    "phase": "V9-06D8-A",
+    "generated_at": "2026-07-04T20:32:52+00:00",
+    "pre_counts": {
+        "pages": 22,
+        "services": 15,
+        "posts": 0,
+        "nav_menus": 3
+    },
+    "post_counts": {
+        "pages": 22,
+        "services": 15,
+        "posts": 0,
+        "nav_menus": 3
+    },
+    "count_changes": [],
+    "runtime_files_changed": false,
+    "source_files_changed": false,
+    "content_writes": 0,
+    "acf_page_meta_writes": 0,
+    "options_writes": 11,
+    "rewrite_flush": false,
+    "menus_changed": true,
+    "redirects_created": 0,
+    "object_create_delete": 0,
+    "result": "PASS"
 }

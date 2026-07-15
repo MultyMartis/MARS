@@ -1,0 +1,4 @@
+post_type,layout_mode_source,render_file,normal_render_path,placeholder_render_path,h1_source,action,notes
+service,"service_editor_role / service_layout_variant",single-service.php + service-template-loader.php,alcohol-stack|subdivision-stack|leaf-stack,placeholder-stack.php,"hero_title_override → post_title → fallback",implemented,early resolve before nested force
+page (generic),page_layout_mode,page-templates/generic.php,generic/content-page.php,inline H1-only branch in generic.php,post_title,implemented,default full; not mass-enabled
+page (other templates),n/a,dedicated templates,template-specific,n/a,varies,no_change_by_design,Home/hub/contacts/reviews/legal untouched

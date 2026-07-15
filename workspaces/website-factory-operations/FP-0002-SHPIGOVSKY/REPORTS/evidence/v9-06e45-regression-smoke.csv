@@ -1,0 +1,12 @@
+route,http,fatal,result
+/,200,no,PASS
+/uslugi/,200,no,PASS
+/uslugi/zavisimosti/,200,no,PASS
+/uslugi/psihicheskoe-zdorovie/,200,no,PASS
+/uslugi/rasstroystva-pischevogo-povedeniya/,200,no,PASS
+/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/,200,no,PASS
+/uslugi/psihicheskoe-zdorovie/depressiya/,200,no,PASS
+/blog/,200,no,PASS
+/specyalisty/,200,no,PASS
+/o-centre/,200,no,PASS
+/kontakty/,200,no,PASS

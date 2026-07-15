@@ -1,0 +1,609 @@
+post_id,field_name,action,seed_source,notes,preview
+74,service_general_team_image,preserved,accepted_demo_image,"control image if missing",non-scalar
+74,service_general_clinic_landscape_image,preserved,accepted_demo_image,"control image if missing",non-scalar
+74,service_general_corridor_image,preserved,accepted_demo_image,"control image if missing",non-scalar
+314,service_general_team_image,preserved,accepted_demo_image,"control image if missing",non-scalar
+314,service_general_clinic_landscape_image,preserved,accepted_demo_image,"control image if missing",non-scalar
+314,service_general_corridor_image,preserved,accepted_demo_image,"control image if missing",non-scalar
+78,service_general_team_image,preserved,accepted_demo_image,"control image if missing",non-scalar
+78,service_general_clinic_landscape_image,preserved,accepted_demo_image,"control image if missing",non-scalar
+78,service_general_corridor_image,preserved,accepted_demo_image,"control image if missing",non-scalar
+81,service_general_team_image,preserved,accepted_demo_image,"control image if missing",non-scalar
+81,service_general_clinic_landscape_image,preserved,accepted_demo_image,"control image if missing",non-scalar
+81,service_general_corridor_image,preserved,accepted_demo_image,"control image if missing",non-scalar
+85,service_general_team_image,preserved,accepted_demo_image,"control image if missing",non-scalar
+85,service_general_clinic_landscape_image,preserved,accepted_demo_image,"control image if missing",non-scalar
+85,service_general_corridor_image,preserved,accepted_demo_image,"control image if missing",non-scalar
+316,service_general_intro_heading,seeded,page_title_demo,"page-specific neutral demo","Поведенческие зависимости — состояние, с которым можн"
+316,service_general_intro_highlight,seeded,neutral_demo,"neutral demo highlight","DEMO — ЭТО НЕ ПРИГОВОР. ЭТО СОСТОЯНИЕ, КОТОРОЕ ПОДДАЁТСЯ "
+316,service_general_bordered_info_items,seeded,page_title_demo,"neutral bordered",array:3
+316,service_general_signs_heading,seeded,page_title_demo,"neutral signs","Признаки, на которые стоит обратить внимание (Поведенч"
+316,service_general_signs_intro,seeded,page_title_demo,"neutral signs","DEMO — если вы замечаете у себя или близкого изменения, с"
+316,service_general_signs_items,seeded,neutral_demo,"neutral signs",array:5
+316,service_general_signs_editorial,seeded,page_title_demo,"neutral signs editorial","DEMO — краткий редакционный блок для страницы «Поведенч"
+316,service_general_approach_heading,seeded,page_title_demo,"neutral approach","Наш подход к работе с запросом «Поведенческие зависим�"
+316,service_general_approach_highlight,seeded,neutral_demo,"neutral approach","DEMO — МЫ СОЧЕТАЕМ ДИАГНОСТИКУ, ТЕРАПИЮ И ПОДДЕРЖКУ СЕМЬ"
+316,service_general_approach_intro,seeded,page_title_demo,"neutral approach","DEMO — помощь по направлению «Поведенческие зависимост�"
+316,service_general_approach_more_label,seeded,neutral_demo,"neutral approach link",подробнее
+316,service_general_approach_more_url,seeded,neutral_demo,"neutral approach link",http://shpigovsky.test/o-centre/programma-lecheniya/
+316,service_general_approach_cards,seeded,neutral_demo,"neutral approach cards",array:4
+316,service_general_team_image,seeded,accepted_demo_image,"shared accepted demo image",1238
+316,service_general_clinic_landscape_image,seeded,accepted_demo_image,"shared accepted demo image",1239
+316,service_general_corridor_image,seeded,accepted_demo_image,"shared accepted demo image",1709
+316,service_general_program_heading,seeded,neutral_demo,"neutral program","Наша программа включает 4 направления"
+316,service_general_program_more_label,seeded,neutral_demo,"neutral program",подробнее
+316,service_general_program_lead,seeded,page_title_demo,"neutral program","DEMO — программа для «Поведенческие зависимости»: медиц"
+316,service_general_program_intro_items,seeded,page_title_demo,"neutral program",array:2
+316,service_general_stages_heading,seeded,neutral_demo,"neutral stages","Что нужно для начала работы с нами"
+316,service_general_stages_lead,seeded,neutral_demo,"neutral stages","DEMO — мы соблюдаем конфиденциальность и уважение к гра�"
+316,service_general_stages_items,seeded,neutral_demo,"neutral stages",array:4
+316,service_general_stages_support_heading,seeded,neutral_demo,"neutral stages","Поддержка осуществляется на всех этапах:"
+316,service_general_stages_support_items,seeded,neutral_demo,"neutral stages",array:4
+316,service_general_faq_heading,seeded,neutral_demo,"neutral faq","Нас часто спрашивают"
+316,service_general_faq_items,seeded,page_title_demo,"neutral faq",array:3
+316,service_general_specialists_visible,seeded,historic_layout,"preserve no-specialists leaf layout",0
+316,service_general_children_visible,seeded,automatic_children,"keep automatic child tiles visible",1
+75,service_general_intro_heading,seeded,page_title_demo,"page-specific neutral demo","Профилактический анализ — состояние, с которым можно �"
+75,service_general_intro_highlight,seeded,neutral_demo,"neutral demo highlight","DEMO — ЭТО НЕ ПРИГОВОР. ЭТО СОСТОЯНИЕ, КОТОРОЕ ПОДДАЁТСЯ "
+75,service_general_bordered_info_items,seeded,page_title_demo,"neutral bordered",array:3
+75,service_general_signs_heading,seeded,page_title_demo,"neutral signs","Признаки, на которые стоит обратить внимание (Профилак"
+75,service_general_signs_intro,seeded,page_title_demo,"neutral signs","DEMO — если вы замечаете у себя или близкого изменения, с"
+75,service_general_signs_items,seeded,neutral_demo,"neutral signs",array:5
+75,service_general_signs_editorial,seeded,page_title_demo,"neutral signs editorial","DEMO — краткий редакционный блок для страницы «Профилак"
+75,service_general_approach_heading,seeded,page_title_demo,"neutral approach","Наш подход к работе с запросом «Профилактический анал�"
+75,service_general_approach_highlight,seeded,neutral_demo,"neutral approach","DEMO — МЫ СОЧЕТАЕМ ДИАГНОСТИКУ, ТЕРАПИЮ И ПОДДЕРЖКУ СЕМЬ"
+75,service_general_approach_intro,seeded,page_title_demo,"neutral approach","DEMO — помощь по направлению «Профилактический анализ» "
+75,service_general_approach_more_label,seeded,neutral_demo,"neutral approach link",подробнее
+75,service_general_approach_more_url,seeded,neutral_demo,"neutral approach link",http://shpigovsky.test/o-centre/programma-lecheniya/
+75,service_general_approach_cards,seeded,neutral_demo,"neutral approach cards",array:4
+75,service_general_team_image,seeded,accepted_demo_image,"shared accepted demo image",1238
+75,service_general_clinic_landscape_image,seeded,accepted_demo_image,"shared accepted demo image",1239
+75,service_general_corridor_image,seeded,accepted_demo_image,"shared accepted demo image",1709
+75,service_general_program_heading,seeded,neutral_demo,"neutral program","Наша программа включает 4 направления"
+75,service_general_program_more_label,seeded,neutral_demo,"neutral program",подробнее
+75,service_general_program_lead,seeded,page_title_demo,"neutral program","DEMO — программа для «Профилактический анализ»: медицин"
+75,service_general_program_intro_items,seeded,page_title_demo,"neutral program",array:2
+75,service_general_stages_heading,seeded,neutral_demo,"neutral stages","Что нужно для начала работы с нами"
+75,service_general_stages_lead,seeded,neutral_demo,"neutral stages","DEMO — мы соблюдаем конфиденциальность и уважение к гра�"
+75,service_general_stages_items,seeded,neutral_demo,"neutral stages",array:4
+75,service_general_stages_support_heading,seeded,neutral_demo,"neutral stages","Поддержка осуществляется на всех этапах:"
+75,service_general_stages_support_items,seeded,neutral_demo,"neutral stages",array:4
+75,service_general_faq_heading,seeded,neutral_demo,"neutral faq","Нас часто спрашивают"
+75,service_general_faq_items,seeded,page_title_demo,"neutral faq",array:3
+75,service_general_specialists_visible,seeded,historic_layout,"preserve no-specialists leaf layout",0
+1047,service_general_intro_heading,seeded,page_title_demo,"page-specific neutral demo","Компьютерная зависимость — состояние, с которым можно"
+1047,service_general_intro_highlight,seeded,neutral_demo,"neutral demo highlight","DEMO — ЭТО НЕ ПРИГОВОР. ЭТО СОСТОЯНИЕ, КОТОРОЕ ПОДДАЁТСЯ "
+1047,service_general_bordered_info_items,seeded,page_title_demo,"neutral bordered",array:3
+1047,service_general_signs_heading,seeded,page_title_demo,"neutral signs","Признаки, на которые стоит обратить внимание (Компьюте"
+1047,service_general_signs_intro,seeded,page_title_demo,"neutral signs","DEMO — если вы замечаете у себя или близкого изменения, с"
+1047,service_general_signs_items,seeded,neutral_demo,"neutral signs",array:5
+1047,service_general_signs_editorial,seeded,page_title_demo,"neutral signs editorial","DEMO — краткий редакционный блок для страницы «Компьюте"
+1047,service_general_approach_heading,seeded,page_title_demo,"neutral approach","Наш подход к работе с запросом «Компьютерная зависимо�"
+1047,service_general_approach_highlight,seeded,neutral_demo,"neutral approach","DEMO — МЫ СОЧЕТАЕМ ДИАГНОСТИКУ, ТЕРАПИЮ И ПОДДЕРЖКУ СЕМЬ"
+1047,service_general_approach_intro,seeded,page_title_demo,"neutral approach","DEMO — помощь по направлению «Компьютерная зависимость�"
+1047,service_general_approach_more_label,seeded,neutral_demo,"neutral approach link",подробнее
+1047,service_general_approach_more_url,seeded,neutral_demo,"neutral approach link",http://shpigovsky.test/o-centre/programma-lecheniya/
+1047,service_general_approach_cards,seeded,neutral_demo,"neutral approach cards",array:4
+1047,service_general_team_image,seeded,accepted_demo_image,"shared accepted demo image",1238
+1047,service_general_clinic_landscape_image,seeded,accepted_demo_image,"shared accepted demo image",1239
+1047,service_general_corridor_image,seeded,accepted_demo_image,"shared accepted demo image",1709
+1047,service_general_program_heading,seeded,neutral_demo,"neutral program","Наша программа включает 4 направления"
+1047,service_general_program_more_label,seeded,neutral_demo,"neutral program",подробнее
+1047,service_general_program_lead,seeded,page_title_demo,"neutral program","DEMO — программа для «Компьютерная зависимость»: медици"
+1047,service_general_program_intro_items,seeded,page_title_demo,"neutral program",array:2
+1047,service_general_stages_heading,seeded,neutral_demo,"neutral stages","Что нужно для начала работы с нами"
+1047,service_general_stages_lead,seeded,neutral_demo,"neutral stages","DEMO — мы соблюдаем конфиденциальность и уважение к гра�"
+1047,service_general_stages_items,seeded,neutral_demo,"neutral stages",array:4
+1047,service_general_stages_support_heading,seeded,neutral_demo,"neutral stages","Поддержка осуществляется на всех этапах:"
+1047,service_general_stages_support_items,seeded,neutral_demo,"neutral stages",array:4
+1047,service_general_faq_heading,seeded,neutral_demo,"neutral faq","Нас часто спрашивают"
+1047,service_general_faq_items,seeded,page_title_demo,"neutral faq",array:3
+1047,service_general_specialists_visible,seeded,historic_layout,"preserve no-specialists leaf layout",0
+1048,service_general_intro_heading,seeded,page_title_demo,"page-specific neutral demo","Лечение опиумной зависимости — состояние, с которым м�"
+1048,service_general_intro_highlight,seeded,neutral_demo,"neutral demo highlight","DEMO — ЭТО НЕ ПРИГОВОР. ЭТО СОСТОЯНИЕ, КОТОРОЕ ПОДДАЁТСЯ "
+1048,service_general_bordered_info_items,seeded,page_title_demo,"neutral bordered",array:3
+1048,service_general_signs_heading,seeded,page_title_demo,"neutral signs","Признаки, на которые стоит обратить внимание (Лечение �"
+1048,service_general_signs_intro,seeded,page_title_demo,"neutral signs","DEMO — если вы замечаете у себя или близкого изменения, с"
+1048,service_general_signs_items,seeded,neutral_demo,"neutral signs",array:5
+1048,service_general_signs_editorial,seeded,page_title_demo,"neutral signs editorial","DEMO — краткий редакционный блок для страницы «Лечение �"
+1048,service_general_approach_heading,seeded,page_title_demo,"neutral approach","Наш подход к работе с запросом «Лечение опиумной завис"
+1048,service_general_approach_highlight,seeded,neutral_demo,"neutral approach","DEMO — МЫ СОЧЕТАЕМ ДИАГНОСТИКУ, ТЕРАПИЮ И ПОДДЕРЖКУ СЕМЬ"
+1048,service_general_approach_intro,seeded,page_title_demo,"neutral approach","DEMO — помощь по направлению «Лечение опиумной зависимо"
+1048,service_general_approach_more_label,seeded,neutral_demo,"neutral approach link",подробнее
+1048,service_general_approach_more_url,seeded,neutral_demo,"neutral approach link",http://shpigovsky.test/o-centre/programma-lecheniya/
+1048,service_general_approach_cards,seeded,neutral_demo,"neutral approach cards",array:4
+1048,service_general_team_image,seeded,accepted_demo_image,"shared accepted demo image",1238
+1048,service_general_clinic_landscape_image,seeded,accepted_demo_image,"shared accepted demo image",1239
+1048,service_general_corridor_image,seeded,accepted_demo_image,"shared accepted demo image",1709
+1048,service_general_program_heading,seeded,neutral_demo,"neutral program","Наша программа включает 4 направления"
+1048,service_general_program_more_label,seeded,neutral_demo,"neutral program",подробнее
+1048,service_general_program_lead,seeded,page_title_demo,"neutral program","DEMO — программа для «Лечение опиумной зависимости»: ме�"
+1048,service_general_program_intro_items,seeded,page_title_demo,"neutral program",array:2
+1048,service_general_stages_heading,seeded,neutral_demo,"neutral stages","Что нужно для начала работы с нами"
+1048,service_general_stages_lead,seeded,neutral_demo,"neutral stages","DEMO — мы соблюдаем конфиденциальность и уважение к гра�"
+1048,service_general_stages_items,seeded,neutral_demo,"neutral stages",array:4
+1048,service_general_stages_support_heading,seeded,neutral_demo,"neutral stages","Поддержка осуществляется на всех этапах:"
+1048,service_general_stages_support_items,seeded,neutral_demo,"neutral stages",array:4
+1048,service_general_faq_heading,seeded,neutral_demo,"neutral faq","Нас часто спрашивают"
+1048,service_general_faq_items,seeded,page_title_demo,"neutral faq",array:3
+1048,service_general_specialists_visible,seeded,historic_layout,"preserve no-specialists leaf layout",0
+79,service_general_intro_heading,seeded,page_title_demo,"page-specific neutral demo","ПТСР — состояние, с которым можно работать системно и �"
+79,service_general_intro_highlight,seeded,neutral_demo,"neutral demo highlight","DEMO — ЭТО НЕ ПРИГОВОР. ЭТО СОСТОЯНИЕ, КОТОРОЕ ПОДДАЁТСЯ "
+79,service_general_bordered_info_items,seeded,page_title_demo,"neutral bordered",array:3
+79,service_general_signs_heading,seeded,page_title_demo,"neutral signs","Признаки, на которые стоит обратить внимание (ПТСР)"
+79,service_general_signs_intro,seeded,page_title_demo,"neutral signs","DEMO — если вы замечаете у себя или близкого изменения, с"
+79,service_general_signs_items,seeded,neutral_demo,"neutral signs",array:5
+79,service_general_signs_editorial,seeded,page_title_demo,"neutral signs editorial","DEMO — краткий редакционный блок для страницы «ПТСР».
+
+З�"
+79,service_general_approach_heading,seeded,page_title_demo,"neutral approach","Наш подход к работе с запросом «ПТСР»"
+79,service_general_approach_highlight,seeded,neutral_demo,"neutral approach","DEMO — МЫ СОЧЕТАЕМ ДИАГНОСТИКУ, ТЕРАПИЮ И ПОДДЕРЖКУ СЕМЬ"
+79,service_general_approach_intro,seeded,page_title_demo,"neutral approach","DEMO — помощь по направлению «ПТСР» строится как команд�"
+79,service_general_approach_more_label,seeded,neutral_demo,"neutral approach link",подробнее
+79,service_general_approach_more_url,seeded,neutral_demo,"neutral approach link",http://shpigovsky.test/o-centre/programma-lecheniya/
+79,service_general_approach_cards,seeded,neutral_demo,"neutral approach cards",array:4
+79,service_general_team_image,seeded,accepted_demo_image,"shared accepted demo image",1238
+79,service_general_clinic_landscape_image,seeded,accepted_demo_image,"shared accepted demo image",1239
+79,service_general_corridor_image,seeded,accepted_demo_image,"shared accepted demo image",1709
+79,service_general_program_heading,seeded,neutral_demo,"neutral program","Наша программа включает 4 направления"
+79,service_general_program_more_label,seeded,neutral_demo,"neutral program",подробнее
+79,service_general_program_lead,seeded,page_title_demo,"neutral program","DEMO — программа для «ПТСР»: медицинская, психотерапевт�"
+79,service_general_program_intro_items,seeded,page_title_demo,"neutral program",array:2
+79,service_general_stages_heading,seeded,neutral_demo,"neutral stages","Что нужно для начала работы с нами"
+79,service_general_stages_lead,seeded,neutral_demo,"neutral stages","DEMO — мы соблюдаем конфиденциальность и уважение к гра�"
+79,service_general_stages_items,seeded,neutral_demo,"neutral stages",array:4
+79,service_general_stages_support_heading,seeded,neutral_demo,"neutral stages","Поддержка осуществляется на всех этапах:"
+79,service_general_stages_support_items,seeded,neutral_demo,"neutral stages",array:4
+79,service_general_faq_heading,seeded,neutral_demo,"neutral faq","Нас часто спрашивают"
+79,service_general_faq_items,seeded,page_title_demo,"neutral faq",array:3
+79,service_general_specialists_visible,seeded,historic_layout,"preserve no-specialists leaf layout",0
+80,service_general_intro_heading,seeded,page_title_demo,"page-specific neutral demo","Эмоциональное выгорание — состояние, с которым можно �"
+80,service_general_intro_highlight,seeded,neutral_demo,"neutral demo highlight","DEMO — ЭТО НЕ ПРИГОВОР. ЭТО СОСТОЯНИЕ, КОТОРОЕ ПОДДАЁТСЯ "
+80,service_general_bordered_info_items,seeded,page_title_demo,"neutral bordered",array:3
+80,service_general_signs_heading,seeded,page_title_demo,"neutral signs","Признаки, на которые стоит обратить внимание (Эмоциона"
+80,service_general_signs_intro,seeded,page_title_demo,"neutral signs","DEMO — если вы замечаете у себя или близкого изменения, с"
+80,service_general_signs_items,seeded,neutral_demo,"neutral signs",array:5
+80,service_general_signs_editorial,seeded,page_title_demo,"neutral signs editorial","DEMO — краткий редакционный блок для страницы «Эмоциона"
+80,service_general_approach_heading,seeded,page_title_demo,"neutral approach","Наш подход к работе с запросом «Эмоциональное выгоран�"
+80,service_general_approach_highlight,seeded,neutral_demo,"neutral approach","DEMO — МЫ СОЧЕТАЕМ ДИАГНОСТИКУ, ТЕРАПИЮ И ПОДДЕРЖКУ СЕМЬ"
+80,service_general_approach_intro,seeded,page_title_demo,"neutral approach","DEMO — помощь по направлению «Эмоциональное выгорание» "
+80,service_general_approach_more_label,seeded,neutral_demo,"neutral approach link",подробнее
+80,service_general_approach_more_url,seeded,neutral_demo,"neutral approach link",http://shpigovsky.test/o-centre/programma-lecheniya/
+80,service_general_approach_cards,seeded,neutral_demo,"neutral approach cards",array:4
+80,service_general_team_image,seeded,accepted_demo_image,"shared accepted demo image",1238
+80,service_general_clinic_landscape_image,seeded,accepted_demo_image,"shared accepted demo image",1239
+80,service_general_corridor_image,seeded,accepted_demo_image,"shared accepted demo image",1709
+80,service_general_program_heading,seeded,neutral_demo,"neutral program","Наша программа включает 4 направления"
+80,service_general_program_more_label,seeded,neutral_demo,"neutral program",подробнее
+80,service_general_program_lead,seeded,page_title_demo,"neutral program","DEMO — программа для «Эмоциональное выгорание»: медицин"
+80,service_general_program_intro_items,seeded,page_title_demo,"neutral program",array:2
+80,service_general_stages_heading,seeded,neutral_demo,"neutral stages","Что нужно для начала работы с нами"
+80,service_general_stages_lead,seeded,neutral_demo,"neutral stages","DEMO — мы соблюдаем конфиденциальность и уважение к гра�"
+80,service_general_stages_items,seeded,neutral_demo,"neutral stages",array:4
+80,service_general_stages_support_heading,seeded,neutral_demo,"neutral stages","Поддержка осуществляется на всех этапах:"
+80,service_general_stages_support_items,seeded,neutral_demo,"neutral stages",array:4
+80,service_general_faq_heading,seeded,neutral_demo,"neutral faq","Нас часто спрашивают"
+80,service_general_faq_items,seeded,page_title_demo,"neutral faq",array:3
+80,service_general_specialists_visible,seeded,historic_layout,"preserve no-specialists leaf layout",0
+82,service_general_intro_heading,seeded,page_title_demo,"page-specific neutral demo","Расстройства сна — состояние, с которым можно работат�"
+82,service_general_intro_highlight,seeded,neutral_demo,"neutral demo highlight","DEMO — ЭТО НЕ ПРИГОВОР. ЭТО СОСТОЯНИЕ, КОТОРОЕ ПОДДАЁТСЯ "
+82,service_general_bordered_info_items,seeded,page_title_demo,"neutral bordered",array:3
+82,service_general_signs_heading,seeded,page_title_demo,"neutral signs","Признаки, на которые стоит обратить внимание (Расстрой"
+82,service_general_signs_intro,seeded,page_title_demo,"neutral signs","DEMO — если вы замечаете у себя или близкого изменения, с"
+82,service_general_signs_items,seeded,neutral_demo,"neutral signs",array:5
+82,service_general_signs_editorial,seeded,page_title_demo,"neutral signs editorial","DEMO — краткий редакционный блок для страницы «Расстрой"
+82,service_general_approach_heading,seeded,page_title_demo,"neutral approach","Наш подход к работе с запросом «Расстройства сна»"
+82,service_general_approach_highlight,seeded,neutral_demo,"neutral approach","DEMO — МЫ СОЧЕТАЕМ ДИАГНОСТИКУ, ТЕРАПИЮ И ПОДДЕРЖКУ СЕМЬ"
+82,service_general_approach_intro,seeded,page_title_demo,"neutral approach","DEMO — помощь по направлению «Расстройства сна» строитс"
+82,service_general_approach_more_label,seeded,neutral_demo,"neutral approach link",подробнее
+82,service_general_approach_more_url,seeded,neutral_demo,"neutral approach link",http://shpigovsky.test/o-centre/programma-lecheniya/
+82,service_general_approach_cards,seeded,neutral_demo,"neutral approach cards",array:4
+82,service_general_team_image,seeded,accepted_demo_image,"shared accepted demo image",1238
+82,service_general_clinic_landscape_image,seeded,accepted_demo_image,"shared accepted demo image",1239
+82,service_general_corridor_image,seeded,accepted_demo_image,"shared accepted demo image",1709
+82,service_general_program_heading,seeded,neutral_demo,"neutral program","Наша программа включает 4 направления"
+82,service_general_program_more_label,seeded,neutral_demo,"neutral program",подробнее
+82,service_general_program_lead,seeded,page_title_demo,"neutral program","DEMO — программа для «Расстройства сна»: медицинская, пс"
+82,service_general_program_intro_items,seeded,page_title_demo,"neutral program",array:2
+82,service_general_stages_heading,seeded,neutral_demo,"neutral stages","Что нужно для начала работы с нами"
+82,service_general_stages_lead,seeded,neutral_demo,"neutral stages","DEMO — мы соблюдаем конфиденциальность и уважение к гра�"
+82,service_general_stages_items,seeded,neutral_demo,"neutral stages",array:4
+82,service_general_stages_support_heading,seeded,neutral_demo,"neutral stages","Поддержка осуществляется на всех этапах:"
+82,service_general_stages_support_items,seeded,neutral_demo,"neutral stages",array:4
+82,service_general_faq_heading,seeded,neutral_demo,"neutral faq","Нас часто спрашивают"
+82,service_general_faq_items,seeded,page_title_demo,"neutral faq",array:3
+82,service_general_specialists_visible,seeded,historic_layout,"preserve no-specialists leaf layout",0
+83,service_general_intro_heading,seeded,page_title_demo,"page-specific neutral demo","Травма — состояние, с которым можно работать системно "
+83,service_general_intro_highlight,seeded,neutral_demo,"neutral demo highlight","DEMO — ЭТО НЕ ПРИГОВОР. ЭТО СОСТОЯНИЕ, КОТОРОЕ ПОДДАЁТСЯ "
+83,service_general_bordered_info_items,seeded,page_title_demo,"neutral bordered",array:3
+83,service_general_signs_heading,seeded,page_title_demo,"neutral signs","Признаки, на которые стоит обратить внимание (Травма)"
+83,service_general_signs_intro,seeded,page_title_demo,"neutral signs","DEMO — если вы замечаете у себя или близкого изменения, с"
+83,service_general_signs_items,seeded,neutral_demo,"neutral signs",array:5
+83,service_general_signs_editorial,seeded,page_title_demo,"neutral signs editorial","DEMO — краткий редакционный блок для страницы «Травма».
+"
+83,service_general_approach_heading,seeded,page_title_demo,"neutral approach","Наш подход к работе с запросом «Травма»"
+83,service_general_approach_highlight,seeded,neutral_demo,"neutral approach","DEMO — МЫ СОЧЕТАЕМ ДИАГНОСТИКУ, ТЕРАПИЮ И ПОДДЕРЖКУ СЕМЬ"
+83,service_general_approach_intro,seeded,page_title_demo,"neutral approach","DEMO — помощь по направлению «Травма» строится как кома�"
+83,service_general_approach_more_label,seeded,neutral_demo,"neutral approach link",подробнее
+83,service_general_approach_more_url,seeded,neutral_demo,"neutral approach link",http://shpigovsky.test/o-centre/programma-lecheniya/
+83,service_general_approach_cards,seeded,neutral_demo,"neutral approach cards",array:4
+83,service_general_team_image,seeded,accepted_demo_image,"shared accepted demo image",1238
+83,service_general_clinic_landscape_image,seeded,accepted_demo_image,"shared accepted demo image",1239
+83,service_general_corridor_image,seeded,accepted_demo_image,"shared accepted demo image",1709
+83,service_general_program_heading,seeded,neutral_demo,"neutral program","Наша программа включает 4 направления"
+83,service_general_program_more_label,seeded,neutral_demo,"neutral program",подробнее
+83,service_general_program_lead,seeded,page_title_demo,"neutral program","DEMO — программа для «Травма»: медицинская, психотерапе�"
+83,service_general_program_intro_items,seeded,page_title_demo,"neutral program",array:2
+83,service_general_stages_heading,seeded,neutral_demo,"neutral stages","Что нужно для начала работы с нами"
+83,service_general_stages_lead,seeded,neutral_demo,"neutral stages","DEMO — мы соблюдаем конфиденциальность и уважение к гра�"
+83,service_general_stages_items,seeded,neutral_demo,"neutral stages",array:4
+83,service_general_stages_support_heading,seeded,neutral_demo,"neutral stages","Поддержка осуществляется на всех этапах:"
+83,service_general_stages_support_items,seeded,neutral_demo,"neutral stages",array:4
+83,service_general_faq_heading,seeded,neutral_demo,"neutral faq","Нас часто спрашивают"
+83,service_general_faq_items,seeded,page_title_demo,"neutral faq",array:3
+83,service_general_specialists_visible,seeded,historic_layout,"preserve no-specialists leaf layout",0
+1049,service_general_intro_heading,seeded,page_title_demo,"page-specific neutral demo","Хроническая усталость — состояние, с которым можно ра�"
+1049,service_general_intro_highlight,seeded,neutral_demo,"neutral demo highlight","DEMO — ЭТО НЕ ПРИГОВОР. ЭТО СОСТОЯНИЕ, КОТОРОЕ ПОДДАЁТСЯ "
+1049,service_general_bordered_info_items,seeded,page_title_demo,"neutral bordered",array:3
+1049,service_general_signs_heading,seeded,page_title_demo,"neutral signs","Признаки, на которые стоит обратить внимание (Хроничес"
+1049,service_general_signs_intro,seeded,page_title_demo,"neutral signs","DEMO — если вы замечаете у себя или близкого изменения, с"
+1049,service_general_signs_items,seeded,neutral_demo,"neutral signs",array:5
+1049,service_general_signs_editorial,seeded,page_title_demo,"neutral signs editorial","DEMO — краткий редакционный блок для страницы «Хроничес"
+1049,service_general_approach_heading,seeded,page_title_demo,"neutral approach","Наш подход к работе с запросом «Хроническая усталость�"
+1049,service_general_approach_highlight,seeded,neutral_demo,"neutral approach","DEMO — МЫ СОЧЕТАЕМ ДИАГНОСТИКУ, ТЕРАПИЮ И ПОДДЕРЖКУ СЕМЬ"
+1049,service_general_approach_intro,seeded,page_title_demo,"neutral approach","DEMO — помощь по направлению «Хроническая усталость» ст"
+1049,service_general_approach_more_label,seeded,neutral_demo,"neutral approach link",подробнее
+1049,service_general_approach_more_url,seeded,neutral_demo,"neutral approach link",http://shpigovsky.test/o-centre/programma-lecheniya/
+1049,service_general_approach_cards,seeded,neutral_demo,"neutral approach cards",array:4
+1049,service_general_team_image,seeded,accepted_demo_image,"shared accepted demo image",1238
+1049,service_general_clinic_landscape_image,seeded,accepted_demo_image,"shared accepted demo image",1239
+1049,service_general_corridor_image,seeded,accepted_demo_image,"shared accepted demo image",1709
+1049,service_general_program_heading,seeded,neutral_demo,"neutral program","Наша программа включает 4 направления"
+1049,service_general_program_more_label,seeded,neutral_demo,"neutral program",подробнее
+1049,service_general_program_lead,seeded,page_title_demo,"neutral program","DEMO — программа для «Хроническая усталость»: медицинск"
+1049,service_general_program_intro_items,seeded,page_title_demo,"neutral program",array:2
+1049,service_general_stages_heading,seeded,neutral_demo,"neutral stages","Что нужно для начала работы с нами"
+1049,service_general_stages_lead,seeded,neutral_demo,"neutral stages","DEMO — мы соблюдаем конфиденциальность и уважение к гра�"
+1049,service_general_stages_items,seeded,neutral_demo,"neutral stages",array:4
+1049,service_general_stages_support_heading,seeded,neutral_demo,"neutral stages","Поддержка осуществляется на всех этапах:"
+1049,service_general_stages_support_items,seeded,neutral_demo,"neutral stages",array:4
+1049,service_general_faq_heading,seeded,neutral_demo,"neutral faq","Нас часто спрашивают"
+1049,service_general_faq_items,seeded,page_title_demo,"neutral faq",array:3
+1049,service_general_specialists_visible,seeded,historic_layout,"preserve no-specialists leaf layout",0
+1050,service_general_intro_heading,seeded,page_title_demo,"page-specific neutral demo","Стресс — состояние, с которым можно работать системно "
+1050,service_general_intro_highlight,seeded,neutral_demo,"neutral demo highlight","DEMO — ЭТО НЕ ПРИГОВОР. ЭТО СОСТОЯНИЕ, КОТОРОЕ ПОДДАЁТСЯ "
+1050,service_general_bordered_info_items,seeded,page_title_demo,"neutral bordered",array:3
+1050,service_general_signs_heading,seeded,page_title_demo,"neutral signs","Признаки, на которые стоит обратить внимание (Стресс)"
+1050,service_general_signs_intro,seeded,page_title_demo,"neutral signs","DEMO — если вы замечаете у себя или близкого изменения, с"
+1050,service_general_signs_items,seeded,neutral_demo,"neutral signs",array:5
+1050,service_general_signs_editorial,seeded,page_title_demo,"neutral signs editorial","DEMO — краткий редакционный блок для страницы «Стресс».
+"
+1050,service_general_approach_heading,seeded,page_title_demo,"neutral approach","Наш подход к работе с запросом «Стресс»"
+1050,service_general_approach_highlight,seeded,neutral_demo,"neutral approach","DEMO — МЫ СОЧЕТАЕМ ДИАГНОСТИКУ, ТЕРАПИЮ И ПОДДЕРЖКУ СЕМЬ"
+1050,service_general_approach_intro,seeded,page_title_demo,"neutral approach","DEMO — помощь по направлению «Стресс» строится как кома�"
+1050,service_general_approach_more_label,seeded,neutral_demo,"neutral approach link",подробнее
+1050,service_general_approach_more_url,seeded,neutral_demo,"neutral approach link",http://shpigovsky.test/o-centre/programma-lecheniya/
+1050,service_general_approach_cards,seeded,neutral_demo,"neutral approach cards",array:4
+1050,service_general_team_image,seeded,accepted_demo_image,"shared accepted demo image",1238
+1050,service_general_clinic_landscape_image,seeded,accepted_demo_image,"shared accepted demo image",1239
+1050,service_general_corridor_image,seeded,accepted_demo_image,"shared accepted demo image",1709
+1050,service_general_program_heading,seeded,neutral_demo,"neutral program","Наша программа включает 4 направления"
+1050,service_general_program_more_label,seeded,neutral_demo,"neutral program",подробнее
+1050,service_general_program_lead,seeded,page_title_demo,"neutral program","DEMO — программа для «Стресс»: медицинская, психотерапе�"
+1050,service_general_program_intro_items,seeded,page_title_demo,"neutral program",array:2
+1050,service_general_stages_heading,seeded,neutral_demo,"neutral stages","Что нужно для начала работы с нами"
+1050,service_general_stages_lead,seeded,neutral_demo,"neutral stages","DEMO — мы соблюдаем конфиденциальность и уважение к гра�"
+1050,service_general_stages_items,seeded,neutral_demo,"neutral stages",array:4
+1050,service_general_stages_support_heading,seeded,neutral_demo,"neutral stages","Поддержка осуществляется на всех этапах:"
+1050,service_general_stages_support_items,seeded,neutral_demo,"neutral stages",array:4
+1050,service_general_faq_heading,seeded,neutral_demo,"neutral faq","Нас часто спрашивают"
+1050,service_general_faq_items,seeded,page_title_demo,"neutral faq",array:3
+1050,service_general_specialists_visible,seeded,historic_layout,"preserve no-specialists leaf layout",0
+1051,service_general_intro_heading,seeded,page_title_demo,"page-specific neutral demo","Нарциссизм — состояние, с которым можно работать сист�"
+1051,service_general_intro_highlight,seeded,neutral_demo,"neutral demo highlight","DEMO — ЭТО НЕ ПРИГОВОР. ЭТО СОСТОЯНИЕ, КОТОРОЕ ПОДДАЁТСЯ "
+1051,service_general_bordered_info_items,seeded,page_title_demo,"neutral bordered",array:3
+1051,service_general_signs_heading,seeded,page_title_demo,"neutral signs","Признаки, на которые стоит обратить внимание (Нарцисси"
+1051,service_general_signs_intro,seeded,page_title_demo,"neutral signs","DEMO — если вы замечаете у себя или близкого изменения, с"
+1051,service_general_signs_items,seeded,neutral_demo,"neutral signs",array:5
+1051,service_general_signs_editorial,seeded,page_title_demo,"neutral signs editorial","DEMO — краткий редакционный блок для страницы «Нарцисси"
+1051,service_general_approach_heading,seeded,page_title_demo,"neutral approach","Наш подход к работе с запросом «Нарциссизм»"
+1051,service_general_approach_highlight,seeded,neutral_demo,"neutral approach","DEMO — МЫ СОЧЕТАЕМ ДИАГНОСТИКУ, ТЕРАПИЮ И ПОДДЕРЖКУ СЕМЬ"
+1051,service_general_approach_intro,seeded,page_title_demo,"neutral approach","DEMO — помощь по направлению «Нарциссизм» строится как �"
+1051,service_general_approach_more_label,seeded,neutral_demo,"neutral approach link",подробнее
+1051,service_general_approach_more_url,seeded,neutral_demo,"neutral approach link",http://shpigovsky.test/o-centre/programma-lecheniya/
+1051,service_general_approach_cards,seeded,neutral_demo,"neutral approach cards",array:4
+1051,service_general_team_image,seeded,accepted_demo_image,"shared accepted demo image",1238
+1051,service_general_clinic_landscape_image,seeded,accepted_demo_image,"shared accepted demo image",1239
+1051,service_general_corridor_image,seeded,accepted_demo_image,"shared accepted demo image",1709
+1051,service_general_program_heading,seeded,neutral_demo,"neutral program","Наша программа включает 4 направления"
+1051,service_general_program_more_label,seeded,neutral_demo,"neutral program",подробнее
+1051,service_general_program_lead,seeded,page_title_demo,"neutral program","DEMO — программа для «Нарциссизм»: медицинская, психоте�"
+1051,service_general_program_intro_items,seeded,page_title_demo,"neutral program",array:2
+1051,service_general_stages_heading,seeded,neutral_demo,"neutral stages","Что нужно для начала работы с нами"
+1051,service_general_stages_lead,seeded,neutral_demo,"neutral stages","DEMO — мы соблюдаем конфиденциальность и уважение к гра�"
+1051,service_general_stages_items,seeded,neutral_demo,"neutral stages",array:4
+1051,service_general_stages_support_heading,seeded,neutral_demo,"neutral stages","Поддержка осуществляется на всех этапах:"
+1051,service_general_stages_support_items,seeded,neutral_demo,"neutral stages",array:4
+1051,service_general_faq_heading,seeded,neutral_demo,"neutral faq","Нас часто спрашивают"
+1051,service_general_faq_items,seeded,page_title_demo,"neutral faq",array:3
+1051,service_general_specialists_visible,seeded,historic_layout,"preserve no-specialists leaf layout",0
+86,service_general_intro_heading,seeded,page_title_demo,"page-specific neutral demo","Булимия — состояние, с которым можно работать системн�"
+86,service_general_intro_highlight,seeded,neutral_demo,"neutral demo highlight","DEMO — ЭТО НЕ ПРИГОВОР. ЭТО СОСТОЯНИЕ, КОТОРОЕ ПОДДАЁТСЯ "
+86,service_general_bordered_info_items,seeded,page_title_demo,"neutral bordered",array:3
+86,service_general_signs_heading,seeded,page_title_demo,"neutral signs","Признаки, на которые стоит обратить внимание (Булимия)"
+86,service_general_signs_intro,seeded,page_title_demo,"neutral signs","DEMO — если вы замечаете у себя или близкого изменения, с"
+86,service_general_signs_items,seeded,neutral_demo,"neutral signs",array:5
+86,service_general_signs_editorial,seeded,page_title_demo,"neutral signs editorial","DEMO — краткий редакционный блок для страницы «Булимия»"
+86,service_general_approach_heading,seeded,page_title_demo,"neutral approach","Наш подход к работе с запросом «Булимия»"
+86,service_general_approach_highlight,seeded,neutral_demo,"neutral approach","DEMO — МЫ СОЧЕТАЕМ ДИАГНОСТИКУ, ТЕРАПИЮ И ПОДДЕРЖКУ СЕМЬ"
+86,service_general_approach_intro,seeded,page_title_demo,"neutral approach","DEMO — помощь по направлению «Булимия» строится как ком�"
+86,service_general_approach_more_label,seeded,neutral_demo,"neutral approach link",подробнее
+86,service_general_approach_more_url,seeded,neutral_demo,"neutral approach link",http://shpigovsky.test/o-centre/programma-lecheniya/
+86,service_general_approach_cards,seeded,neutral_demo,"neutral approach cards",array:4
+86,service_general_team_image,seeded,accepted_demo_image,"shared accepted demo image",1238
+86,service_general_clinic_landscape_image,seeded,accepted_demo_image,"shared accepted demo image",1239
+86,service_general_corridor_image,seeded,accepted_demo_image,"shared accepted demo image",1709
+86,service_general_program_heading,seeded,neutral_demo,"neutral program","Наша программа включает 4 направления"
+86,service_general_program_more_label,seeded,neutral_demo,"neutral program",подробнее
+86,service_general_program_lead,seeded,page_title_demo,"neutral program","DEMO — программа для «Булимия»: медицинская, психотерап�"
+86,service_general_program_intro_items,seeded,page_title_demo,"neutral program",array:2
+86,service_general_stages_heading,seeded,neutral_demo,"neutral stages","Что нужно для начала работы с нами"
+86,service_general_stages_lead,seeded,neutral_demo,"neutral stages","DEMO — мы соблюдаем конфиденциальность и уважение к гра�"
+86,service_general_stages_items,seeded,neutral_demo,"neutral stages",array:4
+86,service_general_stages_support_heading,seeded,neutral_demo,"neutral stages","Поддержка осуществляется на всех этапах:"
+86,service_general_stages_support_items,seeded,neutral_demo,"neutral stages",array:4
+86,service_general_faq_heading,seeded,neutral_demo,"neutral faq","Нас часто спрашивают"
+86,service_general_faq_items,seeded,page_title_demo,"neutral faq",array:3
+86,service_general_specialists_visible,seeded,historic_layout,"preserve no-specialists leaf layout",0
+87,service_general_intro_heading,seeded,page_title_demo,"page-specific neutral demo","Компульсивное переедание — состояние, с которым можно"
+87,service_general_intro_highlight,seeded,neutral_demo,"neutral demo highlight","DEMO — ЭТО НЕ ПРИГОВОР. ЭТО СОСТОЯНИЕ, КОТОРОЕ ПОДДАЁТСЯ "
+87,service_general_bordered_info_items,seeded,page_title_demo,"neutral bordered",array:3
+87,service_general_signs_heading,seeded,page_title_demo,"neutral signs","Признаки, на которые стоит обратить внимание (Компульс"
+87,service_general_signs_intro,seeded,page_title_demo,"neutral signs","DEMO — если вы замечаете у себя или близкого изменения, с"
+87,service_general_signs_items,seeded,neutral_demo,"neutral signs",array:5
+87,service_general_signs_editorial,seeded,page_title_demo,"neutral signs editorial","DEMO — краткий редакционный блок для страницы «Компульс"
+87,service_general_approach_heading,seeded,page_title_demo,"neutral approach","Наш подход к работе с запросом «Компульсивное перееда�"
+87,service_general_approach_highlight,seeded,neutral_demo,"neutral approach","DEMO — МЫ СОЧЕТАЕМ ДИАГНОСТИКУ, ТЕРАПИЮ И ПОДДЕРЖКУ СЕМЬ"
+87,service_general_approach_intro,seeded,page_title_demo,"neutral approach","DEMO — помощь по направлению «Компульсивное переедание�"
+87,service_general_approach_more_label,seeded,neutral_demo,"neutral approach link",подробнее
+87,service_general_approach_more_url,seeded,neutral_demo,"neutral approach link",http://shpigovsky.test/o-centre/programma-lecheniya/
+87,service_general_approach_cards,seeded,neutral_demo,"neutral approach cards",array:4
+87,service_general_team_image,seeded,accepted_demo_image,"shared accepted demo image",1238
+87,service_general_clinic_landscape_image,seeded,accepted_demo_image,"shared accepted demo image",1239
+87,service_general_corridor_image,seeded,accepted_demo_image,"shared accepted demo image",1709
+87,service_general_program_heading,seeded,neutral_demo,"neutral program","Наша программа включает 4 направления"
+87,service_general_program_more_label,seeded,neutral_demo,"neutral program",подробнее
+87,service_general_program_lead,seeded,page_title_demo,"neutral program","DEMO — программа для «Компульсивное переедание»: медици"
+87,service_general_program_intro_items,seeded,page_title_demo,"neutral program",array:2
+87,service_general_stages_heading,seeded,neutral_demo,"neutral stages","Что нужно для начала работы с нами"
+87,service_general_stages_lead,seeded,neutral_demo,"neutral stages","DEMO — мы соблюдаем конфиденциальность и уважение к гра�"
+87,service_general_stages_items,seeded,neutral_demo,"neutral stages",array:4
+87,service_general_stages_support_heading,seeded,neutral_demo,"neutral stages","Поддержка осуществляется на всех этапах:"
+87,service_general_stages_support_items,seeded,neutral_demo,"neutral stages",array:4
+87,service_general_faq_heading,seeded,neutral_demo,"neutral faq","Нас часто спрашивают"
+87,service_general_faq_items,seeded,page_title_demo,"neutral faq",array:3
+87,service_general_specialists_visible,seeded,historic_layout,"preserve no-specialists leaf layout",0
+1011,service_general_intro_heading,seeded,page_title_demo,"page-specific neutral demo","Лечение солевой зависимости — состояние, с которым мо�"
+1011,service_general_intro_highlight,seeded,neutral_demo,"neutral demo highlight","DEMO — ЭТО НЕ ПРИГОВОР. ЭТО СОСТОЯНИЕ, КОТОРОЕ ПОДДАЁТСЯ "
+1011,service_general_bordered_info_items,seeded,page_title_demo,"neutral bordered",array:3
+1011,service_general_signs_heading,seeded,page_title_demo,"neutral signs","Признаки, на которые стоит обратить внимание (Лечение �"
+1011,service_general_signs_intro,seeded,page_title_demo,"neutral signs","DEMO — если вы замечаете у себя или близкого изменения, с"
+1011,service_general_signs_items,seeded,neutral_demo,"neutral signs",array:5
+1011,service_general_signs_editorial,seeded,page_title_demo,"neutral signs editorial","DEMO — краткий редакционный блок для страницы «Лечение �"
+1011,service_general_approach_heading,seeded,page_title_demo,"neutral approach","Наш подход к работе с запросом «Лечение солевой зависи"
+1011,service_general_approach_highlight,seeded,neutral_demo,"neutral approach","DEMO — МЫ СОЧЕТАЕМ ДИАГНОСТИКУ, ТЕРАПИЮ И ПОДДЕРЖКУ СЕМЬ"
+1011,service_general_approach_intro,seeded,page_title_demo,"neutral approach","DEMO — помощь по направлению «Лечение солевой зависимос"
+1011,service_general_approach_more_label,seeded,neutral_demo,"neutral approach link",подробнее
+1011,service_general_approach_more_url,seeded,neutral_demo,"neutral approach link",http://shpigovsky.test/o-centre/programma-lecheniya/
+1011,service_general_approach_cards,seeded,neutral_demo,"neutral approach cards",array:4
+1011,service_general_team_image,seeded,accepted_demo_image,"shared accepted demo image",1238
+1011,service_general_clinic_landscape_image,seeded,accepted_demo_image,"shared accepted demo image",1239
+1011,service_general_corridor_image,seeded,accepted_demo_image,"shared accepted demo image",1709
+1011,service_general_program_heading,seeded,neutral_demo,"neutral program","Наша программа включает 4 направления"
+1011,service_general_program_more_label,seeded,neutral_demo,"neutral program",подробнее
+1011,service_general_program_lead,seeded,page_title_demo,"neutral program","DEMO — программа для «Лечение солевой зависимости»: мед�"
+1011,service_general_program_intro_items,seeded,page_title_demo,"neutral program",array:2
+1011,service_general_stages_heading,seeded,neutral_demo,"neutral stages","Что нужно для начала работы с нами"
+1011,service_general_stages_lead,seeded,neutral_demo,"neutral stages","DEMO — мы соблюдаем конфиденциальность и уважение к гра�"
+1011,service_general_stages_items,seeded,neutral_demo,"neutral stages",array:4
+1011,service_general_stages_support_heading,seeded,neutral_demo,"neutral stages","Поддержка осуществляется на всех этапах:"
+1011,service_general_stages_support_items,seeded,neutral_demo,"neutral stages",array:4
+1011,service_general_faq_heading,seeded,neutral_demo,"neutral faq","Нас часто спрашивают"
+1011,service_general_faq_items,seeded,page_title_demo,"neutral faq",array:3
+1011,service_general_specialists_visible,seeded,historic_layout,"preserve no-specialists leaf layout",0
+1012,service_general_intro_heading,seeded,page_title_demo,"page-specific neutral demo","Лечение метадоновой зависимости — состояние, с которы"
+1012,service_general_intro_highlight,seeded,neutral_demo,"neutral demo highlight","DEMO — ЭТО НЕ ПРИГОВОР. ЭТО СОСТОЯНИЕ, КОТОРОЕ ПОДДАЁТСЯ "
+1012,service_general_bordered_info_items,seeded,page_title_demo,"neutral bordered",array:3
+1012,service_general_signs_heading,seeded,page_title_demo,"neutral signs","Признаки, на которые стоит обратить внимание (Лечение �"
+1012,service_general_signs_intro,seeded,page_title_demo,"neutral signs","DEMO — если вы замечаете у себя или близкого изменения, с"
+1012,service_general_signs_items,seeded,neutral_demo,"neutral signs",array:5
+1012,service_general_signs_editorial,seeded,page_title_demo,"neutral signs editorial","DEMO — краткий редакционный блок для страницы «Лечение �"
+1012,service_general_approach_heading,seeded,page_title_demo,"neutral approach","Наш подход к работе с запросом «Лечение метадоновой за"
+1012,service_general_approach_highlight,seeded,neutral_demo,"neutral approach","DEMO — МЫ СОЧЕТАЕМ ДИАГНОСТИКУ, ТЕРАПИЮ И ПОДДЕРЖКУ СЕМЬ"
+1012,service_general_approach_intro,seeded,page_title_demo,"neutral approach","DEMO — помощь по направлению «Лечение метадоновой завис"
+1012,service_general_approach_more_label,seeded,neutral_demo,"neutral approach link",подробнее
+1012,service_general_approach_more_url,seeded,neutral_demo,"neutral approach link",http://shpigovsky.test/o-centre/programma-lecheniya/
+1012,service_general_approach_cards,seeded,neutral_demo,"neutral approach cards",array:4
+1012,service_general_team_image,seeded,accepted_demo_image,"shared accepted demo image",1238
+1012,service_general_clinic_landscape_image,seeded,accepted_demo_image,"shared accepted demo image",1239
+1012,service_general_corridor_image,seeded,accepted_demo_image,"shared accepted demo image",1709
+1012,service_general_program_heading,seeded,neutral_demo,"neutral program","Наша программа включает 4 направления"
+1012,service_general_program_more_label,seeded,neutral_demo,"neutral program",подробнее
+1012,service_general_program_lead,seeded,page_title_demo,"neutral program","DEMO — программа для «Лечение метадоновой зависимости»:"
+1012,service_general_program_intro_items,seeded,page_title_demo,"neutral program",array:2
+1012,service_general_stages_heading,seeded,neutral_demo,"neutral stages","Что нужно для начала работы с нами"
+1012,service_general_stages_lead,seeded,neutral_demo,"neutral stages","DEMO — мы соблюдаем конфиденциальность и уважение к гра�"
+1012,service_general_stages_items,seeded,neutral_demo,"neutral stages",array:4
+1012,service_general_stages_support_heading,seeded,neutral_demo,"neutral stages","Поддержка осуществляется на всех этапах:"
+1012,service_general_stages_support_items,seeded,neutral_demo,"neutral stages",array:4
+1012,service_general_faq_heading,seeded,neutral_demo,"neutral faq","Нас часто спрашивают"
+1012,service_general_faq_items,seeded,page_title_demo,"neutral faq",array:3
+1012,service_general_specialists_visible,seeded,historic_layout,"preserve no-specialists leaf layout",0
+1013,service_general_intro_heading,seeded,page_title_demo,"page-specific neutral demo","Лечение героиновой зависимости — состояние, с которым"
+1013,service_general_intro_highlight,seeded,neutral_demo,"neutral demo highlight","DEMO — ЭТО НЕ ПРИГОВОР. ЭТО СОСТОЯНИЕ, КОТОРОЕ ПОДДАЁТСЯ "
+1013,service_general_bordered_info_items,seeded,page_title_demo,"neutral bordered",array:3
+1013,service_general_signs_heading,seeded,page_title_demo,"neutral signs","Признаки, на которые стоит обратить внимание (Лечение �"
+1013,service_general_signs_intro,seeded,page_title_demo,"neutral signs","DEMO — если вы замечаете у себя или близкого изменения, с"
+1013,service_general_signs_items,seeded,neutral_demo,"neutral signs",array:5
+1013,service_general_signs_editorial,seeded,page_title_demo,"neutral signs editorial","DEMO — краткий редакционный блок для страницы «Лечение �"
+1013,service_general_approach_heading,seeded,page_title_demo,"neutral approach","Наш подход к работе с запросом «Лечение героиновой зав"
+1013,service_general_approach_highlight,seeded,neutral_demo,"neutral approach","DEMO — МЫ СОЧЕТАЕМ ДИАГНОСТИКУ, ТЕРАПИЮ И ПОДДЕРЖКУ СЕМЬ"
+1013,service_general_approach_intro,seeded,page_title_demo,"neutral approach","DEMO — помощь по направлению «Лечение героиновой зависи"
+1013,service_general_approach_more_label,seeded,neutral_demo,"neutral approach link",подробнее
+1013,service_general_approach_more_url,seeded,neutral_demo,"neutral approach link",http://shpigovsky.test/o-centre/programma-lecheniya/
+1013,service_general_approach_cards,seeded,neutral_demo,"neutral approach cards",array:4
+1013,service_general_team_image,seeded,accepted_demo_image,"shared accepted demo image",1238
+1013,service_general_clinic_landscape_image,seeded,accepted_demo_image,"shared accepted demo image",1239
+1013,service_general_corridor_image,seeded,accepted_demo_image,"shared accepted demo image",1709
+1013,service_general_program_heading,seeded,neutral_demo,"neutral program","Наша программа включает 4 направления"
+1013,service_general_program_more_label,seeded,neutral_demo,"neutral program",подробнее
+1013,service_general_program_lead,seeded,page_title_demo,"neutral program","DEMO — программа для «Лечение героиновой зависимости»: �"
+1013,service_general_program_intro_items,seeded,page_title_demo,"neutral program",array:2
+1013,service_general_stages_heading,seeded,neutral_demo,"neutral stages","Что нужно для начала работы с нами"
+1013,service_general_stages_lead,seeded,neutral_demo,"neutral stages","DEMO — мы соблюдаем конфиденциальность и уважение к гра�"
+1013,service_general_stages_items,seeded,neutral_demo,"neutral stages",array:4
+1013,service_general_stages_support_heading,seeded,neutral_demo,"neutral stages","Поддержка осуществляется на всех этапах:"
+1013,service_general_stages_support_items,seeded,neutral_demo,"neutral stages",array:4
+1013,service_general_faq_heading,seeded,neutral_demo,"neutral faq","Нас часто спрашивают"
+1013,service_general_faq_items,seeded,page_title_demo,"neutral faq",array:3
+1013,service_general_specialists_visible,seeded,historic_layout,"preserve no-specialists leaf layout",0
+315,service_general_intro_heading,seeded,page_title_demo,"page-specific neutral demo","Лечение лекарственной зависимости — состояние, с кото"
+315,service_general_intro_highlight,seeded,neutral_demo,"neutral demo highlight","DEMO — ЭТО НЕ ПРИГОВОР. ЭТО СОСТОЯНИЕ, КОТОРОЕ ПОДДАЁТСЯ "
+315,service_general_bordered_info_items,seeded,page_title_demo,"neutral bordered",array:3
+315,service_general_signs_heading,seeded,page_title_demo,"neutral signs","Признаки, на которые стоит обратить внимание (Лечение �"
+315,service_general_signs_intro,seeded,page_title_demo,"neutral signs","DEMO — если вы замечаете у себя или близкого изменения, с"
+315,service_general_signs_items,seeded,neutral_demo,"neutral signs",array:5
+315,service_general_signs_editorial,seeded,page_title_demo,"neutral signs editorial","DEMO — краткий редакционный блок для страницы «Лечение �"
+315,service_general_approach_heading,seeded,page_title_demo,"neutral approach","Наш подход к работе с запросом «Лечение лекарственной "
+315,service_general_approach_highlight,seeded,neutral_demo,"neutral approach","DEMO — МЫ СОЧЕТАЕМ ДИАГНОСТИКУ, ТЕРАПИЮ И ПОДДЕРЖКУ СЕМЬ"
+315,service_general_approach_intro,seeded,page_title_demo,"neutral approach","DEMO — помощь по направлению «Лечение лекарственной зав"
+315,service_general_approach_more_label,seeded,neutral_demo,"neutral approach link",подробнее
+315,service_general_approach_more_url,seeded,neutral_demo,"neutral approach link",http://shpigovsky.test/o-centre/programma-lecheniya/
+315,service_general_approach_cards,seeded,neutral_demo,"neutral approach cards",array:4
+315,service_general_team_image,seeded,accepted_demo_image,"shared accepted demo image",1238
+315,service_general_clinic_landscape_image,seeded,accepted_demo_image,"shared accepted demo image",1239
+315,service_general_corridor_image,seeded,accepted_demo_image,"shared accepted demo image",1709
+315,service_general_program_heading,seeded,neutral_demo,"neutral program","Наша программа включает 4 направления"
+315,service_general_program_more_label,seeded,neutral_demo,"neutral program",подробнее
+315,service_general_program_lead,seeded,page_title_demo,"neutral program","DEMO — программа для «Лечение лекарственной зависимост�"
+315,service_general_program_intro_items,seeded,page_title_demo,"neutral program",array:2
+315,service_general_stages_heading,seeded,neutral_demo,"neutral stages","Что нужно для начала работы с нами"
+315,service_general_stages_lead,seeded,neutral_demo,"neutral stages","DEMO — мы соблюдаем конфиденциальность и уважение к гра�"
+315,service_general_stages_items,seeded,neutral_demo,"neutral stages",array:4
+315,service_general_stages_support_heading,seeded,neutral_demo,"neutral stages","Поддержка осуществляется на всех этапах:"
+315,service_general_stages_support_items,seeded,neutral_demo,"neutral stages",array:4
+315,service_general_faq_heading,seeded,neutral_demo,"neutral faq","Нас часто спрашивают"
+315,service_general_faq_items,seeded,page_title_demo,"neutral faq",array:3
+315,service_general_specialists_visible,seeded,historic_layout,"preserve no-specialists leaf layout",0
+1016,service_general_intro_heading,seeded,page_title_demo,"page-specific neutral demo","Лечение игровой зависимости — состояние, с которым мо�"
+1016,service_general_intro_highlight,seeded,neutral_demo,"neutral demo highlight","DEMO — ЭТО НЕ ПРИГОВОР. ЭТО СОСТОЯНИЕ, КОТОРОЕ ПОДДАЁТСЯ "
+1016,service_general_bordered_info_items,seeded,page_title_demo,"neutral bordered",array:3
+1016,service_general_signs_heading,seeded,page_title_demo,"neutral signs","Признаки, на которые стоит обратить внимание (Лечение �"
+1016,service_general_signs_intro,seeded,page_title_demo,"neutral signs","DEMO — если вы замечаете у себя или близкого изменения, с"
+1016,service_general_signs_items,seeded,neutral_demo,"neutral signs",array:5
+1016,service_general_signs_editorial,seeded,page_title_demo,"neutral signs editorial","DEMO — краткий редакционный блок для страницы «Лечение �"
+1016,service_general_approach_heading,seeded,page_title_demo,"neutral approach","Наш подход к работе с запросом «Лечение игровой зависи"
+1016,service_general_approach_highlight,seeded,neutral_demo,"neutral approach","DEMO — МЫ СОЧЕТАЕМ ДИАГНОСТИКУ, ТЕРАПИЮ И ПОДДЕРЖКУ СЕМЬ"
+1016,service_general_approach_intro,seeded,page_title_demo,"neutral approach","DEMO — помощь по направлению «Лечение игровой зависимос"
+1016,service_general_approach_more_label,seeded,neutral_demo,"neutral approach link",подробнее
+1016,service_general_approach_more_url,seeded,neutral_demo,"neutral approach link",http://shpigovsky.test/o-centre/programma-lecheniya/
+1016,service_general_approach_cards,seeded,neutral_demo,"neutral approach cards",array:4
+1016,service_general_team_image,seeded,accepted_demo_image,"shared accepted demo image",1238
+1016,service_general_clinic_landscape_image,seeded,accepted_demo_image,"shared accepted demo image",1239
+1016,service_general_corridor_image,seeded,accepted_demo_image,"shared accepted demo image",1709
+1016,service_general_program_heading,seeded,neutral_demo,"neutral program","Наша программа включает 4 направления"
+1016,service_general_program_more_label,seeded,neutral_demo,"neutral program",подробнее
+1016,service_general_program_lead,seeded,page_title_demo,"neutral program","DEMO — программа для «Лечение игровой зависимости»: мед�"
+1016,service_general_program_intro_items,seeded,page_title_demo,"neutral program",array:2
+1016,service_general_stages_heading,seeded,neutral_demo,"neutral stages","Что нужно для начала работы с нами"
+1016,service_general_stages_lead,seeded,neutral_demo,"neutral stages","DEMO — мы соблюдаем конфиденциальность и уважение к гра�"
+1016,service_general_stages_items,seeded,neutral_demo,"neutral stages",array:4
+1016,service_general_stages_support_heading,seeded,neutral_demo,"neutral stages","Поддержка осуществляется на всех этапах:"
+1016,service_general_stages_support_items,seeded,neutral_demo,"neutral stages",array:4
+1016,service_general_faq_heading,seeded,neutral_demo,"neutral faq","Нас часто спрашивают"
+1016,service_general_faq_items,seeded,page_title_demo,"neutral faq",array:3
+1016,service_general_specialists_visible,seeded,historic_layout,"preserve no-specialists leaf layout",0
+1017,service_general_intro_heading,seeded,page_title_demo,"page-specific neutral demo","Интернет-зависимость — состояние, с которым можно раб�"
+1017,service_general_intro_highlight,seeded,neutral_demo,"neutral demo highlight","DEMO — ЭТО НЕ ПРИГОВОР. ЭТО СОСТОЯНИЕ, КОТОРОЕ ПОДДАЁТСЯ "
+1017,service_general_bordered_info_items,seeded,page_title_demo,"neutral bordered",array:3
+1017,service_general_signs_heading,seeded,page_title_demo,"neutral signs","Признаки, на которые стоит обратить внимание (Интернет"
+1017,service_general_signs_intro,seeded,page_title_demo,"neutral signs","DEMO — если вы замечаете у себя или близкого изменения, с"
+1017,service_general_signs_items,seeded,neutral_demo,"neutral signs",array:5
+1017,service_general_signs_editorial,seeded,page_title_demo,"neutral signs editorial","DEMO — краткий редакционный блок для страницы «Интернет"
+1017,service_general_approach_heading,seeded,page_title_demo,"neutral approach","Наш подход к работе с запросом «Интернет-зависимость»"
+1017,service_general_approach_highlight,seeded,neutral_demo,"neutral approach","DEMO — МЫ СОЧЕТАЕМ ДИАГНОСТИКУ, ТЕРАПИЮ И ПОДДЕРЖКУ СЕМЬ"
+1017,service_general_approach_intro,seeded,page_title_demo,"neutral approach","DEMO — помощь по направлению «Интернет-зависимость» стр"
+1017,service_general_approach_more_label,seeded,neutral_demo,"neutral approach link",подробнее
+1017,service_general_approach_more_url,seeded,neutral_demo,"neutral approach link",http://shpigovsky.test/o-centre/programma-lecheniya/
+1017,service_general_approach_cards,seeded,neutral_demo,"neutral approach cards",array:4
+1017,service_general_team_image,seeded,accepted_demo_image,"shared accepted demo image",1238
+1017,service_general_clinic_landscape_image,seeded,accepted_demo_image,"shared accepted demo image",1239
+1017,service_general_corridor_image,seeded,accepted_demo_image,"shared accepted demo image",1709
+1017,service_general_program_heading,seeded,neutral_demo,"neutral program","Наша программа включает 4 направления"
+1017,service_general_program_more_label,seeded,neutral_demo,"neutral program",подробнее
+1017,service_general_program_lead,seeded,page_title_demo,"neutral program","DEMO — программа для «Интернет-зависимость»: медицинска"
+1017,service_general_program_intro_items,seeded,page_title_demo,"neutral program",array:2
+1017,service_general_stages_heading,seeded,neutral_demo,"neutral stages","Что нужно для начала работы с нами"
+1017,service_general_stages_lead,seeded,neutral_demo,"neutral stages","DEMO — мы соблюдаем конфиденциальность и уважение к гра�"
+1017,service_general_stages_items,seeded,neutral_demo,"neutral stages",array:4
+1017,service_general_stages_support_heading,seeded,neutral_demo,"neutral stages","Поддержка осуществляется на всех этапах:"
+1017,service_general_stages_support_items,seeded,neutral_demo,"neutral stages",array:4
+1017,service_general_faq_heading,seeded,neutral_demo,"neutral faq","Нас часто спрашивают"
+1017,service_general_faq_items,seeded,page_title_demo,"neutral faq",array:3
+1017,service_general_specialists_visible,seeded,historic_layout,"preserve no-specialists leaf layout",0
+1018,service_general_intro_heading,seeded,page_title_demo,"page-specific neutral demo","Лечение созависимости — состояние, с которым можно ра�"
+1018,service_general_intro_highlight,seeded,neutral_demo,"neutral demo highlight","DEMO — ЭТО НЕ ПРИГОВОР. ЭТО СОСТОЯНИЕ, КОТОРОЕ ПОДДАЁТСЯ "
+1018,service_general_bordered_info_items,seeded,page_title_demo,"neutral bordered",array:3
+1018,service_general_signs_heading,seeded,page_title_demo,"neutral signs","Признаки, на которые стоит обратить внимание (Лечение �"
+1018,service_general_signs_intro,seeded,page_title_demo,"neutral signs","DEMO — если вы замечаете у себя или близкого изменения, с"
+1018,service_general_signs_items,seeded,neutral_demo,"neutral signs",array:5
+1018,service_general_signs_editorial,seeded,page_title_demo,"neutral signs editorial","DEMO — краткий редакционный блок для страницы «Лечение �"
+1018,service_general_approach_heading,seeded,page_title_demo,"neutral approach","Наш подход к работе с запросом «Лечение созависимости�"
+1018,service_general_approach_highlight,seeded,neutral_demo,"neutral approach","DEMO — МЫ СОЧЕТАЕМ ДИАГНОСТИКУ, ТЕРАПИЮ И ПОДДЕРЖКУ СЕМЬ"
+1018,service_general_approach_intro,seeded,page_title_demo,"neutral approach","DEMO — помощь по направлению «Лечение созависимости» ст"
+1018,service_general_approach_more_label,seeded,neutral_demo,"neutral approach link",подробнее
+1018,service_general_approach_more_url,seeded,neutral_demo,"neutral approach link",http://shpigovsky.test/o-centre/programma-lecheniya/
+1018,service_general_approach_cards,seeded,neutral_demo,"neutral approach cards",array:4
+1018,service_general_team_image,seeded,accepted_demo_image,"shared accepted demo image",1238
+1018,service_general_clinic_landscape_image,seeded,accepted_demo_image,"shared accepted demo image",1239
+1018,service_general_corridor_image,seeded,accepted_demo_image,"shared accepted demo image",1709
+1018,service_general_program_heading,seeded,neutral_demo,"neutral program","Наша программа включает 4 направления"
+1018,service_general_program_more_label,seeded,neutral_demo,"neutral program",подробнее
+1018,service_general_program_lead,seeded,page_title_demo,"neutral program","DEMO — программа для «Лечение созависимости»: медицинск"
+1018,service_general_program_intro_items,seeded,page_title_demo,"neutral program",array:2
+1018,service_general_stages_heading,seeded,neutral_demo,"neutral stages","Что нужно для начала работы с нами"
+1018,service_general_stages_lead,seeded,neutral_demo,"neutral stages","DEMO — мы соблюдаем конфиденциальность и уважение к гра�"
+1018,service_general_stages_items,seeded,neutral_demo,"neutral stages",array:4
+1018,service_general_stages_support_heading,seeded,neutral_demo,"neutral stages","Поддержка осуществляется на всех этапах:"
+1018,service_general_stages_support_items,seeded,neutral_demo,"neutral stages",array:4
+1018,service_general_faq_heading,seeded,neutral_demo,"neutral faq","Нас часто спрашивают"
+1018,service_general_faq_items,seeded,page_title_demo,"neutral faq",array:3
+1018,service_general_specialists_visible,seeded,historic_layout,"preserve no-specialists leaf layout",0
+1019,service_general_intro_heading,seeded,page_title_demo,"page-specific neutral demo","Зависимость от постоянных покупок — состояние, с кото�"
+1019,service_general_intro_highlight,seeded,neutral_demo,"neutral demo highlight","DEMO — ЭТО НЕ ПРИГОВОР. ЭТО СОСТОЯНИЕ, КОТОРОЕ ПОДДАЁТСЯ "
+1019,service_general_bordered_info_items,seeded,page_title_demo,"neutral bordered",array:3
+1019,service_general_signs_heading,seeded,page_title_demo,"neutral signs","Признаки, на которые стоит обратить внимание (Зависимо"
+1019,service_general_signs_intro,seeded,page_title_demo,"neutral signs","DEMO — если вы замечаете у себя или близкого изменения, с"
+1019,service_general_signs_items,seeded,neutral_demo,"neutral signs",array:5
+1019,service_general_signs_editorial,seeded,page_title_demo,"neutral signs editorial","DEMO — краткий редакционный блок для страницы «Зависимо"
+1019,service_general_approach_heading,seeded,page_title_demo,"neutral approach","Наш подход к работе с запросом «Зависимость от постоян"
+1019,service_general_approach_highlight,seeded,neutral_demo,"neutral approach","DEMO — МЫ СОЧЕТАЕМ ДИАГНОСТИКУ, ТЕРАПИЮ И ПОДДЕРЖКУ СЕМЬ"
+1019,service_general_approach_intro,seeded,page_title_demo,"neutral approach","DEMO — помощь по направлению «Зависимость от постоянных"
+1019,service_general_approach_more_label,seeded,neutral_demo,"neutral approach link",подробнее
+1019,service_general_approach_more_url,seeded,neutral_demo,"neutral approach link",http://shpigovsky.test/o-centre/programma-lecheniya/
+1019,service_general_approach_cards,seeded,neutral_demo,"neutral approach cards",array:4
+1019,service_general_team_image,seeded,accepted_demo_image,"shared accepted demo image",1238
+1019,service_general_clinic_landscape_image,seeded,accepted_demo_image,"shared accepted demo image",1239
+1019,service_general_corridor_image,seeded,accepted_demo_image,"shared accepted demo image",1709
+1019,service_general_program_heading,seeded,neutral_demo,"neutral program","Наша программа включает 4 направления"
+1019,service_general_program_more_label,seeded,neutral_demo,"neutral program",подробнее
+1019,service_general_program_lead,seeded,page_title_demo,"neutral program","DEMO — программа для «Зависимость от постоянных покупок"
+1019,service_general_program_intro_items,seeded,page_title_demo,"neutral program",array:2
+1019,service_general_stages_heading,seeded,neutral_demo,"neutral stages","Что нужно для начала работы с нами"
+1019,service_general_stages_lead,seeded,neutral_demo,"neutral stages","DEMO — мы соблюдаем конфиденциальность и уважение к гра�"
+1019,service_general_stages_items,seeded,neutral_demo,"neutral stages",array:4
+1019,service_general_stages_support_heading,seeded,neutral_demo,"neutral stages","Поддержка осуществляется на всех этапах:"
+1019,service_general_stages_support_items,seeded,neutral_demo,"neutral stages",array:4
+1019,service_general_faq_heading,seeded,neutral_demo,"neutral faq","Нас часто спрашивают"
+1019,service_general_faq_items,seeded,page_title_demo,"neutral faq",array:3
+1019,service_general_specialists_visible,seeded,historic_layout,"preserve no-specialists leaf layout",0

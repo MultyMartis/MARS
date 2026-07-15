@@ -1,0 +1,15 @@
+step,value
+user,admin
+path_used,wp-admin-form-post
+admin_get_code,200
+admin_post_code,302
+admin_post_location,http://shpigovsky.test/wp-admin/post.php?post=315&action=edit&message=1
+meta_before_role,placeholder
+meta_before_layout,placeholder
+meta_after_role,service
+meta_after_layout,service_general
+ui_before_placeholder_checked,yes
+ui_after_service_checked,yes
+ui_after_placeholder_checked,no
+placeholder_option_still_available,yes
+db_writes_estimated,2

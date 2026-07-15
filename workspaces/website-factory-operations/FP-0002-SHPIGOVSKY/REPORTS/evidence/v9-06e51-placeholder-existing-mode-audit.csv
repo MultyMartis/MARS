@@ -1,0 +1,12 @@
+location,type,term_found,current_status_before_e51,reusable,action,notes
+ServiceLayoutGovernance.php,admin_php,service_editor_role placeholder demoted,demoted_to_legacy_warning,yes,restored_as_first_class_choice,E45-FIX01 removed placeholder from primary UI
+FieldGroups.php service_editor_role,acf_field,section/service only before,choices_without_placeholder,yes,added_placeholder_Заглушка,RU help text for stub mode
+service_layout_variant,acf_field,placeholder Legacy label,technical_hidden,yes,relabeled_Заглушка_active_sync_target,still hidden technical field
+service-helpers map placeholder→leaf,theme_php,placeholder→leaf,mapped_to_leaf_full_stack,partial,remapped_to_placeholder_stack,E44 semantics were leaf alias
+single-service.php / loader,theme_php,placeholder-stack historical,stack_file_missing,yes,created_placeholder-stack.php,true stub H1 only
+EditorRestrictions list column,admin_php,Заглушка when layout=placeholder,still_present,yes,kept,legacy column remains useful
+page generic template,page_template,interim generic content,no page_layout_mode,yes,added_page_layout_mode ACF,scoped to generic.php only
+sections #73/#77/#84,service_cpt,section role,full_section,yes,option_available_not_enabled,placeholder choice available first-level but not selected
+DB #78,postmeta,role=service layout=service_general,full_service_demo,n/a,set_placeholder_for_test,content metas preserved
+institutional_placeholder_notice,acf_textarea,institutional copy,unrelated,no,no_change,not layout mode
+service-placeholder.svg,asset,image fallback,unrelated,no,no_change,name collision only in smoke regex

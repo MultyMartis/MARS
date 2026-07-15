@@ -1,0 +1,33 @@
+route,expected,http,result,group,notes,url
+/,200,200,PASS,core,,http://shpigovsky.test/
+/uslugi/,200,200,PASS,core,,http://shpigovsky.test/uslugi/
+/blog/,200,200,PASS,core,,http://shpigovsky.test/blog/
+/specyalisty/,200,200,PASS,core,,http://shpigovsky.test/specyalisty/
+/o-centre/,200,200,PASS,core,,http://shpigovsky.test/o-centre/
+/o-centre/programma-lecheniya/,200,200,PASS,core,,http://shpigovsky.test/o-centre/programma-lecheniya/
+/kontakty/,200,200,PASS,core,,http://shpigovsky.test/kontakty/
+/otzyvy/,200,200,PASS,core,,http://shpigovsky.test/otzyvy/
+/o-centre/programma-lecheniya/genotipirovanie/,200,200,PASS,program,,http://shpigovsky.test/o-centre/programma-lecheniya/genotipirovanie/
+/o-centre/programma-lecheniya/neyropsihologicheskaya-korrektsiya/,200,200,PASS,program,,http://shpigovsky.test/o-centre/programma-lecheniya/neyropsihologicheskaya-korrektsiya/
+/o-centre/programma-lecheniya/psihokorrektsiya/,200,200,PASS,program,,http://shpigovsky.test/o-centre/programma-lecheniya/psihokorrektsiya/
+/o-centre/programma-lecheniya/kinezioterapiya/,200,200,PASS,program,,http://shpigovsky.test/o-centre/programma-lecheniya/kinezioterapiya/
+/specyalisty/shipovsky/,200,200,PASS,specialist,,http://shpigovsky.test/specyalisty/shipovsky/
+/specyalisty/kazakov/,200,200,PASS,specialist,,http://shpigovsky.test/specyalisty/kazakov/
+/specyalisty/kostyuk/,200,200,PASS,specialist,,http://shpigovsky.test/specyalisty/kostyuk/
+/specyalisty/shapiguzova/,200,200,PASS,specialist,,http://shpigovsky.test/specyalisty/shapiguzova/
+/blog/nazvanie-stati/,200,200,PASS,blog,,http://shpigovsky.test/blog/nazvanie-stati/
+/blog/yoga-v-terapii-abstinentnyy-sindrom/,200,200,PASS,blog-e35,,http://shpigovsky.test/blog/yoga-v-terapii-abstinentnyy-sindrom/
+/blog/bos-terapiya-trenirovka-zon-mozga/,200,200,PASS,blog-e35,,http://shpigovsky.test/blog/bos-terapiya-trenirovka-zon-mozga/
+/blog/genotipirovanie-pri-zavisimostyah/,200,200,PASS,blog-e35,,http://shpigovsky.test/blog/genotipirovanie-pri-zavisimostyah/
+/blog/kak-prohodit-pervaya-konsultatsiya/,200,200,PASS,blog-e35,,http://shpigovsky.test/blog/kak-prohodit-pervaya-konsultatsiya/
+/blog/sryvy-i-retsidivy-signal-k-korrektirovke/,200,200,PASS,blog-e35,,http://shpigovsky.test/blog/sryvy-i-retsidivy-signal-k-korrektirovke/
+/uslugi/zavisimosti/,200,200,PASS,service,,http://shpigovsky.test/uslugi/zavisimosti/
+/uslugi/psihicheskoe-zdorovie/,200,200,PASS,service,,http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/
+/uslugi/rasstroystva-pischevogo-povedeniya/,200,200,PASS,service,,http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/
+/uslugi/zavisimosti/internet-zavisimost/,200,200,PASS,service-canonical,,http://shpigovsky.test/uslugi/zavisimosti/internet-zavisimost/
+/uslugi/genotipirovanie/,404,404,PASS,expected-removed,Not Found,http://shpigovsky.test/uslugi/genotipirovanie/
+/uslugi/zavisimosti/lechenie-internet-zavisimosti/,404,404,PASS,expected-removed,Not Found,http://shpigovsky.test/uslugi/zavisimosti/lechenie-internet-zavisimosti/
+/uslugi/zavisimosti/lechenie-opiumnoy-zavisimosti/,200,200,PASS,service-opium,,http://shpigovsky.test/uslugi/zavisimosti/lechenie-opiumnoy-zavisimosti/
+/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/,200,200,PASS,service-narcotic-parent,,http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/
+/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/geroin/,200,200,PASS,service-deep,,http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/geroin/
+/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/internet-zavisimost/,200,200,PASS,service-canonical,,http://shpigovsky.test/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/internet-zavisimost/

@@ -1,0 +1,13 @@
+route,http,result,notes
+/,200,PASS,recheck 2026-07-14-2215; Home fields=74; body hash variance vs FIX01 backup accepted (gallery order); ACF untouched
+/uslugi/,200,PASS,fingerprint match vs FIX01 backup (hash16=1c590de7afc173fe)
+/uslugi/zavisimosti/,200,PASS,fingerprint match vs FIX01 backup (hash16=a1d6fcc56ad3e435); visual preserved
+/uslugi/psihicheskoe-zdorovie/,200,PASS,#77 section; layout+hero groups present; no fatal
+/uslugi/rasstroystva-pischevogo-povedeniya/,200,PASS,#84 section; layout+hero groups present; no fatal
+/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/,200,PASS,#314 real URL
+/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/,200,PASS,#74 real URL
+/uslugi/psihicheskoe-zdorovie/depressiya/,200,PASS,#78 depression URL
+/blog/,200,PASS,
+/specyalisty/,200,PASS,
+/o-centre/,200,PASS,
+/kontakty/,200,PASS,

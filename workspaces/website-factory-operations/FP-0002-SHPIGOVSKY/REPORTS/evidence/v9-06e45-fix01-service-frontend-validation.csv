@@ -1,0 +1,14 @@
+route,expected_stack,http,child_block,result,notes
+/uslugi/,services hub,200,n/a,PASS,hub size restored; no child css
+/uslugi/zavisimosti/,subdivision,200,n/a,PASS,subdivision main
+/uslugi/psihicheskoe-zdorovie/,subdivision,200,n/a,PASS,
+/uslugi/rasstroystva-pischevogo-povedeniya/,subdivision,200,n/a,PASS,
+alcohol URL,alcohol-special,200,hidden,PASS,static alcohol title preserved; bordered info present
+narcotic URL,alcohol-special,200,visible,PASS,4 child cards before FAQ
+heroin URL,alcohol-special,200,hidden,PASS,no children
+depression URL,alcohol-special,200,hidden,PASS,no alcohol static title
+/,home,200,n/a,PASS,frozen; no child css
+/blog/,ok,200,n/a,PASS,
+/specyalisty/,ok,200,n/a,PASS,
+/o-centre/,ok,200,n/a,PASS,
+/kontakty/,ok,200,n/a,PASS,

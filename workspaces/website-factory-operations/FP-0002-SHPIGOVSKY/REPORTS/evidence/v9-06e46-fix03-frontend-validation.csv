@@ -1,0 +1,12 @@
+check,expected,actual,result,notes
+/uslugi/zavisimosti/ HTTP,200,200,PASS,
+Visual program preserved,yes,2 intros Lorem + footer with ТЕСТ,PASS,operator test suffix retained
+Program intro preserved,yes,2 paragraphs,PASS,now from seeded repeater
+Lower link text correct,yes,подробнее о программе ТЕСТ,PASS,user value wins
+CTA frontend not broken,yes,service-subdivision-start present,PASS,mid-cta still rendered
+No debug/test agent text,yes,no USER_* leak,PASS,ТЕСТ is operator-entered meta
+/uslugi/psihicheskoe-zdorovie/ HTTP,200,200,PASS,demo fallback
+/uslugi/rasstroystva-pischevogo-povedeniya/ HTTP,200,200,PASS,demo fallback
+Home / frozen,unchanged templates,home template hash match backup; HTML gallery link dynamic variance only,PASS,
+Services hub /uslugi/ frozen,unchanged,HTML fingerprint match,PASS,
+Operator CSS,preserved,v9-style.css hash match backup,PASS,

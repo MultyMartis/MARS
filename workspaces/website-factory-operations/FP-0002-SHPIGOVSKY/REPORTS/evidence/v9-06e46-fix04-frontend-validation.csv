@@ -1,0 +1,13 @@
+route,http,fatal,has_clinic_landscape,landscape_src_match_expected,program_present,result,notes
+http://shpigovsky.test/,200,False,True,True,False,PASS,
+http://shpigovsky.test/uslugi/,200,False,False,False,True,PASS,
+http://shpigovsky.test/uslugi/zavisimosti/,200,False,True,True,True,PASS,
+http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/,200,False,True,True,True,PASS,
+http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/,200,False,True,True,True,PASS,
+http://shpigovsky.test/uslugi/lechenie-narkoticheskoy-zavisimosti/,200,False,True,True,True,PASS,
+http://shpigovsky.test/uslugi/lechenie-alkogolnoy-zavisimosti/,200,False,True,True,True,PASS,
+http://shpigovsky.test/blog/,200,False,False,False,False,PASS,
+http://shpigovsky.test/specyalisty/,200,False,False,False,False,PASS,
+http://shpigovsky.test/o-centre/,200,False,True,False,True,PASS,
+http://shpigovsky.test/kontakty/,200,False,False,False,False,PASS,
+http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/depressiya/,200,False,True,True,True,PASS,

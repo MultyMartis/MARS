@@ -1,0 +1,11 @@
+check,expected,actual,result,notes
+home_http,200,200,PASS,
+hero_slider_attr,data-hero-slider present,yes,PASS,2 slides
+slide_1_title,Шпиговский дом 1,present,PASS,
+slide_2_title,Шпиговский дом 2,present,PASS,
+horizontal_swiper,Swiper direction horizontal,initHomeHeroSlider in v9-shell.js,PASS,local Swiper vendor
+arrows_default,visible when enabled,data-hero-prev present,PASS,defaults enabled
+dots_default,visible when enabled,data-hero-pagination present,PASS,defaults enabled
+autoplay_setting,admin field + data attr,home_hero_autoplay_enabled seeded 1,PASS,delay 5000
+one_slide_nav_hidden,no nav when count<=1,code path hides nav/dots/autoplay,PASS,logic in hero.php
+standalone_hero_media,retired/hidden,fp02-acf-legacy-retired + CSS hide,PASS,meta 302 preserved

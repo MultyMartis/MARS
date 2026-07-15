@@ -1,0 +1,10 @@
+current_order,current_group_or_box,desired_order,desired_group_or_box,action,notes
+1,Service — FAQ|group_fp02_service_faq,,,hide_from_normal_ui,before FIX01
+2,Service — Layout|group_fp02_service_layout_hero,1,Макет страницы услуги (group_fp02_service_layout_hero),keep_as_1_rename,before FIX01
+3,Service — Relationships|group_fp02_service_relationships,,,hide_from_normal_ui,before FIX01
+4,Service — Structured Sections (x4 duplicates),,,hide_from_normal_ui,before FIX01
+5,Hero страницы услуги|group_fp02_service_hero,2,Hero страницы услуги (group_fp02_service_hero),keep_as_2,before FIX01
+6,Услуга — блоки страницы|group_fp02_service_general_parity,3,Услуга — блоки страницы (group_fp02_service_general_parity),keep_as_3,before FIX01
+AFTER_1,Макет страницы услуги|group_fp02_service_layout_hero,1,Макет страницы услуги,keep,after FIX01 PASS
+AFTER_2,Hero страницы услуги|group_fp02_service_hero,2,Hero страницы услуги,keep,after FIX01 PASS
+AFTER_3,Услуга — блоки страницы|group_fp02_service_general_parity,3,Услуга — блоки страницы,keep,after FIX01 PASS

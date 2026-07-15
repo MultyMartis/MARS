@@ -1,46 +1,278 @@
 {
-  "phase": "V9-06D8-A",
-  "generated_at": "2026-07-04T20:22:00Z",
-  "writable_fields": [
-    "organisation_name",
-    "phone_primary",
-    "phone_secondary",
-    "site_email",
-    "site_address",
-    "opening_hours",
-    "default_callback_title",
-    "default_button_label",
-    "default_secondary_button_label",
-    "global_cta_title",
-    "global_cta_text"
-  ],
-  "skipped_fields": [
-    "map_link",
-    "social_links",
-    "legal_org_identifiers",
-    "default_callback_text",
-    "default_consent_text_reference"
-  ],
-  "entries": [
-    {"field": "organisation_name", "proposed_value_state": "set", "source": "V9_STATIC_SOURCE", "classification": "LOCAL_MVP_PLACEHOLDER", "operator_supplied_required": false, "write": true},
-    {"field": "phone_primary", "proposed_value_state": "set", "source": "V9_STATIC_SOURCE", "classification": "LOCAL_MVP_PLACEHOLDER", "operator_supplied_required": false, "write": true},
-    {"field": "phone_secondary", "proposed_value_state": "set", "source": "V9_STATIC_SOURCE", "classification": "LOCAL_MVP_PLACEHOLDER", "operator_supplied_required": false, "write": true},
-    {"field": "site_email", "proposed_value_state": "set", "source": "V9_STATIC_SOURCE", "classification": "LOCAL_MVP_PLACEHOLDER", "operator_supplied_required": false, "write": true},
-    {"field": "site_address", "proposed_value_state": "set", "source": "V9_STATIC_SOURCE", "classification": "LOCAL_MVP_PLACEHOLDER", "operator_supplied_required": false, "write": true},
-    {"field": "opening_hours", "proposed_value_state": "set", "source": "V9_STATIC_SOURCE", "classification": "LOCAL_MVP_PLACEHOLDER", "operator_supplied_required": false, "write": true},
-    {"field": "map_link", "proposed_value_state": "unchanged", "source": "OPERATOR_SUPPLIED_REQUIRED", "classification": "empty", "operator_supplied_required": true, "write": false},
-    {"field": "social_links", "proposed_value_state": "unchanged", "source": "OPERATOR_SUPPLIED_REQUIRED", "classification": "empty", "operator_supplied_required": true, "write": false},
-    {"field": "legal_org_identifiers", "proposed_value_state": "unchanged", "source": "OPERATOR_SUPPLIED_REQUIRED", "classification": "empty", "operator_supplied_required": true, "write": false},
-    {"field": "default_callback_title", "proposed_value_state": "set", "source": "V9_STATIC_SOURCE", "classification": "LOCAL_MVP_PLACEHOLDER", "operator_supplied_required": false, "write": true},
-    {"field": "default_callback_text", "proposed_value_state": "unchanged", "source": "DO_NOT_SEED", "classification": "empty", "operator_supplied_required": false, "write": false},
-    {"field": "default_button_label", "proposed_value_state": "set", "source": "V9_STATIC_SOURCE", "classification": "LOCAL_MVP_PLACEHOLDER", "operator_supplied_required": false, "write": true},
-    {"field": "default_secondary_button_label", "proposed_value_state": "set", "source": "V9_STATIC_SOURCE", "classification": "LOCAL_MVP_PLACEHOLDER", "operator_supplied_required": false, "write": true},
-    {"field": "default_consent_text_reference", "proposed_value_state": "unchanged", "source": "DO_NOT_SEED", "classification": "empty", "operator_supplied_required": false, "write": false},
-    {"field": "global_cta_title", "proposed_value_state": "set", "source": "V9_STATIC_SOURCE", "classification": "LOCAL_MVP_PLACEHOLDER", "operator_supplied_required": false, "write": true},
-    {"field": "global_cta_text", "proposed_value_state": "set", "source": "V9_STATIC_SOURCE", "classification": "LOCAL_MVP_PLACEHOLDER", "operator_supplied_required": false, "write": true}
-  ],
-  "value_traceability": "All writable values traced to workspaces/fp-0002-shpigovsky-v9/src/ — not operator-supplied production confirmation",
-  "invented_values": false,
-  "secrets_in_payload": false,
-  "result": "PASS"
+    "phase": "V9-06D8-A",
+    "generated_at": "2026-07-04T20:32:41+00:00",
+    "payload": {
+        "organisation_name": {
+            "value": "Шпиговский дом",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "write": true,
+            "v9_ref": "src/partials/layout/head.html og:site_name; header/footer logo alt"
+        },
+        "phone_primary": {
+            "value": "8 (925) 183-64-64",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "write": true,
+            "v9_ref": "src/partials/layout/header.html, footer.html, contacts-map-body.html"
+        },
+        "phone_secondary": {
+            "value": "8 (995) 023-92-26",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "write": true,
+            "v9_ref": "src/partials/layout/header.html, footer.html"
+        },
+        "site_email": {
+            "value": "Info@shpigovsky.ru",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "write": true,
+            "v9_ref": "src/partials/layout/footer.html, contacts-map-body.html"
+        },
+        "site_address": {
+            "value": "Москва,\nМосковская область",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "write": true,
+            "v9_ref": "src/partials/layout/header.html address lines (chrome short form)"
+        },
+        "opening_hours": {
+            "value": "пн-пт: 09:00-19:00\nсб-вс: 09:00-20:00",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "write": true,
+            "v9_ref": "src/partials/sections/contacts-map-body.html + footer.html (header variant differs — not used)"
+        },
+        "map_link": {
+            "value": "",
+            "source": "OPERATOR_SUPPLIED_REQUIRED",
+            "classification": "empty",
+            "write": false,
+            "v9_ref": "V9 uses static map images only; no external map URL in source"
+        },
+        "social_links": {
+            "value": [],
+            "source": "OPERATOR_SUPPLIED_REQUIRED",
+            "classification": "empty",
+            "write": false,
+            "v9_ref": "V9 messenger href=\"#\" placeholders — do not invent URLs"
+        },
+        "legal_org_identifiers": {
+            "value": "",
+            "source": "OPERATOR_SUPPLIED_REQUIRED",
+            "classification": "empty",
+            "write": false,
+            "v9_ref": "privacy-policy-body.html contains [ДЕМО: ИНН] placeholders"
+        },
+        "default_callback_title": {
+            "value": "Заказать звонок",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "write": true,
+            "v9_ref": "src/partials/layout/header.html data-modal-title"
+        },
+        "default_callback_text": {
+            "value": "",
+            "source": "DO_NOT_SEED",
+            "classification": "empty",
+            "write": false,
+            "v9_ref": "No stable modal body copy in V9 static; subtitle hidden by default"
+        },
+        "default_button_label": {
+            "value": "Заказать звонок",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "write": true,
+            "v9_ref": "src/partials/layout/header.html footer callback buttons"
+        },
+        "default_secondary_button_label": {
+            "value": "Записаться",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "write": true,
+            "v9_ref": "src/partials/layout/footer.html appointment button"
+        },
+        "default_consent_text_reference": {
+            "value": "",
+            "source": "DO_NOT_SEED",
+            "classification": "empty",
+            "write": false,
+            "v9_ref": "Deferred until legal pages review (D8 planning)"
+        },
+        "global_cta_title": {
+            "value": "Остались вопросы?",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "write": true,
+            "v9_ref": "src/partials/sections/final-form.html default headingText in page includes"
+        },
+        "global_cta_text": {
+            "value": "Опишите вашу ситуацию в форме заявки, и мы расскажем, как сможем помочь",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "write": true,
+            "v9_ref": "src/pages/usluga-konechnaya-v1.html final-form leadText (plain text normalization)"
+        }
+    },
+    "entries": [
+        {
+            "field": "organisation_name",
+            "proposed_value_state": "set",
+            "proposed_value_preview": "Шпиговский дом",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "operator_supplied_required": false,
+            "write": true
+        },
+        {
+            "field": "phone_primary",
+            "proposed_value_state": "set",
+            "proposed_value_preview": "8 (925) 183-64-64",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "operator_supplied_required": false,
+            "write": true
+        },
+        {
+            "field": "phone_secondary",
+            "proposed_value_state": "set",
+            "proposed_value_preview": "8 (995) 023-92-26",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "operator_supplied_required": false,
+            "write": true
+        },
+        {
+            "field": "site_email",
+            "proposed_value_state": "set",
+            "proposed_value_preview": "Info@shpigovsky.ru",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "operator_supplied_required": false,
+            "write": true
+        },
+        {
+            "field": "site_address",
+            "proposed_value_state": "set",
+            "proposed_value_preview": "Москва,\nМосковская область",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "operator_supplied_required": false,
+            "write": true
+        },
+        {
+            "field": "opening_hours",
+            "proposed_value_state": "set",
+            "proposed_value_preview": "пн-пт: 09:00-19:00\nсб-вс: 09:00-20:00",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "operator_supplied_required": false,
+            "write": true
+        },
+        {
+            "field": "map_link",
+            "proposed_value_state": "unchanged",
+            "proposed_value_preview": "empty/skip",
+            "source": "OPERATOR_SUPPLIED_REQUIRED",
+            "classification": "empty",
+            "operator_supplied_required": true,
+            "write": false
+        },
+        {
+            "field": "social_links",
+            "proposed_value_state": "unchanged",
+            "proposed_value_preview": "empty/skip",
+            "source": "OPERATOR_SUPPLIED_REQUIRED",
+            "classification": "empty",
+            "operator_supplied_required": true,
+            "write": false
+        },
+        {
+            "field": "legal_org_identifiers",
+            "proposed_value_state": "unchanged",
+            "proposed_value_preview": "empty/skip",
+            "source": "OPERATOR_SUPPLIED_REQUIRED",
+            "classification": "empty",
+            "operator_supplied_required": true,
+            "write": false
+        },
+        {
+            "field": "default_callback_title",
+            "proposed_value_state": "set",
+            "proposed_value_preview": "Заказать звонок",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "operator_supplied_required": false,
+            "write": true
+        },
+        {
+            "field": "default_callback_text",
+            "proposed_value_state": "unchanged",
+            "proposed_value_preview": "empty/skip",
+            "source": "DO_NOT_SEED",
+            "classification": "empty",
+            "operator_supplied_required": false,
+            "write": false
+        },
+        {
+            "field": "default_button_label",
+            "proposed_value_state": "set",
+            "proposed_value_preview": "Заказать звонок",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "operator_supplied_required": false,
+            "write": true
+        },
+        {
+            "field": "default_secondary_button_label",
+            "proposed_value_state": "set",
+            "proposed_value_preview": "Записаться",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "operator_supplied_required": false,
+            "write": true
+        },
+        {
+            "field": "default_consent_text_reference",
+            "proposed_value_state": "unchanged",
+            "proposed_value_preview": "empty/skip",
+            "source": "DO_NOT_SEED",
+            "classification": "empty",
+            "operator_supplied_required": false,
+            "write": false
+        },
+        {
+            "field": "global_cta_title",
+            "proposed_value_state": "set",
+            "proposed_value_preview": "Остались вопросы?",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "operator_supplied_required": false,
+            "write": true
+        },
+        {
+            "field": "global_cta_text",
+            "proposed_value_state": "set",
+            "proposed_value_preview": "Опишите вашу ситуацию в форме заявки, и мы расскажем, как сможем помочь",
+            "source": "V9_STATIC_SOURCE",
+            "classification": "LOCAL_MVP_PLACEHOLDER",
+            "operator_supplied_required": false,
+            "write": true
+        }
+    ],
+    "writable_fields": [
+        "organisation_name",
+        "phone_primary",
+        "phone_secondary",
+        "site_email",
+        "site_address",
+        "opening_hours",
+        "default_callback_title",
+        "default_button_label",
+        "default_secondary_button_label",
+        "global_cta_title",
+        "global_cta_text"
+    ],
+    "result": "PASS"
 }

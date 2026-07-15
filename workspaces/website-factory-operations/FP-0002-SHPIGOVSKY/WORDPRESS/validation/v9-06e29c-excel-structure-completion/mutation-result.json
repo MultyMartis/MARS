@@ -1,0 +1,231 @@
+{
+    "services": [
+        {
+            "path": "/uslugi/zavisimosti/",
+            "action": "EXISTS_OK",
+            "id": 73,
+            "parent": 0
+        },
+        {
+            "path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+            "action": "CREATED_SERVICE",
+            "id": 1009,
+            "parent": 73
+        },
+        {
+            "path": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/",
+            "action": "CREATED_SERVICE",
+            "id": 1010,
+            "parent": 73
+        },
+        {
+            "path": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/soli/",
+            "action": "CREATED_SERVICE",
+            "id": 1011,
+            "parent": 0
+        },
+        {
+            "path": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/matadon/",
+            "action": "CREATED_SERVICE",
+            "id": 1012,
+            "parent": 0
+        },
+        {
+            "path": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/geroin/",
+            "action": "CREATED_SERVICE",
+            "id": 1013,
+            "parent": 0
+        },
+        {
+            "path": "/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lekarstva/",
+            "action": "CREATED_SERVICE",
+            "id": 1014,
+            "parent": 0
+        },
+        {
+            "path": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/",
+            "action": "CREATED_SERVICE",
+            "id": 1015,
+            "parent": 73
+        },
+        {
+            "path": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/ludomaniya/",
+            "action": "CREATED_SERVICE",
+            "id": 1016,
+            "parent": 0
+        },
+        {
+            "path": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/internet-zavisimost/",
+            "action": "CREATED_SERVICE",
+            "id": 1017,
+            "parent": 0
+        },
+        {
+            "path": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/sozavisimost/",
+            "action": "CREATED_SERVICE",
+            "id": 1018,
+            "parent": 0
+        },
+        {
+            "path": "/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/shopogolizm/",
+            "action": "CREATED_SERVICE",
+            "id": 1019,
+            "parent": 0
+        },
+        {
+            "path": "/uslugi/psihicheskoe-zdorovie/",
+            "action": "EXISTS_OK",
+            "id": 77,
+            "parent": 0
+        },
+        {
+            "path": "/uslugi/psihicheskoe-zdorovie/depressiya/",
+            "action": "CREATED_SERVICE",
+            "id": 1020,
+            "parent": 77
+        },
+        {
+            "path": "/uslugi/psihicheskoe-zdorovie/ptsr/",
+            "action": "CREATED_SERVICE",
+            "id": 1021,
+            "parent": 77
+        },
+        {
+            "path": "/uslugi/psihicheskoe-zdorovie/emotsionalnoe-vygoranie/",
+            "action": "CREATED_SERVICE",
+            "id": 1022,
+            "parent": 77
+        },
+        {
+            "path": "/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/",
+            "action": "CREATED_SERVICE",
+            "id": 1023,
+            "parent": 77
+        },
+        {
+            "path": "/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/",
+            "action": "CREATED_SERVICE",
+            "id": 1024,
+            "parent": 77
+        },
+        {
+            "path": "/uslugi/psihicheskoe-zdorovie/travma/",
+            "action": "CREATED_SERVICE",
+            "id": 1025,
+            "parent": 77
+        },
+        {
+            "path": "/uslugi/rasstroystva-pischevogo-povedeniya/",
+            "action": "EXISTS_OK",
+            "id": 84,
+            "parent": 0
+        },
+        {
+            "path": "/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/",
+            "action": "CREATED_SERVICE",
+            "id": 1026,
+            "parent": 84
+        },
+        {
+            "path": "/uslugi/rasstroystva-pischevogo-povedeniya/buliniya/",
+            "action": "CREATED_SERVICE",
+            "id": 1027,
+            "parent": 84
+        },
+        {
+            "path": "/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/",
+            "action": "CREATED_SERVICE",
+            "id": 1028,
+            "parent": 84
+        },
+        {
+            "path": "/uslugi/genotipirovanie/",
+            "action": "CREATED_SERVICE",
+            "id": 1029,
+            "parent": 0
+        }
+    ],
+    "pages": [
+        {
+            "path": "/specyalisty/",
+            "action": "CREATED_PAGE",
+            "id": 1030,
+            "parent": 0,
+            "template": "page-templates/generic.php"
+        },
+        {
+            "path": "/specyalisty/shipovsky/",
+            "action": "CREATED_PAGE",
+            "id": 1031,
+            "parent": 1030,
+            "template": "page-templates/generic.php"
+        },
+        {
+            "path": "/specyalisty/kazakov/",
+            "action": "CREATED_PAGE",
+            "id": 1032,
+            "parent": 1030,
+            "template": "page-templates/generic.php"
+        },
+        {
+            "path": "/specyalisty/kostyuk/",
+            "action": "CREATED_PAGE",
+            "id": 1033,
+            "parent": 1030,
+            "template": "page-templates/generic.php"
+        },
+        {
+            "path": "/o-centre/o-nas/",
+            "action": "UPDATED_PAGE",
+            "id": 12,
+            "parent": 11,
+            "template": "page-templates/generic.php"
+        },
+        {
+            "path": "/o-centre/programma-lecheniya/",
+            "action": "UPDATED_PAGE",
+            "id": 13,
+            "parent": 11,
+            "template": "page-templates/generic.php"
+        },
+        {
+            "path": "/o-centre/galereya-o-dome/",
+            "action": "UPDATED_PAGE",
+            "id": 14,
+            "parent": 11,
+            "template": "page-templates/generic.php"
+        },
+        {
+            "path": "/o-centre/specialistam/",
+            "action": "UPDATED_PAGE",
+            "id": 15,
+            "parent": 11,
+            "template": "page-templates/generic.php"
+        },
+        {
+            "path": "/o-centre/rodstvennikam/",
+            "action": "UPDATED_PAGE",
+            "id": 16,
+            "parent": 11,
+            "template": "page-templates/generic.php"
+        },
+        {
+            "path": "/o-centre/intervyu-i-smi/",
+            "action": "CREATED_PAGE",
+            "id": 1039,
+            "parent": 11,
+            "template": "page-templates/generic.php"
+        }
+    ],
+    "favicon_copy": [
+        "favicon.svg",
+        "favicon-32x32.png",
+        "favicon.ico",
+        "apple-touch-icon.png"
+    ],
+    "site_icon": {
+        "ok": true,
+        "attachment_id": 1040
+    },
+    "db_writes": 35
+}

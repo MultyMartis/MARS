@@ -1,0 +1,203 @@
+{
+  "consoleErrors": [],
+  "routes": [
+    {
+      "key": "home",
+      "url": "http://shpigovsky.test/",
+      "status": 200,
+      "hasSigns": false,
+      "hasReadMore": false
+    },
+    {
+      "key": "uslugi",
+      "url": "http://shpigovsky.test/uslugi/",
+      "status": 200,
+      "hasSigns": false,
+      "hasReadMore": false
+    },
+    {
+      "key": "zavisimosti",
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/",
+      "status": 200,
+      "hasSigns": false,
+      "hasReadMore": false
+    },
+    {
+      "key": "psihicheskoe",
+      "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/",
+      "status": 200,
+      "hasSigns": false,
+      "hasReadMore": false
+    },
+    {
+      "key": "rpp",
+      "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/",
+      "status": 200,
+      "hasSigns": false,
+      "hasReadMore": false
+    },
+    {
+      "key": "alcohol",
+      "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "status": 200,
+      "hasSigns": true,
+      "hasReadMore": true
+    },
+    {
+      "key": "p314",
+      "url": "http://shpigovsky.test/?p=314",
+      "status": 200,
+      "hasSigns": false,
+      "hasReadMore": false
+    },
+    {
+      "key": "p78",
+      "url": "http://shpigovsky.test/?p=78",
+      "status": 200,
+      "hasSigns": false,
+      "hasReadMore": false
+    },
+    {
+      "key": "blog",
+      "url": "http://shpigovsky.test/blog/",
+      "status": 200,
+      "hasSigns": false,
+      "hasReadMore": false
+    },
+    {
+      "key": "specyalisty",
+      "url": "http://shpigovsky.test/specyalisty/",
+      "status": 200,
+      "hasSigns": false,
+      "hasReadMore": false
+    },
+    {
+      "key": "o-centre",
+      "url": "http://shpigovsky.test/o-centre/",
+      "status": 200,
+      "hasSigns": false,
+      "hasReadMore": false
+    },
+    {
+      "key": "kontakty",
+      "url": "http://shpigovsky.test/kontakty/",
+      "status": 200,
+      "hasSigns": false,
+      "hasReadMore": false
+    }
+  ],
+  "toggle": {
+    "initialNative": {
+      "hasBlock": true,
+      "buttonPresent": true,
+      "buttonHidden": false,
+      "buttonText": "Читать больше",
+      "ariaExpanded": "false",
+      "isClamped": true,
+      "isExpanded": false,
+      "maxHeight": "120px",
+      "clientHeight": 120,
+      "scrollHeight": 504,
+      "textPreview": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i"
+    },
+    "initialLong": {
+      "hasBlock": true,
+      "buttonPresent": true,
+      "buttonHidden": false,
+      "buttonText": "Читать больше",
+      "ariaExpanded": "false",
+      "isClamped": true,
+      "isExpanded": false,
+      "maxHeight": "120px",
+      "clientHeight": 120,
+      "scrollHeight": 168,
+      "textPreview": "Признаки зависимости проявляются постепенно: растёт толерантность, появляется тя"
+    },
+    "buttonVisibleBefore": true,
+    "afterExpand": {
+      "hasBlock": true,
+      "buttonPresent": true,
+      "buttonHidden": false,
+      "buttonText": "Скрыть",
+      "ariaExpanded": "true",
+      "isClamped": false,
+      "isExpanded": true,
+      "maxHeight": "168px",
+      "clientHeight": 168,
+      "scrollHeight": 168,
+      "textPreview": "Признаки зависимости проявляются постепенно: растёт толерантность, появляется тя"
+    },
+    "afterCollapse": {
+      "hasBlock": true,
+      "buttonPresent": true,
+      "buttonHidden": false,
+      "buttonText": "Читать больше",
+      "ariaExpanded": "false",
+      "isClamped": true,
+      "isExpanded": false,
+      "maxHeight": "120px",
+      "clientHeight": 120,
+      "scrollHeight": 168,
+      "textPreview": "Признаки зависимости проявляются постепенно: растёт толерантность, появляется тя"
+    },
+    "afterResizeExpanded": {
+      "hasBlock": true,
+      "buttonPresent": true,
+      "buttonHidden": false,
+      "buttonText": "Скрыть",
+      "ariaExpanded": "true",
+      "isClamped": false,
+      "isExpanded": true,
+      "maxHeight": "336px",
+      "clientHeight": 336,
+      "scrollHeight": 336,
+      "textPreview": "Признаки зависимости проявляются постепенно: растёт толерантность, появляется тя"
+    },
+    "afterCollapseMobile": {
+      "hasBlock": true,
+      "buttonPresent": true,
+      "buttonHidden": false,
+      "buttonText": "Читать больше",
+      "ariaExpanded": "false",
+      "isClamped": true,
+      "isExpanded": false,
+      "maxHeight": "120px",
+      "clientHeight": 120,
+      "scrollHeight": 336,
+      "textPreview": "Признаки зависимости проявляются постепенно: растёт толерантность, появляется тя"
+    },
+    "shortText": {
+      "hasBlock": true,
+      "buttonPresent": true,
+      "buttonHidden": true,
+      "buttonText": "Читать больше",
+      "ariaExpanded": "false",
+      "isClamped": false,
+      "isExpanded": false,
+      "maxHeight": "none",
+      "clientHeight": 24,
+      "scrollHeight": 24,
+      "textPreview": "Короткий текст в пределах пяти строк."
+    },
+    "p314": {
+      "hasBlock": false
+    },
+    "p78": {
+      "hasBlock": false
+    }
+  },
+  "frozen": {
+    "home": {
+      "status": 200,
+      "hasServiceSignsReadMore": false
+    },
+    "uslugi": {
+      "status": 200,
+      "hasServiceSignsReadMore": false
+    },
+    "zavisimosti": {
+      "status": 200,
+      "hasServiceSignsReadMore": false
+    }
+  }
+}

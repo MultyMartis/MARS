@@ -1,0 +1,13 @@
+route,url,expected_stack,http,result,notes
+home,http://shpigovsky.test/,home,200,PASS,freeze preserved; whitespace-collapsed delta=21 noise (encoding/newlines); HTTP 200
+uslugi,http://shpigovsky.test/uslugi/,uslugi,200,PASS,freeze preserved; whitespace-collapsed exact equal; raw snapshot newline artifact only; HTTP 200
+zavisimosti,http://shpigovsky.test/uslugi/zavisimosti/,subdivision,200,PASS,body_has_subdivision=True; wp-singular service-template-default single single-service postid-73 wp-theme-shpigovsky p
+psihicheskoe-zdorovie,http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/,subdivision,200,PASS,body_has_subdivision=True; wp-singular service-template-default single single-service postid-77 wp-theme-shpigovsky p
+rpp,http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/,subdivision,200,PASS,body_has_subdivision=True; wp-singular service-template-default single single-service postid-84 wp-theme-shpigovsky p
+narcotic,http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/,service,200,PASS,body_has_service=True; wp-singular service-template-default single single-service postid-314 wp-theme-shpigovsky page-service-leaf-v1; child_block=True
+alcohol,http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/,service,200,PASS,body_has_service=True; wp-singular service-template-default single single-service postid-74 wp-theme-shpigovsky page-service-leaf-v1 ; alcohol_markers=True
+depressiya,http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/depressiya/,service,200,PASS,body_has_service=True; wp-singular service-template-default single single-service postid-78 wp-theme-shpigovsky page-service-leaf-v1 
+blog,http://shpigovsky.test/blog/,any,200,PASS,
+specyalisty,http://shpigovsky.test/specyalisty/,any,200,PASS,
+o-centre,http://shpigovsky.test/o-centre/,any,200,PASS,
+kontakty,http://shpigovsky.test/kontakty/,any,200,PASS,

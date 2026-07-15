@@ -118,6 +118,20 @@ function shpigovsky_get_blog_archive_card_link_label() {
 }
 
 /**
+ * Blog no-photo placeholder (theme-local SVG; distinct from service/specialist placeholders).
+ *
+ * @return array{url:string,width:int,height:int,alt:string}
+ */
+function shpigovsky_get_blog_no_photo_image() {
+	return array(
+		'url'    => shpigovsky_asset_uri( 'images/blog-no-photo.svg' ),
+		'width'  => 1200,
+		'height' => 800,
+		'alt'    => '',
+	);
+}
+
+/**
  * Fallback card image data for archive cards.
  *
  * @return array{url:string,width:int,height:int,alt:string}
@@ -135,12 +149,7 @@ function shpigovsky_get_blog_archive_card_fallback_image() {
 	}
 
 	if ( empty( $image['url'] ) ) {
-		return array(
-			'url'    => shpigovsky_asset_uri( 'img/content/home-articles/article-alcohol-dependence.webp' ),
-			'width'  => 1216,
-			'height' => 1632,
-			'alt'    => '',
-		);
+		return shpigovsky_get_blog_no_photo_image();
 	}
 
 	return array(

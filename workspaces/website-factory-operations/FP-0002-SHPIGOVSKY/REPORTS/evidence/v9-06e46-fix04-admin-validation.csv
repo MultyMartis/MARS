@@ -1,0 +1,10 @@
+check,expected,actual,result,notes
+#73 edit group loads,yes,parity 55 fields via ServiceSectionParity::group,PASS,
+Footer link field gone,yes,section_program_footer_label absent,PASS,legacy meta kept
+Landscape image field visible,yes,section_clinic_landscape_image present,PASS,
+Landscape notice updated,yes,section-specific wording; no Home SoT,PASS,from PHP group()
+Classic editor hide hooks,yes,admin_init/add_meta_boxes/admin_head wired,PASS,service CPT scope
+Title/permalink/sidebar intact,yes,post_title Зависимости preserved,PASS,no structural post changes
+Save/seed validation,no errors,update_field seed #73/#77/#84=1239,PASS,
+#77/#84 compatible,yes,seeded; HTTP 200,PASS,
+Home landscape meta untouched,1239,1239,PASS,

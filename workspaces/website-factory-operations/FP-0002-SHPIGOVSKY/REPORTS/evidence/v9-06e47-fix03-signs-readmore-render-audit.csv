@@ -1,0 +1,6 @@
+item,file,selector_or_field,current_behavior,action,notes
+editorial_field,WORDPRESS/plugins/shpigovsky-core/src/Fields/ServiceGeneralParity.php + acf-json group_fp02_service_general_parity.json,service_general_signs_editorial / Редакционный текст после признаков,Rendered via shpigovsky_get_general_signs_copy,preserve field no admin change,Demo content on #74 length 426
+helper_resolver,WORDPRESS/theme/shpigovsky/inc/service-general-helpers.php,shpigovsky_get_general_signs_copy()['editorial'],ACF SoT with emergency fallback,no change,Reads service_general_signs_editorial
+template_render,WORDPRESS/theme/shpigovsky/template-parts/service/signs.php,.service-leaf-signs-v1__editorial + .service-leaf-signs-v1__read-more,"p + p markup; button always shown when editorial non-empty; no clamp",convert read-more to button with aria; add id; JS-driven clamp,Scoped to service general signs only
+css_block,WORDPRESS/theme/shpigovsky/assets/css/v9-style.css,.page-service-leaf-v1 .service-leaf-signs-v1__*,Visual styles only no clamp/expand,"add is-clamped/is-expanded/max-height CSS vars + button reset",Patched independently in source and operator runtime CSS
+js_shell,WORDPRESS/theme/shpigovsky/assets/js/v9-shell.js,none for signs read-more,No overflow detection,add initServiceSignsReadMore IIFE,Vanilla JS; debounce resize; fonts.ready + load + rAF

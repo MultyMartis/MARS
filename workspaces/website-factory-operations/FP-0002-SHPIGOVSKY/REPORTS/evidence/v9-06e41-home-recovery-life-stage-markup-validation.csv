@@ -1,0 +1,9 @@
+check,expected,actual,result,notes
+stage_wrapper,.home-recovery-life__stage outer,present,PASS,
+stage_inner,.home-recovery-life__stage-inner bordered,present,PASS,border styles moved
+label_1,1 месяц,present,PASS,seeded + editable stage_label
+label_2,2 месяц,present,PASS,
+label_3,3 месяц,present,PASS,
+label_style,red 18px bold,CSS color accent 18px 700,PASS,not outlined
+desktop_layout,3-card flex row,CSS preserved,PASS,
+mobile_layout,column stack E36,media query updated to inner,PASS,

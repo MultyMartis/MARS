@@ -1,0 +1,4 @@
+depends_on_value,field_key,field_name,operator,effect,source,notes
+subdivision,field_fp02_service_category_section_lead,service_category_section_lead,==,"show field","group_fp02_service_layout_hero / FieldGroups.php","E43-FIX01 hub lead"
+(any),field_fp02_service_layout_variant,service_layout_variant,n/a,"required select; validation enum",RepeaterValidation::validate_service_layout,
+placeholder,n/a,"admin column fp02_placeholder",==,"list table status label",EditorRestrictions,"not ACF conditional"

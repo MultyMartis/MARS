@@ -1,6 +1,6 @@
 <?php
 /**
- * Service template loader — layout meta routing (V9-06D7-D).
+ * Service template loader — layout meta routing (V9-06E51).
  *
  * @package Shpigovsky
  */
@@ -12,10 +12,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Allowed service layout variants (architecture contract).
  *
+ * `alcohol-special` retained as legacy frontend slug alias of `service-general`.
+ * `placeholder` = temporary stub (header / nav / H1 / footer only).
+ *
  * @return string[]
  */
 function shpigovsky_service_layout_variants() {
-	return array( 'subdivision', 'leaf', 'alcohol-special' );
+	return array( 'subdivision', 'leaf', 'service-general', 'alcohol-special', 'placeholder' );
 }
 
 /**
@@ -37,6 +40,9 @@ function shpigovsky_get_service_layout_variant() {
 /**
  * Map layout variant to stack template slug.
  *
+ * `alcohol-stack.php` remains the general service stack partial filename
+ * (legacy name; content is the general service frontend stack).
+ *
  * @param string $variant Layout variant.
  * @return string
  */
@@ -44,7 +50,9 @@ function shpigovsky_service_stack_slug( $variant ) {
 	$map = array(
 		'subdivision'     => 'subdivision-stack',
 		'leaf'            => 'leaf-stack',
-		'alcohol-special' => 'alcohol-stack',
+		'service-general' => 'alcohol-stack', // legacy partial filename
+		'alcohol-special' => 'alcohol-stack', // legacy alias
+		'placeholder'     => 'placeholder-stack',
 	);
 
 	return isset( $map[ $variant ] ) ? $map[ $variant ] : 'leaf-stack';

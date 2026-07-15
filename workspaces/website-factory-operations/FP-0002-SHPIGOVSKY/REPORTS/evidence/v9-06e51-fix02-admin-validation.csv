@@ -1,0 +1,6 @@
+check,expected,actual,result,notes
+"#78 admin loads authenticated","200 + post-type-service",200,PASS,"cookie auth via wp_generate_auth_cookie"
+"role inputs use acf[field_…]",">0 acf-prefixed; 0 bare input names","3 acf / 0 bare",PASS,"FIX02 root cause fixed"
+"start control Заглушка",placeholder,placeholder,PASS,
+"after Update reload Услуга","service checked",service,PASS,"full form replay with _acf_nonce"
+"meta after save",service/service_general,service/service_general,PASS,

@@ -1,0 +1,8 @@
+group_key,title,registration,top_level_fields,visible_for_service_role,visible_for_section_role,notes
+group_fp02_service_layout_hero,Макет страницы услуги,PHP+JSON,13,yes,yes,role selector + technical fields
+group_fp02_service_hero,Hero страницы услуги,PHP+JSON,7,yes,yes,shared hero
+group_fp02_service_general_parity,Услуга — блоки страницы,PHP+JSON,68,yes,no,FE order 1–18; after FIX01/FIX02
+group_fp02_service_section_parity,Service — Раздел (блоки по порядку сайта),PHP+JSON,55,no,yes,accepted Раздел model
+group_fp02_service_structured_sections,Service — Structured Sections,legacy DB soft-disabled + PHP,n/a,no,yes_for_shared_cta_meta,hidden for Услуга via role filter
+group_fp02_service_faq,Service — FAQ,legacy DB soft-disabled,n/a,no,yes_legacy,hidden for Услуга
+group_fp02_service_relationships,Service — Relationships,legacy DB soft-disabled,n/a,no,yes_legacy,hidden for Услуга

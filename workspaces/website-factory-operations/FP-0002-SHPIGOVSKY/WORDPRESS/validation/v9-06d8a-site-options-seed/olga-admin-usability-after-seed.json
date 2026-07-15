@@ -1,12 +1,35 @@
 {
-  "phase": "V9-06D8-A",
-  "generated_at": "2026-07-04T20:22:00Z",
-  "executed": false,
-  "blocked_reason": "Post-seed admin read blocked — DB/runtime unavailable",
-  "areas": [
-    {"area": "Site Options screen (fp02-site-settings)", "visible_editable": "UNKNOWN", "value_clarity": "Field groups defined in ACF JSON; English labels", "remaining_ux_issue": "RU labels/help deferred", "result": "NOT_ASSESSED"},
-    {"area": "Contacts option fields", "visible_editable": "UNKNOWN", "value_clarity": "Planned V9 placeholder seed for phone/email/address/hours", "remaining_ux_issue": "map_link, social_links need operator URLs", "result": "NOT_ASSESSED"},
-    {"area": "Modal/CTA option fields", "visible_editable": "UNKNOWN", "value_clarity": "Planned CTA label seed from V9 static", "remaining_ux_issue": "global_cta not consumed by all templates yet", "result": "NOT_ASSESSED"}
-  ],
-  "result": "NOT_PERFORMED"
+    "phase": "V9-06D8-A",
+    "generated_at": "2026-07-04T20:32:52+00:00",
+    "areas": [
+        {
+            "area": "Site Options screen",
+            "visible": true,
+            "clarity": "Menu slug fp02-site-settings; English group titles",
+            "issue": "RU labels deferred to future admin UX repair",
+            "result": "PARTIAL"
+        },
+        {
+            "area": "Contacts fields",
+            "visible": true,
+            "clarity": "Field names map to phone/email/address/hours",
+            "issue": "social_links and map_link empty until operator supplies",
+            "result": "PARTIAL"
+        },
+        {
+            "area": "Modal/CTA fields",
+            "visible": true,
+            "clarity": "default_button_label seeded from V9",
+            "issue": "global_cta fields seeded but not all templates consume them yet",
+            "result": "PARTIAL"
+        },
+        {
+            "area": "Legal identifiers",
+            "visible": true,
+            "clarity": "Empty — operator must fill",
+            "issue": "OPERATOR_SUPPLIED_REQUIRED",
+            "result": "PARTIAL"
+        }
+    ],
+    "result": "PARTIAL"
 }

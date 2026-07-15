@@ -1,0 +1,36 @@
+route,http,result,notes
+/,200,PASS,
+/uslugi/,200,PASS,
+/uslugi/zavisimosti/,200,PASS,
+/uslugi/psihicheskoe-zdorovie/,200,PASS,
+/uslugi/rasstroystva-pischevogo-povedeniya/,200,PASS,
+/blog/,200,PASS,
+/specyalisty/,200,PASS,
+/o-centre/,200,PASS,
+/kontakty/,200,PASS,
+http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/,200,PASS,"service #74"
+http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/,200,PASS,"service #314"
+http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/depressiya/,200,PASS,"service #78"
+http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/,200,PASS,"service #81"
+http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/,200,PASS,"service #85"
+http://shpigovsky.test/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/,200,PASS,"service #316"
+http://shpigovsky.test/uslugi/zavisimosti/profilakticheskiy-analiz/,200,PASS,"service #75"
+http://shpigovsky.test/uslugi/zavisimosti/kompyuternaya-zavisimost/,200,PASS,"service #1047"
+http://shpigovsky.test/uslugi/zavisimosti/lechenie-opiumnoy-zavisimosti/,200,PASS,"service #1048"
+http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/ptsr/,200,PASS,"service #79"
+http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/emotsionalnoe-vygoranie/,200,PASS,"service #80"
+http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/,200,PASS,"service #82"
+http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/travma/,200,PASS,"service #83"
+http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/hronicheskaya-ustalost/,200,PASS,"service #1049"
+http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/stress/,200,PASS,"service #1050"
+http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/nartsissizm/,200,PASS,"service #1051"
+http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/buliniya/,200,PASS,"service #86"
+http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/,200,PASS,"service #87"
+http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/soli/,200,PASS,"service #1011"
+http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/matadon/,200,PASS,"service #1012"
+http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/geroin/,200,PASS,"service #1013"
+http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lekarstva/,200,PASS,"service #315"
+http://shpigovsky.test/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/ludomaniya/,200,PASS,"service #1016"
+http://shpigovsky.test/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/internet-zavisimost/,200,PASS,"service #1017"
+http://shpigovsky.test/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/sozavisimost/,200,PASS,"service #1018"
+http://shpigovsky.test/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/shopogolizm/,200,PASS,"service #1019"

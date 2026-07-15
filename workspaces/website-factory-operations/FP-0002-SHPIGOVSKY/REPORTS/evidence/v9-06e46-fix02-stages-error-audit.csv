@@ -1,0 +1,4 @@
+route,block,error_text_or_code,source_file,suspected_cause,fix,validation_result,notes
+/uslugi/zavisimosti/,7. Этапы / service-subdivision-stages,"Literal PHP leaked into HTML: $stages_heading = __( 'Что нужно…' ); … support_rows parse block",theme/template-parts/service/stages.php,"Premature ?> after stages fallback array closed PHP; assignment block rendered as text; variables undefined in section markup",Remove premature ?>'; resolve stages via shpigovsky_get_section_stages_items(); add section_stages_items ACF repeater seeded from stages/fallback,PASS_no_leak_HTTP200,"Before evidence: backup snapshots/stages-error-code-before.txt; after leak=False"
+/uslugi/psihicheskoe-zdorovie/,stages same partial,same leak risk when subdivision,stages.php,same,same template fix,PASS_HTTP200,
+/uslugi/rasstroystva-pischevogo-povedeniya/,stages same partial,same leak risk when subdivision,stages.php,same,same template fix,PASS_HTTP200,

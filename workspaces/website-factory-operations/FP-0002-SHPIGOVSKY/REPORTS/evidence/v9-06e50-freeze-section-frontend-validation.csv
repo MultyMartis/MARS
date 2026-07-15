@@ -1,0 +1,4 @@
+route,expected,actual,result,notes
+`/uslugi/zavisimosti/`,"200 + ACF section content","HTTP 200 nature=yes approach=yes wrong_dep=no acf_heading_on_page=yes",PASS,"heading=Природа зависимости 000101"
+`/uslugi/psihicheskoe-zdorovie/`,"200 + ACF section content","HTTP 200 nature=yes approach=yes wrong_dep=no acf_heading_on_page=yes",PASS,"heading=Природа психических состояний"
+`/uslugi/rasstroystva-pischevogo-povedeniya/`,"200 + ACF section content","HTTP 200 nature=yes approach=yes wrong_dep=no acf_heading_on_page=yes",PASS,"heading=Природа расстройств пищевого поведения"

@@ -1,0 +1,828 @@
+{
+    "sync": [
+        {
+            "src": "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/plugins\/shpigovsky-core\/src\/Fields\/ServiceSectionParity.php",
+            "dst": "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/plugins\/shpigovsky-core\/src\/Fields\/ServiceSectionParity.php",
+            "copied": false,
+            "match": true,
+            "hash_src": "b3554e25b562e753c57e4ef60a3cf785",
+            "hash_dst": "b3554e25b562e753c57e4ef60a3cf785"
+        },
+        {
+            "src": "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/theme\/shpigovsky\/inc\/service-section-helpers.php",
+            "dst": "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/themes\/shpigovsky\/inc\/service-section-helpers.php",
+            "copied": false,
+            "match": true,
+            "hash_src": "62e28cc97a7fbcc730d0e81f284253bb",
+            "hash_dst": "62e28cc97a7fbcc730d0e81f284253bb"
+        },
+        {
+            "src": "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/theme\/shpigovsky\/template-parts\/service\/team-stats.php",
+            "dst": "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/themes\/shpigovsky\/template-parts\/service\/team-stats.php",
+            "copied": false,
+            "match": true,
+            "hash_src": "395586c02d5ffe85ed18390234e12bc0",
+            "hash_dst": "395586c02d5ffe85ed18390234e12bc0"
+        },
+        {
+            "src": "X:\/AI MARS\/workspaces\/website-factory-operations\/FP-0002-SHPIGOVSKY\/WORDPRESS\/acf-json\/group_fp02_service_section_parity.json",
+            "dst": "X:\/MARS-Localhost\/sites\/wordpress\/projects\/shpigovsky\/wp-content\/acf-json\/group_fp02_service_section_parity.json",
+            "copied": true,
+            "match": true,
+            "hash_src": "39bf16c7ec7a3878b0741d8b32981359",
+            "hash_dst": "39bf16c7ec7a3878b0741d8b32981359"
+        }
+    ],
+    "corridor_media": {
+        "id": 1709,
+        "created": false,
+        "url": "http:\/\/shpigovsky.test\/wp-content\/uploads\/2026\/07\/shpigovsky-interior-corridor.webp",
+        "note": "reused existing"
+    },
+    "team_id": 1238,
+    "landscape_id": 1239,
+    "db_writes": 0,
+    "seed_log_count": 84,
+    "seed_log": [
+        {
+            "post_id": 73,
+            "field": "section_dependencies_heading",
+            "action": "preserved",
+            "before": "Зависимости, которые мы лечим 000101",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_dependencies_lead",
+            "action": "preserved",
+            "before": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 000101",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_dependencies_footer",
+            "action": "preserved",
+            "before": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 000101",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_nature_heading",
+            "action": "preserved",
+            "before": "Природа зависимости 000101",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_nature_lead",
+            "action": "preserved",
+            "before": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_program_heading",
+            "action": "preserved",
+            "before": "Наша программа включает 4 направления ТЕСТ",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_program_more_label",
+            "action": "preserved",
+            "before": "подробнее ТЕСТ",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_program_lead",
+            "action": "preserved",
+            "before": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ТЕСТ",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_stages_heading",
+            "action": "preserved",
+            "before": "Что нужно для прохождения реабилитации и лечения",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_stages_lead",
+            "action": "preserved",
+            "before": "Мы гарантируем конфиденциальность, уважение к личности, поддержание комфортной, психологически безопасной атмосферы.",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_stages_support_heading",
+            "action": "preserved",
+            "before": "Поддержка осуществляется на всех этапах:",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_approach_heading",
+            "action": "preserved",
+            "before": "Наш подход к лечению зависимостей",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_approach_more_label",
+            "action": "preserved",
+            "before": "подробнее",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_approach_more_url",
+            "action": "preserved",
+            "before": "http:\/\/shpigovsky.test\/o-centre\/programma-lecheniya\/",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_approach_highlight",
+            "action": "preserved",
+            "before": "Мы используем мультидисциплинарный подход — когда лечение одного пациента обеспечивается командой специалистов разных профилей.",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_approach_intro",
+            "action": "preserved",
+            "before": "Лечение в нашем реабилитационном центре совмещает современный и мультидисциплинарный подход, направленный на устранение истинных причин зависимости.",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_corridor_image_alt",
+            "action": "preserved",
+            "before": "Интерьер клиники — коридор с картинами",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_team_image_alt",
+            "action": "preserved",
+            "before": "Команда специалистов реабилитационного центра",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_faq_heading",
+            "action": "preserved",
+            "before": "Нас часто спрашивают",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_nature_text_blocks",
+            "action": "preserved",
+            "before": "non-scalar",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_nature_cards",
+            "action": "preserved",
+            "before": "non-scalar",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_program_intro_items",
+            "action": "preserved",
+            "before": "non-scalar",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_stages_items",
+            "action": "preserved",
+            "before": "non-scalar",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_stages_support_items",
+            "action": "preserved",
+            "before": "non-scalar",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_approach_cards",
+            "action": "preserved",
+            "before": "non-scalar",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_corridor_image",
+            "action": "preserved",
+            "before": "1709",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_team_image",
+            "action": "preserved",
+            "before": "1238",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 73,
+            "field": "section_clinic_landscape_image",
+            "action": "preserved",
+            "before": "1239",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_dependencies_heading",
+            "action": "preserved",
+            "before": "Зависимости, которые мы лечим",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_dependencies_lead",
+            "action": "preserved",
+            "before": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_dependencies_footer",
+            "action": "preserved",
+            "before": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_nature_heading",
+            "action": "preserved",
+            "before": "Природа зависимости",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_nature_lead",
+            "action": "preserved",
+            "before": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_program_heading",
+            "action": "preserved",
+            "before": "Наша программа включает 4 направления",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_program_more_label",
+            "action": "preserved",
+            "before": "подробнее",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_program_lead",
+            "action": "preserved",
+            "before": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_stages_heading",
+            "action": "preserved",
+            "before": "Что нужно для прохождения реабилитации и лечения",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_stages_lead",
+            "action": "preserved",
+            "before": "Мы гарантируем конфиденциальность, уважение к личности, поддержание комфортной, психологически безопасной атмосферы.",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_stages_support_heading",
+            "action": "preserved",
+            "before": "Поддержка осуществляется на всех этапах:",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_approach_heading",
+            "action": "preserved",
+            "before": "Наш подход к лечению зависимостей",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_approach_more_label",
+            "action": "preserved",
+            "before": "подробнее",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_approach_more_url",
+            "action": "preserved",
+            "before": "http:\/\/shpigovsky.test\/o-centre\/programma-lecheniya\/",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_approach_highlight",
+            "action": "preserved",
+            "before": "Мы используем мультидисциплинарный подход — когда лечение одного пациента обеспечивается командой специалистов разных профилей.",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_approach_intro",
+            "action": "preserved",
+            "before": "Лечение в нашем реабилитационном центре совмещает современный и мультидисциплинарный подход, направленный на устранение истинных причин зависимости.",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_corridor_image_alt",
+            "action": "preserved",
+            "before": "Интерьер клиники — коридор с картинами",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_team_image_alt",
+            "action": "preserved",
+            "before": "Команда специалистов реабилитационного центра",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_faq_heading",
+            "action": "preserved",
+            "before": "Нас часто спрашивают",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_nature_text_blocks",
+            "action": "preserved",
+            "before": "non-scalar",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_nature_cards",
+            "action": "preserved",
+            "before": "non-scalar",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_program_intro_items",
+            "action": "preserved",
+            "before": "non-scalar",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_stages_items",
+            "action": "preserved",
+            "before": "non-scalar",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_stages_support_items",
+            "action": "preserved",
+            "before": "non-scalar",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_approach_cards",
+            "action": "preserved",
+            "before": "non-scalar",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_corridor_image",
+            "action": "preserved",
+            "before": "1709",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_team_image",
+            "action": "preserved",
+            "before": "1238",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 77,
+            "field": "section_clinic_landscape_image",
+            "action": "preserved",
+            "before": "1239",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_dependencies_heading",
+            "action": "preserved",
+            "before": "Зависимости, которые мы лечим",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_dependencies_lead",
+            "action": "preserved",
+            "before": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_dependencies_footer",
+            "action": "preserved",
+            "before": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_nature_heading",
+            "action": "preserved",
+            "before": "Природа зависимости",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_nature_lead",
+            "action": "preserved",
+            "before": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_program_heading",
+            "action": "preserved",
+            "before": "Наша программа включает 4 направления",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_program_more_label",
+            "action": "preserved",
+            "before": "подробнее",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_program_lead",
+            "action": "preserved",
+            "before": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_stages_heading",
+            "action": "preserved",
+            "before": "Что нужно для прохождения реабилитации и лечения",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_stages_lead",
+            "action": "preserved",
+            "before": "Мы гарантируем конфиденциальность, уважение к личности, поддержание комфортной, психологически безопасной атмосферы.",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_stages_support_heading",
+            "action": "preserved",
+            "before": "Поддержка осуществляется на всех этапах:",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_approach_heading",
+            "action": "preserved",
+            "before": "Наш подход к лечению зависимостей",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_approach_more_label",
+            "action": "preserved",
+            "before": "подробнее",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_approach_more_url",
+            "action": "preserved",
+            "before": "http:\/\/shpigovsky.test\/o-centre\/programma-lecheniya\/",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_approach_highlight",
+            "action": "preserved",
+            "before": "Мы используем мультидисциплинарный подход — когда лечение одного пациента обеспечивается командой специалистов разных профилей.",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_approach_intro",
+            "action": "preserved",
+            "before": "Лечение в нашем реабилитационном центре совмещает современный и мультидисциплинарный подход, направленный на устранение истинных причин зависимости.",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_corridor_image_alt",
+            "action": "preserved",
+            "before": "Интерьер клиники — коридор с картинами",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_team_image_alt",
+            "action": "preserved",
+            "before": "Команда специалистов реабилитационного центра",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_faq_heading",
+            "action": "preserved",
+            "before": "Нас часто спрашивают",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_nature_text_blocks",
+            "action": "preserved",
+            "before": "non-scalar",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_nature_cards",
+            "action": "preserved",
+            "before": "non-scalar",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_program_intro_items",
+            "action": "preserved",
+            "before": "non-scalar",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_stages_items",
+            "action": "preserved",
+            "before": "non-scalar",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_stages_support_items",
+            "action": "preserved",
+            "before": "non-scalar",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_approach_cards",
+            "action": "preserved",
+            "before": "non-scalar",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_corridor_image",
+            "action": "preserved",
+            "before": "1709",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_team_image",
+            "action": "preserved",
+            "before": "1238",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        },
+        {
+            "post_id": 84,
+            "field": "section_clinic_landscape_image",
+            "action": "preserved",
+            "before": "1239",
+            "seeded": null,
+            "source": "",
+            "result": "SKIP_EXISTING"
+        }
+    ],
+    "resolve73": {
+        "team": {
+            "url": "http:\/\/shpigovsky.test\/wp-content\/uploads\/2026\/07\/shpigovsky-staff-group.webp",
+            "alt": "alt",
+            "width": 1139,
+            "height": 443,
+            "source": "acf:section_team_image"
+        },
+        "corridor": {
+            "url": "http:\/\/shpigovsky.test\/wp-content\/uploads\/2026\/07\/shpigovsky-interior-corridor.webp",
+            "alt": "Интерьер клиники — коридор с картинами",
+            "width": 2187,
+            "height": 1231,
+            "source": "acf:section_corridor_image"
+        },
+        "landscape": {
+            "url": "http:\/\/shpigovsky.test\/wp-content\/uploads\/2026\/07\/shpigovsky-clinic-landscape-1.webp",
+            "alt": "alt",
+            "width": 1139,
+            "height": 584
+        }
+    },
+    "home_staff_untouched": 1238,
+    "home_landscape_untouched": 1239
+}

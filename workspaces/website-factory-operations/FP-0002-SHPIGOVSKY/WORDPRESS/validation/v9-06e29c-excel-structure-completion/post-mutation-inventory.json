@@ -1,0 +1,595 @@
+{
+    "manifest_count": 41,
+    "posts": [
+        {
+            "id": 3,
+            "type": "page",
+            "slug": "privacy-policy",
+            "title": "Политика конфиденциальности",
+            "parent": 0,
+            "status": "publish",
+            "template": "page-templates/legal.php",
+            "url": "http://shpigovsky.test/privacy-policy/"
+        },
+        {
+            "id": 4,
+            "type": "page",
+            "slug": "glavnaya",
+            "title": "Главная",
+            "parent": 0,
+            "status": "publish",
+            "template": "default",
+            "url": "http://shpigovsky.test/"
+        },
+        {
+            "id": 5,
+            "type": "page",
+            "slug": "uslugi",
+            "title": "Услуги",
+            "parent": 0,
+            "status": "publish",
+            "template": "page-templates/services-hub.php",
+            "url": "http://shpigovsky.test/uslugi/"
+        },
+        {
+            "id": 11,
+            "type": "page",
+            "slug": "o-centre",
+            "title": "О центре",
+            "parent": 0,
+            "status": "publish",
+            "template": "page-templates/institutional.php",
+            "url": "http://shpigovsky.test/o-centre/"
+        },
+        {
+            "id": 12,
+            "type": "page",
+            "slug": "o-nas",
+            "title": "О нас",
+            "parent": 11,
+            "status": "publish",
+            "template": "page-templates/generic.php",
+            "url": "http://shpigovsky.test/o-centre/o-nas/"
+        },
+        {
+            "id": 13,
+            "type": "page",
+            "slug": "programma-lecheniya",
+            "title": "Программа лечения",
+            "parent": 11,
+            "status": "publish",
+            "template": "page-templates/generic.php",
+            "url": "http://shpigovsky.test/o-centre/programma-lecheniya/"
+        },
+        {
+            "id": 14,
+            "type": "page",
+            "slug": "galereya-o-dome",
+            "title": "Галерея о доме",
+            "parent": 11,
+            "status": "publish",
+            "template": "page-templates/generic.php",
+            "url": "http://shpigovsky.test/o-centre/galereya-o-dome/"
+        },
+        {
+            "id": 15,
+            "type": "page",
+            "slug": "specialistam",
+            "title": "Специалистам",
+            "parent": 11,
+            "status": "publish",
+            "template": "page-templates/generic.php",
+            "url": "http://shpigovsky.test/o-centre/specialistam/"
+        },
+        {
+            "id": 16,
+            "type": "page",
+            "slug": "rodstvennikam",
+            "title": "Родственникам",
+            "parent": 11,
+            "status": "publish",
+            "template": "page-templates/generic.php",
+            "url": "http://shpigovsky.test/o-centre/rodstvennikam/"
+        },
+        {
+            "id": 18,
+            "type": "page",
+            "slug": "otzyvy",
+            "title": "Отзывы",
+            "parent": 0,
+            "status": "publish",
+            "template": "page-templates/reviews.php",
+            "url": "http://shpigovsky.test/otzyvy/"
+        },
+        {
+            "id": 19,
+            "type": "page",
+            "slug": "blog",
+            "title": "Статьи",
+            "parent": 0,
+            "status": "publish",
+            "template": "",
+            "url": "http://shpigovsky.test/blog/"
+        },
+        {
+            "id": 20,
+            "type": "page",
+            "slug": "kontakty",
+            "title": "Контакты",
+            "parent": 0,
+            "status": "publish",
+            "template": "page-templates/contacts.php",
+            "url": "http://shpigovsky.test/kontakty/"
+        },
+        {
+            "id": 22,
+            "type": "page",
+            "slug": "user-agreement",
+            "title": "Пользовательское соглашение",
+            "parent": 0,
+            "status": "publish",
+            "template": "page-templates/legal.php",
+            "url": "http://shpigovsky.test/user-agreement/"
+        },
+        {
+            "id": 23,
+            "type": "page",
+            "slug": "consent-personal-data",
+            "title": "Согласие на обработку персональных данных",
+            "parent": 0,
+            "status": "publish",
+            "template": "page-templates/legal.php",
+            "url": "http://shpigovsky.test/consent-personal-data/"
+        },
+        {
+            "id": 24,
+            "type": "page",
+            "slug": "cookie-files-policy",
+            "title": "Политика Cookie-файлов",
+            "parent": 0,
+            "status": "publish",
+            "template": "page-templates/legal.php",
+            "url": "http://shpigovsky.test/cookie-files-policy/"
+        },
+        {
+            "id": 73,
+            "type": "service",
+            "slug": "zavisimosti",
+            "title": "Зависимости",
+            "parent": 0,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/"
+        },
+        {
+            "id": 74,
+            "type": "service",
+            "slug": "lechenie-alkogolnoy-zavisimosti",
+            "title": "Лечение алкогольной зависимости",
+            "parent": 73,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/"
+        },
+        {
+            "id": 75,
+            "type": "service",
+            "slug": "profilakticheskiy-analiz",
+            "title": "Профилактический анализ",
+            "parent": 73,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/profilakticheskiy-analiz/"
+        },
+        {
+            "id": 77,
+            "type": "service",
+            "slug": "psihicheskoe-zdorovie",
+            "title": "Психическое здоровье",
+            "parent": 0,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/"
+        },
+        {
+            "id": 78,
+            "type": "service",
+            "slug": "depressiya",
+            "title": "Депрессия",
+            "parent": 77,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/depressiya/"
+        },
+        {
+            "id": 79,
+            "type": "service",
+            "slug": "ptrs",
+            "title": "ПТСР",
+            "parent": 77,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/ptrs/"
+        },
+        {
+            "id": 80,
+            "type": "service",
+            "slug": "emocionalnoe-vygoranie",
+            "title": "Эмоциональное выгорание",
+            "parent": 77,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/emocionalnoe-vygoranie/"
+        },
+        {
+            "id": 81,
+            "type": "service",
+            "slug": "trevozhnye-rasstroystva",
+            "title": "Тревожные расстройства",
+            "parent": 77,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/"
+        },
+        {
+            "id": 82,
+            "type": "service",
+            "slug": "rasstroystva-sna",
+            "title": "Расстройства сна",
+            "parent": 77,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/rasstroystva-sna/"
+        },
+        {
+            "id": 83,
+            "type": "service",
+            "slug": "travma",
+            "title": "Травма",
+            "parent": 77,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/travma/"
+        },
+        {
+            "id": 84,
+            "type": "service",
+            "slug": "rasstroystva-pischevogo-povedeniya",
+            "title": "Расстройства пищевого поведения",
+            "parent": 0,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/"
+        },
+        {
+            "id": 85,
+            "type": "service",
+            "slug": "anoreksiya",
+            "title": "Анорексия",
+            "parent": 84,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/"
+        },
+        {
+            "id": 86,
+            "type": "service",
+            "slug": "nervnaya-bulimiya",
+            "title": "Нервная булимия",
+            "parent": 84,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/nervnaya-bulimiya/"
+        },
+        {
+            "id": 87,
+            "type": "service",
+            "slug": "kompulsivnoe-pereedanie",
+            "title": "Компульсивное переедание",
+            "parent": 84,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie/"
+        },
+        {
+            "id": 314,
+            "type": "service",
+            "slug": "narkoticheskaya-zavisimost",
+            "title": "Наркотическая зависимость",
+            "parent": 73,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/narkoticheskaya-zavisimost/"
+        },
+        {
+            "id": 315,
+            "type": "service",
+            "slug": "lekarstvennaya-zavisimost",
+            "title": "Лекарственная зависимость",
+            "parent": 73,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/lekarstvennaya-zavisimost/"
+        },
+        {
+            "id": 316,
+            "type": "service",
+            "slug": "povedencheskie-zavisimosti",
+            "title": "Поведенческие зависимости",
+            "parent": 73,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/povedencheskie-zavisimosti/"
+        },
+        {
+            "id": 750,
+            "type": "post",
+            "slug": "nazvanie-stati",
+            "title": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём",
+            "parent": 0,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/blog/nazvanie-stati/"
+        },
+        {
+            "id": 1009,
+            "type": "service",
+            "slug": "lechenie-alkogolnoy-zavisimosti-2",
+            "title": "Лечение алкогольной зависимости",
+            "parent": 73,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti-2/"
+        },
+        {
+            "id": 1010,
+            "type": "service",
+            "slug": "lechenie-narkoticheskoy-zavisimosti",
+            "title": "Лечение наркотической зависимости",
+            "parent": 73,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/"
+        },
+        {
+            "id": 1011,
+            "type": "service",
+            "slug": "soli",
+            "title": "Лечение солевой зависимости",
+            "parent": 0,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/soli/"
+        },
+        {
+            "id": 1012,
+            "type": "service",
+            "slug": "matadon",
+            "title": "Лечение метадоновой зависимости",
+            "parent": 0,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/matadon/"
+        },
+        {
+            "id": 1013,
+            "type": "service",
+            "slug": "geroin",
+            "title": "Лечение героиновой зависимости",
+            "parent": 0,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/geroin/"
+        },
+        {
+            "id": 1014,
+            "type": "service",
+            "slug": "lekarstva",
+            "title": "Лечение лекарственной зависимости",
+            "parent": 0,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/lekarstva/"
+        },
+        {
+            "id": 1015,
+            "type": "service",
+            "slug": "lechenie-povedencheskoy-zavisimosti",
+            "title": "Поведенческие зависимости",
+            "parent": 73,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-povedencheskoy-zavisimosti/"
+        },
+        {
+            "id": 1016,
+            "type": "service",
+            "slug": "ludomaniya",
+            "title": "Лечение игровой зависимости",
+            "parent": 0,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/ludomaniya/"
+        },
+        {
+            "id": 1017,
+            "type": "service",
+            "slug": "internet-zavisimost",
+            "title": "Интернет-зависимость",
+            "parent": 0,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/internet-zavisimost/"
+        },
+        {
+            "id": 1018,
+            "type": "service",
+            "slug": "sozavisimost",
+            "title": "Лечение созависимости",
+            "parent": 0,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/sozavisimost/"
+        },
+        {
+            "id": 1019,
+            "type": "service",
+            "slug": "shopogolizm",
+            "title": "Зависимость от постоянных покупок",
+            "parent": 0,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/shopogolizm/"
+        },
+        {
+            "id": 1020,
+            "type": "service",
+            "slug": "depressiya-2",
+            "title": "Депрессия",
+            "parent": 77,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/depressiya-2/"
+        },
+        {
+            "id": 1021,
+            "type": "service",
+            "slug": "ptsr",
+            "title": "ПТСР",
+            "parent": 77,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/ptsr/"
+        },
+        {
+            "id": 1022,
+            "type": "service",
+            "slug": "emotsionalnoe-vygoranie",
+            "title": "Эмоциональное выгорание",
+            "parent": 77,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/emotsionalnoe-vygoranie/"
+        },
+        {
+            "id": 1023,
+            "type": "service",
+            "slug": "trevozhnye-rasstroystva-2",
+            "title": "Тревожные расстройства",
+            "parent": 77,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva-2/"
+        },
+        {
+            "id": 1024,
+            "type": "service",
+            "slug": "rasstroystva-sna-2",
+            "title": "Расстройства сна",
+            "parent": 77,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/rasstroystva-sna-2/"
+        },
+        {
+            "id": 1025,
+            "type": "service",
+            "slug": "travma-2",
+            "title": "Травма",
+            "parent": 77,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/travma-2/"
+        },
+        {
+            "id": 1026,
+            "type": "service",
+            "slug": "anoreksiya-2",
+            "title": "Анорексия",
+            "parent": 84,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya-2/"
+        },
+        {
+            "id": 1027,
+            "type": "service",
+            "slug": "buliniya",
+            "title": "Булимия",
+            "parent": 84,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/buliniya/"
+        },
+        {
+            "id": 1028,
+            "type": "service",
+            "slug": "kompulsivnoe-pereedanie-2",
+            "title": "Компульсивное переедание",
+            "parent": 84,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/kompulsivnoe-pereedanie-2/"
+        },
+        {
+            "id": 1029,
+            "type": "service",
+            "slug": "genotipirovanie",
+            "title": "Генотипирование",
+            "parent": 0,
+            "status": "publish",
+            "template": "single-service.php",
+            "url": "http://shpigovsky.test/uslugi/genotipirovanie/"
+        },
+        {
+            "id": 1030,
+            "type": "page",
+            "slug": "specyalisty",
+            "title": "Специалисты",
+            "parent": 0,
+            "status": "publish",
+            "template": "page-templates/generic.php",
+            "url": "http://shpigovsky.test/specyalisty/"
+        },
+        {
+            "id": 1031,
+            "type": "page",
+            "slug": "shipovsky",
+            "title": "Сергей Шпиговский",
+            "parent": 1030,
+            "status": "publish",
+            "template": "page-templates/generic.php",
+            "url": "http://shpigovsky.test/specyalisty/shipovsky/"
+        },
+        {
+            "id": 1032,
+            "type": "page",
+            "slug": "kazakov",
+            "title": "Казаков",
+            "parent": 1030,
+            "status": "publish",
+            "template": "page-templates/generic.php",
+            "url": "http://shpigovsky.test/specyalisty/kazakov/"
+        },
+        {
+            "id": 1033,
+            "type": "page",
+            "slug": "kostyuk",
+            "title": "Костюк",
+            "parent": 1030,
+            "status": "publish",
+            "template": "page-templates/generic.php",
+            "url": "http://shpigovsky.test/specyalisty/kostyuk/"
+        },
+        {
+            "id": 1039,
+            "type": "page",
+            "slug": "intervyu-i-smi",
+            "title": "Интервью и СМИ",
+            "parent": 11,
+            "status": "publish",
+            "template": "page-templates/generic.php",
+            "url": "http://shpigovsky.test/o-centre/intervyu-i-smi/"
+        }
+    ]
+}

@@ -1,16 +1,84 @@
 {
-  "phase": "V9-06D8-A",
-  "generated_at": "2026-07-04T20:22:00Z",
-  "executed": false,
-  "blocked_reason": "HTTP and DB unavailable at task time",
-  "routes": [
-    {"route": "Home", "url": "http://shpigovsky.test/", "http": 0, "header": false, "footer": false, "css": false, "js": false, "contact_cta_chrome": false, "result": "NOT_PERFORMED"},
-    {"route": "Services Hub", "url": "http://shpigovsky.test/uslugi/", "http": 0, "header": false, "footer": false, "css": false, "js": false, "contact_cta_chrome": false, "result": "NOT_PERFORMED"},
-    {"route": "Service 73", "url": "http://shpigovsky.test/uslugi/zavisimosti/", "http": 0, "header": false, "footer": false, "css": false, "js": false, "contact_cta_chrome": false, "result": "NOT_PERFORMED"},
-    {"route": "Service 74", "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/", "http": 0, "header": false, "footer": false, "css": false, "js": false, "contact_cta_chrome": false, "result": "NOT_PERFORMED"},
-    {"route": "Service 77", "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/", "http": 0, "header": false, "footer": false, "css": false, "js": false, "contact_cta_chrome": false, "result": "NOT_PERFORMED"},
-    {"route": "Service 84", "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/", "http": 0, "header": false, "footer": false, "css": false, "js": false, "contact_cta_chrome": false, "result": "NOT_PERFORMED"},
-    {"route": "Contacts", "url": "http://shpigovsky.test/kontakty/", "http": 0, "header": false, "footer": false, "css": false, "js": false, "contact_cta_chrome": false, "result": "NOT_PERFORMED"}
-  ],
-  "result": "NOT_PERFORMED"
+    "phase": "V9-06D8-A",
+    "generated_at": "2026-07-04T20:32:52+00:00",
+    "routes": [
+        {
+            "route": "Home",
+            "url": "http://shpigovsky.test/",
+            "http": 200,
+            "header": true,
+            "footer": true,
+            "css": true,
+            "js": true,
+            "contact_cta_chrome": true,
+            "result": "PASS"
+        },
+        {
+            "route": "Services Hub",
+            "url": "http://shpigovsky.test/uslugi/",
+            "http": 200,
+            "header": true,
+            "footer": true,
+            "css": true,
+            "js": true,
+            "contact_cta_chrome": true,
+            "result": "PASS"
+        },
+        {
+            "route": "Service 73",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/",
+            "http": 200,
+            "header": true,
+            "footer": true,
+            "css": true,
+            "js": true,
+            "contact_cta_chrome": true,
+            "result": "PASS"
+        },
+        {
+            "route": "Service 74",
+            "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+            "http": 200,
+            "header": true,
+            "footer": true,
+            "css": true,
+            "js": true,
+            "contact_cta_chrome": true,
+            "result": "PASS"
+        },
+        {
+            "route": "Service 77",
+            "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/",
+            "http": 200,
+            "header": true,
+            "footer": true,
+            "css": true,
+            "js": true,
+            "contact_cta_chrome": true,
+            "result": "PASS"
+        },
+        {
+            "route": "Service 84",
+            "url": "http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/",
+            "http": 200,
+            "header": true,
+            "footer": true,
+            "css": true,
+            "js": true,
+            "contact_cta_chrome": true,
+            "result": "PASS"
+        },
+        {
+            "route": "Contacts",
+            "url": "http://shpigovsky.test/kontakty/",
+            "http": 200,
+            "header": true,
+            "footer": true,
+            "css": true,
+            "js": true,
+            "contact_cta_chrome": true,
+            "result": "PASS"
+        }
+    ],
+    "result": "ALL_200"
 }

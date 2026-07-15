@@ -1,146 +1,119 @@
 {
     "key": "group_fp02_service_layout_hero",
-    "title": "Service — Layout and Hero",
+    "title": "Макет страницы услуги",
     "fields": [
         {
-            "key": "field_fp02_service_layout_variant",
-            "label": "Вариант макета",
-            "name": "service_layout_variant",
+            "key": "field_fp02_service_editor_role",
+            "label": "Макет страницы услуги",
+            "name": "service_editor_role",
             "aria-label": "",
-            "prefix": "acf",
-            "type": "select",
-            "value": null,
-            "menu_order": 0,
-            "instructions": "Allowed V9-06C values: subdivision, standard, extended, alcohol_special, placeholder.",
-            "required": 1,
-            "id": "",
-            "class": "",
+            "type": "button_group",
+            "instructions": "Временный режим «Заглушка»: на фронте выводятся только шапка, навигация, H1 и подвал. Контент в полях не удаляется и может быть включён обратно сменой макета.",
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": "fp02-acf-section-title fp02-service-layout-selector",
                 "id": ""
             },
-            "default_value": "standard",
+            "default_value": "",
             "placeholder": "",
             "choices": {
-                "subdivision": "Подраздел",
-                "standard": "Стандартная услуга",
-                "extended": "Расширенная услуга",
-                "alcohol_special": "Алкогольная зависимость",
+                "section": "Раздел",
+                "service": "Услуга",
                 "placeholder": "Заглушка"
             },
             "return_format": "value",
-            "_name": "service_layout_variant",
-            "_valid": 1,
-            "multiple": 0,
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "create_options": 0,
-            "save_options": 0,
-            "allow_custom": 0,
-            "search_placeholder": "",
-            "prepend": "",
-            "append": "",
-            "min": "",
-            "max": ""
+            "allow_null": 1,
+            "layout": "horizontal"
         },
         {
-            "key": "field_fp02_hero_eyebrow_service",
-            "label": "Надзаголовок",
-            "name": "hero_eyebrow",
+            "key": "field_fp02_service_layout_advanced_heading",
+            "label": "Расширенные настройки шаблона",
+            "name": "service_layout_advanced_heading",
             "aria-label": "",
-            "prefix": "acf",
-            "type": "text",
-            "value": null,
-            "menu_order": 1,
+            "type": "message",
             "instructions": "",
             "required": 0,
-            "id": "",
-            "class": "",
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": "fp02-acf-section-title fp02-service-layout-advanced fp02-service-layout-technical-hidden",
                 "id": ""
             },
             "default_value": "",
             "placeholder": "",
-            "_name": "hero_eyebrow",
-            "_valid": 1,
-            "maxlength": "",
-            "prepend": "",
-            "append": ""
+            "message": "Служебные параметры (скрыты в обычном UI). subdivision = Раздел; service_general = Услуга; placeholder = Заглушка; standard \/ extended — Legacy. alcohol_special — устаревший alias service_general."
         },
         {
-            "key": "field_fp02_hero_title_override_service",
-            "label": "Заголовок H1 override",
-            "name": "hero_title_override",
+            "key": "field_fp02_service_layout_override_enabled",
+            "label": "Ручной технический шаблон",
+            "name": "service_layout_override_enabled",
             "aria-label": "",
-            "prefix": "acf",
-            "type": "text",
-            "value": null,
-            "menu_order": 2,
+            "type": "true_false",
+            "instructions": "Служебное поле (скрыто в обычном UI). FIX03: синхронизация идёт по макету\/глубине; override не используется редактором.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "fp02-service-layout-advanced fp02-service-layout-technical-hidden",
+                "id": ""
+            },
+            "default_value": 0,
+            "placeholder": "",
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_service_layout_variant",
+            "label": "Технический шаблон",
+            "name": "service_layout_variant",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Служебное поле (скрыто в обычном UI). Синхронизируется автоматически: Раздел→subdivision, Услуга→service_general, Заглушка→placeholder.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "fp02-service-layout-advanced fp02-service-layout-technical-hidden",
+                "id": ""
+            },
+            "default_value": "service_general",
+            "placeholder": "",
+            "choices": {
+                "subdivision": "Раздел",
+                "service_general": "Услуга",
+                "placeholder": "Заглушка",
+                "standard": "Legacy: стандартная услуга",
+                "extended": "Legacy: расширенная услуга"
+            },
+            "return_format": "value"
+        },
+        {
+            "key": "field_fp02_service_layout_hub_heading",
+            "label": "Карточка и показ на \/uslugi\/",
+            "name": "service_layout_hub_heading",
+            "aria-label": "",
+            "type": "message",
             "instructions": "",
             "required": 0,
-            "id": "",
-            "class": "",
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": "fp02-acf-section-title",
                 "id": ""
             },
             "default_value": "",
             "placeholder": "",
-            "_name": "hero_title_override",
-            "_valid": 1,
-            "maxlength": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_fp02_hero_lead_service",
-            "label": "Лид",
-            "name": "hero_lead",
-            "aria-label": "",
-            "prefix": "acf",
-            "type": "textarea",
-            "value": null,
-            "menu_order": 3,
-            "instructions": "",
-            "required": 0,
-            "id": "",
-            "class": "",
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "rows": 4,
-            "_name": "hero_lead",
-            "_valid": 1,
-            "new_lines": "",
-            "maxlength": "",
-            "acfe_textarea_code": 0
+            "message": "Поля карточки\/хаба (не hero и не макет шаблона). Мини-описание и флаги показа на \/uslugi\/ и главной."
         },
         {
             "key": "field_fp02_service_short_description",
             "label": "Мини-описание",
             "name": "service_short_description",
             "aria-label": "",
-            "prefix": "acf",
             "type": "textarea",
-            "value": null,
-            "menu_order": 4,
-            "instructions": "Краткий текст для карточки услуги на странице /uslugi/ (оба режима отображения).",
+            "instructions": "Краткий текст для карточки услуги на странице \/uslugi\/ и в блоке дочерних услуг. Для корневых разделов также выводится в блоке категории на \/uslugi\/.",
             "required": 0,
-            "id": "",
-            "class": "",
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -149,26 +122,154 @@
             },
             "default_value": "",
             "placeholder": "",
-            "rows": 4,
-            "_name": "service_short_description",
-            "_valid": 1,
-            "new_lines": "",
-            "maxlength": "",
-            "acfe_textarea_code": 0
+            "rows": 4
         },
         {
-            "key": "field_fp02_hero_media_service",
-            "label": "Hero image",
-            "name": "hero_media",
+            "key": "field_fp02_service_child_services_enabled",
+            "label": "Показывать дочерние услуги",
+            "name": "service_child_services_enabled",
             "aria-label": "",
-            "prefix": "acf",
-            "type": "image",
-            "value": null,
-            "menu_order": 5,
-            "instructions": "Hero background image for this service. Empty falls back to theme asset by layout variant.",
+            "type": "true_false",
+            "instructions": "Автоматический блок плиток дочерних услуг перед FAQ. Если дочерних страниц нет — блок не выводится.",
             "required": 0,
-            "id": "",
-            "class": "",
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "service"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_service_child_services_heading",
+            "label": "Заголовок блока дочерних услуг",
+            "name": "service_child_services_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Если пусто — используется «Направления внутри услуги».",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "service"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Направления внутри услуги"
+        },
+        {
+            "key": "field_fp02_service_category_section_lead",
+            "label": "Текст под мини-описанием на странице «Услуги»",
+            "name": "service_category_section_lead",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Выводится в блоке категории услуги на странице \/uslugi\/ под мини-описанием. Используется для корневых разделов (тип «Раздел» \/ технический шаблон subdivision).",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_fp02_service_editor_role",
+                        "operator": "==",
+                        "value": "section"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_fp02_service_layout_variant",
+                        "operator": "==",
+                        "value": "subdivision"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 4
+        },
+        {
+            "key": "field_fp02_service_show_in_text_list",
+            "label": "Показывать в текстовом списке",
+            "name": "service_show_in_text_list",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Показывать услугу в текстовом списке раздела на \/uslugi\/.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_service_show_in_slider",
+            "label": "Показывать в слайдере",
+            "name": "service_show_in_slider",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Показывать услугу карточкой в галерее\/слайдере раздела на \/uslugi\/. Не путать с «Показывать в слайдере на главной».",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "placeholder": "",
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_service_show_on_home_gallery",
+            "label": "Показывать в слайдере на главной",
+            "name": "service_show_on_home_gallery",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Отдельный флаг для слайдера услуг на главной (Home gallery). По умолчанию включено для услуг 1-го уровня (дети корневых разделов). Не связан с флагом слайдера \/uslugi\/.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1
+        },
+        {
+            "key": "field_fp02_service_slider_image",
+            "label": "Изображение для слайдера",
+            "name": "service_slider_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Опционально. Если изображение не выбрано, на сайте используется заглушка.",
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -178,71 +279,7 @@
             "default_value": "",
             "placeholder": "",
             "return_format": "array",
-            "preview_size": "medium",
-            "_name": "hero_media",
-            "_valid": 1,
-            "library": "all",
-            "min_width": 0,
-            "min_height": 0,
-            "min_size": 0,
-            "max_width": 0,
-            "max_height": 0,
-            "max_size": 0,
-            "mime_types": "",
-            "uploader": "",
-            "acfe_thumbnail": 0,
-            "upload_folder": ""
-        },
-        {
-            "key": "field_fp02_hero_cta_label_service",
-            "label": "Текст кнопки в hero-блоке",
-            "name": "hero_cta_label",
-            "aria-label": "",
-            "prefix": "acf",
-            "type": "text",
-            "value": null,
-            "menu_order": 6,
-            "instructions": "Индивидуальный текст кнопки для hero-блока этой страницы/услуги. Если оставить пустым, используется текущий текст по умолчанию.",
-            "required": 0,
-            "id": "",
-            "class": "",
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "_name": "hero_cta_label",
-            "_valid": 1,
-            "maxlength": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_fp02_hero_cta_target_service",
-            "label": "CTA target",
-            "name": "hero_cta_target",
-            "aria-label": "",
-            "prefix": "acf",
-            "type": "url",
-            "value": null,
-            "menu_order": 7,
-            "instructions": "",
-            "required": 0,
-            "id": "",
-            "class": "",
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "_name": "hero_cta_target",
-            "_valid": 1
+            "preview_size": "medium"
         }
     ],
     "location": [
@@ -261,11 +298,7 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
-    "description": "FP-0002 V9-06C canonical source field group. Runtime registration occurs only after delivery authorization.",
+    "description": "FP-0002 V9-06E46-FIX01: service layout (role\/template) + hub\/catalog flags. Hero separated to group_fp02_service_hero.",
     "show_in_rest": 0,
-    "display_title": "",
-    "allow_ai_access": false,
-    "ai_description": "",
-    "modified": 1783953600,
-    "_valid": true
+    "modified": 1784040457
 }

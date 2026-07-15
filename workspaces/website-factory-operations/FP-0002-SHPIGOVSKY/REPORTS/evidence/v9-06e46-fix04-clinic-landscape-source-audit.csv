@@ -1,0 +1,5 @@
+post_id,title,current_render_source,current_image_id,current_image_url,target_field_name,seeded_image_id,frontend_expected,notes
+4,Home (page_on_front),home_clinic_landscape_image,1239,http://shpigovsky.test/wp-content/uploads/2026/07/shpigovsky-clinic-landscape-1.webp,home_clinic_landscape_image,(unchanged),unchanged,Home frozen; not primary for sections anymore
+73,Зависимости,home_clinic_landscape_image (before FIX04),1239,http://shpigovsky.test/wp-content/uploads/2026/07/shpigovsky-clinic-landscape-1.webp,section_clinic_landscape_image,1239,same URL,Seeded from Home attachment; FE now section-specific
+77,Психическое здоровье,home_clinic_landscape_image (before FIX04),1239,http://shpigovsky.test/wp-content/uploads/2026/07/shpigovsky-clinic-landscape-1.webp,section_clinic_landscape_image,1239,same URL,Seeded same image for visual continuity
+84,Расстройства пищевого поведения,home_clinic_landscape_image (before FIX04),1239,http://shpigovsky.test/wp-content/uploads/2026/07/shpigovsky-clinic-landscape-1.webp,section_clinic_landscape_image,1239,same URL,Seeded same image for visual continuity

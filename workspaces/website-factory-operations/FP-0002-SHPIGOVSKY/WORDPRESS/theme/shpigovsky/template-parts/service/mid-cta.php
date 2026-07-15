@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $post_id  = shpigovsky_get_current_service_id();
 $variant  = get_query_var( 'shpigovsky_service_layout_variant', shpigovsky_get_service_layout_variant() );
 
-if ( 'alcohol-special' === $variant ) {
+if ( shpigovsky_is_service_general_variant( $variant ) ) {
 	$phone = shpigovsky_get_site_option( 'phone_primary' );
 	$phone = '' !== $phone ? $phone : '8 (925) 183-64-64';
 	$cta   = array(

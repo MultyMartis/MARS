@@ -1,0 +1,26 @@
+ID,post_title,slug,post_status,post_parent,template,featured_image_id,url
+3,Политика конфиденциальности,privacy-policy,publish,0,page-templates/legal.php,,http://shpigovsky.test/?page_id=3
+4,Главная,glavnaya,publish,0,default,,http://shpigovsky.test/glavnaya/
+5,Услуги,uslugi,publish,0,page-templates/services-hub.php,,http://shpigovsky.test/uslugi/
+11,О центре,o-centre,publish,0,page-templates/institutional.php,,http://shpigovsky.test/o-centre/
+12,О нас,o-nas,publish,11,page-templates/generic.php,,http://shpigovsky.test/o-centre/o-nas/
+13,Программа лечения,programma-lecheniya,publish,11,page-templates/generic.php,,http://shpigovsky.test/o-centre/programma-lecheniya/
+14,Галерея о доме,galereya-o-dome,publish,11,page-templates/generic.php,,http://shpigovsky.test/o-centre/galereya-o-dome/
+15,Специалистам,specialistam,publish,11,page-templates/generic.php,,http://shpigovsky.test/o-centre/specialistam/
+16,Родственникам,rodstvennikam,publish,11,page-templates/generic.php,,http://shpigovsky.test/o-centre/rodstvennikam/
+18,Отзывы,otzyvy,publish,0,page-templates/reviews.php,,http://shpigovsky.test/otzyvy/
+19,Статьи,blog,publish,0,,,http://shpigovsky.test/blog/
+20,Контакты,kontakty,publish,0,page-templates/contacts.php,,http://shpigovsky.test/kontakty/
+22,Пользовательское соглашение,user-agreement,publish,0,page-templates/legal.php,,http://shpigovsky.test/user-agreement/
+23,Согласие на обработку персональных данных,consent-personal-data,publish,0,page-templates/legal.php,,http://shpigovsky.test/consent-personal-data/
+24,Политика Cookie-файлов,cookie-files-policy,publish,0,page-templates/legal.php,,http://shpigovsky.test/cookie-files-policy/
+1030,Специалисты,specyalisty,publish,0,page-templates/generic.php,,http://shpigovsky.test/specyalisty/
+1031,Сергей Юрьевич Шпиговский,shipovsky,publish,1030,page-templates/generic.php,1092,http://shpigovsky.test/specyalisty/shipovsky/
+1032,Максим Михайлович Казаков,kazakov,publish,1030,page-templates/generic.php,1094,http://shpigovsky.test/specyalisty/kazakov/
+1033,Дарья Владимировна Костюк,kostyuk,publish,1030,page-templates/generic.php,1096,http://shpigovsky.test/specyalisty/kostyuk/
+1039,Интервью и СМИ,intervyu-i-smi,publish,11,page-templates/generic.php,,http://shpigovsky.test/o-centre/intervyu-i-smi/
+1053,Генотипирование,genotipirovanie,publish,13,page-templates/generic.php,,http://shpigovsky.test/o-centre/programma-lecheniya/genotipirovanie/
+1054,Нейропсихологическая коррекция,neyropsihologicheskaya-korrektsiya,publish,13,page-templates/generic.php,,http://shpigovsky.test/o-centre/programma-lecheniya/neyropsihologicheskaya-korrektsiya/
+1055,Психокоррекция,psihokorrektsiya,publish,13,page-templates/generic.php,,http://shpigovsky.test/o-centre/programma-lecheniya/psihokorrektsiya/
+1056,Кинезиотерапия,kinezioterapiya,publish,13,page-templates/generic.php,,http://shpigovsky.test/o-centre/programma-lecheniya/kinezioterapiya/
+1097,Шапигузова Татьяна Андреевна,shapiguzova,publish,1030,page-templates/generic.php,1099,http://shpigovsky.test/specyalisty/shapiguzova/

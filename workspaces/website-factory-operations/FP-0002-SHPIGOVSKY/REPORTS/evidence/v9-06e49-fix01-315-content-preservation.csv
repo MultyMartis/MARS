@@ -1,0 +1,19 @@
+meta_or_check,before,after,"changed yes/no","allowed yes/no",result,notes
+service_editor_role,placeholder,service,yes,yes,PASS,"layout restore target"
+service_layout_variant,placeholder,service_general,yes,yes,PASS,"layout restore target"
+service_category_section_lead,MISSING,empty,yes,yes,PASS,"allowed related ACF field created empty on admin save; no prior content deleted"
+_service_category_section_lead,MISSING,field_fp02_service_category_section_lead,yes,yes,PASS,"allowed related ACF reference meta"
+service_child_services_heading,MISSING,empty,yes,yes,PASS,"allowed related ACF field created empty on admin save; no prior content deleted"
+_service_child_services_heading,MISSING,field_fp02_service_child_services_heading,yes,yes,PASS,"allowed related ACF reference meta"
+existing_non_layout_content_keys,214,214,no,yes,PASS,"all 214 prior content/ref keys retained; +4 new empty/ref only"
+post_status,publish,publish,no,yes,PASS,
+post_name,lekarstva,lekarstva,no,yes,PASS,
+permalink,.../lekarstva/,.../lekarstva/,no,yes,PASS,
+service_short_description,"Лекарственная зависимость нередко формируется там, где меньш","Лекарственная зависимость нередко формируется там, где меньш",no,yes,PASS,"content field"
+service_hero_title,,,no,yes,PASS,"content field"
+service_hero_lead,,,no,yes,PASS,"content field"
+service_problem_title,,,no,yes,PASS,"content field"
+service_problem_text,,,no,yes,PASS,"content field"
+service_about_title,,,no,yes,PASS,"content field"
+service_about_text,,,no,yes,PASS,"content field"
+image_or_repeater_meta_count,98,98,no,yes,PASS,heuristic

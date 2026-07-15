@@ -1,0 +1,27 @@
+field,type,section,seeded_value_preview,i18n_ready,result,notes
+section_nav_visible,true_false,2 Nav,1,yes,PASS,#73/#77/#84
+section_dependencies_visible,true_false,3 Dependencies,1,yes,PASS,
+section_dependencies_heading,text,3 Dependencies,Зависимости которые мы лечим,yes,PASS,#73 only
+section_dependencies_lead,textarea,3 Dependencies,Lorem...,yes,PASS,#73
+section_dependencies_footer,textarea,3 Dependencies,Lorem...,yes,PASS,#73
+section_nature_visible,true_false,4 Nature,1,yes,PASS,
+section_nature_heading,text,4 Nature,Природа зависимости,yes,PASS,#73
+section_nature_cards,repeater,4 Nature,2 cards,yes,PASS,#73
+section_mid_cta_visible,true_false,5 CTA,1,yes,PASS,
+section_program_visible,true_false,6 Program,1,yes,PASS,
+section_program_heading,text,6 Program,Наша программа включает 4 направления,yes,PASS,#73
+section_program_intro/intro2,textarea,6 Program,Lorem...,yes,PASS,#73
+section_stages_visible,true_false,7 Stages,1,yes,PASS,
+section_stages_support_items,repeater,7 Stages,4 items,yes,PASS,#73
+section_approach_visible,true_false,8 Approach,1,yes,PASS,
+section_approach_heading,text,8 Approach,Наш подход к лечению зависимостей,yes,PASS,#73
+section_approach_cards,repeater,8 Approach,4 cards,yes,PASS,#73
+section_clinic_landscape_visible,true_false,9 Clinic,1,yes,PASS,
+section_specialists_visible,true_false,10 Specialists,1,yes,PASS,
+section_founder_quote_visible,true_false,11 Founder,1,yes,PASS,
+section_comfort_visible,true_false,12 Comfort,1,yes,PASS,
+section_reviews_visible,true_false,13 Reviews,1,yes,PASS,
+section_faq_visible,true_false,14 FAQ,1,yes,PASS,
+section_faq_heading,text,14 FAQ,Нас часто спрашивают,yes,PASS,#73
+section_final_form_visible,true_false,15 Final form,1,yes,PASS,
+group_fp02_service_section_parity,group,-,63 fields,yes,PASS,new group

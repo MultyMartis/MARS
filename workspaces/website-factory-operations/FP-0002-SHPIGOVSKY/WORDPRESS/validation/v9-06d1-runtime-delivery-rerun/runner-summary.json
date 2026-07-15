@@ -1,0 +1,16 @@
+{
+  "started_at": "2026-07-03T20:23:44.238621Z",
+  "steps": [
+    "preflight",
+    "runtime-baseline",
+    "checkpoint",
+    "dry-run",
+    "source-php-lint",
+    "apply",
+    "post-filesystem",
+    "runtime-php-lint",
+    "runtime-validations"
+  ],
+  "result": "PASS",
+  "finished_at": "2026-07-03T20:24:17.106674Z"
+}

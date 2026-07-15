@@ -1,0 +1,17 @@
+current_field_name,current_label,current_type,current_value_preview,frontend_block,target_field_name,target_type,conversion_action,meta_preservation_strategy,notes
+section_dependencies_notice,3. Зависимости / дочерние услуги,message,children source notice,dependencies children,section_dependencies_notice,message,rename_label_only,N/A,label → 3. Дочерние услуги; message text kept
+section_nature_neurobiology_heading,Подзаголовок: нейробиология,text,Нейробиология,nature subsection,section_nature_text_blocks.heading,repeater_sub,merge_into_repeater_row,keep legacy meta as fallback,row 1 seeded
+section_nature_neurobiology_text,Текст: нейробиология,textarea,Lorem…,nature subsection,section_nature_text_blocks.text,repeater_sub,merge_into_repeater_row,keep legacy meta as fallback,row 1 seeded
+section_nature_genotyping_heading,Подзаголовок: генотипирование,text,Генотипирование,nature subsection+link,section_nature_text_blocks.heading,repeater_sub,merge_into_repeater_row,keep legacy meta as fallback,row 2 + optional link fields
+section_nature_genotyping_text,Текст: генотипирование (до ссылки),textarea,Lorem…,nature subsection,section_nature_text_blocks.text,repeater_sub,merge_into_repeater_row,keep legacy,row 2
+section_nature_genotyping_link_label,Текст ссылки на генотипирование,text,Подробнее…,nature link,section_nature_text_blocks.link_label,repeater_sub,merge_into_repeater_row,keep legacy,optional
+section_nature_genotyping_link_url,URL ссылки на генотипирование,url,/profilakticheskiy-analiz/,nature link,section_nature_text_blocks.link_url,repeater_sub,merge_into_repeater_row,keep legacy,optional
+section_nature_genotyping_after_text,Текст: генотипирование (после ссылки),textarea,Lorem…,nature after link,section_nature_text_blocks.after_text,repeater_sub,merge_into_repeater_row,keep legacy,optional
+section_nature_cards,Карточки проявлений,repeater,2 cards,nature cards,section_nature_cards,repeater,keep_as_pattern_reference,N/A,reference pattern for new repeaters
+section_mid_cta_notice,5. CTA «С чего начать»,message,CTA pointer,mid CTA,section_mid_cta_notice,message,rename_label_only,N/A,→ CTA «Раздел услуги»
+section_program_intro,Intro программы (1),textarea,Lorem…,program intro p1,section_program_intro_items.text,repeater_sub,merge_into_repeater,keep legacy fallback,row 1
+section_program_intro2,Intro программы (2),textarea,Lorem…,program intro p2,section_program_intro_items.text,repeater_sub,merge_into_repeater,keep legacy fallback,row 2
+section_stages_heading,Заголовок этапов,text,Что нужно…,stages chrome,section_stages_heading,text,keep,N/A,already ACF
+section_stages_lead,Лид этапов,textarea,Мы гарантируем…,stages chrome,section_stages_lead,textarea,keep,N/A,already ACF
+stages (Structured Sections),Этапы,repeater,4 steps seeded,stages steps,section_stages_items,repeater,mirror_into_section_parity,keep stages as secondary fallback,section_stages_items primary for subdivision
+section_stages_support_items,Пункты поддержки,repeater,4 items,stages support,section_stages_support_items,repeater,keep,N/A,already repeater
