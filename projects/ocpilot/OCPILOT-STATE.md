@@ -1,8 +1,8 @@
 # OCPilot — Program State
 
 **Status:** living state document — **not** automated router  
-**Last updated:** 2026-07-15
-**Evidence cutoff:** 2026-07-15 (SITE-002 Run **4.270** / `SITE-002-PROD-BLOG-SCHEDULED-NEWS-RCK-PRODUCTIVITY-01` — scheduled blog post_id **13** for **2026-07-16 07:00 Barnaul**; prior Run **4.269** monitor baseline **1615**)
+**Last updated:** 2026-07-16
+**Evidence cutoff:** 2026-07-16 (SITE-002 Run **4.272** / `SITE-002-PROD-BLOG-PUBLISH-DATETIME-READTIME-01` — admin publish datetime UI + `reading_time_minutes`; post_id **13** schedule unchanged; prior Runs **4.271** images / **4.270** scheduled news)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Blog Scheduled News RCK Productivity 01 (Run 4.270)** — **COMPLETE** · post_id **13** scheduled for **2026-07-16 07:00 Barnaul** · autopublish gate on catalog blog model · image input missing · [report](sites/site-002/reports/SITE-002-PROD-BLOG-SCHEDULED-NEWS-RCK-PRODUCTIVITY-01.md) · prior [refresh 02](sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-02.md) · Production content checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01` |
+| Current SITE-002 focus | **Blog Publish Datetime Readtime 01 (Run 4.272)** — **COMPLETE** · admin datetime publish UI + `reading_time_minutes` on list/detail · post_id **13** still scheduled **2026-07-16 07:00 Barnaul** · [report](sites/site-002/reports/SITE-002-PROD-BLOG-PUBLISH-DATETIME-READTIME-01.md) · prior [images 4.271](sites/site-002/reports/SITE-002-PROD-BLOG-RCK-LOGO-AND-TITLE-IMAGE-01.md) · [scheduled 4.270](sites/site-002/reports/SITE-002-PROD-BLOG-SCHEDULED-NEWS-RCK-PRODUCTIVITY-01.md) · Production content checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01` |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 

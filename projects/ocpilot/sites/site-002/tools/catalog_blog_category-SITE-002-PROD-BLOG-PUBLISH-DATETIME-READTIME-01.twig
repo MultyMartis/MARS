@@ -1,0 +1,70 @@
+{{ header }}
+<main class="main">
+
+<section class="zpm-restore">
+  <div class="container">
+
+
+
+    <div class="blog-list">
+
+      {% if posts %}
+
+        {% for post in posts %}
+
+        <a class="blog-list__item" href="{{ post.href }}" title="Подробнее">
+            {% if post.thumb %}
+                <div class="blog-list__item-img">
+                    <img src="{{ post.thumb }}" alt="{{ post.title }}">
+                </div>
+            {% endif %}
+        <div class="blog-list__item-main">
+          <div>
+            <div class="blog-list__item__meta">
+              <div class="data">
+                <b>Рубрика:</b>
+                <span>{{ post.category_name }}</span>
+              </div>
+              <div class="rubric">
+                <b>Дата:</b>
+                <span>{{ post.date }}</span>
+              </div>
+              <div class="views">
+                <b>Просмотров:</b>
+                <span>{{ post.views }}</span>
+              </div>
+              {% if post.reading_time_text %}
+              <div class="reading-time">
+                <span>{{ post.reading_time_text }}</span>
+              </div>
+              {% endif %}
+            </div>
+            <div class="blog-list__item__title">{{ post.title }}</div>
+          </div>
+          <div class="blog-list__item__bottom">
+            <div class="blog-list__item__anonce">
+              {{ post.short }}
+            </div>
+            <div class="blog-list__item__ico_arrow">
+              <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__goto_btn_arrow"></use></svg>
+            </div>
+          </div>
+        </div>
+      </a>
+
+
+
+        {% endfor %}
+    {% endif %}
+
+        {{ pagination }}
+
+  </div>
+</section>
+
+{{ other_news }}
+
+</main>
+
+
+{{ footer }}
