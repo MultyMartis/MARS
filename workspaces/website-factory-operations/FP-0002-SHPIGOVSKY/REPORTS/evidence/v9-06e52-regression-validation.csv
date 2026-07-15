@@ -1,0 +1,16 @@
+﻿route,url,expected,actual,result,notes
+/,http://shpigovsky.test/,"200 preserved",http=200,PASS,
+/uslugi/,http://shpigovsky.test/uslugi/,"200 preserved",http=200,PASS,
+/uslugi/zavisimosti/,http://shpigovsky.test/uslugi/zavisimosti/,"200 preserved",http=200,PASS,
+/uslugi/psihicheskoe-zdorovie/,http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/,"200 preserved",http=200,PASS,
+/uslugi/rasstroystva-pischevogo-povedeniya/,http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/,"200 preserved",http=200,PASS,
+#74,http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/,"200 preserved",http=200,PASS,role=service;variant=service_general
+#314,http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/,"200 preserved",http=200,PASS,role=service;variant=service_general
+#315,http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lekarstva/,"200 preserved",http=200,PASS,role=service;variant=service_general
+#78,http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/depressiya/,"200 preserved",http=200,PASS,role=service;variant=service_general
+#81,http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/trevozhnye-rasstroystva/,"200 preserved",http=200,PASS,role=service;variant=service_general
+#85,http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/anoreksiya/,"200 preserved",http=200,PASS,role=service;variant=service_general
+/blog/,http://shpigovsky.test/blog/,"200 preserved",http=200,PASS,
+/specyalisty/,http://shpigovsky.test/specyalisty/,"200 preserved",http=200,PASS,
+/o-centre/,http://shpigovsky.test/o-centre/,"200 preserved",http=200,PASS,
+/kontakty/,http://shpigovsky.test/kontakty/,"200 preserved",http=200,PASS,

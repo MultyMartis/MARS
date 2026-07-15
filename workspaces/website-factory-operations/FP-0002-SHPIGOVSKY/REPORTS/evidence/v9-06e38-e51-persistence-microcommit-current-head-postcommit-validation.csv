@@ -1,0 +1,14 @@
+check,expected,actual,result,notes
+commit_hash,new fp0002 micro-commit,d3f3fdf271eec42465a9ae5ac5e604e6c35b178c,PASS,docs(fp0002): persist v9 e38-e51 postcommit evidence
+commit_parent_before,a64da2708aa71942b81322b4df10dd7aadcc73d7,a64da2708aa71942b81322b4df10dd7aadcc73d7,PASS,MetaBOT sandbox implementation evidence remained ancestor
+base_still_ancestor,YES,YES,PASS,dba97a38 ancestor of new HEAD
+files_in_commit,12,12,PASS,all under FP-0002-SHPIGOVSKY/REPORTS
+product_code_in_commit,0,0,PASS,
+foreign_paths_in_commit,0,0,PASS,no MetaBOT/OCPilot/iSEO
+sql_in_commit,0,0,PASS,
+binaries_in_commit,0,0,PASS,text docs/evidence only
+staged_after,0,0,PASS,
+push_attempted,NO,NO,PASS,
+foreign_wip_untouched,YES,YES,PASS,foreign status lines remain; temp.zip excluded
+infinite_tail_second_commit,NO,NO,PASS,this CSV local-only uncommitted
+overall,PASS,PASS,PASS,micro-commit complete on monorepo-aware gate

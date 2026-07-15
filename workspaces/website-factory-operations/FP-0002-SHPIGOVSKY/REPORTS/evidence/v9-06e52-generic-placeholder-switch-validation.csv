@@ -1,0 +1,6 @@
+﻿step,post_id,title,expected,actual,result,notes
+1,1039,"Интервью и СМИ",body_readable,meaningful,PASS,precondition
+2,1039,"Интервью и СМИ",full_frontend,http=200;status=generic-acf-sot;src=acf-or-emergency,PASS,"start full"
+3,1039,"Интервью и СМИ",shell_h1_only,http=200;ph=yes,PASS,"placeholder FE"
+4,1039,"Интервью и СМИ",acf_body_preserved,meaningful,PASS,"not deleted"
+5,1039,"Интервью и СМИ",full_restored,http=200;ph=no;acf=yes,PASS,"final full"

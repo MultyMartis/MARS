@@ -1,0 +1,62 @@
+{
+  "diagnostic_label": "PC14_FU03_OPERATOR_SMOKE_DIAGNOSTICS",
+  "decision": "PC14_FU03_OPERATOR_SMOKE_DIAGNOSED_FIX_REQUIRED",
+  "recommended_next": "PC14_FU03_DIAGNOSTICS_PERSIST",
+  "recommended_after_persist": "PC14_FU03_HOTFIX01_SANDBOX_DESIGN",
+  "production_apply_commit": "44c05c3b",
+  "production_worker": "p4mqb4VuPcemIDlC",
+  "smoke_lock_key": "chat:499423375:1784151029009",
+  "executions": {
+    "intake": "3353",
+    "worker": "3354",
+    "admin_locks": "3356",
+    "admin_health": "3358"
+  },
+  "path_classification": {
+    "primary": "D+C",
+    "detail": "Worker executed FU03 dirty→repair→dirty→reject successfully, prepared STRICT QA REJECT materials, sent completion preface via Status nodes, then aborted before Send Telegram Run / Close Lock / Memory because Restore Format Run Items requires Format Run Pipeline.",
+    "letters": {
+      "A": false,
+      "B": "partial — failed before final output send",
+      "C": true,
+      "D": true,
+      "E": "gate OK; repair left dirty as expected for bait; reject msg prepared OK",
+      "F": false,
+      "G": "reject format OK; restore/send path broken",
+      "H": "Take First Item OK; later restore dropped path",
+      "I": true,
+      "J": true,
+      "K": true,
+      "L": false,
+      "M": false
+    }
+  },
+  "root_cause": {
+    "summary": "FU03 reject branch is not compatible with pre-existing Restore Format Run Items / Restore Format Run Items After Lock code that unconditionally reads Format Run Pipeline.",
+    "failing_node": "Restore Format Run Items",
+    "error": "Node 'Format Run Pipeline' hasn't been executed (surfaced as TypeError Cannot assign to read only property 'name')",
+    "affected_nodes": [
+      "Restore Format Run Items",
+      "Close Lock Before Sending (not reached)",
+      "Restore Format Run Items After Lock (same code risk; not reached)",
+      "Parse Mode / Send Telegram Run (not reached)",
+      "Prepare Memory Row Run / Append Memory Run (not executed)"
+    ],
+    "not_root_cause": [
+      "Run Strict Surface Repair live call succeeded (~31s)",
+      "Final Surface Strict Scan / Re-Scan logic functioned",
+      "Format Strict Reject Message produced valid diagnostic",
+      "Intake lock create succeeded",
+      "Production apply node count / FU03 node presence / PC-07 expression intact"
+    ]
+  },
+  "impact": {
+    "immediate_rollback_required": false,
+    "reason_no_immediate_rollback": "Clean/approved path that reaches Format Run Pipeline may still complete; broken surface is the dirty-after-repair reject send/close/memory path. Prefer targeted HOTFIX01 over full FU03 rollback.",
+    "hotfix_safe_candidate": true,
+    "operator_retry_before_fix": false,
+    "lock_manual_cleanup_later": true,
+    "lock_expires_at": "2026-07-15T22:00:32.713Z",
+    "false_completion_ux": true
+  }
+}

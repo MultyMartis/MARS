@@ -1,0 +1,115 @@
+{
+  "added": [
+    "Build Final Public Payload",
+    "Build Strict Surface Repair Payload",
+    "Extract Strict Surface Repair",
+    "Final Surface Strict Re-Scan",
+    "Final Surface Strict Scan",
+    "Format Strict Reject Message",
+    "IF Final Surface Clean",
+    "IF Repaired Surface Clean",
+    "Run Strict Surface Repair"
+  ],
+  "removed": [],
+  "modifiedCode": [
+    "Format Run Pipeline",
+    "Prepare Memory Row Run"
+  ],
+  "unexpected": [],
+  "expectedAdded": [
+    "Build Final Public Payload",
+    "Build Strict Surface Repair Payload",
+    "Extract Strict Surface Repair",
+    "Final Surface Strict Re-Scan",
+    "Final Surface Strict Scan",
+    "Format Strict Reject Message",
+    "IF Final Surface Clean",
+    "IF Repaired Surface Clean",
+    "Run Strict Surface Repair"
+  ],
+  "addedMatchesExpected": true,
+  "modifiedMatchesExpected": true,
+  "preserveChecks": {
+    "Close Lock Before Sending": {
+      "ok": true,
+      "jsCodeUnchanged": true
+    },
+    "TZ Strict Cleanup": {
+      "ok": true,
+      "jsCodeUnchanged": true
+    },
+    "Strict Cleanup": {
+      "ok": true,
+      "jsCodeUnchanged": true
+    },
+    "Strict Risk Scanner": {
+      "ok": true,
+      "jsCodeUnchanged": true
+    },
+    "Postcheck Strict Claims": {
+      "ok": true,
+      "jsCodeUnchanged": true
+    },
+    "Normalize Run Output": {
+      "ok": true,
+      "jsCodeUnchanged": true
+    },
+    "Take First Item": {
+      "ok": true,
+      "jsCodeUnchanged": true
+    },
+    "Finish Lock": {
+      "ok": true,
+      "jsCodeUnchanged": true
+    }
+  },
+  "beforeNodeCount": 92,
+  "afterNodeCount": 101,
+  "copiedFromSandbox": [
+    {
+      "name": "Build Final Public Payload",
+      "kind": "jsCode"
+    },
+    {
+      "name": "Final Surface Strict Scan",
+      "kind": "jsCode"
+    },
+    {
+      "name": "IF Final Surface Clean",
+      "kind": "if_parameters"
+    },
+    {
+      "name": "Build Strict Surface Repair Payload",
+      "kind": "jsCode"
+    },
+    {
+      "name": "Run Strict Surface Repair",
+      "kind": "http_enabled",
+      "disabled": false
+    },
+    {
+      "name": "Extract Strict Surface Repair",
+      "kind": "jsCode"
+    },
+    {
+      "name": "Final Surface Strict Re-Scan",
+      "kind": "jsCode"
+    },
+    {
+      "name": "IF Repaired Surface Clean",
+      "kind": "if_parameters"
+    },
+    {
+      "name": "Format Strict Reject Message",
+      "kind": "jsCode"
+    },
+    {
+      "name": "Format Run Pipeline",
+      "kind": "jsCode"
+    },
+    {
+      "name": "Prepare Memory Row Run",
+      "kind": "jsCode"
+    }
+  ]
+}

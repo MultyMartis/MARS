@@ -1,0 +1,96 @@
+[
+  {
+    "name": "Build Final Public Payload",
+    "type": "n8n-nodes-base.code",
+    "disabled": false,
+    "jsCodeLength": 7762,
+    "jsCodeSha256": "4724c4d6d9bd82e77a56a8a587c2c48c84f588473a53d9b122a8cbd1fadb1cb1"
+  },
+  {
+    "name": "Final Surface Strict Scan",
+    "type": "n8n-nodes-base.code",
+    "disabled": false,
+    "jsCodeLength": 6197,
+    "jsCodeSha256": "e49f1e62701fa06cd2e15be4debc3a65663b6b12ba5b0ca28e38424091a038fd",
+    "hasSot": true
+  },
+  {
+    "name": "IF Final Surface Clean",
+    "type": "n8n-nodes-base.if",
+    "disabled": false,
+    "jsCodeLength": null,
+    "jsCodeSha256": null
+  },
+  {
+    "name": "Build Strict Surface Repair Payload",
+    "type": "n8n-nodes-base.code",
+    "disabled": false,
+    "jsCodeLength": 8541,
+    "jsCodeSha256": "1c9c511da8c8579445c4f0c07353a89b893e8077f4368bf66b9a0fef8e32a41c"
+  },
+  {
+    "name": "Run Strict Surface Repair",
+    "type": "n8n-nodes-base.httpRequest",
+    "disabled": false,
+    "jsCodeLength": null,
+    "jsCodeSha256": null
+  },
+  {
+    "name": "Extract Strict Surface Repair",
+    "type": "n8n-nodes-base.code",
+    "disabled": false,
+    "jsCodeLength": 10075,
+    "jsCodeSha256": "841de634a7674b7ac595e020e21094148834a6ad5706f886cb345ca85f6a90e8"
+  },
+  {
+    "name": "Final Surface Strict Re-Scan",
+    "type": "n8n-nodes-base.code",
+    "disabled": false,
+    "jsCodeLength": 6295,
+    "jsCodeSha256": "9d267387784bc046a953479fd08a4e85439ac960ff372f71e7c142c2ec61245a",
+    "hasSot": true
+  },
+  {
+    "name": "IF Repaired Surface Clean",
+    "type": "n8n-nodes-base.if",
+    "disabled": false,
+    "jsCodeLength": null,
+    "jsCodeSha256": null
+  },
+  {
+    "name": "Format Strict Reject Message",
+    "type": "n8n-nodes-base.code",
+    "disabled": false,
+    "jsCodeLength": 1951,
+    "jsCodeSha256": "ea54e2149685b77ca475e6276d7c00769f8ca1ae90fec6bd7f26bd705065e25c"
+  },
+  {
+    "name": "Format Run Pipeline",
+    "type": "n8n-nodes-base.code",
+    "disabled": false,
+    "jsCodeLength": 16169,
+    "jsCodeSha256": "5dda2a0c8a5f3d874a7d19aa11bfb47b80c4c4a7b484916ff953ea99343f414a",
+    "hasFormatVersion": true
+  },
+  {
+    "name": "Prepare Memory Row Run",
+    "type": "n8n-nodes-base.code",
+    "disabled": false,
+    "jsCodeLength": 2094,
+    "jsCodeSha256": "1388ef4eb1f11245606f724ac67511af847962fcb6610cbc69c520114796f901"
+  },
+  {
+    "name": "TZ Strict Cleanup",
+    "type": "n8n-nodes-base.code",
+    "disabled": false,
+    "jsCodeLength": 12044,
+    "jsCodeSha256": "3d328466dc32c36b89c02a7afde29cef4c6dfc36e953d6966c399dda3f203da6"
+  },
+  {
+    "name": "Normalize Run Output",
+    "type": "n8n-nodes-base.code",
+    "disabled": false,
+    "jsCodeLength": 4918,
+    "jsCodeSha256": "9e5deb327139429fade57fd093f523e69defc706f6f50fcc6bbefd587d0422e5"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "before": {
+    "normalize_to_format": true,
+    "normalize_to_build": false
+  },
+  "after": {
+    "normalize_to_build": true,
+    "no_direct_normalize_to_format": true,
+    "if_clean_true": true,
+    "if_clean_false": true,
+    "if_repaired_true": true,
+    "if_repaired_false": true,
+    "reject_to_take_first": true,
+    "reject_to_memory": true,
+    "format_has_consumer": true,
+    "ok": true
+  },
+  "repairEnabled": true
+}

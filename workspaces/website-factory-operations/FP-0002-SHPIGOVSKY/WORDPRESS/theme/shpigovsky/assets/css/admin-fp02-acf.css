@@ -1,0 +1,149 @@
+/**
+ * FP-0002 unified ACF admin UI styles.
+ *
+ * V9-06E41 — section/block title readability (~20px).
+ * V9-06E43 — Services hub + shared .fp02-acf-section-title screens.
+ * V9-06E44 — service layout variant help.
+ * V9-06E45 / FIX03 — layout selector / technical hide.
+ * V9-06E53 — thematic block separation; remove noisy internal grey field dividers.
+ *
+ * Scoped to FP-0002 admin screens via body.fp02-acf-admin (theme enqueue).
+ * Does not alter public frontend CSS.
+ */
+
+/* -------------------------------------------------------------------------
+ * Section / block titles
+ * ------------------------------------------------------------------------- */
+
+.acf-field.fp02-acf-section-title > .acf-label > label {
+	font-size: 20px !important;
+	font-weight: 600;
+	line-height: 1.3;
+	color: #1d2327;
+}
+
+.acf-field.fp02-acf-section-title.acf-field-message > .acf-label > label {
+	font-size: 20px !important;
+	font-weight: 600;
+	line-height: 1.3;
+}
+
+/* Nested repeater/sub-field labels stay normal size. */
+.acf-field.fp02-acf-section-title .acf-fields > .acf-field > .acf-label > label,
+.acf-field.fp02-acf-section-title .acf-row .acf-label > label {
+	font-size: 13px !important;
+	font-weight: 600;
+	line-height: 1.4;
+}
+
+/* Legacy standalone Hero image — keep meta, hide from operators. */
+.acf-field.fp02-acf-legacy-retired {
+	display: none !important;
+}
+
+/* V9-06E41-FIX01 / E43 — auto-block notice emphasis (source of truth). */
+.fp02-acf-notice-danger {
+	color: #c9251d;
+	font-weight: 700;
+}
+
+.fp02-acf-notice-danger a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+/* V9-06E44 — service layout variant help (scoped; service CPT + ACF screens). */
+.fp02-service-layout-help {
+	margin: 10px 0 0;
+	padding: 10px 12px;
+	max-width: 52rem;
+	box-sizing: border-box;
+}
+
+.fp02-service-layout-help__list {
+	margin: 0.5em 0 0.75em 1.25em;
+	padding: 0;
+}
+
+.fp02-service-layout-help__list li {
+	margin: 0 0 0.45em;
+	line-height: 1.45;
+}
+
+.fp02-service-layout-help__hint {
+	margin: 0;
+	font-style: italic;
+}
+
+.fp02-service-layout-mismatch {
+	border-left-color: #dba617;
+}
+
+/* V9-06E45 — advanced technical layout block visual separation. */
+.acf-field.fp02-service-layout-advanced {
+	background: #f6f7f7;
+	border-top: 1px solid #dcdcde;
+	padding-top: 12px;
+	margin-top: 4px;
+}
+
+/* V9-06E45-FIX03 — hide technical override/layout from normal editor UI (belt + prepare_field). */
+.acf-field.fp02-service-layout-technical-hidden,
+.acf-field.fp02-service-layout-advanced {
+	display: none !important;
+}
+
+.fp02-service-layout-selector-help .fp02-acf-notice-danger,
+.fp02-service-layout-auto-notice .fp02-acf-notice-danger {
+	color: #c9251d;
+	font-weight: 700;
+}
+
+/* -------------------------------------------------------------------------
+ * V9-06E53 — thematic blocks vs internal field dividers
+ *
+ * ACF default draws a grey border-top on every .acf-field. Inside a thematic
+ * block (Hero, Навигация, …) that creates noisy horizontal lines. Keep
+ * control/input borders; remove sibling field dividers; restore one clear
+ * separator only on .fp02-acf-section-title rows.
+ * ------------------------------------------------------------------------- */
+
+/* Remove default ACF sibling field dividers inside metabox field lists. */
+body.fp02-acf-admin .acf-postbox .acf-fields > .acf-field {
+	border-top: none;
+}
+
+/* Nested group/repeater bodies: same quiet grouping by spacing/labels. */
+body.fp02-acf-admin .acf-postbox .acf-field .acf-fields > .acf-field {
+	border-top: none;
+}
+
+/*
+ * Major thematic block start — section heading row.
+ * Provides the only strong horizontal separation between blocks.
+ */
+body.fp02-acf-admin .acf-postbox .acf-fields > .acf-field.fp02-acf-section-title {
+	margin-top: 20px;
+	margin-bottom: 2px;
+	padding-top: 14px;
+	padding-bottom: 10px;
+	border-top: 1px solid #c3c4c7 !important;
+	background: #f6f7f7;
+	border-radius: 2px;
+}
+
+body.fp02-acf-admin .acf-postbox .acf-fields > .acf-field.fp02-acf-section-title:first-child {
+	margin-top: 0;
+}
+
+/* Comfortable spacing inside a thematic block without grey rules. */
+body.fp02-acf-admin .acf-postbox .acf-fields > .acf-field:not(.fp02-acf-section-title) {
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+/* Keep ACF postboxes (e.g. «Содержимое страницы») visually distinct. */
+body.fp02-acf-admin .acf-postbox {
+	margin-top: 12px;
+	margin-bottom: 16px;
+}

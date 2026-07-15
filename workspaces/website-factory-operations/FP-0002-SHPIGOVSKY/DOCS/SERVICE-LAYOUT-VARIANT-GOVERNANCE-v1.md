@@ -89,10 +89,12 @@ Unchanged from FIX01/FIX02 except: child-services CSS is **not** enqueued on pla
 
 Pages using `page-templates/generic.php` may set ACF `page_layout_mode`:
 
-- `full` (default) — existing generic content shell
+- `full` (default) — generic content shell from ACF SoT (`group_fp02_page_generic_content`, V9-06E52)
 - `placeholder` — H1 only
 
 Dedicated templates (Home, `/uslugi/`, contacts, reviews, legal, institutional hub) are **out of this field** by design.
+
+See also: `DOCS/GENERIC-PAGES-ADMIN-PARITY-MODEL-v1.md`.
 
 ---
 
@@ -104,6 +106,7 @@ Dedicated templates (Home, `/uslugi/`, contacts, reviews, legal, institutional h
 - **E45-FIX02:** rename technical `alcohol_special` → `service_general`
 - **E45-FIX03:** depth-based one-block selector; nested auto service
 - **E51:** restore **Заглушка** as first-class layout mode + true stub frontend; `#78` test enable
+- **E52:** generic pages ACF content SoT + empty-safe + placeholder for `generic.php`
 
 ---
 

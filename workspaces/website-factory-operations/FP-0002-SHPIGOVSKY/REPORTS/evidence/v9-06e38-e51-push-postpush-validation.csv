@@ -1,0 +1,8 @@
+check,expected,actual,result,notes
+remote_tip_equals_local_HEAD,YES,NO (remote=9a8c4cadee234f773c847687d1e3131a2654dba4 HEAD=f8d859924d84c7d6a57f2662b8fe7b3e9f53a629),FAIL,diverged; push not attempted
+fp0002_main_on_remote,YES,NOT_ON_REMOTE / NOT_CHECKED via contains after push,FAIL,push skipped; commits remain local-only relative to remote tip
+fp0002_micro_on_remote,YES,NOT_ON_REMOTE / NOT_CHECKED,FAIL,push skipped
+staged_after,0,0,PASS,no staging by this task
+foreign_WIP_untouched,YES,YES,PASS,no restore/clean/stash/reset; working tree left as found
+product_changes_this_task,NO,NO,PASS,only push-report evidence files written locally
+runtime_DB,unchanged,unchanged,PASS,not touched

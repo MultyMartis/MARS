@@ -1,0 +1,10 @@
+screen,post_id,expected,actual,result,notes
+service_section,73,admin_css_body_fp02_section_titles,accepted_e53_visual+css_sync,PASS,operator_accepted;freeze_docs
+service_page,74,admin_css_layout_controls,accepted_e53_visual+css_sync,PASS,operator_accepted
+service_page,315,admin_css_role_usluga,accepted_e53_visual;fe_no_placeholder_stack,PASS,controls_preserved
+generic_page,1039,admin_css_layout_mode_full,accepted_e53;fe_full,PASS,generic_css_gap_closed_e53
+specialist_generic,1031,admin_css_layout_mode_full,accepted_e53;fe_full,PASS,
+home,4,admin_css_sections_readable,accepted_e53_9of9,PASS,e42_freeze_preserved
+services_hub,5,admin_css_sections_readable,accepted_e53_9of9,PASS,e44_freeze_preserved
+operator_css,n/a,runtime_11A45ABE_preserved,11A45ABE87AE54B7…,PASS,intentional_drift
+internal_grey_lines,n/a,removed_inside_blocks,css_rules_active,PASS,major_separators_kept

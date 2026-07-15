@@ -40,6 +40,7 @@ final class EditorRestrictions implements ModuleInterface {
 	public static function register() {
 		add_filter( 'use_block_editor_for_post_type', array( __CLASS__, 'filter_block_editor' ), 10, 2 );
 		add_action( 'add_meta_boxes', array( __CLASS__, 'remove_irrelevant_metaboxes' ), 20 );
+		add_action( 'add_meta_boxes', array( __CLASS__, 'remove_generic_page_clutter' ), 30 );
 		add_filter( 'manage_' . Service::POST_TYPE . '_posts_columns', array( __CLASS__, 'filter_service_columns' ) );
 		add_action( 'manage_' . Service::POST_TYPE . '_posts_custom_column', array( __CLASS__, 'render_service_column' ), 10, 2 );
 		add_action( 'admin_notices', array( __CLASS__, 'render_legal_blocker_notice' ) );
@@ -73,6 +74,32 @@ final class EditorRestrictions implements ModuleInterface {
 		remove_meta_box( 'postcustom', Service::POST_TYPE, 'normal' );
 		remove_meta_box( 'revisionsdiv', Service::POST_TYPE, 'normal' );
 		remove_meta_box( 'postexcerpt', Service::POST_TYPE, 'normal' );
+	}
+
+	/**
+	 * V9-06E52: for Generic Content pages, hide classic editor / clutter when ACF is SoT.
+	 * Does not touch Home, dedicated templates, or posts page.
+	 */
+	public static function remove_generic_page_clutter() {
+		$post_id = isset( $_GET['post'] ) ? (int) $_GET['post'] : 0; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if ( $post_id <= 0 && isset( $GLOBALS['post'] ) && $GLOBALS['post'] instanceof \WP_Post ) {
+			$post_id = (int) $GLOBALS['post']->ID;
+		}
+		if ( $post_id <= 0 || 'page' !== get_post_type( $post_id ) ) {
+			return;
+		}
+
+		$tpl = (string) get_page_template_slug( $post_id );
+		if ( 'page-templates/generic.php' !== $tpl ) {
+			return;
+		}
+
+		remove_meta_box( 'postexcerpt', 'page', 'normal' );
+		remove_meta_box( 'revisionsdiv', 'page', 'normal' );
+		remove_meta_box( 'commentstatusdiv', 'page', 'normal' );
+		remove_meta_box( 'commentsdiv', 'page', 'normal' );
+		remove_meta_box( 'trackbacksdiv', 'page', 'normal' );
+		remove_meta_box( 'postcustom', 'page', 'normal' );
 	}
 
 	/**

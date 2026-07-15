@@ -1,0 +1,11 @@
+admin_area,post_id_or_screen,post_type,acf_group,admin_css_file,section_class_present,internal_lines_present,applies_to_e53,notes
+Home,4,page,group_fp02_page_home,"admin-home-acf.css (pre) / admin-fp02-acf.css (E53)",yes,yes-ACF-default,yes,"23 section titles; CSS was enqueued"
+"Services hub",5,page,group_fp02_page_services_hub,"admin-home-acf.css / admin-fp02-acf.css",yes,yes-ACF-default,yes,"10 section titles"
+"Service section",73,service,"group_fp02_service_section_parity (+ layout/hero)","admin-home-acf.css / admin-fp02-acf.css",yes,yes-ACF-default,yes,"operator screenshot target; Hero/Nav/Children/Nature"
+"Service page",74,service,"group_fp02_service_general_parity (+ layout/hero)","admin-home-acf.css / admin-fp02-acf.css",yes,yes-ACF-default,yes,"21 section titles"
+"Service page",315,service,group_fp02_service_general_parity,"admin-home-acf.css / admin-fp02-acf.css",yes,yes-ACF-default,yes,"must remain Услуга"
+"Generic page",1039,page,"group_fp02_page_layout_mode + group_fp02_page_generic_content","none pre-E53 / admin-fp02-acf.css","partial (layout only)",yes-ACF-default,yes,"CSS was NOT enqueued before E53"
+"Specialist generic",1031,page,"layout + generic content","none pre-E53 / admin-fp02-acf.css",partial,yes-ACF-default,yes,"specialist bio page"
+"O-centre hub",11,page,group_fp02_page_institutional*,"none pre-E53 / admin-fp02-acf.css","no fp02-acf-section-title",yes-ACF-default,yes,"enqueue via post_type=page"
+Contacts,20,page,"contacts page groups","none pre-E53 / admin-fp02-acf.css","no fp02-acf-section-title",yes-ACF-default,yes,"enqueue via post_type=page"
+"Site Settings",fp02-site-settings*,options,"site options groups","none pre-E53 / admin-fp02-acf.css",varies,yes-ACF-default,yes,"hook contains fp02-site-settings"

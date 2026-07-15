@@ -1,0 +1,24 @@
+{
+  "source": "n8n_admin_lookup_plus_intake_create_plus_operator_transcript",
+  "operator_observed": {
+    "lock_key": "chat:499423375:1784151029009",
+    "task_id": "pending",
+    "created_at": "2026-07-15T21:30:32.713Z",
+    "expires_at": "2026-07-15T22:00:32.713Z",
+    "status": "active"
+  },
+  "intake_create_lock": {
+    "task_id": "pending",
+    "status": "active",
+    "lock_key": "chat:499423375:1784151029009",
+    "created_at": "2026-07-15T21:30:32.713Z",
+    "expires_at": "2026-07-15T22:00:32.713Z"
+  },
+  "worker_route_task_id": "seo202607152130389k7zou",
+  "worker_close_lock": null,
+  "close_lock_executed": false,
+  "promotion_occurred": false,
+  "promotion_note": "Worker Route Command generated real task_id seo202607152130389k7zou, but Close Lock Before Sending never executed, so Sheets row remained task_id=pending / status=active.",
+  "admin_lookup_confirms_row": true,
+  "note": "Direct Google Sheets write API not used."
+}

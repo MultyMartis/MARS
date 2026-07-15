@@ -182,38 +182,86 @@ add_action( 'admin_head-post.php', 'shpigovsky_hide_native_editor_admin_css' );
 add_action( 'admin_head-post-new.php', 'shpigovsky_hide_native_editor_admin_css' );
 
 /**
- * Enqueue FP02 ACF admin CSS (section titles ~20px, legacy field hide).
- * V9-06E41 — front page; V9-06E43 — also Services hub page template.
- * V9-06E44 — also service CPT screens (layout variant help styles).
+ * Whether the current admin screen should load FP-0002 ACF admin CSS.
+ *
+ * V9-06E41 — front page; V9-06E43 — Services hub; V9-06E44 — service CPT;
+ * V9-06E53 — all page + service edit screens + FP02 Site Settings options pages
+ * so thematic blocks and generic-page ACF share the same visual layer.
+ *
+ * @param string $hook_suffix Current admin hook suffix.
+ * @return bool
+ */
+function shpigovsky_admin_should_enqueue_fp02_acf_css( $hook_suffix ) {
+	if ( in_array( $hook_suffix, array( 'post.php', 'post-new.php' ), true ) ) {
+		$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
+		$post_type = ( $screen && isset( $screen->post_type ) ) ? (string) $screen->post_type : '';
+
+		if ( in_array( $post_type, array( 'page', 'service' ), true ) ) {
+			return true;
+		}
+	}
+
+	// ACF options pages under FP02 Site Settings (slug contains fp02-site-settings).
+	if ( is_string( $hook_suffix ) && false !== strpos( $hook_suffix, 'fp02-site-settings' ) ) {
+		return true;
+	}
+
+	return false;
+}
+
+/**
+ * Body class for scoped FP-0002 ACF admin visual rules (V9-06E53).
+ *
+ * @param string $classes Space-separated body classes.
+ * @return string
+ */
+function shpigovsky_fp02_acf_admin_body_class( $classes ) {
+	$hook = isset( $GLOBALS['hook_suffix'] ) ? (string) $GLOBALS['hook_suffix'] : '';
+
+	if ( ! shpigovsky_admin_should_enqueue_fp02_acf_css( $hook ) ) {
+		return $classes;
+	}
+
+	$classes .= ' fp02-acf-admin';
+
+	return $classes;
+}
+add_filter( 'admin_body_class', 'shpigovsky_fp02_acf_admin_body_class' );
+
+/**
+ * Enqueue unified FP02 ACF admin CSS.
+ * V9-06E41–E45 — section titles, notices, layout help/hide.
+ * V9-06E53 — thematic block separation; no noisy internal field dividers.
  */
 function shpigovsky_enqueue_home_acf_admin_css( $hook_suffix ) {
-	if ( ! in_array( $hook_suffix, array( 'post.php', 'post-new.php' ), true ) ) {
+	if ( ! shpigovsky_admin_should_enqueue_fp02_acf_css( $hook_suffix ) ) {
 		return;
 	}
 
-	$screen = function_exists( 'get_current_screen' ) ? get_current_screen() : null;
-	$is_service = $screen && isset( $screen->post_type ) && 'service' === $screen->post_type;
-
-	$page_id = shpigovsky_admin_edit_page_id();
-	$front   = (int) get_option( 'page_on_front' );
-	$is_home = $page_id > 0 && $front > 0 && $page_id === $front;
-	$is_hub  = $page_id > 0 && 'page-templates/services-hub.php' === (string) get_page_template_slug( $page_id );
-
-	if ( ! $is_home && ! $is_hub && ! $is_service ) {
-		return;
-	}
-
-	$rel = 'assets/css/admin-home-acf.css';
+	$rel = 'assets/css/admin-fp02-acf.css';
 
 	if ( ! is_readable( SHPIGOVSKY_THEME_DIR . '/' . $rel ) ) {
-		return;
+		// Fallback for older runtime copies that only have the alias file.
+		$rel = 'assets/css/admin-home-acf.css';
+		if ( ! is_readable( SHPIGOVSKY_THEME_DIR . '/' . $rel ) ) {
+			return;
+		}
 	}
 
 	wp_enqueue_style(
-		'shpigovsky-home-acf-admin',
+		'shpigovsky-fp02-acf-admin',
 		SHPIGOVSKY_THEME_URI . '/' . $rel,
 		array(),
 		shpigovsky_asset_version( $rel )
 	);
+
+	// Legacy handle alias (E41–E45): same stylesheet URL, no second network fetch.
+	wp_register_style(
+		'shpigovsky-home-acf-admin',
+		false,
+		array( 'shpigovsky-fp02-acf-admin' ),
+		shpigovsky_asset_version( $rel )
+	);
+	wp_enqueue_style( 'shpigovsky-home-acf-admin' );
 }
 add_action( 'admin_enqueue_scripts', 'shpigovsky_enqueue_home_acf_admin_css' );

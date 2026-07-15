@@ -1,0 +1,30 @@
+{
+  "id": "p4mqb4VuPcemIDlC",
+  "name": "SEO Content Agent Beta.v14 - Worker",
+  "active": true,
+  "node_count": 101,
+  "updatedAt": "2026-07-15T21:09:45.123Z",
+  "fu03_nodes_present": [
+    "Build Final Public Payload",
+    "Final Surface Strict Scan",
+    "IF Final Surface Clean",
+    "Build Strict Surface Repair Payload",
+    "Run Strict Surface Repair",
+    "Extract Strict Surface Repair",
+    "Final Surface Strict Re-Scan",
+    "IF Repaired Surface Clean",
+    "Format Strict Reject Message"
+  ],
+  "fu03_count": 9,
+  "run_strict_surface_repair_enabled": true,
+  "format_run_pipeline_present": true,
+  "prepare_memory_row_run_present": true,
+  "close_lock_task_id_expression": "={{ $('Route Command').first().json.task_id }}",
+  "close_lock_pc07_ok": true,
+  "side_effect_enabled_sample": {
+    "Send Telegram Run": true,
+    "Append Memory Run": true,
+    "Close Lock Before Sending": true,
+    "Run Strict Surface Repair": true
+  }
+}
