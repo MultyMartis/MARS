@@ -180,6 +180,8 @@ Exact paths under `/public_html/`:
 - Authority worktree used for docs/mirrors/commit
 - Dirty main ignored
 - Repo mirrors under `projects/ocpilot/sites/site-002/tools/`
+- Commit: `7abb0d17` — `ocpilot: add SITE-002 blog publish datetime and reading time`
+- Push: `origin/mars/canonical-post-recovery` fast-forward `5727a8f3..7abb0d17`
 
 ## 20. Storage artifacts
 
