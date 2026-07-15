@@ -134,7 +134,14 @@ Key paths:
 
 ## 10. Git commit + push status
 
-See closeout after authority commit/push.
+| Item | Value |
+|------|-------|
+| Authority worktree | `X:\AI MARS STORAGE\git-sync-e01\repo` |
+| Branch used | `site-002-git-authority-realign-after-wave-e` |
+| Commit | `385738af` — `ocpilot: attach SITE-002 RCK logo and blog title image` |
+| Push | `origin/mars/canonical-post-recovery` (`9eec4341..385738af`) |
+| Dirty main `X:\AI MARS` | **not mutated** |
+| Foreign WIP | excluded (not staged) |
 
 ## 11. Final verdict
 
