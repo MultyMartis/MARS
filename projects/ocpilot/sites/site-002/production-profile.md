@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-15 (Run 4.269 — SITE-002-MONITOR-BASELINE-REFRESH-02 — baseline **1530→1615**; monitor `NO_ACTION_REQUIRED`; prior Run 4.268 onboarding 03; production content checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01`)
+**Last updated:** 2026-07-15 (Run 4.270 — SITE-002-PROD-BLOG-SCHEDULED-NEWS-RCK-PRODUCTIVITY-01 — scheduled news post_id **13** for **2026-07-16 07:00 Barnaul** + catalog blog autopublish gate; prior Run 4.269 baseline **1615**; production content checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01`)
 
 ---
 
@@ -92,6 +92,7 @@ Do not claim that Production exactly matches TEST unless evidence proves it.
 | Mail recipients architecture (Production) | **ACTIVE — TEMP TEST RECIPIENT** (Run 4.264 confirm · Run 4.265 re-verify · Run 4.266 full form mail rerun) — `config_mail_alert_email` currently **only** `client.leads@polygon-ws.ru`; `info@bzpm.ru` **not** restored yet; handler `catalog/controller/checkout/anketa.php`; admin-managed comma list · empty-lead backend guard OK (8 valid 200 / 3 negatives 400) · [full rerun](reports/SITE-002-PROD-FORM-MAIL-FULL-TEST-RERUN-01.md) · [follow-up](reports/SITE-002-PROD-FORM-EMPTY-LEAD-GUARD-FOLLOWUP-01.md) · [audit](reports/SITE-002-PROD-1C-LOGS-AND-FORM-MAIL-AUDIT-01.md) · [discovery](reports/SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01.md) · [confirmation](reports/SITE-002-PROD-MAIL-RECIPIENTS-ADMIN-ADD-01.md) |
 | Mail system architecture (Production) | **DISCOVERED — REDESIGN CHARTERS READY** (Run 4.222) — read-only full mail map: 29 public forms → anketa; standard OC twig mails (order/account/affiliate); no service info in admin form mail today; hybrid shared-renderer recommended; 5 future charters; Beget backup confirmed; 0 Production mutation · [report](reports/SITE-002-PROD-MAIL-SYSTEM-DISCOVERY-01.md) · [audit baseline](baselines/SITE-002-MAIL-SYSTEM-DISCOVERY-01.md) |
 | Catalog default sort (Production) | `pd.name ASC` when `sort`/`order` omitted |
+| Custom blog / scheduled news (Production) | **ACTIVE — SCHEDULED PUBLISH GATE** (Run **4.270**) — custom module `catalog/controller|model/blog/*`, tables `oc_blog_posts` / `oc_blog_themes`; frontend gate `active=1 AND date_added <= NOW()` (PHP/MySQL `Europe/Moscow`); SEO `blog/news/{slug}`; Google sitemap does **not** include blog; RCK productivity article post_id **13** `date_added=2026-07-16 03:00:00` (Barnaul 07:00); logo intake missing · [report](reports/SITE-002-PROD-BLOG-SCHEDULED-NEWS-RCK-PRODUCTIVITY-01.md) |
 
 ---
 

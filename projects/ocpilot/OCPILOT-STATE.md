@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-15
-**Evidence cutoff:** 2026-07-15 (SITE-002 Run **4.269** / `SITE-002-MONITOR-BASELINE-REFRESH-02` — baseline **1530→1615**; monitor `NO_ACTION_REQUIRED`; prior Run **4.268** onboarding 03)
+**Evidence cutoff:** 2026-07-15 (SITE-002 Run **4.270** / `SITE-002-PROD-BLOG-SCHEDULED-NEWS-RCK-PRODUCTIVITY-01` — scheduled blog post_id **13** for **2026-07-16 07:00 Barnaul**; prior Run **4.269** monitor baseline **1615**)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Monitor Baseline Refresh 02 (Run 4.269)** — **COMPLETE** · baseline **1530→1615** · manual monitor `2026-07-15_15-53-13` **`NO_ACTION_REQUIRED`** · needs **0** · checkpoint `SITE-002-STABLE-PROD-POST-1C-MONITOR-BASELINE-1615-02` · [refresh 02](sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-02.md) · prior [onboarding 03](sites/site-002/reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-03.md) · Production content checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01` |
+| Current SITE-002 focus | **Blog Scheduled News RCK Productivity 01 (Run 4.270)** — **COMPLETE** · post_id **13** scheduled for **2026-07-16 07:00 Barnaul** · autopublish gate on catalog blog model · image input missing · [report](sites/site-002/reports/SITE-002-PROD-BLOG-SCHEDULED-NEWS-RCK-PRODUCTIVITY-01.md) · prior [refresh 02](sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-02.md) · Production content checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01` |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 
