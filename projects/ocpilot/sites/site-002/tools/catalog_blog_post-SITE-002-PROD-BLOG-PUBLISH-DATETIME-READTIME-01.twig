@@ -1,0 +1,42 @@
+{{ header }}
+
+<main class="main">
+
+  <section class="zpm-seo blog-item">
+    <div class="container">
+
+        <div class="blog-item__meta">
+          <div class="data">
+            <b>Рубрика:</b>
+            <span>{{ category_name }}</span>
+          </div>
+          <div class="rubric">
+            <b>Дата:</b>
+            <span>{{ date }}</span>
+          </div>
+          <div class="views">
+            <b>Просмотров:</b>
+            <span>{{ views }}</span>
+          </div>
+          {% if reading_time_text %}
+          <div class="reading-time">
+            <span>{{ reading_time_text }}</span>
+          </div>
+          {% endif %}
+        </div>
+{% if thumb %}
+      <div class="blog-item-img__wrap">
+        <img src="{{ thumb }}" alt="{{ heading_title }}">
+      </div>
+ {% endif %}
+
+
+        {{ content }}
+
+           </div>
+  </section>
+
+{{ other_news }}
+</main>
+
+{{ footer }}

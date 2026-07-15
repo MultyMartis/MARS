@@ -30,7 +30,8 @@ param(
 $ErrorActionPreference = 'Stop'
 
 $TaskName = 'MARS_SITE_002_Post_1C_Catalog_Monitor'
-$RepoRoot = 'X:\AI MARS'
+# Repository root derived from installer path (.../projects/ocpilot/sites/site-002/tools).
+$RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..\..\..\..')).Path
 $RunnerScript = Join-Path $RepoRoot 'projects\ocpilot\sites\site-002\tools\site-002-post-1c-monitor-runner.ps1'
 $InstallLogRoot = 'X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\deployments\SITE-002-POST-1C-MONITOR-SCHEDULER-READINESS-01\scheduler'
 $InstallLog = Join-Path $InstallLogRoot ("install-{0}.log" -f (Get-Date -Format 'yyyy-MM-dd_HH-mm-ss'))

@@ -72,6 +72,24 @@ class ControllerCheckoutAnketa extends Controller {
 			$data['text'] = $this->request->post['message'];
 		}
 
+		// Reject leads with no user content (prevents admin mail of service-only empty submissions).
+		// Audit: SITE-002-PROD-1C-LOGS-AND-FORM-MAIL-AUDIT-01 / OCPilot Run 4.264
+		$has_user_field = false;
+		foreach (array('name', 'contact', 'phone', 'email', 'company', 'message', 'comment', 'text', 'project_description', 'subject') as $zpm_user_key) {
+			if (isset($this->request->post[$zpm_user_key]) && trim((string)$this->request->post[$zpm_user_key]) !== '') {
+				$has_user_field = true;
+				break;
+			}
+		}
+		if (!$has_user_field) {
+			http_response_code(400);
+			echo json_encode(array(
+				'ok' => false,
+				'message' => 'Заполните имя, телефон или e-mail'
+			));
+			exit;
+		}
+
 		$text = '';
 		$dialog_label = $this->zpmDialogLabel($dialog);
 		$product_name = '';

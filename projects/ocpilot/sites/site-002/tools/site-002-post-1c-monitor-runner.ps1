@@ -19,7 +19,8 @@ param(
 
 $ErrorActionPreference = 'Stop'
 
-$RepoRoot = 'X:\AI MARS'
+# Repository root derived from runner path (.../projects/ocpilot/sites/site-002/tools).
+$RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..\..\..\..\..')).Path
 $MonitorScript = Join-Path $RepoRoot 'projects\ocpilot\sites\site-002\tools\site-002-prod-post-1c-catalog-onboarding-monitor-02.py'
 $ScheduledRoot = 'X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\scheduled-monitors\post-1c'
 $OperationId = 'SITE-002-POST-1C-MONITOR-ARTIFACTS-HARDENING-01'

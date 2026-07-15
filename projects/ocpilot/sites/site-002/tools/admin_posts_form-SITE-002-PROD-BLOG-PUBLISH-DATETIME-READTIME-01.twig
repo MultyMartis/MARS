@@ -1,0 +1,150 @@
+{{ header }}{{ column_left }}
+<div id="content">
+  <div class="page-header">
+    <div class="container-fluid">
+      <div class="pull-right">
+        <button type="submit" form="form-post" data-toggle="tooltip" title="{{ button_save }}" class="btn btn-primary"><i class="fa fa-save"></i></button>
+        <a href="{{ cancel }}" data-toggle="tooltip" title="{{ button_cancel }}" class="btn btn-default"><i class="fa fa-reply"></i></a>
+      </div>
+      <h1>{{ heading_title }}</h1>
+      <ul class="breadcrumb">
+        {% for breadcrumb in breadcrumbs %}
+        <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><i class="fa fa-pencil"></i> {{ text_form }}</h3>
+      </div>
+      <div class="panel-body">
+        <form action="{{ action }}" method="post" enctype="multipart/form-data" id="form-post" class="form-horizontal">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab-general" data-toggle="tab">Основное</a></li>
+            <li><a href="#tab-data" data-toggle="tab">Данные и SEO</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="tab-general">
+              <div class="form-group required">
+                <label class="col-sm-2 control-label" for="input-title">{{ entry_title }}</label>
+                <div class="col-sm-10">
+                  <input type="text" name="title" value="{{ title }}" placeholder="{{ entry_title }}" id="input-title" class="form-control" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-short-description">{{ entry_short_description }}</label>
+                <div class="col-sm-10">
+                  <textarea name="short_description" placeholder="{{ entry_short_description }}" id="input-short-description" class="form-control">{{ short_description }}</textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-content">{{ entry_description }}</label>
+                <div class="col-sm-10">
+                  <textarea name="content" placeholder="{{ entry_description }}" id="input-content" data-toggle="summernote" class="form-control">{{ content }}</textarea>
+                </div>
+              </div>
+            </div>
+
+           <div class="tab-pane" id="tab-data">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-image">{{ entry_image }}</label>
+                    <div class="col-sm-10">
+                    <a href="" id="thumb-image" data-toggle="image" class="img-thumbnail"><img src="{{ thumb }}" alt="" title="" data-placeholder="{{ placeholder }}" /></a>
+                    <input type="hidden" name="image" value="{{ image }}" id="input-image" />
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-category">{{ entry_category }}</label>
+                    <div class="col-sm-10">
+                    <select name="category_id" id="input-category" class="form-control">
+                        <option value="0">--- Не выбрано ---</option>
+                        {% for category in categories %}
+                        <option value="{{ category.id }}" {% if category.id == category_id %}selected="selected"{% endif %}>{{ category.name }}</option>
+                        {% endfor %}
+                    </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-modified">
+                    <span data-toggle="tooltip" title="Используется для отложенной публикации статьи на сайте. Время сайта (как в MySQL/OpenCart).">Дата и время публикации</span>
+                    </label>
+                    <div class="col-sm-3">
+                      <div class="input-group datetime">
+                        <input type="text" name="modified" value="{{ modified }}" placeholder="YYYY-MM-DD HH:MM" data-date-format="YYYY-MM-DD HH:mm" id="input-modified" class="form-control" />
+                        <span class="input-group-btn">
+                          <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button>
+                        </span>
+                      </div>
+                      <span class="help-block">Дата и время публикации (по времени сайта). Для отложенной публикации укажите будущую дату и время.</span>
+                    </div>
+                </div>
+{% if reading_time_minutes %}
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Время на чтение</label>
+                    <div class="col-sm-10">
+                      <p class="form-control-static">{{ reading_time_minutes }} мин. (считается автоматически при сохранении по объёму текста)</p>
+                    </div>
+                </div>
+{% endif %}
+
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-keyword">
+                    <span data-toggle="tooltip" title="{{ help_keyword }}">{{ entry_keyword }}</span>
+                    </label>
+                    <div class="col-sm-10">
+                    <input type="text" name="keyword" value="{{ keyword }}" placeholder="{{ entry_keyword }}" id="input-keyword" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-meta-title">{{ entry_meta_title }}</label>
+                    <div class="col-sm-10">
+                    <input type="text" name="meta_title" value="{{ meta_title }}" placeholder="{{ entry_meta_title }}" id="input-meta-title" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-meta-description">{{ entry_meta_description }}</label>
+                    <div class="col-sm-10">
+                    <textarea name="meta_description" rows="5" placeholder="{{ entry_meta_description }}" id="input-meta-description" class="form-control">{{ meta_description }}</textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-meta-keyword">{{ entry_meta_keyword }}</label>
+                    <div class="col-sm-10">
+                    <textarea name="meta_keyword" rows="3" placeholder="{{ entry_meta_keyword }}" id="input-meta-keyword" class="form-control">{{ meta_keyword }}</textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-status">{{ entry_status }}</label>
+                    <div class="col-sm-10">
+                    <select name="active" id="input-status" class="form-control">
+                        <option value="1" {% if active %}selected="selected"{% endif %}>{{ text_enabled }}</option>
+                        <option value="0" {% if not active %}selected="selected"{% endif %}>{{ text_disabled }}</option>
+                    </select>
+                    </div>
+                </div>
+                </div>
+
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript"><!--
+$('.datetime').datetimepicker({
+  language: 'ru',
+  pickDate: true,
+  pickTime: true
+});
+//--></script>
+</div>
+{{ footer }}
