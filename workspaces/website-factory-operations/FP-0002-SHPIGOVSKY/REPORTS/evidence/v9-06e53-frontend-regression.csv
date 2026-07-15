@@ -1,0 +1,15 @@
+route,url,expected,actual,result,notes
+/,http://shpigovsky.test/,200/preserved,http=200,PASS,len=185394
+/uslugi/,http://shpigovsky.test/uslugi/,200/preserved,http=200,PASS,len=123600
+/uslugi/zavisimosti/,http://shpigovsky.test/uslugi/zavisimosti/,200/preserved,http=200,PASS,len=128926
+/uslugi/psihicheskoe-zdorovie/,http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/,200/preserved,http=200,PASS,len=130547
+/uslugi/rasstroystva-pischevogo-povedeniya/,http://shpigovsky.test/uslugi/rasstroystva-pischevogo-povedeniya/,200/preserved,http=200,PASS,len=125557
+#74,http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/,200/preserved,http=200,PASS,len=132868
+#315,http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lekarstva/,200/preserved,http=200,PASS,len=113565;role=service;variant=service_general
+#78,http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/depressiya/,200/preserved,http=200,PASS,len=112333;role=service;variant=service_general
+#1039,http://shpigovsky.test/o-centre/intervyu-i-smi/,200/preserved,http=200,PASS,len=58236;page_layout_mode=full
+#1031,http://shpigovsky.test/specyalisty/shipovsky/,200/preserved,http=200,PASS,len=58752;page_layout_mode=full
+/blog/,http://shpigovsky.test/blog/,200/preserved,http=200,PASS,len=70532
+/specyalisty/,http://shpigovsky.test/specyalisty/,200/preserved,http=200,PASS,len=58114
+/o-centre/,http://shpigovsky.test/o-centre/,200/preserved,http=200,PASS,len=124056
+/kontakty/,http://shpigovsky.test/kontakty/,200/preserved,http=200,PASS,len=67527

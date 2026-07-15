@@ -1,0 +1,76 @@
+{
+    "key": "group_fp02_page_generic_content",
+    "title": "Содержимое страницы",
+    "fields": [
+        {
+            "key": "field_fp02_generic_page_lead",
+            "label": "Лид / вступление",
+            "name": "generic_page_lead",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Необязательно. Если поле пустое — блок на фронте скрывается (без демо-текста).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "br"
+        },
+        {
+            "key": "field_fp02_generic_page_body",
+            "label": "Основной текст",
+            "name": "generic_page_body",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Источник содержимого обычной страницы. Если пусто — текст на фронте не подставляется из шаблона. Аварийный запас: post_content только если ACF пуст.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/generic.php"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "author",
+        "format",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": true,
+    "description": "V9-06E52 generic page ACF content source of truth (Generic Content template).",
+    "show_in_rest": 0,
+    "modified": 1784452800
+}

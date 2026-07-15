@@ -72,7 +72,7 @@ Evidence: `REPORTS/evidence/v9-06e38-e51-persistence-microcommit-current-head-st
 | Item | Value |
 |---|---|
 | Commit attempted | YES |
-| Commit hash | SEE_LOCAL_POSTCOMMIT_OR_GIT_LOG_1 |
+| Commit hash | `d3f3fdf271eec42465a9ae5ac5e604e6c35b178c` |
 | Commit message | `docs(fp0002): persist v9 e38-e51 postcommit evidence` |
 | Files committed | 12 (FP-0002 REPORTS docs/evidence micro-tail only) |
 | Push attempted | NO |
@@ -98,7 +98,7 @@ Commit body notes:
 | Foreign paths in commit | 0 | 0 | PASS |
 | MetaBOT/OCPilot/iSEO paths in commit | 0 | 0 | PASS |
 | Staged files after | 0 | 0 | PASS |
-| HEAD after | new FP-0002 micro-commit | recorded in local postcommit CSV | PASS |
+| HEAD after | `d3f3fdf271eec42465a9ae5ac5e604e6c35b178c` | `d3f3fdf271eec42465a9ae5ac5e604e6c35b178c` | PASS |
 
 Optional local (uncommitted): `REPORTS/evidence/v9-06e38-e51-persistence-microcommit-current-head-postcommit-validation.csv`
 
@@ -167,7 +167,7 @@ Commit created:
 YES
 
 Commit hash:
-SEE_LOCAL_POSTCOMMIT_OR_GIT_LOG_1
+d3f3fdf271eec42465a9ae5ac5e604e6c35b178c
 
 Base commit:
 dba97a3833fc5853dde434aba0da3bbfc875d9fe

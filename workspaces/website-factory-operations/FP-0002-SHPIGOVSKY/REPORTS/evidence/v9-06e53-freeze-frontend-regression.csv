@@ -1,0 +1,13 @@
+id,url,http,bytes,placeholder_stack,result,notes
+home,http://shpigovsky.test/,200,185223,no,PASS,
+uslugi,http://shpigovsky.test/uslugi/,200,123600,no,PASS,e44_preserved
+section-73,http://shpigovsky.test/uslugi/zavisimosti/,200,128926,no,PASS,e50_preserved
+service-74,http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/,200,132868,no,PASS,
+service-315,http://shpigovsky.test/uslugi/zavisimosti/lechenie-narkoticheskoy-zavisimosti/lekarstva/,200,113565,no,PASS,expected_usluga_service_general
+service-78,http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/depressiya/,200,112333,no,PASS,expected_usluga_service_general
+generic-1039,http://shpigovsky.test/o-centre/intervyu-i-smi/,200,58236,no,PASS,page_layout_mode_full
+generic-1031,http://shpigovsky.test/specyalisty/shipovsky/,200,58752,no,PASS,page_layout_mode_full
+blog,http://shpigovsky.test/blog/,200,70532,no,PASS,
+specialists,http://shpigovsky.test/specyalisty/,200,58114,no,PASS,
+ocentru,http://shpigovsky.test/o-centre/,200,124056,no,PASS,
+contacts,http://shpigovsky.test/kontakty/,200,67527,no,PASS,

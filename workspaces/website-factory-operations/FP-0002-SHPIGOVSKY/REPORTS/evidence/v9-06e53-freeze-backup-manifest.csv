@@ -1,0 +1,12 @@
+item,path_or_value,result,notes
+backup_root,X:\MARS-Localhost\backups\wordpress\projects\shpigovsky\v9-06e53-admin-ux-section-styling-freeze-accepted-before-experience-pack-20260716-053214\,PASS,
+db_dump,db/mars_wp_fp0002.sql,PASS,method=COPY_PREV_E53_0_WRITES;sha256=D7CD293235372C98AA4A3D86D47AC99EBD18F5903EA0AB934130E9515518F4B6
+theme_tree_sha256,44f4095e595d9bc264935387e93e9b62b4cbdaceef546931255adad8472154e3,PASS,
+plugin_tree_sha256,a76447a1e601673eb83cbd03fc1b77df5f78de5d03a2928a4c5ec813eb3a9e33,PASS,
+acf_json_tree_sha256,75481f5cd0cb64678bc372e73a76091ee0ddecfa1d2a023e4dbb835ef4215f9e,PASS,
+operator_css_sha256,11A45ABE87AE54B755133F3ABB5807D388B45F5FD06070EE9310CD513F2FCF5A,PASS,preserved
+admin_screenshots,screenshots/admin (from e53 inventories),PASS,png_headless_skipped_text_inventories
+frontend_snapshots,frontend/*.html (12 routes),PASS,route-smoke.csv
+source_runtime_manifest,hashes/source-runtime-sync.csv,PASS,
+freeze_summary,freeze-summary.json,PASS,
+db_writes_during_freeze,0,PASS,

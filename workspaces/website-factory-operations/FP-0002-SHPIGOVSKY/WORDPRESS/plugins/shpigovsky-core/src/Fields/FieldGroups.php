@@ -161,6 +161,7 @@ final class FieldGroups implements ModuleInterface {
 			self::page_services_hub(),
 			self::page_ocentre_hub(),
 			self::page_layout_mode(),
+			self::page_generic_content(),
 			self::page_institutional_child(),
 			self::page_contacts(),
 			self::page_reviews(),
@@ -2533,7 +2534,7 @@ final class FieldGroups implements ModuleInterface {
 					'page_layout_mode',
 					'button_group',
 					array(
-						'instructions'  => __( 'Временный режим страницы. На фронте выводятся только шапка, навигация, H1 и подвал. Контент в полях не удаляется и может быть включён обратно сменой макета.', 'shpigovsky-core' ),
+						'instructions'  => __( '«Полная страница» показывает обычные редактируемые блоки. «Заглушка» временно выводит только шапку, навигацию, H1 и подвал. Содержимое в полях сохраняется и возвращается при переключении обратно.', 'shpigovsky-core' ),
 						'required'      => 0,
 						'choices'       => array(
 							'full'        => __( 'Полная страница', 'shpigovsky-core' ),
@@ -2553,6 +2554,63 @@ final class FieldGroups implements ModuleInterface {
 			),
 			self::location( 'page_template', '==', 'page-templates/generic.php' )
 		);
+	}
+
+	/**
+	 * Generic Content template — page body SoT (V9-06E52).
+	 * Empty optional fields hide on frontend (no hardcoded demo injection).
+	 *
+	 * @return array<string, mixed>
+	 */
+	private static function page_generic_content() {
+		$group = self::group(
+			'group_fp02_page_generic_content',
+			__( 'Содержимое страницы', 'shpigovsky-core' ),
+			array(
+				self::field(
+					'field_fp02_generic_page_lead',
+					__( 'Лид / вступление', 'shpigovsky-core' ),
+					'generic_page_lead',
+					'textarea',
+					array(
+						'instructions' => __( 'Необязательно. Если поле пустое — блок на фронте скрывается (без демо-текста).', 'shpigovsky-core' ),
+						'rows'         => 3,
+						'new_lines'    => 'br',
+					)
+				),
+				self::field(
+					'field_fp02_generic_page_body',
+					__( 'Основной текст', 'shpigovsky-core' ),
+					'generic_page_body',
+					'wysiwyg',
+					array(
+						'instructions'  => __( 'Источник содержимого обычной страницы. Если пусто — текст на фронте не подставляется из шаблона. Аварийный запас: post_content только если ACF пуст.', 'shpigovsky-core' ),
+						'tabs'          => 'all',
+						'toolbar'       => 'full',
+						'media_upload'  => 1,
+						'delay'         => 0,
+					)
+				),
+			),
+			self::location( 'page_template', '==', 'page-templates/generic.php' )
+		);
+
+		$group['menu_order']     = 1;
+		$group['hide_on_screen'] = array(
+			'the_content',
+			'excerpt',
+			'discussion',
+			'comments',
+			'revisions',
+			'author',
+			'format',
+			'categories',
+			'tags',
+			'send-trackbacks',
+		);
+		$group['description']    = 'V9-06E52 generic page ACF content source of truth (Generic Content template).';
+
+		return $group;
 	}
 
 	/**

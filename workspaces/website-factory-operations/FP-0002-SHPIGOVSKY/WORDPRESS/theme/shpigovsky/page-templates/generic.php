@@ -5,6 +5,7 @@
  *
  * V9-06E51: optional ACF page_layout_mode=placeholder renders H1 only
  * (header / nav / footer stay in the theme shell).
+ * V9-06E52: full mode content SoT = ACF generic_page_* (see content-page.php).
  *
  * @package Shpigovsky
  */

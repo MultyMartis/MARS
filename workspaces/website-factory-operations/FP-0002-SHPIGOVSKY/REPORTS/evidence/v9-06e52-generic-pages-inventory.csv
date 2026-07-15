@@ -1,0 +1,26 @@
+﻿post_id,title,url,post_status,parent_id,parent_title,template,is_front_page,is_posts_page,exclude_reason,included_in_e52,current_layout_mode,has_acf_group,frontend_status,notes
+3,"Политика конфиденциальности",http://shpigovsky.test/privacy-policy/,publish,0,,page-templates/legal.php,no,no,dedicated_template:page-templates/legal.php,no,,no,probe_pending,
+4,Главная,http://shpigovsky.test/,publish,0,,(default),yes,no,front_page,no,,no,probe_pending,
+5,Услуги,http://shpigovsky.test/uslugi/,publish,0,,page-templates/services-hub.php,no,no,dedicated_template:page-templates/services-hub.php,no,,no,probe_pending,
+11,"О центре",http://shpigovsky.test/o-centre/,publish,0,,page-templates/institutional.php,no,no,dedicated_template:page-templates/institutional.php,no,,no,probe_pending,
+12,"О нас",http://shpigovsky.test/o-centre/o-nas/,publish,11,"О центре",page-templates/generic.php,no,no,,yes,full(default),yes,probe_pending,post_content_present
+13,"Программа лечения",http://shpigovsky.test/o-centre/programma-lecheniya/,publish,11,"О центре",page-templates/generic.php,no,no,,yes,full(default),yes,probe_pending,post_content_present
+14,"Галерея о доме",http://shpigovsky.test/o-centre/galereya-o-dome/,publish,11,"О центре",page-templates/generic.php,no,no,,yes,full(default),yes,probe_pending,post_content_present
+15,Специалистам,http://shpigovsky.test/o-centre/specialistam/,publish,11,"О центре",page-templates/generic.php,no,no,,yes,full(default),yes,probe_pending,post_content_present
+16,Родственникам,http://shpigovsky.test/o-centre/rodstvennikam/,publish,11,"О центре",page-templates/generic.php,no,no,,yes,full(default),yes,probe_pending,post_content_present
+18,Отзывы,http://shpigovsky.test/otzyvy/,publish,0,,page-templates/reviews.php,no,no,dedicated_template:page-templates/reviews.php,no,,no,probe_pending,
+19,Статьи,http://shpigovsky.test/blog/,publish,0,,(default),no,yes,posts_page,no,,no,probe_pending,
+20,Контакты,http://shpigovsky.test/kontakty/,publish,0,,page-templates/contacts.php,no,no,dedicated_template:page-templates/contacts.php,no,,no,probe_pending,
+22,"Пользовательское соглашение",http://shpigovsky.test/user-agreement/,publish,0,,page-templates/legal.php,no,no,dedicated_template:page-templates/legal.php,no,,no,probe_pending,
+23,"Согласие на обработку персональных данных",http://shpigovsky.test/consent-personal-data/,publish,0,,page-templates/legal.php,no,no,dedicated_template:page-templates/legal.php,no,,no,probe_pending,
+24,"Политика Cookie-файлов",http://shpigovsky.test/cookie-files-policy/,publish,0,,page-templates/legal.php,no,no,dedicated_template:page-templates/legal.php,no,,no,probe_pending,
+1030,Специалисты,http://shpigovsky.test/specyalisty/,publish,0,,page-templates/generic.php,no,no,,yes,full(default),yes,probe_pending,post_content_present
+1031,"Сергей Юрьевич Шпиговский",http://shpigovsky.test/specyalisty/shipovsky/,publish,1030,Специалисты,page-templates/generic.php,no,no,,yes,full(default),yes,probe_pending,post_content_present
+1032,"Максим Михайлович Казаков",http://shpigovsky.test/specyalisty/kazakov/,publish,1030,Специалисты,page-templates/generic.php,no,no,,yes,full(default),yes,probe_pending,post_content_present
+1033,"Дарья Владимировна Костюк",http://shpigovsky.test/specyalisty/kostyuk/,publish,1030,Специалисты,page-templates/generic.php,no,no,,yes,full(default),yes,probe_pending,post_content_present
+1039,"Интервью и СМИ",http://shpigovsky.test/o-centre/intervyu-i-smi/,publish,11,"О центре",page-templates/generic.php,no,no,,yes,full(default),yes,probe_pending,post_content_present
+1053,Генотипирование,http://shpigovsky.test/o-centre/programma-lecheniya/genotipirovanie/,publish,13,"Программа лечения",page-templates/generic.php,no,no,,yes,full(default),yes,probe_pending,post_content_present
+1054,"Нейропсихологическая коррекция",http://shpigovsky.test/o-centre/programma-lecheniya/neyropsihologicheskaya-korrektsiya/,publish,13,"Программа лечения",page-templates/generic.php,no,no,,yes,full(default),yes,probe_pending,post_content_present
+1055,Психокоррекция,http://shpigovsky.test/o-centre/programma-lecheniya/psihokorrektsiya/,publish,13,"Программа лечения",page-templates/generic.php,no,no,,yes,full(default),yes,probe_pending,post_content_present
+1056,Кинезиотерапия,http://shpigovsky.test/o-centre/programma-lecheniya/kinezioterapiya/,publish,13,"Программа лечения",page-templates/generic.php,no,no,,yes,full(default),yes,probe_pending,post_content_present
+1097,"Шапигузова Татьяна Андреевна",http://shpigovsky.test/specyalisty/shapiguzova/,publish,1030,Специалисты,page-templates/generic.php,no,no,,yes,full(default),yes,probe_pending,post_content_present
