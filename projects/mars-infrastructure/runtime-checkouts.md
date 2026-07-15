@@ -2,7 +2,7 @@
 
 **Document role:** Human-operated registry of clean Git checkouts used for scheduled/local runtime — **not** a runtime product.
 
-**Last updated:** 2026-07-13 (`MARS-INFRA-RUNTIME-CHECKOUT-PIN-SITE-002-01` / Run 4.262)
+**Last updated:** 2026-07-15 (Run 4.268 onboarding 03 allowlist sync; pin commit still `08803bd4` / prior pin 4.262 `0ab7e9f5` ancestry)
 
 ---
 
@@ -21,7 +21,7 @@ Scheduled and unattended local jobs must **not** execute from the dirty developm
 | Path | `X:\AI MARS STORAGE\runtime-checkouts\site-002-monitor\repo` |
 | Source ref | `origin/mars/canonical-post-recovery` |
 | Pinned commit (2026-07-13) | `0ab7e9f5` (was `bd3021bf` / earlier `56f9bae7`) |
-| Status | **clean** vs HEAD (Run **4.262** pin) |
+| Status | **dirty vs pin** after Run **4.268** allowlist file sync (expected until next pin/refresh); HEAD still `08803bd4` |
 | Prior working file sync (Run 4.261) | monitor script was exact-copied then dirty vs old HEAD; superseded by hard reset to `0ab7e9f5` |
 | Checkout method | Sparse clone — cone `projects/ocpilot` |
 | Runner | `projects/ocpilot/sites/site-002/tools/site-002-post-1c-monitor-runner.ps1` |
@@ -69,3 +69,7 @@ Run **4.261** refreshed storage sitemap baseline **1377→1530** and exact-copie
 ### Runtime checkout pin (2026-07-13)
 
 Run **4.262** / `MARS-INFRA-RUNTIME-CHECKOUT-PIN-SITE-002-01`: `git reset --hard 0ab7e9f5` inside runtime checkout (path unchanged). Status **clean**. Manual verify artifact `2026-07-13_00-05-00`: **`NO_ACTION_REQUIRED`**; needs **0**; 1530→1530. Scheduler unchanged (still points to this path). See [MARS-INFRA-RUNTIME-CHECKOUT-PIN-SITE-002-01.md](reports/MARS-INFRA-RUNTIME-CHECKOUT-PIN-SITE-002-01.md).
+
+### Onboarding 03 allowlist sync (2026-07-15)
+
+Run **4.268** exact-copied updated monitor allowlist (`stellazhi-premium-vysota-1600`) into this runtime checkout (file dirty vs pinned HEAD until refresh). Manual verification artifact `2026-07-15_15-25-30`: onboarding needs **0**; classification **`HYGIENE_REVIEW_REQUIRED`** (baseline 1530→1615 only). See [SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-03.md](../ocpilot/sites/site-002/reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-03.md).
