@@ -1,0 +1,108 @@
+{
+  "status": "proposed_only_not_applied",
+  "productionNodeCountBefore": 92,
+  "productionNodeCountAfterExpected": 101,
+  "addNodes": [
+    {
+      "name": "Build Final Public Payload",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "sandboxDisabled": false,
+      "productionDisabledIntent": false,
+      "role": "canonical public_payload + NL detect + strategy hide"
+    },
+    {
+      "name": "Final Surface Strict Scan",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "sandboxDisabled": false,
+      "productionDisabledIntent": false,
+      "role": "central SOT scan"
+    },
+    {
+      "name": "IF Final Surface Clean",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "sandboxDisabled": false,
+      "productionDisabledIntent": false,
+      "role": "branch gate"
+    },
+    {
+      "name": "Build Strict Surface Repair Payload",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "sandboxDisabled": false,
+      "productionDisabledIntent": false,
+      "role": "repair prompt max 1"
+    },
+    {
+      "name": "Run Strict Surface Repair",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "sandboxDisabled": true,
+      "productionDisabledIntent": false,
+      "role": "OpenRouter HTTP repair (ENABLE in production)"
+    },
+    {
+      "name": "Extract Strict Surface Repair",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "sandboxDisabled": false,
+      "productionDisabledIntent": false,
+      "role": "parse/merge repaired surfaces"
+    },
+    {
+      "name": "Final Surface Strict Re-Scan",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "sandboxDisabled": false,
+      "productionDisabledIntent": false,
+      "role": "central SOT scan"
+    },
+    {
+      "name": "IF Repaired Surface Clean",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "sandboxDisabled": false,
+      "productionDisabledIntent": false,
+      "role": "branch gate"
+    },
+    {
+      "name": "Format Strict Reject Message",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "sandboxDisabled": false,
+      "productionDisabledIntent": false,
+      "role": "diagnostic-only reject path"
+    }
+  ],
+  "modifyNodes": [
+    {
+      "name": "Format Run Pipeline",
+      "change": "consume public_payload (v14-pc14-fu03-public-payload-consumer); keep shortcut legacy path",
+      "jsCodeDiffers": true
+    },
+    {
+      "name": "Prepare Memory Row Run",
+      "change": "memory_status / strict_surface_status / repair_attempts / sanitized_payload / blocked_diagnostic",
+      "jsCodeDiffers": true
+    }
+  ],
+  "preserveUnchanged": [
+    "Close Lock Before Sending",
+    "TZ Strict Cleanup",
+    "Strict Cleanup",
+    "Strict Risk Scanner",
+    "Postcheck Strict Claims",
+    "Normalize Run Output",
+    "Take First Item",
+    "Finish Lock",
+    "Route Command"
+  ],
+  "preserveIdentity": {
+    "id": "p4mqb4VuPcemIDlC",
+    "name": "SEO Content Agent Beta.v14 - Worker",
+    "active": true,
+    "webhook": "production webhook path unchanged"
+  }
+}

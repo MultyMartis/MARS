@@ -1,0 +1,82 @@
+{
+  "status": "proposed_only_not_applied",
+  "rollbackFilePlanned": "local/pc14-fu03-production-apply-2026-07-16/rollback/worker-before-pc14-fu03.raw.json",
+  "rollbackStrategy": [
+    "Fresh GET production immediately before apply",
+    "Save raw JSON rollback under local/.../rollback/",
+    "On failure or regression: PUT rollback raw (or UI restore) restoring pre-FU03 92-node Worker",
+    "Re-GET and confirm nodeCount=92, no FU03 nodes, HOTFIX01 TZ intact, active=true"
+  ],
+  "risks": [
+    {
+      "id": "live_repair_openrouter",
+      "description": "Enabling Run Strict Surface Repair performs live OpenRouter call on dirty final surface",
+      "proposalBlocking": false,
+      "applyBlocking": false,
+      "mitigation": "max 1 call; only on dirty path; post-apply smoke required"
+    },
+    {
+      "id": "graph_branch_routing",
+      "description": "IF gates miswire could skip Format or skip reject",
+      "proposalBlocking": false,
+      "applyBlocking": false,
+      "mitigation": "connection plan + post-apply graph checks + harness re-run on sanitized export"
+    },
+    {
+      "id": "blocked_ux",
+      "description": "Strict reject sends diagnostic only — operator/user sees blocked message",
+      "proposalBlocking": false,
+      "applyBlocking": false,
+      "mitigation": "documented expected UX; smoke includes dirty path"
+    },
+    {
+      "id": "memory_schema",
+      "description": "New memory fields may not have Sheets columns",
+      "proposalBlocking": false,
+      "applyBlocking": false,
+      "mitigation": "fields optional / tolerant; Sheets schema expansion deferred (SAFE UNKNOWN)"
+    },
+    {
+      "id": "get_live_behavior",
+      "description": "/get path not covered by FU03 gate in v1",
+      "proposalBlocking": false,
+      "applyBlocking": false,
+      "mitigation": "accepted v1 scope; backlog follow-up"
+    },
+    {
+      "id": "shortcut_bypass",
+      "description": "Shortcut modes bypass FU03 gate",
+      "proposalBlocking": false,
+      "applyBlocking": false,
+      "mitigation": "accepted v1 — Normalize path only"
+    },
+    {
+      "id": "sheets_schema_not_expanded",
+      "description": "No Sheets schema expansion in this wave",
+      "proposalBlocking": false,
+      "applyBlocking": false,
+      "mitigation": "memory code writes fields if columns exist; otherwise SAFE UNKNOWN"
+    },
+    {
+      "id": "side_effect_preservation",
+      "description": "Accidental copy of sandbox disabled=true would break production Telegram/Sheets/locks",
+      "proposalBlocking": false,
+      "applyBlocking": true,
+      "mitigation": "side-effect preservation checklist mandatory in apply task; re-GET enabled states"
+    },
+    {
+      "id": "rollback_complexity",
+      "description": "101-node graph rollback to 92-node raw required if apply fails",
+      "proposalBlocking": false,
+      "applyBlocking": false,
+      "mitigation": "raw rollback file before PUT; verify hashes"
+    },
+    {
+      "id": "branch_divergence",
+      "description": "Local/remote git divergence (ahead/behind) not relevant to n8n apply",
+      "proposalBlocking": false,
+      "applyBlocking": false,
+      "mitigation": "no pull/push in apply; persist proposal separately"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "status": "proposed_only_not_applied",
+  "remove": [
+    {
+      "from": "Normalize Run Output",
+      "to": "Format Run Pipeline",
+      "reason": "insert FU03 gate between Normalize and Format"
+    }
+  ],
+  "add": [
+    {
+      "from": "Normalize Run Output",
+      "to": "Build Final Public Payload"
+    },
+    {
+      "from": "Build Final Public Payload",
+      "to": "Final Surface Strict Scan"
+    },
+    {
+      "from": "Final Surface Strict Scan",
+      "to": "IF Final Surface Clean"
+    },
+    {
+      "from": "IF Final Surface Clean",
+      "branch": "true",
+      "to": "Format Run Pipeline"
+    },
+    {
+      "from": "IF Final Surface Clean",
+      "branch": "false",
+      "to": "Build Strict Surface Repair Payload"
+    },
+    {
+      "from": "Build Strict Surface Repair Payload",
+      "to": "Run Strict Surface Repair"
+    },
+    {
+      "from": "Run Strict Surface Repair",
+      "to": "Extract Strict Surface Repair"
+    },
+    {
+      "from": "Extract Strict Surface Repair",
+      "to": "Final Surface Strict Re-Scan"
+    },
+    {
+      "from": "Final Surface Strict Re-Scan",
+      "to": "IF Repaired Surface Clean"
+    },
+    {
+      "from": "IF Repaired Surface Clean",
+      "branch": "true",
+      "to": "Format Run Pipeline"
+    },
+    {
+      "from": "IF Repaired Surface Clean",
+      "branch": "false",
+      "to": "Format Strict Reject Message"
+    },
+    {
+      "from": "Format Strict Reject Message",
+      "to": [
+        "Take First Item",
+        "Prepare Memory Row Run"
+      ]
+    }
+  ],
+  "preserve": [
+    {
+      "from": "Format Run Pipeline",
+      "to": [
+        "Prepare Memory Row Run",
+        "Take First Item"
+      ]
+    },
+    "Shortcut Switch → Format edges (FU03 gate on Normalize path only)"
+  ],
+  "sandboxGraphChecks": {
+    "normalize_to_build": true,
+    "no_direct_normalize_to_format": true,
+    "build_to_scan": true,
+    "scan_to_if": true,
+    "if_clean_true": true,
+    "if_clean_false": true,
+    "repair_to_run": true,
+    "run_to_extract": true,
+    "extract_to_rescan": true,
+    "rescan_to_if": true,
+    "if_repaired_true": true,
+    "if_repaired_false": true,
+    "reject_to_take_first": true,
+    "reject_to_memory": true,
+    "format_to_memory_and_take": true
+  }
+}

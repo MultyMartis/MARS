@@ -1,0 +1,296 @@
+{
+  "status": "proposed_only_not_applied",
+  "rule": "Copy FU03 graph/code only. Do NOT propagate sandbox disabled flags for production-live side effects.",
+  "productionSnapshot": [
+    {
+      "name": "Send Telegram Local",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.telegram",
+      "hasCredentials": true
+    },
+    {
+      "name": "Send Telegram Single",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.telegram",
+      "hasCredentials": true
+    },
+    {
+      "name": "Send Telegram Run",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.telegram",
+      "hasCredentials": true
+    },
+    {
+      "name": "Send Telegram Memory Get",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.telegram",
+      "hasCredentials": true
+    },
+    {
+      "name": "OpenRouter Single Mode",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.httpRequest",
+      "hasCredentials": false
+    },
+    {
+      "name": "Append Memory Local",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.googleSheets",
+      "hasCredentials": true
+    },
+    {
+      "name": "Append Memory Single",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.googleSheets",
+      "hasCredentials": true
+    },
+    {
+      "name": "Append Memory Run",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.googleSheets",
+      "hasCredentials": true
+    },
+    {
+      "name": "Close Lock Before Sending",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.googleSheets",
+      "hasCredentials": true
+    },
+    {
+      "name": "Close Single Lock Before Sending",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.googleSheets",
+      "hasCredentials": true
+    },
+    {
+      "name": "Finish Lock",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.googleSheets",
+      "hasCredentials": true
+    }
+  ],
+  "sandboxSnapshot": [
+    {
+      "name": "Send Telegram Local",
+      "present": true,
+      "disabled": true,
+      "type": "n8n-nodes-base.telegram",
+      "hasCredentials": true
+    },
+    {
+      "name": "Send Telegram Single",
+      "present": true,
+      "disabled": true,
+      "type": "n8n-nodes-base.telegram",
+      "hasCredentials": true
+    },
+    {
+      "name": "Send Telegram Run",
+      "present": true,
+      "disabled": true,
+      "type": "n8n-nodes-base.telegram",
+      "hasCredentials": true
+    },
+    {
+      "name": "Send Telegram Memory Get",
+      "present": true,
+      "disabled": true,
+      "type": "n8n-nodes-base.telegram",
+      "hasCredentials": true
+    },
+    {
+      "name": "OpenRouter Single Mode",
+      "present": true,
+      "disabled": true,
+      "type": "n8n-nodes-base.httpRequest",
+      "hasCredentials": false
+    },
+    {
+      "name": "Append Memory Local",
+      "present": true,
+      "disabled": true,
+      "type": "n8n-nodes-base.googleSheets",
+      "hasCredentials": true
+    },
+    {
+      "name": "Append Memory Single",
+      "present": true,
+      "disabled": true,
+      "type": "n8n-nodes-base.googleSheets",
+      "hasCredentials": true
+    },
+    {
+      "name": "Append Memory Run",
+      "present": true,
+      "disabled": true,
+      "type": "n8n-nodes-base.googleSheets",
+      "hasCredentials": true
+    },
+    {
+      "name": "Close Lock Before Sending",
+      "present": true,
+      "disabled": true,
+      "type": "n8n-nodes-base.googleSheets",
+      "hasCredentials": true
+    },
+    {
+      "name": "Close Single Lock Before Sending",
+      "present": true,
+      "disabled": true,
+      "type": "n8n-nodes-base.googleSheets",
+      "hasCredentials": true
+    },
+    {
+      "name": "Finish Lock",
+      "present": true,
+      "disabled": true,
+      "type": "n8n-nodes-base.googleSheets",
+      "hasCredentials": true
+    }
+  ],
+  "openRouterLikeProduction": [
+    {
+      "name": "OpenRouter Single Mode",
+      "disabled": false,
+      "type": "n8n-nodes-base.httpRequest"
+    },
+    {
+      "name": "Run Outline",
+      "disabled": false,
+      "type": "n8n-nodes-base.httpRequest"
+    },
+    {
+      "name": "Run Text",
+      "disabled": false,
+      "type": "n8n-nodes-base.httpRequest"
+    },
+    {
+      "name": "Run SEO QA",
+      "disabled": false,
+      "type": "n8n-nodes-base.httpRequest"
+    },
+    {
+      "name": "Run Factcheck",
+      "disabled": false,
+      "type": "n8n-nodes-base.httpRequest"
+    },
+    {
+      "name": "Run Auto Polish Text",
+      "disabled": false,
+      "type": "n8n-nodes-base.httpRequest"
+    },
+    {
+      "name": "Run SEO Strategy",
+      "disabled": false,
+      "type": "n8n-nodes-base.httpRequest"
+    },
+    {
+      "name": "Run Text Repair",
+      "disabled": false,
+      "type": "n8n-nodes-base.httpRequest"
+    },
+    {
+      "name": "Run Single Text Repair",
+      "disabled": false,
+      "type": "n8n-nodes-base.httpRequest"
+    }
+  ],
+  "openRouterLikeSandbox": [
+    {
+      "name": "OpenRouter Single Mode",
+      "disabled": true,
+      "type": "n8n-nodes-base.httpRequest"
+    },
+    {
+      "name": "Run Outline",
+      "disabled": true,
+      "type": "n8n-nodes-base.httpRequest"
+    },
+    {
+      "name": "Run Text",
+      "disabled": true,
+      "type": "n8n-nodes-base.httpRequest"
+    },
+    {
+      "name": "Run SEO QA",
+      "disabled": true,
+      "type": "n8n-nodes-base.httpRequest"
+    },
+    {
+      "name": "Run Factcheck",
+      "disabled": true,
+      "type": "n8n-nodes-base.httpRequest"
+    },
+    {
+      "name": "Run Auto Polish Text",
+      "disabled": true,
+      "type": "n8n-nodes-base.httpRequest"
+    },
+    {
+      "name": "Run SEO Strategy",
+      "disabled": true,
+      "type": "n8n-nodes-base.httpRequest"
+    },
+    {
+      "name": "Run Text Repair",
+      "disabled": true,
+      "type": "n8n-nodes-base.httpRequest"
+    },
+    {
+      "name": "Run Single Text Repair",
+      "disabled": true,
+      "type": "n8n-nodes-base.httpRequest"
+    },
+    {
+      "name": "Run Strict Surface Repair",
+      "disabled": true,
+      "type": "n8n-nodes-base.httpRequest"
+    }
+  ],
+  "sandboxOnlyDisabledMustNotApply": [
+    "Send Telegram Local",
+    "Send Telegram Single",
+    "Send Telegram Run",
+    "Send Telegram Memory Get",
+    "OpenRouter Single Mode",
+    "Append Memory Local",
+    "Append Memory Single",
+    "Append Memory Run",
+    "Close Lock Before Sending",
+    "Close Single Lock Before Sending",
+    "Finish Lock"
+  ],
+  "runStrictSurfaceRepair": {
+    "sandboxDisabled": true,
+      "productionIntent": "sandbox has disabled=true; production apply must set disabled=false",
+    "credentialPattern": "reuse existing OpenRouter HTTP credential/header pattern from production Run Text Repair / OpenRouter nodes",
+    "maxCallsPerDirtyTask": 1,
+    "skipWhenFinalScanClean": true
+  },
+  "closeLock": {
+    "expression": "={{ $('Route Command').first().json.task_id }}",
+    "productionOk": true,
+    "sandboxOk": true,
+    "preserve": true
+  },
+  "credentials": {
+    "preserveProductionCredentials": true,
+    "doNotImportSandboxCredentialMutations": true,
+    "note": "Credential ids redacted in sanitized exports; raw local only"
+  },
+  "active": {
+    "productionMustRemain": true,
+    "doNotCopySandboxActiveFalse": true
+  }
+}

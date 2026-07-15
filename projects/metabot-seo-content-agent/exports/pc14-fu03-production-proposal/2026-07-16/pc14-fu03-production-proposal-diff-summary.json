@@ -1,0 +1,120 @@
+{
+  "status": "proposed_only_not_applied",
+  "proposal": "PC14_FU03_PRODUCTION_PROPOSAL",
+  "decision": "PC14_FU03_READY_FOR_PRODUCTION_APPROVAL",
+  "recommendedNext": "PC14_FU03_PRODUCTION_PROPOSAL_PERSIST",
+  "blockers": [],
+  "production": {
+    "id": "p4mqb4VuPcemIDlC",
+    "name": "SEO Content Agent Beta.v14 - Worker",
+    "active": true,
+    "nodeCount": 92,
+    "updatedAt": "2026-07-13T21:49:02.829Z"
+  },
+  "sandbox": {
+    "id": "tVGWi7Ud3zz2eGKo",
+    "name": "SEO Content Agent Beta.v14 - Worker.sandbox-pc14-fu03",
+    "active": false,
+    "nodeCount": 101,
+    "updatedAt": "2026-07-15T20:36:18.849Z",
+    "liveGetOk": true,
+    "commit": "a64da270"
+  },
+  "nodes": {
+    "added": [
+      "Build Final Public Payload",
+      "Build Strict Surface Repair Payload",
+      "Extract Strict Surface Repair",
+      "Final Surface Strict Re-Scan",
+      "Final Surface Strict Scan",
+      "Format Strict Reject Message",
+      "IF Final Surface Clean",
+      "IF Repaired Surface Clean",
+      "Run Strict Surface Repair"
+    ],
+    "removed": [],
+    "modified": [
+      {
+        "name": "Format Run Pipeline",
+        "jsCodeDiffers": true,
+        "productionJsLength": 12435,
+        "sandboxJsLength": 16169
+      },
+      {
+        "name": "Prepare Memory Row Run",
+        "jsCodeDiffers": true,
+        "productionJsLength": 791,
+        "sandboxJsLength": 2094
+      }
+    ],
+    "addedMatchesFu03": true,
+    "ignoreAsPatchDiff": [
+      "id",
+      "name",
+      "active",
+      "webhook",
+      "webhookId",
+      "versionId",
+      "updatedAt",
+      "createdAt",
+      "meta",
+      "tags",
+      "shared",
+      "pinData"
+    ]
+  },
+  "connections": {
+    "production": {
+      "normalize_to_format": true,
+      "format_to_memory_and_take": true
+    },
+    "sandbox": {
+      "normalize_to_build": true,
+      "no_direct_normalize_to_format": true,
+      "build_to_scan": true,
+      "scan_to_if": true,
+      "if_clean_true": true,
+      "if_clean_false": true,
+      "repair_to_run": true,
+      "run_to_extract": true,
+      "extract_to_rescan": true,
+      "rescan_to_if": true,
+      "if_repaired_true": true,
+      "if_repaired_false": true,
+      "reject_to_take_first": true,
+      "reject_to_memory": true,
+      "format_to_memory_and_take": true
+    },
+    "intendedProductionAfterApply": {
+      "normalize": "→ Build Final Public Payload (remove direct → Format Run Pipeline)",
+      "fu03Gate": {
+        "normalize_to_build": true,
+        "no_direct_normalize_to_format": true,
+        "build_to_scan": true,
+        "scan_to_if": true,
+        "if_clean_true": true,
+        "if_clean_false": true,
+        "repair_to_run": true,
+        "run_to_extract": true,
+        "extract_to_rescan": true,
+        "rescan_to_if": true,
+        "if_repaired_true": true,
+        "if_repaired_false": true,
+        "reject_to_take_first": true,
+        "reject_to_memory": true,
+        "format_to_memory_and_take": true
+      }
+    }
+  },
+  "doNotCopyFromSandbox": [
+    "active=false",
+    "workflow id/name/webhook",
+    "sandbox side-effect disabled states for Telegram/OpenRouter/Sheets/locks",
+    "sandbox Run Strict Surface Repair disabled=true (production must enable)"
+  ],
+  "hashes": {
+    "prodRawSha256": "210d462267d8145ff668a9bd445ef8a0e1a77c569eb0fd2747e284da5c764a60",
+    "prodSanitizedSha256": "c5695385cdb1e678d480c8cd86e525ddcd09895a24a9ea8907c3426aa90621f2",
+    "sandboxSourceSha256": "c79b2041956d1424c8baf5d50fcf35a04e162b4711e941a5fd250b33e9d9b480"
+  }
+}

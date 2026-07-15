@@ -1,0 +1,69 @@
+{
+  "status": "proposed_only_not_applied",
+  "nodes": [
+    {
+      "name": "Format Run Pipeline",
+      "jsLength": 16169,
+      "hasSot": false,
+      "hasFormatVersion": true,
+      "hasPublicPayload": true,
+      "hasBlockedDirty": false
+    },
+    {
+      "name": "Prepare Memory Row Run",
+      "jsLength": 2094,
+      "hasSot": false,
+      "hasFormatVersion": false,
+      "hasPublicPayload": false,
+      "hasBlockedDirty": true
+    },
+    {
+      "name": "Build Final Public Payload",
+      "jsLength": 7762,
+      "hasSot": false,
+      "hasFormatVersion": false,
+      "hasPublicPayload": true,
+      "hasBlockedDirty": false
+    },
+    {
+      "name": "Final Surface Strict Scan",
+      "jsLength": 6197,
+      "hasSot": true,
+      "hasFormatVersion": false,
+      "hasPublicPayload": true,
+      "hasBlockedDirty": false
+    },
+    {
+      "name": "Build Strict Surface Repair Payload",
+      "jsLength": 8541,
+      "hasSot": true,
+      "hasFormatVersion": false,
+      "hasPublicPayload": true,
+      "hasBlockedDirty": false
+    },
+    {
+      "name": "Extract Strict Surface Repair",
+      "jsLength": 10075,
+      "hasSot": true,
+      "hasFormatVersion": false,
+      "hasPublicPayload": true,
+      "hasBlockedDirty": false
+    },
+    {
+      "name": "Final Surface Strict Re-Scan",
+      "jsLength": 6295,
+      "hasSot": true,
+      "hasFormatVersion": false,
+      "hasPublicPayload": true,
+      "hasBlockedDirty": false
+    },
+    {
+      "name": "Format Strict Reject Message",
+      "jsLength": 1951,
+      "hasSot": false,
+      "hasFormatVersion": false,
+      "hasPublicPayload": true,
+      "hasBlockedDirty": true
+    }
+  ]
+}
