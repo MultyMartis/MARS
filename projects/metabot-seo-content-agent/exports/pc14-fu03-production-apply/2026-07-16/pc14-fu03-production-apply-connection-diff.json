@@ -1,0 +1,38 @@
+{
+  "removed": [
+    {
+      "from": "Normalize Run Output",
+      "to": "Format Run Pipeline",
+      "wasPresent": true,
+      "nowAbsent": true
+    }
+  ],
+  "addedPath": [
+    "Normalize Run Output → Build Final Public Payload",
+    "Build Final Public Payload → Final Surface Strict Scan",
+    "Final Surface Strict Scan → IF Final Surface Clean",
+    "IF Final Surface Clean [true] → Format Run Pipeline",
+    "IF Final Surface Clean [false] → Build Strict Surface Repair Payload",
+    "Build Strict Surface Repair Payload → Run Strict Surface Repair",
+    "Run Strict Surface Repair → Extract Strict Surface Repair",
+    "Extract Strict Surface Repair → Final Surface Strict Re-Scan",
+    "Final Surface Strict Re-Scan → IF Repaired Surface Clean",
+    "IF Repaired Surface Clean [true] → Format Run Pipeline",
+    "IF Repaired Surface Clean [false] → Format Strict Reject Message",
+    "Format Strict Reject Message → Take First Item + Prepare Memory Row Run"
+  ],
+  "graph": {
+    "missing_nodes": [],
+    "normalize_to_build": true,
+    "no_direct_normalize_to_format": true,
+    "if_clean_true": true,
+    "if_clean_false": true,
+    "if_repaired_true": true,
+    "if_repaired_false": true,
+    "reject_to_take_first": true,
+    "reject_to_memory": true,
+    "format_has_consumer": true,
+    "active_false": false,
+    "ok": true
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "before": [
+    {
+      "name": "Send Telegram Local",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.telegram",
+      "hasCredentials": true
+    },
+    {
+      "name": "Send Telegram Single",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.telegram",
+      "hasCredentials": true
+    },
+    {
+      "name": "Send Telegram Run",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.telegram",
+      "hasCredentials": true
+    },
+    {
+      "name": "Send Telegram Memory Get",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.telegram",
+      "hasCredentials": true
+    },
+    {
+      "name": "OpenRouter Single Mode",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.httpRequest",
+      "hasCredentials": false
+    },
+    {
+      "name": "Append Memory Local",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.googleSheets",
+      "hasCredentials": true
+    },
+    {
+      "name": "Append Memory Single",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.googleSheets",
+      "hasCredentials": true
+    },
+    {
+      "name": "Append Memory Run",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.googleSheets",
+      "hasCredentials": true
+    },
+    {
+      "name": "Close Lock Before Sending",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.googleSheets",
+      "hasCredentials": true
+    },
+    {
+      "name": "Close Single Lock Before Sending",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.googleSheets",
+      "hasCredentials": true
+    },
+    {
+      "name": "Finish Lock",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.googleSheets",
+      "hasCredentials": true
+    }
+  ],
+  "after": [
+    {
+      "name": "Send Telegram Local",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.telegram",
+      "hasCredentials": true
+    },
+    {
+      "name": "Send Telegram Single",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.telegram",
+      "hasCredentials": true
+    },
+    {
+      "name": "Send Telegram Run",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.telegram",
+      "hasCredentials": true
+    },
+    {
+      "name": "Send Telegram Memory Get",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.telegram",
+      "hasCredentials": true
+    },
+    {
+      "name": "OpenRouter Single Mode",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.httpRequest",
+      "hasCredentials": false
+    },
+    {
+      "name": "Append Memory Local",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.googleSheets",
+      "hasCredentials": true
+    },
+    {
+      "name": "Append Memory Single",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.googleSheets",
+      "hasCredentials": true
+    },
+    {
+      "name": "Append Memory Run",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.googleSheets",
+      "hasCredentials": true
+    },
+    {
+      "name": "Close Lock Before Sending",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.googleSheets",
+      "hasCredentials": true
+    },
+    {
+      "name": "Close Single Lock Before Sending",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.googleSheets",
+      "hasCredentials": true
+    },
+    {
+      "name": "Finish Lock",
+      "present": true,
+      "disabled": false,
+      "type": "n8n-nodes-base.googleSheets",
+      "hasCredentials": true
+    }
+  ],
+  "preserved": true,
+  "mismatches": [],
+  "rule": "Do not copy sandbox disabled side-effect states; preserve production enabled states"
+}
