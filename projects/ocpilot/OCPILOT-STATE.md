@@ -1,8 +1,8 @@
 # OCPilot — Program State
 
 **Status:** living state document — **not** automated router  
-**Last updated:** 2026-07-14
-**Evidence cutoff:** 2026-07-14 (SITE-002 Run **4.266** / `SITE-002-PROD-FORM-MAIL-FULL-TEST-RERUN-01` — full form mail rerun: 8 valid 200 + 3 negatives 400; mailbox operator checklist pending; prior Run **4.265** guard verify; temp recipient only `client.leads@polygon-ws.ru`)
+**Last updated:** 2026-07-15
+**Evidence cutoff:** 2026-07-15 (SITE-002 Run **4.267** / `SITE-002-PROD-1C-DAILY-HEALTHCHECK-20260715-01` — imports Jul 14/15 SUCCESS; monitor **ONBOARDING_REQUIRED** 1530→1615 needs 1; sitemap **1615**; prior Run **4.266** form mail rerun)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Form Mail Full Test Rerun (Run 4.266)** — **PARTIAL — MAILBOX OPERATOR CONFIRMATION NEEDED** · 8 valid forms HTTP 200 · empty/service-only/whitespace blocked (400) · temp mail alert **only** `client.leads@polygon-ws.ru` (`info@bzpm.ru` not restored) · [full rerun](sites/site-002/reports/SITE-002-PROD-FORM-MAIL-FULL-TEST-RERUN-01.md) · prior [4.265 follow-up](sites/site-002/reports/SITE-002-PROD-FORM-EMPTY-LEAD-GUARD-FOLLOWUP-01.md) · Production checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01` |
+| Current SITE-002 focus | **1C Daily Healthcheck (Run 4.267)** — **ATTENTION — NEW SITEMAP DELTA** · imports `2026-07-14`/`2026-07-15` **SUCCESS** (6.48s/7.27s) · natural monitor `2026-07-15_12-30-02` **ONBOARDING_REQUIRED** 1530→**1615** needs **1** (`stellazhi-premium-vysota-1600`) · scheduler runtime checkout OK · next: onboarding + baseline refresh charter · [healthcheck](sites/site-002/reports/SITE-002-PROD-1C-DAILY-HEALTHCHECK-20260715-01.md) · prior [4.266 form mail](sites/site-002/reports/SITE-002-PROD-FORM-MAIL-FULL-TEST-RERUN-01.md) · Production checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01` |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 

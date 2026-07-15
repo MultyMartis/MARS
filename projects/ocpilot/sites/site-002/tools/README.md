@@ -117,6 +117,7 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 - **Run 4.262:** runtime checkout pin — `reset --hard 0ab7e9f5`; status **clean**; scheduler unchanged; manual `2026-07-13_00-05-00` **NO_ACTION_REQUIRED**; 1530→1530 · [infra report](../../../mars-infrastructure/reports/MARS-INFRA-RUNTIME-CHECKOUT-PIN-SITE-002-01.md)
 - **Run 4.264:** 1C logs + form mail audit — latest import SUCCESS; natural monitor `2026-07-13_13-00-39` **NO_ACTION_REQUIRED**; empty-lead root cause = permissive anketa; backend guard deployed; temp recipient only `client.leads@polygon-ws.ru` · [report](../reports/SITE-002-PROD-1C-LOGS-AND-FORM-MAIL-AUDIT-01.md)
 - **Run 4.265:** empty-lead guard follow-up — operator empty mail was pre-patch test; live service-only/whitespace → 400; no further patch · [report](../reports/SITE-002-PROD-FORM-EMPTY-LEAD-GUARD-FOLLOWUP-01.md)
+- **Run 4.267:** 1C daily healthcheck — imports `2026-07-14`/`2026-07-15` SUCCESS (6.48s/7.27s); natural monitors Jul 14/15 **ONBOARDING_REQUIRED** 1530→1615 needs **1** (`stellazhi-premium-vysota-1600`); live sitemap **1615**; production mutation **0** · [report](../reports/SITE-002-PROD-1C-DAILY-HEALTHCHECK-20260715-01.md)
 - Runner `RepoRoot` derived from `$PSScriptRoot` (not hardcoded `X:\AI MARS`).
 - Successful Windows Task `LastTaskResult` is **0**; **2** means runner/monitor execution failure — check `scheduled-monitors/post-1c/<timestamp>/run.stderr.log`.
 - Per-run logs: `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\scheduled-monitors\post-1c\`
