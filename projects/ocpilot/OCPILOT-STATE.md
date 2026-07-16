@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-16
-**Evidence cutoff:** 2026-07-16 (SITE-002 Run **4.276** / `SITE-002-PROD-BRAND-CAPS-AND-BLOG-SLIDER-ORDER-01` — brand caps + blog slider order/limit/meta fixed; prior Run **4.275** baseline **1714**)
+**Evidence cutoff:** 2026-07-16 (SITE-002 Run **4.277** / `SITE-002-PROD-BLOG-LITERAL-NEWLINE-CLEANUP-01` — post **13** literal `\n` artifacts removed from DB content; prior Run **4.276** brand caps + blog slider)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Brand Caps and Blog Slider Order 01 (Run 4.276)** — **COMPLETE** · post **13** capitalization fixed · sliders `getSliderPosts` newest-first max **24** + reading time meta · [report](sites/site-002/reports/SITE-002-PROD-BRAND-CAPS-AND-BLOG-SLIDER-ORDER-01.md) · prior [baseline refresh 4.275](sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-03.md) |
+| Current SITE-002 focus | **Blog Literal Newline Cleanup 01 (Run 4.277)** — **COMPLETE** · post **13** visible `\n` artifacts removed (DB content only) · [report](sites/site-002/reports/SITE-002-PROD-BLOG-LITERAL-NEWLINE-CLEANUP-01.md) · prior [brand/slider 4.276](sites/site-002/reports/SITE-002-PROD-BRAND-CAPS-AND-BLOG-SLIDER-ORDER-01.md) |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 
