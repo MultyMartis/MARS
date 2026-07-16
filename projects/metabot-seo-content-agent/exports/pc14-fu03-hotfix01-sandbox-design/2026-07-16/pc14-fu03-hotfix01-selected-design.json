@@ -1,0 +1,40 @@
+{
+  "selected_option": "A",
+  "label": "PC14_FU03_HOTFIX01_SANDBOX_DESIGN",
+  "decision": "PC14_FU03_HOTFIX01_SANDBOX_DESIGN_READY_FOR_IMPLEMENTATION",
+  "recommended_next": "PC14_FU03_HOTFIX01_DESIGN_PERSIST",
+  "after_persist": "PC14_FU03_HOTFIX01_SANDBOX_IMPLEMENTATION",
+  "rationale": [
+    "0 node delta for primary fix",
+    "Preserves restore semantics",
+    "Reject item shape already compatible downstream",
+    "PC-07 Close Lock expression untouched",
+    "Optional fan-out reorder hardens memory branch"
+  ],
+  "primary_changes": [
+    {
+      "node": "Restore Format Run Items",
+      "change": "jsCode only"
+    },
+    {
+      "node": "Restore Format Run Items After Lock",
+      "change": "jsCode only"
+    }
+  ],
+  "secondary_optional_change": {
+    "node": "Format Strict Reject Message connections",
+    "change": "Reorder main[0] to Prepare Memory Row Run then Take First Item",
+    "required_for_hotfix": false,
+    "recommended": true
+  },
+  "status_preface_plan": {
+    "choice": "leave_unchanged",
+    "reason": "Minimal HOTFIX01; materials will send after restore fix. Reject UX preface deferred."
+  },
+  "fallback_order": [
+    "Format Run Pipeline if executed and non-empty",
+    "Format Strict Reject Message if executed and non-empty",
+    "throw explicit HOTFIX01 error"
+  ],
+  "do_not_swallow": "If both candidates missing/empty, throw; do not return empty array"
+}

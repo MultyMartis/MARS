@@ -1,0 +1,22 @@
+{
+  "paths": {
+    "A_clean": "Normalize -> Build Final Public Payload -> Final Surface Strict Scan -> IF clean true -> Format Run Pipeline -> restore/send/lock/memory",
+    "B_repair_clean": "scan dirty -> repair -> re-scan clean -> Format Run Pipeline -> restore/send/lock/memory",
+    "C_reject_after_hotfix": "scan dirty -> repair -> re-scan dirty -> Format Strict Reject Message -> Take First/Status -> Restore(source=reject) -> Close Lock -> Restore After Lock -> Parse Mode -> Send Telegram -> Memory blocked_dirty"
+  },
+  "current_broken_edge": "Path C aborts at Restore Format Run Items",
+  "connection_changes_required": false,
+  "connection_changes_recommended": {
+    "Format Strict Reject Message.main[0]": {
+      "before": [
+        "Take First Item",
+        "Prepare Memory Row Run"
+      ],
+      "after": [
+        "Prepare Memory Row Run",
+        "Take First Item"
+      ]
+    }
+  },
+  "why_not_input_items": "Status Complete and Close Lock consume/replace item stream; Restore re-reads formatter named-node outputs"
+}

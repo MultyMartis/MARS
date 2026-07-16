@@ -1,0 +1,33 @@
+{
+  "label": "PC14_FU03_HOTFIX01_SANDBOX_DESIGN",
+  "based_on_diagnostics": "PC14_FU03_OPERATOR_SMOKE_DIAGNOSED_FIX_REQUIRED",
+  "diagnostics_commit": "cab4597a",
+  "production_apply_commit": "44c05c3b",
+  "production_worker": "p4mqb4VuPcemIDlC",
+  "smoke": {
+    "intake_execution": "3353",
+    "worker_execution": "3354",
+    "task_id": "seo202607152130389k7zou",
+    "lock_key": "chat:499423375:1784151029009",
+    "path": "dirty(11) -> repair OK (~31s) -> dirty(17) -> Format Strict Reject Message -> Take First Item -> Status Complete -> Restore Format Run Items ERROR"
+  },
+  "root_cause": {
+    "primary": "Restore Format Run Items hardcodes Format Run Pipeline .all(); FU03 reject branch skips Format Run Pipeline.",
+    "secondary_same_bug": "Restore Format Run Items After Lock uses identical hardcoded reference.",
+    "contributing_fanout_order": "Format Strict Reject Message fans out Take First Item before Prepare Memory Row Run; Format Run Pipeline fans out Prepare Memory first. Sequential fan-out plus restore error can prevent memory branch from starting.",
+    "not_root_cause": [
+      "Run Strict Surface Repair live success",
+      "Format Strict Reject Message payload shape",
+      "PC-07 Close Lock expression",
+      "TZ HOTFIX01"
+    ]
+  },
+  "impact": {
+    "telegram_final_materials": "not sent",
+    "close_lock": "not reached",
+    "memory_append": "not reached",
+    "false_preface": "Status Complete sent complete/sending materials",
+    "immediate_rollback": "not recommended",
+    "retry_before_fix": "not safe"
+  }
+}

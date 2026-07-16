@@ -1,0 +1,35 @@
+{
+  "expected_node_count_before": 101,
+  "expected_node_count_after": 101,
+  "node_delta": 0,
+  "modify": [
+    {
+      "name": "Restore Format Run Items",
+      "type": "n8n-nodes-base.code",
+      "change_type": "jsCode_replace"
+    },
+    {
+      "name": "Restore Format Run Items After Lock",
+      "type": "n8n-nodes-base.code",
+      "change_type": "jsCode_replace"
+    }
+  ],
+  "optional_connection_only": [
+    {
+      "from": "Format Strict Reject Message",
+      "to_order_recommended": [
+        "Prepare Memory Row Run",
+        "Take First Item"
+      ],
+      "to_order_current": [
+        "Take First Item",
+        "Prepare Memory Row Run"
+      ]
+    }
+  ],
+  "preserve_checks": {
+    "pc07_close_lock_task_id": "={{ $('Route Command').first().json.task_id }}",
+    "tz_hotfix01_marker": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+    "fu03_nodes_remain": 9
+  }
+}

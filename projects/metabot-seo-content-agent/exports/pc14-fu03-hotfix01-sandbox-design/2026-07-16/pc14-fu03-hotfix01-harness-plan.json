@@ -1,0 +1,52 @@
+{
+  "mode": "offline_local_only",
+  "forbidden_in_harness": [
+    "Telegram live send",
+    "OpenRouter live call",
+    "Google Sheets write",
+    "lock cleanup",
+    "/run live"
+  ],
+  "cases": [
+    {
+      "id": "HF01-CLEAN-01",
+      "expect": "clean path simulated final send + close lock + memory"
+    },
+    {
+      "id": "HF01-REPAIR-CLEAN-01",
+      "expect": "dirty then repair-clean simulated final send + close lock + memory"
+    },
+    {
+      "id": "HF01-REJECT-01",
+      "expect": "reject diagnostic send + close lock + memory blocked_dirty"
+    },
+    {
+      "id": "HF01-REJECT-TASKID-01",
+      "expect": "real task_id preserved; never pending at Close Lock source"
+    },
+    {
+      "id": "HF01-RESTORE-A-01",
+      "expect": "Restore Format Run Items OK without Format Run Pipeline"
+    },
+    {
+      "id": "HF01-RESTORE-B-01",
+      "expect": "Restore Format Run Items After Lock OK without Format Run Pipeline"
+    },
+    {
+      "id": "HF01-PC07-01",
+      "expect": "Close Lock task_id expression unchanged"
+    },
+    {
+      "id": "HF01-TZ-01",
+      "expect": "TZ HOTFIX01 unchanged"
+    },
+    {
+      "id": "HF01-SIDEFX-01",
+      "expect": "side-effect enabled states preserved"
+    },
+    {
+      "id": "HF01-SECRET-01",
+      "expect": "no secrets in evidence"
+    }
+  ]
+}

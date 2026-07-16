@@ -1,0 +1,15 @@
+{
+  "prefer": "HOTFIX01 over full FU03 rollback",
+  "full_fu03_rollback_source": "local/pc14-fu03-production-apply-2026-07-16/rollback/worker-before-pc14-fu03.raw.json",
+  "full_fu03_rollback_when": [
+    "clean path also proven broken",
+    "sandbox harness fails and cannot be corrected quickly",
+    "production state drifts unexpectedly",
+    "credentials/side-effect preservation cannot be assured"
+  ],
+  "hotfix_apply_backups_required": [
+    "raw production before-HOTFIX01",
+    "raw sandbox before-HOTFIX01"
+  ],
+  "hotfix_rollback": "Restore prior jsCode on two Restore nodes (+ optional connection order) from before-HOTFIX01 raw backup"
+}

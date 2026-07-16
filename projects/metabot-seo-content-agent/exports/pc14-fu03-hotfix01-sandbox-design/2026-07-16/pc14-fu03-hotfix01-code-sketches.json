@@ -1,0 +1,8 @@
+{
+  "version": "v1-pc14-fu03-hotfix01-restore-reject-safe",
+  "applies_to": [
+    "Restore Format Run Items",
+    "Restore Format Run Items After Lock"
+  ],
+  "jsCode": "function loadFormattedItems() {\n  const candidates = [\n    'Format Run Pipeline',\n    'Format Strict Reject Message',\n  ];\n  const errors = [];\n  for (const name of candidates) {\n    try {\n      const items = $(name).all();\n      if (Array.isArray(items) && items.length > 0) {\n        return { source: name, items };\n      }\n      errors.push(name + ': executed but empty');\n    } catch (e) {\n      errors.push(name + ': ' + String((e && e.message) || e));\n    }\n  }\n  throw new Error(\n    'HOTFIX01 Restore: no formatted items from Format Run Pipeline or Format Strict Reject Message. ' +\n    errors.join(' | ')\n  );\n}\n\nconst loaded = loadFormattedItems();\nreturn loaded.items.map((item) => ({\n  json: {\n    ...item.json,\n    _restore_source: loaded.source,\n  },\n}));\n"
+}

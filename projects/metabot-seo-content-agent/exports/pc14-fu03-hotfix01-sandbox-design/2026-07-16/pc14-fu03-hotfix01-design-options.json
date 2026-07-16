@@ -1,0 +1,73 @@
+{
+  "options": [
+    {
+      "id": "A",
+      "name": "Reject-safe named-node restore fallback",
+      "summary": "Change both Restore nodes to try Format Run Pipeline then Format Strict Reject Message via try/catch around named-node .all().",
+      "node_delta": 0,
+      "graph_delta": "optional reorder Format Strict Reject Message fan-out so Prepare Memory Row Run is first",
+      "pros": [
+        "Minimal code change",
+        "Preserves restore purpose after Status/Close Lock",
+        "Clean and repair-clean unchanged when Format Run Pipeline executed",
+        "Easy harness and rollback"
+      ],
+      "cons": [
+        "Still depends on named-node execution history",
+        "Must not swallow empty/malformed both-miss"
+      ],
+      "n8n_reliability": "high"
+    },
+    {
+      "id": "B",
+      "name": "Shared normalization node",
+      "summary": "Add Unify Formatted Run Items after both formatters; point restores at it.",
+      "node_delta": "+1",
+      "pros": [
+        "Single SOT"
+      ],
+      "cons": [
+        "Graph rewire",
+        "Larger diff",
+        "More connection risk"
+      ],
+      "n8n_reliability": "medium"
+    },
+    {
+      "id": "C",
+      "name": "Input-item restore + reject shape mimic",
+      "summary": "Use input items in restore; make reject mimic Format Run Pipeline.",
+      "node_delta": 0,
+      "pros": [
+        "No named-node coupling"
+      ],
+      "cons": [
+        "Unsafe with Status Complete / Close Lock item stream",
+        "Needs deeper chain redesign"
+      ],
+      "n8n_reliability": "low for current chain"
+    },
+    {
+      "id": "D",
+      "name": "Route reject through Format-compatible shim",
+      "summary": "Wire reject into Format-compatible branch or modified Format Run Pipeline.",
+      "node_delta": "0 to +1",
+      "pros": [
+        "Keeps restore code unchanged"
+      ],
+      "cons": [
+        "Touches Format or adds shim",
+        "Higher clean-path risk"
+      ],
+      "n8n_reliability": "medium"
+    }
+  ],
+  "evaluation_priority": [
+    "minimal_patch",
+    "n8n_expression_reliability",
+    "least_clean_path_impact",
+    "easy_harness",
+    "easy_rollback"
+  ],
+  "selected": "A"
+}

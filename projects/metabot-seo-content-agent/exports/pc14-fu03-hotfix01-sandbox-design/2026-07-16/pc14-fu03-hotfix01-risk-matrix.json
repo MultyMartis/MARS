@@ -1,0 +1,46 @@
+{
+  "risks": [
+    {
+      "id": "R1",
+      "risk": "Wrong source if both executed",
+      "severity": "low",
+      "likelihood": "very_low",
+      "mitigation": "Prefer Format Run Pipeline first"
+    },
+    {
+      "id": "R2",
+      "risk": "try/catch hides formatter bugs",
+      "severity": "medium",
+      "likelihood": "low",
+      "mitigation": "Throw if both miss; never silent []"
+    },
+    {
+      "id": "R3",
+      "risk": "Clean path regression",
+      "severity": "high",
+      "likelihood": "low",
+      "mitigation": "HF01-CLEAN-01 / HF01-REPAIR-CLEAN-01"
+    },
+    {
+      "id": "R4",
+      "risk": "Memory skipped if fan-out order remains and later send fails",
+      "severity": "medium",
+      "likelihood": "medium",
+      "mitigation": "Recommended connection reorder"
+    },
+    {
+      "id": "R5",
+      "risk": "Retry before hotfix",
+      "severity": "medium",
+      "likelihood": "medium",
+      "mitigation": "No /run until HOTFIX01 applied"
+    },
+    {
+      "id": "R6",
+      "risk": "Full FU03 rollback blast radius",
+      "severity": "high",
+      "likelihood": "low",
+      "mitigation": "Prefer HOTFIX01"
+    }
+  ]
+}

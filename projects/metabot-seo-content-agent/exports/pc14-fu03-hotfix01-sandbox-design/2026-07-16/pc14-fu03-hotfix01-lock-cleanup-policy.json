@@ -1,0 +1,14 @@
+{
+  "smoke_lock_key": "chat:499423375:1784151029009",
+  "smoke_task_id_at_failure": "pending",
+  "real_worker_task_id": "seo202607152130389k7zou",
+  "this_design_task_may_clear_lock": false,
+  "policy": {
+    "wait_for_hotfix_before_cleanup": true,
+    "prefer_auto_expiry": true,
+    "lock_expires_at_utc": "2026-07-15T22:00:32.713Z",
+    "admin_locks_may_hide_after_expiry": true,
+    "manual_cleanup_requires": "separate operator-approved lock cleanup charter",
+    "manual_cleanup_when": "lock remains sticky AND blocks future /run"
+  }
+}
