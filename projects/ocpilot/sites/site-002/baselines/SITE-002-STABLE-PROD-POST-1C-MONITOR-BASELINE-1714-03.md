@@ -1,0 +1,44 @@
+# BASELINE — SITE-002 Stable Prod Post-1C Monitor Baseline 1714 03
+
+**Checkpoint ID:** `SITE-002-STABLE-PROD-POST-1C-MONITOR-BASELINE-1714-03`  
+**Issued:** 2026-07-16  
+**Operation:** `SITE-002-MONITOR-BASELINE-REFRESH-03`  
+**OCPilot run:** 4.275  
+**Environment:** https://bzpm.ru/ (Production sitemap observed; **local monitor hygiene only**)
+
+## Scope and wording
+
+Local post-1C monitor sitemap baseline refresh after validated catalog onboarding 04 (Run 4.274). This checkpoint records that the monitor's comparison baseline was updated from **1615** to **1714** URLs and that a post-refresh manual monitor run returned **`NO_ACTION_REQUIRED`**.
+
+This does **not** claim a new broad production content stability checkpoint. Parent production checkpoint remains `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01` unless a separate production charter supersedes it.
+
+## Verified
+
+| Area | Status |
+|------|--------|
+| Source onboarding monitor | **PASS** — `2026-07-16_14-48-00`; needs **0**; garbage **0**; hygiene flags **0** |
+| Live sitemap | **PASS** — 1714 URLs; valid XML; premium-3-1600 + prior branches present; 0 БЗПМ |
+| Baseline refresh | **UPDATED** — storage artifact + monitor expected-count constants |
+| Post-refresh monitor | **PASS** — post-refresh manual run; classification **`NO_ACTION_REQUIRED`**; 1714→1714; +0/−0 |
+| Production mutation | **0** |
+| Scheduler mutation | **0** |
+| Dirty main | **untouched** |
+
+## Explicit exclusions
+
+- Not a claim that catalog/content meta is frozen forever.  
+- Not a natural scheduled timing proof.  
+- Runtime checkout remains dirty vs pin `08803bd4` with synced monitor file until a later pin.
+
+## Production mutation
+
+**None** — monitor baseline/docs/runtime sync only.
+
+## Reports
+
+- [SITE-002-MONITOR-BASELINE-REFRESH-03.md](../reports/SITE-002-MONITOR-BASELINE-REFRESH-03.md)
+- [SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-04.md](../reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-04.md)
+
+## Storage
+
+`X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\deployments\SITE-002-MONITOR-BASELINE-REFRESH-03\`

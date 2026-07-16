@@ -2,7 +2,7 @@
 
 **Document role:** Human-operated registry of clean Git checkouts used for scheduled/local runtime — **not** a runtime product.
 
-**Last updated:** 2026-07-16 (Run 4.274 onboarding 04 allowlist sync; pin commit still `08803bd4`)
+**Last updated:** 2026-07-16 (Run 4.275 monitor baseline refresh 03 sync; pin commit still `08803bd4`)
 
 ---
 
@@ -21,7 +21,7 @@ Scheduled and unattended local jobs must **not** execute from the dirty developm
 | Path | `X:\AI MARS STORAGE\runtime-checkouts\site-002-monitor\repo` |
 | Source ref | `origin/mars/canonical-post-recovery` |
 | Pinned commit (2026-07-13) | `0ab7e9f5` (was `bd3021bf` / earlier `56f9bae7`) |
-| Status | **dirty vs pin** after Run **4.274** allowlist file sync (expected until next pin); HEAD still `08803bd4` |
+| Status | **dirty vs pin** after Run **4.275** monitor-02 constants sync (expected until next pin); HEAD still `08803bd4` |
 | Prior working file sync (Run 4.261) | monitor script was exact-copied then dirty vs old HEAD; superseded by hard reset to `0ab7e9f5` |
 | Checkout method | Sparse clone — cone `projects/ocpilot` |
 | Runner | `projects/ocpilot/sites/site-002/tools/site-002-post-1c-monitor-runner.ps1` |
@@ -81,3 +81,7 @@ Run **4.269** refreshed storage sitemap baseline **1530→1615** and exact-copie
 ### Onboarding 04 allowlist sync (2026-07-16)
 
 Run **4.274** exact-copied updated monitor allowlist (`stellazhi-premium-3-vysota-1600`) into this runtime checkout (file dirty vs pinned HEAD until refresh). Manual verification artifact `2026-07-16_14-48-00`: onboarding needs **0**; classification **`HYGIENE_REVIEW_REQUIRED`** (baseline 1615→1714 only). See [SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-04.md](../ocpilot/sites/site-002/reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-04.md).
+
+### Monitor baseline refresh 03 sync (2026-07-16)
+
+Run **4.275** refreshed storage sitemap baseline **1615→1714** and exact-copied updated monitor-02 constants into this runtime checkout. Manual verification artifact `2026-07-16_15-03-50`: classification **`NO_ACTION_REQUIRED`**; needs **0**; 1714→1714. See [SITE-002-MONITOR-BASELINE-REFRESH-03.md](../ocpilot/sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-03.md).
