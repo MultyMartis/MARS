@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-16 (Run 4.275 — SITE-002-MONITOR-BASELINE-REFRESH-03 — baseline **1615→1714**; manual monitor **NO_ACTION_REQUIRED**; prior 4.274 onboarding)
+**Last updated:** 2026-07-16 (Run 4.276 — SITE-002-PROD-BRAND-CAPS-AND-BLOG-SLIDER-ORDER-01 — brand caps + blog slider order/limit/meta; prior 4.275 baseline **1714**)
 
 ---
 
@@ -92,7 +92,7 @@ Do not claim that Production exactly matches TEST unless evidence proves it.
 | Mail recipients architecture (Production) | **ACTIVE — TEMP TEST RECIPIENT** (Run 4.264 confirm · Run 4.265 re-verify · Run 4.266 full form mail rerun) — `config_mail_alert_email` currently **only** `client.leads@polygon-ws.ru`; `info@bzpm.ru` **not** restored yet; handler `catalog/controller/checkout/anketa.php`; admin-managed comma list · empty-lead backend guard OK (8 valid 200 / 3 negatives 400) · [full rerun](reports/SITE-002-PROD-FORM-MAIL-FULL-TEST-RERUN-01.md) · [follow-up](reports/SITE-002-PROD-FORM-EMPTY-LEAD-GUARD-FOLLOWUP-01.md) · [audit](reports/SITE-002-PROD-1C-LOGS-AND-FORM-MAIL-AUDIT-01.md) · [discovery](reports/SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01.md) · [confirmation](reports/SITE-002-PROD-MAIL-RECIPIENTS-ADMIN-ADD-01.md) |
 | Mail system architecture (Production) | **DISCOVERED — REDESIGN CHARTERS READY** (Run 4.222) — read-only full mail map: 29 public forms → anketa; standard OC twig mails (order/account/affiliate); no service info in admin form mail today; hybrid shared-renderer recommended; 5 future charters; Beget backup confirmed; 0 Production mutation · [report](reports/SITE-002-PROD-MAIL-SYSTEM-DISCOVERY-01.md) · [audit baseline](baselines/SITE-002-MAIL-SYSTEM-DISCOVERY-01.md) |
 | Catalog default sort (Production) | `pd.name ASC` when `sort`/`order` omitted |
-| Custom blog / scheduled news (Production) | **ACTIVE — POST 13 PUBLISHED + READING TIME** (Run **4.273** verifies; **4.272** implemented) — post_id **13** live at `/blog/news/proizvoditelnost-truda-rck-altayskiy-kray-2026`; reading time on list/detail/**related slider** (`.zpm-rel-articles-card__meta`); gate `active=1 AND date_added <= NOW()` · [postpublish 4.273](reports/SITE-002-PROD-BLOG-POSTPUBLISH-1C-HEALTHCHECK-RELARTICLES-META-01.md) · [readtime 4.272](reports/SITE-002-PROD-BLOG-PUBLISH-DATETIME-READTIME-01.md) |
+| Custom blog / scheduled news (Production) | **ACTIVE — SLIDER ORDER + BRAND CAPS** (Run **4.276**) — `getSliderPosts()` newest-first max **24** on home/category/post sliders; brand full-name `Завод` capitalization (post **13** + info meta); reading time in `.zpm-rel-articles-card__meta`; gate `active=1 AND date_added <= NOW()` · [brand/slider 4.276](reports/SITE-002-PROD-BRAND-CAPS-AND-BLOG-SLIDER-ORDER-01.md) · [postpublish 4.273](reports/SITE-002-PROD-BLOG-POSTPUBLISH-1C-HEALTHCHECK-RELARTICLES-META-01.md) |
 
 ---
 
