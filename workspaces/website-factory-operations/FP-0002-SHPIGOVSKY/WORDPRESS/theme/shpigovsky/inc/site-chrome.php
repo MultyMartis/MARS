@@ -131,6 +131,11 @@ function shpigovsky_get_messenger_visual_fallback_rows( $context = 'header' ) {
 			'url'   => '#',
 			'icon'  => 'whatsapp.svg',
 		),
+		array(
+			'label' => 'Max',
+			'url'   => '#',
+			'icon'  => 'max.svg',
+		),
 	);
 
 	$mobile = array(

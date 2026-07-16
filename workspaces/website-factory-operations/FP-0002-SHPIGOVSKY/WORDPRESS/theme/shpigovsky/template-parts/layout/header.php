@@ -26,16 +26,33 @@ if ( is_front_page() ) {
 <header class="site-header" role="banner">
 	<div class="container">
 		<div class="site-header__mobile-bar">
+
 			<a class="site-header__logo site-header__logo--mobile" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 				<img class="site-header__logo-image" src="<?php echo esc_url( $logo_url ); ?>" alt="<?php echo esc_attr( $brand_label ); ?>">
 			</a>
+
 			<div class="site-header__mobile-bar--actions">
-				<?php if ( '' !== $phone_primary && '' !== $phone_primary_href ) : ?>
-					<a class="site-header__phone site-header__phone--mobile-primary" href="<?php echo esc_url( $phone_primary_href ); ?>">
-						<?php echo esc_html( $phone_primary ); ?>
-					</a>
-				<?php endif; ?>
+
+				<div class="site-header__mobile-bar--actions--wrapper">
+					<?php if ( '' !== $phone_primary && '' !== $phone_primary_href ) : ?>
+						<a class="site-header__phone" href="<?php echo esc_url( $phone_primary_href ); ?>"><?php echo esc_html( $phone_primary ); ?></a>
+					<?php endif; ?>
+					<?php if ( '' !== $phone_secondary && '' !== $phone_secondary_href ) : ?>
+						<a class="site-header__phone" href="<?php echo esc_url( $phone_secondary_href ); ?>"><?php echo esc_html( $phone_secondary ); ?></a>
+					<?php endif; ?>
+				</div>
+
 				<?php get_template_part( 'template-parts/navigation/messenger-links', null, array( 'context' => 'mobile-header' ) ); ?>
+
+				<button
+					type="button"
+					class="btn mobile-header__btn"
+					data-modal-open="consultation"
+					data-modal-source="header"
+					data-modal-title="<?php echo esc_attr( $callback_label ); ?>"
+					data-modal-submit-text="<?php echo esc_attr( $callback_label ); ?>"
+				><?php echo esc_html( $callback_label ); ?></button>
+
 				<button
 					type="button"
 					class="site-header__menu-toggle"
@@ -48,7 +65,9 @@ if ( is_front_page() ) {
 						<i class="fas fa-bars"></i>
 					</span>
 				</button>
+
 			</div>
+
 		</div>
 
 		<div class="site-header__top">

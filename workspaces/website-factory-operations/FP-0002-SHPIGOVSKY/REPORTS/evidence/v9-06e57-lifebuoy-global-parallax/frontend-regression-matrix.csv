@@ -1,0 +1,11 @@
+check,result,notes
+home_hero,PASS,hero present
+floating_header,PASS,markup present; z-index 950 above lifebuoy 0
+forms,PASS,data-lead-form present
+offcanvas_trigger,PASS,menu trigger present
+single_lifebuoy_instance,PASS,count=1 all routes
+horizontal_overflow,PASS,0 overflow cases in matrix
+js_errors,PASS,0 console/page errors
+php_warnings_html_smoke,PASS,HTTP 200 home; markup present
+v9_style_operator_css,PASS,hash unchanged 2F7CC5AC…
+galleries_video_smoke,PASS,no code touched; routes 200

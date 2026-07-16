@@ -1,0 +1,22 @@
+{
+  "first": {
+    "ok": true,
+    "success": true,
+    "message": "Заявка принята на локальном стенде. Отправка email здесь отключена — письмо не уходило.",
+    "mode": "local",
+    "mail_transport": "disabled"
+  },
+  "second": {
+    "ok": false,
+    "success": false,
+    "message": "Эта заявка уже была отправлена. Обновите страницу, если нужно отправить новую."
+  },
+  "honeypot": {
+    "ok": true,
+    "success": true,
+    "message": "Заявка принята на локальном стенде. Отправка email здесь отключена — письмо не уходило.",
+    "mode": "local",
+    "spam": true
+  },
+  "public_recipient_in_theme": false
+}

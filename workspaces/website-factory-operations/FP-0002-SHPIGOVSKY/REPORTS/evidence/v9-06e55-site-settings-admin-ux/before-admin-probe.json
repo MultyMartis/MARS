@@ -1,0 +1,170 @@
+{
+    "generated_at": "2026-07-16T09:21:34+00:00",
+    "screens": [
+        {
+            "page": "fp02-site-settings-general",
+            "login_redirect": false,
+            "body_fp02_acf_admin": true,
+            "body_site_settings": false,
+            "css_enqueued": true,
+            "section_title_count": 0,
+            "postbox_count": 0,
+            "repeater_count": 1,
+            "acf_row_count": 8,
+            "postbox_titles": [],
+            "body_hook_class": "fp02-acf-admin",
+            "http": 200
+        },
+        {
+            "page": "fp02-block-header",
+            "login_redirect": false,
+            "body_fp02_acf_admin": false,
+            "body_site_settings": false,
+            "css_enqueued": false,
+            "section_title_count": 0,
+            "postbox_count": 0,
+            "repeater_count": 0,
+            "acf_row_count": 0,
+            "postbox_titles": [],
+            "body_hook_class": "-d0-bd-d0-b0-d1-81-d1-82-d1-80-d0-be-d0-b9-d0-ba-d0-b8--d1-81-d0-b0-d0-b9-d1-82-d0-b0_page_fp02-block-header",
+            "http": 200
+        },
+        {
+            "page": "fp02-block-footer",
+            "login_redirect": false,
+            "body_fp02_acf_admin": false,
+            "body_site_settings": false,
+            "css_enqueued": false,
+            "section_title_count": 0,
+            "postbox_count": 0,
+            "repeater_count": 0,
+            "acf_row_count": 0,
+            "postbox_titles": [],
+            "body_hook_class": "-d0-bd-d0-b0-d1-81-d1-82-d1-80-d0-be-d0-b9-d0-ba-d0-b8--d1-81-d0-b0-d0-b9-d1-82-d0-b0_page_fp02-block-footer",
+            "http": 200
+        },
+        {
+            "page": "fp02-block-final-form",
+            "login_redirect": false,
+            "body_fp02_acf_admin": false,
+            "body_site_settings": false,
+            "css_enqueued": false,
+            "section_title_count": 0,
+            "postbox_count": 0,
+            "repeater_count": 0,
+            "acf_row_count": 0,
+            "postbox_titles": [],
+            "body_hook_class": "-d0-bd-d0-b0-d1-81-d1-82-d1-80-d0-be-d0-b9-d0-ba-d0-b8--d1-81-d0-b0-d0-b9-d1-82-d0-b0_page_fp02-block-final-form",
+            "http": 200
+        },
+        {
+            "page": "fp02-block-specialists",
+            "login_redirect": false,
+            "body_fp02_acf_admin": false,
+            "body_site_settings": false,
+            "css_enqueued": false,
+            "section_title_count": 0,
+            "postbox_count": 0,
+            "repeater_count": 0,
+            "acf_row_count": 0,
+            "postbox_titles": [],
+            "body_hook_class": "-d0-bd-d0-b0-d1-81-d1-82-d1-80-d0-be-d0-b9-d0-ba-d0-b8--d1-81-d0-b0-d0-b9-d1-82-d0-b0_page_fp02-block-specialists",
+            "http": 200
+        },
+        {
+            "page": "fp02-block-cta-bands",
+            "login_redirect": false,
+            "body_fp02_acf_admin": false,
+            "body_site_settings": false,
+            "css_enqueued": false,
+            "section_title_count": 0,
+            "postbox_count": 0,
+            "repeater_count": 0,
+            "acf_row_count": 0,
+            "postbox_titles": [],
+            "body_hook_class": "-d0-bd-d0-b0-d1-81-d1-82-d1-80-d0-be-d0-b9-d0-ba-d0-b8--d1-81-d0-b0-d0-b9-d1-82-d0-b0_page_fp02-block-cta-bands",
+            "http": 200
+        },
+        {
+            "page": "fp02-block-comfort",
+            "login_redirect": false,
+            "body_fp02_acf_admin": false,
+            "body_site_settings": false,
+            "css_enqueued": false,
+            "section_title_count": 0,
+            "postbox_count": 0,
+            "repeater_count": 3,
+            "acf_row_count": 72,
+            "postbox_titles": [],
+            "body_hook_class": "-d0-bd-d0-b0-d1-81-d1-82-d1-80-d0-be-d0-b9-d0-ba-d0-b8--d1-81-d0-b0-d0-b9-d1-82-d0-b0_page_fp02-block-comfort",
+            "http": 200
+        },
+        {
+            "page": "service-73",
+            "login_redirect": false,
+            "body_fp02_acf_admin": false,
+            "body_site_settings": false,
+            "css_enqueued": false,
+            "section_title_count": 0,
+            "postbox_count": 0,
+            "repeater_count": 0,
+            "acf_row_count": 0,
+            "postbox_titles": [],
+            "body_hook_class": "",
+            "http": 403
+        }
+    ],
+    "enqueue_checks": [
+        {
+            "slug": "fp02-site-settings-general",
+            "hypothetical_hook": "settings_page_fp02-site-settings-general",
+            "current_e53_match": true,
+            "proposed_fp02_block_match": true
+        },
+        {
+            "slug": "fp02-block-header",
+            "hypothetical_hook": "settings_page_fp02-block-header",
+            "current_e53_match": false,
+            "proposed_fp02_block_match": true
+        },
+        {
+            "slug": "fp02-block-footer",
+            "hypothetical_hook": "settings_page_fp02-block-footer",
+            "current_e53_match": false,
+            "proposed_fp02_block_match": true
+        },
+        {
+            "slug": "fp02-block-final-form",
+            "hypothetical_hook": "settings_page_fp02-block-final-form",
+            "current_e53_match": false,
+            "proposed_fp02_block_match": true
+        },
+        {
+            "slug": "fp02-block-specialists",
+            "hypothetical_hook": "settings_page_fp02-block-specialists",
+            "current_e53_match": false,
+            "proposed_fp02_block_match": true
+        },
+        {
+            "slug": "fp02-block-cta-bands",
+            "hypothetical_hook": "settings_page_fp02-block-cta-bands",
+            "current_e53_match": false,
+            "proposed_fp02_block_match": true
+        },
+        {
+            "slug": "fp02-block-comfort",
+            "hypothetical_hook": "settings_page_fp02-block-comfort",
+            "current_e53_match": false,
+            "proposed_fp02_block_match": true
+        },
+        {
+            "slug": "fp02-site-settings-blocks",
+            "hypothetical_hook": "settings_page_fp02-site-settings-blocks",
+            "current_e53_match": true,
+            "proposed_fp02_block_match": true
+        }
+    ],
+    "function_exists": {
+        "shpigovsky_admin_should_enqueue_fp02_acf_css": true
+    }
+}

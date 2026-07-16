@@ -1,0 +1,130 @@
+--- source/v9-style.css
++++ runtime/v9-style.css
+@@ -22241,6 +22241,12 @@
+   color: var(--color-text-secondary);
+ }
+ 
++.site-footer__credit > a:hover{
++  color: var(--color-accent);
++  text-decoration: underline;
++  text-underline-offset: 2px;
++}
++
+ .site-footer__legal-links {
+   display: flex;
+   align-items: center;
+@@ -22811,6 +22817,9 @@
+ }
+ 
+ @media (max-width: 767px) {
++
++
++
+   .founder-quote__layout {
+     grid-template-columns: minmax(0, 1fr);
+   }
+@@ -22891,6 +22900,12 @@
+ 
+ }
+ @media (max-width: 560px) {
++
++
++
++
++
++
+   .fp02-floating-header__messengers,
+   .mobile-header__messengers {
+     display: none;
+@@ -23489,7 +23504,7 @@
+     padding-right: var(--pad-gap-line);
+   }
+   .services-inner-hero-v2__media {
+-    aspect-ratio: 100/100;
++    aspect-ratio: 100/60;
+     min-height: 410px;
+   }
+   .services-inner-hero-v2__overlay {
+@@ -27776,4 +27791,81 @@
+     min-height: 280px;
+   }
+   .services-inner-hero-v2__nav { width: 36px; height: 36px; font-size: 22px; }
+-}
++
++
++  .services-inner-hero-v2__media {
++    aspect-ratio: 100/70;
++  }
++
++
++}
++
++
++@media (max-width: 700px) {
++
++  .services-inner-hero-v2__media {
++    aspect-ratio: 100/80;
++  }
++
++}
++
++@media (max-width: 650px) {
++
++  .services-inner-hero-v2__media {
++    aspect-ratio: 100/90;
++  }
++
++}
++
++@media (max-width: 550px) {
++
++  .services-inner-hero-v2__media {
++    aspect-ratio: 100/100;
++  }
++
++  .hero__title {
++    font-size: 30px;
++    line-height: 30px;
++  }
++
++  .hero__title {
++    font-size: 30px;
++    line-height: 30px;
++  }
++
++}
++
++@media (max-width: 490px) {
++
++  .services-inner-hero-v2__media {
++    aspect-ratio: 100/110;
++  }
++
++}
++
++@media (max-width: 450px) {
++
++  .services-inner-hero-v2__media {
++    aspect-ratio: 100/130;
++  }
++
++}
++
++@media (max-width: 410px) {
++
++  .services-inner-hero-v2__media {
++    aspect-ratio: 100/150;
++  }
++
++}
++
++@media (max-width: 370px) {
++
++  .services-inner-hero-v2__media {
++    aspect-ratio: 100/170;
++  }
++
++}
++
++
++

@@ -3,6 +3,7 @@
  * Template part: home/hero.php
  *
  * V9-06E41: multi-slide Hero from home_hero_slides + Swiper when count > 1.
+ * V9-06E56-FU01: empty optional slide fields render nothing (no demo text inject).
  *
  * @package Shpigovsky
  */
@@ -37,10 +38,11 @@ if ( is_array( $raw_slides ) ) {
 }
 
 if ( empty( $slides ) ) {
+	// Emergency only when no valid slides exist — image shell, no demo copy.
 	$fallback_image = shpigovsky_get_home_hero_image();
 	$slides[]       = array(
-		'title' => 'Шпиговский дом',
-		'text'  => 'Центр профилактики и&nbsp;лечения зависимостей',
+		'title' => '',
+		'text'  => '',
 		'image' => $fallback_image,
 	);
 }
@@ -73,9 +75,9 @@ if ( $is_slider ) {
 		<div class="hero__slides<?php echo $is_slider ? ' swiper-wrapper' : ''; ?>">
 			<?php foreach ( $slides as $index => $slide ) : ?>
 				<?php
-				$hero_title = '' !== $slide['title'] ? $slide['title'] : 'Шпиговский дом';
-				$hero_text  = '' !== $slide['text'] ? $slide['text'] : 'Центр профилактики и&nbsp;лечения зависимостей';
-				$hero_image = $slide['image'];
+				$hero_title  = isset( $slide['title'] ) ? (string) $slide['title'] : '';
+				$hero_text   = isset( $slide['text'] ) ? (string) $slide['text'] : '';
+				$hero_image  = $slide['image'];
 				$slide_class = $is_slider ? 'hero__slide swiper-slide' : 'hero__slide';
 				?>
 			<div class="<?php echo esc_attr( $slide_class ); ?>">
@@ -96,11 +98,15 @@ if ( $is_slider ) {
 					<div class="hero__container">
 						<div class="hero__panel">
 							<div class="hero__content-inner">
+								<?php if ( '' !== $hero_text ) : ?>
 								<p class="hero__tagline"><?php echo wp_kses_post( $hero_text ); ?></p>
-								<?php if ( 0 === $index ) : ?>
+								<?php endif; ?>
+								<?php if ( '' !== $hero_title ) : ?>
+									<?php if ( 0 === $index ) : ?>
 								<h1 class="hero__title"><?php echo esc_html( $hero_title ); ?></h1>
-								<?php else : ?>
+									<?php else : ?>
 								<p class="hero__title"><?php echo esc_html( $hero_title ); ?></p>
+									<?php endif; ?>
 								<?php endif; ?>
 							</div>
 						</div>

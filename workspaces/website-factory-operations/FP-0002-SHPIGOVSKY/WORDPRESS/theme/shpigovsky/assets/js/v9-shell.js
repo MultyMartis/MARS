@@ -98,6 +98,56 @@
 	var closeTriggers = offcanvas.querySelectorAll('[data-offcanvas-close]');
 	var lastTrigger = null;
 	var isOpen = false;
+	var OFFCANVAS_BODY_LOCK_CLASS = 'is-offcanvas-scroll-locked';
+	var offcanvasScrollLockY = 0;
+
+	function getOffcanvasScrollY() {
+		return window.scrollY || document.documentElement.scrollTop || 0;
+	}
+
+	function focusOffcanvasElement(element, preventScroll) {
+		if (!element || typeof element.focus !== 'function') {
+			return;
+		}
+
+		try {
+			if (preventScroll) {
+				element.focus({ preventScroll: true });
+			} else {
+				element.focus();
+			}
+		} catch (error) {
+			element.focus();
+		}
+	}
+
+	function lockOffcanvasBodyScroll() {
+		offcanvasScrollLockY = getOffcanvasScrollY();
+		var targetY = offcanvasScrollLockY;
+
+		document.documentElement.classList.add(OFFCANVAS_BODY_LOCK_CLASS);
+		document.body.classList.add(OFFCANVAS_BODY_LOCK_CLASS);
+
+		window.requestAnimationFrame(function () {
+			if (Math.abs(getOffcanvasScrollY() - targetY) > 1) {
+				window.scrollTo(0, targetY);
+			}
+		});
+	}
+
+	function unlockOffcanvasBodyScroll() {
+		var scrollY = offcanvasScrollLockY || getOffcanvasScrollY();
+
+		document.documentElement.classList.remove(OFFCANVAS_BODY_LOCK_CLASS);
+		document.body.classList.remove(OFFCANVAS_BODY_LOCK_CLASS);
+		offcanvasScrollLockY = 0;
+
+		if (scrollY > 0) {
+			window.requestAnimationFrame(function () {
+				window.scrollTo(0, scrollY);
+			});
+		}
+	}
 
 	function getFocusableElements(root) {
 		if (!root) {
@@ -153,11 +203,12 @@
 	}
 
 	function openMenu(trigger) {
-		if (isOpen || desktopQuery.matches) {
+		if (isOpen) {
 			return;
 		}
 
 		lastTrigger = trigger || lastTrigger;
+		lockOffcanvasBodyScroll();
 		isOpen = true;
 		syncAria(true);
 
@@ -165,9 +216,9 @@
 		var focusable = getFocusableElements(panel);
 
 		if (focusTarget) {
-			focusTarget.focus();
+			focusOffcanvasElement(focusTarget, true);
 		} else if (focusable.length) {
-			focusable[0].focus();
+			focusOffcanvasElement(focusable[0], true);
 		}
 
 		document.addEventListener('keydown', onKeydown);
@@ -181,12 +232,13 @@
 
 		isOpen = false;
 		syncAria(false);
+		unlockOffcanvasBodyScroll();
 
 		document.removeEventListener('keydown', onKeydown);
 		document.removeEventListener('keydown', trapFocus);
 
-		if (lastTrigger && typeof lastTrigger.focus === 'function') {
-			lastTrigger.focus();
+		if (lastTrigger) {
+			focusOffcanvasElement(lastTrigger, true);
 		}
 	}
 
@@ -198,9 +250,7 @@
 	}
 
 	function onViewportChange() {
-		if (desktopQuery.matches && isOpen) {
-			closeMenu();
-		}
+		// Offcanvas may open on desktop via floating-header Menu (V9-06E54).
 	}
 
 	var desktopQuery = window.matchMedia('(min-width: ' + DESKTOP_MIN + 'px)');
@@ -308,18 +358,18 @@
 					: false;
 			})(),
 			breakpoints: {
-				320: {
-					slidesPerView: 2.15,
-					spaceBetween: 10,
-				},
-				768: {
-					slidesPerView: 3.15,
-					spaceBetween: 20,
-				},
-				1025: {
-					slidesPerView: 3.5,
-					spaceBetween: 30,
-				},
+						431: {
+							slidesPerView: 2.15,
+							spaceBetween: 10,
+						},
+						768: {
+							slidesPerView: 3.15,
+							spaceBetween: 20,
+						},
+						1025: {
+							slidesPerView: 3.5,
+							spaceBetween: 30,
+						},
 			},
 		};
 	}
@@ -379,18 +429,18 @@
 				}
 				: false,
 			breakpoints: {
-				320: {
-					slidesPerView: 1.35,
-					spaceBetween: 10,
-				},
-				768: {
-					slidesPerView: 2.5,
-					spaceBetween: 20,
-				},
-				1025: {
-					slidesPerView: 2.5,
-					spaceBetween: 30,
-				},
+						431: {
+							slidesPerView: 1.15,
+							spaceBetween: 10,
+						},
+						768: {
+							slidesPerView: 2.15,
+							spaceBetween: 20,
+						},
+						1025: {
+							slidesPerView: 2.5,
+							spaceBetween: 30,
+						},
 			},
 		});
 		});
@@ -434,18 +484,18 @@
 			watchOverflow: true,
 			grabCursor: true,
 			breakpoints: {
-				320: {
-					slidesPerView: 1.35,
-					spaceBetween: 10,
-				},
-				768: {
-					slidesPerView: 2.5,
-					spaceBetween: 20,
-				},
-				1025: {
-					slidesPerView: 3.5,
-					spaceBetween: 30,
-				},
+						431: {
+							slidesPerView: 2.15,
+							spaceBetween: 10,
+						},
+						768: {
+							slidesPerView: 3.15,
+							spaceBetween: 20,
+						},
+						1025: {
+							slidesPerView: 3.5,
+							spaceBetween: 30,
+						},
 			},
 		});
 		});
@@ -487,18 +537,18 @@
 				preventClicksPropagation: true,
 				threshold: 8,
 				breakpoints: {
-					320: {
-						slidesPerView: 1.2,
-						spaceBetween: 10,
-					},
-					768: {
-						slidesPerView: 2.5,
-						spaceBetween: 20,
-					},
-					1025: {
-						slidesPerView: 3,
-						spaceBetween: 30,
-					},
+						431: {
+							slidesPerView: 2.15,
+							spaceBetween: 10,
+						},
+						768: {
+							slidesPerView: 3.15,
+							spaceBetween: 20,
+						},
+						1025: {
+							slidesPerView: 3.5,
+							spaceBetween: 30,
+						},
 				},
 			});
 		});
@@ -622,17 +672,25 @@
 	var BODY_LOCK_CLASS = 'is-modal-scroll-locked';
 	var prefersReducedMotionModal = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 	var PHONE_DIGITS_MIN = 10;
-	var LEAD_FORM_CONFIG = {
-		endpoint: '',
-		siteConfigEndpoint: '',
-		recaptchaAction: 'form_lead',
-		phoneMask: '+7 999 999 - 99 - 99',
-		backendBlockedMessage:
-			'Отправка заявки пока недоступна. Позвоните нам по телефону 8 (925) 183-64-64.',
-		validationErrorMessage: 'Проверьте поля формы и попробуйте снова.',
-		recaptchaSecurityMessage:
-			'Проверка безопасности не пройдена. Обновите страницу и попробуйте снова.',
-	};
+	var LEAD_FORM_CONFIG = Object.assign(
+		{
+			endpoint: '',
+			action: 'fp02_lead_submit',
+			nonce: '',
+			nonceField: 'fp02_lead_nonce',
+			siteConfigEndpoint: '',
+			recaptchaAction: 'form_lead',
+			phoneMask: '+7 999 999 - 99 - 99',
+			backendBlockedMessage:
+				'Отправка заявки пока недоступна. Позвоните нам по телефону 8 (925) 183-64-64.',
+			validationErrorMessage: 'Проверьте поля формы и попробуйте снова.',
+			recaptchaSecurityMessage:
+				'Проверка безопасности не пройдена. Обновите страницу и попробуйте снова.',
+			successMessage:
+				'Заявка принята на локальном стенде. Отправка email здесь отключена — письмо не уходило.',
+		},
+		typeof window.fp02LeadForm === 'object' && window.fp02LeadForm ? window.fp02LeadForm : {}
+	);
 
 	var activeModal = null;
 	var lastModalTrigger = null;
@@ -1141,11 +1199,75 @@
 		});
 	}
 
+	function createRequestToken() {
+		if (window.crypto && typeof window.crypto.randomUUID === 'function') {
+			return window.crypto.randomUUID().replace(/-/g, '') + String(Date.now());
+		}
+
+		return (
+			'fp02' +
+			String(Date.now()) +
+			Math.random().toString(36).slice(2) +
+			Math.random().toString(36).slice(2)
+		);
+	}
+
+	function ensureLeadSecurityFields(form) {
+		var container = form.querySelector('[data-lead-form-hidden]');
+		if (!container) {
+			return;
+		}
+
+		var ensure = function (name, attrs) {
+			var input = container.querySelector('[data-lead-hidden="' + name + '"]');
+			if (input) {
+				return input;
+			}
+
+			input = document.createElement('input');
+			input.type = attrs.type || 'hidden';
+			input.name = attrs.name || name;
+			input.setAttribute('data-lead-hidden', name);
+			if (attrs.value != null) {
+				input.value = attrs.value;
+			}
+			if (attrs.autocomplete) {
+				input.setAttribute('autocomplete', attrs.autocomplete);
+			}
+			if (attrs.tabIndex != null) {
+				input.tabIndex = attrs.tabIndex;
+			}
+			container.appendChild(input);
+			return input;
+		};
+
+		ensure('action', { name: 'action', value: LEAD_FORM_CONFIG.action || 'fp02_lead_submit' });
+		ensure(LEAD_FORM_CONFIG.nonceField || 'fp02_lead_nonce', {
+			name: LEAD_FORM_CONFIG.nonceField || 'fp02_lead_nonce',
+			value: LEAD_FORM_CONFIG.nonce || '',
+		}).setAttribute('data-lead-hidden', LEAD_FORM_CONFIG.nonceField || 'fp02_lead_nonce');
+		ensure('form_started_at', {
+			name: 'form_started_at',
+			value: String(Math.floor(Date.now() / 1000)),
+		});
+		ensure('timestamp', { name: 'timestamp', value: '' });
+		ensure('request_token', { name: 'request_token', value: createRequestToken() });
+		ensure('company_url', {
+			type: 'text',
+			name: 'company_url',
+			value: '',
+			autocomplete: 'off',
+			tabIndex: -1,
+		});
+	}
+
 	function populateHiddenFields(form) {
 		var container = form.querySelector('[data-lead-form-hidden]');
 		if (!container) {
 			return;
 		}
+
+		ensureLeadSecurityFields(form);
 
 		var setValue = function (name, value) {
 			var input = container.querySelector('[data-lead-hidden="' + name + '"]');
@@ -1159,6 +1281,22 @@
 
 		var context = form.getAttribute('data-form-context') || 'final';
 		setValue('form_context', context);
+
+		if (LEAD_FORM_CONFIG.nonce) {
+			setValue(LEAD_FORM_CONFIG.nonceField || 'fp02_lead_nonce', LEAD_FORM_CONFIG.nonce);
+		}
+
+		if (LEAD_FORM_CONFIG.action) {
+			setValue('action', LEAD_FORM_CONFIG.action);
+		}
+
+		var started = container.querySelector('[data-lead-hidden="form_started_at"]');
+		if (started && !started.value) {
+			started.value = String(Math.floor(Date.now() / 1000));
+		}
+
+		setValue('timestamp', String(Math.floor(Date.now() / 1000)));
+		setValue('request_token', createRequestToken());
 	}
 
 	function setLeadSource(form, leadSource) {
@@ -1335,6 +1473,17 @@
 			formData.append(key, payload[key]);
 		});
 
+		if (LEAD_FORM_CONFIG.action && !formData.get('action')) {
+			formData.append('action', LEAD_FORM_CONFIG.action);
+		}
+
+		if (LEAD_FORM_CONFIG.nonce) {
+			var nonceField = LEAD_FORM_CONFIG.nonceField || 'fp02_lead_nonce';
+			if (!formData.get(nonceField)) {
+				formData.append(nonceField, LEAD_FORM_CONFIG.nonce);
+			}
+		}
+
 		return appendRecaptchaToken(form, formData)
 			.then(function () {
 				return fetch(LEAD_FORM_CONFIG.endpoint, {
@@ -1462,10 +1611,12 @@
 				.then(function (result) {
 					var successMessage =
 						(result.data && typeof result.data.message === 'string' && result.data.message) ||
-						'Заявка принята. Перезвоним в ближайшее время.';
+						LEAD_FORM_CONFIG.successMessage ||
+						'Заявка принята на локальном стенде. Отправка email здесь отключена — письмо не уходило.';
 					setLeadFormState(form, 'success');
 					showLeadFormStatus(form, 'success', successMessage);
 					form.reset();
+					ensureLeadSecurityFields(form);
 					populateHiddenFields(form);
 				})
 				.catch(function (error) {
@@ -1490,9 +1641,7 @@
 	function boot() {
 		bindModalSystem();
 		document.querySelectorAll('[data-lead-form]').forEach(function (form) {
-			form.addEventListener('submit', function (event) {
-				event.preventDefault();
-			});
+			initLeadForm(form);
 		});
 	}
 
@@ -1599,7 +1748,7 @@
 							: false;
 					})(),
 					breakpoints: {
-						320: {
+						431: {
 							slidesPerView: 2.15,
 							spaceBetween: 10,
 						},
@@ -1656,7 +1805,7 @@
 					grabCursor: true,
 					pagination: false,
 					breakpoints: {
-						320: {
+						431: {
 							slidesPerView: 2.15,
 							spaceBetween: 10,
 						},

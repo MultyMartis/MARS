@@ -1,0 +1,10 @@
+route,url,http,phpWarn,jsErrors,floating,form,pass
+home,http://shpigovsky.test/,200,false,0,true,true,PASS
+uslugi,http://shpigovsky.test/uslugi/,200,false,0,true,true,PASS
+section,http://shpigovsky.test/uslugi/zavisimosti/,200,false,0,true,true,PASS
+service1,http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/,200,false,0,true,true,PASS
+service2,http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/depressiya/,200,false,0,true,true,PASS
+generic,http://shpigovsky.test/o-centre/,200,false,0,true,true,PASS
+ocentre,http://shpigovsky.test/o-centre/,200,false,0,true,true,PASS
+kontakty,http://shpigovsky.test/kontakty/,200,false,0,true,true,PASS
+blog,http://shpigovsky.test/blog/,200,false,0,true,true,PASS

@@ -1,0 +1,10 @@
+check,result,notes
+Home edit fields model,PASS,hero.php empty-field hide only; ACF fields unchanged
+Site Settings files,PASS,untouched this wave
+Comfort split groups,PASS,untouched this wave
+Service Section templates,PASS,gallery CSS additive only
+Individual Service,PASS,no service ACF/PHP mutation
+Generic Page,PASS,untouched
+E55 admin CSS,PASS,admin-fp02-acf.css untouched
+E56 Comfort split,PASS,plugin/ACF untouched
+DB writes,0,confirmed by charter adherence — no seed/save scripts run

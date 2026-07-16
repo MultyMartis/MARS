@@ -1,0 +1,580 @@
+{
+  "ts": "2026-07-16T08:10:31.612Z",
+  "base": "http://shpigovsky.test",
+  "routes": [
+    {
+      "route": "home",
+      "path": "/",
+      "status": 200,
+      "hasFloating": true,
+      "hasMainHeader": true
+    },
+    {
+      "route": "uslugi",
+      "path": "/uslugi/",
+      "status": 200,
+      "hasFloating": true,
+      "hasMainHeader": true
+    },
+    {
+      "route": "section",
+      "path": "/uslugi/zavisimosti/",
+      "status": 200,
+      "hasFloating": true,
+      "hasMainHeader": true
+    },
+    {
+      "route": "service",
+      "path": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "status": 200,
+      "hasFloating": true,
+      "hasMainHeader": true
+    },
+    {
+      "route": "generic",
+      "path": "/politika-konfidentsialnosti/",
+      "status": 404,
+      "hasFloating": true,
+      "hasMainHeader": true
+    },
+    {
+      "route": "o-centre",
+      "path": "/o-centre/",
+      "status": 200,
+      "hasFloating": true,
+      "hasMainHeader": true
+    },
+    {
+      "route": "kontakty",
+      "path": "/kontakty/",
+      "status": 200,
+      "hasFloating": true,
+      "hasMainHeader": true
+    },
+    {
+      "route": "blog",
+      "path": "/blog/",
+      "status": 200,
+      "hasFloating": true,
+      "hasMainHeader": true
+    },
+    {
+      "route": "blog-single",
+      "path": "/blog/lechenie-zavisimosti-v-domashnih-usloviyah/",
+      "status": 404,
+      "hasFloating": true,
+      "hasMainHeader": true
+    }
+  ],
+  "scroll": [
+    {
+      "viewport": "desktop-1440",
+      "threshold": 500,
+      "steps": [
+        {
+          "phase": "top",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": false,
+          "ariaHidden": "true",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, -90)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 0,
+          "threshold": 500
+        },
+        {
+          "phase": "below-threshold",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": false,
+          "ariaHidden": "true",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, -90)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 450,
+          "threshold": 500
+        },
+        {
+          "phase": "scroll-down",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": false,
+          "ariaHidden": "true",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, -90)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 0,
+          "threshold": 500
+        },
+        {
+          "phase": "scroll-up",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": true,
+          "ariaHidden": "false",
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 740,
+          "threshold": 500
+        }
+      ]
+    },
+    {
+      "viewport": "desktop-1280",
+      "threshold": 500,
+      "steps": [
+        {
+          "phase": "top",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": false,
+          "ariaHidden": "true",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, -90)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 0,
+          "threshold": 500
+        },
+        {
+          "phase": "below-threshold",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": false,
+          "ariaHidden": "true",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, -90)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 450,
+          "threshold": 500
+        },
+        {
+          "phase": "scroll-down",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": false,
+          "ariaHidden": "true",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, -90)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 0,
+          "threshold": 500
+        },
+        {
+          "phase": "scroll-up",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": true,
+          "ariaHidden": "false",
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 740,
+          "threshold": 500
+        }
+      ]
+    },
+    {
+      "viewport": "desktop-1024",
+      "threshold": 650,
+      "steps": [
+        {
+          "phase": "top",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": false,
+          "ariaHidden": "true",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, -90)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 0,
+          "threshold": 500
+        },
+        {
+          "phase": "below-threshold",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": true,
+          "ariaHidden": "false",
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 600,
+          "threshold": 500
+        },
+        {
+          "phase": "scroll-down",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": false,
+          "ariaHidden": "true",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, -90)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 0,
+          "threshold": 500
+        },
+        {
+          "phase": "scroll-up",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": true,
+          "ariaHidden": "false",
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 890,
+          "threshold": 500
+        }
+      ]
+    },
+    {
+      "viewport": "tablet-768",
+      "threshold": 650,
+      "steps": [
+        {
+          "phase": "top",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": false,
+          "ariaHidden": "true",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, -90)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 0,
+          "threshold": 650
+        },
+        {
+          "phase": "below-threshold",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": true,
+          "ariaHidden": "false",
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 600,
+          "threshold": 650
+        },
+        {
+          "phase": "scroll-down",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": false,
+          "ariaHidden": "true",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, -90)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 0,
+          "threshold": 650
+        },
+        {
+          "phase": "scroll-up",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": true,
+          "ariaHidden": "false",
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 890,
+          "threshold": 650
+        }
+      ]
+    },
+    {
+      "viewport": "mobile-390",
+      "threshold": 650,
+      "steps": [
+        {
+          "phase": "top",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": false,
+          "ariaHidden": "true",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, -90)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 0,
+          "threshold": 650
+        },
+        {
+          "phase": "below-threshold",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": true,
+          "ariaHidden": "false",
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 600,
+          "threshold": 650
+        },
+        {
+          "phase": "scroll-down",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": false,
+          "ariaHidden": "true",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, -90)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 0,
+          "threshold": 650
+        },
+        {
+          "phase": "scroll-up",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": true,
+          "ariaHidden": "false",
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 890,
+          "threshold": 650
+        }
+      ]
+    },
+    {
+      "viewport": "mobile-375",
+      "threshold": 650,
+      "steps": [
+        {
+          "phase": "top",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": false,
+          "ariaHidden": "true",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, -90)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 0,
+          "threshold": 650
+        },
+        {
+          "phase": "below-threshold",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": true,
+          "ariaHidden": "false",
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 600,
+          "threshold": 650
+        },
+        {
+          "phase": "scroll-down",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": false,
+          "ariaHidden": "true",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, -90)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 0,
+          "threshold": 650
+        },
+        {
+          "phase": "scroll-up",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": true,
+          "ariaHidden": "false",
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 890,
+          "threshold": 650
+        }
+      ]
+    },
+    {
+      "viewport": "mobile-320",
+      "threshold": 650,
+      "steps": [
+        {
+          "phase": "top",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": false,
+          "ariaHidden": "true",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, -90)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 0,
+          "threshold": 650
+        },
+        {
+          "phase": "below-threshold",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": true,
+          "ariaHidden": "false",
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 600,
+          "threshold": 650
+        },
+        {
+          "phase": "scroll-down",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": false,
+          "ariaHidden": "true",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, -90)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 0,
+          "threshold": 650
+        },
+        {
+          "phase": "scroll-up",
+          "hasFloating": true,
+          "hasMainHeader": true,
+          "floatingHeight": 90,
+          "floatingVisible": true,
+          "ariaHidden": "false",
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "overflowX": false,
+          "menuBtn": true,
+          "offcanvasId": "mobile-menu",
+          "scrollY": 890,
+          "threshold": 650
+        }
+      ]
+    }
+  ],
+  "menu": [
+    {
+      "viewport": "desktop-1440",
+      "opened": true,
+      "state": {
+        "offcanvasState": "open",
+        "bodyState": "open",
+        "ariaExpanded": "true",
+        "hasPhones": true,
+        "hasMessengers": true,
+        "hasCta": true,
+        "bodyOverflow": "hidden"
+      },
+      "afterEscape": {
+        "offcanvasState": "closed",
+        "ariaExpanded": "false"
+      }
+    },
+    {
+      "viewport": "mobile-390",
+      "opened": true,
+      "state": {
+        "offcanvasState": "open",
+        "bodyState": "open",
+        "ariaExpanded": "true",
+        "hasPhones": true,
+        "hasMessengers": true,
+        "hasCta": true,
+        "bodyOverflow": "hidden"
+      },
+      "afterEscape": {
+        "offcanvasState": "closed",
+        "ariaExpanded": "false"
+      }
+    }
+  ],
+  "consoleErrors": [
+    {
+      "route": "generic",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "route": "blog-single",
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ],
+  "pageErrors": []
+}

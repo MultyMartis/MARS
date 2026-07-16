@@ -1,0 +1,197 @@
+{
+    "admin": [
+        {
+            "screen": "Общие настройки",
+            "page": "fp02-site-settings-general",
+            "sections_visible": "YES",
+            "repeaters_usable": "YES",
+            "overflow": "NOT_MEASURED",
+            "js_errors": "NOT_MEASURED",
+            "body_fp02_acf_admin": "YES",
+            "body_site_settings": "YES",
+            "css_enqueued": "YES",
+            "result": "PASS",
+            "http": 200
+        },
+        {
+            "screen": "Header block",
+            "page": "fp02-block-header",
+            "sections_visible": "YES",
+            "repeaters_usable": "N\/A",
+            "overflow": "NOT_MEASURED",
+            "js_errors": "NOT_MEASURED",
+            "body_fp02_acf_admin": "YES",
+            "body_site_settings": "YES",
+            "css_enqueued": "YES",
+            "result": "PASS",
+            "http": 200
+        },
+        {
+            "screen": "Footer block",
+            "page": "fp02-block-footer",
+            "sections_visible": "YES",
+            "repeaters_usable": "N\/A",
+            "overflow": "NOT_MEASURED",
+            "js_errors": "NOT_MEASURED",
+            "body_fp02_acf_admin": "YES",
+            "body_site_settings": "YES",
+            "css_enqueued": "YES",
+            "result": "PASS",
+            "http": 200
+        },
+        {
+            "screen": "Final form block",
+            "page": "fp02-block-final-form",
+            "sections_visible": "YES",
+            "repeaters_usable": "N\/A",
+            "overflow": "NOT_MEASURED",
+            "js_errors": "NOT_MEASURED",
+            "body_fp02_acf_admin": "YES",
+            "body_site_settings": "YES",
+            "css_enqueued": "YES",
+            "result": "PASS",
+            "http": 200
+        },
+        {
+            "screen": "Specialists block",
+            "page": "fp02-block-specialists",
+            "sections_visible": "YES",
+            "repeaters_usable": "N\/A",
+            "overflow": "NOT_MEASURED",
+            "js_errors": "NOT_MEASURED",
+            "body_fp02_acf_admin": "YES",
+            "body_site_settings": "YES",
+            "css_enqueued": "YES",
+            "result": "PASS",
+            "http": 200
+        },
+        {
+            "screen": "CTA bands block",
+            "page": "fp02-block-cta-bands",
+            "sections_visible": "YES",
+            "repeaters_usable": "N\/A",
+            "overflow": "NOT_MEASURED",
+            "js_errors": "NOT_MEASURED",
+            "body_fp02_acf_admin": "YES",
+            "body_site_settings": "YES",
+            "css_enqueued": "YES",
+            "result": "PASS",
+            "http": 200
+        },
+        {
+            "screen": "Comfort block",
+            "page": "fp02-block-comfort",
+            "sections_visible": "YES",
+            "repeaters_usable": "YES",
+            "overflow": "NOT_MEASURED",
+            "js_errors": "NOT_MEASURED",
+            "body_fp02_acf_admin": "YES",
+            "body_site_settings": "YES",
+            "css_enqueued": "YES",
+            "result": "PASS",
+            "http": 200
+        },
+        {
+            "screen": "Service section #73",
+            "page": "post.php?post=73&action=edit",
+            "sections_visible": "YES",
+            "repeaters_usable": "YES",
+            "overflow": "NOT_MEASURED",
+            "js_errors": "NOT_MEASURED",
+            "body_fp02_acf_admin": "YES",
+            "body_site_settings": "NO",
+            "css_enqueued": "YES",
+            "result": "PASS",
+            "http": 200
+        },
+        {
+            "screen": "Generic page #1039",
+            "page": "post.php?post=1039&action=edit",
+            "sections_visible": "YES",
+            "repeaters_usable": "N\/A",
+            "overflow": "NOT_MEASURED",
+            "js_errors": "NOT_MEASURED",
+            "body_fp02_acf_admin": "YES",
+            "body_site_settings": "NO",
+            "css_enqueued": "YES",
+            "result": "PASS",
+            "http": 200
+        },
+        {
+            "screen": "Home #4",
+            "page": "post.php?post=4&action=edit",
+            "sections_visible": "YES",
+            "repeaters_usable": "YES",
+            "overflow": "NOT_MEASURED",
+            "js_errors": "NOT_MEASURED",
+            "body_fp02_acf_admin": "YES",
+            "body_site_settings": "NO",
+            "css_enqueued": "YES",
+            "result": "PASS",
+            "http": 200
+        },
+        {
+            "screen": "Services hub #5",
+            "page": "post.php?post=5&action=edit",
+            "sections_visible": "YES",
+            "repeaters_usable": "YES",
+            "overflow": "NOT_MEASURED",
+            "js_errors": "NOT_MEASURED",
+            "body_fp02_acf_admin": "YES",
+            "body_site_settings": "NO",
+            "css_enqueued": "YES",
+            "result": "PASS",
+            "http": 200
+        }
+    ],
+    "frontend": [
+        {
+            "route": "\/",
+            "http": 200,
+            "visual_change": "CHANGED",
+            "result": "REVIEW"
+        },
+        {
+            "route": "\/uslugi\/",
+            "http": 200,
+            "visual_change": "PRESUMED_PASS",
+            "result": "PASS"
+        },
+        {
+            "route": "\/uslugi\/zavisimosti\/",
+            "http": 200,
+            "visual_change": "PRESUMED_PASS",
+            "result": "PASS"
+        },
+        {
+            "route": "\/o-centre\/",
+            "http": 200,
+            "visual_change": "PRESUMED_PASS",
+            "result": "PASS"
+        },
+        {
+            "route": "\/kontakty\/",
+            "http": 200,
+            "visual_change": "PRESUMED_PASS",
+            "result": "PASS"
+        },
+        {
+            "route": "\/privacy-policy\/",
+            "http": 200,
+            "visual_change": "PRESUMED_PASS",
+            "result": "PASS"
+        }
+    ],
+    "sync": [
+        {
+            "file": "assets\/css\/admin-fp02-acf.css",
+            "match": true
+        },
+        {
+            "file": "inc\/admin-editor.php",
+            "match": true
+        }
+    ],
+    "v9_style_prefix": "11A45ABE",
+    "db_writes": 0
+}

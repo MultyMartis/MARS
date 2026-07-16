@@ -1,0 +1,8 @@
+case,http,result
+SUCCESS,200,local accept mail_transport=disabled
+DUP,409,duplicate token rejected
+EMPTY_NAME,422,field name required
+BAD_PHONE,422,field phone invalid
+NO_CONSENT,422,field consent required
+TOO_FAST,422,min fill time
+HONEYPOT,200,silent local accept spam=true

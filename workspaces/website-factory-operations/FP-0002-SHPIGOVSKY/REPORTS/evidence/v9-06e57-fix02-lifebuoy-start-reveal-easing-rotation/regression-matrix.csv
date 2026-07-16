@@ -1,0 +1,12 @@
+route,check,result,notes
+home,hero,PASS,present
+home,floating_header,PASS,present
+home,offcanvas_trigger,PASS,present
+home,form,PASS,data-lead-form present
+home,gallery,PASS,gallery/swiper present
+home,video,N/A,no video element on Home probe (same as prior waves)
+home,lifebuoy_single,PASS,count=1
+home,pointer_events,PASS,none
+home,overflow_x,PASS,0 overflow samples
+all_routes,console_js_errors,PASS,0
+all_routes,php_warnings,PASS,HTTP 200 smoke; no PHP warning probe needed (0 DB writes)

@@ -182,11 +182,54 @@ add_action( 'admin_head-post.php', 'shpigovsky_hide_native_editor_admin_css' );
 add_action( 'admin_head-post-new.php', 'shpigovsky_hide_native_editor_admin_css' );
 
 /**
+ * Current FP02 ACF options page slug on admin.php screens.
+ *
+ * @return string
+ */
+function shpigovsky_admin_fp02_options_page_slug() {
+	if ( ! is_admin() ) {
+		return '';
+	}
+
+	// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only screen detection.
+	if ( ! isset( $_GET['page'] ) ) {
+		return '';
+	}
+
+	return sanitize_key( wp_unslash( $_GET['page'] ) );
+}
+
+/**
+ * Whether the current admin screen is FP02 Site Settings or a reusable block options page.
+ *
+ * V9-06E55 — includes fp02-block-* siblings registered under «Настройки сайта».
+ *
+ * @param string $hook_suffix Current admin hook suffix.
+ * @return bool
+ */
+function shpigovsky_admin_is_fp02_site_settings_screen( $hook_suffix = '' ) {
+	$page = shpigovsky_admin_fp02_options_page_slug();
+
+	if ( $page && ( 0 === strpos( $page, 'fp02-site-settings' ) || 0 === strpos( $page, 'fp02-block-' ) ) ) {
+		return true;
+	}
+
+	if ( is_string( $hook_suffix ) && '' !== $hook_suffix ) {
+		if ( false !== strpos( $hook_suffix, 'fp02-site-settings' ) || false !== strpos( $hook_suffix, 'fp02-block-' ) ) {
+			return true;
+		}
+	}
+
+	return false;
+}
+
+/**
  * Whether the current admin screen should load FP-0002 ACF admin CSS.
  *
  * V9-06E41 — front page; V9-06E43 — Services hub; V9-06E44 — service CPT;
  * V9-06E53 — all page + service edit screens + FP02 Site Settings options pages
  * so thematic blocks and generic-page ACF share the same visual layer.
+ * V9-06E55 — fp02-block-* reusable block options pages under Site Settings menu.
  *
  * @param string $hook_suffix Current admin hook suffix.
  * @return bool
@@ -201,8 +244,7 @@ function shpigovsky_admin_should_enqueue_fp02_acf_css( $hook_suffix ) {
 		}
 	}
 
-	// ACF options pages under FP02 Site Settings (slug contains fp02-site-settings).
-	if ( is_string( $hook_suffix ) && false !== strpos( $hook_suffix, 'fp02-site-settings' ) ) {
+	if ( shpigovsky_admin_is_fp02_site_settings_screen( $hook_suffix ) ) {
 		return true;
 	}
 
@@ -223,6 +265,10 @@ function shpigovsky_fp02_acf_admin_body_class( $classes ) {
 	}
 
 	$classes .= ' fp02-acf-admin';
+
+	if ( shpigovsky_admin_is_fp02_site_settings_screen( $hook ) ) {
+		$classes .= ' fp02-site-settings-admin';
+	}
 
 	return $classes;
 }

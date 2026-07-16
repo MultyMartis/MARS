@@ -6,6 +6,7 @@
  * V9-06E44 — service layout variant help.
  * V9-06E45 / FIX03 — layout selector / technical hide.
  * V9-06E53 — thematic block separation; remove noisy internal grey field dividers.
+ * V9-06E55 — Site Settings options pages (.postbox groups, repeaters, block subpages).
  *
  * Scoped to FP-0002 admin screens via body.fp02-acf-admin (theme enqueue).
  * Does not alter public frontend CSS.
@@ -146,4 +147,95 @@ body.fp02-acf-admin .acf-postbox .acf-fields > .acf-field:not(.fp02-acf-section-
 body.fp02-acf-admin .acf-postbox {
 	margin-top: 12px;
 	margin-bottom: 16px;
+}
+
+/* -------------------------------------------------------------------------
+ * V9-06E55 — Site Settings + reusable block options pages
+ *
+ * Options screens render ACF groups as WP .postbox elements (often without
+ * .acf-postbox). Top-level fields are direct children of .inside — not wrapped
+ * in .acf-fields — so E53 .acf-postbox rules do not apply there.
+ * ------------------------------------------------------------------------- */
+
+body.fp02-site-settings-admin #normal-sortables > .postbox[id^="acf-group_"] > .inside > .acf-field,
+body.fp02-site-settings-admin #normal-sortables > .postbox[id^="acf-group_"] .acf-field .acf-fields > .acf-field {
+	border-top: none;
+}
+
+body.fp02-site-settings-admin #normal-sortables > .postbox[id^="acf-group_"] > .inside > .acf-field:not(.acf-field-message) {
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+/* Major thematic group — postbox title matches E53 .fp02-acf-section-title weight. */
+body.fp02-site-settings-admin #normal-sortables > .postbox[id^="acf-group_"] {
+	margin-top: 20px;
+	margin-bottom: 16px;
+	border: 1px solid #c3c4c7;
+	border-radius: 2px;
+	box-shadow: none;
+}
+
+body.fp02-site-settings-admin #normal-sortables > .postbox[id^="acf-group_"]:first-child {
+	margin-top: 0;
+}
+
+body.fp02-site-settings-admin #normal-sortables > .postbox[id^="acf-group_"] > .postbox-header {
+	background: #f6f7f7;
+	border-bottom: 1px solid #c3c4c7;
+}
+
+body.fp02-site-settings-admin #normal-sortables > .postbox[id^="acf-group_"] > .postbox-header .hndle {
+	font-size: 20px !important;
+	font-weight: 600;
+	line-height: 1.3;
+	color: #1d2327;
+	padding: 14px 12px 10px;
+}
+
+/* In-group notices stay normal label size. */
+body.fp02-site-settings-admin #normal-sortables > .postbox[id^="acf-group_"] .acf-field-message > .acf-label > label {
+	font-size: 13px !important;
+	font-weight: 600;
+	line-height: 1.4;
+}
+
+body.fp02-site-settings-admin #normal-sortables > .postbox[id^="acf-group_"] .acf-field-message > .acf-input {
+	padding-top: 4px;
+}
+
+/* Repeaters — readable row hierarchy without internal grey field noise. */
+body.fp02-site-settings-admin .acf-field-repeater > .acf-label > label {
+	font-size: 13px !important;
+	font-weight: 600;
+	line-height: 1.4;
+}
+
+body.fp02-site-settings-admin .acf-field-repeater .acf-row .acf-fields > .acf-field {
+	border-top: none;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+body.fp02-site-settings-admin .acf-repeater.-row > .acf-table > tbody > .acf-row:not(.acf-clone) > td {
+	background: #fafafa;
+}
+
+body.fp02-site-settings-admin .acf-repeater.-row > .acf-table > tbody > .acf-row:not(.acf-clone) > td.acf-row-handle {
+	background: #f0f0f1;
+}
+
+body.fp02-site-settings-admin .acf-field-repeater .acf-repeater-add-row,
+body.fp02-site-settings-admin .acf-field-repeater > .acf-input > .acf-actions .acf-button {
+	margin-top: 10px;
+}
+
+/* Publish box stays compact; options form footer readable. */
+body.fp02-site-settings-admin #submitdiv.postbox {
+	margin-top: 0;
+	margin-bottom: 12px;
+}
+
+body.fp02-site-settings-admin .acf-settings-wrap .acf-form-submit {
+	margin-top: 8px;
 }

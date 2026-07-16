@@ -1,0 +1,695 @@
+{
+  "aspect": [
+    {
+      "viewport": "767x1024",
+      "ordinary": {
+        "w": 722,
+        "h": 505.390625,
+        "aspect": 1.4285979285824701,
+        "aspectRatioCss": "100 / 70",
+        "heightCss": "505.391px",
+        "maxHeightCss": "none",
+        "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "home": {
+        "w": 752,
+        "h": 526.390625,
+        "aspect": 1.4285968713823503,
+        "aspectRatioCss": "100 / 70",
+        "heightCss": "526.391px",
+        "maxHeightCss": "none",
+        "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "deltaAspect": 0.0000010572001198916325,
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "ordinary": {
+        "w": 345,
+        "h": 517.5,
+        "aspect": 0.6666666666666666,
+        "aspectRatioCss": "100 / 150",
+        "heightCss": "517.5px",
+        "maxHeightCss": "none",
+        "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "home": {
+        "w": 375,
+        "h": 562.5,
+        "aspect": 0.6666666666666666,
+        "aspectRatioCss": "100 / 150",
+        "heightCss": "562.5px",
+        "maxHeightCss": "none",
+        "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "deltaAspect": 0,
+      "pass": true
+    },
+    {
+      "viewport": "375x812",
+      "ordinary": {
+        "w": 330,
+        "h": 495,
+        "aspect": 0.6666666666666666,
+        "aspectRatioCss": "100 / 150",
+        "heightCss": "495px",
+        "maxHeightCss": "none",
+        "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "home": {
+        "w": 360,
+        "h": 540,
+        "aspect": 0.6666666666666666,
+        "aspectRatioCss": "100 / 150",
+        "heightCss": "540px",
+        "maxHeightCss": "none",
+        "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "deltaAspect": 0,
+      "pass": true
+    },
+    {
+      "viewport": "320x568",
+      "ordinary": {
+        "w": 290,
+        "h": 493,
+        "aspect": 0.5882352941176471,
+        "aspectRatioCss": "100 / 170",
+        "heightCss": "493px",
+        "maxHeightCss": "none",
+        "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "home": {
+        "w": 320,
+        "h": 544,
+        "aspect": 0.5882352941176471,
+        "aspectRatioCss": "100 / 170",
+        "heightCss": "544px",
+        "maxHeightCss": "none",
+        "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+        "fontSize": "18px",
+        "fontWeight": "300",
+        "lineHeight": "24px",
+        "letterSpacing": "normal"
+      },
+      "deltaAspect": 0,
+      "pass": true
+    }
+  ],
+  "gallery": [
+    {
+      "viewport": "1440x900",
+      "home": {
+        "found": true,
+        "slidesPerViewParam": 3.5,
+        "spaceBetween": 30,
+        "breakpoints": {
+          "431": {
+            "slidesPerView": 2.15,
+            "spaceBetween": 10
+          },
+          "768": {
+            "slidesPerView": 3.15,
+            "spaceBetween": 20
+          },
+          "1025": {
+            "slidesPerView": 3.5,
+            "spaceBetween": 30
+          }
+        },
+        "loop": false,
+        "autoplay": true,
+        "navigation": false,
+        "watchOverflow": true,
+        "visibleCount": 4,
+        "slideWidth": 312.84375,
+        "gap": 30,
+        "imageHeight": 310,
+        "imageCssHeight": "310px",
+        "imageMaxHeight": "310px",
+        "imageObjectFit": "cover",
+        "pageOverflow": false,
+        "wrapperDisplay": "flex"
+      },
+      "service": {
+        "found": true,
+        "slidesPerViewParam": 3.5,
+        "spaceBetween": 30,
+        "breakpoints": {
+          "431": {
+            "slidesPerView": 2.15,
+            "spaceBetween": 10
+          },
+          "768": {
+            "slidesPerView": 3.15,
+            "spaceBetween": 20
+          },
+          "1025": {
+            "slidesPerView": 3.5,
+            "spaceBetween": 30
+          }
+        },
+        "loop": false,
+        "autoplay": true,
+        "navigation": false,
+        "watchOverflow": true,
+        "visibleCount": 4,
+        "slideWidth": 312.84375,
+        "gap": 30,
+        "imageHeight": 310,
+        "imageCssHeight": "310px",
+        "imageMaxHeight": "310px",
+        "imageObjectFit": "cover",
+        "pageOverflow": false,
+        "wrapperDisplay": "flex"
+      },
+      "sameSwiperParams": true,
+      "imageHeightDelta": 0,
+      "pass": true
+    },
+    {
+      "viewport": "1280x800",
+      "home": {
+        "found": true,
+        "slidesPerViewParam": 3.5,
+        "spaceBetween": 30,
+        "breakpoints": {
+          "431": {
+            "slidesPerView": 2.15,
+            "spaceBetween": 10
+          },
+          "768": {
+            "slidesPerView": 3.15,
+            "spaceBetween": 20
+          },
+          "1025": {
+            "slidesPerView": 3.5,
+            "spaceBetween": 30
+          }
+        },
+        "loop": false,
+        "autoplay": true,
+        "navigation": false,
+        "watchOverflow": true,
+        "visibleCount": 4,
+        "slideWidth": 312.84375,
+        "gap": 30,
+        "imageHeight": 310,
+        "imageCssHeight": "310px",
+        "imageMaxHeight": "310px",
+        "imageObjectFit": "cover",
+        "pageOverflow": false,
+        "wrapperDisplay": "flex"
+      },
+      "service": {
+        "found": true,
+        "slidesPerViewParam": 3.5,
+        "spaceBetween": 30,
+        "breakpoints": {
+          "431": {
+            "slidesPerView": 2.15,
+            "spaceBetween": 10
+          },
+          "768": {
+            "slidesPerView": 3.15,
+            "spaceBetween": 20
+          },
+          "1025": {
+            "slidesPerView": 3.5,
+            "spaceBetween": 30
+          }
+        },
+        "loop": false,
+        "autoplay": true,
+        "navigation": false,
+        "watchOverflow": true,
+        "visibleCount": 4,
+        "slideWidth": 312.84375,
+        "gap": 30,
+        "imageHeight": 310,
+        "imageCssHeight": "310px",
+        "imageMaxHeight": "310px",
+        "imageObjectFit": "cover",
+        "pageOverflow": false,
+        "wrapperDisplay": "flex"
+      },
+      "sameSwiperParams": true,
+      "imageHeightDelta": 0,
+      "pass": true
+    },
+    {
+      "viewport": "1024x768",
+      "home": {
+        "found": true,
+        "slidesPerViewParam": 3.15,
+        "spaceBetween": 20,
+        "breakpoints": {
+          "431": {
+            "slidesPerView": 2.15,
+            "spaceBetween": 10
+          },
+          "768": {
+            "slidesPerView": 3.15,
+            "spaceBetween": 20
+          },
+          "1025": {
+            "slidesPerView": 3.5,
+            "spaceBetween": 30
+          }
+        },
+        "loop": false,
+        "autoplay": true,
+        "navigation": false,
+        "watchOverflow": true,
+        "visibleCount": 4,
+        "slideWidth": 297.140625,
+        "gap": 20,
+        "imageHeight": 280,
+        "imageCssHeight": "280px",
+        "imageMaxHeight": "310px",
+        "imageObjectFit": "cover",
+        "pageOverflow": false,
+        "wrapperDisplay": "flex"
+      },
+      "service": {
+        "found": true,
+        "slidesPerViewParam": 3.15,
+        "spaceBetween": 20,
+        "breakpoints": {
+          "431": {
+            "slidesPerView": 2.15,
+            "spaceBetween": 10
+          },
+          "768": {
+            "slidesPerView": 3.15,
+            "spaceBetween": 20
+          },
+          "1025": {
+            "slidesPerView": 3.5,
+            "spaceBetween": 30
+          }
+        },
+        "loop": false,
+        "autoplay": true,
+        "navigation": false,
+        "watchOverflow": true,
+        "visibleCount": 4,
+        "slideWidth": 297.140625,
+        "gap": 20,
+        "imageHeight": 280,
+        "imageCssHeight": "280px",
+        "imageMaxHeight": "280px",
+        "imageObjectFit": "cover",
+        "pageOverflow": false,
+        "wrapperDisplay": "flex"
+      },
+      "sameSwiperParams": true,
+      "imageHeightDelta": 0,
+      "pass": true
+    },
+    {
+      "viewport": "768x1024",
+      "home": {
+        "found": true,
+        "slidesPerViewParam": 3.15,
+        "spaceBetween": 20,
+        "breakpoints": {
+          "431": {
+            "slidesPerView": 2.15,
+            "spaceBetween": 10
+          },
+          "768": {
+            "slidesPerView": 3.15,
+            "spaceBetween": 20
+          },
+          "1025": {
+            "slidesPerView": 3.5,
+            "spaceBetween": 30
+          }
+        },
+        "loop": false,
+        "autoplay": true,
+        "navigation": false,
+        "watchOverflow": true,
+        "visibleCount": 4,
+        "slideWidth": 215.859375,
+        "gap": 20,
+        "imageHeight": 280,
+        "imageCssHeight": "280px",
+        "imageMaxHeight": "310px",
+        "imageObjectFit": "cover",
+        "pageOverflow": false,
+        "wrapperDisplay": "flex"
+      },
+      "service": {
+        "found": true,
+        "slidesPerViewParam": 3.15,
+        "spaceBetween": 20,
+        "breakpoints": {
+          "431": {
+            "slidesPerView": 2.15,
+            "spaceBetween": 10
+          },
+          "768": {
+            "slidesPerView": 3.15,
+            "spaceBetween": 20
+          },
+          "1025": {
+            "slidesPerView": 3.5,
+            "spaceBetween": 30
+          }
+        },
+        "loop": false,
+        "autoplay": true,
+        "navigation": false,
+        "watchOverflow": true,
+        "visibleCount": 4,
+        "slideWidth": 215.859375,
+        "gap": 20,
+        "imageHeight": 280,
+        "imageCssHeight": "280px",
+        "imageMaxHeight": "280px",
+        "imageObjectFit": "cover",
+        "pageOverflow": false,
+        "wrapperDisplay": "flex"
+      },
+      "sameSwiperParams": true,
+      "imageHeightDelta": 0,
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "home": {
+        "found": true,
+        "slidesPerViewParam": 4,
+        "spaceBetween": 30,
+        "breakpoints": {
+          "431": {
+            "slidesPerView": 2.15,
+            "spaceBetween": 10
+          },
+          "768": {
+            "slidesPerView": 3.15,
+            "spaceBetween": 20
+          },
+          "1025": {
+            "slidesPerView": 3.5,
+            "spaceBetween": 30
+          }
+        },
+        "loop": false,
+        "autoplay": true,
+        "navigation": false,
+        "watchOverflow": true,
+        "visibleCount": 4,
+        "slideWidth": 63.75,
+        "gap": 30,
+        "imageHeight": 280,
+        "imageCssHeight": "280px",
+        "imageMaxHeight": "310px",
+        "imageObjectFit": "cover",
+        "pageOverflow": false,
+        "wrapperDisplay": "flex"
+      },
+      "service": {
+        "found": true,
+        "slidesPerViewParam": 4,
+        "spaceBetween": 30,
+        "breakpoints": {
+          "431": {
+            "slidesPerView": 2.15,
+            "spaceBetween": 10
+          },
+          "768": {
+            "slidesPerView": 3.15,
+            "spaceBetween": 20
+          },
+          "1025": {
+            "slidesPerView": 3.5,
+            "spaceBetween": 30
+          }
+        },
+        "loop": false,
+        "autoplay": true,
+        "navigation": false,
+        "watchOverflow": true,
+        "visibleCount": 4,
+        "slideWidth": 63.75,
+        "gap": 30,
+        "imageHeight": 280,
+        "imageCssHeight": "280px",
+        "imageMaxHeight": "280px",
+        "imageObjectFit": "cover",
+        "pageOverflow": false,
+        "wrapperDisplay": "flex"
+      },
+      "sameSwiperParams": true,
+      "imageHeightDelta": 0,
+      "pass": true
+    },
+    {
+      "viewport": "375x812",
+      "home": {
+        "found": true,
+        "slidesPerViewParam": 4,
+        "spaceBetween": 30,
+        "breakpoints": {
+          "431": {
+            "slidesPerView": 2.15,
+            "spaceBetween": 10
+          },
+          "768": {
+            "slidesPerView": 3.15,
+            "spaceBetween": 20
+          },
+          "1025": {
+            "slidesPerView": 3.5,
+            "spaceBetween": 30
+          }
+        },
+        "loop": false,
+        "autoplay": true,
+        "navigation": false,
+        "watchOverflow": true,
+        "visibleCount": 4,
+        "slideWidth": 60,
+        "gap": 30,
+        "imageHeight": 280,
+        "imageCssHeight": "280px",
+        "imageMaxHeight": "310px",
+        "imageObjectFit": "cover",
+        "pageOverflow": false,
+        "wrapperDisplay": "flex"
+      },
+      "service": {
+        "found": true,
+        "slidesPerViewParam": 4,
+        "spaceBetween": 30,
+        "breakpoints": {
+          "431": {
+            "slidesPerView": 2.15,
+            "spaceBetween": 10
+          },
+          "768": {
+            "slidesPerView": 3.15,
+            "spaceBetween": 20
+          },
+          "1025": {
+            "slidesPerView": 3.5,
+            "spaceBetween": 30
+          }
+        },
+        "loop": false,
+        "autoplay": true,
+        "navigation": false,
+        "watchOverflow": true,
+        "visibleCount": 4,
+        "slideWidth": 60,
+        "gap": 30,
+        "imageHeight": 280,
+        "imageCssHeight": "280px",
+        "imageMaxHeight": "280px",
+        "imageObjectFit": "cover",
+        "pageOverflow": false,
+        "wrapperDisplay": "flex"
+      },
+      "sameSwiperParams": true,
+      "imageHeightDelta": 0,
+      "pass": true
+    },
+    {
+      "viewport": "320x568",
+      "home": {
+        "found": true,
+        "slidesPerViewParam": 4,
+        "spaceBetween": 30,
+        "breakpoints": {
+          "431": {
+            "slidesPerView": 2.15,
+            "spaceBetween": 10
+          },
+          "768": {
+            "slidesPerView": 3.15,
+            "spaceBetween": 20
+          },
+          "1025": {
+            "slidesPerView": 3.5,
+            "spaceBetween": 30
+          }
+        },
+        "loop": false,
+        "autoplay": true,
+        "navigation": false,
+        "watchOverflow": true,
+        "visibleCount": 4,
+        "slideWidth": 50,
+        "gap": 30,
+        "imageHeight": 280,
+        "imageCssHeight": "280px",
+        "imageMaxHeight": "310px",
+        "imageObjectFit": "cover",
+        "pageOverflow": false,
+        "wrapperDisplay": "flex"
+      },
+      "service": {
+        "found": true,
+        "slidesPerViewParam": 4,
+        "spaceBetween": 30,
+        "breakpoints": {
+          "431": {
+            "slidesPerView": 2.15,
+            "spaceBetween": 10
+          },
+          "768": {
+            "slidesPerView": 3.15,
+            "spaceBetween": 20
+          },
+          "1025": {
+            "slidesPerView": 3.5,
+            "spaceBetween": 30
+          }
+        },
+        "loop": false,
+        "autoplay": true,
+        "navigation": false,
+        "watchOverflow": true,
+        "visibleCount": 4,
+        "slideWidth": 50,
+        "gap": 30,
+        "imageHeight": 280,
+        "imageCssHeight": "280px",
+        "imageMaxHeight": "280px",
+        "imageObjectFit": "cover",
+        "pageOverflow": false,
+        "wrapperDisplay": "flex"
+      },
+      "sameSwiperParams": true,
+      "imageHeightDelta": 0,
+      "pass": true
+    }
+  ],
+  "heroSlides": [
+    {
+      "index": 0,
+      "title": "Шпиговский дом",
+      "tagline": "Центр профилактики и лечения зависимостей",
+      "hasTaglineEl": true,
+      "hasTitleEl": true
+    },
+    {
+      "index": 1,
+      "title": "Центр реабилитации",
+      "tagline": null,
+      "hasTaglineEl": false,
+      "hasTitleEl": true
+    }
+  ],
+  "fonts": {
+    "homeTitle": {
+      "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+      "fontSize": "30px",
+      "fontWeight": "400",
+      "lineHeight": "30px",
+      "letterSpacing": "normal"
+    },
+    "ordinaryTitle": {
+      "fontFamily": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvetica Neue\", arial, sans-serif",
+      "fontSize": "26px",
+      "fontWeight": "400",
+      "lineHeight": "30px",
+      "letterSpacing": "normal"
+    }
+  },
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "jsErrors": []
+    },
+    {
+      "route": "/uslugi/",
+      "status": 200,
+      "jsErrors": []
+    },
+    {
+      "route": "/uslugi/zavisimosti/",
+      "status": 200,
+      "jsErrors": []
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+      "status": 200,
+      "jsErrors": []
+    },
+    {
+      "route": "/uslugi/psihicheskie-rasstroystva/",
+      "status": 404,
+      "jsErrors": []
+    },
+    {
+      "route": "/o-centre/",
+      "status": 200,
+      "jsErrors": []
+    },
+    {
+      "route": "/kontakty/",
+      "status": 200,
+      "jsErrors": []
+    },
+    {
+      "route": "/blog/",
+      "status": 200,
+      "jsErrors": []
+    }
+  ],
+  "consoleErrors": []
+}

@@ -1,0 +1,5 @@
+path,role,pre_wave_sha256_prefix,notes
+WORDPRESS/theme/shpigovsky/assets/css/v9-style.css,protected-operator-css,0E1D29F169A38612,source=runtime MATCH pre-wave FU02 baseline
+WORDPRESS/theme/shpigovsky/inc/assets.php,enqueue-may-change,2D39A9ECCAF0E97F,no preload currently; may stay unchanged
+WORDPRESS/theme/shpigovsky/assets/fonts/,font-dir-additive,N/A,inter only pre-wave; libertinus to be added
+INCOMING/.../lifebuoy.webp,RESERVED-EXCLUDED,B4F1C9F6A09A68F6,must not be modified in FU02
