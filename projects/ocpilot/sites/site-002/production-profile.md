@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-16 (Run 4.278 — SITE-002-PROD-BLOG-SEO-URL-ROUTING-FIX-01 — blog SEO URL routing; prior 4.277 literal `\n` cleanup)
+**Last updated:** 2026-07-16 (Run 4.279 — SITE-002-PROD-BLOG-WAVE-FINAL-SMOKE-01 — final smoke ALL CHECKS GREEN; prior 4.278 blog SEO routing)
 
 ---
 
@@ -92,7 +92,7 @@ Do not claim that Production exactly matches TEST unless evidence proves it.
 | Mail recipients architecture (Production) | **ACTIVE — TEMP TEST RECIPIENT** (Run 4.264 confirm · Run 4.265 re-verify · Run 4.266 full form mail rerun) — `config_mail_alert_email` currently **only** `client.leads@polygon-ws.ru`; `info@bzpm.ru` **not** restored yet; handler `catalog/controller/checkout/anketa.php`; admin-managed comma list · empty-lead backend guard OK (8 valid 200 / 3 negatives 400) · [full rerun](reports/SITE-002-PROD-FORM-MAIL-FULL-TEST-RERUN-01.md) · [follow-up](reports/SITE-002-PROD-FORM-EMPTY-LEAD-GUARD-FOLLOWUP-01.md) · [audit](reports/SITE-002-PROD-1C-LOGS-AND-FORM-MAIL-AUDIT-01.md) · [discovery](reports/SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01.md) · [confirmation](reports/SITE-002-PROD-MAIL-RECIPIENTS-ADMIN-ADD-01.md) |
 | Mail system architecture (Production) | **DISCOVERED — REDESIGN CHARTERS READY** (Run 4.222) — read-only full mail map: 29 public forms → anketa; standard OC twig mails (order/account/affiliate); no service info in admin form mail today; hybrid shared-renderer recommended; 5 future charters; Beget backup confirmed; 0 Production mutation · [report](reports/SITE-002-PROD-MAIL-SYSTEM-DISCOVERY-01.md) · [audit baseline](baselines/SITE-002-MAIL-SYSTEM-DISCOVERY-01.md) |
 | Catalog default sort (Production) | `pd.name ASC` when `sort`/`order` omitted |
-| Custom blog / scheduled news (Production) | **ACTIVE** (Run **4.278**) — blog SEO URLs work: `/blog/news/{slug}` + `/blog/news` via `seo_url.php` full-path bridge; `oc_seo_url` query `blog_post_id=N` / `blog_category_id=N`; active startup **`seo_url`** (not `seo_pro`); prior **4.277** literal `\n` cleanup · [SEO routing 4.278](reports/SITE-002-PROD-BLOG-SEO-URL-ROUTING-FIX-01.md) · [newline cleanup 4.277](reports/SITE-002-PROD-BLOG-LITERAL-NEWLINE-CLEANUP-01.md) |
+| Custom blog / scheduled news (Production) | **ACTIVE** (Run **4.279** smoke GREEN) — post **13** live; SEO `/blog/news/{slug}` + `/blog/news` via `seo_url.php` full-path bridge; sliders newest-first + reading time; brand `Завод` caps OK; literal `\n` **0**; sitemap **1714** (blog URLs not in Google sitemap by strategy); monitor **NO_ACTION_REQUIRED** · [final smoke 4.279](reports/SITE-002-PROD-BLOG-WAVE-FINAL-SMOKE-01.md) · [SEO routing 4.278](reports/SITE-002-PROD-BLOG-SEO-URL-ROUTING-FIX-01.md) |
 
 ---
 
