@@ -1,0 +1,136 @@
+{
+    "key": "group_fp02_block_comfort_intro",
+    "title": "Reusable Block — Comfort Intro",
+    "fields": [
+        {
+            "key": "field_fp02_comfort_heading",
+            "label": "Комфорт — заголовок",
+            "name": "comfort_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "ID": 0,
+            "prefix": "acf",
+            "value": null,
+            "menu_order": 0,
+            "id": "",
+            "class": "",
+            "parent": "group_fp02_block_comfort_intro",
+            "_name": "comfort_heading",
+            "_valid": 1
+        },
+        {
+            "key": "field_fp02_comfort_lead",
+            "label": "Комфорт — лид",
+            "name": "comfort_lead",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 4,
+            "ID": 0,
+            "prefix": "acf",
+            "value": null,
+            "menu_order": 1,
+            "id": "",
+            "class": "",
+            "parent": "group_fp02_block_comfort_intro",
+            "_name": "comfort_lead",
+            "_valid": 1
+        },
+        {
+            "key": "field_fp02_comfort_all_link_label",
+            "label": "Комфорт — текст ссылки",
+            "name": "comfort_all_link_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "ID": 0,
+            "prefix": "acf",
+            "value": null,
+            "menu_order": 2,
+            "id": "",
+            "class": "",
+            "parent": "group_fp02_block_comfort_intro",
+            "_name": "comfort_all_link_label",
+            "_valid": 1
+        },
+        {
+            "key": "field_fp02_comfort_all_link_url",
+            "label": "Комфорт — URL ссылки",
+            "name": "comfort_all_link_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "ID": 0,
+            "prefix": "acf",
+            "value": null,
+            "menu_order": 3,
+            "id": "",
+            "class": "",
+            "parent": "group_fp02_block_comfort_intro",
+            "_name": "comfort_all_link_url",
+            "_valid": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "fp02-block-comfort-intro"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "FP-0002 V9-06C canonical source field group. Runtime registration occurs only after delivery authorization.",
+    "show_in_rest": 0,
+    "modified": 1784452800,
+    "ID": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "local": "php",
+    "_valid": true
+}

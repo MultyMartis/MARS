@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "success": true,
+  "message": "Заявка принята на локальном стенде. Отправка email здесь отключена — письмо не уходило.",
+  "mode": "local",
+  "mail_transport": "disabled",
+  "module_enabled": true,
+  "future_recipient_constant": "client.leads@polygon-ws.ru",
+  "public_markup_contains_recipient": false,
+  "notes": "Captured from WP-bootstrapped wp_ajax_nopriv_fp02_lead_submit smoke on 2026-07-16. No wp_mail invoked."
+}

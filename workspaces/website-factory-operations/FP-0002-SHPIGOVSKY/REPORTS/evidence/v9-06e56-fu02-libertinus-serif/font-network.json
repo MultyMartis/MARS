@@ -1,0 +1,46 @@
+[
+  {
+    "route": "home",
+    "url": "http://shpigovsky.test/",
+    "requests": [
+      {
+        "url": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/fonts/libertinus-serif/libertinus-serif-regular.ttf",
+        "status": 200,
+        "contentType": "font/ttf"
+      }
+    ]
+  },
+  {
+    "route": "section",
+    "url": "http://shpigovsky.test/uslugi/zavisimosti/",
+    "requests": [
+      {
+        "url": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/fonts/libertinus-serif/libertinus-serif-regular.ttf",
+        "status": 200,
+        "contentType": "font/ttf"
+      }
+    ]
+  },
+  {
+    "route": "service1",
+    "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+    "requests": [
+      {
+        "url": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/fonts/libertinus-serif/libertinus-serif-regular.ttf",
+        "status": 200,
+        "contentType": "font/ttf"
+      }
+    ]
+  },
+  {
+    "route": "uslugi",
+    "url": "http://shpigovsky.test/uslugi/",
+    "requests": [
+      {
+        "url": "http://shpigovsky.test/wp-content/themes/shpigovsky/assets/fonts/libertinus-serif/libertinus-serif-regular.ttf",
+        "status": 200,
+        "contentType": "font/ttf"
+      }
+    ]
+  }
+]

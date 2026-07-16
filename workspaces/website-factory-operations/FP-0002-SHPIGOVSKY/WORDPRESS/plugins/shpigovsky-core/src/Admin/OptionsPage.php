@@ -35,6 +35,24 @@ final class OptionsPage implements ModuleInterface {
 	public const BLOCKS_PARENT_SLUG = 'fp02-site-settings-blocks';
 
 	/**
+	 * Canonical ACF storage post_id for comfort / gallery / requirements.
+	 * Frontend get_field(..., 'fp02-block-comfort') MUST keep using this.
+	 */
+	public const COMFORT_STORAGE_POST_ID = 'fp02-block-comfort';
+
+	/**
+	 * Legacy comfort menu slug — hidden; redirects to intro.
+	 */
+	public const COMFORT_LEGACY_SLUG = 'fp02-block-comfort';
+
+	/**
+	 * Split comfort admin menu slugs (location only; storage unchanged).
+	 */
+	public const COMFORT_INTRO_SLUG         = 'fp02-block-comfort-intro';
+	public const COMFORT_GALLERY_SLUG       = 'fp02-block-comfort-gallery';
+	public const COMFORT_REQUIREMENTS_SLUG  = 'fp02-block-comfort-requirements';
+
+	/**
 	 * {@inheritdoc}
 	 */
 	public static function id() {
@@ -54,6 +72,8 @@ final class OptionsPage implements ModuleInterface {
 	public static function register() {
 		add_action( 'acf/init', array( __CLASS__, 'register_options_pages' ) );
 		add_action( 'acf/input/admin_head', array( __CLASS__, 'render_skeleton_admin_notice' ) );
+		add_action( 'admin_menu', array( __CLASS__, 'hide_legacy_comfort_menu' ), 999 );
+		add_action( 'admin_init', array( __CLASS__, 'redirect_legacy_comfort_page' ) );
 	}
 
 	/**
@@ -107,6 +127,45 @@ final class OptionsPage implements ModuleInterface {
 		foreach ( self::get_reusable_block_subpages() as $subpage ) {
 			acf_add_options_sub_page( $subpage );
 		}
+
+		// Legacy slug kept registered for bookmarks / old links; menu item hidden.
+		acf_add_options_sub_page(
+			array(
+				'page_title'  => __( 'Комфорт / преимущества (архив)', 'shpigovsky-core' ),
+				'menu_title'  => __( 'Комфорт / преимущества', 'shpigovsky-core' ),
+				'menu_slug'   => self::COMFORT_LEGACY_SLUG,
+				'parent_slug' => self::PARENT_SLUG,
+				'post_id'     => self::COMFORT_STORAGE_POST_ID,
+				'capability'  => 'manage_options',
+				'autoload'    => false,
+			)
+		);
+	}
+
+	/**
+	 * Remove legacy comfort submenu after ACF registers it.
+	 */
+	public static function hide_legacy_comfort_menu() {
+		remove_submenu_page( self::PARENT_SLUG, self::COMFORT_LEGACY_SLUG );
+	}
+
+	/**
+	 * Redirect legacy comfort page to intro split page.
+	 */
+	public static function redirect_legacy_comfort_page() {
+		if ( ! is_admin() ) {
+			return;
+		}
+
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- read-only redirect gate.
+		$page = isset( $_GET['page'] ) ? sanitize_key( wp_unslash( $_GET['page'] ) ) : '';
+
+		if ( self::COMFORT_LEGACY_SLUG !== $page ) {
+			return;
+		}
+
+		wp_safe_redirect( admin_url( 'admin.php?page=' . self::COMFORT_INTRO_SLUG ) );
+		exit;
 	}
 
 	/**
@@ -141,8 +200,19 @@ final class OptionsPage implements ModuleInterface {
 				'menu_slug'  => 'fp02-block-cta-bands',
 			),
 			array(
-				'menu_title' => __( 'Комфорт / преимущества', 'shpigovsky-core' ),
-				'menu_slug'  => 'fp02-block-comfort',
+				'menu_title' => __( 'Комфорт — вводный блок', 'shpigovsky-core' ),
+				'menu_slug'  => self::COMFORT_INTRO_SLUG,
+				'post_id'    => self::COMFORT_STORAGE_POST_ID,
+			),
+			array(
+				'menu_title' => __( 'Комфорт — галерея', 'shpigovsky-core' ),
+				'menu_slug'  => self::COMFORT_GALLERY_SLUG,
+				'post_id'    => self::COMFORT_STORAGE_POST_ID,
+			),
+			array(
+				'menu_title' => __( 'Комфорт — требования', 'shpigovsky-core' ),
+				'menu_slug'  => self::COMFORT_REQUIREMENTS_SLUG,
+				'post_id'    => self::COMFORT_STORAGE_POST_ID,
 			),
 			array(
 				'menu_title' => __( 'Требования и преимущества', 'shpigovsky-core' ),
@@ -173,13 +243,26 @@ final class OptionsPage implements ModuleInterface {
 			);
 
 			if ( $is_fielded ) {
-				$subpage['post_id'] = $block['menu_slug'];
+				$subpage['post_id'] = isset( $block['post_id'] ) ? $block['post_id'] : $block['menu_slug'];
 			}
 
 			$subpages[] = $subpage;
 		}
 
 		return $subpages;
+	}
+
+	/**
+	 * Comfort split admin slugs (menu/location only).
+	 *
+	 * @return array<int, string>
+	 */
+	public static function get_comfort_split_slugs() {
+		return array(
+			self::COMFORT_INTRO_SLUG,
+			self::COMFORT_GALLERY_SLUG,
+			self::COMFORT_REQUIREMENTS_SLUG,
+		);
 	}
 
 	/**
@@ -196,15 +279,19 @@ final class OptionsPage implements ModuleInterface {
 	}
 
 	/**
-	 * Batch 2 reusable blocks with active ACF fields (V9-06E21).
+	 * Batch 2 reusable blocks with active ACF fields (V9-06E21 / E56 comfort split).
+	 *
+	 * Storage for comfort remains `fp02-block-comfort`; menu uses split slugs.
 	 *
 	 * @return array<int, string>
 	 */
 	public static function get_batch2_fielded_block_slugs() {
-		return array(
-			'fp02-block-header',
-			'fp02-block-footer',
-			'fp02-block-comfort',
+		return array_merge(
+			array(
+				'fp02-block-header',
+				'fp02-block-footer',
+			),
+			self::get_comfort_split_slugs()
 		);
 	}
 
@@ -272,6 +359,13 @@ final class OptionsPage implements ModuleInterface {
 				}
 			}
 			echo '</ul></div>';
+			return;
+		}
+
+		if ( in_array( $page, self::get_comfort_split_slugs(), true ) ) {
+			echo '<div class="notice notice-info"><p>';
+			echo esc_html__( 'Разделы «Комфорт» хранят данные в общем пространстве fp02-block-comfort (фронтенд без изменений). Старая страница «Комфорт / преимущества» скрыта и перенаправляет сюда.', 'shpigovsky-core' );
+			echo '</p></div>';
 			return;
 		}
 

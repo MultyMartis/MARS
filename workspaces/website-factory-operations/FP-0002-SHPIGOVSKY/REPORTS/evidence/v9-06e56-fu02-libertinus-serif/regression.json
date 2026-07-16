@@ -1,0 +1,110 @@
+[
+  {
+    "route": "home",
+    "url": "http://shpigovsky.test/",
+    "http": 200,
+    "phpWarn": false,
+    "jsErrors": [],
+    "floating": true,
+    "form": true,
+    "homeHero": true,
+    "gallery": true,
+    "pass": "PASS"
+  },
+  {
+    "route": "uslugi",
+    "url": "http://shpigovsky.test/uslugi/",
+    "http": 200,
+    "phpWarn": false,
+    "jsErrors": [],
+    "floating": true,
+    "form": true,
+    "homeHero": false,
+    "gallery": true,
+    "pass": "PASS"
+  },
+  {
+    "route": "section",
+    "url": "http://shpigovsky.test/uslugi/zavisimosti/",
+    "http": 200,
+    "phpWarn": false,
+    "jsErrors": [],
+    "floating": true,
+    "form": true,
+    "homeHero": false,
+    "gallery": false,
+    "pass": "PASS"
+  },
+  {
+    "route": "service1",
+    "url": "http://shpigovsky.test/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/",
+    "http": 200,
+    "phpWarn": false,
+    "jsErrors": [],
+    "floating": true,
+    "form": true,
+    "homeHero": false,
+    "gallery": false,
+    "pass": "PASS"
+  },
+  {
+    "route": "service2",
+    "url": "http://shpigovsky.test/uslugi/psihicheskoe-zdorovie/depressiya/",
+    "http": 200,
+    "phpWarn": false,
+    "jsErrors": [],
+    "floating": true,
+    "form": true,
+    "homeHero": false,
+    "gallery": false,
+    "pass": "PASS"
+  },
+  {
+    "route": "generic",
+    "url": "http://shpigovsky.test/o-centre/",
+    "http": 200,
+    "phpWarn": false,
+    "jsErrors": [],
+    "floating": true,
+    "form": true,
+    "homeHero": false,
+    "gallery": false,
+    "pass": "PASS"
+  },
+  {
+    "route": "ocentre",
+    "url": "http://shpigovsky.test/o-centre/",
+    "http": 200,
+    "phpWarn": false,
+    "jsErrors": [],
+    "floating": true,
+    "form": true,
+    "homeHero": false,
+    "gallery": false,
+    "pass": "PASS"
+  },
+  {
+    "route": "kontakty",
+    "url": "http://shpigovsky.test/kontakty/",
+    "http": 200,
+    "phpWarn": false,
+    "jsErrors": [],
+    "floating": true,
+    "form": true,
+    "homeHero": false,
+    "gallery": false,
+    "pass": "PASS"
+  },
+  {
+    "route": "blog",
+    "url": "http://shpigovsky.test/blog/",
+    "http": 200,
+    "phpWarn": false,
+    "jsErrors": [],
+    "floating": true,
+    "form": true,
+    "homeHero": false,
+    "gallery": false,
+    "pass": "PASS"
+  }
+]

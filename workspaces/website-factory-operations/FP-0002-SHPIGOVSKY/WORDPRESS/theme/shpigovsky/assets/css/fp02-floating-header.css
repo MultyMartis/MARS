@@ -1,0 +1,214 @@
+/* FP-0002 V9-06E54 — floating utility header (scoped; does not modify v9-style.css) */
+
+.fp02-floating-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 950;
+  box-sizing: border-box;
+  height: 80px;
+  margin: 0;
+  padding: 0;
+  border-bottom: var(--border-width, 1px) solid var(--border-color-subtle, #e3e7ef);
+  background-color: #e5ecf4;
+  box-shadow: 0 8px 24px rgba(71, 83, 113, 0.12);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate3d(0, -100%, 0);
+  transition:
+    transform 0.28s ease,
+    opacity 0.28s ease;
+  will-change: transform, opacity;
+}
+
+.fp02-floating-header.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate3d(0, 0, 0);
+}
+
+.fp02-floating-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--pad-gap-line, 16px);
+  box-sizing: border-box;
+  height: 80px;
+  min-height: 80px;
+  max-height: 80px;
+}
+
+.fp02-floating-header__logo {
+  display: flex;
+  flex: 0 1 auto;
+  align-items: center;
+  min-width: 0;
+  height: 56px;
+}
+
+.fp02-floating-header__logo-image {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+}
+
+.fp02-floating-header__contacts__wrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: end;
+}
+
+.fp02-floating-header__contacts {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--pad-gap-line, 16px);
+  min-width: 0;
+}
+
+.fp02-floating-header__phone {
+  display: block;
+  flex: 0 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+  font-weight: var(--font-weight-heading);
+}
+
+.fp02-floating-header__contacts__wrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: end;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.fp02-floating-header__phone:focus-visible,
+.fp02-floating-header__menu-button:focus-visible,
+.fp02-floating-header__callback:focus-visible {
+  outline: 2px solid var(--color-accent, #d63b3b);
+  outline-offset: 2px;
+}
+
+.fp02-floating-header__messengers .site-header__messengers {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: var(--pad-gap-line, 16px);
+}
+
+.fp02-floating-header__callback {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.fp02-floating-header__menu-button {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  height: var(--main-size-btns);
+  padding: 0 var(--pad-btns);
+  gap: var(--pad-gap-mini);
+  border-width: var(--control-border-width);
+  border-style: solid;
+  border-color: var(--color-text-primary);
+  border-radius: var(--radius-full);
+  background-color: transparent;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-button);
+  line-height: calc(var(--main-size-btns) - 2px);
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  gap: 7px;
+}
+
+.fp02-floating-header__menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+.fp02-floating-header__menu-label {
+  display: none;
+  font-size: var(--font-size-button, 14px);
+  font-weight: var(--font-weight-button, 500);
+  line-height: var(--line-height-button, 20px);
+}
+
+@media (min-width: 1025px) {
+  .fp02-floating-header__menu-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+  .fp02-floating-header__menu-button {
+    width: auto;
+    min-width: 40px;
+    padding-inline: var(--pad-gap);
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+
+  .fp02-floating-header__menu-button {
+    padding: 0;
+  }
+
+}
+
+/* Progressive hide order: messengers → phone 2 → callback → phone 1 */
+
+@media (max-width: 767px) {
+
+.fp02-floating-header__callback {
+  display: none;
+}
+
+}
+
+/* Desktop offcanvas — allow floating-header Menu to open existing panel */
+@media (min-width: 1025px) {
+  .offcanvas[data-offcanvas-state="open"] {
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .offcanvas[data-offcanvas-state="open"] .offcanvas__overlay {
+    opacity: 1;
+  }
+
+  .offcanvas[data-offcanvas-state="open"] .offcanvas__panel {
+    transform: translateX(0);
+  }
+
+  body[data-offcanvas-state="open"] {
+    overflow: hidden;
+  }
+}
+
+/* Offcanvas scroll lock — preserves scroll position when menu opens from floating header */
+html.is-offcanvas-scroll-locked,
+body.is-offcanvas-scroll-locked {
+  height: auto;
+  min-height: 100%;
+  overflow: hidden;
+  touch-action: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fp02-floating-header {
+    transition: none;
+  }
+}

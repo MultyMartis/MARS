@@ -1,0 +1,11 @@
+area,result,notes
+Home hero,PASS,selector present
+Floating header,PASS,z-index above decor
+Offcanvas trigger,PASS,present
+Lead form,PASS,present; decor pointer-events none
+Gallery/swiper,PASS,present on home
+Video,PASS,present on home
+Lifebuoy single instance,PASS,count=1
+Horizontal overflow,PASS,0 true across matrix
+Console JS errors,PASS,0
+PHP warnings,PASS,routes HTTP 200; no pageerror

@@ -148,7 +148,11 @@ $footer_copyright_suffix = shpigovsky_get_footer_copyright_suffix();
 			<p class="site-footer__copyright">&copy; <?php echo esc_html( gmdate( 'Y' ) ); ?> <?php echo esc_html( $footer_copyright_suffix ); ?></p>
 			<p class="site-footer__credit">
 				<?php if ( '' !== $footer_credit_url ) : ?>
-					<a href="<?php echo esc_url( $footer_credit_url ); ?>"><?php echo esc_html( $footer_credit_text ); ?></a>
+					<a
+						href="<?php echo esc_url( $footer_credit_url ); ?>"
+						target="_blank"
+						rel="noopener noreferrer"
+					><?php echo esc_html( $footer_credit_text ); ?></a>
 				<?php else : ?>
 					<?php echo esc_html( $footer_credit_text ); ?>
 				<?php endif; ?>

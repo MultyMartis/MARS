@@ -109,8 +109,8 @@ final class ModuleRegistry {
 		'forms.consultation'        => array(
 			'module'            => 'Forms',
 			'class'             => ConsultationHandler::class,
-			'status'            => self::DISABLED_UNTIL_LATER_PHASE,
-			'runtime_delivered' => false,
+			'status'            => self::ENABLED_IN_CONTENT_MODEL,
+			'runtime_delivered' => true,
 		),
 		'taxonomies'                => array(
 			'module'            => 'Taxonomies',

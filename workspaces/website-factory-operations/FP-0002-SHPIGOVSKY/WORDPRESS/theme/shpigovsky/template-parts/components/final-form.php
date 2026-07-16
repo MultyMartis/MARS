@@ -65,11 +65,20 @@ $privacy_url = home_url( '/privacy-policy/' );
 
 			<form class="final-form__form" data-lead-form data-form-context="final" novalidate>
 				<div class="final-form__hidden" data-lead-form-hidden aria-hidden="true">
+					<input type="hidden" name="action" data-lead-hidden="action" value="fp02_lead_submit">
+					<input type="hidden" name="fp02_lead_nonce" data-lead-hidden="fp02_lead_nonce" value="<?php echo esc_attr( wp_create_nonce( 'fp02_lead_submit' ) ); ?>">
 					<input type="hidden" name="form_context" data-lead-hidden="form_context" value="final">
 					<input type="hidden" name="lead_source" data-lead-hidden="lead_source" value="<?php echo esc_attr( $lead_source ); ?>">
 					<input type="hidden" name="page_url" data-lead-hidden="page_url" value="">
 					<input type="hidden" name="page_title" data-lead-hidden="page_title" value="">
+					<input type="hidden" name="form_started_at" data-lead-hidden="form_started_at" value="">
+					<input type="hidden" name="timestamp" data-lead-hidden="timestamp" value="">
+					<input type="hidden" name="request_token" data-lead-hidden="request_token" value="">
 					<input type="hidden" name="g-recaptcha-response" data-lead-hidden="g-recaptcha-response" value="">
+					<label class="final-form__honeypot" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">
+						<span><?php esc_html_e( 'Не заполняйте это поле', 'shpigovsky' ); ?></span>
+						<input type="text" name="company_url" data-lead-hidden="company_url" value="" tabindex="-1" autocomplete="off">
+					</label>
 				</div>
 				<div class="final-form__row">
 					<div class="final-form__field" data-lead-field-wrap>

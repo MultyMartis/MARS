@@ -175,7 +175,9 @@ final class FieldGroups implements ModuleInterface {
 			self::block_cta_bands(),
 			self::block_header(),
 			self::block_footer(),
-			self::block_comfort_benefits(),
+			self::block_comfort_intro(),
+			self::block_comfort_gallery(),
+			self::block_comfort_requirements(),
 		);
 	}
 
@@ -3152,19 +3154,34 @@ final class FieldGroups implements ModuleInterface {
 	}
 
 	/**
-	 * Reusable block — comfort / requirements / benefits (V9-06E21 Batch 2).
+	 * Reusable block — comfort intro (V9-06E56 split; storage post_id fp02-block-comfort).
 	 *
 	 * @return array<string, mixed>
 	 */
-	private static function block_comfort_benefits() {
+	private static function block_comfort_intro() {
 		return self::group(
-			'group_fp02_block_comfort',
-			'Reusable Block — Comfort / Benefits',
+			'group_fp02_block_comfort_intro',
+			'Reusable Block — Comfort Intro',
 			array(
 				self::field( 'field_fp02_comfort_heading', 'Комфорт — заголовок', 'comfort_heading', 'text' ),
 				self::field( 'field_fp02_comfort_lead', 'Комфорт — лид', 'comfort_lead', 'textarea', array( 'rows' => 4 ) ),
 				self::field( 'field_fp02_comfort_all_link_label', 'Комфорт — текст ссылки', 'comfort_all_link_label', 'text' ),
 				self::field( 'field_fp02_comfort_all_link_url', 'Комфорт — URL ссылки', 'comfort_all_link_url', 'url' ),
+			),
+			self::location( 'options_page', '==', 'fp02-block-comfort-intro' )
+		);
+	}
+
+	/**
+	 * Reusable block — comfort gallery (V9-06E56 split; storage post_id fp02-block-comfort).
+	 *
+	 * @return array<string, mixed>
+	 */
+	private static function block_comfort_gallery() {
+		return self::group(
+			'group_fp02_block_comfort_gallery',
+			'Reusable Block — Comfort Gallery',
+			array(
 				self::repeater(
 					'field_fp02_comfort_gallery_items',
 					'Комфорт — галерея',
@@ -3180,6 +3197,21 @@ final class FieldGroups implements ModuleInterface {
 						self::field( 'field_fp02_comfort_gallery_fancybox', 'Fancybox', 'gallery_fancybox_enabled', 'true_false', array( 'default_value' => 1 ) ),
 					)
 				),
+			),
+			self::location( 'options_page', '==', 'fp02-block-comfort-gallery' )
+		);
+	}
+
+	/**
+	 * Reusable block — rehab requirements (V9-06E56 split; storage post_id fp02-block-comfort).
+	 *
+	 * @return array<string, mixed>
+	 */
+	private static function block_comfort_requirements() {
+		return self::group(
+			'group_fp02_block_comfort_requirements',
+			'Reusable Block — Comfort Requirements',
+			array(
 				self::field( 'field_fp02_rehab_requirements_heading', 'Требования — заголовок', 'rehab_requirements_heading', 'text' ),
 				self::field( 'field_fp02_rehab_requirements_intro', 'Требования — вводный текст', 'rehab_requirements_intro', 'textarea', array( 'rows' => 3 ) ),
 				self::repeater(
@@ -3211,7 +3243,7 @@ final class FieldGroups implements ModuleInterface {
 				self::field( 'field_fp02_rehab_requirements_photo_width', 'Требования — ширина фото', 'rehab_requirements_photo_width', 'number', array( 'min' => 0 ) ),
 				self::field( 'field_fp02_rehab_requirements_photo_height', 'Требования — высота фото', 'rehab_requirements_photo_height', 'number', array( 'min' => 0 ) ),
 			),
-			self::location( 'options_page', '==', 'fp02-block-comfort' )
+			self::location( 'options_page', '==', 'fp02-block-comfort-requirements' )
 		);
 	}
 

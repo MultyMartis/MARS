@@ -78,6 +78,60 @@ function shpigovsky_enqueue_assets() {
 		);
 	}
 
+	$floating_css = SHPIGOVSKY_THEME_DIR . '/assets/css/fp02-floating-header.css';
+	if ( is_readable( $floating_css ) ) {
+		$floating_deps = array();
+		if ( wp_style_is( 'shpigovsky-v9', 'enqueued' ) || wp_style_is( 'shpigovsky-v9', 'registered' ) ) {
+			$floating_deps[] = 'shpigovsky-v9';
+		}
+		wp_enqueue_style(
+			'shpigovsky-fp02-floating-header',
+			SHPIGOVSKY_THEME_URI . '/assets/css/fp02-floating-header.css',
+			$floating_deps,
+			shpigovsky_asset_version( 'css/fp02-floating-header.css' )
+		);
+	}
+
+	$floating_js = SHPIGOVSKY_THEME_DIR . '/assets/js/fp02-floating-header.js';
+	if ( is_readable( $floating_js ) ) {
+		$floating_js_deps = array();
+		if ( wp_script_is( 'shpigovsky-v9-shell', 'enqueued' ) || wp_script_is( 'shpigovsky-v9-shell', 'registered' ) ) {
+			$floating_js_deps[] = 'shpigovsky-v9-shell';
+		}
+		wp_enqueue_script(
+			'shpigovsky-fp02-floating-header',
+			SHPIGOVSKY_THEME_URI . '/assets/js/fp02-floating-header.js',
+			$floating_js_deps,
+			shpigovsky_asset_version( 'js/fp02-floating-header.js' ),
+			true
+		);
+	}
+
+	$lifebuoy_css = SHPIGOVSKY_THEME_DIR . '/assets/css/fp02-lifebuoy-parallax.css';
+	if ( is_readable( $lifebuoy_css ) ) {
+		$lifebuoy_deps = array();
+		if ( wp_style_is( 'shpigovsky-v9', 'enqueued' ) || wp_style_is( 'shpigovsky-v9', 'registered' ) ) {
+			$lifebuoy_deps[] = 'shpigovsky-v9';
+		}
+		wp_enqueue_style(
+			'shpigovsky-fp02-lifebuoy-parallax',
+			SHPIGOVSKY_THEME_URI . '/assets/css/fp02-lifebuoy-parallax.css',
+			$lifebuoy_deps,
+			shpigovsky_asset_version( 'css/fp02-lifebuoy-parallax.css' )
+		);
+	}
+
+	$lifebuoy_js = SHPIGOVSKY_THEME_DIR . '/assets/js/fp02-lifebuoy-parallax.js';
+	if ( is_readable( $lifebuoy_js ) ) {
+		wp_enqueue_script(
+			'shpigovsky-fp02-lifebuoy-parallax',
+			SHPIGOVSKY_THEME_URI . '/assets/js/fp02-lifebuoy-parallax.js',
+			array(),
+			shpigovsky_asset_version( 'js/fp02-lifebuoy-parallax.js' ),
+			true
+		);
+	}
+
 	/**
 	 * Extension hook for later waves (Swiper, Fancybox, Inputmask, page modules).
 	 */
