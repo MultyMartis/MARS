@@ -1,0 +1,80 @@
+{% if other_news_list %}
+<section class="rel-articles">
+  <div class="container">
+
+
+
+    <div class="zpm-slider__head">
+
+      <div class="section-title__like-h2">{{ other_news_list_header }}</div>
+
+      <div class="zpm-slider__btn_wrap">
+        <button class="zpm-slider__btn rel-articles__btn--prev" type="button" aria-label="Предыдущая">
+          <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__btn_back"></use></svg>
+        </button>
+        <button class="zpm-slider__btn rel-articles__btn--next" type="button" aria-label="Следующая">
+          <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__btn_next"></use></svg>
+        </button>
+        <div>
+          <a class="btn zm-inline-btn" href="/blog">Смотреть все</a>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <div class="js-rel-articles-slider">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+{% for item in other_news_list %}
+
+     <div class="swiper-slide">
+            <a class="zpm-rel-articles-card" href="{{ item.href }}" title="Подробнее">
+              <div class="zpm-rel-articles-card__top">
+                <div class="zpm-rel-articles-card__img">
+                  <img class="" src="{{ item.thumb }}" alt="{{ item.title }}">
+                </div>
+                <div class="zpm-rel-articles-card__title">{{ item.title }}</div>
+              </div>
+              <div class="zpm-rel-articles-card__bottom">
+                <div class="zpm-rel-articles-card__meta">
+                  <div class="data">
+                    <b>Рубрика:</b>
+                    <span>{{ item.category_name }}</span>
+                  </div>
+                  <div class="rubric">
+                    <b>Дата:</b>
+                    <span>{{ item.date }}</span>
+                  </div>
+                  <div class="views">
+                    <b>Просмотров:</b>
+                    <span>{{ item.views }}</span>
+                  </div>
+                  {% if item.reading_time_text %}
+                  <div class="reading-time">
+                    <span>{{ item.reading_time_text }}</span>
+                  </div>
+                  {% endif %}
+                </div>
+                <div class="zpm-rel-articles-card__bottom-wrap">
+                  <div class="zpm-rel-articles-card__anonce">
+                    {{ item.short }}
+                  </div>
+                  <div class="zpm-rel-articles-card__ico_arrow">
+                    <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__goto_btn_arrow"></use></svg>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+{% endfor %}
+
+       </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endif %}

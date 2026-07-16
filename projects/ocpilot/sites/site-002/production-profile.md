@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-16 (Run 4.272 — SITE-002-PROD-BLOG-PUBLISH-DATETIME-READTIME-01 — admin publish datetime UI + reading time; post_id **13** schedule unchanged; prior 4.271 images / 4.270 scheduled news; production content checkpoint unchanged `SITE-002-STABLE-PROD-POST-1C-LARI-DURATION-MONITOR-MANUAL-VERIFIED-01`)
+**Last updated:** 2026-07-16 (Run 4.273 — SITE-002-PROD-BLOG-POSTPUBLISH-1C-HEALTHCHECK-RELARTICLES-META-01 — post **13** published; related slider meta fixed; 1C/monitor/sitemap healthcheck; monitor onboarding need **1** / sitemap **1714**; prior 4.272 readtime)
 
 ---
 
@@ -92,7 +92,7 @@ Do not claim that Production exactly matches TEST unless evidence proves it.
 | Mail recipients architecture (Production) | **ACTIVE — TEMP TEST RECIPIENT** (Run 4.264 confirm · Run 4.265 re-verify · Run 4.266 full form mail rerun) — `config_mail_alert_email` currently **only** `client.leads@polygon-ws.ru`; `info@bzpm.ru` **not** restored yet; handler `catalog/controller/checkout/anketa.php`; admin-managed comma list · empty-lead backend guard OK (8 valid 200 / 3 negatives 400) · [full rerun](reports/SITE-002-PROD-FORM-MAIL-FULL-TEST-RERUN-01.md) · [follow-up](reports/SITE-002-PROD-FORM-EMPTY-LEAD-GUARD-FOLLOWUP-01.md) · [audit](reports/SITE-002-PROD-1C-LOGS-AND-FORM-MAIL-AUDIT-01.md) · [discovery](reports/SITE-002-PROD-MAIL-RECIPIENTS-DISCOVERY-01.md) · [confirmation](reports/SITE-002-PROD-MAIL-RECIPIENTS-ADMIN-ADD-01.md) |
 | Mail system architecture (Production) | **DISCOVERED — REDESIGN CHARTERS READY** (Run 4.222) — read-only full mail map: 29 public forms → anketa; standard OC twig mails (order/account/affiliate); no service info in admin form mail today; hybrid shared-renderer recommended; 5 future charters; Beget backup confirmed; 0 Production mutation · [report](reports/SITE-002-PROD-MAIL-SYSTEM-DISCOVERY-01.md) · [audit baseline](baselines/SITE-002-MAIL-SYSTEM-DISCOVERY-01.md) |
 | Catalog default sort (Production) | `pd.name ASC` when `sort`/`order` omitted |
-| Custom blog / scheduled news (Production) | **ACTIVE — DATETIME UI + READING TIME** (Run **4.272**) — admin datetimepicker for `date_added` publish; column `reading_time_minutes` (1500 chars/min); frontend `.blog-list__item__meta` / `.blog-item__meta` show `Время на чтение: N …`; gate still `active=1 AND date_added <= NOW()`; post_id **13** schedule `2026-07-16 03:00:00` + hero/logo from Run **4.271** · [report](reports/SITE-002-PROD-BLOG-PUBLISH-DATETIME-READTIME-01.md) · [scheduled 4.270](reports/SITE-002-PROD-BLOG-SCHEDULED-NEWS-RCK-PRODUCTIVITY-01.md) · [images 4.271](reports/SITE-002-PROD-BLOG-RCK-LOGO-AND-TITLE-IMAGE-01.md) |
+| Custom blog / scheduled news (Production) | **ACTIVE — POST 13 PUBLISHED + READING TIME** (Run **4.273** verifies; **4.272** implemented) — post_id **13** live at `/blog/news/proizvoditelnost-truda-rck-altayskiy-kray-2026`; reading time on list/detail/**related slider** (`.zpm-rel-articles-card__meta`); gate `active=1 AND date_added <= NOW()` · [postpublish 4.273](reports/SITE-002-PROD-BLOG-POSTPUBLISH-1C-HEALTHCHECK-RELARTICLES-META-01.md) · [readtime 4.272](reports/SITE-002-PROD-BLOG-PUBLISH-DATETIME-READTIME-01.md) |
 
 ---
 
