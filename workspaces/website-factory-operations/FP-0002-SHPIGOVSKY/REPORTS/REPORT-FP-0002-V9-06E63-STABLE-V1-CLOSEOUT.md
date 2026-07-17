@@ -9,7 +9,7 @@
 | Stable status | STABLE / NEAR-PRODUCTION |
 | Formulation | Stable local near-production baseline |
 | Operator acceptance | Yes |
-| Commit | `c891574ede79f33b5ca779c50c9405685b6808ff` |
+| Commit | `d1befe9b8bfc8688f2f286998ec048e6be49beb6` |
 | Push | `_PENDING_PUSH_` |
 | Freeze | `X:\MARS-Localhost\backups\wordpress\projects\shpigovsky\v9-stable-v1-near-production-freeze-20260718-004137` |
 | Production deployment | **Not performed** |
@@ -111,7 +111,7 @@ Excluded: runtime, backups, INCOMING binaries, validation chrome/temps, node_mod
 
 | Field | Value |
 |-------|-------|
-| Hash | `c891574ede79f33b5ca779c50c9405685b6808ff` |
+| Hash | `d1befe9b8bfc8688f2f286998ec048e6be49beb6` |
 | Message | `feat(fp-0002): freeze V9 stable v1 near-production baseline` |
 | Files | _PENDING_ |
 
@@ -144,7 +144,7 @@ Excluded: runtime, backups, INCOMING binaries, validation chrome/temps, node_mod
 | Runtime | `X:\MARS-Localhost\sites\wordpress\projects\shpigovsky` |
 | Parity | Theme/plugin MATCH after canonization |
 | DB | `mars_wp_fp0002` / `fp02_` |
-| Release commit | `c891574ede79f33b5ca779c50c9405685b6808ff` |
+| Release commit | `d1befe9b8bfc8688f2f286998ec048e6be49beb6` |
 | Freeze | `X:\MARS-Localhost\backups\wordpress\projects\shpigovsky\v9-stable-v1-near-production-freeze-20260718-004137` |
 
 ## 16. Deferred Before Public Production
@@ -170,7 +170,7 @@ Excluded: runtime, backups, INCOMING binaries, validation chrome/temps, node_mod
 - Final report: `REPORTS/REPORT-FP-0002-V9-06E63-STABLE-V1-CLOSEOUT.md`
 - Deferred work: `REPORTS/STABLE-V1/DEFERRED-WORK-FP-0002-AFTER-STABLE-V1.md`
 - Pre-production checklist: `REPORTS/STABLE-V1/PRE-PRODUCTION-CHECKLIST-FP-0002-V9-STABLE-V1.md`
-- Release commit: `c891574ede79f33b5ca779c50c9405685b6808ff`
+- Release commit: `d1befe9b8bfc8688f2f286998ec048e6be49beb6`
 - Canonical remote branch: `origin/mars/canonical-post-recovery`
 
 ## Execution safety
@@ -179,6 +179,8 @@ Excluded: runtime, backups, INCOMING binaries, validation chrome/temps, node_mod
 - scope lock honored: yes (`X:\AI MARS`, `X:\AI MARS STORAGE`, `X:\MARS-Localhost`)
 - destructive ops: none (robocopy copy-only; no MIR/PURGE; no git clean/reset)
 - protected zone touch: none beyond authorized FP-0002 / backups / Storage git-sync
+
+
 
 
 

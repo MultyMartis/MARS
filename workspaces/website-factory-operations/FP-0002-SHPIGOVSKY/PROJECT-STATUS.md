@@ -3,7 +3,7 @@
 **Factory Project:** FP-0002 — Shpigovsky.ru  
 **Last updated:** 2026-07-18 (V9-06E63 Stable v1 Closeout)
 
-**Current WordPress phase:** `FP-0002 V9 Stable v1 — LOCAL NEAR-PRODUCTION BASELINE FROZEN AND PUSHED` — **PASS** (closeout). Formulation: **Stable local near-production baseline**. Operator accepted. Operator CSS/JS canonized (`v9-style` **`1CCC5A8F…`**). Pre-release backup: `v9-06e63-before-stable-v1-closeout-20260718-003355`. Authoritative freeze: `v9-stable-v1-near-production-freeze-20260718-004137` (DB SHA256 `E38978E7D4FB2EAD…`). Release docs: `REPORTS/STABLE-V1/`. Freeze marker: `REPORTS/FREEZE-FP-0002-V9-STABLE-V1.md`. Report: `REPORTS/REPORT-FP-0002-V9-06E63-STABLE-V1-CLOSEOUT.md`. Evidence: `REPORTS/evidence/v9-06e63-stable-v1-closeout/`. **Public production deployment has not been performed.** Commit/push: via clean worktree to `origin/mars/canonical-post-recovery` Release commit `c891574ede79f33b5ca779c50c9405685b6808ff` (see closeout report; push pending)..
+**Current WordPress phase:** `FP-0002 V9 Stable v1 — LOCAL NEAR-PRODUCTION BASELINE FROZEN AND PUSHED` — **PASS** (closeout). Formulation: **Stable local near-production baseline**. Operator accepted. Operator CSS/JS canonized (`v9-style` **`1CCC5A8F…`**). Pre-release backup: `v9-06e63-before-stable-v1-closeout-20260718-003355`. Authoritative freeze: `v9-stable-v1-near-production-freeze-20260718-004137` (DB SHA256 `E38978E7D4FB2EAD…`). Release docs: `REPORTS/STABLE-V1/`. Freeze marker: `REPORTS/FREEZE-FP-0002-V9-STABLE-V1.md`. Report: `REPORTS/REPORT-FP-0002-V9-06E63-STABLE-V1-CLOSEOUT.md`. Evidence: `REPORTS/evidence/v9-06e63-stable-v1-closeout/`. **Public production deployment has not been performed.** Commit/push: via clean worktree to `origin/mars/canonical-post-recovery` Release commit `d1befe9b8bfc8688f2f286998ec048e6be49beb6` (see closeout report; push pending)..
 
 **Prior WordPress phase:** V9-06E62E-FIX01 SEARCH WRAPPER + TRIGGER PLACEMENT — **PASS** (local validation); later included in Stable v1. Preflight source↔runtime drift **0**; operator `v9-style` **`C2246240…`** then superseded by E63 operator edits **`1CCC5A8F…`**. Search crumbs → `.internal-page-nav > .container > .breadcrumbs`; Search dropdown trigger desktop main Header only. Backup: `v9-06e62e-fix01-before-search-wrapper-trigger-placement-20260717-174720`. Report: `REPORTS/REPORT-FP-0002-V9-06E62E-FIX01-search-wrapper-trigger-placement.md`.
 **Prior WordPress phase:** V9-06E62E 404 DECOR + WORDPRESS SEARCH — **PASS** (local validation); **operator review pending**; **no freeze**; **no commit**; **no push**. Operator CSS canonized (`v9-style` `18114D3C…` → **`C2246240…`** preserved; `fp02-404` runtime promoted then decor-width edit). Operator asset `404-decor.png` (670×425) installed; `404-visual.png` removed from active use/source/runtime. Header search dropdown + native WP search (`post`/`page`/`service`, 12/page); `search.php` + result cards + pagination + `noindex,follow`. DB writes: **0**. Backup: `v9-06e62e-before-404-decor-wordpress-search-20260717-173256`. Report: `REPORTS/REPORT-FP-0002-V9-06E62E-404-decor-wordpress-search.md`. Evidence: `REPORTS/evidence/v9-06e62e-404-decor-wordpress-search/`.
@@ -703,6 +703,8 @@ PARTIAL PASS: V9 static content/layout authority repair for `/uslugi/`, `/kontak
 
 - Encoding mojibake audit/fix: default category term repaired (2 DB rows).
 - Report: `reports/FP-0002-V9-06E26D-POLISH-ENCODING-MOJIBAKE-AUDIT-AND-FIX-REPORT-v1.md`
+
+
 
 
 
