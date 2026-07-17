@@ -16,7 +16,7 @@
 | Source commit before release (dirty main HEAD) | `7443c4e9256101a95d756b5a3c01cd4e827f0713` |
 | Canonical remote HEAD before release | `29c07d210169ff273d69e7b5f9000d84c1c097b1` |
 | Final release commit | d1befe9b8bfc8688f2f286998ec048e6be49beb6 |
-| Remote push state | _PENDING_PUSH_ |
+| Remote push state | dd49fc5cc5fe6717af96cf87fda3816df309b1ba |
 | Pre-release backup | `X:\MARS-Localhost\backups\wordpress\projects\shpigovsky\v9-06e63-before-stable-v1-closeout-20260718-003355` |
 | Authoritative freeze | X:\MARS-Localhost\backups\wordpress\projects\shpigovsky\v9-stable-v1-near-production-freeze-20260718-004137 |
 | Protected operator CSS | `v9-style.css` SHA256 `1CCC5A8F1150BC696186E0F8D4546B7D55A1895BFA3C77DD50A32204B09A7BA9` |
@@ -48,6 +48,7 @@ All accepted FP-0002 WordPress work through V9-06E62E-FIX01, plus operator manua
 1. Restore authoritative Stable v1 freeze backup (Phase F path).
 2. Restore DB from freeze SQL dump.
 3. Redeploy theme/plugin/ACF from freeze snapshot or Git release commit.
+
 
 
 
