@@ -1,0 +1,35 @@
+{
+  "hotfixId": "PC14_FU03_HOTFIX01_RESTORE_REJECT_SAFE",
+  "scope": {
+    "added": [],
+    "removed": [],
+    "modifiedCode": [
+      "Restore Format Run Items",
+      "Restore Format Run Items After Lock"
+    ],
+    "unexpected": [],
+    "otherMeta": [],
+    "connectionsChanged": false,
+    "scopeOk": true
+  },
+  "changed": [
+    {
+      "name": "Restore Format Run Items",
+      "jsCodeLengthBefore": 150,
+      "jsCodeLengthAfter": 1112,
+      "wasBrokenHardRequire": true,
+      "hasFallback": true,
+      "hasRestoreSource": true
+    },
+    {
+      "name": "Restore Format Run Items After Lock",
+      "jsCodeLengthBefore": 150,
+      "jsCodeLengthAfter": 1123,
+      "wasBrokenHardRequire": true,
+      "hasFallback": true,
+      "hasRestoreSource": true
+    }
+  ],
+  "node_count_before": 101,
+  "node_count_after": 101
+}
