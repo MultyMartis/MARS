@@ -62,6 +62,17 @@ $callback_label  = '' !== $callback_label ? $callback_label : __( 'Заказа�
 				)
 			);
 			?>
+			<ul class="offcanvas__nav-list offcanvas__nav-list--actions">
+				<li class="offcanvas__nav-item">
+					<a
+						class="offcanvas__nav-link offcanvas__nav-link--search"
+						href="<?php echo esc_url( home_url( '/?s=' ) ); ?>"
+					>
+						<i class="fas fa-search" aria-hidden="true"></i>
+						<span><?php esc_html_e( 'Поиск', 'shpigovsky' ); ?></span>
+					</a>
+				</li>
+			</ul>
 		</nav>
 		<div class="offcanvas__contacts">
 			<?php if ( '' !== $phone_primary || '' !== $phone_secondary ) : ?>

@@ -73,6 +73,39 @@ function shpigovsky_get_blog_archive_intro() {
 }
 
 /**
+ * Blog archive integer option.
+ *
+ * @param string $field_name ACF field name.
+ * @param int    $default    Default value.
+ * @return int
+ */
+function shpigovsky_get_blog_archive_int_field( $field_name, $default ) {
+	$value = (int) shpigovsky_get_blog_archive_field( $field_name );
+
+	return $value > 0 ? $value : (int) $default;
+}
+
+/**
+ * Blog archive boolean option with default-on behavior.
+ *
+ * @param string $field_name ACF field name.
+ * @return bool
+ */
+function shpigovsky_get_blog_archive_toggle( $field_name ) {
+	$page_id = shpigovsky_get_blog_posts_page_id();
+
+	if ( $page_id <= 0 || ! metadata_exists( 'post', $page_id, $field_name ) ) {
+		return true;
+	}
+
+	if ( function_exists( 'get_field' ) ) {
+		return (bool) get_field( $field_name, $page_id );
+	}
+
+	return (bool) get_post_meta( $page_id, $field_name, true );
+}
+
+/**
  * Empty state title.
  *
  * @return string
@@ -287,30 +320,27 @@ function shpigovsky_get_blog_breadcrumb_trail() {
  * @return array<string, mixed>
  */
 function shpigovsky_get_blog_archive_cta_band() {
-	$title = shpigovsky_get_blog_archive_field( 'blog_archive_final_cta_title' );
-	$text  = shpigovsky_get_blog_archive_field( 'blog_archive_final_cta_text' );
-	$phone = shpigovsky_get_blog_archive_field( 'blog_archive_final_cta_phone' );
-	$hint  = shpigovsky_get_blog_archive_field( 'blog_archive_final_cta_phone_hint' );
-	$label = shpigovsky_get_blog_archive_field( 'blog_archive_final_cta_button_label' );
-
-	if ( '' === $phone ) {
-		$phone = shpigovsky_get_site_option( 'phone_primary' );
-	}
+	$title = shpigovsky_get_cta_band_default_title( 'Запишитесь на встречу' );
+	$text  = shpigovsky_get_cta_band_default_subtitle( 'Опишите ситуацию в удобном для вас формате. Первый разговор ни к чему не обязывает, но может стать шагом к переменам.' );
+	$phone = shpigovsky_get_site_option( 'phone_primary' );
+	$hint  = shpigovsky_get_cta_band_phone_hint( 'Или позвоните нам' );
+	$label = shpigovsky_get_cta_band_default_button_label( 'Записаться' );
 
 	if ( '' === $phone ) {
 		$phone = '8 (925) 183-64-64';
 	}
 
 	return array(
-		'title'          => '' !== $title ? $title : 'Запишитесь на встречу',
-		'subtitle'       => '' !== $text ? $text : 'Опишите ситуацию в удобном для вас формате. Первый разговор ни к чему не обязывает, но может стать шагом к переменам.',
+		'title'          => $title,
+		'subtitle'       => $text,
 		'phone'          => $phone,
-		'phone_hint'     => '' !== $hint ? $hint : 'Или позвоните нам',
-		'button_label'   => '' !== $label ? $label : 'Записаться',
+		'phone_hint'     => $hint,
+		'button_label'   => $label,
+		'button_url'     => '',
 		'source'         => 'blog-cta-01',
 		'section_id'     => 'blog-cta-01',
 		'heading_id'     => 'blog-cta-01-heading',
-		'heading_text'   => '' !== $title ? $title : 'Запишитесь на встречу',
+		'heading_text'   => $title,
 		'wrap_section'   => true,
 		'button_first'   => true,
 		'margin_flush'   => true,
@@ -358,7 +388,7 @@ function shpigovsky_blog_archive_posts_per_page( $query ) {
 		return;
 	}
 
-	$query->set( 'posts_per_page', 12 );
+	$query->set( 'posts_per_page', shpigovsky_get_blog_archive_int_field( 'blog_archive_posts_per_page', 12 ) );
 }
 add_action( 'pre_get_posts', 'shpigovsky_blog_archive_posts_per_page' );
 

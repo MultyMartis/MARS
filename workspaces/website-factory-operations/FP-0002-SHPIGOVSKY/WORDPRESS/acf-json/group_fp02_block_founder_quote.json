@@ -1,0 +1,81 @@
+{
+    "key": "group_fp02_block_founder_quote",
+    "title": "Reusable Block — Founder Quote",
+    "fields": [
+        {
+            "key": "field_fp02_founder_quote_source_notice",
+            "label": "Слово основателя",
+            "name": "founder_quote_source_notice",
+            "type": "message",
+            "message": "Общий контент блока «Слово основателя» для Главной, Блога (при включённом переключателе), Услуг и других страниц, где подключён шаблон founder-quote. На странице Блога редактируется только показ/скрытие."
+        },
+        {
+            "key": "field_fp02_founder_quote_paragraphs",
+            "label": "Абзацы цитаты",
+            "name": "founder_quote_paragraphs",
+            "type": "repeater",
+            "instructions": "Пусто — статический V9 fallback в шаблоне.",
+            "layout": "row",
+            "button_label": "Добавить абзац",
+            "min": 0,
+            "max": 10,
+            "sub_fields": [
+                {
+                    "key": "field_fp02_founder_quote_paragraph_text",
+                    "label": "Абзац",
+                    "name": "text",
+                    "type": "textarea",
+                    "rows": 3
+                }
+            ]
+        },
+        {
+            "key": "field_fp02_founder_quote_photo",
+            "label": "Фото",
+            "name": "founder_quote_photo",
+            "type": "image",
+            "return_format": "array",
+            "preview_size": "medium",
+            "instructions": "Пусто — theme asset founder-sergey-shpigovsky.png."
+        },
+        {
+            "key": "field_fp02_founder_quote_name",
+            "label": "Имя",
+            "name": "founder_quote_name",
+            "type": "text",
+            "instructions": "Пусто — Сергей Юрьевич Шпиговский."
+        },
+        {
+            "key": "field_fp02_founder_quote_role",
+            "label": "Роль / подпись",
+            "name": "founder_quote_role",
+            "type": "text",
+            "instructions": "Пусто — Основатель центра. Аддиктолог, интервенционист."
+        },
+        {
+            "key": "field_fp02_founder_quote_cta_label",
+            "label": "Текст кнопки",
+            "name": "founder_quote_cta_label",
+            "type": "text",
+            "instructions": "Пусто — Записаться на консультацию."
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "fp02-block-founder-quote"
+            }
+        ]
+    ],
+    "menu_order": 14,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true,
+    "description": "FP-0002 V9-06E62B — reusable Founder's Word ownership for Blog toggle + shared frontend.",
+    "show_in_rest": 0,
+    "modified": 1784247000
+}

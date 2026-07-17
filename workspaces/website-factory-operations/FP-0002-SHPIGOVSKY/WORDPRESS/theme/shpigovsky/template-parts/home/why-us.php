@@ -42,8 +42,12 @@ if ( shpigovsky_home_list_enabled( 'home_why_us_items_enabled' ) ) {
 
 $icon_uri = shpigovsky_asset_uri( 'svg/external-link.svg' );
 
+$args            = isset( $args ) && is_array( $args ) ? $args : array();
+$extra_classes   = isset( $args['class'] ) ? trim( (string) $args['class'] ) : '';
+$section_classes = trim( 'home-why-us ' . $extra_classes );
+
 ?>
-<section data-reveal class="home-why-us @@class" aria-labelledby="home-why-us-heading">
+<section data-reveal class="<?php echo esc_attr( $section_classes ); ?>" aria-labelledby="home-why-us-heading">
   <div class="container">
     <h2 class="home-why-us__heading" id="home-why-us-heading"><?php echo wp_kses_post( $heading ); ?></h2>
     <p class="home-why-us__lead"><?php echo wp_kses_post( $lead ); ?></p>

@@ -1,0 +1,14 @@
+route,expected,actual,result
+/,200,200,PASS
+/uslugi/,200,200,PASS
+/o-centre/,200,200,PASS
+/kontakty/,200,200,PASS
+/blog/,200,200,PASS
+/blog/page/2/,200,200,PASS
+/blog/page/3/,404,404,PASS
+/otzyvy/,200,200,PASS
+/otzyvy/page/2/,200,200,PASS
+/otzyvy/page/3/,200,200,PASS
+/otzyvy/page/99/,404,404,PASS
+/uslugi/zavisimosti/,200,200,PASS
+/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/,200,200,PASS

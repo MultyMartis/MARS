@@ -1,0 +1,10 @@
+field_key,field_name,label,status,code_references,db_values,action
+field_fp02_contacts_address,contacts_address,Address,OBSOLETE,contacts-helpers static fallback only (removed),postmeta retained on page 20,REMOVED_FROM_ACF_GROUP
+field_fp02_contacts_map_url,contacts_map_url,Map URL,OBSOLETE,get_contacts_map_embed_url candidate only — never rendered in templates,no value row on page 20,REMOVED_FROM_ACF_GROUP
+field_fp02_contacts_blocks,contacts_blocks,Contact blocks,OBSOLETE,legacy fallback when contacts_locations empty (removed),2 rows dormant postmeta retained,REMOVED_FROM_ACF_GROUP
+field_fp02_contacts_block_title,title (sub),Заголовок,OBSOLETE,child of contacts_blocks,dormant with parent,REMOVED_WITH_PARENT
+field_fp02_contacts_block_text,text (sub),Текст,OBSOLETE,child of contacts_blocks,dormant with parent,REMOVED_WITH_PARENT
+field_fp02_contacts_phones,contacts_phones,Phones,ACTIVE,shpigovsky_get_contacts_primary_phone,1 row on page 20,RETAINED
+field_fp02_contacts_messengers,contacts_messengers,Messengers,ACTIVE,shpigovsky_get_contacts_messenger_rows,empty — falls back to site social_links,RETAINED
+field_fp02_contacts_locations,contacts_locations,Адреса и карты,ACTIVE,shpigovsky_get_contacts_locations + location-card,2 rows with map embeds,RETAINED
+field_fp02_contacts_form_intro,contacts_form_intro,Form intro,ACTIVE,shpigovsky_get_contacts_intro,populated,RETAINED

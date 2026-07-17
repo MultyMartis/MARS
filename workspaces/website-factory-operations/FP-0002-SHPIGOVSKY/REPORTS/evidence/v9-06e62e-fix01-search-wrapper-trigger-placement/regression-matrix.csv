@@ -1,0 +1,11 @@
+route,http,php_warnings,notes
+/,200,0,home
+/uslugi/zavisimosti/,200,0,service section
+/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/,200,0,service leaf
+/o-centre/,200,0,
+/kontakty/,200,0,
+/blog/,200,0,
+/otzyvy/,200,0,
+/?s=,200,0,blank search ready
+/?s=алкоголь,200,0,results + internal-page-nav
+/missing-e62e-fix01/,404,0,404 decor path

@@ -1,0 +1,45 @@
+{
+    "key": "group_fp02_treatment_program_child",
+    "title": "Программа лечения — карточка",
+    "fields": [
+        {
+            "key": "field_fp02_treatment_program_short_description",
+            "label": "Мини-описание",
+            "name": "treatment_program_short_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Краткий текст для карточки направления в блоке программы лечения на Главной странице.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_parent",
+                "operator": "==",
+                "value": "13"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "V9-06E62D Treatment Program child mini-description for Home direction cards. Location: page_parent == 13 (Программа лечения).",
+    "show_in_rest": 0,
+    "modified": 1784452800
+}

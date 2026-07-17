@@ -3,9 +3,26 @@
     "title": "Page — Contacts",
     "fields": [
         {
-            "key": "field_fp02_contacts_address",
-            "label": "Address",
-            "name": "contacts_address",
+            "key": "field_fp02_contacts_heading",
+            "label": "Заголовок страницы",
+            "name": "contacts_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Пусто — используется заголовок страницы.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_contacts_form_intro",
+            "label": "Вводный текст формы",
+            "name": "contacts_form_intro",
             "aria-label": "",
             "type": "textarea",
             "instructions": "",
@@ -21,25 +38,8 @@
             "rows": 3
         },
         {
-            "key": "field_fp02_contacts_map_url",
-            "label": "Map URL",
-            "name": "contacts_map_url",
-            "aria-label": "",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
             "key": "field_fp02_contacts_phones",
-            "label": "Phones",
+            "label": "Телефоны",
             "name": "contacts_phones",
             "aria-label": "",
             "type": "repeater",
@@ -60,7 +60,7 @@
             "sub_fields": [
                 {
                     "key": "field_fp02_contacts_phone_label",
-                    "label": "Label",
+                    "label": "Подпись",
                     "name": "label",
                     "aria-label": "",
                     "type": "text",
@@ -77,7 +77,7 @@
                 },
                 {
                     "key": "field_fp02_contacts_phone_value",
-                    "label": "Phone",
+                    "label": "Телефон",
                     "name": "phone",
                     "aria-label": "",
                     "type": "text",
@@ -96,7 +96,7 @@
         },
         {
             "key": "field_fp02_contacts_messengers",
-            "label": "Messengers",
+            "label": "Мессенджеры",
             "name": "contacts_messengers",
             "aria-label": "",
             "type": "repeater",
@@ -117,7 +117,7 @@
             "sub_fields": [
                 {
                     "key": "field_fp02_contacts_messenger_label",
-                    "label": "Label",
+                    "label": "Подпись",
                     "name": "label",
                     "aria-label": "",
                     "type": "text",
@@ -152,9 +152,9 @@
             ]
         },
         {
-            "key": "field_fp02_contacts_blocks",
-            "label": "Contact blocks",
-            "name": "contacts_blocks",
+            "key": "field_fp02_contacts_locations",
+            "label": "Адреса и карты",
+            "name": "contacts_locations",
             "aria-label": "",
             "type": "repeater",
             "instructions": "Bounded repeater. Max rows are enforced in source and validation hooks.",
@@ -173,7 +173,7 @@
             "max": 8,
             "sub_fields": [
                 {
-                    "key": "field_fp02_contacts_block_title",
+                    "key": "field_fp02_contacts_location_title",
                     "label": "Заголовок",
                     "name": "title",
                     "aria-label": "",
@@ -190,11 +190,11 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_fp02_contacts_block_text",
-                    "label": "Текст",
-                    "name": "text",
+                    "key": "field_fp02_contacts_location_address",
+                    "label": "Адрес",
+                    "name": "address",
                     "aria-label": "",
-                    "type": "textarea",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -204,28 +204,148 @@
                         "id": ""
                     },
                     "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_fp02_contacts_location_address_label",
+                    "label": "Подпись к адресу",
+                    "name": "address_label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_fp02_contacts_location_hours_label",
+                    "label": "Подпись режима работы",
+                    "name": "hours_label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_fp02_contacts_location_hours_html",
+                    "label": "Режим работы",
+                    "name": "hours_html",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Пусто — общий режим работы из настроек сайта.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
                     "placeholder": "",
-                    "rows": 3
+                    "rows": 2
+                },
+                {
+                    "key": "field_fp02_contacts_location_email",
+                    "label": "Email",
+                    "name": "email",
+                    "aria-label": "",
+                    "type": "email",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_fp02_contacts_location_email_label",
+                    "label": "Подпись email",
+                    "name": "email_label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_fp02_contacts_location_map_embed_code",
+                    "label": "Код Яндекс.Карты",
+                    "name": "map_embed_code",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Вставьте полный код конструктора Яндекс.Карт: <script ...></script>.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "rows": 4
+                },
+                {
+                    "key": "field_fp02_contacts_location_map_alt",
+                    "label": "Alt карты",
+                    "name": "map_alt",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_fp02_contacts_location_simplified",
+                    "label": "Упрощённая карточка",
+                    "name": "simplified",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
                 }
-            ]
-        },
-        {
-            "key": "field_fp02_contacts_form_intro",
-            "label": "Form intro",
-            "name": "contacts_form_intro",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "rows": 3
+            ],
+            "collapsed": "field_fp02_contacts_location_address"
         }
     ],
     "location": [
@@ -246,5 +366,5 @@
     "active": true,
     "description": "FP-0002 V9-06C canonical source field group. Runtime registration occurs only after delivery authorization.",
     "show_in_rest": 0,
-    "modified": 1783158780
+    "modified": 1784452800
 }

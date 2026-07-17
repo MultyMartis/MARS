@@ -1,0 +1,12 @@
+page_type,template,example_route,wrapper,notes
+Specialist parent,page-templates/generic.php,/specyalisty/,internal-page-nav>container,E62A wrap
+Specialist child,page-templates/generic.php,/specyalisty/shipovsky/,internal-page-nav>container,E62A wrap
+Gallery,page-templates/generic.php,/o-centre/galereya-o-dome/,internal-page-nav>container,E62A wrap
+Generic other,page-templates/generic.php,/o-centre/o-nas/,internal-page-nav>container,E62A wrap
+O-centre hub,page-templates/institutional.php,/o-centre/,internal-page-nav (existing),unchanged
+Contacts,page-templates/contacts.php,/kontakty/,contacts-page__breadcrumbs,excluded from internal wrap
+Reviews,page-templates/reviews.php,/otzyvy/,reviews-page__breadcrumbs,excluded
+Blog archive,home.php,/blog/,blog-page__breadcrumbs,excluded
+Blog single,single.php,/blog/demo-pagination-article-10/,blog-article-hero__breadcrumbs,excluded
+Service,service stacks,/uslugi/zavisimosti/...,internal-page-nav via subnav,excluded from render_breadcrumbs wrap
+Legal,page-templates/legal.php,(legal routes),internal-page-nav>container,auto wrap

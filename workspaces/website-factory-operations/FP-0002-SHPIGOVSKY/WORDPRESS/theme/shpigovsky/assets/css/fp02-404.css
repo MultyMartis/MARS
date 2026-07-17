@@ -1,0 +1,234 @@
+/**
+ * FP-0002 V9-06E62D — 404 page (Figma PG-011 / frames `404` + `404 - моб`).
+ * Authority: INCOMING/01_DESIGN/26.06.2026 PNG pair (1437×1900 / 380×1734).
+ * Scoped to .page-404 only. Does not alter global header/footer/h1/buttons site-wide.
+ */
+
+.page-404 {
+  --page-404-bg: #dbe5f1;
+  --page-404-text: #475371;
+}
+
+.page-404__content {
+  /* Figma desktop: ~149px from nav bottom (~143) to title (~292) at 1437 artboard */
+  /* padding: 96px 0 72px; */
+}
+
+.page-404__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 920px;
+  margin-inline: auto;
+}
+
+/* Prevent global h1 (46/46) from leaking into 404 title */
+.page-404__title {
+  margin: 0;
+  max-width: 20ch;
+  font-family: var(--font-family-base, 'Inter', system-ui, sans-serif);
+  font-size: 32px;
+  
+  line-height: 40px;
+  letter-spacing: 0;
+  color: var(--page-404-text);
+}
+
+.page-404__lead {
+  /* Figma desktop gap title→lead ≈ 68px (title end ~318 → lead ~386) */
+  margin: 48px 0 0;
+  max-width: 36ch;
+  font-family: var(--font-family-base, 'Inter', system-ui, sans-serif);
+  font-size: 20px;
+
+  line-height: 28px;
+  letter-spacing: 0;
+  color: var(--page-404-text);
+}
+
+.page-404__brand {
+  /* Figma desktop gap lead→logo ≈ 102px (lead end ~402 → logo ~504) */
+  margin-top: 72px;
+}
+
+.page-404__logo {
+  display: block;
+  width: 246px;
+  height: auto;
+  margin-inline: auto;
+}
+
+.page-404__actions {
+  /* Figma desktop gap logo→button ≈ 88px (logo end ~614 → button ~702) */
+  margin: 64px 0 0;
+}
+
+.page-404__home-link {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 262px;
+  min-height: 53px;
+  padding: 14px 32px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.page-404__home-label--mobile {
+  display: none;
+}
+
+.page-404__visual {
+  /* Figma desktop gap button→visual ≈ 66px (button end ~754 → visual ~820) */
+  /* E62E: operator decor asset is 670×425 (decorative, non-interactive) */
+  margin: 48px 0 0;
+  width: min(100%, 670px);
+}
+
+.page-404__visual-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* Shape/cutout is baked into the PNG against #dbe5f1 — no extra radius */
+  border-radius: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 1024px) {
+  .page-404__content {
+    padding-top: 72px;
+    padding-bottom: 56px;
+  }
+
+  .page-404__title {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .page-404__lead {
+    margin-top: 40px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .page-404__brand {
+    margin-top: 56px;
+  }
+
+  .page-404__actions {
+    margin-top: 48px;
+  }
+
+  .page-404__visual {
+    width: min(100%, 560px);
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-404__content {
+    padding: 48px 0 40px;
+  }
+
+  .page-404__title {
+    max-width: 16ch;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .page-404__lead {
+    margin-top: 28px;
+    max-width: 28ch;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .page-404__brand {
+    margin-top: 40px;
+  }
+
+  .page-404__logo {
+    width: 180px;
+  }
+
+  .page-404__actions {
+    margin-top: 36px;
+  }
+
+  .page-404__home-label--desktop {
+    display: none;
+  }
+
+  .page-404__home-label--mobile {
+    display: inline;
+  }
+
+  .page-404__home-link {
+    min-width: 148px;
+    min-height: 36px;
+    padding: 10px 24px;
+    font-size: 13px;
+  }
+
+  .page-404__visual {
+    margin-top: 32px;
+    width: min(100%, 100%);
+  }
+}
+
+@media (max-width: 480px) {
+  .page-404__content {
+    padding: 40px 0 32px;
+  }
+
+  .page-404__title {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .page-404__lead {
+    margin-top: 24px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .page-404__brand {
+    margin-top: 32px;
+  }
+
+  .page-404__logo {
+    width: 168px;
+  }
+
+  .page-404__actions {
+    margin-top: 28px;
+  }
+
+  .page-404__visual {
+    margin-top: 28px;
+  }
+}
+
+@media (max-height: 700px) and (min-width: 768px) {
+  .page-404__content {
+    padding-top: 48px;
+    padding-bottom: 40px;
+  }
+
+  .page-404__brand {
+    margin-top: 40px;
+  }
+
+  .page-404__actions {
+    margin-top: 36px;
+  }
+
+  .page-404__visual {
+    margin-top: 28px;
+  }
+}

@@ -1,0 +1,401 @@
+{
+  "route": "blog",
+  "viewport": "480",
+  "url": "http://127.0.0.1:8765/blog/",
+  "ok": true,
+  "metrics": {
+    "viewport": {
+      "w": 480,
+      "h": 900
+    },
+    "overflowX": -15,
+    "scrollHeight": 7935,
+    "containerStats": [
+      {
+        "class": "container",
+        "width": 465,
+        "maxWidth": "1230px",
+        "paddingLeft": "15px",
+        "paddingRight": "15px",
+        "marginLeft": "0px",
+        "marginRight": "0px"
+      },
+      {
+        "class": "container",
+        "width": 465,
+        "maxWidth": "1230px",
+        "paddingLeft": "15px",
+        "paddingRight": "15px",
+        "marginLeft": "0px",
+        "marginRight": "0px"
+      },
+      {
+        "class": "container blog-archive__container",
+        "width": 465,
+        "maxWidth": "1230px",
+        "paddingLeft": "15px",
+        "paddingRight": "15px",
+        "marginLeft": "0px",
+        "marginRight": "0px"
+      },
+      {
+        "class": "container program-cta-band-section__container",
+        "width": 465,
+        "maxWidth": "1230px",
+        "paddingLeft": "15px",
+        "paddingRight": "15px",
+        "marginLeft": "0px",
+        "marginRight": "0px"
+      },
+      {
+        "class": "container blog-expert-quote__container",
+        "width": 465,
+        "maxWidth": "1230px",
+        "paddingLeft": "15px",
+        "paddingRight": "15px",
+        "marginLeft": "0px",
+        "marginRight": "0px"
+      },
+      {
+        "class": "container",
+        "width": 465,
+        "maxWidth": "1230px",
+        "paddingLeft": "15px",
+        "paddingRight": "15px",
+        "marginLeft": "0px",
+        "marginRight": "0px"
+      }
+    ],
+    "sectionStats": [
+      {
+        "class": "blog-archive",
+        "top": 92,
+        "height": 5378,
+        "width": 465,
+        "paddingTop": "10px",
+        "paddingBottom": "25px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "class": "program-cta-band-section",
+        "top": 5495,
+        "height": 288,
+        "width": 465,
+        "paddingTop": "0px",
+        "paddingBottom": "20px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "class": "blog-expert-quote",
+        "top": 5803,
+        "height": 793,
+        "width": 465,
+        "paddingTop": "0px",
+        "paddingBottom": "25px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      }
+    ],
+    "buttonStats": [
+      {
+        "text": "Заказать звонок",
+        "w": 0,
+        "h": 0,
+        "fontSize": "14px",
+        "padding": "0px 25px 0px 25px",
+        "radius": "999px"
+      },
+      {
+        "text": "Заказать звонок",
+        "w": 280,
+        "h": 40,
+        "fontSize": "14px",
+        "padding": "0px 25px 0px 25px",
+        "radius": "999px"
+      },
+      {
+        "text": "Записаться",
+        "w": 375,
+        "h": 40,
+        "fontSize": "14px",
+        "padding": "0px 25px 0px 25px",
+        "radius": "999px"
+      },
+      {
+        "text": "Записаться на консультацию",
+        "w": 395,
+        "h": 50,
+        "fontSize": "14px",
+        "padding": "12px 25px 12px 25px",
+        "radius": "999px"
+      },
+      {
+        "text": "Заказать звонок",
+        "w": 189,
+        "h": 40,
+        "fontSize": "14px",
+        "padding": "0px 25px 0px 25px",
+        "radius": "999px"
+      },
+      {
+        "text": "Записаться",
+        "w": 148,
+        "h": 40,
+        "fontSize": "14px",
+        "padding": "0px 25px 0px 25px",
+        "radius": "999px"
+      },
+      {
+        "text": "Записаться на консультацию",
+        "w": 0,
+        "h": 0,
+        "fontSize": "14px",
+        "padding": "0px 25px 0px 25px",
+        "radius": "999px"
+      }
+    ],
+    "cardStats": [
+      {
+        "class": "blog-archive-card is-revealed",
+        "w": 435,
+        "h": 406,
+        "padding": "0px 0px 0px 0px",
+        "radius": "30px"
+      },
+      {
+        "class": "blog-archive-card__image-link",
+        "w": 435,
+        "h": 213,
+        "padding": "0px 0px 0px 0px",
+        "radius": "30px"
+      },
+      {
+        "class": "blog-archive-card__image",
+        "w": 435,
+        "h": 213,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "blog-archive-card__body",
+        "w": 435,
+        "h": 193,
+        "padding": "15px 20px 20px 20px",
+        "radius": "0px"
+      },
+      {
+        "class": "blog-archive-card__title",
+        "w": 395,
+        "h": 44,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "blog-archive-card__title-link",
+        "w": 387,
+        "h": 42,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "blog-archive-card__meta",
+        "w": 395,
+        "h": 20,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "blog-archive-card__date",
+        "w": 75,
+        "h": 17,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "blog-archive-card__reading-time",
+        "w": 12,
+        "h": 17,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "blog-archive-card__reading-time",
+        "w": 123,
+        "h": 17,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "blog-archive-card__excerpt",
+        "w": 395,
+        "h": 40,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "blog-archive-card__read-more",
+        "w": 395,
+        "h": 24,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "blog-archive-card__read-more-link",
+        "w": 49,
+        "h": 19,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "blog-archive-card is-revealed",
+        "w": 435,
+        "h": 406,
+        "padding": "0px 0px 0px 0px",
+        "radius": "30px"
+      },
+      {
+        "class": "blog-archive-card__image-link",
+        "w": 435,
+        "h": 213,
+        "padding": "0px 0px 0px 0px",
+        "radius": "30px"
+      },
+      {
+        "class": "blog-archive-card__image",
+        "w": 435,
+        "h": 213,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "blog-archive-card__body",
+        "w": 435,
+        "h": 193,
+        "padding": "15px 20px 20px 20px",
+        "radius": "0px"
+      },
+      {
+        "class": "blog-archive-card__title",
+        "w": 395,
+        "h": 44,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "blog-archive-card__title-link",
+        "w": 391,
+        "h": 42,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "blog-archive-card__meta",
+        "w": 395,
+        "h": 20,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      }
+    ],
+    "h2s": [
+      {
+        "text": "Лечение алкогольной зависимости: почему сила воли ",
+        "size": "16px",
+        "lh": "22px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "Йога в терапии: снятие абстинентного синдрома, сни",
+        "size": "16px",
+        "lh": "22px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "БОС-терапия: тренировка конкретных зон мозга с пом",
+        "size": "16px",
+        "lh": "22px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "Лечение алкогольной зависимости: почему сила воли ",
+        "size": "16px",
+        "lh": "22px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "Йога в терапии: снятие абстинентного синдрома, сни",
+        "size": "16px",
+        "lh": "22px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "БОС-терапия: тренировка конкретных зон мозга с пом",
+        "size": "16px",
+        "lh": "22px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "Лечение алкогольной зависимости: почему сила воли ",
+        "size": "16px",
+        "lh": "22px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "Йога в терапии: снятие абстинентного синдрома, сни",
+        "size": "16px",
+        "lh": "22px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "БОС-терапия: тренировка конкретных зон мозга с пом",
+        "size": "16px",
+        "lh": "22px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "Лечение алкогольной зависимости: почему сила воли ",
+        "size": "16px",
+        "lh": "22px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "Йога в терапии: снятие абстинентного синдрома, сни",
+        "size": "16px",
+        "lh": "22px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "БОС-терапия: тренировка конкретных зон мозга с пом",
+        "size": "16px",
+        "lh": "22px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "Лечение алкогольной зависимости: почему сила воли ",
+        "size": "16px",
+        "lh": "22px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "Йога в терапии: снятие абстинентного синдрома, сни",
+        "size": "16px",
+        "lh": "22px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "БОС-терапия: тренировка конкретных зон мозга с пом",
+        "size": "16px",
+        "lh": "22px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      }
+    ],
+    "overlaps": []
+  },
+  "errors": [],
+  "status": 200,
+  "shots": {
+    "full": "blog__480__v9__full.png",
+    "body": "blog__480__v9__body.png"
+  }
+}

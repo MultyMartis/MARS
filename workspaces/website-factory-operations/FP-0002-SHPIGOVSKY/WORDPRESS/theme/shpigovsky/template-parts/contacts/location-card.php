@@ -24,9 +24,11 @@ $hours_html    = isset( $location['hours_html'] ) ? (string) $location['hours_ht
 $hours_label   = isset( $location['hours_label'] ) ? trim( (string) $location['hours_label'] ) : '';
 $email         = isset( $location['email'] ) ? sanitize_email( (string) $location['email'] ) : '';
 $email_label   = isset( $location['email_label'] ) ? trim( (string) $location['email_label'] ) : '';
-$map_image     = isset( $location['map_image'] ) ? trim( (string) $location['map_image'] ) : '';
-$map_embed     = isset( $location['map_embed'] ) ? trim( (string) $location['map_embed'] ) : '';
-$map_alt       = isset( $location['map_alt'] ) ? trim( (string) $location['map_alt'] ) : '';
+$map_image        = isset( $location['map_image'] ) ? trim( (string) $location['map_image'] ) : '';
+$map_embed        = isset( $location['map_embed'] ) ? trim( (string) $location['map_embed'] ) : '';
+$map_embed_code   = isset( $location['map_embed_code'] ) ? (string) $location['map_embed_code'] : '';
+$map_script       = '' !== trim( $map_embed_code ) ? shpigovsky_sanitize_yandex_constructor_embed( $map_embed_code ) : '';
+$map_alt          = isset( $location['map_alt'] ) ? trim( (string) $location['map_alt'] ) : '';
 $simplified    = ! empty( $location['simplified'] );
 
 if ( '' === $title && '' === $address ) {
@@ -41,7 +43,7 @@ if ( '' === $title && '' === $address ) {
 	<?php if ( $simplified ) : ?>
 		<?php if ( '' !== $address ) : ?>
 			<div class="contacts-location__detail-body">
-				<p class="contacts-location__value"><?php echo wp_kses_post( nl2br( esc_html( $address ) ) ); ?></p>
+				<p class="contacts-location__text"><?php echo wp_kses_post( nl2br( esc_html( $address ) ) ); ?></p>
 			</div>
 		<?php endif; ?>
 	<?php else : ?>
@@ -52,9 +54,7 @@ if ( '' === $title && '' === $address ) {
 						<i class="fas fa-map-marker-alt"></i>
 					</span>
 					<div class="contacts-location__detail-body">
-						<p class="contacts-location__value">
-							<address class="contacts-location__address"><?php echo esc_html( $address ); ?></address>
-						</p>
+						<address class="contacts-location__address contacts-location__text"><?php echo esc_html( $address ); ?></address>
 						<?php if ( '' !== $address_label ) : ?>
 							<p class="contacts-location__label"><?php echo esc_html( $address_label ); ?></p>
 						<?php endif; ?>
@@ -68,7 +68,7 @@ if ( '' === $title && '' === $address ) {
 						<i class="fas fa-clock"></i>
 					</span>
 					<div class="contacts-location__detail-body">
-						<p class="contacts-location__value"><?php echo wp_kses_post( $hours_html ); ?></p>
+						<p class="contacts-location__text"><?php echo wp_kses_post( $hours_html ); ?></p>
 						<p class="contacts-location__label"><?php echo esc_html( $hours_label ); ?></p>
 					</div>
 				</li>
@@ -80,7 +80,7 @@ if ( '' === $title && '' === $address ) {
 						<i class="fas fa-envelope"></i>
 					</span>
 					<div class="contacts-location__detail-body">
-						<p class="contacts-location__value">
+						<p class="contacts-location__text">
 							<a class="contacts-location__email" href="<?php echo esc_url( 'mailto:' . $email ); ?>"><?php echo esc_html( $email ); ?></a>
 						</p>
 						<?php if ( '' !== $email_label ) : ?>
@@ -92,7 +92,13 @@ if ( '' === $title && '' === $address ) {
 		</ul>
 	<?php endif; ?>
 
-	<?php if ( '' !== $map_image ) : ?>
+	<?php if ( '' !== $map_script ) : ?>
+		<figure class="contacts-location__map contacts-location__map--constructor">
+			<div class="contacts-location__map-embed contacts-location__map-embed--constructor">
+				<?php echo $map_script; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- sanitized Yandex Constructor script. ?>
+			</div>
+		</figure>
+	<?php elseif ( '' !== $map_image ) : ?>
 		<figure class="contacts-location__map">
 			<img
 				class="contacts-location__map-image"

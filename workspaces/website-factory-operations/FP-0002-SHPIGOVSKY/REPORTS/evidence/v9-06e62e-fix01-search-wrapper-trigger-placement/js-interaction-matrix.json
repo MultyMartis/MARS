@@ -1,0 +1,16 @@
+{
+  "matrix": [
+    {"label":"desktop_toggle_count","ok":true,"detail":"PASS"},
+    {"label":"desktop_open_focus","ok":true,"detail":"PASS"},
+    {"label":"desktop_escape_closes","ok":true,"detail":"PASS"},
+    {"label":"mobile_no_visible_search_toggle","ok":true,"detail":"PASS"},
+    {"label":"mobile_no_header_search_button","ok":true,"detail":"PASS"},
+    {"label":"offcanvas_search_link","ok":true,"detail":"href=http://shpigovsky.test/?s="},
+    {"label":"offcanvas_search_navigates_blank","ok":true,"detail":"PASS instr=Введите поисковый запрос cards=0 form=1 robots=noindex, follow"},
+    {"label":"floating_no_search","ok":true,"detail":"PASS"},
+    {"label":"no_horizontal_overflow_home_1440","ok":true,"detail":"PASS"},
+    {"label":"no_horizontal_overflow_search_blank_480","ok":true,"detail":"PASS"}
+  ],
+  "consoleErrors": [],
+  "desktopBreakpoint": "max-width 1024px shows mobile-bar; site-header__bottom (desktop search) hidden; desktop layout >=1025px"
+}

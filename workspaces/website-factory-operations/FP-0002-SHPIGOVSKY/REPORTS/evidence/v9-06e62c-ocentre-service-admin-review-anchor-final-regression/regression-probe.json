@@ -1,0 +1,297 @@
+{
+    "routes": [
+        {
+            "route": "\/",
+            "expected": 200,
+            "actual": 200,
+            "bytes": 207207,
+            "php_warn": 0,
+            "pass": "PASS"
+        },
+        {
+            "route": "\/uslugi\/",
+            "expected": 200,
+            "actual": 200,
+            "bytes": 134197,
+            "php_warn": 0,
+            "pass": "PASS"
+        },
+        {
+            "route": "\/uslugi\/zavisimosti\/",
+            "expected": 200,
+            "actual": 200,
+            "bytes": 151716,
+            "php_warn": 0,
+            "pass": "PASS"
+        },
+        {
+            "route": "\/uslugi\/zavisimosti\/lechenie-alkogolnoj-zavisimosti\/",
+            "expected": 200,
+            "actual": 404,
+            "bytes": 67362,
+            "php_warn": 0,
+            "pass": "FAIL"
+        },
+        {
+            "route": "\/o-centre\/",
+            "expected": 200,
+            "actual": 200,
+            "bytes": 148232,
+            "php_warn": 0,
+            "pass": "PASS"
+        },
+        {
+            "route": "\/o-centre\/galereya-o-dome\/",
+            "expected": 200,
+            "actual": 200,
+            "bytes": 69377,
+            "php_warn": 0,
+            "pass": "PASS"
+        },
+        {
+            "route": "\/specyalisty\/",
+            "expected": 200,
+            "actual": 200,
+            "bytes": 69254,
+            "php_warn": 0,
+            "pass": "PASS"
+        },
+        {
+            "route": "\/kontakty\/",
+            "expected": 200,
+            "actual": 200,
+            "bytes": 79504,
+            "php_warn": 0,
+            "pass": "PASS"
+        },
+        {
+            "route": "\/blog\/",
+            "expected": 200,
+            "actual": 200,
+            "bytes": 92995,
+            "php_warn": 0,
+            "pass": "PASS"
+        },
+        {
+            "route": "\/blog\/page\/2\/",
+            "expected": 200,
+            "actual": 200,
+            "bytes": 79603,
+            "php_warn": 0,
+            "pass": "PASS"
+        },
+        {
+            "route": "\/otzyvy\/",
+            "expected": 200,
+            "actual": 200,
+            "bytes": 93059,
+            "php_warn": 0,
+            "pass": "PASS"
+        },
+        {
+            "route": "\/otzyvy\/page\/2\/",
+            "expected": 200,
+            "actual": 200,
+            "bytes": 99199,
+            "php_warn": 0,
+            "pass": "PASS"
+        },
+        {
+            "route": "\/otzyvy\/page\/3\/",
+            "expected": 200,
+            "actual": 200,
+            "bytes": 99209,
+            "php_warn": 0,
+            "pass": "PASS"
+        },
+        {
+            "route": "\/otzyvy\/page\/99\/",
+            "expected": 404,
+            "actual": 404,
+            "bytes": 67362,
+            "php_warn": 0,
+            "pass": "PASS"
+        },
+        {
+            "route": "\/this-route-should-404-e62c\/",
+            "expected": 404,
+            "actual": 404,
+            "bytes": 67362,
+            "php_warn": 0,
+            "pass": "PASS"
+        },
+        {
+            "route": "\/blog\/demo-pagination-article-10\/",
+            "expected": 200,
+            "actual": 200,
+            "bytes": 73718,
+            "php_warn": 0,
+            "pass": "PASS"
+        }
+    ],
+    "ocentre": {
+        "http_200": true,
+        "no_o_centre_cta_1": true,
+        "no_who_we_treat_gallery": true,
+        "has_who_we_treat": true,
+        "has_program_cta_band": true,
+        "lead_without_inner_span": false,
+        "has_bullet_intro": true,
+        "bullet_has_seed_snip": true,
+        "nested_section_cta": false,
+        "cta_as_div_inside": true,
+        "has_staff_home": true,
+        "has_feature_home": true,
+        "has_landscape_home": true,
+        "duplicate_who_we_treat": true,
+        "duplicate_our_home": true
+    },
+    "review_anchors": {
+        "page1": [
+            "review-c3a450d7",
+            "review-0bea8c59",
+            "review-aca4590f",
+            "review-67d83ec2",
+            "review-275de8b6",
+            "review-7c5c771f",
+            "review-60b812d0",
+            "review-8becfc9e",
+            "review-d5a8f84f",
+            "review-2114e391"
+        ],
+        "page2": [
+            "review-ecb2dd45",
+            "review-4d48d519",
+            "review-689f43cd",
+            "review-853281f5",
+            "review-d5bc5f00",
+            "review-903b01ae",
+            "review-ff9e4f06",
+            "review-d0732029",
+            "review-db738f09",
+            "review-770fbc00"
+        ],
+        "page3": [
+            "review-1cd93d2d",
+            "review-14875021",
+            "review-03d96b8e",
+            "review-6c618f13",
+            "review-689cd36f",
+            "review-121c2093",
+            "review-e20f4bda",
+            "review-a41b8c63",
+            "review-e6dd7ba1",
+            "review-8dbc9ea4"
+        ],
+        "total": 30,
+        "unique": 30,
+        "no_legacy_idx": false
+    },
+    "slider_links": {
+        "count": 0,
+        "links": [],
+        "pass": false
+    },
+    "service_admin_74": {
+        "service_id": 74,
+        "role": "service",
+        "has_structured": false,
+        "has_relationships": false,
+        "visible_keys": [
+            "group_fp02_service_faq",
+            "group_fp02_service_layout_hero",
+            "group_fp02_service_hero",
+            "group_fp02_service_section_parity",
+            "group_fp02_service_general_parity"
+        ]
+    },
+    "service_admin_73": {
+        "service_id": 73,
+        "role": "section",
+        "has_structured": false,
+        "has_relationships": false
+    },
+    "demo_blog": [
+        {
+            "ID": 1745,
+            "slug": "demo-pagination-article-01",
+            "title": "Демо-статья для проверки пагинации — 01"
+        },
+        {
+            "ID": 1746,
+            "slug": "demo-pagination-article-02",
+            "title": "Демо-статья для проверки пагинации — 02"
+        },
+        {
+            "ID": 1747,
+            "slug": "demo-pagination-article-03",
+            "title": "Демо-статья для проверки пагинации — 03"
+        },
+        {
+            "ID": 1748,
+            "slug": "demo-pagination-article-04",
+            "title": "Демо-статья для проверки пагинации — 04"
+        },
+        {
+            "ID": 1749,
+            "slug": "demo-pagination-article-05",
+            "title": "Демо-статья для проверки пагинации — 05"
+        },
+        {
+            "ID": 1750,
+            "slug": "demo-pagination-article-06",
+            "title": "Демо-статья для проверки пагинации — 06"
+        },
+        {
+            "ID": 1751,
+            "slug": "demo-pagination-article-07",
+            "title": "Демо-статья для проверки пагинации — 07"
+        },
+        {
+            "ID": 1752,
+            "slug": "demo-pagination-article-08",
+            "title": "Демо-статья для проверки пагинации — 08"
+        },
+        {
+            "ID": 1753,
+            "slug": "demo-pagination-article-09",
+            "title": "Демо-статья для проверки пагинации — 09"
+        },
+        {
+            "ID": 1754,
+            "slug": "demo-pagination-article-10",
+            "title": "Демо-статья для проверки пагинации — 10"
+        },
+        {
+            "ID": 1105,
+            "slug": "sryvy-i-retsidivy-signal-k-korrektirovke",
+            "title": "Срывы и рецидивы: почему это не конец лечения, а сигнал к корректировке"
+        },
+        {
+            "ID": 1104,
+            "slug": "kak-prohodit-pervaya-konsultatsiya",
+            "title": "Как проходит первая консультация в центре: чего ожидать семье и человеку"
+        },
+        {
+            "ID": 1103,
+            "slug": "genotipirovanie-pri-zavisimostyah",
+            "title": "Генотипирование при зависимостях: зачем оно нужно на старте программы"
+        },
+        {
+            "ID": 1102,
+            "slug": "bos-terapiya-trenirovka-zon-mozga",
+            "title": "БОС-терапия: тренировка конкретных зон мозга с помощью технологий"
+        },
+        {
+            "ID": 1101,
+            "slug": "yoga-v-terapii-abstinentnyy-sindrom",
+            "title": "Йога в терапии: снятие абстинентного синдрома и снижение кортизола"
+        },
+        {
+            "ID": 750,
+            "slug": "nazvanie-stati",
+            "title": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём"
+        }
+    ],
+    "demo_reviews_count": 0
+}

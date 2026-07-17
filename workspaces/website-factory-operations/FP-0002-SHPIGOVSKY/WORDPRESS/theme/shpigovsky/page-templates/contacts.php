@@ -13,11 +13,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 ?>
 <main class="page-kontakty__main site-main site-main--contacts" id="main-content">
-	<div class="contacts-page__breadcrumbs">
-		<div class="container">
-			<?php shpigovsky_render_breadcrumbs(); ?>
+	<?php if ( shpigovsky_breadcrumbs_enabled_for_context() ) : ?>
+		<div class="contacts-page__breadcrumbs">
+			<div class="container">
+				<?php shpigovsky_render_breadcrumbs(); ?>
+			</div>
 		</div>
-	</div>
+	<?php endif; ?>
 	<?php
 	get_template_part( 'template-parts/contacts/map-body' );
 	get_template_part( 'template-parts/contacts/rehabilitation-steps' );

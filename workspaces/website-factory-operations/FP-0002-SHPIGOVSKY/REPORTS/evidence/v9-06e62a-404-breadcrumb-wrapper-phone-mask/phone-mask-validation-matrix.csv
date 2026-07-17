@@ -1,0 +1,7 @@
+case,input,output,digits,result
+type_10_local,9991234567,+7 (999) 123-45-67,11,PASS
+type_8_prefix,89991234567,+7 (999) 123-45-67,11,PASS
+type_plus7,+79991234567,+7 (999) 123-45-67,11,PASS
+incomplete,999,+7 (999) ,4,PASS_INCOMPLETE
+final_form,9991234567,+7 (999) 123-45-67,11,PASS
+bound_attrs,final+modal,data-phone-mask-bound=true,—,PASS_NO_DOUBLE

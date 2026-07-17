@@ -1,0 +1,3 @@
+group_key,label,registration,active,admin_visible_service,admin_visible_section,data_retained,frontend_readers
+group_fp02_service_structured_sections,Service — Structured Sections,PHP FieldGroups::service_structured_sections,false,NO,NO,YES,"intro_text,intro_note,signs_items,programme_items,stages,cta_*"
+group_fp02_service_relationships,Service — Relationships / Related Services,PHP FieldGroups::service_relationships,false,NO,NO,YES,manual_related_services

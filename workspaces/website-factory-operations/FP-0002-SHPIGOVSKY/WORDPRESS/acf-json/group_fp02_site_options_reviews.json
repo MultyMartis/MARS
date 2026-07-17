@@ -8,7 +8,7 @@
             "name": "reviews_enabled",
             "aria-label": "",
             "type": "true_false",
-            "instructions": "Отключите, чтобы скрыть блок отзывов на главной и странице /otzyvy/.",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -17,6 +17,7 @@
                 "id": ""
             },
             "default_value": 1,
+            "placeholder": "",
             "ui": 1,
             "ui_on_text": "Да",
             "ui_off_text": "Нет"
@@ -27,7 +28,7 @@
             "name": "reviews_section_heading",
             "aria-label": "",
             "type": "text",
-            "instructions": "Общий заголовок для блока отзывов. Если пусто — используется заголовок Home или «Отзывы».",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -36,7 +37,27 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "Отзывы"
+            "placeholder": ""
+        },
+        {
+            "key": "field_fp02_options_reviews_per_page",
+            "label": "Отзывов на странице",
+            "name": "reviews_per_page",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 10,
+            "placeholder": "",
+            "min": 1,
+            "max": 50,
+            "step": 1
         },
         {
             "key": "field_fp02_options_reviews_items",
@@ -44,7 +65,7 @@
             "name": "reviews_items",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "Site-wide reviews source. Если пусто — на фронтенде используется статический V9 fallback.",
+            "instructions": "Site-wide reviews source. Если пусто — на фронтенде используется статический V9 fallback. Якоря используют постоянный review_uid (не индекс строки).",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -59,6 +80,24 @@
             "min": 0,
             "max": 50,
             "sub_fields": [
+                {
+                    "key": "field_fp02_options_review_uid",
+                    "label": "Постоянный ID отзыва",
+                    "name": "review_uid",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Стабильный якорь (review-xxxxxxxx). Не меняется при перестановке строк. Заполняется автоматически.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "fp02-review-uid-field",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "readonly": 1
+                },
                 {
                     "key": "field_fp02_options_review_author",
                     "label": "Автор",
@@ -95,12 +134,35 @@
                     "rows": 5
                 },
                 {
+                    "key": "field_fp02_options_review_service",
+                    "label": "Повод обращения",
+                    "name": "review_service",
+                    "aria-label": "",
+                    "type": "post_object",
+                    "instructions": "Автоматический список услуг (CPT service).",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "post_type": [
+                        "service"
+                    ],
+                    "return_format": "id",
+                    "ui": 1,
+                    "allow_null": 1
+                },
+                {
                     "key": "field_fp02_options_review_context",
-                    "label": "Контекст / роль",
+                    "label": "Контекст / повод вручную",
                     "name": "review_context",
                     "aria-label": "",
                     "type": "text",
-                    "instructions": "",
+                    "instructions": "Fallback, если услуга не выбрана.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -180,6 +242,7 @@
                         "id": ""
                     },
                     "default_value": 1,
+                    "placeholder": "",
                     "ui": 1,
                     "ui_on_text": "Да",
                     "ui_off_text": "Нет"
@@ -199,6 +262,7 @@
                         "id": ""
                     },
                     "default_value": 1,
+                    "placeholder": "",
                     "ui": 1,
                     "ui_on_text": "Да",
                     "ui_off_text": "Нет"
@@ -215,14 +279,14 @@
             }
         ]
     ],
-    "menu_order": 2,
+    "menu_order": 0,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
-    "description": "FP-0002 V9-06D9-U options reviews — fp02-reviews canonical (E20 removed alias).",
+    "description": "FP-0002 V9-06C canonical source field group. Runtime registration occurs only after delivery authorization.",
     "show_in_rest": 0,
-    "modified": 1783780000
+    "modified": 1784452800
 }

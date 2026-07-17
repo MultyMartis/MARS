@@ -2,7 +2,7 @@
 /**
  * Template part: components/review-archive-card.php
  *
- * Static V9 archive card — V9-06D9-W.
+ * Static V9 archive card — V9-06D9-W / V9-06E62B / V9-06E62C stable UID anchors.
  *
  * @package Shpigovsky
  */
@@ -21,6 +21,8 @@ $item = wp_parse_args(
 		'date'         => '',
 		'rating'       => 5,
 		'service_href' => '',
+		'review_id'    => 0,
+		'review_uid'   => '',
 	)
 );
 
@@ -36,9 +38,17 @@ $date_parts   = shpigovsky_format_review_archive_date( $item['date'] ?? '' );
 $service_text = trim( (string) ( $item['context'] ?: $item['source'] ) );
 $service_href = trim( (string) $item['service_href'] );
 $rating_label = sprintf( 'Оценка %d из 5', $rating );
-
+$review_uid   = function_exists( 'shpigovsky_sanitize_review_uid' )
+	? shpigovsky_sanitize_review_uid( $item['review_uid'] ?? '' )
+	: '';
+$review_id    = (int) ( $item['review_id'] ?? 0 );
+$body_id      = '' !== $review_uid
+	? 'review-archive-card-body-' . $review_uid
+	: ( $review_id > 0
+		? 'review-archive-card-body-' . $review_id
+		: 'review-archive-card-body-' . wp_unique_id() );
 ?>
-<article class="review-archive-card" data-reveal>
+<article class="review-archive-card" data-reveal data-review-read-more<?php echo '' !== $review_uid ? ' id="' . esc_attr( $review_uid ) . '"' : ''; ?>>
   <header class="review-archive-card__header">
     <ul class="review-archive-card__rating" aria-label="<?php echo esc_attr( $rating_label ); ?>">
 	  <?php for ( $star = 0; $star < $rating; $star++ ) : ?>
@@ -49,7 +59,7 @@ $rating_label = sprintf( 'Оценка %d из 5', $rating );
     <time class="review-archive-card__date"<?php echo '' !== $date_parts['iso'] ? ' datetime="' . esc_attr( $date_parts['iso'] ) . '"' : ''; ?>><?php echo esc_html( $date_parts['formatted'] ); ?></time>
 	<?php endif; ?>
   </header>
-  <h2 class="review-archive-card__name"><?php echo esc_html( $author ); ?></h2>
+  <div class="review-archive-card__name"><?php echo esc_html( $author ); ?></div>
 	<?php if ( '' !== $service_text ) : ?>
   <p class="review-archive-card__service">
     Повод обращения:
@@ -60,7 +70,10 @@ $rating_label = sprintf( 'Оценка %d из 5', $rating );
 		<?php endif; ?>
   </p>
 	<?php endif; ?>
-  <div class="review-archive-card__body">
+  <div class="review-archive-card__body" id="<?php echo esc_attr( $body_id ); ?>" data-review-body>
 	<?php echo wp_kses_post( wpautop( $text ) ); ?>
   </div>
+  <button class="review-archive-card__read-more-link" type="button" aria-expanded="false" aria-controls="<?php echo esc_attr( $body_id ); ?>" data-review-toggle hidden>
+	<?php esc_html_e( 'Читать весь отзыв', 'shpigovsky' ); ?>
+  </button>
 </article>

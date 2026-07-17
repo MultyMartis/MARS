@@ -15,7 +15,6 @@ if ( ! shpigovsky_is_about_hub_page() ) {
 
 $page_id = (int) get_queried_object_id();
 $context = shpigovsky_get_about_who_we_treat_context( $page_id );
-$staff   = shpigovsky_asset_uri( 'img/content/pre-reviews/shpigovsky-staff-group.webp' );
 ?>
 <section data-reveal class="services-category-section-v2 services-category-section-v2--addictions services-category-section-v2--o-centre-who-we-treat" id="who-we-treat" aria-labelledby="who-we-treat-heading">
 	<div class="container services-category-section-v2__container">
@@ -56,28 +55,12 @@ $staff   = shpigovsky_asset_uri( 'img/content/pre-reviews/shpigovsky-staff-group
 			</a>
 		</div>
 
-		<div class="services-category-section-v2__gallery">
-			<div class="who-we-treat-visual">
-				<div class="who-we-treat-visual__staff-bleed">
-					<img class="who-we-treat-visual__staff-image" src="<?php echo esc_url( $staff ); ?>" width="1139" height="443" alt="<?php esc_attr_e( 'Команда специалистов реабилитационного центра', 'shpigovsky' ); ?>" loading="lazy" decoding="async">
-				</div>
-				<ul class="home-feature-grid__card-grid who-we-treat-visual__cards">
-					<?php foreach ( $context['cards'] as $card ) : ?>
-						<?php
-						$card_title = isset( $card['title'] ) ? trim( (string) $card['title'] ) : '';
-						$card_text  = isset( $card['text'] ) ? trim( (string) $card['text'] ) : '';
-
-						if ( '' === $card_title && '' === $card_text ) {
-							continue;
-						}
-						?>
-						<li class="home-feature-grid__card who-we-treat-visual__card">
-							<h3 class="home-feature-grid__card-title"><?php echo esc_html( $card_title ); ?></h3>
-							<p class="home-feature-grid__card-text"><?php echo esc_html( $card_text ); ?></p>
-						</li>
-					<?php endforeach; ?>
-				</ul>
-			</div>
-		</div>
+		<?php
+		// Nested inside #who-we-treat <section>: use visual band <div>, not nested <section>.
+		$who_we_treat_cta                 = shpigovsky_get_about_guest_cta_band( 'o-centre-who-we-treat-cta' );
+		$who_we_treat_cta['wrap_section'] = false;
+		set_query_var( 'shpigovsky_program_cta_band', $who_we_treat_cta );
+		get_template_part( 'template-parts/components/program-cta-band' );
+		?>
 	</div>
 </section>

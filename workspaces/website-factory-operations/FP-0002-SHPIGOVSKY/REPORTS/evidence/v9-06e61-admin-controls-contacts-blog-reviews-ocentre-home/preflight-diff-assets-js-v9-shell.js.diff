@@ -1,0 +1,32 @@
+diff --git "a/X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\assets\\js\\v9-shell.js" "b/X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\assets\\js\\v9-shell.js"
+index 35acb725..b449ed16 100644
+--- "a/X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\assets\\js\\v9-shell.js"	
++++ "b/X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\assets\\js\\v9-shell.js"
+@@ -525,7 +525,7 @@
+ 			}
+ 
+ 			new window.Swiper(slider, {
+-				slidesPerView: 1.2,
++				slidesPerView: 1.5,
+ 				spaceBetween: INF_GAP,
+ 				loop: false,
+ 				autoplay: false,
+@@ -538,15 +538,15 @@
+ 				threshold: 8,
+ 				breakpoints: {
+ 						431: {
+-							slidesPerView: 2.15,
++							slidesPerView: 1.5,
+ 							spaceBetween: 10,
+ 						},
+ 						768: {
+-							slidesPerView: 3.15,
++							slidesPerView: 2.5,
+ 							spaceBetween: 20,
+ 						},
+ 						1025: {
+-							slidesPerView: 3.5,
++							slidesPerView: 3,
+ 							spaceBetween: 30,
+ 						},
+ 				},

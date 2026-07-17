@@ -26,6 +26,6 @@ $context = shpigovsky_get_about_approach_context( $page_id );
 			</a>
 		</div>
 		<p class="program-approach-band__highlight block-whith-red-line"><?php echo esc_html( $context['highlight'] ); ?></p>
-		<p class="program-approach-band__intro"><?php echo esc_html( $context['intro'] ); ?></p>
+		<p class="program-approach-band__intro"><span><?php echo esc_html( $context['intro'] ); ?></span></p>
 	</div>
 </section>

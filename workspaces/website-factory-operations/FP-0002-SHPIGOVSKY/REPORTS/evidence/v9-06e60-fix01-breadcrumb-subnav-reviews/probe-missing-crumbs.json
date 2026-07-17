@@ -1,0 +1,158 @@
+[
+  {
+    "route": "/kontakty/",
+    "vp": {
+      "w": 1440,
+      "h": 900
+    },
+    "data": {
+      "breadcrumbRoot": true,
+      "classes": [
+        "contacts-page__breadcrumbs",
+        "shpigovsky-skeleton-breadcrumbs"
+      ],
+      "link": {
+        "sel": "nav a",
+        "tag": "A",
+        "className": "site-header__nav-link",
+        "fontSize": "16px",
+        "lineHeight": "20px",
+        "color": "rgb(71, 83, 113)",
+        "textDecoration": "none"
+      },
+      "current": null,
+      "allLinks": [],
+      "subnavHover": null
+    },
+    "hoverColor": null,
+    "subnavHover": null
+  },
+  {
+    "route": "/otzyvy/",
+    "vp": {
+      "w": 1440,
+      "h": 900
+    },
+    "data": {
+      "breadcrumbRoot": true,
+      "classes": [
+        "reviews-page__breadcrumbs",
+        "shpigovsky-skeleton-breadcrumbs"
+      ],
+      "link": {
+        "sel": "nav a",
+        "tag": "A",
+        "className": "site-header__nav-link",
+        "fontSize": "16px",
+        "lineHeight": "20px",
+        "color": "rgb(71, 83, 113)",
+        "textDecoration": "none"
+      },
+      "current": null,
+      "allLinks": [],
+      "subnavHover": null
+    },
+    "hoverColor": null,
+    "subnavHover": null
+  },
+  {
+    "route": "/blog/",
+    "vp": {
+      "w": 1024,
+      "h": 768
+    },
+    "data": {
+      "breadcrumbRoot": true,
+      "classes": [
+        "blog-page__breadcrumbs",
+        "breadcrumbs",
+        "breadcrumbs__list",
+        "breadcrumbs__item",
+        "breadcrumbs__link",
+        "breadcrumbs__item breadcrumbs__item--current",
+        "breadcrumbs__current"
+      ],
+      "link": {
+        "sel": ".breadcrumbs__link",
+        "tag": "A",
+        "className": "breadcrumbs__link",
+        "fontSize": "8px",
+        "lineHeight": "12px",
+        "color": "rgb(109, 123, 143)",
+        "textDecoration": "none"
+      },
+      "current": {
+        "sel": ".breadcrumbs__current",
+        "tag": "SPAN",
+        "className": "breadcrumbs__current",
+        "fontSize": "8px",
+        "lineHeight": "12px",
+        "color": "rgb(71, 83, 113)",
+        "textDecoration": "none"
+      },
+      "allLinks": [
+        {
+          "text": "Главная",
+          "className": "breadcrumbs__link",
+          "fs": "8px",
+          "lh": "12px",
+          "color": "rgb(109, 123, 143)"
+        }
+      ],
+      "subnavHover": null
+    },
+    "hoverColor": "rgb(111, 120, 139)",
+    "subnavHover": null
+  },
+  {
+    "route": "/uslugi/",
+    "vp": {
+      "w": 1440,
+      "h": 900
+    },
+    "data": {
+      "breadcrumbRoot": true,
+      "classes": [
+        "breadcrumbs",
+        "breadcrumbs__list",
+        "breadcrumbs__item",
+        "breadcrumbs__link",
+        "breadcrumbs__item",
+        "breadcrumbs__current"
+      ],
+      "link": {
+        "sel": ".breadcrumbs__link",
+        "tag": "A",
+        "className": "breadcrumbs__link",
+        "fontSize": "14px",
+        "lineHeight": "18px",
+        "color": "rgb(109, 123, 143)",
+        "textDecoration": "none"
+      },
+      "current": {
+        "sel": ".breadcrumbs__current",
+        "tag": "SPAN",
+        "className": "breadcrumbs__current",
+        "fontSize": "14px",
+        "lineHeight": "18px",
+        "color": "rgb(71, 83, 113)",
+        "textDecoration": "none"
+      },
+      "allLinks": [
+        {
+          "text": "Главная",
+          "className": "breadcrumbs__link",
+          "fs": "14px",
+          "lh": "18px",
+          "color": "rgb(109, 123, 143)"
+        }
+      ],
+      "subnavHover": null
+    },
+    "hoverColor": "rgb(110, 122, 142)",
+    "subnavHover": {
+      "color": "rgb(114, 117, 135)",
+      "borderColor": "rgba(88, 76, 100, 0.443)"
+    }
+  }
+]

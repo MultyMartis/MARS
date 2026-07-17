@@ -97,20 +97,32 @@ final class FieldGroups implements ModuleInterface {
 			return $groups;
 		}
 
+		// V9-06E62C: always hide obsolete Structured Sections + Relationships on Service edit
+		// screens (all roles). Data retained; frontend helpers still read postmeta.
+		// Hidden from Service admin by operator request in V9-06E62C; data retained for rollback/frontend compatibility.
+		$always_hide = array(
+			'group_fp02_service_structured_sections',
+			'group_fp02_service_relationships',
+		);
+
 		// V9-06E47-FIX01: Услуга editor only needs Layout + Hero + Услуга blocks.
 		// V9-06E51: Заглушка keeps the same admin content groups as Услуга (content not deleted).
-		$hide_keys = array();
+		$hide_keys = $always_hide;
 		if ( 'service' === $role || 'placeholder' === $role ) {
-			$hide_keys = array(
-				'group_fp02_service_section_parity',
-				'group_fp02_service_structured_sections',
-				'group_fp02_service_faq',
-				'group_fp02_service_relationships',
+			$hide_keys = array_merge(
+				$always_hide,
+				array(
+					'group_fp02_service_section_parity',
+					'group_fp02_service_faq',
+				)
 			);
 		} elseif ( 'section' === $role ) {
-			// Раздел: keep Structured Sections for shared mid-cta meta (E46-FIX03).
-			$hide_keys = array(
-				'group_fp02_service_general_parity',
+			// Раздел: mid-cta lives in section parity; Structured Sections no longer shown (E62C).
+			$hide_keys = array_merge(
+				$always_hide,
+				array(
+					'group_fp02_service_general_parity',
+				)
 			);
 		}
 
@@ -162,6 +174,7 @@ final class FieldGroups implements ModuleInterface {
 			self::page_ocentre_hub(),
 			self::page_layout_mode(),
 			self::page_generic_content(),
+			self::page_treatment_program_child(),
 			self::page_institutional_child(),
 			self::page_contacts(),
 			self::page_reviews(),
@@ -170,9 +183,11 @@ final class FieldGroups implements ModuleInterface {
 			self::blog_archive_settings(),
 			self::site_options_contacts(),
 			self::site_options_modal_cta(),
+			self::site_options_reviews(),
 			self::block_final_form(),
 			self::block_specialists(),
 			self::block_cta_bands(),
+			self::block_founder_quote(),
 			self::block_header(),
 			self::block_footer(),
 			self::block_comfort_intro(),
@@ -490,7 +505,8 @@ final class FieldGroups implements ModuleInterface {
 	 * @return array<string, mixed>
 	 */
 	private static function service_structured_sections() {
-		return self::group(
+		// Hidden from Service admin by operator request in V9-06E62C; data retained for rollback/frontend compatibility.
+		$group = self::group(
 			'group_fp02_service_structured_sections',
 			'Service — Structured Sections',
 			array(
@@ -605,6 +621,9 @@ final class FieldGroups implements ModuleInterface {
 			),
 			self::location( 'post_type', '==', 'service' )
 		);
+		$group['active']      = false;
+		$group['description'] = 'Hidden from Service admin by operator request in V9-06E62C; data retained for rollback/frontend compatibility.';
+		return $group;
 	}
 
 	/**
@@ -638,7 +657,8 @@ final class FieldGroups implements ModuleInterface {
 	 * @return array<string, mixed>
 	 */
 	private static function service_relationships() {
-		return self::group(
+		// Hidden from Service admin by operator request in V9-06E62C; data retained for rollback/frontend compatibility.
+		$group = self::group(
 			'group_fp02_service_relationships',
 			'Service — Relationships / Related Services',
 			array(
@@ -657,6 +677,9 @@ final class FieldGroups implements ModuleInterface {
 			),
 			self::location( 'post_type', '==', 'service' )
 		);
+		$group['active']      = false;
+		$group['description'] = 'Hidden from Service admin by operator request in V9-06E62C; data retained for rollback/frontend compatibility.';
+		return $group;
 	}
 
 	/**
@@ -2514,6 +2537,16 @@ final class FieldGroups implements ModuleInterface {
 						'instructions' => 'G0 intro + G1-G4 bullets for /o-centre/ hub. Images use static V9 theme assets when media empty.',
 					)
 				),
+				self::field(
+					'field_fp02_infrastructure_narrative_bullet_intro',
+					'Дополнительный текст после вводного блока',
+					'infrastructure_narrative_bullet_intro',
+					'textarea',
+					array(
+						'rows'         => 5,
+						'instructions' => 'Текст сразу после красной линии (G0 lead). Рендерится как .infrastructure-narrative__bullet со span. Пусто — блок скрыт.',
+					)
+				),
 			),
 			self::location_page_id( 11 )
 		);
@@ -2616,6 +2649,38 @@ final class FieldGroups implements ModuleInterface {
 	}
 
 	/**
+	 * Treatment Program child pages (direct children of «Программа лечения» #13).
+	 * Owns Home direction-card mini-descriptions (`.home-rehabilitation-program__direction-text`).
+	 *
+	 * @return array<string, mixed>
+	 */
+	private static function page_treatment_program_child() {
+		$group = self::group(
+			'group_fp02_treatment_program_child',
+			__( 'Программа лечения — карточка', 'shpigovsky-core' ),
+			array(
+				self::field(
+					'field_fp02_treatment_program_short_description',
+					__( 'Мини-описание', 'shpigovsky-core' ),
+					'treatment_program_short_description',
+					'textarea',
+					array(
+						'instructions' => __( 'Краткий текст для карточки направления в блоке программы лечения на Главной странице.', 'shpigovsky-core' ),
+						'rows'         => 4,
+						'new_lines'    => '',
+					)
+				),
+			),
+			self::location( 'page_parent', '==', '13' )
+		);
+
+		$group['menu_order']  = 0;
+		$group['description'] = 'V9-06E62D Treatment Program child mini-description for Home direction cards. Location: page_parent == 13 (Программа лечения).';
+
+		return $group;
+	}
+
+	/**
 	 * Institutional child pages group (pages #12-#16).
 	 *
 	 * @return array<string, mixed>
@@ -2673,12 +2738,41 @@ final class FieldGroups implements ModuleInterface {
 			'group_fp02_page_contacts',
 			'Page — Contacts',
 			array(
-				self::field( 'field_fp02_contacts_address', 'Address', 'contacts_address', 'textarea', array( 'rows' => 3 ) ),
-				self::field( 'field_fp02_contacts_map_url', 'Map URL', 'contacts_map_url', 'url' ),
-				self::repeater( 'field_fp02_contacts_phones', 'Phones', 'contacts_phones', 4, array( self::field( 'field_fp02_contacts_phone_label', 'Label', 'label', 'text' ), self::field( 'field_fp02_contacts_phone_value', 'Phone', 'phone', 'text' ) ) ),
-				self::repeater( 'field_fp02_contacts_messengers', 'Messengers', 'contacts_messengers', 6, array( self::field( 'field_fp02_contacts_messenger_label', 'Label', 'label', 'text' ), self::field( 'field_fp02_contacts_messenger_url', 'URL', 'url', 'url' ) ) ),
-				self::repeater( 'field_fp02_contacts_blocks', 'Contact blocks', 'contacts_blocks', 8, self::title_text_subfields( 'contacts_block' ) ),
-				self::field( 'field_fp02_contacts_form_intro', 'Form intro', 'contacts_form_intro', 'textarea', array( 'rows' => 3 ) ),
+				self::field( 'field_fp02_contacts_heading', 'Заголовок страницы', 'contacts_heading', 'text', array( 'instructions' => 'Пусто — используется заголовок страницы.' ) ),
+				self::field( 'field_fp02_contacts_form_intro', 'Вводный текст формы', 'contacts_form_intro', 'textarea', array( 'rows' => 3 ) ),
+				self::repeater( 'field_fp02_contacts_phones', 'Телефоны', 'contacts_phones', 4, array( self::field( 'field_fp02_contacts_phone_label', 'Подпись', 'label', 'text' ), self::field( 'field_fp02_contacts_phone_value', 'Телефон', 'phone', 'text' ) ) ),
+				self::repeater( 'field_fp02_contacts_messengers', 'Мессенджеры', 'contacts_messengers', 6, array( self::field( 'field_fp02_contacts_messenger_label', 'Подпись', 'label', 'text' ), self::field( 'field_fp02_contacts_messenger_url', 'URL', 'url', 'url' ) ) ),
+				self::repeater(
+					'field_fp02_contacts_locations',
+					'Адреса и карты',
+					'contacts_locations',
+					8,
+					array(
+						self::field( 'field_fp02_contacts_location_title', 'Заголовок', 'title', 'text' ),
+						self::field( 'field_fp02_contacts_location_address', 'Адрес', 'address', 'text' ),
+						self::field( 'field_fp02_contacts_location_address_label', 'Подпись к адресу', 'address_label', 'text' ),
+						self::field( 'field_fp02_contacts_location_hours_label', 'Подпись режима работы', 'hours_label', 'text' ),
+						self::field( 'field_fp02_contacts_location_hours_html', 'Режим работы', 'hours_html', 'textarea', array( 'rows' => 2, 'instructions' => 'Пусто — общий режим работы из настроек сайта.' ) ),
+						self::field( 'field_fp02_contacts_location_email', 'Email', 'email', 'email' ),
+						self::field( 'field_fp02_contacts_location_email_label', 'Подпись email', 'email_label', 'text' ),
+						self::field(
+							'field_fp02_contacts_location_map_embed_code',
+							'Код Яндекс.Карты',
+							'map_embed_code',
+							'textarea',
+							array(
+								'rows'         => 4,
+								'instructions' => 'Вставьте полный код конструктора Яндекс.Карт: <script ...></script>.',
+							)
+						),
+						self::field( 'field_fp02_contacts_location_map_alt', 'Alt карты', 'map_alt', 'text' ),
+						self::field( 'field_fp02_contacts_location_simplified', 'Упрощённая карточка', 'simplified', 'true_false' ),
+					),
+					0,
+					array(
+						'collapsed' => 'field_fp02_contacts_location_address',
+					)
+				),
 			),
 			self::location( 'page_template', '==', 'page-templates/contacts.php' )
 		);
@@ -2694,16 +2788,14 @@ final class FieldGroups implements ModuleInterface {
 			'group_fp02_page_reviews',
 			'Page — Reviews',
 			array(
-				self::repeater(
-					'field_fp02_reviews_items',
-					'Reviews',
-					'reviews_items',
-					50,
+				self::field(
+					'field_fp02_page_reviews_source_notice',
+					'Источник отзывов',
+					'page_reviews_source_notice',
+					'message',
 					array(
-						self::field( 'field_fp02_review_author_label', 'Author label', 'author_label', 'text' ),
-						self::field( 'field_fp02_review_text', 'Review text', 'text', 'textarea', array( 'rows' => 5 ) ),
-						self::field( 'field_fp02_review_meta', 'Metadata', 'metadata', 'text' ),
-						self::field( 'field_fp02_review_source', 'Source', 'source', 'text' ),
+						'message'   => 'Отзывы редактируются в отдельном разделе админки: <a href="' . esc_url( admin_url( 'admin.php?page=fp02-reviews' ) ) . '">Отзывы</a>. Эта страница использует общий список отзывов и настройку «Отзывов на странице».',
+						'new_lines' => 'br',
 					)
 				),
 			),
@@ -2793,45 +2885,46 @@ final class FieldGroups implements ModuleInterface {
 			'group_fp02_blog_archive_settings',
 			'Blog — Archive Settings',
 			array(
-				self::field( 'field_fp02_blog_archive_eyebrow', 'Eyebrow', 'blog_archive_eyebrow', 'text' ),
-				self::field( 'field_fp02_blog_archive_title', 'Archive H1', 'blog_archive_title', 'text' ),
-				self::field( 'field_fp02_blog_archive_lead', 'Lead', 'blog_archive_lead', 'textarea', array( 'rows' => 3 ) ),
-				self::field( 'field_fp02_blog_archive_intro', 'Intro', 'blog_archive_intro', 'textarea', array( 'rows' => 4 ) ),
-				self::field( 'field_fp02_blog_archive_featured_label', 'Featured label', 'blog_archive_featured_label', 'text' ),
-				self::field( 'field_fp02_blog_archive_all_label', 'All articles label', 'blog_archive_all_label', 'text' ),
-				self::field( 'field_fp02_blog_archive_empty_title', 'Empty state title', 'blog_archive_empty_title', 'text' ),
-				self::field( 'field_fp02_blog_archive_empty_text', 'Empty state text', 'blog_archive_empty_text', 'textarea', array( 'rows' => 3 ) ),
-				self::field( 'field_fp02_blog_archive_card_link_label', 'Card link label', 'blog_archive_card_link_label', 'text', array( 'default_value' => 'Читать' ) ),
+				self::field( 'field_fp02_blog_archive_title', 'Заголовок архива', 'blog_archive_title', 'text' ),
+				self::field( 'field_fp02_blog_archive_intro', 'Вводный текст', 'blog_archive_intro', 'textarea', array( 'rows' => 4 ) ),
 				self::field(
-					'field_fp02_blog_archive_card_fallback_image',
-					'Card fallback image',
-					'blog_archive_card_fallback_image',
-					'image',
+					'field_fp02_blog_archive_posts_per_page',
+					'Статей на странице',
+					'blog_archive_posts_per_page',
+					'number',
 					array(
-						'return_format' => 'array',
-						'preview_size'  => 'medium',
+						'default_value' => 12,
+						'min'           => 1,
+						'max'           => 50,
+						'step'          => 1,
 					)
 				),
-				self::field( 'field_fp02_blog_archive_final_cta_title', 'Final CTA title', 'blog_archive_final_cta_title', 'text' ),
-				self::field( 'field_fp02_blog_archive_final_cta_text', 'Final CTA text', 'blog_archive_final_cta_text', 'textarea', array( 'rows' => 3 ) ),
-				self::field( 'field_fp02_blog_archive_final_cta_phone', 'Final CTA phone', 'blog_archive_final_cta_phone', 'text' ),
-				self::field( 'field_fp02_blog_archive_final_cta_phone_hint', 'Final CTA phone hint', 'blog_archive_final_cta_phone_hint', 'text' ),
-				self::field( 'field_fp02_blog_archive_final_cta_button_label', 'Final CTA button label', 'blog_archive_final_cta_button_label', 'text' ),
-				self::field( 'field_fp02_blog_archive_final_cta_button_url', 'Final CTA button URL', 'blog_archive_final_cta_button_url', 'url' ),
-				self::field( 'field_fp02_blog_archive_expert_quote_text', 'Expert quote text', 'blog_archive_expert_quote_text', 'textarea', array( 'rows' => 5 ) ),
-				self::field( 'field_fp02_blog_archive_expert_name', 'Expert name', 'blog_archive_expert_name', 'text' ),
-				self::field( 'field_fp02_blog_archive_expert_role', 'Expert role', 'blog_archive_expert_role', 'text' ),
 				self::field(
-					'field_fp02_blog_archive_expert_photo',
-					'Expert photo',
-					'blog_archive_expert_photo',
-					'image',
+					'field_fp02_blog_archive_show_cta',
+					'Показывать CTA-блок',
+					'blog_archive_show_cta',
+					'true_false',
 					array(
-						'return_format' => 'array',
-						'preview_size'  => 'medium',
+						'default_value' => 1,
+						'ui'            => 1,
+						'ui_on_text'    => 'Да',
+						'ui_off_text'   => 'Нет',
+						'instructions'  => 'Контент берётся из повторяемого блока «CTA-блоки».',
 					)
 				),
-				self::field( 'field_fp02_blog_archive_expert_cta_label', 'Expert CTA label', 'blog_archive_expert_cta_label', 'text' ),
+				self::field(
+					'field_fp02_blog_archive_show_founder_word',
+					'Показывать слово основателя',
+					'blog_archive_show_founder_word',
+					'true_false',
+					array(
+						'default_value' => 1,
+						'ui'            => 1,
+						'ui_on_text'    => 'Да',
+						'ui_off_text'   => 'Нет',
+						'instructions'  => 'Контент берётся из «Настройки сайта → Цитата основателя». Здесь только показ/скрытие.',
+					)
+				),
 			),
 			self::location( 'page_type', '==', 'posts_page' )
 		);
@@ -2847,6 +2940,30 @@ final class FieldGroups implements ModuleInterface {
 			'group_fp02_site_options_contacts',
 			'Site Options — Contacts and Organisation',
 			array(
+				self::field(
+					'field_fp02_show_breadcrumbs_pages',
+					'Показывать хлебные крошки на страницах',
+					'show_breadcrumbs_pages',
+					'true_false',
+					array(
+						'default_value' => 1,
+						'ui'            => 1,
+						'ui_on_text'    => 'Да',
+						'ui_off_text'   => 'Нет',
+					)
+				),
+				self::field(
+					'field_fp02_show_breadcrumbs_services',
+					'Показывать хлебные крошки в услугах',
+					'show_breadcrumbs_services',
+					'true_false',
+					array(
+						'default_value' => 1,
+						'ui'            => 1,
+						'ui_on_text'    => 'Да',
+						'ui_off_text'   => 'Нет',
+					)
+				),
 				self::field( 'field_fp02_org_name', 'Organisation name', 'organisation_name', 'text' ),
 				self::field( 'field_fp02_phone_primary', 'Primary phone', 'phone_primary', 'text' ),
 				self::field( 'field_fp02_phone_secondary', 'Secondary phone', 'phone_secondary', 'text' ),
@@ -2880,6 +2997,83 @@ final class FieldGroups implements ModuleInterface {
 				self::field( 'field_fp02_global_cta_text', 'Global CTA text', 'global_cta_text', 'textarea', array( 'rows' => 3 ) ),
 			),
 			self::location( 'options_page', '==', 'fp02-site-settings-general' )
+		);
+	}
+
+	/**
+	 * Site reviews/options group.
+	 *
+	 * @return array<string, mixed>
+	 */
+	private static function site_options_reviews() {
+		return self::group(
+			'group_fp02_site_options_reviews',
+			'Site Options — Reviews',
+			array(
+				self::field( 'field_fp02_options_reviews_enabled', 'Включить блок отзывов', 'reviews_enabled', 'true_false', array( 'default_value' => 1, 'ui' => 1, 'ui_on_text' => 'Да', 'ui_off_text' => 'Нет' ) ),
+				self::field( 'field_fp02_options_reviews_section_heading', 'Заголовок блока отзывов', 'reviews_section_heading', 'text' ),
+				self::field(
+					'field_fp02_options_reviews_per_page',
+					'Отзывов на странице',
+					'reviews_per_page',
+					'number',
+					array(
+						'default_value' => 10,
+						'min'           => 1,
+						'max'           => 50,
+						'step'          => 1,
+					)
+				),
+				self::repeater(
+					'field_fp02_options_reviews_items',
+					'Отзывы',
+					'reviews_items',
+					50,
+					array(
+						self::field(
+							'field_fp02_options_review_uid',
+							'Постоянный ID отзыва',
+							'review_uid',
+							'text',
+							array(
+								'instructions' => 'Стабильный якорь (review-xxxxxxxx). Не меняется при перестановке строк. Заполняется автоматически.',
+								'wrapper'      => array(
+									'width' => '50',
+									'class' => 'fp02-review-uid-field',
+									'id'    => '',
+								),
+							)
+						),
+						self::field( 'field_fp02_options_review_author', 'Автор', 'review_author', 'text' ),
+						self::field( 'field_fp02_options_review_text', 'Текст отзыва', 'review_text', 'textarea', array( 'rows' => 5 ) ),
+						self::field(
+							'field_fp02_options_review_service',
+							'Повод обращения',
+							'review_service',
+							'post_object',
+							array(
+								'post_type'      => array( 'service' ),
+								'return_format'  => 'id',
+								'ui'             => 1,
+								'allow_null'     => 1,
+								'instructions'   => 'Автоматический список услуг (CPT service).',
+							)
+						),
+						self::field( 'field_fp02_options_review_context', 'Контекст / повод вручную', 'review_context', 'text', array( 'instructions' => 'Fallback, если услуга не выбрана.' ) ),
+						self::field( 'field_fp02_options_review_source', 'Источник', 'review_source', 'text' ),
+						self::field( 'field_fp02_options_review_date', 'Дата', 'review_date', 'text' ),
+						self::field( 'field_fp02_options_review_rating', 'Оценка (1–5)', 'review_rating', 'number', array( 'default_value' => 5, 'min' => 1, 'max' => 5, 'step' => 1 ) ),
+						self::field( 'field_fp02_options_review_visible', 'Показывать', 'review_visible', 'true_false', array( 'default_value' => 1, 'ui' => 1, 'ui_on_text' => 'Да', 'ui_off_text' => 'Нет' ) ),
+						self::field( 'field_fp02_options_review_featured', 'В слайдере на главной', 'review_featured', 'true_false', array( 'default_value' => 1, 'ui' => 1, 'ui_on_text' => 'Да', 'ui_off_text' => 'Нет' ) ),
+					),
+					0,
+					array(
+						'button_label' => 'Добавить отзыв',
+						'instructions' => 'Site-wide reviews source. Если пусто — на фронтенде используется статический V9 fallback. Якоря используют постоянный review_uid (не индекс строки).',
+					)
+				),
+			),
+			self::location( 'options_page', '==', 'fp02-reviews' )
 		);
 	}
 
@@ -2982,35 +3176,128 @@ final class FieldGroups implements ModuleInterface {
 			array(
 				self::field(
 					'field_fp02_cta_band_default_title',
-					'Заголовок CTA по умолчанию',
+					'CTA лид',
 					'cta_band_default_title',
-					'text',
+					'textarea',
 					array(
-						'instructions' => 'Используется когда у услуги нет cta_title. Пусто — global_cta_title из Общих настроек.',
+						'rows'         => 2,
+						'instructions' => 'Основной текст `.program-cta-band__lead` (как Comfort CTA лид). Используется когда у услуги нет cta_title. Пусто — global_cta_title из Общих настроек.',
 					)
 				),
 				self::field(
 					'field_fp02_cta_band_default_subtitle',
-					'Текст CTA по умолчанию',
+					'Текст CTA',
 					'cta_band_default_subtitle',
 					'textarea',
 					array(
-						'rows'         => 3,
-						'instructions' => 'Пусто — global_cta_text из Общих настроек.',
+						'rows'         => 2,
+						'instructions' => 'Короткий текст `.program-cta-band__lead-txt` (как Comfort `cta_lead_text`). Пусто — global_cta_text из Общих настроек.',
 					)
 				),
-				self::field( 'field_fp02_cta_band_phone_hint', 'Подпись телефона', 'cta_band_phone_hint', 'text' ),
+				self::field(
+					'field_fp02_cta_band_phone_hint',
+					'Подпись телефона',
+					'cta_band_phone_hint',
+					'text',
+					array(
+						'instructions' => 'Текст рядом с телефоном (как «Или позвоните нам» в Comfort CTA).',
+					)
+				),
 				self::field(
 					'field_fp02_cta_band_default_button_label',
-					'Текст кнопки по умолчанию',
+					'Текст кнопки CTA',
 					'cta_band_default_button_label',
 					'text',
 					array(
-						'instructions' => 'Пусто — default_button_label из Общих настроек.',
+						'instructions' => 'Пусто — default_button_label из Общих настроек. URL кнопки задаётся на уровне страницы/услуги (`cta_button_target`), иначе открывается модалка консультации.',
 					)
 				),
 			),
 			self::location( 'options_page', '==', 'fp02-block-cta-bands' )
+		);
+	}
+
+	/**
+	 * Reusable block — Founder’s Word / founder quote (V9-06E62B).
+	 *
+	 * Blog archive keeps only the visibility toggle; content lives here.
+	 *
+	 * @return array<string, mixed>
+	 */
+	private static function block_founder_quote() {
+		return self::group(
+			'group_fp02_block_founder_quote',
+			'Reusable Block — Founder Quote',
+			array(
+				self::field(
+					'field_fp02_founder_quote_source_notice',
+					'Слово основателя',
+					'founder_quote_source_notice',
+					'message',
+					array(
+						'message' => 'Общий контент блока «Слово основателя» для Главной, Блога (при включённом переключателе), Услуг и других страниц, где подключён шаблон founder-quote. На странице Блога редактируется только показ/скрытие.',
+					)
+				),
+				self::repeater(
+					'field_fp02_founder_quote_paragraphs',
+					'Абзацы цитаты',
+					'founder_quote_paragraphs',
+					10,
+					array(
+						self::field(
+							'field_fp02_founder_quote_paragraph_text',
+							'Абзац',
+							'text',
+							'textarea',
+							array( 'rows' => 3 )
+						),
+					),
+					0,
+					array(
+						'button_label' => 'Добавить абзац',
+						'instructions' => 'Пусто — статический V9 fallback в шаблоне.',
+					)
+				),
+				self::field(
+					'field_fp02_founder_quote_photo',
+					'Фото',
+					'founder_quote_photo',
+					'image',
+					array(
+						'return_format' => 'array',
+						'preview_size'  => 'medium',
+						'instructions'  => 'Пусто — theme asset founder-sergey-shpigovsky.png.',
+					)
+				),
+				self::field(
+					'field_fp02_founder_quote_name',
+					'Имя',
+					'founder_quote_name',
+					'text',
+					array(
+						'instructions' => 'Пусто — Сергей Юрьевич Шпиговский.',
+					)
+				),
+				self::field(
+					'field_fp02_founder_quote_role',
+					'Роль / подпись',
+					'founder_quote_role',
+					'text',
+					array(
+						'instructions' => 'Пусто — Основатель центра. Аддиктолог, интервенционист.',
+					)
+				),
+				self::field(
+					'field_fp02_founder_quote_cta_label',
+					'Текст кнопки',
+					'founder_quote_cta_label',
+					'text',
+					array(
+						'instructions' => 'Пусто — Записаться на консультацию.',
+					)
+				),
+			),
+			self::location( 'options_page', '==', 'fp02-block-founder-quote' )
 		);
 	}
 
@@ -3225,6 +3512,16 @@ final class FieldGroups implements ModuleInterface {
 					)
 				),
 				self::field( 'field_fp02_rehab_requirements_cta_lead', 'Требования — CTA лид', 'rehab_requirements_cta_lead', 'textarea', array( 'rows' => 2 ) ),
+				self::field(
+					'field_fp02_rehab_requirements_cta_lead_text',
+					'Текст CTA',
+					'cta_lead_text',
+					'textarea',
+					array(
+						'rows'         => 2,
+						'instructions' => 'Короткий текст в блоке `.home-rehabilitation-requirements__cta-lead-txt` под основным CTA-лидом.',
+					)
+				),
 				self::field( 'field_fp02_rehab_requirements_cta_phone', 'Требования — телефон CTA', 'rehab_requirements_cta_phone', 'text', array( 'instructions' => 'Пусто — phone_primary из Общих настроек или статический fallback.' ) ),
 				self::field( 'field_fp02_rehab_requirements_cta_button_label', 'Требования — кнопка CTA', 'rehab_requirements_cta_button_label', 'text' ),
 				self::field( 'field_fp02_rehab_requirements_support_heading', 'Требования — заголовок поддержки', 'rehab_requirements_support_heading', 'text' ),

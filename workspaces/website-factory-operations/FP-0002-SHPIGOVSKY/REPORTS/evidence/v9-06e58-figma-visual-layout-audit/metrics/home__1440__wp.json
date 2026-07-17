@@ -1,0 +1,663 @@
+{
+  "route": "home",
+  "viewport": "1440",
+  "url": "http://shpigovsky.test/",
+  "ok": true,
+  "metrics": {
+    "viewport": {
+      "w": 1440,
+      "h": 1100
+    },
+    "overflowX": -15,
+    "scrollHeight": 17716,
+    "containerStats": [
+      {
+        "class": "container",
+        "width": 1230,
+        "maxWidth": "1230px",
+        "paddingLeft": "30px",
+        "paddingRight": "30px",
+        "marginLeft": "97.5px",
+        "marginRight": "97.5px"
+      },
+      {
+        "class": "container fp02-floating-header__inner",
+        "width": 1230,
+        "maxWidth": "1230px",
+        "paddingLeft": "30px",
+        "paddingRight": "30px",
+        "marginLeft": "97.5px",
+        "marginRight": "97.5px"
+      },
+      {
+        "class": "hero__container",
+        "width": 1001,
+        "maxWidth": "none",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "marginLeft": "0px",
+        "marginRight": "0px"
+      },
+      {
+        "class": "hero__container",
+        "width": 783,
+        "maxWidth": "none",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "marginLeft": "0px",
+        "marginRight": "0px"
+      },
+      {
+        "class": "container",
+        "width": 1230,
+        "maxWidth": "1230px",
+        "paddingLeft": "30px",
+        "paddingRight": "30px",
+        "marginLeft": "97.5px",
+        "marginRight": "97.5px"
+      },
+      {
+        "class": "container",
+        "width": 1230,
+        "maxWidth": "1230px",
+        "paddingLeft": "30px",
+        "paddingRight": "30px",
+        "marginLeft": "97.5px",
+        "marginRight": "97.5px"
+      },
+      {
+        "class": "container",
+        "width": 1230,
+        "maxWidth": "1230px",
+        "paddingLeft": "30px",
+        "paddingRight": "30px",
+        "marginLeft": "97.5px",
+        "marginRight": "97.5px"
+      },
+      {
+        "class": "container",
+        "width": 1230,
+        "maxWidth": "1230px",
+        "paddingLeft": "30px",
+        "paddingRight": "30px",
+        "marginLeft": "97.5px",
+        "marginRight": "97.5px"
+      },
+      {
+        "class": "container",
+        "width": 1230,
+        "maxWidth": "1230px",
+        "paddingLeft": "30px",
+        "paddingRight": "30px",
+        "marginLeft": "97.5px",
+        "marginRight": "97.5px"
+      },
+      {
+        "class": "container",
+        "width": 1230,
+        "maxWidth": "1230px",
+        "paddingLeft": "30px",
+        "paddingRight": "30px",
+        "marginLeft": "97.5px",
+        "marginRight": "97.5px"
+      },
+      {
+        "class": "container",
+        "width": 1230,
+        "maxWidth": "1230px",
+        "paddingLeft": "30px",
+        "paddingRight": "30px",
+        "marginLeft": "97.5px",
+        "marginRight": "97.5px"
+      },
+      {
+        "class": "container",
+        "width": 1230,
+        "maxWidth": "1230px",
+        "paddingLeft": "30px",
+        "paddingRight": "30px",
+        "marginLeft": "97.5px",
+        "marginRight": "97.5px"
+      }
+    ],
+    "sectionStats": [
+      {
+        "class": "home-recovery-intro is-revealed",
+        "top": 815,
+        "height": 1377,
+        "width": 1425,
+        "paddingTop": "50px",
+        "paddingBottom": "50px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "class": "founder-quote founder-quote--variant-b",
+        "top": 2212,
+        "height": 583,
+        "width": 1425,
+        "paddingTop": "50px",
+        "paddingBottom": "50px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "class": "home-treatment-prevention",
+        "top": 2795,
+        "height": 1141,
+        "width": 1425,
+        "paddingTop": "50px",
+        "paddingBottom": "50px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "class": "home-gallery",
+        "top": 3936,
+        "height": 513,
+        "width": 1425,
+        "paddingTop": "50px",
+        "paddingBottom": "50px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "class": "home-why-us @@class",
+        "top": 4449,
+        "height": 635,
+        "width": 1425,
+        "paddingTop": "50px",
+        "paddingBottom": "50px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "class": "home-staff-photo @@class",
+        "top": 5084,
+        "height": 555,
+        "width": 1425,
+        "paddingTop": "50px",
+        "paddingBottom": "50px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "class": "home-feature-grid @@class",
+        "top": 5640,
+        "height": 596,
+        "width": 1425,
+        "paddingTop": "50px",
+        "paddingBottom": "50px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "class": "clinic-landscape",
+        "top": 6236,
+        "height": 700,
+        "width": 1425,
+        "paddingTop": "50px",
+        "paddingBottom": "50px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "class": "home-recovery-life",
+        "top": 6935,
+        "height": 1081,
+        "width": 1425,
+        "paddingTop": "50px",
+        "paddingBottom": "50px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "class": "reviews",
+        "top": 8016,
+        "height": 512,
+        "width": 1425,
+        "paddingTop": "50px",
+        "paddingBottom": "50px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "class": "home-rehabilitation-requirements",
+        "top": 8528,
+        "height": 1700,
+        "width": 1425,
+        "paddingTop": "50px",
+        "paddingBottom": "50px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "class": "home-rehabilitation-program",
+        "top": 10228,
+        "height": 1694,
+        "width": 1425,
+        "paddingTop": "50px",
+        "paddingBottom": "50px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "class": "home-genotyping",
+        "top": 11922,
+        "height": 1002,
+        "width": 1425,
+        "paddingTop": "50px",
+        "paddingBottom": "50px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "class": "comfort",
+        "top": 12924,
+        "height": 1264,
+        "width": 1425,
+        "paddingTop": "50px",
+        "paddingBottom": "50px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "class": "home-videos",
+        "top": 14188,
+        "height": 554,
+        "width": 1425,
+        "paddingTop": "50px",
+        "paddingBottom": "50px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "class": "specialists",
+        "top": 14742,
+        "height": 592,
+        "width": 1425,
+        "paddingTop": "50px",
+        "paddingBottom": "50px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "class": "home-articles",
+        "top": 15314,
+        "height": 552,
+        "width": 1425,
+        "paddingTop": "50px",
+        "paddingBottom": "50px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "class": "faq",
+        "top": 15886,
+        "height": 753,
+        "width": 1425,
+        "paddingTop": "50px",
+        "paddingBottom": "50px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      {
+        "class": "final-form",
+        "top": 16639,
+        "height": 554,
+        "width": 1425,
+        "paddingTop": "50px",
+        "paddingBottom": "50px",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      }
+    ],
+    "buttonStats": [
+      {
+        "text": "Заказать звонок",
+        "w": 0,
+        "h": 0,
+        "fontSize": "14px",
+        "padding": "0px 25px 0px 25px",
+        "radius": "999px"
+      },
+      {
+        "text": "Заказать звонок",
+        "w": 189,
+        "h": 40,
+        "fontSize": "14px",
+        "padding": "0px 25px 0px 25px",
+        "radius": "999px"
+      },
+      {
+        "text": "Заказать звонок",
+        "w": 280,
+        "h": 40,
+        "fontSize": "14px",
+        "padding": "0px 25px 0px 25px",
+        "radius": "999px"
+      },
+      {
+        "text": "Заказать звонок",
+        "w": 189,
+        "h": 40,
+        "fontSize": "14px",
+        "padding": "0px 25px 0px 25px",
+        "radius": "999px"
+      },
+      {
+        "text": "Заказать звонок",
+        "w": 189,
+        "h": 40,
+        "fontSize": "14px",
+        "padding": "0px 25px 0px 25px",
+        "radius": "999px"
+      },
+      {
+        "text": "Заказать звонок",
+        "w": 189,
+        "h": 40,
+        "fontSize": "14px",
+        "padding": "0px 25px 0px 25px",
+        "radius": "999px"
+      },
+      {
+        "text": "Записаться на консультацию",
+        "w": 200,
+        "h": 50,
+        "fontSize": "14px",
+        "padding": "0px 25px 0px 25px",
+        "radius": "999px"
+      },
+      {
+        "text": "Записаться",
+        "w": 148,
+        "h": 40,
+        "fontSize": "14px",
+        "padding": "0px 25px 0px 25px",
+        "radius": "999px"
+      },
+      {
+        "text": "Записаться на консультацию",
+        "w": 297,
+        "h": 40,
+        "fontSize": "14px",
+        "padding": "0px 25px 0px 25px",
+        "radius": "999px"
+      },
+      {
+        "text": "Заказать звонок",
+        "w": 189,
+        "h": 40,
+        "fontSize": "14px",
+        "padding": "0px 25px 0px 25px",
+        "radius": "999px"
+      },
+      {
+        "text": "Заказать звонок",
+        "w": 189,
+        "h": 40,
+        "fontSize": "14px",
+        "padding": "0px 25px 0px 25px",
+        "radius": "999px"
+      },
+      {
+        "text": "Записаться",
+        "w": 148,
+        "h": 40,
+        "fontSize": "14px",
+        "padding": "0px 25px 0px 25px",
+        "radius": "999px"
+      },
+      {
+        "text": "Записаться на консультацию",
+        "w": 0,
+        "h": 0,
+        "fontSize": "14px",
+        "padding": "0px 25px 0px 25px",
+        "radius": "999px"
+      }
+    ],
+    "cardStats": [
+      {
+        "class": "home-recovery-intro__card-grid",
+        "w": 1170,
+        "h": 770,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "home-recovery-intro__card",
+        "w": 370,
+        "h": 370,
+        "padding": "30px 30px 30px 30px",
+        "radius": "30px"
+      },
+      {
+        "class": "home-recovery-intro__card-icon",
+        "w": 308,
+        "h": 48,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "home-recovery-intro__card-title",
+        "w": 280,
+        "h": 48,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "home-recovery-intro__card-text",
+        "w": 308,
+        "h": 216,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "home-recovery-intro__card",
+        "w": 370,
+        "h": 370,
+        "padding": "30px 30px 30px 30px",
+        "radius": "30px"
+      },
+      {
+        "class": "home-recovery-intro__card-icon",
+        "w": 308,
+        "h": 48,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "home-recovery-intro__card-title",
+        "w": 280,
+        "h": 48,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "home-recovery-intro__card-text",
+        "w": 308,
+        "h": 240,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "home-recovery-intro__card",
+        "w": 370,
+        "h": 370,
+        "padding": "30px 30px 30px 30px",
+        "radius": "30px"
+      },
+      {
+        "class": "home-recovery-intro__card-icon",
+        "w": 308,
+        "h": 48,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "home-recovery-intro__card-title",
+        "w": 280,
+        "h": 48,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "home-recovery-intro__card-text",
+        "w": 308,
+        "h": 216,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "home-recovery-intro__card",
+        "w": 370,
+        "h": 370,
+        "padding": "30px 30px 30px 30px",
+        "radius": "30px"
+      },
+      {
+        "class": "home-recovery-intro__card-icon",
+        "w": 308,
+        "h": 48,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "home-recovery-intro__card-title",
+        "w": 280,
+        "h": 48,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "home-recovery-intro__card-text",
+        "w": 308,
+        "h": 240,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "home-recovery-intro__card",
+        "w": 370,
+        "h": 370,
+        "padding": "30px 30px 30px 30px",
+        "radius": "30px"
+      },
+      {
+        "class": "home-recovery-intro__card-icon",
+        "w": 308,
+        "h": 48,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      },
+      {
+        "class": "home-recovery-intro__card-title",
+        "w": 280,
+        "h": 48,
+        "padding": "0px 0px 0px 0px",
+        "radius": "0px"
+      }
+    ],
+    "h2s": [
+      {
+        "text": "Шпиговский дом — восстановление, построенное вокру",
+        "size": "36px",
+        "lh": "36px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "Лечение и профилактика",
+        "size": "36px",
+        "lh": "36px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "Нас выбирают за мультидисциплинарный подход к лече",
+        "size": "36px",
+        "lh": "36px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "Как меняется жизнь человека в процессе восстановле",
+        "size": "36px",
+        "lh": "36px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "Отзывы",
+        "size": "36px",
+        "lh": "36px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "Что нужно для прохождения реабилитации и лечения",
+        "size": "36px",
+        "lh": "36px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "Программа центра включает 4 направления",
+        "size": "36px",
+        "lh": "36px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "Генотипирование — инструмент диагностики",
+        "size": "36px",
+        "lh": "36px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "Комфорт, приватность, забота",
+        "size": "36px",
+        "lh": "36px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "Видео о нашем центре",
+        "size": "36px",
+        "lh": "36px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "Специалисты центра",
+        "size": "36px",
+        "lh": "36px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "Статьи",
+        "size": "36px",
+        "lh": "36px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "Нас часто спрашивают",
+        "size": "36px",
+        "lh": "36px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "Остались вопросы?",
+        "size": "30px",
+        "lh": "34px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      },
+      {
+        "text": "Услуги",
+        "size": "18px",
+        "lh": "24px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", roboto, \"Helvet"
+      }
+    ],
+    "overlaps": []
+  },
+  "errors": [],
+  "status": 200,
+  "shots": {
+    "full": "home__1440__wp__full.png",
+    "body": "home__1440__wp__body.png"
+  }
+}

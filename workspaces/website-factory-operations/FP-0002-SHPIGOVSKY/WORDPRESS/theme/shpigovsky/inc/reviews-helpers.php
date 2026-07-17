@@ -2,13 +2,46 @@
 /**
  * Shared reviews helpers — V9-06D9-X admin-to-frontend binding repair.
  *
- * Read-only; no meta writes.
+ * V9-06E62C: stable review_uid anchors (not repeater indices).
  *
  * @package Shpigovsky
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
+}
+
+/**
+ * Generate a unique review UID in format review-xxxxxxxx.
+ *
+ * @param array<int, string> $existing Existing UIDs to avoid.
+ * @return string
+ */
+function shpigovsky_generate_review_uid( array $existing = array() ) {
+	$existing_map = array_fill_keys( array_map( 'strval', $existing ), true );
+
+	for ( $i = 0; $i < 32; $i++ ) {
+		$candidate = 'review-' . strtolower( substr( bin2hex( random_bytes( 4 ) ), 0, 8 ) );
+		if ( ! isset( $existing_map[ $candidate ] ) ) {
+			return $candidate;
+		}
+	}
+
+	return 'review-' . strtolower( substr( md5( uniqid( (string) wp_rand(), true ) ), 0, 8 ) );
+}
+
+/**
+ * Normalize / validate a stored review UID.
+ *
+ * @param string $uid Raw UID.
+ * @return string Empty when invalid.
+ */
+function shpigovsky_sanitize_review_uid( $uid ) {
+	$uid = strtolower( trim( (string) $uid ) );
+	if ( preg_match( '/^review-[a-z0-9]{6,32}$/', $uid ) ) {
+		return $uid;
+	}
+	return '';
 }
 
 /**
@@ -332,25 +365,79 @@ function shpigovsky_normalize_review_row( $row ) {
 		}
 	}
 
+	$service_data = shpigovsky_resolve_review_service_data( $row['review_service'] ?? null );
+	$service_id   = 0;
+
+	if ( isset( $row['review_service'] ) ) {
+		if ( $row['review_service'] instanceof WP_Post ) {
+			$service_id = (int) $row['review_service']->ID;
+		} elseif ( is_numeric( $row['review_service'] ) ) {
+			$service_id = (int) $row['review_service'];
+		} elseif ( is_array( $row['review_service'] ) && isset( $row['review_service']['ID'] ) ) {
+			$service_id = (int) $row['review_service']['ID'];
+		}
+	}
+
+	$uid = shpigovsky_pick_review_string_field(
+		$row,
+		array( 'review_uid', 'review_key' )
+	);
+
 	return array(
-		'author'   => $author,
-		'text'     => $text,
-		'context'  => shpigovsky_pick_review_string_field(
+		'author'       => $author,
+		'text'         => $text,
+		'context'      => '' !== $service_data['title'] ? $service_data['title'] : shpigovsky_pick_review_string_field(
 			$row,
 			array( 'review_context', 'metadata' )
 		),
-		'source'   => shpigovsky_pick_review_string_field(
+		'source'       => shpigovsky_pick_review_string_field(
 			$row,
 			array( 'review_source', 'source' )
 		),
-		'date'     => shpigovsky_pick_review_string_field(
+		'date'         => shpigovsky_pick_review_string_field(
 			$row,
 			array( 'review_date', 'date' )
 		),
-		'rating'   => shpigovsky_normalize_review_rating( null !== $rating_raw ? $rating_raw : 5 ),
-		'featured' => $featured,
-		'visible'  => true,
-		'is_demo'  => false,
+		'rating'       => shpigovsky_normalize_review_rating( null !== $rating_raw ? $rating_raw : 5 ),
+		'service_href' => $service_data['url'],
+		'service_id'   => $service_id,
+		'featured'     => $featured,
+		'visible'      => true,
+		'is_demo'      => false,
+		'review_uid'   => $uid,
+		'review_id'    => 0,
+	);
+}
+
+/**
+ * Resolve service relationship data from an ACF post_object value.
+ *
+ * @param mixed $service Raw ACF value.
+ * @return array{title:string,url:string}
+ */
+function shpigovsky_resolve_review_service_data( $service ) {
+	$post_id = 0;
+
+	if ( $service instanceof WP_Post ) {
+		$post_id = (int) $service->ID;
+	} elseif ( is_numeric( $service ) ) {
+		$post_id = (int) $service;
+	} elseif ( is_array( $service ) && isset( $service['ID'] ) ) {
+		$post_id = (int) $service['ID'];
+	}
+
+	if ( $post_id <= 0 || 'service' !== get_post_type( $post_id ) ) {
+		return array(
+			'title' => '',
+			'url'   => '',
+		);
+	}
+
+	$url = get_permalink( $post_id );
+
+	return array(
+		'title' => get_the_title( $post_id ),
+		'url'   => is_string( $url ) ? $url : '',
 	);
 }
 
@@ -375,12 +462,16 @@ function shpigovsky_get_reviews_option_items() {
 
 		$normalized = array();
 
-		foreach ( $candidate as $row ) {
+		foreach ( $candidate as $raw_index => $row ) {
 			$item = shpigovsky_normalize_review_row( $row );
 
-			if ( null !== $item ) {
-				$normalized[] = $item;
+			if ( null === $item ) {
+				continue;
 			}
+
+			// Legacy 1-based index retained for diagnostics only (not used as public anchor).
+			$item['review_id'] = (int) $raw_index + 1;
+			$normalized[]      = $item;
 		}
 
 		if ( ! empty( $normalized ) ) {
@@ -446,6 +537,348 @@ function shpigovsky_get_reviews_items( $args = array() ) {
 
 	return $items;
 }
+
+/**
+ * Reviews archive posts-per-page setting.
+ *
+ * @return int
+ */
+function shpigovsky_get_reviews_per_page() {
+	if ( ! function_exists( 'get_field' ) ) {
+		return 10;
+	}
+
+	$value = (int) get_field( 'reviews_per_page', shpigovsky_get_reviews_options_context() );
+
+	return $value > 0 ? $value : 10;
+}
+
+/**
+ * Slice reviews for current archive page.
+ *
+ * @param array<int, array<string, mixed>> $items Review rows.
+ * @return array{items:array<int,array<string,mixed>>,current:int,total:int,per_page:int,out_of_range:bool}
+ */
+function shpigovsky_paginate_reviews_items( $items ) {
+	$per_page     = shpigovsky_get_reviews_per_page();
+	$count        = count( $items );
+	$total        = max( 1, (int) ceil( $count / $per_page ) );
+	$requested    = max( 1, (int) get_query_var( 'paged', 1 ) );
+	$out_of_range = $requested > $total;
+	$current      = $out_of_range ? $total : $requested;
+	$offset       = ( $current - 1 ) * $per_page;
+
+	return array(
+		'items'        => $out_of_range ? array() : array_slice( $items, $offset, $per_page ),
+		'current'      => $current,
+		'total'        => $total,
+		'per_page'     => $per_page,
+		'out_of_range' => $out_of_range,
+	);
+}
+
+/**
+ * Reviews archive page ID (`/otzyvy/`).
+ *
+ * @return int
+ */
+function shpigovsky_get_reviews_archive_page_id() {
+	static $cached = null;
+
+	if ( null !== $cached ) {
+		return $cached;
+	}
+
+	$page = get_page_by_path( 'otzyvy' );
+
+	if ( $page instanceof WP_Post ) {
+		$cached = (int) $page->ID;
+		return $cached;
+	}
+
+	$pages = get_posts(
+		array(
+			'post_type'              => 'page',
+			'post_status'            => 'publish',
+			'posts_per_page'         => 20,
+			'meta_key'               => '_wp_page_template',
+			'meta_value'             => 'page-templates/reviews.php',
+			'no_found_rows'          => true,
+			'update_post_meta_cache' => false,
+			'update_post_term_cache' => false,
+			'fields'                 => 'ids',
+		)
+	);
+
+	$cached = ! empty( $pages ) ? (int) $pages[0] : 0;
+
+	return $cached;
+}
+
+/**
+ * Build archive URL for a review UID (stable across repeater reorder).
+ *
+ * Page number is computed from current row position + reviews_per_page.
+ * Cached per request — no per-card DB queries.
+ *
+ * @param string $review_uid Stable review UID (review-xxxxxxxx).
+ * @return string Absolute URL with #{review_uid}, or archive root when unknown.
+ */
+function shpigovsky_get_review_archive_url( $review_uid ) {
+	static $map = null;
+
+	$review_uid = shpigovsky_sanitize_review_uid( $review_uid );
+	$page_id    = shpigovsky_get_reviews_archive_page_id();
+	$base       = $page_id > 0 ? get_permalink( $page_id ) : home_url( '/otzyvy/' );
+
+	if ( ! is_string( $base ) || '' === $base ) {
+		$base = home_url( '/otzyvy/' );
+	}
+
+	$base = trailingslashit( $base );
+
+	if ( null === $map ) {
+		$map      = array();
+		$items    = shpigovsky_get_reviews_items(
+			array(
+				'featured_only' => false,
+				'limit'         => 0,
+			)
+		);
+		$per_page = shpigovsky_get_reviews_per_page();
+
+		foreach ( $items as $index => $item ) {
+			$uid = shpigovsky_sanitize_review_uid( $item['review_uid'] ?? '' );
+			if ( '' === $uid ) {
+				continue;
+			}
+			$page_num     = (int) floor( $index / $per_page ) + 1;
+			$map[ $uid ]  = $page_num;
+		}
+	}
+
+	if ( '' === $review_uid || ! isset( $map[ $review_uid ] ) ) {
+		return $base;
+	}
+
+	$page_num = (int) $map[ $review_uid ];
+	$url      = $base;
+
+	if ( $page_num > 1 ) {
+		$url = $base . user_trailingslashit( 'page/' . $page_num, 'single' );
+	}
+
+	return $url . '#' . $review_uid;
+}
+
+/**
+ * Ensure every reviews_items row has a unique persistent review_uid.
+ *
+ * Idempotent: existing valid UIDs are preserved; empty/invalid/duplicate get new IDs.
+ *
+ * @param string $context ACF options context.
+ * @return array{updated:bool,assigned:int,preserved:int,rows:int}
+ */
+function shpigovsky_ensure_review_uids( $context = '' ) {
+	if ( ! function_exists( 'get_field' ) || ! function_exists( 'update_field' ) ) {
+		return array(
+			'updated'    => false,
+			'assigned'   => 0,
+			'preserved'  => 0,
+			'rows'       => 0,
+		);
+	}
+
+	if ( '' === $context ) {
+		$context = shpigovsky_get_reviews_options_context();
+	}
+
+	$rows = get_field( 'reviews_items', $context );
+	if ( ! is_array( $rows ) ) {
+		return array(
+			'updated'    => false,
+			'assigned'   => 0,
+			'preserved'  => 0,
+			'rows'       => 0,
+		);
+	}
+
+	$seen      = array();
+	$assigned  = 0;
+	$preserved = 0;
+	$changed   = false;
+
+	foreach ( $rows as $index => $row ) {
+		if ( ! is_array( $row ) ) {
+			$row = array();
+		}
+		$uid = shpigovsky_sanitize_review_uid( $row['review_uid'] ?? '' );
+		if ( '' === $uid || isset( $seen[ $uid ] ) ) {
+			$uid      = shpigovsky_generate_review_uid( array_keys( $seen ) );
+			$assigned++;
+			$changed  = true;
+		} else {
+			$preserved++;
+		}
+		$seen[ $uid ]              = true;
+		$rows[ $index ]            = $row;
+		$rows[ $index ]['review_uid'] = $uid;
+	}
+
+	if ( $changed ) {
+		update_field( 'reviews_items', $rows, $context );
+	}
+
+	return array(
+		'updated'   => $changed,
+		'assigned'  => $assigned,
+		'preserved' => $preserved,
+		'rows'      => count( $rows ),
+	);
+}
+
+/**
+ * Persist review_uid values when Reviews options are saved in admin.
+ *
+ * @param int|string $post_id ACF post/options id.
+ * @return void
+ */
+function shpigovsky_reviews_save_ensure_uids( $post_id ) {
+	if ( ! is_string( $post_id ) && ! is_numeric( $post_id ) ) {
+		return;
+	}
+
+	$post_id = (string) $post_id;
+	$contexts = array(
+		shpigovsky_get_reviews_options_context(),
+		'fp02-reviews',
+		'option',
+		'options',
+	);
+
+	$matched = false;
+	foreach ( $contexts as $ctx ) {
+		if ( $post_id === (string) $ctx || false !== strpos( $post_id, 'fp02-reviews' ) ) {
+			$matched = true;
+			break;
+		}
+	}
+
+	if ( ! $matched && function_exists( 'acf_get_options_page' ) ) {
+		// Options screen save for Reviews.
+		if ( isset( $_POST['acf'] ) && is_array( $_POST['acf'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
+			foreach ( array_keys( $_POST['acf'] ) as $key ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
+				if ( false !== strpos( (string) $key, 'reviews_items' ) || 'field_fp02_options_reviews_items' === $key ) {
+					$matched = true;
+					break;
+				}
+			}
+		}
+	}
+
+	if ( ! $matched ) {
+		return;
+	}
+
+	shpigovsky_ensure_review_uids( shpigovsky_get_reviews_options_context() );
+}
+add_action( 'acf/save_post', 'shpigovsky_reviews_save_ensure_uids', 20 );
+
+/**
+ * Mark review_uid as read-only in admin UI.
+ *
+ * @param array<string,mixed>|false $field Field.
+ * @return array<string,mixed>|false
+ */
+function shpigovsky_reviews_readonly_uid_field( $field ) {
+	if ( ! is_array( $field ) ) {
+		return $field;
+	}
+	$field['readonly'] = 1;
+	$field['disabled'] = 0;
+	return $field;
+}
+add_filter( 'acf/prepare_field/key=field_fp02_options_review_uid', 'shpigovsky_reviews_readonly_uid_field' );
+
+/**
+ * Force HTTP 404 when Reviews archive page is out of range.
+ *
+ * @return void
+ */
+function shpigovsky_reviews_out_of_range_404() {
+	if ( is_admin() || wp_doing_ajax() ) {
+		return;
+	}
+
+	if ( ! is_page_template( 'page-templates/reviews.php' ) ) {
+		return;
+	}
+
+	$requested = max( 1, (int) get_query_var( 'paged', 1 ) );
+
+	if ( $requested <= 1 ) {
+		return;
+	}
+
+	$items = shpigovsky_get_reviews_items(
+		array(
+			'featured_only' => false,
+			'limit'         => 0,
+		)
+	);
+	$per_page = shpigovsky_get_reviews_per_page();
+	$total    = max( 1, (int) ceil( count( $items ) / $per_page ) );
+
+	if ( $requested <= $total ) {
+		return;
+	}
+
+	global $wp_query;
+
+	$wp_query->set_404();
+	status_header( 404 );
+	nocache_headers();
+}
+add_action( 'template_redirect', 'shpigovsky_reviews_out_of_range_404', 5 );
+
+/**
+ * Prevent redirect_canonical from collapsing out-of-range Reviews pages to page 1.
+ *
+ * @param string|false $redirect_url Redirect target.
+ * @param string       $requested_url Requested URL.
+ * @return string|false
+ */
+function shpigovsky_reviews_disable_canonical_redirect_when_out_of_range( $redirect_url, $requested_url ) {
+	if ( is_admin() || ! is_string( $requested_url ) || '' === $requested_url ) {
+		return $redirect_url;
+	}
+
+	if ( ! preg_match( '~/otzyvy/page/([0-9]+)/?(?:[?#]|$)~', $requested_url, $matches ) ) {
+		return $redirect_url;
+	}
+
+	$requested = max( 1, (int) $matches[1] );
+
+	if ( $requested <= 1 ) {
+		return $redirect_url;
+	}
+
+	$items = shpigovsky_get_reviews_items(
+		array(
+			'featured_only' => false,
+			'limit'         => 0,
+		)
+	);
+	$per_page = shpigovsky_get_reviews_per_page();
+	$total    = max( 1, (int) ceil( count( $items ) / $per_page ) );
+
+	if ( $requested > $total ) {
+		return false;
+	}
+
+	return $redirect_url;
+}
+add_filter( 'redirect_canonical', 'shpigovsky_reviews_disable_canonical_redirect_when_out_of_range', 10, 2 );
 
 /**
  * Resolve shared reviews data source mode for validation and diagnostics.

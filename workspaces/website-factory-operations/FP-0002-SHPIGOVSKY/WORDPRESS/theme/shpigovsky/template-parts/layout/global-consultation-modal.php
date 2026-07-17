@@ -55,7 +55,7 @@ $privacy_url = home_url( '/privacy-policy/' );
 				</div>
 				<div class="modal-consultation__field" data-lead-field-wrap>
 					<label class="modal-consultation__label" for="modal-consultation-phone"><?php esc_html_e( 'Ваш телефон', 'shpigovsky' ); ?></label>
-					<input class="modal-consultation__input" type="tel" id="modal-consultation-phone" name="phone" data-phone-input inputmode="tel" placeholder="+7 999 999 - 99 - 99" autocomplete="tel" required>
+					<input class="modal-consultation__input" type="tel" id="modal-consultation-phone" name="phone" data-phone-input inputmode="tel" placeholder="+7 (___) ___-__-__" autocomplete="tel" required>
 					<span class="modal-consultation__field-error" data-lead-field-error id="modal-consultation-phone-error" hidden></span>
 				</div>
 			</div>

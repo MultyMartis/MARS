@@ -54,7 +54,7 @@ if ( shpigovsky_is_service_general_variant( $variant ) ) {
 			<p class="services-program-v2__lead"><?php echo esc_html( (string) $program['lead'] ); ?></p>
 		<?php endif; ?>
 		<?php foreach ( $intros as $intro_index => $intro_text ) : ?>
-			<p class="services-program-v2__intro<?php echo $intro_index > 0 ? ' services-program-v2__intro--continued' : ''; ?>"><?php echo esc_html( (string) $intro_text ); ?></p>
+			<p class="services-program-v2__intro<?php echo $intro_index > 0 ? ' services-program-v2__intro--continued' : ''; ?>"><span><?php echo esc_html( (string) $intro_text ); ?></span></p>
 		<?php endforeach; ?>
 
 		<div class="services-program-v2__grid">
@@ -163,7 +163,7 @@ if ( 'subdivision' === $variant ) {
 				? 'services-program-v2__intro'
 				: 'services-program-v2__intro services-program-v2__intro--continued';
 			?>
-			<p class="<?php echo esc_attr( $intro_class ); ?>"><?php echo esc_html( $intro_text ); ?></p>
+			<p class="<?php echo esc_attr( $intro_class ); ?>"><span><?php echo esc_html( $intro_text ); ?></span></p>
 		<?php endforeach; ?>
 
 		<div class="services-program-v2__grid">

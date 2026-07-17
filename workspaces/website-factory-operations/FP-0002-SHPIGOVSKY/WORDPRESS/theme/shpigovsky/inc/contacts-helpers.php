@@ -119,6 +119,66 @@ function shpigovsky_get_contacts_primary_phone() {
 }
 
 /**
+ * Contacts page H1 with page title fallback.
+ *
+ * @return string
+ */
+function shpigovsky_get_contacts_heading() {
+	$heading = shpigovsky_get_contacts_field( 'contacts_heading' );
+
+	if ( '' !== $heading ) {
+		return $heading;
+	}
+
+	$title = trim( (string) get_the_title() );
+
+	return '' !== $title ? $title : __( 'Контакты', 'shpigovsky' );
+}
+
+/**
+ * All display phones for the contacts hero row.
+ *
+ * @return array<int, array{label:string,display:string,href:string}>
+ */
+function shpigovsky_get_contacts_phone_rows() {
+	$rows   = shpigovsky_get_contacts_repeater( 'contacts_phones' );
+	$phones = array();
+
+	foreach ( $rows as $row ) {
+		$phone = isset( $row['phone'] ) ? trim( (string) $row['phone'] ) : '';
+		$label = isset( $row['label'] ) ? trim( (string) $row['label'] ) : '';
+
+		if ( '' === $phone ) {
+			continue;
+		}
+
+		$phones[] = array(
+			'label'   => $label,
+			'display' => $phone,
+			'href'    => shpigovsky_phone_href( $phone ),
+		);
+	}
+
+	if ( ! empty( $phones ) ) {
+		return $phones;
+	}
+
+	$option_phone = shpigovsky_format_phone_display( shpigovsky_get_site_option( 'phone_primary' ) );
+
+	if ( '' === $option_phone ) {
+		return array();
+	}
+
+	return array(
+		array(
+			'label'   => '',
+			'display' => $option_phone,
+			'href'    => shpigovsky_phone_href( $option_phone ),
+		),
+	);
+}
+
+/**
  * Messenger/social rows for contacts page.
  *
  * @return array<int, array{label:string,url:string,icon:string}>
@@ -146,11 +206,21 @@ function shpigovsky_get_contacts_messenger_rows() {
 		return $normalized;
 	}
 
-	foreach ( shpigovsky_get_social_link_rows() as $row ) {
+	// Same data path as header messengers (configured social_links or visual # fallback).
+	foreach ( shpigovsky_get_messenger_link_rows( 'header' ) as $row ) {
+		$url   = isset( $row['url'] ) ? trim( (string) $row['url'] ) : '';
+		$label = isset( $row['label'] ) ? trim( (string) $row['label'] ) : '';
+
+		if ( '' === $url ) {
+			continue;
+		}
+
 		$normalized[] = array(
-			'label' => $row['label'],
-			'url'   => $row['url'],
-			'icon'  => shpigovsky_social_icon_for_label( $row['label'] ),
+			'label' => $label,
+			'url'   => $url,
+			'icon'  => isset( $row['icon'] ) && '' !== trim( (string) $row['icon'] )
+				? trim( (string) $row['icon'] )
+				: shpigovsky_social_icon_for_label( $label ),
 		);
 	}
 
@@ -188,7 +258,7 @@ function shpigovsky_get_contacts_hours_lines() {
 }
 
 /**
- * Static V9 location fallback when ACF blocks are empty.
+ * Static V9 location fallback when ACF locations repeater is empty.
  *
  * @return array<int, array<string, string>>
  */
@@ -198,15 +268,12 @@ function shpigovsky_get_contacts_static_locations() {
 	$hours_html  = implode( '<br>', array_map( 'esc_html', $hours_lines ) );
 
 	$primary_address = shpigovsky_get_site_option( 'site_address' );
-	$page_address    = shpigovsky_get_contacts_field( 'contacts_address' );
 
 	$location_one_address = '' !== trim( $primary_address )
 		? trim( $primary_address )
 		: 'Московская область, район ж.д. станции Катуар, д. Сухарево';
 
-	$location_two_address = '' !== trim( $page_address ) && ! is_email( $page_address )
-		? trim( $page_address )
-		: 'Москва, ул. Ленина, 3';
+	$location_two_address = 'Москва, ул. Ленина, 3';
 
 	$map_images = shpigovsky_get_v9_contacts_map_images();
 
@@ -239,46 +306,105 @@ function shpigovsky_get_contacts_static_locations() {
 }
 
 /**
- * Resolve contacts location cards from ACF blocks or static fallback.
+ * Normalize contacts location repeater rows for the location card partial.
  *
+ * @param array<int, array<string, mixed>> $rows Repeater rows.
  * @return array<int, array<string, string>>
  */
-function shpigovsky_get_contacts_locations() {
-	$locations = shpigovsky_get_contacts_static_locations();
-	$blocks    = shpigovsky_get_contacts_repeater( 'contacts_blocks' );
+function shpigovsky_normalize_contacts_location_rows( array $rows ) {
+	$email_default       = shpigovsky_get_contacts_email();
+	$hours_lines_default = shpigovsky_get_contacts_hours_lines();
+	$hours_html_default  = implode( '<br>', array_map( 'esc_html', $hours_lines_default ) );
+	$locations           = array();
 
-	if ( empty( $blocks ) ) {
-		return $locations;
-	}
-
-	foreach ( $blocks as $index => $block ) {
-		if ( ! isset( $locations[ $index ] ) || ! is_array( $block ) ) {
+	foreach ( $rows as $row ) {
+		if ( ! is_array( $row ) ) {
 			continue;
 		}
 
-		$title = isset( $block['title'] ) ? trim( (string) $block['title'] ) : '';
-		$text  = isset( $block['text'] ) ? trim( (string) $block['text'] ) : '';
+		$title         = isset( $row['title'] ) ? trim( (string) $row['title'] ) : '';
+		$address       = isset( $row['address'] ) ? trim( (string) $row['address'] ) : '';
+		$address_label = isset( $row['address_label'] ) ? trim( (string) $row['address_label'] ) : '';
+		$hours_label   = isset( $row['hours_label'] ) ? trim( (string) $row['hours_label'] ) : '';
+		$hours_html    = isset( $row['hours_html'] ) ? trim( (string) $row['hours_html'] ) : '';
+		$email         = isset( $row['email'] ) ? sanitize_email( (string) $row['email'] ) : '';
+		$email_label   = isset( $row['email_label'] ) ? trim( (string) $row['email_label'] ) : '';
+		$map_embed_code = isset( $row['map_embed_code'] ) ? (string) $row['map_embed_code'] : '';
+		$map_alt       = isset( $row['map_alt'] ) ? trim( (string) $row['map_alt'] ) : '';
+		$simplified    = ! empty( $row['simplified'] );
 
-		if ( '' !== $title ) {
-			$locations[ $index ]['title'] = $title;
+		if ( '' === $title && '' === $address ) {
+			continue;
 		}
 
-		if ( '' !== $text ) {
-			$locations[ $index ]['address'] = $text;
+		if ( '' === $hours_html ) {
+			$hours_html = $hours_html_default;
 		}
+
+		if ( '' === $hours_label ) {
+			$hours_label = 'Режим работы';
+		}
+
+		if ( '' === $email || ! is_email( $email ) ) {
+			$email = $email_default;
+		}
+
+		if ( '' === $email_label ) {
+			$email_label = 'почта';
+		}
+
+		if ( '' === $map_alt && '' !== $address ) {
+			$map_alt = sprintf(
+				/* translators: %s: location address */
+				__( 'Карта: %s', 'shpigovsky' ),
+				wp_strip_all_tags( $address )
+			);
+		}
+
+		$locations[] = array(
+			'title'          => $title,
+			'address'        => $address,
+			'address_label'  => $address_label,
+			'hours_html'     => $hours_html,
+			'hours_label'    => $hours_label,
+			'email'          => $email,
+			'email_label'    => $email_label,
+			'map_image'      => '',
+			'map_embed'      => '',
+			'map_embed_code' => $map_embed_code,
+			'map_alt'        => $map_alt,
+			'simplified'     => $simplified,
+		);
 	}
 
 	return $locations;
 }
 
 /**
- * Map embed URL from page field or site option when allowlisted.
+ * Resolve contacts location cards from ACF locations repeater or static fallback.
+ *
+ * @return array<int, array<string, string>>
+ */
+function shpigovsky_get_contacts_locations() {
+	$location_rows = shpigovsky_get_contacts_repeater( 'contacts_locations' );
+
+	if ( ! empty( $location_rows ) ) {
+		return shpigovsky_normalize_contacts_location_rows( $location_rows );
+	}
+
+	return shpigovsky_get_contacts_static_locations();
+}
+
+/**
+ * Map embed URL from site option when allowlisted.
+ *
+ * Legacy page field contacts_map_url was removed in V9-06E59-FIX01 (superseded by
+ * per-location map_embed_code). Historical postmeta may remain dormant.
  *
  * @return string
  */
 function shpigovsky_get_contacts_map_embed_url() {
 	$candidates = array(
-		shpigovsky_get_contacts_field( 'contacts_map_url' ),
 		shpigovsky_get_site_option( 'map_link' ),
 	);
 

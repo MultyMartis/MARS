@@ -1,0 +1,6 @@
+selector,viewport,pre_intervention,intervention,current_before,final,evidence,action
+.site-header__nav-link / --font-size-nav,--line-height-nav,all,16px/20px,unchanged across E58/E59/V9 static/current,16px/20px,16px/20px,backups+viewport-validation,NO_RESTORE
+.offcanvas__nav-link,all,16px/20px,unchanged,16px/20px,16px/20px,same,NO_RESTORE
+.internal-page-nav .breadcrumbs__link/current,desktop+,14px/18px,unchanged,14px/18px,14px/18px,same,NO_RESTORE
+.page-blog breadcrumbs @max-1024,<=1024,8px/12px Figma EXACT_GEOMETRY,present since V9 static,8px/12px,8px/12px,v9 src/scss EXACT_GEOMETRY,NO_RESTORE (not unwanted automation)
+commented SCSS 11px mobile breadcrumb,mobile,never shipped,commented-only in v9 scss,n/a,n/a,style.scss comments,SAFE_UNKNOWN / not active

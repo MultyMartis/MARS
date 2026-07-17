@@ -1,0 +1,4 @@
+route,destination_examples,nested_anchor,notes
+/uslugi/,8 sample service-name anchors to child services,no,service-card.php
+/uslugi/zavisimosti/,6 child service-name anchors,no,children.php
+fallback,no link when permalink empty,n/a,span.service-name

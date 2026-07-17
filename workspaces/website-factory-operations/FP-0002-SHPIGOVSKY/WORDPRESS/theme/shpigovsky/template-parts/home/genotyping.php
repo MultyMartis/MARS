@@ -81,14 +81,14 @@ $cta_label = shpigovsky_home_text_or_fallback(
 				continue;
 			}
 			?>
-      <p class="home-genotyping__text"><?php echo wp_kses_post( $text ); ?></p>
+      <p class="home-genotyping__text"><span><?php echo wp_kses_post( $text ); ?></span></p>
       <?php endforeach; ?>
     </div>
     <?php endif; ?>
 
     <div class="UNIVERSAL-requirements__support">
     <h3 class="home-genotyping__subheading"><?php echo wp_kses_post( $subheading ); ?></h3>
-    <p class="home-genotyping__text"><?php echo wp_kses_post( $list_intro ); ?></p>
+    <p class="home-genotyping__text"><span><?php echo wp_kses_post( $list_intro ); ?></span></p>
     <?php if ( ! empty( $list_rows ) ) : ?>
     <ul class="home-genotyping__list">
       <?php foreach ( $list_rows as $row ) : ?>

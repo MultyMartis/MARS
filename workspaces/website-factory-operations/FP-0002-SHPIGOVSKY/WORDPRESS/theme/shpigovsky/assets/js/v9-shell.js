@@ -341,8 +341,8 @@
 
 	function gallerySwiperOptions(slider) {
 		return {
-			slidesPerView: 4,
-			spaceBetween: 30,
+			slidesPerView: 1.15,
+			spaceBetween: 10,
 			loop: false,
 			autoplay: false,
 			navigation: false,
@@ -415,8 +415,8 @@
 			var pagination = slider.querySelector('[data-reviews-pagination]');
 
 			new window.Swiper(slider, {
-			slidesPerView: 2.2,
-			spaceBetween: 30,
+			slidesPerView: 1.15,
+			spaceBetween: 10,
 			loop: false,
 			autoplay: false,
 			navigation: false,
@@ -470,8 +470,8 @@
 			var pagination = slider.querySelector('[data-specialists-pagination]');
 
 			new window.Swiper(slider, {
-			slidesPerView: 3.5,
-			spaceBetween: 30,
+			slidesPerView: 1.15,
+			spaceBetween: 10,
 			loop: false,
 			autoplay: false,
 			navigation: false,
@@ -525,7 +525,7 @@
 			}
 
 			new window.Swiper(slider, {
-				slidesPerView: 1.2,
+				slidesPerView: 1.5,
 				spaceBetween: INF_GAP,
 				loop: false,
 				autoplay: false,
@@ -538,15 +538,15 @@
 				threshold: 8,
 				breakpoints: {
 						431: {
-							slidesPerView: 2.15,
+							slidesPerView: 1.5,
 							spaceBetween: 10,
 						},
 						768: {
-							slidesPerView: 3.15,
+							slidesPerView: 2.5,
 							spaceBetween: 20,
 						},
 						1025: {
-							slidesPerView: 3.5,
+							slidesPerView: 3,
 							spaceBetween: 30,
 						},
 				},
@@ -680,7 +680,7 @@
 			nonceField: 'fp02_lead_nonce',
 			siteConfigEndpoint: '',
 			recaptchaAction: 'form_lead',
-			phoneMask: '+7 999 999 - 99 - 99',
+			phoneMask: '+7 (___) ___-__-__',
 			backendBlockedMessage:
 				'Отправка заявки пока недоступна. Позвоните нам по телефону 8 (925) 183-64-64.',
 			validationErrorMessage: 'Проверьте поля формы и попробуйте снова.',
@@ -821,6 +821,7 @@
 		closeOffcanvasIfOpen();
 		lastModalTrigger = trigger || lastModalTrigger;
 		applyModalContext(modal, trigger || lastModalTrigger);
+		bindPhoneMasksIn(modal);
 
 		modal.removeAttribute('hidden');
 		modal.setAttribute('aria-hidden', 'false');
@@ -1071,10 +1072,6 @@
 
 	function isPhoneComplete(value) {
 		var digits = getPhoneDigits(value);
-		if (digits.indexOf('7') === 0) {
-			return digits.length >= 11;
-		}
-
 		return digits.length >= PHONE_DIGITS_MIN;
 	}
 
@@ -1311,26 +1308,70 @@
 		}
 	}
 
+	/**
+	 * Triumph Manipulator v6 proven phone mask (custom vanilla — no Inputmask / jQuery).
+	 * Format: +7 (XXX) XXX-XX-XX
+	 */
 	function bindPhoneMask(input) {
 		if (!input || input.getAttribute('data-phone-mask-bound') === 'true') {
 			return;
 		}
 
-		if (typeof window.Inputmask !== 'function') {
-			return;
-		}
-
-		if (input.inputmask) {
-			input.setAttribute('data-phone-mask-bound', 'true');
-			return;
-		}
-
-		window.Inputmask({
-			mask: LEAD_FORM_CONFIG.phoneMask,
-			showMaskOnHover: false,
-		}).mask(input);
-
 		input.setAttribute('data-phone-mask-bound', 'true');
+		input.setAttribute('inputmode', 'tel');
+		if (!input.getAttribute('autocomplete')) {
+			input.setAttribute('autocomplete', 'tel');
+		}
+
+		input.addEventListener('input', function () {
+			var digits = String(input.value || '').replace(/\D/g, '');
+			var normalized = digits;
+
+			if (normalized.indexOf('8') === 0) {
+				normalized = '7' + normalized.slice(1);
+			}
+
+			if (normalized.length > 0 && normalized.indexOf('7') !== 0) {
+				normalized = '7' + normalized;
+			}
+
+			normalized = normalized.slice(0, 11);
+
+			if (!normalized) {
+				input.value = '';
+				return;
+			}
+
+			var local = normalized.slice(1);
+			var formatted = '+7';
+
+			if (local.length > 0) {
+				formatted += ' (' + local.slice(0, 3);
+			}
+			if (local.length >= 3) {
+				formatted += ') ' + local.slice(3, 6);
+			}
+			if (local.length >= 6) {
+				formatted += '-' + local.slice(6, 8);
+			}
+			if (local.length >= 8) {
+				formatted += '-' + local.slice(8, 10);
+			}
+
+			input.value = formatted;
+		});
+	}
+
+	function collectPhoneInputs(root) {
+		var scope = root || document;
+		var nodes = scope.querySelectorAll(
+			'input[type="tel"], input[name="phone"], input[data-phone-input], input[data-phone-mask]'
+		);
+		return Array.prototype.slice.call(nodes);
+	}
+
+	function bindPhoneMasksIn(root) {
+		collectPhoneInputs(root).forEach(bindPhoneMask);
 	}
 
 	function collectPayload(form) {
@@ -1529,7 +1570,7 @@
 		form.setAttribute('data-lead-form-init', 'true');
 		populateHiddenFields(form);
 
-		form.querySelectorAll('[data-phone-input]').forEach(bindPhoneMask);
+		bindPhoneMasksIn(form);
 
 		form.querySelectorAll('input, textarea, select').forEach(function (field) {
 			if (
@@ -1643,6 +1684,8 @@
 		document.querySelectorAll('[data-lead-form]').forEach(function (form) {
 			initLeadForm(form);
 		});
+		// Cover any tel fields outside lead-form markers (defensive; idempotent).
+		bindPhoneMasksIn(document);
 	}
 
 	if (document.readyState === 'loading') {
@@ -1796,8 +1839,8 @@
 			var options = optionsFactory
 				? optionsFactory(slider)
 				: {
-					slidesPerView: 4,
-					spaceBetween: 30,
+					slidesPerView: 1.15,
+					spaceBetween: 10,
 					loop: false,
 					autoplay: false,
 					navigation: false,
@@ -1980,6 +2023,83 @@
 		};
 
 		new window.Swiper(slider, options);
+	}
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', boot);
+	} else {
+		boot();
+	}
+})();
+
+// FP-0002 V9-06E61 — reviews archive read-more toggle
+(function initReviewArchiveReadMore() {
+	'use strict';
+
+	var LINE_COUNT = 6;
+	var LABEL_MORE = 'Читать весь отзыв';
+	var LABEL_HIDE = 'Свернуть';
+
+	function lineHeight(element) {
+		var styles = window.getComputedStyle(element);
+		var value = parseFloat(styles.lineHeight);
+
+		if (!value || Number.isNaN(value)) {
+			value = (parseFloat(styles.fontSize) || 16) * 1.5;
+		}
+
+		return value;
+	}
+
+	function syncCard(card) {
+		var body = card.querySelector('[data-review-body]');
+		var button = card.querySelector('[data-review-toggle]');
+
+		if (!body || !button) {
+			return;
+		}
+
+		var clampHeight = lineHeight(body) * LINE_COUNT;
+		var fullHeight = body.scrollHeight;
+		var needsClamp = fullHeight > clampHeight + 2;
+
+		if (!needsClamp) {
+			body.classList.remove('is-clamped', 'is-expanded');
+			body.style.removeProperty('--review-body-clamp-height');
+			button.hidden = true;
+			button.setAttribute('aria-expanded', 'false');
+			button.textContent = LABEL_MORE;
+			return;
+		}
+
+		body.style.setProperty('--review-body-clamp-height', clampHeight + 'px');
+		button.hidden = false;
+
+		if (!body.classList.contains('is-expanded')) {
+			body.classList.add('is-clamped');
+		}
+
+		if (button._reviewReadMoreBound) {
+			return;
+		}
+
+		button._reviewReadMoreBound = true;
+		button.addEventListener('click', function () {
+			var expanded = body.classList.toggle('is-expanded');
+			body.classList.toggle('is-clamped', !expanded);
+			button.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+			button.textContent = expanded ? LABEL_HIDE : LABEL_MORE;
+		});
+	}
+
+	function syncAll() {
+		document.querySelectorAll('[data-review-read-more]').forEach(syncCard);
+	}
+
+	function boot() {
+		syncAll();
+		window.addEventListener('load', syncAll);
+		window.addEventListener('resize', syncAll);
 	}
 
 	if (document.readyState === 'loading') {
@@ -2274,4 +2394,227 @@
 	} else {
 		boot();
 	}
+})();
+
+// FP-0002 V9-06E62B — review slider five-line overflow → archive link (no in-place expand)
+(function initReviewSliderFullLinks() {
+	'use strict';
+
+	var LINE_COUNT = 5;
+	var TOLERANCE_PX = 2;
+	var RESIZE_DEBOUNCE_MS = 150;
+	var ATTR_BOUND = 'data-review-slider-full-bound';
+
+	function lineHeight(element) {
+		var styles = window.getComputedStyle(element);
+		var value = parseFloat(styles.lineHeight);
+
+		if (!value || Number.isNaN(value)) {
+			value = (parseFloat(styles.fontSize) || 16) * 1.5;
+		}
+
+		return value;
+	}
+
+	function syncCard(card) {
+		var text = card.querySelector('[data-review-slider-text]');
+		var footer = card.querySelector('[data-review-slider-read-more]');
+
+		if (!text || !footer) {
+			return;
+		}
+
+		text.classList.remove('is-clamped');
+		footer.hidden = true;
+
+		var clampHeight = lineHeight(text) * LINE_COUNT;
+		var needsLink = text.scrollHeight > clampHeight + TOLERANCE_PX;
+
+		if (!needsLink) {
+			return;
+		}
+
+		text.classList.add('is-clamped');
+		footer.hidden = false;
+	}
+
+	function syncAll() {
+		document.querySelectorAll('[data-reviews-slider] [data-review-slider-card]').forEach(syncCard);
+	}
+
+	function boot() {
+		if (document.documentElement.getAttribute(ATTR_BOUND) === '1') {
+			return;
+		}
+
+		document.documentElement.setAttribute(ATTR_BOUND, '1');
+		syncAll();
+		window.addEventListener('load', syncAll);
+
+		var resizeTimer = null;
+		window.addEventListener('resize', function () {
+			if (resizeTimer) {
+				window.clearTimeout(resizeTimer);
+			}
+			resizeTimer = window.setTimeout(syncAll, RESIZE_DEBOUNCE_MS);
+		});
+	}
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', boot);
+	} else {
+		boot();
+	}
+})();
+
+/* FP-0002 V9-06E62E / FIX01 — header site search dropdown (desktop main header only) */
+(function initSiteSearchPanel() {
+	'use strict';
+
+	var panel = document.querySelector('[data-search-panel]');
+
+	if (!panel || panel.getAttribute('data-search-init') === 'true') {
+		return;
+	}
+
+	panel.setAttribute('data-search-init', 'true');
+
+	// Only explicit dropdown toggles (data-search-toggle). Mobile offcanvas Search link must not use this attribute.
+	var toggles = document.querySelectorAll('[data-search-toggle]');
+	var closeButtons = panel.querySelectorAll('[data-search-close]');
+	var forms = document.querySelectorAll('[data-site-search-form]');
+	var isOpen = false;
+	var lastToggle = null;
+
+	function getFocusInput() {
+		return panel.querySelector('[data-search-focus], input[type="search"], input[name="s"]');
+	}
+
+	function setOpen(open, trigger) {
+		if (open === isOpen) {
+			if (open) {
+				var input = getFocusInput();
+				if (input) {
+					input.focus();
+				}
+			}
+			return;
+		}
+
+		isOpen = open;
+
+		if (open) {
+			panel.hidden = false;
+			panel.setAttribute('data-search-state', 'open');
+			panel.removeAttribute('hidden');
+
+			// Close conflicting UI.
+			var offcanvasClose = document.querySelector('[data-offcanvas][data-offcanvas-state="open"] [data-offcanvas-close]');
+			if (offcanvasClose) {
+				offcanvasClose.click();
+			}
+
+			var modal = document.querySelector('[data-modal="consultation"][data-modal-state="open"]');
+			if (modal) {
+				var modalClose = modal.querySelector('[data-modal-close]');
+				if (modalClose) {
+					modalClose.click();
+				}
+			}
+		} else {
+			panel.setAttribute('data-search-state', 'closed');
+			panel.hidden = true;
+			panel.setAttribute('hidden', 'hidden');
+		}
+
+		Array.prototype.forEach.call(toggles, function (btn) {
+			btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+		});
+
+		if (open) {
+			lastToggle = trigger || lastToggle || toggles[0] || null;
+			window.setTimeout(function () {
+				var input = getFocusInput();
+				if (input) {
+					input.focus();
+				}
+			}, 0);
+		} else if (lastToggle && typeof lastToggle.focus === 'function') {
+			lastToggle.focus();
+		}
+	}
+
+	Array.prototype.forEach.call(toggles, function (btn) {
+		btn.addEventListener('click', function (event) {
+			event.preventDefault();
+			var shouldOpen = btn.getAttribute('aria-expanded') !== 'true';
+			setOpen(shouldOpen, btn);
+		});
+	});
+
+	Array.prototype.forEach.call(closeButtons, function (btn) {
+		btn.addEventListener('click', function (event) {
+			event.preventDefault();
+			setOpen(false);
+		});
+	});
+
+	document.addEventListener('keydown', function (event) {
+		if (!isOpen) {
+			return;
+		}
+
+		if (event.key === 'Escape') {
+			event.preventDefault();
+			setOpen(false);
+		}
+	});
+
+	document.addEventListener('click', function (event) {
+		if (!isOpen) {
+			return;
+		}
+
+		var target = event.target;
+		if (!(target instanceof Element)) {
+			return;
+		}
+
+		if (panel.contains(target) || target.closest('[data-search-toggle]')) {
+			return;
+		}
+
+		setOpen(false);
+	});
+
+	// Close search when opening offcanvas or consultation modal.
+	document.addEventListener('click', function (event) {
+		var target = event.target;
+		if (!(target instanceof Element)) {
+			return;
+		}
+
+		if (target.closest('[data-offcanvas-open]') || target.closest('[data-modal-open="consultation"]')) {
+			if (isOpen) {
+				setOpen(false);
+			}
+		}
+	}, true);
+
+	Array.prototype.forEach.call(forms, function (form) {
+		form.addEventListener('submit', function (event) {
+			var input = form.querySelector('input[name="s"]');
+			if (!input) {
+				return;
+			}
+
+			var value = String(input.value || '').replace(/^\s+|\s+$/g, '');
+			input.value = value;
+
+			if (!value) {
+				event.preventDefault();
+				input.focus();
+			}
+		});
+	});
 })();

@@ -1,0 +1,12 @@
+property,figma_desktop,desktop_before,desktop_final,figma_mobile,mobile_before,mobile_final
+bg,#DBE5F1,#dbe5f1,#dbe5f1,#DBE5F1,#dbe5f1,#dbe5f1
+title_color,#475371,inherited/var,--page-404-text #475371,#475371,inherited,#475371
+title_size,≈32px (ink band ~292-318 @1437),clamp→36px @1440,32px / 40px lh / 600,≈22-24px 2-line,clamp→28?,22px / 30px lh
+lead_size,≈20px (ink ~386-402),clamp→24px,20px / 28px lh,≈16px,clamp,15px / 22px
+title_to_lead_gap,≈68px,16px,48px,≈28px,16px,24px
+lead_to_logo_gap,≈102px,28px,72px,≈50px,22px,32px
+logo_width,246px,min(220px 56vw),246px,≈168-180,min 220,168px
+logo_to_button_gap,≈88px,28px,64px,≈40px,22px,28px
+button_size,≈262×53,min-width 240,262×53 min,≈148×36,min 180,148×36
+button_to_visual_gap,≈66px,40px,48px,≈28px,28px,28px
+visual_radius,baked PNG cutout,CSS 28px,0 (PNG owns shape),baked,20px,0

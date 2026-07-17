@@ -1,0 +1,10 @@
+area,status,notes
+header,PASS,present on / /uslugi/ /otzyvy/ /kontakty/
+floating-header,PASS,fp02-floating-header present after scroll (not mutated)
+offcanvas,NOT_RETESTED_DEEP,no CSS/JS touch this wave
+service-name-links,PASS,E60 links untouched
+CTA-bands,PASS,program-cta-band present; not mutated
+maps,NOT_IN_SCOPE,contacts maps not touched
+galleries,NOT_IN_SCOPE,comfort gallery not touched
+footer,PASS,present
+lifebuoy,PASS,fp02-lifebuoy-parallax present; not mutated

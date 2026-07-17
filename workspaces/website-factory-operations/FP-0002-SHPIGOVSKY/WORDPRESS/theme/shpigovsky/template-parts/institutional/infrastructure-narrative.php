@@ -26,7 +26,10 @@ $fb_group = isset( $context['fancybox_group'] ) ? (string) $context['fancybox_gr
 				<header class="infrastructure-narrative__head">
 					<h2 class="infrastructure-narrative__heading" id="infrastructure-narrative-heading"><?php echo esc_html( $groups['g0']['heading'] ); ?></h2>
 				</header>
-				<p class="infrastructure-narrative__lead"><?php echo esc_html( $groups['g0']['lead'] ); ?></p>
+				<p class="infrastructure-narrative__lead block-whith-red-line"><?php echo esc_html( $groups['g0']['lead'] ); ?></p>
+				<?php if ( ! empty( $groups['g0']['bullet_intro'] ) ) : ?>
+					<p class="infrastructure-narrative__bullet"><span><?php echo esc_html( $groups['g0']['bullet_intro'] ); ?></span></p>
+				<?php endif; ?>
 			</div>
 		<?php endif; ?>
 
@@ -64,17 +67,17 @@ $fb_group = isset( $context['fancybox_group'] ) ? (string) $context['fancybox_gr
 					</div>
 				<?php endif; ?>
 				<?php if ( ! empty( $group['bullet'] ) ) : ?>
-					<p class="infrastructure-narrative__bullet"><?php echo esc_html( $group['bullet'] ); ?></p>
+					<p class="infrastructure-narrative__bullet"><span><?php echo esc_html( $group['bullet'] ); ?></span></p>
 				<?php endif; ?>
 			</div>
 		<?php endforeach; ?>
 
 		<?php if ( ! empty( $g5_items ) ) : ?>
 			<div class="infrastructure-narrative__group infrastructure-narrative__group--g5" data-inf-group="g5">
-				<div class="comfort__gallery">
-					<div class="comfort__gallery-item comfort__gallery-item_decor">
+				<div class="comfort__gallery-stage">
+					<div class="comfort__gallery-decor" aria-hidden="true">
 						<img
-							class="comfort__gallery-image"
+							class="comfort__gallery-decor-image"
 							src="<?php echo esc_url( shpigovsky_asset_uri( 'img/branding/logo.svg' ) ); ?>"
 							width="auto"
 							height="auto"
@@ -83,25 +86,27 @@ $fb_group = isset( $context['fancybox_group'] ) ? (string) $context['fancybox_gr
 							decoding="async"
 						>
 					</div>
-					<?php
-					$wide_indexes = array( 0, 5 );
-					foreach ( $g5_items as $index => $image ) :
-						$src         = shpigovsky_asset_uri( (string) $image['src'] );
-						$item_class  = 'comfort__gallery-item';
-						$item_class .= in_array( $index, $wide_indexes, true ) ? ' comfort__gallery-item--wide' : '';
-						?>
-						<a class="<?php echo esc_attr( $item_class ); ?>" href="<?php echo esc_url( $src ); ?>" data-fancybox="<?php echo esc_attr( $fb_group ); ?>-g5">
-							<img
-								class="comfort__gallery-image"
-								src="<?php echo esc_url( $src ); ?>"
-								width="<?php echo (int) $image['width']; ?>"
-								height="<?php echo (int) $image['height']; ?>"
-								alt="<?php echo esc_attr( (string) $image['alt'] ); ?>"
-								loading="lazy"
-								decoding="async"
-							>
-						</a>
-					<?php endforeach; ?>
+					<div class="comfort__gallery">
+						<?php
+						$wide_indexes = array( 0, 5 );
+						foreach ( $g5_items as $index => $image ) :
+							$src         = shpigovsky_asset_uri( (string) $image['src'] );
+							$item_class  = 'comfort__gallery-item';
+							$item_class .= in_array( $index, $wide_indexes, true ) ? ' comfort__gallery-item--wide' : '';
+							?>
+							<a class="<?php echo esc_attr( $item_class ); ?>" href="<?php echo esc_url( $src ); ?>" data-fancybox="<?php echo esc_attr( $fb_group ); ?>-g5">
+								<img
+									class="comfort__gallery-image"
+									src="<?php echo esc_url( $src ); ?>"
+									width="<?php echo (int) $image['width']; ?>"
+									height="<?php echo (int) $image['height']; ?>"
+									alt="<?php echo esc_attr( (string) $image['alt'] ); ?>"
+									loading="lazy"
+									decoding="async"
+								>
+							</a>
+						<?php endforeach; ?>
+					</div>
 				</div>
 			</div>
 		<?php endif; ?>

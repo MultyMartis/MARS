@@ -1,0 +1,9 @@
+id,severity,recommendation,confidence,shared_or_local,likely_risk,operator_decision
+E58-VA-001,HIGH,RECOMMEND CONFIRM,HIGH,local (Home),medium — Home spacing only,
+E58-VA-002,MEDIUM,RECOMMEND REJECT — FALSE POSITIVE,HIGH,shared partials,n/a — no delta vs V9,
+E58-VA-003,MEDIUM,RECOMMEND REJECT — FALSE POSITIVE,HIGH,shared .btn,n/a — matches token+V9,
+E58-VA-004,MEDIUM,RECOMMEND ACCEPT AS INTENTIONAL,MEDIUM,shared typography roles,high if forced global H2 normalize,
+E58-VA-005,MEDIUM,RECOMMEND HOLD — INSUFFICIENT EVIDENCE,MEDIUM,shared hub,medium-high if composition changed without confirm,
+E58-VA-006,LOW,RECOMMEND REJECT — FALSE POSITIVE,HIGH,blog-related-card,n/a — WP≈V9,
+E58-VA-007,LOW,RECOMMEND REJECT — FALSE POSITIVE,HIGH,blog partials,n/a — WP==V9 rhythm,
+E58-VA-008,LOW,RECOMMEND REJECT — FALSE POSITIVE,HIGH,generic template,n/a — padding matches V9 48/72,

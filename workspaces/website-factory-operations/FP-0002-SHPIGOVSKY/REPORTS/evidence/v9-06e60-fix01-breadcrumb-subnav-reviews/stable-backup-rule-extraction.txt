@@ -1,0 +1,16 @@
+# Stable-backup rule extraction — E58 operator-edits v9-style.css
+
+Authority: X:\MARS-Localhost\backups\wordpress\projects\shpigovsky\v9-06e58-current-baseline-freeze-before-visual-audit-20260716-225434\operator-edits\v9-style.css
+SHA256: 307A111EB229BA16C8A388C8A83B18C257C80AE57648E1601C2FA0EBF1851E04
+
+Relevant rule count (breadcrumbs + services-page-subnav, including media queries): 38
+
+Typography (stable = pre-FIX01 current for non-hover):
+- .internal-page-nav .breadcrumbs__link/current: 14px / 18px
+- separator ::before: 14px / 18px
+- .page-blog / .page-blog-article crumbs @max-width 1024: 8px / 12px
+- .blog-article-hero crumbs desktop: 13px / 18px
+- .services-page-subnav__link: 14px / 20px; hover border+color var(--color-accent)
+
+Only pre-FIX01 divergences vs stable: 5 breadcrumb hover colors (accent-hover vs accent).
+Subnav: zero divergences.

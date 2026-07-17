@@ -116,5 +116,6 @@ if ( is_front_page() ) {
 		</div>
 	</div>
 
+	<?php get_template_part( 'template-parts/navigation/search-panel' ); ?>
 	<?php get_template_part( 'template-parts/navigation/offcanvas' ); ?>
 </header>

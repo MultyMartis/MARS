@@ -3,6 +3,46 @@
     "title": "Site Options — Contacts and Organisation",
     "fields": [
         {
+            "key": "field_fp02_show_breadcrumbs_pages",
+            "label": "Показывать хлебные крошки на страницах",
+            "name": "show_breadcrumbs_pages",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1,
+            "ui_on_text": "Да",
+            "ui_off_text": "Нет"
+        },
+        {
+            "key": "field_fp02_show_breadcrumbs_services",
+            "label": "Показывать хлебные крошки в услугах",
+            "name": "show_breadcrumbs_services",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1,
+            "ui_on_text": "Да",
+            "ui_off_text": "Нет"
+        },
+        {
             "key": "field_fp02_org_name",
             "label": "Organisation name",
             "name": "organisation_name",
@@ -217,5 +257,5 @@
     "active": true,
     "description": "FP-0002 V9-06C canonical source field group. Runtime registration occurs only after delivery authorization.",
     "show_in_rest": 0,
-    "modified": 1783603200
+    "modified": 1784452800
 }

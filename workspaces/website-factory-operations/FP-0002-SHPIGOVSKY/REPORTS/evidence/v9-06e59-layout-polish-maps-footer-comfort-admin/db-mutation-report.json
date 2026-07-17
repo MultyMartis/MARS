@@ -1,0 +1,20 @@
+{
+    "contacts_page_id": 20,
+    "contacts_page_slug": "kontakty",
+    "writes": [
+        {
+            "scope": "contacts_locations",
+            "post_id": 20,
+            "before": "",
+            "after": "2",
+            "rows": 2
+        },
+        {
+            "scope": "cta_lead_text",
+            "context": "fp02-block-comfort",
+            "before": "",
+            "after": "Вы сможете все посмотреть и задать вопросы лично"
+        }
+    ],
+    "skipped": []
+}

@@ -5,6 +5,7 @@
  * D9-D: static V9 visual authority with theme asset fallbacks.
  * V9-06E31: program direction links to /o-centre/programma-lecheniya/* pages.
  * V9-06E41-FIX01: head/lead/intro from Home ACF with frontend fallbacks.
+ * V9-06E62D: direction card text from child-page ACF `treatment_program_short_description`.
  *
  * @package Shpigovsky
  */
@@ -49,9 +50,9 @@ $intro_2 = shpigovsky_home_text_or_fallback(
 
     <p class="home-rehabilitation-program__lead"><?php echo wp_kses_post( $lead ); ?></p>
 
-    <p class="home-rehabilitation-program__intro"><?php echo wp_kses_post( $intro_1 ); ?></p>
+    <p class="home-rehabilitation-program__intro"><span><?php echo wp_kses_post( $intro_1 ); ?></span></p>
 
-    <p class="home-rehabilitation-program__intro"><?php echo wp_kses_post( $intro_2 ); ?></p>
+    <p class="home-rehabilitation-program__intro"><span><?php echo wp_kses_post( $intro_2 ); ?></span></p>
 
     <div class="home-rehabilitation-program__directions">
       <?php foreach ( $directions as $direction ) : ?>

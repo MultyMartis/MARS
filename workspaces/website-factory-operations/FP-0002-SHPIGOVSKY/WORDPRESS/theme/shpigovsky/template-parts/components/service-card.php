@@ -36,13 +36,11 @@ if ( 'v2' === $variant ) :
 	<article class="services-category-section-v2__service">
 		<div class="services-category-section-v2__service-head">
 			<h3 class="services-category-section-v2__service-title">
-				<span class="services-category-section-v2__service-name">
-					<?php if ( '' !== $url ) : ?>
-						<a class="services-category-section-v2__service-name-link" href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $title ); ?></a>
-					<?php else : ?>
-						<?php echo esc_html( $title ); ?>
-					<?php endif; ?>
-				</span>
+				<?php if ( '' !== $url ) : ?>
+					<a class="services-category-section-v2__service-name" href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $title ); ?></a>
+				<?php else : ?>
+					<span class="services-category-section-v2__service-name"><?php echo esc_html( $title ); ?></span>
+				<?php endif; ?>
 				<span class="services-category-section-v2__service-leader" aria-hidden="true"></span>
 			</h3>
 			<?php if ( '' !== $url ) : ?>

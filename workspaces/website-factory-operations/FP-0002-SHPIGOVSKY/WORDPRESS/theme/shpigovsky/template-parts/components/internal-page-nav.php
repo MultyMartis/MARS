@@ -12,6 +12,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 $trail = get_query_var( 'shpigovsky_breadcrumb_trail', array() );
 $items = get_query_var( 'shpigovsky_subnav_items', array() );
 
+if ( ! function_exists( 'shpigovsky_breadcrumbs_enabled_for_context' ) || ! shpigovsky_breadcrumbs_enabled_for_context() ) {
+	$trail = array();
+}
+
 if ( empty( $trail ) && empty( $items ) ) {
 	return;
 }

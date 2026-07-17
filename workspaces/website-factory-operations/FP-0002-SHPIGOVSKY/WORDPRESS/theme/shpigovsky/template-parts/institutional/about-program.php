@@ -31,11 +31,11 @@ $context = shpigovsky_get_about_program_context( $page_id );
 		<?php endif; ?>
 
 		<?php if ( '' !== $context['intro'] ) : ?>
-			<p class="services-program-v2__intro"><?php echo esc_html( $context['intro'] ); ?></p>
+			<p class="services-program-v2__intro"><span><?php echo esc_html( $context['intro'] ); ?></span></p>
 		<?php endif; ?>
 
 		<?php if ( '' !== $context['intro2'] ) : ?>
-			<p class="services-program-v2__intro services-program-v2__intro--secondary"><?php echo esc_html( $context['intro2'] ); ?></p>
+			<p class="services-program-v2__intro services-program-v2__intro--secondary"><span><?php echo esc_html( $context['intro2'] ); ?></span></p>
 		<?php endif; ?>
 
 		<div class="services-program-v2__grid">

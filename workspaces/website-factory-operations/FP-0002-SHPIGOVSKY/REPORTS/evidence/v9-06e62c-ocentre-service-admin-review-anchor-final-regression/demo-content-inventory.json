@@ -1,0 +1,93 @@
+{
+    "blog_posts": [
+        {
+            "ID": 1745,
+            "slug": "demo-pagination-article-01",
+            "title": "Демо-статья для проверки пагинации — 01"
+        },
+        {
+            "ID": 1746,
+            "slug": "demo-pagination-article-02",
+            "title": "Демо-статья для проверки пагинации — 02"
+        },
+        {
+            "ID": 1747,
+            "slug": "demo-pagination-article-03",
+            "title": "Демо-статья для проверки пагинации — 03"
+        },
+        {
+            "ID": 1748,
+            "slug": "demo-pagination-article-04",
+            "title": "Демо-статья для проверки пагинации — 04"
+        },
+        {
+            "ID": 1749,
+            "slug": "demo-pagination-article-05",
+            "title": "Демо-статья для проверки пагинации — 05"
+        },
+        {
+            "ID": 1750,
+            "slug": "demo-pagination-article-06",
+            "title": "Демо-статья для проверки пагинации — 06"
+        },
+        {
+            "ID": 1751,
+            "slug": "demo-pagination-article-07",
+            "title": "Демо-статья для проверки пагинации — 07"
+        },
+        {
+            "ID": 1752,
+            "slug": "demo-pagination-article-08",
+            "title": "Демо-статья для проверки пагинации — 08"
+        },
+        {
+            "ID": 1753,
+            "slug": "demo-pagination-article-09",
+            "title": "Демо-статья для проверки пагинации — 09"
+        },
+        {
+            "ID": 1754,
+            "slug": "demo-pagination-article-10",
+            "title": "Демо-статья для проверки пагинации — 10"
+        },
+        {
+            "ID": 1105,
+            "slug": "sryvy-i-retsidivy-signal-k-korrektirovke",
+            "title": "Срывы и рецидивы: почему это не конец лечения, а сигнал к корректировке"
+        },
+        {
+            "ID": 1104,
+            "slug": "kak-prohodit-pervaya-konsultatsiya",
+            "title": "Как проходит первая консультация в центре: чего ожидать семье и человеку"
+        },
+        {
+            "ID": 1103,
+            "slug": "genotipirovanie-pri-zavisimostyah",
+            "title": "Генотипирование при зависимостях: зачем оно нужно на старте программы"
+        },
+        {
+            "ID": 1102,
+            "slug": "bos-terapiya-trenirovka-zon-mozga",
+            "title": "БОС-терапия: тренировка конкретных зон мозга с помощью технологий"
+        },
+        {
+            "ID": 1101,
+            "slug": "yoga-v-terapii-abstinentnyy-sindrom",
+            "title": "Йога в терапии: снятие абстинентного синдрома и снижение кортизола"
+        },
+        {
+            "ID": 750,
+            "slug": "nazvanie-stati",
+            "title": "Лечение алкогольной зависимости: почему сила воли здесь ни при чём"
+        }
+    ],
+    "reviews": [],
+    "note": "Local demo content; require operator decision before production cleanup. Do not delete in E62C.",
+    "cleanup_procedure": [
+        "1. Operator confirm production cleanup charter",
+        "2. Backup DB",
+        "3. Trash\/delete blog IDs 1745-1754 (or current demo list)",
+        "4. Remove reviews_items rows marked e62b-demo \/ is_demo from fp02-reviews options",
+        "5. Re-verify pagination page counts"
+    ]
+}

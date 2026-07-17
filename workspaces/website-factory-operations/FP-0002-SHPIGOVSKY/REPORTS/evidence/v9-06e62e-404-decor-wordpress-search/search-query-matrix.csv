@@ -1,0 +1,8 @@
+query,url,http,found,types_seen,pagination,robots,canonical,title_ok
+алкоголь,/?s=алкоголь,200,2,Услуга+Статья,no,noindex follow,none,yes
+Шпиговский,/?s=Шпиговский,200,1,Специалист/Страница,no,noindex follow,none,yes
+сила воли,/?s=сила+воли,200,1,Статья,no,noindex follow,none,yes
+зависим,/?s=зависим,200,16,mixed,yes page/2,noindex follow,none,yes
+zzzznotfoundxyz,/?s=zzzznotfoundxyz,200,0,n/a,no,noindex follow,none,yes
+empty,/?s=,200,0,n/a,no,noindex follow,none,yes
+special chars,/?s=тест+%26+%3Cscript%3E,200,0+,n/a,no,noindex follow,none,escaped

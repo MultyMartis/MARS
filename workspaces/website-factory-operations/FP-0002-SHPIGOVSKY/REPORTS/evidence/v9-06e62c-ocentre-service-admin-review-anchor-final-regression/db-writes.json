@@ -1,0 +1,48 @@
+{
+    "started_at": "2026-07-17T09:50:31+00:00",
+    "writes": [
+        {
+            "scope": "o-centre-bullet-seed",
+            "action": "seed_empty",
+            "page": 11,
+            "bytes": 770
+        },
+        {
+            "scope": "review-uid-migration",
+            "result": {
+                "updated": true,
+                "assigned": 30,
+                "preserved": 0,
+                "rows": 30
+            }
+        },
+        {
+            "scope": "reorder-test-move",
+            "uid": "review-2114e391",
+            "from": 9,
+            "to": 29
+        },
+        {
+            "scope": "reorder-test-restore",
+            "action": "restored_accepted_order",
+            "uid": "review-2114e391"
+        }
+    ],
+    "final_uid_count": 30,
+    "unique_uids": 30,
+    "empty_uids": 0,
+    "reorder_test": {
+        "performed": true,
+        "sample_uid": "review-2114e391",
+        "before_index": 9,
+        "before_page": 1,
+        "after_index": 29,
+        "after_page": 3,
+        "uid_unchanged": true,
+        "page_changed": true,
+        "restored": true,
+        "restored_index": 9,
+        "restored_uid_match": true
+    },
+    "finished_at": "2026-07-17T09:50:32+00:00"
+}

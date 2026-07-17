@@ -19,6 +19,7 @@ $heading        = shpigovsky_get_rehab_requirements_scalar( 'rehab_requirements_
 $intro          = shpigovsky_get_rehab_requirements_scalar( 'rehab_requirements_intro', 'Мы гарантируем конфиденциальность, уважение к личности, поддержание комфортной, психологически безопасной атмосферы.' );
 $steps          = shpigovsky_get_rehab_requirements_steps();
 $cta_lead       = shpigovsky_get_rehab_requirements_scalar( 'rehab_requirements_cta_lead', 'Узнайте подробнее об условиях поступления и стоимости лечения по телефону горячей линии' );
+$cta_lead_txt   = shpigovsky_get_rehab_requirements_scalar( 'cta_lead_text', 'Вы сможете все посмотреть и задать вопросы лично' );
 $cta_phone      = shpigovsky_get_rehab_requirements_cta_phone();
 $cta_button     = shpigovsky_get_rehab_requirements_scalar( 'rehab_requirements_cta_button_label', 'Записаться' );
 $support_heading = shpigovsky_get_rehab_requirements_scalar( 'rehab_requirements_support_heading', 'Поддержка осуществляется на всех этапах:' );
@@ -44,16 +45,30 @@ $photo          = shpigovsky_get_rehab_requirements_photo();
     </ol>
 
     <div class="home-rehabilitation-requirements__cta-band">
-      <p class="home-rehabilitation-requirements__cta-lead"><?php echo wp_kses_post( $cta_lead ); ?></p>
-      <a class="home-rehabilitation-requirements__cta-phone" href="<?php echo esc_url( $cta_phone['href'] ); ?>"><?php echo esc_html( $cta_phone['display'] ); ?></a>
-      <button
-        type="button"
-        class="btn btn_dark btn--primary home-rehabilitation-requirements__cta-button"
-        data-modal-open="consultation"
-        data-modal-source="rehabilitation"
-        data-modal-title="<?php echo esc_attr( $cta_button ); ?>"
-        data-modal-submit-text="<?php echo esc_attr( $cta_button ); ?>"
-      ><?php echo esc_html( $cta_button ); ?></button>
+
+      <div class="home-rehabilitation-requirements__cta-wrap01">
+        <p class="home-rehabilitation-requirements__cta-lead"><?php echo wp_kses_post( $cta_lead ); ?></p>
+        <p class="home-rehabilitation-requirements__cta-lead-txt"><?php echo esc_html( $cta_lead_txt ); ?></p>
+      </div>
+
+      <div class="home-rehabilitation-requirements__cta-wrap02">
+
+        <button
+          type="button"
+          class="btn btn_dark btn--primary home-rehabilitation-requirements__cta-button"
+          data-modal-open="consultation"
+          data-modal-source="rehabilitation"
+          data-modal-title="<?php echo esc_attr( $cta_button ); ?>"
+          data-modal-submit-text="<?php echo esc_attr( $cta_button ); ?>"
+        ><?php echo esc_html( $cta_button ); ?></button>
+
+        <div>
+          <a class="home-rehabilitation-requirements__cta-phone" href="<?php echo esc_url( $cta_phone['href'] ); ?>"><?php echo esc_html( $cta_phone['display'] ); ?></a>
+          <span>Или позвоните нам</span>
+        </div>
+
+      </div>
+
     </div>
 
     <div class="home-rehabilitation-requirements__support">

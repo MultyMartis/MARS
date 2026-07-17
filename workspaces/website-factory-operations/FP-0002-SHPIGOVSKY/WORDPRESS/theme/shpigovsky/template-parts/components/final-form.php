@@ -48,8 +48,8 @@ $name_placeholder = shpigovsky_get_final_form_field_label( 'final_form_name_plac
 $phone_placeholder = shpigovsky_get_block_option_scalar( 'final_form_phone_placeholder', shpigovsky_get_final_form_block_context() );
 $message_placeholder = shpigovsky_get_final_form_field_label( 'final_form_message_placeholder', __( 'Опишите ситуацию', 'shpigovsky' ) );
 
-if ( '' === $phone_placeholder ) {
-	$phone_placeholder = '+7 999 999 - 99 - 99';
+if ( '' === $phone_placeholder || '+7 999 999 - 99 - 99' === $phone_placeholder ) {
+	$phone_placeholder = '+7 (___) ___-__-__';
 }
 
 $consent_url = home_url( '/consent-personal-data/' );

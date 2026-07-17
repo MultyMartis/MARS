@@ -2,6 +2,10 @@
 /**
  * Program direction map — shared Home / services / about program blocks.
  *
+ * V9-06E62D: Home direction card text (`.home-rehabilitation-program__direction-text`)
+ * is owned by each Treatment Program child page ACF field
+ * `treatment_program_short_description` («Мини-описание»).
+ *
  * @package Shpigovsky
  */
 
@@ -12,7 +16,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Canonical program direction page paths under /o-centre/programma-lecheniya/.
  *
- * @return array<int, array{slug:string,title:string,marker:string,image:string,width:int,height:int,alt:string,text:string}>
+ * Body copy for Home cards lives on the child page ACF field — not in this map.
+ *
+ * @return array<int, array{slug:string,title:string,marker:string,image:string,width:int,height:int,alt:string}>
  */
 function shpigovsky_get_program_direction_definitions() {
 	return array(
@@ -24,7 +30,6 @@ function shpigovsky_get_program_direction_definitions() {
 			'width'  => 1216,
 			'height' => 1632,
 			'alt'    => 'Генотипирование',
-			'text'   => 'Выявление причин эндогенной природы зависимости служит дополнительным инструментом в&nbsp;индивидуальной схеме лечения и&nbsp;реабилитации. В&nbsp;основе большинства зависимостей лежит нарушение работы системы вознаграждения мозга&nbsp;— в&nbsp;частности, гипофункция мезолимбической дофаминовой системы. Это не&nbsp;слабость характера. Это биология, с&nbsp;которой можно и&nbsp;нужно работать.',
 		),
 		array(
 			'slug'   => 'neyropsihologicheskaya-korrektsiya',
@@ -34,7 +39,6 @@ function shpigovsky_get_program_direction_definitions() {
 			'width'  => 1632,
 			'height' => 1216,
 			'alt'    => 'Нейропсихологическая коррекция',
-			'text'   => 'БОС-терапия (биологическая обратная связь) проводится с&nbsp;использованием специального оборудования. На&nbsp;этом этапе лечения и&nbsp;реабилитации происходит обучение сознательно контролировать функции своего тела (пульс, дыхание, напряжение мышц, артериальное давление). Специальные датчики оборудования выполняют функцию «физиологического зеркала».',
 		),
 		array(
 			'slug'   => 'psihokorrektsiya',
@@ -44,7 +48,6 @@ function shpigovsky_get_program_direction_definitions() {
 			'width'  => 880,
 			'height' => 1184,
 			'alt'    => 'Психокоррекция',
-			'text'   => 'Зависимость редко бывает просто привычкой. За&nbsp;ней почти всегда стоит что-то глубже: тревога, которую не&nbsp;удаётся унять, боль, которую проще приглушить, чем прожить, или пустота там, где должно быть что-то важное. Психокоррекция формирует внутреннюю опору и&nbsp;новую стратегию совладания со&nbsp;стрессом.',
 		),
 		array(
 			'slug'   => 'kinezioterapiya',
@@ -54,9 +57,22 @@ function shpigovsky_get_program_direction_definitions() {
 			'width'  => 880,
 			'height' => 1184,
 			'alt'    => 'Кинезиотерапия',
-			'text'   => 'Движение меняет химию мозга. Это не&nbsp;вдохновляющая цитата&nbsp;— это факт, подтверждённый десятилетиями исследований в&nbsp;области нейробиологии и&nbsp;аддиктологии. Физическая нагрузка стимулирует выработку эндорфинов (создающих ощущение благополучия), дофамина (системы вознаграждения) и&nbsp;серотонина (регулирующего настроение, аппетит и&nbsp;сон). Именно эти нейромедиаторы зависимость «научила» организм получать извне&nbsp;— мы помогаем восстановить их естественную выработку.',
 		),
 	);
+}
+
+/**
+ * Resolve program direction child page under programma-lecheniya.
+ *
+ * @param string $slug Child page slug.
+ * @return WP_Post|null
+ */
+function shpigovsky_get_program_direction_page( $slug ) {
+	$slug = sanitize_title( (string) $slug );
+	$path = 'o-centre/programma-lecheniya/' . $slug;
+	$page = get_page_by_path( $path );
+
+	return ( $page instanceof WP_Post ) ? $page : null;
 }
 
 /**
@@ -66,9 +82,7 @@ function shpigovsky_get_program_direction_definitions() {
  * @return string Absolute URL (falls back to expected path when page missing).
  */
 function shpigovsky_get_program_direction_url( $slug ) {
-	$slug = sanitize_title( (string) $slug );
-	$path = 'o-centre/programma-lecheniya/' . $slug;
-	$page = get_page_by_path( $path );
+	$page = shpigovsky_get_program_direction_page( $slug );
 
 	if ( $page instanceof WP_Post ) {
 		$url = get_permalink( $page );
@@ -77,19 +91,54 @@ function shpigovsky_get_program_direction_url( $slug ) {
 		}
 	}
 
+	$slug = sanitize_title( (string) $slug );
+	$path = 'o-centre/programma-lecheniya/' . $slug;
+
 	return home_url( '/' . $path . '/' );
+}
+
+/**
+ * Mini-description for a Treatment Program child page (Home direction card text).
+ *
+ * @param int $page_id Child page ID.
+ * @return string Raw HTML-safe fragment (may contain &nbsp;); empty when unset.
+ */
+function shpigovsky_get_treatment_program_short_description( $page_id ) {
+	$page_id = (int) $page_id;
+	if ( $page_id <= 0 ) {
+		return '';
+	}
+
+	$value = '';
+	if ( function_exists( 'get_field' ) ) {
+		$raw = get_field( 'treatment_program_short_description', $page_id );
+		if ( is_string( $raw ) ) {
+			$value = $raw;
+		}
+	}
+
+	if ( '' === $value ) {
+		$meta = get_post_meta( $page_id, 'treatment_program_short_description', true );
+		if ( is_string( $meta ) ) {
+			$value = $meta;
+		}
+	}
+
+	return is_string( $value ) ? trim( $value ) : '';
 }
 
 /**
  * Program direction items with resolved URLs and asset URIs.
  *
  * @param string $variant home|service|about — controls whether body text is included.
- * @return array<int, array{slug:string,title:string,marker:string,title_display:string,url:string,image:string,width:int,height:int,alt:string,text:string}>
+ * @return array<int, array{slug:string,title:string,marker:string,title_display:string,url:string,image:string,width:int,height:int,alt:string,text:string,page_id:int}>
  */
 function shpigovsky_get_program_direction_items( $variant = 'service' ) {
 	$items = array();
 
 	foreach ( shpigovsky_get_program_direction_definitions() as $def ) {
+		$page          = shpigovsky_get_program_direction_page( $def['slug'] );
+		$page_id       = ( $page instanceof WP_Post ) ? (int) $page->ID : 0;
 		$title_display = $def['marker'] . ' — ' . $def['title'];
 		$item          = array(
 			'slug'          => $def['slug'],
@@ -102,10 +151,11 @@ function shpigovsky_get_program_direction_items( $variant = 'service' ) {
 			'height'        => (int) $def['height'],
 			'alt'           => $def['alt'],
 			'text'          => '',
+			'page_id'       => $page_id,
 		);
 
-		if ( 'home' === $variant ) {
-			$item['text'] = $def['text'];
+		if ( 'home' === $variant && $page_id > 0 ) {
+			$item['text'] = shpigovsky_get_treatment_program_short_description( $page_id );
 		}
 
 		$items[] = $item;

@@ -297,8 +297,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
-    "description": "FP-0002 V9-06C canonical source field group. Runtime registration occurs only after delivery authorization.",
+    "active": false,
+    "description": "Hidden from Service admin by operator request in V9-06E62C; data retained for rollback/frontend compatibility.",
     "show_in_rest": 0,
     "modified": 1783953600
 }

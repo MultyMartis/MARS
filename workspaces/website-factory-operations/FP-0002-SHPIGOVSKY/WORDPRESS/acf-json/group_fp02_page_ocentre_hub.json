@@ -814,6 +814,24 @@
                     "return_format": "array"
                 }
             ]
+        },
+        {
+            "key": "field_fp02_infrastructure_narrative_bullet_intro",
+            "label": "Дополнительный текст после вводного блока",
+            "name": "infrastructure_narrative_bullet_intro",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Текст сразу после красной линии (G0 lead). Рендерится как .infrastructure-narrative__bullet со span. Пусто — блок скрыт.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 5
         }
     ],
     "location": [

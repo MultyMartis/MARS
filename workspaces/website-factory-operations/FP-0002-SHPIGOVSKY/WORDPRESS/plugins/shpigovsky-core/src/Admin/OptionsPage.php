@@ -275,6 +275,7 @@ final class OptionsPage implements ModuleInterface {
 			'fp02-block-final-form',
 			'fp02-block-specialists',
 			'fp02-block-cta-bands',
+			'fp02-block-founder-quote',
 		);
 	}
 

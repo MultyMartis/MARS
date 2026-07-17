@@ -48,6 +48,10 @@ function shpigovsky_should_hide_native_editor( $page_id ) {
 		return false;
 	}
 
+	if ( $page_id === (int) get_option( 'page_for_posts' ) ) {
+		return true;
+	}
+
 	return in_array( $page_id, shpigovsky_get_hide_native_editor_page_ids(), true );
 }
 

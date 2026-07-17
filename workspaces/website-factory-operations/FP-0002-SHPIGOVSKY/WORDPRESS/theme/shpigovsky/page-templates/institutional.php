@@ -27,12 +27,10 @@ $is_about = shpigovsky_is_about_hub_page( $page_id );
 		get_template_part( 'template-parts/institutional/institutional-narrative' );
 		get_template_part( 'template-parts/institutional/founder-quote' );
 		get_template_part( 'template-parts/institutional/who-we-treat' );
-
-		set_query_var( 'shpigovsky_program_cta_band', shpigovsky_get_about_guest_cta_band( 'o-centre-cta-1' ) );
-		get_template_part( 'template-parts/components/program-cta-band' );
-
 		get_template_part( 'template-parts/institutional/approach-band' );
-		get_template_part( 'template-parts/institutional/clinic-landscape' );
+		get_template_part( 'template-parts/home/staff-photo' );
+		get_template_part( 'template-parts/home/feature-grid' );
+		get_template_part( 'template-parts/home/clinic-landscape' );
 		get_template_part( 'template-parts/institutional/about-program' );
 		get_template_part( 'template-parts/institutional/infrastructure-narrative' );
 
@@ -66,8 +64,12 @@ $is_about = shpigovsky_is_about_hub_page( $page_id );
 			)
 		);
 	} else {
-		shpigovsky_render_breadcrumbs();
-		shpigovsky_render_internal_page_nav();
+		// Non-hub institutional pages: single internal-page-nav shell (no duplicate wrappers).
+		shpigovsky_render_breadcrumbs(
+			array(
+				'wrap' => 'internal',
+			)
+		);
 		while ( have_posts() ) :
 			the_post();
 			?>

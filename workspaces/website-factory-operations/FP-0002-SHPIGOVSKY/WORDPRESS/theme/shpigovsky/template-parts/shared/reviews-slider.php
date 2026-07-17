@@ -2,7 +2,7 @@
 /**
  * Template part: shared/reviews-slider.php
  *
- * Shared reviews slider — V9-06D9-R Hybrid E architecture.
+ * Shared reviews slider — V9-06D9-R Hybrid E / V9-06E62B full-review links.
  *
  * @package Shpigovsky
  */
@@ -70,9 +70,16 @@ $aria_label    = wp_strip_all_tags( $heading );
       <div class="reviews__wrapper swiper-wrapper">
 		<?php foreach ( $items as $item ) : ?>
 			<?php
-			$rating = shpigovsky_normalize_review_rating( $item['rating'] ?? 5 );
+			$rating     = shpigovsky_normalize_review_rating( $item['rating'] ?? 5 );
+			$review_uid = isset( $item['review_uid'] ) ? (string) $item['review_uid'] : '';
+			if ( function_exists( 'shpigovsky_sanitize_review_uid' ) ) {
+				$review_uid = shpigovsky_sanitize_review_uid( $review_uid );
+			}
+			$full_url = '' !== $review_uid && function_exists( 'shpigovsky_get_review_archive_url' )
+				? shpigovsky_get_review_archive_url( $review_uid )
+				: home_url( '/otzyvy/' );
 			?>
-        <article class="reviews__slide swiper-slide">
+        <article class="reviews__slide swiper-slide" data-review-slider-card<?php echo '' !== $review_uid ? ' data-review-uid="' . esc_attr( $review_uid ) . '"' : ''; ?>>
           <div class="reviews__card">
             <ul class="reviews__rating" aria-label="<?php echo esc_attr( sprintf( 'Оценка %d из 5', $rating ) ); ?>">
 			  <?php for ( $star = 0; $star < $rating; $star++ ) : ?>
@@ -81,10 +88,10 @@ $aria_label    = wp_strip_all_tags( $heading );
             </ul>
             <cite class="reviews__author-name"><?php echo esc_html( $item['author'] ); ?></cite>
             <blockquote class="reviews__quote">
-              <p class="reviews__text"><?php echo wp_kses_post( $item['text'] ); ?></p>
+              <p class="reviews__text" data-review-slider-text><?php echo wp_kses_post( $item['text'] ); ?></p>
             </blockquote>
-            <footer class="reviews__read-all">
-              <span class="reviews__read-more-text">Читать весь отзыв</span>
+            <footer class="reviews__read-all" data-review-slider-read-more hidden>
+              <a class="reviews__read-more-link" href="<?php echo esc_url( $full_url ); ?>" data-review-slider-full-link aria-label="<?php echo esc_attr( sprintf( 'Читать весь отзыв — %s', wp_strip_all_tags( (string) ( $item['author'] ?? '' ) ) ) ); ?>">Читать весь отзыв</a>
             </footer>
           </div>
         </article>

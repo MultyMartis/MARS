@@ -4,31 +4,33 @@
     "fields": [
         {
             "key": "field_fp02_cta_band_default_title",
-            "label": "Заголовок CTA по умолчанию",
+            "label": "CTA лид",
             "name": "cta_band_default_title",
-            "type": "text",
-            "instructions": "Используется когда у услуги нет cta_title. Пусто — global_cta_title из Общих настроек."
+            "type": "textarea",
+            "rows": 2,
+            "instructions": "Основной текст `.program-cta-band__lead` (как Comfort CTA лид). Используется когда у услуги нет cta_title. Пусто — global_cta_title из Общих настроек."
         },
         {
             "key": "field_fp02_cta_band_default_subtitle",
-            "label": "Текст CTA по умолчанию",
+            "label": "Текст CTA",
             "name": "cta_band_default_subtitle",
             "type": "textarea",
-            "rows": 3,
-            "instructions": "Пусто — global_cta_text из Общих настроек."
+            "rows": 2,
+            "instructions": "Короткий текст `.program-cta-band__lead-txt` (как Comfort `cta_lead_text`). Пусто — global_cta_text из Общих настроек."
         },
         {
             "key": "field_fp02_cta_band_phone_hint",
             "label": "Подпись телефона",
             "name": "cta_band_phone_hint",
-            "type": "text"
+            "type": "text",
+            "instructions": "Текст рядом с телефоном (как «Или позвоните нам» в Comfort CTA)."
         },
         {
             "key": "field_fp02_cta_band_default_button_label",
-            "label": "Текст кнопки по умолчанию",
+            "label": "Текст кнопки CTA",
             "name": "cta_band_default_button_label",
             "type": "text",
-            "instructions": "Пусто — default_button_label из Общих настроек."
+            "instructions": "Пусто — default_button_label из Общих настроек. URL кнопки задаётся на уровне страницы/услуги (`cta_button_target`), иначе открывается модалка консультации."
         }
     ],
     "location": [
@@ -46,7 +48,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "active": true,
-    "description": "FP-0002 V9-06E18 Batch 1 — global CTA band defaults.",
+    "description": "FP-0002 V9-06E60 — program CTA band defaults aligned to Comfort CTA admin model.",
     "show_in_rest": 0,
-    "modified": 1783690000
+    "modified": 1784246400
 }

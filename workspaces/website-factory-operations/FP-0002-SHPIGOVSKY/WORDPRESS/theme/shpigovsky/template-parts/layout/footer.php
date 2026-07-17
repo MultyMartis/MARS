@@ -96,7 +96,9 @@ $footer_copyright_suffix = shpigovsky_get_footer_copyright_suffix();
 				</div>
 			</div>
 			<nav class="site-footer__nav" aria-label="<?php esc_attr_e( 'Навигация в подвале — услуги', 'shpigovsky' ); ?>">
-				<h2 class="site-footer__nav-heading"><?php esc_html_e( 'Услуги', 'shpigovsky' ); ?></h2>
+				<h2 class="site-footer__nav-heading">
+					<a class="site-footer__nav-heading-link" href="<?php echo esc_url( home_url( '/uslugi/' ) ); ?>"><?php esc_html_e( 'Услуги', 'shpigovsky' ); ?></a>
+				</h2>
 				<?php
 				wp_nav_menu(
 					array(
@@ -112,7 +114,9 @@ $footer_copyright_suffix = shpigovsky_get_footer_copyright_suffix();
 				?>
 			</nav>
 			<nav class="site-footer__nav" aria-label="<?php esc_attr_e( 'Навигация в подвале — о центре', 'shpigovsky' ); ?>">
-				<h2 class="site-footer__nav-heading"><?php esc_html_e( 'О центре', 'shpigovsky' ); ?></h2>
+				<h2 class="site-footer__nav-heading">
+					<a class="site-footer__nav-heading-link" href="<?php echo esc_url( home_url( '/o-centre/' ) ); ?>"><?php esc_html_e( 'О центре', 'shpigovsky' ); ?></a>
+				</h2>
 				<?php
 				wp_nav_menu(
 					array(

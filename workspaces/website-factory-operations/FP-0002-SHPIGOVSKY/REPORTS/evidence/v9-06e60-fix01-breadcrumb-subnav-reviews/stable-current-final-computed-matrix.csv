@@ -1,0 +1,13 @@
+component,selector,property,viewport,stable_backup,current_before,final_runtime,result
+breadcrumbs,.internal-page-nav .breadcrumbs__link,font-size/line-height,1440,14px/18px,14px/18px,14px/18px,PASS
+breadcrumbs,.internal-page-nav .breadcrumbs__link,font-size/line-height,1024,14px/18px,14px/18px,14px/18px,PASS
+breadcrumbs,.internal-page-nav .breadcrumbs__link,font-size/line-height,480,14px/18px,14px/18px,14px/18px,PASS
+breadcrumbs,.internal-page-nav .breadcrumbs__link,font-size/line-height,370,14px/18px,14px/18px,14px/18px,PASS
+breadcrumbs,.internal-page-nav .breadcrumbs__link:hover,color,all,var(--color-accent)=rgb(179,38,30),var(--color-accent-hover),var(--color-accent) rule restored,PASS_CSS
+breadcrumbs,.page-blog breadcrumbs @<=1024,font-size/line-height,1024,8px/12px,8px/12px,8px/12px,PASS
+breadcrumbs,blog-article-hero @<=1024,font-size/line-height,1024,8px/12px,8px/12px,8px/12px,PASS
+subnav,.services-page-subnav__link,font-size/line-height,1440,14px/20px,14px/20px,14px/20px,PASS
+subnav,.services-page-subnav__link:hover,color/border,all,var(--color-accent),unchanged identical,unchanged,PASS
+reviews,.review-archive-card__name,tag,all,h2 (V9 static),h2,div,PASS
+reviews,.review-archive-card__name,font-size,1440,h3=26px (bug),26px,18px,PASS
+reviews,.review-archive-card__name,font-size,1024/480/370,V9 SCSS note 16px adaptive; operator CSS already 18px,18px,18px,PASS_OPERATOR_18

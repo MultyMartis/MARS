@@ -3,140 +3,99 @@
     "title": "Blog — Archive Settings",
     "fields": [
         {
-            "key": "field_fp02_blog_archive_eyebrow",
-            "label": "Eyebrow",
-            "name": "blog_archive_eyebrow",
-            "type": "text"
-        },
-        {
             "key": "field_fp02_blog_archive_title",
-            "label": "Archive H1",
+            "label": "Заголовок архива",
             "name": "blog_archive_title",
-            "type": "text"
-        },
-        {
-            "key": "field_fp02_blog_archive_lead",
-            "label": "Lead",
-            "name": "blog_archive_lead",
-            "type": "textarea",
-            "rows": 3
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         },
         {
             "key": "field_fp02_blog_archive_intro",
-            "label": "Intro",
+            "label": "Вводный текст",
             "name": "blog_archive_intro",
+            "aria-label": "",
             "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
             "rows": 4
         },
         {
-            "key": "field_fp02_blog_archive_featured_label",
-            "label": "Featured label",
-            "name": "blog_archive_featured_label",
-            "type": "text"
+            "key": "field_fp02_blog_archive_posts_per_page",
+            "label": "Статей на странице",
+            "name": "blog_archive_posts_per_page",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 12,
+            "placeholder": "",
+            "min": 1,
+            "max": 50,
+            "step": 1
         },
         {
-            "key": "field_fp02_blog_archive_all_label",
-            "label": "All articles label",
-            "name": "blog_archive_all_label",
-            "type": "text"
+            "key": "field_fp02_blog_archive_show_cta",
+            "label": "Показывать CTA-блок",
+            "name": "blog_archive_show_cta",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Контент берётся из повторяемого блока «CTA-блоки».",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1,
+            "ui_on_text": "Да",
+            "ui_off_text": "Нет"
         },
         {
-            "key": "field_fp02_blog_archive_empty_title",
-            "label": "Empty state title",
-            "name": "blog_archive_empty_title",
-            "type": "text"
-        },
-        {
-            "key": "field_fp02_blog_archive_empty_text",
-            "label": "Empty state text",
-            "name": "blog_archive_empty_text",
-            "type": "textarea",
-            "rows": 3
-        },
-        {
-            "key": "field_fp02_blog_archive_card_link_label",
-            "label": "Card link label",
-            "name": "blog_archive_card_link_label",
-            "type": "text",
-            "default_value": "Читать"
-        },
-        {
-            "key": "field_fp02_blog_archive_card_fallback_image",
-            "label": "Card fallback image",
-            "name": "blog_archive_card_fallback_image",
-            "type": "image",
-            "return_format": "array",
-            "preview_size": "medium"
-        },
-        {
-            "key": "field_fp02_blog_archive_final_cta_title",
-            "label": "Final CTA title",
-            "name": "blog_archive_final_cta_title",
-            "type": "text"
-        },
-        {
-            "key": "field_fp02_blog_archive_final_cta_text",
-            "label": "Final CTA text",
-            "name": "blog_archive_final_cta_text",
-            "type": "textarea",
-            "rows": 3
-        },
-        {
-            "key": "field_fp02_blog_archive_final_cta_phone",
-            "label": "Final CTA phone",
-            "name": "blog_archive_final_cta_phone",
-            "type": "text"
-        },
-        {
-            "key": "field_fp02_blog_archive_final_cta_phone_hint",
-            "label": "Final CTA phone hint",
-            "name": "blog_archive_final_cta_phone_hint",
-            "type": "text"
-        },
-        {
-            "key": "field_fp02_blog_archive_final_cta_button_label",
-            "label": "Final CTA button label",
-            "name": "blog_archive_final_cta_button_label",
-            "type": "text"
-        },
-        {
-            "key": "field_fp02_blog_archive_final_cta_button_url",
-            "label": "Final CTA button URL",
-            "name": "blog_archive_final_cta_button_url",
-            "type": "url"
-        },
-        {
-            "key": "field_fp02_blog_archive_expert_quote_text",
-            "label": "Expert quote text",
-            "name": "blog_archive_expert_quote_text",
-            "type": "textarea",
-            "rows": 5
-        },
-        {
-            "key": "field_fp02_blog_archive_expert_name",
-            "label": "Expert name",
-            "name": "blog_archive_expert_name",
-            "type": "text"
-        },
-        {
-            "key": "field_fp02_blog_archive_expert_role",
-            "label": "Expert role",
-            "name": "blog_archive_expert_role",
-            "type": "text"
-        },
-        {
-            "key": "field_fp02_blog_archive_expert_photo",
-            "label": "Expert photo",
-            "name": "blog_archive_expert_photo",
-            "type": "image",
-            "return_format": "array",
-            "preview_size": "medium"
-        },
-        {
-            "key": "field_fp02_blog_archive_expert_cta_label",
-            "label": "Expert CTA label",
-            "name": "blog_archive_expert_cta_label",
-            "type": "text"
+            "key": "field_fp02_blog_archive_show_founder_word",
+            "label": "Показывать слово основателя",
+            "name": "blog_archive_show_founder_word",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Контент берётся из повторяемого блока «Цитата основателя».",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "ui": 1,
+            "ui_on_text": "Да",
+            "ui_off_text": "Нет"
         }
     ],
     "location": [
@@ -155,7 +114,7 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
-    "description": "FP-0002 V9-06E26B blog archive settings on page_for_posts.",
+    "description": "FP-0002 V9-06C canonical source field group. Runtime registration occurs only after delivery authorization.",
     "show_in_rest": 0,
-    "modified": 1784044800
+    "modified": 1784452800
 }

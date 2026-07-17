@@ -1,0 +1,17 @@
+route,expected,actual,php_warn,pass
+/,200,200,0,PASS
+/uslugi/,200,200,0,PASS
+/uslugi/zavisimosti/,200,200,0,PASS
+/uslugi/zavisimosti/lechenie-alkogolnoj-zavisimosti/,200,404,0,FAIL
+/o-centre/,200,200,0,PASS
+/o-centre/galereya-o-dome/,200,200,0,PASS
+/specyalisty/,200,200,0,PASS
+/kontakty/,200,200,0,PASS
+/blog/,200,200,0,PASS
+/blog/page/2/,200,200,0,PASS
+/otzyvy/,200,200,0,PASS
+/otzyvy/page/2/,200,200,0,PASS
+/otzyvy/page/3/,200,200,0,PASS
+/otzyvy/page/99/,404,404,0,PASS
+/this-route-should-404-e62c/,404,404,0,PASS
+/blog/demo-pagination-article-10/,200,200,0,PASS

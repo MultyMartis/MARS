@@ -1,0 +1,5 @@
+location,before,after,notes
+desktop_main_header_primary_nav,data-search-toggle button present,data-search-toggle button present,opens dropdown panel
+floating_header,fp02-floating-header__search + data-search-toggle,REMOVED,no gap/orphan ARIA
+mobile_header_bar,site-header__search--mobile + data-search-toggle,REMOVED,alignment preserved
+mobile_offcanvas,none,a.offcanvas__nav-link--search href=/?s=,navigates blank Search; no data-search-toggle

@@ -1,0 +1,8 @@
+acf_get_fields(group_fp02_page_contacts) AFTER FIX01:
+- contacts_phones
+- contacts_messengers
+- contacts_locations (2 rows populated)
+- contacts_form_intro
+
+NOT present: contacts_address, contacts_map_url, contacts_blocks
+DB acf-field posts under group #101 still list legacy fields — overridden by local PHP registration (SoT). Content postmeta for obsolete fields retained intentionally.

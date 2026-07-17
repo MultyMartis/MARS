@@ -1,0 +1,19 @@
+BEFORE (E59 / pre-FIX01):
+section.comfort
+  .container
+    .comfort__head
+    .comfort__lead
+    .comfort__gallery
+      .comfort__gallery-item.comfort__gallery-item_decor  (logo — counted in grid)
+      .comfort__gallery-item.comfort__gallery-item--wide   (photo)
+      .comfort__gallery-item … (photos)
+
+AFTER (FIX01):
+section.comfort
+  .container
+    .comfort__head
+    .comfort__lead
+    .comfort__gallery-stage   (CSS grid owner)
+      .comfort__gallery-decor > .comfort__gallery-decor-image  (outside gallery semantics)
+      .comfort__gallery (display:contents)
+        .comfort__gallery-item[.comfort__gallery-item--wide] … (real photos only)

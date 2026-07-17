@@ -19,8 +19,12 @@ $image = shpigovsky_home_image_or_asset(
 	443
 );
 
+$args            = isset( $args ) && is_array( $args ) ? $args : array();
+$extra_classes   = isset( $args['class'] ) ? trim( (string) $args['class'] ) : '';
+$section_classes = trim( 'home-staff-photo ' . $extra_classes );
+
 ?>
-<section data-reveal class="home-staff-photo @@class" aria-label="Команда центра">
+<section data-reveal class="<?php echo esc_attr( $section_classes ); ?>" aria-label="Команда центра">
   <div class="container">
     <div class="home-staff-photo__bleed">
       <img

@@ -1,0 +1,27 @@
+finding_id,property,figma_reference,v9_static,current_wp,difference,viewport,notes
+E58-VA-001,home-staff-photo padding-top,N/A (Home not in 26.06 PNG pair),0px (no-top-padding),50px,+50px,1440,literal @@class blocks utility
+E58-VA-001,home-staff-photo padding-bottom,N/A,30px (no-top-padding--30),50px,+20px,1440,
+E58-VA-001,home-feature-grid padding-top,N/A,0px,50px,+50px,1440,
+E58-VA-001,home-feature-grid padding-bottom,N/A,30px,50px,+20px,1440,
+E58-VA-001,clinic-landscape padding-top,N/A,0px,50px,+50px,1440,
+E58-VA-001,clinic-landscape padding-bottom,N/A,50px,50px,0,1440,
+E58-VA-001,home-why-us padding-top,N/A,50px,50px,0,1440,
+E58-VA-001,home-why-us padding-bottom,N/A,30px,50px,+20px,1440,
+E58-VA-001,home-staff-photo padding-top,N/A,0px,25px,+25px,480,--pad-y mobile 25
+E58-VA-001,home-feature-grid padding-top,N/A,0px,25px,+25px,480,
+E58-VA-001,clinic-landscape padding-top,N/A,0px,25px,+25px,480,
+E58-VA-002,specialists padding,visual denser possible,50px/50px,50px/50px,0 vs V9,1440,CSV claimed 30/30 was index mis-pair
+E58-VA-002,program-approach-band padding,N/A,50px/0px,50px/0px,0 vs V9,1440,
+E58-VA-002,services-program-v2 padding,N/A,50px/50px,50px/50px,0 vs V9,1440,
+E58-VA-003,.btn height,~40px visual (token era),40px (majority),40px (majority),0,370;480;1440,token --main-size-btns:40px; border in box
+E58-VA-003,.btn vertical padding,N/A,0 25px,0 25px,0,370;480,height from token not padding
+E58-VA-003,touch guideline 44px,N/A external,not design SoT,40px,-4 vs guideline only,370,not Figma/V9 defect
+E58-VA-004,content section h2 size,~36 desktop / ~26 mobile,36px@1440 / 26px@480,36px@1440 / 26px@480,0 for same role,1440;480,18px chrome / 30px CTA titles are other roles
+E58-VA-005,category service row widths,see Figma export,DOM-order sensitive,DOM-order sensitive,unreliable index delta,1440;480,hold for visual
+E58-VA-005,services-category-section-v2 section pad,N/A,50px/50px typical,50px/50px,~0 section shell,1440,
+E58-VA-006,blog-related-card size,see Figma,370x356,370x356,0,1440,
+E58-VA-006,blog-related-card__title padding,N/A,10px 30px 0 30px,10px 30px 0 30px,0,1440,
+E58-VA-007,blog-article-related padding,N/A,30px/30px,30px/30px,0,1440,CSV claimed pb 0 was wrong pair
+E58-VA-007,program-cta-band-section padding,N/A,0px/30px,0px/30px,0,1440,
+E58-VA-007,related→CTA combined gap,N/A,30 bottom + 0 top,same,0,1440,
+E58-VA-008,plain-page-content padding,typovoy denser possible,48px/72px,48px/72px,0 vs V9,1440;480,CSV 0/0 was mismatched V9 node

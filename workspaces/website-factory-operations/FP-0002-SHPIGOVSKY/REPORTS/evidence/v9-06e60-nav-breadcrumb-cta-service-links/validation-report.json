@@ -1,0 +1,159 @@
+{
+    "wave": "V9-06E60",
+    "db_writes": [
+        {
+            "field": "cta_band_phone_hint",
+            "action": "skip_nonempty_or_missing",
+            "value": "Или позвоните нам"
+        }
+    ],
+    "cta_options": {
+        "cta_band_default_title": {
+            "option": null,
+            "block": "Остались вопросы?"
+        },
+        "cta_band_default_subtitle": {
+            "option": null,
+            "block": "Опишите вашу ситуацию в форме заявки, и мы расскажем, как сможем помочь"
+        },
+        "cta_band_phone_hint": {
+            "option": null,
+            "block": "Или позвоните нам"
+        },
+        "cta_band_default_button_label": {
+            "option": null,
+            "block": "Заказать звонок"
+        }
+    },
+    "routes": {
+        "\/": {
+            "http": 200,
+            "bytes": 196899,
+            "php_noise": false,
+            "has_program_cta": false,
+            "has_home_cta": true,
+            "has_service_name_a": false,
+            "old_cta_title_class": false,
+            "old_name_link_class": false
+        },
+        "\/uslugi\/": {
+            "http": 200,
+            "bytes": 134209,
+            "php_noise": false,
+            "has_program_cta": true,
+            "has_home_cta": false,
+            "has_service_name_a": true,
+            "old_cta_title_class": false,
+            "old_name_link_class": false
+        },
+        "\/uslugi\/zavisimosti\/": {
+            "http": 200,
+            "bytes": 141033,
+            "php_noise": false,
+            "has_program_cta": true,
+            "has_home_cta": false,
+            "has_service_name_a": true,
+            "old_cta_title_class": false,
+            "old_name_link_class": false
+        },
+        "\/o-centre\/": {
+            "http": 200,
+            "bytes": 135920,
+            "php_noise": false,
+            "has_program_cta": true,
+            "has_home_cta": false,
+            "has_service_name_a": false,
+            "old_cta_title_class": false,
+            "old_name_link_class": false
+        },
+        "\/kontakty\/": {
+            "http": 200,
+            "bytes": 78400,
+            "php_noise": false,
+            "has_program_cta": true,
+            "has_home_cta": false,
+            "has_service_name_a": false,
+            "old_cta_title_class": false,
+            "old_name_link_class": false
+        },
+        "\/blog\/": {
+            "http": 200,
+            "bytes": 81300,
+            "php_noise": false,
+            "has_program_cta": true,
+            "has_home_cta": false,
+            "has_service_name_a": false,
+            "old_cta_title_class": false,
+            "old_name_link_class": false
+        }
+    },
+    "service_links": {
+        "zavisimosti": [
+            {
+                "href": "http:\/\/shpigovsky.test\/uslugi\/zavisimosti\/lechenie-alkogolnoy-zavisimosti\/",
+                "text": "Лечение алкогольной зависимости"
+            },
+            {
+                "href": "http:\/\/shpigovsky.test\/uslugi\/zavisimosti\/lechenie-narkoticheskoy-zavisimosti\/",
+                "text": "Лечение наркотической зависимости"
+            },
+            {
+                "href": "http:\/\/shpigovsky.test\/uslugi\/zavisimosti\/lechenie-povedencheskoy-zavisimosti\/",
+                "text": "Поведенческие зависимости"
+            },
+            {
+                "href": "http:\/\/shpigovsky.test\/uslugi\/zavisimosti\/profilakticheskiy-analiz\/",
+                "text": "Профилактический анализ"
+            },
+            {
+                "href": "http:\/\/shpigovsky.test\/uslugi\/zavisimosti\/kompyuternaya-zavisimost\/",
+                "text": "Компьютерная зависимость"
+            },
+            {
+                "href": "http:\/\/shpigovsky.test\/uslugi\/zavisimosti\/lechenie-opiumnoy-zavisimosti\/",
+                "text": "Лечение опиумной зависимости"
+            }
+        ],
+        "uslugi": [
+            {
+                "href": "http:\/\/shpigovsky.test\/uslugi\/zavisimosti\/lechenie-alkogolnoy-zavisimosti\/",
+                "text": "Алкогольная зависимость"
+            },
+            {
+                "href": "http:\/\/shpigovsky.test\/uslugi\/zavisimosti\/lechenie-narkoticheskoy-zavisimosti\/",
+                "text": "Наркотическая зависимость"
+            },
+            {
+                "href": "http:\/\/shpigovsky.test\/uslugi\/zavisimosti\/lechenie-povedencheskoy-zavisimosti\/",
+                "text": "Поведенческие зависимости"
+            },
+            {
+                "href": "http:\/\/shpigovsky.test\/uslugi\/zavisimosti\/profilakticheskiy-analiz\/",
+                "text": "Профилактический анализ"
+            },
+            {
+                "href": "http:\/\/shpigovsky.test\/uslugi\/psihicheskoe-zdorovie\/depressiya\/",
+                "text": "Депрессия"
+            },
+            {
+                "href": "http:\/\/shpigovsky.test\/uslugi\/psihicheskoe-zdorovie\/ptsr\/",
+                "text": "ПТСР"
+            },
+            {
+                "href": "http:\/\/shpigovsky.test\/uslugi\/psihicheskoe-zdorovie\/emotsionalnoe-vygoranie\/",
+                "text": "Эмоциональное выгорание"
+            },
+            {
+                "href": "http:\/\/shpigovsky.test\/uslugi\/psihicheskoe-zdorovie\/trevozhnye-rasstroystva\/",
+                "text": "Тревожные расстройства"
+            }
+        ]
+    },
+    "cta_dom": {
+        "blog_has_wrap01": true,
+        "blog_has_wrap02": true,
+        "blog_has_lead": true,
+        "blog_has_old_title": false,
+        "home_has_canonical": true
+    }
+}

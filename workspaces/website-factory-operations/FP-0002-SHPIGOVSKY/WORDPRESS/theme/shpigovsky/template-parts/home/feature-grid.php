@@ -16,8 +16,12 @@ $advantage_items = shpigovsky_home_repeater_or_fallback(
 	shpigovsky_home_advantages_fallback_items()
 );
 
+$args            = isset( $args ) && is_array( $args ) ? $args : array();
+$extra_classes   = isset( $args['class'] ) ? trim( (string) $args['class'] ) : '';
+$section_classes = trim( 'home-feature-grid ' . $extra_classes );
+
 ?>
-<section data-reveal class="home-feature-grid @@class" aria-label="Преимущества центра">
+<section data-reveal class="<?php echo esc_attr( $section_classes ); ?>" aria-label="Преимущества центра">
   <div class="container">
     <ul class="home-feature-grid__card-grid">
       <?php foreach ( $advantage_items as $item ) : ?>

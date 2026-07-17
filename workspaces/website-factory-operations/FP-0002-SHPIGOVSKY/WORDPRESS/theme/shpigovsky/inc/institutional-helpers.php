@@ -434,9 +434,14 @@ function shpigovsky_get_about_infrastructure_context( $page_id ) {
 		$bullet       = isset( $static_group['bullet'] ) ? (string) $static_group['bullet'] : '';
 
 		if ( 'g0' === $group_key ) {
+			$bullet_intro = '';
+			if ( function_exists( 'get_field' ) ) {
+				$bullet_intro = trim( (string) get_field( 'infrastructure_narrative_bullet_intro', $page_id ) );
+			}
 			$groups[ $group_key ] = array(
-				'heading' => '' !== $heading ? $heading : ( isset( $static_group['heading'] ) ? $static_group['heading'] : '' ),
-				'lead'    => '' !== $lead ? $lead : ( isset( $static_group['lead'] ) ? $static_group['lead'] : '' ),
+				'heading'      => '' !== $heading ? $heading : ( isset( $static_group['heading'] ) ? $static_group['heading'] : '' ),
+				'lead'         => '' !== $lead ? $lead : ( isset( $static_group['lead'] ) ? $static_group['lead'] : '' ),
+				'bullet_intro' => $bullet_intro,
 			);
 		} else {
 			if ( '' !== $lead ) {

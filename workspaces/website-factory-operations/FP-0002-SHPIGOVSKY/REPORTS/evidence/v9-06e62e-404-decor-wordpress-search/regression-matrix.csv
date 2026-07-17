@@ -1,0 +1,13 @@
+route,status,notes
+/,200,header+search panel+toggles
+/uslugi/,200,ok
+/uslugi/zavisimosti/lechenie-alkogolnoy-zavisimosti/,200,service
+/specyalisty/,200,ok
+/o-centre/,200,ok
+/kontakty/,200,ok
+/blog/,200,ok
+/otzyvy/,200,ok
+/missing-e62e/,404,decor asset active
+/?s=зависим,200,results+pagination
+/page/2/?s=зависим,200,page2
+/page/99/?s=зависим,404,invalid page

@@ -132,6 +132,34 @@ function shpigovsky_enqueue_assets() {
 		);
 	}
 
+	$page_404_css = SHPIGOVSKY_THEME_DIR . '/assets/css/fp02-404.css';
+	if ( is_404() && is_readable( $page_404_css ) ) {
+		$deps_404 = array();
+		if ( wp_style_is( 'shpigovsky-v9', 'enqueued' ) || wp_style_is( 'shpigovsky-v9', 'registered' ) ) {
+			$deps_404[] = 'shpigovsky-v9';
+		}
+		wp_enqueue_style(
+			'shpigovsky-fp02-404',
+			SHPIGOVSKY_THEME_URI . '/assets/css/fp02-404.css',
+			$deps_404,
+			shpigovsky_asset_version( 'css/fp02-404.css' )
+		);
+	}
+
+	$search_css = SHPIGOVSKY_THEME_DIR . '/assets/css/fp02-search.css';
+	if ( is_readable( $search_css ) ) {
+		$deps_search = array();
+		if ( wp_style_is( 'shpigovsky-v9', 'enqueued' ) || wp_style_is( 'shpigovsky-v9', 'registered' ) ) {
+			$deps_search[] = 'shpigovsky-v9';
+		}
+		wp_enqueue_style(
+			'shpigovsky-fp02-search',
+			SHPIGOVSKY_THEME_URI . '/assets/css/fp02-search.css',
+			$deps_search,
+			shpigovsky_asset_version( 'css/fp02-search.css' )
+		);
+	}
+
 	/**
 	 * Extension hook for later waves (Swiper, Fancybox, Inputmask, page modules).
 	 */

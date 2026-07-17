@@ -1,0 +1,117 @@
+{
+  "jsErrors": [],
+  "regression": [
+    {
+      "route": "/",
+      "http": 200,
+      "phpWarn": false,
+      "overflow": false,
+      "robots": "noindex, nofollow",
+      "canonical": "http://shpigovsky.test/"
+    },
+    {
+      "route": "/uslugi/",
+      "http": 200,
+      "phpWarn": false,
+      "overflow": false,
+      "robots": "noindex, nofollow",
+      "canonical": "http://shpigovsky.test/uslugi/"
+    },
+    {
+      "route": "/uslugi/zavisimosti/lechenie-alkogolnoj-zavisimosti/",
+      "http": 404,
+      "phpWarn": false,
+      "overflow": false,
+      "robots": "noindex, nofollow",
+      "canonical": ""
+    },
+    {
+      "route": "/o-centre/",
+      "http": 200,
+      "phpWarn": false,
+      "overflow": false,
+      "robots": "noindex, nofollow",
+      "canonical": "http://shpigovsky.test/o-centre/"
+    },
+    {
+      "route": "/kontakty/",
+      "http": 200,
+      "phpWarn": false,
+      "overflow": false,
+      "robots": "noindex, nofollow",
+      "canonical": "http://shpigovsky.test/kontakty/"
+    },
+    {
+      "route": "/blog/",
+      "http": 200,
+      "phpWarn": false,
+      "overflow": false,
+      "robots": "noindex, nofollow",
+      "canonical": "http://shpigovsky.test/blog/"
+    },
+    {
+      "route": "/otzyvy/",
+      "http": 200,
+      "phpWarn": false,
+      "overflow": false,
+      "robots": "noindex, nofollow",
+      "canonical": "http://shpigovsky.test/otzyvy/"
+    },
+    {
+      "route": "/o-centre/programma-lecheniya/genotipirovanie/",
+      "http": 200,
+      "phpWarn": false,
+      "overflow": false,
+      "robots": "noindex, nofollow",
+      "canonical": "http://shpigovsky.test/o-centre/programma-lecheniya/genotipirovanie/"
+    },
+    {
+      "route": "/o-centre/programma-lecheniya/neyropsihologicheskaya-korrektsiya/",
+      "http": 200,
+      "phpWarn": false,
+      "overflow": false,
+      "robots": "noindex, nofollow",
+      "canonical": "http://shpigovsky.test/o-centre/programma-lecheniya/neyropsihologicheskaya-korrektsiya/"
+    },
+    {
+      "route": "/o-centre/programma-lecheniya/psihokorrektsiya/",
+      "http": 200,
+      "phpWarn": false,
+      "overflow": false,
+      "robots": "noindex, nofollow",
+      "canonical": "http://shpigovsky.test/o-centre/programma-lecheniya/psihokorrektsiya/"
+    },
+    {
+      "route": "/o-centre/programma-lecheniya/kinezioterapiya/",
+      "http": 200,
+      "phpWarn": false,
+      "overflow": false,
+      "robots": "noindex, nofollow",
+      "canonical": "http://shpigovsky.test/o-centre/programma-lecheniya/kinezioterapiya/"
+    },
+    {
+      "route": "/this-page-definitely-does-not-exist-e62d/",
+      "http": 404,
+      "phpWarn": false,
+      "overflow": false,
+      "robots": "noindex, nofollow",
+      "canonical": ""
+    },
+    {
+      "route": "/uslugi/zavisimosti/this-service-does-not-exist-e62d/",
+      "http": 404,
+      "phpWarn": false,
+      "overflow": false,
+      "robots": "noindex, nofollow",
+      "canonical": ""
+    },
+    {
+      "route": "/blog/this-blog-post-does-not-exist-e62d/",
+      "http": 404,
+      "phpWarn": false,
+      "overflow": false,
+      "robots": "noindex, nofollow",
+      "canonical": ""
+    }
+  ]
+}

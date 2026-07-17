@@ -1,0 +1,7 @@
+dirty_main_HEAD=7443c4e9256101a95d756b5a3c01cd4e827f0713
+origin_mars_canonical_post_recovery=29c07d210169ff273d69e7b5f9000d84c1c097b1
+unpushed_commits:
+7443c4e9 docs(metabot): add pc14 fu03 hotfix01 sandbox design 3c43a03e docs(fp0002): freeze current baseline before visual audit
+note=Clean worktree will base on origin and apply exact allowlist file state from dirty main (not cherry-pick mixed ancestry including metabot).
+allowlist_count=207
+foreign_wip_count=336

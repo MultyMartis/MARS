@@ -1,0 +1,4 @@
+selector,file,breakpoint,stable_value,current_before,action
+.internal-page-nav .services-page-subnav__list,v9-style.css,default,flex wrap gap 10px,identical,KEEP
+.internal-page-nav .services-page-subnav__link,v9-style.css,default,14px/20px min-h 34 pad 6/16,identical,KEEP
+.internal-page-nav .services-page-subnav__link:hover,:focus-visible,v9-style.css,default,border+color var(--color-accent),identical (E60 did not change),KEEP_STABLE_AUTHORITY

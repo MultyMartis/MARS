@@ -1,0 +1,6 @@
+location,selector,aria,opens,notes
+desktop_nav,.site-header__search[data-search-toggle],aria-expanded+aria-controls=site-header-search,yes,primary trigger
+mobile_bar,.site-header__search--mobile[data-search-toggle],same,yes,added for <=1024 when bottom nav hidden
+floating_header,.fp02-floating-header__search[data-search-toggle],same,yes,added for scroll utility header
+offcanvas,none,n/a,n/a,no search trigger in offcanvas
+dormant_dropdown,none_pre_wave,n/a,n/a,no pre-existing panel markup

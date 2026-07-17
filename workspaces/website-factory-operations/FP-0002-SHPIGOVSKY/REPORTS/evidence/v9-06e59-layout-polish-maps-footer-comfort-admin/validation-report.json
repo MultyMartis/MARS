@@ -1,0 +1,67 @@
+{
+    "routes": {
+        "\/": {
+            "url": "http:\/\/shpigovsky.test\/",
+            "http": 200,
+            "bytes": 197060
+        },
+        "\/kontakty\/": {
+            "url": "http:\/\/shpigovsky.test\/kontakty\/",
+            "http": 200,
+            "bytes": 78410
+        },
+        "\/uslugi\/": {
+            "url": "http:\/\/shpigovsky.test\/uslugi\/",
+            "http": 200,
+            "bytes": 135171
+        },
+        "\/o-centre\/": {
+            "url": "http:\/\/shpigovsky.test\/o-centre\/",
+            "http": 200,
+            "bytes": 135681
+        }
+    },
+    "home_spacing": {
+        "home-staff-photo no-top-padding no-top-padding--30": true,
+        "home-feature-grid no-top-padding no-top-padding--30": true,
+        "clinic-landscape no-top-padding": true,
+        "home-why-us no-top-padding--30": true,
+        "no @@class literal": true
+    },
+    "contacts_maps": {
+        "location_articles": 2,
+        "constructor_scripts": 2,
+        "static_map_images": 0,
+        "constructor_wrapper": 2,
+        "addresses": {
+            "mo": true,
+            "moscow": true
+        },
+        "urls": [
+            "https:\/\/api-maps.yandex.ru\/services\/constructor\/1.0\/js\/?um=constructor%3A75ad56afa5fdc8ad7e4d9468299e52ce70e4b2e4144e2411f5a756a98b95b56f&#038;width=100%25&#038;height=500&#038;lang=ru_RU&#038;scroll=false",
+            "https:\/\/api-maps.yandex.ru\/services\/constructor\/1.0\/js\/?um=constructor%3A5d19ddb0c6f2f3ec81448c63bb347491a0ed5f1e1d5b747c874d510b75e2c026&#038;width=100%25&#038;height=500&#038;lang=ru_RU&#038;scroll=false"
+        ]
+    },
+    "footer_links": {
+        "\/": {
+            "uslugi_heading_link": true,
+            "ocentre_heading_link": true
+        },
+        "\/kontakty\/": {
+            "uslugi_heading_link": true,
+            "ocentre_heading_link": true
+        },
+        "\/uslugi\/": {
+            "uslugi_heading_link": true,
+            "ocentre_heading_link": true
+        },
+        "\/o-centre\/": {
+            "uslugi_heading_link": true,
+            "ocentre_heading_link": true
+        }
+    },
+    "comfort_cta": {
+        "acf_value": "Вы сможете все посмотреть и задать вопросы лично",
+        "frontend_contains": true
+    }
+}

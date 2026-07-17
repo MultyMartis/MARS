@@ -1,0 +1,13 @@
+diff --git "a/X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\assets\\css\\fp02-lifebuoy-parallax.css" "b/X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\assets\\css\\fp02-lifebuoy-parallax.css"
+index 47bdf017..14f95a60 100644
+--- "a/X:\\AI MARS\\workspaces\\website-factory-operations\\FP-0002-SHPIGOVSKY\\WORDPRESS\\theme\\shpigovsky\\assets\\css\\fp02-lifebuoy-parallax.css"	
++++ "b/X:\\MARS-Localhost\\sites\\wordpress\\projects\\shpigovsky\\wp-content\\themes\\shpigovsky\\assets\\css\\fp02-lifebuoy-parallax.css"
+@@ -25,7 +25,7 @@
+   width: min(88vw, 806px);
+   max-width: none;
+   height: auto;
+-  opacity: 0.3;
++  opacity: 0.2;
+   user-select: none;
+   -webkit-user-drag: none;
+   transform: translate3d(

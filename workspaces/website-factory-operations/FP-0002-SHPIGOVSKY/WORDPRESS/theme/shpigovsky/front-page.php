@@ -23,10 +23,10 @@ if ( is_front_page() ) {
 	get_template_part( 'template-parts/home/founder-quote' );
 	get_template_part( 'template-parts/home/treatment-prevention' );
 	get_template_part( 'template-parts/home/gallery' );
-	get_template_part( 'template-parts/home/why-us' );
-	get_template_part( 'template-parts/home/staff-photo' );
-	get_template_part( 'template-parts/home/feature-grid' );
-	get_template_part( 'template-parts/home/clinic-landscape' );
+	get_template_part( 'template-parts/home/why-us', null, array( 'class' => 'no-top-padding--30' ) );
+	get_template_part( 'template-parts/home/staff-photo', null, array( 'class' => 'no-top-padding no-top-padding--30' ) );
+	get_template_part( 'template-parts/home/feature-grid', null, array( 'class' => 'no-top-padding no-top-padding--30' ) );
+	get_template_part( 'template-parts/home/clinic-landscape', null, array( 'modifier_class' => 'no-top-padding' ) );
 	get_template_part( 'template-parts/home/recovery-life' );
 	get_template_part( 'template-parts/home/reviews' );
 	get_template_part( 'template-parts/home/rehabilitation-requirements' );

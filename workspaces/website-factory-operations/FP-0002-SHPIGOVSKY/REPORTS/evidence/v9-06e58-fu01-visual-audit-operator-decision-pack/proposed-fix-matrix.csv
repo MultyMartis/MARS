@@ -1,0 +1,9 @@
+finding_id,include_in_batch,batch,likely_selector,property,approx_old,approx_new,breakpoint_scope,likely_files,affected_routes,regression_risk,notes
+E58-VA-001,YES,A,main > .home-staff-photo / .home-feature-grid / .clinic-landscape / .home-why-us OR restore utility classes,padding-top/bottom via no-top-padding (+ --30),50/50 (desktop),0/30 staff+feature; 0/50 landscape; 50/30 why-us,all (inherits --pad-y),template-parts/home/*.php (remove @@class; pass classes from front-page.php); CSS utilities already exist,/ only,medium — Home neighbors,Smallest fix: port V9 class args; do not invent new tokens
+E58-VA-002,NO,—,—,—,—,—,—,—,—,—,Rejected FP
+E58-VA-003,NO,—,—,—,—,—,—,—,—,—,Rejected FP
+E58-VA-004,NO,—,—,—,—,—,—,—,—,—,Intentional role hierarchy
+E58-VA-005,NO until confirm,B candidate,—,—,—,—,—,—,/uslugi/,medium-high,Hold
+E58-VA-006,NO,—,—,—,—,—,—,—,—,—,Rejected FP
+E58-VA-007,NO,—,—,—,—,—,—,—,—,—,Rejected FP
+E58-VA-008,NO,—,—,—,—,—,—,—,—,—,Rejected FP

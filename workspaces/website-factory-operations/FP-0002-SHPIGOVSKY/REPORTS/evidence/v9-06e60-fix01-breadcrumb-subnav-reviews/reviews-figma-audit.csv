@@ -1,0 +1,11 @@
+finding,viewport,before,reference,final,action
+reviewer-name-element,all,h2.review-archive-card__name,operator + Figma intent (neutral name; not heading),div.review-archive-card__name,FIXED
+reviewer-name-font-size,1440,26px (var(--font-size-h3)),operator require 18px; V9 base token 18px; Home reviews__author-name uses base,18px,FIXED
+reviewer-name-line-height,1440,30px (h3),base line-height 24px,24px,FIXED
+reviewer-name-font-size,<=1024,18px (operator already),V9 SCSS adaptive comment 16px EXACT_GEOMETRY,18px kept,NO_CHANGE (operator+charter 18px wins)
+review-list-columns,all,1 column flex,V9 single column,1 column,MATCH
+card-padding-mobile,<=1024,20px,V9 EXACT_GEOMETRY 20px,20px,MATCH
+card-gap-mobile,<=1024,12px,V9 12px,12px,MATCH
+card-min-height-mobile,<=1024,400px,V9 EXACT_GEOMETRY 400px,400px,MATCH
+body-font-mobile,<=1024,15px/20px,V9 EXACT_GEOMETRY 15/20,15/20,MATCH
+otzyvy-breadcrumbs-markup,all,skeleton empty nav,V9 has real breadcrumbs partial,unchanged skeleton,SAFE_UNKNOWN pre-existing (out of restore CSS scope)

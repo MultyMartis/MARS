@@ -1,0 +1,13 @@
+selector,prior,classification,final,a11y
+.site-header__nav-link:hover,color accent + ::after underline bar,NAVIGATION,color accent-hover; ::after opacity 0,focus-visible outline retained
+.offcanvas__nav-link:hover,color accent,NAVIGATION,color accent-hover,focus-visible outline retained
+.site-footer__nav-link:hover,accent + underline,NAVIGATION,accent-hover no underline,focus-visible outline + color
+.site-footer__nav-heading-link,accent-hover (E59),NAVIGATION,unchanged accent-hover,ok
+a.services-category-section-v2__service-name,name-link child accent-hover,CARD/TITLE,class on anchor; accent-hover no underline,ok
+.services-category-section-v2__service-child-link,dotted border underline,CARD/TITLE,accent-hover; border 0,ok
+.home-rehabilitation-program__direction-title-link,underline on hover,HEADING LINK,accent-hover no underline,ok
+.home-rehabilitation-program__direction-more,underline on hover,NAV-LIKE,accent-hover no underline,ok
+.services-program-v2__item-title-link,underline on hover,HEADING LINK,accent-hover no underline,ok
+.specialists__card-link .specialists__name,underline on hover,CARD TITLE,accent-hover no underline; base name still has permanent underline decoration in static CSS,SAFE_UNKNOWN permanent underline left
+.breadcrumbs__link:hover,color accent,NAVIGATION,color accent-hover,ok
+.final-form__consent-link / modal / legal / body links,underline,INLINE/LEGAL,unchanged,keep for readability

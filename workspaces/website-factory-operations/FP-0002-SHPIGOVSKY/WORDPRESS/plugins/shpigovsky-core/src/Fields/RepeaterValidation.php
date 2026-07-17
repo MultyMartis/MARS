@@ -104,7 +104,7 @@ final class RepeaterValidation implements ModuleInterface {
 			'field_fp02_infrastructure_g0_g5'      => 6,
 			'field_fp02_contacts_phones'           => 4,
 			'field_fp02_contacts_messengers'       => 6,
-			'field_fp02_contacts_blocks'           => 8,
+			'field_fp02_contacts_locations'        => 8,
 			'field_fp02_reviews_items'             => 50,
 			'field_fp02_social_links'              => 8,
 		);

@@ -1,0 +1,6 @@
+selector,file,breakpoint,removed_value,why
+.internal-page-nav .breadcrumbs__link:hover color,v9-style.css,default,var(--color-accent-hover),E60 accent-hover override; restore E58 accent
+.contacts-page__breadcrumbs .breadcrumbs__link:hover color,v9-style.css,default,var(--color-accent-hover),E60 override
+.reviews-page__breadcrumbs .breadcrumbs__link:hover color,v9-style.css,default,var(--color-accent-hover),E60 override
+.blog-page__breadcrumbs .breadcrumbs__link:hover color,v9-style.css,default,var(--color-accent-hover),E60 override
+.blog-article-hero__breadcrumbs .breadcrumbs__link:hover color,v9-style.css,default,var(--color-accent-hover),E60 override

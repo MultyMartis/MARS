@@ -818,12 +818,16 @@ function shpigovsky_get_service_cta_band( $post_id ) {
 		$button_label = shpigovsky_get_cta_band_default_button_label( $default_cta );
 	}
 
+	$button_url = shpigovsky_get_service_field( $post_id, 'cta_button_target' );
+	$button_url = is_string( $button_url ) ? trim( $button_url ) : '';
+
 	return array(
 		'title'        => $title,
 		'subtitle'     => $subtitle,
 		'phone'        => $phone,
-		'phone_hint'   => shpigovsky_get_cta_band_phone_hint(),
+		'phone_hint'   => shpigovsky_get_cta_band_phone_hint( __( 'Или позвоните нам', 'shpigovsky' ) ),
 		'button_label' => $button_label,
+		'button_url'   => $button_url,
 		'source'       => 'service-cta-' . $post_id,
 	);
 }

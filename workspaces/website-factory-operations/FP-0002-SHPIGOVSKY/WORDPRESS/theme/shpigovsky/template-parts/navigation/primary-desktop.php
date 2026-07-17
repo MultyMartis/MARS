@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $search_button = sprintf(
-	'<li class="site-header__nav-item site-header__nav-item--search"><button type="button" class="site-header__search" aria-label="%1$s"><i class="fas fa-search" aria-hidden="true"></i></button></li>',
+	'<li class="site-header__nav-item site-header__nav-item--search"><button type="button" class="site-header__search" data-search-toggle aria-expanded="false" aria-controls="site-header-search" aria-label="%1$s"><i class="fas fa-search" aria-hidden="true"></i></button></li>',
 	esc_attr__( 'Открыть поиск', 'shpigovsky' )
 );
 ?>

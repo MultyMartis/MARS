@@ -1,0 +1,178 @@
+{
+    "writes": [
+        {
+            "scope": "postmeta:20:contacts_heading",
+            "before": "",
+            "after": "Контакты",
+            "note": "seed empty heading"
+        },
+        {
+            "scope": "option:show_breadcrumbs_pages",
+            "before": null,
+            "after": 1,
+            "note": "default enabled"
+        },
+        {
+            "scope": "option:show_breadcrumbs_services",
+            "before": null,
+            "after": 1,
+            "note": "default enabled"
+        },
+        {
+            "scope": "postmeta:19:blog_archive_posts_per_page",
+            "before": null,
+            "after": 12,
+            "note": "default"
+        },
+        {
+            "scope": "postmeta:19:blog_archive_show_cta",
+            "before": null,
+            "after": 1,
+            "note": "default on"
+        },
+        {
+            "scope": "postmeta:19:blog_archive_show_founder_word",
+            "before": null,
+            "after": 1,
+            "note": "default on"
+        },
+        {
+            "scope": "option:fp02-reviews:reviews_per_page",
+            "before": null,
+            "after": 10,
+            "note": "default"
+        },
+        {
+            "scope": "fp02-reviews:reviews_items_0_review_service",
+            "before": "",
+            "after": 1019,
+            "note": "Зависимость от постоянных покупок"
+        },
+        {
+            "scope": "posts:demo:1745",
+            "before": "",
+            "after": "Демо-статья для проверки пагинации — 01",
+            "note": "demo-pagination-article-01"
+        },
+        {
+            "scope": "posts:demo:1746",
+            "before": "",
+            "after": "Демо-статья для проверки пагинации — 02",
+            "note": "demo-pagination-article-02"
+        },
+        {
+            "scope": "posts:demo:1747",
+            "before": "",
+            "after": "Демо-статья для проверки пагинации — 03",
+            "note": "demo-pagination-article-03"
+        },
+        {
+            "scope": "posts:demo:1748",
+            "before": "",
+            "after": "Демо-статья для проверки пагинации — 04",
+            "note": "demo-pagination-article-04"
+        },
+        {
+            "scope": "posts:demo:1749",
+            "before": "",
+            "after": "Демо-статья для проверки пагинации — 05",
+            "note": "demo-pagination-article-05"
+        },
+        {
+            "scope": "posts:demo:1750",
+            "before": "",
+            "after": "Демо-статья для проверки пагинации — 06",
+            "note": "demo-pagination-article-06"
+        },
+        {
+            "scope": "posts:demo:1751",
+            "before": "",
+            "after": "Демо-статья для проверки пагинации — 07",
+            "note": "demo-pagination-article-07"
+        },
+        {
+            "scope": "posts:demo:1752",
+            "before": "",
+            "after": "Демо-статья для проверки пагинации — 08",
+            "note": "demo-pagination-article-08"
+        },
+        {
+            "scope": "posts:demo:1753",
+            "before": "",
+            "after": "Демо-статья для проверки пагинации — 09",
+            "note": "demo-pagination-article-09"
+        },
+        {
+            "scope": "posts:demo:1754",
+            "before": "",
+            "after": "Демо-статья для проверки пагинации — 10",
+            "note": "demo-pagination-article-10"
+        }
+    ],
+    "skipped": [
+        "contacts_phones rows=2 (preserved)"
+    ],
+    "demo_posts": [
+        {
+            "id": 1745,
+            "slug": "demo-pagination-article-01",
+            "title": "Демо-статья для проверки пагинации — 01",
+            "action": "created"
+        },
+        {
+            "id": 1746,
+            "slug": "demo-pagination-article-02",
+            "title": "Демо-статья для проверки пагинации — 02",
+            "action": "created"
+        },
+        {
+            "id": 1747,
+            "slug": "demo-pagination-article-03",
+            "title": "Демо-статья для проверки пагинации — 03",
+            "action": "created"
+        },
+        {
+            "id": 1748,
+            "slug": "demo-pagination-article-04",
+            "title": "Демо-статья для проверки пагинации — 04",
+            "action": "created"
+        },
+        {
+            "id": 1749,
+            "slug": "demo-pagination-article-05",
+            "title": "Демо-статья для проверки пагинации — 05",
+            "action": "created"
+        },
+        {
+            "id": 1750,
+            "slug": "demo-pagination-article-06",
+            "title": "Демо-статья для проверки пагинации — 06",
+            "action": "created"
+        },
+        {
+            "id": 1751,
+            "slug": "demo-pagination-article-07",
+            "title": "Демо-статья для проверки пагинации — 07",
+            "action": "created"
+        },
+        {
+            "id": 1752,
+            "slug": "demo-pagination-article-08",
+            "title": "Демо-статья для проверки пагинации — 08",
+            "action": "created"
+        },
+        {
+            "id": 1753,
+            "slug": "demo-pagination-article-09",
+            "title": "Демо-статья для проверки пагинации — 09",
+            "action": "created"
+        },
+        {
+            "id": 1754,
+            "slug": "demo-pagination-article-10",
+            "title": "Демо-статья для проверки пагинации — 10",
+            "action": "created"
+        }
+    ],
+    "unrelated": 0
+}

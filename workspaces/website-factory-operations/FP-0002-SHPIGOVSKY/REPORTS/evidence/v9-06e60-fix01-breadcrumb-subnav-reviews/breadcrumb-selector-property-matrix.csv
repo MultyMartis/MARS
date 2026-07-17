@@ -1,0 +1,9 @@
+selector,file,breakpoint,stable_value,current_before,action
+.internal-page-nav .breadcrumbs__link:hover,:focus-visible,v9-style.css,default,color:var(--color-accent),color:var(--color-accent-hover),RESTORE_STABLE
+.contacts-page__breadcrumbs .breadcrumbs__link:hover,:focus-visible,v9-style.css,default,color:var(--color-accent),color:var(--color-accent-hover),RESTORE_STABLE
+.reviews-page__breadcrumbs .breadcrumbs__link:hover,:focus-visible,v9-style.css,default,color:var(--color-accent),color:var(--color-accent-hover),RESTORE_STABLE
+.blog-page__breadcrumbs .breadcrumbs__link:hover,:focus-visible,v9-style.css,default,color:var(--color-accent),color:var(--color-accent-hover),RESTORE_STABLE
+.blog-article-hero__breadcrumbs .breadcrumbs__link:hover,:focus-visible,v9-style.css,default,color:var(--color-accent),color:var(--color-accent-hover),RESTORE_STABLE
+.internal-page-nav .breadcrumbs__link|.breadcrumbs__current,v9-style.css,default,14px/18px,14px/18px,KEEP_IDENTICAL
+.page-blog .blog-page__breadcrumbs ... @max-width:1024,v9-style.css,<=1024,8px/12px,8px/12px,KEEP_IDENTICAL
+.internal-page-nav .services-page-subnav__link,v9-style.css,default,14px/20px + accent hover,identical,KEEP_IDENTICAL_NO_DIFF

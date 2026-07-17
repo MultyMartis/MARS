@@ -1,0 +1,21 @@
+# Pre-Production Checklist — FP-0002 V9 Stable v1
+
+- [ ] Real domain / environment provisioned
+- [ ] HTTPS certificates
+- [ ] Database migration from `mars_wp_fp0002`
+- [ ] URL replacement (local → production)
+- [ ] Mail / SMTP credentials configured
+- [ ] Lead recipient verified
+- [ ] Forms end-to-end on production
+- [ ] Analytics
+- [ ] Search indexing / webmaster tools
+- [ ] robots.txt reviewed
+- [ ] Sitemap
+- [ ] Canonical verification
+- [ ] Demo Blog posts reviewed/removed
+- [ ] Demo Reviews replaced/removed
+- [ ] Legal data verified
+- [ ] Production backups
+- [ ] Rollback plan tested
+- [ ] Post-deploy smoke test
+- [ ] Local `noindex` policy replaced with production indexability policy (except Search/404 rules)

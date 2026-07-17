@@ -66,7 +66,7 @@ if ( '' === $cta_button ) {
 		</p>
 
 		<p class="services-program-v2__intro">
-			<?php echo esc_html( $intro ); ?>
+			<span><?php echo esc_html( $intro ); ?></span>
 		</p>
 
 		<div class="services-program-v2__grid">

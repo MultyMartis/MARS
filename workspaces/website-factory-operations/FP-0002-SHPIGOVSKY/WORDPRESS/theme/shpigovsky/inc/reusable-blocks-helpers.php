@@ -33,6 +33,13 @@ function shpigovsky_get_cta_bands_block_context() {
 }
 
 /**
+ * ACF options context for founder quote block admin.
+ */
+function shpigovsky_get_founder_quote_block_context() {
+	return 'fp02-block-founder-quote';
+}
+
+/**
  * Read a scalar block option field.
  *
  * @param string $field_name Field name.
@@ -414,6 +421,50 @@ function shpigovsky_get_cta_band_default_button_label( $static_fallback = '' ) {
 }
 
 /**
+ * Founder quote reusable block payload.
+ *
+ * @return array<string, mixed>
+ */
+function shpigovsky_get_founder_quote_block_context_data() {
+	$context = shpigovsky_get_founder_quote_block_context();
+	$rows    = function_exists( 'get_field' ) ? get_field( 'founder_quote_paragraphs', $context ) : array();
+	$texts   = array();
+
+	if ( is_array( $rows ) ) {
+		foreach ( $rows as $row ) {
+			$text = is_array( $row ) && isset( $row['text'] ) ? trim( (string) $row['text'] ) : '';
+			if ( '' !== $text ) {
+				$texts[] = $text;
+			}
+		}
+	}
+
+	if ( empty( $texts ) ) {
+		$texts = array(
+			'Мы создавали «Шпиговский Дом» как место, где человек может получить профессиональную помощь, не&nbsp;теряя связь с&nbsp;собственной жизнью.',
+			'Многие боятся обратиться за&nbsp;лечением, потому что опасаются потерять семью, работу и&nbsp;привычный уклад жизни.',
+			'Мы считаем, что современная реабилитация должна помогать человеку восстанавливать себя, сохраняя то, что для него действительно важно.',
+			'«Наша цель&nbsp;— создать безопасное пространство для изменений. Наша задача&nbsp;— не&nbsp;изолировать человека от&nbsp;жизни, а&nbsp;помочь ему вернуть контроль над ней.»',
+		);
+	}
+
+	$photo = function_exists( 'get_field' ) ? get_field( 'founder_quote_photo', $context ) : null;
+	$url   = shpigovsky_acf_image_url( $photo );
+	$alt   = shpigovsky_acf_image_alt( $photo );
+
+	return array(
+		'paragraphs' => $texts,
+		'name'       => shpigovsky_get_block_option_scalar( 'founder_quote_name', $context ) ?: 'Сергей Юрьевич Шпиговский',
+		'role'       => shpigovsky_get_block_option_scalar( 'founder_quote_role', $context ) ?: 'Основатель центра. Аддиктолог, интервенционист',
+		'photo_url'  => '' !== $url ? $url : shpigovsky_asset_uri( 'img/content/founder-sergey-shpigovsky.png' ),
+		'photo_alt'  => '' !== $alt ? $alt : 'Сергей Юрьевич Шпиговский',
+		'photo_width' => is_array( $photo ) && ! empty( $photo['width'] ) ? (int) $photo['width'] : 1281,
+		'photo_height' => is_array( $photo ) && ! empty( $photo['height'] ) ? (int) $photo['height'] : 1278,
+		'cta_label'  => shpigovsky_get_block_option_scalar( 'founder_quote_cta_label', $context ) ?: 'Записаться на консультацию',
+	);
+}
+
+/**
  * ACF options context for header block admin.
  */
 function shpigovsky_get_header_block_context() {
@@ -771,11 +822,11 @@ function shpigovsky_normalize_comfort_gallery_row( $row, $fallback_row ) {
 }
 
 /**
- * Resolve comfort gallery items for rendering.
+ * Resolve all comfort gallery rows (including decor) before separation.
  *
  * @return array<int, array<string, mixed>>
  */
-function shpigovsky_get_comfort_gallery_items() {
+function shpigovsky_get_comfort_gallery_all_items() {
 	$fallback = shpigovsky_get_comfort_gallery_static_rows();
 	$rows     = array();
 
@@ -809,10 +860,50 @@ function shpigovsky_get_comfort_gallery_items() {
 	$mapped = array();
 
 	foreach ( $fallback as $fallback_row ) {
-		$mapped[] = shpigovsky_normalize_comfort_gallery_row( $fallback_row, $fallback_row );
+		$item = shpigovsky_normalize_comfort_gallery_row( $fallback_row, $fallback_row );
+
+		if ( null !== $item ) {
+			$mapped[] = $item;
+		}
 	}
 
 	return $mapped;
+}
+
+/**
+ * Decor-only comfort gallery asset (logo), if present.
+ *
+ * Separated from real gallery items so it does not participate in layout/JS indexing.
+ *
+ * @return array<string, mixed>|null
+ */
+function shpigovsky_get_comfort_gallery_decor_item() {
+	foreach ( shpigovsky_get_comfort_gallery_all_items() as $item ) {
+		if ( ! empty( $item['is_decor'] ) ) {
+			return $item;
+		}
+	}
+
+	return null;
+}
+
+/**
+ * Resolve real comfort gallery items for rendering (decor excluded).
+ *
+ * @return array<int, array<string, mixed>>
+ */
+function shpigovsky_get_comfort_gallery_items() {
+	$items = array();
+
+	foreach ( shpigovsky_get_comfort_gallery_all_items() as $item ) {
+		if ( ! empty( $item['is_decor'] ) ) {
+			continue;
+		}
+
+		$items[] = $item;
+	}
+
+	return $items;
 }
 
 /**
