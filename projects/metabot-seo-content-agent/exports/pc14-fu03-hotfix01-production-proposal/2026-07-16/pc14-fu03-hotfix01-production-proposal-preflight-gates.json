@@ -1,0 +1,124 @@
+{
+  "status": "gates_for_future_production_apply",
+  "gates": [
+    {
+      "id": "G01",
+      "name": "production_active_true",
+      "pass": true,
+      "observed": true
+    },
+    {
+      "id": "G02",
+      "name": "production_node_count_101",
+      "pass": true,
+      "observed": 101
+    },
+    {
+      "id": "G03",
+      "name": "production_fu03_nodes_9",
+      "pass": true,
+      "observed": 9
+    },
+    {
+      "id": "G04",
+      "name": "run_strict_surface_repair_enabled",
+      "pass": true,
+      "observed": {
+        "disabled": false
+      }
+    },
+    {
+      "id": "G05",
+      "name": "hotfix01_not_yet_applied_on_production",
+      "pass": true,
+      "observed": {
+        "Restore Format Run Items": {
+          "present": true,
+          "length": 150,
+          "is_broken": true,
+          "is_hotfix01": false,
+          "includes_format_pipeline": true,
+          "includes_reject_fallback": false,
+          "includes_restore_source": false,
+          "includes_version_marker_literal": false
+        },
+        "Restore Format Run Items After Lock": {
+          "present": true,
+          "length": 150,
+          "is_broken": true,
+          "is_hotfix01": false,
+          "includes_format_pipeline": true,
+          "includes_reject_fallback": false,
+          "includes_restore_source": false,
+          "includes_version_marker_literal": false
+        }
+      }
+    },
+    {
+      "id": "G06",
+      "name": "pc07_close_lock_unchanged",
+      "pass": true,
+      "observed": {
+        "present": true,
+        "mapping": "={{ $('Route Command').first().json.task_id }}",
+        "ok": true
+      }
+    },
+    {
+      "id": "G07",
+      "name": "tz_hotfix01_intact",
+      "pass": true,
+      "observed": {
+        "present": true,
+        "structuredCloneCount": 0,
+        "clonePlainPresent": true,
+        "versionIntact": true,
+        "version": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01"
+      }
+    },
+    {
+      "id": "G08",
+      "name": "sandbox_hotfix01_source_verified",
+      "pass": true,
+      "observed": {
+        "active": false,
+        "restore": {
+          "Restore Format Run Items": {
+            "present": true,
+            "length": 1112,
+            "is_broken": false,
+            "is_hotfix01": true,
+            "includes_format_pipeline": true,
+            "includes_reject_fallback": true,
+            "includes_restore_source": true,
+            "includes_version_marker_literal": false
+          },
+          "Restore Format Run Items After Lock": {
+            "present": true,
+            "length": 1123,
+            "is_broken": false,
+            "is_hotfix01": true,
+            "includes_format_pipeline": true,
+            "includes_reject_fallback": true,
+            "includes_restore_source": true,
+            "includes_version_marker_literal": false
+          }
+        },
+        "harnessAllPass": true
+      }
+    },
+    {
+      "id": "G09",
+      "name": "no_unexpected_non_target_drift",
+      "pass": true,
+      "observed": []
+    },
+    {
+      "id": "G10",
+      "name": "operator_approval_required_before_put",
+      "pass": true,
+      "note": "Human gate — not automated"
+    }
+  ],
+  "allAutomatedGatesPass": true
+}

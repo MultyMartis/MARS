@@ -1,0 +1,40 @@
+{
+  "risks": [
+    {
+      "id": "R1",
+      "risk": "Production already drifted beyond two restore nodes",
+      "mitigation": "Preflight non-target drift gate; DRIFT_BLOCKED if unexpected",
+      "residual": "low_if_gates_hold"
+    },
+    {
+      "id": "R2",
+      "risk": "Copying sandbox disabled side-effect states into production",
+      "mitigation": "jsCode-only transform; explicitly preserve production enabled states",
+      "residual": "low"
+    },
+    {
+      "id": "R3",
+      "risk": "Reject path still fails due to fan-out ordering",
+      "mitigation": "HOTFIX01 dual-source restore; optional fan-out reorder deferred/open",
+      "residual": "medium_operator_observable"
+    },
+    {
+      "id": "R4",
+      "risk": "False complete preface UX remains confusing on reject",
+      "mitigation": "Smoke verifies materials/diagnostic and lock close; preface wording SAFE UNKNOWN",
+      "residual": "medium_ux"
+    },
+    {
+      "id": "R5",
+      "risk": "Apply without offline harness on production-transformed copy",
+      "mitigation": "Mandatory HF01 10/10 after transform before declaring apply verified",
+      "residual": "low"
+    },
+    {
+      "id": "R6",
+      "risk": "Retry /run before hotfix leaves another pending lock",
+      "mitigation": "Charter forbids /run until apply; lock cleanup separate",
+      "residual": "medium_ops"
+    }
+  ]
+}

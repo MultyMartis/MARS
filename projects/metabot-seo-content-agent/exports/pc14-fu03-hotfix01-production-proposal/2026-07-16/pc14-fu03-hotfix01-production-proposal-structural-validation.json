@@ -1,0 +1,26 @@
+{
+  "production": {
+    "nodeCount": 101,
+    "fu03Nodes": [
+      "Build Final Public Payload",
+      "Final Surface Strict Scan",
+      "IF Final Surface Clean",
+      "Build Strict Surface Repair Payload",
+      "Run Strict Surface Repair",
+      "Extract Strict Surface Repair",
+      "Final Surface Strict Re-Scan",
+      "IF Repaired Surface Clean",
+      "Format Strict Reject Message"
+    ],
+    "fu03Count": 9,
+    "targetRestorePresent": true,
+    "connectionsPresent": true
+  },
+  "sandbox": {
+    "nodeCount": 101,
+    "fu03Count": 9,
+    "targetRestoreHotfix01": true
+  },
+  "proposedNodeDelta": 0,
+  "proposedConnectionChanges": false
+}

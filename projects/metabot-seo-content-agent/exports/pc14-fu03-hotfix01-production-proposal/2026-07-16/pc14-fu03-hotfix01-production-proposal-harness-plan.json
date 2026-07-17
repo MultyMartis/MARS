@@ -1,0 +1,139 @@
+{
+  "status": "plan_only_not_executed",
+  "method": "OFFLINE_LOCAL_HARNESS_NO_LIVE_SIDE_EFFECTS",
+  "afterProductionTransform": true,
+  "requiredCases": [
+    "HF01-CLEAN-01",
+    "HF01-REPAIR-CLEAN-01",
+    "HF01-REJECT-01",
+    "HF01-REJECT-TASKID-01",
+    "HF01-RESTORE-A-01",
+    "HF01-RESTORE-B-01",
+    "HF01-PC07-01",
+    "HF01-TZ-01",
+    "HF01-SIDEFX-01",
+    "HF01-SECRET-01"
+  ],
+  "expectedScore": "10/10 PASS",
+  "forbidden": [
+    "Telegram",
+    "OpenRouter",
+    "Sheets write",
+    "/run",
+    "/health",
+    "/locks"
+  ],
+  "referenceHarness": {
+    "method": "OFFLINE_LOCAL_HARNESS_NO_LIVE_SIDE_EFFECTS",
+    "cases": {
+      "HF01-CLEAN-01": {
+        "id": "HF01-CLEAN-01",
+        "pass": true,
+        "restore_source": "format_run_pipeline",
+        "send_simulated": true,
+        "close_lock_simulated": true,
+        "memory_simulated": true,
+        "memory_status": "done"
+      },
+      "HF01-REPAIR-CLEAN-01": {
+        "id": "HF01-REPAIR-CLEAN-01",
+        "pass": true,
+        "restore_source": "format_run_pipeline",
+        "send_simulated": true,
+        "close_lock_simulated": true,
+        "memory_simulated": true,
+        "memory_status": "done"
+      },
+      "HF01-REJECT-01": {
+        "id": "HF01-REJECT-01",
+        "pass": true,
+        "restore_source": "format_strict_reject_message",
+        "diagnostic_send_simulated": true,
+        "close_lock_simulated": true,
+        "memory_simulated": true,
+        "memory_status": "blocked_dirty"
+      },
+      "HF01-REJECT-TASKID-01": {
+        "id": "HF01-REJECT-TASKID-01",
+        "pass": true,
+        "task_id": "seo202607152130389k7zou",
+        "close_lock_task_id": "seo202607152130389k7zou",
+        "close_lock_mapping": "={{ $('Route Command').first().json.task_id }}",
+        "not_pending": true
+      },
+      "HF01-RESTORE-A-01": {
+        "id": "HF01-RESTORE-A-01",
+        "pass": true,
+        "broken_baseline_throws": true,
+        "hotfix_ok_without_format_pipeline": true,
+        "restore_source": "format_strict_reject_message"
+      },
+      "HF01-RESTORE-B-01": {
+        "id": "HF01-RESTORE-B-01",
+        "pass": true,
+        "broken_baseline_throws": true,
+        "hotfix_ok_without_format_pipeline": true,
+        "restore_source": "format_strict_reject_message"
+      },
+      "HF01-PC07-01": {
+        "id": "HF01-PC07-01",
+        "pass": true,
+        "expression_present": true,
+        "mapping_unchanged": true,
+        "expected_fragment": "$('Route Command').first().json.task_id"
+      },
+      "HF01-TZ-01": {
+        "id": "HF01-TZ-01",
+        "pass": true,
+        "structuredClone_count": 0,
+        "clonePlain_present": true,
+        "version": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+        "version_intact": true,
+        "tz_unchanged": true
+      },
+      "HF01-SIDEFX-01": {
+        "id": "HF01-SIDEFX-01",
+        "pass": true,
+        "side_effect_disabled_diffs": [],
+        "sandbox_inactive": true,
+        "production_untouched_by_sidefx_check": true
+      },
+      "HF01-SECRET-01": {
+        "id": "HF01-SECRET-01",
+        "pass": true,
+        "verdict": "PASS_WITH_REVIEW_LABELS",
+        "findings_count": 0
+      }
+    },
+    "structural": {
+      "node_count_before": 101,
+      "node_count_after": 101,
+      "node_delta": 0,
+      "fu03_nodes_before": 9,
+      "fu03_nodes_after": 9,
+      "fu03_expected": 9,
+      "connections_unchanged": true,
+      "both_restores_hotfixed": true,
+      "both_restores_were_broken": true
+    },
+    "required_ids": [
+      "HF01-CLEAN-01",
+      "HF01-REPAIR-CLEAN-01",
+      "HF01-REJECT-01",
+      "HF01-REJECT-TASKID-01",
+      "HF01-RESTORE-A-01",
+      "HF01-RESTORE-B-01",
+      "HF01-PC07-01",
+      "HF01-TZ-01",
+      "HF01-SIDEFX-01"
+    ],
+    "required_pass_pending_secret": true,
+    "target_nodes": [
+      "Restore Format Run Items",
+      "Restore Format Run Items After Lock"
+    ],
+    "allPass": true,
+    "pass_count": 10,
+    "total_count": 10
+  }
+}

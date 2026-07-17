@@ -1,0 +1,362 @@
+[
+  {
+    "name": "Format Local Response",
+    "jsCodeLength": 2088,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Format Single Mode Message",
+    "jsCodeLength": 9725,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Run Extract Outline",
+    "jsCodeLength": 1462,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Run Extract Text",
+    "jsCodeLength": 1441,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Run Extract SEO QA",
+    "jsCodeLength": 4161,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Format Run Pipeline",
+    "jsCodeLength": 16169,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Prepare Memory Row Local",
+    "jsCodeLength": 514,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Prepare Memory Row Single",
+    "jsCodeLength": 791,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Prepare Memory Row Run",
+    "jsCodeLength": 2094,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Route Command",
+    "jsCodeLength": 4363,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Run Extract Factcheck",
+    "jsCodeLength": 1579,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Format Memory Get",
+    "jsCodeLength": 1540,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Prepare Memory Reuse",
+    "jsCodeLength": 2637,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Compute Content Score",
+    "jsCodeLength": 6276,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Auto Fix Text",
+    "jsCodeLength": 224,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Auto Polish Text",
+    "jsCodeLength": 3452,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Extract Auto Polish Text",
+    "jsCodeLength": 1103,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Ensure FAQ Text",
+    "jsCodeLength": 221,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Commercial Layer Text",
+    "jsCodeLength": 227,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Final Text Cleanup",
+    "jsCodeLength": 1971,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Store Worker Meta",
+    "jsCodeLength": 748,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Build Outline Payload",
+    "jsCodeLength": 3637,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Find Memory Reuse Row",
+    "jsCodeLength": 552,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Build Factcheck Payload",
+    "jsCodeLength": 2764,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Postcheck Strict Claims",
+    "jsCodeLength": 3364,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Build SEOQA Payload",
+    "jsCodeLength": 3628,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Extract SEO Strategy",
+    "jsCodeLength": 1224,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Build Text Payload",
+    "jsCodeLength": 4611,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Build SEO Strategy Payload",
+    "jsCodeLength": 1527,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Build Single Payload",
+    "jsCodeLength": 6555,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Parse Mode",
+    "jsCodeLength": 405,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Take First Item",
+    "jsCodeLength": 18,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Restore Format Run Items",
+    "jsCodeLength": 150,
+    "isTarget": true,
+    "isFu03": false
+  },
+  {
+    "name": "Restore Postcheck Data",
+    "jsCodeLength": 382,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Restore Route Data",
+    "jsCodeLength": 88,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Restore Outline Data",
+    "jsCodeLength": 144,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Restore SEO Strategy Data",
+    "jsCodeLength": 149,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Restore Content Score Data",
+    "jsCodeLength": 733,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Hard Final Cleanup",
+    "jsCodeLength": 250,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Restore Lock Context",
+    "jsCodeLength": 304,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Find Memory Get Row",
+    "jsCodeLength": 506,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Restore Format Run Items After Lock",
+    "jsCodeLength": 150,
+    "isTarget": true,
+    "isFu03": false
+  },
+  {
+    "name": "Build Text Repair Payload",
+    "jsCodeLength": 2819,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Extract Text Repair",
+    "jsCodeLength": 1049,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Normalize Run Output",
+    "jsCodeLength": 4918,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Take First Single Item",
+    "jsCodeLength": 18,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Restore Format Single Items After Lock",
+    "jsCodeLength": 137,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Restore Route Data Single",
+    "jsCodeLength": 88,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Build Single Text Repair Payload",
+    "jsCodeLength": 2502,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Extract Single Text Repair",
+    "jsCodeLength": 2798,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Strict Cleanup",
+    "jsCodeLength": 8358,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Table Sanity Check",
+    "jsCodeLength": 2610,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Strict Risk Scanner",
+    "jsCodeLength": 4003,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "TZ Strict Cleanup",
+    "jsCodeLength": 12044,
+    "isTarget": false,
+    "isFu03": false
+  },
+  {
+    "name": "Build Final Public Payload",
+    "jsCodeLength": 7762,
+    "isTarget": false,
+    "isFu03": true
+  },
+  {
+    "name": "Final Surface Strict Scan",
+    "jsCodeLength": 6197,
+    "isTarget": false,
+    "isFu03": true
+  },
+  {
+    "name": "Build Strict Surface Repair Payload",
+    "jsCodeLength": 8541,
+    "isTarget": false,
+    "isFu03": true
+  },
+  {
+    "name": "Extract Strict Surface Repair",
+    "jsCodeLength": 10075,
+    "isTarget": false,
+    "isFu03": true
+  },
+  {
+    "name": "Final Surface Strict Re-Scan",
+    "jsCodeLength": 6295,
+    "isTarget": false,
+    "isFu03": true
+  },
+  {
+    "name": "Format Strict Reject Message",
+    "jsCodeLength": 1951,
+    "isTarget": false,
+    "isFu03": true
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "status": "proposed_only_not_applied",
+  "proposal": "PC14_FU03_HOTFIX01_PRODUCTION_PROPOSAL",
+  "hotfixId": "PC14_FU03_HOTFIX01_RESTORE_REJECT_SAFE",
+  "hotfixVersion": "v1-pc14-fu03-hotfix01-restore-reject-safe",
+  "productionWorker": {
+    "id": "p4mqb4VuPcemIDlC",
+    "name": "SEO Content Agent Beta.v14 - Worker"
+  },
+  "sandboxSource": {
+    "id": "tVGWi7Ud3zz2eGKo",
+    "name": "SEO Content Agent Beta.v14 - Worker.sandbox-pc14-fu03"
+  },
+  "basedOn": {
+    "sandboxImplementation": "PC14_FU03_HOTFIX01_SANDBOX_APPLIED_HARNESS_VERIFIED",
+    "sandboxImplCommit": "3a41bbc8",
+    "designCommit": "7443c4e9",
+    "diagnosticsCommit": "cab4597a",
+    "productionApplyCommit": "44c05c3b"
+  },
+  "patchType": "jsCode_replace_only",
+  "nodeDelta": 0,
+  "connectionChanges": false,
+  "targetNodes": [
+    "Restore Format Run Items",
+    "Restore Format Run Items After Lock"
+  ],
+  "doNotCopySandboxDisabledStates": true,
+  "preserve": {
+    "active": true,
+    "id": "p4mqb4VuPcemIDlC",
+    "name": "SEO Content Agent Beta.v14 - Worker",
+    "credentials": true,
+    "sideEffectEnabledStates": true,
+    "runStrictSurfaceRepairEnabled": true,
+    "pc07CloseLock": "={{ $('Route Command').first().json.task_id }}",
+    "tzHotfix01": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+    "intakeAdminUntouched": true
+  },
+  "doNotModify": [
+    "Format Run Pipeline",
+    "Format Strict Reject Message",
+    "Build Final Public Payload",
+    "Final Surface Strict Scan",
+    "Run Strict Surface Repair",
+    "Extract Strict Surface Repair",
+    "Final Surface Strict Re-Scan",
+    "marker lists",
+    "TZ Strict Cleanup",
+    "PC-07 nodes",
+    "Intake",
+    "Admin",
+    "credentials",
+    "side-effect enabled states"
+  ],
+  "decision": "PC14_FU03_HOTFIX01_READY_FOR_PRODUCTION_APPROVAL",
+  "recommendedNext": "PC14_FU03_HOTFIX01_PRODUCTION_PROPOSAL_PERSIST",
+  "blockers": []
+}
