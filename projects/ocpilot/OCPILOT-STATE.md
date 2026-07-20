@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-20
-**Evidence cutoff:** 2026-07-20 (SITE-002 Run **4.282** / `SITE-002-PROD-REGRESSION-HOTFIX-01` — parent-path PDP restored + `has_children` notices removed; blog SEO preserved; baseline still **1714**; next baseline refresh 04)
+**Evidence cutoff:** 2026-07-20 (SITE-002 Run **4.283** / `SITE-002-PROD-MEGAMENU-AND-CACHE-PLUGIN-DIAGNOSTIC-01` — mega menu restored via header `cat-list-header` rebuild-on-miss; cache plugin `oc3x_storage_cleaner`/`Cache_Cleaner` diagnosed for separate fix; baseline still **1714**)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Production Regression Hotfix 01 (Run 4.282)** — **COMPLETE — PRODUCTS RESTORED AND NOTICES REMOVED** · parent-path PDP + header `has_children` · blog SEO preserved · baseline still **1714** · next **`SITE-002-MONITOR-BASELINE-REFRESH-04`** · [hotfix report](sites/site-002/reports/SITE-002-PROD-REGRESSION-HOTFIX-01.md) · prior [onboarding 05 / 4.281](sites/site-002/reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-05.md) |
+| Current SITE-002 focus | **Mega Menu + Cache Plugin Diagnostic (Run 4.283)** — **COMPLETE — CATEGORIES RESTORED, CACHE PLUGIN NEEDS SEPARATE FIX** · header rebuild-on-miss for `cat-list-header` · `oc3x_storage_cleaner` / OCMOD `Cache_Cleaner` · next **`SITE-002-PROD-ADMIN-CACHE-CLEANER-BUTTON-RESTORE-01`** + **`SITE-002-PROD-CATALOG-TILE-BLOCKS-AUTOMATION-01`** + baseline refresh 04 · [report](sites/site-002/reports/SITE-002-PROD-MEGAMENU-AND-CACHE-PLUGIN-DIAGNOSTIC-01.md) · prior [hotfix 4.282](sites/site-002/reports/SITE-002-PROD-REGRESSION-HOTFIX-01.md) |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 

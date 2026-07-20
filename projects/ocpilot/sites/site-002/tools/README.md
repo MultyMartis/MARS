@@ -110,7 +110,8 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 | `site-002-prod-blog-seo-url-routing-fix-01.py` | Blog SEO full-path decode/rewrite patch deploy for `SITE-002-PROD-BLOG-SEO-URL-ROUTING-FIX-01` (Run **4.278**) |
 | `seo_url-site-002-prod-blog-seo-url-routing-fix-01.php` | Patched `catalog/controller/startup/seo_url.php` — multi-segment blog keyword decode + rewrite (Run **4.278**); **updated** Run **4.282** with product path membership rebuild |
 | `seo_url-site-002-prod-regression-hotfix-01.php` | Hotfix mirror of live `seo_url.php` after Run **4.282** (blog full-path + product path rebuild) |
-| `header-site-002-prod-regression-hotfix-01.php` | Hotfix mirror of live `header.php` — safe `!empty(has_children)` (Run **4.282**) |
+| `header-site-002-prod-regression-hotfix-01.php` | Live `header.php` mirror — `!empty(has_children)` + `cat-list-header` rebuild-on-miss (Run **4.282** + **4.283**) |
+| `header-site-002-prod-megamenu-cache-rebuild-01.php` | Same post-4.283 `header.php` mirror (explicit mega menu cold-cache rebuild op) |
 | *(documentation only)* | Run **4.278** blog SEO URL routing fix — post **13** SEO + `/blog/news` → 200 · [report](../reports/SITE-002-PROD-BLOG-SEO-URL-ROUTING-FIX-01.md) |
 | *(documentation only)* | Run **4.282** production regression hotfix — parent-path PDP restored + `has_children` notices removed · [report](../reports/SITE-002-PROD-REGRESSION-HOTFIX-01.md) |
 | *(documentation only)* | Run **4.279** blog wave final smoke — ALL CHECKS GREEN; Storage `audits/SITE-002-PROD-BLOG-WAVE-FINAL-SMOKE-01/` · [report](../reports/SITE-002-PROD-BLOG-WAVE-FINAL-SMOKE-01.md) |
@@ -166,6 +167,7 @@ Small site-specific helpers for Production capture and inspection. **Read-only b
 - **Run 4.274:** catalog new branch onboarding 04 — id **367**/`stellazhi-premium-3-vysota-1600`; exact meta UPDATE + allowlist + runtime sync; manual monitor `2026-07-16_14-48-00` needs **0**; classification **HYGIENE_REVIEW_REQUIRED** (baseline-delta only); baseline still **1615** · [report](../reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-04.md)
 - **Run 4.281:** catalog new branch onboarding 05 — ids **368/373/369/371/372/370** `tehnologicheskoe-oborudovanie/*`; exact meta UPDATE + flat allowlist + runtime sync; manual `2026-07-20_18-05-09` target needs **0**; overall needs **230** (URL churn); baseline still **1714**; next baseline refresh 04 · [report](../reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-05.md)
 - **Run 4.282:** production regression hotfix — parent-path PDP «Товар не найден» (`checkProductCategory` + incomplete PLP path) + header `has_children` notices; FTP `seo_url.php`+`header.php`; blog SEO preserved; admin cache button SAFE UNKNOWN · [report](../reports/SITE-002-PROD-REGRESSION-HOTFIX-01.md)
+- **Run 4.283:** mega menu + cache plugin diagnostic — cold `cat-list-header` empty mega menu after cache clear; FTP `header.php` rebuild-on-miss; `oc3x_storage_cleaner`/`Cache_Cleaner` OCMOD not applied; tile automation discovery for cat **362** · [report](../reports/SITE-002-PROD-MEGAMENU-AND-CACHE-PLUGIN-DIAGNOSTIC-01.md)
 - **Run 4.273:** blog postpublish verify + related slider meta fix — [report](../reports/SITE-002-PROD-BLOG-POSTPUBLISH-1C-HEALTHCHECK-RELARTICLES-META-01.md)
 - Runner `RepoRoot` derived from `$PSScriptRoot` (not hardcoded `X:\AI MARS`).
 - Successful Windows Task `LastTaskResult` is **0**; **2** means runner/monitor execution failure — check `scheduled-monitors/post-1c/<timestamp>/run.stderr.log`.
