@@ -1,0 +1,12 @@
+{
+  "status": "available_not_executed",
+  "method": "Re-PUT production Worker from raw before-hotfix02 backup",
+  "rollbackPath": "local/pc14-fu03-hotfix02-send-branch-production-apply-2026-07-20/rollback/worker-before-hotfix02.raw.json",
+  "rollbackPerformed": false,
+  "notes": [
+    "Do not deactivate production during rollback unless operator charter says so",
+    "Do not copy sandbox disabled side-effect states",
+    "Do not roll back HOTFIX01 restores / FU03 / PC-07 / TZ",
+    "Prefer full raw backup restore over partial revert if any doubt"
+  ]
+}

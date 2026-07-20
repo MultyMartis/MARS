@@ -1,0 +1,98 @@
+{
+  "scope": {
+    "added": [],
+    "removed": [],
+    "modifiedCode": [
+      "Format Strict Reject Message",
+      "Parse Mode"
+    ],
+    "unexpected": [],
+    "otherMeta": [],
+    "connectionsChanged": true,
+    "connectionChangedKeys": [
+      "Format Strict Reject Message"
+    ],
+    "preserveOk": {
+      "Restore Format Run Items": true,
+      "Restore Format Run Items After Lock": true,
+      "Build Final Public Payload": true,
+      "Final Surface Strict Scan": true,
+      "Extract Strict Surface Repair": true,
+      "Final Surface Strict Re-Scan": true,
+      "TZ Strict Cleanup": true,
+      "Route Command": true,
+      "Status Complete": true,
+      "Status Final": true,
+      "Send Telegram Run.expr": true
+    },
+    "scopeOk": true
+  },
+  "changed": [
+    {
+      "name": "Format Strict Reject Message",
+      "jsCodeLengthBefore": 1951,
+      "jsCodeLengthAfter": 2821,
+      "isHotfix02After": true,
+      "matchesHelper": true,
+      "sha256_before": "ea54e2149685b77ca475e6276d7c00769f8ca1ae90fec6bd7f26bd705065e25c",
+      "sha256_after": "35aa1f131f146cb631c67219b44ddc7606f21863c778243198ac58664303c422",
+      "sha256_helper": "35aa1f131f146cb631c67219b44ddc7606f21863c778243198ac58664303c422"
+    },
+    {
+      "name": "Parse Mode",
+      "jsCodeLengthBefore": 405,
+      "jsCodeLengthAfter": 768,
+      "isHotfix02After": true,
+      "matchesHelper": true,
+      "sha256_before": "ea137131703ca857b5c25a8f436762d84a43682d5ca4629f46739b6e750ad003",
+      "sha256_after": "1752a5d3a51febfe23e356e9309af3c701c27917016cc57906662b8db7c09b96",
+      "sha256_helper": "1752a5d3a51febfe23e356e9309af3c701c27917016cc57906662b8db7c09b96"
+    }
+  ],
+  "connectionReorder": {
+    "node": "Format Strict Reject Message",
+    "before": [
+      "Take First Item",
+      "Prepare Memory Row Run"
+    ],
+    "after": [
+      "Prepare Memory Row Run",
+      "Take First Item"
+    ],
+    "memory_first": true
+  },
+  "preput": {
+    "active_true": true,
+    "node_count_101": true,
+    "fu03_9": true,
+    "node_delta_0": true,
+    "only_two_code_targets": true,
+    "only_one_connection_key": true,
+    "no_added_deleted": true,
+    "no_credential_changes": true,
+    "no_side_effect_disabled_changes": true,
+    "repair_remains_enabled": true,
+    "hotfix01_restores_unchanged": true,
+    "pc07_unchanged": true,
+    "tz_unchanged": true,
+    "send_telegram_unchanged": true,
+    "hotfix02_markers": true,
+    "memory_first": true,
+    "scopeOk": true,
+    "changed_all_hotfix02": true,
+    "helper_mirror": true,
+    "connectionReorder": {
+      "node": "Format Strict Reject Message",
+      "before": [
+        "Take First Item",
+        "Prepare Memory Row Run"
+      ],
+      "after": [
+        "Prepare Memory Row Run",
+        "Take First Item"
+      ],
+      "memory_first": true
+    },
+    "pass": true
+  }
+}

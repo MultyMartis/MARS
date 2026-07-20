@@ -1,0 +1,16 @@
+{
+  "unchanged": false,
+  "changed_connection_keys": [
+    "Format Strict Reject Message"
+  ],
+  "before_fanout": [
+    "Take First Item",
+    "Prepare Memory Row Run"
+  ],
+  "after_fanout": [
+    "Prepare Memory Row Run",
+    "Take First Item"
+  ],
+  "memory_first_after": true,
+  "note": "HOTFIX02 requires Format Strict Reject Message fan-out reorder only"
+}

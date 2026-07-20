@@ -1,0 +1,87 @@
+{
+  "pass_count": 10,
+  "total_count": 10,
+  "fail_ids": [],
+  "cases": {
+    "HF02-H01-REJECT-ASTERISK-FAMILY": {
+      "pass": true,
+      "asterisk_count": 0,
+      "telegram_text_safe_preview": "Task ID: t-h01\n\nSTRICT QA REJECT — output blocked before final send\nStatus: blocked-dirty\nReason: Residual strict-surface markers remain after repair; final materials blocked.\nResidual count: 1\nRepair"
+    },
+    "HF02-H02-REJECT-ASTERISK-SNIPPET": {
+      "pass": true,
+      "asterisk_count": 0,
+      "has_entity_risk": false
+    },
+    "HF02-H03-REJECT-UNDERSCORE": {
+      "pass": true,
+      "underscore_count": 0,
+      "preview": "Task ID: t-h03\n\nSTRICT QA REJECT — output blocked before final send\nStatus: blocked-dirty\nReason: Residual strict-surface markers remain after repair; final materials blocked.\nResidual count: 1\nRepair attempts: 1\nMarkers found:\n1. seo-text "
+    },
+    "HF02-H04-REJECT-BRACKETS-BACKTICKS": {
+      "pass": true,
+      "bracket_open": 0,
+      "bracket_close": 0,
+      "backtick_count": 0
+    },
+    "HF02-H05-LONG-REJECT-CHUNKING": {
+      "pass": true,
+      "chunk_count": 2,
+      "max_chunk_len": 3599,
+      "asterisk_count_total": 0,
+      "task_id": "seo202607201222012uqhz9"
+    },
+    "HF02-H06-MEMORY-FIRST-FANOUT": {
+      "pass": true,
+      "order": [
+        "Prepare Memory Row Run",
+        "Take First Item"
+      ],
+      "memory_status_expected": "blocked_dirty",
+      "close_lock_still_on_send_chain": true,
+      "note": "Graph order makes Prepare Memory reachable before Take First / final send branch"
+    },
+    "HF02-H07-CLEAN-PATH-REGRESSION": {
+      "pass": true,
+      "telegram_text_safe": "Часть 1/2\nSEO article with emphasis and field-path and 'code' and (link)",
+      "asterisk_count": 0
+    },
+    "HF02-H08-HOTFIX01-RESTORE-INTACT": {
+      "pass": true,
+      "restore_a": true,
+      "restore_b": true,
+      "reject_source_present": true,
+      "clean_source_present": true
+    },
+    "HF02-H09-EXEC3364-FIXTURE": {
+      "pass": true,
+      "asterisk_count_old_path": 0,
+      "asterisk_count_new_path": 0,
+      "entity_risk_new": false,
+      "task_id": "seo202607201222012uqhz9",
+      "execution_fixture": "3364"
+    },
+    "HF02-H10-SECRET-SCAN": {
+      "pass": true,
+      "verdict": "PASS_WITH_REVIEW_LABELS",
+      "finding_count": 0
+    }
+  },
+  "structural": {
+    "node_count_after": 101,
+    "node_delta": 0,
+    "fu03_nodes_after": 9,
+    "fu03_expected": 9,
+    "hotfix02_reject": true,
+    "hotfix02_parse_mode": true,
+    "memory_first_fanout": true,
+    "reject_version_marker": true,
+    "parse_version_marker": true,
+    "patch_js_mirrors_exported_constants": true
+  },
+  "target_code_nodes": [
+    "Format Strict Reject Message",
+    "Parse Mode"
+  ],
+  "max_chunk_convention": 3600
+}

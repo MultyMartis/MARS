@@ -1,0 +1,97 @@
+{
+  "before": {
+    "id": "p4mqb4VuPcemIDlC",
+    "name": "SEO Content Agent Beta.v14 - Worker",
+    "active": true,
+    "nodeCount": 101,
+    "fu03Count": 9,
+    "updatedAt": "2026-07-20T11:03:34.279Z",
+    "repairEnabled": true,
+    "rejectHotfix02": false,
+    "parseHotfix02": false,
+    "rejectFanout": [
+      "Take First Item",
+      "Prepare Memory Row Run"
+    ],
+    "memoryFirst": false,
+    "hotfix02Already": false,
+    "sendTelegramExpr": "={{ $json.telegram_text_safe }}"
+  },
+  "after": {
+    "id": "p4mqb4VuPcemIDlC",
+    "name": "SEO Content Agent Beta.v14 - Worker",
+    "active": true,
+    "nodeCount": 101,
+    "fu03Count": 9,
+    "updatedAt": "2026-07-20T18:12:05.376Z",
+    "repairEnabled": true,
+    "rejectHotfix02": true,
+    "parseHotfix02": true,
+    "memoryFirst": true,
+    "hotfix02Ok": true,
+    "restoreA": true,
+    "restoreB": true,
+    "sendTelegramExpr": "={{ $json.telegram_text_safe }}"
+  },
+  "checks": {
+    "id_ok": true,
+    "active_true": true,
+    "node_count_101": true,
+    "fu03_9": true,
+    "updatedAt_changed": true,
+    "hotfix02_present": true,
+    "memory_first": true,
+    "only_allowlisted_delta": true,
+    "node_delta_0": true,
+    "repair_enabled": true,
+    "send_telegram_unchanged": true,
+    "hotfix01_restores_intact": true,
+    "pc07_unchanged": true,
+    "tz_unchanged": true,
+    "side_effects_unchanged": true,
+    "credentials_preserved": true,
+    "intake_admin_untouched": true,
+    "sandbox_still_inactive": true,
+    "pass": true
+  },
+  "sandboxRecheck": {
+    "id": "TMhJbxtk6uUPDpEb",
+    "active": false,
+    "unchanged_inactive": true,
+    "name": "SEO Content Agent Beta.v14 - Worker.sandbox-pc14-fu03-hotfix02-send"
+  },
+  "targets": {
+    "before": {
+      "Format Strict Reject Message": {
+        "present": true,
+        "length": 1951,
+        "is_hotfix02": false,
+        "has_version_marker": false,
+        "sha256": "ea54e2149685b77ca475e6276d7c00769f8ca1ae90fec6bd7f26bd705065e25c"
+      },
+      "Parse Mode": {
+        "present": true,
+        "length": 405,
+        "is_hotfix02": false,
+        "has_version_marker": false,
+        "sha256": "ea137131703ca857b5c25a8f436762d84a43682d5ca4629f46739b6e750ad003"
+      }
+    },
+    "after": {
+      "Format Strict Reject Message": {
+        "present": true,
+        "length": 2821,
+        "is_hotfix02": true,
+        "has_version_marker": true,
+        "sha256": "35aa1f131f146cb631c67219b44ddc7606f21863c778243198ac58664303c422"
+      },
+      "Parse Mode": {
+        "present": true,
+        "length": 768,
+        "is_hotfix02": true,
+        "has_version_marker": true,
+        "sha256": "1752a5d3a51febfe23e356e9309af3c701c27917016cc57906662b8db7c09b96"
+      }
+    }
+  }
+}

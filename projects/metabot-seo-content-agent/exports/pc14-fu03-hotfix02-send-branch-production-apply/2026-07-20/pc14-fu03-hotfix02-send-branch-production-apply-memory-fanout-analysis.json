@@ -1,0 +1,15 @@
+{
+  "before": [
+    "Take First Item",
+    "Prepare Memory Row Run"
+  ],
+  "after": [
+    "Prepare Memory Row Run",
+    "Take First Item"
+  ],
+  "memory_first": true,
+  "expected": [
+    "Prepare Memory Row Run",
+    "Take First Item"
+  ]
+}

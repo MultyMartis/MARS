@@ -1,0 +1,7 @@
+{
+  "sendTelegramExpr": "={{ $json.telegram_text_safe }}",
+  "expected": "={{ $json.telegram_text_safe }}",
+  "unchanged": true,
+  "parseModeVersion": "v1-pc14-fu03-hotfix02-parse-mode-plain",
+  "rejectVersion": "v1-pc14-fu03-hotfix02-format-strict-reject-plain"
+}

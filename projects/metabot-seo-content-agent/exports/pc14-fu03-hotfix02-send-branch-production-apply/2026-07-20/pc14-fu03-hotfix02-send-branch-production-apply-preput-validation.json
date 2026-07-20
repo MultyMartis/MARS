@@ -1,0 +1,34 @@
+{
+  "active_true": true,
+  "node_count_101": true,
+  "fu03_9": true,
+  "node_delta_0": true,
+  "only_two_code_targets": true,
+  "only_one_connection_key": true,
+  "no_added_deleted": true,
+  "no_credential_changes": true,
+  "no_side_effect_disabled_changes": true,
+  "repair_remains_enabled": true,
+  "hotfix01_restores_unchanged": true,
+  "pc07_unchanged": true,
+  "tz_unchanged": true,
+  "send_telegram_unchanged": true,
+  "hotfix02_markers": true,
+  "memory_first": true,
+  "scopeOk": true,
+  "changed_all_hotfix02": true,
+  "helper_mirror": true,
+  "connectionReorder": {
+    "node": "Format Strict Reject Message",
+    "before": [
+      "Take First Item",
+      "Prepare Memory Row Run"
+    ],
+    "after": [
+      "Prepare Memory Row Run",
+      "Take First Item"
+    ],
+    "memory_first": true
+  },
+  "pass": true
+}

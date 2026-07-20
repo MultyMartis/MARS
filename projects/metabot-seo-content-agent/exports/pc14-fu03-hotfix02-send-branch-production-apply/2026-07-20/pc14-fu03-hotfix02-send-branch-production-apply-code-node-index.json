@@ -1,0 +1,24 @@
+{
+  "targets": [
+    "Format Strict Reject Message",
+    "Parse Mode"
+  ],
+  "rejectVersion": "v1-pc14-fu03-hotfix02-format-strict-reject-plain",
+  "parseVersion": "v1-pc14-fu03-hotfix02-parse-mode-plain",
+  "after": {
+    "Format Strict Reject Message": {
+      "present": true,
+      "length": 2821,
+      "is_hotfix02": true,
+      "has_version_marker": true,
+      "sha256": "35aa1f131f146cb631c67219b44ddc7606f21863c778243198ac58664303c422"
+    },
+    "Parse Mode": {
+      "present": true,
+      "length": 768,
+      "is_hotfix02": true,
+      "has_version_marker": true,
+      "sha256": "1752a5d3a51febfe23e356e9309af3c701c27917016cc57906662b8db7c09b96"
+    }
+  }
+}

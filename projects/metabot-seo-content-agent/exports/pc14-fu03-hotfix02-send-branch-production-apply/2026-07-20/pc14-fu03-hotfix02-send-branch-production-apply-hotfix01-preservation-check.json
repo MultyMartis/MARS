@@ -1,0 +1,44 @@
+{
+  "before": {
+    "Restore Format Run Items": {
+      "present": true,
+      "length": 1112,
+      "is_hotfix01": true,
+      "includes_format_pipeline": true,
+      "includes_reject_fallback": true,
+      "includes_restore_source": true,
+      "sha256": "9e17d7e465e3a48bc478aedc127fa4cfb970a49cb0e8e8215ce34b2378667a25"
+    },
+    "Restore Format Run Items After Lock": {
+      "present": true,
+      "length": 1123,
+      "is_hotfix01": true,
+      "includes_format_pipeline": true,
+      "includes_reject_fallback": true,
+      "includes_restore_source": true,
+      "sha256": "a757f4c6c1b22136d0d8b8bc196e7bea1e9ddde5efc8709c0dfeb146c283c0aa"
+    }
+  },
+  "after": {
+    "Restore Format Run Items": {
+      "present": true,
+      "length": 1112,
+      "is_hotfix01": true,
+      "includes_format_pipeline": true,
+      "includes_reject_fallback": true,
+      "includes_restore_source": true,
+      "sha256": "9e17d7e465e3a48bc478aedc127fa4cfb970a49cb0e8e8215ce34b2378667a25"
+    },
+    "Restore Format Run Items After Lock": {
+      "present": true,
+      "length": 1123,
+      "is_hotfix01": true,
+      "includes_format_pipeline": true,
+      "includes_reject_fallback": true,
+      "includes_restore_source": true,
+      "sha256": "a757f4c6c1b22136d0d8b8bc196e7bea1e9ddde5efc8709c0dfeb146c283c0aa"
+    }
+  },
+  "pass": true,
+  "jsCode_unchanged": true
+}
