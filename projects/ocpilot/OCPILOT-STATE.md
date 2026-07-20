@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-20
-**Evidence cutoff:** 2026-07-20 (SITE-002 Run **4.281** / `SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-05` — 6 `tehnologicheskoe-oborudovanie/*` branches onboarded; meta+allowlist; target needs **0**; baseline still **1714**; next baseline refresh 04)
+**Evidence cutoff:** 2026-07-20 (SITE-002 Run **4.282** / `SITE-002-PROD-REGRESSION-HOTFIX-01` — parent-path PDP restored + `has_children` notices removed; blog SEO preserved; baseline still **1714**; next baseline refresh 04)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Catalog New Branch Onboarding 05 (Run 4.281)** — **COMPLETE — 6 BRANCHES ONBOARDED** · ids **368/373/369/371/372/370** · sitemap **1737** · baseline still **1714** · next **`SITE-002-MONITOR-BASELINE-REFRESH-04`** · [report](sites/site-002/reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-05.md) · prior [multiday healthcheck 4.280](sites/site-002/reports/SITE-002-PROD-MULTIDAY-HEALTHCHECK-01.md) |
+| Current SITE-002 focus | **Production Regression Hotfix 01 (Run 4.282)** — **COMPLETE — PRODUCTS RESTORED AND NOTICES REMOVED** · parent-path PDP + header `has_children` · blog SEO preserved · baseline still **1714** · next **`SITE-002-MONITOR-BASELINE-REFRESH-04`** · [hotfix report](sites/site-002/reports/SITE-002-PROD-REGRESSION-HOTFIX-01.md) · prior [onboarding 05 / 4.281](sites/site-002/reports/SITE-002-PROD-CATALOG-NEW-BRANCH-ONBOARDING-05.md) |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 
