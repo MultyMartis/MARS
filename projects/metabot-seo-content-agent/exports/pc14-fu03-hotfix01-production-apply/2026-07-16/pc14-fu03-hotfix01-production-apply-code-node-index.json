@@ -1,0 +1,61 @@
+{
+  "target_nodes": [
+    {
+      "name": "Restore Format Run Items",
+      "length": 1112,
+      "hotfix01": true
+    },
+    {
+      "name": "Restore Format Run Items After Lock",
+      "length": 1123,
+      "hotfix01": true
+    }
+  ],
+  "fu03_nodes": [
+    {
+      "name": "Build Final Public Payload",
+      "present": true,
+      "disabled": false
+    },
+    {
+      "name": "Final Surface Strict Scan",
+      "present": true,
+      "disabled": false
+    },
+    {
+      "name": "IF Final Surface Clean",
+      "present": true,
+      "disabled": false
+    },
+    {
+      "name": "Build Strict Surface Repair Payload",
+      "present": true,
+      "disabled": false
+    },
+    {
+      "name": "Run Strict Surface Repair",
+      "present": true,
+      "disabled": false
+    },
+    {
+      "name": "Extract Strict Surface Repair",
+      "present": true,
+      "disabled": false
+    },
+    {
+      "name": "Final Surface Strict Re-Scan",
+      "present": true,
+      "disabled": false
+    },
+    {
+      "name": "IF Repaired Surface Clean",
+      "present": true,
+      "disabled": false
+    },
+    {
+      "name": "Format Strict Reject Message",
+      "present": true,
+      "disabled": false
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "scope": {
+    "added": [],
+    "removed": [],
+    "modifiedCode": [
+      "Restore Format Run Items",
+      "Restore Format Run Items After Lock"
+    ],
+    "unexpected": [],
+    "otherMeta": [],
+    "connectionsChanged": false,
+    "preserveOk": {
+      "Format Run Pipeline": true,
+      "Format Strict Reject Message": true,
+      "Build Final Public Payload": true,
+      "Final Surface Strict Scan": true,
+      "Extract Strict Surface Repair": true,
+      "Final Surface Strict Re-Scan": true,
+      "TZ Strict Cleanup": true,
+      "Route Command": true
+    },
+    "scopeOk": true
+  },
+  "changed": [
+    {
+      "name": "Restore Format Run Items",
+      "jsCodeLengthBefore": 150,
+      "jsCodeLengthAfter": 1112,
+      "wasBrokenHardRequire": true,
+      "isHotfix01After": true,
+      "matchesHelper": true,
+      "sha256_before": "39b9cca47e67a34c4eb4cfaab2e9475358fe8841862496d7e1e35410aab9356f",
+      "sha256_after": "9e17d7e465e3a48bc478aedc127fa4cfb970a49cb0e8e8215ce34b2378667a25",
+      "sha256_helper": "9e17d7e465e3a48bc478aedc127fa4cfb970a49cb0e8e8215ce34b2378667a25"
+    },
+    {
+      "name": "Restore Format Run Items After Lock",
+      "jsCodeLengthBefore": 150,
+      "jsCodeLengthAfter": 1123,
+      "wasBrokenHardRequire": true,
+      "isHotfix01After": true,
+      "matchesHelper": true,
+      "sha256_before": "39b9cca47e67a34c4eb4cfaab2e9475358fe8841862496d7e1e35410aab9356f",
+      "sha256_after": "a757f4c6c1b22136d0d8b8bc196e7bea1e9ddde5efc8709c0dfeb146c283c0aa",
+      "sha256_helper": "a757f4c6c1b22136d0d8b8bc196e7bea1e9ddde5efc8709c0dfeb146c283c0aa"
+    }
+  ],
+  "transformValid": true
+}

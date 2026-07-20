@@ -1,0 +1,137 @@
+{
+  "status": "production_apply_preflight",
+  "gates": [
+    {
+      "id": "G01",
+      "name": "production_active_true",
+      "pass": true,
+      "observed": true
+    },
+    {
+      "id": "G02",
+      "name": "production_node_count_101",
+      "pass": true,
+      "observed": 101
+    },
+    {
+      "id": "G03",
+      "name": "production_fu03_nodes_9",
+      "pass": true,
+      "observed": 9
+    },
+    {
+      "id": "G04",
+      "name": "run_strict_surface_repair_enabled",
+      "pass": true,
+      "observed": {
+        "disabled": false
+      }
+    },
+    {
+      "id": "G05",
+      "name": "hotfix01_not_yet_applied_on_production",
+      "pass": true,
+      "observed": {
+        "Restore Format Run Items": {
+          "present": true,
+          "length": 150,
+          "is_broken": true,
+          "is_hotfix01": false,
+          "includes_format_pipeline": true,
+          "includes_reject_fallback": false,
+          "includes_restore_source": false,
+          "includes_version_marker_literal": false,
+          "sha256": "39b9cca47e67a34c4eb4cfaab2e9475358fe8841862496d7e1e35410aab9356f"
+        },
+        "Restore Format Run Items After Lock": {
+          "present": true,
+          "length": 150,
+          "is_broken": true,
+          "is_hotfix01": false,
+          "includes_format_pipeline": true,
+          "includes_reject_fallback": false,
+          "includes_restore_source": false,
+          "includes_version_marker_literal": false,
+          "sha256": "39b9cca47e67a34c4eb4cfaab2e9475358fe8841862496d7e1e35410aab9356f"
+        }
+      }
+    },
+    {
+      "id": "G06",
+      "name": "pc07_close_lock_unchanged",
+      "pass": true,
+      "observed": {
+        "pass": true,
+        "taskIdValue": "={{ $('Route Command').first().json.task_id }}",
+        "exprOk": true,
+        "present": true
+      }
+    },
+    {
+      "id": "G07",
+      "name": "tz_hotfix01_intact",
+      "pass": true,
+      "observed": {
+        "present": true,
+        "structuredCloneCount": 0,
+        "clonePlainPresent": true,
+        "versionIntact": true,
+        "version": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+        "pass": true
+      }
+    },
+    {
+      "id": "G08",
+      "name": "sandbox_hotfix01_source_verified",
+      "pass": true,
+      "observed": {
+        "id": "tVGWi7Ud3zz2eGKo",
+        "name": "SEO Content Agent Beta.v14 - Worker.sandbox-pc14-fu03",
+        "active": false,
+        "nodeCount": 101,
+        "fu03Count": 9,
+        "repairDisabled": true,
+        "bothHotfix01": true,
+        "sourceOk": true,
+        "restore": {
+          "Restore Format Run Items": {
+            "present": true,
+            "length": 1112,
+            "is_broken": false,
+            "is_hotfix01": true,
+            "includes_format_pipeline": true,
+            "includes_reject_fallback": true,
+            "includes_restore_source": true,
+            "includes_version_marker_literal": false,
+            "sha256": "9e17d7e465e3a48bc478aedc127fa4cfb970a49cb0e8e8215ce34b2378667a25"
+          },
+          "Restore Format Run Items After Lock": {
+            "present": true,
+            "length": 1123,
+            "is_broken": false,
+            "is_hotfix01": true,
+            "includes_format_pipeline": true,
+            "includes_reject_fallback": true,
+            "includes_restore_source": true,
+            "includes_version_marker_literal": false,
+            "sha256": "a757f4c6c1b22136d0d8b8bc196e7bea1e9ddde5efc8709c0dfeb146c283c0aa"
+          }
+        }
+      }
+    },
+    {
+      "id": "G09",
+      "name": "no_unexpected_non_target_drift",
+      "pass": true,
+      "observed": []
+    },
+    {
+      "id": "G10",
+      "name": "operator_approval_via_task_charter",
+      "pass": true,
+      "observed": true,
+      "note": "Human charter for PRODUCTION_APPLY"
+    }
+  ],
+  "allAutomatedGatesPass": true
+}

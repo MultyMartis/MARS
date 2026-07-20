@@ -1,0 +1,16 @@
+{
+  "before": {
+    "pass": true,
+    "taskIdValue": "={{ $('Route Command').first().json.task_id }}",
+    "exprOk": true,
+    "present": true
+  },
+  "after": {
+    "pass": true,
+    "taskIdValue": "={{ $('Route Command').first().json.task_id }}",
+    "exprOk": true,
+    "present": true
+  },
+  "pass": true,
+  "expected": "={{ $('Route Command').first().json.task_id }}"
+}

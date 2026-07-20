@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "modifiedCode": [
+    "Restore Format Run Items",
+    "Restore Format Run Items After Lock"
+  ],
+  "unexpected": [],
+  "preserveOk": {
+    "Format Run Pipeline": true,
+    "Format Strict Reject Message": true,
+    "Build Final Public Payload": true,
+    "Final Surface Strict Scan": true,
+    "Extract Strict Surface Repair": true,
+    "Final Surface Strict Re-Scan": true,
+    "TZ Strict Cleanup": true,
+    "Route Command": true
+  },
+  "connections_unchanged": true
+}
