@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-20
-**Evidence cutoff:** 2026-07-20 (SITE-002 Run **4.287** / `SITE-002-PROD-MEGAMENU-CHILDREN-AUTOMATION-01` — mega menu children DB-driven parity with Catalog Section Tiles; tech pane **4**=tiles; image regen docs committed; baseline still **1714**)
+**Evidence cutoff:** 2026-07-20 (SITE-002 Run **4.288** / `SITE-002-MONITOR-BASELINE-REFRESH-04` — monitor baseline **1714→1737**; manual `2026-07-20_22-32-43` **NO_ACTION_REQUIRED**; tech equipment wave closed for monitor baseline)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Mega Menu Children Automation (Run 4.287)** — **COMPLETE — MENU MATCHES TILES** · `prepareMegamenuCategories` ↔ `buildHubChildCards` · tech mega **4** · prior polish [4.286](sites/site-002/reports/SITE-002-PROD-CATALOG-TILE-POLISH-01.md) + image regen [4.286b](sites/site-002/reports/SITE-002-PROD-TECH-CATEGORY-IMAGES-REGEN-01.md) · next **`SITE-002-MONITOR-BASELINE-REFRESH-04`** · [report](sites/site-002/reports/SITE-002-PROD-MEGAMENU-CHILDREN-AUTOMATION-01.md) |
+| Current SITE-002 focus | **Monitor Baseline Refresh 04 (Run 4.288)** — **COMPLETE — BASELINE 1737 AND MONITOR NO_ACTION_REQUIRED** · baseline **1714→1737**; checkpoint `SITE-002-STABLE-PROD-POST-1C-MONITOR-BASELINE-1737-04`; tech equipment wave closed for monitor · prior mega children [4.287](sites/site-002/reports/SITE-002-PROD-MEGAMENU-CHILDREN-AUTOMATION-01.md) · [report](sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-04.md) |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 
