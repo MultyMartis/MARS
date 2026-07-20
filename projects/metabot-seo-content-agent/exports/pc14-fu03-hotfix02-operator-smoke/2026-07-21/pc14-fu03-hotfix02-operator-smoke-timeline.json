@@ -1,0 +1,37 @@
+{
+  "timezone_operator": "UTC+7",
+  "events": [
+    {
+      "local": "2026-07-21T01:22+07:00",
+      "utc": "2026-07-20T18:22:00Z",
+      "event": "production_apply_persist_committed",
+      "commit": "65642ef27b59a19e7541a642c8ff120fddba8c7f",
+      "note": "HOTFIX02 production apply evidence committed, not pushed"
+    },
+    {
+      "local": "2026-07-21T01:29+07:00",
+      "utc": "2026-07-20T18:29:00Z",
+      "event": "operator_run_command",
+      "detail": "/run HOTFIX02 smoke bait brief (кофемашины + для удобства восприятия + banned stems)"
+    },
+    {
+      "local": "2026-07-21T01:29+07:00",
+      "utc": "2026-07-20T18:29:37Z",
+      "event": "task_id_embedded_timestamp",
+      "task_id": "seo20260720182937io0c5y",
+      "detail": "Task ID UTC stamp aligns with operator /run minute"
+    },
+    {
+      "local": "2026-07-21T01:29+07:00",
+      "utc": "2026-07-20T18:29:00Z",
+      "event": "status_complete_preface",
+      "detail": "✅ Задача завершена / Результат готов. Отправляю материалы..."
+    },
+    {
+      "local": "2026-07-21T01:31+07:00",
+      "utc": "2026-07-20T18:31:00Z",
+      "event": "strict_qa_reject_delivered",
+      "detail": "Plain-safe STRICT QA REJECT diagnostic with Status: blocked-dirty, residual_count=17"
+    }
+  ]
+}

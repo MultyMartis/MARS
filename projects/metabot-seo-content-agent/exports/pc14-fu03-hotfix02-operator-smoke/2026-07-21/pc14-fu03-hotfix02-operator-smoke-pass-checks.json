@@ -1,0 +1,59 @@
+{
+  "decision": "PC14_FU03_HOTFIX02_OPERATOR_SMOKE_PASS",
+  "evidence_basis": "operator_telegram_transcript",
+  "checks": [
+    {
+      "id": "HF02-OS-01-BAIT-BRIEF-MATCHED",
+      "pass": true,
+      "detail": "Operator /run includes PC14-FU03 HOTFIX02 after production apply, forced phrase «для удобства восприятия», and banned-stem list matching prior HOTFIX01 smoke bait pattern."
+    },
+    {
+      "id": "HF02-OS-02-TASK-ID-ASSIGNED",
+      "pass": true,
+      "detail": "Reject diagnostic includes Task ID seo20260720182937io0c5y; embedded UTC 2026-07-20T18:29:37Z aligns with operator local 01:29 UTC+7."
+    },
+    {
+      "id": "HF02-OS-03-STRICT-REJECT-TRIGGERED",
+      "pass": true,
+      "detail": "Banner STRICT QA REJECT — output blocked before final send; Status blocked-dirty; residual_count=17; repair_attempts=1. Expected for bait."
+    },
+    {
+      "id": "HF02-OS-04-REJECT-DELIVERED-TO-TELEGRAM",
+      "pass": true,
+      "detail": "Operator received full reject diagnostic at 01:31. Contrasts HOTFIX01 smoke where Send Telegram Run failed with Telegram 400 entity parse and reject body was not delivered."
+    },
+    {
+      "id": "HF02-OS-05-PLAIN-SAFE-TEMPLATE-SHAPE",
+      "pass": true,
+      "detail": "Delivered text matches HOTFIX02 Format Strict Reject Message template order: Task ID, blank, banner, Status, Reason, Residual count, Repair attempts, Markers found (≤5), Action."
+    },
+    {
+      "id": "HF02-OS-06-PARSE-MODE-HYPHEN-SIGNATURE",
+      "pass": true,
+      "detail": "Formatter emits Status: blocked_dirty; operator saw Status: blocked-dirty. Underscore→hyphen conversion is the HOTFIX02 Parse Mode plain-safe signature."
+    },
+    {
+      "id": "HF02-OS-07-NO-RAW-ASTERISK-IN-REJECT",
+      "pass": true,
+      "detail": "asterisk_count_in_reject_body=0. HOTFIX01 failure mode was raw * in marker excerpts causing Telegram entity parse errors."
+    },
+    {
+      "id": "HF02-OS-08-NO-ENTITY-PARSE-FAILURE-OBSERVED",
+      "pass": true,
+      "detail": "Transcript shows successful reject message delivery; no Telegram API error / can't parse entities symptom visible to operator."
+    },
+    {
+      "id": "HF02-OS-09-CONTENT-QA-NOT-IN-SCOPE",
+      "pass": true,
+      "detail": "Content remaining dirty (17 residuals) is out of HOTFIX02 send-branch scope. Smoke PASS means reject path delivery, not clean SEO materials."
+    },
+    {
+      "id": "HF02-OS-10-PREFACE-STILL-PRESENT-DEFERRED",
+      "pass": true,
+      "detail": "Status Complete preface («✅ Задача завершена» / «Результат готов…») still precedes reject. Explicitly deferred to HOTFIX03; does not fail HOTFIX02."
+    }
+  ],
+  "pass_count": 10,
+  "total_count": 10,
+  "fail_ids": []
+}

@@ -1,0 +1,55 @@
+{
+  "source": "operator_telegram_transcript",
+  "sanitized": true,
+  "redactions": [
+    "No chat_id, user_id, phone, tokens, or credentials present in source transcript"
+  ],
+  "timezone_note": "Operator timestamps are local UTC+7 (21.07.2026). Task ID embeds UTC stamp 2026-07-20T18:29:37Z.",
+  "messages": [
+    {
+      "local_timestamp": "2026-07-21T01:29+07:00",
+      "approx_utc": "2026-07-20T18:29:00Z",
+      "direction": "operator_to_bot",
+      "author_label": "operator",
+      "kind": "run_command",
+      "text": "/run тестовая проверка PC14-FU03 HOTFIX02 после production apply: короткий SEO-план на 3 пункта для страницы услуги ремонта кофемашин. Обязательно сделай SEO ТЗ с таблицей и укажи причину таблицы. В причине таблицы специально используй формулировку: для удобства восприятия. Не используй слова: аккуратное, удобства, удобно, позволяет, обеспечение, контроль, безопасность, специализированные, надежность, наглядность."
+    },
+    {
+      "local_timestamp": "2026-07-21T01:29+07:00",
+      "approx_utc": "2026-07-20T18:29:00Z",
+      "direction": "bot_to_operator",
+      "author_label": "SEO Content Agent",
+      "kind": "status_complete_preface",
+      "text": "✅ Задача завершена\n\nРезультат готов. Отправляю материалы...",
+      "notes": [
+        "Known false Status Complete/Final preface on reject path",
+        "Deferred to PC14_FU03_HOTFIX03_PREFACE_GATING",
+        "Not a HOTFIX02 failure"
+      ]
+    },
+    {
+      "local_timestamp": "2026-07-21T01:31+07:00",
+      "approx_utc": "2026-07-20T18:31:00Z",
+      "direction": "bot_to_operator",
+      "author_label": "SEO Content Agent",
+      "kind": "strict_qa_reject_diagnostic",
+      "task_id": "seo20260720182937io0c5y",
+      "text": "Task ID: seo20260720182937io0c5y\n\nSTRICT QA REJECT — output blocked before final send\nStatus: blocked-dirty\nReason: Residual strict-surface markers remain after repair; final materials blocked.\nResidual count: 17\nRepair attempts: 1\nMarkers found:\n1. seo-strategy-public / безопасн @ surfaces.seo-strategy-public — а, связанные с гарантией, надежностью и безопасностью 3. Не обещать конкретных результат\n2. seo-strategy-public / надежн / надёжн @ surfaces.seo-strategy-public — ользовать слова, связанные с гарантией, надежностью и безопасностью 3. Не обещать конк\n3. seo-strategy-public / безопасность @ surfaces.seo-strategy-public — а, связанные с гарантией, надежностью и безопасностью 3. Не обещать конкретных результатов р\n4. seo-strategy-public / надежность @ surfaces.seo-strategy-public — ользовать слова, связанные с гарантией, надежностью и безопасностью 3. Не обещать конкретн\n5. seo-text / наглядн @ surfaces.seo-text — отоспособности кофемашины в целом. для наглядности восприятия ниже представлена таблиц\nAction: retry not recommended until fix/review",
+      "parsed_fields": {
+        "task_id": "seo20260720182937io0c5y",
+        "banner": "STRICT QA REJECT — output blocked before final send",
+        "status_line": "Status: blocked-dirty",
+        "status_token_observed": "blocked-dirty",
+        "status_token_formatter_raw": "blocked_dirty",
+        "parse_mode_underscore_to_hyphen_signature": true,
+        "reason": "Residual strict-surface markers remain after repair; final materials blocked.",
+        "residual_count": 17,
+        "repair_attempts": 1,
+        "markers_listed": 5,
+        "markers_list_cap_note": "Formatter lists at most 5 residuals (slice 0..5); residual_count may be higher",
+        "action": "Action: retry not recommended until fix/review",
+        "asterisk_count_in_reject_body": 0
+      }
+    }
+  ]
+}

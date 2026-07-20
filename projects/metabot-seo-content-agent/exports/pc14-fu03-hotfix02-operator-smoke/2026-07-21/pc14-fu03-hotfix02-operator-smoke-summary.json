@@ -1,0 +1,61 @@
+{
+  "smoke_id": "PC14_FU03_HOTFIX02_OPERATOR_SMOKE",
+  "decision": "PC14_FU03_HOTFIX02_OPERATOR_SMOKE_PASS",
+  "recommended_next": "PC14_FU03_HOTFIX03_PREFACE_GATING",
+  "final_status": "COMPLETE — PC14-FU03 HOTFIX02 operator smoke PASS persisted",
+  "date_local": "2026-07-21",
+  "evidence_mode": "operator_telegram_transcript_only",
+  "production_worker_id": "p4mqb4VuPcemIDlC",
+  "production_apply_commit": "65642ef27b59a19e7541a642c8ff120fddba8c7f",
+  "production_apply_commit_short": "65642ef2",
+  "proposal_commit_short": "36012d8b",
+  "hotfix01_apply_commit_short": "67ecdc7c",
+  "task_id": "seo20260720182937io0c5y",
+  "task_id_embedded_utc": "2026-07-20T18:29:37Z",
+  "operator_local_window_utc7": {
+    "start": "2026-07-21T01:29+07:00",
+    "reject_delivered": "2026-07-21T01:31+07:00"
+  },
+  "bait_brief": {
+    "forced_table_reason_phrase": "для удобства восприятия",
+    "banned_stems_requested": [
+      "аккуратное",
+      "удобства",
+      "удобно",
+      "позволяет",
+      "обеспечение",
+      "контроль",
+      "безопасность",
+      "специализированные",
+      "надежность",
+      "наглядность"
+    ],
+    "topic": "ремонт кофемашин / SEO-план 3 пункта + SEO ТЗ с таблицей"
+  },
+  "observed_outcome": {
+    "status_complete_preface_sent": true,
+    "strict_qa_reject_delivered": true,
+    "reject_status": "blocked-dirty",
+    "residual_count": 17,
+    "repair_attempts": 1,
+    "markers_listed": 5,
+    "telegram_entity_parse_failure_observed": false,
+    "content_materials_final_send_blocked": true
+  },
+  "hotfix02_scope_notes": [
+    "HOTFIX02 targets plain-safe reject delivery + Parse Mode sanitizer + memory-first fan-out",
+    "STRICT QA REJECT on bait brief is expected and is not a HOTFIX02 failure",
+    "False Status Complete preface remains a known deferred issue (HOTFIX03)",
+    "Memory-first and Close Lock success are not proven from Telegram-only evidence"
+  ],
+  "safe_unknown": [
+    "n8n Intake execution id",
+    "n8n Worker execution id",
+    "n8n Admin execution ids",
+    "Close Lock Before Sending status=done proof",
+    "Append Memory Run / Prepare Memory Row Run proof",
+    "Sheets lock/memory row contents",
+    "exact telegram_parse_mode null wire value"
+  ],
+  "secret_scan": "PASS_WITH_REVIEW_LABELS"
+}

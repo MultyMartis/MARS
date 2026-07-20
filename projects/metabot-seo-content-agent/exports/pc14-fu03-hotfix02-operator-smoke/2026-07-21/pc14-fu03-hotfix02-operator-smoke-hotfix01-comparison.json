@@ -1,0 +1,39 @@
+{
+  "purpose": "Contrast HOTFIX01 vs HOTFIX02 operator smoke outcomes for the same bait-class brief",
+  "hotfix01": {
+    "label": "PC14_FU03_HOTFIX01_SMOKE_DIAGNOSED_TELEGRAM_API_FAILURE",
+    "apply_commit_short": "67ecdc7c",
+    "task_id": "seo202607201222012uqhz9",
+    "worker_execution": "3364",
+    "restore_path": "PASS",
+    "close_lock": "PASS (status=done)",
+    "send_telegram_run": "FAIL — Telegram HTTP 400 can't parse entities",
+    "reject_diagnostic_delivered_to_operator": false,
+    "operator_visible": [
+      "Status Complete / Status Final false preface only"
+    ],
+    "memory_append": "NOT EXECUTED (diagnosed)"
+  },
+  "hotfix02": {
+    "label": "PC14_FU03_HOTFIX02_OPERATOR_SMOKE_PASS",
+    "apply_commit_short": "65642ef2",
+    "task_id": "seo20260720182937io0c5y",
+    "worker_execution": "SAFE_UNKNOWN_NO_N8N_CALL",
+    "send_telegram_run": "INFERRED_SUCCESS — reject diagnostic visible in Telegram",
+    "reject_diagnostic_delivered_to_operator": true,
+    "operator_visible": [
+      "Status Complete false preface",
+      "Full STRICT QA REJECT plain-safe diagnostic"
+    ],
+    "status_token_observed": "blocked-dirty",
+    "asterisk_count_in_reject_body": 0,
+    "memory_append": "SAFE_UNKNOWN_TELEGRAM_ONLY",
+    "close_lock": "SAFE_UNKNOWN_TELEGRAM_ONLY"
+  },
+  "delta": {
+    "hotfix02_fixed_send_failure": true,
+    "reject_now_reaches_operator": true,
+    "false_preface_still_present": true,
+    "content_strict_surface_still_dirty_on_bait": true
+  }
+}
