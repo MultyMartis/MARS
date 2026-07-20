@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-20
-**Evidence cutoff:** 2026-07-20 (SITE-002 Run **4.285** / `SITE-002-PROD-CATALOG-TILE-BLOCKS-AUTOMATION-01` — Catalog Section Tiles automated; tech root **362** peer of neutral **79**; mega menu + home+/katalog tiles; baseline still **1714**)
+**Evidence cutoff:** 2026-07-20 (SITE-002 Run **4.286** / `SITE-002-PROD-CATALOG-TILE-POLISH-01` — tech root **362** name normalized; tile images for tech children; all-catalog link `/katalog/`; baseline still **1714**)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Catalog Tile Blocks Automation (Run 4.285)** — **COMPLETE — TECHNOLOGICAL EQUIPMENT ADDED** · Catalog Section Tiles / Плитки разделов каталога · Launch Mode roots **79+362** · home+/katalog dual blocks · placeholder fallback · OCMOD refresh after deploy · next **`SITE-002-MONITOR-BASELINE-REFRESH-04`** · [report](sites/site-002/reports/SITE-002-PROD-CATALOG-TILE-BLOCKS-AUTOMATION-01.md) · prior [cache button 4.284](sites/site-002/reports/SITE-002-PROD-ADMIN-CACHE-CLEANER-BUTTON-RESTORE-01.md) · [megamenu 4.283](sites/site-002/reports/SITE-002-PROD-MEGAMENU-AND-CACHE-PLUGIN-DIAGNOSTIC-01.md) |
+| Current SITE-002 focus | **Catalog Tile Polish (Run 4.286)** — **COMPLETE — NAME IMAGES AND ALL-LINK FIXED** · tech root **362** `Технологическое оборудование` · images **368/373/369/371/372/370** · all-link `/katalog/` · prior tiles automation [4.285](sites/site-002/reports/SITE-002-PROD-CATALOG-TILE-BLOCKS-AUTOMATION-01.md) · next **`SITE-002-MONITOR-BASELINE-REFRESH-04`** · [report](sites/site-002/reports/SITE-002-PROD-CATALOG-TILE-POLISH-01.md) |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 
