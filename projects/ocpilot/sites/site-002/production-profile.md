@@ -3,7 +3,7 @@
 **Site ID:** SITE-002  
 **Project:** ЗПМ / BZPM  
 **Document role:** Production environment registration — **not** connection authorization  
-**Last updated:** 2026-07-16 (Run 4.279 — SITE-002-PROD-BLOG-WAVE-FINAL-SMOKE-01 — final smoke ALL CHECKS GREEN; prior 4.278 blog SEO routing)
+**Last updated:** 2026-07-20 (Run 4.280 — SITE-002-PROD-MULTIDAY-HEALTHCHECK-01 — ATTENTION NEW ONBOARDING REQUIRED; sitemap 1737; prior 4.279 blog wave green)
 
 ---
 
