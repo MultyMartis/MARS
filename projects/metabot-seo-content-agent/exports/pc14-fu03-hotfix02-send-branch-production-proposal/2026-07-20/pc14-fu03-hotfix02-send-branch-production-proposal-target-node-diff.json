@@ -1,0 +1,26 @@
+{
+  "Format Strict Reject Message": {
+    "production_length": 1951,
+    "sandbox_length": 2821,
+    "proposed_length": 2821,
+    "production_is_hotfix02": false,
+    "sandbox_is_hotfix02": true,
+    "sandbox_matches_proposed_helper": true,
+    "production_would_change": true,
+    "sha256_production": "ea54e2149685b77ca475e6276d7c00769f8ca1ae90fec6bd7f26bd705065e25c",
+    "sha256_sandbox": "35aa1f131f146cb631c67219b44ddc7606f21863c778243198ac58664303c422",
+    "version_marker": "v1-pc14-fu03-hotfix02-format-strict-reject-plain"
+  },
+  "Parse Mode": {
+    "production_length": 405,
+    "sandbox_length": 768,
+    "proposed_length": 768,
+    "production_is_hotfix02": false,
+    "sandbox_is_hotfix02": true,
+    "sandbox_matches_proposed_helper": true,
+    "production_would_change": true,
+    "sha256_production": "ea137131703ca857b5c25a8f436762d84a43682d5ca4629f46739b6e750ad003",
+    "sha256_sandbox": "1752a5d3a51febfe23e356e9309af3c701c27917016cc57906662b8db7c09b96",
+    "version_marker": "v1-pc14-fu03-hotfix02-parse-mode-plain"
+  }
+}

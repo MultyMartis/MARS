@@ -1,0 +1,46 @@
+{
+  "risks": [
+    {
+      "id": "R1",
+      "risk": "Production drifted beyond allowlisted HOTFIX02 targets since HOTFIX01 apply",
+      "mitigation": "Preflight non-target + target-vs-baseline gates; DRIFT_BLOCKED if unexpected",
+      "residual": "low_if_gates_hold"
+    },
+    {
+      "id": "R2",
+      "risk": "Copying sandbox disabled side-effect / repair-disabled states into production",
+      "mitigation": "jsCode + one connection reorder only; preserve production enabled states; keep Run Strict Surface Repair enabled",
+      "residual": "low"
+    },
+    {
+      "id": "R3",
+      "risk": "Telegram still returns 400 despite * neutralization (unknown parse_mode default)",
+      "mitigation": "Neutralize *, _, backticks, []; keep Send Telegram Run expr; smoke verifies delivery",
+      "residual": "medium_safe_unknown_parse_mode"
+    },
+    {
+      "id": "R4",
+      "risk": "False complete preface UX remains confusing on reject",
+      "mitigation": "Deferred to HOTFIX03; smoke still requires materials/diagnostic + lock close",
+      "residual": "medium_ux"
+    },
+    {
+      "id": "R5",
+      "risk": "Apply without offline HF02 harness on production-transformed copy",
+      "mitigation": "Mandatory HF02 10/10 after transform before declaring apply verified",
+      "residual": "low"
+    },
+    {
+      "id": "R6",
+      "risk": "Retry /run before HOTFIX02 leaves another failed send / lock noise",
+      "mitigation": "Charter forbids /run until apply; lock cleanup separate",
+      "residual": "medium_ops"
+    },
+    {
+      "id": "R7",
+      "risk": "Sandbox source drift between proposal and apply",
+      "mitigation": "Fresh GET sandbox at apply time; SOURCE_DRIFT_BLOCKED if mismatch",
+      "residual": "low"
+    }
+  ]
+}

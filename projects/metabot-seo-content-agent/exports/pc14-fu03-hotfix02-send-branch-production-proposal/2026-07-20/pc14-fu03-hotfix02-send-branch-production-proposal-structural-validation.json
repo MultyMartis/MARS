@@ -1,0 +1,37 @@
+{
+  "production": {
+    "nodeCount": 101,
+    "fu03Nodes": [
+      "Build Final Public Payload",
+      "Final Surface Strict Scan",
+      "IF Final Surface Clean",
+      "Build Strict Surface Repair Payload",
+      "Run Strict Surface Repair",
+      "Extract Strict Surface Repair",
+      "Final Surface Strict Re-Scan",
+      "IF Repaired Surface Clean",
+      "Format Strict Reject Message"
+    ],
+    "fu03Count": 9,
+    "targetCodePresent": true,
+    "connectionsPresent": true,
+    "rejectFanout": [
+      "Take First Item",
+      "Prepare Memory Row Run"
+    ]
+  },
+  "sandbox": {
+    "nodeCount": 101,
+    "fu03Count": 9,
+    "hotfix02Reject": true,
+    "hotfix02Parse": true,
+    "memoryFirst": true,
+    "rejectFanout": [
+      "Prepare Memory Row Run",
+      "Take First Item"
+    ]
+  },
+  "proposedNodeDelta": 0,
+  "proposedConnectionChanges": true,
+  "proposedConnectionKey": "Format Strict Reject Message"
+}

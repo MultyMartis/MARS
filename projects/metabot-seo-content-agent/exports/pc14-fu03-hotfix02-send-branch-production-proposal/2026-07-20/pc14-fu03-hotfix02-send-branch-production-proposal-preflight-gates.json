@@ -1,0 +1,150 @@
+{
+  "status": "gates_for_future_production_apply",
+  "gates": [
+    {
+      "id": "G01",
+      "name": "production_active_true",
+      "pass": true,
+      "observed": true
+    },
+    {
+      "id": "G02",
+      "name": "production_node_count_101",
+      "pass": true,
+      "observed": 101
+    },
+    {
+      "id": "G03",
+      "name": "production_fu03_nodes_9",
+      "pass": true,
+      "observed": 9
+    },
+    {
+      "id": "G04",
+      "name": "run_strict_surface_repair_enabled",
+      "pass": true,
+      "observed": {
+        "disabled": false
+      }
+    },
+    {
+      "id": "G05",
+      "name": "hotfix01_restores_intact",
+      "pass": true,
+      "observed": {
+        "Restore Format Run Items": {
+          "present": true,
+          "length": 1112,
+          "is_hotfix01": true
+        },
+        "Restore Format Run Items After Lock": {
+          "present": true,
+          "length": 1123,
+          "is_hotfix01": true
+        }
+      }
+    },
+    {
+      "id": "G06",
+      "name": "hotfix02_not_yet_applied_on_production",
+      "pass": true,
+      "observed": {
+        "bothPreHotfix02": true,
+        "bothHotfix02": false,
+        "targets": {
+          "Format Strict Reject Message": {
+            "present": true,
+            "length": 1951,
+            "is_hotfix02": false,
+            "has_version_marker": false,
+            "sha256": "ea54e2149685b77ca475e6276d7c00769f8ca1ae90fec6bd7f26bd705065e25c"
+          },
+          "Parse Mode": {
+            "present": true,
+            "length": 405,
+            "is_hotfix02": false,
+            "has_version_marker": false,
+            "sha256": "ea137131703ca857b5c25a8f436762d84a43682d5ca4629f46739b6e750ad003"
+          }
+        },
+        "rejectFanout": [
+          "Take First Item",
+          "Prepare Memory Row Run"
+        ]
+      }
+    },
+    {
+      "id": "G07",
+      "name": "pc07_close_lock_unchanged",
+      "pass": true,
+      "observed": {
+        "present": true,
+        "mapping": "={{ $('Route Command').first().json.task_id }}",
+        "ok": true
+      }
+    },
+    {
+      "id": "G08",
+      "name": "tz_hotfix01_intact",
+      "pass": true,
+      "observed": {
+        "present": true,
+        "structuredCloneCount": 0,
+        "clonePlainPresent": true,
+        "versionIntact": true,
+        "version": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01"
+      }
+    },
+    {
+      "id": "G09",
+      "name": "sandbox_hotfix02_source_verified",
+      "pass": true,
+      "observed": {
+        "active": false,
+        "targets": {
+          "Format Strict Reject Message": {
+            "present": true,
+            "length": 2821,
+            "is_hotfix02": true,
+            "has_version_marker": true,
+            "sha256": "35aa1f131f146cb631c67219b44ddc7606f21863c778243198ac58664303c422"
+          },
+          "Parse Mode": {
+            "present": true,
+            "length": 768,
+            "is_hotfix02": true,
+            "has_version_marker": true,
+            "sha256": "1752a5d3a51febfe23e356e9309af3c701c27917016cc57906662b8db7c09b96"
+          }
+        },
+        "memoryFirst": true,
+        "helperMirrorOk": true,
+        "harnessAllPass": true,
+        "evidenceDrift": []
+      }
+    },
+    {
+      "id": "G10",
+      "name": "no_unexpected_non_target_drift",
+      "pass": true,
+      "observed": {
+        "nonTargetDrift": [],
+        "connNonTargetDrift": [],
+        "targetVsBaseline": []
+      }
+    },
+    {
+      "id": "G11",
+      "name": "send_telegram_expr_unchanged",
+      "pass": true,
+      "observed": "={{ $json.telegram_text_safe }}"
+    },
+    {
+      "id": "G12",
+      "name": "operator_approval_required_before_put",
+      "pass": true,
+      "note": "Human gate — not automated"
+    }
+  ],
+  "allAutomatedGatesPass": true
+}

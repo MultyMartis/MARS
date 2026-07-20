@@ -1,0 +1,89 @@
+{
+  "status": "proposed_only_not_applied",
+  "proposal": "PC14_FU03_HOTFIX02_PRODUCTION_PROPOSAL",
+  "hotfixId": "PC14_FU03_HOTFIX02_SEND_BRANCH",
+  "hotfixVersion": "v1-pc14-fu03-hotfix02-send-branch",
+  "rejectVersion": "v1-pc14-fu03-hotfix02-format-strict-reject-plain",
+  "parseVersion": "v1-pc14-fu03-hotfix02-parse-mode-plain",
+  "productionWorker": {
+    "id": "p4mqb4VuPcemIDlC",
+    "name": "SEO Content Agent Beta.v14 - Worker"
+  },
+  "sandboxSource": {
+    "id": "TMhJbxtk6uUPDpEb",
+    "name": "SEO Content Agent Beta.v14 - Worker.sandbox-pc14-fu03-hotfix02-send"
+  },
+  "basedOn": {
+    "sandboxImplementation": "PC14_FU03_HOTFIX02_SANDBOX_APPLIED_HARNESS_VERIFIED",
+    "productionHotfix01ApplyCommit": "67ecdc7c",
+    "design": "PC14_FU03_HOTFIX02_SEND_BRANCH_DESIGN_READY_FOR_SANDBOX",
+    "diagnostics": "PC14_FU03_HOTFIX01_SMOKE_DIAGNOSED_TELEGRAM_API_FAILURE"
+  },
+  "patchType": "jsCode_replace_two_nodes_plus_one_connection_reorder",
+  "nodeDelta": 0,
+  "connectionChanges": true,
+  "connectionTargetCount": 1,
+  "codeTargetCount": 2,
+  "targetNodes": [
+    "Format Strict Reject Message",
+    "Parse Mode"
+  ],
+  "connectionReorder": {
+    "node": "Format Strict Reject Message",
+    "before": [
+      "Take First Item",
+      "Prepare Memory Row Run"
+    ],
+    "after": [
+      "Prepare Memory Row Run",
+      "Take First Item"
+    ],
+    "memory_first": true
+  },
+  "doNotCopySandboxDisabledStates": true,
+  "preserve": {
+    "active": true,
+    "id": "p4mqb4VuPcemIDlC",
+    "name": "SEO Content Agent Beta.v14 - Worker",
+    "credentials": true,
+    "sideEffectEnabledStates": true,
+    "runStrictSurfaceRepairEnabled": true,
+    "hotfix01Restores": true,
+    "pc07CloseLock": "={{ $('Route Command').first().json.task_id }}",
+    "tzHotfix01": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+    "sendTelegramExpr": "={{ $json.telegram_text_safe }}",
+    "statusCompleteFinalUnchanged": true,
+    "intakeAdminUntouched": true
+  },
+  "doNotModify": [
+    "Send Telegram Run expression",
+    "Status Complete",
+    "Status Final",
+    "Restore Format Run Items",
+    "Restore Format Run Items After Lock",
+    "Run Strict Surface Repair enabled state",
+    "Build Final Public Payload",
+    "Final Surface Strict Scan",
+    "Extract Strict Surface Repair",
+    "Final Surface Strict Re-Scan",
+    "TZ Strict Cleanup",
+    "PC-07 nodes",
+    "Intake",
+    "Admin",
+    "credentials",
+    "side-effect enabled states"
+  ],
+  "expectedAfterApply": {
+    "nodeCount": "101 -> 101",
+    "fu03Nodes": 9,
+    "codeTargetCount": 2,
+    "connectionTargetCount": 1,
+    "rejectFanout": [
+      "Prepare Memory Row Run",
+      "Take First Item"
+    ]
+  },
+  "decision": "PC14_FU03_HOTFIX02_READY_FOR_PRODUCTION_APPROVAL",
+  "recommendedNext": "PC14_FU03_HOTFIX02_PRODUCTION_PROPOSAL_PERSIST",
+  "blockers": []
+}

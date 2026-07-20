@@ -1,0 +1,29 @@
+{
+  "status": "plan_only_not_executed",
+  "steps": [
+    "1. Read production Worker fresh (GET p4mqb4VuPcemIDlC)",
+    "2. Read sandbox HOTFIX02 source fresh (GET TMhJbxtk6uUPDpEb)",
+    "3. Save raw production rollback backup: local/pc14-fu03-hotfix02-send-branch-production-apply-2026-07-20/rollback/worker-before-hotfix02.raw.json",
+    "4. Sanitize before export for repo evidence",
+    "5. Extract only Format Strict Reject Message + Parse Mode jsCode from sandbox",
+    "6. Transform production raw: replace only those two parameters.jsCode values",
+    "7. Reorder only Format Strict Reject Message main fan-out to Prepare Memory Row Run -> Take First Item",
+    "8. Preserve production active=true, credentials, side-effect enabled states, Run Strict Surface Repair enabled, HOTFIX01 restores, PC-07, TZ HOTFIX01, Send Telegram Run expr, Status Complete/Final",
+    "9. Validate transformed workflow structurally (101 nodes, 9 FU03, node delta 0, only allowlisted changes)",
+    "10. PUT/Update production Worker only after preflight gates + operator approval",
+    "11. Re-GET production after apply",
+    "12. Verify HOTFIX02 markers, memory-first fan-out, HOTFIX01 intact, repair enabled, PC-07/TZ/credentials/side-effects intact, Intake/Admin untouched",
+    "13. Run offline/local production-transformed harness HF02 10/10 — no Telegram/OpenRouter/Sheets/no /run",
+    "14. Do not run operator smoke in production apply task unless explicitly asked later"
+  ],
+  "targetNodes": [
+    "Format Strict Reject Message",
+    "Parse Mode"
+  ],
+  "nodeDelta": 0,
+  "connectionChanges": true,
+  "connectionKey": "Format Strict Reject Message",
+  "intakeAdmin": "untouched",
+  "doNotDisableRepairOnProduction": true,
+  "doNotCopySandboxSideEffectDisabledStates": true
+}

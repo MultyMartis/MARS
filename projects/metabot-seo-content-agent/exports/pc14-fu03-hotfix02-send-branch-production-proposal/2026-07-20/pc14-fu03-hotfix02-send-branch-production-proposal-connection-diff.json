@@ -1,0 +1,23 @@
+{
+  "key": "Format Strict Reject Message",
+  "production_fanout": [
+    "Take First Item",
+    "Prepare Memory Row Run"
+  ],
+  "sandbox_fanout": [
+    "Prepare Memory Row Run",
+    "Take First Item"
+  ],
+  "expected_old": [
+    "Take First Item",
+    "Prepare Memory Row Run"
+  ],
+  "expected_new": [
+    "Prepare Memory Row Run",
+    "Take First Item"
+  ],
+  "production_memory_first": false,
+  "sandbox_memory_first": true,
+  "production_would_change": true,
+  "only_allowed_key": true
+}
