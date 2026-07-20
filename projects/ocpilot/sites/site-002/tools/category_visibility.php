@@ -2,11 +2,13 @@
 /**
  * BZPM Launch Mode — unified category visibility layer (M7.1).
  * M9.5 — neutral root hub branch list for category 79.
- * M9.7C — megamenu children filtered to categories with active products only.
+ * M9.7C — megamenu children historically filtered to categories with active products only.
  * M9.7E — homepage category section uses neutral hub branches
  * SITE-002-PROD-PARENT-CATEGORY-TILES-LARI-REMOVAL-01 — removed ID 88 from parent tiles whitelist (not launch root card).
  * SITE-002-PROD-CATALOG-TILE-BLOCKS-AUTOMATION-01 — Catalog Section Tiles / Плитки разделов каталога:
  *   peer root Технологическое оборудование (362); multi-section tile blocks; placeholder fallback.
+ * SITE-002-PROD-MEGAMENU-CHILDREN-AUTOMATION-01 — mega menu children rebuilt DB-driven to match Catalog Section Tiles
+ *   (neutral keeps product gate; other section hubs include empty active children).
  *
  * Single source of truth for Launch Mode navigation and /katalog presentation.
  * Controllers must use this class; do not hardcode visibility rules in Twig.
@@ -412,8 +414,13 @@ class CategoryVisibility {
 	}
 
 	/**
-	 * M9.7C — enrich megamenu children with live product counts and thumb300;
-	 * drop branches with zero active products (visibility only).
+	 * Mega menu children — DB-driven parity with Catalog Section Tiles.
+	 *
+	 * SITE-002-PROD-MEGAMENU-CHILDREN-AUTOMATION-01:
+	 * Rebuild direct children from DB (do not trust partial cat-list-header rows).
+	 * Neutral hub (79): curated whitelist + require products (same as buildHubChildCards).
+	 * Other section hubs (362+): all active direct children, including zero-product hubs.
+	 * Non-hub roots: keep legacy product-count gate on cached children.
 	 */
 	public function prepareMegamenuCategories(array $categories, $controller) {
 		$controller->load->model('catalog/category');
@@ -421,37 +428,68 @@ class CategoryVisibility {
 		$controller->load->model('tool/image');
 
 		foreach ($categories as $key => $category) {
-			if (empty($category['children']) || !is_array($category['children'])) {
+			if (empty($category['category_id'])) {
 				continue;
 			}
 
+			$root_id = (int)$category['category_id'];
 			$children = array();
 
-			foreach ($category['children'] as $child) {
-				if (empty($child['category_id'])) {
+			if ($this->isSectionHubCategory($root_id)) {
+				$cards = $this->buildHubChildCards($controller, $root_id);
+
+				foreach ($cards as $card) {
+					$branch_id = (int)$card['category_id'];
+					$image = '';
+
+					$branch = $controller->model_catalog_category->getCategory($branch_id);
+
+					if ($branch && !empty($branch['image'])) {
+						$image = $branch['image'];
+					}
+
+					$children[] = array(
+						'category_id'  => $branch_id,
+						'name'         => $card['name'],
+						'href'         => $card['href'],
+						'thumb'        => $this->resizeCategoryImage($controller, $image, 160, 160),
+						'thumb200'     => $this->resizeCategoryImage($controller, $image, 200, 200),
+						'thumb300'     => !empty($card['thumb300']) ? $card['thumb300'] : $this->resizeCategoryImage($controller, $image, 300, 300),
+						'count'        => isset($card['count']) ? (int)$card['count'] : 0,
+						'has_children' => false,
+					);
+				}
+			} else {
+				if (empty($category['children']) || !is_array($category['children'])) {
 					continue;
 				}
 
-				$filter_data = array(
-					'filter_category_id'  => (int)$child['category_id'],
-					'filter_sub_category' => true
-				);
+				foreach ($category['children'] as $child) {
+					if (empty($child['category_id'])) {
+						continue;
+					}
 
-				$count = (int)$controller->model_catalog_product->getTotalProducts($filter_data);
+					$filter_data = array(
+						'filter_category_id'  => (int)$child['category_id'],
+						'filter_sub_category' => true
+					);
 
-				if ($count <= 0) {
-					continue;
+					$count = (int)$controller->model_catalog_product->getTotalProducts($filter_data);
+
+					if ($count <= 0) {
+						continue;
+					}
+
+					$branch = $controller->model_catalog_category->getCategory((int)$child['category_id']);
+					$image = ($branch && !empty($branch['image'])) ? $branch['image'] : '';
+
+					$child['thumb300'] = $this->resizeCategoryImage($controller, $image, 300, 300);
+					$child['count'] = $count;
+					$children[] = $child;
 				}
 
-				$branch = $controller->model_catalog_category->getCategory((int)$child['category_id']);
-				$image = ($branch && !empty($branch['image'])) ? $branch['image'] : '';
-
-				$child['thumb300'] = $this->resizeCategoryImage($controller, $image, 300, 300);
-				$child['count'] = $count;
-				$children[] = $child;
+				$children = $this->sortCategoriesByRussianName($children);
 			}
-
-			$children = $this->sortCategoriesByRussianName($children);
 
 			$categories[$key]['children'] = $children;
 			$categories[$key]['has_children'] = !empty($children);
