@@ -1,0 +1,18 @@
+{
+  "status": "plan_only_not_executed",
+  "method": "re-PUT production from raw pre-HOTFIX03 backup",
+  "backupPath": "local/pc14-fu03-hotfix03-preface-gating-production-apply-2026-07-21/rollback/worker-before-hotfix03.raw.json",
+  "trigger": "post-apply verification fails (HOTFIX03 marker missing, unexpected delta, harness fail, topology drift)",
+  "steps": [
+    "1. Load raw backup worker-before-hotfix03.raw.json",
+    "2. Validate backup id/name/active/nodes match production identity",
+    "3. PUT production from backup",
+    "4. Re-GET and verify HOTFIX03 absent and HOTFIX02/HOTFIX01/PC-07/TZ intact",
+    "5. Record rollback evidence"
+  ],
+  "noGitRollbackForLiveWorkflow": true,
+  "notes": [
+    "Git rollback does not restore live n8n workflow state",
+    "Do not use sandbox as rollback source for production side-effect/active states"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "status": "no_connection_changes_proposed",
+  "production_connections_sha256": "2b0f82f81f4fb489e0de6bbd742b56b7e2fe3b245d2ba81ed38433c8b9ff49bf",
+  "sandbox_connections_sha256": "2b0f82f81f4fb489e0de6bbd742b56b7e2fe3b245d2ba81ed38433c8b9ff49bf",
+  "proposed_connection_changes": [],
+  "connections_unchanged_after_transform": true,
+  "topology": {
+    "production": {
+      "upstream": [
+        "Take First Item"
+      ],
+      "downstream": [
+        "Restore Format Run Items"
+      ]
+    },
+    "sandbox": {
+      "upstream": [
+        "Take First Item"
+      ],
+      "downstream": [
+        "Restore Format Run Items"
+      ]
+    },
+    "compatible": true
+  }
+}

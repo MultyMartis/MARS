@@ -1,0 +1,8 @@
+{
+  "production_before_preview": "=✅ Задача завершена\n\nРезультат готов. Отправляю материалы...",
+  "proposed_after_preview": "={{ /* v1-pc14-fu03-hotfix03-preface-gating */ (() => {\n  const j = $json || {};\n  const ms = String(j.memory_status || '').trim();\n  const status = String(j.status || j.strict_surface_status || '').trim();\n  const blocked =\n    !!j.blocked",
+  "production_full_length": 60,
+  "proposed_full_length": 1053,
+  "marker": "v1-pc14-fu03-hotfix03-preface-gating",
+  "selected_design": "HOTFIX03_DESIGN_D_OUTCOME_GATED_STATUS_COMPLETE"
+}

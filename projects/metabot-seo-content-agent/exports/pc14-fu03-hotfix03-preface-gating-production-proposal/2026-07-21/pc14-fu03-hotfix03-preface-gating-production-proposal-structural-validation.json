@@ -1,0 +1,50 @@
+{
+  "transform_preview": {
+    "nodeDelta": 0,
+    "connectionsUnchanged": true,
+    "credentialsUnchanged": true,
+    "sideEffectsUnchanged": true,
+    "textOnlyChangeConfirmed": true,
+    "changedNodes": [
+      {
+        "name": "Status Complete",
+        "reason": "parameters.text_only"
+      }
+    ]
+  },
+  "production_nodes": 101,
+  "sandbox_nodes": 101,
+  "fu03": {
+    "production": 9,
+    "sandbox": 9,
+    "expected": 9
+  },
+  "target": {
+    "production": {
+      "count": 1,
+      "present": true,
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "operation": "editMessageText",
+      "parse_mode": "HTML",
+      "disabled": false,
+      "text": "=✅ Задача завершена\n\nРезультат готов. Отправляю материалы...",
+      "text_length": 60,
+      "text_sha256": "c57f9c8fff9be2d22857e0de5781e8cd31f5b2414b4a69c67f428e1286edfc6a",
+      "has_hotfix03_marker": false,
+      "has_outcome_gating": false,
+      "has_credentials": true
+    },
+    "sandbox": {
+      "count": 1,
+      "type": "n8n-nodes-base.telegram",
+      "operation": "editMessageText",
+      "parse_mode": "HTML",
+      "has_hotfix03_marker": true,
+      "has_outcome_gating": true,
+      "text_length": 1053,
+      "text_sha256": "8205d01202f19d88b5bfe80568ac453bf7a9d8007e363a68ee186a221bbfb7dc",
+      "disabled": true
+    }
+  }
+}

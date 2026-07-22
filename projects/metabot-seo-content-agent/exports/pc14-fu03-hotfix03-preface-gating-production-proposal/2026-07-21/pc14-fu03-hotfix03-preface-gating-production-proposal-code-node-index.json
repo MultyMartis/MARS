@@ -1,0 +1,728 @@
+{
+  "production": [
+    {
+      "name": "Auto Fix Text",
+      "length": 224,
+      "sha256": "531f6ebdfcee2f7d43a504ccec8971342c006c4653238ee54a5e0b802b22ca95",
+      "disabled": false
+    },
+    {
+      "name": "Auto Polish Text",
+      "length": 3452,
+      "sha256": "30f481883810c43371f44583bcd5535abd0756c9dc80a24987bb969c8216478e",
+      "disabled": false
+    },
+    {
+      "name": "Build Factcheck Payload",
+      "length": 2764,
+      "sha256": "a9b6f3c1eb7fc8d8addb2c4cee5e1849f69e4960128e39bce0129bcd20aa7f10",
+      "disabled": false
+    },
+    {
+      "name": "Build Final Public Payload",
+      "length": 7762,
+      "sha256": "4724c4d6d9bd82e77a56a8a587c2c48c84f588473a53d9b122a8cbd1fadb1cb1",
+      "disabled": false
+    },
+    {
+      "name": "Build Outline Payload",
+      "length": 3637,
+      "sha256": "fdf7b1370e36043742a87e051a2869f947d24ec7e3c2b3e4a92ceb084d3b5e76",
+      "disabled": false
+    },
+    {
+      "name": "Build SEO Strategy Payload",
+      "length": 1527,
+      "sha256": "6235fa5628a8970d542adbf820e8d45b4b70bf123a893dca42f02575d146b75d",
+      "disabled": false
+    },
+    {
+      "name": "Build SEOQA Payload",
+      "length": 3628,
+      "sha256": "25ca5f19c5084c07685ccd6eda2f5ac474e789adb116de94720ea586f82b8f25",
+      "disabled": false
+    },
+    {
+      "name": "Build Single Payload",
+      "length": 6555,
+      "sha256": "f8ea368e2475278aab340afadff30204dcbd3011b72677bd9550017ebf466e5d",
+      "disabled": false
+    },
+    {
+      "name": "Build Single Text Repair Payload",
+      "length": 2502,
+      "sha256": "8adfd6f75fc542718c838361c236b5b54b703ef51208f6b1d24ee52ede73ad8f",
+      "disabled": false
+    },
+    {
+      "name": "Build Strict Surface Repair Payload",
+      "length": 8541,
+      "sha256": "1c9c511da8c8579445c4f0c07353a89b893e8077f4368bf66b9a0fef8e32a41c",
+      "disabled": false
+    },
+    {
+      "name": "Build Text Payload",
+      "length": 4611,
+      "sha256": "03274f0e7a4844654eaa624fb9b4e58f8980526dc612d473ab0c688bb8fa3703",
+      "disabled": false
+    },
+    {
+      "name": "Build Text Repair Payload",
+      "length": 2819,
+      "sha256": "aafd779562c68ed98fb733e95ec544bd5ad434dcb7894c9c86a0273ffcbf1d4e",
+      "disabled": false
+    },
+    {
+      "name": "Commercial Layer Text",
+      "length": 227,
+      "sha256": "79e4fb22641d5d258530e8038588e6a7f93a274e60fd0be98f41150db0d5948d",
+      "disabled": false
+    },
+    {
+      "name": "Compute Content Score",
+      "length": 6276,
+      "sha256": "84af8d66b53dea55644619c48103531e2a4d637eb20bfa81680d643ff07f36c3",
+      "disabled": false
+    },
+    {
+      "name": "Ensure FAQ Text",
+      "length": 221,
+      "sha256": "e73d34277f9df57ef0e4cf7f4335125de4881ab4b9c81925c101d0a028843f37",
+      "disabled": false
+    },
+    {
+      "name": "Extract Auto Polish Text",
+      "length": 1103,
+      "sha256": "17e0bfb41fd00e6fa5abd77f475b24b1fbd992a017fb429b0c06960a3a2ab702",
+      "disabled": false
+    },
+    {
+      "name": "Extract SEO Strategy",
+      "length": 1224,
+      "sha256": "bc4c257d5a92ce47f2a8e68b041e826c046e124ac04f296eb984c27aaa888637",
+      "disabled": false
+    },
+    {
+      "name": "Extract Single Text Repair",
+      "length": 2798,
+      "sha256": "23dde974387180a13da510851a12f72673b399da2a40b1747c67de8299a5a4ae",
+      "disabled": false
+    },
+    {
+      "name": "Extract Strict Surface Repair",
+      "length": 10075,
+      "sha256": "841de634a7674b7ac595e020e21094148834a6ad5706f886cb345ca85f6a90e8",
+      "disabled": false
+    },
+    {
+      "name": "Extract Text Repair",
+      "length": 1049,
+      "sha256": "cbf37ebe94533a860bd164dbddf10df071f43b3002649edc77d99ebccde7a6b9",
+      "disabled": false
+    },
+    {
+      "name": "Final Surface Strict Re-Scan",
+      "length": 6295,
+      "sha256": "9d267387784bc046a953479fd08a4e85439ac960ff372f71e7c142c2ec61245a",
+      "disabled": false
+    },
+    {
+      "name": "Final Surface Strict Scan",
+      "length": 6197,
+      "sha256": "e49f1e62701fa06cd2e15be4debc3a65663b6b12ba5b0ca28e38424091a038fd",
+      "disabled": false
+    },
+    {
+      "name": "Final Text Cleanup",
+      "length": 1971,
+      "sha256": "46d4242f842cf6c2618146f31c233acbbb68df58c84d825d13821b31b5ee39a5",
+      "disabled": false
+    },
+    {
+      "name": "Find Memory Get Row",
+      "length": 506,
+      "sha256": "906c59b7e906eb19501d9429d23bd3c991528d97eb800b2b5a8272aef674b305",
+      "disabled": false
+    },
+    {
+      "name": "Find Memory Reuse Row",
+      "length": 552,
+      "sha256": "af3a243d969e7f210d49ef9fda2bb1a056bee08d5a71529bdd4966771e380b26",
+      "disabled": false
+    },
+    {
+      "name": "Format Local Response",
+      "length": 2088,
+      "sha256": "d423a67eac67bc92ce1075ead64e8f6f4389a17441686859c2638dcca025319f",
+      "disabled": false
+    },
+    {
+      "name": "Format Memory Get",
+      "length": 1540,
+      "sha256": "39e3d92eee8faec0e7e776100c4b1c973de60c9b575716d69b310f74d28d0d8e",
+      "disabled": false
+    },
+    {
+      "name": "Format Run Pipeline",
+      "length": 16169,
+      "sha256": "5dda2a0c8a5f3d874a7d19aa11bfb47b80c4c4a7b484916ff953ea99343f414a",
+      "disabled": false
+    },
+    {
+      "name": "Format Single Mode Message",
+      "length": 9725,
+      "sha256": "d9b474835a3f352b36a3a63327cc419e7a6bd927205f3a0e6bff84d49a8cfc46",
+      "disabled": false
+    },
+    {
+      "name": "Format Strict Reject Message",
+      "length": 2821,
+      "sha256": "35aa1f131f146cb631c67219b44ddc7606f21863c778243198ac58664303c422",
+      "disabled": false
+    },
+    {
+      "name": "Hard Final Cleanup",
+      "length": 250,
+      "sha256": "e7c4520e8b85568d2cadfb5166c9677db36c47f5a38a3200e1a5d3f6d10a0def",
+      "disabled": false
+    },
+    {
+      "name": "Normalize Run Output",
+      "length": 4918,
+      "sha256": "9e5deb327139429fade57fd093f523e69defc706f6f50fcc6bbefd587d0422e5",
+      "disabled": false
+    },
+    {
+      "name": "Parse Mode",
+      "length": 768,
+      "sha256": "1752a5d3a51febfe23e356e9309af3c701c27917016cc57906662b8db7c09b96",
+      "disabled": false
+    },
+    {
+      "name": "Postcheck Strict Claims",
+      "length": 3364,
+      "sha256": "a1bffe093a6a6fc8a282fad5f50f9e63ae1303d7a9f62fbdfa9376259e20b811",
+      "disabled": false
+    },
+    {
+      "name": "Prepare Memory Reuse",
+      "length": 2637,
+      "sha256": "896b66e6ad2ff80724c0d8341c6b40149ac89a40e4c7045c625e95a3da60c634",
+      "disabled": false
+    },
+    {
+      "name": "Prepare Memory Row Local",
+      "length": 514,
+      "sha256": "a04442ac3b59cc9e9067848020826cfbe1e5848f9ddee7d82d39a4175deb39de",
+      "disabled": false
+    },
+    {
+      "name": "Prepare Memory Row Run",
+      "length": 2094,
+      "sha256": "1388ef4eb1f11245606f724ac67511af847962fcb6610cbc69c520114796f901",
+      "disabled": false
+    },
+    {
+      "name": "Prepare Memory Row Single",
+      "length": 791,
+      "sha256": "ea14ff1d779ed667d8a9a0cdb3f5de9cc40bc90036ee7df47964ee3af4ffa3ac",
+      "disabled": false
+    },
+    {
+      "name": "Restore Content Score Data",
+      "length": 733,
+      "sha256": "9ca0c3a58c1d9c0c7471e3384ba4f45cd3df0e86a94bedb5b0881216c2d9a559",
+      "disabled": false
+    },
+    {
+      "name": "Restore Format Run Items",
+      "length": 1112,
+      "sha256": "9e17d7e465e3a48bc478aedc127fa4cfb970a49cb0e8e8215ce34b2378667a25",
+      "disabled": false
+    },
+    {
+      "name": "Restore Format Run Items After Lock",
+      "length": 1123,
+      "sha256": "a757f4c6c1b22136d0d8b8bc196e7bea1e9ddde5efc8709c0dfeb146c283c0aa",
+      "disabled": false
+    },
+    {
+      "name": "Restore Format Single Items After Lock",
+      "length": 137,
+      "sha256": "6bb5e7a64888fe33f1e2629d279f2d22ae9675ab02bbc343aac2ea8aa0019093",
+      "disabled": false
+    },
+    {
+      "name": "Restore Lock Context",
+      "length": 304,
+      "sha256": "dca7d5547bc1f357766afce7285969cd24b99f0e0b3632766e03e1778909b8d3",
+      "disabled": false
+    },
+    {
+      "name": "Restore Outline Data",
+      "length": 144,
+      "sha256": "53f66c1b73145ba32ad69b93399636a0ea2ca7499660cbcdf9cd83e840370462",
+      "disabled": false
+    },
+    {
+      "name": "Restore Postcheck Data",
+      "length": 382,
+      "sha256": "ed005dbb30cebd72f7299e275c32b812aba910c6b29bafeed442f62fedd44ecb",
+      "disabled": false
+    },
+    {
+      "name": "Restore Route Data",
+      "length": 88,
+      "sha256": "777e97d546e7eccf3eb0057d5fb9ea10e87d6e49d54753ab2a64bd419ab5c3e5",
+      "disabled": false
+    },
+    {
+      "name": "Restore Route Data Single",
+      "length": 88,
+      "sha256": "777e97d546e7eccf3eb0057d5fb9ea10e87d6e49d54753ab2a64bd419ab5c3e5",
+      "disabled": false
+    },
+    {
+      "name": "Restore SEO Strategy Data",
+      "length": 149,
+      "sha256": "bc33a44e7fcacfda60f3ef18340d14104388f698b55d7fab65165827a2c25f16",
+      "disabled": false
+    },
+    {
+      "name": "Route Command",
+      "length": 4363,
+      "sha256": "0a53aade52a7ca259a3598c04f933a42ffaa8a1789516bf307fe7ed1e99dc7f8",
+      "disabled": false
+    },
+    {
+      "name": "Run Extract Factcheck",
+      "length": 1579,
+      "sha256": "17ea7314295fb0298b1f1683908c1defbb23c24eb1ea1846fb5927aa98db6e37",
+      "disabled": false
+    },
+    {
+      "name": "Run Extract Outline",
+      "length": 1462,
+      "sha256": "d0b114996e05052fe18430835c3e79e6942fdc048153824685765fd01d490d3e",
+      "disabled": false
+    },
+    {
+      "name": "Run Extract SEO QA",
+      "length": 4161,
+      "sha256": "078e51a623c22ce2a50c6ed1a17afb812d651304bbb299567d729c3f42a40c16",
+      "disabled": false
+    },
+    {
+      "name": "Run Extract Text",
+      "length": 1441,
+      "sha256": "e8f86a1edd363d41afff8a0a622882f0fb8fe1b3fed57793d2b7a83fd38ca131",
+      "disabled": false
+    },
+    {
+      "name": "Store Worker Meta",
+      "length": 748,
+      "sha256": "ca7f66943e8aa5dc49d06051ef82a419d8139e500eb70ba0e9b0a7c5edb46374",
+      "disabled": false
+    },
+    {
+      "name": "Strict Cleanup",
+      "length": 8358,
+      "sha256": "db3156c15457ed8dd3a788281aa87ebc3afc140a2114d4bf33712a9e8f116180",
+      "disabled": false
+    },
+    {
+      "name": "Strict Risk Scanner",
+      "length": 4003,
+      "sha256": "84c1eddaa67f95c1d395c054f8ad7f4827db31f1d1f77094d48b8699d20910da",
+      "disabled": false
+    },
+    {
+      "name": "Table Sanity Check",
+      "length": 2610,
+      "sha256": "fb59dbd8cc110df24a4bf376f3b7f38d6050a8183a1b6d00ba343d490c5b7f99",
+      "disabled": false
+    },
+    {
+      "name": "Take First Item",
+      "length": 18,
+      "sha256": "9aa84f71d9bc813aa9e1e572030f7990c05e3b9f50f961f68bd7e5b8747bba88",
+      "disabled": false
+    },
+    {
+      "name": "Take First Single Item",
+      "length": 18,
+      "sha256": "9aa84f71d9bc813aa9e1e572030f7990c05e3b9f50f961f68bd7e5b8747bba88",
+      "disabled": false
+    },
+    {
+      "name": "TZ Strict Cleanup",
+      "length": 12044,
+      "sha256": "3d328466dc32c36b89c02a7afde29cef4c6dfc36e953d6966c399dda3f203da6",
+      "disabled": false
+    }
+  ],
+  "sandbox": [
+    {
+      "name": "Auto Fix Text",
+      "length": 224,
+      "sha256": "531f6ebdfcee2f7d43a504ccec8971342c006c4653238ee54a5e0b802b22ca95",
+      "disabled": false
+    },
+    {
+      "name": "Auto Polish Text",
+      "length": 3452,
+      "sha256": "30f481883810c43371f44583bcd5535abd0756c9dc80a24987bb969c8216478e",
+      "disabled": false
+    },
+    {
+      "name": "Build Factcheck Payload",
+      "length": 2764,
+      "sha256": "a9b6f3c1eb7fc8d8addb2c4cee5e1849f69e4960128e39bce0129bcd20aa7f10",
+      "disabled": false
+    },
+    {
+      "name": "Build Final Public Payload",
+      "length": 7762,
+      "sha256": "4724c4d6d9bd82e77a56a8a587c2c48c84f588473a53d9b122a8cbd1fadb1cb1",
+      "disabled": false
+    },
+    {
+      "name": "Build Outline Payload",
+      "length": 3637,
+      "sha256": "fdf7b1370e36043742a87e051a2869f947d24ec7e3c2b3e4a92ceb084d3b5e76",
+      "disabled": false
+    },
+    {
+      "name": "Build SEO Strategy Payload",
+      "length": 1527,
+      "sha256": "6235fa5628a8970d542adbf820e8d45b4b70bf123a893dca42f02575d146b75d",
+      "disabled": false
+    },
+    {
+      "name": "Build SEOQA Payload",
+      "length": 3628,
+      "sha256": "25ca5f19c5084c07685ccd6eda2f5ac474e789adb116de94720ea586f82b8f25",
+      "disabled": false
+    },
+    {
+      "name": "Build Single Payload",
+      "length": 6555,
+      "sha256": "f8ea368e2475278aab340afadff30204dcbd3011b72677bd9550017ebf466e5d",
+      "disabled": false
+    },
+    {
+      "name": "Build Single Text Repair Payload",
+      "length": 2502,
+      "sha256": "8adfd6f75fc542718c838361c236b5b54b703ef51208f6b1d24ee52ede73ad8f",
+      "disabled": false
+    },
+    {
+      "name": "Build Strict Surface Repair Payload",
+      "length": 8541,
+      "sha256": "1c9c511da8c8579445c4f0c07353a89b893e8077f4368bf66b9a0fef8e32a41c",
+      "disabled": false
+    },
+    {
+      "name": "Build Text Payload",
+      "length": 4611,
+      "sha256": "03274f0e7a4844654eaa624fb9b4e58f8980526dc612d473ab0c688bb8fa3703",
+      "disabled": false
+    },
+    {
+      "name": "Build Text Repair Payload",
+      "length": 2819,
+      "sha256": "aafd779562c68ed98fb733e95ec544bd5ad434dcb7894c9c86a0273ffcbf1d4e",
+      "disabled": false
+    },
+    {
+      "name": "Commercial Layer Text",
+      "length": 227,
+      "sha256": "79e4fb22641d5d258530e8038588e6a7f93a274e60fd0be98f41150db0d5948d",
+      "disabled": false
+    },
+    {
+      "name": "Compute Content Score",
+      "length": 6276,
+      "sha256": "84af8d66b53dea55644619c48103531e2a4d637eb20bfa81680d643ff07f36c3",
+      "disabled": false
+    },
+    {
+      "name": "Ensure FAQ Text",
+      "length": 221,
+      "sha256": "e73d34277f9df57ef0e4cf7f4335125de4881ab4b9c81925c101d0a028843f37",
+      "disabled": false
+    },
+    {
+      "name": "Extract Auto Polish Text",
+      "length": 1103,
+      "sha256": "17e0bfb41fd00e6fa5abd77f475b24b1fbd992a017fb429b0c06960a3a2ab702",
+      "disabled": false
+    },
+    {
+      "name": "Extract SEO Strategy",
+      "length": 1224,
+      "sha256": "bc4c257d5a92ce47f2a8e68b041e826c046e124ac04f296eb984c27aaa888637",
+      "disabled": false
+    },
+    {
+      "name": "Extract Single Text Repair",
+      "length": 2798,
+      "sha256": "23dde974387180a13da510851a12f72673b399da2a40b1747c67de8299a5a4ae",
+      "disabled": false
+    },
+    {
+      "name": "Extract Strict Surface Repair",
+      "length": 10075,
+      "sha256": "841de634a7674b7ac595e020e21094148834a6ad5706f886cb345ca85f6a90e8",
+      "disabled": false
+    },
+    {
+      "name": "Extract Text Repair",
+      "length": 1049,
+      "sha256": "cbf37ebe94533a860bd164dbddf10df071f43b3002649edc77d99ebccde7a6b9",
+      "disabled": false
+    },
+    {
+      "name": "Final Surface Strict Re-Scan",
+      "length": 6295,
+      "sha256": "9d267387784bc046a953479fd08a4e85439ac960ff372f71e7c142c2ec61245a",
+      "disabled": false
+    },
+    {
+      "name": "Final Surface Strict Scan",
+      "length": 6197,
+      "sha256": "e49f1e62701fa06cd2e15be4debc3a65663b6b12ba5b0ca28e38424091a038fd",
+      "disabled": false
+    },
+    {
+      "name": "Final Text Cleanup",
+      "length": 1971,
+      "sha256": "46d4242f842cf6c2618146f31c233acbbb68df58c84d825d13821b31b5ee39a5",
+      "disabled": false
+    },
+    {
+      "name": "Find Memory Get Row",
+      "length": 506,
+      "sha256": "906c59b7e906eb19501d9429d23bd3c991528d97eb800b2b5a8272aef674b305",
+      "disabled": false
+    },
+    {
+      "name": "Find Memory Reuse Row",
+      "length": 552,
+      "sha256": "af3a243d969e7f210d49ef9fda2bb1a056bee08d5a71529bdd4966771e380b26",
+      "disabled": false
+    },
+    {
+      "name": "Format Local Response",
+      "length": 2088,
+      "sha256": "d423a67eac67bc92ce1075ead64e8f6f4389a17441686859c2638dcca025319f",
+      "disabled": false
+    },
+    {
+      "name": "Format Memory Get",
+      "length": 1540,
+      "sha256": "39e3d92eee8faec0e7e776100c4b1c973de60c9b575716d69b310f74d28d0d8e",
+      "disabled": false
+    },
+    {
+      "name": "Format Run Pipeline",
+      "length": 16169,
+      "sha256": "5dda2a0c8a5f3d874a7d19aa11bfb47b80c4c4a7b484916ff953ea99343f414a",
+      "disabled": false
+    },
+    {
+      "name": "Format Single Mode Message",
+      "length": 9725,
+      "sha256": "d9b474835a3f352b36a3a63327cc419e7a6bd927205f3a0e6bff84d49a8cfc46",
+      "disabled": false
+    },
+    {
+      "name": "Format Strict Reject Message",
+      "length": 2821,
+      "sha256": "35aa1f131f146cb631c67219b44ddc7606f21863c778243198ac58664303c422",
+      "disabled": false
+    },
+    {
+      "name": "Hard Final Cleanup",
+      "length": 250,
+      "sha256": "e7c4520e8b85568d2cadfb5166c9677db36c47f5a38a3200e1a5d3f6d10a0def",
+      "disabled": false
+    },
+    {
+      "name": "Normalize Run Output",
+      "length": 4918,
+      "sha256": "9e5deb327139429fade57fd093f523e69defc706f6f50fcc6bbefd587d0422e5",
+      "disabled": false
+    },
+    {
+      "name": "Parse Mode",
+      "length": 768,
+      "sha256": "1752a5d3a51febfe23e356e9309af3c701c27917016cc57906662b8db7c09b96",
+      "disabled": false
+    },
+    {
+      "name": "Postcheck Strict Claims",
+      "length": 3364,
+      "sha256": "a1bffe093a6a6fc8a282fad5f50f9e63ae1303d7a9f62fbdfa9376259e20b811",
+      "disabled": false
+    },
+    {
+      "name": "Prepare Memory Reuse",
+      "length": 2637,
+      "sha256": "896b66e6ad2ff80724c0d8341c6b40149ac89a40e4c7045c625e95a3da60c634",
+      "disabled": false
+    },
+    {
+      "name": "Prepare Memory Row Local",
+      "length": 514,
+      "sha256": "a04442ac3b59cc9e9067848020826cfbe1e5848f9ddee7d82d39a4175deb39de",
+      "disabled": false
+    },
+    {
+      "name": "Prepare Memory Row Run",
+      "length": 2094,
+      "sha256": "1388ef4eb1f11245606f724ac67511af847962fcb6610cbc69c520114796f901",
+      "disabled": false
+    },
+    {
+      "name": "Prepare Memory Row Single",
+      "length": 791,
+      "sha256": "ea14ff1d779ed667d8a9a0cdb3f5de9cc40bc90036ee7df47964ee3af4ffa3ac",
+      "disabled": false
+    },
+    {
+      "name": "Restore Content Score Data",
+      "length": 733,
+      "sha256": "9ca0c3a58c1d9c0c7471e3384ba4f45cd3df0e86a94bedb5b0881216c2d9a559",
+      "disabled": false
+    },
+    {
+      "name": "Restore Format Run Items",
+      "length": 1112,
+      "sha256": "9e17d7e465e3a48bc478aedc127fa4cfb970a49cb0e8e8215ce34b2378667a25",
+      "disabled": false
+    },
+    {
+      "name": "Restore Format Run Items After Lock",
+      "length": 1123,
+      "sha256": "a757f4c6c1b22136d0d8b8bc196e7bea1e9ddde5efc8709c0dfeb146c283c0aa",
+      "disabled": false
+    },
+    {
+      "name": "Restore Format Single Items After Lock",
+      "length": 137,
+      "sha256": "6bb5e7a64888fe33f1e2629d279f2d22ae9675ab02bbc343aac2ea8aa0019093",
+      "disabled": false
+    },
+    {
+      "name": "Restore Lock Context",
+      "length": 304,
+      "sha256": "dca7d5547bc1f357766afce7285969cd24b99f0e0b3632766e03e1778909b8d3",
+      "disabled": false
+    },
+    {
+      "name": "Restore Outline Data",
+      "length": 144,
+      "sha256": "53f66c1b73145ba32ad69b93399636a0ea2ca7499660cbcdf9cd83e840370462",
+      "disabled": false
+    },
+    {
+      "name": "Restore Postcheck Data",
+      "length": 382,
+      "sha256": "ed005dbb30cebd72f7299e275c32b812aba910c6b29bafeed442f62fedd44ecb",
+      "disabled": false
+    },
+    {
+      "name": "Restore Route Data",
+      "length": 88,
+      "sha256": "777e97d546e7eccf3eb0057d5fb9ea10e87d6e49d54753ab2a64bd419ab5c3e5",
+      "disabled": false
+    },
+    {
+      "name": "Restore Route Data Single",
+      "length": 88,
+      "sha256": "777e97d546e7eccf3eb0057d5fb9ea10e87d6e49d54753ab2a64bd419ab5c3e5",
+      "disabled": false
+    },
+    {
+      "name": "Restore SEO Strategy Data",
+      "length": 149,
+      "sha256": "bc33a44e7fcacfda60f3ef18340d14104388f698b55d7fab65165827a2c25f16",
+      "disabled": false
+    },
+    {
+      "name": "Route Command",
+      "length": 4363,
+      "sha256": "0a53aade52a7ca259a3598c04f933a42ffaa8a1789516bf307fe7ed1e99dc7f8",
+      "disabled": false
+    },
+    {
+      "name": "Run Extract Factcheck",
+      "length": 1579,
+      "sha256": "17ea7314295fb0298b1f1683908c1defbb23c24eb1ea1846fb5927aa98db6e37",
+      "disabled": false
+    },
+    {
+      "name": "Run Extract Outline",
+      "length": 1462,
+      "sha256": "d0b114996e05052fe18430835c3e79e6942fdc048153824685765fd01d490d3e",
+      "disabled": false
+    },
+    {
+      "name": "Run Extract SEO QA",
+      "length": 4161,
+      "sha256": "078e51a623c22ce2a50c6ed1a17afb812d651304bbb299567d729c3f42a40c16",
+      "disabled": false
+    },
+    {
+      "name": "Run Extract Text",
+      "length": 1441,
+      "sha256": "e8f86a1edd363d41afff8a0a622882f0fb8fe1b3fed57793d2b7a83fd38ca131",
+      "disabled": false
+    },
+    {
+      "name": "Store Worker Meta",
+      "length": 748,
+      "sha256": "ca7f66943e8aa5dc49d06051ef82a419d8139e500eb70ba0e9b0a7c5edb46374",
+      "disabled": false
+    },
+    {
+      "name": "Strict Cleanup",
+      "length": 8358,
+      "sha256": "db3156c15457ed8dd3a788281aa87ebc3afc140a2114d4bf33712a9e8f116180",
+      "disabled": false
+    },
+    {
+      "name": "Strict Risk Scanner",
+      "length": 4003,
+      "sha256": "84c1eddaa67f95c1d395c054f8ad7f4827db31f1d1f77094d48b8699d20910da",
+      "disabled": false
+    },
+    {
+      "name": "Table Sanity Check",
+      "length": 2610,
+      "sha256": "fb59dbd8cc110df24a4bf376f3b7f38d6050a8183a1b6d00ba343d490c5b7f99",
+      "disabled": false
+    },
+    {
+      "name": "Take First Item",
+      "length": 18,
+      "sha256": "9aa84f71d9bc813aa9e1e572030f7990c05e3b9f50f961f68bd7e5b8747bba88",
+      "disabled": false
+    },
+    {
+      "name": "Take First Single Item",
+      "length": 18,
+      "sha256": "9aa84f71d9bc813aa9e1e572030f7990c05e3b9f50f961f68bd7e5b8747bba88",
+      "disabled": false
+    },
+    {
+      "name": "TZ Strict Cleanup",
+      "length": 12044,
+      "sha256": "3d328466dc32c36b89c02a7afde29cef4c6dfc36e953d6966c399dda3f203da6",
+      "disabled": false
+    }
+  ],
+  "note": "HOTFIX03 changes no code nodes — text node Status Complete only",
+  "target_text_only": "Status Complete"
+}

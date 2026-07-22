@@ -1,0 +1,376 @@
+{
+  "status": "gates_pass_proposal_ready",
+  "proposal": "PC14_FU03_HOTFIX03_PREFACE_GATING_PRODUCTION_PROPOSAL",
+  "decision": "PC14_FU03_HOTFIX03_PREFACE_GATING_READY_FOR_PRODUCTION_APPROVAL",
+  "all_pass": true,
+  "pass_count": 22,
+  "fail_count": 0,
+  "gates": [
+    {
+      "id": "G01",
+      "name": "production_active_true",
+      "pass": true,
+      "observed": true
+    },
+    {
+      "id": "G02",
+      "name": "production_nodes_101",
+      "pass": true,
+      "observed": 101
+    },
+    {
+      "id": "G03",
+      "name": "production_hotfix02_present",
+      "pass": true,
+      "observed": {
+        "Format_Strict_Reject_Message": {
+          "present": true,
+          "length": 2821,
+          "has_marker": true,
+          "is_hotfix02": true,
+          "sha256": "35aa1f131f146cb631c67219b44ddc7606f21863c778243198ac58664303c422"
+        },
+        "Parse_Mode": {
+          "present": true,
+          "length": 768,
+          "has_marker": true,
+          "is_hotfix02": true,
+          "sha256": "1752a5d3a51febfe23e356e9309af3c701c27917016cc57906662b8db7c09b96"
+        },
+        "memory_first_fanout": true,
+        "reject_fanout": [
+          "Prepare Memory Row Run",
+          "Take First Item"
+        ]
+      }
+    },
+    {
+      "id": "G04",
+      "name": "production_hotfix03_absent",
+      "pass": true,
+      "observed": {
+        "has_hotfix03_marker": false
+      }
+    },
+    {
+      "id": "G05",
+      "name": "production_updatedAt_captured",
+      "pass": true,
+      "observed": "2026-07-20T18:12:05.376Z"
+    },
+    {
+      "id": "G06",
+      "name": "sandbox_active_false",
+      "pass": true,
+      "observed": false
+    },
+    {
+      "id": "G07",
+      "name": "sandbox_hotfix03_present",
+      "pass": true,
+      "observed": {
+        "has_marker": true,
+        "outcome_gated": true,
+        "text_length": 1053
+      }
+    },
+    {
+      "id": "G08",
+      "name": "sandbox_selected_design_option_d_present",
+      "pass": true,
+      "observed": "HOTFIX03_DESIGN_D_OUTCOME_GATED_STATUS_COMPLETE"
+    },
+    {
+      "id": "G09",
+      "name": "sandbox_harness_12_12_already_passed",
+      "pass": true,
+      "observed": {
+        "score": "12/12",
+        "pass": true
+      }
+    },
+    {
+      "id": "G10",
+      "name": "target_node_exists_exactly_once_both",
+      "pass": true,
+      "observed": {
+        "production": 1,
+        "sandbox": 1
+      }
+    },
+    {
+      "id": "G11",
+      "name": "target_type_operation_compatible",
+      "pass": true,
+      "observed": {
+        "production": {
+          "type": "n8n-nodes-base.telegram",
+          "operation": "editMessageText",
+          "parse_mode": "HTML"
+        },
+        "sandbox": {
+          "type": "n8n-nodes-base.telegram",
+          "operation": "editMessageText",
+          "parse_mode": "HTML"
+        }
+      }
+    },
+    {
+      "id": "G12",
+      "name": "surrounding_topology_compatible",
+      "pass": true,
+      "observed": {
+        "production": {
+          "upstream": [
+            "Take First Item"
+          ],
+          "downstream": [
+            "Restore Format Run Items"
+          ]
+        },
+        "sandbox": {
+          "upstream": [
+            "Take First Item"
+          ],
+          "downstream": [
+            "Restore Format Run Items"
+          ]
+        },
+        "compatible": true
+      }
+    },
+    {
+      "id": "G13",
+      "name": "proposed_diff_only_status_complete_text",
+      "pass": true,
+      "observed": {
+        "text_only": true,
+        "nodeDelta": 0,
+        "connectionsUnchanged": true
+      }
+    },
+    {
+      "id": "G14",
+      "name": "credentials_unchanged_in_proposal",
+      "pass": true,
+      "observed": {
+        "equal": true
+      }
+    },
+    {
+      "id": "G15",
+      "name": "side_effect_states_unchanged_in_proposal",
+      "pass": true,
+      "observed": {
+        "equal": true
+      }
+    },
+    {
+      "id": "G16",
+      "name": "production_repair_remains_enabled",
+      "pass": true,
+      "observed": {
+        "disabled": false
+      }
+    },
+    {
+      "id": "G17",
+      "name": "hotfix02_preserved",
+      "pass": true,
+      "observed": {
+        "Format_Strict_Reject_Message": {
+          "present": true,
+          "length": 2821,
+          "has_marker": true,
+          "is_hotfix02": true,
+          "sha256": "35aa1f131f146cb631c67219b44ddc7606f21863c778243198ac58664303c422"
+        },
+        "Parse_Mode": {
+          "present": true,
+          "length": 768,
+          "has_marker": true,
+          "is_hotfix02": true,
+          "sha256": "1752a5d3a51febfe23e356e9309af3c701c27917016cc57906662b8db7c09b96"
+        },
+        "memory_first_fanout": true,
+        "reject_fanout": [
+          "Prepare Memory Row Run",
+          "Take First Item"
+        ]
+      }
+    },
+    {
+      "id": "G18",
+      "name": "hotfix01_preserved",
+      "pass": true,
+      "observed": {
+        "Restore Format Run Items": {
+          "present": true,
+          "length": 1112,
+          "is_hotfix01": true,
+          "sha256": "9e17d7e465e3a48bc478aedc127fa4cfb970a49cb0e8e8215ce34b2378667a25"
+        },
+        "Restore Format Run Items After Lock": {
+          "present": true,
+          "length": 1123,
+          "is_hotfix01": true,
+          "sha256": "a757f4c6c1b22136d0d8b8bc196e7bea1e9ddde5efc8709c0dfeb146c283c0aa"
+        }
+      }
+    },
+    {
+      "id": "G19",
+      "name": "pc07_preserved",
+      "pass": true,
+      "observed": "={{ $('Route Command').first().json.task_id }}"
+    },
+    {
+      "id": "G20",
+      "name": "tz_preserved",
+      "pass": true,
+      "observed": {
+        "present": true,
+        "structuredClone_count": 0,
+        "clonePlain": true,
+        "version": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+        "version_intact": true,
+        "code_length": 12044
+      }
+    },
+    {
+      "id": "G21",
+      "name": "send_telegram_run_unchanged",
+      "pass": true,
+      "observed": "={{ $json.telegram_text_safe }}"
+    },
+    {
+      "id": "G22",
+      "name": "raw_rollback_backup_plan_path_defined",
+      "pass": true,
+      "observed": "local/pc14-fu03-hotfix03-preface-gating-production-apply-2026-07-21/rollback/worker-before-hotfix03.raw.json"
+    }
+  ],
+  "production": {
+    "id": "p4mqb4VuPcemIDlC",
+    "name": "SEO Content Agent Beta.v14 - Worker",
+    "active": true,
+    "nodes": 101,
+    "fu03": 9,
+    "updatedAt": "2026-07-20T18:12:05.376Z",
+    "statusComplete": {
+      "has_hotfix03": false,
+      "text_length": 60,
+      "type": "n8n-nodes-base.telegram",
+      "operation": "editMessageText",
+      "parse_mode": "HTML"
+    },
+    "hotfix02": {
+      "Format_Strict_Reject_Message": {
+        "present": true,
+        "length": 2821,
+        "has_marker": true,
+        "is_hotfix02": true,
+        "sha256": "35aa1f131f146cb631c67219b44ddc7606f21863c778243198ac58664303c422"
+      },
+      "Parse_Mode": {
+        "present": true,
+        "length": 768,
+        "has_marker": true,
+        "is_hotfix02": true,
+        "sha256": "1752a5d3a51febfe23e356e9309af3c701c27917016cc57906662b8db7c09b96"
+      },
+      "memory_first_fanout": true,
+      "reject_fanout": [
+        "Prepare Memory Row Run",
+        "Take First Item"
+      ]
+    },
+    "hotfix01": {
+      "Restore Format Run Items": {
+        "present": true,
+        "length": 1112,
+        "is_hotfix01": true,
+        "sha256": "9e17d7e465e3a48bc478aedc127fa4cfb970a49cb0e8e8215ce34b2378667a25"
+      },
+      "Restore Format Run Items After Lock": {
+        "present": true,
+        "length": 1123,
+        "is_hotfix01": true,
+        "sha256": "a757f4c6c1b22136d0d8b8bc196e7bea1e9ddde5efc8709c0dfeb146c283c0aa"
+      }
+    },
+    "pc07": "={{ $('Route Command').first().json.task_id }}",
+    "tz": {
+      "present": true,
+      "structuredClone_count": 0,
+      "clonePlain": true,
+      "version": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+      "version_intact": true,
+      "code_length": 12044
+    },
+    "repair_disabled": false,
+    "sendTelegramExpr": "={{ $json.telegram_text_safe }}"
+  },
+  "sandbox": {
+    "id": "TFsK8NooFwryUVxi",
+    "name": "SEO Content Agent Beta.v14 - Worker.sandbox-pc14-fu03-hotfix03-preface",
+    "active": false,
+    "nodes": 101,
+    "fu03": 9,
+    "updatedAt": "2026-07-22T07:29:04.755Z",
+    "statusComplete": {
+      "has_hotfix03": true,
+      "outcome_gated": true,
+      "text_length": 1053,
+      "type": "n8n-nodes-base.telegram",
+      "operation": "editMessageText",
+      "parse_mode": "HTML"
+    },
+    "hotfix02": {
+      "Format_Strict_Reject_Message": {
+        "present": true,
+        "length": 2821,
+        "has_marker": true,
+        "is_hotfix02": true,
+        "sha256": "35aa1f131f146cb631c67219b44ddc7606f21863c778243198ac58664303c422"
+      },
+      "Parse_Mode": {
+        "present": true,
+        "length": 768,
+        "has_marker": true,
+        "is_hotfix02": true,
+        "sha256": "1752a5d3a51febfe23e356e9309af3c701c27917016cc57906662b8db7c09b96"
+      },
+      "memory_first_fanout": true,
+      "reject_fanout": [
+        "Prepare Memory Row Run",
+        "Take First Item"
+      ]
+    },
+    "hotfix01": {
+      "Restore Format Run Items": {
+        "present": true,
+        "length": 1112,
+        "is_hotfix01": true,
+        "sha256": "9e17d7e465e3a48bc478aedc127fa4cfb970a49cb0e8e8215ce34b2378667a25"
+      },
+      "Restore Format Run Items After Lock": {
+        "present": true,
+        "length": 1123,
+        "is_hotfix01": true,
+        "sha256": "a757f4c6c1b22136d0d8b8bc196e7bea1e9ddde5efc8709c0dfeb146c283c0aa"
+      }
+    },
+    "pc07": "={{ $('Route Command').first().json.task_id }}",
+    "tz": {
+      "present": true,
+      "structuredClone_count": 0,
+      "clonePlain": true,
+      "version": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+      "version_intact": true,
+      "code_length": 12044
+    },
+    "repair_disabled": true,
+    "note": "sandbox disabled side-effect/repair states are sandbox-only and must NOT be copied to production"
+  }
+}

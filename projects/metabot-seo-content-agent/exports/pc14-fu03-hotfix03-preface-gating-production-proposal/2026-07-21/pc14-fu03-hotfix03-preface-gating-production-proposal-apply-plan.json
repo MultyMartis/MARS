@@ -1,0 +1,27 @@
+{
+  "status": "plan_only_not_executed",
+  "task": "PC14_FU03_HOTFIX03_PREFACE_GATING_PRODUCTION_APPLY",
+  "steps": [
+    "1. fresh GET production (p4mqb4VuPcemIDlC)",
+    "2. fresh GET sandbox (TFsK8NooFwryUVxi)",
+    "3. save raw rollback backup under local/pc14-fu03-hotfix03-preface-gating-production-apply-2026-07-21/rollback/worker-before-hotfix03.raw.json",
+    "4. transform production raw only: replace Status Complete.parameters.text from sandbox; node delta 0; connections unchanged",
+    "5. pre-PUT validation: only target node changed; no side-effect/credential changes; HOTFIX02/HOTFIX01/PC-07/TZ preserved; active true preserved; Run Strict Surface Repair remains enabled",
+    "6. PUT production only if gates pass (operator-approved)",
+    "7. re-GET production",
+    "8. verify HOTFIX03 marker present and only target delta",
+    "9. run offline HF03 harness against production-after (expect 12/12 PASS)",
+    "10. no operator smoke inside apply",
+    "11. create apply evidence/report",
+    "12. separate apply persist",
+    "13. then operator smoke (PC14_FU03_HOTFIX03_OPERATOR_SMOKE)"
+  ],
+  "targetNode": "Status Complete",
+  "targetField": "parameters.text",
+  "nodeDelta": 0,
+  "connectionChanges": false,
+  "doNotDisableRepairOnProduction": true,
+  "doNotCopySandboxSideEffectDisabledStates": true,
+  "doNotCopySandboxActiveFalse": true,
+  "intakeAdmin": "untouched"
+}

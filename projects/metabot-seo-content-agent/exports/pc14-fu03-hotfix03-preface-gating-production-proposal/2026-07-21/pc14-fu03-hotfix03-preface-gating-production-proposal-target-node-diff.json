@@ -1,0 +1,29 @@
+{
+  "node": "Status Complete",
+  "field": "parameters.text",
+  "type": "n8n-nodes-base.telegram",
+  "operation": "editMessageText",
+  "parse_mode": "HTML",
+  "production_before_text": "=✅ Задача завершена\n\nРезультат готов. Отправляю материалы...",
+  "sandbox_source_text": "={{ /* v1-pc14-fu03-hotfix03-preface-gating */ (() => {\n  const j = $json || {};\n  const ms = String(j.memory_status || '').trim();\n  const status = String(j.status || j.strict_surface_status || '').trim();\n  const blocked =\n    !!j.blocked_diagnostic ||\n    ms === 'blocked_dirty' ||\n    ms === 'blocked-dirty' ||\n    status === 'blocked_dirty' ||\n    status === 'blocked-dirty';\n  if (blocked) {\n    return \"⚠️ Задача обработана, но итоговые материалы заблокированы строгой проверкой. Отправляю диагностическое сообщение...\";\n  }\n  if (ms === 'failed' || ms === 'error' || status === 'error' || status === 'failed') {\n    return \"⚠️ Обработка завершена с ошибкой.\\n\\nПроверьте диагностику / статус.\";\n  }\n  if (\n    ms === 'approved_clean' ||\n    ms === 'repair_attempted_clean' ||\n    status === 'clean' ||\n    status === 'approved_clean' ||\n    status === 'repair_attempted_clean'\n  ) {\n    return \"✅ Задача завершена\\n\\nРезультат готов. Отправляю материалы...\";\n  }\n  return \"Задача обработана. Проверяю итоговый статус перед отправкой...\";\n})() }}",
+  "production_before_length": 60,
+  "proposed_length": 1053,
+  "production_before_sha256": "c57f9c8fff9be2d22857e0de5781e8cd31f5b2414b4a69c67f428e1286edfc6a",
+  "proposed_sha256": "8205d01202f19d88b5bfe80568ac453bf7a9d8007e363a68ee186a221bbfb7dc",
+  "has_hotfix03_marker_in_source": true,
+  "has_hotfix03_marker_in_production": false,
+  "outcome_gated_expression_present": true,
+  "selected_option": "HOTFIX03_DESIGN_D_OUTCOME_GATED_STATUS_COMPLETE",
+  "version": "v1-pc14-fu03-hotfix03-preface-gating",
+  "changed": [
+    {
+      "name": "Status Complete",
+      "field": "parameters.text",
+      "textLengthBefore": 60,
+      "textLengthAfter": 1053,
+      "hasHotfix03MarkerAfter": true
+    }
+  ],
+  "non_target_nodes_changed": [],
+  "text_only_change_confirmed": true
+}

@@ -1,0 +1,55 @@
+{
+  "status": "proposal_risk_assessment",
+  "risks": [
+    {
+      "id": "R01",
+      "risk": "False success preface on blocked-dirty path remains if HOTFIX03 not applied",
+      "likelihood": "high_without_apply",
+      "impact": "operator_confusion_false_complete",
+      "mitigation": "apply Option D Status Complete gating after approval"
+    },
+    {
+      "id": "R02",
+      "risk": "Accidental copy of sandbox disabled side-effect / repair states to production",
+      "likelihood": "medium_if_naive_copy",
+      "impact": "production_side_effects_disabled",
+      "mitigation": "text-only transform; explicit do-not-copy disabled states; gate G15/G16"
+    },
+    {
+      "id": "R03",
+      "risk": "HOTFIX02 regression during Status Complete text replace",
+      "likelihood": "low",
+      "impact": "Telegram 400 entity parse returns",
+      "mitigation": "do not touch Format Strict Reject Message / Parse Mode / Send Telegram Run; HF03-H07"
+    },
+    {
+      "id": "R04",
+      "risk": "HOTFIX01 restore / PC-07 / TZ regression",
+      "likelihood": "low",
+      "impact": "lock/restore failures",
+      "mitigation": "preserve-only gates G18-G20; HF03-H08/H09"
+    },
+    {
+      "id": "R05",
+      "risk": "Topology / connection drift during apply",
+      "likelihood": "low",
+      "impact": "status chain break",
+      "mitigation": "node delta 0; connections unchanged validation; HF03-H11"
+    },
+    {
+      "id": "R06",
+      "risk": "Secret leakage in evidence",
+      "likelihood": "low",
+      "impact": "credential exposure",
+      "mitigation": "sanitize exports; secret scan PASS_WITH_REVIEW_LABELS"
+    },
+    {
+      "id": "R07",
+      "risk": "Blind apply if production already has HOTFIX03 or drifted",
+      "likelihood": "blocked_by_gates",
+      "impact": "unsafe overwrite",
+      "mitigation": "ALREADY_APPLIED / DRIFT_BLOCKED stop labels"
+    }
+  ],
+  "residual_after_proposal": "operator_approval_required_before_PUT"
+}
