@@ -1,0 +1,42 @@
+{
+  "guards_id": "PC14_FU03_HOTFIX03_HOTFIX02_REGRESSION_GUARDS",
+  "must_remain_intact": [
+    {
+      "id": "G-HF02-01",
+      "item": "Format Strict Reject Message plain-safe formatter (v1-pc14-fu03-hotfix02-format-strict-reject-plain or successor marker)"
+    },
+    {
+      "id": "G-HF02-02",
+      "item": "Parse Mode plain-safe sanitizer including * neutralization (v1-pc14-fu03-hotfix02-parse-mode-plain or successor)"
+    },
+    {
+      "id": "G-HF02-03",
+      "item": "Reject fan-out memory-first (Prepare Memory before Take First / send chain)"
+    },
+    {
+      "id": "G-HF02-04",
+      "item": "Send Telegram Run text={{ $json.telegram_text_safe }} unless separately chartered"
+    },
+    {
+      "id": "G-HF02-05",
+      "item": "Operator-visible reject body raw * count remains 0 on blocked-dirty fixtures"
+    },
+    {
+      "id": "G-HF01-01",
+      "item": "Restore Format Run Items + Restore Format Run Items After Lock"
+    },
+    {
+      "id": "G-PC07-01",
+      "item": "Close Lock Before Sending PC-07 task_id mapping"
+    },
+    {
+      "id": "G-TZ-01",
+      "item": "TZ HOTFIX01 preserved"
+    }
+  ],
+  "hotfix03_allowed_delta": [
+    "Status Complete text / expression only (preferred)",
+    "Optional Status Final text only if proven false-success",
+    "Documented Option C suppress if D fails"
+  ]
+}

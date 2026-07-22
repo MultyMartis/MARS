@@ -1,0 +1,42 @@
+{
+  "design_id": "PC14_FU03_HOTFIX03_PREFACE_GATING_DESIGN",
+  "based_on": "PC14_FU03_HOTFIX02_OPERATOR_SMOKE_PASS",
+  "hotfix02_operator_smoke_commit": "1343b676566f2a9be58c3c565200b4e3b58add77",
+  "hotfix02_operator_smoke_commit_short": "1343b676",
+  "hotfix02_production_apply_commit_short": "65642ef2",
+  "production_worker_id": "p4mqb4VuPcemIDlC",
+  "smoke_task_id": "seo20260720182937io0c5y",
+  "open_issue": "PC14_FU03_HOTFIX03_PREFACE_GATING",
+  "decision": "PC14_FU03_HOTFIX03_PREFACE_GATING_DESIGN_READY_FOR_SANDBOX",
+  "recommended_next": "PC14_FU03_HOTFIX03_PREFACE_GATING_SANDBOX_IMPLEMENTATION",
+  "final_status": "COMPLETE — PC14-FU03 HOTFIX03 preface gating design ready",
+  "selected_option_id": "HOTFIX03_DESIGN_D_OUTCOME_GATED_STATUS_COMPLETE",
+  "fallback_option_id": "HOTFIX03_DESIGN_C_SUPPRESS_SUCCESS_PREFACE",
+  "node_delta_expected": 0,
+  "primary_target_node": "Status Complete",
+  "secondary_review_node": "Status Final",
+  "preserve": [
+    "HOTFIX02 Format Strict Reject Message plain-safe logic",
+    "HOTFIX02 Parse Mode plain-safe sanitizer",
+    "HOTFIX02 memory-first reject fan-out",
+    "HOTFIX01 Restore Format Run Items",
+    "HOTFIX01 Restore Format Run Items After Lock",
+    "PC-07 Close Lock Before Sending task_id mapping",
+    "TZ HOTFIX01",
+    "Send Telegram Run text expression unless proven necessary",
+    "credentials and side-effect enabled states",
+    "Intake x8EbTGKNdlBprLvk",
+    "Admin AR6QxGt8ZKH0xG2T",
+    "production Worker active true after later apply wave"
+  ],
+  "do_not_change_in_hotfix03": [
+    "strict scanning",
+    "repair loop bodies",
+    "content generation",
+    "HOTFIX02 sanitizer logic except status-metadata consistency if required",
+    "live production during design"
+  ],
+  "evidence_mode": "committed_sanitized_docs_only",
+  "live_n8n_get": false,
+  "secret_scan": "PASS_WITH_REVIEW_LABELS"
+}

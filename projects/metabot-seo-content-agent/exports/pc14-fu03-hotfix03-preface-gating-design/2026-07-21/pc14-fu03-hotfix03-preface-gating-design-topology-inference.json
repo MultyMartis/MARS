@@ -1,0 +1,70 @@
+{
+  "inference_id": "PC14_FU03_HOTFIX03_TOPOLOGY_INFERENCE",
+  "evidence_sources": [
+    "exports/pc14-fu03-hotfix02-send-branch-design/2026-07-20/pc14-fu03-hotfix02-send-branch-current-send-path-analysis.json",
+    "exports/pc14-fu03-hotfix02-send-branch-design/2026-07-20/pc14-fu03-hotfix02-send-branch-current-preface-analysis.json",
+    "exports/pc14-fu03-hotfix02-operator-smoke/2026-07-21/pc14-fu03-hotfix02-operator-smoke-telegram-transcript.sanitized.json",
+    "reports/REPORT-metabot-seo-agent-v14-pc14-fu03-hotfix02-operator-smoke.md",
+    "reports/REPORT-metabot-seo-agent-v14-pc14-fu03-hotfix02-send-branch-design.md"
+  ],
+  "live_n8n_get": false,
+  "shared_send_chain_inferred": [
+    "Format Run Pipeline OR Format Strict Reject Message",
+    "Take First Item",
+    "Status Complete",
+    "Restore Format Run Items",
+    "Close Lock Before Sending",
+    "Restore Format Run Items After Lock",
+    "Parse Mode",
+    "Send Telegram Run",
+    "Restore Lock Context"
+  ],
+  "nodes": {
+    "Status Complete": {
+      "role": "premature_success_preface",
+      "operation": "editMessageText",
+      "parse_mode": "HTML",
+      "text": "✅ Задача завершена / Результат готов. Отправляю материалы...",
+      "upstream_of_final_clean_reject_split": false,
+      "note": "Runs AFTER Format* selection (outcome known on item) but BEFORE lock/parse/send; static text ignores outcome",
+      "reject_path_reaches_node": true,
+      "runs_before_final_outcome_send": true
+    },
+    "Status Final": {
+      "role": "progress_status",
+      "operation": "editMessageText",
+      "parse_mode": "HTML",
+      "text": "⏳ Задача выполняется / Этап: 📦 Готовим итоговый результат...",
+      "false_success_claim": false
+    },
+    "Format Strict Reject Message": {
+      "role": "reject_diagnostic_builder",
+      "emits": ["telegram_text", "memory_status=blocked_dirty", "blocked_diagnostic", "task_id"]
+    },
+    "Parse Mode": {
+      "role": "HOTFIX02_plain_safe_sanitizer",
+      "downstream_of_status_complete": true
+    },
+    "Send Telegram Run": {
+      "role": "final_materials_or_reject_send",
+      "downstream_of_status_complete": true
+    },
+    "Close Lock Before Sending": {
+      "role": "lock_close",
+      "sequenced_after_status_complete_via_restore": true
+    },
+    "Prepare Memory Row Run / Append Memory Run": {
+      "role": "memory_append",
+      "hotfix02_reject_fanout": "memory-first before Take First / send chain"
+    }
+  },
+  "hotfix02_post_state_note": "HOTFIX02 changed Format Strict Reject, Parse Mode, and reject fan-out; Status Complete/Final intentionally unchanged",
+  "safe_unknown": [
+    "Exact live production node UUIDs / connection JSON after HOTFIX02 without fresh GET",
+    "Exact Format Run Pipeline clean-path field names for memory_status on clean items",
+    "Whether Status Complete text is literal or expression in current production JSON",
+    "Whether any parallel branch also edits the same status message_id",
+    "n8n execution IDs for smoke task seo20260720182937io0c5y"
+  ],
+  "design_implication": "Option D can gate on Format* fields at Status Complete without moving the node; validate predicates on fresh production export in sandbox task"
+}

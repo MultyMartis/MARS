@@ -1,0 +1,87 @@
+{
+  "next_task": "PC14_FU03_HOTFIX03_PREFACE_GATING_SANDBOX_IMPLEMENTATION",
+  "design_decision": "PC14_FU03_HOTFIX03_PREFACE_GATING_DESIGN_READY_FOR_SANDBOX",
+  "selected_option": "HOTFIX03_DESIGN_D_OUTCOME_GATED_STATUS_COMPLETE",
+  "fallback_option": "HOTFIX03_DESIGN_C_SUPPRESS_SUCCESS_PREFACE",
+  "steps": [
+    {
+      "step": 1,
+      "action": "Fresh production Worker read-only export",
+      "target": "p4mqb4VuPcemIDlC",
+      "name": "SEO Content Agent Beta.v14 - Worker",
+      "note": "Must include post-HOTFIX02 Status Complete text, connections, Format Strict Reject, Parse Mode, Close Lock, restores"
+    },
+    {
+      "step": 2,
+      "action": "Clone production Worker to inactive sandbox",
+      "suggested_name": "SEO Content Agent Beta.v14 - Worker.sandbox-pc14-fu03-hotfix03-preface",
+      "active": false,
+      "do_not_reuse": "TMhJbxtk6uUPDpEb (HOTFIX02 sandbox) as patch baseline unless fresh-verified identical to production"
+    },
+    {
+      "step": 3,
+      "action": "Disable side-effect nodes in sandbox",
+      "except": "explicitly mocked/local harness nodes",
+      "disable_examples": [
+        "Telegram live sends (or mock)",
+        "OpenRouter HTTP",
+        "Google Sheets writes",
+        "Run Strict Surface Repair unless harness mocks it"
+      ]
+    },
+    {
+      "step": 4,
+      "action": "Apply Option D to Status Complete only (preferred)",
+      "change": "Outcome-gated editMessageText wording; keep connections; node delta 0",
+      "fallback": "If field predicates unsafe after fresh read → Option C suppress success preface"
+    },
+    {
+      "step": 5,
+      "action": "Run offline harness",
+      "see": "pc14-fu03-hotfix03-preface-gating-design-harness-plan.json"
+    },
+    {
+      "step": 6,
+      "action": "Persist sanitized sandbox evidence + report",
+      "no_production_apply": true,
+      "no_live_telegram": true
+    }
+  ],
+  "proposed_target_nodes": [
+    {
+      "name": "Status Complete",
+      "role": "primary — gate preface wording by outcome",
+      "expected_edit": true
+    },
+    {
+      "name": "Status Final",
+      "role": "review only — leave unless it claims success",
+      "expected_edit": false
+    }
+  ],
+  "do_not_touch_unless_necessary": [
+    "Format Strict Reject Message",
+    "Parse Mode",
+    "Send Telegram Run",
+    "Restore Format Run Items",
+    "Restore Format Run Items After Lock",
+    "Close Lock Before Sending",
+    "Prepare Memory Row Run",
+    "Append Memory Run",
+    "strict scanner",
+    "repair loop",
+    "generation nodes",
+    "Intake",
+    "Admin"
+  ],
+  "node_delta_expected": 0,
+  "credentials_policy": "preserve from production clone; do not rotate",
+  "side_effect_states_policy": "sandbox may disable; production apply must restore production-correct enabled states from fresh baseline",
+  "live_calls_forbidden_in_implementation_task": [
+    "Telegram",
+    "OpenRouter",
+    "Google Sheets",
+    "/run retry",
+    "production mutation"
+  ]
+}

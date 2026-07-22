@@ -1,0 +1,103 @@
+{
+  "design_id": "PC14_FU03_HOTFIX03_PREFACE_GATING_DESIGN",
+  "risks": [
+    {
+      "id": "R1",
+      "risk": "Duplicate Telegram status messages (status edit + final send both sounding like completion)",
+      "likelihood": "medium",
+      "impact": "medium",
+      "mitigation": "Keep Status Complete as single editMessageText; gate wording only; do not add new Telegram send for preface"
+    },
+    {
+      "id": "R2",
+      "risk": "Losing operator feedback if success preface removed on clean path",
+      "likelihood": "low_if_D",
+      "impact": "low",
+      "mitigation": "Option D retains success wording for clean/repair-clean; Option C documents UX loss as acceptable trade"
+    },
+    {
+      "id": "R3",
+      "risk": "Blocking clean-path final materials by accidental connection change",
+      "likelihood": "low_if_delta0",
+      "impact": "high",
+      "mitigation": "Prefer expression-only change on Status Complete; no shared send-chain reorder in selected design"
+    },
+    {
+      "id": "R4",
+      "risk": "Reject path not sending diagnostic",
+      "likelihood": "low",
+      "impact": "critical",
+      "mitigation": "Do not touch Format Strict Reject / Parse Mode / Send Telegram Run; harness must assert reject send payload still produced"
+    },
+    {
+      "id": "R5",
+      "risk": "Memory append skipped if connections reordered incorrectly",
+      "likelihood": "low_for_D",
+      "impact": "high",
+      "mitigation": "Do not change HOTFIX02 memory-first fan-out; harness checks Prepare Memory / Append Memory reachability"
+    },
+    {
+      "id": "R6",
+      "risk": "Close Lock skipped if Status Complete removed as sequencing bridge",
+      "likelihood": "medium_if_node_deleted",
+      "impact": "critical",
+      "mitigation": "Keep Status Complete node and connections; change text only; never delete without rewiring Restore input"
+    },
+    {
+      "id": "R7",
+      "risk": "Breaking HOTFIX02 parse-safe reject",
+      "likelihood": "low",
+      "impact": "critical",
+      "mitigation": "Regression guards: raw * = 0; plain-safe template; Parse Mode version marker preserved"
+    },
+    {
+      "id": "R8",
+      "risk": "Breaking PC-07 Close Lock task_id mapping",
+      "likelihood": "low",
+      "impact": "critical",
+      "mitigation": "Do not edit Close Lock Before Sending expression; structural equality check in harness"
+    },
+    {
+      "id": "R9",
+      "risk": "Breaking Sheets status transitions / row writes",
+      "likelihood": "low",
+      "impact": "high",
+      "mitigation": "No Sheets node edits; lock/memory nodes disabled in sandbox and only structurally asserted"
+    },
+    {
+      "id": "R10",
+      "risk": "Changing /get /locks /health Admin behavior",
+      "likelihood": "very_low",
+      "impact": "high",
+      "mitigation": "Intake/Admin out of scope; Worker-only sandbox"
+    },
+    {
+      "id": "R11",
+      "risk": "Sandbox disabled side-effect states copied to production",
+      "likelihood": "medium_without_gates",
+      "impact": "critical",
+      "mitigation": "Production apply gates: re-enable side-effects from fresh production baseline; never copy disabled states"
+    },
+    {
+      "id": "R12",
+      "risk": "n8n parallel branch timing: status edit races final send wording",
+      "likelihood": "low",
+      "impact": "medium",
+      "mitigation": "Keep Status Complete on linear shared chain before Parse Mode/Send; do not fan-out Status Complete parallel to Format*"
+    },
+    {
+      "id": "R13",
+      "risk": "Wrong gating predicate marks clean as reject (or reverse)",
+      "likelihood": "medium",
+      "impact": "high",
+      "mitigation": "Harness fixtures for clean, repair-clean, blocked-dirty, error; fallback to Option C if predicates ambiguous after fresh production read"
+    },
+    {
+      "id": "R14",
+      "risk": "HTML entity issues in new Status Complete text",
+      "likelihood": "low",
+      "impact": "medium",
+      "mitigation": "Keep status edits HTML-safe; avoid raw <>& and Markdown markers in status strings; do not switch Status Complete to Markdown"
+    }
+  ]
+}

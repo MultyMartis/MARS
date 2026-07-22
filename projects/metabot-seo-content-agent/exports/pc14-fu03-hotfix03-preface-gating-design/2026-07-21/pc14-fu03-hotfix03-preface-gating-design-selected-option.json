@@ -1,0 +1,79 @@
+{
+  "selected_option_id": "HOTFIX03_DESIGN_D_OUTCOME_GATED_STATUS_COMPLETE",
+  "fallback_option_id": "HOTFIX03_DESIGN_C_SUPPRESS_SUCCESS_PREFACE",
+  "design_label": "PC14_FU03_HOTFIX03_PREFACE_GATING_DESIGN",
+  "patch_class": "telegram_status_preface_gating",
+  "node_delta_expected": 0,
+  "primary_change": {
+    "node": "Status Complete",
+    "operation": "editMessageText",
+    "parse_mode": "HTML",
+    "current_static_text": "✅ Задача завершена / Результат готов. Отправляю материалы...",
+    "proposed_change": "Replace static success text with outcome-aware expression (or equivalent Code-free expression) that selects wording from item fields after Take First Item",
+    "keep_position": true,
+    "keep_as_sequencing_bridge": true
+  },
+  "outcome_wording_policy": {
+    "clean": {
+      "allowed": true,
+      "example": "✅ Задача завершена\n\nРезультат готов. Отправляю материалы..."
+    },
+    "repair_clean": {
+      "allowed": true,
+      "example": "✅ Задача завершена\n\nРезультат готов. Отправляю материалы..."
+    },
+    "blocked_dirty_reject": {
+      "allowed": true,
+      "forbid_success_materials_claim": true,
+      "example_candidates": [
+        "⛔ Задача завершена с блокировкой\n\nИтоговые материалы заблокированы. Отправляю диагностику…",
+        "⛔ Обработка завершена\n\nSTRICT QA блокирует итоговые материалы. Готовлю диагностику…"
+      ]
+    },
+    "error": {
+      "allowed": true,
+      "forbid_success_materials_claim": true,
+      "example": "⚠️ Обработка завершена с ошибкой\n\nПроверьте диагностику / статус."
+    }
+  },
+  "gating_signals_expected_from_committed_evidence": [
+    {
+      "field": "memory_status",
+      "reject_value": "blocked_dirty",
+      "source": "Format Strict Reject Message"
+    },
+    {
+      "field": "blocked_diagnostic",
+      "reject_presence": true,
+      "source": "Format Strict Reject Message"
+    },
+    {
+      "field": "message_type / send_policy",
+      "note": "May exist after HOTFIX02 Parse Mode metadata; Status Complete is upstream of Parse Mode — prefer Format* fields at Status Complete",
+      "safe_unknown": true
+    }
+  ],
+  "secondary_node_policy": {
+    "node": "Status Final",
+    "current_role": "progress editMessageText — preparing final result",
+    "hotfix03_default": "leave unchanged unless fresh production read shows it also claims success",
+    "smoke_ok_progress_text": "⏳ Задача выполняется / Этап: 📦 Готовим итоговый результат..."
+  },
+  "explicit_non_goals": [
+    "Do not change Format Strict Reject Message HOTFIX02 plain-safe body logic except status-metadata consistency if absolutely required",
+    "Do not change Parse Mode HOTFIX02 sanitizer unless required for status message safety (Status Complete already HTML)",
+    "Do not change Send Telegram Run expression unless necessary",
+    "Do not reorder Close Lock / Restore / memory fan-out unless Option D fails and Option A is re-selected",
+    "Do not touch strict scanner / repair / generation",
+    "Do not mutate Intake or Admin",
+    "Do not activate sandbox"
+  ],
+  "sandbox_first": true,
+  "production_apply_only_after": [
+    "fresh production Worker read",
+    "inactive sandbox clone + harness PASS",
+    "HOTFIX02 regression guards PASS",
+    "operator approval"
+  ],
+  "decision": "PC14_FU03_HOTFIX03_PREFACE_GATING_DESIGN_READY_FOR_SANDBOX"
+}

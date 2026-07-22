@@ -1,0 +1,76 @@
+{
+  "design_id": "PC14_FU03_HOTFIX03_PREFACE_GATING_DESIGN",
+  "options": [
+    {
+      "id": "HOTFIX03_DESIGN_A_MOVE_SUCCESS_PREFACE_DOWNSTREAM",
+      "summary": "Move Status Complete (or success acknowledgement) downstream so it only runs after final clean/repair-clean branch is confirmed and preferably after send-prep knows outcome.",
+      "pros": [
+        "Strong sequencing guarantee against premature success",
+        "Keeps success UX for clean path"
+      ],
+      "cons": [
+        "Connection reorder risk: Status Complete is currently a sequencing bridge into Restore → Close Lock → Parse Mode → Send",
+        "May require duplicate status nodes or extra connections",
+        "Higher risk to lock/memory chain than in-place wording gate"
+      ],
+      "node_delta_estimate": "0 to +1",
+      "verdict": "defer_as_secondary — only if Option D field gating fails in sandbox"
+    },
+    {
+      "id": "HOTFIX03_DESIGN_B_NEUTRAL_PROCESSING_TEXT",
+      "summary": "Replace success preface with neutral processing text for all paths (e.g. «Задача обработана. Проверяю итоговые материалы…»).",
+      "pros": [
+        "Simple static text change",
+        "Node delta 0",
+        "Stops false ✅ complete claim"
+      ],
+      "cons": [
+        "On reject path, neutral «проверяю материалы» can still mislead if materials are already blocked",
+        "Does not give outcome-accurate UX",
+        "Weaker than outcome-gated wording"
+      ],
+      "node_delta_estimate": 0,
+      "verdict": "partial — absorb only if D cannot read outcome fields safely"
+    },
+    {
+      "id": "HOTFIX03_DESIGN_C_SUPPRESS_SUCCESS_PREFACE",
+      "summary": "Suppress success preface entirely; let final materials or reject diagnostic be the first final-status operator message (Status Final progress may remain).",
+      "pros": [
+        "Minimal behavioral risk",
+        "Eliminates false success claim",
+        "Node delta 0 if Status Complete becomes no-op / honest progress / skipped edit"
+      ],
+      "cons": [
+        "Clean path loses early «готово» acknowledgement before materials",
+        "Must not break sequencing if Status Complete is required as connection bridge"
+      ],
+      "node_delta_estimate": 0,
+      "verdict": "fallback — preferred if D gating proves unsafe"
+    },
+    {
+      "id": "HOTFIX03_DESIGN_D_OUTCOME_GATED_STATUS_COMPLETE",
+      "summary": "Split final status messages by outcome while keeping Status Complete position: clean/repair-clean → success wording; blocked-dirty/reject → blocked/reject wording only; errors → error wording only.",
+      "pros": [
+        "Matches preferred UX",
+        "Outcome already known at Status Complete (after Format* / Take First)",
+        "Format Strict Reject already emits memory_status=blocked_dirty and blocked_diagnostic",
+        "Preserves Restore/Close Lock sequencing bridge",
+        "Node delta 0 expected (expression-only on Status Complete text)"
+      ],
+      "cons": [
+        "Must define reliable field predicates for clean vs reject vs error",
+        "Must keep HTML parse_mode safe for status edits",
+        "Must not alter HOTFIX02 reject send path"
+      ],
+      "node_delta_estimate": 0,
+      "verdict": "SELECTED"
+    }
+  ],
+  "selection_preference_order": [
+    "HOTFIX03_DESIGN_D_OUTCOME_GATED_STATUS_COMPLETE",
+    "HOTFIX03_DESIGN_C_SUPPRESS_SUCCESS_PREFACE",
+    "HOTFIX03_DESIGN_B_NEUTRAL_PROCESSING_TEXT",
+    "HOTFIX03_DESIGN_A_MOVE_SUCCESS_PREFACE_DOWNSTREAM"
+  ],
+  "rationale": "Committed topology shows Status Complete already runs after Format* where outcome fields exist, and before lock/send. Outcome-gated wording at the same node (Option D) fixes false success without rewiring the lock/send bridge. Option C remains the minimal fallback."
+}

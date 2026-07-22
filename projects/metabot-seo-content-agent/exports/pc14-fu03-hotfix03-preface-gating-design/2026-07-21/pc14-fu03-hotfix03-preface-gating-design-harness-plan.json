@@ -1,0 +1,92 @@
+{
+  "harness_id": "PC14_FU03_HOTFIX03_PREFACE_GATING_HARNESS",
+  "mode": "offline_structural_and_expression",
+  "no_live_telegram": true,
+  "no_live_openrouter": true,
+  "no_live_sheets": true,
+  "fixtures": [
+    {
+      "id": "HF03-CLEAN",
+      "path": "clean",
+      "expect_status_complete_success_wording": true,
+      "forbid_false_reject_wording": true,
+      "expect_final_materials_path_reachable": true
+    },
+    {
+      "id": "HF03-REPAIR-CLEAN",
+      "path": "repair_clean",
+      "expect_status_complete_success_wording": true,
+      "forbid_false_reject_wording": true,
+      "expect_final_materials_path_reachable": true
+    },
+    {
+      "id": "HF03-BLOCKED-DIRTY",
+      "path": "blocked_dirty_reject",
+      "expect_status_complete_success_wording": false,
+      "forbid_phrases": [
+        "Результат готов. Отправляю материалы",
+        "✅ Задача завершена"
+      ],
+      "allow_blocked_or_neutral_or_suppress": true,
+      "expect_reject_diagnostic_payload_preserved": true,
+      "expect_raw_asterisk_count": 0
+    },
+    {
+      "id": "HF03-ERROR",
+      "path": "error",
+      "expect_status_complete_success_wording": false,
+      "forbid_materials_ready_claim": true
+    }
+  ],
+  "checks": [
+    {
+      "id": "HF03-01",
+      "check": "No premature success preface on reject path"
+    },
+    {
+      "id": "HF03-02",
+      "check": "Success wording present only on clean/repair-clean if Option D retained"
+    },
+    {
+      "id": "HF03-03",
+      "check": "Lock close path reachable (Status Complete → Restore → Close Lock connections intact)"
+    },
+    {
+      "id": "HF03-04",
+      "check": "Memory append path reachable (HOTFIX02 memory-first fan-out intact)"
+    },
+    {
+      "id": "HF03-05",
+      "check": "HOTFIX02 raw * safety preserved on reject telegram_text_safe"
+    },
+    {
+      "id": "HF03-06",
+      "check": "PC-07 Close Lock expression preserved"
+    },
+    {
+      "id": "HF03-07",
+      "check": "TZ HOTFIX01 preserved"
+    },
+    {
+      "id": "HF03-08",
+      "check": "HOTFIX01 restore nodes preserved"
+    },
+    {
+      "id": "HF03-09",
+      "check": "Credentials / side-effect identity preserved vs clone baseline (sandbox disable list documented)"
+    },
+    {
+      "id": "HF03-10",
+      "check": "Node delta expected 0"
+    },
+    {
+      "id": "HF03-11",
+      "check": "Structural checks: shared send chain order unchanged except Status Complete text"
+    },
+    {
+      "id": "HF03-12",
+      "check": "Telegram status text HTML-safe (no accidental Markdown hazards in Status Complete)"
+    }
+  ],
+  "pass_criteria": "All HF03 fixtures and checks PASS, or documented Option C fallback with same reject/lock/memory/HOTFIX02 guards PASS"
+}

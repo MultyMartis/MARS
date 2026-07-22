@@ -1,0 +1,42 @@
+{
+  "design_id": "PC14_FU03_HOTFIX03_PREFACE_GATING_DESIGN",
+  "in_scope": [
+    "Design report and sanitized evidence pack",
+    "Preface/status UX gating design for Worker Status Complete",
+    "Sandbox implementation plan for next task",
+    "Harness plan and risk matrix",
+    "Selective commit of this design pack only"
+  ],
+  "out_of_scope": [
+    "Live n8n mutation",
+    "n8n API calls",
+    "Telegram / OpenRouter / Google Sheets calls",
+    "Sandbox workflow create/activate",
+    "Production apply",
+    "Lock clear",
+    "/run retry",
+    "Strict scanner / repair loop / generation logic changes",
+    "HOTFIX02 Format Strict Reject / Parse Mode logic changes (except later absolute necessity)",
+    "Send Telegram Run expression change unless necessary",
+    "Intake mutation",
+    "Admin mutation",
+    "Staging raw/local/helper/runner/.mjs files",
+    "Foreign WIP (Website Factory / FP-0002 / Shpigovsky / OCPilot / etc.)",
+    "git push / git pull / git add . / git add -A"
+  ],
+  "must_preserve": [
+    "HOTFIX02 plain-safe reject delivery",
+    "HOTFIX01 restore nodes",
+    "PC-07 task_id Close Lock mapping",
+    "TZ HOTFIX01",
+    "memory append semantics",
+    "Close Lock Before Sending semantics",
+    "credentials",
+    "production side-effect enabled states (at later apply)",
+    "foreign WIP"
+  ],
+  "production_worker": "p4mqb4VuPcemIDlC",
+  "intake": "x8EbTGKNdlBprLvk",
+  "admin": "AR6QxGt8ZKH0xG2T",
+  "hotfix02_sandbox_do_not_mutate_in_design": "TMhJbxtk6uUPDpEb"
+}
