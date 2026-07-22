@@ -1,0 +1,7 @@
+{
+  "pass": true,
+  "exact": true,
+  "task_id_expr": "={{ $('Route Command').first().json.task_id }}",
+  "has_route_command_task_id": true,
+  "expected": "={{ $('Route Command').first().json.task_id }}"
+}

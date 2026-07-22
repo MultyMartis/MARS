@@ -1,0 +1,36 @@
+{
+  "production_baseline": {
+    "pass": true,
+    "errors": [],
+    "nodeCount": 101,
+    "fu03Count": 9,
+    "active": true,
+    "updatedAt": "2026-07-20T18:12:05.376Z",
+    "hotfix02_present": true,
+    "hotfix03_absent": true,
+    "status_complete_text_preview": "=✅ Задача завершена\n\nРезультат готов. Отправляю материалы...",
+    "repair_enabled": true,
+    "pc07": {
+      "pass": true,
+      "exact": true,
+      "task_id_expr": "={{ $('Route Command').first().json.task_id }}",
+      "has_route_command_task_id": true,
+      "expected": "={{ $('Route Command').first().json.task_id }}"
+    },
+    "tz": {
+      "pass": true,
+      "structuredClone_count": 0,
+      "clonePlain_present": true,
+      "version_intact": true,
+      "version": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01"
+    },
+    "restoreA": true,
+    "restoreB": true,
+    "reject_fanout": [
+      "Prepare Memory Row Run",
+      "Take First Item"
+    ]
+  },
+  "date": "2026-07-21",
+  "hotfix": "PC14_FU03_HOTFIX03_PREFACE_GATING"
+}

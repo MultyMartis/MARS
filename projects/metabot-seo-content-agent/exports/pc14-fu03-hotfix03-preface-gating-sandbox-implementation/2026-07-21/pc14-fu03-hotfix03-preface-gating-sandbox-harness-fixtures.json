@@ -1,0 +1,21 @@
+{
+  "blocked_dirty": {
+    "memory_status": "blocked_dirty"
+  },
+  "hyphen_blocked": {
+    "memory_status": "blocked-dirty"
+  },
+  "blocked_diagnostic": {
+    "blocked_diagnostic": true
+  },
+  "approved_clean": {
+    "memory_status": "approved_clean"
+  },
+  "repair_clean": {
+    "memory_status": "repair_attempted_clean"
+  },
+  "unknown": {},
+  "expected_blocked": "⚠️ Задача обработана, но итоговые материалы заблокированы строгой проверкой. Отправляю диагностическое сообщение...",
+  "expected_success": "✅ Задача завершена\n\nРезультат готов. Отправляю материалы...",
+  "expected_neutral": "Задача обработана. Проверяю итоговый статус перед отправкой..."
+}

@@ -1,0 +1,31 @@
+{
+  "preserve_unchanged": [
+    "Format Strict Reject Message",
+    "Parse Mode",
+    "Send Telegram Run",
+    "Restore Format Run Items",
+    "Restore Format Run Items After Lock",
+    "Close Lock Before Sending",
+    "Prepare Memory Row Run",
+    "Append Memory Run",
+    "Run Strict Surface Repair",
+    "Build Final Public Payload",
+    "Final Surface Strict Scan",
+    "Extract Strict Surface Repair",
+    "Final Surface Strict Re-Scan",
+    "TZ Strict Cleanup",
+    "Status Final"
+  ],
+  "fu03_nodes": [
+    "Build Final Public Payload",
+    "Final Surface Strict Scan",
+    "IF Final Surface Clean",
+    "Build Strict Surface Repair Payload",
+    "Run Strict Surface Repair",
+    "Extract Strict Surface Repair",
+    "Final Surface Strict Re-Scan",
+    "IF Repaired Surface Clean",
+    "Format Strict Reject Message"
+  ],
+  "target_text_only": "Status Complete"
+}

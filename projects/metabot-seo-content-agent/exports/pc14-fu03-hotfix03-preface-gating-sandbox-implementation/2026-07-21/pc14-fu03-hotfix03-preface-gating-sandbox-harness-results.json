@@ -1,0 +1,113 @@
+{
+  "harness_id": "PC14_FU03_HOTFIX03_PREFACE_GATING_HARNESS",
+  "mode": "offline_structural_and_expression",
+  "selected_option": "HOTFIX03_DESIGN_D_OUTCOME_GATED_STATUS_COMPLETE",
+  "score": "12/12",
+  "pass": true,
+  "fail_ids": [],
+  "cases": {
+    "HF03-H01-BLOCKED-DIRTY-NO-SUCCESS-PREFACE": {
+      "id": "HF03-H01-BLOCKED-DIRTY-NO-SUCCESS-PREFACE",
+      "pass": true,
+      "outcome": "blocked_dirty_reject",
+      "text": "⚠️ Задача обработана, но итоговые материалы заблокированы строгой проверкой. Отправляю диагностическое сообщение..."
+    },
+    "HF03-H02-HYPHEN-BLOCKED-DIRTY": {
+      "id": "HF03-H02-HYPHEN-BLOCKED-DIRTY",
+      "pass": true,
+      "outcome": "blocked_dirty_reject",
+      "text": "⚠️ Задача обработана, но итоговые материалы заблокированы строгой проверкой. Отправляю диагностическое сообщение..."
+    },
+    "HF03-H03-BLOCKED-DIAGNOSTIC-FIELD": {
+      "id": "HF03-H03-BLOCKED-DIAGNOSTIC-FIELD",
+      "pass": true,
+      "outcome": "blocked_dirty_reject",
+      "text": "⚠️ Задача обработана, но итоговые материалы заблокированы строгой проверкой. Отправляю диагностическое сообщение..."
+    },
+    "HF03-H04-CLEAN-SUCCESS-PREFACE-ALLOWED": {
+      "id": "HF03-H04-CLEAN-SUCCESS-PREFACE-ALLOWED",
+      "pass": true,
+      "outcome": "clean_or_repair_clean",
+      "text": "✅ Задача завершена\n\nРезультат готов. Отправляю материалы...",
+      "expect_success": true
+    },
+    "HF03-H05-REPAIR-CLEAN-SUCCESS-PREFACE-ALLOWED": {
+      "id": "HF03-H05-REPAIR-CLEAN-SUCCESS-PREFACE-ALLOWED",
+      "pass": true,
+      "outcome": "clean_or_repair_clean",
+      "text": "✅ Задача завершена\n\nРезультат готов. Отправляю материалы...",
+      "expect_success": true
+    },
+    "HF03-H06-UNKNOWN-OUTCOME-NEUTRAL": {
+      "id": "HF03-H06-UNKNOWN-OUTCOME-NEUTRAL",
+      "pass": true,
+      "outcome": "unknown_neutral",
+      "text": "Задача обработана. Проверяю итоговый статус перед отправкой..."
+    },
+    "HF03-H07-HOTFIX02-REGRESSION-RAW-ASTERISK-SAFETY": {
+      "id": "HF03-H07-HOTFIX02-REGRESSION-RAW-ASTERISK-SAFETY",
+      "pass": true,
+      "asterisk_count": 0,
+      "reject_marker": "v1-pc14-fu03-hotfix02-format-strict-reject-plain",
+      "parse_marker": "v1-pc14-fu03-hotfix02-parse-mode-plain"
+    },
+    "HF03-H08-HOTFIX01-RESTORE-PRESERVED": {
+      "id": "HF03-H08-HOTFIX01-RESTORE-PRESERVED",
+      "pass": true,
+      "restore_a": {
+        "uses_format_strict_reject": true,
+        "uses_format_run_pipeline": true,
+        "is_hotfix01": true
+      },
+      "restore_b": {
+        "uses_format_strict_reject": true,
+        "uses_format_run_pipeline": true,
+        "is_hotfix01": true
+      }
+    },
+    "HF03-H09-PC07-TZ-PRESERVED": {
+      "id": "HF03-H09-PC07-TZ-PRESERVED",
+      "pass": true,
+      "pc07_exact": true,
+      "tz": {
+        "pass": true,
+        "structuredClone_count": 0,
+        "clonePlain_present": true,
+        "version_intact": true,
+        "version": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01"
+      }
+    },
+    "HF03-H10-SIDE-EFFECT-CREDENTIAL-PRESERVATION": {
+      "id": "HF03-H10-SIDE-EFFECT-CREDENTIAL-PRESERVATION",
+      "pass": true,
+      "sandbox_repair_disabled": true,
+      "sandbox_send_disabled": true,
+      "production_repair_enabled": true,
+      "send_expr_has_telegram_text_safe": true,
+      "credential_names_match": true,
+      "expected_send_expr": "={{ $json.telegram_text_safe }}"
+    },
+    "HF03-H11-GRAPH-STRUCTURAL-CHECK": {
+      "id": "HF03-H11-GRAPH-STRUCTURAL-CHECK",
+      "pass": true,
+      "node_count": 101,
+      "connections_unchanged": true,
+      "status_complete_text_changed": true,
+      "hotfix03_marker": true,
+      "unexpected_code_changes": [],
+      "reject_fanout": [
+        "Prepare Memory Row Run",
+        "Take First Item"
+      ],
+      "fu03_count": 9
+    },
+    "HF03-H12-SECRET-SCAN": {
+      "id": "HF03-H12-SECRET-SCAN",
+      "pass": true,
+      "result": "PASS_WITH_REVIEW_LABELS",
+      "findings_count": 0
+    }
+  },
+  "status_complete_text_after_preview": "={{ /* v1-pc14-fu03-hotfix03-preface-gating */ (() => {\n  const j = $json || {};\n  const ms = String(j.memory_status || '').trim();\n  const status = String(j.status || j.strict_surface_status || '').trim();\n  const blocked =\n    !!j.blocked",
+  "blocked_preface_example": "⚠️ Задача обработана, но итоговые материалы заблокированы строгой проверкой. Отправляю диагностическое сообщение..."
+}

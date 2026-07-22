@@ -1,0 +1,44 @@
+{
+  "pass": true,
+  "scope": {
+    "added": [],
+    "removed": [],
+    "modifiedText": [
+      "Status Complete"
+    ],
+    "modifiedCode": [],
+    "unexpected": [],
+    "otherMeta": [],
+    "connectionsChanged": false,
+    "scopeOk": true
+  },
+  "connDiff": {
+    "unchanged": true,
+    "changed_connection_keys": [],
+    "only_allowed_keys": true,
+    "reject_fanout": [
+      "Prepare Memory Row Run",
+      "Take First Item"
+    ],
+    "status_complete_downstream": [
+      "Restore Format Run Items"
+    ],
+    "note": "HOTFIX03 expects zero connection changes"
+  },
+  "postVerify": {
+    "sandbox_active_false": true,
+    "node_count_101": true,
+    "fu03_9": true,
+    "hotfix03_marker": true,
+    "hotfix02_preserved": true,
+    "hotfix01_restores": true,
+    "pc07": true,
+    "tz": true,
+    "repair_disabled_sandbox": true,
+    "send_expr_unchanged": true,
+    "scope_ok": true,
+    "connections_unchanged": true,
+    "production_unchanged": true,
+    "pass": true
+  }
+}

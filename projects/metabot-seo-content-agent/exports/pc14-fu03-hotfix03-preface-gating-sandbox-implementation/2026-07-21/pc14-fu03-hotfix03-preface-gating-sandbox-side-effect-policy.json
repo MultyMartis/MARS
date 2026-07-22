@@ -1,0 +1,363 @@
+{
+  "sandbox_side_effects_disabled": true,
+  "production_unchanged": true,
+  "credentials_preserved": true,
+  "disabled_notes": [
+    "Send Telegram Local",
+    "OpenRouter Single Mode",
+    "Send Telegram Single",
+    "Run Outline",
+    "Run Text",
+    "Run SEO QA",
+    "Run Factcheck",
+    "Send Telegram Run",
+    "Append Memory Local",
+    "Append Memory Single",
+    "Append Memory Run",
+    "Send Telegram Memory Get",
+    "Run Auto Polish Text",
+    "Finish Lock",
+    "Status Outline",
+    "Status Strategy",
+    "Status Text",
+    "Status SEO QA",
+    "Status Factcheck",
+    "Status Final",
+    "Run SEO Strategy",
+    "Status Complete",
+    "Close Lock Before Sending",
+    "Run Text Repair",
+    "Status Single",
+    "Close Single Lock Before Sending",
+    "Status Single Complete",
+    "Run Single Text Repair",
+    "Run Strict Surface Repair"
+  ],
+  "sandbox_snapshot": [
+    {
+      "name": "Append Memory Local",
+      "type": "n8n-nodes-base.googleSheets",
+      "disabled": true
+    },
+    {
+      "name": "Append Memory Run",
+      "type": "n8n-nodes-base.googleSheets",
+      "disabled": true
+    },
+    {
+      "name": "Append Memory Single",
+      "type": "n8n-nodes-base.googleSheets",
+      "disabled": true
+    },
+    {
+      "name": "Close Lock Before Sending",
+      "type": "n8n-nodes-base.googleSheets",
+      "disabled": true
+    },
+    {
+      "name": "Close Single Lock Before Sending",
+      "type": "n8n-nodes-base.googleSheets",
+      "disabled": true
+    },
+    {
+      "name": "Finish Lock",
+      "type": "n8n-nodes-base.googleSheets",
+      "disabled": true
+    },
+    {
+      "name": "Lookup Memory Get",
+      "type": "n8n-nodes-base.googleSheets",
+      "disabled": false
+    },
+    {
+      "name": "Lookup Memory Reuse",
+      "type": "n8n-nodes-base.googleSheets",
+      "disabled": false
+    },
+    {
+      "name": "OpenRouter Single Mode",
+      "type": "n8n-nodes-base.httpRequest",
+      "disabled": true
+    },
+    {
+      "name": "Run Auto Polish Text",
+      "type": "n8n-nodes-base.httpRequest",
+      "disabled": true
+    },
+    {
+      "name": "Run Factcheck",
+      "type": "n8n-nodes-base.httpRequest",
+      "disabled": true
+    },
+    {
+      "name": "Run Outline",
+      "type": "n8n-nodes-base.httpRequest",
+      "disabled": true
+    },
+    {
+      "name": "Run SEO QA",
+      "type": "n8n-nodes-base.httpRequest",
+      "disabled": true
+    },
+    {
+      "name": "Run SEO Strategy",
+      "type": "n8n-nodes-base.httpRequest",
+      "disabled": true
+    },
+    {
+      "name": "Run Single Text Repair",
+      "type": "n8n-nodes-base.httpRequest",
+      "disabled": true
+    },
+    {
+      "name": "Run Strict Surface Repair",
+      "type": "n8n-nodes-base.httpRequest",
+      "disabled": true
+    },
+    {
+      "name": "Run Text",
+      "type": "n8n-nodes-base.httpRequest",
+      "disabled": true
+    },
+    {
+      "name": "Run Text Repair",
+      "type": "n8n-nodes-base.httpRequest",
+      "disabled": true
+    },
+    {
+      "name": "Send Telegram Local",
+      "type": "n8n-nodes-base.telegram",
+      "disabled": true
+    },
+    {
+      "name": "Send Telegram Memory Get",
+      "type": "n8n-nodes-base.telegram",
+      "disabled": true
+    },
+    {
+      "name": "Send Telegram Run",
+      "type": "n8n-nodes-base.telegram",
+      "disabled": true
+    },
+    {
+      "name": "Send Telegram Single",
+      "type": "n8n-nodes-base.telegram",
+      "disabled": true
+    },
+    {
+      "name": "Status Complete",
+      "type": "n8n-nodes-base.telegram",
+      "disabled": true
+    },
+    {
+      "name": "Status Factcheck",
+      "type": "n8n-nodes-base.telegram",
+      "disabled": true
+    },
+    {
+      "name": "Status Final",
+      "type": "n8n-nodes-base.telegram",
+      "disabled": true
+    },
+    {
+      "name": "Status Outline",
+      "type": "n8n-nodes-base.telegram",
+      "disabled": true
+    },
+    {
+      "name": "Status SEO QA",
+      "type": "n8n-nodes-base.telegram",
+      "disabled": true
+    },
+    {
+      "name": "Status Single",
+      "type": "n8n-nodes-base.telegram",
+      "disabled": true
+    },
+    {
+      "name": "Status Single Complete",
+      "type": "n8n-nodes-base.telegram",
+      "disabled": true
+    },
+    {
+      "name": "Status Strategy",
+      "type": "n8n-nodes-base.telegram",
+      "disabled": true
+    },
+    {
+      "name": "Status Text",
+      "type": "n8n-nodes-base.telegram",
+      "disabled": true
+    },
+    {
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "disabled": true
+    }
+  ],
+  "production_snapshot": [
+    {
+      "name": "Append Memory Local",
+      "type": "n8n-nodes-base.googleSheets",
+      "disabled": false
+    },
+    {
+      "name": "Append Memory Run",
+      "type": "n8n-nodes-base.googleSheets",
+      "disabled": false
+    },
+    {
+      "name": "Append Memory Single",
+      "type": "n8n-nodes-base.googleSheets",
+      "disabled": false
+    },
+    {
+      "name": "Close Lock Before Sending",
+      "type": "n8n-nodes-base.googleSheets",
+      "disabled": false
+    },
+    {
+      "name": "Close Single Lock Before Sending",
+      "type": "n8n-nodes-base.googleSheets",
+      "disabled": false
+    },
+    {
+      "name": "Finish Lock",
+      "type": "n8n-nodes-base.googleSheets",
+      "disabled": false
+    },
+    {
+      "name": "Lookup Memory Get",
+      "type": "n8n-nodes-base.googleSheets",
+      "disabled": false
+    },
+    {
+      "name": "Lookup Memory Reuse",
+      "type": "n8n-nodes-base.googleSheets",
+      "disabled": false
+    },
+    {
+      "name": "OpenRouter Single Mode",
+      "type": "n8n-nodes-base.httpRequest",
+      "disabled": false
+    },
+    {
+      "name": "Run Auto Polish Text",
+      "type": "n8n-nodes-base.httpRequest",
+      "disabled": false
+    },
+    {
+      "name": "Run Factcheck",
+      "type": "n8n-nodes-base.httpRequest",
+      "disabled": false
+    },
+    {
+      "name": "Run Outline",
+      "type": "n8n-nodes-base.httpRequest",
+      "disabled": false
+    },
+    {
+      "name": "Run SEO QA",
+      "type": "n8n-nodes-base.httpRequest",
+      "disabled": false
+    },
+    {
+      "name": "Run SEO Strategy",
+      "type": "n8n-nodes-base.httpRequest",
+      "disabled": false
+    },
+    {
+      "name": "Run Single Text Repair",
+      "type": "n8n-nodes-base.httpRequest",
+      "disabled": false
+    },
+    {
+      "name": "Run Strict Surface Repair",
+      "type": "n8n-nodes-base.httpRequest",
+      "disabled": false
+    },
+    {
+      "name": "Run Text",
+      "type": "n8n-nodes-base.httpRequest",
+      "disabled": false
+    },
+    {
+      "name": "Run Text Repair",
+      "type": "n8n-nodes-base.httpRequest",
+      "disabled": false
+    },
+    {
+      "name": "Send Telegram Local",
+      "type": "n8n-nodes-base.telegram",
+      "disabled": false
+    },
+    {
+      "name": "Send Telegram Memory Get",
+      "type": "n8n-nodes-base.telegram",
+      "disabled": false
+    },
+    {
+      "name": "Send Telegram Run",
+      "type": "n8n-nodes-base.telegram",
+      "disabled": false
+    },
+    {
+      "name": "Send Telegram Single",
+      "type": "n8n-nodes-base.telegram",
+      "disabled": false
+    },
+    {
+      "name": "Status Complete",
+      "type": "n8n-nodes-base.telegram",
+      "disabled": false
+    },
+    {
+      "name": "Status Factcheck",
+      "type": "n8n-nodes-base.telegram",
+      "disabled": false
+    },
+    {
+      "name": "Status Final",
+      "type": "n8n-nodes-base.telegram",
+      "disabled": false
+    },
+    {
+      "name": "Status Outline",
+      "type": "n8n-nodes-base.telegram",
+      "disabled": false
+    },
+    {
+      "name": "Status SEO QA",
+      "type": "n8n-nodes-base.telegram",
+      "disabled": false
+    },
+    {
+      "name": "Status Single",
+      "type": "n8n-nodes-base.telegram",
+      "disabled": false
+    },
+    {
+      "name": "Status Single Complete",
+      "type": "n8n-nodes-base.telegram",
+      "disabled": false
+    },
+    {
+      "name": "Status Strategy",
+      "type": "n8n-nodes-base.telegram",
+      "disabled": false
+    },
+    {
+      "name": "Status Text",
+      "type": "n8n-nodes-base.telegram",
+      "disabled": false
+    },
+    {
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "disabled": false
+    }
+  ],
+  "policy": "disable_telegram_openrouter_sheets_locks_memory_repair_in_sandbox_only",
+  "webhook_path": "seo-content-agent-sandbox-pc14-fu03-hotfix03-preface",
+  "production_side_effects_not_copied_back": true
+}

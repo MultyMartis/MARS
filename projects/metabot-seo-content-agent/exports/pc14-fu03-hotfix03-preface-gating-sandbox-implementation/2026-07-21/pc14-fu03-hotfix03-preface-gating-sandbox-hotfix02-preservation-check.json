@@ -1,0 +1,12 @@
+{
+  "pass": true,
+  "reject_version": "v1-pc14-fu03-hotfix02-format-strict-reject-plain",
+  "parse_version": "v1-pc14-fu03-hotfix02-parse-mode-plain",
+  "memory_first_fanout": true,
+  "fanout": [
+    "Prepare Memory Row Run",
+    "Take First Item"
+  ],
+  "reject_code_is_hotfix02": true,
+  "parse_code_is_hotfix02": true
+}

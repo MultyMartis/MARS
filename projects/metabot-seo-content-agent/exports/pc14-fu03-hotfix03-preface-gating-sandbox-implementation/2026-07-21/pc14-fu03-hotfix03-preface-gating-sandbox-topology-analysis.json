@@ -1,0 +1,38 @@
+{
+  "target": "Status Complete",
+  "type": "n8n-nodes-base.telegram",
+  "typeVersion": 1,
+  "operation": "editMessageText",
+  "parse_mode": "HTML",
+  "current_text": "=✅ Задача завершена\n\nРезультат готов. Отправляю материалы...",
+  "is_static_success_preface": true,
+  "upstream_nodes": [
+    "Take First Item"
+  ],
+  "downstream_nodes": [
+    "Restore Format Run Items"
+  ],
+  "sequencing_bridge": true,
+  "shared_chain_inferred": [
+    "Format Run Pipeline OR Format Strict Reject Message",
+    "Take First Item",
+    "Status Complete",
+    "Restore Format Run Items",
+    "Close Lock Before Sending",
+    "Restore Format Run Items After Lock",
+    "Parse Mode",
+    "Send Telegram Run"
+  ],
+  "fields_available_at_status_complete_from_format_paths": [
+    "memory_status",
+    "blocked_diagnostic",
+    "strict_surface_status",
+    "telegram_text",
+    "task_id",
+    "repair_attempts"
+  ],
+  "expression_based_text_safe": true,
+  "node_delta_0_possible": true,
+  "selected_design": "HOTFIX03_DESIGN_D_OUTCOME_GATED_STATUS_COMPLETE",
+  "fallback_design": "HOTFIX03_DESIGN_C_SUPPRESS_SUCCESS_PREFACE"
+}

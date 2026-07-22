@@ -1,0 +1,13 @@
+{
+  "unchanged": true,
+  "changed_connection_keys": [],
+  "only_allowed_keys": true,
+  "reject_fanout": [
+    "Prepare Memory Row Run",
+    "Take First Item"
+  ],
+  "status_complete_downstream": [
+    "Restore Format Run Items"
+  ],
+  "note": "HOTFIX03 expects zero connection changes"
+}

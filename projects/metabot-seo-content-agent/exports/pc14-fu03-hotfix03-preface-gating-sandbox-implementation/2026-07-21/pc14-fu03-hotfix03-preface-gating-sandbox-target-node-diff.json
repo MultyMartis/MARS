@@ -1,0 +1,16 @@
+{
+  "node": "Status Complete",
+  "before_text": "=✅ Задача завершена\n\nРезультат готов. Отправляю материалы...",
+  "after_text": "={{ /* v1-pc14-fu03-hotfix03-preface-gating */ (() => {\n  const j = $json || {};\n  const ms = String(j.memory_status || '').trim();\n  const status = String(j.status || j.strict_surface_status || '').trim();\n  const blocked =\n    !!j.blocked_diagnostic ||\n    ms === 'blocked_dirty' ||\n    ms === 'blocked-dirty' ||\n    status === 'blocked_dirty' ||\n    status === 'blocked-dirty';\n  if (blocked) {\n    return \"⚠️ Задача обработана, но итоговые материалы заблокированы строгой проверкой. Отправляю диагностическое сообщение...\";\n  }\n  if (ms === 'failed' || ms === 'error' || status === 'error' || status === 'failed') {\n    return \"⚠️ Обработка завершена с ошибкой.\\n\\nПроверьте диагностику / статус.\";\n  }\n  if (\n    ms === 'approved_clean' ||\n    ms === 'repair_attempted_clean' ||\n    status === 'clean' ||\n    status === 'approved_clean' ||\n    status === 'repair_attempted_clean'\n  ) {\n    return \"✅ Задача завершена\\n\\nРезультат готов. Отправляю материалы...\";\n  }\n  return \"Задача обработана. Проверяю итоговый статус перед отправкой...\";\n})() }}",
+  "changed": [
+    {
+      "name": "Status Complete",
+      "field": "parameters.text",
+      "textLengthBefore": 60,
+      "textLengthAfter": 1053,
+      "hasHotfix03Marker": true
+    }
+  ],
+  "selected_option": "HOTFIX03_DESIGN_D_OUTCOME_GATED_STATUS_COMPLETE",
+  "version": "v1-pc14-fu03-hotfix03-preface-gating"
+}
