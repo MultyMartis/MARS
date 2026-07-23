@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-23
-**Evidence cutoff:** 2026-07-23 (SITE-002 Run **4.290** / `SITE-002-PROD-1C-CANONICAL-CATEGORY-REPARENT-01` — products reparented to 1C canonical hubs; JG 210A under myaso **373**; baseline still **1737**)
+**Evidence cutoff:** 2026-07-23 (SITE-002 Run **4.291** / `SITE-002-PROD-CANONICAL-REPARENT-POSTCHECK-01` — confirmed group still on **373/375**; persistence after 1C import **not yet proven**; baseline still **1737**)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **1C Canonical Category Reparent 01 (Run 4.290)** — **COMPLETE — PRODUCTS MOVED** · `oc_product_to_category` for **4707/4708/4710→373**, **4712→375**; JG 210A public/canonical under myaso; legacy **154/159/165** emptied (not deleted); **375** no longer empty; importer name-collision / GUID fix still required before next import · baseline still **1737** · [report](sites/site-002/reports/SITE-002-PROD-1C-CANONICAL-CATEGORY-REPARENT-01.md) · prior forensic [4.289](sites/site-002/reports/SITE-002-PROD-CATALOG-STRUCTURE-FORENSIC-01.md) |
+| Current SITE-002 focus | **Canonical Reparent Postcheck 01 (Run 4.291)** — **COMPLETE — GROUP MOVED, PERSISTENCE NOT YET PROVEN** · DB/public/sitemap confirm full confirmed group (**4707/4708/4710→373**, **4712→375**, **4709→376**); legacy leaves empty; latest 1C import `080010` predates reparent; importer GUID/name-collision fix still required · baseline still **1737** · [postcheck](sites/site-002/reports/SITE-002-PROD-CANONICAL-REPARENT-POSTCHECK-01.md) · [reparent 4.290](sites/site-002/reports/SITE-002-PROD-1C-CANONICAL-CATEGORY-REPARENT-01.md) · forensic [4.289](sites/site-002/reports/SITE-002-PROD-CATALOG-STRUCTURE-FORENSIC-01.md) |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 
