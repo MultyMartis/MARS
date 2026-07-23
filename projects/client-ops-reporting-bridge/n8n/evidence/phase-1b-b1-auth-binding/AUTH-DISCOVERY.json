@@ -1,0 +1,72 @@
+{
+  "phase": "1B-B1",
+  "verdict": "AUTH_NATIVE_HEADER_CREDENTIAL_CONFIRMED",
+  "target_auth_state": "AUTH_NATIVE_HEADER_CREDENTIAL_BOUND",
+  "api_host": "n8n.ai-metacode.com",
+  "n8n_application_version": "SAFE_UNKNOWN",
+  "openapi": {
+    "path": "/api/v1/openapi.yml",
+    "credential_create": "POST /api/v1/credentials",
+    "credential_list": "GET /api/v1/credentials",
+    "credential_schema": "GET /api/v1/credentials/schema/{credentialTypeName}",
+    "list_includes_secrets": false,
+    "documented_note": "Credential data (secrets) is not included on list."
+  },
+  "schemas": {
+    "httpHeaderAuth": {
+      "available": true,
+      "properties": ["name", "value", "useCustomAuth"],
+      "required": []
+    },
+    "httpBasicAuth": {
+      "available": true,
+      "properties": ["user", "password"]
+    },
+    "jwtAuth": {
+      "available": true
+    },
+    "headerAuth_type_name": {
+      "available": false,
+      "note": "Type name headerAuth 404; correct credential type is httpHeaderAuth"
+    }
+  },
+  "webhook_node": {
+    "type": "n8n-nodes-base.webhook",
+    "typeVersion": 2.1,
+    "authentication_parameter": "authentication",
+    "preferred_value": "headerAuth",
+    "credential_type_key": "httpHeaderAuth",
+    "pre_binding_live_param": "ABSENT_WHEN_UNSET",
+    "live_examples_with_auth_before_task": 0,
+    "binding_shape_confirmed_after_put": true
+  },
+  "candidates": [
+    {
+      "candidate": "native_header_auth",
+      "supported": true,
+      "security": "PREFERRED — secret outside workflow JSON in n8n credential store"
+    },
+    {
+      "candidate": "basic_auth",
+      "supported": true,
+      "security": "Available but not preferred for PROFILE_B header token"
+    },
+    {
+      "candidate": "environment_binding_in_code",
+      "supported": "SAFE_UNKNOWN",
+      "security": "Exact Code@2 env syntax still unproven; not used"
+    },
+    {
+      "candidate": "code_node_embedded_secret",
+      "supported": false,
+      "security": "FORBIDDEN — would expose secret in workflow JSON"
+    },
+    {
+      "candidate": "hmac_sha256",
+      "supported": false,
+      "security": "Future hardening only; not in this task"
+    }
+  ],
+  "preferred_header_name": "X-MARS-Client-Ops-Token",
+  "preferred_credential_display_name": "MARS Client Ops Webhook Auth — bzpm.ru"
+}

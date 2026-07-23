@@ -5,7 +5,7 @@
 
 | Node | type | typeVersion | Notes |
 |------|------|-------------|-------|
-| Webhook | `n8n-nodes-base.webhook` | `2.1` | Prefer `responseMode=responseNode`; live Admin webhook lacked `authentication` param |
+| Webhook | `n8n-nodes-base.webhook` | `2.1` | Prefer `responseMode=responseNode`; Phase 1B-B1 bound `authentication=headerAuth` + `credentials.httpHeaderAuth` |
 | Code | `n8n-nodes-base.code` | `2` | `return [{ json: {...} }]` |
 | IF | `n8n-nodes-base.if` | `2.3` | true=`main[0]`, false=`main[1]` |
 | Switch | `n8n-nodes-base.switch` | `3` / `3.2` | Not used in first sandbox template |
@@ -24,11 +24,21 @@
 
 - Inactive create omitted `webhookId`; server assigned one.
 - Create payload schema accepted without top-level `active` (workflow remained inactive).
-- Auth mode used: `AUTH_BLOCKED_INACTIVE_ONLY`.
+- Auth mode used at create: `AUTH_BLOCKED_INACTIVE_ONLY`.
+- Auth mode after Phase 1B-B1: `AUTH_NATIVE_HEADER_CREDENTIAL_BOUND`.
+
+## Phase 1B-B1 auth notes
+
+- Credential type: `httpHeaderAuth` (schema confirmed live).
+- Webhook param: `authentication: "headerAuth"`.
+- Credential reference shape: `{ credentials: { httpHeaderAuth: { id, name } } }`.
+- Header name: `X-MARS-Client-Ops-Token`.
+- Credential create: `POST /api/v1/credentials` with write-only `data`.
+- List/GET workflow exposes credential id/name only.
 
 ## SAFE UNKNOWN
 
 - Exact n8n application version.
-- Secure Code-node access to env/credential secrets.
-- Native webhook header-auth credential create payload shape on this instance.
+- Authenticated/unauthorized webhook POST HTTP status/body semantics (deferred to Phase 1B-B2).
 - Data Store availability.
+- Secure Code-node access to env secrets (not required after native Header Auth).

@@ -26,4 +26,4 @@ Deterministic gates before inactive sandbox create.
 | Rollback plan present | Runbook exists | PASS |
 | Operator HITL | Required for apply | Phase 1B-B charter + confirmation phrase |
 
-**Apply readiness:** Phase 1B-B inactive create completed under `AUTH_BLOCKED_INACTIVE_ONLY`. Authenticated POST remains blocked until auth binding charter.
+**Apply readiness:** Phase 1B-B1 native auth binding completed under `AUTH_NATIVE_HEADER_CREDENTIAL_BOUND`. Authenticated POST remains blocked until Phase 1B-B2 charter.

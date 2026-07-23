@@ -14,7 +14,7 @@
 | webhook calls | `0` |
 | Telegram | absent |
 | node count | 9 |
-| auth binding | `AUTH_BLOCKED_INACTIVE_ONLY` |
+| auth binding | `AUTH_BLOCKED_INACTIVE_ONLY` at create; superseded by Phase 1B-B1 `AUTH_NATIVE_HEADER_CREDENTIAL_BOUND` |
 | dedupe | `DEDUPE_DEFERRED_SANDBOX` |
 
 ## Auth binding verdict
@@ -55,8 +55,8 @@ Default: leave inactive. Deletion HITL-only. Rollback required now: **NO**.
 
 ## Next HITL gates
 
-1. **Phase 1B-B1 — Native Webhook Auth Binding Intake and Controlled Apply** (separate charter) — bind local secret via proven native/header or env mechanism without embedding secret in workflow JSON; do not activate; do not POST-validate yet.
-2. Later: authenticated sandbox POST validation (only after auth binding succeeds).
+1. **Phase 1B-B1 — Native Webhook Auth Binding** — **COMPLETE** (see `PHASE-1B-B1-NATIVE-WEBHOOK-AUTH-BINDING.md`).
+2. **Phase 1B-B2 — Authenticated Sandbox POST Validation** (separate charter) — do not activate; validate unauthorized/authorized POST behavior only under explicit charter.
 3. Later Telegram bot/credential/message charter.
 4. Production activation remains blocked.
 

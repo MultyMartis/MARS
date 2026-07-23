@@ -5,6 +5,7 @@
 **Baseline commit:** `791de1d71485c65440f4da88203b6500b36aa0eb`
 **Extension commit:** `04cd01d1881bccf6fc0dfeebef5b891e378fef37`
 **Phase 1B-B:** inactive sandbox created (see [PHASE-1B-B-INACTIVE-SANDBOX-WORKFLOW.md](PHASE-1B-B-INACTIVE-SANDBOX-WORKFLOW.md))
+**Phase 1B-B1:** native auth bound (see [PHASE-1B-B1-NATIVE-WEBHOOK-AUTH-BINDING.md](PHASE-1B-B1-NATIVE-WEBHOOK-AUTH-BINDING.md))
 
 ## Final status
 
@@ -14,7 +15,7 @@
 | Client Ops programmer extension | **COMPLETE** |
 | Workflow template | **CREATED LOCALLY** |
 | Offline n8n harness | **PASS** |
-| Sandbox workflow | **CREATED INACTIVE** (`AUTH_BLOCKED_INACTIVE_ONLY`) |
+| Sandbox workflow | **CREATED INACTIVE + AUTH BOUND** (`AUTH_NATIVE_HEADER_CREDENTIAL_BOUND`) |
 | Webhook tests | **NOT SENT** |
 | Telegram | **NOT CONNECTED** |
 | Production | **UNCHANGED** |
@@ -23,11 +24,12 @@
 
 ### Auth MVP
 
-- Header: `X-MARS-Client-Ops-Token` (Bearer also accepted).
-- Validated in Code before business validation.
-- Secret never in Git/template/responses.
-- Placeholder: `<<<HITL_REQUIRED:CLIENT_OPS_WEBHOOK_AUTH_SECRET>>>`
-- Live Phase 1B-B binding: **AUTH_BLOCKED_INACTIVE_ONLY** (native header credential create not evidenced; local secret prepared under gitignored `local/`, not bound into n8n).
+- Header: `X-MARS-Client-Ops-Token` (Bearer also accepted by Code path historically; native Webhook Header Auth enforces the header credential).
+- Live Phase 1B-B1 binding: **AUTH_NATIVE_HEADER_CREDENTIAL_BOUND**.
+- Credential display name: `MARS Client Ops Webhook Auth — bzpm.ru`.
+- Credential type: `httpHeaderAuth`.
+- Secret never in Git/template/responses/workflow JSON.
+- Historical create placeholder: `<<<HITL_REQUIRED:CLIENT_OPS_WEBHOOK_AUTH_SECRET>>>` (removed from live workflow after binding).
 - Hardening target: HMAC-SHA256(raw body + timestamp) — not implemented.
 
 ### Dedupe sandbox
@@ -62,7 +64,10 @@ Leave inactive and mark abandoned. Delete only under explicit HITL.
 - `n8n/runbooks/*`
 - `n8n/experience-pack/*`
 - `n8n/runners/run-client-ops-greenfield-create.mjs` (+ write client, prepare/validate helpers)
+- `n8n/runners/run-client-ops-credential-create.mjs` (+ credential client)
+- `n8n/runners/run-client-ops-auth-binding-put.mjs` (+ workflow update client, prepare/validate helpers)
 - `n8n/evidence/phase-1b-b-inactive-sandbox-create/`
+- `n8n/evidence/phase-1b-b1-auth-binding/`
 - `projects/metabot-seo-content-agent/metabot-developer/client-ops-n8n-extension-v1.md`
 
 ## Harness usage
@@ -77,13 +82,12 @@ node projects/client-ops-reporting-bridge/n8n/runners/run-client-ops-greenfield-
 
 ## Unresolved HITL
 
-1. Auth secret binding mechanism in live n8n (native header credential vs proven env) — still blocked.
-2. Exact n8n application version.
-3. Production dedupe store.
-4. Authenticated POST test authorization.
-5. Telegram bot / chat approvals (future display name: `Монитор bzpm.ru — MetaCODE`; avatar: bzpm.ru logo).
-6. Production activation.
+1. Exact n8n application version.
+2. Production dedupe store.
+3. Authenticated POST test authorization (Phase 1B-B2).
+4. Telegram bot / chat approvals (future display name: `Монитор bzpm.ru — MetaCODE`; avatar: bzpm.ru logo).
+5. Production activation.
 
 ## Next charter
 
-**Phase 1B-B1 — Native Webhook Auth Binding Intake and Controlled Apply** — do not begin without explicit operator charter. Authenticated sandbox POST validation remains after auth binding succeeds.
+**Phase 1B-B2 — Authenticated Sandbox POST Validation** — do not begin without explicit operator charter.

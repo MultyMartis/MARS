@@ -1,0 +1,44 @@
+{
+  "phase": "1B-B1",
+  "workflow_id": "tkM4H0G0gM3q9Foi",
+  "workflow_name": "MARS Client Ops Bridge — bzpm.ru",
+  "auth_mode": "AUTH_NATIVE_HEADER_CREDENTIAL_BOUND",
+  "pre_put_versionId": "6d44f0ee-3060-43fa-90d6-8a01f7c5b2a7",
+  "pre_put_updatedAt": "2026-07-23T17:32:40.294Z",
+  "active": false,
+  "allowed_delta": [
+    "Webhook.parameters.authentication -> headerAuth",
+    "Webhook.credentials.httpHeaderAuth reference (id+name)",
+    "Process Client Ops Gates jsCode: remove auth placeholder; auth_mode=NATIVE_HEADER_AUTH",
+    "meta.mars_auth_binding / mars_phase markers"
+  ],
+  "forbidden_delta": [
+    "activation",
+    "Telegram nodes",
+    "HTTP Request",
+    "Sheets",
+    "Data Store",
+    "durable dedupe claims",
+    "secret values in JSON",
+    "workflow rename",
+    "node count change",
+    "business validation removal"
+  ],
+  "credential_ref": {
+    "id": "WKHmPaw6QBp7WnzP",
+    "name": "MARS Client Ops Webhook Auth — bzpm.ru",
+    "type": "httpHeaderAuth",
+    "header_name": "X-MARS-Client-Ops-Token"
+  },
+  "gates": {
+    "python_unittest": "59/59 PASS",
+    "node_harness": "28/28 PASS",
+    "template_validation": "18/18 PASS",
+    "credential_collision": "0 before create",
+    "proposed_put_validation": "23/23 PASS",
+    "security_scan": "CLEAN",
+    "secret_leakage_scan": "0 matches",
+    "drift_gate": "PASS (versionId matched snapshot)"
+  },
+  "final_apply_verdict": "APPLY_AUTHORIZED"
+}

@@ -8,6 +8,7 @@ const roots = [
   'projects/client-ops-reporting-bridge/n8n',
   'projects/client-ops-reporting-bridge/CLIENT-OPS-PROGRAMMER-CAPABILITY-EXTENSION.md',
   'projects/client-ops-reporting-bridge/PHASE-1B-B-INACTIVE-SANDBOX-WORKFLOW.md',
+  'projects/client-ops-reporting-bridge/PHASE-1B-B1-NATIVE-WEBHOOK-AUTH-BINDING.md',
   'projects/client-ops-reporting-bridge/README.md',
   'projects/client-ops-reporting-bridge/ROADMAP.md',
   'projects/client-ops-reporting-bridge/PHASE-1-IMPLEMENTATION-READINESS.md',

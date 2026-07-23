@@ -1,0 +1,39 @@
+{
+  "id": "tkM4H0G0gM3q9Foi",
+  "name": "MARS Client Ops Bridge — bzpm.ru",
+  "active": false,
+  "nodes": 9,
+  "versionId": "6c6d1282-0105-47e1-a3f5-b070cec0664b",
+  "updatedAt": "2026-07-23T18:21:07.808Z",
+  "exact_name_count": 1,
+  "webhook_authentication": "headerAuth",
+  "credential_reference": {
+    "id": "WKHmPaw6QBp7WnzP",
+    "name": "MARS Client Ops Webhook Auth — bzpm.ru",
+    "type": "httpHeaderAuth",
+    "value_visible": false,
+    "keys": ["id", "name"]
+  },
+  "auth_placeholder_absent": true,
+  "native_auth_marker_present": true,
+  "auth_mode": "AUTH_NATIVE_HEADER_CREDENTIAL_BOUND",
+  "dedupe": "DEDUPE_DEFERRED_SANDBOX",
+  "telegram_absent": true,
+  "http_request_absent": true,
+  "sheets_absent": true,
+  "data_store_absent": true,
+  "executions_observed": 0,
+  "webhook_calls": 0,
+  "node_matrix": [
+    { "name": "Webhook Intake", "type": "n8n-nodes-base.webhook", "typeVersion": 2.1, "has_credentials": true },
+    { "name": "Capture Request Metadata", "type": "n8n-nodes-base.code", "typeVersion": 2, "has_credentials": false },
+    { "name": "Process Client Ops Gates", "type": "n8n-nodes-base.code", "typeVersion": 2, "has_credentials": false },
+    { "name": "IF Accepted Branch", "type": "n8n-nodes-base.if", "typeVersion": 2.3, "has_credentials": false },
+    { "name": "Prepare Accepted Response", "type": "n8n-nodes-base.code", "typeVersion": 2, "has_credentials": false },
+    { "name": "Prepare Rejected Response", "type": "n8n-nodes-base.code", "typeVersion": 2, "has_credentials": false },
+    { "name": "Respond Accepted", "type": "n8n-nodes-base.respondToWebhook", "typeVersion": 1.1, "has_credentials": false },
+    { "name": "Respond Rejected", "type": "n8n-nodes-base.respondToWebhook", "typeVersion": 1.1, "has_credentials": false },
+    { "name": "Sanitized Internal Evidence", "type": "n8n-nodes-base.code", "typeVersion": 2, "has_credentials": false, "disabled": true }
+  ],
+  "note": "Sanitized read-back only. No credential values. No usable webhook URL."
+}

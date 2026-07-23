@@ -19,6 +19,8 @@
 - Dry-run default; `--apply` + exact confirmation phrase for live create.
 - Immediate re-GET + sanitized structural diff after create.
 - `AUTH_BLOCKED_INACTIVE_ONLY` is acceptable when native credential binding is not evidenced.
+- After Phase 1B-B1: prefer `AUTH_NATIVE_HEADER_CREDENTIAL_BOUND` with dedicated `httpHeaderAuth` credential and Webhook `authentication=headerAuth`.
+- Keep secrets in gitignored local files and n8n credential store — never in workflow JSON / Code / Git evidence.
 - Leave inactive by default; deletion HITL-only.
 
 ## Runtime note

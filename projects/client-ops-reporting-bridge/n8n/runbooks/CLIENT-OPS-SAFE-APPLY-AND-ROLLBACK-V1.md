@@ -55,7 +55,8 @@ Delete only when inactive, exact name/id match, explicit operator approval, and 
 ## 8. Credential binding gate
 
 - Secret value never in Git / template / reports.
-- Phase 1B-B: `AUTH_BLOCKED_INACTIVE_ONLY`; local secret prepared outside Git; n8n credential not created.
+- Phase 1B-B: `AUTH_BLOCKED_INACTIVE_ONLY` at create; local secret prepared outside Git.
+- Phase 1B-B1: `AUTH_NATIVE_HEADER_CREDENTIAL_BOUND`; dedicated `httpHeaderAuth` credential created and bound; workflow remains inactive; no webhook POST.
 - Failed auth must return HTTP 401 without mismatch details.
 
 ## 9. Test POST gate (later charter)

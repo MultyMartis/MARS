@@ -1,0 +1,24 @@
+{
+  "put_attempted": true,
+  "put_count": 1,
+  "result": "SUCCESS",
+  "workflow_id": "tkM4H0G0gM3q9Foi",
+  "workflow_name": "MARS Client Ops Bridge — bzpm.ru",
+  "confirmation_phrase": "BIND AUTH TO INACTIVE CLIENT OPS BRIDGE BZPM",
+  "active_after_response": false,
+  "activation_changes": 0,
+  "executions_observed": 0,
+  "webhook_calls": 0,
+  "pre_put_versionId": "6d44f0ee-3060-43fa-90d6-8a01f7c5b2a7",
+  "post_put_versionId": "6c6d1282-0105-47e1-a3f5-b070cec0664b",
+  "post_put_updatedAt": "2026-07-23T18:21:07.808Z",
+  "credential_ref": {
+    "id": "WKHmPaw6QBp7WnzP",
+    "name": "MARS Client Ops Webhook Auth — bzpm.ru",
+    "type": "httpHeaderAuth"
+  },
+  "webhook_authentication": "headerAuth",
+  "placeholder_absent": true,
+  "native_marker_present": true,
+  "structural_diff_ok": true
+}

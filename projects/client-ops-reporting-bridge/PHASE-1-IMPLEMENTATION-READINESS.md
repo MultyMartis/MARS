@@ -1,12 +1,13 @@
 # Phase 1 Implementation Readiness
 
-**Status:** PHASE 1A + PROGRAMMER EXTENSION + PHASE 1B-B INACTIVE SANDBOX COMPLETE / AUTH POST PENDING
+**Status:** PHASE 1A + PROGRAMMER EXTENSION + PHASE 1B-B INACTIVE SANDBOX + PHASE 1B-B1 NATIVE AUTH BINDING COMPLETE / AUTH POST PENDING
 **Phase 0A:** COMPLETE
 **Phase 0B:** COMPLETE (documentation)
 **Phase 1A:** COMPLETE (offline exporter core + fixtures + tests)
 **Programmer extension:** COMPLETE
 **Phase 1B-B inactive sandbox:** COMPLETE — see [PHASE-1B-B-INACTIVE-SANDBOX-WORKFLOW.md](PHASE-1B-B-INACTIVE-SANDBOX-WORKFLOW.md)
-**Phase 1B authenticated POST / Telegram / activation:** NOT STARTED — next charter is **Phase 1B-B1 Native Webhook Auth Binding Intake and Controlled Apply**; auth remains `AUTH_BLOCKED_INACTIVE_ONLY` until then
+**Phase 1B-B1 native webhook auth binding:** COMPLETE — see [PHASE-1B-B1-NATIVE-WEBHOOK-AUTH-BINDING.md](PHASE-1B-B1-NATIVE-WEBHOOK-AUTH-BINDING.md)
+**Phase 1B authenticated POST / Telegram / activation:** NOT STARTED — next charter is **Phase 1B-B2 Authenticated Sandbox POST Validation**; auth is now `AUTH_NATIVE_HEADER_CREDENTIAL_BOUND`
 
 ---
 
@@ -21,10 +22,10 @@
 | Workflow template | **CREATED LOCALLY** + used as create source |
 | Offline n8n harness | **PASS** |
 | Exporter transport / publication | **NOT STARTED** |
-| n8n Client Ops workflow | **CREATED INACTIVE** (`tkM4H0G0gM3q9Foi`; `AUTH_BLOCKED_INACTIVE_ONLY`) |
+| n8n Client Ops workflow | **CREATED INACTIVE + AUTH BOUND** (`tkM4H0G0gM3q9Foi`; `AUTH_NATIVE_HEADER_CREDENTIAL_BOUND`) |
 | Telegram Client Ops bot | **DOES NOT EXIST** / **NOT CONNECTED** |
 | Profile A/B selection | **PROFILE_B_REQUIRED** (authoritative) |
-| External credentials | **Local secret prepared** (gitignored); **n8n credential not created** |
+| External credentials | **Local secret prepared** (gitignored); **n8n `httpHeaderAuth` credential created and bound** |
 | Phase 1 production activation | **NOT APPROVED** |
 | Production | **UNCHANGED** |
 
@@ -49,7 +50,7 @@
 
 | Blocker | State |
 |---------|-------|
-| Auth secret binding syntax in live n8n Code@2 / native webhook header auth | **AUTH_BLOCKED_INACTIVE_ONLY** (binding still HITL; local secret present, not bound) |
+| Auth secret binding syntax in live n8n Code@2 / native webhook header auth | **AUTH_NATIVE_HEADER_CREDENTIAL_BOUND** (native Webhook Header Auth; Code-level shared-secret comparison removed) |
 | Exact n8n application version | **SAFE UNKNOWN** |
 | Durable dedupe store for production | **OPEN** (sandbox = deferred) |
 | Dedicated Client Ops Telegram bot approval | **Required before Telegram gate** |
@@ -76,7 +77,7 @@
 
 | # | Decision | State |
 |---|----------|-------|
-| — | Auth credential binding method in n8n | **AUTH_BLOCKED_INACTIVE_ONLY** — native header credential create not evidenced; local secret ready |
+| — | Auth credential binding method in n8n | **AUTH_NATIVE_HEADER_CREDENTIAL_BOUND** — dedicated `httpHeaderAuth` credential created and bound; POST validation still pending |
 | — | Approve dedicated Client Ops Telegram bot? | **RECOMMENDED** — approval required before external work |
 | — | Approve exact internal test chat | Blocking before sandbox send |
 | — | Approve production workflow activation | Blocking before L6 |
@@ -127,7 +128,7 @@ Local exporter on operator workstation remains temporary. Long-term runtime must
 | Profile selected | **Yes — PROFILE_B_REQUIRED** |
 | Programmer extension local | **Yes** |
 | Offline harness PASS | **Yes** |
-| Sandbox workflow created | **Yes** (inactive; `tkM4H0G0gM3q9Foi`; `AUTH_BLOCKED_INACTIVE_ONLY`) |
+| Sandbox workflow created | **Yes** (inactive; `tkM4H0G0gM3q9Foi`; `AUTH_NATIVE_HEADER_CREDENTIAL_BOUND`) |
 | Auth binding resolved | **No** — next: Phase 1B-B1 Native Webhook Auth Binding Intake and Controlled Apply |
 | Dedicated bot approved | **No** |
 | Test chat approved | **No** |

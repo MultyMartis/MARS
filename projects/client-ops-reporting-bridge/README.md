@@ -1,8 +1,8 @@
 # MARS Client Ops Reporting Bridge
 
 **Subsystem name:** MARS Client Ops Reporting Bridge
-**Status:** PHASE 0A/0B COMPLETE + PHASE 1A OFFLINE EXPORTER CORE COMPLETE + PROGRAMMER EXTENSION COMPLETE + PHASE 1B-B INACTIVE SANDBOX CREATED
-**Implementation status:** Phase 1A offline exporter core + fixtures + tests **COMPLETE**; MetaBOT programmer Client Ops extension **COMPLETE**; Phase 1B-B inactive sandbox workflow **CREATED AND VERIFIED** (`AUTH_BLOCKED_INACTIVE_ONLY`); authenticated POST / Telegram / production activation **NOT STARTED**
+**Status:** PHASE 0A/0B COMPLETE + PHASE 1A OFFLINE EXPORTER CORE COMPLETE + PROGRAMMER EXTENSION COMPLETE + PHASE 1B-B INACTIVE SANDBOX CREATED + PHASE 1B-B1 NATIVE AUTH BOUND
+**Implementation status:** Phase 1A offline exporter core + fixtures + tests **COMPLETE**; MetaBOT programmer Client Ops extension **COMPLETE**; Phase 1B-B inactive sandbox workflow **CREATED**; Phase 1B-B1 native Header Auth credential **BOUND** (`AUTH_NATIVE_HEADER_CREDENTIAL_BOUND`); authenticated sandbox POST / Telegram / production activation **NOT STARTED**
 **Production state:** UNCHANGED
 **Transport decision:** **PROFILE_B_REQUIRED**
 **Live n8n workflow name:** `MARS Client Ops Bridge — bzpm.ru` (inactive)
@@ -67,7 +67,7 @@ Phase 0A freezes the contract. Phase 0B freezes implementation-ready design and 
 | **MetaBOT Programmer Client Ops extension** | **COMPLETE** |
 | **Phase 1B-B — Inactive sandbox create** | **COMPLETE** — see [PHASE-1B-B-INACTIVE-SANDBOX-WORKFLOW.md](PHASE-1B-B-INACTIVE-SANDBOX-WORKFLOW.md) |
 | **Phase 1B — Auth binding / POST / Telegram / activation** | **NOT STARTED** — next: Phase 1B-B1 Native Webhook Auth Binding Intake and Controlled Apply |
-| **n8n Client Ops workflow** | **CREATED INACTIVE** (`AUTH_BLOCKED_INACTIVE_ONLY`; no webhook test) |
+| **n8n Client Ops workflow** | **CREATED INACTIVE + AUTH BOUND** (`AUTH_NATIVE_HEADER_CREDENTIAL_BOUND`; no webhook test) |
 | **Telegram** | **NOT CONNECTED** (future bot name reserved: `Монитор bzpm.ru — MetaCODE`) |
 | **Production** | **UNCHANGED** |
 | **Exporter (offline)** | Exists under `src/client_ops_reporting_bridge/` |

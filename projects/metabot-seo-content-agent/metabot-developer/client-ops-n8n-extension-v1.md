@@ -49,8 +49,9 @@ MVP: custom header / Bearer shared secret over TLS, validated before business pr
 
 - Secret never in workflow JSON / Git / fixtures / responses.
 - Failed auth → HTTP 401, code `UNAUTHORIZED`.
-- Phase 1B-B live state: **AUTH_BLOCKED_INACTIVE_ONLY** — inactive workflow created with unresolved placeholder; local secret prepared outside Git; n8n credential not created.
-- Native webhook header-auth credential create payload shape remains unproven on this instance.
+- Phase 1B-B live create state: **AUTH_BLOCKED_INACTIVE_ONLY**.
+- Phase 1B-B1 live state: **AUTH_NATIVE_HEADER_CREDENTIAL_BOUND** — dedicated `httpHeaderAuth` credential created; Webhook `authentication=headerAuth`; placeholder removed; workflow remains inactive; POST not tested.
+- Native header-auth credential create payload shape is now evidenced on this instance (see Phase 1B-B1 evidence).
 - Hardening target: HMAC-SHA256(raw body + timestamp) with replay window (not in first sandbox template).
 
 ## 6. Validation boundary
@@ -69,7 +70,7 @@ Deterministic JSON accept/reject contract (see Client Ops programmer extension d
 
 ## 9. Sandbox-first rule
 
-Generate local template → offline harness → inactive create → re-GET → Phase 1B-B1 auth binding intake → only later authenticated POST / Telegram / production activation under separate charters.
+Generate local template → offline harness → inactive create → re-GET → Phase 1B-B1 auth binding → only later authenticated POST / Telegram / production activation under separate charters.
 
 ## 10. No Telegram in first create
 
@@ -81,12 +82,11 @@ MetaBOT / Cursor programmer must generate and apply workflow JSON. Manual n8n UI
 
 ## 12. Experience capture requirement
 
-After first sandbox apply, update `projects/client-ops-reporting-bridge/n8n/experience-pack/` with create/re-GET facts. Phase 1B-B captured inactive-create experience; next is Phase 1B-B1 auth binding intake; authenticated POST and Telegram remain incomplete.
+After first sandbox apply, update `projects/client-ops-reporting-bridge/n8n/experience-pack/` with create/re-GET facts. Phase 1B-B captured inactive-create experience; Phase 1B-B1 captured native auth binding; authenticated POST and Telegram remain incomplete.
 
 ## Remaining gaps (SAFE UNKNOWN)
 
 - Exact n8n application version.
 - Data Store availability.
-- Exact secure secret injection syntax into Code@2.
-- Native header-auth credential create payload shape.
+- Authenticated/unauthorized webhook POST HTTP semantics (Phase 1B-B2).
 - Production durable dedupe store choice.

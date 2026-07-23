@@ -1,8 +1,8 @@
 # Roadmap — MARS Client Ops Reporting Bridge
 
-**Status:** PHASE 0A/0B + PHASE 1A + PROGRAMMER EXTENSION + PHASE 1B-B INACTIVE SANDBOX CREATE COMPLETE
-**Current completed phases:** Phase 0A/0B + Phase 1A offline exporter core + MetaBOT programmer Client Ops extension + Phase 1B-B inactive sandbox create
-**Remaining Phase 1B:** authenticated sandbox POST, Telegram, production activation — NOT STARTED
+**Status:** PHASE 0A/0B + PHASE 1A + PROGRAMMER EXTENSION + PHASE 1B-B INACTIVE SANDBOX + PHASE 1B-B1 NATIVE AUTH BINDING COMPLETE
+**Current completed phases:** Phase 0A/0B + Phase 1A offline exporter core + MetaBOT programmer Client Ops extension + Phase 1B-B inactive sandbox create + Phase 1B-B1 native webhook auth binding
+**Remaining Phase 1B:** authenticated sandbox POST (1B-B2), Telegram, production activation — NOT STARTED
 
 ---
 
@@ -80,7 +80,7 @@
 | **HITL gate** | Inactive sandbox create → authenticated POST → Telegram → production activation |
 | **Evidence required** | Sanitized envelopes; create/re-GET evidence; isolation tests; unchanged monitor/baseline/scheduler |
 | **Exit criteria** | Internal SIMPLE reliable for OK/ATTENTION/FAILED/BLOCKED per send policy (OK always sends during validation) |
-| **State** | **PARTIAL** — Phase 1B-B inactive sandbox created (`AUTH_BLOCKED_INACTIVE_ONLY`); next recommended charter: Phase 1B-B1 — Native Webhook Auth Binding Intake and Controlled Apply |
+| **State** | **PARTIAL** — Phase 1B-B inactive sandbox created + Phase 1B-B1 native Header Auth bound (`AUTH_NATIVE_HEADER_CREDENTIAL_BOUND`); next recommended charter: Phase 1B-B2 — Authenticated Sandbox POST Validation |
 
 ---
 
