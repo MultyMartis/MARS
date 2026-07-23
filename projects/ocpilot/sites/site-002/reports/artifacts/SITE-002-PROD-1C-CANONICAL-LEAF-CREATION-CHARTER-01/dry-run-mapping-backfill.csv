@@ -1,0 +1,8 @@
+source_group_id,source_name,source_full_path,target_category_id_or_placeholder,match_method_after_leaf_apply,notes
+e0fd5c42-a3b8-11ea-8152-a85e4515c4f4,ТЕХНОЛОГИЧЕСКОЕ ОБОРУДОВАНИЕ,ТЕХНОЛОГИЧЕСКОЕ ОБОРУДОВАНИЕ,362,GUID_OR_PATH,hub_ready_now
+2adc2489-7c1a-11f1-aecc-581122cf362c,Мясоперерабатывающее,ТЕХНОЛОГИЧЕСКОЕ ОБОРУДОВАНИЕ > Мясоперерабатывающее,373,GUID_OR_PATH,hub_ready_now
+bac3dc26-7c19-11f1-aecc-581122cf362c,Электромеханическое,ТЕХНОЛОГИЧЕСКОЕ ОБОРУДОВАНИЕ > Электромеханическое,375,GUID_OR_PATH,hub_ready_now
+e0b6bb6d-7c1a-11f1-aecc-581122cf362c,Слайсеры для мяса,ТЕХНОЛОГИЧЕСКОЕ ОБОРУДОВАНИЕ > Мясоперерабатывающее > Слайсеры для мяса,376,GUID_OR_PATH,leaf_exists
+7e43262d-7c1a-11f1-aecc-581122cf362c,Мясорубки,ТЕХНОЛОГИЧЕСКОЕ ОБОРУДОВАНИЕ > Мясоперерабатывающее > Мясорубки,@NEW_MYASORUBKI_ID,CREATED_THEN_MAP,after_leaf_apply
+95003163-7c1a-11f1-aecc-581122cf362c,Пилы для мяса,ТЕХНОЛОГИЧЕСКОЕ ОБОРУДОВАНИЕ > Мясоперерабатывающее > Пилы для мяса,@NEW_PILY_ID,CREATED_THEN_MAP,after_leaf_apply
+41a86281-7c1b-11f1-aecc-581122cf362c,Хлеборезки,ТЕХНОЛОГИЧЕСКОЕ ОБОРУДОВАНИЕ > Электромеханическое > Хлеборезки,@NEW_HLEBOREZKI_ID,CREATED_THEN_MAP,after_leaf_apply

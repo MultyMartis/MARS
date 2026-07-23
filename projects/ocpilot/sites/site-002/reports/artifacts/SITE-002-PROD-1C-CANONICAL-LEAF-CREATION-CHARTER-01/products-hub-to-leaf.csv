@@ -1,0 +1,6 @@
+product_id,product_name,current_category_id,current_main,target_logical_key,target_category_id_placeholder,relation_strategy,remove_hub_relation,preserve_other_relations,main_category_after,rollback
+4707,Мясорубка TC-12,373,1,NEW_LEAF_MYASORUBKI,@NEW_MYASORUBKI_ID,REPLACE_HUB_WITH_LEAF,YES,YES_if_any,1_on_leaf,restore_ptc_to_373
+4708,Мясорубка TC-22,373,1,NEW_LEAF_MYASORUBKI,@NEW_MYASORUBKI_ID,REPLACE_HUB_WITH_LEAF,YES,YES_if_any,1_on_leaf,restore_ptc_to_373
+4710,Пила для мяса на кости JG 210A,373,1,NEW_LEAF_PILY,@NEW_PILY_ID,REPLACE_HUB_WITH_LEAF,YES,YES_if_any,1_on_leaf,restore_ptc_to_373
+4712,Хлеборезка ТТ-D7C,375,1,NEW_LEAF_HLEBOREZKI,@NEW_HLEBOREZKI_ID,REPLACE_HUB_WITH_LEAF,YES,YES_if_any,1_on_leaf,restore_ptc_to_375
+4709,Слайсер для мяса ТТ-М29С,376,1,,376,KEEP,NO,YES,1_on_376,n/a
