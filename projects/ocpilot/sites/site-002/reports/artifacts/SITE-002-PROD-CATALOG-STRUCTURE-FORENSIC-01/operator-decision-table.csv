@@ -1,0 +1,5 @@
+item_id,action,reason,evidence,risk,rollback,hitl_gate,fix_1c_first,redirect_needed
+product:4710,REPARENT_TO_MYASO_PILY,1C source under Мясоперерабатывающее,import0_1.xml + DB 159 under 153,SEO path change; routing hotfix surface,restore product_to_category 4710→159,YES,PREFERRED,YES
+category:375,DISABLE_OR_POPULATE,Empty public hub in menu/sitemap,DB 0/0; HTTP empty; 1C has Хлеборезки child,Hiding may fight Run 4.287 empty-hub policy,re-enable status=1,YES,YES if populate,IF_DISABLED
+category:153,KEEP_THEN_MIGRATE_DESCENDANTS,Still has 4 subtree products,subtree_products=4,Broken URLs if deleted early,N/A keep,YES for any disable,YES,YES when migrated
+category:159,KEEP_UNTIL_REPARENT_THEN_REDIRECT,Holds JG 210A,direct_products=1,Orphan SEO if deleted,restore status/relations,YES,YES,YES

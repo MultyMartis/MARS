@@ -17,7 +17,8 @@
 | **Catalog default sort (Production)** | **COMPLETE** — Run 4.176; default `pd.name ASC` in `category.php` |
 | **Catalog sort menu (Production)** | **COMPLETE** — Run 4.177; menu order in `category.twig`; «Умолчанию» removed |
 | **MARS 1C cron wrapper (Production)** | **OPERATIONAL — FIRST SCHEDULED RUN VERIFIED** — Run 4.194; automatic run SUCCESS 2026-07-06 08:00 Moscow; daily import OPERATIONAL |
-| **MARS 1C cron reports (Production)** | **CURRENT** — Run 4.194; first scheduled report `mars_1c_import_2026-07-06_080007.txt` verified on Production |
+| **MARS 1C cron reports (Production)** | **CURRENT** — Run 4.194; first scheduled report `mars_1c_import_2026-07-06_080007.txt` verified on Production; latest forensic sample `mars_1c_import_2026-07-23_080010.txt` SUCCESS (Run **4.289**) |
+| **Catalog structure / 1C category mapping (Production)** | **MISMATCH CONFIRMED — REVIEW REQUIRED** (Run **4.289**) — product category groups in `import0_1.xml` nest under `ТЕХНОЛОГИЧЕСКОЕ ОБОРУДОВАНИЕ`; `oc_category` has no GUID/`xml_id` (only `oc_product.xml_id`); name collision can attach new 1C leaves to legacy same-name categories (e.g. Пилы для мяса **159** under **153**) · [report](../reports/SITE-002-PROD-CATALOG-STRUCTURE-FORENSIC-01.md) |
 
 **TEST-derived knowledge classification:** Implementation evidence and reusable technical knowledge. **Not** automatic proof of current Production parity.
 
