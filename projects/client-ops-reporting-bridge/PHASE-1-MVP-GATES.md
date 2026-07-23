@@ -1,7 +1,7 @@
 # Phase 1 MVP Gates
 
-**Status:** DOCUMENTATION + PROGRAMMER EXTENSION / PHASE 1B SANDBOX CREATE PENDING
-**Gate actions:** live n8n / Telegram / webhook actions **NOT EXECUTED** by this pack
+**Status:** DOCUMENTATION + PROGRAMMER EXTENSION + PHASE 1B-B INACTIVE SANDBOX COMPLETE / AUTH POST PENDING
+**Gate actions:** inactive sandbox create **EXECUTED**; Telegram / authenticated POST / production activation **NOT EXECUTED**
 **Phase 1 production readiness:** NOT READY until remaining activation gates are satisfied
 
 ---
@@ -20,7 +20,7 @@
 | — | Transport profile for bzpm Bridge | **PROFILE_B_REQUIRED** | Authenticated webhook intake |
 | — | Manual n8n UI assembly | **NOT ACCEPTED** | Cursor/MetaBOT programmer generates JSON |
 | — | First sandbox dedupe | **DEDUPE_DEFERRED_SANDBOX** | No false durable claims |
-| — | Auth MVP | **Custom header/Bearer + HITL binding** | Placeholder until live bind |
+| — | Auth MVP | **Blocked inactive** (`AUTH_BLOCKED_INACTIVE_ONLY`) | Local secret prepared; n8n credential not created; placeholder retained |
 
 Do **not** re-ask decisions already marked APPROVED / FROZEN.
 
@@ -57,7 +57,7 @@ Client Ops Bridge for bzpm.ru uses **PROFILE_B_REQUIRED**:
 | **Exporter design gate** | Phase 0B design of read-only exporter | Design docs + acceptance test plan (**satisfied as docs**) | No deploy |
 | **Programmer extension gate** | Local template/harness/runbooks ready | Harness PASS + template gates PASS | Docs/tools only |
 | **Auth binding gate** | Resolve HITL secret binding | Operator credential/env placement; no secrets in Git | Rotate secret externally |
-| **n8n inactive sandbox create gate** | Create inactive workflow via programmer | Sanitized create/re-GET evidence; no activate | Abandon inactive or HITL delete |
+| **n8n inactive sandbox create gate** | Create inactive workflow via programmer | **SATISFIED** — see `n8n/evidence/phase-1b-b-inactive-sandbox-create/` | Abandon inactive or HITL delete |
 | **Authenticated POST gate** | First protected webhook tests | Synthetic envelopes only | Disable webhook / leave inactive |
 | **Telegram credential gate** | Dedicated bot approval + credential placement | Operator credential placement in n8n only; no secrets in Git | Rotate/revoke token externally |
 | **First sandbox message gate** | First SIMPLE message to **approved** internal test chat | Screenshot/transcript sanitized | Stop sending; disable workflow |

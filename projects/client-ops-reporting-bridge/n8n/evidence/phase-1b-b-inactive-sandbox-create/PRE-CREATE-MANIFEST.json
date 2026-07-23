@@ -1,0 +1,42 @@
+{
+  "phase": "1B-B",
+  "generated_at": "2026-07-23T17:32:38Z",
+  "workflow_name": "MARS Client Ops Bridge — bzpm.ru",
+  "auth_mode": "AUTH_BLOCKED_INACTIVE_ONLY",
+  "credential_create": false,
+  "exact_name_collision_count": 0,
+  "apply_payload_path": "X:\\AI MARS\\local\\client-ops-reporting-bridge\\bzpm.ru\\apply\\mars-client-ops-bridge-bzpm.create-payload.json",
+  "apply_payload_sha256": "97deed860697f5b13c664fc2fabb7a9fbb579d01cb4c1bdb42073668f66ff7ac",
+  "apply_payload_bytes": 55568,
+  "gates": {
+    "python_unittest": {
+      "expected": "59/59",
+      "result": "PASS"
+    },
+    "node_harness": {
+      "expected": "28/28",
+      "result": "PASS"
+    },
+    "template_validation": {
+      "expected": "18/18",
+      "result": "PASS"
+    },
+    "proposed_payload_validation": {
+      "expected": "21/21",
+      "result": "PASS"
+    },
+    "security_scan": {
+      "expected": "CLEAN",
+      "result": "CLEAN"
+    },
+    "name_collision": {
+      "expected": 0,
+      "result": 0
+    }
+  },
+  "final_apply_verdict": "APPLY_AUTHORIZED_BLOCKED_INACTIVE",
+  "confirmation_phrase": "CREATE INACTIVE MARS CLIENT OPS BRIDGE BZPM",
+  "no_webhook_test": true,
+  "no_telegram": true,
+  "no_activation": true
+}

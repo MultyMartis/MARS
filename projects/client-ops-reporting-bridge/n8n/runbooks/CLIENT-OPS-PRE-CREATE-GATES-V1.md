@@ -19,11 +19,11 @@ Deterministic gates before inactive sandbox create.
 | Terminal branches | Both reach Respond to Webhook | PASS |
 | No dangling connections | All sources/targets exist | PASS |
 | No duplicate node names | Unique | PASS |
-| Auth placeholder | Present until HITL bind; runner rejects apply | PASS (present) / apply blocked |
+| Auth placeholder | Present until HITL bind; blocked-inactive apply allowed under Phase 1B-B | PASS (present) / blocked-inactive create authorized |
 | Fixture harness | PASS | PASS (28/28) |
 | Baseline Git commit | Client Ops baseline present | Operator attest |
 | Locus clean / narrowly understood | Foreign WIP excluded | Operator attest |
 | Rollback plan present | Runbook exists | PASS |
-| Operator HITL | Required for apply | Pending |
+| Operator HITL | Required for apply | Phase 1B-B charter + confirmation phrase |
 
-**Apply readiness:** NOT READY until auth placeholder resolved through HITL and create charter authorizes write client.
+**Apply readiness:** Phase 1B-B inactive create completed under `AUTH_BLOCKED_INACTIVE_ONLY`. Authenticated POST remains blocked until auth binding charter.

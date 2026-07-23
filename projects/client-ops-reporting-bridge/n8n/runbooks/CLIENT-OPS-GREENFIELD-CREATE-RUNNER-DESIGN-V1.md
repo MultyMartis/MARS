@@ -1,26 +1,27 @@
 # Greenfield Create Runner Design — Client Ops
 
-**Status:** DESIGN + SKELETON
+**Status:** DESIGN + IMPLEMENTED RUNNER
 **Skeleton path:** `../runners/run-client-ops-greenfield-create.skeleton.mjs`
-**Executed create in this task:** NO
+**Live runner:** `../runners/run-client-ops-greenfield-create.mjs`
+**Phase 1B-B executed create:** YES (inactive; blocked auth)
 
-## Future runner steps
+## Runner steps
 
-1. Load template.
-2. Reject unresolved placeholders.
+1. Load prepared local apply payload.
+2. Allow blocked-inactive placeholder mode when authorized.
 3. Validate node types / typeVersions.
 4. Validate graph / connections.
 5. Validate workflow name.
-6. Validate inactive state.
-7. Reject credentials in JSON unless explicitly approved.
-8. Reject secrets.
-9. Reject webhook IDs.
+6. Validate inactive create (no active=true).
+7. Reject credentials in JSON for blocked mode.
+8. Reject secrets / absolute URLs.
+9. Reject webhook IDs in create payload.
 10. Reject Telegram nodes.
 11. Produce create payload.
 12. Require `--apply`.
-13. Require explicit operator confirmation input.
+13. Require confirmation phrase `CREATE INACTIVE MARS CLIENT OPS BRIDGE BZPM`.
 14. POST through separate write-capable client.
-15. Re-GET created workflow.
+15. Re-GET created workflow via GET-only client.
 16. Sanitize evidence.
 17. Record rollback / delete boundary.
 18. Never activate automatically.
