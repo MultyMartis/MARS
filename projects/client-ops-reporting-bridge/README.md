@@ -1,10 +1,12 @@
 # MARS Client Ops Reporting Bridge
 
-**Subsystem name:** MARS Client Ops Reporting Bridge  
-**Status:** PHASE 0A/0B COMPLETE + PHASE 1A OFFLINE EXPORTER CORE COMPLETE  
-**Implementation status:** Phase 1A offline exporter core + fixtures + tests **COMPLETE**; n8n / webhook / Telegram / Storage publication **NOT STARTED**  
-**Production state:** UNCHANGED  
-**Canonical locus:** `projects/client-ops-reporting-bridge/`  
+**Subsystem name:** MARS Client Ops Reporting Bridge
+**Status:** PHASE 0A/0B COMPLETE + PHASE 1A OFFLINE EXPORTER CORE COMPLETE + PROGRAMMER CAPABILITY EXTENSION COMPLETE
+**Implementation status:** Phase 1A offline exporter core + fixtures + tests **COMPLETE**; MetaBOT programmer Client Ops extension (template/harness/runbooks) **COMPLETE LOCALLY**; n8n sandbox workflow / webhook / Telegram / Storage publication **NOT STARTED / NOT APPLIED**
+**Production state:** UNCHANGED
+**Transport decision:** **PROFILE_B_REQUIRED** (authoritative for next sandbox create)
+**Future n8n workflow name:** `MARS Client Ops Bridge — bzpm.ru`
+**Canonical locus:** `projects/client-ops-reporting-bridge/`
 **Registry:** `project_id` **not registered** — programme locus only (registry mutation not authorized)
 
 ---
@@ -62,17 +64,18 @@ Phase 0A freezes the contract. Phase 0B freezes implementation-ready design and 
 | **Phase 0A — Contract freeze** | **COMPLETE** |
 | **Phase 0B — Implementation design** | **COMPLETE** (documentation) |
 | **Phase 1A — Offline exporter core** | **COMPLETE** (fixture-driven; no production/network) |
-| **Phase 1B — Transport / publication** | **NOT STARTED / BLOCKED** by profile decision |
-| **n8n Client Ops workflow** | **NOT CREATED** |
+| **MetaBOT Programmer Client Ops extension** | **COMPLETE** (local template/harness/runbooks; not applied) |
+| **Phase 1B — Transport / publication** | **NOT STARTED** — profile frozen as **PROFILE_B_REQUIRED**; sandbox create pending next charter |
+| **n8n Client Ops workflow** | **NOT CREATED** (local inactive template only) |
 | **Telegram** | **NOT CONNECTED** |
 | **Production** | **UNCHANGED** |
 | **Exporter (offline)** | Exists under `src/client_ops_reporting_bridge/` |
-| **Exporter (publish/push)** | Does not exist |
+| **Exporter (publish/push)** | Does not exist (`push-webhook` not implemented) |
 | **AI_COMMENT runtime** | Does not exist |
 | **Hub Gateway feed** | Does not exist |
-| **PROFILE A vs B** | Both designed; selection pending n8n Storage access |
+| **PROFILE A vs B** | **PROFILE_B_REQUIRED** frozen for Client Ops Bridge — bzpm.ru |
 
-**Explicit statement:** Phase 1A is offline-only. No n8n workflow, webhook, Telegram bot, Storage publication, or production exporter service is claimed. See [PHASE-1A-OFFLINE-EXPORTER-CORE.md](PHASE-1A-OFFLINE-EXPORTER-CORE.md).
+**Explicit statement:** Phase 1A is offline-only. Programmer extension adds local n8n template/harness only. No live n8n workflow, webhook call, Telegram bot, Storage publication, or production exporter service is claimed. See [PHASE-1A-OFFLINE-EXPORTER-CORE.md](PHASE-1A-OFFLINE-EXPORTER-CORE.md) and [CLIENT-OPS-PROGRAMMER-CAPABILITY-EXTENSION.md](CLIENT-OPS-PROGRAMMER-CAPABILITY-EXTENSION.md).
 
 ---
 
@@ -115,6 +118,18 @@ Phase 0A freezes the contract. Phase 0B freezes implementation-ready design and 
 | `src/client_ops_reporting_bridge/` | Offline Python exporter core |
 | `fixtures/` | Sanitized synthetic fixtures |
 | `tests/` | Offline unittest suite |
+
+### Programmer capability extension (local, not applied)
+
+| Document / path | Role |
+|-----------------|------|
+| [CLIENT-OPS-PROGRAMMER-CAPABILITY-EXTENSION.md](CLIENT-OPS-PROGRAMMER-CAPABILITY-EXTENSION.md) | Extension status, decisions, next charter |
+| `n8n/templates/` | Inactive sandbox workflow template (not applied) |
+| `n8n/harness/` | Offline Node validation harness |
+| `n8n/runbooks/` | Pre-create gates, create design, apply/rollback |
+| `n8n/experience-pack/` | Skeleton experience pack |
+| `n8n/runners/` | Greenfield create runner skeleton (not executed) |
+| MetaBOT knowledge | `projects/metabot-seo-content-agent/metabot-developer/client-ops-n8n-extension-v1.md` |
 
 ---
 

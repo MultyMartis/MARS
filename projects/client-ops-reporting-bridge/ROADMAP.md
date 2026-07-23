@@ -1,8 +1,8 @@
 # Roadmap — MARS Client Ops Reporting Bridge
 
-**Status:** PHASE 0A/0B COMPLETE + PHASE 1A OFFLINE CORE COMPLETE  
-**Current completed phases:** Phase 0A contract freeze + Phase 0B design + Phase 1A offline exporter core  
-**Phase 1B transport / production activation:** NOT STARTED / BLOCKED
+**Status:** PHASE 0A/0B COMPLETE + PHASE 1A OFFLINE CORE COMPLETE + PROGRAMMER EXTENSION COMPLETE (LOCAL)
+**Current completed phases:** Phase 0A contract freeze + Phase 0B design + Phase 1A offline exporter core + MetaBOT programmer Client Ops extension (local)
+**Phase 1B transport / sandbox create / production activation:** NOT STARTED (PROFILE_B_REQUIRED frozen; inactive sandbox create is next charter)
 
 ---
 
@@ -57,17 +57,30 @@
 
 ---
 
+## Phase 1A-EXT — MetaBOT Programmer Client Ops capability extension
+
+| Item | Content |
+|------|---------|
+| **Goal** | Repository-local programmer extension: template, harness, gates, runbooks, experience-pack skeleton |
+| **Allowed work** | Docs/tools under `projects/client-ops-reporting-bridge/n8n/` + narrow MetaBOT developer knowledge doc |
+| **Forbidden work** | Live n8n create/update/delete/activate; webhook POST; credentials; Telegram; Storage; push-webhook |
+| **Evidence required** | Offline Node harness PASS; template gates PASS; Python suite still PASS |
+| **Exit criteria** | Next charter can generate inactive sandbox workflow JSON without manual UI assembly |
+| **State** | **COMPLETE (local only)** — see [CLIENT-OPS-PROGRAMMER-CAPABILITY-EXTENSION.md](CLIENT-OPS-PROGRAMMER-CAPABILITY-EXTENSION.md) |
+
+---
+
 ## Phase 1B — Transport / publication (SITE-002 internal SIMPLE path)
 
 | Item | Content |
 |------|---------|
 | **Goal** | SITE-002 internal operator SIMPLE delivery from normalized envelope |
-| **Allowed work** | Profile-selected publish/push; sandbox then HITL production n8n path; internal Telegram SIMPLE |
-| **Forbidden work** | Client routing; AI enablement (unless separately approved early — default no); baseline refresh; production site writes |
-| **HITL gate** | Sandbox message OK → production activation gate |
-| **Evidence required** | Sanitized envelopes; send evidence; isolation tests; unchanged monitor/baseline/scheduler |
+| **Allowed work** | PROFILE_B authenticated webhook path; sandbox then HITL production n8n path; later internal Telegram SIMPLE |
+| **Forbidden work** | Client routing; AI enablement (unless separately approved early — default no); baseline refresh; production site writes; manual n8n UI assembly |
+| **HITL gate** | Inactive sandbox create → authenticated POST → Telegram → production activation |
+| **Evidence required** | Sanitized envelopes; create/re-GET evidence; isolation tests; unchanged monitor/baseline/scheduler |
 | **Exit criteria** | Internal SIMPLE reliable for OK/ATTENTION/FAILED/BLOCKED per send policy (OK always sends during validation) |
-| **State** | **NOT STARTED / BLOCKED** on remaining operator decisions (n8n Storage access / PROFILE A vs B) |
+| **State** | **NOT STARTED** — transport profile frozen as **PROFILE_B_REQUIRED**; next recommended charter: Phase 1B-B Inactive Sandbox Workflow Generation |
 
 ---
 
