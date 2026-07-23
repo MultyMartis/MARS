@@ -1,0 +1,24 @@
+{
+  "pass": true,
+  "after": {
+    "Format_Strict_Reject_Message": {
+      "present": true,
+      "length": 2821,
+      "has_marker": true,
+      "is_hotfix02": true,
+      "sha256": "35aa1f131f146cb631c67219b44ddc7606f21863c778243198ac58664303c422"
+    },
+    "Parse_Mode": {
+      "present": true,
+      "length": 768,
+      "has_marker": true,
+      "is_hotfix02": true,
+      "sha256": "1752a5d3a51febfe23e356e9309af3c701c27917016cc57906662b8db7c09b96"
+    },
+    "memory_first_fanout": true,
+    "reject_fanout": [
+      "Prepare Memory Row Run",
+      "Take First Item"
+    ]
+  }
+}

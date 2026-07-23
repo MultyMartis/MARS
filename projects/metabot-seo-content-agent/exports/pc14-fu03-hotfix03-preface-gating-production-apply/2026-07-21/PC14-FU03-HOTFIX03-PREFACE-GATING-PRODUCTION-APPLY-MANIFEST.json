@@ -1,0 +1,27 @@
+{
+  "task": "PC14_FU03_HOTFIX03_PREFACE_GATING_PRODUCTION_APPLY",
+  "decision": "PC14_FU03_HOTFIX03_PREFACE_GATING_PRODUCTION_APPLIED_HARNESS_VERIFIED",
+  "recommendedNext": "PC14_FU03_HOTFIX03_PREFACE_GATING_PRODUCTION_APPLY_PERSIST",
+  "finalStatus": "COMPLETE — PC14-FU03 HOTFIX03 production applied and harness verified",
+  "production": {
+    "id": "p4mqb4VuPcemIDlC",
+    "name": "SEO Content Agent Beta.v14 - Worker"
+  },
+  "sandbox": {
+    "id": "TFsK8NooFwryUVxi",
+    "name": "SEO Content Agent Beta.v14 - Worker.sandbox-pc14-fu03-hotfix03-preface"
+  },
+  "proposalCommit": "e02f90fe",
+  "sandboxEvidenceCommit": "17ad8615",
+  "preput": "27/27",
+  "harness": "12/12",
+  "put": {
+    "performed": true,
+    "httpOk": true,
+    "putReturnedActive": true,
+    "putReturnedNodeCount": 101,
+    "updatedAtBefore": "2026-07-20T18:12:05.376Z",
+    "putReturnedUpdatedAt": "2026-07-23T08:40:13.076Z",
+    "updatedAtAfter": "2026-07-23T08:40:13.076Z"
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "all_pass": true,
+  "pass_count": 27,
+  "fail_count": 0,
+  "expected": "27/27",
+  "gates": [
+    {
+      "id": "G01",
+      "name": "production_active_true",
+      "pass": true,
+      "observed": true
+    },
+    {
+      "id": "G02",
+      "name": "production_nodes_101",
+      "pass": true,
+      "observed": 101
+    },
+    {
+      "id": "G03",
+      "name": "production_hotfix02_present",
+      "pass": true,
+      "observed": {
+        "Format_Strict_Reject_Message": {
+          "present": true,
+          "length": 2821,
+          "has_marker": true,
+          "is_hotfix02": true,
+          "sha256": "35aa1f131f146cb631c67219b44ddc7606f21863c778243198ac58664303c422"
+        },
+        "Parse_Mode": {
+          "present": true,
+          "length": 768,
+          "has_marker": true,
+          "is_hotfix02": true,
+          "sha256": "1752a5d3a51febfe23e356e9309af3c701c27917016cc57906662b8db7c09b96"
+        },
+        "memory_first_fanout": true,
+        "reject_fanout": [
+          "Prepare Memory Row Run",
+          "Take First Item"
+        ]
+      }
+    },
+    {
+      "id": "G04",
+      "name": "production_hotfix03_absent",
+      "pass": true,
+      "observed": {
+        "has_hotfix03_marker": false
+      }
+    },
+    {
+      "id": "G05",
+      "name": "sandbox_active_false",
+      "pass": true,
+      "observed": false
+    },
+    {
+      "id": "G06",
+      "name": "sandbox_hotfix03_present",
+      "pass": true,
+      "observed": {
+        "has_marker": true,
+        "outcome_gated": true
+      }
+    },
+    {
+      "id": "G07",
+      "name": "target_node_exists_exactly_once_production",
+      "pass": true,
+      "observed": 1
+    },
+    {
+      "id": "G08",
+      "name": "target_node_exists_exactly_once_sandbox",
+      "pass": true,
+      "observed": 1
+    },
+    {
+      "id": "G09",
+      "name": "target_type_telegram",
+      "pass": true,
+      "observed": {
+        "production": "n8n-nodes-base.telegram",
+        "sandbox": "n8n-nodes-base.telegram"
+      }
+    },
+    {
+      "id": "G10",
+      "name": "target_operation_editMessageText",
+      "pass": true,
+      "observed": {
+        "production": "editMessageText",
+        "sandbox": "editMessageText"
+      }
+    },
+    {
+      "id": "G11",
+      "name": "parse_mode_HTML",
+      "pass": true,
+      "observed": {
+        "production": "HTML",
+        "sandbox": "HTML"
+      }
+    },
+    {
+      "id": "G12",
+      "name": "topology_compatible",
+      "pass": true,
+      "observed": {
+        "production": {
+          "upstream": [
+            "Take First Item"
+          ],
+          "downstream": [
+            "Restore Format Run Items"
+          ]
+        },
+        "sandbox": {
+          "upstream": [
+            "Take First Item"
+          ],
+          "downstream": [
+            "Restore Format Run Items"
+          ]
+        }
+      }
+    },
+    {
+      "id": "G13",
+      "name": "only_status_complete_parameters_text_changes",
+      "pass": true,
+      "observed": [
+        {
+          "name": "Status Complete",
+          "reason": "parameters.text_only"
+        }
+      ]
+    },
+    {
+      "id": "G14",
+      "name": "node_delta_0",
+      "pass": true,
+      "observed": 0
+    },
+    {
+      "id": "G15",
+      "name": "connection_delta_0",
+      "pass": true,
+      "observed": {
+        "connections_equal": true
+      }
+    },
+    {
+      "id": "G16",
+      "name": "code_node_delta_0",
+      "pass": true,
+      "observed": 0
+    },
+    {
+      "id": "G17",
+      "name": "credentials_unchanged",
+      "pass": true,
+      "observed": {
+        "equal": true
+      }
+    },
+    {
+      "id": "G18",
+      "name": "side_effect_states_unchanged",
+      "pass": true,
+      "observed": {
+        "equal": true
+      }
+    },
+    {
+      "id": "G19",
+      "name": "production_active_true_preserved_in_preview",
+      "pass": true,
+      "observed": true
+    },
+    {
+      "id": "G20",
+      "name": "run_strict_surface_repair_enabled",
+      "pass": true,
+      "observed": {
+        "before_disabled": false,
+        "preview_disabled": false
+      }
+    },
+    {
+      "id": "G21",
+      "name": "hotfix02_preserved",
+      "pass": true,
+      "observed": {
+        "Format_Strict_Reject_Message": {
+          "present": true,
+          "length": 2821,
+          "has_marker": true,
+          "is_hotfix02": true,
+          "sha256": "35aa1f131f146cb631c67219b44ddc7606f21863c778243198ac58664303c422"
+        },
+        "Parse_Mode": {
+          "present": true,
+          "length": 768,
+          "has_marker": true,
+          "is_hotfix02": true,
+          "sha256": "1752a5d3a51febfe23e356e9309af3c701c27917016cc57906662b8db7c09b96"
+        },
+        "memory_first_fanout": true,
+        "reject_fanout": [
+          "Prepare Memory Row Run",
+          "Take First Item"
+        ]
+      }
+    },
+    {
+      "id": "G22",
+      "name": "hotfix01_preserved",
+      "pass": true,
+      "observed": {
+        "Restore Format Run Items": {
+          "present": true,
+          "length": 1112,
+          "is_hotfix01": true,
+          "sha256": "9e17d7e465e3a48bc478aedc127fa4cfb970a49cb0e8e8215ce34b2378667a25"
+        },
+        "Restore Format Run Items After Lock": {
+          "present": true,
+          "length": 1123,
+          "is_hotfix01": true,
+          "sha256": "a757f4c6c1b22136d0d8b8bc196e7bea1e9ddde5efc8709c0dfeb146c283c0aa"
+        }
+      }
+    },
+    {
+      "id": "G23",
+      "name": "pc07_preserved",
+      "pass": true,
+      "observed": "={{ $('Route Command').first().json.task_id }}"
+    },
+    {
+      "id": "G24",
+      "name": "tz_hotfix01_preserved",
+      "pass": true,
+      "observed": {
+        "present": true,
+        "structuredClone_count": 0,
+        "clonePlain": true,
+        "version": "v1.1-tz-strict-cleanup-pc14-fu02-hotfix01",
+        "version_intact": true,
+        "code_length": 12044,
+        "sha256": "3d328466dc32c36b89c02a7afde29cef4c6dfc36e953d6966c399dda3f203da6"
+      }
+    },
+    {
+      "id": "G25",
+      "name": "send_telegram_run_unchanged",
+      "pass": true,
+      "observed": "={{ $json.telegram_text_safe }}"
+    },
+    {
+      "id": "G26",
+      "name": "raw_rollback_backup_exists",
+      "pass": true,
+      "observed": "local/pc14-fu03-hotfix03-preface-gating-production-apply-2026-07-21/rollback/worker-before-hotfix03.raw.json"
+    },
+    {
+      "id": "G27",
+      "name": "secret_scan_preput_pass_with_review_labels",
+      "pass": true,
+      "observed": {
+        "result": "PASS_WITH_REVIEW_LABELS",
+        "pass": true,
+        "findings": [],
+        "scanned_file_count": 4
+      }
+    }
+  ]
+}

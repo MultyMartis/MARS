@@ -1,0 +1,5 @@
+{
+  "pass": true,
+  "expected": "={{ $('Route Command').first().json.task_id }}",
+  "observed": "={{ $('Route Command').first().json.task_id }}"
+}

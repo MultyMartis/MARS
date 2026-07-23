@@ -1,0 +1,39 @@
+{
+  "checks": {
+    "active_true": true,
+    "nodes_101": true,
+    "hotfix03_marker": true,
+    "text_matches_sandbox": true,
+    "only_target_text_changed": true,
+    "node_delta_0": true,
+    "connections_unchanged": true,
+    "credentials_unchanged": true,
+    "side_effects_unchanged": true,
+    "repair_enabled": true,
+    "hotfix02_preserved": true,
+    "hotfix01_preserved": true,
+    "pc07_preserved": true,
+    "tz_preserved": true,
+    "send_telegram_unchanged": true,
+    "intake_admin_untouched": true,
+    "sandbox_untouched": true,
+    "pass": true
+  },
+  "afterStatus": {
+    "count": 1,
+    "present": true,
+    "type": "n8n-nodes-base.telegram",
+    "typeVersion": 1,
+    "operation": "editMessageText",
+    "parse_mode": "HTML",
+    "disabled": false,
+    "text": "={{ /* v1-pc14-fu03-hotfix03-preface-gating */ (() => {\n  const j = $json || {};\n  const ms = String(j.memory_status || '').trim();\n  const status = String(j.status || j.strict_surface_status || '').trim();\n  const blocked =\n    !!j.blocked_diagnostic ||\n    ms === 'blocked_dirty' ||\n    ms === 'blocked-dirty' ||\n    status === 'blocked_dirty' ||\n    status === 'blocked-dirty';\n  if (blocked) {\n    return \"⚠️ Задача обработана, но итоговые материалы заблокированы строгой проверкой. Отправляю диагностическое сообщение...\";\n  }\n  if (ms === 'failed' || ms === 'error' || status === 'error' || status === 'failed') {\n    return \"⚠️ Обработка завершена с ошибкой.\\n\\nПроверьте диагностику / статус.\";\n  }\n  if (\n    ms === 'approved_clean' ||\n    ms === 'repair_attempted_clean' ||\n    status === 'clean' ||\n    status === 'approved_clean' ||\n    status === 'repair_attempted_clean'\n  ) {\n    return \"✅ Задача завершена\\n\\nРезультат готов. Отправляю материалы...\";\n  }\n  return \"Задача обработана. Проверяю итоговый статус перед отправкой...\";\n})() }}",
+    "text_length": 1053,
+    "text_sha256": "8205d01202f19d88b5bfe80568ac453bf7a9d8007e363a68ee186a221bbfb7dc",
+    "has_hotfix03_marker": true,
+    "has_outcome_gating": true,
+    "has_credentials": true
+  },
+  "updatedAtBefore": "2026-07-20T18:12:05.376Z",
+  "updatedAtAfter": "2026-07-23T08:40:13.076Z"
+}
