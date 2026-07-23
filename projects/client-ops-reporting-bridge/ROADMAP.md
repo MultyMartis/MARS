@@ -1,0 +1,128 @@
+# Roadmap — MARS Client Ops Reporting Bridge
+
+**Status:** PHASE 0A/0B COMPLETE + PHASE 1A OFFLINE CORE COMPLETE  
+**Current completed phases:** Phase 0A contract freeze + Phase 0B design + Phase 1A offline exporter core  
+**Phase 1B transport / production activation:** NOT STARTED / BLOCKED
+
+---
+
+## Phase 0A — Contract freeze
+
+| Item | Content |
+|------|---------|
+| **Goal** | Freeze shared documentation contract (envelope, precedence, severity, SIMPLE, AI restrictions, gates, SITE-002 intake) |
+| **Allowed work** | Documentation under `projects/client-ops-reporting-bridge/` |
+| **Forbidden work** | Exporter, n8n, Telegram, webhooks, AI calls, production/monitor/baseline/scheduler changes |
+| **HITL gate** | Operator accepts Phase 0A pack |
+| **Evidence required** | This documentation set present; production mutation counts remain zero |
+| **Exit criteria** | Contract docs coherent; blockers listed; no runtime claimed |
+| **State** | **COMPLETE** |
+
+---
+
+## Phase 0B — Implementation design
+
+| Item | Content |
+|------|---------|
+| **Goal** | Convert Phase 0A contract into implementation-ready technical design + deterministic acceptance-test specification |
+| **Allowed work** | Design docs under `projects/client-ops-reporting-bridge/`; PROFILE A and B designed without choosing without evidence |
+| **Forbidden work** | Exporter code; n8n workflow JSON; Telegram/webhook/credentials; Storage directory creation; production activation; monitor/baseline mutation |
+| **HITL gate** | Approve design + test plan; answer remaining operator decisions before implementation transfer work |
+| **Evidence required** | Phase 0B design documents referencing Phase 0A contracts; dual-profile design; acceptance matrix |
+| **Exit criteria** | Design complete; acceptance tests specified; remaining blockers explicit; **implementation not started** |
+| **State** | **COMPLETE (design only)** |
+
+### Phase 0B exit distinctions
+
+| Distinction | State after Phase 0B |
+|-------------|----------------------|
+| Design complete | **Yes** |
+| Implementation started | **No** |
+| External credentials present | **No** (absent) |
+| Profile A vs B selected | **Pending** n8n Storage access decision |
+| Phase 1 ready to activate | **No** |
+
+---
+
+## Phase 1A — Offline exporter core
+
+| Item | Content |
+|------|---------|
+| **Goal** | Fixture-driven offline normalize / envelope / security / event_id / SIMPLE render + tests |
+| **Allowed work** | Code + fixtures + tests under `projects/client-ops-reporting-bridge/` |
+| **Forbidden work** | Storage publication; webhook; n8n; Telegram; production/monitor/baseline/scheduler |
+| **Evidence required** | Offline unittest pass; synthetic fixtures; no production mutations |
+| **Exit criteria** | validate-only + build-envelope offline; contracts honored |
+| **State** | **COMPLETE** — see [PHASE-1A-OFFLINE-EXPORTER-CORE.md](PHASE-1A-OFFLINE-EXPORTER-CORE.md) |
+
+---
+
+## Phase 1B — Transport / publication (SITE-002 internal SIMPLE path)
+
+| Item | Content |
+|------|---------|
+| **Goal** | SITE-002 internal operator SIMPLE delivery from normalized envelope |
+| **Allowed work** | Profile-selected publish/push; sandbox then HITL production n8n path; internal Telegram SIMPLE |
+| **Forbidden work** | Client routing; AI enablement (unless separately approved early — default no); baseline refresh; production site writes |
+| **HITL gate** | Sandbox message OK → production activation gate |
+| **Evidence required** | Sanitized envelopes; send evidence; isolation tests; unchanged monitor/baseline/scheduler |
+| **Exit criteria** | Internal SIMPLE reliable for OK/ATTENTION/FAILED/BLOCKED per send policy (OK always sends during validation) |
+| **State** | **NOT STARTED / BLOCKED** on remaining operator decisions (n8n Storage access / PROFILE A vs B) |
+
+---
+
+## Phase 2 — AI_COMMENT
+
+| Item | Content |
+|------|---------|
+| **Goal** | Optional AI commentary after immutable SIMPLE |
+| **Allowed work** | AI branch using safe input shape; strict fallback |
+| **Forbidden work** | AI authority over severity/action; raw artifact prompts; client AI copy without approval |
+| **HITL gate** | Explicit AI enablement |
+| **Evidence required** | Failure/timeout fallback tests; prohibited-behavior checks |
+| **Exit criteria** | AI optional; SIMPLE never blocked by AI |
+
+---
+
+## Phase 3 — Client-ready routing
+
+| Item | Content |
+|------|---------|
+| **Goal** | Separate client templates and routing |
+| **Allowed work** | Client-safe templates; approved chat routing |
+| **Forbidden work** | Reusing internal templates without approval; exposing internals |
+| **HITL gate** | Per-client routing approval |
+| **Evidence required** | Template approval record; sanitized delivery evidence |
+| **Exit criteria** | Client path isolated from internal operator path |
+
+---
+
+## Phase 4 — Hub Gateway feed
+
+| Item | Content |
+|------|---------|
+| **Goal** | Optional secondary consumer of normalized envelope |
+| **Allowed work** | Feed/display integration design and later implementation under HomeGateway programme rules |
+| **Forbidden work** | Making Hub Gateway a control plane; claiming runtime before evidence |
+| **HITL gate** | HomeGateway / operator charter |
+| **Evidence required** | Consumer contract mapping; no credential leakage |
+| **Exit criteria** | Display/consume path documented and evidenced |
+
+---
+
+## Phase 5 — Multi-client template
+
+| Item | Content |
+|------|---------|
+| **Goal** | Reusable multi-site reporting templates beyond SITE-002 |
+| **Allowed work** | Parameterized site identity; shared severity/envelope reuse |
+| **Forbidden work** | Assuming all sites share SITE-002 monitor artifact shapes without adapters |
+| **HITL gate** | Per-site onboarding into bridge |
+| **Evidence required** | Adapter notes; site-specific intake docs |
+| **Exit criteria** | Second site proven without breaking SITE-002 |
+
+---
+
+## Non-claims
+
+No phase beyond documentation (0A/0B) is implemented by this pack. Future phases require explicit charters. Phase 0B does **not** create runtime, credentials, workflows, or Storage directories.

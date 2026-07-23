@@ -1,0 +1,141 @@
+# MARS Client Ops Reporting Bridge
+
+**Subsystem name:** MARS Client Ops Reporting Bridge  
+**Status:** PHASE 0A/0B COMPLETE + PHASE 1A OFFLINE EXPORTER CORE COMPLETE  
+**Implementation status:** Phase 1A offline exporter core + fixtures + tests **COMPLETE**; n8n / webhook / Telegram / Storage publication **NOT STARTED**  
+**Production state:** UNCHANGED  
+**Canonical locus:** `projects/client-ops-reporting-bridge/`  
+**Registry:** `project_id` **not registered** — programme locus only (registry mutation not authorized)
+
+---
+
+## Purpose
+
+Freeze a shared documentation contract and Phase 0B technical design for a **future** client-site operational reporting chain:
+
+```text
+SITE / OCPilot monitor artifacts
+  → future read-only exporter
+  → sanitized report envelope v1
+  → future n8n validation / deduplication
+  → future Telegram SIMPLE delivery
+  → optional future AI_COMMENT
+  → future Hub Gateway consumer
+```
+
+Phase 0A freezes the contract. Phase 0B freezes implementation-ready design and acceptance tests so a later Phase 1 charter can build without reopening architecture.
+
+---
+
+## Non-goals (Phase 0A / 0B)
+
+- No exporter implementation or executable stub presented as runtime.
+- No n8n workflow create/edit/access.
+- No Telegram bot create/edit/send.
+- No webhook, public endpoint, or credential addition.
+- No OpenRouter / AI API calls.
+- No Hub Gateway integration.
+- No SITE-002 monitor, scheduler, or baseline mutation.
+- No Storage artifact mutation / promoted directory creation.
+- No production writes (FTP/SFTP/SSH/DB/REST write).
+- No registry, governance, MetaBOT, OCPilot, or HomeGateway edits outside this locus.
+
+---
+
+## Ownership boundaries
+
+| Layer | Owns | Must not own |
+|-------|------|----------------|
+| **OCPilot / SITE** | Monitor facts; baseline-related facts; factual report producer inputs | Telegram; AI; routing; client chat configuration |
+| **Shared contract (this pack)** | Report envelope; source authority; artifact precedence; severity normalization; cross-consumer semantics | Live delivery; credentials; runtime |
+| **MetaBOT / n8n (future)** | Intake, validation, deduplication, routing, formatting, delivery, retry, optional AI branch | SITE/monitor truth; baseline authority |
+| **Telegram (future)** | Transport and presentation only | Source of truth |
+| **AI (future optional)** | Short commentary after immutable SIMPLE facts | Facts, severity, actions, production decisions |
+| **Hub Gateway (future optional)** | Secondary consumer of normalized envelope | Phase 0A/0B runtime claim |
+
+---
+
+## Current phase
+
+| Field | Value |
+|-------|-------|
+| **Phase 0A — Contract freeze** | **COMPLETE** |
+| **Phase 0B — Implementation design** | **COMPLETE** (documentation) |
+| **Phase 1A — Offline exporter core** | **COMPLETE** (fixture-driven; no production/network) |
+| **Phase 1B — Transport / publication** | **NOT STARTED / BLOCKED** by profile decision |
+| **n8n Client Ops workflow** | **NOT CREATED** |
+| **Telegram** | **NOT CONNECTED** |
+| **Production** | **UNCHANGED** |
+| **Exporter (offline)** | Exists under `src/client_ops_reporting_bridge/` |
+| **Exporter (publish/push)** | Does not exist |
+| **AI_COMMENT runtime** | Does not exist |
+| **Hub Gateway feed** | Does not exist |
+| **PROFILE A vs B** | Both designed; selection pending n8n Storage access |
+
+**Explicit statement:** Phase 1A is offline-only. No n8n workflow, webhook, Telegram bot, Storage publication, or production exporter service is claimed. See [PHASE-1A-OFFLINE-EXPORTER-CORE.md](PHASE-1A-OFFLINE-EXPORTER-CORE.md).
+
+---
+
+## Document map
+
+### Phase 0A — Contract freeze
+
+| Document | Role |
+|----------|------|
+| [ARCHITECTURE.md](ARCHITECTURE.md) | Boundaries, flows, failure isolation |
+| [REPORT-CONTRACT-V1.md](REPORT-CONTRACT-V1.md) | Frozen sanitized report envelope v1 |
+| [ARTIFACT-AUTHORITY-AND-PRECEDENCE.md](ARTIFACT-AUTHORITY-AND-PRECEDENCE.md) | Source artifact authority and conflict rules |
+| [SEVERITY-MODEL.md](SEVERITY-MODEL.md) | OK / ATTENTION / FAILED / BLOCKED |
+| [TELEGRAM-SIMPLE-TEMPLATES.md](TELEGRAM-SIMPLE-TEMPLATES.md) | Deterministic SIMPLE rendering |
+| [AI-COMMENT-CONTRACT.md](AI-COMMENT-CONTRACT.md) | Optional AI commentary restrictions |
+| [PHASE-1-MVP-GATES.md](PHASE-1-MVP-GATES.md) | Blockers and approval gates |
+| [SITE-002-MVP-INTAKE.md](SITE-002-MVP-INTAKE.md) | SITE-002 evidence and assumptions |
+| [ROADMAP.md](ROADMAP.md) | Phased implementation roadmap |
+
+### Phase 0B — Implementation design
+
+| Document | Role |
+|----------|------|
+| [IMPLEMENTATION-DESIGN-V1.md](IMPLEMENTATION-DESIGN-V1.md) | End-to-end Phase 1 technical design; PROFILE A/B |
+| [EXPORTER-DESIGN-V1.md](EXPORTER-DESIGN-V1.md) | Future read-only exporter design |
+| [PROMOTED-ARTIFACT-PROTOCOL-V1.md](PROMOTED-ARTIFACT-PROTOCOL-V1.md) | Promoted Storage layout and atomicity |
+| [NORMALIZATION-ALGORITHM-V1.md](NORMALIZATION-ALGORITHM-V1.md) | Deterministic normalization algorithm |
+| [EVENT-ID-AND-DEDUPE-V1.md](EVENT-ID-AND-DEDUPE-V1.md) | Deterministic event_id and dedupe |
+| [N8N-WORKFLOW-DESIGN-V1.md](N8N-WORKFLOW-DESIGN-V1.md) | Future isolated n8n workflow design |
+| [ACCEPTANCE-TEST-PLAN-V1.md](ACCEPTANCE-TEST-PLAN-V1.md) | L0–L7 acceptance tests (not executed in 0B) |
+| [TEST-FIXTURES-SPEC-V1.md](TEST-FIXTURES-SPEC-V1.md) | Fixture specification (no raw prod copies) |
+| [FAILURE-RETRY-AND-ROLLBACK-V1.md](FAILURE-RETRY-AND-ROLLBACK-V1.md) | Failure, retry, disable/rollback |
+| [PHASE-1-IMPLEMENTATION-READINESS.md](PHASE-1-IMPLEMENTATION-READINESS.md) | Readiness and remaining decisions |
+
+### Phase 1A — Offline exporter core
+
+| Document / path | Role |
+|-----------------|------|
+| [PHASE-1A-OFFLINE-EXPORTER-CORE.md](PHASE-1A-OFFLINE-EXPORTER-CORE.md) | Phase 1A scope, CLI, tests, limitations |
+| `src/client_ops_reporting_bridge/` | Offline Python exporter core |
+| `fixtures/` | Sanitized synthetic fixtures |
+| `tests/` | Offline unittest suite |
+
+---
+
+## Related programmes (reference only)
+
+| Programme | Path | Relationship |
+|-----------|------|----------------|
+| OCPilot | `projects/ocpilot/` | SITE monitor producer lane |
+| SITE-002 | `projects/ocpilot/sites/site-002/` | First MVP site evidence |
+| MetaBOT | `projects/metabot-seo-content-agent/` | Future n8n / Telegram / AI patterns |
+| HomeGateway | `projects/homegateway-v4-ai/` | Future optional Hub Gateway consumer (planned / draft) |
+| Shared contracts | `shared/contracts/` | Sibling shared-rule pattern (ATLAS/groundtruth) |
+
+Do **not** treat related programme docs as proof that Client Ops Reporting Bridge runtime exists.
+
+---
+
+## Honesty boundary
+
+- **Documented architecture:** Phase 0A pack.
+- **Documented implementation design:** Phase 0B pack.
+- **Implemented offline core:** Phase 1A — fixture validate/build only; not production runtime.
+- **Planned transport:** Phase 1B+ (publication, n8n, Telegram) — **not** started.
+- **Legacy / external:** MetaBOT live n8n and SITE-002 monitor tooling exist in their own lanes; this bridge does **not** wrap them yet.
