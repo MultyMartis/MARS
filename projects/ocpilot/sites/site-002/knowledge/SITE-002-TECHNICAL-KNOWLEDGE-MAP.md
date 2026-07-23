@@ -18,7 +18,7 @@
 | **Catalog sort menu (Production)** | **COMPLETE** — Run 4.177; menu order in `category.twig`; «Умолчанию» removed |
 | **MARS 1C cron wrapper (Production)** | **OPERATIONAL — FIRST SCHEDULED RUN VERIFIED** — Run 4.194; automatic run SUCCESS 2026-07-06 08:00 Moscow; daily import OPERATIONAL |
 | **MARS 1C cron reports (Production)** | **CURRENT** — Run 4.194; first scheduled report `mars_1c_import_2026-07-06_080007.txt` verified on Production; latest forensic sample `mars_1c_import_2026-07-23_080010.txt` SUCCESS (Run **4.289**) |
-| **Catalog structure / 1C category mapping (Production)** | **IDENTITY FIX CHARTER READY** (Run **4.292**) — importer matches categories by **leaf name only** (`IMPORTER_LEAF_NAME_COLLISION_CONFIRMED`); 1C group `<Ид>` GUIDs available; `oc_category` has **no** GUID/`xml_id`; recommend hybrid mapping table + full-path fallback + collision guard for legacy **154/159/165**; confirmed reparent group still on hubs **373/375** until post-fix import proves persistence; legacy cleanup deferred · [charter](../reports/SITE-002-PROD-1C-CATEGORY-IDENTITY-FIX-CHARTER-01.md) · [postcheck](../reports/SITE-002-PROD-CANONICAL-REPARENT-POSTCHECK-01.md) · [reparent](../reports/SITE-002-PROD-1C-CANONICAL-CATEGORY-REPARENT-01.md) · forensic [4.289](../reports/SITE-002-PROD-CATALOG-STRUCTURE-FORENSIC-01.md) |
+| **Catalog structure / 1C category mapping (Production)** | **IDENTITY HARNESS COMPLETE — LEAF CREATION NEEDED** (Run **4.293**) — read-only harness parses live CommerceML groups/products (GUID + full path) vs DB; tech leaves Мясорубки / Пилы для мяса / Хлеборезки **missing**; hubs **362/373/375/376** backfill-ready; critical **4707/4708/4710/4712** would revert to legacy **154/159/165** under old leaf-name importer; tool `tools/site-002-1c-category-identity-harness.py` · [harness](../reports/SITE-002-PROD-1C-CATEGORY-IDENTITY-HARNESS-01.md) · [charter](../reports/SITE-002-PROD-1C-CATEGORY-IDENTITY-FIX-CHARTER-01.md) · [postcheck](../reports/SITE-002-PROD-CANONICAL-REPARENT-POSTCHECK-01.md) · [reparent](../reports/SITE-002-PROD-1C-CANONICAL-CATEGORY-REPARENT-01.md) |
 
 **TEST-derived knowledge classification:** Implementation evidence and reusable technical knowledge. **Not** automatic proof of current Production parity.
 
@@ -452,9 +452,11 @@ Post-**M9.8.9-06F** live code: offers import calls `refreshPriceIndex()` for eac
 
 Match key: `xml_id` → `product_id`. Unknown `xml_id` offers are silently skipped.
 
-### Category matching risk (Run 4.292 charter)
+### Category matching risk (Run 4.292 charter + Run 4.293 harness)
 
-Categories are **not** matched by persisted GUID. `import_1C.php` builds a leaf-name index from `oc_category_description.name` and maps each 1C group `<Ид>` to that OC `category_id` at runtime only. Same-name leaves under different parents collide (legacy **154/159/165** vs tech tree). Product↔category links are fully replaced each import. Charter recommends hybrid GUID mapping table + full-path fallback + collision guard before the next import can undo Run 4.290 reparent. See [SITE-002-PROD-1C-CATEGORY-IDENTITY-FIX-CHARTER-01.md](../reports/SITE-002-PROD-1C-CATEGORY-IDENTITY-FIX-CHARTER-01.md).
+Categories are **not** matched by persisted GUID. `import_1C.php` builds a leaf-name index from `oc_category_description.name` and maps each 1C group `<Ид>` to that OC `category_id` at runtime only. Same-name leaves under different parents collide (legacy **154/159/165** vs tech tree). Product↔category links are fully replaced each import.
+
+Run **4.293** harness proved live XML→DB mapping: 104 source groups / 1562 products; critical products **4707/4708/4710/4712** currently on hubs **373/375** after Run 4.290, but proposed durable placement needs tech leaves (or interim hub GUID map + collision guard). **4709** stays correctly on **376**. Next: leaf-creation charter and/or mapping-table backfill without product moves. Tool: [site-002-1c-category-identity-harness.py](../tools/site-002-1c-category-identity-harness.py). See [SITE-002-PROD-1C-CATEGORY-IDENTITY-HARNESS-01.md](../reports/SITE-002-PROD-1C-CATEGORY-IDENTITY-HARNESS-01.md) and [SITE-002-PROD-1C-CATEGORY-IDENTITY-FIX-CHARTER-01.md](../reports/SITE-002-PROD-1C-CATEGORY-IDENTITY-FIX-CHARTER-01.md).
 
 ### SAFE UNKNOWN
 

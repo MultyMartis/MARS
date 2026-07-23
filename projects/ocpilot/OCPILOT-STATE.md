@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-23
-**Evidence cutoff:** 2026-07-23 (SITE-002 Run **4.292** / `SITE-002-PROD-1C-CATEGORY-IDENTITY-FIX-CHARTER-01` — importer leaf-name collision charter ready; hybrid GUID map recommended; persistence after 1C import still **not proven**; baseline still **1737**)
+**Evidence cutoff:** 2026-07-23 (SITE-002 Run **4.293** / `SITE-002-PROD-1C-CATEGORY-IDENTITY-HARNESS-01` — read-only XML↔DB harness complete; leaf creation needed before durable backfill; old importer still risks revert of 4707/4708/4710/4712 to 154/159/165; baseline still **1737**)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **1C Category Identity Fix Charter 01 (Run 4.292)** — **COMPLETE — IMPLEMENTATION PLAN READY** · importer leaf-name collision **CONFIRMED**; 1C group GUIDs available; recommend hybrid mapping table + full-path fallback + legacy collision guard; reparent group still on **373/375** until next import proves persistence · baseline still **1737** · [charter 4.292](sites/site-002/reports/SITE-002-PROD-1C-CATEGORY-IDENTITY-FIX-CHARTER-01.md) · [postcheck 4.291](sites/site-002/reports/SITE-002-PROD-CANONICAL-REPARENT-POSTCHECK-01.md) · [reparent 4.290](sites/site-002/reports/SITE-002-PROD-1C-CANONICAL-CATEGORY-REPARENT-01.md) · forensic [4.289](sites/site-002/reports/SITE-002-PROD-CATALOG-STRUCTURE-FORENSIC-01.md) |
+| Current SITE-002 focus | **1C Category Identity Harness 01 (Run 4.293)** — **COMPLETE — LEAF CREATION NEEDED BEFORE BACKFILL** · live XML parsed (104 groups / 1562 products); critical products validated; tech leaves Мясорубки / Пилы для мяса / Хлеборезки missing; hubs **362/373/375/376** backfill-ready; old importer still risks revert to **154/159/165** · next: leaf-creation charter and/or mapping-table backfill · baseline still **1737** · [harness 4.293](sites/site-002/reports/SITE-002-PROD-1C-CATEGORY-IDENTITY-HARNESS-01.md) · [charter 4.292](sites/site-002/reports/SITE-002-PROD-1C-CATEGORY-IDENTITY-FIX-CHARTER-01.md) · [postcheck 4.291](sites/site-002/reports/SITE-002-PROD-CANONICAL-REPARENT-POSTCHECK-01.md) · [reparent 4.290](sites/site-002/reports/SITE-002-PROD-1C-CANONICAL-CATEGORY-REPARENT-01.md) |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 
