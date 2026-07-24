@@ -136,8 +136,8 @@ Allowlist copy source → runtime for changed auth/config/health/tool/README fil
 | exact-path git add | **yes** |
 | commit | **yes** |
 | commit message | `feat(iseo-report-hub): add auth persistence bootstrap` |
-| commit hash | `ae32472f40bcbdb6a5d9cd68a09f65e2bc16246d` |
-| HEAD verification | `ae32472f` matches `git rev-parse HEAD` after commit |
+| commit hash | `d4b3b2e2155f41e8f99d4ac56a47de870ea6b10c` |
+| HEAD verification | feat commit `d4b3b2e2` (`git rev-parse` at amend closeout); push **no** |
 | push | **no** |
 
 ---
