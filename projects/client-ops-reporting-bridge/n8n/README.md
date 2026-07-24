@@ -2,7 +2,7 @@
 
 **Status:** PHASE 1B-B…C1 + D0 + D1 COMPLETE (workflow inactive; durable sequential dedupe retained)
 **Live n8n:** one workflow `MARS Client Ops Bridge — bzpm.ru`; native Header Auth; Pattern B Telegram (`2bIC5376l7ElXb4B`); durable dedupe Data Table `H6VYhwz7RXZCBMmu`; `active=false`; nodes=17; executions=29; versionId `3d2fd6fc-bc17-4e0f-b9e5-086c959afd29`; concurrency `DEDUPE_SEQUENTIAL_SAFE_CONCURRENCY_UNPROVEN`
-**Architecture:** durable dedupe before runtime producer (D0); R1 preferred; post-Telegram SENT ledger deferred; concurrent producers / scheduler / production activation forbidden
+**Architecture:** durable dedupe before runtime producer (D0); R1 preferred; D2 offline producer PROVEN_OFFLINE (HTTP FORBIDDEN_D2); post-Telegram SENT ledger deferred; concurrent producers / scheduler / production activation forbidden
 
 | Path | Role |
 |------|------|

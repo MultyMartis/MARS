@@ -1,8 +1,8 @@
 # Roadmap — MARS Client Ops Reporting Bridge
 
-**Status:** PHASE 0A/0B + PHASE 1A + PROGRAMMER EXTENSION + PHASE 1B-B…C1 + PHASE 1B-D0 + PHASE 1B-D1 COMPLETE (D1B baseline commit this wave; not pushed)
-**Current completed phases:** … + Phase 1B-D0 runtime connection charter + Phase 1B-D1 durable sequential dedupe (inactive; Data Table retained)
-**Remaining Phase 1B:** Phase 1B-D2 Sequential Runtime Producer Design (offline) → controlled producer connection → production activation — NOT STARTED
+**Status:** PHASE 0A/0B + PHASE 1A + PROGRAMMER EXTENSION + PHASE 1B-B…C1 + PHASE 1B-D0 + PHASE 1B-D1 + PHASE 1B-D2 OFFLINE PRODUCER COMPLETE (D2B baseline commit pending; not pushed)
+**Current completed phases:** … + Phase 1B-D1 durable sequential dedupe + Phase 1B-D2 offline sequential runtime producer (HTTP FORBIDDEN_D2)
+**Remaining Phase 1B:** Phase 1B-D2B commit → Phase 1B-D3 controlled connection (later charter) → production activation — NOT STARTED
 
 ---
 
@@ -80,7 +80,7 @@
 | **HITL gate** | Inactive sandbox create → authenticated POST → Telegram → production activation |
 | **Evidence required** | Sanitized envelopes; create/re-GET evidence; isolation tests; unchanged monitor/baseline/scheduler |
 | **Exit criteria** | Internal SIMPLE reliable for OK/ATTENTION/FAILED/BLOCKED per send policy (OK always sends during validation) |
-| **State** | **PARTIAL** — Phase 1B-D1 durable sequential dedupe complete (inactive; executions=29; concurrency unproven; SENT ledger deferred); next: **Phase 1B-D2 Sequential Runtime Producer Design** (offline); production activation still last |
+| **State** | **PARTIAL** — Phase 1B-D2 offline producer complete (`READY_FOR_SEQUENTIAL_RUNTIME_PRODUCER_OFFLINE_BASELINE_COMMIT`); real HTTP still FORBIDDEN_D2; next: **D2B commit** then later **D3 controlled connection**; production activation still last |
 
 ---
 

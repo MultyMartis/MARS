@@ -12,7 +12,8 @@
 **Phase 1B-C1 Telegram sandbox apply:** COMPLETE — inactive workflow; one delivery verified — see [PHASE-1B-C1-TELEGRAM-SANDBOX-INTEGRATION-CONTROLLED-APPLY.md](PHASE-1B-C1-TELEGRAM-SANDBOX-INTEGRATION-CONTROLLED-APPLY.md)
 **Phase 1B-D0 next-step / runtime connection charter:** COMPLETE (decision only) — see [PHASE-1B-D0-INACTIVE-SANDBOX-NEXT-STEP-DECISION-AND-RUNTIME-CONNECTION-CHARTER.md](PHASE-1B-D0-INACTIVE-SANDBOX-NEXT-STEP-DECISION-AND-RUNTIME-CONNECTION-CHARTER.md)
 **Phase 1B-D1 durable dedupe inactive sandbox:** COMPLETE — sequential proof; table `H6VYhwz7RXZCBMmu` retained; see [PHASE-1B-D1-DURABLE-DEDUPE-DESIGN-AND-INACTIVE-SANDBOX-IMPLEMENTATION.md](PHASE-1B-D1-DURABLE-DEDUPE-DESIGN-AND-INACTIVE-SANDBOX-IMPLEMENTATION.md)
-**Phase 1B production activation:** NOT STARTED — readiness after D1B commit: `READY_FOR_NEXT_SEQUENTIAL_RUNTIME_PRODUCER_DESIGN_PHASE`; next charter **Phase 1B-D2 — Sequential Runtime Producer Design and Offline Implementation**
+**Phase 1B-D2 sequential runtime producer (offline):** COMPLETE — see [PHASE-1B-D2-SEQUENTIAL-RUNTIME-PRODUCER-DESIGN-AND-OFFLINE-IMPLEMENTATION.md](PHASE-1B-D2-SEQUENTIAL-RUNTIME-PRODUCER-DESIGN-AND-OFFLINE-IMPLEMENTATION.md)
+**Phase 1B production activation:** NOT STARTED — readiness: `READY_FOR_SEQUENTIAL_RUNTIME_PRODUCER_OFFLINE_BASELINE_COMMIT`; next **Phase 1B-D2B commit**, then later **Phase 1B-D3 controlled connection** (not authorized in D2)
 
 ---
 

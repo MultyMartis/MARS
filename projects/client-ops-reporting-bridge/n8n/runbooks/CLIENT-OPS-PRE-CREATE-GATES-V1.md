@@ -26,4 +26,4 @@ Deterministic gates before inactive sandbox create.
 | Rollback plan present | Runbook exists | PASS |
 | Operator HITL | Required for apply | Phase 1B-B charter + confirmation phrase |
 
-**Apply readiness:** Phase 1B-D1 durable sequential dedupe complete (inactive; executions=29). Next offline charter: Phase 1B-D2 Sequential Runtime Producer Design. Concurrent producers / scheduler / production activation remain blocked. Never schedule Client Ops jobs from dirty `X:\AI MARS`.
+**Apply readiness:** Phase 1B-D2 offline sequential producer complete; real HTTP still FORBIDDEN_D2; workflow inactive (executions=29). Next: D2B commit, then later D3 controlled connection charter. Concurrent producers / scheduler / production activation remain blocked. Never schedule Client Ops jobs from dirty `X:\AI MARS`.

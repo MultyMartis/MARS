@@ -1,8 +1,8 @@
 # MARS Client Ops Reporting Bridge
 
 **Subsystem name:** MARS Client Ops Reporting Bridge
-**Status:** PHASE 0A/0B COMPLETE + PHASE 1A OFFLINE EXPORTER CORE COMPLETE + PROGRAMMER EXTENSION COMPLETE + PHASE 1B-B…C1 COMPLETE + PHASE 1B-D0 CHARTER COMPLETE + PHASE 1B-D1 DURABLE DEDUPE COMPLETE (inactive sandbox; sequential proof; D1B baseline commit pending/this wave)
-**Implementation status:** Phase 1A offline exporter core + fixtures + tests **COMPLETE**; MetaBOT programmer Client Ops extension **COMPLETE**; Phase 1B-B…C1 Telegram sandbox integration **APPLIED**; Phase 1B-D0 runtime-connection charter **COMPLETE**; Phase 1B-D1 durable sequential dedupe **PROVEN** (Data Table retained; FIRST_SEEN/DUPLICATE/EVENT_ID_CONFLICT; one Telegram send; concurrency unproven); next **Phase 1B-D2 Sequential Runtime Producer Design** (offline); production activation **NOT STARTED**
+**Status:** PHASE 0A/0B COMPLETE + PHASE 1A OFFLINE EXPORTER CORE COMPLETE + PROGRAMMER EXTENSION COMPLETE + PHASE 1B-B…C1 COMPLETE + PHASE 1B-D0 CHARTER COMPLETE + PHASE 1B-D1 DURABLE DEDUPE COMPLETE + PHASE 1B-D2 OFFLINE PRODUCER COMPLETE (D2B baseline commit pending)
+**Implementation status:** Phase 1A offline exporter core + fixtures + tests **COMPLETE**; MetaBOT programmer Client Ops extension **COMPLETE**; Phase 1B-B…C1 Telegram sandbox integration **APPLIED**; Phase 1B-D0 runtime-connection charter **COMPLETE**; Phase 1B-D1 durable sequential dedupe **PROVEN**; Phase 1B-D2 sequential runtime producer **PROVEN_OFFLINE** (real HTTP FORBIDDEN_D2); readiness `READY_FOR_SEQUENTIAL_RUNTIME_PRODUCER_OFFLINE_BASELINE_COMMIT`; production activation **NOT STARTED**
 **Production state:** UNCHANGED
 **Transport decision:** **PROFILE_B_REQUIRED**
 **Live n8n workflow name:** `MARS Client Ops Bridge — bzpm.ru` (inactive; nodes=17; executions=29; durable dedupe + Pattern B Telegram; versionId `3d2fd6fc-…`)
@@ -75,16 +75,17 @@ Phase 0A freezes the contract. Phase 0B freezes implementation-ready design and 
 | **Phase 1B-C1 — Telegram sandbox apply** | **COMPLETE** — see [PHASE-1B-C1-TELEGRAM-SANDBOX-INTEGRATION-CONTROLLED-APPLY.md](PHASE-1B-C1-TELEGRAM-SANDBOX-INTEGRATION-CONTROLLED-APPLY.md) |
 | **Phase 1B-D0 — Next-step / runtime connection charter** | **COMPLETE** (decision only) — see [PHASE-1B-D0-INACTIVE-SANDBOX-NEXT-STEP-DECISION-AND-RUNTIME-CONNECTION-CHARTER.md](PHASE-1B-D0-INACTIVE-SANDBOX-NEXT-STEP-DECISION-AND-RUNTIME-CONNECTION-CHARTER.md) |
 | **Phase 1B-D1 — Durable dedupe inactive sandbox** | **COMPLETE** — sequential FIRST_SEEN / DUPLICATE / EVENT_ID_CONFLICT proven; table `H6VYhwz7RXZCBMmu` retained; see [PHASE-1B-D1-DURABLE-DEDUPE-DESIGN-AND-INACTIVE-SANDBOX-IMPLEMENTATION.md](PHASE-1B-D1-DURABLE-DEDUPE-DESIGN-AND-INACTIVE-SANDBOX-IMPLEMENTATION.md) |
+| **Phase 1B-D2 — Sequential runtime producer (offline)** | **COMPLETE** — offline producer dry-run/mock/fixture; push-webhook blocked; see [PHASE-1B-D2-SEQUENTIAL-RUNTIME-PRODUCER-DESIGN-AND-OFFLINE-IMPLEMENTATION.md](PHASE-1B-D2-SEQUENTIAL-RUNTIME-PRODUCER-DESIGN-AND-OFFLINE-IMPLEMENTATION.md) |
 | **n8n Client Ops workflow** | **INACTIVE** — auth bound + Pattern B Telegram + durable dedupe gate (nodes=17; executions=29); `DEDUPE_SEQUENTIAL_SAFE_CONCURRENCY_UNPROVEN` |
 | **Telegram** | **SANDBOX PATH APPLIED** (`@monitor_bzpm_metacode_bot`; credential `2bIC5376l7ElXb4B` bound; chat `499423375`); D1 successful-attempt deliveries=1 (duplicates/conflicts suppressed); **not** production-activated |
 | **Production** | **UNCHANGED** |
 | **Exporter (offline)** | Exists under `src/client_ops_reporting_bridge/` |
-| **Exporter (publish/push)** | Does not exist (`push-webhook` not implemented) |
+| **Exporter (publish/push)** | `push-webhook` present but **blocked** (`NETWORK_DISPATCH_NOT_AUTHORIZED_D2`); real HTTP FORBIDDEN until D3 |
 | **AI_COMMENT runtime** | Does not exist |
 | **Hub Gateway feed** | Does not exist |
 | **PROFILE A vs B** | **PROFILE_B_REQUIRED** frozen for Client Ops Bridge — bzpm.ru |
 
-**Explicit statement:** Phase 1B-D1 proved durable sequential dedupe in the inactive sandbox (Data Table retained; one Telegram send; duplicate/conflict paths excluded from Telegram). Concurrency atomicity and post-Telegram `SENT` ledger remain deferred. Concurrent producers / scheduler / production activation remain forbidden. Next offline charter: **Phase 1B-D2 Sequential Runtime Producer Design**. See D0 + D1 packs.
+**Explicit statement:** Phase 1B-D2 implemented an offline sequential runtime producer (R1) with mock/fixture/disabled transports only. Real Client Ops HTTP dispatch remains `FORBIDDEN_D2`. Concurrent producers / scheduler / production activation remain forbidden. Next: **Phase 1B-D2B offline evidence baseline commit**, then later D3 controlled connection (not authorized now).
 
 ---
 

@@ -1,10 +1,13 @@
-"""Offline CLI for Phase 1A exporter core.
+"""Offline CLI for Phase 1A exporter core + Phase 1B-D2 producer.
 
 Modes:
-  validate-only   — normalize; print sanitized result; no envelope write
-  build-envelope  — write distributable envelope to an approved local path
+  validate-only         — normalize; print sanitized result; no envelope write
+  build-envelope        — write distributable envelope to an approved local path
+  producer-dry-run      — offline producer with mock/fixture/disabled transport
+  producer-fixture-test — run a named mock classification once
+  push-webhook          — ALWAYS blocked in D2 (NETWORK_DISPATCH_NOT_AUTHORIZED_D2)
 
-No network, Storage publication, n8n, Telegram, or production access.
+No real network, Storage publication, n8n, Telegram, or production access.
 """
 
 from __future__ import annotations
@@ -26,10 +29,30 @@ from .constants import (
 )
 from .errors import UnsafeOutputPathError, UsageError
 from .pipeline import process_fixture_dir
+from .producer_config import (
+    ProducerConfigError,
+    default_profile_path,
+    default_secrets_path,
+    load_producer_profile,
+    load_producer_secrets,
+    offline_default_profile,
+)
+from .producer_constants import (
+    EXIT_CONCURRENCY_REJECTED,
+    EXIT_CONFIG_INVALID,
+    EXIT_NETWORK_NOT_AUTHORIZED,
+    MOCK_FIXTURE_NAMES,
+    NETWORK_DISPATCH_NOT_AUTHORIZED_D2,
+    TRANSPORT_DISABLED,
+    TRANSPORT_MOCK,
+)
+from .producer_dispatch_guard import SequentialDispatchError
+from .producer_pipeline import run_producer_offline
 from .security_validator import redact_for_diagnostics
 
-# Approved output roots for Phase 1A (resolved at runtime).
+# Approved output roots for Phase 1A/D2 (resolved at runtime).
 _PROJECT_ROOT = Path(__file__).resolve().parents[2]
+_REPO_ROOT = Path(__file__).resolve().parents[4]
 
 
 def _is_under(path: Path, root: Path) -> bool:
@@ -41,26 +64,32 @@ def _is_under(path: Path, root: Path) -> bool:
 
 
 def assert_safe_output_path(output: Path) -> Path:
-    """Refuse paths outside project locus or system temp.
+    """Refuse paths outside approved offline boundaries.
 
     Approved:
     - under ``projects/client-ops-reporting-bridge/``
     - under the process temporary directory
+    - under ``local/client-ops-reporting-bridge/`` (ignored local evidence/runs)
     """
     resolved = output.resolve()
     tmp_root = Path(tempfile.gettempdir()).resolve()
-    if _is_under(resolved, _PROJECT_ROOT) or _is_under(resolved, tmp_root):
+    local_client_ops = (_REPO_ROOT / "local" / "client-ops-reporting-bridge").resolve()
+    if (
+        _is_under(resolved, _PROJECT_ROOT)
+        or _is_under(resolved, tmp_root)
+        or _is_under(resolved, local_client_ops)
+    ):
         # Deny writing into fixtures source trees accidentally replacing inputs
         fixtures = (_PROJECT_ROOT / "fixtures").resolve()
         if _is_under(resolved, fixtures) and resolved.parent == fixtures:
             raise UnsafeOutputPathError(
                 "refusing to write envelope directly into fixtures root"
             )
-        # Allow fixtures/*/out/ or project test-output/
+        # Allow fixtures/*/out/ or project test-output/ or ignored local runs/
         return resolved
     raise UnsafeOutputPathError(
-        "output path outside approved Phase 1A boundaries "
-        "(project locus or system temp)"
+        "output path outside approved offline boundaries "
+        "(project locus, ignored local client-ops, or system temp)"
     )
 
 
@@ -138,11 +167,124 @@ def cmd_build_envelope(
     return EXIT_SUCCESS
 
 
+def _load_profile_optional(path: Optional[Path]):
+    if path is None:
+        default = default_profile_path(_REPO_ROOT)
+        if default.is_file():
+            return load_producer_profile(default)
+        return offline_default_profile()
+    return load_producer_profile(path)
+
+
+def cmd_producer_dry_run(
+    fixture: Path,
+    *,
+    transport: str = TRANSPORT_MOCK,
+    mock_response: str = "202_accepted",
+    evidence_dir: Optional[Path] = None,
+    profile_path: Optional[Path] = None,
+    concurrency: int = 1,
+    live: bool = False,
+    apply: bool = False,
+    with_auth: bool = False,
+) -> int:
+    if live or apply or transport.strip().lower() == "http":
+        _print_result(
+            {
+                "ok": False,
+                "final_state": NETWORK_DISPATCH_NOT_AUTHORIZED_D2,
+                "network_calls": 0,
+                "transport_mode": transport,
+            }
+        )
+        return EXIT_NETWORK_NOT_AUTHORIZED
+
+    if concurrency != 1:
+        _print_result(
+            {
+                "ok": False,
+                "final_state": "CONCURRENCY_REJECTED",
+                "network_calls": 0,
+            }
+        )
+        return EXIT_CONCURRENCY_REJECTED
+
+    try:
+        profile = _load_profile_optional(profile_path)
+    except ProducerConfigError as exc:
+        _print_result(
+            {
+                "ok": False,
+                "final_state": "CONFIG_INVALID",
+                "error": redact_for_diagnostics(str(exc)),
+                "network_calls": 0,
+            }
+        )
+        return EXIT_CONFIG_INVALID
+
+    secrets = None
+    if with_auth:
+        secrets = load_producer_secrets(default_secrets_path(_REPO_ROOT))
+
+    safe_evidence = None
+    if evidence_dir is not None:
+        safe_evidence = assert_safe_output_path(evidence_dir)
+
+    result = run_producer_offline(
+        fixture_dir=fixture,
+        profile=profile,
+        secrets=secrets,
+        transport_mode=transport,
+        mock_fixture=mock_response,
+        concurrency=concurrency,
+        evidence_dir=safe_evidence,
+        require_auth=False,
+    )
+    payload = result.to_sanitized_dict()
+    payload["ok"] = result.final_state not in {
+        NETWORK_DISPATCH_NOT_AUTHORIZED_D2,
+        "CONCURRENCY_REJECTED",
+        "SOURCE_BLOCKED",
+        "CONFIG_INVALID",
+    }
+    _print_result(payload)
+    if result.final_state == NETWORK_DISPATCH_NOT_AUTHORIZED_D2:
+        return EXIT_NETWORK_NOT_AUTHORIZED
+    if result.final_state == "CONCURRENCY_REJECTED":
+        return EXIT_CONCURRENCY_REJECTED
+    if result.final_state == "SOURCE_BLOCKED":
+        return EXIT_SOURCE_BLOCKED
+    return EXIT_SUCCESS
+
+
+def cmd_producer_fixture_test(mock_response: str, fixture: Path) -> int:
+    if mock_response not in MOCK_FIXTURE_NAMES:
+        raise UsageError(f"unknown mock response: {mock_response}")
+    return cmd_producer_dry_run(
+        fixture,
+        transport=TRANSPORT_MOCK,
+        mock_response=mock_response,
+    )
+
+
+def cmd_push_webhook(*_args, **_kwargs) -> int:
+    """Future live POST — blocked throughout D2."""
+    _print_result(
+        {
+            "ok": False,
+            "final_state": NETWORK_DISPATCH_NOT_AUTHORIZED_D2,
+            "network_calls": 0,
+            "message": "push-webhook requires Phase 1B-D3 controlled connection charter",
+        }
+    )
+    return EXIT_NETWORK_NOT_AUTHORIZED
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="client_ops_reporting_bridge",
         description=(
-            "Phase 1A offline exporter core — fixture validate / build only"
+            "Phase 1A offline exporter + Phase 1B-D2 offline sequential producer"
         ),
     )
     parser.add_argument(
@@ -179,6 +321,50 @@ def build_parser() -> argparse.ArgumentParser:
         type=Path,
         help="output JSON path under project locus or temp",
     )
+
+    p_dry = sub.add_parser(
+        "producer-dry-run",
+        help="offline producer dry-run (mock/fixture/disabled; never live POST)",
+    )
+    p_dry.add_argument("--fixture", required=True, type=Path)
+    p_dry.add_argument(
+        "--transport",
+        default=TRANSPORT_MOCK,
+        choices=["disabled", "fixture", "mock"],
+        help="D2-allowed transports only (http absent)",
+    )
+    p_dry.add_argument(
+        "--mock-response",
+        default="202_accepted",
+        help="mock fixture name when --transport=mock",
+    )
+    p_dry.add_argument("--evidence-dir", type=Path, default=None)
+    p_dry.add_argument("--profile", type=Path, default=None)
+    p_dry.add_argument("--concurrency", type=int, default=1)
+    p_dry.add_argument("--with-auth", action="store_true")
+    p_dry.add_argument("--live", action="store_true", help="blocked in D2")
+    p_dry.add_argument("--apply", action="store_true", help="blocked in D2")
+
+    p_fix = sub.add_parser(
+        "producer-fixture-test",
+        help="run one named mock classification against a fixture",
+    )
+    p_fix.add_argument("--fixture", required=True, type=Path)
+    p_fix.add_argument(
+        "--mock-response",
+        required=True,
+        choices=sorted(MOCK_FIXTURE_NAMES.keys()),
+    )
+
+    p_push = sub.add_parser(
+        "push-webhook",
+        help="BLOCKED in D2 — future controlled connection only",
+    )
+    p_push.add_argument("--fixture", type=Path, default=None)
+    p_push.add_argument("--live", action="store_true")
+    p_push.add_argument("--apply", action="store_true")
+    p_push.add_argument("--transport", default="http")
+
     return parser
 
 
@@ -200,6 +386,22 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             return cmd_build_envelope(
                 args.fixture, args.output, debug=args.debug
             )
+        if args.command == "producer-dry-run":
+            return cmd_producer_dry_run(
+                args.fixture,
+                transport=args.transport,
+                mock_response=args.mock_response,
+                evidence_dir=args.evidence_dir,
+                profile_path=args.profile,
+                concurrency=args.concurrency,
+                live=args.live,
+                apply=args.apply,
+                with_auth=args.with_auth,
+            )
+        if args.command == "producer-fixture-test":
+            return cmd_producer_fixture_test(args.mock_response, args.fixture)
+        if args.command == "push-webhook":
+            return cmd_push_webhook()
         raise UsageError(f"unknown command: {args.command}")
     except UsageError as exc:
         sys.stderr.write(f"usage error: {exc}\n")
@@ -207,6 +409,12 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     except UnsafeOutputPathError as exc:
         sys.stderr.write(f"unsafe output path: {exc}\n")
         return EXIT_UNSAFE_OUTPUT_PATH
+    except SequentialDispatchError as exc:
+        sys.stderr.write(f"sequential guard: {exc}\n")
+        return EXIT_CONCURRENCY_REJECTED
+    except ProducerConfigError as exc:
+        sys.stderr.write(f"config error: {redact_for_diagnostics(str(exc))}\n")
+        return EXIT_CONFIG_INVALID
     except Exception as exc:  # noqa: BLE001 — map to exit 5 without stack by default
         sys.stderr.write(
             f"internal error: {redact_for_diagnostics(type(exc).__name__)}\n"

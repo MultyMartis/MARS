@@ -3,7 +3,7 @@
 **Status:** DOCUMENTATION + PROGRAMMER EXTENSION + PHASE 1B-B…C1 + PHASE 1B-D0 + PHASE 1B-D1 COMPLETE / PRODUCTION ACTIVATION PENDING
 **Gate actions:** … Phase 1B-D0 charter **EXECUTED**; Phase 1B-D1 durable sequential dedupe **EXECUTED** (inactive); production activation **NOT EXECUTED**
 **Phase 1 production readiness:** NOT READY until remaining activation gates are satisfied
-**Next offline design phase:** Phase 1B-D2 Sequential Runtime Producer Design (no webhook connection unless later controlled charter)
+**Next phase:** Phase 1B-D2B Sequential Runtime Producer Offline Evidence Baseline Commit; real webhook connection remains blocked until Phase 1B-D3 controlled charter
 
 ---
 

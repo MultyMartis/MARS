@@ -93,7 +93,7 @@ node projects/client-ops-reporting-bridge/n8n/runners/run-client-ops-telegram-cr
 1. Exact n8n application version.
 2. Concurrent atomicity / unique `event_id` enforcement (D1 sequential proven; concurrency unproven).
 3. Post-Telegram durable `delivery_state=SENT` ledger (deferred).
-4. Runtime producer connection (next offline design: D2; no live connection until later charter).
+4. Runtime producer live connection (D2 offline producer complete; live POST remains D3+; no live connection until later charter).
 5. Production activation (separate charter; last).
 
 ## Architecture decisions captured in Phase 1B-D0
@@ -113,4 +113,4 @@ node projects/client-ops-reporting-bridge/n8n/runners/run-client-ops-telegram-cr
 
 ## Next charter
 
-**Phase 1B-D2 — Sequential Runtime Producer Design and Offline Implementation** — offline only; do not call Client Ops webhook unless a later controlled connection phase is approved.
+**Phase 1B-D2 — Sequential Runtime Producer Design and Offline Implementation** — COMPLETE offline (`READY_FOR_SEQUENTIAL_RUNTIME_PRODUCER_OFFLINE_BASELINE_COMMIT`); `push-webhook` returns `NETWORK_DISPATCH_NOT_AUTHORIZED_D2`. Do not call Client Ops webhook unless Phase 1B-D3 controlled connection is approved.

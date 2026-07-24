@@ -88,7 +88,7 @@ Telegram delivery sandbox apply is complete on the inactive Client Ops workflow 
 ## Still incomplete until later charters
 
 - Phase 1B-D2 Sequential Runtime Producer Design (offline)
-- Runtime producer connection (controlled later charter)
+- Runtime producer live HTTP connection (D2 offline producer done; D3 controlled charter later)
 - Scheduler connection (after manual E2E)
 - Concurrent atomicity / unique event_id enforcement
 - Post-Telegram durable SENT ledger

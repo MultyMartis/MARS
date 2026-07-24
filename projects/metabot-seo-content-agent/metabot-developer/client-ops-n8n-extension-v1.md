@@ -70,7 +70,7 @@ Validate: schema_name, schema major 1, site identity, event_type, normalized_sta
 
 First sandbox: `DEDUPE_DEFERRED_SANDBOX` / response may advertise `dedupe: "DEFERRED_SANDBOX"` and `DEDUPE_NOT_ENABLED_SANDBOX`.
 
-Phase 1B-D0 decision: durable dedupe is **mandatory before any runtime producer connection**. Preferred store on this install: n8n **Data Table**. Phase 1B-D1 proved **sequential** durable dedupe (FIRST_SEEN / DUPLICATE / EVENT_ID_CONFLICT). Classification remains `DEDUPE_SEQUENTIAL_SAFE_CONCURRENCY_UNPROVEN`. Post-Telegram SENT ledger deferred. Do not claim concurrent-safe or production-grade delivery ledger yet.
+Phase 1B-D0 decision: durable dedupe is **mandatory before any runtime producer connection**. Preferred store on this install: n8n **Data Table**. Phase 1B-D1 proved **sequential** durable dedupe (FIRST_SEEN / DUPLICATE / EVENT_ID_CONFLICT). Classification remains `DEDUPE_SEQUENTIAL_SAFE_CONCURRENCY_UNPROVEN`. Post-Telegram SENT ledger deferred. Phase 1B-D2 added an **offline** sequential producer (mock/fixture/disabled transports; `push-webhook` blocked as `NETWORK_DISPATCH_NOT_AUTHORIZED_D2`). Do not claim live producer connection, concurrent-safe dedupe, or production-grade delivery ledger yet.
 
 ## 8. Structured response
 
