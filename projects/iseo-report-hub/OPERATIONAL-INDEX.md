@@ -15,8 +15,8 @@
 | **Owner / product architect** | Андрей |
 | **Business owner / vision source** | Никита / i-SEO |
 | **Developer** | Антон |
-| **Platform direction** | **Reopened** — WordPress on i-seo.su remains option; custom PHP + MySQL candidate; see [I-SEO-REPORT-HUB-PLATFORM-OPTIONS-v0.1.md](product/I-SEO-REPORT-HUB-PLATFORM-OPTIONS-v0.1.md) |
-| **Implementation** | **Not started** — no plugin, no runtime, no n8n workflow |
+| **Platform direction** | **Decided** — custom **PHP + SQL/MySQL**; **no WordPress runtime**; Laragon available as local dev/runtime candidate; see [I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md](product/I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md) |
+| **Implementation** | **Not started** — no PHP app, no SQL migrations, no Laragon project, no n8n workflow |
 
 ---
 
@@ -26,7 +26,7 @@
 |-------|-------|
 | **Status** | planned / product architecture |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | Product Architecture Layer 02 complete (docs); static demo v0.4 accepted as raw baseline; SEO feedback deferred |
+| **Active stage** | Platform decision + PHP/MySQL MVP technical brief package (docs); Layer 02 complete; static demo v0.4 UX reference; SEO feedback deferred; **implementation not started** |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -86,21 +86,37 @@
 | Product Architecture Layer 02 | **Completed** (documentation) — modules, roles, data model, lifecycle, publishing/snapshots, implementation decision frame |
 | Demo workspace in Layer 02 task | **Unchanged** — no HTML/CSS/JS edits |
 | Implementation | **Not started** |
-| Next after Layer 02 review | Scoped **commit** of architecture docs; then choose **v0.5 demo corrections** **or** **MVP technical brief** |
+| Platform decision (2026-07-24) | **Custom PHP + SQL/MySQL**; WordPress **rejected** as runtime/SoT; Laragon local candidate |
+| Next stage | **Operator review** of PHP/MySQL technical brief package, then **scoped commit** |
 
-**Demo workspace:** `workspaces/website-factory-operations/iseo-report-hub-prototype/` — v0.4 exists (commit `66d651a2`); **not modified** in Product Architecture Layer 02 task.
+**Demo workspace:** `workspaces/website-factory-operations/iseo-report-hub-prototype/` — v0.4 exists (commit `66d651a2`); **not modified** in platform decision / technical brief task.
+
+---
+
+## Operator decision — platform + PHP/MySQL MVP technical brief (2026-07-24)
+
+| Decision | Status |
+|----------|--------|
+| Platform | **Custom PHP + SQL/MySQL** — WordPress **not** runtime / not DB SoT / not admin backend |
+| Laragon | **Available** as local dev/runtime candidate (exact path/versions **SAFE UNKNOWN** until Phase 0) |
+| WordPress / i-seo.su residual | Visual style reference; optional future embed/link; marketing pages — **not** required for MVP |
+| Static demo v0.4 | UX reference only |
+| Technical brief package | Created (platform decision, brief, Laragon plan, phases, schema draft, route map) |
+| Implementation | **Not started** |
+| Next stage | Operator review of PHP/MySQL MVP Technical Brief, then scoped commit |
 
 ---
 
 ## Current approved decisions (summary)
 
 1. Report Hub — **операционная система отчётности**, не PDF-only tool.
-2. **Platform** — **platform-neutral until decision gate**; WordPress on i-seo.su **or** custom PHP + MySQL — see platform options v0.1.
-3. **n8n** — external helper (AI, reminders, notifications); **не** SoT.
-4. **Primary client output** — web report pages (hosting TBD by platform choice); PDF optional later.
-5. **Reporting period** — 1 month; 3 weekly checkpoints + 1 monthly final.
-6. **MVP direction** — internal admin, manual data, evidence, Topvisor external link, approval/publish (implementation platform TBD).
-7. **Credentials/secrets** — отдельный secure integration concern; **не** в report content.
+2. **Platform** — **custom PHP + SQL/MySQL** (operator decision 2026-07-24); WordPress **rejected** as runtime/SoT; see [PLATFORM-DECISION-v0.1](product/I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md).
+3. **Laragon** — accepted local dev/runtime **candidate** (versions/paths unverified).
+4. **n8n** — external helper (AI, reminders, notifications); **не** SoT.
+5. **Primary client output** — web report from published snapshots via token URL; PDF optional later.
+6. **Reporting period** — 1 month; 3 weekly checkpoints + 1 monthly final.
+7. **MVP direction** — internal admin, manual data, evidence, Topvisor external link, approval/publish on custom PHP app.
+8. **Credentials/secrets** — отдельный secure integration concern; **не** в report content.
 
 ---
 
@@ -143,6 +159,13 @@
 | 33 | [product/I-SEO-REPORT-HUB-IMPLEMENTATION-OPTIONS-DECISION-FRAME-v0.1.md](product/I-SEO-REPORT-HUB-IMPLEMENTATION-OPTIONS-DECISION-FRAME-v0.1.md) | WP / PHP+MySQL / hybrid decision frame |
 | 34 | [product/I-SEO-REPORT-HUB-V0.5-DEMO-CORRECTIONS-BACKLOG-v0.1.md](product/I-SEO-REPORT-HUB-V0.5-DEMO-CORRECTIONS-BACKLOG-v0.1.md) | Future demo v0.5 corrections backlog |
 | 35 | [reports/REPORT-iseo-report-hub-product-architecture-layer-02.md](reports/REPORT-iseo-report-hub-product-architecture-layer-02.md) | Layer 02 closeout report |
+| 36 | [product/I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md](product/I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md) | Platform decision: PHP + MySQL, no WP runtime |
+| 37 | [product/I-SEO-REPORT-HUB-PHP-MYSQL-MVP-TECHNICAL-BRIEF-v0.1.md](product/I-SEO-REPORT-HUB-PHP-MYSQL-MVP-TECHNICAL-BRIEF-v0.1.md) | PHP/MySQL MVP technical brief |
+| 38 | [product/I-SEO-REPORT-HUB-LARAGON-LOCAL-RUNTIME-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-LARAGON-LOCAL-RUNTIME-PLAN-v0.1.md) | Laragon local runtime plan |
+| 39 | [product/I-SEO-REPORT-HUB-MVP-IMPLEMENTATION-PHASES-v0.1.md](product/I-SEO-REPORT-HUB-MVP-IMPLEMENTATION-PHASES-v0.1.md) | MVP implementation phases 0–11 |
+| 40 | [product/I-SEO-REPORT-HUB-MVP-SCHEMA-DRAFT-v0.1.md](product/I-SEO-REPORT-HUB-MVP-SCHEMA-DRAFT-v0.1.md) | Conceptual MVP schema draft |
+| 41 | [product/I-SEO-REPORT-HUB-MVP-ROUTE-AND-SCREEN-MAP-v0.1.md](product/I-SEO-REPORT-HUB-MVP-ROUTE-AND-SCREEN-MAP-v0.1.md) | Conceptual route/screen map |
+| 42 | [reports/REPORT-iseo-report-hub-platform-decision-php-mysql-technical-brief-01.md](reports/REPORT-iseo-report-hub-platform-decision-php-mysql-technical-brief-01.md) | Platform decision + technical brief closeout |
 
 ---
 
@@ -187,26 +210,28 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Operator review** of Product Architecture Layer 02 docs
-2. **Scoped commit** of Layer 02 architecture documentation (operator-chartered; selective paths only)
-3. Then choose: **v0.5 demo corrections** (from backlog) **or** **MVP technical brief** (platform/hosting/auth/ownership)
+1. **Operator review** of PHP/MySQL MVP Technical Brief package (platform decision + brief + Laragon plan + phases + schema + routes)
+2. **Scoped commit** of this documentation package (operator-chartered; selective paths only) — **not done in this task**
+3. Optional parallel: **v0.5 demo corrections** from backlog (UX only; not product runtime)
 4. **SEO specialist feedback** — still **deferred** until operator opens feedback charter
-5. **Platform decision gate** — after Layer 02 + technical brief (+ feedback when ready); see platform options + implementation decision frame
+5. **Phase 0** — Laragon/runtime confirmation + local scaffold charter (HITL)
 6. Work dictionary extraction/sanitization (из Nikita materials; **exclude** credential sheet)
-7. MVP implementation charter (HITL) — platform TBD (Anton / i-SEO)
+7. MVP implementation phases 1–11 per implementation charter (Anton / i-SEO)
 8. Later: n8n/API/AI integration (events only; human approval gates)
 
-**Historical note:** Static demos v0.1–v0.4 and report content architecture are complete as documentation/demo baselines; see operator review sections above.
+**Historical note:** Static demos v0.1–v0.4, report content architecture, and Product Architecture Layer 02 are complete as documentation/demo baselines. Platform decision (PHP+MySQL) supersedes WordPress-as-runtime assumptions for forward work.
 
 ---
 
 ## Boundaries (do not overclaim)
 
 - **No implementation started**
-- **No WordPress plugin exists**
+- **No PHP app / SQL schema / Laragon project exists** for Report Hub
+- **No WordPress plugin exists** (and WP is not the chosen runtime)
 - **No API integration exists**
 - **No n8n workflow exists**
 - **No client portal exists**
 - **No autonomous publication**
-- **Website Factory is not runtime owner** — methodology + prototype lane only; production platform **not decided** (see platform options v0.1)
-- **Static demo v0.1 is not SEO specialist-ready** — workflow mechanics only
+- **Website Factory is not runtime owner** — methodology + prototype lane only
+- **Static demo v0.4 is UX reference only** — not implementation
+- **Historical WP architecture docs** remain in corpus as legacy planning — not current SoT
