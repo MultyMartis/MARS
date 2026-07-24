@@ -16,7 +16,7 @@
 | **Business owner / vision source** | Никита / i-SEO |
 | **Developer** | Антон |
 | **Platform direction** | **Decided** — custom **PHP + SQL/MySQL**; **no WordPress runtime**; Laragon local runtime **verified** (preflight 01); see [I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md](product/I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md) |
-| **Implementation** | **Phase 1A source skeleton complete** in `app-source/` (bootstrap/router/views/controllers/services); runtime at `X:\MARS-Localhost\sites\php\projects\iseo-report-hub` **not synced**; **no** DB / vhost / hosts / secrets; auth stub only |
+| **Implementation** | **Phase 1B complete** — Phase 1A skeleton synced **source → runtime**; local smoke PASS (php -l + CLI + built-in `:8088`); **no** DB / vhost / hosts / secrets; auth stub only |
 | **Source model** | **Model A active** — `projects/iseo-report-hub/app-source/` is versioned SoT; sync direction **source → runtime**; runtime → source only by explicit import charter |
 
 ---
@@ -25,9 +25,9 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | planned / product architecture + Phase 0 runtime scaffold + Model A `app-source/` mirror + **Phase 1A app skeleton** |
+| **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A skeleton + **Phase 1B runtime sync** |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | MVP **Phase 1A source skeleton complete** (bootstrap/router/views/controllers/services); runtime **not synced**; DB **not** created; next recommended: **Phase 1B source → runtime sync + smoke**; vhost / hosts still separate |
+| **Active stage** | MVP **Phase 1B complete** — runtime has Phase 1A skeleton; smoke PASS; DB **not** created; vhost / hosts **not** mapped; next recommended: **local vhost/hosts charter for `iseo-report-hub.test`** |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -212,6 +212,24 @@
 
 ---
 
+## MVP Phase 1B source → runtime sync + local smoke 01 (2026-07-24)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** — allowlist source → runtime sync + local smoke |
+| **Result doc** | [I-SEO-REPORT-HUB-MVP-PHASE-1B-RUNTIME-SYNC-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-MVP-PHASE-1B-RUNTIME-SYNC-RESULT-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-mvp-phase-1b-source-to-runtime-sync-local-smoke-01.md](reports/REPORT-iseo-report-hub-mvp-phase-1b-source-to-runtime-sync-local-smoke-01.md) |
+| **Source path** | `X:\AI MARS\projects\iseo-report-hub\app-source\` |
+| **Runtime path** | `X:\MARS-Localhost\sites\php\projects\iseo-report-hub\` |
+| **Sync** | Allowlist copy — **44** files; missing **0**; no wipe |
+| **Smoke** | `php -l` PASS (25 files); CLI routes PASS; built-in server `127.0.0.1:8088` PASS then stopped |
+| **DB** | **Not created** · not tested |
+| **vhost / hosts** | **Not configured** |
+| **Secrets** | **None** — no `.env` / `.env.local` |
+| **Next stage** | **Local vhost/hosts mapping charter** for `iseo-report-hub.test` |
+
+---
+
 ## Current approved decisions (summary)
 
 1. Report Hub — **операционная система отчётности**, не PDF-only tool.
@@ -286,6 +304,8 @@
 | 55 | [app-source/](app-source/) | Versioned Model A PHP source mirror (Phase 1A skeleton) |
 | 56 | [product/I-SEO-REPORT-HUB-MVP-PHASE-1A-APP-SKELETON-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-MVP-PHASE-1A-APP-SKELETON-RESULT-v0.1.md) | Phase 1A app skeleton result |
 | 57 | [reports/REPORT-iseo-report-hub-mvp-phase-1a-app-skeleton-config-baseline-01.md](reports/REPORT-iseo-report-hub-mvp-phase-1a-app-skeleton-config-baseline-01.md) | Phase 1A closeout report |
+| 58 | [product/I-SEO-REPORT-HUB-MVP-PHASE-1B-RUNTIME-SYNC-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-MVP-PHASE-1B-RUNTIME-SYNC-RESULT-v0.1.md) | Phase 1B runtime sync result |
+| 59 | [reports/REPORT-iseo-report-hub-mvp-phase-1b-source-to-runtime-sync-local-smoke-01.md](reports/REPORT-iseo-report-hub-mvp-phase-1b-source-to-runtime-sync-local-smoke-01.md) | Phase 1B closeout report |
 
 ---
 
@@ -330,25 +350,25 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Phase 1B** — source → runtime sync + local smoke (recommended next)
-2. DB creation charter — only after runtime skeleton smoke (or explicit operator override)
+1. **Local vhost/hosts mapping charter** for `iseo-report-hub.test` (recommended next)
+2. DB creation charter — after domain mapping (or explicit operator override)
 3. Optional parallel: **v0.5 demo corrections** from backlog (UX only; not product runtime)
 4. **SEO specialist feedback** — still **deferred** until operator opens feedback charter
 5. Work dictionary extraction/sanitization (из Nikita materials; **exclude** credential sheet)
 6. MVP implementation phases 2–11 per implementation charter (Anton / i-SEO)
 7. Later: n8n/API/AI integration (events only; human approval gates)
 
-**Historical note:** Static demos v0.1–v0.4, report content architecture, and Product Architecture Layer 02 are complete as documentation/demo baselines. Platform decision (PHP+MySQL) supersedes WordPress-as-runtime assumptions for forward work. Phase 0 scaffold exists on Localhost; Model A charter + deploy/sync policy are defined; `app-source/` mirror is created and is the versioned source of truth for app code.
+**Historical note:** Static demos v0.1–v0.4, report content architecture, and Product Architecture Layer 02 are complete as documentation/demo baselines. Platform decision (PHP+MySQL) supersedes WordPress-as-runtime assumptions for forward work. Phase 0 scaffold + Phase 1A skeleton + Phase 1B source→runtime sync are done; `app-source/` remains the versioned SoT; runtime is Localhost deploy target.
 
 ---
 
 ## Boundaries (do not overclaim)
 
-- **Implementation is Phase 0 scaffold only** — not a product app
-- **Runtime scaffold exists** at `X:\MARS-Localhost\sites\php\projects\iseo-report-hub` — index/health pages + folders; **no** DB, **no** auth, **no** migrations
+- **Phase 1B synced Phase 1A skeleton to runtime** — still not a product app with DB/auth/reports
+- **Runtime now has Phase 1A app skeleton** at `X:\MARS-Localhost\sites\php\projects\iseo-report-hub` — front controller, bootstrap, router, views, controllers, services; **no** DB, **no** auth persistence, **no** migrations
 - **Versioned source of truth is `app-source/`** — runtime remains Localhost deploy target outside monorepo
 - **Model A active** — sync direction **source → runtime**; runtime → source only by explicit import charter
-- **Phase 1 can be chartered after operator review** — DB / vhost / hosts / `.env.local` remain not done
+- **DB / vhost / hosts / `.env.local` remain not done**
 - **No WordPress plugin exists** (and WP is not the chosen runtime)
 - **No API integration exists**
 - **No n8n workflow exists**
@@ -357,6 +377,6 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **Website Factory is not runtime owner** — methodology + prototype lane only
 - **Static demo v0.4 is UX reference only** — not implementation
 - **Historical WP architecture docs** remain in corpus as legacy planning — not current SoT
-- **Phase 0 / mirror create did not change Laragon config, hosts, vhosts, services, or databases**
+- **Phase 1B did not change Laragon config, hosts, vhosts, services, or databases**
 - **Domain `iseo-report-hub.test` is intended only** until manually mapped
 - **No separate runtime Git repository** — and none should be created without charter
