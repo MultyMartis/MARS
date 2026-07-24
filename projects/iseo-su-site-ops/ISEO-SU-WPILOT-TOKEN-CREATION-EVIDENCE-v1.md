@@ -1,10 +1,10 @@
 # ISEO-SU WPILOT TOKEN CREATION EVIDENCE v1
 
 **Programme:** ISEO-SU-SITE-OPS  
-**Task ID:** ISEO-SU-SITE-OPS-PHASE-6C-WPILOT-TOKEN-CREATION-ONLY  
+**Task ID:** ISEO-SU-SITE-OPS-PHASE-6C-WPILOT-TOKEN-CREATION-ONLY-RETRY  
 **Date:** 2026-07-24  
 **Site:** `https://i-seo.su/`  
-**Decision:** **PHASE 6C — BLOCKED / NO TOKEN**
+**Decision:** **PHASE 6C RETRY — COMPLETE / TOKEN CREATED LOCAL-ONLY**
 
 No secrets, credentials, cookies, nonces, plaintext tokens, or token-derived identifiers are recorded here.
 
@@ -14,10 +14,11 @@ No secrets, credentials, cookies, nonces, plaintext tokens, or token-derived ide
 
 | Field | Value |
 |-------|-------|
-| Status | **BLOCKED / NO TOKEN** |
-| Token generated in WordPress Admin | **No** (plugin refused) |
-| Local token file created | **No** |
-| Root cause | Plugin `generate_token` requires `WPilot_Environment::is_operationally_ready` (DEV confirmed + bridge enabled). Phase 6C charter forbids enabling the bridge. |
+| Status | **CREATED / LOCAL-ONLY** |
+| Token generated in WordPress Admin | **Yes** (exactly once; RC6) |
+| Local token file created | **Yes** |
+| Historical Phase 6C (RC5) | **BLOCKED / NO TOKEN** — see §15 |
+| Root cause of historical block | RC5 `generate_token` required `is_operationally_ready` (DEV+bridge) |
 
 ---
 
@@ -25,17 +26,18 @@ No secrets, credentials, cookies, nonces, plaintext tokens, or token-derived ide
 
 | Gate | Approval string | Status |
 |------|-----------------|--------|
-| Token creation 6C | `APPROVE ISEO-SU WPILOT TOKEN CREATION 6C` | **Present** (operator follow-up message) |
-| Task charter | `ISEO-SU-SITE-OPS-PHASE-6C-WPILOT-TOKEN-CREATION-ONLY` | Executed within bounds |
+| Token creation 6C retry | `APPROVE ISEO-SU WPILOT TOKEN CREATION 6C RETRY` | **Present** |
+| Task charter | `ISEO-SU-SITE-OPS-PHASE-6C-WPILOT-TOKEN-CREATION-ONLY-RETRY` | Executed |
+| Prior 6C / 6C-R approvals | — | **Not reused** |
 
 ---
 
 ## 3. Backup Confirmation
 
 | Field | Value |
-|-------|-------|
-| Required string | `CONFIRM ISEO-SU FRESH BEGET BACKUP FOR WPILOT 6C` |
-| Status | **Present** (operator follow-up message; operator-attested for this 6C session) |
+|-------|--------|
+| Required string | `CONFIRM ISEO-SU FRESH BEGET BACKUP FOR WPILOT 6C RETRY` |
+| Status | **Present** (operator-attested for this retry session) |
 | Beget panel login by agent | **Not performed** |
 | Independent panel timestamp | SAFE UNKNOWN residual |
 
@@ -45,25 +47,25 @@ No secrets, credentials, cookies, nonces, plaintext tokens, or token-derived ide
 
 | Check | Result |
 |-------|--------|
-| WP Admin login (MARS account) | **OK** (Playwright; Beget cookie gate) |
+| WP Admin login (MARS account) | **OK** (Playwright) |
 | MetaCODE WPilot active | **YES** |
 | Version line | **0.3.0** |
+| Duplicate WPilot rows | **1** |
 | Safety checkboxes | `dev_confirmed` **off**; `bridge_enabled` **off**; `write_enabled` **off** |
 | Connection tab token status | **не сгенерирован** |
 | Local canonical token file | **Absent** |
-| Alternate token filenames | **Absent** |
-| Unsafe automatic action observed | **None** |
+| PHP fatal / Admin regression | **None** |
 
 ---
 
 ## 5. Token Creation Action
 
 | Field | Value |
-|-------|-------|
-| Action | Clicked **Generate / Rotate Token** only (separate form; no Save Bridge) |
+|-------|--------|
+| Action | Clicked generate-token control **once** (separate form; no Save Bridge) |
 | Bridge / DEV / writes toggled | **No** |
-| Plugin response (sanitized) | Notice: enable bridge and confirm DEV/test before generating a token |
-| Plaintext token displayed | **No** |
+| Plugin response (sanitized) | Token generated; plaintext shown once |
+| Legacy bridge+DEV gate notice | **Not observed** |
 | Unrelated settings saved | **No** |
 
 ---
@@ -73,8 +75,9 @@ No secrets, credentials, cookies, nonces, plaintext tokens, or token-derived ide
 | Item | Status |
 |------|--------|
 | Canonical path | `X:\AI MARS\local\tokens\wpilot-prod-iseo-su.token` |
-| Created | **No** |
-| Git-ignore coverage | Proven (`/local/`) before any create attempt |
+| Created | **Yes** |
+| Format | Plaintext only; Git-ignored under `/local/` |
+| Tracked / staged / Storage copy | **No** |
 
 ---
 
@@ -82,13 +85,14 @@ No secrets, credentials, cookies, nonces, plaintext tokens, or token-derived ide
 
 | Item | Status |
 |------|--------|
-| `site-profile.json` token fields updated | **No** (no token) |
+| `site-profile.json` | Updated with path/status metadata only |
+| Token value in profile | **No** |
 
 ---
 
 ## 8. Bridge State
 
-**DISABLED** before and after generate attempt. Checkbox remained unchecked. Charter boundary respected (bridge not enabled).
+**DISABLED** before and after generate. Checkbox remained unchecked.
 
 ---
 
@@ -98,7 +102,13 @@ No secrets, credentials, cookies, nonces, plaintext tokens, or token-derived ide
 
 ---
 
-## 10. REST State
+## 10. DEV Confirmation State
+
+**DISABLED** before and after. Checkbox remained unchecked.
+
+---
+
+## 11. REST State
 
 | Item | Status |
 |------|--------|
@@ -107,61 +117,52 @@ No secrets, credentials, cookies, nonces, plaintext tokens, or token-derived ide
 
 ---
 
-## 11. Secret Safety
+## 12. Secret Safety
 
 | Check | Result |
 |-------|--------|
-| Token printed / logged / REPORT | N/A (none created) |
-| Secrets contents printed | No |
-| Git stage/commit/push | No |
+| Token printed / logged / REPORT | **No** |
+| Token length / prefix / suffix / hash printed | **No** |
+| Secrets contents printed | **No** |
+| Git stage/commit/push | **No** |
 
 ---
 
-## 12. Validation
+## 13. Validation
 
 | Check | Result |
 |-------|--------|
 | Preflight workspace / volume / branch | PASS |
-| Approvals + 6C backup confirm | PASS |
-| Access files + ignore | PASS |
+| Approvals + 6C RETRY backup confirm | PASS |
 | Pre-token safe defaults | PASS |
-| Token create under charter (bridge off) | **FAIL — plugin gate** |
-| Bridge / writes remain off | PASS |
+| RC6 generate with toggles off | PASS |
+| Local persist + ignore | PASS |
+| Post: Admin token present; toggles off | PASS |
+| Post: plaintext not visible after reload | PASS |
 | No REST | PASS |
 
 ---
 
-## 13. Deviations
+## 14. Deviations
 
-- Generate button was clicked once with bridge off to confirm live gate behavior; no bridge/settings mutation.
-- Product UX text on Safety tab also states token generation requires DEV confirmation + bridge enablement (matches source).
-
----
-
-## 14. SAFE UNKNOWN
-
-- Whether Phase **6C-R** update-only (RC6 package) will be approved next.
-- Whether production REST smoke will ever require a non-DEV environment confirmation model (out of RC6 scope; REST still uses `dev_confirmed` semantics).
+- Scratch Playwright helper under `_phase6c-retry-scratch/` used for HITL Admin automation (same pattern as Phase 6C/6C-R). Result JSON is sanitized and gitignored.
 
 ---
 
-## 15. Stop Condition (Phase 6C historical)
+## 15. Historical Phase 6C (RC5) note
 
-**STOP — WPILOT TOKEN GENERATION REQUIRES BRIDGE+DEV CONFIRM; PHASE 6C CHARTER FORBIDS BRIDGE ENABLEMENT**
+Original GATE 6C on RC5: generate refused with notice requiring bridge+DEV; charter forbade bridge; **no token**. Remediated by RC6 (`can_manage_token`) via Phase 4C + Phase 6C-R, then this retry.
 
-Plugin remains active (RC5). Bridge disabled. Writes disabled. No token. No REST.
+Historical stop (superseded for retry):
+
+`STOP — WPILOT TOKEN GENERATION REQUIRES BRIDGE+DEV CONFIRM; PHASE 6C CHARTER FORBIDS BRIDGE ENABLEMENT`
 
 ---
 
-## 16. Remediation follow-up (Phase 4C / WPilot RC6)
+## 16. Stop Condition (this retry)
 
-| Field | Value |
-|-------|-------|
-| Status | **SOURCE REMEDIATION COMPLETE / PACKAGE READY** |
-| Package | `metacode-wpilot-v0.3.0-rc6.zip` |
-| SHA-256 | `4a0b929cee34e8c6188a10991b0c120bb1e8ffdd09674418a32d920c2aa16bf6` |
-| Production update | **NOT PERFORMED** |
-| Report | [reports/REPORT-ISEO-SU-SITE-OPS-PHASE-4C-WPILOT-TOKEN-GATING-REMEDIATION.md](reports/REPORT-ISEO-SU-SITE-OPS-PHASE-4C-WPILOT-TOKEN-GATING-REMEDIATION.md) |
-| Next gate | **PHASE 6C-R WPILOT REMEDIATION UPDATE-ONLY** then **PHASE 6C TOKEN CREATION-ONLY RETRY** |
+**PHASE 6C RETRY — COMPLETE / TOKEN CREATED LOCAL-ONLY**
 
-*Token creation evidence v1 · 2026-07-24 · BLOCKED / NO TOKEN (6C) · remediation packaged (4C / RC6).*
+RC6 active. Token local-only. Bridge/writes/`dev_confirmed` disabled. No REST. RC5 rollback retained. Wait for operator review before Phase 6D.
+
+*Token creation evidence v1 · 2026-07-24 · RETRY COMPLETE / TOKEN CREATED LOCAL-ONLY.*

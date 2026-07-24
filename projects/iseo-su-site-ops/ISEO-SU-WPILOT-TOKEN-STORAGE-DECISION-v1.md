@@ -1,9 +1,9 @@
 # ISEO-SU WPILOT TOKEN STORAGE DECISION v1
 
 **Programme:** ISEO-SU-SITE-OPS  
-**Task:** PHASE 4B  
+**Task:** PHASE 4B (decision) · **PHASE 6C RETRY (token present)**  
 **Date:** 2026-07-24  
-**Status:** **DECISION RECORDED / TOKEN NOT CREATED**
+**Status:** **DECISION RECORDED / TOKEN PRESENT LOCAL-ONLY** · Phase 6C RETRY **COMPLETE**
 
 ---
 
@@ -22,28 +22,28 @@ Authority: `projects/wpilot/local-storage-policy.md`
 
 ---
 
-## 2. Selected future local path
+## 2. Selected local path
 
 | Field | Value |
 |-------|-------|
-| **Classification** | **CONFIRMED BY POLICY** (path pattern) / **PROPOSED** filename for this site |
+| **Classification** | **CONFIRMED** |
 | **Path** | `X:\AI MARS\local\tokens\wpilot-prod-iseo-su.token` |
 | **Site alias** | `prod-iseo-su` |
-| **Format** | Single-line plaintext token only (no JSON wrapper), per MARS token standard examples |
+| **Format** | Single-line plaintext token only (no JSON wrapper), per MARS token standard |
 
 Rationale: mirrors DEV naming (`wpilot-dev-gktriumph.token`) with `prod` + site slug.
 
 ---
 
-## 3. Site profile reference (future)
+## 3. Site profile reference
 
-Local site metadata under `X:\AI MARS\local\sites\iseo-su-production\` may store:
+Local site metadata under `X:\AI MARS\local\sites\iseo-su-production\` stores:
 
-- `token_file` / `token_ref` path string  
-- site URL, REST namespace `wpilot/v1`  
+- `token_file_path` / path reference string  
 - sanitized status timestamps  
+- plugin/bridge/write/DEV status metadata  
 
-Must **not** store the token value in `secrets.local.md` unless operator later explicitly chooses that additional copy — **default is dedicated token file only**.
+Must **not** store the token value in `secrets.local.md` — **dedicated token file only**.
 
 ---
 
@@ -62,7 +62,6 @@ Must **not** store the token value in `secrets.local.md` unless operator later e
 - No token in REPORT  
 - No token in git  
 - No token in Storage  
-- No token creation in Phase 4B  
 - No shared generic secrets dump as primary store  
 
 ---
@@ -71,10 +70,12 @@ Must **not** store the token value in `secrets.local.md` unless operator later e
 
 | Item | Status |
 |------|--------|
-| Local token file | **NOT CREATED** |
-| WordPress token hash | **N/A** (plugin absent) |
-| GATE 6C | **NOT AUTHORIZED** |
+| Local token file | **PRESENT** (Git-ignored) |
+| WordPress token hash | **Present** (Admin indicates token generated) |
+| GATE 6C (RC5 historical) | **BLOCKED** — bridge+DEV gate |
+| GATE 6C RETRY (RC6) | **COMPLETE** — token created with bridge/writes/DEV off |
+| Canonical path (unchanged) | `X:\AI MARS\local\tokens\wpilot-prod-iseo-su.token` |
 
 ---
 
-*Token storage decision v1 · 2026-07-24 · no token created.*
+*Token storage decision v1 · 2026-07-24 · path decided; token present local-only after 6C retry.*

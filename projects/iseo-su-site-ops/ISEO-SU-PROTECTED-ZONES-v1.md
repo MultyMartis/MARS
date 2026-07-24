@@ -1,7 +1,7 @@
 # ISEO-SU PROTECTED ZONES v1
 
 **Programme:** ISEO-SU-SITE-OPS  
-**Task:** PHASE 2B · **updated PHASE 4B**  
+**Task:** PHASE 2B · updated through PHASE 6C RETRY (token local-only)  
 **Date:** 2026-07-24  
 **Policy:** Although future work may eventually cover the whole site, **initial default is protect-all** until an exact task charter names paths/surfaces.
 
@@ -45,15 +45,24 @@ No secrets stored here.
 
 ## 3. Initial allow posture
 
-Nothing is allowlisted for mutation after Phase 2B / 4B.
+**Phase 6A exact allow (completed):** creation of inactive  
+`wp-content/plugins/metacode-wpilot/**` only under the Phase 6A install-only charter.
 
-Future allowlists must be **exact paths** in a task charter.
+**Phase 6B exact allow (completed):** WordPress Admin activation of **MetaCODE WPilot only**, with read-only verification of safe defaults. No token, bridge, write, REST smoke, or settings saves.
+
+**Phase 6C attempted (blocked on RC5):** Generate-token click with bridge/DEV/writes left **off**. Plugin refused. No token file created.
+
+**Phase 6C-R exact allow (completed):** SFTP in-place update of `wp-content/plugins/metacode-wpilot/**` from accepted RC5 to accepted RC6 only; creation of bounded sibling rollback dir `.mars-rollback-metacode-wpilot-rc5-phase6c-r/`. No token, bridge, write, REST, or settings saves.
+
+**Phase 6C RETRY exact allow (completed):** WordPress Admin generate-token **once** under RC6 with bridge/writes/`dev_confirmed` left **off**; persist plaintext only to `X:\AI MARS\local\tokens\wpilot-prod-iseo-su.token`; update ignored site-profile path/status metadata only. No bridge enable, no writes enable, no REST.
+
+Nothing else is allowlisted for mutation. Bridge enable, writes, REST smoke, and other paths remain **FORBIDDEN** without a **separate** exact charter.
 
 ---
 
-## 4. WPilot-specific boundaries (Phase 4B)
+## 4. WPilot-specific boundaries (Phase 4B / 6A / 6B / 6C-R)
 
-Even after a future authorized WPilot install, the following remain **out of WPilot mutation scope** unless a separate proven charter says otherwise:
+Even with WPilot **active (RC6 safe defaults)**, the following remain **out of WPilot mutation scope** unless a separate proven charter says otherwise:
 
 | Surface | Rule |
 |---------|------|
@@ -67,10 +76,12 @@ Even after a future authorized WPilot install, the following remain **out of WPi
 | `.htaccess` / `wp-config.php` | **FORBIDDEN** |
 | Cache purge via WPilot | **NOT AVAILABLE** — do not invent |
 | WPilot write routes | **FORBIDDEN** until GATE 6E+ charter |
+| Bridge enable / write enable / REST smoke | **FORBIDDEN** until GATE 6D+ charter |
+| Token generate | **DONE (6C RETRY)** — further rotate/revoke needs charter |
 
 WPilot MVP mutation surface (when later enabled): **WordPress `page` `post_content` only**, with plugin backup/rollback — still subordinate to full Beget backup policy.
 
-Plugin filesystem path (future): `wp-content/plugins/metacode-wpilot/` — protect against wrong-folder deletes; emergency rollback may rename/delete **only** that exact folder under charter.
+Plugin filesystem path (present, **active RC6**, safe defaults + token present): `wp-content/plugins/metacode-wpilot/` — protect against wrong-folder deletes; emergency rollback may restore from `.mars-rollback-metacode-wpilot-rc5-phase6c-r/` or deactivate/rename **only** the exact active folder under charter. Do **not** enable bridge/writes or call REST without GATE 6D+ charter. Treat the rollback sibling as temporary evidence — not an activatable plugin; cleanup requires operator gate. Local token file under `X:\AI MARS\local\tokens\` is protected secret storage (Git-ignored).
 
 ---
 
@@ -80,4 +91,4 @@ URL `https://mayday.beget.com/phpMyAdmin/` is **metadata only**. Opening it is o
 
 ---
 
-*Protected zones v1 · updated Phase 4B 2026-07-24.*
+*Protected zones v1 · updated Phase 6C RETRY 2026-07-24.*

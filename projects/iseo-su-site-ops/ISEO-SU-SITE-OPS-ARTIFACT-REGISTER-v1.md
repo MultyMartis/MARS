@@ -1,6 +1,6 @@
 # ISEO-SU-SITE-OPS Artifact Register v1
 
-**Status:** ACCEPTED (Phase 1.5); **updated Phase 4C / RC6 remediation** 2026-07-24  
+**Status:** ACCEPTED (Phase 1.5); **updated Phase 6C RETRY / token local-only** 2026-07-24  
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`
 
 Status vocabulary: **COMPLETE** · **CREATED** · **PLANNED** · **CONDITIONAL** · **DEFERRED** · **NOT AUTHORIZED** · **OPEN**
@@ -53,23 +53,27 @@ Status vocabulary: **COMPLETE** · **CREATED** · **PLANNED** · **CONDITIONAL**
 | ISEO-SU-WPILOT-SOURCE-AND-ROUTE-AUDIT-v1 | `ISEO-SU-WPILOT-SOURCE-AND-ROUTE-AUDIT-v1.md` | CREATED | Phase 4B |
 | ISEO-SU-WPILOT-CAPABILITY-MATRIX-v1 | `ISEO-SU-WPILOT-CAPABILITY-MATRIX-v1.md` | CREATED | Phase 4B |
 | ISEO-SU-WPILOT-COMPATIBILITY-ASSESSMENT-v1 | `ISEO-SU-WPILOT-COMPATIBILITY-ASSESSMENT-v1.md` | CREATED | Phase 4B — CONDITIONAL GO |
-| ISEO-SU-WPILOT-INSTALLATION-AND-ROLLBACK-PLAN-v1 | `ISEO-SU-WPILOT-INSTALLATION-AND-ROLLBACK-PLAN-v1.md` | CREATED | Phase 4B plan; **GATE 6A + 6B executed** |
-| ISEO-SU-WPILOT-TOKEN-STORAGE-DECISION-v1 | `ISEO-SU-WPILOT-TOKEN-STORAGE-DECISION-v1.md` | CREATED | Path decided; token NOT CREATED; 6C blocked |
+| ISEO-SU-WPILOT-INSTALLATION-AND-ROLLBACK-PLAN-v1 | `ISEO-SU-WPILOT-INSTALLATION-AND-ROLLBACK-PLAN-v1.md` | CREATED | Phase 4B plan; **GATE 6A + 6B + 6C-R executed** |
+| ISEO-SU-WPILOT-TOKEN-STORAGE-DECISION-v1 | `ISEO-SU-WPILOT-TOKEN-STORAGE-DECISION-v1.md` | CREATED | Path decided; token **PRESENT** local-only (6C retry) |
 | ISEO-SU-WPILOT-INSTALL-ONLY-EVIDENCE-v1 | `ISEO-SU-WPILOT-INSTALL-ONLY-EVIDENCE-v1.md` | CREATED | Phase 6A sanitized install evidence |
 | ISEO-SU-WPILOT-ACTIVATION-ONLY-EVIDENCE-v1 | `ISEO-SU-WPILOT-ACTIVATION-ONLY-EVIDENCE-v1.md` | CREATED | Phase 6B sanitized activation evidence |
-| ISEO-SU-WPILOT-TOKEN-CREATION-EVIDENCE-v1 | `ISEO-SU-WPILOT-TOKEN-CREATION-EVIDENCE-v1.md` | CREATED | Phase 6C blocked; 4C remediation pointer |
+| ISEO-SU-WPILOT-TOKEN-CREATION-EVIDENCE-v1 | `ISEO-SU-WPILOT-TOKEN-CREATION-EVIDENCE-v1.md` | CREATED | Phase 6C retry COMPLETE / token local-only |
+| ISEO-SU-WPILOT-RC6-UPDATE-EVIDENCE-v1 | `ISEO-SU-WPILOT-RC6-UPDATE-EVIDENCE-v1.md` | CREATED | Phase 6C-R RC6 update evidence |
 | Phase 4B REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-PHASE-4B-WPILOT-PREINSTALL-PACKAGE-AND-COMPATIBILITY-GATE.md` | COMPLETE | CONDITIONAL GO |
 | Phase 4B-P REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-PHASE-4B-P-DOCUMENTATION-PERSISTENCE-CHECKPOINT.md` | COMPLETE | DOCUMENTATION PERSISTED |
-| Phase 4C REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-PHASE-4C-WPILOT-TOKEN-GATING-REMEDIATION.md` | COMPLETE | RC6 packaged; production unchanged |
+| Phase 4C REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-PHASE-4C-WPILOT-TOKEN-GATING-REMEDIATION.md` | COMPLETE | RC6 packaged; later deployed via 6C-R |
 | Phase 6A REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-PHASE-6A-WPILOT-INSTALL-ONLY.md` | COMPLETE | WPILOT INSTALLED INACTIVE |
 | Phase 6B REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-PHASE-6B-WPILOT-ACTIVATION-ONLY.md` | COMPLETE | WPILOT ACTIVE SAFE DEFAULTS |
-| Phase 6C REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-PHASE-6C-WPILOT-TOKEN-CREATION-ONLY.md` | **BLOCKED** | NO TOKEN — bridge+DEV required on RC5 |
+| Phase 6C REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-PHASE-6C-WPILOT-TOKEN-CREATION-ONLY.md` | **BLOCKED** | Historical RC5 — NO TOKEN |
+| Phase 6C-R REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-PHASE-6C-R-WPILOT-REMEDIATION-UPDATE-ONLY.md` | COMPLETE | RC6 ACTIVE SAFE DEFAULTS |
+| Phase 6C RETRY REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-PHASE-6C-WPILOT-TOKEN-CREATION-ONLY-RETRY.md` | COMPLETE | TOKEN CREATED LOCAL-ONLY |
+| Phase 6C-P REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-PHASE-6C-P-PRODUCTION-ONBOARDING-EVIDENCE-PERSISTENCE.md` | COMPLETE | PRODUCTION ONBOARDING EVIDENCE PERSISTED |
 
-Local-only (Git-ignored): `X:\AI MARS\local\sites\iseo-su-production\`.
+Local-only (Git-ignored): `X:\AI MARS\local\sites\iseo-su-production\` · `X:\AI MARS\local\tokens\wpilot-prod-iseo-su.token`.
 
-Scratch (local audit helpers; gitignored via `_phase2b-scratch/.gitignore` / `_phase6a-scratch/.gitignore` / `_phase6b-scratch/.gitignore` / `_phase6c-scratch/.gitignore`): not programme authority.
+Scratch (local audit helpers; gitignored via `_phase*-scratch/.gitignore`): not programme authority.
 
-Phase status: **PHASE 6B — COMPLETE / WPILOT ACTIVE SAFE DEFAULTS**; **PHASE 6C — BLOCKED / NO TOKEN**; **PHASE 4C — REMEDIATION COMPLETE / RC6 PACKAGE READY** (not deployed); bridge / writes / REST smoke **NOT AUTHORIZED**.
+Phase status: **PHASE 6C — TOKEN CREATED / RC6 SAFE DEFAULTS**; **PHASE 6C-P — EVIDENCE PERSISTED**; bridge / writes / DEV / REST smoke **NOT AUTHORIZED**; RC5 rollback retained.
 
 ---
 
@@ -107,4 +111,4 @@ Unchanged: no tokens/credentials in Git locus; no DB dumps; no Localhost mirror;
 
 ---
 
-*Artifact Register v1 · updated 2026-07-24 Phase 4C / RC6.*
+*Artifact Register v1 · updated 2026-07-24 Phase 6C-P / production onboarding evidence persistence.*

@@ -1,6 +1,6 @@
 # ISEO-SU-SITE-OPS SAFE UNKNOWN Register v1
 
-**Status:** ACCEPTED; **updated Phase 4C / RC6 remediation** 2026-07-24  
+**Status:** ACCEPTED; **updated Phase 6C RETRY** 2026-07-24  
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`
 
 Rule: do **not** invent values. Resolve only with evidence.
@@ -51,16 +51,17 @@ Rule: do **not** invent values. Resolve only with evidence.
 | U-020 | Restore method details | SAFE UNKNOWN | Irrecoverable change | Restore drill notes | 3–4 |
 | U-022 | Maintained canonical source outside production | SAFE UNKNOWN | Wrong sync | Operator attestation | 3 |
 | U-023 | Manual production drift inventory | PARTIAL (dual home/blog files known) | Overwrite | Ongoing drift log | 3–7 |
-| U-025 | WPilot production compatibility | **PARTIAL → 6A/6B DONE → 6C BLOCKED → 4C RC6 PACKAGED (not deployed)** | Token/REST/write still unproven on prod | GATE 6C-R then 6C retry / 6D | 6C-R |
+| U-025 | WPilot production compatibility | **PARTIAL → 6A/6B/6C-R DONE → 6C RETRY TOKEN DONE**; REST/write still unproven | REST/write unproven | GATE 6D / 6E | 6D |
 | U-038 | Admin Plugins inactive badge for WPilot | **RESOLVED in 6B** — Plugins row **active** after activation | — | — | 6B |
 | U-039 | Beget panel backup object/timestamp for Phase 6A | SAFE UNKNOWN (operator-attested string only) | Wrong restore point | Operator panel note | 6A residual |
 | U-040 | Beget panel backup object/timestamp for Phase 6B | SAFE UNKNOWN (operator-attested string only) | Wrong restore point | Operator panel note | 6B residual |
-| U-042 | Beget panel backup object/timestamp for Phase 6C | SAFE UNKNOWN (operator-attested string only) | Wrong restore point | Operator panel note | 6C residual |
+| U-042 | Beget panel backup object/timestamp for Phase 6C / 6C RETRY | SAFE UNKNOWN (operator-attested string only) | Wrong restore point | Operator panel note | 6C residual |
 | U-041 | Physical existence of `wpilot_backups` / `wpilot_audit_log` tables | SAFE UNKNOWN (no DB login; Admin schema valid = да) | Orphan/missing schema assumptions | Optional later DB charter | 6B residual / later |
 | U-026 | WPilot endpoint inventory for this site | **DOCUMENTED FROM SOURCE** (routes known); production behavior SAFE UNKNOWN | Wrong smoke | GATE 6D | 6D |
 | U-027 | Rollback implementation proof | SAFE UNKNOWN (plugin rollback proven on DEV only) | Unrecoverable write | Restore evidence + optional 6E | 4–6 |
-| U-028 | WPilot token format for production | **PATH DECIDED**; file **NOT CREATED**; 6C refused on RC5; RC6 allows token without bridge (source) | Secret leakage | 6C-R + 6C retry | 6C-R |
+| U-028 | WPilot token for production | **PATH DECIDED**; file **PRESENT** local-only after 6C RETRY; format not recorded in docs | Secret leakage | Protect local file; rotate on exposure | 6C RETRY done |
 | U-043 | Whether production token creation may temporarily assert DEV confirmed | **RESOLVED for token mint** — RC6 does **not** require DEV for token; REST still uses `dev_confirmed` if bridge enabled later | False DEV for REST remains policy risk | Future REST charter | 6D+ |
+| U-044 | Beget panel backup object/timestamp for Phase 6C RETRY | SAFE UNKNOWN (operator-attested `CONFIRM … 6C RETRY` only) | Wrong restore point | Operator panel note | 6C RETRY residual |
 | U-035 | PHP syntax lint of WPilot package on agent host | **RESOLVED for remediation session** — Laragon PHP 8.3 used for `php -l` + unit harness | — | — | 4C |
 | U-036 | `X-WPilot-Token` header forwarding on i-seo.su | SAFE UNKNOWN | Auth smoke failure | GATE 6D | 6D |
 | U-037 | WPilot uninstall residual tables/options | SAFE UNKNOWN (no uninstall.php) | Orphan DB objects | Document on future uninstall charter | later |
@@ -83,12 +84,14 @@ Phase 6A installed MetaCODE WPilot **inactive** on production (SFTP; 27/27 files
 
 Phase 6B activated MetaCODE WPilot with **safe defaults** (bridge/writes off; token absent; no REST smoke). Public `wpilot/v1` namespace is registered but was not invoked.
 
-Phase 6C attempted token creation with approvals + backup confirm: generate refused unless DEV+bridge enabled; bridge was **not** enabled; token **not** created.
+Phase 6C attempted token creation on RC5: generate refused unless DEV+bridge enabled; bridge was **not** enabled; token **not** created.
 
-Phase 4C / WPilot RC6 packaged the token-gating remediation (`can_manage_token`); **not deployed** to production. Next gate: **6C-R update-only**.
+Phase 4C / WPilot RC6 packaged the token-gating remediation (`can_manage_token`); Phase 6C-R deployed RC6 to production.
+
+Phase 6C RETRY created the production token with bridge/writes/`dev_confirmed` **off**; local-only file present; no REST. Next gate: **6D bridge + negative-auth / read-only smoke** (separate approval).
 
 Remaining gaps are mainly **PHP runtime**, **Beget backup panel timestamps**, **physical DB table proof**, ACF UI, menus, **web-KP naming**, header/WAF smoke, restore drill, plus long-standing SoT items.
 
 ---
 
-*SAFE UNKNOWN Register v1 · updated 2026-07-24 Phase 4C / RC6.*
+*SAFE UNKNOWN Register v1 · updated 2026-07-24 Phase 6C RETRY.*

@@ -1,11 +1,12 @@
 # ISEO-SU WPILOT INSTALLATION AND ROLLBACK PLAN v1
 
 **Programme:** ISEO-SU-SITE-OPS  
-**Task:** PHASE 4B (plan) · PHASE 6A (GATE 6A executed) · **PHASE 6B (GATE 6B executed)**  
+**Task:** PHASE 4B (plan) · PHASE 6A–6C-R executed · **PHASE 6C RETRY (token) executed**  
 **Date:** 2026-07-24  
-**Status:** GATE 6A **COMPLETE** (installed) · GATE 6B **COMPLETE** — plugin **ACTIVE / SAFE DEFAULTS**; later gates remain plan-only  
-**Package:** `metacode-wpilot-v0.3.0-rc5.zip`  
-**SHA-256:** `43c71a561872a037f294a12d5194d0925e988392599f02c1eeb2d8b1c52e1577`
+**Status:** GATE 6A–6B **COMPLETE** · GATE 6C-R **COMPLETE** (RC6) · GATE 6C RETRY **COMPLETE** (token local-only; bridge/writes/DEV still off) · GATE 6D+ plan-only  
+**Current production package:** `metacode-wpilot-v0.3.0-rc6.zip`  
+**RC6 SHA-256:** `4a0b929cee34e8c6188a10991b0c120bb1e8ffdd09674418a32d920c2aa16bf6`  
+**RC5 rollback ZIP (retained):** `metacode-wpilot-v0.3.0-rc5.zip` · `43c71a561872a037f294a12d5194d0925e988392599f02c1eeb2d8b1c52e1577`
 
 ---
 
@@ -111,25 +112,27 @@
 | **PASS** | Token hash present in WP; local file created by operator; reference recorded without secret |
 | **Rollback** | Revoke token in Admin; delete local token file if required |
 | **Stop** | Token exposure; storage path non-canonical |
-| **Phase 6C result** | **BLOCKED / NO TOKEN** — WPilot 0.3.0 refuses generate unless DEV confirmed + bridge enabled (`is_operationally_ready`). Live notice observed; bridge/writes left off. Evidence: `ISEO-SU-WPILOT-TOKEN-CREATION-EVIDENCE-v1.md` |
-| **Remediation** | **WPilot RC6 packaged** (`can_manage_token`) — see Phase 4C REPORT. Do **not** improvise temporary DEV+bridge under original 6C. Next: **GATE 6C-R** update-only, then 6C retry. |
+| **Phase 6C result (RC5 historical)** | **BLOCKED / NO TOKEN** — RC5 refused generate unless DEV+bridge (`is_operationally_ready`). Bridge/writes left off. |
+| **Remediation** | **WPilot RC6** (`can_manage_token`) — Phase 4C packaged; Phase 6C-R deployed. |
+| **Phase 6C RETRY result (RC6)** | **PASS / COMPLETE** — token created with bridge/writes/`dev_confirmed` **off**; local file only; no REST. Approval: `APPROVE ISEO-SU WPILOT TOKEN CREATION 6C RETRY` + fresh backup confirm. Evidence: `ISEO-SU-WPILOT-TOKEN-CREATION-EVIDENCE-v1.md` · retry REPORT. |
 
 ---
 
-## GATE 6C-R — WPILOT REMEDIATION UPDATE-ONLY (next)
+## GATE 6C-R — WPILOT REMEDIATION UPDATE-ONLY
 
 | Field | Content |
 |-------|---------|
 | **Inputs** | Phase 4C / RC6 package accepted; fresh Beget backup for update session |
 | **Package** | `metacode-wpilot-v0.3.0-rc6.zip` |
 | **SHA-256** | `4a0b929cee34e8c6188a10991b0c120bb1e8ffdd09674418a32d920c2aa16bf6` |
-| **Actions** | Update **only** the WPilot plugin package; verify version/release label / safe defaults |
+| **Actions** | Update **only** the WPilot plugin package; verify release identity / safe defaults |
 | **Prohibited** | Token creation; bridge enable; write enable; REST; unrelated plugin/theme/core changes |
 | **PASS** | RC6 installed/active; bridge/writes/`dev_confirmed` remain off; no token; no REST |
-| **Rollback** | Restore prior RC5 plugin folder/package from backup; deactivate if needed |
+| **Rollback** | Restore captured RC5 sibling dir `.mars-rollback-metacode-wpilot-rc5-phase6c-r/` (or accepted RC5 ZIP if capture unavailable) |
 | **Stop** | Hash mismatch; unexpected state change; any token/REST activity |
+| **Phase 6C-R result** | **PASS / COMPLETE** — RC6 active; safe defaults intact; RC5 capture retained. Evidence: `ISEO-SU-WPILOT-RC6-UPDATE-EVIDENCE-v1.md` |
 
-After 6C-R acceptance: retry **GATE 6C TOKEN CREATION-ONLY** under RC6 semantics (token without bridge).
+After 6C-R acceptance: **GATE 6C RETRY** executed successfully under RC6 semantics (token without bridge). **GATE 6D** is next and remains **not auto-authorized**.
 
 ---
 
@@ -185,8 +188,9 @@ After 6C-R acceptance: retry **GATE 6C TOKEN CREATION-ONLY** under RC6 semantics
 
 GATE 6A rollback path remains ready but was **not** needed (install validated).  
 GATE 6B Admin deactivate / SFTP rename rollback paths remain ready; **not** needed (activation validated with safe defaults).  
-**Do not** execute GATE 6C+ without separate operator approval.
+GATE 6C-R captured RC5 sibling rollback dir remains on production pending operator cleanup review; restore **not** needed (RC6 validated).  
+**Do not** execute GATE 6D+ without separate operator approval and a fresh Beget backup.
 
 ---
 
-*Installation and rollback plan v1 · updated Phase 4C / RC6 remediation 2026-07-24 · GATE 6B complete; 6C blocked; 6C-R next.*
+*Installation and rollback plan v1 · updated Phase 6C RETRY COMPLETE 2026-07-24 · token local-only; bridge/writes/DEV off; 6D next.*
