@@ -144,7 +144,12 @@ Restore `archive-glossary.php`, `inc/glossary-helpers.php`, `inc/glossary-cpt.ph
 
 ## 16. Git and Foreign WIP
 
-Scoped commit created (no push). Foreign WIP left untouched. Scratch evidence not staged.
+Scoped commit created (no push):
+
+- hash: `e0004df0a9f46ed1f7ac6382747acd464effccde`
+- subject: `fix(iseo-su): repair glossary archive empty layout`
+- 10 paths (theme package + evidence + REPORT + register/index/map updates)
+- Foreign WIP and `_glossary-scratch/` evidence left unstaged
 
 ---
 
