@@ -104,10 +104,10 @@ function iseo_glossary_archive_query( $query ) {
 	$query->set( 'posts_per_page', -1 );
 	$query->set( 'orderby', 'title' );
 	$query->set( 'order', 'ASC' );
-
-	if ( ! iseo_glossary_is_publicly_exposed() && current_user_can( 'edit_posts' ) ) {
-		$query->set( 'post_status', array( 'publish', 'draft', 'pending', 'future', 'private' ) );
-	}
+	// Status list mirrors iseo_glossary_archive_post_statuses(); archive template
+	// loads terms via iseo_glossary_get_archive_posts() because the main query
+	// can report found_posts without hydrating $wp_query->posts for drafts.
+	$query->set( 'post_status', iseo_glossary_archive_post_statuses() );
 }
 add_action( 'pre_get_posts', 'iseo_glossary_archive_query' );
 

@@ -52,6 +52,14 @@ Status vocabulary: **COMPLETE** · **CREATED** · **PLANNED** · **CONDITIONAL**
 | SEO and internal linking model | `ISEO-SU-GLOSSARY-SEO-AND-INTERNAL-LINKING-MODEL-v1.md` | CREATED |
 | Editorial audit REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-EDITORIAL-AUDIT-AND-PILOT.md` | COMPLETE |
 
+### Glossary archive layout fix (2026-07-24)
+
+| Artifact | Path | Status |
+|----------|------|--------|
+| Archive layout fix evidence | `ISEO-SU-GLOSSARY-ARCHIVE-LAYOUT-FIX-EVIDENCE-v1.md` | CREATED |
+| Archive empty-state / layout fix REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-ARCHIVE-EMPTY-STATE-AND-LAYOUT-FIX.md` | COMPLETE |
+| Theme package updates (archive + helpers + cpt) | `wordpress/iseoblog-glossary/` | UPDATED / deployed |
+
 ---
 
 ## Programme foundation artifacts (this locus)

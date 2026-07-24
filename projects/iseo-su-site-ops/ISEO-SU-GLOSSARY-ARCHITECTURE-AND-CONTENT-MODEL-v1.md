@@ -11,7 +11,7 @@
 
 | Field | Value |
 |-------|-------|
-| Status | **EDITORIAL MODEL READY / PILOT PREPARED** (WP drafts unchanged) |
+| Status | **ARCHIVE PREVIEW FIXED / EDITORIAL HOLD** (WP drafts unchanged; public exposure closed) |
 | Public launch | **HOLD** — operator + Nikita review of pilot required |
 | CPT | `glossary` deployed in theme `iseoblog` |
 | Templates | `archive-glossary.php`, `single-glossary.php` |
@@ -138,11 +138,13 @@ Implemented with existing classes only:
 1. H1 «Глоссарий» in `page_scene`
 2. Intro in `content_block`
 3. Alphabet nav via `blog_filter` / `blog_filter__btn` (only non-empty letters)
-4. Groups as `content_block` + `h2` + `ul`/`li` links
+4. Groups as `content_block` + plain `h2` + `ul`/`li` (privacy body-heading pattern; not `content_block__title`)
 5. Optional GET search `glossary_q` (server-side filter; no JS required)
-6. Empty / no-results copy inside `content_block`
-7. Single page for ~241 terms (`posts_per_page = -1`)
+6. Empty / no-results copy inside `content_block` («Термины пока не добавлены.»)
+7. Single page for ~241 terms via dedicated archive query (`iseo_glossary_get_archive_posts`), not the main Loop — the main archive query can report `found_posts` without hydrating `$wp_query->posts` for mixed draft statuses
+8. Draft list URLs use `get_preview_post_link()` for users who can `edit_post`
 
+Layout fix evidence: `ISEO-SU-GLOSSARY-ARCHIVE-LAYOUT-FIX-EVIDENCE-v1.md`.
 ---
 
 ## 10. Single Term UX

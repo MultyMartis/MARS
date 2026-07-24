@@ -1,12 +1,117 @@
 <?php
 /**
- * Glossary helper functions (letter grouping, sorting).
+ * Glossary helper functions (archive query, letter grouping, sorting).
  *
  * @package iseoblog
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
+}
+
+/**
+ * Post statuses visible on the glossary archive for the current viewer.
+ *
+ * Anonymous / public gate closed → publish only (archive still 404 via template_redirect).
+ * Authorized editors → include drafts for preview without publishing.
+ *
+ * @return string[]
+ */
+function iseo_glossary_archive_post_statuses() {
+	if ( current_user_can( 'edit_posts' ) ) {
+		return array( 'publish', 'draft', 'pending', 'future', 'private' );
+	}
+	return array( 'publish' );
+}
+
+/**
+ * Raw term title for grouping/display (avoids front-end title filters).
+ *
+ * @param WP_Post|int $post Post.
+ * @return string
+ */
+function iseo_glossary_term_title( $post ) {
+	$post = get_post( $post );
+	if ( ! $post ) {
+		return '';
+	}
+	return trim( wp_strip_all_tags( (string) $post->post_title ) );
+}
+
+/**
+ * Safe list URL for a glossary term.
+ *
+ * Published + public exposure → permalink.
+ * Draft/pending/etc. → preview link only when the viewer can edit that post.
+ * Otherwise empty (title rendered without a public link).
+ *
+ * @param WP_Post|int $post Post.
+ * @return string
+ */
+function iseo_glossary_term_list_url( $post ) {
+	$post = get_post( $post );
+	if ( ! $post ) {
+		return '';
+	}
+
+	if ( 'publish' === $post->post_status && iseo_glossary_is_publicly_exposed() ) {
+		$url = get_permalink( $post );
+		return $url ? (string) $url : '';
+	}
+
+	if ( current_user_can( 'edit_post', $post->ID ) ) {
+		$preview = get_preview_post_link( $post );
+		return $preview ? (string) $preview : '';
+	}
+
+	return '';
+}
+
+/**
+ * Load glossary archive posts via a dedicated query.
+ *
+ * The main WordPress archive query can report found_posts without hydrating
+ * $wp_query->posts for mixed draft statuses on the front end. Do not rely on it.
+ *
+ * @return WP_Post[]
+ */
+function iseo_glossary_get_archive_posts() {
+	$query = new WP_Query(
+		array(
+			'post_type'              => 'glossary',
+			'post_status'            => iseo_glossary_archive_post_statuses(),
+			'posts_per_page'         => -1,
+			'orderby'                => 'title',
+			'order'                  => 'ASC',
+			'no_found_rows'          => true,
+			'ignore_sticky_posts'    => true,
+			'update_post_meta_cache' => false,
+			'update_post_term_cache' => false,
+		)
+	);
+
+	$posts = array();
+	if ( ! empty( $query->posts ) && is_array( $query->posts ) ) {
+		foreach ( $query->posts as $post ) {
+			$post = get_post( $post );
+			if ( ! $post instanceof WP_Post ) {
+				continue;
+			}
+			if ( 'glossary' !== $post->post_type ) {
+				continue;
+			}
+			if ( '' === iseo_glossary_term_title( $post ) ) {
+				continue;
+			}
+			// Private posts stay capability-gated.
+			if ( 'private' === $post->post_status && ! current_user_can( 'read_post', $post->ID ) ) {
+				continue;
+			}
+			$posts[] = $post;
+		}
+	}
+
+	return $posts;
 }
 
 /**
@@ -18,7 +123,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 function iseo_glossary_letter_from_title( $title ) {
 	$title = trim( wp_strip_all_tags( (string) $title ) );
 	if ( '' === $title ) {
-		return '#';
+		return '';
 	}
 
 	$char = mb_substr( $title, 0, 1, 'UTF-8' );
@@ -112,7 +217,7 @@ function iseo_glossary_letter_anchor( $letter ) {
 }
 
 /**
- * Group posts by derived letter.
+ * Group posts by derived letter. Empty titles and empty groups are omitted.
  *
  * @param WP_Post[] $posts Posts.
  * @return array<string, WP_Post[]>
@@ -120,11 +225,28 @@ function iseo_glossary_letter_anchor( $letter ) {
 function iseo_glossary_group_posts_by_letter( $posts ) {
 	$groups = array();
 	foreach ( $posts as $post ) {
-		$letter = iseo_glossary_letter_from_title( get_the_title( $post ) );
+		if ( ! $post instanceof WP_Post ) {
+			continue;
+		}
+		$title  = iseo_glossary_term_title( $post );
+		$letter = iseo_glossary_letter_from_title( $title );
+		if ( '' === $letter ) {
+			continue;
+		}
 		if ( ! isset( $groups[ $letter ] ) ) {
 			$groups[ $letter ] = array();
 		}
 		$groups[ $letter ][] = $post;
+	}
+
+	foreach ( $groups as $letter => $items ) {
+		if ( empty( $items ) ) {
+			unset( $groups[ $letter ] );
+		}
+	}
+
+	if ( empty( $groups ) ) {
+		return array();
 	}
 
 	uksort(
@@ -138,7 +260,7 @@ function iseo_glossary_group_posts_by_letter( $posts ) {
 		usort(
 			$items,
 			static function ( $left, $right ) {
-				return strnatcasecmp( get_the_title( $left ), get_the_title( $right ) );
+				return strnatcasecmp( iseo_glossary_term_title( $left ), iseo_glossary_term_title( $right ) );
 			}
 		);
 		$groups[ $letter ] = $items;
@@ -174,7 +296,10 @@ function iseo_glossary_filter_posts( $posts, $q ) {
 	$needle = mb_strtolower( $q, 'UTF-8' );
 	$out    = array();
 	foreach ( $posts as $post ) {
-		$hay = mb_strtolower( get_the_title( $post ) . ' ' . $post->post_excerpt, 'UTF-8' );
+		if ( ! $post instanceof WP_Post ) {
+			continue;
+		}
+		$hay = mb_strtolower( iseo_glossary_term_title( $post ) . ' ' . $post->post_excerpt, 'UTF-8' );
 		if ( false !== mb_strpos( $hay, $needle, 0, 'UTF-8' ) ) {
 			$out[] = $post;
 		}

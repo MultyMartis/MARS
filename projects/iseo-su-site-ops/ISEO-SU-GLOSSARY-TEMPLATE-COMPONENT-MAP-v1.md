@@ -24,8 +24,10 @@
 | Scroll cue | privacy | `a.see_more_btn` |
 | Intro + search | legal `content_block` + native form controls | `content_block`, plain `form` / `input` / `button` (no lead-form ids) |
 | Alphabet nav | blog tag filter | `blog_filter`, `blog_filter__navigations`, `blog_filter__label`, `blog_filter__item`, `blog_filter__btn` |
-| Letter groups | content sections | `content_block`, `content_block__title`, `h2`, `ul`/`li`/`a` |
+| Letter groups | privacy body headings (not oversized section chrome) | `content_block` + plain `h2` + `ul`/`li`/`a` — **do not** wrap letter labels in `content_block__title` (that class is 88px section chrome used by Telegram/audit blocks) |
 | Empty state | content paragraph | `content_block` + `p` |
+
+Archive data source: dedicated `iseo_glossary_get_archive_posts()` query (not the main Loop). Draft term links use capability-gated preview URLs while public exposure is closed.
 
 ## Single (`single-glossary.php`)
 

@@ -24,10 +24,10 @@
 
 | Field | Value |
 |-------|-------|
-| **Lifecycle** | **GLOSSARY EDITORIAL MODEL READY / PILOT PREPARED** |
-| **Project status** | Glossary CPT/templates deployed; 241 draft terms; editorial audit + 12-term pilot in MARS; public exposure HOLD; WPilot bridge/writes/REST still gated |
+| **Lifecycle** | **GLOSSARY ARCHIVE PREVIEW FIXED / EDITORIAL HOLD** |
+| **Project status** | Glossary CPT/templates deployed; 241 draft terms; auth archive preview layout fixed; editorial audit + 12-term pilot in MARS; public exposure HOLD; WPilot bridge/writes/REST still gated |
 | **Architecture knowledge** | **COMPLETE** — knowledge base + route matrix + task routing guide |
-| **Glossary** | Foundation + draft intake + source canonicalization + **editorial standard/audit/pilot** — WP definitions still empty |
+| **Glossary** | Foundation + draft intake + source canonicalization + editorial standard/audit/pilot + **archive empty-state/layout fix** — WP definitions still empty; public exposure closed |
 | **Current phase (WPilot)** | **PHASE 6D — BLOCKED** (bridge/smoke awaiting exact approval + backup lines) — **not required** for ordinary site content/file tasks |
 | **Accepted WPilot baseline** | **PHASE 6C — TOKEN CREATED / RC6 SAFE DEFAULTS** |
 | **Access files** | **LOCAL-ONLY FILLED / VALIDATED** (Git-ignored) |
@@ -131,6 +131,7 @@ Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **ab
 | Glossary canonical source (Nikita v1) | [materials/glossary/ISEO-SU-GLOSSARY-SOURCE-NIKITA-v1.xlsx](materials/glossary/ISEO-SU-GLOSSARY-SOURCE-NIKITA-v1.xlsx) · SHA-256 `f7651cffc5d03c497062ac6ee5b6288d9397ae5abede43fbd19f1a3ea26699de` |
 | Glossary materials README | [materials/glossary/README.md](materials/glossary/README.md) |
 | Glossary template component map | [ISEO-SU-GLOSSARY-TEMPLATE-COMPONENT-MAP-v1.md](ISEO-SU-GLOSSARY-TEMPLATE-COMPONENT-MAP-v1.md) |
+| Glossary archive layout fix evidence | [ISEO-SU-GLOSSARY-ARCHIVE-LAYOUT-FIX-EVIDENCE-v1.md](ISEO-SU-GLOSSARY-ARCHIVE-LAYOUT-FIX-EVIDENCE-v1.md) |
 | Task routing guide | [ISEO-SU-TASK-ROUTING-GUIDE-v1.md](ISEO-SU-TASK-ROUTING-GUIDE-v1.md) |
 | Route ownership matrix | [ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md](ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md) |
 | Knowledge base | [ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md](ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md) |

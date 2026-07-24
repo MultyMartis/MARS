@@ -31,7 +31,7 @@ No secrets stored here.
 | Shared CSS | `css/main.css`, `css/media.css` | sitewide marketing look |
 | SEO calculator / tariffs | `/tariff-calc`, ACF calculator groups, `tarif-calc.php`, handlers | revenue tool |
 | Web-KP / offers | `/offers`, CPT `offer`, `single-offer.php`, ACF «Предложения» | private commercial proposals |
-| Glossary (pre-launch) | CPT `glossary`, `/glossary/`, glossary templates/includes, draft terms | do not publish empties; do not open exposure gate without charter; no new CSS |
+| Glossary (pre-launch) | CPT `glossary`, `/glossary/`, glossary templates/includes, draft terms | do not publish empties; do not open exposure gate without charter; no new CSS; archive preview uses dedicated query + preview links only |
 | Global header/footer | static HTML chrome + theme topbar/footer parts | dual-channel breakage |
 | Homepage template | `page-home.php` (+ parallel `home.html`) | primary acquisition surface |
 | Analytics / verification | `google*.html`, `yandex_*.html`, injected scripts | SEO/property proof |
@@ -74,4 +74,4 @@ Even with WPilot active (RC6 safe defaults + local token):
 
 ---
 
-*Protected zones v1 · updated glossary foundation 2026-07-24.*
+*Protected zones v1 · updated glossary archive layout fix 2026-07-24.*

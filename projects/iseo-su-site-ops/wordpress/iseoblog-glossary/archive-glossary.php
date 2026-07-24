@@ -3,23 +3,18 @@
  * Glossary archive template.
  * Reuses internal-page structure from privacy-policy / content pages:
  * page_scene + breadcrumbs + content_block + blog_filter alphabet nav.
+ * Letter groups use plain h2 inside content_block (privacy pattern), not
+ * content_block__title (oversized section chrome).
  *
  * @package iseoblog
  */
 
 get_header();
 
-$search_q = iseo_glossary_search_query();
-$posts    = array();
-if ( have_posts() ) {
-	while ( have_posts() ) {
-		the_post();
-		$posts[] = get_post();
-	}
-	rewind_posts();
-}
-$posts  = iseo_glossary_filter_posts( $posts, $search_q );
-$groups = iseo_glossary_group_posts_by_letter( $posts );
+$search_q    = iseo_glossary_search_query();
+$posts       = iseo_glossary_get_archive_posts();
+$posts       = iseo_glossary_filter_posts( $posts, $search_q );
+$groups      = iseo_glossary_group_posts_by_letter( $posts );
 $archive_url = get_post_type_archive_link( 'glossary' );
 ?>
 
@@ -68,7 +63,7 @@ $archive_url = get_post_type_archive_link( 'glossary' );
 
 				<?php if ( empty( $groups ) ) : ?>
 					<div class="content_block">
-						<p><?php echo $search_q ? 'По запросу ничего не найдено.' : 'Термины пока не опубликованы.'; ?></p>
+						<p><?php echo $search_q ? 'По запросу ничего не найдено.' : 'Термины пока не добавлены.'; ?></p>
 					</div>
 				<?php else : ?>
 
@@ -79,6 +74,9 @@ $archive_url = get_post_type_archive_link( 'glossary' );
 									<div>Алфавит:</div>
 								</div>
 								<?php foreach ( $groups as $letter => $items ) : ?>
+									<?php if ( empty( $items ) ) : ?>
+										<?php continue; ?>
+									<?php endif; ?>
 									<div class="blog_filter__item">
 										<a class="blog_filter__btn" href="#<?php echo esc_attr( iseo_glossary_letter_anchor( $letter ) ); ?>">
 											<div><?php echo esc_html( iseo_glossary_letter_label( $letter ) ); ?></div>
@@ -91,14 +89,26 @@ $archive_url = get_post_type_archive_link( 'glossary' );
 					</div>
 
 					<?php foreach ( $groups as $letter => $items ) : ?>
+						<?php if ( empty( $items ) ) : ?>
+							<?php continue; ?>
+						<?php endif; ?>
 						<div class="content_block" id="<?php echo esc_attr( iseo_glossary_letter_anchor( $letter ) ); ?>">
-							<div class="content_block__title">
-								<h2><?php echo esc_html( iseo_glossary_letter_label( $letter ) ); ?></h2>
-							</div>
+							<h2><?php echo esc_html( iseo_glossary_letter_label( $letter ) ); ?></h2>
 							<ul>
 								<?php foreach ( $items as $term_post ) : ?>
+									<?php
+									$title = iseo_glossary_term_title( $term_post );
+									if ( '' === $title ) {
+										continue;
+									}
+									$url = iseo_glossary_term_list_url( $term_post );
+									?>
 									<li>
-										<a href="<?php echo esc_url( get_permalink( $term_post ) ); ?>"><?php echo esc_html( get_the_title( $term_post ) ); ?></a>
+										<?php if ( $url ) : ?>
+											<a href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $title ); ?></a>
+										<?php else : ?>
+											<?php echo esc_html( $title ); ?>
+										<?php endif; ?>
 										<?php
 										$excerpt = trim( (string) $term_post->post_excerpt );
 										if ( $excerpt ) :
