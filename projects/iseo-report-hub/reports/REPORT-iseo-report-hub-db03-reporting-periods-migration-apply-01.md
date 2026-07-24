@@ -138,9 +138,9 @@
 | Message | `feat(iseo-report-hub): add db03 reporting periods migration` |
 | Exact-path git add | four allowlisted paths only |
 | Staged list | migration SQL + apply result + this report + OPERATIONAL-INDEX |
-| Commit hash | _pending primary commit_ |
+| Commit hash | `c19c29b8be79ecfc8c946dd624e8f21023c2db39` |
 | Hash-record follow-up | `docs(iseo-report-hub): record db03 reporting periods migration commit hash` (this report only) |
-| HEAD verification | after commits |
+| HEAD verification | after hash-record commit |
 | Push | **no** |
 
 ---
