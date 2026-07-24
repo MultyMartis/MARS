@@ -2,11 +2,12 @@
 
 **Programme:** ISEO-SU-SITE-OPS  
 **Task:** ISEO-SU-SITE-OPS-GLOSSARY-EDITORIAL-AUDIT-AND-PILOT-CONTENT-STANDARD  
-**Date:** 2026-07-24  
-**Status:** DRAFT FOR OPERATOR / NIKITA REVIEW  
+**Date:** 2026-07-24 (updated 2026-07-25 Batch 01)  
+**Status:** ACTIVE FOR DRAFT PRODUCTION  
 
 Companion: `ISEO-SU-GLOSSARY-EDITORIAL-STANDARD-v1.md`  
 Architecture URL gate: `ISEO_GLOSSARY_PUBLIC_EXPOSURE` (currently false)
+Final corpus: `ISEO-SU-GLOSSARY-FINAL-CORPUS-v1.md`
 
 ---
 
@@ -21,10 +22,11 @@ Architecture URL gate: `ISEO_GLOSSARY_PUBLIC_EXPOSURE` (currently false)
 
 Rules:
 
-- MERGE terms do not get independent public URLs.
-- RENAME uses the new canonical title/slug at publish time; old draft title may be updated in WP under a later charter.
+- MERGED terms do not get independent public URLs.
+- APPROVED_RENAME uses the new canonical title/slug; Batch 01 already renamed matching drafts where applicable.
 - Do not invent `.html` glossary URLs unless operator revisits G-U-002.
 - Self-canonical on published singles; no cross-domain glossary mirrors.
+- While drafts remain unpublished, related-term relationships may be stored as plain text; do not emit public draft-to-draft hyperlinks that could leak draft URLs.
 
 ---
 

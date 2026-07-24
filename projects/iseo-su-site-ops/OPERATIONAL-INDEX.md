@@ -24,15 +24,15 @@
 
 | Field | Value |
 |-------|-------|
-| **Lifecycle** | **GLOSSARY ARCHIVE PREVIEW FIXED / EDITORIAL HOLD** |
-| **Project status** | Glossary CPT/templates deployed; 241 draft terms; auth archive preview layout fixed; editorial audit + 12-term pilot in MARS; public exposure HOLD; WPilot bridge/writes/REST still gated |
+| **Lifecycle** | **GLOSSARY FINAL CORPUS SET / BATCH 01 DRAFTS LOADED** |
+| **Project status** | Glossary CPT/templates deployed; 241 drafts; final corpus decided; Batch 01 (30) definitions loaded as drafts; public exposure HOLD; WPilot bridge/writes/REST still gated |
 | **Architecture knowledge** | **COMPLETE** — knowledge base + route matrix + task routing guide |
-| **Glossary** | Foundation + draft intake + source canonicalization + editorial standard/audit/pilot + **archive empty-state/layout fix** — WP definitions still empty; public exposure closed |
+| **Glossary** | Foundation + draft intake + source canonicalization + editorial audit/pilot + archive layout fix + **final corpus + Batch 01 draft content** — remaining definitions empty; public exposure closed |
 | **Current phase (WPilot)** | **PHASE 6D — BLOCKED** (bridge/smoke awaiting exact approval + backup lines) — **not required** for ordinary site content/file tasks |
 | **Accepted WPilot baseline** | **PHASE 6C — TOKEN CREATED / RC6 SAFE DEFAULTS** |
 | **Access files** | **LOCAL-ONLY FILLED / VALIDATED** (Git-ignored) |
 | **WPilot** | **ACTIVE** RC6; bridge **DISABLED**; writes **DISABLED**; token **LOCAL-ONLY**; REST **NOT RUN** |
-| **Next operator action (site work)** | Review glossary audit + pilot with Nikita → authorize bulk definitions / WP content upload charter |
+| **Next operator action (site work)** | Visual/content review of Batch 01 drafts → authorize Batch 02 and/or publication gate later |
 | **Next operator action (WPilot 6D)** | Exact lines `APPROVE ISEO-SU WPILOT BRIDGE AND READ-ONLY SMOKE 6D` + `CONFIRM ISEO-SU FRESH BEGET BACKUP FOR WPILOT 6D` |
 
 Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **absent**. Architecture: **hybrid** — see knowledge base.
@@ -108,7 +108,7 @@ Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **ab
 
 ## Next authorized task
 
-**Glossary:** operator + Nikita review editorial audit and pilot batch; separate charter for bulk definition writing and optional WordPress draft content upload; publication gate (`ISEO_GLOSSARY_PUBLIC_EXPOSURE`) later.
+**Glossary:** operator visual/content review of Batch 01 drafts; then Batch 02 content charter and/or publication gate (`ISEO_GLOSSARY_PUBLIC_EXPOSURE`) later. Do not publish without explicit gate.
 
 **Ordinary site work:** additional concrete tasks after fresh Beget backup; MARS follows Task Routing Guide.
 
@@ -153,6 +153,8 @@ Additional historical artifacts remain listed in the Artifact Register.
 
 | Report | Status |
 |--------|--------|
+| [Glossary final corpus and Batch 01 content](reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-FINAL-CORPUS-AND-BATCH-01-CONTENT.md) | **COMPLETE — GLOSSARY FINAL CORPUS SET / BATCH 01 LOADED AS DRAFTS** |
+| [Glossary archive empty-state and layout fix](reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-ARCHIVE-EMPTY-STATE-AND-LAYOUT-FIX.md) | COMPLETE |
 | [Glossary editorial audit and pilot](reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-EDITORIAL-AUDIT-AND-PILOT.md) | **COMPLETE — GLOSSARY EDITORIAL MODEL READY / PILOT PREPARED** |
 | [Glossary source material canonicalization](reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-SOURCE-MATERIAL-CANONICALIZATION.md) | **COMPLETE — GLOSSARY SOURCE MATERIAL CANONICALIZED / PROJECT BRAIN PERSISTED** |
 | [Glossary architecture template and content intake](reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-ARCHITECTURE-TEMPLATE-AND-CONTENT-INTAKE.md) | **COMPLETE — GLOSSARY FOUNDATION READY / TERMS IMPORTED AS DRAFTS** |
@@ -162,4 +164,4 @@ Additional historical artifacts remain listed in the Artifact Register.
 
 ---
 
-*ISEO-SU-SITE-OPS Operational Index · Glossary editorial model ready / pilot prepared · 2026-07-24 · WPilot RC6 safe defaults · token local-only · bridge/writes disabled.*
+*ISEO-SU-SITE-OPS Operational Index · Glossary final corpus + Batch 01 drafts loaded · 2026-07-25 · WPilot RC6 safe defaults · token local-only · bridge/writes disabled.*

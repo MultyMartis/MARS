@@ -54,8 +54,22 @@
 | Full audit matrix | `data/glossary-editorial/ISEO-SU-GLOSSARY-TERM-AUDIT-v1.csv` |
 | Status counts (provisional) | KEEP 146 · RENAME 48 · MERGE 26 · REVIEW 8 · EXCLUDE 13 |
 | Pilot definitions | `ISEO-SU-GLOSSARY-PILOT-BATCH-v1.md` (12 terms, MARS-only) |
-| WP drafts mutated | **no** |
+| WP drafts mutated | **no** (audit/pilot wave) |
 | Public exposure | **still closed** |
+
+## Final corpus + Batch 01 (2026-07-25)
+
+| Field | Value |
+|-------|-------|
+| Task | ISEO-SU-SITE-OPS-GLOSSARY-FINAL-CORPUS-AND-BATCH-01-CONTENT |
+| Final corpus | APPROVED 146 · APPROVED_RENAME 48 · MERGED 26 · DEFERRED 8 · EXCLUDED 13 |
+| Corpus artifacts | `ISEO-SU-GLOSSARY-FINAL-CORPUS-v1.md` + CSV |
+| Batch 01 size | **30** draft definitions applied to existing posts |
+| Batch 01 manifest | `ISEO-SU-GLOSSARY-BATCH-01-MANIFEST-v1.md` |
+| Content sources | `content/glossary/batch-01/` |
+| WP mutation scope | Batch 01 glossary drafts only (title/content/excerpt/ACF/Yoast); status remains draft |
+| Public exposure | **still closed** |
+| Publication | **not performed** |
 
 ---
 

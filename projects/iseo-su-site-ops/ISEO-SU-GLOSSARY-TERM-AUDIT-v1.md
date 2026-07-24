@@ -191,11 +191,20 @@ Exact duplicate titles in source: **0** (confirmed at intake).
 
 ---
 
-## 11. Next step
+## 11. Supersession note (2026-07-25)
 
-1. Operator + Nikita review status counts and REVIEW/EXCLUDE lists.  
-2. Approve pilot definitions (`ISEO-SU-GLOSSARY-PILOT-BATCH-v1.md`).  
-3. Separate charter for bulk definition writing and optional draft content upload.
+Operational dispositions for publication planning are now in:
+
+- `ISEO-SU-GLOSSARY-FINAL-CORPUS-v1.md`
+- `data/glossary-editorial/ISEO-SU-GLOSSARY-FINAL-CORPUS-v1.csv`
+
+This audit file remains the historical provisional matrix (KEEP/RENAME/MERGE/REVIEW/EXCLUDE). Do not treat REVIEW as still awaiting per-term operator votes for corpus inclusion — final corpus deferred those eight independently.
+
+## 12. Next step (historical — completed by final corpus + Batch 01)
+
+1. ~~Operator + Nikita review status counts and REVIEW/EXCLUDE lists.~~ → MARS independent final corpus.  
+2. ~~Approve pilot definitions.~~ → improved into Batch 01.  
+3. ~~Separate charter for bulk definition writing / draft upload.~~ → Batch 01 loaded as drafts 2026-07-25.
 
 ---
 
