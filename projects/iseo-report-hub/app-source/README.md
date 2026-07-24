@@ -1,53 +1,69 @@
-# i-SEO Report Hub — Runtime Scaffold
+# i-SEO Report Hub — App Source Mirror
 
 ## Status
 
-**Phase 0 scaffold only.** This tree is a minimal custom PHP + SQL/MySQL runtime placeholder. It is **not** a product implementation.
+**Phase 1A source skeleton complete.** Versioned Active Brain mirror with minimal PHP app skeleton (bootstrap, router, views, controllers, services, config loader). **Not** synced to Localhost runtime in this phase.
 
 | Fact | State |
 |------|-------|
 | Platform | Custom **PHP + SQL/MySQL** |
 | WordPress | **Not used** as runtime or source of truth |
-| Framework / Composer | **None** in this phase |
-| Database | **Not created** |
+| Framework / Composer | **None** — plain PHP 8.3 |
+| Database | **Not created** · no connection attempted |
 | Migrations | **None** |
-| Vhost / hosts | **Not created** by Phase 0 |
-| Secrets | **None** — `.env.example` placeholders only; no `.env` |
+| Auth | **Stub only** — no DB login |
+| Secrets | **None** — `.env.example` placeholders only; **no** `.env` / `.env.local` |
+| Runtime sync | **Not done** in Phase 1A |
 
-## Local identity
+## Paths
 
 | Item | Value |
 |------|-------|
-| Runtime path | `X:\MARS-Localhost\sites\php\projects\iseo-report-hub` |
-| Intended domain | `iseo-report-hub.test` |
-| DB candidate | `iseo_report_hub_dev` |
-| PHP target | **8.3.30** (Laragon verified) |
+| Source mirror (this tree) | `X:\AI MARS\projects\iseo-report-hub\app-source\` |
+| Runtime target (unchanged) | `X:\MARS-Localhost\sites\php\projects\iseo-report-hub\` |
+| Intended domain | `iseo-report-hub.test` (not mapped yet) |
+| DB candidate | `iseo_report_hub_dev` (not created) |
+| PHP target | **8.3.30** (Laragon) |
 
-Docs and specs remain in the MARS Active Brain:
+Docs and specs remain in:
 
 `X:\AI MARS\projects\iseo-report-hub\`
 
-## How to review manually
+## Optional source review (built-in server)
 
-1. Inspect files under this runtime path.
-2. Open `public/index.php` through a **local server mapping once configured** (vhost/hosts are **manual next steps**, not done here).
-3. Open `public/health.php` for a PHP/extension sanity page (no DB connection).
-4. PHP built-in server is **optional** and only if the operator explicitly chooses later, for example from `public/`:
+Operator-only local review from this tree (does **not** update runtime):
 
-   `php -S 127.0.0.1:8080`
+```bash
+php -S 127.0.0.1:8088 -t public public/index.php
+```
 
-   Domain `iseo-report-hub.test` may **not** resolve until hosts/vhost are configured.
+Charter-equivalent document form (same intent):
+
+```bash
+php -S 127.0.0.1:8088 -t public
+```
+
+For path routes (`/`, `/login`, `/health`), pass `public/index.php` as the built-in server router script so requests dispatch through the front controller. Static assets under `public/assets/` are served as files.
+
+Routes: `GET /`, `GET /login`, `POST /login` (stub), `GET /logout`, `GET /health`, 404 fallback.
 
 ## Secrets policy
 
 - Do **not** commit `.env` or `.env.local`.
-- Copy `.env.example` → `.env` only under operator control; use local credentials never stored in git.
+- Do **not** create `.env.local` in Phase 1A.
+- Copy `.env.example` → `.env.local` only under a later operator charter.
 - No production credentials, no real private client metrics in this tree.
+
+## What this phase is not
+
+- Runtime not updated / not claimed updated
+- No source → runtime sync
+- No DB / SQL / migrations
+- No Composer / npm / frameworks
+- No vhost / hosts changes
 
 ## Next phase
 
-**Phase 1** — app skeleton + config loader + environment handling + basic routing/layout + auth baseline (DB still optional unless Phase 1 charter decides otherwise).
+**Recommended:** Phase 1B — source → runtime sync + local smoke.
 
-## Source Mirror Note
-
-This directory is the versioned Active Brain source mirror for i-SEO Report Hub. Runtime deployment target is `X:\MARS-Localhost\sites\php\projects\iseo-report-hub`. Primary sync direction is source → runtime. Do not commit `.env`, `.env.local`, uploads, logs, cache, DB dumps, or private client data.
+**Alternative:** DB creation charter only after runtime skeleton smoke.

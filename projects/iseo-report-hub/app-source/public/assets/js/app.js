@@ -1,6 +1,6 @@
-/* i-SEO Report Hub — Phase 0 optional demo JS only */
+/* i-SEO Report Hub — Phase 1A optional progressive JS only */
 
-document.documentElement.dataset.scaffold = 'phase-0';
+document.documentElement.dataset.scaffold = 'phase-1a';
 
 document.addEventListener('DOMContentLoaded', () => {
   const stamp = document.createElement('span');

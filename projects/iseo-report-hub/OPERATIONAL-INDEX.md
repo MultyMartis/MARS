@@ -16,8 +16,8 @@
 | **Business owner / vision source** | Никита / i-SEO |
 | **Developer** | Антон |
 | **Platform direction** | **Decided** — custom **PHP + SQL/MySQL**; **no WordPress runtime**; Laragon local runtime **verified** (preflight 01); see [I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md](product/I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md) |
-| **Implementation** | **Phase 0 scaffold + committed `app-source/` mirror** — runtime at `X:\MARS-Localhost\sites\php\projects\iseo-report-hub`; versioned source at `projects/iseo-report-hub/app-source/`; **no** DB / vhost / hosts / secrets; **no** product features beyond health/index pages; Phase 1 may be chartered after operator review |
-| **Source model** | **Model A active** — `projects/iseo-report-hub/app-source/` created; sync direction **source → runtime**; runtime → source only by explicit import charter |
+| **Implementation** | **Phase 1A source skeleton complete** in `app-source/` (bootstrap/router/views/controllers/services); runtime at `X:\MARS-Localhost\sites\php\projects\iseo-report-hub` **not synced**; **no** DB / vhost / hosts / secrets; auth stub only |
+| **Source model** | **Model A active** — `projects/iseo-report-hub/app-source/` is versioned SoT; sync direction **source → runtime**; runtime → source only by explicit import charter |
 
 ---
 
@@ -25,9 +25,9 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | planned / product architecture + Phase 0 runtime scaffold + Model A `app-source/` mirror created |
+| **Status** | planned / product architecture + Phase 0 runtime scaffold + Model A `app-source/` mirror + **Phase 1A app skeleton** |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | MVP **Phase 0 scaffold reviewed**; source/runtime policy v0.1 defined; Model A charter accepted; **`app-source/` mirror created** from Phase 0 scaffold; Laragon preflight complete; platform decision + technical brief package; Layer 02 complete; static demo v0.4 UX reference; SEO feedback deferred; **Phase 1 can be chartered after operator review**; DB / vhost / hosts **not** done |
+| **Active stage** | MVP **Phase 1A source skeleton complete** (bootstrap/router/views/controllers/services); runtime **not synced**; DB **not** created; next recommended: **Phase 1B source → runtime sync + smoke**; vhost / hosts still separate |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -196,6 +196,22 @@
 
 ---
 
+## MVP Phase 1A app skeleton + config baseline 01 (2026-07-24)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** — source-only Phase 1A skeleton |
+| **Result doc** | [I-SEO-REPORT-HUB-MVP-PHASE-1A-APP-SKELETON-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-MVP-PHASE-1A-APP-SKELETON-RESULT-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-mvp-phase-1a-app-skeleton-config-baseline-01.md](reports/REPORT-iseo-report-hub-mvp-phase-1a-app-skeleton-config-baseline-01.md) |
+| **Source path** | `X:\AI MARS\projects\iseo-report-hub\app-source\` |
+| **What exists** | Front controller, bootstrap, router, layout/views, controllers, Config/Auth/Csrf services, helpers, health/login/dashboard stubs |
+| **Runtime** | **Not synced** — Localhost runtime untouched |
+| **DB** | **Not created** · no connection |
+| **Secrets** | **None** — no `.env` / `.env.local` |
+| **Next stage** | **Phase 1B** — source → runtime sync + local smoke |
+
+---
+
 ## Current approved decisions (summary)
 
 1. Report Hub — **операционная система отчётности**, не PDF-only tool.
@@ -267,7 +283,9 @@
 | 52 | [reports/REPORT-iseo-report-hub-model-a-source-mirror-deploy-sync-charter-01.md](reports/REPORT-iseo-report-hub-model-a-source-mirror-deploy-sync-charter-01.md) | Model A source mirror + deploy/sync charter closeout |
 | 53 | [product/I-SEO-REPORT-HUB-APP-SOURCE-MIRROR-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-APP-SOURCE-MIRROR-RESULT-v0.1.md) | App-source mirror create result |
 | 54 | [reports/REPORT-iseo-report-hub-create-app-source-mirror-from-phase-0-scaffold-01.md](reports/REPORT-iseo-report-hub-create-app-source-mirror-from-phase-0-scaffold-01.md) | App-source mirror create closeout |
-| 55 | [app-source/](app-source/) | Versioned Model A PHP source mirror (Phase 0 scaffold) |
+| 55 | [app-source/](app-source/) | Versioned Model A PHP source mirror (Phase 1A skeleton) |
+| 56 | [product/I-SEO-REPORT-HUB-MVP-PHASE-1A-APP-SKELETON-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-MVP-PHASE-1A-APP-SKELETON-RESULT-v0.1.md) | Phase 1A app skeleton result |
+| 57 | [reports/REPORT-iseo-report-hub-mvp-phase-1a-app-skeleton-config-baseline-01.md](reports/REPORT-iseo-report-hub-mvp-phase-1a-app-skeleton-config-baseline-01.md) | Phase 1A closeout report |
 
 ---
 
@@ -312,8 +330,8 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Operator review** of committed `app-source/` mirror
-2. **MVP Phase 1** — app skeleton + config + auth baseline — may be chartered after operator review (DB / vhost / hosts still separate)
+1. **Phase 1B** — source → runtime sync + local smoke (recommended next)
+2. DB creation charter — only after runtime skeleton smoke (or explicit operator override)
 3. Optional parallel: **v0.5 demo corrections** from backlog (UX only; not product runtime)
 4. **SEO specialist feedback** — still **deferred** until operator opens feedback charter
 5. Work dictionary extraction/sanitization (из Nikita materials; **exclude** credential sheet)

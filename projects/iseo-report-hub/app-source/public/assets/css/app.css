@@ -1,4 +1,4 @@
-/* i-SEO Report Hub — Phase 0 scaffold styles (local only, no external assets) */
+/* i-SEO Report Hub — Phase 1A source skeleton styles (local only, no external assets) */
 
 :root {
   --bg: #0f1c24;
@@ -30,13 +30,21 @@ body {
 }
 
 .container {
-  width: min(860px, calc(100% - 2rem));
+  width: min(960px, calc(100% - 2rem));
   margin: 0 auto;
 }
 
 .site-header {
-  padding: 2.5rem 0 1.5rem;
+  padding: 2rem 0 1.25rem;
   border-bottom: 1px solid var(--border);
+}
+
+.header-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .brand {
@@ -49,13 +57,38 @@ body {
 
 h1 {
   margin: 0 0 0.4rem;
-  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 650;
 }
 
 .tagline {
   margin: 0;
   color: var(--muted);
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  align-items: center;
+}
+
+.site-nav a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  outline: none;
+}
+
+.nav-user {
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 main {
@@ -74,6 +107,36 @@ main {
   margin: 0 0 0.85rem;
   font-size: 1.05rem;
   color: var(--accent);
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.status-card .status-pill {
+  display: inline-block;
+  margin: 0 0 0.6rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.status-ready .status-pill {
+  color: var(--ok);
+  border-color: color-mix(in srgb, var(--ok) 45%, var(--border));
+}
+
+.status-pending .status-pill,
+.status-stub .status-pill {
+  color: var(--warn);
+  border-color: color-mix(in srgb, var(--warn) 45%, var(--border));
 }
 
 .facts,
@@ -100,7 +163,7 @@ code {
 
 .btn {
   display: inline-block;
-  margin-top: 0.5rem;
+  margin: 0.35rem 0.35rem 0 0;
   padding: 0.55rem 1rem;
   border-radius: 6px;
   background: var(--accent);
@@ -108,6 +171,8 @@ code {
   text-decoration: none;
   font-weight: 600;
   border: 1px solid transparent;
+  cursor: pointer;
+  font: inherit;
 }
 
 .btn:hover,
@@ -127,6 +192,53 @@ code {
 .btn-secondary:focus-visible {
   background: #1d3340;
   color: var(--text);
+}
+
+.login-form {
+  display: grid;
+  gap: 0.9rem;
+  max-width: 28rem;
+}
+
+.login-form label {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.login-form input {
+  padding: 0.55rem 0.7rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: #0f1a21;
+  color: var(--text);
+  font: inherit;
+}
+
+.login-form input:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--accent) 55%, white);
+  outline-offset: 1px;
+}
+
+.flash-stack {
+  margin-bottom: 1rem;
+}
+
+.flash {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  background: #13232c;
+}
+
+.flash-warn {
+  border-color: color-mix(in srgb, var(--warn) 50%, var(--border));
+  color: #f0d48a;
+}
+
+.flash-info {
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+  color: #b7e6de;
 }
 
 .ok {

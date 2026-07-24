@@ -2,53 +2,53 @@
 declare(strict_types=1);
 
 /**
- * i-SEO Report Hub — Phase 0 public entrypoint.
- * Scaffold only: no database connection, no auth, no framework.
+ * i-SEO Report Hub — Phase 1A front controller.
+ * No DB. No .env required. Source-only skeleton.
  */
 
-$appName = 'i-SEO Report Hub';
-$phase = 'Phase 0 — Runtime scaffold only';
-$phpVersion = PHP_VERSION;
-$runtimePath = dirname(__DIR__);
-$noDb = true;
-?>
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?= htmlspecialchars($appName, ENT_QUOTES, 'UTF-8') ?> — Phase 0</title>
-    <link rel="stylesheet" href="assets/css/app.css">
-</head>
-<body>
-    <header class="site-header">
-        <div class="container">
-            <p class="brand">INTLSEO / i-SEO</p>
-            <h1><?= htmlspecialchars($appName, ENT_QUOTES, 'UTF-8') ?></h1>
-            <p class="tagline">Custom PHP + SQL/MySQL reporting runtime (scaffold)</p>
-        </div>
-    </header>
+// When used as PHP built-in server router, serve existing public files as-is.
+if (PHP_SAPI === 'cli-server') {
+    $reqPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
+    if (is_string($reqPath) && $reqPath !== '/' && $reqPath !== '') {
+        $candidate = __DIR__ . str_replace('/', DIRECTORY_SEPARATOR, $reqPath);
+        if (is_file($candidate)) {
+            return false;
+        }
+    }
+}
 
-    <main class="container">
-        <section class="panel">
-            <h2>Status</h2>
-            <ul class="facts">
-                <li><strong>Stage:</strong> <?= htmlspecialchars($phase, ENT_QUOTES, 'UTF-8') ?></li>
-                <li><strong>PHP version:</strong> <?= htmlspecialchars($phpVersion, ENT_QUOTES, 'UTF-8') ?></li>
-                <li><strong>Database connection:</strong> <?= $noDb ? 'not attempted' : 'n/a' ?></li>
-                <li><strong>WordPress:</strong> not used</li>
-                <li><strong>Runtime path:</strong> <code><?= htmlspecialchars($runtimePath, ENT_QUOTES, 'UTF-8') ?></code></li>
-            </ul>
-            <p class="note">This page is a safe static entrypoint. No `.env` is required. No credentials are loaded.</p>
-            <p><a class="btn" href="health.php">Open health check</a></p>
-        </section>
-    </main>
+try {
+    /** @var array<string, mixed> $app */
+    $app = require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'bootstrap.php';
+    require $app['app_path'] . DIRECTORY_SEPARATOR . 'routes.php';
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>MARS Localhost · Phase 0 scaffold · no production deployment</p>
-        </div>
-    </footer>
-    <script src="assets/js/app.js" defer></script>
-</body>
-</html>
+    /** @var \Iseo\Support\Router $router */
+    $router = $app['router'];
+    $router->dispatch(request_method(), request_path());
+} catch (Throwable $e) {
+    $debug = true;
+    if (isset($app) && is_array($app) && isset($app['config']) && $app['config'] instanceof \Iseo\Services\ConfigService) {
+        $debug = $app['config']->debug();
+    }
+
+    http_response_code(500);
+    header('Content-Type: text/html; charset=UTF-8');
+
+    if ($debug) {
+        $message = htmlspecialchars($e->getMessage(), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+        $file = htmlspecialchars($e->getFile(), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+        $line = (int) $e->getLine();
+        echo '<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><title>Error</title></head><body>';
+        echo '<h1>Application error</h1>';
+        echo '<p>Phase 1A debug view — no secrets intentionally shown.</p>';
+        echo '<p><strong>Message:</strong> ' . $message . '</p>';
+        echo '<p><strong>File:</strong> ' . $file . ' <strong>Line:</strong> ' . $line . '</p>';
+        echo '</body></html>';
+        return;
+    }
+
+    echo '<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><title>Error</title></head><body>';
+    echo '<h1>Something went wrong</h1>';
+    echo '<p>Safe error page. Details hidden because APP_DEBUG is false.</p>';
+    echo '</body></html>';
+}
