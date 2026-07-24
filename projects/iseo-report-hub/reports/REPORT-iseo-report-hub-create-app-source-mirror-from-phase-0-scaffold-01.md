@@ -139,13 +139,14 @@
 | Field | Value |
 |-------|--------|
 | Exact-path `git add` | **Yes** |
-| Commit | **Yes** |
+| Primary commit | **Yes** |
 | Message | `feat(iseo-report-hub): add app source mirror scaffold` |
 | Commit hash | `696e56f900e25879fa99bb97c9591e49c8c8e02b` |
-| HEAD verification | `git show --name-only --oneline --stat HEAD` — only allowlisted i-SEO Report Hub `app-source/**` + docs paths |
+| HEAD verification (primary) | `git show --name-only --oneline --stat 696e56f9` — only allowlisted i-SEO Report Hub `app-source/**` + docs paths (29 files) |
+| Follow-up (hash record) | `e5863d5896c4c10d2948e799df5176b2d411af01` — `docs(iseo-report-hub): record app source mirror commit hash` (report §8 hash only; programme pattern) |
 | Push | **No** |
 
-Staged list at commit (29 paths): all `app-source/**` files listed in §4 (including `storage/README.md` after source-only `!README.md` gitignore fix) plus OPERATIONAL-INDEX, result doc, and this report.
+Staged list at primary commit (29 paths): all `app-source/**` files listed in §4 (including `storage/README.md` after source-only `!README.md` gitignore fix) plus OPERATIONAL-INDEX, result doc, and this report.
 
 ---
 
