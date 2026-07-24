@@ -202,15 +202,17 @@ Scoped commit (no `git add .` / `-A` / pathspec directory dump; explicit file pa
 
 | Field | Value |
 |-------|-------|
-| Subject | `docs(iseo-su): complete production architecture knowledge base` |
+| Subject (project-brain) | `docs(iseo-su): complete production architecture knowledge base` |
 | Commit hash (full) | `3a934926e30bde3c3244203881b68e93629763df` |
 | Commit hash (short) | `3a934926` |
 | Committed file count | **18** |
-| Paths | architecture package + updates + this REPORT only (exact list in Git Persistence post-commit validation) |
-| Staged index after commit | empty |
+| Follow-up (REPORT hash fill only) | `03a44add` — `docs(iseo-su): record architecture knowledge persistence commit hash` (1 file) |
+| Paths (brain commit) | see post-commit path list below |
+| Staged index after commits | empty |
 | Push | **not performed** |
 | Secrets committed | **No** |
 | Scratch/local secrets | **Not staged** |
+| Foreign WIP | preserved (a mistaken mixed staging attempt was soft-reset and never left on branch tip) |
 
 ---
 
