@@ -191,7 +191,13 @@ See architecture model §19 (Yoast workflow preference; optional `.html` singles
 
 ## 23. Git Persistence
 
-Scoped commit planned: glossary package + intake data + docs/register updates. No push.
+Scoped commit created (no push):
+
+- hash: `2e7f150cbd9728ab2299afcff36247e6c283dcb3`
+- subject: `feat(iseo-su): add wordpress glossary foundation and draft intake`
+- 23 paths (glossary package, intake JSON/CSV, docs, register/index updates)
+- Foreign WIP and `_glossary-scratch/` evidence left unstaged
+- Original workbook `.xlsx` copy left untracked on purpose (sanitized inventory committed)
 
 ---
 
