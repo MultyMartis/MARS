@@ -1,9 +1,24 @@
 # ISEO-SU-SITE-OPS Artifact Register v1
 
-**Status:** ACCEPTED (Phase 1.5); **updated Phase 6C RETRY / token local-only** 2026-07-24  
+**Status:** ACCEPTED (Phase 1.5); **updated architecture knowledge capture** 2026-07-24  
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`
 
 Status vocabulary: **COMPLETE** · **CREATED** · **PLANNED** · **CONDITIONAL** · **DEFERRED** · **NOT AUTHORIZED** · **OPEN**
+
+### Architecture knowledge package (2026-07-24)
+
+| Artifact | Path | Status |
+|----------|------|--------|
+| Production architecture knowledge base | `ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md` | CREATED |
+| Canonical route ownership matrix | `ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md` | CREATED |
+| Page-to-source map | `ISEO-SU-PAGE-TO-SOURCE-MAP-v1.md` | CREATED |
+| WordPress object/template map | `ISEO-SU-WORDPRESS-OBJECT-AND-TEMPLATE-MAP-v1.md` | CREATED |
+| Static PHP file ownership map | `ISEO-SU-STATIC-PHP-FILE-OWNERSHIP-MAP-v1.md` | CREATED |
+| Forms/calculators/web-KP map | `ISEO-SU-FORMS-CALCULATORS-AND-WEB-KP-MAP-v1.md` | CREATED |
+| Global component dependency map | `ISEO-SU-GLOBAL-COMPONENT-DEPENDENCY-MAP-v1.md` | CREATED |
+| Task routing guide | `ISEO-SU-TASK-ROUTING-GUIDE-v1.md` | CREATED |
+| Site route register | `ISEO-SU-SITE-ROUTE-REGISTER-v1.md` | CREATED |
+| Architecture capture REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-COMPLETE-PRODUCTION-ARCHITECTURE-ROUTE-KNOWLEDGE-CAPTURE.md` | COMPLETE |
 
 ---
 
@@ -59,6 +74,7 @@ Status vocabulary: **COMPLETE** · **CREATED** · **PLANNED** · **CONDITIONAL**
 | ISEO-SU-WPILOT-ACTIVATION-ONLY-EVIDENCE-v1 | `ISEO-SU-WPILOT-ACTIVATION-ONLY-EVIDENCE-v1.md` | CREATED | Phase 6B sanitized activation evidence |
 | ISEO-SU-WPILOT-TOKEN-CREATION-EVIDENCE-v1 | `ISEO-SU-WPILOT-TOKEN-CREATION-EVIDENCE-v1.md` | CREATED | Phase 6C retry COMPLETE / token local-only |
 | ISEO-SU-WPILOT-RC6-UPDATE-EVIDENCE-v1 | `ISEO-SU-WPILOT-RC6-UPDATE-EVIDENCE-v1.md` | CREATED | Phase 6C-R RC6 update evidence |
+| ISEO-SU-WPILOT-READ-ONLY-SMOKE-EVIDENCE-v1 | `ISEO-SU-WPILOT-READ-ONLY-SMOKE-EVIDENCE-v1.md` | CREATED | Phase 6D blocked — no smoke run |
 | Phase 4B REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-PHASE-4B-WPILOT-PREINSTALL-PACKAGE-AND-COMPATIBILITY-GATE.md` | COMPLETE | CONDITIONAL GO |
 | Phase 4B-P REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-PHASE-4B-P-DOCUMENTATION-PERSISTENCE-CHECKPOINT.md` | COMPLETE | DOCUMENTATION PERSISTED |
 | Phase 4C REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-PHASE-4C-WPILOT-TOKEN-GATING-REMEDIATION.md` | COMPLETE | RC6 packaged; later deployed via 6C-R |
@@ -68,12 +84,13 @@ Status vocabulary: **COMPLETE** · **CREATED** · **PLANNED** · **CONDITIONAL**
 | Phase 6C-R REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-PHASE-6C-R-WPILOT-REMEDIATION-UPDATE-ONLY.md` | COMPLETE | RC6 ACTIVE SAFE DEFAULTS |
 | Phase 6C RETRY REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-PHASE-6C-WPILOT-TOKEN-CREATION-ONLY-RETRY.md` | COMPLETE | TOKEN CREATED LOCAL-ONLY |
 | Phase 6C-P REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-PHASE-6C-P-PRODUCTION-ONBOARDING-EVIDENCE-PERSISTENCE.md` | COMPLETE | PRODUCTION ONBOARDING EVIDENCE PERSISTED |
+| Phase 6D REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-PHASE-6D-WPILOT-BRIDGE-ENABLEMENT-AND-READ-ONLY-SMOKE.md` | **BLOCKED** | Missing exact approval + fresh backup lines |
 
 Local-only (Git-ignored): `X:\AI MARS\local\sites\iseo-su-production\` · `X:\AI MARS\local\tokens\wpilot-prod-iseo-su.token`.
 
 Scratch (local audit helpers; gitignored via `_phase*-scratch/.gitignore`): not programme authority.
 
-Phase status: **PHASE 6C — TOKEN CREATED / RC6 SAFE DEFAULTS**; **PHASE 6C-P — EVIDENCE PERSISTED**; bridge / writes / DEV / REST smoke **NOT AUTHORIZED**; RC5 rollback retained.
+Phase status: **PHASE 6D — BLOCKED / PRODUCTION UNCHANGED**; accepted baseline remains **PHASE 6C — TOKEN CREATED / RC6 SAFE DEFAULTS**; bridge / writes / DEV / REST smoke **NOT RUN**; RC5 rollback retained.
 
 ---
 
