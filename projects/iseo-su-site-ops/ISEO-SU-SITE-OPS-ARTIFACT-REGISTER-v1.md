@@ -20,6 +20,17 @@ Status vocabulary: **COMPLETE** · **CREATED** · **PLANNED** · **CONDITIONAL**
 | Site route register | `ISEO-SU-SITE-ROUTE-REGISTER-v1.md` | CREATED |
 | Architecture capture REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-COMPLETE-PRODUCTION-ARCHITECTURE-ROUTE-KNOWLEDGE-CAPTURE.md` | COMPLETE |
 
+### Glossary foundation package (2026-07-24)
+
+| Artifact | Path | Status |
+|----------|------|--------|
+| Glossary architecture and content model | `ISEO-SU-GLOSSARY-ARCHITECTURE-AND-CONTENT-MODEL-v1.md` | CREATED |
+| Glossary term intake register | `ISEO-SU-GLOSSARY-TERM-INTAKE-REGISTER-v1.md` | CREATED |
+| Glossary template component map | `ISEO-SU-GLOSSARY-TEMPLATE-COMPONENT-MAP-v1.md` | CREATED |
+| Theme source package | `wordpress/iseoblog-glossary/` | CREATED / deployed |
+| Sanitized intake inventory | `data/glossary-intake/glossary-terms-inventory-v1.json` (+ csv) | CREATED |
+| Glossary intake REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-ARCHITECTURE-TEMPLATE-AND-CONTENT-INTAKE.md` | COMPLETE |
+
 ---
 
 ## Programme foundation artifacts (this locus)

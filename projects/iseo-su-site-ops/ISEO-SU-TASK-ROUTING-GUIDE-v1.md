@@ -180,6 +180,21 @@
 
 ---
 
+## glossary
+
+| Step | Action |
+|------|--------|
+| Inspect first | CPT `glossary` + `/glossary/` + `archive-glossary.php` / `single-glossary.php` + ACF group «Глоссарий — метаданные термина» |
+| SoT | Theme includes under `iseoblog/inc/glossary-*.php` + CPT posts |
+| Access | WP Admin for drafts/definitions; SFTP for templates |
+| Backup | Beget + theme bak copies |
+| Modify | Draft definitions/excerpts; **do not** open `ISEO_GLOSSARY_PUBLIC_EXPOSURE` without charter |
+| Validate | Editor preview archive/single; anonymous must stay 404 until gate |
+| Rollback | Restore theme glossary files; delete only glossary drafts |
+| Traps | Workbook has no definitions — never invent; do not add menu/sitemap early; do not edit privacy-policy as “style twin” |
+
+---
+
 ## CSS/JS
 
 | Step | Action |
@@ -275,8 +290,10 @@
 - one marketing HTML (`/contacts.html` or `/about.html`)
 - `/tariff-calc`
 - `/offers` (if offers/KP adjacent)
+- `/glossary/` (expect **404** for anonymous until publication gate)
 - `/sitemap.xml` (if SEO/URL adjacent)
+- `/privacy-policy.html` (if legal/reference adjacent)
 
 ---
 
-*Task routing guide v1 · 2026-07-24.*
+*Task routing guide v1 · updated glossary 2026-07-24.*

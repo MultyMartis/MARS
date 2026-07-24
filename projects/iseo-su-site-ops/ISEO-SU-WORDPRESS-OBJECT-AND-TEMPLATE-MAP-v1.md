@@ -38,6 +38,7 @@
 | CPT | Labels | public | has_archive | REST public | Template | Notes |
 |-----|--------|--------|-------------|-------------|----------|-------|
 | `offer` | Предложения | true | true | no (401 on type) | `single-offer.php` | Admin list ~20 rows; robots disallow `/offer/*` |
+| `glossary` | Глоссарий / Термины | true (gated) | `/glossary/` | publish list empty `[]` | `archive-glossary.php`, `single-glossary.php` | **241 drafts**; anonymous front **404** until `ISEO_GLOSSARY_PUBLIC_EXPOSURE`; Yoast sitemap excluded pre-launch |
 
 ## Taxonomies (route-relevant)
 
@@ -52,6 +53,8 @@
 | `page-tariffcalc.php` | Tariff calc shell |
 | `single.php` | Blog singles |
 | `single-offer.php` | Offer / KP singles |
+| `archive-glossary.php` | Glossary alphabetical archive |
+| `single-glossary.php` | Glossary term singles |
 | `page.php` | Default pages |
 | `archive.php` | Archives |
 | `header.php` / `footer.php` | WP chrome |
@@ -71,8 +74,9 @@
 | 1761 | Настройки калькулятора | Rates, tariffs, coefficients (`seo_rate`, `dev_rate`, `tariffs`, `k_*`, …) |
 | 1742 | Настройки каналов и тарифов | Channel stages and tariff packages |
 | 1382 | Предложения | Offer/KP fields (`site`, `region`, channels, tariff, discount, audit file, growth points, …) |
+| PHP local `group_iseo_glossary_term` | Глоссарий — метаданные термина | `glossary_synonyms`, `glossary_keywords`, `glossary_lsi_phrases`, `glossary_source_notes` |
 
-No `acf-json` directory found on disk. No `acf_add_options_page` in theme `functions.php` (calculator fields appear on tariff-calc page edit).
+No `acf-json` directory found on disk. Glossary fields registered in theme PHP (`inc/glossary-acf.php`). No `acf_add_options_page` in theme `functions.php` (calculator fields appear on tariff-calc page edit).
 
 ## Menus
 
@@ -81,11 +85,23 @@ No `acf-json` directory found on disk. No `acf_add_options_page` in theme `funct
 | Location | `menu-1` → Primary |
 | Menu name | Меню 1 |
 | Theme topbar | Also hardcodes many service URLs |
+| Glossary | **not** added to menus (pre-launch HOLD) |
 
 ## Homepage / blog settings summary
 
 Homepage is a **template-static-like WP page**. Blog hub is a **custom page template**, not the native posts page setting.
 
+## Glossary (2026-07-24)
+
+| Item | Detail |
+|------|--------|
+| CPT | `glossary` |
+| Drafts imported | 241 |
+| Published | 0 |
+| Public exposure constant | `ISEO_GLOSSARY_PUBLIC_EXPOSURE = false` |
+| Import tool | disabled after intake (`ISEO_GLOSSARY_IMPORT_ENABLED = false`) |
+| Source package | `projects/iseo-su-site-ops/wordpress/iseoblog-glossary/` |
+
 ---
 
-*WordPress object and template map v1 · 2026-07-24.*
+*WordPress object and template map v1 · updated glossary 2026-07-24.*

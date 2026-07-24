@@ -24,14 +24,15 @@
 
 | Field | Value |
 |-------|-------|
-| **Lifecycle** | **ARCHITECTURE KNOWLEDGE READY / PROJECT BRAIN PERSISTED** |
-| **Project status** | Ordinary site work ready after fresh Beget backup + concrete task; WPilot bridge/writes/REST still gated |
+| **Lifecycle** | **GLOSSARY FOUNDATION READY / TERMS IMPORTED AS DRAFTS** |
+| **Project status** | Glossary CPT/templates deployed; 241 draft terms; public exposure HOLD; WPilot bridge/writes/REST still gated |
 | **Architecture knowledge** | **COMPLETE** — knowledge base + route matrix + task routing guide |
+| **Glossary** | Foundation + draft intake complete — see glossary architecture model + REPORT |
 | **Current phase (WPilot)** | **PHASE 6D — BLOCKED** (bridge/smoke awaiting exact approval + backup lines) — **not required** for ordinary site content/file tasks |
 | **Accepted WPilot baseline** | **PHASE 6C — TOKEN CREATED / RC6 SAFE DEFAULTS** |
 | **Access files** | **LOCAL-ONLY FILLED / VALIDATED** (Git-ignored) |
 | **WPilot** | **ACTIVE** RC6; bridge **DISABLED**; writes **DISABLED**; token **LOCAL-ONLY**; REST **NOT RUN** |
-| **Next operator action (site work)** | Fresh Beget backup → concrete site task → use Task Routing Guide |
+| **Next operator action (site work)** | Review glossary drafts → authorize definition writing → publication gate later |
 | **Next operator action (WPilot 6D)** | Exact lines `APPROVE ISEO-SU WPILOT BRIDGE AND READ-ONLY SMOKE 6D` + `CONFIRM ISEO-SU FRESH BEGET BACKUP FOR WPILOT 6D` |
 
 Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **absent**. Architecture: **hybrid** — see knowledge base.
@@ -107,7 +108,9 @@ Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **ab
 
 ## Next authorized task
 
-**Ordinary site work:** operator provides concrete task after fresh Beget backup; MARS follows Task Routing Guide.
+**Glossary:** operator reviews draft intake; separate charter for definition writing and publication gate (`ISEO_GLOSSARY_PUBLIC_EXPOSURE`).
+
+**Ordinary site work:** additional concrete tasks after fresh Beget backup; MARS follows Task Routing Guide.
 
 **Optional parallel gate:** Phase 6D WPilot bridge + read-only smoke — only after both exact approval lines (does not block site-content tasks).
 
@@ -117,6 +120,9 @@ Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **ab
 
 | Artifact | Path |
 |----------|------|
+| Glossary architecture / content model | [ISEO-SU-GLOSSARY-ARCHITECTURE-AND-CONTENT-MODEL-v1.md](ISEO-SU-GLOSSARY-ARCHITECTURE-AND-CONTENT-MODEL-v1.md) |
+| Glossary intake register | [ISEO-SU-GLOSSARY-TERM-INTAKE-REGISTER-v1.md](ISEO-SU-GLOSSARY-TERM-INTAKE-REGISTER-v1.md) |
+| Glossary template component map | [ISEO-SU-GLOSSARY-TEMPLATE-COMPONENT-MAP-v1.md](ISEO-SU-GLOSSARY-TEMPLATE-COMPONENT-MAP-v1.md) |
 | Task routing guide | [ISEO-SU-TASK-ROUTING-GUIDE-v1.md](ISEO-SU-TASK-ROUTING-GUIDE-v1.md) |
 | Route ownership matrix | [ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md](ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md) |
 | Knowledge base | [ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md](ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md) |
@@ -138,10 +144,11 @@ Additional historical artifacts remain listed in the Artifact Register.
 
 | Report | Status |
 |--------|--------|
+| [Glossary architecture template and content intake](reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-ARCHITECTURE-TEMPLATE-AND-CONTENT-INTAKE.md) | **COMPLETE — GLOSSARY FOUNDATION READY / TERMS IMPORTED AS DRAFTS** |
 | [Architecture route knowledge capture](reports/REPORT-ISEO-SU-SITE-OPS-COMPLETE-PRODUCTION-ARCHITECTURE-ROUTE-KNOWLEDGE-CAPTURE.md) | **COMPLETE / ARCHITECTURE KNOWLEDGE READY** |
 | Phase 6D WPilot bridge smoke | BLOCKED / PRODUCTION UNCHANGED |
 | Phase 6C-P onboarding evidence persistence | COMPLETE |
 
 ---
 
-*ISEO-SU-SITE-OPS Operational Index · Architecture knowledge ready · 2026-07-24 · WPilot RC6 safe defaults · token local-only · bridge/writes disabled.*
+*ISEO-SU-SITE-OPS Operational Index · Glossary foundation ready (drafts) · 2026-07-24 · WPilot RC6 safe defaults · token local-only · bridge/writes disabled.*

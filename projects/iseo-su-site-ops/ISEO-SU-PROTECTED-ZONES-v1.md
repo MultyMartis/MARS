@@ -31,6 +31,7 @@ No secrets stored here.
 | Shared CSS | `css/main.css`, `css/media.css` | sitewide marketing look |
 | SEO calculator / tariffs | `/tariff-calc`, ACF calculator groups, `tarif-calc.php`, handlers | revenue tool |
 | Web-KP / offers | `/offers`, CPT `offer`, `single-offer.php`, ACF «Предложения» | private commercial proposals |
+| Glossary (pre-launch) | CPT `glossary`, `/glossary/`, glossary templates/includes, draft terms | do not publish empties; do not open exposure gate without charter; no new CSS |
 | Global header/footer | static HTML chrome + theme topbar/footer parts | dual-channel breakage |
 | Homepage template | `page-home.php` (+ parallel `home.html`) | primary acquisition surface |
 | Analytics / verification | `google*.html`, `yandex_*.html`, injected scripts | SEO/property proof |
@@ -66,10 +67,11 @@ Even with WPilot active (RC6 safe defaults + local token):
 | Theme templates | **FORBIDDEN** |
 | ACF field data | **FORBIDDEN** (not WPilot MVP) |
 | CPT `offer` / KP | **FORBIDDEN** until charter |
+| Glossary publish / exposure gate / menu link | **FORBIDDEN** until separate publication charter |
 | Forms / mail | **FORBIDDEN** |
 | `.htaccess` / `wp-config.php` | **FORBIDDEN** |
 | Bridge / writes / REST | **FORBIDDEN** until GATE 6D+ |
 
 ---
 
-*Protected zones v1 · updated architecture capture 2026-07-24.*
+*Protected zones v1 · updated glossary foundation 2026-07-24.*
