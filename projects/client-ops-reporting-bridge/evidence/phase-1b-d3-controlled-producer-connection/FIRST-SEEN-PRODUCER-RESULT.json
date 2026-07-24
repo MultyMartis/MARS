@@ -1,0 +1,90 @@
+{
+  "label": "FIRST_SEEN",
+  "event_id": "3c66aedb-e1ea-55dc-aa56-32fa3810dcab",
+  "producer_status": 0,
+  "result": {
+    "producer_run_id": "783e1d95-7d87-447c-8b6a-4cc824a725ed",
+    "event_id": "3c66aedb-e1ea-55dc-aa56-32fa3810dcab",
+    "site_id": "SITE-002",
+    "status": "OK",
+    "observed_at": "2026-07-25T03:05:00Z",
+    "transport_mode": "http",
+    "dispatch_attempted": true,
+    "simulated_dispatch": false,
+    "http_status": 202,
+    "business_result": "INTAKE_ACCEPTED",
+    "dedupe_result": "FIRST_SEEN",
+    "retry_decision": "TERMINAL_SUCCESS",
+    "retry_count": 0,
+    "failure_category": "HTTP_202_INTAKE_ACCEPTED",
+    "intake_accepted": true,
+    "telegram_delivery_known": false,
+    "telegram_message_id": null,
+    "n8n_execution_id": null,
+    "elapsed_ms": 845,
+    "final_state": "INTAKE_ACCEPTED",
+    "redaction_status": "redacted",
+    "network_calls": 1,
+    "automatic_retry": false,
+    "endpoint_identity": {
+      "host_class": "n8n-client-ops",
+      "route_configured": true,
+      "scheme": "https",
+      "host_approved": true,
+      "host_len": 19,
+      "path_prefix_ok": true,
+      "route_class_ok": true,
+      "port": null,
+      "query_present": false,
+      "fragment_present": false,
+      "userinfo_present": false
+    },
+    "request_sanitized": {
+      "method": "POST",
+      "host_class": "n8n-client-ops",
+      "route_configured": true,
+      "content_type": "application/json",
+      "auth_header_name": "X-MARS-Client-Ops-Token",
+      "auth_header_present": true,
+      "headers_redacted": {
+        "Content-Type": "application/json",
+        "X-MARS-Client-Ops-Token": "<redacted>"
+      },
+      "body_event_id": "3c66aedb-e1ea-55dc-aa56-32fa3810dcab",
+      "body_schema_name": "mars.client_ops.report",
+      "connect_timeout_ms": 5000,
+      "request_timeout_ms": 30000
+    },
+    "extra": {
+      "retry_plan": {
+        "event_id": "3c66aedb-e1ea-55dc-aa56-32fa3810dcab",
+        "same_event_id": true,
+        "envelope_event_id": "3c66aedb-e1ea-55dc-aa56-32fa3810dcab",
+        "retry_count_next": 0,
+        "automatic_retry": false,
+        "retry_decision": "TERMINAL_SUCCESS",
+        "requires_manual_dedupe_check": false,
+        "dispatch_triggered": false
+      },
+      "transport_response": {
+        "ok": true,
+        "http_status": 202,
+        "error_class": null,
+        "simulated": false,
+        "network_calls": 1,
+        "body_keys": [
+          "event_id",
+          "result"
+        ]
+      },
+      "real_network": true,
+      "mode": "first_seen",
+      "d3_marker": "mars-client-ops-producer-live-d3",
+      "auth_header_present": true,
+      "auth_header_value": "<redacted>"
+    },
+    "ok": true
+  },
+  "secrets_absent": true,
+  "full_webhook_url_absent": true
+}

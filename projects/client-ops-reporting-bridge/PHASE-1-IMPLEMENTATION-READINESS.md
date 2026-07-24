@@ -13,7 +13,8 @@
 **Phase 1B-D0 next-step / runtime connection charter:** COMPLETE (decision only) — see [PHASE-1B-D0-INACTIVE-SANDBOX-NEXT-STEP-DECISION-AND-RUNTIME-CONNECTION-CHARTER.md](PHASE-1B-D0-INACTIVE-SANDBOX-NEXT-STEP-DECISION-AND-RUNTIME-CONNECTION-CHARTER.md)
 **Phase 1B-D1 durable dedupe inactive sandbox:** COMPLETE — sequential proof; table `H6VYhwz7RXZCBMmu` retained; see [PHASE-1B-D1-DURABLE-DEDUPE-DESIGN-AND-INACTIVE-SANDBOX-IMPLEMENTATION.md](PHASE-1B-D1-DURABLE-DEDUPE-DESIGN-AND-INACTIVE-SANDBOX-IMPLEMENTATION.md)
 **Phase 1B-D2 sequential runtime producer (offline):** COMPLETE — see [PHASE-1B-D2-SEQUENTIAL-RUNTIME-PRODUCER-DESIGN-AND-OFFLINE-IMPLEMENTATION.md](PHASE-1B-D2-SEQUENTIAL-RUNTIME-PRODUCER-DESIGN-AND-OFFLINE-IMPLEMENTATION.md)
-**Phase 1B production activation:** NOT STARTED — readiness: `READY_FOR_SEQUENTIAL_RUNTIME_PRODUCER_OFFLINE_BASELINE_COMMIT`; next **Phase 1B-D2B commit**, then later **Phase 1B-D3 controlled connection** (not authorized in D2)
+**Phase 1B-D3 controlled sequential producer connection:** COMPLETE — synthetic FIRST_SEEN + exact replay; see [PHASE-1B-D3-CONTROLLED-SEQUENTIAL-PRODUCER-CONNECTION-AND-SYNTHETIC-LIVE-POST.md](PHASE-1B-D3-CONTROLLED-SEQUENTIAL-PRODUCER-CONNECTION-AND-SYNTHETIC-LIVE-POST.md)
+**Phase 1B production activation:** NOT STARTED — readiness: `READY_FOR_REAL_SOURCE_ADAPTER_AND_MANUAL_CONNECTION_CHARTER`; next **Phase 1B-D4** SITE-002 real-source adapter design / manual dry-run (not automatic monitor connection)
 
 ---
 

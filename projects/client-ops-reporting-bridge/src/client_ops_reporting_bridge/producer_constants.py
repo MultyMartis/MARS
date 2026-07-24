@@ -12,10 +12,45 @@ from typing import Final, Mapping
 # ---------------------------------------------------------------------------
 
 D2_PHASE_ID: Final[str] = "1B-D2"
+D3_PHASE_ID: Final[str] = "1B-D3"
 NETWORK_DISPATCH_NOT_AUTHORIZED_D2: Final[str] = (
     "NETWORK_DISPATCH_NOT_AUTHORIZED_D2"
 )
+NETWORK_DISPATCH_NOT_AUTHORIZED_D3: Final[str] = (
+    "NETWORK_DISPATCH_NOT_AUTHORIZED_D3"
+)
 D3_ACTIVATION_GATE: Final[str] = "PHASE_1B_D3_CONTROLLED_CONNECTION_CHARTER"
+
+# D3 confirmation phrases (exact match required for live HTTP)
+D3_ENABLE_PHRASE: Final[str] = (
+    "ENABLE CLIENT OPS CONTROLLED PRODUCER HTTP D3 BZPM"
+)
+D3_ACTIVATE_PHRASE: Final[str] = (
+    "ACTIVATE CLIENT OPS CONTROLLED PRODUCER TEST D3 BZPM"
+)
+D3_SEND_FIRST_PHRASE: Final[str] = (
+    "SEND ONE CLIENT OPS PRODUCER FIRST SEEN D3 BZPM"
+)
+D3_SEND_REPLAY_PHRASE: Final[str] = (
+    "SEND ONE CLIENT OPS PRODUCER EXACT REPLAY D3 BZPM"
+)
+D3_DEACTIVATE_PHRASE: Final[str] = (
+    "DEACTIVATE CLIENT OPS CONTROLLED PRODUCER TEST D3 BZPM"
+)
+D3_EMERGENCY_DEACTIVATE_PHRASE: Final[str] = (
+    "EMERGENCY DEACTIVATE CLIENT OPS PRODUCER D3 BZPM"
+)
+
+D3_PRODUCER_MARKER: Final[str] = "mars-client-ops-producer-live-d3"
+D3_MAX_REAL_REQUESTS: Final[int] = 2
+D3_ALLOWED_ENVIRONMENTS: Final[frozenset[str]] = frozenset(
+    {"sandbox", "sandbox_controlled"}
+)
+D3_APPROVED_HOST: Final[str] = "n8n.ai-metacode.com"
+D3_ROUTE_PREFIX: Final[str] = "/webhook/"
+D3_RUNS_REL: Final[str] = "runs/d3-controlled-live"
+D3_CHARTER_STATE_FILENAME: Final[str] = "charter-state.json"
+D3_ENVELOPE_FILENAME: Final[str] = "d3-synthetic-envelope.json"
 
 AUTH_HEADER_NAME: Final[str] = "X-MARS-Client-Ops-Token"
 CONTENT_TYPE_JSON: Final[str] = "application/json"

@@ -82,13 +82,17 @@ Telegram delivery sandbox apply is complete on the inactive Client Ops workflow 
 - Data Table workflow node `n8n-nodes-base.dataTable` typeVersion 1.1 works for get/insert.
 - `require('crypto')` is disallowed in this n8n Code sandbox (failed execution 3410) → fingerprint is canonical JSON equality.
 - Sequential proof: FIRST_SEEN → 202 + Telegram; EXACT_REPLAY → 200 DUPLICATE_SUPPRESSED no Telegram; EVENT_ID_CONFLICT → 409 no Telegram.
-- Final inactive state: nodes=17; executions=29; table `H6VYhwz7RXZCBMmu` retained; one synthetic proof row.
+- Final inactive state after D1: nodes=17; executions=29; table `H6VYhwz7RXZCBMmu` retained; one synthetic proof row (historical D1 snapshot).
 - Classification: `DEDUPE_SEQUENTIAL_SAFE_CONCURRENCY_UNPROVEN`; post-Telegram SENT ledger deferred.
+
+## Facts learned from Phase 1B-D3 (controlled producer live)
+
+- Gated real HTTPS transport proved FIRST_SEEN (execution 3414; Telegram message_id=6 once) and exact replay DUPLICATE_SUPPRESSED (execution 3415; Telegram 0).
+- Final inactive state: nodes=17; executions=31; Data Table rows=2; versionId unchanged; D3 charter consumed; generic live mode remains blocked.
 
 ## Still incomplete until later charters
 
-- Phase 1B-D2 Sequential Runtime Producer Design (offline)
-- Runtime producer live HTTP connection (D2 offline producer done; D3 controlled charter later)
+- Phase 1B-D4 SITE-002 real-source adapter design / manual dry-run
 - Scheduler connection (after manual E2E)
 - Concurrent atomicity / unique event_id enforcement
 - Post-Telegram durable SENT ledger

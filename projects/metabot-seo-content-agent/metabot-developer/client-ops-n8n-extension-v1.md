@@ -70,7 +70,7 @@ Validate: schema_name, schema major 1, site identity, event_type, normalized_sta
 
 First sandbox: `DEDUPE_DEFERRED_SANDBOX` / response may advertise `dedupe: "DEFERRED_SANDBOX"` and `DEDUPE_NOT_ENABLED_SANDBOX`.
 
-Phase 1B-D0 decision: durable dedupe is **mandatory before any runtime producer connection**. Preferred store on this install: n8n **Data Table**. Phase 1B-D1 proved **sequential** durable dedupe (FIRST_SEEN / DUPLICATE / EVENT_ID_CONFLICT). Classification remains `DEDUPE_SEQUENTIAL_SAFE_CONCURRENCY_UNPROVEN`. Post-Telegram SENT ledger deferred. Phase 1B-D2 added an **offline** sequential producer (mock/fixture/disabled transports; `push-webhook` blocked as `NETWORK_DISPATCH_NOT_AUTHORIZED_D2`). Do not claim live producer connection, concurrent-safe dedupe, or production-grade delivery ledger yet.
+Phase 1B-D0 decision: durable dedupe is **mandatory before any runtime producer connection**. Preferred store on this install: n8n **Data Table**. Phase 1B-D1 proved **sequential** durable dedupe (FIRST_SEEN / DUPLICATE / EVENT_ID_CONFLICT). Classification remains `DEDUPE_SEQUENTIAL_SAFE_CONCURRENCY_UNPROVEN`. Post-Telegram SENT ledger deferred. Phase 1B-D2 added an **offline** sequential producer (mock/fixture/disabled transports; `push-webhook` blocked as `NETWORK_DISPATCH_NOT_AUTHORIZED_D2`). Phase 1B-D3 proved **one controlled** sequential producer HTTPS path (synthetic FIRST_SEEN + exact replay DUPLICATE_SUPPRESSED) with temporary activation and final inactive workflow; generic live mode remains blocked; no SITE-002 runtime/scheduler connection. Do not claim concurrent-safe dedupe, unattended producer, or production activation.
 
 ## 8. Structured response
 
@@ -78,7 +78,7 @@ Deterministic JSON accept/reject contract (see Client Ops programmer extension d
 
 ## 9. Sandbox-first rule
 
-Generate local template → offline harness → inactive create → re-GET → Phase 1B-B1 auth binding → Phase 1B-B2 authenticated POST → Phase 1B-C Telegram bot/credential intake → Phase 1B-C0/C0R2 chat-target discovery → Phase 1B-C0S semantics → Phase 1B-C1 Telegram sandbox apply (done) → Phase 1B-C1B evidence baseline (done) → Phase 1B-D0 runtime connection charter (done) → Phase 1B-D1 durable dedupe (done) → Phase 1B-D1B evidence baseline commit → Phase 1B-D2 sequential runtime producer design (offline next) → only later controlled producer connection / production activation under separate charters.
+Generate local template → offline harness → inactive create → re-GET → Phase 1B-B1 auth binding → Phase 1B-B2 authenticated POST → Phase 1B-C Telegram bot/credential intake → Phase 1B-C0/C0R2 chat-target discovery → Phase 1B-C0S semantics → Phase 1B-C1 Telegram sandbox apply (done) → Phase 1B-C1B evidence baseline (done) → Phase 1B-D0 runtime connection charter (done) → Phase 1B-D1 durable dedupe (done) → Phase 1B-D1B evidence baseline commit → Phase 1B-D2 sequential runtime producer offline (done) → Phase 1B-D3 controlled sequential producer connection + synthetic live POST (done) → Phase 1B-D3B evidence baseline commit (this wave) → Phase 1B-D4 real-source adapter design / manual dry-run (next) → only later production activation under separate charter.
 
 ## 10. Telegram sandbox apply (1B-C1)
 

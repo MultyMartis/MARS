@@ -113,4 +113,8 @@ node projects/client-ops-reporting-bridge/n8n/runners/run-client-ops-telegram-cr
 
 ## Next charter
 
-**Phase 1B-D2 — Sequential Runtime Producer Design and Offline Implementation** — COMPLETE offline (`READY_FOR_SEQUENTIAL_RUNTIME_PRODUCER_OFFLINE_BASELINE_COMMIT`); `push-webhook` returns `NETWORK_DISPATCH_NOT_AUTHORIZED_D2`. Do not call Client Ops webhook unless Phase 1B-D3 controlled connection is approved.
+**Phase 1B-D2 — Sequential Runtime Producer Design and Offline Implementation** — COMPLETE offline; `push-webhook` returns `NETWORK_DISPATCH_NOT_AUTHORIZED_D2`.
+
+**Phase 1B-D3 — Controlled Sequential Producer Connection** — COMPLETE; synthetic FIRST_SEEN + exact replay proven; D3 one-time charter CONSUMED; generic live mode remains BLOCKED. Do not reconnect SITE-002 monitor or enable scheduler without a later explicit charter.
+
+**Phase 1B-D4 — SITE-002 Real-Source Adapter Design and Manual Dry-Run Integration** — next (offline/read-only first; not authorized by D3B alone).

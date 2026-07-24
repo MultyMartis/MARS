@@ -1,0 +1,35 @@
+{
+  "readiness": "READY_FOR_CONTROLLED_PRODUCER_CONNECTION_BASELINE_COMMIT",
+  "verdict": "COMPLETE — CONTROLLED PRODUCER LIVE CONNECTION PROVEN; FIRST_SEEN DELIVERED ONCE AND REPLAY SUPPRESSED",
+  "mutations": {
+    "activation_changes": 2,
+    "producer_http_requests": 2,
+    "webhook_calls": 2,
+    "executions_added": 2,
+    "table_rows_created_through_workflow": 1,
+    "telegram_attempted": 1,
+    "telegram_delivered": 1
+  },
+  "first_seen": {
+    "unambiguous": true,
+    "execution_id": "3414",
+    "producer_final_state": "INTAKE_ACCEPTED",
+    "table_ok": true
+  },
+  "replay": {
+    "executed": true,
+    "execution_id": "3415",
+    "producer_final_state": "DUPLICATE_SUPPRESSED"
+  },
+  "replay_skipped": null,
+  "containment": {
+    "deactivate_attempted": true,
+    "emergency_attempted": false,
+    "final_active": false,
+    "final_running": 0,
+    "final_executions": 31,
+    "ok": true
+  },
+  "error": null,
+  "event_id": "3c66aedb-e1ea-55dc-aa56-32fa3810dcab"
+}

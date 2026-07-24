@@ -115,6 +115,23 @@ function main() {
     pass('no_live_http_in_transport');
   } else fail('no_live_http_in_transport');
 
+  // D3 may add producer_http.py; generic producer modules must still not dial.
+  for (const file of walk(SRC).filter((f) => f.endsWith('.py') && f.includes('producer'))) {
+    const norm = file.replace(/\\/g, '/');
+    if (norm.endsWith('producer_http.py') || norm.endsWith('producer_d3.py')) {
+      continue; // D3-gated modules validated by D3 validator
+    }
+    const text = readFileSync(file, 'utf8');
+    for (const re of FORBIDDEN_NETWORK_ENABLE) {
+      if (re.test(text) && !/raise NetworkDispatchNotAuthorized/.test(text)) {
+        if (/urlopen|requests\.|httpx\./.test(text) && /def dispatch/.test(text)) {
+          fail('network_static_scan', file);
+        }
+      }
+    }
+  }
+  pass('network_static_scan_producer');
+
   const guard = readFileSync(resolve(SRC, 'producer_dispatch_guard.py'), 'utf8');
   if (/concurrency/.test(guard) && /SequentialDispatchError/.test(guard)) {
     pass('sequential_guard');
@@ -155,20 +172,6 @@ function main() {
   } else fail('push_webhook_blocked');
   if (!/Schedule|scheduler\.|crontab/.test(cli)) pass('no_scheduler_in_cli');
   else fail('no_scheduler_in_cli');
-
-  // Scan producer modules for forbidden network enable defaults
-  for (const file of walk(SRC).filter((f) => f.endsWith('.py') && f.includes('producer'))) {
-    const text = readFileSync(file, 'utf8');
-    for (const re of FORBIDDEN_NETWORK_ENABLE) {
-      if (re.test(text) && !/raise NetworkDispatchNotAuthorized/.test(text)) {
-        // urlopen in comments/tests of other modules ok; producer modules must not call
-        if (/urlopen|requests\.|httpx\./.test(text) && /def dispatch/.test(text)) {
-          fail('network_static_scan', file);
-        }
-      }
-    }
-  }
-  pass('network_static_scan_producer');
 
   // Secret leakage scan on pack + phase doc
   const scanRoots = [PACK, PHASE, resolve(PROJECT, 'producer.local.json.example')].filter(

@@ -1,13 +1,14 @@
-"""Offline CLI for Phase 1A exporter core + Phase 1B-D2 producer.
+"""Offline CLI for Phase 1A exporter core + Phase 1B-D2/D3 producer.
 
 Modes:
   validate-only         — normalize; print sanitized result; no envelope write
   build-envelope        — write distributable envelope to an approved local path
   producer-dry-run      — offline producer with mock/fixture/disabled transport
   producer-fixture-test — run a named mock classification once
-  push-webhook          — ALWAYS blocked in D2 (NETWORK_DISPATCH_NOT_AUTHORIZED_D2)
+  push-webhook          — ALWAYS blocked (use producer-d3-controlled-live)
+  producer-d3-controlled-live — D3-gated real HTTPS (exact phrases + --apply)
 
-No real network, Storage publication, n8n, Telegram, or production access.
+Ordinary dry-run never reaches network. Import causes no network.
 """
 
 from __future__ import annotations
@@ -38,14 +39,20 @@ from .producer_config import (
     offline_default_profile,
 )
 from .producer_constants import (
+    D3_ENABLE_PHRASE,
+    D3_SEND_FIRST_PHRASE,
+    D3_SEND_REPLAY_PHRASE,
     EXIT_CONCURRENCY_REJECTED,
     EXIT_CONFIG_INVALID,
     EXIT_NETWORK_NOT_AUTHORIZED,
     MOCK_FIXTURE_NAMES,
     NETWORK_DISPATCH_NOT_AUTHORIZED_D2,
+    NETWORK_DISPATCH_NOT_AUTHORIZED_D3,
     TRANSPORT_DISABLED,
     TRANSPORT_MOCK,
 )
+from .producer_d3 import run_producer_d3_controlled
+from .producer_d3_gates import build_authorization, default_d3_runs_dir
 from .producer_dispatch_guard import SequentialDispatchError
 from .producer_pipeline import run_producer_offline
 from .security_validator import redact_for_diagnostics
@@ -268,16 +275,151 @@ def cmd_producer_fixture_test(mock_response: str, fixture: Path) -> int:
 
 
 def cmd_push_webhook(*_args, **_kwargs) -> int:
-    """Future live POST — blocked throughout D2."""
+    """Generic live POST — remains blocked; use producer-d3-controlled-live."""
     _print_result(
         {
             "ok": False,
             "final_state": NETWORK_DISPATCH_NOT_AUTHORIZED_D2,
             "network_calls": 0,
-            "message": "push-webhook requires Phase 1B-D3 controlled connection charter",
+            "message": (
+                "push-webhook remains blocked; use producer-d3-controlled-live "
+                "with exact D3 confirmation phrases"
+            ),
         }
     )
     return EXIT_NETWORK_NOT_AUTHORIZED
+
+
+def cmd_producer_d3_controlled_live(
+    *,
+    fixture: Optional[Path],
+    mode: str,
+    apply: bool,
+    dry_run: bool,
+    confirm_enable: Optional[str],
+    confirm_send: Optional[str],
+    profile_path: Optional[Path],
+    evidence_dir: Optional[Path],
+    concurrency: int,
+    max_retries: int,
+) -> int:
+    """D3-gated controlled live producer POST (or dry-run readiness)."""
+    if concurrency != 1:
+        _print_result({"ok": False, "final_state": "CONCURRENCY_REJECTED", "network_calls": 0})
+        return EXIT_CONCURRENCY_REJECTED
+    if max_retries != 0:
+        _print_result(
+            {
+                "ok": False,
+                "final_state": NETWORK_DISPATCH_NOT_AUTHORIZED_D3,
+                "network_calls": 0,
+                "error": "max_retries must be 0",
+            }
+        )
+        return EXIT_NETWORK_NOT_AUTHORIZED
+
+    try:
+        profile = _load_profile_optional(profile_path)
+    except ProducerConfigError as exc:
+        _print_result(
+            {
+                "ok": False,
+                "final_state": "CONFIG_INVALID",
+                "error": redact_for_diagnostics(str(exc)),
+                "network_calls": 0,
+            }
+        )
+        return EXIT_CONFIG_INVALID
+
+    secrets_path = default_secrets_path(_REPO_ROOT)
+    secrets = load_producer_secrets(secrets_path)
+    profile_ok = bool(profile.webhook_base and profile.webhook_route)
+    auth = build_authorization(
+        enable_phrase=confirm_enable,
+        send_phrase=confirm_send,
+        mode=mode,
+        apply=apply,
+        dry_run=dry_run,
+        environment=profile.environment,
+        concurrency=concurrency,
+        max_retries=max_retries,
+        producer_marker_present=True,  # applied inside pipeline for live/dry
+        profile_present=profile_ok,
+        secret_present=secrets.auth_secret_present,
+    )
+
+    safe_evidence = assert_safe_output_path(evidence_dir) if evidence_dir else None
+    runs_dir = default_d3_runs_dir(_REPO_ROOT)
+
+    if dry_run:
+        # Prove readiness without network
+        ready = (
+            profile_ok
+            and secrets.auth_secret_present
+            and concurrency == 1
+            and max_retries == 0
+            and profile.environment in {"sandbox", "sandbox_controlled"}
+        )
+        _print_result(
+            {
+                "ok": ready,
+                "final_state": "D3_DRY_RUN_READY" if ready else "NOT_READY",
+                "network_calls": 0,
+                "dispatch_attempted": False,
+                "real_network": False,
+                "profile_present": profile_ok,
+                "secret_present": secrets.auth_secret_present,
+                "environment": profile.environment,
+                "concurrency": concurrency,
+                "max_retries": max_retries,
+                "mode": mode,
+                "enable_phrase_expected": D3_ENABLE_PHRASE,
+                "send_phrase_expected": (
+                    D3_SEND_FIRST_PHRASE if mode == "first_seen" else D3_SEND_REPLAY_PHRASE
+                ),
+            }
+        )
+        return EXIT_SUCCESS if ready else EXIT_CONFIG_INVALID
+
+    if not apply:
+        _print_result(
+            {
+                "ok": False,
+                "final_state": NETWORK_DISPATCH_NOT_AUTHORIZED_D3,
+                "network_calls": 0,
+                "error": "missing --apply",
+            }
+        )
+        return EXIT_NETWORK_NOT_AUTHORIZED
+
+    result = run_producer_d3_controlled(
+        authorization=auth,
+        profile=profile,
+        secrets=secrets,
+        fixture_dir=fixture,
+        mode=mode,
+        concurrency=concurrency,
+        evidence_dir=safe_evidence,
+        runs_dir=runs_dir,
+        repo_root=_REPO_ROOT,
+    )
+    payload = result.to_sanitized_dict()
+    payload["ok"] = result.final_state not in {
+        NETWORK_DISPATCH_NOT_AUTHORIZED_D2,
+        NETWORK_DISPATCH_NOT_AUTHORIZED_D3,
+        "CONCURRENCY_REJECTED",
+        "SOURCE_BLOCKED",
+        "CONFIG_INVALID",
+    }
+    _print_result(payload)
+    if result.final_state in {
+        NETWORK_DISPATCH_NOT_AUTHORIZED_D2,
+        NETWORK_DISPATCH_NOT_AUTHORIZED_D3,
+    }:
+        return EXIT_NETWORK_NOT_AUTHORIZED
+    if result.final_state == "CONCURRENCY_REJECTED":
+        return EXIT_CONCURRENCY_REJECTED
+    return EXIT_SUCCESS
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -358,12 +500,35 @@ def build_parser() -> argparse.ArgumentParser:
 
     p_push = sub.add_parser(
         "push-webhook",
-        help="BLOCKED in D2 — future controlled connection only",
+        help="BLOCKED — use producer-d3-controlled-live instead",
     )
     p_push.add_argument("--fixture", type=Path, default=None)
     p_push.add_argument("--live", action="store_true")
     p_push.add_argument("--apply", action="store_true")
     p_push.add_argument("--transport", default="http")
+
+    p_d3 = sub.add_parser(
+        "producer-d3-controlled-live",
+        help="D3-gated controlled live HTTPS producer POST (exact phrases required)",
+    )
+    p_d3.add_argument("--fixture", type=Path, default=None)
+    p_d3.add_argument(
+        "--mode",
+        choices=["first_seen", "exact_replay"],
+        default="first_seen",
+    )
+    p_d3.add_argument("--apply", action="store_true")
+    p_d3.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="validate readiness only; never open network",
+    )
+    p_d3.add_argument("--confirm-enable", type=str, default=None)
+    p_d3.add_argument("--confirm-send", type=str, default=None)
+    p_d3.add_argument("--profile", type=Path, default=None)
+    p_d3.add_argument("--evidence-dir", type=Path, default=None)
+    p_d3.add_argument("--concurrency", type=int, default=1)
+    p_d3.add_argument("--max-retries", type=int, default=0)
 
     return parser
 
@@ -402,6 +567,26 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             return cmd_producer_fixture_test(args.mock_response, args.fixture)
         if args.command == "push-webhook":
             return cmd_push_webhook()
+        if args.command == "producer-d3-controlled-live":
+            if (
+                not args.dry_run
+                and args.apply
+                and args.mode == "first_seen"
+                and args.fixture is None
+            ):
+                raise UsageError("--fixture required for FIRST_SEEN live apply")
+            return cmd_producer_d3_controlled_live(
+                fixture=args.fixture,
+                mode=args.mode,
+                apply=args.apply,
+                dry_run=args.dry_run,
+                confirm_enable=args.confirm_enable,
+                confirm_send=args.confirm_send,
+                profile_path=args.profile,
+                evidence_dir=args.evidence_dir,
+                concurrency=args.concurrency,
+                max_retries=args.max_retries,
+            )
         raise UsageError(f"unknown command: {args.command}")
     except UsageError as exc:
         sys.stderr.write(f"usage error: {exc}\n")

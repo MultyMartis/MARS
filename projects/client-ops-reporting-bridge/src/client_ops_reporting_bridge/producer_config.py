@@ -120,7 +120,7 @@ def parse_producer_profile(
     env = str(
         raw.get("environment") or raw.get("CLIENT_OPS_ENVIRONMENT") or DEFAULT_ENVIRONMENT
     ).strip()
-    if env not in {"sandbox", "staging", "production"}:
+    if env not in {"sandbox", "sandbox_controlled", "staging", "production"}:
         raise ProducerConfigError("invalid environment")
 
     site_id = str(raw.get("site_id") or raw.get("CLIENT_OPS_SITE_ID") or "SITE-002").strip()
