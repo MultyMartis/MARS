@@ -1,7 +1,7 @@
 # ISEO-SU SITE OPS — Operational Index
 
-**Lane:** A — Existing Site Operations / Integration  
-**Classification:** documentation-first programme locus  
+**Lane:** A — Existing Site Operations / Integration
+**Classification:** documentation-first programme locus
 **Domain root:** [README.md](README.md)
 
 ---
@@ -27,7 +27,7 @@
 | **Lifecycle** | **GLOSSARY FOUNDATION READY / TERMS IMPORTED AS DRAFTS** |
 | **Project status** | Glossary CPT/templates deployed; 241 draft terms; public exposure HOLD; WPilot bridge/writes/REST still gated |
 | **Architecture knowledge** | **COMPLETE** — knowledge base + route matrix + task routing guide |
-| **Glossary** | Foundation + draft intake complete — see glossary architecture model + REPORT |
+| **Glossary** | Foundation + draft intake complete; Nikita source workbook canonicalized (immutable v1) — see source register + REPORT |
 | **Current phase (WPilot)** | **PHASE 6D — BLOCKED** (bridge/smoke awaiting exact approval + backup lines) — **not required** for ordinary site content/file tasks |
 | **Accepted WPilot baseline** | **PHASE 6C — TOKEN CREATED / RC6 SAFE DEFAULTS** |
 | **Access files** | **LOCAL-ONLY FILLED / VALIDATED** (Git-ignored) |
@@ -41,11 +41,11 @@ Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **ab
 
 ## Knowledge authority order (site tasks)
 
-1. Task-specific accepted production evidence  
-2. [ISEO-SU-TASK-ROUTING-GUIDE-v1.md](ISEO-SU-TASK-ROUTING-GUIDE-v1.md)  
-3. [ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md](ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md)  
-4. [ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md](ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md)  
-5. Component maps (page/source, WP objects, static PHP, forms/web-KP, global components)  
+1. Task-specific accepted production evidence
+2. [ISEO-SU-TASK-ROUTING-GUIDE-v1.md](ISEO-SU-TASK-ROUTING-GUIDE-v1.md)
+3. [ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md](ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md)
+4. [ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md](ISEO-SU-PRODUCTION-ARCHITECTURE-KNOWLEDGE-BASE-v1.md)
+5. Component maps (page/source, WP objects, static PHP, forms/web-KP, global components)
 6. Historical intake / Phase 0–6C-P reports (immutable)
 
 ---
@@ -122,6 +122,9 @@ Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **ab
 |----------|------|
 | Glossary architecture / content model | [ISEO-SU-GLOSSARY-ARCHITECTURE-AND-CONTENT-MODEL-v1.md](ISEO-SU-GLOSSARY-ARCHITECTURE-AND-CONTENT-MODEL-v1.md) |
 | Glossary intake register | [ISEO-SU-GLOSSARY-TERM-INTAKE-REGISTER-v1.md](ISEO-SU-GLOSSARY-TERM-INTAKE-REGISTER-v1.md) |
+| Glossary source material register | [ISEO-SU-GLOSSARY-SOURCE-MATERIAL-REGISTER-v1.md](ISEO-SU-GLOSSARY-SOURCE-MATERIAL-REGISTER-v1.md) |
+| Glossary canonical source (Nikita v1) | [materials/glossary/ISEO-SU-GLOSSARY-SOURCE-NIKITA-v1.xlsx](materials/glossary/ISEO-SU-GLOSSARY-SOURCE-NIKITA-v1.xlsx) · SHA-256 `f7651cffc5d03c497062ac6ee5b6288d9397ae5abede43fbd19f1a3ea26699de` |
+| Glossary materials README | [materials/glossary/README.md](materials/glossary/README.md) |
 | Glossary template component map | [ISEO-SU-GLOSSARY-TEMPLATE-COMPONENT-MAP-v1.md](ISEO-SU-GLOSSARY-TEMPLATE-COMPONENT-MAP-v1.md) |
 | Task routing guide | [ISEO-SU-TASK-ROUTING-GUIDE-v1.md](ISEO-SU-TASK-ROUTING-GUIDE-v1.md) |
 | Route ownership matrix | [ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md](ISEO-SU-CANONICAL-ROUTE-OWNERSHIP-MATRIX-v1.md) |
@@ -144,6 +147,7 @@ Additional historical artifacts remain listed in the Artifact Register.
 
 | Report | Status |
 |--------|--------|
+| [Glossary source material canonicalization](reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-SOURCE-MATERIAL-CANONICALIZATION.md) | **COMPLETE — GLOSSARY SOURCE MATERIAL CANONICALIZED / PROJECT BRAIN PERSISTED** |
 | [Glossary architecture template and content intake](reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-ARCHITECTURE-TEMPLATE-AND-CONTENT-INTAKE.md) | **COMPLETE — GLOSSARY FOUNDATION READY / TERMS IMPORTED AS DRAFTS** |
 | [Architecture route knowledge capture](reports/REPORT-ISEO-SU-SITE-OPS-COMPLETE-PRODUCTION-ARCHITECTURE-ROUTE-KNOWLEDGE-CAPTURE.md) | **COMPLETE / ARCHITECTURE KNOWLEDGE READY** |
 | Phase 6D WPilot bridge smoke | BLOCKED / PRODUCTION UNCHANGED |

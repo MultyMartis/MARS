@@ -1,9 +1,9 @@
 # ISEO-SU GLOSSARY ARCHITECTURE AND CONTENT MODEL v1
 
-**Programme:** ISEO-SU-SITE-OPS  
-**Task:** ISEO-SU-SITE-OPS-GLOSSARY-ARCHITECTURE-TEMPLATE-AND-CONTENT-INTAKE  
-**Site:** https://i-seo.su/  
-**Date:** 2026-07-24  
+**Programme:** ISEO-SU-SITE-OPS
+**Task:** ISEO-SU-SITE-OPS-GLOSSARY-ARCHITECTURE-TEMPLATE-AND-CONTENT-INTAKE
+**Site:** https://i-seo.su/
+**Date:** 2026-07-24
 
 ---
 
@@ -35,11 +35,18 @@ Professional SEO / digital-marketing glossary managed in WordPress, alphabetical
 
 | Field | Value |
 |-------|-------|
-| Operator file | `ГЛОССАРИЙ РАБОЧИЙ САЙТ.xlsx` (Desktop) |
-| Project copy | `projects/iseo-su-site-ops/data/glossary-intake/glossary-rabochiy-sait.xlsx` (local working copy; not required in Git) |
-| Sanitized inventory | `data/glossary-intake/glossary-terms-inventory-v1.json` + `.csv` |
+| Original filename | `ГЛОССАРИЙ РАБОЧИЙ САЙТ.xlsx` (provider: Никита) |
+| Canonical immutable source | `materials/glossary/ISEO-SU-GLOSSARY-SOURCE-NIKITA-v1.xlsx` |
+| Classification | **SOURCE / IMMUTABLE / NIKITA v1** |
+| SHA-256 | `f7651cffc5d03c497062ac6ee5b6288d9397ae5abede43fbd19f1a3ea26699de` |
+| Byte size | `23820` |
+| Source register | `ISEO-SU-GLOSSARY-SOURCE-MATERIAL-REGISTER-v1.md` |
+| Provenance README | `materials/glossary/README.md` |
+| Working copy (non-canonical) | `data/glossary-intake/glossary-rabochiy-sait.xlsx` |
+| Sanitized inventory | `data/glossary-intake/glossary-terms-inventory-v1.json` + `.csv` (derived; parent hash above) |
 | Sheet | `Лист1` |
 | Columns | Термин · Ключевые слова · LSI-фразы · Синонимы |
+| Versioning | never overwrite v1; future revisions → v2, v3, … |
 
 ---
 
@@ -97,9 +104,9 @@ PHP-registered local field group `group_iseo_glossary_term` (theme has no `acf-j
 
 Native WP:
 
-- title = term  
-- content = full definition (empty for now)  
-- excerpt = short definition (empty for now)  
+- title = term
+- content = full definition (empty for now)
+- excerpt = short definition (empty for now)
 
 Letter group is **derived** from title (not stored).
 
@@ -121,13 +128,13 @@ Publication gate constant: `ISEO_GLOSSARY_PUBLIC_EXPOSURE` (default **false**).
 
 Implemented with existing classes only:
 
-1. H1 «Глоссарий» in `page_scene`  
-2. Intro in `content_block`  
-3. Alphabet nav via `blog_filter` / `blog_filter__btn` (only non-empty letters)  
-4. Groups as `content_block` + `h2` + `ul`/`li` links  
-5. Optional GET search `glossary_q` (server-side filter; no JS required)  
-6. Empty / no-results copy inside `content_block`  
-7. Single page for ~241 terms (`posts_per_page = -1`)  
+1. H1 «Глоссарий» in `page_scene`
+2. Intro in `content_block`
+3. Alphabet nav via `blog_filter` / `blog_filter__btn` (only non-empty letters)
+4. Groups as `content_block` + `h2` + `ul`/`li` links
+5. Optional GET search `glossary_q` (server-side filter; no JS required)
+6. Empty / no-results copy inside `content_block`
+7. Single page for ~241 terms (`posts_per_page = -1`)
 
 ---
 
@@ -135,12 +142,12 @@ Implemented with existing classes only:
 
 `page_scene` + breadcrumbs + `content_block` article:
 
-- H1 = term  
-- Excerpt (if any) near top  
-- Content definition  
-- Synonyms block when ACF filled  
-- Link back to archive  
-- No fake dates / authors / ratings / FAQ / invented schema  
+- H1 = term
+- Excerpt (if any) near top
+- Content definition
+- Synonyms block when ACF filled
+- Link back to archive
+- No fake dates / authors / ratings / FAQ / invented schema
 
 ---
 
@@ -195,12 +202,12 @@ Privacy-policy file was **not modified**.
 
 ## 15. Editorial Workflow
 
-1. Keep terms as drafts.  
-2. Write definition in editor + short excerpt.  
-3. Review synonyms if public.  
-4. Yoast title/description per term.  
-5. Operator opens publication gate (`ISEO_GLOSSARY_PUBLIC_EXPOSURE`).  
-6. Publish terms intentionally; add menu/sitemap only after content QA.  
+1. Keep terms as drafts.
+2. Write definition in editor + short excerpt.
+3. Review synonyms if public.
+4. Yoast title/description per term.
+5. Operator opens publication gate (`ISEO_GLOSSARY_PUBLIC_EXPOSURE`).
+6. Publish terms intentionally; add menu/sitemap only after content QA.
 
 ---
 
@@ -214,11 +221,11 @@ Highlights: 241 drafts; ACF visible; archive preview for editors; anonymous 404;
 
 ## 17. Rollback
 
-1. Restore `functions.php` from `.bak-glossary-*` or pre-deploy backup.  
-2. Remove `archive-glossary.php`, `single-glossary.php`, `inc/glossary-*.php`, `inc/data/glossary-terms-inventory-v1.json`.  
-3. Delete only `glossary` draft posts (Admin bulk or scoped DB op under charter).  
-4. Flush permalinks.  
-5. Verify `/`, privacy, blog, tariff-calc, offers.  
+1. Restore `functions.php` from `.bak-glossary-*` or pre-deploy backup.
+2. Remove `archive-glossary.php`, `single-glossary.php`, `inc/glossary-*.php`, `inc/data/glossary-terms-inventory-v1.json`.
+3. Delete only `glossary` draft posts (Admin bulk or scoped DB op under charter).
+4. Flush permalinks.
+5. Verify `/`, privacy, blog, tariff-calc, offers.
 
 Full Beget backup remains last resort (operator-confirmed pre-task).
 
@@ -250,11 +257,11 @@ Full Beget backup remains last resort (operator-confirmed pre-task).
 
 Do **not** publish until operator confirms:
 
-1. Definitions written for launch set (or explicit thin-page policy change — not recommended).  
-2. `ISEO_GLOSSARY_PUBLIC_EXPOSURE = true` deliberately set.  
-3. Sample published terms QA’d on desktop/mobile.  
-4. Menu / internal links / sitemap inclusion decided.  
-5. Fresh backup before mass publish.  
+1. Definitions written for launch set (or explicit thin-page policy change — not recommended).
+2. `ISEO_GLOSSARY_PUBLIC_EXPOSURE = true` deliberately set.
+3. Sample published terms QA’d on desktop/mobile.
+4. Menu / internal links / sitemap inclusion decided.
+5. Fresh backup before mass publish.
 
 ---
 

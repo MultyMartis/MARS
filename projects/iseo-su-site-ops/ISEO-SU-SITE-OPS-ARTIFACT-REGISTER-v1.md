@@ -1,6 +1,6 @@
 # ISEO-SU-SITE-OPS Artifact Register v1
 
-**Status:** ACCEPTED (Phase 1.5); **updated architecture knowledge capture** 2026-07-24  
+**Status:** ACCEPTED (Phase 1.5); **updated architecture knowledge capture** 2026-07-24
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`
 
 Status vocabulary: **COMPLETE** · **CREATED** · **PLANNED** · **CONDITIONAL** · **DEFERRED** · **NOT AUTHORIZED** · **OPEN**
@@ -30,6 +30,16 @@ Status vocabulary: **COMPLETE** · **CREATED** · **PLANNED** · **CONDITIONAL**
 | Theme source package | `wordpress/iseoblog-glossary/` | CREATED / deployed |
 | Sanitized intake inventory | `data/glossary-intake/glossary-terms-inventory-v1.json` (+ csv) | CREATED |
 | Glossary intake REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-ARCHITECTURE-TEMPLATE-AND-CONTENT-INTAKE.md` | COMPLETE |
+
+### Glossary source material (2026-07-24)
+
+| Artifact | Path | Status |
+|----------|------|--------|
+| Canonical Nikita workbook v1 (immutable) | `materials/glossary/ISEO-SU-GLOSSARY-SOURCE-NIKITA-v1.xlsx` | CREATED |
+| Source SHA-256 | `f7651cffc5d03c497062ac6ee5b6288d9397ae5abede43fbd19f1a3ea26699de` | RECORDED |
+| Materials provenance README | `materials/glossary/README.md` | CREATED |
+| Glossary source material register | `ISEO-SU-GLOSSARY-SOURCE-MATERIAL-REGISTER-v1.md` | CREATED |
+| Source material canonicalization REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-SOURCE-MATERIAL-CANONICALIZATION.md` | COMPLETE |
 
 ---
 
