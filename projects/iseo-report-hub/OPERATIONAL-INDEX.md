@@ -26,7 +26,7 @@
 |-------|-------|
 | **Status** | planned / product architecture |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | Report content architecture v0.1 complete; next: Static Demo v0.3 (project type selector + staged demo states) |
+| **Active stage** | Product Architecture Layer 02 complete (docs); static demo v0.4 accepted as raw baseline; SEO feedback deferred |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -76,6 +76,22 @@
 
 ---
 
+## Operator review — static demo v0.4 + Product Architecture Layer 02 (2026-07-24)
+
+| Decision | Status |
+|----------|--------|
+| Static demo v0.4 | **Accepted** as useful **raw** prototype / UX reference (specialist workspace + i-seo style direction) |
+| Demo polishing | **Not next** — some panels will later be removed/added; corrections → v0.5 backlog only |
+| SEO specialist feedback | **Deferred** — still premature; informal viewers did not produce meaningful notes |
+| Product Architecture Layer 02 | **Completed** (documentation) — modules, roles, data model, lifecycle, publishing/snapshots, implementation decision frame |
+| Demo workspace in Layer 02 task | **Unchanged** — no HTML/CSS/JS edits |
+| Implementation | **Not started** |
+| Next after Layer 02 review | Scoped **commit** of architecture docs; then choose **v0.5 demo corrections** **or** **MVP technical brief** |
+
+**Demo workspace:** `workspaces/website-factory-operations/iseo-report-hub-prototype/` — v0.4 exists (commit `66d651a2`); **not modified** in Product Architecture Layer 02 task.
+
+---
+
 ## Current approved decisions (summary)
 
 1. Report Hub — **операционная система отчётности**, не PDF-only tool.
@@ -118,6 +134,15 @@
 | 24 | [product/I-SEO-REPORT-HUB-DEMO-REPORT-STATES-v0.1.md](product/I-SEO-REPORT-HUB-DEMO-REPORT-STATES-v0.1.md) | Staged demo scenarios for v0.3 |
 | 25 | [reports/REPORT-iseo-report-hub-static-demo-v0.2-report-structure-injection-01.md](reports/REPORT-iseo-report-hub-static-demo-v0.2-report-structure-injection-01.md) | Static demo v0.2 build closeout |
 | 26 | [reports/REPORT-iseo-report-hub-report-content-architecture-01.md](reports/REPORT-iseo-report-hub-report-content-architecture-01.md) | Report content architecture closeout |
+| 27 | [reports/REPORT-iseo-report-hub-static-demo-v0.4-iseo-style-specialist-workspace-01.md](reports/REPORT-iseo-report-hub-static-demo-v0.4-iseo-style-specialist-workspace-01.md) | Static demo v0.4 closeout |
+| 28 | [product/I-SEO-REPORT-HUB-PRODUCT-ARCHITECTURE-LAYER-02-v0.1.md](product/I-SEO-REPORT-HUB-PRODUCT-ARCHITECTURE-LAYER-02-v0.1.md) | Product Architecture Layer 02 |
+| 29 | [product/I-SEO-REPORT-HUB-ROLE-AND-PERMISSION-MODEL-v0.1.md](product/I-SEO-REPORT-HUB-ROLE-AND-PERMISSION-MODEL-v0.1.md) | Roles and permissions |
+| 30 | [product/I-SEO-REPORT-HUB-DATA-MODEL-v0.1.md](product/I-SEO-REPORT-HUB-DATA-MODEL-v0.1.md) | Conceptual data model |
+| 31 | [product/I-SEO-REPORT-HUB-REPORT-LIFECYCLE-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-LIFECYCLE-v0.1.md) | Period/weekly/monthly/block lifecycle |
+| 32 | [product/I-SEO-REPORT-HUB-PUBLISHING-AND-SNAPSHOT-MODEL-v0.1.md](product/I-SEO-REPORT-HUB-PUBLISHING-AND-SNAPSHOT-MODEL-v0.1.md) | Publishing and snapshots |
+| 33 | [product/I-SEO-REPORT-HUB-IMPLEMENTATION-OPTIONS-DECISION-FRAME-v0.1.md](product/I-SEO-REPORT-HUB-IMPLEMENTATION-OPTIONS-DECISION-FRAME-v0.1.md) | WP / PHP+MySQL / hybrid decision frame |
+| 34 | [product/I-SEO-REPORT-HUB-V0.5-DEMO-CORRECTIONS-BACKLOG-v0.1.md](product/I-SEO-REPORT-HUB-V0.5-DEMO-CORRECTIONS-BACKLOG-v0.1.md) | Future demo v0.5 corrections backlog |
+| 35 | [reports/REPORT-iseo-report-hub-product-architecture-layer-02.md](reports/REPORT-iseo-report-hub-product-architecture-layer-02.md) | Layer 02 closeout report |
 
 ---
 
@@ -162,13 +187,16 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Static Demo v0.3** — project type selector + Report Content Architecture v0.1 + Block Matrix v0.1 + Demo Report States v0.1; **no platform implementation**
-2. **Operator review** of demo v0.3 lifecycle clarity, block content depth, and project-type differentiation
-3. **SEO specialist feedback** — only after operator approves v0.3; **not** on v0.1/v0.2 without content architecture
-4. **Platform decision gate** — after structure + feedback; see platform options v0.1
-5. Work dictionary extraction/sanitization (из Nikita materials; **exclude** credential sheet)
-6. MVP implementation charter (HITL) — platform TBD (Anton / i-SEO)
-7. Later: n8n/API/AI integration (events only; human approval gates)
+1. **Operator review** of Product Architecture Layer 02 docs
+2. **Scoped commit** of Layer 02 architecture documentation (operator-chartered; selective paths only)
+3. Then choose: **v0.5 demo corrections** (from backlog) **or** **MVP technical brief** (platform/hosting/auth/ownership)
+4. **SEO specialist feedback** — still **deferred** until operator opens feedback charter
+5. **Platform decision gate** — after Layer 02 + technical brief (+ feedback when ready); see platform options + implementation decision frame
+6. Work dictionary extraction/sanitization (из Nikita materials; **exclude** credential sheet)
+7. MVP implementation charter (HITL) — platform TBD (Anton / i-SEO)
+8. Later: n8n/API/AI integration (events only; human approval gates)
+
+**Historical note:** Static demos v0.1–v0.4 and report content architecture are complete as documentation/demo baselines; see operator review sections above.
 
 ---
 
