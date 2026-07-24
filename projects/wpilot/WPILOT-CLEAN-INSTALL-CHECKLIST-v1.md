@@ -78,9 +78,10 @@
   - Token: **not generated**
   - DEV/test confirmation: **not confirmed**
 - [ ] Подтвердить: admin UI отображает v0.3.0 runtime summary (если UX-01 package — Runtime Status / Proven Operations panels).
-- [ ] Включить DEV/test confirmation + bridge + write readiness (по operator policy).
+- [ ] Включить DEV/test confirmation + bridge + write readiness (по operator policy) **только если** REST/write операции авторизованы. Для production token-only onboarding (RC6+): токен может быть создан **без** DEV confirmation и **без** bridge; bridge/writes остаются выключенными до отдельного charter.
 - [ ] Сгенерировать token; скопировать plaintext **один раз**; сохранить только в approved local storage.
 - [ ] Обновить страницу — plaintext token **не** отображается повторно.
+- [ ] Подтвердить: после генерации токена `bridge_enabled` / `write_enabled` / `dev_confirmed` **не** изменились сами по себе (RC6).
 
 ---
 

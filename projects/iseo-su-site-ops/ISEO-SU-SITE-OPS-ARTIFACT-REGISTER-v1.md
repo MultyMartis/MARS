@@ -1,6 +1,6 @@
 # ISEO-SU-SITE-OPS Artifact Register v1
 
-**Status:** ACCEPTED (Phase 1.5); **updated Phase 4B** 2026-07-24  
+**Status:** ACCEPTED (Phase 1.5); **updated Phase 4C / RC6 remediation** 2026-07-24  
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`
 
 Status vocabulary: **COMPLETE** · **CREATED** · **PLANNED** · **CONDITIONAL** · **DEFERRED** · **NOT AUTHORIZED** · **OPEN**
@@ -53,16 +53,23 @@ Status vocabulary: **COMPLETE** · **CREATED** · **PLANNED** · **CONDITIONAL**
 | ISEO-SU-WPILOT-SOURCE-AND-ROUTE-AUDIT-v1 | `ISEO-SU-WPILOT-SOURCE-AND-ROUTE-AUDIT-v1.md` | CREATED | Phase 4B |
 | ISEO-SU-WPILOT-CAPABILITY-MATRIX-v1 | `ISEO-SU-WPILOT-CAPABILITY-MATRIX-v1.md` | CREATED | Phase 4B |
 | ISEO-SU-WPILOT-COMPATIBILITY-ASSESSMENT-v1 | `ISEO-SU-WPILOT-COMPATIBILITY-ASSESSMENT-v1.md` | CREATED | Phase 4B — CONDITIONAL GO |
-| ISEO-SU-WPILOT-INSTALLATION-AND-ROLLBACK-PLAN-v1 | `ISEO-SU-WPILOT-INSTALLATION-AND-ROLLBACK-PLAN-v1.md` | CREATED | Phase 4B plan only |
-| ISEO-SU-WPILOT-TOKEN-STORAGE-DECISION-v1 | `ISEO-SU-WPILOT-TOKEN-STORAGE-DECISION-v1.md` | CREATED | Path decided; token NOT CREATED |
+| ISEO-SU-WPILOT-INSTALLATION-AND-ROLLBACK-PLAN-v1 | `ISEO-SU-WPILOT-INSTALLATION-AND-ROLLBACK-PLAN-v1.md` | CREATED | Phase 4B plan; **GATE 6A + 6B executed** |
+| ISEO-SU-WPILOT-TOKEN-STORAGE-DECISION-v1 | `ISEO-SU-WPILOT-TOKEN-STORAGE-DECISION-v1.md` | CREATED | Path decided; token NOT CREATED; 6C blocked |
+| ISEO-SU-WPILOT-INSTALL-ONLY-EVIDENCE-v1 | `ISEO-SU-WPILOT-INSTALL-ONLY-EVIDENCE-v1.md` | CREATED | Phase 6A sanitized install evidence |
+| ISEO-SU-WPILOT-ACTIVATION-ONLY-EVIDENCE-v1 | `ISEO-SU-WPILOT-ACTIVATION-ONLY-EVIDENCE-v1.md` | CREATED | Phase 6B sanitized activation evidence |
+| ISEO-SU-WPILOT-TOKEN-CREATION-EVIDENCE-v1 | `ISEO-SU-WPILOT-TOKEN-CREATION-EVIDENCE-v1.md` | CREATED | Phase 6C blocked; 4C remediation pointer |
 | Phase 4B REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-PHASE-4B-WPILOT-PREINSTALL-PACKAGE-AND-COMPATIBILITY-GATE.md` | COMPLETE | CONDITIONAL GO |
 | Phase 4B-P REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-PHASE-4B-P-DOCUMENTATION-PERSISTENCE-CHECKPOINT.md` | COMPLETE | DOCUMENTATION PERSISTED |
+| Phase 4C REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-PHASE-4C-WPILOT-TOKEN-GATING-REMEDIATION.md` | COMPLETE | RC6 packaged; production unchanged |
+| Phase 6A REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-PHASE-6A-WPILOT-INSTALL-ONLY.md` | COMPLETE | WPILOT INSTALLED INACTIVE |
+| Phase 6B REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-PHASE-6B-WPILOT-ACTIVATION-ONLY.md` | COMPLETE | WPILOT ACTIVE SAFE DEFAULTS |
+| Phase 6C REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-PHASE-6C-WPILOT-TOKEN-CREATION-ONLY.md` | **BLOCKED** | NO TOKEN — bridge+DEV required on RC5 |
 
 Local-only (Git-ignored): `X:\AI MARS\local\sites\iseo-su-production\`.
 
-Scratch (local audit helpers; gitignored via `_phase2b-scratch/.gitignore`): not programme authority.
+Scratch (local audit helpers; gitignored via `_phase2b-scratch/.gitignore` / `_phase6a-scratch/.gitignore` / `_phase6b-scratch/.gitignore` / `_phase6c-scratch/.gitignore`): not programme authority.
 
-Phase status: **PHASE 4B — COMPLETE / PRE-INSTALL CONDITIONAL GO**; **PHASE 4B-P — DOCUMENTATION PERSISTED**.
+Phase status: **PHASE 6B — COMPLETE / WPILOT ACTIVE SAFE DEFAULTS**; **PHASE 6C — BLOCKED / NO TOKEN**; **PHASE 4C — REMEDIATION COMPLETE / RC6 PACKAGE READY** (not deployed); bridge / writes / REST smoke **NOT AUTHORIZED**.
 
 ---
 
@@ -79,8 +86,10 @@ Phase status: **PHASE 4B — COMPLETE / PRE-INSTALL CONDITIONAL GO**; **PHASE 4B
 | WPILOT-SOURCE-AND-ROUTE-AUDIT-v1 | Static routes/defaults | **CREATED** | 4B |
 | WPILOT-CAPABILITY-MATRIX-v1 | Capability classifications | **CREATED** | 4B |
 | WPILOT-COMPATIBILITY-ASSESSMENT-v1 | i-seo.su compatibility | **CREATED** | 4B |
-| WPILOT-INSTALLATION-AND-ROLLBACK-PLAN-v1 | Separated install gates | **CREATED** | 4B |
+| WPILOT-INSTALLATION-AND-ROLLBACK-PLAN-v1 | Separated install gates | **UPDATED** (GATE 6A + 6B complete) | 4B / 6A / 6B |
 | WPILOT-TOKEN-STORAGE-DECISION-v1 | Local token path decision | **CREATED** (file NOT CREATED) | 4B |
+| WPILOT-INSTALL-ONLY-EVIDENCE-v1 | Sanitized Phase 6A install evidence | **CREATED** | 6A |
+| WPILOT-ACTIVATION-ONLY-EVIDENCE-v1 | Sanitized Phase 6B activation evidence | **CREATED** | 6B |
 | WPILOT-PLUGIN-CONNECTION-PLAN-v1 | Preinstall / connection plan | SUPERSEDED IN PART by 4B install plan | 4B |
 | FTP-CONNECTION-PLAN-v1 | Static/file channel plan | PLANNED | 4A |
 | BACKUP-ROLLBACK-MODEL-v1 | Backup/rollback for hybrid ops | PLANNED | 3–4 |
@@ -98,4 +107,4 @@ Unchanged: no tokens/credentials in Git locus; no DB dumps; no Localhost mirror;
 
 ---
 
-*Artifact Register v1 · updated 2026-07-24 Phase 2B.*
+*Artifact Register v1 · updated 2026-07-24 Phase 4C / RC6.*

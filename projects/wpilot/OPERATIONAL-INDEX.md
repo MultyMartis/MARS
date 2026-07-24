@@ -14,12 +14,13 @@
 | **Lifecycle state** | **Reference Implementation** |
 | **Authority State** | `WPILOT-RC5-PROVEN-CONNECTION-RUNTIME-2026-06-19` |
 | **Commit** | `648632acbdd42703427fd76a0cb1fd8d88641dcc` |
-| **Release candidate** | `v0.3.0-RC5` |
+| **Release candidate (proven baseline)** | `v0.3.0-RC5` |
+| **Maintenance package (token-gating remediation)** | `v0.3.0-RC6` — [WPILOT-RELEASE-CANDIDATE-v0.3.0-RC6.md](WPILOT-RELEASE-CANDIDATE-v0.3.0-RC6.md) · [reports/REPORT-WPILOT-PRODUCTION-TOKEN-GATING-REMEDIATION.md](reports/REPORT-WPILOT-PRODUCTION-TOKEN-GATING-REMEDIATION.md) |
 | **Plugin version** | `0.3.0` (schema `0.2.0`) |
 | **Runtime maturity** | `proven_content_writes` + `proven_connection_runtime` |
 | **Environment** | DEV only — `https://dev.gktriumph.ru` + local FP-0002 `http://shpigovsky.test/` (**v0.3.0-rc5**; read-only bridge + **FW-07C-2B local write lifecycle PROVEN** 2026-07-02) |
 | **Token storage** | `X:\AI MARS\local\tokens\wpilot-dev-gktriumph.token` · `wpilot-local-shpigovsky.token` |
-| **Notes** | No token value in repo. Sprint 3 **HOLD**. Next phase: explicit HITL charter only. |
+| **Notes** | No token value in repo. Sprint 3 **HOLD**. RC6 packages production token-gating fix; **not** auto-deployed. Next phase: explicit HITL charter only. |
 
 ---
 
@@ -46,6 +47,7 @@
 | 4 | **Maintenance policy** | [WPILOT-MAINTENANCE-POLICY-v1.md](WPILOT-MAINTENANCE-POLICY-v1.md) |
 | 5 | **Program overview** | [README.md](README.md) |
 | 6 | **RC5 release candidate** | [WPILOT-RELEASE-CANDIDATE-v0.3.0-RC5.md](WPILOT-RELEASE-CANDIDATE-v0.3.0-RC5.md) |
+| 6b | **RC6 maintenance package (token gating)** | [WPILOT-RELEASE-CANDIDATE-v0.3.0-RC6.md](WPILOT-RELEASE-CANDIDATE-v0.3.0-RC6.md) |
 | 7 | **State freeze (RC5)** | [reports/wpilot-state-freeze-2026-06-19.md](reports/wpilot-state-freeze-2026-06-19.md) |
 | 8 | **Core freeze** | [WPILOT-STATE-FREEZE-2026-06-19-v1.md](WPILOT-STATE-FREEZE-2026-06-19-v1.md) |
 | 9 | **Proven capabilities** | [WPILOT-PROVEN-CAPABILITIES-v1.md](WPILOT-PROVEN-CAPABILITIES-v1.md) |
@@ -69,6 +71,7 @@
 | BUGFIX-02 | Connection metadata persistence | **Complete** |
 | RC5 | Connection proof on live DEV | **Complete** |
 | WPILOT-MILESTONE-002 | RC5 Finalization | **COMPLETE** |
+| RC6 | Production token-gating remediation (`can_manage_token`) | **PACKAGED** — source+tests+ZIP; production update chartered separately |
 
 **Partial:** TEST-01 clean ZIP install — not a blocker for RC5 live proof.
 

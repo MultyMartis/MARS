@@ -95,7 +95,8 @@ msgstr ""
 #: admin/class-wpilot-admin-page.php
 msgid ""
 "If this WordPress site is production or production-like, leave the bridge "
-"disabled and do not generate a token."
+"and writes disabled until a separate operational charter authorizes them. "
+"Token generation alone does not enable the bridge or writes."
 msgstr ""
 
 #: admin/class-wpilot-admin-page.php
@@ -126,9 +127,10 @@ msgstr ""
 
 #: admin/class-wpilot-admin-page.php
 msgid ""
-"Token generation is allowed only after DEV/test confirmation and bridge "
-"enablement. Rotating a token replaces the previous credential; plaintext is "
-"shown once."
+"Token generation requires an authorized administrator and a valid security "
+"nonce. It does not require DEV/test confirmation, bridge enablement, or "
+"write readiness. Generating a token does not enable the bridge or writes. "
+"Rotating a token replaces the previous credential; plaintext is shown once."
 msgstr ""
 
 #: admin/class-wpilot-admin-page.php
@@ -256,7 +258,9 @@ msgid "Bridge settings saved."
 msgstr ""
 
 #: admin/class-wpilot-admin-page.php
-msgid "Enable the bridge and confirm DEV/test use before generating a token."
+msgid ""
+"Token generation requires an authorized administrator and must not run while "
+"emergency disable is active."
 msgstr ""
 
 #: admin/class-wpilot-admin-page.php

@@ -1,9 +1,9 @@
 # ISEO-SU WPILOT INSTALLATION AND ROLLBACK PLAN v1
 
 **Programme:** ISEO-SU-SITE-OPS  
-**Task:** PHASE 4B  
+**Task:** PHASE 4B (plan) · PHASE 6A (GATE 6A executed) · **PHASE 6B (GATE 6B executed)**  
 **Date:** 2026-07-24  
-**Status:** PLAN ONLY — **no execution in Phase 4B**  
+**Status:** GATE 6A **COMPLETE** (installed) · GATE 6B **COMPLETE** — plugin **ACTIVE / SAFE DEFAULTS**; later gates remain plan-only  
 **Package:** `metacode-wpilot-v0.3.0-rc5.zip`  
 **SHA-256:** `43c71a561872a037f294a12d5194d0925e988392599f02c1eeb2d8b1c52e1577`
 
@@ -58,6 +58,7 @@
 | **PASS** | Operator-attested fresh full backup for this session |
 | **Rollback** | Hosting restore path known to operator |
 | **Stop** | Backup unavailable or stale relative to session |
+| **Phase 6A result** | **PASS** — operator string present in Phase 6A charter |
 
 ---
 
@@ -66,20 +67,21 @@
 | Field | Content |
 |-------|---------|
 | **Inputs** | 4B-1..4B-3 PASS; exact ZIP + SHA-256; SFTP or WP Admin upload charter |
-| **Operator approval string** | `AUTHORIZE ISEO-SU WPILOT INSTALL-ONLY 6A` |
+| **Operator approval string** | `AUTHORIZE ISEO-SU WPILOT INSTALL-ONLY 6A` (operationalized via task `ISEO-SU-SITE-OPS-PHASE-6A-WPILOT-INSTALL-ONLY`) |
 | **Actions** | Upload/install plugin files to `wp-content/plugins/metacode-wpilot/` only; verify single folder + main file; **do not activate** |
 | **Prohibited** | Activation; token; REST authenticated calls; write enable; theme/core changes |
 | **PASS** | One folder `metacode-wpilot/`; `metacode-wpilot.php` present; no ghost/stale duplicate; inactive |
 | **Rollback** | Delete/rename exact plugin folder via SFTP; confirm plugins list; frontend smoke |
 | **Stop** | Duplicate folders, wrong version, upload corruption, unexpected files |
+| **Phase 6A result** | **PASS / COMPLETE** — SFTP install; 27/27 files; inactive; evidence in `ISEO-SU-WPILOT-INSTALL-ONLY-EVIDENCE-v1.md` |
 
 ### After upload / before activation checklist
 
-- [ ] Exactly one `metacode-wpilot` plugin directory  
-- [ ] Main file present  
-- [ ] No `metacode-wpilot-v0.3.0` ghost folder  
-- [ ] Not activated  
-- [ ] Frontend baseline unchanged  
+- [x] Exactly one `metacode-wpilot` plugin directory  
+- [x] Main file present  
+- [x] No `metacode-wpilot-v0.3.0` ghost folder  
+- [x] Not activated  
+- [x] Frontend baseline unchanged  
 
 ---
 
@@ -88,12 +90,13 @@
 | Field | Content |
 |-------|---------|
 | **Inputs** | 6A PASS; Admin access (prefer browser HITL); backup still valid |
-| **Operator approval string** | `AUTHORIZE ISEO-SU WPILOT ACTIVATION-ONLY 6B` |
+| **Operator approval string** | `APPROVE ISEO-SU WPILOT ACTIVATION 6B` (+ session backup `CONFIRM ISEO-SU FRESH BEGET BACKUP FOR WPILOT 6B`) |
 | **Actions** | Activate plugin; confirm bridge off / write off / no token; confirm Admin menu; optional public ping only if chartered |
 | **Prohibited** | Token generate; bridge enable; write enable; dry-run/write REST; cache purge unless separate charter |
 | **PASS** | Active plugin; defaults safe; frontend OK; Admin reachable |
 | **Rollback** | Deactivate in Admin; else SFTP rename/delete plugin folder; DB restore only if tables/options damage proven |
 | **Stop** | Fatal error, Admin lockout, frontend breakage, unexpected bridge-on |
+| **Phase 6B result** | **PASS / COMPLETE** — active; bridge/writes off; token absent; evidence in `ISEO-SU-WPILOT-ACTIVATION-ONLY-EVIDENCE-v1.md` |
 
 ---
 
@@ -102,12 +105,31 @@
 | Field | Content |
 |-------|---------|
 | **Inputs** | 6B PASS; token storage decision; Admin HITL |
-| **Operator approval string** | `AUTHORIZE ISEO-SU WPILOT TOKEN-CREATION-ONLY 6C` |
+| **Operator approval string** | `APPROVE ISEO-SU WPILOT TOKEN CREATION 6C` (+ fresh Beget backup confirm for 6C) |
 | **Actions** | Generate token in Admin; store plaintext **only** in approved local token file; site metadata stores path/reference only |
-| **Prohibited** | Pasting token into chat/docs/REPORT/git; enabling write; authenticated smoke beyond later gate |
+| **Prohibited** | Pasting token into chat/docs/REPORT/git; enabling write; authenticated smoke beyond later gate; **original 6C also forbade bridge enable** |
 | **PASS** | Token hash present in WP; local file created by operator; reference recorded without secret |
 | **Rollback** | Revoke token in Admin; delete local token file if required |
 | **Stop** | Token exposure; storage path non-canonical |
+| **Phase 6C result** | **BLOCKED / NO TOKEN** — WPilot 0.3.0 refuses generate unless DEV confirmed + bridge enabled (`is_operationally_ready`). Live notice observed; bridge/writes left off. Evidence: `ISEO-SU-WPILOT-TOKEN-CREATION-EVIDENCE-v1.md` |
+| **Remediation** | **WPilot RC6 packaged** (`can_manage_token`) — see Phase 4C REPORT. Do **not** improvise temporary DEV+bridge under original 6C. Next: **GATE 6C-R** update-only, then 6C retry. |
+
+---
+
+## GATE 6C-R — WPILOT REMEDIATION UPDATE-ONLY (next)
+
+| Field | Content |
+|-------|---------|
+| **Inputs** | Phase 4C / RC6 package accepted; fresh Beget backup for update session |
+| **Package** | `metacode-wpilot-v0.3.0-rc6.zip` |
+| **SHA-256** | `4a0b929cee34e8c6188a10991b0c120bb1e8ffdd09674418a32d920c2aa16bf6` |
+| **Actions** | Update **only** the WPilot plugin package; verify version/release label / safe defaults |
+| **Prohibited** | Token creation; bridge enable; write enable; REST; unrelated plugin/theme/core changes |
+| **PASS** | RC6 installed/active; bridge/writes/`dev_confirmed` remain off; no token; no REST |
+| **Rollback** | Restore prior RC5 plugin folder/package from backup; deactivate if needed |
+| **Stop** | Hash mismatch; unexpected state change; any token/REST activity |
+
+After 6C-R acceptance: retry **GATE 6C TOKEN CREATION-ONLY** under RC6 semantics (token without bridge).
 
 ---
 
@@ -161,8 +183,10 @@
 3. Restore DB only if activation created incompatible damage  
 4. Validate frontend + Admin recovery  
 
-**Do not execute any rollback now.**
+GATE 6A rollback path remains ready but was **not** needed (install validated).  
+GATE 6B Admin deactivate / SFTP rename rollback paths remain ready; **not** needed (activation validated with safe defaults).  
+**Do not** execute GATE 6C+ without separate operator approval.
 
 ---
 
-*Installation and rollback plan v1 · 2026-07-24 · plan only.*
+*Installation and rollback plan v1 · updated Phase 4C / RC6 remediation 2026-07-24 · GATE 6B complete; 6C blocked; 6C-R next.*

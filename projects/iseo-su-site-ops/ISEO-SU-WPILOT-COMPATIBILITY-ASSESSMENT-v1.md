@@ -136,6 +136,7 @@ All activation/smoke risk is **production-direct**. Mitigations: fresh Beget bac
 | Risk | Level | Mitigation |
 |------|-------|------------|
 | Wrong ZIP (stale v0.3.0) | Medium | SHA-256 gate |
+| Wrong ZIP (RC5 vs RC6 mix-up after remediation) | Medium | Prefer RC6 SHA-256 `4a0b929cee34e8c6188a10991b0c120bb1e8ffdd09674418a32d920c2aa16bf6` for 6C-R; keep RC5 hash for rollback identity |
 | Activation creates tables/options | Medium | Pre-backup; post-check Admin/SFTP |
 | Public ping discloses bridge flags | Low | Expected; no secrets |
 | Operator enables write too early | High | Separated GATE 6E optional later |
@@ -172,7 +173,12 @@ Not NO-GO: package exact; defaults safe; no material static security blocker fou
 - Cache behavior after future content writes  
 - Web-KP exact URL/ownership  
 - Beget restore drill proof  
+- Live production behavior of RC6 until GATE 6C-R  
 
 ---
 
-*Compatibility assessment v1 · 2026-07-24.*
+## 15. Phase 4C / RC6 note (2026-07-24)
+
+Token-generation gate conflict observed in Phase 6C is remediated in WPilot **v0.3.0-RC6** (source + package). Compatibility CONDITIONAL GO for RC5 install remains historical. For update-only remediation use RC6 SHA-256 above; do not silently replace the accepted RC5 identity records.
+
+*Compatibility assessment v1 · 2026-07-24 · addendum Phase 4C / RC6.*

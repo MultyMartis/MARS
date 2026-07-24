@@ -13,6 +13,13 @@ class WPilot_Constants {
 	const VERSION        = '0.3.0';
 	const SCHEMA_VERSION = '0.2.0';
 
+	/**
+	 * Packaging / release-candidate label. Distinct from WordPress plugin Version.
+	 * RC6 = production token-gating remediation after RC5.
+	 */
+	const RELEASE_CANDIDATE = 'RC6';
+	const RELEASE_LABEL     = '0.3.0-RC6';
+
 	const RUNTIME_MATURITY = 'proven_content_writes';
 	const RUNTIME_STATUS   = 'ACTIVE';
 	const ENVIRONMENT      = 'DEV';

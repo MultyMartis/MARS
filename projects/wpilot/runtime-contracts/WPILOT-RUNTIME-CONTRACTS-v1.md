@@ -431,6 +431,16 @@ Minimal schema — aligns with [database-contract-v0.md](../plugin-mvp/database-
 
 `wpilot_enabled`, `wpilot_dev_confirmed`, `wpilot_write_enabled`, `wpilot_emergency_disabled`, `wpilot_token_hash`, `wpilot_schema_version`, retention hints — per v0 contract.
 
+### 7.2.1 Readiness split (RC6)
+
+| Readiness | Gate | Notes |
+|-----------|------|-------|
+| **Token creation** | `WPilot_Environment::can_manage_token()` + admin nonce | Does **not** require `dev_confirmed`, `bridge_enabled`, or `write_enabled` |
+| **REST operational** | `WPilot_Environment::operational_readiness()` + token auth | Requires bridge + DEV confirmation + not emergency |
+| **Write** | REST operational + `write_enabled` + endpoint mutation gates | Unchanged |
+
+`dev_confirmed` remains a literal DEV/test assertion for REST/write paths. It is **not** a production onboarding substitute. Token generation alone must not enable bridge or writes.
+
 ### 7.3 Relationships
 
 ```

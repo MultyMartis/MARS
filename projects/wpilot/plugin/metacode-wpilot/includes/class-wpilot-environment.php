@@ -75,7 +75,9 @@ class WPilot_Environment {
 	}
 
 	/**
-	 * Boolean readiness check for non-REST admin flows.
+	 * Boolean readiness check for non-REST admin flows that require a live bridge.
+	 *
+	 * Token generation must not use this gate. Use can_manage_token() instead.
 	 *
 	 * @param array|null $options Optional state snapshot.
 	 * @return bool
@@ -87,6 +89,35 @@ class WPilot_Environment {
 			&& ! self::emergency_disabled( $options )
 			&& self::bridge_enabled( $options )
 			&& self::dev_confirmed( $options );
+	}
+
+	/**
+	 * Admin readiness for token generate / rotate / revoke.
+	 *
+	 * Requires an authorized administrator and a non-emergency option state.
+	 * Does not require DEV/test confirmation, bridge enablement, or write readiness.
+	 *
+	 * Nonce validation remains the caller's responsibility (admin POST handler).
+	 *
+	 * @param array|null $options Optional state snapshot.
+	 * @return bool
+	 */
+	public static function can_manage_token( $options = null ) {
+		$options = self::options( $options );
+
+		if ( ! self::environment_valid( $options ) ) {
+			return false;
+		}
+
+		if ( self::emergency_disabled( $options ) ) {
+			return false;
+		}
+
+		if ( ! current_user_can( WPilot_Constants::CAPABILITY_MANAGE_OPTIONS ) ) {
+			return false;
+		}
+
+		return true;
 	}
 
 	/**

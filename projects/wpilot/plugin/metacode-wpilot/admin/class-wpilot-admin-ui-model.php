@@ -42,6 +42,8 @@ class WPilot_Admin_UI_Model {
 
 			'version'           => WPilot_Constants::VERSION,
 
+			'release_label'     => WPilot_Constants::RELEASE_LABEL,
+
 			'schema_version'    => WPilot_Constants::SCHEMA_VERSION,
 
 			'status'            => WPilot_Constants::RUNTIME_STATUS,

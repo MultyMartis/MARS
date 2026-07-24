@@ -101,19 +101,23 @@ class WPilot_Settings {
 	/**
 	 * Store a generated token hash and return the plaintext token once.
 	 *
-	 * @param array|null $options Optional state snapshot.
+	 * Persists only token-related fields so a stale full options snapshot cannot
+	 * overwrite unrelated connection metadata (BUGFIX-02 class regression).
+	 * Does not enable bridge, writes, or DEV/test confirmation.
+	 *
 	 * @return string
 	 */
 	public static function generate_token() {
-		$token   = WPilot_Constants::TOKEN_PREFIX . wp_generate_password( WPilot_Constants::TOKEN_LENGTH, false, false );
-		$options = self::get_options();
+		$token = WPilot_Constants::TOKEN_PREFIX . wp_generate_password( WPilot_Constants::TOKEN_LENGTH, false, false );
 
-		$options['token_hash']         = wp_hash_password( $token );
-		$options['token_created_at']   = current_time( 'mysql', true );
-		$options['token_revoked_at']   = '';
-		$options['last_token_used_at'] = '';
-
-		self::update_options( $options );
+		self::update_options(
+			array(
+				'token_hash'         => wp_hash_password( $token ),
+				'token_created_at'   => current_time( 'mysql', true ),
+				'token_revoked_at'   => '',
+				'last_token_used_at' => '',
+			)
+		);
 
 		return $token;
 	}
@@ -124,13 +128,13 @@ class WPilot_Settings {
 	 * @return void
 	 */
 	public static function revoke_token() {
-		$options = self::get_options();
-
-		$options['token_hash']       = '';
-		$options['token_created_at'] = '';
-		$options['token_revoked_at'] = current_time( 'mysql', true );
-
-		self::update_options( $options );
+		self::update_options(
+			array(
+				'token_hash'       => '',
+				'token_created_at' => '',
+				'token_revoked_at' => current_time( 'mysql', true ),
+			)
+		);
 	}
 
 	/**

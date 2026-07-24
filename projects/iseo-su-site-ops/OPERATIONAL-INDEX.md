@@ -24,27 +24,36 @@
 
 | Field | Value |
 |-------|-------|
-| **Lifecycle** | **PRE-WPILOT / PRE-INSTALL CONDITIONAL GO** |
-| **Project status** | Active documentation programme; production writes **NOT AUTHORIZED** |
-| **Current phase** | **PHASE 4B — COMPLETE / PRE-INSTALL CONDITIONAL GO** |
+| **Lifecycle** | **WPILOT ACTIVE / SAFE DEFAULTS** |
+| **Project status** | Active documentation + bounded production activation programme; token / bridge / writes **NOT AUTHORIZED** |
+| **Current phase** | **PHASE 6B — WPILOT ACTIVE / SAFE DEFAULTS** |
 | **Phase 2B status** | **COMPLETE / READ-ONLY PRODUCTION ARCHITECTURE CAPTURED** |
 | **Phase 4B status** | **COMPLETE / PRE-INSTALL CONDITIONAL GO** (static package + compatibility only) |
-| **Production connection** | Read-only SFTP + limited REST/public GET **executed** under 2B charter; default reuse **NOT AUTHORIZED** without new charter |
+| **Phase 6A status** | **COMPLETE / WPILOT INSTALLED INACTIVE** |
+| **Phase 6B status** | **COMPLETE / WPILOT ACTIVE SAFE DEFAULTS** |
+| **Production connection** | Phase 6B used WP Admin activation under activation-only charter |
 | **Access files** | **LOCAL-ONLY FILLED / VALIDATED** (Git-ignored) |
-| **WPilot** | **ABSENT on production** / package **ACCEPTED MATCH** RC5 / install **HOLD** until GATE 6A |
-| **FTP/SFTP** | **SFTP read-only used in 2B**; further use charter-gated |
+| **WPilot** | **ACTIVE** on production / package **0.3.0-RC5 / accepted hash** |
+| **Activation** | **DONE (6B)** |
+| **FTP/SFTP** | Used under Phase 6A; further use charter-gated |
 | **Local mirror** | **NOT DECIDED** |
 | **ATLAS** | **MINT DEFERRED** |
-| **Token creation** | **NOT AUTHORIZED** (path decided; file NOT CREATED) |
-| **REST smoke (WPilot)** | **NOT AUTHORIZED** |
+| **Token creation** | **BLOCKED on RC5 (6C)**; RC6 remediation **PACKAGED** (4C) — **NOT CREATED** on production |
+| **Bridge** | **DISABLED** |
+| **Writes** | **DISABLED** |
+| **REST smoke (WPilot)** | **NOT AUTHORIZED** / **NOT RUN** |
 | **Controlled write smoke** | **NOT AUTHORIZED** |
-| **Next operator action** | Review Phase 4B REPORT; approve 4B-1 / 4B-2 / 4B-3 before any install |
-| **Next gate** | **ISEO-SU-SITE-OPS — PHASE 6A WPILOT INSTALL-ONLY** (after CONDITIONAL GO conditions satisfied); else **PHASE 4C** remediation |
+| **Phase 6C status** | **BLOCKED / NO TOKEN** (live product gate conflict on RC5) |
+| **Phase 4C status** | **COMPLETE / RC6 PACKAGE READY** — production unchanged |
+| **Remediation package** | `metacode-wpilot-v0.3.0-rc6.zip` · SHA-256 `4a0b929cee34e8c6188a10991b0c120bb1e8ffdd09674418a32d920c2aa16bf6` |
+| **Next operator action** | Approve **PHASE 6C-R WPILOT REMEDIATION UPDATE-ONLY** (fresh Beget backup; update plugin only; keep bridge/writes off; no token; no REST) |
+| **Next gate** | **ISEO-SU-SITE-OPS — PHASE 6C-R WPILOT REMEDIATION UPDATE-ONLY** |
 
 Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **absent**. Architecture: **hybrid** (root WP + physical PHP-capable HTML + shared assets) — see boundary map.
 
-Canonical package: `X:\AI MARS STORAGE\wpilot\deploy-packages\metacode-wpilot-v0.3.0-rc5.zip`  
-SHA-256: `43c71a561872a037f294a12d5194d0925e988392599f02c1eeb2d8b1c52e1577`
+Installed production package (current): `X:\AI MARS STORAGE\wpilot\deploy-packages\metacode-wpilot-v0.3.0-rc5.zip`  
+SHA-256: `43c71a561872a037f294a12d5194d0925e988392599f02c1eeb2d8b1c52e1577`  
+Remediation package (not deployed): `…\metacode-wpilot-v0.3.0-rc6.zip` · `4a0b929cee34e8c6188a10991b0c120bb1e8ffdd09674418a32d920c2aa16bf6`
 
 ---
 
@@ -81,11 +90,11 @@ On conflict: **this locus wins** for i-seo.su hybrid site operations documentati
 |------|--------|
 | 1 | Read this OPERATIONAL-INDEX |
 | 2 | Confirm phase and HOLDs below |
-| 3 | Read charter + system boundaries + Phase 2B audit + Phase 4B WPilot gate |
+| 3 | Read charter + system boundaries + Phase 2B audit + Phase 4B WPilot gate + Phase 6B evidence |
 | 4 | Check Decision / SAFE UNKNOWN / protected zones |
 | 5 | For credentials: local-only files — never paste secrets into chat |
 | 6 | Execute only the **next authorized task** after operator acceptance |
-| 7 | Close with REPORT under `reports/` — no secrets, no production mutation |
+| 7 | Close with REPORT under `reports/` — no secrets, no unauthorized production mutation |
 
 ---
 
@@ -93,12 +102,13 @@ On conflict: **this locus wins** for i-seo.su hybrid site operations documentati
 
 | HOLD | Status |
 |------|--------|
-| Production **write** / upload / settings save | **HOLD** |
+| Production **write** outside exact activation/rollback charters | **HOLD** |
 | Beget / hosting **panel** login by agent | **HOLD** |
-| Unchartered SFTP reuse | **HOLD** (2B was one-time charter) |
+| Unchartered SFTP reuse | **HOLD** |
 | Unchartered WP Admin reuse | **HOLD** |
-| WPilot plugin installation on i-seo.su | **HOLD** (await GATE 6A) |
-| Token / profile creation for i-seo.su (WPilot token) | **HOLD** |
+| WPilot plugin **activation** | **DONE (6B)** — do not re-activate / re-configure without charter |
+| Token / profile creation for i-seo.su (WPilot token) | **HOLD** until after **6C-R**; 6C blocked on RC5; RC6 packaged |
+| Bridge enable / write enable | **HOLD** |
 | WPilot REST smoke | **HOLD** |
 | Controlled write smoke | **HOLD** |
 | Database / phpMyAdmin | **HOLD** |
@@ -110,21 +120,21 @@ On conflict: **this locus wins** for i-seo.su hybrid site operations documentati
 
 ## Next authorized task
 
-After operator acceptance of CONDITIONAL GO conditions (gates 4B-1, 4B-2, 4B-3):
+**ISEO-SU-SITE-OPS — PHASE 6C-R WPILOT REMEDIATION UPDATE-ONLY**
 
-**ISEO-SU-SITE-OPS — PHASE 6A WPILOT INSTALL-ONLY**
+Requires fresh Beget backup; update only WPilot to RC6; preserve bridge/writes/`dev_confirmed` off; create **no** token; run **no** REST.
 
-Do **not** combine with activation, token, or REST.
+After 6C-R acceptance: **PHASE 6C TOKEN CREATION-ONLY RETRY**.
 
-If conditions cannot be accepted: **PHASE 4C WPILOT PREINSTALL REMEDIATION**.
+See [reports/REPORT-ISEO-SU-SITE-OPS-PHASE-4C-WPILOT-TOKEN-GATING-REMEDIATION.md](reports/REPORT-ISEO-SU-SITE-OPS-PHASE-4C-WPILOT-TOKEN-GATING-REMEDIATION.md) and Phase 6C blocked REPORT.
 
 ---
 
 ## Forbidden actions (current)
 
-- Production writes / uploads / chmod / deletes
-- WordPress settings saves, updates, installs, activations
-- WPilot install / token / REST (until separately gated)
+- Production writes / uploads / chmod / deletes outside exact rollback/token charters
+- WordPress settings saves, core/theme updates, unrelated plugin changes
+- WPilot **token** / bridge enable / write enable / REST (until separately gated)
 - Database / phpMyAdmin access; copying DB credentials
 - ATLAS mint; registry mutation
 - Localhost mirror / Storage writes (unless separately chartered)
@@ -160,7 +170,10 @@ If conditions cannot be accepted: **PHASE 4C WPILOT PREINSTALL REMEDIATION**.
 | WPilot capability matrix | [ISEO-SU-WPILOT-CAPABILITY-MATRIX-v1.md](ISEO-SU-WPILOT-CAPABILITY-MATRIX-v1.md) |
 | WPilot compatibility | [ISEO-SU-WPILOT-COMPATIBILITY-ASSESSMENT-v1.md](ISEO-SU-WPILOT-COMPATIBILITY-ASSESSMENT-v1.md) |
 | WPilot install/rollback plan | [ISEO-SU-WPILOT-INSTALLATION-AND-ROLLBACK-PLAN-v1.md](ISEO-SU-WPILOT-INSTALLATION-AND-ROLLBACK-PLAN-v1.md) |
+| WPilot install-only evidence | [ISEO-SU-WPILOT-INSTALL-ONLY-EVIDENCE-v1.md](ISEO-SU-WPILOT-INSTALL-ONLY-EVIDENCE-v1.md) |
+| WPilot activation-only evidence | [ISEO-SU-WPILOT-ACTIVATION-ONLY-EVIDENCE-v1.md](ISEO-SU-WPILOT-ACTIVATION-ONLY-EVIDENCE-v1.md) |
 | WPilot token storage decision | [ISEO-SU-WPILOT-TOKEN-STORAGE-DECISION-v1.md](ISEO-SU-WPILOT-TOKEN-STORAGE-DECISION-v1.md) |
+| WPilot token creation evidence | [ISEO-SU-WPILOT-TOKEN-CREATION-EVIDENCE-v1.md](ISEO-SU-WPILOT-TOKEN-CREATION-EVIDENCE-v1.md) | BLOCKED / NO TOKEN (live gate) |
 
 ---
 
@@ -176,19 +189,26 @@ If conditions cannot be accepted: **PHASE 4C WPILOT PREINSTALL REMEDIATION**.
 | Phase 2B read-only production audit | [reports/REPORT-ISEO-SU-SITE-OPS-PHASE-2B-READ-ONLY-PRODUCTION-AUDIT.md](reports/REPORT-ISEO-SU-SITE-OPS-PHASE-2B-READ-ONLY-PRODUCTION-AUDIT.md) | COMPLETE |
 | Phase 4B WPilot preinstall package + compatibility gate | [reports/REPORT-ISEO-SU-SITE-OPS-PHASE-4B-WPILOT-PREINSTALL-PACKAGE-AND-COMPATIBILITY-GATE.md](reports/REPORT-ISEO-SU-SITE-OPS-PHASE-4B-WPILOT-PREINSTALL-PACKAGE-AND-COMPATIBILITY-GATE.md) | COMPLETE / CONDITIONAL GO |
 | Phase 4B-P documentation persistence checkpoint | [reports/REPORT-ISEO-SU-SITE-OPS-PHASE-4B-P-DOCUMENTATION-PERSISTENCE-CHECKPOINT.md](reports/REPORT-ISEO-SU-SITE-OPS-PHASE-4B-P-DOCUMENTATION-PERSISTENCE-CHECKPOINT.md) | COMPLETE / DOCUMENTATION PERSISTED |
+| Phase 6A WPilot install-only | [reports/REPORT-ISEO-SU-SITE-OPS-PHASE-6A-WPILOT-INSTALL-ONLY.md](reports/REPORT-ISEO-SU-SITE-OPS-PHASE-6A-WPILOT-INSTALL-ONLY.md) | COMPLETE / INSTALLED INACTIVE |
+| Phase 6B WPilot activation-only | [reports/REPORT-ISEO-SU-SITE-OPS-PHASE-6B-WPILOT-ACTIVATION-ONLY.md](reports/REPORT-ISEO-SU-SITE-OPS-PHASE-6B-WPILOT-ACTIVATION-ONLY.md) | COMPLETE / ACTIVE SAFE DEFAULTS |
+| Phase 6C WPilot token creation-only | [reports/REPORT-ISEO-SU-SITE-OPS-PHASE-6C-WPILOT-TOKEN-CREATION-ONLY.md](reports/REPORT-ISEO-SU-SITE-OPS-PHASE-6C-WPILOT-TOKEN-CREATION-ONLY.md) | **BLOCKED / NO TOKEN** (plugin requires bridge+DEV; charter forbids bridge) |
 
 ---
 
 ## SAFE UNKNOWN summary
 
-Resolved in 2B: hybrid architecture, docroot, WP root install, WP 7.0.2, theme `iseoblog`, plugin filesystem inventory, calculator/tariffs/forms, WPilot absence, SFTP model.  
+Resolved in 2B: hybrid architecture, docroot, WP root install, WP 7.0.2, theme `iseoblog`, plugin filesystem inventory, calculator/tariffs/forms, then-WPilot-absence, SFTP model.  
 
 Resolved in 4B (static): canonical RC5 package identity + SHA-256; exact REST route inventory from source; safe activation defaults; token local path decision (file not created).  
 
-Open: PHP runtime, exact plugin actives, ACF UI, web-KP naming, header forwarding, menus/widgets, restore proof, external SoT (U-022). Tracked in SAFE UNKNOWN register.
+Resolved in 6A: RC5 package on production as inactive `metacode-wpilot/` (27/27); no public `wpilot` REST namespace while inactive; frontend baseline intact.  
+
+Resolved in 6B: plugin **active** with bridge/writes **off**, token **absent**; Admin diagnostics schema valid; public `wpilot/v1` namespace registered but **not invoked**; frontend/admin regression PASS.
+
+Open: PHP runtime, Beget backup object/timestamp details, ACF UI, web-KP naming, header forwarding, menus/widgets, restore proof, physical DB table existence without DB login, external SoT (U-022). Tracked in SAFE UNKNOWN register.
 
 **Do not invent values.** Secrets stay in local-only files.
 
 ---
 
-*ISEO-SU-SITE-OPS Operational Index · Phase 4B COMPLETE / CONDITIONAL GO · 2026-07-24 · production writes NOT AUTHORIZED.*
+*ISEO-SU-SITE-OPS Operational Index · Phase 6B COMPLETE / Phase 6C BLOCKED (token needs bridge+DEV) · 2026-07-24 · bridge/writes/REST smoke NOT AUTHORIZED.*

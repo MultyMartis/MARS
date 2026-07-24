@@ -2,6 +2,7 @@
 
 **Classification:** Evidence layer — documented proof of executed capabilities only.  
 **Status:** v1 evidence register — updated 2026-06-19 (RC5 release freeze: UX-01…BUGFIX-02 + connection proof).  
+**Addendum 2026-07-24:** RC6 packages a **source/static-tested** token-gating remediation (`can_manage_token`). This is **not** claimed as a new DEV runtime proven capability until a chartered DEV/update proof exists. See [reports/REPORT-WPILOT-PRODUCTION-TOKEN-GATING-REMEDIATION.md](reports/REPORT-WPILOT-PRODUCTION-TOKEN-GATING-REMEDIATION.md).  
 **Site scope:** `https://dev.gktriumph.ru` (DEV/test only, human-supervised).  
 **Related:** [WPILOT-MISSION-v1.md](WPILOT-MISSION-v1.md), [WPILOT-OPERATIONS-MANIFEST-v1.md](WPILOT-OPERATIONS-MANIFEST-v1.md), [WPILOT-OPERATION-BINDINGS-v1.md](WPILOT-OPERATION-BINDINGS-v1.md), [local-storage-policy.md](local-storage-policy.md), [WPILOT-STATE-FREEZE-2026-06-19-v1.md](WPILOT-STATE-FREEZE-2026-06-19-v1.md)
 

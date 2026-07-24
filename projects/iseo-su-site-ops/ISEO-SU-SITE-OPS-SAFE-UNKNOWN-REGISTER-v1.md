@@ -1,6 +1,6 @@
 # ISEO-SU-SITE-OPS SAFE UNKNOWN Register v1
 
-**Status:** ACCEPTED; **updated Phase 2B** 2026-07-24  
+**Status:** ACCEPTED; **updated Phase 4C / RC6 remediation** 2026-07-24  
 **Canonical locus:** `X:\AI MARS\projects\iseo-su-site-ops\`
 
 Rule: do **not** invent values. Resolve only with evidence.
@@ -33,7 +33,7 @@ Rule: do **not** invent values. Resolve only with evidence.
 | U-016 | Forms | Multiple `*__FORM.php` handlers | CONFIRMED BY SFTP |
 | U-021 | Staging | Absent | CONFIRMED BY OPERATOR (unchanged) |
 | U-024 | FTP/SFTP model | SFTP port 22 to docroot | CONFIRMED BY AUDIT |
-| — | WPilot on production | Absent | CONFIRMED BY SFTP |
+| — | WPilot on production | **Active / safe defaults** (Phase 6B; installed in 6A) | CONFIRMED BY WP ADMIN + REST INDEX NAMESPACE |
 
 ---
 
@@ -42,7 +42,7 @@ Rule: do **not** invent values. Resolve only with evidence.
 | ID | Item | Classification | Risk | Evidence needed | Earliest phase |
 |----|------|----------------|------|-----------------|----------------|
 | U-007 | PHP **runtime** version | SAFE UNKNOWN | Compatibility planning | Browser Admin Site Health or hosting panel | 2C / 4B HITL |
-| U-009b | Exact plugin active/inactive matrix | SAFE UNKNOWN | Wrong conflict assumptions | Browser Admin plugins screen | 2C / 4B |
+| U-009b | Exact plugin active/inactive matrix | **PARTIAL** (Phase 6B captured pre/post active plugin-file sets; WPilot newly active only) | Wrong conflict assumptions | Optional full Plugins HITL export | 6B partial / later |
 | U-010 | ACF field groups / options | SAFE UNKNOWN | Wrong field SoT | Admin ACF UI or export | 3 / 2C |
 | U-015 | Web-KP exact URL/tool | SAFE UNKNOWN | Tool breakage | Operator confirms whether `/offers`+CPT `offer` is web-KP | 2C HITL |
 | U-017 | Mail delivery path (SMTP vs mail()) | SAFE UNKNOWN | Silent form failure | Handler review under charter / mail plugin settings | 3 |
@@ -51,11 +51,17 @@ Rule: do **not** invent values. Resolve only with evidence.
 | U-020 | Restore method details | SAFE UNKNOWN | Irrecoverable change | Restore drill notes | 3–4 |
 | U-022 | Maintained canonical source outside production | SAFE UNKNOWN | Wrong sync | Operator attestation | 3 |
 | U-023 | Manual production drift inventory | PARTIAL (dual home/blog files known) | Overwrite | Ongoing drift log | 3–7 |
-| U-025 | WPilot production compatibility | **PARTIAL → CONDITIONAL GO** (Phase 4B static review) | Failed install | Operator accept 4B-1..4B-3; then 6A | 4B COMPLETE / 6A |
+| U-025 | WPilot production compatibility | **PARTIAL → 6A/6B DONE → 6C BLOCKED → 4C RC6 PACKAGED (not deployed)** | Token/REST/write still unproven on prod | GATE 6C-R then 6C retry / 6D | 6C-R |
+| U-038 | Admin Plugins inactive badge for WPilot | **RESOLVED in 6B** — Plugins row **active** after activation | — | — | 6B |
+| U-039 | Beget panel backup object/timestamp for Phase 6A | SAFE UNKNOWN (operator-attested string only) | Wrong restore point | Operator panel note | 6A residual |
+| U-040 | Beget panel backup object/timestamp for Phase 6B | SAFE UNKNOWN (operator-attested string only) | Wrong restore point | Operator panel note | 6B residual |
+| U-042 | Beget panel backup object/timestamp for Phase 6C | SAFE UNKNOWN (operator-attested string only) | Wrong restore point | Operator panel note | 6C residual |
+| U-041 | Physical existence of `wpilot_backups` / `wpilot_audit_log` tables | SAFE UNKNOWN (no DB login; Admin schema valid = да) | Orphan/missing schema assumptions | Optional later DB charter | 6B residual / later |
 | U-026 | WPilot endpoint inventory for this site | **DOCUMENTED FROM SOURCE** (routes known); production behavior SAFE UNKNOWN | Wrong smoke | GATE 6D | 6D |
 | U-027 | Rollback implementation proof | SAFE UNKNOWN (plugin rollback proven on DEV only) | Unrecoverable write | Restore evidence + optional 6E | 4–6 |
-| U-028 | WPilot token format for production | **PATH DECIDED** (`wpilot-prod-iseo-su.token`); file **NOT CREATED** | Secret leakage | GATE 6C | 6C |
-| U-035 | PHP syntax lint of WPilot package on agent host | SAFE UNKNOWN (`php` binary unavailable) | Missed parse error | Lint on machine with PHP, or rely on DEV proven package | 4C optional |
+| U-028 | WPilot token format for production | **PATH DECIDED**; file **NOT CREATED**; 6C refused on RC5; RC6 allows token without bridge (source) | Secret leakage | 6C-R + 6C retry | 6C-R |
+| U-043 | Whether production token creation may temporarily assert DEV confirmed | **RESOLVED for token mint** — RC6 does **not** require DEV for token; REST still uses `dev_confirmed` if bridge enabled later | False DEV for REST remains policy risk | Future REST charter | 6D+ |
+| U-035 | PHP syntax lint of WPilot package on agent host | **RESOLVED for remediation session** — Laragon PHP 8.3 used for `php -l` + unit harness | — | — | 4C |
 | U-036 | `X-WPilot-Token` header forwarding on i-seo.su | SAFE UNKNOWN | Auth smoke failure | GATE 6D | 6D |
 | U-037 | WPilot uninstall residual tables/options | SAFE UNKNOWN (no uninstall.php) | Orphan DB objects | Document on future uninstall charter | later |
 | U-029 | Backup evidence Storage paths | SAFE UNKNOWN | Misplaced artefacts | Policy when authorized | 4–6 |
@@ -69,12 +75,20 @@ Rule: do **not** invent values. Resolve only with evidence.
 
 ## Summary
 
-Phase 2B resolved the hybrid architecture, docroot, WP root install, version, theme, plugin filesystem inventory, calculator/tariffs/forms presence, and WPilot absence.  
+Phase 2B resolved the hybrid architecture, docroot, WP root install, version, theme, plugin filesystem inventory, calculator/tariffs/forms presence, and (then) WPilot absence.  
 
 Phase 4B completed static package + source compatibility review: **ACCEPTED MATCH** RC5 package; **CONDITIONAL GO** pre-install.  
 
-Remaining gaps are mainly **Admin-UI-only facts** (PHP runtime, plugin actives, ACF UI, menus), **web-KP naming**, header/WAF smoke, restore drill, plus long-standing SoT items.
+Phase 6A installed MetaCODE WPilot **inactive** on production (SFTP; 27/27 files).  
+
+Phase 6B activated MetaCODE WPilot with **safe defaults** (bridge/writes off; token absent; no REST smoke). Public `wpilot/v1` namespace is registered but was not invoked.
+
+Phase 6C attempted token creation with approvals + backup confirm: generate refused unless DEV+bridge enabled; bridge was **not** enabled; token **not** created.
+
+Phase 4C / WPilot RC6 packaged the token-gating remediation (`can_manage_token`); **not deployed** to production. Next gate: **6C-R update-only**.
+
+Remaining gaps are mainly **PHP runtime**, **Beget backup panel timestamps**, **physical DB table proof**, ACF UI, menus, **web-KP naming**, header/WAF smoke, restore drill, plus long-standing SoT items.
 
 ---
 
-*SAFE UNKNOWN Register v1 · updated 2026-07-24 Phase 4B.*
+*SAFE UNKNOWN Register v1 · updated 2026-07-24 Phase 4C / RC6.*

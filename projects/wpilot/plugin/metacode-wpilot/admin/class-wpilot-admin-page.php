@@ -612,7 +612,7 @@ class WPilot_Admin_Page {
 
 		?>
 
-		<p><strong><?php echo esc_html__( 'Production prohibition:', 'metacode-wpilot' ); ?></strong> <?php echo esc_html__( 'If this WordPress site is production or production-like, leave the bridge disabled and do not generate a token.', 'metacode-wpilot' ); ?></p>
+		<p><strong><?php echo esc_html__( 'Production prohibition:', 'metacode-wpilot' ); ?></strong> <?php echo esc_html__( 'If this WordPress site is production or production-like, leave the bridge and writes disabled until a separate operational charter authorizes them. Token generation alone does not enable the bridge or writes.', 'metacode-wpilot' ); ?></p>
 
 
 
@@ -668,7 +668,7 @@ class WPilot_Admin_Page {
 
 		<h2><?php echo esc_html__( 'Token Control', 'metacode-wpilot' ); ?></h2>
 
-		<p><?php echo esc_html__( 'Token generation is allowed only after DEV/test confirmation and bridge enablement. Rotating a token replaces the previous credential; plaintext is shown once.', 'metacode-wpilot' ); ?></p>
+		<p><?php echo esc_html__( 'Token generation requires an authorized administrator and a valid security nonce. It does not require DEV/test confirmation, bridge enablement, or write readiness. Generating a token does not enable the bridge or writes. Rotating a token replaces the previous credential; plaintext is shown once.', 'metacode-wpilot' ); ?></p>
 
 		<form method="post" style="display:inline-block; margin-right: 8px;">
 
@@ -1014,9 +1014,9 @@ class WPilot_Admin_Page {
 
 			case 'generate_token':
 
-				if ( ! WPilot_Environment::is_operationally_ready( $options ) ) {
+				if ( ! WPilot_Environment::can_manage_token( $options ) ) {
 
-					$this->messages[] = __( 'Enable the bridge and confirm DEV/test use before generating a token.', 'metacode-wpilot' );
+					$this->messages[] = __( 'Token generation requires an authorized administrator and must not run while emergency disable is active.', 'metacode-wpilot' );
 
 					break;
 

@@ -108,10 +108,12 @@ msgstr "Запрет для production:"
 #: admin/class-wpilot-admin-page.php
 msgid ""
 "If this WordPress site is production or production-like, leave the bridge "
-"disabled and do not generate a token."
+"and writes disabled until a separate operational charter authorizes them. "
+"Token generation alone does not enable the bridge or writes."
 msgstr ""
-"Если этот сайт WordPress — production или production-подобный, оставьте мост"
-" выключенным и не генерируйте токен."
+"Если этот сайт WordPress — production или production-подобный, оставьте мост "
+"и запись выключенными, пока отдельный operational charter их не разрешит. "
+"Одна генерация токена не включает мост и запись."
 
 #: admin/class-wpilot-admin-page.php
 msgid "Bridge Control"
@@ -143,13 +145,15 @@ msgstr "Управление токеном"
 
 #: admin/class-wpilot-admin-page.php
 msgid ""
-"Token generation is allowed only after DEV/test confirmation and bridge "
-"enablement. Rotating a token replaces the previous credential; plaintext is "
-"shown once."
+"Token generation requires an authorized administrator and a valid security "
+"nonce. It does not require DEV/test confirmation, bridge enablement, or "
+"write readiness. Generating a token does not enable the bridge or writes. "
+"Rotating a token replaces the previous credential; plaintext is shown once."
 msgstr ""
-"Генерация токена разрешена только после подтверждения DEV/test и включения "
-"моста. Ротация заменяет предыдущий credential; plaintext показывается один "
-"раз."
+"Генерация токена требует авторизованного администратора и действительный "
+"nonce. Подтверждение DEV/test, включение моста и write readiness не нужны. "
+"Генерация токена не включает мост и запись. Ротация заменяет предыдущий "
+"credential; plaintext показывается один раз."
 
 #: admin/class-wpilot-admin-page.php
 msgid "Generate / Rotate Token"
@@ -289,8 +293,12 @@ msgid "Bridge settings saved."
 msgstr "Настройки моста сохранены."
 
 #: admin/class-wpilot-admin-page.php
-msgid "Enable the bridge and confirm DEV/test use before generating a token."
-msgstr "Включите мост и подтвердите DEV/test перед генерацией токена."
+msgid ""
+"Token generation requires an authorized administrator and must not run while "
+"emergency disable is active."
+msgstr ""
+"Генерация токена требует авторизованного администратора и не выполняется "
+"при активном аварийном отключении."
 
 #: admin/class-wpilot-admin-page.php
 msgid "Token generated. Plaintext is shown once below."
