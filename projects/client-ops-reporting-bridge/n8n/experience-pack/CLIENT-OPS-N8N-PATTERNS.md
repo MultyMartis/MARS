@@ -10,7 +10,7 @@
 - Auth failure before business validation.
 - Dedupe deferred in first sandbox (`DEDUPE_DEFERRED_SANDBOX`).
 - No Telegram in first sandbox create; Telegram apply is a later gate.
-- **Pattern B (runtime-confirmed on this host):** accepted path → Respond to Webhook → Telegram `sendMessage`.
+- **Pattern B (runtime-confirmed and applied on inactive sandbox):** accepted path → Respond to Webhook → Telegram `sendMessage`.
 - No manual n8n UI node assembly — Cursor/MetaBOT programmer generates JSON.
 - Sandbox-first; inactive create; never leave activated after POST tests.
 

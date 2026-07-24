@@ -1,0 +1,22 @@
+{
+  "phase": "1B-C1",
+  "activation_count": 1,
+  "deactivation_count": 1,
+  "emergency_deactivation_retry": 0,
+  "authenticated_posts": 1,
+  "synthetic_event": {
+    "schema_name": "mars.client_ops.report",
+    "schema_version": "1.0",
+    "site_id": "SITE-002",
+    "domain": "bzpm.ru",
+    "event_type": "site.post_1c_monitor",
+    "status": "OK",
+    "event_id": "3175a598-07b3-47d3-9c60-d1a1bd51ea65",
+    "producer": "mars-client-ops-telegram-sandbox-c1",
+    "production_monitor_data": false,
+    "sandbox_marker": true
+  },
+  "expected_http": 202,
+  "expected_result": "ACCEPTED",
+  "expected_dedupe": "DEFERRED_SANDBOX"
+}

@@ -1,7 +1,7 @@
 # Client Ops n8n Experience Pack
 
 **Status:** PARTIAL — CREATE + AUTH BINDING + AUTHENTICATED POST + TELEGRAM INTAKE + SEMANTICS CAPTURED
-Telegram delivery apply remains pending (bot/credential/chat-target intake done; Pattern B semantics `PATTERN_B_CONFIRMED` in 1B-C0S; workflow apply pending 1B-C1).
+Telegram delivery sandbox apply is complete on the inactive Client Ops workflow (Phase 1B-C1; one delivery verified). Production activation remains pending.
 
 ## Contents
 
@@ -58,8 +58,8 @@ Telegram delivery apply remains pending (bot/credential/chat-target intake done;
 - Phase 1B-C0 discovery confirmation phrase: `DISCOVER CLIENT OPS TELEGRAM CHAT TARGET`.
 - Phase 1B-C0R2 final discovery confirmation phrase: `FINAL DISCOVER CLIENT OPS TELEGRAM CHAT TARGET`.
 - Chat target may be absent after bot create until operator presses Start — does not block credential intake; Phase 1B-C0 returned 0 updates; Phase 1B-C0R2 confirmed one private chat after operator Start/`/start`.
-- Proposed Pattern B: Respond to Webhook first, then Telegram `sendMessage` on accepted path only — **runtime-confirmed** in Phase 1B-C0S (not applied to Client Ops workflow).
-- Next: Phase 1B-C1 controlled apply.
+- Proposed Pattern B: Respond to Webhook first, then Telegram `sendMessage` on accepted path only — **runtime-confirmed** in Phase 1B-C0S; **applied** to inactive Client Ops workflow in Phase 1B-C1.
+- Next: Phase 1B-D0 inactive-sandbox next-step decision / runtime-connection charter (documentation only unless separately authorized).
 
 ## Facts learned from Phase 1B-C0S semantics verification
 
@@ -71,7 +71,9 @@ Telegram delivery apply remains pending (bot/credential/chat-target intake done;
 
 ## Still incomplete until later charters
 
-- Phase 1B-C1 Telegram sandbox integration controlled apply
-- Telegram sandbox workflow apply / message send (1B-C1)
+- Phase 1B-D0 inactive-sandbox next-step decision / runtime-connection charter
+- Production activation (separate charter)
+- Durable dedupe store
+- Monitor / exporter / scheduler runtime connection
 - Production activation
 - Durable dedupe store

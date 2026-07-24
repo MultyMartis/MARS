@@ -66,10 +66,13 @@ const RESPONSE_CAPTURE_MAX = 2048;
 const MAX_PAYLOAD_BYTES = 256 * 1024;
 const PRODUCER_NAME = 'mars-client-ops-sandbox-validator';
 
+const C1_POST_CONFIRM = 'SEND ONE CLIENT OPS TELEGRAM SANDBOX TEST BZPM';
+
 function parseArgs(argv) {
-  const args = { apply: false, confirm: null };
+  const args = { apply: false, confirm: null, c1SandboxTest: false };
   for (const a of argv) {
     if (a === '--apply') args.apply = true;
+    else if (a === '--c1-sandbox-test') args.c1SandboxTest = true;
     else if (a.startsWith('--confirm=')) args.confirm = a.slice('--confirm='.length);
   }
   return args;
@@ -771,12 +774,48 @@ async function main() {
   report.case_count = matrix.length;
   report.max_requests = MAX_REQUESTS;
 
+  const telegramPresent = summary.telegram_absent === false;
+  const execCount = execBefore.count ?? execBefore.rows.length;
+  const matrixReplayBlocked = telegramPresent || execCount > 0;
+
   if (!args.apply) {
+    if (args.c1SandboxTest) {
+      report.dry_run = {
+        mode: 'C1_SINGLE_SYNTHETIC_OVERRIDE',
+        would_activate: true,
+        would_deactivate: true,
+        would_post_cases: ['C1_OK_SYNTHETIC'],
+        matrix_replay_rejected: true,
+        production_payload_rejected: true,
+        pre_active: live.active,
+        gates: {
+          exact_name_count: exact.length === 1,
+          active_false: live.active === false,
+          header_auth: summary.webhook_authentication === 'headerAuth',
+          credential_bound:
+            summary.credential_reference?.id === CREDENTIAL_ID &&
+            summary.credential_reference?.name === CREDENTIAL_NAME,
+          http_request_absent: summary.http_request_absent,
+          c1_override_phrase_required: true,
+          single_post_only: true,
+          telegram_integration_present_or_pending: true,
+        },
+      };
+      const gateFail = Object.entries(report.dry_run.gates).filter(([, v]) => !v);
+      report.dry_run_verdict = gateFail.length === 0 ? 'READY_C1_OVERRIDE' : 'BLOCKED';
+      if (gateFail.length) report.dry_run_failed_gates = gateFail.map(([k]) => k);
+      console.log(JSON.stringify(report, null, 2));
+      process.exitCode = gateFail.length === 0 ? 0 : 2;
+      return;
+    }
+
     report.dry_run = {
       would_activate: true,
       would_deactivate: true,
       would_post_cases: matrix.map((c) => c.id),
       pre_active: live.active,
+      matrix_replay_blocked: matrixReplayBlocked,
+      production_payload_rejected: true,
       gates: {
         exact_name_count: exact.length === 1,
         active_false: live.active === false,
@@ -787,15 +826,38 @@ async function main() {
           summary.credential_reference?.name === CREDENTIAL_NAME,
         telegram_absent: summary.telegram_absent,
         http_request_absent: summary.http_request_absent,
-        executions_baseline_zero:
-          (execBefore.count ?? execBefore.rows.length) === 0,
+        executions_baseline_zero: execCount === 0,
+        matrix_not_blocked_by_prior_work: !matrixReplayBlocked,
       },
     };
     const gateFail = Object.entries(report.dry_run.gates).filter(([, v]) => !v);
     report.dry_run_verdict = gateFail.length === 0 ? 'READY' : 'BLOCKED';
     if (gateFail.length) report.dry_run_failed_gates = gateFail.map(([k]) => k);
+    if (matrixReplayBlocked) {
+      report.dry_run_verdict = 'BLOCKED_MATRIX_REPLAY';
+      report.replay_guard =
+        'B2 28-case matrix replay rejected after prior executions and/or Telegram integration; use Phase 1B-C1 runner or --c1-sandbox-test override.';
+    }
     console.log(JSON.stringify(report, null, 2));
-    process.exitCode = gateFail.length === 0 ? 0 : 2;
+    process.exitCode = report.dry_run_verdict === 'READY' ? 0 : 2;
+    return;
+  }
+
+  if (matrixReplayBlocked && !args.c1SandboxTest) {
+    report.aborted = 'matrix_replay_blocked';
+    report.replay_guard =
+      'Authenticated POST matrix apply is blocked after prior sandbox executions/Telegram integration.';
+    console.log(JSON.stringify(report, null, 2));
+    process.exitCode = 2;
+    return;
+  }
+
+  if (args.c1SandboxTest) {
+    report.aborted = 'c1_override_must_use_phase_c1_runner';
+    report.hint =
+      'Use run-client-ops-telegram-sandbox-controlled-apply.mjs for the single authorized C1 POST.';
+    console.log(JSON.stringify(report, null, 2));
+    process.exitCode = 2;
     return;
   }
 

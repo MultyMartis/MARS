@@ -14,6 +14,7 @@ const roots = [
   'projects/client-ops-reporting-bridge/PHASE-1B-C0-TELEGRAM-CHAT-TARGET-DISCOVERY-RETRY.md',
   'projects/client-ops-reporting-bridge/PHASE-1B-C0R2-TELEGRAM-CHAT-TARGET-DISCOVERY-FINAL-RETRY.md',
   'projects/client-ops-reporting-bridge/PHASE-1B-C0S-TELEGRAM-INTEGRATION-SEMANTICS-VERIFICATION.md',
+  'projects/client-ops-reporting-bridge/PHASE-1B-C1-TELEGRAM-SANDBOX-INTEGRATION-CONTROLLED-APPLY.md',
   'projects/client-ops-reporting-bridge/README.md',
 
   'projects/client-ops-reporting-bridge/ROADMAP.md',
@@ -81,6 +82,9 @@ for (const f of files) {
           f.replace(/\\/g, '/'),
         ) ||
           /phase-1b-c0s-telegram-integration-semantics[\\/](SEMANTICS-DECISION|LEVEL-2-TELEGRAM-RESULT|PATTERN-A-RESULT|TEST-RESULTS|CONTAINMENT-STATUS)\.(json|md)$/i.test(
+            f.replace(/\\/g, '/'),
+          ) ||
+          /phase-1b-c1-telegram-sandbox-controlled-apply[\\/].+\.(json|md)$/i.test(
             f.replace(/\\/g, '/'),
           ))
       ) {

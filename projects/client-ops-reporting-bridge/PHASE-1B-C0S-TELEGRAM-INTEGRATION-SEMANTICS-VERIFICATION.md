@@ -48,7 +48,9 @@ Does this n8n installation continue downstream execution after `Respond to Webho
 
 ## Next recommendation
 
-**Phase 1B-C1 — Telegram Sandbox Integration Controlled Apply**
+**Phase 1B-C1 — Telegram Sandbox Integration Controlled Apply** — COMPLETE (see `PHASE-1B-C1-TELEGRAM-SANDBOX-INTEGRATION-CONTROLLED-APPLY.md`).
+
+Next: **Phase 1B-D0 — Inactive Sandbox Next-Step Decision and Runtime Connection Charter** (after 1B-C1 apply + 1B-C1B evidence baseline commit)
 
 ## Evidence
 

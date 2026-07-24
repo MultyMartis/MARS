@@ -1,11 +1,11 @@
 # MARS Client Ops Reporting Bridge
 
 **Subsystem name:** MARS Client Ops Reporting Bridge
-**Status:** PHASE 0A/0B COMPLETE + PHASE 1A OFFLINE EXPORTER CORE COMPLETE + PROGRAMMER EXTENSION COMPLETE + PHASE 1B-B INACTIVE SANDBOX CREATED + PHASE 1B-B1 NATIVE AUTH BOUND + PHASE 1B-B2 AUTHENTICATED POST VALIDATED + PHASE 1B-C TELEGRAM BOT INTAKE COMPLETE
-**Implementation status:** Phase 1A offline exporter core + fixtures + tests **COMPLETE**; MetaBOT programmer Client Ops extension **COMPLETE**; Phase 1B-B inactive sandbox workflow **CREATED**; Phase 1B-B1 native Header Auth credential **BOUND**; Phase 1B-B2 authenticated sandbox POST matrix **PASSED** (workflow returned inactive); Phase 1B-C Telegram bot + n8n credential intake **COMPLETE**; Phase 1B-C0R2 chat-target discovery **COMPLETE** (`TELEGRAM_CHAT_TARGET_CONFIRMED`); Phase 1B-C0S semantics **COMPLETE** (`PATTERN_B_CONFIRMED`); sandbox Telegram integration apply / production activation **NOT STARTED** (`READY_FOR_TELEGRAM_SANDBOX_INTEGRATION_APPLY`)
+**Status:** PHASE 0A/0B COMPLETE + PHASE 1A OFFLINE EXPORTER CORE COMPLETE + PROGRAMMER EXTENSION COMPLETE + PHASE 1B-B INACTIVE SANDBOX CREATED + PHASE 1B-B1 NATIVE AUTH BOUND + PHASE 1B-B2 AUTHENTICATED POST VALIDATED + PHASE 1B-C TELEGRAM BOT INTAKE COMPLETE + PHASE 1B-C1 TELEGRAM SANDBOX APPLY COMPLETE (evidence baseline committed in 1B-C1B; not pushed)
+**Implementation status:** Phase 1A offline exporter core + fixtures + tests **COMPLETE**; MetaBOT programmer Client Ops extension **COMPLETE**; Phase 1B-B inactive sandbox workflow **CREATED**; Phase 1B-B1 native Header Auth credential **BOUND**; Phase 1B-B2 authenticated sandbox POST matrix **PASSED** (workflow returned inactive); Phase 1B-C Telegram bot + n8n credential intake **COMPLETE**; Phase 1B-C0R2 chat-target discovery **COMPLETE**; Phase 1B-C0S semantics **COMPLETE** (`PATTERN_B_CONFIRMED`); Phase 1B-C1 Telegram sandbox integration **APPLIED** (inactive; one delivery verified; readiness `READY_FOR_NEXT_INACTIVE_SANDBOX_PHASE`); production activation **NOT STARTED**
 **Production state:** UNCHANGED
 **Transport decision:** **PROFILE_B_REQUIRED**
-**Live n8n workflow name:** `MARS Client Ops Bridge — bzpm.ru` (inactive; POST validated under temporary activation)
+**Live n8n workflow name:** `MARS Client Ops Bridge — bzpm.ru` (inactive; Telegram Pattern B node present; POST+delivery sandbox-validated)
 **Canonical locus:** `projects/client-ops-reporting-bridge/`
 **Registry:** `project_id` **not registered** — programme locus only (registry mutation not authorized)
 
@@ -81,7 +81,7 @@ Phase 0A freezes the contract. Phase 0B freezes implementation-ready design and 
 | **Hub Gateway feed** | Does not exist |
 | **PROFILE A vs B** | **PROFILE_B_REQUIRED** frozen for Client Ops Bridge — bzpm.ru |
 
-**Explicit statement:** Phase 1B-C verified the dedicated Telegram bot and created one unbound n8n `telegramApi` credential. Phase 1B-C0R2 confirmed the private chat target. Phase 1B-C0S verified Pattern B (`Respond` then Telegram) on this host with one temporary workflow and one synthetic Telegram message. Client Ops workflow remains inactive and unchanged. Readiness: `READY_FOR_TELEGRAM_SANDBOX_INTEGRATION_APPLY`. See [PHASE-1B-C0S-TELEGRAM-INTEGRATION-SEMANTICS-VERIFICATION.md](PHASE-1B-C0S-TELEGRAM-INTEGRATION-SEMANTICS-VERIFICATION.md).
+**Explicit statement:** Phase 1B-C1 applied Pattern B Telegram `sendMessage` to the inactive Client Ops workflow and verified one sandbox delivery. Workflow remains inactive. Readiness: `READY_FOR_NEXT_INACTIVE_SANDBOX_PHASE`. See [PHASE-1B-C1-TELEGRAM-SANDBOX-INTEGRATION-CONTROLLED-APPLY.md](PHASE-1B-C1-TELEGRAM-SANDBOX-INTEGRATION-CONTROLLED-APPLY.md).
 
 ---
 
@@ -169,5 +169,5 @@ Do **not** treat related programme docs as proof that Client Ops Reporting Bridg
 - **Documented architecture:** Phase 0A pack.
 - **Documented implementation design:** Phase 0B pack.
 - **Implemented offline core:** Phase 1A — fixture validate/build only; not production runtime.
-- **Planned transport:** Phase 1B-C1 Telegram sandbox apply + production activation remain pending; Phase 1B-C/C0R2/C0S intake+semantics complete (`PATTERN_B_CONFIRMED`).
+- **Planned transport:** Phase 1B-C1 Telegram sandbox apply complete (inactive); production activation remains pending; readiness `READY_FOR_NEXT_INACTIVE_SANDBOX_PHASE`.
 - **Legacy / external:** MetaBOT live n8n and SITE-002 monitor tooling exist in their own lanes; this bridge does **not** wrap them yet.

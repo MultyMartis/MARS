@@ -15,6 +15,8 @@ export const EXPECTED_HOST = 'n8n.ai-metacode.com';
 
 const ACTIVATE_CONFIRM = 'TEMPORARILY ACTIVATE CLIENT OPS BRIDGE FOR POST VALIDATION';
 const DEACTIVATE_CONFIRM = 'DEACTIVATE CLIENT OPS BRIDGE AFTER POST VALIDATION';
+const C1_ACTIVATE_CONFIRM = 'ACTIVATE CLIENT OPS TELEGRAM SANDBOX TEST BZPM';
+const C1_DEACTIVATE_CONFIRM = 'DEACTIVATE CLIENT OPS TELEGRAM SANDBOX TEST BZPM';
 
 /**
  * @param {string} [envPath]
@@ -86,7 +88,7 @@ async function activationRequest(method, path, creds, body) {
  * @param {string} confirm
  */
 export async function activateAllowlistedWorkflow(creds, confirm) {
-  if (confirm !== ACTIVATE_CONFIRM) {
+  if (confirm !== ACTIVATE_CONFIRM && confirm !== C1_ACTIVATE_CONFIRM) {
     throw new Error('Activation confirmation phrase mismatch');
   }
   return activationRequest(
@@ -101,7 +103,7 @@ export async function activateAllowlistedWorkflow(creds, confirm) {
  * @param {string} confirm
  */
 export async function deactivateAllowlistedWorkflow(creds, confirm) {
-  if (confirm !== DEACTIVATE_CONFIRM) {
+  if (confirm !== DEACTIVATE_CONFIRM && confirm !== C1_DEACTIVATE_CONFIRM) {
     throw new Error('Deactivation confirmation phrase mismatch');
   }
   return activationRequest(
@@ -113,3 +115,5 @@ export async function deactivateAllowlistedWorkflow(creds, confirm) {
 
 export const ACTIVATION_CONFIRM_PHRASE = ACTIVATE_CONFIRM;
 export const DEACTIVATION_CONFIRM_PHRASE = DEACTIVATE_CONFIRM;
+export const C1_ACTIVATION_CONFIRM_PHRASE = C1_ACTIVATE_CONFIRM;
+export const C1_DEACTIVATION_CONFIRM_PHRASE = C1_DEACTIVATE_CONFIRM;

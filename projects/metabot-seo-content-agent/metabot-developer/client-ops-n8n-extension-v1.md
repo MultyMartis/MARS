@@ -18,7 +18,7 @@ They are **not** SEO content generation workflows.
 | Trigger | Telegram / internal webhooks | PROFILE_B authenticated webhook |
 | Payload | SEO task commands | `mars.client_ops.report` envelope |
 | Primary output | SEO text / Sheets memory | Structured accept/reject HTTP response |
-| First sandbox Telegram | Often present | **Forbidden** |
+| First sandbox Telegram | Often present | **Applied on inactive sandbox (1B-C1)**; production activation still gated |
 | Dedupe | Sheets / locks | Deferred in first sandbox |
 | Site mutation | None | None (also no SITE-002 monitor changes) |
 
@@ -56,9 +56,10 @@ MVP: custom header / Bearer shared secret over TLS, validated before business pr
 - Phase 1B-C0: authorized chat-target discovery retry (`getWebhookInfo` + one `getUpdates` without offset) still returned zero updates; no local chat target file; no message send; workflow unchanged.
 - Phase 1B-C0R2: final discovery retry after operator-confirmed Start/`/start` returned one private chat update; local ignored `telegram.target.local.env` created; no message send; workflow unchanged.
 - Phase 1B-C0S: temporary semantics workflow proved Pattern B (`Respond` then Telegram) on this host; exactly one synthetic Telegram message; temporary workflow deleted; real Client Ops workflow unchanged.
+- Phase 1B-C1: controlled apply added one Telegram node on accepted path only; credential `2bIC5376l7ElXb4B` bound; one synthetic delivery verified; workflow returned inactive; executions 24→25.
 - Native header-auth credential create payload shape is evidenced (Phase 1B-B1).
 - Telegram credential create payload shape is evidenced (Phase 1B-C): `{ name, type: "telegramApi", data: { accessToken } }`.
-- Controlled temporary activation + production webhook POST + deactivate-in-finally is evidenced (Phase 1B-B2).
+- Controlled temporary activation + production webhook POST + deactivate-in-finally is evidenced (Phase 1B-B2 / 1B-C1).
 - Hardening target: HMAC-SHA256(raw body + timestamp) with replay window (not in first sandbox template).
 
 ## 6. Validation boundary
@@ -77,11 +78,11 @@ Deterministic JSON accept/reject contract (see Client Ops programmer extension d
 
 ## 9. Sandbox-first rule
 
-Generate local template → offline harness → inactive create → re-GET → Phase 1B-B1 auth binding → Phase 1B-B2 authenticated POST → Phase 1B-C Telegram bot/credential intake → Phase 1B-C0/C0R2 chat-target discovery → Phase 1B-C0S semantics → only later Telegram sandbox apply / production activation under separate charters.
+Generate local template → offline harness → inactive create → re-GET → Phase 1B-B1 auth binding → Phase 1B-B2 authenticated POST → Phase 1B-C Telegram bot/credential intake → Phase 1B-C0/C0R2 chat-target discovery → Phase 1B-C0S semantics → Phase 1B-C1 Telegram sandbox apply (done) → Phase 1B-C1B evidence baseline commit (done) → only later inactive-sandbox decision / production activation under separate charters.
 
-## 10. No Telegram in first create
+## 10. Telegram sandbox apply (1B-C1)
 
-Telegram remains a separated gate. Phase 1B-C may create an unbound `telegramApi` credential without binding. Phase 1B-C0S may send **one** synthetic message from a temporary workflow only. Pattern B continuation-after-Respond is **PATTERN_B_CONFIRMED** on this installation.
+Telegram Pattern B is applied on the inactive Client Ops workflow (`Telegram Notify Accepted` after `Respond Accepted`). Rejected paths do not send. Production activation remains a separated gate.
 
 ## 11. No operator manual node assembly
 
@@ -89,7 +90,7 @@ MetaBOT / Cursor programmer must generate and apply workflow JSON. Manual n8n UI
 
 ## 12. Experience capture requirement
 
-After first sandbox apply, update `projects/client-ops-reporting-bridge/n8n/experience-pack/` with create/re-GET facts. Phase 1B-B captured inactive-create experience; Phase 1B-B1 captured native auth binding; Phase 1B-B2 captured authenticated POST / activation containment; Phase 1B-C/C0R2 captured Telegram bot/credential intake and chat-target confirmation; Phase 1B-C0S captured Pattern B semantics (`PATTERN_B_CONFIRMED`). Delivery apply to Client Ops workflow still incomplete pending 1B-C1.
+After first sandbox apply, update `projects/client-ops-reporting-bridge/n8n/experience-pack/` with create/re-GET facts. Phase 1B-B captured inactive-create experience; Phase 1B-B1 captured native auth binding; Phase 1B-B2 captured authenticated POST / activation containment; Phase 1B-C/C0R2/C0S captured Telegram intake/semantics; Phase 1B-C1 captured inactive Telegram apply + one delivery. Production activation still incomplete.
 
 ## Remaining gaps (SAFE UNKNOWN)
 

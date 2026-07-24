@@ -1,6 +1,6 @@
 # Phase 1 Implementation Readiness
 
-**Status:** PHASE 1A + PROGRAMMER EXTENSION + PHASE 1B-B + PHASE 1B-B1 + PHASE 1B-B2 + PHASE 1B-C INTAKE + C0R2 + C0S COMPLETE / TELEGRAM SANDBOX APPLY PENDING
+**Status:** PHASE 1A + PROGRAMMER EXTENSION + PHASE 1B-B + PHASE 1B-B1 + PHASE 1B-B2 + PHASE 1B-C INTAKE + C0R2 + C0S + C1 + C1B COMPLETE / PRODUCTION ACTIVATION PENDING
 **Phase 0A:** COMPLETE
 **Phase 0B:** COMPLETE (documentation)
 **Phase 1A:** COMPLETE (offline exporter core + fixtures + tests)
@@ -9,7 +9,8 @@
 **Phase 1B-B1 native webhook auth binding:** COMPLETE — see [PHASE-1B-B1-NATIVE-WEBHOOK-AUTH-BINDING.md](PHASE-1B-B1-NATIVE-WEBHOOK-AUTH-BINDING.md)
 **Phase 1B-B2 authenticated sandbox POST:** COMPLETE — see [PHASE-1B-B2-AUTHENTICATED-SANDBOX-POST-VALIDATION.md](PHASE-1B-B2-AUTHENTICATED-SANDBOX-POST-VALIDATION.md)
 **Phase 1B-C0S Telegram semantics:** COMPLETE — `PATTERN_B_CONFIRMED` — see [PHASE-1B-C0S-TELEGRAM-INTEGRATION-SEMANTICS-VERIFICATION.md](PHASE-1B-C0S-TELEGRAM-INTEGRATION-SEMANTICS-VERIFICATION.md)
-**Phase 1B Telegram sandbox apply / production activation:** NOT STARTED — readiness `READY_FOR_TELEGRAM_SANDBOX_INTEGRATION_APPLY`; next charter **Phase 1B-C1**; auth confirmed `AUTH_NATIVE_HEADER_CREDENTIAL_CONFIRMED`
+**Phase 1B-C1 Telegram sandbox apply:** COMPLETE — inactive workflow; one delivery verified — see [PHASE-1B-C1-TELEGRAM-SANDBOX-INTEGRATION-CONTROLLED-APPLY.md](PHASE-1B-C1-TELEGRAM-SANDBOX-INTEGRATION-CONTROLLED-APPLY.md)
+**Phase 1B production activation:** NOT STARTED — readiness `READY_FOR_NEXT_INACTIVE_SANDBOX_PHASE`; next charter **Phase 1B-D0** (inactive-sandbox next-step decision / runtime-connection charter; documentation only unless separately authorized)
 
 ---
 
@@ -25,7 +26,7 @@
 | Offline n8n harness | **PASS** |
 | Exporter transport / publication | **NOT STARTED** |
 | n8n Client Ops workflow | **CREATED INACTIVE + AUTH BOUND + POST VALIDATED** (`tkM4H0G0gM3q9Foi`; returned inactive after 1B-B2) |
-| Telegram Client Ops bot | **EXISTS** `@monitor_bzpm_metacode_bot` — credential unbound; chat target confirmed; Pattern B semantics **CONFIRMED**; delivery **NOT YET APPLIED** to workflow |
+| Telegram Client Ops bot | **BOUND on sandbox path** — `@monitor_bzpm_metacode_bot`; credential `2bIC5376l7ElXb4B` bound to `Telegram Notify Accepted`; Pattern B applied; workflow inactive; production activation **NOT APPROVED** |
 | Profile A/B selection | **PROFILE_B_REQUIRED** (authoritative) |
 | External credentials | **Local secret prepared** (gitignored); **n8n `httpHeaderAuth` credential created and bound** |
 | Phase 1 production activation | **NOT APPROVED** |

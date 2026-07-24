@@ -18,7 +18,7 @@
 | Offline n8n harness | **PASS** |
 | Sandbox workflow | **CREATED INACTIVE + AUTH BOUND + POST VALIDATED** |
 | Webhook tests | **SENT** (Phase 1B-B2 synthetic matrix; workflow returned inactive) |
-| Telegram | **BOT + CREDENTIAL INTAKE DONE** (`@monitor_bzpm_metacode_bot`; unbound; no send) |
+| Telegram | **SANDBOX APPLY DONE** (`Telegram Notify Accepted` bound; inactive; one C1 delivery) |
 | Production | **UNCHANGED** |
 
 ## Decisions frozen
@@ -52,7 +52,7 @@
 
 ### Workflow stages (sandbox)
 
-Webhook → Capture → Process Gates (CT/auth/schema/security/event_id/dedupe) → IF → Prepare → Respond. No Telegram node live yet (Phase 1B-C prepared unbound credential; Phase 1B-C0S confirmed Pattern B for future apply). No HTTP Request. No Storage write.
+Webhook → Capture → Process Gates → IF → Prepare → Respond Accepted → **Telegram Notify Accepted** (Pattern B). Rejected path does not reach Telegram. No HTTP Request. No Storage write. Workflow remains inactive pending production activation charter.
 
 ### Rollback default
 
@@ -92,10 +92,9 @@ node projects/client-ops-reporting-bridge/n8n/runners/run-client-ops-telegram-cr
 
 1. Exact n8n application version.
 2. Production dedupe store.
-3. Telegram sandbox integration apply (Phase 1B-C1) — chat target confirmed; Pattern B confirmed in 1B-C0S.
+3. Phase 1B-D0 inactive-sandbox next-step decision / runtime-connection charter (documentation only unless separately authorized).
 4. Production activation (separate charter).
-5. Production activation.
 
 ## Next charter
 
-**Phase 1B-C1 — Telegram Sandbox Integration Controlled Apply** — do not begin without explicit operator charter.
+**Phase 1B-D0 — Inactive Sandbox Next-Step Decision and Runtime Connection Charter** — documentation/decision only unless separately authorized; do not begin without explicit operator charter.

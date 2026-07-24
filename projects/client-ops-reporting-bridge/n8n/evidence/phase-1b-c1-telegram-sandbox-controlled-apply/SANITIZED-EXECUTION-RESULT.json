@@ -1,0 +1,23 @@
+{
+  "phase": "1B-C1",
+  "execution_id": "3409",
+  "executions_before": 24,
+  "executions_after": 25,
+  "executions_added": 1,
+  "status": "success",
+  "finished": true,
+  "running_final": 0,
+  "unrelated_executions_in_window": 0,
+  "node_order": [
+    "Webhook Intake",
+    "Capture Request Metadata",
+    "Process Client Ops Gates",
+    "IF Accepted Branch",
+    "Prepare Accepted Response",
+    "Respond Accepted",
+    "Telegram Notify Accepted"
+  ],
+  "respond_before_telegram": true,
+  "telegram_node_runs": 1,
+  "raw_execution_payload_persisted": false
+}

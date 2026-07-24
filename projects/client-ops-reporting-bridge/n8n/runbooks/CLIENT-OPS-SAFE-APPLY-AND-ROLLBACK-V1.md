@@ -69,12 +69,12 @@ Delete only when inactive, exact name/id match, explicit operator approval, and 
 - Phase 1B-C: bot `@monitor_bzpm_metacode_bot` + unbound `telegramApi` credential intake complete; no message send; workflow unchanged.
 - Phase 1B-C0: chat-target discovery retry returned 0 updates.
 - Phase 1B-C0R2: chat target confirmed (`TELEGRAM_CHAT_TARGET_CONFIRMED`); local ignored target file created.
-- Phase 1B-C0S: Pattern B continuation-after-Respond **confirmed** via temporary semantics workflow (deleted); readiness `READY_FOR_TELEGRAM_SANDBOX_INTEGRATION_APPLY`; apply still requires Phase 1B-C1 charter.
+- Phase 1B-C0S: Pattern B continuation-after-Respond **confirmed** via temporary semantics workflow (deleted).
+- Phase 1B-C1: Telegram sandbox integration **applied** to inactive real workflow; one synthetic delivery verified; final `active=false`; readiness `READY_FOR_NEXT_INACTIVE_SANDBOX_PHASE` (evidence baseline committed in 1B-C1B).
 - Display name: `Монитор bzpm.ru — MetaCODE`.
 - Avatar requirement: bzpm.ru logo (verification SAFE UNKNOWN via Bot API).
 - Never put bot token in workflow JSON.
 - Avatar: bzpm.ru logo.
-- Not part of first sandbox create.
 
 ## 11. Production activation gate
 
