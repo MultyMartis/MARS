@@ -16,7 +16,8 @@
 | **Business owner / vision source** | Никита / i-SEO |
 | **Developer** | Антон |
 | **Platform direction** | **Decided** — custom **PHP + SQL/MySQL**; **no WordPress runtime**; Laragon local runtime **verified** (preflight 01); see [I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md](product/I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md) |
-| **Implementation** | **Phase 0 scaffold only** — runtime tree at `X:\MARS-Localhost\sites\php\projects\iseo-report-hub`; **no** DB / vhost / hosts / secrets; **no** product features beyond health/index pages; Phase 1 **blocked** until source preservation model approved |
+| **Implementation** | **Phase 0 scaffold only** — runtime tree at `X:\MARS-Localhost\sites\php\projects\iseo-report-hub`; **no** DB / vhost / hosts / secrets; **no** product features beyond health/index pages; Phase 1 **blocked** until `app-source/` mirror exists and sync/deploy policy is accepted |
+| **Source model** | **Model A selected (planning)** — planned `projects/iseo-report-hub/app-source/`; sync direction source → runtime; mirror **not** created yet |
 
 ---
 
@@ -24,9 +25,9 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | planned / product architecture + Phase 0 runtime scaffold + source/runtime policy |
+| **Status** | planned / product architecture + Phase 0 runtime scaffold + Model A source mirror charter |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | MVP **Phase 0 scaffold reviewed**; source/runtime policy v0.1 defined; Laragon preflight complete; platform decision + technical brief package; Layer 02 complete; static demo v0.4 UX reference; SEO feedback deferred; **Phase 1 blocked** until source preservation model (recommend Model A) approved |
+| **Active stage** | MVP **Phase 0 scaffold reviewed**; source/runtime policy v0.1 defined; **Model A selected for planning** (charter + deploy/sync policy + file map); `app-source/` **not** created; Laragon preflight complete; platform decision + technical brief package; Layer 02 complete; static demo v0.4 UX reference; SEO feedback deferred; **Phase 1 blocked** until mirror exists and sync/deploy policy is accepted |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -139,7 +140,7 @@
 | **What exists** | `public/index.php`, `public/health.php`, folder placeholders, config/env examples |
 | **What does not exist** | Auth, DB, migrations, vhost/hosts, product features |
 | **Source / runtime** | Runtime outside Active Brain Git; see [SOURCE-RUNTIME-POLICY-v0.1](product/I-SEO-REPORT-HUB-SOURCE-RUNTIME-POLICY-v0.1.md) |
-| **Next stage** | **Source mirror + deploy/sync charter (Model A)** — then Phase 1; Phase 1 **blocked** until model approved |
+| **Next stage** | Create and commit `app-source/` mirror from Phase 0 scaffold; Phase 1 **blocked** until mirror exists |
 
 ---
 
@@ -157,6 +158,25 @@
 | **Not done in this wave** | No `app-source/` created; no runtime Git repo; no DB/vhost/hosts |
 | **Phase 1** | **Blocked** until source preservation model approved |
 | **Recommended next** | Create source mirror + deploy/sync charter for Model A |
+
+---
+
+## Model A source mirror + deploy/sync charter 01 (2026-07-24)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Charter complete** — documentation only; no mirror/sync executed |
+| **Model** | **Model A selected for planning** |
+| **Source path (planned)** | `X:\AI MARS\projects\iseo-report-hub\app-source\` — **does not exist yet** |
+| **Runtime target** | `X:\MARS-Localhost\sites\php\projects\iseo-report-hub\` |
+| **Sync direction** | **source → runtime** (default); runtime → source only via explicit import charter |
+| **Charter** | [I-SEO-REPORT-HUB-MODEL-A-SOURCE-MIRROR-CHARTER-v0.1.md](product/I-SEO-REPORT-HUB-MODEL-A-SOURCE-MIRROR-CHARTER-v0.1.md) |
+| **Deploy/sync policy** | [I-SEO-REPORT-HUB-DEPLOY-SYNC-POLICY-v0.1.md](product/I-SEO-REPORT-HUB-DEPLOY-SYNC-POLICY-v0.1.md) |
+| **File map** | [I-SEO-REPORT-HUB-SOURCE-MIRROR-FILE-MAP-v0.1.md](product/I-SEO-REPORT-HUB-SOURCE-MIRROR-FILE-MAP-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-model-a-source-mirror-deploy-sync-charter-01.md](reports/REPORT-iseo-report-hub-model-a-source-mirror-deploy-sync-charter-01.md) |
+| **Not done** | No `app-source/` creation; no runtime copy; no sync; no runtime edits; no DB/vhost/hosts |
+| **Phase 1** | **Blocked** until `app-source/` mirror exists, is committed, and sync/deploy policy is accepted |
+| **Next stage** | Create and commit `app-source/` mirror from Phase 0 scaffold using the approved file map |
 
 ---
 
@@ -225,6 +245,10 @@
 | 46 | [reports/REPORT-iseo-report-hub-mvp-phase-0-runtime-scaffold-01.md](reports/REPORT-iseo-report-hub-mvp-phase-0-runtime-scaffold-01.md) | Phase 0 runtime scaffold closeout |
 | 47 | [product/I-SEO-REPORT-HUB-SOURCE-RUNTIME-POLICY-v0.1.md](product/I-SEO-REPORT-HUB-SOURCE-RUNTIME-POLICY-v0.1.md) | Source vs Localhost runtime versioning policy |
 | 48 | [reports/REPORT-iseo-report-hub-phase-0-runtime-review-source-runtime-policy-01.md](reports/REPORT-iseo-report-hub-phase-0-runtime-review-source-runtime-policy-01.md) | Phase 0 runtime review + source/runtime policy closeout |
+| 49 | [product/I-SEO-REPORT-HUB-MODEL-A-SOURCE-MIRROR-CHARTER-v0.1.md](product/I-SEO-REPORT-HUB-MODEL-A-SOURCE-MIRROR-CHARTER-v0.1.md) | Model A source mirror charter (planning) |
+| 50 | [product/I-SEO-REPORT-HUB-DEPLOY-SYNC-POLICY-v0.1.md](product/I-SEO-REPORT-HUB-DEPLOY-SYNC-POLICY-v0.1.md) | Deploy/sync policy source → runtime |
+| 51 | [product/I-SEO-REPORT-HUB-SOURCE-MIRROR-FILE-MAP-v0.1.md](product/I-SEO-REPORT-HUB-SOURCE-MIRROR-FILE-MAP-v0.1.md) | Phase 0 → app-source include/exclude map |
+| 52 | [reports/REPORT-iseo-report-hub-model-a-source-mirror-deploy-sync-charter-01.md](reports/REPORT-iseo-report-hub-model-a-source-mirror-deploy-sync-charter-01.md) | Model A source mirror + deploy/sync charter closeout |
 
 ---
 
@@ -269,15 +293,15 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Create source mirror + deploy/sync charter for Model A** (recommended) — or explicitly approve an alternate model
-2. **MVP Phase 1** — app skeleton + config + auth baseline — **blocked** until source preservation model approved
+1. **Create and commit `app-source/` mirror** from Phase 0 scaffold using the approved file map (Model A)
+2. **MVP Phase 1** — app skeleton + config + auth baseline — **blocked** until mirror exists and sync/deploy policy is accepted
 3. Optional parallel: **v0.5 demo corrections** from backlog (UX only; not product runtime)
 4. **SEO specialist feedback** — still **deferred** until operator opens feedback charter
 5. Work dictionary extraction/sanitization (из Nikita materials; **exclude** credential sheet)
 6. MVP implementation phases 2–11 per implementation charter (Anton / i-SEO)
 7. Later: n8n/API/AI integration (events only; human approval gates)
 
-**Historical note:** Static demos v0.1–v0.4, report content architecture, and Product Architecture Layer 02 are complete as documentation/demo baselines. Platform decision (PHP+MySQL) supersedes WordPress-as-runtime assumptions for forward work. Phase 0 scaffold exists on Localhost; source versioning requires Model A charter before Phase 1.
+**Historical note:** Static demos v0.1–v0.4, report content architecture, and Product Architecture Layer 02 are complete as documentation/demo baselines. Platform decision (PHP+MySQL) supersedes WordPress-as-runtime assumptions for forward work. Phase 0 scaffold exists on Localhost; Model A charter + deploy/sync policy are defined; `app-source/` mirror creation is the next gate before Phase 1.
 
 ---
 
@@ -285,8 +309,9 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 - **Implementation is Phase 0 scaffold only** — not a product app
 - **Runtime scaffold exists** at `X:\MARS-Localhost\sites\php\projects\iseo-report-hub` — index/health pages + folders; **no** DB, **no** auth, **no** migrations
-- **Runtime is outside Active Brain Git** — not versioned until source-mirror charter
-- **Phase 1 is blocked** until source preservation model is approved
+- **Runtime is outside Active Brain Git** — not versioned until `app-source/` mirror is created and committed
+- **Model A selected for planning** — `app-source/` path planned; sync source → runtime; mirror **not** created yet
+- **Phase 1 is blocked** until mirror exists and sync/deploy policy is accepted
 - **No WordPress plugin exists** (and WP is not the chosen runtime)
 - **No API integration exists**
 - **No n8n workflow exists**
