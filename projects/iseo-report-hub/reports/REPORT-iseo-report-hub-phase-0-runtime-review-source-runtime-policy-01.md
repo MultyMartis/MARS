@@ -108,7 +108,7 @@
 | Exact-path `git add` | **Yes** — allowlisted Active Brain paths only |
 | Commit | **Yes** |
 | Message | `docs(iseo-report-hub): define source runtime policy` |
-| Commit hash | `COMMIT_HASH_PLACEHOLDER` |
+| Commit hash | `09fb3b7f` (`09fb3b7fdc64cec11e99e4d3f17cbb05a3607959`) |
 | HEAD verification | `git show --name-only --oneline --stat HEAD` — allowlisted docs only |
 | Push | **No** |
 | Runtime path staged | **No** |
