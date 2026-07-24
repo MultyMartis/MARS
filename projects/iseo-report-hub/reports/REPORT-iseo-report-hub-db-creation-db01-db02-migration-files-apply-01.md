@@ -124,6 +124,7 @@
 | Commit | **yes** |
 | Message | `feat(iseo-report-hub): add initial db migration` |
 | Commit hash | `9ada00b3f89a05040f4d3bb1deb16f5fe9ba3146` |
+| Hash-record commit | `5af7d72704d956123ee929ad0b1c8e1a0c005c4a` — `docs(iseo-report-hub): record initial db migration commit hash` |
 | Push | **no** |
 
 Staged allowlist (expected):
