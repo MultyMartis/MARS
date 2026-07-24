@@ -208,9 +208,10 @@ Audit-wide YES count: **34** (algorithms, proprietary metrics, myth-prone terms,
 
 ## 17. Git Persistence
 
-Scoped commit subject:
+Scoped commit:
 
-`docs(iseo-su): define glossary editorial standard and pilot`
+- subject: `docs(iseo-su): define glossary editorial standard and pilot`
+- hash: `c1896c1a551475a84880e8c0ff5f8e97d8536b52`
 
 Explicit path staging only. **No push.** Foreign WIP excluded.
 
