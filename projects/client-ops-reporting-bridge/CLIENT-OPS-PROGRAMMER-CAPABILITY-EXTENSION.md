@@ -6,6 +6,7 @@
 **Extension commit:** `04cd01d1881bccf6fc0dfeebef5b891e378fef37`
 **Phase 1B-B:** inactive sandbox created (see [PHASE-1B-B-INACTIVE-SANDBOX-WORKFLOW.md](PHASE-1B-B-INACTIVE-SANDBOX-WORKFLOW.md))
 **Phase 1B-B1:** native auth bound (see [PHASE-1B-B1-NATIVE-WEBHOOK-AUTH-BINDING.md](PHASE-1B-B1-NATIVE-WEBHOOK-AUTH-BINDING.md))
+**Phase 1B-B2:** authenticated POST validated (see [PHASE-1B-B2-AUTHENTICATED-SANDBOX-POST-VALIDATION.md](PHASE-1B-B2-AUTHENTICATED-SANDBOX-POST-VALIDATION.md))
 
 ## Final status
 
@@ -15,8 +16,8 @@
 | Client Ops programmer extension | **COMPLETE** |
 | Workflow template | **CREATED LOCALLY** |
 | Offline n8n harness | **PASS** |
-| Sandbox workflow | **CREATED INACTIVE + AUTH BOUND** (`AUTH_NATIVE_HEADER_CREDENTIAL_BOUND`) |
-| Webhook tests | **NOT SENT** |
+| Sandbox workflow | **CREATED INACTIVE + AUTH BOUND + POST VALIDATED** |
+| Webhook tests | **SENT** (Phase 1B-B2 synthetic matrix; workflow returned inactive) |
 | Telegram | **NOT CONNECTED** |
 | Production | **UNCHANGED** |
 
@@ -25,7 +26,8 @@
 ### Auth MVP
 
 - Header: `X-MARS-Client-Ops-Token` (Bearer also accepted by Code path historically; native Webhook Header Auth enforces the header credential).
-- Live Phase 1B-B1 binding: **AUTH_NATIVE_HEADER_CREDENTIAL_BOUND**.
+- Live Phase 1B-B2 confirmation: **AUTH_NATIVE_HEADER_CREDENTIAL_CONFIRMED**.
+- Observed native reject: HTTP **403** text `Authorization data is wrong!` (not workflow JSON 401).
 - Credential display name: `MARS Client Ops Webhook Auth — bzpm.ru`.
 - Credential type: `httpHeaderAuth`.
 - Secret never in Git/template/responses/workflow JSON.
@@ -36,8 +38,7 @@
 
 - **`DEDUPE_DEFERRED_SANDBOX`**
 - Response may include `dedupe: "DEFERRED_SANDBOX"` / `DEDUPE_NOT_ENABLED_SANDBOX`
-- Production durable store still required later (Data Store unproven).
-
+- Phase 1B-B2 duplicate `event_id` accepted twice — durable store still required later.
 ### Response contract
 
 - ACCEPTED → HTTP 202

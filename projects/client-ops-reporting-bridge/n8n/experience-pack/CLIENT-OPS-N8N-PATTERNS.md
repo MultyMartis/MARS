@@ -1,6 +1,6 @@
 # Client Ops n8n Patterns
 
-**Status:** PARTIAL — Phase 1B-B inactive create captured
+**Status:** PARTIAL — Phase 1B-B create + Phase 1B-B1 auth + Phase 1B-B2 POST captured
 
 ## Frozen design patterns
 
@@ -11,16 +11,19 @@
 - Dedupe deferred in first sandbox (`DEDUPE_DEFERRED_SANDBOX`).
 - No Telegram in first sandbox.
 - No manual n8n UI node assembly — Cursor/MetaBOT programmer generates JSON.
-- Sandbox-first; inactive create; never auto-activate.
+- Sandbox-first; inactive create; never leave activated after POST tests.
 
-## Patterns proven in Phase 1B-B
+## Patterns proven in Phase 1B-B / B1 / B2
 
 - Separate write-capable create client from GET-only exporter.
 - Dry-run default; `--apply` + exact confirmation phrase for live create.
 - Immediate re-GET + sanitized structural diff after create.
 - `AUTH_BLOCKED_INACTIVE_ONLY` is acceptable when native credential binding is not evidenced.
-- After Phase 1B-B1: prefer `AUTH_NATIVE_HEADER_CREDENTIAL_BOUND` with dedicated `httpHeaderAuth` credential and Webhook `authentication=headerAuth`.
+- Prefer `AUTH_NATIVE_HEADER_CREDENTIAL_BOUND` / confirmed with dedicated `httpHeaderAuth` credential and Webhook `authentication=headerAuth`.
 - Keep secrets in gitignored local files and n8n credential store — never in workflow JSON / Code / Git evidence.
+- Controlled temporary activation allowlisted by workflow ID; deactivate in `finally`; never print full webhook URL.
+- Native Header Auth rejects with HTTP 403 text before business executions.
+- Malformed/oversized bodies may be rejected by native parse (HTTP 422) before workflow size gates.
 - Leave inactive by default; deletion HITL-only.
 
 ## Runtime note

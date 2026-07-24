@@ -1,0 +1,29 @@
+{
+  "captured_at": "2026-07-24T03:55:27Z",
+  "workflow_id": "tkM4H0G0gM3q9Foi",
+  "workflow_name": "MARS Client Ops Bridge — bzpm.ru",
+  "exact_name_count": 1,
+  "active": false,
+  "nodes": 9,
+  "versionId": "6c6d1282-0105-47e1-a3f5-b070cec0664b",
+  "updatedAt": "2026-07-23T18:21:07.808Z",
+  "webhook_type": "n8n-nodes-base.webhook",
+  "webhook_typeVersion": 2.1,
+  "authentication": "headerAuth",
+  "credential_reference": {
+    "id": "WKHmPaw6QBp7WnzP",
+    "name": "MARS Client Ops Webhook Auth — bzpm.ru",
+    "type": "httpHeaderAuth",
+    "value_visible": false
+  },
+  "credential_exact_name_count": 1,
+  "auth_placeholder_absent": true,
+  "dedupe": "DEDUPE_DEFERRED_SANDBOX",
+  "telegram_absent": true,
+  "http_request_absent": true,
+  "sheets_absent": true,
+  "data_store_absent": true,
+  "executions_baseline": 0,
+  "ignored_snapshot_path_class": "local/client-ops-reporting-bridge/bzpm.ru/rollback/phase-1b-b2/",
+  "full_url_in_repo": false
+}

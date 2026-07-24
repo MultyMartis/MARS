@@ -1,7 +1,7 @@
 # Phase 1 MVP Gates
 
-**Status:** DOCUMENTATION + PROGRAMMER EXTENSION + PHASE 1B-B INACTIVE SANDBOX + PHASE 1B-B1 AUTH BINDING COMPLETE / AUTH POST PENDING
-**Gate actions:** inactive sandbox create **EXECUTED**; native Header Auth binding **EXECUTED**; Telegram / authenticated POST / production activation **NOT EXECUTED**
+**Status:** DOCUMENTATION + PROGRAMMER EXTENSION + PHASE 1B-B + PHASE 1B-B1 + PHASE 1B-B2 COMPLETE / TELEGRAM PENDING
+**Gate actions:** inactive sandbox create **EXECUTED**; native Header Auth binding **EXECUTED**; authenticated POST matrix **EXECUTED** (workflow returned inactive); Telegram / production activation **NOT EXECUTED**
 **Phase 1 production readiness:** NOT READY until remaining activation gates are satisfied
 
 ---
@@ -20,7 +20,7 @@
 | — | Transport profile for bzpm Bridge | **PROFILE_B_REQUIRED** | Authenticated webhook intake |
 | — | Manual n8n UI assembly | **NOT ACCEPTED** | Cursor/MetaBOT programmer generates JSON |
 | — | First sandbox dedupe | **DEDUPE_DEFERRED_SANDBOX** | No false durable claims |
-| — | Auth MVP | **Native Header Auth bound** (`AUTH_NATIVE_HEADER_CREDENTIAL_BOUND`) | Credential `MARS Client Ops Webhook Auth — bzpm.ru`; header `X-MARS-Client-Ops-Token`; workflow inactive; POST validation not yet run |
+| — | Auth MVP | **Native Header Auth confirmed** (`AUTH_NATIVE_HEADER_CREDENTIAL_CONFIRMED`) | Credential `MARS Client Ops Webhook Auth — bzpm.ru`; header `X-MARS-Client-Ops-Token`; Phase 1B-B2 POST matrix passed; workflow inactive |
 
 Do **not** re-ask decisions already marked APPROVED / FROZEN.
 
@@ -58,7 +58,7 @@ Client Ops Bridge for bzpm.ru uses **PROFILE_B_REQUIRED**:
 | **Programmer extension gate** | Local template/harness/runbooks ready | Harness PASS + template gates PASS | Docs/tools only |
 | **Auth binding gate** | Native Header Auth bound | Credential + inactive workflow PUT done; secret outside Git | Rotate secret externally; rebind under new charter |
 | **n8n inactive sandbox create gate** | Create inactive workflow via programmer | **SATISFIED** — see `n8n/evidence/phase-1b-b-inactive-sandbox-create/` | Abandon inactive or HITL delete |
-| **Authenticated POST gate** | First protected webhook tests | Synthetic envelopes only | Disable webhook / leave inactive |
+| **Authenticated POST gate** | First protected webhook tests | **SATISFIED** — see `n8n/evidence/phase-1b-b2-authenticated-post-validation/` | Disable webhook / leave inactive |
 | **Telegram credential gate** | Dedicated bot approval + credential placement | Operator credential placement in n8n only; no secrets in Git | Rotate/revoke token externally |
 | **First sandbox message gate** | First SIMPLE message to **approved** internal test chat | Screenshot/transcript sanitized | Stop sending; disable workflow |
 | **Production workflow activation gate** | Explicit HITL to activate | Apply manifest + rollback plan (MetaBOT discipline) | Deactivate workflow; preserve SITE monitor |

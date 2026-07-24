@@ -1,0 +1,32 @@
+{
+  "candidates": [
+    {
+      "mode": "POST_MODE_CONTROLLED_TEMPORARY_ACTIVATION",
+      "evidence": "MetaBOT sandbox-pc07 and related runners: POST /api/v1/workflows/{id}/activate then production /webhook/{path} then deactivate; OpenAPI docs host present; activate OPTIONS returns 405 (endpoint exists, method restricted).",
+      "selected": true,
+      "reason": "No proven API-driven test-listen mechanism on this installation; temporary activation already evidenced in MetaBOT contour."
+    },
+    {
+      "mode": "POST_MODE_API_TEST_LISTEN",
+      "evidence": "Live swagger-ui-init probe yielded no documented listen/test webhook API path for this host.",
+      "selected": false,
+      "reason": "Not evidenced; inventing endpoints forbidden."
+    },
+    {
+      "mode": "POST_MODE_EXISTING_SANDBOX_MECHANISM",
+      "evidence": "No separate Client Ops sandbox listen harness beyond temporary activation pattern.",
+      "selected": false,
+      "reason": "Activation pattern is the existing mechanism."
+    },
+    {
+      "mode": "POST_MODE_BLOCKED",
+      "evidence": "N/A — activation endpoints and production webhook route class are available.",
+      "selected": false,
+      "reason": "Not blocked."
+    }
+  ],
+  "verdict": "POST_MODE_CONTROLLED_TEMPORARY_ACTIVATION",
+  "host_class": "approved MARS n8n",
+  "route_class": "production webhook",
+  "url_exposed": false
+}

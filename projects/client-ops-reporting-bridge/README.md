@@ -1,11 +1,11 @@
 # MARS Client Ops Reporting Bridge
 
 **Subsystem name:** MARS Client Ops Reporting Bridge
-**Status:** PHASE 0A/0B COMPLETE + PHASE 1A OFFLINE EXPORTER CORE COMPLETE + PROGRAMMER EXTENSION COMPLETE + PHASE 1B-B INACTIVE SANDBOX CREATED + PHASE 1B-B1 NATIVE AUTH BOUND
-**Implementation status:** Phase 1A offline exporter core + fixtures + tests **COMPLETE**; MetaBOT programmer Client Ops extension **COMPLETE**; Phase 1B-B inactive sandbox workflow **CREATED**; Phase 1B-B1 native Header Auth credential **BOUND** (`AUTH_NATIVE_HEADER_CREDENTIAL_BOUND`); authenticated sandbox POST / Telegram / production activation **NOT STARTED**
+**Status:** PHASE 0A/0B COMPLETE + PHASE 1A OFFLINE EXPORTER CORE COMPLETE + PROGRAMMER EXTENSION COMPLETE + PHASE 1B-B INACTIVE SANDBOX CREATED + PHASE 1B-B1 NATIVE AUTH BOUND + PHASE 1B-B2 AUTHENTICATED POST VALIDATED
+**Implementation status:** Phase 1A offline exporter core + fixtures + tests **COMPLETE**; MetaBOT programmer Client Ops extension **COMPLETE**; Phase 1B-B inactive sandbox workflow **CREATED**; Phase 1B-B1 native Header Auth credential **BOUND**; Phase 1B-B2 authenticated sandbox POST matrix **PASSED** (workflow returned inactive); Telegram / production activation **NOT STARTED**
 **Production state:** UNCHANGED
 **Transport decision:** **PROFILE_B_REQUIRED**
-**Live n8n workflow name:** `MARS Client Ops Bridge — bzpm.ru` (inactive)
+**Live n8n workflow name:** `MARS Client Ops Bridge — bzpm.ru` (inactive; POST validated under temporary activation)
 **Canonical locus:** `projects/client-ops-reporting-bridge/`
 **Registry:** `project_id` **not registered** — programme locus only (registry mutation not authorized)
 
@@ -131,6 +131,15 @@ Phase 0A freezes the contract. Phase 0B freezes implementation-ready design and 
 | `n8n/experience-pack/` | Skeleton experience pack |
 | `n8n/runners/` | Greenfield create runner skeleton (not executed) |
 | MetaBOT knowledge | `projects/metabot-seo-content-agent/metabot-developer/client-ops-n8n-extension-v1.md` |
+
+### Phase 1B — n8n sandbox transport
+
+| Document / path | Role |
+|-----------------|------|
+| [PHASE-1B-B-INACTIVE-SANDBOX-WORKFLOW.md](PHASE-1B-B-INACTIVE-SANDBOX-WORKFLOW.md) | Inactive sandbox create |
+| [PHASE-1B-B1-NATIVE-WEBHOOK-AUTH-BINDING.md](PHASE-1B-B1-NATIVE-WEBHOOK-AUTH-BINDING.md) | Native Header Auth binding |
+| [PHASE-1B-B2-AUTHENTICATED-SANDBOX-POST-VALIDATION.md](PHASE-1B-B2-AUTHENTICATED-SANDBOX-POST-VALIDATION.md) | Authenticated POST matrix |
+| `n8n/evidence/phase-1b-b2-authenticated-post-validation/` | Sanitized POST evidence |
 
 ---
 

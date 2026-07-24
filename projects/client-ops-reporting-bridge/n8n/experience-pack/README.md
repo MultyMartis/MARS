@@ -1,7 +1,7 @@
 # Client Ops n8n Experience Pack
 
-**Status:** PARTIAL — INACTIVE SANDBOX CREATE + NATIVE AUTH BINDING CAPTURED
-Full experience remains incomplete until authenticated POST and later Telegram testing.
+**Status:** PARTIAL — CREATE + AUTH BINDING + AUTHENTICATED POST CAPTURED
+Telegram and production activation remain incomplete.
 
 ## Contents
 
@@ -32,11 +32,22 @@ Full experience remains incomplete until authenticated POST and later Telegram t
 - Credential create payload shape (sanitized): `{ name, type: "httpHeaderAuth", data: { name: "<Header-Name>", value: "<secret>" } }` — value never stored in Git.
 - Safe secret-loading pattern: read gitignored `secrets.local.env` into process memory only; never print; never pass on argv; never write into workflow JSON.
 - Controlled auth-only PUT pattern: allowlisted workflow ID client; strip `webhookId`/read-only fields; require `--apply` + confirmation phrase; compare `versionId` pre-PUT; save gitignored rollback; immediate re-GET.
-- After native binding, remove Code placeholder shared-secret comparison and retain `auth_mode=NATIVE_HEADER_AUTH` marker; do not claim POST response semantics until Phase 1B-B2.
+- After native binding, remove Code placeholder shared-secret comparison and retain `auth_mode=NATIVE_HEADER_AUTH` marker.
 - Rollback lesson: leave inactive after successful auth-only PUT; retain ignored raw rollback; do not auto-delete credential.
+
+## Facts learned from Phase 1B-B2 authenticated POST
+
+- Preferred POST mode when test-listen API is absent: controlled temporary activation + production webhook route class + deactivate in `finally`.
+- Native Header Auth reject: HTTP 403 plain text `Authorization data is wrong!`; no business execution.
+- Valid authenticated envelopes: HTTP 202 `ACCEPTED` with `dedupe: DEFERRED_SANDBOX`.
+- Validation/security rejects: HTTP 400 with `INVALID_SCHEMA` / `SECURITY_REJECTED`.
+- Unsupported Content-Type: workflow HTTP 415 after auth.
+- Malformed JSON and oversized payloads: native HTTP 422 parse failure may occur before workflow gates (no execution).
+- Duplicate event_id under deferred dedupe: both submissions accepted.
+- Evidence redaction: never store full webhook URL/path, auth secret, or raw execution payloads in Git.
 
 ## Still incomplete until later charters
 
-- Authenticated POST behavior (unauthorized/authorized status codes and bodies)
 - Telegram delivery
 - Production activation
+- Durable dedupe store

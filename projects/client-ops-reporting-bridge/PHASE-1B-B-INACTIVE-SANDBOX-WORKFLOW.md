@@ -56,7 +56,8 @@ Default: leave inactive. Deletion HITL-only. Rollback required now: **NO**.
 ## Next HITL gates
 
 1. **Phase 1B-B1 — Native Webhook Auth Binding** — **COMPLETE** (see `PHASE-1B-B1-NATIVE-WEBHOOK-AUTH-BINDING.md`).
-2. **Phase 1B-B2 — Authenticated Sandbox POST Validation** (separate charter) — do not activate; validate unauthorized/authorized POST behavior only under explicit charter.
+2. **Phase 1B-B2 — Authenticated Sandbox POST Validation** — **COMPLETE** — see [PHASE-1B-B2-AUTHENTICATED-SANDBOX-POST-VALIDATION.md](PHASE-1B-B2-AUTHENTICATED-SANDBOX-POST-VALIDATION.md).
+3. **Phase 1B-C — Telegram Bot Intake and Sandbox Integration Preparation** (separate charter).
 3. Later Telegram bot/credential/message charter.
 4. Production activation remains blocked.
 

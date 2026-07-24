@@ -1,0 +1,487 @@
+{
+  "generated_at": "2026-07-24T03:55:40.093Z",
+  "post_mode": "POST_MODE_CONTROLLED_TEMPORARY_ACTIVATION",
+  "requests_attempted": 28,
+  "requests_completed": 28,
+  "activation_changes": 2,
+  "cases": [
+    {
+      "case": "T01",
+      "scenario": "No auth header",
+      "auth": "omit",
+      "http": 403,
+      "classification": "NATIVE_AUTH_REJECTED",
+      "expected_classification": "NATIVE_AUTH_REJECTED",
+      "latency_ms": 114,
+      "response": {
+        "raw_redacted": "Authorization data is wrong!"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": false
+    },
+    {
+      "case": "T02",
+      "scenario": "Wrong auth value",
+      "auth": "wrong",
+      "http": 403,
+      "classification": "NATIVE_AUTH_REJECTED",
+      "expected_classification": "NATIVE_AUTH_REJECTED",
+      "latency_ms": 107,
+      "response": {
+        "raw_redacted": "Authorization data is wrong!"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": false
+    },
+    {
+      "case": "T03",
+      "scenario": "Unsupported content type",
+      "auth": "valid",
+      "http": 415,
+      "classification": "NATIVE_PARSE_REJECTED",
+      "expected_classification": "NATIVE_PARSE_REJECTED",
+      "latency_ms": 264,
+      "response": {
+        "ok": false,
+        "result": "REJECTED",
+        "code": "UNSUPPORTED_MEDIA_TYPE"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": true
+    },
+    {
+      "case": "T04",
+      "scenario": "Malformed JSON",
+      "auth": "valid",
+      "http": 422,
+      "classification": "NATIVE_PARSE_REJECTED",
+      "expected_classification": "NATIVE_PARSE_REJECTED",
+      "latency_ms": 125,
+      "response": {
+        "code": 422,
+        "message": "Failed to parse request body"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": false
+    },
+    {
+      "case": "T05",
+      "scenario": "Valid OK",
+      "auth": "valid",
+      "http": 202,
+      "classification": "WORKFLOW_ACCEPTED",
+      "expected_classification": "WORKFLOW_ACCEPTED",
+      "latency_ms": 233,
+      "response": {
+        "ok": true,
+        "result": "ACCEPTED",
+        "event_id": "95483aff-c02e-4930-bb1a-9e6b167a346a",
+        "dedupe": "DEFERRED_SANDBOX"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": true
+    },
+    {
+      "case": "T06",
+      "scenario": "Valid ATTENTION",
+      "auth": "valid",
+      "http": 202,
+      "classification": "WORKFLOW_ACCEPTED",
+      "expected_classification": "WORKFLOW_ACCEPTED",
+      "latency_ms": 179,
+      "response": {
+        "ok": true,
+        "result": "ACCEPTED",
+        "event_id": "2b02e062-f3ee-4d0a-846c-034903cdbfe6",
+        "dedupe": "DEFERRED_SANDBOX"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": true
+    },
+    {
+      "case": "T07",
+      "scenario": "Valid FAILED",
+      "auth": "valid",
+      "http": 202,
+      "classification": "WORKFLOW_ACCEPTED",
+      "expected_classification": "WORKFLOW_ACCEPTED",
+      "latency_ms": 166,
+      "response": {
+        "ok": true,
+        "result": "ACCEPTED",
+        "event_id": "cb444e39-573b-44c1-84a4-34311df29e82",
+        "dedupe": "DEFERRED_SANDBOX"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": true
+    },
+    {
+      "case": "T08",
+      "scenario": "Valid BLOCKED",
+      "auth": "valid",
+      "http": 202,
+      "classification": "WORKFLOW_ACCEPTED",
+      "expected_classification": "WORKFLOW_ACCEPTED",
+      "latency_ms": 171,
+      "response": {
+        "ok": true,
+        "result": "ACCEPTED",
+        "event_id": "1dd63553-565b-40e9-9fa7-c5bc32eb5706",
+        "dedupe": "DEFERRED_SANDBOX"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": true
+    },
+    {
+      "case": "T09",
+      "scenario": "Invalid schema_name",
+      "auth": "valid",
+      "http": 400,
+      "classification": "WORKFLOW_VALIDATION_REJECTED",
+      "expected_classification": "WORKFLOW_VALIDATION_REJECTED",
+      "latency_ms": 162,
+      "response": {
+        "ok": false,
+        "result": "REJECTED",
+        "code": "INVALID_SCHEMA"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": true
+    },
+    {
+      "case": "T10",
+      "scenario": "Unsupported schema major",
+      "auth": "valid",
+      "http": 400,
+      "classification": "WORKFLOW_VALIDATION_REJECTED",
+      "expected_classification": "WORKFLOW_VALIDATION_REJECTED",
+      "latency_ms": 206,
+      "response": {
+        "ok": false,
+        "result": "REJECTED",
+        "code": "INVALID_SCHEMA"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": true
+    },
+    {
+      "case": "T11",
+      "scenario": "Invalid site_id",
+      "auth": "valid",
+      "http": 400,
+      "classification": "WORKFLOW_VALIDATION_REJECTED",
+      "expected_classification": "WORKFLOW_VALIDATION_REJECTED",
+      "latency_ms": 163,
+      "response": {
+        "ok": false,
+        "result": "REJECTED",
+        "code": "INVALID_SCHEMA"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": true
+    },
+    {
+      "case": "T12",
+      "scenario": "Invalid domain",
+      "auth": "valid",
+      "http": 400,
+      "classification": "WORKFLOW_VALIDATION_REJECTED",
+      "expected_classification": "WORKFLOW_VALIDATION_REJECTED",
+      "latency_ms": 191,
+      "response": {
+        "ok": false,
+        "result": "REJECTED",
+        "code": "INVALID_SCHEMA"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": true
+    },
+    {
+      "case": "T13",
+      "scenario": "Invalid event_type",
+      "auth": "valid",
+      "http": 400,
+      "classification": "WORKFLOW_VALIDATION_REJECTED",
+      "expected_classification": "WORKFLOW_VALIDATION_REJECTED",
+      "latency_ms": 178,
+      "response": {
+        "ok": false,
+        "result": "REJECTED",
+        "code": "INVALID_SCHEMA"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": true
+    },
+    {
+      "case": "T14",
+      "scenario": "Invalid status",
+      "auth": "valid",
+      "http": 400,
+      "classification": "WORKFLOW_VALIDATION_REJECTED",
+      "expected_classification": "WORKFLOW_VALIDATION_REJECTED",
+      "latency_ms": 172,
+      "response": {
+        "ok": false,
+        "result": "REJECTED",
+        "code": "INVALID_SCHEMA"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": true
+    },
+    {
+      "case": "T15",
+      "scenario": "Invalid event_id UUID",
+      "auth": "valid",
+      "http": 400,
+      "classification": "WORKFLOW_VALIDATION_REJECTED",
+      "expected_classification": "WORKFLOW_VALIDATION_REJECTED",
+      "latency_ms": 182,
+      "response": {
+        "ok": false,
+        "result": "REJECTED",
+        "code": "INVALID_SCHEMA"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": true
+    },
+    {
+      "case": "T16",
+      "scenario": "Boolean metric",
+      "auth": "valid",
+      "http": 400,
+      "classification": "WORKFLOW_VALIDATION_REJECTED",
+      "expected_classification": "WORKFLOW_VALIDATION_REJECTED",
+      "latency_ms": 192,
+      "response": {
+        "ok": false,
+        "result": "REJECTED",
+        "code": "INVALID_SCHEMA"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": true
+    },
+    {
+      "case": "T17",
+      "scenario": "Negative metric",
+      "auth": "valid",
+      "http": 400,
+      "classification": "WORKFLOW_VALIDATION_REJECTED",
+      "expected_classification": "WORKFLOW_VALIDATION_REJECTED",
+      "latency_ms": 180,
+      "response": {
+        "ok": false,
+        "result": "REJECTED",
+        "code": "INVALID_SCHEMA"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": true
+    },
+    {
+      "case": "T18",
+      "scenario": "contains_secrets=true",
+      "auth": "valid",
+      "http": 400,
+      "classification": "WORKFLOW_SECURITY_REJECTED",
+      "expected_classification": "WORKFLOW_SECURITY_REJECTED",
+      "latency_ms": 179,
+      "response": {
+        "ok": false,
+        "result": "REJECTED",
+        "code": "SECURITY_REJECTED"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": true
+    },
+    {
+      "case": "T19",
+      "scenario": "redacted=false",
+      "auth": "valid",
+      "http": 400,
+      "classification": "WORKFLOW_SECURITY_REJECTED",
+      "expected_classification": "WORKFLOW_SECURITY_REJECTED",
+      "latency_ms": 161,
+      "response": {
+        "ok": false,
+        "result": "REJECTED",
+        "code": "SECURITY_REJECTED"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": true
+    },
+    {
+      "case": "T20",
+      "scenario": "Windows path injection",
+      "auth": "valid",
+      "http": 400,
+      "classification": "WORKFLOW_SECURITY_REJECTED",
+      "expected_classification": "WORKFLOW_SECURITY_REJECTED",
+      "latency_ms": 174,
+      "response": {
+        "ok": false,
+        "result": "REJECTED",
+        "code": "SECURITY_REJECTED"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": true
+    },
+    {
+      "case": "T21",
+      "scenario": "UNC path injection",
+      "auth": "valid",
+      "http": 400,
+      "classification": "WORKFLOW_SECURITY_REJECTED",
+      "expected_classification": "WORKFLOW_SECURITY_REJECTED",
+      "latency_ms": 192,
+      "response": {
+        "ok": false,
+        "result": "REJECTED",
+        "code": "SECURITY_REJECTED"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": true
+    },
+    {
+      "case": "T22",
+      "scenario": "Embedded URI credentials",
+      "auth": "valid",
+      "http": 400,
+      "classification": "WORKFLOW_SECURITY_REJECTED",
+      "expected_classification": "WORKFLOW_SECURITY_REJECTED",
+      "latency_ms": 189,
+      "response": {
+        "ok": false,
+        "result": "REJECTED",
+        "code": "SECURITY_REJECTED"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": true
+    },
+    {
+      "case": "T23",
+      "scenario": "Token-like value",
+      "auth": "valid",
+      "http": 400,
+      "classification": "WORKFLOW_SECURITY_REJECTED",
+      "expected_classification": "WORKFLOW_SECURITY_REJECTED",
+      "latency_ms": 190,
+      "response": {
+        "ok": false,
+        "result": "REJECTED",
+        "code": "SECURITY_REJECTED"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": true
+    },
+    {
+      "case": "T24",
+      "scenario": "Stack-trace-like value",
+      "auth": "valid",
+      "http": 400,
+      "classification": "WORKFLOW_SECURITY_REJECTED",
+      "expected_classification": "WORKFLOW_SECURITY_REJECTED",
+      "latency_ms": 167,
+      "response": {
+        "ok": false,
+        "result": "REJECTED",
+        "code": "SECURITY_REJECTED"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": true
+    },
+    {
+      "case": "T25",
+      "scenario": "Private-key marker",
+      "auth": "valid",
+      "http": 400,
+      "classification": "WORKFLOW_SECURITY_REJECTED",
+      "expected_classification": "WORKFLOW_SECURITY_REJECTED",
+      "latency_ms": 166,
+      "response": {
+        "ok": false,
+        "result": "REJECTED",
+        "code": "SECURITY_REJECTED"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": true
+    },
+    {
+      "case": "T26",
+      "scenario": "Oversized payload",
+      "auth": "valid",
+      "http": 422,
+      "classification": "UNEXPECTED",
+      "expected_classification": "PAYLOAD_TOO_LARGE",
+      "latency_ms": 375,
+      "response": {
+        "code": 422,
+        "message": "Failed to parse request body"
+      },
+      "transport_error_class": null,
+      "class_match": false,
+      "expect_execution": false
+    },
+    {
+      "case": "T27",
+      "scenario": "Duplicate event_id first",
+      "auth": "valid",
+      "http": 202,
+      "classification": "WORKFLOW_ACCEPTED",
+      "expected_classification": "WORKFLOW_ACCEPTED",
+      "latency_ms": 173,
+      "response": {
+        "ok": true,
+        "result": "ACCEPTED",
+        "event_id": "042bcf18-2aae-425b-b8e7-9c0e9bb2b165",
+        "dedupe": "DEFERRED_SANDBOX"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": true
+    },
+    {
+      "case": "T28",
+      "scenario": "Duplicate event_id second",
+      "auth": "valid",
+      "http": 202,
+      "classification": "WORKFLOW_ACCEPTED",
+      "expected_classification": "WORKFLOW_ACCEPTED",
+      "latency_ms": 226,
+      "response": {
+        "ok": true,
+        "result": "ACCEPTED",
+        "event_id": "042bcf18-2aae-425b-b8e7-9c0e9bb2b165",
+        "dedupe": "DEFERRED_SANDBOX"
+      },
+      "transport_error_class": null,
+      "class_match": true,
+      "expect_execution": true
+    }
+  ],
+  "secret_printed": false,
+  "full_url_exposed": false
+}

@@ -26,6 +26,7 @@
 - Create payload schema accepted without top-level `active` (workflow remained inactive).
 - Auth mode used at create: `AUTH_BLOCKED_INACTIVE_ONLY`.
 - Auth mode after Phase 1B-B1: `AUTH_NATIVE_HEADER_CREDENTIAL_BOUND`.
+- Auth mode after Phase 1B-B2: `AUTH_NATIVE_HEADER_CREDENTIAL_CONFIRMED`.
 
 ## Phase 1B-B1 auth notes
 
@@ -35,6 +36,17 @@
 - Header name: `X-MARS-Client-Ops-Token`.
 - Credential create: `POST /api/v1/credentials` with write-only `data`.
 - List/GET workflow exposes credential id/name only.
+
+## Phase 1B-B2 POST notes
+
+- Activate: `POST /api/v1/workflows/{id}/activate` (allowlisted ID only).
+- Deactivate: `POST /api/v1/workflows/{id}/deactivate` in `finally`.
+- Production webhook route class used after temporary activation (URL never stored in Git evidence).
+- Native auth reject: HTTP 403 text `Authorization data is wrong!`.
+- Valid accept: HTTP 202 `{ ok:true, result:"ACCEPTED", dedupe:"DEFERRED_SANDBOX" }`.
+- Malformed JSON / oversized: native HTTP 422 `Failed to parse request body` (may skip workflow execution).
+- Content-Type reject: workflow HTTP 415 `UNSUPPORTED_MEDIA_TYPE` after auth.
+- Duplicate event_id: both accepted under deferred dedupe.
 
 ## SAFE UNKNOWN
 

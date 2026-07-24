@@ -52,7 +52,9 @@ Rollback required now: **NO**.
 
 ## Next permitted phase
 
-**Phase 1B-B2 — Authenticated Sandbox POST Validation**
+**Phase 1B-C — Telegram Bot Intake and Sandbox Integration Preparation**
+
+Phase 1B-B2 authenticated POST validation is **COMPLETE** — see [PHASE-1B-B2-AUTHENTICATED-SANDBOX-POST-VALIDATION.md](PHASE-1B-B2-AUTHENTICATED-SANDBOX-POST-VALIDATION.md).
 
 ## Evidence
 
