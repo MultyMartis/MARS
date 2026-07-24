@@ -41,6 +41,17 @@ Status vocabulary: **COMPLETE** · **CREATED** · **PLANNED** · **CONDITIONAL**
 | Glossary source material register | `ISEO-SU-GLOSSARY-SOURCE-MATERIAL-REGISTER-v1.md` | CREATED |
 | Source material canonicalization REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-SOURCE-MATERIAL-CANONICALIZATION.md` | COMPLETE |
 
+### Glossary editorial audit and pilot (2026-07-24)
+
+| Artifact | Path | Status |
+|----------|------|--------|
+| Editorial standard | `ISEO-SU-GLOSSARY-EDITORIAL-STANDARD-v1.md` | CREATED |
+| Term audit summary | `ISEO-SU-GLOSSARY-TERM-AUDIT-v1.md` | CREATED |
+| Term audit CSV (241 rows) | `data/glossary-editorial/ISEO-SU-GLOSSARY-TERM-AUDIT-v1.csv` | CREATED |
+| Pilot batch (12 definitions) | `ISEO-SU-GLOSSARY-PILOT-BATCH-v1.md` | CREATED |
+| SEO and internal linking model | `ISEO-SU-GLOSSARY-SEO-AND-INTERNAL-LINKING-MODEL-v1.md` | CREATED |
+| Editorial audit REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-EDITORIAL-AUDIT-AND-PILOT.md` | COMPLETE |
+
 ---
 
 ## Programme foundation artifacts (this locus)

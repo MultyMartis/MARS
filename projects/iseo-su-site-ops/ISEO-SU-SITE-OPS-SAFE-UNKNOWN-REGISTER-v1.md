@@ -47,19 +47,22 @@ Rule: do **not** invent values. Resolve only with evidence.
 | U-048 | Exact ACF location rules | Groups + consuming templates known | Full location UI export | Admin location panel scrape noisy | Wrong object edits | **No** if editing known objects | Export field groups |
 | U-049 | `/offers` listing UX | Page exists; editor empty; CPT exists | How listing markup is composed | Not fully traced beyond default page template | Offers hub text edits | **No** if editing CPT/singles | Bounded template trace |
 | U-050 | `varvara-new.php` business role | Title VVR-Searcher; 200 | Product ownership/use | Out of marketing IA | Avoid casual edit | **No** | Operator note |
-| G-U-001 | Glossary Yoast focus workflow | CPT + drafts ready | Preferred title/description pattern per term | Editorial preference | Content wave only | **No** for foundation | Operator style guide |
+| G-U-001 | Glossary Yoast focus workflow | CPT + drafts ready; SEO model drafted | Preferred title/description pattern per term after pilot approval | Editorial preference | Content wave only | **No** for foundation | Operator style guide + pilot approval |
 | G-U-002 | Glossary single `.html` URLs | Current CPT slash URLs like `offer` | Whether launch should match blog `.html` | Product URL preference | Future rewrite only | **No** pre-launch | Operator decision at publication |
-| G-U-003 | Related glossary terms | ACF model deferred | Whether bidirectional related terms are needed | Not in workbook | Content UX later | **No** | Editorial charter |
+| G-U-003 | Related glossary terms | ACF model deferred; linking model drafted | Whether bidirectional related terms are needed | Not in workbook | Content UX later | **No** | Editorial charter |
 | G-U-004 | Server inventory JSON retention | File on theme `inc/data/`; import UI disabled | Keep vs remove from production | Ops hygiene | Low | **No** | Operator cleanup preference |
+| G-U-005 | Audit REVIEW queue (8 terms) | Listed in term audit | KEEP vs EXCLUDE decisions | Needs Nikita | Blocks only those terms | **No** for pilot | Nikita review |
+| G-U-006 | Algorithm status currency | Pilot notes caution historical updates | Current official status of АГС/Минусинск/etc. | Needs expert docs check | Expert batch only | **No** | Primary-source verification wave |
+| G-U-007 | GEO vocabulary stability | Pilot definition provisional | Settled industry/official naming | Emerging topic | AI/GEO terms only | **No** | Expert approve before WP upload |
 
 ---
 
 ## Summary
 
-Architecture capture closes the practical onboarding gap: routes, SoT, forms/calc/offers, dual chrome, plugins, ACF groups, and task routing are documented. Glossary foundation adds CPT/templates/draft intake with public exposure HOLD. Remaining SAFE UNKNOWN items are **named** and **non-blocking** for ordinary work that follows the task routing guide and route matrix.
+Architecture capture closes the practical onboarding gap: routes, SoT, forms/calc/offers, dual chrome, plugins, ACF groups, and task routing are documented. Glossary foundation adds CPT/templates/draft intake with public exposure HOLD. Glossary editorial audit adds classification of 241 terms, definition standard, SEO model, and a 12-term pilot in MARS (no WP content upload). Remaining SAFE UNKNOWN items are **named** and **non-blocking** for ordinary work that follows the task routing guide and route matrix.
 
 WPilot bridge/REST remains a separate gate (6D), not required for ordinary site content/file tasks.
 
 ---
 
-*SAFE UNKNOWN Register v1 · updated glossary foundation 2026-07-24.*
+*SAFE UNKNOWN Register v1 · updated glossary editorial audit 2026-07-24.*

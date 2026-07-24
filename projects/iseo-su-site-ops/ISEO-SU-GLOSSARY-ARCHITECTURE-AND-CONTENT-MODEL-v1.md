@@ -11,12 +11,16 @@
 
 | Field | Value |
 |-------|-------|
-| Status | **FOUNDATION READY / TERMS IMPORTED AS DRAFTS** |
-| Public launch | **HOLD** — operator review required |
+| Status | **EDITORIAL MODEL READY / PILOT PREPARED** (WP drafts unchanged) |
+| Public launch | **HOLD** — operator + Nikita review of pilot required |
 | CPT | `glossary` deployed in theme `iseoblog` |
 | Templates | `archive-glossary.php`, `single-glossary.php` |
 | Draft terms | **241** |
 | Published terms | **0** |
+| Definitions in WP | **still absent** — pilot text lives in MARS only |
+| Editorial standard | `ISEO-SU-GLOSSARY-EDITORIAL-STANDARD-v1.md` |
+| Term audit | `ISEO-SU-GLOSSARY-TERM-AUDIT-v1.md` + CSV matrix |
+| Pilot batch | `ISEO-SU-GLOSSARY-PILOT-BATCH-v1.md` (12 terms) |
 | Menu link | **not added** |
 | Sitemap | **excluded** while `ISEO_GLOSSARY_PUBLIC_EXPOSURE` is false |
 | Anonymous `/glossary/` | **404** |
@@ -56,8 +60,11 @@ Professional SEO / digital-marketing glossary managed in WordPress, alphabetical
 |------|-------|
 | Term titles | Ready (241 unique) |
 | Keywords / LSI / synonyms | Imported as ACF editorial metadata |
-| Definitions / excerpts | **Absent** — not invented |
-| Publishable pages | **Not ready** |
+| Editorial audit | **Complete** — KEEP/MERGE/RENAME/REVIEW/EXCLUDE in CSV |
+| Definition writing standard | **Defined** (v1) |
+| Pilot definitions (MARS) | **12 terms drafted** for review |
+| Definitions / excerpts in WordPress | **Absent** — not uploaded in editorial wave |
+| Publishable pages | **Not ready** until review + content upload charter + gate |
 
 ---
 
@@ -202,12 +209,15 @@ Privacy-policy file was **not modified**.
 
 ## 15. Editorial Workflow
 
-1. Keep terms as drafts.
-2. Write definition in editor + short excerpt.
-3. Review synonyms if public.
-4. Yoast title/description per term.
-5. Operator opens publication gate (`ISEO_GLOSSARY_PUBLIC_EXPOSURE`).
-6. Publish terms intentionally; add menu/sitemap only after content QA.
+1. Keep terms as drafts (production unchanged in editorial-audit wave).
+2. Classify via term audit CSV; resolve REVIEW/EXCLUDE with Nikita.
+3. Write definitions in MARS first per `ISEO-SU-GLOSSARY-EDITORIAL-STANDARD-v1.md`.
+4. Approve pilot → separate charter for WP draft content upload.
+5. Review synonyms if public; apply SEO model titles/metas.
+6. Operator opens publication gate (`ISEO_GLOSSARY_PUBLIC_EXPOSURE`).
+7. Publish terms intentionally; add menu/sitemap only after content QA.
+
+SEO / linking detail: `ISEO-SU-GLOSSARY-SEO-AND-INTERNAL-LINKING-MODEL-v1.md`.
 
 ---
 
@@ -246,10 +256,13 @@ Full Beget backup remains last resort (operator-confirmed pre-task).
 
 | ID | Item |
 |----|------|
-| G-U-001 | Exact Yoast primary focus workflow preference per term (operator) |
+| G-U-001 | Exact Yoast primary focus workflow preference per term (operator) — SEO model drafted, pilot pending approval |
 | G-U-002 | Whether final public singles should use `.html` suffix like blog (currently CPT slash URLs like `offer`) |
 | G-U-003 | Future related-terms UX / bidirectional links |
 | G-U-004 | Whether inventory JSON should remain on server after import (currently present; import UI disabled) |
+| G-U-005 | Final disposition of 8 REVIEW terms |
+| G-U-006 | Currency of historical algorithm entries vs official docs |
+| G-U-007 | GEO naming/stability before WP upload |
 
 ---
 

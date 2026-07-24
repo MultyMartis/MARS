@@ -57,10 +57,21 @@ Derived inventories list 241 valid terms and do not invent definitions.
 ## Editorial Status
 
 - **241** WordPress `glossary` drafts exist (imported under commit `2e7f150c`).
-- Definitions are **not** ready.
+- Definitions are **not** ready in WordPress.
+- Editorial standard + full term audit + 12-term pilot prepared in MARS (2026-07-24).
 - Public exposure remains **closed** (`ISEO_GLOSSARY_PUBLIC_EXPOSURE = false`).
-- Editorial review is required before publication.
+- Operator / Nikita review required before bulk definition generation or WP content upload.
+
+### Derived editorial artifacts
+
+| Artifact | Path |
+|----------|------|
+| Editorial standard | `ISEO-SU-GLOSSARY-EDITORIAL-STANDARD-v1.md` |
+| Term audit CSV | `data/glossary-editorial/ISEO-SU-GLOSSARY-TERM-AUDIT-v1.csv` |
+| Pilot batch | `ISEO-SU-GLOSSARY-PILOT-BATCH-v1.md` |
+
+Parent source SHA-256 remains `f7651cffc5d03c497062ac6ee5b6288d9397ae5abede43fbd19f1a3ea26699de`.
 
 ---
 
-*SOURCE / IMMUTABLE / NIKITA v1 · 2026-07-24*
+*SOURCE / IMMUTABLE / NIKITA v1 · editorial audit linked 2026-07-24*

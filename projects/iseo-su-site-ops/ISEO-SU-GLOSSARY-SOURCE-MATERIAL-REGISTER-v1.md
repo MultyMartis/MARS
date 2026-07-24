@@ -126,6 +126,19 @@
 - Empty draft bodies must not be published as finished glossary pages.
 - Public exposure remains closed until operator-authorized editorial and publication gates.
 
+### Editorial audit linkage (2026-07-24)
+
+| Artifact | Path |
+|----------|------|
+| Editorial standard | `ISEO-SU-GLOSSARY-EDITORIAL-STANDARD-v1.md` |
+| Term audit summary | `ISEO-SU-GLOSSARY-TERM-AUDIT-v1.md` |
+| Term audit CSV | `data/glossary-editorial/ISEO-SU-GLOSSARY-TERM-AUDIT-v1.csv` |
+| Pilot batch | `ISEO-SU-GLOSSARY-PILOT-BATCH-v1.md` |
+| SEO / linking model | `ISEO-SU-GLOSSARY-SEO-AND-INTERNAL-LINKING-MODEL-v1.md` |
+| Parent source SHA-256 | `f7651cffc5d03c497062ac6ee5b6288d9397ae5abede43fbd19f1a3ea26699de` (unchanged) |
+
+Workbook v1 remains **immutable**; audit/pilot artifacts are derived editorial work, not a new source version.
+
 ---
 
 ## 11. Security and Privacy Review

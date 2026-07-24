@@ -45,6 +45,18 @@
 - Re-run is idempotent by normalized title (existing drafts are skipped).
 - Admin import UI disabled after successful intake.
 
+## Editorial audit follow-up (2026-07-24)
+
+| Field | Value |
+|-------|-------|
+| Editorial task | ISEO-SU-SITE-OPS-GLOSSARY-EDITORIAL-AUDIT-AND-PILOT-CONTENT-STANDARD |
+| Audit summary | `ISEO-SU-GLOSSARY-TERM-AUDIT-v1.md` |
+| Full audit matrix | `data/glossary-editorial/ISEO-SU-GLOSSARY-TERM-AUDIT-v1.csv` |
+| Status counts (provisional) | KEEP 146 · RENAME 48 · MERGE 26 · REVIEW 8 · EXCLUDE 13 |
+| Pilot definitions | `ISEO-SU-GLOSSARY-PILOT-BATCH-v1.md` (12 terms, MARS-only) |
+| WP drafts mutated | **no** |
+| Public exposure | **still closed** |
+
 ---
 
-*Glossary term intake register v1 · 2026-07-24.*
+*Glossary term intake register v1 · updated editorial audit link 2026-07-24.*
