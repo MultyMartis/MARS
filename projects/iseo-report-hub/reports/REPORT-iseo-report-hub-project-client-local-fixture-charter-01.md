@@ -110,8 +110,8 @@ Documented for next apply wave:
 |-------|-------|
 | Exact-path git add | **yes** — allowlisted docs only |
 | Commit message | `docs(iseo-report-hub): add local fixture charter` |
-| Commit hash | `PENDING_PRIMARY_COMMIT_HASH` |
-| Hash-record follow-up | `PENDING_HASH_RECORD_COMMIT_HASH` (if needed) |
+| Commit hash | `fdebe7b5ba7db5df0c9b0225a3d1a5765b9e7ba8` |
+| Hash-record follow-up | recorded in this follow-up commit |
 | Push | **no** |
 
 ---
