@@ -203,8 +203,12 @@ Scoped commit (no `git add .` / `-A` / pathspec directory dump; explicit file pa
 | Field | Value |
 |-------|-------|
 | Subject | `docs(iseo-su): complete production architecture knowledge base` |
-| Commit hash | *(filled after commit)* |
-| Paths | architecture package + updates + this REPORT only |
+| Commit hash (full) | `3a934926e30bde3c3244203881b68e93629763df` |
+| Commit hash (short) | `3a934926` |
+| Committed file count | **18** |
+| Paths | architecture package + updates + this REPORT only (exact list in Git Persistence post-commit validation) |
+| Staged index after commit | empty |
+| Push | **not performed** |
 | Secrets committed | **No** |
 | Scratch/local secrets | **Not staged** |
 
