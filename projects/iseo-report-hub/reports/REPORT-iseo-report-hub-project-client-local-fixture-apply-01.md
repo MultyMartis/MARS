@@ -133,11 +133,11 @@
 | Exact-path git add | `create-local-fixture.php`, `README.md`, result doc, this report, `OPERATIONAL-INDEX.md` |
 | Staged list | allowlisted i-SEO paths only |
 | Commit message | `feat(iseo-report-hub): add local fixture bootstrap` |
-| Commit hash | **PENDING_PRIMARY_COMMIT** |
-| HEAD verification | after commit |
+| Commit hash | `348b40896a86f5652ea8f7ba5ab5574ebc2abf2b` |
+| HEAD verification | `348b40896a86f5652ea8f7ba5ab5574ebc2abf2b` matches primary commit |
 | Push | **no** |
 
-Hash-record follow-up (if needed): `docs(iseo-report-hub): record local fixture bootstrap commit hash`
+Hash-record follow-up: `docs(iseo-report-hub): record local fixture bootstrap commit hash`
 
 ---
 
