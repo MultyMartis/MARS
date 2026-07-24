@@ -7,10 +7,15 @@ final class AuthController extends BaseController
 {
     public function showLogin(): void
     {
+        if ($this->auth->isAuthenticated() && $this->auth->hasInternalRole()) {
+            $this->redirect('/');
+            return;
+        }
+
         $this->render('login', [
             'pageTitle' => 'Login',
-            'warning' => 'DB auth is not implemented yet. POST /login will not authenticate.',
-            'authImplemented' => false,
+            'authImplemented' => (bool) $this->config->get('auth.implemented', false),
+            'error' => null,
         ]);
     }
 
@@ -22,7 +27,7 @@ final class AuthController extends BaseController
 
         $token = $_POST['_csrf'] ?? null;
         if (!$this->csrf->validate(is_string($token) ? $token : null)) {
-            flash_set('warn', 'CSRF token invalid or missing. Auth still not implemented in Phase 1A.');
+            flash_set('warn', 'CSRF token invalid or missing. Please try again.');
             $this->redirect('/login');
             return;
         }
@@ -30,15 +35,43 @@ final class AuthController extends BaseController
         $email = isset($_POST['email']) && is_string($_POST['email']) ? trim($_POST['email']) : '';
         $password = isset($_POST['password']) && is_string($_POST['password']) ? $_POST['password'] : '';
 
-        $result = $this->auth->login($email, $password);
-        flash_set('warn', $result['message']);
+        $result = $this->auth->login($email, $password, [
+            'ip' => $this->clientIp(),
+            'user_agent' => $this->userAgent(),
+        ]);
+
+        // Never echo password.
+        unset($password);
+
+        if (!empty($result['ok'])) {
+            flash_set('info', 'Signed in successfully.');
+            $this->redirect('/');
+            return;
+        }
+
+        flash_set('warn', (string) ($result['message'] ?? 'Invalid email or password.'));
         $this->redirect('/login');
     }
 
     public function logout(): void
     {
-        $this->auth->logout();
-        flash_set('info', 'Placeholder session cleared. Auth persistence not implemented in Phase 1A.');
+        $this->auth->logout([
+            'ip' => $this->clientIp(),
+            'user_agent' => $this->userAgent(),
+        ]);
+        flash_set('info', 'Signed out.');
         $this->redirect('/login');
+    }
+
+    private function clientIp(): ?string
+    {
+        $ip = $_SERVER['REMOTE_ADDR'] ?? null;
+        return is_string($ip) && $ip !== '' ? $ip : null;
+    }
+
+    private function userAgent(): ?string
+    {
+        $ua = $_SERVER['HTTP_USER_AGENT'] ?? null;
+        return is_string($ua) && $ua !== '' ? $ua : null;
     }
 }

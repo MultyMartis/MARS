@@ -1,6 +1,6 @@
-/* i-SEO Report Hub — Phase 1A optional progressive JS only */
+/* i-SEO Report Hub — progressive enhancement marker */
 
-document.documentElement.dataset.scaffold = 'phase-1a';
+document.documentElement.dataset.scaffold = 'auth-persistence';
 
 document.addEventListener('DOMContentLoaded', () => {
   const stamp = document.createElement('span');

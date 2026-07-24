@@ -21,6 +21,7 @@ final class Response
     {
         http_response_code($status);
         header('Location: ' . $location);
+        exit;
     }
 
     public static function text(string $body, int $status = 200): void

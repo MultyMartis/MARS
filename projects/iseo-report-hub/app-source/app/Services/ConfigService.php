@@ -4,8 +4,8 @@ declare(strict_types=1);
 namespace Iseo\Services;
 
 /**
- * Config loader — defaults + optional future .env.local.
- * Phase 1A: no secrets required; no DB connection.
+ * Config loader — defaults + optional .env.local (runtime).
+ * DB credentials loaded when present; secrets never printed.
  */
 final class ConfigService
 {
@@ -54,6 +54,13 @@ final class ConfigService
             'charset' => 'utf8mb4',
         ]);
 
+        $dbHost = $this->envValue('DB_HOST', (string) ($databaseDefaults['host'] ?? '127.0.0.1'));
+        $dbPort = (int) $this->envValue('DB_PORT', (string) ($databaseDefaults['port'] ?? 3306));
+        $dbName = $this->envValue('DB_DATABASE', (string) ($databaseDefaults['database'] ?? 'iseo_report_hub_dev'));
+        $dbUser = $this->envValue('DB_USERNAME', (string) ($databaseDefaults['username'] ?? 'CHANGE_ME'));
+        $dbPass = $this->envValue('DB_PASSWORD', (string) ($databaseDefaults['password'] ?? 'CHANGE_ME'));
+        $dbConfigured = $this->detectDatabaseConfigured($dbHost, $dbName, $dbUser, $dbPass);
+
         $this->config = [
             'app' => [
                 'name' => $this->envValue('APP_NAME', (string) ($appDefaults['name'] ?? 'i-SEO Report Hub')),
@@ -61,24 +68,25 @@ final class ConfigService
                 'debug' => $this->envBool('APP_DEBUG', (bool) ($appDefaults['debug'] ?? true)),
                 'url' => $this->envValue('APP_URL', (string) ($appDefaults['url'] ?? 'http://iseo-report-hub.test')),
                 'timezone' => (string) ($appDefaults['timezone'] ?? 'Europe/Moscow'),
-                'phase' => '1A',
-                'phase_label' => 'Phase 1A — App skeleton (source-only)',
+                'phase' => 'auth',
+                'phase_label' => 'Auth persistence — local DB-backed login',
             ],
             'database' => [
                 'driver' => (string) ($databaseDefaults['driver'] ?? 'mysql'),
-                'host' => $this->envValue('DB_HOST', (string) ($databaseDefaults['host'] ?? '127.0.0.1')),
-                'port' => (int) $this->envValue('DB_PORT', (string) ($databaseDefaults['port'] ?? 3306)),
-                'database' => $this->envValue('DB_DATABASE', (string) ($databaseDefaults['database'] ?? 'iseo_report_hub_dev')),
-                'username' => $this->envValue('DB_USERNAME', (string) ($databaseDefaults['username'] ?? 'CHANGE_ME')),
-                'password' => $this->envValue('DB_PASSWORD', (string) ($databaseDefaults['password'] ?? 'CHANGE_ME')),
+                'host' => $dbHost,
+                'port' => $dbPort,
+                'database' => $dbName,
+                'username' => $dbUser,
+                'password' => $dbPass,
                 'charset' => (string) ($databaseDefaults['charset'] ?? 'utf8mb4'),
-                'configured' => false,
+                'configured' => $dbConfigured,
                 'connected' => false,
-                'phase_1a_note' => 'DB not configured / not tested in Phase 1A',
             ],
             'auth' => [
-                'implemented' => false,
-                'status' => 'Auth persistence not implemented in Phase 1A',
+                'implemented' => true,
+                'status' => $dbConfigured
+                    ? 'DB-backed auth available'
+                    : 'Auth code present; database not configured',
             ],
             'meta' => [
                 'env_local_present' => $this->envLocalPresent,
@@ -218,5 +226,30 @@ final class ConfigService
         }
 
         return $default;
+    }
+
+    /**
+     * DB is configured when .env.local (or process env) supplies non-placeholder credentials.
+     * Empty password is allowed for local Laragon; username/database must be real.
+     */
+    private function detectDatabaseConfigured(string $host, string $database, string $username, string $password): bool
+    {
+        if (!$this->envLocalPresent && getenv('DB_DATABASE') === false) {
+            return false;
+        }
+
+        if ($host === '' || $database === '' || $username === '') {
+            return false;
+        }
+
+        $placeholders = ['CHANGE_ME', 'changeme', 'your_password', 'your_username'];
+        if (in_array($username, $placeholders, true)) {
+            return false;
+        }
+        if (in_array($password, $placeholders, true)) {
+            return false;
+        }
+
+        return true;
     }
 }

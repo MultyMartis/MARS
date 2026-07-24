@@ -2,13 +2,13 @@
 declare(strict_types=1);
 
 /**
- * i-SEO Report Hub — application bootstrap (Phase 1A).
+ * i-SEO Report Hub — application bootstrap.
  *
  * - Defines paths
  * - Loads helpers / classes / services
  * - Starts session safely
- * - Loads config defaults (optional .env.local if present later)
- * - No database connection
+ * - Loads config (optional .env.local when present)
+ * - Wires DatabaseService (lazy; app boots even if DB missing)
  *
  * @return array<string, mixed>
  */
@@ -25,6 +25,7 @@ require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Support' . DIRECTORY_SEPARAT
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Support' . DIRECTORY_SEPARATOR . 'Router.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Support' . DIRECTORY_SEPARATOR . 'View.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Services' . DIRECTORY_SEPARATOR . 'ConfigService.php';
+require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Services' . DIRECTORY_SEPARATOR . 'DatabaseService.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Services' . DIRECTORY_SEPARATOR . 'AuthService.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Services' . DIRECTORY_SEPARATOR . 'CsrfService.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Controllers' . DIRECTORY_SEPARATOR . 'BaseController.php';
@@ -35,10 +36,11 @@ require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Controllers' . DIRECTORY_SEP
 use Iseo\Services\AuthService;
 use Iseo\Services\ConfigService;
 use Iseo\Services\CsrfService;
+use Iseo\Services\DatabaseService;
 use Iseo\Support\Router;
 use Iseo\Support\View;
 
-// Safe session start (no custom cookie secrets required in Phase 1A).
+// Safe session start.
 if (session_status() !== PHP_SESSION_ACTIVE) {
     session_name('iseo_report_hub_session');
     session_start([
@@ -56,7 +58,8 @@ if ($timezone !== '') {
     date_default_timezone_set($timezone);
 }
 
-$auth = new AuthService();
+$db = new DatabaseService($config);
+$auth = new AuthService($db, $config);
 $csrf = new CsrfService();
 $view = new View(ISEO_VIEWS_PATH);
 $router = new Router();
@@ -66,11 +69,12 @@ $app = [
     'app_path' => ISEO_APP_PATH,
     'public_path' => ISEO_PUBLIC_PATH,
     'config' => $config,
+    'db' => $db,
     'auth' => $auth,
     'csrf' => $csrf,
     'view' => $view,
     'router' => $router,
-    'phase' => '1A',
+    'phase' => 'auth',
     'db_connected' => false,
 ];
 

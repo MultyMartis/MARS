@@ -7,28 +7,39 @@ final class DashboardController extends BaseController
 {
     public function index(): void
     {
+        if (!$this->auth->isAuthenticated() || !$this->auth->hasInternalRole()) {
+            $this->redirect('/login');
+            return;
+        }
+
+        $user = $this->auth->currentUser();
+        $dbConfigured = (bool) $this->config->get('database.configured', false);
+
         $this->render('dashboard', [
             'pageTitle' => 'Dashboard',
+            'user' => $user,
             'cards' => [
                 [
-                    'title' => 'Source skeleton',
+                    'title' => 'Auth',
                     'status' => 'ready',
-                    'detail' => 'Bootstrap, router, views, controllers, services present in app-source.',
-                ],
-                [
-                    'title' => 'Runtime sync',
-                    'status' => 'pending',
-                    'detail' => 'Not synced to X:\\MARS-Localhost in Phase 1A.',
+                    'detail' => 'DB-backed login active for internal roles.',
                 ],
                 [
                     'title' => 'Database',
-                    'status' => 'pending',
-                    'detail' => (string) $this->config->get('database.phase_1a_note', 'DB not configured / not tested in Phase 1A'),
+                    'status' => $dbConfigured ? 'ready' : 'pending',
+                    'detail' => $dbConfigured
+                        ? 'Configured via runtime .env.local (credentials not shown).'
+                        : 'Database not configured.',
                 ],
                 [
-                    'title' => 'Auth',
-                    'status' => 'stub',
-                    'detail' => $this->auth->statusMessage(),
+                    'title' => 'Runtime',
+                    'status' => 'ready',
+                    'detail' => 'Local Laragon runtime at iseo-report-hub.test.',
+                ],
+                [
+                    'title' => 'Reporting CRUD',
+                    'status' => 'pending',
+                    'detail' => 'Not implemented — auth baseline only.',
                 ],
             ],
         ]);

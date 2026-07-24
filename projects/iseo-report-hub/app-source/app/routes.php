@@ -2,8 +2,7 @@
 declare(strict_types=1);
 
 /**
- * Conceptual Phase 1A routes.
- * No database. POST /login does not authenticate.
+ * Conceptual routes — DB-backed auth for local MVP.
  *
  * @var array<string, mixed> $app
  */

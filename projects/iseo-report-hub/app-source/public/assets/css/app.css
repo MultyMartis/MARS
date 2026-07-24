@@ -241,6 +241,39 @@ code {
   color: #b7e6de;
 }
 
+.flash-error {
+  border-color: color-mix(in srgb, var(--danger) 50%, var(--border));
+  color: #efb0b0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.badge-ok,
+.badge-pass {
+  color: var(--ok);
+  border-color: color-mix(in srgb, var(--ok) 45%, var(--border));
+}
+
+.badge-degraded,
+.badge-warn,
+.badge-n\/a {
+  color: var(--warn);
+  border-color: color-mix(in srgb, var(--warn) 45%, var(--border));
+}
+
+.badge-fail {
+  color: var(--danger);
+  border-color: color-mix(in srgb, var(--danger) 45%, var(--border));
+}
+
 .ok {
   color: var(--ok);
 }

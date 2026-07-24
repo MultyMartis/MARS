@@ -16,7 +16,7 @@
 | **Business owner / vision source** | Никита / i-SEO |
 | **Developer** | Антон |
 | **Platform direction** | **Decided** — custom **PHP + SQL/MySQL**; **no WordPress runtime**; Laragon local runtime **verified** (preflight 01); see [I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md](product/I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md) |
-| **Implementation** | **Phase 1B complete** + **local vhost/hosts mapping complete** + **DB `iseo_report_hub_dev` created** + **DB-01/DB-02 first migration applied** + **auth persistence / local admin bootstrap charter complete** — Phase 1A skeleton in runtime; domain smoke **PASS**; runtime `.env.local` present (not in Git); auth still stub (no persistence code yet) |
+| **Implementation** | **Phase 1B complete** + **local vhost/hosts mapping complete** + **DB `iseo_report_hub_dev` created** + **DB-01/DB-02 first migration applied** + **auth persistence + local admin bootstrap implemented** — DB-backed login/logout; local admin user present; `/health` shows safe DB status |
 | **Source model** | **Model A active** — `projects/iseo-report-hub/app-source/` is versioned SoT; sync direction **source → runtime**; runtime → source only by explicit import charter |
 
 ---
@@ -25,9 +25,9 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A skeleton + Phase 1B runtime sync + local vhost/hosts + **local DB created** + **first migration applied** |
+| **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A/1B + local DB + **auth persistence implemented** |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | **Auth persistence + local admin bootstrap charter complete** — planning/docs only; no code/DB changes; next: **Auth Persistence + Local Admin Bootstrap Implementation 01** |
+| **Active stage** | **Auth Persistence + Local Admin Bootstrap Implementation 01 complete** — DB-backed login; local admin created; next: **DB-03 reporting periods migration charter** |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -327,7 +327,25 @@
 | **`.env` / `.env.local`** | **Unchanged** |
 | **SQL executed** | **No** |
 | **Auth code** | Still **stub** (`AuthService::login` → `not_implemented`) |
-| **Next stage** | **Auth Persistence + Local Admin Bootstrap Implementation 01** |
+| **Next stage** | **Auth Persistence + Local Admin Bootstrap Implementation 01** — **completed** (see implementation section below) |
+
+---
+
+## Auth persistence + local admin bootstrap implementation 01 (2026-07-25)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** — DB-backed auth + local admin + smoke |
+| **Result doc** | [I-SEO-REPORT-HUB-AUTH-PERSISTENCE-IMPLEMENTATION-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-AUTH-PERSISTENCE-IMPLEMENTATION-RESULT-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-auth-persistence-local-admin-bootstrap-implementation-01.md](reports/REPORT-iseo-report-hub-auth-persistence-local-admin-bootstrap-implementation-01.md) |
+| **Auth** | **DB-backed** login/logout/session/roles/audit (stub replaced) |
+| **Local admin** | **Created** — `admin@iseo-report-hub.test` / role `admin_owner` (password not stored in docs) |
+| **Users / roles** | users **1** · roles **6** |
+| **DB health on `/health`** | Safe status **PASS** (configured/connection/name/migrations/tables/counts; no secrets) |
+| **Smoke** | lint PASS; failed login / success login / dashboard / logout / health / 404 PASS; duplicate admin refused |
+| **Secrets** | No password/hash/credentials in Git or reports; runtime `.env.local` unchanged/outside Git |
+| **Schema** | **No** migration edits |
+| **Next stage** | **DB-03 reporting periods migration charter** |
 
 ---
 
@@ -423,6 +441,8 @@
 | 73 | [product/I-SEO-REPORT-HUB-DB-CONNECTION-HEALTH-POLICY-v0.1.md](product/I-SEO-REPORT-HUB-DB-CONNECTION-HEALTH-POLICY-v0.1.md) | DB connection + `/health` safe status policy |
 | 74 | [product/I-SEO-REPORT-HUB-AUTH-IMPLEMENTATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-AUTH-IMPLEMENTATION-PLAN-v0.1.md) | Auth + bootstrap implementation plan (next wave) |
 | 75 | [reports/REPORT-iseo-report-hub-auth-persistence-local-admin-bootstrap-charter-01.md](reports/REPORT-iseo-report-hub-auth-persistence-local-admin-bootstrap-charter-01.md) | Auth persistence + local admin bootstrap charter closeout |
+| 76 | [product/I-SEO-REPORT-HUB-AUTH-PERSISTENCE-IMPLEMENTATION-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-AUTH-PERSISTENCE-IMPLEMENTATION-RESULT-v0.1.md) | Auth persistence + local admin bootstrap implementation result |
+| 77 | [reports/REPORT-iseo-report-hub-auth-persistence-local-admin-bootstrap-implementation-01.md](reports/REPORT-iseo-report-hub-auth-persistence-local-admin-bootstrap-implementation-01.md) | Auth persistence + local admin bootstrap implementation closeout |
 
 ---
 
@@ -467,27 +487,27 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Auth Persistence + Local Admin Bootstrap Implementation 01** — **recommended next** (charter/policy complete; still no real login)
+1. **DB-03 reporting periods migration charter** — **recommended next** (auth baseline ready)
 2. Optional parallel: **v0.5 demo corrections** from backlog (UX only; not product runtime)
 3. **SEO specialist feedback** — still **deferred** until operator opens feedback charter
 4. Work dictionary extraction/sanitization (из Nikita materials; **exclude** credential sheet)
-5. MVP implementation phases 2–11 per implementation charter (Anton / i-SEO); DB-03+ reporting tables when chartered
+5. MVP implementation phases 2–11 per implementation charter (Anton / i-SEO); reporting CRUD after DB-03+
 6. Later: n8n/API/AI integration (events only; human approval gates)
 
-**Historical note:** Static demos v0.1–v0.4, report content architecture, and Product Architecture Layer 02 are complete as documentation/demo baselines. Platform decision (PHP+MySQL) supersedes WordPress-as-runtime assumptions for forward work. Phase 0 scaffold + Phase 1A skeleton + Phase 1B source→runtime sync + Apache vhost + Windows `hosts` for `iseo-report-hub.test` are done (direct domain re-smoke PASS). Local DB `iseo_report_hub_dev` is **created**; first migration (DB-01 + minimal DB-02) is **applied**. Auth persistence + local admin bootstrap are **chartered** (docs only). `app-source/` remains the versioned SoT; runtime is Localhost deploy target.
+**Historical note:** Static demos v0.1–v0.4, report content architecture, and Product Architecture Layer 02 are complete as documentation/demo baselines. Platform decision (PHP+MySQL) supersedes WordPress-as-runtime assumptions for forward work. Phase 0 scaffold + Phase 1A skeleton + Phase 1B source→runtime sync + Apache vhost + Windows `hosts` for `iseo-report-hub.test` are done (direct domain re-smoke PASS). Local DB `iseo_report_hub_dev` is **created**; first migration (DB-01 + minimal DB-02) is **applied**. Auth persistence + local admin bootstrap are **implemented** (DB-backed login; one local admin). `app-source/` remains the versioned SoT; runtime is Localhost deploy target.
 
 ---
 
 ## Boundaries (do not overclaim)
 
-- **Phase 1B synced Phase 1A skeleton to runtime** — still not a product app with auth persistence/reports
-- **Auth persistence charter exists** — implementation **not** started; login remains stub
-- **Runtime now has Phase 1A app skeleton** at `X:\MARS-Localhost\sites\php\projects\iseo-report-hub` — front controller, bootstrap, router, views, controllers, services; **auth still stub**; **no** report CRUD
-- **Local MySQL DB `iseo_report_hub_dev` exists** with core auth/org tables; **no** real users; **no** report-domain tables yet
+- **Auth persistence is implemented for local MVP** — login/logout/session/roles/audit; **not** production auth hardening
+- **One local admin user exists** — no user management UI; no password reset
+- **Runtime has synced auth code** at `X:\MARS-Localhost\sites\php\projects\iseo-report-hub` — **no** report CRUD yet
+- **Local MySQL DB `iseo_report_hub_dev` exists** with core auth/org tables; **no** report-domain tables yet (DB-03+)
 - **Runtime `.env.local` exists** (outside Git); source keeps placeholders only
 - **Versioned source of truth is `app-source/`** — runtime remains Localhost deploy target outside monorepo
 - **Model A active** — sync direction **source → runtime**; runtime → source only by explicit import charter
-- **Apache vhost + Windows `hosts` for `iseo-report-hub.test` are in place**; direct domain HTTP smoke **PASS** (re-smoke 01)
+- **Apache vhost + Windows `hosts` for `iseo-report-hub.test` are in place**; direct domain HTTP smoke **PASS**
 - **No WordPress plugin exists** (and WP is not the chosen runtime)
 - **No API integration exists**
 - **No n8n workflow exists**
@@ -496,5 +516,5 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **Website Factory is not runtime owner** — methodology + prototype lane only
 - **Static demo v0.4 is UX reference only** — not implementation
 - **Historical WP architecture docs** remain in corpus as legacy planning — not current SoT
-- **Domain `iseo-report-hub.test` resolves to 127.0.0.1** and serves Phase 1A routes over HTTP
+- **Domain `iseo-report-hub.test` resolves to 127.0.0.1** and serves auth-capable routes over HTTP
 - **No separate runtime Git repository** — and none should be created without charter

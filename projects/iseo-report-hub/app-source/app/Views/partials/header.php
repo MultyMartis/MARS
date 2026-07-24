@@ -12,12 +12,15 @@ declare(strict_types=1);
             <p class="tagline"><?= e($phaseLabel) ?></p>
         </div>
         <nav class="site-nav" aria-label="Main">
-            <a href="<?= e(url_path('/')) ?>">Dashboard</a>
-            <a href="<?= e(url_path('/health')) ?>">Health</a>
-            <a href="<?= e(url_path('/login')) ?>">Login</a>
             <?php if ($currentUser !== null): ?>
+                <a href="<?= e(url_path('/')) ?>">Dashboard</a>
+            <?php endif; ?>
+            <a href="<?= e(url_path('/health')) ?>">Health</a>
+            <?php if ($currentUser !== null): ?>
+                <span class="nav-user"><?= e(($currentUser['name'] ?? 'User') . ' · ' . ($currentUser['email'] ?? '')) ?></span>
                 <a href="<?= e(url_path('/logout')) ?>">Logout</a>
-                <span class="nav-user"><?= e($currentUser['name'] ?? 'User') ?></span>
+            <?php else: ?>
+                <a href="<?= e(url_path('/login')) ?>">Login</a>
             <?php endif; ?>
         </nav>
     </div>
