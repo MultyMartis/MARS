@@ -107,9 +107,11 @@ Documented for next wave:
 | Item | Value |
 |------|-------|
 | Exact-path git add | Yes — allowlisted docs only |
-| Commit message | `docs(iseo-report-hub): add reporting period crud charter` |
-| Commit hash | `4e416d33f92cb0c43893ca529d312c51a54aac6b` |
-| Hash-record follow-up | `fab0045b6f3dd8cea5e1ef1f82515cd6a0346805` |
+| Primary commit message | `docs(iseo-report-hub): add reporting period crud charter` |
+| Primary CRUD charter commit | `4e416d33f92cb0c43893ca529d312c51a54aac6b` |
+| Hash-record follow-up (first) | `fab0045b6f3dd8cea5e1ef1f82515cd6a0346805` — filled primary hash into this report; self-hash still placeholder text |
+| Hash-record clarification (second) | `c370ceba762855845bcdadc32a94d669259681b6` — recorded `fab0045b…` as the hash-record follow-up value |
+| Authoritative HEAD after hash-record chain | `c370ceba762855845bcdadc32a94d669259681b6` |
 | Push | **no** |
 
 ---
@@ -144,7 +146,7 @@ Documented for next wave:
 | Action | Done? |
 |--------|-------|
 | exact-path git add | Yes (allowlisted docs) |
-| commit | Yes (primary + optional hash-record) |
+| commit | Yes (primary `4e416d33` + hash-record `fab0045b` + clarification `c370ceba`) |
 | push | **No** |
 | fetch | **No** |
 | pull | **No** |
