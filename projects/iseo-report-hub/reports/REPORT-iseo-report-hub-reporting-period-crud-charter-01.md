@@ -108,8 +108,8 @@ Documented for next wave:
 |------|-------|
 | Exact-path git add | Yes — allowlisted docs only |
 | Commit message | `docs(iseo-report-hub): add reporting period crud charter` |
-| Commit hash | `PENDING_PRIMARY_COMMIT_HASH` |
-| Hash-record follow-up | `PENDING_HASH_RECORD_COMMIT_HASH` (report-only if needed) |
+| Commit hash | `4e416d33f92cb0c43893ca529d312c51a54aac6b` |
+| Hash-record follow-up | filled in this follow-up commit (report-only) |
 | Push | **no** |
 
 ---
