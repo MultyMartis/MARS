@@ -16,7 +16,7 @@
 | Volume label | `AI WS` |
 | Branch | `mars/canonical-post-recovery` |
 | HEAD before | `ee065a77696528b8c8bcb2935f024ec4331e5a4a` |
-| HEAD after commit | `POST_COMMIT_HASH` |
+| HEAD after commit | `51f3c1f6cd59665c4d59b5227b73c3764859a887` |
 | Staged / index (pre-write) | **Empty** |
 | i-SEO WIP clean before | **Yes** (no modified/untracked under `projects/iseo-report-hub/`) |
 | Foreign WIP | **Preserved** (not staged, not restored, not cleaned) |
@@ -114,7 +114,7 @@ Updated:
 |------|-------|
 | Exact-path git add | **Yes** (7 allowlisted docs only) |
 | Commit message | `docs(iseo-report-hub): add db03 reporting periods charter` |
-| Commit hash | `POST_COMMIT_HASH` |
+| Commit hash | `51f3c1f6cd59665c4d59b5227b73c3764859a887` |
 | Push | **No** |
 
 ---
