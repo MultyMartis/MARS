@@ -67,6 +67,21 @@ Status vocabulary: **COMPLETE** · **CREATED** · **PLANNED** · **CONDITIONAL**
 | Batch 01 updater tool | `tools/glossary-batch01-content-updater.py` | CREATED |
 | Final corpus + Batch 01 REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-FINAL-CORPUS-AND-BATCH-01-CONTENT.md` | COMPLETE |
 
+### Glossary Batch 01 refinement + Batch 02 (2026-07-25)
+
+| Artifact | Path | Status |
+|----------|------|--------|
+| Editorial standard (depth model) | `ISEO-SU-GLOSSARY-EDITORIAL-STANDARD-v1.md` | UPDATED |
+| SEO / internal linking model | `ISEO-SU-GLOSSARY-SEO-AND-INTERNAL-LINKING-MODEL-v1.md` | UPDATED |
+| Research register | `ISEO-SU-GLOSSARY-RESEARCH-REGISTER-v1.md` | UPDATED |
+| Batch 02 manifest | `ISEO-SU-GLOSSARY-BATCH-02-MANIFEST-v1.md` | CREATED |
+| Batch 02 DB backup evidence | `ISEO-SU-GLOSSARY-BATCH-02-DB-BACKUP-AND-ROLLBACK-v1.md` | CREATED |
+| Batch 02 content CSV | `data/glossary-editorial/ISEO-SU-GLOSSARY-BATCH-02-CONTENT-v1.csv` | CREATED |
+| Batch 02 Markdown sources | `content/glossary/batch-02/` | CREATED |
+| Snapshot pointer | `data/glossary-editorial/ISEO-SU-GLOSSARY-BATCH-02-PREWRITE-SNAPSHOT-POINTER-v1.json` | CREATED |
+| Unified glossary updater | `tools/glossary-batch-content-updater.py` | CREATED |
+| Batch 01 refine + Batch 02 REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-BATCH-01-REFINEMENT-AND-BATCH-02.md` | COMPLETE |
+
 ### Glossary archive layout fix (2026-07-24)
 
 | Artifact | Path | Status |

@@ -112,16 +112,19 @@ Forbidden:
 
 Link types:
 
-1. **Glossary ↔ glossary** — related terms block (3–7 links).
+1. **Glossary ↔ glossary** — related terms block (normally 2–5; zero acceptable).
 2. **Glossary → service/blog** — only when a real matching page exists and the link helps the reader; do not force commercial links in every term.
-3. **Service/blog → glossary** — later content waves; not required for pilot.
+3. **Service/blog → glossary** — later content waves; not required for draft batches.
 
 Rules:
 
+- related terms must be semantically useful; not SEO quantity;
 - anchor text = natural term name;
 - no identical mass anchors across the site;
-- do not link MERGE/EXCLUDE targets;
-- prefer contrast pairs (404 vs 410, UX vs UI, ROI vs ROMI).
+- do not link MERGE / EXCLUDE / DEFERRED targets;
+- prefer contrast pairs (404 vs 410, UX vs UI, ROI vs ROMI);
+- **draft stage:** store related-term names as editorial plain text; do not emit public draft→draft hyperlinks;
+- future public links only when the target entry is publication-eligible.
 
 ---
 
@@ -134,7 +137,23 @@ Related-term selection criteria:
 - prerequisite concept (e.g. индексация → краулинг);
 - metric ↔ tool (CTR → сниппет / SERP).
 
-Store planned relations in pilot notes and future editorial sheets. Bidirectional UI remains optional (G-U-003).
+Store planned relations in editorial sheets and article metadata. Bidirectional UI remains optional (G-U-003).
+
+---
+
+## 8A. Publication Eligibility (per-entry)
+
+**PUBLICATION_ELIGIBILITY = per-entry approved content state**
+
+A post existing in the `glossary` CPT is not enough. An entry may become public only when:
+
+- disposition APPROVED / APPROVED_RENAME;
+- reviewed short definition + body present;
+- no placeholder copy;
+- slug/title/SEO metadata acceptable;
+- intentional publish decision for that entry.
+
+Global CPT exposure must never publish all 241 drafts by default.
 
 ---
 

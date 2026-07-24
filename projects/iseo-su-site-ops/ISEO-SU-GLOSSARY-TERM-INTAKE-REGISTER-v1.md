@@ -2,7 +2,7 @@
 
 **Programme:** ISEO-SU-SITE-OPS
 **Task:** ISEO-SU-SITE-OPS-GLOSSARY-ARCHITECTURE-TEMPLATE-AND-CONTENT-INTAKE
-**Date:** 2026-07-24
+**Date:** 2026-07-25 (updated after Batch 02 drafts)
 
 ## Source
 
@@ -71,6 +71,20 @@
 | Public exposure | **still closed** |
 | Publication | **not performed** |
 
+## Batch 01 refinement + Batch 02 (2026-07-25)
+
+| Field | Value |
+|-------|-------|
+| Task | ISEO-SU-SITE-OPS-GLOSSARY-BATCH-01-REFINEMENT-AND-BATCH-02 |
+| Batch 01 refine | 4 MINOR_EDIT applied; 26 PASS_AS_IS; 0 MATERIAL_EDIT |
+| Batch 02 size | **45** draft definitions applied to existing posts |
+| Populated drafts (approx.) | **75** (30 + 45) |
+| Remaining empty drafts | **166** (241 − 75) |
+| Batch 02 manifest | `ISEO-SU-GLOSSARY-BATCH-02-MANIFEST-v1.md` |
+| Content sources | `content/glossary/batch-02/` |
+| Public exposure | **still closed** |
+| Publication | **not performed** |
+
 ---
 
-*Glossary term intake register v1 · updated editorial audit link 2026-07-24.*
+*Glossary term intake register v1 · updated Batch 02 2026-07-25.*

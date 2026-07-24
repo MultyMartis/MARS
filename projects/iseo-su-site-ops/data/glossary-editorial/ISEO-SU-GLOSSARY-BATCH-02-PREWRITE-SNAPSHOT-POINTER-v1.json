@@ -1,0 +1,26 @@
+{
+  "utc": "2026-07-24T20:51:44+07:00",
+  "authoritative": true,
+  "storage_path": "X:\\AI MARS STORAGE\\iseo-su-site-ops\\glossary-db-backups\\glossary-batch01-refine-batch02-20260725-035144",
+  "snapshot_file": "scoped-glossary-prewrite-snapshot.json",
+  "sha256": "9176ca591b8a84eb9f863e6a5fa9b4a9018ac5badb37713c562f7b86f87aa441",
+  "bytes": 127966,
+  "target_count": 75,
+  "batch01_count": 30,
+  "batch02_count": 45,
+  "notes": "Authoritative prewrite snapshot before Batch 01 refine + Batch 02 apply. Additional subset snapshots also exist under glossary-db-backups for apply waves.",
+  "subset_snapshots": [
+    {
+      "path": "X:\\AI MARS STORAGE\\iseo-su-site-ops\\glossary-db-backups\\glossary-batch01-refine-batch02-20260725-035635",
+      "sha256": "47f8ca37ad6ed435d2d777d1df36088c78239bfb8999c0290c5f63e494aebe9e",
+      "target_count": 4,
+      "scope": "Batch 01 refine apply prewrite"
+    },
+    {
+      "path": "X:\\AI MARS STORAGE\\iseo-su-site-ops\\glossary-db-backups\\glossary-batch01-refine-batch02-20260725-040020",
+      "sha256": "658f5a58b92304da41285e173b98ee3209bd00009f8bcbf9385fbec64e18f17c",
+      "target_count": 45,
+      "scope": "Batch 02 apply prewrite"
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 # ISEO-SU GLOSSARY EDITORIAL STANDARD v1
 
 **Programme:** ISEO-SU-SITE-OPS  
-**Task:** ISEO-SU-SITE-OPS-GLOSSARY-EDITORIAL-AUDIT-AND-PILOT-CONTENT-STANDARD  
+**Task:** ISEO-SU-SITE-OPS-GLOSSARY-BATCH-01-REFINEMENT-AND-BATCH-02  
 **Site:** https://i-seo.su/  
-**Date:** 2026-07-24  
-**Status:** DRAFT FOR OPERATOR / NIKITA REVIEW  
+**Date:** 2026-07-25 (depth model refined)  
+**Status:** ACTIVE FOR DRAFT PRODUCTION  
 
 ---
 
@@ -18,9 +18,10 @@ Goals:
 - remain understandable to business owners and non-specialists;
 - stay neutral and free of sales pitches;
 - support editorial SEO without keyword stuffing;
-- keep one concept per page after audit decisions (KEEP / MERGE / RENAME).
+- keep one concept per page after audit decisions (APPROVED / APPROVED_RENAME / MERGE / DEFER / EXCLUDE);
+- vary article depth by usefulness — never pad simple concepts.
 
-This document governs **editorial content**. It does not authorize WordPress uploads or public exposure.
+This document governs **editorial content**. It does not authorize public exposure.
 
 ---
 
@@ -29,60 +30,104 @@ This document governs **editorial content**. It does not authorize WordPress upl
 Primary readers:
 
 - business owners and marketing managers evaluating SEO;
-- site owners who need plain-language explanations;
-- specialists who want a precise local reference.
+- marketers and junior/middle specialists;
+- clients who encounter these concepts in reports and proposals.
 
-Tone: professional, calm, practical. Prefer plain Russian. Keep English abbreviations when they are industry-standard (SEO, CTR, PPC, robots.txt), and explain them on first use.
-
----
-
-## 3. Definition Structure
-
-Every normal glossary term uses this structure (section headings may be light or omitted in final HTML if the flow stays clear):
-
-1. **Short definition** — 1–2 sentences answering «что это?»; suitable as WordPress excerpt / archive teaser.
-2. **Expanded explanation** — purpose and context in plain Russian; technically accurate.
-3. **Why it matters** — practical relevance for a business or website owner.
-4. **How it works / how it is used** — only when it adds clarity.
-5. **Example** — concrete, realistic, without invented performance claims.
-6. **Related terms** — planned internal glossary links only (from retained terms).
-7. **Synonyms / alternative names** — genuine equivalents only.
-8. **Important distinction** — when the term is commonly confused with another.
-
-Not every section is mandatory for every term. SIMPLE terms may stop after short definition + brief expansion + related terms. EXPERT terms may use the full set.
+Tone: professional, calm, practical. Prefer plain Russian. Keep English abbreviations when they are industry-standard (SEO, CTR, PPC, robots.txt), and explain them on first use. Technical correctness takes priority over oversimplification.
 
 ---
 
-## 4. Length Model
+## 3. Article Depth Model (SIMPLE / MODERATE / COMPLEX)
 
-Flexible length by complexity. Do not pad.
+Depth is an **editorial writing aid**, not a bureaucratic taxonomy. Classify by usefulness of the subject, then write accordingly.
 
-| Layer | Guidance |
-|-------|----------|
-| Short definition | 160–300 characters |
-| Full SIMPLE term | ~700–1,500 characters |
-| Full MODERATE term | ~1,500–3,000 characters |
-| Full EXPERT term | up to ~4,500 characters when justified |
+### SIMPLE
 
-Character counts are editorial guidance, not hard quotas. Prefer clarity over length.
+Typical structure:
+
+- short definition;
+- 2–5 explanatory paragraphs;
+- optional clarification or example;
+- related terms;
+- synonyms if real.
+
+Typical useful copy: about **500–1400** characters when that is enough.  
+**Do not pad to a minimum.**
+
+### MODERATE
+
+Typical structure:
+
+- short definition;
+- explanatory introduction;
+- 1–3 meaningful H2 sections only where they help;
+- example/clarification where useful;
+- related terms;
+- synonyms.
+
+Typical useful copy: about **1200–2800** characters.
+
+### COMPLEX
+
+Typical structure may include:
+
+- short definition;
+- broader explanation;
+- several meaningful H2 sections;
+- mechanics/technical behavior;
+- examples;
+- distinctions;
+- limitations/nuances;
+- related terms.
+
+Typical useful copy: about **2200–5000** characters. Longer only when the subject truly needs it.
+
+### Absolute length rule
+
+Content length is determined by **usefulness**, not SEO word count. Never inflate a simple concept to satisfy a target length.
 
 ---
 
-## 5. Writing Style
+## 4. Structure Variation
+
+Do **not** force identical headings such as «Что это», «Почему важно», «Как работает», «Пример» onto every article.
+
+Use headings only where they help the reader. Two neighboring glossary pages should not look as if they were generated from the same rigid template.
+
+Building blocks (use only what is needed):
+
+1. **Short definition** — 1–2 sentences; stands alone; suitable as excerpt.
+2. **Expanded explanation** — context in plain Russian.
+3. **Clarification / mechanics / distinction** — when confusion is common.
+4. **Example** — concrete, realistic, without invented performance claims.
+5. **Related terms** — semantically useful only (normally 2–5; zero is acceptable).
+6. **Synonyms** — genuine equivalents only.
+
+---
+
+## 5. Writing Style and AI-text Filter
 
 - Lead with the meaning; do not open with history unless history is the point.
 - Prefer active, concrete wording.
 - Use ordinary Russian punctuation and quotation marks («»).
-- Expand abbreviations on first mention when helpful: «CTR (кликабельность)».
-- Use lists sparingly and only for clarity.
-- Keep one H1 (term title); body uses H2/H3 only if the CMS layout needs them.
+- Expand abbreviations on first mention when helpful.
+- Use lists sparingly.
+- Keep one H1 (term title).
 
-Avoid:
+Before accepting an article, reject or rewrite:
 
-- «это когда» as the main definition pattern;
-- «данный термин», «следует отметить», «необходимо понимать»;
-- filler, synonym stuffing, and LSI dumping;
-- exaggerated claims and fake authority.
+- repetitive introductions;
+- generic statements with no information value;
+- unnecessary conclusions;
+- the same definition restated in multiple paragraphs;
+- excessive «важно понимать» / «таким образом»;
+- fake expert tone;
+- keyword stuffing;
+- unnatural repetition of the canonical term;
+- formulaic H2 structure across many pages;
+- unsupported claims;
+- unnecessary marketing language;
+- circular definitions («SEO — это процесс SEO-оптимизации»).
 
 ---
 
@@ -134,11 +179,16 @@ Detailed model: `ISEO-SU-GLOSSARY-SEO-AND-INTERNAL-LINKING-MODEL-v1.md`.
 
 ## 9. Related Terms and Internal Links
 
-- Link only to terms that remain KEEP or RENAME after audit.
-- Prefer 3–7 related terms; avoid dumping entire categories.
-- Related terms should clarify the concept graph (parent, sibling, contrast), not chase traffic.
-- Do not fabricate URLs; use planned `/glossary/{slug}/` paths from the audit dataset.
+- Related terms must be **semantically useful**.
+- Normally **2–5** is enough; **zero** is acceptable when no meaningful relation exists.
+- Do not add links merely for SEO or build large link clouds.
+- Use only APPROVED / APPROVED_RENAME publication-pool concepts as future public targets.
+- Do not use EXCLUDED / DEFERRED terms as public related targets.
+- During draft-only stage: keep related-term relationships as structured editorial metadata (plain names in copy / datasets). Do **not** create unsafe public links to draft content.
+- Future public internal links only when the target entry is safely publishable.
+- Do not fabricate URLs; use planned `/glossary/{slug}/` paths from the corpus.
 - Bidirectional related-term UX remains optional (SAFE UNKNOWN G-U-003).
+- Do not modify templates merely to force links during draft batches.
 
 ---
 
@@ -187,34 +237,51 @@ Expert/Nikita review is required before publication of flagged terms. Pilot batc
 
 ## 13. Editorial Workflow
 
-1. Audit term (status, category, canonical title, synonyms).
-2. Draft short definition + full body per this standard.
-3. Attach SEO guidance (title, meta, links, cannibalization).
-4. Peer/operator review; expert review if flagged.
-5. Upload to WordPress **only under a separate charter** (drafts remain drafts until publication gate).
-6. Publish only after `ISEO_GLOSSARY_PUBLIC_EXPOSURE` and content QA.
-
-Pilot definitions live in MARS first (`ISEO-SU-GLOSSARY-PILOT-BATCH-v1.md`). They are not uploaded in this task.
+1. Confirm final disposition APPROVED or APPROVED_RENAME.
+2. Assign editorial depth (SIMPLE / MODERATE / COMPLEX) as a writing aid.
+3. Draft short definition + body per this standard (no padding).
+4. Attach SEO guidance (title, meta, related targets).
+5. Peer/operator review; expert review if flagged.
+6. Load into WordPress as **draft** under a scoped charter.
+7. Publish only after per-entry readiness **and** programme gate `ISEO_GLOSSARY_PUBLIC_EXPOSURE`.
 
 ---
 
-## 14. Publication Readiness Checklist
+## 14. Publication Completeness Rule
 
-A term is publication-ready only if:
+A glossary entry is **not** publication-ready merely because a WordPress post exists.
 
-- [ ] status is KEEP or RENAME (not MERGE / EXCLUDE);
-- [ ] REVIEW items resolved by operator/Nikita;
-- [ ] canonical title and slug agreed;
-- [ ] short definition present (excerpt);
-- [ ] full definition present and fact-checked;
+**PUBLICATION_ELIGIBILITY = per-entry approved content state**
+
+Required before any future public exposure of that entry:
+
+- final disposition APPROVED or APPROVED_RENAME;
+- non-empty reviewed short definition;
+- non-empty reviewed article body;
+- no unresolved factual issue;
+- canonical title finalized;
+- slug finalized;
+- SEO metadata acceptable;
+- no placeholder copy;
+- no editorial placeholder such as «Определение термина готовится редакцией и пока не опубликовано.»
+
+Incomplete records must remain `draft`.  
+The future public exposure mechanism must **never** expose all 241 records merely because the CPT becomes public.
+
+Checklist:
+
+- [ ] disposition APPROVED / APPROVED_RENAME;
+- [ ] short definition reviewed;
+- [ ] full body reviewed and fact-checked;
+- [ ] canonical title and slug finalized;
 - [ ] synonyms cleaned;
-- [ ] related terms valid;
-- [ ] SEO title and meta drafted;
+- [ ] related terms useful and valid;
+- [ ] SEO title and meta acceptable;
 - [ ] expert flag cleared or accepted with notes;
-- [ ] no sales filler / no unsupported claims;
-- [ ] WordPress post still draft until intentional publish wave;
-- [ ] public exposure gate still controlled at programme level.
+- [ ] no sales filler / unsupported claims / placeholders;
+- [ ] intentional publish decision for this entry;
+- [ ] programme public-exposure gate still controlled.
 
 ---
 
-*ISEO-SU Glossary Editorial Standard v1 · 2026-07-24 · for operator/Nikita review.*
+*ISEO-SU Glossary Editorial Standard v1 · 2026-07-25 · operational.*
