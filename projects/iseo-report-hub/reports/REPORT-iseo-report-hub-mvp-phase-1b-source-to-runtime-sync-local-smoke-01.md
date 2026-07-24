@@ -129,8 +129,8 @@ Hash spot-check (source vs runtime): `public/index.php`, `app/bootstrap.php`, `a
 | Exact-path stage | yes |
 | Staged list | `OPERATIONAL-INDEX.md`; `product/I-SEO-REPORT-HUB-MVP-PHASE-1B-RUNTIME-SYNC-RESULT-v0.1.md`; `reports/REPORT-iseo-report-hub-mvp-phase-1b-source-to-runtime-sync-local-smoke-01.md` |
 | Commit message | `docs(iseo-report-hub): record phase 1b runtime sync` |
-| Commit hash | *(filled after commit — verify `git rev-parse HEAD` / `git show --name-only --oneline --stat HEAD`)* |
-| HEAD verification | post-commit: only the three Active Brain docs above |
+| Commit hash | `223504692edfd05337a703b19d2b4865714d014c` (`22350469`) |
+| HEAD verification | `git show --name-only --oneline --stat HEAD` — only the three Active Brain docs above |
 | Push | **no** |
 
 ---
