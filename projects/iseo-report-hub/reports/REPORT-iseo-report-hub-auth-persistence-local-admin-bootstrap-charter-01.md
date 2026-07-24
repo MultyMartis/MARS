@@ -16,6 +16,7 @@
 | Volume label | `AI WS` |
 | Branch | `mars/canonical-post-recovery` |
 | HEAD (pre-commit) | `1433bcb790ae38d0b7fac215245da21ceb175a44` |
+| HEAD (post-commit) | `4d4aaa0c5c2ccee8a1ea285918f7609aaf7fdd69` |
 | Staged / index (pre-write) | **Empty** |
 | Foreign WIP | **Preserved** (not staged, not restored, not cleaned) |
 | Write scope | Active Brain i-SEO Report Hub docs only (6 allowlisted paths) |
@@ -154,10 +155,12 @@ Document: `product/I-SEO-REPORT-HUB-AUTH-IMPLEMENTATION-PLAN-v0.1.md`
 |-------|--------|
 | Exact-path `git add` | **Yes** (6 Active Brain docs) |
 | Commit | **Yes** — `docs(iseo-report-hub): add auth bootstrap charter` |
-| Commit hash | *(filled after commit)* |
+| Commit hash | `4d4aaa0c5c2ccee8a1ea285918f7609aaf7fdd69` |
+| Short hash | `4d4aaa0c` |
+| HEAD verification | `git show --name-only --oneline --stat HEAD` — **6 docs only** |
 | Push | **No** |
 
-Staged allowlist:
+Staged allowlist (committed):
 
 1. `projects/iseo-report-hub/OPERATIONAL-INDEX.md`
 2. `projects/iseo-report-hub/product/I-SEO-REPORT-HUB-AUTH-PERSISTENCE-CHARTER-v0.1.md`
