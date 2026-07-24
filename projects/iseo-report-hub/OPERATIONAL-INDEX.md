@@ -16,7 +16,7 @@
 | **Business owner / vision source** | Никита / i-SEO |
 | **Developer** | Антон |
 | **Platform direction** | **Decided** — custom **PHP + SQL/MySQL**; **no WordPress runtime**; Laragon local runtime **verified** (preflight 01); see [I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md](product/I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md) |
-| **Implementation** | **Phase 1B complete** + **local vhost/hosts mapping complete** — Phase 1A skeleton in runtime; Apache vhost + Windows `hosts` for `iseo-report-hub.test`; direct domain HTTP smoke **PASS**; **no** DB / secrets; auth stub only |
+| **Implementation** | **Phase 1B complete** + **local vhost/hosts mapping complete** + **DB creation / migration charter complete** — Phase 1A skeleton in runtime; domain smoke **PASS**; DB target `iseo_report_hub_dev` planned; **DB not created**; **no** `.env.local`; auth stub only |
 | **Source model** | **Model A active** — `projects/iseo-report-hub/app-source/` is versioned SoT; sync direction **source → runtime**; runtime → source only by explicit import charter |
 
 ---
@@ -25,9 +25,9 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A skeleton + Phase 1B runtime sync + **local vhost/hosts mapping complete** |
+| **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A skeleton + Phase 1B runtime sync + local vhost/hosts + **DB creation / schema migration charter complete** |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | **Local hosts re-smoke PASS** — `iseo-report-hub.test` resolves and serves Phase 1A routes; DB **not** created; next: **DB creation + schema migration charter** |
+| **Active stage** | **DB charter complete** — target `iseo_report_hub_dev`; **no** DB created; migration policy + initial schema plan + local env/secrets policy written; next: **DB creation + DB-01/DB-02 migration files/apply charter** |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -270,6 +270,27 @@
 
 ---
 
+## DB creation + schema migration charter 01 (2026-07-24)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** — documentation / policy only |
+| **DB charter** | [I-SEO-REPORT-HUB-DB-CREATION-CHARTER-v0.1.md](product/I-SEO-REPORT-HUB-DB-CREATION-CHARTER-v0.1.md) |
+| **Migration policy** | [I-SEO-REPORT-HUB-MIGRATION-POLICY-v0.1.md](product/I-SEO-REPORT-HUB-MIGRATION-POLICY-v0.1.md) |
+| **Initial schema plan** | [I-SEO-REPORT-HUB-INITIAL-SCHEMA-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-INITIAL-SCHEMA-PLAN-v0.1.md) |
+| **Local env / secrets policy** | [I-SEO-REPORT-HUB-LOCAL-ENV-DB-SECRETS-POLICY-v0.1.md](product/I-SEO-REPORT-HUB-LOCAL-ENV-DB-SECRETS-POLICY-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-db-creation-schema-migration-charter-01.md](reports/REPORT-iseo-report-hub-db-creation-schema-migration-charter-01.md) |
+| **DB target** | `iseo_report_hub_dev` @ `127.0.0.1:3306` (MySQL 8.4.3) |
+| **DB created** | **No** |
+| **SQL executed** | **No** |
+| **Migration files** | **None** (planned under `app-source/database/migrations/`) |
+| **`.env.local`** | **Not created** |
+| **First migration scope (planned)** | DB-01 + minimal DB-02 (`schema_migrations`, auth, clients/projects/sites/profiles) |
+| **App-source / runtime** | **Unchanged** |
+| **Next stage** | **DB creation + DB-01/DB-02 migration files/apply charter** |
+
+---
+
 ## Current approved decisions (summary)
 
 1. Report Hub — **операционная система отчётности**, не PDF-only tool.
@@ -350,6 +371,11 @@
 | 61 | [reports/REPORT-iseo-report-hub-local-vhost-hosts-mapping-01.md](reports/REPORT-iseo-report-hub-local-vhost-hosts-mapping-01.md) | Local vhost/hosts mapping closeout |
 | 62 | [product/I-SEO-REPORT-HUB-LOCAL-HOSTS-RESMOKE-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-LOCAL-HOSTS-RESMOKE-RESULT-v0.1.md) | Local hosts re-smoke result |
 | 63 | [reports/REPORT-iseo-report-hub-local-hosts-resmoke-01.md](reports/REPORT-iseo-report-hub-local-hosts-resmoke-01.md) | Local hosts re-smoke closeout |
+| 64 | [product/I-SEO-REPORT-HUB-DB-CREATION-CHARTER-v0.1.md](product/I-SEO-REPORT-HUB-DB-CREATION-CHARTER-v0.1.md) | Local DB creation charter (planning) |
+| 65 | [product/I-SEO-REPORT-HUB-MIGRATION-POLICY-v0.1.md](product/I-SEO-REPORT-HUB-MIGRATION-POLICY-v0.1.md) | Migration location/format/ledger/execution policy |
+| 66 | [product/I-SEO-REPORT-HUB-INITIAL-SCHEMA-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-INITIAL-SCHEMA-PLAN-v0.1.md) | DB-01…DB-05 phasing + first migration recommendation |
+| 67 | [product/I-SEO-REPORT-HUB-LOCAL-ENV-DB-SECRETS-POLICY-v0.1.md](product/I-SEO-REPORT-HUB-LOCAL-ENV-DB-SECRETS-POLICY-v0.1.md) | Local `.env.local` / DB secrets policy |
+| 68 | [reports/REPORT-iseo-report-hub-db-creation-schema-migration-charter-01.md](reports/REPORT-iseo-report-hub-db-creation-schema-migration-charter-01.md) | DB creation + schema migration charter closeout |
 
 ---
 
@@ -394,14 +420,14 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **DB creation + schema migration charter** for local `iseo_report_hub_dev` — **recommended next** (domain mapping PASS)
+1. **DB creation + DB-01/DB-02 migration files/apply charter** for local `iseo_report_hub_dev` — **recommended next** (DB policy charter complete; DB still not created)
 2. Optional parallel: **v0.5 demo corrections** from backlog (UX only; not product runtime)
 3. **SEO specialist feedback** — still **deferred** until operator opens feedback charter
 4. Work dictionary extraction/sanitization (из Nikita materials; **exclude** credential sheet)
 5. MVP implementation phases 2–11 per implementation charter (Anton / i-SEO)
 6. Later: n8n/API/AI integration (events only; human approval gates)
 
-**Historical note:** Static demos v0.1–v0.4, report content architecture, and Product Architecture Layer 02 are complete as documentation/demo baselines. Platform decision (PHP+MySQL) supersedes WordPress-as-runtime assumptions for forward work. Phase 0 scaffold + Phase 1A skeleton + Phase 1B source→runtime sync + Apache vhost + Windows `hosts` for `iseo-report-hub.test` are done (direct domain re-smoke PASS); `app-source/` remains the versioned SoT; runtime is Localhost deploy target.
+**Historical note:** Static demos v0.1–v0.4, report content architecture, and Product Architecture Layer 02 are complete as documentation/demo baselines. Platform decision (PHP+MySQL) supersedes WordPress-as-runtime assumptions for forward work. Phase 0 scaffold + Phase 1A skeleton + Phase 1B source→runtime sync + Apache vhost + Windows `hosts` for `iseo-report-hub.test` are done (direct domain re-smoke PASS). DB creation + migration **policy** charter is complete; `iseo_report_hub_dev` is **not** created yet. `app-source/` remains the versioned SoT; runtime is Localhost deploy target.
 
 ---
 
@@ -411,7 +437,7 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **Runtime now has Phase 1A app skeleton** at `X:\MARS-Localhost\sites\php\projects\iseo-report-hub` — front controller, bootstrap, router, views, controllers, services; **no** DB, **no** auth persistence, **no** migrations
 - **Versioned source of truth is `app-source/`** — runtime remains Localhost deploy target outside monorepo
 - **Model A active** — sync direction **source → runtime**; runtime → source only by explicit import charter
-- **DB / `.env.local` remain not done**
+- **DB creation / migration / env-secrets policies are documented**; **DB / `.env.local` remain not done**
 - **Apache vhost + Windows `hosts` for `iseo-report-hub.test` are in place**; direct domain HTTP smoke **PASS** (re-smoke 01)
 - **No WordPress plugin exists** (and WP is not the chosen runtime)
 - **No API integration exists**
