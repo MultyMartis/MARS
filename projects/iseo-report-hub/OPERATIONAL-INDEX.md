@@ -16,7 +16,7 @@
 | **Business owner / vision source** | Никита / i-SEO |
 | **Developer** | Антон |
 | **Platform direction** | **Decided** — custom **PHP + SQL/MySQL**; **no WordPress runtime**; Laragon local runtime **verified** (preflight 01); see [I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md](product/I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md) |
-| **Implementation** | **Not started** — no PHP app, no SQL migrations, no iseo Laragon site/DB, no n8n workflow |
+| **Implementation** | **Phase 0 scaffold only** — runtime tree at `X:\MARS-Localhost\sites\php\projects\iseo-report-hub`; **no** DB / vhost / hosts / secrets; **no** product features beyond health/index pages; Phase 1 **blocked** until source preservation model approved |
 
 ---
 
@@ -24,9 +24,9 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | planned / product architecture |
+| **Status** | planned / product architecture + Phase 0 runtime scaffold + source/runtime policy |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | Laragon runtime preflight **complete** (read-only); platform decision + PHP/MySQL MVP technical brief package (docs); Layer 02 complete; static demo v0.4 UX reference; SEO feedback deferred; **implementation not started** |
+| **Active stage** | MVP **Phase 0 scaffold reviewed**; source/runtime policy v0.1 defined; Laragon preflight complete; platform decision + technical brief package; Layer 02 complete; static demo v0.4 UX reference; SEO feedback deferred; **Phase 1 blocked** until source preservation model (recommend Model A) approved |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -119,8 +119,44 @@
 | **MySQL** | **8.4.3** client + server; port **3306** listening; `SELECT VERSION()` only; **no** DB created |
 | **Web server** | Apache **2.4.66** on port **80**; Nginx present, not running |
 | **Runtime changes** | **None** — no scaffold, SQL, DB, vhost/hosts, Laragon config, or service restart |
-| **Phase 0 readiness** | **Partial** — environment capable; layout/domain/DB charter inputs still required |
-| **Next stage** | Operator review of Laragon Preflight Result, then **MVP Phase 0 scaffold charter** after approval and missing inputs |
+| **Phase 0 readiness** | **Inputs applied** — operator approved runtime path / domain / DB candidate / PHP pin |
+| **Next stage (after Phase 0)** | Operator review of Phase 0 scaffold, then **Phase 1** app skeleton / config / auth baseline |
+
+---
+
+## MVP Phase 0 runtime scaffold 01 (2026-07-24)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Created** — scaffold only |
+| **Result doc** | [I-SEO-REPORT-HUB-MVP-PHASE-0-SCAFFOLD-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-MVP-PHASE-0-SCAFFOLD-RESULT-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-mvp-phase-0-runtime-scaffold-01.md](reports/REPORT-iseo-report-hub-mvp-phase-0-runtime-scaffold-01.md) |
+| **Runtime path** | `X:\MARS-Localhost\sites\php\projects\iseo-report-hub` |
+| **Domain (intended)** | `iseo-report-hub.test` — **not** mapped by this task |
+| **DB candidate** | `iseo_report_hub_dev` — **not** created |
+| **PHP** | 8.3.30 |
+| **Secrets** | **None** — `.env.example` placeholders only |
+| **What exists** | `public/index.php`, `public/health.php`, folder placeholders, config/env examples |
+| **What does not exist** | Auth, DB, migrations, vhost/hosts, product features |
+| **Source / runtime** | Runtime outside Active Brain Git; see [SOURCE-RUNTIME-POLICY-v0.1](product/I-SEO-REPORT-HUB-SOURCE-RUNTIME-POLICY-v0.1.md) |
+| **Next stage** | **Source mirror + deploy/sync charter (Model A)** — then Phase 1; Phase 1 **blocked** until model approved |
+
+---
+
+## Source / runtime policy 01 (2026-07-24)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Defined** — policy v0.1 |
+| **Policy doc** | [I-SEO-REPORT-HUB-SOURCE-RUNTIME-POLICY-v0.1.md](product/I-SEO-REPORT-HUB-SOURCE-RUNTIME-POLICY-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-phase-0-runtime-review-source-runtime-policy-01.md](reports/REPORT-iseo-report-hub-phase-0-runtime-review-source-runtime-policy-01.md) |
+| **Active Brain** | `X:\AI MARS\projects\iseo-report-hub\` — committed docs/specs authority |
+| **Runtime** | `X:\MARS-Localhost\sites\php\projects\iseo-report-hub\` — local runnable workspace; **not** a separate Git repo |
+| **Versioning issue** | Runtime outside monorepo — not committed by normal Active Brain commits |
+| **Recommended model** | **Model A** — versioned `app-source/` under Active Brain + sync/deploy to Localhost runtime |
+| **Not done in this wave** | No `app-source/` created; no runtime Git repo; no DB/vhost/hosts |
+| **Phase 1** | **Blocked** until source preservation model approved |
+| **Recommended next** | Create source mirror + deploy/sync charter for Model A |
 
 ---
 
@@ -185,6 +221,10 @@
 | 42 | [reports/REPORT-iseo-report-hub-platform-decision-php-mysql-technical-brief-01.md](reports/REPORT-iseo-report-hub-platform-decision-php-mysql-technical-brief-01.md) | Platform decision + technical brief closeout |
 | 43 | [product/I-SEO-REPORT-HUB-LARAGON-PREFLIGHT-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-LARAGON-PREFLIGHT-RESULT-v0.1.md) | Laragon/runtime preflight result (read-only) |
 | 44 | [reports/REPORT-iseo-report-hub-laragon-runtime-preflight-01.md](reports/REPORT-iseo-report-hub-laragon-runtime-preflight-01.md) | Laragon runtime preflight closeout |
+| 45 | [product/I-SEO-REPORT-HUB-MVP-PHASE-0-SCAFFOLD-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-MVP-PHASE-0-SCAFFOLD-RESULT-v0.1.md) | MVP Phase 0 runtime scaffold result |
+| 46 | [reports/REPORT-iseo-report-hub-mvp-phase-0-runtime-scaffold-01.md](reports/REPORT-iseo-report-hub-mvp-phase-0-runtime-scaffold-01.md) | Phase 0 runtime scaffold closeout |
+| 47 | [product/I-SEO-REPORT-HUB-SOURCE-RUNTIME-POLICY-v0.1.md](product/I-SEO-REPORT-HUB-SOURCE-RUNTIME-POLICY-v0.1.md) | Source vs Localhost runtime versioning policy |
+| 48 | [reports/REPORT-iseo-report-hub-phase-0-runtime-review-source-runtime-policy-01.md](reports/REPORT-iseo-report-hub-phase-0-runtime-review-source-runtime-policy-01.md) | Phase 0 runtime review + source/runtime policy closeout |
 
 ---
 
@@ -229,23 +269,24 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Operator review** of [Laragon Preflight Result v0.1](product/I-SEO-REPORT-HUB-LARAGON-PREFLIGHT-RESULT-v0.1.md) (layout, domain, DB, PHP pin, sync policy)
-2. **MVP Phase 0 scaffold charter** after operator approval and missing inputs — **not started**
-3. Optional: **scoped commit** of preflight docs (operator-chartered; selective paths only) — **not done in this task**
-4. Optional parallel: **v0.5 demo corrections** from backlog (UX only; not product runtime)
-5. **SEO specialist feedback** — still **deferred** until operator opens feedback charter
-6. Work dictionary extraction/sanitization (из Nikita materials; **exclude** credential sheet)
-7. MVP implementation phases 1–11 per implementation charter (Anton / i-SEO)
-8. Later: n8n/API/AI integration (events only; human approval gates)
+1. **Create source mirror + deploy/sync charter for Model A** (recommended) — or explicitly approve an alternate model
+2. **MVP Phase 1** — app skeleton + config + auth baseline — **blocked** until source preservation model approved
+3. Optional parallel: **v0.5 demo corrections** from backlog (UX only; not product runtime)
+4. **SEO specialist feedback** — still **deferred** until operator opens feedback charter
+5. Work dictionary extraction/sanitization (из Nikita materials; **exclude** credential sheet)
+6. MVP implementation phases 2–11 per implementation charter (Anton / i-SEO)
+7. Later: n8n/API/AI integration (events only; human approval gates)
 
-**Historical note:** Static demos v0.1–v0.4, report content architecture, and Product Architecture Layer 02 are complete as documentation/demo baselines. Platform decision (PHP+MySQL) supersedes WordPress-as-runtime assumptions for forward work.
+**Historical note:** Static demos v0.1–v0.4, report content architecture, and Product Architecture Layer 02 are complete as documentation/demo baselines. Platform decision (PHP+MySQL) supersedes WordPress-as-runtime assumptions for forward work. Phase 0 scaffold exists on Localhost; source versioning requires Model A charter before Phase 1.
 
 ---
 
 ## Boundaries (do not overclaim)
 
-- **No implementation started**
-- **No PHP app / SQL schema / iseo Laragon site or DB exists** for Report Hub (Laragon stack itself exists under MARS-Localhost)
+- **Implementation is Phase 0 scaffold only** — not a product app
+- **Runtime scaffold exists** at `X:\MARS-Localhost\sites\php\projects\iseo-report-hub` — index/health pages + folders; **no** DB, **no** auth, **no** migrations
+- **Runtime is outside Active Brain Git** — not versioned until source-mirror charter
+- **Phase 1 is blocked** until source preservation model is approved
 - **No WordPress plugin exists** (and WP is not the chosen runtime)
 - **No API integration exists**
 - **No n8n workflow exists**
@@ -254,4 +295,6 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **Website Factory is not runtime owner** — methodology + prototype lane only
 - **Static demo v0.4 is UX reference only** — not implementation
 - **Historical WP architecture docs** remain in corpus as legacy planning — not current SoT
-- **Preflight did not change Laragon, hosts, vhosts, services, or databases**
+- **Phase 0 did not change Laragon config, hosts, vhosts, services, or databases**
+- **Domain `iseo-report-hub.test` is intended only** until manually mapped
+- **No separate runtime Git repository** — and none should be created without charter
