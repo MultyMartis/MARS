@@ -89,7 +89,7 @@ DB not tested. Apache restart **not** performed (not required).
 | Exact-path stage | yes |
 | Staged list | `projects/iseo-report-hub/OPERATIONAL-INDEX.md`; `projects/iseo-report-hub/product/I-SEO-REPORT-HUB-LOCAL-HOSTS-RESMOKE-RESULT-v0.1.md`; `projects/iseo-report-hub/reports/REPORT-iseo-report-hub-local-hosts-resmoke-01.md` |
 | Commit message | `docs(iseo-report-hub): record local hosts resmoke` |
-| Commit hash | `COMMIT_HASH_PENDING` |
+| Commit hash | `38eb6421cbee706e850c3ee212f92d20f28f4e7b` (`38eb6421`) |
 | HEAD verification | `git show --name-only --oneline --stat HEAD` — only the three Active Brain docs above |
 | Push | **no** |
 
