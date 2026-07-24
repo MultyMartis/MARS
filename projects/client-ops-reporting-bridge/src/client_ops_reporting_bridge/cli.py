@@ -5,10 +5,12 @@ Modes:
   build-envelope        — write distributable envelope to an approved local path
   producer-dry-run      — offline producer with mock/fixture/disabled transport
   producer-fixture-test — run a named mock classification once
+  site002-adapter-dry-run — D4 real-source adapter → producer offline only
   push-webhook          — ALWAYS blocked (use producer-d3-controlled-live)
   producer-d3-controlled-live — D3-gated real HTTPS (exact phrases + --apply)
 
 Ordinary dry-run never reaches network. Import causes no network.
+D4 real-source live dispatch is always blocked.
 """
 
 from __future__ import annotations
@@ -51,6 +53,11 @@ from .producer_constants import (
     TRANSPORT_DISABLED,
     TRANSPORT_MOCK,
 )
+from .site002_adapter import (
+    RealSourceLiveDispatchNotAuthorized,
+    run_site002_adapter_dry_run,
+)
+from .site002_adapter_constants import REAL_SOURCE_LIVE_DISPATCH_NOT_AUTHORIZED_D4
 from .producer_d3 import run_producer_d3_controlled
 from .producer_d3_gates import build_authorization, default_d3_runs_dir
 from .producer_dispatch_guard import SequentialDispatchError
@@ -195,7 +202,20 @@ def cmd_producer_dry_run(
     apply: bool = False,
     with_auth: bool = False,
 ) -> int:
+    from .site002_adapter import is_real_source_fixture
+
     if live or apply or transport.strip().lower() == "http":
+        # Real-source fixtures must not piggyback on generic live attempts
+        if is_real_source_fixture(fixture):
+            _print_result(
+                {
+                    "ok": False,
+                    "final_state": REAL_SOURCE_LIVE_DISPATCH_NOT_AUTHORIZED_D4,
+                    "network_calls": 0,
+                    "transport_mode": transport,
+                }
+            )
+            return EXIT_NETWORK_NOT_AUTHORIZED
         _print_result(
             {
                 "ok": False,
@@ -260,6 +280,79 @@ def cmd_producer_dry_run(
     if result.final_state == "CONCURRENCY_REJECTED":
         return EXIT_CONCURRENCY_REJECTED
     if result.final_state == "SOURCE_BLOCKED":
+        return EXIT_SOURCE_BLOCKED
+    return EXIT_SUCCESS
+
+
+def cmd_site002_adapter_dry_run(
+    source: Path,
+    *,
+    transport: str = TRANSPORT_MOCK,
+    mock_response: str = "202_accepted",
+    evidence_dir: Optional[Path] = None,
+    live: bool = False,
+    apply: bool = False,
+    confirm_enable: Optional[str] = None,
+    confirm_send: Optional[str] = None,
+) -> int:
+    """D4 real-source adapter offline dry-run (never HTTP)."""
+    d3_phrase = confirm_enable or confirm_send
+    try:
+        safe_evidence = (
+            assert_safe_output_path(evidence_dir) if evidence_dir is not None else None
+        )
+        result = run_site002_adapter_dry_run(
+            source,
+            transport=transport,
+            mock_response=mock_response,
+            live=live,
+            apply=apply,
+            d3_phrase=d3_phrase,
+            evidence_dir=safe_evidence,
+        )
+    except RealSourceLiveDispatchNotAuthorized as exc:
+        _print_result(
+            {
+                "ok": False,
+                "final_state": REAL_SOURCE_LIVE_DISPATCH_NOT_AUTHORIZED_D4,
+                "network_calls": 0,
+                "error": redact_for_diagnostics(str(exc.detail)),
+            }
+        )
+        return EXIT_NETWORK_NOT_AUTHORIZED
+
+    payload = result.to_sanitized_dict()
+    payload["ok"] = result.final_state not in {
+        REAL_SOURCE_LIVE_DISPATCH_NOT_AUTHORIZED_D4,
+        "ADAPTER_FIREWALL_REJECTED",
+        "ADAPTER_SOURCE_REJECTED",
+        "SOURCE_BLOCKED",
+        "CONCURRENCY_REJECTED",
+    }
+    # Always expose producer_input identity fields for offline evidence
+    if result.producer_input is not None:
+        payload["producer_input"] = {
+            k: result.producer_input.get(k)
+            for k in (
+                "run_id",
+                "observed_at",
+                "normalized_status",
+                "source_status",
+                "summary_code",
+                "action_code",
+                "reason_codes",
+                "metrics",
+            )
+            if k in result.producer_input
+        }
+    _print_result(payload)
+    if result.final_state == REAL_SOURCE_LIVE_DISPATCH_NOT_AUTHORIZED_D4:
+        return EXIT_NETWORK_NOT_AUTHORIZED
+    if result.final_state in {
+        "ADAPTER_FIREWALL_REJECTED",
+        "ADAPTER_SOURCE_REJECTED",
+        "SOURCE_BLOCKED",
+    }:
         return EXIT_SOURCE_BLOCKED
     return EXIT_SUCCESS
 
@@ -498,6 +591,42 @@ def build_parser() -> argparse.ArgumentParser:
         choices=sorted(MOCK_FIXTURE_NAMES.keys()),
     )
 
+    p_d4 = sub.add_parser(
+        "site002-adapter-dry-run",
+        help=(
+            "D4 SITE-002 real-source adapter offline dry-run "
+            "(explicit source path; never live HTTP)"
+        ),
+    )
+    p_d4.add_argument(
+        "--source",
+        required=True,
+        type=Path,
+        help="explicit SITE-002 fixture/artifact directory (no --latest)",
+    )
+    p_d4.add_argument(
+        "--transport",
+        default=TRANSPORT_MOCK,
+        choices=["disabled", "fixture", "mock"],
+        help="D4-allowed transports only (http absent)",
+    )
+    p_d4.add_argument("--mock-response", default="202_accepted")
+    p_d4.add_argument("--evidence-dir", type=Path, default=None)
+    p_d4.add_argument("--live", action="store_true", help="blocked in D4")
+    p_d4.add_argument("--apply", action="store_true", help="blocked in D4")
+    p_d4.add_argument("--confirm-enable", type=str, default=None)
+    p_d4.add_argument("--confirm-send", type=str, default=None)
+    p_d4.add_argument(
+        "--latest",
+        action="store_true",
+        help="forbidden — auto-discovery not authorized",
+    )
+    p_d4.add_argument(
+        "--watch",
+        action="store_true",
+        help="forbidden — watch mode not authorized",
+    )
+
     p_push = sub.add_parser(
         "push-webhook",
         help="BLOCKED — use producer-d3-controlled-live instead",
@@ -565,6 +694,27 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             )
         if args.command == "producer-fixture-test":
             return cmd_producer_fixture_test(args.mock_response, args.fixture)
+        if args.command == "site002-adapter-dry-run":
+            if getattr(args, "latest", False) or getattr(args, "watch", False):
+                _print_result(
+                    {
+                        "ok": False,
+                        "final_state": REAL_SOURCE_LIVE_DISPATCH_NOT_AUTHORIZED_D4,
+                        "network_calls": 0,
+                        "error": "auto-discovery/watch modes forbidden in D4",
+                    }
+                )
+                return EXIT_NETWORK_NOT_AUTHORIZED
+            return cmd_site002_adapter_dry_run(
+                args.source,
+                transport=args.transport,
+                mock_response=args.mock_response,
+                evidence_dir=args.evidence_dir,
+                live=args.live,
+                apply=args.apply,
+                confirm_enable=args.confirm_enable,
+                confirm_send=args.confirm_send,
+            )
         if args.command == "push-webhook":
             return cmd_push_webhook()
         if args.command == "producer-d3-controlled-live":

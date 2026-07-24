@@ -62,6 +62,9 @@ def apply_d3_synthetic_markers(envelope: dict[str, Any]) -> dict[str, Any]:
 
 def build_d3_synthetic_envelope(fixture_dir: Path) -> dict[str, Any]:
     """Build envelope through canonical source→envelope path, then mark D3."""
+    from .site002_adapter import reject_d3_real_source_usage
+
+    reject_d3_real_source_usage(Path(fixture_dir))
     proc = process_fixture_dir(Path(fixture_dir), build_envelope=True)
     if not proc.distributable or proc.envelope is None:
         raise ValueError("fixture not distributable for D3 synthetic event")
@@ -105,11 +108,44 @@ def run_producer_d3_controlled(
     producer_run_id: Optional[str] = None,
 ) -> ProducerResult:
     """Execute one gated live producer POST (FIRST_SEEN or exact replay)."""
+    from .site002_adapter import (
+        RealSourceLiveDispatchNotAuthorized,
+        reject_d3_real_source_usage,
+    )
+
     start = time.perf_counter()
     run_id = producer_run_id or new_producer_run_id()
     guard = guard or get_default_guard()
     root = Path(repo_root) if repo_root else Path(__file__).resolve().parents[4]
     runs = Path(runs_dir) if runs_dir else default_d3_runs_dir(root)
+
+    if fixture_dir is not None:
+        try:
+            reject_d3_real_source_usage(Path(fixture_dir))
+        except RealSourceLiveDispatchNotAuthorized as exc:
+            return ProducerResult(
+                producer_run_id=run_id,
+                event_id=None,
+                site_id=profile.site_id or SITE_ID,
+                status="BLOCKED",
+                transport_mode=TRANSPORT_HTTP,
+                dispatch_attempted=False,
+                simulated_dispatch=False,
+                http_status=None,
+                business_result="NOT_DISPATCHED",
+                dedupe_result="NA",
+                retry_decision="TERMINAL_FAILURE",
+                retry_count=0,
+                failure_category="D4_REAL_SOURCE_GUARD",
+                intake_accepted=False,
+                telegram_delivery_known=False,
+                elapsed_ms=elapsed_since_ms(start),
+                final_state=exc.code,
+                redaction_status="redacted",
+                network_calls=0,
+                endpoint_identity=profile.sanitized_dict()["endpoint_identity"],
+                extra={"error": str(exc.detail)},
+            )
 
     # Dry-run never reaches network
     if authorization.dry_run:

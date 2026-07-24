@@ -2,7 +2,7 @@
 
 **Status:** PHASE 0A/0B + PHASE 1A + PROGRAMMER EXTENSION + PHASE 1B-B…C1 + PHASE 1B-D0 + PHASE 1B-D1 + PHASE 1B-D2 OFFLINE PRODUCER + PHASE 1B-D3 CONTROLLED PRODUCER LIVE CONNECTION COMPLETE (D3B baseline commit; not pushed)
 **Current completed phases:** … + Phase 1B-D2 offline sequential runtime producer + Phase 1B-D3 controlled synthetic producer HTTPS (FIRST_SEEN + exact replay)
-**Remaining Phase 1B:** Phase 1B-D4 SITE-002 real-source adapter design / manual dry-run → later production activation — NOT STARTED
+**Remaining Phase 1B:** Phase 1B-D5 first manual real-source connection charter (Pattern B) → production activation — D4 offline COMPLETE; D4B baseline COMMITTED (not pushed)
 
 ---
 
@@ -80,7 +80,7 @@
 | **HITL gate** | Inactive sandbox create → authenticated POST → Telegram → production activation |
 | **Evidence required** | Sanitized envelopes; create/re-GET evidence; isolation tests; unchanged monitor/baseline/scheduler |
 | **Exit criteria** | Internal SIMPLE reliable for OK/ATTENTION/FAILED/BLOCKED per send policy (OK always sends during validation) |
-| **State** | **PARTIAL** — Phase 1B-D3 controlled synthetic producer HTTPS proven (`READY_FOR_REAL_SOURCE_ADAPTER_AND_MANUAL_CONNECTION_CHARTER`); generic live mode BLOCKED; D3 charter CONSUMED; next: **D4 real-source adapter design / manual dry-run**; production activation still last |
+| **State** | **PARTIAL** — Phase 1B-D4 SITE-002 real-source adapter **PROVEN_OFFLINE**; Phase 1B-D4B offline evidence baseline **COMMITTED** (`READY_FOR_FIRST_MANUAL_REAL_SOURCE_CONNECTION_CHARTER`); real-source live POST blocked; next **D5** Pattern B manual connection charter; production activation still last |
 
 ---
 

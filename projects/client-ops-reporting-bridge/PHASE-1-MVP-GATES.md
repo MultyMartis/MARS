@@ -3,7 +3,7 @@
 **Status:** DOCUMENTATION + PROGRAMMER EXTENSION + PHASE 1B-B…C1 + PHASE 1B-D0 + PHASE 1B-D1 + PHASE 1B-D2 + PHASE 1B-D3 COMPLETE / PRODUCTION ACTIVATION PENDING
 **Gate actions:** … Phase 1B-D0 charter **EXECUTED**; Phase 1B-D1 durable sequential dedupe **EXECUTED** (inactive); Phase 1B-D2 offline producer **EXECUTED**; Phase 1B-D3 controlled synthetic live connection **EXECUTED**; production activation **NOT EXECUTED**
 **Phase 1 production readiness:** NOT READY until remaining activation gates are satisfied
-**Next phase:** Phase 1B-D4 SITE-002 Real-Source Adapter Design and Manual Dry-Run Integration; production activation remains last
+**Next phase:** Phase 1B-D5 First Manual SITE-002 Real-Source Connection Charter and Controlled Live POST (Pattern B); real-source live POST and production activation remain blocked until that charter
 
 ---
 

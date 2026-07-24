@@ -117,4 +117,4 @@ node projects/client-ops-reporting-bridge/n8n/runners/run-client-ops-telegram-cr
 
 **Phase 1B-D3 — Controlled Sequential Producer Connection** — COMPLETE; synthetic FIRST_SEEN + exact replay proven; D3 one-time charter CONSUMED; generic live mode remains BLOCKED. Do not reconnect SITE-002 monitor or enable scheduler without a later explicit charter.
 
-**Phase 1B-D4 — SITE-002 Real-Source Adapter Design and Manual Dry-Run Integration** — next (offline/read-only first; not authorized by D3B alone).
+**Phase 1B-D4 — SITE-002 Real-Source Adapter Design and Manual Dry-Run Integration** — COMPLETE (offline); Phase 1B-D4B offline evidence baseline COMMITTED (not pushed); readiness `READY_FOR_FIRST_MANUAL_REAL_SOURCE_CONNECTION_CHARTER`; real-source live POST remains blocked (`REAL_SOURCE_LIVE_DISPATCH_NOT_AUTHORIZED_D4`). Next: D5 first manual real-source connection charter (Pattern B; separate charter).

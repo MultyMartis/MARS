@@ -14,7 +14,7 @@
 **Phase 1B-D1 durable dedupe inactive sandbox:** COMPLETE — sequential proof; table `H6VYhwz7RXZCBMmu` retained; see [PHASE-1B-D1-DURABLE-DEDUPE-DESIGN-AND-INACTIVE-SANDBOX-IMPLEMENTATION.md](PHASE-1B-D1-DURABLE-DEDUPE-DESIGN-AND-INACTIVE-SANDBOX-IMPLEMENTATION.md)
 **Phase 1B-D2 sequential runtime producer (offline):** COMPLETE — see [PHASE-1B-D2-SEQUENTIAL-RUNTIME-PRODUCER-DESIGN-AND-OFFLINE-IMPLEMENTATION.md](PHASE-1B-D2-SEQUENTIAL-RUNTIME-PRODUCER-DESIGN-AND-OFFLINE-IMPLEMENTATION.md)
 **Phase 1B-D3 controlled sequential producer connection:** COMPLETE — synthetic FIRST_SEEN + exact replay; see [PHASE-1B-D3-CONTROLLED-SEQUENTIAL-PRODUCER-CONNECTION-AND-SYNTHETIC-LIVE-POST.md](PHASE-1B-D3-CONTROLLED-SEQUENTIAL-PRODUCER-CONNECTION-AND-SYNTHETIC-LIVE-POST.md)
-**Phase 1B production activation:** NOT STARTED — readiness: `READY_FOR_REAL_SOURCE_ADAPTER_AND_MANUAL_CONNECTION_CHARTER`; next **Phase 1B-D4** SITE-002 real-source adapter design / manual dry-run (not automatic monitor connection)
+**Phase 1B production activation:** NOT STARTED — readiness: `READY_FOR_FIRST_MANUAL_REAL_SOURCE_CONNECTION_CHARTER`; Phase 1B-D4 offline adapter COMPLETE; Phase 1B-D4B offline evidence baseline COMMITTED (not pushed); next **Phase 1B-D5** Pattern B manual real-source connection charter (not automatic monitor connection)
 
 ---
 
