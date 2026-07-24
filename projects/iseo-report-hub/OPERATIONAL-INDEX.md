@@ -15,8 +15,8 @@
 | **Owner / product architect** | Андрей |
 | **Business owner / vision source** | Никита / i-SEO |
 | **Developer** | Антон |
-| **Platform direction** | **Decided** — custom **PHP + SQL/MySQL**; **no WordPress runtime**; Laragon available as local dev/runtime candidate; see [I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md](product/I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md) |
-| **Implementation** | **Not started** — no PHP app, no SQL migrations, no Laragon project, no n8n workflow |
+| **Platform direction** | **Decided** — custom **PHP + SQL/MySQL**; **no WordPress runtime**; Laragon local runtime **verified** (preflight 01); see [I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md](product/I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md) |
+| **Implementation** | **Not started** — no PHP app, no SQL migrations, no iseo Laragon site/DB, no n8n workflow |
 
 ---
 
@@ -26,7 +26,7 @@
 |-------|-------|
 | **Status** | planned / product architecture |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | Platform decision + PHP/MySQL MVP technical brief package (docs); Layer 02 complete; static demo v0.4 UX reference; SEO feedback deferred; **implementation not started** |
+| **Active stage** | Laragon runtime preflight **complete** (read-only); platform decision + PHP/MySQL MVP technical brief package (docs); Layer 02 complete; static demo v0.4 UX reference; SEO feedback deferred; **implementation not started** |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -107,11 +107,28 @@
 
 ---
 
+## Laragon runtime preflight 01 (2026-07-24)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** — read-only preflight only |
+| **Result doc** | [I-SEO-REPORT-HUB-LARAGON-PREFLIGHT-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-LARAGON-PREFLIGHT-RESULT-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-laragon-runtime-preflight-01.md](reports/REPORT-iseo-report-hub-laragon-runtime-preflight-01.md) |
+| **Laragon** | **Found** — `X:\MARS-Localhost\laragon\` (v8.6.1); process running |
+| **PHP** | **8.3.30** active (Apache `mod_php` + profile); MVP extensions verified (`pdo_mysql`, `mbstring`, `json`, `openssl`, `fileinfo`, …); not on system PATH |
+| **MySQL** | **8.4.3** client + server; port **3306** listening; `SELECT VERSION()` only; **no** DB created |
+| **Web server** | Apache **2.4.66** on port **80**; Nginx present, not running |
+| **Runtime changes** | **None** — no scaffold, SQL, DB, vhost/hosts, Laragon config, or service restart |
+| **Phase 0 readiness** | **Partial** — environment capable; layout/domain/DB charter inputs still required |
+| **Next stage** | Operator review of Laragon Preflight Result, then **MVP Phase 0 scaffold charter** after approval and missing inputs |
+
+---
+
 ## Current approved decisions (summary)
 
 1. Report Hub — **операционная система отчётности**, не PDF-only tool.
 2. **Platform** — **custom PHP + SQL/MySQL** (operator decision 2026-07-24); WordPress **rejected** as runtime/SoT; see [PLATFORM-DECISION-v0.1](product/I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md).
-3. **Laragon** — accepted local dev/runtime **candidate** (versions/paths unverified).
+3. **Laragon** — local runtime **verified** at `X:\MARS-Localhost\laragon\` (preflight 01); PHP 8.3.30 / MySQL 8.4.3 / Apache 2.4.66; no iseo site/DB yet.
 4. **n8n** — external helper (AI, reminders, notifications); **не** SoT.
 5. **Primary client output** — web report from published snapshots via token URL; PDF optional later.
 6. **Reporting period** — 1 month; 3 weekly checkpoints + 1 monthly final.
@@ -166,6 +183,8 @@
 | 40 | [product/I-SEO-REPORT-HUB-MVP-SCHEMA-DRAFT-v0.1.md](product/I-SEO-REPORT-HUB-MVP-SCHEMA-DRAFT-v0.1.md) | Conceptual MVP schema draft |
 | 41 | [product/I-SEO-REPORT-HUB-MVP-ROUTE-AND-SCREEN-MAP-v0.1.md](product/I-SEO-REPORT-HUB-MVP-ROUTE-AND-SCREEN-MAP-v0.1.md) | Conceptual route/screen map |
 | 42 | [reports/REPORT-iseo-report-hub-platform-decision-php-mysql-technical-brief-01.md](reports/REPORT-iseo-report-hub-platform-decision-php-mysql-technical-brief-01.md) | Platform decision + technical brief closeout |
+| 43 | [product/I-SEO-REPORT-HUB-LARAGON-PREFLIGHT-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-LARAGON-PREFLIGHT-RESULT-v0.1.md) | Laragon/runtime preflight result (read-only) |
+| 44 | [reports/REPORT-iseo-report-hub-laragon-runtime-preflight-01.md](reports/REPORT-iseo-report-hub-laragon-runtime-preflight-01.md) | Laragon runtime preflight closeout |
 
 ---
 
@@ -210,11 +229,11 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Operator review** of PHP/MySQL MVP Technical Brief package (platform decision + brief + Laragon plan + phases + schema + routes)
-2. **Scoped commit** of this documentation package (operator-chartered; selective paths only) — **not done in this task**
-3. Optional parallel: **v0.5 demo corrections** from backlog (UX only; not product runtime)
-4. **SEO specialist feedback** — still **deferred** until operator opens feedback charter
-5. **Phase 0** — Laragon/runtime confirmation + local scaffold charter (HITL)
+1. **Operator review** of [Laragon Preflight Result v0.1](product/I-SEO-REPORT-HUB-LARAGON-PREFLIGHT-RESULT-v0.1.md) (layout, domain, DB, PHP pin, sync policy)
+2. **MVP Phase 0 scaffold charter** after operator approval and missing inputs — **not started**
+3. Optional: **scoped commit** of preflight docs (operator-chartered; selective paths only) — **not done in this task**
+4. Optional parallel: **v0.5 demo corrections** from backlog (UX only; not product runtime)
+5. **SEO specialist feedback** — still **deferred** until operator opens feedback charter
 6. Work dictionary extraction/sanitization (из Nikita materials; **exclude** credential sheet)
 7. MVP implementation phases 1–11 per implementation charter (Anton / i-SEO)
 8. Later: n8n/API/AI integration (events only; human approval gates)
@@ -226,7 +245,7 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 ## Boundaries (do not overclaim)
 
 - **No implementation started**
-- **No PHP app / SQL schema / Laragon project exists** for Report Hub
+- **No PHP app / SQL schema / iseo Laragon site or DB exists** for Report Hub (Laragon stack itself exists under MARS-Localhost)
 - **No WordPress plugin exists** (and WP is not the chosen runtime)
 - **No API integration exists**
 - **No n8n workflow exists**
@@ -235,3 +254,4 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **Website Factory is not runtime owner** — methodology + prototype lane only
 - **Static demo v0.4 is UX reference only** — not implementation
 - **Historical WP architecture docs** remain in corpus as legacy planning — not current SoT
+- **Preflight did not change Laragon, hosts, vhosts, services, or databases**
