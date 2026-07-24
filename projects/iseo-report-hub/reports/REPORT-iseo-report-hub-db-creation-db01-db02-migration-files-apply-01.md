@@ -123,7 +123,7 @@
 | Exact-path `git add` | **yes** (allowlisted paths only) |
 | Commit | **yes** |
 | Message | `feat(iseo-report-hub): add initial db migration` |
-| Commit hash | `COMMIT_HASH_PENDING` |
+| Commit hash | `9ada00b3f89a05040f4d3bb1deb16f5fe9ba3146` |
 | Push | **no** |
 
 Staged allowlist (expected):
