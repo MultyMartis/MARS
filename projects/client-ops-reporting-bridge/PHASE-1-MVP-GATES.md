@@ -1,8 +1,9 @@
 # Phase 1 MVP Gates
 
-**Status:** DOCUMENTATION + PROGRAMMER EXTENSION + PHASE 1B-B + PHASE 1B-B1 + PHASE 1B-B2 + PHASE 1B-C INTAKE + C0R2 + C0S + C1 + C1B COMPLETE / PRODUCTION ACTIVATION PENDING
-**Gate actions:** inactive sandbox create **EXECUTED**; native Header Auth binding **EXECUTED**; authenticated POST matrix **EXECUTED**; Telegram bot/credential intake **EXECUTED**; chat target **CONFIRMED**; semantics Pattern B **CONFIRMED**; Telegram sandbox integration apply **EXECUTED** (inactive; one delivery); production activation **NOT EXECUTED**
+**Status:** DOCUMENTATION + PROGRAMMER EXTENSION + PHASE 1B-B…C1 + PHASE 1B-D0 + PHASE 1B-D1 COMPLETE / PRODUCTION ACTIVATION PENDING
+**Gate actions:** … Phase 1B-D0 charter **EXECUTED**; Phase 1B-D1 durable sequential dedupe **EXECUTED** (inactive); production activation **NOT EXECUTED**
 **Phase 1 production readiness:** NOT READY until remaining activation gates are satisfied
+**Next offline design phase:** Phase 1B-D2 Sequential Runtime Producer Design (no webhook connection unless later controlled charter)
 
 ---
 
@@ -19,7 +20,7 @@
 | — | Clock skew tolerance `300` seconds | **APPROVED** | Future `observed_at` → `SOURCE_TIME_INVALID` |
 | — | Transport profile for bzpm Bridge | **PROFILE_B_REQUIRED** | Authenticated webhook intake |
 | — | Manual n8n UI assembly | **NOT ACCEPTED** | Cursor/MetaBOT programmer generates JSON |
-| — | First sandbox dedupe | **DEDUPE_DEFERRED_SANDBOX** | No false durable claims |
+| — | First sandbox dedupe | **DEDUPE_SEQUENTIAL_SAFE_CONCURRENCY_UNPROVEN** (D1 proven sequential; concurrent producers forbidden) | Data Table `H6VYhwz7RXZCBMmu` retained; SENT ledger deferred |
 | — | Auth MVP | **Native Header Auth confirmed** (`AUTH_NATIVE_HEADER_CREDENTIAL_CONFIRMED`) | Credential `MARS Client Ops Webhook Auth — bzpm.ru`; header `X-MARS-Client-Ops-Token`; Phase 1B-B2 POST matrix passed; workflow inactive |
 
 Do **not** re-ask decisions already marked APPROVED / FROZEN.

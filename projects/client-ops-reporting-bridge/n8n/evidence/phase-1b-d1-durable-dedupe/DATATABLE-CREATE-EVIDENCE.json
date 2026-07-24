@@ -1,0 +1,27 @@
+{
+  "phrase": "CREATE CLIENT OPS DEDUPE DATA TABLE BZPM",
+  "create_count": 1,
+  "table_name": "MARS Client Ops Dedupe — bzpm.ru",
+  "table_id": "H6VYhwz7RXZCBMmu",
+  "column_count": 15,
+  "column_names": [
+    "conflict_count",
+    "delivery_state",
+    "duplicate_count",
+    "event_fingerprint",
+    "event_id",
+    "event_status",
+    "event_type",
+    "first_seen_at",
+    "intake_state",
+    "last_seen_at",
+    "redaction_version",
+    "sandbox_marker",
+    "schema_name",
+    "schema_version",
+    "site_id"
+  ],
+  "initial_row_count": 0,
+  "http_status": 201,
+  "verification": "PASS"
+}

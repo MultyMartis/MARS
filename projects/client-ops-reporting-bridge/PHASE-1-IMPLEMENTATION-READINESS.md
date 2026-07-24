@@ -10,7 +10,9 @@
 **Phase 1B-B2 authenticated sandbox POST:** COMPLETE — see [PHASE-1B-B2-AUTHENTICATED-SANDBOX-POST-VALIDATION.md](PHASE-1B-B2-AUTHENTICATED-SANDBOX-POST-VALIDATION.md)
 **Phase 1B-C0S Telegram semantics:** COMPLETE — `PATTERN_B_CONFIRMED` — see [PHASE-1B-C0S-TELEGRAM-INTEGRATION-SEMANTICS-VERIFICATION.md](PHASE-1B-C0S-TELEGRAM-INTEGRATION-SEMANTICS-VERIFICATION.md)
 **Phase 1B-C1 Telegram sandbox apply:** COMPLETE — inactive workflow; one delivery verified — see [PHASE-1B-C1-TELEGRAM-SANDBOX-INTEGRATION-CONTROLLED-APPLY.md](PHASE-1B-C1-TELEGRAM-SANDBOX-INTEGRATION-CONTROLLED-APPLY.md)
-**Phase 1B production activation:** NOT STARTED — readiness `READY_FOR_NEXT_INACTIVE_SANDBOX_PHASE`; next charter **Phase 1B-D0** (inactive-sandbox next-step decision / runtime-connection charter; documentation only unless separately authorized)
+**Phase 1B-D0 next-step / runtime connection charter:** COMPLETE (decision only) — see [PHASE-1B-D0-INACTIVE-SANDBOX-NEXT-STEP-DECISION-AND-RUNTIME-CONNECTION-CHARTER.md](PHASE-1B-D0-INACTIVE-SANDBOX-NEXT-STEP-DECISION-AND-RUNTIME-CONNECTION-CHARTER.md)
+**Phase 1B-D1 durable dedupe inactive sandbox:** COMPLETE — sequential proof; table `H6VYhwz7RXZCBMmu` retained; see [PHASE-1B-D1-DURABLE-DEDUPE-DESIGN-AND-INACTIVE-SANDBOX-IMPLEMENTATION.md](PHASE-1B-D1-DURABLE-DEDUPE-DESIGN-AND-INACTIVE-SANDBOX-IMPLEMENTATION.md)
+**Phase 1B production activation:** NOT STARTED — readiness after D1B commit: `READY_FOR_NEXT_SEQUENTIAL_RUNTIME_PRODUCER_DESIGN_PHASE`; next charter **Phase 1B-D2 — Sequential Runtime Producer Design and Offline Implementation**
 
 ---
 

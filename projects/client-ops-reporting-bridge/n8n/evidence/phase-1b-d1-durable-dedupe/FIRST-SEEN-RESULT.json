@@ -1,0 +1,48 @@
+{
+  "label": "FIRST_SEEN",
+  "phrase": "SEND CLIENT OPS DEDUPE FIRST SEEN TEST BZPM",
+  "http_status": 202,
+  "response_result": "ACCEPTED",
+  "response_dedupe": "FIRST_SEEN",
+  "response_ok": true,
+  "execution_id": "3411",
+  "execution_summary": {
+    "ok": true,
+    "execution_id": "3411",
+    "status": "success",
+    "finished": true,
+    "node_names_executed": [
+      "Webhook Intake",
+      "Capture Request Metadata",
+      "Process Client Ops Gates",
+      "IF Accepted Branch",
+      "Prepare Dedupe Context",
+      "Dedupe Lookup",
+      "Dedupe Classify",
+      "IF Dedupe First Seen",
+      "Dedupe Claim Insert",
+      "Prepare Accepted Response",
+      "Respond Accepted",
+      "Telegram Notify Accepted"
+    ],
+    "telegram_runs": 1,
+    "telegram_message_id": 5,
+    "telegram_ok": true,
+    "has_dedupe_lookup": true,
+    "has_dedupe_classify": true,
+    "has_claim_insert": true,
+    "has_respond_accepted": true,
+    "has_respond_non_first": false
+  },
+  "post_ok": true,
+  "post_error": null,
+  "url_sanitized": "https://n8n.ai-metacode.com/[REDACTED_PATH]",
+  "event_id": "1e8673d0-2b47-4950-89cb-350f335d5d7f",
+  "event_fingerprint": "{\"action_code\":\"NONE\",\"action_required\":false,\"domain\":\"bzpm.ru\",\"event_type\":\"site.post_1c_monitor\",\"metrics\":{\"added_urls\":0,\"baseline_count\":42,\"current_count\":42,\"onboarding_needed_count\":0,\"removed_urls\":0},\"normalized_status\":\"OK\",\"schema_name\":\"mars.client_ops.report\",\"schema_version\":\"1.0\",\"site_id\":\"SITE-002\",\"source_status\":\"NO_ACTION_REQUIRED\",\"summary_code\":\"NO_ACTION_REQUIRED\"}",
+  "expected": {
+    "http_status": 202,
+    "result": "ACCEPTED",
+    "dedupe": "FIRST_SEEN",
+    "telegram_runs": 1
+  }
+}

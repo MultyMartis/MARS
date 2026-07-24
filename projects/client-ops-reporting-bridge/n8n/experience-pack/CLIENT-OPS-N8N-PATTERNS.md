@@ -9,6 +9,8 @@
 - Structured accept/reject JSON responses.
 - Auth failure before business validation.
 - Dedupe deferred in first sandbox (`DEDUPE_DEFERRED_SANDBOX`).
+- Phase 1B-D0: implement durable dedupe (Data Table preferred) **before** runtime producer connection; prefer R1 exporter producer; never schedule from dirty main monorepo.
+- Phase 1B-D1: durable sequential dedupe via Data Table before Telegram; concurrent producers forbidden until atomicity proven.
 - No Telegram in first sandbox create; Telegram apply is a later gate.
 - **Pattern B (runtime-confirmed and applied on inactive sandbox):** accepted path → Respond to Webhook → Telegram `sendMessage`.
 - No manual n8n UI node assembly — Cursor/MetaBOT programmer generates JSON.

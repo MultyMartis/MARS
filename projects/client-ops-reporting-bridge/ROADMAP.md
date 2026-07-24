@@ -1,8 +1,8 @@
 # Roadmap — MARS Client Ops Reporting Bridge
 
-**Status:** PHASE 0A/0B + PHASE 1A + PROGRAMMER EXTENSION + PHASE 1B-B + PHASE 1B-B1 + PHASE 1B-B2 + PHASE 1B-C INTAKE + PHASE 1B-C0R2 + PHASE 1B-C0S + PHASE 1B-C1 COMPLETE (evidence committed in 1B-C1B; not pushed)
-**Current completed phases:** … + Phase 1B-C1 Telegram sandbox integration controlled apply (inactive; one delivery verified) + Phase 1B-C1B evidence baseline commit
-**Remaining Phase 1B:** inactive-sandbox next-step decision (1B-D0) → production activation — NOT STARTED
+**Status:** PHASE 0A/0B + PHASE 1A + PROGRAMMER EXTENSION + PHASE 1B-B…C1 + PHASE 1B-D0 + PHASE 1B-D1 COMPLETE (D1B baseline commit this wave; not pushed)
+**Current completed phases:** … + Phase 1B-D0 runtime connection charter + Phase 1B-D1 durable sequential dedupe (inactive; Data Table retained)
+**Remaining Phase 1B:** Phase 1B-D2 Sequential Runtime Producer Design (offline) → controlled producer connection → production activation — NOT STARTED
 
 ---
 
@@ -80,7 +80,7 @@
 | **HITL gate** | Inactive sandbox create → authenticated POST → Telegram → production activation |
 | **Evidence required** | Sanitized envelopes; create/re-GET evidence; isolation tests; unchanged monitor/baseline/scheduler |
 | **Exit criteria** | Internal SIMPLE reliable for OK/ATTENTION/FAILED/BLOCKED per send policy (OK always sends during validation) |
-| **State** | **PARTIAL** — Phase 1B-C1 Telegram sandbox apply complete (inactive; one delivery verified; evidence baseline committed in 1B-C1B, not pushed); next: Phase 1B-D0 inactive-sandbox decision charter, then production activation |
+| **State** | **PARTIAL** — Phase 1B-D1 durable sequential dedupe complete (inactive; executions=29; concurrency unproven; SENT ledger deferred); next: **Phase 1B-D2 Sequential Runtime Producer Design** (offline); production activation still last |
 
 ---
 

@@ -1,0 +1,21 @@
+{
+  "openapi_paths": [
+    "/data-tables",
+    "/data-tables/{id}",
+    "/data-tables/{id}/rows",
+    "/rows/update",
+    "/rows/upsert",
+    "/rows/delete"
+  ],
+  "column_types": [
+    "string",
+    "number",
+    "boolean",
+    "date",
+    "json"
+  ],
+  "unique_constraints": false,
+  "upsert_match": "filter conditions (eq supported)",
+  "node_type": "n8n-nodes-base.dataTable",
+  "node_typeVersion_used": 1.1
+}

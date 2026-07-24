@@ -70,7 +70,9 @@ Delete only when inactive, exact name/id match, explicit operator approval, and 
 - Phase 1B-C0: chat-target discovery retry returned 0 updates.
 - Phase 1B-C0R2: chat target confirmed (`TELEGRAM_CHAT_TARGET_CONFIRMED`); local ignored target file created.
 - Phase 1B-C0S: Pattern B continuation-after-Respond **confirmed** via temporary semantics workflow (deleted).
-- Phase 1B-C1: Telegram sandbox integration **applied** to inactive real workflow; one synthetic delivery verified; final `active=false`; readiness `READY_FOR_NEXT_INACTIVE_SANDBOX_PHASE` (evidence baseline committed in 1B-C1B).
+- Phase 1B-C1: Telegram sandbox integration **applied** to inactive real workflow; one synthetic delivery verified; final `active=false`; readiness advanced by Phase 1B-D0 to `READY_FOR_SELECTED_INACTIVE_IMPLEMENTATION_PHASE` (next: D1 Durable Dedupe).
+- Phase 1B-D0: decision-only charter — no workflow mutation; durable dedupe before runtime producer; R1 preferred; Data Table preferred; dirty-main scheduling forbidden.
+- Phase 1B-D1: durable sequential dedupe applied; first attempt rolled back after execution 3410 (`require('crypto')` disallowed); successful retest executions 26→29; table `H6VYhwz7RXZCBMmu` retained; concurrency `DEDUPE_SEQUENTIAL_SAFE_CONCURRENCY_UNPROVEN`; SENT ledger deferred.
 - Display name: `Монитор bzpm.ru — MetaCODE`.
 - Avatar requirement: bzpm.ru logo (verification SAFE UNKNOWN via Bot API).
 - Never put bot token in workflow JSON.
@@ -79,3 +81,4 @@ Delete only when inactive, exact name/id match, explicit operator approval, and 
 ## 11. Production activation gate
 
 - Explicit HITL; separate from sandbox create.
+- Mandatory gate list: `evidence/phase-1b-d0-runtime-connection-charter/PRODUCTION-ACTIVATION-GATES.md`.

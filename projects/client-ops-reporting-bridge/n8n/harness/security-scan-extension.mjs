@@ -15,6 +15,9 @@ const roots = [
   'projects/client-ops-reporting-bridge/PHASE-1B-C0R2-TELEGRAM-CHAT-TARGET-DISCOVERY-FINAL-RETRY.md',
   'projects/client-ops-reporting-bridge/PHASE-1B-C0S-TELEGRAM-INTEGRATION-SEMANTICS-VERIFICATION.md',
   'projects/client-ops-reporting-bridge/PHASE-1B-C1-TELEGRAM-SANDBOX-INTEGRATION-CONTROLLED-APPLY.md',
+  'projects/client-ops-reporting-bridge/PHASE-1B-D0-INACTIVE-SANDBOX-NEXT-STEP-DECISION-AND-RUNTIME-CONNECTION-CHARTER.md',
+  'projects/client-ops-reporting-bridge/PHASE-1B-D1-DURABLE-DEDUPE-DESIGN-AND-INACTIVE-SANDBOX-IMPLEMENTATION.md',
+  'projects/client-ops-reporting-bridge/evidence/phase-1b-d0-runtime-connection-charter',
   'projects/client-ops-reporting-bridge/README.md',
 
   'projects/client-ops-reporting-bridge/ROADMAP.md',
@@ -85,6 +88,21 @@ for (const f of files) {
             f.replace(/\\/g, '/'),
           ) ||
           /phase-1b-c1-telegram-sandbox-controlled-apply[\\/].+\.(json|md)$/i.test(
+            f.replace(/\\/g, '/'),
+          ) ||
+          /phase-1b-d0-runtime-connection-charter[\\/].+\.(json|md)$/i.test(
+            f.replace(/\\/g, '/'),
+          ) ||
+          /phase-1b-d1-durable-dedupe[\\/].+\.(json|md)$/i.test(
+            f.replace(/\\/g, '/'),
+          ) ||
+          /PHASE-1B-D0-INACTIVE-SANDBOX-NEXT-STEP-DECISION-AND-RUNTIME-CONNECTION-CHARTER\.md$/i.test(
+            f.replace(/\\/g, '/'),
+          ) ||
+          /PHASE-1B-D1-DURABLE-DEDUPE-DESIGN-AND-INACTIVE-SANDBOX-IMPLEMENTATION\.md$/i.test(
+            f.replace(/\\/g, '/'),
+          ) ||
+          /runners[\\/](run-client-ops-durable-dedupe-sandbox|lib[\\/]client-ops-dedupe-compose)\.mjs$/i.test(
             f.replace(/\\/g, '/'),
           ))
       ) {

@@ -70,7 +70,7 @@ Validate: schema_name, schema major 1, site identity, event_type, normalized_sta
 
 First sandbox: `DEDUPE_DEFERRED_SANDBOX` / response may advertise `dedupe: "DEFERRED_SANDBOX"` and `DEDUPE_NOT_ENABLED_SANDBOX`.
 
-Do not claim production-grade durable dedupe yet.
+Phase 1B-D0 decision: durable dedupe is **mandatory before any runtime producer connection**. Preferred store on this install: n8n **Data Table**. Phase 1B-D1 proved **sequential** durable dedupe (FIRST_SEEN / DUPLICATE / EVENT_ID_CONFLICT). Classification remains `DEDUPE_SEQUENTIAL_SAFE_CONCURRENCY_UNPROVEN`. Post-Telegram SENT ledger deferred. Do not claim concurrent-safe or production-grade delivery ledger yet.
 
 ## 8. Structured response
 
@@ -78,7 +78,7 @@ Deterministic JSON accept/reject contract (see Client Ops programmer extension d
 
 ## 9. Sandbox-first rule
 
-Generate local template → offline harness → inactive create → re-GET → Phase 1B-B1 auth binding → Phase 1B-B2 authenticated POST → Phase 1B-C Telegram bot/credential intake → Phase 1B-C0/C0R2 chat-target discovery → Phase 1B-C0S semantics → Phase 1B-C1 Telegram sandbox apply (done) → Phase 1B-C1B evidence baseline commit (done) → only later inactive-sandbox decision / production activation under separate charters.
+Generate local template → offline harness → inactive create → re-GET → Phase 1B-B1 auth binding → Phase 1B-B2 authenticated POST → Phase 1B-C Telegram bot/credential intake → Phase 1B-C0/C0R2 chat-target discovery → Phase 1B-C0S semantics → Phase 1B-C1 Telegram sandbox apply (done) → Phase 1B-C1B evidence baseline (done) → Phase 1B-D0 runtime connection charter (done) → Phase 1B-D1 durable dedupe (done) → Phase 1B-D1B evidence baseline commit → Phase 1B-D2 sequential runtime producer design (offline next) → only later controlled producer connection / production activation under separate charters.
 
 ## 10. Telegram sandbox apply (1B-C1)
 
@@ -90,11 +90,11 @@ MetaBOT / Cursor programmer must generate and apply workflow JSON. Manual n8n UI
 
 ## 12. Experience capture requirement
 
-After first sandbox apply, update `projects/client-ops-reporting-bridge/n8n/experience-pack/` with create/re-GET facts. Phase 1B-B captured inactive-create experience; Phase 1B-B1 captured native auth binding; Phase 1B-B2 captured authenticated POST / activation containment; Phase 1B-C/C0R2/C0S captured Telegram intake/semantics; Phase 1B-C1 captured inactive Telegram apply + one delivery. Production activation still incomplete.
+After first sandbox apply, update `projects/client-ops-reporting-bridge/n8n/experience-pack/` with create/re-GET facts. Phase 1B-B…C1 captured; Phase 1B-D0 captured architecture decisions; Phase 1B-D1 captured durable sequential dedupe + Data Table retention. Production activation still incomplete.
 
 ## Remaining gaps (SAFE UNKNOWN)
 
 - Exact n8n application version.
-- Data Store availability.
+- Data Table workflow node typeVersion / concurrency atomicity of upsert.
 - Workflow-level HTTP 413 for oversized bodies (observed native 422 parse before size gate).
-- Production durable dedupe store choice.
+- Long-term exporter host placement.

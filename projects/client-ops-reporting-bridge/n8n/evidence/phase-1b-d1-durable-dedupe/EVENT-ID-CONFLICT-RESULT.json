@@ -1,0 +1,47 @@
+{
+  "label": "EVENT_ID_CONFLICT",
+  "phrase": "SEND CLIENT OPS DEDUPE CONFLICT TEST BZPM",
+  "http_status": 409,
+  "response_result": "EVENT_ID_CONFLICT",
+  "response_dedupe": null,
+  "response_ok": false,
+  "execution_id": "3413",
+  "execution_summary": {
+    "ok": true,
+    "execution_id": "3413",
+    "status": "success",
+    "finished": true,
+    "node_names_executed": [
+      "Webhook Intake",
+      "Capture Request Metadata",
+      "Process Client Ops Gates",
+      "IF Accepted Branch",
+      "Prepare Dedupe Context",
+      "Dedupe Lookup",
+      "Dedupe Classify",
+      "IF Dedupe First Seen",
+      "Prepare Non-First-Seen Response",
+      "Respond Non-First-Seen"
+    ],
+    "telegram_runs": 0,
+    "telegram_message_id": null,
+    "telegram_ok": null,
+    "has_dedupe_lookup": true,
+    "has_dedupe_classify": true,
+    "has_claim_insert": false,
+    "has_respond_accepted": false,
+    "has_respond_non_first": true
+  },
+  "post_ok": true,
+  "post_error": null,
+  "url_sanitized": "https://n8n.ai-metacode.com/[REDACTED_PATH]",
+  "event_id": "1e8673d0-2b47-4950-89cb-350f335d5d7f",
+  "original_fingerprint": "{\"action_code\":\"NONE\",\"action_required\":false,\"domain\":\"bzpm.ru\",\"event_type\":\"site.post_1c_monitor\",\"metrics\":{\"added_urls\":0,\"baseline_count\":42,\"current_count\":42,\"onboarding_needed_count\":0,\"removed_urls\":0},\"normalized_status\":\"OK\",\"schema_name\":\"mars.client_ops.report\",\"schema_version\":\"1.0\",\"site_id\":\"SITE-002\",\"source_status\":\"NO_ACTION_REQUIRED\",\"summary_code\":\"NO_ACTION_REQUIRED\"}",
+  "conflict_fingerprint": "{\"action_code\":\"NONE\",\"action_required\":false,\"domain\":\"bzpm.ru\",\"event_type\":\"site.post_1c_monitor\",\"metrics\":{\"added_urls\":0,\"baseline_count\":99,\"current_count\":42,\"onboarding_needed_count\":0,\"removed_urls\":0},\"normalized_status\":\"OK\",\"schema_name\":\"mars.client_ops.report\",\"schema_version\":\"1.0\",\"site_id\":\"SITE-002\",\"source_status\":\"NO_ACTION_REQUIRED\",\"summary_code\":\"NO_ACTION_REQUIRED\"}",
+  "expected": {
+    "http_status": 409,
+    "result": "EVENT_ID_CONFLICT",
+    "telegram_runs": 0
+  },
+  "total_telegram_deliveries_after": 1
+}

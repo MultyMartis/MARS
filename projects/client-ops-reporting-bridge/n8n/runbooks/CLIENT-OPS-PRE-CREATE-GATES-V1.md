@@ -26,4 +26,4 @@ Deterministic gates before inactive sandbox create.
 | Rollback plan present | Runbook exists | PASS |
 | Operator HITL | Required for apply | Phase 1B-B charter + confirmation phrase |
 
-**Apply readiness:** Phase 1B-C1 Telegram sandbox integration controlled apply is complete (inactive; one delivery verified). Readiness `READY_FOR_NEXT_INACTIVE_SANDBOX_PHASE` (1B-C1B evidence baseline committed). Production activation remains blocked until separate charter.
+**Apply readiness:** Phase 1B-D1 durable sequential dedupe complete (inactive; executions=29). Next offline charter: Phase 1B-D2 Sequential Runtime Producer Design. Concurrent producers / scheduler / production activation remain blocked. Never schedule Client Ops jobs from dirty `X:\AI MARS`.

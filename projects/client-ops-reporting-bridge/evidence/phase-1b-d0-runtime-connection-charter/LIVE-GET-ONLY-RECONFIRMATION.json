@@ -1,0 +1,72 @@
+{
+  "phase": "1B-D0",
+  "mode": "GET_ONLY",
+  "timestamp_utc_approx": "2026-07-24",
+  "exact_name_count": 1,
+  "workflow_id": "tkM4H0G0gM3q9Foi",
+  "workflow_name": "MARS Client Ops Bridge — bzpm.ru",
+  "active": false,
+  "nodes": 10,
+  "node_names": [
+    "Webhook Intake",
+    "Capture Request Metadata",
+    "Process Client Ops Gates",
+    "IF Accepted Branch",
+    "Prepare Accepted Response",
+    "Prepare Rejected Response",
+    "Respond Accepted",
+    "Respond Rejected",
+    "Sanitized Internal Evidence",
+    "Telegram Notify Accepted"
+  ],
+  "executions": 25,
+  "running": 0,
+  "versionId": "900407ad-ca23-45be-9a16-bbd9d88e836f",
+  "version_match_expected": true,
+  "webhook_authentication": "headerAuth",
+  "auth_credential": {
+    "id": "WKHmPaw6QBp7WnzP",
+    "name": "MARS Client Ops Webhook Auth — bzpm.ru",
+    "type": "httpHeaderAuth",
+    "secret_value_present_in_list": false
+  },
+  "telegram": {
+    "nodes": 1,
+    "node_name": "Telegram Notify Accepted",
+    "credential_id": "2bIC5376l7ElXb4B",
+    "credential_name": "MARS Client Ops Telegram — bzpm.ru",
+    "credential_type": "telegramApi",
+    "token_present_in_list": false,
+    "chat_id": "499423375"
+  },
+  "pattern_b": {
+    "connection": "Respond Accepted → Telegram Notify Accepted",
+    "confirmed": true
+  },
+  "rejected_path_reaches_telegram": false,
+  "dedupe": {
+    "operational_label": "DEDUPE_DEFERRED_SANDBOX",
+    "code_response_dedupe": "DEFERRED_SANDBOX",
+    "code_note": "DEDUPE_NOT_ENABLED_SANDBOX",
+    "data_store_nodes": 0,
+    "data_table_nodes": 0
+  },
+  "forbidden_nodes": {
+    "http_request": 0,
+    "google_sheets": 0,
+    "schedule": 0
+  },
+  "connections": {
+    "production_monitor": false,
+    "scheduler": false,
+    "exporter_runtime": false
+  },
+  "temp_client_ops_semantics_workflows": 0,
+  "mutations_this_phase": {
+    "workflow_updates": 0,
+    "activations": 0,
+    "webhook_posts": 0,
+    "telegram_api_calls": 0,
+    "credential_changes": 0
+  }
+}

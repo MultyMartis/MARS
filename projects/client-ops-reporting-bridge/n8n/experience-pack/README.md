@@ -59,7 +59,7 @@ Telegram delivery sandbox apply is complete on the inactive Client Ops workflow 
 - Phase 1B-C0R2 final discovery confirmation phrase: `FINAL DISCOVER CLIENT OPS TELEGRAM CHAT TARGET`.
 - Chat target may be absent after bot create until operator presses Start — does not block credential intake; Phase 1B-C0 returned 0 updates; Phase 1B-C0R2 confirmed one private chat after operator Start/`/start`.
 - Proposed Pattern B: Respond to Webhook first, then Telegram `sendMessage` on accepted path only — **runtime-confirmed** in Phase 1B-C0S; **applied** to inactive Client Ops workflow in Phase 1B-C1.
-- Next: Phase 1B-D0 inactive-sandbox next-step decision / runtime-connection charter (documentation only unless separately authorized).
+- Phase 1B-D0 charter complete: durable dedupe **before** runtime producer; preferred pattern **R1**; preferred store n8n **Data Table**; dirty-main scheduling **forbidden**.
 
 ## Facts learned from Phase 1B-C0S semantics verification
 
@@ -69,11 +69,27 @@ Telegram delivery sandbox apply is complete on the inactive Client Ops workflow 
 - Message budget for semantics: exactly one Telegram message total across the phase.
 - Real Client Ops workflow must remain denylisted for mutation during semantics tests.
 
+## Facts learned from Phase 1B-D0 (decision only)
+
+- Live workflow GET-only reconfirmed inactive; executions remain 25; versionId unchanged.
+- OpenAPI on this install documents **Data Table** APIs including upsert; legacy Data Store not present in OpenAPI.
+- Duplicate `event_id` under deferred dedupe + Pattern B Telegram ⇒ durable dedupe is mandatory before runtime producer connection.
+- Preferred first runtime pattern: exporter → authenticated webhook (R1); fallback file pickup adapter (R3).
+- Scheduler ownership: dedicated Windows task later; never from dirty `X:\AI MARS`; use clean Storage runtime checkout when created.
+
+## Facts learned from Phase 1B-D1 (inactive durable dedupe)
+
+- Data Table workflow node `n8n-nodes-base.dataTable` typeVersion 1.1 works for get/insert.
+- `require('crypto')` is disallowed in this n8n Code sandbox (failed execution 3410) → fingerprint is canonical JSON equality.
+- Sequential proof: FIRST_SEEN → 202 + Telegram; EXACT_REPLAY → 200 DUPLICATE_SUPPRESSED no Telegram; EVENT_ID_CONFLICT → 409 no Telegram.
+- Final inactive state: nodes=17; executions=29; table `H6VYhwz7RXZCBMmu` retained; one synthetic proof row.
+- Classification: `DEDUPE_SEQUENTIAL_SAFE_CONCURRENCY_UNPROVEN`; post-Telegram SENT ledger deferred.
+
 ## Still incomplete until later charters
 
-- Phase 1B-D0 inactive-sandbox next-step decision / runtime-connection charter
-- Production activation (separate charter)
-- Durable dedupe store
-- Monitor / exporter / scheduler runtime connection
-- Production activation
-- Durable dedupe store
+- Phase 1B-D2 Sequential Runtime Producer Design (offline)
+- Runtime producer connection (controlled later charter)
+- Scheduler connection (after manual E2E)
+- Concurrent atomicity / unique event_id enforcement
+- Post-Telegram durable SENT ledger
+- Production activation (last; separate charter)

@@ -43,7 +43,10 @@
 - Deactivate: `POST /api/v1/workflows/{id}/deactivate` in `finally`.
 - Production webhook route class used after temporary activation (URL never stored in Git evidence).
 - Native auth reject: HTTP 403 text `Authorization data is wrong!`.
-- Valid accept: HTTP 202 `{ ok:true, result:"ACCEPTED", dedupe:"DEFERRED_SANDBOX" }`.
+- Valid accept (deferred era): HTTP 202 `{ ok:true, result:"ACCEPTED", dedupe:"DEFERRED_SANDBOX" }`.
+- Valid accept (D1 FIRST_SEEN): HTTP 202 `{ ok:true, result:"ACCEPTED", dedupe:"FIRST_SEEN" }`.
+- Exact replay (D1): HTTP 200 `{ result:"DUPLICATE_SUPPRESSED", dedupe:"DUPLICATE" }` — no Telegram.
+- Event-id conflict (D1): HTTP 409 `{ result:"EVENT_ID_CONFLICT" }` — no Telegram; original fingerprint retained.
 - Malformed JSON / oversized: native HTTP 422 `Failed to parse request body` (may skip workflow execution).
 - Content-Type reject: workflow HTTP 415 `UNSUPPORTED_MEDIA_TYPE` after auth.
 - Duplicate event_id: both accepted under deferred dedupe.
@@ -59,8 +62,8 @@
 ## SAFE UNKNOWN
 
 - Exact n8n application version.
-- Data Store availability.
-- Whether durable Data Store is available on this host.
+- Data Table workflow node typeVersion 1.1 PROVEN in D1; upsert concurrency/atomicity still SAFE UNKNOWN (`DEDUPE_SEQUENTIAL_SAFE_CONCURRENCY_UNPROVEN`).
+- Whether durable Data Table backup/restore is operator-documented on this host.
 - Avatar verification via Bot API (SAFE UNKNOWN).
 - Secure Code-node access to env secrets (not required after native Header Auth).
 - Chat target private ID until operator Start interaction is observed (1B-C0R2 confirmed; ID held in ignored local target + sanitized discovery evidence).

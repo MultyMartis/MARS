@@ -1,11 +1,11 @@
 # MARS Client Ops Reporting Bridge
 
 **Subsystem name:** MARS Client Ops Reporting Bridge
-**Status:** PHASE 0A/0B COMPLETE + PHASE 1A OFFLINE EXPORTER CORE COMPLETE + PROGRAMMER EXTENSION COMPLETE + PHASE 1B-B INACTIVE SANDBOX CREATED + PHASE 1B-B1 NATIVE AUTH BOUND + PHASE 1B-B2 AUTHENTICATED POST VALIDATED + PHASE 1B-C TELEGRAM BOT INTAKE COMPLETE + PHASE 1B-C1 TELEGRAM SANDBOX APPLY COMPLETE (evidence baseline committed in 1B-C1B; not pushed)
-**Implementation status:** Phase 1A offline exporter core + fixtures + tests **COMPLETE**; MetaBOT programmer Client Ops extension **COMPLETE**; Phase 1B-B inactive sandbox workflow **CREATED**; Phase 1B-B1 native Header Auth credential **BOUND**; Phase 1B-B2 authenticated sandbox POST matrix **PASSED** (workflow returned inactive); Phase 1B-C Telegram bot + n8n credential intake **COMPLETE**; Phase 1B-C0R2 chat-target discovery **COMPLETE**; Phase 1B-C0S semantics **COMPLETE** (`PATTERN_B_CONFIRMED`); Phase 1B-C1 Telegram sandbox integration **APPLIED** (inactive; one delivery verified; readiness `READY_FOR_NEXT_INACTIVE_SANDBOX_PHASE`); production activation **NOT STARTED**
+**Status:** PHASE 0A/0B COMPLETE + PHASE 1A OFFLINE EXPORTER CORE COMPLETE + PROGRAMMER EXTENSION COMPLETE + PHASE 1B-B…C1 COMPLETE + PHASE 1B-D0 CHARTER COMPLETE + PHASE 1B-D1 DURABLE DEDUPE COMPLETE (inactive sandbox; sequential proof; D1B baseline commit pending/this wave)
+**Implementation status:** Phase 1A offline exporter core + fixtures + tests **COMPLETE**; MetaBOT programmer Client Ops extension **COMPLETE**; Phase 1B-B…C1 Telegram sandbox integration **APPLIED**; Phase 1B-D0 runtime-connection charter **COMPLETE**; Phase 1B-D1 durable sequential dedupe **PROVEN** (Data Table retained; FIRST_SEEN/DUPLICATE/EVENT_ID_CONFLICT; one Telegram send; concurrency unproven); next **Phase 1B-D2 Sequential Runtime Producer Design** (offline); production activation **NOT STARTED**
 **Production state:** UNCHANGED
 **Transport decision:** **PROFILE_B_REQUIRED**
-**Live n8n workflow name:** `MARS Client Ops Bridge — bzpm.ru` (inactive; Telegram Pattern B node present; POST+delivery sandbox-validated)
+**Live n8n workflow name:** `MARS Client Ops Bridge — bzpm.ru` (inactive; nodes=17; executions=29; durable dedupe + Pattern B Telegram; versionId `3d2fd6fc-…`)
 **Canonical locus:** `projects/client-ops-reporting-bridge/`
 **Registry:** `project_id` **not registered** — programme locus only (registry mutation not authorized)
 
@@ -72,8 +72,11 @@ Phase 0A freezes the contract. Phase 0B freezes implementation-ready design and 
 | **Phase 1B-C0 — Chat target discovery retry** | **PARTIAL** — 0 updates; see [PHASE-1B-C0-TELEGRAM-CHAT-TARGET-DISCOVERY-RETRY.md](PHASE-1B-C0-TELEGRAM-CHAT-TARGET-DISCOVERY-RETRY.md) |
 | **Phase 1B-C0R2 — Chat target discovery final retry** | **COMPLETE** — `TELEGRAM_CHAT_TARGET_CONFIRMED`; see [PHASE-1B-C0R2-TELEGRAM-CHAT-TARGET-DISCOVERY-FINAL-RETRY.md](PHASE-1B-C0R2-TELEGRAM-CHAT-TARGET-DISCOVERY-FINAL-RETRY.md) |
 | **Phase 1B-C0S — Telegram integration semantics** | **COMPLETE** — `PATTERN_B_CONFIRMED`; see [PHASE-1B-C0S-TELEGRAM-INTEGRATION-SEMANTICS-VERIFICATION.md](PHASE-1B-C0S-TELEGRAM-INTEGRATION-SEMANTICS-VERIFICATION.md) |
-| **n8n Client Ops workflow** | **CREATED INACTIVE + AUTH BOUND + POST VALIDATED** (`AUTH_NATIVE_HEADER_CREDENTIAL_CONFIRMED`); Telegram node **absent** |
-| **Telegram** | **BOT + CREDENTIAL + CHAT TARGET DONE** (`@monitor_bzpm_metacode_bot`; credential `2bIC5376l7ElXb4B` unbound; chat ID in ignored local target); delivery **NOT CONNECTED** |
+| **Phase 1B-C1 — Telegram sandbox apply** | **COMPLETE** — see [PHASE-1B-C1-TELEGRAM-SANDBOX-INTEGRATION-CONTROLLED-APPLY.md](PHASE-1B-C1-TELEGRAM-SANDBOX-INTEGRATION-CONTROLLED-APPLY.md) |
+| **Phase 1B-D0 — Next-step / runtime connection charter** | **COMPLETE** (decision only) — see [PHASE-1B-D0-INACTIVE-SANDBOX-NEXT-STEP-DECISION-AND-RUNTIME-CONNECTION-CHARTER.md](PHASE-1B-D0-INACTIVE-SANDBOX-NEXT-STEP-DECISION-AND-RUNTIME-CONNECTION-CHARTER.md) |
+| **Phase 1B-D1 — Durable dedupe inactive sandbox** | **COMPLETE** — sequential FIRST_SEEN / DUPLICATE / EVENT_ID_CONFLICT proven; table `H6VYhwz7RXZCBMmu` retained; see [PHASE-1B-D1-DURABLE-DEDUPE-DESIGN-AND-INACTIVE-SANDBOX-IMPLEMENTATION.md](PHASE-1B-D1-DURABLE-DEDUPE-DESIGN-AND-INACTIVE-SANDBOX-IMPLEMENTATION.md) |
+| **n8n Client Ops workflow** | **INACTIVE** — auth bound + Pattern B Telegram + durable dedupe gate (nodes=17; executions=29); `DEDUPE_SEQUENTIAL_SAFE_CONCURRENCY_UNPROVEN` |
+| **Telegram** | **SANDBOX PATH APPLIED** (`@monitor_bzpm_metacode_bot`; credential `2bIC5376l7ElXb4B` bound; chat `499423375`); D1 successful-attempt deliveries=1 (duplicates/conflicts suppressed); **not** production-activated |
 | **Production** | **UNCHANGED** |
 | **Exporter (offline)** | Exists under `src/client_ops_reporting_bridge/` |
 | **Exporter (publish/push)** | Does not exist (`push-webhook` not implemented) |
@@ -81,7 +84,7 @@ Phase 0A freezes the contract. Phase 0B freezes implementation-ready design and 
 | **Hub Gateway feed** | Does not exist |
 | **PROFILE A vs B** | **PROFILE_B_REQUIRED** frozen for Client Ops Bridge — bzpm.ru |
 
-**Explicit statement:** Phase 1B-C1 applied Pattern B Telegram `sendMessage` to the inactive Client Ops workflow and verified one sandbox delivery. Workflow remains inactive. Readiness: `READY_FOR_NEXT_INACTIVE_SANDBOX_PHASE`. See [PHASE-1B-C1-TELEGRAM-SANDBOX-INTEGRATION-CONTROLLED-APPLY.md](PHASE-1B-C1-TELEGRAM-SANDBOX-INTEGRATION-CONTROLLED-APPLY.md).
+**Explicit statement:** Phase 1B-D1 proved durable sequential dedupe in the inactive sandbox (Data Table retained; one Telegram send; duplicate/conflict paths excluded from Telegram). Concurrency atomicity and post-Telegram `SENT` ledger remain deferred. Concurrent producers / scheduler / production activation remain forbidden. Next offline charter: **Phase 1B-D2 Sequential Runtime Producer Design**. See D0 + D1 packs.
 
 ---
 

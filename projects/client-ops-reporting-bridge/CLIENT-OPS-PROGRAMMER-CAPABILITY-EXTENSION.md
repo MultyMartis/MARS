@@ -91,10 +91,26 @@ node projects/client-ops-reporting-bridge/n8n/runners/run-client-ops-telegram-cr
 ## Unresolved HITL
 
 1. Exact n8n application version.
-2. Production dedupe store.
-3. Phase 1B-D0 inactive-sandbox next-step decision / runtime-connection charter (documentation only unless separately authorized).
-4. Production activation (separate charter).
+2. Concurrent atomicity / unique `event_id` enforcement (D1 sequential proven; concurrency unproven).
+3. Post-Telegram durable `delivery_state=SENT` ledger (deferred).
+4. Runtime producer connection (next offline design: D2; no live connection until later charter).
+5. Production activation (separate charter; last).
+
+## Architecture decisions captured in Phase 1B-D0
+
+- Durable dedupe **before** any runtime producer connection.
+- Preferred producer pattern **R1** (exporter → webhook); fallback **R3**.
+- Preferred dedupe store: n8n **Data Table** (OpenAPI-proven); fallback producer ledger.
+- Manual/HITL before scheduler; clean runtime checkout required for schedules (never dirty `X:\AI MARS`).
+- Production activation remains forbidden until full gate list.
+
+## Phase 1B-D1 result (inactive)
+
+- Durable sequential dedupe proven: FIRST_SEEN / DUPLICATE / EVENT_ID_CONFLICT.
+- Table `MARS Client Ops Dedupe — bzpm.ru` (`H6VYhwz7RXZCBMmu`) retained with one synthetic proof row.
+- First attempt failed (`require('crypto')` disallowed; execution 3410) and was rolled back; successful path final executions=29.
+- Classification: `DEDUPE_SEQUENTIAL_SAFE_CONCURRENCY_UNPROVEN`.
 
 ## Next charter
 
-**Phase 1B-D0 — Inactive Sandbox Next-Step Decision and Runtime Connection Charter** — documentation/decision only unless separately authorized; do not begin without explicit operator charter.
+**Phase 1B-D2 — Sequential Runtime Producer Design and Offline Implementation** — offline only; do not call Client Ops webhook unless a later controlled connection phase is approved.

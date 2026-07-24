@@ -1,0 +1,22 @@
+{
+  "phase": "1B-D1",
+  "title": "Durable Dedupe Design and Inactive Sandbox Implementation",
+  "workflow_id": "tkM4H0G0gM3q9Foi",
+  "table_name": "MARS Client Ops Dedupe — bzpm.ru",
+  "architecture": "n8n_data_table_primary",
+  "fallback": "producer_side_durable_ledger",
+  "concurrency_class": "DEDUPE_SEQUENTIAL_SAFE_CONCURRENCY_UNPROVEN",
+  "fingerprint": "canonical_json_v1",
+  "phrases": [
+    "CREATE CLIENT OPS DEDUPE DATA TABLE BZPM",
+    "APPLY CLIENT OPS DURABLE DEDUPE SANDBOX BZPM",
+    "ACTIVATE CLIENT OPS DURABLE DEDUPE TEST BZPM",
+    "SEND CLIENT OPS DEDUPE FIRST SEEN TEST BZPM",
+    "SEND CLIENT OPS DEDUPE EXACT REPLAY TEST BZPM",
+    "SEND CLIENT OPS DEDUPE CONFLICT TEST BZPM",
+    "DEACTIVATE CLIENT OPS DURABLE DEDUPE TEST BZPM",
+    "ROLL BACK CLIENT OPS DURABLE DEDUPE SANDBOX BZPM"
+  ],
+  "runtime_producer_authorized": false,
+  "scheduler_authorized": false
+}
