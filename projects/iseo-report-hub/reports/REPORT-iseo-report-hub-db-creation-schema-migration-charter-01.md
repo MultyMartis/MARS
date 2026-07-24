@@ -130,8 +130,9 @@ Doc: `product/I-SEO-REPORT-HUB-LOCAL-ENV-DB-SECRETS-POLICY-v0.1.md`
 | Exact-path stage | yes |
 | Staged list (docs commit) | `projects/iseo-report-hub/OPERATIONAL-INDEX.md`; `projects/iseo-report-hub/product/I-SEO-REPORT-HUB-DB-CREATION-CHARTER-v0.1.md`; `projects/iseo-report-hub/product/I-SEO-REPORT-HUB-MIGRATION-POLICY-v0.1.md`; `projects/iseo-report-hub/product/I-SEO-REPORT-HUB-INITIAL-SCHEMA-PLAN-v0.1.md`; `projects/iseo-report-hub/product/I-SEO-REPORT-HUB-LOCAL-ENV-DB-SECRETS-POLICY-v0.1.md`; `projects/iseo-report-hub/reports/REPORT-iseo-report-hub-db-creation-schema-migration-charter-01.md` |
 | Commit message | `docs(iseo-report-hub): add db migration charter` |
-| Commit hash | _(filled after commit)_ |
-| HEAD verification | _(filled after commit)_ |
+| Commit hash | `d38613bb2ec7fd078ae19418936934ec4721a2bf` (`d38613bb`) — six Active Brain docs only |
+| Hash-fill follow-up | _(this update)_ — `docs(iseo-report-hub): record db migration charter commit hash` (this report path only) |
+| HEAD verification | `git show --name-only --oneline --stat d38613bb` — only the six Active Brain docs above |
 | Push | **no** |
 
 ---
