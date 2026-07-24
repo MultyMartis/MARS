@@ -117,17 +117,19 @@ Note: charter listed a prior known HEAD `fddf8780…`; session start HEAD was `6
 | Exact-path `git add` | **Yes** (allowlisted Active Brain paths only) |
 | Commit | **Yes** |
 | Message | `docs(iseo-report-hub): add source mirror sync charter` |
-| Commit hash | `PENDING_POST_COMMIT` |
-| HEAD verification | Pending post-commit `git show` |
+| Commit hash | `2442800729f180e1f216469d2db151945b5aef2f` |
+| HEAD verification | `git show --name-only --oneline --stat HEAD` — only allowlisted Active Brain paths |
 | Push | **No** |
 
-Staged allowlist (expected):
+Committed paths:
 
 - `projects/iseo-report-hub/OPERATIONAL-INDEX.md`
 - `projects/iseo-report-hub/product/I-SEO-REPORT-HUB-MODEL-A-SOURCE-MIRROR-CHARTER-v0.1.md`
 - `projects/iseo-report-hub/product/I-SEO-REPORT-HUB-DEPLOY-SYNC-POLICY-v0.1.md`
 - `projects/iseo-report-hub/product/I-SEO-REPORT-HUB-SOURCE-MIRROR-FILE-MAP-v0.1.md`
 - `projects/iseo-report-hub/reports/REPORT-iseo-report-hub-model-a-source-mirror-deploy-sync-charter-01.md`
+
+Post-commit index after primary commit: **empty**.
 
 ---
 
