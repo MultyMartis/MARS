@@ -1,0 +1,93 @@
+{
+  "request_count": 1,
+  "response_status": 202,
+  "elapsed_ms": 179,
+  "body_fields": {
+    "status": "SEMANTICS_TEST_ACCEPTED",
+    "test_id": "L1-9b3d61"
+  },
+  "execution_id": "3407",
+  "execution_status": "success",
+  "node_order": [
+    "Webhook Semantics",
+    "Set Before Response",
+    "Respond Semantics",
+    "Set After Response"
+  ],
+  "after_response_marker": true,
+  "downstream_continuation": true,
+  "telegram_messages": 0,
+  "verdict": "PATTERN_B_STRUCTURALLY_SUPPORTED",
+  "inspect": {
+    "execution_status": "success",
+    "finished": true,
+    "node_run_count": 4,
+    "node_order": [
+      "Webhook Semantics",
+      "Set Before Response",
+      "Respond Semantics",
+      "Set After Response"
+    ],
+    "node_counts": {
+      "Webhook Semantics": 1,
+      "Set Before Response": 1,
+      "Respond Semantics": 1,
+      "Set After Response": 1
+    },
+    "runs": [
+      {
+        "node": "Webhook Semantics",
+        "run_index": 0,
+        "startTime": 1784871416138,
+        "executionTime": 1,
+        "has_error": false,
+        "error_class": null,
+        "marker_after_reached": false,
+        "delivery_marker_reached": false,
+        "telegram_ok_signal": false,
+        "telegram_message_id_present": false
+      },
+      {
+        "node": "Set Before Response",
+        "run_index": 0,
+        "startTime": 1784871416139,
+        "executionTime": 3,
+        "has_error": false,
+        "error_class": null,
+        "marker_after_reached": false,
+        "delivery_marker_reached": false,
+        "telegram_ok_signal": false,
+        "telegram_message_id_present": false
+      },
+      {
+        "node": "Respond Semantics",
+        "run_index": 0,
+        "startTime": 1784871416143,
+        "executionTime": 13,
+        "has_error": false,
+        "error_class": null,
+        "marker_after_reached": false,
+        "delivery_marker_reached": false,
+        "telegram_ok_signal": false,
+        "telegram_message_id_present": false
+      },
+      {
+        "node": "Set After Response",
+        "run_index": 0,
+        "startTime": 1784871416157,
+        "executionTime": 6,
+        "has_error": false,
+        "error_class": null,
+        "marker_after_reached": true,
+        "delivery_marker_reached": false,
+        "telegram_ok_signal": false,
+        "telegram_message_id_present": false
+      }
+    ],
+    "after_marker_reached": true,
+    "delivery_marker_reached": false,
+    "telegram_node_runs": 0,
+    "telegram_ok_signal": false,
+    "telegram_message_id_present": false
+  }
+}

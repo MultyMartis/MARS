@@ -1,6 +1,6 @@
 # Client Ops n8n Patterns
 
-**Status:** PARTIAL — Phase 1B-B create + Phase 1B-B1 auth + Phase 1B-B2 POST captured
+**Status:** PARTIAL — Phase 1B-B/B1/B2 + C0S semantics captured
 
 ## Frozen design patterns
 
@@ -9,7 +9,8 @@
 - Structured accept/reject JSON responses.
 - Auth failure before business validation.
 - Dedupe deferred in first sandbox (`DEDUPE_DEFERRED_SANDBOX`).
-- No Telegram in first sandbox.
+- No Telegram in first sandbox create; Telegram apply is a later gate.
+- **Pattern B (runtime-confirmed on this host):** accepted path → Respond to Webhook → Telegram `sendMessage`.
 - No manual n8n UI node assembly — Cursor/MetaBOT programmer generates JSON.
 - Sandbox-first; inactive create; never leave activated after POST tests.
 
@@ -25,6 +26,12 @@
 - Native Header Auth rejects with HTTP 403 text before business executions.
 - Malformed/oversized bodies may be rejected by native parse (HTTP 422) before workflow size gates.
 - Leave inactive by default; deletion HITL-only.
+
+## Patterns proven in Phase 1B-C0S
+
+- Downstream nodes after `Respond to Webhook` execute on this installation.
+- Telegram `sendMessage` after Respond delivers exactly once when placed on the sequential accepted path.
+- Temporary semantics workflow containment: activate only for the test window; delete after evidence.
 
 ## Runtime note
 

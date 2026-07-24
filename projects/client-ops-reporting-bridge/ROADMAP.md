@@ -1,8 +1,8 @@
 # Roadmap — MARS Client Ops Reporting Bridge
 
-**Status:** PHASE 0A/0B + PHASE 1A + PROGRAMMER EXTENSION + PHASE 1B-B + PHASE 1B-B1 + PHASE 1B-B2 COMPLETE
-**Current completed phases:** Phase 0A/0B + Phase 1A offline exporter core + MetaBOT programmer Client Ops extension + Phase 1B-B inactive sandbox create + Phase 1B-B1 native webhook auth binding + Phase 1B-B2 authenticated sandbox POST validation
-**Remaining Phase 1B:** Telegram bot intake (1B-C), production activation — NOT STARTED
+**Status:** PHASE 0A/0B + PHASE 1A + PROGRAMMER EXTENSION + PHASE 1B-B + PHASE 1B-B1 + PHASE 1B-B2 + PHASE 1B-C INTAKE + PHASE 1B-C0R2 + PHASE 1B-C0S COMPLETE
+**Current completed phases:** … + Phase 1B-C0S Telegram integration semantics verification (`PATTERN_B_CONFIRMED`)
+**Remaining Phase 1B:** sandbox integration apply (1B-C1) → production activation — NOT STARTED
 
 ---
 
@@ -80,7 +80,7 @@
 | **HITL gate** | Inactive sandbox create → authenticated POST → Telegram → production activation |
 | **Evidence required** | Sanitized envelopes; create/re-GET evidence; isolation tests; unchanged monitor/baseline/scheduler |
 | **Exit criteria** | Internal SIMPLE reliable for OK/ATTENTION/FAILED/BLOCKED per send policy (OK always sends during validation) |
-| **State** | **PARTIAL** — Phase 1B-B/B1/B2 transport auth + POST validation complete (workflow inactive); next recommended charter: Phase 1B-C — Telegram Bot Intake and Sandbox Integration Preparation |
+| **State** | **PARTIAL** — Phase 1B-B/B1/B2/C/C0R2/C0S complete (`PATTERN_B_CONFIRMED`); workflow inactive; Telegram credential unbound; next: Phase 1B-C1 — Telegram Sandbox Integration Controlled Apply |
 
 ---
 

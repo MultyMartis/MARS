@@ -52,7 +52,7 @@ Rollback required now: **NO**.
 
 ## Next permitted phase
 
-**Phase 1B-C — Telegram Bot Intake and Sandbox Integration Preparation**
+**Phase 1B-C — Telegram Bot Intake and Sandbox Integration Preparation** — see [PHASE-1B-C-TELEGRAM-BOT-INTAKE-AND-INTEGRATION-PREPARATION.md](PHASE-1B-C-TELEGRAM-BOT-INTAKE-AND-INTEGRATION-PREPARATION.md). Next: **Phase 1B-C0 — Telegram Chat Target Discovery Retry**.
 
 Phase 1B-B2 authenticated POST validation is **COMPLETE** — see [PHASE-1B-B2-AUTHENTICATED-SANDBOX-POST-VALIDATION.md](PHASE-1B-B2-AUTHENTICATED-SANDBOX-POST-VALIDATION.md).
 

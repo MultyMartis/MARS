@@ -1,7 +1,7 @@
 /**
  * Offline security scan for Client Ops programmer extension artifacts.
  */
-import { readdirSync, readFileSync, statSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
 const roots = [
@@ -9,7 +9,13 @@ const roots = [
   'projects/client-ops-reporting-bridge/CLIENT-OPS-PROGRAMMER-CAPABILITY-EXTENSION.md',
   'projects/client-ops-reporting-bridge/PHASE-1B-B-INACTIVE-SANDBOX-WORKFLOW.md',
   'projects/client-ops-reporting-bridge/PHASE-1B-B1-NATIVE-WEBHOOK-AUTH-BINDING.md',
+  'projects/client-ops-reporting-bridge/PHASE-1B-B2-AUTHENTICATED-SANDBOX-POST-VALIDATION.md',
+  'projects/client-ops-reporting-bridge/PHASE-1B-C-TELEGRAM-BOT-INTAKE-AND-INTEGRATION-PREPARATION.md',
+  'projects/client-ops-reporting-bridge/PHASE-1B-C0-TELEGRAM-CHAT-TARGET-DISCOVERY-RETRY.md',
+  'projects/client-ops-reporting-bridge/PHASE-1B-C0R2-TELEGRAM-CHAT-TARGET-DISCOVERY-FINAL-RETRY.md',
+  'projects/client-ops-reporting-bridge/PHASE-1B-C0S-TELEGRAM-INTEGRATION-SEMANTICS-VERIFICATION.md',
   'projects/client-ops-reporting-bridge/README.md',
+
   'projects/client-ops-reporting-bridge/ROADMAP.md',
   'projects/client-ops-reporting-bridge/PHASE-1-IMPLEMENTATION-READINESS.md',
   'projects/client-ops-reporting-bridge/PHASE-1-MVP-GATES.md',
@@ -17,6 +23,7 @@ const roots = [
 ];
 
 function walk(p, out = []) {
+  if (!existsSync(p)) return out;
   const st = statSync(p);
   if (st.isFile()) {
     out.push(p);
@@ -66,7 +73,21 @@ for (const f of files) {
     }
   }
   for (const p of patterns) {
-    if (p.re.test(text)) findings.push({ file: f, id: p.id });
+    if (p.re.test(text)) {
+      // Operational Telegram chat IDs are permitted only in Phase 1B-C discovery evidence.
+      if (
+        p.id === 'chat_id_numeric' &&
+        (/phase-1b-c-telegram-bot-intake[\\/](CHAT-TARGET-DISCOVERY|PROPOSED-INTEGRATION)\.json$/i.test(
+          f.replace(/\\/g, '/'),
+        ) ||
+          /phase-1b-c0s-telegram-integration-semantics[\\/](SEMANTICS-DECISION|LEVEL-2-TELEGRAM-RESULT|PATTERN-A-RESULT|TEST-RESULTS|CONTAINMENT-STATUS)\.(json|md)$/i.test(
+            f.replace(/\\/g, '/'),
+          ))
+      ) {
+        continue;
+      }
+      findings.push({ file: f, id: p.id });
+    }
   }
 }
 

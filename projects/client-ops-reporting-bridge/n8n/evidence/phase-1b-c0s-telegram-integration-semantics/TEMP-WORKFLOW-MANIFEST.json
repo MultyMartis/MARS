@@ -1,0 +1,31 @@
+{
+  "name": "MARS TEMP — Respond Telegram Semantics — bzpm.ru",
+  "id": "xPPF6uOg8omj2n9C",
+  "created_active": false,
+  "node_count_level1": 4,
+  "node_types": [
+    {
+      "name": "Webhook Semantics",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1
+    },
+    {
+      "name": "Set Before Response",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    },
+    {
+      "name": "Respond Semantics",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1
+    },
+    {
+      "name": "Set After Response",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4
+    }
+  ],
+  "webhook_path_stored": false,
+  "webhook_path_present": true,
+  "telegram_bound_at_create": false
+}

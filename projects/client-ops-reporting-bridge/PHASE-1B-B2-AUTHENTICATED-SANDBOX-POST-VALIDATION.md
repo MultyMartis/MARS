@@ -67,4 +67,4 @@ Future bot (unchanged):
 
 ## Next permitted phase
 
-**Phase 1B-C — Telegram Bot Intake and Sandbox Integration Preparation**
+**Phase 1B-C — Telegram Bot Intake and Sandbox Integration Preparation** — **COMPLETE** for intake; see [PHASE-1B-C-TELEGRAM-BOT-INTAKE-AND-INTEGRATION-PREPARATION.md](PHASE-1B-C-TELEGRAM-BOT-INTAKE-AND-INTEGRATION-PREPARATION.md). Next: **Phase 1B-C0**.

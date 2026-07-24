@@ -26,4 +26,4 @@ Deterministic gates before inactive sandbox create.
 | Rollback plan present | Runbook exists | PASS |
 | Operator HITL | Required for apply | Phase 1B-B charter + confirmation phrase |
 
-**Apply readiness:** Phase 1B-B1 native auth binding completed under `AUTH_NATIVE_HEADER_CREDENTIAL_BOUND`. Authenticated POST remains blocked until Phase 1B-B2 charter.
+**Apply readiness:** Phase 1B-B2 POST validation, Phase 1B-C Telegram bot/credential intake, Phase 1B-C0R2 chat-target confirmation, and Phase 1B-C0S Pattern B semantics verification are complete (`READY_FOR_TELEGRAM_SANDBOX_INTEGRATION_APPLY`). Telegram sandbox workflow apply remains blocked until apply charter (Phase 1B-C1).

@@ -1,7 +1,7 @@
 # Client Ops n8n Experience Pack
 
-**Status:** PARTIAL — CREATE + AUTH BINDING + AUTHENTICATED POST CAPTURED
-Telegram and production activation remain incomplete.
+**Status:** PARTIAL — CREATE + AUTH BINDING + AUTHENTICATED POST + TELEGRAM INTAKE + SEMANTICS CAPTURED
+Telegram delivery apply remains pending (bot/credential/chat-target intake done; Pattern B semantics `PATTERN_B_CONFIRMED` in 1B-C0S; workflow apply pending 1B-C1).
 
 ## Contents
 
@@ -46,8 +46,32 @@ Telegram and production activation remain incomplete.
 - Duplicate event_id under deferred dedupe: both submissions accepted.
 - Evidence redaction: never store full webhook URL/path, auth secret, or raw execution payloads in Git.
 
+## Facts learned from Phase 1B-C / 1B-C0 / 1B-C0R2 Telegram intake
+
+- Credential type: `telegramApi` with `accessToken` (optional `baseUrl`).
+- Dedicated credential name: `MARS Client Ops Telegram — bzpm.ru` (`2bIC5376l7ElXb4B`) — unbound.
+- Bot username: `monitor_bzpm_metacode_bot` (ID `8852310960`).
+- Live credential schema `GET /api/v1/credentials/schema/telegramApi` returns `{ accessToken, baseUrl }` (`additionalProperties: false`; `baseUrl` optional).
+- Credential create uses `type: "telegramApi"` and `data.accessToken` from gitignored `telegram.secrets.local.env`.
+- Telegram node credential reference key is `telegramApi` (MetaBOT precedent + live schema).
+- Read-only Bot API intake allowlist: `getMe`, `getWebhookInfo`, conditional single `getUpdates` without `offset`.
+- Phase 1B-C0 discovery confirmation phrase: `DISCOVER CLIENT OPS TELEGRAM CHAT TARGET`.
+- Phase 1B-C0R2 final discovery confirmation phrase: `FINAL DISCOVER CLIENT OPS TELEGRAM CHAT TARGET`.
+- Chat target may be absent after bot create until operator presses Start — does not block credential intake; Phase 1B-C0 returned 0 updates; Phase 1B-C0R2 confirmed one private chat after operator Start/`/start`.
+- Proposed Pattern B: Respond to Webhook first, then Telegram `sendMessage` on accepted path only — **runtime-confirmed** in Phase 1B-C0S (not applied to Client Ops workflow).
+- Next: Phase 1B-C1 controlled apply.
+
+## Facts learned from Phase 1B-C0S semantics verification
+
+- On this n8n host, nodes connected after `Respond to Webhook` continue to execute (`PATTERN_B_STRUCTURALLY_SUPPORTED`).
+- Telegram `sendMessage` after Respond executes once with delivery marker (`PATTERN_B_CONFIRMED`).
+- Temporary semantics workflow pattern: create inactive → activate → one POST → deactivate in `finally` → delete after evidence.
+- Message budget for semantics: exactly one Telegram message total across the phase.
+- Real Client Ops workflow must remain denylisted for mutation during semantics tests.
+
 ## Still incomplete until later charters
 
-- Telegram delivery
+- Phase 1B-C1 Telegram sandbox integration controlled apply
+- Telegram sandbox workflow apply / message send (1B-C1)
 - Production activation
 - Durable dedupe store

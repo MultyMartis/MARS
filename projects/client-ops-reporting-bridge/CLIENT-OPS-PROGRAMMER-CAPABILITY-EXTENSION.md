@@ -18,7 +18,7 @@
 | Offline n8n harness | **PASS** |
 | Sandbox workflow | **CREATED INACTIVE + AUTH BOUND + POST VALIDATED** |
 | Webhook tests | **SENT** (Phase 1B-B2 synthetic matrix; workflow returned inactive) |
-| Telegram | **NOT CONNECTED** |
+| Telegram | **BOT + CREDENTIAL INTAKE DONE** (`@monitor_bzpm_metacode_bot`; unbound; no send) |
 | Production | **UNCHANGED** |
 
 ## Decisions frozen
@@ -52,7 +52,7 @@
 
 ### Workflow stages (sandbox)
 
-Webhook → Capture → Process Gates (CT/auth/schema/security/event_id/dedupe) → IF → Prepare → Respond. No Telegram. No HTTP Request. No Storage write.
+Webhook → Capture → Process Gates (CT/auth/schema/security/event_id/dedupe) → IF → Prepare → Respond. No Telegram node live yet (Phase 1B-C prepared unbound credential; Phase 1B-C0S confirmed Pattern B for future apply). No HTTP Request. No Storage write.
 
 ### Rollback default
 
@@ -69,6 +69,11 @@ Leave inactive and mark abandoned. Delete only under explicit HITL.
 - `n8n/runners/run-client-ops-auth-binding-put.mjs` (+ workflow update client, prepare/validate helpers)
 - `n8n/evidence/phase-1b-b-inactive-sandbox-create/`
 - `n8n/evidence/phase-1b-b1-auth-binding/`
+- `n8n/runners/run-client-ops-telegram-intake.mjs`
+- `n8n/runners/run-client-ops-telegram-credential-create.mjs`
+- `n8n/runners/validate-client-ops-telegram-message-contract.mjs`
+- `n8n/runners/validate-client-ops-telegram-proposed-integration.mjs`
+- `n8n/evidence/phase-1b-c-telegram-bot-intake/`
 - `projects/metabot-seo-content-agent/metabot-developer/client-ops-n8n-extension-v1.md`
 
 ## Harness usage
@@ -79,16 +84,18 @@ node projects/client-ops-reporting-bridge/n8n/harness/validate-template.mjs
 node projects/client-ops-reporting-bridge/n8n/runners/prepare-client-ops-apply-payload.mjs
 node projects/client-ops-reporting-bridge/n8n/runners/validate-client-ops-apply-payload.mjs
 node projects/client-ops-reporting-bridge/n8n/runners/run-client-ops-greenfield-create.mjs
+node projects/client-ops-reporting-bridge/n8n/runners/run-client-ops-telegram-intake.mjs
+node projects/client-ops-reporting-bridge/n8n/runners/run-client-ops-telegram-credential-create.mjs
 ```
 
 ## Unresolved HITL
 
 1. Exact n8n application version.
 2. Production dedupe store.
-3. Authenticated POST test authorization (Phase 1B-B2).
-4. Telegram bot / chat approvals (future display name: `Монитор bzpm.ru — MetaCODE`; avatar: bzpm.ru logo).
+3. Telegram sandbox integration apply (Phase 1B-C1) — chat target confirmed; Pattern B confirmed in 1B-C0S.
+4. Production activation (separate charter).
 5. Production activation.
 
 ## Next charter
 
-**Phase 1B-B2 — Authenticated Sandbox POST Validation** — do not begin without explicit operator charter.
+**Phase 1B-C1 — Telegram Sandbox Integration Controlled Apply** — do not begin without explicit operator charter.

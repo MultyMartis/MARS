@@ -1,7 +1,7 @@
 # Phase 1 MVP Gates
 
-**Status:** DOCUMENTATION + PROGRAMMER EXTENSION + PHASE 1B-B + PHASE 1B-B1 + PHASE 1B-B2 COMPLETE / TELEGRAM PENDING
-**Gate actions:** inactive sandbox create **EXECUTED**; native Header Auth binding **EXECUTED**; authenticated POST matrix **EXECUTED** (workflow returned inactive); Telegram / production activation **NOT EXECUTED**
+**Status:** DOCUMENTATION + PROGRAMMER EXTENSION + PHASE 1B-B + PHASE 1B-B1 + PHASE 1B-B2 + PHASE 1B-C INTAKE + C0R2 + C0S COMPLETE / TELEGRAM SANDBOX APPLY PENDING
+**Gate actions:** inactive sandbox create **EXECUTED**; native Header Auth binding **EXECUTED**; authenticated POST matrix **EXECUTED**; Telegram bot/credential intake **EXECUTED**; chat target **CONFIRMED**; semantics Pattern B **CONFIRMED**; Telegram sandbox integration apply / production activation **NOT EXECUTED**
 **Phase 1 production readiness:** NOT READY until remaining activation gates are satisfied
 
 ---
@@ -11,7 +11,7 @@
 | # | Question | State | Notes |
 |---|----------|-------|-------|
 | 1 | Can the n8n host directly read `X:\AI MARS STORAGE`? | **SUPERSEDED for Bridge path** | Client Ops Bridge — bzpm.ru frozen as **PROFILE_B_REQUIRED**; Storage access remains independently relevant for optional PROFILE A / audit mirrors |
-| 2 | Dedicated Telegram bot vs existing internal bot? | **RECOMMENDED: dedicated Client Ops bot**; operator approval required before external-system work | Bot does **not** exist yet; no credentials created; **not** in first sandbox |
+| 2 | Dedicated Telegram bot vs existing internal bot? | **DEDICATED BOT + CHAT TARGET + SEMANTICS DONE** — `@monitor_bzpm_metacode_bot`; Pattern B confirmed; credential unbound | Bot exists; credential `2bIC5376l7ElXb4B`; **not** bound; **1** semantics test message only (C0S); apply still pending |
 | 3 | Suppress routine OK after initial validation period? | **APPROVED for Phase 1 validation:** OK **always sends**; suppression is a later policy option (not enabled) | Consumer-side policy |
 | 4 | Is artifact precedence frozen exactly as documented? | **APPROVED** | See `ARTIFACT-AUTHORITY-AND-PRECEDENCE.md` + Phase 0B algorithm |
 | 5 | Is Phase 1 routing confirmed internal-only? | **APPROVED** | No client routing before separate approval |
@@ -59,7 +59,7 @@ Client Ops Bridge for bzpm.ru uses **PROFILE_B_REQUIRED**:
 | **Auth binding gate** | Native Header Auth bound | Credential + inactive workflow PUT done; secret outside Git | Rotate secret externally; rebind under new charter |
 | **n8n inactive sandbox create gate** | Create inactive workflow via programmer | **SATISFIED** — see `n8n/evidence/phase-1b-b-inactive-sandbox-create/` | Abandon inactive or HITL delete |
 | **Authenticated POST gate** | First protected webhook tests | **SATISFIED** — see `n8n/evidence/phase-1b-b2-authenticated-post-validation/` | Disable webhook / leave inactive |
-| **Telegram credential gate** | Dedicated bot approval + credential placement | Operator credential placement in n8n only; no secrets in Git | Rotate/revoke token externally |
+| **Telegram credential gate** | Dedicated bot approval + credential placement | **SATISFIED for intake + chat target** — credential `MARS Client Ops Telegram — bzpm.ru` (`2bIC5376l7ElXb4B`) created unbound; secret remains gitignored local only; chat target confirmed in ignored local target (1B-C0R2) | Rotate/revoke token externally; do not bind until C0S semantics + C1 |
 | **First sandbox message gate** | First SIMPLE message to **approved** internal test chat | Screenshot/transcript sanitized | Stop sending; disable workflow |
 | **Production workflow activation gate** | Explicit HITL to activate | Apply manifest + rollback plan (MetaBOT discipline) | Deactivate workflow; preserve SITE monitor |
 

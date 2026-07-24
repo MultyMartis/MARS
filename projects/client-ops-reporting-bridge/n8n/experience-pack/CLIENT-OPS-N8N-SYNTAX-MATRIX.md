@@ -11,7 +11,7 @@
 | Switch | `n8n-nodes-base.switch` | `3` / `3.2` | Not used in first sandbox template |
 | Set | `n8n-nodes-base.set` | `2` | Evidenced; first template prefers Code@2 |
 | HTTP Request | `n8n-nodes-base.httpRequest` | `4` / `4.4` | Not in first sandbox |
-| Telegram | `n8n-nodes-base.telegram` | `1` / `1.2` | Not in first sandbox |
+| Telegram | `n8n-nodes-base.telegram` | `1` / `1.2` | Not live in Client Ops yet; Phase 1B-C credential type `telegramApi` + `accessToken` confirmed |
 | Respond to Webhook | `n8n-nodes-base.respondToWebhook` | `1.1` | Live sandbox-get evidence + Client Ops create |
 
 ## Expressions
@@ -48,9 +48,19 @@
 - Content-Type reject: workflow HTTP 415 `UNSUPPORTED_MEDIA_TYPE` after auth.
 - Duplicate event_id: both accepted under deferred dedupe.
 
+## Phase 1B-C Telegram notes
+
+- Credential type: `telegramApi` (schema confirmed live).
+- Token field: `accessToken` (optional `baseUrl`).
+- Credential reference shape: `{ credentials: { telegramApi: { id, name } } }`.
+- Dedicated credential display name: `MARS Client Ops Telegram — bzpm.ru` (`2bIC5376l7ElXb4B`) — unbound.
+- Bot username discovered via `getMe`: `monitor_bzpm_metacode_bot`.
+
 ## SAFE UNKNOWN
 
 - Exact n8n application version.
-- Authenticated/unauthorized webhook POST HTTP status/body semantics (deferred to Phase 1B-B2).
 - Data Store availability.
+- Whether durable Data Store is available on this host.
+- Avatar verification via Bot API (SAFE UNKNOWN).
 - Secure Code-node access to env secrets (not required after native Header Auth).
+- Chat target private ID until operator Start interaction is observed (1B-C0R2 confirmed; ID held in ignored local target + sanitized discovery evidence).
