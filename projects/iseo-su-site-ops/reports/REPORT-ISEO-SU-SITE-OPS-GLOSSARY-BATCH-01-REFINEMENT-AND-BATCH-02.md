@@ -238,7 +238,11 @@ Scoped Storage snapshot + `ISEO-SU-GLOSSARY-BATCH-02-DB-BACKUP-AND-ROLLBACK-v1.m
 
 ## 26. Git Persistence
 
-One scoped commit planned after this REPORT (explicit paths only; no push). Raw DB snapshots not staged.
+Scoped commit created (no push):
+
+- Subject: `content(iseo-su): refine glossary batch 01 and add batch 02 drafts`
+- Hash: `fe7dfb4817a30e6e0824f987ee8d5518f005f45d`
+- Raw DB snapshots not staged.
 
 ## 27. Recommended Next Step
 
