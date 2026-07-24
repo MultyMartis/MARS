@@ -1,0 +1,160 @@
+/* i-SEO Report Hub — Phase 0 scaffold styles (local only, no external assets) */
+
+:root {
+  --bg: #0f1c24;
+  --bg-panel: #162832;
+  --text: #e8eef2;
+  --muted: #9bb0bc;
+  --accent: #2bb3a3;
+  --accent-2: #1a7a6f;
+  --warn: #d4a017;
+  --danger: #c45c5c;
+  --ok: #3cba8c;
+  --border: #243844;
+  --font: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font);
+  color: var(--text);
+  background:
+    radial-gradient(ellipse at top left, #1a3340 0%, transparent 55%),
+    linear-gradient(160deg, #0c161c 0%, #122029 45%, #0f1c24 100%);
+  line-height: 1.5;
+}
+
+.container {
+  width: min(860px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  padding: 2.5rem 0 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  margin: 0 0 0.35rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--accent);
+}
+
+h1 {
+  margin: 0 0 0.4rem;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 650;
+}
+
+.tagline {
+  margin: 0;
+  color: var(--muted);
+}
+
+main {
+  padding: 1.75rem 0 3rem;
+}
+
+.panel {
+  background: color-mix(in srgb, var(--bg-panel) 92%, transparent);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.panel h2 {
+  margin: 0 0 0.85rem;
+  font-size: 1.05rem;
+  color: var(--accent);
+}
+
+.facts,
+.ext-list {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.facts li,
+.ext-list li {
+  margin: 0.35rem 0;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+code {
+  font-size: 0.86em;
+  word-break: break-all;
+  color: #c9e6df;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.55rem 1rem;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #06221e;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background: #3ec9b8;
+  outline: 2px solid color-mix(in srgb, var(--accent) 50%, white);
+  outline-offset: 2px;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  background: #1d3340;
+  color: var(--text);
+}
+
+.ok {
+  color: var(--ok);
+}
+
+.warn {
+  color: var(--warn);
+}
+
+.missing {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.site-footer {
+  padding: 1.25rem 0 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
