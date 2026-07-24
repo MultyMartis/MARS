@@ -35,6 +35,16 @@ php tools/create-local-admin.php --name="Local Admin" --email=admin@iseo-report-
 
 Password via hidden/local prompt or process-only `ISEO_ADMIN_PASSWORD` (never argv; never commit; never report).
 
+## Local fixture bootstrap
+
+CLI only (runtime with `.env.local`):
+
+```bash
+php tools/create-local-fixture.php
+```
+
+Creates one local-only demo client / project / site / reporting_period (`LOCAL_FIXTURE_ONLY`). Idempotent. Refuses any DB other than `iseo_report_hub_dev` @ `127.0.0.1`. Prints IDs/counts only — no credentials.
+
 ## Routes
 
 - `GET /` — dashboard (requires authenticated internal role)
@@ -55,11 +65,11 @@ Password via hidden/local prompt or process-only `ISEO_ADMIN_PASSWORD` (never ar
 
 - No password reset / remember-me / OAuth
 - No client portal auth for `client_viewer`
-- No reporting CRUD
+- No reporting CRUD UI
 - No user management UI
-- No DB-03+ reporting tables
+- No real client import
 - No Composer / npm / WordPress
 
 ## Next phase
 
-**Recommended:** DB-03 reporting periods migration charter (schema for reporting periods), then project/period CRUD baseline.
+**Recommended:** Reporting Period CRUD Charter 01.
