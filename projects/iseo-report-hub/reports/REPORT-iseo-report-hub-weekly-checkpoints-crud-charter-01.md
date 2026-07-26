@@ -113,9 +113,9 @@ Next-wave smoke gates:
 |------|-------|
 | Exact-path git add | Yes — allowlisted docs only |
 | Primary commit message | `docs(iseo-report-hub): add weekly checkpoints crud charter` |
-| Primary commit hash | `PENDING_PRIMARY_COMMIT_HASH` |
-| Hash-record follow-up (if needed) | `docs(iseo-report-hub): record weekly checkpoints crud charter commit hash` |
-| Hash-record commit hash | `PENDING_HASH_RECORD_COMMIT_HASH` |
+| Primary commit hash | `3a0569a519c08bd0560f58d8ba35a9c4bfbd88c1` |
+| Hash-record follow-up message | `docs(iseo-report-hub): record weekly checkpoints crud charter commit hash` |
+| Hash-record follow-up | `PENDING_HASH_RECORD_COMMIT_HASH` |
 | Push | **no** |
 
 ---
