@@ -9,6 +9,7 @@
 **Clarify commit:** `f2c03787a2697d160ecf2e33077f215cf820707a`  
 **Closeout git-actions commit:** `19742518db9bbb9d9951e6073867a773c5573637`  
 **Closeout-hashes commit:** `ca1fe1296186e958ae9cf6b42f099ccb0a6c68e1`
+**Branch tip (after tip-ref fix):** `2f3b9b191542f0076b429a41d1817975e0eb1fb6`
 
 ---
 
@@ -178,7 +179,7 @@ Covers: DB-08 schema; storage path; HTML generate; idempotency; file checksum; a
 | push | **no** |
 | fetch | **no** |
 | pull | **no** |
-| checkout / update-ref | worktree add `--detach` at `7c3dbf1c`; FF `update-ref` `mars/canonical-post-recovery` → `c6c33f84`; scoped `git checkout HEAD --` allowlisted i-SEO docs on main |
+| checkout / update-ref | worktree add `--detach` at `7c3dbf1c`; FF `update-ref` `mars/canonical-post-recovery` -> `2f3b9b19`; scoped `git checkout HEAD --` allowlisted i-SEO docs on main |
 | reset | **no** |
 | restore | **scoped only** on main — allowlisted i-SEO docs aligned to HEAD after update-ref; foreign staged untouched |
 | clean | **no** |
