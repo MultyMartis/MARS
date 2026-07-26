@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Iseo\Controllers;
 
 use Iseo\Services\ReportingPeriodService;
+use Iseo\Services\WeeklyCheckpointService;
 use Iseo\Support\Response;
 
 final class ReportingPeriodController extends BaseController
@@ -14,7 +15,8 @@ final class ReportingPeriodController extends BaseController
         \Iseo\Services\ConfigService $config,
         \Iseo\Services\AuthService $auth,
         \Iseo\Services\CsrfService $csrf,
-        private ReportingPeriodService $periods
+        private ReportingPeriodService $periods,
+        private ?WeeklyCheckpointService $checkpoints = null
     ) {
         parent::__construct($app, $view, $config, $auth, $csrf);
     }
@@ -62,10 +64,24 @@ final class ReportingPeriodController extends BaseController
             return;
         }
 
+        $weeklyCheckpoints = [];
+        $canCreateCheckpoint = false;
+        if ($this->checkpoints !== null) {
+            $weeklyCheckpoints = $this->checkpoints->listForPeriod($id);
+            foreach ($weeklyCheckpoints as &$wc) {
+                $wc['_can_edit'] = $this->checkpoints->canEdit($user, $wc, $period);
+            }
+            unset($wc);
+            $canCreateCheckpoint = $this->checkpoints->canCreate($user)
+                && $this->checkpoints->canMutateAgainstParent($user, $period);
+        }
+
         $this->render('reporting-periods/show', [
             'pageTitle' => 'Period ' . (string) $period['period_key'],
             'period' => $period,
             'canEdit' => $this->periods->canEdit($user, $period),
+            'weeklyCheckpoints' => $weeklyCheckpoints,
+            'canCreateCheckpoint' => $canCreateCheckpoint,
         ]);
     }
 

@@ -2,6 +2,11 @@
 declare(strict_types=1);
 /** @var array<string, mixed> $period */
 /** @var bool $canEdit */
+/** @var list<array<string, mixed>> $weeklyCheckpoints */
+/** @var bool $canCreateCheckpoint */
+$periodId = (int) $period['id'];
+$weeklyCheckpoints = $weeklyCheckpoints ?? [];
+$canCreateCheckpoint = $canCreateCheckpoint ?? false;
 ?>
 <section class="panel">
     <div class="panel-head">
@@ -9,8 +14,9 @@ declare(strict_types=1);
         <p>
             <a class="btn btn-secondary" href="<?= e(url_path('/reporting-periods')) ?>">Back to list</a>
             <?php if ($canEdit): ?>
-                <a class="btn" href="<?= e(url_path('/reporting-periods/' . (int) $period['id'] . '/edit')) ?>">Edit</a>
+                <a class="btn" href="<?= e(url_path('/reporting-periods/' . $periodId . '/edit')) ?>">Edit</a>
             <?php endif; ?>
+            <a class="btn btn-secondary" href="<?= e(url_path('/reporting-periods/' . $periodId . '/weekly-checkpoints')) ?>">Weekly checkpoints</a>
         </p>
     </div>
     <p>
@@ -38,6 +44,52 @@ declare(strict_types=1);
 </section>
 
 <section class="panel">
+    <div class="panel-head">
+        <h2>Weekly checkpoints (<?= e((string) count($weeklyCheckpoints)) ?>)</h2>
+        <p>
+            <a class="btn btn-secondary" href="<?= e(url_path('/reporting-periods/' . $periodId . '/weekly-checkpoints')) ?>">Open list</a>
+            <?php if ($canCreateCheckpoint): ?>
+                <a class="btn" href="<?= e(url_path('/reporting-periods/' . $periodId . '/weekly-checkpoints/create')) ?>">Create checkpoint</a>
+            <?php endif; ?>
+        </p>
+    </div>
+    <?php if ($weeklyCheckpoints === []): ?>
+        <p class="note">No weekly checkpoints for this period yet.</p>
+    <?php else: ?>
+        <div class="table-wrap">
+            <table class="data-table">
+                <thead>
+                <tr>
+                    <th>Week</th>
+                    <th>Key</th>
+                    <th>Title</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($weeklyCheckpoints as $wc): ?>
+                    <?php $wcId = (int) $wc['id']; ?>
+                    <tr>
+                        <td>W<?= e((string) $wc['week_index']) ?></td>
+                        <td><code><?= e((string) $wc['checkpoint_key']) ?></code></td>
+                        <td><?= e((string) $wc['title']) ?></td>
+                        <td><span class="status-badge status-<?= e((string) $wc['status']) ?>"><?= e((string) $wc['status']) ?></span></td>
+                        <td class="actions">
+                            <a href="<?= e(url_path('/weekly-checkpoints/' . $wcId)) ?>">View</a>
+                            <?php if (!empty($wc['_can_edit'])): ?>
+                                · <a href="<?= e(url_path('/weekly-checkpoints/' . $wcId . '/edit')) ?>">Edit</a>
+                            <?php endif; ?>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    <?php endif; ?>
+</section>
+
+<section class="panel">
     <h2>Content scope</h2>
-    <p class="note">Weekly checkpoints / monthly report content: not implemented.</p>
+    <p class="note">Monthly report content / report blocks: not implemented.</p>
 </section>

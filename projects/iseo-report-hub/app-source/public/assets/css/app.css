@@ -369,12 +369,21 @@ code {
   border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
 }
 
-.status-badge.status-finalized {
+.status-badge.status-finalized,
+.status-badge.status-completed,
+.status-badge.status-reviewed {
   color: var(--ok);
   border-color: color-mix(in srgb, var(--ok) 45%, var(--border));
 }
 
-.status-badge.status-archived {
+.status-badge.status-in_progress,
+.status-badge.status-ready_for_review {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+}
+
+.status-badge.status-archived,
+.status-badge.status-skipped {
   color: var(--warn);
   border-color: color-mix(in srgb, var(--warn) 45%, var(--border));
 }
