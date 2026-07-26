@@ -133,7 +133,7 @@ Updated:
 | Exact-path git add | Yes — allowlisted docs only |
 | Commit message | `docs(iseo-report-hub): add db04 weekly checkpoints charter` |
 | Primary commit hash | `71516b34c2fdeb140ed06b0e41dcd5c40cf8eae3` |
-| Hash-record follow-up | `PENDING_HASH_RECORD_COMMIT_HASH` |
+| Hash-record follow-up | `f5f34360818a758f157a4d189f3e7e7bec78865d` |
 | Push | **No** |
 
 ---
