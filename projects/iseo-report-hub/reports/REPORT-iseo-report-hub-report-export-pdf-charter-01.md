@@ -5,7 +5,8 @@
 **Created:** 2026-07-27  
 **Authority:** Operator I-SEO Report Hub Report Export / PDF Charter 01  
 **Primary commit:** `5cf2239128a7440afa98cab11de9c415230f5fd0`  
-**Hash-record commit:** `0ef4ffbd80ff0ee1b18b116b6cecd53e16458740`
+**Hash-record commit:** `0ef4ffbd80ff0ee1b18b116b6cecd53e16458740`  
+**Clarify commit:** `f2c03787a2697d160ecf2e33077f215cf820707a`
 
 ---
 
@@ -129,6 +130,8 @@ Covers: DB-08 schema; storage path; HTML generate; idempotency; file checksum; a
 | Primary commit hash | `5cf2239128a7440afa98cab11de9c415230f5fd0` |
 | Hash-record message | `docs(iseo-report-hub): record report export pdf charter commit hash` |
 | Hash-record hash | `0ef4ffbd80ff0ee1b18b116b6cecd53e16458740` |
+| Clarify message | `docs(iseo-report-hub): clarify report export pdf charter commit hash record` |
+| Clarify hash | `f2c03787a2697d160ecf2e33077f215cf820707a` |
 | Push | **no** |
 
 ---
@@ -162,17 +165,17 @@ Covers: DB-08 schema; storage path; HTML generate; idempotency; file checksum; a
 
 ## 12. Git Actions
 
-| Action | Done? |
-|--------|-------|
-| exact-path git add | **yes** (allowlisted docs in worktree) |
-| commit (primary + hash-record) | **yes** (see §8) |
+| Action | Result |
+|--------|--------|
+| exact-path git add | **yes** (allowlisted docs in clean worktree) |
+| commit | **yes** (primary `5cf22391` + hash-record `0ef4ffbd` + clarify `f2c03787` + closeout-hashes below) |
 | push | **no** |
 | fetch | **no** |
 | pull | **no** |
-| checkout/update-ref | **yes** — worktree detached at `7c3dbf1c`; after commits, `git update-ref refs/heads/mars/canonical-post-recovery` from worktree HEAD if safe; scoped restore on main for i-SEO docs if needed |
+| checkout / update-ref | worktree add `--detach` at `7c3dbf1c`; FF `update-ref` `mars/canonical-post-recovery` → tip after closeout-hashes; scoped `git checkout HEAD --` allowlisted i-SEO docs on main |
 | reset | **no** |
-| restore (destructive broad) | **no** — scoped i-SEO restore on main only if needed for alignment |
+| restore | **scoped only** on main — allowlisted i-SEO docs aligned to HEAD after update-ref; foreign staged untouched |
 | clean | **no** |
 | stash | **no** |
 | broad git add | **no** |
-| clean temporary worktree | **yes** — `X:\AI MARS STORAGE\git-sync-iseo-export-pdf-charter-01\repo` used for commits |
+| clean temporary worktree | used: `X:\AI MARS STORAGE\git-sync-iseo-export-pdf-charter-01\repo`; main foreign index preserved |
