@@ -599,6 +599,82 @@ code {
   margin-bottom: 1rem;
 }
 
+.finalization-card h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.readiness-checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.readiness-checklist li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: baseline;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.readiness-mark {
+  display: inline-block;
+  min-width: 3.2rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.readiness-item--pass .readiness-mark,
+.readiness-pass {
+  color: #1b6b3a;
+}
+
+.readiness-item--fail .readiness-mark,
+.readiness-fail {
+  color: #9b2c2c;
+}
+
+.finalization-actions {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.finalization-action .field-hint {
+  margin: 0.25rem 0 0;
+}
+
+.finalized-badge,
+.draft-warning-badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.finalized-badge {
+  background: #e8f5ee;
+  color: #1b6b3a;
+}
+
+.draft-warning-badge {
+  background: #fff4e5;
+  color: #8a5a00;
+}
+
+.locked-notice {
+  border-color: #c9a227;
+  background: #fffbeb;
+}
+
+.draft-warning {
+  color: #8a5a00;
+}
+
 @media print {
   .site-header,
   .site-footer,

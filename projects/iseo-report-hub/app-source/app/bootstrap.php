@@ -38,6 +38,7 @@ require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Services' . DIRECTORY_SEPARA
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Services' . DIRECTORY_SEPARATOR . 'MonthlyReportContentService.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Services' . DIRECTORY_SEPARATOR . 'ReportBlockService.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Services' . DIRECTORY_SEPARATOR . 'ReportPreviewService.php';
+require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Services' . DIRECTORY_SEPARATOR . 'ReportFinalizationService.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Controllers' . DIRECTORY_SEPARATOR . 'BaseController.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Controllers' . DIRECTORY_SEPARATOR . 'DashboardController.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Controllers' . DIRECTORY_SEPARATOR . 'AuthController.php';

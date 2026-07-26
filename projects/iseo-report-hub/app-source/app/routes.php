@@ -3,7 +3,8 @@ declare(strict_types=1);
 
 /**
  * Conceptual routes — DB-backed auth + reporting period CRUD + weekly checkpoints
- * + monthly report content CRUD + report blocks CRUD + report preview.
+ * + monthly report content CRUD + report blocks CRUD + report preview
+ * + report finalization workflow.
  *
  * Dynamic /reporting-periods/{id}, /weekly-checkpoints/{id}, /monthly-reports/{id},
  * and /report-blocks/{id} matching is registered at request time against the
@@ -32,6 +33,7 @@ use Iseo\Services\CsrfService;
 use Iseo\Services\DatabaseService;
 use Iseo\Services\MonthlyReportContentService;
 use Iseo\Services\ReportBlockService;
+use Iseo\Services\ReportFinalizationService;
 use Iseo\Services\ReportPreviewService;
 use Iseo\Services\ReportingPeriodService;
 use Iseo\Services\WeeklyCheckpointService;
@@ -65,6 +67,7 @@ $blockRepo = new ReportBlockRepository($db);
 $blockService = new ReportBlockService($blockRepo, $db);
 $previewRepo = new ReportPreviewRepository($db);
 $previewService = new ReportPreviewService($previewRepo, $db);
+$finalizationService = new ReportFinalizationService($monthlyRepo, $blockRepo, $previewService, $db);
 $reportingPeriods = new ReportingPeriodController(
     $app,
     $view,
@@ -83,7 +86,8 @@ $monthlyReports = new MonthlyReportContentController(
     $auth,
     $csrf,
     $monthlyService,
-    $blockService
+    $blockService,
+    $finalizationService
 );
 $reportBlocks = new ReportBlockController($app, $view, $config, $auth, $csrf, $blockService);
 $reportPreview = new ReportPreviewController($app, $view, $config, $auth, $csrf, $previewService);
@@ -157,6 +161,26 @@ if (preg_match('#^/reporting-periods/(\d+)/monthly-report/create$#', $requestPat
     $reportId = (int) $m[1];
     $router->get($requestPath, static function () use ($reportPreview, $reportId): void {
         $reportPreview->show($reportId);
+    });
+} elseif (preg_match('#^/monthly-reports/(\d+)/submit-review$#', $requestPath, $m) === 1) {
+    $reportId = (int) $m[1];
+    $router->post($requestPath, static function () use ($monthlyReports, $reportId): void {
+        $monthlyReports->submitReview($reportId);
+    });
+} elseif (preg_match('#^/monthly-reports/(\d+)/mark-reviewed$#', $requestPath, $m) === 1) {
+    $reportId = (int) $m[1];
+    $router->post($requestPath, static function () use ($monthlyReports, $reportId): void {
+        $monthlyReports->markReviewed($reportId);
+    });
+} elseif (preg_match('#^/monthly-reports/(\d+)/finalize$#', $requestPath, $m) === 1) {
+    $reportId = (int) $m[1];
+    $router->post($requestPath, static function () use ($monthlyReports, $reportId): void {
+        $monthlyReports->finalize($reportId);
+    });
+} elseif (preg_match('#^/monthly-reports/(\d+)/reopen$#', $requestPath, $m) === 1) {
+    $reportId = (int) $m[1];
+    $router->post($requestPath, static function () use ($monthlyReports, $reportId): void {
+        $monthlyReports->reopen($reportId);
     });
 } elseif (preg_match('#^/monthly-reports/(\d+)/edit$#', $requestPath, $m) === 1) {
     $reportId = (int) $m[1];

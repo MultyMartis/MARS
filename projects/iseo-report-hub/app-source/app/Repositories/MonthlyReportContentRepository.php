@@ -293,6 +293,34 @@ SQL;
     }
 
     /**
+     * Lifecycle-only update for finalization workflow (status / timestamps).
+     */
+    public function updateLifecycle(
+        int $id,
+        string $status,
+        ?string $reviewedAt,
+        ?string $finalizedAt,
+        int $updatedBy
+    ): void {
+        $sql = <<<'SQL'
+UPDATE monthly_report_contents SET
+    status = :status,
+    updated_by = :updated_by,
+    reviewed_at = :reviewed_at,
+    finalized_at = :finalized_at
+WHERE id = :id
+SQL;
+        $stmt = $this->pdo()->prepare($sql);
+        $stmt->execute([
+            ':status' => $status,
+            ':updated_by' => $updatedBy,
+            ':reviewed_at' => $reviewedAt,
+            ':finalized_at' => $finalizedAt,
+            ':id' => $id,
+        ]);
+    }
+
+    /**
      * @param array{
      *   status:string,
      *   title:string,

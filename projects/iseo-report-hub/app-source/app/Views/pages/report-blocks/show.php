@@ -7,6 +7,7 @@ declare(strict_types=1);
 $monthlyId = (int) $block['monthly_report_content_id'];
 $periodId = (int) $block['reporting_period_id'];
 $sourceCheckpoints = $sourceCheckpoints ?? [];
+$parentFinalized = !empty($parentFinalized);
 ?>
 <section class="panel">
     <div class="panel-head">
@@ -23,8 +24,18 @@ $sourceCheckpoints = $sourceCheckpoints ?? [];
         <span class="status-badge status-<?= e((string) $block['status']) ?>"><?= e((string) $block['status']) ?></span>
         · <span class="type-badge"><?= e((string) $block['block_type']) ?></span>
         · sort <?= e((string) $block['sort_order']) ?>
+        <?php if ($parentFinalized): ?>
+            · <span class="finalized-badge">Parent finalized</span>
+        <?php endif; ?>
     </p>
 </section>
+
+<?php if ($parentFinalized): ?>
+    <section class="panel locked-notice">
+        <h2>Locked</h2>
+        <p>Parent monthly report is finalized. Editing this block is blocked until reopen.</p>
+    </section>
+<?php endif; ?>
 
 <section class="panel">
     <h2>Parent context</h2>

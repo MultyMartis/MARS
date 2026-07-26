@@ -21,6 +21,8 @@ $action = $isEdit
 $cancelHref = $isEdit
     ? url_path('/monthly-reports/' . (int) $report['id'])
     : url_path('/reporting-periods/' . $periodId);
+$parentFinalized = !empty($parentFinalized) || !empty($formLocked);
+$formLocked = !empty($formLocked) || $parentFinalized;
 
 $selectedSource = $old['source_weekly_checkpoint_ids'] ?? [];
 if (!is_array($selectedSource)) {
@@ -54,6 +56,14 @@ $textFields = [
     </p>
 </section>
 
+<?php if ($parentFinalized): ?>
+    <section class="panel locked-notice">
+        <h2>Locked — finalized</h2>
+        <p>This monthly report is finalized. Normal edits are blocked. Use <strong>Reopen</strong> on the monthly detail page (admin_owner) before editing.</p>
+        <p><a class="btn btn-secondary" href="<?= e($cancelHref) ?>">Back to monthly report</a></p>
+    </section>
+<?php endif; ?>
+
 <?php if (!empty($formMessage) || $errors !== []): ?>
     <section class="panel flash flash-warn">
         <p><?= e((string) ($formMessage ?? 'Please correct the form errors.')) ?></p>
@@ -69,6 +79,9 @@ $textFields = [
 
 <section class="panel">
     <h2><?= $isEdit ? 'Edit monthly report content' : 'Create monthly report content' ?></h2>
+    <?php if ($formLocked): ?>
+        <p class="note">Form locked while finalized.</p>
+    <?php else: ?>
     <form class="rp-form mrc-form" method="post" action="<?= e($action) ?>" novalidate>
         <?= $csrf->field() ?>
 
@@ -174,4 +187,5 @@ $textFields = [
             <a class="btn btn-secondary" href="<?= e($cancelHref) ?>">Cancel</a>
         </p>
     </form>
+    <?php endif; ?>
 </section>

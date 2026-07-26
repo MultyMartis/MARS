@@ -401,6 +401,14 @@ final class MonthlyReportContentService
             return ['ok' => false, 'message' => 'You do not have permission to edit this monthly report.', 'errors' => []];
         }
 
+        if ((string) ($existing['status'] ?? '') === 'finalized') {
+            return [
+                'ok' => false,
+                'message' => 'Monthly report is finalized. Reopen before editing content.',
+                'errors' => ['status' => 'Finalized reports are locked for normal edit. Use reopen first.'],
+            ];
+        }
+
         if (!$this->canMutateAgainstParent($user, $period)) {
             return [
                 'ok' => false,
@@ -568,11 +576,16 @@ final class MonthlyReportContentService
             return true;
         }
 
+        // Finalized reopen / finalize must use explicit finalization routes.
+        if ($from === 'finalized' || $to === 'finalized') {
+            return false;
+        }
+
         $forward = [
             'draft' => ['in_progress'],
             'in_progress' => ['ready_for_review'],
             'ready_for_review' => ['reviewed'],
-            'reviewed' => ['finalized'],
+            'reviewed' => [],
         ];
 
         if (isset($forward[$from]) && in_array($to, $forward[$from], true)) {
@@ -581,11 +594,6 @@ final class MonthlyReportContentService
 
         // any non-finalized → archived
         if ($from !== 'finalized' && $to === 'archived') {
-            return true;
-        }
-
-        // reopen finalized only by admin_owner
-        if ($from === 'finalized' && $this->userHasAnyRole($user, ['admin_owner'])) {
             return true;
         }
 
@@ -789,25 +797,11 @@ final class MonthlyReportContentService
     {
         $errors = $this->validateCommon($data, $period);
         $existingStatus = (string) $existing['status'];
-        $isAdmin = $this->userHasAnyRole($user, ['admin_owner']);
 
-        // Finalized content editable only by admin_owner
-        if ($existingStatus === 'finalized' && !$isAdmin) {
-            $contentFields = array_merge(['title'], self::TEXT_FIELDS);
-            foreach ($contentFields as $field) {
-                $old = (string) ($existing[$field] ?? '');
-                $new = (string) ($data[$field] ?? '');
-                if ($old !== $new) {
-                    $errors[$field] = 'Finalized content can only be edited by admin_owner.';
-                }
-            }
-            $oldIds = $this->decodeSourceIds($existing['source_weekly_checkpoint_ids'] ?? null);
-            $newIds = $data['source_ids'];
-            sort($oldIds);
-            sort($newIds);
-            if ($oldIds !== $newIds) {
-                $errors['source_weekly_checkpoint_ids'] = 'Source weekly checkpoints can only be changed by admin_owner when finalized.';
-            }
+        // Finalized content is locked for all roles until reopen.
+        if ($existingStatus === 'finalized') {
+            $errors['status'] = 'Finalized reports are locked. Use reopen first.';
+            return $errors;
         }
 
         if (!$this->canAssignOwnerReviewer($user)) {

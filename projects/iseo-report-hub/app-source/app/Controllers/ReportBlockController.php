@@ -52,6 +52,7 @@ final class ReportBlockController extends BaseController
             'monthly' => $monthly,
             'blocks' => $rows,
             'canCreate' => $canCreate,
+            'parentFinalized' => (string) ($monthly['status'] ?? '') === 'finalized',
         ]);
     }
 
@@ -65,6 +66,12 @@ final class ReportBlockController extends BaseController
         $monthly = $this->blocks->getMonthlyReport($monthlyReportId);
         if ($monthly === null) {
             $this->notFoundMonthly();
+            return;
+        }
+
+        if ((string) ($monthly['status'] ?? '') === 'finalized') {
+            flash_set('warn', 'Parent monthly report is finalized. Reopen before creating blocks.');
+            $this->redirect('/monthly-reports/' . $monthlyReportId . '/blocks');
             return;
         }
 
@@ -114,6 +121,12 @@ final class ReportBlockController extends BaseController
         $monthly = $this->blocks->getMonthlyReport($monthlyReportId);
         if ($monthly === null) {
             $this->notFoundMonthly();
+            return;
+        }
+
+        if ((string) ($monthly['status'] ?? '') === 'finalized') {
+            flash_set('warn', 'Parent monthly report is finalized. Reopen before creating blocks.');
+            $this->redirect('/monthly-reports/' . $monthlyReportId . '/blocks');
             return;
         }
 
@@ -201,6 +214,7 @@ final class ReportBlockController extends BaseController
             'monthly' => $monthly,
             'sourceCheckpoints' => $sourceRows,
             'canEdit' => $canEdit,
+            'parentFinalized' => $monthly !== null && (string) ($monthly['status'] ?? '') === 'finalized',
         ]);
     }
 
@@ -220,6 +234,12 @@ final class ReportBlockController extends BaseController
         $monthly = $this->blocks->getMonthlyReport((int) $block['monthly_report_content_id']);
         if ($monthly === null) {
             $this->notFoundMonthly();
+            return;
+        }
+
+        if ((string) ($monthly['status'] ?? '') === 'finalized') {
+            flash_set('warn', 'Parent monthly report is finalized. Reopen before editing blocks.');
+            $this->redirect('/report-blocks/' . $id);
             return;
         }
 
@@ -268,6 +288,12 @@ final class ReportBlockController extends BaseController
         $monthly = $this->blocks->getMonthlyReport((int) $block['monthly_report_content_id']);
         if ($monthly === null) {
             $this->notFoundMonthly();
+            return;
+        }
+
+        if ((string) ($monthly['status'] ?? '') === 'finalized') {
+            flash_set('warn', 'Parent monthly report is finalized. Reopen before editing blocks.');
+            $this->redirect('/report-blocks/' . $id);
             return;
         }
 

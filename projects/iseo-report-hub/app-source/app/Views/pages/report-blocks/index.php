@@ -5,6 +5,7 @@ declare(strict_types=1);
 /** @var bool $canCreate */
 $monthlyId = (int) $monthly['id'];
 $periodId = (int) $monthly['reporting_period_id'];
+$parentFinalized = !empty($parentFinalized) || ((string) ($monthly['status'] ?? '') === 'finalized');
 ?>
 <section class="panel">
     <div class="panel-head">
@@ -25,6 +26,12 @@ $periodId = (int) $monthly['reporting_period_id'];
     </p>
 </section>
 
+<?php if ($parentFinalized): ?>
+    <section class="panel locked-notice">
+        <h2>Locked</h2>
+        <p>Parent monthly report is finalized. Block create/edit is blocked until reopen. List and detail remain read-only.</p>
+    </section>
+<?php endif; ?>
 <?php if ($blocks === []): ?>
     <section class="panel">
         <p>No report blocks for this monthly report yet.</p>

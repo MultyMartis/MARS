@@ -38,8 +38,12 @@ $flatLabels = [
             <?php if (!$printMode): ?>
                 <p class="report-preview__controls">
                     <a class="btn btn-secondary" href="<?= e(url_path('/monthly-reports/' . $reportId)) ?>">Back to monthly report</a>
-                    <a class="btn btn-secondary" href="<?= e(url_path('/monthly-reports/' . $reportId . '/edit')) ?>">Edit monthly report</a>
-                    <a class="btn btn-secondary" href="<?= e(url_path('/monthly-reports/' . $reportId . '/blocks')) ?>">Manage report blocks</a>
+                    <?php if ((string) ($report['status'] ?? '') !== 'finalized'): ?>
+                        <a class="btn btn-secondary" href="<?= e(url_path('/monthly-reports/' . $reportId . '/edit')) ?>">Edit monthly report</a>
+                        <a class="btn btn-secondary" href="<?= e(url_path('/monthly-reports/' . $reportId . '/blocks')) ?>">Manage report blocks</a>
+                    <?php else: ?>
+                        <a class="btn btn-secondary" href="<?= e(url_path('/monthly-reports/' . $reportId . '/blocks')) ?>">View report blocks</a>
+                    <?php endif; ?>
                     <a class="btn btn-secondary" href="<?= e(url_path('/monthly-reports/' . $reportId . '/preview/print')) ?>">Print view</a>
                 </p>
             <?php else: ?>
@@ -52,6 +56,11 @@ $flatLabels = [
         <p>
             <span class="internal-only-badge">Internal only</span>
             · <span class="status-badge status-<?= e((string) $report['status']) ?>"><?= e((string) $report['status']) ?></span>
+            <?php if ((string) ($report['status'] ?? '') === 'finalized'): ?>
+                · <span class="finalized-badge">Finalized</span>
+            <?php else: ?>
+                · <span class="draft-warning-badge">Not finalized</span>
+            <?php endif; ?>
             · <code><?= e((string) ($report['period_key'] ?? '')) ?></code>
         </p>
         <ul class="facts">
@@ -73,8 +82,12 @@ $flatLabels = [
                 </a>
                 · <?= e((string) ($report['period_start'] ?? '')) ?> – <?= e((string) ($report['period_end'] ?? '')) ?>
             </li>
+            <li><strong>Finalized at:</strong> <?= e((string) ($report['finalized_at'] ?? '—')) ?></li>
             <li><strong>Generated at:</strong> <?= e((string) $generatedAt) ?></li>
         </ul>
+        <?php if ((string) ($report['status'] ?? '') !== 'finalized'): ?>
+            <p class="note draft-warning<?= $printMode ? '' : '' ?>">This preview is not finalized. Treat as working draft.</p>
+        <?php endif; ?>
     </section>
 
     <section class="panel report-preview__sources">

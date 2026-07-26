@@ -70,14 +70,18 @@ Creates one local-only demo client / project / site / reporting_period (`LOCAL_F
 - `GET /reporting-periods/{period_id}/monthly-report` — period monthly detail (or redirect to create)
 - `GET /reporting-periods/{period_id}/monthly-report/create` — create form (one per period)
 - `POST /reporting-periods/{period_id}/monthly-report` — create (CSRF; duplicate guard)
-- `GET /monthly-reports/{id}` — flat detail (includes report blocks section)
+- `GET /monthly-reports/{id}` — flat detail (includes report blocks section + finalization card)
 - `GET /monthly-reports/{id}/preview` — **internal-only** assembled preview (auth required; blocks primary; no public/PDF)
 - `GET /monthly-reports/{id}/preview/print` — print-friendly twin of preview (browser print only; no server PDF)
-- `GET /monthly-reports/{id}/edit` — edit form
-- `POST /monthly-reports/{id}` — update (CSRF; archive via status)
+- `POST /monthly-reports/{id}/submit-review` — `in_progress` → `ready_for_review` (CSRF; role-gated)
+- `POST /monthly-reports/{id}/mark-reviewed` — `ready_for_review` → `reviewed` (CSRF; role-gated)
+- `POST /monthly-reports/{id}/finalize` — `reviewed` → `finalized` when readiness passes (CSRF; sets `finalized_at` if null)
+- `POST /monthly-reports/{id}/reopen` — `finalized` → `reviewed` (admin_owner; preserves `finalized_at`)
+- `GET /monthly-reports/{id}/edit` — edit form (locked when finalized)
+- `POST /monthly-reports/{id}` — update (CSRF; archive via status; refused when finalized)
 - `GET /monthly-reports/{monthly_report_id}/blocks` — block list within monthly report
 - `GET /monthly-reports/{monthly_report_id}/blocks/create` — create block form
-- `POST /monthly-reports/{monthly_report_id}/blocks` — create block (CSRF; unique parent+block_key)
+- `POST /monthly-reports/{monthly_report_id}/blocks` — create block (CSRF; unique parent+block_key; refused when parent finalized)
 - `GET /report-blocks/{id}` — flat block detail
 - `GET /report-blocks/{id}/edit` — edit form
 - `POST /report-blocks/{id}` — update (CSRF; archive via status)
@@ -108,4 +112,4 @@ No public share token, no export route, no server-side PDF generation.
 
 ## Next phase
 
-**Recommended:** Report Finalization Charter 01 (or Report Preview / Render Hardening 01 if multi-role / archive-exclusion live smoke needed).
+**Recommended:** Report Snapshot Charter 01 (immutable final snapshot for export/PDF foundations).

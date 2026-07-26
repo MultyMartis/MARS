@@ -296,11 +296,9 @@ final class ReportBlockService
     public function canMutateAgainstParent(array $user, array $monthly): bool
     {
         $status = (string) ($monthly['status'] ?? '');
-        if ($status === 'archived') {
+        if ($status === 'archived' || $status === 'finalized') {
+            // MVP: reopen required before any block create/edit, including admin_owner.
             return false;
-        }
-        if ($status === 'finalized') {
-            return $this->userHasAnyRole($user, ['admin_owner']);
         }
         return true;
     }

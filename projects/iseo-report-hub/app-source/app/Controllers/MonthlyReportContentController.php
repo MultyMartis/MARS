@@ -5,6 +5,7 @@ namespace Iseo\Controllers;
 
 use Iseo\Services\MonthlyReportContentService;
 use Iseo\Services\ReportBlockService;
+use Iseo\Services\ReportFinalizationService;
 use Iseo\Support\Response;
 
 final class MonthlyReportContentController extends BaseController
@@ -16,7 +17,8 @@ final class MonthlyReportContentController extends BaseController
         \Iseo\Services\AuthService $auth,
         \Iseo\Services\CsrfService $csrf,
         private MonthlyReportContentService $monthlyReports,
-        private ReportBlockService $reportBlocks
+        private ReportBlockService $reportBlocks,
+        private ReportFinalizationService $finalization
     ) {
         parent::__construct($app, $view, $config, $auth, $csrf);
     }
@@ -223,6 +225,7 @@ final class MonthlyReportContentController extends BaseController
             return;
         }
 
+        $parentFinalized = $this->finalization->isMonthlyFinalizedLocked($report);
         $available = $this->monthlyReports->selectableWeeklyCheckpoints((int) $period['id']);
 
         $this->render('monthly-reports/edit', [
@@ -237,6 +240,8 @@ final class MonthlyReportContentController extends BaseController
             'availableCheckpoints' => $available,
             'canAssignUsers' => $this->monthlyReports->canAssignOwnerReviewer($user),
             'locks' => $this->locksForReport($report, $user),
+            'parentFinalized' => $parentFinalized,
+            'formLocked' => $parentFinalized,
         ]);
     }
 
@@ -275,6 +280,12 @@ final class MonthlyReportContentController extends BaseController
             return;
         }
 
+        if ($this->finalization->isMonthlyFinalizedLocked($report)) {
+            flash_set('warn', 'Monthly report is finalized. Reopen before editing content.');
+            $this->redirect('/monthly-reports/' . $id);
+            return;
+        }
+
         $input = $this->readInput();
         $result = $this->monthlyReports->update($user, $report, $period, $input);
 
@@ -301,7 +312,60 @@ final class MonthlyReportContentController extends BaseController
             'availableCheckpoints' => $available,
             'canAssignUsers' => $this->monthlyReports->canAssignOwnerReviewer($user),
             'locks' => $this->locksForReport($report, $user),
+            'parentFinalized' => false,
+            'formLocked' => false,
         ], 422);
+    }
+
+    public function submitReview(int $id): void
+    {
+        $this->runFinalizationAction($id, 'submitForReview');
+    }
+
+    public function markReviewed(int $id): void
+    {
+        $this->runFinalizationAction($id, 'markReviewed');
+    }
+
+    public function finalize(int $id): void
+    {
+        $this->runFinalizationAction($id, 'finalize');
+    }
+
+    public function reopen(int $id): void
+    {
+        $this->runFinalizationAction($id, 'reopen');
+    }
+
+    private function runFinalizationAction(int $id, string $method): void
+    {
+        if (!$this->guardMethod(['POST'])) {
+            return;
+        }
+
+        $user = $this->requireInternalUser();
+        if ($user === null) {
+            return;
+        }
+
+        if (!$this->monthlyReports->canList($user)) {
+            $this->denyAccess();
+            return;
+        }
+
+        if (!$this->validateCsrf()) {
+            flash_set('warn', 'CSRF token invalid or missing. Please try again.');
+            $this->redirect('/monthly-reports/' . $id);
+            return;
+        }
+
+        $result = $this->finalization->{$method}($id, $user);
+        if (!empty($result['ok'])) {
+            flash_set('info', (string) ($result['message'] ?? 'Action completed.'));
+        } else {
+            flash_set('warn', (string) ($result['message'] ?? 'Action failed.'));
+        }
+        $this->redirect('/monthly-reports/' . $id);
     }
 
     /**
@@ -316,7 +380,9 @@ final class MonthlyReportContentController extends BaseController
         $sourceIds = $this->monthlyReports->decodeSourceIds($report['source_weekly_checkpoint_ids'] ?? null);
         $sourceRows = $this->monthlyReports->resolveSourceCheckpointRows($sourceIds, $available);
 
+        $parentFinalized = $this->finalization->isMonthlyFinalizedLocked($report);
         $canEdit = $period !== null
+            && !$parentFinalized
             && $this->monthlyReports->canEdit($user, $report)
             && $this->monthlyReports->canMutateAgainstParent($user, $period);
 
@@ -324,14 +390,16 @@ final class MonthlyReportContentController extends BaseController
         $canCreateBlock = false;
         try {
             $reportBlocks = $this->reportBlocks->listForMonthlyReport((int) $report['id']);
-            $canCreateBlock = $this->reportBlocks->canCreate($user)
+            $canCreateBlock = !$parentFinalized
+                && $this->reportBlocks->canCreate($user)
                 && $this->reportBlocks->canMutateAgainstParent($user, [
                     'id' => (int) $report['id'],
                     'status' => (string) $report['status'],
                     'reporting_period_id' => (int) $report['reporting_period_id'],
                 ]);
             foreach ($reportBlocks as &$blockRow) {
-                $blockRow['_can_edit'] = $this->reportBlocks->canEdit($user, $blockRow)
+                $blockRow['_can_edit'] = !$parentFinalized
+                    && $this->reportBlocks->canEdit($user, $blockRow)
                     && $this->reportBlocks->canMutateAgainstParent($user, [
                         'id' => (int) $report['id'],
                         'status' => (string) $report['status'],
@@ -344,6 +412,19 @@ final class MonthlyReportContentController extends BaseController
             $canCreateBlock = false;
         }
 
+        $readiness = [
+            'ok' => false,
+            'ready' => false,
+            'gates' => [],
+            'failed_gates' => [],
+            'actions' => [],
+        ];
+        try {
+            $readiness = $this->finalization->getReadiness((int) $report['id'], $user);
+        } catch (\Throwable) {
+            // Show page even if readiness computation fails.
+        }
+
         $this->render('monthly-reports/show', [
             'pageTitle' => 'Monthly report — ' . (string) ($report['period_key'] ?? $report['id']),
             'report' => $report,
@@ -352,6 +433,8 @@ final class MonthlyReportContentController extends BaseController
             'canEdit' => $canEdit,
             'reportBlocks' => $reportBlocks,
             'canCreateBlock' => $canCreateBlock,
+            'parentFinalized' => $parentFinalized,
+            'readiness' => $readiness,
         ]);
     }
 
@@ -473,8 +556,7 @@ final class MonthlyReportContentController extends BaseController
     private function locksForReport(array $report, array $user): array
     {
         $status = (string) $report['status'];
-        $isAdmin = in_array('admin_owner', $user['roles'], true);
-        $lockContent = $status === 'finalized' && !$isAdmin;
+        $lockContent = $status === 'finalized';
 
         return [
             'reporting_period_id' => true,
