@@ -127,7 +127,7 @@ Primary message:
 
 - exact-path git add (allowlisted only)
 - staged list: see post-commit verification
-- commit hash: **PENDING_PRIMARY**
+- commit hash: `4bda84e50e8fde82f4429aa24cb590aa26c430fb`
 - push: **no**
 
 Hash-record follow-up (this report only):
