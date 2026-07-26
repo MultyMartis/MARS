@@ -4,7 +4,7 @@
 **project_id:** `iseo-report-hub`  
 **Created:** 2026-07-27  
 **Authority:** Operator I-SEO Report Hub Report Preview / Render Charter 01  
-**Primary commit:** `PENDING_AFTER_COMMIT`  
+**Primary commit:** `f9604d4b103ed984aaa83382ee87ee60c865e28c`  
 **Hash-record commit:** `PENDING_AFTER_HASH_RECORD`
 
 ---
@@ -122,7 +122,7 @@ Documented for next implementation wave:
 |------|-------|
 | Exact-path git add | allowlisted docs only |
 | Primary commit message | `docs(iseo-report-hub): add report preview render charter` |
-| Primary commit hash | `PENDING_AFTER_COMMIT` |
+| Primary commit hash | `f9604d4b103ed984aaa83382ee87ee60c865e28c` |
 | Hash-record message | `docs(iseo-report-hub): record report preview render charter commit hash` |
 | Hash-record commit hash | `PENDING_AFTER_HASH_RECORD` |
 | Push | **no** |
