@@ -243,7 +243,8 @@ Not mutated: publish state, CPT public exposure, sitemap, menu, templates, CSS/J
 
 ## 26. Git Persistence
 
-Scoped commit requested by charter after validation (this report wave). No push.
+Scoped commit: `46c4a701` — `content(iseo-su): add glossary batch 03 drafts`  
+No push.
 
 ## 27. Recommended Next Step
 
