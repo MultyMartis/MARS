@@ -1,0 +1,30 @@
+{
+  "phase": "1B-D6A2B",
+  "mode": "OFFLINE_EVIDENCE_BASELINE_GIT_COMMIT_ONLY",
+  "no_live_rule": true,
+  "authorized_external_ops": ["GET_READONLY_RECONFIRMATION"],
+  "forbidden": {
+    "workflow_activation": true,
+    "workflow_content_mutation": true,
+    "webhook_calls": true,
+    "telegram": true,
+    "datatable_mutation": true,
+    "monitor_execution": true,
+    "scheduler_execution": true,
+    "site002_source_mutation": true,
+    "push": true
+  },
+  "commit_subject_exact": "feat(client-ops): deploy durable delivery ledger",
+  "scope": {
+    "include": ["D6", "D6A", "D6A2", "D6A2B"],
+    "exclude": ["D6B", "D6C", "D6E", "D6D", "foreign_client_ops_wip", "site002_source"]
+  },
+  "accepted_prior": {
+    "D6A2_verdict": "COMPLETE — DURABLE DELIVERY LEDGER DEPLOYED TO CLIENT OPS AND SYNTHETIC PENDING→SENT VERIFIED; PRODUCTION REMAINS CONTAINED",
+    "readiness_entering": "READY_FOR_D6A2_EVIDENCE_BASELINE_COMMIT"
+  },
+  "production_readiness_retained": {
+    "CLIENT_OPS_UNATTENDED_PRODUCTION_READY": false,
+    "CLIENT_OPS_AUTOMATIC_SITE002_CONNECTION_AUTHORIZED": false
+  }
+}

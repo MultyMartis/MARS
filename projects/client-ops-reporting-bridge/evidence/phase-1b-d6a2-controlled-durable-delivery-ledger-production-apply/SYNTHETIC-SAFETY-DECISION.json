@@ -1,0 +1,9 @@
+{
+  "phase": "1B-D6A2",
+  "token": "D6A2_SYNTHETIC_SAFE_TARGET_AVAILABLE",
+  "rationale": "Established private Client Ops Telegram sandbox target from C0/C1 (chat_type=private); used for prior synthetic C1/D1/D3 tests. Synthetic non-customer payload only; no real SITE-002 producer; no historical event reuse; credential/chat binding unchanged.",
+  "chat_id_disclosed_minimally": true,
+  "chat_id": "499423375",
+  "real_site002_producer": false,
+  "customer_facing_message": false
+}

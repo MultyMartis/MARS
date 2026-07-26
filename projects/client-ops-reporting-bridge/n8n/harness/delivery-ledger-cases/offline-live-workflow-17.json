@@ -1,0 +1,655 @@
+{
+  "id": "tkM4H0G0gM3q9Foi",
+  "name": "MARS Client Ops Bridge — bzpm.ru",
+  "active": false,
+  "versionId": "3d2fd6fc-bc17-4e0f-b9e5-086c959afd29",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "mars-client-ops-bridge-bzpm-sandbox",
+        "responseMode": "responseNode",
+        "options": {},
+        "authentication": "headerAuth"
+      },
+      "id": "3be98c96-0514-42d4-9b0d-4f75b7afd314",
+      "name": "Webhook Intake",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        300
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "WKHmPaw6QBp7WnzP",
+          "name": "MARS Client Ops Webhook Auth — bzpm.ru"
+        }
+      },
+      "webhookId": "99aa954c-c53f-47d6-92fa-a1e326ed0177"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Capture Request Metadata — Client Ops sandbox\nconst item = $input.first().json || {};\nconst headers = item.headers || item.header || {};\nconst body = item.body !== undefined ? item.body : item;\nlet rawBodyBytes = 0;\ntry {\n  rawBodyBytes = Buffer.byteLength(JSON.stringify(body ?? {}), 'utf8');\n} catch (e) {\n  rawBodyBytes = 0;\n}\nreturn [{\n  json: {\n    headers,\n    body,\n    rawBodyBytes,\n    received_at: new Date().toISOString(),\n  }\n}];\n"
+      },
+      "id": "3f3a1ca9-a1d1-444a-a14e-f5f488cf6a9b",
+      "name": "Capture Request Metadata",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        240,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// auth_mode=NATIVE_HEADER_AUTH\n// Client Ops Process Gates — sandbox template\n// AUTH SECRET BINDING: HITL_REQUIRED — placeholder must be replaced before apply.\n/**\n * MARS Client Ops Bridge — offline / Code@2-compatible validation library.\n *\n * Pure JavaScript. No network. No secret values emitted in responses.\n * Suitable for Node harness and for embedding into n8n Code@2 nodes.\n *\n * AUTH: MVP compares request header token to an injected expectedSecret\n * string. Live credential/env binding remains HITL_REQUIRED — do not invent\n * n8n env access syntax here.\n */\n\nconst WORKFLOW_NAME = 'MARS Client Ops Bridge — bzpm.ru';\nconst SCHEMA_NAME = 'mars.client_ops.report';\nconst SCHEMA_MAJOR = 1;\nconst EVENT_TYPE = 'site.post_1c_monitor';\nconst SITE_ID = 'SITE-002';\nconst SITE_DOMAIN = 'bzpm.ru';\nconst MAX_PAYLOAD_BYTES = 256 * 1024;\nconst AUTH_HEADER = 'x-mars-client-ops-token';\nconst AUTH_PLACEHOLDER = ''; // retired under NATIVE_HEADER_AUTH\n/** Clearly synthetic harness-only secret — never a production credential. */\nconst SYNTHETIC_HARNESS_SECRET =\n  'SYNTHETIC_CLIENT_OPS_HARNESS_SECRET_v1_NOT_A_REAL_CREDENTIAL';\n\nconst ALLOWED_STATUSES = new Set(['OK', 'ATTENTION', 'FAILED', 'BLOCKED']);\n\nconst REQUIRED_TOP_LEVEL = [\n  'schema_name',\n  'schema_version',\n  'event_id',\n  'event_type',\n  'generated_at',\n  'observed_at',\n  'environment',\n  'site',\n  'producer',\n  'run',\n  'action',\n  'metrics',\n  'freshness',\n  'security',\n];\n\nconst METRIC_KEYS = [\n  'baseline_count',\n  'current_count',\n  'added_urls',\n  'removed_urls',\n  'onboarding_needed_count',\n];\n\nconst FORBIDDEN_TOP_LEVEL_KEYS = new Set([\n  'delivery',\n  'ai',\n  'routing',\n  'telegram',\n  'chat_id',\n  'bot_token',\n  'webhook',\n  'credentials',\n  'secret',\n  'secrets',\n  'password',\n  'token',\n  'api_key',\n  'openrouter',\n  'atlas',\n  'source_path',\n  'absolute_path',\n  'storage_path',\n]);\n\nconst RE_WINDOWS_ABS = /[A-Za-z]:\\\\/;\nconst RE_UNC = /\\\\\\\\[^\\s\\\\/]+\\\\/;\nconst RE_URI_CREDS = /[a-zA-Z][a-zA-Z0-9+.-]*:\\/\\/[^/\\s]*:[^/\\s]*@/;\nconst RE_TOKENISH =\n  /(\\b(api[_-]?key|bot[_-]?token|access[_-]?token|secret[_-]?key|bearer\\s+[A-Za-z0-9\\-._~+/]+=*)\\b|\\b\\d{8,10}:[A-Za-z0-9_-]{30,}\\b)/i;\nconst RE_STACK = /^(Traceback \\(most recent call last\\):|\\s+File \".+\", line \\d+)/m;\nconst RE_PRIVATE_KEY = /-----BEGIN (RSA |OPENSSH )?PRIVATE KEY-----/i;\nconst RE_UUID =\n  /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;\n\n/**\n * @param {unknown} headers\n * @returns {Record<string, string>}\n */\nfunction normalizeHeaders(headers) {\n  const out = {};\n  if (!headers || typeof headers !== 'object') return out;\n  for (const [key, value] of Object.entries(headers)) {\n    if (value === undefined || value === null) continue;\n    out[String(key).toLowerCase()] = Array.isArray(value)\n      ? String(value[0] ?? '')\n      : String(value);\n  }\n  return out;\n}\n\n/**\n * @param {Record<string, string>} headers\n * @returns {{ ok: boolean, code?: string }}\n */\nfunction validateContentType(headers) {\n  const raw = headers['content-type'] || '';\n  const base = raw.split(';')[0].trim().toLowerCase();\n  if (base !== 'application/json') {\n    return { ok: false, code: 'UNSUPPORTED_MEDIA_TYPE' };\n  }\n  return { ok: true };\n}\n\n/**\n * Auth interface only. Does not leak secrets.\n * @param {Record<string, string>} headers\n * @param {string} expectedSecret\n * @returns {{ ok: boolean, code?: string }}\n */\nfunction validateAuthInterface(headers, expectedSecret) {\n  if (\n    !expectedSecret ||\n    expectedSecret === AUTH_PLACEHOLDER ||\n    expectedSecret.includes('HITL_REQUIRED')\n  ) {\n    return { ok: false, code: 'AUTH_BINDING_UNRESOLVED' };\n  }\n  const headerToken = (headers[AUTH_HEADER] || '').trim();\n  const auth = (headers.authorization || '').trim();\n  let presented = headerToken;\n  if (!presented && /^Bearer\\s+/i.test(auth)) {\n    presented = auth.replace(/^Bearer\\s+/i, '').trim();\n  }\n  if (!presented) {\n    return { ok: false, code: 'UNAUTHORIZED' };\n  }\n  if (presented !== expectedSecret) {\n    return { ok: false, code: 'UNAUTHORIZED' };\n  }\n  return { ok: true };\n}\n\n/**\n * @param {unknown} envelope\n * @returns {{ ok: boolean, code?: string, field?: string }}\n */\nfunction validateEnvelopeShape(envelope) {\n  if (!envelope || typeof envelope !== 'object' || Array.isArray(envelope)) {\n    return { ok: false, code: 'INVALID_SCHEMA', field: '(root)' };\n  }\n  for (const key of REQUIRED_TOP_LEVEL) {\n    if (!(key in envelope)) {\n      return { ok: false, code: 'INVALID_SCHEMA', field: key };\n    }\n  }\n  for (const key of Object.keys(envelope)) {\n    if (FORBIDDEN_TOP_LEVEL_KEYS.has(String(key).toLowerCase())) {\n      return { ok: false, code: 'SECURITY_REJECTED', field: key };\n    }\n  }\n  return { ok: true };\n}\n\n/**\n * @param {unknown} version\n * @returns {{ ok: boolean, code?: string }}\n */\nfunction validateSchemaVersion(version) {\n  if (typeof version !== 'string' || !/^\\d+\\.\\d+$/.test(version)) {\n    return { ok: false, code: 'INVALID_SCHEMA' };\n  }\n  const major = Number(version.split('.')[0]);\n  if (major !== SCHEMA_MAJOR) {\n    return { ok: false, code: 'INVALID_SCHEMA' };\n  }\n  return { ok: true };\n}\n\n/**\n * @param {unknown} status\n * @returns {{ ok: boolean, code?: string }}\n */\nfunction validateAllowedStatus(status) {\n  if (typeof status !== 'string' || !ALLOWED_STATUSES.has(status)) {\n    return { ok: false, code: 'INVALID_SCHEMA' };\n  }\n  return { ok: true };\n}\n\n/**\n * @param {unknown} security\n * @returns {{ ok: boolean, code?: string, field?: string }}\n */\nfunction validateSecurityFlags(security) {\n  if (!security || typeof security !== 'object') {\n    return { ok: false, code: 'SECURITY_REJECTED', field: 'security' };\n  }\n  if (security.contains_secrets !== false) {\n    return {\n      ok: false,\n      code: 'SECURITY_REJECTED',\n      field: 'security.contains_secrets',\n    };\n  }\n  if (security.redacted !== true) {\n    return {\n      ok: false,\n      code: 'SECURITY_REJECTED',\n      field: 'security.redacted',\n    };\n  }\n  return { ok: true };\n}\n\n/**\n * @param {unknown} eventId\n * @returns {{ ok: boolean, code?: string }}\n */\nfunction validateEventId(eventId) {\n  if (typeof eventId !== 'string' || !RE_UUID.test(eventId)) {\n    return { ok: false, code: 'INVALID_SCHEMA' };\n  }\n  return { ok: true };\n}\n\n/**\n * @param {string} text\n * @param {number} [maxLen]\n */\nfunction redactForDiagnostics(text, maxLen = 80) {\n  let cleaned = String(text);\n  cleaned = cleaned.replace(RE_WINDOWS_ABS, '<REDACTED_PATH>');\n  cleaned = cleaned.replace(RE_UNC, '<REDACTED_UNC>');\n  cleaned = cleaned.replace(RE_URI_CREDS, '<REDACTED_URI>');\n  cleaned = cleaned.replace(RE_TOKENISH, '<REDACTED_TOKEN>');\n  if (cleaned.length > maxLen) return `${cleaned.slice(0, maxLen - 3)}...`;\n  return cleaned;\n}\n\n/**\n * @param {unknown} value\n * @param {string} [prefix]\n * @returns {Iterable<[string, string]>}\n */\nfunction* iterStrings(value, prefix = '') {\n  if (typeof value === 'string') {\n    yield [prefix, value];\n  } else if (value && typeof value === 'object' && !Array.isArray(value)) {\n    for (const [key, child] of Object.entries(value)) {\n      const path = prefix ? `${prefix}.${key}` : String(key);\n      yield* iterStrings(child, path);\n    }\n  } else if (Array.isArray(value)) {\n    for (let i = 0; i < value.length; i += 1) {\n      yield* iterStrings(value[i], `${prefix}[${i}]`);\n    }\n  }\n}\n\n/**\n * @param {unknown} envelope\n * @returns {{ ok: boolean, code?: string, field?: string, diagnostic?: string }}\n */\nfunction scanUnsafeStrings(envelope) {\n  for (const [path, text] of iterStrings(envelope)) {\n    if (RE_WINDOWS_ABS.test(text) || RE_UNC.test(text)) {\n      return {\n        ok: false,\n        code: 'SECURITY_REJECTED',\n        field: path,\n        diagnostic: 'path_pattern',\n      };\n    }\n    if (RE_URI_CREDS.test(text)) {\n      return {\n        ok: false,\n        code: 'SECURITY_REJECTED',\n        field: path,\n        diagnostic: 'uri_credentials',\n      };\n    }\n    if (RE_TOKENISH.test(text)) {\n      return {\n        ok: false"
+      },
+      "id": "f8d02d31-0b8e-4154-a34f-6332d64b19d8",
+      "name": "Process Client Ops Gates",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "c37e4772-e012-4136-bf10-fc8063e1b871",
+              "leftValue": "={{ String($json.branch_accepted) }}",
+              "rightValue": "true",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "88c2a229-98ef-4583-bf95-3eaed949350c",
+      "name": "IF Accepted Branch",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        720,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Prepare Accepted Response — post-dedupe FIRST_SEEN path\nconst classified = $('Dedupe Classify').item.json || {};\nreturn [{\n  json: {\n    http_status: classified.http_status,\n    response: classified.response,\n    evidence: classified.evidence || {},\n    received_at: classified.received_at || null,\n    dedupe_classification: classified.dedupe_classification || 'FIRST_SEEN',\n  }\n}];"
+      },
+      "id": "e7957b65-11cc-4a98-ae4b-63cdabd99e0f",
+      "name": "Prepare Accepted Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2160,
+        -40
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const j = $input.first().json || {};\nreturn [{\n  json: {\n    http_status: j.http_status,\n    response: j.response,\n    evidence: j.evidence || {},\n    received_at: j.received_at || null,\n  }\n}];"
+      },
+      "id": "123a3d0e-6e07-4315-af28-6788c96af156",
+      "name": "Prepare Rejected Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        960,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json.response }}",
+        "options": {
+          "responseCode": "={{ $json.http_status }}"
+        }
+      },
+      "id": "23d5ca7d-ca14-4b70-9f17-6a292003463c",
+      "name": "Respond Accepted",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        2400,
+        -40
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json.response }}",
+        "options": {
+          "responseCode": "={{ $json.http_status }}"
+        }
+      },
+      "id": "5e756b10-5f50-4faf-a06e-45fe014f3e8d",
+      "name": "Respond Rejected",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        1200,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const j = $input.first().json || {};\nconst evidence = j.evidence || {};\nconst response = j.response || {};\nreturn [{\n  json: {\n    sanitized_evidence: {\n      gate: evidence.gate || null,\n      code: evidence.code || null,\n      event_id: evidence.event_id || response.event_id || null,\n      dedupe: evidence.dedupe || response.dedupe || null,\n      http_status: j.http_status,\n      received_at: j.received_at || null,\n    }\n  }\n}];"
+      },
+      "id": "16187c62-0e8e-46ea-be26-3e05de0773c3",
+      "name": "Sanitized Internal Evidence",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        960,
+        300
+      ],
+      "disabled": true,
+      "notes": "Optional post-gate evidence shape. Disabled in first sandbox; does not send Telegram or write Storage."
+    },
+    {
+      "parameters": {
+        "chatId": "499423375",
+        "text": "[SANITIZED_TELEGRAM_TEXT]",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "id": "2807d211-256d-4ecd-ba4c-4707c565c281",
+      "name": "Telegram Notify Accepted",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2640,
+        -40
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "2bIC5376l7ElXb4B",
+          "name": "MARS Client Ops Telegram — bzpm.ru"
+        }
+      },
+      "webhookId": "3a967773-dcec-434e-bc14-4a12f1b9614c"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Prepare Dedupe Context — Phase 1B-D1\n// Deterministic fingerprint via canonical JSON (Node crypto require is disallowed on this n8n host).\n// No network; no secrets; no filesystem.\nconst gates = $input.first().json || {};\nconst capture = $('Capture Request Metadata').item.json || {};\nconst body = capture.body || {};\nconst site = body.site || {};\nconst run = body.run || {};\nconst metrics = body.metrics || {};\nconst action = body.action || {};\n\nfunction canonicalize(value) {\n  if (value === null || typeof value !== 'object') return value;\n  if (Array.isArray(value)) return value.map(canonicalize);\n  const out = {};\n  for (const key of Object.keys(value).sort()) out[key] = canonicalize(value[key]);\n  return out;\n}\n\nconst fingerprintDoc = canonicalize({\n  schema_name: body.schema_name,\n  schema_version: body.schema_version,\n  event_type: body.event_type,\n  site_id: site.site_id,\n  domain: site.domain,\n  normalized_status: run.normalized_status,\n  summary_code: run.summary_code,\n  source_status: run.source_status,\n  action_code: action.code,\n  action_required: action.required,\n  metrics: {\n    baseline_count: metrics.baseline_count,\n    current_count: metrics.current_count,\n    added_urls: metrics.added_urls,\n    removed_urls: metrics.removed_urls,\n    onboarding_needed_count: metrics.onboarding_needed_count,\n  },\n});\n\nconst event_fingerprint = JSON.stringify(fingerprintDoc);\nconst now = new Date().toISOString();\n\nreturn [{\n  json: {\n    http_status: gates.http_status,\n    response: gates.response,\n    evidence: gates.evidence || {},\n    received_at: gates.received_at || capture.received_at || null,\n    event_id: String(body.event_id || ''),\n    event_fingerprint,\n    site_id: String(site.site_id || ''),\n    schema_name: String(body.schema_name || ''),\n    schema_version: String(body.schema_version || ''),\n    event_type: String(body.event_type || ''),\n    event_status: String(run.normalized_status || ''),\n    first_seen_at: now,\n    last_seen_at: now,\n    intake_state: 'FIRST_SEEN',\n    delivery_state: 'PENDING',\n    duplicate_count: 0,\n    conflict_count: 0,\n    redaction_version: 'd1-v1',\n    sandbox_marker: 'mars-client-ops-dedupe-sandbox-d1',\n  }\n}];"
+      },
+      "id": "82d6d43e-2ab9-4ffe-a496-baac79b4a4b0",
+      "name": "Prepare Dedupe Context",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        960,
+        60
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "row",
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "H6VYhwz7RXZCBMmu"
+        },
+        "matchType": "allConditions",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "event_id",
+              "condition": "eq",
+              "keyValue": "={{ $('Prepare Dedupe Context').item.json.event_id }}"
+            }
+          ]
+        },
+        "returnAll": false,
+        "limit": 1,
+        "orderBy": false
+      },
+      "id": "bd7f8bf8-7090-4e2c-8a8d-de91622b71e5",
+      "name": "Dedupe Lookup",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        1200,
+        60
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Dedupe Classify — Phase 1B-D1\n// Reads durable lookup row (if any) vs prepared fingerprint context.\nconst ctx = $('Prepare Dedupe Context').item.json || {};\nconst row = $input.first().json || {};\nconst hasRow = Boolean(row && row.event_id);\nconst eventId = String(ctx.event_id || '');\nconst fp = String(ctx.event_fingerprint || '');\n\nlet classification = 'FIRST_SEEN';\nif (hasRow) {\n  const storedFp = String(row.event_fingerprint || '');\n  if (storedFp && storedFp === fp) classification = 'DUPLICATE';\n  else classification = 'EVENT_ID_CONFLICT';\n}\n\nlet http_status = 202;\nlet response;\nlet evidence;\n\nif (classification === 'FIRST_SEEN') {\n  http_status = 202;\n  response = {\n    ok: true,\n    result: 'ACCEPTED',\n    event_id: eventId,\n    dedupe: 'FIRST_SEEN',\n  };\n  evidence = {\n    gate: 'dedupe',\n    code: 'FIRST_SEEN',\n    event_id: eventId,\n  };\n} else if (classification === 'DUPLICATE') {\n  http_status = 200;\n  response = {\n    ok: true,\n    result: 'DUPLICATE_SUPPRESSED',\n    event_id: eventId,\n    dedupe: 'DUPLICATE',\n  };\n  evidence = {\n    gate: 'dedupe',\n    code: 'DUPLICATE',\n    event_id: eventId,\n  };\n} else {\n  http_status = 409;\n  response = {\n    ok: false,\n    result: 'EVENT_ID_CONFLICT',\n    code: 'EVENT_ID_CONFLICT',\n    event_id: eventId,\n  };\n  evidence = {\n    gate: 'dedupe',\n    code: 'EVENT_ID_CONFLICT',\n    event_id: eventId,\n  };\n}\n\nreturn [{\n  json: {\n    ...ctx,\n    lookup_has_row: hasRow,\n    stored_fingerprint: hasRow ? String(row.event_fingerprint || '') : null,\n    stored_intake_state: hasRow ? String(row.intake_state || '') : null,\n    stored_delivery_state: hasRow ? String(row.delivery_state || '') : null,\n    stored_duplicate_count: hasRow ? Number(row.duplicate_count || 0) : 0,\n    stored_conflict_count: hasRow ? Number(row.conflict_count || 0) : 0,\n    dedupe_classification: classification,\n    branch_first_seen: classification === 'FIRST_SEEN',\n    branch_conflict: classification === 'EVENT_ID_CONFLICT',\n    http_status,\n    response,\n    evidence,\n  }\n}];"
+      },
+      "id": "f99ffd18-e34e-4fc6-bca3-6b653a47c9cd",
+      "name": "Dedupe Classify",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1440,
+        60
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "f7dc5bf1-f49e-4218-b7f7-b487edf903a5",
+              "leftValue": "={{ String($json.branch_first_seen) }}",
+              "rightValue": "true",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "ed78e327-bf9d-4169-80bc-90c9e1320550",
+      "name": "IF Dedupe First Seen",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        1680,
+        60
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "row",
+        "operation": "insert",
+        "dataTableId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "H6VYhwz7RXZCBMmu"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "event_id": "={{ $json.event_id }}",
+            "event_fingerprint": "={{ $json.event_fingerprint }}",
+            "site_id": "={{ $json.site_id }}",
+            "schema_name": "={{ $json.schema_name }}",
+            "schema_version": "={{ $json.schema_version }}",
+            "event_type": "={{ $json.event_type }}",
+            "event_status": "={{ $json.event_status }}",
+            "intake_state": "FIRST_SEEN",
+            "delivery_state": "PENDING",
+            "first_seen_at": "={{ $json.first_seen_at }}",
+            "last_seen_at": "={{ $json.last_seen_at }}",
+            "duplicate_count": 0,
+            "conflict_count": 0,
+            "redaction_version": "={{ $json.redaction_version }}",
+            "sandbox_marker": "={{ $json.sandbox_marker }}"
+          },
+          "schema": [
+            {
+              "id": "event_id",
+              "displayName": "event_id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "event_fingerprint",
+              "displayName": "event_fingerprint",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "site_id",
+              "displayName": "site_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "schema_name",
+              "displayName": "schema_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "schema_version",
+              "displayName": "schema_version",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "event_type",
+              "displayName": "event_type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "event_status",
+              "displayName": "event_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "intake_state",
+              "displayName": "intake_state",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "delivery_state",
+              "displayName": "delivery_state",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "first_seen_at",
+              "displayName": "first_seen_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "last_seen_at",
+              "displayName": "last_seen_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "duplicate_count",
+              "displayName": "duplicate_count",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "conflict_count",
+              "displayName": "conflict_count",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "redaction_version",
+              "displayName": "redaction_version",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "sandbox_marker",
+              "displayName": "sandbox_marker",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f1985d54-85c4-46aa-a315-f14ad1d90e54",
+      "name": "Dedupe Claim Insert",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        1920,
+        -40
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Prepare Non-First-Seen Response — DUPLICATE or EVENT_ID_CONFLICT\nconst j = $input.first().json || {};\nreturn [{\n  json: {\n    http_status: j.http_status,\n    response: j.response,\n    evidence: j.evidence || {},\n    received_at: j.received_at || null,\n    dedupe_classification: j.dedupe_classification || null,\n  }\n}];"
+      },
+      "id": "885b9c0f-a9e1-4625-98e2-8d46bb366d23",
+      "name": "Prepare Non-First-Seen Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1920,
+        160
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json.response }}",
+        "options": {
+          "responseCode": "={{ $json.http_status }}"
+        }
+      },
+      "id": "4629093b-142e-433c-9326-3b9708354da9",
+      "name": "Respond Non-First-Seen",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        2160,
+        160
+      ]
+    }
+  ],
+  "connections": {
+    "Webhook Intake": {
+      "main": [
+        [
+          {
+            "node": "Capture Request Metadata",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Capture Request Metadata": {
+      "main": [
+        [
+          {
+            "node": "Process Client Ops Gates",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Process Client Ops Gates": {
+      "main": [
+        [
+          {
+            "node": "IF Accepted Branch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Accepted Branch": {
+      "main": [
+        [
+          {
+            "node": "Prepare Dedupe Context",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Prepare Rejected Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Accepted Response": {
+      "main": [
+        [
+          {
+            "node": "Respond Accepted",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Rejected Response": {
+      "main": [
+        [
+          {
+            "node": "Respond Rejected",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Respond Accepted": {
+      "main": [
+        [
+          {
+            "node": "Telegram Notify Accepted",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Dedupe Context": {
+      "main": [
+        [
+          {
+            "node": "Dedupe Lookup",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dedupe Lookup": {
+      "main": [
+        [
+          {
+            "node": "Dedupe Classify",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dedupe Classify": {
+      "main": [
+        [
+          {
+            "node": "IF Dedupe First Seen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Dedupe First Seen": {
+      "main": [
+        [
+          {
+            "node": "Dedupe Claim Insert",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Prepare Non-First-Seen Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dedupe Claim Insert": {
+      "main": [
+        [
+          {
+            "node": "Prepare Accepted Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Non-First-Seen Response": {
+      "main": [
+        [
+          {
+            "node": "Respond Non-First-Seen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
+  }
+}

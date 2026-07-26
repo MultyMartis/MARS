@@ -1,0 +1,26 @@
+{
+  "phase": "1B-D6A",
+  "title": "Durable Post-Telegram Delivery Ledger Design and Offline Implementation",
+  "live_apply_authorized": false,
+  "workstreams_in_scope": ["A"],
+  "workstreams_out_of_scope": ["B", "C", "E", "D"],
+  "allowed_mutations": [
+    "projects/client-ops-reporting-bridge/ source and evidence only"
+  ],
+  "forbidden": [
+    "n8n production workflow PUT",
+    "n8n activation",
+    "Data Table mutation",
+    "Telegram send",
+    "producer POST",
+    "webhook call",
+    "monitor/scheduler execution",
+    "git commit/push",
+    "MAIN index mutation"
+  ],
+  "baseline_commit": "e9c9be59f643e66970930e31339431acb8077b55",
+  "runtime_commit": "8bb6e8f0f56388c12fdb013cf4cc1b27eb84331c",
+  "workflow_id": "tkM4H0G0gM3q9Foi",
+  "datatable_id": "H6VYhwz7RXZCBMmu",
+  "historical_event_id": "c84e29bf-79b1-5aea-98c4-9dc8d651fc96"
+}

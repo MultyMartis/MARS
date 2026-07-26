@@ -1,0 +1,44 @@
+# Phase 1B-D6A2 — Evidence Pack
+
+**Phase:** Controlled Durable Delivery Ledger Production Apply and Synthetic Verification
+**Workflow:** `tkM4H0G0gM3q9Foi` (MARS Client Ops Bridge — bzpm.ru)
+**Data Table:** `H6VYhwz7RXZCBMmu`
+**Scope:** Workstream A only (durable delivery ledger)
+
+## Verdict
+
+**COMPLETE — DURABLE DELIVERY LEDGER DEPLOYED TO CLIENT OPS AND SYNTHETIC PENDING→SENT VERIFIED; PRODUCTION REMAINS CONTAINED**
+
+**Readiness:** `READY_FOR_D6A2_EVIDENCE_BASELINE_COMMIT`
+
+## Key tokens
+
+| Token | Result |
+|-------|--------|
+| D6A2_ACCEPTED_D6A_SOURCE_REVALIDATED | PASS (harness 11/11, validator 48/48) |
+| D6A2_LIVE_BASELINE_RECONFIRMED | PASS (pre-apply) |
+| D6A2_RUNTIME_BASELINE_RECONFIRMED | PASS |
+| D6A2_NO_SCHEMA_MIGRATION_REQUIRED | PASS (15 columns) |
+| D6A2_MINIMAL_PRODUCTION_DELTA_DEFINED | PASS |
+| D6A2_WORKFLOW_DELTA_SCOPE_CLEAN | PASS |
+| D6A2_ROLLBACK_SNAPSHOT_READY | PASS |
+| D6A2_SECURITY_GATE_PASS | PASS |
+| D6A2_PRODUCTION_WORKFLOW_LEDGER_APPLIED | PASS (17→20 nodes) |
+| D6A2_DEPLOYED_LEDGER_STATIC_VALIDATION_PASS | PASS |
+| D6A2_SYNTHETIC_SAFE_TARGET_AVAILABLE | PASS (C0/C1 private sandbox chat) |
+| D6A2_SYNTHETIC_SENT_VERIFIED | PASS |
+| D6A2_FAILED_PRODUCTION_VERIFICATION_DEFERRED_FOR_SAFETY | recorded |
+| D6A2_DUPLICATE_SUPPRESSION_PRESERVED | PASS (replay telegram_runs=0) |
+| D6A2_WORKFLOW_RECONTAINED | PASS (`active=false`) |
+| D6A2_HISTORICAL_ROW_RECONCILIATION_DEFERRED | recorded |
+| MAIN_INDEX_UNTOUCHED_BY_D6A2 | PASS |
+
+## Production readiness (unchanged)
+
+- `CLIENT_OPS_UNATTENDED_PRODUCTION_READY=NO`
+- `CLIENT_OPS_AUTOMATIC_SITE002_CONNECTION_AUTHORIZED=NO`
+- D6B / D6C / D6E / D6D = NOT STARTED
+
+## Secrets
+
+No raw Telegram tokens, webhook secrets, API keys, or raw Telegram responses are stored in this pack.

@@ -1,0 +1,13 @@
+{
+  "phase": "1B-D6A2",
+  "token": "D6A2_SECURITY_GATE_PASS",
+  "checks": {
+    "no_telegram_token_in_delta": true,
+    "no_webhook_secret_in_delta": true,
+    "no_api_key_in_delta": true,
+    "finalize_writes_delivery_state_only": true,
+    "credentials_unchanged": true,
+    "chat_binding_unchanged": true,
+    "historical_row_not_in_apply": true
+  }
+}
