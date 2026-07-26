@@ -178,7 +178,7 @@ Covers: DB-08 schema; storage path; HTML generate; idempotency; file checksum; a
 | push | **no** |
 | fetch | **no** |
 | pull | **no** |
-| checkout / update-ref | worktree add `--detach` at `7c3dbf1c`; FF `update-ref` `mars/canonical-post-recovery` → `ca1fe129`; scoped `git checkout HEAD --` allowlisted i-SEO docs on main |
+| checkout / update-ref | worktree add `--detach` at `7c3dbf1c`; FF `update-ref` `mars/canonical-post-recovery` → `c6c33f84`; scoped `git checkout HEAD --` allowlisted i-SEO docs on main |
 | reset | **no** |
 | restore | **scoped only** on main — allowlisted i-SEO docs aligned to HEAD after update-ref; foreign staged untouched |
 | clean | **no** |
