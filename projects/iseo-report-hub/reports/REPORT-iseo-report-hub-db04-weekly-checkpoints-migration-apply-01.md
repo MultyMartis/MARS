@@ -156,8 +156,8 @@ Inserted in transaction for reporting period `2026-07` (id **1**). Count after i
 | Staged list | migration SQL; apply result; closeout report; OPERATIONAL-INDEX |
 | Commit message | `feat(iseo-report-hub): add weekly checkpoints migration` |
 | Commit hash | `f7a26aa354635c90c6f6e040583c241c7800a7dd` |
-| Hash-record follow-up | `PENDING_HASH_RECORD_COMMIT_HASH` — `docs(iseo-report-hub): record weekly checkpoints migration commit hash` |
-| HEAD verification | primary commit `f7a26aa3` contains exact allowlisted paths |
+| Hash-record follow-up | `228965d73f918abd0b4013481b96d743c88fd602` — `docs(iseo-report-hub): record weekly checkpoints migration commit hash` |
+| HEAD verification | primary `f7a26aa3`; hash-record `228965d7`; allowlisted paths only |
 | Push | **no** |
 
 ---
