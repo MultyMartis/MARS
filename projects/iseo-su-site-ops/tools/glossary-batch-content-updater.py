@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Glossary draft content updater (Batch 01 refine + Batch 02/03 load).
+"""Glossary draft content updater (Batch 01 refine + Batch 02/03/04 load).
 
 Safety:
 - CPT glossary only; exact matched draft IDs; dry-run default; force status=draft;
@@ -224,7 +224,9 @@ def load_batch_items(batch: str) -> list[dict]:
         return json.loads((ROOT / "_glossary-scratch/batch-02-content.json").read_text(encoding="utf-8"))
     if batch == "03":
         return json.loads((ROOT / "_glossary-scratch/batch-03-content.json").read_text(encoding="utf-8"))
-    raise SystemExit("batch must be 01, 02, or 03")
+    if batch == "04":
+        return json.loads((ROOT / "_glossary-scratch/batch-04-content.json").read_text(encoding="utf-8"))
+    raise SystemExit("batch must be 01, 02, 03, or 04")
 
 
 def load_corpus_map() -> dict[str, dict]:
@@ -238,6 +240,7 @@ def patch_csv(batch: str, mapping: dict[str, dict]) -> None:
         "01": "ISEO-SU-GLOSSARY-BATCH-01-CONTENT-v1.csv",
         "02": "ISEO-SU-GLOSSARY-BATCH-02-CONTENT-v1.csv",
         "03": "ISEO-SU-GLOSSARY-BATCH-03-CONTENT-v1.csv",
+        "04": "ISEO-SU-GLOSSARY-BATCH-04-CONTENT-v1.csv",
     }
     csv_path = ROOT / "data/glossary-editorial" / names[batch]
     if not csv_path.exists():
@@ -258,7 +261,7 @@ def patch_csv(batch: str, mapping: dict[str, dict]) -> None:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--batch", choices=["01", "02", "03", "both"], required=True)
+    ap.add_argument("--batch", choices=["01", "02", "03", "04", "both"], required=True)
     ap.add_argument("--mode", choices=["snapshot", "dry-run", "apply"], default="dry-run")
     ap.add_argument("--only-source", action="append", default=[], help="Limit to exact source_term values")
     ap.add_argument("--skip-acf", action="store_true")
@@ -274,7 +277,12 @@ def main() -> int:
             items = [x for x in items if x["source_term"] in set(args.only_source)]
         items_by_batch[b] = items
 
-    scratch_name = "batch03-wp" if args.batch == "03" else "batch02-wp"
+    if args.batch == "04":
+        scratch_name = "batch04-wp"
+    elif args.batch == "03":
+        scratch_name = "batch03-wp"
+    else:
+        scratch_name = "batch02-wp"
     scratch = ROOT / "_glossary-scratch" / scratch_name
     scratch.mkdir(parents=True, exist_ok=True)
     utc = datetime.now(timezone.utc).isoformat()
@@ -403,12 +411,24 @@ def main() -> int:
         if args.mode == "snapshot" or args.mode == "apply":
             if backup_dir is None:
                 ts = datetime.now().strftime("%Y%m%d-%H%M%S")
-                if args.batch == "03":
+                if args.batch == "04":
+                    backup_dir = STORAGE_BACKUP_ROOT / f"glossary-batch04-final-content-{ts}"
+                elif args.batch == "03":
                     backup_dir = STORAGE_BACKUP_ROOT / f"glossary-batch03-{ts}"
                 else:
                     backup_dir = STORAGE_BACKUP_ROOT / f"glossary-batch01-refine-batch02-{ts}"
             backup_dir.mkdir(parents=True, exist_ok=True)
             snap_path = backup_dir / "scoped-glossary-prewrite-snapshot.json"
+            # Refuse silent overwrite of a larger prior snapshot in the same directory.
+            if snap_path.exists() and args.mode == "apply":
+                try:
+                    prior = json.loads(snap_path.read_text(encoding="utf-8"))
+                    prior_n = int(prior.get("target_count") or len(prior.get("items") or []))
+                    if prior_n > len(all_snapshot_items):
+                        alt = backup_dir / f"scoped-glossary-prewrite-snapshot-partial-{datetime.now().strftime('%H%M%S')}.json"
+                        snap_path = alt
+                except Exception:
+                    pass
             meta = {
                 "utc": utc,
                 "method": "authenticated_wp_rest_plus_admin_acf_yoast_fields",
@@ -418,6 +438,7 @@ def main() -> int:
                 "batch01_count": sum(1 for x in all_snapshot_items if x["batch"] == "01"),
                 "batch02_count": sum(1 for x in all_snapshot_items if x["batch"] == "02"),
                 "batch03_count": sum(1 for x in all_snapshot_items if x["batch"] == "03"),
+                "batch04_count": sum(1 for x in all_snapshot_items if x["batch"] == "04"),
                 "items": all_snapshot_items,
             }
             snap_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -439,11 +460,12 @@ def main() -> int:
                 "target_count": len(all_snapshot_items),
                 "post_ids": [x["post_id"] for x in all_snapshot_items],
             }
-            pointer_name = (
-                "ISEO-SU-GLOSSARY-BATCH-03-PREWRITE-SNAPSHOT-POINTER-v1.json"
-                if args.batch == "03"
-                else "ISEO-SU-GLOSSARY-BATCH-02-PREWRITE-SNAPSHOT-POINTER-v1.json"
-            )
+            if args.batch == "04":
+                pointer_name = "ISEO-SU-GLOSSARY-BATCH-04-PREWRITE-SNAPSHOT-POINTER-v1.json"
+            elif args.batch == "03":
+                pointer_name = "ISEO-SU-GLOSSARY-BATCH-03-PREWRITE-SNAPSHOT-POINTER-v1.json"
+            else:
+                pointer_name = "ISEO-SU-GLOSSARY-BATCH-02-PREWRITE-SNAPSHOT-POINTER-v1.json"
             (ROOT / "data/glossary-editorial" / pointer_name).write_text(
                 json.dumps(pointer, ensure_ascii=False, indent=2), encoding="utf-8"
             )
@@ -481,9 +503,13 @@ def main() -> int:
                 base["target_in_range"] = 42 <= target <= 48
             elif b == "03":
                 base["target_in_range"] = 50 <= target <= 60
-                # refuse duplicate target IDs within plan
                 ids = [x["post_id"] for x in plan]
                 base["no_duplicate_target_ids"] = len(ids) == len(set(ids))
+            elif b == "04":
+                # Final content batch: no minimum size; refuse duplicates and empty plan
+                ids = [x["post_id"] for x in plan]
+                base["no_duplicate_target_ids"] = len(ids) == len(set(ids))
+                base["non_empty_target"] = target > 0
             gates[b] = base
         receipt["gates"] = gates
         all_gates_ok = all(all(v.values()) for v in gates.values())

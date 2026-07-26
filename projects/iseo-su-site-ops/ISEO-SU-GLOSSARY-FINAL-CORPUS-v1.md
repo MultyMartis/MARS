@@ -13,17 +13,23 @@
 
 Final operational disposition assigned for **all 241** source terms.
 
+**Batch 04 final content completion (2026-07-26)** re-evaluated the remaining publication-pool candidates and updated dispositions where needed. Counts below are **current**.
+
 | Disposition | Count |
 |-------------|------:|
-| APPROVED | 146 |
-| APPROVED_RENAME | 48 |
-| MERGED | 26 |
-| DEFERRED | 8 |
+| APPROVED | 137 |
+| APPROVED_RENAME | 47 |
+| MERGED | 30 |
+| DEFERRED | 14 |
 | EXCLUDED | 13 |
 | **Total** | **241** |
 
-**Publication pool (APPROVED + APPROVED_RENAME):** 194  
-**Batch 01 candidates marked:** 30
+**Publication pool (APPROVED + APPROVED_RENAME):** 184  
+**Populated production-quality drafts:** 184 (Batches 01–04)  
+**Publication-eligible:** 184 — see `ISEO-SU-GLOSSARY-PUBLICATION-ELIGIBILITY-v1.md`  
+**Published:** 0  
+
+Historical note: initial final-corpus cut was APPROVED 146 / APPROVED_RENAME 48 / MERGED 26 / DEFERRED 8 / EXCLUDED 13 (publication pool 194). Batch 04 moved 4→MERGED and 6→DEFERRED rather than padding weak articles.
 
 ---
 
@@ -66,7 +72,7 @@ Policy applied:
 
 ## 5. Approved Terms
 
-Count: **146**
+Count: **137** (after Batch 04 disposition cleanup; see CSV for authoritative list)
 
 - `АГС` → **АГС** (search engines and indexing, MEDIUM)
 - `Алгоритм ранжирования` → **Алгоритм ранжирования** (search engines and indexing, MEDIUM)
@@ -219,7 +225,7 @@ Count: **146**
 
 ## 6. Approved Renames
 
-Count: **48**
+Count: **47** (after Batch 04: `ВЧ / СЧ / НЧ запросы` moved to MERGED → Частотность запроса)
 
 - `Акцептор` → **Акцептор ссылки** (`акцептор-ссылки`)
 - `Анкор (анкорный текст)` → **Анкорный текст** (`анкорный-текст`)
@@ -274,7 +280,7 @@ Count: **48**
 
 ## 7. Merged Terms
 
-Count: **26**
+Count: **30**
 
 - `Алгоритмы поисковых систем` → **Алгоритм ранжирования**
 - `Гостевой постинг` → **Аутрич**
@@ -302,21 +308,31 @@ Count: **26**
 - `LCP` → **Core Web Vitals**
 - `SSL` → **HTTPS**
 - `Юзабилити` → **UX и UI**
+- `ВЧ / СЧ / НЧ запросы` → **Частотность запроса** *(Batch 04)*
+- `Морда` → **Главная страница сайта** *(Batch 04)*
+- `УВ` → **Уникальный посетитель** *(Batch 04)*
+- `Процент вхождений` → **Плотность ключевых слов** *(Batch 04)*
 
 ---
 
 ## 8. Deferred Terms
 
-Count: **8**
+Count: **14**
 
 - `Контент` — Very broad; KEEP only if short foundational definition wanted. | Too broad foundational term; defer separate article unless short fundamentals layer authorized.
 - `Скрипт` — Too vague — may EXCLUDE. | Too vague for glossary concept.
 - `Ссылка` — Very broad foundational term — KEEP short or EXCLUDE in favor of specific link terms. | Too broad; covered by specific link terms.
-- `Human-First Content` — Marketing/SEO framing term — align with Google helpful content guidance; avoid slogan tone. | Positioning slogan vs helpful-content guidance; defer until wordin
+- `Human-First Content` — Marketing/SEO framing term — align with Google helpful content guidance; avoid slogan tone. | Positioning slogan vs helpful-content guidance; defer until wording approved.
 - `MFA` — Made-for-Advertising sites — confirm acronym usage for RU audience. | Made-for-Advertising acronym — confirm RU audience usefulness.
 - `Sandbox` — Often mythical/overstated; expert decide KEEP with myth-busting or EXCLUDE. | Often mythical/overstated; defer until myth-busting framing approved.
 - `Spam Score` — Moz proprietary metric — disclose or EXCLUDE. | Moz proprietary metric; defer pending vendor-disclosure decision.
 - `URL-адрес` — Very basic; KEEP short or EXCLUDE. | Too basic relative to glossary scope.
+- `СНСС (ранее НПС)` — *(Batch 04)* historical Yandex anti-paid-link framing; naming/status unstable.
+- `СПЕКТР` — *(Batch 04)* diversity-of-SERP framing; primary docs insufficient.
+- `ПРЕСЕО` — *(Batch 04)* agency process jargon.
+- `Отдел антиспама` — *(Batch 04)* organizational metaphor, not glossary concept.
+- `Пост-фильтры` — *(Batch 04)* unstable jargon vs filter/algorithm.
+- `CatBoost` — *(Batch 04)* ML library; ranking role opaque.
 
 ---
 

@@ -95,6 +95,22 @@ Status vocabulary: **COMPLETE** · **CREATED** · **PLANNED** · **CONDITIONAL**
 | Glossary content updater | `tools/glossary-batch-content-updater.py` | UPDATED (batch 03) |
 | Batch 03 REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-BATCH-03.md` | COMPLETE |
 
+### Glossary Batch 04 final content completion (2026-07-26)
+
+| Artifact | Path | Status |
+|----------|------|--------|
+| Batch 04 manifest | `ISEO-SU-GLOSSARY-BATCH-04-MANIFEST-v1.md` | CREATED |
+| Batch 04 DB backup evidence | `ISEO-SU-GLOSSARY-BATCH-04-DB-BACKUP-AND-ROLLBACK-v1.md` | CREATED |
+| Batch 04 content CSV | `data/glossary-editorial/ISEO-SU-GLOSSARY-BATCH-04-CONTENT-v1.csv` | CREATED |
+| Batch 04 Markdown sources | `content/glossary/batch-04/` | CREATED |
+| Snapshot pointer | `data/glossary-editorial/ISEO-SU-GLOSSARY-BATCH-04-PREWRITE-SNAPSHOT-POINTER-v1.json` | CREATED |
+| Publication eligibility CSV | `data/glossary-editorial/ISEO-SU-GLOSSARY-PUBLICATION-ELIGIBILITY-v1.csv` | CREATED |
+| Publication eligibility MD | `ISEO-SU-GLOSSARY-PUBLICATION-ELIGIBILITY-v1.md` | CREATED |
+| Final corpus CSV/MD | `ISEO-SU-GLOSSARY-FINAL-CORPUS-v1.*` | UPDATED (Batch 04 dispositions) |
+| Research register | `ISEO-SU-GLOSSARY-RESEARCH-REGISTER-v1.md` | UPDATED |
+| Glossary content updater | `tools/glossary-batch-content-updater.py` | UPDATED (batch 04) |
+| Batch 04 REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-BATCH-04-FINAL-CONTENT-COMPLETION.md` | COMPLETE |
+
 ### Glossary archive layout fix (2026-07-24)
 
 | Artifact | Path | Status |

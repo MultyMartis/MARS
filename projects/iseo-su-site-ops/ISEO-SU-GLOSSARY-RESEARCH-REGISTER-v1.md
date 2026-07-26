@@ -1,9 +1,9 @@
 # ISEO-SU GLOSSARY RESEARCH REGISTER v1
 
 **Programme:** ISEO-SU-SITE-OPS  
-**Tasks:** FINAL-CORPUS-AND-BATCH-01-CONTENT; BATCH-01-REFINEMENT-AND-BATCH-02; GLOSSARY-BATCH-03  
-**Dates:** 2026-07-25; Batch 03 2026-07-26  
-**Scope:** Batch 01 + Batch 02 + Batch 03 fact-sensitive terms  
+**Tasks:** FINAL-CORPUS-AND-BATCH-01-CONTENT; BATCH-01-REFINEMENT-AND-BATCH-02; GLOSSARY-BATCH-03; GLOSSARY-BATCH-04-FINAL-CONTENT-COMPLETION  
+**Dates:** 2026-07-25; Batch 03–04 2026-07-26  
+**Scope:** Batch 01 + Batch 02 + Batch 03 + Batch 04 fact-sensitive terms  
 **Rule:** Sources verify facts; publishable copy is original. No large copyrighted passages reproduced.
 
 ---
@@ -102,22 +102,43 @@
 
 ---
 
-## 6. Deliberately unused as primary evidence
+## 6. Term-level research notes (Batch 04)
 
-- Low-quality SEO listicles claiming secret ranking factors.
-- Invented percentage lifts or “guaranteed top-10” claims.
-- Third-party DA/DR as if official Google/Yandex scores (**still deferred**; excluded from Batch 03).
+| Canonical term | Source authority | What was verified | Review date | Wording implication | Uncertainty |
+|----------------|------------------|-------------------|-------------|---------------------|-------------|
+| Domain Authority | Moz product docs (role-level) | Proprietary Moz metric; not Google/Yandex official score | 2026-07-26 | Mandatory vendor disclosure | Formula proprietary |
+| Domain Rating | Ahrefs product docs (role-level) | Proprietary Ahrefs metric; not official engine score | 2026-07-26 | Mandatory vendor disclosure | Formula proprietary |
+| PageRank | Historical Google / academic PageRank framing | Historical importance; Toolbar PR retired; concept ≠ public score | 2026-07-26 | Historical + conceptual | Current internal use opaque |
+| AMP | Google AMP historical docs / web platform | Accelerated Mobile Pages; strategic centrality reduced vs early years | 2026-07-26 | Historical/technical; no magic ranking claim | Feature landscape changes |
+| BERT | Google Search public ML/BERT framing | Improves understanding of query/document language; not a webmaster toggle | 2026-07-26 | COMPLEX; no weights | Architecture opacity |
+| BM25 | Classical IR literature | Okapi BM25 ranking function; not secret modern Google formula | 2026-07-26 | Methodological caution | — |
+| Neural Matching | Google public neural matching framing | Helps match query meaning to documents beyond exact terms | 2026-07-26 | COMPLEX; not Yandex | Weights unpublished |
+| MatrixNet | Historical Yandex ML ranking framing | Historical Yandex ML ranking technology name | 2026-07-26 | Historical; no weights | Current naming/integration |
+| АГС | Historical Yandex anti-doorway industry framing | Treat as historical; do not claim current active status | 2026-07-26 | Historical caution | Current status unknown |
+| тИЦ | Historical Yandex TIC | Abolished historical citation index | 2026-07-26 | Explicitly historical | — |
+| PBN | Industry + spam-policy framing | Private blog networks as manipulative link schemes | 2026-07-26 | Educational risk framing | — |
+| Spam Update | Google spam updates / spam policies framing | Spam-focused Google updates; not exhaustive date list as fact | 2026-07-26 | Policy-oriented | Naming of specific waves |
+| Google AdSense | Google AdSense product role | Ad serving/monetization product; not Ads campaign manager twin | 2026-07-26 | Product role clarity | Policy/UI changes |
+| Remaining Batch 04 terms | Editorial / methodological | Audience-fit accuracy | 2026-07-26 | Depth as assigned | |
 
 ---
 
-## 7. Next research actions (non-blocking)
+## 7. Deliberately unused as primary evidence
+
+- Low-quality SEO listicles claiming secret ranking factors.
+- Invented percentage lifts or “guaranteed top-10” claims.
+- Treating DA/DR/PageRank as official Google/Yandex scores (vendor disclosure required; articles written carefully in Batch 04).
+
+---
+
+## 8. Next research actions (non-blocking)
 
 1. Before publication polish: re-check Yandex Metrica current definition of «отказ».
 2. Before GEO publication: confirm operator comfort with provisional industry framing.
 3. Re-check CWV / mobile-first docs if Google changes framing again.
-4. Before publishing Поведенческие факторы / RankBrain: expert/operator comfort with COMPLEX provisional framing.
-5. Before any DA/DR/PageRank articles: decide third-party metric framing charter.
+4. Before publishing Поведенческие факторы / RankBrain / Neural Matching / BERT: expert/operator comfort with COMPLEX provisional framing.
+5. Before publishing DA/DR/PageRank: confirm vendor-disclosure wording still acceptable.
 
 ---
 
-*ISEO-SU Glossary Research Register v1 · updated Batch 03 2026-07-26 · editorial only.*
+*ISEO-SU Glossary Research Register v1 · updated Batch 04 2026-07-26 · editorial only.*

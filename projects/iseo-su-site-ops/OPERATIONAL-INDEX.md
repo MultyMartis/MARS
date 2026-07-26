@@ -24,15 +24,15 @@
 
 | Field | Value |
 |-------|-------|
-| **Lifecycle** | **GLOSSARY BATCH 03 DRAFTS LOADED** |
-| **Project status** | Glossary CPT/templates deployed; 241 drafts; final corpus decided; Batches 01–03 definitions loaded as drafts (**130** populated); public exposure HOLD; WPilot bridge/writes/REST still gated |
+| **Lifecycle** | **GLOSSARY SAFE CONTENT CORPUS COMPLETE / PUBLICATION NOT STARTED** |
+| **Project status** | Glossary CPT/templates deployed; 241 drafts; Batches 01–04 definitions loaded (**184** populated / publication-eligible); MERGED 30 / DEFERRED 14 / EXCLUDED 13; public exposure HOLD; WPilot bridge/writes/REST still gated |
 | **Architecture knowledge** | **COMPLETE** — knowledge base + route matrix + task routing guide |
-| **Glossary** | Foundation + draft intake + source canonicalization + editorial audit/pilot + archive layout fix + final corpus + Batches 01–03 draft content — remaining definitions empty; public exposure closed |
+| **Glossary** | Foundation + draft intake + source canonicalization + editorial audit/pilot + archive layout fix + final corpus + Batches 01–04 draft content — **safe content corpus complete with deferred edge cases**; public exposure closed |
 | **Current phase (WPilot)** | **PHASE 6D — BLOCKED** (bridge/smoke awaiting exact approval + backup lines) — **not required** for ordinary site content/file tasks |
 | **Accepted WPilot baseline** | **PHASE 6C — TOKEN CREATED / RC6 SAFE DEFAULTS** |
 | **Access files** | **LOCAL-ONLY FILLED / VALIDATED** (Git-ignored) |
 | **WPilot** | **ACTIVE** RC6; bridge **DISABLED**; writes **DISABLED**; token **LOCAL-ONLY**; REST **NOT RUN** |
-| **Next operator action (site work)** | Visual/content review of Batch 03 drafts → authorize Batch 04 and/or publication gate later |
+| **Next operator action (site work)** | Future **publication phase** charter only (eligibility CSV is authority; do not auto-publish) |
 | **Next operator action (WPilot 6D)** | Exact lines `APPROVE ISEO-SU WPILOT BRIDGE AND READ-ONLY SMOKE 6D` + `CONFIRM ISEO-SU FRESH BEGET BACKUP FOR WPILOT 6D` |
 
 Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **absent**. Architecture: **hybrid** — see knowledge base.
@@ -108,7 +108,7 @@ Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **ab
 
 ## Next authorized task
 
-**Glossary:** operator visual/content review of Batch 03 (and prior) drafts; then Batch 04 content charter and/or publication gate (`ISEO_GLOSSARY_PUBLIC_EXPOSURE`) later. Do not publish without explicit gate. Incomplete drafts (e.g. empty «Лид») must remain non-public.
+**Glossary:** safe content corpus complete (**184** publication-eligible drafts). Next is a **separate publication phase** using `ISEO-SU-GLOSSARY-PUBLICATION-ELIGIBILITY-v1` — do not publish without explicit gate. Non-eligible drafts (MERGED/DEFERRED/EXCLUDED) stay non-public.
 
 **Ordinary site work:** additional concrete tasks after fresh Beget backup; MARS follows Task Routing Guide.
 
@@ -125,6 +125,8 @@ Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **ab
 | Glossary Batch 01 manifest | [ISEO-SU-GLOSSARY-BATCH-01-MANIFEST-v1.md](ISEO-SU-GLOSSARY-BATCH-01-MANIFEST-v1.md) |
 | Glossary Batch 02 manifest | [ISEO-SU-GLOSSARY-BATCH-02-MANIFEST-v1.md](ISEO-SU-GLOSSARY-BATCH-02-MANIFEST-v1.md) |
 | Glossary Batch 03 manifest | [ISEO-SU-GLOSSARY-BATCH-03-MANIFEST-v1.md](ISEO-SU-GLOSSARY-BATCH-03-MANIFEST-v1.md) |
+| Glossary Batch 04 manifest | [ISEO-SU-GLOSSARY-BATCH-04-MANIFEST-v1.md](ISEO-SU-GLOSSARY-BATCH-04-MANIFEST-v1.md) |
+| Glossary publication eligibility | [ISEO-SU-GLOSSARY-PUBLICATION-ELIGIBILITY-v1.md](ISEO-SU-GLOSSARY-PUBLICATION-ELIGIBILITY-v1.md) |
 | Glossary research register | [ISEO-SU-GLOSSARY-RESEARCH-REGISTER-v1.md](ISEO-SU-GLOSSARY-RESEARCH-REGISTER-v1.md) |
 | Glossary term audit summary | [ISEO-SU-GLOSSARY-TERM-AUDIT-v1.md](ISEO-SU-GLOSSARY-TERM-AUDIT-v1.md) |
 | Glossary term audit CSV | [data/glossary-editorial/ISEO-SU-GLOSSARY-TERM-AUDIT-v1.csv](data/glossary-editorial/ISEO-SU-GLOSSARY-TERM-AUDIT-v1.csv) |

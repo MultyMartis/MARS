@@ -2,7 +2,7 @@
 
 **Programme:** ISEO-SU-SITE-OPS
 **Task:** ISEO-SU-SITE-OPS-GLOSSARY-ARCHITECTURE-TEMPLATE-AND-CONTENT-INTAKE
-**Date:** 2026-07-25 (updated after Batch 02 drafts; Batch 03 2026-07-26)
+**Date:** 2026-07-25 (updated after Batch 02 drafts; Batch 03–04 2026-07-26)
 
 ## Source
 
@@ -99,6 +99,23 @@
 | Public exposure | **still closed** |
 | Publication | **not performed** |
 
+## Batch 04 (2026-07-26)
+
+| Field | Value |
+|-------|-------|
+| Task | ISEO-SU-SITE-OPS-GLOSSARY-BATCH-04-FINAL-CONTENT-COMPLETION |
+| Candidates reviewed | **64** (reconciled; prior report said 63) |
+| READY_FOR_CONTENT applied | **54** |
+| Newly MERGED / DEFERRED / EXCLUDED | **4 / 6 / 0** |
+| Populated drafts | **184** (30 + 45 + 55 + 54) |
+| Publication-eligible | **184** |
+| Non-eligible drafts retained | **57** (MERGED 30 + DEFERRED 14 + EXCLUDED 13) |
+| Batch 04 manifest | `ISEO-SU-GLOSSARY-BATCH-04-MANIFEST-v1.md` |
+| Eligibility register | `ISEO-SU-GLOSSARY-PUBLICATION-ELIGIBILITY-v1.md` |
+| Content sources | `content/glossary/batch-04/` |
+| Public exposure | **still closed** |
+| Publication | **not performed** |
+
 ---
 
-*Glossary term intake register v1 · updated Batch 03 2026-07-26.*
+*Glossary term intake register v1 · updated Batch 04 2026-07-26.*
