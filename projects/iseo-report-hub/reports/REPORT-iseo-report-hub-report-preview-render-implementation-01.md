@@ -113,7 +113,7 @@ no production DB; no real client data; no credentials in Git/report; no password
 | Message | `feat(iseo-report-hub): add report preview render` |
 | Staging | exact-path `git add` only |
 | Primary commit hash | `4334b4a853faa208f7334cc37925d3954d3bfd14` |
-| Hash-record follow-up | `docs(iseo-report-hub): record report preview render commit hash` (this report only) |
+| Hash-record commit | `52bd58a9929c5c8de25d4a2d0041bac3f67e4947` — `docs(iseo-report-hub): record report preview render commit hash` |
 | Push | **no** |
 
 ## 12. SAFE UNKNOWN
