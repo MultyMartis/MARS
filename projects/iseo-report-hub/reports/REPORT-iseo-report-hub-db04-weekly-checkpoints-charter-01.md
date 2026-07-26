@@ -16,7 +16,7 @@
 | Volume label | `AI WS` |
 | Branch | `mars/canonical-post-recovery` |
 | HEAD before | `f1d8a17e52fd7eb401b34cb3d044a061ebb6f5e7` |
-| HEAD after primary commit | `PENDING_PRIMARY_COMMIT_HASH` |
+| HEAD after primary commit | `71516b34c2fdeb140ed06b0e41dcd5c40cf8eae3` |
 | Staged / index (pre-write) | **Empty** |
 | i-SEO WIP clean before | **Yes** (no modified/untracked under `projects/iseo-report-hub/`) |
 | Foreign WIP | **Preserved** (not staged, not restored, not cleaned) |
@@ -132,8 +132,8 @@ Updated:
 |------|-------|
 | Exact-path git add | Yes — allowlisted docs only |
 | Commit message | `docs(iseo-report-hub): add db04 weekly checkpoints charter` |
-| Primary commit hash | `PENDING_PRIMARY_COMMIT_HASH` |
-| Hash-record follow-up | `PENDING_HASH_RECORD_COMMIT_HASH` (if needed) |
+| Primary commit hash | `71516b34c2fdeb140ed06b0e41dcd5c40cf8eae3` |
+| Hash-record follow-up | `PENDING_HASH_RECORD_COMMIT_HASH` |
 | Push | **No** |
 
 ---
