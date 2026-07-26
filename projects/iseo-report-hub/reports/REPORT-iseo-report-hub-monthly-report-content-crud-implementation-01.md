@@ -3,8 +3,8 @@
 **Date:** 2026-07-26  
 **project_id:** `iseo-report-hub`  
 **Branch:** `mars/canonical-post-recovery`  
-**Primary commit:** **BLOCKED** — foreign staged index present at commit wave  
-**Hash-record commit:** **not created**  
+**Primary commit:** `65f6412443c7236f17cbf54db3b259a59eccb288` — `feat(iseo-report-hub): add monthly report content crud`  
+**Hash-record commit:** `PENDING_HASH_RECORD` — `docs(iseo-report-hub): record monthly report content crud commit hash`  
 **Push:** no
 
 ---
@@ -17,13 +17,14 @@
 | Drive | `X:` |
 | Volume label | `AI WS` |
 | Branch | `mars/canonical-post-recovery` |
-| HEAD before | `a6802b1abd78af4128844d868227919a3b17b308` |
-| HEAD at commit attempt | `8bb6e8f0f56388c12fdb013cf4cc1b27eb84331c` (advanced by parallel foreign commits; not by this wave) |
-| Staged/index before start | empty |
-| i-SEO WIP clean before | yes |
+| HEAD before implementation | `a6802b1abd78af4128844d868227919a3b17b308` |
+| HEAD at blocked commit attempt | `8bb6e8f0f56388c12fdb013cf4cc1b27eb84331c` (foreign index STOP; later cleared by Foreign Staged Index Audit + Resolution 03) |
+| Primary commit HEAD | `65f6412443c7236f17cbf54db3b259a59eccb288` |
+| Staged/index before scoped commit | empty (after foreign index resolution) |
+| i-SEO WIP before scoped commit | present; allowlisted paths only staged |
 | Foreign WIP | preserved (not staged/restored/cleaned by this wave) |
 | Write scope | allowlisted `projects/iseo-report-hub/` app-source + docs; allowlist runtime sync |
-| Commit wave | **STOP** — non-empty index from unrelated projects; index not modified |
+| Commit wave | **PASS** — exact-path stage + primary commit; no push |
 
 ---
 
@@ -143,7 +144,7 @@ Authenticated HTTP smoke used **session injection** (`ISEO_ADMIN_PASSWORD` unset
 - no WordPress; no Composer/npm; no vhost/hosts/service restart
 - no demo/registry changes
 - no push/fetch/pull/reset/clean/stash; no broad git add
-- **no index mutation of foreign staged paths**
+- **no foreign WIP staged/restored/cleaned** — scoped exact-path add of i-SEO allowlist only
 
 ---
 
@@ -159,17 +160,16 @@ Authenticated HTTP smoke used **session injection** (`ISEO_ADMIN_PASSWORD` unset
 
 | Item | Value |
 |------|-------|
-| Exact-path git add | **not executed** — blocked by non-empty foreign index |
-| Staged list (blocker) | foreign `client-ops-reporting-bridge/**` + `ocpilot/sites/site-002/tools/site-002-prod-post-1c-catalog-onboarding-monitor-02.py` |
-| Primary message | intended: `feat(iseo-report-hub): add monthly report content crud` |
-| Primary hash | **none** — commit not created |
-| Hash-record | **none** |
-| HEAD | remains `8bb6e8f0f56388c12fdb013cf4cc1b27eb84331c` (no i-SEO commit from this wave) |
+| Exact-path git add | yes (allowlisted paths only) |
+| Staged list | 18 exact allowlist paths under `projects/iseo-report-hub/` |
+| Primary commit hash | `65f6412443c7236f17cbf54db3b259a59eccb288` |
+| Primary message | `feat(iseo-report-hub): add monthly report content crud` |
+| Hash-record commit | `PENDING_HASH_RECORD` |
+| Hash-record message | `docs(iseo-report-hub): record monthly report content crud commit hash` |
+| HEAD verification | after hash-record |
 | Push | **no** |
 
-**STOP — I-SEO MONTHLY REPORT CONTENT CRUD IMPLEMENTATION BLOCKED BY NON-EMPTY INDEX**
-
-Operator action required: clear or commit foreign staged paths outside this wave, then re-run scoped exact-path stage/commit for i-SEO allowlist only. This wave did **not** unstage/reset foreign index entries.
+Foreign index note: initial implementation commit wave was blocked by non-empty foreign staged index; Foreign Staged Index Audit + Resolution 03 unstaged foreign paths only; this scoped commit wave staged i-SEO allowlist only.
 
 ---
 
@@ -177,20 +177,18 @@ Operator action required: clear or commit foreign staged paths outside this wave
 
 - Multi-role HTTP denials not exercised (single admin user).
 - Password-form login path not re-smoked this session (`ISEO_ADMIN_PASSWORD` unset).
-- Which parallel agent staged the foreign index entries after this wave’s empty-index preflight.
 
 ---
 
 ## 13. Recommended Next Action
 
-**Operator: clear foreign staged index, then scoped commit of Monthly Report Content CRUD allowlist**  
-(After commit lands: next product stage **Report Blocks DB-06 Charter 01**.)
+**Report Blocks DB-06 Charter 01**
 
 ---
 
 ## 14. Files Changed
 
-Git working tree (Active Brain; **uncommitted** due to index STOP):
+Committed in primary `65f6412443c7236f17cbf54db3b259a59eccb288`:
 
 - `projects/iseo-report-hub/app-source/app/routes.php`
 - `projects/iseo-report-hub/app-source/app/bootstrap.php`
@@ -215,7 +213,7 @@ Runtime (synced mirrors; not Git):
 
 - matching paths under `X:\MARS-Localhost\sites\php\projects\iseo-report-hub\`
 
-DB mutation summary:
+DB mutation summary (implementation smoke; not this commit wave):
 
 - UPDATE `monthly_report_contents` id **1** (status → `in_progress`; content marker retained)
 - INSERT audit_log events for monthly_report_content update/status_changed
@@ -227,8 +225,9 @@ DB mutation summary:
 
 | Action | Done? |
 |--------|-------|
-| exact-path git add | **no** (blocked) |
-| commit | **no** (blocked) |
+| exact-path git add | **yes** (allowlist only) |
+| primary commit | **yes** `65f6412443c7236f17cbf54db3b259a59eccb288` |
+| hash-record commit | pending follow-up |
 | push | **no** |
 | fetch | no |
 | pull | no |
@@ -238,4 +237,4 @@ DB mutation summary:
 | clean | no |
 | stash | no |
 | broad git add | no |
-| foreign index unstage | **no** (forbidden) |
+| foreign WIP touch | **no** |

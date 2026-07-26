@@ -13,8 +13,8 @@
 
 | Field | Value |
 |-------|-------|
-| Status | **complete** (runtime + smoke) — **Git commit blocked** by foreign non-empty index |
-| CRUD implemented | **yes** (source + runtime synced; uncommitted in Git) |
+| Status | **complete** (runtime + smoke + Git primary commit) |
+| CRUD implemented | **yes** (source + runtime synced; primary `65f6412443c7236f17cbf54db3b259a59eccb288`) |
 | Demo monthly row edited | **yes** — id **1** `draft` → `in_progress` |
 | Auth required | **yes** |
 | Real client data | **no** — `LOCAL_FIXTURE_ONLY` only |
