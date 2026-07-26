@@ -4,7 +4,7 @@
 **project_id:** `iseo-report-hub`  
 **Created:** 2026-07-27  
 **Authority:** Operator I-SEO Report Hub Report Export / PDF Charter 01  
-**Primary commit:** `PENDING_PRIMARY`  
+**Primary commit:** `5cf2239128a7440afa98cab11de9c415230f5fd0`  
 **Hash-record commit:** `PENDING_HASH_RECORD`
 
 ---
@@ -126,7 +126,7 @@ Covers: DB-08 schema; storage path; HTML generate; idempotency; file checksum; a
 |------|-------|
 | Exact-path git add | allowlisted docs only (in clean worktree) |
 | Commit message | `docs(iseo-report-hub): add report export pdf charter` |
-| Primary commit hash | `PENDING_PRIMARY` |
+| Primary commit hash | `5cf2239128a7440afa98cab11de9c415230f5fd0` |
 | Hash-record message | `docs(iseo-report-hub): record report export pdf charter commit hash` |
 | Hash-record hash | `PENDING_HASH_RECORD` |
 | Push | **no** |
