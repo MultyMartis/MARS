@@ -163,9 +163,9 @@ Authenticated HTTP smoke used **session injection** (`ISEO_ADMIN_PASSWORD` unset
 | Staged list | see post-commit verification |
 | Primary commit hash | `911db07d8ca51bb1778c53ca570ef3b8950234a0` |
 | Primary message | `feat(iseo-report-hub): add weekly checkpoints crud` |
-| Hash-record commit | `PENDING_HASH_RECORD` |
+| Hash-record commit | `64c42cbe6616be19b6d8ea3340466e7bab1f7bf9` |
 | Hash-record message | `docs(iseo-report-hub): record weekly checkpoints crud commit hash` |
-| HEAD verification | after hash-record |
+| HEAD verification | after clarify |
 | Push | **no** |
 
 ---
