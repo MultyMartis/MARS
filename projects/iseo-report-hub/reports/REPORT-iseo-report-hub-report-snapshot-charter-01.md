@@ -5,7 +5,8 @@
 **Created:** 2026-07-27  
 **Authority:** Operator I-SEO Report Hub Report Snapshot Charter 01  
 **Primary commit:** `a84e871dd073bb81be505060ad99f3dd1c6afa84`  
-**Hash-record commit:** `04a4206c4d30458ceb419ac7048e34e8b736365b`
+**Hash-record commit:** `04a4206c4d30458ceb419ac7048e34e8b736365b`  
+**Clarify commit:** `4c3a69dc17bc10211fcae8baa4d429859a0bccee`
 
 ---
 
@@ -141,6 +142,8 @@ Documented for future waves:
 | Primary hash | `a84e871dd073bb81be505060ad99f3dd1c6afa84` |
 | Hash-record message | `docs(iseo-report-hub): record report snapshot charter commit hash` |
 | Hash-record hash | `04a4206c4d30458ceb419ac7048e34e8b736365b` |
+| Clarify message | `docs(iseo-report-hub): clarify report snapshot charter commit hash record` |
+| Clarify hash | `4c3a69dc17bc10211fcae8baa4d429859a0bccee` |
 | Push | **no** |
 
 ---
@@ -176,15 +179,15 @@ Documented for future waves:
 | Action | Result |
 |--------|--------|
 | exact-path git add | **yes** (allowlisted docs in clean worktree) |
-| commit | **yes** (primary + hash-record) |
+| commit | **yes** (primary + hash-record + clarify) |
 | push | **no** |
 | fetch | **no** |
 | pull | **no** |
-| checkout / update-ref | worktree add `--detach`; FF `update-ref` main branch to worktree HEAD after commits if safe |
+| checkout / update-ref | worktree add `--detach` at `10882e24`; FF `update-ref` `mars/canonical-post-recovery` → `4c3a69dc` |
 | reset | **no** |
-| restore | **no** |
+| restore | **scoped only** on main — allowlisted i-SEO docs aligned to HEAD after update-ref; foreign staged untouched |
 | clean | **no** |
 | stash | **no** |
 | broad git add | **no** |
-| clean temporary worktree | used: `X:\AI MARS STORAGE\git-sync-iseo-snapshot-charter-01\repo`; main foreign index untouched |
+| clean temporary worktree | used: `X:\AI MARS STORAGE\git-sync-iseo-snapshot-charter-01\repo`; main foreign index preserved |
 
