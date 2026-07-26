@@ -151,18 +151,16 @@ Authenticated HTTP smoke used **session injection** because `ISEO_ADMIN_PASSWORD
 
 | Field | Value |
 |-------|-------|
-| exact-path git add | **attempted** — then **reverted for i-SEO paths only** |
-| commit | **no** — **STOPPED** |
-| commit message | intended: `feat(iseo-report-hub): add reporting period crud` |
-| commit hash | **none** — commit blocked |
-| HEAD verification | still `6b143852f10aed8dfab5f7b974ae15965b7a233a` |
+| exact-path git add | **yes** — allowlisted i-SEO CRUD paths only (scoped commit wave) |
+| commit | **yes** |
+| commit message | `feat(iseo-report-hub): add reporting period crud` |
+| commit hash | `392258fc572ac17b479618ba888b6b2ffe0feb68` |
+| HEAD after primary commit | `392258fc572ac17b479618ba888b6b2ffe0feb68` |
+| Pre-scoped-commit HEAD | `f92ba003c981bb7ba6025865998f439b0f4ce756` |
+| Implementation-wave HEAD (historical) | `6b143852f10aed8dfab5f7b974ae15965b7a233a` |
 | push | **no** |
 
-**STOP reason:** at commit time `git diff --cached --name-only` contained **67 foreign staged paths** (primarily `projects/client-ops-reporting-bridge/**` + one `projects/metabot-seo-content-agent/**` path), which appeared after preflight (index was empty at wave start). Per charter: do not commit when staged list is not pure allowlist.
-
-i-SEO allowlisted paths were **unstaged** after detection so they are not mixed into the foreign index. Foreign staged entries were **left untouched**.
-
-Operator action needed before scoped commit: clear/resolve foreign staged index (outside this agent scope), then exact-path stage i-SEO allowlist only and commit.
+**Prior attempt note:** first commit attempt was stopped by a foreign staged index (67 paths). i-SEO paths were unstaged; blocker later cleared. Scoped commit wave proceeded with empty index and exact-path allowlist only.
 
 ---
 
@@ -178,7 +176,7 @@ Operator action needed before scoped commit: clear/resolve foreign staged index 
 
 ## 13. Recommended Next Action
 
-**Clear foreign staged index, then exact-path commit Reporting Period CRUD Implementation 01** (message `feat(iseo-report-hub): add reporting period crud`). After that: **Weekly Checkpoints DB-04 Charter 01**.
+**I-SEO Report Hub — Weekly Checkpoints DB-04 Charter 01**
 
 ---
 
@@ -222,13 +220,13 @@ Allowlisted mirrors under `X:\MARS-Localhost\sites\php\projects\iseo-report-hub\
 
 | Action | Done? |
 |--------|-------|
-| exact-path git add | **attempted then unstaged** (i-SEO only) |
-| commit | **no** — blocked by foreign staged index |
+| exact-path git add | **yes** (scoped commit wave) |
+| commit | **yes** — `392258fc572ac17b479618ba888b6b2ffe0feb68` |
 | push | **no** |
 | fetch | **no** |
 | pull | **no** |
 | checkout | **no** |
 | reset | **no** |
-| restore | **yes** — `git restore --staged` for i-SEO allowlist paths only |
+| restore | **no** in scoped commit wave (prior wave: staged restore for i-SEO only) |
 | clean | **no** |
 | stash | **no** |
