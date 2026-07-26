@@ -4,7 +4,7 @@
 **project_id:** `iseo-report-hub`  
 **Branch:** `mars/canonical-post-recovery`  
 **Primary commit:** `65f6412443c7236f17cbf54db3b259a59eccb288` — `feat(iseo-report-hub): add monthly report content crud`  
-**Hash-record commit:** `PENDING_HASH_RECORD` — `docs(iseo-report-hub): record monthly report content crud commit hash`  
+**Hash-record commit:** `17553a555948120fa3b84184a6610668a0ced2e5` — `docs(iseo-report-hub): record monthly report content crud commit hash`  
 **Push:** no
 
 ---
@@ -164,9 +164,9 @@ Authenticated HTTP smoke used **session injection** (`ISEO_ADMIN_PASSWORD` unset
 | Staged list | 18 exact allowlist paths under `projects/iseo-report-hub/` |
 | Primary commit hash | `65f6412443c7236f17cbf54db3b259a59eccb288` |
 | Primary message | `feat(iseo-report-hub): add monthly report content crud` |
-| Hash-record commit | `PENDING_HASH_RECORD` |
+| Hash-record commit | `17553a555948120fa3b84184a6610668a0ced2e5` |
 | Hash-record message | `docs(iseo-report-hub): record monthly report content crud commit hash` |
-| HEAD verification | after hash-record |
+| HEAD verification | after clarify |
 | Push | **no** |
 
 Foreign index note: initial implementation commit wave was blocked by non-empty foreign staged index; Foreign Staged Index Audit + Resolution 03 unstaged foreign paths only; this scoped commit wave staged i-SEO allowlist only.
@@ -227,7 +227,7 @@ DB mutation summary (implementation smoke; not this commit wave):
 |--------|-------|
 | exact-path git add | **yes** (allowlist only) |
 | primary commit | **yes** `65f6412443c7236f17cbf54db3b259a59eccb288` |
-| hash-record commit | pending follow-up |
+| hash-record commit | **yes** `17553a555948120fa3b84184a6610668a0ced2e5` |
 | push | **no** |
 | fetch | no |
 | pull | no |
