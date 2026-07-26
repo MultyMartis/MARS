@@ -12,6 +12,7 @@ use Iseo\Services\ReportPreviewService;
 /** @var array<string, mixed> $diagnostics */
 /** @var string $generatedAt */
 /** @var bool $printMode */
+/** @var array<string, mixed>|null $activeSnapshot */
 
 $reportId = (int) $report['id'];
 $periodId = (int) $report['reporting_period_id'];
@@ -20,6 +21,7 @@ $flatFields = $flatFields ?? [];
 $sourceWeekly = $sourceWeekly ?? [];
 $diagnostics = $diagnostics ?? [];
 $printMode = !empty($printMode);
+$activeSnapshot = $activeSnapshot ?? null;
 $flatLabels = [
     'executive_summary' => 'Executive summary',
     'work_completed' => 'Work completed',
@@ -45,6 +47,7 @@ $flatLabels = [
                         <a class="btn btn-secondary" href="<?= e(url_path('/monthly-reports/' . $reportId . '/blocks')) ?>">View report blocks</a>
                     <?php endif; ?>
                     <a class="btn btn-secondary" href="<?= e(url_path('/monthly-reports/' . $reportId . '/preview/print')) ?>">Print view</a>
+                    <a class="btn btn-secondary" href="<?= e(url_path('/monthly-reports/' . $reportId . '/snapshot')) ?>">Snapshot</a>
                 </p>
             <?php else: ?>
                 <p class="report-preview__controls no-print">
@@ -84,6 +87,18 @@ $flatLabels = [
             </li>
             <li><strong>Finalized at:</strong> <?= e((string) ($report['finalized_at'] ?? '—')) ?></li>
             <li><strong>Generated at:</strong> <?= e((string) $generatedAt) ?></li>
+            <li><strong>Snapshot:</strong>
+                <?php if (is_array($activeSnapshot)): ?>
+                    <span class="immutable-badge">Active</span>
+                    · <a href="<?= e(url_path('/report-snapshots/' . (int) $activeSnapshot['id'])) ?>">
+                        <code><?= e((string) $activeSnapshot['snapshot_key']) ?></code>
+                    </a>
+                    · v<?= e((string) $activeSnapshot['version']) ?>
+                <?php else: ?>
+                    <span class="note">No snapshot yet</span>
+                    · <a href="<?= e(url_path('/monthly-reports/' . $reportId . '/snapshot')) ?>">Open snapshot page</a>
+                <?php endif; ?>
+            </li>
         </ul>
         <?php if ((string) ($report['status'] ?? '') !== 'finalized'): ?>
             <p class="note draft-warning<?= $printMode ? '' : '' ?>">This preview is not finalized. Treat as working draft.</p>

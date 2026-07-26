@@ -675,6 +675,51 @@ code {
   color: #8a5a00;
 }
 
+.immutable-badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: #eef2ff;
+  color: #3730a3;
+}
+
+.snapshot-card .checksum-display,
+.checksum-full {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  word-break: break-all;
+}
+
+.snapshot-idempotent-form {
+  margin-top: 0.75rem;
+}
+
+.snapshot-blocks .snapshot-block {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.snapshot-block__summary {
+  color: #444;
+  font-style: italic;
+}
+
+.snapshot-block__body {
+  white-space: normal;
+  margin-top: 0.35rem;
+}
+
+.snapshot-rendered-text {
+  white-space: pre-wrap;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  background: #f7f7f8;
+  padding: 0.75rem;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
 @media print {
   .site-header,
   .site-footer,

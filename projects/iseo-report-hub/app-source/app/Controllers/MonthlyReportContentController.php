@@ -6,6 +6,7 @@ namespace Iseo\Controllers;
 use Iseo\Services\MonthlyReportContentService;
 use Iseo\Services\ReportBlockService;
 use Iseo\Services\ReportFinalizationService;
+use Iseo\Services\ReportSnapshotService;
 use Iseo\Support\Response;
 
 final class MonthlyReportContentController extends BaseController
@@ -18,7 +19,8 @@ final class MonthlyReportContentController extends BaseController
         \Iseo\Services\CsrfService $csrf,
         private MonthlyReportContentService $monthlyReports,
         private ReportBlockService $reportBlocks,
-        private ReportFinalizationService $finalization
+        private ReportFinalizationService $finalization,
+        private ReportSnapshotService $snapshots
     ) {
         parent::__construct($app, $view, $config, $auth, $csrf);
     }
@@ -425,6 +427,19 @@ final class MonthlyReportContentController extends BaseController
             // Show page even if readiness computation fails.
         }
 
+        $activeSnapshot = null;
+        $canCreateSnapshot = false;
+        try {
+            $snapState = $this->snapshots->getActiveForMonthly((int) $report['id'], $user);
+            if (!empty($snapState['ok'])) {
+                $activeSnapshot = $snapState['snapshot'] ?? null;
+                $canCreateSnapshot = !empty($snapState['can_create']);
+            }
+        } catch (\Throwable) {
+            $activeSnapshot = null;
+            $canCreateSnapshot = false;
+        }
+
         $this->render('monthly-reports/show', [
             'pageTitle' => 'Monthly report — ' . (string) ($report['period_key'] ?? $report['id']),
             'report' => $report,
@@ -435,6 +450,8 @@ final class MonthlyReportContentController extends BaseController
             'canCreateBlock' => $canCreateBlock,
             'parentFinalized' => $parentFinalized,
             'readiness' => $readiness,
+            'activeSnapshot' => $activeSnapshot,
+            'canCreateSnapshot' => $canCreateSnapshot,
         ]);
     }
 

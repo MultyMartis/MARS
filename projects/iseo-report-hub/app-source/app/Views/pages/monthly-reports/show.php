@@ -8,6 +8,8 @@ declare(strict_types=1);
 /** @var bool $canCreateBlock */
 /** @var bool $parentFinalized */
 /** @var array<string, mixed> $readiness */
+/** @var array<string, mixed>|null $activeSnapshot */
+/** @var bool $canCreateSnapshot */
 /** @var \Iseo\Services\CsrfService $csrf */
 $periodId = (int) $report['reporting_period_id'];
 $reportId = (int) $report['id'];
@@ -19,6 +21,8 @@ $readiness = $readiness ?? ['ready' => false, 'gates' => [], 'failed_gates' => [
 $gates = is_array($readiness['gates'] ?? null) ? $readiness['gates'] : [];
 $actions = is_array($readiness['actions'] ?? null) ? $readiness['actions'] : [];
 $failedGates = is_array($readiness['failed_gates'] ?? null) ? $readiness['failed_gates'] : [];
+$activeSnapshot = $activeSnapshot ?? null;
+$canCreateSnapshot = !empty($canCreateSnapshot);
 ?>
 <section class="panel">
     <div class="panel-head">
@@ -127,6 +131,47 @@ $failedGates = is_array($readiness['failed_gates'] ?? null) ? $readiness['failed
             </div>
         <?php endforeach; ?>
     </div>
+</section>
+
+<section class="panel snapshot-card">
+    <div class="panel-head">
+        <h2>Report snapshot</h2>
+        <p>
+            <a class="btn btn-secondary" href="<?= e(url_path('/monthly-reports/' . $reportId . '/snapshot')) ?>">Open snapshot page</a>
+        </p>
+    </div>
+    <?php if (!is_array($activeSnapshot)): ?>
+        <p class="note">No snapshot yet.</p>
+        <?php if ($canCreateSnapshot): ?>
+            <form method="post" action="<?= e(url_path('/monthly-reports/' . $reportId . '/snapshot')) ?>">
+                <?= $csrf->field() ?>
+                <button type="submit" class="btn">Create snapshot</button>
+            </form>
+        <?php elseif ($parentFinalized): ?>
+            <p class="field-hint">Finalized — open snapshot page to create if your role allows.</p>
+        <?php else: ?>
+            <p class="field-hint">Finalize the monthly report before creating a snapshot.</p>
+        <?php endif; ?>
+    <?php else: ?>
+        <?php
+        $snapChecksum = (string) ($activeSnapshot['checksum_sha256'] ?? '');
+        $snapShort = $snapChecksum !== '' ? substr($snapChecksum, 0, 12) . '…' : '—';
+        ?>
+        <p>
+            <span class="immutable-badge">Immutable</span>
+            · <span class="status-badge status-<?= e((string) $activeSnapshot['status']) ?>"><?= e((string) $activeSnapshot['status']) ?></span>
+        </p>
+        <ul class="facts">
+            <li><strong>ID:</strong> <?= e((string) $activeSnapshot['id']) ?></li>
+            <li><strong>Key:</strong> <code><?= e((string) $activeSnapshot['snapshot_key']) ?></code></li>
+            <li><strong>Version:</strong> <?= e((string) $activeSnapshot['version']) ?></li>
+            <li><strong>Checksum:</strong> <code class="checksum-display" title="<?= e($snapChecksum) ?>"><?= e($snapShort) ?></code></li>
+            <li><strong>Created at:</strong> <?= e((string) ($activeSnapshot['created_at'] ?? '—')) ?></li>
+        </ul>
+        <p>
+            <a class="btn" href="<?= e(url_path('/report-snapshots/' . (int) $activeSnapshot['id'])) ?>">View snapshot</a>
+        </p>
+    <?php endif; ?>
 </section>
 
 <section class="panel">

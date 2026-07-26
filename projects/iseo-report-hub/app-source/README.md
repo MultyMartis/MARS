@@ -2,7 +2,7 @@
 
 ## Status
 
-**Auth + reporting period CRUD + weekly checkpoints CRUD + monthly report content CRUD + report blocks CRUD MVP (local).** Versioned Active Brain mirror with DB-backed login/logout, safe `/health` DB status, local admin/fixture tools, internal reporting-period CRUD, period-scoped weekly checkpoint CRUD, period-scoped monthly report content CRUD, and monthly-scoped report blocks CRUD. Sync to Localhost runtime is done via allowlist (Model A).
+**Auth + reporting period CRUD + weekly checkpoints CRUD + monthly report content CRUD + report blocks CRUD + preview + finalization + snapshots MVP (local).** Versioned Active Brain mirror with DB-backed login/logout, safe `/health` DB status, local admin/fixture tools, internal reporting-period CRUD, period-scoped weekly checkpoint CRUD, period-scoped monthly report content CRUD, monthly-scoped report blocks CRUD, internal preview/print, finalization workflow, and internal report snapshots. Sync to Localhost runtime is done via allowlist (Model A).
 
 | Fact | State |
 |------|-------|
@@ -16,6 +16,7 @@
 | Weekly checkpoints | **CRUD MVP** — period-scoped list/detail/create/edit/skip-or-archive-by-status |
 | Monthly report content | **CRUD MVP** — period-scoped detail/create/edit/archive-by-status; one row per period |
 | Report blocks | **CRUD MVP** — monthly-scoped list/detail/create/edit/archive-by-status; unique parent+block_key |
+| Report snapshots | **Internal MVP** — create/view active snapshot from finalized monthly; checksum idempotency; no public/PDF |
 | Secrets | **None in source** — `.env.example` placeholders only; **no** `.env` / `.env.local` |
 | Runtime sync | Allowlist source → runtime |
 
@@ -73,6 +74,9 @@ Creates one local-only demo client / project / site / reporting_period (`LOCAL_F
 - `GET /monthly-reports/{id}` — flat detail (includes report blocks section + finalization card)
 - `GET /monthly-reports/{id}/preview` — **internal-only** assembled preview (auth required; blocks primary; no public/PDF)
 - `GET /monthly-reports/{id}/preview/print` — print-friendly twin of preview (browser print only; no server PDF)
+- `GET /monthly-reports/{id}/snapshot` — active snapshot summary or “no snapshot yet” (auth; internal-only)
+- `POST /monthly-reports/{id}/snapshot` — create snapshot from finalized monthly (CSRF; idempotent on checksum; admin_owner / seo_lead_reviewer)
+- `GET /report-snapshots/{id}` — immutable snapshot detail (auth; internal-only; no edit/delete/public)
 - `POST /monthly-reports/{id}/submit-review` — `in_progress` → `ready_for_review` (CSRF; role-gated)
 - `POST /monthly-reports/{id}/mark-reviewed` — `ready_for_review` → `reviewed` (CSRF; role-gated)
 - `POST /monthly-reports/{id}/finalize` — `reviewed` → `finalized` when readiness passes (CSRF; sets `finalized_at` if null)
@@ -88,7 +92,7 @@ Creates one local-only demo client / project / site / reporting_period (`LOCAL_F
 - 404 fallback
 
 No top-level `/monthly-reports` or `/report-blocks` index (period/monthly-scoped entry is enough).  
-No DELETE route for reporting periods, weekly checkpoints, monthly report content, or report blocks — archive/skip via status.  
+No DELETE route for reporting periods, weekly checkpoints, monthly report content, report blocks, or snapshots — archive/skip via status (snapshots: no DELETE; supersede on later version).  
 No drag/drop reorder (manual `sort_order` only).  
 No public share token, no export route, no server-side PDF generation.
 
@@ -105,11 +109,13 @@ No public share token, no export route, no server-side PDF generation.
 - No password reset / remember-me / OAuth
 - No client portal auth for `client_viewer`
 - No drag/drop reorder / rich text editor / PDF export
-- No hard DELETE of reporting periods, weekly checkpoints, monthly report content, or report blocks
+- No hard DELETE of reporting periods, weekly checkpoints, monthly report content, report blocks, or snapshots
 - No user management UI
 - No real client import
 - No Composer / npm / WordPress
+- No snapshot v2 versioning smoke (deferred until reopen/re-finalize charter)
+- No public/token publish from snapshots
 
 ## Next phase
 
-**Recommended:** Report Snapshot Charter 01 (immutable final snapshot for export/PDF foundations).
+**Recommended:** Report Export / PDF Charter 01 (export foundations on top of active snapshot).

@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Iseo\Controllers;
 
 use Iseo\Services\ReportPreviewService;
+use Iseo\Services\ReportSnapshotService;
 use Iseo\Support\Response;
 use Throwable;
 
@@ -15,7 +16,8 @@ final class ReportPreviewController extends BaseController
         \Iseo\Services\ConfigService $config,
         \Iseo\Services\AuthService $auth,
         \Iseo\Services\CsrfService $csrf,
-        private ReportPreviewService $preview
+        private ReportPreviewService $preview,
+        private ReportSnapshotService $snapshots
     ) {
         parent::__construct($app, $view, $config, $auth, $csrf);
     }
@@ -64,6 +66,16 @@ final class ReportPreviewController extends BaseController
         $title = (string) ($report['title'] ?? ('Monthly report #' . $monthlyReportId));
         $pageTitle = ($printMode ? 'Print preview — ' : 'Preview — ') . $title;
 
+        $activeSnapshot = null;
+        try {
+            $snapState = $this->snapshots->getActiveForMonthly($monthlyReportId, $user);
+            if (!empty($snapState['ok'])) {
+                $activeSnapshot = $snapState['snapshot'] ?? null;
+            }
+        } catch (Throwable) {
+            $activeSnapshot = null;
+        }
+
         $this->render($view, [
             'pageTitle' => $pageTitle,
             'printMode' => $printMode,
@@ -76,6 +88,7 @@ final class ReportPreviewController extends BaseController
             'diagnostics' => $payload['diagnostics'],
             'generatedAt' => $payload['generated_at'],
             'canEdit' => $this->preview->canPreview($user),
+            'activeSnapshot' => $activeSnapshot,
         ]);
     }
 

@@ -4,12 +4,12 @@ declare(strict_types=1);
 /**
  * Conceptual routes — DB-backed auth + reporting period CRUD + weekly checkpoints
  * + monthly report content CRUD + report blocks CRUD + report preview
- * + report finalization workflow.
+ * + report finalization workflow + report snapshots.
  *
  * Dynamic /reporting-periods/{id}, /weekly-checkpoints/{id}, /monthly-reports/{id},
- * and /report-blocks/{id} matching is registered at request time against the
- * exact path (Router remains exact-match only; no overbuilt pattern engine).
- * Static /create segments and nested paths are matched before bare ids.
+ * /report-blocks/{id}, and /report-snapshots/{id} matching is registered at request
+ * time against the exact path (Router remains exact-match only; no overbuilt
+ * pattern engine). Static /create segments and nested paths are matched before bare ids.
  *
  * @var array<string, mixed> $app
  */
@@ -20,11 +20,13 @@ use Iseo\Controllers\HealthController;
 use Iseo\Controllers\MonthlyReportContentController;
 use Iseo\Controllers\ReportBlockController;
 use Iseo\Controllers\ReportPreviewController;
+use Iseo\Controllers\ReportSnapshotController;
 use Iseo\Controllers\ReportingPeriodController;
 use Iseo\Controllers\WeeklyCheckpointController;
 use Iseo\Repositories\MonthlyReportContentRepository;
 use Iseo\Repositories\ReportBlockRepository;
 use Iseo\Repositories\ReportPreviewRepository;
+use Iseo\Repositories\ReportSnapshotRepository;
 use Iseo\Repositories\ReportingPeriodRepository;
 use Iseo\Repositories\WeeklyCheckpointRepository;
 use Iseo\Services\AuthService;
@@ -35,6 +37,7 @@ use Iseo\Services\MonthlyReportContentService;
 use Iseo\Services\ReportBlockService;
 use Iseo\Services\ReportFinalizationService;
 use Iseo\Services\ReportPreviewService;
+use Iseo\Services\ReportSnapshotService;
 use Iseo\Services\ReportingPeriodService;
 use Iseo\Services\WeeklyCheckpointService;
 use Iseo\Support\Router;
@@ -68,6 +71,8 @@ $blockService = new ReportBlockService($blockRepo, $db);
 $previewRepo = new ReportPreviewRepository($db);
 $previewService = new ReportPreviewService($previewRepo, $db);
 $finalizationService = new ReportFinalizationService($monthlyRepo, $blockRepo, $previewService, $db);
+$snapshotRepo = new ReportSnapshotRepository($db);
+$snapshotService = new ReportSnapshotService($snapshotRepo, $monthlyRepo, $blockRepo, $previewService, $db);
 $reportingPeriods = new ReportingPeriodController(
     $app,
     $view,
@@ -87,10 +92,12 @@ $monthlyReports = new MonthlyReportContentController(
     $csrf,
     $monthlyService,
     $blockService,
-    $finalizationService
+    $finalizationService,
+    $snapshotService
 );
 $reportBlocks = new ReportBlockController($app, $view, $config, $auth, $csrf, $blockService);
-$reportPreview = new ReportPreviewController($app, $view, $config, $auth, $csrf, $previewService);
+$reportPreview = new ReportPreviewController($app, $view, $config, $auth, $csrf, $previewService, $snapshotService);
+$reportSnapshots = new ReportSnapshotController($app, $view, $config, $auth, $csrf, $snapshotService);
 
 $router->get('/', static function () use ($dashboard): void {
     $dashboard->index();
@@ -161,6 +168,19 @@ if (preg_match('#^/reporting-periods/(\d+)/monthly-report/create$#', $requestPat
     $reportId = (int) $m[1];
     $router->get($requestPath, static function () use ($reportPreview, $reportId): void {
         $reportPreview->show($reportId);
+    });
+} elseif (preg_match('#^/monthly-reports/(\d+)/snapshot$#', $requestPath, $m) === 1) {
+    $reportId = (int) $m[1];
+    $router->get($requestPath, static function () use ($reportSnapshots, $reportId): void {
+        $reportSnapshots->monthlySnapshot($reportId);
+    });
+    $router->post($requestPath, static function () use ($reportSnapshots, $reportId): void {
+        $reportSnapshots->createForMonthly($reportId);
+    });
+} elseif (preg_match('#^/report-snapshots/(\d+)$#', $requestPath, $m) === 1) {
+    $snapshotId = (int) $m[1];
+    $router->get($requestPath, static function () use ($reportSnapshots, $snapshotId): void {
+        $reportSnapshots->show($snapshotId);
     });
 } elseif (preg_match('#^/monthly-reports/(\d+)/submit-review$#', $requestPath, $m) === 1) {
     $reportId = (int) $m[1];
