@@ -39,9 +39,13 @@ class TestNormalizer(ExporterTestCase):
 
     def test_stale(self) -> None:
         r = self._norm("fixture-blocked-stale")
-        self.assertEqual(r.normalized_status, "BLOCKED")
-        self.assertEqual(r.summary_code, "SOURCE_REPORT_STALE")
+        # D6B: factual NO_ACTION_REQUIRED → OK; age → STALE_REVIEW_REQUIRED
+        self.assertEqual(r.normalized_status, "OK")
+        self.assertEqual(r.summary_code, "NO_ACTION_REQUIRED")
         self.assertTrue(r.stale)
+        self.assertEqual(r.delivery_eligibility, "STALE_REVIEW_REQUIRED")
+        self.assertNotEqual(r.normalized_status, "BLOCKED")
+        self.assertNotEqual(r.summary_code, "SOURCE_REPORT_STALE")
 
     def test_future_time(self) -> None:
         r = self._norm("fixture-blocked-invalid-time")

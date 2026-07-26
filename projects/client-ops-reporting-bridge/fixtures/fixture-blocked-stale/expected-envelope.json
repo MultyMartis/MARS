@@ -1,7 +1,7 @@
 {
   "schema_name": "mars.client_ops.report",
   "schema_version": "1.0",
-  "event_id": "aaec31ba-4083-59a3-8c41-fe74546fe16f",
+  "event_id": "e10b5dcf-f188-5dc2-be75-c3ad73c38654",
   "event_type": "site.post_1c_monitor",
   "generated_at": "2026-07-23T12:35:00Z",
   "observed_at": "2026-07-20T09:30:00Z",
@@ -17,18 +17,17 @@
   },
   "run": {
     "run_id": "2026-07-20_12-30-00",
-    "source_status": "SOURCE_REPORT_STALE",
-    "normalized_status": "BLOCKED",
-    "summary_code": "SOURCE_REPORT_STALE",
+    "source_status": "NO_ACTION_REQUIRED",
+    "normalized_status": "OK",
+    "summary_code": "NO_ACTION_REQUIRED",
     "reason_codes": [
-      "SOURCE_REPORT_TOO_OLD",
-      "SOURCE_STALE"
+      "BASELINE_DELTA_ZERO"
     ]
   },
   "action": {
-    "required": true,
-    "code": "REVIEW_SCHEDULER_AND_ARTIFACTS",
-    "text": "проверить планировщик и свежесть артефактов"
+    "required": false,
+    "code": "NONE",
+    "text": "none"
   },
   "metrics": {
     "baseline_count": 100,

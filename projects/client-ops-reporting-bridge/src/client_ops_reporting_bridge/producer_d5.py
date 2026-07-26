@@ -16,7 +16,14 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Mapping, Optional
 
-from .constants import SITE_ID
+from .constants import SITE_ID, STALE_AFTER_SECONDS
+from .delivery_eligibility import (
+    FRESH_AND_ELIGIBLE,
+    NOT_SAFE_TO_SEND,
+    SOURCE_VALID_BUT_STALE_REVIEW_REQUIRED,
+    STALE_REVIEW_REQUIRED,
+    is_live_delivery_authorized,
+)
 from .producer_classify import classify_transport_response, plan_retry_attempt
 from .producer_config import ProducerProfile, ProducerSecrets
 from .producer_constants import (
@@ -94,15 +101,19 @@ def build_d5_real_source_envelope(source_dir: Path) -> dict[str, Any]:
                 raise D5GateError("sanitized D4 fixture rejected as live real-source")
 
     proc, _redaction, _fp = adapt_source_dir(Path(source_dir), build_envelope=True)
-    if not proc.distributable or proc.envelope is None:
-        raise D5GateError("source not distributable for D5 real-source event")
     if proc.security_rejected:
         raise D5GateError("source security rejected")
     if proc.normalized_status == "BLOCKED":
-        # Authority/staleness BLOCKED must not be posted to client channel by default.
         raise D5GateError(
             f"source maps to BLOCKED ({proc.source_status}); live POST not approved"
         )
+    if not is_live_delivery_authorized(proc):
+        raise D5GateError(
+            "source delivery_eligibility is "
+            f"{proc.delivery_eligibility}; live POST not approved"
+        )
+    if not proc.distributable or proc.envelope is None:
+        raise D5GateError("source not distributable for D5 real-source event")
     return apply_d5_real_source_markers(dict(proc.envelope))
 
 
@@ -129,13 +140,23 @@ def build_source_preview(
 ) -> dict[str, Any]:
     """Sanitized preview for operator gate (network_calls=0)."""
     now = now_utc or datetime.now(timezone.utc)
-    proc, redaction, fingerprint = adapt_source_dir(Path(source_dir), build_envelope=True)
+    proc, redaction, fingerprint = adapt_source_dir(
+        Path(source_dir), build_envelope=True, now_utc=now_utc
+    )
     event_id = None
     if proc.envelope is not None:
         event_id = str(proc.envelope.get("event_id") or "") or None
     observed = proc.observed_at
     age_seconds = proc.age_seconds
     age_hours = round(float(age_seconds) / 3600.0, 2) if age_seconds is not None else None
+    # Stale valid sources: preserve factual status; do not emit customer text.
+    message_preview = None
+    if (
+        proc.delivery_eligibility == FRESH_AND_ELIGIBLE
+        and proc.distributable
+        and proc.simple_text
+    ):
+        message_preview = proc.simple_text
     preview = {
         "source_label": sanitize_source_label(source_dir),
         "source_run_id": proc.run_id,
@@ -145,6 +166,12 @@ def build_source_preview(
         "verification_time_utc": now.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "source_classification": proc.source_status,
         "client_ops_mapped_status": proc.normalized_status,
+        "source_status": proc.normalized_status,
+        "delivery_eligibility": proc.delivery_eligibility,
+        "freshness_threshold_seconds": proc.freshness_threshold_seconds
+        or STALE_AFTER_SECONDS,
+        "freshness_reason": proc.freshness_reason,
+        "stale": bool(proc.stale),
         "safe_metrics": proc.metrics,
         "reason_codes": list(proc.reason_codes),
         "action_code": proc.action_code,
@@ -159,7 +186,7 @@ def build_source_preview(
             "artifact_count": len(redaction.get("artifacts") or []),
         },
         "source_contract_fingerprint": fingerprint,
-        "message_preview": proc.simple_text,
+        "message_preview": message_preview,
         "distributable": proc.distributable,
         "security_rejected": proc.security_rejected,
         "network_calls": 0,
@@ -171,6 +198,7 @@ def assess_preview_for_live(preview: Mapping[str, Any]) -> dict[str, Any]:
     """Return preview verdict — does not send."""
     status = str(preview.get("client_ops_mapped_status") or "")
     source_status = str(preview.get("source_classification") or "")
+    eligibility = str(preview.get("delivery_eligibility") or "")
     msg = str(preview.get("message_preview") or "")
     unsafe_tokens = (
         "X:\\",
@@ -188,9 +216,15 @@ def assess_preview_for_live(preview: Mapping[str, Any]) -> dict[str, Any]:
     if status == "BLOCKED" and "CONFLICT" in source_status:
         verdict = "REAL_SOURCE_PREVIEW_NOT_APPROVED_FOR_LIVE_POST"
         reason = "contradictory authority BLOCKED"
-    elif status == "BLOCKED":
+    elif status == "BLOCKED" or eligibility == NOT_SAFE_TO_SEND:
         verdict = "REAL_SOURCE_PREVIEW_NOT_APPROVED_FOR_LIVE_POST"
-        reason = "BLOCKED status not safe for client-facing Telegram"
+        reason = "BLOCKED / NOT_SAFE_TO_SEND — not safe for client-facing Telegram"
+    elif eligibility == STALE_REVIEW_REQUIRED:
+        verdict = SOURCE_VALID_BUT_STALE_REVIEW_REQUIRED
+        reason = (
+            "factual source status preserved; artifact stale — "
+            "automatic/live delivery not authorized"
+        )
     elif msg_unsafe:
         verdict = "REAL_SOURCE_PREVIEW_NOT_APPROVED_FOR_LIVE_POST"
         reason = "message preview exposes internal path/secret markers"
@@ -203,6 +237,9 @@ def assess_preview_for_live(preview: Mapping[str, Any]) -> dict[str, Any]:
     elif not preview.get("event_id"):
         verdict = "REAL_SOURCE_PREVIEW_NOT_APPROVED_FOR_LIVE_POST"
         reason = "event_id missing"
+    elif eligibility != FRESH_AND_ELIGIBLE:
+        verdict = "REAL_SOURCE_PREVIEW_NOT_APPROVED_FOR_LIVE_POST"
+        reason = f"delivery_eligibility={eligibility or 'MISSING'}"
     else:
         verdict = "REAL_SOURCE_PREVIEW_APPROVED_FOR_ONE_LIVE_POST"
         reason = "preview safe for one controlled live POST"
@@ -211,6 +248,8 @@ def assess_preview_for_live(preview: Mapping[str, Any]) -> dict[str, Any]:
         "verdict": verdict,
         "reason": reason,
         "approved": verdict == "REAL_SOURCE_PREVIEW_APPROVED_FOR_ONE_LIVE_POST",
+        "source_status": status,
+        "delivery_eligibility": eligibility,
         "network_calls": 0,
     }
 

@@ -331,6 +331,8 @@ def adapt_source_dir(
         if proc.envelope is not None and proc.distributable:
             tz = loaded_meta.display_timezone
             proc.simple_text = format_simple(proc.envelope, tz_name=tz)
+        else:
+            proc.simple_text = None
     return proc, redaction, fingerprint
 
 

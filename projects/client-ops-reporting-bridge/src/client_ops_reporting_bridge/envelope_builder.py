@@ -16,6 +16,7 @@ from .constants import (
     SITE_ID,
     SITE_NAME,
 )
+from .delivery_eligibility import FRESH_AND_ELIGIBLE
 from .errors import ProcessResult, ValidationIssue
 from .event_identity import compute_event_id
 from .models import FixtureMeta, to_utc_z
@@ -279,8 +280,19 @@ def attach_envelope_with_security(
         result.reason_codes = sorted({i.code for i in sec_issues})
         result.issues.extend(sec_issues)
         result.source_status = "ENVELOPE_SECURITY_REJECTED"
+        result.delivery_eligibility = "NOT_SAFE_TO_SEND"
+        result.freshness_reason = "ENVELOPE_SECURITY_REJECTED"
         return result
 
+    # Keep envelope for identity/preview even when stale; customer delivery
+    # requires FRESH_AND_ELIGIBLE (D6B). Age does not enter event_id material.
     result.envelope = envelope
-    result.distributable = True
+    if (
+        result.delivery_eligibility == FRESH_AND_ELIGIBLE
+        and result.normalized_status != "BLOCKED"
+        and not result.security_rejected
+    ):
+        result.distributable = True
+    else:
+        result.distributable = False
     return result

@@ -1,0 +1,27 @@
+{
+  "phase": "1B-D6B",
+  "title": "Source Status vs Delivery Freshness Semantics Separation",
+  "live_apply_authorized": false,
+  "roadmap_order": ["A", "B", "C", "E", "D"],
+  "accepted_workstream_a_commit": "12e4c6ad1f4199458b6f091d084f33ca5f8a965d",
+  "out_of_scope": [
+    "C_activation_lifecycle",
+    "E_retry_concurrency",
+    "D_unattended_monitor_integration",
+    "production_workflow_mutate",
+    "data_table_mutate",
+    "telegram_send",
+    "monitor_run",
+    "git_commit_push"
+  ],
+  "required_separation": {
+    "source_status": ["OK", "ATTENTION", "FAILED", "BLOCKED"],
+    "delivery_eligibility": [
+      "FRESH_AND_ELIGIBLE",
+      "STALE_REVIEW_REQUIRED",
+      "NOT_SAFE_TO_SEND"
+    ]
+  },
+  "stale_after_seconds": 93600,
+  "threshold_operator": ">"
+}

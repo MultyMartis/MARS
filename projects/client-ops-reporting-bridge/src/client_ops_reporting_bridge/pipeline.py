@@ -54,5 +54,8 @@ def process_fixture_dir(
         result.simple_text = format_simple(
             result.envelope, tz_name=tz
         )
+    else:
+        # Stale / blocked / not fresh-eligible: no customer-facing message.
+        result.simple_text = None
 
     return result

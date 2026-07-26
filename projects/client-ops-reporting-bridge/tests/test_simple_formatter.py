@@ -42,10 +42,15 @@ class TestSimpleFormatter(ExporterTestCase):
         r = process_fixture_dir(
             self.fixture("fixture-blocked-classification-conflict")
         )
-        assert r.simple_text is not None
-        self.assertIn("ЗПМ · BLOCKED", r.simple_text)
-        self.assertNotIn(":\\", r.simple_text)
-        self.assertNotIn("Traceback", r.simple_text)
+        # D6B: true BLOCKED is not customer-deliverable.
+        self.assertEqual(r.normalized_status, "BLOCKED")
+        self.assertEqual(r.delivery_eligibility, "NOT_SAFE_TO_SEND")
+        self.assertIsNone(r.simple_text)
+        assert r.envelope is not None
+        text = format_simple(r.envelope, tz_name="Europe/Moscow")
+        self.assertIn("ЗПМ · BLOCKED", text)
+        self.assertNotIn(":\\", text)
+        self.assertNotIn("Traceback", text)
 
     def test_timezone_conversion(self) -> None:
         r = process_fixture_dir(self.fixture("fixture-ok"))

@@ -244,9 +244,12 @@ class D5RAuthorityAlignmentTests(ExporterTestCase):
                 hours_ago=40,
             )
             result = normalize(load_artifacts(run_dir))
-            self.assertEqual(result.summary_code, "SOURCE_REPORT_STALE")
-            self.assertEqual(result.normalized_status, "BLOCKED")
+            # D6B: factual OK preserved; stale is delivery_eligibility only
+            self.assertEqual(result.normalized_status, "OK")
+            self.assertEqual(result.summary_code, "NO_ACTION_REQUIRED")
             self.assertTrue(result.stale)
+            self.assertEqual(result.delivery_eligibility, "STALE_REVIEW_REQUIRED")
+            self.assertNotEqual(result.summary_code, "SOURCE_REPORT_STALE")
 
     def test_l_preview_semantics_decision_file(self) -> None:
         path = (

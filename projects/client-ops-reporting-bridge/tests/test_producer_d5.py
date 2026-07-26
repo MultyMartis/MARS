@@ -187,8 +187,11 @@ class TestD5PreviewAndIdentity(ExporterTestCase):
             decision = assess_preview_for_live(preview)
             self.assertFalse(decision["approved"])
             self.assertEqual(
-                decision["verdict"], "REAL_SOURCE_PREVIEW_NOT_APPROVED_FOR_LIVE_POST"
+                decision["verdict"], "SOURCE_VALID_BUT_STALE_REVIEW_REQUIRED"
             )
+            self.assertEqual(preview["client_ops_mapped_status"], "OK")
+            self.assertEqual(preview["delivery_eligibility"], "STALE_REVIEW_REQUIRED")
+            self.assertIsNone(preview.get("message_preview"))
 
     def test_j_event_id_deterministic_double_build(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

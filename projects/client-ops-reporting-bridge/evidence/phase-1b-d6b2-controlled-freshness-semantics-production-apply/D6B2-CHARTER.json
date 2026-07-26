@@ -1,0 +1,20 @@
+{
+  "phase": "1B-D6B2",
+  "workstream": "B",
+  "forbidden": [
+    "C",
+    "E",
+    "D",
+    "workstream_a_mutation",
+    "git_commit",
+    "git_push",
+    "real_site002_producer",
+    "historical_reconciliation",
+    "threshold_tune"
+  ],
+  "stale_after_seconds": 93600,
+  "operator": "age_seconds > 93600",
+  "production_surface_preference": "smallest_truthful",
+  "max_synthetic_webhooks": 1,
+  "preferred_stale_proof": "producer_preview_no_webhook"
+}

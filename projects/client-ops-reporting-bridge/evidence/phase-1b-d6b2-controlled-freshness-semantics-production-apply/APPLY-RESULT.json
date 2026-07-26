@@ -1,0 +1,24 @@
+{
+  "phase": "1B-D6B2",
+  "token": "D6B2_PRODUCTION_FRESHNESS_SEMANTICS_APPLIED",
+  "production_apply_performed": true,
+  "production_surface": "D6B2_PRODUCTION_SURFACE_PRODUCER_ONLY",
+  "apply_operations": 1,
+  "apply_kind": "producer_path_hash_lock_and_declare",
+  "producer_bytes_mutated_during_d6b2": 0,
+  "note": "Accepted D6B WT producer files already present; D6B2 formally locked them as production-path semantics after gates. No n8n content mutation.",
+  "n8n_workflow_content_mutations": 0,
+  "n8n_activation_changes": 0,
+  "rollback_operations": 0,
+  "applied_sha256": {
+    "delivery_eligibility.py": "90112684FC41EA933CAFA3B544F0CCF68E9C68437C17AAE83DE120F4645A310D",
+    "normalizer.py": "0393BFD94A1A56824150C4F0592A6F284D37A9FEF3BD24E004F24C59F253EA6A",
+    "errors.py": "CC404BE6949D446436485A4F3D30277E2C7243F2E072DBCBDEFE50D54E212CFB",
+    "envelope_builder.py": "E3AECE534D92715B6A4A36678C228236262DD891E4CA1753DE679DFBD40854D2",
+    "producer_d5.py": "BBD3132A21F24E2E5F8803728A9F32ECB303CB9AB3603229591344376D3ECC9F",
+    "pipeline.py": "12AD136129A1E9C9C81CD7F35DAFAB64A10A354156D9DFB848A7CC8F053DBC48",
+    "site002_adapter.py": "600A76B52234F09B7EBB19591A2684234076EEF114123C2E8453087227F65B5F",
+    "constants.py": "4FED76BAF00E7FADA165E6D1E281C6D438FA3CC697D252A2EFF568F43617D641"
+  },
+  "workflow_versionId_unchanged": "dc8746bf-df9c-425d-9b3f-4ace452ac5ef"
+}

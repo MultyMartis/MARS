@@ -70,7 +70,10 @@ class TestEnvelopeBuilder(ExporterTestCase):
         r = process_fixture_dir(
             self.fixture("fixture-blocked-classification-conflict")
         )
-        self.assertTrue(r.distributable)
+        # D6B: BLOCKED → NOT_SAFE_TO_SEND → not customer-distributable;
+        # identity envelope may still be retained when metrics trusted.
+        self.assertFalse(r.distributable)
+        self.assertEqual(r.delivery_eligibility, "NOT_SAFE_TO_SEND")
         assert r.envelope is not None
         self.assertEqual(r.envelope["run"]["normalized_status"], "BLOCKED")
         self.assertEqual(r.envelope["metrics"]["added_urls"], 80)

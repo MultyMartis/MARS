@@ -1,4 +1,8 @@
-"""Deterministic normalization algorithm (Phase 1A offline)."""
+"""Deterministic normalization algorithm (Phase 1A offline).
+
+Phase 1B-D6B: artifact age no longer rewrites factual normalized_status.
+Freshness is expressed as delivery_eligibility on ProcessResult.
+"""
 
 from __future__ import annotations
 
@@ -13,6 +17,7 @@ from .constants import (
     STALE_AFTER_SECONDS,
     SUPPORTED_SOURCE_CLASSIFICATIONS,
 )
+from .delivery_eligibility import apply_delivery_eligibility
 from .errors import ProcessResult, ValidationIssue
 from .models import FixtureMeta, ParsedArtifacts, SourceMetrics, to_utc_z
 from .source_validation import (
@@ -46,7 +51,7 @@ def _blocked(
     text = action_text_override or ACTION_TEXT.get(
         action_code, ACTION_TEXT["REVIEW_SOURCE_ARTIFACTS"]
     )
-    return ProcessResult(
+    result = ProcessResult(
         ok=False,
         normalized_status="BLOCKED",
         summary_code=summary_code,
@@ -64,6 +69,7 @@ def _blocked(
         distributable=False,
         issues=list(issues or []),
     )
+    return apply_delivery_eligibility(result)
 
 
 def _establish_observed_at(
@@ -107,6 +113,9 @@ def normalize(
 
     ``now_utc`` / ``meta.now_utc`` / ``clock`` provide injectable time.
     Machine clock is used only when no injectable value is provided.
+
+    Artifact age affects ``delivery_eligibility`` / ``stale`` only — never
+    rewrites factual ``normalized_status`` for a valid source classification.
     """
     meta = meta or FixtureMeta()
     if now_utc is not None:
@@ -163,7 +172,6 @@ def normalize(
         }
     }
     if missing_field_codes or not metrics.all_core_present():
-        # Distinguish missing baseline specifically
         summary = "SOURCE_ARTIFACT_MISSING"
         reasons = [
             "SOURCE_REQUIRED_FIELD_MISSING",
@@ -180,7 +188,9 @@ def normalize(
             action_text_override=override,
         )
 
-    negative = [i for i in all_issues if i.code in {"SOURCE_METRIC_NEGATIVE", "NEGATIVE_METRIC"}]
+    negative = [
+        i for i in all_issues if i.code in {"SOURCE_METRIC_NEGATIVE", "NEGATIVE_METRIC"}
+    ]
     if negative:
         return _blocked(
             summary_code="SOURCE_ARTIFACT_CONFLICT",
@@ -239,20 +249,9 @@ def normalize(
             action_text_override=override,
         )
 
-    if age_seconds > STALE_AFTER_SECONDS:
-        return _blocked(
-            summary_code="SOURCE_REPORT_STALE",
-            action_code="REVIEW_SCHEDULER_AND_ARTIFACTS",
-            reason_codes=["SOURCE_REPORT_TOO_OLD", "SOURCE_STALE"],
-            run_id=run_id,
-            observed_at=observed_at,
-            age_seconds=age_seconds,
-            stale=True,
-            metrics=metrics,
-            metrics_trusted=metrics.all_core_present(),
-            issues=all_issues,
-            action_text_override=override,
-        )
+    # D6B: age > STALE_AFTER_SECONDS must NOT rewrite factual status to BLOCKED.
+    # Authority/classification continue; eligibility applied after mapping.
+    assert STALE_AFTER_SECONDS == 93600
 
     if classification is None:
         return _blocked(
@@ -304,7 +303,6 @@ def normalize(
             observed_at=observed_at,
             age_seconds=age_seconds,
             metrics=metrics,
-            # Counts are present integers; conflict is logical, not missing.
             metrics_trusted=True,
             issues=all_issues,
             action_text_override=override,
@@ -391,15 +389,14 @@ def normalize(
     )
     if failed:
         reasons = ["SOURCE_EXIT_CODE_NONZERO", "MONITOR_EXECUTION_FAILED"]
-        return ProcessResult(
+        result = ProcessResult(
             ok=False,
             normalized_status="FAILED",
             summary_code="SOURCE_EXECUTION_FAILED",
             action_code="REVIEW_SOURCE_FAILURE",
             action_required=True,
             reason_codes=sorted(set(reasons)),
-            action_text=override
-            or ACTION_TEXT["REVIEW_SOURCE_FAILURE"],
+            action_text=override or ACTION_TEXT["REVIEW_SOURCE_FAILURE"],
             source_status=classification,
             run_id=run_id,
             observed_at=observed_at,
@@ -407,23 +404,24 @@ def normalize(
             stale=False,
             metrics=metrics.as_dict(),
             metrics_trusted=True,
-            distributable=False,  # set true after envelope+security
+            distributable=False,
             issues=all_issues,
         )
+        return apply_delivery_eligibility(result)
 
-    reasons: list[str] = []
+    reasons_ok: list[str] = []
     if a == 0 and r == 0 and b == c:
-        reasons.append("BASELINE_DELTA_ZERO")
+        reasons_ok.append("BASELINE_DELTA_ZERO")
     else:
-        reasons.append("BASELINE_DELTA_NONZERO")
+        reasons_ok.append("BASELINE_DELTA_NONZERO")
 
     if classification == "ONBOARDING_REQUIRED":
-        reasons.extend(["ONBOARDING_COUNT_NONZERO", "CATEGORY_PLP_ADDED"])
+        reasons_ok.extend(["ONBOARDING_COUNT_NONZERO", "CATEGORY_PLP_ADDED"])
         status = "ATTENTION"
         summary = "ONBOARDING_REQUIRED"
         action = "REVIEW_ONBOARDING"
     elif classification == "HYGIENE_REVIEW_REQUIRED":
-        reasons.append("HYGIENE_FLAGS_PRESENT")
+        reasons_ok.append("HYGIENE_FLAGS_PRESENT")
         status = "ATTENTION"
         summary = "HYGIENE_REVIEW_REQUIRED"
         action = "REVIEW_HYGIENE"
@@ -445,13 +443,13 @@ def normalize(
             action_text_override=override,
         )
 
-    return ProcessResult(
+    result = ProcessResult(
         ok=status == "OK",
         normalized_status=status,
         summary_code=summary,
         action_code=action,
         action_required=action != "NONE",
-        reason_codes=sorted(set(reasons)),
+        reason_codes=sorted(set(reasons_ok)),
         action_text=override or ACTION_TEXT[action],
         source_status=classification,
         run_id=run_id,
@@ -463,3 +461,4 @@ def normalize(
         distributable=False,
         issues=all_issues,
     )
+    return apply_delivery_eligibility(result)
