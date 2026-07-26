@@ -157,8 +157,8 @@ Authenticated HTTP smoke used **session injection** (`ISEO_ADMIN_PASSWORD` unset
 | Item | Value |
 |------|-------|
 | Exact-path git add | yes (allowlisted only) |
-| Staged list | see post-commit verification |
-| Primary commit hash | _(filled by hash-record follow-up)_ |
+| Staged list | 19 allowlisted paths (verified before commit) |
+| Primary commit hash | `135da2137cef401e16225b8f1e653dfbe3e18699` |
 | Primary message | `feat(iseo-report-hub): add report blocks crud` |
 | Hash-record follow-up | `docs(iseo-report-hub): record report blocks crud commit hash` |
 | Push | **no** |
