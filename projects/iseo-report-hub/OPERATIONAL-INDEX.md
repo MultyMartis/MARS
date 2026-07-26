@@ -16,7 +16,7 @@
 | **Business owner / vision source** | Никита / i-SEO |
 | **Developer** | Антон |
 | **Platform direction** | **Decided** — custom **PHP + SQL/MySQL**; **no WordPress runtime**; Laragon local runtime **verified** (preflight 01); see [I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md](product/I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md) |
-| **Implementation** | **Phase 1B complete** + **local vhost/hosts mapping complete** + **DB `iseo_report_hub_dev` created** + **DB-01/DB-02 first migration applied** + **auth persistence + local admin bootstrap implemented** + **DB-03 reporting periods migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** — DB-backed login/logout; demo fixture + smoke period; internal reporting-period CRUD; `weekly_checkpoints` table + W1–W4; period-scoped weekly checkpoint CRUD; `monthly_report_contents` table + period-scoped monthly report content CRUD (demo id **1**); `report_blocks` table + monthly-scoped report block CRUD (6 local blocks under monthly id **1** after smoke); preview/render **designed** (docs only; **no** preview code yet); **no** drag/drop / PDF/export / client portal |
+| **Implementation** | **Phase 1B complete** + **local vhost/hosts mapping complete** + **DB `iseo_report_hub_dev` created** + **DB-01/DB-02 first migration applied** + **auth persistence + local admin bootstrap implemented** + **DB-03 reporting periods migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** + **Report Preview / Render Implementation 01 complete** + **Report Finalization Charter 01 complete** — DB-backed login/logout; demo fixture + smoke period; internal reporting-period CRUD; `weekly_checkpoints` table + W1–W4; period-scoped weekly checkpoint CRUD; `monthly_report_contents` table + period-scoped monthly report content CRUD (demo id **1**); `report_blocks` table + monthly-scoped report block CRUD (6 local blocks under monthly id **1** after smoke); internal preview/print implemented (`blocks_primary`); finalization **designed** (docs only; **no** finalize code yet); **no** drag/drop / PDF/export / client portal |
 | **Source model** | **Model A active** — `projects/iseo-report-hub/app-source/` is versioned SoT; sync direction **source → runtime**; runtime → source only by explicit import charter |
 
 ---
@@ -25,9 +25,9 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A/1B + local DB + **auth persistence implemented** + **DB-03 migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** |
+| **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A/1B + local DB + **auth persistence implemented** + **DB-03 migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** + **Report Preview / Render Implementation 01 complete** + **Report Finalization Charter 01 complete** |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | **Report Preview / Render Charter 01 complete** — next recommended: **Report Preview / Render Implementation 01** |
+| **Active stage** | **Report Finalization Charter 01 complete** — next recommended: **Report Finalization Implementation 01** |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -719,7 +719,24 @@
 | **Restrictions** | no schema edits; no business-row mutation; no PDF/export/public share; no secrets; no push |
 | **Result** | [I-SEO-REPORT-HUB-REPORT-PREVIEW-RENDER-IMPLEMENTATION-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-PREVIEW-RENDER-IMPLEMENTATION-RESULT-v0.1.md) |
 | **Closeout** | [REPORT-iseo-report-hub-report-preview-render-implementation-01.md](reports/REPORT-iseo-report-hub-report-preview-render-implementation-01.md) |
-| **Next recommended stage** | **Report Finalization Charter 01** |
+| **Next recommended stage** | **Report Finalization Charter 01** — **completed** (see section below) |
+
+---
+
+## Report Finalization Charter 01 (2026-07-27)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** — documentation / policy only |
+| **Baseline dependency** | Report Preview / Render Implementation 01 (`4334b4a8…` / hash-record `52bd58a9…` / clarify `11a4f232…`); smoke 22/22 PASS; DB unchanged by preview |
+| **Designed surface** | Internal monthly finalization; readiness gates; staged status transitions; parent→block locks; explicit submit/review/finalize/reopen routes; audit events; **no** public/PDF/snapshot |
+| **Code / runtime / DB this wave** | **None** — no app-source; no runtime sync; no DB mutation |
+| **Next implementation candidate** | **I-SEO Report Hub — Report Finalization Implementation 01** |
+| **Charter** | [I-SEO-REPORT-HUB-REPORT-FINALIZATION-CHARTER-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-FINALIZATION-CHARTER-v0.1.md) |
+| **Design** | [I-SEO-REPORT-HUB-REPORT-FINALIZATION-DESIGN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-FINALIZATION-DESIGN-v0.1.md) |
+| **Implementation plan** | [I-SEO-REPORT-HUB-REPORT-FINALIZATION-IMPLEMENTATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-FINALIZATION-IMPLEMENTATION-PLAN-v0.1.md) |
+| **Validation plan** | [I-SEO-REPORT-HUB-REPORT-FINALIZATION-VALIDATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-FINALIZATION-VALIDATION-PLAN-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-report-finalization-charter-01.md](reports/REPORT-iseo-report-hub-report-finalization-charter-01.md) |
 
 ---
 
@@ -890,6 +907,13 @@
 | 148 | [product/I-SEO-REPORT-HUB-REPORT-PREVIEW-RENDER-IMPLEMENTATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-PREVIEW-RENDER-IMPLEMENTATION-PLAN-v0.1.md) | Report Preview / Render implementation plan (next wave) |
 | 149 | [product/I-SEO-REPORT-HUB-REPORT-PREVIEW-RENDER-VALIDATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-PREVIEW-RENDER-VALIDATION-PLAN-v0.1.md) | Report Preview / Render validation/smoke plan |
 | 150 | [reports/REPORT-iseo-report-hub-report-preview-render-charter-01.md](reports/REPORT-iseo-report-hub-report-preview-render-charter-01.md) | Report Preview / Render charter closeout |
+| 151 | [product/I-SEO-REPORT-HUB-REPORT-PREVIEW-RENDER-IMPLEMENTATION-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-PREVIEW-RENDER-IMPLEMENTATION-RESULT-v0.1.md) | Report Preview / Render implementation result |
+| 152 | [reports/REPORT-iseo-report-hub-report-preview-render-implementation-01.md](reports/REPORT-iseo-report-hub-report-preview-render-implementation-01.md) | Report Preview / Render implementation closeout |
+| 153 | [product/I-SEO-REPORT-HUB-REPORT-FINALIZATION-CHARTER-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-FINALIZATION-CHARTER-v0.1.md) | Report Finalization charter (planning) |
+| 154 | [product/I-SEO-REPORT-HUB-REPORT-FINALIZATION-DESIGN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-FINALIZATION-DESIGN-v0.1.md) | Report Finalization design (gates/locks/routes) |
+| 155 | [product/I-SEO-REPORT-HUB-REPORT-FINALIZATION-IMPLEMENTATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-FINALIZATION-IMPLEMENTATION-PLAN-v0.1.md) | Report Finalization implementation plan (next wave) |
+| 156 | [product/I-SEO-REPORT-HUB-REPORT-FINALIZATION-VALIDATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-FINALIZATION-VALIDATION-PLAN-v0.1.md) | Report Finalization validation/smoke plan |
+| 157 | [reports/REPORT-iseo-report-hub-report-finalization-charter-01.md](reports/REPORT-iseo-report-hub-report-finalization-charter-01.md) | Report Finalization charter closeout |
 
 ---
 
@@ -934,7 +958,7 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Report Preview / Render Implementation 01** — **recommended next** (charter complete; preview code not started)
+1. **Report Finalization Implementation 01** — **recommended next** (charter complete; finalize/lock code not started)
 2. Optional: **Report Blocks CRUD Hardening 01** if multi-role HTTP smoke is needed
 3. Optional: **Monthly Report Content CRUD Hardening 01** if multi-role HTTP smoke is needed
 4. Optional: **Weekly Checkpoints CRUD Hardening 01** if multi-role HTTP smoke is needed
@@ -943,7 +967,7 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 7. **SEO specialist feedback** — still **deferred** until operator opens feedback charter
 8. Work dictionary extraction/sanitization (из Nikita materials; **exclude** credential sheet)
 9. MVP implementation phases 2–11 per implementation charter (Anton / i-SEO)
-10. Later: n8n/API/AI integration (events only; human approval gates)
+10. Later: n8n/API/AI integration (events only; human approval gates); later export/snapshot from finalized reports
 
 **Historical note:** Static demos v0.1–v0.4, report content architecture, and Product Architecture Layer 02 are complete as documentation/demo baselines. Platform decision (PHP+MySQL) supersedes WordPress-as-runtime assumptions for forward work. Phase 0 scaffold + Phase 1A skeleton + Phase 1B source→runtime sync + Apache vhost + Windows `hosts` for `iseo-report-hub.test` are done (direct domain re-smoke PASS). Local DB `iseo_report_hub_dev` is **created**; first migration (DB-01 + minimal DB-02) is **applied**. Auth persistence + local admin bootstrap are **implemented** (DB-backed login; one local admin). DB-03 reporting periods migration is **applied**. Local fixture apply is **complete** (demo client/project/site + period `2026-07`). Reporting Period CRUD **implementation** is complete (internal list/detail/create/edit/archive-by-status; smoke period `2026-08` archived; counts clients/projects/sites/reporting_periods **1/1/1/2**). Weekly Checkpoints DB-04 **migration apply** is complete (`weekly_checkpoints` + local W1–W3 smoke). Weekly Checkpoints CRUD **implementation** is complete (period-scoped list/detail/create/edit/skip-or-archive; W4 smoke id **7** skipped; weekly_checkpoints **4**). Monthly Report Content DB-05 **migration apply** is complete (`monthly_report_contents` + 1 local demo row). Monthly Report Content CRUD **implementation** is complete (period-scoped detail/create/edit/archive-by-status; demo id **1** status `in_progress`; monthly_report_contents **1**). Report Blocks DB-06 **migration apply** is complete (`report_blocks` + 5 local fixture blocks; migrations **5** / tables **13**). Report Blocks CRUD **Charter 01** is complete (docs/policy only; next = Report Blocks CRUD Implementation 01). `app-source/` remains the versioned SoT; runtime is Localhost deploy target.
 
@@ -973,7 +997,9 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **Report Blocks CRUD Charter 01 is complete** — design/implementation/validation plans exist
 - **Report Blocks CRUD Implementation 01 is complete** — monthly-scoped list/detail/create/edit; archive-by-status; no hard DELETE; report_blocks **6**
 - **Report Preview / Render Charter 01 is complete** — design/implementation/validation plans exist; **no** preview code/runtime/DB changes in charter wave
-- **No assembled monthly report preview runtime yet** — next = Report Preview / Render Implementation 01
+- **Report Preview / Render Implementation 01 is complete** — internal preview + print routes; smoke 22/22; DB unchanged; **no** public/PDF
+- **Report Finalization Charter 01 is complete** — finalization/readiness/lock/reopen design exists; **no** finalize code/runtime/DB changes in charter wave
+- **No finalization / lock workflow runtime yet** — next = Report Finalization Implementation 01
 - **No drag/drop reorder / PDF export / rich text editor / client portal** (runtime)
 - **No autonomous publication**
 - **Website Factory is not runtime owner** — methodology + prototype lane only
