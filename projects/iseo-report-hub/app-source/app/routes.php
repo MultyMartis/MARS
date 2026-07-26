@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 /**
  * Conceptual routes — DB-backed auth + reporting period CRUD + weekly checkpoints
- * + monthly report content CRUD + report blocks CRUD.
+ * + monthly report content CRUD + report blocks CRUD + report preview.
  *
  * Dynamic /reporting-periods/{id}, /weekly-checkpoints/{id}, /monthly-reports/{id},
  * and /report-blocks/{id} matching is registered at request time against the
@@ -18,10 +18,12 @@ use Iseo\Controllers\DashboardController;
 use Iseo\Controllers\HealthController;
 use Iseo\Controllers\MonthlyReportContentController;
 use Iseo\Controllers\ReportBlockController;
+use Iseo\Controllers\ReportPreviewController;
 use Iseo\Controllers\ReportingPeriodController;
 use Iseo\Controllers\WeeklyCheckpointController;
 use Iseo\Repositories\MonthlyReportContentRepository;
 use Iseo\Repositories\ReportBlockRepository;
+use Iseo\Repositories\ReportPreviewRepository;
 use Iseo\Repositories\ReportingPeriodRepository;
 use Iseo\Repositories\WeeklyCheckpointRepository;
 use Iseo\Services\AuthService;
@@ -30,6 +32,7 @@ use Iseo\Services\CsrfService;
 use Iseo\Services\DatabaseService;
 use Iseo\Services\MonthlyReportContentService;
 use Iseo\Services\ReportBlockService;
+use Iseo\Services\ReportPreviewService;
 use Iseo\Services\ReportingPeriodService;
 use Iseo\Services\WeeklyCheckpointService;
 use Iseo\Support\Router;
@@ -60,6 +63,8 @@ $monthlyRepo = new MonthlyReportContentRepository($db);
 $monthlyService = new MonthlyReportContentService($monthlyRepo, $db);
 $blockRepo = new ReportBlockRepository($db);
 $blockService = new ReportBlockService($blockRepo, $db);
+$previewRepo = new ReportPreviewRepository($db);
+$previewService = new ReportPreviewService($previewRepo, $db);
 $reportingPeriods = new ReportingPeriodController(
     $app,
     $view,
@@ -81,6 +86,7 @@ $monthlyReports = new MonthlyReportContentController(
     $blockService
 );
 $reportBlocks = new ReportBlockController($app, $view, $config, $auth, $csrf, $blockService);
+$reportPreview = new ReportPreviewController($app, $view, $config, $auth, $csrf, $previewService);
 
 $router->get('/', static function () use ($dashboard): void {
     $dashboard->index();
@@ -141,6 +147,16 @@ if (preg_match('#^/reporting-periods/(\d+)/monthly-report/create$#', $requestPat
     });
     $router->post($requestPath, static function () use ($reportBlocks, $reportId): void {
         $reportBlocks->store($reportId);
+    });
+} elseif (preg_match('#^/monthly-reports/(\d+)/preview/print$#', $requestPath, $m) === 1) {
+    $reportId = (int) $m[1];
+    $router->get($requestPath, static function () use ($reportPreview, $reportId): void {
+        $reportPreview->print($reportId);
+    });
+} elseif (preg_match('#^/monthly-reports/(\d+)/preview$#', $requestPath, $m) === 1) {
+    $reportId = (int) $m[1];
+    $router->get($requestPath, static function () use ($reportPreview, $reportId): void {
+        $reportPreview->show($reportId);
     });
 } elseif (preg_match('#^/monthly-reports/(\d+)/edit$#', $requestPath, $m) === 1) {
     $reportId = (int) $m[1];

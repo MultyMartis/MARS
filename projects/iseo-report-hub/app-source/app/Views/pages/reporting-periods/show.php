@@ -102,8 +102,9 @@ $canEditMonthly = $canEditMonthly ?? false;
         <p>
             <?php if ($monthlyReport !== null): ?>
                 <a class="btn btn-secondary" href="<?= e(url_path('/monthly-reports/' . (int) $monthlyReport['id'])) ?>">Open report</a>
+                <a class="btn" href="<?= e(url_path('/monthly-reports/' . (int) $monthlyReport['id'] . '/preview')) ?>">Preview</a>
                 <?php if ($canEditMonthly): ?>
-                    <a class="btn" href="<?= e(url_path('/monthly-reports/' . (int) $monthlyReport['id'] . '/edit')) ?>">Edit</a>
+                    <a class="btn btn-secondary" href="<?= e(url_path('/monthly-reports/' . (int) $monthlyReport['id'] . '/edit')) ?>">Edit</a>
                 <?php endif; ?>
             <?php elseif ($canCreateMonthly): ?>
                 <a class="btn" href="<?= e(url_path('/reporting-periods/' . $periodId . '/monthly-report/create')) ?>">Create monthly report</a>

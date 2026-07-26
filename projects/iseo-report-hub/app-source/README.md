@@ -71,6 +71,8 @@ Creates one local-only demo client / project / site / reporting_period (`LOCAL_F
 - `GET /reporting-periods/{period_id}/monthly-report/create` — create form (one per period)
 - `POST /reporting-periods/{period_id}/monthly-report` — create (CSRF; duplicate guard)
 - `GET /monthly-reports/{id}` — flat detail (includes report blocks section)
+- `GET /monthly-reports/{id}/preview` — **internal-only** assembled preview (auth required; blocks primary; no public/PDF)
+- `GET /monthly-reports/{id}/preview/print` — print-friendly twin of preview (browser print only; no server PDF)
 - `GET /monthly-reports/{id}/edit` — edit form
 - `POST /monthly-reports/{id}` — update (CSRF; archive via status)
 - `GET /monthly-reports/{monthly_report_id}/blocks` — block list within monthly report
@@ -83,7 +85,8 @@ Creates one local-only demo client / project / site / reporting_period (`LOCAL_F
 
 No top-level `/monthly-reports` or `/report-blocks` index (period/monthly-scoped entry is enough).  
 No DELETE route for reporting periods, weekly checkpoints, monthly report content, or report blocks — archive/skip via status.  
-No drag/drop reorder (manual `sort_order` only).
+No drag/drop reorder (manual `sort_order` only).  
+No public share token, no export route, no server-side PDF generation.
 
 ## Secrets policy
 
@@ -105,4 +108,4 @@ No drag/drop reorder (manual `sort_order` only).
 
 ## Next phase
 
-**Recommended:** Report Preview / Render Charter 01 (or Report Blocks CRUD Hardening 01 if multi-role smoke needed).
+**Recommended:** Report Finalization Charter 01 (or Report Preview / Render Hardening 01 if multi-role / archive-exclusion live smoke needed).

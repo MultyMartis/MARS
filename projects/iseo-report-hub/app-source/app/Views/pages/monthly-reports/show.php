@@ -19,8 +19,9 @@ $canCreateBlock = $canCreateBlock ?? false;
             <a class="btn btn-secondary" href="<?= e(url_path('/reporting-periods/' . $periodId)) ?>">Parent period</a>
             <a class="btn btn-secondary" href="<?= e(url_path('/reporting-periods/' . $periodId . '/weekly-checkpoints')) ?>">Weekly checkpoints</a>
             <a class="btn btn-secondary" href="<?= e(url_path('/monthly-reports/' . $reportId . '/blocks')) ?>">Report blocks</a>
+            <a class="btn" href="<?= e(url_path('/monthly-reports/' . $reportId . '/preview')) ?>">Preview</a>
             <?php if ($canEdit): ?>
-                <a class="btn" href="<?= e(url_path('/monthly-reports/' . $reportId . '/edit')) ?>">Edit</a>
+                <a class="btn btn-secondary" href="<?= e(url_path('/monthly-reports/' . $reportId . '/edit')) ?>">Edit</a>
             <?php endif; ?>
         </p>
     </div>

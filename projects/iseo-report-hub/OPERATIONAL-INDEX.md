@@ -697,12 +697,29 @@
 | **Baseline dependency** | Report Blocks CRUD Implementation 01 (`135da213…` / hash-record `5c65ac88…`); Monthly Report Content CRUD; DB-05 + DB-06 tables |
 | **Designed surface** | Internal authenticated monthly preview; blocks primary (`sort_order`/`id`); archived excluded; DB-05 flat fallback/diagnostics; source weekly links; optional print-friendly route; **no** public/PDF |
 | **Code / runtime / DB this wave** | **None** — no app-source; no runtime sync; no DB mutation |
-| **Next implementation candidate** | **I-SEO Report Hub — Report Preview / Render Implementation 01** |
+| **Next implementation candidate** | **I-SEO Report Hub — Report Preview / Render Implementation 01** — **completed** (see section below) |
 | **Charter** | [I-SEO-REPORT-HUB-REPORT-PREVIEW-RENDER-CHARTER-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-PREVIEW-RENDER-CHARTER-v0.1.md) |
 | **Design** | [I-SEO-REPORT-HUB-REPORT-PREVIEW-RENDER-DESIGN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-PREVIEW-RENDER-DESIGN-v0.1.md) |
 | **Implementation plan** | [I-SEO-REPORT-HUB-REPORT-PREVIEW-RENDER-IMPLEMENTATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-PREVIEW-RENDER-IMPLEMENTATION-PLAN-v0.1.md) |
 | **Validation plan** | [I-SEO-REPORT-HUB-REPORT-PREVIEW-RENDER-VALIDATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-PREVIEW-RENDER-VALIDATION-PLAN-v0.1.md) |
 | **Closeout** | [REPORT-iseo-report-hub-report-preview-render-charter-01.md](reports/REPORT-iseo-report-hub-report-preview-render-charter-01.md) |
+
+---
+
+## Report Preview / Render Implementation 01 (2026-07-27)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** — source preview/render + runtime allowlist sync + smoke + docs |
+| **Baseline dependency** | Report Preview / Render Charter 01 (`f9604d4b…` / hash-record `34e7d9d0…` / clarify `65ab3a97…`); Report Blocks CRUD Implementation 01 |
+| **Routes** | `GET /monthly-reports/{id}/preview`; `GET /monthly-reports/{id}/preview/print`; **no** public/PDF/export/share |
+| **Render** | `blocks_primary` / `flat_fallback` / `empty`; order `sort_order ASC`, `id ASC`; archived excluded; HTML escape + newlines; internal diagnostics |
+| **DB final counts** | migrations **5**; tables **13**; reporting_periods **2**; weekly_checkpoints **4**; monthly_report_contents **1**; report_blocks **6** — **unchanged** by this wave |
+| **Smoke** | PASS — unauth redirect; auth preview/print 200; 6 blocks + order; W1–W4; Preview links; regression; DB fingerprint unchanged; session injection |
+| **Restrictions** | no schema edits; no business-row mutation; no PDF/export/public share; no secrets; no push |
+| **Result** | [I-SEO-REPORT-HUB-REPORT-PREVIEW-RENDER-IMPLEMENTATION-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-PREVIEW-RENDER-IMPLEMENTATION-RESULT-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-report-preview-render-implementation-01.md](reports/REPORT-iseo-report-hub-report-preview-render-implementation-01.md) |
+| **Next recommended stage** | **Report Finalization Charter 01** |
 
 ---
 
