@@ -152,7 +152,7 @@ Next wave smoke covers:
 | Action | Done? |
 |--------|-------|
 | Exact-path git add | Yes (allowlisted docs) |
-| Commit | Yes (primary `e4dfa572` + hash-record `3eb637d3`) |
+| Commit | Yes (primary `e4dfa572` + hash-record `3eb637d3` + clarify `1c55949e`) |
 | Push | **No** |
 | Fetch | **No** |
 | Pull | **No** |
