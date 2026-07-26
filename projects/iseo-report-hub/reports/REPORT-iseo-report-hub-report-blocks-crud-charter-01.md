@@ -4,7 +4,7 @@
 **project_id:** `iseo-report-hub`  
 **Created:** 2026-07-26  
 **Authority:** Operator I-SEO Report Hub Report Blocks CRUD Charter 01  
-**Primary commit:** `PENDING_PRIMARY_COMMIT_HASH`
+**Primary commit:** `a8f3f6dfedcadf22aa72618bc9c107f68e7ee78d`
 
 ---
 
@@ -120,10 +120,10 @@ Next wave smoke covers:
 |------|-------|
 | Exact-path git add | allowlisted docs only |
 | Commit message | `docs(iseo-report-hub): add report blocks crud charter` |
-| Commit hash | `PENDING_PRIMARY_COMMIT_HASH` |
+| Commit hash | `a8f3f6dfedcadf22aa72618bc9c107f68e7ee78d` |
 | Push | **no** |
 
-Hash-record follow-up (if needed): `docs(iseo-report-hub): record report blocks crud charter commit hash` on this REPORT only.
+Hash-record follow-up: `docs(iseo-report-hub): record report blocks crud charter commit hash` on this REPORT only.
 
 ---
 
