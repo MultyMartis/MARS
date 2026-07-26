@@ -4,7 +4,7 @@
 **Date:** 2026-07-26  
 **Authority:** Operator I-SEO Report Hub Weekly Checkpoints CRUD Implementation 01  
 **Primary commit:** `911db07d8ca51bb1778c53ca570ef3b8950234a0` — `feat(iseo-report-hub): add weekly checkpoints crud`  
-**Hash-record commit:** `PENDING_HASH_RECORD` — `docs(iseo-report-hub): record weekly checkpoints crud commit hash`
+**Hash-record commit:** `64c42cbe6616be19b6d8ea3340466e7bab1f7bf9` — `docs(iseo-report-hub): record weekly checkpoints crud commit hash`
 
 ---
 
