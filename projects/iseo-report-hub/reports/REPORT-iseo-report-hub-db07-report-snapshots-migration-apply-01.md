@@ -124,7 +124,7 @@
 |-------|--------|
 | Exact-path git add | **yes** (allowlisted paths in clean worktree) |
 | Staged list | migration SQL; app-source README; result doc; this report; OPERATIONAL-INDEX |
-| Primary commit hash | `PENDING_PRIMARY_COMMIT` |
+| Primary commit hash | `eb1d0ce544f42876a99ea4393a98ffa780bb6f1f` |
 | Primary message | `feat(iseo-report-hub): add report snapshots migration` |
 | Hash-record commit | `PENDING_HASH_RECORD` — `docs(iseo-report-hub): record report snapshots migration commit hash` |
 | HEAD after wave | `PENDING_HEAD_AFTER` |
