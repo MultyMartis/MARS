@@ -6,7 +6,8 @@
 **Authority:** Operator I-SEO Report Hub Report Export / PDF Charter 01  
 **Primary commit:** `5cf2239128a7440afa98cab11de9c415230f5fd0`  
 **Hash-record commit:** `0ef4ffbd80ff0ee1b18b116b6cecd53e16458740`  
-**Clarify commit:** `f2c03787a2697d160ecf2e33077f215cf820707a`
+**Clarify commit:** `f2c03787a2697d160ecf2e33077f215cf820707a`  
+**Closeout-hashes commit:** `19742518db9bbb9d9951e6073867a773c5573637`
 
 ---
 
@@ -132,6 +133,8 @@ Covers: DB-08 schema; storage path; HTML generate; idempotency; file checksum; a
 | Hash-record hash | `0ef4ffbd80ff0ee1b18b116b6cecd53e16458740` |
 | Clarify message | `docs(iseo-report-hub): clarify report export pdf charter commit hash record` |
 | Clarify hash | `f2c03787a2697d160ecf2e33077f215cf820707a` |
+| Closeout-hashes message | `docs(iseo-report-hub): clarify report export pdf charter closeout git actions` |
+| Closeout-hashes hash | `19742518db9bbb9d9951e6073867a773c5573637` |
 | Push | **no** |
 
 ---
@@ -168,11 +171,11 @@ Covers: DB-08 schema; storage path; HTML generate; idempotency; file checksum; a
 | Action | Result |
 |--------|--------|
 | exact-path git add | **yes** (allowlisted docs in clean worktree) |
-| commit | **yes** (primary `5cf22391` + hash-record `0ef4ffbd` + clarify `f2c03787` + closeout-hashes below) |
+| commit | **yes** (primary `5cf22391` + hash-record `0ef4ffbd` + clarify `f2c03787` + closeout-hashes `19742518`) |
 | push | **no** |
 | fetch | **no** |
 | pull | **no** |
-| checkout / update-ref | worktree add `--detach` at `7c3dbf1c`; FF `update-ref` `mars/canonical-post-recovery` → tip after closeout-hashes; scoped `git checkout HEAD --` allowlisted i-SEO docs on main |
+| checkout / update-ref | worktree add `--detach` at `7c3dbf1c`; FF `update-ref` `mars/canonical-post-recovery` → `19742518`; scoped `git checkout HEAD --` allowlisted i-SEO docs on main |
 | reset | **no** |
 | restore | **scoped only** on main — allowlisted i-SEO docs aligned to HEAD after update-ref; foreign staged untouched |
 | clean | **no** |
