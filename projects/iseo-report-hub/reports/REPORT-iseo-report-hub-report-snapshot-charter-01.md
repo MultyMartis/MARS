@@ -5,7 +5,7 @@
 **Created:** 2026-07-27  
 **Authority:** Operator I-SEO Report Hub Report Snapshot Charter 01  
 **Primary commit:** `a84e871dd073bb81be505060ad99f3dd1c6afa84`  
-**Hash-record commit:** `PENDING_HASH_RECORD`
+**Hash-record commit:** `04a4206c4d30458ceb419ac7048e34e8b736365b`
 
 ---
 
@@ -140,7 +140,7 @@ Documented for future waves:
 | Primary message | `docs(iseo-report-hub): add report snapshot charter` |
 | Primary hash | `a84e871dd073bb81be505060ad99f3dd1c6afa84` |
 | Hash-record message | `docs(iseo-report-hub): record report snapshot charter commit hash` |
-| Hash-record hash | `PENDING_HASH_RECORD` |
+| Hash-record hash | `04a4206c4d30458ceb419ac7048e34e8b736365b` |
 | Push | **no** |
 
 ---
@@ -187,3 +187,4 @@ Documented for future waves:
 | stash | **no** |
 | broad git add | **no** |
 | clean temporary worktree | used: `X:\AI MARS STORAGE\git-sync-iseo-snapshot-charter-01\repo`; main foreign index untouched |
+
