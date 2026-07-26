@@ -10,7 +10,7 @@
 | WordPress | **Not used** as runtime or source of truth |
 | Framework / Composer | **None** — plain PHP 8.3 |
 | Database | Local `iseo_report_hub_dev` via runtime `.env.local` (not in Git) |
-| Migrations | Core + reporting_periods + weekly_checkpoints + monthly_report_contents + report_blocks applied (separate waves) |
+| Migrations | Core + reporting_periods + weekly_checkpoints + monthly_report_contents + report_blocks + report_snapshots applied (separate waves) |
 | Auth | **DB-backed** — `password_verify` + roles + audit |
 | Reporting periods | **CRUD MVP** — list/detail/create/edit/archive-by-status |
 | Weekly checkpoints | **CRUD MVP** — period-scoped list/detail/create/edit/skip-or-archive-by-status |
