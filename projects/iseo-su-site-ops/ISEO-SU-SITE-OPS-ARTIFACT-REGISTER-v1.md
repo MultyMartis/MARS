@@ -111,6 +111,19 @@ Status vocabulary: **COMPLETE** · **CREATED** · **PLANNED** · **CONDITIONAL**
 | Glossary content updater | `tools/glossary-batch-content-updater.py` | UPDATED (batch 04) |
 | Batch 04 REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-BATCH-04-FINAL-CONTENT-COMPLETION.md` | COMPLETE |
 
+### Glossary publication launch (2026-07-26)
+
+| Artifact | Path | Status |
+|----------|------|--------|
+| Publication launch manifest | `ISEO-SU-GLOSSARY-PUBLICATION-LAUNCH-MANIFEST-v1.md` | CREATED |
+| Publication backup/rollback | `ISEO-SU-GLOSSARY-PUBLICATION-BACKUP-AND-ROLLBACK-v1.md` | CREATED |
+| Publication launch CSV | `data/glossary-editorial/ISEO-SU-GLOSSARY-PUBLICATION-LAUNCH-v1.csv` | CREATED |
+| Publication eligibility CSV/MD | `ISEO-SU-GLOSSARY-PUBLICATION-ELIGIBILITY-v1.*` | UPDATED (live published state) |
+| SEO / internal linking model | `ISEO-SU-GLOSSARY-SEO-AND-INTERNAL-LINKING-MODEL-v1.md` | UPDATED |
+| Architecture / content model | `ISEO-SU-GLOSSARY-ARCHITECTURE-AND-CONTENT-MODEL-v1.md` | UPDATED |
+| Theme package (exposure, related links) | `wordpress/iseoblog-glossary/` | UPDATED / deployed |
+| Publication launch REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-PUBLICATION-READINESS-AND-CONTROLLED-LAUNCH.md` | COMPLETE |
+
 ### Glossary archive layout fix (2026-07-24)
 
 | Artifact | Path | Status |

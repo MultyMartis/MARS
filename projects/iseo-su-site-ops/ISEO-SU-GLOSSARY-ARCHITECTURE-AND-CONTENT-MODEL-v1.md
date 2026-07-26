@@ -11,23 +11,23 @@
 
 | Field | Value |
 |-------|-------|
-| Status | **FINAL CORPUS SET / BATCH 01 DRAFTS LOADED** (public exposure still closed) |
-| Public launch | **HOLD** — operator visual review before Batch 02 / publication gate |
+| Status | **PUBLIC GLOSSARY LAUNCHED** (2026-07-26 controlled launch) |
+| Public launch | **LIVE** — 184 eligible canonical articles published |
 | CPT | `glossary` deployed in theme `iseoblog` |
-| Templates | `archive-glossary.php`, `single-glossary.php` |
-| Draft terms | **241** |
-| Published terms | **0** |
-| Final corpus | `ISEO-SU-GLOSSARY-FINAL-CORPUS-v1.md` + CSV — APPROVED 146 / APPROVED_RENAME 48 / MERGED 26 / DEFERRED 8 / EXCLUDED 13 |
-| Definitions in WP | **Batch 01 (30)** loaded as draft content/excerpts; remaining drafts still empty definitions |
+| Templates | `archive-glossary.php`, `single-glossary.php` (+ related-terms block) |
+| Draft terms | **57** (MERGED 30 / DEFERRED 14 / EXCLUDED 13) |
+| Published terms | **184** |
+| Final corpus | `ISEO-SU-GLOSSARY-FINAL-CORPUS-v1.md` + eligibility/launch CSVs |
+| Definitions in WP | Batches 01–04; eligible set published |
 | Editorial standard | `ISEO-SU-GLOSSARY-EDITORIAL-STANDARD-v1.md` |
 | Term audit | `ISEO-SU-GLOSSARY-TERM-AUDIT-v1.md` + CSV matrix (superseded for ops by final corpus) |
 | Pilot batch | `ISEO-SU-GLOSSARY-PILOT-BATCH-v1.md` (12 terms; improved into Batch 01) |
-| Batch 01 | `ISEO-SU-GLOSSARY-BATCH-01-MANIFEST-v1.md` + `content/glossary/batch-01/` |
-| Menu link | **not added** |
-| Sitemap | **excluded** while `ISEO_GLOSSARY_PUBLIC_EXPOSURE` is false |
-| Anonymous `/glossary/` | **404** |
+| Batch 01–04 | manifests under programme root + `content/glossary/batch-0N/` |
+| Menu link | **not added** (header dense; deferred) |
+| Sitemap | Yoast/wp glossary sitemap **184**; custom `sitemap.xml` unchanged |
+| Anonymous `/glossary/` | **200** |
 | Import tool | deployed then **disabled** (`ISEO_GLOSSARY_IMPORT_ENABLED = false`) |
-| Batch updater | `tools/glossary-batch01-content-updater.py` (draft-only; not a public endpoint) |
+| Exposure gate | `ISEO_GLOSSARY_PUBLIC_EXPOSURE = true` |
 | New CSS | **none** |
 
 ---
@@ -126,13 +126,13 @@ Letter group is **derived** from title (not stored).
 
 ## 8. URL Model
 
-| Surface | URL | Pre-launch behaviour |
+| Surface | URL | Post-launch behaviour |
 |---------|-----|----------------------|
-| Archive | `/glossary/` | Anonymous **404**; editors can preview |
-| Single | `/glossary/{slug}/` | Anonymous **404** unless capability; drafts only via preview |
+| Archive | `/glossary/` | Anonymous **200**; published eligible only |
+| Single | `/glossary/{slug}/` | Anonymous **200** for published; drafts non-public |
 | Collision check | no physical `glossary` / `glossary.html` | clear |
 
-Publication gate constant: `ISEO_GLOSSARY_PUBLIC_EXPOSURE` (default **false**).
+Publication gate constant: `ISEO_GLOSSARY_PUBLIC_EXPOSURE` (**true** as of 2026-07-26 launch).
 
 ---
 

@@ -2,12 +2,13 @@
 
 **Programme:** ISEO-SU-SITE-OPS  
 **Task:** ISEO-SU-SITE-OPS-GLOSSARY-EDITORIAL-AUDIT-AND-PILOT-CONTENT-STANDARD  
-**Date:** 2026-07-24 (updated 2026-07-25 Batch 01)  
-**Status:** ACTIVE FOR DRAFT PRODUCTION  
+**Date:** 2026-07-24 (updated 2026-07-26 controlled launch)  
+**Status:** ACTIVE FOR PUBLIC GLOSSARY  
 
 Companion: `ISEO-SU-GLOSSARY-EDITORIAL-STANDARD-v1.md`  
-Architecture URL gate: `ISEO_GLOSSARY_PUBLIC_EXPOSURE` (currently false)
-Final corpus: `ISEO-SU-GLOSSARY-FINAL-CORPUS-v1.md`
+Architecture URL gate: `ISEO_GLOSSARY_PUBLIC_EXPOSURE` (**true** after 2026-07-26 launch)  
+Final corpus: `ISEO-SU-GLOSSARY-FINAL-CORPUS-v1.md`  
+Launch: `ISEO-SU-GLOSSARY-PUBLICATION-LAUNCH-MANIFEST-v1.md`
 
 ---
 
@@ -15,7 +16,7 @@ Final corpus: `ISEO-SU-GLOSSARY-FINAL-CORPUS-v1.md`
 
 | Surface | Pattern | Notes |
 |---------|---------|-------|
-| Archive | `/glossary/` | Closed to anonymous users while gate is false |
+| Archive | `/glossary/` | Public hub (published eligible only) |
 | Single | `/glossary/{slug}/` | CPT rewrite; slash URLs aligned with `offer` |
 | Canonical title | one per concept | From audit `canonical_term` |
 | Canonical slug | derived from canonical title | Stored in audit CSV; may be adjusted before publish |
@@ -32,21 +33,16 @@ Rules:
 
 ## 2. Indexation Rules
 
-Pre-publication (current production state):
+Post-launch (2026-07-26):
 
-- drafts only;
-- anonymous archive/singles not publicly exposed;
-- robots/noindex controls and sitemap exclusion while gate closed.
+| Surface | Indexation |
+|---------|------------|
+| Published eligible singles | **index, follow** (default) |
+| Public archive `/glossary/` | **index, follow** |
+| MERGED / DEFERRED / EXCLUDED drafts | not public → not indexable |
+| Yoast/wp glossary sitemap | **184** published URLs observed |
 
-After intentional publication of a term:
-
-| Decision | When |
-|----------|------|
-| **Indexable** | KEEP/RENAME, complete definition, unique intent, no thin content |
-| **Noindex** | temporary QA, duplicate risk unresolved, or operator HOLD |
-| **Not published** | MERGE / EXCLUDE / unresolved REVIEW |
-
-Do not index empty definitions. Do not open the archive until a meaningful batch is ready.
+Custom `sitemap.xml` advertised in `robots.txt` remains a separate static index and was **not** modified in the launch (minimal-change).
 
 ---
 
@@ -123,8 +119,9 @@ Rules:
 - no identical mass anchors across the site;
 - do not link MERGE / EXCLUDE / DEFERRED targets;
 - prefer contrast pairs (404 vs 410, UX vs UI, ROI vs ROMI);
-- **draft stage:** store related-term names as editorial plain text; do not emit public draft→draft hyperlinks;
-- future public links only when the target entry is publication-eligible.
+- public related links render only for **published eligible** canonical targets in the single-template «Связанные понятия» block (`glossary_related_terms` meta);
+- MERGED aliases resolve to canonical targets when present; DEFERRED/EXCLUDED never linked;
+- do not mass-insert body inline links in launch maintenance waves.
 
 ---
 

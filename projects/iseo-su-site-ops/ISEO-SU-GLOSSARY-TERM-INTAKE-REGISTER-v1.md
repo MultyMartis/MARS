@@ -116,6 +116,19 @@
 | Public exposure | **still closed** |
 | Publication | **not performed** |
 
+## Controlled publication launch (2026-07-26)
+
+| Field | Value |
+|-------|-------|
+| Task | ISEO-SU-SITE-OPS-GLOSSARY-PUBLICATION-READINESS-AND-CONTROLLED-LAUNCH |
+| Published | **184** |
+| Remaining drafts | **57** |
+| Public archive | **200** `/glossary/` |
+| Exposure gate | `ISEO_GLOSSARY_PUBLIC_EXPOSURE = true` |
+| Launch manifest | `ISEO-SU-GLOSSARY-PUBLICATION-LAUNCH-MANIFEST-v1.md` |
+| Launch CSV | `data/glossary-editorial/ISEO-SU-GLOSSARY-PUBLICATION-LAUNCH-v1.csv` |
+| Menu link | **not added** |
+
 ---
 
 *Glossary term intake register v1 · updated Batch 04 2026-07-26.*

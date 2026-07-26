@@ -299,10 +299,161 @@ function iseo_glossary_filter_posts( $posts, $q ) {
 		if ( ! $post instanceof WP_Post ) {
 			continue;
 		}
-		$hay = mb_strtolower( iseo_glossary_term_title( $post ) . ' ' . $post->post_excerpt, 'UTF-8' );
+		$syn = '';
+		if ( function_exists( 'get_field' ) ) {
+			$syn = (string) get_field( 'glossary_synonyms', $post->ID );
+		} else {
+			$syn = (string) get_post_meta( $post->ID, 'glossary_synonyms', true );
+		}
+		$hay = mb_strtolower(
+			iseo_glossary_term_title( $post ) . ' ' . $post->post_excerpt . ' ' . $syn,
+			'UTF-8'
+		);
 		if ( false !== mb_strpos( $hay, $needle, 0, 'UTF-8' ) ) {
 			$out[] = $post;
 		}
 	}
 	return $out;
+}
+
+/**
+ * Normalize a glossary term label for map lookups.
+ *
+ * @param string $label Label.
+ * @return string
+ */
+function iseo_glossary_normalize_label( $label ) {
+	$label = html_entity_decode( wp_strip_all_tags( (string) $label ), ENT_QUOTES | ENT_HTML5, 'UTF-8' );
+	$label = preg_replace( '/\s+/u', ' ', $label );
+	$label = trim( mb_strtolower( (string) $label, 'UTF-8' ) );
+	return $label;
+}
+
+/**
+ * Split related-term textarea into unique labels.
+ *
+ * @param string $raw Raw field.
+ * @return string[]
+ */
+function iseo_glossary_parse_related_labels( $raw ) {
+	$raw = trim( (string) $raw );
+	if ( '' === $raw ) {
+		return array();
+	}
+	$parts = preg_split( '/[;\n]+/u', $raw );
+	$out   = array();
+	$seen  = array();
+	foreach ( (array) $parts as $part ) {
+		$label = trim( (string) $part );
+		if ( '' === $label ) {
+			continue;
+		}
+		$key = iseo_glossary_normalize_label( $label );
+		if ( '' === $key || isset( $seen[ $key ] ) ) {
+			continue;
+		}
+		$seen[ $key ] = true;
+		$out[]        = $label;
+	}
+	return $out;
+}
+
+/**
+ * Map of normalized published glossary titles → post objects (cached per request).
+ *
+ * @return array<string, WP_Post>
+ */
+function iseo_glossary_published_title_map() {
+	static $map = null;
+	if ( null !== $map ) {
+		return $map;
+	}
+
+	$map   = array();
+	$query = new WP_Query(
+		array(
+			'post_type'              => 'glossary',
+			'post_status'            => 'publish',
+			'posts_per_page'         => -1,
+			'orderby'                => 'title',
+			'order'                  => 'ASC',
+			'no_found_rows'          => true,
+			'ignore_sticky_posts'    => true,
+			'update_post_meta_cache' => false,
+			'update_post_term_cache' => false,
+		)
+	);
+
+	if ( empty( $query->posts ) || ! is_array( $query->posts ) ) {
+		return $map;
+	}
+
+	foreach ( $query->posts as $post ) {
+		$post = get_post( $post );
+		if ( ! $post instanceof WP_Post ) {
+			continue;
+		}
+		$title = iseo_glossary_term_title( $post );
+		$key   = iseo_glossary_normalize_label( $title );
+		if ( '' === $key || isset( $map[ $key ] ) ) {
+			continue;
+		}
+		$map[ $key ] = $post;
+	}
+
+	return $map;
+}
+
+/**
+ * Resolve related-term labels for a glossary post into public link rows.
+ * Only published + publicly exposed targets are linked.
+ *
+ * @param WP_Post|int $post Post.
+ * @return array<int, array{label:string,url:string}>
+ */
+function iseo_glossary_get_related_public_links( $post ) {
+	$post = get_post( $post );
+	if ( ! $post instanceof WP_Post ) {
+		return array();
+	}
+
+	$raw = '';
+	if ( function_exists( 'get_field' ) ) {
+		$raw = (string) get_field( 'glossary_related_terms', $post->ID );
+	}
+	if ( '' === trim( $raw ) ) {
+		$raw = (string) get_post_meta( $post->ID, 'glossary_related_terms', true );
+	}
+
+	$labels = iseo_glossary_parse_related_labels( $raw );
+	if ( empty( $labels ) ) {
+		return array();
+	}
+
+	$self_key = iseo_glossary_normalize_label( iseo_glossary_term_title( $post ) );
+	$map      = iseo_glossary_published_title_map();
+	$links    = array();
+	$seen     = array();
+
+	foreach ( $labels as $label ) {
+		$key = iseo_glossary_normalize_label( $label );
+		if ( '' === $key || $key === $self_key || isset( $seen[ $key ] ) ) {
+			continue;
+		}
+		if ( ! isset( $map[ $key ] ) ) {
+			continue;
+		}
+		$target = $map[ $key ];
+		$url    = iseo_glossary_term_list_url( $target );
+		if ( '' === $url ) {
+			continue;
+		}
+		$seen[ $key ] = true;
+		$links[]      = array(
+			'label' => iseo_glossary_term_title( $target ),
+			'url'   => $url,
+		);
+	}
+
+	return $links;
 }

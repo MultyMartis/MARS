@@ -31,7 +31,7 @@ No secrets stored here.
 | Shared CSS | `css/main.css`, `css/media.css` | sitewide marketing look |
 | SEO calculator / tariffs | `/tariff-calc`, ACF calculator groups, `tarif-calc.php`, handlers | revenue tool |
 | Web-KP / offers | `/offers`, CPT `offer`, `single-offer.php`, ACF «Предложения» | private commercial proposals |
-| Glossary (pre-launch) | CPT `glossary`, `/glossary/`, glossary templates/includes, draft terms | do not publish empties; do not open exposure gate without charter; no new CSS; archive preview uses dedicated query + preview links only |
+| Glossary (public + drafts) | CPT `glossary`, `/glossary/`, glossary templates/includes, non-eligible drafts | do not publish MERGED/DEFERRED/EXCLUDED; no new CSS; related links only to published eligible; exposure/rollback via launch docs |
 | Global header/footer | static HTML chrome + theme topbar/footer parts | dual-channel breakage |
 | Homepage template | `page-home.php` (+ parallel `home.html`) | primary acquisition surface |
 | Analytics / verification | `google*.html`, `yandex_*.html`, injected scripts | SEO/property proof |

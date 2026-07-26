@@ -10,8 +10,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! defined( 'ISEO_GLOSSARY_PUBLIC_EXPOSURE' ) ) {
-	// Operator publication gate: keep false until definitions are ready.
-	define( 'ISEO_GLOSSARY_PUBLIC_EXPOSURE', false );
+	// Controlled public launch: eligible published glossary articles + archive.
+	define( 'ISEO_GLOSSARY_PUBLIC_EXPOSURE', true );
 }
 
 /**
@@ -141,8 +141,13 @@ function iseo_glossary_robots( $robots ) {
 	if ( ! is_post_type_archive( 'glossary' ) && ! is_singular( 'glossary' ) ) {
 		return $robots;
 	}
-	if ( iseo_glossary_is_publicly_exposed() && is_singular( 'glossary' ) && 'publish' === get_post_status() ) {
-		return $robots;
+	if ( iseo_glossary_is_publicly_exposed() ) {
+		if ( is_post_type_archive( 'glossary' ) ) {
+			return $robots;
+		}
+		if ( is_singular( 'glossary' ) && 'publish' === get_post_status() ) {
+			return $robots;
+		}
 	}
 	$robots['noindex']  = true;
 	$robots['nofollow'] = true;
