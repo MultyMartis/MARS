@@ -203,7 +203,11 @@ LEVEL 1 publish→draft allowlist; LEVEL exposure false + bak restore; LEVEL dat
 
 ## 32. Git Persistence
 
-One scoped commit authorized after validation (no push). Subject: `feat(iseo-su): launch public glossary`.
+Scoped commit created (no push):
+
+- hash: `add9ff304e010e578bb35233f63a9a40eee97af3`
+- subject: `feat(iseo-su): launch public glossary`
+- 17 allowlisted paths only; foreign WIP preserved; raw DB backup not committed.
 
 ## 33. Operator Review
 
