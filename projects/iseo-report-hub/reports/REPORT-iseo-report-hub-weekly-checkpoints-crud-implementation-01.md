@@ -3,7 +3,7 @@
 **project_id:** `iseo-report-hub`  
 **Date:** 2026-07-26  
 **Authority:** Operator I-SEO Report Hub Weekly Checkpoints CRUD Implementation 01  
-**Primary commit:** `PENDING_PRIMARY_HASH` — `feat(iseo-report-hub): add weekly checkpoints crud`  
+**Primary commit:** `911db07d8ca51bb1778c53ca570ef3b8950234a0` — `feat(iseo-report-hub): add weekly checkpoints crud`  
 **Hash-record commit:** `PENDING_HASH_RECORD` — `docs(iseo-report-hub): record weekly checkpoints crud commit hash`
 
 ---
@@ -161,11 +161,11 @@ Authenticated HTTP smoke used **session injection** (`ISEO_ADMIN_PASSWORD` unset
 |------|-------|
 | Exact-path git add | yes (allowlisted paths only) |
 | Staged list | see post-commit verification |
-| Primary commit hash | `PENDING_PRIMARY_HASH` |
+| Primary commit hash | `911db07d8ca51bb1778c53ca570ef3b8950234a0` |
 | Primary message | `feat(iseo-report-hub): add weekly checkpoints crud` |
 | Hash-record commit | `PENDING_HASH_RECORD` |
 | Hash-record message | `docs(iseo-report-hub): record weekly checkpoints crud commit hash` |
-| HEAD verification | after commits |
+| HEAD verification | after hash-record |
 | Push | **no** |
 
 ---
