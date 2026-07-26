@@ -4,8 +4,13 @@ declare(strict_types=1);
 /** @var array<string, mixed>|null $period */
 /** @var list<array<string, mixed>> $sourceCheckpoints */
 /** @var bool $canEdit */
+/** @var list<array<string, mixed>> $reportBlocks */
+/** @var bool $canCreateBlock */
 $periodId = (int) $report['reporting_period_id'];
+$reportId = (int) $report['id'];
 $sourceCheckpoints = $sourceCheckpoints ?? [];
+$reportBlocks = $reportBlocks ?? [];
+$canCreateBlock = $canCreateBlock ?? false;
 ?>
 <section class="panel">
     <div class="panel-head">
@@ -13,8 +18,9 @@ $sourceCheckpoints = $sourceCheckpoints ?? [];
         <p>
             <a class="btn btn-secondary" href="<?= e(url_path('/reporting-periods/' . $periodId)) ?>">Parent period</a>
             <a class="btn btn-secondary" href="<?= e(url_path('/reporting-periods/' . $periodId . '/weekly-checkpoints')) ?>">Weekly checkpoints</a>
+            <a class="btn btn-secondary" href="<?= e(url_path('/monthly-reports/' . $reportId . '/blocks')) ?>">Report blocks</a>
             <?php if ($canEdit): ?>
-                <a class="btn" href="<?= e(url_path('/monthly-reports/' . (int) $report['id'] . '/edit')) ?>">Edit</a>
+                <a class="btn" href="<?= e(url_path('/monthly-reports/' . $reportId . '/edit')) ?>">Edit</a>
             <?php endif; ?>
         </p>
     </div>
@@ -83,4 +89,55 @@ $sourceCheckpoints = $sourceCheckpoints ?? [];
         <li><strong>Client notes:</strong> <?= e((string) ($report['client_notes'] ?? '—')) ?></li>
         <li><strong>Internal notes:</strong> <?= e((string) ($report['internal_notes'] ?? '—')) ?></li>
     </ul>
+</section>
+
+<section class="panel">
+    <div class="panel-head">
+        <h2>Report blocks</h2>
+        <p>
+            <a class="btn btn-secondary" href="<?= e(url_path('/monthly-reports/' . $reportId . '/blocks')) ?>">Open block list</a>
+            <?php if ($canCreateBlock): ?>
+                <a class="btn" href="<?= e(url_path('/monthly-reports/' . $reportId . '/blocks/create')) ?>">Create block</a>
+            <?php endif; ?>
+        </p>
+    </div>
+    <?php if ($reportBlocks === []): ?>
+        <p class="note">No report blocks yet.</p>
+    <?php else: ?>
+        <div class="table-wrap">
+            <table class="data-table">
+                <thead>
+                <tr>
+                    <th>Sort</th>
+                    <th>Key</th>
+                    <th>Type</th>
+                    <th>Title</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($reportBlocks as $rb): ?>
+                    <?php
+                    $bid = (int) $rb['id'];
+                    $canEditBlock = !empty($rb['_can_edit']);
+                    ?>
+                    <tr>
+                        <td><?= e((string) $rb['sort_order']) ?></td>
+                        <td><code><?= e((string) $rb['block_key']) ?></code></td>
+                        <td><span class="type-badge"><?= e((string) $rb['block_type']) ?></span></td>
+                        <td><?= e((string) $rb['title']) ?></td>
+                        <td><span class="status-badge status-<?= e((string) $rb['status']) ?>"><?= e((string) $rb['status']) ?></span></td>
+                        <td class="actions">
+                            <a href="<?= e(url_path('/report-blocks/' . $bid)) ?>">View</a>
+                            <?php if ($canEditBlock): ?>
+                                · <a href="<?= e(url_path('/report-blocks/' . $bid . '/edit')) ?>">Edit</a>
+                            <?php endif; ?>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    <?php endif; ?>
 </section>

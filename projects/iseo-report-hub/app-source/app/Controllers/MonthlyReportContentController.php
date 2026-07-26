@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Iseo\Controllers;
 
 use Iseo\Services\MonthlyReportContentService;
+use Iseo\Services\ReportBlockService;
 use Iseo\Support\Response;
 
 final class MonthlyReportContentController extends BaseController
@@ -14,7 +15,8 @@ final class MonthlyReportContentController extends BaseController
         \Iseo\Services\ConfigService $config,
         \Iseo\Services\AuthService $auth,
         \Iseo\Services\CsrfService $csrf,
-        private MonthlyReportContentService $monthlyReports
+        private MonthlyReportContentService $monthlyReports,
+        private ReportBlockService $reportBlocks
     ) {
         parent::__construct($app, $view, $config, $auth, $csrf);
     }
@@ -318,12 +320,38 @@ final class MonthlyReportContentController extends BaseController
             && $this->monthlyReports->canEdit($user, $report)
             && $this->monthlyReports->canMutateAgainstParent($user, $period);
 
+        $reportBlocks = [];
+        $canCreateBlock = false;
+        try {
+            $reportBlocks = $this->reportBlocks->listForMonthlyReport((int) $report['id']);
+            $canCreateBlock = $this->reportBlocks->canCreate($user)
+                && $this->reportBlocks->canMutateAgainstParent($user, [
+                    'id' => (int) $report['id'],
+                    'status' => (string) $report['status'],
+                    'reporting_period_id' => (int) $report['reporting_period_id'],
+                ]);
+            foreach ($reportBlocks as &$blockRow) {
+                $blockRow['_can_edit'] = $this->reportBlocks->canEdit($user, $blockRow)
+                    && $this->reportBlocks->canMutateAgainstParent($user, [
+                        'id' => (int) $report['id'],
+                        'status' => (string) $report['status'],
+                        'reporting_period_id' => (int) $report['reporting_period_id'],
+                    ]);
+            }
+            unset($blockRow);
+        } catch (\Throwable) {
+            $reportBlocks = [];
+            $canCreateBlock = false;
+        }
+
         $this->render('monthly-reports/show', [
             'pageTitle' => 'Monthly report — ' . (string) ($report['period_key'] ?? $report['id']),
             'report' => $report,
             'period' => $period,
             'sourceCheckpoints' => $sourceRows,
             'canEdit' => $canEdit,
+            'reportBlocks' => $reportBlocks,
+            'canCreateBlock' => $canCreateBlock,
         ]);
     }
 

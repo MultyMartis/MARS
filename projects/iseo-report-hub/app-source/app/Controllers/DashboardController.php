@@ -4,9 +4,11 @@ declare(strict_types=1);
 namespace Iseo\Controllers;
 
 use Iseo\Repositories\MonthlyReportContentRepository;
+use Iseo\Repositories\ReportBlockRepository;
 use Iseo\Repositories\ReportingPeriodRepository;
 use Iseo\Repositories\WeeklyCheckpointRepository;
 use Iseo\Services\MonthlyReportContentService;
+use Iseo\Services\ReportBlockService;
 use Iseo\Services\ReportingPeriodService;
 use Iseo\Services\WeeklyCheckpointService;
 use Throwable;
@@ -26,9 +28,11 @@ final class DashboardController extends BaseController
         $periodCount = null;
         $checkpointCount = null;
         $monthlyCount = null;
+        $blockCount = null;
         $reportingDetail = 'Internal CRUD ready — list / detail / create / edit / archive-by-status.';
         $checkpointDetail = 'Period-scoped CRUD ready — list / detail / create / edit / skip-or-archive-by-status.';
         $monthlyDetail = 'Period-scoped CRUD ready — detail / create / edit / archive-by-status.';
+        $blockDetail = 'Monthly-scoped CRUD ready — list / detail / create / edit / archive-by-status.';
         if ($dbConfigured) {
             try {
                 /** @var \Iseo\Services\DatabaseService $db */
@@ -42,10 +46,14 @@ final class DashboardController extends BaseController
                 $monthlyService = new MonthlyReportContentService(new MonthlyReportContentRepository($db), $db);
                 $monthlyCount = $monthlyService->countReports();
                 $monthlyDetail = 'Period-scoped CRUD ready. Monthly reports in DB: ' . $monthlyCount . '.';
+                $blockService = new ReportBlockService(new ReportBlockRepository($db), $db);
+                $blockCount = $blockService->countBlocks();
+                $blockDetail = 'Monthly-scoped CRUD ready. Report blocks in DB: ' . $blockCount . '.';
             } catch (Throwable) {
                 $reportingDetail = 'CRUD code ready; period count unavailable.';
                 $checkpointDetail = 'CRUD code ready; checkpoint count unavailable.';
                 $monthlyDetail = 'CRUD code ready; monthly report count unavailable.';
+                $blockDetail = 'CRUD code ready; report block count unavailable.';
             }
         }
 
@@ -55,6 +63,7 @@ final class DashboardController extends BaseController
             'periodCount' => $periodCount,
             'checkpointCount' => $checkpointCount,
             'monthlyCount' => $monthlyCount,
+            'blockCount' => $blockCount,
             'cards' => [
                 [
                     'title' => 'Auth',
@@ -87,6 +96,11 @@ final class DashboardController extends BaseController
                     'title' => 'Monthly reports',
                     'status' => 'ready',
                     'detail' => $monthlyDetail,
+                ],
+                [
+                    'title' => 'Report blocks',
+                    'status' => 'ready',
+                    'detail' => $blockDetail,
                 ],
             ],
         ]);

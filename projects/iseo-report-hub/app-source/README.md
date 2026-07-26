@@ -2,7 +2,7 @@
 
 ## Status
 
-**Auth + reporting period CRUD + weekly checkpoints CRUD + monthly report content CRUD MVP (local).** Versioned Active Brain mirror with DB-backed login/logout, safe `/health` DB status, local admin/fixture tools, internal reporting-period CRUD, period-scoped weekly checkpoint CRUD, and period-scoped monthly report content CRUD. Sync to Localhost runtime is done via allowlist (Model A).
+**Auth + reporting period CRUD + weekly checkpoints CRUD + monthly report content CRUD + report blocks CRUD MVP (local).** Versioned Active Brain mirror with DB-backed login/logout, safe `/health` DB status, local admin/fixture tools, internal reporting-period CRUD, period-scoped weekly checkpoint CRUD, period-scoped monthly report content CRUD, and monthly-scoped report blocks CRUD. Sync to Localhost runtime is done via allowlist (Model A).
 
 | Fact | State |
 |------|-------|
@@ -10,11 +10,12 @@
 | WordPress | **Not used** as runtime or source of truth |
 | Framework / Composer | **None** — plain PHP 8.3 |
 | Database | Local `iseo_report_hub_dev` via runtime `.env.local` (not in Git) |
-| Migrations | Core + reporting_periods + weekly_checkpoints + monthly_report_contents applied (separate waves) |
+| Migrations | Core + reporting_periods + weekly_checkpoints + monthly_report_contents + report_blocks applied (separate waves) |
 | Auth | **DB-backed** — `password_verify` + roles + audit |
 | Reporting periods | **CRUD MVP** — list/detail/create/edit/archive-by-status |
 | Weekly checkpoints | **CRUD MVP** — period-scoped list/detail/create/edit/skip-or-archive-by-status |
 | Monthly report content | **CRUD MVP** — period-scoped detail/create/edit/archive-by-status; one row per period |
+| Report blocks | **CRUD MVP** — monthly-scoped list/detail/create/edit/archive-by-status; unique parent+block_key |
 | Secrets | **None in source** — `.env.example` placeholders only; **no** `.env` / `.env.local` |
 | Runtime sync | Allowlist source → runtime |
 
@@ -69,13 +70,20 @@ Creates one local-only demo client / project / site / reporting_period (`LOCAL_F
 - `GET /reporting-periods/{period_id}/monthly-report` — period monthly detail (or redirect to create)
 - `GET /reporting-periods/{period_id}/monthly-report/create` — create form (one per period)
 - `POST /reporting-periods/{period_id}/monthly-report` — create (CSRF; duplicate guard)
-- `GET /monthly-reports/{id}` — flat detail
+- `GET /monthly-reports/{id}` — flat detail (includes report blocks section)
 - `GET /monthly-reports/{id}/edit` — edit form
 - `POST /monthly-reports/{id}` — update (CSRF; archive via status)
+- `GET /monthly-reports/{monthly_report_id}/blocks` — block list within monthly report
+- `GET /monthly-reports/{monthly_report_id}/blocks/create` — create block form
+- `POST /monthly-reports/{monthly_report_id}/blocks` — create block (CSRF; unique parent+block_key)
+- `GET /report-blocks/{id}` — flat block detail
+- `GET /report-blocks/{id}/edit` — edit form
+- `POST /report-blocks/{id}` — update (CSRF; archive via status)
 - 404 fallback
 
-No top-level `/monthly-reports` index (period-scoped entry is enough).  
-No DELETE route for reporting periods, weekly checkpoints, or monthly report content — archive/skip via status.
+No top-level `/monthly-reports` or `/report-blocks` index (period/monthly-scoped entry is enough).  
+No DELETE route for reporting periods, weekly checkpoints, monthly report content, or report blocks — archive/skip via status.  
+No drag/drop reorder (manual `sort_order` only).
 
 ## Secrets policy
 
@@ -89,12 +97,12 @@ No DELETE route for reporting periods, weekly checkpoints, or monthly report con
 
 - No password reset / remember-me / OAuth
 - No client portal auth for `client_viewer`
-- No report blocks editor / PDF export
-- No hard DELETE of reporting periods, weekly checkpoints, or monthly report content
+- No drag/drop reorder / rich text editor / PDF export
+- No hard DELETE of reporting periods, weekly checkpoints, monthly report content, or report blocks
 - No user management UI
 - No real client import
 - No Composer / npm / WordPress
 
 ## Next phase
 
-**Recommended:** Report Blocks DB-06 Charter 01 (or Monthly Report Content CRUD Hardening 01 if multi-role smoke needed).
+**Recommended:** Report Preview / Render Charter 01 (or Report Blocks CRUD Hardening 01 if multi-role smoke needed).

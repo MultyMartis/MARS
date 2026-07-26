@@ -3,10 +3,10 @@ declare(strict_types=1);
 
 /**
  * Conceptual routes — DB-backed auth + reporting period CRUD + weekly checkpoints
- * + monthly report content CRUD.
+ * + monthly report content CRUD + report blocks CRUD.
  *
- * Dynamic /reporting-periods/{id}, /weekly-checkpoints/{id}, and
- * /monthly-reports/{id} matching is registered at request time against the
+ * Dynamic /reporting-periods/{id}, /weekly-checkpoints/{id}, /monthly-reports/{id},
+ * and /report-blocks/{id} matching is registered at request time against the
  * exact path (Router remains exact-match only; no overbuilt pattern engine).
  * Static /create segments and nested paths are matched before bare ids.
  *
@@ -17,9 +17,11 @@ use Iseo\Controllers\AuthController;
 use Iseo\Controllers\DashboardController;
 use Iseo\Controllers\HealthController;
 use Iseo\Controllers\MonthlyReportContentController;
+use Iseo\Controllers\ReportBlockController;
 use Iseo\Controllers\ReportingPeriodController;
 use Iseo\Controllers\WeeklyCheckpointController;
 use Iseo\Repositories\MonthlyReportContentRepository;
+use Iseo\Repositories\ReportBlockRepository;
 use Iseo\Repositories\ReportingPeriodRepository;
 use Iseo\Repositories\WeeklyCheckpointRepository;
 use Iseo\Services\AuthService;
@@ -27,6 +29,7 @@ use Iseo\Services\ConfigService;
 use Iseo\Services\CsrfService;
 use Iseo\Services\DatabaseService;
 use Iseo\Services\MonthlyReportContentService;
+use Iseo\Services\ReportBlockService;
 use Iseo\Services\ReportingPeriodService;
 use Iseo\Services\WeeklyCheckpointService;
 use Iseo\Support\Router;
@@ -55,6 +58,8 @@ $checkpointRepo = new WeeklyCheckpointRepository($db);
 $checkpointService = new WeeklyCheckpointService($checkpointRepo, $db);
 $monthlyRepo = new MonthlyReportContentRepository($db);
 $monthlyService = new MonthlyReportContentService($monthlyRepo, $db);
+$blockRepo = new ReportBlockRepository($db);
+$blockService = new ReportBlockService($blockRepo, $db);
 $reportingPeriods = new ReportingPeriodController(
     $app,
     $view,
@@ -66,7 +71,16 @@ $reportingPeriods = new ReportingPeriodController(
     $monthlyService
 );
 $weeklyCheckpoints = new WeeklyCheckpointController($app, $view, $config, $auth, $csrf, $checkpointService);
-$monthlyReports = new MonthlyReportContentController($app, $view, $config, $auth, $csrf, $monthlyService);
+$monthlyReports = new MonthlyReportContentController(
+    $app,
+    $view,
+    $config,
+    $auth,
+    $csrf,
+    $monthlyService,
+    $blockService
+);
+$reportBlocks = new ReportBlockController($app, $view, $config, $auth, $csrf, $blockService);
 
 $router->get('/', static function () use ($dashboard): void {
     $dashboard->index();
@@ -115,6 +129,19 @@ if (preg_match('#^/reporting-periods/(\d+)/monthly-report/create$#', $requestPat
     $router->post($requestPath, static function () use ($monthlyReports, $periodId): void {
         $monthlyReports->store($periodId);
     });
+} elseif (preg_match('#^/monthly-reports/(\d+)/blocks/create$#', $requestPath, $m) === 1) {
+    $reportId = (int) $m[1];
+    $router->get($requestPath, static function () use ($reportBlocks, $reportId): void {
+        $reportBlocks->create($reportId);
+    });
+} elseif (preg_match('#^/monthly-reports/(\d+)/blocks$#', $requestPath, $m) === 1) {
+    $reportId = (int) $m[1];
+    $router->get($requestPath, static function () use ($reportBlocks, $reportId): void {
+        $reportBlocks->indexForMonthlyReport($reportId);
+    });
+    $router->post($requestPath, static function () use ($reportBlocks, $reportId): void {
+        $reportBlocks->store($reportId);
+    });
 } elseif (preg_match('#^/monthly-reports/(\d+)/edit$#', $requestPath, $m) === 1) {
     $reportId = (int) $m[1];
     $router->get($requestPath, static function () use ($monthlyReports, $reportId): void {
@@ -127,6 +154,19 @@ if (preg_match('#^/reporting-periods/(\d+)/monthly-report/create$#', $requestPat
     });
     $router->post($requestPath, static function () use ($monthlyReports, $reportId): void {
         $monthlyReports->update($reportId);
+    });
+} elseif (preg_match('#^/report-blocks/(\d+)/edit$#', $requestPath, $m) === 1) {
+    $blockId = (int) $m[1];
+    $router->get($requestPath, static function () use ($reportBlocks, $blockId): void {
+        $reportBlocks->edit($blockId);
+    });
+} elseif (preg_match('#^/report-blocks/(\d+)$#', $requestPath, $m) === 1) {
+    $blockId = (int) $m[1];
+    $router->get($requestPath, static function () use ($reportBlocks, $blockId): void {
+        $reportBlocks->show($blockId);
+    });
+    $router->post($requestPath, static function () use ($reportBlocks, $blockId): void {
+        $reportBlocks->update($blockId);
     });
 } elseif (preg_match('#^/reporting-periods/(\d+)/weekly-checkpoints/create$#', $requestPath, $m) === 1) {
     $periodId = (int) $m[1];
