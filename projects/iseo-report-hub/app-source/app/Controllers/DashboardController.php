@@ -3,8 +3,10 @@ declare(strict_types=1);
 
 namespace Iseo\Controllers;
 
+use Iseo\Repositories\MonthlyReportContentRepository;
 use Iseo\Repositories\ReportingPeriodRepository;
 use Iseo\Repositories\WeeklyCheckpointRepository;
+use Iseo\Services\MonthlyReportContentService;
 use Iseo\Services\ReportingPeriodService;
 use Iseo\Services\WeeklyCheckpointService;
 use Throwable;
@@ -23,8 +25,10 @@ final class DashboardController extends BaseController
 
         $periodCount = null;
         $checkpointCount = null;
+        $monthlyCount = null;
         $reportingDetail = 'Internal CRUD ready — list / detail / create / edit / archive-by-status.';
         $checkpointDetail = 'Period-scoped CRUD ready — list / detail / create / edit / skip-or-archive-by-status.';
+        $monthlyDetail = 'Period-scoped CRUD ready — detail / create / edit / archive-by-status.';
         if ($dbConfigured) {
             try {
                 /** @var \Iseo\Services\DatabaseService $db */
@@ -35,9 +39,13 @@ final class DashboardController extends BaseController
                 $checkpointService = new WeeklyCheckpointService(new WeeklyCheckpointRepository($db), $db);
                 $checkpointCount = $checkpointService->countCheckpoints();
                 $checkpointDetail = 'Period-scoped CRUD ready. Checkpoints in DB: ' . $checkpointCount . '.';
+                $monthlyService = new MonthlyReportContentService(new MonthlyReportContentRepository($db), $db);
+                $monthlyCount = $monthlyService->countReports();
+                $monthlyDetail = 'Period-scoped CRUD ready. Monthly reports in DB: ' . $monthlyCount . '.';
             } catch (Throwable) {
                 $reportingDetail = 'CRUD code ready; period count unavailable.';
                 $checkpointDetail = 'CRUD code ready; checkpoint count unavailable.';
+                $monthlyDetail = 'CRUD code ready; monthly report count unavailable.';
             }
         }
 
@@ -46,6 +54,7 @@ final class DashboardController extends BaseController
             'user' => $user,
             'periodCount' => $periodCount,
             'checkpointCount' => $checkpointCount,
+            'monthlyCount' => $monthlyCount,
             'cards' => [
                 [
                     'title' => 'Auth',
@@ -73,6 +82,11 @@ final class DashboardController extends BaseController
                     'title' => 'Weekly checkpoints',
                     'status' => 'ready',
                     'detail' => $checkpointDetail,
+                ],
+                [
+                    'title' => 'Monthly reports',
+                    'status' => 'ready',
+                    'detail' => $monthlyDetail,
                 ],
             ],
         ]);

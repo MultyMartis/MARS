@@ -438,6 +438,41 @@ code {
   font-size: 0.85rem;
 }
 
+.mrc-form {
+  max-width: 48rem;
+}
+
+.mrc-source-fieldset {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.75rem 1rem 1rem;
+}
+
+.mrc-source-fieldset legend {
+  padding: 0 0.35rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.mrc-source-list {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.mrc-source-item {
+  display: flex;
+  gap: 0.55rem;
+  align-items: flex-start;
+}
+
+.mrc-form textarea {
+  min-height: 5.5rem;
+  resize: vertical;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;

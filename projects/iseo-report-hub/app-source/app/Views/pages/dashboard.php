@@ -31,8 +31,9 @@ declare(strict_types=1);
     <p>
         <a class="btn" href="<?= e(url_path('/reporting-periods')) ?>">Reporting periods<?= isset($periodCount) && $periodCount !== null ? ' (' . e((string) $periodCount) . ')' : '' ?></a>
         <a class="btn btn-secondary" href="<?= e(url_path('/reporting-periods')) ?>">Weekly checkpoints<?= isset($checkpointCount) && $checkpointCount !== null ? ' (' . e((string) $checkpointCount) . ')' : '' ?> — via periods</a>
+        <a class="btn btn-secondary" href="<?= e(url_path('/reporting-periods')) ?>">Monthly reports<?= isset($monthlyCount) && $monthlyCount !== null ? ' (' . e((string) $monthlyCount) . ')' : '' ?> — via periods</a>
         <a class="btn" href="<?= e(url_path('/health')) ?>">Health</a>
         <a class="btn btn-secondary" href="<?= e(url_path('/logout')) ?>">Logout</a>
     </p>
-    <p class="note">Weekly checkpoints are period-scoped (no top-level weekly nav). Open a reporting period, then its checkpoint list.</p>
+    <p class="note">Weekly checkpoints and monthly report content are period-scoped (no top-level nav). Open a reporting period, then its checkpoint list or monthly report.</p>
 </section>

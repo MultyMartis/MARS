@@ -2,7 +2,7 @@
 
 ## Status
 
-**Auth + reporting period CRUD + weekly checkpoints CRUD MVP (local).** Versioned Active Brain mirror with DB-backed login/logout, safe `/health` DB status, local admin/fixture tools, internal reporting-period CRUD, and period-scoped weekly checkpoint CRUD. Sync to Localhost runtime is done via allowlist (Model A).
+**Auth + reporting period CRUD + weekly checkpoints CRUD + monthly report content CRUD MVP (local).** Versioned Active Brain mirror with DB-backed login/logout, safe `/health` DB status, local admin/fixture tools, internal reporting-period CRUD, period-scoped weekly checkpoint CRUD, and period-scoped monthly report content CRUD. Sync to Localhost runtime is done via allowlist (Model A).
 
 | Fact | State |
 |------|-------|
@@ -10,10 +10,11 @@
 | WordPress | **Not used** as runtime or source of truth |
 | Framework / Composer | **None** — plain PHP 8.3 |
 | Database | Local `iseo_report_hub_dev` via runtime `.env.local` (not in Git) |
-| Migrations | Core + reporting_periods + weekly_checkpoints applied (separate waves) |
+| Migrations | Core + reporting_periods + weekly_checkpoints + monthly_report_contents applied (separate waves) |
 | Auth | **DB-backed** — `password_verify` + roles + audit |
 | Reporting periods | **CRUD MVP** — list/detail/create/edit/archive-by-status |
 | Weekly checkpoints | **CRUD MVP** — period-scoped list/detail/create/edit/skip-or-archive-by-status |
+| Monthly report content | **CRUD MVP** — period-scoped detail/create/edit/archive-by-status; one row per period |
 | Secrets | **None in source** — `.env.example` placeholders only; **no** `.env` / `.env.local` |
 | Runtime sync | Allowlist source → runtime |
 
@@ -56,7 +57,7 @@ Creates one local-only demo client / project / site / reporting_period (`LOCAL_F
 - `GET /reporting-periods` — list (auth + internal role)
 - `GET /reporting-periods/create` — create form
 - `POST /reporting-periods` — create (CSRF)
-- `GET /reporting-periods/{id}` — detail (includes weekly checkpoint section)
+- `GET /reporting-periods/{id}` — detail (includes weekly checkpoint + monthly report sections)
 - `GET /reporting-periods/{id}/edit` — edit form
 - `POST /reporting-periods/{id}` — update (CSRF; archive via status)
 - `GET /reporting-periods/{period_id}/weekly-checkpoints` — list within period
@@ -65,9 +66,16 @@ Creates one local-only demo client / project / site / reporting_period (`LOCAL_F
 - `GET /weekly-checkpoints/{id}` — detail
 - `GET /weekly-checkpoints/{id}/edit` — edit form
 - `POST /weekly-checkpoints/{id}` — update (CSRF; skip/archive via status)
+- `GET /reporting-periods/{period_id}/monthly-report` — period monthly detail (or redirect to create)
+- `GET /reporting-periods/{period_id}/monthly-report/create` — create form (one per period)
+- `POST /reporting-periods/{period_id}/monthly-report` — create (CSRF; duplicate guard)
+- `GET /monthly-reports/{id}` — flat detail
+- `GET /monthly-reports/{id}/edit` — edit form
+- `POST /monthly-reports/{id}` — update (CSRF; archive via status)
 - 404 fallback
 
-No DELETE route for reporting periods or weekly checkpoints — archive/skip via status.
+No top-level `/monthly-reports` index (period-scoped entry is enough).  
+No DELETE route for reporting periods, weekly checkpoints, or monthly report content — archive/skip via status.
 
 ## Secrets policy
 
@@ -81,12 +89,12 @@ No DELETE route for reporting periods or weekly checkpoints — archive/skip via
 
 - No password reset / remember-me / OAuth
 - No client portal auth for `client_viewer`
-- No monthly content editor / report blocks
-- No hard DELETE of reporting periods or weekly checkpoints
+- No report blocks editor / PDF export
+- No hard DELETE of reporting periods, weekly checkpoints, or monthly report content
 - No user management UI
 - No real client import
 - No Composer / npm / WordPress
 
 ## Next phase
 
-**Recommended:** Monthly Report Content DB-05 Charter 01 (or Weekly Checkpoints CRUD Hardening 01 if multi-role smoke needed).
+**Recommended:** Report Blocks DB-06 Charter 01 (or Monthly Report Content CRUD Hardening 01 if multi-role smoke needed).

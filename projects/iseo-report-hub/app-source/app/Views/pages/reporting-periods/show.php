@@ -4,9 +4,15 @@ declare(strict_types=1);
 /** @var bool $canEdit */
 /** @var list<array<string, mixed>> $weeklyCheckpoints */
 /** @var bool $canCreateCheckpoint */
+/** @var array<string, mixed>|null $monthlyReport */
+/** @var bool $canCreateMonthly */
+/** @var bool $canEditMonthly */
 $periodId = (int) $period['id'];
 $weeklyCheckpoints = $weeklyCheckpoints ?? [];
 $canCreateCheckpoint = $canCreateCheckpoint ?? false;
+$monthlyReport = $monthlyReport ?? null;
+$canCreateMonthly = $canCreateMonthly ?? false;
+$canEditMonthly = $canEditMonthly ?? false;
 ?>
 <section class="panel">
     <div class="panel-head">
@@ -17,6 +23,7 @@ $canCreateCheckpoint = $canCreateCheckpoint ?? false;
                 <a class="btn" href="<?= e(url_path('/reporting-periods/' . $periodId . '/edit')) ?>">Edit</a>
             <?php endif; ?>
             <a class="btn btn-secondary" href="<?= e(url_path('/reporting-periods/' . $periodId . '/weekly-checkpoints')) ?>">Weekly checkpoints</a>
+            <a class="btn btn-secondary" href="<?= e(url_path('/reporting-periods/' . $periodId . '/monthly-report')) ?>">Monthly report</a>
         </p>
     </div>
     <p>
@@ -90,6 +97,27 @@ $canCreateCheckpoint = $canCreateCheckpoint ?? false;
 </section>
 
 <section class="panel">
-    <h2>Content scope</h2>
-    <p class="note">Monthly report content / report blocks: not implemented.</p>
+    <div class="panel-head">
+        <h2>Monthly report content</h2>
+        <p>
+            <?php if ($monthlyReport !== null): ?>
+                <a class="btn btn-secondary" href="<?= e(url_path('/monthly-reports/' . (int) $monthlyReport['id'])) ?>">Open report</a>
+                <?php if ($canEditMonthly): ?>
+                    <a class="btn" href="<?= e(url_path('/monthly-reports/' . (int) $monthlyReport['id'] . '/edit')) ?>">Edit</a>
+                <?php endif; ?>
+            <?php elseif ($canCreateMonthly): ?>
+                <a class="btn" href="<?= e(url_path('/reporting-periods/' . $periodId . '/monthly-report/create')) ?>">Create monthly report</a>
+            <?php endif; ?>
+        </p>
+    </div>
+    <?php if ($monthlyReport === null): ?>
+        <p class="note">No monthly report content for this period yet.</p>
+    <?php else: ?>
+        <ul class="facts">
+            <li><strong>ID:</strong> <?= e((string) $monthlyReport['id']) ?></li>
+            <li><strong>Title:</strong> <?= e((string) $monthlyReport['title']) ?></li>
+            <li><strong>Status:</strong> <span class="status-badge status-<?= e((string) $monthlyReport['status']) ?>"><?= e((string) $monthlyReport['status']) ?></span></li>
+        </ul>
+    <?php endif; ?>
+    <p class="note">Report blocks / PDF export: not implemented.</p>
 </section>

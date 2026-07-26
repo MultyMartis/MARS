@@ -1,0 +1,86 @@
+<?php
+declare(strict_types=1);
+/** @var array<string, mixed> $report */
+/** @var array<string, mixed>|null $period */
+/** @var list<array<string, mixed>> $sourceCheckpoints */
+/** @var bool $canEdit */
+$periodId = (int) $report['reporting_period_id'];
+$sourceCheckpoints = $sourceCheckpoints ?? [];
+?>
+<section class="panel">
+    <div class="panel-head">
+        <h2>Monthly report — <?= e((string) ($report['period_key'] ?? '')) ?></h2>
+        <p>
+            <a class="btn btn-secondary" href="<?= e(url_path('/reporting-periods/' . $periodId)) ?>">Parent period</a>
+            <a class="btn btn-secondary" href="<?= e(url_path('/reporting-periods/' . $periodId . '/weekly-checkpoints')) ?>">Weekly checkpoints</a>
+            <?php if ($canEdit): ?>
+                <a class="btn" href="<?= e(url_path('/monthly-reports/' . (int) $report['id'] . '/edit')) ?>">Edit</a>
+            <?php endif; ?>
+        </p>
+    </div>
+    <p>
+        <span class="status-badge status-<?= e((string) $report['status']) ?>"><?= e((string) $report['status']) ?></span>
+    </p>
+</section>
+
+<section class="panel">
+    <h2>Parent period</h2>
+    <ul class="facts">
+        <li><strong>Period:</strong>
+            <a href="<?= e(url_path('/reporting-periods/' . $periodId)) ?>">
+                <code><?= e((string) ($report['period_key'] ?? '')) ?></code>
+            </a>
+            · <span class="status-badge status-<?= e((string) ($report['period_status'] ?? '')) ?>"><?= e((string) ($report['period_status'] ?? '')) ?></span>
+        </li>
+        <li><strong>Project:</strong> <?= e((string) ($report['project_name'] ?? '—')) ?></li>
+        <li><strong>Client:</strong> <?= e((string) ($report['client_name'] ?? '—')) ?></li>
+        <li><strong>Period dates:</strong> <?= e((string) ($report['period_start'] ?? '')) ?> – <?= e((string) ($report['period_end'] ?? '')) ?></li>
+    </ul>
+</section>
+
+<section class="panel">
+    <h2>Details</h2>
+    <ul class="facts">
+        <li><strong>ID:</strong> <?= e((string) $report['id']) ?></li>
+        <li><strong>Title:</strong> <?= e((string) $report['title']) ?></li>
+        <li><strong>Reviewed at:</strong> <?= e((string) ($report['reviewed_at'] ?? '—')) ?></li>
+        <li><strong>Finalized at:</strong> <?= e((string) ($report['finalized_at'] ?? '—')) ?></li>
+        <li><strong>Owner:</strong> <?= e((string) ($report['owner_name'] ?? '—')) ?><?php if (!empty($report['owner_email'])): ?> · <?= e((string) $report['owner_email']) ?><?php endif; ?></li>
+        <li><strong>Reviewer:</strong> <?= e((string) ($report['reviewer_name'] ?? '—')) ?><?php if (!empty($report['reviewer_email'])): ?> · <?= e((string) $report['reviewer_email']) ?><?php endif; ?></li>
+        <li><strong>Created by:</strong> <?= e((string) ($report['created_by_name'] ?? '—')) ?> · <?= e((string) ($report['created_at'] ?? '')) ?></li>
+        <li><strong>Updated by:</strong> <?= e((string) ($report['updated_by_name'] ?? '—')) ?> · <?= e((string) ($report['updated_at'] ?? '')) ?></li>
+    </ul>
+</section>
+
+<section class="panel">
+    <h2>Source weekly checkpoints</h2>
+    <?php if ($sourceCheckpoints === []): ?>
+        <p class="note">No source weekly checkpoints linked.</p>
+    <?php else: ?>
+        <ul class="facts">
+            <?php foreach ($sourceCheckpoints as $wc): ?>
+                <li>
+                    <a href="<?= e(url_path('/weekly-checkpoints/' . (int) $wc['id'])) ?>">
+                        <code><?= e((string) $wc['checkpoint_key']) ?></code>
+                    </a>
+                    · <span class="status-badge status-<?= e((string) $wc['status']) ?>"><?= e((string) $wc['status']) ?></span>
+                    · <?= e((string) $wc['title']) ?>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
+</section>
+
+<section class="panel">
+    <h2>Content</h2>
+    <ul class="facts">
+        <li><strong>Executive summary:</strong> <?= e((string) ($report['executive_summary'] ?? '—')) ?></li>
+        <li><strong>Work completed:</strong> <?= e((string) ($report['work_completed'] ?? '—')) ?></li>
+        <li><strong>Results summary:</strong> <?= e((string) ($report['results_summary'] ?? '—')) ?></li>
+        <li><strong>Key findings:</strong> <?= e((string) ($report['key_findings'] ?? '—')) ?></li>
+        <li><strong>Risks and blockers:</strong> <?= e((string) ($report['risks_and_blockers'] ?? '—')) ?></li>
+        <li><strong>Next month plan:</strong> <?= e((string) ($report['next_month_plan'] ?? '—')) ?></li>
+        <li><strong>Client notes:</strong> <?= e((string) ($report['client_notes'] ?? '—')) ?></li>
+        <li><strong>Internal notes:</strong> <?= e((string) ($report['internal_notes'] ?? '—')) ?></li>
+    </ul>
+</section>

@@ -30,14 +30,17 @@ require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Services' . DIRECTORY_SEPARA
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Services' . DIRECTORY_SEPARATOR . 'CsrfService.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Repositories' . DIRECTORY_SEPARATOR . 'ReportingPeriodRepository.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Repositories' . DIRECTORY_SEPARATOR . 'WeeklyCheckpointRepository.php';
+require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Repositories' . DIRECTORY_SEPARATOR . 'MonthlyReportContentRepository.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Services' . DIRECTORY_SEPARATOR . 'ReportingPeriodService.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Services' . DIRECTORY_SEPARATOR . 'WeeklyCheckpointService.php';
+require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Services' . DIRECTORY_SEPARATOR . 'MonthlyReportContentService.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Controllers' . DIRECTORY_SEPARATOR . 'BaseController.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Controllers' . DIRECTORY_SEPARATOR . 'DashboardController.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Controllers' . DIRECTORY_SEPARATOR . 'AuthController.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Controllers' . DIRECTORY_SEPARATOR . 'HealthController.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Controllers' . DIRECTORY_SEPARATOR . 'ReportingPeriodController.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Controllers' . DIRECTORY_SEPARATOR . 'WeeklyCheckpointController.php';
+require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Controllers' . DIRECTORY_SEPARATOR . 'MonthlyReportContentController.php';
 
 use Iseo\Services\AuthService;
 use Iseo\Services\ConfigService;

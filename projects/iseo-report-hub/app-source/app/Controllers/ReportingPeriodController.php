@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Iseo\Controllers;
 
+use Iseo\Services\MonthlyReportContentService;
 use Iseo\Services\ReportingPeriodService;
 use Iseo\Services\WeeklyCheckpointService;
 use Iseo\Support\Response;
@@ -16,7 +17,8 @@ final class ReportingPeriodController extends BaseController
         \Iseo\Services\AuthService $auth,
         \Iseo\Services\CsrfService $csrf,
         private ReportingPeriodService $periods,
-        private ?WeeklyCheckpointService $checkpoints = null
+        private ?WeeklyCheckpointService $checkpoints = null,
+        private ?MonthlyReportContentService $monthlyReports = null
     ) {
         parent::__construct($app, $view, $config, $auth, $csrf);
     }
@@ -76,12 +78,28 @@ final class ReportingPeriodController extends BaseController
                 && $this->checkpoints->canMutateAgainstParent($user, $period);
         }
 
+        $monthlyReport = null;
+        $canCreateMonthly = false;
+        $canEditMonthly = false;
+        if ($this->monthlyReports !== null) {
+            $monthlyReport = $this->monthlyReports->getByPeriodId($id);
+            $canCreateMonthly = $monthlyReport === null
+                && $this->monthlyReports->canCreate($user)
+                && $this->monthlyReports->canMutateAgainstParent($user, $period);
+            $canEditMonthly = $monthlyReport !== null
+                && $this->monthlyReports->canEdit($user, $monthlyReport)
+                && $this->monthlyReports->canMutateAgainstParent($user, $period);
+        }
+
         $this->render('reporting-periods/show', [
             'pageTitle' => 'Period ' . (string) $period['period_key'],
             'period' => $period,
             'canEdit' => $this->periods->canEdit($user, $period),
             'weeklyCheckpoints' => $weeklyCheckpoints,
             'canCreateCheckpoint' => $canCreateCheckpoint,
+            'monthlyReport' => $monthlyReport,
+            'canCreateMonthly' => $canCreateMonthly,
+            'canEditMonthly' => $canEditMonthly,
         ]);
     }
 
