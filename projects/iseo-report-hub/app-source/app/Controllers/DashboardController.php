@@ -3,6 +3,10 @@ declare(strict_types=1);
 
 namespace Iseo\Controllers;
 
+use Iseo\Repositories\ReportingPeriodRepository;
+use Iseo\Services\ReportingPeriodService;
+use Throwable;
+
 final class DashboardController extends BaseController
 {
     public function index(): void
@@ -15,9 +19,24 @@ final class DashboardController extends BaseController
         $user = $this->auth->currentUser();
         $dbConfigured = (bool) $this->config->get('database.configured', false);
 
+        $periodCount = null;
+        $reportingDetail = 'Internal CRUD ready — list / detail / create / edit / archive-by-status.';
+        if ($dbConfigured) {
+            try {
+                /** @var \Iseo\Services\DatabaseService $db */
+                $db = $this->app['db'];
+                $service = new ReportingPeriodService(new ReportingPeriodRepository($db), $db);
+                $periodCount = $service->countPeriods();
+                $reportingDetail = 'Internal CRUD ready. Periods in DB: ' . $periodCount . '.';
+            } catch (Throwable) {
+                $reportingDetail = 'CRUD code ready; period count unavailable.';
+            }
+        }
+
         $this->render('dashboard', [
             'pageTitle' => 'Dashboard',
             'user' => $user,
+            'periodCount' => $periodCount,
             'cards' => [
                 [
                     'title' => 'Auth',
@@ -38,8 +57,8 @@ final class DashboardController extends BaseController
                 ],
                 [
                     'title' => 'Reporting CRUD',
-                    'status' => 'pending',
-                    'detail' => 'Not implemented — auth baseline only.',
+                    'status' => 'ready',
+                    'detail' => $reportingDetail,
                 ],
             ],
         ]);

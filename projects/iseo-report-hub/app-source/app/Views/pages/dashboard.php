@@ -29,6 +29,7 @@ declare(strict_types=1);
 <section class="panel">
     <h2>Quick links</h2>
     <p>
+        <a class="btn" href="<?= e(url_path('/reporting-periods')) ?>">Reporting periods<?= isset($periodCount) && $periodCount !== null ? ' (' . e((string) $periodCount) . ')' : '' ?></a>
         <a class="btn" href="<?= e(url_path('/health')) ?>">Health</a>
         <a class="btn btn-secondary" href="<?= e(url_path('/logout')) ?>">Logout</a>
     </p>

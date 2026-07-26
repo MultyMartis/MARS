@@ -298,6 +298,137 @@ code {
   margin: 0;
 }
 
+.panel-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.panel-head h2 {
+  margin: 0;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.data-table th,
+.data-table td {
+  padding: 0.55rem 0.65rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.data-table th {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.data-table .actions a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.data-table .actions a:hover,
+.data-table .actions a:focus-visible {
+  text-decoration: underline;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.status-badge.status-draft {
+  color: var(--muted);
+}
+
+.status-badge.status-active,
+.status-badge.status-weekly_review,
+.status-badge.status-monthly_review {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+}
+
+.status-badge.status-finalized {
+  color: var(--ok);
+  border-color: color-mix(in srgb, var(--ok) 45%, var(--border));
+}
+
+.status-badge.status-archived {
+  color: var(--warn);
+  border-color: color-mix(in srgb, var(--warn) 45%, var(--border));
+}
+
+.rp-form {
+  display: grid;
+  gap: 0.9rem;
+  max-width: 40rem;
+}
+
+.rp-form label {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.rp-form input,
+.rp-form select,
+.rp-form textarea {
+  padding: 0.55rem 0.7rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: #0f1a21;
+  color: var(--text);
+  font: inherit;
+}
+
+.rp-form input:focus-visible,
+.rp-form select:focus-visible,
+.rp-form textarea:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--accent) 55%, white);
+  outline-offset: 1px;
+}
+
+.rp-form input[readonly],
+.rp-form input:disabled {
+  opacity: 0.75;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.9rem;
+}
+
+.field-error {
+  color: #efb0b0;
+  font-size: 0.85rem;
+}
+
+.field-hint {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;

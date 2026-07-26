@@ -2,7 +2,7 @@
 
 ## Status
 
-**Auth persistence bootstrap complete (local).** Versioned Active Brain mirror with DB-backed login/logout, safe `/health` DB status, and local admin CLI bootstrap tool. Sync to Localhost runtime is done via allowlist (Model A).
+**Auth + reporting period CRUD MVP (local).** Versioned Active Brain mirror with DB-backed login/logout, safe `/health` DB status, local admin/fixture tools, and internal reporting-period CRUD. Sync to Localhost runtime is done via allowlist (Model A).
 
 | Fact | State |
 |------|-------|
@@ -10,10 +10,11 @@
 | WordPress | **Not used** as runtime or source of truth |
 | Framework / Composer | **None** — plain PHP 8.3 |
 | Database | Local `iseo_report_hub_dev` via runtime `.env.local` (not in Git) |
-| Migrations | First core migration applied (separate wave) |
+| Migrations | Core + reporting_periods applied (separate waves) |
 | Auth | **DB-backed** — `password_verify` + roles + audit |
+| Reporting periods | **CRUD MVP** — list/detail/create/edit/archive-by-status |
 | Secrets | **None in source** — `.env.example` placeholders only; **no** `.env` / `.env.local` |
-| Runtime sync | Allowlist source → runtime for auth wave files |
+| Runtime sync | Allowlist source → runtime |
 
 ## Paths
 
@@ -51,7 +52,15 @@ Creates one local-only demo client / project / site / reporting_period (`LOCAL_F
 - `GET /login` / `POST /login` — DB-backed login
 - `GET /logout` — logout + redirect login
 - `GET /health` — PHP + safe DB status
+- `GET /reporting-periods` — list (auth + internal role)
+- `GET /reporting-periods/create` — create form
+- `POST /reporting-periods` — create (CSRF)
+- `GET /reporting-periods/{id}` — detail
+- `GET /reporting-periods/{id}/edit` — edit form
+- `POST /reporting-periods/{id}` — update (CSRF; archive via status)
 - 404 fallback
+
+No DELETE route for reporting periods — archive via `status=archived`.
 
 ## Secrets policy
 
@@ -65,11 +74,12 @@ Creates one local-only demo client / project / site / reporting_period (`LOCAL_F
 
 - No password reset / remember-me / OAuth
 - No client portal auth for `client_viewer`
-- No reporting CRUD UI
+- No weekly checkpoint / monthly content editor
+- No hard DELETE of reporting periods
 - No user management UI
 - No real client import
 - No Composer / npm / WordPress
 
 ## Next phase
 
-**Recommended:** Reporting Period CRUD Charter 01.
+**Recommended:** Weekly Checkpoints DB-04 Charter 01 (or Reporting Period CRUD Hardening 01 if role matrix needs multi-user smoke).
