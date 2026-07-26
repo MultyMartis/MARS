@@ -134,7 +134,7 @@ Hash-record follow-up (this report only):
 
 `docs(iseo-report-hub): record report finalization workflow commit hash`
 
-- hash: **PENDING_HASH_RECORD**
+- hash: `f2234453477abd30e24a32beaef1ce5c8e6ccc0b`
 
 ## 12. SAFE UNKNOWN
 
