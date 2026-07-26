@@ -109,7 +109,7 @@ no production DB; no real client data; no credentials in Git/report; no password
 |------|-------|
 | Message | `feat(iseo-report-hub): add report snapshot workflow` |
 | Staging | exact-path `git add` allowlisted paths only |
-| Commit hash | `PENDING_PRIMARY` |
+| Commit hash | `7d19979183947a25510915a7d36da9655c370673` |
 | Hash-record follow-up | `PENDING_HASH` — `docs(iseo-report-hub): record report snapshot workflow commit hash` |
 | HEAD verification | after commits |
 | Push | **no** |
