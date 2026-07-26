@@ -4,7 +4,7 @@
 **project_id:** `iseo-report-hub`  
 **Created:** 2026-07-27  
 **Authority:** Operator I-SEO Report Hub Report Finalization Charter 01  
-**Primary commit:** `PENDING_PRIMARY_HASH`  
+**Primary commit:** `68f7fe3c8bde09a7b440e32e248f7a8bd8ec2d58`  
 **Hash-record commit:** `PENDING_HASH_RECORD`
 
 ---
@@ -124,7 +124,7 @@ Documented for next implementation wave:
 |------|-------|
 | Exact-path git add | allowlisted docs only |
 | Primary commit message | `docs(iseo-report-hub): add report finalization charter` |
-| Primary commit hash | `PENDING_PRIMARY_HASH` |
+| Primary commit hash | `68f7fe3c8bde09a7b440e32e248f7a8bd8ec2d58` |
 | Hash-record message | `docs(iseo-report-hub): record report finalization charter commit hash` |
 | Hash-record commit hash | `PENDING_HASH_RECORD` |
 | Push | **no** |
