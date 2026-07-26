@@ -4,7 +4,7 @@
 **project_id:** `iseo-report-hub`  
 **Created:** 2026-07-27  
 **Authority:** Operator I-SEO Report Hub Report Snapshot Charter 01  
-**Primary commit:** `PENDING_PRIMARY_HASH`  
+**Primary commit:** `a84e871dd073bb81be505060ad99f3dd1c6afa84`  
 **Hash-record commit:** `PENDING_HASH_RECORD`
 
 ---
@@ -138,7 +138,7 @@ Documented for future waves:
 |------|-------|
 | Exact-path git add | allowlisted docs only (in clean worktree) |
 | Primary message | `docs(iseo-report-hub): add report snapshot charter` |
-| Primary hash | `PENDING_PRIMARY_HASH` |
+| Primary hash | `a84e871dd073bb81be505060ad99f3dd1c6afa84` |
 | Hash-record message | `docs(iseo-report-hub): record report snapshot charter commit hash` |
 | Hash-record hash | `PENDING_HASH_RECORD` |
 | Push | **no** |
