@@ -126,8 +126,8 @@
 | Staged list | migration SQL; app-source README; result doc; this report; OPERATIONAL-INDEX |
 | Primary commit hash | `eb1d0ce544f42876a99ea4393a98ffa780bb6f1f` |
 | Primary message | `feat(iseo-report-hub): add report snapshots migration` |
-| Hash-record commit | `PENDING_HASH_RECORD` — `docs(iseo-report-hub): record report snapshots migration commit hash` |
-| HEAD after wave | `PENDING_HEAD_AFTER` |
+| Hash-record commit | `e290a29cb2d8d90994b47de371b3dbf763277de0` — `docs(iseo-report-hub): record report snapshots migration commit hash` |
+| HEAD after wave | `e290a29cb2d8d90994b47de371b3dbf763277de0` |
 | Push | **no** |
 
 ---
