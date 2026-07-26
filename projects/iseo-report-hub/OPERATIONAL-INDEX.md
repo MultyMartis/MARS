@@ -16,7 +16,7 @@
 | **Business owner / vision source** | Никита / i-SEO |
 | **Developer** | Антон |
 | **Platform direction** | **Decided** — custom **PHP + SQL/MySQL**; **no WordPress runtime**; Laragon local runtime **verified** (preflight 01); see [I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md](product/I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md) |
-| **Implementation** | **Phase 1B complete** + **local vhost/hosts mapping complete** + **DB `iseo_report_hub_dev` created** + **DB-01/DB-02 first migration applied** + **auth persistence + local admin bootstrap implemented** + **DB-03 reporting periods migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** — DB-backed login/logout; demo fixture + smoke period; internal reporting-period CRUD; `weekly_checkpoints` table + W1–W3 fixture + W4 smoke; period-scoped weekly checkpoint CRUD; **no** monthly content editor / client portal |
+| **Implementation** | **Phase 1B complete** + **local vhost/hosts mapping complete** + **DB `iseo_report_hub_dev` created** + **DB-01/DB-02 first migration applied** + **auth persistence + local admin bootstrap implemented** + **DB-03 reporting periods migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** — DB-backed login/logout; demo fixture + smoke period; internal reporting-period CRUD; `weekly_checkpoints` table + W1–W3 fixture + W4 smoke; period-scoped weekly checkpoint CRUD; monthly content schema **planned** (not applied); **no** monthly content editor / client portal |
 | **Source model** | **Model A active** — `projects/iseo-report-hub/app-source/` is versioned SoT; sync direction **source → runtime**; runtime → source only by explicit import charter |
 
 ---
@@ -25,9 +25,9 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A/1B + local DB + **auth persistence implemented** + **DB-03 migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** |
+| **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A/1B + local DB + **auth persistence implemented** + **DB-03 migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | **Weekly Checkpoints CRUD Implementation 01 complete** — next recommended: **Monthly Report Content DB-05 Charter 01** |
+| **Active stage** | **Monthly Report Content DB-05 Charter 01 complete** — next recommended: **Monthly Report Content DB-05 Migration Apply 01** |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -535,7 +535,28 @@
 | **DB after** | weekly_checkpoints **4**; reporting_periods **2**; migrations **3**; tables **11** |
 | **Auth / CSRF** | required; CSRF on POST; session-injection smoke (password env unset) |
 | **Out of scope (confirmed)** | monthly editor; report blocks; Topvisor; client portal; schema edits; DELETE |
-| **Next recommended stage** | **Monthly Report Content DB-05 Charter 01** |
+| **Next recommended stage** | **Monthly Report Content DB-05 Charter 01** — **completed** (see section below) |
+
+---
+
+## Monthly Report Content DB-05 Charter 01 (2026-07-26)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** — documentation / policy only |
+| **Baseline dependency** | Weekly Checkpoints CRUD Implementation 01 — commits `911db07d` + hash-record `64c42cbe` + clarify `6f968ed2` / `865cd4b5`; migrations **3**; tables **11**; weekly_checkpoints **4**; reporting_periods **2** |
+| **Charter** | [I-SEO-REPORT-HUB-DB-05-MONTHLY-REPORT-CONTENT-CHARTER-v0.1.md](product/I-SEO-REPORT-HUB-DB-05-MONTHLY-REPORT-CONTENT-CHARTER-v0.1.md) |
+| **Schema plan** | [I-SEO-REPORT-HUB-DB-05-MONTHLY-REPORT-CONTENT-SCHEMA-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-DB-05-MONTHLY-REPORT-CONTENT-SCHEMA-PLAN-v0.1.md) |
+| **Lifecycle** | [I-SEO-REPORT-HUB-MONTHLY-REPORT-LIFECYCLE-v0.1.md](product/I-SEO-REPORT-HUB-MONTHLY-REPORT-LIFECYCLE-v0.1.md) |
+| **Implementation plan** | [I-SEO-REPORT-HUB-DB-05-MONTHLY-REPORT-CONTENT-IMPLEMENTATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-DB-05-MONTHLY-REPORT-CONTENT-IMPLEMENTATION-PLAN-v0.1.md) |
+| **Validation plan** | [I-SEO-REPORT-HUB-DB-05-MONTHLY-REPORT-CONTENT-VALIDATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-DB-05-MONTHLY-REPORT-CONTENT-VALIDATION-PLAN-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-db05-monthly-report-content-charter-01.md](reports/REPORT-iseo-report-hub-db05-monthly-report-content-charter-01.md) |
+| **Planned table** | `monthly_report_contents` (at most one per `reporting_periods`) |
+| **Planned SQL filename** | `2026_07_26_000004_create_monthly_report_contents_table.sql` — **not** created in this wave |
+| **App-source / runtime / DB** | **Unchanged** — no SQL; no migration; no code sync; no DB mutation |
+| **No seed in migration** | Confirmed — demo monthly smoke row deferred to apply wave |
+| **Out of scope (confirmed)** | monthly CRUD UI; report blocks; PDF/export; client portal; Topvisor; real client data; production |
+| **Next apply candidate** | **I-SEO Report Hub — Monthly Report Content DB-05 Migration Apply 01** |
 
 ---
 
@@ -670,6 +691,12 @@
 | 112 | [reports/REPORT-iseo-report-hub-weekly-checkpoints-crud-charter-01.md](reports/REPORT-iseo-report-hub-weekly-checkpoints-crud-charter-01.md) | Weekly Checkpoints CRUD charter closeout |
 | 113 | [product/I-SEO-REPORT-HUB-WEEKLY-CHECKPOINTS-CRUD-IMPLEMENTATION-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-WEEKLY-CHECKPOINTS-CRUD-IMPLEMENTATION-RESULT-v0.1.md) | Weekly Checkpoints CRUD implementation result |
 | 114 | [reports/REPORT-iseo-report-hub-weekly-checkpoints-crud-implementation-01.md](reports/REPORT-iseo-report-hub-weekly-checkpoints-crud-implementation-01.md) | Weekly Checkpoints CRUD implementation closeout |
+| 115 | [product/I-SEO-REPORT-HUB-DB-05-MONTHLY-REPORT-CONTENT-CHARTER-v0.1.md](product/I-SEO-REPORT-HUB-DB-05-MONTHLY-REPORT-CONTENT-CHARTER-v0.1.md) | DB-05 monthly report content charter (planning) |
+| 116 | [product/I-SEO-REPORT-HUB-DB-05-MONTHLY-REPORT-CONTENT-SCHEMA-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-DB-05-MONTHLY-REPORT-CONTENT-SCHEMA-PLAN-v0.1.md) | DB-05 `monthly_report_contents` schema plan |
+| 117 | [product/I-SEO-REPORT-HUB-MONTHLY-REPORT-LIFECYCLE-v0.1.md](product/I-SEO-REPORT-HUB-MONTHLY-REPORT-LIFECYCLE-v0.1.md) | Monthly report content status lifecycle for DB-05 |
+| 118 | [product/I-SEO-REPORT-HUB-DB-05-MONTHLY-REPORT-CONTENT-IMPLEMENTATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-DB-05-MONTHLY-REPORT-CONTENT-IMPLEMENTATION-PLAN-v0.1.md) | DB-05 migration apply implementation plan |
+| 119 | [product/I-SEO-REPORT-HUB-DB-05-MONTHLY-REPORT-CONTENT-VALIDATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-DB-05-MONTHLY-REPORT-CONTENT-VALIDATION-PLAN-v0.1.md) | DB-05 validation/smoke plan |
+| 120 | [reports/REPORT-iseo-report-hub-db05-monthly-report-content-charter-01.md](reports/REPORT-iseo-report-hub-db05-monthly-report-content-charter-01.md) | DB-05 monthly report content charter closeout |
 
 ---
 
@@ -714,7 +741,7 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Monthly Report Content DB-05 Charter 01** — **recommended next** (weekly checkpoint CRUD complete; smoke passed)
+1. **Monthly Report Content DB-05 Migration Apply 01** — **recommended next** (DB-05 charter complete; no SQL yet)
 2. Optional: **Weekly Checkpoints CRUD Hardening 01** if multi-role HTTP smoke is needed
 3. Optional: **Reporting Period CRUD Hardening 01** if account-manager edit / multi-role smoke is needed
 4. Optional parallel: **v0.5 demo corrections** from backlog (UX only; not product runtime)
@@ -723,7 +750,7 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 7. MVP implementation phases 2–11 per implementation charter (Anton / i-SEO)
 8. Later: n8n/API/AI integration (events only; human approval gates)
 
-**Historical note:** Static demos v0.1–v0.4, report content architecture, and Product Architecture Layer 02 are complete as documentation/demo baselines. Platform decision (PHP+MySQL) supersedes WordPress-as-runtime assumptions for forward work. Phase 0 scaffold + Phase 1A skeleton + Phase 1B source→runtime sync + Apache vhost + Windows `hosts` for `iseo-report-hub.test` are done (direct domain re-smoke PASS). Local DB `iseo_report_hub_dev` is **created**; first migration (DB-01 + minimal DB-02) is **applied**. Auth persistence + local admin bootstrap are **implemented** (DB-backed login; one local admin). DB-03 reporting periods migration is **applied**. Local fixture apply is **complete** (demo client/project/site + period `2026-07`). Reporting Period CRUD **implementation** is complete (internal list/detail/create/edit/archive-by-status; smoke period `2026-08` archived; counts clients/projects/sites/reporting_periods **1/1/1/2**). Weekly Checkpoints DB-04 **migration apply** is complete (`weekly_checkpoints` + local W1–W3 smoke; migrations **3** / tables **11**). Weekly Checkpoints CRUD **implementation** is complete (period-scoped list/detail/create/edit/skip-or-archive; W4 smoke id **7** skipped; weekly_checkpoints **4**). `app-source/` remains the versioned SoT; runtime is Localhost deploy target.
+**Historical note:** Static demos v0.1–v0.4, report content architecture, and Product Architecture Layer 02 are complete as documentation/demo baselines. Platform decision (PHP+MySQL) supersedes WordPress-as-runtime assumptions for forward work. Phase 0 scaffold + Phase 1A skeleton + Phase 1B source→runtime sync + Apache vhost + Windows `hosts` for `iseo-report-hub.test` are done (direct domain re-smoke PASS). Local DB `iseo_report_hub_dev` is **created**; first migration (DB-01 + minimal DB-02) is **applied**. Auth persistence + local admin bootstrap are **implemented** (DB-backed login; one local admin). DB-03 reporting periods migration is **applied**. Local fixture apply is **complete** (demo client/project/site + period `2026-07`). Reporting Period CRUD **implementation** is complete (internal list/detail/create/edit/archive-by-status; smoke period `2026-08` archived; counts clients/projects/sites/reporting_periods **1/1/1/2**). Weekly Checkpoints DB-04 **migration apply** is complete (`weekly_checkpoints` + local W1–W3 smoke; migrations **3** / tables **11**). Weekly Checkpoints CRUD **implementation** is complete (period-scoped list/detail/create/edit/skip-or-archive; W4 smoke id **7** skipped; weekly_checkpoints **4**). Monthly Report Content DB-05 **charter** is complete (schema/lifecycle/apply/validation plans; **no** migration SQL; **no** monthly table). `app-source/` remains the versioned SoT; runtime is Localhost deploy target.
 
 ---
 
@@ -745,6 +772,7 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **No client portal exists**
 - **Weekly Checkpoints DB-04 migration is applied** — table + local W1–W3 smoke exist
 - **Weekly Checkpoints CRUD MVP is implemented** — period-scoped list/detail/create/edit/skip-or-archive-by-status; CSRF; no DELETE; parent period show integration
+- **Monthly Report Content DB-05 is charter-complete only** — planned table `monthly_report_contents`; **no** migration SQL; **no** monthly table; **no** monthly CRUD
 - **No monthly content editor**
 - **No autonomous publication**
 - **Website Factory is not runtime owner** — methodology + prototype lane only
