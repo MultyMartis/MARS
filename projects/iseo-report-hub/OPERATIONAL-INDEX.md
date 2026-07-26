@@ -16,7 +16,7 @@
 | **Business owner / vision source** | Никита / i-SEO |
 | **Developer** | Антон |
 | **Platform direction** | **Decided** — custom **PHP + SQL/MySQL**; **no WordPress runtime**; Laragon local runtime **verified** (preflight 01); see [I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md](product/I-SEO-REPORT-HUB-PLATFORM-DECISION-v0.1.md) |
-| **Implementation** | **Phase 1B complete** + **local vhost/hosts mapping complete** + **DB `iseo_report_hub_dev` created** + **DB-01/DB-02 first migration applied** + **auth persistence + local admin bootstrap implemented** + **DB-03 reporting periods migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** + **Report Preview / Render Implementation 01 complete** + **Report Finalization Charter 01 complete** + **Report Finalization Implementation 01 complete** — DB-backed login/logout; demo fixture + smoke period; internal reporting-period CRUD; `weekly_checkpoints` table + W1–W4; period-scoped weekly checkpoint CRUD; `monthly_report_contents` table + period-scoped monthly report content CRUD (demo id **1**, status **finalized** after finalization smoke); `report_blocks` table + monthly-scoped report block CRUD (6 local blocks under monthly id **1**); internal preview/print (`blocks_primary`); finalization workflow + readiness + locks; **no** drag/drop / PDF/export / client portal / snapshot |
+| **Implementation** | **Phase 1B complete** + **local vhost/hosts mapping complete** + **DB `iseo_report_hub_dev` created** + **DB-01/DB-02 first migration applied** + **auth persistence + local admin bootstrap implemented** + **DB-03 reporting periods migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** + **Report Preview / Render Implementation 01 complete** + **Report Finalization Charter 01 complete** + **Report Finalization Implementation 01 complete** + **Report Snapshot Charter 01 complete** — DB-backed login/logout; demo fixture + smoke period; internal reporting-period CRUD; `weekly_checkpoints` table + W1–W4; period-scoped weekly checkpoint CRUD; `monthly_report_contents` table + period-scoped monthly report content CRUD (demo id **1**, status **finalized** after finalization smoke); `report_blocks` table + monthly-scoped report block CRUD (6 local blocks under monthly id **1**); internal preview/print (`blocks_primary`); finalization workflow + readiness + locks; snapshot policy/design/schema planned (`report_snapshots` / DB-07 proposed); **no** drag/drop / PDF/export / client portal / snapshot table yet |
 | **Source model** | **Model A active** — `projects/iseo-report-hub/app-source/` is versioned SoT; sync direction **source → runtime**; runtime → source only by explicit import charter |
 
 ---
@@ -25,9 +25,9 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A/1B + local DB + **auth persistence implemented** + **DB-03 migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** + **Report Preview / Render Implementation 01 complete** + **Report Finalization Charter 01 complete** + **Report Finalization Implementation 01 complete** |
+| **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A/1B + local DB + **auth persistence implemented** + **DB-03 migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** + **Report Preview / Render Implementation 01 complete** + **Report Finalization Charter 01 complete** + **Report Finalization Implementation 01 complete** + **Report Snapshot Charter 01 complete** |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | **Report Finalization Implementation 01 complete** — next recommended: **Report Snapshot Charter 01** |
+| **Active stage** | **Report Snapshot Charter 01 complete** — next recommended: **Report Snapshot DB-07 Migration Apply 01** |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -752,7 +752,26 @@
 | **Restrictions** | no schema edits; no DELETE; no period/weekly mutation; no PDF/export/public share; no secrets; no push |
 | **Result** | [I-SEO-REPORT-HUB-REPORT-FINALIZATION-IMPLEMENTATION-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-FINALIZATION-IMPLEMENTATION-RESULT-v0.1.md) |
 | **Closeout** | [REPORT-iseo-report-hub-report-finalization-implementation-01.md](reports/REPORT-iseo-report-hub-report-finalization-implementation-01.md) |
-| **Next recommended stage** | **Report Snapshot Charter 01** |
+| **Next recommended stage** | **Report Snapshot Charter 01** — **completed** (see section below) |
+
+---
+
+## Report Snapshot Charter 01 (2026-07-27)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** — documentation / policy only |
+| **Baseline dependency** | Report Finalization Implementation 01 (`4bda84e5…` / hash-record `f2234453…` / clarify `10882e24…`); smoke 52/52 PASS; monthly id **1** `finalized`; report_blocks **6** `reviewed` |
+| **Designed surface** | Internal immutable/semi-immutable snapshot after finalization; DB-backed `report_snapshots` (DB-07 proposed); payload JSON + checksum; versioning/idempotency; gates; routes/service/UI/audit design; **no** public/PDF/export |
+| **Proposed table** | `report_snapshots` — parent `monthly_report_content_id` + `reporting_period_id`; unique `(monthly_report_content_id, version)` + `snapshot_key` |
+| **Code / runtime / DB this wave** | **None** — no app-source; no runtime sync; no DB mutation; no SQL migration file |
+| **Next implementation candidate** | **I-SEO Report Hub — Report Snapshot DB-07 Migration Apply 01** |
+| **Charter** | [I-SEO-REPORT-HUB-REPORT-SNAPSHOT-CHARTER-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-SNAPSHOT-CHARTER-v0.1.md) |
+| **Design** | [I-SEO-REPORT-HUB-REPORT-SNAPSHOT-DESIGN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-SNAPSHOT-DESIGN-v0.1.md) |
+| **Schema plan** | [I-SEO-REPORT-HUB-REPORT-SNAPSHOT-SCHEMA-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-SNAPSHOT-SCHEMA-PLAN-v0.1.md) |
+| **Implementation plan** | [I-SEO-REPORT-HUB-REPORT-SNAPSHOT-IMPLEMENTATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-SNAPSHOT-IMPLEMENTATION-PLAN-v0.1.md) |
+| **Validation plan** | [I-SEO-REPORT-HUB-REPORT-SNAPSHOT-VALIDATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-SNAPSHOT-VALIDATION-PLAN-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-report-snapshot-charter-01.md](reports/REPORT-iseo-report-hub-report-snapshot-charter-01.md) |
 
 ---
 
@@ -932,6 +951,12 @@
 | 157 | [reports/REPORT-iseo-report-hub-report-finalization-charter-01.md](reports/REPORT-iseo-report-hub-report-finalization-charter-01.md) | Report Finalization charter closeout |
 | 158 | [product/I-SEO-REPORT-HUB-REPORT-FINALIZATION-IMPLEMENTATION-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-FINALIZATION-IMPLEMENTATION-RESULT-v0.1.md) | Report Finalization implementation result |
 | 159 | [reports/REPORT-iseo-report-hub-report-finalization-implementation-01.md](reports/REPORT-iseo-report-hub-report-finalization-implementation-01.md) | Report Finalization implementation closeout |
+| 160 | [product/I-SEO-REPORT-HUB-REPORT-SNAPSHOT-CHARTER-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-SNAPSHOT-CHARTER-v0.1.md) | Report Snapshot charter (planning) |
+| 161 | [product/I-SEO-REPORT-HUB-REPORT-SNAPSHOT-DESIGN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-SNAPSHOT-DESIGN-v0.1.md) | Report Snapshot design (payload/gates/routes) |
+| 162 | [product/I-SEO-REPORT-HUB-REPORT-SNAPSHOT-SCHEMA-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-SNAPSHOT-SCHEMA-PLAN-v0.1.md) | Report Snapshot schema plan (`report_snapshots` / DB-07) |
+| 163 | [product/I-SEO-REPORT-HUB-REPORT-SNAPSHOT-IMPLEMENTATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-SNAPSHOT-IMPLEMENTATION-PLAN-v0.1.md) | Report Snapshot implementation plan (next waves) |
+| 164 | [product/I-SEO-REPORT-HUB-REPORT-SNAPSHOT-VALIDATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-SNAPSHOT-VALIDATION-PLAN-v0.1.md) | Report Snapshot validation/smoke plan |
+| 165 | [reports/REPORT-iseo-report-hub-report-snapshot-charter-01.md](reports/REPORT-iseo-report-hub-report-snapshot-charter-01.md) | Report Snapshot charter closeout |
 
 ---
 
@@ -976,7 +1001,7 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Report Snapshot Charter 01** — **recommended next** (finalization complete; monthly id 1 finalized; locks demonstrable)
+1. **Report Snapshot DB-07 Migration Apply 01** — **recommended next** (snapshot charter complete; create/apply `report_snapshots`)
 2. Optional: **Report Blocks CRUD Hardening 01** if multi-role HTTP smoke is needed
 3. Optional: **Monthly Report Content CRUD Hardening 01** if multi-role HTTP smoke is needed
 4. Optional: **Weekly Checkpoints CRUD Hardening 01** if multi-role HTTP smoke is needed
@@ -1018,7 +1043,8 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **Report Preview / Render Implementation 01 is complete** — internal preview + print routes; smoke 22/22; DB unchanged; **no** public/PDF
 - **Report Finalization Charter 01 is complete** — finalization/readiness/lock/reopen design exists
 - **Report Finalization Implementation 01 is complete** — staged transitions + readiness + locks; smoke 52/52; monthly id 1 left **finalized**; **no** public/PDF/snapshot
-- **No immutable snapshot / PDF / public share yet** — next = Report Snapshot Charter 01
+- **Report Snapshot Charter 01 is complete** — internal snapshot policy/design/schema/validation; proposed DB-07 `report_snapshots`; **no** code/runtime/DB in charter wave
+- **No `report_snapshots` table / PDF / public share yet** — next = Report Snapshot DB-07 Migration Apply 01
 - **No drag/drop reorder / PDF export / rich text editor / client portal** (runtime)
 - **No autonomous publication**
 - **Website Factory is not runtime owner** — methodology + prototype lane only
