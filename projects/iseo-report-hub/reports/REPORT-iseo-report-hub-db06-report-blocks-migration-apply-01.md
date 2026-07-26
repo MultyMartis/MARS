@@ -173,9 +173,10 @@ Auth smoke used session injection; no password / session id printed in this repo
 |-------|-------|
 | Message | `feat(iseo-report-hub): add report blocks migration` |
 | Exact-path git add | migration SQL + result doc + closeout report + OPERATIONAL-INDEX |
-| Staged list | allowlisted i-SEO paths only |
-| Commit hash | _pending primary commit_ |
-| Hash-record follow-up | `docs(iseo-report-hub): record report blocks migration commit hash` (this report only, if needed) |
+| Staged list | allowlisted i-SEO paths only (4 paths) |
+| Commit hash | `1b71a0213c61844258a87afb68f9b796bd35443f` |
+| Hash-record follow-up | `docs(iseo-report-hub): record report blocks migration commit hash` (this report only) |
+| HEAD verification | `git rev-parse HEAD` matches primary (then hash-record advances HEAD) |
 | Push | **no** |
 
 ---
