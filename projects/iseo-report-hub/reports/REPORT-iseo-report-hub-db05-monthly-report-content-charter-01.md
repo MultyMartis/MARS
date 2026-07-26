@@ -131,8 +131,8 @@ Charter wave did **not** insert the demo row.
 |------|-------|
 | Exact-path git add | yes (allowlisted docs only) |
 | Commit message | `docs(iseo-report-hub): add db05 monthly report content charter` |
-| Primary commit hash | `PENDING_PRIMARY_COMMIT_HASH` |
-| Hash-record follow-up | `PENDING_HASH_RECORD_COMMIT_HASH` (if needed) |
+| Primary commit hash | `c2dae889de2c1cf834b1b45997a036aa4b117476` |
+| Hash-record follow-up | `PENDING_HASH_RECORD_COMMIT_HASH` |
 | Push | **no** |
 
 ---
