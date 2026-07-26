@@ -1,0 +1,62 @@
+{
+  "ok": true,
+  "final_state": "D5_PREVIEW_READY",
+  "network_calls": 0,
+  "dispatch_attempted": false,
+  "real_network": false,
+  "profile_present": true,
+  "secret_present": true,
+  "environment_requested": "manual_real_source_controlled",
+  "concurrency": 1,
+  "max_retries": 0,
+  "automatic_retry": false,
+  "d3_charter_consumed": true,
+  "d4_live_blocked": true,
+  "d5_charter_consumed": true,
+  "enable_phrase_expected": "ENABLE ONE MANUAL SITE002 REAL SOURCE D5 BZPM",
+  "send_phrase_expected": "SEND ONE MANUAL SITE002 REAL SOURCE EVENT D5 BZPM",
+  "source_preview": {
+    "source_label": "site002-post-1c-run/2026-07-26_17-48-38",
+    "source_run_id": "2026-07-26_17-48-38",
+    "observed_at": "2026-07-26T10:52:32Z",
+    "source_age_seconds": 15484,
+    "source_age_hours": 4.3,
+    "verification_time_utc": "2026-07-26T15:10:36Z",
+    "source_classification": "ONBOARDING_REQUIRED",
+    "client_ops_mapped_status": "ATTENTION",
+    "safe_metrics": {
+      "baseline_count": 1737,
+      "current_count": 1854,
+      "added_urls": 119,
+      "removed_urls": 2,
+      "onboarding_needed_count": 7
+    },
+    "reason_codes": [
+      "BASELINE_DELTA_NONZERO",
+      "CATEGORY_PLP_ADDED",
+      "ONBOARDING_COUNT_NONZERO"
+    ],
+    "action_code": "REVIEW_ONBOARDING",
+    "summary_code": "ONBOARDING_REQUIRED",
+    "event_id": "c84e29bf-79b1-5aea-98c4-9dc8d651fc96",
+    "source_contract_version": "site002-monitor-result-v1",
+    "source_provenance": "REAL_EXISTING_SITE002_MONITOR_ARTIFACT",
+    "firewall_result": "PASS",
+    "redaction_result": {
+      "policy": "site002-adapter-allowlist-v1",
+      "run_log_loaded": false,
+      "artifact_count": 3
+    },
+    "source_contract_fingerprint": "ad7f2ebd4cce009ea2a8c205d8664d1a342c562f27448acfd194909e68c6f097",
+    "message_preview": "╟╧╠ ╖ ATTENTION\nPost-1C monitor\n\nBaseline: 1737\nCurrent: 1854\nAdded: 119\nRemoved: 2\nOnboarding needed: 7\n\nAction: яЁютхЁшЄ№ эют√х тхЄъш ърЄрыюур\nRun: 2026-07-26 13:52\n",
+    "distributable": true,
+    "security_rejected": false,
+    "network_calls": 0
+  },
+  "source_preview_decision": {
+    "verdict": "REAL_SOURCE_PREVIEW_APPROVED_FOR_ONE_LIVE_POST",
+    "reason": "preview safe for one controlled live POST",
+    "approved": true,
+    "network_calls": 0
+  }
+}

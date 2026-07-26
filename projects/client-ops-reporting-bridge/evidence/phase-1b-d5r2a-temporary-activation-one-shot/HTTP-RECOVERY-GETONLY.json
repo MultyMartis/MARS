@@ -1,0 +1,117 @@
+{
+  "method": "GET_ONLY_POST_HTTP_RECOVERY",
+  "workflow_final_active": false,
+  "workflow_nodes": 17,
+  "workflow_versionId": "3d2fd6fc-bc17-4e0f-b9e5-086c959afd29",
+  "execution": {
+    "id": "3416",
+    "status": "success",
+    "finished": true,
+    "mode": "webhook",
+    "startedAt": "2026-07-26T15:12:15.592Z",
+    "stoppedAt": "2026-07-26T15:12:15.840Z"
+  },
+  "nodes_executed": [
+    "Webhook Intake",
+    "Capture Request Metadata",
+    "Process Client Ops Gates",
+    "IF Accepted Branch",
+    "Prepare Dedupe Context",
+    "Dedupe Lookup",
+    "Dedupe Classify",
+    "IF Dedupe First Seen",
+    "Dedupe Claim Insert",
+    "Prepare Accepted Response",
+    "Respond Accepted",
+    "Telegram Notify Accepted"
+  ],
+  "respond_nodes": {
+    "Webhook Intake": {
+      "present": true,
+      "has_error": false,
+      "execution_status": "success"
+    },
+    "IF Accepted Branch": {
+      "present": true,
+      "has_error": false,
+      "execution_status": "success"
+    },
+    "Prepare Accepted Response": {
+      "present": true,
+      "has_error": false,
+      "execution_status": "success"
+    },
+    "Respond Accepted": {
+      "present": true,
+      "has_error": false,
+      "execution_status": "success"
+    },
+    "Telegram Notify Accepted": {
+      "present": true,
+      "has_error": false,
+      "execution_status": "success"
+    }
+  },
+  "telegram_nodes": {
+    "Telegram Notify Accepted": {
+      "present": true,
+      "has_error": false,
+      "execution_status": "success"
+    }
+  },
+  "claim_nodes": {
+    "Prepare Dedupe Context": {
+      "present": true,
+      "has_error": false,
+      "execution_status": "success"
+    },
+    "Dedupe Lookup": {
+      "present": true,
+      "has_error": false,
+      "execution_status": "success"
+    },
+    "Dedupe Classify": {
+      "present": true,
+      "has_error": false,
+      "execution_status": "success"
+    },
+    "IF Dedupe First Seen": {
+      "present": true,
+      "has_error": false,
+      "execution_status": "success"
+    },
+    "Dedupe Claim Insert": {
+      "present": true,
+      "has_error": false,
+      "execution_status": "success"
+    }
+  },
+  "datatable_event_row_sanitized": {
+    "event_id": "c84e29bf-79b1-5aea-98c4-9dc8d651fc96",
+    "event_status": "ATTENTION",
+    "intake_state": "FIRST_SEEN",
+    "delivery_state": "PENDING",
+    "site_id": "SITE-002",
+    "keys": [
+      "event_id",
+      "event_fingerprint",
+      "site_id",
+      "schema_name",
+      "schema_version",
+      "event_type",
+      "event_status",
+      "intake_state",
+      "delivery_state",
+      "first_seen_at",
+      "last_seen_at",
+      "duplicate_count",
+      "conflict_count",
+      "redaction_version",
+      "sandbox_marker",
+      "id",
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "note": "Producer stdout parse failed in orchestrator; HTTP status recovered via GET-only n8n evidence. Respond Accepted implies intake 202 for this workflow pattern when execution success + FIRST_SEEN row."
+}

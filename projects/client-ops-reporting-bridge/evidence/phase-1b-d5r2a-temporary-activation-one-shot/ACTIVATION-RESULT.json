@@ -1,0 +1,16 @@
+{
+  "activation_mutation": "POST /api/v1/workflows/tkM4H0G0gM3q9Foi/activate",
+  "confirm_phrase_class": "D5_ACTIVATE",
+  "activation_changes": 1,
+  "get_verify": {
+    "active": true,
+    "nodes": 17,
+    "versionId": "3d2fd6fc-bc17-4e0f-b9e5-086c959afd29",
+    "version_unchanged": true,
+    "nodes_unchanged": true
+  },
+  "executions_after_activation": 31,
+  "running_after_activation": 0,
+  "unexpected_execution_on_activation": false,
+  "verdict": "D5R2A_WORKFLOW_TEMPORARILY_ACTIVE"
+}

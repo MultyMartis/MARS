@@ -1,0 +1,22 @@
+{
+  "mutations": 0,
+  "phase": "1B-D5R2A",
+  "workflow": {
+    "running": 0,
+    "finished_false_count_note": "One historical finished=false error row remains; no active running execution.",
+    "executions": 31,
+    "versionId": "3d2fd6fc-bc17-4e0f-b9e5-086c959afd29",
+    "id": "tkM4H0G0gM3q9Foi",
+    "active": false,
+    "name": "MARS Client Ops Bridge тАФ bzpm.ru",
+    "nodes": 17
+  },
+  "datatable": {
+    "name": "MARS Client Ops Dedupe тАФ bzpm.ru",
+    "columns": 15,
+    "rows": 2,
+    "id": "H6VYhwz7RXZCBMmu"
+  },
+  "method": "GET_ONLY",
+  "verdict": "CLIENT_OPS_LIVE_BASELINE_MATCH"
+}

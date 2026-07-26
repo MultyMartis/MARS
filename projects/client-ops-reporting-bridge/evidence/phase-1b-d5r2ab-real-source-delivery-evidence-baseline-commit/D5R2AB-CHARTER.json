@@ -1,0 +1,42 @@
+{
+  "phase": "1B-D5R2AB",
+  "mode": "OFFLINE_EVIDENCE_BASELINE_GIT_COMMIT_ONLY",
+  "prior_phase": "1B-D5R2A",
+  "prior_readiness": "READY_FOR_D5R2A_EVIDENCE_BASELINE_COMMIT",
+  "no_live_rule": true,
+  "caps": {
+    "activation_changes": 0,
+    "producer_http_requests": 0,
+    "webhook_calls": 0,
+    "telegram_attempted": 0,
+    "datatable_mutations": 0,
+    "n8n_content_mutations": 0,
+    "monitor_executions": 0,
+    "scheduler_executions": 0,
+    "git_commits_max": 1,
+    "git_pushes": 0
+  },
+  "allowed_loci": [
+    "projects/client-ops-reporting-bridge/PHASE-1B-D5R2-CONTROLLED-D5-MANUAL-REAL-SOURCE-RETRY-WITH-REVALIDATED-FRESH-CANDIDATE.md",
+    "projects/client-ops-reporting-bridge/PHASE-1B-D5R2A-CONTROLLED-REAL-SOURCE-DELIVERY-WITH-TEMPORARY-N8N-ACTIVATION-AND-IMMEDIATE-RE-CONTAINMENT.md",
+    "projects/client-ops-reporting-bridge/PHASE-1B-D5R2AB-TEMPORARY-ACTIVATION-REAL-SOURCE-DELIVERY-EVIDENCE-BASELINE-COMMIT.md",
+    "projects/client-ops-reporting-bridge/evidence/phase-1b-d5r2-controlled-real-source-retry/",
+    "projects/client-ops-reporting-bridge/evidence/phase-1b-d5r2a-temporary-activation-one-shot/",
+    "projects/client-ops-reporting-bridge/evidence/phase-1b-d5r2ab-real-source-delivery-evidence-baseline-commit/"
+  ],
+  "forbidden": [
+    "SITE-002 source commit",
+    "runtime mutation",
+    "MAIN index mutation",
+    "n8n activation",
+    "live producer POST",
+    "push"
+  ],
+  "commit_subject_exact": "feat(client-ops): record first verified site002 real-source delivery",
+  "selected_event_id": "c84e29bf-79b1-5aea-98c4-9dc8d651fc96",
+  "selected_run_id": "2026-07-26_17-48-38",
+  "runtime_target": "8bb6e8f0f56388c12fdb013cf4cc1b27eb84331c",
+  "workflow_id": "tkM4H0G0gM3q9Foi",
+  "datatable_id": "H6VYhwz7RXZCBMmu",
+  "execution_id": "3416"
+}

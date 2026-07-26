@@ -1,0 +1,11 @@
+{
+  "parse_failed": true,
+  "reason": "producer stdout JSON not parsed by orchestrator (exit 0); GET-only n8n recovery used instead",
+  "auth_header_value": "<redacted>",
+  "raw_stdout_not_stored": true,
+  "network_evidence": {
+    "n8n_execution_id": "3416",
+    "startedAt": "2026-07-26T15:12:15.592Z",
+    "mode": "webhook"
+  }
+}

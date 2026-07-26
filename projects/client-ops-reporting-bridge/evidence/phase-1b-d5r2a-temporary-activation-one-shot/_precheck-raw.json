@@ -1,0 +1,56 @@
+{
+  "phase": "1B-D5R2A",
+  "method": "GET_ONLY",
+  "workflow": {
+    "id": "tkM4H0G0gM3q9Foi",
+    "name": "MARS Client Ops Bridge тАФ bzpm.ru",
+    "active": false,
+    "nodes": 17,
+    "versionId": "3d2fd6fc-bc17-4e0f-b9e5-086c959afd29",
+    "updatedAt": "2026-07-24T07:42:17.478Z",
+    "webhook_nodes": 4,
+    "webhook_id_present": true,
+    "webhook_path_present": true
+  },
+  "executions": {
+    "observable": true,
+    "count": 31,
+    "running": 0,
+    "finished_false": 1
+  },
+  "datatable": {
+    "id": "H6VYhwz7RXZCBMmu",
+    "name": "MARS Client Ops Dedupe тАФ bzpm.ru",
+    "columns": 15,
+    "rows": 2
+  },
+  "event": {
+    "event_id": "c84e29bf-79b1-5aea-98c4-9dc8d651fc96",
+    "rows": 0
+  },
+  "expected": {
+    "active": false,
+    "nodes": 17,
+    "executions": 31,
+    "running": 0,
+    "versionId": "3d2fd6fc-bc17-4e0f-b9e5-086c959afd29",
+    "table_columns": 15,
+    "table_rows": 2,
+    "event_rows": 0
+  },
+  "verdict_baseline": "CLIENT_OPS_LIVE_BASELINE_MATCH",
+  "verdict_event": "D5R2A_EVENT_UNSEEN",
+  "activation_capability": {
+    "activate_api_path": "/api/v1/workflows/tkM4H0G0gM3q9Foi/activate",
+    "deactivate_api_path": "/api/v1/workflows/tkM4H0G0gM3q9Foi/deactivate",
+    "content_edit_required": false,
+    "unrelated_workflow_dependency": false,
+    "production_webhook_expected_on_activate": true,
+    "established_client": "client-ops-n8n-activation-client.mjs",
+    "confirm_phrases_available": [
+      "ACTIVATE CLIENT OPS MANUAL REAL SOURCE D5 BZPM",
+      "DEACTIVATE CLIENT OPS MANUAL REAL SOURCE D5 BZPM"
+    ]
+  },
+  "capability_verdict": "D5R2A_TEMPORARY_ACTIVATION_CAPABILITY_CONFIRMED"
+}

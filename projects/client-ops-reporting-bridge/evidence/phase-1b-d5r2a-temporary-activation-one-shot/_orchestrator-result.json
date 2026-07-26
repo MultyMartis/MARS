@@ -1,0 +1,36 @@
+{
+  "live_auth_phrase": "APPROVE D5R2A TEMPORARY ACTIVATE + ONE REAL SOURCE POST + DEACTIVATE — EVENT c84e29bf-79b1-5aea-98c4-9dc8d651fc96 — NO RETRY",
+  "activation_changes": 2,
+  "real_http_requests": 1,
+  "charter_consumed": true,
+  "http": {
+    "http_status": null,
+    "intake_accepted": false,
+    "business_result": null,
+    "dedupe_result": null,
+    "final_state": null,
+    "failure_category": null,
+    "producer_exit_status": 0,
+    "network_calls": null,
+    "retry_count": 0,
+    "interpretation": "AMBIGUOUS_OR_PARSE_FAILURE"
+  },
+  "execution": {
+    "pre": 31,
+    "post": 32,
+    "id": "3416"
+  },
+  "datatable": {
+    "total": 3,
+    "event": 1
+  },
+  "telegram": {
+    "attempted": 1,
+    "delivered": 1,
+    "node_ok": true,
+    "message_id": "7",
+    "node_name": "Telegram Notify Accepted"
+  },
+  "final_active": false,
+  "recontainment_ok": true
+}
