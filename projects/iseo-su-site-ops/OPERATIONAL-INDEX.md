@@ -24,15 +24,15 @@
 
 | Field | Value |
 |-------|-------|
-| **Lifecycle** | **GLOSSARY BATCH 01 REFINED / BATCH 02 DRAFTS LOADED** |
-| **Project status** | Glossary CPT/templates deployed; 241 drafts; final corpus decided; Batch 01 refined; Batch 02 (45) definitions loaded as drafts; public exposure HOLD; WPilot bridge/writes/REST still gated |
+| **Lifecycle** | **GLOSSARY BATCH 03 DRAFTS LOADED** |
+| **Project status** | Glossary CPT/templates deployed; 241 drafts; final corpus decided; Batches 01–03 definitions loaded as drafts (**130** populated); public exposure HOLD; WPilot bridge/writes/REST still gated |
 | **Architecture knowledge** | **COMPLETE** — knowledge base + route matrix + task routing guide |
-| **Glossary** | Foundation + draft intake + source canonicalization + editorial audit/pilot + archive layout fix + final corpus + Batch 01 + **Batch 01 refinement + Batch 02 draft content** — remaining definitions empty; public exposure closed |
+| **Glossary** | Foundation + draft intake + source canonicalization + editorial audit/pilot + archive layout fix + final corpus + Batches 01–03 draft content — remaining definitions empty; public exposure closed |
 | **Current phase (WPilot)** | **PHASE 6D — BLOCKED** (bridge/smoke awaiting exact approval + backup lines) — **not required** for ordinary site content/file tasks |
 | **Accepted WPilot baseline** | **PHASE 6C — TOKEN CREATED / RC6 SAFE DEFAULTS** |
 | **Access files** | **LOCAL-ONLY FILLED / VALIDATED** (Git-ignored) |
 | **WPilot** | **ACTIVE** RC6; bridge **DISABLED**; writes **DISABLED**; token **LOCAL-ONLY**; REST **NOT RUN** |
-| **Next operator action (site work)** | Visual/content review of Batch 01+02 drafts → authorize Batch 03 and/or publication gate later |
+| **Next operator action (site work)** | Visual/content review of Batch 03 drafts → authorize Batch 04 and/or publication gate later |
 | **Next operator action (WPilot 6D)** | Exact lines `APPROVE ISEO-SU WPILOT BRIDGE AND READ-ONLY SMOKE 6D` + `CONFIRM ISEO-SU FRESH BEGET BACKUP FOR WPILOT 6D` |
 
 Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **absent**. Architecture: **hybrid** — see knowledge base.
@@ -108,7 +108,7 @@ Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **ab
 
 ## Next authorized task
 
-**Glossary:** operator visual/content review of Batch 01+02 drafts; then Batch 03 content charter and/or publication gate (`ISEO_GLOSSARY_PUBLIC_EXPOSURE`) later. Do not publish without explicit gate. Incomplete drafts (e.g. empty «Лид») must remain non-public.
+**Glossary:** operator visual/content review of Batch 03 (and prior) drafts; then Batch 04 content charter and/or publication gate (`ISEO_GLOSSARY_PUBLIC_EXPOSURE`) later. Do not publish without explicit gate. Incomplete drafts (e.g. empty «Лид») must remain non-public.
 
 **Ordinary site work:** additional concrete tasks after fresh Beget backup; MARS follows Task Routing Guide.
 
@@ -124,6 +124,7 @@ Hosting: **Beget**. WordPress Admin: `https://i-seo.su/wp-admin/`. Staging: **ab
 | Glossary final corpus | [ISEO-SU-GLOSSARY-FINAL-CORPUS-v1.md](ISEO-SU-GLOSSARY-FINAL-CORPUS-v1.md) |
 | Glossary Batch 01 manifest | [ISEO-SU-GLOSSARY-BATCH-01-MANIFEST-v1.md](ISEO-SU-GLOSSARY-BATCH-01-MANIFEST-v1.md) |
 | Glossary Batch 02 manifest | [ISEO-SU-GLOSSARY-BATCH-02-MANIFEST-v1.md](ISEO-SU-GLOSSARY-BATCH-02-MANIFEST-v1.md) |
+| Glossary Batch 03 manifest | [ISEO-SU-GLOSSARY-BATCH-03-MANIFEST-v1.md](ISEO-SU-GLOSSARY-BATCH-03-MANIFEST-v1.md) |
 | Glossary research register | [ISEO-SU-GLOSSARY-RESEARCH-REGISTER-v1.md](ISEO-SU-GLOSSARY-RESEARCH-REGISTER-v1.md) |
 | Glossary term audit summary | [ISEO-SU-GLOSSARY-TERM-AUDIT-v1.md](ISEO-SU-GLOSSARY-TERM-AUDIT-v1.md) |
 | Glossary term audit CSV | [data/glossary-editorial/ISEO-SU-GLOSSARY-TERM-AUDIT-v1.csv](data/glossary-editorial/ISEO-SU-GLOSSARY-TERM-AUDIT-v1.csv) |
@@ -156,6 +157,7 @@ Additional historical artifacts remain listed in the Artifact Register.
 
 | Report | Status |
 |--------|--------|
+| [Glossary Batch 03](reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-BATCH-03.md) | **COMPLETE — GLOSSARY BATCH 03 LOADED AS DRAFTS** |
 | [Glossary Batch 01 refinement and Batch 02](reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-BATCH-01-REFINEMENT-AND-BATCH-02.md) | **COMPLETE — GLOSSARY BATCH 01 REFINED / BATCH 02 LOADED AS DRAFTS** |
 | [Glossary final corpus and Batch 01 content](reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-FINAL-CORPUS-AND-BATCH-01-CONTENT.md) | **COMPLETE — GLOSSARY FINAL CORPUS SET / BATCH 01 LOADED AS DRAFTS** |
 | [Glossary archive empty-state and layout fix](reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-ARCHIVE-EMPTY-STATE-AND-LAYOUT-FIX.md) | COMPLETE |
@@ -168,4 +170,4 @@ Additional historical artifacts remain listed in the Artifact Register.
 
 ---
 
-*ISEO-SU-SITE-OPS Operational Index · Glossary Batch 01 refined + Batch 02 drafts loaded · 2026-07-25 · WPilot RC6 safe defaults · token local-only · bridge/writes disabled.*
+*ISEO-SU-SITE-OPS Operational Index · Glossary Batch 03 drafts loaded · 2026-07-26 · WPilot RC6 safe defaults · token local-only · bridge/writes disabled.*

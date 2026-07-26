@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Glossary draft content updater (Batch 01 refine + Batch 02 load).
+"""Glossary draft content updater (Batch 01 refine + Batch 02/03 load).
 
 Safety:
 - CPT glossary only; exact matched draft IDs; dry-run default; force status=draft;
@@ -222,7 +222,9 @@ def load_batch_items(batch: str) -> list[dict]:
         return json.loads((ROOT / "_glossary-scratch/batch-01-content.json").read_text(encoding="utf-8"))
     if batch == "02":
         return json.loads((ROOT / "_glossary-scratch/batch-02-content.json").read_text(encoding="utf-8"))
-    raise SystemExit("batch must be 01 or 02")
+    if batch == "03":
+        return json.loads((ROOT / "_glossary-scratch/batch-03-content.json").read_text(encoding="utf-8"))
+    raise SystemExit("batch must be 01, 02, or 03")
 
 
 def load_corpus_map() -> dict[str, dict]:
@@ -232,9 +234,12 @@ def load_corpus_map() -> dict[str, dict]:
 
 
 def patch_csv(batch: str, mapping: dict[str, dict]) -> None:
-    csv_path = ROOT / "data/glossary-editorial" / (
-        "ISEO-SU-GLOSSARY-BATCH-01-CONTENT-v1.csv" if batch == "01" else "ISEO-SU-GLOSSARY-BATCH-02-CONTENT-v1.csv"
-    )
+    names = {
+        "01": "ISEO-SU-GLOSSARY-BATCH-01-CONTENT-v1.csv",
+        "02": "ISEO-SU-GLOSSARY-BATCH-02-CONTENT-v1.csv",
+        "03": "ISEO-SU-GLOSSARY-BATCH-03-CONTENT-v1.csv",
+    }
+    csv_path = ROOT / "data/glossary-editorial" / names[batch]
     if not csv_path.exists():
         return
     rows = list(csv.DictReader(csv_path.open(encoding="utf-8-sig")))
@@ -253,7 +258,7 @@ def patch_csv(batch: str, mapping: dict[str, dict]) -> None:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--batch", choices=["01", "02", "both"], required=True)
+    ap.add_argument("--batch", choices=["01", "02", "03", "both"], required=True)
     ap.add_argument("--mode", choices=["snapshot", "dry-run", "apply"], default="dry-run")
     ap.add_argument("--only-source", action="append", default=[], help="Limit to exact source_term values")
     ap.add_argument("--skip-acf", action="store_true")
@@ -269,7 +274,8 @@ def main() -> int:
             items = [x for x in items if x["source_term"] in set(args.only_source)]
         items_by_batch[b] = items
 
-    scratch = ROOT / "_glossary-scratch" / "batch02-wp"
+    scratch_name = "batch03-wp" if args.batch == "03" else "batch02-wp"
+    scratch = ROOT / "_glossary-scratch" / scratch_name
     scratch.mkdir(parents=True, exist_ok=True)
     utc = datetime.now(timezone.utc).isoformat()
     receipt: dict = {"utc": utc, "mode": args.mode, "batches": {}, "ok": False}
@@ -397,7 +403,10 @@ def main() -> int:
         if args.mode == "snapshot" or args.mode == "apply":
             if backup_dir is None:
                 ts = datetime.now().strftime("%Y%m%d-%H%M%S")
-                backup_dir = STORAGE_BACKUP_ROOT / f"glossary-batch01-refine-batch02-{ts}"
+                if args.batch == "03":
+                    backup_dir = STORAGE_BACKUP_ROOT / f"glossary-batch03-{ts}"
+                else:
+                    backup_dir = STORAGE_BACKUP_ROOT / f"glossary-batch01-refine-batch02-{ts}"
             backup_dir.mkdir(parents=True, exist_ok=True)
             snap_path = backup_dir / "scoped-glossary-prewrite-snapshot.json"
             meta = {
@@ -408,6 +417,7 @@ def main() -> int:
                 "target_count": len(all_snapshot_items),
                 "batch01_count": sum(1 for x in all_snapshot_items if x["batch"] == "01"),
                 "batch02_count": sum(1 for x in all_snapshot_items if x["batch"] == "02"),
+                "batch03_count": sum(1 for x in all_snapshot_items if x["batch"] == "03"),
                 "items": all_snapshot_items,
             }
             snap_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -420,7 +430,6 @@ def main() -> int:
                 "bytes": snap_path.stat().st_size,
                 "target_count": len(all_snapshot_items),
             }
-            # sanitized copy under project (no need to duplicate full content if huge — keep metadata pointer)
             pointer = {
                 "utc": utc,
                 "storage_path": str(backup_dir),
@@ -430,7 +439,12 @@ def main() -> int:
                 "target_count": len(all_snapshot_items),
                 "post_ids": [x["post_id"] for x in all_snapshot_items],
             }
-            (ROOT / "data/glossary-editorial/ISEO-SU-GLOSSARY-BATCH-02-PREWRITE-SNAPSHOT-POINTER-v1.json").write_text(
+            pointer_name = (
+                "ISEO-SU-GLOSSARY-BATCH-03-PREWRITE-SNAPSHOT-POINTER-v1.json"
+                if args.batch == "03"
+                else "ISEO-SU-GLOSSARY-BATCH-02-PREWRITE-SNAPSHOT-POINTER-v1.json"
+            )
+            (ROOT / "data/glossary-editorial" / pointer_name).write_text(
                 json.dumps(pointer, ensure_ascii=False, indent=2), encoding="utf-8"
             )
 
@@ -456,23 +470,21 @@ def main() -> int:
         for b, plan in plans.items():
             coll = receipt["batches"][b]["collisions"]
             target = receipt["batches"][b]["target_count"]
+            base = {
+                "matched_equals_target": len(plan) == target,
+                "no_non_glossary": not any(c.get("reason") == "non_glossary" for c in coll),
+                "no_published_target": not any(c.get("reason") == "not_draft" for c in coll),
+                "no_unresolved_slug_collision": not any(c.get("reason") == "slug_collision" for c in coll),
+                "no_skipped": len(receipt["batches"][b]["skipped"]) == 0,
+            }
             if b == "02":
-                gates[b] = {
-                    "target_in_range": 42 <= target <= 48,
-                    "matched_equals_target": len(plan) == target,
-                    "no_non_glossary": not any(c.get("reason") == "non_glossary" for c in coll),
-                    "no_published_target": not any(c.get("reason") == "not_draft" for c in coll),
-                    "no_unresolved_slug_collision": not any(c.get("reason") == "slug_collision" for c in coll),
-                    "no_skipped": len(receipt["batches"][b]["skipped"]) == 0,
-                }
-            else:
-                gates[b] = {
-                    "matched_equals_target": len(plan) == target,
-                    "no_non_glossary": not any(c.get("reason") == "non_glossary" for c in coll),
-                    "no_published_target": not any(c.get("reason") == "not_draft" for c in coll),
-                    "no_unresolved_slug_collision": not any(c.get("reason") == "slug_collision" for c in coll),
-                    "no_skipped": len(receipt["batches"][b]["skipped"]) == 0,
-                }
+                base["target_in_range"] = 42 <= target <= 48
+            elif b == "03":
+                base["target_in_range"] = 50 <= target <= 60
+                # refuse duplicate target IDs within plan
+                ids = [x["post_id"] for x in plan]
+                base["no_duplicate_target_ids"] = len(ids) == len(set(ids))
+            gates[b] = base
         receipt["gates"] = gates
         all_gates_ok = all(all(v.values()) for v in gates.values())
 

@@ -1,9 +1,9 @@
 # ISEO-SU GLOSSARY RESEARCH REGISTER v1
 
 **Programme:** ISEO-SU-SITE-OPS  
-**Tasks:** FINAL-CORPUS-AND-BATCH-01-CONTENT; BATCH-01-REFINEMENT-AND-BATCH-02  
-**Dates:** 2026-07-25  
-**Scope:** Batch 01 + Batch 02 fact-sensitive terms  
+**Tasks:** FINAL-CORPUS-AND-BATCH-01-CONTENT; BATCH-01-REFINEMENT-AND-BATCH-02; GLOSSARY-BATCH-03  
+**Dates:** 2026-07-25; Batch 03 2026-07-26  
+**Scope:** Batch 01 + Batch 02 + Batch 03 fact-sensitive terms  
 **Rule:** Sources verify facts; publishable copy is original. No large copyrighted passages reproduced.
 
 ---
@@ -81,21 +81,43 @@
 
 ---
 
-## 5. Deliberately unused as primary evidence
+## 5. Term-level research notes (Batch 03)
 
-- Low-quality SEO listicles claiming secret ranking factors.
-- Invented percentage lifts or “guaranteed top-10” claims.
-- Third-party DA/DR as if official Google/Yandex scores (deferred from Batch 02).
+| Canonical term | Source authority | What was verified | Review date | Wording implication | Uncertainty |
+|----------------|------------------|-------------------|-------------|---------------------|-------------|
+| RankBrain | Google historical Search Central / public ML framing | ML component for query/document interpretation; not a webmaster toggle | 2026-07-26 | COMPLEX; no claimed weights; not Yandex | Current architecture opacity |
+| Краулинговый бюджет | Google Search Central crawl budget guidance | Meaningful mainly for large sites; crawl ≠ index guarantee | 2026-07-26 | COMPLEX; avoid fake quotas | Exact site quotas unpublished |
+| Disavow | Google Search Console Disavow docs | Extreme measure for toxic inbound links | 2026-07-26 | Cautionary; not daily routine; no identical Yandex twin | Mis-file risk |
+| FAQ-разметка | Schema.org FAQPage + Search Central rich-results | May enable enhancements; not ranking guarantee | 2026-07-26 | Eligibility / no guarantee language | Feature eligibility changes |
+| Mixed content | web.dev / browser mixed content rules | HTTPS page loading HTTP assets can be blocked | 2026-07-26 | Security/UX framing, not SEO myth | — |
+| ИКС | Yandex Webmaster product framing | Yandex site quality index; not Google metric | 2026-07-26 | Explicit Yandex-only | Formula incomplete |
+| Google Panda | Historical Google quality update framing | Quality/thin content history; continuum today | 2026-07-26 | Historical; not Yandex | Current naming/integration |
+| Google Penguin | Historical Google link-spam update | Link spam focus; later more continuous | 2026-07-26 | Historical; not Yandex | — |
+| Минусинск | Yandex public anti-paid-link framing | Yandex link-spam measure; not Penguin | 2026-07-26 | Keep ecosystems separate | Exact thresholds |
+| Баден-Баден | Yandex text-quality / over-optimization framing | Yandex content quality measure; not Panda | 2026-07-26 | Keep ecosystems separate | Exact thresholds |
+| Алгоритм ранжирования | Search Central / industry | Opaque multi-signal systems; updates | 2026-07-26 | COMPLEX; no factor lists as fact | Always |
+| TF-IDF | Classical IR literature | Classic statistic; not modern SEO silver bullet | 2026-07-26 | Methodological caution | — |
+| Скорость загрузки страницы | web.dev / CWV ecosystem | Lab/field metrics; not sole ranking factor | 2026-07-26 | Tie to CWV carefully | Weights unknown |
+| Remaining Batch 03 terms | Editorial / methodological | Audience-fit accuracy | 2026-07-26 | Depth as assigned | |
 
 ---
 
-## 6. Next research actions (non-blocking)
+## 6. Deliberately unused as primary evidence
+
+- Low-quality SEO listicles claiming secret ranking factors.
+- Invented percentage lifts or “guaranteed top-10” claims.
+- Third-party DA/DR as if official Google/Yandex scores (**still deferred**; excluded from Batch 03).
+
+---
+
+## 7. Next research actions (non-blocking)
 
 1. Before publication polish: re-check Yandex Metrica current definition of «отказ».
 2. Before GEO publication: confirm operator comfort with provisional industry framing.
 3. Re-check CWV / mobile-first docs if Google changes framing again.
-4. Before publishing Поведенческие факторы: expert/operator comfort with COMPLEX provisional framing.
+4. Before publishing Поведенческие факторы / RankBrain: expert/operator comfort with COMPLEX provisional framing.
+5. Before any DA/DR/PageRank articles: decide third-party metric framing charter.
 
 ---
 
-*ISEO-SU Glossary Research Register v1 · 2026-07-25 · editorial only.*
+*ISEO-SU Glossary Research Register v1 · updated Batch 03 2026-07-26 · editorial only.*

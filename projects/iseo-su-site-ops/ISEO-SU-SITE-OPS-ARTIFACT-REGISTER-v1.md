@@ -82,6 +82,19 @@ Status vocabulary: **COMPLETE** · **CREATED** · **PLANNED** · **CONDITIONAL**
 | Unified glossary updater | `tools/glossary-batch-content-updater.py` | CREATED |
 | Batch 01 refine + Batch 02 REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-BATCH-01-REFINEMENT-AND-BATCH-02.md` | COMPLETE |
 
+### Glossary Batch 03 (2026-07-26)
+
+| Artifact | Path | Status |
+|----------|------|--------|
+| Batch 03 manifest | `ISEO-SU-GLOSSARY-BATCH-03-MANIFEST-v1.md` | CREATED |
+| Batch 03 DB backup evidence | `ISEO-SU-GLOSSARY-BATCH-03-DB-BACKUP-AND-ROLLBACK-v1.md` | CREATED |
+| Batch 03 content CSV | `data/glossary-editorial/ISEO-SU-GLOSSARY-BATCH-03-CONTENT-v1.csv` | CREATED |
+| Batch 03 Markdown sources | `content/glossary/batch-03/` | CREATED |
+| Snapshot pointer | `data/glossary-editorial/ISEO-SU-GLOSSARY-BATCH-03-PREWRITE-SNAPSHOT-POINTER-v1.json` | CREATED |
+| Research register | `ISEO-SU-GLOSSARY-RESEARCH-REGISTER-v1.md` | UPDATED |
+| Glossary content updater | `tools/glossary-batch-content-updater.py` | UPDATED (batch 03) |
+| Batch 03 REPORT | `reports/REPORT-ISEO-SU-SITE-OPS-GLOSSARY-BATCH-03.md` | COMPLETE |
+
 ### Glossary archive layout fix (2026-07-24)
 
 | Artifact | Path | Status |
