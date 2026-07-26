@@ -121,9 +121,8 @@ Next wave smoke covers:
 | Exact-path git add | allowlisted docs only |
 | Commit message | `docs(iseo-report-hub): add report blocks crud charter` |
 | Commit hash | `a8f3f6dfedcadf22aa72618bc9c107f68e7ee78d` |
+| Hash-record commit | `7b20b8b8aae8361284c216d9cc588f2ea48e51bb` — `docs(iseo-report-hub): record report blocks crud charter commit hash` |
 | Push | **no** |
-
-Hash-record follow-up: `docs(iseo-report-hub): record report blocks crud charter commit hash` on this REPORT only.
 
 ---
 
@@ -157,7 +156,7 @@ Hash-record follow-up: `docs(iseo-report-hub): record report blocks crud charter
 | Action | Done? |
 |--------|-------|
 | exact-path git add | **yes** (allowlisted docs) |
-| commit | **yes** (primary; hash-record if needed) |
+| commit | **yes** (primary `a8f3f6df`; hash-record `7b20b8b8`) |
 | push | **no** |
 | fetch | **no** |
 | pull | **no** |
