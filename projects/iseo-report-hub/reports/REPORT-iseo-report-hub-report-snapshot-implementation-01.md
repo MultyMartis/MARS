@@ -111,7 +111,8 @@ no production DB; no real client data; no credentials in Git/report; no password
 | Staging | exact-path `git add` allowlisted paths only |
 | Commit hash | `7d19979183947a25510915a7d36da9655c370673` |
 | Hash-record follow-up | `040586fe96db91868704ed448402f640f438cb02` — `docs(iseo-report-hub): record report snapshot workflow commit hash` |
-| HEAD verification | after commits |
+| Clarify follow-up | `c6b5d84161a751c594444a93510b159eb4c73a17` — `docs(iseo-report-hub): clarify report snapshot workflow commit hash record` |
+| HEAD verification | `c6b5d84161a751c594444a93510b159eb4c73a17` |
 | Push | **no** |
 
 ## 12. SAFE UNKNOWN
