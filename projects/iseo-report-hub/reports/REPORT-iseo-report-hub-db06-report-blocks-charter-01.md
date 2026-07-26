@@ -137,8 +137,8 @@ Future apply wave gates:
 |------|-------|
 | Exact-path git add | yes (allowlisted docs only) |
 | Commit message | `docs(iseo-report-hub): add db06 report blocks charter` |
-| Commit hash | PENDING_PRIMARY |
-| Hash-record follow-up | PENDING_HASH_RECORD (report only, if needed) |
+| Commit hash | `8b62264cbc8dfc7c42461f4cd600ee374d5c6efb` |
+| Hash-record follow-up | PENDING_HASH_RECORD |
 | Push | **no** |
 
 ---
