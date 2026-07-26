@@ -291,10 +291,60 @@ docs(metallka): persist site ops and wpilot production baseline
 | Allowlist authority | [METALLKA-GIT-PERSISTENCE-ALLOWLIST-v2.txt](METALLKA-GIT-PERSISTENCE-ALLOWLIST-v2.txt) |
 | Push | **NOT AUTHORIZED** in P4-R2 |
 
+### P4-R2 execution result (post-commit amendment on primary disk)
+
+| Field | Value |
+|-------|-------|
+| REMOTE_BASE | `dc1fa5c48255efd8819b1947408d82f67bf020ca` |
+| PERSIST_COMMIT | `0a39638d5cf0e593c5c262f98bfd6722808f6307` |
+| Prepared branch | `mars/tmp-metallka-remote-persist-20260727-012227` |
+| Clean worktree | `X:\AI MARS STORAGE\git-sync-metallka-remote-canonical-20260727-012227\repo` |
+| File count | **61** |
+| Race check | **UNCHANGED / READY** |
+| Push | **NOT AUTHORIZED / NOT PERFORMED** *(in P4-R2; authorized and completed in P4-R3)* |
+| Level | **A — PUSH-READY** *(historical at end of R2)* |
+| Report | [reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P4-R2-REMOTE-CANONICAL-PERSISTENCE-PREP.md](reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P4-R2-REMOTE-CANONICAL-PERSISTENCE-PREP.md) (included in P5 follow-up) |
+
 Recommended commit subject (P4-R2):
 
 ```text
 docs(metallka): persist site ops and wpilot production baseline
 ```
 
-*METALLKA Git Persistence Audit v1 · root cause A · P1 BLOCKED · P2–P4-R1 provenance · P4-R2 remote-canonical prep strategy.*
+---
+
+## 17. Phase 4C-P4-R3 remote canonical scoped push
+
+| Field | Value |
+|-------|-------|
+| Operator approval | `APPROVE METALLKA GIT PUSH — PUSH SCOPED PERSISTENCE COMMIT TO ORIGIN CANONICAL` |
+| Remote canonical persistence | **COMPLETE** |
+| Remote commit | `0a39638d5cf0e593c5c262f98bfd6722808f6307` |
+| Remote branch | `origin/mars/canonical-post-recovery` |
+| Push | **COMPLETE** (force = **NO**; one-commit FF `dc1fa5c4` → `0a39638d`) |
+| Changed paths | **61** / foreign **0** |
+| Final secret check | **PASS** |
+| Primary Active Brain synchronization | **NOT PERFORMED** |
+| Post-push documentation follow-up | **PREPARED** (Phase 4C-P5; push **NOT AUTHORIZED**) |
+| WPilot writes | **BLOCKED** |
+| Clean worktree retained | `X:\AI MARS STORAGE\git-sync-metallka-remote-canonical-20260727-012227\repo` |
+| Temp branch retained | `mars/tmp-metallka-remote-persist-20260727-012227` |
+| Report | [reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P4-R3-REMOTE-CANONICAL-PUSH.md](reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P4-R3-REMOTE-CANONICAL-PUSH.md) (included in P5 follow-up) |
+
+---
+
+## 18. Phase 4C-P5 post-push documentation follow-up (prep)
+
+| Field | Value |
+|-------|-------|
+| Operator approval | `APPROVE METALLKA P5 — PREPARE POST-PUSH DOCUMENTATION FOLLOW-UP` |
+| Purpose | Tiny scoped docs commit on refreshed `origin/mars/canonical-post-recovery` tip |
+| REMOTE_BASE (prep) | `0a39638d5cf0e593c5c262f98bfd6722808f6307` |
+| Follow-up allowlist | [METALLKA-GIT-POST-PUSH-FOLLOWUP-ALLOWLIST-v1.txt](METALLKA-GIT-POST-PUSH-FOLLOWUP-ALLOWLIST-v1.txt) |
+| Scope | R2/R3 reports + current-state navigation/audit/register + allowlist |
+| Push | **NOT AUTHORIZED / NOT PERFORMED** in P5 |
+| Primary Active Brain sync | **NOT PERFORMED** |
+| Production WPilot | `dev_confirmed=true` · `bridge_enabled=true` · `write_enabled=false` · authenticated reads **PROVEN** · writes **BLOCKED** |
+| Next product phase | After P5 push acceptance → **PHASE 4D — FIRST WPILOT CONTROLLED WRITE SMOKE CHARTER PREPARATION** (not started) |
+
+*METALLKA Git Persistence Audit v1 · root cause A · P1–P4-R1 provenance · P4-R2 prepared · P4-R3 remote COMPLETE @ `0a39638d5cf0` · P5 follow-up PREPARED (push not authorized).*

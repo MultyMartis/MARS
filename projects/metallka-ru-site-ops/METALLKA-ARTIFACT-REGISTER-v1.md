@@ -68,13 +68,15 @@
 | Phase 4C-R0 report | [reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-R0-GATE-E-RETRY-CHARTER.md](reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-R0-GATE-E-RETRY-CHARTER.md) | **COMPLETE — RETRY NOT AUTHORIZED** (historical prep) |
 | Phase 4C-R1 Gate E retry execution evidence | [METALLKA-WPILOT-GATE-E-RETRY-EXECUTION-EVIDENCE-v1.md](METALLKA-WPILOT-GATE-E-RETRY-EXECUTION-EVIDENCE-v1.md) | **COMPLETE — PROVEN** |
 | Phase 4C-R1 report | [reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-R1-WPILOT-GATE-E-RETRY-EXECUTION.md](reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-R1-WPILOT-GATE-E-RETRY-EXECUTION.md) | **COMPLETE — PROVEN** |
-| Git Persistence Audit | [METALLKA-GIT-PERSISTENCE-AUDIT-v1.md](METALLKA-GIT-PERSISTENCE-AUDIT-v1.md) | **COMPLETE** (Phase 4C-P1; amended P2/P3/P4-R1/P4-R2 strategy) |
+| Git Persistence Audit | [METALLKA-GIT-PERSISTENCE-AUDIT-v1.md](METALLKA-GIT-PERSISTENCE-AUDIT-v1.md) | **COMPLETE** (Phase 4C-P1; amended through P4-R3 push) |
 | Git Persistence Allowlist v1 | [METALLKA-GIT-PERSISTENCE-ALLOWLIST-v1.txt](METALLKA-GIT-PERSISTENCE-ALLOWLIST-v1.txt) | **HISTORICAL** (P1; 57 paths) |
-| Git Persistence Allowlist v2 | [METALLKA-GIT-PERSISTENCE-ALLOWLIST-v2.txt](METALLKA-GIT-PERSISTENCE-ALLOWLIST-v2.txt) | **ACTIVE** — current corpus staging authority (P4-R2) |
+| Git Persistence Allowlist v2 | [METALLKA-GIT-PERSISTENCE-ALLOWLIST-v2.txt](METALLKA-GIT-PERSISTENCE-ALLOWLIST-v2.txt) | **ACTIVE** — corpus staging authority used for remote baseline |
 | Phase 4C-P2 clean-worktree persistence report | [reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P2-CLEAN-WORKTREE-CORPUS-PERSISTENCE.md](reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P2-CLEAN-WORKTREE-CORPUS-PERSISTENCE.md) | **HISTORICAL** — provenance path via `980fa320` era |
 | Phase 4C-P3 canonical integration readiness report | [reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P3-CANONICAL-INTEGRATION-READINESS.md](reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P3-CANONICAL-INTEGRATION-READINESS.md) | **HISTORICAL** — LEVEL B DEFERRED (dirty-primary model abandoned for R2) |
 | Phase 4C-P4-R1 canonical promotion report | [reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P4-R1-CANONICAL-PROMOTION.md](reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P4-R1-CANONICAL-PROMOTION.md) | **HISTORICAL — BLOCKED** (tip advanced; objects provenance only) |
-| Phase 4C-P4-R2 remote-canonical persistence prep report | [reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P4-R2-REMOTE-CANONICAL-PERSISTENCE-PREP.md](reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P4-R2-REMOTE-CANONICAL-PERSISTENCE-PREP.md) | **FOLLOW-UP PENDING** (created after PERSIST_COMMIT; not inside that commit) |
+| Phase 4C-P4-R2 remote-canonical persistence prep report | [reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P4-R2-REMOTE-CANONICAL-PERSISTENCE-PREP.md](reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P4-R2-REMOTE-CANONICAL-PERSISTENCE-PREP.md) | **INCLUDED IN P5 FOLLOW-UP** (historical R2 evidence) |
+| Phase 4C-P4-R3 remote canonical push report | [reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P4-R3-REMOTE-CANONICAL-PUSH.md](reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P4-R3-REMOTE-CANONICAL-PUSH.md) | **INCLUDED IN P5 FOLLOW-UP** (historical R3 evidence) |
+| Git Post-Push Follow-Up Allowlist v1 | [METALLKA-GIT-POST-PUSH-FOLLOWUP-ALLOWLIST-v1.txt](METALLKA-GIT-POST-PUSH-FOLLOWUP-ALLOWLIST-v1.txt) | **ACTIVE** — P5 staging authority |
 
 ---
 
@@ -104,8 +106,11 @@
 | Gate E authenticated read smoke (success path) | **COMPLETE** (4C-R1) |
 | Phase 4D first controlled write smoke charter | **PLANNED** — not started |
 | WPilot Writes | **BLOCKED** |
-| Project Corpus Persistence (git commit) | **P4-R2** — fresh scoped commit on `origin/mars/canonical-post-recovery` via git-sync clean worktree; dirty Active Brain is INPUT SOURCE only |
-| Push | **NOT AUTHORIZED / NOT PERFORMED** in P4-R2 |
+| Project Corpus Persistence (git commit) | **REMOTE BASELINE COMPLETE** — `0a39638d5cf0e593c5c262f98bfd6722808f6307` on `origin/mars/canonical-post-recovery` |
+| Push | **COMPLETE** (P4-R3; force = NO; fast-forward) |
+| Primary Active Brain synchronization | **NOT PERFORMED** |
+| Post-push documentation follow-up | **PREPARED** (Phase 4C-P5; push **NOT AUTHORIZED**) |
+| Phase 4C-P5 prep report | **LOCAL / PENDING** — [reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P5-POST-PUSH-DOCUMENTATION-FOLLOWUP-PREP.md](reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P5-POST-PUSH-DOCUMENTATION-FOLLOWUP-PREP.md) (created after FOLLOWUP_COMMIT; not recursive) |
 | OPERATIONAL-RUNBOOK-v1 | **PLANNED** |
 | CONTROLLED-WRITE-SMOKE-PLAN-v1 | **PLANNED** |
 
@@ -126,4 +131,4 @@
 
 ---
 
-*Artifact Register v1 · P4-R2 remote-canonical persistence prep · dirty primary = Active Brain only · push NOT AUTHORIZED · WPilot Writes BLOCKED.*
+*Artifact Register v1 · P4-R3 PUSH COMPLETE · remote `0a39638d5cf0e593c5c262f98bfd6722808f6307` · primary sync NOT PERFORMED · P5 post-push docs PREPARED (push not authorized) · WPilot Writes BLOCKED.*

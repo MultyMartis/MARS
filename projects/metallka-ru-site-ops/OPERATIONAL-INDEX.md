@@ -42,7 +42,7 @@
 | **Gate E** | **AUTHORIZED** · **EXECUTED AS BLOCKED STOP** (Phase 4C historical) |
 | **Gate E retry** | **EXECUTED COMPLETE** (Phase 4C-R1) — final posture T/T/F MODEL A |
 | **Site Ops write readiness** | **PROVEN** for bounded WP Admin / WPBakery page-local text (CHANGE 0001 class); WPilot writes still **BLOCKED** |
-| **Git persistence** | **P4-R2 IN PROGRESS / PREP** — abandon dirty-primary integration chase. Authority = **`origin/mars/canonical-post-recovery`**. Fresh scoped snapshot via clean git-sync worktree under `X:\AI MARS STORAGE\git-sync-*`. Historical provenance only: `980fa320` / `c781a55a` / `ac0f37b7` (not cherry-picked). Push **NOT** authorized in this phase. |
+| **Git persistence** | **REMOTE BASELINE PERSISTENCE COMPLETE** — remote commit `0a39638d5cf0e593c5c262f98bfd6722808f6307` on `origin/mars/canonical-post-recovery` (parent `dc1fa5c48255efd8819b1947408d82f67bf020ca`). Push **COMPLETE** (fast-forward / no force). Primary Active Brain synchronization **NOT PERFORMED**. Post-push documentation follow-up **PREPARED** (Phase 4C-P5; push **NOT AUTHORIZED**). Historical provenance only: `980fa320` / `c781a55a` / `ac0f37b7`. |
 | **MARS Git model** | One monorepo; dirty `X:\AI MARS` = Active Brain / INPUT SOURCE (read-only for Git waves); foreign WIP out of scope; persistence/sync = Storage `git-sync-*\repo`; remote canonical tip is integration authority |
 
 ---
@@ -52,12 +52,14 @@
 | Field | Value |
 |-------|--------|
 | **Does NOT auto-start** | Phase 4D write smoke / write enable / backup / dry-run / scoped-replace |
-| **Next phase** | Complete **P4-R2** remote-canonical persistence prep → separate explicit push gate → then Phase 4D charter only after acceptance |
-| **Required approval (future push)** | `APPROVE METALLKA GIT PUSH — PUSH SCOPED PERSISTENCE COMMIT TO ORIGIN CANONICAL` (not granted in P4-R2) |
+| **Next phase** | Push prepared **P5 post-push documentation follow-up** (separate approval) → then **PHASE 4D — FIRST WPILOT CONTROLLED WRITE SMOKE CHARTER PREPARATION** (not authorized here) |
+| **Push approval used** | `APPROVE METALLKA GIT PUSH — PUSH SCOPED PERSISTENCE COMMIT TO ORIGIN CANONICAL` (P4-R3) |
+| **Required approval (future P5 push)** | `APPROVE METALLKA P5 PUSH — PUSH POST-PUSH DOCUMENTATION FOLLOW-UP TO ORIGIN CANONICAL` (not granted in P5 prep) |
 | **Evidence (4C-R1)** | [METALLKA-WPILOT-GATE-E-RETRY-EXECUTION-EVIDENCE-v1.md](METALLKA-WPILOT-GATE-E-RETRY-EXECUTION-EVIDENCE-v1.md) |
 | **Evidence (4C-P2/P3)** | [reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P2-CLEAN-WORKTREE-CORPUS-PERSISTENCE.md](reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P2-CLEAN-WORKTREE-CORPUS-PERSISTENCE.md) · [reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P3-CANONICAL-INTEGRATION-READINESS.md](reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P3-CANONICAL-INTEGRATION-READINESS.md) |
 | **Evidence (4C-P4-R1)** | [reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P4-R1-CANONICAL-PROMOTION.md](reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P4-R1-CANONICAL-PROMOTION.md) (historical BLOCKED) |
-| **Evidence (4C-P4-R2)** | [reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P4-R2-REMOTE-CANONICAL-PERSISTENCE-PREP.md](reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P4-R2-REMOTE-CANONICAL-PERSISTENCE-PREP.md) (created after prep commit; FOLLOW-UP PENDING) |
+| **Evidence (4C-P4-R2)** | [reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P4-R2-REMOTE-CANONICAL-PERSISTENCE-PREP.md](reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P4-R2-REMOTE-CANONICAL-PERSISTENCE-PREP.md) (included in P5 follow-up) |
+| **Evidence (4C-P4-R3)** | [reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P4-R3-REMOTE-CANONICAL-PUSH.md](reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P4-R3-REMOTE-CANONICAL-PUSH.md) (included in P5 follow-up) |
 
 ---
 
@@ -114,6 +116,9 @@
 | 47 | [reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P2-CLEAN-WORKTREE-CORPUS-PERSISTENCE.md](reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P2-CLEAN-WORKTREE-CORPUS-PERSISTENCE.md) |
 | 48 | [reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P3-CANONICAL-INTEGRATION-READINESS.md](reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P3-CANONICAL-INTEGRATION-READINESS.md) |
 | 49 | [reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P4-R1-CANONICAL-PROMOTION.md](reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P4-R1-CANONICAL-PROMOTION.md) |
+| 50 | [reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P4-R2-REMOTE-CANONICAL-PERSISTENCE-PREP.md](reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P4-R2-REMOTE-CANONICAL-PERSISTENCE-PREP.md) |
+| 51 | [reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P4-R3-REMOTE-CANONICAL-PUSH.md](reports/REPORT-METALLKA-SITE-OPS-PHASE-4C-P4-R3-REMOTE-CANONICAL-PUSH.md) |
+| 52 | [METALLKA-GIT-POST-PUSH-FOLLOWUP-ALLOWLIST-v1.txt](METALLKA-GIT-POST-PUSH-FOLLOWUP-ALLOWLIST-v1.txt) (P5 follow-up staging authority) |
 
 ---
 
@@ -131,7 +136,7 @@
 | Local mirror / MLI profile | **HOLD / DEFER** |
 | ATLAS ORG / WEB / DOM | **HOLD** |
 | Registry project row | **HOLD** |
-| Git corpus persistence commit | **P4-R2** — fresh remote-canonical snapshot via git-sync; dirty primary not used for commit/promote; push separately gated |
+| Git corpus remote baseline | **CLEARED — P4-R3 PUSH COMPLETE** — `0a39638d5cf0e593c5c262f98bfd6722808f6307` on `origin/mars/canonical-post-recovery`; primary sync **NOT PERFORMED**; P5 post-push docs follow-up **PREPARED / PUSH NOT AUTHORIZED** |
 
 ---
 
@@ -145,4 +150,4 @@
 
 ---
 
-*METALLKA-RU-SITE-OPS Operational Index · Phase 4C-R1 COMPLETE — WPilot T/T/F reads PROVEN; writes BLOCKED; Git: P4-R2 remote-canonical persistence prep (push NOT authorized); Phase 4D not started.*
+*METALLKA-RU-SITE-OPS Operational Index · Phase 4C-R1 COMPLETE — WPilot T/T/F reads PROVEN; writes BLOCKED; Git: remote baseline COMPLETE @ `0a39638d5cf0` on origin/canonical; primary sync NOT PERFORMED; P5 post-push docs PREPARED (push not authorized); Phase 4D not started.*
