@@ -25,8 +25,8 @@ OCPILOT_RUN = "4.213"
 SITE_ID = "SITE-002"
 ENVIRONMENT = "PRODUCTION"
 PRODUCTION_URL = "https://bzpm.ru/"
-BASELINE_BEFORE = "SITE-002-STABLE-PROD-CATALOG-BRANCH-FOLLOWUP-01"
-AUDIT_BASELINE_BEFORE = "SITE-002-POST-1C-CATALOG-MONITOR-01"
+BASELINE_BEFORE = "SITE-002-STABLE-PROD-POST-1C-MONITOR-BASELINE-1737-04"
+AUDIT_BASELINE_BEFORE = "SITE-002-MONITOR-BASELINE-REFRESH-04"
 WRONG_BRAND = "БЗПМ"
 CORRECT_BRAND = "ЗПМ"
 UTF8_BOM = b"\xef\xbb\xbf"
@@ -76,9 +76,21 @@ SANITY_URLS = (
 ONBOARDED_CATEGORY_PATHS = {
     "katalog/nejtralnoe-oborudovanie/konditerskiy-inventar",
     "katalog/nejtralnoe-oborudovanie/konditerskiy-inventar/formy-konditerskie",
-    "katalog/nejtralnoe-oborudovanie/lari",
-    "katalog/nejtralnoe-oborudovanie/lari/skladskie-lari",
-    "katalog/nejtralnoe-oborudovanie/lari/proizvodstvennye-lari",
+    "katalog/nejtralnoe-oborudovanie/shkafy-i-lari/lari",
+    "katalog/nejtralnoe-oborudovanie/shkafy-i-lari/lari/proizvodstvennye-lari",
+    "katalog/nejtralnoe-oborudovanie/shkafy-i-lari/lari/skladskie-lari",
+    "katalog/nejtralnoe-oborudovanie/shkafy-i-lari/shkafy-dlya-hleba",
+    "katalog/nejtralnoe-oborudovanie/stellazhi/stellazhi-premium-3/stellazhi-premium-3-vysota-1600",
+    "katalog/nejtralnoe-oborudovanie/stellazhi/stellazhi-premium/stellazhi-premium-vysota-1600",
+    "katalog/nejtralnoe-oborudovanie/stellazhi/stellazhi-standart/stellazhi-standart-vysota-1600",
+    "katalog/tehnologicheskoe-oborudovanie",
+    "katalog/tehnologicheskoe-oborudovanie/posuda-i-inventar",
+    "tehnologicheskoe-oborudovanie/hlebopekarnoe",
+    "tehnologicheskoe-oborudovanie/myasopererabatyvayuschee",
+    "tehnologicheskoe-oborudovanie/teplovoe",
+    "tehnologicheskoe-oborudovanie/teplovoe/grili-kontaktnye",
+    "tehnologicheskoe-oborudovanie/teplovoe/risovarki",
+    "tehnologicheskoe-oborudovanie/teplovoe/vodonagrevateli",
 }
 
 TECHNICAL_QUERY_PATTERNS = (
@@ -735,11 +747,15 @@ def ensure_layout() -> None:
 
 def phase1_baseline() -> tuple[list[str], dict[str, Any]]:
     print("Phase 1: baseline selection...")
-    source_op = "SITE-002-PROD-POST-1C-CATALOG-ONBOARDING-MONITOR-01 (Run 4.212 current)"
+    source_op = (
+        "SITE-002-MONITOR-BASELINE-REFRESH-04 (Run 4.288) — refreshed from live sitemap "
+        "after validated tech equipment wave (onboarding 05 + tiles/megamenu; source 62d82eb6)"
+    )
     verified_by = AUDIT_BASELINE_BEFORE
     limitation = (
-        "Run 4.212 persisted full sitemap URL set in current/sitemap-current-urls.json; "
-        "count 1377, SHA-256 9c81305483d7fb79b829e562598e5a3a0eb74a29350fae142fa78f97c3eca6c1."
+        "Baseline URL set refreshed in MONITOR-01 current/sitemap-current-urls.json; "
+        "count 1737, SHA-256 of JSON artifact recorded in SITE-002-MONITOR-BASELINE-REFRESH-04 "
+        "baseline-after; prior 1714 snapshot retained under baseline-before and sibling pre-refresh copy."
     )
     if not BASELINE_RUN_4212.exists():
         raise FileNotFoundError(f"Baseline artifact missing: {BASELINE_RUN_4212}")
@@ -752,8 +768,8 @@ def phase1_baseline() -> tuple[list[str], dict[str, Any]]:
         "audit_baseline_before": AUDIT_BASELINE_BEFORE,
         "artifact_path": str(BASELINE_RUN_4212),
         "url_count": len(urls),
-        "expected_count_run_4_212": 1377,
-        "match_expected": len(urls) == 1377,
+        "expected_count_run_4_288": 1737,
+        "match_expected": len(urls) == 1737,
         "reconstructed": False,
         "limitations": limitation,
         "captured_at": utc_now(),
@@ -771,7 +787,7 @@ def phase1_baseline() -> tuple[list[str], dict[str, Any]]:
             f"- Baseline checkpoint: `{BASELINE_BEFORE}`",
             f"- Artifact: `{BASELINE_RUN_4212}`",
             f"- URL count: **{len(urls)}**",
-            f"- Match Run 4.212 expected (1377): **{selection['match_expected']}**",
+            f"- Match Run 4.288 expected (1737): **{selection['match_expected']}**",
             f"- Reconstructed: **no**",
             "",
             "## Limitations",
@@ -837,7 +853,7 @@ def phase2_current() -> tuple[list[str], dict[str, Any], str, str]:
         "llms_bzpm_count": count_brand(llms_text, WRONG_BRAND),
         "llms_zpm_count": count_brand(llms_text, CORRECT_BRAND),
         "captured_at": utc_now(),
-        "baseline_expected_count": 1377,
+        "baseline_expected_count": 1737,
     }
     write_json(DEPLOYMENT_ROOT / "current" / "sitemap-current-summary.json", summary)
     write_json(DEPLOYMENT_ROOT / "current" / "sitemap-current-urls.json", urls)
@@ -850,8 +866,8 @@ def phase2_current() -> tuple[list[str], dict[str, Any], str, str]:
             f"- Sitemap HTTP: **{summary['sitemap_http_status']}**",
             f"- Valid XML: **{valid_xml}**",
             f"- URL count: **{len(urls)}**",
-            f"- Baseline (4.212): **1377**",
-            f"- Delta vs baseline: **{len(urls) - 1377:+d}**",
+            f"- Baseline (4.288): **1737**",
+            f"- Delta vs baseline: **{len(urls) - 1737:+d}**",
             f"- robots HTTP 200 + Sitemap: **{summary['robots_http_status'] == 200 and summary['robots_sitemap_directive']}**",
             f"- llms UTF-8 BOM: **{summary['llms_utf8_bom']}**",
             f"- llms ЗПМ / no БЗПМ: **{summary['llms_zpm_count'] > 0} / {summary['llms_bzpm_count'] == 0}**",

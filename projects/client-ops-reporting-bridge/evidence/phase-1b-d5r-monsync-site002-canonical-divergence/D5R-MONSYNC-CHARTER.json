@@ -1,0 +1,36 @@
+{
+  "phase": "1B-D5R-MONSYNC",
+  "title": "SITE-002 Canonical Divergence Reconciliation for Monitor Runtime Target",
+  "date_utc": "2026-07-26",
+  "authorized": true,
+  "scope": {
+    "create_scoped_local_commit": true,
+    "advance_local_canonical_ref_if_safe": true,
+    "client_ops_evidence_writes": true,
+    "temporary_git_sync_worktree": true
+  },
+  "forbidden": {
+    "monitor_execution": true,
+    "runtime_checkout_mutation": true,
+    "scheduler_mutation": true,
+    "client_ops_post": true,
+    "n8n_mutation": true,
+    "telegram": true,
+    "1c_import": true,
+    "production_writes": true,
+    "git_pull": true,
+    "broad_origin_merge": true,
+    "main_index_mutation": true,
+    "push": true
+  },
+  "accepted_prior": {
+    "monclean_verdict": "PARTIAL — SITE-002 TARGET CANONICAL RUNTIME REVISION NOT SAFE FOR DEPLOYMENT",
+    "root_blocker": "CANONICAL BRANCH DIVERGENCE",
+    "runner_repair_commit": "9a48e93bdc46cd1a0a05153b9e4588ee23cf81d7",
+    "monitor_baseline_origin_commit": "af5f3fcae588cdf0631ae7b3a4b7b7d48f404ef6",
+    "monitor_baseline_blob": "9c0272f6271a666cd50bad501779b8468c03e68c",
+    "mond_run_id": "2026-07-26_17-48-38",
+    "mond_event_id": "c84e29bf-79b1-5aea-98c4-9dc8d651fc96"
+  },
+  "preferred_commit_subject": "fix(site-002): reconcile monitor runtime baseline with runner repair"
+}
