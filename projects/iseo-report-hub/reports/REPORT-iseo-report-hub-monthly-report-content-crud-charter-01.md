@@ -1,9 +1,10 @@
 # REPORT — I-SEO REPORT HUB MONTHLY REPORT CONTENT CRUD CHARTER 01
 
-**Status:** COMPLETE (docs/policy only) — pending primary commit hash fill  
+**Status:** COMPLETE (docs/policy only)  
 **project_id:** `iseo-report-hub`  
 **Created:** 2026-07-26  
-**Authority:** Operator I-SEO Report Hub Monthly Report Content CRUD Charter 01
+**Authority:** Operator I-SEO Report Hub Monthly Report Content CRUD Charter 01  
+**Primary commit:** `e4dfa572af762f74f270bb3fffa20d30ba5c13eb`
 
 ---
 
@@ -113,8 +114,8 @@ Next wave smoke covers:
 |-------|-------|
 | Exact-path git add | allowlisted docs only |
 | Commit message | `docs(iseo-report-hub): add monthly report content crud charter` |
-| Commit hash | _pending primary commit_ |
-| Hash-record follow-up | `docs(iseo-report-hub): record monthly report content crud charter commit hash` (this REPORT only, if needed) |
+| Commit hash | `e4dfa572af762f74f270bb3fffa20d30ba5c13eb` |
+| Hash-record follow-up | `docs(iseo-report-hub): record monthly report content crud charter commit hash` (this REPORT only) |
 | Push | **no** |
 
 ---
