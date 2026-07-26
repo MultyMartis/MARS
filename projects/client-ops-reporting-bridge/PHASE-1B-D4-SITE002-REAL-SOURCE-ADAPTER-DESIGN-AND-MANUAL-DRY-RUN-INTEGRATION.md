@@ -27,9 +27,11 @@ D4 proves this **offline** with sanitized accepted SITE-002 artifacts. No monito
 
 Authoritative artifact family: per-run directory with:
 
-- `monitor-classification.json` (primary classification)
+- `monitor-classification.json` (primary **action** classification)
 - `changed-summary.json` (metrics)
-- `run-summary.json` (run_id / timing / exit)
+- `run-summary.json` (run_id / timing / exit; `classification` is an **intended duplicate** of monitor-classification, not an independent health layer)
+
+**D5R clarification (no D4 behavior change):** when `run-summary.classification` disagrees with `monitor-classification.classification`, Client Ops must continue to fail closed (`SOURCE_ARTIFACT_CONFLICT`). D5R traced disagreement to SITE-002 runner merge overwrite (`MONITOR_ARTIFACT_GENERATION_BUG`), not to expected different semantic layers. See Phase 1B-D5R evidence pack.
 
 ## Implementation
 

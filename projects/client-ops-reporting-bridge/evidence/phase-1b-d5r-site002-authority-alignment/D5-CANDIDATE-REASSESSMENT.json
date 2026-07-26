@@ -1,0 +1,91 @@
+{
+  "phase": "1B-D5R",
+  "mode": "offline_reassessment_only",
+  "network_calls": 0,
+  "live_post": false,
+  "d5_historical_candidates_inspected": 3,
+  "d5_historical_authoritative_json_reads": 9,
+  "d5_historical_raw_log_reads": 0,
+  "d5r_candidate_rereads": 3,
+  "d5r_authoritative_json_reads": 9,
+  "d5r_raw_source_log_reads": 0,
+  "storage_mutations": 0,
+  "safe_existing_source": "NO_SAFE_EXISTING_SOURCE_AVAILABLE_FOR_D5_RETRY",
+  "candidates": [
+    {
+      "id": "candidate1",
+      "label": "site002-post-1c-run/2026-07-26_12-30-02",
+      "source_run_id": "2026-07-26_12-30-02",
+      "observed_at": "2026-07-26T05:33:06Z",
+      "original_source_facts": {
+        "monitor_classification": "ONBOARDING_REQUIRED",
+        "run_summary_classification": "NO_ACTION_REQUIRED",
+        "onboarding_needs_count": 7,
+        "added_count": 119,
+        "removed_count": 2,
+        "runner_merge_markers": true,
+        "run_next_action": "runner_default_review_both_files"
+      },
+      "canonical_action_classification": "ONBOARDING_REQUIRED",
+      "run_health": "success_exit_0",
+      "authority": "CONFLICT_EMITTER_BUG",
+      "mapped_client_ops_status": "BLOCKED",
+      "delivery_freshness": "FRESH_WITHIN_93600_AT_D5_INSPECTION",
+      "delivery_eligibility": "NOT_SAFE_TO_SEND",
+      "event_id": "e30ef970-7ea1-561b-ac2d-411201ba04c8",
+      "preview_verdict": "REAL_SOURCE_PREVIEW_NOT_APPROVED_FOR_LIVE_POST",
+      "future_retry_safety": "CANDIDATE_NOT_SAFE_FOR_FUTURE_D5_RETRY",
+      "reason": "SOURCE_ARTIFACT_CONFLICT from runner classification overwrite"
+    },
+    {
+      "id": "candidate2",
+      "label": "site002-post-1c-run/2026-07-20_22-32-43",
+      "source_run_id": "2026-07-20_22-32-43",
+      "observed_at": "2026-07-20T15:33:03Z",
+      "original_source_facts": {
+        "monitor_classification": "NO_ACTION_REQUIRED",
+        "run_summary_classification": "NO_ACTION_REQUIRED",
+        "onboarding_needs_count": 0,
+        "added_count": 0,
+        "removed_count": 0,
+        "runner_merge_markers": true,
+        "note": "classification match is accidental; next_action still runner-default"
+      },
+      "canonical_action_classification": "NO_ACTION_REQUIRED",
+      "run_health": "success_exit_0",
+      "authority": "MATCH_BUT_RUNNER_NEXT_ACTION_CORRUPTION_LATENT",
+      "mapped_client_ops_status": "BLOCKED",
+      "delivery_freshness": "STALE",
+      "delivery_eligibility": "NOT_SAFE_TO_SEND",
+      "event_id": "b819e684-8a5e-5793-8b91-4543b43fa52f",
+      "preview_verdict": "REAL_SOURCE_PREVIEW_NOT_APPROVED_FOR_LIVE_POST",
+      "future_retry_safety": "CANDIDATE_NOT_SAFE_FOR_FUTURE_D5_RETRY",
+      "reason": "stale under 93600; also next_action runner-default corruption"
+    },
+    {
+      "id": "candidate3",
+      "label": "site002-post-1c-run/2026-07-20_12-45-01",
+      "source_run_id": "2026-07-20_12-45-01",
+      "observed_at": "2026-07-20T06:10:33Z",
+      "original_source_facts": {
+        "monitor_classification": "ONBOARDING_REQUIRED",
+        "run_summary_classification": "ONBOARDING_REQUIRED",
+        "onboarding_needs_count": 236,
+        "added_count": 1723,
+        "removed_count": 1700,
+        "runner_merge_markers": false,
+        "note": "appears produced without Finish-Summary overwrite path"
+      },
+      "canonical_action_classification": "ONBOARDING_REQUIRED",
+      "run_health": "success_exit_0",
+      "authority": "MATCH_WITHOUT_RUNNER_OVERWRITE",
+      "mapped_client_ops_status": "BLOCKED",
+      "delivery_freshness": "STALE",
+      "delivery_eligibility": "NOT_SAFE_TO_SEND",
+      "event_id": "9244a403-12cb-5424-80d8-c65cfa22db3c",
+      "preview_verdict": "REAL_SOURCE_PREVIEW_NOT_APPROVED_FOR_LIVE_POST",
+      "future_retry_safety": "CANDIDATE_NOT_SAFE_FOR_FUTURE_D5_RETRY",
+      "reason": "stale under 93600 despite truthful matching classifications"
+    }
+  ]
+}

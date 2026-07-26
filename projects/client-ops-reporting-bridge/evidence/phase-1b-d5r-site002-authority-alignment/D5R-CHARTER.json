@@ -1,0 +1,24 @@
+{
+  "phase": "1B-D5R",
+  "title": "SITE-002 Monitor Classification Authority Alignment and Fresh Safe-Source Reassessment",
+  "branch": "mars/canonical-post-recovery",
+  "client_ops_baseline_ancestor": "fe3a1b641858c06eb97f5763d16be1e80c501522",
+  "d5_historical_verdict_preserved": "PARTIAL — MANUAL SITE-002 REAL-SOURCE CONNECTION NOT STARTED; PRE-LIVE GATE BLOCKED",
+  "authorized_writes": [
+    "projects/client-ops-reporting-bridge/",
+    "projects/metabot-seo-content-agent/metabot-developer/client-ops-n8n-extension-v1.md"
+  ],
+  "forbidden": {
+    "site002_code_edits": true,
+    "monitor_execution": true,
+    "live_producer_post": true,
+    "n8n_activation": true,
+    "datatable_mutation": true,
+    "telegram_send": true,
+    "storage_mutation": true,
+    "stage_commit_push": true
+  },
+  "max_candidates": 3,
+  "raw_logs_authorized": 0,
+  "d5_charter_must_remain": "UNUSED"
+}

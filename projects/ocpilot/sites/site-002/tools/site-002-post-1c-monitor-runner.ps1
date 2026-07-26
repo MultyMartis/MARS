@@ -141,6 +141,94 @@ $summary = [ordered]@{
     error                           = $null
 }
 
+function Test-NonEmptySemanticValue {
+    param($Value)
+    if ($null -eq $Value) { return $false }
+    return -not [string]::IsNullOrWhiteSpace([string]$Value)
+}
+
+function Merge-RunnerMetadataPreservingMonitorSemantics {
+    <#
+      Merge monitor run-summary with runner metadata.
+      Preserve non-empty classification/next_action already emitted by Python.
+      Never invent NO_ACTION_REQUIRED merely because runner-local fields were empty.
+    #>
+    param(
+        [hashtable]$RunnerSummary,
+        [object]$MonitorSummaryObject,
+        [double]$DurationSeconds,
+        [datetime]$FinishedAt,
+        [scriptblock]$FormatDuration
+    )
+    $merged = @{}
+    foreach ($key in $RunnerSummary.Keys) { $merged[$key] = $RunnerSummary[$key] }
+    if ($null -ne $MonitorSummaryObject) {
+        $MonitorSummaryObject.PSObject.Properties | ForEach-Object {
+            $merged[$_.Name] = $_.Value
+        }
+        $semanticKeys = @('classification', 'next_action')
+        foreach ($key in $RunnerSummary.Keys) {
+            if ($null -eq $RunnerSummary[$key]) { continue }
+            if ($semanticKeys -contains $key -and (Test-NonEmptySemanticValue $merged[$key])) {
+                # Keep monitor/canonical semantic authority.
+                continue
+            }
+            $merged[$key] = $RunnerSummary[$key]
+        }
+    }
+    $merged['duration_seconds'] = [math]::Round($DurationSeconds, 3)
+    $merged['duration_human'] = & $FormatDuration -Seconds $DurationSeconds
+    $merged['runner_finished_at_local'] = $FinishedAt.ToString('o')
+    return $merged
+}
+
+function Complete-RunSummarySemanticDefaults {
+    <#
+      Apply classification/next_action defaults only after merge, and only when still empty.
+      Prefer monitor-classification.json when run-summary lacks semantics.
+    #>
+    param(
+        [hashtable]$Merged,
+        [int]$ExitCode,
+        [string]$RunDirectory,
+        [bool]$MonitorSummaryPresent
+    )
+    if (-not (Test-NonEmptySemanticValue $Merged['classification'])) {
+        $fromMc = $false
+        $mcPath = Join-Path $RunDirectory 'monitor-classification.json'
+        if (Test-Path -LiteralPath $mcPath) {
+            try {
+                $mc = Get-Content -LiteralPath $mcPath -Raw -Encoding UTF8 | ConvertFrom-Json
+                if (Test-NonEmptySemanticValue $mc.classification) {
+                    $Merged['classification'] = [string]$mc.classification
+                    if (Test-NonEmptySemanticValue $mc.next_action) {
+                        $Merged['next_action'] = [string]$mc.next_action
+                    }
+                    $fromMc = $true
+                }
+            } catch {
+                # ignore parse errors; fall through to fail-safe
+            }
+        }
+        if (-not $fromMc) {
+            if ($ExitCode -eq 0 -and $MonitorSummaryPresent) {
+                # Summary exists but classification missing — do not invent quiet OK.
+                $Merged['classification'] = 'FAILURE_REVIEW_REQUIRED'
+            } else {
+                $Merged['classification'] = if ($ExitCode -eq 0) { 'NO_ACTION_REQUIRED' } else { 'FAILURE_REVIEW_REQUIRED' }
+            }
+        }
+    }
+    if (-not (Test-NonEmptySemanticValue $Merged['next_action'])) {
+        $Merged['next_action'] = if ($ExitCode -eq 0) {
+            'Review run-summary.json and monitor-classification.json in run directory.'
+        } else {
+            'Investigate run.log and run.stderr.log for monitor failure.'
+        }
+    }
+    return $Merged
+}
+
 function Finish-Summary {
     param([int]$ExitCode)
     $finishedAt = Get-Date
@@ -152,37 +240,39 @@ function Finish-Summary {
     if (-not $summary.status -or $summary.status -eq 'pending') {
         $summary.status = if ($ExitCode -eq 0) { 'success' } else { 'failed' }
     }
-    if (-not $summary.classification) {
-        $summary.classification = if ($ExitCode -eq 0) { 'NO_ACTION_REQUIRED' } else { 'FAILURE_REVIEW_REQUIRED' }
-    }
-    if (-not $summary.next_action) {
-        $summary.next_action = if ($ExitCode -eq 0) {
-            'Review run-summary.json and monitor-classification.json in run directory.'
-        } else {
-            'Investigate run.log and run.stderr.log for monitor failure.'
+    # Do not default classification/next_action before merge — that previously
+    # overwrote Python monitor semantics (D5R MONITOR_ARTIFACT_GENERATION_BUG).
+
+    $monitorSummaryPath = Join-Path $runDir 'run-summary.json'
+    $monitorSummaryObject = $null
+    $monitorSummaryPresent = $false
+    $mergeError = $null
+    if (Test-Path -LiteralPath $monitorSummaryPath) {
+        $monitorSummaryPresent = $true
+        try {
+            $monitorSummaryObject = Get-Content -LiteralPath $monitorSummaryPath -Raw -Encoding UTF8 | ConvertFrom-Json
+        } catch {
+            $mergeError = $_.Exception.Message
         }
     }
 
-  # Merge monitor-written run-summary if present (richer fields)
-    $monitorSummaryPath = Join-Path $runDir 'run-summary.json'
-    $merged = @{}
-    foreach ($key in $summary.Keys) { $merged[$key] = $summary[$key] }
-    if (Test-Path -LiteralPath $monitorSummaryPath) {
-        try {
-            $monitorSummary = Get-Content -LiteralPath $monitorSummaryPath -Raw -Encoding UTF8 | ConvertFrom-Json
-            $monitorSummary.PSObject.Properties | ForEach-Object {
-                $merged[$_.Name] = $_.Value
-            }
-            foreach ($key in $summary.Keys) {
-                if ($null -ne $summary[$key]) { $merged[$key] = $summary[$key] }
-            }
-            $merged['duration_seconds'] = [math]::Round($durationSeconds, 3)
-            $merged['duration_human'] = Format-DurationHuman -Seconds $durationSeconds
-            $merged['runner_finished_at_local'] = $finishedAt.ToString('o')
-        } catch {
-            $merged['monitor_summary_merge_error'] = $_.Exception.Message
-        }
+    $runnerHash = @{}
+    foreach ($key in $summary.Keys) { $runnerHash[$key] = $summary[$key] }
+    $merged = Merge-RunnerMetadataPreservingMonitorSemantics `
+        -RunnerSummary $runnerHash `
+        -MonitorSummaryObject $monitorSummaryObject `
+        -DurationSeconds $durationSeconds `
+        -FinishedAt $finishedAt `
+        -FormatDuration ${function:Format-DurationHuman}
+    if ($mergeError) {
+        $merged['monitor_summary_merge_error'] = $mergeError
     }
+    $merged = Complete-RunSummarySemanticDefaults `
+        -Merged $merged `
+        -ExitCode $ExitCode `
+        -RunDirectory $runDir `
+        -MonitorSummaryPresent ($monitorSummaryPresent -and -not $mergeError)
+
     Write-JsonFile -Path $summaryJsonPath -Data $merged
     $md = @(
         '# Post-1C monitor run summary',

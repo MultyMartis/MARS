@@ -52,6 +52,54 @@ D3_RUNS_REL: Final[str] = "runs/d3-controlled-live"
 D3_CHARTER_STATE_FILENAME: Final[str] = "charter-state.json"
 D3_ENVELOPE_FILENAME: Final[str] = "d3-synthetic-envelope.json"
 
+# ---------------------------------------------------------------------------
+# Phase 1B-D5 — one manual SITE-002 real-source controlled live POST
+# ---------------------------------------------------------------------------
+
+D5_PHASE_ID: Final[str] = "1B-D5"
+NETWORK_DISPATCH_NOT_AUTHORIZED_D5: Final[str] = (
+    "NETWORK_DISPATCH_NOT_AUTHORIZED_D5"
+)
+D5_REAL_SOURCE_CHARTER_CONSUMED: Final[str] = "D5_REAL_SOURCE_CHARTER_CONSUMED"
+SECOND_REAL_SOURCE_POST_NOT_AUTHORIZED: Final[str] = (
+    "SECOND_REAL_SOURCE_POST_NOT_AUTHORIZED"
+)
+
+D5_ENABLE_PHRASE: Final[str] = (
+    "ENABLE ONE MANUAL SITE002 REAL SOURCE D5 BZPM"
+)
+D5_ACTIVATE_PHRASE: Final[str] = (
+    "ACTIVATE CLIENT OPS MANUAL REAL SOURCE D5 BZPM"
+)
+D5_SEND_PHRASE: Final[str] = (
+    "SEND ONE MANUAL SITE002 REAL SOURCE EVENT D5 BZPM"
+)
+D5_DEACTIVATE_PHRASE: Final[str] = (
+    "DEACTIVATE CLIENT OPS MANUAL REAL SOURCE D5 BZPM"
+)
+D5_EMERGENCY_DEACTIVATE_PHRASE: Final[str] = (
+    "EMERGENCY DEACTIVATE CLIENT OPS MANUAL REAL SOURCE D5 BZPM"
+)
+
+D5_PRODUCER_MARKER: Final[str] = "mars-client-ops-site002-real-source-d5"
+D5_MAX_REAL_REQUESTS: Final[int] = 1
+D5_MAX_SOURCE_CANDIDATES: Final[int] = 3
+D5_ALLOWED_ENVIRONMENTS: Final[frozenset[str]] = frozenset(
+    {"manual_real_source_controlled"}
+)
+D5_SOURCE_PROVENANCE: Final[str] = "REAL_EXISTING_SITE002_MONITOR_ARTIFACT"
+D5_RUNS_REL: Final[str] = "runs/d5-manual-real-source"
+D5_CHARTER_STATE_FILENAME: Final[str] = "charter-state.json"
+D5_SOURCE_ROOT_PARTS: Final[tuple[str, ...]] = (
+    "AI MARS STORAGE",
+    "ocpilot",
+    "project-sites",
+    "site-002",
+    "production",
+    "scheduled-monitors",
+    "post-1c",
+)
+
 AUTH_HEADER_NAME: Final[str] = "X-MARS-Client-Ops-Token"
 CONTENT_TYPE_JSON: Final[str] = "application/json"
 

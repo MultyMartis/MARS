@@ -44,12 +44,16 @@ from .producer_constants import (
     D3_ENABLE_PHRASE,
     D3_SEND_FIRST_PHRASE,
     D3_SEND_REPLAY_PHRASE,
+    D5_ENABLE_PHRASE,
+    D5_SEND_PHRASE,
+    D5_SOURCE_PROVENANCE,
     EXIT_CONCURRENCY_REJECTED,
     EXIT_CONFIG_INVALID,
     EXIT_NETWORK_NOT_AUTHORIZED,
     MOCK_FIXTURE_NAMES,
     NETWORK_DISPATCH_NOT_AUTHORIZED_D2,
     NETWORK_DISPATCH_NOT_AUTHORIZED_D3,
+    NETWORK_DISPATCH_NOT_AUTHORIZED_D5,
     TRANSPORT_DISABLED,
     TRANSPORT_MOCK,
 )
@@ -57,9 +61,25 @@ from .site002_adapter import (
     RealSourceLiveDispatchNotAuthorized,
     run_site002_adapter_dry_run,
 )
-from .site002_adapter_constants import REAL_SOURCE_LIVE_DISPATCH_NOT_AUTHORIZED_D4
+from .site002_adapter_constants import (
+    REAL_SOURCE_LIVE_DISPATCH_NOT_AUTHORIZED_D4,
+    SOURCE_CONTRACT_VERSION,
+)
 from .producer_d3 import run_producer_d3_controlled
 from .producer_d3_gates import build_authorization, default_d3_runs_dir
+from .producer_d5 import (
+    assess_preview_for_live,
+    build_source_preview,
+    d3_charter_is_consumed,
+    run_producer_d5_controlled,
+)
+from .producer_d5_gates import (
+    build_authorization as build_d5_authorization,
+    default_d5_runs_dir,
+    load_charter_state as load_d5_charter_state,
+    reject_forbidden_discovery_flags,
+    validate_explicit_source_path,
+)
 from .producer_dispatch_guard import SequentialDispatchError
 from .producer_pipeline import run_producer_offline
 from .security_validator import redact_for_diagnostics
@@ -515,6 +535,196 @@ def cmd_producer_d3_controlled_live(
     return EXIT_SUCCESS
 
 
+def cmd_site002_controlled_live(
+    *,
+    source: Optional[Path],
+    apply: bool,
+    dry_run: bool,
+    preview_only: bool,
+    confirm_enable: Optional[str],
+    confirm_send: Optional[str],
+    environment: str,
+    profile_path: Optional[Path],
+    evidence_dir: Optional[Path],
+    concurrency: int,
+    max_retries: int,
+    event_unseen: bool,
+    preview_approved: bool,
+    latest: bool = False,
+    watch: bool = False,
+) -> int:
+    """D5-gated one manual SITE-002 real-source controlled live POST."""
+    try:
+        reject_forbidden_discovery_flags(latest=latest, watch=watch)
+    except Exception as exc:  # noqa: BLE001
+        _print_result(
+            {
+                "ok": False,
+                "final_state": NETWORK_DISPATCH_NOT_AUTHORIZED_D5,
+                "network_calls": 0,
+                "error": redact_for_diagnostics(str(exc)),
+            }
+        )
+        return EXIT_NETWORK_NOT_AUTHORIZED
+
+    if concurrency != 1:
+        _print_result({"ok": False, "final_state": "CONCURRENCY_REJECTED", "network_calls": 0})
+        return EXIT_CONCURRENCY_REJECTED
+    if max_retries != 0:
+        _print_result(
+            {
+                "ok": False,
+                "final_state": NETWORK_DISPATCH_NOT_AUTHORIZED_D5,
+                "network_calls": 0,
+                "error": "max_retries must be 0",
+            }
+        )
+        return EXIT_NETWORK_NOT_AUTHORIZED
+
+    if source is None:
+        raise UsageError("--source required (explicit completed SITE-002 run directory)")
+
+    try:
+        profile = _load_profile_optional(profile_path)
+    except ProducerConfigError as exc:
+        _print_result(
+            {
+                "ok": False,
+                "final_state": "CONFIG_INVALID",
+                "error": redact_for_diagnostics(str(exc)),
+                "network_calls": 0,
+            }
+        )
+        return EXIT_CONFIG_INVALID
+
+    secrets_path = default_secrets_path(_REPO_ROOT)
+    secrets = load_producer_secrets(secrets_path)
+    profile_ok = bool(profile.webhook_base and profile.webhook_route)
+    runs_dir = default_d5_runs_dir(_REPO_ROOT)
+    safe_evidence = assert_safe_output_path(evidence_dir) if evidence_dir else None
+
+    source_path_ok = False
+    try:
+        validated = validate_explicit_source_path(Path(source))
+        source_path_ok = True
+    except Exception as exc:  # noqa: BLE001
+        if not (dry_run or preview_only):
+            _print_result(
+                {
+                    "ok": False,
+                    "final_state": NETWORK_DISPATCH_NOT_AUTHORIZED_D5,
+                    "network_calls": 0,
+                    "error": redact_for_diagnostics(str(exc)),
+                }
+            )
+            return EXIT_NETWORK_NOT_AUTHORIZED
+        validated = Path(source)
+
+    if preview_only or dry_run:
+        preview = build_source_preview(validated) if source_path_ok else {}
+        decision = assess_preview_for_live(preview) if preview else {
+            "verdict": "REAL_SOURCE_PREVIEW_NOT_APPROVED_FOR_LIVE_POST",
+            "reason": "source path invalid",
+            "approved": False,
+            "network_calls": 0,
+        }
+        charter = load_d5_charter_state(runs_dir)
+        _print_result(
+            {
+                "ok": bool(source_path_ok and decision.get("approved")),
+                "final_state": (
+                    "D5_PREVIEW_READY" if decision.get("approved") else "D5_PREVIEW_BLOCKED"
+                ),
+                "network_calls": 0,
+                "dispatch_attempted": False,
+                "real_network": False,
+                "profile_present": profile_ok,
+                "secret_present": secrets.auth_secret_present,
+                "environment_requested": environment,
+                "concurrency": concurrency,
+                "max_retries": max_retries,
+                "automatic_retry": False,
+                "d3_charter_consumed": d3_charter_is_consumed(_REPO_ROOT),
+                "d4_live_blocked": True,
+                "d5_charter_consumed": bool(charter.get("charter_consumed")),
+                "enable_phrase_expected": D5_ENABLE_PHRASE,
+                "send_phrase_expected": D5_SEND_PHRASE,
+                "source_preview": preview,
+                "source_preview_decision": decision,
+            }
+        )
+        return EXIT_SUCCESS if source_path_ok else EXIT_CONFIG_INVALID
+
+    if not apply:
+        _print_result(
+            {
+                "ok": False,
+                "final_state": NETWORK_DISPATCH_NOT_AUTHORIZED_D5,
+                "network_calls": 0,
+                "error": "missing --apply",
+            }
+        )
+        return EXIT_NETWORK_NOT_AUTHORIZED
+
+    auth = build_d5_authorization(
+        enable_phrase=confirm_enable,
+        send_phrase=confirm_send,
+        apply=apply,
+        dry_run=False,
+        environment=environment,
+        site_id="SITE-002",
+        domain="bzpm.ru",
+        source_contract=SOURCE_CONTRACT_VERSION,
+        source_provenance=D5_SOURCE_PROVENANCE,
+        concurrency=concurrency,
+        max_retries=max_retries,
+        automatic_retry=False,
+        producer_marker_present=True,
+        profile_present=profile_ok,
+        secret_present=secrets.auth_secret_present,
+        source_path_ok=source_path_ok,
+        preview_approved=preview_approved,
+        event_unseen=event_unseen,
+        d3_charter_consumed=d3_charter_is_consumed(_REPO_ROOT),
+        d4_live_blocked=True,
+    )
+
+    result = run_producer_d5_controlled(
+        authorization=auth,
+        profile=profile,
+        secrets=secrets,
+        source_dir=validated,
+        concurrency=concurrency,
+        evidence_dir=safe_evidence,
+        runs_dir=runs_dir,
+        repo_root=_REPO_ROOT,
+        event_unseen_confirmed=event_unseen,
+    )
+    payload = result.to_sanitized_dict()
+    payload["ok"] = result.final_state not in {
+        NETWORK_DISPATCH_NOT_AUTHORIZED_D2,
+        NETWORK_DISPATCH_NOT_AUTHORIZED_D3,
+        NETWORK_DISPATCH_NOT_AUTHORIZED_D5,
+        REAL_SOURCE_LIVE_DISPATCH_NOT_AUTHORIZED_D4,
+        "CONCURRENCY_REJECTED",
+        "SOURCE_BLOCKED",
+        "CONFIG_INVALID",
+        "D5_REAL_SOURCE_CHARTER_CONSUMED",
+    }
+    _print_result(payload)
+    if result.final_state in {
+        NETWORK_DISPATCH_NOT_AUTHORIZED_D2,
+        NETWORK_DISPATCH_NOT_AUTHORIZED_D3,
+        NETWORK_DISPATCH_NOT_AUTHORIZED_D5,
+        REAL_SOURCE_LIVE_DISPATCH_NOT_AUTHORIZED_D4,
+        "D5_REAL_SOURCE_CHARTER_CONSUMED",
+    }:
+        return EXIT_NETWORK_NOT_AUTHORIZED
+    if result.final_state == "CONCURRENCY_REJECTED":
+        return EXIT_CONCURRENCY_REJECTED
+    return EXIT_SUCCESS
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="client_ops_reporting_bridge",
@@ -659,6 +869,54 @@ def build_parser() -> argparse.ArgumentParser:
     p_d3.add_argument("--concurrency", type=int, default=1)
     p_d3.add_argument("--max-retries", type=int, default=0)
 
+    p_d5 = sub.add_parser(
+        "site002-controlled-live",
+        help=(
+            "D5-gated one manual SITE-002 real-source controlled live POST "
+            "(explicit source; exact phrases; max 1 HTTP)"
+        ),
+    )
+    p_d5.add_argument(
+        "--source",
+        type=Path,
+        required=True,
+        help="explicit completed SITE-002 run directory under approved root",
+    )
+    p_d5.add_argument("--apply", action="store_true")
+    p_d5.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="preview/readiness only; never open network",
+    )
+    p_d5.add_argument(
+        "--preview-only",
+        action="store_true",
+        help="emit sanitized source preview; never open network",
+    )
+    p_d5.add_argument("--confirm-enable", type=str, default=None)
+    p_d5.add_argument("--confirm-send", type=str, default=None)
+    p_d5.add_argument(
+        "--environment",
+        type=str,
+        default="manual_real_source_controlled",
+    )
+    p_d5.add_argument("--profile", type=Path, default=None)
+    p_d5.add_argument("--evidence-dir", type=Path, default=None)
+    p_d5.add_argument("--concurrency", type=int, default=1)
+    p_d5.add_argument("--max-retries", type=int, default=0)
+    p_d5.add_argument(
+        "--event-unseen",
+        action="store_true",
+        help="operator confirms Data Table precheck: event_id rows=0",
+    )
+    p_d5.add_argument(
+        "--preview-approved",
+        action="store_true",
+        help="operator confirms REAL_SOURCE_PREVIEW_APPROVED_FOR_ONE_LIVE_POST",
+    )
+    p_d5.add_argument("--latest", action="store_true", help="forbidden")
+    p_d5.add_argument("--watch", action="store_true", help="forbidden")
+
     return parser
 
 
@@ -736,6 +994,24 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
                 evidence_dir=args.evidence_dir,
                 concurrency=args.concurrency,
                 max_retries=args.max_retries,
+            )
+        if args.command == "site002-controlled-live":
+            return cmd_site002_controlled_live(
+                source=args.source,
+                apply=args.apply,
+                dry_run=args.dry_run,
+                preview_only=args.preview_only,
+                confirm_enable=args.confirm_enable,
+                confirm_send=args.confirm_send,
+                environment=args.environment,
+                profile_path=args.profile,
+                evidence_dir=args.evidence_dir,
+                concurrency=args.concurrency,
+                max_retries=args.max_retries,
+                event_unseen=args.event_unseen,
+                preview_approved=args.preview_approved,
+                latest=args.latest,
+                watch=args.watch,
             )
         raise UsageError(f"unknown command: {args.command}")
     except UsageError as exc:

@@ -25,8 +25,11 @@ from .producer_constants import (
     TRANSPORT_HTTP,
 )
 from .producer_d3_gates import D3GateError, D3LiveAuthorization
+from .producer_d5_gates import D5GateError, D5LiveAuthorization
 from .producer_request import OutboundRequest
 from .producer_transport import TransportResponse
+
+LiveAuthorization = D3LiveAuthorization | D5LiveAuthorization
 
 
 class EndpointAllowlistError(ValueError):
@@ -137,10 +140,10 @@ class LiveHttpTransport:
     auth_secret: str
     connect_timeout_s: float
     read_timeout_s: float
-    authorization: D3LiveAuthorization
+    authorization: LiveAuthorization
     mode: str = TRANSPORT_HTTP
     network_calls: int = 0
-    tls_verify: bool = True  # cannot be disabled for live D3
+    tls_verify: bool = True  # cannot be disabled for live D3/D5
 
     def dispatch(self, request: OutboundRequest) -> TransportResponse:
         self.authorization.assert_live_allowed()
@@ -287,6 +290,29 @@ def create_d3_live_transport(
     )
 
 
+def create_d5_live_transport(
+    *,
+    profile: ProducerProfile,
+    secrets: ProducerSecrets,
+    authorization: D5LiveAuthorization,
+) -> LiveHttpTransport:
+    """Create D5 live transport — reuses D3 HTTPS allowlist/transport."""
+    authorization.assert_live_allowed()
+    if not secrets.auth_secret_present:
+        raise D5GateError("auth secret missing")
+    secret = secrets.get_auth_secret() or ""
+    if not secret:
+        raise D5GateError("auth secret empty")
+    endpoint = validate_and_allow_endpoint(profile)
+    return LiveHttpTransport(
+        endpoint=endpoint,
+        auth_secret=secret,
+        connect_timeout_s=profile.connect_timeout_ms / 1000.0,
+        read_timeout_s=profile.request_timeout_ms / 1000.0,
+        authorization=authorization,
+    )
+
+
 def _parse_bounded_json(raw: str) -> Optional[dict[str, Any]]:
     if not raw:
         return None
@@ -329,6 +355,7 @@ __all__ = [
     "assert_no_url_leak",
     "compose_webhook_url",
     "create_d3_live_transport",
+    "create_d5_live_transport",
     "validate_and_allow_endpoint",
     "NETWORK_DISPATCH_NOT_AUTHORIZED_D3",
 ]

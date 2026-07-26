@@ -1,0 +1,20 @@
+{
+  "phase": "1B-D5",
+  "prelive_get_performed": false,
+  "live_state_verified": false,
+  "live_state_note": "SAFE UNKNOWN — no live GET performed for D5; values are expected pre-D5 baseline from prior charter evidence",
+  "expected_baseline": {
+    "workflow_id": "tkM4H0G0gM3q9Foi",
+    "workflow_name": "MARS Client Ops Bridge — bzpm.ru",
+    "version_id": "3d2fd6fc-bc17-4e0f-b9e5-086c959afd29",
+    "active": false,
+    "nodes": 17,
+    "executions": 31,
+    "running": 0,
+    "table_id": "H6VYhwz7RXZCBMmu",
+    "table_name": "MARS Client Ops Dedupe — bzpm.ru",
+    "table_rows": 2
+  },
+  "observed_live": null,
+  "network_calls": 0
+}

@@ -134,6 +134,8 @@ with metrics showing non-zero onboarding needs / added category PLPs is an **unr
 
 `monitor-classification.json` remains the **primary classification artifact** for MVP once conflicts are resolved (for example by monitor tooling fix under a separate charter). Until contradiction is gone, exporters must not emit authoritative OK or ATTENTION.
 
+**D5R confirmation (2026-07-26, analysis-only):** the ONBOARDING vs NO_ACTION pair is a confirmed SITE-002 runner `Finish-Summary` overwrite bug (`MONITOR_ARTIFACT_GENERATION_BUG`), not an intended dual-layer health/action split. Client Ops must keep fail-closed until the emitter is repaired.
+
 ---
 
 ## 8. Malformed / missing handling

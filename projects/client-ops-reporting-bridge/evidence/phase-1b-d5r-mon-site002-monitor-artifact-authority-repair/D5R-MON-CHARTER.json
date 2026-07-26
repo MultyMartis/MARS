@@ -1,0 +1,38 @@
+{
+  "phase": "1B-D5R-MON",
+  "title": "SITE-002 Monitor Artifact Authority Repair",
+  "accepted_prior": {
+    "phase": "1B-D5R",
+    "verdict": "COMPLETE — SITE-002 SOURCE AUTHORITY ROOT CAUSE CONFIRMED; MONITOR ARTIFACT REPAIR REQUIRED BEFORE D5 RETRY",
+    "readiness": "READY_FOR_SITE002_MONITOR_ARTIFACT_AUTHORITY_REPAIR_CHARTER",
+    "root_cause": "MONITOR_ARTIFACT_GENERATION_BUG"
+  },
+  "bounds": {
+    "monitor_execution": false,
+    "one_c_import": false,
+    "runtime_deploy": false,
+    "scheduler_modify": false,
+    "scheduler_execute": false,
+    "client_ops_post": false,
+    "n8n_activate": false,
+    "telegram": false,
+    "git_stage": false,
+    "git_commit": false,
+    "git_push": false,
+    "freshness_repair": false,
+    "d5_charter_consume": false,
+    "historical_artifact_rewrite": false
+  },
+  "authorized_write_loci": [
+    "projects/client-ops-reporting-bridge/",
+    "projects/ocpilot/sites/site-002/tools/site-002-post-1c-monitor-runner.ps1",
+    "projects/ocpilot/sites/site-002/tools/site-002-post-1c-monitor-runner-finish-summary-authority-regression.ps1",
+    "projects/metabot-seo-content-agent/metabot-developer/client-ops-n8n-extension-v1.md"
+  ],
+  "client_ops_baseline_ancestor": "fe3a1b641858c06eb97f5763d16be1e80c501522",
+  "d5_charter": {
+    "charter_consumed": false,
+    "real_http_requests": 0,
+    "status": "UNUSED"
+  }
+}

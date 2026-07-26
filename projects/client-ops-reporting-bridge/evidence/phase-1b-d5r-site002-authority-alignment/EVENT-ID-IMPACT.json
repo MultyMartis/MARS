@@ -1,0 +1,34 @@
+{
+  "phase": "1B-D5R",
+  "interpretation_changed": false,
+  "uuid_namespace_changed": false,
+  "source_contract_version": "site002-monitor-result-v1",
+  "version_decision": "clarified_no_v2",
+  "note": "No Client Ops remapping applied; event_id inputs unchanged from D5 observations.",
+  "candidates": [
+    {
+      "id": "candidate1",
+      "label": "site002-post-1c-run/2026-07-26_12-30-02",
+      "old_event_id": "e30ef970-7ea1-561b-ac2d-411201ba04c8",
+      "repaired_event_id": "e30ef970-7ea1-561b-ac2d-411201ba04c8",
+      "changed": false,
+      "reason": "No adapter remapping; conflict still maps to BLOCKED identity facts as in D5"
+    },
+    {
+      "id": "candidate2",
+      "label": "site002-post-1c-run/2026-07-20_22-32-43",
+      "old_event_id": "b819e684-8a5e-5793-8b91-4543b43fa52f",
+      "repaired_event_id": "b819e684-8a5e-5793-8b91-4543b43fa52f",
+      "changed": false,
+      "reason": "No adapter remapping; stale BLOCKED path unchanged"
+    },
+    {
+      "id": "candidate3",
+      "label": "site002-post-1c-run/2026-07-20_12-45-01",
+      "old_event_id": "9244a403-12cb-5424-80d8-c65cfa22db3c",
+      "repaired_event_id": "9244a403-12cb-5424-80d8-c65cfa22db3c",
+      "changed": false,
+      "reason": "No adapter remapping; stale BLOCKED path unchanged"
+    }
+  ]
+}

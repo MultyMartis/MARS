@@ -1,0 +1,27 @@
+{
+  "phase": "1B-D5R",
+  "primary_root_cause": "MONITOR_ARTIFACT_GENERATION_BUG",
+  "root_cause_standard": "ROOT_CAUSE_CONFIRMED",
+  "canonical_notification_authority": "CANONICAL_SITE002_NOTIFICATION_AUTHORITY_CONFIRMED",
+  "client_ops_repair": "NOT_APPLIED",
+  "site002_monitor_repair": "SITE002_MONITOR_REPAIR_REQUIRED",
+  "freshness_semantics": "FRESHNESS_STATUS_SEMANTICS_REQUIRES_SEPARATE_REPAIR",
+  "source_contract_version_decision": "site002-monitor-result-v1_clarified_no_v2",
+  "safe_existing_source": "NO_SAFE_EXISTING_SOURCE_AVAILABLE_FOR_D5_RETRY",
+  "d5_charter": {
+    "state": "UNUSED",
+    "charter_consumed": false,
+    "real_http_requests": 0,
+    "requires_rebuild_for_retry": true
+  },
+  "d5_historical_verdict_preserved": "PARTIAL — MANUAL SITE-002 REAL-SOURCE CONNECTION NOT STARTED; PRE-LIVE GATE BLOCKED",
+  "readiness": "READY_FOR_SITE002_MONITOR_ARTIFACT_AUTHORITY_REPAIR_CHARTER",
+  "verdict": "COMPLETE — SITE-002 SOURCE AUTHORITY ROOT CAUSE CONFIRMED; MONITOR ARTIFACT REPAIR REQUIRED BEFORE D5 RETRY",
+  "next_recommendation": "Phase 1B-D5R-MON — SITE-002 Monitor Artifact Authority Repair",
+  "live_post": false,
+  "monitor_executions": 0,
+  "site002_repo_edits": 0,
+  "storage_mutations": 0,
+  "d5r_authoritative_json_reads": 9,
+  "d5r_raw_log_reads": 0
+}
