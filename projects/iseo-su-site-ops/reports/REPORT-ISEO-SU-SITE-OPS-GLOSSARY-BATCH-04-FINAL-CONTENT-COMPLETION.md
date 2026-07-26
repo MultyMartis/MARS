@@ -213,7 +213,8 @@ Not mutated: publish state, CPT public exposure, sitemap, menu, templates, CSS/J
 
 ## 29. Git Persistence
 
-Scoped commit created after validation (see git log). **No push.**
+Scoped commit: `9058aba4` — `content(iseo-su): complete glossary safe content corpus`  
+**No push.**
 
 ## 30. Recommended Publication Phase
 
