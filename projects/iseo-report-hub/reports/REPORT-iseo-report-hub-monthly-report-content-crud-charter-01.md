@@ -115,7 +115,8 @@ Next wave smoke covers:
 | Exact-path git add | allowlisted docs only |
 | Commit message | `docs(iseo-report-hub): add monthly report content crud charter` |
 | Commit hash | `e4dfa572af762f74f270bb3fffa20d30ba5c13eb` |
-| Hash-record follow-up | `docs(iseo-report-hub): record monthly report content crud charter commit hash` (this REPORT only) |
+| Hash-record follow-up message | `docs(iseo-report-hub): record monthly report content crud charter commit hash` |
+| Hash-record follow-up | `3eb637d30906986de33028c5cde0c5e633f16d69` |
 | Push | **no** |
 
 ---
@@ -151,7 +152,7 @@ Next wave smoke covers:
 | Action | Done? |
 |--------|-------|
 | Exact-path git add | Yes (allowlisted docs) |
-| Commit | Yes (primary + optional hash-record) |
+| Commit | Yes (primary `e4dfa572` + hash-record `3eb637d3`) |
 | Push | **No** |
 | Fetch | **No** |
 | Pull | **No** |
