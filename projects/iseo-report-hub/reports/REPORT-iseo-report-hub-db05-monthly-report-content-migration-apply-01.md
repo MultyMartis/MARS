@@ -164,8 +164,8 @@ Auth smoke used session injection; no password / session id printed in this repo
 | Staging | exact-path `git add` only (4 allowlisted paths) |
 | Staged list | migration SQL; migration-apply result; this report; OPERATIONAL-INDEX |
 | Commit message | `feat(iseo-report-hub): add monthly report content migration` |
-| Commit hash | **PENDING_PRIMARY_COMMIT** |
-| Hash-record follow-up | if needed — `docs(iseo-report-hub): record monthly report content migration commit hash` |
+| Commit hash | `aac9c18ef49fc3b715106882893e18e280176800` |
+| Hash-record follow-up | `docs(iseo-report-hub): record monthly report content migration commit hash` — this file |
 | Push | **no** |
 
 ---
