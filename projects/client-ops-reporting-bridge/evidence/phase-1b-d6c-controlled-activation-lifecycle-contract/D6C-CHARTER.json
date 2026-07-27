@@ -1,0 +1,31 @@
+{
+  "phase": "1B-D6C",
+  "title": "Controlled Activation Lifecycle Contract",
+  "live_apply_authorized": false,
+  "activation_model": "HYBRID_C1_TO_C3_BOUNDED",
+  "workstream_order": [
+    "A",
+    "B",
+    "C",
+    "E",
+    "D"
+  ],
+  "baselines": {
+    "A": "12e4c6ad1f4199458b6f091d084f33ca5f8a965d",
+    "B": "94d06c05ea79eb22780588d91064006c3edf2a05"
+  },
+  "defaults": {
+    "max_requests": 1,
+    "max_retries": 0,
+    "max_concurrency": 1,
+    "max_activation_changes": 2,
+    "required_initial_workflow_active": false
+  },
+  "forbidden": [
+    "unattended_mode",
+    "scheduler_trigger",
+    "monitor_auto_activate",
+    "workstream_E",
+    "workstream_D"
+  ]
+}

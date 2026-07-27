@@ -1,0 +1,44 @@
+{
+  "phase": "1B-D6C2",
+  "surface": "CONTROL_TOOL_ONLY",
+  "declaration": "D6C2_CONTROL_TOOL_SURFACE_DECLARED",
+  "note": "Operator-side control-plane tooling bound for production use. Not a source→runtime n8n content deployment.",
+  "files": {
+    "n8n/runners/lib/client-ops-activation-lifecycle.mjs": {
+      "present": true,
+      "sha256": "db801ecb1d73aa891888626d88c588984dfad42777e9b4f41ae179c85e5ccd9f",
+      "bytes": 37139
+    },
+    "n8n/runners/lib/client-ops-lifecycle-lock.mjs": {
+      "present": true,
+      "sha256": "dbf13a800c590d092ff9ec9bd53c21a51448769bf72df61506e7174b21376852",
+      "bytes": 7456
+    },
+    "n8n/runners/lib/client-ops-lifecycle-offline-transport.mjs": {
+      "present": true,
+      "sha256": "37c40c830319a235f912cd19df62e0f4782d30011ee55cfd1eb9c4296fe222c0",
+      "bytes": 7758
+    },
+    "n8n/runners/lib/client-ops-lifecycle-production-transport.mjs": {
+      "present": true,
+      "sha256": "d6a523bb53933ccb034d51ac6f363a38666ccfc2f5e3238824302f27e52a2997",
+      "bytes": 9123
+    },
+    "n8n/runners/lib/client-ops-n8n-activation-client.mjs": {
+      "present": true,
+      "sha256": "a26adfb90cc09f46bddb0cb9914ebb36b00ccb958a1803d61f4a8801ada0b314",
+      "bytes": 7078
+    },
+    "n8n/harness/d6c-activation-lifecycle-harness.mjs": {
+      "present": true,
+      "sha256": "8839ee80a15810fd70f8dd0427bb141fd32fd336b206ba184f9411da5476ba97",
+      "bytes": 30225
+    },
+    "n8n/runners/run-client-ops-d6c2-activation-lifecycle-production-dry-window.mjs": {
+      "present": true,
+      "sha256": "382a9ba5285ae4a50ff5cbce51e32d9dc74de330e92c4680ce12c867daf095d0",
+      "bytes": 20249
+    }
+  },
+  "workflow_content_mutation_required": false
+}
