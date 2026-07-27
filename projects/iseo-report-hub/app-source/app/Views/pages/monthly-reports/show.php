@@ -172,6 +172,10 @@ $canCreateSnapshot = !empty($canCreateSnapshot);
             <a class="btn" href="<?= e(url_path('/report-snapshots/' . (int) $activeSnapshot['id'])) ?>">View snapshot</a>
             <a class="btn btn-secondary" href="<?= e(url_path('/report-snapshots/' . (int) $activeSnapshot['id'] . '/exports')) ?>">Exports</a>
         </p>
+        <p class="template-state-note">
+            Existing export artifacts use template not recorded (legacy/current exporter).
+            Future default HTML template: <code>iseo_default_v1</code> v1 (registered restyle requires a new export version wave).
+        </p>
     <?php endif; ?>
 </section>
 

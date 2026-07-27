@@ -19,6 +19,11 @@ $sourceShort = $sourceChecksum !== '' ? substr($sourceChecksum, 0, 12) . '…' :
 $fileSize = isset($export['file_size_bytes']) ? (int) $export['file_size_bytes'] : 0;
 $downloadLabel = $isPdf ? 'Download PDF' : 'Download HTML';
 $artifactLabel = $isPdf ? 'PDF artifact' : 'HTML artifact';
+/** @var array{id?:string,version?:int}|null $futureTemplate */
+$futureTemplate = is_array($futureTemplate ?? null) ? $futureTemplate : [];
+$legacyTemplateLabel = (string) ($legacyTemplateLabel ?? 'not recorded (legacy/current exporter)');
+$futureTemplateId = (string) ($futureTemplate['id'] ?? 'iseo_default_v1');
+$futureTemplateVersion = (string) (int) ($futureTemplate['version'] ?? 1);
 ?>
 <section class="panel export-card export-detail">
     <div class="panel-head">
@@ -48,6 +53,8 @@ $artifactLabel = $isPdf ? 'PDF artifact' : 'HTML artifact';
         <li><strong>Export key:</strong> <code><?= e((string) ($export['export_key'] ?? '')) ?></code></li>
         <li><strong>Format:</strong> <code><?= e($format) ?></code></li>
         <li><strong>Status:</strong> <span class="status-badge status-<?= e((string) ($export['status'] ?? '')) ?>"><?= e((string) ($export['status'] ?? '')) ?></span></li>
+        <li><strong>Template (recorded):</strong> <?= e($legacyTemplateLabel) ?></li>
+        <li><strong>Future default template:</strong> <code><?= e($futureTemplateId) ?></code> v<?= e($futureTemplateVersion) ?></li>
         <li><strong>Filename:</strong> <code><?= e((string) ($export['filename'] ?? '')) ?></code></li>
         <li><strong>MIME type:</strong> <code><?= e((string) ($export['mime_type'] ?? '')) ?></code></li>
         <li><strong>File size:</strong> <?= e($fileSize > 0 ? number_format($fileSize) . ' bytes' : '—') ?></li>
@@ -72,5 +79,5 @@ $artifactLabel = $isPdf ? 'PDF artifact' : 'HTML artifact';
         </li>
     </ul>
 
-    <p class="field-hint export-hint">No public link. Download requires authentication. Path/MIME/size/checksum<?= $isPdf ? '/PDF-magic' : '' ?> are validated before streaming.</p>
+    <p class="field-hint export-hint">No public link. Download requires authentication. Path/MIME/size/checksum<?= $isPdf ? '/PDF-magic' : '' ?> are validated before streaming. This historical row has no DB template_id; future HTML generation uses <code><?= e($futureTemplateId) ?></code> v<?= e($futureTemplateVersion) ?> without overwriting this artifact.</p>
 </section>

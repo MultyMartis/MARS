@@ -52,6 +52,8 @@ final class ReportSnapshotController extends BaseController
             'pdfExport' => $exportState['pdfExport'],
             'canCreateExport' => $exportState['canCreateExport'],
             'canCreatePdfExport' => $exportState['canCreatePdfExport'],
+            'futureTemplate' => $this->exports->defaultTemplateSummary(),
+            'legacyTemplateLabel' => $this->exports->legacyTemplateLabel(),
         ]);
     }
 
@@ -137,6 +139,8 @@ final class ReportSnapshotController extends BaseController
             'pdfExport' => $exportState['pdfExport'],
             'canCreateExport' => $exportState['canCreateExport'],
             'canCreatePdfExport' => $exportState['canCreatePdfExport'],
+            'futureTemplate' => $this->exports->defaultTemplateSummary(),
+            'legacyTemplateLabel' => $this->exports->legacyTemplateLabel(),
         ]);
     }
 

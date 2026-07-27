@@ -18,6 +18,7 @@
 | Report blocks | **CRUD MVP** — monthly-scoped list/detail/create/edit/archive-by-status; unique parent+block_key |
 | Report snapshots | **Internal MVP** — create/view active snapshot from finalized monthly; checksum idempotency; no public |
 | Report exports | **HTML + PDF MVP (hardened)** — internal HTML artifact + Edge headless PDF; auth download with path/MIME/size/checksum/PDF-magic guards; idempotent; **no** public share |
+| Report styling template | **Code-first default `iseo_default_v1` v1** — future HTML generation uses template renderer; historical exports id 1/2 unchanged; no DB template registry yet |
 | Secrets | **None in source** — `.env.example` placeholders only; **no** `.env` / `.env.local` |
 | Runtime sync | Allowlist source → runtime |
 
@@ -121,7 +122,9 @@ No public share token. PDF is internal-only via authenticated download from loca
 - No Composer / npm / WordPress
 - No snapshot v2 versioning smoke (deferred until reopen/re-finalize charter)
 - No public/token publish from snapshots
+- No DB-backed template registry / client branding DB / logo upload
+- No silent overwrite of historical HTML/PDF exports (restyle requires new export version wave)
 
 ## Next phase
 
-**Recommended:** Report Styling / Client Template Charter 01.
+**Recommended:** Report Styling Export Version Apply 01 (explicit new HTML/PDF export version using `iseo_default_v1`; no overwrite of v1 artifacts).

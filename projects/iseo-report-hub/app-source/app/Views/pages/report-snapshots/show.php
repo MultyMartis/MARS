@@ -23,6 +23,10 @@ $htmlExport = $htmlExport ?? null;
 $pdfExport = $pdfExport ?? null;
 $canCreateExport = !empty($canCreateExport);
 $canCreatePdfExport = !empty($canCreatePdfExport);
+$legacyTemplateLabel = (string) ($legacyTemplateLabel ?? 'not recorded (legacy/current exporter)');
+$futureTemplate = is_array($futureTemplate ?? null) ? $futureTemplate : [];
+$futureTemplateId = (string) ($futureTemplate['id'] ?? 'iseo_default_v1');
+$futureTemplateVersion = (string) (int) ($futureTemplate['version'] ?? 1);
 
 $monthlyId = 0;
 if (is_array($snapshot) && isset($snapshot['monthly_report_content_id'])) {
@@ -162,6 +166,10 @@ $decodeIds = static function (mixed $raw): array {
             <span class="internal-only-badge">Internal only</span>
             <span class="artifact-badge">HTML artifact</span>
         </p>
+        <p class="template-state-note">
+            Existing artifact template: <?= e($legacyTemplateLabel) ?>.
+            Future default: <code><?= e($futureTemplateId) ?></code> v<?= e($futureTemplateVersion) ?> (new exports only).
+        </p>
         <?php if (!is_array($htmlExport)): ?>
             <p class="note">No HTML export yet.</p>
             <?php if ($canCreateExport): ?>
@@ -181,6 +189,7 @@ $decodeIds = static function (mixed $raw): array {
                 <li><strong>Filename:</strong> <code><?= e((string) ($htmlExport['filename'] ?? '')) ?></code></li>
                 <li><strong>Checksum:</strong> <code class="checksum-display" title="<?= e($exportChecksum) ?>"><?= e($exportShort) ?></code></li>
                 <li><strong>Size:</strong> <?= e($exportSize > 0 ? number_format($exportSize) . ' B' : '—') ?></li>
+                <li><strong>Template:</strong> <?= e($legacyTemplateLabel) ?></li>
             </ul>
             <p>
                 <a class="btn" href="<?= e(url_path('/report-exports/' . (int) $htmlExport['id'])) ?>">View export</a>
@@ -233,6 +242,7 @@ $decodeIds = static function (mixed $raw): array {
                 <li><strong>Filename:</strong> <code><?= e((string) ($pdfExport['filename'] ?? '')) ?></code></li>
                 <li><strong>Checksum:</strong> <code class="checksum-display" title="<?= e($pdfChecksum) ?>"><?= e($pdfShort) ?></code></li>
                 <li><strong>Size:</strong> <?= e($pdfSize > 0 ? number_format($pdfSize) . ' B' : '—') ?></li>
+                <li><strong>Template:</strong> <?= e($legacyTemplateLabel) ?> (PDF inherits source HTML styling)</li>
             </ul>
             <p class="export-ready-note">PDF export is ready. Duplicate create is not required.</p>
             <p>

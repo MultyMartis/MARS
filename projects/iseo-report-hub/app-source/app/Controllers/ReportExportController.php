@@ -47,6 +47,8 @@ final class ReportExportController extends BaseController
             'canCreatePdf' => !empty($result['can_create_pdf']),
             'hasHtmlExport' => !empty($result['has_html_export']),
             'hasPdfExport' => !empty($result['has_pdf_export']),
+            'futureTemplate' => $result['future_template'] ?? $this->exports->defaultTemplateSummary(),
+            'legacyTemplateLabel' => (string) ($result['legacy_template_label'] ?? $this->exports->legacyTemplateLabel()),
             'message' => $result['message'],
         ]);
     }
@@ -157,6 +159,8 @@ final class ReportExportController extends BaseController
         $this->render('report-exports/show', [
             'pageTitle' => 'Export — ' . $key,
             'export' => $export,
+            'futureTemplate' => $this->exports->defaultTemplateSummary(),
+            'legacyTemplateLabel' => $this->exports->legacyTemplateLabel(),
             'message' => $result['message'],
         ]);
     }

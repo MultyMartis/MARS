@@ -17,6 +17,11 @@ $canCreatePdf = !empty($canCreatePdf);
 $hasHtmlExport = !empty($hasHtmlExport);
 $hasPdfExport = !empty($hasPdfExport);
 $message = (string) ($message ?? '');
+/** @var array{id?:string,version?:int,display_label?:string}|null $futureTemplate */
+$futureTemplate = is_array($futureTemplate ?? null) ? $futureTemplate : [];
+$legacyTemplateLabel = (string) ($legacyTemplateLabel ?? 'not recorded (legacy/current exporter)');
+$futureTemplateId = (string) ($futureTemplate['id'] ?? 'iseo_default_v1');
+$futureTemplateVersion = (string) (int) ($futureTemplate['version'] ?? 1);
 
 $snapshotId = (int) ($snapshot['id'] ?? 0);
 $monthlyId = (int) ($snapshot['monthly_report_content_id'] ?? 0);
@@ -41,6 +46,13 @@ $snapshotKey = (string) ($snapshot['snapshot_key'] ?? '');
         <span class="artifact-badge artifact-badge--pdf">PDF artifact</span>
         · Snapshot <code><?= e($snapshotKey) ?></code>
     </p>
+    <p class="template-state-note">
+        <strong>Existing artifacts:</strong> template <?= e($legacyTemplateLabel) ?>.
+        <br>
+        <strong>Future default template:</strong>
+        <code><?= e($futureTemplateId) ?></code> v<?= e($futureTemplateVersion) ?>
+        (applies to newly generated HTML only; does not rewrite current exports).
+    </p>
 
     <?php if ($exports === []): ?>
         <p class="note">No exports yet for this snapshot.</p>
@@ -61,6 +73,7 @@ $snapshotKey = (string) ($snapshot['snapshot_key'] ?? '');
                     <th>Key</th>
                     <th>Format</th>
                     <th>Status</th>
+                    <th>Template</th>
                     <th>Filename</th>
                     <th>Checksum</th>
                     <th>Size</th>
@@ -87,6 +100,7 @@ $snapshotKey = (string) ($snapshot['snapshot_key'] ?? '');
                             <span class="type-badge<?= $format === 'pdf' ? ' type-badge--pdf' : '' ?>"><?= e($format) ?></span>
                         </td>
                         <td><span class="status-badge status-<?= e((string) ($row['status'] ?? '')) ?>"><?= e((string) ($row['status'] ?? '')) ?></span></td>
+                        <td><span class="template-badge" title="No DB template metadata on historical rows"><?= e($legacyTemplateLabel) ?></span></td>
                         <td><code><?= e((string) ($row['filename'] ?? '')) ?></code></td>
                         <td><code class="checksum-display" title="<?= e($checksum) ?>"><?= e($short) ?></code></td>
                         <td><?= e($size > 0 ? number_format($size) . ' B' : '—') ?></td>

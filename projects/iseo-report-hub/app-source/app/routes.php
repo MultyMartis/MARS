@@ -40,9 +40,11 @@ use Iseo\Services\ReportBlockService;
 use Iseo\Services\ReportFinalizationService;
 use Iseo\Services\ReportPreviewService;
 use Iseo\Services\ReportExportService;
+use Iseo\Services\ReportTemplateService;
 use Iseo\Services\ReportSnapshotService;
 use Iseo\Services\ReportingPeriodService;
 use Iseo\Services\WeeklyCheckpointService;
+use Iseo\Support\ReportTemplateRenderer;
 use Iseo\Support\Router;
 use Iseo\Support\View;
 
@@ -77,7 +79,9 @@ $finalizationService = new ReportFinalizationService($monthlyRepo, $blockRepo, $
 $snapshotRepo = new ReportSnapshotRepository($db);
 $snapshotService = new ReportSnapshotService($snapshotRepo, $monthlyRepo, $blockRepo, $previewService, $db);
 $exportRepo = new ReportExportRepository($db);
-$exportService = new ReportExportService($exportRepo, $snapshotRepo, $db);
+$templateService = new ReportTemplateService();
+$templateRenderer = new ReportTemplateRenderer($templateService);
+$exportService = new ReportExportService($exportRepo, $snapshotRepo, $db, $templateService, $templateRenderer);
 $reportingPeriods = new ReportingPeriodController(
     $app,
     $view,

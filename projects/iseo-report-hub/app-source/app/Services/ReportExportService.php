@@ -5,6 +5,7 @@ namespace Iseo\Services;
 
 use Iseo\Repositories\ReportExportRepository;
 use Iseo\Repositories\ReportSnapshotRepository;
+use Iseo\Support\ReportTemplateRenderer;
 use Throwable;
 
 /**
@@ -40,8 +41,81 @@ final class ReportExportService
     public function __construct(
         private ReportExportRepository $exports,
         private ReportSnapshotRepository $snapshots,
-        private DatabaseService $db
+        private DatabaseService $db,
+        private ReportTemplateService $templates = new ReportTemplateService(),
+        private ?ReportTemplateRenderer $renderer = null
     ) {
+        $this->renderer ??= new ReportTemplateRenderer($this->templates);
+    }
+
+    /**
+     * Future HTML exports use this code-first default template.
+     *
+     * @return array{id:string,version:int,render_target:string,source:string,branding:string,display_label:string}
+     */
+    public function defaultTemplateSummary(): array
+    {
+        return $this->templates->getDefaultSummary();
+    }
+
+    /**
+     * Historical export rows have no DB template_id — do not invent one.
+     */
+    public function legacyTemplateLabel(): string
+    {
+        return $this->templates->legacyTemplateLabel();
+    }
+
+    /**
+     * Non-mutating dry-render of snapshot HTML via iseo_default_v1 (no DB/file write).
+     *
+     * @return array{
+     *   ok:bool,
+     *   message:string,
+     *   html:?string,
+     *   template:?array{id:string,version:int,render_target:string,source:string,branding:string,display_label:string},
+     *   snapshot:?array<string,mixed>,
+     *   errors?:array<string,string>
+     * }
+     */
+    public function dryRenderHtmlForSnapshot(int $snapshotId): array
+    {
+        $this->assertDb();
+
+        $snapshot = $this->snapshots->findById($snapshotId);
+        if ($snapshot === null) {
+            return [
+                'ok' => false,
+                'message' => 'Snapshot not found.',
+                'html' => null,
+                'template' => null,
+                'snapshot' => null,
+                'errors' => ['id' => 'Not found.'],
+            ];
+        }
+
+        $payload = $this->decodePayloadJson($snapshot['payload_json'] ?? null);
+        if ($payload === null) {
+            return [
+                'ok' => false,
+                'message' => 'Snapshot payload is missing or invalid.',
+                'html' => null,
+                'template' => null,
+                'snapshot' => $snapshot,
+                'errors' => ['payload' => 'Invalid payload.'],
+            ];
+        }
+
+        $generatedAt = gmdate('Y-m-d\TH:i:s\Z');
+        $html = $this->buildHtml($snapshot, $payload, $generatedAt);
+
+        return [
+            'ok' => true,
+            'message' => 'Dry-render complete.',
+            'html' => $html,
+            'template' => $this->defaultTemplateSummary(),
+            'snapshot' => $snapshot,
+        ];
     }
 
     /**
@@ -119,6 +193,8 @@ final class ReportExportService
             'can_create_pdf' => $this->canCreatePdfForSnapshot($snapshot, $actor, $htmlReady),
             'has_html_export' => $htmlReady !== null,
             'has_pdf_export' => $pdfReady !== null,
+            'future_template' => $this->defaultTemplateSummary(),
+            'legacy_template_label' => $this->legacyTemplateLabel(),
         ];
     }
 
@@ -824,121 +900,7 @@ final class ReportExportService
      */
     public function buildHtml(array $snapshot, array $payload, string $generatedAt): string
     {
-        $title = (string) ($snapshot['title'] ?? ($payload['monthly_report']['title'] ?? 'Monthly report'));
-        $snapshotKey = (string) ($snapshot['snapshot_key'] ?? '');
-        $version = (int) ($snapshot['version'] ?? 0);
-        $checksum = (string) ($snapshot['checksum_sha256'] ?? '');
-        $period = is_array($payload['period'] ?? null) ? $payload['period'] : [];
-        $client = is_array($payload['client'] ?? null) ? $payload['client'] : [];
-        $project = is_array($payload['project'] ?? null) ? $payload['project'] : [];
-        $site = is_array($payload['site'] ?? null) ? $payload['site'] : [];
-        $monthly = is_array($payload['monthly_report'] ?? null) ? $payload['monthly_report'] : [];
-        $blocks = is_array($payload['blocks'] ?? null) ? $payload['blocks'] : [];
-        $weeklySources = is_array($payload['weekly_sources'] ?? null) ? $payload['weekly_sources'] : [];
-
-        $periodKey = (string) ($period['key'] ?? '');
-        $renderMode = (string) ($snapshot['render_mode'] ?? ($payload['metadata']['render_mode'] ?? ''));
-
-        $esc = static fn (mixed $v): string => htmlspecialchars((string) $v, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
-
-        $html = '<!DOCTYPE html>' . "\n";
-        $html .= '<html lang="ru">' . "\n";
-        $html .= '<head>' . "\n";
-        $html .= '<meta charset="UTF-8">' . "\n";
-        $html .= '<meta name="viewport" content="width=device-width, initial-scale=1">' . "\n";
-        $html .= '<title>' . $esc($title) . ' — export</title>' . "\n";
-        $html .= '<style>' . $this->embeddedCss() . '</style>' . "\n";
-        $html .= '</head>' . "\n";
-        $html .= '<body>' . "\n";
-        $html .= '<header class="export-header">' . "\n";
-        $html .= '<p class="export-badge">Internal report export — HTML artifact</p>' . "\n";
-        $html .= '<h1>' . $esc($title) . '</h1>' . "\n";
-        $html .= '<dl class="export-meta">' . "\n";
-        $html .= '<dt>Period</dt><dd><code>' . $esc($periodKey) . '</code></dd>' . "\n";
-        $html .= '<dt>Client</dt><dd>' . $esc((string) ($client['name'] ?? '—')) . '</dd>' . "\n";
-        $html .= '<dt>Project</dt><dd>' . $esc((string) ($project['name'] ?? '—')) . '</dd>' . "\n";
-        $html .= '<dt>Site</dt><dd>' . $esc((string) ($site['url'] ?? '—'));
-        if (!empty($site['label'])) {
-            $html .= ' — ' . $esc((string) $site['label']);
-        }
-        $html .= '</dd>' . "\n";
-        $html .= '<dt>Snapshot key</dt><dd><code>' . $esc($snapshotKey) . '</code></dd>' . "\n";
-        $html .= '<dt>Snapshot version</dt><dd>' . $esc((string) $version) . '</dd>' . "\n";
-        $html .= '<dt>Snapshot checksum</dt><dd><code class="checksum">' . $esc($checksum) . '</code></dd>' . "\n";
-        $html .= '<dt>Render mode</dt><dd><code>' . $esc($renderMode) . '</code></dd>' . "\n";
-        $html .= '<dt>Export generated at (UTC)</dt><dd>' . $esc($generatedAt) . '</dd>' . "\n";
-        $html .= '<dt>Monthly status</dt><dd>' . $esc((string) ($monthly['status'] ?? '—')) . '</dd>' . "\n";
-        $html .= '</dl>' . "\n";
-        $html .= '</header>' . "\n";
-
-        if ($weeklySources !== []) {
-            $html .= '<section class="export-section">' . "\n";
-            $html .= '<h2>Source weekly checkpoints</h2>' . "\n";
-            $html .= '<ul>' . "\n";
-            foreach ($weeklySources as $wc) {
-                if (!is_array($wc)) {
-                    continue;
-                }
-                $html .= '<li><code>' . $esc((string) ($wc['checkpoint_key'] ?? '')) . '</code>';
-                $html .= ' — ' . $esc((string) ($wc['title'] ?? ''));
-                $html .= ' (' . $esc((string) ($wc['status'] ?? '')) . ')</li>' . "\n";
-            }
-            $html .= '</ul>' . "\n";
-            $html .= '</section>' . "\n";
-        }
-
-        $flatFields = is_array($monthly['flat_fields'] ?? null) ? $monthly['flat_fields'] : [];
-        if ($flatFields !== []) {
-            $html .= '<section class="export-section">' . "\n";
-            $html .= '<h2>Monthly summary fields</h2>' . "\n";
-            foreach ($flatFields as $key => $value) {
-                if (!is_string($key)) {
-                    continue;
-                }
-                $label = str_replace('_', ' ', $key);
-                $label = ucwords($label);
-                $html .= '<article class="export-block">' . "\n";
-                $html .= '<h3>' . $esc($label) . '</h3>' . "\n";
-                $html .= '<div class="export-body">' . nl2br($esc((string) $value), false) . '</div>' . "\n";
-                $html .= '</article>' . "\n";
-            }
-            $html .= '</section>' . "\n";
-        }
-
-        $html .= '<section class="export-section">' . "\n";
-        $html .= '<h2>Report blocks</h2>' . "\n";
-        if ($blocks === []) {
-            $html .= '<p class="note">No blocks in snapshot payload.</p>' . "\n";
-        } else {
-            foreach ($blocks as $block) {
-                if (!is_array($block)) {
-                    continue;
-                }
-                $html .= '<article class="export-block">' . "\n";
-                $html .= '<h3>' . $esc((string) ($block['title'] ?? '')) . '</h3>' . "\n";
-                $html .= '<p class="export-block-meta"><code>' . $esc((string) ($block['block_key'] ?? '')) . '</code>';
-                $html .= ' · ' . $esc((string) ($block['block_type'] ?? ''));
-                $html .= ' · sort ' . $esc((string) ($block['sort_order'] ?? '')) . '</p>' . "\n";
-                $summary = trim((string) ($block['summary'] ?? ''));
-                if ($summary !== '') {
-                    $html .= '<p class="export-summary"><em>' . $esc($summary) . '</em></p>' . "\n";
-                }
-                $body = trim((string) ($block['body'] ?? ''));
-                if ($body !== '') {
-                    $html .= '<div class="export-body">' . nl2br($esc($body), false) . '</div>' . "\n";
-                }
-                $html .= '</article>' . "\n";
-            }
-        }
-        $html .= '</section>' . "\n";
-
-        $html .= '<footer class="export-footer">' . "\n";
-        $html .= '<p>Immutable snapshot export. Source: report_snapshots payload only.</p>' . "\n";
-        $html .= '</footer>' . "\n";
-        $html .= '</body>' . "\n";
-        $html .= '</html>';
-
-        return $html;
+        return $this->renderer->render($snapshot, $payload, $generatedAt);
     }
 
     /**
@@ -1382,25 +1344,6 @@ final class ReportExportService
         } catch (Throwable) {
             // Temp cleanup is best-effort.
         }
-    }
-
-    private function embeddedCss(): string
-    {
-        return <<<'CSS'
-body { font-family: Georgia, "Times New Roman", serif; color: #1a1a1a; line-height: 1.5; margin: 2rem; max-width: 52rem; }
-.export-badge { font-size: 0.85rem; color: #555; text-transform: uppercase; letter-spacing: 0.05em; }
-.export-meta { display: grid; grid-template-columns: 12rem 1fr; gap: 0.25rem 1rem; font-size: 0.95rem; }
-.export-meta dt { font-weight: 600; margin: 0; }
-.export-meta dd { margin: 0; }
-.export-section { margin-top: 2rem; border-top: 1px solid #ccc; padding-top: 1rem; }
-.export-block { margin-bottom: 1.5rem; }
-.export-block-meta { font-size: 0.85rem; color: #444; }
-.export-summary { color: #333; }
-.export-body { margin-top: 0.5rem; }
-.checksum { word-break: break-all; font-size: 0.8rem; }
-.export-footer { margin-top: 2rem; font-size: 0.8rem; color: #666; border-top: 1px solid #ddd; padding-top: 1rem; }
-.note { color: #666; }
-CSS;
     }
 
     private function resolveStoragePath(string $storagePath): ?string
