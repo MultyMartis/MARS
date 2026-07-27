@@ -137,7 +137,7 @@ Commit message:
 
 - exact-path git add: yes (allowlisted paths only)
 - staged list: see section 16 / post-commit verification
-- commit hash: `PENDING_PRIMARY` (filled in hash-record follow-up)
+- commit hash: `31ff2a734c894ab50ba3532e3b96b68391b002ae` (filled in hash-record follow-up)
 - HEAD verification: after primary + hash-record commits
 - push: **no**
 
