@@ -127,7 +127,7 @@ no production DB; no real client data; no credentials/password/hash/session in r
 | Staging | exact-path `git add` allowlist only |
 | Primary commit | `ddea70ba803cb196444377d43d9673633bbde7b5` |
 | Hash-record follow-up | `c39809060b618e0eaa380b723e5092abddebb0eb` then tip fill `c8a733444a884c99f70086f3cef3016d732b3057` — `docs(iseo-report-hub): record pdf browser report export commit hash` |
-| HEAD verification | primary `ddea70ba803cb196444377d43d9673633bbde7b5`; hash-record `c39809060b618e0eaa380b723e5092abddebb0eb`; tip fill `c8a733444a884c99f70086f3cef3016d732b3057`; final HEAD after this docs tip clarification recorded via update-ref |
+| HEAD verification | final HEAD `a0998ba683d2b4cfd29ee8af0219d2f682cf0548`; primary `ddea70ba803cb196444377d43d9673633bbde7b5`; hash-record `c39809060b618e0eaa380b723e5092abddebb0eb`; tip fill `c8a733444a884c99f70086f3cef3016d732b3057` |
 | Push | **no** |
 
 ## 13. SAFE UNKNOWN
