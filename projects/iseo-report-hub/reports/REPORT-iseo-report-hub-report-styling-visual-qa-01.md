@@ -104,8 +104,11 @@ Verdict: **PASS_WITH_MINOR_ISSUES** — no BLOCKER/MAJOR.
 Commit message: `docs(iseo-report-hub): add report styling visual qa`
 
 - exact-path git add: three allowlisted docs only
-- staged list: (filled after commit)
-- primary commit hash: **PENDING_PRIMARY**
+- staged list:
+  - projects/iseo-report-hub/product/I-SEO-REPORT-HUB-REPORT-STYLING-VISUAL-QA-RESULT-v0.1.md
+  - projects/iseo-report-hub/reports/REPORT-iseo-report-hub-report-styling-visual-qa-01.md
+  - projects/iseo-report-hub/OPERATIONAL-INDEX.md
+- primary commit hash: **1d1d3c0d4af462698dc8fef84c03d3d1673bdcab**
 - hash-record commit: **PENDING_HASH_RECORD** (message: `docs(iseo-report-hub): record report styling visual qa commit hash`)
 - HEAD verification: after update-ref
 - push: **no**
