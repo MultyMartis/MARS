@@ -127,7 +127,7 @@
 |-------|--------|
 | Exact-path git add | **yes** (allowlisted paths in clean worktree) |
 | Staged list | migration SQL; app-source README; result doc; this report; OPERATIONAL-INDEX |
-| Primary commit hash | `TBD` |
+| Primary commit hash | `7b059bb285452735a5834bb1a5789d22e6733d06` |
 | Primary message | `feat(iseo-report-hub): add report exports migration` |
 | Hash-record commit | `TBD` — `docs(iseo-report-hub): record report exports migration commit hash` |
 | HEAD after wave | `TBD` |
