@@ -4,7 +4,7 @@
 **project_id:** `iseo-report-hub`  
 **Created:** 2026-07-27  
 **Authority:** Operator I-SEO Report Hub Report Export PDF Engine Probe 01  
-**Primary commit:** `PENDING_PRIMARY`  
+**Primary commit:** `90e30e3069a718b4e3e1d51cadc6efc1475f340a`  
 **Hash-record commit:** `PENDING_HASH_RECORD`
 
 ---
@@ -147,7 +147,7 @@ v0.1 Decision / v0.2 Implementation / v0.2 Validation plans **not** modified.
 |------|-------|
 | Exact-path git add | allowlisted docs only |
 | Commit message | `docs(iseo-report-hub): record pdf engine probe` |
-| Primary commit hash | `PENDING_PRIMARY` |
+| Primary commit hash | `90e30e3069a718b4e3e1d51cadc6efc1475f340a` |
 | Hash-record message | `docs(iseo-report-hub): record pdf engine probe commit hash` |
 | Hash-record commit hash | `PENDING_HASH_RECORD` |
 | Push | **no** |
