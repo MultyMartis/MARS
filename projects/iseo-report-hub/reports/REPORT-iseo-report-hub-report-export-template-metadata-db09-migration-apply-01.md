@@ -153,7 +153,7 @@ No new artifacts. Outside `public/` and Git.
 |-------|--------|
 | Exact-path git add | allowlisted migration + README + result + OPERATIONAL-INDEX + this report (worktree) |
 | Staged list | see section 14 / post-commit verification |
-| Primary commit hash | `PENDING_PRIMARY` |
+| Primary commit hash | `c1e7ba2416f1e49ef0f115d0efa23ffcb7abd317` |
 | Primary message | `feat(iseo-report-hub): add export template metadata migration` |
 | Hash-record commit | `PENDING_HASH_RECORD` — `docs(iseo-report-hub): record export template metadata migration commit hash` |
 | HEAD verification | after commits |
