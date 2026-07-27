@@ -12,7 +12,19 @@ final class ReportTemplate
 
     public const VERSION_DEFAULT = 1;
 
+    /** Alias for DB-09 / export metadata writers. */
+    public const ID = self::ID_DEFAULT;
+
+    /** Alias for DB-09 / export metadata writers. */
+    public const VERSION = self::VERSION_DEFAULT;
+
     public const RENDER_TARGET_HTML_EXPORT = 'html_export';
+
+    public const RENDER_TARGET_PDF_EXPORT = 'pdf_export';
+
+    public const RENDER_ENGINE_PHP_TEMPLATE = 'php_template_renderer';
+
+    public const RENDER_ENGINE_EDGE_HEADLESS_PDF = 'edge_headless_pdf';
 
     public const SOURCE_REPORT_SNAPSHOT = 'report_snapshot';
 

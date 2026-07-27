@@ -5,6 +5,7 @@ namespace Iseo\Services;
 
 use Iseo\Repositories\ReportExportRepository;
 use Iseo\Repositories\ReportSnapshotRepository;
+use Iseo\Support\ReportTemplate;
 use Iseo\Support\ReportTemplateRenderer;
 use Throwable;
 
@@ -188,18 +189,23 @@ final class ReportExportService
         $styledHtml = $this->exports->findReadyStyledVersionForSnapshotFormat($snapshotId, 'html');
         $styledPdf = $this->exports->findReadyStyledVersionForSnapshotFormat($snapshotId, 'pdf');
         $canCreate = $this->canCreateExportForSnapshot($snapshot, $actor);
+        $exportRows = $this->exports->findBySnapshotId($snapshotId);
+        $enriched = [];
+        foreach ($exportRows as $row) {
+            $enriched[] = $this->withDisplayMetadata($row);
+        }
 
         return [
             'ok' => true,
             'message' => 'Exports loaded.',
             'snapshot' => $snapshot,
-            'exports' => $this->exports->findBySnapshotId($snapshotId),
+            'exports' => $enriched,
             'can_create' => $canCreate,
             'can_create_pdf' => $this->canCreatePdfForSnapshot($snapshot, $actor, $htmlReady),
             'has_html_export' => $htmlReady !== null,
             'has_pdf_export' => $pdfReady !== null,
-            'styled_html_export' => $styledHtml,
-            'styled_pdf_export' => $styledPdf,
+            'styled_html_export' => $styledHtml !== null ? $this->withDisplayMetadata($styledHtml) : null,
+            'styled_pdf_export' => $styledPdf !== null ? $this->withDisplayMetadata($styledPdf) : null,
             'can_create_styled_html' => $canCreate,
             'can_create_styled_pdf' => $canCreate
                 && $styledHtml !== null
@@ -829,6 +835,22 @@ final class ReportExportService
                 'checksum_sha256' => $fileChecksum,
                 'source_snapshot_checksum_sha256' => $snapshotChecksum,
                 'created_by' => (int) $actor['id'],
+                'template_id' => ReportTemplate::ID,
+                'template_version' => (string) ReportTemplate::VERSION,
+                'render_target' => ReportTemplate::RENDER_TARGET_HTML_EXPORT,
+                'render_engine' => ReportTemplate::RENDER_ENGINE_PHP_TEMPLATE,
+                'render_options_json' => $this->encodeJsonSafe([
+                    'export_version' => $nextVersion,
+                    'styled_version' => true,
+                ]),
+                'source_html_export_id' => null,
+                'metadata_json' => $this->encodeJsonSafe([
+                    'template_id' => ReportTemplate::ID,
+                    'template_version' => ReportTemplate::VERSION,
+                    'render_target' => ReportTemplate::RENDER_TARGET_HTML_EXPORT,
+                    'render_engine' => ReportTemplate::RENDER_ENGINE_PHP_TEMPLATE,
+                    'export_version' => $nextVersion,
+                ]),
             ]);
 
             $this->exports->insertAudit('report_export.html_created', (int) $actor['id'], $newId, [
@@ -1085,6 +1107,29 @@ final class ReportExportService
                 'checksum_sha256' => $fileChecksum,
                 'source_snapshot_checksum_sha256' => $snapshotChecksum,
                 'created_by' => (int) $actor['id'],
+                'template_id' => ReportTemplate::ID,
+                'template_version' => (string) ReportTemplate::VERSION,
+                'render_target' => ReportTemplate::RENDER_TARGET_PDF_EXPORT,
+                'render_engine' => ReportTemplate::RENDER_ENGINE_EDGE_HEADLESS_PDF,
+                'render_options_json' => $this->encodeJsonSafe([
+                    'export_version' => $nextVersion,
+                    'styled_version' => true,
+                    'engine' => $engine,
+                    'engine_version' => $engineVersion !== '' ? $engineVersion : null,
+                ]),
+                'source_html_export_id' => (int) ($htmlExport['id'] ?? 0) > 0
+                    ? (int) $htmlExport['id']
+                    : null,
+                'metadata_json' => $this->encodeJsonSafe([
+                    'template_id' => ReportTemplate::ID,
+                    'template_version' => ReportTemplate::VERSION,
+                    'render_target' => ReportTemplate::RENDER_TARGET_PDF_EXPORT,
+                    'render_engine' => ReportTemplate::RENDER_ENGINE_EDGE_HEADLESS_PDF,
+                    'source_html_export_id' => (int) ($htmlExport['id'] ?? 0) > 0
+                        ? (int) $htmlExport['id']
+                        : null,
+                    'export_version' => $nextVersion,
+                ]),
             ]);
 
             $this->exports->insertAudit('report_export.pdf_created', (int) $actor['id'], $newId, [
@@ -1129,17 +1174,102 @@ final class ReportExportService
     }
 
     /**
-     * Infer UI template label from export_key version (no DB template columns).
-     * v1 / unknown → legacy; v>=2 → iseo_default_v1 v1.
+     * DB-first template label. Never invent iseo_default_v1 for NULL metadata rows.
      */
     public function templateLabelForExport(array $export): string
     {
-        $version = $this->parseExportVersionFromKey((string) ($export['export_key'] ?? ''));
-        if ($version !== null && $version >= 2) {
-            $summary = $this->defaultTemplateSummary();
-            return $summary['id'] . ' v' . $summary['version'];
+        $templateId = trim((string) ($export['template_id'] ?? ''));
+        $templateVersion = trim((string) ($export['template_version'] ?? ''));
+        if ($templateId !== '' && $templateVersion !== '') {
+            return $templateId . ' v' . $templateVersion;
         }
         return $this->legacyTemplateLabel();
+    }
+
+    public function renderTargetLabelForExport(array $export): string
+    {
+        $target = trim((string) ($export['render_target'] ?? ''));
+        return match ($target) {
+            ReportTemplate::RENDER_TARGET_HTML_EXPORT => 'HTML export',
+            ReportTemplate::RENDER_TARGET_PDF_EXPORT => 'PDF export',
+            '' => 'not recorded',
+            default => $target,
+        };
+    }
+
+    public function renderEngineLabelForExport(array $export): string
+    {
+        $engine = trim((string) ($export['render_engine'] ?? ''));
+        return match ($engine) {
+            ReportTemplate::RENDER_ENGINE_PHP_TEMPLATE => 'PHP template renderer',
+            ReportTemplate::RENDER_ENGINE_EDGE_HEADLESS_PDF => 'Edge headless PDF',
+            '' => 'not recorded',
+            default => $engine,
+        };
+    }
+
+    /**
+     * @return array{id:int,export_key:string,label:string,status:?string}|null
+     */
+    public function sourceHtmlSummaryForExport(array $export): ?array
+    {
+        $sourceId = isset($export['source_html_export_id']) ? (int) $export['source_html_export_id'] : 0;
+        if ($sourceId <= 0) {
+            return null;
+        }
+
+        $key = trim((string) ($export['source_html_export_key'] ?? ''));
+        $status = isset($export['source_html_export_status'])
+            ? (string) $export['source_html_export_status']
+            : null;
+
+        if ($key === '') {
+            try {
+                $source = $this->exports->findById($sourceId);
+            } catch (Throwable) {
+                $source = null;
+            }
+            if (is_array($source)) {
+                $key = trim((string) ($source['export_key'] ?? ''));
+                $status = isset($source['status']) ? (string) $source['status'] : $status;
+            }
+        }
+
+        $label = '#' . $sourceId;
+        if ($key !== '') {
+            $label .= ' ' . $key;
+        }
+
+        return [
+            'id' => $sourceId,
+            'export_key' => $key,
+            'label' => $label,
+            'status' => $status,
+        ];
+    }
+
+    public function isLegacyTemplateMetadata(array $export): bool
+    {
+        $templateId = trim((string) ($export['template_id'] ?? ''));
+        $templateVersion = trim((string) ($export['template_version'] ?? ''));
+        return $templateId === '' || $templateVersion === '';
+    }
+
+    /**
+     * @param array<string, mixed> $export
+     * @return array<string, mixed>
+     */
+    public function withDisplayMetadata(array $export): array
+    {
+        $source = $this->sourceHtmlSummaryForExport($export);
+        $export['display_template_label'] = $this->templateLabelForExport($export);
+        $export['display_render_target_label'] = $this->renderTargetLabelForExport($export);
+        $export['display_render_engine_label'] = $this->renderEngineLabelForExport($export);
+        $export['display_source_html_label'] = is_array($source) ? $source['label'] : 'not recorded';
+        $export['display_source_html'] = $source;
+        $export['is_legacy_template_metadata'] = $this->isLegacyTemplateMetadata($export);
+        $export['has_recorded_template'] = !$export['is_legacy_template_metadata'];
+        return $export;
     }
 
     public function parseExportVersionFromKey(string $exportKey): ?int
@@ -1150,8 +1280,14 @@ final class ReportExportService
         return null;
     }
 
+    /**
+     * Prefer DB template metadata; fall back to export_key version for display badges only.
+     */
     public function isStyledExport(array $export): bool
     {
+        if (!$this->isLegacyTemplateMetadata($export)) {
+            return true;
+        }
         $version = $this->parseExportVersionFromKey((string) ($export['export_key'] ?? ''));
         return $version !== null && $version >= 2;
     }
@@ -1207,7 +1343,7 @@ final class ReportExportService
         return [
             'ok' => true,
             'message' => 'Export loaded.',
-            'export' => $export,
+            'export' => $this->withDisplayMetadata($export),
         ];
     }
 
@@ -2038,6 +2174,25 @@ final class ReportExportService
         }
         $decoded = json_decode($raw, true);
         return is_array($decoded) ? $decoded : null;
+    }
+
+    /**
+     * Safe JSON encode for DB-09 metadata columns (no secrets; empty → null).
+     *
+     * @param array<string, mixed> $data
+     */
+    private function encodeJsonSafe(array $data): ?string
+    {
+        if ($data === []) {
+            return null;
+        }
+        unset($data['password'], $data['password_hash'], $data['hash'], $data['token'], $data['session']);
+        try {
+            $json = json_encode($data, JSON_UNESCAPED_UNICODE | JSON_THROW_ON_ERROR);
+            return is_string($json) ? $json : null;
+        } catch (Throwable) {
+            return null;
+        }
     }
 
     /**

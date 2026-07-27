@@ -774,6 +774,34 @@ code {
   font-weight: 600;
 }
 
+.export-table .template-badge--legacy,
+.export-card .template-badge--legacy {
+  color: #64748b;
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  font-weight: 500;
+}
+
+.export-table .meta-muted,
+.export-card .meta-muted {
+  color: #64748b;
+  font-size: 0.82rem;
+}
+
+.export-table .source-lineage,
+.export-card .source-lineage {
+  display: inline-block;
+  font-size: 0.82rem;
+  color: #0f172a;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.export-table .source-lineage--unknown,
+.export-card .source-lineage--unknown {
+  color: #64748b;
+  font-family: inherit;
+}
+
 .snapshot-blocks .snapshot-block {
   padding: 0.75rem 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);

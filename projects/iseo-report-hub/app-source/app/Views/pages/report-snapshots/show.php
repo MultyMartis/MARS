@@ -31,7 +31,7 @@ $canCreateExport = !empty($canCreateExport);
 $canCreatePdfExport = !empty($canCreatePdfExport);
 $canCreateStyledHtml = !empty($canCreateStyledHtml);
 $canCreateStyledPdf = !empty($canCreateStyledPdf);
-$legacyTemplateLabel = (string) ($legacyTemplateLabel ?? 'not recorded (legacy/current exporter)');
+$legacyTemplateLabel = (string) ($legacyTemplateLabel ?? 'not recorded / legacy');
 $futureTemplate = is_array($futureTemplate ?? null) ? $futureTemplate : [];
 $futureTemplateId = (string) ($futureTemplate['id'] ?? 'iseo_default_v1');
 $futureTemplateVersion = (string) (int) ($futureTemplate['version'] ?? 1);
@@ -176,8 +176,8 @@ $decodeIds = static function (mixed $raw): array {
             <span class="artifact-badge">HTML artifact</span>
         </p>
         <p class="template-state-note">
-            Historical v1 template: <?= e($legacyTemplateLabel) ?>.
-            Styled default: <code><?= e($futureTemplateId) ?></code> v<?= e($futureTemplateVersion) ?> (new export version only).
+            DB template metadata preferred. Legacy / NULL: <?= e($legacyTemplateLabel) ?>.
+            Recorded default: <code><?= e($futureTemplateId) ?></code> v<?= e($futureTemplateVersion) ?> (new export version only).
         </p>
         <?php if (!is_array($htmlExport)): ?>
             <p class="note">No HTML export yet.</p>
@@ -190,7 +190,12 @@ $decodeIds = static function (mixed $raw): array {
         <?php else: ?>
             <?php
             $displayHtml = is_array($styledHtmlExport) ? $styledHtmlExport : $htmlExport;
-            $displayHtmlIsStyled = is_array($styledHtmlExport);
+            $displayHtmlIsLegacy = is_array($displayHtml)
+                && (!empty($displayHtml['is_legacy_template_metadata'])
+                    || trim((string) ($displayHtml['template_id'] ?? '')) === '');
+            $displayHtmlTemplate = is_array($displayHtml)
+                ? (string) ($displayHtml['display_template_label'] ?? ($displayHtmlIsLegacy ? $legacyTemplateLabel : $styledTemplateLabel))
+                : $legacyTemplateLabel;
             $exportChecksum = (string) ($displayHtml['checksum_sha256'] ?? '');
             $exportShort = $exportChecksum !== '' ? substr($exportChecksum, 0, 12) . '…' : '—';
             $exportSize = isset($displayHtml['file_size_bytes']) ? (int) $displayHtml['file_size_bytes'] : 0;
@@ -206,10 +211,16 @@ $decodeIds = static function (mixed $raw): array {
                 <li><strong>Checksum:</strong> <code class="checksum-display" title="<?= e($exportChecksum) ?>"><?= e($exportShort) ?></code></li>
                 <li><strong>Size:</strong> <?= e($exportSize > 0 ? number_format($exportSize) . ' B' : '—') ?></li>
                 <li><strong>Template:</strong>
-                    <span class="template-badge<?= $displayHtmlIsStyled ? ' template-badge--styled' : '' ?>">
-                        <?= e($displayHtmlIsStyled ? $styledTemplateLabel : $legacyTemplateLabel) ?>
+                    <span class="template-badge<?= $displayHtmlIsLegacy ? ' template-badge--legacy' : ' template-badge--styled' ?>">
+                        <?= e($displayHtmlTemplate) ?>
                     </span>
                 </li>
+                <?php if (is_array($displayHtml) && !$displayHtmlIsLegacy): ?>
+                    <li><strong>Render:</strong>
+                        <span class="meta-muted"><?= e((string) ($displayHtml['display_render_target_label'] ?? 'HTML export')) ?></span>
+                        · <span class="meta-muted"><?= e((string) ($displayHtml['display_render_engine_label'] ?? 'PHP template renderer')) ?></span>
+                    </li>
+                <?php endif; ?>
             </ul>
             <p>
                 <a class="btn" href="<?= e(url_path('/report-exports/' . (int) $displayHtml['id'])) ?>">View export</a>
@@ -260,7 +271,15 @@ $decodeIds = static function (mixed $raw): array {
         <?php else: ?>
             <?php
             $displayPdf = is_array($styledPdfExport) ? $styledPdfExport : $pdfExport;
-            $displayPdfIsStyled = is_array($styledPdfExport);
+            $displayPdfIsLegacy = is_array($displayPdf)
+                && (!empty($displayPdf['is_legacy_template_metadata'])
+                    || trim((string) ($displayPdf['template_id'] ?? '')) === '');
+            $displayPdfTemplate = is_array($displayPdf)
+                ? (string) ($displayPdf['display_template_label'] ?? ($displayPdfIsLegacy ? $legacyTemplateLabel : $styledTemplateLabel))
+                : $legacyTemplateLabel;
+            $displayPdfSource = is_array($displayPdf)
+                ? (string) ($displayPdf['display_source_html_label'] ?? 'not recorded')
+                : 'not recorded';
             $pdfChecksum = (string) ($displayPdf['checksum_sha256'] ?? '');
             $pdfShort = $pdfChecksum !== '' ? substr($pdfChecksum, 0, 12) . '…' : '—';
             $pdfSize = isset($displayPdf['file_size_bytes']) ? (int) $displayPdf['file_size_bytes'] : 0;
@@ -276,11 +295,21 @@ $decodeIds = static function (mixed $raw): array {
                 <li><strong>Checksum:</strong> <code class="checksum-display" title="<?= e($pdfChecksum) ?>"><?= e($pdfShort) ?></code></li>
                 <li><strong>Size:</strong> <?= e($pdfSize > 0 ? number_format($pdfSize) . ' B' : '—') ?></li>
                 <li><strong>Template:</strong>
-                    <span class="template-badge<?= $displayPdfIsStyled ? ' template-badge--styled' : '' ?>">
-                        <?= e($displayPdfIsStyled ? $styledTemplateLabel : $legacyTemplateLabel) ?>
+                    <span class="template-badge<?= $displayPdfIsLegacy ? ' template-badge--legacy' : ' template-badge--styled' ?>">
+                        <?= e($displayPdfTemplate) ?>
                     </span>
-                    <?= $displayPdfIsStyled ? ' (from styled HTML)' : ' (legacy HTML)' ?>
                 </li>
+                <li><strong>Source HTML:</strong>
+                    <span class="source-lineage<?= $displayPdfSource === 'not recorded' ? ' source-lineage--unknown' : '' ?>">
+                        <?= e($displayPdfSource) ?>
+                    </span>
+                </li>
+                <?php if (is_array($displayPdf) && !$displayPdfIsLegacy): ?>
+                    <li><strong>Render:</strong>
+                        <span class="meta-muted"><?= e((string) ($displayPdf['display_render_target_label'] ?? 'PDF export')) ?></span>
+                        · <span class="meta-muted"><?= e((string) ($displayPdf['display_render_engine_label'] ?? 'Edge headless PDF')) ?></span>
+                    </li>
+                <?php endif; ?>
             </ul>
             <p class="export-ready-note">Latest PDF shown above. Historical versions remain on the exports list.</p>
             <p>

@@ -27,7 +27,7 @@
 |-------|-------|
 | **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A/1B + local DB + **auth persistence implemented** + **DB-03 migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** + **Report Preview / Render Implementation 01 complete** + **Report Finalization Charter 01 complete** + **Report Finalization Implementation 01 complete** + **Report Snapshot Charter 01 complete** + **Report Snapshot DB-07 Migration Apply 01 complete** + **Report Snapshot Implementation 01 complete** + **Report Export / PDF Charter 01 complete** + **Report Export DB-08 Migration Apply 01 complete** |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | **Report Export Template Metadata DB-09 Migration Apply 01 complete** — nullable metadata columns on `report_exports`; backfill ids **3–4**; next recommended: **Report Export Template Metadata UI Implementation 01** |
+| **Active stage** | **Report Export Template Metadata UI Implementation 01 complete** — DB-09 metadata read/display + future styled write support; DB/artifacts unchanged; next recommended: **Report Delivery / Public Share Charter 01** |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -1045,7 +1045,26 @@
 | **Restrictions** | local DB only; no app code; no new export rows; no artifact mutation; no public/share; no package install; no secrets |
 | **Result** | [I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-MIGRATION-APPLY-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-MIGRATION-APPLY-RESULT-v0.1.md) |
 | **Closeout** | [REPORT-iseo-report-hub-report-export-template-metadata-db09-migration-apply-01.md](reports/REPORT-iseo-report-hub-report-export-template-metadata-db09-migration-apply-01.md) |
-| **Next recommended stage** | **I-SEO Report Hub — Report Export Template Metadata UI Implementation 01** |
+| **Next recommended stage** | **I-SEO Report Hub — Report Export Template Metadata UI Implementation 01** — **completed** (see section below) |
+
+---
+
+## Report Export Template Metadata UI Implementation 01 (2026-07-27)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** |
+| **DB metadata read** | yes — repository SELECT includes DB-09 columns + source HTML join |
+| **UI display** | export list/detail, snapshot cards, monthly note |
+| **Display matrix** | ids **1–2**: `not recorded / legacy` (source HTML unknown for PDF id **2**); ids **3–4**: `iseo_default_v1 v1`; id **4** source `#3 snapshot-1-html-v2` |
+| **Future write support** | styled HTML/PDF create paths write DB-09 metadata; **create not invoked** this wave |
+| **DB unchanged** | migrations **8**; tables **15**; `report_exports` **4**; row metadata unchanged |
+| **Artifacts** | v1/v2 HTML/PDF checksums **unchanged** |
+| **Smoke** | HTTP read-only **27/27 PASS** (`127.0.0.1:8092`) |
+| **Restrictions** | no schema/migration; no export row mutation; no artifact regen; no public/share; no secrets |
+| **Result** | [I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-UI-IMPLEMENTATION-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-UI-IMPLEMENTATION-RESULT-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-report-export-template-metadata-ui-implementation-01.md](reports/REPORT-iseo-report-hub-report-export-template-metadata-ui-implementation-01.md) |
+| **Next recommended stage** | **I-SEO Report Hub — Report Delivery / Public Share Charter 01** |
 
 ---
 
@@ -1278,6 +1297,8 @@
 | 210 | [reports/REPORT-iseo-report-hub-report-export-template-metadata-db09-charter-01.md](reports/REPORT-iseo-report-hub-report-export-template-metadata-db09-charter-01.md) | DB-09 charter closeout |
 | 211 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-MIGRATION-APPLY-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-MIGRATION-APPLY-RESULT-v0.1.md) | DB-09 migration apply result |
 | 212 | [reports/REPORT-iseo-report-hub-report-export-template-metadata-db09-migration-apply-01.md](reports/REPORT-iseo-report-hub-report-export-template-metadata-db09-migration-apply-01.md) | DB-09 migration apply closeout |
+| 213 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-UI-IMPLEMENTATION-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-UI-IMPLEMENTATION-RESULT-v0.1.md) | Template metadata UI implementation result |
+| 214 | [reports/REPORT-iseo-report-hub-report-export-template-metadata-ui-implementation-01.md](reports/REPORT-iseo-report-hub-report-export-template-metadata-ui-implementation-01.md) | Template metadata UI implementation closeout |
 
 ---
 
@@ -1322,8 +1343,8 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Report Export Template Metadata UI Implementation 01** — **recommended next**
-2. Optional: **Report Delivery / Public Share Charter 01** (after metadata UI if needed)
+1. **Report Delivery / Public Share Charter 01** — **recommended next**
+2. Optional: **Report Export Template Metadata Write Smoke 01** (exercise future create writes under controlled charter)
 3. Optional: **Report Styling Visual QA Fix 01** (only if operator prioritizes minor QA issues)
 3. Optional: **Report Snapshot Hardening 01** / **Report Snapshot Versioning Charter 01** if multi-role or v2 smoke needed
 4. Optional: **Report Blocks CRUD Hardening 01** if multi-role HTTP smoke is needed
@@ -1382,8 +1403,9 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **Report Styling Export Version Apply 01 is complete** — styled HTML/PDF v2 (`snapshot-1-html-v2` / `snapshot-1-pdf-v2`); ids **3**/**4**; `report_exports` **4**; v1 unchanged; idempotent; HTTP 55/55; **no** public/share
 - **Report Styling Visual QA 01 is complete** — verdict **PASS_WITH_MINOR_ISSUES**; HTML screenshot + PDF text/integrity; DB/artifacts unchanged; HTTP 35/35; **no** code/runtime/DB mutation
 - **Report Export Template Metadata DB-09 Charter 01 is complete** — Option A nullable columns on `report_exports`; backfill policy ids 3–4 only; **no** code/runtime/DB/SQL/artifact mutation in charter
-- **Report Export Template Metadata DB-09 Migration Apply 01 is complete** — migration `000008` applied; columns/indexes/FK present; backfill ids **3–4**; ids **1–2** NULL; migrations **8**; `report_exports` **4**; artifacts unchanged; HTTP 12/12; **no** app UI/repository metadata write yet
-- **Next** = Report Export Template Metadata UI Implementation 01
+- **Report Export Template Metadata DB-09 Migration Apply 01 is complete** — migration `000008` applied; columns/indexes/FK present; backfill ids **3–4**; ids **1–2** NULL; migrations **8**; `report_exports` **4**; artifacts unchanged; HTTP 12/12
+- **Report Export Template Metadata UI Implementation 01 is complete** — repository/service/UI DB-first metadata display; future styled create writes metadata (not invoked); DB/artifacts unchanged; HTTP 27/27; **no** public/share
+- **Next** = Report Delivery / Public Share Charter 01
 - **No drag/drop reorder / public PDF share / rich text editor / client portal** (runtime)
 - **No autonomous publication**
 - **Website Factory is not runtime owner** — methodology + prototype lane only

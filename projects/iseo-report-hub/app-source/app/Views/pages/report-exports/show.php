@@ -4,7 +4,11 @@ declare(strict_types=1);
 /** @var array<string, mixed> $export */
 /** @var string $message */
 /** @var string $templateLabel */
+/** @var string $renderTargetLabel */
+/** @var string $renderEngineLabel */
+/** @var array{id?:int,export_key?:string,label?:string}|null $sourceHtmlSummary */
 /** @var bool $isStyledExport */
+/** @var bool $isLegacyTemplateMetadata */
 
 $export = $export ?? [];
 $message = (string) ($message ?? '');
@@ -23,13 +27,18 @@ $downloadLabel = $isPdf ? 'Download PDF' : 'Download HTML';
 $artifactLabel = $isPdf ? 'PDF artifact' : 'HTML artifact';
 /** @var array{id?:string,version?:int}|null $futureTemplate */
 $futureTemplate = is_array($futureTemplate ?? null) ? $futureTemplate : [];
-$legacyTemplateLabel = (string) ($legacyTemplateLabel ?? 'not recorded (legacy/current exporter)');
+$legacyTemplateLabel = (string) ($legacyTemplateLabel ?? 'not recorded / legacy');
 $futureTemplateId = (string) ($futureTemplate['id'] ?? 'iseo_default_v1');
 $futureTemplateVersion = (string) (int) ($futureTemplate['version'] ?? 1);
+$isLegacyTemplateMetadata = !empty($isLegacyTemplateMetadata);
 $isStyledExport = !empty($isStyledExport);
-$templateLabel = (string) ($templateLabel ?? ($isStyledExport
-    ? ($futureTemplateId . ' v' . $futureTemplateVersion)
-    : $legacyTemplateLabel));
+$templateLabel = (string) ($templateLabel ?? ($export['display_template_label'] ?? $legacyTemplateLabel));
+$renderTargetLabel = (string) ($renderTargetLabel ?? ($export['display_render_target_label'] ?? 'not recorded'));
+$renderEngineLabel = (string) ($renderEngineLabel ?? ($export['display_render_engine_label'] ?? 'not recorded'));
+$sourceHtmlSummary = is_array($sourceHtmlSummary ?? null) ? $sourceHtmlSummary : null;
+$sourceHtmlLabel = is_array($sourceHtmlSummary) && isset($sourceHtmlSummary['label'])
+    ? (string) $sourceHtmlSummary['label']
+    : (string) ($export['display_source_html_label'] ?? 'not recorded');
 ?>
 <section class="panel export-card export-detail">
     <div class="panel-head">
@@ -51,10 +60,10 @@ $templateLabel = (string) ($templateLabel ?? ($isStyledExport
     <p>
         <span class="internal-only-badge">Internal only</span>
         <span class="artifact-badge<?= $isPdf ? ' artifact-badge--pdf' : '' ?>"><?= e($artifactLabel) ?></span>
-        <?php if ($isStyledExport): ?>
-            <span class="template-badge template-badge--styled">Styled export</span>
+        <?php if ($isLegacyTemplateMetadata): ?>
+            <span class="template-badge template-badge--legacy">Legacy / not recorded</span>
         <?php else: ?>
-            <span class="template-badge">Historical v1</span>
+            <span class="template-badge template-badge--styled">Recorded template</span>
         <?php endif; ?>
         · <span class="status-badge status-<?= e((string) ($export['status'] ?? '')) ?>"><?= e((string) ($export['status'] ?? '')) ?></span>
     </p>
@@ -65,9 +74,18 @@ $templateLabel = (string) ($templateLabel ?? ($isStyledExport
         <li><strong>Format:</strong> <code><?= e($format) ?></code></li>
         <li><strong>Status:</strong> <span class="status-badge status-<?= e((string) ($export['status'] ?? '')) ?>"><?= e((string) ($export['status'] ?? '')) ?></span></li>
         <li><strong>Template:</strong>
-            <span class="template-badge<?= $isStyledExport ? ' template-badge--styled' : '' ?>"><?= e($templateLabel) ?></span>
+            <span class="template-badge<?= $isLegacyTemplateMetadata ? ' template-badge--legacy' : ' template-badge--styled' ?>"><?= e($templateLabel) ?></span>
         </li>
-        <?php if (!$isStyledExport): ?>
+        <li><strong>Render target:</strong> <?= e($renderTargetLabel) ?></li>
+        <li><strong>Render engine:</strong> <?= e($renderEngineLabel) ?></li>
+        <?php if ($isPdf): ?>
+            <li><strong>Source HTML:</strong>
+                <span class="source-lineage<?= $sourceHtmlLabel === 'not recorded' ? ' source-lineage--unknown' : '' ?>">
+                    <?= e($sourceHtmlLabel) ?>
+                </span>
+            </li>
+        <?php endif; ?>
+        <?php if ($isLegacyTemplateMetadata): ?>
             <li><strong>Default template (for new versions):</strong> <code><?= e($futureTemplateId) ?></code> v<?= e($futureTemplateVersion) ?></li>
         <?php endif; ?>
         <li><strong>Filename:</strong> <code><?= e((string) ($export['filename'] ?? '')) ?></code></li>
@@ -96,10 +114,6 @@ $templateLabel = (string) ($templateLabel ?? ($isStyledExport
 
     <p class="field-hint export-hint">
         No public link. Download requires authentication. Path/MIME/size/checksum<?= $isPdf ? '/PDF-magic' : '' ?> are validated before streaming.
-        <?php if ($isStyledExport): ?>
-            This styled export uses <code><?= e($futureTemplateId) ?></code> v<?= e($futureTemplateVersion) ?> and does not replace historical v1 artifacts.
-        <?php else: ?>
-            This historical row has no DB template_id; restyle requires a new export version (v2+), not an overwrite.
-        <?php endif; ?>
+        Template/render fields come from DB-09 columns when present; NULL rows stay <?= e($legacyTemplateLabel) ?> and are never inferred as <code><?= e($futureTemplateId) ?></code>.
     </p>
 </section>

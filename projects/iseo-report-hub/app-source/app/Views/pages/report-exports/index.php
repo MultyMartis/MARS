@@ -27,7 +27,7 @@ $styledPdfExport = is_array($styledPdfExport ?? null) ? $styledPdfExport : null;
 $message = (string) ($message ?? '');
 /** @var array{id?:string,version?:int,display_label?:string}|null $futureTemplate */
 $futureTemplate = is_array($futureTemplate ?? null) ? $futureTemplate : [];
-$legacyTemplateLabel = (string) ($legacyTemplateLabel ?? 'not recorded (legacy/current exporter)');
+$legacyTemplateLabel = (string) ($legacyTemplateLabel ?? 'not recorded / legacy');
 $futureTemplateId = (string) ($futureTemplate['id'] ?? 'iseo_default_v1');
 $futureTemplateVersion = (string) (int) ($futureTemplate['version'] ?? 1);
 $styledTemplateLabel = $futureTemplateId . ' v' . $futureTemplateVersion;
@@ -36,10 +36,14 @@ $snapshotId = (int) ($snapshot['id'] ?? 0);
 $monthlyId = (int) ($snapshot['monthly_report_content_id'] ?? 0);
 $snapshotKey = (string) ($snapshot['snapshot_key'] ?? '');
 
-$labelForExport = static function (array $row) use ($legacyTemplateLabel, $styledTemplateLabel): string {
-    $key = (string) ($row['export_key'] ?? '');
-    if (preg_match('/-v(\d+)$/', $key, $m) === 1 && (int) $m[1] >= 2) {
-        return $styledTemplateLabel;
+$rowTemplateLabel = static function (array $row) use ($legacyTemplateLabel): string {
+    if (isset($row['display_template_label']) && is_string($row['display_template_label']) && $row['display_template_label'] !== '') {
+        return $row['display_template_label'];
+    }
+    $templateId = trim((string) ($row['template_id'] ?? ''));
+    $templateVersion = trim((string) ($row['template_version'] ?? ''));
+    if ($templateId !== '' && $templateVersion !== '') {
+        return $templateId . ' v' . $templateVersion;
     }
     return $legacyTemplateLabel;
 };
@@ -64,11 +68,13 @@ $labelForExport = static function (array $row) use ($legacyTemplateLabel, $style
         · Snapshot <code><?= e($snapshotKey) ?></code>
     </p>
     <p class="template-state-note">
-        <strong>Historical v1:</strong> template <?= e($legacyTemplateLabel) ?>.
+        <strong>DB template metadata:</strong> preferred over filename/key inference.
         <br>
-        <strong>Styled default template:</strong>
+        <strong>Legacy / NULL:</strong> <?= e($legacyTemplateLabel) ?>.
+        <br>
+        <strong>Recorded default:</strong>
         <code><?= e($futureTemplateId) ?></code> v<?= e($futureTemplateVersion) ?>
-        (new export version only; does not rewrite v1 artifacts).
+        (styled export versions; does not rewrite v1 artifacts).
     </p>
 
     <?php if ($exports === []): ?>
@@ -91,6 +97,8 @@ $labelForExport = static function (array $row) use ($legacyTemplateLabel, $style
                     <th>Format</th>
                     <th>Status</th>
                     <th>Template</th>
+                    <th>Render</th>
+                    <th>Source HTML</th>
                     <th>Filename</th>
                     <th>Checksum</th>
                     <th>Size</th>
@@ -109,8 +117,15 @@ $labelForExport = static function (array $row) use ($legacyTemplateLabel, $style
                     $short = $checksum !== '' ? substr($checksum, 0, 12) . '…' : '—';
                     $size = isset($row['file_size_bytes']) ? (int) $row['file_size_bytes'] : 0;
                     $format = (string) ($row['format'] ?? '');
-                    $rowTemplateLabel = $labelForExport($row);
-                    $isStyledRow = $rowTemplateLabel === $styledTemplateLabel;
+                    $tplLabel = $rowTemplateLabel($row);
+                    $isLegacyRow = !empty($row['is_legacy_template_metadata'])
+                        || $tplLabel === $legacyTemplateLabel;
+                    $renderTarget = (string) ($row['display_render_target_label'] ?? 'not recorded');
+                    $renderEngine = (string) ($row['display_render_engine_label'] ?? 'not recorded');
+                    $sourceHtmlLabel = (string) ($row['display_source_html_label'] ?? 'not recorded');
+                    if ($format !== 'pdf') {
+                        $sourceHtmlLabel = '—';
+                    }
                     ?>
                     <tr>
                         <td><?= e((string) $eid) ?></td>
@@ -120,9 +135,23 @@ $labelForExport = static function (array $row) use ($legacyTemplateLabel, $style
                         </td>
                         <td><span class="status-badge status-<?= e((string) ($row['status'] ?? '')) ?>"><?= e((string) ($row['status'] ?? '')) ?></span></td>
                         <td>
-                            <span class="template-badge<?= $isStyledRow ? ' template-badge--styled' : '' ?>">
-                                <?= e($rowTemplateLabel) ?>
+                            <span class="template-badge<?= $isLegacyRow ? ' template-badge--legacy' : ' template-badge--styled' ?>">
+                                <?= e($tplLabel) ?>
                             </span>
+                        </td>
+                        <td>
+                            <span class="meta-muted"><?= e($renderTarget) ?></span>
+                            <br>
+                            <span class="meta-muted"><?= e($renderEngine) ?></span>
+                        </td>
+                        <td>
+                            <?php if ($format === 'pdf'): ?>
+                                <span class="source-lineage<?= $sourceHtmlLabel === 'not recorded' ? ' source-lineage--unknown' : '' ?>">
+                                    <?= e($sourceHtmlLabel) ?>
+                                </span>
+                            <?php else: ?>
+                                <span class="meta-muted">—</span>
+                            <?php endif; ?>
                         </td>
                         <td><code><?= e((string) ($row['filename'] ?? '')) ?></code></td>
                         <td><code class="checksum-display" title="<?= e($checksum) ?>"><?= e($short) ?></code></td>
@@ -174,7 +203,7 @@ $labelForExport = static function (array $row) use ($legacyTemplateLabel, $style
                 <p class="export-ready-note">
                     Styled HTML ready:
                     <code><?= e((string) ($styledHtmlExport['export_key'] ?? '')) ?></code>
-                    · template <code><?= e($styledTemplateLabel) ?></code>
+                    · template <code><?= e((string) ($styledHtmlExport['display_template_label'] ?? $styledTemplateLabel)) ?></code>
                 </p>
                 <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/html/styled')) ?>" class="export-idempotent-form">
                     <?= $csrf->field() ?>
@@ -194,7 +223,7 @@ $labelForExport = static function (array $row) use ($legacyTemplateLabel, $style
                 <p class="export-ready-note">
                     Styled PDF ready:
                     <code><?= e((string) ($styledPdfExport['export_key'] ?? '')) ?></code>
-                    · derived from styled HTML
+                    · source HTML <?= e((string) ($styledPdfExport['display_source_html_label'] ?? 'not recorded')) ?>
                 </p>
                 <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/pdf/styled')) ?>" class="export-idempotent-form">
                     <?= $csrf->field() ?>

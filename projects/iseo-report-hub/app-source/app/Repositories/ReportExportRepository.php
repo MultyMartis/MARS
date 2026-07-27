@@ -33,16 +33,30 @@ final class ReportExportRepository
 
         $stmt = $this->pdo()->prepare(
             'SELECT re.*, u.name AS created_by_name, u.email AS created_by_email,
-                    rs.snapshot_key, rs.version AS snapshot_version, rs.status AS snapshot_status
+                    rs.snapshot_key, rs.version AS snapshot_version, rs.status AS snapshot_status,
+                    src.export_key AS source_html_export_key,
+                    src.format AS source_html_export_format,
+                    src.status AS source_html_export_status
              FROM report_exports re
              LEFT JOIN users u ON u.id = re.created_by
              LEFT JOIN report_snapshots rs ON rs.id = re.report_snapshot_id
+             LEFT JOIN report_exports src ON src.id = re.source_html_export_id
              WHERE re.id = :id
              LIMIT 1'
         );
         $stmt->execute([':id' => $id]);
         $row = $stmt->fetch();
         return is_array($row) ? $row : null;
+    }
+
+    /**
+     * Detail fetch with optional source-HTML lineage columns (DB-09).
+     *
+     * @return array<string, mixed>|null
+     */
+    public function findByIdWithSourceHtml(int $id): ?array
+    {
+        return $this->findById($id);
     }
 
     /**
@@ -55,9 +69,13 @@ final class ReportExportRepository
         }
 
         $stmt = $this->pdo()->prepare(
-            'SELECT re.*, u.name AS created_by_name, u.email AS created_by_email
+            'SELECT re.*, u.name AS created_by_name, u.email AS created_by_email,
+                    src.export_key AS source_html_export_key,
+                    src.format AS source_html_export_format,
+                    src.status AS source_html_export_status
              FROM report_exports re
              LEFT JOIN users u ON u.id = re.created_by
+             LEFT JOIN report_exports src ON src.id = re.source_html_export_id
              WHERE re.report_snapshot_id = :sid
              ORDER BY re.id DESC'
         );
@@ -260,7 +278,14 @@ final class ReportExportRepository
      *   file_size_bytes:int,
      *   checksum_sha256:string,
      *   source_snapshot_checksum_sha256:string,
-     *   created_by:?int
+     *   created_by:?int,
+     *   template_id?:?string,
+     *   template_version?:?string,
+     *   render_target?:?string,
+     *   render_engine?:?string,
+     *   render_options_json?:?string,
+     *   source_html_export_id?:?int,
+     *   metadata_json?:?string
      * } $data
      */
     public function insert(array $data): int
@@ -269,11 +294,15 @@ final class ReportExportRepository
             'INSERT INTO report_exports
                 (report_snapshot_id, monthly_report_content_id, export_key, format, status,
                  storage_disk, storage_path, filename, mime_type, file_size_bytes,
-                 checksum_sha256, source_snapshot_checksum_sha256, created_by)
+                 checksum_sha256, source_snapshot_checksum_sha256, created_by,
+                 template_id, template_version, render_target, render_engine,
+                 render_options_json, source_html_export_id, metadata_json)
              VALUES
                 (:report_snapshot_id, :monthly_report_content_id, :export_key, :format, :status,
                  :storage_disk, :storage_path, :filename, :mime_type, :file_size_bytes,
-                 :checksum_sha256, :source_snapshot_checksum_sha256, :created_by)'
+                 :checksum_sha256, :source_snapshot_checksum_sha256, :created_by,
+                 :template_id, :template_version, :render_target, :render_engine,
+                 :render_options_json, :source_html_export_id, :metadata_json)'
         );
 
         $stmt->execute([
@@ -290,6 +319,13 @@ final class ReportExportRepository
             ':checksum_sha256' => $data['checksum_sha256'],
             ':source_snapshot_checksum_sha256' => $data['source_snapshot_checksum_sha256'],
             ':created_by' => $data['created_by'],
+            ':template_id' => $data['template_id'] ?? null,
+            ':template_version' => $data['template_version'] ?? null,
+            ':render_target' => $data['render_target'] ?? null,
+            ':render_engine' => $data['render_engine'] ?? null,
+            ':render_options_json' => $data['render_options_json'] ?? null,
+            ':source_html_export_id' => $data['source_html_export_id'] ?? null,
+            ':metadata_json' => $data['metadata_json'] ?? null,
         ]);
 
         return (int) $this->pdo()->lastInsertId();

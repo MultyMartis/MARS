@@ -203,6 +203,8 @@ final class ReportExportController extends BaseController
         $key = (string) ($export['export_key'] ?? ('#' . $exportId));
         $templateLabel = $this->exports->templateLabelForExport($export);
         $isStyled = $this->exports->isStyledExport($export);
+        $isLegacy = $this->exports->isLegacyTemplateMetadata($export);
+        $sourceHtml = $this->exports->sourceHtmlSummaryForExport($export);
 
         $this->render('report-exports/show', [
             'pageTitle' => 'Export — ' . $key,
@@ -210,7 +212,11 @@ final class ReportExportController extends BaseController
             'futureTemplate' => $this->exports->defaultTemplateSummary(),
             'legacyTemplateLabel' => $this->exports->legacyTemplateLabel(),
             'templateLabel' => $templateLabel,
+            'renderTargetLabel' => $this->exports->renderTargetLabelForExport($export),
+            'renderEngineLabel' => $this->exports->renderEngineLabelForExport($export),
+            'sourceHtmlSummary' => $sourceHtml,
             'isStyledExport' => $isStyled,
+            'isLegacyTemplateMetadata' => $isLegacy,
             'message' => $result['message'],
         ]);
     }

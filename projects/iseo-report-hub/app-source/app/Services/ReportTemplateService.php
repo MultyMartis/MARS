@@ -93,10 +93,10 @@ final class ReportTemplateService
     }
 
     /**
-     * UI label for historical export rows without recorded template metadata.
+     * UI label for historical export rows without recorded template metadata (DB NULL).
      */
     public function legacyTemplateLabel(): string
     {
-        return 'not recorded (legacy/current exporter)';
+        return 'not recorded / legacy';
     }
 }

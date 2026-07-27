@@ -173,8 +173,8 @@ $canCreateSnapshot = !empty($canCreateSnapshot);
             <a class="btn btn-secondary" href="<?= e(url_path('/report-snapshots/' . (int) $activeSnapshot['id'] . '/exports')) ?>">Exports</a>
         </p>
         <p class="template-state-note">
-            Historical export artifacts use template not recorded (legacy/current exporter).
-            Styled default HTML template: <code>iseo_default_v1</code> v1 available as a separate export version (does not overwrite v1).
+            Export template labels prefer DB-09 metadata. Legacy rows (ids 1–2): not recorded / legacy.
+            Styled rows (ids 3–4): <code>iseo_default_v1</code> v1 with PDF source HTML lineage when recorded.
         </p>
     <?php endif; ?>
 </section>

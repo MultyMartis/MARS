@@ -231,10 +231,10 @@ final class ReportSnapshotController extends BaseController
             );
 
         return [
-            'htmlExport' => $htmlExport,
-            'pdfExport' => $pdfExport,
-            'styledHtmlExport' => $styledHtmlExport,
-            'styledPdfExport' => $styledPdfExport,
+            'htmlExport' => is_array($htmlExport) ? $this->exports->withDisplayMetadata($htmlExport) : null,
+            'pdfExport' => is_array($pdfExport) ? $this->exports->withDisplayMetadata($pdfExport) : null,
+            'styledHtmlExport' => is_array($styledHtmlExport) ? $this->exports->withDisplayMetadata($styledHtmlExport) : null,
+            'styledPdfExport' => is_array($styledPdfExport) ? $this->exports->withDisplayMetadata($styledPdfExport) : null,
             'canCreateExport' => $canCreateExport,
             'canCreatePdfExport' => $canCreatePdfExport,
             'canCreateStyledHtml' => $canCreateStyledHtml,
