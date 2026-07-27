@@ -27,7 +27,7 @@
 |-------|-------|
 | **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A/1B + local DB + **auth persistence implemented** + **DB-03 migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** + **Report Preview / Render Implementation 01 complete** + **Report Finalization Charter 01 complete** + **Report Finalization Implementation 01 complete** + **Report Snapshot Charter 01 complete** + **Report Snapshot DB-07 Migration Apply 01 complete** + **Report Snapshot Implementation 01 complete** + **Report Export / PDF Charter 01 complete** + **Report Export DB-08 Migration Apply 01 complete** |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | **Report Export HTML Artifact Implementation 01 complete** — next recommended: **Report Export PDF Engine Charter 01** |
+| **Active stage** | **Report Export PDF Engine Charter 01 complete** — next recommended: **Report Export PDF Engine Probe 01** |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -858,7 +858,26 @@
 | **Restrictions** | no schema edits; no business row mutations; no PDF/public; no secrets; no push |
 | **Result** | [I-SEO-REPORT-HUB-REPORT-EXPORT-HTML-ARTIFACT-IMPLEMENTATION-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-HTML-ARTIFACT-IMPLEMENTATION-RESULT-v0.1.md) |
 | **Closeout** | [REPORT-iseo-report-hub-report-export-html-artifact-implementation-01.md](reports/REPORT-iseo-report-hub-report-export-html-artifact-implementation-01.md) |
-| **Next recommended stage** | **I-SEO Report Hub — Report Export PDF Engine Charter 01** |
+| **Next recommended stage** | **I-SEO Report Hub — Report Export PDF Engine Charter 01** — **completed** (see section below) |
+
+---
+
+## Report Export PDF Engine Charter 01 (2026-07-27)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** — documentation / policy only |
+| **Baseline dependency** | Report Export HTML Artifact Implementation 01 (`25cf8d42…` / hash-record `ce1c095a…`); DB-08 Apply; Snapshot Implementation; HTML export id **1** `snapshot-1-html-v1` ready; artifact outside public; **no** PDF |
+| **Decision** | **Do not** implement server PDF yet; run read-only **PDF Engine Probe 01** first; prefer headless/local browser only if already available; otherwise STOP for operator install approval |
+| **Preferred PDF source** | Existing ready HTML export artifact (checksum-aligned to snapshot) |
+| **Code / runtime / DB / PDF this wave** | **None** — no app-source; no runtime sync; no DB mutation; no engine/package install; no PDF file |
+| **Charter** | [I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-ENGINE-CHARTER-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-ENGINE-CHARTER-v0.1.md) |
+| **Comparison** | [I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-ENGINE-COMPARISON-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-ENGINE-COMPARISON-v0.1.md) |
+| **Decision doc** | [I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-ENGINE-DECISION-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-ENGINE-DECISION-v0.1.md) |
+| **Implementation plan** | [I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-IMPLEMENTATION-PLAN-v0.2.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-IMPLEMENTATION-PLAN-v0.2.md) |
+| **Validation plan** | [I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-VALIDATION-PLAN-v0.2.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-VALIDATION-PLAN-v0.2.md) |
+| **Closeout** | [REPORT-iseo-report-hub-report-export-pdf-engine-charter-01.md](reports/REPORT-iseo-report-hub-report-export-pdf-engine-charter-01.md) |
+| **Next recommended stage** | **I-SEO Report Hub — Report Export PDF Engine Probe 01** |
 
 ---
 
@@ -1058,6 +1077,12 @@
 | 177 | [reports/REPORT-iseo-report-hub-db08-report-exports-migration-apply-01.md](reports/REPORT-iseo-report-hub-db08-report-exports-migration-apply-01.md) | DB-08 report exports migration apply closeout |
 | 178 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-HTML-ARTIFACT-IMPLEMENTATION-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-HTML-ARTIFACT-IMPLEMENTATION-RESULT-v0.1.md) | Report Export HTML Artifact Implementation result |
 | 179 | [reports/REPORT-iseo-report-hub-report-export-html-artifact-implementation-01.md](reports/REPORT-iseo-report-hub-report-export-html-artifact-implementation-01.md) | Report Export HTML Artifact Implementation closeout |
+| 180 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-ENGINE-CHARTER-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-ENGINE-CHARTER-v0.1.md) | Report Export PDF Engine charter (probe-first) |
+| 181 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-ENGINE-COMPARISON-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-ENGINE-COMPARISON-v0.1.md) | PDF engine comparison (manual / Chromium / wkhtmltopdf / Dompdf / mPDF) |
+| 182 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-ENGINE-DECISION-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-ENGINE-DECISION-v0.1.md) | PDF engine decision (no implement yet; probe next) |
+| 183 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-IMPLEMENTATION-PLAN-v0.2.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-IMPLEMENTATION-PLAN-v0.2.md) | PDF implementation plan v0.2 (probe → PDF) |
+| 184 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-VALIDATION-PLAN-v0.2.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-VALIDATION-PLAN-v0.2.md) | PDF validation plan v0.2 (probe + future PDF smoke) |
+| 185 | [reports/REPORT-iseo-report-hub-report-export-pdf-engine-charter-01.md](reports/REPORT-iseo-report-hub-report-export-pdf-engine-charter-01.md) | Report Export PDF Engine charter closeout |
 
 ---
 
@@ -1102,8 +1127,8 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Report Export PDF Engine Charter 01** — **recommended next** (PDF generation from HTML snapshot export baseline)
-2. Later: **PDF Engine Charter** then PDF export implementation
+1. **Report Export PDF Engine Probe 01** — **recommended next** (read-only engine inventory; no install; no PDF by default)
+2. Later: **Report Export PDF Artifact Implementation 01** only if probe selects controllable engine (or operator approves install)
 4. Optional: **Report Snapshot Hardening 01** / **Report Snapshot Versioning Charter 01** if multi-role or v2 smoke needed
 5. Optional: **Report Blocks CRUD Hardening 01** if multi-role HTTP smoke is needed
 6. Optional: **Monthly Report Content CRUD Hardening 01** if multi-role HTTP smoke is needed
@@ -1152,7 +1177,8 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **Report Export / PDF Charter 01 is complete** — HTML export first from snapshot; PDF deferred; storage outside public/Git; DB-08 `report_exports` designed
 - **Report Export DB-08 Migration Apply 01 is complete** — `report_exports` table exists; migrations **7**; tables **15**
 - **Report Export HTML Artifact Implementation 01 is complete** — HTML export from snapshot; artifact outside public; auth download; idempotent; smoke 47/47; **no** PDF/public share
-- **Next** = Report Export PDF Engine Charter 01
+- **Report Export PDF Engine Charter 01 is complete** — engine comparison + probe-first decision; HTML artifact preferred source; **no** code/runtime/DB/PDF/install in charter
+- **Next** = Report Export PDF Engine Probe 01
 - **No drag/drop reorder / PDF export / rich text editor / client portal** (runtime)
 - **No autonomous publication**
 - **Website Factory is not runtime owner** — methodology + prototype lane only
