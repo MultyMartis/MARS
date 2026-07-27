@@ -3,7 +3,7 @@
 **Status:** COMPLETE (docs/policy only)  
 **project_id:** `iseo-report-hub`  
 **Date:** 2026-07-27  
-**Primary commit:** `PENDING_PRIMARY`  
+**Primary commit:** `6603aa17d094f9fe7d163535e3e6cf5aac713360`  
 **Hash-record commit:** `PENDING_HASH_RECORD`  
 **Push:** **no**
 
@@ -145,7 +145,7 @@ Gates: exact id + exact `export_key` (+ checksum preferred). Idempotent. **Not e
 |------|-------|
 | Exact-path git add | allowlisted docs only (worktree) |
 | Primary message | `docs(iseo-report-hub): add export template metadata db09 charter` |
-| Primary hash | `PENDING_PRIMARY` |
+| Primary hash | `6603aa17d094f9fe7d163535e3e6cf5aac713360` |
 | Hash-record message | `docs(iseo-report-hub): record export template metadata db09 charter commit hash` |
 | Hash-record hash | `PENDING_HASH_RECORD` |
 | Push | **no** |
