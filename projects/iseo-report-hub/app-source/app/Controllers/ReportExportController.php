@@ -44,6 +44,9 @@ final class ReportExportController extends BaseController
             'snapshot' => $snapshot,
             'exports' => $result['exports'],
             'canCreate' => !empty($result['can_create']),
+            'canCreatePdf' => !empty($result['can_create_pdf']),
+            'hasHtmlExport' => !empty($result['has_html_export']),
+            'hasPdfExport' => !empty($result['has_pdf_export']),
             'message' => $result['message'],
         ]);
     }
@@ -66,6 +69,41 @@ final class ReportExportController extends BaseController
         }
 
         $result = $this->exports->createHtmlForSnapshot($snapshotId, $user);
+        $this->respondCreateResult($snapshotId, $result);
+    }
+
+    public function createPdfForSnapshot(int $snapshotId): void
+    {
+        if (!$this->guardMethod(['POST'])) {
+            return;
+        }
+
+        $user = $this->requireInternalUser();
+        if ($user === null) {
+            return;
+        }
+
+        if (!$this->validateCsrf()) {
+            flash_set('error', 'Invalid CSRF token. Please try again.');
+            $this->redirect('/report-snapshots/' . $snapshotId . '/exports');
+            return;
+        }
+
+        $result = $this->exports->createPdfForSnapshot($snapshotId, $user);
+        $this->respondCreateResult($snapshotId, $result);
+    }
+
+    /**
+     * @param array{
+     *   ok:bool,
+     *   message:string,
+     *   export:?array<string,mixed>,
+     *   idempotent:bool,
+     *   errors?:array<string,string>
+     * } $result
+     */
+    private function respondCreateResult(int $snapshotId, array $result): void
+    {
         if (!$result['ok']) {
             if (isset($result['errors']['role'])) {
                 $this->denyAccess();

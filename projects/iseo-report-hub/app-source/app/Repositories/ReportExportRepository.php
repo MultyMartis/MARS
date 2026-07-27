@@ -107,7 +107,18 @@ final class ReportExportRepository
      */
     public function findReadyHtmlBySnapshotChecksum(int $snapshotId, string $snapshotChecksum): ?array
     {
-        if ($snapshotId <= 0 || $snapshotChecksum === '') {
+        return $this->findReadyBySnapshotFormatAndChecksum($snapshotId, 'html', $snapshotChecksum);
+    }
+
+    /**
+     * @return array<string, mixed>|null
+     */
+    public function findReadyBySnapshotFormatAndChecksum(
+        int $snapshotId,
+        string $format,
+        string $snapshotChecksum
+    ): ?array {
+        if ($snapshotId <= 0 || $format === '' || $snapshotChecksum === '') {
             return null;
         }
 
@@ -115,7 +126,7 @@ final class ReportExportRepository
             'SELECT re.*
              FROM report_exports re
              WHERE re.report_snapshot_id = :sid
-               AND re.format = \'html\'
+               AND re.format = :format
                AND re.status = \'ready\'
                AND re.source_snapshot_checksum_sha256 = :checksum
              ORDER BY re.id DESC
@@ -123,6 +134,7 @@ final class ReportExportRepository
         );
         $stmt->execute([
             ':sid' => $snapshotId,
+            ':format' => $format,
             ':checksum' => $snapshotChecksum,
         ]);
         $row = $stmt->fetch();

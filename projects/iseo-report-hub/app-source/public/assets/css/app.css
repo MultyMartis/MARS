@@ -705,6 +705,16 @@ code {
   color: #0369a1;
 }
 
+.export-card .artifact-badge--pdf {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.export-table .type-badge--pdf {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
 .export-card .checksum-display,
 .export-detail .checksum-display {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;

@@ -10,11 +10,15 @@ $message = (string) ($message ?? '');
 $exportId = (int) ($export['id'] ?? 0);
 $snapshotId = (int) ($export['report_snapshot_id'] ?? 0);
 $monthlyId = (int) ($export['monthly_report_content_id'] ?? 0);
+$format = (string) ($export['format'] ?? '');
+$isPdf = $format === 'pdf';
 $checksum = (string) ($export['checksum_sha256'] ?? '');
 $checksumShort = $checksum !== '' ? substr($checksum, 0, 12) . '…' : '—';
 $sourceChecksum = (string) ($export['source_snapshot_checksum_sha256'] ?? '');
 $sourceShort = $sourceChecksum !== '' ? substr($sourceChecksum, 0, 12) . '…' : '—';
 $fileSize = isset($export['file_size_bytes']) ? (int) $export['file_size_bytes'] : 0;
+$downloadLabel = $isPdf ? 'Download PDF' : 'Download HTML';
+$artifactLabel = $isPdf ? 'PDF artifact' : 'HTML artifact';
 ?>
 <section class="panel export-card export-detail">
     <div class="panel-head">
@@ -28,21 +32,21 @@ $fileSize = isset($export['file_size_bytes']) ? (int) $export['file_size_bytes']
                 <a class="btn btn-secondary" href="<?= e(url_path('/monthly-reports/' . $monthlyId)) ?>">Monthly report</a>
             <?php endif; ?>
             <?php if ($exportId > 0 && (string) ($export['status'] ?? '') === 'ready'): ?>
-                <a class="btn" href="<?= e(url_path('/report-exports/' . $exportId . '/download')) ?>">Download HTML</a>
+                <a class="btn" href="<?= e(url_path('/report-exports/' . $exportId . '/download')) ?>"><?= e($downloadLabel) ?></a>
             <?php endif; ?>
         </p>
     </div>
 
     <p>
         <span class="internal-only-badge">Internal only</span>
-        <span class="artifact-badge">HTML artifact</span>
+        <span class="artifact-badge<?= $isPdf ? ' artifact-badge--pdf' : '' ?>"><?= e($artifactLabel) ?></span>
         · <span class="status-badge status-<?= e((string) ($export['status'] ?? '')) ?>"><?= e((string) ($export['status'] ?? '')) ?></span>
     </p>
 
     <ul class="facts export-meta-list">
         <li><strong>ID:</strong> <?= e((string) $exportId) ?></li>
         <li><strong>Export key:</strong> <code><?= e((string) ($export['export_key'] ?? '')) ?></code></li>
-        <li><strong>Format:</strong> <code><?= e((string) ($export['format'] ?? '')) ?></code></li>
+        <li><strong>Format:</strong> <code><?= e($format) ?></code></li>
         <li><strong>Status:</strong> <span class="status-badge status-<?= e((string) ($export['status'] ?? '')) ?>"><?= e((string) ($export['status'] ?? '')) ?></span></li>
         <li><strong>Filename:</strong> <code><?= e((string) ($export['filename'] ?? '')) ?></code></li>
         <li><strong>MIME type:</strong> <code><?= e((string) ($export['mime_type'] ?? '')) ?></code></li>

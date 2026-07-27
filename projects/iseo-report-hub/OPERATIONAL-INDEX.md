@@ -27,7 +27,7 @@
 |-------|-------|
 | **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A/1B + local DB + **auth persistence implemented** + **DB-03 migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** + **Report Preview / Render Implementation 01 complete** + **Report Finalization Charter 01 complete** + **Report Finalization Implementation 01 complete** + **Report Snapshot Charter 01 complete** + **Report Snapshot DB-07 Migration Apply 01 complete** + **Report Snapshot Implementation 01 complete** + **Report Export / PDF Charter 01 complete** + **Report Export DB-08 Migration Apply 01 complete** |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | **Report Export PDF Engine Probe 01 complete** — next recommended: **Report Export PDF Browser Implementation 01** |
+| **Active stage** | **Report Export PDF Browser Implementation 01 complete** — next recommended: **Report Export PDF Hardening 01** |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -896,7 +896,24 @@
 | **Implementation plan v0.3** | [I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-IMPLEMENTATION-PLAN-v0.3.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-IMPLEMENTATION-PLAN-v0.3.md) |
 | **Validation plan v0.3** | [I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-VALIDATION-PLAN-v0.3.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-VALIDATION-PLAN-v0.3.md) |
 | **Closeout** | [REPORT-iseo-report-hub-report-export-pdf-engine-probe-01.md](reports/REPORT-iseo-report-hub-report-export-pdf-engine-probe-01.md) |
-| **Next recommended stage** | **I-SEO Report Hub — Report Export PDF Browser Implementation 01** |
+| **Next recommended stage** | **I-SEO Report Hub — Report Export PDF Browser Implementation 01** — **completed** (see section below) |
+
+---
+
+## Report Export PDF Browser Implementation 01 (2026-07-27)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** — Edge headless PDF from ready HTML artifact |
+| **Engine used** | Microsoft Edge `msedge.exe` **150.0.4078.99** (Chrome fallback available; **not** used) |
+| **Routes** | `POST /report-snapshots/{id}/exports/pdf`; existing export detail/download support `format=pdf` |
+| **DB final** | migrations **7**; tables **15**; `report_exports` **2**; pdf id **2** key `snapshot-1-pdf-v1` checksum `707e72d65f253de1…`; HTML id **1** unchanged |
+| **Artifact** | `storage/exports/reports/monthly-1/snapshot-1/monthly-1-v1.pdf` (133005 B; `%PDF`; outside public/Git) |
+| **Smoke** | lint PASS; service create+idempotent PASS; HTTP **39/39** PASS (`127.0.0.1:8088`, admin_owner session injection) |
+| **Restrictions** | no public/share; no package install; no schema/db-migrate; no HTML/snapshot/monthly/block mutations |
+| **Result** | [I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-BROWSER-IMPLEMENTATION-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-BROWSER-IMPLEMENTATION-RESULT-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-report-export-pdf-browser-implementation-01.md](reports/REPORT-iseo-report-hub-report-export-pdf-browser-implementation-01.md) |
+| **Next recommended stage** | **I-SEO Report Hub — Report Export PDF Hardening 01** |
 
 ---
 
@@ -1107,6 +1124,8 @@
 | 188 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-IMPLEMENTATION-PLAN-v0.3.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-IMPLEMENTATION-PLAN-v0.3.md) | PDF implementation plan v0.3 (browser path) |
 | 189 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-VALIDATION-PLAN-v0.3.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-VALIDATION-PLAN-v0.3.md) | PDF validation plan v0.3 |
 | 190 | [reports/REPORT-iseo-report-hub-report-export-pdf-engine-probe-01.md](reports/REPORT-iseo-report-hub-report-export-pdf-engine-probe-01.md) | Report Export PDF Engine Probe closeout |
+| 191 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-BROWSER-IMPLEMENTATION-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-BROWSER-IMPLEMENTATION-RESULT-v0.1.md) | Report Export PDF Browser Implementation result |
+| 192 | [reports/REPORT-iseo-report-hub-report-export-pdf-browser-implementation-01.md](reports/REPORT-iseo-report-hub-report-export-pdf-browser-implementation-01.md) | Report Export PDF Browser Implementation closeout |
 
 ---
 
@@ -1174,7 +1193,7 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **One local admin user exists** — no user management UI; no password reset
 - **Reporting Period CRUD MVP is implemented** — internal list/detail/create/edit/archive-by-status; CSRF; no DELETE; demo + smoke periods only
 - **Runtime has synced auth + CRUD code** at `X:\MARS-Localhost\sites\php\projects\iseo-report-hub`
-- **Local MySQL DB `iseo_report_hub_dev` exists** with core auth/org tables + **`reporting_periods`** (DB-03) + **`weekly_checkpoints`** (DB-04) + **`monthly_report_contents`** (DB-05) + **`report_blocks`** (DB-06) + **`report_snapshots`** (DB-07) + **`report_exports`** (DB-08; migrations **7**; tables **15**; active snapshot **1**; HTML export **1**)
+- **Local MySQL DB `iseo_report_hub_dev` exists** with core auth/org tables + **`reporting_periods`** (DB-03) + **`weekly_checkpoints`** (DB-04) + **`monthly_report_contents`** (DB-05) + **`report_blocks`** (DB-06) + **`report_snapshots`** (DB-07) + **`report_exports`** (DB-08; migrations **7**; tables **15**; active snapshot **1**; HTML export **1**; PDF export **1**)
 - **Local fixture + CRUD smoke** — demo client/project/site **1/1/1**; reporting_periods **2** (`2026-07` fixture + `2026-08` smoke archived); weekly_checkpoints **4** (W1–W3 fixture + W4 smoke `skipped`, `LOCAL_FIXTURE_ONLY`); monthly_report_contents **1** (demo for `2026-07`, status `in_progress`, `LOCAL_FIXTURE_ONLY`); report_blocks **6** (fixture + smoke `risks_and_blockers` under monthly id **1**, `LOCAL_FIXTURE_ONLY`)
 - **Runtime `.env.local` exists** (outside Git); source keeps placeholders only
 - **Versioned source of truth is `app-source/`** — runtime remains Localhost deploy target outside monorepo
@@ -1203,8 +1222,9 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **Report Export HTML Artifact Implementation 01 is complete** — HTML export from snapshot; artifact outside public; auth download; idempotent; smoke 47/47; **no** PDF/public share
 - **Report Export PDF Engine Charter 01 is complete** — engine comparison + probe-first decision; HTML artifact preferred source; **no** code/runtime/DB/PDF/install in charter
 - **Report Export PDF Engine Probe 01 is complete** — Edge selected (`msedge.exe` 150.0.4078.99); Chrome alternate; **no** code/runtime/DB/PDF/install in probe
-- **Next** = Report Export PDF Browser Implementation 01
-- **No drag/drop reorder / PDF export / rich text editor / client portal** (runtime)
+- **Report Export PDF Browser Implementation 01 is complete** — Edge headless PDF from HTML artifact; export id **2** `snapshot-1-pdf-v1`; auth download; idempotent; smoke 39/39; **no** public/share/install
+- **Next** = Report Export PDF Hardening 01
+- **No drag/drop reorder / public PDF share / rich text editor / client portal** (runtime)
 - **No autonomous publication**
 - **Website Factory is not runtime owner** — methodology + prototype lane only
 - **Static demo v0.4 is UX reference only** — not implementation

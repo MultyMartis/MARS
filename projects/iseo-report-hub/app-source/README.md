@@ -16,8 +16,8 @@
 | Weekly checkpoints | **CRUD MVP** — period-scoped list/detail/create/edit/skip-or-archive-by-status |
 | Monthly report content | **CRUD MVP** — period-scoped detail/create/edit/archive-by-status; one row per period |
 | Report blocks | **CRUD MVP** — monthly-scoped list/detail/create/edit/archive-by-status; unique parent+block_key |
-| Report snapshots | **Internal MVP** — create/view active snapshot from finalized monthly; checksum idempotency; no public/PDF |
-| Report exports | **HTML MVP** — internal HTML export from snapshot; auth download; idempotent; **no** PDF/public share |
+| Report snapshots | **Internal MVP** — create/view active snapshot from finalized monthly; checksum idempotency; no public |
+| Report exports | **HTML + PDF MVP** — internal HTML artifact + Edge headless PDF from HTML; auth download; idempotent; **no** public share |
 | Secrets | **None in source** — `.env.example` placeholders only; **no** `.env` / `.env.local` |
 | Runtime sync | Allowlist source → runtime |
 
@@ -80,8 +80,9 @@ Creates one local-only demo client / project / site / reporting_period (`LOCAL_F
 - `GET /report-snapshots/{id}` — immutable snapshot detail (auth; internal-only; no edit/delete/public)
 - `GET /report-snapshots/{id}/exports` — list exports for snapshot (auth; internal-only)
 - `POST /report-snapshots/{id}/exports/html` — create HTML export from snapshot (CSRF; idempotent; admin_owner / seo_lead_reviewer)
-- `GET /report-exports/{id}` — export metadata detail (auth; internal-only)
-- `GET /report-exports/{id}/download` — authenticated HTML artifact download (no public URL)
+- `POST /report-snapshots/{id}/exports/pdf` — create PDF export from ready HTML artifact via Edge headless (CSRF; idempotent; admin_owner / seo_lead_reviewer)
+- `GET /report-exports/{id}` — export metadata detail (auth; internal-only; HTML or PDF)
+- `GET /report-exports/{id}/download` — authenticated artifact download (HTML or PDF MIME; no public URL)
 - `POST /monthly-reports/{id}/submit-review` — `in_progress` → `ready_for_review` (CSRF; role-gated)
 - `POST /monthly-reports/{id}/mark-reviewed` — `ready_for_review` → `reviewed` (CSRF; role-gated)
 - `POST /monthly-reports/{id}/finalize` — `reviewed` → `finalized` when readiness passes (CSRF; sets `finalized_at` if null)
@@ -99,7 +100,7 @@ Creates one local-only demo client / project / site / reporting_period (`LOCAL_F
 No top-level `/monthly-reports` or `/report-blocks` index (period/monthly-scoped entry is enough).  
 No DELETE route for reporting periods, weekly checkpoints, monthly report content, report blocks, or snapshots — archive/skip via status (snapshots: no DELETE; supersede on later version).  
 No drag/drop reorder (manual `sort_order` only).  
-No public share token, no export route, no server-side PDF generation.
+No public share token. PDF is internal-only via authenticated download from local Edge print-to-PDF (Chrome fallback if Edge fails).
 
 ## Secrets policy
 
@@ -113,7 +114,7 @@ No public share token, no export route, no server-side PDF generation.
 
 - No password reset / remember-me / OAuth
 - No client portal auth for `client_viewer`
-- No drag/drop reorder / rich text editor / PDF export
+- No drag/drop reorder / rich text editor / public PDF share
 - No hard DELETE of reporting periods, weekly checkpoints, monthly report content, report blocks, or snapshots
 - No user management UI
 - No real client import
@@ -123,4 +124,4 @@ No public share token, no export route, no server-side PDF generation.
 
 ## Next phase
 
-**Recommended:** Report Export HTML Artifact Implementation 01 (first HTML export from active snapshot; DB-08 schema applied).
+**Recommended:** Report Export PDF Hardening 01.

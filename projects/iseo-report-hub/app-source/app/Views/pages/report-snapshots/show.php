@@ -8,7 +8,9 @@ declare(strict_types=1);
 /** @var bool $canCreate */
 /** @var string $message */
 /** @var array<string, mixed>|null $htmlExport */
+/** @var array<string, mixed>|null $pdfExport */
 /** @var bool $canCreateExport */
+/** @var bool $canCreatePdfExport */
 /** @var \Iseo\Services\CsrfService $csrf */
 
 $mode = $mode ?? 'detail';
@@ -18,7 +20,9 @@ $payload = $payload ?? null;
 $canCreate = !empty($canCreate);
 $message = (string) ($message ?? '');
 $htmlExport = $htmlExport ?? null;
+$pdfExport = $pdfExport ?? null;
 $canCreateExport = !empty($canCreateExport);
+$canCreatePdfExport = !empty($canCreatePdfExport);
 
 $monthlyId = 0;
 if (is_array($snapshot) && isset($snapshot['monthly_report_content_id'])) {
@@ -180,6 +184,53 @@ $decodeIds = static function (mixed $raw): array {
             </p>
             <?php if ($canCreateExport): ?>
                 <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/html')) ?>" class="export-idempotent-form">
+                    <?= $csrf->field() ?>
+                    <button type="submit" class="btn btn-secondary">Re-check / create (idempotent)</button>
+                </form>
+            <?php endif; ?>
+        <?php endif; ?>
+    </section>
+
+    <?php
+    $pdfChecksum = is_array($pdfExport) ? (string) ($pdfExport['checksum_sha256'] ?? '') : '';
+    $pdfShort = $pdfChecksum !== '' ? substr($pdfChecksum, 0, 12) . '…' : '—';
+    $pdfSize = is_array($pdfExport) && isset($pdfExport['file_size_bytes']) ? (int) $pdfExport['file_size_bytes'] : 0;
+    ?>
+    <section class="panel export-card">
+        <div class="panel-head">
+            <h2>PDF export</h2>
+            <p>
+                <a class="btn btn-secondary" href="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports')) ?>">All exports</a>
+            </p>
+        </div>
+        <p>
+            <span class="internal-only-badge">Internal only</span>
+            <span class="artifact-badge artifact-badge--pdf">PDF artifact</span>
+        </p>
+        <?php if (!is_array($htmlExport)): ?>
+            <p class="note">Create an HTML export before generating PDF.</p>
+        <?php elseif (!is_array($pdfExport)): ?>
+            <p class="note">No PDF export yet.</p>
+            <?php if ($canCreatePdfExport): ?>
+                <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/pdf')) ?>">
+                    <?= $csrf->field() ?>
+                    <button type="submit" class="btn">Create PDF export</button>
+                </form>
+            <?php endif; ?>
+        <?php else: ?>
+            <ul class="facts">
+                <li><strong>Export ID:</strong> <?= e((string) $pdfExport['id']) ?></li>
+                <li><strong>Key:</strong> <code><?= e((string) ($pdfExport['export_key'] ?? '')) ?></code></li>
+                <li><strong>Filename:</strong> <code><?= e((string) ($pdfExport['filename'] ?? '')) ?></code></li>
+                <li><strong>Checksum:</strong> <code class="checksum-display" title="<?= e($pdfChecksum) ?>"><?= e($pdfShort) ?></code></li>
+                <li><strong>Size:</strong> <?= e($pdfSize > 0 ? number_format($pdfSize) . ' B' : '—') ?></li>
+            </ul>
+            <p>
+                <a class="btn" href="<?= e(url_path('/report-exports/' . (int) $pdfExport['id'])) ?>">View export</a>
+                <a class="btn btn-secondary btn-download" href="<?= e(url_path('/report-exports/' . (int) $pdfExport['id'] . '/download')) ?>">Download</a>
+            </p>
+            <?php if ($canCreatePdfExport): ?>
+                <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/pdf')) ?>" class="export-idempotent-form">
                     <?= $csrf->field() ?>
                     <button type="submit" class="btn btn-secondary">Re-check / create (idempotent)</button>
                 </form>

@@ -49,7 +49,9 @@ final class ReportSnapshotController extends BaseController
             'canCreate' => !empty($result['can_create']),
             'message' => $result['message'],
             'htmlExport' => $exportState['htmlExport'],
+            'pdfExport' => $exportState['pdfExport'],
             'canCreateExport' => $exportState['canCreateExport'],
+            'canCreatePdfExport' => $exportState['canCreatePdfExport'],
         ]);
     }
 
@@ -132,22 +134,35 @@ final class ReportSnapshotController extends BaseController
             'canCreate' => false,
             'message' => $result['message'],
             'htmlExport' => $exportState['htmlExport'],
+            'pdfExport' => $exportState['pdfExport'],
             'canCreateExport' => $exportState['canCreateExport'],
+            'canCreatePdfExport' => $exportState['canCreatePdfExport'],
         ]);
     }
 
     /**
      * @param array<string, mixed>|null $snapshot
      * @param array{id:int,email:string,name:string,roles:list<string>,authenticated_at:string} $user
-     * @return array{htmlExport:?array<string,mixed>,canCreateExport:bool}
+     * @return array{
+     *   htmlExport:?array<string,mixed>,
+     *   pdfExport:?array<string,mixed>,
+     *   canCreateExport:bool,
+     *   canCreatePdfExport:bool
+     * }
      */
     private function exportStateForSnapshot(?array $snapshot, array $user): array
     {
         if (!is_array($snapshot)) {
-            return ['htmlExport' => null, 'canCreateExport' => false];
+            return [
+                'htmlExport' => null,
+                'pdfExport' => null,
+                'canCreateExport' => false,
+                'canCreatePdfExport' => false,
+            ];
         }
 
         $htmlExport = null;
+        $pdfExport = null;
         $snapshotId = (int) ($snapshot['id'] ?? 0);
         if ($snapshotId > 0) {
             try {
@@ -155,18 +170,31 @@ final class ReportSnapshotController extends BaseController
             } catch (\Throwable) {
                 $htmlExport = null;
             }
+            try {
+                $pdfExport = $this->exports->getReadyExportForSnapshotFormat($snapshotId, 'pdf');
+            } catch (\Throwable) {
+                $pdfExport = null;
+            }
         }
 
         $canCreateExport = false;
+        $canCreatePdfExport = false;
         try {
             $canCreateExport = $this->exports->canCreateExportForSnapshot($snapshot, $user);
         } catch (\Throwable) {
             $canCreateExport = false;
         }
+        try {
+            $canCreatePdfExport = $this->exports->canCreatePdfForSnapshot($snapshot, $user, $htmlExport);
+        } catch (\Throwable) {
+            $canCreatePdfExport = false;
+        }
 
         return [
             'htmlExport' => $htmlExport,
+            'pdfExport' => $pdfExport,
             'canCreateExport' => $canCreateExport,
+            'canCreatePdfExport' => $canCreatePdfExport,
         ];
     }
 
