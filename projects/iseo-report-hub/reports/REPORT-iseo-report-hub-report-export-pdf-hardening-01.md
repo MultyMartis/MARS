@@ -129,11 +129,11 @@ no production DB; no real client data; no credentials in Git/report; no password
 ## 12. Commit
 
 - exact-path git add (allowlisted i-SEO paths only)
-- staged list: see section 15 / post-commit verification
-- primary commit hash: `COMMIT_HASH_PENDING`
+- staged list (primary): 10 allowlisted i-SEO paths (service/controller/views/css/README/result/report/OPERATIONAL-INDEX)
+- primary commit hash: `d8a1b9e10ad62773aebe9347593c6a87aded2259`
 - commit message: `fix(iseo-report-hub): harden pdf report export`
-- hash-record follow-up (this report only): `HASH_RECORD_PENDING` — `docs(iseo-report-hub): record pdf report export hardening commit hash`
-- HEAD verification: after commits
+- hash-record follow-up (this report only): see tip after hash-record commit — `docs(iseo-report-hub): record pdf report export hardening commit hash`
+- HEAD verification: worktree tip advanced; `refs/heads/mars/canonical-post-recovery` updated via `update-ref`
 - push: **no**
 
 ## 13. SAFE UNKNOWN
