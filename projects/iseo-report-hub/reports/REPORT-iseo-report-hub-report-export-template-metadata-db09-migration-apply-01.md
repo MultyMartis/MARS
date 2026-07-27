@@ -155,7 +155,7 @@ No new artifacts. Outside `public/` and Git.
 | Staged list | see section 14 / post-commit verification |
 | Primary commit hash | `c1e7ba2416f1e49ef0f115d0efa23ffcb7abd317` |
 | Primary message | `feat(iseo-report-hub): add export template metadata migration` |
-| Hash-record commit | `PENDING_HASH_RECORD` — `docs(iseo-report-hub): record export template metadata migration commit hash` |
+| Hash-record commit | `11e2c84a095a80692f62d0f4a106fb331475240f` — `docs(iseo-report-hub): record export template metadata migration commit hash` |
 | HEAD verification | after commits |
 | Push | **no** |
 
