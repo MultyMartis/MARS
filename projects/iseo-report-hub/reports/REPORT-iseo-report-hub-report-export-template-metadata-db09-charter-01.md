@@ -4,7 +4,7 @@
 **project_id:** `iseo-report-hub`  
 **Date:** 2026-07-27  
 **Primary commit:** `6603aa17d094f9fe7d163535e3e6cf5aac713360`  
-**Hash-record commit:** `PENDING_HASH_RECORD`  
+**Hash-record commit:** `dad85ede6ae3a9f0f0a23c7a2deecbe74645fa8a`  
 **Push:** **no**
 
 ---
@@ -147,7 +147,7 @@ Gates: exact id + exact `export_key` (+ checksum preferred). Idempotent. **Not e
 | Primary message | `docs(iseo-report-hub): add export template metadata db09 charter` |
 | Primary hash | `6603aa17d094f9fe7d163535e3e6cf5aac713360` |
 | Hash-record message | `docs(iseo-report-hub): record export template metadata db09 charter commit hash` |
-| Hash-record hash | `PENDING_HASH_RECORD` |
+| Hash-record hash | `dad85ede6ae3a9f0f0a23c7a2deecbe74645fa8a` |
 | Push | **no** |
 
 ---
