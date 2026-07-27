@@ -160,7 +160,7 @@ Created / updated:
 |-------|-------|
 | Exact-path git add | allowlisted docs only (see §11) |
 | Primary commit message | `docs(iseo-report-hub): add report delivery public share charter` |
-| Primary commit hash | `PENDING_PRIMARY` |
+| Primary commit hash | `63d8f3e037cdb797f17f2dc955be92041852dba4` |
 | Hash-record commit message | `docs(iseo-report-hub): record report delivery public share charter commit hash` |
 | Hash-record commit hash | `PENDING_HASH_RECORD` |
 | Tip after | `PENDING_TIP` |
@@ -210,3 +210,4 @@ Created / updated:
 | stash | **no** |
 | broad git add | **no** |
 | clean temporary worktree | used: `X:\AI MARS STORAGE\git-sync-iseo-report-delivery-public-share-charter-01\repo` |
+
