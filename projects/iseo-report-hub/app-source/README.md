@@ -10,13 +10,14 @@
 | WordPress | **Not used** as runtime or source of truth |
 | Framework / Composer | **None** — plain PHP 8.3 |
 | Database | Local `iseo_report_hub_dev` via runtime `.env.local` (not in Git) |
-| Migrations | Core + reporting_periods + weekly_checkpoints + monthly_report_contents + report_blocks + report_snapshots applied (separate waves) |
+| Migrations | Core + reporting_periods + weekly_checkpoints + monthly_report_contents + report_blocks + report_snapshots + report_exports applied (separate waves) |
 | Auth | **DB-backed** — `password_verify` + roles + audit |
 | Reporting periods | **CRUD MVP** — list/detail/create/edit/archive-by-status |
 | Weekly checkpoints | **CRUD MVP** — period-scoped list/detail/create/edit/skip-or-archive-by-status |
 | Monthly report content | **CRUD MVP** — period-scoped detail/create/edit/archive-by-status; one row per period |
 | Report blocks | **CRUD MVP** — monthly-scoped list/detail/create/edit/archive-by-status; unique parent+block_key |
 | Report snapshots | **Internal MVP** — create/view active snapshot from finalized monthly; checksum idempotency; no public/PDF |
+| Report exports | **Schema only (DB-08)** — `report_exports` table; **no** export rows/files/routes yet |
 | Secrets | **None in source** — `.env.example` placeholders only; **no** `.env` / `.env.local` |
 | Runtime sync | Allowlist source → runtime |
 
@@ -118,4 +119,4 @@ No public share token, no export route, no server-side PDF generation.
 
 ## Next phase
 
-**Recommended:** Report Export / PDF Charter 01 (export foundations on top of active snapshot).
+**Recommended:** Report Export HTML Artifact Implementation 01 (first HTML export from active snapshot; DB-08 schema applied).
