@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-27
-**Evidence cutoff:** 2026-07-27 (SITE-002 Run **4.301** / `SITE-002-PROD-LEGACY-CATEGORY-CLEANUP-CHARTER-01` — read-only cleanup charter; Option A apply plan ready; parent **153** keep temporarily; mutation **0**)
+**Evidence cutoff:** 2026-07-27 (SITE-002 Run **4.302** / `SITE-002-PROD-DEMO-CATALOG-CLEANUP-CHARTER-01` — read-only demo catalog cleanup inventory; Group A **154–170** DELETE_READY; parent **153** pending; product deletes **0**; Run **4.301** redirect plan superseded; mutation **0**)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Legacy Category Cleanup Charter 01 (Run 4.301)** — **COMPLETE — APPLY PLAN READY** · empty legacy **154/159/165** → Option A **301+disable** to **378/379/380**; keep **153** temporarily; apply **not** executed · [cleanup charter 4.301](sites/site-002/reports/SITE-002-PROD-LEGACY-CATEGORY-CLEANUP-CHARTER-01.md) · [baseline refresh 4.300](sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-05.md) · [persistence check 4.299](sites/site-002/reports/SITE-002-PROD-1C-POST-IMPORT-PERSISTENCE-CHECK-01.md) · [importer patch 4.297](sites/site-002/reports/SITE-002-PROD-1C-IMPORTER-GUID-PATH-PATCH-01.md) |
+| Current SITE-002 focus | **Demo Catalog Cleanup Charter 01 (Run 4.302)** — **ATTENTION — OPERATOR REVIEW REQUIRED** · Group A physical-delete ready: categories **154–170** (17 empty legacy children of **153**); parent **153** KEEP_PARENT_PENDING; demo products DELETE_READY **0**; ambiguous empty cats **119**; Run **4.301** Option A **301+disable superseded**; apply **not** executed · [demo cleanup charter 4.302](sites/site-002/reports/SITE-002-PROD-DEMO-CATALOG-CLEANUP-CHARTER-01.md) · [legacy charter 4.301 superseded](sites/site-002/reports/SITE-002-PROD-LEGACY-CATEGORY-CLEANUP-CHARTER-01.md) · [baseline refresh 4.300](sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-05.md) · [persistence check 4.299](sites/site-002/reports/SITE-002-PROD-1C-POST-IMPORT-PERSISTENCE-CHECK-01.md) |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 
