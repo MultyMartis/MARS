@@ -126,8 +126,8 @@ no production DB; no real client data; no credentials/password/hash/session in r
 | Message | `feat(iseo-report-hub): add pdf browser report export` |
 | Staging | exact-path `git add` allowlist only |
 | Primary commit | `ddea70ba803cb196444377d43d9673633bbde7b5` |
-| Hash-record follow-up | `PENDING_HASH_RECORD` — `docs(iseo-report-hub): record pdf browser report export commit hash` |
-| HEAD verification | primary on branch; hash-record pending |
+| Hash-record follow-up | `c39809060b618e0eaa380b723e5092abddebb0eb` — `docs(iseo-report-hub): record pdf browser report export commit hash` |
+| HEAD verification | branch HEAD `c39809060b618e0eaa380b723e5092abddebb0eb` (hash-record); parent primary `ddea70ba803cb196444377d43d9673633bbde7b5` |
 | Push | **no** |
 
 ## 13. SAFE UNKNOWN
