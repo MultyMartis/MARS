@@ -18,7 +18,7 @@
 | **Catalog sort menu (Production)** | **COMPLETE** — Run 4.177; menu order in `category.twig`; «Умолчанию» removed |
 | **MARS 1C cron wrapper (Production)** | **OPERATIONAL — FIRST SCHEDULED RUN VERIFIED** — Run 4.194; automatic run SUCCESS 2026-07-06 08:00 Moscow; daily import OPERATIONAL |
 | **MARS 1C cron reports (Production)** | **CURRENT** — Run 4.194; first scheduled report `mars_1c_import_2026-07-06_080007.txt` verified on Production; latest forensic sample `mars_1c_import_2026-07-23_080010.txt` SUCCESS (Run **4.289**) |
-| **Catalog structure / 1C category mapping (Production)** | **IMPORTER GUID/PATH PATCH DEPLOYED** (Run **4.297**) — `import_1C.php` + `import_1C_process.php`; map table from Run **4.296**; precedence GUID → path → collision guard (never leaf→legacy **154/159/165**); auto-create disabled Phase A; dry-run **4707/4708→378**, **4710→379**, **4712→380**, **4709→376**; next = post-import persistence check; baseline still **1737** · [importer patch](../reports/SITE-002-PROD-1C-IMPORTER-GUID-PATH-PATCH-01.md) · [mapping backfill](../reports/SITE-002-PROD-1C-CATEGORY-MAPPING-BACKFILL-01.md) · [leaf apply](../reports/SITE-002-PROD-1C-CANONICAL-LEAF-APPLY-01.md) · [leaf charter](../reports/SITE-002-PROD-1C-CANONICAL-LEAF-CREATION-CHARTER-01.md) · [harness](../reports/SITE-002-PROD-1C-CATEGORY-IDENTITY-HARNESS-01.md) · [identity charter](../reports/SITE-002-PROD-1C-CATEGORY-IDENTITY-FIX-CHARTER-01.md) |
+| **Catalog structure / 1C category mapping (Production)** | **POST-IMPORT PERSISTENCE CONFIRMED** (Run **4.299**) — natural imports 2026-07-24..27 SUCCESS after Run **4.297** GUID/path patch; critical stay **378/379/380/376**; legacy **154/159/165** empty; map table **7/7** active; sitemap live **1854**; baseline still **1737**; next = baseline refresh charter · [persistence check](../reports/SITE-002-PROD-1C-POST-IMPORT-PERSISTENCE-CHECK-01.md) · [importer patch](../reports/SITE-002-PROD-1C-IMPORTER-GUID-PATH-PATCH-01.md) · [mapping backfill](../reports/SITE-002-PROD-1C-CATEGORY-MAPPING-BACKFILL-01.md) · [leaf apply](../reports/SITE-002-PROD-1C-CANONICAL-LEAF-APPLY-01.md) · [harness](../reports/SITE-002-PROD-1C-CATEGORY-IDENTITY-HARNESS-01.md) |
 
 **TEST-derived knowledge classification:** Implementation evidence and reusable technical knowledge. **Not** automatic proof of current Production parity.
 
@@ -452,7 +452,11 @@ Post-**M9.8.9-06F** live code: offers import calls `refreshPriceIndex()` for eac
 
 Match key: `xml_id` → `product_id`. Unknown `xml_id` offers are silently skipped.
 
-### Category matching (Run 4.297 importer patch + Run 4.296 map)
+### Category matching (Run 4.299 persistence + Run 4.297 importer patch + Run 4.296 map)
+
+Post-patch natural imports (2026-07-24..27) kept critical products on canonical leaves **378/379/380/376**. Wrapper TXT reports SUCCESS; product `date_modified` 2026-07-27 confirms import touch. Live sitemap **1854** vs baseline **1737**.
+
+### Category matching (Run 4.297 importer patch + Run 4.296 map) — historical
 
 Production importer now resolves categories via `oc_mars_1c_category_map` GUID first, then path hash / unique DB full path, then safe leaf-name only. Tech-tree collision guard blocks legacy **154/159/165** / under **153**. Auto-create disabled (Phase A). `import_1C_process.php` preserves existing `product_to_category` on update when no group resolves. Deployed files: `catalog/controller/common/import_1C.php` + `import_1C_process.php`. Repo mirrors: [import_1C-site-002-prod-1c-importer-guid-path-patch-01.php](../tools/import_1C-site-002-prod-1c-importer-guid-path-patch-01.php), [import_1C_process-site-002-prod-1c-importer-guid-path-patch-01.php](../tools/import_1C_process-site-002-prod-1c-importer-guid-path-patch-01.php). See [SITE-002-PROD-1C-IMPORTER-GUID-PATH-PATCH-01.md](../reports/SITE-002-PROD-1C-IMPORTER-GUID-PATH-PATCH-01.md). Persistence after next natural import still requires post-import check. Baseline still **1737**.
 
