@@ -27,7 +27,7 @@
 |-------|-------|
 | **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A/1B + local DB + **auth persistence implemented** + **DB-03 migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** + **Report Preview / Render Implementation 01 complete** + **Report Finalization Charter 01 complete** + **Report Finalization Implementation 01 complete** + **Report Snapshot Charter 01 complete** + **Report Snapshot DB-07 Migration Apply 01 complete** + **Report Snapshot Implementation 01 complete** + **Report Export / PDF Charter 01 complete** + **Report Export DB-08 Migration Apply 01 complete** |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | **Report Export Template Metadata DB-09 Charter 01 complete** — Option A nullable columns on `report_exports`; next recommended: **Report Export Template Metadata DB-09 Migration Apply 01** |
+| **Active stage** | **Report Export Template Metadata DB-09 Migration Apply 01 complete** — nullable metadata columns on `report_exports`; backfill ids **3–4**; next recommended: **Report Export Template Metadata UI Implementation 01** |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -1024,7 +1024,28 @@
 | **Migration plan** | [I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-MIGRATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-MIGRATION-PLAN-v0.1.md) |
 | **Validation plan** | [I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-VALIDATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-VALIDATION-PLAN-v0.1.md) |
 | **Closeout** | [REPORT-iseo-report-hub-report-export-template-metadata-db09-charter-01.md](reports/REPORT-iseo-report-hub-report-export-template-metadata-db09-charter-01.md) |
-| **Next recommended stage** | **I-SEO Report Hub — Report Export Template Metadata DB-09 Migration Apply 01** |
+| **Next recommended stage** | **I-SEO Report Hub — Report Export Template Metadata DB-09 Migration Apply 01** — **completed** (see section below) |
+
+---
+
+## Report Export Template Metadata DB-09 Migration Apply 01 (2026-07-27)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** |
+| **Migration file** | `2026_07_27_000008_add_template_metadata_to_report_exports_table.sql` |
+| **Checksum (SHA-256)** | `75202829747e4a15138e2a89760fc68995e5e2cc56f1b20b80664f7a08eb37d0` |
+| **Columns** | `template_id`, `template_version`, `render_target`, `render_engine`, `render_options_json`, `source_html_export_id`, `metadata_json` (all nullable) |
+| **Indexes** | `idx_report_exports_template` (`template_id`, `template_version`); `idx_report_exports_source_html` (`source_html_export_id`) |
+| **FK** | `fk_report_exports_source_html_export` — `source_html_export_id` → `report_exports(id)` **ON DELETE SET NULL** |
+| **Backfill matrix** | id **1–2** metadata **NULL**; id **3** `iseo_default_v1` / `1` / `html_export` / `php_template_renderer`; id **4** same template + `pdf_export` / `edge_headless_pdf` / `source_html_export_id=3` |
+| **DB final** | migrations **8**; tables **15**; `report_exports` **4** (html **2**, pdf **2**); snapshots/monthly/blocks/periods/weekly unchanged |
+| **Artifacts** | v1/v2 HTML/PDF checksums **unchanged**; `%PDF` PASS; no new artifacts |
+| **Smoke** | HTTP **12/12 PASS** (`/health`, exports list, details 1–4, downloads 1–4, `/share` 404) via temp PHP `-S` `:8092` |
+| **Restrictions** | local DB only; no app code; no new export rows; no artifact mutation; no public/share; no package install; no secrets |
+| **Result** | [I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-MIGRATION-APPLY-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-MIGRATION-APPLY-RESULT-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-report-export-template-metadata-db09-migration-apply-01.md](reports/REPORT-iseo-report-hub-report-export-template-metadata-db09-migration-apply-01.md) |
+| **Next recommended stage** | **I-SEO Report Hub — Report Export Template Metadata UI Implementation 01** |
 
 ---
 
@@ -1255,6 +1276,8 @@
 | 208 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-MIGRATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-MIGRATION-PLAN-v0.1.md) | DB-09 migration plan |
 | 209 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-VALIDATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-VALIDATION-PLAN-v0.1.md) | DB-09 validation plan |
 | 210 | [reports/REPORT-iseo-report-hub-report-export-template-metadata-db09-charter-01.md](reports/REPORT-iseo-report-hub-report-export-template-metadata-db09-charter-01.md) | DB-09 charter closeout |
+| 211 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-MIGRATION-APPLY-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-MIGRATION-APPLY-RESULT-v0.1.md) | DB-09 migration apply result |
+| 212 | [reports/REPORT-iseo-report-hub-report-export-template-metadata-db09-migration-apply-01.md](reports/REPORT-iseo-report-hub-report-export-template-metadata-db09-migration-apply-01.md) | DB-09 migration apply closeout |
 
 ---
 
@@ -1299,9 +1322,9 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Report Export Template Metadata DB-09 Migration Apply 01** — **recommended next**
-2. Optional: **Report Export Template Metadata UI Implementation 01** (after Apply)
-3. Optional: **Report Delivery / Public Share Charter 01** (after metadata if needed)
+1. **Report Export Template Metadata UI Implementation 01** — **recommended next**
+2. Optional: **Report Delivery / Public Share Charter 01** (after metadata UI if needed)
+3. Optional: **Report Styling Visual QA Fix 01** (only if operator prioritizes minor QA issues)
 3. Optional: **Report Snapshot Hardening 01** / **Report Snapshot Versioning Charter 01** if multi-role or v2 smoke needed
 4. Optional: **Report Blocks CRUD Hardening 01** if multi-role HTTP smoke is needed
 5. Optional: **Monthly Report Content CRUD Hardening 01** if multi-role HTTP smoke is needed
@@ -1323,7 +1346,7 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **One local admin user exists** — no user management UI; no password reset
 - **Reporting Period CRUD MVP is implemented** — internal list/detail/create/edit/archive-by-status; CSRF; no DELETE; demo + smoke periods only
 - **Runtime has synced auth + CRUD code** at `X:\MARS-Localhost\sites\php\projects\iseo-report-hub`
-- **Local MySQL DB `iseo_report_hub_dev` exists** with core auth/org tables + **`reporting_periods`** (DB-03) + **`weekly_checkpoints`** (DB-04) + **`monthly_report_contents`** (DB-05) + **`report_blocks`** (DB-06) + **`report_snapshots`** (DB-07) + **`report_exports`** (DB-08; migrations **7**; tables **15**; active snapshot **1**; HTML export **1**; PDF export **1**)
+- **Local MySQL DB `iseo_report_hub_dev` exists** with core auth/org tables + **`reporting_periods`** (DB-03) + **`weekly_checkpoints`** (DB-04) + **`monthly_report_contents`** (DB-05) + **`report_blocks`** (DB-06) + **`report_snapshots`** (DB-07) + **`report_exports`** (DB-08 + DB-09 template metadata; migrations **8**; tables **15**; active snapshot **1**; HTML exports **2**; PDF exports **2**)
 - **Local fixture + CRUD smoke** — demo client/project/site **1/1/1**; reporting_periods **2** (`2026-07` fixture + `2026-08` smoke archived); weekly_checkpoints **4** (W1–W3 fixture + W4 smoke `skipped`, `LOCAL_FIXTURE_ONLY`); monthly_report_contents **1** (demo for `2026-07`, status `in_progress`, `LOCAL_FIXTURE_ONLY`); report_blocks **6** (fixture + smoke `risks_and_blockers` under monthly id **1**, `LOCAL_FIXTURE_ONLY`)
 - **Runtime `.env.local` exists** (outside Git); source keeps placeholders only
 - **Versioned source of truth is `app-source/`** — runtime remains Localhost deploy target outside monorepo
@@ -1359,7 +1382,8 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **Report Styling Export Version Apply 01 is complete** — styled HTML/PDF v2 (`snapshot-1-html-v2` / `snapshot-1-pdf-v2`); ids **3**/**4**; `report_exports` **4**; v1 unchanged; idempotent; HTTP 55/55; **no** public/share
 - **Report Styling Visual QA 01 is complete** — verdict **PASS_WITH_MINOR_ISSUES**; HTML screenshot + PDF text/integrity; DB/artifacts unchanged; HTTP 35/35; **no** code/runtime/DB mutation
 - **Report Export Template Metadata DB-09 Charter 01 is complete** — Option A nullable columns on `report_exports`; backfill policy ids 3–4 only; **no** code/runtime/DB/SQL/artifact mutation in charter
-- **Next** = Report Export Template Metadata DB-09 Migration Apply 01
+- **Report Export Template Metadata DB-09 Migration Apply 01 is complete** — migration `000008` applied; columns/indexes/FK present; backfill ids **3–4**; ids **1–2** NULL; migrations **8**; `report_exports` **4**; artifacts unchanged; HTTP 12/12; **no** app UI/repository metadata write yet
+- **Next** = Report Export Template Metadata UI Implementation 01
 - **No drag/drop reorder / public PDF share / rich text editor / client portal** (runtime)
 - **No autonomous publication**
 - **Website Factory is not runtime owner** — methodology + prototype lane only
