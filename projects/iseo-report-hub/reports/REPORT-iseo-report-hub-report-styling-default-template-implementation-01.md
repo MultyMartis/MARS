@@ -111,7 +111,7 @@ All hard restrictions from the charter observed: no production DB; no real priva
 |------|-------|
 | Message | `feat(iseo-report-hub): add default report styling template` |
 | Staging | exact-path `git add` allowlisted paths only |
-| Commit hash | _(filled after commit)_ |
+| Commit hash | `4ad0f5818780b67a02a62b9c03e8d867c4ce4aba` |
 | Push | **no** |
 
 Hash-record follow-up (if needed):
