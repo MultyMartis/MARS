@@ -17,7 +17,7 @@
 | Monthly report content | **CRUD MVP** — period-scoped detail/create/edit/archive-by-status; one row per period |
 | Report blocks | **CRUD MVP** — monthly-scoped list/detail/create/edit/archive-by-status; unique parent+block_key |
 | Report snapshots | **Internal MVP** — create/view active snapshot from finalized monthly; checksum idempotency; no public |
-| Report exports | **HTML + PDF MVP** — internal HTML artifact + Edge headless PDF from HTML; auth download; idempotent; **no** public share |
+| Report exports | **HTML + PDF MVP (hardened)** — internal HTML artifact + Edge headless PDF; auth download with path/MIME/size/checksum/PDF-magic guards; idempotent; **no** public share |
 | Secrets | **None in source** — `.env.example` placeholders only; **no** `.env` / `.env.local` |
 | Runtime sync | Allowlist source → runtime |
 
@@ -124,4 +124,4 @@ No public share token. PDF is internal-only via authenticated download from loca
 
 ## Next phase
 
-**Recommended:** Report Export PDF Hardening 01.
+**Recommended:** Report Styling / Client Template Charter 01.

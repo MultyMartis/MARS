@@ -174,20 +174,25 @@ $decodeIds = static function (mixed $raw): array {
             <ul class="facts">
                 <li><strong>Export ID:</strong> <?= e((string) $htmlExport['id']) ?></li>
                 <li><strong>Key:</strong> <code><?= e((string) ($htmlExport['export_key'] ?? '')) ?></code></li>
+                <li><strong>Format / status:</strong>
+                    <span class="type-badge">html</span>
+                    · <span class="status-badge status-<?= e((string) ($htmlExport['status'] ?? '')) ?>"><?= e((string) ($htmlExport['status'] ?? '')) ?></span>
+                </li>
                 <li><strong>Filename:</strong> <code><?= e((string) ($htmlExport['filename'] ?? '')) ?></code></li>
                 <li><strong>Checksum:</strong> <code class="checksum-display" title="<?= e($exportChecksum) ?>"><?= e($exportShort) ?></code></li>
                 <li><strong>Size:</strong> <?= e($exportSize > 0 ? number_format($exportSize) . ' B' : '—') ?></li>
             </ul>
             <p>
                 <a class="btn" href="<?= e(url_path('/report-exports/' . (int) $htmlExport['id'])) ?>">View export</a>
-                <a class="btn btn-secondary btn-download" href="<?= e(url_path('/report-exports/' . (int) $htmlExport['id'] . '/download')) ?>">Download</a>
+                <a class="btn btn-secondary btn-download" href="<?= e(url_path('/report-exports/' . (int) $htmlExport['id'] . '/download')) ?>">Download HTML</a>
             </p>
             <?php if ($canCreateExport): ?>
                 <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/html')) ?>" class="export-idempotent-form">
                     <?= $csrf->field() ?>
-                    <button type="submit" class="btn btn-secondary">Re-check / create (idempotent)</button>
+                    <button type="submit" class="btn btn-secondary">Re-check HTML export (idempotent)</button>
                 </form>
             <?php endif; ?>
+            <p class="field-hint export-hint">No public URL.</p>
         <?php endif; ?>
     </section>
 
@@ -221,20 +226,27 @@ $decodeIds = static function (mixed $raw): array {
             <ul class="facts">
                 <li><strong>Export ID:</strong> <?= e((string) $pdfExport['id']) ?></li>
                 <li><strong>Key:</strong> <code><?= e((string) ($pdfExport['export_key'] ?? '')) ?></code></li>
+                <li><strong>Format / status:</strong>
+                    <span class="type-badge type-badge--pdf">pdf</span>
+                    · <span class="status-badge status-<?= e((string) ($pdfExport['status'] ?? '')) ?>"><?= e((string) ($pdfExport['status'] ?? '')) ?></span>
+                </li>
                 <li><strong>Filename:</strong> <code><?= e((string) ($pdfExport['filename'] ?? '')) ?></code></li>
                 <li><strong>Checksum:</strong> <code class="checksum-display" title="<?= e($pdfChecksum) ?>"><?= e($pdfShort) ?></code></li>
                 <li><strong>Size:</strong> <?= e($pdfSize > 0 ? number_format($pdfSize) . ' B' : '—') ?></li>
             </ul>
+            <p class="export-ready-note">PDF export is ready. Duplicate create is not required.</p>
             <p>
                 <a class="btn" href="<?= e(url_path('/report-exports/' . (int) $pdfExport['id'])) ?>">View export</a>
-                <a class="btn btn-secondary btn-download" href="<?= e(url_path('/report-exports/' . (int) $pdfExport['id'] . '/download')) ?>">Download</a>
+                <a class="btn btn-secondary btn-download" href="<?= e(url_path('/report-exports/' . (int) $pdfExport['id'] . '/download')) ?>">Download PDF</a>
             </p>
             <?php if ($canCreatePdfExport): ?>
                 <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/pdf')) ?>" class="export-idempotent-form">
                     <?= $csrf->field() ?>
-                    <button type="submit" class="btn btn-secondary">Re-check / create (idempotent)</button>
+                    <button type="submit" class="btn btn-secondary">Re-check PDF export (idempotent)</button>
                 </form>
+                <p class="field-hint export-hint">Re-check returns the existing PDF without rewriting the artifact.</p>
             <?php endif; ?>
+            <p class="field-hint export-hint">No public URL.</p>
         <?php endif; ?>
     </section>
 <?php endif; ?>

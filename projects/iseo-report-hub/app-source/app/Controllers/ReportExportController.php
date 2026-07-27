@@ -194,14 +194,25 @@ final class ReportExportController extends BaseController
             return;
         }
 
-        $filename = (string) ($export['filename'] ?? 'export.html');
-        $mime = (string) ($export['mime_type'] ?? 'text/html; charset=UTF-8');
+        $filename = $this->exports->safeDownloadFilename($export);
+        $mime = $this->exports->safeDownloadMime($export);
+        $size = (int) filesize($absolute);
+        if ($size <= 0) {
+            Response::html(
+                '<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><title>Export unavailable</title></head>'
+                . '<body><h1>Export unavailable</h1><p>Export artifact is empty.</p>'
+                . '<p><a href="' . e(url_path('/report-exports/' . $exportId)) . '">Back to export</a></p></body></html>',
+                404
+            );
+            return;
+        }
 
         http_response_code(200);
         header('Content-Type: ' . $mime);
-        header('Content-Disposition: attachment; filename="' . str_replace('"', '', $filename) . '"');
-        header('Content-Length: ' . (string) filesize($absolute));
+        header('Content-Disposition: attachment; filename="' . $filename . '"');
+        header('Content-Length: ' . (string) $size);
         header('X-Content-Type-Options: nosniff');
+        header('Cache-Control: private, no-store');
         readfile($absolute);
         exit;
     }

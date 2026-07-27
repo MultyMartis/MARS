@@ -104,8 +104,9 @@ $snapshotKey = (string) ($snapshot['snapshot_key'] ?? '');
         <?php if ($canCreate && $snapshotId > 0): ?>
             <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/html')) ?>" class="export-idempotent-form">
                 <?= $csrf->field() ?>
-                <button type="submit" class="btn btn-secondary">Create / re-check HTML export (idempotent)</button>
+                <button type="submit" class="btn btn-secondary">Re-check HTML export (idempotent)</button>
             </form>
+            <p class="field-hint export-hint">HTML re-check returns the existing ready artifact when checksums match; it does not create a duplicate row.</p>
         <?php endif; ?>
 
         <?php if ($canCreatePdf && $snapshotId > 0 && $hasHtmlExport && !$hasPdfExport): ?>
@@ -113,13 +114,17 @@ $snapshotKey = (string) ($snapshot['snapshot_key'] ?? '');
                 <?= $csrf->field() ?>
                 <button type="submit" class="btn">Create PDF export</button>
             </form>
+            <p class="field-hint export-hint">PDF is generated from the ready HTML artifact via Edge headless (Chrome fallback). No public URL.</p>
         <?php elseif ($canCreatePdf && $snapshotId > 0 && $hasPdfExport): ?>
+            <p class="export-ready-note">PDF export is ready. Create is not needed — use Download or re-check below.</p>
             <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/pdf')) ?>" class="export-idempotent-form">
                 <?= $csrf->field() ?>
-                <button type="submit" class="btn btn-secondary">Create / re-check PDF export (idempotent)</button>
+                <button type="submit" class="btn btn-secondary">Re-check PDF export (idempotent)</button>
             </form>
+            <p class="field-hint export-hint">Re-check validates metadata and file integrity and returns the existing PDF (id unchanged; no rewrite).</p>
         <?php elseif ($hasHtmlExport && !$hasPdfExport && $snapshotId > 0 && !$canCreatePdf): ?>
             <p class="field-hint">PDF creation requires admin_owner or seo_lead_reviewer role.</p>
         <?php endif; ?>
+        <p class="field-hint export-hint">No public share URL. Downloads require authentication.</p>
     <?php endif; ?>
 </section>

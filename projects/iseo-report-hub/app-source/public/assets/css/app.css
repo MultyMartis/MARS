@@ -710,7 +710,8 @@ code {
   color: #991b1b;
 }
 
-.export-table .type-badge--pdf {
+.export-table .type-badge--pdf,
+.export-card .type-badge--pdf {
   background: #fee2e2;
   color: #991b1b;
 }
@@ -731,6 +732,19 @@ code {
 .export-meta-list code.checksum-full {
   word-break: break-all;
   font-size: 0.8rem;
+}
+
+.export-card .export-hint {
+  margin-top: 0.35rem;
+}
+
+.export-card .export-ready-note {
+  margin: 0.5rem 0;
+  padding: 0.45rem 0.65rem;
+  border-left: 3px solid #991b1b;
+  background: #fef2f2;
+  color: #7f1d1d;
+  font-size: 0.92rem;
 }
 
 .snapshot-blocks .snapshot-block {

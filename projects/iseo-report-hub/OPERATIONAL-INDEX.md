@@ -27,7 +27,7 @@
 |-------|-------|
 | **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A/1B + local DB + **auth persistence implemented** + **DB-03 migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** + **Report Preview / Render Implementation 01 complete** + **Report Finalization Charter 01 complete** + **Report Finalization Implementation 01 complete** + **Report Snapshot Charter 01 complete** + **Report Snapshot DB-07 Migration Apply 01 complete** + **Report Snapshot Implementation 01 complete** + **Report Export / PDF Charter 01 complete** + **Report Export DB-08 Migration Apply 01 complete** |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | **Report Export PDF Browser Implementation 01 complete** — next recommended: **Report Export PDF Hardening 01** |
+| **Active stage** | **Report Export PDF Hardening 01 complete** — next recommended: **Report Styling / Client Template Charter 01** |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -913,7 +913,23 @@
 | **Restrictions** | no public/share; no package install; no schema/db-migrate; no HTML/snapshot/monthly/block mutations |
 | **Result** | [I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-BROWSER-IMPLEMENTATION-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-BROWSER-IMPLEMENTATION-RESULT-v0.1.md) |
 | **Closeout** | [REPORT-iseo-report-hub-report-export-pdf-browser-implementation-01.md](reports/REPORT-iseo-report-hub-report-export-pdf-browser-implementation-01.md) |
-| **Next recommended stage** | **I-SEO Report Hub — Report Export PDF Hardening 01** |
+| **Next recommended stage** | **I-SEO Report Hub — Report Export PDF Hardening 01** — **completed** (see section below) |
+
+---
+
+## Report Export PDF Hardening 01 (2026-07-27)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** — non-destructive PDF export workflow hardening |
+| **Validation coverage** | path (relative/anti-traversal/storage-root); MIME/format/extension; size; checksum; PDF `%PDF` magic; idempotent no-rewrite; download safe headers |
+| **DB final** | migrations **7**; tables **15**; `report_exports` **2** unchanged; HTML id **1**; PDF id **2** key `snapshot-1-pdf-v1` checksum `707e72d65f253de1…` |
+| **Artifact** | PDF unchanged (133005 B; checksum match; outside public/Git); no new/duplicate artifacts |
+| **Smoke** | lint PASS; service failure-mode suite PASS; HTTP **67/67** PASS (`127.0.0.1:8091`) |
+| **Restrictions** | no schema/db-migrate; no export/business row mutation; no HTML/PDF regeneration; no public/share; no package install; no push |
+| **Result** | [I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-HARDENING-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-HARDENING-RESULT-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-report-export-pdf-hardening-01.md](reports/REPORT-iseo-report-hub-report-export-pdf-hardening-01.md) |
+| **Next recommended stage** | **I-SEO Report Hub — Report Styling / Client Template Charter 01** |
 
 ---
 
@@ -1126,6 +1142,8 @@
 | 190 | [reports/REPORT-iseo-report-hub-report-export-pdf-engine-probe-01.md](reports/REPORT-iseo-report-hub-report-export-pdf-engine-probe-01.md) | Report Export PDF Engine Probe closeout |
 | 191 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-BROWSER-IMPLEMENTATION-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-BROWSER-IMPLEMENTATION-RESULT-v0.1.md) | Report Export PDF Browser Implementation result |
 | 192 | [reports/REPORT-iseo-report-hub-report-export-pdf-browser-implementation-01.md](reports/REPORT-iseo-report-hub-report-export-pdf-browser-implementation-01.md) | Report Export PDF Browser Implementation closeout |
+| 193 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-HARDENING-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-HARDENING-RESULT-v0.1.md) | Report Export PDF Hardening result |
+| 194 | [reports/REPORT-iseo-report-hub-report-export-pdf-hardening-01.md](reports/REPORT-iseo-report-hub-report-export-pdf-hardening-01.md) | Report Export PDF Hardening closeout |
 
 ---
 

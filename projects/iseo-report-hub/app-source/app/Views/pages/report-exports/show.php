@@ -72,5 +72,5 @@ $artifactLabel = $isPdf ? 'PDF artifact' : 'HTML artifact';
         </li>
     </ul>
 
-    <p class="field-hint">No public link. Download requires authentication.</p>
+    <p class="field-hint export-hint">No public link. Download requires authentication. Path/MIME/size/checksum<?= $isPdf ? '/PDF-magic' : '' ?> are validated before streaming.</p>
 </section>

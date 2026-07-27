@@ -196,30 +196,18 @@ final class ReportExportService
 
         $existing = $this->exports->findReadyHtmlBySnapshotChecksum($snapshotId, $snapshotChecksum);
         if ($existing !== null) {
-            $paths = $this->artifactPath($snapshot);
-            $absolute = $paths['absolute'];
-            if (!is_file($absolute)) {
+            $validation = $this->validateReadyArtifact($existing);
+            if (!$validation['ok']) {
                 return [
                     'ok' => false,
-                    'message' => 'Export metadata exists but artifact file is missing. Contact an administrator.',
+                    'message' => $validation['message'] . ' Contact an administrator.',
                     'export' => $existing,
                     'idempotent' => false,
-                    'errors' => ['file' => 'Artifact missing on disk.'],
+                    'errors' => $validation['errors'],
                 ];
             }
 
-            $fileChecksum = $this->checksumFile($absolute);
-            $storedChecksum = (string) ($existing['checksum_sha256'] ?? '');
-            if ($storedChecksum !== '' && !hash_equals(strtolower($storedChecksum), strtolower($fileChecksum))) {
-                return [
-                    'ok' => false,
-                    'message' => 'Export metadata does not match artifact checksum. Contact an administrator.',
-                    'export' => $existing,
-                    'idempotent' => false,
-                    'errors' => ['checksum' => 'Checksum mismatch.'],
-                ];
-            }
-
+            $fileChecksum = strtolower((string) ($existing['checksum_sha256'] ?? ''));
             $this->exports->insertAudit('report_export.idempotent_hit', (int) $actor['id'], (int) $existing['id'], [
                 'export_id' => (int) $existing['id'],
                 'report_snapshot_id' => $snapshotId,
@@ -402,32 +390,23 @@ final class ReportExportService
 
         $existingPdf = $this->exports->findReadyBySnapshotFormatAndChecksum($snapshotId, 'pdf', $snapshotChecksum);
         if ($existingPdf !== null) {
-            $paths = $this->artifactPathForFormat($snapshot, 'pdf');
-            $absolute = $paths['absolute'];
-            if (!is_file($absolute)) {
-                $this->auditPdfFailure($actor, $snapshotId, $monthlyId, (int) ($existingPdf['id'] ?? 0), ['pdf_file_missing']);
+            $validation = $this->validateReadyArtifact($existingPdf);
+            if (!$validation['ok']) {
+                $reasons = array_keys($validation['errors']);
+                if ($reasons === []) {
+                    $reasons = ['pdf_artifact_invalid'];
+                }
+                $this->auditPdfFailure($actor, $snapshotId, $monthlyId, (int) ($existingPdf['id'] ?? 0), $reasons);
                 return [
                     'ok' => false,
-                    'message' => 'PDF export metadata exists but artifact file is missing. Contact an administrator.',
+                    'message' => $validation['message'] . ' Contact an administrator.',
                     'export' => $existingPdf,
                     'idempotent' => false,
-                    'errors' => ['file' => 'Artifact missing on disk.'],
+                    'errors' => $validation['errors'],
                 ];
             }
 
-            $fileChecksum = $this->checksumFile($absolute);
-            $storedChecksum = (string) ($existingPdf['checksum_sha256'] ?? '');
-            if ($storedChecksum !== '' && !hash_equals(strtolower($storedChecksum), strtolower($fileChecksum))) {
-                $this->auditPdfFailure($actor, $snapshotId, $monthlyId, (int) ($existingPdf['id'] ?? 0), ['pdf_checksum_mismatch']);
-                return [
-                    'ok' => false,
-                    'message' => 'PDF export metadata does not match artifact checksum. Contact an administrator.',
-                    'export' => $existingPdf,
-                    'idempotent' => false,
-                    'errors' => ['checksum' => 'Checksum mismatch.'],
-                ];
-            }
-
+            $fileChecksum = strtolower((string) ($existingPdf['checksum_sha256'] ?? ''));
             $htmlExport = $this->exports->findReadyHtmlBySnapshotChecksum($snapshotId, $snapshotChecksum);
             $this->exports->insertAudit('report_export.pdf_idempotent_hit', (int) $actor['id'], (int) $existingPdf['id'], [
                 'export_id' => (int) $existingPdf['id'],
@@ -440,6 +419,7 @@ final class ReportExportService
                 'source_snapshot_checksum_sha256' => $snapshotChecksum,
                 'engine' => 'edge',
                 'actor_user_id' => (int) $actor['id'],
+                'rewritten' => false,
             ]);
 
             return [
@@ -462,28 +442,19 @@ final class ReportExportService
             ];
         }
 
-        $htmlAbsolute = $this->resolveStoragePath((string) ($htmlExport['storage_path'] ?? ''));
-        if ($htmlAbsolute === null || !is_file($htmlAbsolute)) {
-            $this->auditPdfFailure($actor, $snapshotId, $monthlyId, (int) ($htmlExport['id'] ?? 0), ['html_file_missing']);
+        $htmlValidation = $this->validateReadyArtifact($htmlExport);
+        if (!$htmlValidation['ok']) {
+            $reasons = ['html_source_invalid'];
+            foreach (array_keys($htmlValidation['errors']) as $key) {
+                $reasons[] = 'html_' . $key;
+            }
+            $this->auditPdfFailure($actor, $snapshotId, $monthlyId, (int) ($htmlExport['id'] ?? 0), $reasons);
             return [
                 'ok' => false,
-                'message' => 'HTML export artifact file is missing.',
+                'message' => 'HTML export source is not valid for PDF generation: ' . $htmlValidation['message'],
                 'export' => null,
                 'idempotent' => false,
-                'errors' => ['html_file' => 'Missing.'],
-            ];
-        }
-
-        $htmlFileChecksum = $this->checksumFile($htmlAbsolute);
-        $htmlStoredChecksum = (string) ($htmlExport['checksum_sha256'] ?? '');
-        if ($htmlStoredChecksum === '' || !hash_equals(strtolower($htmlStoredChecksum), strtolower($htmlFileChecksum))) {
-            $this->auditPdfFailure($actor, $snapshotId, $monthlyId, (int) ($htmlExport['id'] ?? 0), ['html_checksum_mismatch']);
-            return [
-                'ok' => false,
-                'message' => 'HTML export file checksum does not match metadata.',
-                'export' => null,
-                'idempotent' => false,
-                'errors' => ['html_checksum' => 'Mismatch.'],
+                'errors' => ['html' => $htmlValidation['message']],
             ];
         }
 
@@ -654,47 +625,197 @@ final class ReportExportService
         }
 
         $export = $result['export'];
-        if ((string) ($export['status'] ?? '') !== 'ready') {
+        $validation = $this->validateReadyArtifact($export);
+        if (!$validation['ok']) {
             return [
                 'ok' => false,
-                'message' => 'Export is not ready for download.',
+                'message' => $validation['message'],
                 'export' => $export,
                 'absolute_path' => null,
-                'errors' => ['status' => 'Not ready.'],
+                'errors' => $validation['errors'],
             ];
-        }
-
-        $absolute = $this->resolveStoragePath((string) ($export['storage_path'] ?? ''));
-        if ($absolute === null || !is_file($absolute)) {
-            return [
-                'ok' => false,
-                'message' => 'Export artifact file is missing.',
-                'export' => $export,
-                'absolute_path' => null,
-                'errors' => ['file' => 'Missing.'],
-            ];
-        }
-
-        $storedChecksum = (string) ($export['checksum_sha256'] ?? '');
-        if ($storedChecksum !== '') {
-            $fileChecksum = $this->checksumFile($absolute);
-            if (!hash_equals(strtolower($storedChecksum), strtolower($fileChecksum))) {
-                return [
-                    'ok' => false,
-                    'message' => 'Export artifact checksum mismatch.',
-                    'export' => $export,
-                    'absolute_path' => null,
-                    'errors' => ['checksum' => 'Mismatch.'],
-                ];
-            }
         }
 
         return [
             'ok' => true,
             'message' => 'Ready to stream.',
             'export' => $export,
-            'absolute_path' => $absolute,
+            'absolute_path' => $validation['absolute_path'],
         ];
+    }
+
+    /**
+     * Validate ready export metadata against on-disk artifact (path/MIME/size/checksum/magic).
+     * User-facing messages never include absolute filesystem paths.
+     *
+     * @param array<string, mixed> $export
+     * @return array{
+     *   ok:bool,
+     *   message:string,
+     *   absolute_path:?string,
+     *   errors:array<string,string>
+     * }
+     */
+    public function validateReadyArtifact(array $export): array
+    {
+        if ((string) ($export['status'] ?? '') !== 'ready') {
+            return [
+                'ok' => false,
+                'message' => 'Export is not ready for download.',
+                'absolute_path' => null,
+                'errors' => ['status' => 'Not ready.'],
+            ];
+        }
+
+        $format = strtolower(trim((string) ($export['format'] ?? '')));
+        if ($format !== 'html' && $format !== 'pdf') {
+            return [
+                'ok' => false,
+                'message' => 'Export format is not supported for download.',
+                'absolute_path' => null,
+                'errors' => ['format' => 'Unknown.'],
+            ];
+        }
+
+        $mime = strtolower(trim((string) ($export['mime_type'] ?? '')));
+        if (!$this->isAllowedMimeForFormat($format, $mime)) {
+            return [
+                'ok' => false,
+                'message' => 'Export MIME type does not match format.',
+                'absolute_path' => null,
+                'errors' => ['mime' => 'Mismatch.'],
+            ];
+        }
+
+        $filename = (string) ($export['filename'] ?? '');
+        if (!$this->filenameMatchesFormat($filename, $format)) {
+            return [
+                'ok' => false,
+                'message' => 'Export filename extension does not match format.',
+                'absolute_path' => null,
+                'errors' => ['filename' => 'Extension mismatch.'],
+            ];
+        }
+
+        $storagePath = (string) ($export['storage_path'] ?? '');
+        if (!$this->isRelativeStoragePath($storagePath)) {
+            return [
+                'ok' => false,
+                'message' => 'Export storage path is invalid.',
+                'absolute_path' => null,
+                'errors' => ['path' => 'Invalid.'],
+            ];
+        }
+
+        if (!$this->storagePathExtensionMatchesFormat($storagePath, $format)) {
+            return [
+                'ok' => false,
+                'message' => 'Export storage path extension does not match format.',
+                'absolute_path' => null,
+                'errors' => ['path' => 'Extension mismatch.'],
+            ];
+        }
+
+        $absolute = $this->resolveStoragePath($storagePath);
+        if ($absolute === null || !is_file($absolute)) {
+            return [
+                'ok' => false,
+                'message' => 'Export artifact file is missing.',
+                'absolute_path' => null,
+                'errors' => ['file' => 'Missing.'],
+            ];
+        }
+
+        $expectedSize = isset($export['file_size_bytes']) ? (int) $export['file_size_bytes'] : 0;
+        $actualSize = (int) filesize($absolute);
+        if ($expectedSize > 0 && $actualSize !== $expectedSize) {
+            return [
+                'ok' => false,
+                'message' => 'Export artifact size does not match metadata.',
+                'absolute_path' => null,
+                'errors' => ['size' => 'Mismatch.'],
+            ];
+        }
+        if ($actualSize <= 0) {
+            return [
+                'ok' => false,
+                'message' => 'Export artifact is empty.',
+                'absolute_path' => null,
+                'errors' => ['size' => 'Empty.'],
+            ];
+        }
+
+        $storedChecksum = strtolower(trim((string) ($export['checksum_sha256'] ?? '')));
+        if ($storedChecksum === '') {
+            return [
+                'ok' => false,
+                'message' => 'Export checksum metadata is missing.',
+                'absolute_path' => null,
+                'errors' => ['checksum' => 'Missing.'],
+            ];
+        }
+        $fileChecksum = strtolower($this->checksumFile($absolute));
+        if ($fileChecksum === '' || !hash_equals($storedChecksum, $fileChecksum)) {
+            return [
+                'ok' => false,
+                'message' => 'Export artifact checksum mismatch.',
+                'absolute_path' => null,
+                'errors' => ['checksum' => 'Mismatch.'],
+            ];
+        }
+
+        if ($format === 'pdf') {
+            $magic = $this->readFileMagic($absolute, 4);
+            if ($magic !== '%PDF') {
+                return [
+                    'ok' => false,
+                    'message' => 'PDF artifact magic bytes are invalid.',
+                    'absolute_path' => null,
+                    'errors' => ['pdf_magic' => 'Invalid.'],
+                ];
+            }
+        }
+
+        return [
+            'ok' => true,
+            'message' => 'Artifact validated.',
+            'absolute_path' => $absolute,
+            'errors' => [],
+        ];
+    }
+
+    /**
+     * Safe Content-Type for streaming (never trust arbitrary DB MIME blindly beyond allowlist).
+     */
+    public function safeDownloadMime(array $export): string
+    {
+        $format = strtolower(trim((string) ($export['format'] ?? '')));
+        if ($format === 'pdf') {
+            return 'application/pdf';
+        }
+        return 'text/html; charset=UTF-8';
+    }
+
+    /**
+     * Sanitize attachment filename for Content-Disposition (ASCII fallback).
+     */
+    public function safeDownloadFilename(array $export): string
+    {
+        $filename = trim((string) ($export['filename'] ?? ''));
+        $format = strtolower(trim((string) ($export['format'] ?? '')));
+        $fallback = $format === 'pdf' ? 'export.pdf' : 'export.html';
+        if ($filename === '') {
+            return $fallback;
+        }
+        $filename = str_replace(['"', "\r", "\n", "\0", '/', '\\'], '', $filename);
+        $filename = basename($filename);
+        if ($filename === '' || $filename === '.' || $filename === '..') {
+            return $fallback;
+        }
+        if (!$this->filenameMatchesFormat($filename, $format === 'pdf' ? 'pdf' : 'html')) {
+            return $fallback;
+        }
+        return $filename;
     }
 
     /**
@@ -1012,16 +1133,7 @@ final class ReportExportService
             ];
         }
 
-        $fh = fopen($pdfPath, 'rb');
-        if ($fh === false) {
-            return [
-                'ok' => false,
-                'message' => 'Could not read PDF artifact.',
-                'reasons' => ['pdf_unreadable'],
-            ];
-        }
-        $magic = fread($fh, 4);
-        fclose($fh);
+        $magic = $this->readFileMagic($pdfPath, 4);
         if ($magic !== '%PDF') {
             return [
                 'ok' => false,
@@ -1293,12 +1405,11 @@ CSS;
 
     private function resolveStoragePath(string $storagePath): ?string
     {
-        $storagePath = trim(str_replace('\\', '/', $storagePath));
-        if ($storagePath === '' || str_contains($storagePath, '..')) {
+        if (!$this->isRelativeStoragePath($storagePath)) {
             return null;
         }
 
-        $normalized = ltrim($storagePath, '/');
+        $normalized = ltrim(str_replace('\\', '/', trim($storagePath)), '/');
         $allowedPrefix = self::STORAGE_REL_ROOT . '/';
         if (!str_starts_with($normalized, $allowedPrefix)) {
             return null;
@@ -1317,16 +1428,91 @@ CSS;
             $resolved = $absolute;
         }
 
-        $rootReal = realpath(dirname($resolved));
-        if ($rootReal !== false && $root !== false) {
-            $rootNorm = rtrim(str_replace('\\', '/', $root), '/');
-            $fileNorm = str_replace('\\', '/', $resolved);
-            if (!str_starts_with($fileNorm, $rootNorm)) {
+        $rootNorm = rtrim(str_replace('\\', '/', (string) $root), '/');
+        $fileNorm = str_replace('\\', '/', $resolved);
+        if ($rootNorm === '' || (!str_starts_with($fileNorm, $rootNorm . '/') && $fileNorm !== $rootNorm)) {
+            return null;
+        }
+
+        $publicRoot = realpath(base_path('public'));
+        if ($publicRoot !== false) {
+            $publicNorm = rtrim(str_replace('\\', '/', $publicRoot), '/');
+            if (str_starts_with($fileNorm, $publicNorm . '/') || $fileNorm === $publicNorm) {
                 return null;
             }
         }
 
         return $resolved;
+    }
+
+    private function isRelativeStoragePath(string $storagePath): bool
+    {
+        $storagePath = trim(str_replace('\\', '/', $storagePath));
+        if ($storagePath === '' || str_contains($storagePath, "\0")) {
+            return false;
+        }
+        if (str_contains($storagePath, '..')) {
+            return false;
+        }
+        // Reject absolute / UNC / drive-letter paths stored in metadata.
+        if (str_starts_with($storagePath, '/') || str_starts_with($storagePath, '//')) {
+            return false;
+        }
+        if (preg_match('#^[A-Za-z]:/#', $storagePath) === 1) {
+            return false;
+        }
+        if (str_starts_with($storagePath, 'file:')) {
+            return false;
+        }
+        return str_starts_with($storagePath, self::STORAGE_REL_ROOT . '/');
+    }
+
+    private function isAllowedMimeForFormat(string $format, string $mime): bool
+    {
+        $mime = strtolower(trim($mime));
+        if ($format === 'pdf') {
+            return $mime === 'application/pdf';
+        }
+        if ($format === 'html') {
+            return $mime === 'text/html' || str_starts_with($mime, 'text/html;');
+        }
+        return false;
+    }
+
+    private function filenameMatchesFormat(string $filename, string $format): bool
+    {
+        $filename = basename(str_replace('\\', '/', $filename));
+        if ($filename === '' || $filename === '.' || $filename === '..') {
+            return false;
+        }
+        $ext = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
+        if ($format === 'pdf') {
+            return $ext === 'pdf';
+        }
+        if ($format === 'html') {
+            return $ext === 'html' || $ext === 'htm';
+        }
+        return false;
+    }
+
+    private function storagePathExtensionMatchesFormat(string $storagePath, string $format): bool
+    {
+        $normalized = str_replace('\\', '/', $storagePath);
+        return $this->filenameMatchesFormat(basename($normalized), $format);
+    }
+
+    private function readFileMagic(string $path, int $length): string
+    {
+        if ($length <= 0 || !is_file($path)) {
+            return '';
+        }
+        $fh = fopen($path, 'rb');
+        if ($fh === false) {
+            return '';
+        }
+        $magic = fread($fh, $length);
+        fclose($fh);
+        return is_string($magic) ? $magic : '';
     }
 
     /**
