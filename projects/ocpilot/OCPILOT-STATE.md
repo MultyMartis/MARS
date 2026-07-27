@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-27
-**Evidence cutoff:** 2026-07-27 (SITE-002 Run **4.308** / `SITE-002-PROD-AMBIGUOUS-EMPTY-CATEGORIES-REVIEW-CHARTER-01` — empty-category inventory; 119 vs 99 **RESOLVED**; operator review required; baseline remains **1836**)
+**Evidence cutoff:** 2026-07-27 (SITE-002 Run **4.309** / `SITE-002-PROD-EMPTY-CATEGORIES-HITL-TRIAGE-01` — HITL triage for **97** empty candidates; decision sheet ready; baseline remains **1836**)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Ambiguous Empty Categories Review Charter 01 (Run 4.308)** — **ATTENTION — OPERATOR REVIEW REQUIRED** · empty inventory complete; charter-style ambiguous **119** = **99** leaves + **20** empty parents; 119 vs 99 **RESOLVED**; DELETE_READY **0**; KEEP **22**; review **97**; baseline still **1836** / monitor `NO_ACTION_REQUIRED`; apply **not** executed · [review charter 4.308](sites/site-002/reports/SITE-002-PROD-AMBIGUOUS-EMPTY-CATEGORIES-REVIEW-CHARTER-01.md) · [baseline refresh 4.307](sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-07.md) · [parent 153 delete apply 4.306](sites/site-002/reports/SITE-002-PROD-PARENT-153-DELETE-APPLY-01.md) · [demo delete apply 4.303](sites/site-002/reports/SITE-002-PROD-DEMO-CATEGORY-DELETE-APPLY-01.md) |
+| Current SITE-002 focus | **Empty Categories HITL Triage 01 (Run 4.309)** — **COMPLETE — AWAIT OPERATOR DECISIONS** · **97** candidates enriched; proposed WAIT **96** / KEEP **1** / DELETE_CAND **0**; decision sheet ready; apply **not** executed; baseline **1836** / `NO_ACTION_REQUIRED` · [HITL triage 4.309](sites/site-002/reports/SITE-002-PROD-EMPTY-CATEGORIES-HITL-TRIAGE-01.md) · [review charter 4.308](sites/site-002/reports/SITE-002-PROD-AMBIGUOUS-EMPTY-CATEGORIES-REVIEW-CHARTER-01.md) · [baseline refresh 4.307](sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-07.md) · [parent 153 delete apply 4.306](sites/site-002/reports/SITE-002-PROD-PARENT-153-DELETE-APPLY-01.md) · [demo delete apply 4.303](sites/site-002/reports/SITE-002-PROD-DEMO-CATEGORY-DELETE-APPLY-01.md) |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 
@@ -573,6 +573,7 @@ W1 write charter applies to Phase 1 waves only; does not resume Run 5 automatica
 
 | Date | Change |
 |------|--------|
+| 2026-07-27 | **UPDATED** — SITE-002 empty categories HITL triage **01** (Run **4.309**) — **97** candidates enriched; proposed WAIT **96** / KEEP **1** / DELETE_CAND **0**; operator decision sheet ready; apply **not** executed; baseline **1836** unchanged; production/Client Ops **0** |
 | 2026-07-27 | **UPDATED** — SITE-002 ambiguous empty categories review charter **01** (Run **4.308**) — inventory complete; **119** = **99** leaves + **20** empty parents; 119 vs 99 **RESOLVED**; DELETE_READY **0**; operator review **97**; apply **not** executed; baseline **1836** unchanged; production/Client Ops **0** |
 | 2026-07-27 | **UPDATED** — SITE-002 monitor baseline refresh **07** (Run **4.307**) — baseline **1837→1836** after parent **153** delete; checkpoint `SITE-002-STABLE-PROD-POST-PARENT-153-DELETE-MONITOR-BASELINE-1836-07`; manual `2026-07-27_18-39-04` **NO_ACTION_REQUIRED**; production/Client Ops **0** |
 | 2026-06-07 | **CREATED** — OCPilot program state; SITE-001 Phase 1 **NOT AUTHORIZED** |
