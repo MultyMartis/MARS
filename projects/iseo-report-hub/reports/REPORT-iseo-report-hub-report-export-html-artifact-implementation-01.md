@@ -16,7 +16,7 @@
 | Branch | `mars/canonical-post-recovery` |
 | HEAD before | `79c2071dd8ae8096506d45bc189e1f732b310d35` (branch advanced from charter baseline `3b35673f…`; i-SEO scope clean) |
 | Staged/index state | Foreign-only staged WIP (`projects/client-ops-reporting-bridge/`); **no** `projects/iseo-report-hub/` staged |
-| Clean temporary worktree used | **no** — branch already checked out at `X:\AI MARS`; exact-path commit from main (foreign staged WIP preserved) |
+| Clean temporary worktree used | **yes** — detached worktree `X:\AI MARS STORAGE\git-sync-iseo-export-html-implementation-01\repo`; `git update-ref` on `mars/canonical-post-recovery` |
 | i-SEO WIP clean before | **yes** |
 | Foreign WIP preserved | **yes** |
 | Write scope | i-SEO app-source + docs + runtime allowlist sync + runtime artifact only |
@@ -147,7 +147,7 @@ All charter restrictions confirmed — no production DB; no real client data; no
 |------|-------|
 | Staging | exact-path `git add` allowlisted paths only |
 | Commit message | `feat(iseo-report-hub): add html report export workflow` |
-| Commit hash | `COMMIT_HASH_PLACEHOLDER` |
+| Commit hash | `25cf8d4229c1e31bf1159ed2976bb320340bb336` |
 | Push | **no** |
 
 ---
@@ -214,4 +214,4 @@ One `report_exports` insert (id 1); optional audit rows.
 | clean | **no** |
 | stash | **no** |
 | broad git add | **no** |
-| clean temporary worktree | not used (same-branch checkout conflict) |
+| clean temporary worktree | **yes** — detached worktree at `X:\AI MARS STORAGE\git-sync-iseo-export-html-implementation-01\repo` |
