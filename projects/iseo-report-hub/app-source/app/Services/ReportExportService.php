@@ -21,6 +21,8 @@ final class ReportExportService
 
     private const BROWSER_TEMP_ROOT = 'X:\\AI MARS STORAGE\\incoming\\iseo-report-hub\\pdf-browser-temp';
 
+    private const STYLED_BROWSER_TEMP_ROOT = 'X:\\AI MARS STORAGE\\incoming\\iseo-report-hub\\styling-export-version-apply-01\\pdf-browser-temp';
+
     private const PDF_TIMEOUT_SECONDS = 90;
 
     /** @var list<string> */
@@ -183,16 +185,25 @@ final class ReportExportService
 
         $htmlReady = $this->exports->findReadyBySnapshotAndFormat($snapshotId, 'html');
         $pdfReady = $this->exports->findReadyBySnapshotAndFormat($snapshotId, 'pdf');
+        $styledHtml = $this->exports->findReadyStyledVersionForSnapshotFormat($snapshotId, 'html');
+        $styledPdf = $this->exports->findReadyStyledVersionForSnapshotFormat($snapshotId, 'pdf');
+        $canCreate = $this->canCreateExportForSnapshot($snapshot, $actor);
 
         return [
             'ok' => true,
             'message' => 'Exports loaded.',
             'snapshot' => $snapshot,
             'exports' => $this->exports->findBySnapshotId($snapshotId),
-            'can_create' => $this->canCreateExportForSnapshot($snapshot, $actor),
+            'can_create' => $canCreate,
             'can_create_pdf' => $this->canCreatePdfForSnapshot($snapshot, $actor, $htmlReady),
             'has_html_export' => $htmlReady !== null,
             'has_pdf_export' => $pdfReady !== null,
+            'styled_html_export' => $styledHtml,
+            'styled_pdf_export' => $styledPdf,
+            'can_create_styled_html' => $canCreate,
+            'can_create_styled_pdf' => $canCreate
+                && $styledHtml !== null
+                && (is_file(self::EDGE_EXE) || is_file(self::CHROME_EXE)),
             'future_template' => $this->defaultTemplateSummary(),
             'legacy_template_label' => $this->legacyTemplateLabel(),
         ];
@@ -639,6 +650,529 @@ final class ReportExportService
     }
 
     /**
+     * Create next styled HTML export version using iseo_default_v1 (never overwrites v1).
+     * Idempotent: if a ready styled version (v>=2) already validates, return it (no v3 in this wave).
+     *
+     * @param array{id:int,email:string,name:string,roles:list<string>,authenticated_at:string} $actor
+     * @return array{
+     *   ok:bool,
+     *   message:string,
+     *   export:?array<string,mixed>,
+     *   idempotent:bool,
+     *   errors?:array<string,string>
+     * }
+     */
+    public function createStyledHtmlVersionForSnapshot(int $snapshotId, array $actor): array
+    {
+        $this->assertDb();
+
+        if (!$this->canCreate($actor)) {
+            $this->auditFailure($actor, $snapshotId, null, ['role']);
+            return [
+                'ok' => false,
+                'message' => 'You do not have permission to create styled HTML exports.',
+                'export' => null,
+                'idempotent' => false,
+                'errors' => ['role' => 'Insufficient role.'],
+            ];
+        }
+
+        $snapshot = $this->snapshots->findById($snapshotId);
+        if ($snapshot === null) {
+            $this->auditFailure($actor, $snapshotId, null, ['snapshot_exists']);
+            return [
+                'ok' => false,
+                'message' => 'Snapshot not found.',
+                'export' => null,
+                'idempotent' => false,
+                'errors' => ['id' => 'Not found.'],
+            ];
+        }
+
+        if ((string) ($snapshot['status'] ?? '') !== 'active') {
+            $this->auditFailure($actor, $snapshotId, (int) ($snapshot['monthly_report_content_id'] ?? 0), ['snapshot_active']);
+            return [
+                'ok' => false,
+                'message' => 'Styled HTML export requires an active snapshot.',
+                'export' => null,
+                'idempotent' => false,
+                'errors' => ['status' => 'Snapshot is not active.'],
+            ];
+        }
+
+        $payload = $this->decodePayloadJson($snapshot['payload_json'] ?? null);
+        if ($payload === null) {
+            $this->auditFailure($actor, $snapshotId, (int) $snapshot['monthly_report_content_id'], ['payload_valid']);
+            return [
+                'ok' => false,
+                'message' => 'Snapshot payload is missing or invalid.',
+                'export' => null,
+                'idempotent' => false,
+                'errors' => ['payload' => 'Invalid payload.'],
+            ];
+        }
+
+        $snapshotChecksum = (string) ($snapshot['checksum_sha256'] ?? '');
+        if ($snapshotChecksum === '') {
+            $this->auditFailure($actor, $snapshotId, (int) $snapshot['monthly_report_content_id'], ['checksum_present']);
+            return [
+                'ok' => false,
+                'message' => 'Snapshot checksum is missing.',
+                'export' => null,
+                'idempotent' => false,
+                'errors' => ['checksum' => 'Missing checksum.'],
+            ];
+        }
+
+        $template = $this->defaultTemplateSummary();
+        $existingStyled = $this->exports->findReadyStyledVersionForSnapshotFormat($snapshotId, 'html');
+        if ($existingStyled !== null) {
+            $validation = $this->validateReadyArtifact($existingStyled);
+            if (!$validation['ok']) {
+                return [
+                    'ok' => false,
+                    'message' => $validation['message'] . ' Contact an administrator.',
+                    'export' => $existingStyled,
+                    'idempotent' => false,
+                    'errors' => $validation['errors'],
+                ];
+            }
+
+            $fileChecksum = strtolower((string) ($existingStyled['checksum_sha256'] ?? ''));
+            $this->exports->insertAudit('report_export.html_idempotent_hit', (int) $actor['id'], (int) $existingStyled['id'], [
+                'export_id' => (int) $existingStyled['id'],
+                'report_snapshot_id' => $snapshotId,
+                'monthly_report_content_id' => (int) $existingStyled['monthly_report_content_id'],
+                'format' => 'html',
+                'export_key' => (string) ($existingStyled['export_key'] ?? ''),
+                'storage_path' => (string) $existingStyled['storage_path'],
+                'checksum_sha256' => $fileChecksum,
+                'source_snapshot_checksum_sha256' => $snapshotChecksum,
+                'template_id' => $template['id'],
+                'template_version' => $template['version'],
+                'actor_user_id' => (int) $actor['id'],
+                'styled_version' => true,
+            ]);
+
+            return [
+                'ok' => true,
+                'message' => 'Styled HTML export already exists (idempotent).',
+                'export' => $existingStyled,
+                'idempotent' => true,
+            ];
+        }
+
+        $maxVersion = $this->exports->maxExportVersionForSnapshotFormat($snapshotId, 'html');
+        $nextVersion = $maxVersion + 1;
+        if ($nextVersion < 2) {
+            $nextVersion = 2;
+        }
+
+        $exportKey = 'snapshot-' . $snapshotId . '-html-v' . $nextVersion;
+        $paths = $this->artifactPathForExportVersion($snapshot, 'html', $nextVersion);
+        $absolute = $paths['absolute'];
+        $relative = $paths['relative'];
+        $filename = $paths['filename'];
+
+        if (is_file($absolute)) {
+            $this->auditFailure($actor, $snapshotId, (int) $snapshot['monthly_report_content_id'], ['styled_html_path_exists']);
+            return [
+                'ok' => false,
+                'message' => 'Styled HTML export path already exists unexpectedly.',
+                'export' => null,
+                'idempotent' => false,
+                'errors' => ['path' => 'Exists.'],
+            ];
+        }
+
+        $generatedAt = gmdate('Y-m-d\TH:i:s\Z');
+        $html = $this->buildHtml($snapshot, $payload, $generatedAt);
+
+        $dir = dirname($absolute);
+        if (!is_dir($dir) && !mkdir($dir, 0755, true) && !is_dir($dir)) {
+            $this->auditFailure($actor, $snapshotId, (int) $snapshot['monthly_report_content_id'], ['mkdir_failed']);
+            return [
+                'ok' => false,
+                'message' => 'Could not create export storage directory.',
+                'export' => null,
+                'idempotent' => false,
+                'errors' => [],
+            ];
+        }
+
+        if (file_put_contents($absolute, $html) === false) {
+            $this->auditFailure($actor, $snapshotId, (int) $snapshot['monthly_report_content_id'], ['write_failed']);
+            return [
+                'ok' => false,
+                'message' => 'Could not write styled HTML export artifact.',
+                'export' => null,
+                'idempotent' => false,
+                'errors' => [],
+            ];
+        }
+
+        $fileSize = (int) filesize($absolute);
+        $fileChecksum = $this->checksumFile($absolute);
+
+        try {
+            $newId = $this->exports->insert([
+                'report_snapshot_id' => $snapshotId,
+                'monthly_report_content_id' => (int) $snapshot['monthly_report_content_id'],
+                'export_key' => $exportKey,
+                'format' => 'html',
+                'status' => 'ready',
+                'storage_disk' => 'local',
+                'storage_path' => $relative,
+                'filename' => $filename,
+                'mime_type' => 'text/html; charset=UTF-8',
+                'file_size_bytes' => $fileSize,
+                'checksum_sha256' => $fileChecksum,
+                'source_snapshot_checksum_sha256' => $snapshotChecksum,
+                'created_by' => (int) $actor['id'],
+            ]);
+
+            $this->exports->insertAudit('report_export.html_created', (int) $actor['id'], $newId, [
+                'export_id' => $newId,
+                'report_snapshot_id' => $snapshotId,
+                'monthly_report_content_id' => (int) $snapshot['monthly_report_content_id'],
+                'format' => 'html',
+                'storage_path' => $relative,
+                'checksum_sha256' => $fileChecksum,
+                'source_snapshot_checksum_sha256' => $snapshotChecksum,
+                'actor_user_id' => (int) $actor['id'],
+                'export_key' => $exportKey,
+                'template_id' => $template['id'],
+                'template_version' => $template['version'],
+                'styled_version' => true,
+                'export_version' => $nextVersion,
+            ]);
+
+            $created = $this->exports->findById($newId);
+            return [
+                'ok' => true,
+                'message' => 'Styled HTML export created.',
+                'export' => $created,
+                'idempotent' => false,
+            ];
+        } catch (Throwable) {
+            if (is_file($absolute)) {
+                @unlink($absolute);
+            }
+            $this->auditFailure($actor, $snapshotId, (int) $snapshot['monthly_report_content_id'], ['persist_failed']);
+            return [
+                'ok' => false,
+                'message' => 'Could not save styled HTML export metadata. Please try again.',
+                'export' => null,
+                'idempotent' => false,
+                'errors' => [],
+            ];
+        }
+    }
+
+    /**
+     * Create next styled PDF export version from ready styled HTML (never overwrites v1).
+     * Idempotent: if a ready styled PDF (v>=2) already validates, return it (no v3 in this wave).
+     *
+     * @param array{id:int,email:string,name:string,roles:list<string>,authenticated_at:string} $actor
+     * @return array{
+     *   ok:bool,
+     *   message:string,
+     *   export:?array<string,mixed>,
+     *   idempotent:bool,
+     *   errors?:array<string,string>
+     * }
+     */
+    public function createStyledPdfVersionForSnapshot(int $snapshotId, array $actor): array
+    {
+        $this->assertDb();
+
+        if (!$this->canCreate($actor)) {
+            $this->auditPdfFailure($actor, $snapshotId, null, null, ['role']);
+            return [
+                'ok' => false,
+                'message' => 'You do not have permission to create styled PDF exports.',
+                'export' => null,
+                'idempotent' => false,
+                'errors' => ['role' => 'Insufficient role.'],
+            ];
+        }
+
+        $snapshot = $this->snapshots->findById($snapshotId);
+        if ($snapshot === null) {
+            $this->auditPdfFailure($actor, $snapshotId, null, null, ['snapshot_exists']);
+            return [
+                'ok' => false,
+                'message' => 'Snapshot not found.',
+                'export' => null,
+                'idempotent' => false,
+                'errors' => ['id' => 'Not found.'],
+            ];
+        }
+
+        $monthlyId = (int) ($snapshot['monthly_report_content_id'] ?? 0);
+
+        if ((string) ($snapshot['status'] ?? '') !== 'active') {
+            $this->auditPdfFailure($actor, $snapshotId, $monthlyId, null, ['snapshot_active']);
+            return [
+                'ok' => false,
+                'message' => 'Styled PDF export requires an active snapshot.',
+                'export' => null,
+                'idempotent' => false,
+                'errors' => ['status' => 'Snapshot is not active.'],
+            ];
+        }
+
+        $snapshotChecksum = (string) ($snapshot['checksum_sha256'] ?? '');
+        if ($snapshotChecksum === '') {
+            $this->auditPdfFailure($actor, $snapshotId, $monthlyId, null, ['checksum_present']);
+            return [
+                'ok' => false,
+                'message' => 'Snapshot checksum is missing.',
+                'export' => null,
+                'idempotent' => false,
+                'errors' => ['checksum' => 'Missing checksum.'],
+            ];
+        }
+
+        $template = $this->defaultTemplateSummary();
+        $existingStyledPdf = $this->exports->findReadyStyledVersionForSnapshotFormat($snapshotId, 'pdf');
+        if ($existingStyledPdf !== null) {
+            $validation = $this->validateReadyArtifact($existingStyledPdf);
+            if (!$validation['ok']) {
+                $reasons = array_keys($validation['errors']);
+                if ($reasons === []) {
+                    $reasons = ['pdf_artifact_invalid'];
+                }
+                $this->auditPdfFailure($actor, $snapshotId, $monthlyId, (int) ($existingStyledPdf['id'] ?? 0), $reasons);
+                return [
+                    'ok' => false,
+                    'message' => $validation['message'] . ' Contact an administrator.',
+                    'export' => $existingStyledPdf,
+                    'idempotent' => false,
+                    'errors' => $validation['errors'],
+                ];
+            }
+
+            $fileChecksum = strtolower((string) ($existingStyledPdf['checksum_sha256'] ?? ''));
+            $styledHtml = $this->exports->findReadyStyledVersionForSnapshotFormat($snapshotId, 'html');
+            $this->exports->insertAudit('report_export.pdf_idempotent_hit', (int) $actor['id'], (int) $existingStyledPdf['id'], [
+                'export_id' => (int) $existingStyledPdf['id'],
+                'report_snapshot_id' => $snapshotId,
+                'source_html_export_id' => is_array($styledHtml) ? (int) ($styledHtml['id'] ?? 0) : null,
+                'monthly_report_content_id' => $monthlyId,
+                'format' => 'pdf',
+                'export_key' => (string) ($existingStyledPdf['export_key'] ?? ''),
+                'storage_path' => (string) $existingStyledPdf['storage_path'],
+                'checksum_sha256' => $fileChecksum,
+                'source_snapshot_checksum_sha256' => $snapshotChecksum,
+                'engine' => 'edge',
+                'template_id' => $template['id'],
+                'template_version' => $template['version'],
+                'actor_user_id' => (int) $actor['id'],
+                'rewritten' => false,
+                'styled_version' => true,
+            ]);
+
+            return [
+                'ok' => true,
+                'message' => 'Styled PDF export already exists (idempotent).',
+                'export' => $existingStyledPdf,
+                'idempotent' => true,
+            ];
+        }
+
+        $htmlExport = $this->exports->findReadyStyledVersionForSnapshotFormat($snapshotId, 'html');
+        if ($htmlExport === null) {
+            $this->auditPdfFailure($actor, $snapshotId, $monthlyId, null, ['styled_html_export_missing']);
+            return [
+                'ok' => false,
+                'message' => 'A ready styled HTML export is required before creating a styled PDF export.',
+                'export' => null,
+                'idempotent' => false,
+                'errors' => ['html' => 'Styled HTML export missing.'],
+            ];
+        }
+
+        $htmlValidation = $this->validateReadyArtifact($htmlExport);
+        if (!$htmlValidation['ok']) {
+            $reasons = ['html_source_invalid'];
+            foreach (array_keys($htmlValidation['errors']) as $key) {
+                $reasons[] = 'html_' . $key;
+            }
+            $this->auditPdfFailure($actor, $snapshotId, $monthlyId, (int) ($htmlExport['id'] ?? 0), $reasons);
+            return [
+                'ok' => false,
+                'message' => 'Styled HTML export source is not valid for PDF generation: ' . $htmlValidation['message'],
+                'export' => null,
+                'idempotent' => false,
+                'errors' => ['html' => $htmlValidation['message']],
+            ];
+        }
+
+        if (!is_file(self::EDGE_EXE) && !is_file(self::CHROME_EXE)) {
+            $this->auditPdfFailure($actor, $snapshotId, $monthlyId, (int) ($htmlExport['id'] ?? 0), ['browser_missing']);
+            return [
+                'ok' => false,
+                'message' => 'No allowed browser PDF engine is available on this host.',
+                'export' => null,
+                'idempotent' => false,
+                'errors' => ['engine' => 'Missing.'],
+            ];
+        }
+
+        $maxVersion = $this->exports->maxExportVersionForSnapshotFormat($snapshotId, 'pdf');
+        $nextVersion = $maxVersion + 1;
+        if ($nextVersion < 2) {
+            $nextVersion = 2;
+        }
+
+        $generated = $this->generatePdfFromHtml(
+            $snapshot,
+            $htmlExport,
+            $nextVersion,
+            self::STYLED_BROWSER_TEMP_ROOT
+        );
+        if (!$generated['ok']) {
+            $this->auditPdfFailure(
+                $actor,
+                $snapshotId,
+                $monthlyId,
+                (int) ($htmlExport['id'] ?? 0),
+                $generated['reasons'] ?? ['pdf_generation_failed']
+            );
+            return [
+                'ok' => false,
+                'message' => $generated['message'] ?? 'Styled PDF generation failed.',
+                'export' => null,
+                'idempotent' => false,
+                'errors' => ['pdf' => 'Generation failed.'],
+            ];
+        }
+
+        $paths = $generated['paths'] ?? null;
+        $fileChecksum = (string) ($generated['checksum_sha256'] ?? '');
+        $fileSize = (int) ($generated['file_size_bytes'] ?? 0);
+        $engine = (string) ($generated['engine'] ?? 'edge');
+        $engineVersion = (string) ($generated['engine_version'] ?? '');
+        if (!is_array($paths) || $fileChecksum === '' || $fileSize <= 0) {
+            $this->auditPdfFailure($actor, $snapshotId, $monthlyId, (int) ($htmlExport['id'] ?? 0), ['pdf_output_invalid']);
+            return [
+                'ok' => false,
+                'message' => 'Styled PDF generation produced an invalid artifact.',
+                'export' => null,
+                'idempotent' => false,
+                'errors' => ['pdf' => 'Invalid output.'],
+            ];
+        }
+
+        $absolute = (string) $paths['absolute'];
+        $relative = (string) $paths['relative'];
+        $filename = (string) $paths['filename'];
+        $exportKey = 'snapshot-' . $snapshotId . '-pdf-v' . $nextVersion;
+
+        try {
+            $newId = $this->exports->insert([
+                'report_snapshot_id' => $snapshotId,
+                'monthly_report_content_id' => $monthlyId,
+                'export_key' => $exportKey,
+                'format' => 'pdf',
+                'status' => 'ready',
+                'storage_disk' => 'local',
+                'storage_path' => $relative,
+                'filename' => $filename,
+                'mime_type' => 'application/pdf',
+                'file_size_bytes' => $fileSize,
+                'checksum_sha256' => $fileChecksum,
+                'source_snapshot_checksum_sha256' => $snapshotChecksum,
+                'created_by' => (int) $actor['id'],
+            ]);
+
+            $this->exports->insertAudit('report_export.pdf_created', (int) $actor['id'], $newId, [
+                'export_id' => $newId,
+                'report_snapshot_id' => $snapshotId,
+                'source_html_export_id' => (int) ($htmlExport['id'] ?? 0),
+                'monthly_report_content_id' => $monthlyId,
+                'format' => 'pdf',
+                'storage_path' => $relative,
+                'checksum_sha256' => $fileChecksum,
+                'source_snapshot_checksum_sha256' => $snapshotChecksum,
+                'engine' => $engine,
+                'engine_version' => $engineVersion !== '' ? $engineVersion : null,
+                'actor_user_id' => (int) $actor['id'],
+                'export_key' => $exportKey,
+                'template_id' => $template['id'],
+                'template_version' => $template['version'],
+                'styled_version' => true,
+                'export_version' => $nextVersion,
+            ]);
+
+            $created = $this->exports->findById($newId);
+            return [
+                'ok' => true,
+                'message' => 'Styled PDF export created.',
+                'export' => $created,
+                'idempotent' => false,
+            ];
+        } catch (Throwable) {
+            if (is_file($absolute)) {
+                @unlink($absolute);
+            }
+            $this->auditPdfFailure($actor, $snapshotId, $monthlyId, (int) ($htmlExport['id'] ?? 0), ['persist_failed']);
+            return [
+                'ok' => false,
+                'message' => 'Could not save styled PDF export metadata. Please try again.',
+                'export' => null,
+                'idempotent' => false,
+                'errors' => [],
+            ];
+        }
+    }
+
+    /**
+     * Infer UI template label from export_key version (no DB template columns).
+     * v1 / unknown → legacy; v>=2 → iseo_default_v1 v1.
+     */
+    public function templateLabelForExport(array $export): string
+    {
+        $version = $this->parseExportVersionFromKey((string) ($export['export_key'] ?? ''));
+        if ($version !== null && $version >= 2) {
+            $summary = $this->defaultTemplateSummary();
+            return $summary['id'] . ' v' . $summary['version'];
+        }
+        return $this->legacyTemplateLabel();
+    }
+
+    public function parseExportVersionFromKey(string $exportKey): ?int
+    {
+        if (preg_match('/-v(\d+)$/', trim($exportKey), $m) === 1) {
+            return (int) $m[1];
+        }
+        return null;
+    }
+
+    public function isStyledExport(array $export): bool
+    {
+        $version = $this->parseExportVersionFromKey((string) ($export['export_key'] ?? ''));
+        return $version !== null && $version >= 2;
+    }
+
+    /**
+     * @return array<string, mixed>|null
+     */
+    public function findReadyStyledHtmlForSnapshot(int $snapshotId): ?array
+    {
+        return $this->exports->findReadyStyledVersionForSnapshotFormat($snapshotId, 'html');
+    }
+
+    /**
+     * @return array<string, mixed>|null
+     */
+    public function findReadyStyledPdfForSnapshot(int $snapshotId): ?array
+    {
+        return $this->exports->findReadyStyledVersionForSnapshotFormat($snapshotId, 'pdf');
+    }
+
+    /**
      * @param array{id:int,email:string,name:string,roles:list<string>,authenticated_at:string} $actor
      * @return array{
      *   ok:bool,
@@ -918,11 +1452,28 @@ final class ReportExportService
      */
     public function artifactPathForFormat(array $snapshot, string $format): array
     {
+        $version = (int) ($snapshot['version'] ?? 1);
+        if ($version < 1) {
+            $version = 1;
+        }
+        return $this->artifactPathForExportVersion($snapshot, $format, $version);
+    }
+
+    /**
+     * Versioned export artifact paths: monthly-{id}-v{N}.{ext}
+     *
+     * @param array<string, mixed> $snapshot
+     * @return array{relative:string,absolute:string,filename:string}
+     */
+    public function artifactPathForExportVersion(array $snapshot, string $format, int $exportVersion): array
+    {
         $monthlyId = (int) ($snapshot['monthly_report_content_id'] ?? 0);
         $snapshotId = (int) ($snapshot['id'] ?? 0);
-        $snapshotKey = (string) ($snapshot['snapshot_key'] ?? '');
+        if ($exportVersion < 1) {
+            $exportVersion = 1;
+        }
         $ext = $format === 'pdf' ? 'pdf' : 'html';
-        $filename = $snapshotKey . '.' . $ext;
+        $filename = 'monthly-' . $monthlyId . '-v' . $exportVersion . '.' . $ext;
 
         $relative = self::STORAGE_REL_ROOT
             . '/monthly-' . $monthlyId
@@ -952,8 +1503,12 @@ final class ReportExportService
      *   engine_version?:string
      * }
      */
-    public function generatePdfFromHtml(array $snapshot, array $htmlExport): array
-    {
+    public function generatePdfFromHtml(
+        array $snapshot,
+        array $htmlExport,
+        ?int $exportVersion = null,
+        ?string $browserTempRoot = null
+    ): array {
         $htmlAbsolute = $this->resolveStoragePath((string) ($htmlExport['storage_path'] ?? ''));
         if ($htmlAbsolute === null || !is_file($htmlAbsolute)) {
             return [
@@ -963,7 +1518,15 @@ final class ReportExportService
             ];
         }
 
-        $paths = $this->artifactPathForFormat($snapshot, 'pdf');
+        if ($exportVersion === null) {
+            $parsed = $this->parseExportVersionFromKey((string) ($htmlExport['export_key'] ?? ''));
+            $exportVersion = $parsed ?? (int) ($snapshot['version'] ?? 1);
+        }
+        if ($exportVersion < 1) {
+            $exportVersion = 1;
+        }
+
+        $paths = $this->artifactPathForExportVersion($snapshot, 'pdf', $exportVersion);
         $pdfAbsolute = $paths['absolute'];
         $dir = dirname($pdfAbsolute);
         if (!is_dir($dir) && !mkdir($dir, 0755, true) && !is_dir($dir)) {
@@ -978,6 +1541,10 @@ final class ReportExportService
             @unlink($pdfAbsolute);
         }
 
+        $tempRoot = $browserTempRoot !== null && $browserTempRoot !== ''
+            ? $browserTempRoot
+            : self::BROWSER_TEMP_ROOT;
+
         $engines = [];
         if (is_file(self::EDGE_EXE)) {
             $engines[] = ['name' => 'edge', 'exe' => self::EDGE_EXE];
@@ -990,8 +1557,8 @@ final class ReportExportService
         $lastReasons = ['pdf_generation_failed'];
         foreach ($engines as $engine) {
             $unique = bin2hex(random_bytes(8));
-            $profileDir = self::BROWSER_TEMP_ROOT . DIRECTORY_SEPARATOR . $engine['name'] . '-profile-' . $unique;
-            if (!is_dir(self::BROWSER_TEMP_ROOT) && !mkdir(self::BROWSER_TEMP_ROOT, 0755, true) && !is_dir(self::BROWSER_TEMP_ROOT)) {
+            $profileDir = $tempRoot . DIRECTORY_SEPARATOR . $engine['name'] . '-profile-' . $unique;
+            if (!is_dir($tempRoot) && !mkdir($tempRoot, 0755, true) && !is_dir($tempRoot)) {
                 return [
                     'ok' => false,
                     'message' => 'Could not create browser temp directory.',

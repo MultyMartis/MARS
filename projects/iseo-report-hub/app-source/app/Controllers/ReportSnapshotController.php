@@ -50,8 +50,12 @@ final class ReportSnapshotController extends BaseController
             'message' => $result['message'],
             'htmlExport' => $exportState['htmlExport'],
             'pdfExport' => $exportState['pdfExport'],
+            'styledHtmlExport' => $exportState['styledHtmlExport'],
+            'styledPdfExport' => $exportState['styledPdfExport'],
             'canCreateExport' => $exportState['canCreateExport'],
             'canCreatePdfExport' => $exportState['canCreatePdfExport'],
+            'canCreateStyledHtml' => $exportState['canCreateStyledHtml'],
+            'canCreateStyledPdf' => $exportState['canCreateStyledPdf'],
             'futureTemplate' => $this->exports->defaultTemplateSummary(),
             'legacyTemplateLabel' => $this->exports->legacyTemplateLabel(),
         ]);
@@ -137,8 +141,12 @@ final class ReportSnapshotController extends BaseController
             'message' => $result['message'],
             'htmlExport' => $exportState['htmlExport'],
             'pdfExport' => $exportState['pdfExport'],
+            'styledHtmlExport' => $exportState['styledHtmlExport'],
+            'styledPdfExport' => $exportState['styledPdfExport'],
             'canCreateExport' => $exportState['canCreateExport'],
             'canCreatePdfExport' => $exportState['canCreatePdfExport'],
+            'canCreateStyledHtml' => $exportState['canCreateStyledHtml'],
+            'canCreateStyledPdf' => $exportState['canCreateStyledPdf'],
             'futureTemplate' => $this->exports->defaultTemplateSummary(),
             'legacyTemplateLabel' => $this->exports->legacyTemplateLabel(),
         ]);
@@ -150,8 +158,12 @@ final class ReportSnapshotController extends BaseController
      * @return array{
      *   htmlExport:?array<string,mixed>,
      *   pdfExport:?array<string,mixed>,
+     *   styledHtmlExport:?array<string,mixed>,
+     *   styledPdfExport:?array<string,mixed>,
      *   canCreateExport:bool,
-     *   canCreatePdfExport:bool
+     *   canCreatePdfExport:bool,
+     *   canCreateStyledHtml:bool,
+     *   canCreateStyledPdf:bool
      * }
      */
     private function exportStateForSnapshot(?array $snapshot, array $user): array
@@ -160,13 +172,19 @@ final class ReportSnapshotController extends BaseController
             return [
                 'htmlExport' => null,
                 'pdfExport' => null,
+                'styledHtmlExport' => null,
+                'styledPdfExport' => null,
                 'canCreateExport' => false,
                 'canCreatePdfExport' => false,
+                'canCreateStyledHtml' => false,
+                'canCreateStyledPdf' => false,
             ];
         }
 
         $htmlExport = null;
         $pdfExport = null;
+        $styledHtmlExport = null;
+        $styledPdfExport = null;
         $snapshotId = (int) ($snapshot['id'] ?? 0);
         if ($snapshotId > 0) {
             try {
@@ -178,6 +196,16 @@ final class ReportSnapshotController extends BaseController
                 $pdfExport = $this->exports->getReadyExportForSnapshotFormat($snapshotId, 'pdf');
             } catch (\Throwable) {
                 $pdfExport = null;
+            }
+            try {
+                $styledHtmlExport = $this->exports->findReadyStyledHtmlForSnapshot($snapshotId);
+            } catch (\Throwable) {
+                $styledHtmlExport = null;
+            }
+            try {
+                $styledPdfExport = $this->exports->findReadyStyledPdfForSnapshot($snapshotId);
+            } catch (\Throwable) {
+                $styledPdfExport = null;
             }
         }
 
@@ -194,11 +222,23 @@ final class ReportSnapshotController extends BaseController
             $canCreatePdfExport = false;
         }
 
+        $canCreateStyledHtml = $canCreateExport;
+        $canCreateStyledPdf = $canCreateExport
+            && is_array($styledHtmlExport)
+            && (
+                is_file('C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe')
+                || is_file('C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe')
+            );
+
         return [
             'htmlExport' => $htmlExport,
             'pdfExport' => $pdfExport,
+            'styledHtmlExport' => $styledHtmlExport,
+            'styledPdfExport' => $styledPdfExport,
             'canCreateExport' => $canCreateExport,
             'canCreatePdfExport' => $canCreatePdfExport,
+            'canCreateStyledHtml' => $canCreateStyledHtml,
+            'canCreateStyledPdf' => $canCreateStyledPdf,
         ];
     }
 

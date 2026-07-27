@@ -187,6 +187,16 @@ if (preg_match('#^/reporting-periods/(\d+)/monthly-report/create$#', $requestPat
     $router->post($requestPath, static function () use ($reportSnapshots, $reportId): void {
         $reportSnapshots->createForMonthly($reportId);
     });
+} elseif (preg_match('#^/report-snapshots/(\d+)/exports/pdf/styled$#', $requestPath, $m) === 1) {
+    $snapshotId = (int) $m[1];
+    $router->post($requestPath, static function () use ($reportExports, $snapshotId): void {
+        $reportExports->createStyledPdfForSnapshot($snapshotId);
+    });
+} elseif (preg_match('#^/report-snapshots/(\d+)/exports/html/styled$#', $requestPath, $m) === 1) {
+    $snapshotId = (int) $m[1];
+    $router->post($requestPath, static function () use ($reportExports, $snapshotId): void {
+        $reportExports->createStyledHtmlForSnapshot($snapshotId);
+    });
 } elseif (preg_match('#^/report-snapshots/(\d+)/exports/pdf$#', $requestPath, $m) === 1) {
     $snapshotId = (int) $m[1];
     $router->post($requestPath, static function () use ($reportExports, $snapshotId): void {

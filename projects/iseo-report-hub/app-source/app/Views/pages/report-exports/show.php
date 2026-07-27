@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 /** @var array<string, mixed> $export */
 /** @var string $message */
+/** @var string $templateLabel */
+/** @var bool $isStyledExport */
 
 $export = $export ?? [];
 $message = (string) ($message ?? '');
@@ -24,6 +26,10 @@ $futureTemplate = is_array($futureTemplate ?? null) ? $futureTemplate : [];
 $legacyTemplateLabel = (string) ($legacyTemplateLabel ?? 'not recorded (legacy/current exporter)');
 $futureTemplateId = (string) ($futureTemplate['id'] ?? 'iseo_default_v1');
 $futureTemplateVersion = (string) (int) ($futureTemplate['version'] ?? 1);
+$isStyledExport = !empty($isStyledExport);
+$templateLabel = (string) ($templateLabel ?? ($isStyledExport
+    ? ($futureTemplateId . ' v' . $futureTemplateVersion)
+    : $legacyTemplateLabel));
 ?>
 <section class="panel export-card export-detail">
     <div class="panel-head">
@@ -45,6 +51,11 @@ $futureTemplateVersion = (string) (int) ($futureTemplate['version'] ?? 1);
     <p>
         <span class="internal-only-badge">Internal only</span>
         <span class="artifact-badge<?= $isPdf ? ' artifact-badge--pdf' : '' ?>"><?= e($artifactLabel) ?></span>
+        <?php if ($isStyledExport): ?>
+            <span class="template-badge template-badge--styled">Styled export</span>
+        <?php else: ?>
+            <span class="template-badge">Historical v1</span>
+        <?php endif; ?>
         · <span class="status-badge status-<?= e((string) ($export['status'] ?? '')) ?>"><?= e((string) ($export['status'] ?? '')) ?></span>
     </p>
 
@@ -53,8 +64,12 @@ $futureTemplateVersion = (string) (int) ($futureTemplate['version'] ?? 1);
         <li><strong>Export key:</strong> <code><?= e((string) ($export['export_key'] ?? '')) ?></code></li>
         <li><strong>Format:</strong> <code><?= e($format) ?></code></li>
         <li><strong>Status:</strong> <span class="status-badge status-<?= e((string) ($export['status'] ?? '')) ?>"><?= e((string) ($export['status'] ?? '')) ?></span></li>
-        <li><strong>Template (recorded):</strong> <?= e($legacyTemplateLabel) ?></li>
-        <li><strong>Future default template:</strong> <code><?= e($futureTemplateId) ?></code> v<?= e($futureTemplateVersion) ?></li>
+        <li><strong>Template:</strong>
+            <span class="template-badge<?= $isStyledExport ? ' template-badge--styled' : '' ?>"><?= e($templateLabel) ?></span>
+        </li>
+        <?php if (!$isStyledExport): ?>
+            <li><strong>Default template (for new versions):</strong> <code><?= e($futureTemplateId) ?></code> v<?= e($futureTemplateVersion) ?></li>
+        <?php endif; ?>
         <li><strong>Filename:</strong> <code><?= e((string) ($export['filename'] ?? '')) ?></code></li>
         <li><strong>MIME type:</strong> <code><?= e((string) ($export['mime_type'] ?? '')) ?></code></li>
         <li><strong>File size:</strong> <?= e($fileSize > 0 ? number_format($fileSize) . ' bytes' : '—') ?></li>
@@ -79,5 +94,12 @@ $futureTemplateVersion = (string) (int) ($futureTemplate['version'] ?? 1);
         </li>
     </ul>
 
-    <p class="field-hint export-hint">No public link. Download requires authentication. Path/MIME/size/checksum<?= $isPdf ? '/PDF-magic' : '' ?> are validated before streaming. This historical row has no DB template_id; future HTML generation uses <code><?= e($futureTemplateId) ?></code> v<?= e($futureTemplateVersion) ?> without overwriting this artifact.</p>
+    <p class="field-hint export-hint">
+        No public link. Download requires authentication. Path/MIME/size/checksum<?= $isPdf ? '/PDF-magic' : '' ?> are validated before streaming.
+        <?php if ($isStyledExport): ?>
+            This styled export uses <code><?= e($futureTemplateId) ?></code> v<?= e($futureTemplateVersion) ?> and does not replace historical v1 artifacts.
+        <?php else: ?>
+            This historical row has no DB template_id; restyle requires a new export version (v2+), not an overwrite.
+        <?php endif; ?>
+    </p>
 </section>

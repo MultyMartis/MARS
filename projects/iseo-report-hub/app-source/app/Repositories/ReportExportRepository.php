@@ -142,6 +142,111 @@ final class ReportExportRepository
     }
 
     /**
+     * @return array<string, mixed>|null
+     */
+    public function findReadyByExportKey(string $exportKey): ?array
+    {
+        $exportKey = trim($exportKey);
+        if ($exportKey === '') {
+            return null;
+        }
+
+        $stmt = $this->pdo()->prepare(
+            'SELECT re.*
+             FROM report_exports re
+             WHERE re.export_key = :export_key
+               AND re.status = \'ready\'
+             ORDER BY re.id DESC
+             LIMIT 1'
+        );
+        $stmt->execute([':export_key' => $exportKey]);
+        $row = $stmt->fetch();
+        return is_array($row) ? $row : null;
+    }
+
+    /**
+     * Max export version parsed from export_key suffix `-vN` for snapshot+format.
+     */
+    public function maxExportVersionForSnapshotFormat(int $snapshotId, string $format): int
+    {
+        if ($snapshotId <= 0 || $format === '') {
+            return 0;
+        }
+
+        $stmt = $this->pdo()->prepare(
+            'SELECT re.export_key
+             FROM report_exports re
+             WHERE re.report_snapshot_id = :sid
+               AND re.format = :format'
+        );
+        $stmt->execute([
+            ':sid' => $snapshotId,
+            ':format' => $format,
+        ]);
+        $rows = $stmt->fetchAll();
+        if (!is_array($rows)) {
+            return 0;
+        }
+
+        $max = 0;
+        foreach ($rows as $row) {
+            if (!is_array($row)) {
+                continue;
+            }
+            $key = (string) ($row['export_key'] ?? '');
+            if (preg_match('/-v(\d+)$/', $key, $m) === 1) {
+                $version = (int) $m[1];
+                if ($version > $max) {
+                    $max = $version;
+                }
+            }
+        }
+
+        return $max;
+    }
+
+    /**
+     * Latest ready export with version >= 2 (styled restyle versions).
+     *
+     * @return array<string, mixed>|null
+     */
+    public function findReadyStyledVersionForSnapshotFormat(int $snapshotId, string $format): ?array
+    {
+        if ($snapshotId <= 0 || $format === '') {
+            return null;
+        }
+
+        $stmt = $this->pdo()->prepare(
+            'SELECT re.*
+             FROM report_exports re
+             WHERE re.report_snapshot_id = :sid
+               AND re.format = :format
+               AND re.status = \'ready\'
+             ORDER BY re.id DESC'
+        );
+        $stmt->execute([
+            ':sid' => $snapshotId,
+            ':format' => $format,
+        ]);
+        $rows = $stmt->fetchAll();
+        if (!is_array($rows)) {
+            return null;
+        }
+
+        foreach ($rows as $row) {
+            if (!is_array($row)) {
+                continue;
+            }
+            $key = (string) ($row['export_key'] ?? '');
+            if (preg_match('/-v(\d+)$/', $key, $m) === 1 && (int) $m[1] >= 2) {
+                return $row;
+            }
+        }
+
+        return null;
+    }
+
+    /**
      * @param array{
      *   report_snapshot_id:int,
      *   monthly_report_content_id:int,

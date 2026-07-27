@@ -7,6 +7,10 @@ declare(strict_types=1);
 /** @var bool $canCreatePdf */
 /** @var bool $hasHtmlExport */
 /** @var bool $hasPdfExport */
+/** @var bool $canCreateStyledHtml */
+/** @var bool $canCreateStyledPdf */
+/** @var array<string, mixed>|null $styledHtmlExport */
+/** @var array<string, mixed>|null $styledPdfExport */
 /** @var string $message */
 /** @var \Iseo\Services\CsrfService $csrf */
 
@@ -16,16 +20,29 @@ $canCreate = !empty($canCreate);
 $canCreatePdf = !empty($canCreatePdf);
 $hasHtmlExport = !empty($hasHtmlExport);
 $hasPdfExport = !empty($hasPdfExport);
+$canCreateStyledHtml = !empty($canCreateStyledHtml);
+$canCreateStyledPdf = !empty($canCreateStyledPdf);
+$styledHtmlExport = is_array($styledHtmlExport ?? null) ? $styledHtmlExport : null;
+$styledPdfExport = is_array($styledPdfExport ?? null) ? $styledPdfExport : null;
 $message = (string) ($message ?? '');
 /** @var array{id?:string,version?:int,display_label?:string}|null $futureTemplate */
 $futureTemplate = is_array($futureTemplate ?? null) ? $futureTemplate : [];
 $legacyTemplateLabel = (string) ($legacyTemplateLabel ?? 'not recorded (legacy/current exporter)');
 $futureTemplateId = (string) ($futureTemplate['id'] ?? 'iseo_default_v1');
 $futureTemplateVersion = (string) (int) ($futureTemplate['version'] ?? 1);
+$styledTemplateLabel = $futureTemplateId . ' v' . $futureTemplateVersion;
 
 $snapshotId = (int) ($snapshot['id'] ?? 0);
 $monthlyId = (int) ($snapshot['monthly_report_content_id'] ?? 0);
 $snapshotKey = (string) ($snapshot['snapshot_key'] ?? '');
+
+$labelForExport = static function (array $row) use ($legacyTemplateLabel, $styledTemplateLabel): string {
+    $key = (string) ($row['export_key'] ?? '');
+    if (preg_match('/-v(\d+)$/', $key, $m) === 1 && (int) $m[1] >= 2) {
+        return $styledTemplateLabel;
+    }
+    return $legacyTemplateLabel;
+};
 ?>
 <section class="panel export-card">
     <div class="panel-head">
@@ -47,11 +64,11 @@ $snapshotKey = (string) ($snapshot['snapshot_key'] ?? '');
         · Snapshot <code><?= e($snapshotKey) ?></code>
     </p>
     <p class="template-state-note">
-        <strong>Existing artifacts:</strong> template <?= e($legacyTemplateLabel) ?>.
+        <strong>Historical v1:</strong> template <?= e($legacyTemplateLabel) ?>.
         <br>
-        <strong>Future default template:</strong>
+        <strong>Styled default template:</strong>
         <code><?= e($futureTemplateId) ?></code> v<?= e($futureTemplateVersion) ?>
-        (applies to newly generated HTML only; does not rewrite current exports).
+        (new export version only; does not rewrite v1 artifacts).
     </p>
 
     <?php if ($exports === []): ?>
@@ -92,6 +109,8 @@ $snapshotKey = (string) ($snapshot['snapshot_key'] ?? '');
                     $short = $checksum !== '' ? substr($checksum, 0, 12) . '…' : '—';
                     $size = isset($row['file_size_bytes']) ? (int) $row['file_size_bytes'] : 0;
                     $format = (string) ($row['format'] ?? '');
+                    $rowTemplateLabel = $labelForExport($row);
+                    $isStyledRow = $rowTemplateLabel === $styledTemplateLabel;
                     ?>
                     <tr>
                         <td><?= e((string) $eid) ?></td>
@@ -100,7 +119,11 @@ $snapshotKey = (string) ($snapshot['snapshot_key'] ?? '');
                             <span class="type-badge<?= $format === 'pdf' ? ' type-badge--pdf' : '' ?>"><?= e($format) ?></span>
                         </td>
                         <td><span class="status-badge status-<?= e((string) ($row['status'] ?? '')) ?>"><?= e((string) ($row['status'] ?? '')) ?></span></td>
-                        <td><span class="template-badge" title="No DB template metadata on historical rows"><?= e($legacyTemplateLabel) ?></span></td>
+                        <td>
+                            <span class="template-badge<?= $isStyledRow ? ' template-badge--styled' : '' ?>">
+                                <?= e($rowTemplateLabel) ?>
+                            </span>
+                        </td>
                         <td><code><?= e((string) ($row['filename'] ?? '')) ?></code></td>
                         <td><code class="checksum-display" title="<?= e($checksum) ?>"><?= e($short) ?></code></td>
                         <td><?= e($size > 0 ? number_format($size) . ' B' : '—') ?></td>
@@ -120,7 +143,7 @@ $snapshotKey = (string) ($snapshot['snapshot_key'] ?? '');
                 <?= $csrf->field() ?>
                 <button type="submit" class="btn btn-secondary">Re-check HTML export (idempotent)</button>
             </form>
-            <p class="field-hint export-hint">HTML re-check returns the existing ready artifact when checksums match; it does not create a duplicate row.</p>
+            <p class="field-hint export-hint">Legacy HTML re-check returns the existing ready v1 artifact when checksums match; it does not create a duplicate row.</p>
         <?php endif; ?>
 
         <?php if ($canCreatePdf && $snapshotId > 0 && $hasHtmlExport && !$hasPdfExport): ?>
@@ -130,7 +153,7 @@ $snapshotKey = (string) ($snapshot['snapshot_key'] ?? '');
             </form>
             <p class="field-hint export-hint">PDF is generated from the ready HTML artifact via Edge headless (Chrome fallback). No public URL.</p>
         <?php elseif ($canCreatePdf && $snapshotId > 0 && $hasPdfExport): ?>
-            <p class="export-ready-note">PDF export is ready. Create is not needed — use Download or re-check below.</p>
+            <p class="export-ready-note">Legacy PDF export is ready. Create is not needed — use Download or re-check below.</p>
             <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/pdf')) ?>" class="export-idempotent-form">
                 <?= $csrf->field() ?>
                 <button type="submit" class="btn btn-secondary">Re-check PDF export (idempotent)</button>
@@ -139,6 +162,49 @@ $snapshotKey = (string) ($snapshot['snapshot_key'] ?? '');
         <?php elseif ($hasHtmlExport && !$hasPdfExport && $snapshotId > 0 && !$canCreatePdf): ?>
             <p class="field-hint">PDF creation requires admin_owner or seo_lead_reviewer role.</p>
         <?php endif; ?>
+
+        <?php if ($canCreateStyledHtml && $snapshotId > 0): ?>
+            <?php if ($styledHtmlExport === null): ?>
+                <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/html/styled')) ?>" class="export-idempotent-form">
+                    <?= $csrf->field() ?>
+                    <button type="submit" class="btn">Create styled HTML export (<?= e($styledTemplateLabel) ?>)</button>
+                </form>
+                <p class="field-hint export-hint">Creates a new HTML export version with embedded default template CSS. Does not overwrite historical v1.</p>
+            <?php else: ?>
+                <p class="export-ready-note">
+                    Styled HTML ready:
+                    <code><?= e((string) ($styledHtmlExport['export_key'] ?? '')) ?></code>
+                    · template <code><?= e($styledTemplateLabel) ?></code>
+                </p>
+                <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/html/styled')) ?>" class="export-idempotent-form">
+                    <?= $csrf->field() ?>
+                    <button type="submit" class="btn btn-secondary">Re-check styled HTML (idempotent)</button>
+                </form>
+            <?php endif; ?>
+        <?php endif; ?>
+
+        <?php if ($canCreateStyledPdf && $snapshotId > 0): ?>
+            <?php if ($styledPdfExport === null): ?>
+                <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/pdf/styled')) ?>" class="export-idempotent-form">
+                    <?= $csrf->field() ?>
+                    <button type="submit" class="btn">Create styled PDF export from HTML v2</button>
+                </form>
+                <p class="field-hint export-hint">PDF is printed from styled HTML v2 via Edge headless. Does not overwrite historical v1 PDF.</p>
+            <?php else: ?>
+                <p class="export-ready-note">
+                    Styled PDF ready:
+                    <code><?= e((string) ($styledPdfExport['export_key'] ?? '')) ?></code>
+                    · derived from styled HTML
+                </p>
+                <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/pdf/styled')) ?>" class="export-idempotent-form">
+                    <?= $csrf->field() ?>
+                    <button type="submit" class="btn btn-secondary">Re-check styled PDF (idempotent)</button>
+                </form>
+            <?php endif; ?>
+        <?php elseif ($styledHtmlExport !== null && $styledPdfExport === null && $snapshotId > 0 && !$canCreateStyledPdf): ?>
+            <p class="field-hint">Styled PDF creation requires admin_owner or seo_lead_reviewer role and a browser PDF engine.</p>
+        <?php endif; ?>
+
         <p class="field-hint export-hint">No public share URL. Downloads require authentication.</p>
     <?php endif; ?>
 </section>

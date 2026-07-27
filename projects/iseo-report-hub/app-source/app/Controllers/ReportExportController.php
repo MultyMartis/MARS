@@ -47,6 +47,10 @@ final class ReportExportController extends BaseController
             'canCreatePdf' => !empty($result['can_create_pdf']),
             'hasHtmlExport' => !empty($result['has_html_export']),
             'hasPdfExport' => !empty($result['has_pdf_export']),
+            'styledHtmlExport' => $result['styled_html_export'] ?? null,
+            'styledPdfExport' => $result['styled_pdf_export'] ?? null,
+            'canCreateStyledHtml' => !empty($result['can_create_styled_html']),
+            'canCreateStyledPdf' => !empty($result['can_create_styled_pdf']),
             'futureTemplate' => $result['future_template'] ?? $this->exports->defaultTemplateSummary(),
             'legacyTemplateLabel' => (string) ($result['legacy_template_label'] ?? $this->exports->legacyTemplateLabel()),
             'message' => $result['message'],
@@ -92,6 +96,48 @@ final class ReportExportController extends BaseController
         }
 
         $result = $this->exports->createPdfForSnapshot($snapshotId, $user);
+        $this->respondCreateResult($snapshotId, $result);
+    }
+
+    public function createStyledHtmlForSnapshot(int $snapshotId): void
+    {
+        if (!$this->guardMethod(['POST'])) {
+            return;
+        }
+
+        $user = $this->requireInternalUser();
+        if ($user === null) {
+            return;
+        }
+
+        if (!$this->validateCsrf()) {
+            flash_set('error', 'Invalid CSRF token. Please try again.');
+            $this->redirect('/report-snapshots/' . $snapshotId . '/exports');
+            return;
+        }
+
+        $result = $this->exports->createStyledHtmlVersionForSnapshot($snapshotId, $user);
+        $this->respondCreateResult($snapshotId, $result);
+    }
+
+    public function createStyledPdfForSnapshot(int $snapshotId): void
+    {
+        if (!$this->guardMethod(['POST'])) {
+            return;
+        }
+
+        $user = $this->requireInternalUser();
+        if ($user === null) {
+            return;
+        }
+
+        if (!$this->validateCsrf()) {
+            flash_set('error', 'Invalid CSRF token. Please try again.');
+            $this->redirect('/report-snapshots/' . $snapshotId . '/exports');
+            return;
+        }
+
+        $result = $this->exports->createStyledPdfVersionForSnapshot($snapshotId, $user);
         $this->respondCreateResult($snapshotId, $result);
     }
 
@@ -155,12 +201,16 @@ final class ReportExportController extends BaseController
 
         $export = $result['export'];
         $key = (string) ($export['export_key'] ?? ('#' . $exportId));
+        $templateLabel = $this->exports->templateLabelForExport($export);
+        $isStyled = $this->exports->isStyledExport($export);
 
         $this->render('report-exports/show', [
             'pageTitle' => 'Export — ' . $key,
             'export' => $export,
             'futureTemplate' => $this->exports->defaultTemplateSummary(),
             'legacyTemplateLabel' => $this->exports->legacyTemplateLabel(),
+            'templateLabel' => $templateLabel,
+            'isStyledExport' => $isStyled,
             'message' => $result['message'],
         ]);
     }

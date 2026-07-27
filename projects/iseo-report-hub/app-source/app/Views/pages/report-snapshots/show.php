@@ -9,8 +9,12 @@ declare(strict_types=1);
 /** @var string $message */
 /** @var array<string, mixed>|null $htmlExport */
 /** @var array<string, mixed>|null $pdfExport */
+/** @var array<string, mixed>|null $styledHtmlExport */
+/** @var array<string, mixed>|null $styledPdfExport */
 /** @var bool $canCreateExport */
 /** @var bool $canCreatePdfExport */
+/** @var bool $canCreateStyledHtml */
+/** @var bool $canCreateStyledPdf */
 /** @var \Iseo\Services\CsrfService $csrf */
 
 $mode = $mode ?? 'detail';
@@ -21,12 +25,17 @@ $canCreate = !empty($canCreate);
 $message = (string) ($message ?? '');
 $htmlExport = $htmlExport ?? null;
 $pdfExport = $pdfExport ?? null;
+$styledHtmlExport = $styledHtmlExport ?? null;
+$styledPdfExport = $styledPdfExport ?? null;
 $canCreateExport = !empty($canCreateExport);
 $canCreatePdfExport = !empty($canCreatePdfExport);
+$canCreateStyledHtml = !empty($canCreateStyledHtml);
+$canCreateStyledPdf = !empty($canCreateStyledPdf);
 $legacyTemplateLabel = (string) ($legacyTemplateLabel ?? 'not recorded (legacy/current exporter)');
 $futureTemplate = is_array($futureTemplate ?? null) ? $futureTemplate : [];
 $futureTemplateId = (string) ($futureTemplate['id'] ?? 'iseo_default_v1');
 $futureTemplateVersion = (string) (int) ($futureTemplate['version'] ?? 1);
+$styledTemplateLabel = $futureTemplateId . ' v' . $futureTemplateVersion;
 
 $monthlyId = 0;
 if (is_array($snapshot) && isset($snapshot['monthly_report_content_id'])) {
@@ -167,8 +176,8 @@ $decodeIds = static function (mixed $raw): array {
             <span class="artifact-badge">HTML artifact</span>
         </p>
         <p class="template-state-note">
-            Existing artifact template: <?= e($legacyTemplateLabel) ?>.
-            Future default: <code><?= e($futureTemplateId) ?></code> v<?= e($futureTemplateVersion) ?> (new exports only).
+            Historical v1 template: <?= e($legacyTemplateLabel) ?>.
+            Styled default: <code><?= e($futureTemplateId) ?></code> v<?= e($futureTemplateVersion) ?> (new export version only).
         </p>
         <?php if (!is_array($htmlExport)): ?>
             <p class="note">No HTML export yet.</p>
@@ -179,29 +188,46 @@ $decodeIds = static function (mixed $raw): array {
                 </form>
             <?php endif; ?>
         <?php else: ?>
+            <?php
+            $displayHtml = is_array($styledHtmlExport) ? $styledHtmlExport : $htmlExport;
+            $displayHtmlIsStyled = is_array($styledHtmlExport);
+            $exportChecksum = (string) ($displayHtml['checksum_sha256'] ?? '');
+            $exportShort = $exportChecksum !== '' ? substr($exportChecksum, 0, 12) . '…' : '—';
+            $exportSize = isset($displayHtml['file_size_bytes']) ? (int) $displayHtml['file_size_bytes'] : 0;
+            ?>
             <ul class="facts">
-                <li><strong>Export ID:</strong> <?= e((string) $htmlExport['id']) ?></li>
-                <li><strong>Key:</strong> <code><?= e((string) ($htmlExport['export_key'] ?? '')) ?></code></li>
+                <li><strong>Export ID:</strong> <?= e((string) $displayHtml['id']) ?></li>
+                <li><strong>Key:</strong> <code><?= e((string) ($displayHtml['export_key'] ?? '')) ?></code></li>
                 <li><strong>Format / status:</strong>
                     <span class="type-badge">html</span>
-                    · <span class="status-badge status-<?= e((string) ($htmlExport['status'] ?? '')) ?>"><?= e((string) ($htmlExport['status'] ?? '')) ?></span>
+                    · <span class="status-badge status-<?= e((string) ($displayHtml['status'] ?? '')) ?>"><?= e((string) ($displayHtml['status'] ?? '')) ?></span>
                 </li>
-                <li><strong>Filename:</strong> <code><?= e((string) ($htmlExport['filename'] ?? '')) ?></code></li>
+                <li><strong>Filename:</strong> <code><?= e((string) ($displayHtml['filename'] ?? '')) ?></code></li>
                 <li><strong>Checksum:</strong> <code class="checksum-display" title="<?= e($exportChecksum) ?>"><?= e($exportShort) ?></code></li>
                 <li><strong>Size:</strong> <?= e($exportSize > 0 ? number_format($exportSize) . ' B' : '—') ?></li>
-                <li><strong>Template:</strong> <?= e($legacyTemplateLabel) ?></li>
+                <li><strong>Template:</strong>
+                    <span class="template-badge<?= $displayHtmlIsStyled ? ' template-badge--styled' : '' ?>">
+                        <?= e($displayHtmlIsStyled ? $styledTemplateLabel : $legacyTemplateLabel) ?>
+                    </span>
+                </li>
             </ul>
             <p>
-                <a class="btn" href="<?= e(url_path('/report-exports/' . (int) $htmlExport['id'])) ?>">View export</a>
-                <a class="btn btn-secondary btn-download" href="<?= e(url_path('/report-exports/' . (int) $htmlExport['id'] . '/download')) ?>">Download HTML</a>
+                <a class="btn" href="<?= e(url_path('/report-exports/' . (int) $displayHtml['id'])) ?>">View export</a>
+                <a class="btn btn-secondary btn-download" href="<?= e(url_path('/report-exports/' . (int) $displayHtml['id'] . '/download')) ?>">Download HTML</a>
+                <a class="btn btn-secondary" href="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports')) ?>">All versions</a>
             </p>
-            <?php if ($canCreateExport): ?>
-                <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/html')) ?>" class="export-idempotent-form">
+            <?php if ($canCreateStyledHtml && !is_array($styledHtmlExport)): ?>
+                <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/html/styled')) ?>" class="export-idempotent-form">
                     <?= $csrf->field() ?>
-                    <button type="submit" class="btn btn-secondary">Re-check HTML export (idempotent)</button>
+                    <button type="submit" class="btn">Create styled HTML (<?= e($styledTemplateLabel) ?>)</button>
+                </form>
+            <?php elseif ($canCreateStyledHtml && is_array($styledHtmlExport)): ?>
+                <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/html/styled')) ?>" class="export-idempotent-form">
+                    <?= $csrf->field() ?>
+                    <button type="submit" class="btn btn-secondary">Re-check styled HTML (idempotent)</button>
                 </form>
             <?php endif; ?>
-            <p class="field-hint export-hint">No public URL.</p>
+            <p class="field-hint export-hint">No public URL. Historical v1 remains available on the exports list.</p>
         <?php endif; ?>
     </section>
 
@@ -232,29 +258,45 @@ $decodeIds = static function (mixed $raw): array {
                 </form>
             <?php endif; ?>
         <?php else: ?>
+            <?php
+            $displayPdf = is_array($styledPdfExport) ? $styledPdfExport : $pdfExport;
+            $displayPdfIsStyled = is_array($styledPdfExport);
+            $pdfChecksum = (string) ($displayPdf['checksum_sha256'] ?? '');
+            $pdfShort = $pdfChecksum !== '' ? substr($pdfChecksum, 0, 12) . '…' : '—';
+            $pdfSize = isset($displayPdf['file_size_bytes']) ? (int) $displayPdf['file_size_bytes'] : 0;
+            ?>
             <ul class="facts">
-                <li><strong>Export ID:</strong> <?= e((string) $pdfExport['id']) ?></li>
-                <li><strong>Key:</strong> <code><?= e((string) ($pdfExport['export_key'] ?? '')) ?></code></li>
+                <li><strong>Export ID:</strong> <?= e((string) $displayPdf['id']) ?></li>
+                <li><strong>Key:</strong> <code><?= e((string) ($displayPdf['export_key'] ?? '')) ?></code></li>
                 <li><strong>Format / status:</strong>
                     <span class="type-badge type-badge--pdf">pdf</span>
-                    · <span class="status-badge status-<?= e((string) ($pdfExport['status'] ?? '')) ?>"><?= e((string) ($pdfExport['status'] ?? '')) ?></span>
+                    · <span class="status-badge status-<?= e((string) ($displayPdf['status'] ?? '')) ?>"><?= e((string) ($displayPdf['status'] ?? '')) ?></span>
                 </li>
-                <li><strong>Filename:</strong> <code><?= e((string) ($pdfExport['filename'] ?? '')) ?></code></li>
+                <li><strong>Filename:</strong> <code><?= e((string) ($displayPdf['filename'] ?? '')) ?></code></li>
                 <li><strong>Checksum:</strong> <code class="checksum-display" title="<?= e($pdfChecksum) ?>"><?= e($pdfShort) ?></code></li>
                 <li><strong>Size:</strong> <?= e($pdfSize > 0 ? number_format($pdfSize) . ' B' : '—') ?></li>
-                <li><strong>Template:</strong> <?= e($legacyTemplateLabel) ?> (PDF inherits source HTML styling)</li>
+                <li><strong>Template:</strong>
+                    <span class="template-badge<?= $displayPdfIsStyled ? ' template-badge--styled' : '' ?>">
+                        <?= e($displayPdfIsStyled ? $styledTemplateLabel : $legacyTemplateLabel) ?>
+                    </span>
+                    <?= $displayPdfIsStyled ? ' (from styled HTML)' : ' (legacy HTML)' ?>
+                </li>
             </ul>
-            <p class="export-ready-note">PDF export is ready. Duplicate create is not required.</p>
+            <p class="export-ready-note">Latest PDF shown above. Historical versions remain on the exports list.</p>
             <p>
-                <a class="btn" href="<?= e(url_path('/report-exports/' . (int) $pdfExport['id'])) ?>">View export</a>
-                <a class="btn btn-secondary btn-download" href="<?= e(url_path('/report-exports/' . (int) $pdfExport['id'] . '/download')) ?>">Download PDF</a>
+                <a class="btn" href="<?= e(url_path('/report-exports/' . (int) $displayPdf['id'])) ?>">View export</a>
+                <a class="btn btn-secondary btn-download" href="<?= e(url_path('/report-exports/' . (int) $displayPdf['id'] . '/download')) ?>">Download PDF</a>
             </p>
-            <?php if ($canCreatePdfExport): ?>
-                <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/pdf')) ?>" class="export-idempotent-form">
+            <?php if ($canCreateStyledPdf && is_array($styledHtmlExport) && !is_array($styledPdfExport)): ?>
+                <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/pdf/styled')) ?>" class="export-idempotent-form">
                     <?= $csrf->field() ?>
-                    <button type="submit" class="btn btn-secondary">Re-check PDF export (idempotent)</button>
+                    <button type="submit" class="btn">Create styled PDF from HTML v2</button>
                 </form>
-                <p class="field-hint export-hint">Re-check returns the existing PDF without rewriting the artifact.</p>
+            <?php elseif ($canCreateStyledPdf && is_array($styledPdfExport)): ?>
+                <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/pdf/styled')) ?>" class="export-idempotent-form">
+                    <?= $csrf->field() ?>
+                    <button type="submit" class="btn btn-secondary">Re-check styled PDF (idempotent)</button>
+                </form>
             <?php endif; ?>
             <p class="field-hint export-hint">No public URL.</p>
         <?php endif; ?>

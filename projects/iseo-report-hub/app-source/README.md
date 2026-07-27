@@ -17,8 +17,8 @@
 | Monthly report content | **CRUD MVP** — period-scoped detail/create/edit/archive-by-status; one row per period |
 | Report blocks | **CRUD MVP** — monthly-scoped list/detail/create/edit/archive-by-status; unique parent+block_key |
 | Report snapshots | **Internal MVP** — create/view active snapshot from finalized monthly; checksum idempotency; no public |
-| Report exports | **HTML + PDF MVP (hardened)** — internal HTML artifact + Edge headless PDF; auth download with path/MIME/size/checksum/PDF-magic guards; idempotent; **no** public share |
-| Report styling template | **Code-first default `iseo_default_v1` v1** — future HTML generation uses template renderer; historical exports id 1/2 unchanged; no DB template registry yet |
+| Report exports | **HTML + PDF MVP (hardened) + styled v2** — internal HTML/PDF artifacts; Edge headless PDF; auth download with path/MIME/size/checksum/PDF-magic guards; idempotent; historical v1 preserved; styled v2 via `iseo_default_v1`; **no** public share |
+| Report styling template | **Code-first default `iseo_default_v1` v1** — applied to styled export versions (v2+); historical exports id 1/2 unchanged; no DB template registry yet |
 | Secrets | **None in source** — `.env.example` placeholders only; **no** `.env` / `.env.local` |
 | Runtime sync | Allowlist source → runtime |
 
@@ -81,7 +81,9 @@ Creates one local-only demo client / project / site / reporting_period (`LOCAL_F
 - `GET /report-snapshots/{id}` — immutable snapshot detail (auth; internal-only; no edit/delete/public)
 - `GET /report-snapshots/{id}/exports` — list exports for snapshot (auth; internal-only)
 - `POST /report-snapshots/{id}/exports/html` — create HTML export from snapshot (CSRF; idempotent; admin_owner / seo_lead_reviewer)
+- `POST /report-snapshots/{id}/exports/html/styled` — create styled HTML export version using `iseo_default_v1` (CSRF; idempotent; does not overwrite v1)
 - `POST /report-snapshots/{id}/exports/pdf` — create PDF export from ready HTML artifact via Edge headless (CSRF; idempotent; admin_owner / seo_lead_reviewer)
+- `POST /report-snapshots/{id}/exports/pdf/styled` — create styled PDF from styled HTML v2 (CSRF; idempotent; does not overwrite v1)
 - `GET /report-exports/{id}` — export metadata detail (auth; internal-only; HTML or PDF)
 - `GET /report-exports/{id}/download` — authenticated artifact download (HTML or PDF MIME; no public URL)
 - `POST /monthly-reports/{id}/submit-review` — `in_progress` → `ready_for_review` (CSRF; role-gated)
@@ -127,4 +129,4 @@ No public share token. PDF is internal-only via authenticated download from loca
 
 ## Next phase
 
-**Recommended:** Report Styling Export Version Apply 01 (explicit new HTML/PDF export version using `iseo_default_v1`; no overwrite of v1 artifacts).
+**Recommended:** Report Styling Visual QA 01 (operator visual review of styled HTML/PDF v2 against default template).
