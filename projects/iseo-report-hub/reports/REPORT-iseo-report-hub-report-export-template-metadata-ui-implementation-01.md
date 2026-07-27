@@ -114,7 +114,7 @@ Exact allowlisted files copied to `X:\MARS-Localhost\sites\php\projects\iseo-rep
 |-------|-------|
 | Message | `feat(iseo-report-hub): display export template metadata` |
 | Staging | exact-path `git add` only (allowlisted paths) |
-| Primary commit hash | `PENDING_PRIMARY` |
+| Primary commit hash | `bd64bd03ec02c03592eb127cfc27ed34815aad6f` |
 | Hash-record follow-up | `PENDING_HASH_RECORD` (`docs(iseo-report-hub): record export template metadata ui commit hash`) |
 | Push | **no** |
 
