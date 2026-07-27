@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-27
-**Evidence cutoff:** 2026-07-27 (SITE-002 Run **4.309** / `SITE-002-PROD-EMPTY-CATEGORIES-HITL-TRIAGE-01` — HITL triage for **97** empty candidates; decision sheet ready; baseline remains **1836**)
+**Evidence cutoff:** 2026-07-27 (SITE-002 Run **4.310** / `SITE-002-PROD-NEUTRAL-NEW-CATEGORIES-VISIBILITY-DIAGNOSTIC-01` — neutral empty leaves under **79** are DB+sitemap+HTTP but UI-hidden by product gates; baseline remains **1836**)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Empty Categories HITL Triage 01 (Run 4.309)** — **COMPLETE — AWAIT OPERATOR DECISIONS** · **97** candidates enriched; proposed WAIT **96** / KEEP **1** / DELETE_CAND **0**; decision sheet ready; apply **not** executed; baseline **1836** / `NO_ACTION_REQUIRED` · [HITL triage 4.309](sites/site-002/reports/SITE-002-PROD-EMPTY-CATEGORIES-HITL-TRIAGE-01.md) · [review charter 4.308](sites/site-002/reports/SITE-002-PROD-AMBIGUOUS-EMPTY-CATEGORIES-REVIEW-CHARTER-01.md) · [baseline refresh 4.307](sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-07.md) · [parent 153 delete apply 4.306](sites/site-002/reports/SITE-002-PROD-PARENT-153-DELETE-APPLY-01.md) · [demo delete apply 4.303](sites/site-002/reports/SITE-002-PROD-DEMO-CATEGORY-DELETE-APPLY-01.md) |
+| Current SITE-002 focus | **Neutral New Categories Visibility Diagnostic 01 (Run 4.310)** — **COMPLETE — ROOT CAUSE IDENTIFIED** · **60** empty leaves under root **79** = DB+sitemap+HTTP 200 but **UI sitemap-only** (whitelist + `require_products` + parent `$totalsub > 0`); tech **362** empty hubs intentionally different; operator decision: keep hidden vs parent-page charter · prior HITL **4.309** still awaits delete/keep decisions · baseline **1836** · [visibility diagnostic 4.310](sites/site-002/reports/SITE-002-PROD-NEUTRAL-NEW-CATEGORIES-VISIBILITY-DIAGNOSTIC-01.md) · [HITL triage 4.309](sites/site-002/reports/SITE-002-PROD-EMPTY-CATEGORIES-HITL-TRIAGE-01.md) · [review charter 4.308](sites/site-002/reports/SITE-002-PROD-AMBIGUOUS-EMPTY-CATEGORIES-REVIEW-CHARTER-01.md) · [baseline refresh 4.307](sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-07.md) |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 

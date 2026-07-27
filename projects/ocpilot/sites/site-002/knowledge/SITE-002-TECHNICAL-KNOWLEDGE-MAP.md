@@ -988,6 +988,7 @@ See §6. Per-category PHP profiles control which attributes appear in sidebar an
 - `prepareMegamenuCategories()` for section hubs uses `buildHubChildCards` (Run **4.287**); neutral still requires products; tech shows empty active children
 - Template: `catalog/view/theme/default/template/common/megamenu.twig`
 - Evidence: [REPORT-BZPM-M9.7C-IMAGE-DEPLOY-MEGAMENU-CLEANUP.md](../reports/REPORT-BZPM-M9.7C-IMAGE-DEPLOY-MEGAMENU-CLEANUP.md)
+- **Neutral empty-leaf visibility (Run 4.310):** **60** HITL empty leaves under root **79** are active in DB, listed in sitemap (**1836**), HTTP **200**, but **not** linked from home tiles / `/katalog/` tiles / mega menu / root 79 / parent pages. Causes: (1) neutral curated whitelist + `require_products=true` in `buildHubChildCards(79)`; (2) non-hub `category.php` child loop requires `$totalsub > 0`; (3) candidates are depth 2–3 leaves, not first-level tiles. Tech **362** intentionally differs (empty first-level hubs shown). CSS `.category__view{display:none!important}` is secondary only. Default recommendation: keep current behavior until operator charters parent-page visibility. · [report](../reports/SITE-002-PROD-NEUTRAL-NEW-CATEGORIES-VISIBILITY-DIAGNOSTIC-01.md)
 
 ### PLP Layout (Category V2.x)
 
