@@ -27,7 +27,7 @@
 |-------|-------|
 | **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A/1B + local DB + **auth persistence implemented** + **DB-03 migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** + **Report Preview / Render Implementation 01 complete** + **Report Finalization Charter 01 complete** + **Report Finalization Implementation 01 complete** + **Report Snapshot Charter 01 complete** + **Report Snapshot DB-07 Migration Apply 01 complete** + **Report Snapshot Implementation 01 complete** + **Report Export / PDF Charter 01 complete** + **Report Export DB-08 Migration Apply 01 complete** |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | **Report Export PDF Engine Charter 01 complete** — next recommended: **Report Export PDF Engine Probe 01** |
+| **Active stage** | **Report Export PDF Engine Probe 01 complete** — next recommended: **Report Export PDF Browser Implementation 01** |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -877,7 +877,26 @@
 | **Implementation plan** | [I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-IMPLEMENTATION-PLAN-v0.2.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-IMPLEMENTATION-PLAN-v0.2.md) |
 | **Validation plan** | [I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-VALIDATION-PLAN-v0.2.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-VALIDATION-PLAN-v0.2.md) |
 | **Closeout** | [REPORT-iseo-report-hub-report-export-pdf-engine-charter-01.md](reports/REPORT-iseo-report-hub-report-export-pdf-engine-charter-01.md) |
-| **Next recommended stage** | **I-SEO Report Hub — Report Export PDF Engine Probe 01** |
+| **Next recommended stage** | **I-SEO Report Hub — Report Export PDF Engine Probe 01** — **completed** (see section below) |
+
+---
+
+## Report Export PDF Engine Probe 01 (2026-07-27)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** — read-only environment probe; docs only |
+| **Baseline dependency** | PDF Engine Charter 01 (`e16fc414…` / hash-record `22f2f80e…` / tip `4883cd39…`); HTML Artifact Implementation 01; DB-08; HTML export id **1** ready |
+| **Probe findings** | Edge **AVAILABLE_READY** (`msedge.exe` **150.0.4078.99**); Chrome **AVAILABLE_READY** (**150.0.7871.182**); Chromium standalone **MISSING**; Firefox/Firefox Dev **present** but **NOT_RECOMMENDED_FOR_MVP**; wkhtmltopdf **MISSING**; Composer **2.10.1** present / no project `composer.json`; PHP **8.3.30** + mbstring/gd/intl/dom/xml/iconv/openssl (zip **off**) |
+| **Selected candidate** | **Microsoft Edge** — `C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe` (Chrome alternate) |
+| **HTML / PDF state** | HTML artifact checksum match; **no** `.pdf` under export storage; DB pdf rows **0**; report_exports **1** |
+| **Code / runtime / DB / PDF this wave** | **None** — no app-source; no runtime sync; no DB mutation; no install/download; no PDF file |
+| **Probe result** | [I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-ENGINE-PROBE-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-ENGINE-PROBE-RESULT-v0.1.md) |
+| **Decision v0.2** | [I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-ENGINE-DECISION-v0.2.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-ENGINE-DECISION-v0.2.md) |
+| **Implementation plan v0.3** | [I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-IMPLEMENTATION-PLAN-v0.3.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-IMPLEMENTATION-PLAN-v0.3.md) |
+| **Validation plan v0.3** | [I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-VALIDATION-PLAN-v0.3.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-VALIDATION-PLAN-v0.3.md) |
+| **Closeout** | [REPORT-iseo-report-hub-report-export-pdf-engine-probe-01.md](reports/REPORT-iseo-report-hub-report-export-pdf-engine-probe-01.md) |
+| **Next recommended stage** | **I-SEO Report Hub — Report Export PDF Browser Implementation 01** |
 
 ---
 
@@ -1083,6 +1102,11 @@
 | 183 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-IMPLEMENTATION-PLAN-v0.2.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-IMPLEMENTATION-PLAN-v0.2.md) | PDF implementation plan v0.2 (probe → PDF) |
 | 184 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-VALIDATION-PLAN-v0.2.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-VALIDATION-PLAN-v0.2.md) | PDF validation plan v0.2 (probe + future PDF smoke) |
 | 185 | [reports/REPORT-iseo-report-hub-report-export-pdf-engine-charter-01.md](reports/REPORT-iseo-report-hub-report-export-pdf-engine-charter-01.md) | Report Export PDF Engine charter closeout |
+| 186 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-ENGINE-PROBE-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-ENGINE-PROBE-RESULT-v0.1.md) | PDF Engine Probe result (Edge selected) |
+| 187 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-ENGINE-DECISION-v0.2.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-ENGINE-DECISION-v0.2.md) | PDF engine decision v0.2 (probe-backed Edge) |
+| 188 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-IMPLEMENTATION-PLAN-v0.3.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-IMPLEMENTATION-PLAN-v0.3.md) | PDF implementation plan v0.3 (browser path) |
+| 189 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-VALIDATION-PLAN-v0.3.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-VALIDATION-PLAN-v0.3.md) | PDF validation plan v0.3 |
+| 190 | [reports/REPORT-iseo-report-hub-report-export-pdf-engine-probe-01.md](reports/REPORT-iseo-report-hub-report-export-pdf-engine-probe-01.md) | Report Export PDF Engine Probe closeout |
 
 ---
 
@@ -1127,8 +1151,8 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Report Export PDF Engine Probe 01** — **recommended next** (read-only engine inventory; no install; no PDF by default)
-2. Later: **Report Export PDF Artifact Implementation 01** only if probe selects controllable engine (or operator approves install)
+1. **Report Export PDF Browser Implementation 01** — **recommended next** (Edge allowlisted headless PDF from HTML artifact; no install)
+2. Fallback only if Implementation blocked: operator install approval / Chrome alternate path already documented
 4. Optional: **Report Snapshot Hardening 01** / **Report Snapshot Versioning Charter 01** if multi-role or v2 smoke needed
 5. Optional: **Report Blocks CRUD Hardening 01** if multi-role HTTP smoke is needed
 6. Optional: **Monthly Report Content CRUD Hardening 01** if multi-role HTTP smoke is needed
@@ -1178,7 +1202,8 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **Report Export DB-08 Migration Apply 01 is complete** — `report_exports` table exists; migrations **7**; tables **15**
 - **Report Export HTML Artifact Implementation 01 is complete** — HTML export from snapshot; artifact outside public; auth download; idempotent; smoke 47/47; **no** PDF/public share
 - **Report Export PDF Engine Charter 01 is complete** — engine comparison + probe-first decision; HTML artifact preferred source; **no** code/runtime/DB/PDF/install in charter
-- **Next** = Report Export PDF Engine Probe 01
+- **Report Export PDF Engine Probe 01 is complete** — Edge selected (`msedge.exe` 150.0.4078.99); Chrome alternate; **no** code/runtime/DB/PDF/install in probe
+- **Next** = Report Export PDF Browser Implementation 01
 - **No drag/drop reorder / PDF export / rich text editor / client portal** (runtime)
 - **No autonomous publication**
 - **Website Factory is not runtime owner** — methodology + prototype lane only
