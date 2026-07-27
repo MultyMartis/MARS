@@ -17,7 +17,7 @@
 | Monthly report content | **CRUD MVP** — period-scoped detail/create/edit/archive-by-status; one row per period |
 | Report blocks | **CRUD MVP** — monthly-scoped list/detail/create/edit/archive-by-status; unique parent+block_key |
 | Report snapshots | **Internal MVP** — create/view active snapshot from finalized monthly; checksum idempotency; no public/PDF |
-| Report exports | **Schema only (DB-08)** — `report_exports` table; **no** export rows/files/routes yet |
+| Report exports | **HTML MVP** — internal HTML export from snapshot; auth download; idempotent; **no** PDF/public share |
 | Secrets | **None in source** — `.env.example` placeholders only; **no** `.env` / `.env.local` |
 | Runtime sync | Allowlist source → runtime |
 
@@ -78,6 +78,10 @@ Creates one local-only demo client / project / site / reporting_period (`LOCAL_F
 - `GET /monthly-reports/{id}/snapshot` — active snapshot summary or “no snapshot yet” (auth; internal-only)
 - `POST /monthly-reports/{id}/snapshot` — create snapshot from finalized monthly (CSRF; idempotent on checksum; admin_owner / seo_lead_reviewer)
 - `GET /report-snapshots/{id}` — immutable snapshot detail (auth; internal-only; no edit/delete/public)
+- `GET /report-snapshots/{id}/exports` — list exports for snapshot (auth; internal-only)
+- `POST /report-snapshots/{id}/exports/html` — create HTML export from snapshot (CSRF; idempotent; admin_owner / seo_lead_reviewer)
+- `GET /report-exports/{id}` — export metadata detail (auth; internal-only)
+- `GET /report-exports/{id}/download` — authenticated HTML artifact download (no public URL)
 - `POST /monthly-reports/{id}/submit-review` — `in_progress` → `ready_for_review` (CSRF; role-gated)
 - `POST /monthly-reports/{id}/mark-reviewed` — `ready_for_review` → `reviewed` (CSRF; role-gated)
 - `POST /monthly-reports/{id}/finalize` — `reviewed` → `finalized` when readiness passes (CSRF; sets `finalized_at` if null)

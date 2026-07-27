@@ -170,6 +170,7 @@ $canCreateSnapshot = !empty($canCreateSnapshot);
         </ul>
         <p>
             <a class="btn" href="<?= e(url_path('/report-snapshots/' . (int) $activeSnapshot['id'])) ?>">View snapshot</a>
+            <a class="btn btn-secondary" href="<?= e(url_path('/report-snapshots/' . (int) $activeSnapshot['id'] . '/exports')) ?>">HTML exports</a>
         </p>
     <?php endif; ?>
 </section>

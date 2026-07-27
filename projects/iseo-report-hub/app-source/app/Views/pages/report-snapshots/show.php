@@ -7,6 +7,8 @@ declare(strict_types=1);
 /** @var array<string, mixed>|null $payload */
 /** @var bool $canCreate */
 /** @var string $message */
+/** @var array<string, mixed>|null $htmlExport */
+/** @var bool $canCreateExport */
 /** @var \Iseo\Services\CsrfService $csrf */
 
 $mode = $mode ?? 'detail';
@@ -15,6 +17,8 @@ $snapshot = $snapshot ?? null;
 $payload = $payload ?? null;
 $canCreate = !empty($canCreate);
 $message = (string) ($message ?? '');
+$htmlExport = $htmlExport ?? null;
+$canCreateExport = !empty($canCreateExport);
 
 $monthlyId = 0;
 if (is_array($snapshot) && isset($snapshot['monthly_report_content_id'])) {
@@ -135,6 +139,54 @@ $decodeIds = static function (mixed $raw): array {
         <?php endif; ?>
     <?php endif; ?>
 </section>
+
+<?php if (is_array($snapshot)): ?>
+    <?php
+    $snapshotId = (int) $snapshot['id'];
+    $exportChecksum = is_array($htmlExport) ? (string) ($htmlExport['checksum_sha256'] ?? '') : '';
+    $exportShort = $exportChecksum !== '' ? substr($exportChecksum, 0, 12) . '…' : '—';
+    $exportSize = is_array($htmlExport) && isset($htmlExport['file_size_bytes']) ? (int) $htmlExport['file_size_bytes'] : 0;
+    ?>
+    <section class="panel export-card">
+        <div class="panel-head">
+            <h2>HTML export</h2>
+            <p>
+                <a class="btn btn-secondary" href="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports')) ?>">All exports</a>
+            </p>
+        </div>
+        <p>
+            <span class="internal-only-badge">Internal only</span>
+            <span class="artifact-badge">HTML artifact</span>
+        </p>
+        <?php if (!is_array($htmlExport)): ?>
+            <p class="note">No HTML export yet.</p>
+            <?php if ($canCreateExport): ?>
+                <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/html')) ?>">
+                    <?= $csrf->field() ?>
+                    <button type="submit" class="btn">Create HTML export</button>
+                </form>
+            <?php endif; ?>
+        <?php else: ?>
+            <ul class="facts">
+                <li><strong>Export ID:</strong> <?= e((string) $htmlExport['id']) ?></li>
+                <li><strong>Key:</strong> <code><?= e((string) ($htmlExport['export_key'] ?? '')) ?></code></li>
+                <li><strong>Filename:</strong> <code><?= e((string) ($htmlExport['filename'] ?? '')) ?></code></li>
+                <li><strong>Checksum:</strong> <code class="checksum-display" title="<?= e($exportChecksum) ?>"><?= e($exportShort) ?></code></li>
+                <li><strong>Size:</strong> <?= e($exportSize > 0 ? number_format($exportSize) . ' B' : '—') ?></li>
+            </ul>
+            <p>
+                <a class="btn" href="<?= e(url_path('/report-exports/' . (int) $htmlExport['id'])) ?>">View export</a>
+                <a class="btn btn-secondary btn-download" href="<?= e(url_path('/report-exports/' . (int) $htmlExport['id'] . '/download')) ?>">Download</a>
+            </p>
+            <?php if ($canCreateExport): ?>
+                <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/html')) ?>" class="export-idempotent-form">
+                    <?= $csrf->field() ?>
+                    <button type="submit" class="btn btn-secondary">Re-check / create (idempotent)</button>
+                </form>
+            <?php endif; ?>
+        <?php endif; ?>
+    </section>
+<?php endif; ?>
 
 <?php if ($mode === 'detail' && is_array($snapshot)): ?>
     <section class="panel">

@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Iseo\Controllers;
 
+use Iseo\Services\ReportExportService;
 use Iseo\Services\ReportSnapshotService;
 use Iseo\Support\Response;
 
@@ -14,7 +15,8 @@ final class ReportSnapshotController extends BaseController
         \Iseo\Services\ConfigService $config,
         \Iseo\Services\AuthService $auth,
         \Iseo\Services\CsrfService $csrf,
-        private ReportSnapshotService $snapshots
+        private ReportSnapshotService $snapshots,
+        private ReportExportService $exports
     ) {
         parent::__construct($app, $view, $config, $auth, $csrf);
     }
@@ -36,6 +38,8 @@ final class ReportSnapshotController extends BaseController
             return;
         }
 
+        $exportState = $this->exportStateForSnapshot($result['snapshot'], $user);
+
         $this->render('report-snapshots/show', [
             'pageTitle' => 'Report snapshot — monthly #' . $monthlyReportId,
             'mode' => 'monthly',
@@ -44,6 +48,8 @@ final class ReportSnapshotController extends BaseController
             'payload' => null,
             'canCreate' => !empty($result['can_create']),
             'message' => $result['message'],
+            'htmlExport' => $exportState['htmlExport'],
+            'canCreateExport' => $exportState['canCreateExport'],
         ]);
     }
 
@@ -115,6 +121,8 @@ final class ReportSnapshotController extends BaseController
         $snapshot = $result['snapshot'];
         $title = (string) ($snapshot['title'] ?? ('Snapshot #' . $snapshotId));
 
+        $exportState = $this->exportStateForSnapshot($snapshot, $user);
+
         $this->render('report-snapshots/show', [
             'pageTitle' => 'Snapshot — ' . $title,
             'mode' => 'detail',
@@ -123,7 +131,43 @@ final class ReportSnapshotController extends BaseController
             'payload' => $result['payload'],
             'canCreate' => false,
             'message' => $result['message'],
+            'htmlExport' => $exportState['htmlExport'],
+            'canCreateExport' => $exportState['canCreateExport'],
         ]);
+    }
+
+    /**
+     * @param array<string, mixed>|null $snapshot
+     * @param array{id:int,email:string,name:string,roles:list<string>,authenticated_at:string} $user
+     * @return array{htmlExport:?array<string,mixed>,canCreateExport:bool}
+     */
+    private function exportStateForSnapshot(?array $snapshot, array $user): array
+    {
+        if (!is_array($snapshot)) {
+            return ['htmlExport' => null, 'canCreateExport' => false];
+        }
+
+        $htmlExport = null;
+        $snapshotId = (int) ($snapshot['id'] ?? 0);
+        if ($snapshotId > 0) {
+            try {
+                $htmlExport = $this->exports->findReadyHtmlForSnapshot($snapshotId);
+            } catch (\Throwable) {
+                $htmlExport = null;
+            }
+        }
+
+        $canCreateExport = false;
+        try {
+            $canCreateExport = $this->exports->canCreateExportForSnapshot($snapshot, $user);
+        } catch (\Throwable) {
+            $canCreateExport = false;
+        }
+
+        return [
+            'htmlExport' => $htmlExport,
+            'canCreateExport' => $canCreateExport,
+        ];
     }
 
     /**
