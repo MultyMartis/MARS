@@ -27,7 +27,7 @@
 |-------|-------|
 | **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A/1B + local DB + **auth persistence implemented** + **DB-03 migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** + **Report Preview / Render Implementation 01 complete** + **Report Finalization Charter 01 complete** + **Report Finalization Implementation 01 complete** + **Report Snapshot Charter 01 complete** + **Report Snapshot DB-07 Migration Apply 01 complete** + **Report Snapshot Implementation 01 complete** + **Report Export / PDF Charter 01 complete** + **Report Export DB-08 Migration Apply 01 complete** |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | **Report Styling Visual QA 01 complete** — verdict **PASS_WITH_MINOR_ISSUES** — next recommended: **Report Export Template Metadata DB-09 Charter 01** |
+| **Active stage** | **Report Export Template Metadata DB-09 Charter 01 complete** — Option A nullable columns on `report_exports`; next recommended: **Report Export Template Metadata DB-09 Migration Apply 01** |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -1003,7 +1003,28 @@
 | **Evidence (STORAGE only)** | `X:\AI MARS STORAGE\incoming\iseo-report-hub\styling-visual-qa-01\` |
 | **Result** | [I-SEO-REPORT-HUB-REPORT-STYLING-VISUAL-QA-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-STYLING-VISUAL-QA-RESULT-v0.1.md) |
 | **Closeout** | [REPORT-iseo-report-hub-report-styling-visual-qa-01.md](reports/REPORT-iseo-report-hub-report-styling-visual-qa-01.md) |
-| **Next recommended stage** | **I-SEO Report Hub — Report Export Template Metadata DB-09 Charter 01** |
+| **Next recommended stage** | **I-SEO Report Hub — Report Export Template Metadata DB-09 Charter 01** — **completed** (see section below) |
+
+---
+
+## Report Export Template Metadata DB-09 Charter 01 (2026-07-27)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** (docs/policy only) |
+| **Decision** | **Option A** — nullable template/render metadata columns on `report_exports`; defer `report_templates` registry / client assignment |
+| **Planned columns** | `template_id`, `template_version`, `render_target`, `render_engine`, `render_options_json`, `source_html_export_id`, `metadata_json` (all NULL-able) |
+| **FK** | `source_html_export_id` → `report_exports(id)` **ON DELETE SET NULL** |
+| **Backfill policy** | ids **1–2** remain NULL / not recorded; ids **3–4** may be backfilled to `iseo_default_v1` v**1** (PDF **4** → HTML **3**) only in Apply wave with exact-id/key gates |
+| **Suggested migration file** | `2026_07_27_000008_add_template_metadata_to_report_exports_table.sql` (Apply must verify sequence) |
+| **Mutations this charter** | **none** — no app-source; no runtime; no DB; no SQL/migration file; no artifact change |
+| **DB baseline (read-only)** | migrations **7**; tables **15**; `report_exports` **4** (html **2**, pdf **2**) |
+| **Charter** | [I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-CHARTER-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-CHARTER-v0.1.md) |
+| **Design** | [I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-DESIGN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-DESIGN-v0.1.md) |
+| **Migration plan** | [I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-MIGRATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-MIGRATION-PLAN-v0.1.md) |
+| **Validation plan** | [I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-VALIDATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-VALIDATION-PLAN-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-report-export-template-metadata-db09-charter-01.md](reports/REPORT-iseo-report-hub-report-export-template-metadata-db09-charter-01.md) |
+| **Next recommended stage** | **I-SEO Report Hub — Report Export Template Metadata DB-09 Migration Apply 01** |
 
 ---
 
@@ -1227,6 +1248,13 @@
 | 201 | [reports/REPORT-iseo-report-hub-report-styling-default-template-implementation-01.md](reports/REPORT-iseo-report-hub-report-styling-default-template-implementation-01.md) | Default template implementation closeout |
 | 202 | [product/I-SEO-REPORT-HUB-REPORT-STYLING-EXPORT-VERSION-APPLY-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-STYLING-EXPORT-VERSION-APPLY-RESULT-v0.1.md) | Styled export version apply result |
 | 203 | [reports/REPORT-iseo-report-hub-report-styling-export-version-apply-01.md](reports/REPORT-iseo-report-hub-report-styling-export-version-apply-01.md) | Styled export version apply closeout |
+| 204 | [product/I-SEO-REPORT-HUB-REPORT-STYLING-VISUAL-QA-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-STYLING-VISUAL-QA-RESULT-v0.1.md) | Report Styling Visual QA result |
+| 205 | [reports/REPORT-iseo-report-hub-report-styling-visual-qa-01.md](reports/REPORT-iseo-report-hub-report-styling-visual-qa-01.md) | Report Styling Visual QA closeout |
+| 206 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-CHARTER-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-CHARTER-v0.1.md) | DB-09 export template metadata charter |
+| 207 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-DESIGN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-DESIGN-v0.1.md) | DB-09 design (Option A columns) |
+| 208 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-MIGRATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-MIGRATION-PLAN-v0.1.md) | DB-09 migration plan |
+| 209 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-VALIDATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-DB09-VALIDATION-PLAN-v0.1.md) | DB-09 validation plan |
+| 210 | [reports/REPORT-iseo-report-hub-report-export-template-metadata-db09-charter-01.md](reports/REPORT-iseo-report-hub-report-export-template-metadata-db09-charter-01.md) | DB-09 charter closeout |
 
 ---
 
@@ -1271,8 +1299,9 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Report Export Template Metadata DB-09 Charter 01** — **recommended next**
-2. Optional: **Report Delivery / Public Share Charter 01** (after metadata if needed)
+1. **Report Export Template Metadata DB-09 Migration Apply 01** — **recommended next**
+2. Optional: **Report Export Template Metadata UI Implementation 01** (after Apply)
+3. Optional: **Report Delivery / Public Share Charter 01** (after metadata if needed)
 3. Optional: **Report Snapshot Hardening 01** / **Report Snapshot Versioning Charter 01** if multi-role or v2 smoke needed
 4. Optional: **Report Blocks CRUD Hardening 01** if multi-role HTTP smoke is needed
 5. Optional: **Monthly Report Content CRUD Hardening 01** if multi-role HTTP smoke is needed
@@ -1329,7 +1358,8 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **Report Styling Default Template Implementation 01 is complete** — code-first `iseo_default_v1` v**1**; dry-render 17/17; HTTP 40/40; historical exports id **1**/**2** unchanged; **no** new export rows; **no** public/share
 - **Report Styling Export Version Apply 01 is complete** — styled HTML/PDF v2 (`snapshot-1-html-v2` / `snapshot-1-pdf-v2`); ids **3**/**4**; `report_exports` **4**; v1 unchanged; idempotent; HTTP 55/55; **no** public/share
 - **Report Styling Visual QA 01 is complete** — verdict **PASS_WITH_MINOR_ISSUES**; HTML screenshot + PDF text/integrity; DB/artifacts unchanged; HTTP 35/35; **no** code/runtime/DB mutation
-- **Next** = Report Export Template Metadata DB-09 Charter 01
+- **Report Export Template Metadata DB-09 Charter 01 is complete** — Option A nullable columns on `report_exports`; backfill policy ids 3–4 only; **no** code/runtime/DB/SQL/artifact mutation in charter
+- **Next** = Report Export Template Metadata DB-09 Migration Apply 01
 - **No drag/drop reorder / public PDF share / rich text editor / client portal** (runtime)
 - **No autonomous publication**
 - **Website Factory is not runtime owner** — methodology + prototype lane only
