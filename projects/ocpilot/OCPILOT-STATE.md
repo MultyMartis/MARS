@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-27
-**Evidence cutoff:** 2026-07-27 (SITE-002 Run **4.305** / `SITE-002-PROD-PARENT-153-REVIEW-CHARTER-01` — parent **153** `PARENT_153_DELETE_READY`; Option A physical delete plan ready; apply **not** executed; baseline remains **1837**)
+**Evidence cutoff:** 2026-07-27 (SITE-002 Run **4.306** / `SITE-002-PROD-PARENT-153-DELETE-APPLY-01` — parent **153** physically deleted; 154–170 remain deleted; sitemap **1837→1836**; baseline still **1837**; next = baseline refresh 07)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Parent 153 Review Charter 01 (Run 4.305)** — **COMPLETE — DELETE PLAN READY** · parent **153** empty legacy root (`PARENT_153_DELETE_READY`); Option A physical delete recommended; apply **not** executed; monitor baseline still **1837** · next = parent **153** delete apply / ambiguous empties · [parent 153 review 4.305](sites/site-002/reports/SITE-002-PROD-PARENT-153-REVIEW-CHARTER-01.md) · [baseline refresh 4.304](sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-06.md) · [delete apply 4.303](sites/site-002/reports/SITE-002-PROD-DEMO-CATEGORY-DELETE-APPLY-01.md) · [demo cleanup charter 4.302](sites/site-002/reports/SITE-002-PROD-DEMO-CATALOG-CLEANUP-CHARTER-01.md) |
+| Current SITE-002 focus | **Parent 153 Delete Apply 01 (Run 4.306)** — **COMPLETE — LEGACY PARENT REMOVED** · category **153** physically deleted (**6** rows); 154–170 remain deleted; products **0**; redirects **0**; sitemap **1837→1836**; monitor baseline still **1837** · next = `SITE-002-MONITOR-BASELINE-REFRESH-07` · [parent 153 delete apply 4.306](sites/site-002/reports/SITE-002-PROD-PARENT-153-DELETE-APPLY-01.md) · [parent 153 review 4.305](sites/site-002/reports/SITE-002-PROD-PARENT-153-REVIEW-CHARTER-01.md) · [baseline refresh 4.304](sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-06.md) · [demo delete apply 4.303](sites/site-002/reports/SITE-002-PROD-DEMO-CATEGORY-DELETE-APPLY-01.md) |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 
