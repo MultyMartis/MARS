@@ -27,7 +27,7 @@
 |-------|-------|
 | **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A/1B + local DB + **auth persistence implemented** + **DB-03 migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** + **Report Preview / Render Implementation 01 complete** + **Report Finalization Charter 01 complete** + **Report Finalization Implementation 01 complete** + **Report Snapshot Charter 01 complete** + **Report Snapshot DB-07 Migration Apply 01 complete** + **Report Snapshot Implementation 01 complete** + **Report Export / PDF Charter 01 complete** + **Report Export DB-08 Migration Apply 01 complete** |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | **Report Export Template Metadata UI Implementation 01 complete** — DB-09 metadata read/display + future styled write support; DB/artifacts unchanged; next recommended: **Report Delivery / Public Share Charter 01** |
+| **Active stage** | **Report Delivery / Public Share Charter 01 complete** — MVP = tokenized public share for ready styled PDF only; next recommended: **Report Delivery Public Share DB-10 Migration Apply 01** |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -1064,7 +1064,29 @@
 | **Restrictions** | no schema/migration; no export row mutation; no artifact regen; no public/share; no secrets |
 | **Result** | [I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-UI-IMPLEMENTATION-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-UI-IMPLEMENTATION-RESULT-v0.1.md) |
 | **Closeout** | [REPORT-iseo-report-hub-report-export-template-metadata-ui-implementation-01.md](reports/REPORT-iseo-report-hub-report-export-template-metadata-ui-implementation-01.md) |
-| **Next recommended stage** | **I-SEO Report Hub — Report Delivery / Public Share Charter 01** |
+| **Next recommended stage** | **I-SEO Report Hub — Report Delivery / Public Share Charter 01** — **completed** (see section below) |
+
+---
+
+## Report Delivery / Public Share Charter 01 (2026-07-27)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** — docs/policy only |
+| **MVP decision** | **Option B** — tokenized public share for ready styled PDF exports only |
+| **Shareable policy** | `format=pdf`, status `ready`, `template_id` not null, `render_target=pdf_export`; first local target export id **4**; **no** HTML / legacy v1 in MVP |
+| **Security** | token hash only; plaintext URL once; expiry default 30d; revoke; checksum before stream; no raw path; no public listing; audit events |
+| **Data model** | recommended table `report_export_shares` (DB-10) |
+| **Routes (planned)** | internal create/list/revoke; public `GET /share/report/{token}`; **not implemented** this wave |
+| **Deferred** | client portal; email delivery; one-time links; HTML public share |
+| **Mutations this wave** | **none** — no app-source / runtime / DB / SQL / token / public route / artifact changes |
+| **Charter** | [I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-CHARTER-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-CHARTER-v0.1.md) |
+| **Design** | [I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-DESIGN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-DESIGN-v0.1.md) |
+| **Security model** | [I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-SECURITY-MODEL-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-SECURITY-MODEL-v0.1.md) |
+| **Implementation plan** | [I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-IMPLEMENTATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-IMPLEMENTATION-PLAN-v0.1.md) |
+| **Validation plan** | [I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-VALIDATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-VALIDATION-PLAN-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-report-delivery-public-share-charter-01.md](reports/REPORT-iseo-report-hub-report-delivery-public-share-charter-01.md) |
+| **Next recommended stage** | **I-SEO Report Hub — Report Delivery Public Share DB-10 Migration Apply 01** |
 
 ---
 
@@ -1299,6 +1321,12 @@
 | 212 | [reports/REPORT-iseo-report-hub-report-export-template-metadata-db09-migration-apply-01.md](reports/REPORT-iseo-report-hub-report-export-template-metadata-db09-migration-apply-01.md) | DB-09 migration apply closeout |
 | 213 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-UI-IMPLEMENTATION-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-TEMPLATE-METADATA-UI-IMPLEMENTATION-RESULT-v0.1.md) | Template metadata UI implementation result |
 | 214 | [reports/REPORT-iseo-report-hub-report-export-template-metadata-ui-implementation-01.md](reports/REPORT-iseo-report-hub-report-export-template-metadata-ui-implementation-01.md) | Template metadata UI implementation closeout |
+| 215 | [product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-CHARTER-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-CHARTER-v0.1.md) | Report delivery / public share charter |
+| 216 | [product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-DESIGN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-DESIGN-v0.1.md) | Public share design (lifecycle / routes / UI) |
+| 217 | [product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-SECURITY-MODEL-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-SECURITY-MODEL-v0.1.md) | Public share security model |
+| 218 | [product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-IMPLEMENTATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-IMPLEMENTATION-PLAN-v0.1.md) | Public share implementation plan (DB-10 then impl) |
+| 219 | [product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-VALIDATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-VALIDATION-PLAN-v0.1.md) | Public share validation plan |
+| 220 | [reports/REPORT-iseo-report-hub-report-delivery-public-share-charter-01.md](reports/REPORT-iseo-report-hub-report-delivery-public-share-charter-01.md) | Public share charter closeout |
 
 ---
 
@@ -1343,8 +1371,9 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Report Delivery / Public Share Charter 01** — **recommended next**
-2. Optional: **Report Export Template Metadata Write Smoke 01** (exercise future create writes under controlled charter)
+1. **Report Delivery Public Share DB-10 Migration Apply 01** — **recommended next**
+2. Then: **Report Delivery Public Share Implementation 01**
+3. Optional: **Report Export Template Metadata Write Smoke 01** (exercise future create writes under controlled charter)
 3. Optional: **Report Styling Visual QA Fix 01** (only if operator prioritizes minor QA issues)
 3. Optional: **Report Snapshot Hardening 01** / **Report Snapshot Versioning Charter 01** if multi-role or v2 smoke needed
 4. Optional: **Report Blocks CRUD Hardening 01** if multi-role HTTP smoke is needed
@@ -1405,8 +1434,9 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **Report Export Template Metadata DB-09 Charter 01 is complete** — Option A nullable columns on `report_exports`; backfill policy ids 3–4 only; **no** code/runtime/DB/SQL/artifact mutation in charter
 - **Report Export Template Metadata DB-09 Migration Apply 01 is complete** — migration `000008` applied; columns/indexes/FK present; backfill ids **3–4**; ids **1–2** NULL; migrations **8**; `report_exports` **4**; artifacts unchanged; HTTP 12/12
 - **Report Export Template Metadata UI Implementation 01 is complete** — repository/service/UI DB-first metadata display; future styled create writes metadata (not invoked); DB/artifacts unchanged; HTTP 27/27; **no** public/share
-- **Next** = Report Delivery / Public Share Charter 01
-- **No drag/drop reorder / public PDF share / rich text editor / client portal** (runtime)
+- **Report Delivery / Public Share Charter 01 is complete** — Option B tokenized PDF share MVP; `report_export_shares` + DB-10 then implementation planned; **no** code/runtime/DB/SQL/token/public route/artifact mutation in charter
+- **Next** = Report Delivery Public Share DB-10 Migration Apply 01
+- **No drag/drop reorder / public PDF share runtime / rich text editor / client portal** (runtime; share remains policy-only until DB-10 + implementation)
 - **No autonomous publication**
 - **Website Factory is not runtime owner** — methodology + prototype lane only
 - **Static demo v0.4 is UX reference only** — not implementation
