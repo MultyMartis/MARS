@@ -10,7 +10,7 @@
 | WordPress | **Not used** as runtime or source of truth |
 | Framework / Composer | **None** — plain PHP 8.3 |
 | Database | Local `iseo_report_hub_dev` via runtime `.env.local` (not in Git) |
-| Migrations | Core + reporting_periods + weekly_checkpoints + monthly_report_contents + report_blocks + report_snapshots + report_exports (DB-08) + export template/render metadata columns (DB-09) applied (separate waves) |
+| Migrations | Core + reporting_periods + weekly_checkpoints + monthly_report_contents + report_blocks + report_snapshots + report_exports (DB-08) + export template/render metadata columns (DB-09) + report_export_shares (DB-10) applied (separate waves) |
 | Auth | **DB-backed** — `password_verify` + roles + audit |
 | Reporting periods | **CRUD MVP** — list/detail/create/edit/archive-by-status |
 | Weekly checkpoints | **CRUD MVP** — period-scoped list/detail/create/edit/skip-or-archive-by-status |
@@ -20,6 +20,7 @@
 | Report exports | **HTML + PDF MVP (hardened) + styled v2** — internal HTML/PDF artifacts; Edge headless PDF; auth download with path/MIME/size/checksum/PDF-magic guards; idempotent; historical v1 preserved; styled v2 via `iseo_default_v1`; **no** public share |
 | Report styling template | **Code-first default `iseo_default_v1` v1** — applied to styled export versions (v2+); historical exports id 1/2 unchanged; no DB template registry yet |
 | Export template metadata (DB-09) | **Nullable columns on `report_exports`** — `template_id` / `template_version` / `render_target` / `render_engine` / `render_options_json` / `source_html_export_id` / `metadata_json`; backfill ids **3–4** only; ids **1–2** NULL; **UI/repository/service read + future write support implemented** |
+| Public share (DB-10) | **Table `report_export_shares` applied** — token_hash unique; FKs to exports/users; status CHECK; **0** share rows; **no** token/service/public route yet |
 | Secrets | **None in source** — `.env.example` placeholders only; **no** `.env` / `.env.local` |
 | Runtime sync | Allowlist source → runtime |
 

@@ -27,7 +27,7 @@
 |-------|-------|
 | **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A/1B + local DB + **auth persistence implemented** + **DB-03 migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** + **Report Preview / Render Implementation 01 complete** + **Report Finalization Charter 01 complete** + **Report Finalization Implementation 01 complete** + **Report Snapshot Charter 01 complete** + **Report Snapshot DB-07 Migration Apply 01 complete** + **Report Snapshot Implementation 01 complete** + **Report Export / PDF Charter 01 complete** + **Report Export DB-08 Migration Apply 01 complete** |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | **Report Delivery / Public Share Charter 01 complete** — MVP = tokenized public share for ready styled PDF only; next recommended: **Report Delivery Public Share DB-10 Migration Apply 01** |
+| **Active stage** | **Report Delivery Public Share DB-10 Migration Apply 01 complete** — `report_export_shares` table exists (0 rows); next recommended: **Report Delivery Public Share Implementation 01** |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -1086,7 +1086,28 @@
 | **Implementation plan** | [I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-IMPLEMENTATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-IMPLEMENTATION-PLAN-v0.1.md) |
 | **Validation plan** | [I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-VALIDATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-VALIDATION-PLAN-v0.1.md) |
 | **Closeout** | [REPORT-iseo-report-hub-report-delivery-public-share-charter-01.md](reports/REPORT-iseo-report-hub-report-delivery-public-share-charter-01.md) |
-| **Next recommended stage** | **I-SEO Report Hub — Report Delivery Public Share DB-10 Migration Apply 01** |
+| **Next recommended stage** | **I-SEO Report Hub — Report Delivery Public Share DB-10 Migration Apply 01** — **completed** (see section below) |
+
+---
+
+## Report Delivery Public Share DB-10 Migration Apply 01 (2026-07-27)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** — local DB migration only |
+| **Migration** | `2026_07_27_000009_create_report_export_shares_table.sql` |
+| **Checksum** | `384fbb48cccc55989035056c899af701f0dbb49e2c362b44a23acaf656ba82d3` |
+| **Table** | `report_export_shares` — 16 columns; unique `token_hash`; indexes export/status, expires/status, created_by, revoked_by |
+| **FKs** | `report_export_id` → `report_exports(id)` RESTRICT; `created_by`/`revoked_by` → `users(id)` SET NULL |
+| **CHECK** | `status` IN (`active`,`revoked`,`expired`) |
+| **Share rows** | **0** (no tokens created) |
+| **DB final** | migrations **9**; tables **16**; `report_exports` **4** unchanged; business counts unchanged |
+| **Artifacts** | v1/v2 HTML/PDF checksums **unchanged**; `%PDF-` PASS; no new artifacts |
+| **Smoke** | **13/13 PASS** — health; auth exports/details/downloads 1–4; `/share` 404; `/share/report/test-token` 404 |
+| **Restrictions** | local DB only; no app code; no share row/token; no public route; no export/artifact mutation; no package install; no secrets |
+| **Result** | [I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-DB10-MIGRATION-APPLY-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-DB10-MIGRATION-APPLY-RESULT-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-report-delivery-public-share-db10-migration-apply-01.md](reports/REPORT-iseo-report-hub-report-delivery-public-share-db10-migration-apply-01.md) |
+| **Next recommended stage** | **I-SEO Report Hub — Report Delivery Public Share Implementation 01** |
 
 ---
 
@@ -1327,6 +1348,8 @@
 | 218 | [product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-IMPLEMENTATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-IMPLEMENTATION-PLAN-v0.1.md) | Public share implementation plan (DB-10 then impl) |
 | 219 | [product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-VALIDATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-VALIDATION-PLAN-v0.1.md) | Public share validation plan |
 | 220 | [reports/REPORT-iseo-report-hub-report-delivery-public-share-charter-01.md](reports/REPORT-iseo-report-hub-report-delivery-public-share-charter-01.md) | Public share charter closeout |
+| 221 | [product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-DB10-MIGRATION-APPLY-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-DB10-MIGRATION-APPLY-RESULT-v0.1.md) | DB-10 public share migration apply result |
+| 222 | [reports/REPORT-iseo-report-hub-report-delivery-public-share-db10-migration-apply-01.md](reports/REPORT-iseo-report-hub-report-delivery-public-share-db10-migration-apply-01.md) | DB-10 public share migration apply closeout |
 
 ---
 
@@ -1371,9 +1394,8 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Report Delivery Public Share DB-10 Migration Apply 01** — **recommended next**
-2. Then: **Report Delivery Public Share Implementation 01**
-3. Optional: **Report Export Template Metadata Write Smoke 01** (exercise future create writes under controlled charter)
+1. **Report Delivery Public Share Implementation 01** — **recommended next**
+2. Optional: **Report Export Template Metadata Write Smoke 01** (exercise future create writes under controlled charter)
 3. Optional: **Report Styling Visual QA Fix 01** (only if operator prioritizes minor QA issues)
 3. Optional: **Report Snapshot Hardening 01** / **Report Snapshot Versioning Charter 01** if multi-role or v2 smoke needed
 4. Optional: **Report Blocks CRUD Hardening 01** if multi-role HTTP smoke is needed
@@ -1396,7 +1418,7 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **One local admin user exists** — no user management UI; no password reset
 - **Reporting Period CRUD MVP is implemented** — internal list/detail/create/edit/archive-by-status; CSRF; no DELETE; demo + smoke periods only
 - **Runtime has synced auth + CRUD code** at `X:\MARS-Localhost\sites\php\projects\iseo-report-hub`
-- **Local MySQL DB `iseo_report_hub_dev` exists** with core auth/org tables + **`reporting_periods`** (DB-03) + **`weekly_checkpoints`** (DB-04) + **`monthly_report_contents`** (DB-05) + **`report_blocks`** (DB-06) + **`report_snapshots`** (DB-07) + **`report_exports`** (DB-08 + DB-09 template metadata; migrations **8**; tables **15**; active snapshot **1**; HTML exports **2**; PDF exports **2**)
+- **Local MySQL DB `iseo_report_hub_dev` exists** with core auth/org tables + **`reporting_periods`** (DB-03) + **`weekly_checkpoints`** (DB-04) + **`monthly_report_contents`** (DB-05) + **`report_blocks`** (DB-06) + **`report_snapshots`** (DB-07) + **`report_exports`** (DB-08 + DB-09 template metadata) + **`report_export_shares`** (DB-10 empty; migrations **9**; tables **16**; active snapshot **1**; HTML exports **2**; PDF exports **2**; share rows **0**)
 - **Local fixture + CRUD smoke** — demo client/project/site **1/1/1**; reporting_periods **2** (`2026-07` fixture + `2026-08` smoke archived); weekly_checkpoints **4** (W1–W3 fixture + W4 smoke `skipped`, `LOCAL_FIXTURE_ONLY`); monthly_report_contents **1** (demo for `2026-07`, status `in_progress`, `LOCAL_FIXTURE_ONLY`); report_blocks **6** (fixture + smoke `risks_and_blockers` under monthly id **1**, `LOCAL_FIXTURE_ONLY`)
 - **Runtime `.env.local` exists** (outside Git); source keeps placeholders only
 - **Versioned source of truth is `app-source/`** — runtime remains Localhost deploy target outside monorepo
@@ -1435,8 +1457,9 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **Report Export Template Metadata DB-09 Migration Apply 01 is complete** — migration `000008` applied; columns/indexes/FK present; backfill ids **3–4**; ids **1–2** NULL; migrations **8**; `report_exports` **4**; artifacts unchanged; HTTP 12/12
 - **Report Export Template Metadata UI Implementation 01 is complete** — repository/service/UI DB-first metadata display; future styled create writes metadata (not invoked); DB/artifacts unchanged; HTTP 27/27; **no** public/share
 - **Report Delivery / Public Share Charter 01 is complete** — Option B tokenized PDF share MVP; `report_export_shares` + DB-10 then implementation planned; **no** code/runtime/DB/SQL/token/public route/artifact mutation in charter
-- **Next** = Report Delivery Public Share DB-10 Migration Apply 01
-- **No drag/drop reorder / public PDF share runtime / rich text editor / client portal** (runtime; share remains policy-only until DB-10 + implementation)
+- **Report Delivery Public Share DB-10 Migration Apply 01 is complete** — migration `000009` applied; `report_export_shares` exists; share rows **0**; migrations **9**; tables **16**; artifacts unchanged; HTTP 13/13; **no** token/public route/app code
+- **Next** = Report Delivery Public Share Implementation 01
+- **No drag/drop reorder / public PDF share runtime / rich text editor / client portal** (runtime; share table exists; token/route/service remain unimplemented)
 - **No autonomous publication**
 - **Website Factory is not runtime owner** — methodology + prototype lane only
 - **Static demo v0.4 is UX reference only** — not implementation
