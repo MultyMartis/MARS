@@ -94,7 +94,7 @@ This charter wave: docs-only; no styling smoke execution beyond read-only artifa
 
 - exact-path git add: allowlisted docs only (in clean worktree)
 - commit message: `docs(iseo-report-hub): add report styling template charter`
-- commit hash: `PENDING_PRIMARY_HASH`
+- commit hash: `f7d21ac7a1fe75699074a9829c41483419bd8433`
 - hash-record follow-up (report only): `PENDING_HASH_RECORD`
 - push: **no**
 
