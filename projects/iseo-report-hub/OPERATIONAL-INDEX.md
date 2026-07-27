@@ -27,7 +27,7 @@
 |-------|-------|
 | **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A/1B + local DB + **auth persistence implemented** + **DB-03 migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** + **Report Preview / Render Implementation 01 complete** + **Report Finalization Charter 01 complete** + **Report Finalization Implementation 01 complete** + **Report Snapshot Charter 01 complete** + **Report Snapshot DB-07 Migration Apply 01 complete** + **Report Snapshot Implementation 01 complete** + **Report Export / PDF Charter 01 complete** + **Report Export DB-08 Migration Apply 01 complete** |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | **Report Styling Export Version Apply 01 complete** — next recommended: **Report Styling Visual QA 01** |
+| **Active stage** | **Report Styling Visual QA 01 complete** — verdict **PASS_WITH_MINOR_ISSUES** — next recommended: **Report Export Template Metadata DB-09 Charter 01** |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -984,7 +984,26 @@
 | **Restrictions** | no schema change; no v1 overwrite; no public share; no package install; no push |
 | **Result** | [I-SEO-REPORT-HUB-REPORT-STYLING-EXPORT-VERSION-APPLY-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-STYLING-EXPORT-VERSION-APPLY-RESULT-v0.1.md) |
 | **Closeout** | [REPORT-iseo-report-hub-report-styling-export-version-apply-01.md](reports/REPORT-iseo-report-hub-report-styling-export-version-apply-01.md) |
-| **Next recommended stage** | **I-SEO Report Hub — Report Styling Visual QA 01** |
+| **Next recommended stage** | **I-SEO Report Hub — Report Styling Visual QA 01** — **completed** (see section below) |
+
+---
+
+## Report Styling Visual QA 01 (2026-07-27)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** |
+| **Verdict** | **PASS_WITH_MINOR_ISSUES** |
+| **Styled HTML v2** | inspected — structural PASS; Edge screenshot under STORAGE |
+| **Styled PDF v2** | inspected — `%PDF` PASS; **3** pages; `pypdf` text PASS; pixel screenshot inconclusive |
+| **Artifact checksums** | **unchanged** (v1 HTML `c194c62b…` / v1 PDF `707e72d6…` / v2 HTML `27a6eee6…` / v2 PDF `a8c4d61c…`) |
+| **DB** | **unchanged** — migrations **7**; tables **15**; `report_exports` **4** (html **2**, pdf **2**); no new rows |
+| **HTTP** | read-only smoke **35/35 PASS** (`127.0.0.1:8091` temporary PHP built-in) |
+| **Issues** | MINOR: Edge PDF print footer leaks local `file:///X:/...` path; PDF badge still “HTML ARTIFACT”; some raw block keys — no BLOCKER/MAJOR |
+| **Evidence (STORAGE only)** | `X:\AI MARS STORAGE\incoming\iseo-report-hub\styling-visual-qa-01\` |
+| **Result** | [I-SEO-REPORT-HUB-REPORT-STYLING-VISUAL-QA-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-STYLING-VISUAL-QA-RESULT-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-report-styling-visual-qa-01.md](reports/REPORT-iseo-report-hub-report-styling-visual-qa-01.md) |
+| **Next recommended stage** | **I-SEO Report Hub — Report Export Template Metadata DB-09 Charter 01** |
 
 ---
 
@@ -1252,18 +1271,18 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Report Styling Visual QA 01** — **recommended next** (operator visual review of styled HTML/PDF v2)
-2. Optional later: **Report Export Template Metadata DB-09 Charter 01** if durable template columns/registry needed
+1. **Report Export Template Metadata DB-09 Charter 01** — **recommended next**
+2. Optional: **Report Delivery / Public Share Charter 01** (after metadata if needed)
 3. Optional: **Report Snapshot Hardening 01** / **Report Snapshot Versioning Charter 01** if multi-role or v2 smoke needed
-5. Optional: **Report Blocks CRUD Hardening 01** if multi-role HTTP smoke is needed
-6. Optional: **Monthly Report Content CRUD Hardening 01** if multi-role HTTP smoke is needed
-7. Optional: **Weekly Checkpoints CRUD Hardening 01** if multi-role HTTP smoke is needed
-8. Optional: **Reporting Period CRUD Hardening 01** if account-manager edit / multi-role smoke is needed
-9. Optional parallel: **v0.5 demo corrections** from backlog (UX only; not product runtime)
-10. **SEO specialist feedback** — still **deferred** until operator opens feedback charter
-11. Work dictionary extraction/sanitization (из Nikita materials; **exclude** credential sheet)
-12. MVP implementation phases 2–11 per implementation charter (Anton / i-SEO)
-13. Later: n8n/API/AI integration (events only; human approval gates); public publish from snapshots
+4. Optional: **Report Blocks CRUD Hardening 01** if multi-role HTTP smoke is needed
+5. Optional: **Monthly Report Content CRUD Hardening 01** if multi-role HTTP smoke is needed
+6. Optional: **Weekly Checkpoints CRUD Hardening 01** if multi-role HTTP smoke is needed
+7. Optional: **Reporting Period CRUD Hardening 01** if account-manager edit / multi-role smoke is needed
+8. Optional parallel: **v0.5 demo corrections** from backlog (UX only; not product runtime)
+9. **SEO specialist feedback** — still **deferred** until operator opens feedback charter
+10. Work dictionary extraction/sanitization (из Nikita materials; **exclude** credential sheet)
+11. MVP implementation phases 2–11 per implementation charter (Anton / i-SEO)
+12. Later: n8n/API/AI integration (events only; human approval gates); public publish from snapshots
 
 **Historical note:** Static demos v0.1–v0.4, report content architecture, and Product Architecture Layer 02 are complete as documentation/demo baselines. Platform decision (PHP+MySQL) supersedes WordPress-as-runtime assumptions for forward work. Phase 0 scaffold + Phase 1A skeleton + Phase 1B source→runtime sync + Apache vhost + Windows `hosts` for `iseo-report-hub.test` are done (direct domain re-smoke PASS). Local DB `iseo_report_hub_dev` is **created**; first migration (DB-01 + minimal DB-02) is **applied**. Auth persistence + local admin bootstrap are **implemented** (DB-backed login; one local admin). DB-03 reporting periods migration is **applied**. Local fixture apply is **complete** (demo client/project/site + period `2026-07`). Reporting Period CRUD **implementation** is complete (internal list/detail/create/edit/archive-by-status; smoke period `2026-08` archived; counts clients/projects/sites/reporting_periods **1/1/1/2**). Weekly Checkpoints DB-04 **migration apply** is complete (`weekly_checkpoints` + local W1–W3 smoke). Weekly Checkpoints CRUD **implementation** is complete (period-scoped list/detail/create/edit/skip-or-archive; W4 smoke id **7** skipped; weekly_checkpoints **4**). Monthly Report Content DB-05 **migration apply** is complete (`monthly_report_contents` + 1 local demo row). Monthly Report Content CRUD **implementation** is complete (period-scoped detail/create/edit/archive-by-status; demo id **1** status `in_progress`; monthly_report_contents **1**). Report Blocks DB-06 **migration apply** is complete (`report_blocks` + 5 local fixture blocks; migrations **5** / tables **13**). Report Blocks CRUD **Charter 01** is complete (docs/policy only; next = Report Blocks CRUD Implementation 01). `app-source/` remains the versioned SoT; runtime is Localhost deploy target.
 
@@ -1309,7 +1328,8 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **Report Styling / Client Template Charter 01 is complete** — design/implementation/validation plans; MVP `iseo_default_v1` v**1**; **no** code/runtime/DB/artifact mutation in charter
 - **Report Styling Default Template Implementation 01 is complete** — code-first `iseo_default_v1` v**1**; dry-render 17/17; HTTP 40/40; historical exports id **1**/**2** unchanged; **no** new export rows; **no** public/share
 - **Report Styling Export Version Apply 01 is complete** — styled HTML/PDF v2 (`snapshot-1-html-v2` / `snapshot-1-pdf-v2`); ids **3**/**4**; `report_exports` **4**; v1 unchanged; idempotent; HTTP 55/55; **no** public/share
-- **Next** = Report Styling Visual QA 01
+- **Report Styling Visual QA 01 is complete** — verdict **PASS_WITH_MINOR_ISSUES**; HTML screenshot + PDF text/integrity; DB/artifacts unchanged; HTTP 35/35; **no** code/runtime/DB mutation
+- **Next** = Report Export Template Metadata DB-09 Charter 01
 - **No drag/drop reorder / public PDF share / rich text editor / client portal** (runtime)
 - **No autonomous publication**
 - **Website Factory is not runtime owner** — methodology + prototype lane only
