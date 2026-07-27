@@ -126,8 +126,8 @@ no production DB; no real client data; no credentials/password/hash/session in r
 | Message | `feat(iseo-report-hub): add pdf browser report export` |
 | Staging | exact-path `git add` allowlist only |
 | Primary commit | `ddea70ba803cb196444377d43d9673633bbde7b5` |
-| Hash-record follow-up | `c39809060b618e0eaa380b723e5092abddebb0eb` — `docs(iseo-report-hub): record pdf browser report export commit hash` |
-| HEAD verification | branch HEAD `c39809060b618e0eaa380b723e5092abddebb0eb` (hash-record); parent primary `ddea70ba803cb196444377d43d9673633bbde7b5` |
+| Hash-record follow-up | `c39809060b618e0eaa380b723e5092abddebb0eb` then tip fill `c8a733444a884c99f70086f3cef3016d732b3057` — `docs(iseo-report-hub): record pdf browser report export commit hash` |
+| HEAD verification | primary `ddea70ba803cb196444377d43d9673633bbde7b5`; hash-record `c39809060b618e0eaa380b723e5092abddebb0eb`; tip fill `c8a733444a884c99f70086f3cef3016d732b3057`; final HEAD after this docs tip clarification recorded via update-ref |
 | Push | **no** |
 
 ## 13. SAFE UNKNOWN
@@ -169,7 +169,7 @@ I-SEO Report Hub — Report Export PDF Hardening 01
 | Action | Done? |
 |--------|-------|
 | exact-path git add | yes (worktree) |
-| commit | yes (primary + hash-record) |
+| commit | yes (primary + hash-record + tip fills) |
 | push | **no** |
 | fetch/pull | no |
 | checkout/update-ref | yes — worktree commit aligned to `mars/canonical-post-recovery` via update-ref |
