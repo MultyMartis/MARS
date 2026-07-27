@@ -147,7 +147,7 @@ No new artifacts. Outside `public/` and Git.
 | Staged list | see section 14 / post-commit verification |
 | Primary commit hash | `b68c41bd14118f887e388a9bddd33e1fc0a451c6` |
 | Primary message | `feat(iseo-report-hub): add public share migration` |
-| Hash-record commit | `PENDING_HASH_RECORD` — `docs(iseo-report-hub): record public share migration commit hash` |
+| Hash-record commit | `4d4b63cf3987d65d35bbe35f5bcfa020a99f48b6` — `docs(iseo-report-hub): record public share migration commit hash` |
 | HEAD verification | after commits |
 | Push | **no** |
 
