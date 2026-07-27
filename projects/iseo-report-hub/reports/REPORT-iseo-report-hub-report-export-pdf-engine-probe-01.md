@@ -5,7 +5,8 @@
 **Created:** 2026-07-27  
 **Authority:** Operator I-SEO Report Hub Report Export PDF Engine Probe 01  
 **Primary commit:** `90e30e3069a718b4e3e1d51cadc6efc1475f340a`  
-**Hash-record commit:** `b89bc6157865c0daa6b3767da0cc04de4a15911b`
+**Hash-record commit:** `b89bc6157865c0daa6b3767da0cc04de4a15911b`  
+**Tip / self-hash fill:** `1acdc8842d34853ff3edd87e3e4cfbd2cdf007e7`
 
 ---
 
@@ -150,6 +151,7 @@ v0.1 Decision / v0.2 Implementation / v0.2 Validation plans **not** modified.
 | Primary commit hash | `90e30e3069a718b4e3e1d51cadc6efc1475f340a` |
 | Hash-record message | `docs(iseo-report-hub): record pdf engine probe commit hash` |
 | Hash-record commit hash | `b89bc6157865c0daa6b3767da0cc04de4a15911b` |
+| Tip / self-hash fill | `1acdc8842d34853ff3edd87e3e4cfbd2cdf007e7` |
 | Push | **no** |
 
 ---
@@ -184,14 +186,14 @@ v0.1 Decision / v0.2 Implementation / v0.2 Validation plans **not** modified.
 | Action | Done? |
 |--------|-------|
 | exact-path git add | **yes** (worktree) |
-| commit | **yes** (primary + hash-record) |
+| commit | **yes** (primary `90e30e30` + hash-record `b89bc615` + tip/self-hash fill `1acdc884`) |
 | push | **no** |
 | fetch | **no** |
 | pull | **no** |
-| checkout / update-ref | **yes** — `git update-ref refs/heads/mars/canonical-post-recovery <new-tip>` from worktree after commits; scoped restore on main for i-SEO docs if needed |
+| checkout / update-ref | **yes** — `git update-ref refs/heads/mars/canonical-post-recovery 1acdc884…`; scoped `git checkout TIP -- <allowlisted>` then `git restore --staged` on main |
 | reset | **no** |
-| restore | **scoped only** on main for allowlisted i-SEO docs if required to align working tree |
+| restore | **scoped staged unstage only** on main for allowlisted i-SEO docs |
 | clean | **no** |
 | stash | **no** |
 | broad git add | **no** |
-| clean temporary worktree | used `X:\AI MARS STORAGE\git-sync-iseo-pdf-engine-probe-01\repo`; remove after update-ref when safe |
+| clean temporary worktree | used then removed: `X:\AI MARS STORAGE\git-sync-iseo-pdf-engine-probe-01\repo` |
