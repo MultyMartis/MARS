@@ -27,7 +27,7 @@
 |-------|-------|
 | **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A/1B + local DB + **auth persistence implemented** + **DB-03 migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** + **Report Preview / Render Implementation 01 complete** + **Report Finalization Charter 01 complete** + **Report Finalization Implementation 01 complete** + **Report Snapshot Charter 01 complete** + **Report Snapshot DB-07 Migration Apply 01 complete** + **Report Snapshot Implementation 01 complete** + **Report Export / PDF Charter 01 complete** + **Report Export DB-08 Migration Apply 01 complete** |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | **Report Export PDF Hardening 01 complete** — next recommended: **Report Styling / Client Template Charter 01** |
+| **Active stage** | **Report Styling / Client Template Charter 01 complete** — next recommended: **Report Styling Default Template Implementation 01** |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -929,7 +929,25 @@
 | **Restrictions** | no schema/db-migrate; no export/business row mutation; no HTML/PDF regeneration; no public/share; no package install; no push |
 | **Result** | [I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-HARDENING-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-HARDENING-RESULT-v0.1.md) |
 | **Closeout** | [REPORT-iseo-report-hub-report-export-pdf-hardening-01.md](reports/REPORT-iseo-report-hub-report-export-pdf-hardening-01.md) |
-| **Next recommended stage** | **I-SEO Report Hub — Report Styling / Client Template Charter 01** |
+| **Next recommended stage** | **I-SEO Report Hub — Report Styling / Client Template Charter 01** — **completed** (see section below) |
+
+---
+
+## Report Styling / Client Template Charter 01 (2026-07-27)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** — docs/policy only |
+| **MVP template** | code-first `iseo_default_v1` version **1** (no DB registry yet) |
+| **Branding MVP** | i-SEO default text brand only; no logo upload / client CSS DB |
+| **Immutability** | snapshot content immutable; existing HTML id **1** / PDF id **2** not silently overwritten |
+| **Charter mutations** | **none** — no app-source; no runtime; no DB; no artifact regeneration; no new export rows |
+| **Charter** | [I-SEO-REPORT-HUB-REPORT-STYLING-CLIENT-TEMPLATE-CHARTER-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-STYLING-CLIENT-TEMPLATE-CHARTER-v0.1.md) |
+| **Design** | [I-SEO-REPORT-HUB-REPORT-STYLING-CLIENT-TEMPLATE-DESIGN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-STYLING-CLIENT-TEMPLATE-DESIGN-v0.1.md) |
+| **Implementation plan** | [I-SEO-REPORT-HUB-REPORT-STYLING-CLIENT-TEMPLATE-IMPLEMENTATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-STYLING-CLIENT-TEMPLATE-IMPLEMENTATION-PLAN-v0.1.md) |
+| **Validation plan** | [I-SEO-REPORT-HUB-REPORT-STYLING-CLIENT-TEMPLATE-VALIDATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-STYLING-CLIENT-TEMPLATE-VALIDATION-PLAN-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-report-styling-client-template-charter-01.md](reports/REPORT-iseo-report-hub-report-styling-client-template-charter-01.md) |
+| **Next recommended stage** | **I-SEO Report Hub — Report Styling Default Template Implementation 01** |
 
 ---
 
@@ -1144,6 +1162,11 @@
 | 192 | [reports/REPORT-iseo-report-hub-report-export-pdf-browser-implementation-01.md](reports/REPORT-iseo-report-hub-report-export-pdf-browser-implementation-01.md) | Report Export PDF Browser Implementation closeout |
 | 193 | [product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-HARDENING-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-EXPORT-PDF-HARDENING-RESULT-v0.1.md) | Report Export PDF Hardening result |
 | 194 | [reports/REPORT-iseo-report-hub-report-export-pdf-hardening-01.md](reports/REPORT-iseo-report-hub-report-export-pdf-hardening-01.md) | Report Export PDF Hardening closeout |
+| 195 | [product/I-SEO-REPORT-HUB-REPORT-STYLING-CLIENT-TEMPLATE-CHARTER-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-STYLING-CLIENT-TEMPLATE-CHARTER-v0.1.md) | Report Styling / Client Template charter |
+| 196 | [product/I-SEO-REPORT-HUB-REPORT-STYLING-CLIENT-TEMPLATE-DESIGN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-STYLING-CLIENT-TEMPLATE-DESIGN-v0.1.md) | Report Styling / Client Template design |
+| 197 | [product/I-SEO-REPORT-HUB-REPORT-STYLING-CLIENT-TEMPLATE-IMPLEMENTATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-STYLING-CLIENT-TEMPLATE-IMPLEMENTATION-PLAN-v0.1.md) | Report Styling Default Template implementation plan |
+| 198 | [product/I-SEO-REPORT-HUB-REPORT-STYLING-CLIENT-TEMPLATE-VALIDATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-STYLING-CLIENT-TEMPLATE-VALIDATION-PLAN-v0.1.md) | Report Styling / Client Template validation plan |
+| 199 | [reports/REPORT-iseo-report-hub-report-styling-client-template-charter-01.md](reports/REPORT-iseo-report-hub-report-styling-client-template-charter-01.md) | Report Styling / Client Template charter closeout |
 
 ---
 
@@ -1188,9 +1211,9 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Report Export PDF Browser Implementation 01** — **recommended next** (Edge allowlisted headless PDF from HTML artifact; no install)
-2. Fallback only if Implementation blocked: operator install approval / Chrome alternate path already documented
-4. Optional: **Report Snapshot Hardening 01** / **Report Snapshot Versioning Charter 01** if multi-role or v2 smoke needed
+1. **Report Styling Default Template Implementation 01** — **recommended next** (code-first `iseo_default_v1` / version `1`; no silent overwrite of existing exports; no DB-09 required)
+2. Optional later: **Report Export Template Metadata DB-09 Charter 01** if durable template columns/registry needed
+3. Optional: **Report Snapshot Hardening 01** / **Report Snapshot Versioning Charter 01** if multi-role or v2 smoke needed
 5. Optional: **Report Blocks CRUD Hardening 01** if multi-role HTTP smoke is needed
 6. Optional: **Monthly Report Content CRUD Hardening 01** if multi-role HTTP smoke is needed
 7. Optional: **Weekly Checkpoints CRUD Hardening 01** if multi-role HTTP smoke is needed
@@ -1241,7 +1264,9 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **Report Export PDF Engine Charter 01 is complete** — engine comparison + probe-first decision; HTML artifact preferred source; **no** code/runtime/DB/PDF/install in charter
 - **Report Export PDF Engine Probe 01 is complete** — Edge selected (`msedge.exe` 150.0.4078.99); Chrome alternate; **no** code/runtime/DB/PDF/install in probe
 - **Report Export PDF Browser Implementation 01 is complete** — Edge headless PDF from HTML artifact; export id **2** `snapshot-1-pdf-v1`; auth download; idempotent; smoke 39/39; **no** public/share/install
-- **Next** = Report Export PDF Hardening 01
+- **Report Export PDF Hardening 01 is complete** — path/MIME/size/checksum/`%PDF`/idempotency/download hardening; smoke 67/67; `report_exports` **2** unchanged; **no** public/share/install
+- **Report Styling / Client Template Charter 01 is complete** — design/implementation/validation plans; MVP `iseo_default_v1` v**1**; **no** code/runtime/DB/artifact mutation in charter
+- **Next** = Report Styling Default Template Implementation 01
 - **No drag/drop reorder / public PDF share / rich text editor / client portal** (runtime)
 - **No autonomous publication**
 - **Website Factory is not runtime owner** — methodology + prototype lane only
