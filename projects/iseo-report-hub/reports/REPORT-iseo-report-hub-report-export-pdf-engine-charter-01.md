@@ -4,7 +4,7 @@
 **project_id:** `iseo-report-hub`  
 **Created:** 2026-07-27  
 **Authority:** Operator I-SEO Report Hub Report Export PDF Engine Charter 01  
-**Primary commit:** `PENDING_PRIMARY_HASH`  
+**Primary commit:** `e16fc4149712e1770c7b6dd8c53109469347c018`  
 **Hash-record commit:** `PENDING_HASH_RECORD`
 
 ---
@@ -123,7 +123,7 @@ Created/updated:
 |------|-------|
 | Exact-path git add | allowlisted docs only (worktree) |
 | Commit message | `docs(iseo-report-hub): add report export pdf engine charter` |
-| Primary commit hash | `PENDING_PRIMARY_HASH` |
+| Primary commit hash | `e16fc4149712e1770c7b6dd8c53109469347c018` |
 | Hash-record message | `docs(iseo-report-hub): record report export pdf engine charter commit hash` |
 | Hash-record commit hash | `PENDING_HASH_RECORD` |
 | Push | **no** |
