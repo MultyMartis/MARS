@@ -9,6 +9,9 @@
  *   peer root Технологическое оборудование (362); multi-section tile blocks; placeholder fallback.
  * SITE-002-PROD-MEGAMENU-CHILDREN-AUTOMATION-01 — mega menu children rebuilt DB-driven to match Catalog Section Tiles
  *   (neutral keeps product gate; other section hubs include empty active children).
+ * SITE-002-PROD-FIRST-LEVEL-BLOCK-HYBRID-APPLY-01 — HYBRID Neutral first-level block (home+/katalog):
+ *   explicit show list; hide legacy wait IDs 82/83/85/87/89; empty copy for future proven empties;
+ *   mega/buildHubChildCards product gate unchanged; Tech 362 unchanged.
  *
  * Single source of truth for Launch Mode navigation and /katalog presentation.
  * Controllers must use this class; do not hardcode visibility rules in Twig.
@@ -22,6 +25,8 @@ class CategoryVisibility {
 	const NEUTRAL_HUB_CATEGORY_ID = 79;
 	const TECHNOLOGICAL_HUB_CATEGORY_ID = 362;
 	const PLACEHOLDER_IMAGE = 'placeholder.png';
+	/** Empty first-level caption for future proven empty Neutral show-list cards. */
+	const EMPTY_FIRST_LEVEL_COPY = 'Ожидайте, товары скоро поступят.';
 
 	private static $visible_root_category_ids = array(79, 362);
 
@@ -41,8 +46,11 @@ class CategoryVisibility {
 		'ventilyacionnoe-oborudovanie',
 	);
 
-	/** Commercial curated list for neutral hub Catalog Section Tiles (M9.5+). */
-	private static $neutral_hub_branch_ids = array(322, 331, 301, 326, 354, 358, 207, 80, 86, 360);
+	/** HYBRID show IDs for Neutral first-level Catalog Section Tiles (home + /katalog/). */
+	private static $neutral_hub_branch_ids = array(80, 86, 207, 301, 322, 326, 331, 354, 358, 360);
+
+	/** Legacy Neutral first-level duplicates — wait 1C proof; never show in first-level block. */
+	private static $neutral_first_level_hide_wait_ids = array(82, 83, 85, 87, 89);
 
 	public function isLaunchMode() {
 		return self::LAUNCH_MODE;
@@ -83,6 +91,14 @@ class CategoryVisibility {
 
 	public function getNeutralHubBranchIds() {
 		return self::$neutral_hub_branch_ids;
+	}
+
+	public function getNeutralFirstLevelHideWaitIds() {
+		return self::$neutral_first_level_hide_wait_ids;
+	}
+
+	public function getEmptyFirstLevelCopy() {
+		return self::EMPTY_FIRST_LEVEL_COPY;
 	}
 
 	public function extractRootSlugFromHref($href) {
@@ -256,7 +272,7 @@ class CategoryVisibility {
 		return $controller->model_tool_image->resize(self::PLACEHOLDER_IMAGE, $width, $height);
 	}
 
-	private function buildCardFromCategory($controller, $branch_id, $branch, $require_products) {
+	private function buildCardFromCategory($controller, $branch_id, $branch, $require_products, $attach_empty_copy = false) {
 		$branch_id = (int)$branch_id;
 
 		if (!$branch) {
@@ -274,14 +290,23 @@ class CategoryVisibility {
 			return null;
 		}
 
-		return array(
+		$card = array(
 			'category_id' => $branch_id,
 			'name'        => $branch['name'],
 			'href'        => $controller->url->link('product/katalog', 'path=' . $this->buildCategoryPathParam($controller, $branch_id)),
 			'img'         => $this->resizeCategoryImage($controller, isset($branch['image']) ? $branch['image'] : ''),
 			'thumb300'    => $this->resizeCategoryImage($controller, isset($branch['image']) ? $branch['image'] : ''),
 			'count'       => $count,
+			'empty_copy'  => '',
+			'show_empty_copy' => false,
 		);
+
+		if ($attach_empty_copy && $count <= 0) {
+			$card['empty_copy'] = self::EMPTY_FIRST_LEVEL_COPY;
+			$card['show_empty_copy'] = true;
+		}
+
+		return $card;
 	}
 
 	/**
@@ -327,6 +352,37 @@ class CategoryVisibility {
 	/**
 	 * Catalog Section Tiles — one block per visible Launch Mode root.
 	 */
+	/**
+	 * HYBRID Neutral first-level cards for Catalog Section Tiles only (home + /katalog/).
+	 * Show approved IDs; never include hide/wait IDs; allow zero-product cards with empty copy.
+	 * Mega menu continues to use buildHubChildCards() with Neutral product gate.
+	 */
+	public function buildNeutralFirstLevelBlockCards($controller) {
+		$controller->load->model('catalog/category');
+		$controller->load->model('catalog/product');
+		$controller->load->model('tool/image');
+
+		$cards = array();
+		$hide = self::$neutral_first_level_hide_wait_ids;
+
+		foreach ($this->getNeutralHubBranchIds() as $branch_id) {
+			$branch_id = (int)$branch_id;
+
+			if (in_array($branch_id, $hide, true)) {
+				continue;
+			}
+
+			$branch = $controller->model_catalog_category->getCategory($branch_id);
+			$card = $this->buildCardFromCategory($controller, $branch_id, $branch, false, true);
+
+			if ($card) {
+				$cards[] = $card;
+			}
+		}
+
+		return $this->sortCategoriesByRussianName($cards);
+	}
+
 	public function buildCatalogSectionTileBlocks($controller) {
 		if (!$this->isLaunchMode()) {
 			return array();
@@ -345,7 +401,11 @@ class CategoryVisibility {
 				continue;
 			}
 
-			$cards = $this->buildHubChildCards($controller, $root_id);
+			if ((int)$root_id === self::NEUTRAL_HUB_CATEGORY_ID) {
+				$cards = $this->buildNeutralFirstLevelBlockCards($controller);
+			} else {
+				$cards = $this->buildHubChildCards($controller, $root_id);
+			}
 
 			if (empty($cards)) {
 				continue;

@@ -1,0 +1,64 @@
+<section class="zpm-cat-sections" data-cat-sections>
+  <div class="container">
+
+    {% if catalog_section_tiles %}
+      {% for section in catalog_section_tiles %}
+      <div class="zpm-cat-sections__block" data-catalog-section-tiles data-section-id="{{ section.category_id }}">
+        <div class="zpm-cat-sections__head">
+          <a class="zpm-cat-sections__title" href="{{ section.href }}">{{ section.name }}</a>
+        </div>
+        <div class="zpm-cat-sections__grid-wrapper">
+          <div class="zpm-cat-sections__grid">
+            {% if section.cards %}
+            {% for cat in section.cards %}
+              <a class="zpm-cat-card" href="{{ cat.href }}">
+                <div class="zpm-cat-card__title">{{ cat.name }}</div>
+            {% if cat.empty_copy %}
+            <div class="zpm-cat-card__empty">{{ cat.empty_copy }}</div>
+            {% endif %}
+                <div class="zpm-cat-card__img">
+                  <img class="" src="{{ cat.img }}" alt="{{ cat.name }}">
+                </div>
+                <div class="zpm-cat-card__ico_arrow">
+                  <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__goto_btn_arrow"></use></svg>
+                </div>
+              </a>
+            {% endfor %}
+            {% endif %}
+          </div>
+          {% if loop.first %}
+          <div>
+            <a class="btn zm-inline-btn" href="{{ catalog_primary_entry|default('/katalog/nejtralnoe-oborudovanie') }}">Перейти в&nbsp;каталог</a>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    {% else %}
+    <div class="zpm-cat-sections__grid-wrapper">
+      <div class="zpm-cat-sections__grid">
+        {% if categories %}
+        {% for cat in categories %}
+          <a class="zpm-cat-card" href="{{ cat.href }}">
+            <div class="zpm-cat-card__title">{{ cat.name }}</div>
+            {% if cat.empty_copy %}
+            <div class="zpm-cat-card__empty">{{ cat.empty_copy }}</div>
+            {% endif %}
+            <div class="zpm-cat-card__img">
+              <img class="" src="{{ cat.img }}" alt="{{ cat.name }}">
+            </div>
+            <div class="zpm-cat-card__ico_arrow">
+              <svg class="zpm-icon" aria-hidden="true" focusable="false"><use href="#zpm_ico__goto_btn_arrow"></use></svg>
+            </div>
+          </a>
+        {% endfor %}
+        {% endif %}
+      </div>
+      <div>
+        <a class="btn zm-inline-btn" href="{{ catalog_primary_entry|default('/katalog/nejtralnoe-oborudovanie') }}">Перейти в&nbsp;каталог</a>
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+</section>
