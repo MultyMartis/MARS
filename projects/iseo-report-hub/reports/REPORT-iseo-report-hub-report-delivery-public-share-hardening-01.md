@@ -120,7 +120,7 @@ All charter restrictions confirmed: no production/remote DB; no real data beyond
 |-------|-------|
 | Exact-path git add | yes (allowlist only) |
 | Staged list | see post-commit verification |
-| Primary commit | `PENDING_PRIMARY` — `fix(iseo-report-hub): harden public report share links` |
+| Primary commit | `a453ecd0138febe4cf2fa2d90ff86e8cd450e940` — `fix(iseo-report-hub): harden public report share links` |
 | Hash-record commit | `PENDING_HASH` — `docs(iseo-report-hub): record public report share hardening commit hash` |
 | HEAD verification | after commits |
 | Push | **no** |
