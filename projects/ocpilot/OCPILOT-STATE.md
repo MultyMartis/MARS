@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-28
-**Evidence cutoff:** 2026-07-28 (SITE-002 Run **4.312** / `SITE-002-MONITOR-BASELINE-REFRESH-08` — baseline **1836→1879** after 1C import 2026-07-28; monitor after **NO_ACTION_REQUIRED**; first-level block scope still pending)
+**Evidence cutoff:** 2026-07-28 (SITE-002 Run **4.313** / `SITE-002-PROD-FIRST-LEVEL-BLOCK-SCOPE-DECISION-01` — HYBRID scope recommended; baseline **1879** remains current; UI apply not executed)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Monitor Baseline Refresh 08 (Run 4.312)** — **COMPLETE — BASELINE UPDATED** · baseline **1836→1879** after import `mars_1c_import_2026-07-28_080011.txt`; checkpoint `SITE-002-STABLE-PROD-POST-1C-IMPORT-20260728-MONITOR-BASELINE-1879-08`; after `2026-07-28_15-23-10` **NO_ACTION_REQUIRED** · next still **first-level block scope decision** (UI apply not performed) · [baseline refresh 4.312](sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-08.md) · [first-level block charter 4.311](sites/site-002/reports/SITE-002-PROD-POST-1C-NEUTRAL-FIRST-LEVEL-BLOCK-CHARTER-01.md) · [visibility diagnostic 4.310](sites/site-002/reports/SITE-002-PROD-NEUTRAL-NEW-CATEGORIES-VISIBILITY-DIAGNOSTIC-01.md) |
+| Current SITE-002 focus | **First-Level Block Scope Decision 01 (Run 4.313)** — **COMPLETE — HYBRID RECOMMENDED** · baseline **1879** current; SHOW **80/86/207/301/322/326/331/354/358/360**; HIDE/WAIT **82/83/85/87/89**; empty copy `Ожидайте, товары скоро поступят.`; next = operator confirm then first-level block apply · [scope decision 4.313](sites/site-002/reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-SCOPE-DECISION-01.md) · [baseline refresh 4.312](sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-08.md) · [first-level block charter 4.311](sites/site-002/reports/SITE-002-PROD-POST-1C-NEUTRAL-FIRST-LEVEL-BLOCK-CHARTER-01.md) |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 
@@ -573,6 +573,7 @@ W1 write charter applies to Phase 1 waves only; does not resume Run 5 automatica
 
 | Date | Change |
 |------|--------|
+| 2026-07-28 | **UPDATED** — SITE-002 first-level block scope decision **01** (Run **4.313**) — **HYBRID RECOMMENDED**; SHOW 10 curated IDs; HIDE/WAIT empty legacy **82/83/85/87/89**; baseline **1879** unchanged; future apply charter only; production/Client Ops **0**; UI apply not performed |
 | 2026-07-28 | **UPDATED** — SITE-002 monitor baseline refresh **08** (Run **4.312**) — baseline **1836→1879** after 1C import 2026-07-28; checkpoint `SITE-002-STABLE-PROD-POST-1C-IMPORT-20260728-MONITOR-BASELINE-1879-08`; manual `2026-07-28_15-23-10` **NO_ACTION_REQUIRED**; production/Client Ops **0**; UI apply not performed |
 | 2026-07-28 | **UPDATED** — SITE-002 post-1C neutral first-level block charter **01** (Run **4.311**) — import `2026-07-28` SUCCESS; critical **5/5**; sitemap live **1879**; first-level plan pending operator scope; empty copy agreed; apply **not** executed; production/Client Ops **0** |
 | 2026-07-27 | **UPDATED** — SITE-002 empty categories HITL triage **01** (Run **4.309**) — **97** candidates enriched; proposed WAIT **96** / KEEP **1** / DELETE_CAND **0**; operator decision sheet ready; apply **not** executed; baseline **1836** unchanged; production/Client Ops **0** |
