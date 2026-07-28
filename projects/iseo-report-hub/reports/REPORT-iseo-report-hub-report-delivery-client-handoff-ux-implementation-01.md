@@ -112,7 +112,7 @@ No production/remote DB; no real data beyond fixture; no credentials/password/ha
 |-------|-------|
 | Message | `feat(iseo-report-hub): add client handoff ux` |
 | Staging | exact-path only (allowlisted) |
-| Primary commit | `COMMIT_PENDING` |
+| Primary commit | `98371ef393460bcb9c60a24bd81003409cd894ef` |
 | Hash-record | `HASH_RECORD_PENDING` — `docs(iseo-report-hub): record client handoff ux commit hash` |
 | Push | **no** |
 
