@@ -118,11 +118,12 @@ All charter restrictions confirmed: no production/remote DB; no real data beyond
 
 | Field | Value |
 |-------|-------|
-| Exact-path git add | yes (allowlist only) |
-| Staged list | see post-commit verification |
+| Exact-path git add | yes (allowlist only; clean worktree) |
+| Staged list (primary) | SafeToken.php; ReportExportShareService.php; ReportExportShareRepository.php; PublicReportShareController.php; routes.php; report-export-shares/index.php; README.md; HARDENING-RESULT; REPORT; OPERATIONAL-INDEX |
 | Primary commit | `a453ecd0138febe4cf2fa2d90ff86e8cd450e940` — `fix(iseo-report-hub): harden public report share links` |
 | Hash-record commit | `60b3ffcc169fffcdd5ed80261459aa755bb8dfa3` — `docs(iseo-report-hub): record public report share hardening commit hash` |
-| HEAD verification | after commits |
+| Tip HEAD | `b10fa05646d0c0fce7bb065505228d9c41b6158f` — `docs(iseo-report-hub): record public report share hardening tip hash` |
+| HEAD verification | `b10fa05646d0c0fce7bb065505228d9c41b6158f` |
 | Push | **no** |
 
 ## 13. SAFE UNKNOWN
