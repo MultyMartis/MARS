@@ -125,9 +125,9 @@ All charter restrictions confirmed: no production/remote DB; no real data beyond
 |-------|-------|
 | Exact-path git add | yes (allowlist docs only; clean worktree) |
 | Staged list (primary) | VISUAL-QA-RESULT; REPORT; OPERATIONAL-INDEX |
-| Primary commit | `PENDING_PRIMARY_HASH` — `docs(iseo-report-hub): add public share visual qa` |
-| Hash-record commit | `PENDING_HASH_RECORD` — `docs(iseo-report-hub): record public share visual qa commit hash` |
-| HEAD verification | `PENDING_TIP` |
+| Primary commit | `9e9101879904b4a981cf58a5e04aeac64cd3baf2` — `docs(iseo-report-hub): add public share visual qa` |
+| Hash-record commit | (this commit) — `docs(iseo-report-hub): record public share visual qa commit hash` |
+| HEAD verification | filled after hash-record |
 | Push | **no** |
 
 ## 12. SAFE UNKNOWN
