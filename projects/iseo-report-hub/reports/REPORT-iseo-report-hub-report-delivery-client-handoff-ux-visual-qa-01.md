@@ -127,7 +127,7 @@ No production/remote DB; no real data beyond fixture; no credentials/password/ha
 | Staging | exact-path only (allowlisted) |
 | Primary commit | `1431192bdfe27562d64ccc2d8d4f35ae9b4a382c` |
 | Hash-record | `9720ed5f350ef5a8aa8813d9f23b964970e22fdd` — `docs(iseo-report-hub): record client handoff visual qa commit hash` |
-| Tip HEAD | `4188ec3c244a29c80eba41be81872f01dd798fef` |
+| Tip HEAD | `3fde1454ba6ffcb397d90d0c1cea6dfd840f4201` |
 | Push | **no** |
 
 ## 12. SAFE UNKNOWN
