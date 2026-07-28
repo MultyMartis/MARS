@@ -9,6 +9,9 @@ declare(strict_types=1);
 /** @var array{id?:int,export_key?:string,label?:string}|null $sourceHtmlSummary */
 /** @var bool $isStyledExport */
 /** @var bool $isLegacyTemplateMetadata */
+/** @var array{eligible?:bool,reason?:string,code?:string}|null $shareEligibility */
+/** @var int $activeShareCount */
+/** @var bool $canManageShares */
 
 $export = $export ?? [];
 $message = (string) ($message ?? '');
@@ -39,6 +42,11 @@ $sourceHtmlSummary = is_array($sourceHtmlSummary ?? null) ? $sourceHtmlSummary :
 $sourceHtmlLabel = is_array($sourceHtmlSummary) && isset($sourceHtmlSummary['label'])
     ? (string) $sourceHtmlSummary['label']
     : (string) ($export['display_source_html_label'] ?? 'not recorded');
+$shareEligibility = is_array($shareEligibility ?? null) ? $shareEligibility : [];
+$shareEligible = !empty($shareEligibility['eligible']);
+$shareReason = (string) ($shareEligibility['reason'] ?? 'Eligibility not evaluated.');
+$activeShareCount = (int) ($activeShareCount ?? 0);
+$canManageShares = !empty($canManageShares);
 ?>
 <section class="panel export-card export-detail">
     <div class="panel-head">
@@ -54,6 +62,9 @@ $sourceHtmlLabel = is_array($sourceHtmlSummary) && isset($sourceHtmlSummary['lab
             <?php if ($exportId > 0 && (string) ($export['status'] ?? '') === 'ready'): ?>
                 <a class="btn" href="<?= e(url_path('/report-exports/' . $exportId . '/download')) ?>"><?= e($downloadLabel) ?></a>
             <?php endif; ?>
+            <?php if ($exportId > 0): ?>
+                <a class="btn btn-secondary" href="<?= e(url_path('/report-exports/' . $exportId . '/shares')) ?>">Public shares</a>
+            <?php endif; ?>
         </p>
     </div>
 
@@ -64,6 +75,11 @@ $sourceHtmlLabel = is_array($sourceHtmlSummary) && isset($sourceHtmlSummary['lab
             <span class="template-badge template-badge--legacy">Legacy / not recorded</span>
         <?php else: ?>
             <span class="template-badge template-badge--styled">Recorded template</span>
+        <?php endif; ?>
+        <?php if ($shareEligible): ?>
+            <span class="share-badge share-badge--eligible">Shareable PDF</span>
+        <?php else: ?>
+            <span class="share-badge share-badge--blocked">Not shareable</span>
         <?php endif; ?>
         · <span class="status-badge status-<?= e((string) ($export['status'] ?? '')) ?>"><?= e((string) ($export['status'] ?? '')) ?></span>
     </p>
@@ -113,7 +129,30 @@ $sourceHtmlLabel = is_array($sourceHtmlSummary) && isset($sourceHtmlSummary['lab
     </ul>
 
     <p class="field-hint export-hint">
-        No public link. Download requires authentication. Path/MIME/size/checksum<?= $isPdf ? '/PDF-magic' : '' ?> are validated before streaming.
+        Auth download requires authentication. Path/MIME/size/checksum<?= $isPdf ? '/PDF-magic' : '' ?> are validated before streaming.
         Template/render fields come from DB-09 columns when present; NULL rows stay <?= e($legacyTemplateLabel) ?> and are never inferred as <code><?= e($futureTemplateId) ?></code>.
     </p>
+</section>
+
+<section class="panel export-card share-card">
+    <div class="panel-head">
+        <h2>Public share</h2>
+        <p>
+            <a class="btn" href="<?= e(url_path('/report-exports/' . $exportId . '/shares')) ?>">Manage shares</a>
+        </p>
+    </div>
+    <p>
+        <?php if ($shareEligible): ?>
+            <span class="share-badge share-badge--eligible">Eligible</span>
+        <?php else: ?>
+            <span class="share-badge share-badge--blocked">Not eligible</span>
+        <?php endif; ?>
+        · Active shares: <strong><?= e((string) $activeShareCount) ?></strong>
+    </p>
+    <p class="field-hint share-hint"><?= e($shareReason) ?></p>
+    <?php if ($shareEligible && $canManageShares): ?>
+        <p class="field-hint">Create or revoke opaque token links on the shares page. Plaintext URL is shown once.</p>
+    <?php elseif ($shareEligible): ?>
+        <p class="field-hint">View share status on the shares page. Create/revoke requires admin_owner or seo_lead_reviewer.</p>
+    <?php endif; ?>
 </section>

@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace Iseo\Controllers;
 
 use Iseo\Services\ReportExportService;
+use Iseo\Services\ReportExportShareService;
 use Iseo\Support\Response;
 
 final class ReportExportController extends BaseController
@@ -14,7 +15,8 @@ final class ReportExportController extends BaseController
         \Iseo\Services\ConfigService $config,
         \Iseo\Services\AuthService $auth,
         \Iseo\Services\CsrfService $csrf,
-        private ReportExportService $exports
+        private ReportExportService $exports,
+        private ?ReportExportShareService $shares = null
     ) {
         parent::__construct($app, $view, $config, $auth, $csrf);
     }
@@ -38,11 +40,23 @@ final class ReportExportController extends BaseController
 
         $snapshot = $result['snapshot'];
         $title = (string) ($snapshot['title'] ?? ('Snapshot #' . $snapshotId));
+        $exports = $result['exports'];
+        if ($this->shares !== null) {
+            foreach ($exports as $idx => $row) {
+                if (!is_array($row)) {
+                    continue;
+                }
+                $eligibility = $this->shares->evaluateEligibility($row);
+                $exports[$idx]['share_eligible'] = !empty($eligibility['eligible']);
+                $exports[$idx]['share_eligibility_reason'] = (string) ($eligibility['reason'] ?? '');
+                $exports[$idx]['active_share_count'] = $this->shares->activeShareCountForExport((int) ($row['id'] ?? 0));
+            }
+        }
 
         $this->render('report-exports/index', [
             'pageTitle' => 'Exports — ' . $title,
             'snapshot' => $snapshot,
-            'exports' => $result['exports'],
+            'exports' => $exports,
             'canCreate' => !empty($result['can_create']),
             'canCreatePdf' => !empty($result['can_create_pdf']),
             'hasHtmlExport' => !empty($result['has_html_export']),
@@ -205,6 +219,14 @@ final class ReportExportController extends BaseController
         $isStyled = $this->exports->isStyledExport($export);
         $isLegacy = $this->exports->isLegacyTemplateMetadata($export);
         $sourceHtml = $this->exports->sourceHtmlSummaryForExport($export);
+        $shareEligibility = ['eligible' => false, 'reason' => 'Share service unavailable.', 'code' => 'unavailable'];
+        $activeShareCount = 0;
+        $canManageShares = false;
+        if ($this->shares !== null) {
+            $shareEligibility = $this->shares->evaluateEligibility($export);
+            $activeShareCount = $this->shares->activeShareCountForExport($exportId);
+            $canManageShares = $this->shares->canManage($user);
+        }
 
         $this->render('report-exports/show', [
             'pageTitle' => 'Export — ' . $key,
@@ -217,6 +239,9 @@ final class ReportExportController extends BaseController
             'sourceHtmlSummary' => $sourceHtml,
             'isStyledExport' => $isStyled,
             'isLegacyTemplateMetadata' => $isLegacy,
+            'shareEligibility' => $shareEligibility,
+            'activeShareCount' => $activeShareCount,
+            'canManageShares' => $canManageShares,
             'message' => $result['message'],
         ]);
     }

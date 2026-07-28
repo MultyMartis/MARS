@@ -175,6 +175,7 @@ $canCreateSnapshot = !empty($canCreateSnapshot);
         <p class="template-state-note">
             Export template labels prefer DB-09 metadata. Legacy rows (ids 1–2): not recorded / legacy.
             Styled rows (ids 3–4): <code>iseo_default_v1</code> v1 with PDF source HTML lineage when recorded.
+            Public share MVP: ready styled PDF only (export id 4).
         </p>
     <?php endif; ?>
 </section>

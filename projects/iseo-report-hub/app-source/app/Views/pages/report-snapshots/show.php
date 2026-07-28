@@ -238,7 +238,7 @@ $decodeIds = static function (mixed $raw): array {
                     <button type="submit" class="btn btn-secondary">Re-check styled HTML (idempotent)</button>
                 </form>
             <?php endif; ?>
-            <p class="field-hint export-hint">No public URL. Historical v1 remains available on the exports list.</p>
+            <p class="field-hint export-hint">Auth download only for HTML. Public share applies to ready styled PDF exports only.</p>
         <?php endif; ?>
     </section>
 
@@ -327,7 +327,15 @@ $decodeIds = static function (mixed $raw): array {
                     <button type="submit" class="btn btn-secondary">Re-check styled PDF (idempotent)</button>
                 </form>
             <?php endif; ?>
-            <p class="field-hint export-hint">No public URL.</p>
+            <p class="field-hint export-hint">
+                Auth download always available.
+                <?php if (!empty($displayPdf['template_id']) && (string) ($displayPdf['render_target'] ?? '') === 'pdf_export'): ?>
+                    <span class="share-badge share-badge--eligible">Shareable PDF candidate</span>
+                    — manage token links from export detail / shares.
+                <?php else: ?>
+                    <span class="share-badge share-badge--blocked">Not shareable (legacy/HTML rules)</span>
+                <?php endif; ?>
+            </p>
         <?php endif; ?>
     </section>
 <?php endif; ?>

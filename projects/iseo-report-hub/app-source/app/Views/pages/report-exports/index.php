@@ -99,6 +99,7 @@ $rowTemplateLabel = static function (array $row) use ($legacyTemplateLabel): str
                     <th>Template</th>
                     <th>Render</th>
                     <th>Source HTML</th>
+                    <th>Share</th>
                     <th>Filename</th>
                     <th>Checksum</th>
                     <th>Size</th>
@@ -126,6 +127,8 @@ $rowTemplateLabel = static function (array $row) use ($legacyTemplateLabel): str
                     if ($format !== 'pdf') {
                         $sourceHtmlLabel = '—';
                     }
+                    $shareEligible = !empty($row['share_eligible']);
+                    $activeShares = (int) ($row['active_share_count'] ?? 0);
                     ?>
                     <tr>
                         <td><?= e((string) $eid) ?></td>
@@ -153,6 +156,16 @@ $rowTemplateLabel = static function (array $row) use ($legacyTemplateLabel): str
                                 <span class="meta-muted">—</span>
                             <?php endif; ?>
                         </td>
+                        <td>
+                            <?php if ($shareEligible): ?>
+                                <span class="share-badge share-badge--eligible">Shareable</span>
+                                <?php if ($activeShares > 0): ?>
+                                    <br><span class="meta-muted">Active: <?= e((string) $activeShares) ?></span>
+                                <?php endif; ?>
+                            <?php else: ?>
+                                <span class="share-badge share-badge--blocked">No</span>
+                            <?php endif; ?>
+                        </td>
                         <td><code><?= e((string) ($row['filename'] ?? '')) ?></code></td>
                         <td><code class="checksum-display" title="<?= e($checksum) ?>"><?= e($short) ?></code></td>
                         <td><?= e($size > 0 ? number_format($size) . ' B' : '—') ?></td>
@@ -160,6 +173,7 @@ $rowTemplateLabel = static function (array $row) use ($legacyTemplateLabel): str
                         <td class="actions">
                             <a href="<?= e(url_path('/report-exports/' . $eid)) ?>">View</a>
                             · <a class="btn-download" href="<?= e(url_path('/report-exports/' . $eid . '/download')) ?>">Download</a>
+                            · <a href="<?= e(url_path('/report-exports/' . $eid . '/shares')) ?>">Shares</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -234,6 +248,6 @@ $rowTemplateLabel = static function (array $row) use ($legacyTemplateLabel): str
             <p class="field-hint">Styled PDF creation requires admin_owner or seo_lead_reviewer role and a browser PDF engine.</p>
         <?php endif; ?>
 
-        <p class="field-hint export-hint">No public share URL. Downloads require authentication.</p>
+        <p class="field-hint export-hint">Auth downloads require authentication. Public share is available only for ready styled PDF exports (MVP: export id 4).</p>
     <?php endif; ?>
 </section>

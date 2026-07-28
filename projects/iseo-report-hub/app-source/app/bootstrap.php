@@ -35,6 +35,7 @@ require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Repositories' . DIRECTORY_SE
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Repositories' . DIRECTORY_SEPARATOR . 'ReportPreviewRepository.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Repositories' . DIRECTORY_SEPARATOR . 'ReportSnapshotRepository.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Repositories' . DIRECTORY_SEPARATOR . 'ReportExportRepository.php';
+require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Repositories' . DIRECTORY_SEPARATOR . 'ReportExportShareRepository.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Services' . DIRECTORY_SEPARATOR . 'ReportingPeriodService.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Services' . DIRECTORY_SEPARATOR . 'WeeklyCheckpointService.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Services' . DIRECTORY_SEPARATOR . 'MonthlyReportContentService.php';
@@ -44,8 +45,10 @@ require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Services' . DIRECTORY_SEPARA
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Services' . DIRECTORY_SEPARATOR . 'ReportSnapshotService.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Support' . DIRECTORY_SEPARATOR . 'ReportTemplate.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Support' . DIRECTORY_SEPARATOR . 'ReportTemplateRenderer.php';
+require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Support' . DIRECTORY_SEPARATOR . 'SafeToken.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Services' . DIRECTORY_SEPARATOR . 'ReportTemplateService.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Services' . DIRECTORY_SEPARATOR . 'ReportExportService.php';
+require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Services' . DIRECTORY_SEPARATOR . 'ReportExportShareService.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Controllers' . DIRECTORY_SEPARATOR . 'BaseController.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Controllers' . DIRECTORY_SEPARATOR . 'DashboardController.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Controllers' . DIRECTORY_SEPARATOR . 'AuthController.php';
@@ -57,6 +60,8 @@ require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Controllers' . DIRECTORY_SEP
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Controllers' . DIRECTORY_SEPARATOR . 'ReportPreviewController.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Controllers' . DIRECTORY_SEPARATOR . 'ReportSnapshotController.php';
 require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Controllers' . DIRECTORY_SEPARATOR . 'ReportExportController.php';
+require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Controllers' . DIRECTORY_SEPARATOR . 'ReportExportShareController.php';
+require_once ISEO_APP_PATH . DIRECTORY_SEPARATOR . 'Controllers' . DIRECTORY_SEPARATOR . 'PublicReportShareController.php';
 
 use Iseo\Services\AuthService;
 use Iseo\Services\ConfigService;

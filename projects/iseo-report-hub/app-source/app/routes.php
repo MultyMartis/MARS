@@ -20,7 +20,9 @@ use Iseo\Controllers\HealthController;
 use Iseo\Controllers\MonthlyReportContentController;
 use Iseo\Controllers\ReportBlockController;
 use Iseo\Controllers\ReportPreviewController;
+use Iseo\Controllers\PublicReportShareController;
 use Iseo\Controllers\ReportExportController;
+use Iseo\Controllers\ReportExportShareController;
 use Iseo\Controllers\ReportSnapshotController;
 use Iseo\Controllers\ReportingPeriodController;
 use Iseo\Controllers\WeeklyCheckpointController;
@@ -28,6 +30,7 @@ use Iseo\Repositories\MonthlyReportContentRepository;
 use Iseo\Repositories\ReportBlockRepository;
 use Iseo\Repositories\ReportPreviewRepository;
 use Iseo\Repositories\ReportExportRepository;
+use Iseo\Repositories\ReportExportShareRepository;
 use Iseo\Repositories\ReportSnapshotRepository;
 use Iseo\Repositories\ReportingPeriodRepository;
 use Iseo\Repositories\WeeklyCheckpointRepository;
@@ -40,6 +43,7 @@ use Iseo\Services\ReportBlockService;
 use Iseo\Services\ReportFinalizationService;
 use Iseo\Services\ReportPreviewService;
 use Iseo\Services\ReportExportService;
+use Iseo\Services\ReportExportShareService;
 use Iseo\Services\ReportTemplateService;
 use Iseo\Services\ReportSnapshotService;
 use Iseo\Services\ReportingPeriodService;
@@ -79,9 +83,11 @@ $finalizationService = new ReportFinalizationService($monthlyRepo, $blockRepo, $
 $snapshotRepo = new ReportSnapshotRepository($db);
 $snapshotService = new ReportSnapshotService($snapshotRepo, $monthlyRepo, $blockRepo, $previewService, $db);
 $exportRepo = new ReportExportRepository($db);
+$exportShareRepo = new ReportExportShareRepository($db);
 $templateService = new ReportTemplateService();
 $templateRenderer = new ReportTemplateRenderer($templateService);
 $exportService = new ReportExportService($exportRepo, $snapshotRepo, $db, $templateService, $templateRenderer);
+$exportShareService = new ReportExportShareService($exportShareRepo, $exportRepo, $exportService, $db, $config);
 $reportingPeriods = new ReportingPeriodController(
     $app,
     $view,
@@ -107,7 +113,9 @@ $monthlyReports = new MonthlyReportContentController(
 $reportBlocks = new ReportBlockController($app, $view, $config, $auth, $csrf, $blockService);
 $reportPreview = new ReportPreviewController($app, $view, $config, $auth, $csrf, $previewService, $snapshotService);
 $reportSnapshots = new ReportSnapshotController($app, $view, $config, $auth, $csrf, $snapshotService, $exportService);
-$reportExports = new ReportExportController($app, $view, $config, $auth, $csrf, $exportService);
+$reportExports = new ReportExportController($app, $view, $config, $auth, $csrf, $exportService, $exportShareService);
+$reportExportShares = new ReportExportShareController($app, $view, $config, $auth, $csrf, $exportShareService);
+$publicReportShares = new PublicReportShareController($app, $view, $config, $auth, $csrf, $exportShareService, $exportService);
 
 $router->get('/', static function () use ($dashboard): void {
     $dashboard->index();
@@ -212,6 +220,19 @@ if (preg_match('#^/reporting-periods/(\d+)/monthly-report/create$#', $requestPat
     $router->get($requestPath, static function () use ($reportExports, $snapshotId): void {
         $reportExports->listForSnapshot($snapshotId);
     });
+} elseif (preg_match('#^/report-exports/(\d+)/shares$#', $requestPath, $m) === 1) {
+    $exportId = (int) $m[1];
+    $router->get($requestPath, static function () use ($reportExportShares, $exportId): void {
+        $reportExportShares->index($exportId);
+    });
+    $router->post($requestPath, static function () use ($reportExportShares, $exportId): void {
+        $reportExportShares->store($exportId);
+    });
+} elseif (preg_match('#^/report-export-shares/(\d+)/revoke$#', $requestPath, $m) === 1) {
+    $shareId = (int) $m[1];
+    $router->post($requestPath, static function () use ($reportExportShares, $shareId): void {
+        $reportExportShares->revoke($shareId);
+    });
 } elseif (preg_match('#^/report-exports/(\d+)/download$#', $requestPath, $m) === 1) {
     $exportId = (int) $m[1];
     $router->get($requestPath, static function () use ($reportExports, $exportId): void {
@@ -221,6 +242,11 @@ if (preg_match('#^/reporting-periods/(\d+)/monthly-report/create$#', $requestPat
     $exportId = (int) $m[1];
     $router->get($requestPath, static function () use ($reportExports, $exportId): void {
         $reportExports->show($exportId);
+    });
+} elseif (preg_match('#^/share/report/([A-Za-z0-9_-]+)$#', $requestPath, $m) === 1) {
+    $token = (string) $m[1];
+    $router->get($requestPath, static function () use ($publicReportShares, $token): void {
+        $publicReportShares->download($token);
     });
 } elseif (preg_match('#^/report-snapshots/(\d+)$#', $requestPath, $m) === 1) {
     $snapshotId = (int) $m[1];

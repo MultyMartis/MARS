@@ -17,10 +17,10 @@
 | Monthly report content | **CRUD MVP** — period-scoped detail/create/edit/archive-by-status; one row per period |
 | Report blocks | **CRUD MVP** — monthly-scoped list/detail/create/edit/archive-by-status; unique parent+block_key |
 | Report snapshots | **Internal MVP** — create/view active snapshot from finalized monthly; checksum idempotency; no public |
-| Report exports | **HTML + PDF MVP (hardened) + styled v2** — internal HTML/PDF artifacts; Edge headless PDF; auth download with path/MIME/size/checksum/PDF-magic guards; idempotent; historical v1 preserved; styled v2 via `iseo_default_v1`; **no** public share |
+| Report exports | **HTML + PDF MVP (hardened) + styled v2** — internal HTML/PDF artifacts; Edge headless PDF; auth download with path/MIME/size/checksum/PDF-magic guards; idempotent; historical v1 preserved; styled v2 via `iseo_default_v1` |
 | Report styling template | **Code-first default `iseo_default_v1` v1** — applied to styled export versions (v2+); historical exports id 1/2 unchanged; no DB template registry yet |
 | Export template metadata (DB-09) | **Nullable columns on `report_exports`** — `template_id` / `template_version` / `render_target` / `render_engine` / `render_options_json` / `source_html_export_id` / `metadata_json`; backfill ids **3–4** only; ids **1–2** NULL; **UI/repository/service read + future write support implemented** |
-| Public share (DB-10) | **Table `report_export_shares` applied** — token_hash unique; FKs to exports/users; status CHECK; **0** share rows; **no** token/service/public route yet |
+| Public share (DB-10 + MVP) | **Table `report_export_shares` + tokenized public PDF share** — hash-only tokens; create/revoke UI; `GET /share/report/{token}` streams ready styled PDF only; no portal/email/HTML share |
 | Secrets | **None in source** — `.env.example` placeholders only; **no** `.env` / `.env.local` |
 | Runtime sync | Allowlist source → runtime |
 
@@ -87,7 +87,11 @@ Creates one local-only demo client / project / site / reporting_period (`LOCAL_F
 - `POST /report-snapshots/{id}/exports/pdf` — create PDF export from ready HTML artifact via Edge headless (CSRF; idempotent; admin_owner / seo_lead_reviewer)
 - `POST /report-snapshots/{id}/exports/pdf/styled` — create styled PDF from styled HTML v2 (CSRF; idempotent; does not overwrite v1)
 - `GET /report-exports/{id}` — export metadata detail (auth; internal-only; HTML or PDF)
-- `GET /report-exports/{id}/download` — authenticated artifact download (HTML or PDF MIME; no public URL)
+- `GET /report-exports/{id}/download` — authenticated artifact download (HTML or PDF MIME)
+- `GET /report-exports/{id}/shares` — list/create public share links for export (auth; internal-only)
+- `POST /report-exports/{id}/shares` — create share token (CSRF; hash stored only; plaintext URL once; admin_owner / seo_lead_reviewer)
+- `POST /report-export-shares/{id}/revoke` — revoke active share (CSRF; role-gated)
+- `GET /share/report/{token}` — **public** PDF stream by opaque token (no auth; ready styled PDF only)
 - `POST /monthly-reports/{id}/submit-review` — `in_progress` → `ready_for_review` (CSRF; role-gated)
 - `POST /monthly-reports/{id}/mark-reviewed` — `ready_for_review` → `reviewed` (CSRF; role-gated)
 - `POST /monthly-reports/{id}/finalize` — `reviewed` → `finalized` when readiness passes (CSRF; sets `finalized_at` if null)
@@ -105,7 +109,7 @@ Creates one local-only demo client / project / site / reporting_period (`LOCAL_F
 No top-level `/monthly-reports` or `/report-blocks` index (period/monthly-scoped entry is enough).  
 No DELETE route for reporting periods, weekly checkpoints, monthly report content, report blocks, or snapshots — archive/skip via status (snapshots: no DELETE; supersede on later version).  
 No drag/drop reorder (manual `sort_order` only).  
-No public share token. PDF is internal-only via authenticated download from local Edge print-to-PDF (Chrome fallback if Edge fails).
+Public share MVP: opaque token for ready styled PDF only (`render_target=pdf_export` + template metadata). No client portal, email, HTML public share, or `/r/{token}` short route. Auth PDF/HTML downloads remain.
 
 ## Secrets policy
 
@@ -119,16 +123,16 @@ No public share token. PDF is internal-only via authenticated download from loca
 
 - No password reset / remember-me / OAuth
 - No client portal auth for `client_viewer`
-- No drag/drop reorder / rich text editor / public PDF share
+- No drag/drop reorder / rich text editor / client portal
 - No hard DELETE of reporting periods, weekly checkpoints, monthly report content, report blocks, or snapshots
 - No user management UI
 - No real client import
 - No Composer / npm / WordPress
 - No snapshot v2 versioning smoke (deferred until reopen/re-finalize charter)
-- No public/token publish from snapshots
+- No email delivery / one-time-only UX / short `/r/{token}` route
 - No DB-backed template registry / client branding DB / logo upload
 - No silent overwrite of historical HTML/PDF exports (restyle requires new export version wave)
 
 ## Next phase
 
-**Recommended:** Report Delivery / Public Share Charter 01.
+**Recommended:** Report Delivery Public Share Hardening 01.
