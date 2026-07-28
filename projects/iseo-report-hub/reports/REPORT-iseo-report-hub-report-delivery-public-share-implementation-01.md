@@ -118,16 +118,13 @@ All charter restrictions confirmed: no production/remote DB; no real data beyond
 
 ## 12. Commit
 
-Commit message:
-
-```
-feat(iseo-report-hub): add public report share links
-```
-
-(Hash filled after primary commit; hash-record follow-up for this report if needed.)
-
-- exact-path git add: yes
-- push: **no**
+| Item | Value |
+|------|-------|
+| Primary commit | `dbba3c51bf107894ede863ff4da0c82fdba2f2e7` |
+| Message | `feat(iseo-report-hub): add public report share links` |
+| Hash-record | see tip after docs follow-up |
+| exact-path git add | yes |
+| push | **no** |
 
 ## 13. SAFE UNKNOWN
 
