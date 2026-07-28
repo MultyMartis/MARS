@@ -41,8 +41,9 @@ final class PublicReportShareController extends BaseController
         }
 
         $export = $result['export'];
+        $share = $result['share'];
         $absolute = $result['absolute_path'];
-        if (!is_array($export) || !is_string($absolute) || $absolute === '' || !is_file($absolute)) {
+        if (!is_array($export) || !is_array($share) || !is_string($absolute) || $absolute === '' || !is_file($absolute)) {
             $this->safeDeny(404);
             return;
         }
@@ -54,13 +55,24 @@ final class PublicReportShareController extends BaseController
             return;
         }
 
+        $shareId = (int) ($share['id'] ?? 0);
+        if ($shareId <= 0 || !$this->shares->recordSuccessfulPublicAccess($shareId)) {
+            // Race: revoked/expired/max-access between resolve and stream.
+            $this->safeDeny(410);
+            return;
+        }
+
         http_response_code(200);
         header('Content-Type: application/pdf');
         header('Content-Disposition: attachment; filename="' . $filename . '"');
         header('Content-Length: ' . (string) $size);
         header('X-Content-Type-Options: nosniff');
         header('Cache-Control: private, no-store');
+        header('Pragma: no-cache');
+        header('Expires: 0');
         header('X-Robots-Tag: noindex, nofollow');
+        header('Referrer-Policy: no-referrer');
+        // Never emit absolute filesystem path in headers or body.
         readfile($absolute);
         exit;
     }
@@ -76,13 +88,17 @@ final class PublicReportShareController extends BaseController
         Response::html(
             '<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8">'
             . '<meta name="robots" content="noindex, nofollow">'
+            . '<meta name="referrer" content="no-referrer">'
             . '<title>' . e($title) . '</title></head>'
             . '<body><h1>' . e($heading) . '</h1><p>' . e($message) . '</p></body></html>',
             $status,
             [
                 'Cache-Control' => 'private, no-store',
+                'Pragma' => 'no-cache',
+                'Expires' => '0',
                 'X-Robots-Tag' => 'noindex, nofollow',
                 'X-Content-Type-Options' => 'nosniff',
+                'Referrer-Policy' => 'no-referrer',
             ]
         );
     }

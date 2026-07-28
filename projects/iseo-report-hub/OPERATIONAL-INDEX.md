@@ -27,7 +27,7 @@
 |-------|-------|
 | **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A/1B + local DB + **auth persistence implemented** + **DB-03 migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** + **Report Preview / Render Implementation 01 complete** + **Report Finalization Charter 01 complete** + **Report Finalization Implementation 01 complete** + **Report Snapshot Charter 01 complete** + **Report Snapshot DB-07 Migration Apply 01 complete** + **Report Snapshot Implementation 01 complete** + **Report Export / PDF Charter 01 complete** + **Report Export DB-08 Migration Apply 01 complete** |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | **Report Delivery Public Share Implementation 01 complete** — tokenized public PDF share MVP live; next recommended: **Report Delivery Public Share Hardening 01** |
+| **Active stage** | **Report Delivery Public Share Hardening 01 complete** — token/route/header/access hardening live; next recommended: **Report Delivery Public Share Visual QA 01** |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -1125,7 +1125,27 @@
 | **Restrictions** | local DB only; no export/artifact mutation; no portal/email; no `/r/{token}`; no secrets; no push |
 | **Result** | [I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-IMPLEMENTATION-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-IMPLEMENTATION-RESULT-v0.1.md) |
 | **Closeout** | [REPORT-iseo-report-hub-report-delivery-public-share-implementation-01.md](reports/REPORT-iseo-report-hub-report-delivery-public-share-implementation-01.md) |
-| **Next recommended stage** | **I-SEO Report Hub — Report Delivery Public Share Hardening 01** |
+| **Next recommended stage** | **I-SEO Report Hub — Report Delivery Public Share Hardening 01** — **completed** (see section below) |
+
+---
+
+## Report Delivery Public Share Hardening 01 (2026-07-28)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** — hardening / safety / regression |
+| **Token validation** | Exact **64 hex** before hash; reject empty/short/non-hex/path/`%`/null; `hashPublicToken()` |
+| **Denial policy** | invalid/missing/ineligible/artifact → **404**; revoked/expired/max_access → **410** |
+| **Public headers** | PDF attachment + length + nosniff + private/no-store + noindex + Pragma/Expires/Referrer-Policy |
+| **Access tracking** | `access_count` only after stream preflight; SQL guards active/expiry/max_access |
+| **UI** | no `token_hash` / IP-UA hashes in share UI; once-URL only; active blocks recreate |
+| **DB final** | migrations **9**; tables **16**; `report_exports` **4**; `report_export_shares` **3** revoked (ids 1–2 preserved); active **0** |
+| **Artifacts** | v1/v2 checksums **unchanged**; `%PDF` PASS; no public files |
+| **Smoke** | **66/66 PASS** (`127.0.0.1:8092`; session injection; token unit 9/9) |
+| **Restrictions** | local DB only; no export/artifact mutation; no prune of existing revoked rows; no portal/email; no `/r/{token}`; no secrets; no push |
+| **Result** | [I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-HARDENING-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-HARDENING-RESULT-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-report-delivery-public-share-hardening-01.md](reports/REPORT-iseo-report-hub-report-delivery-public-share-hardening-01.md) |
+| **Next recommended stage** | **I-SEO Report Hub — Report Delivery Public Share Visual QA 01** |
 
 ---
 
@@ -1370,6 +1390,8 @@
 | 222 | [reports/REPORT-iseo-report-hub-report-delivery-public-share-db10-migration-apply-01.md](reports/REPORT-iseo-report-hub-report-delivery-public-share-db10-migration-apply-01.md) | DB-10 public share migration apply closeout |
 | 223 | [product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-IMPLEMENTATION-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-IMPLEMENTATION-RESULT-v0.1.md) | Public share implementation result |
 | 224 | [reports/REPORT-iseo-report-hub-report-delivery-public-share-implementation-01.md](reports/REPORT-iseo-report-hub-report-delivery-public-share-implementation-01.md) | Public share implementation closeout |
+| 225 | [product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-HARDENING-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-HARDENING-RESULT-v0.1.md) | Public share hardening result |
+| 226 | [reports/REPORT-iseo-report-hub-report-delivery-public-share-hardening-01.md](reports/REPORT-iseo-report-hub-report-delivery-public-share-hardening-01.md) | Public share hardening closeout |
 
 ---
 
@@ -1414,7 +1436,7 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Report Delivery Public Share Hardening 01** — **recommended next**
+1. **Report Delivery Public Share Visual QA 01** — **recommended next**
 2. Optional: **Report Export Template Metadata Write Smoke 01** (exercise future create writes under controlled charter)
 3. Optional: **Report Styling Visual QA Fix 01** (only if operator prioritizes minor QA issues)
 3. Optional: **Report Snapshot Hardening 01** / **Report Snapshot Versioning Charter 01** if multi-role or v2 smoke needed

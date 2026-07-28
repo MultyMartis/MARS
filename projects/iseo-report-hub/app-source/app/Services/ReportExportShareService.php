@@ -103,8 +103,12 @@ final class ReportExportShareService
         }
 
         $eligibility = $this->evaluateEligibility($export);
-        $shareRows = $this->shares->findForExport($exportId);
-        $active = $this->shares->findActiveForExport($exportId);
+        $shareRows = array_map(
+            fn (array $row): array => $this->sanitizeShareRowForUi($row),
+            $this->shares->findForExport($exportId)
+        );
+        $activeRaw = $this->shares->findActiveForExport($exportId);
+        $active = $activeRaw !== null ? $this->sanitizeShareRowForUi($activeRaw) : null;
         $onceUrl = $this->consumeOnceShareUrl($exportId);
 
         return [
@@ -183,7 +187,7 @@ final class ReportExportShareService
                 'ok' => false,
                 'message' => 'An active share already exists for this export. Revoke it before creating a new link.',
                 'export' => $export,
-                'share' => $existing,
+                'share' => $this->sanitizeShareRowForUi($existing),
                 'plaintext_token' => null,
                 'plaintext_share_url' => null,
                 'eligibility' => $eligibility,
@@ -192,7 +196,19 @@ final class ReportExportShareService
         }
 
         $token = SafeToken::generate();
-        $tokenHash = SafeToken::hash($token);
+        $tokenHash = SafeToken::hashPublicToken($token);
+        if ($tokenHash === null) {
+            return [
+                'ok' => false,
+                'message' => 'Could not create share link.',
+                'export' => $export,
+                'share' => null,
+                'plaintext_token' => null,
+                'plaintext_share_url' => null,
+                'eligibility' => $eligibility,
+                'errors' => ['create' => 'Token format.'],
+            ];
+        }
         $label = $this->normalizeLabel($tokenLabel);
         $expiresAt = date('Y-m-d H:i:s', time() + (self::DEFAULT_EXPIRY_DAYS * 86400));
         $userId = (int) ($actor['id'] ?? 0);
@@ -236,12 +252,14 @@ final class ReportExportShareService
 
         $url = $this->buildPublicShareUrl($token);
         $this->storeOnceShareUrl($exportId, $url);
+        // Plaintext token is returned only for this create response / once-session URL.
+        // Controllers must not log it; views show URL once then consume session value.
 
         return [
             'ok' => true,
             'message' => 'Public share link created. Copy it now — it will not be shown again.',
             'export' => $export,
-            'share' => $share,
+            'share' => $this->sanitizeShareRowForUi($share),
             'plaintext_token' => $token,
             'plaintext_share_url' => $url,
             'eligibility' => $eligibility,
@@ -288,7 +306,7 @@ final class ReportExportShareService
             return [
                 'ok' => false,
                 'message' => 'Share is not active.',
-                'share' => $share,
+                'share' => $this->sanitizeShareRowForUi($share),
                 'export_id' => $exportId,
                 'errors' => ['status' => 'Not active.'],
             ];
@@ -301,7 +319,7 @@ final class ReportExportShareService
         return [
             'ok' => $ok,
             'message' => $ok ? 'Share link revoked.' : 'Could not revoke share.',
-            'share' => $updated,
+            'share' => $updated !== null ? $this->sanitizeShareRowForUi($updated) : null,
             'export_id' => $exportId,
             'errors' => $ok ? [] : ['revoke' => 'Failed.'],
         ];
@@ -324,12 +342,17 @@ final class ReportExportShareService
     {
         $this->assertDb();
 
+        // Format gate before any hashing / DB lookup.
         $token = trim($token);
-        if ($token === '' || strlen($token) < 32 || !preg_match('/^[a-fA-F0-9]+$/', $token)) {
+        if (!SafeToken::isValidPublicToken($token)) {
             return $this->denyPublic(404, 'not_found', 'Not found.');
         }
 
-        $hash = SafeToken::hash($token);
+        $hash = SafeToken::hashPublicToken($token);
+        if ($hash === null) {
+            return $this->denyPublic(404, 'not_found', 'Not found.');
+        }
+
         $share = $this->shares->findByTokenHash($hash);
         if ($share === null || !SafeToken::equalsHash((string) ($share['token_hash'] ?? ''), $token)) {
             return $this->denyPublic(404, 'not_found', 'Not found.');
@@ -372,11 +395,7 @@ final class ReportExportShareService
             return $this->denyPublic(404, 'artifact_invalid', 'Not found.');
         }
 
-        $ipHash = $this->hashOptional($_SERVER['REMOTE_ADDR'] ?? null);
-        $uaHash = $this->hashOptional($_SERVER['HTTP_USER_AGENT'] ?? null);
-        $this->shares->recordSuccessfulAccess((int) $share['id'], $ipHash, $uaHash);
-        $share = $this->shares->findById((int) $share['id']) ?? $share;
-
+        // Access is recorded by the public controller only after stream preflight succeeds.
         return [
             'ok' => true,
             'http_status' => 200,
@@ -386,6 +405,21 @@ final class ReportExportShareService
             'absolute_path' => $validation['absolute_path'],
             'deny_code' => null,
         ];
+    }
+
+    /**
+     * Record a successful public stream access (hash-only IP/UA). Does not increment on denials.
+     */
+    public function recordSuccessfulPublicAccess(int $shareId): bool
+    {
+        if ($shareId <= 0) {
+            return false;
+        }
+        $this->assertDb();
+        $ipHash = $this->hashOptional($_SERVER['REMOTE_ADDR'] ?? null);
+        $uaHash = $this->hashOptional($_SERVER['HTTP_USER_AGENT'] ?? null);
+
+        return $this->shares->recordSuccessfulAccess($shareId, $ipHash, $uaHash);
     }
 
     /**
@@ -499,6 +533,24 @@ final class ReportExportShareService
             $label = substr($label, 0, 150);
         }
         return $label;
+    }
+
+    /**
+     * Strip sensitive columns before internal UI rendering (no hash/path/IP leakage).
+     *
+     * @param array<string, mixed> $row
+     * @return array<string, mixed>
+     */
+    private function sanitizeShareRowForUi(array $row): array
+    {
+        unset(
+            $row['token_hash'],
+            $row['last_access_ip_hash'],
+            $row['last_user_agent_hash'],
+            $row['metadata_json']
+        );
+
+        return $row;
     }
 
     private function hashOptional(mixed $value): ?string

@@ -20,7 +20,7 @@
 | Report exports | **HTML + PDF MVP (hardened) + styled v2** — internal HTML/PDF artifacts; Edge headless PDF; auth download with path/MIME/size/checksum/PDF-magic guards; idempotent; historical v1 preserved; styled v2 via `iseo_default_v1` |
 | Report styling template | **Code-first default `iseo_default_v1` v1** — applied to styled export versions (v2+); historical exports id 1/2 unchanged; no DB template registry yet |
 | Export template metadata (DB-09) | **Nullable columns on `report_exports`** — `template_id` / `template_version` / `render_target` / `render_engine` / `render_options_json` / `source_html_export_id` / `metadata_json`; backfill ids **3–4** only; ids **1–2** NULL; **UI/repository/service read + future write support implemented** |
-| Public share (DB-10 + MVP) | **Table `report_export_shares` + tokenized public PDF share** — hash-only tokens; create/revoke UI; `GET /share/report/{token}` streams ready styled PDF only; no portal/email/HTML share |
+| Public share (DB-10 + MVP) | **Hardened tokenized public PDF share** — exact 64-hex token gate before hash; hash-only storage; create/revoke UI (no token_hash / IP hashes in UI); `GET /share/report/{token}` streams ready styled PDF; denial 404/410 policy; access_count only after stream preflight; no portal/email/HTML share |
 | Secrets | **None in source** — `.env.example` placeholders only; **no** `.env` / `.env.local` |
 | Runtime sync | Allowlist source → runtime |
 

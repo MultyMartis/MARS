@@ -204,7 +204,9 @@ final class ReportExportShareRepository
                  last_access_ip_hash = :ip_hash,
                  last_user_agent_hash = :ua_hash
              WHERE id = :id
-               AND status = \'active\''
+               AND status = \'active\'
+               AND expires_at > NOW()
+               AND (max_access_count IS NULL OR access_count < max_access_count)'
         );
         $stmt->execute([
             ':ip_hash' => $ipHash,

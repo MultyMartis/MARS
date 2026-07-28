@@ -243,10 +243,15 @@ if (preg_match('#^/reporting-periods/(\d+)/monthly-report/create$#', $requestPat
     $router->get($requestPath, static function () use ($reportExports, $exportId): void {
         $reportExports->show($exportId);
     });
-} elseif (preg_match('#^/share/report/([A-Za-z0-9_-]+)$#', $requestPath, $m) === 1) {
+} elseif (preg_match('#^/share/report/([a-fA-F0-9]{64})$#', $requestPath, $m) === 1) {
     $token = (string) $m[1];
     $router->get($requestPath, static function () use ($publicReportShares, $token): void {
         $publicReportShares->download($token);
+    });
+} elseif (preg_match('#^/share/report(?:/.*)?$#', $requestPath) === 1) {
+    // Malformed / wrong-length / path-like tokens: generic 404 (no existence leak).
+    $router->get($requestPath, static function () use ($publicReportShares): void {
+        $publicReportShares->download('');
     });
 } elseif (preg_match('#^/report-snapshots/(\d+)$#', $requestPath, $m) === 1) {
     $snapshotId = (int) $m[1];

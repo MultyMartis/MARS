@@ -58,6 +58,8 @@ $format = (string) ($export['format'] ?? '');
                     type="text"
                     class="share-url-input"
                     readonly
+                    autocomplete="off"
+                    spellcheck="false"
                     value="<?= e($plaintextShareUrl) ?>"
                     data-share-url
                     aria-label="Public share URL"
