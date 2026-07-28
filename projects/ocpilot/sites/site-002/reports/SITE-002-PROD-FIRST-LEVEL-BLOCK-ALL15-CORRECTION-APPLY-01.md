@@ -232,9 +232,9 @@ Evidence: Storage `regression/`.
 | Worktree | `X:\AI MARS STORAGE\git-sync-e01\repo` |
 | Branch | `site-002-git-authority-realign-after-wave-e` |
 | Start HEAD | `7e133aa6` |
+| Commit | `a959050c` — `ocpilot: show all SITE-002 neutral first-level categories` |
+| Push | `origin HEAD:mars/canonical-post-recovery` — **OK** (`7e133aa6..a959050c`) |
 | Dirty main mutations | **0** |
-| Commit message (this wave) | `ocpilot: show all SITE-002 neutral first-level categories` |
-| Push | `origin HEAD:mars/canonical-post-recovery` (fast-forward) |
 
 ## 20. Rollback plan
 
