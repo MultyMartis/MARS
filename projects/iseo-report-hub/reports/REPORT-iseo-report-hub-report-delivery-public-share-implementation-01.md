@@ -122,7 +122,7 @@ All charter restrictions confirmed: no production/remote DB; no real data beyond
 |------|-------|
 | Primary commit | `dbba3c51bf107894ede863ff4da0c82fdba2f2e7` |
 | Message | `feat(iseo-report-hub): add public report share links` |
-| Hash-record | see tip after docs follow-up |
+| Hash-record | `2439c225bf6f333efe823c2ca6f88ea2caec522b` |
 | exact-path git add | yes |
 | push | **no** |
 
