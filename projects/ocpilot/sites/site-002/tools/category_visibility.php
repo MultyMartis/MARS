@@ -9,8 +9,9 @@
  *   peer root Технологическое оборудование (362); multi-section tile blocks; placeholder fallback.
  * SITE-002-PROD-MEGAMENU-CHILDREN-AUTOMATION-01 — mega menu children rebuilt DB-driven to match Catalog Section Tiles
  *   (neutral keeps product gate; other section hubs include empty active children).
- * SITE-002-PROD-FIRST-LEVEL-BLOCK-HYBRID-APPLY-01 — HYBRID Neutral first-level block (home+/katalog):
- *   explicit show list; hide legacy wait IDs 82/83/85/87/89; empty copy for future proven empties;
+ * SITE-002-PROD-FIRST-LEVEL-BLOCK-HYBRID-APPLY-01 — HYBRID Neutral first-level block (superseded by ALL15 correction).
+ * SITE-002-PROD-FIRST-LEVEL-BLOCK-ALL15-CORRECTION-APPLY-01 — ALL-15 Neutral first-level block (home+/katalog):
+ *   all 15 direct children of 79; empty copy for zero-product first-level cards;
  *   mega/buildHubChildCards product gate unchanged; Tech 362 unchanged.
  *
  * Single source of truth for Launch Mode navigation and /katalog presentation.
@@ -25,7 +26,7 @@ class CategoryVisibility {
 	const NEUTRAL_HUB_CATEGORY_ID = 79;
 	const TECHNOLOGICAL_HUB_CATEGORY_ID = 362;
 	const PLACEHOLDER_IMAGE = 'placeholder.png';
-	/** Empty first-level caption for future proven empty Neutral show-list cards. */
+	/** Empty first-level caption for empty Neutral first-level cards. */
 	const EMPTY_FIRST_LEVEL_COPY = 'Ожидайте, товары скоро поступят.';
 
 	private static $visible_root_category_ids = array(79, 362);
@@ -46,11 +47,11 @@ class CategoryVisibility {
 		'ventilyacionnoe-oborudovanie',
 	);
 
-	/** HYBRID show IDs for Neutral first-level Catalog Section Tiles (home + /katalog/). */
-	private static $neutral_hub_branch_ids = array(80, 86, 207, 301, 322, 326, 331, 354, 358, 360);
+	/** ALL-15 Neutral first-level Catalog Section Tiles (home + /katalog/) — direct children of 79. */
+	private static $neutral_hub_branch_ids = array(80, 82, 83, 85, 86, 87, 89, 207, 301, 322, 326, 331, 354, 358, 360);
 
-	/** Legacy Neutral first-level duplicates — wait 1C proof; never show in first-level block. */
-	private static $neutral_first_level_hide_wait_ids = array(82, 83, 85, 87, 89);
+	/** No Neutral first-level IDs hidden in Catalog Section Tiles after ALL15 correction. */
+	private static $neutral_first_level_hide_wait_ids = array();
 
 	public function isLaunchMode() {
 		return self::LAUNCH_MODE;
@@ -353,8 +354,8 @@ class CategoryVisibility {
 	 * Catalog Section Tiles — one block per visible Launch Mode root.
 	 */
 	/**
-	 * HYBRID Neutral first-level cards for Catalog Section Tiles only (home + /katalog/).
-	 * Show approved IDs; never include hide/wait IDs; allow zero-product cards with empty copy.
+	 * ALL-15 Neutral first-level cards for Catalog Section Tiles only (home + /katalog/).
+	 * Show all 15 direct children of 79; allow zero-product cards with empty copy.
 	 * Mega menu continues to use buildHubChildCards() with Neutral product gate.
 	 */
 	public function buildNeutralFirstLevelBlockCards($controller) {
