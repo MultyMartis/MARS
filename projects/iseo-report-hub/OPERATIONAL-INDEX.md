@@ -27,7 +27,7 @@
 |-------|-------|
 | **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A/1B + local DB + **auth persistence implemented** + **DB-03 migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** + **Report Preview / Render Implementation 01 complete** + **Report Finalization Charter 01 complete** + **Report Finalization Implementation 01 complete** + **Report Snapshot Charter 01 complete** + **Report Snapshot DB-07 Migration Apply 01 complete** + **Report Snapshot Implementation 01 complete** + **Report Export / PDF Charter 01 complete** + **Report Export DB-08 Migration Apply 01 complete** |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | **Report Delivery Public Share Hardening 01 complete** — token/route/header/access hardening live; next recommended: **Report Delivery Public Share Visual QA 01** |
+| **Active stage** | **Report Delivery Public Share Visual QA 01 complete** — verdict **PASS_WITH_MINOR_ISSUES**; next recommended: **Report Delivery Client Handoff UX Charter 01** |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -1145,7 +1145,27 @@
 | **Restrictions** | local DB only; no export/artifact mutation; no prune of existing revoked rows; no portal/email; no `/r/{token}`; no secrets; no push |
 | **Result** | [I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-HARDENING-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-HARDENING-RESULT-v0.1.md) |
 | **Closeout** | [REPORT-iseo-report-hub-report-delivery-public-share-hardening-01.md](reports/REPORT-iseo-report-hub-report-delivery-public-share-hardening-01.md) |
-| **Next recommended stage** | **I-SEO Report Hub — Report Delivery Public Share Visual QA 01** |
+| **Next recommended stage** | **I-SEO Report Hub — Report Delivery Public Share Visual QA 01** — **completed** (see section below) |
+
+---
+
+## Report Delivery Public Share Visual QA 01 (2026-07-28)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** — visual / UX / public-route QA |
+| **Verdict** | **PASS_WITH_MINOR_ISSUES** (BLOCKER **0** / MAJOR **0** / MINOR **2**) |
+| **Evidence** | `X:\AI MARS STORAGE\incoming\iseo-report-hub\public-share-visual-qa-01\` (STORAGE only; not Git) |
+| **Internal UI** | ids **1–3** Not shareable with reasons; id **4** Shareable; revoked rows readable; once-URL once-only; no `token_hash` / IP-UA / absolute path leaks |
+| **Public route** | valid token **200** PDF + hardening headers; revoked **410**; malformed/invalid **404**; `/share` + `/r/test` **404** |
+| **DB final** | migrations **9**; tables **16**; `report_exports` **4**; `report_export_shares` **4** revoked (ids **1–3** preserved + id **4** QA); active **0** |
+| **Artifacts** | v1/v2 checksums **unchanged**; `%PDF` PASS; no public files |
+| **Smoke** | **86/86 PASS** (`127.0.0.1:8092`; session injection; token redacted) |
+| **Issues** | MINOR relative storage_path on auth detail; MINOR list badge **No** vs detail **Not shareable** |
+| **Restrictions** | no app-source/runtime edits; no export/artifact mutation; no prune; no long-lived active share; no secrets; no push |
+| **Result** | [I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-VISUAL-QA-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-VISUAL-QA-RESULT-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-report-delivery-public-share-visual-qa-01.md](reports/REPORT-iseo-report-hub-report-delivery-public-share-visual-qa-01.md) |
+| **Next recommended stage** | **I-SEO Report Hub — Report Delivery Client Handoff UX Charter 01** |
 
 ---
 
@@ -1392,6 +1412,8 @@
 | 224 | [reports/REPORT-iseo-report-hub-report-delivery-public-share-implementation-01.md](reports/REPORT-iseo-report-hub-report-delivery-public-share-implementation-01.md) | Public share implementation closeout |
 | 225 | [product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-HARDENING-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-HARDENING-RESULT-v0.1.md) | Public share hardening result |
 | 226 | [reports/REPORT-iseo-report-hub-report-delivery-public-share-hardening-01.md](reports/REPORT-iseo-report-hub-report-delivery-public-share-hardening-01.md) | Public share hardening closeout |
+| 227 | [product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-VISUAL-QA-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-VISUAL-QA-RESULT-v0.1.md) | Public share Visual QA result |
+| 228 | [reports/REPORT-iseo-report-hub-report-delivery-public-share-visual-qa-01.md](reports/REPORT-iseo-report-hub-report-delivery-public-share-visual-qa-01.md) | Public share Visual QA closeout |
 
 ---
 
@@ -1436,10 +1458,10 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Report Delivery Public Share Visual QA 01** — **recommended next**
+1. **Report Delivery Client Handoff UX Charter 01** — **recommended next**
 2. Optional: **Report Export Template Metadata Write Smoke 01** (exercise future create writes under controlled charter)
 3. Optional: **Report Styling Visual QA Fix 01** (only if operator prioritizes minor QA issues)
-3. Optional: **Report Snapshot Hardening 01** / **Report Snapshot Versioning Charter 01** if multi-role or v2 smoke needed
+4. Optional: **Report Snapshot Hardening 01** / **Report Snapshot Versioning Charter 01** if multi-role or v2 smoke needed
 4. Optional: **Report Blocks CRUD Hardening 01** if multi-role HTTP smoke is needed
 5. Optional: **Monthly Report Content CRUD Hardening 01** if multi-role HTTP smoke is needed
 6. Optional: **Weekly Checkpoints CRUD Hardening 01** if multi-role HTTP smoke is needed
@@ -1460,7 +1482,7 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **One local admin user exists** — no user management UI; no password reset
 - **Reporting Period CRUD MVP is implemented** — internal list/detail/create/edit/archive-by-status; CSRF; no DELETE; demo + smoke periods only
 - **Runtime has synced auth + CRUD code** at `X:\MARS-Localhost\sites\php\projects\iseo-report-hub`
-- **Local MySQL DB `iseo_report_hub_dev` exists** with core auth/org tables + **`reporting_periods`** (DB-03) + **`weekly_checkpoints`** (DB-04) + **`monthly_report_contents`** (DB-05) + **`report_blocks`** (DB-06) + **`report_snapshots`** (DB-07) + **`report_exports`** (DB-08 + DB-09 template metadata) + **`report_export_shares`** (DB-10; migrations **9**; tables **16**; active snapshot **1**; HTML exports **2**; PDF exports **2**; share rows **2** revoked smoke / **0** active)
+- **Local MySQL DB `iseo_report_hub_dev` exists** with core auth/org tables + **`reporting_periods`** (DB-03) + **`weekly_checkpoints`** (DB-04) + **`monthly_report_contents`** (DB-05) + **`report_blocks`** (DB-06) + **`report_snapshots`** (DB-07) + **`report_exports`** (DB-08 + DB-09 template metadata) + **`report_export_shares`** (DB-10; migrations **9**; tables **16**; active snapshot **1**; HTML exports **2**; PDF exports **2**; share rows **4** revoked smoke / **0** active)
 - **Local fixture + CRUD smoke** — demo client/project/site **1/1/1**; reporting_periods **2** (`2026-07` fixture + `2026-08` smoke archived); weekly_checkpoints **4** (W1–W3 fixture + W4 smoke `skipped`, `LOCAL_FIXTURE_ONLY`); monthly_report_contents **1** (demo for `2026-07`, status `in_progress`, `LOCAL_FIXTURE_ONLY`); report_blocks **6** (fixture + smoke `risks_and_blockers` under monthly id **1**, `LOCAL_FIXTURE_ONLY`)
 - **Runtime `.env.local` exists** (outside Git); source keeps placeholders only
 - **Versioned source of truth is `app-source/`** — runtime remains Localhost deploy target outside monorepo
@@ -1499,9 +1521,12 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **Report Export Template Metadata DB-09 Migration Apply 01 is complete** — migration `000008` applied; columns/indexes/FK present; backfill ids **3–4**; ids **1–2** NULL; migrations **8**; `report_exports` **4**; artifacts unchanged; HTTP 12/12
 - **Report Export Template Metadata UI Implementation 01 is complete** — repository/service/UI DB-first metadata display; future styled create writes metadata (not invoked); DB/artifacts unchanged; HTTP 27/27; **no** public/share
 - **Report Delivery / Public Share Charter 01 is complete** — Option B tokenized PDF share MVP; `report_export_shares` + DB-10 then implementation planned; **no** code/runtime/DB/SQL/token/public route/artifact mutation in charter
-- **Report Delivery Public Share DB-10 Migration Apply 01 is complete** — migration `000009` applied; `report_export_shares` exists; share rows **0**; migrations **9**; tables **16**; artifacts unchanged; HTTP 13/13; **no** token/public route/app code
-- **Next** = Report Delivery Public Share Implementation 01
-- **No drag/drop reorder / public PDF share runtime / rich text editor / client portal** (runtime; share table exists; token/route/service remain unimplemented)
+- **Report Delivery Public Share DB-10 Migration Apply 01 is complete** — migration `000009` applied; `report_export_shares` exists; share rows **0** at apply time; migrations **9**; tables **16**; artifacts unchanged; HTTP 13/13; **no** token/public route/app code in apply wave
+- **Report Delivery Public Share Implementation 01 is complete** — tokenized public PDF share for eligible export id **4**; routes/UI/service; smoke PASS; **no** portal/email/`/r/{token}`
+- **Report Delivery Public Share Hardening 01 is complete** — 64-hex gate; 404/410 policy; stream headers; access after preflight; smoke **66/66**
+- **Report Delivery Public Share Visual QA 01 is complete** — verdict **PASS_WITH_MINOR_ISSUES**; evidence under STORAGE; smoke **86/86**; shares **4** revoked / active **0**; artifacts unchanged; **no** app-source/runtime code edits
+- **Next** = Report Delivery Client Handoff UX Charter 01
+- **No drag/drop reorder / rich text editor / client portal / email delivery** (runtime public share exists for MVP PDF token links only)
 - **No autonomous publication**
 - **Website Factory is not runtime owner** — methodology + prototype lane only
 - **Static demo v0.4 is UX reference only** — not implementation
