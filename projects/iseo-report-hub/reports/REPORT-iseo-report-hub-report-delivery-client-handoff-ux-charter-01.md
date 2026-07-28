@@ -97,7 +97,7 @@ Confirmed for this wave:
 |------|-------|
 | Exact-path git add | allowlisted docs only (see §11) |
 | Primary commit message | `docs(iseo-report-hub): add client handoff ux charter` |
-| Primary commit hash | `PENDING_PRIMARY_HASH` |
+| Primary commit hash | `08cd5e1110388d518ac29c61d4ce28ecd3f3ccd9` |
 | Hash-record commit message | `docs(iseo-report-hub): record client handoff ux charter commit hash` |
 | Hash-record commit hash | `PENDING_HASH_RECORD` |
 | Tip after commits | `PENDING_TIP` |
