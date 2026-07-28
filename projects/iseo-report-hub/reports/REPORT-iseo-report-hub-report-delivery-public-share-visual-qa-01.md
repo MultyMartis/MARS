@@ -127,8 +127,8 @@ All charter restrictions confirmed: no production/remote DB; no real data beyond
 | Staged list (primary) | VISUAL-QA-RESULT; REPORT; OPERATIONAL-INDEX |
 | Primary commit | `9e9101879904b4a981cf58a5e04aeac64cd3baf2` — `docs(iseo-report-hub): add public share visual qa` |
 | Hash-record commit | `ce5214428b8026c274d9b7634650769d316f248f` — `docs(iseo-report-hub): record public share visual qa commit hash` |
-| Tip HEAD | `4aa5f592e895414a8cd68143debe78a3bcdae7ef` — `docs(iseo-report-hub): finalize public share visual qa commit section` |
-| HEAD verification | `4aa5f592e895414a8cd68143debe78a3bcdae7ef` |
+| Tip HEAD | `57ecba75187bd43f4ab3e78549c22d4093bf9b85` — `docs(iseo-report-hub): align public share visual qa tip hash` |
+| HEAD verification | `57ecba75187bd43f4ab3e78549c22d4093bf9b85` |
 | Push | **no** |
 
 ## 12. SAFE UNKNOWN
