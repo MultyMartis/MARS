@@ -843,6 +843,108 @@ code {
   margin-top: 0.5rem;
 }
 
+.tech-details {
+  margin: 0.75rem 0 0.25rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.tech-details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #475569;
+}
+
+.storage-path-tech {
+  display: inline-block;
+  margin-top: 0.25rem;
+  word-break: break-all;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.handoff-panel .handoff-subhead {
+  margin: 1rem 0 0.4rem;
+  font-size: 1rem;
+}
+
+.handoff-context-list {
+  margin-top: 0.75rem;
+}
+
+.handoff-checklist,
+.handoff-warnings {
+  margin: 0.35rem 0 0.75rem;
+  padding-left: 1.1rem;
+}
+
+.handoff-checklist .check-pass {
+  color: #065f46;
+}
+
+.handoff-checklist .check-fail {
+  color: #64748b;
+}
+
+.handoff-checklist .check-mark {
+  display: inline-block;
+  width: 1.1rem;
+  font-weight: 700;
+}
+
+.handoff-warnings {
+  color: #92400e;
+}
+
+.handoff-once-gone {
+  margin: 0.85rem 0;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #fdba74;
+  background: #fff7ed;
+  border-radius: 6px;
+  color: #9a3412;
+}
+
+.handoff-not-ready {
+  color: #64748b;
+}
+
+.handoff-copy-pack {
+  margin: 1rem 0 1.25rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid #bbf7d0;
+  background: #f0fdf4;
+  border-radius: 6px;
+}
+
+.copy-pack-block {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0.85rem 0;
+}
+
+.copy-pack-block label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.copy-pack-text {
+  width: 100%;
+  min-height: 6.5rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  background: #fff;
+  resize: vertical;
+}
+
 .share-url-input {
   flex: 1 1 16rem;
   min-width: 12rem;

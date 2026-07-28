@@ -47,6 +47,7 @@ final class ReportExportShareController extends BaseController
             'eligibility' => $result['eligibility'],
             'canManage' => !empty($result['can_manage']),
             'plaintextShareUrl' => $result['plaintext_share_url'],
+            'handoff' => is_array($result['handoff'] ?? null) ? $result['handoff'] : null,
             'message' => $result['message'],
         ]);
     }

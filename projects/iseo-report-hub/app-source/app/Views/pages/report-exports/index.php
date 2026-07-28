@@ -163,7 +163,13 @@ $rowTemplateLabel = static function (array $row) use ($legacyTemplateLabel): str
                                     <br><span class="meta-muted">Active: <?= e((string) $activeShares) ?></span>
                                 <?php endif; ?>
                             <?php else: ?>
-                                <span class="share-badge share-badge--blocked">No</span>
+                                <?php
+                                $shareReasonTitle = '';
+                                if (isset($reportExportShareService) && $reportExportShareService instanceof \Iseo\Services\ReportExportShareService) {
+                                    $shareReasonTitle = (string) ($reportExportShareService->evaluateEligibility($row)['reason'] ?? '');
+                                }
+                                ?>
+                                <span class="share-badge share-badge--blocked"<?= $shareReasonTitle !== '' ? ' title="' . e($shareReasonTitle) . '"' : '' ?>>Not shareable</span>
                             <?php endif; ?>
                         </td>
                         <td><code><?= e((string) ($row['filename'] ?? '')) ?></code></td>

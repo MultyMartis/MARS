@@ -88,6 +88,7 @@ $templateService = new ReportTemplateService();
 $templateRenderer = new ReportTemplateRenderer($templateService);
 $exportService = new ReportExportService($exportRepo, $snapshotRepo, $db, $templateService, $templateRenderer);
 $exportShareService = new ReportExportShareService($exportShareRepo, $exportRepo, $exportService, $db, $config);
+$view->share(['reportExportShareService' => $exportShareService]);
 $reportingPeriods = new ReportingPeriodController(
     $app,
     $view,

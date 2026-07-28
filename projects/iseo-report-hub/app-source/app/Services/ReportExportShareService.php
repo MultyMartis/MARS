@@ -110,6 +110,7 @@ final class ReportExportShareService
         $activeRaw = $this->shares->findActiveForExport($exportId);
         $active = $activeRaw !== null ? $this->sanitizeShareRowForUi($activeRaw) : null;
         $onceUrl = $this->consumeOnceShareUrl($exportId);
+        $handoff = $this->buildHandoffState($export, $active, $onceUrl, $actor);
 
         return [
             'ok' => true,
@@ -120,6 +121,7 @@ final class ReportExportShareService
             'eligibility' => $eligibility,
             'can_manage' => $this->canManage($actor),
             'plaintext_share_url' => $onceUrl,
+            'handoff' => $handoff,
         ];
     }
 
@@ -429,7 +431,7 @@ final class ReportExportShareService
     public function evaluateEligibility(array $export): array
     {
         if ((string) ($export['format'] ?? '') !== 'pdf') {
-            return ['eligible' => false, 'reason' => 'Only PDF exports are shareable in MVP.', 'code' => 'format'];
+            return ['eligible' => false, 'reason' => 'Only styled PDF exports can be shared.', 'code' => 'format'];
         }
         if ((string) ($export['status'] ?? '') !== 'ready') {
             return ['eligible' => false, 'reason' => 'Export status must be ready.', 'code' => 'status'];
@@ -439,7 +441,7 @@ final class ReportExportShareService
         }
         $templateId = trim((string) ($export['template_id'] ?? ''));
         if ($templateId === '') {
-            return ['eligible' => false, 'reason' => 'Template metadata is required (legacy exports are not shareable).', 'code' => 'template'];
+            return ['eligible' => false, 'reason' => 'Template metadata is required; legacy PDF is not shareable.', 'code' => 'template'];
         }
         if ((string) ($export['render_target'] ?? '') !== 'pdf_export') {
             return ['eligible' => false, 'reason' => 'Render target must be pdf_export.', 'code' => 'render_target'];
@@ -494,6 +496,262 @@ final class ReportExportShareService
             return ['eligible' => false, 'reason' => 'Export not found.', 'code' => 'missing'];
         }
         return $this->evaluateEligibility($export);
+    }
+
+    /**
+     * Build operator handoff readiness + optional copy pack (once URL only).
+     *
+     * @param array<string, mixed> $export
+     * @param array<string, mixed>|null $activeShare sanitized UI row or null
+     * @param array{id:int,email:string,name:string,roles:list<string>,authenticated_at:string}|null $actor
+     * @return array<string, mixed>
+     */
+    public function buildHandoffState(
+        array $export,
+        ?array $activeShare = null,
+        ?string $onceShareUrl = null,
+        ?array $actor = null
+    ): array {
+        $exportId = (int) ($export['id'] ?? 0);
+        $eligibility = $this->evaluateEligibility($export);
+        $ctxRow = $exportId > 0 ? $this->shares->findHandoffContext($exportId) : null;
+
+        $clientName = trim((string) ($ctxRow['client_name'] ?? ''));
+        $projectName = trim((string) ($ctxRow['project_name'] ?? ''));
+        $period = $this->formatPeriodLabel(
+            is_array($ctxRow) ? (string) ($ctxRow['period_key'] ?? '') : '',
+            is_array($ctxRow) ? (string) ($ctxRow['period_start'] ?? '') : '',
+            is_array($ctxRow) ? (string) ($ctxRow['period_title'] ?? '') : ''
+        );
+        $reportStatus = trim((string) ($ctxRow['monthly_status'] ?? ''));
+        $snapshotKey = trim((string) ($ctxRow['snapshot_key'] ?? ($export['snapshot_key'] ?? '')));
+        $snapshotStatus = trim((string) ($ctxRow['snapshot_status'] ?? ($export['snapshot_status'] ?? '')));
+        $templateId = trim((string) ($export['template_id'] ?? ($ctxRow['template_id'] ?? '')));
+        $templateVersion = trim((string) ($export['template_version'] ?? ($ctxRow['template_version'] ?? '')));
+        $templateLabel = ($templateId !== '' && $templateVersion !== '')
+            ? ($templateId . ' v' . $templateVersion)
+            : 'not recorded / legacy';
+        $specialist = trim((string) ($actor['name'] ?? ''));
+        if ($specialist === '') {
+            $specialist = trim((string) ($ctxRow['specialist_name'] ?? ''));
+        }
+        if ($specialist === '') {
+            $specialist = 'специалист i-SEO';
+        }
+
+        if ($clientName === '') {
+            $clientName = 'SAFE UNKNOWN';
+        }
+        if ($projectName === '') {
+            $projectName = 'SAFE UNKNOWN';
+        }
+        if ($period === '') {
+            $period = 'SAFE UNKNOWN';
+        }
+
+        if ($activeShare === null && $exportId > 0) {
+            $activeRaw = $this->shares->findActiveForExport($exportId);
+            $activeShare = $activeRaw !== null ? $this->sanitizeShareRowForUi($activeRaw) : null;
+        }
+
+        $hasActive = is_array($activeShare);
+        $expiresAt = $hasActive ? (string) ($activeShare['expires_at'] ?? '') : '';
+        $expiresDisplay = $expiresAt !== '' ? $this->formatExpiresAt($expiresAt) : '';
+        $revokedCount = $exportId > 0 ? $this->shares->countRevokedForExport($exportId) : 0;
+        $onceAvailable = is_string($onceShareUrl) && $onceShareUrl !== '';
+
+        $reportFinalized = $reportStatus === 'finalized';
+        $snapshotOk = $snapshotKey !== '' && ($snapshotStatus === '' || $snapshotStatus === 'active');
+        $styledPdfReady = $eligibility['eligible'] === true
+            || (
+                (string) ($export['format'] ?? '') === 'pdf'
+                && (string) ($export['status'] ?? '') === 'ready'
+                && $templateId !== ''
+                && (string) ($export['render_target'] ?? '') === 'pdf_export'
+            );
+        $shareable = !empty($eligibility['eligible']);
+        $activeOk = $hasActive && $expiresAt !== '' && strtotime($expiresAt) !== false && strtotime($expiresAt) > time();
+        $urlCopiedOnce = $onceAvailable;
+        $notSendingBadLink = true;
+
+        $checklist = [
+            ['id' => 'report_finalized', 'label' => 'Report finalized', 'pass' => $reportFinalized, 'note' => $reportStatus !== '' ? $reportStatus : 'SAFE UNKNOWN'],
+            ['id' => 'snapshot_exists', 'label' => 'Snapshot exists', 'pass' => $snapshotOk, 'note' => $snapshotKey !== '' ? $snapshotKey : 'SAFE UNKNOWN'],
+            ['id' => 'styled_pdf_ready', 'label' => 'Styled PDF export ready', 'pass' => $styledPdfReady && (string) ($export['status'] ?? '') === 'ready', 'note' => (string) ($export['status'] ?? '')],
+            ['id' => 'shareable_export', 'label' => 'Shareable export', 'pass' => $shareable, 'note' => $eligibility['reason']],
+            ['id' => 'active_share', 'label' => 'Active non-expired share exists', 'pass' => $activeOk, 'note' => $activeOk ? ('expires ' . $expiresAt) : 'no active share'],
+            ['id' => 'url_copied', 'label' => 'Public URL available to copy (create flow only)', 'pass' => $urlCopiedOnce, 'note' => $urlCopiedOnce ? 'shown once now' : 'not on this screen'],
+            ['id' => 'no_bad_link', 'label' => 'Revoked/expired link not sent', 'pass' => $notSendingBadLink, 'note' => 'operator responsibility'],
+        ];
+
+        $warnings = [
+            'Public URL is shown only once when the share is created.',
+            'If URL was not copied, revoke the active share and create a new one.',
+            'Do not send revoked or expired links.',
+            'Do not send legacy PDF or HTML exports.',
+            'Do not send the internal artifact storage path.',
+        ];
+
+        $urlLostGuidance = null;
+        if ($shareable && $activeOk && !$onceAvailable) {
+            $urlLostGuidance = 'Ссылка уже создана, но полный URL был показан только один раз. Если ссылка не была скопирована, отзовите текущую ссылку и создайте новую.';
+        }
+
+        $copyPack = null;
+        if ($onceAvailable && $shareable) {
+            $copyPack = $this->buildCopyPack([
+                'client_name' => $clientName,
+                'project_name' => $projectName,
+                'period' => $period,
+                'share_url' => $onceShareUrl,
+                'expires_at' => $expiresDisplay !== '' ? $expiresDisplay : $expiresAt,
+                'specialist_name' => $specialist,
+                'export_id' => (string) $exportId,
+                'export_key' => (string) ($export['export_key'] ?? ''),
+                'template_label' => $templateLabel,
+                'share_id' => $hasActive ? (string) (int) ($activeShare['id'] ?? 0) : '',
+                'share_status' => $hasActive ? (string) ($activeShare['status'] ?? 'active') : 'active',
+            ]);
+        }
+
+        $deliveryReady = $reportFinalized && $snapshotOk && $shareable && $activeOk && $onceAvailable;
+
+        return [
+            'context' => [
+                'client_name' => $clientName,
+                'project_name' => $projectName,
+                'period' => $period,
+                'report_status' => $reportStatus !== '' ? $reportStatus : 'SAFE UNKNOWN',
+                'snapshot_key' => $snapshotKey !== '' ? $snapshotKey : 'SAFE UNKNOWN',
+                'snapshot_status' => $snapshotStatus !== '' ? $snapshotStatus : 'SAFE UNKNOWN',
+                'export_id' => $exportId,
+                'export_key' => (string) ($export['export_key'] ?? ''),
+                'format' => (string) ($export['format'] ?? ''),
+                'template_label' => $templateLabel,
+                'specialist_name' => $specialist,
+            ],
+            'share_status' => [
+                'has_active' => $hasActive,
+                'active_share_id' => $hasActive ? (int) ($activeShare['id'] ?? 0) : 0,
+                'expires_at' => $expiresAt,
+                'expires_display' => $expiresDisplay,
+                'revoked_count' => $revokedCount,
+                'active_count' => $activeOk ? 1 : 0,
+            ],
+            'checklist' => $checklist,
+            'warnings' => $warnings,
+            'copy_pack' => $copyPack,
+            'once_url_available' => $onceAvailable,
+            'url_lost_guidance' => $urlLostGuidance,
+            'eligible' => $shareable,
+            'eligibility_reason' => $eligibility['reason'],
+            'eligibility_code' => $eligibility['code'],
+            'delivery_ready' => $deliveryReady,
+        ];
+    }
+
+    /**
+     * @param array<string, string> $vars
+     * @return array{short_message:string,email_subject:string,email_body:string,internal_note:string,share_url:string}
+     */
+    public function buildCopyPack(array $vars): array
+    {
+        $client = $vars['client_name'] ?? 'SAFE UNKNOWN';
+        $project = $vars['project_name'] ?? 'SAFE UNKNOWN';
+        $period = $vars['period'] ?? 'SAFE UNKNOWN';
+        $url = $vars['share_url'] ?? '';
+        $expires = $vars['expires_at'] ?? '';
+        $specialist = $vars['specialist_name'] ?? 'специалист i-SEO';
+        if (trim($specialist) === '') {
+            $specialist = 'команда i-SEO';
+        }
+
+        $short = 'Здравствуйте! Подготовили отчет по проекту ' . $project . ' за ' . $period
+            . '. Скачать PDF можно по ссылке: ' . $url
+            . '. Ссылка будет доступна до ' . $expires . '.'
+            . "\n\nЕсли будут вопросы по отчету — напишите, пожалуйста. " . $specialist;
+
+        $emailSubject = 'Отчет по проекту ' . $project . ' за ' . $period;
+        $emailBody = "Здравствуйте!\n\n"
+            . 'Направляем отчет по проекту ' . $project . ' за ' . $period . ".\n\n"
+            . "PDF-файл доступен по защищенной ссылке:\n"
+            . $url . "\n\n"
+            . 'Ссылка действует до ' . $expires . ".\n\n"
+            . "Если потребуется пояснение по отчету или комментарии по следующему периоду, напишите нам.\n\n"
+            . "С уважением,\n"
+            . $specialist;
+
+        $internal = "HANDOFF / INTERNAL\n"
+            . 'Client: ' . $client . "\n"
+            . 'Project: ' . $project . "\n"
+            . 'Period: ' . $period . "\n"
+            . 'Export: id ' . ($vars['export_id'] ?? '') . ' / ' . ($vars['export_key'] ?? '')
+            . ' / template ' . ($vars['template_label'] ?? '') . " (styled PDF only)\n"
+            . 'Share: id ' . ($vars['share_id'] ?? '') . ' / status ' . ($vars['share_status'] ?? '') . "\n"
+            . 'Expires: ' . $expires . "\n"
+            . "URL: available only on create-success screen (once)\n"
+            . "Sent channel: [Telegram | Email | Other]\n"
+            . "Sent at: [operator fills manually]\n"
+            . "Warnings:\n"
+            . "- do not send revoked/expired link\n"
+            . "- do not send HTML or legacy export\n"
+            . "- do not reconstruct URL from DB\n"
+            . "- if URL lost → revoke + recreate share\n"
+            . "- never include internal storage path in client messages";
+
+        return [
+            'short_message' => $short,
+            'email_subject' => $emailSubject,
+            'email_body' => $emailBody,
+            'internal_note' => $internal,
+            'share_url' => $url,
+        ];
+    }
+
+    private function formatPeriodLabel(string $periodKey, string $periodStart, string $periodTitle): string
+    {
+        $months = [
+            1 => 'январь', 2 => 'февраль', 3 => 'март', 4 => 'апрель',
+            5 => 'май', 6 => 'июнь', 7 => 'июль', 8 => 'август',
+            9 => 'сентябрь', 10 => 'октябрь', 11 => 'ноябрь', 12 => 'декабрь',
+        ];
+        if ($periodStart !== '' && preg_match('/^(\d{4})-(\d{2})/', $periodStart, $m) === 1) {
+            $monthNum = (int) $m[2];
+            $year = $m[1];
+            if (isset($months[$monthNum])) {
+                return $months[$monthNum] . ' ' . $year;
+            }
+        }
+        if ($periodKey !== '' && preg_match('/^(\d{4})-(\d{2})$/', $periodKey, $m) === 1) {
+            $monthNum = (int) $m[2];
+            $year = $m[1];
+            if (isset($months[$monthNum])) {
+                return $months[$monthNum] . ' ' . $year;
+            }
+        }
+        if ($periodTitle !== '') {
+            return $periodTitle;
+        }
+        if ($periodKey !== '') {
+            return $periodKey;
+        }
+        return '';
+    }
+
+    private function formatExpiresAt(string $expiresAt): string
+    {
+        $ts = strtotime($expiresAt);
+        if ($ts === false) {
+            return $expiresAt;
+        }
+        $months = [
+            1 => 'января', 2 => 'февраля', 3 => 'марта', 4 => 'апреля',
+            5 => 'мая', 6 => 'июня', 7 => 'июля', 8 => 'августа',
+            9 => 'сентября', 10 => 'октября', 11 => 'ноября', 12 => 'декабря',
+        ];
+        $monthNum = (int) date('n', $ts);
+        $month = $months[$monthNum] ?? date('m', $ts);
+        return (int) date('j', $ts) . ' ' . $month . ' ' . date('Y', $ts) . ', ' . date('H:i', $ts);
     }
 
     /**

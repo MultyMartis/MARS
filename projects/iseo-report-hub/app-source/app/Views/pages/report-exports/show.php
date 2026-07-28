@@ -12,6 +12,7 @@ declare(strict_types=1);
 /** @var array{eligible?:bool,reason?:string,code?:string}|null $shareEligibility */
 /** @var int $activeShareCount */
 /** @var bool $canManageShares */
+/** @var \Iseo\Services\ReportExportShareService|null $reportExportShareService */
 
 $export = $export ?? [];
 $message = (string) ($message ?? '');
@@ -47,6 +48,18 @@ $shareEligible = !empty($shareEligibility['eligible']);
 $shareReason = (string) ($shareEligibility['reason'] ?? 'Eligibility not evaluated.');
 $activeShareCount = (int) ($activeShareCount ?? 0);
 $canManageShares = !empty($canManageShares);
+
+$handoff = null;
+if (isset($reportExportShareService) && $reportExportShareService instanceof \Iseo\Services\ReportExportShareService) {
+    $handoff = $reportExportShareService->buildHandoffState($export, null, null, null);
+}
+$handoff = is_array($handoff) ? $handoff : null;
+$hCtx = is_array($handoff['context'] ?? null) ? $handoff['context'] : [];
+$hShare = is_array($handoff['share_status'] ?? null) ? $handoff['share_status'] : [];
+$hChecks = is_array($handoff['checklist'] ?? null) ? $handoff['checklist'] : [];
+$hWarnings = is_array($handoff['warnings'] ?? null) ? $handoff['warnings'] : [];
+$urlLost = is_string($handoff['url_lost_guidance'] ?? null) ? (string) $handoff['url_lost_guidance'] : '';
+$storagePath = (string) ($export['storage_path'] ?? '');
 ?>
 <section class="panel export-card export-detail">
     <div class="panel-head">
@@ -77,9 +90,9 @@ $canManageShares = !empty($canManageShares);
             <span class="template-badge template-badge--styled">Recorded template</span>
         <?php endif; ?>
         <?php if ($shareEligible): ?>
-            <span class="share-badge share-badge--eligible">Shareable PDF</span>
+            <span class="share-badge share-badge--eligible">Shareable</span>
         <?php else: ?>
-            <span class="share-badge share-badge--blocked">Not shareable</span>
+            <span class="share-badge share-badge--blocked" title="<?= e($shareReason) ?>">Not shareable</span>
         <?php endif; ?>
         · <span class="status-badge status-<?= e((string) ($export['status'] ?? '')) ?>"><?= e((string) ($export['status'] ?? '')) ?></span>
     </p>
@@ -112,7 +125,6 @@ $canManageShares = !empty($canManageShares);
         <li><strong>Source snapshot checksum:</strong> <code class="checksum-display" title="<?= e($sourceChecksum) ?>"><?= e($sourceShort) ?></code></li>
         <li><strong>Full source checksum:</strong> <code class="checksum-full"><?= e($sourceChecksum) ?></code></li>
         <li><strong>Storage disk:</strong> <?= e((string) ($export['storage_disk'] ?? 'local')) ?></li>
-        <li><strong>Storage path:</strong> <code><?= e((string) ($export['storage_path'] ?? '')) ?></code></li>
         <li><strong>Snapshot ID:</strong> <?= e((string) $snapshotId) ?>
             <?php if (!empty($export['snapshot_key'])): ?>
                 · <code><?= e((string) $export['snapshot_key']) ?></code>
@@ -128,31 +140,95 @@ $canManageShares = !empty($canManageShares);
         </li>
     </ul>
 
+    <?php if ($storagePath !== ''): ?>
+        <details class="tech-details">
+            <summary>Technical details (internal)</summary>
+            <p class="field-hint">
+                <strong>Internal technical artifact path</strong> (not for client messages):
+                <code class="storage-path-tech"><?= e($storagePath) ?></code>
+            </p>
+        </details>
+    <?php endif; ?>
+
     <p class="field-hint export-hint">
         Auth download requires authentication. Path/MIME/size/checksum<?= $isPdf ? '/PDF-magic' : '' ?> are validated before streaming.
         Template/render fields come from DB-09 columns when present; NULL rows stay <?= e($legacyTemplateLabel) ?> and are never inferred as <code><?= e($futureTemplateId) ?></code>.
     </p>
 </section>
 
-<section class="panel export-card share-card">
+<section class="panel export-card handoff-panel" data-handoff-panel>
     <div class="panel-head">
-        <h2>Public share</h2>
+        <h2>Client handoff readiness</h2>
         <p>
-            <a class="btn" href="<?= e(url_path('/report-exports/' . $exportId . '/shares')) ?>">Manage shares</a>
+            <a class="btn" href="<?= e(url_path('/report-exports/' . $exportId . '/shares')) ?>">Open shares / copy pack</a>
         </p>
     </div>
-    <p>
-        <?php if ($shareEligible): ?>
-            <span class="share-badge share-badge--eligible">Eligible</span>
-        <?php else: ?>
-            <span class="share-badge share-badge--blocked">Not eligible</span>
-        <?php endif; ?>
-        · Active shares: <strong><?= e((string) $activeShareCount) ?></strong>
-    </p>
-    <p class="field-hint share-hint"><?= e($shareReason) ?></p>
-    <?php if ($shareEligible && $canManageShares): ?>
-        <p class="field-hint">Create or revoke opaque token links on the shares page. Plaintext URL is shown once.</p>
-    <?php elseif ($shareEligible): ?>
-        <p class="field-hint">View share status on the shares page. Create/revoke requires admin_owner or seo_lead_reviewer.</p>
+
+    <?php if ($shareEligible): ?>
+        <p>
+            <span class="share-badge share-badge--eligible">Shareable</span>
+            · Active shares: <strong><?= e((string) ($hShare['active_count'] ?? $activeShareCount)) ?></strong>
+            <?php if (!empty($hShare['expires_at'])): ?>
+                · Expires: <code><?= e((string) $hShare['expires_at']) ?></code>
+            <?php endif; ?>
+            <?php if ((int) ($hShare['revoked_count'] ?? 0) > 0): ?>
+                · Revoked rows: <strong><?= e((string) (int) $hShare['revoked_count']) ?></strong>
+            <?php endif; ?>
+        </p>
+    <?php else: ?>
+        <p>
+            <span class="share-badge share-badge--blocked">Not shareable</span>
+            · <?= e($shareReason) ?>
+        </p>
+        <p class="field-hint handoff-not-ready">Not delivery ready. No handoff copy pack for this export.</p>
     <?php endif; ?>
+
+    <ul class="facts handoff-context-list">
+        <li><strong>Client:</strong> <?= e((string) ($hCtx['client_name'] ?? 'SAFE UNKNOWN')) ?></li>
+        <li><strong>Project:</strong> <?= e((string) ($hCtx['project_name'] ?? 'SAFE UNKNOWN')) ?></li>
+        <li><strong>Period:</strong> <?= e((string) ($hCtx['period'] ?? 'SAFE UNKNOWN')) ?></li>
+        <li><strong>Report status:</strong> <?= e((string) ($hCtx['report_status'] ?? 'SAFE UNKNOWN')) ?></li>
+        <li><strong>Snapshot key:</strong> <code><?= e((string) ($hCtx['snapshot_key'] ?? 'SAFE UNKNOWN')) ?></code></li>
+        <li><strong>Export:</strong> id <?= e((string) $exportId) ?> · <code><?= e((string) ($export['export_key'] ?? '')) ?></code></li>
+        <li><strong>Export format:</strong> <code><?= e($format) ?></code></li>
+        <li><strong>Template:</strong> <?= e((string) ($hCtx['template_label'] ?? $templateLabel)) ?></li>
+        <li><strong>Share status:</strong>
+            <?php if (!empty($hShare['has_active'])): ?>
+                active exists
+            <?php else: ?>
+                no active share
+            <?php endif; ?>
+        </li>
+    </ul>
+
+    <?php if ($hChecks !== []): ?>
+        <h3 class="handoff-subhead">Readiness checklist</h3>
+        <ul class="handoff-checklist">
+            <?php foreach ($hChecks as $item): ?>
+                <?php if (!is_array($item)) { continue; } ?>
+                <li class="<?= !empty($item['pass']) ? 'check-pass' : 'check-fail' ?>">
+                    <span class="check-mark"><?= !empty($item['pass']) ? '✓' : '○' ?></span>
+                    <?= e((string) ($item['label'] ?? '')) ?>
+                    <span class="meta-muted">— <?= e((string) ($item['note'] ?? '')) ?></span>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
+
+    <?php if ($urlLost !== ''): ?>
+        <p class="handoff-once-gone" role="status"><?= e($urlLost) ?></p>
+    <?php elseif ($shareEligible && empty($hShare['has_active'])): ?>
+        <p class="field-hint">No active share. Create a share on the shares page to get the once-only public URL and copy pack.</p>
+    <?php endif; ?>
+
+    <?php if ($hWarnings !== []): ?>
+        <h3 class="handoff-subhead">Warnings</h3>
+        <ul class="handoff-warnings">
+            <?php foreach ($hWarnings as $w): ?>
+                <li><?= e((string) $w) ?></li>
+            <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
+
+    <p class="field-hint">Copy pack (short / email / internal note) appears only immediately after share creation while the plaintext URL is available. No DB delivery tracking in this MVP.</p>
 </section>

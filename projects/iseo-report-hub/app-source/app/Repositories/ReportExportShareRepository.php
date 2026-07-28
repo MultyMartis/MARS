@@ -265,4 +265,67 @@ final class ReportExportShareRepository
         $stmt->execute([':export_id' => $exportId]);
         return (int) $stmt->fetchColumn();
     }
+
+    public function countRevokedForExport(int $exportId): int
+    {
+        if ($exportId <= 0) {
+            return 0;
+        }
+        $stmt = $this->pdo()->prepare(
+            'SELECT COUNT(*) FROM report_export_shares
+             WHERE report_export_id = :export_id
+               AND status = \'revoked\''
+        );
+        $stmt->execute([':export_id' => $exportId]);
+        return (int) $stmt->fetchColumn();
+    }
+
+    /**
+     * Read-only handoff context for operator UI (no token fields).
+     *
+     * @return array<string, mixed>|null
+     */
+    public function findHandoffContext(int $exportId): ?array
+    {
+        if ($exportId <= 0) {
+            return null;
+        }
+
+        $stmt = $this->pdo()->prepare(
+            'SELECT
+                e.id AS export_id,
+                e.export_key,
+                e.format,
+                e.status AS export_status,
+                e.template_id,
+                e.template_version,
+                e.render_target,
+                e.storage_path,
+                rs.id AS snapshot_id,
+                rs.snapshot_key,
+                rs.status AS snapshot_status,
+                mrc.id AS monthly_report_id,
+                mrc.status AS monthly_status,
+                rp.id AS period_id,
+                rp.period_key,
+                rp.period_start,
+                rp.period_end,
+                rp.title AS period_title,
+                p.name AS project_name,
+                c.name AS client_name,
+                u.name AS specialist_name
+             FROM report_exports e
+             LEFT JOIN report_snapshots rs ON rs.id = e.report_snapshot_id
+             LEFT JOIN monthly_report_contents mrc ON mrc.id = e.monthly_report_content_id
+             LEFT JOIN reporting_periods rp ON rp.id = mrc.reporting_period_id
+             LEFT JOIN projects p ON p.id = rp.project_id
+             LEFT JOIN clients c ON c.id = p.client_id
+             LEFT JOIN users u ON u.id = e.created_by
+             WHERE e.id = :id
+             LIMIT 1'
+        );
+        $stmt->execute([':id' => $exportId]);
+        $row = $stmt->fetch();
+        return is_array($row) ? $row : null;
+    }
 }

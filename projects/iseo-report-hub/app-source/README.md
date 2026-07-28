@@ -21,6 +21,7 @@
 | Report styling template | **Code-first default `iseo_default_v1` v1** — applied to styled export versions (v2+); historical exports id 1/2 unchanged; no DB template registry yet |
 | Export template metadata (DB-09) | **Nullable columns on `report_exports`** — `template_id` / `template_version` / `render_target` / `render_engine` / `render_options_json` / `source_html_export_id` / `metadata_json`; backfill ids **3–4** only; ids **1–2** NULL; **UI/repository/service read + future write support implemented** |
 | Public share (DB-10 + MVP) | **Hardened tokenized public PDF share** — exact 64-hex token gate before hash; hash-only storage; create/revoke UI (no token_hash / IP hashes in UI); `GET /share/report/{token}` streams ready styled PDF; denial 404/410 policy; access_count only after stream preflight; no portal/email/HTML share |
+| Client handoff UX (MVP) | Internal readiness panel on export detail + shares; Russian copy pack (short / email / internal note) shown once with plaintext URL; revoke+recreate if URL lost; no DB delivery tracking; no portal/email send |
 | Secrets | **None in source** — `.env.example` placeholders only; **no** `.env` / `.env.local` |
 | Runtime sync | Allowlist source → runtime |
 
@@ -110,6 +111,8 @@ No top-level `/monthly-reports` or `/report-blocks` index (period/monthly-scoped
 No DELETE route for reporting periods, weekly checkpoints, monthly report content, report blocks, or snapshots — archive/skip via status (snapshots: no DELETE; supersede on later version).  
 No drag/drop reorder (manual `sort_order` only).  
 Public share MVP: opaque token for ready styled PDF only (`render_target=pdf_export` + template metadata). No client portal, email, HTML public share, or `/r/{token}` short route. Auth PDF/HTML downloads remain.
+
+Client handoff UX MVP: operator readiness checklist + once-only Russian copy pack on share create. Lost URL → revoke and recreate. No `report_delivery_events` / DB-11 in this wave.
 
 ## Secrets policy
 
