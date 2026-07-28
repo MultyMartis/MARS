@@ -113,7 +113,7 @@ No production/remote DB; no real data beyond fixture; no credentials/password/ha
 | Message | `feat(iseo-report-hub): add client handoff ux` |
 | Staging | exact-path only (allowlisted) |
 | Primary commit | `98371ef393460bcb9c60a24bd81003409cd894ef` |
-| Hash-record | `HASH_RECORD_PENDING` — `docs(iseo-report-hub): record client handoff ux commit hash` |
+| Hash-record | `721be10f37ab8b738dc0bac042603d3d65fa9df4` — `docs(iseo-report-hub): record client handoff ux commit hash` |
 | Push | **no** |
 
 ## 14. SAFE UNKNOWN
