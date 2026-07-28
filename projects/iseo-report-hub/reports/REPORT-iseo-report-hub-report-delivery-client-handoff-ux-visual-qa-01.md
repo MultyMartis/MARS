@@ -126,8 +126,8 @@ No production/remote DB; no real data beyond fixture; no credentials/password/ha
 | Message | `docs(iseo-report-hub): add client handoff visual qa` |
 | Staging | exact-path only (allowlisted) |
 | Primary commit | `1431192bdfe27562d64ccc2d8d4f35ae9b4a382c` |
-| Hash-record | `ef64f0226a03106f3d46282833d053b8800972bb` — `docs(iseo-report-hub): record client handoff visual qa commit hash` |
-| Tip HEAD | `ef64f0226a03106f3d46282833d053b8800972bb` |
+| Hash-record | `368bf85a59ab9850d2303e35d2177d086e3ba4aa` — `docs(iseo-report-hub): record client handoff visual qa commit hash` |
+| Tip HEAD | `368bf85a59ab9850d2303e35d2177d086e3ba4aa` |
 | Push | **no** |
 
 ## 12. SAFE UNKNOWN
