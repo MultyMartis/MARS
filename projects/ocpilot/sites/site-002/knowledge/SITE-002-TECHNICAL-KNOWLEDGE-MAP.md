@@ -2401,3 +2401,11 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 ---
 
 *Documentation only — Production evidence in Run 4.173+ operation manifests. Last updated: 2026-07-10 (Run 4.251 — hardened artifacts confirmed manually; natural scheduled timing still pending).*
+
+### Monitor baseline after 1C import 2026-07-28 (Run 4.312)
+
+- Latest accepted 1C import: `mars_1c_import_2026-07-28_080011.txt` (`mars-20260728-080001-24823ddf`) SUCCESS.
+- Monitor baseline refreshed **1836 → 1879**.
+- Checkpoint: `SITE-002-STABLE-PROD-POST-1C-IMPORT-20260728-MONITOR-BASELINE-1879-08`.
+- Monitor after: `2026-07-28_15-23-10` **NO_ACTION_REQUIRED** (+0/−0).
+- UI first-level block implementation **not** performed in this run; next is operator scope decision / apply charter.
