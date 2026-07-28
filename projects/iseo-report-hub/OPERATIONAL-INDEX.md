@@ -27,7 +27,7 @@
 |-------|-------|
 | **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A/1B + local DB + **auth persistence implemented** + **DB-03 migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** + **Report Preview / Render Implementation 01 complete** + **Report Finalization Charter 01 complete** + **Report Finalization Implementation 01 complete** + **Report Snapshot Charter 01 complete** + **Report Snapshot DB-07 Migration Apply 01 complete** + **Report Snapshot Implementation 01 complete** + **Report Export / PDF Charter 01 complete** + **Report Export DB-08 Migration Apply 01 complete** |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | **Report Delivery Public Share Visual QA 01 complete** — verdict **PASS_WITH_MINOR_ISSUES**; next recommended: **Report Delivery Client Handoff UX Charter 01** |
+| **Active stage** | **Report Delivery Client Handoff UX Charter 01 complete** — MVP Option B (internal handoff panel + copy pack); next recommended: **Report Delivery Client Handoff UX Implementation 01** |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -1165,7 +1165,29 @@
 | **Restrictions** | no app-source/runtime edits; no export/artifact mutation; no prune; no long-lived active share; no secrets; no push |
 | **Result** | [I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-VISUAL-QA-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PUBLIC-SHARE-VISUAL-QA-RESULT-v0.1.md) |
 | **Closeout** | [REPORT-iseo-report-hub-report-delivery-public-share-visual-qa-01.md](reports/REPORT-iseo-report-hub-report-delivery-public-share-visual-qa-01.md) |
-| **Next recommended stage** | **I-SEO Report Hub — Report Delivery Client Handoff UX Charter 01** |
+| **Next recommended stage** | **I-SEO Report Hub — Report Delivery Client Handoff UX Charter 01** — **completed** (see section below) |
+
+---
+
+## Report Delivery Client Handoff UX Charter 01 (2026-07-28)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** — docs/policy only |
+| **MVP decision** | **Option B** — internal handoff panel + copy pack; keep public route as direct PDF token stream |
+| **Deferred** | Option C public landing; Option D client portal; Option E email automation |
+| **Tracking** | **No DB tracking** in immediate Implementation 01; **DB-11 `report_delivery_events` deferred** until operator confirms |
+| **Copy pack** | Short Telegram/messenger; formal email; internal operator note (RU first); placeholders only; no live token |
+| **Once URL** | Public URL shown once at create; lost URL → revoke + recreate; no recoverable token storage |
+| **Visual QA carry-forward** | `UI-REL-STORAGE-PATH` (de-emphasize path); `UI-LIST-SHARE-LABEL` (unify to **Not shareable**) — fix in Implementation 01 |
+| **DB / runtime / app-source** | **Unchanged** this wave (read-only DB check: migrations **9**; tables **16**; shares **4** revoked / active **0**) |
+| **Charter** | [I-SEO-REPORT-HUB-REPORT-DELIVERY-CLIENT-HANDOFF-UX-CHARTER-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-CLIENT-HANDOFF-UX-CHARTER-v0.1.md) |
+| **Design** | [I-SEO-REPORT-HUB-REPORT-DELIVERY-CLIENT-HANDOFF-UX-DESIGN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-CLIENT-HANDOFF-UX-DESIGN-v0.1.md) |
+| **Copy pack** | [I-SEO-REPORT-HUB-REPORT-DELIVERY-CLIENT-HANDOFF-UX-COPY-PACK-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-CLIENT-HANDOFF-UX-COPY-PACK-v0.1.md) |
+| **Implementation plan** | [I-SEO-REPORT-HUB-REPORT-DELIVERY-CLIENT-HANDOFF-UX-IMPLEMENTATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-CLIENT-HANDOFF-UX-IMPLEMENTATION-PLAN-v0.1.md) |
+| **Validation plan** | [I-SEO-REPORT-HUB-REPORT-DELIVERY-CLIENT-HANDOFF-UX-VALIDATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-CLIENT-HANDOFF-UX-VALIDATION-PLAN-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-report-delivery-client-handoff-ux-charter-01.md](reports/REPORT-iseo-report-hub-report-delivery-client-handoff-ux-charter-01.md) |
+| **Next recommended stage** | **I-SEO Report Hub — Report Delivery Client Handoff UX Implementation 01** |
 
 ---
 
@@ -1458,9 +1480,10 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Report Delivery Client Handoff UX Charter 01** — **recommended next**
-2. Optional: **Report Export Template Metadata Write Smoke 01** (exercise future create writes under controlled charter)
-3. Optional: **Report Styling Visual QA Fix 01** (only if operator prioritizes minor QA issues)
+1. **Report Delivery Client Handoff UX Implementation 01** — **recommended next** (no DB migration; copy pack + readiness panel; Visual QA minors)
+2. Optional later: **Report Delivery Client Handoff DB-11 Charter 01** (only if durable delivery events required)
+3. Optional: **Report Export Template Metadata Write Smoke 01** (exercise future create writes under controlled charter)
+4. Optional: **Report Styling Visual QA Fix 01** (covered by handoff Implementation minors unless operator splits)
 4. Optional: **Report Snapshot Hardening 01** / **Report Snapshot Versioning Charter 01** if multi-role or v2 smoke needed
 4. Optional: **Report Blocks CRUD Hardening 01** if multi-role HTTP smoke is needed
 5. Optional: **Monthly Report Content CRUD Hardening 01** if multi-role HTTP smoke is needed
@@ -1525,8 +1548,9 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **Report Delivery Public Share Implementation 01 is complete** — tokenized public PDF share for eligible export id **4**; routes/UI/service; smoke PASS; **no** portal/email/`/r/{token}`
 - **Report Delivery Public Share Hardening 01 is complete** — 64-hex gate; 404/410 policy; stream headers; access after preflight; smoke **66/66**
 - **Report Delivery Public Share Visual QA 01 is complete** — verdict **PASS_WITH_MINOR_ISSUES**; evidence under STORAGE; smoke **86/86**; shares **4** revoked / active **0**; artifacts unchanged; **no** app-source/runtime code edits
-- **Next** = Report Delivery Client Handoff UX Charter 01
-- **No drag/drop reorder / rich text editor / client portal / email delivery** (runtime public share exists for MVP PDF token links only)
+- **Report Delivery Client Handoff UX Charter 01 is complete** — Option B internal handoff panel + copy pack; no DB tracking yet; DB-11 deferred; Visual QA minors carried to Implementation 01; **no** code/runtime/DB/token/public route/artifact mutation in charter
+- **Next** = Report Delivery Client Handoff UX Implementation 01
+- **No drag/drop reorder / rich text editor / client portal / email delivery** (runtime public share exists for MVP PDF token links only; handoff landing page deferred)
 - **No autonomous publication**
 - **Website Factory is not runtime owner** — methodology + prototype lane only
 - **Static demo v0.4 is UX reference only** — not implementation
