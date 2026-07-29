@@ -117,7 +117,7 @@ Confirmed for this wave:
 |------|-------|
 | Exact-path git add | allowlisted docs only (see §12) |
 | Primary commit message | `docs(iseo-report-hub): add production environment charter` |
-| Primary commit hash | `PENDING_PRIMARY_HASH` |
+| Primary commit hash | `b2b0c3af8b6606febabe5d228346cd0fc865a343` |
 | Hash-record commit message | `docs(iseo-report-hub): record production environment charter commit hash` |
 | Hash-record commit hash | `PENDING_HASH_RECORD` |
 | Tip HEAD | `PENDING_TIP` |
