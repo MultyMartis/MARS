@@ -96,6 +96,8 @@ Placeholder remaining on empty cards: **0**
 
 ## 7. Git / Storage
 
+- Authority commit: `9eb89e1870fea45a0525d59f512ace8999d61d23`
+- Pushed to `origin/mars/canonical-post-recovery`
 - Authority allowlist commit/push from `X:\AI MARS STORAGE\git-sync-e01\repo` only
 - Storage pack: `X:\AI MARS STORAGE\ocpilot\project-sites\site-002\production\deployments\SITE-002-PROD-EMPTY-CATEGORY-COPY-RELOCATE-AND-NEW-FIRSTLEVEL-IMAGES-01\`
 - Repo report: `projects/ocpilot/sites/site-002/reports/SITE-002-PROD-EMPTY-CATEGORY-COPY-RELOCATE-AND-NEW-FIRSTLEVEL-IMAGES-01.md`
