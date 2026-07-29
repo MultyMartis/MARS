@@ -105,8 +105,8 @@ Confirmed for this wave:
 | Primary commit message | `docs(iseo-report-hub): add production readiness charter` |
 | Primary commit hash | `fd99ce7d43436e3fdf78ade9f98c78714e70c363` |
 | Hash-record commit message | `docs(iseo-report-hub): record production readiness charter commit hash` |
-| Hash-record commit hash | `PENDING_HASH_RECORD` |
-| Tip HEAD | `PENDING_TIP` |
+| Hash-record commit hash | `677d07facb2f94ef80ad0c79dd90f9aa7f0d07f2` |
+| Tip HEAD | `677d07facb2f94ef80ad0c79dd90f9aa7f0d07f2` |
 | Push | **no** |
 
 ## 10. SAFE UNKNOWN
