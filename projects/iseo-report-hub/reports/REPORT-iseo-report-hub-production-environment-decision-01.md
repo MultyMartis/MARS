@@ -128,8 +128,8 @@ Confirmed for this wave:
 | Primary commit message | `docs(iseo-report-hub): add production environment decision package` |
 | Primary commit hash | `114abef1a451d50aa9c893bdb85508bb96197523` |
 | Hash-record commit message | `docs(iseo-report-hub): record production environment decision commit hash` |
-| Hash-record commit hash | `_pending_hash_record_` |
-| Tip after wave | `_pending_tip_` |
+| Hash-record commit hash | `fc304a62bd681ba2113f18cbe822374631d4cee2` |
+| Tip after wave | `fc304a62bd681ba2113f18cbe822374631d4cee2` |
 | Push | **no** |
 
 ## 10. SAFE UNKNOWN
