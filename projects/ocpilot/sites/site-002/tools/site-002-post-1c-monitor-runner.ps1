@@ -274,6 +274,17 @@ function Finish-Summary {
         -MonitorSummaryPresent ($monitorSummaryPresent -and -not $mergeError)
 
     Write-JsonFile -Path $summaryJsonPath -Data $merged
+    # D6D producer intake completion marker (source contract; not a scheduler change).
+    $markerPath = Join-Path $runDir 'run-complete.marker'
+    $markerObj = [ordered]@{
+        schema = 'site002-run-complete-marker-v1'
+        run_id = $merged.run_id
+        finished_at = $merged.finished_at
+        exit_code = $merged.exit_code
+        classification = $merged.classification
+        status = $merged.status
+    }
+    Write-JsonFile -Path $markerPath -Data $markerObj
     $md = @(
         '# Post-1C monitor run summary',
         '',

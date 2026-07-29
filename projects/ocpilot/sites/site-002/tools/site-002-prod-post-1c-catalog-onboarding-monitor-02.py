@@ -1550,6 +1550,22 @@ def export_scheduled_artifacts(
         "captured_at": utc_now(),
     }
     write_json(scheduled_dir / "run-summary.json", run_summary)
+    # D6D producer intake completion marker (offline contract; runtime deploy is separate phase).
+    write_text(
+        scheduled_dir / "run-complete.marker",
+        json.dumps(
+            {
+                "schema": "site002-run-complete-marker-v1",
+                "run_id": run_summary.get("run_id"),
+                "finished_at": run_summary.get("finished_at") or run_summary.get("captured_at"),
+                "exit_code": run_summary.get("exit_code"),
+                "classification": run_summary.get("classification"),
+            },
+            ensure_ascii=False,
+            separators=(",", ":"),
+        )
+        + "\n",
+    )
     write_text(
         scheduled_dir / "run-summary.md",
         "\n".join([

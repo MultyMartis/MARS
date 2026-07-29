@@ -1,0 +1,12 @@
+# SOURCE-STATUS-MAPPING
+
+Token: D6D_SOURCE_STATUS_MAPPING_DEFINED
+
+| Monitor classification | source_status |
+|---|---|
+| NO_ACTION_REQUIRED | OK |
+| ONBOARDING_REQUIRED | ATTENTION |
+| HYGIENE_REVIEW_REQUIRED | ATTENTION |
+| FAILURE_REVIEW_REQUIRED | FAILED |
+| unknown / malformed | BLOCKED |
+| nonzero exit_code | FAILED |
