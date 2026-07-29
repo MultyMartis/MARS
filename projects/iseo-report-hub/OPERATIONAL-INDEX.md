@@ -27,7 +27,7 @@
 |-------|-------|
 | **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A/1B + local DB + **auth persistence implemented** + **DB-03 migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** + **Report Preview / Render Implementation 01 complete** + **Report Finalization Charter 01 complete** + **Report Finalization Implementation 01 complete** + **Report Snapshot Charter 01 complete** + **Report Snapshot DB-07 Migration Apply 01 complete** + **Report Snapshot Implementation 01 complete** + **Report Export / PDF Charter 01 complete** + **Report Export DB-08 Migration Apply 01 complete** |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | **Report Delivery Client Handoff UX Visual QA 01 complete** — verdict **PASS**; evidence under STORAGE; smoke **129/129**; next recommended: **Report Delivery Production Readiness Charter 01** |
+| **Active stage** | **Report Delivery Production Readiness Charter 01 complete** — docs/policy only; local MVP gates A–D **PASS**; production blocked on gates E–K; next recommended: **Production Environment Charter 01** |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -1226,7 +1226,27 @@
 | **Restrictions** | No app-source/runtime code edits; no portal/email/landing/`/r/{token}`; no plaintext token in DB/report; no artifact mutation; no push |
 | **Result** | [I-SEO-REPORT-HUB-REPORT-DELIVERY-CLIENT-HANDOFF-UX-VISUAL-QA-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-CLIENT-HANDOFF-UX-VISUAL-QA-RESULT-v0.1.md) |
 | **Closeout** | [REPORT-iseo-report-hub-report-delivery-client-handoff-ux-visual-qa-01.md](reports/REPORT-iseo-report-hub-report-delivery-client-handoff-ux-visual-qa-01.md) |
-| **Next recommended stage** | **I-SEO Report Hub — Report Delivery Production Readiness Charter 01** |
+| **Next recommended stage** | **I-SEO Report Hub — Report Delivery Production Readiness Charter 01** — **completed** (see section below) |
+
+---
+
+## Report Delivery Production Readiness Charter 01 (2026-07-30)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** — docs/policy only |
+| **Definition** | Production readiness ≠ production deployment; local MVP ready; production pilot blocked until environment/secrets/DB/backup/access/monitoring/real-data gates |
+| **Local MVP gates** | **A–D PASS** — functional flow; export integrity; public share security; client handoff UX |
+| **Production blockers** | Gates **E–K REQUIRED_BEFORE_PRODUCTION** — environment; secrets/env; prod DB/migration; backup/rollback; access/users; monitoring/logs; real client data |
+| **Deferred** | Gate **M** DB-11; Gate **N** landing/portal/email; Gate **L** retention/pruning **READY_FOR_PLAN** |
+| **DB / runtime / app-source** | **Unchanged** in this wave (no mutation) |
+| **Charter** | [I-SEO-REPORT-HUB-REPORT-DELIVERY-PRODUCTION-READINESS-CHARTER-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PRODUCTION-READINESS-CHARTER-v0.1.md) |
+| **Gates** | [I-SEO-REPORT-HUB-REPORT-DELIVERY-PRODUCTION-READINESS-GATES-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PRODUCTION-READINESS-GATES-v0.1.md) |
+| **Risk register** | [I-SEO-REPORT-HUB-REPORT-DELIVERY-PRODUCTION-READINESS-RISK-REGISTER-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PRODUCTION-READINESS-RISK-REGISTER-v0.1.md) |
+| **Implementation plan** | [I-SEO-REPORT-HUB-REPORT-DELIVERY-PRODUCTION-READINESS-IMPLEMENTATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PRODUCTION-READINESS-IMPLEMENTATION-PLAN-v0.1.md) |
+| **Validation plan** | [I-SEO-REPORT-HUB-REPORT-DELIVERY-PRODUCTION-READINESS-VALIDATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-REPORT-DELIVERY-PRODUCTION-READINESS-VALIDATION-PLAN-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-report-delivery-production-readiness-charter-01.md](reports/REPORT-iseo-report-hub-report-delivery-production-readiness-charter-01.md) |
+| **Next recommended stage** | **I-SEO Report Hub — Production Environment Charter 01** |
 
 ---
 
@@ -1523,19 +1543,22 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Report Delivery Production Readiness Charter 01** — **recommended next**
-2. Optional later: **Report Delivery Client Handoff DB-11 Charter 01** (only if durable delivery events required)
-3. Optional: **Report Export Template Metadata Write Smoke 01** (exercise future create writes under controlled charter)
-4. Optional: **Report Snapshot Hardening 01** / **Report Snapshot Versioning Charter 01** if multi-role or v2 smoke needed
-4. Optional: **Report Blocks CRUD Hardening 01** if multi-role HTTP smoke is needed
-5. Optional: **Monthly Report Content CRUD Hardening 01** if multi-role HTTP smoke is needed
-6. Optional: **Weekly Checkpoints CRUD Hardening 01** if multi-role HTTP smoke is needed
-7. Optional: **Reporting Period CRUD Hardening 01** if account-manager edit / multi-role smoke is needed
-8. Optional parallel: **v0.5 demo corrections** from backlog (UX only; not product runtime)
-9. **SEO specialist feedback** — still **deferred** until operator opens feedback charter
-10. Work dictionary extraction/sanitization (из Nikita materials; **exclude** credential sheet)
-11. MVP implementation phases 2–11 per implementation charter (Anton / i-SEO)
-12. Later: n8n/API/AI integration (events only; human approval gates); client portal / email delivery
+1. **Production Environment Charter 01** — **recommended next** (hosting/domain/HTTPS/runtime/DB/deploy topology decision; docs first)
+2. Optional: **Production Backup/Restore Charter 01** (after environment chosen; before first real deploy)
+3. Optional: **Real Client Data Model Charter 01** (move off LOCAL_FIXTURE_ONLY)
+4. Optional later: **Report Delivery Client Handoff DB-11 Charter 01** (only if durable delivery events required)
+5. Optional: **Revoked share retention/pruning DB charter** (Gate L)
+6. Optional: **Report Export Template Metadata Write Smoke 01** (exercise future create writes under controlled charter)
+7. Optional: **Report Snapshot Hardening 01** / **Report Snapshot Versioning Charter 01** if multi-role or v2 smoke needed
+8. Optional: **Report Blocks CRUD Hardening 01** if multi-role HTTP smoke is needed
+9. Optional: **Monthly Report Content CRUD Hardening 01** if multi-role HTTP smoke is needed
+10. Optional: **Weekly Checkpoints CRUD Hardening 01** if multi-role HTTP smoke is needed
+11. Optional: **Reporting Period CRUD Hardening 01** if account-manager edit / multi-role smoke is needed
+12. Optional parallel: **v0.5 demo corrections** from backlog (UX only; not product runtime)
+13. **SEO specialist feedback** — still **deferred** until operator opens feedback charter
+14. Work dictionary extraction/sanitization (из Nikita materials; **exclude** credential sheet)
+15. Later: n8n/API/AI integration (events only; human approval gates); client portal / email delivery
+16. **Production deploy** — only after Environment + Backup + Real Data gates and explicit operator deploy charter (**no** default push/deploy)
 
 **Historical note:** Static demos v0.1–v0.4, report content architecture, and Product Architecture Layer 02 are complete as documentation/demo baselines. Platform decision (PHP+MySQL) supersedes WordPress-as-runtime assumptions for forward work. Phase 0 scaffold + Phase 1A skeleton + Phase 1B source→runtime sync + Apache vhost + Windows `hosts` for `iseo-report-hub.test` are done (direct domain re-smoke PASS). Local DB `iseo_report_hub_dev` is **created**; first migration (DB-01 + minimal DB-02) is **applied**. Auth persistence + local admin bootstrap are **implemented** (DB-backed login; one local admin). DB-03 reporting periods migration is **applied**. Local fixture apply is **complete** (demo client/project/site + period `2026-07`). Reporting Period CRUD **implementation** is complete (internal list/detail/create/edit/archive-by-status; smoke period `2026-08` archived; counts clients/projects/sites/reporting_periods **1/1/1/2**). Weekly Checkpoints DB-04 **migration apply** is complete (`weekly_checkpoints` + local W1–W3 smoke). Weekly Checkpoints CRUD **implementation** is complete (period-scoped list/detail/create/edit/skip-or-archive; W4 smoke id **7** skipped; weekly_checkpoints **4**). Monthly Report Content DB-05 **migration apply** is complete (`monthly_report_contents` + 1 local demo row). Monthly Report Content CRUD **implementation** is complete (period-scoped detail/create/edit/archive-by-status; demo id **1** status `in_progress`; monthly_report_contents **1**). Report Blocks DB-06 **migration apply** is complete (`report_blocks` + 5 local fixture blocks; migrations **5** / tables **13**). Report Blocks CRUD **Charter 01** is complete (docs/policy only; next = Report Blocks CRUD Implementation 01). `app-source/` remains the versioned SoT; runtime is Localhost deploy target.
 
@@ -1593,7 +1616,9 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **Report Delivery Client Handoff UX Charter 01 is complete** — Option B internal handoff panel + copy pack; no DB tracking yet; DB-11 deferred; Visual QA minors carried to Implementation 01; **no** code/runtime/DB/token/public route/artifact mutation in charter
 - **Report Delivery Client Handoff UX Implementation 01 is complete** — readiness panel + once RU copy pack; Visual QA minors resolved; smoke **115/115**; shares **5** revoked / active **0**; public PDF stream unchanged; **no** DB-11 / portal / email
 - **Report Delivery Client Handoff UX Visual QA 01 is complete** — verdict **PASS**; evidence under STORAGE; smoke **129/129**; shares **6** revoked / active **0**; artifacts unchanged; prior list/path minors resolved; **no** app-source/runtime code edits
-- **Next** = Report Delivery Production Readiness Charter 01
+- **Report Delivery Production Readiness Charter 01 is complete** — docs/policy only; local MVP **A–D PASS**; production **E–K** blockers; M/N deferred; L ready-for-plan; **no** app-source/runtime/DB/deploy mutation
+- **Next** = Production Environment Charter 01
+- **Not production-ready** — local/dev only; fixture data; no prod host/domain/HTTPS/secrets/DB/backup/monitoring
 - **No drag/drop reorder / rich text editor / client portal / email delivery** (runtime public share exists for MVP PDF token links only; handoff landing page deferred)
 - **No autonomous publication**
 - **Website Factory is not runtime owner** — methodology + prototype lane only
