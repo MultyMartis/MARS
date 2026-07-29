@@ -147,7 +147,7 @@ final class HealthController extends BaseController
     {
         $status = $this->collectStatus();
         $this->render('health', [
-            'pageTitle' => 'Health',
+            'pageTitle' => 'Состояние системы',
             'status' => $status,
         ]);
     }

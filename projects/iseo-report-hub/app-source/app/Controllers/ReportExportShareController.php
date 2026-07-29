@@ -40,7 +40,7 @@ final class ReportExportShareController extends BaseController
         $key = (string) ($export['export_key'] ?? ('#' . $exportId));
 
         $this->render('report-export-shares/index', [
-            'pageTitle' => 'Shares — ' . $key,
+            'pageTitle' => 'Ссылки для клиента — ' . $key,
             'export' => $export,
             'shares' => $result['shares'],
             'activeShare' => $result['active_share'],

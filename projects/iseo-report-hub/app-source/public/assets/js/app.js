@@ -18,15 +18,15 @@ async function copyTextValue(value, button) {
       document.body.removeChild(tmp);
     }
     if (button instanceof HTMLButtonElement) {
-      const original = button.textContent || 'Copy';
-      button.textContent = 'Copied';
+      const original = button.textContent || 'Копировать';
+      button.textContent = 'Скопировано';
       window.setTimeout(() => {
         button.textContent = original;
       }, 1600);
     }
   } catch (err) {
     if (button instanceof HTMLButtonElement) {
-      button.textContent = 'Select & copy';
+      button.textContent = 'Выделите и скопируйте';
     }
   }
 }

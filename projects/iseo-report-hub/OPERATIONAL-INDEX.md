@@ -27,7 +27,7 @@
 |-------|-------|
 | **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A/1B + local DB + **auth persistence implemented** + **DB-03 migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** + **Report Preview / Render Implementation 01 complete** + **Report Finalization Charter 01 complete** + **Report Finalization Implementation 01 complete** + **Report Snapshot Charter 01 complete** + **Report Snapshot DB-07 Migration Apply 01 complete** + **Report Snapshot Implementation 01 complete** + **Report Export / PDF Charter 01 complete** + **Report Export DB-08 Migration Apply 01 complete** |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | **Russian UX and HTML Demo Alignment Charter 01 complete** — docs/product-UX only; HTML demo v0.4 **found**; live PHP UI English/technical; target **Russian manager-first UX**; next recommended: **Russian UX and Demo Alignment Implementation 01** (production environment Operator Decision 01 remains available in parallel; no production until UX accepted) |
+| **Active stage** | **Russian UX and Demo Alignment Implementation 01 complete** — live PHP UI Russian manager-first layer on A–D screens; footer truthful; technical details collapsed; existing PDF artifact unchanged; next recommended: **Operator manual Russian UX click-through** (production environment Operator Decision 01 remains available in parallel; no production until UX accepted) |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -1286,7 +1286,7 @@
 | **SAFE UNKNOWN** | Live MySQL re-probe still failed (TCP 3306 refused this wave; same as prior charters); before any implementation/deploy, re-check local DB state if local evidence needed; baseline remains latest attested Client Handoff Visual QA |
 | **Closeout** | [REPORT-iseo-report-hub-production-environment-decision-01.md](reports/REPORT-iseo-report-hub-production-environment-decision-01.md) |
 | **Next recommended stage (environment track)** | **I-SEO Report Hub — Production Environment Operator Decision 01** |
-| **Next recommended stage (product UX track)** | **I-SEO Report Hub — Russian UX and Demo Alignment Implementation 01** — see Russian UX charter section below |
+| **Next recommended stage (product UX track)** | **Operator manual Russian UX click-through** — after Russian UX Implementation 01 |
 
 ---
 
@@ -1308,6 +1308,22 @@
 | **Closeout** | [REPORT-iseo-report-hub-russian-ux-html-demo-alignment-charter-01.md](reports/REPORT-iseo-report-hub-russian-ux-html-demo-alignment-charter-01.md) |
 | **DB / runtime / app-source** | **Unchanged** in this wave (no mutation) |
 | **Next recommended stage** | **I-SEO Report Hub — Russian UX and Demo Alignment Implementation 01** |
+
+---
+
+## Russian UX and Demo Alignment Implementation 01 (2026-07-30)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** — first practical Russian UX layer in live PHP+SQL app |
+| **Result** | [I-SEO-REPORT-HUB-RUSSIAN-UX-DEMO-ALIGNMENT-IMPLEMENTATION-RESULT-v0.1.md](product/I-SEO-REPORT-HUB-RUSSIAN-UX-DEMO-ALIGNMENT-IMPLEMENTATION-RESULT-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-russian-ux-demo-alignment-implementation-01.md](reports/REPORT-iseo-report-hub-russian-ux-demo-alignment-implementation-01.md) |
+| **Translated** | Nav, login, dashboard, periods list, exports, export detail, shares, health chrome, footer, handoff checklist/warnings |
+| **Demo alignment** | Labels/IA/manager flow from static demo v0.4; **no** full CSS shell / pixel-perfect |
+| **PDF artifact** | **Unchanged** (no regeneration) |
+| **Runtime sync** | Exact allowlist source → Laragon runtime |
+| **DB / shares** | Stable (exports 4 / shares 6 / active 0); no token created |
+| **Next recommended stage** | **Operator manual Russian UX click-through** |
 
 ---
 

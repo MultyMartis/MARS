@@ -187,7 +187,7 @@ final class ReportExportShareService
         if ($existing !== null) {
             return [
                 'ok' => false,
-                'message' => 'An active share already exists for this export. Revoke it before creating a new link.',
+                'message' => 'Уже есть активная ссылка для этого файла. Отзовите её, прежде чем создавать новую.',
                 'export' => $export,
                 'share' => $this->sanitizeShareRowForUi($existing),
                 'plaintext_token' => null,
@@ -431,32 +431,32 @@ final class ReportExportShareService
     public function evaluateEligibility(array $export): array
     {
         if ((string) ($export['format'] ?? '') !== 'pdf') {
-            return ['eligible' => false, 'reason' => 'Only styled PDF exports can be shared.', 'code' => 'format'];
+            return ['eligible' => false, 'reason' => 'Отправлять клиенту можно только оформленный PDF.', 'code' => 'format'];
         }
         if ((string) ($export['status'] ?? '') !== 'ready') {
-            return ['eligible' => false, 'reason' => 'Export status must be ready.', 'code' => 'status'];
+            return ['eligible' => false, 'reason' => 'Файл должен быть в статусе «Готово».', 'code' => 'status'];
         }
         if (!empty($export['archived_at'])) {
-            return ['eligible' => false, 'reason' => 'Archived exports cannot be shared.', 'code' => 'archived'];
+            return ['eligible' => false, 'reason' => 'Архивные файлы нельзя отправлять.', 'code' => 'archived'];
         }
         $templateId = trim((string) ($export['template_id'] ?? ''));
         if ($templateId === '') {
-            return ['eligible' => false, 'reason' => 'Template metadata is required; legacy PDF is not shareable.', 'code' => 'template'];
+            return ['eligible' => false, 'reason' => 'Нужен сохранённый шаблон; старый PDF отправлять нельзя.', 'code' => 'template'];
         }
         if ((string) ($export['render_target'] ?? '') !== 'pdf_export') {
-            return ['eligible' => false, 'reason' => 'Render target must be pdf_export.', 'code' => 'render_target'];
+            return ['eligible' => false, 'reason' => 'Тип генерации должен быть pdf_export.', 'code' => 'render_target'];
         }
 
         $validation = $this->exportService->validateReadyArtifact($export);
         if (!$validation['ok']) {
             return [
                 'eligible' => false,
-                'reason' => $validation['message'] !== '' ? $validation['message'] : 'Artifact validation failed.',
+                'reason' => $validation['message'] !== '' ? $validation['message'] : 'Проверка файла не пройдена.',
                 'code' => 'artifact',
             ];
         }
 
-        return ['eligible' => true, 'reason' => 'Eligible for public PDF share.', 'code' => 'ok'];
+        return ['eligible' => true, 'reason' => 'Можно создать ссылку для клиента.', 'code' => 'ok'];
     }
 
     public function isShareableExport(array $export): bool
@@ -493,7 +493,7 @@ final class ReportExportShareService
     {
         $export = $this->exports->findById($exportId);
         if ($export === null) {
-            return ['eligible' => false, 'reason' => 'Export not found.', 'code' => 'missing'];
+            return ['eligible' => false, 'reason' => 'Файл не найден.', 'code' => 'missing'];
         }
         return $this->evaluateEligibility($export);
     }
@@ -530,7 +530,7 @@ final class ReportExportShareService
         $templateVersion = trim((string) ($export['template_version'] ?? ($ctxRow['template_version'] ?? '')));
         $templateLabel = ($templateId !== '' && $templateVersion !== '')
             ? ($templateId . ' v' . $templateVersion)
-            : 'not recorded / legacy';
+            : 'устаревший / не записан';
         $specialist = trim((string) ($actor['name'] ?? ''));
         if ($specialist === '') {
             $specialist = trim((string) ($ctxRow['specialist_name'] ?? ''));
@@ -575,21 +575,21 @@ final class ReportExportShareService
         $notSendingBadLink = true;
 
         $checklist = [
-            ['id' => 'report_finalized', 'label' => 'Report finalized', 'pass' => $reportFinalized, 'note' => $reportStatus !== '' ? $reportStatus : 'SAFE UNKNOWN'],
-            ['id' => 'snapshot_exists', 'label' => 'Snapshot exists', 'pass' => $snapshotOk, 'note' => $snapshotKey !== '' ? $snapshotKey : 'SAFE UNKNOWN'],
-            ['id' => 'styled_pdf_ready', 'label' => 'Styled PDF export ready', 'pass' => $styledPdfReady && (string) ($export['status'] ?? '') === 'ready', 'note' => (string) ($export['status'] ?? '')],
-            ['id' => 'shareable_export', 'label' => 'Shareable export', 'pass' => $shareable, 'note' => $eligibility['reason']],
-            ['id' => 'active_share', 'label' => 'Active non-expired share exists', 'pass' => $activeOk, 'note' => $activeOk ? ('expires ' . $expiresAt) : 'no active share'],
-            ['id' => 'url_copied', 'label' => 'Public URL available to copy (create flow only)', 'pass' => $urlCopiedOnce, 'note' => $urlCopiedOnce ? 'shown once now' : 'not on this screen'],
-            ['id' => 'no_bad_link', 'label' => 'Revoked/expired link not sent', 'pass' => $notSendingBadLink, 'note' => 'operator responsibility'],
+            ['id' => 'report_finalized', 'label' => 'Отчет финализирован', 'pass' => $reportFinalized, 'note' => $reportStatus !== '' ? $reportStatus : 'SAFE UNKNOWN'],
+            ['id' => 'snapshot_exists', 'label' => 'Снимок отчета есть', 'pass' => $snapshotOk, 'note' => $snapshotKey !== '' ? $snapshotKey : 'SAFE UNKNOWN'],
+            ['id' => 'styled_pdf_ready', 'label' => 'PDF для клиента готов', 'pass' => $styledPdfReady && (string) ($export['status'] ?? '') === 'ready', 'note' => (string) ($export['status'] ?? '')],
+            ['id' => 'shareable_export', 'label' => 'Файл можно отправлять', 'pass' => $shareable, 'note' => $eligibility['reason']],
+            ['id' => 'active_share', 'label' => 'Есть активная неистекшая ссылка', 'pass' => $activeOk, 'note' => $activeOk ? ('до ' . $expiresAt) : 'активной ссылки нет'],
+            ['id' => 'url_copied', 'label' => 'Ссылка доступна для копирования (только после создания)', 'pass' => $urlCopiedOnce, 'note' => $urlCopiedOnce ? 'показана сейчас' : 'не на этом экране'],
+            ['id' => 'no_bad_link', 'label' => 'Не отправлять отозванные или просроченные ссылки', 'pass' => $notSendingBadLink, 'note' => 'ответственность оператора'],
         ];
 
         $warnings = [
-            'Public URL is shown only once when the share is created.',
-            'If URL was not copied, revoke the active share and create a new one.',
-            'Do not send revoked or expired links.',
-            'Do not send legacy PDF or HTML exports.',
-            'Do not send the internal artifact storage path.',
+            'Ссылка показывается только один раз при создании.',
+            'Если ссылку не скопировали — отзовите активную и создайте новую.',
+            'Не отправляйте отозванные или просроченные ссылки.',
+            'Не отправляйте старые PDF или HTML-файлы.',
+            'Не отправляйте внутренний путь к файлу на диске.',
         ];
 
         $urlLostGuidance = null;

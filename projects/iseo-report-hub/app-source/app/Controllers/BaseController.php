@@ -27,7 +27,7 @@ abstract class BaseController
     {
         $shared = [
             'appName' => $this->config->appName(),
-            'phaseLabel' => (string) $this->config->get('app.phase_label', 'Phase 1A'),
+            'phaseLabel' => (string) $this->config->get('app.phase_label', 'Система отчетов i-SEO · локальная тестовая среда'),
             'currentUser' => $this->auth->currentUser(),
             'authStatus' => $this->auth->statusMessage(),
             'flashMessages' => flash_get(),

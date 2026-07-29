@@ -221,14 +221,14 @@ final class AuthService
     public function statusMessage(): string
     {
         if ($this->check()) {
-            return 'Authenticated (DB-backed session)';
+            return 'Вход выполнен';
         }
 
         if ($this->db->isConfigured()) {
-            return 'Auth ready — DB-backed login available';
+            return 'Вход доступен';
         }
 
-        return 'Auth unavailable — database not configured';
+        return 'Вход недоступен — база не настроена';
     }
 
     /**

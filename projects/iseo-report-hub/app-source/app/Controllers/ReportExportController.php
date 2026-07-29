@@ -54,7 +54,7 @@ final class ReportExportController extends BaseController
         }
 
         $this->render('report-exports/index', [
-            'pageTitle' => 'Exports — ' . $title,
+            'pageTitle' => 'Файлы отчета — ' . $title,
             'snapshot' => $snapshot,
             'exports' => $exports,
             'canCreate' => !empty($result['can_create']),
@@ -229,7 +229,7 @@ final class ReportExportController extends BaseController
         }
 
         $this->render('report-exports/show', [
-            'pageTitle' => 'Export — ' . $key,
+            'pageTitle' => 'Файл отчета — ' . $key,
             'export' => $export,
             'futureTemplate' => $this->exports->defaultTemplateSummary(),
             'legacyTemplateLabel' => $this->exports->legacyTemplateLabel(),
@@ -242,6 +242,7 @@ final class ReportExportController extends BaseController
             'shareEligibility' => $shareEligibility,
             'activeShareCount' => $activeShareCount,
             'canManageShares' => $canManageShares,
+            'reportExportShareService' => $this->shares,
             'message' => $result['message'],
         ]);
     }

@@ -4,10 +4,10 @@ declare(strict_types=1);
 /** @var \Iseo\Services\CsrfService $csrf */
 ?>
 <section class="panel">
-    <h2>Login</h2>
+    <h2>Вход</h2>
     <p class="note">
-        Local DB-backed authentication.
-        <?= $authImplemented ? 'Auth is implemented.' : 'Auth not implemented.' ?>
+        Локальный вход для сотрудников i-SEO.
+        <?= $authImplemented ? 'Авторизация подключена.' : 'Авторизация пока не подключена.' ?>
     </p>
 
     <form class="login-form" method="post" action="<?= e(url_path('/login')) ?>" autocomplete="username">
@@ -17,9 +17,9 @@ declare(strict_types=1);
             <input type="email" name="email" required autocomplete="username">
         </label>
         <label>
-            <span>Password</span>
+            <span>Пароль</span>
             <input type="password" name="password" required autocomplete="current-password">
         </label>
-        <button class="btn" type="submit">Sign in</button>
+        <button class="btn" type="submit">Войти</button>
     </form>
 </section>

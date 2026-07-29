@@ -15,7 +15,7 @@ declare(strict_types=1);
     <title><?= e(($pageTitle ?? 'App') . ' — ' . $appName) ?></title>
     <link rel="stylesheet" href="<?= e(url_path('/assets/css/app.css')) ?>">
 </head>
-<body data-phase="1a">
+<body data-phase="local-ux">
 <?php require app_path('Views/partials/header.php'); ?>
 <main class="container">
     <?php require app_path('Views/partials/flash.php'); ?>

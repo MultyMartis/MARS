@@ -3,6 +3,6 @@ declare(strict_types=1);
 ?>
 <footer class="site-footer">
     <div class="container">
-        <p>MARS Active Brain source · Phase 1A skeleton · no DB · runtime not synced</p>
+        <p>i-SEO Report Hub — локальная тестовая среда · данные LOCAL_FIXTURE_ONLY · не продакшен</p>
     </div>
 </footer>

@@ -69,7 +69,7 @@ final class ConfigService
                 'url' => $this->envValue('APP_URL', (string) ($appDefaults['url'] ?? 'http://iseo-report-hub.test')),
                 'timezone' => (string) ($appDefaults['timezone'] ?? 'Europe/Moscow'),
                 'phase' => 'auth',
-                'phase_label' => 'Auth persistence — local DB-backed login',
+                'phase_label' => 'Система отчетов i-SEO · локальная тестовая среда',
             ],
             'database' => [
                 'driver' => (string) ($databaseDefaults['driver'] ?? 'mysql'),

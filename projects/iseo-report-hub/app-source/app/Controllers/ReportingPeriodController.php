@@ -42,7 +42,7 @@ final class ReportingPeriodController extends BaseController
         unset($item);
 
         $this->render('reporting-periods/index', [
-            'pageTitle' => 'Reporting periods',
+            'pageTitle' => 'Отчетные периоды',
             'periods' => $items,
             'canCreate' => $this->periods->canCreate($user),
         ]);

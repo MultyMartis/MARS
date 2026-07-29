@@ -24,7 +24,8 @@ final class ReportTemplateRenderer
         $template ??= $this->templates->getDefaultTemplate();
         $tokens = $template->tokens;
 
-        $title = (string) ($snapshot['title'] ?? ($payload['monthly_report']['title'] ?? 'Monthly report'));
+        $title = (string) ($snapshot['title'] ?? ($payload['monthly_report']['title'] ?? 'SEO-отчет'));
+        // Future regenerations should prefer Russian client titles; existing artifacts are not rewritten.
         $snapshotKey = (string) ($snapshot['snapshot_key'] ?? '');
         $version = (int) ($snapshot['version'] ?? 0);
         $checksum = (string) ($snapshot['checksum_sha256'] ?? '');

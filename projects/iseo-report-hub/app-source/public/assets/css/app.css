@@ -1,4 +1,4 @@
-/* i-SEO Report Hub — Phase 1A source skeleton styles (local only, no external assets) */
+/* i-SEO Report Hub — local UI styles (no external assets) */
 
 :root {
   --bg: #0f1c24;
@@ -1042,3 +1042,76 @@ code {
     transition: none !important;
   }
 }
+
+/* Russian UX — manager-first surfaces */
+.dashboard-hero h2 {
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-auth-line {
+  margin-bottom: 0.75rem;
+}
+
+.quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.primary-file-card {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+  background: color-mix(in srgb, var(--accent) 12%, var(--bg-panel));
+}
+
+.primary-file-card h3 {
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+}
+
+.export-table tr.row-primary td {
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+.export-table tr.row-archive td {
+  opacity: 0.85;
+}
+
+.manager-facts {
+  margin-bottom: 0.85rem;
+}
+
+.tech-details {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--bg-panel) 80%, transparent);
+}
+
+.tech-details > summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--muted);
+  list-style: disclosure-closed;
+}
+
+.tech-details[open] > summary {
+  margin-bottom: 0.75rem;
+  color: var(--accent);
+}
+
+.dashboard-status-details {
+  padding-top: 0.85rem;
+}
+
+.site-footer {
+  padding: 1.25rem 0 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+

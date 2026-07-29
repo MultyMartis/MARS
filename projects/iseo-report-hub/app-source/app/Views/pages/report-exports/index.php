@@ -27,7 +27,7 @@ $styledPdfExport = is_array($styledPdfExport ?? null) ? $styledPdfExport : null;
 $message = (string) ($message ?? '');
 /** @var array{id?:string,version?:int,display_label?:string}|null $futureTemplate */
 $futureTemplate = is_array($futureTemplate ?? null) ? $futureTemplate : [];
-$legacyTemplateLabel = (string) ($legacyTemplateLabel ?? 'not recorded / legacy');
+$legacyTemplateLabel = (string) ($legacyTemplateLabel ?? 'устаревший / не записан');
 $futureTemplateId = (string) ($futureTemplate['id'] ?? 'iseo_default_v1');
 $futureTemplateVersion = (string) (int) ($futureTemplate['version'] ?? 1);
 $styledTemplateLabel = $futureTemplateId . ' v' . $futureTemplateVersion;
@@ -35,6 +35,17 @@ $styledTemplateLabel = $futureTemplateId . ' v' . $futureTemplateVersion;
 $snapshotId = (int) ($snapshot['id'] ?? 0);
 $monthlyId = (int) ($snapshot['monthly_report_content_id'] ?? 0);
 $snapshotKey = (string) ($snapshot['snapshot_key'] ?? '');
+
+$statusRu = static function (string $status): string {
+    return match ($status) {
+        'ready' => 'Готово',
+        'pending' => 'В работе',
+        'failed' => 'Ошибка',
+        'revoked' => 'Отозвана',
+        'expired' => 'Истекла',
+        default => $status,
+    };
+};
 
 $rowTemplateLabel = static function (array $row) use ($legacyTemplateLabel): string {
     if (isset($row['display_template_label']) && is_string($row['display_template_label']) && $row['display_template_label'] !== '') {
@@ -47,64 +58,87 @@ $rowTemplateLabel = static function (array $row) use ($legacyTemplateLabel): str
     }
     return $legacyTemplateLabel;
 };
+
+$primaryExport = null;
+$primaryId = is_array($styledPdfExport) ? (int) ($styledPdfExport['id'] ?? 0) : 0;
+if ($primaryId > 0) {
+    foreach ($exports as $row) {
+        if (is_array($row) && (int) ($row['id'] ?? 0) === $primaryId) {
+            $primaryExport = $row;
+            break;
+        }
+    }
+    if ($primaryExport === null) {
+        $primaryExport = $styledPdfExport;
+    }
+}
+$primaryShareable = is_array($primaryExport) && !empty($primaryExport['share_eligible']);
+$primaryStatus = is_array($primaryExport) ? (string) ($primaryExport['status'] ?? '') : '';
 ?>
 <section class="panel export-card">
     <div class="panel-head">
-        <h2>Report exports</h2>
+        <h2>Файлы отчета</h2>
         <p>
             <?php if ($snapshotId > 0): ?>
-                <a class="btn btn-secondary" href="<?= e(url_path('/report-snapshots/' . $snapshotId)) ?>">Snapshot detail</a>
+                <a class="btn btn-secondary" href="<?= e(url_path('/report-snapshots/' . $snapshotId)) ?>">Снимок отчета</a>
             <?php endif; ?>
             <?php if ($monthlyId > 0): ?>
-                <a class="btn btn-secondary" href="<?= e(url_path('/monthly-reports/' . $monthlyId)) ?>">Monthly report</a>
+                <a class="btn btn-secondary" href="<?= e(url_path('/monthly-reports/' . $monthlyId)) ?>">Месячный отчет</a>
             <?php endif; ?>
         </p>
     </div>
 
+    <p class="note">Здесь лежат файлы для скачивания и отправки клиенту. Основной файл для клиента — PDF.</p>
     <p>
-        <span class="internal-only-badge">Internal only</span>
-        <span class="artifact-badge">HTML artifact</span>
-        <span class="artifact-badge artifact-badge--pdf">PDF artifact</span>
-        · Snapshot <code><?= e($snapshotKey) ?></code>
-    </p>
-    <p class="template-state-note">
-        <strong>DB template metadata:</strong> preferred over filename/key inference.
-        <br>
-        <strong>Legacy / NULL:</strong> <?= e($legacyTemplateLabel) ?>.
-        <br>
-        <strong>Recorded default:</strong>
-        <code><?= e($futureTemplateId) ?></code> v<?= e($futureTemplateVersion) ?>
-        (styled export versions; does not rewrite v1 artifacts).
+        <span class="internal-only-badge">Только внутри</span>
+        <span class="artifact-badge artifact-badge--pdf">PDF-файл</span>
+        <span class="artifact-badge">HTML-файл</span>
     </p>
 
+    <?php if (is_array($primaryExport) && $primaryId > 0): ?>
+        <article class="panel primary-file-card">
+            <h3>PDF для клиента</h3>
+            <p>
+                <span class="status-badge status-<?= e($primaryStatus) ?>"><?= e($statusRu($primaryStatus)) ?></span>
+                <?php if ($primaryShareable): ?>
+                    <span class="share-badge share-badge--eligible">Можно отправлять</span>
+                <?php else: ?>
+                    <span class="share-badge share-badge--blocked">Нельзя отправлять</span>
+                <?php endif; ?>
+            </p>
+            <p class="note">Рекомендуемый файл для передачи клиенту.</p>
+            <p>
+                <a class="btn" href="<?= e(url_path('/report-exports/' . $primaryId . '/download')) ?>">Скачать PDF</a>
+                <a class="btn" href="<?= e(url_path('/report-exports/' . $primaryId)) ?>">Открыть файл</a>
+                <a class="btn btn-secondary" href="<?= e(url_path('/report-exports/' . $primaryId . '/shares')) ?>">Ссылки для клиента</a>
+            </p>
+        </article>
+    <?php endif; ?>
+
     <?php if ($exports === []): ?>
-        <p class="note">No exports yet for this snapshot.</p>
+        <p class="note">Файлов для этого снимка пока нет.</p>
         <?php if ($canCreate && $snapshotId > 0): ?>
             <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/html')) ?>">
                 <?= $csrf->field() ?>
-                <button type="submit" class="btn">Create HTML export</button>
+                <button type="submit" class="btn">Создать HTML-файл</button>
             </form>
         <?php elseif ($snapshotId > 0): ?>
-            <p class="field-hint">Export creation requires admin_owner or seo_lead_reviewer role.</p>
+            <p class="field-hint">Создание файлов доступно ролям admin_owner или seo_lead_reviewer.</p>
         <?php endif; ?>
     <?php else: ?>
+        <h3 class="handoff-subhead">Все файлы</h3>
+        <p class="note">Ниже полный список. Старые HTML/PDF без шаблона — архив / технический файл.</p>
         <div class="table-wrap">
             <table class="data-table export-table">
                 <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Key</th>
-                    <th>Format</th>
-                    <th>Status</th>
-                    <th>Template</th>
-                    <th>Render</th>
-                    <th>Source HTML</th>
-                    <th>Share</th>
-                    <th>Filename</th>
-                    <th>Checksum</th>
-                    <th>Size</th>
-                    <th>Created</th>
-                    <th>Actions</th>
+                    <th>Файл</th>
+                    <th>Формат</th>
+                    <th>Статус</th>
+                    <th>Для клиента</th>
+                    <th>Имя файла</th>
+                    <th>Создан</th>
+                    <th>Действия</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -114,72 +148,45 @@ $rowTemplateLabel = static function (array $row) use ($legacyTemplateLabel): str
                         continue;
                     }
                     $eid = (int) ($row['id'] ?? 0);
-                    $checksum = (string) ($row['checksum_sha256'] ?? '');
-                    $short = $checksum !== '' ? substr($checksum, 0, 12) . '…' : '—';
-                    $size = isset($row['file_size_bytes']) ? (int) $row['file_size_bytes'] : 0;
                     $format = (string) ($row['format'] ?? '');
                     $tplLabel = $rowTemplateLabel($row);
                     $isLegacyRow = !empty($row['is_legacy_template_metadata'])
                         || $tplLabel === $legacyTemplateLabel;
-                    $renderTarget = (string) ($row['display_render_target_label'] ?? 'not recorded');
-                    $renderEngine = (string) ($row['display_render_engine_label'] ?? 'not recorded');
-                    $sourceHtmlLabel = (string) ($row['display_source_html_label'] ?? 'not recorded');
-                    if ($format !== 'pdf') {
-                        $sourceHtmlLabel = '—';
-                    }
                     $shareEligible = !empty($row['share_eligible']);
                     $activeShares = (int) ($row['active_share_count'] ?? 0);
+                    $rowStatus = (string) ($row['status'] ?? '');
+                    $isPrimary = $eid === $primaryId;
                     ?>
-                    <tr>
-                        <td><?= e((string) $eid) ?></td>
-                        <td><code><?= e((string) ($row['export_key'] ?? '')) ?></code></td>
+                    <tr class="<?= $isPrimary ? 'row-primary' : ($isLegacyRow ? 'row-archive' : '') ?>">
                         <td>
-                            <span class="type-badge<?= $format === 'pdf' ? ' type-badge--pdf' : '' ?>"><?= e($format) ?></span>
-                        </td>
-                        <td><span class="status-badge status-<?= e((string) ($row['status'] ?? '')) ?>"><?= e((string) ($row['status'] ?? '')) ?></span></td>
-                        <td>
-                            <span class="template-badge<?= $isLegacyRow ? ' template-badge--legacy' : ' template-badge--styled' ?>">
-                                <?= e($tplLabel) ?>
-                            </span>
-                        </td>
-                        <td>
-                            <span class="meta-muted"><?= e($renderTarget) ?></span>
-                            <br>
-                            <span class="meta-muted"><?= e($renderEngine) ?></span>
-                        </td>
-                        <td>
-                            <?php if ($format === 'pdf'): ?>
-                                <span class="source-lineage<?= $sourceHtmlLabel === 'not recorded' ? ' source-lineage--unknown' : '' ?>">
-                                    <?= e($sourceHtmlLabel) ?>
-                                </span>
+                            <?php if ($isPrimary): ?>
+                                <strong>PDF для клиента</strong>
+                            <?php elseif ($isLegacyRow): ?>
+                                Архив / технический файл
                             <?php else: ?>
-                                <span class="meta-muted">—</span>
+                                Файл #<?= e((string) $eid) ?>
                             <?php endif; ?>
                         </td>
                         <td>
+                            <span class="type-badge<?= $format === 'pdf' ? ' type-badge--pdf' : '' ?>"><?= e(strtoupper($format)) ?></span>
+                        </td>
+                        <td><span class="status-badge status-<?= e($rowStatus) ?>"><?= e($statusRu($rowStatus)) ?></span></td>
+                        <td>
                             <?php if ($shareEligible): ?>
-                                <span class="share-badge share-badge--eligible">Shareable</span>
+                                <span class="share-badge share-badge--eligible">Можно отправлять</span>
                                 <?php if ($activeShares > 0): ?>
-                                    <br><span class="meta-muted">Active: <?= e((string) $activeShares) ?></span>
+                                    <br><span class="meta-muted">Активных ссылок: <?= e((string) $activeShares) ?></span>
                                 <?php endif; ?>
                             <?php else: ?>
-                                <?php
-                                $shareReasonTitle = '';
-                                if (isset($reportExportShareService) && $reportExportShareService instanceof \Iseo\Services\ReportExportShareService) {
-                                    $shareReasonTitle = (string) ($reportExportShareService->evaluateEligibility($row)['reason'] ?? '');
-                                }
-                                ?>
-                                <span class="share-badge share-badge--blocked"<?= $shareReasonTitle !== '' ? ' title="' . e($shareReasonTitle) . '"' : '' ?>>Not shareable</span>
+                                <span class="share-badge share-badge--blocked">Нельзя отправлять</span>
                             <?php endif; ?>
                         </td>
                         <td><code><?= e((string) ($row['filename'] ?? '')) ?></code></td>
-                        <td><code class="checksum-display" title="<?= e($checksum) ?>"><?= e($short) ?></code></td>
-                        <td><?= e($size > 0 ? number_format($size) . ' B' : '—') ?></td>
                         <td><?= e((string) ($row['created_at'] ?? '—')) ?></td>
                         <td class="actions">
-                            <a href="<?= e(url_path('/report-exports/' . $eid)) ?>">View</a>
-                            · <a class="btn-download" href="<?= e(url_path('/report-exports/' . $eid . '/download')) ?>">Download</a>
-                            · <a href="<?= e(url_path('/report-exports/' . $eid . '/shares')) ?>">Shares</a>
+                            <a href="<?= e(url_path('/report-exports/' . $eid)) ?>">Открыть</a>
+                            · <a class="btn-download" href="<?= e(url_path('/report-exports/' . $eid . '/download')) ?>">Скачать</a>
+                            · <a href="<?= e(url_path('/report-exports/' . $eid . '/shares')) ?>">Ссылки</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -187,73 +194,73 @@ $rowTemplateLabel = static function (array $row) use ($legacyTemplateLabel): str
             </table>
         </div>
 
-        <?php if ($canCreate && $snapshotId > 0): ?>
-            <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/html')) ?>" class="export-idempotent-form">
-                <?= $csrf->field() ?>
-                <button type="submit" class="btn btn-secondary">Re-check HTML export (idempotent)</button>
-            </form>
-            <p class="field-hint export-hint">Legacy HTML re-check returns the existing ready v1 artifact when checksums match; it does not create a duplicate row.</p>
-        <?php endif; ?>
+        <details class="tech-details">
+            <summary>Технические детали</summary>
+            <p class="template-state-note">
+                <strong>Ключ снимка:</strong> <code><?= e($snapshotKey) ?></code>
+                <br>
+                <strong>Шаблон по умолчанию:</strong>
+                <code><?= e($futureTemplateId) ?></code> v<?= e($futureTemplateVersion) ?>
+                (новые версии; старые файлы не перезаписываются).
+                <br>
+                <strong>Устаревший / NULL:</strong> <?= e($legacyTemplateLabel) ?>.
+            </p>
 
-        <?php if ($canCreatePdf && $snapshotId > 0 && $hasHtmlExport && !$hasPdfExport): ?>
-            <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/pdf')) ?>" class="export-idempotent-form">
-                <?= $csrf->field() ?>
-                <button type="submit" class="btn">Create PDF export</button>
-            </form>
-            <p class="field-hint export-hint">PDF is generated from the ready HTML artifact via Edge headless (Chrome fallback). No public URL.</p>
-        <?php elseif ($canCreatePdf && $snapshotId > 0 && $hasPdfExport): ?>
-            <p class="export-ready-note">Legacy PDF export is ready. Create is not needed — use Download or re-check below.</p>
-            <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/pdf')) ?>" class="export-idempotent-form">
-                <?= $csrf->field() ?>
-                <button type="submit" class="btn btn-secondary">Re-check PDF export (idempotent)</button>
-            </form>
-            <p class="field-hint export-hint">Re-check validates metadata and file integrity and returns the existing PDF (id unchanged; no rewrite).</p>
-        <?php elseif ($hasHtmlExport && !$hasPdfExport && $snapshotId > 0 && !$canCreatePdf): ?>
-            <p class="field-hint">PDF creation requires admin_owner or seo_lead_reviewer role.</p>
-        <?php endif; ?>
-
-        <?php if ($canCreateStyledHtml && $snapshotId > 0): ?>
-            <?php if ($styledHtmlExport === null): ?>
-                <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/html/styled')) ?>" class="export-idempotent-form">
+            <?php if ($canCreate && $snapshotId > 0): ?>
+                <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/html')) ?>" class="export-idempotent-form">
                     <?= $csrf->field() ?>
-                    <button type="submit" class="btn">Create styled HTML export (<?= e($styledTemplateLabel) ?>)</button>
-                </form>
-                <p class="field-hint export-hint">Creates a new HTML export version with embedded default template CSS. Does not overwrite historical v1.</p>
-            <?php else: ?>
-                <p class="export-ready-note">
-                    Styled HTML ready:
-                    <code><?= e((string) ($styledHtmlExport['export_key'] ?? '')) ?></code>
-                    · template <code><?= e((string) ($styledHtmlExport['display_template_label'] ?? $styledTemplateLabel)) ?></code>
-                </p>
-                <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/html/styled')) ?>" class="export-idempotent-form">
-                    <?= $csrf->field() ?>
-                    <button type="submit" class="btn btn-secondary">Re-check styled HTML (idempotent)</button>
+                    <button type="submit" class="btn btn-secondary">Проверить HTML-файл (без дубля)</button>
                 </form>
             <?php endif; ?>
-        <?php endif; ?>
 
-        <?php if ($canCreateStyledPdf && $snapshotId > 0): ?>
-            <?php if ($styledPdfExport === null): ?>
-                <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/pdf/styled')) ?>" class="export-idempotent-form">
+            <?php if ($canCreatePdf && $snapshotId > 0 && $hasHtmlExport && !$hasPdfExport): ?>
+                <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/pdf')) ?>" class="export-idempotent-form">
                     <?= $csrf->field() ?>
-                    <button type="submit" class="btn">Create styled PDF export from HTML v2</button>
+                    <button type="submit" class="btn">Создать PDF</button>
                 </form>
-                <p class="field-hint export-hint">PDF is printed from styled HTML v2 via Edge headless. Does not overwrite historical v1 PDF.</p>
-            <?php else: ?>
-                <p class="export-ready-note">
-                    Styled PDF ready:
-                    <code><?= e((string) ($styledPdfExport['export_key'] ?? '')) ?></code>
-                    · source HTML <?= e((string) ($styledPdfExport['display_source_html_label'] ?? 'not recorded')) ?>
-                </p>
-                <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/pdf/styled')) ?>" class="export-idempotent-form">
+            <?php elseif ($canCreatePdf && $snapshotId > 0 && $hasPdfExport): ?>
+                <p class="export-ready-note">Старый PDF уже готов. Используйте скачивание или проверку ниже.</p>
+                <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/pdf')) ?>" class="export-idempotent-form">
                     <?= $csrf->field() ?>
-                    <button type="submit" class="btn btn-secondary">Re-check styled PDF (idempotent)</button>
+                    <button type="submit" class="btn btn-secondary">Проверить PDF (без дубля)</button>
                 </form>
+            <?php elseif ($hasHtmlExport && !$hasPdfExport && $snapshotId > 0 && !$canCreatePdf): ?>
+                <p class="field-hint">Создание PDF доступно ролям admin_owner или seo_lead_reviewer.</p>
             <?php endif; ?>
-        <?php elseif ($styledHtmlExport !== null && $styledPdfExport === null && $snapshotId > 0 && !$canCreateStyledPdf): ?>
-            <p class="field-hint">Styled PDF creation requires admin_owner or seo_lead_reviewer role and a browser PDF engine.</p>
-        <?php endif; ?>
 
-        <p class="field-hint export-hint">Auth downloads require authentication. Public share is available only for ready styled PDF exports (MVP: export id 4).</p>
+            <?php if ($canCreateStyledHtml && $snapshotId > 0): ?>
+                <?php if ($styledHtmlExport === null): ?>
+                    <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/html/styled')) ?>" class="export-idempotent-form">
+                        <?= $csrf->field() ?>
+                        <button type="submit" class="btn">Создать оформленный HTML (<?= e($styledTemplateLabel) ?>)</button>
+                    </form>
+                <?php else: ?>
+                    <p class="export-ready-note">Оформленный HTML готов.</p>
+                    <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/html/styled')) ?>" class="export-idempotent-form">
+                        <?= $csrf->field() ?>
+                        <button type="submit" class="btn btn-secondary">Проверить оформленный HTML</button>
+                    </form>
+                <?php endif; ?>
+            <?php endif; ?>
+
+            <?php if ($canCreateStyledPdf && $snapshotId > 0): ?>
+                <?php if ($styledPdfExport === null): ?>
+                    <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/pdf/styled')) ?>" class="export-idempotent-form">
+                        <?= $csrf->field() ?>
+                        <button type="submit" class="btn">Создать оформленный PDF</button>
+                    </form>
+                <?php else: ?>
+                    <p class="export-ready-note">Оформленный PDF готов.</p>
+                    <form method="post" action="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports/pdf/styled')) ?>" class="export-idempotent-form">
+                        <?= $csrf->field() ?>
+                        <button type="submit" class="btn btn-secondary">Проверить оформленный PDF</button>
+                    </form>
+                <?php endif; ?>
+            <?php elseif ($styledHtmlExport !== null && $styledPdfExport === null && $snapshotId > 0 && !$canCreateStyledPdf): ?>
+                <p class="field-hint">Создание оформленного PDF требует роли и локального PDF-движка.</p>
+            <?php endif; ?>
+
+            <p class="field-hint export-hint">Скачивание требует входа. Ссылку клиенту можно создать только для готового оформленного PDF.</p>
+        </details>
     <?php endif; ?>
 </section>

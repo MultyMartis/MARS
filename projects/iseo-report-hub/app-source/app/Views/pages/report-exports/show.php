@@ -27,27 +27,39 @@ $checksumShort = $checksum !== '' ? substr($checksum, 0, 12) . '…' : '—';
 $sourceChecksum = (string) ($export['source_snapshot_checksum_sha256'] ?? '');
 $sourceShort = $sourceChecksum !== '' ? substr($sourceChecksum, 0, 12) . '…' : '—';
 $fileSize = isset($export['file_size_bytes']) ? (int) $export['file_size_bytes'] : 0;
-$downloadLabel = $isPdf ? 'Download PDF' : 'Download HTML';
-$artifactLabel = $isPdf ? 'PDF artifact' : 'HTML artifact';
+$downloadLabel = $isPdf ? 'Скачать PDF' : 'Скачать HTML';
+$artifactLabel = $isPdf ? 'PDF-файл' : 'HTML-файл';
 /** @var array{id?:string,version?:int}|null $futureTemplate */
 $futureTemplate = is_array($futureTemplate ?? null) ? $futureTemplate : [];
-$legacyTemplateLabel = (string) ($legacyTemplateLabel ?? 'not recorded / legacy');
+$legacyTemplateLabel = (string) ($legacyTemplateLabel ?? 'устаревший / не записан');
 $futureTemplateId = (string) ($futureTemplate['id'] ?? 'iseo_default_v1');
 $futureTemplateVersion = (string) (int) ($futureTemplate['version'] ?? 1);
 $isLegacyTemplateMetadata = !empty($isLegacyTemplateMetadata);
 $isStyledExport = !empty($isStyledExport);
 $templateLabel = (string) ($templateLabel ?? ($export['display_template_label'] ?? $legacyTemplateLabel));
-$renderTargetLabel = (string) ($renderTargetLabel ?? ($export['display_render_target_label'] ?? 'not recorded'));
-$renderEngineLabel = (string) ($renderEngineLabel ?? ($export['display_render_engine_label'] ?? 'not recorded'));
+$renderTargetLabel = (string) ($renderTargetLabel ?? ($export['display_render_target_label'] ?? 'не записан'));
+$renderEngineLabel = (string) ($renderEngineLabel ?? ($export['display_render_engine_label'] ?? 'не записан'));
 $sourceHtmlSummary = is_array($sourceHtmlSummary ?? null) ? $sourceHtmlSummary : null;
 $sourceHtmlLabel = is_array($sourceHtmlSummary) && isset($sourceHtmlSummary['label'])
     ? (string) $sourceHtmlSummary['label']
-    : (string) ($export['display_source_html_label'] ?? 'not recorded');
+    : (string) ($export['display_source_html_label'] ?? 'не записан');
 $shareEligibility = is_array($shareEligibility ?? null) ? $shareEligibility : [];
 $shareEligible = !empty($shareEligibility['eligible']);
-$shareReason = (string) ($shareEligibility['reason'] ?? 'Eligibility not evaluated.');
+$shareReason = (string) ($shareEligibility['reason'] ?? 'Готовность не оценена.');
 $activeShareCount = (int) ($activeShareCount ?? 0);
 $canManageShares = !empty($canManageShares);
+
+$statusRu = static function (string $status): string {
+    return match ($status) {
+        'ready' => 'Готово',
+        'pending' => 'В работе',
+        'failed' => 'Ошибка',
+        'revoked' => 'Отозвана',
+        'expired' => 'Истекла',
+        'finalized' => 'Финализирован',
+        default => $status,
+    };
+};
 
 $handoff = null;
 if (isset($reportExportShareService) && $reportExportShareService instanceof \Iseo\Services\ReportExportShareService) {
@@ -60,149 +72,100 @@ $hChecks = is_array($handoff['checklist'] ?? null) ? $handoff['checklist'] : [];
 $hWarnings = is_array($handoff['warnings'] ?? null) ? $handoff['warnings'] : [];
 $urlLost = is_string($handoff['url_lost_guidance'] ?? null) ? (string) $handoff['url_lost_guidance'] : '';
 $storagePath = (string) ($export['storage_path'] ?? '');
+$exportStatus = (string) ($export['status'] ?? '');
 ?>
 <section class="panel export-card export-detail">
     <div class="panel-head">
-        <h2>Export detail</h2>
+        <h2>Файл отчета</h2>
         <p>
-            <?php if ($snapshotId > 0): ?>
-                <a class="btn btn-secondary" href="<?= e(url_path('/report-snapshots/' . $snapshotId)) ?>">Snapshot</a>
-                <a class="btn btn-secondary" href="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports')) ?>">All exports</a>
-            <?php endif; ?>
-            <?php if ($monthlyId > 0): ?>
-                <a class="btn btn-secondary" href="<?= e(url_path('/monthly-reports/' . $monthlyId)) ?>">Monthly report</a>
-            <?php endif; ?>
-            <?php if ($exportId > 0 && (string) ($export['status'] ?? '') === 'ready'): ?>
+            <?php if ($exportId > 0 && $exportStatus === 'ready'): ?>
                 <a class="btn" href="<?= e(url_path('/report-exports/' . $exportId . '/download')) ?>"><?= e($downloadLabel) ?></a>
             <?php endif; ?>
             <?php if ($exportId > 0): ?>
-                <a class="btn btn-secondary" href="<?= e(url_path('/report-exports/' . $exportId . '/shares')) ?>">Public shares</a>
+                <a class="btn" href="<?= e(url_path('/report-exports/' . $exportId . '/shares')) ?>">Ссылки для клиента</a>
+            <?php endif; ?>
+            <?php if ($snapshotId > 0): ?>
+                <a class="btn btn-secondary" href="<?= e(url_path('/report-snapshots/' . $snapshotId . '/exports')) ?>">Все файлы отчета</a>
+            <?php endif; ?>
+            <?php if ($monthlyId > 0): ?>
+                <a class="btn btn-secondary" href="<?= e(url_path('/monthly-reports/' . $monthlyId)) ?>">Месячный отчет</a>
             <?php endif; ?>
         </p>
     </div>
 
     <p>
-        <span class="internal-only-badge">Internal only</span>
+        <span class="internal-only-badge">Только внутри</span>
         <span class="artifact-badge<?= $isPdf ? ' artifact-badge--pdf' : '' ?>"><?= e($artifactLabel) ?></span>
         <?php if ($isLegacyTemplateMetadata): ?>
-            <span class="template-badge template-badge--legacy">Legacy / not recorded</span>
+            <span class="template-badge template-badge--legacy">Старый файл</span>
         <?php else: ?>
-            <span class="template-badge template-badge--styled">Recorded template</span>
+            <span class="template-badge template-badge--styled">Шаблон сохранен</span>
         <?php endif; ?>
         <?php if ($shareEligible): ?>
-            <span class="share-badge share-badge--eligible">Shareable</span>
+            <span class="share-badge share-badge--eligible">Можно отправлять</span>
         <?php else: ?>
-            <span class="share-badge share-badge--blocked" title="<?= e($shareReason) ?>">Not shareable</span>
+            <span class="share-badge share-badge--blocked" title="<?= e($shareReason) ?>">Нельзя отправлять</span>
         <?php endif; ?>
-        · <span class="status-badge status-<?= e((string) ($export['status'] ?? '')) ?>"><?= e((string) ($export['status'] ?? '')) ?></span>
-    </p>
-
-    <ul class="facts export-meta-list">
-        <li><strong>ID:</strong> <?= e((string) $exportId) ?></li>
-        <li><strong>Export key:</strong> <code><?= e((string) ($export['export_key'] ?? '')) ?></code></li>
-        <li><strong>Format:</strong> <code><?= e($format) ?></code></li>
-        <li><strong>Status:</strong> <span class="status-badge status-<?= e((string) ($export['status'] ?? '')) ?>"><?= e((string) ($export['status'] ?? '')) ?></span></li>
-        <li><strong>Template:</strong>
-            <span class="template-badge<?= $isLegacyTemplateMetadata ? ' template-badge--legacy' : ' template-badge--styled' ?>"><?= e($templateLabel) ?></span>
-        </li>
-        <li><strong>Render target:</strong> <?= e($renderTargetLabel) ?></li>
-        <li><strong>Render engine:</strong> <?= e($renderEngineLabel) ?></li>
-        <?php if ($isPdf): ?>
-            <li><strong>Source HTML:</strong>
-                <span class="source-lineage<?= $sourceHtmlLabel === 'not recorded' ? ' source-lineage--unknown' : '' ?>">
-                    <?= e($sourceHtmlLabel) ?>
-                </span>
-            </li>
-        <?php endif; ?>
-        <?php if ($isLegacyTemplateMetadata): ?>
-            <li><strong>Default template (for new versions):</strong> <code><?= e($futureTemplateId) ?></code> v<?= e($futureTemplateVersion) ?></li>
-        <?php endif; ?>
-        <li><strong>Filename:</strong> <code><?= e((string) ($export['filename'] ?? '')) ?></code></li>
-        <li><strong>MIME type:</strong> <code><?= e((string) ($export['mime_type'] ?? '')) ?></code></li>
-        <li><strong>File size:</strong> <?= e($fileSize > 0 ? number_format($fileSize) . ' bytes' : '—') ?></li>
-        <li><strong>File checksum:</strong> <code class="checksum-display" title="<?= e($checksum) ?>"><?= e($checksumShort) ?></code></li>
-        <li><strong>Full file checksum:</strong> <code class="checksum-full"><?= e($checksum) ?></code></li>
-        <li><strong>Source snapshot checksum:</strong> <code class="checksum-display" title="<?= e($sourceChecksum) ?>"><?= e($sourceShort) ?></code></li>
-        <li><strong>Full source checksum:</strong> <code class="checksum-full"><?= e($sourceChecksum) ?></code></li>
-        <li><strong>Storage disk:</strong> <?= e((string) ($export['storage_disk'] ?? 'local')) ?></li>
-        <li><strong>Snapshot ID:</strong> <?= e((string) $snapshotId) ?>
-            <?php if (!empty($export['snapshot_key'])): ?>
-                · <code><?= e((string) $export['snapshot_key']) ?></code>
-            <?php endif; ?>
-        </li>
-        <li><strong>Monthly report ID:</strong> <?= e((string) $monthlyId) ?></li>
-        <li><strong>Created at:</strong> <?= e((string) ($export['created_at'] ?? '—')) ?></li>
-        <li><strong>Created by:</strong>
-            <?= e((string) ($export['created_by_name'] ?? '—')) ?>
-            <?php if (!empty($export['created_by_email'])): ?>
-                · <?= e((string) $export['created_by_email']) ?>
-            <?php endif; ?>
-        </li>
-    </ul>
-
-    <?php if ($storagePath !== ''): ?>
-        <details class="tech-details">
-            <summary>Technical details (internal)</summary>
-            <p class="field-hint">
-                <strong>Internal technical artifact path</strong> (not for client messages):
-                <code class="storage-path-tech"><?= e($storagePath) ?></code>
-            </p>
-        </details>
-    <?php endif; ?>
-
-    <p class="field-hint export-hint">
-        Auth download requires authentication. Path/MIME/size/checksum<?= $isPdf ? '/PDF-magic' : '' ?> are validated before streaming.
-        Template/render fields come from DB-09 columns when present; NULL rows stay <?= e($legacyTemplateLabel) ?> and are never inferred as <code><?= e($futureTemplateId) ?></code>.
+        · <span class="status-badge status-<?= e($exportStatus) ?>"><?= e($statusRu($exportStatus)) ?></span>
     </p>
 </section>
 
 <section class="panel export-card handoff-panel" data-handoff-panel>
     <div class="panel-head">
-        <h2>Client handoff readiness</h2>
+        <h2>Готовность к отправке клиенту</h2>
         <p>
-            <a class="btn" href="<?= e(url_path('/report-exports/' . $exportId . '/shares')) ?>">Open shares / copy pack</a>
+            <a class="btn" href="<?= e(url_path('/report-exports/' . $exportId . '/shares')) ?>">Открыть ссылки и тексты</a>
         </p>
     </div>
 
-    <?php if ($shareEligible): ?>
-        <p>
-            <span class="share-badge share-badge--eligible">Shareable</span>
-            · Active shares: <strong><?= e((string) ($hShare['active_count'] ?? $activeShareCount)) ?></strong>
-            <?php if (!empty($hShare['expires_at'])): ?>
-                · Expires: <code><?= e((string) $hShare['expires_at']) ?></code>
-            <?php endif; ?>
-            <?php if ((int) ($hShare['revoked_count'] ?? 0) > 0): ?>
-                · Revoked rows: <strong><?= e((string) (int) $hShare['revoked_count']) ?></strong>
-            <?php endif; ?>
-        </p>
-    <?php else: ?>
-        <p>
-            <span class="share-badge share-badge--blocked">Not shareable</span>
-            · <?= e($shareReason) ?>
-        </p>
-        <p class="field-hint handoff-not-ready">Not delivery ready. No handoff copy pack for this export.</p>
-    <?php endif; ?>
-
-    <ul class="facts handoff-context-list">
-        <li><strong>Client:</strong> <?= e((string) ($hCtx['client_name'] ?? 'SAFE UNKNOWN')) ?></li>
-        <li><strong>Project:</strong> <?= e((string) ($hCtx['project_name'] ?? 'SAFE UNKNOWN')) ?></li>
-        <li><strong>Period:</strong> <?= e((string) ($hCtx['period'] ?? 'SAFE UNKNOWN')) ?></li>
-        <li><strong>Report status:</strong> <?= e((string) ($hCtx['report_status'] ?? 'SAFE UNKNOWN')) ?></li>
-        <li><strong>Snapshot key:</strong> <code><?= e((string) ($hCtx['snapshot_key'] ?? 'SAFE UNKNOWN')) ?></code></li>
-        <li><strong>Export:</strong> id <?= e((string) $exportId) ?> · <code><?= e((string) ($export['export_key'] ?? '')) ?></code></li>
-        <li><strong>Export format:</strong> <code><?= e($format) ?></code></li>
-        <li><strong>Template:</strong> <?= e((string) ($hCtx['template_label'] ?? $templateLabel)) ?></li>
-        <li><strong>Share status:</strong>
-            <?php if (!empty($hShare['has_active'])): ?>
-                active exists
+    <ul class="facts handoff-context-list manager-facts">
+        <li><strong>Клиент:</strong> <?= e((string) ($hCtx['client_name'] ?? 'SAFE UNKNOWN')) ?></li>
+        <li><strong>Проект:</strong> <?= e((string) ($hCtx['project_name'] ?? 'SAFE UNKNOWN')) ?></li>
+        <li><strong>Период:</strong> <?= e((string) ($hCtx['period'] ?? 'SAFE UNKNOWN')) ?></li>
+        <li><strong>PDF:</strong>
+            <?php if ($isPdf && $exportStatus === 'ready'): ?>
+                готов
             <?php else: ?>
-                no active share
+                не готов
+            <?php endif; ?>
+        </li>
+        <li><strong>Отправка:</strong>
+            <?php if ($shareEligible): ?>
+                Можно отправлять
+            <?php else: ?>
+                Нельзя отправлять
+            <?php endif; ?>
+        </li>
+        <li><strong>Ссылка:</strong>
+            <?php if (!empty($hShare['has_active'])): ?>
+                Есть активная ссылка
+            <?php else: ?>
+                Активной ссылки нет
             <?php endif; ?>
         </li>
     </ul>
 
+    <?php if ($shareEligible): ?>
+        <p>
+            <span class="share-badge share-badge--eligible">Можно отправлять</span>
+            · Активные ссылки: <strong><?= e((string) ($hShare['active_count'] ?? $activeShareCount)) ?></strong>
+            <?php if (!empty($hShare['expires_at'])): ?>
+                · Действует до: <code><?= e((string) $hShare['expires_at']) ?></code>
+            <?php endif; ?>
+            <?php if ((int) ($hShare['revoked_count'] ?? 0) > 0): ?>
+                · Отозванные ссылки: <strong><?= e((string) (int) $hShare['revoked_count']) ?></strong>
+            <?php endif; ?>
+        </p>
+    <?php else: ?>
+        <p>
+            <span class="share-badge share-badge--blocked">Нельзя отправлять</span>
+            · <?= e($shareReason) ?>
+        </p>
+        <p class="field-hint handoff-not-ready">Не готово к отправке. Тексты для отправки недоступны для этого файла.</p>
+    <?php endif; ?>
+
     <?php if ($hChecks !== []): ?>
-        <h3 class="handoff-subhead">Readiness checklist</h3>
+        <h3 class="handoff-subhead">Чек-лист готовности</h3>
         <ul class="handoff-checklist">
             <?php foreach ($hChecks as $item): ?>
                 <?php if (!is_array($item)) { continue; } ?>
@@ -218,11 +181,11 @@ $storagePath = (string) ($export['storage_path'] ?? '');
     <?php if ($urlLost !== ''): ?>
         <p class="handoff-once-gone" role="status"><?= e($urlLost) ?></p>
     <?php elseif ($shareEligible && empty($hShare['has_active'])): ?>
-        <p class="field-hint">No active share. Create a share on the shares page to get the once-only public URL and copy pack.</p>
+        <p class="field-hint">Активной ссылки нет. Создайте ссылку на странице «Ссылки для клиента», чтобы получить URL и тексты для отправки.</p>
     <?php endif; ?>
 
     <?php if ($hWarnings !== []): ?>
-        <h3 class="handoff-subhead">Warnings</h3>
+        <h3 class="handoff-subhead">Предупреждения</h3>
         <ul class="handoff-warnings">
             <?php foreach ($hWarnings as $w): ?>
                 <li><?= e((string) $w) ?></li>
@@ -230,5 +193,51 @@ $storagePath = (string) ($export['storage_path'] ?? '');
         </ul>
     <?php endif; ?>
 
-    <p class="field-hint">Copy pack (short / email / internal note) appears only immediately after share creation while the plaintext URL is available. No DB delivery tracking in this MVP.</p>
+    <p class="field-hint">Тексты для отправки появляются сразу после создания ссылки, пока URL ещё виден на экране.</p>
 </section>
+
+<details class="panel tech-details">
+    <summary>Технические детали</summary>
+    <ul class="facts export-meta-list">
+        <li><strong>ID:</strong> <?= e((string) $exportId) ?></li>
+        <li><strong>Ключ файла:</strong> <code><?= e((string) ($export['export_key'] ?? '')) ?></code></li>
+        <li><strong>Формат:</strong> <code><?= e($format) ?></code></li>
+        <li><strong>Статус:</strong> <span class="status-badge status-<?= e($exportStatus) ?>"><?= e($statusRu($exportStatus)) ?></span></li>
+        <li><strong>Шаблон:</strong>
+            <span class="template-badge<?= $isLegacyTemplateMetadata ? ' template-badge--legacy' : ' template-badge--styled' ?>"><?= e($templateLabel) ?></span>
+        </li>
+        <li><strong>Тип генерации:</strong> <?= e($renderTargetLabel) ?></li>
+        <li><strong>Генератор:</strong> <?= e($renderEngineLabel) ?></li>
+        <?php if ($isPdf): ?>
+            <li><strong>Исходный HTML:</strong>
+                <span class="source-lineage<?= $sourceHtmlLabel === 'не записан' || $sourceHtmlLabel === 'not recorded' ? ' source-lineage--unknown' : '' ?>">
+                    <?= e($sourceHtmlLabel) ?>
+                </span>
+            </li>
+        <?php endif; ?>
+        <?php if ($isLegacyTemplateMetadata): ?>
+            <li><strong>Шаблон по умолчанию (для новых версий):</strong> <code><?= e($futureTemplateId) ?></code> v<?= e($futureTemplateVersion) ?></li>
+        <?php endif; ?>
+        <li><strong>Имя файла:</strong> <code><?= e((string) ($export['filename'] ?? '')) ?></code></li>
+        <li><strong>MIME-тип:</strong> <code><?= e((string) ($export['mime_type'] ?? '')) ?></code></li>
+        <li><strong>Размер файла:</strong> <?= e($fileSize > 0 ? number_format($fileSize) . ' байт' : '—') ?></li>
+        <li><strong>Контрольная сумма:</strong> <code class="checksum-display" title="<?= e($checksum) ?>"><?= e($checksumShort) ?></code></li>
+        <li><strong>Полная контрольная сумма:</strong> <code class="checksum-full"><?= e($checksum) ?></code></li>
+        <li><strong>Контрольная сумма снимка:</strong> <code class="checksum-display" title="<?= e($sourceChecksum) ?>"><?= e($sourceShort) ?></code></li>
+        <li><strong>Полная сумма снимка:</strong> <code class="checksum-full"><?= e($sourceChecksum) ?></code></li>
+        <li><strong>Диск хранения:</strong> <?= e((string) ($export['storage_disk'] ?? 'local')) ?></li>
+        <li><strong>Снимок:</strong> <?= e((string) $snapshotId) ?>
+            <?php if (!empty($export['snapshot_key'])): ?>
+                · <code><?= e((string) $export['snapshot_key']) ?></code>
+            <?php endif; ?>
+        </li>
+        <li><strong>Месячный отчет:</strong> <?= e((string) $monthlyId) ?></li>
+        <li><strong>Создан:</strong> <?= e((string) ($export['created_at'] ?? '—')) ?></li>
+        <li><strong>Создал:</strong>
+            <?= e((string) ($export['created_by_name'] ?? '—')) ?>
+        </li>
+        <?php if ($storagePath !== ''): ?>
+            <li><strong>Путь к файлу:</strong> <code class="storage-path-tech"><?= e($storagePath) ?></code></li>
+        <?php endif; ?>
+    </ul>
+</details>

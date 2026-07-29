@@ -29,77 +29,88 @@ final class DashboardController extends BaseController
         $checkpointCount = null;
         $monthlyCount = null;
         $blockCount = null;
-        $reportingDetail = 'Internal CRUD ready — list / detail / create / edit / archive-by-status.';
-        $checkpointDetail = 'Period-scoped CRUD ready — list / detail / create / edit / skip-or-archive-by-status.';
-        $monthlyDetail = 'Period-scoped CRUD ready — detail / create / edit / archive-by-status.';
-        $blockDetail = 'Monthly-scoped CRUD ready — list / detail / create / edit / archive-by-status.';
+        $reportingDetail = 'Внутренние отчеты готовы — список / карточка / создание / правка.';
+        $checkpointDetail = 'Еженедельные заметки готовы — через отчетный период.';
+        $monthlyDetail = 'Месячные отчеты готовы — через отчетный период.';
+        $blockDetail = 'Блоки отчета готовы — через месячный отчет.';
         if ($dbConfigured) {
             try {
                 /** @var \Iseo\Services\DatabaseService $db */
                 $db = $this->app['db'];
                 $periodService = new ReportingPeriodService(new ReportingPeriodRepository($db), $db);
                 $periodCount = $periodService->countPeriods();
-                $reportingDetail = 'Internal CRUD ready. Periods in DB: ' . $periodCount . '.';
+                $reportingDetail = 'Отчетные периоды в базе: ' . $periodCount . '.';
                 $checkpointService = new WeeklyCheckpointService(new WeeklyCheckpointRepository($db), $db);
                 $checkpointCount = $checkpointService->countCheckpoints();
-                $checkpointDetail = 'Period-scoped CRUD ready. Checkpoints in DB: ' . $checkpointCount . '.';
+                $checkpointDetail = 'Еженедельных заметок в базе: ' . $checkpointCount . '.';
                 $monthlyService = new MonthlyReportContentService(new MonthlyReportContentRepository($db), $db);
                 $monthlyCount = $monthlyService->countReports();
-                $monthlyDetail = 'Period-scoped CRUD ready. Monthly reports in DB: ' . $monthlyCount . '.';
+                $monthlyDetail = 'Месячных отчетов в базе: ' . $monthlyCount . '.';
                 $blockService = new ReportBlockService(new ReportBlockRepository($db), $db);
                 $blockCount = $blockService->countBlocks();
-                $blockDetail = 'Monthly-scoped CRUD ready. Report blocks in DB: ' . $blockCount . '.';
+                $blockDetail = 'Блоков отчета в базе: ' . $blockCount . '.';
             } catch (Throwable) {
-                $reportingDetail = 'CRUD code ready; period count unavailable.';
-                $checkpointDetail = 'CRUD code ready; checkpoint count unavailable.';
-                $monthlyDetail = 'CRUD code ready; monthly report count unavailable.';
-                $blockDetail = 'CRUD code ready; report block count unavailable.';
+                $reportingDetail = 'Модуль отчетов готов; счётчик периодов недоступен.';
+                $checkpointDetail = 'Модуль заметок готов; счётчик недоступен.';
+                $monthlyDetail = 'Модуль месячных отчетов готов; счётчик недоступен.';
+                $blockDetail = 'Модуль блоков готов; счётчик недоступен.';
             }
         }
 
         $this->render('dashboard', [
-            'pageTitle' => 'Dashboard',
+            'pageTitle' => 'Главная',
             'user' => $user,
             'periodCount' => $periodCount,
             'checkpointCount' => $checkpointCount,
             'monthlyCount' => $monthlyCount,
             'blockCount' => $blockCount,
+            // Local fixture manager shortcuts (stable smoke IDs).
+            'quickMonthlyId' => 1,
+            'quickSnapshotId' => 1,
+            'quickExportId' => 4,
             'cards' => [
                 [
-                    'title' => 'Auth',
+                    'title' => 'Вход',
                     'status' => 'ready',
-                    'detail' => 'DB-backed login active for internal roles.',
+                    'status_label' => 'Готово',
+                    'detail' => 'Вход выполнен. Сессия сохраняется в базе.',
                 ],
                 [
-                    'title' => 'Database',
+                    'title' => 'База данных',
                     'status' => $dbConfigured ? 'ready' : 'pending',
+                    'status_label' => $dbConfigured ? 'Готово' : 'В работе',
                     'detail' => $dbConfigured
-                        ? 'Configured via runtime .env.local (credentials not shown).'
-                        : 'Database not configured.',
+                        ? 'Подключена через локальный .env.local (учётные данные не показываются).'
+                        : 'База данных не настроена.',
                 ],
                 [
-                    'title' => 'Runtime',
+                    'title' => 'Локальный запуск',
                     'status' => 'ready',
-                    'detail' => 'Local Laragon runtime at iseo-report-hub.test.',
+                    'status_label' => 'Готово',
+                    'detail' => 'Локальный запуск: iseo-report-hub.test.',
                 ],
                 [
-                    'title' => 'Reporting CRUD',
+                    'title' => 'Отчеты',
                     'status' => 'ready',
+                    'status_label' => 'Готово',
                     'detail' => $reportingDetail,
                 ],
                 [
-                    'title' => 'Weekly checkpoints',
+                    'title' => 'Еженедельные заметки',
                     'status' => 'ready',
+                    'status_label' => 'Готово',
                     'detail' => $checkpointDetail,
                 ],
                 [
-                    'title' => 'Monthly reports',
+                    'title' => 'Месячные отчеты',
                     'status' => 'ready',
+                    'status_label' => 'Готово',
                     'detail' => $monthlyDetail,
                 ],
                 [
-                    'title' => 'Report blocks',
+                    'title' => 'Блоки отчета',
                     'status' => 'ready',
+                    'status_label' => 'Готово',
                     'detail' => $blockDetail,
                 ],
             ],

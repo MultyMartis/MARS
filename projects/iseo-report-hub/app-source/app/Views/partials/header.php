@@ -11,17 +11,17 @@ declare(strict_types=1);
             <h1><?= e($appName) ?></h1>
             <p class="tagline"><?= e($phaseLabel) ?></p>
         </div>
-        <nav class="site-nav" aria-label="Main">
+        <nav class="site-nav" aria-label="Основная навигация">
             <?php if ($currentUser !== null): ?>
-                <a href="<?= e(url_path('/')) ?>">Dashboard</a>
-                <a href="<?= e(url_path('/reporting-periods')) ?>">Reporting periods</a>
+                <a href="<?= e(url_path('/')) ?>">Главная</a>
+                <a href="<?= e(url_path('/reporting-periods')) ?>">Отчетные периоды</a>
             <?php endif; ?>
-            <a href="<?= e(url_path('/health')) ?>">Health</a>
+            <a href="<?= e(url_path('/health')) ?>">Состояние системы</a>
             <?php if ($currentUser !== null): ?>
-                <span class="nav-user"><?= e(($currentUser['name'] ?? 'User') . ' · ' . ($currentUser['email'] ?? '')) ?></span>
-                <a href="<?= e(url_path('/logout')) ?>">Logout</a>
+                <span class="nav-user"><?= e(($currentUser['name'] ?? 'Пользователь') . ' · ' . ($currentUser['email'] ?? '')) ?></span>
+                <a href="<?= e(url_path('/logout')) ?>">Выйти</a>
             <?php else: ?>
-                <a href="<?= e(url_path('/login')) ?>">Login</a>
+                <a href="<?= e(url_path('/login')) ?>">Вход</a>
             <?php endif; ?>
         </nav>
     </div>

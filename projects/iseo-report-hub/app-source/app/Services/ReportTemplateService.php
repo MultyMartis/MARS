@@ -97,6 +97,6 @@ final class ReportTemplateService
      */
     public function legacyTemplateLabel(): string
     {
-        return 'not recorded / legacy';
+        return 'устаревший / не записан';
     }
 }

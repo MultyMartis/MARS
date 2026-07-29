@@ -5,19 +5,19 @@ declare(strict_types=1);
 ?>
 <section class="panel">
     <div class="panel-head">
-        <h2>Reporting periods</h2>
+        <h2>Отчетные периоды</h2>
         <?php if ($canCreate): ?>
-            <a class="btn" href="<?= e(url_path('/reporting-periods/create')) ?>">Create period</a>
+            <a class="btn" href="<?= e(url_path('/reporting-periods/create')) ?>">Создать период</a>
         <?php endif; ?>
     </div>
-    <p class="note">Internal monthly shells only. No report content editor in this MVP.</p>
+    <p class="note">Список месяцев для работы с отчетами. Откройте период, чтобы перейти к отчету и файлам.</p>
 </section>
 
 <?php if ($periods === []): ?>
     <section class="panel">
-        <p>No reporting periods yet.</p>
+        <p>Отчетных периодов пока нет.</p>
         <?php if ($canCreate): ?>
-            <p><a class="btn" href="<?= e(url_path('/reporting-periods/create')) ?>">Create the first period</a></p>
+            <p><a class="btn" href="<?= e(url_path('/reporting-periods/create')) ?>">Создать первый период</a></p>
         <?php endif; ?>
     </section>
 <?php else: ?>
@@ -26,14 +26,14 @@ declare(strict_types=1);
             <thead>
             <tr>
                 <th>ID</th>
-                <th>Period</th>
-                <th>Title</th>
-                <th>Project</th>
-                <th>Client</th>
-                <th>Dates</th>
-                <th>Status</th>
-                <th>Owner</th>
-                <th>Actions</th>
+                <th>Период</th>
+                <th>Название</th>
+                <th>Проект</th>
+                <th>Клиент</th>
+                <th>Даты</th>
+                <th>Статус</th>
+                <th>Ответственный</th>
+                <th>Действия</th>
             </tr>
             </thead>
             <tbody>
@@ -50,6 +50,13 @@ declare(strict_types=1);
                     $owner = '—';
                 }
                 $canEditRow = !empty($row['_can_edit']);
+                $statusRu = match ($status) {
+                    'active' => 'Активен',
+                    'draft' => 'Черновик',
+                    'archived' => 'В архиве',
+                    'closed' => 'Закрыт',
+                    default => $status,
+                };
                 ?>
                 <tr>
                     <td><?= e((string) $id) ?></td>
@@ -58,12 +65,12 @@ declare(strict_types=1);
                     <td><?= e((string) $row['project_name']) ?></td>
                     <td><?= e((string) $row['client_name']) ?></td>
                     <td><?= e((string) $row['period_start']) ?> – <?= e((string) $row['period_end']) ?></td>
-                    <td><span class="status-badge status-<?= e($status) ?>"><?= e($status) ?></span></td>
+                    <td><span class="status-badge status-<?= e($status) ?>"><?= e($statusRu) ?></span></td>
                     <td><?= e($owner) ?></td>
                     <td class="actions">
-                        <a href="<?= e(url_path('/reporting-periods/' . $id)) ?>">View</a>
+                        <a href="<?= e(url_path('/reporting-periods/' . $id)) ?>">Открыть</a>
                         <?php if ($canEditRow): ?>
-                            · <a href="<?= e(url_path('/reporting-periods/' . $id . '/edit')) ?>">Edit</a>
+                            · <a href="<?= e(url_path('/reporting-periods/' . $id . '/edit')) ?>">Изменить</a>
                         <?php endif; ?>
                     </td>
                 </tr>
