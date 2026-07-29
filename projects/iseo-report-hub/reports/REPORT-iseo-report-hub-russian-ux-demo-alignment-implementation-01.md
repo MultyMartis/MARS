@@ -118,8 +118,8 @@ No `.env` / storage / export / PDF / vendor sync.
 | Item | Value |
 |------|-------|
 | Primary | `1897c692f81135dde745de7dc23c4efb5ce5e327` |
-| Hash-record | _(if needed)_ |
-| Tip HEAD | _(after update-ref)_ |
+| Hash-record | `cc0ea92b294ba46c683a8fd414c7e0f0193e8677` |
+| Tip HEAD | `cc0ea92b294ba46c683a8fd414c7e0f0193e8677` |
 | Push | **no** |
 
 ---
