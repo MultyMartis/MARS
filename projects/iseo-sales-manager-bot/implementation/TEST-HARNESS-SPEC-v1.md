@@ -1,0 +1,103 @@
+# TEST HARNESS SPEC v1
+
+**Product:** i-SEO Sales Manager Bot  
+**Phase:** 3A  
+**Source fixtures:** SANDBOX-TEST-PLAN-v1 F01–F21  
+**Rule:** synthetic only — no real unread Gmail, no real clients, no production labels
+
+---
+
+## 1. MetaBOT Programmer validation gates
+
+Before any sandbox apply / import:
+
+| Gate | Pass criteria |
+|------|---------------|
+| G1 JSON parse | Workflow JSON parses |
+| G2 Unique names | Node names unique |
+| G3 Connections | All targets exist |
+| G4 Credentials | Placeholders / names only — no secret values |
+| G5 Sandbox side effects | Gmail mutate / prod Telegram / OpenRouter disabled or sandbox-bound |
+| G6 No live recipients | No real manager/admin chat ids in committed artifacts |
+| G7 No real workbook ids | Placeholders or sandbox ids only in committed artifacts |
+| G8 AI OFF isolation | When `ai_enabled=false`, OpenRouter node not executed |
+| G9 Incoming preserve | Error/TG-fail path does not remove incoming |
+| G10 No PROCESSED on TG fail | Telegram fail never reaches Add Gmail PROCESSED |
+| G11 same_message | Classifies `reprocessed`, never business `repeat` |
+
+---
+
+## 2. Fixture matrix
+
+Synthetic Gmail payloads use fake message ids `msg_synth_Fxx` and domains `example.com` / `example.ru` only.
+
+| ID | Synthetic Gmail payload (summary) | Parser expect | Service | Quality | Duplicate | AI branch | Reply source | Sheets writes | Gmail labels | Telegram | Forbidden |
+|----|-----------------------------------|---------------|---------|---------|-----------|-----------|--------------|---------------|--------------|----------|-----------|
+| F01 | Phone only body | phone set; name empty | Other/Audit per text | needs_data/poor | new | OFF | template | RAW+CLEAN+DEDUP+EVENTS | PROCESSED+remove in on TG ok | card no-name | invent email |
+| F02 | Email only | email primary | per text | needs_data+ | new | OFF | template | same | success labels | card | invent phone |
+| F03 | Telegram @handle only | messenger | per text | needs_data+ | new | OFF | template | same | success | card | generic “telegram” as contact |
+| F04 | Named audit + phone | name+phone | Audit | ok/needs_data | new | OFF | template | same | success | named card | |
+| F05 | Unnamed audit + phone | phone; Audit signals | Audit | needs_data | new | OFF | template | same | success | no-name Audit | |
+| F06 | SEO + site + email | site+email | SEO | ok/needs_data | new | OFF | template | same | success | site shown | |
+| F07 | Direct keywords | — | Direct | any | new | OFF | template | same | success | Директ | |
+| F08 | Site build keywords | — | Site | any | new | OFF | template | same | success | Сайт | |
+| F09 | Vague “вопрос” | — | Other | needs_data+ | new | OFF | template | same | success | Другое | |
+| F10 | Calculator payload flag | calc_detected | Audit/SEO per calc | any | new | OFF | template | RAW calc fields | success | | AI columns in RAW |
+| F11 | Malformed / empty body | parse partial/failed | Other | unusable/error | new/error | OFF | template/error | RAW+ERRORS maybe | ERROR; incoming preserved if fail | no fake success | PROCESSED without CLEAN |
+| F12 | Same `gmail_message_id` as prior | same id | — | — | **reprocessed** / same_message | OFF | template | CLEAN **update** | per gate | «Повторная обработка» | status=repeat |
+| F13 | Same phone new message | new msg id | — | — | **repeat** / phone | OFF | template | CLEAN append + history | success | Повторный лид | site_only as repeat |
+| F14 | Same site different contact | new contacts | — | — | **possible** / site_only | OFF | template | CLEAN append | success | card delivered | suppress lead |
+| F15 | AI ON valid JSON | — | AI service | merged | new | ON success | ai | CLEAN ai stamps | success | Режим AI | second AI call |
+| F16 | AI invalid JSON | — | det | det | new | ON fallback | ai_fallback_template | fallback stamps | success | fallback mode | publish invalid JSON |
+| F17 | AI timeout | — | det | det | new | ON fallback | ai_fallback_template | fallback | success | fallback | hang without fallback |
+| F18 | AI forbidden promise | — | det | det | new | ON fallback | ai_fallback_template | fallback | success | fallback | send price promise |
+| F19 | Sheets CLEAN write fail | — | — | — | — | OFF | — | ERRORS; no fake CLEAN | ERROR; incoming preserved | **no** success card | success Telegram |
+| F20 | Body with `<` `&` long text | escape | — | — | new | OFF | template | same | success | no entity crash | MarkdownV2 crash |
+| F21 | CLEAN ok, Telegram fail | — | — | — | new | OFF | template | CLEAN+ERRORS | **ERROR label**; **no PROCESSED**; **incoming preserved** | fail | PROCESSED; remove incoming |
+
+---
+
+## 3. AI mode matrix
+
+| Mode | Fixtures |
+|------|----------|
+| AI OFF (zero OpenRouter) | F01–F14, F19–F21 |
+| AI ON | F15–F18 (+ spot F04/F06) |
+
+Evidence required: n8n execution shows **0** HTTP OpenRouter calls on AI OFF runs.
+
+---
+
+## 4. Admin command fixtures
+
+| Test | Expect |
+|------|--------|
+| Unknown | Exact `Неизвестная команда. Используйте /help.` |
+| Non-admin | `Недостаточно прав.` |
+| `/ai_on` `/ai_off` | CONFIG flip + LEAD_EVENTS audit |
+| `/health` AI off | AI probe SKIPPED |
+| `/test_lead` prod | refused |
+| `/test_lead` dev | sandbox rows only |
+
+---
+
+## 5. Pass criteria (sandbox exit)
+
+1. F01–F21 Pass/Fail recorded.  
+2. No client send path.  
+3. RAW has no AI pretence columns.  
+4. CLEAN stores `first_reply_text`.  
+5. F12–F14 dedupe distinctions correct.  
+6. F16–F18 fallback works.  
+7. F21 label policy holds.  
+8. Gates G1–G11 green.
+
+---
+
+## 6. Evidence location (Phase 3B+)
+
+`projects/iseo-sales-manager-bot/evidence/phase-3-sandbox/` — create when tests run.
+
+---
+
+*Related: SANDBOX-TEST-PLAN-v1 · SANDBOX-APPLY-GATE-v1.*

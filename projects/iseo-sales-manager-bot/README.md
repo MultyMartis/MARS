@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 2 architecture and data model — **documented**; MARS `project_id` **registered** (`planned`); runtime / n8n implementation **not started** in this pack
+**Status:** Phase 3A implementation package **documented**; JSON baseline generation **blocked** pending source drop; registry **planned**; runtime / n8n implementation **not started**
 
 ---
 
@@ -39,7 +39,7 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 | **n8n** | Execution truth (external) |
 | **Google Sheets** | Durable RAW / CLEAN / CONFIG / diagnostics |
 | **Telegram** | Manager cards + admin commands |
-| **MARS (`projects/iseo-sales-manager-bot/`)** | Architecture, contracts, change plans, evidence — **does not execute** the bot |
+| **MARS (`projects/iseo-sales-manager-bot/`)** | Architecture, contracts, change plans, implementation specs, evidence — **does not execute** the bot |
 
 ---
 
@@ -50,6 +50,9 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 | Operational index | [OPERATIONAL-INDEX.md](OPERATIONAL-INDEX.md) |
 | Architecture | [architecture/](architecture/) |
 | Plans | [plans/](plans/) |
+| Baselines / source gap | [baselines/](baselines/) |
+| MetaBOT Programmer implementation package | [implementation/](implementation/) |
+| Reports | [reports/](reports/) |
 | ATLAS recommendation | [atlas/ATLAS-REGISTRATION-RECOMMENDATION-v1.md](atlas/ATLAS-REGISTRATION-RECOMMENDATION-v1.md) |
 
 ---
@@ -64,19 +67,29 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 6. **Never** send replies automatically to real clients.
 7. Do not discuss or embed OpenRouter credentials in docs or exports.
 8. Preserve foreign WIP; selective staging only when explicitly chartered.
+9. Phase 3A: no live n8n, no workflow copies, no Sheets/Gmail/Telegram mutation.
 
 ---
 
 ## Not claimed
 
 - Live n8n parity with Sales-Manager-v2 (**SAFE UNKNOWN** without fresh live attestation).
+- Sanitized Sales-Manager-v1/v2 JSON baselines (**blocked** — source drop required).
 - Implemented runtime inside MARS.
 - Full CRM / OPS-as-CRM.
 - Auto-reply to clients.
-- Live n8n inspection in Phase 2 / Phase 2R (documentation only).
-- Created `.dev` workflow copies, Sheets v2 tabs, Admin workflow, or AI OFF/ON runtime behavior.
+- Created `.dev` workflow copies, Sheets v2 tabs, or live Admin/Operational graphs.
+
+---
+
+## Next gate
+
+**PHASE 3B — LIVE READ-ONLY AUDIT AND DEV WORKFLOW CREATION** — only after [implementation/SANDBOX-APPLY-GATE-v1.md](implementation/SANDBOX-APPLY-GATE-v1.md) operator confirmations.
+
+Operator source drop path: `X:\AI MARS STORAGE\incoming\iseo-sales-manager-bot\raw\`
 
 ---
 
 *Phase 2 charter: ISEO-SALES-MANAGER-BOT — PHASE 2 ARCHITECTURE AND DATA MODEL (2026-07-30).*  
-*Phase 2R: project registration + documentation checkpoint (2026-07-30).*
+*Phase 2R: project registration + documentation checkpoint (2026-07-30).*  
+*Phase 3A: sanitized baseline gate + MetaBOT Programmer implementation package (2026-07-30).*

@@ -12,12 +12,13 @@
 | Field | Value |
 |-------|-------|
 | **Status** | planned / documentation |
-| **Active stage** | **Phase 2R complete** — architecture pack + MARS project registration |
-| **Runtime** | External n8n — **not** executed from MARS; implementation **not started** |
-| **Live parity vs Sales-Manager-v2** | **SAFE UNKNOWN** (no live n8n inspection this phase) |
-| **Registry** | **REGISTERED** — `project_id` **iseo-sales-manager-bot** · status **planned** (2026-07-30) |
+| **Active stage** | **Phase 3A complete** — implementation package + source-gap baseline (**READY WITH SOURCE DROP REQUIRED**) |
+| **Runtime** | External n8n — **not** executed from MARS; workflow JSON / live copies **not** created |
+| **Live parity vs Sales-Manager-v2** | **SAFE UNKNOWN** (no live n8n this phase) |
+| **JSON baselines v1/v2** | **BLOCKED** — exports absent from approved drop paths |
+| **Registry** | **REGISTERED** — `project_id` **iseo-sales-manager-bot** · status **planned** (unchanged; no implementation start) |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
-| **Next** | **PHASE 3A** — sanitized baseline + MetaBOT Programmer implementation package (operator gate before live n8n) |
+| **Next** | **PHASE 3B** — live read-only audit + .dev workflow creation — **only after** sandbox apply gate confirmations |
 
 ---
 
@@ -62,6 +63,34 @@
 |---|----------|--------|
 | 12 | [atlas/ATLAS-REGISTRATION-RECOMMENDATION-v1.md](atlas/ATLAS-REGISTRATION-RECOMMENDATION-v1.md) | Recommendation only |
 
+## Core Run — Phase 3A baselines
+
+| # | Document | Status |
+|---|----------|--------|
+| 13 | [baselines/SOURCE-GAP-MANIFEST-v1.md](baselines/SOURCE-GAP-MANIFEST-v1.md) | Source drop required |
+| 14 | [baselines/SOURCE-SANITIZATION-MANIFEST-v1.md](baselines/SOURCE-SANITIZATION-MANIFEST-v1.md) | Contract defined; exec blocked |
+| 15 | [baselines/SALES-MANAGER-V1-V2-COMPARISON-v1.md](baselines/SALES-MANAGER-V1-V2-COMPARISON-v1.md) | Logical comparison only |
+
+## Core Run — Phase 3A implementation package
+
+| # | Document | Status |
+|---|----------|--------|
+| 16 | [implementation/METABOT-PROGRAMMER-IMPLEMENTATION-BRIEF-v1.md](implementation/METABOT-PROGRAMMER-IMPLEMENTATION-BRIEF-v1.md) | Phase 3A |
+| 17 | [implementation/OPERATIONAL-WORKFLOW-PATCH-SPEC-v1.md](implementation/OPERATIONAL-WORKFLOW-PATCH-SPEC-v1.md) | Phase 3A |
+| 18 | [implementation/ADMIN-WORKFLOW-PATCH-SPEC-v1.md](implementation/ADMIN-WORKFLOW-PATCH-SPEC-v1.md) | Phase 3A |
+| 19 | [implementation/ADMIN-SOURCE-SELECTION-v1.md](implementation/ADMIN-SOURCE-SELECTION-v1.md) | Phase 3A |
+| 20 | [implementation/SHEETS-MIGRATION-SPEC-v1.md](implementation/SHEETS-MIGRATION-SPEC-v1.md) | Phase 3A |
+| 21 | [implementation/DEDUP-IMPLEMENTATION-SPEC-v1.md](implementation/DEDUP-IMPLEMENTATION-SPEC-v1.md) | Phase 3A |
+| 22 | [implementation/TELEGRAM-FORMATTER-SPEC-v1.md](implementation/TELEGRAM-FORMATTER-SPEC-v1.md) | Phase 3A |
+| 23 | [implementation/TEST-HARNESS-SPEC-v1.md](implementation/TEST-HARNESS-SPEC-v1.md) | Phase 3A |
+| 24 | [implementation/SANDBOX-APPLY-GATE-v1.md](implementation/SANDBOX-APPLY-GATE-v1.md) | Gate closed pending operator |
+
+## Reports
+
+| # | Document | Status |
+|---|----------|--------|
+| 25 | [reports/REPORT-iseo-sales-manager-bot-phase3a-sanitized-baseline-and-implementation-package-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3a-sanitized-baseline-and-implementation-package-v1.md) | Phase 3A |
+
 ---
 
 ## Known baseline (operator-provided; not live-verified this phase)
@@ -78,21 +107,21 @@
 |-------|-------|--------|
 | Phase 1 | Discovery / problem framing | Assumed prior / operator pack |
 | **Phase 2** | Architecture + data model + contracts + plans | **DONE** |
-| **Phase 2R** | Project registration + documentation checkpoint | **DONE (this pass)** |
-| Phase 3A | Sanitized baseline + MetaBOT Programmer implementation package | **NEXT** (explicit operator gate before live n8n) |
-| Phase 3B+ | Sandbox Operational.dev / Admin.dev build · tests · promote | Not started |
-| Live | At most one Operational.dev + one Admin.dev; target-only diff | Forbidden until chartered |
+| **Phase 2R** | Project registration + documentation checkpoint | **DONE** |
+| **Phase 3A** | Sanitized baseline + MetaBOT Programmer implementation package | **DONE** (source drop still required for JSON baselines) |
+| Phase 3B | Live read-only audit + Operational.dev / Admin.dev creation | **NEXT** — explicit operator gate |
+| Live | At most one Operational + one Admin; target-only diff | Forbidden until chartered |
 
 ---
 
-## Forbidden in documentation sessions (unless separately chartered)
+## Forbidden in documentation / Phase 3A sessions (unless separately chartered)
 
 - Live n8n access or patch
-- Workflow JSON creation/edit
+- Workflow JSON creation/edit / workflow copies
 - Google Sheets mutation
 - Telegram send / Gmail process
 - Credential discussion (including OpenRouter keys)
-- Broad git staging / commit / push / clean / restore
+- Broad git staging / clean / restore on dirty main worktree
 
 ---
 
@@ -108,4 +137,4 @@
 
 ---
 
-*Last updated: 2026-07-30 — Phase 2R registration + documentation checkpoint.*
+*Last updated: 2026-07-30 — Phase 3A sanitized baseline gate + implementation package.*
