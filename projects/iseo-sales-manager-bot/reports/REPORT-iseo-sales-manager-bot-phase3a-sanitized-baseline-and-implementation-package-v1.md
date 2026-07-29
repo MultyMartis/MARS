@@ -195,13 +195,15 @@ Dirty main worktree **not** used for commit. Temporary worktree from `origin/mar
 ## 21. Commit
 
 Scoped commit (message): `docs(iseo-sales-manager-bot): prepare phase 3a implementation package`  
-Exact hash: filled after commit wave.
+Exact hash: `9e0da3543c9fd9cfc85bfb0f6b19e1c7419eb849`  
+Surface: temporary worktree from `origin/mars/canonical-post-recovery` @ `445a1d93` · branch `tmp/iseo-sm-phase3a` · 15 allowlisted paths under `projects/iseo-sales-manager-bot/**`
 
 ---
 
 ## 22. Push
 
-Target: `origin/mars/canonical-post-recovery` · no force push · filled after push wave.
+Target: `origin/mars/canonical-post-recovery`  
+Result: `445a1d93..9e0da354` · **no force push** · `origin/mars/canonical-post-recovery` = `9e0da3543c9fd9cfc85bfb0f6b19e1c7419eb849`
 
 ---
 
