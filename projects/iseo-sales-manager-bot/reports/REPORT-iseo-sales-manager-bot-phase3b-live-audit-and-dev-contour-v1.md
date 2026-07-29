@@ -239,13 +239,16 @@ Temporary worktree from `origin/mars/canonical-post-recovery`. Main index untouc
 
 ## 25. Commit
 
-See git section after push wave (primary + optional hash-record if required).
+Primary (full): `3cffc81a4f00dd14231fc52cbb7e6b601ada30ec`  
+Message: `feat(iseo-sales-manager-bot): create phase 3b dev contour`
+
+Hash-record commit: see following docs commit after tip alignment.
 
 ---
 
 ## 26. Push
 
-Target: `origin/mars/canonical-post-recovery` (no force).
+Pushed to `origin/mars/canonical-post-recovery` (no force). Remote tip: `3cffc81a4f00dd14231fc52cbb7e6b601ada30ec`.
 
 ---
 
@@ -310,3 +313,4 @@ Stop after live audit, two .dev workflows, approved v2 tabs, synthetic validatio
 - scope lock honored: yes
 - destructive ops: none (accidental probe workflow deleted only)
 - protected zone touch: none
+
