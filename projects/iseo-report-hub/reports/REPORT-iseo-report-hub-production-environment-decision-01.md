@@ -126,7 +126,7 @@ Confirmed for this wave:
 |------|-------|
 | Exact-path git add | allowlisted Decision 01 docs only (see §12) |
 | Primary commit message | `docs(iseo-report-hub): add production environment decision package` |
-| Primary commit hash | `_pending_primary_` |
+| Primary commit hash | `114abef1a451d50aa9c893bdb85508bb96197523` |
 | Hash-record commit message | `docs(iseo-report-hub): record production environment decision commit hash` |
 | Hash-record commit hash | `_pending_hash_record_` |
 | Tip after wave | `_pending_tip_` |
