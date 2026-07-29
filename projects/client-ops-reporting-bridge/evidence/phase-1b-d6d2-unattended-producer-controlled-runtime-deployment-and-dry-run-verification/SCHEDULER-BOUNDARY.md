@@ -1,0 +1,7 @@
+# SCHEDULER-BOUNDARY
+
+- producer_scheduler: ABSENT
+- monitor_scheduler_state: Ready
+
+Token: D6D2_NO_PRODUCER_SCHEDULER_CREATED
+Token: D6D2_EXISTING_MONITOR_SCHEDULER_UNCHANGED

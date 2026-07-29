@@ -1,0 +1,26 @@
+{
+  "phase": "1B-D6D2",
+  "producer_runtime_path": "X:\\AI MARS STORAGE\\runtime-checkouts\\client-ops-site-002-producer\\repo",
+  "runtime_commit": "e1d2a1786fd7d778957b74fb213cf5656231a256",
+  "canonical_ancestry": {
+    "e1d2a1786fd7d778957b74fb213cf5656231a256": true,
+    "7f9fd29fa037939a7f6f13bdb02cb18801bc7fbd": true,
+    "79c2071dd8ae8096506d45bc189e1f732b310d35": true,
+    "94d06c05ea79eb22780588d91064006c3edf2a05": true,
+    "12e4c6ad1f4199458b6f091d084f33ca5f8a965d": true
+  },
+  "source_commit": "e1d2a1786fd7d778957b74fb213cf5656231a256",
+  "deployment_timestamp": "2026-07-29T20:44:55.652Z",
+  "deployed_code_scope": "full detached worktree at D6DB commit",
+  "excluded_code_runtime_wip": "MAIN foreign WIP not copied; monitor foreign WIP untouched",
+  "kill_switch_path": "X:\\AI MARS STORAGE\\runtime-state\\client-ops-site-002-producer\\config\\kill-switch.json",
+  "kill_switch_mode": "DRY_RUN",
+  "state_root": "X:\\AI MARS STORAGE\\runtime-state\\client-ops-site-002-producer",
+  "artifact_root_allowlist": "X:\\AI MARS STORAGE\\ocpilot\\project-sites\\site-002\\production\\scheduled-monitors\\post-1c",
+  "bootstrap_boundary": true,
+  "scheduler_created": false,
+  "marker_deployment_decision": "DEFERRED_OPTION_A",
+  "secret_reference_only": true,
+  "runtime_cleanliness": true,
+  "token": "D6D2_RUNTIME_DEPLOYMENT_MANIFEST_CREATED"
+}

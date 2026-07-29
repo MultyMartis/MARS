@@ -1,0 +1,16 @@
+{
+  "policy": "observed_at ASC, run_id ASC, max=1",
+  "selected": {
+    "ok": true,
+    "run_id": "2026-07-10_13-27-20",
+    "observed_at": "2026-07-10T06:28:52Z",
+    "artifact_fingerprint": "0341f8d2898a6df211133b17ff5f32cb7b568efea5c49e5833b0e3ae8d8f6b93",
+    "source_status": "ATTENTION",
+    "delivery_eligibility": "STALE_REVIEW_REQUIRED",
+    "age_seconds": 1692975,
+    "event_id": "7493aaa9-dd5b-5fb9-a317-b413adcb8426",
+    "artifact_identity": "2026-07-10_13-27-20:0341f8d2898a6df2",
+    "classification": "ONBOARDING_REQUIRED"
+  },
+  "token": "D6D2_DETERMINISTIC_CANDIDATE_SELECTED"
+}

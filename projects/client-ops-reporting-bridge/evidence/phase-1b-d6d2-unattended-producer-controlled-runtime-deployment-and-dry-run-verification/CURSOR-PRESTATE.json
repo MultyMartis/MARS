@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "site_id": "SITE-002",
+  "producer_schema_version": "1",
+  "last_evaluated_run_id": null,
+  "last_evaluated_event_id": null,
+  "last_artifact_identity": null,
+  "artifact_hash": null,
+  "evaluation_timestamp": null,
+  "cursor_state": null,
+  "result_class": null,
+  "delivery_decision": null,
+  "lifecycle_result": null,
+  "processing_terminal": false,
+  "requires_reconciliation": false,
+  "bootstrap_boundary": {
+    "deployment_epoch": "2026-07-29T20:44:55.652Z",
+    "mode": "DRY_RUN_INVENTORY"
+  },
+  "evaluated_runs": {}
+}
