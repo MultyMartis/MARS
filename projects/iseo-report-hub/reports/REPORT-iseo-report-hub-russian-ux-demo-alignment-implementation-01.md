@@ -117,7 +117,7 @@ No `.env` / storage / export / PDF / vendor sync.
 
 | Item | Value |
 |------|-------|
-| Primary | _(filled after commit)_ |
+| Primary | `1897c692f81135dde745de7dc23c4efb5ce5e327` |
 | Hash-record | _(if needed)_ |
 | Tip HEAD | _(after update-ref)_ |
 | Push | **no** |
