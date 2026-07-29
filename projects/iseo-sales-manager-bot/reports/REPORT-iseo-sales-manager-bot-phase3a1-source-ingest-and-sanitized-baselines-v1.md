@@ -231,15 +231,16 @@ Clean temporary worktree based on `origin/mars/canonical-post-recovery`. Main di
 
 ## 19. Commit
 
-Scoped commit (worktree): `docs(iseo-sales-manager-bot): add sanitized source baselines`  
-Hash: *(filled after commit)*
+Primary scoped commit: `86642ad727151c4dc63b3332984c1d5c8b253b7b`  
+Message: `docs(iseo-sales-manager-bot): add sanitized source baselines`
 
 ---
 
 ## 20. Push
 
-Push to `origin/mars/canonical-post-recovery` (no force).  
-Remote tip after push: *(filled after push)*
+Pushed to `origin/mars/canonical-post-recovery` (no force).  
+Primary remote tip after main commit: `86642ad727151c4dc63b3332984c1d5c8b253b7b`  
+This report section was refreshed in a follow-up hash-record commit on the same branch.
 
 ---
 
