@@ -27,7 +27,7 @@
 |-------|-------|
 | **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A/1B + local DB + **auth persistence implemented** + **DB-03 migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** + **Report Preview / Render Implementation 01 complete** + **Report Finalization Charter 01 complete** + **Report Finalization Implementation 01 complete** + **Report Snapshot Charter 01 complete** + **Report Snapshot DB-07 Migration Apply 01 complete** + **Report Snapshot Implementation 01 complete** + **Report Export / PDF Charter 01 complete** + **Report Export DB-08 Migration Apply 01 complete** |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | **Production Environment Charter 01 complete** — docs/policy only; recommended candidate **Option C VPS**; production environment **not selected**; next recommended: **Production Environment Decision 01** |
+| **Active stage** | **Production Environment Decision 01 complete** — decision state **`RECOMMENDATION_READY`**; recommended default **Option C VPS PHP-FPM/Nginx/MySQL**; production environment **not selected**; next recommended: **Production Environment Operator Decision 01** |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -1266,7 +1266,26 @@
 | **Decision log** | [I-SEO-REPORT-HUB-PRODUCTION-ENVIRONMENT-DECISION-LOG-v0.1.md](product/I-SEO-REPORT-HUB-PRODUCTION-ENVIRONMENT-DECISION-LOG-v0.1.md) |
 | **Validation plan** | [I-SEO-REPORT-HUB-PRODUCTION-ENVIRONMENT-VALIDATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-PRODUCTION-ENVIRONMENT-VALIDATION-PLAN-v0.1.md) |
 | **Closeout** | [REPORT-iseo-report-hub-production-environment-charter-01.md](reports/REPORT-iseo-report-hub-production-environment-charter-01.md) |
-| **Next recommended stage** | **I-SEO Report Hub — Production Environment Decision 01** |
+| **Next recommended stage** | **I-SEO Report Hub — Production Environment Decision 01** — **completed** (see section below) |
+
+---
+
+## Production Environment Decision 01 (2026-07-30)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** — docs / decision-support only |
+| **Decision state** | **`RECOMMENDATION_READY`** — not `APPROVED_FOR_IMPLEMENTATION`; not `PRODUCTION_SELECTED` |
+| **Recommended default** | **Option C — VPS PHP-FPM/Nginx/MySQL** (Nginx preferred; PHP 8.3; MySQL 8.x; docroot `/public`) |
+| **Environment selected?** | **No** — operator must answer checklist / Operator Decision 01 |
+| **Operator approval checklist** | [I-SEO-REPORT-HUB-PRODUCTION-ENVIRONMENT-OPERATOR-APPROVAL-CHECKLIST-v0.1.md](product/I-SEO-REPORT-HUB-PRODUCTION-ENVIRONMENT-OPERATOR-APPROVAL-CHECKLIST-v0.1.md) — fields 1–14 **pending** |
+| **Decision brief** | [I-SEO-REPORT-HUB-PRODUCTION-ENVIRONMENT-DECISION-BRIEF-v0.1.md](product/I-SEO-REPORT-HUB-PRODUCTION-ENVIRONMENT-DECISION-BRIEF-v0.1.md) |
+| **Decision matrix** | [I-SEO-REPORT-HUB-PRODUCTION-ENVIRONMENT-DECISION-MATRIX-v0.1.md](product/I-SEO-REPORT-HUB-PRODUCTION-ENVIRONMENT-DECISION-MATRIX-v0.1.md) |
+| **Next wave plan** | [I-SEO-REPORT-HUB-PRODUCTION-ENVIRONMENT-NEXT-WAVE-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-PRODUCTION-ENVIRONMENT-NEXT-WAVE-PLAN-v0.1.md) |
+| **Hard boundaries** | No server access; no deploy; no DNS/HTTPS; no DB mutation; no app-source/runtime/secrets; no production claim |
+| **SAFE UNKNOWN** | Live MySQL re-probe still failed (TCP 3306 refused this wave; same as prior charters); before any implementation/deploy, re-check local DB state if local evidence needed; baseline remains latest attested Client Handoff Visual QA |
+| **Closeout** | [REPORT-iseo-report-hub-production-environment-decision-01.md](reports/REPORT-iseo-report-hub-production-environment-decision-01.md) |
+| **Next recommended stage** | **I-SEO Report Hub — Production Environment Operator Decision 01** |
 
 ---
 
@@ -1563,11 +1582,11 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 
 ## Next stages
 
-1. **Production Environment Decision 01** — **recommended next** (operator selects hosting/domain/HTTPS/PDF/deploy/backup/access; binding decisions)
-2. Optional alternate: **Production Environment Validation 01** — only if operator already supplies target server/domain
+1. **Production Environment Operator Decision 01** — **recommended next** (operator fills checklist 1–14; binding answers; not implementation)
+2. Branch after answers: **Production Environment Validation 01** (VPS + server/domain details) **or** **Production Environment Decision Follow-up 01** (VPS direction only) **or** **Shared Hosting Compatibility Validation 01** **or** **Local Demo Hardening Charter 01** **or** **Report Delivery DB-11 Delivery Events Charter 01** if delivery audit required first
 3. Optional: **Production Backup/Restore Charter 01** (after environment chosen; before first real deploy)
 4. Optional: **Real Client Data Model Charter 01** (move off LOCAL_FIXTURE_ONLY)
-5. Optional later: **Report Delivery Client Handoff DB-11 Charter 01** (only if durable delivery events required)
+5. Optional later: **Report Delivery Client Handoff DB-11 Charter 01** (only if durable delivery events required / checklist 13 = yes)
 6. Optional: **Revoked share retention/pruning DB charter** (Gate L)
 7. Optional: **Report Export Template Metadata Write Smoke 01** (exercise future create writes under controlled charter)
 8. Optional: **Report Snapshot Hardening 01** / **Report Snapshot Versioning Charter 01** if multi-role or v2 smoke needed
@@ -1639,9 +1658,10 @@ Human-supervised, documentation-first. Никакой autonomous orchestration.
 - **Report Delivery Client Handoff UX Visual QA 01 is complete** — verdict **PASS**; evidence under STORAGE; smoke **129/129**; shares **6** revoked / active **0**; artifacts unchanged; prior list/path minors resolved; **no** app-source/runtime code edits
 - **Report Delivery Production Readiness Charter 01 is complete** — docs/policy only; local MVP **A–D PASS**; production **E–K** blockers; M/N deferred; L ready-for-plan; **no** app-source/runtime/DB/deploy mutation
 - **Production Environment Charter 01 is complete** — docs/policy only; options A–E compared; recommended candidate **Option C VPS**; operator decisions 1–12 open; **no** hosting/domain/DNS/HTTPS/server/deploy; **no** app-source/runtime/DB mutation
-- **Next** = Production Environment Decision 01
+- **Production Environment Decision 01 is complete** — decision state **`RECOMMENDATION_READY`**; recommended default **Option C VPS PHP-FPM/Nginx/MySQL**; checklist 1–14 pending; production **not selected**; **no** server/deploy/DNS/HTTPS/DB/secrets/code mutation
+- **Next** = Production Environment Operator Decision 01
 - **Not production-ready** — local/dev only; fixture data; no prod host/domain/HTTPS/secrets/DB/backup/monitoring selected
-- **Live DB re-probe caveat** — MySQL connection refused during Production Readiness Charter 01 and Production Environment Charter 01; re-check local DB before future implementation if local evidence needed
+- **Live DB re-probe caveat** — MySQL connection refused during Production Readiness Charter 01, Production Environment Charter 01, and Production Environment Decision 01; re-check local DB before future implementation if local evidence needed
 - **No drag/drop reorder / rich text editor / client portal / email delivery** (runtime public share exists for MVP PDF token links only; handoff landing page deferred)
 - **No autonomous publication**
 - **Website Factory is not runtime owner** — methodology + prototype lane only
