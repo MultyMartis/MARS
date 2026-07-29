@@ -105,8 +105,8 @@ Pages inventoried (app-source views): Login, Dashboard, Reporting periods, Month
 | Field | Value |
 |-------|-------|
 | Message 1 | `docs(iseo-report-hub): add russian ux demo alignment charter` |
-| Hash 1 | `PENDING_COMMIT_1` |
-| Message 2 (hash record, if needed) | `docs(iseo-report-hub): record russian ux demo alignment charter commit hash` |
+| Hash 1 | `38b829cb4428f9655d5bed84419567abe8609f2c` |
+| Message 2 (hash record) | `docs(iseo-report-hub): record russian ux demo alignment charter commit hash` |
 | Hash 2 | `PENDING_COMMIT_2` |
 | Push | **None** |
 
