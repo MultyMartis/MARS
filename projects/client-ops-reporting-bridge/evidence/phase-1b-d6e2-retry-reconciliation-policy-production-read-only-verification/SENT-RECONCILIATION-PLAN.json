@@ -1,0 +1,14 @@
+{
+  "token": "D6E2_SENT_RECONCILIATION_PLAN_VERIFIED",
+  "plan": {
+    "decision": "UNSAFE_TO_RETRY",
+    "reason_code": "HTTP_202_SENT_TERMINAL",
+    "actions": [
+      "NO_MORE_ACTION_REQUIRED"
+    ],
+    "executable": false,
+    "production_mutation_authorized": false,
+    "live_reconciliation_executed": false
+  },
+  "production_mutation_authorized": false
+}

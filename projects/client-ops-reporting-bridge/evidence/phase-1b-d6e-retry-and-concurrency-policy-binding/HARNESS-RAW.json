@@ -1,0 +1,256 @@
+{
+  "phase": "1B-D6E",
+  "total": 54,
+  "passed": 54,
+  "failed": 0,
+  "e_cases": {
+    "total": 40,
+    "passed": 40
+  },
+  "ec_cases": {
+    "total": 10,
+    "passed": 10
+  },
+  "max_retries": 0,
+  "max_safe_concurrency": 1,
+  "automatic_retries_enabled": false,
+  "concurrency_model": {
+    "max_safe_concurrency": 1,
+    "max_automatic_retries": 0,
+    "same_event_concurrency": "FORBIDDEN",
+    "different_event_concurrency": "FORBIDDEN_UNTIL_ATOMICITY_PROVEN",
+    "d1_historical": "DEDUPE_SEQUENTIAL_SAFE_CONCURRENCY_UNPROVEN",
+    "overturned_by_abc": false,
+    "verdict": "D6E_CONCURRENCY_REMAINS_ONE",
+    "layers": [
+      "source_producer_invocation",
+      "lifecycle_orchestration",
+      "workflow_activation",
+      "webhook_request",
+      "data_table_first_seen_claim",
+      "telegram_delivery",
+      "delivery_finalization"
+    ]
+  },
+  "results": [
+    {
+      "id": "E1",
+      "ok": true
+    },
+    {
+      "id": "E2",
+      "ok": true
+    },
+    {
+      "id": "E3",
+      "ok": true
+    },
+    {
+      "id": "E4",
+      "ok": true
+    },
+    {
+      "id": "E5",
+      "ok": true
+    },
+    {
+      "id": "E6",
+      "ok": true
+    },
+    {
+      "id": "E7",
+      "ok": true
+    },
+    {
+      "id": "E8",
+      "ok": true
+    },
+    {
+      "id": "E9",
+      "ok": true
+    },
+    {
+      "id": "E10",
+      "ok": true
+    },
+    {
+      "id": "E11",
+      "ok": true
+    },
+    {
+      "id": "E12",
+      "ok": true
+    },
+    {
+      "id": "E13",
+      "ok": true
+    },
+    {
+      "id": "E14",
+      "ok": true
+    },
+    {
+      "id": "E15",
+      "ok": true
+    },
+    {
+      "id": "E16",
+      "ok": true
+    },
+    {
+      "id": "E17",
+      "ok": true
+    },
+    {
+      "id": "E18",
+      "ok": true
+    },
+    {
+      "id": "E19",
+      "ok": true
+    },
+    {
+      "id": "E20",
+      "ok": true
+    },
+    {
+      "id": "E21",
+      "ok": true
+    },
+    {
+      "id": "E22",
+      "ok": true
+    },
+    {
+      "id": "E23",
+      "ok": true
+    },
+    {
+      "id": "E24",
+      "ok": true
+    },
+    {
+      "id": "E25",
+      "ok": true
+    },
+    {
+      "id": "E26",
+      "ok": true
+    },
+    {
+      "id": "E27",
+      "ok": true
+    },
+    {
+      "id": "E28",
+      "ok": true
+    },
+    {
+      "id": "E29",
+      "ok": true
+    },
+    {
+      "id": "E30",
+      "ok": true
+    },
+    {
+      "id": "E31",
+      "ok": true
+    },
+    {
+      "id": "E32",
+      "ok": true
+    },
+    {
+      "id": "E33",
+      "ok": true
+    },
+    {
+      "id": "E34",
+      "ok": true
+    },
+    {
+      "id": "E35",
+      "ok": true
+    },
+    {
+      "id": "E36",
+      "ok": true
+    },
+    {
+      "id": "E37",
+      "ok": true
+    },
+    {
+      "id": "E38",
+      "ok": true
+    },
+    {
+      "id": "E39",
+      "ok": true
+    },
+    {
+      "id": "E40",
+      "ok": true
+    },
+    {
+      "id": "EC1",
+      "ok": true
+    },
+    {
+      "id": "EC2",
+      "ok": true
+    },
+    {
+      "id": "EC3",
+      "ok": true
+    },
+    {
+      "id": "EC4",
+      "ok": true
+    },
+    {
+      "id": "EC5",
+      "ok": true
+    },
+    {
+      "id": "EC6",
+      "ok": true
+    },
+    {
+      "id": "EC7",
+      "ok": true
+    },
+    {
+      "id": "EC8",
+      "ok": true
+    },
+    {
+      "id": "EC9",
+      "ok": true
+    },
+    {
+      "id": "EC10",
+      "ok": true
+    },
+    {
+      "id": "INV-AUTO-RETRY",
+      "ok": true
+    },
+    {
+      "id": "INV-AUTHORITY",
+      "ok": true
+    },
+    {
+      "id": "INV-PLANNER",
+      "ok": true
+    },
+    {
+      "id": "INV-CLOCK",
+      "ok": true
+    }
+  ],
+  "failed_details": [],
+  "verdict": "D6E_OFFLINE_POLICY_HARNESS_PASS",
+  "concurrency_verdict": "D6E_CONCURRENCY_HARNESS_PASS"
+}

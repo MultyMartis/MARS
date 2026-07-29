@@ -1,0 +1,42 @@
+{
+  "token": "D6E2_SENT_TERMINAL_POLICY_VERIFIED",
+  "retry_prohibited_token": "D6E2_SENT_RETRY_PROHIBITED",
+  "observation": {
+    "event_id": "d6a2a001-27d6-4a2e-bd6a-000000000001",
+    "intake_state": "FIRST_SEEN",
+    "event_status": "OK",
+    "delivery_state": "SENT"
+  },
+  "result": {
+    "decision": "UNSAFE_TO_RETRY",
+    "reason_code": "HTTP_202_SENT_TERMINAL",
+    "retry_authorized": false,
+    "automatic_retry": false,
+    "requires_reconciliation": false,
+    "requires_new_charter": false,
+    "freshness_recheck_required": true,
+    "controlled_lifecycle_required": true,
+    "operator_action_required": false,
+    "no_send_guard": false,
+    "max_automatic_retries": 0,
+    "max_safe_concurrency": 1,
+    "terminal_success": true,
+    "event_id": "d6a2a001-27d6-4a2e-bd6a-000000000001",
+    "event_identity_preserved": true,
+    "automatic_retries_enabled": false,
+    "reconciliation_plan": {
+      "decision": "UNSAFE_TO_RETRY",
+      "reason_code": "HTTP_202_SENT_TERMINAL",
+      "actions": [
+        "NO_MORE_ACTION_REQUIRED"
+      ],
+      "executable": false,
+      "production_mutation_authorized": false,
+      "live_reconciliation_executed": false
+    },
+    "workstream_a_unchanged": true,
+    "workstream_b_unchanged": true,
+    "workstream_c_unchanged": true,
+    "unattended_mode_enabled": false
+  }
+}

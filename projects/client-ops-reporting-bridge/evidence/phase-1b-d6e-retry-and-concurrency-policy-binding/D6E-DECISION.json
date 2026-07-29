@@ -1,0 +1,28 @@
+{
+  "phase": "1B-D6E",
+  "live_apply_performed": false,
+  "decision_values": [
+    "SAFE_TO_RETRY",
+    "UNSAFE_TO_RETRY",
+    "RECONCILE_BEFORE_RETRY",
+    "FINAL_FAILURE"
+  ],
+  "automatic_retries_enabled": false,
+  "max_automatic_retries": 0,
+  "max_safe_concurrency": 1,
+  "ambiguous_transport_requires_reconciliation": true,
+  "pending_auto_retry_allowed": false,
+  "sent_retry_allowed": false,
+  "failed_auto_retry_allowed": false,
+  "telegram_success_pending_retry_allowed": false,
+  "containment_failure_retry_allowed": false,
+  "freshness_recheck_before_retry": true,
+  "new_retry_charter_required": true,
+  "controlled_lifecycle_required_for_retry": true,
+  "new_source_run_is_retry": false,
+  "workstream_a_unchanged": true,
+  "workstream_b_unchanged": true,
+  "workstream_c_unchanged": true,
+  "unattended_mode_enabled": false,
+  "recommended_next_phase": "Phase 1B-D6E2 — Retry and Reconciliation Policy Production Read-Only Verification"
+}

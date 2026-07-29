@@ -1,0 +1,23 @@
+{
+  "token": "D6E2_HISTORICAL_PENDING_RECONCILIATION_PLAN_VERIFIED",
+  "plan": {
+    "decision": "UNSAFE_TO_RETRY",
+    "reason_code": "HISTORICAL_PENDING_BLIND_RETRY_PROHIBITED",
+    "actions": [
+      "READ_DATA_TABLE_EVENT",
+      "VERIFY_TELEGRAM_EVIDENCE",
+      "READ_N8N_EXECUTIONS",
+      "OPERATOR_REVIEW_REQUIRED"
+    ],
+    "executable": false,
+    "production_mutation_authorized": false,
+    "live_reconciliation_executed": false
+  },
+  "forbidden_actions": [
+    "SEND_WEBHOOK",
+    "RETRY_NOW",
+    "ACTIVATE",
+    "MUTATE_LEDGER"
+  ],
+  "production_mutation_authorized": false
+}

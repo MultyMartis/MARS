@@ -1,0 +1,59 @@
+{
+  "token": "D6E2_READ_ONLY_INVARIANT_ARMED",
+  "all_mutation_probes_rejected": true,
+  "probes": [
+    {
+      "method": "POST",
+      "action": "webhook_post",
+      "rejected": true
+    },
+    {
+      "method": "POST",
+      "action": "activate",
+      "rejected": true
+    },
+    {
+      "method": "POST",
+      "action": "deactivate",
+      "rejected": true
+    },
+    {
+      "method": "POST",
+      "action": "data_table_insert",
+      "rejected": true
+    },
+    {
+      "method": "PATCH",
+      "action": "data_table_update",
+      "rejected": true
+    },
+    {
+      "method": "DELETE",
+      "action": "data_table_delete",
+      "rejected": true
+    },
+    {
+      "method": "POST",
+      "action": "telegram",
+      "rejected": true
+    },
+    {
+      "method": "POST",
+      "action": "retry_execution",
+      "rejected": true
+    },
+    {
+      "method": "PUT",
+      "action": "put_workflow",
+      "rejected": true
+    }
+  ],
+  "allow_reads": true,
+  "allow_webhook": false,
+  "allow_activation": false,
+  "allow_deactivation": false,
+  "allow_data_table_mutation": false,
+  "allow_telegram": false,
+  "allow_retry_execution": false,
+  "allow_reconciliation_mutation": false
+}
