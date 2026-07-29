@@ -1,0 +1,938 @@
+{
+  "updatedAt": "2026-07-29T21:52:50.793Z",
+  "createdAt": "2026-07-29T21:52:50.793Z",
+  "id": "wLrLp4WQHm1VJmxz",
+  "name": "i-SEO Sales Manager - Admin.dev",
+  "description": null,
+  "active": false,
+  "isArchived": false,
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "id": "ce1bb729-ab97-4d7d-9123-0bd9c2d62a5f",
+      "name": "Telegram Trigger",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        180,
+        300
+      ],
+      "credentials": "REDACTED_CREDENTIAL",
+      "disabled": true,
+      "webhookId": "REDACTED_WEBHOOK_ID"
+    },
+    {
+      "parameters": {},
+      "id": "69024abd-f7c2-444c-a167-2ba6d1f1849c",
+      "name": "Manual Admin Synthetic Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        180,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const j = $input.first().json;\nconst msg = j.message || j;\nconst text = String(msg.text || j.text || '').trim();\nconst from = msg.from || j.from || {};\nconst chat = msg.chat || j.chat || {};\nconst parts = text.split(/\\s+/);\nconst command = (parts[0] || '').split('@')[0].toLowerCase();\nconst args = parts.slice(1);\nreturn [{ json: {\n  command,\n  args,\n  text,\n  user_id: String(from.id || j.user_id || ''),\n  username: from.username || '',\n  chat_id: String(chat.id || j.chat_id || ''),\n  raw_ok: Boolean(text),\n}}];"
+      },
+      "id": "40bcbdda-b4d6-4fde-a302-4639a5ef6059",
+      "name": "Normalize Command",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        400,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "value": "REDACTED_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "CONFIG",
+          "mode": "name",
+          "cachedResultName": "CONFIG"
+        },
+        "options": {}
+      },
+      "id": "e19a5aa3-140e-4693-9507-5c3a22362af5",
+      "name": "Read Authorization Config",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        620,
+        300
+      ],
+      "credentials": "REDACTED_CREDENTIAL",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "jsCode": "const j = $input.first().json;\nconst rows = $('Read Authorization Config').all().map(i => i.json);\nconst map = {};\nfor (const r of rows) if (r.key != null) map[String(r.key)] = String(r.value ?? '');\nconst allow = String(map.admin_user_ids || '').split(/[,;\\s]+/).map(s => s.trim()).filter(Boolean);\nconst authorized = allow.length === 0 ? false : allow.includes(String(j.user_id));\n// Fail-closed: empty allowlist => deny state-changing; still allow /help unknown text for UX? Spec: allowlist required for state-changing. Deny all if empty.\nreturn [{ json: { ...j, config_map: map, authorized, environment: map.environment || 'dev', ai_enabled: map.ai_enabled === 'true' } }];"
+      },
+      "id": "b92c1ba7-ee82-44fe-8636-25d97a160782",
+      "name": "Check User Authorization",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        840,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "453e1fe2-d4dd-4984-a4c1-bcc973f4d775",
+              "leftValue": "={{$json.authorized}}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "ac53254e-d568-44d0-811a-96594c633b95",
+      "name": "IF Authorized",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        960,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "outputKey": "help",
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "b4d9d18c-4ff7-4a2f-bfbd-b7e7883b8547",
+                    "leftValue": "={{$json.command}}",
+                    "rightValue": "/help",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "outputKey": "status",
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "240b99d2-2c02-40bf-b917-79c6adf44a48",
+                    "leftValue": "={{$json.command}}",
+                    "rightValue": "/status",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "outputKey": "ai_status",
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "a5c988f5-a8ef-46d7-ab54-9923e3a577f6",
+                    "leftValue": "={{$json.command}}",
+                    "rightValue": "/ai_status",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "outputKey": "ai_on",
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "d558e642-2c99-4126-b7d2-7c691f8ed6d5",
+                    "leftValue": "={{$json.command}}",
+                    "rightValue": "/ai_on",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "outputKey": "ai_off",
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "05e47aa3-afe1-44de-b2f1-18a99d4deef7",
+                    "leftValue": "={{$json.command}}",
+                    "rightValue": "/ai_off",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "outputKey": "health",
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "4aaec99f-0e0a-4ada-8ccc-2a34c6131846",
+                    "leftValue": "={{$json.command}}",
+                    "rightValue": "/health",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "outputKey": "stats",
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "d09cc3f7-b166-40b4-9e46-885672a5ffb9",
+                    "leftValue": "={{$json.command}}",
+                    "rightValue": "/stats",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "outputKey": "test_lead",
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "aa1eb889-8df8-4131-b3b9-2e24545a3f36",
+                    "leftValue": "={{$json.command}}",
+                    "rightValue": "/test_lead",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "outputKey": "last_error",
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "65b0cf5c-2b00-443f-a986-bcb6a461eeb2",
+                    "leftValue": "={{$json.command}}",
+                    "rightValue": "/last_error",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "outputKey": "config",
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "c0238503-843f-48d1-9acf-e029ae96d1de",
+                    "leftValue": "={{$json.command}}",
+                    "rightValue": "/config",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra"
+        }
+      },
+      "id": "07a23a4d-8e62-4b67-8323-2083785ef0b4",
+      "name": "Route Command",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        1060,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{ json: { ...$input.first().json, reply_text: 'Команды Sales Manager Admin:\\n/help\\n/status\\n/ai_status\\n/ai_on\\n/ai_off\\n/health\\n/stats\\n/test_lead\\n/last_error\\n/config' } }];"
+      },
+      "id": "7b4dd6be-f0a8-41ad-98a6-5098272d36bf",
+      "name": "Help",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1300,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const j=$input.first().json; const m=j.config_map||{}; return [{ json: { ...j, reply_text: 'Status\\nenvironment: '+(m.environment||'dev')+'\\nai_enabled: '+(m.ai_enabled||'false')+'\\nlast_success_at: '+(m.last_success_at||'—')+'\\nlast_error_at: '+(m.last_error_at||'—')+'\\nlast_error_code: '+(m.last_error_code||'—') } }];"
+      },
+      "id": "cdab5a2c-efb1-40a0-947a-cfeddadd96d4",
+      "name": "Status",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1300,
+        120
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const j=$input.first().json; const m=j.config_map||{}; return [{ json: { ...j, reply_text: 'AI Status\\nai_enabled: '+(m.ai_enabled||'false')+'\\nai_model: '+(m.ai_model||'—')+'\\nhealth_ai_probe_enabled: '+(m.health_ai_probe_enabled||'false') } }];"
+      },
+      "id": "eeca6045-2ee4-419e-9c79-e8e697a5d60a",
+      "name": "AI Status",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1300,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const j=$input.first().json; if(!j.authorized) return [{ json: { ...j, reply_text: 'Недостаточно прав.' } }]; return [{ json: { ...j, reply_text: 'AI будет включён после записи CONFIG (sandbox gate). Запрос принят.', config_write: { key: 'ai_enabled', value: 'true' }, audit: true } }];"
+      },
+      "id": "ec5c0496-bfaf-45d6-b1ea-f98debe3c675",
+      "name": "AI On",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1300,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const j=$input.first().json; if(!j.authorized) return [{ json: { ...j, reply_text: 'Недостаточно прав.' } }]; return [{ json: { ...j, reply_text: 'AI будет выключен после записи CONFIG. Запрос принят.', config_write: { key: 'ai_enabled', value: 'false' }, audit: true } }];"
+      },
+      "id": "b64c0c42-084e-45d1-9757-896bb57225fb",
+      "name": "AI Off",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1300,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const j=$input.first().json; const m=j.config_map||{};\nconst lines = [\n  'Healthcheck Sales Manager',\n  'CONFIG: ' + (m.ai_enabled != null ? 'OK' : 'MISSING'),\n  'RAW v2: PENDING_RUNTIME',\n  'CLEAN v2: PENDING_RUNTIME',\n  'LEAD_EVENTS: PENDING_RUNTIME',\n  'ERRORS: PENDING_RUNTIME',\n  'DEDUP_INDEX: PENDING_RUNTIME',\n  'Gmail credential ref: present_in_operational',\n  'Telegram: DISABLED_PENDING_SANDBOX_DEST',\n  'AI: ' + ((m.ai_enabled==='true') ? 'ON' : 'OFF'),\n  'AI probe: ' + ((m.ai_enabled==='true' && m.health_ai_probe_enabled==='true') ? 'ALLOWED' : 'SKIPPED'),\n];\nreturn [{ json: { ...j, reply_text: lines.join('\\n') } }];"
+      },
+      "id": "a2153f02-96dc-493d-96f8-c93f7fdb17cb",
+      "name": "Health",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1300,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const j=$input.first().json; const days=(j.config_map||{}).stats_days_default||'7'; return [{ json: { ...j, reply_text: 'Stats window '+days+'d\\nСчитается по bounded CLEAN ranges после появления данных.\\nSynthetic-only в Phase 3B.' } }];"
+      },
+      "id": "2d507aae-02a2-4f7a-a0a2-4740c1cc0a68",
+      "name": "Stats",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1300,
+        720
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const j=$input.first().json; if(!j.authorized) return [{ json:{...j, reply_text:'Недостаточно прав.'}}]; if ((j.config_map||{}).environment === 'prod' && (j.config_map||{}).allow_prod_synthetic !== 'true') return [{ json:{...j, reply_text:'/test_lead запрещён в prod без allow_prod_synthetic.'}}]; return [{ json:{...j, reply_text:'Synthetic fixture queued (F05 unnamed Audit). Sheets write nodes remain gated until operator enables sandbox writes.', audit:true, fixture_id:'F05'}}];"
+      },
+      "id": "97d3befd-d2c4-4e7b-b138-467e40e9f776",
+      "name": "Synthetic Test Lead",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1300,
+        840
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const rows = $('Read ERRORS').all().map(i=>i.json).filter(r=>r.error_code||r.message); if(!rows.length) return [{ json:{...$input.first().json, reply_text:'нет ошибок'}}]; const last=rows[rows.length-1]; return [{ json:{...$input.first().json, reply_text: 'Last error\\ncode: '+(last.error_code||'—')+'\\nstage: '+(last.stage||'—')+'\\nmessage: '+String(last.message||'').slice(0,300) } }];"
+      },
+      "id": "8ee8a63e-d0fe-4b35-ba84-c3d34d3b2e23",
+      "name": "Last Error",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1300,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "value": "REDACTED_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "ERRORS",
+          "mode": "name",
+          "cachedResultName": "ERRORS"
+        },
+        "options": {}
+      },
+      "id": "6961720a-b53b-4e0a-b70a-4c091bae8038",
+      "name": "Read ERRORS",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1060,
+        960
+      ],
+      "credentials": "REDACTED_CREDENTIAL",
+      "alwaysOutputData": true,
+      "disabled": false
+    },
+    {
+      "parameters": {
+        "jsCode": "const j=$input.first().json; const m=j.config_map||{}; const admins=String(m.admin_user_ids||'').split(/[,;\\s]+/).filter(Boolean).length; return [{ json:{...j, reply_text: 'CONFIG\\nenvironment: '+(m.environment||'dev')+'\\nai_enabled: '+(m.ai_enabled||'false')+'\\nparser_version: '+(m.parser_version||'—')+'\\nmessage_format_version: '+(m.message_format_version||'—')+'\\nadmin_user_ids count: '+admins+'\\n(no secrets)' } }];"
+      },
+      "id": "434fc1a9-a900-4e4b-8b79-27de15c1959c",
+      "name": "Config Summary",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1300,
+        1080
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{ json: { ...$input.first().json, reply_text: 'Неизвестная команда. Используйте /help.' } }];"
+      },
+      "id": "ae7de619-5ce5-4d4c-a6cb-6c20a4fe97e4",
+      "name": "Unknown Command",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1300,
+        1200
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{ json: { ...$input.first().json, reply_text: 'Недостаточно прав.' } }];"
+      },
+      "id": "90eee16d-f1f8-4965-bedb-37a180e95870",
+      "name": "Deny Reply",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1060,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "sendMessage",
+        "chatId": "REDACTED_PERSONAL_ID",
+        "text": "={{$json.reply_text}}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "id": "b28bc4ce-3598-4712-aa64-936609cf293d",
+      "name": "Safe Telegram Reply",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1600,
+        300
+      ],
+      "credentials": "REDACTED_CREDENTIAL",
+      "disabled": true,
+      "webhookId": "REDACTED_WEBHOOK_ID"
+    },
+    {
+      "parameters": {
+        "jsCode": "const j=$input.first().json; return [{ json: { ...j, admin_reply_captured: true, reply_len: String(j.reply_text||'').length } }];"
+      },
+      "id": "f999e23b-dee0-4e44-9700-11e645d2965c",
+      "name": "Capture Admin Reply",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1600,
+        520
+      ]
+    }
+  ],
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "Normalize Command",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Manual Admin Synthetic Trigger": {
+      "main": [
+        [
+          {
+            "node": "Normalize Command",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize Command": {
+      "main": [
+        [
+          {
+            "node": "Read Authorization Config",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Authorization Config": {
+      "main": [
+        [
+          {
+            "node": "Check User Authorization",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check User Authorization": {
+      "main": [
+        [
+          {
+            "node": "IF Authorized",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Authorized": {
+      "main": [
+        [
+          {
+            "node": "Route Command",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Deny Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Route Command": {
+      "main": [
+        [
+          {
+            "node": "Help",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Status",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "AI Status",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "AI On",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "AI Off",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Health",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Stats",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Synthetic Test Lead",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Read ERRORS",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Config Summary",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Unknown Command",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read ERRORS": {
+      "main": [
+        [
+          {
+            "node": "Last Error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Last Error": {
+      "main": [
+        [
+          {
+            "node": "Capture Admin Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Help": {
+      "main": [
+        [
+          {
+            "node": "Capture Admin Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Status": {
+      "main": [
+        [
+          {
+            "node": "Capture Admin Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Status": {
+      "main": [
+        [
+          {
+            "node": "Capture Admin Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI On": {
+      "main": [
+        [
+          {
+            "node": "Capture Admin Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Off": {
+      "main": [
+        [
+          {
+            "node": "Capture Admin Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Health": {
+      "main": [
+        [
+          {
+            "node": "Capture Admin Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Stats": {
+      "main": [
+        [
+          {
+            "node": "Capture Admin Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Synthetic Test Lead": {
+      "main": [
+        [
+          {
+            "node": "Capture Admin Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Config Summary": {
+      "main": [
+        [
+          {
+            "node": "Capture Admin Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Unknown Command": {
+      "main": [
+        [
+          {
+            "node": "Capture Admin Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Deny Reply": {
+      "main": [
+        [
+          {
+            "node": "Capture Admin Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Capture Admin Reply": {
+      "main": [
+        [
+          {
+            "node": "Safe Telegram Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
+  },
+  "staticData": null,
+  "meta": null,
+  "pinData": "REDACTED_PINNED_DATA",
+  "versionId": "8c6df005-563e-4aff-8c90-806a1e8d2075",
+  "activeVersionId": null,
+  "versionCounter": 1,
+  "triggerCount": 0,
+  "shared": [
+    {
+      "updatedAt": "2026-07-29T21:52:50.795Z",
+      "createdAt": "2026-07-29T21:52:50.795Z",
+      "role": "workflow:owner",
+      "workflowId": "wLrLp4WQHm1VJmxz",
+      "projectId": "m0cYMcwypxfVeob3",
+      "project": {
+        "updatedAt": "2026-04-04T13:33:43.728Z",
+        "createdAt": "2026-04-04T13:23:03.195Z",
+        "id": "m0cYMcwypxfVeob3",
+        "name": "Andrey MetaCode <multy.martis@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "creatorId": "b6e6266b-1652-480f-8734-2dcdf151cf20"
+      }
+    }
+  ],
+  "tags": [],
+  "activeVersion": null
+}

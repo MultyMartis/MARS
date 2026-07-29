@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3A.1 sanitized source baselines **complete**; Phase 3A implementation package retained with source-graph reconciliation; registry **planned**; runtime / n8n implementation **not started**
+**Status:** Phase 3B dev contour **created** (inactive Operational.dev + Admin.dev); v2 Sheets tabs created; registry remains **planned**; production Sales-Manager-v2 **unchanged**; sandbox Telegram delivery **pending**
 
 ---
 

@@ -1,0 +1,1942 @@
+{
+  "updatedAt": "2026-07-29T22:02:04.988Z",
+  "createdAt": "2026-07-29T21:52:50.602Z",
+  "id": "xSnXPy8cEHoZw6xG",
+  "name": "i-SEO Sales Manager - Operational.dev",
+  "description": null,
+  "active": false,
+  "isArchived": false,
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "seconds"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        3664,
+        752
+      ],
+      "id": "db77c82d-96d7-4263-98a7-d3e888591b4b",
+      "name": "Schedule Trigger",
+      "disabled": true
+    },
+    {
+      "parameters": {},
+      "id": "8a414b32-ef7e-458d-b67d-56f7d34c79a4",
+      "name": "Manual Synthetic Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        3400,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "returnAll": false,
+        "filters": {
+          "labelIds": [
+            "<GMAIL_LABEL_ID_REDACTED>"
+          ]
+        },
+        "limit": 10
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        3664,
+        992
+      ],
+      "id": "fe2fcfcb-a2ee-43b5-bb74-93c3effff9df",
+      "name": "Gmail Fetch Leads",
+      "alwaysOutputData": false,
+      "credentials": "REDACTED_CREDENTIAL",
+      "disabled": true,
+      "webhookId": "REDACTED_WEBHOOK_ID"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse Lead — synthetic-first, Gmail-compatible\nconst crypto = require('crypto');\nconst items = $input.all();\nconst out = [];\nfor (const item of items) {\n  const j = item.json || {};\n  const now = new Date().toISOString();\n  const isSynth = Boolean(j.synthetic_fixture || j.fixture_id || j.__synthetic);\n  let gmail_message_id = String(j.gmail_message_id || j.id || j.messageId || '').trim();\n  if (!gmail_message_id) gmail_message_id = isSynth ? ('msg_synth_' + (j.fixture_id || 'X')) : ('msg_' + crypto.randomUUID());\n  const lead_id = String(j.lead_id || ('lead_' + crypto.randomUUID()));\n  const text = String(j.request_text || j.text || j.snippet || j.body || '');\n  const parsed_name = String(j.parsed_name || j.client_name || j.name || '').trim();\n  const parsed_phone = String(j.parsed_phone || j.phone || '').trim();\n  const parsed_email = String(j.parsed_email || j.email || '').trim();\n  const parsed_messenger = String(j.parsed_messenger || j.messenger || '').trim();\n  const parsed_site = String(j.parsed_site || j.site || '').trim();\n  const hasContact = Boolean(parsed_phone || parsed_email || parsed_messenger);\n  const parse_status = hasContact || text ? (parsed_name || parsed_site || text.length > 10 ? 'ok' : 'partial') : 'failed';\n  out.push({\n    json: {\n      ...j,\n      lead_id,\n      gmail_message_id,\n      gmail_thread_id: j.gmail_thread_id || j.threadId || '',\n      received_at: j.received_at || now,\n      source: j.source || (isSynth ? 'synthetic' : 'gmail'),\n      email_subject: j.email_subject || j.subject || '',\n      sender_email: j.sender_email || '',\n      request_page: j.request_page || '',\n      form_name: j.form_name || '',\n      utm_source: j.utm_source || '',\n      utm_medium: j.utm_medium || '',\n      utm_campaign: j.utm_campaign || '',\n      utm_term: j.utm_term || '',\n      utm_content: j.utm_content || '',\n      parsed_name,\n      parsed_phone,\n      parsed_email,\n      parsed_messenger,\n      parsed_site,\n      request_text: text.slice(0, 4000),\n      calc_detected: String(j.calc_detected || 'false'),\n      calc_data: j.calc_data || '',\n      ip: j.ip || '',\n      parser_version: 'sm-parser-v3',\n      parse_status,\n      parse_warnings: j.parse_warnings || '',\n      workflow_version: 'operational.dev.phase3b',\n      raw_logged_at: now,\n      raw_text: String(j.raw_text || text).slice(0, 8000),\n      __synthetic: isSynth,\n      fixture_id: j.fixture_id || null,\n    }\n  });\n}\nreturn out;"
+      },
+      "id": "bb7a0c29-67b8-472a-9ad8-9fd4be7450cd",
+      "name": "Parse Lead",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3664,
+        752
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "REDACTED_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "lead_raw_v2",
+          "mode": "name",
+          "cachedResultName": "lead_raw_v2",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/<WORKBOOK_ID_REDACTED>/edit#gid=1910541765"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "lead_id": "={{$json.lead_id}}",
+            "gmail_message_id": "={{$json.gmail_message_id}}",
+            "gmail_thread_id": "={{$json.gmail_thread_id}}",
+            "received_at": "={{$json.received_at}}",
+            "source": "={{$json.source}}",
+            "email_subject": "={{$json.email_subject}}",
+            "sender_email": "={{$json.sender_email}}",
+            "request_page": "={{$json.request_page}}",
+            "form_name": "={{$json.form_name}}",
+            "utm_source": "={{$json.utm_source}}",
+            "utm_medium": "={{$json.utm_medium}}",
+            "utm_campaign": "={{$json.utm_campaign}}",
+            "utm_term": "={{$json.utm_term}}",
+            "utm_content": "={{$json.utm_content}}",
+            "parsed_name": "={{$json.parsed_name}}",
+            "parsed_phone": "={{$json.parsed_phone}}",
+            "parsed_email": "={{$json.parsed_email}}",
+            "parsed_messenger": "={{$json.parsed_messenger}}",
+            "parsed_site": "={{$json.parsed_site}}",
+            "request_text": "={{$json.request_text}}",
+            "calc_detected": "={{$json.calc_detected}}",
+            "calc_data": "={{$json.calc_data}}",
+            "ip": "={{$json.ip}}",
+            "parser_version": "={{$json.parser_version}}",
+            "parse_status": "={{$json.parse_status}}",
+            "parse_warnings": "={{$json.parse_warnings}}",
+            "workflow_version": "={{$json.workflow_version}}",
+            "raw_logged_at": "={{$json.raw_logged_at}}",
+            "raw_text": "={{$json.raw_text}}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "lead_id",
+              "displayName": "lead_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "created_at",
+              "displayName": "created_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "source",
+              "displayName": "source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "email_subject",
+              "displayName": "email_subject",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "client_name",
+              "displayName": "client_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "contact_type",
+              "displayName": "contact_type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "client_contact",
+              "displayName": "client_contact",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "client_phone",
+              "displayName": "client_phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "client_email",
+              "displayName": "client_email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "client_messenger",
+              "displayName": "client_messenger",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "client_site",
+              "displayName": "client_site",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "request_text",
+              "displayName": "request_text",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "request_page",
+              "displayName": "request_page",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ip",
+              "displayName": "ip",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ai_summary",
+              "displayName": "ai_summary",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ai_detected_service",
+              "displayName": "ai_detected_service",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ai_priority",
+              "displayName": "ai_priority",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ai_reply",
+              "displayName": "ai_reply",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "manager_status",
+              "displayName": "manager_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "processing_status",
+              "displayName": "processing_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        3880,
+        752
+      ],
+      "id": "2b53a9c4-e436-4eea-86fd-c06f9756152a",
+      "name": "Append RAW v2",
+      "credentials": "REDACTED_CREDENTIAL",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "REDACTED_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "CONFIG",
+          "mode": "name",
+          "cachedResultName": "CONFIG"
+        },
+        "options": {
+          "returnFirstMatch": false
+        },
+        "operation": "read"
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        4100,
+        752
+      ],
+      "id": "333f2589-d344-4c38-bcb5-1b56d7eb842a",
+      "name": "Read CONFIG",
+      "alwaysOutputData": true,
+      "credentials": "REDACTED_CREDENTIAL",
+      "disabled": false
+    },
+    {
+      "parameters": {
+        "jsCode": "const rows = $input.all().map(i => i.json);\nconst map = {};\nfor (const r of rows) {\n  if (r.key != null) map[String(r.key)] = r.value;\n}\nconst bool = (v, d=false) => {\n  if (v === true || v === 'true' || v === '1') return true;\n  if (v === false || v === 'false' || v === '0') return false;\n  return d;\n};\nconst lead = $('Parse Lead').first().json;\nconst config = {\n  ai_enabled: bool(map.ai_enabled, false),\n  ai_model: map.ai_model || '',\n  environment: map.environment || 'dev',\n  message_format_version: map.message_format_version || 'sm-msg-v1',\n  reply_template_version: map.reply_template_version || 'sm-reply-v1',\n  parser_version: map.parser_version || 'sm-parser-v3',\n  health_ai_probe_enabled: bool(map.health_ai_probe_enabled, false),\n  dedupe_contact_window_days: Number(map.dedupe_contact_window_days || 365),\n  gmail_query_limit: Number(map.gmail_query_limit || 10),\n  stats_days_default: Number(map.stats_days_default || 7),\n};\nreturn [{ json: { ...lead, config, ai_enabled: config.ai_enabled } }];"
+      },
+      "id": "8db67ba2-b1a1-45d7-8a40-3a7daab80dd2",
+      "name": "Normalize CONFIG",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4320,
+        752
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const j = $input.first().json;\nconst cfg = j.config || {};\nconst name = String(j.parsed_name || '').trim();\nconst phone = String(j.parsed_phone || '').trim();\nconst email = String(j.parsed_email || '').trim();\nconst messenger = String(j.parsed_messenger || '').trim();\nconst site = String(j.parsed_site || '').trim();\nconst text = String(j.request_text || '');\nconst lower = (text + ' ' + (j.request_page || '') + ' ' + (j.email_subject || '')).toLowerCase();\n\nfunction detectService() {\n  const rules = [\n    ['Audit', [/аудит/, /seo-аудит/, /\\baudit\\b/, /проверка сайта/, /\\/audit/]],\n    ['SEO', [/\\bseo\\b/, /продвижен/, /поисковое/, /позиции/, /трафик/, /семантическое ядро/]],\n    ['Direct', [/директ/, /контекст/, /яндекс директ/, /\\bppc\\b/, /реклама в поиске/]],\n    ['Site', [/создание сайта/, /разработка сайта/, /лендинг/, /сайт под ключ/, /редизайн/]],\n  ];\n  for (const [svc, arr] of rules) {\n    if (arr.some(re => re.test(lower))) return svc;\n  }\n  return 'Other';\n}\n\nconst service = detectService();\nconst contacts = [phone, email, messenger].filter(Boolean);\nconst primary_contact = phone || email || messenger || '';\nlet contact_type = 'unknown';\nif (contacts.length > 1) contact_type = 'mixed';\nelse if (phone) contact_type = 'phone';\nelse if (email) contact_type = 'email';\nelse if (messenger) contact_type = 'messenger';\n\nlet quality_status = 'ok';\nconst missing = [];\nif (!primary_contact) { quality_status = 'unusable'; missing.push('контакт'); }\nelse {\n  if (!name) missing.push('имя');\n  if (!site) missing.push('сайт');\n  if (text.length < 40) missing.push('текст заявки');\n  if (!name && !site && text.length < 40) quality_status = 'poor';\n  else if (!name || !site || text.length < 40) quality_status = 'needs_data';\n  else quality_status = 'ok';\n}\n\nlet priority = 'normal';\nif (/срочно|urgent|asap|критич/i.test(text) || (service === 'Audit' && site)) priority = 'high';\nif (quality_status === 'unusable' || /информацион/i.test(text)) priority = 'low';\n\nconst serviceClause = {\n  Audit: ' (запрос по аудиту сайта)',\n  SEO: ' (запрос по SEO)',\n  Direct: ' (запрос по Директу)',\n  Site: ' (запрос по созданию сайта)',\n  Other: '',\n}[service] || '';\n\nconst first_reply_text = name\n  ? ('Здравствуйте, ' + name + '!\\n\\nСпасибо, ваша заявка получена' + serviceClause + '.\\nСпециалист свяжется с вами, чтобы уточнить задачу.\\n\\nС уважением,\\nкоманда i-SEO')\n  : ('Здравствуйте!\\n\\nСпасибо, ваша заявка получена' + serviceClause + '.\\nМенеджер свяжется с вами, чтобы уточнить задачу.\\n\\nС уважением,\\nкоманда i-SEO');\n\nconst clarification_questions = [];\nif (!name) clarification_questions.push('Как к вам обращаться?');\nif (!site) clarification_questions.push('Укажите, пожалуйста, адрес сайта.');\nif (text.length < 40) clarification_questions.push('Кратко опишите задачу и желаемый результат.');\n\nconst summary = (text || ('Заявка: ' + service)).replace(/\\s+/g, ' ').trim().slice(0, 280);\nconst quality_comment = quality_status === 'ok' ? 'Данных достаточно'\n  : quality_status === 'needs_data' ? 'Нужны уточнения — ' + missing.join('; ')\n  : quality_status === 'poor' ? 'Слабые данные'\n  : 'Недостаточно для связи';\n\nconst manager_recommendation = quality_status === 'unusable'\n  ? 'Запросить контакт перед КП.'\n  : (missing.length ? ('Уточнить: ' + missing.join(', ') + '; использовать вопросы ниже.') : 'Можно готовить следующий шаг.');\n\nreturn [{\n  json: {\n    ...j,\n    client_name: name,\n    primary_contact,\n    contact_type,\n    phone, email, messenger, site, service, summary, priority,\n    quality_status, quality_comment,\n    missing_fields: missing.join('; '),\n    clarification_questions: clarification_questions.map((q,i)=>((i+1)+') '+q)).join('\\n'),\n    manager_recommendation,\n    first_reply_text,\n    first_reply_source: 'template',\n    processing_mode: 'ai_off',\n    ai_status: 'skipped',\n    fallback_used: false,\n    ai_enabled: Boolean(cfg.ai_enabled),\n    message_format_version: cfg.message_format_version || 'sm-msg-v1',\n    reply_template_version: cfg.reply_template_version || 'sm-reply-v1',\n    parser_version: cfg.parser_version || j.parser_version || 'sm-parser-v3',\n  }\n}];"
+      },
+      "id": "14491792-4b03-491f-9b57-1f828d3190b2",
+      "name": "Deterministic Lead Processor",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4540,
+        752
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "e1a34e3e-da94-4514-b2c2-f96e8fe2ee89",
+              "leftValue": "={{$json.ai_enabled}}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "50a81969-b803-4a9f-b791-1b58046bf49c",
+      "name": "IF AI Enabled",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        4760,
+        752
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const j = $input.first().json;\nconst body = {\n  model: (j.config && j.config.ai_model) || 'openai/gpt-4o-mini',\n  messages: [{\n    role: 'user',\n    content: 'Return ONLY JSON with keys summary,service,priority,quality_status,quality_comment,missing_fields,clarification_questions,manager_recommendation,first_reply_text. Lead: ' + JSON.stringify({\n      client_name: j.client_name, phone: j.phone, email: j.email, messenger: j.messenger, site: j.site,\n      service: j.service, summary: j.summary, request_text: j.request_text, quality_status: j.quality_status\n    })\n  }],\n  response_format: { type: 'json_object' }\n};\nreturn [{ json: { ...j, openrouter_body: body } }];"
+      },
+      "id": "7e1abd91-4e65-4828-859f-9bec491b761e",
+      "name": "Prepare AI Request",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4980,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://openrouter.ai/api/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "REDACTED_TOKEN"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "HTTP-Referer",
+              "value": "https://n8n.ai-metacode.com"
+            },
+            {
+              "name": "X-Title",
+              "value": "MetaBOT Lead Processor"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{$json.openrouter_body}}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        5200,
+        560
+      ],
+      "id": "58bdda1f-c05f-47bc-aac0-251babaebf6f",
+      "name": "OpenRouter AI",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "jsCode": "const j = $input.first().json;\nlet raw = j.choices?.[0]?.message?.content || j.data || j.body || j;\nif (typeof raw === 'object' && raw.choices) raw = raw.choices?.[0]?.message?.content;\nlet parsed = null; let ok = false; let reason = '';\ntry {\n  if (typeof raw === 'string') parsed = JSON.parse(raw);\n  else if (raw && typeof raw === 'object') parsed = raw;\n  const allowedService = ['Audit','SEO','Direct','Site','Other'];\n  const allowedPriority = ['low','normal','high'];\n  const allowedQuality = ['ok','needs_data','poor','unusable'];\n  if (!parsed || typeof parsed !== 'object') { reason = 'not_object'; }\n  else if (!allowedService.includes(parsed.service)) { reason = 'bad_service'; }\n  else if (!allowedPriority.includes(parsed.priority)) { reason = 'bad_priority'; }\n  else if (!allowedQuality.includes(parsed.quality_status)) { reason = 'bad_quality'; }\n  else if (/гарант|фиксированн.*цен|точно за \\d|обещаю результат/i.test(String(parsed.first_reply_text||''))) { reason = 'unsafe_promise'; }\n  else { ok = true; }\n} catch (e) { reason = 'invalid_json'; }\nreturn [{ json: { ...$('Deterministic Lead Processor').first().json, ai_valid: ok, ai_reason: reason, ai_parsed: parsed, ai_raw_present: Boolean(raw) } }];"
+      },
+      "id": "03ac309b-0fb0-4e97-aa2e-414adbcd99c2",
+      "name": "Validate AI Result",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        5420,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const det = $('Deterministic Lead Processor').first().json;\nconst j = $input.first().json;\nconst fromAI = j.ai_valid && j.ai_parsed ? j.ai_parsed : null;\nif (!fromAI) {\n  return [{ json: { ...det, processing_mode: det.ai_enabled ? 'ai_fallback' : 'ai_off', ai_status: det.ai_enabled ? 'fallback' : 'skipped', fallback_used: Boolean(det.ai_enabled), first_reply_source: det.ai_enabled ? 'ai_fallback_template' : 'template' } }];\n}\nreturn [{ json: {\n  ...det,\n  summary: fromAI.summary || det.summary,\n  service: fromAI.service || det.service,\n  priority: fromAI.priority || det.priority,\n  quality_status: fromAI.quality_status || det.quality_status,\n  quality_comment: fromAI.quality_comment || det.quality_comment,\n  missing_fields: Array.isArray(fromAI.missing_fields) ? fromAI.missing_fields.join('; ') : (fromAI.missing_fields || det.missing_fields),\n  clarification_questions: Array.isArray(fromAI.clarification_questions) ? fromAI.clarification_questions.map((q,i)=>((i+1)+') '+q)).join('\\n') : (fromAI.clarification_questions || det.clarification_questions),\n  manager_recommendation: fromAI.manager_recommendation || det.manager_recommendation,\n  first_reply_text: fromAI.first_reply_text || det.first_reply_text,\n  first_reply_source: 'ai',\n  processing_mode: 'ai_on',\n  ai_status: 'success',\n  fallback_used: false,\n}}];"
+      },
+      "id": "083ca177-06fc-440b-a21e-030c85763482",
+      "name": "Merge AI or Fallback",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        5640,
+        752
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "REDACTED_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "DEDUP_INDEX",
+          "mode": "name",
+          "cachedResultName": "DEDUP_INDEX"
+        },
+        "options": {
+          "returnFirstMatch": false
+        },
+        "operation": "read"
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        5860,
+        752
+      ],
+      "id": "b41fa657-aff2-44a9-b5f8-51321e95a0b4",
+      "name": "Lookup DEDUP_INDEX",
+      "alwaysOutputData": true,
+      "credentials": "REDACTED_CREDENTIAL",
+      "disabled": false
+    },
+    {
+      "parameters": {
+        "jsCode": "const j = $input.first().json;\nconst matches = $input.all().map(i => i.json).filter(x => x && (x.dedup_key || x.key_type));\nconst invalid = new Set(['44', '#error!', '#ERROR!', 'telegram', 'whatsapp', 'viber', 'телефон', 'localhost']);\n\nfunction normPhone(p){ return String(p||'').replace(/\\D/g,''); }\nfunction normEmail(e){ return String(e||'').trim().toLowerCase(); }\nfunction normSite(s){ return String(s||'').trim().toLowerCase().replace(/^https?:\\/\\//,'').replace(/\\/.*$/,'').replace(/^www\\./,''); }\nfunction validPhone(p){ const d=normPhone(p); return d.length>=10 && d.length<=15 && !invalid.has(d) && d !== '44'; }\nfunction validEmail(e){ const v=normEmail(e); return v.includes('@') && v.includes('.') && !invalid.has(v); }\nfunction validSite(s){ const v=normSite(s); return v && !invalid.has(v) && !v.includes(' '); }\n\nconst keys = [];\nif (j.gmail_message_id) keys.push({key_type:'gmail_message_id', normalized_value:String(j.gmail_message_id).trim()});\nif (validPhone(j.phone)) keys.push({key_type:'phone', normalized_value:normPhone(j.phone)});\nif (validEmail(j.email)) keys.push({key_type:'email', normalized_value:normEmail(j.email)});\nif (validSite(j.site)) keys.push({key_type:'site', normalized_value:normSite(j.site)});\nconst rejected_keys = [];\nfor (const cand of [j.phone, j.email, j.site, '44', '#ERROR!']) {\n  const s = String(cand||'').trim();\n  if (!s) continue;\n  if (invalid.has(s.toLowerCase()) || s === '44' || s === '#ERROR!' || normPhone(s)==='44') rejected_keys.push(s);\n}\n\nlet duplicate_status = 'new';\nlet duplicate_match_type = 'none';\nlet duplicate_lead_id = '';\nconst byType = {};\nfor (const m of matches) {\n  if (String(m.active).toLowerCase() === 'false') continue;\n  byType[m.key_type] = m;\n}\nif (byType.gmail_message_id) {\n  duplicate_status = 'reprocessed';\n  duplicate_match_type = 'same_message';\n  duplicate_lead_id = byType.gmail_message_id.lead_id || '';\n} else if (byType.phone || byType.email || byType.messenger) {\n  const m = byType.phone || byType.email || byType.messenger;\n  duplicate_status = 'repeat';\n  duplicate_match_type = m.key_type;\n  duplicate_lead_id = m.lead_id || '';\n} else if (byType.site) {\n  duplicate_status = 'possible';\n  duplicate_match_type = 'site_only';\n  duplicate_lead_id = byType.site.lead_id || '';\n}\n\nconst candidate_keys = keys.map(k => ({ ...k, dedup_key: k.key_type + ':' + k.normalized_value }));\nreturn [{ json: { ...j, duplicate_status, duplicate_match_type, duplicate_lead_id, candidate_keys, rejected_invalid_keys: rejected_keys, manager_status: j.manager_status || 'new', reply_review_status: 'draft' } }];"
+      },
+      "id": "29fdca44-9238-467e-991a-787f434058a3",
+      "name": "Classify Duplicate",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        6080,
+        752
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "REDACTED_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "lead_clean_v2",
+          "mode": "name",
+          "cachedResultName": "lead_clean_v2",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/<WORKBOOK_ID_REDACTED>/edit#gid=1910541765"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "lead_id": "={{$json.lead_id}}",
+            "source_message_id": "={{$json.gmail_message_id}}",
+            "created_at": "={{$json.received_at}}",
+            "processed_at": "={{$now.toISO()}}",
+            "updated_at": "={{$now.toISO()}}",
+            "client_name": "={{$json.client_name}}",
+            "primary_contact": "={{$json.primary_contact}}",
+            "contact_type": "={{$json.contact_type}}",
+            "phone": "={{$json.phone}}",
+            "email": "={{$json.email}}",
+            "messenger": "={{$json.messenger}}",
+            "site": "={{$json.site}}",
+            "service": "={{$json.service}}",
+            "summary": "={{$json.summary}}",
+            "source": "={{$json.source}}",
+            "request_page": "={{$json.request_page}}",
+            "utm_source": "={{$json.utm_source}}",
+            "utm_medium": "={{$json.utm_medium}}",
+            "utm_campaign": "={{$json.utm_campaign}}",
+            "processing_mode": "={{$json.processing_mode}}",
+            "ai_enabled": "={{$json.ai_enabled}}",
+            "ai_status": "={{$json.ai_status}}",
+            "ai_model": "={{$json.config.ai_model}}",
+            "fallback_used": "={{$json.fallback_used}}",
+            "parser_version": "={{$json.parser_version}}",
+            "message_format_version": "={{$json.message_format_version}}",
+            "reply_template_version": "={{$json.reply_template_version}}",
+            "priority": "={{$json.priority}}",
+            "quality_status": "={{$json.quality_status}}",
+            "quality_comment": "={{$json.quality_comment}}",
+            "missing_fields": "={{$json.missing_fields}}",
+            "clarification_questions": "={{$json.clarification_questions}}",
+            "manager_recommendation": "={{$json.manager_recommendation}}",
+            "first_reply_text": "={{$json.first_reply_text}}",
+            "first_reply_source": "={{$json.first_reply_source}}",
+            "reply_review_status": "={{$json.reply_review_status}}",
+            "duplicate_status": "={{$json.duplicate_status}}",
+            "duplicate_match_type": "={{$json.duplicate_match_type}}",
+            "duplicate_lead_id": "={{$json.duplicate_lead_id}}",
+            "manager_status": "={{$json.manager_status}}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "lead_id",
+              "displayName": "lead_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "created_at",
+              "displayName": "created_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "clean_name",
+              "displayName": "clean_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "primary_contact",
+              "displayName": "primary_contact",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "phone",
+              "displayName": "phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "messenger",
+              "displayName": "messenger",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "site",
+              "displayName": "site",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "service",
+              "displayName": "service",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "summary",
+              "displayName": "summary",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "quality_status",
+              "displayName": "quality_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "duplicate_status",
+              "displayName": "duplicate_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "manager_status",
+              "displayName": "manager_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "notes",
+              "displayName": "notes",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        6300,
+        752
+      ],
+      "id": "13d72d88-9c17-4740-9123-b61eff4a9200",
+      "name": "Append or Update CLEAN v2",
+      "credentials": "REDACTED_CREDENTIAL",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "REDACTED_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "DEDUP_INDEX",
+          "mode": "name",
+          "cachedResultName": "DEDUP_INDEX",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/<WORKBOOK_ID_REDACTED>/edit#gid=1910541765"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "dedup_key": "={{$json.candidate_keys[0].dedup_key}}",
+            "key_type": "={{$json.candidate_keys[0].key_type}}",
+            "lead_id": "={{$json.lead_id}}",
+            "gmail_message_id": "={{$json.gmail_message_id}}",
+            "normalized_value": "={{$json.candidate_keys[0].normalized_value}}",
+            "created_at": "={{$now.toISO()}}",
+            "last_seen_at": "={{$now.toISO()}}",
+            "active": "true"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "lead_id",
+              "displayName": "lead_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "created_at",
+              "displayName": "created_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "clean_name",
+              "displayName": "clean_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "primary_contact",
+              "displayName": "primary_contact",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "phone",
+              "displayName": "phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "messenger",
+              "displayName": "messenger",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "site",
+              "displayName": "site",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "service",
+              "displayName": "service",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "summary",
+              "displayName": "summary",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "quality_status",
+              "displayName": "quality_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "duplicate_status",
+              "displayName": "duplicate_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "manager_status",
+              "displayName": "manager_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "notes",
+              "displayName": "notes",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        6520,
+        752
+      ],
+      "id": "9ea80f28-5846-47cb-bcf6-6851d3599e33",
+      "name": "Append DEDUP_INDEX",
+      "credentials": "REDACTED_CREDENTIAL",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "jsCode": "const j = $input.first().json;\nconst esc = (s) => String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');\nconst dash = (s) => { const v = String(s ?? '').trim(); return v ? esc(v) : '—'; };\nconst dupMap = { new:'Новый лид', repeat:'Повторный лид', possible:'Возможный повтор (сайт)', reprocessed:'Повторная обработка' };\nconst qMap = { ok:'Данных достаточно', needs_data:'Нужны уточнения', poor:'Слабые данные', unusable:'Недостаточно для связи' };\nconst svcMap = { Audit:'Аудит', SEO:'SEO', Direct:'Директ', Site:'Сайт', Other:'Другое' };\nconst modeMap = { ai_off:'Без AI', ai_on:'AI', ai_fallback:'AI недоступен → шаблон' };\nconst header = dupMap[j.duplicate_status] || 'Новый лид';\nconst contactBits = [];\nif (j.phone) contactBits.push(esc(j.phone) + ' (телефон)');\nif (j.email) contactBits.push(esc(j.email) + ' (email)');\nif (j.messenger) contactBits.push(esc(j.messenger) + ' (мессенджер)');\nconst contacts = contactBits.length ? contactBits.join(', ') : '—';\nconst utm = [j.utm_source, j.utm_medium, j.utm_campaign].filter(Boolean).map(esc).join(' / ');\nconst sourceLine = [j.request_page ? esc(j.request_page) : '', utm ? ('utm: ' + utm) : ''].filter(Boolean).join(' · ') || '—';\nlet text = '';\ntext += header + '\\n\\n';\ntext += 'Клиент: ' + dash(j.client_name) + '\\n';\ntext += 'Контакты: ' + contacts + '\\n';\ntext += 'Сайт: ' + dash(j.site) + '\\n';\ntext += 'Услуга: ' + (svcMap[j.service] || dash(j.service)) + '\\n';\ntext += 'Источник: ' + sourceLine + '\\n\\n';\ntext += 'Кратко: ' + dash(j.summary) + '\\n\\n';\ntext += 'Чего не хватает: ' + dash(j.missing_fields) + '\\n';\ntext += 'Качество: ' + (qMap[j.quality_status] || dash(j.quality_status)) + (j.quality_comment ? (' — ' + esc(j.quality_comment)) : '') + '\\n';\ntext += 'Следующий шаг: ' + dash(j.manager_recommendation) + '\\n\\n';\nif (j.clarification_questions) {\n  text += 'Уточняющие вопросы:\\n' + esc(j.clarification_questions) + '\\n\\n';\n}\nif (['repeat','possible','reprocessed'].includes(j.duplicate_status)) {\n  text += 'История: match=' + esc(j.duplicate_match_type) + '; prior=' + dash(j.duplicate_lead_id) + '\\n\\n';\n}\ntext += 'Режим обработки: ' + (modeMap[j.processing_mode] || dash(j.processing_mode)) + '\\n\\n';\ntext += '——— Скопировать ответ клиенту ———\\n';\ntext += String(j.first_reply_text || '') + '\\n';\ntext += '——— Конец ответа ———\\n';\ntext += 'Отправляется только вручную. Бот клиенту не пишет.\\n';\nif (j.lead_id) text += '\\n#' + String(j.lead_id).slice(0, 12);\nreturn [{ json: { ...j, telegram_text: text, telegram_ok: true } }];"
+      },
+      "id": "d0cefad3-f13f-48fe-9a95-0dda4deca4eb",
+      "name": "Format Telegram Lead Card",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        6740,
+        752
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "REDACTED_PERSONAL_ID",
+        "text": "={{$json.telegram_text}}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        6960,
+        752
+      ],
+      "id": "fc39258b-fcec-411f-ac12-c1764f7af80f",
+      "name": "Send Telegram Lead Card",
+      "credentials": "REDACTED_CREDENTIAL",
+      "disabled": true,
+      "webhookId": "REDACTED_WEBHOOK_ID"
+    },
+    {
+      "parameters": {
+        "jsCode": "const j = $input.first().json;\n// When Telegram node is disabled in sandbox, treat formatted card as success for graph validation only if flag set.\nconst ok = j.telegram_ok !== false && j.force_telegram_fail !== true;\nreturn [{ json: { ...j, telegram_ok: ok } }];"
+      },
+      "id": "e351c7f9-5dc9-43da-8bdd-eef7e7001570",
+      "name": "Telegram Result Gate",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        7180,
+        752
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "372cbaf6-b1a7-4f13-8359-72daa8f1f8dc",
+              "leftValue": "={{$json.telegram_ok}}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "5c0caa1c-28f4-4899-a7ac-651aa3261a6b",
+      "name": "IF Telegram Success",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        7400,
+        752
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "REDACTED_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "LEAD_EVENTS",
+          "mode": "name",
+          "cachedResultName": "LEAD_EVENTS",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/<WORKBOOK_ID_REDACTED>/edit#gid=1910541765"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "event_id": "={{$json.lead_id}}-tg",
+            "ts": "={{$now.toISO()}}",
+            "lead_id": "={{$json.lead_id}}",
+            "event_type": "telegram_sent",
+            "actor": "operational",
+            "detail": "sandbox_or_disabled"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "lead_id",
+              "displayName": "lead_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "created_at",
+              "displayName": "created_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "clean_name",
+              "displayName": "clean_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "primary_contact",
+              "displayName": "primary_contact",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "phone",
+              "displayName": "phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "messenger",
+              "displayName": "messenger",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "site",
+              "displayName": "site",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "service",
+              "displayName": "service",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "summary",
+              "displayName": "summary",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "quality_status",
+              "displayName": "quality_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "duplicate_status",
+              "displayName": "duplicate_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "manager_status",
+              "displayName": "manager_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "notes",
+              "displayName": "notes",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        7620,
+        560
+      ],
+      "id": "f19a86a5-4cd2-4857-951b-c566cd8bd2fd",
+      "name": "Append LEAD_EVENTS",
+      "credentials": "REDACTED_CREDENTIAL",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{$node[\"Lead-Mail-Parser\"].json.gmail_message_id}}",
+        "labelIds": [
+          "<GMAIL_LABEL_ID_REDACTED>"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        7840,
+        560
+      ],
+      "id": "f8645b0a-3db4-4268-99a8-06f247ceed27",
+      "name": "Add Gmail PROCESSED",
+      "alwaysOutputData": true,
+      "credentials": "REDACTED_CREDENTIAL",
+      "disabled": true,
+      "webhookId": "REDACTED_WEBHOOK_ID"
+    },
+    {
+      "parameters": {
+        "operation": "removeLabels",
+        "messageId": "={{$node[\"Lead-Mail-Parser\"].json.gmail_message_id}}",
+        "labelIds": [
+          "<GMAIL_LABEL_ID_REDACTED>"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        8060,
+        560
+      ],
+      "id": "67ac46c6-9228-499d-b1e3-8d06669918ee",
+      "name": "Remove Gmail Incoming",
+      "alwaysOutputData": true,
+      "credentials": "REDACTED_CREDENTIAL",
+      "disabled": true,
+      "webhookId": "REDACTED_WEBHOOK_ID"
+    },
+    {
+      "parameters": {
+        "jsCode": "const j = $input.first().json;\nconst now = new Date().toISOString();\nconst error_code = j.error_code || (j.telegram_ok === false ? 'telegram_delivery_failed' : 'processing_error');\nconst stage = j.error_stage || (j.telegram_ok === false ? 'telegram_send' : 'unknown');\nreturn [{ json: {\n  ...j,\n  error_code,\n  stage,\n  error_message: String(j.error_message || j.message || stage).slice(0, 500),\n  error_ts: now,\n  workflow: 'Operational.dev',\n  resolved: false,\n  telegram_ok: false,\n}}];"
+      },
+      "id": "975fde35-f268-43ee-bcdb-c940d0c60d8c",
+      "name": "Error Handler",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        7620,
+        1000
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "REDACTED_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "ERRORS",
+          "mode": "name",
+          "cachedResultName": "ERRORS",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/<WORKBOOK_ID_REDACTED>/edit#gid=1910541765"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "ts": "={{$json.error_ts}}",
+            "error_code": "={{$json.error_code}}",
+            "lead_id": "={{$json.lead_id}}",
+            "stage": "={{$json.stage}}",
+            "message": "={{$json.error_message}}",
+            "workflow": "={{$json.workflow}}",
+            "resolved": "={{$json.resolved}}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "lead_id",
+              "displayName": "lead_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "created_at",
+              "displayName": "created_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "clean_name",
+              "displayName": "clean_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "primary_contact",
+              "displayName": "primary_contact",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "phone",
+              "displayName": "phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "messenger",
+              "displayName": "messenger",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "site",
+              "displayName": "site",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "service",
+              "displayName": "service",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "summary",
+              "displayName": "summary",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "quality_status",
+              "displayName": "quality_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "duplicate_status",
+              "displayName": "duplicate_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "manager_status",
+              "displayName": "manager_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "notes",
+              "displayName": "notes",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        7840,
+        1000
+      ],
+      "id": "aa321e17-3ff9-45d7-8eb2-373df5068386",
+      "name": "Append ERRORS",
+      "credentials": "REDACTED_CREDENTIAL",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{$node[\"Normalize-AI-Result\"].json.gmail_message_id}}",
+        "labelIds": [
+          "<GMAIL_LABEL_ID_REDACTED>"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        8060,
+        1000
+      ],
+      "id": "b0e19988-2838-4a23-a65a-453ba3e57dc4",
+      "name": "Add Gmail ERROR",
+      "credentials": "REDACTED_CREDENTIAL",
+      "disabled": true,
+      "webhookId": "REDACTED_WEBHOOK_ID"
+    },
+    {
+      "parameters": {},
+      "id": "0133c89b-c9fe-44c0-a7af-2dd1164c8bd2",
+      "name": "Preserve Gmail Incoming",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        8280,
+        1000
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "REDACTED_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "CONFIG",
+          "mode": "name",
+          "cachedResultName": "CONFIG",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/<WORKBOOK_ID_REDACTED>/edit#gid=1910541765"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "key": "last_success_at",
+            "value": "={{$now.toISO()}}",
+            "type": "string",
+            "updated_at": "={{$now.toISO()}}",
+            "updated_by": "operational.dev",
+            "description": "ops"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "lead_id",
+              "displayName": "lead_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "created_at",
+              "displayName": "created_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "clean_name",
+              "displayName": "clean_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "primary_contact",
+              "displayName": "primary_contact",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "phone",
+              "displayName": "phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "messenger",
+              "displayName": "messenger",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "site",
+              "displayName": "site",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "service",
+              "displayName": "service",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "summary",
+              "displayName": "summary",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "quality_status",
+              "displayName": "quality_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "duplicate_status",
+              "displayName": "duplicate_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "manager_status",
+              "displayName": "manager_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "notes",
+              "displayName": "notes",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        8500,
+        752
+      ],
+      "id": "b75d1a71-c5bd-4c11-a8ad-d592a5b11419",
+      "name": "Update Last Success / Runtime State",
+      "credentials": "REDACTED_CREDENTIAL",
+      "disabled": true
+    }
+  ],
+  "connections": {
+    "Manual Synthetic Trigger": {
+      "main": [
+        [
+          {
+            "node": "Parse Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Gmail Fetch Leads",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail Fetch Leads": {
+      "main": [
+        [
+          {
+            "node": "Parse Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Lead": {
+      "main": [
+        [
+          {
+            "node": "Append RAW v2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Read CONFIG",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read CONFIG": {
+      "main": [
+        [
+          {
+            "node": "Normalize CONFIG",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize CONFIG": {
+      "main": [
+        [
+          {
+            "node": "Deterministic Lead Processor",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Deterministic Lead Processor": {
+      "main": [
+        [
+          {
+            "node": "IF AI Enabled",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF AI Enabled": {
+      "main": [
+        [
+          {
+            "node": "Prepare AI Request",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Merge AI or Fallback",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare AI Request": {
+      "main": [
+        [
+          {
+            "node": "OpenRouter AI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter AI": {
+      "main": [
+        [
+          {
+            "node": "Validate AI Result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validate AI Result": {
+      "main": [
+        [
+          {
+            "node": "Merge AI or Fallback",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge AI or Fallback": {
+      "main": [
+        [
+          {
+            "node": "Lookup DEDUP_INDEX",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lookup DEDUP_INDEX": {
+      "main": [
+        [
+          {
+            "node": "Classify Duplicate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Classify Duplicate": {
+      "main": [
+        [
+          {
+            "node": "Append or Update CLEAN v2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append or Update CLEAN v2": {
+      "main": [
+        [
+          {
+            "node": "Append DEDUP_INDEX",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append DEDUP_INDEX": {
+      "main": [
+        [
+          {
+            "node": "Format Telegram Lead Card",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Telegram Lead Card": {
+      "main": [
+        [
+          {
+            "node": "Send Telegram Lead Card",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Telegram Lead Card": {
+      "main": [
+        [
+          {
+            "node": "Telegram Result Gate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram Result Gate": {
+      "main": [
+        [
+          {
+            "node": "IF Telegram Success",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Telegram Success": {
+      "main": [
+        [
+          {
+            "node": "Append LEAD_EVENTS",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Error Handler",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append LEAD_EVENTS": {
+      "main": [
+        [
+          {
+            "node": "Add Gmail PROCESSED",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Add Gmail PROCESSED": {
+      "main": [
+        [
+          {
+            "node": "Remove Gmail Incoming",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Remove Gmail Incoming": {
+      "main": [
+        [
+          {
+            "node": "Update Last Success / Runtime State",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Error Handler": {
+      "main": [
+        [
+          {
+            "node": "Append ERRORS",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append ERRORS": {
+      "main": [
+        [
+          {
+            "node": "Add Gmail ERROR",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Add Gmail ERROR": {
+      "main": [
+        [
+          {
+            "node": "Preserve Gmail Incoming",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Preserve Gmail Incoming": {
+      "main": [
+        [
+          {
+            "node": "Update Last Success / Runtime State",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
+  },
+  "staticData": null,
+  "meta": null,
+  "pinData": "REDACTED_PINNED_DATA",
+  "versionId": "f67ff7fb-7268-4767-8f74-9a0a5fd314f0",
+  "activeVersionId": null,
+  "versionCounter": 56,
+  "triggerCount": 1,
+  "shared": [
+    {
+      "updatedAt": "2026-07-29T21:52:50.606Z",
+      "createdAt": "2026-07-29T21:52:50.606Z",
+      "role": "workflow:owner",
+      "workflowId": "xSnXPy8cEHoZw6xG",
+      "projectId": "m0cYMcwypxfVeob3",
+      "project": {
+        "updatedAt": "2026-04-04T13:33:43.728Z",
+        "createdAt": "2026-04-04T13:23:03.195Z",
+        "id": "m0cYMcwypxfVeob3",
+        "name": "Andrey MetaCode <multy.martis@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "creatorId": "b6e6266b-1652-480f-8734-2dcdf151cf20"
+      }
+    }
+  ],
+  "tags": [],
+  "activeVersion": null
+}

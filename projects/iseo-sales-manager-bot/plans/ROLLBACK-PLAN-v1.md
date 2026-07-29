@@ -8,7 +8,8 @@
 
 ## 1. Scope
 
-Rollback covers future sandbox/production n8n + Sheets schema experiments. **Phase 2 creates docs only** — no runtime rollback action now.
+Rollback covers sandbox/production n8n + Sheets schema experiments.  
+**Phase 3B facts:** production rollback source remains live `Sales-Manager-v2` (`h8I2Tl2yl4uzhUnB`, active). Dev copies: `i-SEO Sales Manager - Operational.dev` (`xSnXPy8cEHoZw6xG`) and `i-SEO Sales Manager - Admin.dev` (`wLrLp4WQHm1VJmxz`) — both inactive. Pre-dev raw backup under Storage `incoming/iseo-sales-manager-bot/backups/pre-dev-copy/`.
 
 ---
 

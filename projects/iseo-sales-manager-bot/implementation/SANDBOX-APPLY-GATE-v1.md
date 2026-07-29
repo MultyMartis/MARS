@@ -8,15 +8,15 @@
 
 ## 1. Verdict relative to gate
 
-Phase 3A.1 completed source ingest, sanitization, exact V1/V2 baselines, sheet schema forensics, and implementation reconciliation.
+Phase 3B executed under explicit operator charter: live read-only audit, exactly two inactive `.dev` workflows, v2 tabs, synthetic local validation.
 
-**Technically ready for operator sandbox-gate review:** YES (documentation / baselines).  
-**This gate remains closed** until operator confirmations in §4 are collected.  
-**Phase 3B is not auto-approved.**
+**Phase 3B documentation/dev contour:** DONE.  
+**Production promotion gate:** remains **closed**.  
+**Pending:** sandbox Telegram destination + live fixture acceptance.
 
 Recommended next phase name:
 
-**PHASE 3B — LIVE READ-ONLY AUDIT AND DEV WORKFLOW CREATION**
+**PHASE 3B.1 — COMPLETE PENDING SANDBOX TESTS**
 
 ---
 
@@ -54,23 +54,23 @@ Recommended next phase name:
 
 | # | Confirmation | Status |
 |---|--------------|--------|
-| 1 | Exact live workflow ID for Sales-Manager-v2 | **PENDING** |
-| 2 | Exact RAW workbook (confirm export matches live `<RAW_WORKBOOK_ID>`) | **PENDING** |
-| 3 | Exact CLEAN workbook (confirm export matches live `<CLEAN_WORKBOOK_ID>`) | **PENDING** |
-| 4 | Manager Telegram bot/chat decision | **PENDING** |
-| 5 | Admin Telegram bot/chat decision | **PENDING** |
-| 6 | Authorization to create v2 tabs | **PENDING** |
-| 7 | Authorization to create exactly two .dev workflows maximum | **PENDING** |
-| 8 | Authorization for read-only n8n audit | **PENDING** |
-| 9 | Authorization for synthetic sandbox tests | **PENDING** |
-| 10 | Confirmation original workflow remains untouched | **PENDING** |
+| 1 | Exact live workflow ID for Sales-Manager-v2 | **DONE** (`h8I2Tl2yl4uzhUnB`) |
+| 2 | Exact RAW workbook (confirm export matches live) | **DONE** (role resolved; ID local-only) |
+| 3 | Exact CLEAN workbook (confirm export matches live) | **DONE** (role resolved; ID local-only) |
+| 4 | Manager Telegram bot/chat decision | **PARTIAL** — bot resolved; sandbox chat **PENDING** |
+| 5 | Admin Telegram bot/chat decision | **PARTIAL** — prefer same bot; Trigger disabled |
+| 6 | Authorization to create v2 tabs | **DONE** |
+| 7 | Authorization to create exactly two .dev workflows maximum | **DONE** |
+| 8 | Authorization for read-only n8n audit | **DONE** |
+| 9 | Authorization for synthetic sandbox tests | **DONE** (local harness; live TG delivery pending) |
+| 10 | Confirmation original workflow remains untouched | **DONE** (`ORIGINAL_UNCHANGED`) |
 
 Additional:
 
 | # | Item | Status |
 |---|------|--------|
 | 11 | Source export drop completed + sanitized baselines promoted | **DONE** (Phase 3A.1) |
-| 12 | AI remains OFF in CONFIG for first sandbox runs | **PENDING** operator attest |
+| 12 | AI remains OFF in CONFIG for first sandbox runs | **DONE** (`ai_enabled=false`) |
 | 13 | Sandbox chat ids ≠ production manager chat | **PENDING** |
 
 ---

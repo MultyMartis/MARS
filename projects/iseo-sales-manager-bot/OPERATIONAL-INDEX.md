@@ -11,14 +11,14 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | planned / documentation |
-| **Active stage** | **Phase 3A.1 complete** — sanitized source baselines + implementation reconciliation (**READY FOR OPERATOR SANDBOX GATE**) |
-| **Runtime** | External n8n — **not** executed from MARS; workflow JSON / live copies **not** created |
-| **Live parity vs Sales-Manager-v2** | **SAFE UNKNOWN** (no live n8n this phase) |
-| **JSON baselines v1/v2** | **PRESENT** — `baselines/Sales-Manager-v*.sanitized.json` |
-| **Registry** | **REGISTERED** — `project_id` **iseo-sales-manager-bot** · status **planned** (unchanged; no implementation start) |
+| **Status** | planned / implementation sandbox |
+| **Active stage** | **Phase 3B complete** — live audit + inactive .dev contour + v2 tabs (**READY WITH PENDING SANDBOX TESTS**) |
+| **Runtime** | External n8n — Operational.dev / Admin.dev created **inactive**; production Sales-Manager-v2 untouched |
+| **Live parity vs Sales-Manager-v2** | **PARITY** (Phase 3B read-only audit) |
+| **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports under `evidence/phase3b/` |
+| **Registry** | **REGISTERED** — `project_id` **iseo-sales-manager-bot** · status **planned** (unchanged; no production activation) |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
-| **Next** | **PHASE 3B** — live read-only audit + .dev workflow creation — **only after** sandbox apply gate confirmations |
+| **Next** | **PHASE 3B.1** — complete pending sandbox Telegram/live fixture tests |
 
 ---
 
@@ -98,6 +98,8 @@
 |---|----------|--------|
 | 25 | [reports/REPORT-iseo-sales-manager-bot-phase3a-sanitized-baseline-and-implementation-package-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3a-sanitized-baseline-and-implementation-package-v1.md) | Phase 3A (historical) |
 | 26 | [reports/REPORT-iseo-sales-manager-bot-phase3a1-source-ingest-and-sanitized-baselines-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3a1-source-ingest-and-sanitized-baselines-v1.md) | Phase 3A.1 |
+| 27 | [reports/REPORT-iseo-sales-manager-bot-phase3b-live-audit-and-dev-contour-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3b-live-audit-and-dev-contour-v1.md) | Phase 3B |
+| 28 | [evidence/phase3b/](evidence/phase3b/) | Phase 3B evidence |
 
 ---
 
@@ -118,7 +120,8 @@
 | **Phase 2R** | Project registration + documentation checkpoint | **DONE** |
 | **Phase 3A** | Sanitized baseline gate + MetaBOT Programmer implementation package | **DONE** (historical: sources absent at that time) |
 | **Phase 3A.1** | Source ingest + sanitized baselines + reconciliation | **DONE** |
-| Phase 3B | Live read-only audit + Operational.dev / Admin.dev creation | **NEXT** — explicit operator gate |
+| Phase 3B | Live read-only audit + Operational.dev / Admin.dev creation | **DONE** — inactive contour + v2 tabs; Telegram sandbox PENDING |
+| Phase 3B.1 | Complete pending sandbox tests | **NEXT** |
 | Live | At most one Operational + one Admin; target-only diff | Forbidden until chartered |
 
 ---
@@ -146,4 +149,4 @@
 
 ---
 
-*Last updated: 2026-07-30 — Phase 3A.1 source ingest + sanitized baselines.*
+*Last updated: 2026-07-30 — Phase 3B live audit + inactive .dev contour + v2 Sheets tabs.*
