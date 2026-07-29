@@ -103,7 +103,7 @@ Confirmed for this wave:
 |------|-------|
 | Exact-path git add | allowlisted docs only (see §12) |
 | Primary commit message | `docs(iseo-report-hub): add production readiness charter` |
-| Primary commit hash | `PENDING_PRIMARY_HASH` |
+| Primary commit hash | `fd99ce7d43436e3fdf78ade9f98c78714e70c363` |
 | Hash-record commit message | `docs(iseo-report-hub): record production readiness charter commit hash` |
 | Hash-record commit hash | `PENDING_HASH_RECORD` |
 | Tip HEAD | `PENDING_TIP` |
