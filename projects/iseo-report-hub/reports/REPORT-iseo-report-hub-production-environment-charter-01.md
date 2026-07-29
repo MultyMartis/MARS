@@ -119,8 +119,8 @@ Confirmed for this wave:
 | Primary commit message | `docs(iseo-report-hub): add production environment charter` |
 | Primary commit hash | `b2b0c3af8b6606febabe5d228346cd0fc865a343` |
 | Hash-record commit message | `docs(iseo-report-hub): record production environment charter commit hash` |
-| Hash-record commit hash | `PENDING_HASH_RECORD` |
-| Tip HEAD | `PENDING_TIP` |
+| Hash-record commit hash | `50650dd98384f35b8a6f038da07ab93b7e06d6ae` |
+| Tip HEAD | `50650dd98384f35b8a6f038da07ab93b7e06d6ae` |
 | Push | **no** |
 
 ## 10. SAFE UNKNOWN
