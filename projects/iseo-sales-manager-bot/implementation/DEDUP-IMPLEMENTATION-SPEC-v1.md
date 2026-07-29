@@ -2,7 +2,9 @@
 
 **Product:** i-SEO Sales Manager Bot  
 **Phase:** 3A  
-**Principle:** bounded lookup via `DEDUP_INDEX` — **never** full CLEAN sheet read per lead
+**Principle:** bounded lookup via `DEDUP_INDEX` — **never** full CLEAN sheet read per lead  
+
+**Export confirmation (Phase 3A.1):** Sales-Manager-v2 `Find Duplicate Lead` reads full `lead-base-processed` with `returnFirstMatch` — this is the defect Operational.dev must eliminate.
 
 ---
 

@@ -3,7 +3,8 @@
 **Product:** i-SEO Sales Manager Bot  
 **Phase:** 3A — specification only  
 **Decision:** RAW and CLEAN remain **separate** workbooks  
-**Phase 3A action:** **do not** create tabs or modify Sheets
+**Phase 3A / 3A.1 action:** **do not** create tabs or modify Sheets  
+**Historical evidence (Phase 3A.1):** RAW sheet `lead-base` (20 headers, 19 rows); CLEAN sheet `lead-base-processed` (14 headers, 19 rows) — see baselines schema docs.
 
 ---
 

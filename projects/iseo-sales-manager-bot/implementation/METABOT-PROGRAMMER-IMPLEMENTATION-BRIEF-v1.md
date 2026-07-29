@@ -3,7 +3,7 @@
 **Product:** i-SEO Sales Manager Bot  
 **Phase:** 3A — documentation package only  
 **Grammar authority:** MetaBOT Developer (`n8n-workflow-json-grammar-v1`, `n8n-node-type-catalog-v14`, `n8n-import-safe-generation-rules-v1`, `safe-workflow-patch-protocol-v1`)  
-**Status:** implementation-ready **specification** — **no** workflow JSON created this phase
+**Status:** implementation-ready **specification** — sanitized Sales Manager JSON baselines **present** (Phase 3A.1); **no** live workflow copies created
 
 ---
 
@@ -13,9 +13,11 @@ Prepare exact patch specifications so Phase 3B can:
 
 1. read-only audit live Sales-Manager-v2;
 2. create at most **one** `i-SEO Sales Manager - Operational.dev` and **one** `i-SEO Sales Manager - Admin.dev`;
-3. apply node-level patches using MetaBOT safe patch protocol;
+3. apply node-level patches using MetaBOT safe patch protocol against **sanitized v2 graph evidence**;
 4. create sandbox Sheets tabs only after operator approval;
 5. run synthetic fixtures F01–F21.
+
+**Baseline files:** `baselines/Sales-Manager-v2.sanitized.json` (+ v1), node inventory, connection map.
 
 ---
 

@@ -1,0 +1,1034 @@
+{
+  "name": "Sales-Manager-v2",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "seconds"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        3664,
+        752
+      ],
+      "id": "915543ad-02e8-4c15-a720-73de77337292",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "returnAll": true,
+        "filters": {
+          "labelIds": [
+            "<INCOMING_GMAIL_LABEL_ID>"
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        3664,
+        992
+      ],
+      "id": "b36744f2-0f5c-4362-a625-1f6d944d7751",
+      "name": "Get many messages",
+      "webhookId": "<WEBHOOK_ID_REDACTED>",
+      "alwaysOutputData": false,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "<CREDENTIAL_ID_REDACTED>",
+          "name": "<GMAIL_CREDENTIAL>"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "<GMAIL_LABEL_ID_4>",
+        "messageId": "={{$node[\"Lead-Mail-Parser\"].json.gmail_message_id}}",
+        "labelIds": [
+          "<PROCESSED_GMAIL_LABEL_ID>"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        5392,
+        1232
+      ],
+      "id": "b8723673-8f19-4f42-90ea-55cd308d2eeb",
+      "name": "Add label PROCESSED",
+      "webhookId": "<WEBHOOK_ID_REDACTED>",
+      "alwaysOutputData": true,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "<CREDENTIAL_ID_REDACTED>",
+          "name": "<GMAIL_CREDENTIAL>"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "<GMAIL_LABEL_ID_4>",
+        "messageId": "={{$node[\"Normalize-AI-Result\"].json.gmail_message_id}}",
+        "labelIds": [
+          "<ERROR_GMAIL_LABEL_ID>"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        4944,
+        992
+      ],
+      "id": "9d836987-574d-49af-a83e-75160efc471c",
+      "name": "Add label ERROR",
+      "webhookId": "<WEBHOOK_ID_REDACTED>",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "<CREDENTIAL_ID_REDACTED>",
+          "name": "<GMAIL_CREDENTIAL>"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "<GMAIL_LABEL_ID_5>",
+        "messageId": "={{$node[\"Lead-Mail-Parser\"].json.gmail_message_id}}",
+        "labelIds": [
+          "<INCOMING_GMAIL_LABEL_ID>"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        5568,
+        1232
+      ],
+      "id": "b816b3b2-a038-49f4-b150-1be080715c8d",
+      "name": "Remove label LEADS_ISEO",
+      "webhookId": "<WEBHOOK_ID_REDACTED>",
+      "alwaysOutputData": true,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "<CREDENTIAL_ID_REDACTED>",
+          "name": "<GMAIL_CREDENTIAL>"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const sourceJson = $json || {};\nconst rawText = String(sourceJson.snippet || \"\")\n  .replace(/\\r/g, \"\")\n  .trim();\nconst text = rawText.replace(/\\n+/g, \"\\n\");\n\nfunction toStr(v) {\n  return String(v ?? \"\").trim();\n}\n\nfunction pickField(lines, labels) {\n  const escaped = labels.map((l) => l.replace(/[.*+?^${}()|[\\]\\\\]/g, \"\\\\$&\"));\n  const re = new RegExp(`^(?:${escaped.join(\"|\")})\\\\s*[:：\\\\-]?\\\\s*(.+)$`, \"i\");\n  for (const line of lines) {\n    const m = line.match(re);\n    if (m && m[1]) return toStr(m[1]);\n  }\n  return \"\";\n}\n\nfunction firstMatch(s, re) {\n  const m = s.match(re);\n  return m ? toStr(m[1] || m[0]) : \"\";\n}\n\nfunction compactText(v) {\n  return toStr(v).replace(/\\s+/g, \" \").trim();\n}\n\nfunction extractEmail(s) {\n  const m = String(s || \"\").match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}/i);\n  return m ? m[0].toLowerCase() : \"\";\n}\n\nfunction normalizePhone(raw) {\n  const src = toStr(raw);\n  if (!src) return \"\";\n  const plus = src.startsWith(\"+\");\n  const digits = src.replace(/\\D/g, \"\");\n  if (digits.length < 10 || digits.length > 15) return \"\";\n  return `${plus ? \"+\" : \"\"}${digits}`;\n}\n\nfunction extractPhoneFromText(s) {\n  const candidates = String(s || \"\").match(/(?:\\+?7|8)?[\\s(\\-]*\\d{3}[\\s)\\-]*\\d{3}[\\s\\-]*\\d{2}[\\s\\-]*\\d{2}/g) || [];\n  for (const c of candidates) {\n    const n = normalizePhone(c);\n    if (n) return n;\n  }\n  return \"\";\n}\n\nfunction isEmailDomain(domain, fullText) {\n  const lower = String(fullText || \"\").toLowerCase();\n  const emails = lower.match(/[a-z0-9._%+-]+@([a-z0-9.-]+\\.[a-z]{2,})/g) || [];\n  return emails.some((e) => e.endsWith(`@${domain.toLowerCase()}`));\n}\n\nfunction extractSite(explicitValue, fullText) {\n  const cleanExplicit = toStr(explicitValue).replace(/[),.;:!?]+$/g, \"\");\n  if (cleanExplicit) return cleanExplicit;\n\n  const urlMatch = String(fullText || \"\").match(/https?:\\/\\/[^\\s)]+/i);\n  if (urlMatch) return toStr(urlMatch[0]).replace(/[),.;:!?]+$/g, \"\");\n\n  const domainMatch = String(fullText || \"\").match(/\\b(?:[a-z0-9-]+\\.)+[a-z]{2,}\\b/i);\n  if (!domainMatch) return \"\";\n\n  const domain = domainMatch[0].replace(/[),.;:!?]+$/g, \"\");\n  if (isEmailDomain(domain, fullText)) return \"\";\n  return domain;\n}\n\nfunction extractMessenger(s) {\n  const full = String(s || \"\");\n  const tgHandle = full.match(/(^|\\s)(@[a-zA-Z0-9_]{5,32})\\b/);\n  if (tgHandle) return tgHandle[2];\n\n  const tgLink = full.match(/https?:\\/\\/(?:t\\.me|telegram\\.me)\\/[^\\s)]+/i);\n  if (tgLink) return tgLink[0].replace(/[),.;:!?]+$/g, \"\");\n\n  const waLink = full.match(/https?:\\/\\/(?:wa\\.me|api\\.whatsapp\\.com)\\/[^\\s)]+/i);\n  if (waLink) return waLink[0].replace(/[),.;:!?]+$/g, \"\");\n\n  const waPhone = full.match(/(?:whatsapp|ватсап|вацап|wa)\\s*[:\\-]?\\s*(\\+?\\d[\\d\\s()\\-]{8,}\\d)/i);\n  if (waPhone) {\n    const n = normalizePhone(waPhone[1]);\n    if (n) return `WhatsApp: ${n}`;\n  }\n\n  return \"\";\n}\n\nconst lines = text.split(\"\\n\").map((l) => l.trim()).filter(Boolean);\n\nconst clientName =\n  pickField(lines, [\"Имя\", \"Ваше имя\", \"ФИО\", \"От кого\"]) ||\n  \"UNKNOWN\";\n\nconst explicitPhone = pickField(lines, [\"Телефон\", \"Контакт\"]);\nlet clientPhone = normalizePhone(explicitPhone);\nif (!clientPhone) clientPhone = extractPhoneFromText(text);\n\nconst explicitEmail = pickField(lines, [\"E-mail\", \"Email\", \"Почта\"]);\nconst clientEmail = extractEmail(explicitEmail || text);\n\nconst messengerLabel = pickField(lines, [\"Мессенджер\"]);\nconst contactLine = pickField(lines, [\"Контакт\"]);\nconst clientMessenger = extractMessenger(`${messengerLabel}\\n${contactLine}\\n${text}`);\n\nconst explicitSite = pickField(lines, [\"Адрес сайта\", \"Сайт\", \"URL\"]);\nconst clientSite = extractSite(explicitSite, text);\n\nconst page =\n  pickField(lines, [\"Отправлено со страницы\", \"Страница\", \"URL страницы\"]) ||\n  firstMatch(text, /(https?:\\/\\/[^\\s]+)\\s*$/i);\n\nconst ip =\n  pickField(lines, [\"IP\", \"IP-адрес\"]) ||\n  firstMatch(text, /\\b((?:\\d{1,3}\\.){3}\\d{1,3})\\b/);\n\nconst comment =\n  pickField(lines, [\"Комментарий\", \"Сообщение\", \"Вопрос\", \"Текст заявки\"]);\n\nconst calcMatches = [...text.matchAll(/(?:^|\\n)\\s*((?:0[1-9]|1\\d|20))\\s*[:：]\\s*([^\\n]+)/g)];\nconst calcData = calcMatches\n  .map((m) => `${m[1]}: ${compactText(m[2])}`)\n  .join(\"; \");\nconst calcDetected = calcMatches.length > 0;\n\nconst requestText = [compactText(comment), calcData]\n  .filter(Boolean)\n  .join(calcData && comment ? \" | \" : \"\");\n\nlet contactType = \"unknown\";\nif (clientPhone) {\n  contactType = \"phone\";\n} else if (clientEmail) {\n  contactType = \"email\";\n} else if (clientMessenger) {\n  contactType = \"messenger\";\n}\n\nconst clientContact = clientPhone || clientEmail || clientMessenger || \"UNKNOWN\";\n\nconst gmailMessageId = sourceJson.id || \"\";\nconst gmailThreadId = sourceJson.threadId || \"\";\n\nreturn [{\n  json: {\n    gmail_message_id: gmailMessageId,\n    gmail_thread_id: gmailThreadId,\n    lead_id: gmailMessageId || String(Date.now()),\n    created_at: new Date(Number(sourceJson.internalDate || Date.now())).toISOString(),\n    source: \"gmail\",\n    email_subject: sourceJson.subject || \"UNKNOWN\",\n    client_name: clientName,\n    contact_type: contactType,\n    client_contact: clientContact,\n    client_phone: clientPhone,\n    client_email: clientEmail,\n    client_messenger: clientMessenger,\n    client_site: clientSite,\n    request_text: requestText,\n    request_page: page,\n    ip,\n    raw_text: text,\n    calc_detected: calcDetected,\n    calc_data: calcData,\n    utm_source: firstMatch(text, /(?:\\butm_source\\b|UTM Source)\\s*[:=]\\s*([^\\s&\\n]+)/i),\n    utm_medium: firstMatch(text, /(?:\\butm_medium\\b|UTM Medium)\\s*[:=]\\s*([^\\s&\\n]+)/i),\n    utm_campaign: firstMatch(text, /(?:\\butm_campaign\\b|UTM Campaign)\\s*[:=]\\s*([^\\s&\\n]+)/i),\n    utm_term: firstMatch(text, /(?:\\butm_term\\b|UTM Term)\\s*[:=]\\s*([^\\s&\\n]+)/i),\n    utm_content: firstMatch(text, /(?:\\butm_content\\b|UTM Content)\\s*[:=]\\s*([^\\s&\\n]+)/i),\n    ai_summary: \"\",\n    ai_detected_service: \"\",\n    ai_priority: \"\",\n    ai_reply: \"\",\n    manager_status: \"new\",\n    processing_status: \"parsed\"\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3840,
+        992
+      ],
+      "id": "27313cc7-636c-4f79-a355-42ca4d6525e4",
+      "name": "Lead-Mail-Parser",
+      "alwaysOutputData": false
+    },
+    {
+      "parameters": {
+        "jsCode": "const lead = $node[\"Lead-Mail-Parser\"].json;\n\nreturn [{\n  json: {\n    ...lead,\n    openrouter_body: {\n      model: \"openai/gpt-4o-mini\",\n      messages: [\n        {\n          role: \"system\",\n          content: \"Ты помощник менеджера веб-студии i-SEO. Анализируй входящие заявки кратко и по делу. Определи услугу строго одним значением: Audit, SEO, Direct, Site, Other. Верни только валидный JSON без markdown и без пояснений.\"\n        },\n        {\n          role: \"user\",\n          content: `Проанализируй лид.\n\nСырые данные:\n${lead.raw_text}\n\nДополнительно:\nИмя: ${lead.client_name}\nКонтакт: ${lead.client_contact}\nСайт: ${lead.client_site}\nСтраница: ${lead.request_page}\nКалькулятор: ${lead.calc_data}\n\nПравила услуги:\n- Audit = SEO-аудит, аудит сайта, заявка на проверку, анализ или оценку продвижения\n- SEO = SEO-продвижение, органический трафик, поисковая оптимизация\n- Direct = Яндекс Директ, контекстная реклама, performance ads, настройка рекламы\n- Site = разработка сайта, лендинг, редизайн, доработка сайта, техническая задача по сайту\n- Other = неясно или не относится к услугам\n\nВерни JSON строго в формате:\n{\n  \"ai_summary\": \"\",\n  \"ai_detected_service\": \"Audit|SEO|Direct|Site|Other\",\n  \"ai_priority\": \"low|normal|high\",\n  \"ai_reply\": \"\",\n  \"quality_status\": \"ok|warning|bad\",\n  \"quality_comment\": \"\"\n}`\n        }\n      ],\n      temperature: 0.2\n    }\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4032,
+        992
+      ],
+      "id": "758c503f-5b06-4b5e-9ea0-2481ff138104",
+      "name": "Prepare-OpenRouter-Request"
+    },
+    {
+      "parameters": {
+        "jsCode": "const lead = $node[\"Lead-Mail-Parser\"].json;\n\nlet content = \"\";\n\ntry {\n  content = $json.choices?.[0]?.message?.content || \"\";\n} catch (e) {\n  content = \"\";\n}\n\nlet ai = {};\n\ntry {\n  ai = JSON.parse(content);\n} catch (e) {\n  ai = {\n    ai_summary: \"AI_PARSE_FAILED\",\n    ai_detected_service: \"Other\",\n    ai_priority: \"normal\",\n    ai_reply: \"\"\n  };\n}\n\nreturn [\n  {\n    json: {\n      ...lead,\n\n      ai_summary: ai.ai_summary || \"\",\n      ai_detected_service: ai.ai_detected_service || \"Other\",\n      ai_priority: ai.ai_priority || \"normal\",\n      ai_reply: ai.ai_reply || \"\"\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3664,
+        1232
+      ],
+      "id": "8038987d-026e-44ab-a12b-0bd92ce31c8f",
+      "name": "Normalize-AI-Result"
+    },
+    {
+      "parameters": {
+        "jsCode": "const raw = $node[\"Normalize-AI-Result\"].json;\n\nlet content = $json.choices?.[0]?.message?.content || \"\";\nlet clean = {};\n\ntry {\n  clean = JSON.parse(content);\n} catch (e) {\n  clean = {\n    clean_name: raw.client_name,\n    primary_contact: raw.client_contact,\n    phone: raw.client_phone,\n    email: raw.client_email,\n    messenger: raw.client_messenger,\n    site: raw.client_site,\n    service: raw.ai_detected_service || \"Other\",\n    summary: raw.ai_summary,\n    quality_status: \"warning\",\n    quality_comment: \"AI не смог корректно разобрать данные лида.\"\n  };\n}\n\nfunction cleanText(value) {\n  return String(value || \"\")\n    .replace(/^'+/, \"\")\n    .replace(/^=+'+/, \"\")\n    .replace(/\\s+/g, \" \")\n    .trim();\n}\n\nfunction cleanSite(value) {\n  const site = cleanText(value);\n  if (!site) return \"\";\n  if (site === \".\" || site === \"-\" || site === \"—\") return \"\";\n  if (/Комментарий:/i.test(site)) return \"\";\n  if (/Отправлено со страницы:/i.test(site)) return \"\";\n  return site;\n}\n\nconst allowedServices = new Set([\"Audit\", \"SEO\", \"Direct\", \"Site\", \"Other\"]);\nlet service = cleanText(clean.service || raw.ai_detected_service || \"Other\");\nservice = allowedServices.has(service) ? service : \"Other\";\n\nconst allowedQuality = new Set([\"ok\", \"warning\", \"bad\"]);\nlet qualityStatus = cleanText(clean.quality_status || \"warning\").toLowerCase();\nqualityStatus = allowedQuality.has(qualityStatus) ? qualityStatus : \"warning\";\n\nconst qualityComment = cleanText(clean.quality_comment);\nconst summaryBase = cleanText(clean.summary || raw.ai_summary);\nconst summaryWithContext = [\n  summaryBase,\n  raw.request_page ? `Страница: ${cleanText(raw.request_page)}` : \"\",\n  raw.calc_data ? `Калькулятор: ${cleanText(raw.calc_data)}` : \"\"\n].filter(Boolean).join(\" | \");\n\nreturn [{\n  json: {\n    lead_id: raw.lead_id,\n    created_at: raw.created_at,\n    clean_name: cleanText(clean.clean_name || raw.client_name),\n    primary_contact: cleanText(clean.primary_contact || raw.client_contact),\n    phone: cleanText(clean.phone || raw.client_phone),\n    email: cleanText(clean.email || raw.client_email),\n    messenger: cleanText(clean.messenger || raw.client_messenger),\n    site: cleanSite(clean.site) || cleanSite(raw.client_site),\n    service,\n    summary: summaryWithContext,\n    ai_reply: cleanText(raw.ai_reply),\n    quality_status: qualityStatus,\n    quality_comment: qualityComment,\n    duplicate_status: \"unknown\",\n    manager_status: \"new\",\n    notes: \"\"\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4224,
+        1232
+      ],
+      "id": "6341278c-e67f-4343-aaec-df326b593ef6",
+      "name": "Normalize-Clean-Lead"
+    },
+    {
+      "parameters": {
+        "chatId": "<MANAGER_CHAT_ID>",
+        "text": "={{\n(() => {\n  const data = $node[\"Mark-Duplicate-Status\"].json;\n\n  function clean(value) {\n    return String(value || \"\")\n      .replace(/\\\\([_*[\\]()~`>#+\\-=|{}.!])/g, \"$1\")\n      .trim();\n  }\n\n  return `🟢 Новый лид\n\nКлиент: ${clean(data.clean_name) || \"не указано\"}\nКонтакт: ${clean(data.primary_contact) || \"не указан\"}\nСайт: ${clean(data.site) || \"не указан\"}\nУслуга: ${clean(data.service) || \"не определена\"}\n\nПовтор: ${clean(data.duplicate_status) || \"unknown\"}\n${data.notes ? \"История: \" + clean(data.notes) : \"\"}\n\nКратко:\n${clean(data.summary) || \"нет описания\"}\n\nКачество данных: ${clean(data.quality_status) || \"unknown\"}\n${data.quality_comment ? \"Комментарий: \" + clean(data.quality_comment) : \"\"}\n\n———————————\nГотовый ответ клиенту:\n${clean(data.ai_reply) || \"Ответ пока не сформирован\"}`;\n})()\n}}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        5120,
+        1232
+      ],
+      "id": "7e9edcb2-b002-4b73-8a90-b8783200ffd9",
+      "name": "message v2",
+      "webhookId": "<WEBHOOK_ID_REDACTED>",
+      "credentials": {
+        "telegramApi": {
+          "id": "<CREDENTIAL_ID_REDACTED>",
+          "name": "<TELEGRAM_CREDENTIAL>"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const lead = $node[\"Normalize-AI-Result\"].json;\n\nreturn [{\n  json: {\n    ...lead,\n    openrouter_body: {\n      model: \"openai/gpt-4o-mini\",\n      messages: [\n        {\n          role: \"system\",\n          content: \"Ты нормализатор лидов. Приводи данные к чистому виду, убирай мусор, определяй основной контакт, услугу и качество данных. Верни только валидный JSON без markdown и без пояснений. Услуга должна быть строго одной из: Audit, SEO, Direct, Site, Other.\"\n        },\n        {\n          role: \"user\",\n          content: `Нормализуй данные лида:\n\nИмя: ${lead.client_name}\nТип связи: ${lead.contact_type}\nКонтакт: ${lead.client_contact}\nТелефон: ${lead.client_phone}\nEmail: ${lead.client_email}\nМессенджер: ${lead.client_messenger}\nСайт: ${lead.client_site}\nКомментарий: ${lead.request_text}\nСтраница: ${lead.request_page}\nКалькулятор: ${lead.calc_data}\nAI summary: ${lead.ai_summary}\nAI service: ${lead.ai_detected_service}\n\nПравила услуги:\n- Audit = SEO-аудит, аудит сайта, заявка на проверку, анализ или оценку продвижения\n- SEO = SEO-продвижение, органический трафик, поисковая оптимизация\n- Direct = Яндекс Директ, контекстная реклама, performance ads, настройка рекламы\n- Site = разработка сайта, лендинг, редизайн, доработка сайта, техническая задача по сайту\n- Other = неясно или не относится к услугам\n\nВерни JSON строго в формате:\n{\n  \"clean_name\": \"\",\n  \"primary_contact\": \"\",\n  \"phone\": \"\",\n  \"email\": \"\",\n  \"messenger\": \"\",\n  \"site\": \"\",\n  \"service\": \"Audit|SEO|Direct|Site|Other\",\n  \"summary\": \"\",\n  \"quality_status\": \"ok|warning|bad\",\n  \"quality_comment\": \"\"\n}`\n        }\n      ],\n      temperature: 0.1\n    }\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3840,
+        1232
+      ],
+      "id": "45ee45e9-ccc7-401c-9104-6b7b37a7c2ca",
+      "name": "Prepare-AI-Normalizer-Request"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://openrouter.ai/api/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer <REDACTED_TOKEN>"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "HTTP-Referer",
+              "value": "https://n8n.ai-metacode.com"
+            },
+            {
+              "name": "X-Title",
+              "value": "MetaBOT Lead Processor"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{$json.openrouter_body}}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        4224,
+        992
+      ],
+      "id": "6c243e9c-e8cd-421e-ab57-c4b870e12ca5",
+      "name": "HTTP Request (AI #1)"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://openrouter.ai/api/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer <REDACTED_TOKEN>"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "HTTP-Referer",
+              "value": "https://n8n.ai-metacode.com"
+            },
+            {
+              "name": "X-Title",
+              "value": "MetaBOT Lead Processor"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{$json.openrouter_body}}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        4032,
+        1232
+      ],
+      "id": "466dbdba-8f10-435e-bd2f-90ab37c2bf52",
+      "name": "AI-Normalizer (AI #2)"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "<RAW_WORKBOOK_ID>",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1910541765,
+          "mode": "list",
+          "cachedResultName": "lead-base",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Ba1iveHphZqHSTjkHdih0Aqekk5gmonELEX5dKXZ2NU/edit#gid=<SYNTHETIC_PHONE>"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "lead_id": "={{$node[\"Lead-Mail-Parser\"].json.lead_id}}",
+            "created_at": "={{$node[\"Lead-Mail-Parser\"].json.created_at}}",
+            "source": "={{$node[\"Lead-Mail-Parser\"].json.source}}",
+            "email_subject": "={{$node[\"Lead-Mail-Parser\"].json.email_subject}}",
+            "client_name": "={{$node[\"Lead-Mail-Parser\"].json.client_name}}",
+            "contact_type": "={{$node[\"Lead-Mail-Parser\"].json.contact_type}}",
+            "client_contact": "={{$node[\"Lead-Mail-Parser\"].json.client_contact}}",
+            "client_phone": "={{$node[\"Lead-Mail-Parser\"].json.client_phone ? \"'\" + $node[\"Lead-Mail-Parser\"].json.client_phone : \"\"}}",
+            "client_email": "={{$node[\"Lead-Mail-Parser\"].json.client_email}}",
+            "client_messenger": "={{$node[\"Lead-Mail-Parser\"].json.client_messenger}}",
+            "client_site": "={{$node[\"Lead-Mail-Parser\"].json.client_site}}",
+            "request_text": "={{$node[\"Lead-Mail-Parser\"].json.request_text}}",
+            "request_page": "={{$node[\"Lead-Mail-Parser\"].json.request_page}}",
+            "ip": "={{$node[\"Lead-Mail-Parser\"].json.ip}}",
+            "ai_summary": "={{$node[\"Lead-Mail-Parser\"].json.ai_summary}}",
+            "ai_detected_service": "={{$node[\"Lead-Mail-Parser\"].json.ai_detected_service}}",
+            "ai_priority": "={{$node[\"Lead-Mail-Parser\"].json.ai_priority}}",
+            "ai_reply": "={{$node[\"Lead-Mail-Parser\"].json.ai_reply}}",
+            "manager_status": "={{$node[\"Lead-Mail-Parser\"].json.manager_status}}",
+            "processing_status": "={{$node[\"Lead-Mail-Parser\"].json.processing_status}}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "lead_id",
+              "displayName": "lead_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "created_at",
+              "displayName": "created_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "source",
+              "displayName": "source",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "email_subject",
+              "displayName": "email_subject",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "client_name",
+              "displayName": "client_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "contact_type",
+              "displayName": "contact_type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "client_contact",
+              "displayName": "client_contact",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "client_phone",
+              "displayName": "client_phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "client_email",
+              "displayName": "client_email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "client_messenger",
+              "displayName": "client_messenger",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "client_site",
+              "displayName": "client_site",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "request_text",
+              "displayName": "request_text",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "request_page",
+              "displayName": "request_page",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ip",
+              "displayName": "ip",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ai_summary",
+              "displayName": "ai_summary",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ai_detected_service",
+              "displayName": "ai_detected_service",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ai_priority",
+              "displayName": "ai_priority",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ai_reply",
+              "displayName": "ai_reply",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "manager_status",
+              "displayName": "manager_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "processing_status",
+              "displayName": "processing_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        4032,
+        752
+      ],
+      "id": "61b72ed3-7640-4b28-96bd-4a157c712994",
+      "name": "Запись лида (RAW)",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "<CREDENTIAL_ID_REDACTED>",
+          "name": "<GOOGLE_SHEETS_CREDENTIAL>"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "<CLEAN_WORKBOOK_ID>",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1910541765,
+          "mode": "list",
+          "cachedResultName": "lead-base-processed",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1aeIWHeaqHwgJSKLCFZP8M4qG5y9qmOcPt6rvSWsltRU/edit#gid=<SYNTHETIC_PHONE>"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "lead_id": "={{$node[\"Mark-Duplicate-Status\"].json.lead_id}}",
+            "created_at": "={{$node[\"Mark-Duplicate-Status\"].json.created_at}}",
+            "clean_name": "={{$node[\"Mark-Duplicate-Status\"].json.clean_name}}",
+            "primary_contact": "={{$node[\"Mark-Duplicate-Status\"].json.primary_contact\n  ? \"'\" + $node[\"Mark-Duplicate-Status\"].json.primary_contact\n  : \"\"}}",
+            "phone": "={{$node[\"Mark-Duplicate-Status\"].json.phone\n  ? \"'\" + $node[\"Mark-Duplicate-Status\"].json.phone.replace(/\\D/g, \"\")\n  : \"\"}}",
+            "email": "={{$node[\"Mark-Duplicate-Status\"].json.email}}",
+            "messenger": "={{$node[\"Mark-Duplicate-Status\"].json.messenger}}",
+            "site": "={{$node[\"Mark-Duplicate-Status\"].json.site}}",
+            "service": "={{$node[\"Mark-Duplicate-Status\"].json.service}}",
+            "summary": "={{$node[\"Mark-Duplicate-Status\"].json.summary}}",
+            "quality_status": "={{$node[\"Mark-Duplicate-Status\"].json.quality_status}}",
+            "duplicate_status": "={{$node[\"Mark-Duplicate-Status\"].json.duplicate_status}}",
+            "manager_status": "={{$node[\"Mark-Duplicate-Status\"].json.manager_status}}",
+            "notes": "={{$node[\"Mark-Duplicate-Status\"].json.notes}}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "lead_id",
+              "displayName": "lead_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "created_at",
+              "displayName": "created_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "clean_name",
+              "displayName": "clean_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "primary_contact",
+              "displayName": "primary_contact",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "phone",
+              "displayName": "phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "messenger",
+              "displayName": "messenger",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "site",
+              "displayName": "site",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "service",
+              "displayName": "service",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "summary",
+              "displayName": "summary",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "quality_status",
+              "displayName": "quality_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "duplicate_status",
+              "displayName": "duplicate_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "manager_status",
+              "displayName": "manager_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "notes",
+              "displayName": "notes",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        4944,
+        1232
+      ],
+      "id": "50a11149-efa2-4758-99ca-a2a3c795a2f5",
+      "name": "Осмысленные лиды (CLEAN)",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "<CREDENTIAL_ID_REDACTED>",
+          "name": "<GOOGLE_SHEETS_CREDENTIAL>"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "ce00460a-5978-4c46-b429-236df3fc3c24",
+              "leftValue": "={{$json.quality_status}}",
+              "rightValue": "bad",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        4672,
+        1232
+      ],
+      "id": "3b7e585b-bd79-4c35-a33b-c442abaee928",
+      "name": "IF - Bad Quality"
+    },
+    {
+      "parameters": {
+        "operation": "<GMAIL_LABEL_ID_5>",
+        "messageId": "={{$node[\"Lead-Mail-Parser\"].json.gmail_message_id}}",
+        "labelIds": [
+          "<INCOMING_GMAIL_LABEL_ID>"
+        ]
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        5120,
+        992
+      ],
+      "id": "6151e935-7897-4930-8389-7e5a53a49b1a",
+      "name": "Remove label LEADS_ISEO2",
+      "webhookId": "<WEBHOOK_ID_REDACTED>",
+      "alwaysOutputData": true,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "<CREDENTIAL_ID_REDACTED>",
+          "name": "<GMAIL_CREDENTIAL>"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "<CLEAN_WORKBOOK_ID>",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1910541765,
+          "mode": "list",
+          "cachedResultName": "lead-base-processed",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1aeIWHeaqHwgJSKLCFZP8M4qG5y9qmOcPt6rvSWsltRU/edit#gid=<SYNTHETIC_PHONE>"
+        },
+        "options": {
+          "returnFirstMatch": false
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        4432,
+        1232
+      ],
+      "id": "d0a0eb32-129a-42bd-9712-4eefc0d4f8cc",
+      "name": "Find Duplicate Lead",
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "<CREDENTIAL_ID_REDACTED>",
+          "name": "<GOOGLE_SHEETS_CREDENTIAL>"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const lead = $node[\"Normalize-Clean-Lead\"].json;\n\nfunction onlyDigits(value) {\n  return String(value || \"\").replace(/\\D/g, \"\");\n}\n\nfunction cleanText(value) {\n  return String(value || \"\")\n    .replace(/^'+/, \"\")\n    .replace(/^#ERROR!.*$/i, \"\")\n    .trim()\n    .toLowerCase();\n}\n\nfunction isRealMessenger(value) {\n  const v = cleanText(value);\n  if (!v) return false;\n  if ([\"telegram\", \"whatsapp\", \"wa\", \"max\", \"телеграм\", \"ватсап\", \"вацап\"].includes(v)) return false;\n  return /^@/.test(v) || /t\\.me\\//.test(v) || onlyDigits(v).length >= 10;\n}\n\nconst leadId = cleanText(lead.lead_id);\nconst leadPhone = onlyDigits(lead.phone || lead.primary_contact);\nconst leadEmail = cleanText(lead.email);\nconst leadMessenger = cleanText(lead.messenger);\nconst leadSite = cleanText(lead.site);\n\nconst rows = $input.all()\n  .map((item) => item.json)\n  .filter((row) => row && Object.keys(row).length > 0);\n\nconst duplicates = rows.filter((row) => {\n  const rowLeadId = cleanText(row.lead_id);\n  const rowPhone = onlyDigits(row.phone || row.primary_contact);\n  const rowEmail = cleanText(row.email);\n  const rowMessenger = cleanText(row.messenger);\n  const rowSite = cleanText(row.site);\n\n  if (leadId && rowLeadId && leadId === rowLeadId) return true;\n  if (leadPhone && rowPhone && leadPhone === rowPhone) return true;\n  if (leadEmail && rowEmail && leadEmail === rowEmail) return true;\n  if (isRealMessenger(leadMessenger) && isRealMessenger(rowMessenger) && leadMessenger === rowMessenger) return true;\n  if (leadSite && rowSite && leadSite === rowSite) return true;\n\n  return false;\n});\n\nlet duplicateStatus = \"new\";\nlet duplicateNote = \"\";\n\nif (duplicates.length > 0) {\n  duplicateStatus = \"repeat\";\n\n  const last = duplicates[duplicates.length - 1];\n\n  duplicateNote = [\n    \"Повторный лид.\",\n    last.created_at ? `Предыдущее обращение: ${last.created_at}` : \"\",\n    last.service ? `Прошлая услуга: ${last.service}` : \"\",\n    last.summary ? `Прошлый смысл: ${last.summary}` : \"\"\n  ]\n    .filter(Boolean)\n    .join(\" \");\n}\n\nreturn [\n  {\n    json: {\n      ...lead,\n      duplicate_status: duplicateStatus,\n      notes: duplicateNote\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4672,
+        992
+      ],
+      "id": "97fe8e76-3f2e-43c6-99de-d5760a75e563",
+      "name": "Mark-Duplicate-Status"
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Get many messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get many messages": {
+      "main": [
+        [
+          {
+            "node": "Lead-Mail-Parser",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Add label PROCESSED": {
+      "main": [
+        [
+          {
+            "node": "Remove label LEADS_ISEO",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lead-Mail-Parser": {
+      "main": [
+        [
+          {
+            "node": "Запись лида (RAW)",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Prepare-OpenRouter-Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare-OpenRouter-Request": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request (AI #1)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize-AI-Result": {
+      "main": [
+        [
+          {
+            "node": "Prepare-AI-Normalizer-Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize-Clean-Lead": {
+      "main": [
+        [
+          {
+            "node": "Find Duplicate Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare-AI-Normalizer-Request": {
+      "main": [
+        [
+          {
+            "node": "AI-Normalizer (AI #2)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request (AI #1)": {
+      "main": [
+        [
+          {
+            "node": "Normalize-AI-Result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI-Normalizer (AI #2)": {
+      "main": [
+        [
+          {
+            "node": "Normalize-Clean-Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Осмысленные лиды (CLEAN)": {
+      "main": [
+        [
+          {
+            "node": "message v2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "message v2": {
+      "main": [
+        [
+          {
+            "node": "Add label PROCESSED",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF - Bad Quality": {
+      "main": [
+        [
+          {
+            "node": "Add label ERROR",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Осмысленные лиды (CLEAN)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Add label ERROR": {
+      "main": [
+        [
+          {
+            "node": "Remove label LEADS_ISEO2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Find Duplicate Lead": {
+      "main": [
+        [
+          {
+            "node": "Mark-Duplicate-Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mark-Duplicate-Status": {
+      "main": [
+        [
+          {
+            "node": "IF - Bad Quality",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "<VERSIONID_REDACTED>",
+  "id": "<WORKFLOW_INSTANCE_ID>",
+  "tags": [
+    {
+      "name": "i-SEO",
+      "id": "<TAG_ID_REDACTED>"
+    },
+    {
+      "name": "Lead-i-SEO",
+      "id": "<TAG_ID_REDACTED>"
+    },
+    {
+      "name": "MetaBOT",
+      "id": "<TAG_ID_REDACTED>"
+    }
+  ]
+}

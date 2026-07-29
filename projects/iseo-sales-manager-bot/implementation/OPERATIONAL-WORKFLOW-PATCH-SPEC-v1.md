@@ -2,9 +2,33 @@
 
 **Target workflow name:** `i-SEO Sales Manager - Operational.dev`  
 **Phase:** 3A — specification only (**do not** create workflow yet)  
-**Baseline:** Sales-Manager-v2 logical graph + Phase 2 contracts  
-**JSON baseline:** **BLOCKED** until sanitized export drop  
+**Baseline:** Sales-Manager-v2 sanitized export (`baselines/Sales-Manager-v2.sanitized.json`) + Phase 2 contracts  
+**JSON baseline:** **PRESENT** (Phase 3A.1)  
 **Inter-workflow:** no Execute Workflow / webhook to Admin.dev
+
+### Source node name map (v2 → Operational.dev stable names)
+
+| v2 exact name | Operational.dev stable name (spec) | Disposition |
+|---------------|------------------------------------|-------------|
+| `Schedule Trigger` | Schedule Trigger | retain |
+| `Get many messages` | Gmail Fetch Leads | adapt (add limit; keep label filter) |
+| `Lead-Mail-Parser` | Parse Lead | rewrite |
+| `Запись лида (RAW)` | Append RAW v2 | adapt (no AI columns; after parse) |
+| `Prepare-OpenRouter-Request` | Prepare AI Request | rewrite (single schema) |
+| `HTTP Request (AI #1)` | OpenRouter AI | retain/adapt; gate behind IF AI Enabled |
+| `Normalize-AI-Result` | Validate AI Result / Merge path | rewrite |
+| `Prepare-AI-Normalizer-Request` | — | **remove** |
+| `AI-Normalizer (AI #2)` | — | **remove** |
+| `Normalize-Clean-Lead` | Deterministic Lead Processor + merge outputs | rewrite / split |
+| `Find Duplicate Lead` | Lookup DEDUP_INDEX | replace full-table read |
+| `Mark-Duplicate-Status` | Classify Duplicate | rewrite |
+| `IF - Bad Quality` | quality handling inside processor / branch | change (do not strip incoming on TG fail) |
+| `Осмысленные лиды (CLEAN)` | Append or Update CLEAN v2 | rewrite mapping |
+| `message v2` | Format + Send Telegram Lead Card | rewrite formatter; add success IF |
+| `Add label PROCESSED` / `Remove label LEADS_ISEO` | Add Gmail PROCESSED / Remove Gmail Incoming | retain on TG **success** only |
+| `Add label ERROR` / `Remove label LEADS_ISEO2` | Add Gmail ERROR / Preserve Incoming | adapt — **do not** remove incoming on TG fail |
+
+Observed typeVersions (export): scheduleTrigger 1.3 · gmail 2.2 · code 2 · httpRequest 4.4 · googleSheets 4.7 · if 2.3 · telegram 1.2.
 
 ---
 
