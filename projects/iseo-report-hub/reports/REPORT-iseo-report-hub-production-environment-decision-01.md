@@ -129,7 +129,9 @@ Confirmed for this wave:
 | Primary commit hash | `114abef1a451d50aa9c893bdb85508bb96197523` |
 | Hash-record commit message | `docs(iseo-report-hub): record production environment decision commit hash` |
 | Hash-record commit hash | `fc304a62bd681ba2113f18cbe822374631d4cee2` |
-| Tip after wave | `fc304a62bd681ba2113f18cbe822374631d4cee2` |
+| Tip alignment commit message | `docs(iseo-report-hub): finalize production environment decision tip alignment` |
+| Tip alignment / branch tip HEAD | `8a11292078eeeafda286d72b4b92e870589cfc3a` |
+| Tip after wave (recorded at hash-record) | `fc304a62bd681ba2113f18cbe822374631d4cee2` |
 | Push | **no** |
 
 ## 10. SAFE UNKNOWN
@@ -161,7 +163,7 @@ Before any implementation/deploy work that needs local DB evidence: re-check `is
 | Action | Result |
 |--------|--------|
 | Exact-path git add | **yes** — allowlisted docs only |
-| Commit | **yes** — primary + hash-record (worktree) |
+| Commit | **yes** — primary `114abef1…` + hash-record `fc304a62…` + tip alignment `8a112920…` (worktree) |
 | Push | **no** |
 | Fetch | **no** |
 | Pull | **no** |
