@@ -18,7 +18,7 @@
 | **Catalog sort menu (Production)** | **COMPLETE** — Run 4.177; menu order in `category.twig`; «Умолчанию» removed |
 | **MARS 1C cron wrapper (Production)** | **OPERATIONAL — FIRST SCHEDULED RUN VERIFIED** — Run 4.194; automatic run SUCCESS 2026-07-06 08:00 Moscow; daily import OPERATIONAL |
 | **MARS 1C cron reports (Production)** | **CURRENT** — Run 4.194; first scheduled report `mars_1c_import_2026-07-06_080007.txt` verified on Production; latest forensic sample `mars_1c_import_2026-07-23_080010.txt` SUCCESS (Run **4.289**) |
-| **Catalog structure / 1C category mapping (Production)** | **POST-IMPORT PERSISTENCE CONFIRMED** (Run **4.299**) — natural imports SUCCESS after Run **4.297** GUID/path patch; critical stay **378/379/380/376**; map table **7/7** active; **demo Group A 154–170 deleted (Run 4.303)**; **legacy parent 153 deleted (Run 4.306)**; no redirects; sitemap live **1879**; monitor baseline file **1879** (Run **4.312**); first-level **ALL-15 CORRECTED** (Run **4.316** — all 15 Neutral children of 79 incl. empty **82/83/85/87/89** with empty copy; mega/deep/tech unchanged; HYBRID **4.314/4.315** historical); empty review **4.308**; HITL triage **4.309** · [all15 correction 4.316](../reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-ALL15-CORRECTION-APPLY-01.md) · [closeout 4.315](../reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-HYBRID-CLOSEOUT-01.md) · [hybrid apply 4.314](../reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-HYBRID-APPLY-01.md) · [scope decision 4.313](../reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-SCOPE-DECISION-01.md) · [baseline refresh 4.312](../reports/SITE-002-MONITOR-BASELINE-REFRESH-08.md) · [HITL triage 4.309](../reports/SITE-002-PROD-EMPTY-CATEGORIES-HITL-TRIAGE-01.md) · [persistence check](../reports/SITE-002-PROD-1C-POST-IMPORT-PERSISTENCE-CHECK-01.md) · [importer patch](../reports/SITE-002-PROD-1C-IMPORTER-GUID-PATH-PATCH-01.md) |
+| **Catalog structure / 1C category mapping (Production)** | **POST-IMPORT PERSISTENCE CONFIRMED** (Run **4.299**) — natural imports SUCCESS after Run **4.297** GUID/path patch; critical stay **378/379/380/376**; map table **7/7** active; **demo Group A 154–170 deleted (Run 4.303)**; **legacy parent 153 deleted (Run 4.306)**; no redirects; sitemap live **1879**; monitor baseline file **1879** (Run **4.312**); first-level **ALL-15** (Run **4.316**) + empty-copy relocate/images (Run **4.317** — PLP-only copy; images **82/83/85/87/89**; mega/deep/tech unchanged; HYBRID **4.314/4.315** historical); empty review **4.308**; HITL triage **4.309** · [empty-copy+images 4.317](../reports/SITE-002-PROD-EMPTY-CATEGORY-COPY-RELOCATE-AND-NEW-FIRSTLEVEL-IMAGES-01.md) · [all15 correction 4.316](../reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-ALL15-CORRECTION-APPLY-01.md) · [closeout 4.315](../reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-HYBRID-CLOSEOUT-01.md) · [hybrid apply 4.314](../reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-HYBRID-APPLY-01.md) · [scope decision 4.313](../reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-SCOPE-DECISION-01.md) · [baseline refresh 4.312](../reports/SITE-002-MONITOR-BASELINE-REFRESH-08.md) · [HITL triage 4.309](../reports/SITE-002-PROD-EMPTY-CATEGORIES-HITL-TRIAGE-01.md) · [persistence check](../reports/SITE-002-PROD-1C-POST-IMPORT-PERSISTENCE-CHECK-01.md) · [importer patch](../reports/SITE-002-PROD-1C-IMPORTER-GUID-PATH-PATCH-01.md) |
 
 **TEST-derived knowledge classification:** Implementation evidence and reusable technical knowledge. **Not** automatic proof of current Production parity.
 
@@ -988,7 +988,8 @@ See §6. Per-category PHP profiles control which attributes appear in sidebar an
 - `prepareMegamenuCategories()` for section hubs uses `buildHubChildCards` (Run **4.287**); neutral still requires products; tech shows empty active children
 - Template: `catalog/view/theme/default/template/common/megamenu.twig`
 - Evidence: [REPORT-BZPM-M9.7C-IMAGE-DEPLOY-MEGAMENU-CLEANUP.md](../reports/REPORT-BZPM-M9.7C-IMAGE-DEPLOY-MEGAMENU-CLEANUP.md)
-- **First-level block ALL-15 correction apply (Run 4.316):** corrects HYBRID→ALL-15 on home+/katalog/; all **15** Neutral direct children of **79** including empty **82/83/85/87/89** with copy Ожидайте, товары скоро поступят.; mega keeps product gate; deep/tech/importer/baseline unchanged; baseline **1879**; FTP 1 file + cache.*; ready for operator visual review. · [report](../reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-ALL15-CORRECTION-APPLY-01.md)
+- **Empty-copy relocate + first-level Neutral images (Run 4.317):** card-level `zpm-cat-card__empty` removed from home+`/katalog/`; empty copy `Ожидайте, товары скоро поступят.` only on empty category PLP; ALL-15 retained; images applied for **82/83/85/87/89**; mega/deep/tech/importer/baseline **1879** untouched. · [report](../reports/SITE-002-PROD-EMPTY-CATEGORY-COPY-RELOCATE-AND-NEW-FIRSTLEVEL-IMAGES-01.md)
+- **First-level block ALL-15 correction apply (Run 4.316):** corrects HYBRID→ALL-15 on home+/katalog/; all **15** Neutral direct children of **79** including empty **82/83/85/87/89**; (historical) tile empty copy later relocated in Run **4.317**; mega keeps product gate; deep/tech/importer/baseline unchanged; baseline **1879**. · [report](../reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-ALL15-CORRECTION-APPLY-01.md)
 - **First-level block hybrid closeout (Run 4.315):** operator confirmed Run **4.314** COMPLETE; pending visual review **closed**; HYBRID **ACCEPTED / COMPLETE**; no further apply needed; normal monitor on baseline **1879**. · [report](../reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-HYBRID-CLOSEOUT-01.md)
 - **First-level block hybrid apply (Run 4.314):** HYBRID Neutral first-level live on home+`/katalog/` via `buildNeutralFirstLevelBlockCards`; SHOW curated **80/86/207/301/322/326/331/354/358/360**; HIDE **82/83/85/87/89**; empty copy `Ожидайте, товары скоро поступят.` supported but not currently rendered; mega keeps `buildHubChildCards` product gate; deep/tech/importer/baseline unchanged; baseline **1879**; operator accepted in Run **4.315**. · [report](../reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-HYBRID-APPLY-01.md)
 - **First-level block scope decision (Run 4.313):** after baseline **1879**, HYBRID recommended — SHOW curated **80/86/207/301/322/326/331/354/358/360**; HIDE/WAIT legacy empty first-level **82/83/85/87/89** (duplicate of curated siblings; no 1C map proof); empty copy `Ожидайте, товары скоро поступят.` for future proven empties only; mega/deep/tech/importer/baseline unchanged; apply not executed. · [report](../reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-SCOPE-DECISION-01.md)
@@ -2441,10 +2442,18 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 
 ### First-level block ALL-15 correction apply (Run 4.316)
 
-- Verdict: **COMPLETE — READY FOR OPERATOR VISUAL REVIEW**.
+- Verdict: **COMPLETE** (later refined by Run **4.317** for empty-copy placement).
 - Surfaces: home + `/katalog/` Catalog Section Tiles.
-- Helper: `buildNeutralFirstLevelBlockCards` now shows all **15** Neutral children of **79**.
-- Previously hidden shown: **82, 83, 85, 87, 89** with empty copy `Ожидайте, товары скоро поступят.`
+- Helper: `buildNeutralFirstLevelBlockCards` shows all **15** Neutral children of **79**.
+- Previously hidden shown: **82, 83, 85, 87, 89** (tile empty-copy later relocated to PLP in Run **4.317**).
 - Mega/deep/Tech/sitemap/baseline/importer unchanged; baseline remains **1879**.
-- FTP: `category_visibility.php` only; twigs already had empty-copy hooks.
 - Report: [SITE-002-PROD-FIRST-LEVEL-BLOCK-ALL15-CORRECTION-APPLY-01.md](../reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-ALL15-CORRECTION-APPLY-01.md).
+
+### Empty-copy relocate + first-level Neutral images (Run 4.317)
+
+- Verdict: **COMPLETE**.
+- Card-level `.zpm-cat-card__empty` removed from home + `/katalog/`.
+- Empty copy `Ожидайте, товары скоро поступят.` only on empty category PLP.
+- Images for **82/83/85/87/89** (`catalog/Category-image/<slug>.webp`).
+- ALL-15 retained; mega/deep/Tech/importer/baseline **1879** untouched.
+- Report: [SITE-002-PROD-EMPTY-CATEGORY-COPY-RELOCATE-AND-NEW-FIRSTLEVEL-IMAGES-01.md](../reports/SITE-002-PROD-EMPTY-CATEGORY-COPY-RELOCATE-AND-NEW-FIRSTLEVEL-IMAGES-01.md).

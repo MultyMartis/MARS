@@ -11,8 +11,10 @@
  *   (neutral keeps product gate; other section hubs include empty active children).
  * SITE-002-PROD-FIRST-LEVEL-BLOCK-HYBRID-APPLY-01 — HYBRID Neutral first-level block (superseded by ALL15 correction).
  * SITE-002-PROD-FIRST-LEVEL-BLOCK-ALL15-CORRECTION-APPLY-01 — ALL-15 Neutral first-level block (home+/katalog):
- *   all 15 direct children of 79; empty copy for zero-product first-level cards;
+ *   all 15 direct children of 79; (historical) empty copy on zero-product tiles;
  *   mega/buildHubChildCards product gate unchanged; Tech 362 unchanged.
+ * SITE-002-PROD-EMPTY-CATEGORY-COPY-RELOCATE-AND-NEW-FIRSTLEVEL-IMAGES-01 — empty copy moved to category PLP only;
+ *   first-level tiles keep ALL-15 without card empty-copy; images for empty 82/83/85/87/89.
  *
  * Single source of truth for Launch Mode navigation and /katalog presentation.
  * Controllers must use this class; do not hardcode visibility rules in Twig.
@@ -26,7 +28,7 @@ class CategoryVisibility {
 	const NEUTRAL_HUB_CATEGORY_ID = 79;
 	const TECHNOLOGICAL_HUB_CATEGORY_ID = 362;
 	const PLACEHOLDER_IMAGE = 'placeholder.png';
-	/** Empty first-level caption for empty Neutral first-level cards. */
+	/** Empty category PLP caption when the opened category has zero products. */
 	const EMPTY_FIRST_LEVEL_COPY = 'Ожидайте, товары скоро поступят.';
 
 	private static $visible_root_category_ids = array(79, 362);
@@ -355,7 +357,9 @@ class CategoryVisibility {
 	 */
 	/**
 	 * ALL-15 Neutral first-level cards for Catalog Section Tiles only (home + /katalog/).
-	 * Show all 15 direct children of 79; allow zero-product cards with empty copy.
+	 * Show all 15 direct children of 79, including zero-product cards.
+	 * Empty-state copy is NOT attached to tiles — it belongs on the category PLP only
+	 * (SITE-002-PROD-EMPTY-CATEGORY-COPY-RELOCATE-AND-NEW-FIRSTLEVEL-IMAGES-01).
 	 * Mega menu continues to use buildHubChildCards() with Neutral product gate.
 	 */
 	public function buildNeutralFirstLevelBlockCards($controller) {
@@ -374,7 +378,7 @@ class CategoryVisibility {
 			}
 
 			$branch = $controller->model_catalog_category->getCategory($branch_id);
-			$card = $this->buildCardFromCategory($controller, $branch_id, $branch, false, true);
+			$card = $this->buildCardFromCategory($controller, $branch_id, $branch, false, false);
 
 			if ($card) {
 				$cards[] = $card;
