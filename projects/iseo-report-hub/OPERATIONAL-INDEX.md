@@ -27,7 +27,7 @@
 |-------|-------|
 | **Status** | planned / product architecture + Phase 0 scaffold + Model A `app-source/` + Phase 1A/1B + local DB + **auth persistence implemented** + **DB-03 migration applied** + **local fixture apply complete** + **Reporting Period CRUD Implementation 01 complete** + **Weekly Checkpoints DB-04 Charter 01 complete** + **DB-04 migration apply complete** + **Weekly Checkpoints CRUD Charter 01 complete** + **Weekly Checkpoints CRUD Implementation 01 complete** + **Monthly Report Content DB-05 Charter 01 complete** + **DB-05 migration apply complete** + **Monthly Report Content CRUD Charter 01 complete** + **Monthly Report Content CRUD Implementation 01 complete** + **Report Blocks DB-06 Charter 01 complete** + **DB-06 migration apply complete** + **Report Blocks CRUD Charter 01 complete** + **Report Blocks CRUD Implementation 01 complete** + **Report Preview / Render Charter 01 complete** + **Report Preview / Render Implementation 01 complete** + **Report Finalization Charter 01 complete** + **Report Finalization Implementation 01 complete** + **Report Snapshot Charter 01 complete** + **Report Snapshot DB-07 Migration Apply 01 complete** + **Report Snapshot Implementation 01 complete** + **Report Export / PDF Charter 01 complete** + **Report Export DB-08 Migration Apply 01 complete** |
 | **Lane** | Lane B — product formation and architecture |
-| **Active stage** | **Production Environment Decision 01 complete** — decision state **`RECOMMENDATION_READY`**; recommended default **Option C VPS PHP-FPM/Nginx/MySQL**; production environment **not selected**; next recommended: **Production Environment Operator Decision 01** |
+| **Active stage** | **Russian UX and HTML Demo Alignment Charter 01 complete** — docs/product-UX only; HTML demo v0.4 **found**; live PHP UI English/technical; target **Russian manager-first UX**; next recommended: **Russian UX and Demo Alignment Implementation 01** (production environment Operator Decision 01 remains available in parallel; no production until UX accepted) |
 | **Registry** | Row added 2026-07-10 — `project_id` **iseo-report-hub** · status **planned** |
 
 ---
@@ -1285,7 +1285,29 @@
 | **Hard boundaries** | No server access; no deploy; no DNS/HTTPS; no DB mutation; no app-source/runtime/secrets; no production claim |
 | **SAFE UNKNOWN** | Live MySQL re-probe still failed (TCP 3306 refused this wave; same as prior charters); before any implementation/deploy, re-check local DB state if local evidence needed; baseline remains latest attested Client Handoff Visual QA |
 | **Closeout** | [REPORT-iseo-report-hub-production-environment-decision-01.md](reports/REPORT-iseo-report-hub-production-environment-decision-01.md) |
-| **Next recommended stage** | **I-SEO Report Hub — Production Environment Operator Decision 01** |
+| **Next recommended stage (environment track)** | **I-SEO Report Hub — Production Environment Operator Decision 01** |
+| **Next recommended stage (product UX track)** | **I-SEO Report Hub — Russian UX and Demo Alignment Implementation 01** — see Russian UX charter section below |
+
+---
+
+## Russian UX and HTML Demo Alignment Charter 01 (2026-07-30)
+
+| Field | Value |
+|-------|-------|
+| **Status** | **Complete** — docs / product-UX planning only |
+| **Problem** | Live PHP+SQL MVP works, but UI is English-heavy technical skeleton; not aligned with accepted HTML demo; Russian UX required before production for i-SEO managers/SEO specialists |
+| **HTML demo** | **Found** — `workspaces/website-factory-operations/iseo-report-hub-prototype/` (static demo **v0.4**, INTLSEO-inspired, Russian chrome) |
+| **Live UI** | Dark Phase 1A skeleton EN; stale footer «no DB · runtime not synced»; technical terms on primary surfaces |
+| **Decisions** | Target language **Russian**; hide technical fields by default; manager-first flow; retain PHP+SQL engine; no production until UX accepted |
+| **PDF target** | Client-facing `SEO-отчет за {месяц}` + Russian sections; strip fixture/local/tech from real reports |
+| **Charter** | [I-SEO-REPORT-HUB-RUSSIAN-UX-HTML-DEMO-ALIGNMENT-CHARTER-v0.1.md](product/I-SEO-REPORT-HUB-RUSSIAN-UX-HTML-DEMO-ALIGNMENT-CHARTER-v0.1.md) |
+| **Inventory** | [I-SEO-REPORT-HUB-RUSSIAN-UX-HTML-DEMO-INVENTORY-v0.1.md](product/I-SEO-REPORT-HUB-RUSSIAN-UX-HTML-DEMO-INVENTORY-v0.1.md) |
+| **Copy dictionary** | [I-SEO-REPORT-HUB-RUSSIAN-UX-COPY-DICTIONARY-v0.1.md](product/I-SEO-REPORT-HUB-RUSSIAN-UX-COPY-DICTIONARY-v0.1.md) |
+| **Manager flow** | [I-SEO-REPORT-HUB-RUSSIAN-UX-MANAGER-FLOW-v0.1.md](product/I-SEO-REPORT-HUB-RUSSIAN-UX-MANAGER-FLOW-v0.1.md) |
+| **Implementation plan** | [I-SEO-REPORT-HUB-RUSSIAN-UX-IMPLEMENTATION-PLAN-v0.1.md](product/I-SEO-REPORT-HUB-RUSSIAN-UX-IMPLEMENTATION-PLAN-v0.1.md) |
+| **Closeout** | [REPORT-iseo-report-hub-russian-ux-html-demo-alignment-charter-01.md](reports/REPORT-iseo-report-hub-russian-ux-html-demo-alignment-charter-01.md) |
+| **DB / runtime / app-source** | **Unchanged** in this wave (no mutation) |
+| **Next recommended stage** | **I-SEO Report Hub — Russian UX and Demo Alignment Implementation 01** |
 
 ---
 
