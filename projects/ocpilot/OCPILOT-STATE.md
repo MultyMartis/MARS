@@ -1,8 +1,8 @@
 # OCPilot — Program State
 
 **Status:** living state document — **not** automated router  
-**Last updated:** 2026-07-28
-**Evidence cutoff:** 2026-07-28 (SITE-002 Run **4.316** / `SITE-002-PROD-FIRST-LEVEL-BLOCK-ALL15-CORRECTION-APPLY-01` — ALL-15 Neutral first-level block live on home+`/katalog/` including empty **82/83/85/87/89** with empty copy; mega/deep/tech unchanged; baseline **1879**; ready for operator visual review)
+**Last updated:** 2026-07-30
+**Evidence cutoff:** 2026-07-30 (SITE-002 Run **4.318** / `SITE-002-PROD-POST-IMAGE-WAVE-VISUAL-ACCEPTANCE-AND-1C-HEALTHCHECK-01` — Run **4.317** visually accepted; no further image/copy apply; latest 1C import **2026-07-29 SUCCESS**; **2026-07-30** morning import not yet run before schedule; sitemap/monitor baseline **1879** clean)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **First-Level Block All15 Correction Apply 01 (Run 4.316)** — **READY FOR OPERATOR VISUAL REVIEW** · ALL-15 Neutral first-level on home+`/katalog/` (incl. empty **82/83/85/87/89** + copy `Ожидайте, товары скоро поступят.`); mega/deep/tech unchanged; baseline **1879** · [all15 correction 4.316](sites/site-002/reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-ALL15-CORRECTION-APPLY-01.md) · [closeout 4.315](sites/site-002/reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-HYBRID-CLOSEOUT-01.md) · [hybrid apply 4.314](sites/site-002/reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-HYBRID-APPLY-01.md) · [baseline refresh 4.312](sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-08.md) |
+| Current SITE-002 focus | **Post Image Wave Visual Acceptance + 1C Healthcheck 01 (Run 4.318)** — Run **4.317** **VISUALLY ACCEPTED**; no further image/copy apply · latest natural import `2026-07-29` **SUCCESS**; wait for **2026-07-30** morning import (not yet due at `00:50+07`) · sitemap/monitor **1879** `NO_ACTION_REQUIRED` · [healthcheck 4.318](sites/site-002/reports/SITE-002-PROD-POST-IMAGE-WAVE-VISUAL-ACCEPTANCE-AND-1C-HEALTHCHECK-01.md) · [empty-copy+images 4.317](sites/site-002/reports/SITE-002-PROD-EMPTY-CATEGORY-COPY-RELOCATE-AND-NEW-FIRSTLEVEL-IMAGES-01.md) · [all15 correction 4.316](sites/site-002/reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-ALL15-CORRECTION-APPLY-01.md) · [baseline refresh 4.312](sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-08.md) |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 
@@ -573,7 +573,9 @@ W1 write charter applies to Phase 1 waves only; does not resume Run 5 automatica
 
 | Date | Change |
 |------|--------|
-| 2026-07-28 | **UPDATED** — SITE-002 first-level block ALL-15 correction apply **01** (Run **4.316**) — corrects HYBRID→ALL-15 on home+`/katalog/`; all **15** Neutral children of **79** incl. empty **82/83/85/87/89** with empty copy; mega/deep/tech unchanged; baseline **1879**; FTP 1 file + cache.*; DB/import/Client Ops **0**; ready for operator visual review |
+| 2026-07-30 | **UPDATED** — SITE-002 post image wave visual acceptance + 1C healthcheck **01** (Run **4.318**) — Run **4.317** visually accepted (`визуально всё гуд`); no further image/copy apply; latest import `mars_1c_import_2026-07-29_080009.txt` SUCCESS; 2026-07-30 morning import not yet run (before schedule); sitemap/monitor **1879** clean; production/Client Ops **0** |
+| 2026-07-29 | **UPDATED** — SITE-002 empty-copy relocate + first-level images **01** (Run **4.317**) — card empty-copy removed; PLP-only empty copy; images **82/83/85/87/89**; ALL-15 preserved; baseline **1879**; visual acceptance closed in Run **4.318** |
+| 2026-07-28 | **UPDATED** — SITE-002 first-level block ALL-15 correction apply **01** (Run **4.316**) — corrects HYBRID→ALL-15 on home+`/katalog/`; all **15** Neutral children of **79** incl. empty **82/83/85/87/89**; mega/deep/tech unchanged; baseline **1879**; FTP 1 file + cache.*; DB/import/Client Ops **0**; visual acceptance closed via Runs **4.317/** **4.318** |
 | 2026-07-28 | **UPDATED** — SITE-002 first-level block hybrid closeout **01** (Run **4.315**) — docs-only; operator confirmed Run **4.314** COMPLETE; pending visual review closed; HYBRID **ACCEPTED / COMPLETE**; no further apply needed; normal monitor on baseline **1879**; production/Client Ops **0** |
 | 2026-07-28 | **UPDATED** — SITE-002 first-level block hybrid apply **01** (Run **4.314**) — HYBRID live on home+`/katalog/`; SHOW 10 / HIDE **82/83/85/87/89**; empty copy supported not currently rendered; mega/deep/tech unchanged; baseline **1879**; FTP 3 files + cache.*; DB/import/Client Ops **0**; operator visual review **accepted** in Run **4.315** |
 | 2026-07-28 | **UPDATED** — SITE-002 first-level block scope decision **01** (Run **4.313**) — **HYBRID RECOMMENDED**; SHOW 10 curated IDs; HIDE/WAIT empty legacy **82/83/85/87/89**; baseline **1879** unchanged; future apply charter only; production/Client Ops **0**; UI apply not performed |
