@@ -308,7 +308,19 @@ AGENTS.md (honesty)
 | **What it is NOT** | Runtime, orchestration, CRM/ERP/accounting, legal authority, business-reality registry, central ecosystem authority, or autonomous operator. |
 | **Operational status** | **REGISTERED** (`planned` registry band) — foundation **complete**; WF-01 and WF-02 **live binding pilots PARTIAL** (2026-06-10); implementation engine **not started**. |
 | **Canonical path** | [../projects/ops/README.md](../projects/ops/README.md), [OPERATIONAL-INDEX.md](../projects/ops/OPERATIONAL-INDEX.md); registry `ops`. Evidence: [../logs/ops/ops-registration-v1.md](../logs/ops/ops-registration-v1.md). Visual: `programs.canvas` (Awareness Alignment 2026-06). |
-| **Relationship role** | **Consumes** [ATLAS](#atlas-business-reality-registry) (business identity, when available). **May later surface through** HomeGateway, NOVA. **May consume operator-attested evidence from** MetaBOT, ORCA, MIG, WPilot, OCPilot — **does not** own those lanes. **Not** authority over ATLAS, MARS core, or external runtimes. |
+| **Relationship role** | **Consumes** [ATLAS](#atlas-business-reality-registry) (business identity, when available). **May later surface through** HomeGateway, NOVA. **May consume operator-attested evidence from** MetaBOT, ORCA, MIG, WPilot, OCPilot — **does not** own those lanes. **Logical owner** of [i-SEO Sales Manager Bot](#i-seo-sales-manager-bot). **Not** authority over ATLAS, MARS core, or external runtimes. |
+
+---
+
+### i-SEO Sales Manager Bot
+
+| | |
+|--|--|
+| **What it is** | Documentation-first **external operational product** pack for i-SEO (ORG-0003) sales lead intake / manager assist — Gmail → Sheets → Telegram via n8n; exactly two target workflows (Operational.dev + Admin.dev). |
+| **What it is NOT** | MARS runtime, autonomous CRM, auto-reply-to-client system, MetaBOT clone (three-workflow SEO set), or proof of live n8n parity. |
+| **Operational status** | **REGISTERED** (`planned` registry band) — Phase 2 architecture **documented**; n8n / Sheets / Gmail / Telegram implementation **not started**; live parity **SAFE UNKNOWN**. |
+| **Canonical path** | [../projects/iseo-sales-manager-bot/OPERATIONAL-INDEX.md](../projects/iseo-sales-manager-bot/OPERATIONAL-INDEX.md), [README.md](../projects/iseo-sales-manager-bot/README.md); registry `iseo-sales-manager-bot`. |
+| **Relationship role** | **External Systems** lane (Path D-class) under **OPS** logical ownership; pattern source MetaBOT SEO Content Agent; ATLAS person/org context only (recommendation; no new IDs). Sibling locus to `iseo-report-hub`. |
 
 ---
 

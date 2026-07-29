@@ -41,6 +41,7 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 | **HomeGateway v4.ai** | — | — | ✓ personal operational cockpit concept (static-first) | — | — | ✓ draft/planning docs |
 | **ATLAS** | ✓ population discipline | — | ✓ registry intent | — | — | ✓ foundation + population docs |
 | **OPS** | ✓ back-office discipline | ✓ WF-01/WF-02 pilots | — | — | — | ✓ foundation + workflows |
+| **i-SEO Sales Manager Bot** | — | — | — | ✓ n8n/Gmail/Sheets/Telegram (future) | — | ✓ Phase 2 architecture pack |
 | **GitGuard** | ✓ advisory + helpers | — | ✓ entity-model name | — | — | ✓ mars-survivability pack |
 | **Continuity / IdeaBox** | ✓ incubation (optional) | — | protocols | — | — | ✓ not `project_id` |
 | **Incoming** | ✓ active staging | — | hybrid placement | ✓ bulk (post-triage) | — | ✓ intake charter |
@@ -303,6 +304,19 @@ Re-verify session facts with `git status` and lane charter — this file is **no
 **Not:** Runtime, infrastructure, authority domain, CRM/ERP, ATLAS implementation, orchestration, or automated evidence pull from MetaBOT/ORCA/MIG/WPilot/OCPilot.
 
 **SoT:** [../projects/ops/README.md](../projects/ops/README.md) · [OPERATIONAL-INDEX.md](../projects/ops/OPERATIONAL-INDEX.md) · registry `ops` (**planned**) · [../logs/ops/ops-registration-v1.md](../logs/ops/ops-registration-v1.md)
+
+---
+
+## i-SEO Sales Manager Bot
+
+| Bucket | Reality |
+|--------|---------|
+| **documentation-only** | Phase 2 architecture, data model, UX/admin/AI contracts, and change plans under `projects/iseo-sales-manager-bot/` — **no** in-repo executor. |
+| **external** | Intended execution truth: n8n + Gmail + Google Sheets + Telegram — **not** inspected or mutated in Phase 2 / Phase 2R. |
+
+**Not:** MARS core runtime; OPS CRM; automatic client replies; minted ATLAS PRJ IDs; live workflow copies; Sheets v2 tabs created.
+
+**SoT:** [../projects/iseo-sales-manager-bot/OPERATIONAL-INDEX.md](../projects/iseo-sales-manager-bot/OPERATIONAL-INDEX.md) · [README.md](../projects/iseo-sales-manager-bot/README.md) · registry `iseo-sales-manager-bot` (**planned**)
 
 ---
 
