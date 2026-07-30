@@ -9,3 +9,8 @@ Runtime success state, error stage classification, and bounded stats are impleme
 ## Boundary
 
 No production cutover performed. Original Sales-Manager-v2 unchanged and active.
+
+
+## Phase 3B.4.1
+
+**NOT READY FOR PHASE 3C CUTOVER GATE** — real Telegram Trigger matrix pending/FAIL.

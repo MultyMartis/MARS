@@ -12,13 +12,13 @@
 | Field | Value |
 |-------|-------|
 | **Status** | planned / implementation sandbox; Phase 3B.3 accepted |
-| **Active stage** | **Phase 3B.3 COMPLETE** — Telegram UX polish + final dev acceptance; ready for Phase 3C cutover gate |
+| **Active stage** | **Phase 3B.4.1 ATTENTION** — aliases + Trigger enable verified; real Trigger matrix not confirmed |
 | **Runtime** | External n8n — Operational.dev / Admin.dev **inactive**; production Sales-Manager-v2 untouched |
 | **Live parity vs Sales-Manager-v2** | **PARITY** (Phase 3B / 3B.1 integrity) |
 | **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3B.3 evidence under `evidence/phase3b3/` |
 | **Registry** | **REGISTERED** — `project_id` **iseo-sales-manager-bot** · status **planned** (unchanged; no production activation) |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
-| **Next** | **PHASE 3C** proposal review / cutover gate under a separate production charter |
+| **Next** | Re-open short Admin.dev acceptance window when operator is ready to send the ten canonical commands; then **PHASE 3C** gate |
 
 ---
 

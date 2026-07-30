@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3B.4 runtime/stats/error fixes applied; **real Telegram Trigger acceptance pending** (ATTENTION)
+**Status:** Phase 3B.4.1 — Trigger enabled + aliases applied; **real Telegram Trigger acceptance still pending** (ATTENTION)
 
 ---
 

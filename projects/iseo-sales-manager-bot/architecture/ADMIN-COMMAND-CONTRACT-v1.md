@@ -16,6 +16,18 @@
 
 ---
 
+## 1b. Optional aliases (normalize → canonical)
+
+| Alias | Canonical |
+|-------|-----------|
+| `/aistatus` | `/ai_status` |
+| `/lasterror` | `/last_error` |
+| `/aion` | `/ai_on` |
+| `/aioff` | `/ai_off` |
+| `/foobarunknown` | `/foobar_unknown` |
+
+Canonical forms remain the router contract. Do not replace canonical help text with aliases.
+
 ## 2. Unknown command
 
 Exact response:

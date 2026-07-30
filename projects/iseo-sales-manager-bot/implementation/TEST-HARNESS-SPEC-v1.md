@@ -115,3 +115,8 @@ Evidence required: n8n execution shows **0** HTTP OpenRouter calls on AI OFF run
 ## Phase 3B.4
 
 Harness webhook injection remains valid for reply-shape and unauthorized tests. It is **not** a substitute for real Telegram Trigger acceptance evidence.
+
+
+## Phase 3B.4.1
+
+Alias harness (webhook → Normalize only) may verify `/aistatus` `/lasterror` `/aion` `/aioff` `/foobarunknown`. It is **not** a substitute for the ten real Telegram Trigger executions.
