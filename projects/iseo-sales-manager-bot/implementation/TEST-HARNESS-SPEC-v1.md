@@ -24,6 +24,13 @@ Before any sandbox apply / import:
 | G9 Incoming preserve | Error/TG-fail path does not remove incoming |
 | G10 No PROCESSED on TG fail | Telegram fail never reaches Add Gmail PROCESSED |
 | G11 same_message | Classifies `reprocessed`, never business `repeat` |
+| G12 no-contact UX | `quality_status=bad`; empty reply; no «менеджер свяжется»; contact Q1 first |
+| G13 quality no-dup | Quality label appears once; missing on `Не хватает:` |
+| G14 history human | No `match=` / `prior=` / lead ids in Telegram |
+| G15 mode RU | Без ИИ / С ИИ / ИИ не сработал, использован шаблон |
+| G16 synthetic footer | Dev cards: `Тестовая заявка · PHASE 3B.3`; no hashtags |
+| G17 health wording | No `readable_ref_ok` / `structural_ok_no_fetch` / `inactive_expected` |
+| G18 admin RU config | Контур / Режим ИИ / Версия парсера / Версия сообщений |
 
 ---
 

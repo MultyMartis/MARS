@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** **Phase 3B.2 complete** — Telegram sandbox gate closed: 9 synthetic lead cards and 10 synthetic Admin replies accepted in the private operator sandbox; registry remains **planned**; production Sales-Manager-v2 **unchanged**; **ready for the Phase 3C cutover gate** (proposal only).
+**Status:** **Phase 3B.3 complete** — Telegram UX polish and final dev acceptance closed: 9 synthetic lead cards and 8 Admin replies accepted in the private operator sandbox; UX defects from 3B.2 fixed; registry remains **planned**; production Sales-Manager-v2 **unchanged**; **ready for the Phase 3C cutover gate** (proposal only).
 
 ---
 

@@ -17,13 +17,13 @@
 | `repeat` | повторный / Повторный лид |
 | `possible` | возможный повтор / Возможный повтор (сайт) |
 | `reprocessed` | повторная обработка сообщения / Повторная обработка |
-| `ok` | данных достаточно / Данные в порядке |
+| `ok` | данных достаточно / Данных достаточно |
 | `needs_data` | нужно уточнение / Нужны уточнения |
 | `poor` | слабые данные / Слабые данные |
-| `unusable` | недостаточно данных / Недостаточно для связи |
-| `ai_off` / template path | без ИИ / Без AI |
-| `ai_on` / ai | ИИ / AI |
-| `ai_fallback` | ИИ недоступен, использован шаблон / AI недоступен → шаблон |
+| `unusable` / `bad` | недостаточно данных / Недостаточно для связи |
+| `ai_off` / template path | без ИИ / Без ИИ |
+| `ai_on` / ai | с ИИ / С ИИ |
+| `ai_fallback` | ИИ не сработал, использован шаблон |
 | `Audit` | Аудит |
 | `SEO` | SEO |
 | `Direct` | Директ |
@@ -31,6 +31,8 @@
 | `Other` | Другое |
 
 Empty → `—`.
+
+**Phase 3B.3:** do not append a quality comment that repeats the quality label. Render missing fields on a separate `Не хватает:` line.
 
 ---
 
@@ -59,15 +61,25 @@ Empty → `—`.
 - Block 14 = **copy-ready client reply only** (no internal notes).  
 - Never auto-send block 14 to client channels.
 
-Separators:
+Separators (Phase 3B.3):
 
 ```
-——— Скопировать ответ клиенту ———
+──────── Ответ клиенту ────────
+
 ...
-——— Конец ответа ———
-Отправляется только вручную. Бот клиенту не пишет.
+───────────────────────────────
+Ответ клиенту автоматически не отправляется.
 ```
 
+No-contact:
+
+```
+Готовый ответ не сформирован: нет контактных данных для связи.
+Ответ клиенту автоматически не отправляется.
+```
+
+Development synthetic footer only: `Тестовая заявка · PHASE 3B.3`  
+Production: no synthetic footer / hashtags.
 ---
 
 ## 3. Synthetic examples

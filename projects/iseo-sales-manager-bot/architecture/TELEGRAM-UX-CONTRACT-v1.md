@@ -25,15 +25,16 @@
 5. **Услуга**
 6. **Источник** (source + page + campaign if present)
 7. **Кратко** (summary)
-8. **Чего не хватает** (missing)
-9. **Качество** (human label + short comment)
+8. **Качество** (human label only — do not duplicate the label in a trailing comment)
+9. **Не хватает** (missing fields; omit when empty)
 10. **Следующий шаг** (manager_recommendation)
 11. **Уточняющие вопросы**
-12. **История** (only if repeat/possible/reprocessed)
-13. **Режим обработки** (Без AI / AI / AI→резерв)
-14. **Готовый ответ клиенту** (copy-ready; fenced by clear separators)
+12. **История** (only if repeat/possible/reprocessed; human Russian text only)
+13. **Режим обработки** (Без ИИ / С ИИ / ИИ не сработал, использован шаблон)
+14. **Готовый ответ клиенту** (copy-ready; or no-contact notice when reply cannot be formed)
 
-Optional footer: `lead_id` short form for support (monospace HTML if HTML mode).
+Optional footer in **development synthetic** cards only: `Тестовая заявка · PHASE 3B.3`  
+Production cards: **no** synthetic footer / hashtags.
 
 ---
 
@@ -50,13 +51,13 @@ Optional footer: `lead_id` short form for support (monospace HTML if HTML mode).
 | `Direct` | Директ |
 | `Site` | Сайт |
 | `Other` | Другое |
-| `ok` | Данные в порядке |
+| `ok` | Данных достаточно |
 | `needs_data` | Нужны уточнения |
 | `poor` | Слабые данные |
-| `unusable` | Недостаточно для связи |
-| `ai_off` | Без AI |
-| `ai_on` | AI |
-| `ai_fallback` | AI недоступен → шаблон |
+| `unusable` / `bad` | Недостаточно для связи |
+| `ai_off` / template | Без ИИ |
+| `ai_on` / ai | С ИИ |
+| `ai_fallback` / fallback | ИИ не сработал, использован шаблон |
 
 Empty values → `—` (not `UNKNOWN`, not blank multi-newlines).
 
@@ -72,12 +73,23 @@ Empty values → `—` (not `UNKNOWN`, not blank multi-newlines).
 - Reply block delimited:
 
 ```
-——— Скопировать ответ клиенту ———
+──────── Ответ клиенту ────────
+
 ...text...
-——— Конец ответа ———
+
+───────────────────────────────
+Ответ клиенту автоматически не отправляется.
 ```
 
-- Explicit note under reply: `Отправляется только вручную. Бот клиенту не пишет.`
+- No-contact / empty reply:
+
+```
+Готовый ответ не сформирован: нет контактных данных для связи.
+Ответ клиенту автоматически не отправляется.
+```
+
+- Do not use raw Markdown fences.
+- Do not expose match keys, lead IDs, dedupe keys, or technical enums in История.
 
 ---
 
@@ -193,13 +205,15 @@ Empty values → `—` (not `UNKNOWN`, not blank multi-newlines).
 
 ## 6. Forbidden in manager card
 
-- Raw enums: `UNKNOWN`, `ok`, `Audit` as code, `ai_status=…`
+- Raw enums: `UNKNOWN`, `ok`, `Audit` as code, `ai_status=…`, `match=`, `prior=`
 - Raw AI JSON
 - OpenRouter / credential hints
 - Full Gmail message id unless truncated support footer
 - `#ERROR!`
-- ISO-8601 history strings
-- “Ответ пока не сформирован” when template always fills reply
+- ISO-8601 history strings as the only history line
+- Synthetic hashtags (`#leadmsgsyn`, `#lead_msg_syn`, `#lead_…`)
+- “Менеджер свяжется с вами” when no usable contact exists
+- Duplicate quality labels (`Качество: X — X`)
 
 ---
 
@@ -211,4 +225,4 @@ Empty values → `—` (not `UNKNOWN`, not blank multi-newlines).
 
 ---
 
-*Related: AI-OFF-ON-CONTRACT-v1 · LEAD-DATA-MODEL-v1 · ADMIN-COMMAND-CONTRACT-v1.*
+*Related: AI-OFF-ON-CONTRACT-v1 · LEAD-DATA-MODEL-v1 · ADMIN-COMMAND-CONTRACT-v1 · Phase 3B.3 evidence.*

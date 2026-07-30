@@ -11,11 +11,11 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | planned / implementation sandbox; Phase 3B.2 accepted |
-| **Active stage** | **Phase 3B.2 COMPLETE** — Telegram sandbox gate closed; ready for Phase 3C cutover gate |
+| **Status** | planned / implementation sandbox; Phase 3B.3 accepted |
+| **Active stage** | **Phase 3B.3 COMPLETE** — Telegram UX polish + final dev acceptance; ready for Phase 3C cutover gate |
 | **Runtime** | External n8n — Operational.dev / Admin.dev **inactive**; production Sales-Manager-v2 untouched |
 | **Live parity vs Sales-Manager-v2** | **PARITY** (Phase 3B / 3B.1 integrity) |
-| **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3B.2 evidence under `evidence/phase3b2/` |
+| **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3B.3 evidence under `evidence/phase3b3/` |
 | **Registry** | **REGISTERED** — `project_id` **iseo-sales-manager-bot** · status **planned** (unchanged; no production activation) |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
 | **Next** | **PHASE 3C** proposal review / cutover gate under a separate production charter |
@@ -104,6 +104,8 @@
 | 30 | [evidence/phase3b1/](evidence/phase3b1/) | Phase 3B.1 evidence |
 | 31 | [reports/REPORT-iseo-sales-manager-bot-phase3b2-runtime-fixes-and-telegram-sandbox-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3b2-runtime-fixes-and-telegram-sandbox-v1.md) | Phase 3B.2 |
 | 32 | [evidence/phase3b2/](evidence/phase3b2/) | Phase 3B.2 acceptance evidence |
+| 33 | [reports/REPORT-iseo-sales-manager-bot-phase3b3-telegram-ux-final-acceptance-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3b3-telegram-ux-final-acceptance-v1.md) | Phase 3B.3 |
+| 34 | [evidence/phase3b3/](evidence/phase3b3/) | Phase 3B.3 UX final acceptance evidence |
 
 ---
 
@@ -126,7 +128,8 @@
 | **Phase 3A.1** | Source ingest + sanitized baselines + reconciliation | **DONE** |
 | Phase 3B | Live read-only audit + Operational.dev / Admin.dev creation | **DONE** — inactive contour + v2 tabs; Telegram sandbox PENDING |
 | Phase 3B.1 | Telegram destination / preliminary acceptance | **DONE** |
-| Phase 3B.2 | Runtime fixes + Telegram sandbox acceptance | **DONE** — ready for Phase 3C cutover gate |
+| Phase 3B.2 | Runtime fixes + Telegram sandbox acceptance | **DONE** |
+| Phase 3B.3 | Telegram UX polish + final dev acceptance | **DONE** — ready for Phase 3C cutover gate |
 | Live | At most one Operational + one Admin; target-only diff | Forbidden until chartered |
 
 ---
@@ -154,4 +157,4 @@
 
 ---
 
-*Last updated: 2026-07-31 — Phase 3B.2 runtime fixes and Telegram sandbox acceptance.*
+*Last updated: 2026-07-31 — Phase 3B.3 Telegram UX polish and final dev acceptance.*

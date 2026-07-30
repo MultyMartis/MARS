@@ -48,20 +48,32 @@
 ## 4. Response format (Telegram)
 
 ```
-Healthcheck
+Проверка Sales Manager
 
-CONFIG: OK
-Gmail: OK
-RAW: OK
-CLEAN: OK
-ERRORS: OK
-Telegram admin: OK
-Last success: 30.07.2026 12:40
-Last lead: lead_…
-AI probe: SKIPPED (AI off)
+CONFIG: доступна
+RAW v2: доступна
+CLEAN v2: доступна
+LEAD_EVENTS: доступна
+ERRORS: доступна
+DEDUP_INDEX: доступна
+Gmail: привязка найдена, письма не читались
+Telegram sandbox: доступен
+Operational.dev: выключен, как и требуется
+Admin.dev: тестовый режим
+ИИ: выключен
+Проверка AI: не запускалась
 ```
 
-Use `FAIL (code)` / `WARN (code)` lines. End with overall `Итог: OK | WARN | FAIL`.
+Vocabulary:
+
+- **доступна** — actual safe read succeeded / accepted readable probe
+- **привязка найдена, … не читались** — structural reference only
+- **Ошибка** — validation failed
+- **выключен / отключено** — intentionally disabled
+
+Do not display internal tokens such as `readable_ref_ok`, `structural_ok_no_fetch`, `inactive_expected`.
+
+Use `FAIL (code)` / `WARN (code)` lines when a real check fails. End with overall `Итог: OK | WARN | FAIL` when a scored probe is used.
 
 ---
 

@@ -39,7 +39,21 @@ Exact response:
 | `/stats` | read | Rollup last N days (`stats_days_default` or arg) | Counts |
 | `/test_lead` | write (sandbox) | Inject/run synthetic fixture — **no real Gmail** | Result summary |
 | `/last_error` | read | Latest ERRORS row | Code + stage + time |
-| `/config` | read | Allowlisted non-secret keys summary | Key=value list |
+| `/config` | read | Allowlisted non-secret keys summary | Russian operator labels |
+
+### Phase 3B.3 operator-facing `/config` shape
+
+```
+Сводка CONFIG
+Контур: разработка
+Режим ИИ: выключен
+Версия парсера: sm-parser-v3
+Версия сообщений: sm-msg-v1
+Администраторов в allowlist: 1
+(секреты и идентификаторы скрыты)
+```
+
+Do not expose raw key tokens such as `environment:`, `aienabled:`, `parserversion:` in operator replies.
 
 ### Failure behavior (all)
 
