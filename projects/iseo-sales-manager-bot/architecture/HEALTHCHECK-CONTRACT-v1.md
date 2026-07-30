@@ -91,3 +91,8 @@ Operational writes `last_success_at`, `last_processed_*`, `last_error_*` into CO
 ---
 
 *Related: ADMIN-COMMAND-CONTRACT-v1 · CONFIGURATION-MODEL-v1.*
+
+
+### Phase 3B.4
+
+Harness health wording remains the accepted vocabulary. Real Telegram Trigger `/health` execution is still required for final Trigger acceptance.

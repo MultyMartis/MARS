@@ -99,6 +99,7 @@
 | 25 | [reports/REPORT-iseo-sales-manager-bot-phase3a-sanitized-baseline-and-implementation-package-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3a-sanitized-baseline-and-implementation-package-v1.md) | Phase 3A (historical) |
 | 26 | [reports/REPORT-iseo-sales-manager-bot-phase3a1-source-ingest-and-sanitized-baselines-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3a1-source-ingest-and-sanitized-baselines-v1.md) | Phase 3A.1 |
 | 27 | [reports/REPORT-iseo-sales-manager-bot-phase3b-live-audit-and-dev-contour-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3b-live-audit-and-dev-contour-v1.md) | Phase 3B |
+| Phase 3B.4 | Real Admin Trigger + runtime state | **ATTENTION** — runtime/stats/error PASS; real Trigger NOT CONFIRMED |
 | 28 | [evidence/phase3b/](evidence/phase3b/) | Phase 3B evidence |
 | 29 | [reports/REPORT-iseo-sales-manager-bot-phase3b1-telegram-sandbox-and-dev-acceptance-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3b1-telegram-sandbox-and-dev-acceptance-v1.md) | Phase 3B.1 |
 | 30 | [evidence/phase3b1/](evidence/phase3b1/) | Phase 3B.1 evidence |

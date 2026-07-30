@@ -82,3 +82,11 @@ Telegram Trigger vs Webhook; shared bot with manager cards vs separate admin bot
 ---
 
 *Related: ADMIN-SOURCE-SELECTION-v1 · ADMIN-COMMAND-CONTRACT-v1 · HEALTHCHECK-CONTRACT-v1.*
+
+
+## Phase 3B.4 patch notes
+
+- Enable Telegram Trigger (`disabled=false`) for acceptance windows only; final active=false.
+- Stats: Route → Read CLEAN for Stats → Stats (bounded SYNTHETIC_TEST).
+- AI on/off: AI On/Off → Prepare Config Write → Apply CONFIG Write (appendOrUpdate) → Restore Reply → Capture → Safe Telegram Reply.
+- Normalize Command accepts Telegram Trigger root updates and webhook `body` wrappers.

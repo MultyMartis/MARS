@@ -2,21 +2,10 @@
 
 ## Decision
 
-**READY FOR PHASE 3C CUTOVER GATE — proposal only; not applied.**
+**NOT READY FOR PHASE 3C CUTOVER GATE** — blocked on real Telegram Trigger acceptance (Phase 3B.4 ATTENTION).
 
-Updated after Phase 3B.3 Telegram UX polish and final dev acceptance.
-
-## Recommended cutover
-
-1. Activate accepted Operational.dev and deactivate the original in the same approved window.
-2. Do not patch the original in place.
-3. Keep Admin activation as a separate decision.
-4. Enforce Gmail race prevention: exactly one scheduled intake owner and explicit incoming-label ownership.
-5. At cutover, set `environment=production` with `ai_enabled=false` initially.
-6. Keep the original inactive as the immediate rollback option.
-7. Confirm Telegram manager destination and Admin allowlist before activation.
-8. Retain Phase 3B.3 UX formatter and no-contact rules as the production card contract.
+Runtime success state, error stage classification, and bounded stats are implemented, but the operator private-chat Trigger path was not evidenced during the temporary Admin.dev activation window.
 
 ## Boundary
 
-No production cutover, original deactivation, real Gmail processing, or client communication occurred in Phase 3B.2 or Phase 3B.3.
+No production cutover performed. Original Sales-Manager-v2 unchanged and active.

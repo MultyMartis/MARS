@@ -133,3 +133,8 @@ Explicit unknown-command node — do not silent-drop.
 ---
 
 *Related: CONFIGURATION-MODEL-v1 · HEALTHCHECK-CONTRACT-v1 · TWO-WORKFLOW-ARCHITECTURE-v1.*
+
+
+### Phase 3B.4 stats shape
+
+`/stats` returns bounded 7-day SYNTHETIC_TEST counts (not placeholder text). Runtime success appears on `/status` via CONFIG ops keys. `/last_error` maps `telegram_send` → «отправка карточки в Telegram».

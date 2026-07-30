@@ -110,3 +110,8 @@ Evidence required: n8n execution shows **0** HTTP OpenRouter calls on AI OFF run
 ---
 
 *Related: SANDBOX-TEST-PLAN-v1 · SANDBOX-APPLY-GATE-v1.*
+
+
+## Phase 3B.4
+
+Harness webhook injection remains valid for reply-shape and unauthorized tests. It is **not** a substitute for real Telegram Trigger acceptance evidence.

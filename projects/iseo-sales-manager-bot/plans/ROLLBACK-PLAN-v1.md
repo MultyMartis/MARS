@@ -76,3 +76,8 @@ Notify Admin chat: rollback executed, AI forced OFF, intake paused if needed.
 ---
 
 *Related: N8N-CHANGE-PLAN-v1 · CONFIGURATION-MODEL-v1.*
+
+
+## Phase 3B.4 activation note
+
+Admin.dev may be temporarily activated with Telegram Trigger enabled for operator-private command acceptance. Always deactivate Admin.dev after the window. Do not activate Operational.dev for that test. Production Sales-Manager-v2 remains the sole active intake owner until an explicit cutover charter.
