@@ -207,7 +207,7 @@ Primary scoped commit: `527c363cd7c3c5da4e6257c131533d128109bd34`.
 
 ## 28. Push
 
-Pushed to `origin/mars/canonical-post-recovery` (no force). Hash recorded after push.
+Pushed to `origin/mars/canonical-post-recovery` (no force). Tip: `25b605335913480d7d0c00ebca6dc8c36dbd0731`.
 
 ## 29. Risks
 
