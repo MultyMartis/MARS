@@ -174,11 +174,11 @@ Clean worktree from `origin/mars/canonical-post-recovery`. Dirty main index unto
 
 ## 25. Commit
 
-`fix(iseo-sales-manager-bot): polish active admin workflow` (this wave)
+`003f20bc` — `fix(iseo-sales-manager-bot): polish active admin workflow`
 
 ## 26. Push
 
-Push to `origin/mars/canonical-post-recovery` (no force).
+Pushed to `origin/mars/canonical-post-recovery` (`8d911b9a..003f20bc`). No force.
 
 ## 27. Risks
 
