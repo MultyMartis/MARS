@@ -2,7 +2,7 @@
 
 **Status:** living state document — **not** automated router  
 **Last updated:** 2026-07-30
-**Evidence cutoff:** 2026-07-30 (SITE-002 Run **4.318** / `SITE-002-PROD-POST-IMAGE-WAVE-VISUAL-ACCEPTANCE-AND-1C-HEALTHCHECK-01` — Run **4.317** visually accepted; no further image/copy apply; latest 1C import **2026-07-29 SUCCESS**; **2026-07-30** morning import not yet run before schedule; sitemap/monitor baseline **1879** clean)
+**Evidence cutoff:** 2026-07-30 (SITE-002 Run **4.319** / `SITE-002-PROD-1C-FIRST-LEVEL-CATEGORY-PLACEMENT-FORENSIC-01` — natural import **2026-07-30 SUCCESS**; target first-level categories **PARTIAL**; Посуда **364** under Tech **362**; Холодильное legacy empty **95**; Упаковочное absent; sitemap count **1879**; monitor hygiene review for 1 URL swap; apply not executed)
 **Frozen snapshot (2026-06-01):** [freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md](freeze/site-001-pre-runtime-bridge/OCPILOT-STATE-SUMMARY-v1.md)
 
 ---
@@ -16,7 +16,7 @@
 | First project site | **SITE-001** — Автосалон СИБКАР (TEST) |
 | Second project site | **SITE-002** — ЗПМ — **PRODUCTION REGISTERED** (`https://bzpm.ru/`) · TEST history complete on `https://zpm.new-site.space/` |
 | Current SITE-001 focus | **WF-V2-W2 Flat Used PDP DONE** on TEST (2026-06-10); [SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-EXECUTION-v1.md) · [SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md](sites/site-001/reports/SITE-001-WFV2-W2-FLAT-PDP-DECISION-v1.md); automated **PASS**; operator visual HITL **PENDING**; WF-V2-W3 **NOT AUTHORIZED**; backup `pre-wfv2-w2-flat-pdp-20260610-0304` |
-| Current SITE-002 focus | **Post Image Wave Visual Acceptance + 1C Healthcheck 01 (Run 4.318)** — Run **4.317** **VISUALLY ACCEPTED**; no further image/copy apply · latest natural import `2026-07-29` **SUCCESS**; wait for **2026-07-30** morning import (not yet due at `00:50+07`) · sitemap/monitor **1879** `NO_ACTION_REQUIRED` · [healthcheck 4.318](sites/site-002/reports/SITE-002-PROD-POST-IMAGE-WAVE-VISUAL-ACCEPTANCE-AND-1C-HEALTHCHECK-01.md) · [empty-copy+images 4.317](sites/site-002/reports/SITE-002-PROD-EMPTY-CATEGORY-COPY-RELOCATE-AND-NEW-FIRSTLEVEL-IMAGES-01.md) · [all15 correction 4.316](sites/site-002/reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-ALL15-CORRECTION-APPLY-01.md) · [baseline refresh 4.312](sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-08.md) |
+| Current SITE-002 focus | **1C First-Level Category Placement Forensic 01 (Run 4.319)** — import `2026-07-30` **SUCCESS**; targets **PARTIAL** (Посуда **364** under Tech **362**; Холодильное legacy empty **95**; Упаковочное absent) · next **operator scope decision** (no apply yet) · sitemap count **1879**; monitor `2026-07-30_12-30-02` hygiene URL swap · [forensic 4.319](sites/site-002/reports/SITE-002-PROD-1C-FIRST-LEVEL-CATEGORY-PLACEMENT-FORENSIC-01.md) · [healthcheck 4.318](sites/site-002/reports/SITE-002-PROD-POST-IMAGE-WAVE-VISUAL-ACCEPTANCE-AND-1C-HEALTHCHECK-01.md) · [empty-copy+images 4.317](sites/site-002/reports/SITE-002-PROD-EMPTY-CATEGORY-COPY-RELOCATE-AND-NEW-FIRSTLEVEL-IMAGES-01.md) · [baseline refresh 4.312](sites/site-002/reports/SITE-002-MONITOR-BASELINE-REFRESH-08.md) |
 
 ### Git authority note (SITE-002 Wave E — 2026-07-10)
 

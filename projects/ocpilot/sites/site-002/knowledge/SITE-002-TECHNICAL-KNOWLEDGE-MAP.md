@@ -17,7 +17,7 @@
 | **Catalog default sort (Production)** | **COMPLETE** — Run 4.176; default `pd.name ASC` in `category.php` |
 | **Catalog sort menu (Production)** | **COMPLETE** — Run 4.177; menu order in `category.twig`; «Умолчанию» removed |
 | **MARS 1C cron wrapper (Production)** | **OPERATIONAL — FIRST SCHEDULED RUN VERIFIED** — Run 4.194; automatic run SUCCESS 2026-07-06 08:00 Moscow; daily import OPERATIONAL |
-| **MARS 1C cron reports (Production)** | **CURRENT** — latest completed natural import `mars_1c_import_2026-07-29_080009.txt` / `mars-20260729-080001-1218cd7f` **SUCCESS** (Run **4.318**); **2026-07-30** morning import not yet due when checked before schedule · [healthcheck 4.318](../reports/SITE-002-PROD-POST-IMAGE-WAVE-VISUAL-ACCEPTANCE-AND-1C-HEALTHCHECK-01.md) |
+| **MARS 1C cron reports (Production)** | **CURRENT** — latest completed natural import `mars_1c_import_2026-07-30_080011.txt` / `mars-20260730-080002-810087c7` **SUCCESS** (Run **4.319**) · [forensic 4.319](../reports/SITE-002-PROD-1C-FIRST-LEVEL-CATEGORY-PLACEMENT-FORENSIC-01.md) · prior [healthcheck 4.318](../reports/SITE-002-PROD-POST-IMAGE-WAVE-VISUAL-ACCEPTANCE-AND-1C-HEALTHCHECK-01.md) |
 | **Catalog structure / 1C category mapping (Production)** | **POST-IMPORT PERSISTENCE CONFIRMED** (Run **4.299**) — natural imports SUCCESS after Run **4.297** GUID/path patch; critical stay **378/379/380/376**; map table **7/7** active; **demo Group A 154–170 deleted (Run 4.303)**; **legacy parent 153 deleted (Run 4.306)**; no redirects; sitemap live **1879**; monitor baseline file **1879** (Run **4.312**); first-level **ALL-15** (Run **4.316**) + empty-copy relocate/images (Run **4.317**, visually accepted Run **4.318** — PLP-only copy; images **82/83/85/87/89**; mega/deep/tech unchanged; HYBRID **4.314/4.315** historical); empty review **4.308**; HITL triage **4.309** · [healthcheck 4.318](../reports/SITE-002-PROD-POST-IMAGE-WAVE-VISUAL-ACCEPTANCE-AND-1C-HEALTHCHECK-01.md) · [empty-copy+images 4.317](../reports/SITE-002-PROD-EMPTY-CATEGORY-COPY-RELOCATE-AND-NEW-FIRSTLEVEL-IMAGES-01.md) · [all15 correction 4.316](../reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-ALL15-CORRECTION-APPLY-01.md) · [closeout 4.315](../reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-HYBRID-CLOSEOUT-01.md) · [hybrid apply 4.314](../reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-HYBRID-APPLY-01.md) · [scope decision 4.313](../reports/SITE-002-PROD-FIRST-LEVEL-BLOCK-SCOPE-DECISION-01.md) · [baseline refresh 4.312](../reports/SITE-002-MONITOR-BASELINE-REFRESH-08.md) · [HITL triage 4.309](../reports/SITE-002-PROD-EMPTY-CATEGORIES-HITL-TRIAGE-01.md) · [persistence check](../reports/SITE-002-PROD-1C-POST-IMPORT-PERSISTENCE-CHECK-01.md) · [importer patch](../reports/SITE-002-PROD-1C-IMPORTER-GUID-PATH-PATCH-01.md) |
 
 **TEST-derived knowledge classification:** Implementation evidence and reusable technical knowledge. **Not** automatic proof of current Production parity.
@@ -2467,3 +2467,13 @@ page page--product category-root-{root_id} category-parent-{parent_id}
 - Sitemap **1879**; monitor `2026-07-29_12-30-02` **NO_ACTION_REQUIRED**; critical **5/5**; images **5/5**; map **7/7** active.
 - Next: `WAIT_FOR_TODAY_MORNING_IMPORT`.
 - Report: [SITE-002-PROD-POST-IMAGE-WAVE-VISUAL-ACCEPTANCE-AND-1C-HEALTHCHECK-01.md](../reports/SITE-002-PROD-POST-IMAGE-WAVE-VISUAL-ACCEPTANCE-AND-1C-HEALTHCHECK-01.md).
+
+### 1C first-level category placement forensic (Run 4.319)
+
+- Verdict: **ATTENTION — TARGETS PARTIAL**.
+- Natural import `mars_1c_import_2026-07-30_080011.txt` / `mars-20260730-080002-810087c7` **SUCCESS**.
+- XML top-level groups: Neutral + Tech only — exact targets `Холодильное` / `Посуда и инвентарь` / `Упаковочное` **absent** as groups.
+- DB: Посуда **364** under Tech **362** (6 disabled products); Холодильное legacy empty root **95**; Упаковочное **absent**.
+- Sitemap count **1879**; monitor `2026-07-30_12-30-02` `HYGIENE_REVIEW_REQUIRED` (1 URL swap; onboarding **0**).
+- Apply **not** executed; next `NEEDS_OPERATOR_SCOPE_DECISION`.
+- Report: [SITE-002-PROD-1C-FIRST-LEVEL-CATEGORY-PLACEMENT-FORENSIC-01.md](../reports/SITE-002-PROD-1C-FIRST-LEVEL-CATEGORY-PLACEMENT-FORENSIC-01.md).
