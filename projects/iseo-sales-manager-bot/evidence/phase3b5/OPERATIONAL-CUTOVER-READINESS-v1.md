@@ -2,7 +2,7 @@
 
 ## Decision
 
-**READY FOR PHASE 3C CUTOVER GATE** (explicit operator approval still required).
+**PHASE 3C EXECUTED** — see `evidence/phase3c/` and Phase 3C REPORT (first real lead acceptance still PENDING).
 
 ## Non-operational blockers closed
 

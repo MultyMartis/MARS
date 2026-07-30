@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3B.5 — Admin.dev **active**, polish accepted; `/test_lead` deferred; **READY FOR PHASE 3C CUTOVER GATE** (explicit approval required)
+**Status:** Phase 3C — Operational.dev **active** (production intake, AI OFF); Sales-Manager-v2 **inactive** rollback source; Admin.dev **active**; first real lead acceptance **PENDING**
 
 ---
 
@@ -73,19 +73,22 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 
 ## Not claimed
 
-- Live n8n parity with Sales-Manager-v2 (**SAFE UNKNOWN** without fresh live attestation).
-- Implemented runtime inside MARS.
+- Implemented runtime inside MARS (execution remains external n8n).
 - Full CRM / OPS-as-CRM.
 - Auto-reply to clients.
-- Created `.dev` workflow copies, Sheets v2 tabs, or live Admin/Operational graphs.
+- First real production lead acceptance (Phase 3C.1 **PENDING**).
+- AI ON in production (remains OFF until explicit charter).
 
-**Resolved in Phase 3A.1:** sanitized Sales-Manager-v1/v2 JSON baselines and XLSX-derived schema baselines are present under `baselines/`.
+**Resolved in Phase 3A.1:** sanitized Sales-Manager-v1/v2 JSON baselines and XLSX-derived schema baselines are present under `baselines/`.  
+**Resolved in Phase 3C:** Operational.dev is the active production intake (AI OFF); Sales-Manager-v2 preserved inactive as rollback source; Admin.dev remains active.
 
 ---
 
 ## Next gate
 
-**PHASE 3C — PRODUCTION PROPOSAL REVIEW AND CUTOVER GATE** — requires a separate explicit production charter; no cutover was performed in Phase 3B.2.
+**PHASE 3C.1 — FIRST REAL LEAD OBSERVATION AND PRODUCTION ACCEPTANCE**
+
+Do not enable AI, delete Sales-Manager-v2, or begin Olya handoff without first-real-lead evidence.
 
 Operator source drop path (raw retained): `X:\AI MARS STORAGE\incoming\iseo-sales-manager-bot\raw\`
 
@@ -94,4 +97,5 @@ Operator source drop path (raw retained): `X:\AI MARS STORAGE\incoming\iseo-sale
 *Phase 2 charter: ISEO-SALES-MANAGER-BOT — PHASE 2 ARCHITECTURE AND DATA MODEL (2026-07-30).*  
 *Phase 2R: project registration + documentation checkpoint (2026-07-30).*  
 *Phase 3A: sanitized baseline gate + MetaBOT Programmer implementation package (2026-07-30).*  
-*Phase 3A.1: source ingest + sanitized baselines (2026-07-30).*
+*Phase 3A.1: source ingest + sanitized baselines (2026-07-30).*  
+*Phase 3C: operational production cutover AI OFF (2026-07-31).*

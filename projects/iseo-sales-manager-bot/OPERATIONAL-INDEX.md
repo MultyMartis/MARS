@@ -11,14 +11,14 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | planned / implementation sandbox; Phase 3B.5 Admin polish complete (`/test_lead` deferred) |
-| **Active stage** | **Phase 3B.5 COMPLETE WITH TEST_LEAD DEFERRED** — Admin.dev active; Operational.dev inactive; ready for Phase 3C gate |
-| **Runtime** | External n8n — Admin.dev **active** (ops surface); Operational.dev **inactive**; production Sales-Manager-v2 untouched |
-| **Live parity vs Sales-Manager-v2** | **PARITY** (Phase 3B / 3B.1 integrity) |
-| **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3B.3 evidence under `evidence/phase3b3/` |
-| **Registry** | **REGISTERED** — `project_id` **iseo-sales-manager-bot** · status **planned** (unchanged; no production activation) |
+| **Status** | planned (registry unchanged) / **production cutover complete**; first real lead acceptance **PENDING** |
+| **Active stage** | **Phase 3C COMPLETE — FIRST REAL LEAD ACCEPTANCE PENDING** — Operational.dev active (AI OFF); Sales-Manager-v2 inactive rollback source; Admin.dev active |
+| **Runtime** | External n8n — Operational.dev **active** (sole Gmail intake); Admin.dev **active**; Sales-Manager-v2 **inactive** |
+| **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive |
+| **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C evidence under `evidence/phase3c/` |
+| **Registry** | **REGISTERED** — `project_id` **iseo-sales-manager-bot** · status **planned** (unchanged; separate registry gate not opened) |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
-| **Next** | **PHASE 3C — OPERATIONAL PRODUCTION CUTOVER GATE** (explicit operator approval) |
+| **Next** | **PHASE 3C.1 — FIRST REAL LEAD OBSERVATION AND PRODUCTION ACCEPTANCE** |
 
 ---
 
@@ -107,6 +107,8 @@
 | 32 | [evidence/phase3b2/](evidence/phase3b2/) | Phase 3B.2 acceptance evidence |
 | 33 | [reports/REPORT-iseo-sales-manager-bot-phase3b3-telegram-ux-final-acceptance-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3b3-telegram-ux-final-acceptance-v1.md) | Phase 3B.3 |
 | 34 | [evidence/phase3b3/](evidence/phase3b3/) | Phase 3B.3 UX final acceptance evidence |
+| 35 | [reports/REPORT-iseo-sales-manager-bot-phase3c-operational-production-cutover-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3c-operational-production-cutover-v1.md) | Phase 3C |
+| 36 | [evidence/phase3c/](evidence/phase3c/) | Phase 3C cutover evidence |
 
 ---
 
@@ -130,8 +132,11 @@
 | Phase 3B | Live read-only audit + Operational.dev / Admin.dev creation | **DONE** — inactive contour + v2 tabs; Telegram sandbox PENDING |
 | Phase 3B.1 | Telegram destination / preliminary acceptance | **DONE** |
 | Phase 3B.2 | Runtime fixes + Telegram sandbox acceptance | **DONE** |
-| Phase 3B.3 | Telegram UX polish + final dev acceptance | **DONE** — ready for Phase 3C cutover gate |
-| Live | At most one Operational + one Admin; target-only diff | Forbidden until chartered |
+| Phase 3B.3 | Telegram UX polish + final dev acceptance | **DONE** |
+| Phase 3B.4 / 3B.4.1 / 3B.5 | Real Admin Trigger + polish + cutover readiness | **DONE** |
+| **Phase 3C** | Operational production cutover (AI OFF) | **DONE** — first real lead **PENDING** |
+| Phase 3C.1 | First real lead observation / production acceptance | **NEXT** |
+| Live rename / Olya handoff | After first-real-lead acceptance | Forbidden until chartered |
 
 ---
 
@@ -158,4 +163,4 @@
 
 ---
 
-*Last updated: 2026-07-31 — Phase 3B.3 Telegram UX polish and final dev acceptance.*
+*Last updated: 2026-07-31 — Phase 3C operational production cutover (AI OFF; first real lead PENDING).*

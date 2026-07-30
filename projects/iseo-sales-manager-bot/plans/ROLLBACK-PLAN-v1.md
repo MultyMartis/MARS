@@ -9,7 +9,7 @@
 ## 1. Scope
 
 Rollback covers sandbox/production n8n + Sheets schema experiments.  
-**Phase 3B–3B.2 facts:** production rollback source remains live `Sales-Manager-v2` (`h8I2Tl2yl4uzhUnB`, active). Dev copies: `i-SEO Sales Manager - Operational.dev` (`xSnXPy8cEHoZw6xG`) and `i-SEO Sales Manager - Admin.dev` (`wLrLp4WQHm1VJmxz`) — both inactive after Phase 3B.2 acceptance. Phase 3B.2 refreshed native Sheets mappings, removed the Parse Lead crypto runtime dependency, and closed Telegram sandbox acceptance; it performed no production cutover. Pre-dev raw backup under Storage `incoming/iseo-sales-manager-bot/backups/pre-dev-copy/`. Synthetic `SYNTHETIC_TEST` rows in v2 tabs are sandbox evidence (preserve unless a destructive charter names exact rows).
+**Phase 3C facts (2026-07-31):** production intake owner is `i-SEO Sales Manager - Operational.dev` (`xSnXPy8cEHoZw6xG`, active, AI OFF). Rollback source is inactive `Sales-Manager-v2` (`h8I2Tl2yl4uzhUnB`). Admin.dev (`wLrLp4WQHm1VJmxz`) remains active. Pre-cutover raw backups under Storage `incoming/iseo-sales-manager-bot/phase3c-local/backups/`. Synthetic `SYNTHETIC_TEST` rows in v2 tabs remain sandbox evidence (preserve unless a destructive charter names exact rows).
 
 ---
 
@@ -38,13 +38,25 @@ Naming: `backup-YYYYMMDD-HHMM-operational.dev.json` (local).
 
 ---
 
-## 4. Rollback steps (n8n)
+## 4. Rollback steps (n8n) — Phase 3C production cutover
 
-1. **Disable** broken .dev/prod workflow (active=false).
+If Operational.dev must be rolled back after Phase 3C:
+
+1. **Disable** Operational.dev (`xSnXPy8cEHoZw6xG`, active=false); verify inactive.
+2. Restore CONFIG: `environment=dev` (or rollback marker), `ai_enabled=false`, `operational_workflow_active=false`, keep `admin_workflow_active=true`.
+3. **Reactivate** Sales-Manager-v2 (`h8I2Tl2yl4uzhUnB`); verify active.
+4. Verify only Sales-Manager-v2 processes Gmail (Operational.dev inactive).
+5. Keep Admin.dev active.
+6. Record failure + `evidence/phase3c/PHASE3C-ROLLBACK-RECEIPT-v1.md`.
+7. Do **not** retry cutover automatically.
+
+General sandbox restore (non-cutover):
+
+1. **Disable** broken .dev workflow (active=false).
 2. Re-import **last known good** export (or restore prior version in n8n UI).
 3. Verify credentials still attached (active state drift check).
 4. Confirm CONFIG `ai_enabled=false` until stable.
-5. Smoke: `/health` + one synthetic `/test_lead` in dev only.
+5. Smoke: `/health` (+ deferred `/test_lead` only when explicitly gated).
 6. Record LEAD_EVENTS / REPORT evidence.
 
 Do **not** `robocopy /MIR` or wipe Sheets. Prefer forward-fix schema with legacy tabs retained.
@@ -84,4 +96,8 @@ Admin.dev may be temporarily activated with Telegram Trigger enabled for operato
 
 ## Phase 3B.5 note
 
-Admin.dev may remain **active** after polish acceptance (ops surface). Prefer deactivate → code-only PUT → reactivate when patching an active Admin graph; restore pre-patch export if Telegram Trigger registration fails. Production Sales-Manager-v2 remains sole intake owner until Phase 3C.
+Admin.dev may remain **active** after polish acceptance (ops surface). Prefer deactivate → code-only PUT → reactivate when patching an active Admin graph; restore pre-patch export if Telegram Trigger registration fails.
+
+## Phase 3C note
+
+Operational.dev is the sole Gmail intake owner after cutover. Sales-Manager-v2 must remain inactive unless this rollback sequence is executed. Do not run both operational workflows active in parallel. Recommended later display names (after stable acceptance): `i-SEO Sales Manager - Operational` / `i-SEO Sales Manager - Admin`.

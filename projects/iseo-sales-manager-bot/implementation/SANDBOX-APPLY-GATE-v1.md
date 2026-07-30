@@ -15,11 +15,12 @@ Phase 3B.2 closed the Telegram sandbox gate with private-operator binding, nine 
 
 **Phase 3B documentation/dev contour:** DONE.  
 **Phase 3B.2 Telegram delivery:** **CLOSED** — private operator sandbox accepted; no production manager-group send.
-**Production promotion gate:** remains **closed**.
+**Phase 3B.5:** Admin polish accepted; Admin.dev may remain active; cutover readiness **READY**.
+**Phase 3C production cutover:** **EXECUTED** (2026-07-31) — Operational.dev active (AI OFF); Sales-Manager-v2 inactive rollback source; first real lead acceptance **PENDING**.
 
 Recommended next phase name:
 
-**PHASE 3C — PRODUCTION PROPOSAL REVIEW AND CUTOVER GATE** (only after operator approves sandbox destination and reviews proposal)
+**PHASE 3C.1 — FIRST REAL LEAD OBSERVATION AND PRODUCTION ACCEPTANCE**
 
 ---
 
