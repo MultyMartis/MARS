@@ -110,11 +110,11 @@ Clean worktree from `origin/mars/canonical-post-recovery`. Main foreign WIP / st
 
 ## 23. Commit
 
-(filled after git)
+Primary: `e2cfb52d71165e2455a8f421a2138a95c7a11a14` — `test(iseo-sales-manager-bot): complete phase 3b1 sandbox acceptance`
 
 ## 24. Push
 
-(filled after git)
+Pushed to `origin/mars/canonical-post-recovery` at `e2cfb52d71165e2455a8f421a2138a95c7a11a14` (fast-forward; no force).
 
 ## 25. Risks
 
