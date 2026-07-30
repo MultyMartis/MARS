@@ -1,0 +1,2309 @@
+{
+  "updatedAt": "2026-07-30T21:12:33.190Z",
+  "createdAt": "2026-07-29T21:52:50.793Z",
+  "id": "wLrLp4WQHm1VJmxz",
+  "name": "i-SEO Sales Manager - Admin.dev",
+  "description": null,
+  "active": true,
+  "isArchived": false,
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "id": "ce1bb729-ab97-4d7d-9123-0bd9c2d62a5f",
+      "name": "Telegram Trigger",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        180,
+        300
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "LLDQtI4EEjz3eR1w",
+          "name": "Telegram account - Sales Manager for i-SEO"
+        }
+      },
+      "disabled": false,
+      "webhookId": "c88a9574-f0cc-4881-8067-0c4b67564870"
+    },
+    {
+      "parameters": {},
+      "id": "69024abd-f7c2-444c-a167-2ba6d1f1849c",
+      "name": "Manual Admin Synthetic Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        180,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const j = $input.first().json;\r\n// Telegram Trigger: update at root. Harness webhook may wrap under .body\r\nconst root = (j && j.body && (j.body.message || j.body.text)) ? j.body : j;\r\nconst msg = root.message || root;\r\nconst text = String(msg.text || root.text || j.text || '').trim();\r\nconst from = msg.from || root.from || j.from || {};\r\nconst chat = msg.chat || root.chat || j.chat || {};\r\n\r\n// Only the first token is the command; args never match privileged routes.\r\nconst parts = text.split(/\\s+/).filter(Boolean);\r\nlet rawCmd = (parts[0] || '').trim();\r\n// Strip optional @bot_username suffix (Telegram group form)\r\nrawCmd = rawCmd.split('@')[0];\r\nrawCmd = rawCmd.toLowerCase();\r\n\r\nconst ALIASES = {\r\n  '/aistatus': '/ai_status',\r\n  '/lasterror': '/last_error',\r\n  '/aion': '/ai_on',\r\n  '/aioff': '/ai_off',\r\n  '/foobarunknown': '/foobar_unknown',\r\n};\r\n\r\nconst command = ALIASES[rawCmd] || rawCmd;\r\nconst args = parts.slice(1);\r\n\r\nreturn [{ json: {\r\n  command,\r\n  command_raw: rawCmd,\r\n  args,\r\n  text,\r\n  user_id: String(from.id || root.user_id || j.user_id || ''),\r\n  username: from.username || '',\r\n  chat_id: String(chat.id || root.chat_id || j.chat_id || ''),\r\n  raw_ok: Boolean(text),\r\n}}];\r\n"
+      },
+      "id": "40bcbdda-b4d6-4fde-a302-4639a5ef6059",
+      "name": "Normalize Command",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        400,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "value": "1aeIWHeaqHwgJSKLCFZP8M4qG5y9qmOcPt6rvSWsltRU",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "CONFIG",
+          "mode": "name",
+          "cachedResultName": "CONFIG"
+        },
+        "options": {}
+      },
+      "id": "e19a5aa3-140e-4693-9507-5c3a22362af5",
+      "name": "Read Authorization Config",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        620,
+        300
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "nRfNJVn6SEziII8k",
+          "name": "Google Sheets account (Multy Martis)"
+        }
+      },
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "jsCode": "const lead = $('Normalize Command').first().json;\r\nconst rows = $('Read Authorization Config').all().map((i) => i.json);\r\nconst map = {};\r\nfor (const r of rows) {\r\n  if (r.key != null) map[String(r.key)] = String(r.value ?? '');\r\n}\r\nconst allow = String(map.admin_user_ids || '')\r\n  .split(/[,;\\s]+/)\r\n  .map((s) => s.trim())\r\n  .filter(Boolean);\r\nconst authorized = allow.length === 0 ? false : allow.includes(String(lead.user_id));\r\n\r\n// Read CONFIG emits one item per row; emit authorization decision only once.\r\nconst thisKey = String(($input.first().json && $input.first().json.key) || '');\r\nconst firstKey = rows[0] ? String(rows[0].key) : '';\r\nif (rows.length > 1 && thisKey && firstKey && thisKey !== firstKey) {\r\n  return [];\r\n}\r\n\r\nreturn [{\r\n  json: {\r\n    ...lead,\r\n    config_map: map,\r\n    authorized,\r\n    environment: map.environment || 'dev',\r\n    ai_enabled: map.ai_enabled === 'true',\r\n  },\r\n}];\r\n",
+        "mode": "runOnceForAllItems"
+      },
+      "id": "b92c1ba7-ee82-44fe-8636-25d97a160782",
+      "name": "Check User Authorization",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        840,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "453e1fe2-d4dd-4984-a4c1-bcc973f4d775",
+              "leftValue": "={{$json.authorized}}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "ac53254e-d568-44d0-811a-96594c633b95",
+      "name": "IF Authorized",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        960,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "outputKey": "help",
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "b4d9d18c-4ff7-4a2f-bfbd-b7e7883b8547",
+                    "leftValue": "={{$json.command}}",
+                    "rightValue": "/help",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "outputKey": "status",
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "240b99d2-2c02-40bf-b917-79c6adf44a48",
+                    "leftValue": "={{$json.command}}",
+                    "rightValue": "/status",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "outputKey": "ai_status",
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "a5c988f5-a8ef-46d7-ab54-9923e3a577f6",
+                    "leftValue": "={{$json.command}}",
+                    "rightValue": "/ai_status",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "outputKey": "ai_on",
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "d558e642-2c99-4126-b7d2-7c691f8ed6d5",
+                    "leftValue": "={{$json.command}}",
+                    "rightValue": "/ai_on",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "outputKey": "ai_off",
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "05e47aa3-afe1-44de-b2f1-18a99d4deef7",
+                    "leftValue": "={{$json.command}}",
+                    "rightValue": "/ai_off",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "outputKey": "health",
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "4aaec99f-0e0a-4ada-8ccc-2a34c6131846",
+                    "leftValue": "={{$json.command}}",
+                    "rightValue": "/health",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "outputKey": "stats",
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "d09cc3f7-b166-40b4-9e46-885672a5ffb9",
+                    "leftValue": "={{$json.command}}",
+                    "rightValue": "/stats",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "outputKey": "test_lead",
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "aa1eb889-8df8-4131-b3b9-2e24545a3f36",
+                    "leftValue": "={{$json.command}}",
+                    "rightValue": "/test_lead",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "outputKey": "last_error",
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "65b0cf5c-2b00-443f-a986-bcb6a461eeb2",
+                    "leftValue": "={{$json.command}}",
+                    "rightValue": "/last_error",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "outputKey": "config",
+              "conditions": {
+                "options": {
+                  "caseSensitive": false,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "c0238503-843f-48d1-9acf-e029ae96d1de",
+                    "leftValue": "={{$json.command}}",
+                    "rightValue": "/config",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra"
+        }
+      },
+      "id": "07a23a4d-8e62-4b67-8323-2083785ef0b4",
+      "name": "Route Command",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        1060,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{ json: { ...$input.first().json, reply_text: [\r\n  'Команды Sales Manager Admin',\r\n  '',\r\n  'Состояние:',\r\n  '/status — состояние процессов',\r\n  '/health — проверка зависимостей',\r\n  '/stats — статистика за 7 дней',\r\n  '/last_error — последняя ошибка',\r\n  '',\r\n  'ИИ:',\r\n  '/ai_status — текущий режим',\r\n  '/ai_on — включить ИИ',\r\n  '/ai_off — выключить ИИ',\r\n  '',\r\n  'Настройки:',\r\n  '/config — безопасная сводка',\r\n  '/help — список команд',\r\n].join('\\n') } }];\r\n"
+      },
+      "id": "7b4dd6be-f0a8-41ad-98a6-5098272d36bf",
+      "name": "Help",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1300,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const j = $input.first().json;\r\nconst m = j.config_map || {};\r\n\r\nfunction formatMoscow(v) {\r\n  const s = String(v || '').trim();\r\n  if (!s) return '—';\r\n  const d = new Date(s);\r\n  if (Number.isNaN(d.getTime())) return '—';\r\n  const parts = new Intl.DateTimeFormat('ru-RU', {\r\n    timeZone: 'Europe/Moscow',\r\n    day: '2-digit',\r\n    month: '2-digit',\r\n    year: 'numeric',\r\n    hour: '2-digit',\r\n    minute: '2-digit',\r\n    hour12: false,\r\n  }).formatToParts(d);\r\n  const get = (t) => parts.find((p) => p.type === t)?.value || '';\r\n  return `${get('day')}.${get('month')}.${get('year')} ${get('hour')}:${get('minute')} МСК`;\r\n}\r\n\r\nfunction envKey() {\r\n  return String(m.environment || 'dev').toLowerCase();\r\n}\r\n\r\nfunction isProd() {\r\n  const k = envKey();\r\n  return k === 'production' || k === 'prod';\r\n}\r\n\r\nfunction contourRu() {\r\n  if (isProd()) return 'рабочий контур';\r\n  const map = { dev: 'разработка', development: 'разработка', sandbox: 'песочница' };\r\n  return map[envKey()] || 'разработка';\r\n}\r\n\r\nconst ai = (m.ai_enabled === 'true' || m.ai_enabled === true) ? 'включён' : 'выключен';\r\nconst successTs = formatMoscow(m.last_success_at);\r\nconst errorTs = formatMoscow(m.last_error_at);\r\n\r\n// Dev contour: synthetic runtime state only. Production: real fields; exclude synthetic wording.\r\nlet lines;\r\nif (!isProd()) {\r\n  lines = [\r\n    'Статус Sales Manager',\r\n    '',\r\n    'Контур: ' + contourRu(),\r\n    'Рабочий процесс: выключен',\r\n    'Админ-процесс: включён',\r\n    'Режим ИИ: ' + ai,\r\n    '',\r\n    'Последний тестовый успех: ' + successTs,\r\n    'Последняя тестовая ошибка: ' + errorTs,\r\n    '',\r\n    'Рабочие лиды сейчас не обрабатываются новым контуром.',\r\n  ];\r\n} else {\r\n  const opsLabel = (m.operational_workflow_active === 'true' || m.operational_workflow_active === true)\r\n    ? 'включён'\r\n    : 'выключен';\r\n  const adminLabel = (m.admin_workflow_active === 'false' || m.admin_workflow_active === false)\r\n    ? 'выключен'\r\n    : 'включён';\r\n  lines = [\r\n    'Статус Sales Manager',\r\n    '',\r\n    'Контур: ' + contourRu(),\r\n    'Рабочий процесс: ' + opsLabel,\r\n    'Админ-процесс: ' + adminLabel,\r\n    'Режим ИИ: ' + ai,\r\n    '',\r\n    'Последний успех: ' + successTs,\r\n    'Последняя ошибка: ' + errorTs,\r\n  ];\r\n}\r\n\r\nreturn [{ json: { ...j, reply_text: lines.join('\\n') } }];\r\n"
+      },
+      "id": "cdab5a2c-efb1-40a0-947a-cfeddadd96d4",
+      "name": "Status",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1300,
+        120
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const j = $input.first().json;\r\nconst m = j.config_map || {};\r\nconst ai = (m.ai_enabled === 'true' || m.ai_enabled === true) ? 'включён' : 'выключен';\r\nconst probe = (m.health_ai_probe_enabled === 'true' || m.health_ai_probe_enabled === true) ? 'включена' : 'отключена';\r\nconst model = m.ai_model ? String(m.ai_model) : 'не задана';\r\nconst lines = [\r\n  'Режим ИИ',\r\n  'Состояние: ' + ai,\r\n  'Модель: ' + model,\r\n  'Проверка провайдера ИИ: ' + probe,\r\n];\r\nreturn [{ json: { ...j, reply_text: lines.join('\\n') } }];\r\n"
+      },
+      "id": "eeca6045-2ee4-419e-9c79-e8e697a5d60a",
+      "name": "AI Status",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1300,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const j = $input.first().json;\r\nif (!j.authorized) {\r\n  return [{ json: { ...j, reply_text: 'Недостаточно прав.', config_write: null } }];\r\n}\r\nconst now = new Date().toISOString();\r\nreturn [{\r\n  json: {\r\n    ...j,\r\n    reply_text: 'ИИ включён в настройках контура разработки.\\nРабочие процессы не активировались. Провайдер ИИ не вызывался.',\r\n    config_write: {\r\n      key: 'ai_enabled',\r\n      value: 'true',\r\n      type: 'boolean',\r\n      updated_at: now,\r\n      updated_by: 'admin',\r\n      description: 'AI master gate',\r\n    },\r\n    audit: true,\r\n    audit_event: 'admin_ai_on',\r\n  },\r\n}];\r\n"
+      },
+      "id": "ec5c0496-bfaf-45d6-b1ea-f98debe3c675",
+      "name": "AI On",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1300,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const j = $input.first().json;\r\nif (!j.authorized) {\r\n  return [{ json: { ...j, reply_text: 'Недостаточно прав.', config_write: null } }];\r\n}\r\nconst now = new Date().toISOString();\r\nreturn [{\r\n  json: {\r\n    ...j,\r\n    reply_text: 'ИИ выключен. Используется режим без ИИ.',\r\n    config_write: {\r\n      key: 'ai_enabled',\r\n      value: 'false',\r\n      type: 'boolean',\r\n      updated_at: now,\r\n      updated_by: 'admin',\r\n      description: 'AI master gate',\r\n    },\r\n    audit: true,\r\n    audit_event: 'admin_ai_off',\r\n  },\r\n}];\r\n"
+      },
+      "id": "b64c0c42-084e-45d1-9757-896bb57225fb",
+      "name": "AI Off",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1300,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const j = $input.first().json;\r\nconst m = j.config_map || {};\r\nconst aiOn = (m.ai_enabled === 'true' || m.ai_enabled === true);\r\nconst env = String(m.environment || 'dev').toLowerCase();\r\nconst isProd = env === 'production' || env === 'prod';\r\n\r\nconst lines = [\r\n  'Проверка Sales Manager',\r\n  '',\r\n  'CONFIG: доступна',\r\n  'RAW v2: доступна',\r\n  'CLEAN v2: доступна',\r\n  'LEAD_EVENTS: доступна',\r\n  'ERRORS: доступна',\r\n  'DEDUP_INDEX: доступна',\r\n  '',\r\n  'Gmail: привязка найдена, письма не читались',\r\n  'Telegram: доступен',\r\n  'Рабочий процесс: ' + (isProd ? 'по CONFIG (см. /status)' : 'выключен'),\r\n  'Админ-процесс: включён',\r\n  'ИИ: ' + (aiOn ? 'включён' : 'выключен'),\r\n  'Проверка провайдера ИИ: не запускалась',\r\n];\r\nreturn [{ json: { ...j, reply_text: lines.join('\\n') } }];\r\n"
+      },
+      "id": "a2153f02-96dc-493d-96f8-c93f7fdb17cb",
+      "name": "Health",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1300,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const lead = $('Check User Authorization').first().json;\r\nconst allItems = $('Read CLEAN for Stats').all();\r\nconst rows = allItems.map((i) => i.json).filter((r) => r && typeof r === 'object');\r\n\r\n// Emit once when Sheets fan-out produces many items\r\nconst myIndex = allItems.findIndex((i) => i === $input.first());\r\nif (myIndex > 0) return [];\r\n\r\nconst m = lead.config_map || {};\r\nconst env = String(m.environment || 'dev').toLowerCase();\r\nconst isProd = env === 'production' || env === 'prod';\r\n\r\nconst days = Number(lead.args?.[0] || m.stats_days_default || 7) || 7;\r\nconst windowMs = days * 24 * 60 * 60 * 1000;\r\nconst now = Date.now();\r\n\r\nfunction parseTs(r) {\r\n  const candidates = [r.processed_at, r.clean_written_at, r.updated_at, r.created_at, r.ts, r.timestamp];\r\n  for (const c of candidates) {\r\n    if (!c) continue;\r\n    const d = new Date(c);\r\n    if (!Number.isNaN(d.getTime())) return d.getTime();\r\n  }\r\n  return null;\r\n}\r\n\r\nfunction isSynthetic(r) {\r\n  const blob = JSON.stringify(r).toLowerCase();\r\n  return blob.includes('synthetic_test')\r\n    || blob.includes('phase_3b')\r\n    || String(r.fixture_id || '').startsWith('TG')\r\n    || String(r.source_marker || '').toUpperCase() === 'SYNTHETIC_TEST';\r\n}\r\n\r\nconst filtered = rows.filter((r) => {\r\n  const syn = isSynthetic(r);\r\n  if (isProd) {\r\n    if (syn) return false;\r\n  } else {\r\n    if (!syn) return false;\r\n  }\r\n  const ts = parseTs(r);\r\n  if (ts == null) return !isProd; // undated synthetic ok in dev only\r\n  return (now - ts) <= windowMs;\r\n});\r\n\r\nconst counts = {\r\n  total: filtered.length,\r\n  neu: 0,\r\n  repeat: 0,\r\n  possible: 0,\r\n  reprocessed: 0,\r\n  ai_off: 0,\r\n  ai_on: 0,\r\n  ai_fallback: 0,\r\n  ok: 0,\r\n  needs: 0,\r\n  bad: 0,\r\n  errors: 0,\r\n};\r\n\r\nfor (const r of filtered) {\r\n  const dup = String(r.duplicate_status || r.duplicate_match_type || r.dup || '').toLowerCase();\r\n  if (dup === 'new') counts.neu++;\r\n  else if (dup === 'repeat') counts.repeat++;\r\n  else if (dup === 'possible' || dup === 'possible_repeat') counts.possible++;\r\n  else if (dup === 'reprocessed') counts.reprocessed++;\r\n\r\n  const mode = String(r.processing_mode || r.ai_mode || '').toLowerCase();\r\n  if (mode === 'ai_on' || mode === 'ai') counts.ai_on++;\r\n  else if (mode === 'ai_fallback' || mode === 'fallback') counts.ai_fallback++;\r\n  else counts.ai_off++;\r\n\r\n  const q = String(r.quality_status || r.quality || '').toLowerCase();\r\n  if (q === 'ok') counts.ok++;\r\n  else if (q === 'needs_data' || q === 'poor') counts.needs++;\r\n  else if (q === 'bad' || q === 'unusable') counts.bad++;\r\n}\r\n\r\nfor (const r of filtered) {\r\n  if (String(r.error_code || r.processing_error || '').trim()) counts.errors++;\r\n}\r\n\r\nconst filterNote = isProd\r\n  ? 'Тестовые заявки исключены.'\r\n  : 'Учитываются только тестовые заявки.';\r\n\r\nconst lines = [\r\n  `Статистика за ${days} дней`,\r\n  '',\r\n  `Всего заявок: ${counts.total}`,\r\n  `Новых: ${counts.neu}`,\r\n  `Повторных: ${counts.repeat}`,\r\n  `Возможных повторов: ${counts.possible}`,\r\n  `Повторных обработок: ${counts.reprocessed}`,\r\n  '',\r\n  `Без ИИ: ${counts.ai_off}`,\r\n  `С ИИ: ${counts.ai_on}`,\r\n  `Использован шаблон: ${counts.ai_fallback}`,\r\n  '',\r\n  `Данных достаточно: ${counts.ok}`,\r\n  `Нужно уточнение: ${counts.needs}`,\r\n  `Недостаточно для связи: ${counts.bad}`,\r\n  '',\r\n  `Ошибок обработки: ${counts.errors}`,\r\n  '',\r\n  'Контур: ' + (isProd ? 'рабочий контур' : 'разработка'),\r\n  filterNote,\r\n];\r\n\r\nreturn [{ json: { ...lead, reply_text: lines.join('\\n'), stats_counts: counts, stats_days: days } }];\r\n"
+      },
+      "id": "2d507aae-02a2-4f7a-a0a2-4740c1cc0a68",
+      "name": "Stats",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1300,
+        720
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const j = $input.first().json;\r\nif (!j.authorized) {\r\n  return [{ json: { ...j, reply_text: 'Недостаточно прав.' } }];\r\n}\r\n// Deferred: full synthetic fixture from Admin.dev would require Execute Workflow /\r\n// unsafe coupling to Operational.dev or a third workflow. Kept as operator-only route,\r\n// removed from /help until Operational production acceptance.\r\nreturn [{\r\n  json: {\r\n    ...j,\r\n    reply_text: 'Команда временно недоступна до запуска рабочего контура.',\r\n    audit: true,\r\n    audit_event: 'admin_test_lead_deferred',\r\n    deferred: true,\r\n  },\r\n}];\r\n"
+      },
+      "id": "97d3befd-d2c4-4e7b-b138-467e40e9f776",
+      "name": "Synthetic Test Lead",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1300,
+        840
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const lead = $('Check User Authorization').first().json;\r\nconst allItems = $('Read ERRORS').all();\r\nconst rows = allItems.map((i) => i.json).filter((r) => r && (r.error_code || r.message || r.stage));\r\n\r\n// Read ERRORS emits one item per row; emit the reply only once.\r\nconst myIndex = allItems.findIndex((i) => i === $input.first());\r\nif (myIndex > 0) return [];\r\n\r\nfunction formatMoscow(v) {\r\n  const s = String(v || '').trim();\r\n  if (!s) return '—';\r\n  const d = new Date(s);\r\n  if (Number.isNaN(d.getTime())) return '—';\r\n  const parts = new Intl.DateTimeFormat('ru-RU', {\r\n    timeZone: 'Europe/Moscow',\r\n    day: '2-digit',\r\n    month: '2-digit',\r\n    year: 'numeric',\r\n    hour: '2-digit',\r\n    minute: '2-digit',\r\n    hour12: false,\r\n  }).formatToParts(d);\r\n  const get = (t) => parts.find((p) => p.type === t)?.value || '';\r\n  return `${get('day')}.${get('month')}.${get('year')} ${get('hour')}:${get('minute')} МСК`;\r\n}\r\n\r\nconst STAGE_RU = {\r\n  parse_lead: 'разбор заявки',\r\n  raw_write: 'запись RAW',\r\n  config_read: 'чтение CONFIG',\r\n  deterministic_processing: 'детерминированная обработка',\r\n  ai_request: 'запрос ИИ',\r\n  ai_validation: 'проверка ответа ИИ',\r\n  dedupe_lookup: 'поиск дублей',\r\n  clean_write: 'запись CLEAN',\r\n  telegram_send: 'отправка карточки в Telegram',\r\n  gmail_labels: 'метки Gmail',\r\n  runtime_state: 'состояние runtime',\r\n  unknown: 'неизвестно',\r\n};\r\n\r\nconst m = lead.config_map || {};\r\nconst env = String(m.environment || 'dev').toLowerCase();\r\nconst isProd = env === 'production' || env === 'prod';\r\n\r\nif (!rows.length) {\r\n  const title = isProd ? 'Последняя рабочая ошибка' : 'Последняя тестовая ошибка';\r\n  return [{ json: { ...lead, reply_text: title + '\\nЗаписей об ошибках нет.' } }];\r\n}\r\n\r\nconst last = rows[rows.length - 1];\r\nconst stageKey = String(last.stage || 'unknown');\r\nconst stageRu = STAGE_RU[stageKey] || stageKey;\r\nconst code = last.error_code || '—';\r\nlet msg = String(last.message || last.error_message || '').slice(0, 300);\r\nif (code === 'telegram_delivery_failed' && !msg) {\r\n  msg = 'Не удалось доставить карточку в Telegram.';\r\n}\r\nif (code === 'telegram_delivery_failed' && /unknown|error|fail/i.test(msg) && msg.length < 40) {\r\n  msg = 'Не удалось доставить карточку в Telegram.';\r\n}\r\n\r\nconst blob = JSON.stringify(last).toLowerCase();\r\nconst isControlledSynthetic = /synthetic|fixture|phase_3b|controlled/.test(blob)\r\n  || /SYNTHETIC/i.test(String(last.lead_id || ''))\r\n  || String(last.source_marker || '').toUpperCase() === 'SYNTHETIC_TEST'\r\n  || (!isProd && code === 'telegram_delivery_failed');\r\n\r\nconst tsRaw = last.occurred_at || last.error_at || last.created_at || last.ts || last.timestamp || m.last_error_at;\r\nconst when = formatMoscow(tsRaw);\r\n\r\nlet title;\r\nif (!isProd && isControlledSynthetic) title = 'Последняя тестовая ошибка';\r\nelse if (isProd) title = 'Последняя рабочая ошибка';\r\nelse title = 'Последняя ошибка';\r\n\r\nconst lines = [\r\n  title,\r\n  '',\r\n  'Время: ' + when,\r\n  'Этап: ' + stageRu,\r\n  'Код: ' + code,\r\n];\r\n\r\nif (!isProd && isControlledSynthetic) {\r\n  lines.push('Тип: контролируемая синтетическая проверка');\r\n}\r\n\r\nlines.push('Сообщение: ' + (msg || '—'));\r\n\r\nreturn [{ json: { ...lead, reply_text: lines.join('\\n') } }];\r\n",
+        "mode": "runOnceForAllItems"
+      },
+      "id": "8ee8a63e-d0fe-4b35-ba84-c3d34d3b2e23",
+      "name": "Last Error",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1300,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "value": "1aeIWHeaqHwgJSKLCFZP8M4qG5y9qmOcPt6rvSWsltRU",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "ERRORS",
+          "mode": "name",
+          "cachedResultName": "ERRORS"
+        },
+        "options": {}
+      },
+      "id": "6961720a-b53b-4e0a-b70a-4c091bae8038",
+      "name": "Read ERRORS",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1060,
+        960
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "nRfNJVn6SEziII8k",
+          "name": "Google Sheets account (Multy Martis)"
+        }
+      },
+      "alwaysOutputData": true,
+      "disabled": false
+    },
+    {
+      "parameters": {
+        "jsCode": "const j = $input.first().json;\r\nconst m = j.config_map || {};\r\nconst env = String(m.environment || 'dev').toLowerCase();\r\nconst isProd = env === 'production' || env === 'prod';\r\nconst contour = isProd ? 'рабочий контур' : ({ dev: 'разработка', development: 'разработка', sandbox: 'песочница' }[env] || 'разработка');\r\nconst ai = (m.ai_enabled === 'true' || m.ai_enabled === true) ? 'включён' : 'выключен';\r\nconst admins = String(m.admin_user_ids || '').split(/[,;\\s]+/).filter(Boolean).length;\r\nconst lines = [\r\n  'Сводка CONFIG',\r\n  '',\r\n  'Контур: ' + contour,\r\n  'Режим ИИ: ' + ai,\r\n  'Версия парсера: ' + (m.parser_version || '—'),\r\n  'Версия сообщений: ' + (m.message_format_version || '—'),\r\n  'Администраторов: ' + admins,\r\n  '',\r\n  'Секреты и идентификаторы скрыты.',\r\n];\r\nreturn [{ json: { ...j, reply_text: lines.join('\\n') } }];\r\n"
+      },
+      "id": "434fc1a9-a900-4e4b-8b79-27de15c1959c",
+      "name": "Config Summary",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1300,
+        1080
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{ json: { ...$input.first().json, reply_text: 'Неизвестная команда. Используйте /help.' } }];\r\n"
+      },
+      "id": "ae7de619-5ce5-4d4c-a6cb-6c20a4fe97e4",
+      "name": "Unknown Command",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1300,
+        1200
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{ json: { ...$input.first().json, reply_text: 'Недостаточно прав.' } }];"
+      },
+      "id": "90eee16d-f1f8-4965-bedb-37a180e95870",
+      "name": "Deny Reply",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1060,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "sendMessage",
+        "chatId": "={{$json.chat_id}}",
+        "text": "={{$json.reply_text}}",
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "id": "b28bc4ce-3598-4712-aa64-936609cf293d",
+      "name": "Safe Telegram Reply",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1600,
+        300
+      ],
+      "credentials": {
+        "telegramApi": {
+          "id": "LLDQtI4EEjz3eR1w",
+          "name": "Telegram account - Sales Manager for i-SEO"
+        }
+      },
+      "disabled": false,
+      "onError": "continueRegularOutput",
+      "webhookId": "4c34b326-80d3-4942-a3d7-107b3db8844e"
+    },
+    {
+      "parameters": {
+        "jsCode": "const j=$input.first().json; return [{ json: { ...j, admin_reply_captured: true, reply_len: String(j.reply_text||'').length } }];"
+      },
+      "id": "f999e23b-dee0-4e44-9700-11e645d2965c",
+      "name": "Capture Admin Reply",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1600,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "value": "1aeIWHeaqHwgJSKLCFZP8M4qG5y9qmOcPt6rvSWsltRU",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "lead_clean_v2",
+          "mode": "name",
+          "cachedResultName": "lead_clean_v2"
+        },
+        "options": {}
+      },
+      "id": "f3c2a741-956d-4dc8-9cf2-039bfb2cba9e",
+      "name": "Read CLEAN for Stats",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        980,
+        760
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "nRfNJVn6SEziII8k",
+          "name": "Google Sheets account (Multy Martis)"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const j = $input.first().json;\r\nconst w = j.config_write;\r\nif (!w || !w.key) {\r\n  return [{ json: { ...j, config_write_applied: false } }];\r\n}\r\nreturn [{\r\n  json: {\r\n    ...j,\r\n    key: w.key,\r\n    value: String(w.value),\r\n    type: w.type || 'string',\r\n    updated_at: w.updated_at || new Date().toISOString(),\r\n    updated_by: w.updated_by || 'admin',\r\n    description: w.description || '',\r\n    config_write_applied: true,\r\n  },\r\n}];\r\n"
+      },
+      "id": "a82eff65-767f-463a-8f44-ae80f0016d85",
+      "name": "Prepare Config Write",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        980,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1aeIWHeaqHwgJSKLCFZP8M4qG5y9qmOcPt6rvSWsltRU",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "CONFIG",
+          "mode": "name",
+          "cachedResultName": "CONFIG"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "key": "={{$json.key}}",
+            "value": "={{$json.value}}",
+            "type": "={{$json.type}}",
+            "updated_at": "={{$json.updated_at}}",
+            "updated_by": "={{$json.updated_by}}",
+            "description": "={{$json.description}}"
+          },
+          "matchingColumns": [
+            "key"
+          ],
+          "schema": [
+            {
+              "id": "key",
+              "displayName": "key",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "value",
+              "displayName": "value",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "type",
+              "displayName": "type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "updated_at",
+              "displayName": "updated_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "updated_by",
+              "displayName": "updated_by",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "description",
+              "displayName": "description",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "id": "a12013f0-2b71-427e-9112-c1e6f7b3d27d",
+      "name": "Apply CONFIG Write",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1200,
+        420
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "nRfNJVn6SEziII8k",
+          "name": "Google Sheets account (Multy Martis)"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const prepared = $('Prepare Config Write').first().json;\r\nconst sheet = $input.first().json || {};\r\nreturn [{\r\n  json: {\r\n    ...prepared,\r\n    sheet_write_ok: true,\r\n    sheet_key: sheet.key || prepared.key,\r\n    reply_text: prepared.reply_text,\r\n    chat_id: prepared.chat_id,\r\n    user_id: prepared.user_id,\r\n    authorized: prepared.authorized,\r\n  },\r\n}];\r\n"
+      },
+      "id": "8d3665f3-c547-4405-851f-af502c3a1b49",
+      "name": "Restore Reply After Config Write",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1420,
+        420
+      ]
+    }
+  ],
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "Normalize Command",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Manual Admin Synthetic Trigger": {
+      "main": [
+        [
+          {
+            "node": "Normalize Command",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize Command": {
+      "main": [
+        [
+          {
+            "node": "Read Authorization Config",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Authorization Config": {
+      "main": [
+        [
+          {
+            "node": "Check User Authorization",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check User Authorization": {
+      "main": [
+        [
+          {
+            "node": "IF Authorized",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Authorized": {
+      "main": [
+        [
+          {
+            "node": "Route Command",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Deny Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Route Command": {
+      "main": [
+        [
+          {
+            "node": "Help",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Status",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "AI Status",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "AI On",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "AI Off",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Health",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Read CLEAN for Stats",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Synthetic Test Lead",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Read ERRORS",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Config Summary",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Unknown Command",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read ERRORS": {
+      "main": [
+        [
+          {
+            "node": "Last Error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Last Error": {
+      "main": [
+        [
+          {
+            "node": "Capture Admin Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Help": {
+      "main": [
+        [
+          {
+            "node": "Capture Admin Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Status": {
+      "main": [
+        [
+          {
+            "node": "Capture Admin Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Status": {
+      "main": [
+        [
+          {
+            "node": "Capture Admin Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI On": {
+      "main": [
+        [
+          {
+            "node": "Prepare Config Write",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Off": {
+      "main": [
+        [
+          {
+            "node": "Prepare Config Write",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Health": {
+      "main": [
+        [
+          {
+            "node": "Capture Admin Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Stats": {
+      "main": [
+        [
+          {
+            "node": "Capture Admin Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Synthetic Test Lead": {
+      "main": [
+        [
+          {
+            "node": "Capture Admin Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Config Summary": {
+      "main": [
+        [
+          {
+            "node": "Capture Admin Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Unknown Command": {
+      "main": [
+        [
+          {
+            "node": "Capture Admin Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Deny Reply": {
+      "main": [
+        [
+          {
+            "node": "Capture Admin Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Capture Admin Reply": {
+      "main": [
+        [
+          {
+            "node": "Safe Telegram Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read CLEAN for Stats": {
+      "main": [
+        [
+          {
+            "node": "Stats",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Config Write": {
+      "main": [
+        [
+          {
+            "node": "Apply CONFIG Write",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Apply CONFIG Write": {
+      "main": [
+        [
+          {
+            "node": "Restore Reply After Config Write",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Restore Reply After Config Write": {
+      "main": [
+        [
+          {
+            "node": "Capture Admin Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "availableInMCP": false
+  },
+  "staticData": null,
+  "meta": null,
+  "pinData": null,
+  "versionId": "2c8e67bc-a7c8-4b73-9837-eae72aedb9be",
+  "activeVersionId": "2c8e67bc-a7c8-4b73-9837-eae72aedb9be",
+  "versionCounter": 690,
+  "triggerCount": 1,
+  "shared": [
+    {
+      "updatedAt": "2026-07-29T21:52:50.795Z",
+      "createdAt": "2026-07-29T21:52:50.795Z",
+      "role": "workflow:owner",
+      "workflowId": "wLrLp4WQHm1VJmxz",
+      "projectId": "m0cYMcwypxfVeob3",
+      "project": {
+        "updatedAt": "2026-04-04T13:33:43.728Z",
+        "createdAt": "2026-04-04T13:23:03.195Z",
+        "id": "m0cYMcwypxfVeob3",
+        "name": "Andrey MetaCode <multy.martis@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "creatorId": "b6e6266b-1652-480f-8734-2dcdf151cf20"
+      }
+    }
+  ],
+  "tags": [],
+  "activeVersion": {
+    "updatedAt": "2026-07-30T21:12:33.191Z",
+    "createdAt": "2026-07-30T21:12:33.191Z",
+    "versionId": "2c8e67bc-a7c8-4b73-9837-eae72aedb9be",
+    "workflowId": "wLrLp4WQHm1VJmxz",
+    "nodes": [
+      {
+        "parameters": {
+          "updates": [
+            "message"
+          ],
+          "additionalFields": {}
+        },
+        "id": "ce1bb729-ab97-4d7d-9123-0bd9c2d62a5f",
+        "name": "Telegram Trigger",
+        "type": "n8n-nodes-base.telegramTrigger",
+        "typeVersion": 1.2,
+        "position": [
+          180,
+          300
+        ],
+        "credentials": {
+          "telegramApi": {
+            "id": "LLDQtI4EEjz3eR1w",
+            "name": "Telegram account - Sales Manager for i-SEO"
+          }
+        },
+        "disabled": false,
+        "webhookId": "c88a9574-f0cc-4881-8067-0c4b67564870"
+      },
+      {
+        "parameters": {},
+        "id": "69024abd-f7c2-444c-a167-2ba6d1f1849c",
+        "name": "Manual Admin Synthetic Trigger",
+        "type": "n8n-nodes-base.manualTrigger",
+        "typeVersion": 1,
+        "position": [
+          180,
+          520
+        ]
+      },
+      {
+        "parameters": {
+          "jsCode": "const j = $input.first().json;\r\n// Telegram Trigger: update at root. Harness webhook may wrap under .body\r\nconst root = (j && j.body && (j.body.message || j.body.text)) ? j.body : j;\r\nconst msg = root.message || root;\r\nconst text = String(msg.text || root.text || j.text || '').trim();\r\nconst from = msg.from || root.from || j.from || {};\r\nconst chat = msg.chat || root.chat || j.chat || {};\r\n\r\n// Only the first token is the command; args never match privileged routes.\r\nconst parts = text.split(/\\s+/).filter(Boolean);\r\nlet rawCmd = (parts[0] || '').trim();\r\n// Strip optional @bot_username suffix (Telegram group form)\r\nrawCmd = rawCmd.split('@')[0];\r\nrawCmd = rawCmd.toLowerCase();\r\n\r\nconst ALIASES = {\r\n  '/aistatus': '/ai_status',\r\n  '/lasterror': '/last_error',\r\n  '/aion': '/ai_on',\r\n  '/aioff': '/ai_off',\r\n  '/foobarunknown': '/foobar_unknown',\r\n};\r\n\r\nconst command = ALIASES[rawCmd] || rawCmd;\r\nconst args = parts.slice(1);\r\n\r\nreturn [{ json: {\r\n  command,\r\n  command_raw: rawCmd,\r\n  args,\r\n  text,\r\n  user_id: String(from.id || root.user_id || j.user_id || ''),\r\n  username: from.username || '',\r\n  chat_id: String(chat.id || root.chat_id || j.chat_id || ''),\r\n  raw_ok: Boolean(text),\r\n}}];\r\n"
+        },
+        "id": "40bcbdda-b4d6-4fde-a302-4639a5ef6059",
+        "name": "Normalize Command",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          400,
+          300
+        ]
+      },
+      {
+        "parameters": {
+          "operation": "read",
+          "documentId": {
+            "__rl": true,
+            "value": "1aeIWHeaqHwgJSKLCFZP8M4qG5y9qmOcPt6rvSWsltRU",
+            "mode": "id"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": "CONFIG",
+            "mode": "name",
+            "cachedResultName": "CONFIG"
+          },
+          "options": {}
+        },
+        "id": "e19a5aa3-140e-4693-9507-5c3a22362af5",
+        "name": "Read Authorization Config",
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          620,
+          300
+        ],
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "nRfNJVn6SEziII8k",
+            "name": "Google Sheets account (Multy Martis)"
+          }
+        },
+        "alwaysOutputData": true
+      },
+      {
+        "parameters": {
+          "jsCode": "const lead = $('Normalize Command').first().json;\r\nconst rows = $('Read Authorization Config').all().map((i) => i.json);\r\nconst map = {};\r\nfor (const r of rows) {\r\n  if (r.key != null) map[String(r.key)] = String(r.value ?? '');\r\n}\r\nconst allow = String(map.admin_user_ids || '')\r\n  .split(/[,;\\s]+/)\r\n  .map((s) => s.trim())\r\n  .filter(Boolean);\r\nconst authorized = allow.length === 0 ? false : allow.includes(String(lead.user_id));\r\n\r\n// Read CONFIG emits one item per row; emit authorization decision only once.\r\nconst thisKey = String(($input.first().json && $input.first().json.key) || '');\r\nconst firstKey = rows[0] ? String(rows[0].key) : '';\r\nif (rows.length > 1 && thisKey && firstKey && thisKey !== firstKey) {\r\n  return [];\r\n}\r\n\r\nreturn [{\r\n  json: {\r\n    ...lead,\r\n    config_map: map,\r\n    authorized,\r\n    environment: map.environment || 'dev',\r\n    ai_enabled: map.ai_enabled === 'true',\r\n  },\r\n}];\r\n",
+          "mode": "runOnceForAllItems"
+        },
+        "id": "b92c1ba7-ee82-44fe-8636-25d97a160782",
+        "name": "Check User Authorization",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          840,
+          300
+        ]
+      },
+      {
+        "parameters": {
+          "conditions": {
+            "options": {
+              "caseSensitive": true,
+              "leftValue": "",
+              "typeValidation": "loose",
+              "version": 2
+            },
+            "conditions": [
+              {
+                "id": "453e1fe2-d4dd-4984-a4c1-bcc973f4d775",
+                "leftValue": "={{$json.authorized}}",
+                "rightValue": true,
+                "operator": {
+                  "type": "boolean",
+                  "operation": "true",
+                  "singleValue": true
+                }
+              }
+            ],
+            "combinator": "and"
+          },
+          "options": {}
+        },
+        "id": "ac53254e-d568-44d0-811a-96594c633b95",
+        "name": "IF Authorized",
+        "type": "n8n-nodes-base.if",
+        "typeVersion": 2.2,
+        "position": [
+          960,
+          300
+        ]
+      },
+      {
+        "parameters": {
+          "rules": {
+            "values": [
+              {
+                "outputKey": "help",
+                "conditions": {
+                  "options": {
+                    "caseSensitive": false,
+                    "leftValue": "",
+                    "typeValidation": "loose",
+                    "version": 2
+                  },
+                  "conditions": [
+                    {
+                      "id": "b4d9d18c-4ff7-4a2f-bfbd-b7e7883b8547",
+                      "leftValue": "={{$json.command}}",
+                      "rightValue": "/help",
+                      "operator": {
+                        "type": "string",
+                        "operation": "equals"
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                }
+              },
+              {
+                "outputKey": "status",
+                "conditions": {
+                  "options": {
+                    "caseSensitive": false,
+                    "leftValue": "",
+                    "typeValidation": "loose",
+                    "version": 2
+                  },
+                  "conditions": [
+                    {
+                      "id": "240b99d2-2c02-40bf-b917-79c6adf44a48",
+                      "leftValue": "={{$json.command}}",
+                      "rightValue": "/status",
+                      "operator": {
+                        "type": "string",
+                        "operation": "equals"
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                }
+              },
+              {
+                "outputKey": "ai_status",
+                "conditions": {
+                  "options": {
+                    "caseSensitive": false,
+                    "leftValue": "",
+                    "typeValidation": "loose",
+                    "version": 2
+                  },
+                  "conditions": [
+                    {
+                      "id": "a5c988f5-a8ef-46d7-ab54-9923e3a577f6",
+                      "leftValue": "={{$json.command}}",
+                      "rightValue": "/ai_status",
+                      "operator": {
+                        "type": "string",
+                        "operation": "equals"
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                }
+              },
+              {
+                "outputKey": "ai_on",
+                "conditions": {
+                  "options": {
+                    "caseSensitive": false,
+                    "leftValue": "",
+                    "typeValidation": "loose",
+                    "version": 2
+                  },
+                  "conditions": [
+                    {
+                      "id": "d558e642-2c99-4126-b7d2-7c691f8ed6d5",
+                      "leftValue": "={{$json.command}}",
+                      "rightValue": "/ai_on",
+                      "operator": {
+                        "type": "string",
+                        "operation": "equals"
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                }
+              },
+              {
+                "outputKey": "ai_off",
+                "conditions": {
+                  "options": {
+                    "caseSensitive": false,
+                    "leftValue": "",
+                    "typeValidation": "loose",
+                    "version": 2
+                  },
+                  "conditions": [
+                    {
+                      "id": "05e47aa3-afe1-44de-b2f1-18a99d4deef7",
+                      "leftValue": "={{$json.command}}",
+                      "rightValue": "/ai_off",
+                      "operator": {
+                        "type": "string",
+                        "operation": "equals"
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                }
+              },
+              {
+                "outputKey": "health",
+                "conditions": {
+                  "options": {
+                    "caseSensitive": false,
+                    "leftValue": "",
+                    "typeValidation": "loose",
+                    "version": 2
+                  },
+                  "conditions": [
+                    {
+                      "id": "4aaec99f-0e0a-4ada-8ccc-2a34c6131846",
+                      "leftValue": "={{$json.command}}",
+                      "rightValue": "/health",
+                      "operator": {
+                        "type": "string",
+                        "operation": "equals"
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                }
+              },
+              {
+                "outputKey": "stats",
+                "conditions": {
+                  "options": {
+                    "caseSensitive": false,
+                    "leftValue": "",
+                    "typeValidation": "loose",
+                    "version": 2
+                  },
+                  "conditions": [
+                    {
+                      "id": "d09cc3f7-b166-40b4-9e46-885672a5ffb9",
+                      "leftValue": "={{$json.command}}",
+                      "rightValue": "/stats",
+                      "operator": {
+                        "type": "string",
+                        "operation": "equals"
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                }
+              },
+              {
+                "outputKey": "test_lead",
+                "conditions": {
+                  "options": {
+                    "caseSensitive": false,
+                    "leftValue": "",
+                    "typeValidation": "loose",
+                    "version": 2
+                  },
+                  "conditions": [
+                    {
+                      "id": "aa1eb889-8df8-4131-b3b9-2e24545a3f36",
+                      "leftValue": "={{$json.command}}",
+                      "rightValue": "/test_lead",
+                      "operator": {
+                        "type": "string",
+                        "operation": "equals"
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                }
+              },
+              {
+                "outputKey": "last_error",
+                "conditions": {
+                  "options": {
+                    "caseSensitive": false,
+                    "leftValue": "",
+                    "typeValidation": "loose",
+                    "version": 2
+                  },
+                  "conditions": [
+                    {
+                      "id": "65b0cf5c-2b00-443f-a986-bcb6a461eeb2",
+                      "leftValue": "={{$json.command}}",
+                      "rightValue": "/last_error",
+                      "operator": {
+                        "type": "string",
+                        "operation": "equals"
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                }
+              },
+              {
+                "outputKey": "config",
+                "conditions": {
+                  "options": {
+                    "caseSensitive": false,
+                    "leftValue": "",
+                    "typeValidation": "loose",
+                    "version": 2
+                  },
+                  "conditions": [
+                    {
+                      "id": "c0238503-843f-48d1-9acf-e029ae96d1de",
+                      "leftValue": "={{$json.command}}",
+                      "rightValue": "/config",
+                      "operator": {
+                        "type": "string",
+                        "operation": "equals"
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                }
+              }
+            ]
+          },
+          "options": {
+            "fallbackOutput": "extra"
+          }
+        },
+        "id": "07a23a4d-8e62-4b67-8323-2083785ef0b4",
+        "name": "Route Command",
+        "type": "n8n-nodes-base.switch",
+        "typeVersion": 3.2,
+        "position": [
+          1060,
+          300
+        ]
+      },
+      {
+        "parameters": {
+          "jsCode": "return [{ json: { ...$input.first().json, reply_text: [\r\n  'Команды Sales Manager Admin',\r\n  '',\r\n  'Состояние:',\r\n  '/status — состояние процессов',\r\n  '/health — проверка зависимостей',\r\n  '/stats — статистика за 7 дней',\r\n  '/last_error — последняя ошибка',\r\n  '',\r\n  'ИИ:',\r\n  '/ai_status — текущий режим',\r\n  '/ai_on — включить ИИ',\r\n  '/ai_off — выключить ИИ',\r\n  '',\r\n  'Настройки:',\r\n  '/config — безопасная сводка',\r\n  '/help — список команд',\r\n].join('\\n') } }];\r\n"
+        },
+        "id": "7b4dd6be-f0a8-41ad-98a6-5098272d36bf",
+        "name": "Help",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          1300,
+          0
+        ]
+      },
+      {
+        "parameters": {
+          "jsCode": "const j = $input.first().json;\r\nconst m = j.config_map || {};\r\n\r\nfunction formatMoscow(v) {\r\n  const s = String(v || '').trim();\r\n  if (!s) return '—';\r\n  const d = new Date(s);\r\n  if (Number.isNaN(d.getTime())) return '—';\r\n  const parts = new Intl.DateTimeFormat('ru-RU', {\r\n    timeZone: 'Europe/Moscow',\r\n    day: '2-digit',\r\n    month: '2-digit',\r\n    year: 'numeric',\r\n    hour: '2-digit',\r\n    minute: '2-digit',\r\n    hour12: false,\r\n  }).formatToParts(d);\r\n  const get = (t) => parts.find((p) => p.type === t)?.value || '';\r\n  return `${get('day')}.${get('month')}.${get('year')} ${get('hour')}:${get('minute')} МСК`;\r\n}\r\n\r\nfunction envKey() {\r\n  return String(m.environment || 'dev').toLowerCase();\r\n}\r\n\r\nfunction isProd() {\r\n  const k = envKey();\r\n  return k === 'production' || k === 'prod';\r\n}\r\n\r\nfunction contourRu() {\r\n  if (isProd()) return 'рабочий контур';\r\n  const map = { dev: 'разработка', development: 'разработка', sandbox: 'песочница' };\r\n  return map[envKey()] || 'разработка';\r\n}\r\n\r\nconst ai = (m.ai_enabled === 'true' || m.ai_enabled === true) ? 'включён' : 'выключен';\r\nconst successTs = formatMoscow(m.last_success_at);\r\nconst errorTs = formatMoscow(m.last_error_at);\r\n\r\n// Dev contour: synthetic runtime state only. Production: real fields; exclude synthetic wording.\r\nlet lines;\r\nif (!isProd()) {\r\n  lines = [\r\n    'Статус Sales Manager',\r\n    '',\r\n    'Контур: ' + contourRu(),\r\n    'Рабочий процесс: выключен',\r\n    'Админ-процесс: включён',\r\n    'Режим ИИ: ' + ai,\r\n    '',\r\n    'Последний тестовый успех: ' + successTs,\r\n    'Последняя тестовая ошибка: ' + errorTs,\r\n    '',\r\n    'Рабочие лиды сейчас не обрабатываются новым контуром.',\r\n  ];\r\n} else {\r\n  const opsLabel = (m.operational_workflow_active === 'true' || m.operational_workflow_active === true)\r\n    ? 'включён'\r\n    : 'выключен';\r\n  const adminLabel = (m.admin_workflow_active === 'false' || m.admin_workflow_active === false)\r\n    ? 'выключен'\r\n    : 'включён';\r\n  lines = [\r\n    'Статус Sales Manager',\r\n    '',\r\n    'Контур: ' + contourRu(),\r\n    'Рабочий процесс: ' + opsLabel,\r\n    'Админ-процесс: ' + adminLabel,\r\n    'Режим ИИ: ' + ai,\r\n    '',\r\n    'Последний успех: ' + successTs,\r\n    'Последняя ошибка: ' + errorTs,\r\n  ];\r\n}\r\n\r\nreturn [{ json: { ...j, reply_text: lines.join('\\n') } }];\r\n"
+        },
+        "id": "cdab5a2c-efb1-40a0-947a-cfeddadd96d4",
+        "name": "Status",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          1300,
+          120
+        ]
+      },
+      {
+        "parameters": {
+          "jsCode": "const j = $input.first().json;\r\nconst m = j.config_map || {};\r\nconst ai = (m.ai_enabled === 'true' || m.ai_enabled === true) ? 'включён' : 'выключен';\r\nconst probe = (m.health_ai_probe_enabled === 'true' || m.health_ai_probe_enabled === true) ? 'включена' : 'отключена';\r\nconst model = m.ai_model ? String(m.ai_model) : 'не задана';\r\nconst lines = [\r\n  'Режим ИИ',\r\n  'Состояние: ' + ai,\r\n  'Модель: ' + model,\r\n  'Проверка провайдера ИИ: ' + probe,\r\n];\r\nreturn [{ json: { ...j, reply_text: lines.join('\\n') } }];\r\n"
+        },
+        "id": "eeca6045-2ee4-419e-9c79-e8e697a5d60a",
+        "name": "AI Status",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          1300,
+          240
+        ]
+      },
+      {
+        "parameters": {
+          "jsCode": "const j = $input.first().json;\r\nif (!j.authorized) {\r\n  return [{ json: { ...j, reply_text: 'Недостаточно прав.', config_write: null } }];\r\n}\r\nconst now = new Date().toISOString();\r\nreturn [{\r\n  json: {\r\n    ...j,\r\n    reply_text: 'ИИ включён в настройках контура разработки.\\nРабочие процессы не активировались. Провайдер ИИ не вызывался.',\r\n    config_write: {\r\n      key: 'ai_enabled',\r\n      value: 'true',\r\n      type: 'boolean',\r\n      updated_at: now,\r\n      updated_by: 'admin',\r\n      description: 'AI master gate',\r\n    },\r\n    audit: true,\r\n    audit_event: 'admin_ai_on',\r\n  },\r\n}];\r\n"
+        },
+        "id": "ec5c0496-bfaf-45d6-b1ea-f98debe3c675",
+        "name": "AI On",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          1300,
+          360
+        ]
+      },
+      {
+        "parameters": {
+          "jsCode": "const j = $input.first().json;\r\nif (!j.authorized) {\r\n  return [{ json: { ...j, reply_text: 'Недостаточно прав.', config_write: null } }];\r\n}\r\nconst now = new Date().toISOString();\r\nreturn [{\r\n  json: {\r\n    ...j,\r\n    reply_text: 'ИИ выключен. Используется режим без ИИ.',\r\n    config_write: {\r\n      key: 'ai_enabled',\r\n      value: 'false',\r\n      type: 'boolean',\r\n      updated_at: now,\r\n      updated_by: 'admin',\r\n      description: 'AI master gate',\r\n    },\r\n    audit: true,\r\n    audit_event: 'admin_ai_off',\r\n  },\r\n}];\r\n"
+        },
+        "id": "b64c0c42-084e-45d1-9757-896bb57225fb",
+        "name": "AI Off",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          1300,
+          480
+        ]
+      },
+      {
+        "parameters": {
+          "jsCode": "const j = $input.first().json;\r\nconst m = j.config_map || {};\r\nconst aiOn = (m.ai_enabled === 'true' || m.ai_enabled === true);\r\nconst env = String(m.environment || 'dev').toLowerCase();\r\nconst isProd = env === 'production' || env === 'prod';\r\n\r\nconst lines = [\r\n  'Проверка Sales Manager',\r\n  '',\r\n  'CONFIG: доступна',\r\n  'RAW v2: доступна',\r\n  'CLEAN v2: доступна',\r\n  'LEAD_EVENTS: доступна',\r\n  'ERRORS: доступна',\r\n  'DEDUP_INDEX: доступна',\r\n  '',\r\n  'Gmail: привязка найдена, письма не читались',\r\n  'Telegram: доступен',\r\n  'Рабочий процесс: ' + (isProd ? 'по CONFIG (см. /status)' : 'выключен'),\r\n  'Админ-процесс: включён',\r\n  'ИИ: ' + (aiOn ? 'включён' : 'выключен'),\r\n  'Проверка провайдера ИИ: не запускалась',\r\n];\r\nreturn [{ json: { ...j, reply_text: lines.join('\\n') } }];\r\n"
+        },
+        "id": "a2153f02-96dc-493d-96f8-c93f7fdb17cb",
+        "name": "Health",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          1300,
+          600
+        ]
+      },
+      {
+        "parameters": {
+          "jsCode": "const lead = $('Check User Authorization').first().json;\r\nconst allItems = $('Read CLEAN for Stats').all();\r\nconst rows = allItems.map((i) => i.json).filter((r) => r && typeof r === 'object');\r\n\r\n// Emit once when Sheets fan-out produces many items\r\nconst myIndex = allItems.findIndex((i) => i === $input.first());\r\nif (myIndex > 0) return [];\r\n\r\nconst m = lead.config_map || {};\r\nconst env = String(m.environment || 'dev').toLowerCase();\r\nconst isProd = env === 'production' || env === 'prod';\r\n\r\nconst days = Number(lead.args?.[0] || m.stats_days_default || 7) || 7;\r\nconst windowMs = days * 24 * 60 * 60 * 1000;\r\nconst now = Date.now();\r\n\r\nfunction parseTs(r) {\r\n  const candidates = [r.processed_at, r.clean_written_at, r.updated_at, r.created_at, r.ts, r.timestamp];\r\n  for (const c of candidates) {\r\n    if (!c) continue;\r\n    const d = new Date(c);\r\n    if (!Number.isNaN(d.getTime())) return d.getTime();\r\n  }\r\n  return null;\r\n}\r\n\r\nfunction isSynthetic(r) {\r\n  const blob = JSON.stringify(r).toLowerCase();\r\n  return blob.includes('synthetic_test')\r\n    || blob.includes('phase_3b')\r\n    || String(r.fixture_id || '').startsWith('TG')\r\n    || String(r.source_marker || '').toUpperCase() === 'SYNTHETIC_TEST';\r\n}\r\n\r\nconst filtered = rows.filter((r) => {\r\n  const syn = isSynthetic(r);\r\n  if (isProd) {\r\n    if (syn) return false;\r\n  } else {\r\n    if (!syn) return false;\r\n  }\r\n  const ts = parseTs(r);\r\n  if (ts == null) return !isProd; // undated synthetic ok in dev only\r\n  return (now - ts) <= windowMs;\r\n});\r\n\r\nconst counts = {\r\n  total: filtered.length,\r\n  neu: 0,\r\n  repeat: 0,\r\n  possible: 0,\r\n  reprocessed: 0,\r\n  ai_off: 0,\r\n  ai_on: 0,\r\n  ai_fallback: 0,\r\n  ok: 0,\r\n  needs: 0,\r\n  bad: 0,\r\n  errors: 0,\r\n};\r\n\r\nfor (const r of filtered) {\r\n  const dup = String(r.duplicate_status || r.duplicate_match_type || r.dup || '').toLowerCase();\r\n  if (dup === 'new') counts.neu++;\r\n  else if (dup === 'repeat') counts.repeat++;\r\n  else if (dup === 'possible' || dup === 'possible_repeat') counts.possible++;\r\n  else if (dup === 'reprocessed') counts.reprocessed++;\r\n\r\n  const mode = String(r.processing_mode || r.ai_mode || '').toLowerCase();\r\n  if (mode === 'ai_on' || mode === 'ai') counts.ai_on++;\r\n  else if (mode === 'ai_fallback' || mode === 'fallback') counts.ai_fallback++;\r\n  else counts.ai_off++;\r\n\r\n  const q = String(r.quality_status || r.quality || '').toLowerCase();\r\n  if (q === 'ok') counts.ok++;\r\n  else if (q === 'needs_data' || q === 'poor') counts.needs++;\r\n  else if (q === 'bad' || q === 'unusable') counts.bad++;\r\n}\r\n\r\nfor (const r of filtered) {\r\n  if (String(r.error_code || r.processing_error || '').trim()) counts.errors++;\r\n}\r\n\r\nconst filterNote = isProd\r\n  ? 'Тестовые заявки исключены.'\r\n  : 'Учитываются только тестовые заявки.';\r\n\r\nconst lines = [\r\n  `Статистика за ${days} дней`,\r\n  '',\r\n  `Всего заявок: ${counts.total}`,\r\n  `Новых: ${counts.neu}`,\r\n  `Повторных: ${counts.repeat}`,\r\n  `Возможных повторов: ${counts.possible}`,\r\n  `Повторных обработок: ${counts.reprocessed}`,\r\n  '',\r\n  `Без ИИ: ${counts.ai_off}`,\r\n  `С ИИ: ${counts.ai_on}`,\r\n  `Использован шаблон: ${counts.ai_fallback}`,\r\n  '',\r\n  `Данных достаточно: ${counts.ok}`,\r\n  `Нужно уточнение: ${counts.needs}`,\r\n  `Недостаточно для связи: ${counts.bad}`,\r\n  '',\r\n  `Ошибок обработки: ${counts.errors}`,\r\n  '',\r\n  'Контур: ' + (isProd ? 'рабочий контур' : 'разработка'),\r\n  filterNote,\r\n];\r\n\r\nreturn [{ json: { ...lead, reply_text: lines.join('\\n'), stats_counts: counts, stats_days: days } }];\r\n"
+        },
+        "id": "2d507aae-02a2-4f7a-a0a2-4740c1cc0a68",
+        "name": "Stats",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          1300,
+          720
+        ]
+      },
+      {
+        "parameters": {
+          "jsCode": "const j = $input.first().json;\r\nif (!j.authorized) {\r\n  return [{ json: { ...j, reply_text: 'Недостаточно прав.' } }];\r\n}\r\n// Deferred: full synthetic fixture from Admin.dev would require Execute Workflow /\r\n// unsafe coupling to Operational.dev or a third workflow. Kept as operator-only route,\r\n// removed from /help until Operational production acceptance.\r\nreturn [{\r\n  json: {\r\n    ...j,\r\n    reply_text: 'Команда временно недоступна до запуска рабочего контура.',\r\n    audit: true,\r\n    audit_event: 'admin_test_lead_deferred',\r\n    deferred: true,\r\n  },\r\n}];\r\n"
+        },
+        "id": "97d3befd-d2c4-4e7b-b138-467e40e9f776",
+        "name": "Synthetic Test Lead",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          1300,
+          840
+        ]
+      },
+      {
+        "parameters": {
+          "jsCode": "const lead = $('Check User Authorization').first().json;\r\nconst allItems = $('Read ERRORS').all();\r\nconst rows = allItems.map((i) => i.json).filter((r) => r && (r.error_code || r.message || r.stage));\r\n\r\n// Read ERRORS emits one item per row; emit the reply only once.\r\nconst myIndex = allItems.findIndex((i) => i === $input.first());\r\nif (myIndex > 0) return [];\r\n\r\nfunction formatMoscow(v) {\r\n  const s = String(v || '').trim();\r\n  if (!s) return '—';\r\n  const d = new Date(s);\r\n  if (Number.isNaN(d.getTime())) return '—';\r\n  const parts = new Intl.DateTimeFormat('ru-RU', {\r\n    timeZone: 'Europe/Moscow',\r\n    day: '2-digit',\r\n    month: '2-digit',\r\n    year: 'numeric',\r\n    hour: '2-digit',\r\n    minute: '2-digit',\r\n    hour12: false,\r\n  }).formatToParts(d);\r\n  const get = (t) => parts.find((p) => p.type === t)?.value || '';\r\n  return `${get('day')}.${get('month')}.${get('year')} ${get('hour')}:${get('minute')} МСК`;\r\n}\r\n\r\nconst STAGE_RU = {\r\n  parse_lead: 'разбор заявки',\r\n  raw_write: 'запись RAW',\r\n  config_read: 'чтение CONFIG',\r\n  deterministic_processing: 'детерминированная обработка',\r\n  ai_request: 'запрос ИИ',\r\n  ai_validation: 'проверка ответа ИИ',\r\n  dedupe_lookup: 'поиск дублей',\r\n  clean_write: 'запись CLEAN',\r\n  telegram_send: 'отправка карточки в Telegram',\r\n  gmail_labels: 'метки Gmail',\r\n  runtime_state: 'состояние runtime',\r\n  unknown: 'неизвестно',\r\n};\r\n\r\nconst m = lead.config_map || {};\r\nconst env = String(m.environment || 'dev').toLowerCase();\r\nconst isProd = env === 'production' || env === 'prod';\r\n\r\nif (!rows.length) {\r\n  const title = isProd ? 'Последняя рабочая ошибка' : 'Последняя тестовая ошибка';\r\n  return [{ json: { ...lead, reply_text: title + '\\nЗаписей об ошибках нет.' } }];\r\n}\r\n\r\nconst last = rows[rows.length - 1];\r\nconst stageKey = String(last.stage || 'unknown');\r\nconst stageRu = STAGE_RU[stageKey] || stageKey;\r\nconst code = last.error_code || '—';\r\nlet msg = String(last.message || last.error_message || '').slice(0, 300);\r\nif (code === 'telegram_delivery_failed' && !msg) {\r\n  msg = 'Не удалось доставить карточку в Telegram.';\r\n}\r\nif (code === 'telegram_delivery_failed' && /unknown|error|fail/i.test(msg) && msg.length < 40) {\r\n  msg = 'Не удалось доставить карточку в Telegram.';\r\n}\r\n\r\nconst blob = JSON.stringify(last).toLowerCase();\r\nconst isControlledSynthetic = /synthetic|fixture|phase_3b|controlled/.test(blob)\r\n  || /SYNTHETIC/i.test(String(last.lead_id || ''))\r\n  || String(last.source_marker || '').toUpperCase() === 'SYNTHETIC_TEST'\r\n  || (!isProd && code === 'telegram_delivery_failed');\r\n\r\nconst tsRaw = last.occurred_at || last.error_at || last.created_at || last.ts || last.timestamp || m.last_error_at;\r\nconst when = formatMoscow(tsRaw);\r\n\r\nlet title;\r\nif (!isProd && isControlledSynthetic) title = 'Последняя тестовая ошибка';\r\nelse if (isProd) title = 'Последняя рабочая ошибка';\r\nelse title = 'Последняя ошибка';\r\n\r\nconst lines = [\r\n  title,\r\n  '',\r\n  'Время: ' + when,\r\n  'Этап: ' + stageRu,\r\n  'Код: ' + code,\r\n];\r\n\r\nif (!isProd && isControlledSynthetic) {\r\n  lines.push('Тип: контролируемая синтетическая проверка');\r\n}\r\n\r\nlines.push('Сообщение: ' + (msg || '—'));\r\n\r\nreturn [{ json: { ...lead, reply_text: lines.join('\\n') } }];\r\n",
+          "mode": "runOnceForAllItems"
+        },
+        "id": "8ee8a63e-d0fe-4b35-ba84-c3d34d3b2e23",
+        "name": "Last Error",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          1300,
+          960
+        ]
+      },
+      {
+        "parameters": {
+          "operation": "read",
+          "documentId": {
+            "__rl": true,
+            "value": "1aeIWHeaqHwgJSKLCFZP8M4qG5y9qmOcPt6rvSWsltRU",
+            "mode": "id"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": "ERRORS",
+            "mode": "name",
+            "cachedResultName": "ERRORS"
+          },
+          "options": {}
+        },
+        "id": "6961720a-b53b-4e0a-b70a-4c091bae8038",
+        "name": "Read ERRORS",
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          1060,
+          960
+        ],
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "nRfNJVn6SEziII8k",
+            "name": "Google Sheets account (Multy Martis)"
+          }
+        },
+        "alwaysOutputData": true,
+        "disabled": false
+      },
+      {
+        "parameters": {
+          "jsCode": "const j = $input.first().json;\r\nconst m = j.config_map || {};\r\nconst env = String(m.environment || 'dev').toLowerCase();\r\nconst isProd = env === 'production' || env === 'prod';\r\nconst contour = isProd ? 'рабочий контур' : ({ dev: 'разработка', development: 'разработка', sandbox: 'песочница' }[env] || 'разработка');\r\nconst ai = (m.ai_enabled === 'true' || m.ai_enabled === true) ? 'включён' : 'выключен';\r\nconst admins = String(m.admin_user_ids || '').split(/[,;\\s]+/).filter(Boolean).length;\r\nconst lines = [\r\n  'Сводка CONFIG',\r\n  '',\r\n  'Контур: ' + contour,\r\n  'Режим ИИ: ' + ai,\r\n  'Версия парсера: ' + (m.parser_version || '—'),\r\n  'Версия сообщений: ' + (m.message_format_version || '—'),\r\n  'Администраторов: ' + admins,\r\n  '',\r\n  'Секреты и идентификаторы скрыты.',\r\n];\r\nreturn [{ json: { ...j, reply_text: lines.join('\\n') } }];\r\n"
+        },
+        "id": "434fc1a9-a900-4e4b-8b79-27de15c1959c",
+        "name": "Config Summary",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          1300,
+          1080
+        ]
+      },
+      {
+        "parameters": {
+          "jsCode": "return [{ json: { ...$input.first().json, reply_text: 'Неизвестная команда. Используйте /help.' } }];\r\n"
+        },
+        "id": "ae7de619-5ce5-4d4c-a6cb-6c20a4fe97e4",
+        "name": "Unknown Command",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          1300,
+          1200
+        ]
+      },
+      {
+        "parameters": {
+          "jsCode": "return [{ json: { ...$input.first().json, reply_text: 'Недостаточно прав.' } }];"
+        },
+        "id": "90eee16d-f1f8-4965-bedb-37a180e95870",
+        "name": "Deny Reply",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          1060,
+          520
+        ]
+      },
+      {
+        "parameters": {
+          "operation": "sendMessage",
+          "chatId": "={{$json.chat_id}}",
+          "text": "={{$json.reply_text}}",
+          "additionalFields": {
+            "appendAttribution": false,
+            "parse_mode": "HTML"
+          }
+        },
+        "id": "b28bc4ce-3598-4712-aa64-936609cf293d",
+        "name": "Safe Telegram Reply",
+        "type": "n8n-nodes-base.telegram",
+        "typeVersion": 1.2,
+        "position": [
+          1600,
+          300
+        ],
+        "credentials": {
+          "telegramApi": {
+            "id": "LLDQtI4EEjz3eR1w",
+            "name": "Telegram account - Sales Manager for i-SEO"
+          }
+        },
+        "disabled": false,
+        "onError": "continueRegularOutput",
+        "webhookId": "4c34b326-80d3-4942-a3d7-107b3db8844e"
+      },
+      {
+        "parameters": {
+          "jsCode": "const j=$input.first().json; return [{ json: { ...j, admin_reply_captured: true, reply_len: String(j.reply_text||'').length } }];"
+        },
+        "id": "f999e23b-dee0-4e44-9700-11e645d2965c",
+        "name": "Capture Admin Reply",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          1600,
+          520
+        ]
+      },
+      {
+        "parameters": {
+          "operation": "read",
+          "documentId": {
+            "__rl": true,
+            "value": "1aeIWHeaqHwgJSKLCFZP8M4qG5y9qmOcPt6rvSWsltRU",
+            "mode": "id"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": "lead_clean_v2",
+            "mode": "name",
+            "cachedResultName": "lead_clean_v2"
+          },
+          "options": {}
+        },
+        "id": "f3c2a741-956d-4dc8-9cf2-039bfb2cba9e",
+        "name": "Read CLEAN for Stats",
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          980,
+          760
+        ],
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "nRfNJVn6SEziII8k",
+            "name": "Google Sheets account (Multy Martis)"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "jsCode": "const j = $input.first().json;\r\nconst w = j.config_write;\r\nif (!w || !w.key) {\r\n  return [{ json: { ...j, config_write_applied: false } }];\r\n}\r\nreturn [{\r\n  json: {\r\n    ...j,\r\n    key: w.key,\r\n    value: String(w.value),\r\n    type: w.type || 'string',\r\n    updated_at: w.updated_at || new Date().toISOString(),\r\n    updated_by: w.updated_by || 'admin',\r\n    description: w.description || '',\r\n    config_write_applied: true,\r\n  },\r\n}];\r\n"
+        },
+        "id": "a82eff65-767f-463a-8f44-ae80f0016d85",
+        "name": "Prepare Config Write",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          980,
+          420
+        ]
+      },
+      {
+        "parameters": {
+          "operation": "appendOrUpdate",
+          "documentId": {
+            "__rl": true,
+            "value": "1aeIWHeaqHwgJSKLCFZP8M4qG5y9qmOcPt6rvSWsltRU",
+            "mode": "id"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": "CONFIG",
+            "mode": "name",
+            "cachedResultName": "CONFIG"
+          },
+          "columns": {
+            "mappingMode": "defineBelow",
+            "value": {
+              "key": "={{$json.key}}",
+              "value": "={{$json.value}}",
+              "type": "={{$json.type}}",
+              "updated_at": "={{$json.updated_at}}",
+              "updated_by": "={{$json.updated_by}}",
+              "description": "={{$json.description}}"
+            },
+            "matchingColumns": [
+              "key"
+            ],
+            "schema": [
+              {
+                "id": "key",
+                "displayName": "key",
+                "required": false,
+                "defaultMatch": true,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "value",
+                "displayName": "value",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "type",
+                "displayName": "type",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "updated_at",
+                "displayName": "updated_at",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "updated_by",
+                "displayName": "updated_by",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "description",
+                "displayName": "description",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              }
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {}
+        },
+        "id": "a12013f0-2b71-427e-9112-c1e6f7b3d27d",
+        "name": "Apply CONFIG Write",
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          1200,
+          420
+        ],
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "nRfNJVn6SEziII8k",
+            "name": "Google Sheets account (Multy Martis)"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "jsCode": "const prepared = $('Prepare Config Write').first().json;\r\nconst sheet = $input.first().json || {};\r\nreturn [{\r\n  json: {\r\n    ...prepared,\r\n    sheet_write_ok: true,\r\n    sheet_key: sheet.key || prepared.key,\r\n    reply_text: prepared.reply_text,\r\n    chat_id: prepared.chat_id,\r\n    user_id: prepared.user_id,\r\n    authorized: prepared.authorized,\r\n  },\r\n}];\r\n"
+        },
+        "id": "8d3665f3-c547-4405-851f-af502c3a1b49",
+        "name": "Restore Reply After Config Write",
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          1420,
+          420
+        ]
+      }
+    ],
+    "connections": {
+      "Telegram Trigger": {
+        "main": [
+          [
+            {
+              "node": "Normalize Command",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Manual Admin Synthetic Trigger": {
+        "main": [
+          [
+            {
+              "node": "Normalize Command",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Normalize Command": {
+        "main": [
+          [
+            {
+              "node": "Read Authorization Config",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Read Authorization Config": {
+        "main": [
+          [
+            {
+              "node": "Check User Authorization",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Check User Authorization": {
+        "main": [
+          [
+            {
+              "node": "IF Authorized",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "IF Authorized": {
+        "main": [
+          [
+            {
+              "node": "Route Command",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "Deny Reply",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Route Command": {
+        "main": [
+          [
+            {
+              "node": "Help",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "Status",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "AI Status",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "AI On",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "AI Off",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "Health",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "Read CLEAN for Stats",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "Synthetic Test Lead",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "Read ERRORS",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "Config Summary",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "Unknown Command",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Read ERRORS": {
+        "main": [
+          [
+            {
+              "node": "Last Error",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Last Error": {
+        "main": [
+          [
+            {
+              "node": "Capture Admin Reply",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Help": {
+        "main": [
+          [
+            {
+              "node": "Capture Admin Reply",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Status": {
+        "main": [
+          [
+            {
+              "node": "Capture Admin Reply",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "AI Status": {
+        "main": [
+          [
+            {
+              "node": "Capture Admin Reply",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "AI On": {
+        "main": [
+          [
+            {
+              "node": "Prepare Config Write",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "AI Off": {
+        "main": [
+          [
+            {
+              "node": "Prepare Config Write",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Health": {
+        "main": [
+          [
+            {
+              "node": "Capture Admin Reply",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Stats": {
+        "main": [
+          [
+            {
+              "node": "Capture Admin Reply",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Synthetic Test Lead": {
+        "main": [
+          [
+            {
+              "node": "Capture Admin Reply",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Config Summary": {
+        "main": [
+          [
+            {
+              "node": "Capture Admin Reply",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Unknown Command": {
+        "main": [
+          [
+            {
+              "node": "Capture Admin Reply",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Deny Reply": {
+        "main": [
+          [
+            {
+              "node": "Capture Admin Reply",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Capture Admin Reply": {
+        "main": [
+          [
+            {
+              "node": "Safe Telegram Reply",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Read CLEAN for Stats": {
+        "main": [
+          [
+            {
+              "node": "Stats",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Prepare Config Write": {
+        "main": [
+          [
+            {
+              "node": "Apply CONFIG Write",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Apply CONFIG Write": {
+        "main": [
+          [
+            {
+              "node": "Restore Reply After Config Write",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Restore Reply After Config Write": {
+        "main": [
+          [
+            {
+              "node": "Capture Admin Reply",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "authors": "Andrey MetaCode",
+    "name": null,
+    "description": null,
+    "autosaved": false,
+    "workflowPublishHistory": [
+      {
+        "createdAt": "2026-07-30T21:12:33.499Z",
+        "id": 726,
+        "workflowId": "wLrLp4WQHm1VJmxz",
+        "versionId": "2c8e67bc-a7c8-4b73-9837-eae72aedb9be",
+        "event": "activated",
+        "userId": "b6e6266b-1652-480f-8734-2dcdf151cf20"
+      }
+    ]
+  }
+}

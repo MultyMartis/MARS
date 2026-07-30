@@ -81,3 +81,7 @@ Notify Admin chat: rollback executed, AI forced OFF, intake paused if needed.
 ## Phase 3B.4 activation note
 
 Admin.dev may be temporarily activated with Telegram Trigger enabled for operator-private command acceptance. Always deactivate Admin.dev after the window. Do not activate Operational.dev for that test. Production Sales-Manager-v2 remains the sole active intake owner until an explicit cutover charter.
+
+## Phase 3B.5 note
+
+Admin.dev may remain **active** after polish acceptance (ops surface). Prefer deactivate → code-only PUT → reactivate when patching an active Admin graph; restore pre-patch export if Telegram Trigger registration fails. Production Sales-Manager-v2 remains sole intake owner until Phase 3C.

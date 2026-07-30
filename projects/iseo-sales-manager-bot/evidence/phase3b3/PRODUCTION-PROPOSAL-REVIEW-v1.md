@@ -14,3 +14,7 @@ No production cutover performed. Original Sales-Manager-v2 unchanged and active.
 ## Phase 3B.4.1
 
 **NOT READY FOR PHASE 3C CUTOVER GATE** — real Telegram Trigger matrix pending/FAIL.
+
+## Phase 3B.5
+
+**READY FOR PHASE 3C CUTOVER GATE** — Admin polish accepted; Admin.dev may remain active; `/test_lead` deferred; Operational.dev still inactive; original unchanged. Explicit Phase 3C operator approval required before cutover.

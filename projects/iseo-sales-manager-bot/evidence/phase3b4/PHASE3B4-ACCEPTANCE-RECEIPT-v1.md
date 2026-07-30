@@ -21,3 +21,8 @@
 ## Production proposal
 
 **NOT READY** for Phase 3C until real Trigger acceptance passes.
+
+## Phase 3B.5 supersession
+
+See `evidence/phase3b5/OPERATIONAL-CUTOVER-READINESS-v1.md` — **READY FOR PHASE 3C CUTOVER GATE** after Admin polish (explicit cutover approval still required).
+

@@ -96,3 +96,10 @@ Telegram Trigger vs Webhook; shared bot with manager cards vs separate admin bot
 
 - Keep Telegram Trigger `disabled=false` for future controlled acceptance windows; Admin final active=false.
 - Normalize Command: trim, lowercase, strip `@bot`, map optional aliases to canonical commands; args excluded from privileged matching.
+
+## Phase 3B.5 patch notes
+
+- Admin.dev may remain **active** after polish.
+- Safe patch: deactivate → code-only PUT → reactivate; restore backup if Trigger registration fails.
+- Operator UX: Moscow time render; Russian terminology; synthetic/production status separation.
+- `/test_lead`: deferred reply; omit from `/help` until Operational synthetic entry is chartered.

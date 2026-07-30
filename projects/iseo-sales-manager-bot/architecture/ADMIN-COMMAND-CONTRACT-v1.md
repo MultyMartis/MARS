@@ -150,3 +150,11 @@ Explicit unknown-command node — do not silent-drop.
 ### Phase 3B.4 stats shape
 
 `/stats` returns bounded 7-day SYNTHETIC_TEST counts (not placeholder text). Runtime success appears on `/status` via CONFIG ops keys. `/last_error` maps `telegram_send` → «отправка карточки в Telegram».
+
+### Phase 3B.5 operator-facing polish
+
+- Timestamps in Telegram: `DD.MM.YYYY HH:mm МСК` (Europe/Moscow); UTC storage unchanged.
+- Dev `/status`: тестовый успех/ошибка; no raw error codes; process on/off lines.
+- `/ai_status` / `/ai_on` / `/ai_off`: Russian ИИ wording (see evidence/phase3b5).
+- `/stats` filter note: dev «Учитываются только тестовые заявки.» / prod «Тестовые заявки исключены.»
+- `/test_lead`: **deferred** — removed from `/help`; reply «Команда временно недоступна до запуска рабочего контура.»

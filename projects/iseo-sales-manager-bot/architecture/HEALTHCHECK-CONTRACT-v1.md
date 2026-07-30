@@ -56,12 +56,13 @@ CLEAN v2: доступна
 LEAD_EVENTS: доступна
 ERRORS: доступна
 DEDUP_INDEX: доступна
+
 Gmail: привязка найдена, письма не читались
-Telegram sandbox: доступен
-Operational.dev: выключен, как и требуется
-Admin.dev: тестовый режим
+Telegram: доступен
+Рабочий процесс: выключен
+Админ-процесс: включён
 ИИ: выключен
-Проверка AI: не запускалась
+Проверка провайдера ИИ: не запускалась
 ```
 
 Vocabulary:
@@ -96,3 +97,7 @@ Operational writes `last_success_at`, `last_processed_*`, `last_error_*` into CO
 ### Phase 3B.4
 
 Harness health wording remains the accepted vocabulary. Real Telegram Trigger `/health` execution is still required for final Trigger acceptance.
+
+### Phase 3B.5
+
+Operator-facing health lines use «Рабочий процесс» / «Админ-процесс» / «Проверка провайдера ИИ». Truthful non-fetch Gmail semantics preserved.

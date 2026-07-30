@@ -120,3 +120,7 @@ Harness webhook injection remains valid for reply-shape and unauthorized tests. 
 ## Phase 3B.4.1
 
 Alias harness (webhook → Normalize only) may verify `/aistatus` `/lasterror` `/aion` `/aioff` `/foobarunknown`. It is **not** a substitute for the ten real Telegram Trigger executions.
+
+## Phase 3B.5
+
+Normalize harness remains valid for polish reply-shape checks. Real Telegram Trigger `/help` post-polish is required to prove Trigger registration after Admin patch cycles. Full Trigger re-matrix is optional operator follow-up when Admin stays active.
