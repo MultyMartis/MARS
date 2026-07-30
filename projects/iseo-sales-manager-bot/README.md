@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3B dev contour **created** (inactive Operational.dev + Admin.dev); v2 Sheets tabs created; registry remains **planned**; production Sales-Manager-v2 **unchanged**; sandbox Telegram delivery **pending**
+**Status:** Phase 3B.1 acceptance **attempted** — live AI OFF synthetic + zero-token evidence + Sheets synthetic rows + production proposal ready; registry remains **planned**; production Sales-Manager-v2 **unchanged**; sandbox Telegram delivery **blocked** (`ATTENTION — TELEGRAM SANDBOX DESTINATION REQUIRED`)
 
 ---
 

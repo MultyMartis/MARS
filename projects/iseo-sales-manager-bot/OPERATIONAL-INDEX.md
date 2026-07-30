@@ -12,13 +12,13 @@
 | Field | Value |
 |-------|-------|
 | **Status** | planned / implementation sandbox |
-| **Active stage** | **Phase 3B complete** — live audit + inactive .dev contour + v2 tabs (**READY WITH PENDING SANDBOX TESTS**) |
-| **Runtime** | External n8n — Operational.dev / Admin.dev created **inactive**; production Sales-Manager-v2 untouched |
-| **Live parity vs Sales-Manager-v2** | **PARITY** (Phase 3B read-only audit) |
-| **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports under `evidence/phase3b/` |
+| **Active stage** | **Phase 3B.1** — Telegram sandbox + dev acceptance (**ATTENTION — TELEGRAM SANDBOX DESTINATION REQUIRED**) |
+| **Runtime** | External n8n — Operational.dev / Admin.dev **inactive**; production Sales-Manager-v2 untouched |
+| **Live parity vs Sales-Manager-v2** | **PARITY** (Phase 3B / 3B.1 integrity) |
+| **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3B.1 evidence under `evidence/phase3b1/` |
 | **Registry** | **REGISTERED** — `project_id` **iseo-sales-manager-bot** · status **planned** (unchanged; no production activation) |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
-| **Next** | **PHASE 3B.1** — complete pending sandbox Telegram/live fixture tests |
+| **Next** | Operator approves sandbox Telegram destination → retest delivery → **PHASE 3C** proposal review / cutover gate |
 
 ---
 
@@ -100,6 +100,8 @@
 | 26 | [reports/REPORT-iseo-sales-manager-bot-phase3a1-source-ingest-and-sanitized-baselines-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3a1-source-ingest-and-sanitized-baselines-v1.md) | Phase 3A.1 |
 | 27 | [reports/REPORT-iseo-sales-manager-bot-phase3b-live-audit-and-dev-contour-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3b-live-audit-and-dev-contour-v1.md) | Phase 3B |
 | 28 | [evidence/phase3b/](evidence/phase3b/) | Phase 3B evidence |
+| 29 | [reports/REPORT-iseo-sales-manager-bot-phase3b1-telegram-sandbox-and-dev-acceptance-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3b1-telegram-sandbox-and-dev-acceptance-v1.md) | Phase 3B.1 |
+| 30 | [evidence/phase3b1/](evidence/phase3b1/) | Phase 3B.1 evidence |
 
 ---
 
