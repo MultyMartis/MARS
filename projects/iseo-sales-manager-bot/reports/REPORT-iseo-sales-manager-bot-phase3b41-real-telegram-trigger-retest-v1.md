@@ -121,11 +121,11 @@ Clean worktree; main dirty foreign WIP untouched; selective paths under `project
 
 ## 21. Commit
 
-(recorded after commit wave)
+`797b587bfbc8e124905161fb3b3732d06c9a7dc6` — `fix(iseo-sales-manager-bot): confirm real telegram admin trigger`
 
 ## 22. Push
 
-(recorded after push wave)
+Pushed to `origin/mars/canonical-post-recovery` without force. Tip after push recorded in follow-up docs commit if needed.
 
 ## 23. Risks
 
