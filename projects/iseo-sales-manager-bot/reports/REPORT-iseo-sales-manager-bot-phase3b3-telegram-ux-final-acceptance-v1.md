@@ -205,7 +205,7 @@ Clean worktree from `origin/mars/canonical-post-recovery`. Dirty main index unto
 
 ## 23. Push
 
-Pushed without force to `origin/mars/canonical-post-recovery` (`2d67275d..531985de`).
+Pushed without force to `origin/mars/canonical-post-recovery` (`2d67275d..531985de` fix; tip-align docs `a59a51c0`).
 
 ## 24. Risks
 
