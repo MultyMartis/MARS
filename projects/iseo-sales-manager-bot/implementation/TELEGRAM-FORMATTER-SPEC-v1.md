@@ -5,6 +5,8 @@
 **Format:** plain text **or** safe HTML — **not** fragile MarkdownV2 unless MetaBOT evidence later proves required  
 **Authority:** TELEGRAM-UX-CONTRACT-v1 + Phase 3A operator maps
 
+**Phase 3B.2 accepted runtime setting:** Telegram send nodes use `parse_mode=HTML`. This closes the observed Markdown underscore/entity failure mode; dynamic card and Admin text must remain HTML-escaped.
+
 ---
 
 ## 1. Rendering maps (Russian)

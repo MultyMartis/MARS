@@ -11,14 +11,14 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | planned / implementation sandbox |
-| **Active stage** | **Phase 3B.1** — Telegram sandbox + dev acceptance (**ATTENTION — TELEGRAM SANDBOX DESTINATION REQUIRED**) |
+| **Status** | planned / implementation sandbox; Phase 3B.2 accepted |
+| **Active stage** | **Phase 3B.2 COMPLETE** — Telegram sandbox gate closed; ready for Phase 3C cutover gate |
 | **Runtime** | External n8n — Operational.dev / Admin.dev **inactive**; production Sales-Manager-v2 untouched |
 | **Live parity vs Sales-Manager-v2** | **PARITY** (Phase 3B / 3B.1 integrity) |
-| **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3B.1 evidence under `evidence/phase3b1/` |
+| **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3B.2 evidence under `evidence/phase3b2/` |
 | **Registry** | **REGISTERED** — `project_id` **iseo-sales-manager-bot** · status **planned** (unchanged; no production activation) |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
-| **Next** | Operator approves sandbox Telegram destination → retest delivery → **PHASE 3C** proposal review / cutover gate |
+| **Next** | **PHASE 3C** proposal review / cutover gate under a separate production charter |
 
 ---
 
@@ -90,7 +90,7 @@
 | 21 | [implementation/DEDUP-IMPLEMENTATION-SPEC-v1.md](implementation/DEDUP-IMPLEMENTATION-SPEC-v1.md) | Phase 3A (confirmed vs full-table v2 lookup) |
 | 22 | [implementation/TELEGRAM-FORMATTER-SPEC-v1.md](implementation/TELEGRAM-FORMATTER-SPEC-v1.md) | Phase 3A |
 | 23 | [implementation/TEST-HARNESS-SPEC-v1.md](implementation/TEST-HARNESS-SPEC-v1.md) | Phase 3A |
-| 24 | [implementation/SANDBOX-APPLY-GATE-v1.md](implementation/SANDBOX-APPLY-GATE-v1.md) | Revalidated; still closed pending operator |
+| 24 | [implementation/SANDBOX-APPLY-GATE-v1.md](implementation/SANDBOX-APPLY-GATE-v1.md) | Phase 3B.2 Telegram sandbox items closed; production gate remains closed |
 
 ## Reports
 
@@ -102,6 +102,8 @@
 | 28 | [evidence/phase3b/](evidence/phase3b/) | Phase 3B evidence |
 | 29 | [reports/REPORT-iseo-sales-manager-bot-phase3b1-telegram-sandbox-and-dev-acceptance-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3b1-telegram-sandbox-and-dev-acceptance-v1.md) | Phase 3B.1 |
 | 30 | [evidence/phase3b1/](evidence/phase3b1/) | Phase 3B.1 evidence |
+| 31 | [reports/REPORT-iseo-sales-manager-bot-phase3b2-runtime-fixes-and-telegram-sandbox-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3b2-runtime-fixes-and-telegram-sandbox-v1.md) | Phase 3B.2 |
+| 32 | [evidence/phase3b2/](evidence/phase3b2/) | Phase 3B.2 acceptance evidence |
 
 ---
 
@@ -123,7 +125,8 @@
 | **Phase 3A** | Sanitized baseline gate + MetaBOT Programmer implementation package | **DONE** (historical: sources absent at that time) |
 | **Phase 3A.1** | Source ingest + sanitized baselines + reconciliation | **DONE** |
 | Phase 3B | Live read-only audit + Operational.dev / Admin.dev creation | **DONE** — inactive contour + v2 tabs; Telegram sandbox PENDING |
-| Phase 3B.1 | Complete pending sandbox tests | **NEXT** |
+| Phase 3B.1 | Telegram destination / preliminary acceptance | **DONE** |
+| Phase 3B.2 | Runtime fixes + Telegram sandbox acceptance | **DONE** — ready for Phase 3C cutover gate |
 | Live | At most one Operational + one Admin; target-only diff | Forbidden until chartered |
 
 ---
@@ -151,4 +154,4 @@
 
 ---
 
-*Last updated: 2026-07-30 — Phase 3B live audit + inactive .dev contour + v2 Sheets tabs.*
+*Last updated: 2026-07-31 — Phase 3B.2 runtime fixes and Telegram sandbox acceptance.*

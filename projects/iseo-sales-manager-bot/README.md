@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3B.1 acceptance **attempted** — live AI OFF synthetic + zero-token evidence + Sheets synthetic rows + production proposal ready; registry remains **planned**; production Sales-Manager-v2 **unchanged**; sandbox Telegram delivery **blocked** (`ATTENTION — TELEGRAM SANDBOX DESTINATION REQUIRED`)
+**Status:** **Phase 3B.2 complete** — Telegram sandbox gate closed: 9 synthetic lead cards and 10 synthetic Admin replies accepted in the private operator sandbox; registry remains **planned**; production Sales-Manager-v2 **unchanged**; **ready for the Phase 3C cutover gate** (proposal only).
 
 ---
 
@@ -85,7 +85,7 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 
 ## Next gate
 
-**PHASE 3B — LIVE READ-ONLY AUDIT AND DEV WORKFLOW CREATION** — only after [implementation/SANDBOX-APPLY-GATE-v1.md](implementation/SANDBOX-APPLY-GATE-v1.md) operator confirmations.
+**PHASE 3C — PRODUCTION PROPOSAL REVIEW AND CUTOVER GATE** — requires a separate explicit production charter; no cutover was performed in Phase 3B.2.
 
 Operator source drop path (raw retained): `X:\AI MARS STORAGE\incoming\iseo-sales-manager-bot\raw\`
 

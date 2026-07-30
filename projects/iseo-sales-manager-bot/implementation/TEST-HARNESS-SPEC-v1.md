@@ -66,6 +66,8 @@ Synthetic Gmail payloads use fake message ids `msg_synth_Fxx` and domains `examp
 
 Evidence required: n8n execution shows **0** HTTP OpenRouter calls on AI OFF runs.
 
+**Phase 3B.2 acceptance note:** the prior `AI_DEADLINE` GAP is **CLOSED**. Expanded deterministic Russian unsafe-pattern detection rejected deadline, price, guarantee, and fabricated-fact cases; the Phase 3B.2 local harness result was **19 PASS / 0 FAIL / 0 GAP**.
+
 ---
 
 ## 4. Admin command fixtures

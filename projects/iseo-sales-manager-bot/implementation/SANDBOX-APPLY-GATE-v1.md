@@ -10,10 +10,11 @@
 
 Phase 3B executed under explicit operator charter: live read-only audit, exactly two inactive `.dev` workflows, v2 tabs, synthetic local validation.
 
-Phase 3B.1 executed live AI OFF synthetic runs, zero-token runtime evidence, Sheets synthetic writes, Admin harness, and production proposal — **without** Telegram delivery.
+Phase 3B.1 executed preliminary live AI OFF synthetic runs, zero-token runtime evidence, Sheets synthetic writes, Admin harness, and production proposal.
+Phase 3B.2 closed the Telegram sandbox gate with private-operator binding, nine synthetic lead cards, ten Admin replies, refreshed Sheets mappings, and runtime-fix acceptance.
 
 **Phase 3B documentation/dev contour:** DONE.  
-**Phase 3B.1 Telegram delivery:** **ATTENTION — TELEGRAM SANDBOX DESTINATION REQUIRED**.  
+**Phase 3B.2 Telegram delivery:** **CLOSED** — private operator sandbox accepted; no production manager-group send.
 **Production promotion gate:** remains **closed**.
 
 Recommended next phase name:
@@ -59,12 +60,12 @@ Recommended next phase name:
 | 1 | Exact live workflow ID for Sales-Manager-v2 | **DONE** (`h8I2Tl2yl4uzhUnB`) |
 | 2 | Exact RAW workbook (confirm export matches live) | **DONE** (role resolved; ID local-only) |
 | 3 | Exact CLEAN workbook (confirm export matches live) | **DONE** (role resolved; ID local-only) |
-| 4 | Manager Telegram bot/chat decision | **BLOCKED** — bot resolved; sandbox chat **REQUIRED** (Phase 3B.1 stop) |
-| 5 | Admin Telegram bot/chat decision | **BLOCKED** — prefer same bot; Trigger disabled until destination |
+| 4 | Manager Telegram bot/chat decision | **DONE (sandbox)** — operator private chat resolved; production manager group remains outside this gate |
+| 5 | Admin Telegram bot/chat decision | **DONE (sandbox)** — same private operator chat; Trigger remains disabled |
 | 6 | Authorization to create v2 tabs | **DONE** |
 | 7 | Authorization to create exactly two .dev workflows maximum | **DONE** |
 | 8 | Authorization for read-only n8n audit | **DONE** |
-| 9 | Authorization for synthetic sandbox tests | **DONE** (local + live AI OFF; TG delivery blocked by destination) |
+| 9 | Authorization for synthetic sandbox tests | **DONE** (local + live AI OFF + Telegram sandbox acceptance) |
 | 10 | Confirmation original workflow remains untouched | **DONE** (`ORIGINAL_UNCHANGED`) |
 
 Additional:
@@ -73,9 +74,9 @@ Additional:
 |---|------|--------|
 | 11 | Source export drop completed + sanitized baselines promoted | **DONE** (Phase 3A.1) |
 | 12 | AI remains OFF in CONFIG for first sandbox runs | **DONE** (`ai_enabled=false`) |
-| 13 | Sandbox chat ids ≠ production manager chat | **PENDING** — Phase 3B.1 stop token raised |
-| 14 | Refresh Google Sheets append column cache for v2 tabs | **REQUIRED** before enabling native Sheets write nodes |
-| 15 | Replace Parse Lead `require('crypto')` for n8n task-runner | **REQUIRED** before production Parse on runners |
+| 13 | Sandbox chat ids ≠ production manager chat | **DONE** — private operator sandbox only |
+| 14 | Refresh Google Sheets append column cache for v2 tabs | **DONE** — mappings refreshed |
+| 15 | Replace Parse Lead `require('crypto')` for n8n task-runner | **DONE** — deterministic pure-JS fallback |
 
 ---
 

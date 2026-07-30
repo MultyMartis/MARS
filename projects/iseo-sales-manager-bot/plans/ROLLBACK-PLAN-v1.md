@@ -9,7 +9,7 @@
 ## 1. Scope
 
 Rollback covers sandbox/production n8n + Sheets schema experiments.  
-**Phase 3B / 3B.1 facts:** production rollback source remains live `Sales-Manager-v2` (`h8I2Tl2yl4uzhUnB`, active). Dev copies: `i-SEO Sales Manager - Operational.dev` (`xSnXPy8cEHoZw6xG`) and `i-SEO Sales Manager - Admin.dev` (`wLrLp4WQHm1VJmxz`) — both inactive after Phase 3B.1 restore. Pre-dev raw backup under Storage `incoming/iseo-sales-manager-bot/backups/pre-dev-copy/`. Synthetic `SYNTHETIC_TEST` rows in v2 tabs are sandbox evidence (preserve unless a destructive charter names exact rows). Native Google Sheets append nodes on Operational.dev still need column-list refresh before enabling production writes.
+**Phase 3B–3B.2 facts:** production rollback source remains live `Sales-Manager-v2` (`h8I2Tl2yl4uzhUnB`, active). Dev copies: `i-SEO Sales Manager - Operational.dev` (`xSnXPy8cEHoZw6xG`) and `i-SEO Sales Manager - Admin.dev` (`wLrLp4WQHm1VJmxz`) — both inactive after Phase 3B.2 acceptance. Phase 3B.2 refreshed native Sheets mappings, removed the Parse Lead crypto runtime dependency, and closed Telegram sandbox acceptance; it performed no production cutover. Pre-dev raw backup under Storage `incoming/iseo-sales-manager-bot/backups/pre-dev-copy/`. Synthetic `SYNTHETIC_TEST` rows in v2 tabs are sandbox evidence (preserve unless a destructive charter names exact rows).
 
 ---
 
