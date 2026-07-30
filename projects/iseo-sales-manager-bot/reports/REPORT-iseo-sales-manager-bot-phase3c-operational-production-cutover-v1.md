@@ -122,11 +122,11 @@ Clean temporary worktree from `origin/mars/canonical-post-recovery`; dirty main 
 
 ## 26. Commit
 
-See git closeout (scoped commit on worktree branch merged to canonical via push of worktree commits onto origin tip strategy used by prior phases).
+`8c0a9d5c` — `feat(iseo-sales-manager-bot): cut over operational workflow` (19 paths under `projects/iseo-sales-manager-bot/**`)
 
 ## 27. Push
 
-`origin/mars/canonical-post-recovery` (no force).
+Pushed to `origin/mars/canonical-post-recovery` (`73fcb2f7..8c0a9d5c`, no force).
 
 ## 28. Risks
 
