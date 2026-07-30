@@ -201,11 +201,11 @@ Clean worktree from `origin/mars/canonical-post-recovery`. Dirty main index unto
 
 ## 22. Commit
 
-`fix(iseo-sales-manager-bot): polish telegram ux for final acceptance`
+`531985de` — `fix(iseo-sales-manager-bot): polish telegram ux for final acceptance`
 
 ## 23. Push
 
-Pushed to `origin` without force (see closeout after git wave).
+Pushed without force to `origin/mars/canonical-post-recovery` (`2d67275d..531985de`).
 
 ## 24. Risks
 
