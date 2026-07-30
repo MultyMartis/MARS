@@ -1,0 +1,31 @@
+{
+  "phase": "1B-D6D3",
+  "task_name": "MARS_SITE_002_Client_Ops_Producer",
+  "ok": true,
+  "producer_run_id": "14e5540f-7e22-498f-9bde-def65a7b3dce",
+  "runtime_commit": "e1d2a1786fd7d778957b74fb213cf5656231a256",
+  "kill_switch_mode": "DRY_RUN",
+  "kill_switch_config_hash": "159f79d5e57f1feef8833ea6453c82adc5b4914ca4d213321e8d6629bbfef4ba",
+  "exit_code": 20,
+  "exit_class": "BLOCKED_KILL_SWITCH",
+  "source_run_id": null,
+  "event_id": null,
+  "source_status": null,
+  "delivery_eligibility": null,
+  "artifact_hash": null,
+  "cursor_result": null,
+  "request_authorized": false,
+  "request_attempts": 0,
+  "activation_attempts": 0,
+  "deactivation_attempts": 0,
+  "webhook_calls": 0,
+  "telegram_messages": 0,
+  "data_table_mutations": 0,
+  "reason_codes": [
+    "KILL_SWITCH_SITE_MISMATCH"
+  ],
+  "receipt_path": "X:\\AI MARS STORAGE\\runtime-state\\client-ops-site-002-producer\\receipts\\scheduler-dry-run-2026-07-29T21-48-04-408Z.json",
+  "started_at": "2026-07-29T21:48:04.408Z",
+  "finished_at": "2026-07-29T21:48:04.425Z",
+  "require_completion_marker": false
+}

@@ -1,0 +1,19 @@
+{
+  "phase": "1B-D6D3",
+  "workstream": "D",
+  "mode": "DRY_RUN",
+  "objective": "Create producer scheduler + one controlled scheduled DRY_RUN",
+  "forbids": [
+    "ENABLED",
+    "webhook",
+    "telegram",
+    "datatable_mutation",
+    "activation",
+    "commit",
+    "push",
+    "monitor_task_modify"
+  ],
+  "producer_task_name": "MARS_SITE_002_Client_Ops_Producer",
+  "runtime_pin": "e1d2a1786fd7d778957b74fb213cf5656231a256"
+}
+

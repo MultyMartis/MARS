@@ -1,0 +1,46 @@
+{
+  "schema": "d6d-producer-receipt-v1",
+  "producer_run_id": "c7379e84-2aba-430c-845c-d3cb4e8fb84a",
+  "site_id": "SITE-002",
+  "artifact_identity": null,
+  "artifact_path_sanitized": null,
+  "artifact_hash": "0341f8d2898a6df211133b17ff5f32cb7b568efea5c49e5833b0e3ae8d8f6b93",
+  "source_run_id": "2026-07-10_13-27-20",
+  "event_id": "7493aaa9-dd5b-5fb9-a317-b413adcb8426",
+  "source_status": "ATTENTION",
+  "delivery_eligibility": "STALE_REVIEW_REQUIRED",
+  "kill_switch_mode": "DRY_RUN",
+  "dedupe_result": null,
+  "retry_policy_decision": null,
+  "lifecycle_state_summary": null,
+  "request_attempts": 0,
+  "http_class": null,
+  "delivery_state": null,
+  "containment_result": null,
+  "cursor_result": "EVALUATED",
+  "final_exit_class": "BLOCKED_STALE",
+  "final_exit_code": 21,
+  "timestamps": {
+    "started_at": "2026-07-30T08:40:59.664Z",
+    "finished_at": "2026-07-30T08:41:00.317Z",
+    "evaluation_clock_ms": 1785400860317
+  },
+  "gates_passed": [
+    "acquire_producer_singleton_lock",
+    "verify_kill_switch",
+    "discover_candidates",
+    "validate_stabilize_artifact",
+    "derive_event_identity_fingerprint",
+    "inspect_local_cursor",
+    "derive_source_status",
+    "compute_freshness_eligibility"
+  ],
+  "reason_codes": [
+    "STALE_BLOCKS_BEFORE_ACTIVATION"
+  ],
+  "task_name": "MARS_SITE_002_Client_Ops_Producer",
+  "runtime_commit": "e1d2a1786fd7d778957b74fb213cf5656231a256",
+  "request_authorized": false,
+  "scheduler_phase": "1B-D6D3R",
+  "ledger_observation": null
+}

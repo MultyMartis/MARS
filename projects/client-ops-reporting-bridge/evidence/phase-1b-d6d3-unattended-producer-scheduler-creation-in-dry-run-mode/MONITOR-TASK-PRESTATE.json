@@ -1,0 +1,24 @@
+{
+  "task_name": "MARS_SITE_002_Post_1C_Catalog_Monitor",
+  "state": "Ready",
+  "enabled": true,
+  "last_run": "07/29/2026 12:30:30",
+  "last_result": 0,
+  "next_run": "07/30/2026 12:30:30",
+  "number_of_missed_runs": 0,
+  "actions": [
+    {
+      "WorkingDirectory": "X:\\AI MARS STORAGE\\runtime-checkouts\\site-002-monitor\\repo",
+      "Arguments": "-NoProfile -ExecutionPolicy Bypass -File \"X:\\AI MARS STORAGE\\runtime-checkouts\\site-002-monitor\\repo\\projects\\ocpilot\\sites\\site-002\\tools\\site-002-post-1c-monitor-runner.ps1\"",
+      "Execute": "powershell.exe"
+    }
+  ],
+  "principal_userid": "MetaCODE ONE",
+  "logon_type": "Interactive",
+  "run_level": "Limited",
+  "multiple_instances": "IgnoreNew",
+  "execution_time_limit": "PT2H",
+  "restart_count": 0,
+  "restart_interval": "",
+  "xml_sha256": "BCBB89B3C3CD9AE4AC7E42ACCD7AACEB5E8C3F9BFCE89088FCAF99882905B249"
+}

@@ -1,0 +1,31 @@
+{
+  "phase": "1B-D6D3R",
+  "task_name": "MARS_SITE_002_Client_Ops_Producer",
+  "ok": true,
+  "producer_run_id": "c7379e84-2aba-430c-845c-d3cb4e8fb84a",
+  "runtime_commit": "e1d2a1786fd7d778957b74fb213cf5656231a256",
+  "kill_switch_mode": "DRY_RUN",
+  "kill_switch_config_hash": "159f79d5e57f1feef8833ea6453c82adc5b4914ca4d213321e8d6629bbfef4ba",
+  "exit_code": 21,
+  "exit_class": "BLOCKED_STALE",
+  "source_run_id": "2026-07-10_13-27-20",
+  "event_id": "7493aaa9-dd5b-5fb9-a317-b413adcb8426",
+  "source_status": "ATTENTION",
+  "delivery_eligibility": "STALE_REVIEW_REQUIRED",
+  "artifact_hash": "0341f8d2898a6df211133b17ff5f32cb7b568efea5c49e5833b0e3ae8d8f6b93",
+  "cursor_result": "EVALUATED",
+  "request_authorized": false,
+  "request_attempts": 0,
+  "activation_attempts": 0,
+  "deactivation_attempts": 0,
+  "webhook_calls": 0,
+  "telegram_messages": 0,
+  "data_table_mutations": 0,
+  "reason_codes": [
+    "STALE_BLOCKS_BEFORE_ACTIVATION"
+  ],
+  "receipt_path": "X:\\AI MARS STORAGE\\runtime-state\\client-ops-site-002-producer\\receipts\\scheduler-dry-run-2026-07-30T08-40-59-629Z.json",
+  "started_at": "2026-07-30T08:40:59.629Z",
+  "finished_at": "2026-07-30T08:41:00.319Z",
+  "require_completion_marker": false
+}

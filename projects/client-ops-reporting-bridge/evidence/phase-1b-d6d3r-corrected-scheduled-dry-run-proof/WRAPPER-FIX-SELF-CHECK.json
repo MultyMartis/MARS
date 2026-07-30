@@ -1,0 +1,94 @@
+{
+  "phase": "1B-D6D3R",
+  "check": "wrapper-fix-self-check-R1-R10",
+  "pass": true,
+  "results": [
+    {
+      "id": "R1",
+      "pass": true,
+      "detail": {
+        "mode": "DRY_RUN",
+        "reason": "Phase 1B-D6D2 controlled dedicated producer runtime deployment and one bounded manual DRY_RUN; ENABLED not authorized",
+        "site_id_present_on_raw": true,
+        "wrapper_passes_raw": true
+      }
+    },
+    {
+      "id": "R2",
+      "pass": true,
+      "detail": {
+        "reason": "KILL_SWITCH_SITE_MISMATCH",
+        "note": "parsed object lacks site_id; reproduces D6D3 failure shape"
+      }
+    },
+    {
+      "id": "R3",
+      "pass": true,
+      "detail": {
+        "reason": "KILL_SWITCH_SITE_MISMATCH"
+      }
+    },
+    {
+      "id": "R4",
+      "pass": true,
+      "detail": {
+        "reason": "KILL_SWITCH_SITE_MISMATCH"
+      }
+    },
+    {
+      "id": "R5",
+      "pass": true,
+      "detail": {
+        "reason": "KILL_SWITCH_MODE_UNKNOWN"
+      }
+    },
+    {
+      "id": "R6",
+      "pass": true,
+      "detail": {
+        "parser_mode": "ENABLED",
+        "live_mode": "DRY_RUN",
+        "wrapper_rejects_enabled": true,
+        "charter": "D6D3R_ENABLED_MODE_NOT_AUTHORIZED"
+      }
+    },
+    {
+      "id": "R7",
+      "pass": true,
+      "detail": {
+        "reason": "KILL_SWITCH_MALFORMED",
+        "json_parse_fails": true
+      }
+    },
+    {
+      "id": "R8",
+      "pass": true,
+      "detail": {
+        "mode": "DRY_RUN",
+        "permits_evaluation": true,
+        "permits_activation": false,
+        "permits_request": false
+      }
+    },
+    {
+      "id": "R9",
+      "pass": true,
+      "detail": {
+        "permits_request": false
+      }
+    },
+    {
+      "id": "R10",
+      "pass": true,
+      "detail": {
+        "readonly_token": "D6E2_READ_ONLY_INVARIANT_ARMED",
+        "assertGetOnlyAction": true
+      }
+    }
+  ],
+  "kill_switch_config_hash": "159f79d5e57f1feef8833ea6453c82adc5b4914ca4d213321e8d6629bbfef4ba",
+  "live_mode": "DRY_RUN",
+  "enabled_mode_authorized": false,
+  "token": "D6D3R_WRAPPER_FIX_SELF_CHECK_PASS",
+  "finished_at": "2026-07-30T08:39:19.674Z"
+}

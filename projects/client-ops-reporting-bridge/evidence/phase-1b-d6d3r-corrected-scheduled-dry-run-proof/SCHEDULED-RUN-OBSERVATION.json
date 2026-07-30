@@ -1,0 +1,90 @@
+{
+  "last_run_time": "2026-07-30T15:40:40+07:00",
+  "residual_processes": 0,
+  "phase": "1B-D6D3R",
+  "started_at_utc": "2026-07-30T08:40:39.2094900Z",
+  "next_run_time": "2026-07-31T13:00:00+07:00",
+  "terminal": true,
+  "duration_seconds": 27.406,
+  "observations": [
+    {
+      "last_result": 267009,
+      "at": "2026-07-30T08:40:42.0689589Z",
+      "process_count": 1,
+      "state": "Running",
+      "lock_present": false,
+      "last_run": "2026-07-30T15:40:40+07:00"
+    },
+    {
+      "last_result": 267009,
+      "at": "2026-07-30T08:40:44.8903455Z",
+      "process_count": 1,
+      "state": "Running",
+      "lock_present": false,
+      "last_run": "2026-07-30T15:40:40+07:00"
+    },
+    {
+      "last_result": 267009,
+      "at": "2026-07-30T08:40:47.5720884Z",
+      "process_count": 1,
+      "state": "Running",
+      "lock_present": false,
+      "last_run": "2026-07-30T15:40:40+07:00"
+    },
+    {
+      "last_result": 267009,
+      "at": "2026-07-30T08:40:50.2532560Z",
+      "process_count": 1,
+      "state": "Running",
+      "lock_present": false,
+      "last_run": "2026-07-30T15:40:40+07:00"
+    },
+    {
+      "last_result": 267009,
+      "at": "2026-07-30T08:40:52.9148194Z",
+      "process_count": 1,
+      "state": "Running",
+      "lock_present": false,
+      "last_run": "2026-07-30T15:40:40+07:00"
+    },
+    {
+      "last_result": 267009,
+      "at": "2026-07-30T08:40:55.5235044Z",
+      "process_count": 2,
+      "state": "Running",
+      "lock_present": false,
+      "last_run": "2026-07-30T15:40:40+07:00"
+    },
+    {
+      "last_result": 267009,
+      "at": "2026-07-30T08:40:58.1822871Z",
+      "process_count": 2,
+      "state": "Running",
+      "lock_present": false,
+      "last_run": "2026-07-30T15:40:40+07:00"
+    },
+    {
+      "last_result": 21,
+      "at": "2026-07-30T08:41:01.3399392Z",
+      "process_count": 0,
+      "state": "Running",
+      "lock_present": false,
+      "last_run": "2026-07-30T15:40:40+07:00"
+    },
+    {
+      "last_result": 21,
+      "at": "2026-07-30T08:41:03.9720500Z",
+      "process_count": 0,
+      "state": "Ready",
+      "lock_present": false,
+      "last_run": "2026-07-30T15:40:40+07:00"
+    }
+  ],
+  "invocation_count_this_phase": 1,
+  "task_name": "MARS_SITE_002_Client_Ops_Producer",
+  "finished_at_utc": "2026-07-30T08:41:06.6151863Z",
+  "residual_lock": false,
+  "settings_enabled_after": false,
+  "state_after_disable": "Disabled",
+  "last_task_result": 21
+}

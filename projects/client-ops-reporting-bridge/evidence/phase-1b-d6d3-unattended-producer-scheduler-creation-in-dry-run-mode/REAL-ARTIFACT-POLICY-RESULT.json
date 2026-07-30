@@ -1,0 +1,14 @@
+{
+  "exit_class": "BLOCKED_KILL_SWITCH",
+  "exit_code": 20,
+  "reason_codes": [
+    "KILL_SWITCH_SITE_MISMATCH"
+  ],
+  "selected_run_id": null,
+  "selected_event_id": null,
+  "real_artifact_classification_reached": false,
+  "note": "Fail-closed before candidate inventory due to wrapper kill-switch object shape bug. Not a live kill-switch mode failure: file remained DRY_RUN.",
+  "request_authorized": false,
+  "token": "PARTIAL_D6D3_SCHEDULED_REAL_ARTIFACT_NOT_REACHED"
+}
+

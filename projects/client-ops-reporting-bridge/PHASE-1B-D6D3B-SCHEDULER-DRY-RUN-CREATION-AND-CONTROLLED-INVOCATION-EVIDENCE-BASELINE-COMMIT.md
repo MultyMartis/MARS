@@ -1,0 +1,91 @@
+# PHASE 1B-D6D3B — Scheduler DRY_RUN Creation and Controlled Invocation Evidence Baseline Commit
+
+**Phase:** 1B-D6D3B  
+**Workstream:** D  
+**Roadmap:** A → B → C → E → D  
+**Mode:** OFFLINE EVIDENCE BASELINE / GIT COMMIT only  
+**Production mutations:** 0  
+**Scheduler / producer executions by this phase:** 0  
+**Push:** NO  
+
+## Accepted prior verdicts
+
+### D6D3 (historical failure — preserved)
+
+- Status: PARTIAL — D6D3 CONTROLLED SCHEDULED DRY_RUN DID NOT COMPLETE SAFELY
+- Classification: PARTIAL ACCEPTED — scheduler contour created safely and failed closed; scheduled run stopped at kill-switch parsing before real-artifact classification
+- Initial result: `BLOCKED_KILL_SWITCH` / exit 20 / `KILL_SWITCH_SITE_MISMATCH`
+- Real-artifact evaluation reached: NO
+- Second D6D3 invocation: NO
+
+### D6D3R (corrected recovery — preserved)
+
+- Verdict: COMPLETE — CORRECTED PRODUCER SCHEDULER DRY_RUN REACHED REAL SITE-002 ARTIFACT CLASSIFICATION
+- Classification: ACCEPTED — raw kill-switch gate passed; `BLOCKED_STALE` with zero delivery side effects
+- Result: `BLOCKED_STALE` / exit 21
+- Selected: run_id `2026-07-10_13-27-20` / event_id `7493aaa9-dd5b-5fb9-a317-b413adcb8426`
+- Readiness entering D6D3B: `READY_FOR_D6D3_SCHEDULER_EVIDENCE_BASELINE_COMMIT`
+
+## Preservation rule
+
+`D6D3B_HISTORICAL_FAILURE_AND_RECOVERY_PRESERVED` — do not rewrite D6D3 as if the first scheduled run succeeded.
+
+## Commit subject (exact)
+
+`docs(client-ops): record scheduled producer dry-run`
+
+## Scope of single commit
+
+- D6D3 phase document + sanitized evidence
+- D6D3R phase document + sanitized evidence
+- D6D3B phase document + baseline evidence
+
+Excluded: live runtime-state, runtime checkouts, wrapper bytes, credentials, unrelated Client Ops WIP, SITE-002 sources.
+
+## Tokens
+
+- D6D3B_CANONICAL_BASELINE_RECONFIRMED
+- D6D3B_LIVE_BASELINE_RECONFIRMED
+- D6D3B_PRODUCER_RUNTIME_RECONFIRMED
+- D6D3B_MONITOR_RUNTIME_AND_TASK_RECONFIRMED
+- D6D3B_PRODUCER_TASK_RECONFIRMED_DISABLED
+- D6D3B_RUNTIME_STATE_PRESERVED
+- D6D3B_ACCEPTED_CHANGESET_ISOLATED
+- D6D3B_RUNTIME_STATE_EXCLUDED_FROM_COMMIT
+- D6D3B_HISTORICAL_FAILURE_AND_RECOVERY_PRESERVED
+- D6D3B_INITIAL_FAIL_CLOSED_RUN_CLAIMS_ACCURATE
+- D6D3B_CORRECTED_SCHEDULED_PROOF_CLAIMS_ACCURATE
+- D6D3B_RAW_KILL_SWITCH_FIX_EVIDENCE_SANITIZED
+- D6D3B_WRAPPER_SELF_CHECK_BASELINE_ACCURATE
+- D6D3B_SCHEDULER_CONTRACT_ACCURATE
+- D6D3B_TASK_DEFINITION_EVIDENCE_SANITIZED
+- D6D3B_REAL_ARTIFACT_CLASSIFICATION_ACCURATE
+- D6D3B_CURSOR_EVIDENCE_FAIL_CLOSED
+- D6D3B_OVERLAP_EVIDENCE_ACCURATE
+- D6D3B_RECEIPT_AND_LOG_EVIDENCE_SANITIZED
+- D6D3B_ZERO_SIDE_EFFECT_CLAIMS_ACCURATE
+- D6D3B_ONGOING_EXECUTION_BOUNDARY_ACCURATE
+- D6D3B_WORKSTREAM_BOUNDARIES_CLEAN
+- D6D3B_PRODUCTION_CLAIMS_ACCURATE
+- D6D3B_SECURITY_CLEAN
+
+## Production readiness (unchanged by this commit)
+
+```
+CLIENT_OPS_UNATTENDED_PRODUCTION_READY=NO
+CLIENT_OPS_AUTOMATIC_SITE002_CONNECTION_AUTHORIZED=NO
+D6D_UNATTENDED_PRODUCTION_ENABLED=NO
+D6D3_PRODUCER_SCHEDULER_CREATED=YES
+D6D3R_CORRECTED_SCHEDULED_DRY_RUN_VERIFIED=YES
+D6D3_SCHEDULER_EVIDENCE_COMMITTED=YES (on success)
+D6D3_ONGOING_SCHEDULE_AUTHORIZED=NO
+D6D3_ENABLED_MODE_AUTHORIZED=NO
+AUTOMATIC_RETRIES_ENABLED=NO
+MAX_AUTOMATIC_RETRIES=0
+MAX_SAFE_CONCURRENCY=1
+HISTORICAL_D5R2A_ROW_RECONCILIATION_AUTHORIZED=NO
+```
+
+## Next (not begun)
+
+Phase 1B-D6D4 — Producer Scheduler Ongoing DRY_RUN Observation Window (separate charter).

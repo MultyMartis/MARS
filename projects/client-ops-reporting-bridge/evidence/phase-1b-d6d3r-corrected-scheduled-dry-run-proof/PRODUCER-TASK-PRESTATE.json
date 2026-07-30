@@ -1,0 +1,20 @@
+{
+  "token": "D6D3R_EXISTING_PRODUCER_TASK_RECONFIRMED",
+  "task_name": "MARS_SITE_002_Client_Ops_Producer",
+  "present": true,
+  "state": "Disabled",
+  "multiple_instances": "IgnoreNew",
+  "execution_time_limit": "PT30M",
+  "label": "prestate",
+  "xml_sha256": "9A7D386CF01A05004D115EEB709534603AD4308332DC5065ECA1DA97E741C353",
+  "restart_count": 0,
+  "last_result": 20,
+  "phase": "1B-D6D3R",
+  "settings_enabled": false,
+  "action": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"X:\\AI MARS STORAGE\\runtime-state\\client-ops-site-002-producer\\tmp\\run-client-ops-site-002-producer-scheduled.ps1\"",
+  "last_run": "2026-07-30T04:47:47",
+  "number_of_missed_runs": 0,
+  "kill_switch_mode": "DRY_RUN",
+  "next_run": "2026-07-31T13:00:00",
+  "recreated": false
+}

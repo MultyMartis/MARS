@@ -1,0 +1,16 @@
+{
+  "recorded_at": "2026-07-30T18:37:46Z",
+  "scheduler_execution_authorized": false,
+  "commit_subject": "docs(client-ops): record scheduled producer dry-run",
+  "production_mutations_authorized": false,
+  "push_authorized": false,
+  "entering_readiness": "READY_FOR_D6D3_SCHEDULER_EVIDENCE_BASELINE_COMMIT",
+  "workstream": "D",
+  "phase": "1B-D6D3B",
+  "preserves": [
+    "D6D3_SCHEDULER_CREATION",
+    "D6D3_INITIAL_FAIL_CLOSED",
+    "D6D3R_CORRECTED_SCHEDULED_DRY_RUN"
+  ],
+  "mode": "OFFLINE_EVIDENCE_BASELINE_GIT_COMMIT"
+}

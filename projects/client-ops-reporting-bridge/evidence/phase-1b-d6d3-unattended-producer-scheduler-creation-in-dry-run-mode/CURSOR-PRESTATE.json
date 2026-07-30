@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "site_id": "SITE-002",
+  "producer_schema_version": "1",
+  "last_evaluated_run_id": "2026-07-10_13-27-20",
+  "last_evaluated_event_id": "7493aaa9-dd5b-5fb9-a317-b413adcb8426",
+  "last_artifact_identity": "2026-07-10_13-27-20:0341f8d2898a6df2",
+  "artifact_hash": "0341f8d2898a6df211133b17ff5f32cb7b568efea5c49e5833b0e3ae8d8f6b93",
+  "evaluation_timestamp": "2026-07-29T20:45:07.644Z",
+  "cursor_state": "EVALUATED",
+  "result_class": "STALE_REVIEW_REQUIRED",
+  "delivery_decision": "NO_SEND",
+  "lifecycle_result": null,
+  "processing_terminal": false,
+  "requires_reconciliation": false,
+  "bootstrap_boundary": {
+    "deployment_epoch": "2026-07-29T20:44:55.652Z",
+    "mode": "DRY_RUN_INVENTORY"
+  },
+  "evaluated_runs": {
+    "2026-07-10_13-27-20": {
+      "event_id": "7493aaa9-dd5b-5fb9-a317-b413adcb8426",
+      "artifact_hash": "0341f8d2898a6df211133b17ff5f32cb7b568efea5c49e5833b0e3ae8d8f6b93",
+      "cursor_state": "EVALUATED",
+      "result_class": "STALE_REVIEW_REQUIRED",
+      "delivery_decision": "NO_SEND",
+      "processing_terminal": false,
+      "requires_reconciliation": false,
+      "evaluation_timestamp": "2026-07-29T20:45:07.644Z",
+      "durable_delivery_state": null
+    }
+  }
+}
