@@ -203,7 +203,7 @@ Updated proposal (not applied): activate accepted Operational.dev and disable or
 
 ## 27. Commit
 
-Primary scoped commit created on worktree branch (see closeout). Hash recorded after commit.
+Primary scoped commit: `527c363cd7c3c5da4e6257c131533d128109bd34`.
 
 ## 28. Push
 
@@ -252,3 +252,4 @@ Pushed to `origin/mars/canonical-post-recovery` (no force). Hash recorded after 
 ## 34. Stop Condition
 
 Stopped after runtime fixes, operator-private Telegram acceptance, Admin command acceptance, evidence, production proposal review, scoped commit/push and this report. Did not activate Operational.dev for production, did not leave Admin.dev active, did not disable Sales-Manager-v2, did not process real unread Gmail, did not begin Phase 3C.
+
