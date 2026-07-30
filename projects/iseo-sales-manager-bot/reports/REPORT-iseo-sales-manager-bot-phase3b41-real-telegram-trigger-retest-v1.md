@@ -125,7 +125,7 @@ Clean worktree; main dirty foreign WIP untouched; selective paths under `project
 
 ## 22. Push
 
-Pushed to `origin/mars/canonical-post-recovery` without force. Remote tip after push wave: `b02a3a668205eddae62f249e7067e983ee1f2b33`.
+Pushed to `origin/mars/canonical-post-recovery` without force. Remote tip after push wave: `6204246f972fd5aa6a33e9c4a1d1c05ebd671a54`.
 
 ## 23. Risks
 
