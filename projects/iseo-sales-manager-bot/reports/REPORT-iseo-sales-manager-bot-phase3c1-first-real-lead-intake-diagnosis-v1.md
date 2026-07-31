@@ -115,11 +115,11 @@ Clean worktree from `origin/mars/canonical-post-recovery`; allowlist `projects/i
 
 ## 26. Commit
 
-(filled after commit)
+`df0c6eb4` — `fix(iseo-sales-manager-bot): restore production gmail intake` (20 paths under `projects/iseo-sales-manager-bot/**`)
 
 ## 27. Push
 
-(filled after push)
+Pushed to `origin/mars/canonical-post-recovery` (`056e0ea3..df0c6eb4`, no force).
 
 ## 28. Risks
 
