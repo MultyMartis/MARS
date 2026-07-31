@@ -235,7 +235,7 @@ See §20. All exercised paths (text commands, `/leads` variants, callback proces
 
 **Git:** Commit and push are separate, explicitly authorized waves per MARS git discipline; not executed as part of this documentation pass.
 
-- Commit: `COMMIT_PENDING`
-- Push: `PUSH_PENDING`
+- Commit: `8befd659b8158217e4a059160b8e35aec9ce53d1` — `feat(iseo-sales-manager-bot): add manager lead actions and recovery`
+- Push: `origin/mars/canonical-post-recovery` fast-forward `864df056..8befd659` (non-force)
 
 **Stop condition:** Documentation and evidence review complete for Phase 3D.3. AI remains **OFF**. Sales-Manager-v2 remains **inactive**. No workflow, Sheets, Gmail, or Telegram mutation performed during this documentation pass. No client contact. Awaiting explicit operator instruction for commit/push.
