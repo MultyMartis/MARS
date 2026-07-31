@@ -103,7 +103,43 @@ See [HEALTHCHECK-CONTRACT-v1.md](HEALTHCHECK-CONTRACT-v1.md).
 
 ### `/stats`
 
-Default window from CONFIG. Optional `/stats 30`. Sources: `STATS_DAILY` and/or bounded CLEAN aggregate — **avoid full unbounded reads**.
+Default window from CONFIG. Optional `/stats 30`. Sources: bounded CLEAN aggregate — **avoid full unbounded reads**.
+
+**Phase 3D.1 production shape (business vs technical):**
+
+```text
+Статистика за N дней
+
+Уникальных заявок: N
+Новых: N
+Повторных: N
+Возможных повторов: N
+Повторных обработок сообщений: N
+
+Технических повторных попыток: N
+Карточек доставлено: N
+Ошибок обработки: N
+
+Без ИИ: N
+С ИИ: N
+Использован шаблон: N
+```
+
+Unique identity = `gmail_message_id` || `source_message_id` || `lead_id`. Technical retries must not inflate unique business lead totals.
+
+### `/last_error`
+
+Error lifecycle (read-path): `open` | `resolved` | `controlled_test`.  
+When no open production error:
+
+```text
+Активных рабочих ошибок нет.
+
+Последняя устранённая ошибка:
+<summary> · <stage> · <time>
+```
+
+Do not erase ERRORS history. `/status` must not present a stale timestamp alone as an active failure; authoritative lifecycle is `/last_error`.
 
 ### `/test_lead`
 

@@ -11,14 +11,14 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | planned (registry unchanged) / **production stabilized**; Phase 3D idempotency guard applied; clean valid-contact lead **pending** |
-| **Active stage** | **Phase 3D — ATTENTION (clean test lead pending)** — flood incident closed; Telegram delivery idempotency + bounded retry; Olya/operator guides ready; AI OFF |
+| **Status** | planned (registry unchanged) / **Phase 3D.1 parser repair live**; clean lead acceptance **pending operator new test** |
+| **Active stage** | **Phase 3D.1 — PARSER REPAIRED, NEW TEST PENDING** — real form labels supported; stats unique-lead dedupe; error lifecycle on `/last_error`; AI OFF |
 | **Runtime** | External n8n — Operational.dev **active** (sole Gmail intake); Admin.dev **active**; Sales-Manager-v2 **inactive** |
 | **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive; filter \`labelIds\` parity confirmed |
-| **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C/3C.1/3C.2/3D evidence under `evidence/phase3*` |
+| **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C/3C.1/3C.2/3D/3D.1 evidence under `evidence/phase3*` |
 | **Registry** | status **planned** unchanged — promotion to active/production requires **separate governance gate** |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
-| **Next** | Operator submits clean valid-contact test lead → then optional rename → later PHASE 3E AI ON (charter) |
+| **Next** | Operator submits one new clean audit-form test → Phase 3D.2 Olya handoff closeout → later PHASE 3E AI ON (charter) |
 
 ---
 

@@ -286,3 +286,13 @@ After Gmail Fetch Leads: enable `alwaysOutputData`, add Intake Gate + Switch Int
 - **IF Need Telegram Send** → true: **Telegram Skip Pass** → Result Gate (resume Gmail finalize without resend); false: **Send Telegram Lead Card**.
 - **Update Last Success / Runtime State** writes per-message delivery idempotency keys after success/failure.
 - Do **not** depend only on Gmail unread state for exactly-once Telegram delivery.
+
+## Phase 3D.1 real website form parser note
+
+- **Parse Lead** must extract Russian audit-form labels with next-label delimiting (multiline **and** collapsed single-line): `От кого`/`Имя`, `Способ связи`, `Контакт`, `Телефон`, `Email`/`E-mail`/`Почта`, `Адрес сайта`/`Сайт`, `Комментарий`/`Сообщение`, `Отправлено со страницы`.
+- Stamp `parser_version=sm-parser-v3.1`.
+- Interpret `Способ связи` → phone/email/messenger; reject placeholders (`44`, `#ERROR!`, `UNKNOWN`, …).
+- Site: accept with/without scheme; no DNS required; allow `.example` operator hosts.
+- `Заявка на бесплатный аудит` → Audit / `form_name`.
+- Do **not** auto-replay already PROCESSED malformed messages; request one new clean test lead.
+- Reference harness: `implementation/parser-fixtures/` (F-AF01–F-AF12).

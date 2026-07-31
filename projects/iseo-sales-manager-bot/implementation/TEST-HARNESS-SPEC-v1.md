@@ -124,3 +124,12 @@ Alias harness (webhook → Normalize only) may verify `/aistatus` `/lasterror` `
 ## Phase 3B.5
 
 Normalize harness remains valid for polish reply-shape checks. Real Telegram Trigger `/help` post-polish is required to prove Trigger registration after Admin patch cycles. Full Trigger re-matrix is optional operator follow-up when Admin stays active.
+
+## Phase 3D.1 — real form parser fixtures
+
+Local pure-JS suite (no n8n required):
+
+- `implementation/parser-fixtures/parse-lead-lib.mjs`
+- `implementation/parser-fixtures/run-fixture-suite.mjs`
+- Fixtures **F-AF01–F-AF12** (multiline/collapsed audit form, email/Telegram, NBSP, reorder, missing fields, malformed contact, legacy pre-parsed, special chars, quoted duplicate)
+- Evidence: `evidence/phase3d1/PARSER-FIXTURE-ACCEPTANCE-v1.md`

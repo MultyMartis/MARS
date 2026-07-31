@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3D — production stabilization applied (Telegram delivery idempotency + bounded retry); Operational.dev **active** (AI OFF); Sales-Manager-v2 **inactive**; Admin.dev **active**; Olya guide + operator runbook ready; **clean valid-contact test lead still pending operator submission**
+**Status:** Phase 3D.1 — real website form parser repaired (`sm-parser-v3.1`); Operational.dev **active** (AI OFF); Sales-Manager-v2 **inactive**; Admin.dev **active**; business `/stats` dedupe + error lifecycle applied; **new clean valid-contact test lead awaiting operator submission after readiness notice**
 
 ---
 

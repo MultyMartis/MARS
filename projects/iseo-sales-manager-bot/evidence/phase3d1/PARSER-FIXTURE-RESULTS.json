@@ -1,0 +1,79 @@
+{
+  "total": 12,
+  "passed": 12,
+  "failed": 0,
+  "results": [
+    {
+      "id": "F-AF01",
+      "title": "multiline audit form with phone",
+      "pass": true,
+      "parser_version": "sm-parser-v3.1"
+    },
+    {
+      "id": "F-AF02",
+      "title": "collapsed single-line audit form with phone",
+      "pass": true,
+      "parser_version": "sm-parser-v3.1"
+    },
+    {
+      "id": "F-AF03",
+      "title": "audit form with email",
+      "pass": true,
+      "parser_version": "sm-parser-v3.1"
+    },
+    {
+      "id": "F-AF04",
+      "title": "audit form with Telegram",
+      "pass": true,
+      "parser_version": "sm-parser-v3.1"
+    },
+    {
+      "id": "F-AF05",
+      "title": "optional spaces / NBSP around colon",
+      "pass": true,
+      "parser_version": "sm-parser-v3.1"
+    },
+    {
+      "id": "F-AF06",
+      "title": "reordered optional fields",
+      "pass": true,
+      "parser_version": "sm-parser-v3.1"
+    },
+    {
+      "id": "F-AF07",
+      "title": "missing name but valid phone/site",
+      "pass": true,
+      "parser_version": "sm-parser-v3.1"
+    },
+    {
+      "id": "F-AF08",
+      "title": "valid name/contact missing site",
+      "pass": true,
+      "parser_version": "sm-parser-v3.1"
+    },
+    {
+      "id": "F-AF09",
+      "title": "malformed contact",
+      "pass": true,
+      "parser_version": "sm-parser-v3.1"
+    },
+    {
+      "id": "F-AF10",
+      "title": "previous accepted lead format regression (pre-parsed fields)",
+      "pass": true,
+      "parser_version": "sm-parser-v3.1"
+    },
+    {
+      "id": "F-AF11",
+      "title": "special characters in comment",
+      "pass": true,
+      "parser_version": "sm-parser-v3.1"
+    },
+    {
+      "id": "F-AF12",
+      "title": "duplicated quoted email content",
+      "pass": true,
+      "parser_version": "sm-parser-v3.1"
+    }
+  ]
+}
