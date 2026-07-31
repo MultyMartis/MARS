@@ -109,11 +109,11 @@ Clean worktree; allowlist `projects/iseo-sales-manager-bot/**`; foreign WIP unto
 
 ## 24. Commit
 
-`fix(iseo-sales-manager-bot): repair gmail lead routing` (this wave)
+`e7af121e` — `fix(iseo-sales-manager-bot): repair gmail lead routing` (18 paths under `projects/iseo-sales-manager-bot/**`)
 
 ## 25. Push
 
-Pushed to `origin/mars/canonical-post-recovery` (no force) — see closeout.
+Pushed to `origin/mars/canonical-post-recovery` (`7be959ee..e7af121e`, no force).
 
 ## 26. Risks
 
