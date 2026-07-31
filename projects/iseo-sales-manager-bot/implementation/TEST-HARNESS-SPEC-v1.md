@@ -82,9 +82,13 @@ Evidence required: n8n execution shows **0** HTTP OpenRouter calls on AI OFF run
 | Test | Expect |
 |------|--------|
 | Unknown | Exact `Неизвестная команда. Используйте /help.` |
-| Non-admin | `Недостаточно прав.` |
+| Non-admin | `Доступ запрещён.` |
+| `/start` authorized | Contour + AI wording; points to `/help` |
+| `/start` unauthorized | `Доступ запрещён.` (no config leak) |
+| `/help` | Lists `/start`; omits `/test_lead` |
 | `/ai_on` `/ai_off` | CONFIG flip + LEAD_EVENTS audit |
 | `/health` AI off | AI probe SKIPPED |
+| `/config` | Shows `parser_version=sm-parser-v3.1` when aligned |
 | `/test_lead` prod | refused |
 | `/test_lead` dev | sandbox rows only |
 

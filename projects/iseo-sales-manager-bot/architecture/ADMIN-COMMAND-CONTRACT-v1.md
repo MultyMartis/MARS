@@ -11,7 +11,7 @@
 1. Resolve Telegram `user_id` from update.
 2. Load `admin_user_ids` from CONFIG (`string_list`).
 3. If CONFIG unreadable → deny writes; reply that config is unavailable.
-4. If user not in list → short deny: `Недостаточно прав.`
+4. If user not in list → short deny: `Доступ запрещён.`
 5. Do not reveal other admin IDs.
 
 ---
@@ -42,6 +42,7 @@ Exact response:
 
 | Command | Mode | Effect | Response |
 |---------|------|--------|----------|
+| `/start` | read | Contour + AI mode greeting | Dynamic start panel |
 | `/help` | read | List commands + short purpose | Static help |
 | `/status` | read | environment, ai_enabled, last_success_at, last_processed_lead_id, last_error_at | Snapshot |
 | `/ai_status` | read | ai_enabled, ai_model, health_ai_probe_enabled | AI snapshot |
@@ -59,13 +60,30 @@ Exact response:
 Сводка CONFIG
 Контур: разработка
 Режим ИИ: выключен
-Версия парсера: sm-parser-v3
+Версия парсера: sm-parser-v3.1
 Версия сообщений: sm-msg-v1
 Администраторов в allowlist: 1
 (секреты и идентификаторы скрыты)
 ```
 
 Do not expose raw key tokens such as `environment:`, `aienabled:`, `parserversion:` in operator replies.
+
+### `/start` (Phase 3D.2)
+
+Authorized response shape:
+
+```
+Sales Manager Admin запущен.
+
+Контур: рабочий
+Режим ИИ: выключен
+
+Используйте /help, чтобы посмотреть доступные команды.
+```
+
+- `production` → `рабочий`; otherwise → `разработка`
+- `ai_enabled=true` → `включён`; else → `выключен`
+- `/start@bot_username` normalizes to `/start`
 
 ### Failure behavior (all)
 
@@ -84,7 +102,7 @@ Do not expose raw key tokens such as `environment:`, `aienabled:`, `parserversio
 
 ### `/help`
 
-Lists the ten commands above with one-line Russian descriptions. Mentions: AI default OFF; bot never writes to clients.
+Lists canonical commands with one-line Russian descriptions, including `/start` under «Начало». Omits deferred `/test_lead`. Mentions: AI default OFF; bot never writes to clients.
 
 ### `/status`
 

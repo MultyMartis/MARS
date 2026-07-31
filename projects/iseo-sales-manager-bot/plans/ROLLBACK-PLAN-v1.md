@@ -100,7 +100,7 @@ Admin.dev may remain **active** after polish acceptance (ops surface). Prefer de
 
 ## Phase 3C note
 
-Operational.dev is the sole Gmail intake owner after cutover. Sales-Manager-v2 must remain inactive unless this rollback sequence is executed. Do not run both operational workflows active in parallel. Recommended later display names (after stable acceptance): `i-SEO Sales Manager - Operational` / `i-SEO Sales Manager - Admin`.
+Operational.dev is the sole Gmail intake owner after cutover. Sales-Manager-v2 must remain inactive unless this rollback sequence is executed. **Never activate Sales-Manager-v2 while Operational is active.** Do not run both operational workflows active in parallel. Recommended later display names (after stable acceptance): `i-SEO Sales Manager - Operational` / `i-SEO Sales Manager - Admin` — deferred while references remain clear with `.dev` suffixes.
 
 ## Phase 3C.1 note
 

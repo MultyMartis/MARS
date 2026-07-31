@@ -2,7 +2,7 @@
 
 **Audience:** Андрей (operator)  
 **Contour:** production · AI OFF default  
-**Version:** 1.0 · 2026-07-31
+**Version:** 1.1 · 2026-08-01
 
 ---
 
@@ -15,10 +15,13 @@
 | Admin.dev | **active** |
 | `environment` | `production` |
 | `ai_enabled` | `false` |
+| `parser_version` (display) | `sm-parser-v3.1` |
 | Automatic client replies | **never** |
 | New workflows | **do not create** for hotfixes |
 
 AI OFF is the normal safe production mode.
+
+**Never activate Sales-Manager-v2 while Operational is active.**
 
 ---
 
@@ -26,6 +29,8 @@ AI OFF is the normal safe production mode.
 
 | Command | Use |
 |---------|-----|
+| `/start` | Open Admin panel (contour + AI mode summary) |
+| `/help` | Command list |
 | `/status` | Environment, AI flag, last poll / last lead success |
 | `/health` | Connectivity / readiness summary |
 | `/stats` | Bounded production statistics (exclude SYNTHETIC_TEST) |
@@ -92,6 +97,8 @@ See `plans/ROLLBACK-PLAN-v1.md`.
 ---
 
 ## 6. Avoid dual-active workflows
+
+**Never activate Sales-Manager-v2 while Operational is active.**
 
 Never leave both Sales-Manager-v2 and Operational.dev **active** with Gmail intake.
 

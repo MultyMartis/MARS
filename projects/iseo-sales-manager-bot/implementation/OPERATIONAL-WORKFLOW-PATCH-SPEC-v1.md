@@ -122,7 +122,7 @@ Always emit (canonical enums):
 | `quality_comment` | short Russian |
 | `missing_fields` | list |
 | `clarification_questions` | Russian templates |
-| `manager_recommendation` | Russian template |
+| `manager_recommendation` | Russian template; complete leads use service-aware next step (Audit/SEO/Other); no tautology |
 | `first_reply_text` | name/no-name templates |
 | `first_reply_source` | `template` |
 | `processing_mode` | `ai_off` |
@@ -291,6 +291,8 @@ After Gmail Fetch Leads: enable `alwaysOutputData`, add Intake Gate + Switch Int
 
 - **Parse Lead** must extract Russian audit-form labels with next-label delimiting (multiline **and** collapsed single-line): `От кого`/`Имя`, `Способ связи`, `Контакт`, `Телефон`, `Email`/`E-mail`/`Почта`, `Адрес сайта`/`Сайт`, `Комментарий`/`Сообщение`, `Отправлено со страницы`.
 - Stamp `parser_version=sm-parser-v3.1`.
+- CONFIG display `parser_version` must match deployed parser (`sm-parser-v3.1`).
+- Complete-lead next-step guidance is service-aware (Audit/SEO/Other); never tautological.
 - Interpret `Способ связи` → phone/email/messenger; reject placeholders (`44`, `#ERROR!`, `UNKNOWN`, …).
 - Site: accept with/without scheme; no DNS required; allow `.example` operator hosts.
 - `Заявка на бесплатный аудит` → Audit / `form_name`.

@@ -34,7 +34,7 @@ Sandbox: Telegram send may be disabled until synthetic admin chat approved.
 | 18 | Safe Telegram Reply | pattern | `n8n-nodes-base.telegram` | 1.2 | Reply to admin user/chat | text | sent | → Admin Error Handler | Telegram send | `<TELEGRAM_CREDENTIAL>` | optional | (end / success) |
 | 19 | Admin Error Handler | **new** | Code + ERRORS append + Telegram | 2 | Short Russian + error_code | any | reply | last resort | ERRORS write | sheets/tg | false | → Safe Telegram Reply |
 
-Deny path from node 4 may jump directly to Safe Telegram Reply with `Недостаточно прав.` without Route Command.
+Deny path from node 4 may jump directly to Safe Telegram Reply with `Доступ запрещён.` without Route Command.
 
 ---
 
@@ -42,6 +42,7 @@ Deny path from node 4 may jump directly to Safe Telegram Reply with `Недос�
 
 | Command | Handler | Write? |
 |---------|---------|--------|
+| `/start` | Start | no |
 | `/help` | Help | no |
 | `/status` | Status | no |
 | `/ai_status` | AI Status | no |
@@ -110,3 +111,4 @@ Telegram Trigger vs Webhook; shared bot with manager cards vs separate admin bot
 - Safe patch: deactivate → code-only PUT → reactivate; restore backup if Trigger registration fails.
 - Operator UX: Moscow time render; Russian terminology; synthetic/production status separation.
 - `/test_lead`: deferred reply; omit from `/help` until Operational synthetic entry is chartered.
+- `/start` (Phase 3D.2): authorized greeting with dynamic contour + AI wording; unauthorized → `Доступ запрещён.`

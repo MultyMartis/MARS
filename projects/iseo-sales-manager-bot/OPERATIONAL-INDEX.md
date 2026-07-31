@@ -11,14 +11,14 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | planned (registry unchanged) / **Phase 3D.1 parser repair live**; clean lead acceptance **pending operator new test** |
-| **Active stage** | **Phase 3D.1 — PARSER REPAIRED, NEW TEST PENDING** — real form labels supported; stats unique-lead dedupe; error lifecycle on `/last_error`; AI OFF |
+| **Status** | planned (registry unchanged) / **Phase 3D.2 technical closeout**; Olya visibility **pending**; registry promotion **pending** |
+| **Active stage** | **Phase 3D.2 — TECHNICAL CLOSEOUT, OLYA VISIBILITY PENDING** — `/start` live; parser display `sm-parser-v3.1`; next-step UX polished; exactly-once clean lead confirmed; AI OFF |
 | **Runtime** | External n8n — Operational.dev **active** (sole Gmail intake); Admin.dev **active**; Sales-Manager-v2 **inactive** |
 | **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive; filter \`labelIds\` parity confirmed |
-| **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C/3C.1/3C.2/3D/3D.1 evidence under `evidence/phase3*` |
-| **Registry** | status **planned** unchanged — promotion to active/production requires **separate governance gate** |
+| **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C–3D.2 evidence under `evidence/phase3*` |
+| **Registry** | status **planned** unchanged — promotion to active requires **separate governance gate** (`REGISTRY_STATUS_PROMOTION_PENDING`) |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
-| **Next** | Operator submits one new clean audit-form test → Phase 3D.2 Olya handoff closeout → later PHASE 3E AI ON (charter) |
+| **Next** | Confirm Olya sees Telegram destination → optional operator-typed `/start` Trigger re-matrix → later PHASE 3E AI ON only with separate charter |
 
 ---
 
@@ -175,4 +175,4 @@
 
 ---
 
-*Last updated: 2026-07-31 — Phase 3C operational production cutover (AI OFF; first real lead PENDING).*
+*Last updated: 2026-08-01 — Phase 3D.2 production closeout / Olya handoff (technical closeout; Olya visibility pending).*

@@ -28,6 +28,15 @@
 8. **Качество** (human label only — do not duplicate the label in a trailing comment)
 9. **Не хватает** (missing fields; omit when empty)
 10. **Следующий шаг** (manager_recommendation)
+
+For complete leads (quality ok, contact present), prefer service-aware guidance:
+
+- Audit → `Связаться с клиентом и уточнить детали аудита.`
+- SEO → `Связаться с клиентом и уточнить задачи по продвижению.`
+- Other → `Связаться с клиентом и уточнить задачу.`
+
+Do **not** use tautological wording such as `Можно готовить следующий шаг.`
+Preserve missing-data / no-contact guidance when fields are incomplete.
 11. **Уточняющие вопросы**
 12. **История** (only if repeat/possible/reprocessed; human Russian text only)
 13. **Режим обработки** (Без ИИ / С ИИ / ИИ не сработал, использован шаблон)
