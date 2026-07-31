@@ -271,3 +271,10 @@ Exact live node names/IDs, credential display names, typeVersions on instance, s
 ## Phase 3C.1 observability note
 
 After Gmail Fetch Leads: enable `alwaysOutputData`, add Intake Gate + Switch Intake Route (`error` → Error Handler, `empty` → runtime `last_poll_success_at` only, `lead` → Parse Lead). Keep OpenRouter disabled. Do **not** weaken the incoming-label production filter.
+
+## Phase 3C.2 field-loss / label finalize note
+
+- **Classify Duplicate** must base the lead on `$('Merge AI or Fallback').first().json` (Lookup DEDUP_INDEX replaces `$input` with sheet rows).
+- **Format Telegram Lead Card** must read `$('Classify Duplicate').first().json` (CLEAN/DEDUP append outputs are sheet-shaped).
+- **Send Telegram Lead Card** `chatId` must use `$('Normalize CONFIG').first().json.telegram_manager_chat_id`.
+- Gmail Add PROCESSED / Remove Incoming / Add ERROR `messageId` must use `$json.gmail_message_id || $('Parse Lead').first().json.gmail_message_id` (do not reference retired node names).

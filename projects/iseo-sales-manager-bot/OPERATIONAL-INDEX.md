@@ -11,14 +11,14 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | planned (registry unchanged) / **production cutover complete**; Phase 3C.1 diagnosis complete — **new test lead required** |
-| **Active stage** | **Phase 3C.1 COMPLETE — INTAKE REPAIRED, NEW TEST LEAD REQUIRED** — root cause: Gmail eligibility (Trash + missing incoming label); observability/health patched; AI OFF |
+| **Status** | planned (registry unchanged) / **production cutover complete**; Phase 3C.2 **first real lead accepted** |
+| **Active stage** | **Phase 3C.2 COMPLETE — FIRST REAL LEAD ACCEPTED** — Gmail filters: no Trash rules; OPS chat_id/classify/messageId repaired; AI OFF |
 | **Runtime** | External n8n — Operational.dev **active** (sole Gmail intake); Admin.dev **active**; Sales-Manager-v2 **inactive** |
 | **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive; filter \`labelIds\` parity confirmed |
-| **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C/3C.1 evidence under `evidence/phase3c/` and `evidence/phase3c1/` |
+| **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C/3C.1/3C.2 evidence under `evidence/phase3c*` |
 | **Registry** | **REGISTERED** — `project_id` **iseo-sales-manager-bot** · status **planned** (unchanged; separate registry gate not opened) |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
-| **Next** | **PHASE 3C.2 — FIRST REAL LEAD ACCEPTANCE AFTER LABEL ELIGIBILITY CONFIRMATION** |
+| **Next** | **PHASE 3D — PRODUCTION STABILIZATION AND OLYA HANDOFF** |
 
 ---
 
@@ -46,7 +46,8 @@
 | 4 | [architecture/CONFIGURATION-MODEL-v1.md](architecture/CONFIGURATION-MODEL-v1.md) | Phase 2 |
 | 5 | [architecture/TELEGRAM-UX-CONTRACT-v1.md](architecture/TELEGRAM-UX-CONTRACT-v1.md) | Phase 2 |
 | 6 | [architecture/ADMIN-COMMAND-CONTRACT-v1.md](architecture/ADMIN-COMMAND-CONTRACT-v1.md) | Phase 2 |
-| 7 | [architecture/HEALTHCHECK-CONTRACT-v1.md](architecture/HEALTHCHECK-CONTRACT-v1.md) | Phase 2 |
+| 7 | [architecture/HEALTHCHECK-CONTRACT-v1.md](architecture/HEALTHCHECK-CONTRACT-v1.md) | Phase 2 (+ 3C.1 live query wording) |
+| 7a | [architecture/GMAIL-INTAKE-FILTER-CONTRACT-v1.md](architecture/GMAIL-INTAKE-FILTER-CONTRACT-v1.md) | Phase 3C.2 |
 | 8 | [architecture/AI-OFF-ON-CONTRACT-v1.md](architecture/AI-OFF-ON-CONTRACT-v1.md) | Phase 2 |
 
 ## Core Run — plans
@@ -109,6 +110,10 @@
 | 34 | [evidence/phase3b3/](evidence/phase3b3/) | Phase 3B.3 UX final acceptance evidence |
 | 35 | [reports/REPORT-iseo-sales-manager-bot-phase3c-operational-production-cutover-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3c-operational-production-cutover-v1.md) | Phase 3C |
 | 36 | [evidence/phase3c/](evidence/phase3c/) | Phase 3C cutover evidence |
+| 37 | [reports/REPORT-iseo-sales-manager-bot-phase3c1-first-real-lead-intake-diagnosis-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3c1-first-real-lead-intake-diagnosis-v1.md) | Phase 3C.1 |
+| 38 | [evidence/phase3c1/](evidence/phase3c1/) | Phase 3C.1 evidence |
+| 39 | [reports/REPORT-iseo-sales-manager-bot-phase3c2-gmail-routing-and-first-lead-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3c2-gmail-routing-and-first-lead-v1.md) | Phase 3C.2 |
+| 40 | [evidence/phase3c2/](evidence/phase3c2/) | Phase 3C.2 evidence |
 
 ---
 
@@ -134,9 +139,11 @@
 | Phase 3B.2 | Runtime fixes + Telegram sandbox acceptance | **DONE** |
 | Phase 3B.3 | Telegram UX polish + final dev acceptance | **DONE** |
 | Phase 3B.4 / 3B.4.1 / 3B.5 | Real Admin Trigger + polish + cutover readiness | **DONE** |
-| **Phase 3C** | Operational production cutover (AI OFF) | **DONE** — first real lead **PENDING** |
-| Phase 3C.1 | First real lead observation / production acceptance | **NEXT** |
-| Live rename / Olya handoff | After first-real-lead acceptance | Forbidden until chartered |
+| **Phase 3C** | Operational production cutover (AI OFF) | **DONE** |
+| Phase 3C.1 | First real lead observation / eligibility diagnosis | **DONE** |
+| **Phase 3C.2** | Gmail routing audit + first real lead acceptance | **DONE** |
+| Phase 3D | Production stabilization / Olya handoff | **NEXT** |
+| Live rename / Olya handoff | After stabilization charter | Forbidden until chartered |
 
 ---
 

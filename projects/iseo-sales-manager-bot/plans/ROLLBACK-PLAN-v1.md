@@ -105,3 +105,7 @@ Operational.dev is the sole Gmail intake owner after cutover. Sales-Manager-v2 m
 ## Phase 3C.1 note
 
 First real website test was **delivered** but **not eligible** (Trash + missing incoming label). Do not untrash/relabel broadly. Prefer a new website test after confirming Gmail incoming-label automation. Observability patches on OPS/Admin are forward-compatible; rollback still follows Phase 3C cutover steps if intake must revert to Sales-Manager-v2.
+
+## Phase 3C.2 note
+
+Gmail filter audit: **0** Trash filters; incoming-label filters already correct (no Gmail filter mutation). Historical Trash actor remains SAFE UNKNOWN (external/manual). OPS repairs (Classify base lead, Format from Classify, Telegram chatId from CONFIG, Gmail messageId refs) stopped reprocess flood and enabled first real lead finalization. Pre-patch backups under Storage `incoming/iseo-sales-manager-bot/phase3c2-local/backups/`. Rollback still follows Phase 3C cutover steps if intake must revert to Sales-Manager-v2.

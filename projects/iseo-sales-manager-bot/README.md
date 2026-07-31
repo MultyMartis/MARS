@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3C.1 — Operational.dev **active** (production intake, AI OFF); Sales-Manager-v2 **inactive** rollback source; Admin.dev **active**; first real lead **not accepted** (eligibility: missing incoming label / Trash) — **new website test required** after Gmail filter confirmation
+**Status:** Phase 3C.2 — Operational.dev **active** (production intake, AI OFF); Sales-Manager-v2 **inactive** rollback source; Admin.dev **active**; Gmail filters audited (no Trash rules; incoming label filters OK); **first real lead accepted**; next: Phase 3D stabilization / Olya handoff
 
 ---
 
@@ -76,19 +76,20 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 - Implemented runtime inside MARS (execution remains external n8n).
 - Full CRM / OPS-as-CRM.
 - Auto-reply to clients.
-- First real production lead acceptance (Phase 3C.1 **PENDING**).
 - AI ON in production (remains OFF until explicit charter).
+- Explained historical Trash actor for unlabeled incident mail (SAFE UNKNOWN; not a Gmail filter).
 
 **Resolved in Phase 3A.1:** sanitized Sales-Manager-v1/v2 JSON baselines and XLSX-derived schema baselines are present under `baselines/`.  
-**Resolved in Phase 3C:** Operational.dev is the active production intake (AI OFF); Sales-Manager-v2 preserved inactive as rollback source; Admin.dev remains active.
+**Resolved in Phase 3C:** Operational.dev is the active production intake (AI OFF); Sales-Manager-v2 preserved inactive as rollback source; Admin.dev remains active.  
+**Resolved in Phase 3C.2:** Gmail filters audited (no Trash rules); OPS field-loss/chat_id/messageId repaired; first real website-form lead accepted end-to-end.
 
 ---
 
 ## Next gate
 
-**PHASE 3C.1 — FIRST REAL LEAD OBSERVATION AND PRODUCTION ACCEPTANCE**
+**PHASE 3D — PRODUCTION STABILIZATION AND OLYA HANDOFF**
 
-Do not enable AI, delete Sales-Manager-v2, or begin Olya handoff without first-real-lead evidence.
+Do not enable AI or delete Sales-Manager-v2 without explicit charter. Confirm no client auto-Trash of form mail.
 
 Operator source drop path (raw retained): `X:\AI MARS STORAGE\incoming\iseo-sales-manager-bot\raw\`
 
@@ -98,4 +99,5 @@ Operator source drop path (raw retained): `X:\AI MARS STORAGE\incoming\iseo-sale
 *Phase 2R: project registration + documentation checkpoint (2026-07-30).*  
 *Phase 3A: sanitized baseline gate + MetaBOT Programmer implementation package (2026-07-30).*  
 *Phase 3A.1: source ingest + sanitized baselines (2026-07-30).*  
-*Phase 3C: operational production cutover AI OFF (2026-07-31).*
+*Phase 3C: operational production cutover AI OFF (2026-07-31).*  
+*Phase 3C.2: Gmail routing audit + first real lead acceptance (2026-07-31).*
