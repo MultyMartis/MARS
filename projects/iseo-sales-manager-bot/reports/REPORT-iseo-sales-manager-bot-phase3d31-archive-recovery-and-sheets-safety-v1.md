@@ -68,8 +68,8 @@ Local Phase 3D.3.1 harness: **29/29 PASS** (Storage incoming; not committed).
 
 ## 10. Git
 
-Commit message: `fix(iseo-sales-manager-bot): repair archive lead recovery`  
-Push: `origin/mars/canonical-post-recovery` (no force). Tip hash filled after push.
+Commit: `03a52547e206c38907781fc05c161d98c318031f` — `fix(iseo-sales-manager-bot): repair archive lead recovery`  
+Push: `origin/mars/canonical-post-recovery` @ `03a52547` (no force).
 
 ---
 
