@@ -140,11 +140,11 @@ Clean worktree from `origin/mars/canonical-post-recovery`; allowlist `projects/i
 
 ## 27. Commit
 
-See git section after push (message: `feat(iseo-sales-manager-bot): stabilize production and prepare olya handoff`).
+`6aeb918e` — `feat(iseo-sales-manager-bot): stabilize production and prepare olya handoff` (17 paths under `projects/iseo-sales-manager-bot/**`)
 
 ## 28. Push
 
-Non-force push to `origin/mars/canonical-post-recovery` from worktree branch merge/cherry path as executed.
+Pushed to `origin/mars/canonical-post-recovery` (`0a0294fb..6aeb918e`, no force).
 
 ## 29. Risks
 
