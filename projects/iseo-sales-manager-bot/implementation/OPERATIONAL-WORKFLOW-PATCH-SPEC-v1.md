@@ -267,3 +267,7 @@ Exact live node names/IDs, credential display names, typeVersions on instance, s
 ---
 
 *Related: DEDUP-IMPLEMENTATION-SPEC-v1 · TELEGRAM-FORMATTER-SPEC-v1 · SHEETS-MIGRATION-SPEC-v1 · AI-OFF-ON-CONTRACT-v1.*
+
+## Phase 3C.1 observability note
+
+After Gmail Fetch Leads: enable `alwaysOutputData`, add Intake Gate + Switch Intake Route (`error` → Error Handler, `empty` → runtime `last_poll_success_at` only, `lead` → Parse Lead). Keep OpenRouter disabled. Do **not** weaken the incoming-label production filter.

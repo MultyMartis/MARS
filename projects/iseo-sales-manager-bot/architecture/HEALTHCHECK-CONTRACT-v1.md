@@ -101,3 +101,14 @@ Harness health wording remains the accepted vocabulary. Real Telegram Trigger `/
 ### Phase 3B.5
 
 Operator-facing health lines use «Рабочий процесс» / «Админ-процесс» / «Проверка провайдера ИИ». Truthful non-fetch Gmail semantics preserved.
+
+### Phase 3C.1
+
+Production `/health` performs a **bounded** Gmail getMany using the same incoming-label filter as Operational intake (limit small; no body use in reply; no label mutations). Required wording when the query runs:
+
+```
+Gmail: доступен, запрос выполнен
+Найдено подходящих писем: N
+```
+
+Do **not** display `доступен` from credential reference alone. Structural-only wording remains allowed only when a working query is intentionally not executed.

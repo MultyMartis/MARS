@@ -97,6 +97,13 @@ Telegram Trigger vs Webhook; shared bot with manager cards vs separate admin bot
 - Keep Telegram Trigger `disabled=false` for future controlled acceptance windows; Admin final active=false.
 - Normalize Command: trim, lowercase, strip `@bot`, map optional aliases to canonical commands; args excluded from privileged matching.
 
+## Phase 3C.1 patch notes
+
+- `/health` → Gmail Health Probe (bounded production incoming-label query) → Health formatter.
+- Production wording: `Gmail: доступен, запрос выполнен` + `Найдено подходящих писем: N`.
+- `/status` production lines: последний опрос Gmail / последний обработанный лид / последняя ошибка.
+- `/last_error` stage vocabulary includes `gmail_read` / `schedule_trigger`.
+
 ## Phase 3B.5 patch notes
 
 - Admin.dev may remain **active** after polish.

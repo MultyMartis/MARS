@@ -11,14 +11,14 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | planned (registry unchanged) / **production cutover complete**; first real lead acceptance **PENDING** |
-| **Active stage** | **Phase 3C COMPLETE — FIRST REAL LEAD ACCEPTANCE PENDING** — Operational.dev active (AI OFF); Sales-Manager-v2 inactive rollback source; Admin.dev active |
+| **Status** | planned (registry unchanged) / **production cutover complete**; Phase 3C.1 diagnosis complete — **new test lead required** |
+| **Active stage** | **Phase 3C.1 COMPLETE — INTAKE REPAIRED, NEW TEST LEAD REQUIRED** — root cause: Gmail eligibility (Trash + missing incoming label); observability/health patched; AI OFF |
 | **Runtime** | External n8n — Operational.dev **active** (sole Gmail intake); Admin.dev **active**; Sales-Manager-v2 **inactive** |
-| **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive |
-| **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C evidence under `evidence/phase3c/` |
+| **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive; filter \`labelIds\` parity confirmed |
+| **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C/3C.1 evidence under `evidence/phase3c/` and `evidence/phase3c1/` |
 | **Registry** | **REGISTERED** — `project_id` **iseo-sales-manager-bot** · status **planned** (unchanged; separate registry gate not opened) |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
-| **Next** | **PHASE 3C.1 — FIRST REAL LEAD OBSERVATION AND PRODUCTION ACCEPTANCE** |
+| **Next** | **PHASE 3C.2 — FIRST REAL LEAD ACCEPTANCE AFTER LABEL ELIGIBILITY CONFIRMATION** |
 
 ---
 

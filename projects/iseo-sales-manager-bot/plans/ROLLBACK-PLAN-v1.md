@@ -101,3 +101,7 @@ Admin.dev may remain **active** after polish acceptance (ops surface). Prefer de
 ## Phase 3C note
 
 Operational.dev is the sole Gmail intake owner after cutover. Sales-Manager-v2 must remain inactive unless this rollback sequence is executed. Do not run both operational workflows active in parallel. Recommended later display names (after stable acceptance): `i-SEO Sales Manager - Operational` / `i-SEO Sales Manager - Admin`.
+
+## Phase 3C.1 note
+
+First real website test was **delivered** but **not eligible** (Trash + missing incoming label). Do not untrash/relabel broadly. Prefer a new website test after confirming Gmail incoming-label automation. Observability patches on OPS/Admin are forward-compatible; rollback still follows Phase 3C cutover steps if intake must revert to Sales-Manager-v2.

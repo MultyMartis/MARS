@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3C — Operational.dev **active** (production intake, AI OFF); Sales-Manager-v2 **inactive** rollback source; Admin.dev **active**; first real lead acceptance **PENDING**
+**Status:** Phase 3C.1 — Operational.dev **active** (production intake, AI OFF); Sales-Manager-v2 **inactive** rollback source; Admin.dev **active**; first real lead **not accepted** (eligibility: missing incoming label / Trash) — **new website test required** after Gmail filter confirmation
 
 ---
 
