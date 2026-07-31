@@ -89,8 +89,8 @@ No credentials, Telegram/Gmail IDs, phones, emails, domains, workbook IDs, or ra
 
 Clean worktree from `origin/mars/canonical-post-recovery`. Scoped `projects/iseo-sales-manager-bot/**` only.
 
-Commit: `fix(iseo-sales-manager-bot): close admin reply and runtime state gaps`  
-(hash filled after commit)
+Commit: `491bcc17` — `fix(iseo-sales-manager-bot): close admin reply and runtime state gaps`  
+Pushed to `origin/mars/canonical-post-recovery` (no force).
 
 ## 14. STOP
 
