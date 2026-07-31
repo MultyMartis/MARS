@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3D.2.1 — Admin reply / runtime-state closeout; duplicate `/start` classified as harness overlap; n8n attribution off; `/status` lead stamp backfilled; Update Runtime State fixed; Admin.dev **active**; Operational.dev **active** (AI OFF); Sales-Manager-v2 **inactive**; Olya destination visibility **pending**; registry status promotion **pending**
+**Status:** Phase 3D.3 — Manager UX, lead actions and history recovery; sm-msg-v2 manager cards (emoji indicators + copy-friendly `<code>`/`<pre>` blocks); inline «✅ Отметить обработанным» / «🚫 Отметить как спам» actions via Admin Telegram Trigger callback routing; `/leads` (3/5/10) recent-leads command; CLEAN lifecycle columns added (65 headers); Admin.dev **active**; Operational.dev **active** (AI OFF); Sales-Manager-v2 **inactive**; Olya manager-action access **pending** (not enrolled); registry status promotion **pending**
 
 ---
 
@@ -81,7 +81,8 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 
 **Resolved in Phase 3A.1:** sanitized Sales-Manager-v1/v2 JSON baselines and XLSX-derived schema baselines are present under `baselines/`.  
 **Resolved in Phase 3C:** Operational.dev is the active production intake (AI OFF); Sales-Manager-v2 preserved inactive as rollback source; Admin.dev remains active.  
-**Resolved in Phase 3C.2:** Gmail filters audited (no Trash rules); OPS field-loss/chat_id/messageId repaired; first real website-form lead accepted end-to-end.
+**Resolved in Phase 3C.2:** Gmail filters audited (no Trash rules); OPS field-loss/chat_id/messageId repaired; first real website-form lead accepted end-to-end.  
+**Resolved in Phase 3D.3:** manager UX upgraded to `sm-msg-v2` (emoji lead/lifecycle/system indicators, copy-friendly `<code>` contact fields, single `<pre>` client-reply block); inline lifecycle buttons (Отметить обработанным / Отметить как спам) with idempotent + conflict-safe callback handling via Admin Telegram Trigger; `/leads 3|5|10` recent-leads command (admin allowlist only); CLEAN extended to 65 headers with lifecycle + manager-action-stamp columns; manager-action allowlist (`manager_action_user_ids`) currently falls back to the admin allowlist — **Olya not yet enrolled**.
 
 ---
 
@@ -94,7 +95,7 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 
 ## Next gate
 
-**Operator:** submit one clean valid-contact website test lead (readiness notice already sent).  
+**Next phase:** PHASE 3D.4 — Olya manager-action enrollment (add to `manager_action_user_ids` only, not `admin_user_ids`, after explicit operator approval).  
 **Then:** confirm exactly-once card + optional `.dev` rename.  
 **Later (separate approval):** PHASE 3E — controlled AI ON pilot.
 
@@ -110,4 +111,6 @@ Operator source drop path (raw retained): `X:\AI MARS STORAGE\incoming\iseo-sale
 *Phase 3A.1: source ingest + sanitized baselines (2026-07-30).*  
 *Phase 3C: operational production cutover AI OFF (2026-07-31).*  
 *Phase 3C.2: Gmail routing audit + first real lead acceptance (2026-07-31).*  
-*Phase 3D: production stabilization + Olya handoff pack (2026-07-31).*
+*Phase 3D: production stabilization + Olya handoff pack (2026-07-31).*  
+*Phase 3D.2.1: Admin duplicate reply + runtime-state closeout (2026-08-01).*  
+*Phase 3D.3: manager UX sm-msg-v2, inline lead actions, `/leads`, lifecycle Sheets model — AI OFF (2026-08-01).*

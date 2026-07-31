@@ -241,3 +241,17 @@ Never client Telegram/email auto-send.
 ---
 
 *Related: TELEGRAM-UX-CONTRACT-v1 · OPERATIONAL-WORKFLOW-PATCH-SPEC-v1.*
+
+---
+
+## 6. Phase 3D.3 — `sm-msg-v2` layout
+
+CONFIG `message_format_version=sm-msg-v2`. Adds to the v1 layout (§1–§2) without changing block order:
+
+1. **Emoji title indicator** — one lead-type emoji per card title only (🟢 new / 🟡 repeat / 🟠 possible / 🔵 reprocessed); lifecycle emoji (🕓 pending / ✅ processed / 🚫 spam) render on the lifecycle line, not stacked with the title emoji.
+2. **Copy-friendly contact fields** — `client_name` / `phone` / `email` / `messenger` / `site`, when present, each render as an individual `<code>…</code>` span rather than plain text, so a manager can tap-to-copy exactly one value.
+3. **Reply block as `<pre>`** — block 14 (Готовый ответ клиенту) renders as a single `<pre>…</pre>` element instead of the v1 dash-delimited plain-text block; the manager-only instruction line stays **outside** the `<pre>` so the copied text is client-facing only.
+4. **Inline lifecycle buttons** — actionable pending cards attach the two-button keyboard from TELEGRAM-UX-CONTRACT-v1 §8.3; archive/service cards (including `/leads` output) attach none.
+5. Parse mode remains `HTML` (Phase 3B.2 decision, unchanged); all dynamic values continue to be HTML-escaped before insertion into `<code>`/`<pre>`.
+
+Formatter output is otherwise identical to `sm-msg-v1` content (labels, enums, forbidden list §4 all still apply).

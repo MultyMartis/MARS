@@ -235,3 +235,32 @@ Empty values → `—` (not `UNKNOWN`, not blank multi-newlines).
 ---
 
 *Related: AI-OFF-ON-CONTRACT-v1 · LEAD-DATA-MODEL-v1 · ADMIN-COMMAND-CONTRACT-v1 · Phase 3B.3 evidence.*
+
+---
+
+## 8. Phase 3D.3 — `sm-msg-v2` (emoji indicators, copy blocks, inline actions)
+
+**CONFIG `message_format_version` = `sm-msg-v2`.**
+
+### 8.1 Emoji indicators
+
+Primary indicator sits in the card title only; avoid stacking multiple emoji per line.
+
+**Lead type:** 🟢 Новый лид · 🟡 Повторный лид · 🟠 Возможный повтор (сайт) · 🔵 Повторная обработка  
+**Lifecycle:** 🕓 Ожидает обработки (pending) · ✅ Обработан (processed) · 🚫 Спам (spam)  
+**System:** ✅ success · ⚠️ warning · ❌ error · ℹ️ info · ⚙️ service · 🤖 AI · 📊 stats · 📋 config · 📨 Gmail · 📁 archive
+
+### 8.2 Copy-friendly fields and reply block (`parse_mode=HTML`)
+
+- Contact fields (name / phone / email / messenger / site), when present, render as separate `<code>` inline blocks so managers can tap-to-copy a single value without selecting surrounding text.
+- The prepared client reply renders as a single `<pre>` block placed after a manager-only instruction line — copying it yields **only** client-facing text (no internal labels leak into the copied string).
+- Tap-to-copy on `<code>`/`<pre>` is a current Telegram mobile/desktop client behavior; long-press copy remains the fallback where tap-to-copy is unavailable.
+- Truncation (long cards) prefers preserving manager-facing sections over the reply block.
+
+### 8.3 Inline lifecycle buttons (lead cards only)
+
+Actionable **pending** lead cards carry two inline buttons: **✅ Отметить обработанным** and **🚫 Отметить как спам**. Callback data is an opaque per-lead token (`sm:p:<token12>` / `sm:s:<token12>`) — no PII, no raw `lead_id` in the visible button. Archive, admin, and service cards carry **no** lifecycle buttons. After a successful action the source card message is edited (buttons cleared) rather than a new message sent; see [ADMIN-COMMAND-CONTRACT-v1.md](ADMIN-COMMAND-CONTRACT-v1.md) §7 for callback routing and idempotency.
+
+### 8.4 Forbidden (unchanged, reasserted for 3D.3)
+
+No opaque token collisions surfaced as PII; no raw `lead_id`/dedupe keys in button labels or answer toasts; no automatic client-facing send triggered by a manager button.

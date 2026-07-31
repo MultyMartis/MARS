@@ -63,7 +63,7 @@ No bulk migration of historical rows into v2 for v1. Historical = evidence only.
 
 **Writer:** Operational (primary) · **Reader:** Admin · **Behavior:** upsert by `lead_id` / `source_message_id` · **Retention:** current manager state
 
-Ordered headers (exact):
+Ordered headers (exact, v1 — 52 columns):
 
 `lead_id`, `source_message_id`, `created_at`, `processed_at`, `updated_at`, `client_name`, `primary_contact`, `contact_type`, `phone`, `email`, `messenger`, `site`, `service`, `summary`, `source`, `request_page`, `utm_source`, `utm_medium`, `utm_campaign`, `processing_mode`, `ai_enabled`, `ai_status`, `ai_model`, `fallback_used`, `parser_version`, `message_format_version`, `reply_template_version`, `priority`, `quality_status`, `quality_comment`, `missing_fields`, `clarification_questions`, `manager_recommendation`, `first_reply_text`, `first_reply_source`, `reply_review_status`, `reply_sent_manually_at`, `duplicate_status`, `duplicate_match_type`, `duplicate_lead_id`, `previous_contact_at`, `previous_service`, `previous_summary`, `manager_status`, `assigned_to`, `first_contact_at`, `next_followup_at`, `closed_at`, `close_reason`, `manager_notes`, `processing_error`, `last_error_code`
 
@@ -72,9 +72,34 @@ Ordered headers (exact):
 | `manager_status` | `new` |
 | `reply_review_status` | `draft` |
 | `ai_enabled` | from CONFIG at process time |
+| `message_format_version` | `sm-msg-v2` (Phase 3D.3; was `sm-msg-v1`) |
 | lifecycle optional dates | empty |
 
 **Migration:** header-only; no import of malformed historical processed rows into dedupe.
+
+### 3.1 Phase 3D.3 — lifecycle columns (v2 — 65 columns)
+
+CLEAN extended `+13` headers (52→65) to support inline manager lead actions and callback-driven lifecycle. Appended (order after `last_error_code`):
+
+`lifecycle_status`, `manager_action_token`, `manager_action_user_id`, `manager_action_processed_at`, `manager_action_spam_at`, `manager_action_last_event_id`, `telegram_chat_id`, `telegram_message_id`, `telegram_card_sent_at`, `telegram_card_edited_at`, `card_keyboard_state`, `lead_visual_indicator`, `lead_lifecycle_indicator`
+
+| Header | Type | Required | Default | Notes |
+|--------|------|----------|---------|-------|
+| `lifecycle_status` | enum | yes | `pending` | `pending`\|`processed`\|`spam` |
+| `manager_action_token` | string | yes | generated | opaque 12-char callback token; no PII |
+| `manager_action_user_id` | string | no | empty | Telegram id of acting manager/admin |
+| `manager_action_processed_at` | ISO-8601 | no | empty | set on `pending→processed` |
+| `manager_action_spam_at` | ISO-8601 | no | empty | set on `pending→spam` |
+| `manager_action_last_event_id` | string | no | empty | last `LEAD_EVENTS` row id for this lead |
+| `telegram_chat_id` | string | no | empty | destination chat for the delivered card (manager chat) |
+| `telegram_message_id` | string | no | empty | needed to edit the card on lifecycle change |
+| `telegram_card_sent_at` | ISO-8601 | no | empty | |
+| `telegram_card_edited_at` | ISO-8601 | no | empty | set after successful keyboard-clear edit |
+| `card_keyboard_state` | enum | no | `attached` | `attached`\|`cleared`\|`none` (archive/service cards) |
+| `lead_visual_indicator` | string | no | empty | last-rendered lead-type emoji class (audit trail only) |
+| `lead_lifecycle_indicator` | string | no | empty | last-rendered lifecycle emoji class |
+
+Existing `processed_at` is unchanged and remains **bot processing time** (Operational finalize); `manager_action_processed_at` / `closed_at` are the distinct **manager** lifecycle stamps. No RAW/CLEAN row deletion on `spam` — lifecycle is a status column change plus an append-only `LEAD_EVENTS` record, never a delete.
 
 ---
 
@@ -99,7 +124,8 @@ Ordered headers (exact):
 | `telegram_manager_chat_id` | `<MANAGER_CHAT_ID>` | string | Manager cards |
 | `telegram_admin_chat_id` | `<ADMIN_CHAT_ID>` | string | Admin replies |
 | `admin_user_ids` | *(operator list)* | string_list | Allowlist |
-| `message_format_version` | `sm-msg-v1` | string | Card formatter |
+| `manager_action_user_ids` | *(seeded from `admin_user_ids`; Phase 3D.3)* | string_list | Inline lead-action callback allowlist — falls back to admin list until Olya (or another manager) is explicitly enrolled |
+| `message_format_version` | `sm-msg-v2` (Phase 3D.3; was `sm-msg-v1`) | string | Card formatter |
 | `reply_template_version` | `sm-reply-v1` | string | Templates |
 | `parser_version` | `sm-parser-v3` | string | Parser stamp |
 | `health_ai_probe_enabled` | `false` | boolean | /health AI ping |
@@ -200,3 +226,7 @@ Exact production workbook IDs; whether filenames match `MetaBOT -Leads*.xlsx`; h
 ---
 
 *Related: LEAD-DATA-MODEL-v1 · CONFIGURATION-MODEL-v1 · DEDUP-IMPLEMENTATION-SPEC-v1.*
+
+## Phase 3D.3 note
+
+`lead_clean_v2` header count moved **52→65** (see §3.1) to carry manager lifecycle/callback state directly on the CLEAN row (no separate lifecycle tab). `CONFIG` gained `manager_action_user_ids` (seeded from `admin_user_ids`) and `message_format_version` moved to `sm-msg-v2`. `LEAD_EVENTS` gains no new columns — callback outcomes (`applied`/`idempotent`/`conflict`/`unauthorized`) are recorded via existing `event_type`/`actor`/`detail` fields. No new tab created; no historical row migration; sandbox/synthetic rows (`SYNTHETIC_TEST`) unaffected.

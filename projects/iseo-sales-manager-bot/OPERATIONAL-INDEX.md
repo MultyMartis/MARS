@@ -11,14 +11,14 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | planned (registry unchanged) / **Phase 3D.2.1 Admin reply + runtime-state closeout**; Olya visibility **pending**; registry promotion **pending** |
-| **Active stage** | **Phase 3D.2.1 COMPLETE — PRODUCTION CLOSEOUT CLEAN** — duplicate `/start` = expected harness overlap; runtime lead stamp fixed + backfilled; n8n attribution off; AI OFF |
-| **Runtime** | External n8n — Operational.dev **active** (sole Gmail intake); Admin.dev **active**; Sales-Manager-v2 **inactive** |
+| **Status** | planned (registry unchanged) / **Phase 3D.3 manager UX, lead actions and history recovery**; Olya action access **pending**; registry promotion **pending** |
+| **Active stage** | **PHASE 3D.3 COMPLETE — MANAGER UX AND LEAD ACTIONS READY** — `sm-msg-v2` cards, inline «Отметить обработанным»/«Отметить как спам» callback actions, `/leads 3\|5\|10`, CLEAN lifecycle columns; AI OFF; **PHASE 3D.3 COMPLETE — OLYA ACTION ACCESS PENDING** (manager allowlist falls back to admin; Olya not enrolled) |
+| **Runtime** | External n8n — Operational.dev **active** (sole Gmail intake, 36 nodes); Admin.dev **active** (42 nodes, callback routing); Sales-Manager-v2 **inactive** |
 | **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive; filter \`labelIds\` parity confirmed |
-| **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C–3D.2.1 evidence under `evidence/phase3*` |
+| **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C–3D.3 evidence under `evidence/phase3*` |
 | **Registry** | status **planned** unchanged — promotion to active requires **separate governance gate** (`REGISTRY_STATUS_PROMOTION_PENDING`) |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
-| **Next** | Confirm Olya sees Telegram destination → optional operator-typed Trigger re-matrix → later PHASE 3E AI ON only with separate charter |
+| **Next** | Phase 3D.4 — Olya manager-action enrollment (`manager_action_user_ids` only) → optional operator-typed Trigger re-matrix → later PHASE 3E AI ON only with separate charter |
 
 ---
 
@@ -122,6 +122,8 @@
 | 46 | [evidence/phase3d2/](evidence/phase3d2/) | Phase 3D.2 evidence |
 | 47 | [reports/REPORT-iseo-sales-manager-bot-phase3d21-admin-reply-and-runtime-closeout-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3d21-admin-reply-and-runtime-closeout-v1.md) | Phase 3D.2.1 |
 | 48 | [evidence/phase3d21/](evidence/phase3d21/) | Phase 3D.2.1 evidence |
+| 49 | [reports/REPORT-iseo-sales-manager-bot-phase3d3-manager-ux-actions-and-history-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3d3-manager-ux-actions-and-history-v1.md) | Phase 3D.3 |
+| 50 | [evidence/phase3d3/](evidence/phase3d3/) | Phase 3D.3 evidence (16 docs: visual indicators, keyboard, callback idempotency/conflict, processed/spam acceptance, message edit, copy-friendly fields, reply copy block, lifecycle data model, Sheets lifecycle mapping, manager authorization, `/leads` command + live acceptance, manager UX live acceptance, final workflow state, acceptance receipt) |
 
 ---
 
@@ -154,6 +156,8 @@
 | **Phase 3D.1** | Real-form parser + clean lead | **DONE** |
 | **Phase 3D.2** | Production closeout / Olya handoff docs | **DONE** (typed Trigger pending) |
 | **Phase 3D.2.1** | Admin duplicate reply + runtime lead stamp | **DONE** (harness; typed Trigger pending) |
+| **Phase 3D.3** | Manager UX (`sm-msg-v2`), inline lead actions, `/leads`, lifecycle Sheets model | **DONE** — Olya action access **pending** |
+| Phase 3D.4 | Olya manager-action enrollment | **not opened** |
 | Live rename | After clean-lead acceptance | **deferred** |
 | Registry promotion | Separate governance charter | **not opened** |
 
@@ -182,4 +186,4 @@
 
 ---
 
-*Last updated: 2026-08-01 — Phase 3D.2.1 Admin reply + runtime-state closeout.*
+*Last updated: 2026-08-01 — Phase 3D.3 manager UX, lead actions and history recovery.*

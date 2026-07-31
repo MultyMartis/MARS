@@ -55,6 +55,7 @@ Exact response:
 | `/test_lead` | write (sandbox) | Inject/run synthetic fixture — **no real Gmail** | Result summary |
 | `/last_error` | read | Latest ERRORS row | Code + stage + time |
 | `/config` | read | Allowlisted non-secret keys summary | Russian operator labels |
+| `/leads` | read | Recent CLEAN leads (default 5; accepts `3`\|`5`\|`10`; rejects other counts) | Archive cards, read-only, no lifecycle buttons |
 
 ### Phase 3B.3 operator-facing `/config` shape
 
@@ -195,7 +196,7 @@ Show: ai_enabled, ai_model, environment, message_format_version, reply_template_
 | `/broadcast` | Forbidden |
 | `/stop-all-flow` (MetaBOT) | Not applicable / deferred |
 | `/raw_replay` production Gmail | Forbidden without charter |
-| Inline button callbacks | Deferred |
+| Inline button callbacks | **Delivered Phase 3D.3** — see §7 |
 
 ---
 
@@ -210,7 +211,45 @@ Explicit unknown-command node — do not silent-drop.
 
 ---
 
-*Related: CONFIGURATION-MODEL-v1 · HEALTHCHECK-CONTRACT-v1 · TWO-WORKFLOW-ARCHITECTURE-v1.*
+## 7. Phase 3D.3 — callback routing, `/leads`, and allowlists
+
+### 7.1 Callback routing (inline lead actions)
+
+Inline lifecycle buttons on manager cards route through the **same Admin Telegram Trigger** as text commands (Trigger update types: `message` + `callback_query`; no separate webhook/workflow):
+
+```
+Admin Telegram Trigger → Normalize Command (detect callback_query vs text)
+   → Read Authorization Config → Check Manager Action Authorization
+        → Resolve Lead by Token → State Machine (pending→processed|spam)
+             → Update CLEAN Lifecycle (Sheets) → Append LEAD_EVENTS Callback
+                  → Edit Lead Card Message (clear keyboard) → Answer Callback Query
+```
+
+- Allowed transitions: `pending→processed`, `pending→spam`.
+- Same action repeated on an already-applied lead: **idempotent** — answered, no duplicate Sheets mutation, no duplicate `LEAD_EVENTS` row.
+- Cross transition after settle (`processed↔spam`): **conflict** — `LEAD_EVENTS` records the conflict attempt; **no** Sheets status change; answer explains the lead already has a different status.
+- Unauthorized caller: **no** Sheets mutation, answer `Доступ запрещён.` (same deny wording as command path).
+- On successful mutation the source card message is edited (keyboard cleared); if the edit call itself fails, the Sheets mutation is **kept** and an operator-facing notice path (`Callback Edit Result`) records the edit failure separately — the lifecycle change is not rolled back.
+
+### 7.2 `/leads` command detail
+
+- Default count: **5**. Accepted explicit counts: **3, 5, 10**. Any other count (e.g. `/leads 7`) is **rejected** with a short Russian usage message — no partial/rounded result returned.
+- Admin allowlist only (`admin_user_ids`) — not the manager-action allowlist.
+- Returns the N most recent CLEAN leads as **archive cards**: read-only, **no** inline lifecycle buttons (buttons attach only to actionable pending cards produced by the live intake flow, per TELEGRAM-UX-CONTRACT-v1 §8.3).
+- Synthetic rows (`client_name` containing `SYNTHETIC_TEST`) are excluded from real business recovery use of `/leads`.
+
+### 7.3 Manager vs admin allowlists
+
+| CONFIG key | Purpose | Phase 3D.3 state |
+|------------|---------|-------------------|
+| `admin_user_ids` | Text-command authorization (`/status`, `/leads`, `/ai_on`, …) | Operator only |
+| `manager_action_user_ids` | Inline lead-action callback authorization (Отметить обработанным / Отметить как спам) | **Falls back to `admin_user_ids`** — no manager IDs enrolled yet |
+
+Olya is **not** enrolled in either allowlist. Future enrollment (Phase 3D.4) adds her identity to `manager_action_user_ids` **only**, after explicit operator approval — never to `admin_user_ids`.
+
+---
+
+*Related: CONFIGURATION-MODEL-v1 · HEALTHCHECK-CONTRACT-v1 · TWO-WORKFLOW-ARCHITECTURE-v1 · TELEGRAM-UX-CONTRACT-v1 §8.*
 
 
 ### Phase 3B.4 stats shape

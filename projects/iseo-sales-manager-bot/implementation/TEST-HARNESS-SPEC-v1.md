@@ -140,3 +140,57 @@ Local pure-JS suite (no n8n required):
 - `implementation/parser-fixtures/run-fixture-suite.mjs`
 - Fixtures **F-AF01–F-AF12** (multiline/collapsed audit form, email/Telegram, NBSP, reorder, missing fields, malformed contact, legacy pre-parsed, special chars, quoted duplicate)
 - Evidence: `evidence/phase3d1/PARSER-FIXTURE-ACCEPTANCE-v1.md`
+
+## Phase 3D.3 — manager UX / lead-action fixtures (F-MU01–F-MU30)
+
+Local pure-JS/unit harness covering `sm-msg-v2` formatting, inline keyboard, callback state machine, `/leads`, and lifecycle defaults. Synthetic lead ids and `SYNTHETIC_TEST` markers only — no real Telegram sends in the local run; live confirmation is a separate matrix (below).
+
+| ID | Area | Case | Expect |
+|----|------|------|--------|
+| F-MU01 | Visual indicator | New lead title | 🟢 Новый лид |
+| F-MU02 | Visual indicator | Repeat lead title | 🟡 Повторный лид |
+| F-MU03 | Visual indicator | Possible-repeat title | 🟠 Возможный повтор |
+| F-MU04 | Visual indicator | Reprocessed title | 🔵 Повторная обработка |
+| F-MU05 | Copy field | `client_name` present | rendered as `<code>` |
+| F-MU06 | Copy field | `phone` present | rendered as `<code>` |
+| F-MU07 | Copy field | `email` present | rendered as `<code>` |
+| F-MU08 | Copy field | `messenger` present | rendered as `<code>` |
+| F-MU09 | Copy field | `site` present | rendered as `<code>` |
+| F-MU10 | Reply copy block | Full reply text | single `<pre>` block; manager instruction line stays outside `<pre>` |
+| F-MU11 | Inline keyboard | Actionable pending card | both buttons attached with `sm:p:`/`sm:s:` tokens |
+| F-MU12 | Inline keyboard | Archive/service card | no buttons attached |
+| F-MU13 | Callback | `pending→processed` | outcome `applied`; Sheets mutate true; `LEAD_EVENTS` `manager_marked_processed` |
+| F-MU14 | Callback | repeat same processed click | outcome `idempotent`; no duplicate Sheets mutate |
+| F-MU15 | Callback | `pending→spam` | outcome `applied`; Sheets mutate true |
+| F-MU16 | Callback | repeat same spam click | outcome `idempotent` |
+| F-MU17 | Callback | `processed→spam` after settle | outcome `conflict`; no Sheets status change; event recorded |
+| F-MU18 | Callback | `spam→processed` after settle | outcome `conflict`; no Sheets status change |
+| F-MU19 | Callback | unauthorized user | `Доступ запрещён.`; no Sheets mutation |
+| F-MU20 | Callback | unknown/expired token | safe generic failure; no Sheets mutation |
+| F-MU21 | Message edit | successful mutate | card edited, keyboard cleared |
+| F-MU22 | Message edit | edit call fails | Sheets mutation kept; `Callback Edit Result` notice path used; not rolled back |
+| F-MU23 | `/leads` | default (no arg) | 5 most recent CLEAN leads |
+| F-MU24 | `/leads` | `/leads 3` | 3 most recent |
+| F-MU25 | `/leads` | `/leads 10` | 10 most recent |
+| F-MU26 | `/leads` | `/leads 7` (invalid) | rejected with usage message; no partial result |
+| F-MU27 | `/leads` | synthetic rows present | `SYNTHETIC_TEST` rows excluded from result |
+| F-MU28 | `/leads` | output cards | archive shape, no inline buttons |
+| F-MU29 | Authorization | `manager_action_user_ids` empty | falls back to `admin_user_ids` |
+| F-MU30 | CLEAN defaults | new lead first write | `lifecycle_status=pending`, `manager_action_token` generated, `message_format_version=sm-msg-v2` |
+
+**Result:** 30/30 fixtures PASS plus 1 aggregate regression check (full `sm-msg-v1`-compatible field set still populated under `sm-msg-v2`) = **local harness 31/31 PASS**.
+
+### Live acceptance matrix (Admin Telegram Trigger, operator-private)
+
+| Check | Result |
+|-------|--------|
+| `/start` | PASS |
+| `/help` | PASS |
+| `/config` | PASS |
+| `/leads` (3\|5\|10) | PASS |
+| Callback processed (applied) | PASS |
+| Callback idempotent re-click | PASS |
+| Callback conflict (processed↔spam) | PASS |
+| Callback unauthorized | PASS |
+
+AI calls during live acceptance: **0**. Client auto-messages: **0**. New workflows: **0**.

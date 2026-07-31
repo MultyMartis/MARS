@@ -113,3 +113,33 @@ Telegram Trigger vs Webhook; shared bot with manager cards vs separate admin bot
 - `/test_lead`: deferred reply; omit from `/help` until Operational synthetic entry is chartered.
 - `/start` (Phase 3D.2): authorized greeting with dynamic contour + AI wording; unauthorized → `Доступ запрещён.`
 - Phase 3D.2.1: all Telegram send nodes must set `additionalFields.appendAttribution=false`; Help/readiness advertise canonical commands only; no Admin update-id idempotency table (duplicate `/start` was harness overlap).
+
+## Phase 3D.3 patch notes — callback graph + `/leads`
+
+**Callback graph (added to Route Command upstream branch in Normalize Command):**
+
+```
+Admin Telegram Trigger (message + callback_query)
+  → Normalize Command (branch: text command | callback_query)
+       callback_query →
+         Read Authorization Config → Check Manager Action Authorization
+           (deny → Answer Callback Query "Доступ запрещён.")
+           (allow) → Resolve Lead by Token (opaque token → lead_id)
+             → Lifecycle State Machine
+                  pending→processed | pending→spam → applied
+                  same-status repeat → idempotent
+                  processed↔spam → conflict
+             → Update CLEAN Lifecycle (Sheets, update-by-lead_id)
+             → Append LEAD_EVENTS Callback (immutable; records applied/idempotent/conflict/unauthorized)
+             → Edit Lead Card Message (clear keyboard on applied; on edit failure, log Callback Edit Result but keep Sheets mutation)
+             → Answer Callback Query (confirms outcome to the tapping manager)
+```
+
+- `Check Manager Action Authorization` reads `manager_action_user_ids`, falling back to `admin_user_ids` while the manager allowlist is empty (Phase 3D.3 state — Olya not enrolled).
+- `Resolve Lead by Token` reads `lead_clean_v2` by the opaque per-lead token stamped at CLEAN write time; unknown/expired token → treated as unauthorized-shaped safe failure (no Sheets mutation, generic answer).
+- No Execute Workflow call to Operational.dev; Admin.dev owns the full callback path against `lead_clean_v2` directly (see SHEETS-LIFECYCLE-MAPPING evidence).
+
+**`/leads` handler (added to Route Command):**
+
+- New handler node reads `lead_clean_v2` (bounded, most-recent-first), validates count arg against `{3,5,10}` (default 5; other values → usage message), renders each row as a read-only archive card (no inline keyboard), excludes `SYNTHETIC_TEST` rows from business-facing recovery use.
+- Authorization: `admin_user_ids` only (same gate as other read commands) — **not** the manager-action allowlist.

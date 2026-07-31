@@ -113,3 +113,7 @@ Gmail filter audit: **0** Trash filters; incoming-label filters already correct 
 ## Phase 3D note
 
 Telegram delivery idempotency + bounded retry (max 5) patched on Operational.dev (`IF Need Telegram Send`, `Telegram Skip Pass`, CONFIG keys `tg_delivered:*` / `tg_attempts:*`). Exact DEDUP normalized_value matching restored in Classify. Pre-patch backup: Storage `incoming/iseo-sales-manager-bot/phase3d-local/backups/OPS.before-phase3d-idempotency.raw.json`. Rollback of intake still follows Phase 3C cutover (deactivate Operational → activate Sales-Manager-v2 only after dual-active check). Do not remove idempotency nodes during emergency rollback unless reverting to a known pre-3D export intentionally.
+
+## Phase 3D.3 note
+
+Callback rollback (inline lead-action buttons / `/leads` / `sm-msg-v2` formatter/keyboard) = **restore the pre-3D.3 Admin.dev and Operational.dev exports from their Storage backups**, not an invented alternate workflow or ad hoc node deletion. Do not hand-patch the callback graph or lifecycle Sheets columns as a "rollback" — restore from backup, verify credentials still attached, and confirm CONFIG `ai_enabled=false` before resuming. Intake-owner rollback (Operational.dev ↔ Sales-Manager-v2) is unaffected and still follows the Phase 3C cutover sequence above.
