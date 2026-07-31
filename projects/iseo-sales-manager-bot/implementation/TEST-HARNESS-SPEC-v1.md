@@ -85,7 +85,10 @@ Evidence required: n8n execution shows **0** HTTP OpenRouter calls on AI OFF run
 | Non-admin | `Доступ запрещён.` |
 | `/start` authorized | Contour + AI wording; points to `/help` |
 | `/start` unauthorized | `Доступ запрещён.` (no config leak) |
-| `/help` | Lists `/start`; omits `/test_lead` |
+| `/help` | Lists `/start`; omits `/test_lead`; canonical `/ai_status` (no `/aistatus` ads) |
+| `/status` lead stamp | Shows `last_lead_success_at` Moscow time for latest delivered production lead |
+| Attribution | Admin/Ops Telegram send: `appendAttribution=false` |
+| Runtime update unit | Gmail-stub + gate success → writes `last_lead_success_at`; empty poll → poll only; fail → no success stamp |
 | `/ai_on` `/ai_off` | CONFIG flip + LEAD_EVENTS audit |
 | `/health` AI off | AI probe SKIPPED |
 | `/config` | Shows `parser_version=sm-parser-v3.1` when aligned |

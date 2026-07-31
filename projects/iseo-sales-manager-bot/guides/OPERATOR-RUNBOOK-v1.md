@@ -31,7 +31,7 @@ AI OFF is the normal safe production mode.
 |---------|-----|
 | `/start` | Open Admin panel (contour + AI mode summary) |
 | `/help` | Command list |
-| `/status` | Environment, AI flag, last poll / last lead success |
+| `/status` | Environment, AI flag, last poll / last lead success (`last_lead_success_at`) |
 | `/health` | Connectivity / readiness summary |
 | `/stats` | Bounded production statistics (exclude SYNTHETIC_TEST) |
 | `/last_error` | Last structured error (ignore stale synthetic as active incident) |
@@ -41,6 +41,8 @@ AI OFF is the normal safe production mode.
 | `/ai_off` | Force AI OFF (return to safe mode) |
 
 Allowlist remains operator-only unless you explicitly expand it. Do **not** add Оля to Admin without a separate approval.
+
+**Phase 3D.2.1:** readiness notices and Help must list canonical commands only (`/ai_status`, not `/aistatus`). Telegram messages must not show the n8n attribution footer.
 
 ---
 

@@ -28,6 +28,8 @@
 
 Canonical forms remain the router contract. Do not replace canonical help text with aliases.
 
+**Phase 3D.2.1:** readiness / Help / operator notices must advertise **only** canonical forms. Aliases remain accepted by Normalize Command but must not appear in operator-facing instruction lists.
+
 ## 2. Unknown command
 
 Exact response:
@@ -68,7 +70,7 @@ Exact response:
 
 Do not expose raw key tokens such as `environment:`, `aienabled:`, `parserversion:` in operator replies.
 
-### `/start` (Phase 3D.2)
+### `/start` (Phase 3D.2 / 3D.2.1)
 
 Authorized response shape:
 
@@ -84,6 +86,16 @@ Sales Manager Admin запущен.
 - `production` → `рабочий`; otherwise → `разработка`
 - `ai_enabled=true` → `включён`; else → `выключен`
 - `/start@bot_username` normalizes to `/start`
+- Phase 3D.2 observed double reply was **expected harness overlap** (two deliberate harness executions) — not a Trigger same-update defect; no Admin idempotency table added in 3D.2.1
+
+### `/status` (Phase 3D.2.1)
+
+Production snapshot must read authoritative CONFIG:
+
+- `last_poll_success_at` → «Последний опрос Gmail»
+- `last_lead_success_at` (fallback `last_success_at`) → «Последний обработанный лид»
+
+Operational must write `last_lead_success_at` from **Telegram Result Gate** success context after Gmail finalize — not from the Gmail API stub alone.
 
 ### Failure behavior (all)
 

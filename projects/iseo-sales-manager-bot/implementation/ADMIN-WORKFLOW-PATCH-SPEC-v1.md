@@ -112,3 +112,4 @@ Telegram Trigger vs Webhook; shared bot with manager cards vs separate admin bot
 - Operator UX: Moscow time render; Russian terminology; synthetic/production status separation.
 - `/test_lead`: deferred reply; omit from `/help` until Operational synthetic entry is chartered.
 - `/start` (Phase 3D.2): authorized greeting with dynamic contour + AI wording; unauthorized → `Доступ запрещён.`
+- Phase 3D.2.1: all Telegram send nodes must set `additionalFields.appendAttribution=false`; Help/readiness advertise canonical commands only; no Admin update-id idempotency table (duplicate `/start` was harness overlap).

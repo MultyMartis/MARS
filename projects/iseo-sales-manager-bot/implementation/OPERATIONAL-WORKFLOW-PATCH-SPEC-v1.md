@@ -285,6 +285,7 @@ After Gmail Fetch Leads: enable `alwaysOutputData`, add Intake Gate + Switch Int
 - **Format Telegram Lead Card** sets `skip_telegram` when already delivered or attempts ≥ 5 (`telegram_retry_exhausted`).
 - **IF Need Telegram Send** → true: **Telegram Skip Pass** → Result Gate (resume Gmail finalize without resend); false: **Send Telegram Lead Card**.
 - **Update Last Success / Runtime State** writes per-message delivery idempotency keys after success/failure.
+- **Phase 3D.2.1:** Update code must read delivery truth from `$('Telegram Result Gate')` when present (Gmail finalize stubs lack `telegram_ok`). Empty polls write only `last_poll_success_at`. Success writes `last_lead_success_at` + monotonic newest-event protection. Telegram send nodes keep `appendAttribution=false`.
 - Do **not** depend only on Gmail unread state for exactly-once Telegram delivery.
 
 ## Phase 3D.1 real website form parser note

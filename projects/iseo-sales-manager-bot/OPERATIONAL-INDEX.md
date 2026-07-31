@@ -11,14 +11,14 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | planned (registry unchanged) / **Phase 3D.2 technical closeout**; Olya visibility **pending**; registry promotion **pending** |
-| **Active stage** | **Phase 3D.2 — TECHNICAL CLOSEOUT, OLYA VISIBILITY PENDING** — `/start` live; parser display `sm-parser-v3.1`; next-step UX polished; exactly-once clean lead confirmed; AI OFF |
+| **Status** | planned (registry unchanged) / **Phase 3D.2.1 Admin reply + runtime-state closeout**; Olya visibility **pending**; registry promotion **pending** |
+| **Active stage** | **Phase 3D.2.1 COMPLETE — PRODUCTION CLOSEOUT CLEAN** — duplicate `/start` = expected harness overlap; runtime lead stamp fixed + backfilled; n8n attribution off; AI OFF |
 | **Runtime** | External n8n — Operational.dev **active** (sole Gmail intake); Admin.dev **active**; Sales-Manager-v2 **inactive** |
 | **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive; filter \`labelIds\` parity confirmed |
-| **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C–3D.2 evidence under `evidence/phase3*` |
+| **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C–3D.2.1 evidence under `evidence/phase3*` |
 | **Registry** | status **planned** unchanged — promotion to active requires **separate governance gate** (`REGISTRY_STATUS_PROMOTION_PENDING`) |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
-| **Next** | Confirm Olya sees Telegram destination → optional operator-typed `/start` Trigger re-matrix → later PHASE 3E AI ON only with separate charter |
+| **Next** | Confirm Olya sees Telegram destination → optional operator-typed Trigger re-matrix → later PHASE 3E AI ON only with separate charter |
 
 ---
 
@@ -118,6 +118,10 @@
 | 42 | [evidence/phase3d/](evidence/phase3d/) | Phase 3D evidence |
 | 43 | [guides/OLYA-LEAD-WORK-GUIDE-v1.md](guides/OLYA-LEAD-WORK-GUIDE-v1.md) | Olya handoff |
 | 44 | [guides/OPERATOR-RUNBOOK-v1.md](guides/OPERATOR-RUNBOOK-v1.md) | Operator runbook |
+| 45 | [reports/REPORT-iseo-sales-manager-bot-phase3d2-production-closeout-and-olya-handoff-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3d2-production-closeout-and-olya-handoff-v1.md) | Phase 3D.2 |
+| 46 | [evidence/phase3d2/](evidence/phase3d2/) | Phase 3D.2 evidence |
+| 47 | [reports/REPORT-iseo-sales-manager-bot-phase3d21-admin-reply-and-runtime-closeout-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3d21-admin-reply-and-runtime-closeout-v1.md) | Phase 3D.2.1 |
+| 48 | [evidence/phase3d21/](evidence/phase3d21/) | Phase 3D.2.1 evidence |
 
 ---
 
@@ -146,7 +150,10 @@
 | **Phase 3C** | Operational production cutover (AI OFF) | **DONE** |
 | Phase 3C.1 | First real lead observation / eligibility diagnosis | **DONE** |
 | **Phase 3C.2** | Gmail routing audit + first real lead acceptance | **DONE** |
-| **Phase 3D** | Production stabilization / Olya handoff | **ATTENTION** — idempotency + guides done; clean lead pending |
+| **Phase 3D** | Production stabilization / Olya handoff | **DONE** (technical) |
+| **Phase 3D.1** | Real-form parser + clean lead | **DONE** |
+| **Phase 3D.2** | Production closeout / Olya handoff docs | **DONE** (typed Trigger pending) |
+| **Phase 3D.2.1** | Admin duplicate reply + runtime lead stamp | **DONE** (harness; typed Trigger pending) |
 | Live rename | After clean-lead acceptance | **deferred** |
 | Registry promotion | Separate governance charter | **not opened** |
 
@@ -175,4 +182,4 @@
 
 ---
 
-*Last updated: 2026-08-01 — Phase 3D.2 production closeout / Olya handoff (technical closeout; Olya visibility pending).*
+*Last updated: 2026-08-01 — Phase 3D.2.1 Admin reply + runtime-state closeout.*

@@ -28,8 +28,8 @@
 | 4 | CLEAN sheet readable | Header row readable | `clean_read` |
 | 5 | ERRORS / diagnostics available | Tab readable | `err_read` |
 | 6 | Telegram admin send | Send short “health ok probe” to admin chat **or** dry validate chat id presence (prefer actual short ping in .dev) | `tg_admin` |
-| 7 | Last operational success | `last_success_at` present and within SLO window (e.g. 24–48h) — **warn** if stale, not hard fail if schedule idle | `ops_stale` (warn) |
-| 8 | Last processed lead | `last_processed_lead_id` readable | info |
+| 7 | Last operational success | `last_lead_success_at` / `last_success_at` present and within SLO window (e.g. 24–48h) — **warn** if stale, not hard fail if schedule idle | `ops_stale` (warn) |
+| 8 | Last processed lead | `last_processed_lead_id` / `last_lead_success_at` readable | info |
 | 9 | AI provider probe | **Only if** `ai_enabled=true` **AND** `health_ai_probe_enabled=true` — minimal models list or tiny JSON ping | `ai_probe` |
 
 ---
@@ -80,7 +80,7 @@ Use `FAIL (code)` / `WARN (code)` lines when a real check fails. End with overal
 
 ## 5. Relation to Operational
 
-Operational writes `last_success_at`, `last_processed_*`, `last_error_*` into CONFIG (ops keys) so Admin health stays read-mostly.
+Operational writes `last_lead_success_at`, `last_success_at`, `last_processed_*`, `last_error_*` into CONFIG (ops keys) so Admin health/status stay read-mostly. Phase 3D.2.1: success writes must use Telegram Result Gate context after Gmail finalize (Gmail stub alone is insufficient).
 
 ---
 
