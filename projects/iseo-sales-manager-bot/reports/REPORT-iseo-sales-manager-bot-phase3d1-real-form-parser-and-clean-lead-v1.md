@@ -128,7 +128,7 @@ Clean temporary worktree from `origin/mars/canonical-post-recovery`. Foreign WIP
 
 ## 28. Push
 
-Pushed to `origin` without force (see closeout).
+Pushed without force: `52d77cea..f47b8587` → `origin/mars/canonical-post-recovery` (`f47b8587`).
 
 ## 29. Risks
 
