@@ -147,7 +147,7 @@ Clean worktree from `origin/mars/canonical-post-recovery`. Scoped paths under `p
 ## 26. Commit
 
 Primary: `feat(iseo-sales-manager-bot): close production handoff`  
-(Hash recorded after commit.)
+\$commit
 
 ## 27. Push
 
