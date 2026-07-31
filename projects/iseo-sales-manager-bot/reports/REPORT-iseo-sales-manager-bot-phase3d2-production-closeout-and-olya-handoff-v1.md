@@ -146,12 +146,12 @@ Clean worktree from `origin/mars/canonical-post-recovery`. Scoped paths under `p
 
 ## 26. Commit
 
-Primary: `feat(iseo-sales-manager-bot): close production handoff`  
-\$commit
+Primary: `a5f24f5e` — `feat(iseo-sales-manager-bot): close production handoff`  
+Tip hash record: `827af495` — `docs(iseo-sales-manager-bot): record phase 3d2 tip hash`
 
 ## 27. Push
 
-Pushed to `origin/mars/canonical-post-recovery` (no force).
+Pushed to `origin/mars/canonical-post-recovery` (no force). Tip: `827af495`.
 
 ## 28. Risks
 
