@@ -278,3 +278,11 @@ After Gmail Fetch Leads: enable `alwaysOutputData`, add Intake Gate + Switch Int
 - **Format Telegram Lead Card** must read `$('Classify Duplicate').first().json` (CLEAN/DEDUP append outputs are sheet-shaped).
 - **Send Telegram Lead Card** `chatId` must use `$('Normalize CONFIG').first().json.telegram_manager_chat_id`.
 - Gmail Add PROCESSED / Remove Incoming / Add ERROR `messageId` must use `$json.gmail_message_id || $('Parse Lead').first().json.gmail_message_id` (do not reference retired node names).
+
+## Phase 3D retry / delivery idempotency note
+
+- **Classify Duplicate** matches DEDUP rows by exact `key_type` + `normalized_value` (not type-only); reads CONFIG `tg_delivered:<gmail_message_id>` / `tg_attempts:<gmail_message_id>`.
+- **Format Telegram Lead Card** sets `skip_telegram` when already delivered or attempts ≥ 5 (`telegram_retry_exhausted`).
+- **IF Need Telegram Send** → true: **Telegram Skip Pass** → Result Gate (resume Gmail finalize without resend); false: **Send Telegram Lead Card**.
+- **Update Last Success / Runtime State** writes per-message delivery idempotency keys after success/failure.
+- Do **not** depend only on Gmail unread state for exactly-once Telegram delivery.

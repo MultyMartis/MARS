@@ -11,14 +11,14 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | planned (registry unchanged) / **production cutover complete**; Phase 3C.2 **first real lead accepted** |
-| **Active stage** | **Phase 3C.2 COMPLETE — FIRST REAL LEAD ACCEPTED** — Gmail filters: no Trash rules; OPS chat_id/classify/messageId repaired; AI OFF |
+| **Status** | planned (registry unchanged) / **production stabilized**; Phase 3D idempotency guard applied; clean valid-contact lead **pending** |
+| **Active stage** | **Phase 3D — ATTENTION (clean test lead pending)** — flood incident closed; Telegram delivery idempotency + bounded retry; Olya/operator guides ready; AI OFF |
 | **Runtime** | External n8n — Operational.dev **active** (sole Gmail intake); Admin.dev **active**; Sales-Manager-v2 **inactive** |
 | **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive; filter \`labelIds\` parity confirmed |
-| **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C/3C.1/3C.2 evidence under `evidence/phase3c*` |
-| **Registry** | **REGISTERED** — `project_id` **iseo-sales-manager-bot** · status **planned** (unchanged; separate registry gate not opened) |
+| **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C/3C.1/3C.2/3D evidence under `evidence/phase3*` |
+| **Registry** | status **planned** unchanged — promotion to active/production requires **separate governance gate** |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
-| **Next** | **PHASE 3D — PRODUCTION STABILIZATION AND OLYA HANDOFF** |
+| **Next** | Operator submits clean valid-contact test lead → then optional rename → later PHASE 3E AI ON (charter) |
 
 ---
 
@@ -114,6 +114,10 @@
 | 38 | [evidence/phase3c1/](evidence/phase3c1/) | Phase 3C.1 evidence |
 | 39 | [reports/REPORT-iseo-sales-manager-bot-phase3c2-gmail-routing-and-first-lead-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3c2-gmail-routing-and-first-lead-v1.md) | Phase 3C.2 |
 | 40 | [evidence/phase3c2/](evidence/phase3c2/) | Phase 3C.2 evidence |
+| 41 | [reports/REPORT-iseo-sales-manager-bot-phase3d-production-stabilization-and-olya-handoff-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3d-production-stabilization-and-olya-handoff-v1.md) | Phase 3D |
+| 42 | [evidence/phase3d/](evidence/phase3d/) | Phase 3D evidence |
+| 43 | [guides/OLYA-LEAD-WORK-GUIDE-v1.md](guides/OLYA-LEAD-WORK-GUIDE-v1.md) | Olya handoff |
+| 44 | [guides/OPERATOR-RUNBOOK-v1.md](guides/OPERATOR-RUNBOOK-v1.md) | Operator runbook |
 
 ---
 
@@ -142,8 +146,9 @@
 | **Phase 3C** | Operational production cutover (AI OFF) | **DONE** |
 | Phase 3C.1 | First real lead observation / eligibility diagnosis | **DONE** |
 | **Phase 3C.2** | Gmail routing audit + first real lead acceptance | **DONE** |
-| Phase 3D | Production stabilization / Olya handoff | **NEXT** |
-| Live rename / Olya handoff | After stabilization charter | Forbidden until chartered |
+| **Phase 3D** | Production stabilization / Olya handoff | **ATTENTION** — idempotency + guides done; clean lead pending |
+| Live rename | After clean-lead acceptance | **deferred** |
+| Registry promotion | Separate governance charter | **not opened** |
 
 ---
 

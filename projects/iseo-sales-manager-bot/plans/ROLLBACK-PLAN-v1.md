@@ -109,3 +109,7 @@ First real website test was **delivered** but **not eligible** (Trash + missing 
 ## Phase 3C.2 note
 
 Gmail filter audit: **0** Trash filters; incoming-label filters already correct (no Gmail filter mutation). Historical Trash actor remains SAFE UNKNOWN (external/manual). OPS repairs (Classify base lead, Format from Classify, Telegram chatId from CONFIG, Gmail messageId refs) stopped reprocess flood and enabled first real lead finalization. Pre-patch backups under Storage `incoming/iseo-sales-manager-bot/phase3c2-local/backups/`. Rollback still follows Phase 3C cutover steps if intake must revert to Sales-Manager-v2.
+
+## Phase 3D note
+
+Telegram delivery idempotency + bounded retry (max 5) patched on Operational.dev (`IF Need Telegram Send`, `Telegram Skip Pass`, CONFIG keys `tg_delivered:*` / `tg_attempts:*`). Exact DEDUP normalized_value matching restored in Classify. Pre-patch backup: Storage `incoming/iseo-sales-manager-bot/phase3d-local/backups/OPS.before-phase3d-idempotency.raw.json`. Rollback of intake still follows Phase 3C cutover (deactivate Operational → activate Sales-Manager-v2 only after dual-active check). Do not remove idempotency nodes during emergency rollback unless reverting to a known pre-3D export intentionally.

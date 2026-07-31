@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3C.2 — Operational.dev **active** (production intake, AI OFF); Sales-Manager-v2 **inactive** rollback source; Admin.dev **active**; Gmail filters audited (no Trash rules; incoming label filters OK); **first real lead accepted**; next: Phase 3D stabilization / Olya handoff
+**Status:** Phase 3D — production stabilization applied (Telegram delivery idempotency + bounded retry); Operational.dev **active** (AI OFF); Sales-Manager-v2 **inactive**; Admin.dev **active**; Olya guide + operator runbook ready; **clean valid-contact test lead still pending operator submission**
 
 ---
 
@@ -85,11 +85,20 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 
 ---
 
+## Guides
+
+| Guide | Path |
+|-------|------|
+| Оля — работа с лидами | [guides/OLYA-LEAD-WORK-GUIDE-v1.md](guides/OLYA-LEAD-WORK-GUIDE-v1.md) |
+| Operator runbook (Андрей) | [guides/OPERATOR-RUNBOOK-v1.md](guides/OPERATOR-RUNBOOK-v1.md) |
+
 ## Next gate
 
-**PHASE 3D — PRODUCTION STABILIZATION AND OLYA HANDOFF**
+**Operator:** submit one clean valid-contact website test lead (readiness notice already sent).  
+**Then:** confirm exactly-once card + optional `.dev` rename.  
+**Later (separate approval):** PHASE 3E — controlled AI ON pilot.
 
-Do not enable AI or delete Sales-Manager-v2 without explicit charter. Confirm no client auto-Trash of form mail.
+Do not enable AI or reactivate Sales-Manager-v2 without explicit charter. Do not add Оля to Admin allowlist without approval.
 
 Operator source drop path (raw retained): `X:\AI MARS STORAGE\incoming\iseo-sales-manager-bot\raw\`
 
@@ -100,4 +109,5 @@ Operator source drop path (raw retained): `X:\AI MARS STORAGE\incoming\iseo-sale
 *Phase 3A: sanitized baseline gate + MetaBOT Programmer implementation package (2026-07-30).*  
 *Phase 3A.1: source ingest + sanitized baselines (2026-07-30).*  
 *Phase 3C: operational production cutover AI OFF (2026-07-31).*  
-*Phase 3C.2: Gmail routing audit + first real lead acceptance (2026-07-31).*
+*Phase 3C.2: Gmail routing audit + first real lead acceptance (2026-07-31).*  
+*Phase 3D: production stabilization + Olya handoff pack (2026-07-31).*
