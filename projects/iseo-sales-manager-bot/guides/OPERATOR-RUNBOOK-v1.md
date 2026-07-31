@@ -2,7 +2,7 @@
 
 **Audience:** Андрей (operator)  
 **Contour:** production · AI OFF default  
-**Version:** 1.2 · 2026-08-01 (Phase 3D.3 — manager UX, lead actions, `/leads`, lifecycle Sheets)
+**Version:** 1.3 · 2026-08-01 (Phase 3D.3.1 — `/leads` multi-card archive repair + phone text safety)
 
 ---
 
@@ -39,7 +39,7 @@ AI OFF is the normal safe production mode.
 | `/ai_status` | AI flag + model/probe flags |
 | `/ai_on` | Enable AI — **only with explicit charter** |
 | `/ai_off` | Force AI OFF (return to safe mode) |
-| `/leads` | Recent CLEAN leads archive view — default 5; accepts `3`\|`5`\|`10`; other counts rejected |
+| `/leads` | Recent CLEAN archive — default 5; exact `3`\|`5`\|`10`; one Telegram card per unique lead (ordinals 1..N); other counts rejected; damaged Sheets phones omitted |
 
 Allowlist remains operator-only unless you explicitly expand it. Do **not** add Оля to Admin without a separate approval.
 

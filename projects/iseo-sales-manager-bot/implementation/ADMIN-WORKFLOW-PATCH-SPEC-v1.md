@@ -141,5 +141,12 @@ Admin Telegram Trigger (message + callback_query)
 
 **`/leads` handler (added to Route Command):**
 
-- New handler node reads `lead_clean_v2` (bounded, most-recent-first), validates count arg against `{3,5,10}` (default 5; other values → usage message), renders each row as a read-only archive card (no inline keyboard), excludes `SYNTHETIC_TEST` rows from business-facing recovery use.
+- New handler node reads `lead_clean_v2` (bounded, most-recent-first), validates count arg against exact `{3,5,10}` (default 5; other values → usage message), selects unique business leads, renders each as a read-only archive card (no inline keyboard), excludes `SYNTHETIC_TEST` / technical-retry-only rows from business-facing recovery use.
 - Authorization: `admin_user_ids` only (same gate as other read commands) — **not** the manager-action allowlist.
+
+## Phase 3D.3.1 patch notes — archive multi-card + contact safety
+
+- **Capture Admin Reply:** must map `$input.all()` (passthrough). Do **not** use `$input.first()` — that collapses `/leads` multi-card output to a single Telegram send.
+- **Recent Leads:** exact arg parse; newest-first unique selection; ordinals from selected count; suppress invalid contacts; lifecycle status line; one `lead_card_recovered` event per command.
+- **Read CLEAN for Leads:** bounded A1 range (`A1:ZZ250`).
+- Callback edit path: same invalid-contact suppression on contact fields.

@@ -194,3 +194,9 @@ Local pure-JS/unit harness covering `sm-msg-v2` formatting, inline keyboard, cal
 | Callback unauthorized | PASS |
 
 AI calls during live acceptance: **0**. Client auto-messages: **0**. New workflows: **0**.
+
+## Phase 3D.3.1 — archive recovery + Sheets value safety
+
+Local harness (Storage incoming `phase3d31-local/run-04-harness.mjs`, not committed): **29/29 PASS** covering default `/leads`→5, exact `3|5|10`, reject `7`/`03`/trailing garbage, fewer-than-requested honesty, newest-first unique selection, technical-retry collapse, multi-item capture passthrough, ordinals, lifecycle labels, formula-phone suppression, plus-phone text sanitize, copy-friendly fields, no buttons on done cards, synth exclusion, AI-OFF zero-provider, Admin/callback/Ops regression stubs.
+
+Live Admin acceptance (`/leads 3|5|10|7`): **PASS** — multi-card Telegram delivery, formula suppressed, invalid count warning, contour gates unchanged (`evidence/phase3d31/`).

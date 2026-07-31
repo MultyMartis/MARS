@@ -11,14 +11,15 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | planned (registry unchanged) / **Phase 3D.3 manager UX, lead actions and history recovery**; Olya action access **pending**; registry promotion **pending** |
-| **Active stage** | **PHASE 3D.3 COMPLETE — MANAGER UX AND LEAD ACTIONS READY** — `sm-msg-v2` cards, inline «Отметить обработанным»/«Отметить как спам» callback actions, `/leads 3\|5\|10`, CLEAN lifecycle columns; AI OFF; **PHASE 3D.3 COMPLETE — OLYA ACTION ACCESS PENDING** (manager allowlist falls back to admin; Olya not enrolled) |
+| **Status** | planned (registry unchanged) / **Phase 3D.3.1 archive recovery + Sheets value safety**; Olya action access **pending**; registry promotion **pending** |
+| **Active stage** | **PHASE 3D.3.1 COMPLETE — ARCHIVE RECOVERY ACCEPTED** — `/leads 3\|5\|10` multi-card delivery + ordinals; formula-phone suppressed; new phone writes RAW text; prior 3D.3 manager UX retained; AI OFF; **OLYA ACTION ACCESS PENDING** |
 | **Runtime** | External n8n — Operational.dev **active** (sole Gmail intake, 36 nodes); Admin.dev **active** (42 nodes, callback routing); Sales-Manager-v2 **inactive** |
 | **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive; filter \`labelIds\` parity confirmed |
 | **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C–3D.3 evidence under `evidence/phase3*` |
 | **Registry** | status **planned** unchanged — promotion to active requires **separate governance gate** (`REGISTRY_STATUS_PROMOTION_PENDING`) |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
-| **Next** | Phase 3D.4 — Olya manager-action enrollment (`manager_action_user_ids` only) → optional operator-typed Trigger re-matrix → later PHASE 3E AI ON only with separate charter |
+| **Next** | Phase 3D.4 — Olya manager-action enrollment (`manager_action_user_ids` only) → optional narrow historical phone-cell correction → later PHASE 3E AI ON only with separate charter |
+| **Evidence 3D.3.1** | [evidence/phase3d31/](evidence/phase3d31/) |
 
 ---
 

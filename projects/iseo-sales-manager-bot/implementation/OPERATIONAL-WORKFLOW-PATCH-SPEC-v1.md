@@ -306,4 +306,10 @@ After Gmail Fetch Leads: enable `alwaysOutputData`, add Intake Gate + Switch Int
 - **Send Telegram Lead Card** attaches the two-button inline keyboard (`sm:p:<token12>` processed / `sm:s:<token12>` spam) only when the produced card is an actionable **pending** lead; archive/service sends (e.g. Admin `/leads` output) omit `replyMarkup`.
 - CLEAN upsert on first write now defaults new lifecycle columns: `lifecycle_status=pending`, `manager_action_user_id`/`manager_action_processed_at`/`manager_action_spam_at` empty, `manager_action_token` generated opaque per-lead token (12-char) used for callback routing — see SHEETS-MIGRATION-SPEC-v1 §3 / §11.
 - Operational.dev does **not** process callbacks; all lifecycle-button handling lives in Admin.dev (see ADMIN-WORKFLOW-PATCH-SPEC-v1 Phase 3D.3 notes) reading/writing the same `lead_clean_v2` tab.
+
+## Phase 3D.3.1 note — Sheets RAW phone writes
+
+- **Append or Update CLEAN v2** and **Append RAW v2** set `options.cellFormat=RAW` so contact phones are not interpreted as formulas.
+- Formatter suppresses `#ERROR!` / formula-parse placeholders in live cards (mirrors Admin archive rendering).
+- No change to Gmail intake, exactly-once gates, or AI OFF path.
 - No new workflow created; no change to AI OFF/ON gating; no change to Telegram-fail / PROCESSED label policy (§6 above).

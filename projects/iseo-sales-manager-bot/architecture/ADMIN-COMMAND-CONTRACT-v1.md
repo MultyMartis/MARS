@@ -233,10 +233,22 @@ Admin Telegram Trigger → Normalize Command (detect callback_query vs text)
 
 ### 7.2 `/leads` command detail
 
-- Default count: **5**. Accepted explicit counts: **3, 5, 10**. Any other count (e.g. `/leads 7`) is **rejected** with a short Russian usage message — no partial/rounded result returned.
+- Default count: **5**. Accepted explicit counts: **exact tokens** `3`, `5`, `10` only (`/leads 03`, `/leads 1`, `/leads 7`, `/leads 10 extra` rejected). Invalid reply:
+
+```
+⚠️ Укажите количество: 3, 5 или 10.
+Например: /leads 5
+```
+
 - Admin allowlist only (`admin_user_ids`) — not the manager-action allowlist.
-- Returns the N most recent CLEAN leads as **archive cards**: read-only, **no** inline lifecycle buttons (buttons attach only to actionable pending cards produced by the live intake flow, per TELEGRAM-UX-CONTRACT-v1 §8.3).
-- Synthetic rows (`client_name` containing `SYNTHETIC_TEST`) are excluded from real business recovery use of `/leads`.
+- Returns **up to N distinct** recent CLEAN business leads as **separate Telegram archive cards** (one message per card + optional notice), newest first, ordinals `1 из N` … `N из N` after unique-lead selection. If fewer unique leads exist than requested, return the available count honestly with a notice.
+- Cards are read-only: current lifecycle line (`🕓 Ожидает обработки` / `✅ Обработан` / `🚫 Спам`), copy-friendly fields, **no** inline lifecycle buttons.
+- One bounded `lead_card_recovered` LEAD_EVENTS append per command (not per card).
+- Synthetic / technical-retry-only rows excluded. Invalid Sheets contacts (`#ERROR!`, formula text, `UNKNOWN`, …) are omitted (optional corrupt-contact warning) — never shown as a phone/email.
+
+### 7.2.1 Phase 3D.3.1 repair note
+
+Pre-fix defect: `Capture Admin Reply` collapsed multi-item `/leads` output to `$input.first()`, so Telegram delivered only «карточка 1 из N». Fixed by passthrough of all items. See `evidence/phase3d31/`.
 
 ### 7.3 Manager vs admin allowlists
 

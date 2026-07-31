@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3D.3 — Manager UX, lead actions and history recovery; sm-msg-v2 manager cards (emoji indicators + copy-friendly `<code>`/`<pre>` blocks); inline «✅ Отметить обработанным» / «🚫 Отметить как спам» actions via Admin Telegram Trigger callback routing; `/leads` (3/5/10) recent-leads command; CLEAN lifecycle columns added (65 headers); Admin.dev **active**; Operational.dev **active** (AI OFF); Sales-Manager-v2 **inactive**; Olya manager-action access **pending** (not enrolled); registry status promotion **pending**
+**Status:** Phase 3D.3.1 — Archive recovery + Sheets value safety (`/leads` multi-card ordinals fixed; formula-phone suppressed; new phone writes as Sheets RAW text); prior 3D.3 manager UX retained (sm-msg-v2, lifecycle buttons, CLEAN 65 headers); Admin.dev **active**; Operational.dev **active** (AI OFF); Sales-Manager-v2 **inactive**; Olya manager-action access **pending**; registry status promotion **pending**
 
 ---
 

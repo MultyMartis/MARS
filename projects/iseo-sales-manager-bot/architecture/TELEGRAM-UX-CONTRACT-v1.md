@@ -264,3 +264,10 @@ Actionable **pending** lead cards carry two inline buttons: **✅ Отметит
 ### 8.4 Forbidden (unchanged, reasserted for 3D.3)
 
 No opaque token collisions surfaced as PII; no raw `lead_id`/dedupe keys in button labels or answer toasts; no automatic client-facing send triggered by a manager button.
+
+### 8.5 Phase 3D.3.1 — invalid contact suppression + archive multi-card
+
+- Never render Sheets formula errors or placeholders (`#ERROR!`, `#VALUE!`, `#REF!`, `#N/A`, `Formula parse error`, `UNKNOWN`, bare `44`) as phone/email/messenger/site.
+- Omit the invalid field; archive cards may show `⚠️ Контакт в архивной записи повреждён` when useful.
+- `/leads` must emit **one Telegram message per selected archive card** with correct ordinals; do not collapse to the first item.
+- Archive footer: `ℹ️ Архивная копия. Статус меняется только в исходной карточке.`

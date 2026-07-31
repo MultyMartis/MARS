@@ -230,3 +230,7 @@ Exact production workbook IDs; whether filenames match `MetaBOT -Leads*.xlsx`; h
 ## Phase 3D.3 note
 
 `lead_clean_v2` header count moved **52→65** (see §3.1) to carry manager lifecycle/callback state directly on the CLEAN row (no separate lifecycle tab). `CONFIG` gained `manager_action_user_ids` (seeded from `admin_user_ids`) and `message_format_version` moved to `sm-msg-v2`. `LEAD_EVENTS` gains no new columns — callback outcomes (`applied`/`idempotent`/`conflict`/`unauthorized`) are recorded via existing `event_type`/`actor`/`detail` fields. No new tab created; no historical row migration; sandbox/synthetic rows (`SYNTHETIC_TEST`) unaffected.
+
+## Phase 3D.3.1 note — phone text storage
+
+Operational.dev **Append or Update CLEAN v2** and **Append RAW v2** set Google Sheets node `options.cellFormat=RAW` (`valueInputOption=RAW`) so plus-prefixed phones are stored as text, not evaluated as formulas. Historical `#ERROR!` cells are **not** bulk-rewritten; Telegram rendering suppresses them. `LEAD_EVENTS` may record a single `lead_card_recovered` per `/leads` command (metadata only; no PII).
