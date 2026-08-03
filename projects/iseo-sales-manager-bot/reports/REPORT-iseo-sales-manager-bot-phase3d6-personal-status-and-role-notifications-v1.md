@@ -189,13 +189,14 @@ All closeout mutations performed in clean temporary worktree based on `origin/ma
 
 ## 27. Commit
 
+- Commit: **e78303e2** (`e78303e245e9c3d1499a17e5332eceb106d726dd`)
 - Message: `fix(iseo-sales-manager-bot): close personal status live acceptance`
 - Isolation: clean worktree from `origin/mars/canonical-post-recovery` @ `1463561f`; selective path staging only under `projects/iseo-sales-manager-bot/**`
-- Tip hash recorded in section 28 after push
 
 ## 28. Push
 
-Push target: `origin/mars/canonical-post-recovery` (non-force).
+- Pushed without force to `origin/mars/canonical-post-recovery`
+- Remote tip after push: **e78303e2**
 
 ## 29. Risks
 
