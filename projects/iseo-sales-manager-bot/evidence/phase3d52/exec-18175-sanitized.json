@@ -1,0 +1,67 @@
+{
+  "id": "18175",
+  "status": "success",
+  "mode": "webhook",
+  "startedAt": "2026-08-03T17:06:17.13Z",
+  "stoppedAt": "2026-08-03T17:06:18.242Z",
+  "lastNodeExecuted": "Done",
+  "topError": null,
+  "nodeTrail": [
+    {
+      "node": "WH",
+      "executionStatus": "success",
+      "start": 1785776777133,
+      "items": 1,
+      "errorName": null,
+      "errorMessage": null
+    },
+    {
+      "node": "Plan",
+      "executionStatus": "success",
+      "start": 1785776777133,
+      "items": 1,
+      "errorName": null,
+      "errorMessage": null
+    },
+    {
+      "node": "Meta",
+      "executionStatus": "success",
+      "start": 1785776777145,
+      "items": 1,
+      "errorName": null,
+      "errorMessage": null
+    },
+    {
+      "node": "ReadAccess",
+      "executionStatus": "success",
+      "start": 1785776777365,
+      "items": 1,
+      "errorName": null,
+      "errorMessage": null
+    },
+    {
+      "node": "ReadEvents",
+      "executionStatus": "success",
+      "start": 1785776777684,
+      "items": 1,
+      "errorName": null,
+      "errorMessage": null
+    },
+    {
+      "node": "ReadConfig",
+      "executionStatus": "success",
+      "start": 1785776777947,
+      "items": 1,
+      "errorName": null,
+      "errorMessage": null
+    },
+    {
+      "node": "Done",
+      "executionStatus": "success",
+      "start": 1785776778224,
+      "items": 1,
+      "errorName": null,
+      "errorMessage": null
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "at": "2026-08-03T18:05:53.315Z",
+  "err": null,
+  "checkHead": [
+    "// Phase 3D.5.2 — ADMIN Check User Authorization",
+    "/**\r",
+    " * Phase 3D.5 — public access + ACCESS_CONTROL registry authorization.\r",
+    " * Pure module for harness + n8n Code sync. No raw Telegram IDs in fixtures.\r",
+    " */\r",
+    "\r"
+  ],
+  "checkSyntax": null,
+  "startRecovery": true,
+  "startSyntax": null,
+  "replyHasParseMode": false,
+  "replyChatFromContext": true,
+  "hasCollapse": true,
+  "gates": {
+    "prodInactive": true,
+    "opsActive": true,
+    "adminActive": true,
+    "opsUntouched": true
+  }
+}

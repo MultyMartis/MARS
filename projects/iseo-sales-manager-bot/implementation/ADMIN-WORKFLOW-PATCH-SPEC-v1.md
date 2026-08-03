@@ -176,3 +176,14 @@ See `evidence/phase3d5/` for ACCESS_CONTROL / ACCESS_EVENTS, public auth routing
 - A revoked/blocked ACCESS_CONTROL row always overrides CONFIG allowlists.
 - ACCESS_EVENTS append mapping must reference Prepare Access Upsert fields (never post-Upsert `` metadata).
 - Evidence: `evidence/phase3d51/` · Report: `reports/REPORT-iseo-sales-manager-bot-phase3d51-access-registry-repair-v1.md`.
+
+## Phase 3D.5.2 — Silence recovery graph notes
+
+| Node | Change |
+|---|---|
+| Collapse Authorization Context | **new** Code — collapse CONFIG fan-out to 1 item; preserve Normalize chat/command context |
+| Read Authorization Config / Read ACCESS_CONTROL | `onError=continueRegularOutput`; `alwaysOutputData=true` |
+| Check User Authorization / Start / Help / Deny / Unknown / Config / Handle Callback | Pure JS SHA-256 (no Node crypto module) |
+| Capture Admin Reply | Safe success/error diagnostic stamps (no sensitive command text) |
+
+Expected Admin.dev node count after patch: **51**. Operational.dev unchanged (36).

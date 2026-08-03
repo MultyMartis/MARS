@@ -11,15 +11,17 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | **Phase 3D.5 public access + moderator registry**; ACCESS_CONTROL SoT; Olya moderator; AI OFF
-| **Active stage** | **PHASE 3D.5 COMPLETE — PUBLIC ACCESS AND MODERATOR REGISTRY READY**
-| **Runtime** | External n8n — Operational.dev **active** (sole Gmail intake); Admin.dev **active** (public+registry auth, ~50 nodes); Sales-Manager-v2 **inactive**
+| **Status** | **Phase 3D.5.2 COMPLETE — REAL TELEGRAM COMMANDS RESTORED**; ACCESS_CONTROL SoT; Olya moderator; AI OFF |
+| **Active stage** | **PHASE 3D.5.2 COMPLETE — REAL TELEGRAM COMMANDS RESTORED** |
+| **Runtime** | External n8n — Operational.dev **active** (sole Gmail intake); Admin.dev **active** (registry auth, **51** nodes); Sales-Manager-v2 **inactive** |
 | **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive; filter \`labelIds\` parity confirmed |
 | **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C–3D.3 evidence under `evidence/phase3*` |
 | **Registry** | status **planned** unchanged — promotion to active requires **separate governance gate** (`REGISTRY_STATUS_PROMOTION_PENDING`) |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
-| **Next** | Optional interactive Admin `/moderators` confirmation → multi-form plan continuation → later PHASE 3E AI ON only with separate charter
-| **Evidence 3D.5** | [evidence/phase3d5/](evidence/phase3d5/)
+| **Next** | Optional Olya first-person `/start`/`/help` UX check → multi-form plan continuation → later PHASE 3E AI ON only with separate charter |
+| **Evidence 3D.5.2** | [evidence/phase3d52/](evidence/phase3d52/) · [reports/REPORT-iseo-sales-manager-bot-phase3d52-admin-silence-incident-recovery-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3d52-admin-silence-incident-recovery-v1.md) |
+| **Evidence 3D.5.1** | [evidence/phase3d51/](evidence/phase3d51/) |
+| **Evidence 3D.5** | [evidence/phase3d5/](evidence/phase3d5/) |
 | **Evidence 3D.4** | [evidence/phase3d4/](evidence/phase3d4/)
 | **Evidence 3D.3.1** | [evidence/phase3d31/](evidence/phase3d31/) |
 
@@ -207,3 +209,11 @@
 - A revoked/blocked ACCESS_CONTROL row always overrides CONFIG allowlists.
 - ACCESS_EVENTS append mapping must reference Prepare Access Upsert fields (never post-Upsert `` metadata).
 - Evidence: `evidence/phase3d51/` · Report: `reports/REPORT-iseo-sales-manager-bot-phase3d51-access-registry-repair-v1.md`.
+
+## Phase 3D.5.2 — Admin silence incident recovery
+
+- Root causes: n8n-disallowed `require('crypto')` in Admin Code nodes; CONFIG row fan-out multiplying ACCESS_CONTROL reads (Sheets rate limit); error paths with no Telegram reply.
+- Repair: pure-JS SHA-256; **Collapse Authorization Context** (one command-context item); Sheets `onError=continueRegularOutput`; guaranteed one reply; Admin bootstrap recovery-only command set.
+- Evidence: `evidence/phase3d52/` · Report: `reports/REPORT-iseo-sales-manager-bot-phase3d52-admin-silence-incident-recovery-v1.md`.
+
+*Last updated: 2026-08-04 — Phase 3D.5.2 Admin silence recovery.*

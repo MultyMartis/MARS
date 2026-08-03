@@ -1,0 +1,93 @@
+{
+  "id": "wLrLp4WQHm1VJmxz",
+  "name": "i-SEO Sales Manager - Admin.dev",
+  "active": true,
+  "nodeCount": 50,
+  "connectionHash": "06CDEC544774DFA9A2B9E147136367E5E76A333DF110FFEA3CCC2A7DB58DB76C",
+  "sanitizedHash": "AE76814AAD0F53F1D11FB3324734B5AAD45C9AFE565A0E3148EC8184ED1B7EFA",
+  "disabledNodes": [],
+  "codeHashes": {
+    "Normalize Command": "D9AD4A4AD912B8E2",
+    "Check User Authorization": "768A539DEE1FE679",
+    "Help": "97EBE32B41E6E828",
+    "Status": "4FDB1F1C7896776D",
+    "AI Status": "4ACE8775BCA9AC86",
+    "AI On": "CAABF85BA04A8457",
+    "AI Off": "F000DEAD3AFE2687",
+    "Health": "5696C25C4901DFF9",
+    "Stats": "C7D4CEC62BD94FD8",
+    "Synthetic Test Lead": "8D3A3F48783D4C4B",
+    "Last Error": "B2E2065E2295F0A8",
+    "Config Summary": "074D45DFECD866A5",
+    "Unknown Command": "864F04A598239CE5",
+    "Deny Reply": "6A7DF3A4C6B0F5CB",
+    "Capture Admin Reply": "148B097FF0157033",
+    "Prepare Config Write": "5F2543BCAB982365",
+    "Restore Reply After Config Write": "985CCC740779C85D",
+    "Start": "6488EAE3972A317F",
+    "Handle Callback Action": "6C596303C5086764",
+    "Recent Leads": "A8CFB29C0B0E82C6",
+    "Prepare Callback Answer": "1AA034570994770A",
+    "Callback Edit Result": "1DEBD987C7E76D06",
+    "Prepare Access Upsert": "D2EF5054C67F101B",
+    "Restore Admin Reply Target": "62134DC2B1272070"
+  },
+  "telegramTriggers": [
+    {
+      "name": "Telegram Trigger",
+      "disabled": false,
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "hasWebhookId": true,
+      "credIdHash": "261EB5EE97F9865A",
+      "credName": "Telegram account - Sales Manager for i-SEO",
+      "updates": [
+        "message",
+        "callback_query"
+      ]
+    }
+  ],
+  "telegramSendNodes": [
+    {
+      "name": "Safe Telegram Reply",
+      "disabled": false,
+      "typeVersion": 1.2,
+      "appendAttribution": false,
+      "hasAppendAttributionKey": true,
+      "credIdHash": "261EB5EE97F9865A"
+    },
+    {
+      "name": "Answer Callback Query",
+      "disabled": false,
+      "typeVersion": 1.2,
+      "appendAttribution": false,
+      "hasAppendAttributionKey": true,
+      "credIdHash": "261EB5EE97F9865A"
+    },
+    {
+      "name": "Edit Lead Card Message",
+      "disabled": false,
+      "typeVersion": 1.2,
+      "appendAttribution": false,
+      "hasAppendAttributionKey": true,
+      "credIdHash": "261EB5EE97F9865A"
+    },
+    {
+      "name": "Answer Callback Deny",
+      "disabled": false,
+      "typeVersion": 1.2,
+      "appendAttribution": false,
+      "hasAppendAttributionKey": true,
+      "credIdHash": "261EB5EE97F9865A"
+    },
+    {
+      "name": "Notify Access Subject",
+      "disabled": false,
+      "typeVersion": 1.2,
+      "appendAttribution": false,
+      "hasAppendAttributionKey": true,
+      "credIdHash": "261EB5EE97F9865A"
+    }
+  ],
+  "pinDataPresent": false
+}

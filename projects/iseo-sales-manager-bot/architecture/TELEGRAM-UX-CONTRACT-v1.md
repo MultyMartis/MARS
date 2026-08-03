@@ -320,3 +320,7 @@ See `evidence/phase3d4/` and `knowledge/WEBSITE-FORM-FORMATS-v1.md`.
 - A revoked/blocked ACCESS_CONTROL row always overrides CONFIG allowlists.
 - ACCESS_EVENTS append mapping must reference Prepare Access Upsert fields (never post-Upsert `` metadata).
 - Evidence: `evidence/phase3d51/` · Report: `reports/REPORT-iseo-sales-manager-bot-phase3d51-access-registry-repair-v1.md`.
+
+## Phase 3D.5.2 — One-response invariant
+
+Every Admin text command must produce exactly one Telegram reply. Silence after a received update is an incident. Service-unavailable and processing-failure copy must be operator-safe (no raw IDs, no stack traces).

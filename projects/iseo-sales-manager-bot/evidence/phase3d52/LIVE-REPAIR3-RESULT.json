@@ -1,0 +1,17 @@
+{
+  "at": "2026-08-03T18:28:36.975Z",
+  "err": null,
+  "harnessPass": 9,
+  "harnessTotal": 9,
+  "startHasRecoveryTemp": false,
+  "startHasRoleAware": true,
+  "helpHasCodeTags": true,
+  "restoreReadsPrepare": true,
+  "replyParseMode": "HTML",
+  "gates": {
+    "prodInactive": true,
+    "opsActive": true,
+    "adminActive": true,
+    "opsUntouched": true
+  }
+}
