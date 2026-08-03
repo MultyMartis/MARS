@@ -199,3 +199,11 @@ Admin.dev final node count: **54**. Add exactly:
 | Append ACCESS_EVENTS Notify | Append sent/failed role-notification audit |
 
 Route `/my_status` after registry authorization. ACCESS_CONTROL remains the source of truth matched by `telegram_user_id`. For non-idempotent add/remove, persist registry mutation before Telegram notification. On notification failure, append the `*_notification_failed` event and reply `Права изменены, но уведомление пользователю доставить не удалось.`; do not roll back. Repeated add/remove skips notification.
+
+### Code-node mode contract (3d6b)
+
+- `My Status` and `Finalize Access Notification` must use mode **`runOnceForAllItems`** when their jsCode calls `$input.first()` or `$input.all()`.
+- Code in mode `runOnceForEachItem` must use the current item context and **must not** call `$input.first()` (n8n raises `Can't use .first() here` and returns zero items).
+- Sanitized workflow acceptance must record each relevant Code node's `parameters.mode`.
+- Zero-item Code failures must be detected before deployment (harness / structural checks).
+- Hotfix marker for the accepted live repair: `3d6b-my-status-code-mode` (node count remains 54; connections unchanged).

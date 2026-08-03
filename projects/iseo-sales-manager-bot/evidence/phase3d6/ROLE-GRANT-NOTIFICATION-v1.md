@@ -13,3 +13,5 @@
 Повторная выдача уже active moderator не создаёт новую запись ACCESS_CONTROL, ACCESS_EVENTS или уведомление.
 
 Harness: grant success/failure, persistence при notify failure и repeated-add no-resend — PASS.
+
+Live delivery honesty (Phase 3D.6.1): operator confirmed `/my_status` after grant restoration; **direct visual confirmation of this grant notification text itself was not supplied** → `SAFE UNKNOWN — live role state confirmed; direct notification delivery not visually confirmed`.

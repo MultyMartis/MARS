@@ -2,7 +2,7 @@
 
 **Audience:** Андрей (operator / Admin)  
 **Contour:** production · AI OFF default  
-**Version:** 1.7 · 2026-08-04 (Phase 3D.6 — personal status and role notifications)
+**Version:** 1.8 · 2026-08-04 (Phase 3D.6.1 — live `/my_status` acceptance + 3d6b Code-mode hotfix)
 
 ---
 
@@ -78,7 +78,9 @@ Lead cards with buttons go only to manager/Admin destinations. Public bot reacha
 1. Use `/moderator_add CODE` or `/moderator_remove CODE`; do not edit workflow code or CONFIG to change a moderator.
 2. ACCESS_CONTROL is mutated before the subject notification. If delivery fails, the role state remains changed and the reply is `Права изменены, но уведомление пользователю доставить не удалось.`
 3. Check ACCESS_EVENTS for `moderator_grant_notification_sent/failed` or `moderator_revoke_notification_sent/failed`.
-4. Ask the subject to confirm the exact Telegram notification and `/my_status`. Automated webhook injection failed with `SQLITE_ERROR`; this real operator loop remains pending for Phase 3D.6.
+4. Ask the subject to confirm the exact Telegram **notification text** and `/my_status`. Successful `/my_status` alone does **not** prove notification delivery.
+5. Phase 3D.6.1 closeout: real non-Admin `/my_status` (revoked + restored) was operator-accepted after hotfix `3d6b-my-status-code-mode`. Direct notification delivery remains SAFE UNKNOWN until independently confirmed.
+6. Do not repeat destructive moderator remove/re-add loops for routine verification when final roles are already correct.
 
 
 ## Phase 3D.5.1 — Access registry population and SoT repair

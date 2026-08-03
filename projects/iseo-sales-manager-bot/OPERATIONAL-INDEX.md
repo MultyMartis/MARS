@@ -12,7 +12,7 @@
 | Field | Value |
 |-------|-------|
 | **Status** | **COMPLETE — STATUS READY, LIVE NOTIFICATION CONFIRMATION PENDING**; ACCESS_CONTROL SoT; AI OFF |
-| **Active stage** | **PHASE 3D.6 — personal status and role notifications** |
+| **Active stage** | **PHASE 3D.6 COMPLETE — personal status ready; notification delivery SAFE UNKNOWN** |
 | **Runtime** | External n8n — Operational.dev **active** (sole Gmail intake, 36 nodes); Admin.dev **active** (registry auth, **54** nodes); Sales-Manager-v2 **inactive** |
 | **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive; filter \`labelIds\` parity confirmed |
 | **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C–3D.3 evidence under `evidence/phase3*` |
@@ -170,7 +170,7 @@
 | **Phase 3D.3** | Manager UX (`sm-msg-v2`), inline lead actions, `/leads`, lifecycle Sheets model | **DONE** |
 | **Phase 3D.3.1** | `/leads` multi-card + Sheets phone RAW safety | **DONE** |
 | **Phase 3D.4** | Olya manager enrollment, sm-parser-v3.2 / sm-msg-v2.1, form registry | **DONE** — Olya live Telegram **pending** |
-| **Phase 3D.6** | `/my_status`, role notifications, notification event audit | **COMPLETE — live delivery confirmation pending** |
+| **Phase 3D.6** | `/my_status`, role notifications, 3d6b Code-mode hotfix, live non-Admin status acceptance | **COMPLETE — personal status ready; notification delivery SAFE UNKNOWN** |
 | Next form iteration | Per `MULTI-FORM-TEST-PLAN-v1` | **not opened** |
 | Live rename | After clean-lead acceptance | **deferred** |
 | Registry promotion | Separate governance charter | **not opened** |
@@ -218,4 +218,4 @@
 - Repair: pure-JS SHA-256; **Collapse Authorization Context** (one command-context item); Sheets `onError=continueRegularOutput`; guaranteed one reply; Admin bootstrap recovery-only command set.
 - Evidence: `evidence/phase3d52/` · Report: `reports/REPORT-iseo-sales-manager-bot-phase3d52-admin-silence-incident-recovery-v1.md`.
 
-*Last updated: 2026-08-04 — Phase 3D.6 personal status and role-notification evidence.*
+*Last updated: 2026-08-04 — Phase 3D.6.1 live `/my_status` acceptance closeout and 3d6b hotfix canonicalization.*

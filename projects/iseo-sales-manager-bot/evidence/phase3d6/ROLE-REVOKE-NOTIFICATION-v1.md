@@ -11,3 +11,5 @@
 Повторное снятие already-revoked не отправляет уведомление повторно. Снять права Admin этой командой нельзя.
 
 Harness: revoke success/failure, persistence при notify failure и repeated-remove no-resend — PASS.
+
+Live delivery honesty (Phase 3D.6.1): operator confirmed `/my_status` in revoked state; **direct visual confirmation of this revoke notification text itself was not supplied** → `SAFE UNKNOWN — live role state confirmed; direct notification delivery not visually confirmed`.

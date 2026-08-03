@@ -345,3 +345,5 @@ Never display raw Telegram user IDs. Opaque codes only.
 - Notification delivery failure does not roll back the access mutation; Admin receives `Права изменены, но уведомление пользователю доставить не удалось.`
 - Delivery audit events: `personal_status_viewed`, `moderator_grant_notification_sent/failed`, `moderator_revoke_notification_sent/failed`.
 - Repeated add/remove sends no notification.
+- Code-node mode: `My Status` / `Finalize Access Notification` must use `runOnceForAllItems` when calling `$input.first()` (hotfix `3d6b-my-status-code-mode`). Zero-item Code failures are outages.
+- Phase 3D.6.1 closeout: real non-Admin `/my_status` accepted; direct grant/revoke notification delivery may remain SAFE UNKNOWN without independent visual proof.

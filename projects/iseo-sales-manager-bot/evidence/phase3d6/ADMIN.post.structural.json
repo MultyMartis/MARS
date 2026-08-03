@@ -4,93 +4,44 @@
   "active": true,
   "nodeCount": 54,
   "connectionHash": "D34BC74E6D8C1AC1271F46FA42B0C0AF7C9DA92687F88AB796DC9CC323FAE3C0",
-  "sanitizedHash": "E877B6D4978DF4FE8C0D2A55F4E6A793B7A76BC26E64C99A3F867BF4402B8369",
-  "disabledNodes": [],
-  "codeHashes": {
-    "Normalize Command": "60A377E1D54242D6",
-    "Check User Authorization": "DD3A92CAD750F529",
-    "Help": "4B6309FC35BD0537",
-    "Status": "4FDB1F1C7896776D",
-    "AI Status": "4ACE8775BCA9AC86",
-    "AI On": "CAABF85BA04A8457",
-    "AI Off": "F000DEAD3AFE2687",
-    "Health": "5696C25C4901DFF9",
-    "Stats": "C7D4CEC62BD94FD8",
-    "Synthetic Test Lead": "8D3A3F48783D4C4B",
-    "Last Error": "B2E2065E2295F0A8",
-    "Config Summary": "CB60D9C23269D4FC",
-    "Unknown Command": "4479DE9B6475829D",
-    "Deny Reply": "0734D6C81EF37FC9",
-    "Capture Admin Reply": "54B14672A851EC6E",
-    "Prepare Config Write": "5F2543BCAB982365",
-    "Restore Reply After Config Write": "985CCC740779C85D",
-    "Start": "B5696F427FF22302",
-    "Handle Callback Action": "D112F50764C67B2A",
-    "Recent Leads": "A8CFB29C0B0E82C6",
-    "Prepare Callback Answer": "1AA034570994770A",
-    "Callback Edit Result": "1DEBD987C7E76D06",
-    "Prepare Access Upsert": "0A9457E7B4C3D786",
-    "Restore Admin Reply Target": "DA64314AC1DF513C",
-    "Collapse Authorization Context": "F738BB6FC807979C",
-    "My Status": "6C4F5E7D2C2BA545",
-    "Finalize Access Notification": "F58356B5E498E600"
+  "sanitizedHash": "FF78BFBD9E8ACC939EE051EFD1B02387030C7B57F8CDE9EC1A6F92B2706A3256",
+  "sanitizedHash16": "FF78BFBD9E8ACC93",
+  "hotfixMarker": "3d6b-my-status-code-mode",
+  "codeModes": {
+    "My Status": "runOnceForAllItems",
+    "Finalize Access Notification": "runOnceForAllItems"
   },
-  "telegramTriggers": [
-    {
-      "name": "Telegram Trigger",
-      "disabled": false,
-      "type": "n8n-nodes-base.telegramTrigger",
-      "typeVersion": 1.2,
-      "hasWebhookId": true,
-      "credIdHash": "261EB5EE97F9865A",
-      "credName": "Telegram account - Sales Manager for i-SEO",
-      "updates": [
-        "message",
-        "callback_query"
-      ]
-    }
+  "restoreHardened": true,
+  "telegramTriggerUpdates": [
+    "message",
+    "callback_query"
   ],
-  "telegramSendNodes": [
-    {
-      "name": "Safe Telegram Reply",
-      "disabled": false,
-      "typeVersion": 1.2,
-      "appendAttribution": false,
-      "hasAppendAttributionKey": true,
-      "credIdHash": "261EB5EE97F9865A"
-    },
-    {
-      "name": "Answer Callback Query",
-      "disabled": false,
-      "typeVersion": 1.2,
-      "appendAttribution": false,
-      "hasAppendAttributionKey": true,
-      "credIdHash": "261EB5EE97F9865A"
-    },
-    {
-      "name": "Edit Lead Card Message",
-      "disabled": false,
-      "typeVersion": 1.2,
-      "appendAttribution": false,
-      "hasAppendAttributionKey": true,
-      "credIdHash": "261EB5EE97F9865A"
-    },
-    {
-      "name": "Answer Callback Deny",
-      "disabled": false,
-      "typeVersion": 1.2,
-      "appendAttribution": false,
-      "hasAppendAttributionKey": true,
-      "credIdHash": "261EB5EE97F9865A"
-    },
-    {
-      "name": "Notify Access Subject",
-      "disabled": false,
-      "typeVersion": 1.2,
-      "appendAttribution": false,
-      "hasAppendAttributionKey": true,
-      "credIdHash": "261EB5EE97F9865A"
-    }
-  ],
-  "pinDataPresent": false
+  "contour": {
+    "adminActive": true,
+    "opsActive": true,
+    "opsNodes": 36,
+    "prodActive": false,
+    "named": [
+      {
+        "id": "cJGoQUqIIHull4p7",
+        "name": "Sales-Manager-v1",
+        "active": false
+      },
+      {
+        "id": "h8I2Tl2yl4uzhUnB",
+        "name": "Sales-Manager-v2",
+        "active": false
+      },
+      {
+        "id": "wLrLp4WQHm1VJmxz",
+        "name": "i-SEO Sales Manager - Admin.dev",
+        "active": true
+      },
+      {
+        "id": "xSnXPy8cEHoZw6xG",
+        "name": "i-SEO Sales Manager - Operational.dev",
+        "active": true
+      }
+    ]
+  }
 }

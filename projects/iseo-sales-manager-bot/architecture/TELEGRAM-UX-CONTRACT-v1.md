@@ -332,3 +332,4 @@ Every Admin text command must produce exactly one Telegram reply. Silence after 
 - Revoked text says public commands remain available; blocked text is only `Доступ к боту ограничен.`
 - Grant notification: `Вам выданы права модератора Sales Manager.` followed by card-action rights and `/start`/`/help`.
 - Revoke notification: `Ваши права модератора Sales Manager отозваны.` followed by retained `/start`, `/help`, `/my_status`.
+- Successful `/my_status` after a role change proves ACCESS_CONTROL state; it does not by itself prove grant/revoke notification delivery.
