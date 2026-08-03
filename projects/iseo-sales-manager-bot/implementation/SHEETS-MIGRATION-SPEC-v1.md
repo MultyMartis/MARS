@@ -234,3 +234,10 @@ Exact production workbook IDs; whether filenames match `MetaBOT -Leads*.xlsx`; h
 ## Phase 3D.3.1 note — phone text storage
 
 Operational.dev **Append or Update CLEAN v2** and **Append RAW v2** set Google Sheets node `options.cellFormat=RAW` (`valueInputOption=RAW`) so plus-prefixed phones are stored as text, not evaluated as formulas. Historical `#ERROR!` cells are **not** bulk-rewritten; Telegram rendering suppresses them. `LEAD_EVENTS` may record a single `lead_card_recovered` per `/leads` command (metadata only; no PII).
+
+
+---
+
+## Phase 3D.5 note
+
+See `evidence/phase3d5/` for ACCESS_CONTROL / ACCESS_EVENTS, public auth routing, moderator registry Admin commands, and harness coverage (30+ checks). ACCESS_CONTROL is access SoT; do not edit workflow code to enroll moderators.

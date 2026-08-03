@@ -292,3 +292,27 @@ Olya is enrolled in **`manager_action_user_ids` only** — not in `admin_user_id
 - `/ai_status` / `/ai_on` / `/ai_off`: Russian ИИ wording (see evidence/phase3b5).
 - `/stats` filter note: dev «Учитываются только тестовые заявки.» / prod «Тестовые заявки исключены.»
 - `/test_lead`: **deferred** — removed from `/help`; reply «Команда временно недоступна до запуска рабочего контура.»
+
+
+---
+
+## Phase 3D.5 — Public access + moderator registry
+
+Authorization order:
+1. Read ACCESS_CONTROL (SoT).
+2. Bootstrap from `admin_user_ids` if no row (emergency).
+3. Legacy `manager_action_user_ids` only if no ACCESS_CONTROL row.
+
+Public commands: `/start`, `/help`.  
+Staff-only denial: `Команда доступна только сотрудникам с рабочими правами.`  
+Unknown: `Команда не найдена. Используйте /help.`  
+Blocked: `Доступ к боту ограничен.`
+
+Admin registry commands:
+- `/moderators`
+- `/moderator_pending`
+- `/moderator_info <code>`
+- `/moderator_add <code>`
+- `/moderator_remove <code>`
+
+Never display raw Telegram user IDs. Opaque codes only.

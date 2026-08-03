@@ -11,15 +11,16 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | planned (registry unchanged) / **Phase 3D.4 manager enrollment + multi-form semantic UX**; Olya live `/start`/`/help` **pending**; registry promotion **pending** |
-| **Active stage** | **PHASE 3D.4 COMPLETE — SEMANTICS DEPLOYED, OLYA LIVE CALLBACK PENDING** — Olya in `manager_action_user_ids` only; sm-parser-v3.2 + sm-msg-v2.1; free-audit registry; prior 3D.3/3D.3.1 retained; AI OFF |
-| **Runtime** | External n8n — Operational.dev **active** (sole Gmail intake, 36 nodes); Admin.dev **active** (42 nodes, callback + role-aware start/help); Sales-Manager-v2 **inactive** |
+| **Status** | **Phase 3D.5 public access + moderator registry**; ACCESS_CONTROL SoT; Olya moderator; AI OFF
+| **Active stage** | **PHASE 3D.5 COMPLETE — PUBLIC ACCESS AND MODERATOR REGISTRY READY**
+| **Runtime** | External n8n — Operational.dev **active** (sole Gmail intake); Admin.dev **active** (public+registry auth, ~50 nodes); Sales-Manager-v2 **inactive**
 | **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive; filter \`labelIds\` parity confirmed |
 | **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C–3D.3 evidence under `evidence/phase3*` |
 | **Registry** | status **planned** unchanged — promotion to active requires **separate governance gate** (`REGISTRY_STATUS_PROMOTION_PENDING`) |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
-| **Next** | Olya live Telegram confirmation → next form per `MULTI-FORM-TEST-PLAN-v1` (one form/iteration) → later PHASE 3E AI ON only with separate charter |
-| **Evidence 3D.4** | [evidence/phase3d4/](evidence/phase3d4/) |
+| **Next** | Optional interactive Admin `/moderators` confirmation → multi-form plan continuation → later PHASE 3E AI ON only with separate charter
+| **Evidence 3D.5** | [evidence/phase3d5/](evidence/phase3d5/)
+| **Evidence 3D.4** | [evidence/phase3d4/](evidence/phase3d4/)
 | **Evidence 3D.3.1** | [evidence/phase3d31/](evidence/phase3d31/) |
 
 ---

@@ -299,3 +299,14 @@ Parser upgrades affect card content (not layout):
 - **Source page normalization** — `/free-audit/` → `free-audit` in «Источник» line.
 
 See `evidence/phase3d4/` and `knowledge/WEBSITE-FORM-FORMATS-v1.md`.
+
+
+---
+
+## Phase 3D.5 UX
+
+- Public welcome/help texts are informational only (no production/AI/lead/Admin leakage).
+- Moderator start/help explain cards + irreversible status.
+- Admin help includes **Пользователи** registry section.
+- Callback deny: `У вас нет прав для изменения статуса лида.`
+- message_format_version: **sm-msg-v2.2**

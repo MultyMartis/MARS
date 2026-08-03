@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3D.4 — Manager enrollment + multi-form semantic UX (`sm-parser-v3.2`, `sm-msg-v2.1`; Olya enrolled in `manager_action_user_ids` only; role-aware manager `/start`/`/help`; free-audit form registry); prior 3D.3.1 archive/`/leads` safety retained; Admin.dev **active**; Operational.dev **active** (AI OFF); Sales-Manager-v2 **inactive**; Olya live Telegram `/start`/`/help` confirmation **pending**; registry status promotion **pending**
+**Status:** Phase 3D.5 — Public access + Sheets ACCESS_CONTROL moderator registry (`sm-parser-v3.2`, `sm-msg-v2.2`); public `/start`/`/help`; Admin moderator management without workflow edits; Olya moderator-only; AI OFF
 
 ---
 
@@ -83,7 +83,7 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 **Resolved in Phase 3C:** Operational.dev is the active production intake (AI OFF); Sales-Manager-v2 preserved inactive as rollback source; Admin.dev remains active.  
 **Resolved in Phase 3C.2:** Gmail filters audited (no Trash rules); OPS field-loss/chat_id/messageId repaired; first real website-form lead accepted end-to-end.  
 **Resolved in Phase 3D.3:** manager UX upgraded to `sm-msg-v2` (emoji lead/lifecycle indicators, copy-friendly `<code>` contact fields, single `<pre>` client-reply block); inline lifecycle buttons with idempotent + conflict-safe callback handling; `/leads 3|5|10` (admin allowlist only); CLEAN 65 headers with lifecycle columns.  
-**Resolved in Phase 3D.4:** Olya enrolled in `manager_action_user_ids` only (hash **E6714550214106BA**, not admin); role-aware manager `/start`/`/help`; parser **`sm-parser-v3.2`** (messenger/site split, contact inference, comment «в тг», source page normalization); formatter **`sm-msg-v2.1`** (reduced emoji density); `knowledge/WEBSITE-FORM-FORMATS-v1.md` with free-audit record; synthetic callback acceptance PASS — **live Olya `/start`/`/help` pending**.
+**Resolved in Phase 3D.4:** Olya enrolled in `ACCESS_CONTROL moderator (legacy CONFIG fallback retained) (hash **E6714550214106BA**, not admin); role-aware manager `/start`/`/help`; parser **`sm-parser-v3.2`** (messenger/site split, contact inference, comment «в тг», source page normalization); formatter **`sm-msg-v2.1`** (reduced emoji density); `knowledge/WEBSITE-FORM-FORMATS-v1.md` with free-audit record; synthetic callback acceptance PASS — **live Olya `/start`/`/help` pending**.
 
 ---
 

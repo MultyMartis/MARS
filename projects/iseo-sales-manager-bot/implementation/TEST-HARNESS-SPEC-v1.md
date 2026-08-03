@@ -232,3 +232,10 @@ Combined with F-MU01–F-MU30 regression: **30/30 PASS** (manager UX suite uncha
 | Olya live `/start` / `/help` | **PENDING** |
 
 AI calls: **0**. Client messages: **0**. New workflows: **0**.
+
+
+---
+
+## Phase 3D.5 note
+
+See `evidence/phase3d5/` for ACCESS_CONTROL / ACCESS_EVENTS, public auth routing, moderator registry Admin commands, and harness coverage (30+ checks). ACCESS_CONTROL is access SoT; do not edit workflow code to enroll moderators.

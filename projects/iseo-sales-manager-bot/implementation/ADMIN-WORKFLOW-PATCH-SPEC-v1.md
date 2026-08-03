@@ -159,3 +159,10 @@ Admin Telegram Trigger (message + callback_query)
 - **Manager Start / Manager Help** — Russian role-aware texts per `evidence/phase3d4/MANAGER-START-HELP-ACCEPTANCE-v1.md`; must not expose Admin commands.
 - CONFIG enrollment: add Olya identity to `manager_action_user_ids` **only** after identity resolution (`evidence/phase3d4/OLYA-IDENTITY-RESOLUTION-v1.md`).
 - `/config` summary adds manager count line (count only, no raw IDs).
+
+
+---
+
+## Phase 3D.5 note
+
+See `evidence/phase3d5/` for ACCESS_CONTROL / ACCESS_EVENTS, public auth routing, moderator registry Admin commands, and harness coverage (30+ checks). ACCESS_CONTROL is access SoT; do not edit workflow code to enroll moderators.
