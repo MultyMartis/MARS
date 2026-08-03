@@ -266,3 +266,11 @@ Receipt: `evidence/phase3d4/PHASE3D4-ACCEPTANCE-RECEIPT-v1.md`.
 ---
 
 *Phase 3D.4 documentation pack — 2026-08-03.*
+
+
+## Git
+
+- Commit: `221aca19898abaf9e5b91533daf28e511caaac18`
+- Push tip: `221aca19898abaf9e5b91533daf28e511caaac18`
+- Branch: `mars/canonical-post-recovery`
+
