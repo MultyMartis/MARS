@@ -116,3 +116,13 @@ Operator source drop path (raw retained): `X:\AI MARS STORAGE\incoming\iseo-sale
 *Phase 3D.2.1: Admin duplicate reply + runtime-state closeout (2026-08-01).*  
 *Phase 3D.3: manager UX sm-msg-v2, inline lead actions, `/leads`, lifecycle Sheets model — AI OFF (2026-08-01).*  
 *Phase 3D.4: Olya manager enrollment, sm-parser-v3.2 / sm-msg-v2.1 form semantics, website form registry — AI OFF (2026-08-03).*
+
+
+## Phase 3D.5.1 — Access registry population and SoT repair
+
+- **ACCESS_CONTROL** is the primary authorization authority (Telegram user ID keyed; username informational only).
+- `manager_action_user_ids` is legacy and is **not** an active moderator authority after registry acceptance.
+- `admin_user_ids` remains recovery-only Admin bootstrap when ACCESS_CONTROL cannot be read technically.
+- A revoked/blocked ACCESS_CONTROL row always overrides CONFIG allowlists.
+- ACCESS_EVENTS append mapping must reference Prepare Access Upsert fields (never post-Upsert `` metadata).
+- Evidence: `evidence/phase3d51/` · Report: `reports/REPORT-iseo-sales-manager-bot-phase3d51-access-registry-repair-v1.md`.

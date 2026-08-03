@@ -239,3 +239,13 @@ AI calls: **0**. Client messages: **0**. New workflows: **0**.
 ## Phase 3D.5 note
 
 See `evidence/phase3d5/` for ACCESS_CONTROL / ACCESS_EVENTS, public auth routing, moderator registry Admin commands, and harness coverage (30+ checks). ACCESS_CONTROL is access SoT; do not edit workflow code to enroll moderators.
+
+
+## Phase 3D.5.1 — Access registry population and SoT repair
+
+- **ACCESS_CONTROL** is the primary authorization authority (Telegram user ID keyed; username informational only).
+- `manager_action_user_ids` is legacy and is **not** an active moderator authority after registry acceptance.
+- `admin_user_ids` remains recovery-only Admin bootstrap when ACCESS_CONTROL cannot be read technically.
+- A revoked/blocked ACCESS_CONTROL row always overrides CONFIG allowlists.
+- ACCESS_EVENTS append mapping must reference Prepare Access Upsert fields (never post-Upsert `` metadata).
+- Evidence: `evidence/phase3d51/` · Report: `reports/REPORT-iseo-sales-manager-bot-phase3d51-access-registry-repair-v1.md`.
