@@ -195,8 +195,9 @@ All closeout mutations performed in clean temporary worktree based on `origin/ma
 
 ## 28. Push
 
-- Pushed without force to `origin/mars/canonical-post-recovery`
-- Remote tip after push: **e78303e2**
+- Closeout commit pushed without force to `origin/mars/canonical-post-recovery`: **e78303e2**
+- Tip-hash docs commit: **42cdfb80** (`docs(iseo-sales-manager-bot): record phase 3d61 tip hash`)
+- Current `origin/mars/canonical-post-recovery` tip: **42cdfb80**
 
 ## 29. Risks
 
