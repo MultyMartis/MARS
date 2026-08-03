@@ -255,3 +255,15 @@ CONFIG `message_format_version=sm-msg-v2`. Adds to the v1 layout (§1–§2) wit
 5. Parse mode remains `HTML` (Phase 3B.2 decision, unchanged); all dynamic values continue to be HTML-escaped before insertion into `<code>`/`<pre>`.
 
 Formatter output is otherwise identical to `sm-msg-v1` content (labels, enums, forbidden list §4 all still apply).
+
+---
+
+## 7. Phase 3D.4 — `sm-msg-v2.1` (reduced emoji density)
+
+CONFIG `message_format_version=sm-msg-v2.1`. Extends §6:
+
+1. **Section labels** — Качество, Следующий шаг, Не хватает, Уточняющие вопросы render **without** leading emoji.
+2. **Card emoji budget** — standard cards: title lead-type emoji + lifecycle line emoji only (**max 2**); archive cards may add single ℹ️ footer.
+3. **Unchanged from §6** — `<code>` contact fields, `<pre>` reply block, inline keyboard on pending cards, HTML parse mode.
+
+See `evidence/phase3d4/EMOJI-DENSITY-REDUCTION-v1.md`.

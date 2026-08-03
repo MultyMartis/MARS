@@ -91,7 +91,7 @@ Evidence required: n8n execution shows **0** HTTP OpenRouter calls on AI OFF run
 | Runtime update unit | Gmail-stub + gate success → writes `last_lead_success_at`; empty poll → poll only; fail → no success stamp |
 | `/ai_on` `/ai_off` | CONFIG flip + LEAD_EVENTS audit |
 | `/health` AI off | AI probe SKIPPED |
-| `/config` | Shows `parser_version=sm-parser-v3.1` when aligned |
+| `/config` | Shows `parser_version=sm-parser-v3.2`, `message_format_version=sm-msg-v2.1` when aligned |
 | `/test_lead` prod | refused |
 | `/test_lead` dev | sandbox rows only |
 
@@ -200,3 +200,35 @@ AI calls during live acceptance: **0**. Client auto-messages: **0**. New workflo
 Local harness (Storage incoming `phase3d31-local/run-04-harness.mjs`, not committed): **29/29 PASS** covering default `/leads`→5, exact `3|5|10`, reject `7`/`03`/trailing garbage, fewer-than-requested honesty, newest-first unique selection, technical-retry collapse, multi-item capture passthrough, ordinals, lifecycle labels, formula-phone suppression, plus-phone text sanitize, copy-friendly fields, no buttons on done cards, synth exclusion, AI-OFF zero-provider, Admin/callback/Ops regression stubs.
 
 Live Admin acceptance (`/leads 3|5|10|7`): **PASS** — multi-card Telegram delivery, formula suppressed, invalid count warning, contour gates unchanged (`evidence/phase3d31/`).
+
+## Phase 3D.4 — enrollment + parser semantics fixtures (F-3D4-01–F-3D4-12)
+
+Local harness covering role-aware start/help, Olya callback auth, parser v3.2 semantics, sm-msg-v2.1 emoji reduction. Synthetic identities and form bodies only.
+
+| ID | Area | Case | Expect |
+|----|------|------|--------|
+| F-3D4-01 | Auth | Olya hash on manager list | callback allow |
+| F-3D4-02 | Auth | Olya hash not on admin list | `/status` deny |
+| F-3D4-03 | Start | manager-only `/start` | manager greeting shape |
+| F-3D4-04 | Help | manager-only `/help` | manager help shape |
+| F-3D4-05 | Parser | t.me in site field | messenger not site |
+| F-3D4-06 | Parser | real domain in site | site populated |
+| F-3D4-07 | Parser | «в тг» in comment | Telegram preference in summary |
+| F-3D4-08 | Parser | `/free-audit/` page | normalized `free-audit` |
+| F-3D4-09 | Formatter | v2.1 emoji density | max 2 emoji on standard card |
+| F-3D4-10 | Callback | Olya processed synthetic | applied |
+| F-3D4-11 | Callback | Olya spam synthetic | applied |
+| F-3D4-12 | Regression | admin count 1, manager count 2 | PASS |
+
+Combined with F-MU01–F-MU30 regression: **30/30 PASS** (manager UX suite unchanged).
+
+### Live acceptance (Phase 3D.4)
+
+| Check | Result |
+|-------|--------|
+| CONFIG enrollment | PASS |
+| Live patch | PASS |
+| Synthetic Olya callbacks | PASS |
+| Olya live `/start` / `/help` | **PENDING** |
+
+AI calls: **0**. Client messages: **0**. New workflows: **0**.

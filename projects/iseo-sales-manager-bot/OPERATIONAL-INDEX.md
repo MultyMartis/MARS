@@ -11,14 +11,15 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | planned (registry unchanged) / **Phase 3D.3.1 archive recovery + Sheets value safety**; Olya action access **pending**; registry promotion **pending** |
-| **Active stage** | **PHASE 3D.3.1 COMPLETE — ARCHIVE RECOVERY ACCEPTED** — `/leads 3\|5\|10` multi-card delivery + ordinals; formula-phone suppressed; new phone writes RAW text; prior 3D.3 manager UX retained; AI OFF; **OLYA ACTION ACCESS PENDING** |
-| **Runtime** | External n8n — Operational.dev **active** (sole Gmail intake, 36 nodes); Admin.dev **active** (42 nodes, callback routing); Sales-Manager-v2 **inactive** |
+| **Status** | planned (registry unchanged) / **Phase 3D.4 manager enrollment + multi-form semantic UX**; Olya live `/start`/`/help` **pending**; registry promotion **pending** |
+| **Active stage** | **PHASE 3D.4 COMPLETE — SEMANTICS DEPLOYED, OLYA LIVE CALLBACK PENDING** — Olya in `manager_action_user_ids` only; sm-parser-v3.2 + sm-msg-v2.1; free-audit registry; prior 3D.3/3D.3.1 retained; AI OFF |
+| **Runtime** | External n8n — Operational.dev **active** (sole Gmail intake, 36 nodes); Admin.dev **active** (42 nodes, callback + role-aware start/help); Sales-Manager-v2 **inactive** |
 | **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive; filter \`labelIds\` parity confirmed |
 | **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C–3D.3 evidence under `evidence/phase3*` |
 | **Registry** | status **planned** unchanged — promotion to active requires **separate governance gate** (`REGISTRY_STATUS_PROMOTION_PENDING`) |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
-| **Next** | Phase 3D.4 — Olya manager-action enrollment (`manager_action_user_ids` only) → optional narrow historical phone-cell correction → later PHASE 3E AI ON only with separate charter |
+| **Next** | Olya live Telegram confirmation → next form per `MULTI-FORM-TEST-PLAN-v1` (one form/iteration) → later PHASE 3E AI ON only with separate charter |
+| **Evidence 3D.4** | [evidence/phase3d4/](evidence/phase3d4/) |
 | **Evidence 3D.3.1** | [evidence/phase3d31/](evidence/phase3d31/) |
 
 ---
@@ -124,7 +125,12 @@
 | 47 | [reports/REPORT-iseo-sales-manager-bot-phase3d21-admin-reply-and-runtime-closeout-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3d21-admin-reply-and-runtime-closeout-v1.md) | Phase 3D.2.1 |
 | 48 | [evidence/phase3d21/](evidence/phase3d21/) | Phase 3D.2.1 evidence |
 | 49 | [reports/REPORT-iseo-sales-manager-bot-phase3d3-manager-ux-actions-and-history-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3d3-manager-ux-actions-and-history-v1.md) | Phase 3D.3 |
-| 50 | [evidence/phase3d3/](evidence/phase3d3/) | Phase 3D.3 evidence (16 docs: visual indicators, keyboard, callback idempotency/conflict, processed/spam acceptance, message edit, copy-friendly fields, reply copy block, lifecycle data model, Sheets lifecycle mapping, manager authorization, `/leads` command + live acceptance, manager UX live acceptance, final workflow state, acceptance receipt) |
+| 50 | [evidence/phase3d3/](evidence/phase3d3/) | Phase 3D.3 evidence (16 docs) |
+| 51 | [reports/REPORT-iseo-sales-manager-bot-phase3d31-archive-recovery-and-sheets-safety-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3d31-archive-recovery-and-sheets-safety-v1.md) | Phase 3D.3.1 |
+| 52 | [evidence/phase3d31/](evidence/phase3d31/) | Phase 3D.3.1 evidence |
+| 53 | [knowledge/WEBSITE-FORM-FORMATS-v1.md](knowledge/WEBSITE-FORM-FORMATS-v1.md) | Website form registry |
+| 54 | [reports/REPORT-iseo-sales-manager-bot-phase3d4-manager-enrollment-and-form-semantics-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3d4-manager-enrollment-and-form-semantics-v1.md) | Phase 3D.4 |
+| 55 | [evidence/phase3d4/](evidence/phase3d4/) | Phase 3D.4 evidence (14 docs: identity, roles, start/help, Olya callbacks, emoji v2.1, parser v3.2 semantics, supplied form, multi-form plan, admin regression, workflow state, receipt) |
 
 ---
 
@@ -157,8 +163,10 @@
 | **Phase 3D.1** | Real-form parser + clean lead | **DONE** |
 | **Phase 3D.2** | Production closeout / Olya handoff docs | **DONE** (typed Trigger pending) |
 | **Phase 3D.2.1** | Admin duplicate reply + runtime lead stamp | **DONE** (harness; typed Trigger pending) |
-| **Phase 3D.3** | Manager UX (`sm-msg-v2`), inline lead actions, `/leads`, lifecycle Sheets model | **DONE** — Olya action access **pending** |
-| Phase 3D.4 | Olya manager-action enrollment | **not opened** |
+| **Phase 3D.3** | Manager UX (`sm-msg-v2`), inline lead actions, `/leads`, lifecycle Sheets model | **DONE** |
+| **Phase 3D.3.1** | `/leads` multi-card + Sheets phone RAW safety | **DONE** |
+| **Phase 3D.4** | Olya manager enrollment, sm-parser-v3.2 / sm-msg-v2.1, form registry | **DONE** — Olya live Telegram **pending** |
+| Next form iteration | Per `MULTI-FORM-TEST-PLAN-v1` | **not opened** |
 | Live rename | After clean-lead acceptance | **deferred** |
 | Registry promotion | Separate governance charter | **not opened** |
 
@@ -187,4 +195,4 @@
 
 ---
 
-*Last updated: 2026-08-01 — Phase 3D.3 manager UX, lead actions and history recovery.*
+*Last updated: 2026-08-03 — Phase 3D.4 manager enrollment, parser/formatter semantics, website form registry.*

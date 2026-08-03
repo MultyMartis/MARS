@@ -150,3 +150,12 @@ Admin Telegram Trigger (message + callback_query)
 - **Recent Leads:** exact arg parse; newest-first unique selection; ordinals from selected count; suppress invalid contacts; lifecycle status line; one `lead_card_recovered` event per command.
 - **Read CLEAN for Leads:** bounded A1 range (`A1:ZZ250`).
 - Callback edit path: same invalid-contact suppression on contact fields.
+
+## Phase 3D.4 patch notes — role-aware start/help + Olya enrollment
+
+- **Check User Authorization** unchanged — `admin_user_ids` for text commands only.
+- **Check Manager Action Authorization** reads populated `manager_action_user_ids` (**2** entries: operator + Olya hash E6714550214106BA) — **no fallback** to admin list when populated.
+- **Route Command** `/start` and `/help` branch: admin → existing handlers; manager-only → new **Manager Start** / **Manager Help** code nodes; unauthorized → deny.
+- **Manager Start / Manager Help** — Russian role-aware texts per `evidence/phase3d4/MANAGER-START-HELP-ACCEPTANCE-v1.md`; must not expose Admin commands.
+- CONFIG enrollment: add Olya identity to `manager_action_user_ids` **only** after identity resolution (`evidence/phase3d4/OLYA-IDENTITY-RESOLUTION-v1.md`).
+- `/config` summary adds manager count line (count only, no raw IDs).

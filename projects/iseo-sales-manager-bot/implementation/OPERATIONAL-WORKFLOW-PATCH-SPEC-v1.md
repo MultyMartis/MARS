@@ -313,3 +313,10 @@ After Gmail Fetch Leads: enable `alwaysOutputData`, add Intake Gate + Switch Int
 - Formatter suppresses `#ERROR!` / formula-parse placeholders in live cards (mirrors Admin archive rendering).
 - No change to Gmail intake, exactly-once gates, or AI OFF path.
 - No new workflow created; no change to AI OFF/ON gating; no change to Telegram-fail / PROCESSED label policy (§6 above).
+
+## Phase 3D.4 parser + formatter note
+
+- **Parse Lead** bumps to **`parser_version=sm-parser-v3.2`**: messenger/site split (`t.me` not site); contact method inference; comment «в тг» preference; source page normalization. Registry: `knowledge/WEBSITE-FORM-FORMATS-v1.md`.
+- **Format Telegram Lead Card** bumps to **`message_format_version=sm-msg-v2.1`** — reduced emoji density (see TELEGRAM-FORMATTER-SPEC-v1 §7).
+- CONFIG display keys must match deployed versions.
+- One form per iteration policy: `evidence/phase3d4/MULTI-FORM-TEST-PLAN-v1.md`.

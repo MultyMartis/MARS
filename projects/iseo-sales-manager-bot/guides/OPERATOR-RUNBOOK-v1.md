@@ -2,7 +2,7 @@
 
 **Audience:** Андрей (operator)  
 **Contour:** production · AI OFF default  
-**Version:** 1.3 · 2026-08-01 (Phase 3D.3.1 — `/leads` multi-card archive repair + phone text safety)
+**Version:** 1.4 · 2026-08-03 (Phase 3D.4 — Olya manager enrollment, parser v3.2, form registry)
 
 ---
 
@@ -15,7 +15,8 @@
 | Admin.dev | **active** |
 | `environment` | `production` |
 | `ai_enabled` | `false` |
-| `parser_version` (display) | `sm-parser-v3.1` |
+| `parser_version` (display) | `sm-parser-v3.2` |
+| `message_format_version` | `sm-msg-v2.1` |
 | Automatic client replies | **never** |
 | New workflows | **do not create** for hotfixes |
 
@@ -49,10 +50,24 @@ Allowlist remains operator-only unless you explicitly expand it. Do **not** add 
 
 | CONFIG key | Gates | Current state |
 |------------|-------|----------------|
-| `admin_user_ids` | Text commands (`/status`, `/leads`, `/ai_on`, …) | Operator only |
-| `manager_action_user_ids` | Inline lead-action callbacks (Отметить обработанным / Отметить как спам) | **Falls back to `admin_user_ids`** — Оля **not enrolled** |
+| `admin_user_ids` | Text commands (`/status`, `/leads`, `/ai_on`, …) | **1** — operator only |
+| `manager_action_user_ids` | Inline callbacks + manager `/start`/`/help` | **2** — operator + Olya (hash E6714550214106BA) |
 
-Do not add Оля to `manager_action_user_ids` without a separate approval + controlled enrollment step (Phase 3D.4). Adding her there does **not** grant Admin text-command access — the two lists are independent.
+Olya is enrolled in `manager_action_user_ids` **only** — she does **not** receive Admin command access. `/config` should show admins: **1**, managers with button access: **2**.
+
+### Manager enrollment (Phase 3D.4 — completed)
+
+1. Olya sends `/start` in private chat → capture denied execution (pre-enroll).
+2. Resolve identity hash (**E6714550214106BA**) — distinct from operator (**3FBE21323E22BFC1**).
+3. Add to CONFIG `manager_action_user_ids` **only** — never `admin_user_ids`.
+4. Verify synthetic callback harness (processed/spam).
+5. **Pending:** Olya live `/start`, `/help`, first real button tap — human confirmation gate.
+
+### Remove manager access
+
+To revoke Olya callback access: remove her hash from `manager_action_user_ids` in CONFIG (runtime); do **not** touch `admin_user_ids`. Re-verify `/config` manager count. Document in evidence before/after counts only.
+
+Do not add Оля to `admin_user_ids` without separate approval.
 
 ---
 
@@ -108,6 +123,25 @@ Checks:
 3. Same-status repeat taps are **expected idempotent** no-ops, not failures.
 4. Check `LEAD_EVENTS` for the callback's recorded outcome (`applied`/`idempotent`/`conflict`/`unauthorized`) before patching anything.
 5. Do not manually edit `lifecycle_status` in Sheets to "fix" a conflict — capture evidence and treat as a workflow investigation first.
+
+### Verify callbacks after enrollment
+
+1. Confirm tapping user hash is on `manager_action_user_ids` (not admin-only path for callbacks).
+2. Use a **synthetic** or chartered test card first — check `LEAD_EVENTS` outcome (`applied`/`idempotent`/`conflict`).
+3. Olya live tap on real pending card — **pending human confirmation** after CONFIG enroll.
+4. `/stats` must exclude synthetic acceptance rows.
+
+## 4c. Multi-form registry and testing
+
+Website form definitions: `knowledge/WEBSITE-FORM-FORMATS-v1.md`.
+
+**Policy:** **one form per iteration** — see `evidence/phase3d4/MULTI-FORM-TEST-PLAN-v1.md`.
+
+Per form: update registry → add parser fixture → harness → one live/chartered test email → verify card semantics → stop before next form.
+
+Phase 3D.4 accepted form: **`free-audit`**. Next forms (seo, direct, …) are placeholders — do not batch.
+
+Parser v3.2 rules apply to all forms: `t.me` not site; contact inference; «в тг» in comment; page slug normalization.
 
 ### Card edit failure (keyboard not clearing)
 
@@ -172,9 +206,11 @@ Checklist before any activation change:
 ## 8. Olya handoff boundary
 
 - Оля receives manager cards and uses the prepared reply manually.
-- Оля updates lifecycle in Sheets.
+- Оля may tap **✅ / 🚫** buttons (enrolled Phase 3D.4).
+- Оля may use manager `/start` and `/help` in private chat — not Admin commands.
+- Оля updates lifecycle in Sheets for her sales work; button taps update bot lifecycle state.
 - Оля does **not** need n8n, Gmail, credentials, or Admin allowlist.
-- Operator remains on-call for failures.
+- Operator remains on-call for failures and `/leads` archive.
 
 Guide: `guides/OLYA-LEAD-WORK-GUIDE-v1.md`.
 

@@ -63,17 +63,18 @@ Exact response:
 Сводка CONFIG
 Контур: разработка
 Режим ИИ: выключен
-Версия парсера: sm-parser-v3.1
-Версия сообщений: sm-msg-v1
+Версия парсера: sm-parser-v3.2
+Версия сообщений: sm-msg-v2.1
 Администраторов в allowlist: 1
+Менеджеров с доступом к кнопкам: 2
 (секреты и идентификаторы скрыты)
 ```
 
 Do not expose raw key tokens such as `environment:`, `aienabled:`, `parserversion:` in operator replies.
 
-### `/start` (Phase 3D.2 / 3D.2.1)
+### `/start` (Phase 3D.2 / 3D.2.1 / 3D.4)
 
-Authorized response shape:
+**Admin** (`admin_user_ids`) authorized response shape:
 
 ```
 Sales Manager Admin запущен.
@@ -84,10 +85,24 @@ Sales Manager Admin запущен.
 Используйте /help, чтобы посмотреть доступные команды.
 ```
 
+**Manager only** (`manager_action_user_ids`, not admin) — Phase 3D.4 role-aware shape:
+
+```
+Sales Manager — менеджерский режим
+
+Вы можете отмечать лиды кнопками под карточкой:
+✅ Обработанным · 🚫 Спам
+
+Карточки приходят в рабочий чат менеджеров.
+Admin-команды (/status, /leads, …) вам недоступны.
+
+/help — краткая памятка по работе с карточками.
+```
+
 - `production` → `рабочий`; otherwise → `разработка`
 - `ai_enabled=true` → `включён`; else → `выключен`
 - `/start@bot_username` normalizes to `/start`
-- Phase 3D.2 observed double reply was **expected harness overlap** (two deliberate harness executions) — not a Trigger same-update defect; no Admin idempotency table added in 3D.2.1
+- Unauthorized → `Доступ запрещён.` (no config leak)
 
 ### `/status` (Phase 3D.2.1)
 
@@ -115,7 +130,9 @@ Operational must write `last_lead_success_at` from **Telegram Result Gate** succ
 
 ### `/help`
 
-Lists canonical commands with one-line Russian descriptions, including `/start` under «Начало». Omits deferred `/test_lead`. Mentions: AI default OFF; bot never writes to clients.
+**Admin path:** lists canonical commands with one-line Russian descriptions, including `/start` under «Начало». Omits deferred `/test_lead`. Mentions: AI default OFF; bot never writes to clients.
+
+**Manager path (Phase 3D.4):** short памятка — card emoji meanings, copy blocks, processed/spam buttons, no Admin commands, contact operator on failure. Does **not** list `/status`, `/leads`, `/config`, or AI toggles.
 
 ### `/status`
 
@@ -252,12 +269,12 @@ Pre-fix defect: `Capture Admin Reply` collapsed multi-item `/leads` output to `$
 
 ### 7.3 Manager vs admin allowlists
 
-| CONFIG key | Purpose | Phase 3D.3 state |
-|------------|---------|-------------------|
-| `admin_user_ids` | Text-command authorization (`/status`, `/leads`, `/ai_on`, …) | Operator only |
-| `manager_action_user_ids` | Inline lead-action callback authorization (Отметить обработанным / Отметить как спам) | **Falls back to `admin_user_ids`** — no manager IDs enrolled yet |
+| CONFIG key | Purpose | Phase 3D.4 state |
+|------------|---------|------------------|
+| `admin_user_ids` | Text-command authorization (`/status`, `/leads`, `/ai_on`, …) | **1** — operator only (hash 3FBE21323E22BFC1) |
+| `manager_action_user_ids` | Inline lead-action callback authorization; role-aware manager `/start`/`/help` | **2** — operator + Olya (hash E6714550214106BA); **no fallback** when populated |
 
-Olya is **not** enrolled in either allowlist. Future enrollment (Phase 3D.4) adds her identity to `manager_action_user_ids` **only**, after explicit operator approval — never to `admin_user_ids`.
+Olya is enrolled in **`manager_action_user_ids` only** — not in `admin_user_ids`. She may use lifecycle buttons and receives manager `/start`/`/help`; she may **not** run Admin commands.
 
 ---
 

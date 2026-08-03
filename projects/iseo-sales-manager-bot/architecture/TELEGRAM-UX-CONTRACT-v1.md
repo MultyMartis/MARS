@@ -271,3 +271,31 @@ No opaque token collisions surfaced as PII; no raw `lead_id`/dedupe keys in butt
 - Omit the invalid field; archive cards may show `⚠️ Контакт в архивной записи повреждён` when useful.
 - `/leads` must emit **one Telegram message per selected archive card** with correct ordinals; do not collapse to the first item.
 - Archive footer: `ℹ️ Архивная копия. Статус меняется только в исходной карточке.`
+
+---
+
+## 9. Phase 3D.4 — `sm-msg-v2.1` (reduced emoji density)
+
+**CONFIG `message_format_version` = `sm-msg-v2.1`.**
+
+Builds on §8 (`sm-msg-v2`) with **lower emoji density** on manager lead cards:
+
+- Title lead-type emoji (🟢🟡🟠🔵) and lifecycle emoji (🕓✅🚫) **unchanged**.
+- Section labels (Качество, Следующий шаг, Не хватает, …) render **without** prefix emoji.
+- Archive footer may use a **single** ℹ️; no stacked section indicators.
+- Target: **max 2** emoji on standard (non-archive) cards — title + lifecycle line.
+
+Copy-friendly `<code>` fields, `<pre>` reply block, and inline lifecycle buttons unchanged from §8.
+
+---
+
+## 10. Phase 3D.4 — parser-driven card semantics (`sm-parser-v3.2`)
+
+Parser upgrades affect card content (not layout):
+
+- **`t.me/…` / `@handle` in site field** → classified as **messenger**, not site.
+- **Contact method inference** from «Способ связи» + value shape.
+- **Comment semantics** — «в тг» and equivalents reinforce Telegram preference.
+- **Source page normalization** — `/free-audit/` → `free-audit` in «Источник» line.
+
+See `evidence/phase3d4/` and `knowledge/WEBSITE-FORM-FORMATS-v1.md`.
