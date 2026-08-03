@@ -35,8 +35,8 @@
 Phase 3D.5.2 content was cherry-picked into the canonical worktree as commit `6aef3f49`, from source commit `cb85a34d`.
 
 ## Commit / push
-- Commit: **TBD**
-- Push: **TBD**
+- Commit: **c0c13373ee94**
+- Push: **c0c13373ee94**
 
 ## References
 - `evidence/phase3d6/POST-PATCH-ACCEPTANCE.json`
