@@ -1,0 +1,153 @@
+{
+  "at": "2026-08-03T19:30:59.050Z",
+  "pass": 29,
+  "total": 29,
+  "fail": [],
+  "tests": [
+    {
+      "id": "01_public_my_status",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "02_pending_my_status",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "03_moderator_my_status",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "04_admin_my_status",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "05_revoked_my_status",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "06_blocked_my_status",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "07_no_registry_row",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "08_username_change",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "09_registry_lookup_empty",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "10_registry_lookup_failure",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "11_grant_notification_success",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "12_grant_notification_failure",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "13_revoke_notification_success",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "14_revoke_notification_failure",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "15_grant_mutation_persists_on_notify_fail",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "16_revoke_mutation_persists_on_notify_fail",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "17_repeated_add_no_resend",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "18_repeated_remove_no_resend",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "19_public_help_my_status",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "20_moderator_help_my_status",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "21_admin_help_my_status",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "22_underscores_preserved",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "23_no_other_user_leakage",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "24_callback_denied_after_revoke",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "25_callback_restored_after_readd",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "26_ai_off_zero_provider",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "27_operational_exactly_once_regression",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "28_no_client_auto_messages",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "29_no_new_workflows",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

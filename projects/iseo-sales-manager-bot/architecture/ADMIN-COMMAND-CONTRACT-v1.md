@@ -336,3 +336,12 @@ Never display raw Telegram user IDs. Opaque codes only.
 - Unknown command text: `Команда не найдена. Используйте /help.`
 - Registry technical failure (non-bootstrap): `Сервис временно недоступен. Попробуйте позже.`
 - Webhook ownership: exactly one active Telegram Trigger for the Sales Manager bot (Admin.dev).
+
+## Phase 3D.6 — Personal status and role notifications
+- `/my_status` is public and resolves only the caller through ACCESS_CONTROL by `telegram_user_id`.
+- Explicit active Admin/moderator, pending, revoked and blocked states have separate safe replies; blocked callers may use only this status exception.
+- Help exposes `/my_status` to public, moderator and Admin with HTML `<code>` formatting.
+- A non-idempotent `/moderator_add` or `/moderator_remove` mutates ACCESS_CONTROL first, then sends the canonical role notification.
+- Notification delivery failure does not roll back the access mutation; Admin receives `Права изменены, но уведомление пользователю доставить не удалось.`
+- Delivery audit events: `personal_status_viewed`, `moderator_grant_notification_sent/failed`, `moderator_revoke_notification_sent/failed`.
+- Repeated add/remove sends no notification.

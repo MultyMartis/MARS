@@ -187,3 +187,15 @@ See `evidence/phase3d5/` for ACCESS_CONTROL / ACCESS_EVENTS, public auth routing
 | Capture Admin Reply | Safe success/error diagnostic stamps (no sensitive command text) |
 
 Expected Admin.dev node count after patch: **51**. Operational.dev unchanged (36).
+
+## Phase 3D.6 — personal status and notification patch
+
+Admin.dev final node count: **54**. Add exactly:
+
+| Node | Responsibility |
+|---|---|
+| My Status | Render caller-only `/my_status` for public/pending/moderator/Admin/revoked/blocked |
+| Finalize Access Notification | Detect Telegram delivery result, preserve access mutation, choose Admin reply and build notification event |
+| Append ACCESS_EVENTS Notify | Append sent/failed role-notification audit |
+
+Route `/my_status` after registry authorization. ACCESS_CONTROL remains the source of truth matched by `telegram_user_id`. For non-idempotent add/remove, persist registry mutation before Telegram notification. On notification failure, append the `*_notification_failed` event and reply `Права изменены, но уведомление пользователю доставить не удалось.`; do not roll back. Repeated add/remove skips notification.

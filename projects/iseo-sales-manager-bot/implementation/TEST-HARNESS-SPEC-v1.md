@@ -253,3 +253,8 @@ See `evidence/phase3d5/` for ACCESS_CONTROL / ACCESS_EVENTS, public auth routing
 ## Phase 3D.5.2 — Silence recovery harness
 
 Required coverage includes: registry found/absent/empty/error/malformed/blocked/revoked; Admin bootstrap recovery; moderator/public; `/start` `/help` `/config` `/moderators` `/moderator_pending`; unknown command; bot `@suffix`; chat context survival; one-response invariant; callback auth/deny; AI OFF; Operational Gmail exactly-once; no new workflow; no `require('crypto')` in Admin Code nodes.
+
+## Phase 3D.6 — status and notification suite
+Required checks: `/my_status` for public, pending, moderator, Admin, revoked and blocked; no registry row; username change; empty/failed registry lookup; grant/revoke delivery success and failure; mutation persistence when notify fails; repeated add/remove without resend; help visibility for all role paths with HTML `<code>` underscore preservation; no cross-user leakage; revoke callback deny/re-add restoration; AI OFF zero-provider; Operational exactly-once; zero client auto-messages and zero new workflows.
+
+**Result:** `evidence/phase3d6/HARNESS-RESULT.json` records **29/29 PASS**. Webhook injection is not proof of real Telegram delivery; operator loop remains separate acceptance.

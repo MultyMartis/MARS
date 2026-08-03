@@ -324,3 +324,11 @@ See `evidence/phase3d4/` and `knowledge/WEBSITE-FORM-FORMATS-v1.md`.
 ## Phase 3D.5.2 — One-response invariant
 
 Every Admin text command must produce exactly one Telegram reply. Silence after a received update is an incident. Service-unavailable and processing-failure copy must be operator-safe (no raw IDs, no stack traces).
+
+## Phase 3D.6 — Personal access UX
+- `/my_status` is available to public, pending, active moderator/Admin, revoked and blocked users; it never exposes another user’s identity or registry row.
+- Show command names in HTML `<code>` tags, including `<code>/my_status</code>`, to preserve underscores.
+- Active moderator text confirms card and callback capability but not Admin settings.
+- Revoked text says public commands remain available; blocked text is only `Доступ к боту ограничен.`
+- Grant notification: `Вам выданы права модератора Sales Manager.` followed by card-action rights and `/start`/`/help`.
+- Revoke notification: `Ваши права модератора Sales Manager отозваны.` followed by retained `/start`, `/help`, `/my_status`.

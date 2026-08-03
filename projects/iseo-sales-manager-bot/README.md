@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3D.5.2 COMPLETE — real Telegram Admin commands restored (`sm-parser-v3.2`, `sm-msg-v2.2`); ACCESS_CONTROL SoT; Olya moderator active; AI OFF
+**Status:** Phase 3D.6 COMPLETE — personal status and role-notification contracts; **live Telegram notification confirmation pending**; `sm-parser-v3.2`, `sm-msg-v2.2`; ACCESS_CONTROL SoT; AI OFF
 
 ---
 
@@ -84,6 +84,7 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 **Resolved in Phase 3C.2:** Gmail filters audited (no Trash rules); OPS field-loss/chat_id/messageId repaired; first real website-form lead accepted end-to-end.  
 **Resolved in Phase 3D.3:** manager UX upgraded to `sm-msg-v2` (emoji lead/lifecycle indicators, copy-friendly `<code>` contact fields, single `<pre>` client-reply block); inline lifecycle buttons with idempotent + conflict-safe callback handling; `/leads 3|5|10` (admin allowlist only); CLEAN 65 headers with lifecycle columns.  
 **Resolved in Phase 3D.4:** Olya enrolled in `ACCESS_CONTROL moderator (legacy CONFIG fallback retained) (hash **E6714550214106BA**, not admin); role-aware manager `/start`/`/help`; parser **`sm-parser-v3.2`** (messenger/site split, contact inference, comment «в тг», source page normalization); formatter **`sm-msg-v2.1`** (reduced emoji density); `knowledge/WEBSITE-FORM-FORMATS-v1.md` with free-audit record; synthetic callback acceptance PASS — **live Olya `/start`/`/help` pending**.
+**Resolved in Phase 3D.6:** `/my_status` for public/pending/moderator/Admin/revoked/blocked; grant/revoke Telegram notification branch with ACCESS_EVENTS delivery events and non-rollback failure boundary. Structural patch PASS and harness 29/29 PASS; real operator Telegram delivery loop remains pending after automated webhook `SQLITE_ERROR`.
 
 ---
 
@@ -96,8 +97,8 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 
 ## Next gate
 
-**Current closeout:** PHASE 3D.4 — semantics deployed; Olya CONFIG enrollment ok; **live human Telegram confirmation** for Olya `/start`, `/help`, and first real callback tap **pending**.  
-**Next:** Olya live confirmation → next website form per `MULTI-FORM-TEST-PLAN-v1` (one form per iteration).  
+**Current closeout:** **COMPLETE — STATUS READY, LIVE NOTIFICATION CONFIRMATION PENDING.**
+**Next:** operator performs Telegram grant/revoke delivery confirmation → next website form per `MULTI-FORM-TEST-PLAN-v1` (one form per iteration).
 **Later (separate approval):** PHASE 3E — controlled AI ON pilot; optional `.dev` rename; registry promotion.
 
 Do not enable AI or reactivate Sales-Manager-v2 without explicit charter. Do not add Оля to Admin allowlist without approval.
@@ -116,6 +117,7 @@ Operator source drop path (raw retained): `X:\AI MARS STORAGE\incoming\iseo-sale
 *Phase 3D.2.1: Admin duplicate reply + runtime-state closeout (2026-08-01).*  
 *Phase 3D.3: manager UX sm-msg-v2, inline lead actions, `/leads`, lifecycle Sheets model — AI OFF (2026-08-01).*  
 *Phase 3D.4: Olya manager enrollment, sm-parser-v3.2 / sm-msg-v2.1 form semantics, website form registry — AI OFF (2026-08-03).*
+*Phase 3D.6: personal `/my_status` and role-notification contracts — AI OFF (2026-08-04).*
 
 
 ## Phase 3D.5.1 — Access registry population and SoT repair

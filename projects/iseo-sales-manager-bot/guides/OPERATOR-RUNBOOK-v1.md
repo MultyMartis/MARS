@@ -2,7 +2,7 @@
 
 **Audience:** Андрей (operator / Admin)  
 **Contour:** production · AI OFF default  
-**Version:** 1.6 · 2026-08-04 (Phase 3D.5.2 — Admin silence recovery)
+**Version:** 1.7 · 2026-08-04 (Phase 3D.6 — personal status and role notifications)
 
 ---
 
@@ -56,6 +56,8 @@ Legacy CONFIG `manager_action_user_ids` is fallback only when no ACCESS_CONTROL 
 
 `/start` `/help` `/status` `/health` `/stats` `/last_error` `/config` `/ai_status` `/ai_on` `/ai_off` `/leads`
 
+`/my_status` is public but returns the caller’s own status only. Verify it after role changes without exposing raw IDs.
+
 AI ON only with explicit charter.
 
 ---
@@ -71,6 +73,12 @@ AI ON only with explicit charter.
 ## 6. Button safety
 
 Lead cards with buttons go only to manager/Admin destinations. Public bot reachability ≠ lead visibility. In shared groups, buttons may be visible to members but callbacks still require registry auth.
+
+## 7. Role notification acceptance
+1. Use `/moderator_add CODE` or `/moderator_remove CODE`; do not edit workflow code or CONFIG to change a moderator.
+2. ACCESS_CONTROL is mutated before the subject notification. If delivery fails, the role state remains changed and the reply is `Права изменены, но уведомление пользователю доставить не удалось.`
+3. Check ACCESS_EVENTS for `moderator_grant_notification_sent/failed` or `moderator_revoke_notification_sent/failed`.
+4. Ask the subject to confirm the exact Telegram notification and `/my_status`. Automated webhook injection failed with `SQLITE_ERROR`; this real operator loop remains pending for Phase 3D.6.
 
 
 ## Phase 3D.5.1 — Access registry population and SoT repair
