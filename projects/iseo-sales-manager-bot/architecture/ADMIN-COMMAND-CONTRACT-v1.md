@@ -326,3 +326,13 @@ Never display raw Telegram user IDs. Opaque codes only.
 - A revoked/blocked ACCESS_CONTROL row always overrides CONFIG allowlists.
 - ACCESS_EVENTS append mapping must reference Prepare Access Upsert fields (never post-Upsert `` metadata).
 - Evidence: `evidence/phase3d51/` · Report: `reports/REPORT-iseo-sales-manager-bot-phase3d51-access-registry-repair-v1.md`.
+
+## Phase 3D.5.2 — Guaranteed response + zero-item hazard
+
+- Never let a Sheets read (empty or error) terminate routing with zero Telegram replies.
+- Preserve command context across registry lookup (`chat_id` / `user_id` / `message_id` / `command`).
+- One-response invariant for every text command.
+- Admin bootstrap (`admin_user_ids`) is recovery-only for `/start` `/help` `/status` `/health` `/config` `/moderators` `/moderator_pending` when ACCESS_CONTROL is technically unreadable.
+- Unknown command text: `Команда не найдена. Используйте /help.`
+- Registry technical failure (non-bootstrap): `Сервис временно недоступен. Попробуйте позже.`
+- Webhook ownership: exactly one active Telegram Trigger for the Sales Manager bot (Admin.dev).

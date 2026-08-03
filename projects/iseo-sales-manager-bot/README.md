@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3D.5 — Public access + Sheets ACCESS_CONTROL moderator registry (`sm-parser-v3.2`, `sm-msg-v2.2`); public `/start`/`/help`; Admin moderator management without workflow edits; Olya moderator-only; AI OFF
+**Status:** Phase 3D.5.2 COMPLETE — real Telegram Admin commands restored (`sm-parser-v3.2`, `sm-msg-v2.2`); ACCESS_CONTROL SoT; Olya moderator active; AI OFF
 
 ---
 

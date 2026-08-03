@@ -1,0 +1,163 @@
+{
+  "at": "2026-08-03T17:52:09.618Z",
+  "pass": 31,
+  "total": 31,
+  "fail": [],
+  "tests": [
+    {
+      "id": "01_admin_registry_found",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "02_admin_bootstrap_recovery",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "03_moderator_registry_found",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "04_public_registry_found",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "05_no_registry_row",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "06_empty_sheets_result",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "07_sheets_technical_error",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "08_malformed_registry_row",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "09_blocked_row",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "10_revoked_row",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "1x_cmd_/start",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "1x_cmd_/help",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "1x_cmd_/config",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "1x_cmd_/moderators",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "1x_cmd_/moderator_pending",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "16_unknown_command",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "17_bot_username_suffix",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "18_chat_context_survives",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "19_exactly_one_response",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "20_callback_processed",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "21_callback_spam_auth",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "22_unauthorized_callback",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "23_no_ai_call",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "24_operational_gmail_once",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "25_no_new_workflow",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "26_moderator_pending_parse",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "27_bootstrap_limits_ai_on",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "28_start_help_text",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "29_moderators_list",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "30_access_code_stable",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "id": "31_prepatch_crypto_inventory",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

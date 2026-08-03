@@ -1,0 +1,35 @@
+{
+  "id": "18245",
+  "status": "error",
+  "mode": "webhook",
+  "startedAt": "2026-08-03T17:39:34.427Z",
+  "stoppedAt": "2026-08-03T17:39:34.849Z",
+  "lastNodeExecuted": "Read Authorization Config",
+  "topError": "The service is receiving too many requests from you",
+  "nodeTrail": [
+    {
+      "node": "Telegram Trigger",
+      "executionStatus": "success",
+      "start": 1785778774438,
+      "items": 1,
+      "errorName": null,
+      "errorMessage": null
+    },
+    {
+      "node": "Normalize Command",
+      "executionStatus": "success",
+      "start": 1785778774440,
+      "items": 1,
+      "errorName": null,
+      "errorMessage": null
+    },
+    {
+      "node": "Read Authorization Config",
+      "executionStatus": "error",
+      "start": 1785778774470,
+      "items": 0,
+      "errorName": "NodeApiError",
+      "errorMessage": "The service is receiving too many requests from you"
+    }
+  ]
+}

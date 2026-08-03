@@ -2,7 +2,7 @@
 
 **Audience:** Андрей (operator / Admin)  
 **Contour:** production · AI OFF default  
-**Version:** 1.5 · 2026-08-03 (Phase 3D.5 — public access + ACCESS_CONTROL moderator registry)
+**Version:** 1.6 · 2026-08-04 (Phase 3D.5.2 — Admin silence recovery)
 
 ---
 
@@ -81,3 +81,14 @@ Lead cards with buttons go only to manager/Admin destinations. Public bot reacha
 - A revoked/blocked ACCESS_CONTROL row always overrides CONFIG allowlists.
 - ACCESS_EVENTS append mapping must reference Prepare Access Upsert fields (never post-Upsert `` metadata).
 - Evidence: `evidence/phase3d51/` · Report: `reports/REPORT-iseo-sales-manager-bot-phase3d51-access-registry-repair-v1.md`.
+
+## Phase 3D.5.2 — Operator silence recovery
+
+If Admin commands produce **complete silence**:
+
+1. Check Admin.dev executions for the command timestamp (error vs success).
+2. Common causes (fixed in 3D.5.2): disallowed `crypto` in Code nodes; CONFIG→ACCESS fan-out rate limits; missing reply on Sheets errors.
+3. Do **not** activate Sales-Manager-v2; do **not** create workflow copies.
+4. After repair, prove with real `/start` then `/config` before declaring Admin restored.
+
+Webhook owner for the Sales Manager bot must remain **Admin.dev only**.

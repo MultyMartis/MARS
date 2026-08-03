@@ -1,0 +1,51 @@
+{
+  "id": "18242",
+  "status": "error",
+  "mode": "webhook",
+  "startedAt": "2026-08-03T17:39:04.195Z",
+  "stoppedAt": "2026-08-03T17:39:12.796Z",
+  "lastNodeExecuted": "Check User Authorization",
+  "topError": "Module 'crypto' is disallowed [line 62]",
+  "nodeTrail": [
+    {
+      "node": "Telegram Trigger",
+      "executionStatus": "success",
+      "start": 1785778744208,
+      "items": 1,
+      "errorName": null,
+      "errorMessage": null
+    },
+    {
+      "node": "Normalize Command",
+      "executionStatus": "success",
+      "start": 1785778744208,
+      "items": 1,
+      "errorName": null,
+      "errorMessage": null
+    },
+    {
+      "node": "Read Authorization Config",
+      "executionStatus": "success",
+      "start": 1785778744241,
+      "items": 33,
+      "errorName": null,
+      "errorMessage": null
+    },
+    {
+      "node": "Read ACCESS_CONTROL",
+      "executionStatus": "success",
+      "start": 1785778744718,
+      "items": 66,
+      "errorName": null,
+      "errorMessage": null
+    },
+    {
+      "node": "Check User Authorization",
+      "executionStatus": "error",
+      "start": 1785778752747,
+      "items": 0,
+      "errorName": "",
+      "errorMessage": "Module 'crypto' is disallowed [line 62]"
+    }
+  ]
+}
