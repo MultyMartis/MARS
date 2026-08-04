@@ -182,11 +182,11 @@ No Telegram IDs, chat IDs, actor hashes linked to identities, real usernames, ph
 
 ## 33. Commit
 
-`feat(iseo-sales-manager-bot): attribute lead actions and list revoked moderators` (this wave)
+`28504b9a` — `feat(iseo-sales-manager-bot): attribute lead actions and list revoked moderators`
 
 ## 34. Push
 
-`origin/mars/canonical-post-recovery` (no force) — this wave
+`origin/mars/canonical-post-recovery` @ `28504b9a` (no force).
 
 ## 35. Risks
 
