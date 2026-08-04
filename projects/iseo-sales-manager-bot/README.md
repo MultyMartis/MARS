@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3D.8 — product documentation baseline + recovery/button forensic; action-button live acceptance **PENDING**; `sm-parser-v3.2`, `sm-msg-v2.2`; ACCESS_CONTROL SoT; AI OFF
+**Status:** Phase 3D.8.1 — live callback repair + action feedback + multi-copy ledger restore; **two operator clicks PENDING**; `sm-parser-v3.2`, `sm-msg-v2.2`; ACCESS_CONTROL SoT; AI OFF
 
 ---
 
@@ -26,7 +26,7 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 | Workflow | Role |
 |----------|------|
 | **i-SEO Sales Manager - Operational.dev** | Scheduled Gmail intake → parse → RAW → process → CLEAN → **multi-recipient** Telegram cards (active Admin+moderators) → Gmail labels |
-| **i-SEO Sales Manager - Admin.dev** | Telegram entry → ACCESS_CONTROL auth → commands / callbacks → **multi-copy lifecycle sync** · `/delivery_status` · `/delivery_users` |
+| **i-SEO Sales Manager - Admin.dev** | Telegram entry → ACCESS_CONTROL auth → commands / callbacks (early `answerCallbackQuery`) → **multi-copy lifecycle sync via LEAD_DELIVERIES** · `/delivery_status` · `/delivery_users` |
 
 **No third workflow for v1.** Do not clone MetaBOT Intake/Worker/Admin as three copies. Maximum later live copies: one Operational.dev + one Admin.dev if required.
 
@@ -51,6 +51,7 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 | Product manual layer | [product/](product/) |
 | Parser 3.3 research backlog | [research/parser-3.3/](research/parser-3.3/) |
 | Phase 3D.8 evidence | [evidence/phase3d8/](evidence/phase3d8/) |
+| Phase 3D.8.1 evidence | [evidence/phase3d8-1/](evidence/phase3d8-1/) |
 | Architecture | [architecture/](architecture/) |
 | Plans | [plans/](plans/) |
 | Baselines / sanitized sources | [baselines/](baselines/) |

@@ -224,3 +224,13 @@ Add Admin-only `/delivery_status` and `/delivery_users`.
 ## Phase 3D.8 compatibility note
 
 No Admin graph change is required for the Operational Format-only button repair if `Handle Callback` continues to accept `sm:p:<token12>` and `sm:s:<token12>`. Confirm this in harness and live two-recipient acceptance before closeout. Do not add buttons to `/leads` archive cards.
+
+## Phase 3D.8.1 addendum — early ack + multi-copy repair
+
+Same workflow ID `wLrLp4WQHm1VJmxz`:
+
+1. Route `/__callback` → Prepare Early Callback Ack → Answer Callback Early → Read CLEAN for Callback
+2. Handle Callback texts per lifecycle contract; idempotent/conflict may converge cards without CLEAN rewrite
+3. IF Callback Mutate false → Read LEAD_DELIVERIES (skip LEAD_EVENTS)
+4. Prepare Callback Answer → Capture Admin Reply (late Answer Callback Query bypassed)
+5. Expand ignores Sheets error items; requires durable LEAD_DELIVERIES tab

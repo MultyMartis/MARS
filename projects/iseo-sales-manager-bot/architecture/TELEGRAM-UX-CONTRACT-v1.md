@@ -308,7 +308,7 @@ See `evidence/phase3d4/` and `knowledge/WEBSITE-FORM-FORMATS-v1.md`.
 - Public welcome/help texts are informational only (no production/AI/lead/Admin leakage).
 - Moderator start/help explain cards + irreversible status.
 - Admin help includes **Пользователи** registry section.
-- Callback deny: `У вас нет прав для изменения статуса лида.`
+- Callback deny: `Недостаточно прав для изменения статуса.`
 - message_format_version: **sm-msg-v2.2**
 
 
@@ -345,4 +345,12 @@ Every Admin text command must produce exactly one Telegram reply. Silence after 
 
 ## Phase 3D.8 — action-button payload repair
 
-For an actionable pending card, Format must emit `telegram_has_buttons=true`, `telegram_callback_processed=sm:p:<token12>`, `telegram_callback_spam=sm:s:<token12>`, and preserve `telegram_reply_markup` through recipient expansion and claim restore. Archive `/leads` cards remain buttonless. This is a Format contract repair; Parser 3.2 is unchanged. Live two-recipient acceptance remains pending.
+For an actionable pending card, Format must emit `telegram_has_buttons=true`, `telegram_callback_processed=sm:p:<token12>`, `telegram_callback_spam=sm:s:<token12>`, and preserve `telegram_reply_markup` through recipient expansion and claim restore. Archive `/leads` cards remain buttonless. This is a Format contract repair; Parser 3.2 is unchanged.
+
+## Phase 3D.8.1 — live callback acknowledgement and multi-copy feedback
+
+- Early `answerCallbackQuery`: valid action → `Обрабатываю…`; malformed → `Не удалось распознать действие.`; deny → `Недостаточно прав для изменения статуса.`
+- Final durable texts: processed / spam / idempotent / conflict / not-found / storage / partial-copy (see evidence/phase3d8-1/).
+- Final card status includes `Кем: сотрудник` + Moscow timestamp; buttons removed on all delivered copies.
+- Multi-copy sync requires durable `LEAD_DELIVERIES` rows (`stable_lead_ref` + message refs).
+- Operator two-role acceptance clicks close the phase; harness alone is not COMPLETE.

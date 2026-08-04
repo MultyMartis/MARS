@@ -361,4 +361,11 @@ Moderator `/help` explains private delivery and shared synchronized status.
 
 ## Phase 3D.8 — callback compatibility note
 
-The Operational Format-only button repair must continue to emit callback data with the existing `sm:p:<token12>` / `sm:s:<token12>` prefixes. Admin.dev requires no change only if its deployed callback parser still matches this contract. Archive commands remain read-only and buttonless. Live compatibility acceptance is pending.
+The Operational Format-only button repair must continue to emit callback data with the existing `sm:p:<token12>` / `sm:s:<token12>` prefixes. Archive commands remain read-only and buttonless.
+
+## Phase 3D.8.1 — callback ack + lifecycle feedback
+
+- Callback route acknowledges immediately (`Обрабатываю…`) before CLEAN mutation.
+- Denied callbacks: `Недостаточно прав для изменения статуса.`
+- Optional future Admin diagnostic `/last_callback` (sanitized summary only) — not required if `/last_error` + LEAD_EVENTS suffice.
+- `/moderator_pending` revoked-visibility backlog: `product/MODERATOR-LIFECYCLE-UX-SPEC-v1-DRAFT.md`.
