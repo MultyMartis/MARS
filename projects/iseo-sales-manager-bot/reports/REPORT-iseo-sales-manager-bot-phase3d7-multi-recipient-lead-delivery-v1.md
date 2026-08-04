@@ -33,13 +33,7 @@ Harness **37/37 PASS**. Operator four-user confirmation **PENDING**.
 - Sales-Manager-v2 inactive; Operational active (42 nodes); Admin active (57 nodes)
 - AI calls=0 · client messages=0 · workflows created=0 · rollback=no
 
-## Evidence
+## Commit / push
 
-`projects/iseo-sales-manager-bot/evidence/phase3d7/`
-
-## Execution safety
-
-- cwd: X:\AI MARS (worktree under STORAGE)
-- scope lock honored: yes (`projects/iseo-sales-manager-bot/**`)
-- destructive ops: none
-- protected zone touch: none
+- Commit: `ce06f240` — `feat(iseo-sales-manager-bot): deliver leads to all active moderators`
+- Pushed to `origin/mars/canonical-post-recovery` (no force)
