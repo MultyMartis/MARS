@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3D.8.1 — live callback repair + action feedback + multi-copy ledger restore; **two operator clicks PENDING**; `sm-parser-v3.2`, `sm-msg-v2.2`; ACCESS_CONTROL SoT; AI OFF
+**Status:** Phase 3D.8.2 — actor attribution + revoked moderator visibility; 3D.8.1 COMPLETE; `sm-parser-v3.2`, `sm-msg-v2.2`; ACCESS_CONTROL SoT; AI OFF
 
 ---
 

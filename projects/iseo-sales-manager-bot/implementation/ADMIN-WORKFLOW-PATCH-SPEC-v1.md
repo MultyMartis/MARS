@@ -234,3 +234,12 @@ Same workflow ID `wLrLp4WQHm1VJmxz`:
 3. IF Callback Mutate false → Read LEAD_DELIVERIES (skip LEAD_EVENTS)
 4. Prepare Callback Answer → Capture Admin Reply (late Answer Callback Query bypassed)
 5. Expand ignores Sheets error items; requires durable LEAD_DELIVERIES tab
+
+## Phase 3D.8.2 addendum — actor attribution + revoked list
+
+Same workflow ID `wLrLp4WQHm1VJmxz` (Admin.dev only):
+
+1. Check User Authorization exports `access_display_name` / `access_username` from ACCESS_CONTROL row (not callback profile).
+2. Handle Callback Action builds safe actor label; writes `actor_display_snapshot` into card text and LEAD_EVENTS `detail`.
+3. `formatPendingList` adds revoked former-moderator section with stable codes; Admin help line updated.
+4. Safe patch: deactivate Admin → PUT same ID → reactivate; keep Operational.dev active; keep Sales-Manager-v2 inactive.

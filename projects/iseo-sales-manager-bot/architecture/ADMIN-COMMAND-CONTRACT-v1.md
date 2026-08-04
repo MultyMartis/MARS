@@ -368,4 +368,10 @@ The Operational Format-only button repair must continue to emit callback data wi
 - Callback route acknowledges immediately (`Обрабатываю…`) before CLEAN mutation.
 - Denied callbacks: `Недостаточно прав для изменения статуса.`
 - Optional future Admin diagnostic `/last_callback` (sanitized summary only) — not required if `/last_error` + LEAD_EVENTS suffice.
-- `/moderator_pending` revoked-visibility backlog: `product/MODERATOR-LIFECYCLE-UX-SPEC-v1-DRAFT.md`.
+## Phase 3D.8.2 — actor attribution + revoked moderator visibility
+
+- Lifecycle cards attribute the acting Admin/moderator via ACCESS_CONTROL safe display label.
+- `/moderator_pending` — новые заявки и временно отозванные модераторы (pending section + revoked former-moderator section with stable codes).
+- `/moderators` remains active-only.
+- Blocked users stay out of `/moderator_pending`.
+- Optional future `/moderator_revoked` is not required while `/moderator_pending` covers the operator need.

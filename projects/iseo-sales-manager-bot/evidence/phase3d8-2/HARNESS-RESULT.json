@@ -1,0 +1,252 @@
+{
+  "total": 49,
+  "pass": 49,
+  "fail": 0,
+  "results": [
+    {
+      "id": 1,
+      "title": "Admin action resolves Admin display name",
+      "status": "PASS"
+    },
+    {
+      "id": 2,
+      "title": "Moderator action resolves moderator display name",
+      "status": "PASS"
+    },
+    {
+      "id": 3,
+      "title": "Username fallback",
+      "status": "PASS"
+    },
+    {
+      "id": 4,
+      "title": "Generic fallback",
+      "status": "PASS"
+    },
+    {
+      "id": 5,
+      "title": "Callback profile name cannot override ACCESS_CONTROL",
+      "status": "PASS"
+    },
+    {
+      "id": 6,
+      "title": "Revoked actor denied",
+      "status": "PASS"
+    },
+    {
+      "id": 7,
+      "title": "Public actor denied",
+      "status": "PASS"
+    },
+    {
+      "id": 8,
+      "title": "Actor display snapshot stored once",
+      "status": "PASS"
+    },
+    {
+      "id": 9,
+      "title": "Processed card shows actor label",
+      "status": "PASS"
+    },
+    {
+      "id": 10,
+      "title": "Spam card shows actor label",
+      "status": "PASS"
+    },
+    {
+      "id": 11,
+      "title": "All known copies show same actor label",
+      "status": "PASS"
+    },
+    {
+      "id": 12,
+      "title": "Actor name HTML-escaped",
+      "status": "PASS"
+    },
+    {
+      "id": 13,
+      "title": "Username HTML-escaped",
+      "status": "PASS"
+    },
+    {
+      "id": 14,
+      "title": "Raw actor ID absent from card",
+      "status": "PASS"
+    },
+    {
+      "id": 15,
+      "title": "Actor hash absent from card",
+      "status": "PASS"
+    },
+    {
+      "id": 16,
+      "title": "LEAD_EVENTS contains safe snapshot",
+      "status": "PASS"
+    },
+    {
+      "id": 17,
+      "title": "Later name change does not rewrite historical event",
+      "status": "PASS"
+    },
+    {
+      "id": 18,
+      "title": "Repeated callback does not create new actor snapshot event",
+      "status": "PASS"
+    },
+    {
+      "id": 19,
+      "title": "Conflicting callback does not overwrite first actor attribution",
+      "status": "PASS"
+    },
+    {
+      "id": 20,
+      "title": "pending + revoked sections",
+      "status": "PASS"
+    },
+    {
+      "id": 21,
+      "title": "pending only",
+      "status": "PASS"
+    },
+    {
+      "id": 22,
+      "title": "revoked only",
+      "status": "PASS"
+    },
+    {
+      "id": 23,
+      "title": "both empty",
+      "status": "PASS"
+    },
+    {
+      "id": 24,
+      "title": "public excluded from revoked",
+      "status": "PASS"
+    },
+    {
+      "id": 25,
+      "title": "blocked excluded",
+      "status": "PASS"
+    },
+    {
+      "id": 26,
+      "title": "Admin excluded",
+      "status": "PASS"
+    },
+    {
+      "id": 27,
+      "title": "active moderator excluded from revoked",
+      "status": "PASS"
+    },
+    {
+      "id": 28,
+      "title": "stable code preserved",
+      "status": "PASS"
+    },
+    {
+      "id": 29,
+      "title": "/moderator_add CODE targets same row in harness",
+      "status": "PASS"
+    },
+    {
+      "id": 30,
+      "title": "/moderators active-only",
+      "status": "PASS"
+    },
+    {
+      "id": 31,
+      "title": "exactly one reply",
+      "status": "PASS"
+    },
+    {
+      "id": 32,
+      "title": "Admin-only authorization (command set)",
+      "status": "PASS"
+    },
+    {
+      "id": 33,
+      "title": "underscores preserved",
+      "status": "PASS"
+    },
+    {
+      "id": 34,
+      "title": "no raw IDs exposed",
+      "status": "PASS"
+    },
+    {
+      "id": 35,
+      "title": "Admin processed callback contract",
+      "status": "PASS"
+    },
+    {
+      "id": 36,
+      "title": "moderator spam callback contract",
+      "status": "PASS"
+    },
+    {
+      "id": 37,
+      "title": "callback acknowledgement early-ack flag",
+      "status": "PASS"
+    },
+    {
+      "id": 38,
+      "title": "lifecycle idempotency",
+      "status": "PASS"
+    },
+    {
+      "id": 39,
+      "title": "multi-copy edit uses same edit_text",
+      "status": "PASS"
+    },
+    {
+      "id": 40,
+      "title": "action buttons removed on final card",
+      "status": "PASS"
+    },
+    {
+      "id": 41,
+      "title": "/my_status regression stub",
+      "status": "PASS"
+    },
+    {
+      "id": 42,
+      "title": "/delivery_users regression stub",
+      "status": "PASS"
+    },
+    {
+      "id": 43,
+      "title": "/leads regression stub",
+      "status": "PASS"
+    },
+    {
+      "id": 44,
+      "title": "delivery exactly once stub",
+      "status": "PASS"
+    },
+    {
+      "id": 45,
+      "title": "second poll zero duplicates stub",
+      "status": "PASS"
+    },
+    {
+      "id": 46,
+      "title": "ACCESS_CONTROL primary",
+      "status": "PASS"
+    },
+    {
+      "id": 47,
+      "title": "AI OFF",
+      "status": "PASS"
+    },
+    {
+      "id": 48,
+      "title": "client auto-messages=0",
+      "status": "PASS"
+    },
+    {
+      "id": 49,
+      "title": "no new workflows",
+      "status": "PASS"
+    }
+  ]
+}

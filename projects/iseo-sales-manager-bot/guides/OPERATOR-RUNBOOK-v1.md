@@ -29,4 +29,12 @@ If a new pending card has no buttons, inspect Format output before changing Admi
 2. Expect immediate toast `Обрабатываю…`; then durable reply + both card copies updated.
 3. If only one card updates: check `LEAD_DELIVERIES` tab exists and has delivered rows for the lead.
 4. Do not replay clicks on already-processed leads; use fresh synthetic markers for acceptance.
-5. Acceptance cards: `PHASE_3D8_1_ADMIN_PROCESSED` (Андрей → processed) and `PHASE_3D8_1_MODERATOR_SPAM` (Мопс → spam).
+5. Acceptance cards: `PHASE_3D8_1_ADMIN_PROCESSED` (Андрей → processed) and `PHASE_3D8_1_MODERATOR_SPAM` (Мопс → spam) — **confirmed COMPLETE** in Phase 3D.8.1 closeout.
+
+## Phase 3D.8.2 — attribution and revoked moderators
+
+1. Final cards should show `Кем: <safe name>` from ACCESS_CONTROL (not generic `сотрудник` when display name exists).
+2. `/moderator_pending` lists pending requests and **Права временно отозваны** with stable codes (Olya/Nikita intentionally remain revoked).
+3. `/moderators` stays active-only.
+4. Do not run `/moderator_add` during revoked-list acceptance.
+5. Optional post-patch attribution clicks: use ≤2 new synthetic pending fixtures if needed.

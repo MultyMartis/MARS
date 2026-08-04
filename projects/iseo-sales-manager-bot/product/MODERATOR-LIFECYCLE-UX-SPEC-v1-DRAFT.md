@@ -1,26 +1,22 @@
-# MODERATOR LIFECYCLE UX SPEC v1 DRAFT
+# MODERATOR LIFECYCLE UX SPEC v1
 
-**Status:** DRAFT backlog — not implemented in Phase 3D.8.1  
-**Priority:** next appropriate admin UX phase after callback acceptance
+**Status:** IMPLEMENTED in Phase 3D.8.2 (was draft backlog in 3D.8.1)  
+**Evidence:** `evidence/phase3d8-2/`
 
-## Problem
+## Problem (resolved)
 
-`/moderator_pending` shows only new pending access requests.  
-Former moderators with `status=revoked` are invisible, so stable reactivation codes are hard to retrieve.
+`/moderator_pending` previously showed only new pending access requests.  
+Former moderators with `status=revoked` were invisible, so stable reactivation codes were hard to retrieve.
 
-## Required `/moderator_pending` sections
+## `/moderator_pending` sections
 
 ### Ожидают подтверждения
 
-New pending users (current behavior).
+New pending users.
 
 ### Права временно отозваны
 
-Former moderators with `status=revoked`, for example:
-
-1. Пользователь  
-   Код: ABC123  
-   Права отозваны: …
+Former moderators with `status=revoked`, including stable reactivation code and revoked date.
 
 ## Rules
 
@@ -29,11 +25,16 @@ Former moderators with `status=revoked`, for example:
 - `/moderator_add CODE` restores the same ACCESS_CONTROL row
 - No duplicate identity row
 - Public users are not mixed with former moderators
-- Blocked users remain separate
+- Blocked users remain separate (not listed here)
 - If pending list is empty but revoked users exist, command still returns the revoked section
+- Admin help: `/moderator_pending — новые заявки и временно отозванные модераторы`
 
-## Non-goals (this draft)
+## Optional future
 
-- No callback/lifecycle changes
+`/moderator_revoked` may be added later; not required while `/moderator_pending` covers the operator need.
+
+## Non-goals
+
 - No AI
-- No ACCESS_CONTROL schema redesign beyond display/query
+- No automatic restore of Olya/Nikita
+- No blocked-user admin surface in this command

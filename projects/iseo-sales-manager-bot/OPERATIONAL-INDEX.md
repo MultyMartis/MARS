@@ -11,16 +11,17 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | **PHASE 3D.8.1 — CALLBACK REPAIR READY; TWO OPERATOR CLICKS PENDING** |
-| **Active stage** | Live lifecycle callback ack/feedback + LEAD_DELIVERIES multi-copy sync; two-role synthetic cards awaiting operator clicks; Parser 3.3 backlog (**not implemented**) |
-| **Runtime** | External n8n — Operational.dev **active** (sole Gmail intake, **45** nodes, claim-before-send + ACCESS_CONTROL fan-out); Admin.dev **active** (registry auth, **59** nodes, early callback ack + multi-copy sync); Sales-Manager-v2 **inactive** |
+| **Status** | **PHASE 3D.8.2 — ACTOR ATTRIBUTION + REVOKED MODERATOR VISIBILITY (patch ready; live attribution confirm pending)** |
+| **Active stage** | Actor safe display attribution on lifecycle cards; `/moderator_pending` shows revoked former moderators + stable codes; Parser 3.3 backlog (**not implemented**) |
+| **Runtime** | External n8n — Operational.dev **active** (sole Gmail intake, **45** nodes, claim-before-send + ACCESS_CONTROL fan-out); Admin.dev **active** (registry auth, **59** nodes, actor attribution + revoked list); Sales-Manager-v2 **inactive** |
 | **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive; filter \`labelIds\` parity confirmed |
 | **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C–3D.3 evidence under `evidence/phase3*` |
 | **Registry** | status **planned** unchanged — promotion to active requires **separate governance gate** (`REGISTRY_STATUS_PROMOTION_PENDING`) |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
-| **Next** | Operator two-role clicks (Admin processed + Moderator spam) → then close 3D.8.1 COMPLETE → later PHASE 3E AI ON only with separate charter |
-| **AI** | **OFF** — `ai_enabled=false`; no AI ON claim in Phase 3D.8.1 |
+| **Next** | Operator `/moderator_pending` visual confirm + post-patch attribution clicks on new pending fixtures → later PHASE 3E AI ON only with separate charter |
+| **AI** | **OFF** - `ai_enabled=false`; no AI ON claim in Phase 3D.8.2 |
 | **Product layer** | [product/](product/) |
+| **Evidence 3D.8.2** | [evidence/phase3d8-2/](evidence/phase3d8-2/) · [reports/REPORT-iseo-sales-manager-bot-phase3d8-2-actor-attribution-and-revoked-moderators-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3d8-2-actor-attribution-and-revoked-moderators-v1.md) |
 | **Evidence 3D.8.1** | [evidence/phase3d8-1/](evidence/phase3d8-1/) · [reports/REPORT-iseo-sales-manager-bot-phase3d8-1-live-callback-repair-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3d8-1-live-callback-repair-v1.md) |
 | **Evidence 3D.8** | [evidence/phase3d8/](evidence/phase3d8/) · [reports/REPORT-iseo-sales-manager-bot-phase3d8-product-baseline-backup-and-buttons-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3d8-product-baseline-backup-and-buttons-v1.md) |
 | **Evidence 3D.7.1** | [evidence/phase3d7-1/](evidence/phase3d7-1/) · [reports/REPORT-iseo-sales-manager-bot-phase3d7-1-duplicate-delivery-containment-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3d7-1-duplicate-delivery-containment-v1.md) |

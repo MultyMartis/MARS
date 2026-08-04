@@ -274,3 +274,7 @@ Required assertions: Format sets `telegram_has_buttons` only for actionable pend
 ## Phase 3D.8.1 callback/lifecycle harness — 34 cases
 
 Required: early ack; processed/spam parse; FNV resolve + mismatch; admin/moderator auth; revoked/public/blocked deny; pending→processed/spam; CLEAN/EVENTS one transition; idempotent; conflict; two-copy resolve/edit; buttons removed; edit failure isolation; no mutation rollback; initiator success/partial/storage/malformed feedback; archive non-actionable; delivery once; second poll no dup; `/my_status` + `/delivery_users` regression stubs; AI OFF; client auto-messages=0; no new workflows. Local result: **34/34 PASS**.
+
+## Phase 3D.8.2 actor attribution + revoked list — 49 cases
+
+Required: Admin/moderator display resolution; username + generic fallbacks; callback profile cannot override ACCESS_CONTROL; revoked/public denied; snapshot once; processed/spam cards; multi-copy same label; HTML escape; no raw IDs/hashes on card; LEAD_EVENTS snapshot; name-change immutability; idempotent/conflict non-overwrite; pending+revoked empty-state matrix; public/blocked/Admin/active exclusions; stable code; `/moderators` active-only; one reply; Admin-only; underscores; regressions 35–49. Local runner: `implementation/harness/phase3d82-harness.mjs` — required **49/49 PASS**.

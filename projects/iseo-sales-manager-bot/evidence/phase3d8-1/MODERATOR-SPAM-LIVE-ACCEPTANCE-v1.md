@@ -2,7 +2,7 @@
 
 **Marker:** `PHASE_3D8_1_MODERATOR_SPAM`  
 **Ops execution:** 21642  
-**Status:** DELIVERED — **operator click PENDING**
+**Status:** DELIVERED — **operator click PASS — operator moderator click confirmed**
 
 ## Delivery evidence
 

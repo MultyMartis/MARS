@@ -351,6 +351,13 @@ For an actionable pending card, Format must emit `telegram_has_buttons=true`, `t
 
 - Early `answerCallbackQuery`: valid action → `Обрабатываю…`; malformed → `Не удалось распознать действие.`; deny → `Недостаточно прав для изменения статуса.`
 - Final durable texts: processed / spam / idempotent / conflict / not-found / storage / partial-copy (see evidence/phase3d8-1/).
-- Final card status includes `Кем: сотрудник` + Moscow timestamp; buttons removed on all delivered copies.
+- Final card status includes `Кем: <safe actor label>` + Moscow timestamp; buttons removed on all delivered copies.
 - Multi-copy sync requires durable `LEAD_DELIVERIES` rows (`stable_lead_ref` + message refs).
-- Operator two-role acceptance clicks close the phase; harness alone is not COMPLETE.
+- Operator two-role acceptance clicks closed Phase 3D.8.1 COMPLETE.
+
+## Phase 3D.8.2 — actor attribution
+
+- Actor label comes from ACCESS_CONTROL (`display_name`, then `@username`, else `сотрудник`).
+- Optional combined form: `Display Name · @username` when concise and non-duplicative.
+- Snapshot at apply time is stored in LEAD_EVENTS `detail` and shown identically on all synchronized card copies.
+- Callback profile names must not override ACCESS_CONTROL attribution.

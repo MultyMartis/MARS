@@ -6,6 +6,12 @@
 
 ## 1. Verdict
 
+**PHASE 3D.8.1 COMPLETE — ADMIN AND MODERATOR ACTIONS READY**
+
+*(Closeout amended in Phase 3D.8.2 using operator-confirmed live Admin processed + moderator spam clicks.)*
+
+### Original interim verdict (superseded)
+
 **COMPLETE — CALLBACK REPAIR READY; TWO OPERATOR CLICKS PENDING**
 
 ## 2. Operator observation
@@ -88,11 +94,11 @@ Prior clicked lead remains **processed** (harness mutation). Not blindly replaye
 
 ## 20. Admin processed acceptance
 
-**PENDING** operator Андрей click.
+**PASS** — operator Андрей live click confirmed (Phase 3D.8.2 closeout).
 
 ## 21. Moderator spam acceptance
 
-**PENDING** operator Мопс click.
+**PASS** — operator Мопс live click confirmed (Phase 3D.8.2 closeout).
 
 ## 22. Moderator lifecycle UX backlog
 
@@ -136,10 +142,8 @@ Exact human wall-clock of first unsuccessful moderator press vs harness window o
 
 ## 32. Remaining operator actions
 
-**Test A:** Андрей → `✅ Отметить обработанным` on Lead A.  
-**Test B:** Мопс → `🚫 Отметить как спам` on Lead B.  
-Confirm: loading ends; success text; both copies update; buttons gone; no duplicate cards.
+None for Phase 3D.8.1. Attribution naming (`Кем: сотрудник`) deferred to Phase 3D.8.2.
 
 ## 33. Stop condition
 
-Stopped after forensic, repair, harness PASS, two synthetics delivered, operator instructions, backlog, commit/push, report. **No auto button presses. No COMPLETE until both clicks confirmed.**
+Phase 3D.8.1 closed after operator-confirmed Admin processed + moderator spam live actions.
