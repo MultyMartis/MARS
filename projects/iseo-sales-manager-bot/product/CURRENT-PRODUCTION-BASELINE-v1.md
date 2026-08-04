@@ -14,7 +14,17 @@
 
 ## Доступ
 
-Наблюдалось без идентификаторов: active Admin — 1; active moderator — 1; revoked moderator — 2. Отзыв намеренный; автоматически восстанавливать роли нельзя.
+Наблюдалось без идентификаторов: active admin — 1; active moderator — 1; revoked moderators — 2. Отзыв намеренный; Olya/Nikita не восстановлены.
+
+## Action-button baseline
+
+- OPS Format создаёт `telegram_has_buttons`, `telegram_callback_processed`, `telegram_callback_spam` и сохраняет `telegram_reply_markup`.
+- OPS Send With Buttons передаёт `replyMarkup` и `inlineKeyboard` на верхнем уровне параметров.
+- Admin callback lead token синхронизирован с Format на FNV dual-hash; actor hashes остаются sha256.
+- Local harness: 30/30 PASS. Telegram API подтвердил обе кнопки на обеих отправках.
+- После token sync synthetic callback применил `pending→processed`; edited copy осталась без кнопок.
+- `Expand Card Sync` нашёл 1 копию: визуальная проверка второй moderator copy остаётся pending.
+- OpenRouter disabled; AI OFF; новые workflows не создавались.
 
 ## Git baseline
 
