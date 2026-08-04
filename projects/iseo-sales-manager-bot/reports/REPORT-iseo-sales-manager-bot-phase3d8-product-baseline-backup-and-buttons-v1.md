@@ -151,12 +151,15 @@ No secrets, Telegram/chat IDs, workbook IDs, phones, raw emails, screenshots, or
 
 ## 31. Commit
 
-Prefer message: `fix(iseo-sales-manager-bot): restore lead action buttons and document product baseline`  
-(from clean worktree; allowlist `projects/iseo-sales-manager-bot/**`).
+- `67e2fea6` — `fix(iseo-sales-manager-bot): restore lead action buttons and document product baseline`
+- `7407a0cb` — `docs(iseo-sales-manager-bot): tighten phase 3d8 baseline limitation notes`
+
+Clean worktree allowlist: `projects/iseo-sales-manager-bot/**` only.
 
 ## 32. Push
 
-Push without force to `origin/mars/canonical-post-recovery` (not feature-only).
+Pushed without force to `origin/mars/canonical-post-recovery`  
+Canonical tip: `7407a0cb`.
 
 ## 33. Risks
 
