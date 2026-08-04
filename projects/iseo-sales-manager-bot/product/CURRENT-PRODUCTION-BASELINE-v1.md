@@ -28,4 +28,4 @@
 
 ## Git baseline
 
-Канонические коммиты: `6351ce6c` (3D.7.1 duplicate fix), `ce06f240` (3D.7), `e78303e2` (3D.6 closeout). На старте задачи `origin/mars/canonical-post-recovery` указывал на `6351ce6c`. Основной workspace содержит чужой WIP; работа выполняется только в clean worktree.
+Канонические коммиты до Phase 3D.8: `6351ce6c` (3D.7.1 duplicate fix), `ce06f240` (3D.7), `e78303e2` (3D.6 closeout). На старте задачи `origin/mars/canonical-post-recovery` указывал на `6351ce6c`. Основной workspace содержит чужой WIP; работа Phase 3D.8 выполнялась только в clean worktree. Post-phase tip: см. report §§31–32.

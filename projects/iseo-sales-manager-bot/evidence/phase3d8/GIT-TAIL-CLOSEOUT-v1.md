@@ -5,6 +5,7 @@
 - Branch: `origin/mars/canonical-post-recovery`
 - Tip at Phase 3D.8 start: `6351ce6c` (`fix(iseo-sales-manager-bot): stop repeated lead delivery`)
 - Ancestry includes `ce06f240` (3D.7), `e78303e2` (3D.6 closeout)
+- `phase3d71` worktree/branch already at canonical `6351ce6c`
 
 ## Main workspace (`X:\AI MARS`)
 
@@ -17,7 +18,7 @@
 | Location / branch | Tip / note | Disposition |
 |-------------------|------------|-------------|
 | `incoming/.../worktrees/phase3d71` @ `mars/phase3d71-duplicate-delivery` | `6351ce6c` | Already canonical; retain |
-| `incoming/.../worktrees/phase3d7` @ `agent/iseo-phase3d7-delivery` | `12ba73a7` | Ancestor of canonical; retain |
+| `incoming/.../worktrees/phase3d7` @ `agent/iseo-phase3d7-delivery` | Historical Phase 3D.7 tip | Retain |
 | `git-sync-iseo-sm-phase3d61-closeout-*` | 3D.6 closeout | Historical; retain |
 | Many `worktrees/iseo-sm-phase3b*` / `phase3c*` / `phase3d*` | Older phase tips | Retained; not deleted |
 | `git-sync-iseo-sm-phase3d8-*` | This phase clean worktree | Active integration path |
@@ -28,7 +29,8 @@
 - Scope allowlist: `projects/iseo-sales-manager-bot/**` only
 - No force push; no main-workspace reset/clean/stash
 - Temporary branches/worktrees not deleted (not proven obsolete-and-safe)
-- Phase 3D.8 documentation is prepared in the isolated worktree; this receipt does not claim a commit or push.
+- Phase 3D.8 commit/push operations used the isolated worktree, not the dirty main workspace.
+- Push was non-force; at final validation clean-worktree HEAD equalled canonical origin.
 
 ## Intentionally retained
 

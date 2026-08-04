@@ -22,7 +22,7 @@ Phase 3D.8 product baseline + recovery backup + action-button restoration. No pa
 - Main workspace branch `mars/canonical-post-recovery` but **diverged** from origin with foreign WIP + staged client-ops files
 - Origin tip at start: `6351ce6c`
 - Ancestry OK for `6351ce6c`, `ce06f240`, `e78303e2` on origin
-- Commits performed only via clean worktree
+- Commits performed only via clean worktree; dirty main was not used
 
 ## 5. Git tails
 
@@ -30,7 +30,8 @@ Historical iseo-sm worktrees/branches retained (not deleted). `phase3d71` alread
 
 ## 6. Canonical baseline
 
-Integration base: `origin/mars/canonical-post-recovery` @ `6351ce6c` (+ this phase commit after push).
+Task-start tip: `origin/mars/canonical-post-recovery` @ `6351ce6c`.  
+Post-phase tip before this correction: `ffc35bf7` (see §§31–32).
 
 ## 7. Current access state
 
@@ -68,7 +69,7 @@ Documented product/workflow/parser/message/storage/deployment versions and chann
 
 ## 12. Recovery backup
 
-Storage package created with private + sanitized contours, manifests, sheet tab structure, forensic, git baseline notes, RECOVERY-README, SHA256SUMS. Not committed to Git.
+Storage package contains `private/`, `sanitized/`, `manifests/`, `sheets/`, `forensic/`, `git/`, `RECOVERY-README.md` and `SHA256SUMS.txt`. It is outside Git. Full Sheets PII dumps were not exported; `sheets/` documents structure inferred from workflows.
 
 ## 13. Backup verification
 
@@ -86,7 +87,7 @@ Trace through Format → Expand → Claim → Restore → IF → Send. See `REPL
 
 1. Missing `telegram_has_buttons` / callback fields in Format (IF routed to plain send).  
 2. Send keyboard nested under `additionalFields` (n8n ignored; API had no `reply_markup`).  
-3. Admin sha256 token ≠ Format FNV token (callbacks unauthorized until sync).
+3. Admin sha256 lead token ≠ Format FNV dual-hash token (`manager_action_unauthorized` until sync). Actor hashes remain sha256.
 
 ## 17. Repair
 
@@ -110,7 +111,7 @@ Local button harness: **30/30 PASS**.
 
 ## 22. Live acceptance
 
-Synthetic two-recipient delivery with API-proven inline buttons; no duplicate sends in poll window; processed transition after token sync. Visual dual-client confirmation PENDING.
+Synthetic fixture delivered to 2 recipients. Both Telegram API results contained both inline buttons with `sm:p:` / `sm:s:` callbacks; no duplicate sends appeared in the short poll window. After token sync, callback applied `pending→processed`, and the edited copy lost its buttons. `Answer Callback Query` fails on the synthetic query id and Gmail `PROCESSED` fails without a real Gmail id; both are expected fixture boundaries. Visual dual-client confirmation remains pending.
 
 ## 23. Parser 3.3 backlog
 
@@ -151,15 +152,16 @@ No secrets, Telegram/chat IDs, workbook IDs, phones, raw emails, screenshots, or
 
 ## 31. Commit
 
+Allowlist: `projects/iseo-sales-manager-bot/**` only (clean worktree; dirty main unused).
+
 - `67e2fea6` — `fix(iseo-sales-manager-bot): restore lead action buttons and document product baseline`
 - `7407a0cb` — `docs(iseo-sales-manager-bot): tighten phase 3d8 baseline limitation notes`
-
-Clean worktree allowlist: `projects/iseo-sales-manager-bot/**` only.
+- `ffc35bf7` — `docs(iseo-sales-manager-bot): record phase 3d8 canonical tip hashes in report`
 
 ## 32. Push
 
-Pushed without force to `origin/mars/canonical-post-recovery`  
-Canonical tip: `7407a0cb`.
+Pushed without force to `origin/mars/canonical-post-recovery`.  
+Canonical tip at last push: `ffc35bf7` (this follow-up correction commits after).
 
 ## 33. Risks
 
@@ -177,8 +179,8 @@ Canonical tip: `7407a0cb`.
 1. Visually confirm both Telegram accounts.  
 2. Optional real button press.  
 3. Confirm second copy updates.  
-4. Keep Olya/Nikita revoked unless re-enrollment is intentional.
+4. Keep the two intentionally revoked moderators revoked unless re-enrollment is explicitly authorized.
 
 ## 36. Stop condition
 
-Phase 3D.8 documentation + backup + button repair complete for commit/push. Do not begin Parser 3.3 implementation. Do not implement reminders. Do not enable AI.
+Phase 3D.8 documentation + backup + button repair committed/pushed. Do not begin Parser 3.3 implementation, implement reminders, enable AI, restore revoked moderators, or activate Sales-Manager-v2 under this charter.
