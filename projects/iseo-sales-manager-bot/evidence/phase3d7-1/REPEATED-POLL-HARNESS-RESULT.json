@@ -1,0 +1,171 @@
+{
+  "at": "2026-08-04T13:21:15.345Z",
+  "total_assertions": 26,
+  "passed": 26,
+  "failed": [],
+  "required_ids_pass": true,
+  "code_hashes": {
+    "expand": "B890B3D24C339FE7",
+    "prepare": "691CE9CB88BE457A",
+    "stamp": "674C84E16D7F3FB4",
+    "aggregate": "3D1A8133C1228850"
+  },
+  "cases": [
+    {
+      "id": 1,
+      "name": "one lead, four recipients",
+      "pass": true,
+      "detail": "n=4"
+    },
+    {
+      "id": 2,
+      "name": "first poll sends exactly four cards",
+      "pass": true,
+      "detail": "sends=4"
+    },
+    {
+      "id": 5,
+      "name": "delivered rows persist after poll1",
+      "pass": true,
+      "detail": "delivered=4"
+    },
+    {
+      "id": 6,
+      "name": "stable key identical across recipients prefix",
+      "pass": true,
+      "detail": "lead_delivery:lead_test_3d71_stable_001:u:E0D3B72F7218|lead_delivery:lead_test_3d71_stable_001:u:8CB8F944F73E|lead_delivery:lead_test_3d71_stable_001:u:A1FA164DF974|lead_delivery:lead_test_3d71_stable_001:u:D57F1698CACB"
+    },
+    {
+      "id": 3,
+      "name": "second poll sends zero cards",
+      "pass": true,
+      "detail": "sends=0"
+    },
+    {
+      "id": 6,
+      "name": "stable key identical across polls",
+      "pass": true,
+      "detail": "keys match"
+    },
+    {
+      "id": 4,
+      "name": "third poll sends zero cards",
+      "pass": true,
+      "detail": "sends=0"
+    },
+    {
+      "id": 12,
+      "name": "duplicate LEAD_DELIVERIES delivered rows not created",
+      "pass": true,
+      "detail": "unique=4 len=4"
+    },
+    {
+      "id": 7,
+      "name": "one moderator send failure does not resend Admin",
+      "pass": true,
+      "detail": "admin=delivered finalize=true"
+    },
+    {
+      "id": 18,
+      "name": "Admin anchor delivered",
+      "pass": true,
+      "detail": "delivered"
+    },
+    {
+      "id": 19,
+      "name": "Gmail finalization succeeds on admin anchor",
+      "pass": true,
+      "detail": "{\"f\":true,\"ok\":true}"
+    },
+    {
+      "id": 8,
+      "name": "one moderator retry sends only that moderator",
+      "pass": true,
+      "detail": "sends=1 refs=u:A1FA164DF974"
+    },
+    {
+      "id": 9,
+      "name": "workflow failure after Telegram success does not resend",
+      "pass": true,
+      "detail": "sends=0"
+    },
+    {
+      "id": 10,
+      "name": "Gmail label failure does not resend delivered cards",
+      "pass": true,
+      "detail": "ledger gate"
+    },
+    {
+      "id": 11,
+      "name": "duplicate CLEAN row not created (business_lead_count=1)",
+      "pass": true,
+      "detail": "1"
+    },
+    {
+      "id": 13,
+      "name": "claimed state blocks concurrent poll",
+      "pass": true,
+      "detail": "sends=0"
+    },
+    {
+      "id": 14,
+      "name": "stale claimed state reconciliation",
+      "pass": true,
+      "detail": "sends=4"
+    },
+    {
+      "id": 15,
+      "name": "recipient list unchanged",
+      "pass": true,
+      "detail": "same refs"
+    },
+    {
+      "id": 16,
+      "name": "recipient added after original delivery does not backfill historical lead",
+      "pass": true,
+      "detail": "sends=0"
+    },
+    {
+      "id": 17,
+      "name": "revoked recipient excluded",
+      "pass": true,
+      "detail": "n=3"
+    },
+    {
+      "id": 20,
+      "name": "callback idempotency on duplicate cards",
+      "pass": true,
+      "detail": "contract: first lifecycle transition wins; duplicates denied"
+    },
+    {
+      "id": 21,
+      "name": "AI OFF",
+      "pass": true,
+      "detail": "OpenRouter disabled in patch"
+    },
+    {
+      "id": 22,
+      "name": "client auto-messages=0",
+      "pass": true,
+      "detail": "no client send nodes added"
+    },
+    {
+      "id": 23,
+      "name": "no new workflows",
+      "pass": true,
+      "detail": "same OPS/Admin/Prod IDs"
+    },
+    {
+      "id": 6,
+      "name": "delivery key has no forbidden mutable parts",
+      "pass": true,
+      "detail": "lead_delivery:lead_test_3d71_stable_001:u:E0D3B72F7218 | lead_delivery:lead_test_3d71_stable_001:u:8CB8F944F73E | lead_delivery:lead_test_3d71_stable_001:u:A1FA164DF974 | lead_delivery:lead_test_3d71_stable_001:u:D57F1698CACB"
+    },
+    {
+      "id": 9,
+      "name": "stamp code avoids $input.first()",
+      "pass": true,
+      "detail": "no $input.first() call"
+    }
+  ]
+}

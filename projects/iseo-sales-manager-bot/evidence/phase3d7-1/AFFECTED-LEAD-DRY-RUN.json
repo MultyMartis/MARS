@@ -1,0 +1,38 @@
+{
+  "stable_lead_ref_hash": "C3EF8E536C35E9CC",
+  "recipient_count": 4,
+  "recipient_states": [
+    {
+      "recipient_ref_hash": "ECA22644FB925E33",
+      "role": "admin",
+      "delivery_status": "delivered",
+      "skip_telegram": true,
+      "expect_send": false
+    },
+    {
+      "recipient_ref_hash": "4BB522692B68ED2F",
+      "role": "moderator",
+      "delivery_status": "delivered",
+      "skip_telegram": true,
+      "expect_send": false
+    },
+    {
+      "recipient_ref_hash": "61DC27B324FFE5A0",
+      "role": "moderator",
+      "delivery_status": "delivered",
+      "skip_telegram": true,
+      "expect_send": false
+    },
+    {
+      "recipient_ref_hash": "B1A0DDA6C6CB466D",
+      "role": "moderator",
+      "delivery_status": "delivered",
+      "skip_telegram": true,
+      "expect_send": false
+    }
+  ],
+  "sends_attempted": 0,
+  "all_delivered": true,
+  "gmail_finalized_or_excluded": true,
+  "pass": true
+}

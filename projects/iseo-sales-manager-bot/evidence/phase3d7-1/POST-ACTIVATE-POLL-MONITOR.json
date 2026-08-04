@@ -1,0 +1,36 @@
+{
+  "monitored_ms": 105000,
+  "executions": [
+    {
+      "id": "20654",
+      "startedAt": "2026-08-04T13:24:30.055Z",
+      "status": "success",
+      "sends": 0,
+      "last": "Apply Runtime State CONFIG"
+    },
+    {
+      "id": "20655",
+      "startedAt": "2026-08-04T13:25:00.044Z",
+      "status": "success",
+      "sends": 0,
+      "last": "Apply Runtime State CONFIG"
+    },
+    {
+      "id": "20656",
+      "startedAt": "2026-08-04T13:25:30.037Z",
+      "status": "success",
+      "sends": 0,
+      "last": "Apply Runtime State CONFIG"
+    },
+    {
+      "id": "20657",
+      "startedAt": "2026-08-04T13:26:00.040Z",
+      "status": "success",
+      "sends": 0,
+      "last": "Apply Runtime State CONFIG"
+    }
+  ],
+  "total_telegram_sends": 0,
+  "pass": true,
+  "note": "No new Gmail test sent; monitoring natural polls after reconcile"
+}

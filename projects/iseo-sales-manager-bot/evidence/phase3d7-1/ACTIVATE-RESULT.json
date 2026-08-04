@@ -1,0 +1,87 @@
+{
+  "at": "2026-08-04T13:24:27.175Z",
+  "opsActive": true,
+  "adminActive": true,
+  "prodActive": false,
+  "active_gmail_intake_count": 1,
+  "activeGmailPollers": [
+    {
+      "id": "xSnXPy8cEHoZw6xG",
+      "name": "i-SEO Sales Manager - Operational.dev"
+    }
+  ],
+  "openRouterDisabled": true,
+  "named": [
+    {
+      "id": "cJGoQUqIIHull4p7",
+      "name": "Sales-Manager-v1",
+      "active": false
+    },
+    {
+      "id": "h8I2Tl2yl4uzhUnB",
+      "name": "Sales-Manager-v2",
+      "active": false
+    },
+    {
+      "id": "wLrLp4WQHm1VJmxz",
+      "name": "i-SEO Sales Manager - Admin.dev",
+      "active": true
+    },
+    {
+      "id": "xSnXPy8cEHoZw6xG",
+      "name": "i-SEO Sales Manager - Operational.dev",
+      "active": true
+    }
+  ],
+  "structural": {
+    "id": "xSnXPy8cEHoZw6xG",
+    "name": "i-SEO Sales Manager - Operational.dev",
+    "active": true,
+    "nodeCount": 45,
+    "connectionHash": "0CB507230FD6ADD6990CC7B9FEFB796542F6537004CE8AFBA6FC488BC5B4AE7A",
+    "sanitizedHash": "16AF967E552ACFB1BD7C9B802C0FA7C5C436C7FC3ED84DB2487FCF1334510BC1",
+    "disabledNodes": [
+      "OpenRouter AI"
+    ],
+    "codeHashes": {
+      "Parse Lead": "A69A1B0162523C78",
+      "Normalize CONFIG": "130582BB195BB436",
+      "Deterministic Lead Processor": "7418170E04B3EE2A",
+      "Prepare AI Request": "2F65726CEC71832E",
+      "Validate AI Result": "E4CF768C7CBF56A7",
+      "Merge AI or Fallback": "3D797525EED7AC9C",
+      "Classify Duplicate": "3979F1F74BCE3022",
+      "Format Telegram Lead Card": "BA022609C108DC92",
+      "Telegram Result Gate": "1FDD4349FE217DB3",
+      "Error Handler": "2DACE3F7FF198734",
+      "Update Last Success / Runtime State": "D5A01EAC79495721",
+      "Intake Gate": "32E71CB05F2A39D9",
+      "Telegram Skip Pass": "77A65A0EA2CBECFA",
+      "Expand Delivery Recipients": "B890B3D24C339FE7",
+      "Stamp Delivery Result": "674C84E16D7F3FB4",
+      "Aggregate Delivery Finalizer": "3D1A8133C1228850",
+      "Prepare Delivery Claims": "691CE9CB88BE457A",
+      "Restore Claimed Delivery Items": "840D75BD90DAE8F6"
+    },
+    "telegramTriggers": [],
+    "telegramSendNodes": [
+      {
+        "name": "Send Telegram Lead Card With Buttons",
+        "disabled": false,
+        "typeVersion": 1.2,
+        "appendAttribution": false,
+        "hasAppendAttributionKey": true,
+        "credIdHash": "261EB5EE97F9865A"
+      },
+      {
+        "name": "Send Telegram Lead Card",
+        "disabled": false,
+        "typeVersion": 1.2,
+        "appendAttribution": false,
+        "hasAppendAttributionKey": true,
+        "credIdHash": "261EB5EE97F9865A"
+      }
+    ],
+    "pinDataPresent": false
+  }
+}

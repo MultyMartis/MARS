@@ -1,0 +1,60 @@
+{
+  "edgeCount": 49,
+  "cyclesFound": 0,
+  "cycles": [],
+  "skipToSend": [],
+  "claimPath": [
+    [
+      "IF AI Enabled",
+      "Prepare AI Request"
+    ],
+    [
+      "Prepare AI Request",
+      "OpenRouter AI"
+    ],
+    [
+      "Send Telegram Lead Card",
+      "Stamp Delivery Result"
+    ],
+    [
+      "Telegram Skip Pass",
+      "Stamp Delivery Result"
+    ],
+    [
+      "Send Telegram Lead Card With Buttons",
+      "Stamp Delivery Result"
+    ],
+    [
+      "Read ACCESS_CONTROL",
+      "Expand Delivery Recipients"
+    ],
+    [
+      "Expand Delivery Recipients",
+      "Prepare Delivery Claims"
+    ],
+    [
+      "Stamp Delivery Result",
+      "Append LEAD_DELIVERIES"
+    ],
+    [
+      "Append LEAD_DELIVERIES",
+      "Aggregate Delivery Finalizer"
+    ],
+    [
+      "Aggregate Delivery Finalizer",
+      "IF Telegram Success"
+    ],
+    [
+      "Prepare Delivery Claims",
+      "Upsert LEAD_DELIVERIES Claim"
+    ],
+    [
+      "Upsert LEAD_DELIVERIES Claim",
+      "Restore Claimed Delivery Items"
+    ],
+    [
+      "Restore Claimed Delivery Items",
+      "IF Need Telegram Send"
+    ]
+  ]
+}

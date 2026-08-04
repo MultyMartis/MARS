@@ -11,14 +11,15 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | **COMPLETE — DELIVERY READY, LIVE FOUR-USER CONFIRMATION PENDING**; ACCESS_CONTROL SoT; AI OFF |
-| **Active stage** | **PHASE 3D.7 — multi-recipient lead delivery + synchronized action cards** |
-| **Runtime** | External n8n — Operational.dev **active** (sole Gmail intake, **42** nodes, ACCESS_CONTROL fan-out); Admin.dev **active** (registry auth, **57** nodes, multi-copy sync); Sales-Manager-v2 **inactive** |
+| **Status** | **COMPLETE — PATCH READY, LIVE NO-DUPLICATE CONFIRMATION PENDING** (3D.7.1 duplicate loop stopped; claim-before-send live) |
+| **Active stage** | **PHASE 3D.7.1 — emergency duplicate delivery containment** (parent 3D.7 multi-recipient) |
+| **Runtime** | External n8n — Operational.dev **active** (sole Gmail intake, **45** nodes, claim-before-send + ACCESS_CONTROL fan-out); Admin.dev **active** (registry auth, **57** nodes, multi-copy sync); Sales-Manager-v2 **inactive** |
 | **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive; filter \`labelIds\` parity confirmed |
 | **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C–3D.3 evidence under `evidence/phase3*` |
 | **Registry** | status **planned** unchanged — promotion to active requires **separate governance gate** (`REGISTRY_STATUS_PROMOTION_PENDING`) |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
-| **Next** | Operator four-user live delivery confirmation → later PHASE 3E AI ON only with separate charter |
+| **Next** | Operator four-user **no-duplicate** live confirmation (Task M) → button sync only after card counts confirmed → later PHASE 3E AI ON only with separate charter |
+| **Evidence 3D.7.1** | [evidence/phase3d7-1/](evidence/phase3d7-1/) · [reports/REPORT-iseo-sales-manager-bot-phase3d7-1-duplicate-delivery-containment-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3d7-1-duplicate-delivery-containment-v1.md) |
 | **Evidence 3D.7** | [evidence/phase3d7/](evidence/phase3d7/) · [reports/REPORT-iseo-sales-manager-bot-phase3d7-multi-recipient-lead-delivery-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3d7-multi-recipient-lead-delivery-v1.md) |
 | **Evidence 3D.6** | [evidence/phase3d6/](evidence/phase3d6/) · [reports/REPORT-iseo-sales-manager-bot-phase3d6-personal-status-and-role-notifications-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3d6-personal-status-and-role-notifications-v1.md) |
 | **Evidence 3D.5.2** | [evidence/phase3d52/](evidence/phase3d52/) · [reports/REPORT-iseo-sales-manager-bot-phase3d52-admin-silence-incident-recovery-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3d52-admin-silence-incident-recovery-v1.md) |

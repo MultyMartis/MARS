@@ -1,0 +1,41 @@
+{
+  "ok": true,
+  "opsId": "xSnXPy8cEHoZw6xG",
+  "opsActive": false,
+  "adminActive": true,
+  "prodActive": false,
+  "nodeCountBefore": 42,
+  "nodeCountAfter": 45,
+  "workflowsCreated": 0,
+  "stampMode": "runOnceForAllItems",
+  "stampHash": "674C84E16D7F3FB4",
+  "expandHash": "B890B3D24C339FE7",
+  "aggregateHash": "3D1A8133C1228850",
+  "hasClaimPath": true,
+  "connectionHash": "0CB507230FD6ADD6990CC7B9FEFB796542F6537004CE8AFBA6FC488BC5B4AE7A",
+  "sanitizedHash": "DC1537C69605A80070878697C8F9B974F0905915F745C2315E452F36EA3AFC95",
+  "openRouterDisabled": true,
+  "namedAfter": [
+    {
+      "id": "cJGoQUqIIHull4p7",
+      "name": "Sales-Manager-v1",
+      "active": false
+    },
+    {
+      "id": "h8I2Tl2yl4uzhUnB",
+      "name": "Sales-Manager-v2",
+      "active": false
+    },
+    {
+      "id": "wLrLp4WQHm1VJmxz",
+      "name": "i-SEO Sales Manager - Admin.dev",
+      "active": true
+    },
+    {
+      "id": "xSnXPy8cEHoZw6xG",
+      "name": "i-SEO Sales Manager - Operational.dev",
+      "active": false
+    }
+  ],
+  "note": "Operational.dev left INACTIVE pending harness + reconciliation"
+}
