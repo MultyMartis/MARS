@@ -122,12 +122,11 @@ No credentials, Telegram IDs, chat IDs, real usernames, phones, emails, workbook
 
 ## 20. Commit
 
-*(filled after commit)*
+`2da22ea6` — `style(iseo-sales-manager-bot): shorten lead action button labels`
 
 ## 21. Push
 
-*(filled after push)*
-
+`origin/mars/canonical-post-recovery` @ `2da22ea6` (no force). Tip-hash alignment commit may follow.
 ## 22. Risks
 
 - Historical docs/guides outside this allowlist may still show long button captions until separately updated.
