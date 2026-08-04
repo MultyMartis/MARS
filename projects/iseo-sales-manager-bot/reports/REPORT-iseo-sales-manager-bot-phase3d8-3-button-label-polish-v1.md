@@ -126,7 +126,8 @@ No credentials, Telegram IDs, chat IDs, real usernames, phones, emails, workbook
 
 ## 21. Push
 
-`origin/mars/canonical-post-recovery` @ `33f7da1a` (no force).
+`origin/mars/canonical-post-recovery` @ `9c3c8b48` (no force). Style commit `2da22ea6`; tip-hash docs `33f7da1a` / align `9c3c8b48`.
+
 ## 22. Risks
 
 - Historical docs/guides outside this allowlist may still show long button captions until separately updated.
