@@ -347,3 +347,14 @@ Never display raw Telegram user IDs. Opaque codes only.
 - Repeated add/remove sends no notification.
 - Code-node mode: `My Status` / `Finalize Access Notification` must use `runOnceForAllItems` when calling `$input.first()` (hotfix `3d6b-my-status-code-mode`). Zero-item Code failures are outages.
 - Phase 3D.6.1 closeout: real non-Admin `/my_status` accepted; direct grant/revoke notification delivery may remain SAFE UNKNOWN without independent visual proof.
+
+---
+
+## Phase 3D.7 — delivery commands (Admin-only)
+
+| Command | Purpose |
+|---------|---------|
+| `/delivery_status` | Delivery health counts (no IDs / PII) |
+| `/delivery_users` | Eligible recipients: name, username, role, delivery/chat availability |
+
+Moderator `/help` explains private delivery and shared synchronized status.

@@ -333,3 +333,12 @@ Every Admin text command must produce exactly one Telegram reply. Silence after 
 - Grant notification: `Вам выданы права модератора Sales Manager.` followed by card-action rights and `/start`/`/help`.
 - Revoke notification: `Ваши права модератора Sales Manager отозваны.` followed by retained `/start`, `/help`, `/my_status`.
 - Successful `/my_status` after a role change proves ACCESS_CONTROL state; it does not by itself prove grant/revoke notification delivery.
+
+---
+
+## Phase 3D.7 — multi-recipient cards
+
+- Every eligible active Admin/moderator receives the same manager-facing card in their **private** bot chat.
+- Inline buttons remain only while `manager_status=pending`.
+- Lifecycle actions synchronize all delivered copies; first valid transition wins.
+- Public users never receive production lead cards.

@@ -207,3 +207,16 @@ Route `/my_status` after registry authorization. ACCESS_CONTROL remains the sour
 - Sanitized workflow acceptance must record each relevant Code node's `parameters.mode`.
 - Zero-item Code failures must be detected before deployment (harness / structural checks).
 - Hotfix marker for the accepted live repair: `3d6b-my-status-code-mode` (node count remains 54; connections unchanged).
+
+---
+
+## Phase 3D.7 addendum — card sync + delivery commands
+
+After lifecycle mutate + LEAD_EVENTS:
+
+1. Read LEAD_DELIVERIES for Sync
+2. Expand Card Sync Copies
+3. Edit Lead Card Message (each copy)
+4. Aggregate Card Sync Result → answer callback
+
+Add Admin-only `/delivery_status` and `/delivery_users`.

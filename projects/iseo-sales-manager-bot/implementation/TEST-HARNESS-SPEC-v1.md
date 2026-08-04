@@ -260,3 +260,9 @@ Required checks (31): public/pending/moderator/Admin/revoked/blocked `/my_status
 **Code-mode rule:** harness must execute against the exact live n8n Code-node `mode`. `runOnceForEachItem` code must not call `$input.first()`. Zero-item Code failures are deployment blockers. Role-specific command tests must include a real non-Admin path (operator Telegram acceptance is separate evidence).
 
 **Result:** `evidence/phase3d6/HARNESS-RESULT.json` records **31/31 PASS** at Phase 3D.6.1 closeout. Live non-Admin `/my_status` acceptance is operator-confirmed. Direct grant/revoke notification delivery remains SAFE UNKNOWN unless independently evidenced.
+
+---
+
+## Phase 3D.7 harness
+
+37 cases (fan-out, eligibility exclusions, idempotency, isolation, sync, commands, regressions). Local runner: STORAGE `phase3d7-local/run-04-harness.mjs` — required **37/37 PASS**.

@@ -320,3 +320,18 @@ After Gmail Fetch Leads: enable `alwaysOutputData`, add Intake Gate + Switch Int
 - **Format Telegram Lead Card** bumps to **`message_format_version=sm-msg-v2.1`** — reduced emoji density (see TELEGRAM-FORMATTER-SPEC-v1 §7).
 - CONFIG display keys must match deployed versions.
 - One form per iteration policy: `evidence/phase3d4/MULTI-FORM-TEST-PLAN-v1.md`.
+
+---
+
+## Phase 3D.7 addendum — multi-recipient delivery
+
+After Format Telegram Lead Card:
+
+1. Read LEAD_DELIVERIES
+2. Read ACCESS_CONTROL
+3. Expand Delivery Recipients (N items)
+4. Per-recipient send using `$json.telegram_delivery_chat_id`
+5. Stamp + Append/Upsert LEAD_DELIVERIES
+6. Aggregate Delivery Finalizer (Admin-anchor) → IF Telegram Success → Gmail finalize
+
+Do not expand before business dedupe/CLEAN. Do not use CONFIG `telegram_manager_chat_id` as sole destination.

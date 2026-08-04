@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3D.6 COMPLETE — personal `/my_status` live-accepted; role-notification **contracts** ready; **notification delivery SAFE UNKNOWN**; hotfix `3d6b-my-status-code-mode` canonicalized; `sm-parser-v3.2`, `sm-msg-v2.2`; ACCESS_CONTROL SoT; AI OFF
+**Status:** Phase 3D.7 — multi-recipient lead delivery deployed (ACCESS_CONTROL fan-out + LEAD_DELIVERIES + card sync); **live four-user confirmation PENDING**; `sm-parser-v3.2`, `sm-msg-v2.2`; ACCESS_CONTROL SoT; AI OFF
 
 ---
 
@@ -25,8 +25,8 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 
 | Workflow | Role |
 |----------|------|
-| **i-SEO Sales Manager - Operational.dev** | Scheduled Gmail intake → parse → RAW → process → CLEAN → Telegram manager card → Gmail labels |
-| **i-SEO Sales Manager - Admin.dev** | Telegram admin entry → auth → commands → CONFIG / health / stats / synthetic test |
+| **i-SEO Sales Manager - Operational.dev** | Scheduled Gmail intake → parse → RAW → process → CLEAN → **multi-recipient** Telegram cards (active Admin+moderators) → Gmail labels |
+| **i-SEO Sales Manager - Admin.dev** | Telegram entry → ACCESS_CONTROL auth → commands / callbacks → **multi-copy lifecycle sync** · `/delivery_status` · `/delivery_users` |
 
 **No third workflow for v1.** Do not clone MetaBOT Intake/Worker/Admin as three copies. Maximum later live copies: one Operational.dev + one Admin.dev if required.
 

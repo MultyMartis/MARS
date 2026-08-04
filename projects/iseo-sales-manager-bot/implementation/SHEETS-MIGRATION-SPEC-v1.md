@@ -251,3 +251,9 @@ See `evidence/phase3d5/` for ACCESS_CONTROL / ACCESS_EVENTS, public auth routing
 - A revoked/blocked ACCESS_CONTROL row always overrides CONFIG allowlists.
 - ACCESS_EVENTS append mapping must reference Prepare Access Upsert fields (never post-Upsert `` metadata).
 - Evidence: `evidence/phase3d51/` · Report: `reports/REPORT-iseo-sales-manager-bot-phase3d51-access-registry-repair-v1.md`.
+
+---
+
+## Phase 3D.7 — LEAD_DELIVERIES tab
+
+New immutable tab in CLEAN workbook. Upsert key: `delivery_key`. See `evidence/phase3d7/LEAD-DELIVERIES-DATA-MODEL-v1.md`.
