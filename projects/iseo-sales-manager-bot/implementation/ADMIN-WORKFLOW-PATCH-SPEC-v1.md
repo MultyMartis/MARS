@@ -220,3 +220,7 @@ After lifecycle mutate + LEAD_EVENTS:
 4. Aggregate Card Sync Result → answer callback
 
 Add Admin-only `/delivery_status` and `/delivery_users`.
+
+## Phase 3D.8 compatibility note
+
+No Admin graph change is required for the Operational Format-only button repair if `Handle Callback` continues to accept `sm:p:<token12>` and `sm:s:<token12>`. Confirm this in harness and live two-recipient acceptance before closeout. Do not add buttons to `/leads` archive cards.

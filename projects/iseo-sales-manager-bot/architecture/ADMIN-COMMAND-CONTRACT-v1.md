@@ -358,3 +358,7 @@ Never display raw Telegram user IDs. Opaque codes only.
 | `/delivery_users` | Eligible recipients: name, username, role, delivery/chat availability |
 
 Moderator `/help` explains private delivery and shared synchronized status.
+
+## Phase 3D.8 — callback compatibility note
+
+The Operational Format-only button repair must continue to emit callback data with the existing `sm:p:<token12>` / `sm:s:<token12>` prefixes. Admin.dev requires no change only if its deployed callback parser still matches this contract. Archive commands remain read-only and buttonless. Live compatibility acceptance is pending.

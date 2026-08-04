@@ -1,5 +1,7 @@
 # Руководство Оли — работа с лидами (v1)
 
+> Phase 3D.8 access note: intended guide recipient is currently **revoked by operator choice**. This remains a future moderator guide; do not restore access from this document.
+
 Новые заявки приходят в **личный чат** с ботом Sales Manager.
 
 1. Откройте карточку лида.

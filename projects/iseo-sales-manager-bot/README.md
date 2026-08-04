@@ -4,7 +4,7 @@
 **Classification:** External operational product (documentation-first) — n8n + Gmail + Google Sheets + Telegram  
 **Logical owner:** OPS  
 **Supporting systems:** ATLAS · MetaBOT SEO Content Agent patterns · MetaBOT Programmer / Developer · MARS Survivability / GitGuard  
-**Status:** Phase 3D.7 — multi-recipient lead delivery deployed (ACCESS_CONTROL fan-out + LEAD_DELIVERIES + card sync); **live four-user confirmation PENDING**; `sm-parser-v3.2`, `sm-msg-v2.2`; ACCESS_CONTROL SoT; AI OFF
+**Status:** Phase 3D.8 — product documentation baseline + recovery/button forensic; action-button live acceptance **PENDING**; `sm-parser-v3.2`, `sm-msg-v2.2`; ACCESS_CONTROL SoT; AI OFF
 
 ---
 
@@ -48,6 +48,9 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 | Area | Path |
 |------|------|
 | Operational index | [OPERATIONAL-INDEX.md](OPERATIONAL-INDEX.md) |
+| Product manual layer | [product/](product/) |
+| Parser 3.3 research backlog | [research/parser-3.3/](research/parser-3.3/) |
+| Phase 3D.8 evidence | [evidence/phase3d8/](evidence/phase3d8/) |
 | Architecture | [architecture/](architecture/) |
 | Plans | [plans/](plans/) |
 | Baselines / sanitized sources | [baselines/](baselines/) |
@@ -85,6 +88,7 @@ Human-supervised sales lead intake and manager assist for **i-SEO** (ORG-0003):
 **Resolved in Phase 3D.3:** manager UX upgraded to `sm-msg-v2` (emoji lead/lifecycle indicators, copy-friendly `<code>` contact fields, single `<pre>` client-reply block); inline lifecycle buttons with idempotent + conflict-safe callback handling; `/leads 3|5|10` (admin allowlist only); CLEAN 65 headers with lifecycle columns.  
 **Resolved in Phase 3D.4:** Olya enrolled in `ACCESS_CONTROL moderator (legacy CONFIG fallback retained) (hash **E6714550214106BA**, not admin); role-aware manager `/start`/`/help`; parser **`sm-parser-v3.2`** (messenger/site split, contact inference, comment «в тг», source page normalization); formatter **`sm-msg-v2.1`** (reduced emoji density); `knowledge/WEBSITE-FORM-FORMATS-v1.md` with free-audit record; synthetic callback acceptance PASS — **live Olya `/start`/`/help` pending**.
 **Resolved in Phase 3D.6 / 3D.6.1:** `/my_status` for public/pending/moderator/Admin/revoked/blocked; grant/revoke Telegram notification branch with ACCESS_EVENTS delivery events and non-rollback failure boundary. Live hotfix `3d6b-my-status-code-mode` fixed Code-node mode (`runOnceForAllItems`). Real non-Admin `/my_status` accepted by operator. Direct grant/revoke notification delivery remains SAFE UNKNOWN without independent visual proof. Harness **31/31 PASS**.
+**Phase 3D.8:** product/recovery baseline and Parser 3.3 backlog documented. Button defect is a Format-output mismatch (`telegram_has_buttons` and callback fields absent); Format-only repair is specified, but harness and live two-recipient acceptance remain pending. Parser 3.3, reminders, AI ON pilot and reusable fleet deployment are **not implemented**.
 
 ---
 

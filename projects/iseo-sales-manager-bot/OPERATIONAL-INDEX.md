@@ -11,14 +11,17 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | **COMPLETE — PATCH READY, LIVE NO-DUPLICATE CONFIRMATION PENDING** (3D.7.1 duplicate loop stopped; claim-before-send live) |
-| **Active stage** | **PHASE 3D.7.1 — emergency duplicate delivery containment** (parent 3D.7 multi-recipient) |
+| **Status** | **PHASE 3D.8 — PRODUCT BASELINE DOCUMENTED; BUTTON LIVE ACCEPTANCE PENDING** |
+| **Active stage** | Product/recovery baseline, action-button Format repair contract, Parser 3.3 backlog (**not implemented**) |
 | **Runtime** | External n8n — Operational.dev **active** (sole Gmail intake, **45** nodes, claim-before-send + ACCESS_CONTROL fan-out); Admin.dev **active** (registry auth, **57** nodes, multi-copy sync); Sales-Manager-v2 **inactive** |
 | **Live parity vs Sales-Manager-v2** | **CUT OVER** — Operational.dev replaced v2 for intake; v2 preserved inactive; filter \`labelIds\` parity confirmed |
 | **JSON baselines v1/v2** | **PRESENT** — Phase 3A.1 baselines + Phase 3B sanitized .dev exports; Phase 3C–3D.3 evidence under `evidence/phase3*` |
 | **Registry** | status **planned** unchanged — promotion to active requires **separate governance gate** (`REGISTRY_STATUS_PROMOTION_PENDING`) |
 | **ATLAS** | Recommendation only — ORG-0003 / PER-0001 / PER-0010 / PER-0011; **no** new IDs |
 | **Next** | Operator four-user **no-duplicate** live confirmation (Task M) → button sync only after card counts confirmed → later PHASE 3E AI ON only with separate charter |
+| **AI** | **OFF** — `ai_enabled=false`; no AI ON claim in Phase 3D.8 |
+| **Product layer** | [product/](product/) |
+| **Evidence 3D.8** | [evidence/phase3d8/](evidence/phase3d8/) · [reports/REPORT-iseo-sales-manager-bot-phase3d8-product-baseline-backup-and-buttons-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3d8-product-baseline-backup-and-buttons-v1.md) |
 | **Evidence 3D.7.1** | [evidence/phase3d7-1/](evidence/phase3d7-1/) · [reports/REPORT-iseo-sales-manager-bot-phase3d7-1-duplicate-delivery-containment-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3d7-1-duplicate-delivery-containment-v1.md) |
 | **Evidence 3D.7** | [evidence/phase3d7/](evidence/phase3d7/) · [reports/REPORT-iseo-sales-manager-bot-phase3d7-multi-recipient-lead-delivery-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3d7-multi-recipient-lead-delivery-v1.md) |
 | **Evidence 3D.6** | [evidence/phase3d6/](evidence/phase3d6/) · [reports/REPORT-iseo-sales-manager-bot-phase3d6-personal-status-and-role-notifications-v1.md](reports/REPORT-iseo-sales-manager-bot-phase3d6-personal-status-and-role-notifications-v1.md) |
@@ -173,6 +176,7 @@
 | **Phase 3D.3.1** | `/leads` multi-card + Sheets phone RAW safety | **DONE** |
 | **Phase 3D.4** | Olya manager enrollment, sm-parser-v3.2 / sm-msg-v2.1, form registry | **DONE** — Olya live Telegram **pending** |
 | **Phase 3D.6** | `/my_status`, role notifications, 3d6b Code-mode hotfix, live non-Admin status acceptance | **COMPLETE — personal status ready; notification delivery SAFE UNKNOWN** |
+| **Phase 3D.8** | Product baseline, recovery receipts, button forensic/repair contract, Parser 3.3 research | **DOCUMENTED — live button acceptance PENDING; Parser 3.3 NOT IMPLEMENTED** |
 | Next form iteration | Per `MULTI-FORM-TEST-PLAN-v1` | **not opened** |
 | Live rename | After clean-lead acceptance | **deferred** |
 | Registry promotion | Separate governance charter | **not opened** |

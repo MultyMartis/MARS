@@ -266,3 +266,7 @@ Required checks (31): public/pending/moderator/Admin/revoked/blocked `/my_status
 ## Phase 3D.7 harness
 
 37 cases (fan-out, eligibility exclusions, idempotency, isolation, sync, commands, regressions). Local runner: STORAGE `phase3d7-local/run-04-harness.mjs` — required **37/37 PASS**.
+
+## Phase 3D.8 button-repair harness — PENDING
+
+Required assertions: Format sets `telegram_has_buttons` only for actionable pending cards; both callback fields use `sm:p:`/`sm:s:` plus a 12-character opaque token; reply markup survives Expand and Restore; strict IF selects With Buttons; archive/service/non-pending cards select buttonless Send; repeated poll does not duplicate delivery; Admin callback parser accepts both actions; AI calls and client auto-messages remain zero. Harness result is not yet recorded.

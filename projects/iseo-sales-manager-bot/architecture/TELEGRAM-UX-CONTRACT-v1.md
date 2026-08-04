@@ -342,3 +342,7 @@ Every Admin text command must produce exactly one Telegram reply. Silence after 
 - Inline buttons remain only while `manager_status=pending`.
 - Lifecycle actions synchronize all delivered copies; first valid transition wins.
 - Public users never receive production lead cards.
+
+## Phase 3D.8 — action-button payload repair
+
+For an actionable pending card, Format must emit `telegram_has_buttons=true`, `telegram_callback_processed=sm:p:<token12>`, `telegram_callback_spam=sm:s:<token12>`, and preserve `telegram_reply_markup` through recipient expansion and claim restore. Archive `/leads` cards remain buttonless. This is a Format contract repair; Parser 3.2 is unchanged. Live two-recipient acceptance remains pending.
